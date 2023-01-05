@@ -77,6 +77,7 @@ public class CreateInstanceTemplateRequest extends JdcloudRequest implements jav
     private String regionId;
 
 
+
     /**
      * get 实例模板配置信息。
      *
@@ -94,6 +95,7 @@ public class CreateInstanceTemplateRequest extends JdcloudRequest implements jav
     public void setInstanceTemplateData(InstanceTemplateSpec instanceTemplateData) {
         this.instanceTemplateData = instanceTemplateData;
     }
+
 
     /**
      * get 实例模板的名称，参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
@@ -113,6 +115,7 @@ public class CreateInstanceTemplateRequest extends JdcloudRequest implements jav
         this.name = name;
     }
 
+
     /**
      * get 实例模板的描述，参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      *
@@ -130,6 +133,7 @@ public class CreateInstanceTemplateRequest extends JdcloudRequest implements jav
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 地域ID。
@@ -150,6 +154,7 @@ public class CreateInstanceTemplateRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 实例模板配置信息。
      *
@@ -159,6 +164,7 @@ public class CreateInstanceTemplateRequest extends JdcloudRequest implements jav
         this.instanceTemplateData = instanceTemplateData;
         return this;
     }
+
 
     /**
      * set 实例模板的名称，参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
@@ -170,6 +176,7 @@ public class CreateInstanceTemplateRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set 实例模板的描述，参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      *
@@ -179,6 +186,7 @@ public class CreateInstanceTemplateRequest extends JdcloudRequest implements jav
         this.description = description;
         return this;
     }
+
 
     /**
      * set 地域ID。

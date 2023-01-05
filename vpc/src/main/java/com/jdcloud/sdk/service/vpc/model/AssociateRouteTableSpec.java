@@ -36,45 +36,48 @@ public class AssociateRouteTableSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
+     * 路由表要绑定的子网ID列表, 只有associateType是subnet类型的路由表才支持绑定；subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
      * Required:true
      */
     @Required
+    
     private List<String> subnetIds;
 
 
     /**
-     * get 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
-     *
-     * @return
-     */
+    * get 路由表要绑定的子网ID列表, 只有associateType是subnet类型的路由表才支持绑定；subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
+    *
+    * @return
+    */
     public List<String> getSubnetIds() {
         return subnetIds;
     }
 
     /**
-     * set 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
-     *
-     * @param subnetIds
-     */
+    * set 路由表要绑定的子网ID列表, 只有associateType是subnet类型的路由表才支持绑定；subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
+    *
+    * @param subnetIds
+    */
     public void setSubnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
     }
 
 
+
     /**
-     * set 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
-     *
-     * @param subnetIds
-     */
+    * set 路由表要绑定的子网ID列表, 只有associateType是subnet类型的路由表才支持绑定；subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
+    *
+    * @param subnetIds
+    */
     public AssociateRouteTableSpec subnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
 
 
+
     /**
-     * add item to 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
+     * add item to 路由表要绑定的子网ID列表, 只有associateType是subnet类型的路由表才支持绑定；subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
      *
      * @param subnetId
      */
@@ -84,5 +87,4 @@ public class AssociateRouteTableSpec  implements java.io.Serializable {
         }
         this.subnetIds.add(subnetId);
     }
-
 }

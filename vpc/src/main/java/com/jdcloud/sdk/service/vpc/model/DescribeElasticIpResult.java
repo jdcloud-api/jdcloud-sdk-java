@@ -40,6 +40,7 @@ public class DescribeElasticIpResult extends JdcloudResult implements java.io.Se
     private ElasticIp elasticIp;
 
 
+
     /**
      * get elasticIp资源信息
      *
@@ -57,6 +58,7 @@ public class DescribeElasticIpResult extends JdcloudResult implements java.io.Se
     public void setElasticIp(ElasticIp elasticIp) {
         this.elasticIp = elasticIp;
     }
+
 
 
     /**

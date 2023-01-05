@@ -61,14 +61,15 @@ public class DescribeInstanceTemplatesRequest extends JdcloudRequest implements 
 &#x60;instanceTemplateId&#x60;: 实例模板ID，精确匹配，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -89,6 +90,7 @@ public class DescribeInstanceTemplatesRequest extends JdcloudRequest implements 
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
@@ -107,29 +109,31 @@ public class DescribeInstanceTemplatesRequest extends JdcloudRequest implements 
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;name&#x60;: 实例模板名称，模糊匹配，支持多个
 &#x60;instanceTemplateId&#x60;: 实例模板ID，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;name&#x60;: 实例模板名称，模糊匹配，支持多个
 &#x60;instanceTemplateId&#x60;: 实例模板ID，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID。
@@ -150,6 +154,7 @@ public class DescribeInstanceTemplatesRequest extends JdcloudRequest implements 
     }
 
 
+
     /**
      * set 页码；默认为1。
      *
@@ -159,6 +164,7 @@ public class DescribeInstanceTemplatesRequest extends JdcloudRequest implements 
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
@@ -170,18 +176,20 @@ public class DescribeInstanceTemplatesRequest extends JdcloudRequest implements 
         return this;
     }
 
+
     /**
-     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;name&#x60;: 实例模板名称，模糊匹配，支持多个
 &#x60;instanceTemplateId&#x60;: 实例模板ID，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeInstanceTemplatesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -192,6 +200,7 @@ public class DescribeInstanceTemplatesRequest extends JdcloudRequest implements 
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -208,5 +217,4 @@ public class DescribeInstanceTemplatesRequest extends JdcloudRequest implements 
         }
         this.filters.add(filter);
     }
-
 }

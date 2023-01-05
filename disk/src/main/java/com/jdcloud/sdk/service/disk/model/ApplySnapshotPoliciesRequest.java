@@ -40,8 +40,8 @@ public class ApplySnapshotPoliciesRequest extends JdcloudRequest implements java
     /**
      * 绑定/解绑操作
      */
+    
     private List<PolicyDiskRelationOp> relations;
-
     /**
      * 地域ID
      * Required:true
@@ -50,23 +50,25 @@ public class ApplySnapshotPoliciesRequest extends JdcloudRequest implements java
     private String regionId;
 
 
+
     /**
-     * get 绑定/解绑操作
-     *
-     * @return
-     */
+    * get 绑定/解绑操作
+    *
+    * @return
+    */
     public List<PolicyDiskRelationOp> getRelations() {
         return relations;
     }
 
     /**
-     * set 绑定/解绑操作
-     *
-     * @param relations
-     */
+    * set 绑定/解绑操作
+    *
+    * @param relations
+    */
     public void setRelations(List<PolicyDiskRelationOp> relations) {
         this.relations = relations;
     }
+
 
     /**
      * get 地域ID
@@ -87,15 +89,17 @@ public class ApplySnapshotPoliciesRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
-     * set 绑定/解绑操作
-     *
-     * @param relations
-     */
+    * set 绑定/解绑操作
+    *
+    * @param relations
+    */
     public ApplySnapshotPoliciesRequest relations(List<PolicyDiskRelationOp> relations) {
         this.relations = relations;
         return this;
     }
+
 
     /**
      * set 地域ID
@@ -106,6 +110,7 @@ public class ApplySnapshotPoliciesRequest extends JdcloudRequest implements java
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -119,5 +124,4 @@ public class ApplySnapshotPoliciesRequest extends JdcloudRequest implements java
         }
         this.relations.add(relation);
     }
-
 }

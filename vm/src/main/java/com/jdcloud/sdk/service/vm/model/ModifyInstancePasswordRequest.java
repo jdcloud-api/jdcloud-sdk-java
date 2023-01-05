@@ -68,6 +68,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     private String instanceId;
 
 
+
     /**
      * get 实例密码。
 可用于SSH登录和VNC登录。
@@ -94,6 +95,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
         this.password = password;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -111,6 +113,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -131,6 +134,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 实例密码。
 可用于SSH登录和VNC登录。
@@ -145,6 +149,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -154,6 +159,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云主机ID。

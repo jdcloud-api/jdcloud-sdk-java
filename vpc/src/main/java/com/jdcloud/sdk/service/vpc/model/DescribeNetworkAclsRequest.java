@@ -53,14 +53,15 @@ networkAclNames - networkAcl名称列表，支持多个
 vpcId - networkAcl所属vpc Id，支持单个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -81,6 +82,7 @@ vpcId - networkAcl所属vpc Id，支持单个
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -99,29 +101,31 @@ vpcId - networkAcl所属vpc Id，支持单个
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get networkAclIds - networkAcl ID列表，支持多个
+    * get networkAclIds - networkAcl ID列表，支持多个
 networkAclNames - networkAcl名称列表，支持多个
 vpcId - networkAcl所属vpc Id，支持单个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set networkAclIds - networkAcl ID列表，支持多个
+    * set networkAclIds - networkAcl ID列表，支持多个
 networkAclNames - networkAcl名称列表，支持多个
 vpcId - networkAcl所属vpc Id，支持单个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get Region ID
@@ -142,6 +146,7 @@ vpcId - networkAcl所属vpc Id，支持单个
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
      *
@@ -151,6 +156,7 @@ vpcId - networkAcl所属vpc Id，支持单个
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
@@ -162,18 +168,20 @@ vpcId - networkAcl所属vpc Id，支持单个
         return this;
     }
 
+
     /**
-     * set networkAclIds - networkAcl ID列表，支持多个
+    * set networkAclIds - networkAcl ID列表，支持多个
 networkAclNames - networkAcl名称列表，支持多个
 vpcId - networkAcl所属vpc Id，支持单个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeNetworkAclsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -184,6 +192,7 @@ vpcId - networkAcl所属vpc Id，支持单个
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -200,5 +209,4 @@ vpcId - networkAcl所属vpc Id，支持单个
         }
         this.filters.add(filter);
     }
-
 }

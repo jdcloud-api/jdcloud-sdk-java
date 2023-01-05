@@ -40,6 +40,7 @@ public class DescribeVpcResult extends JdcloudResult implements java.io.Serializ
     private Vpc vpc;
 
 
+
     /**
      * get Vpc资源信息
      *
@@ -57,6 +58,7 @@ public class DescribeVpcResult extends JdcloudResult implements java.io.Serializ
     public void setVpc(Vpc vpc) {
         this.vpc = vpc;
     }
+
 
 
     /**

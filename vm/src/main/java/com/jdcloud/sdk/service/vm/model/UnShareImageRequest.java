@@ -49,8 +49,8 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
      * Required:true
      */
     @Required
+    
     private List<String> pins;
-
     /**
      * 地域ID。
      * Required:true
@@ -66,23 +66,25 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     private String imageId;
 
 
+
     /**
-     * get 需要取消的京东云帐户列表。
-     *
-     * @return
-     */
+    * get 需要取消的京东云帐户列表。
+    *
+    * @return
+    */
     public List<String> getPins() {
         return pins;
     }
 
     /**
-     * set 需要取消的京东云帐户列表。
-     *
-     * @param pins
-     */
+    * set 需要取消的京东云帐户列表。
+    *
+    * @param pins
+    */
     public void setPins(List<String> pins) {
         this.pins = pins;
     }
+
 
     /**
      * get 地域ID。
@@ -101,6 +103,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 镜像ID。
@@ -121,15 +124,17 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
-     * set 需要取消的京东云帐户列表。
-     *
-     * @param pins
-     */
+    * set 需要取消的京东云帐户列表。
+    *
+    * @param pins
+    */
     public UnShareImageRequest pins(List<String> pins) {
         this.pins = pins;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -141,6 +146,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 镜像ID。
      *
@@ -150,6 +156,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
         this.imageId = imageId;
         return this;
     }
+
 
 
     /**
@@ -163,5 +170,4 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
         }
         this.pins.add(pin);
     }
-
 }

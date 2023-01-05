@@ -58,37 +58,40 @@ public class CreateInstancesResult extends JdcloudResult implements java.io.Seri
     /**
      * instanceIds
      */
+    
     private List<String> instanceIds;
 
 
     /**
-     * get instanceIds
-     *
-     * @return
-     */
+    * get instanceIds
+    *
+    * @return
+    */
     public List<String> getInstanceIds() {
         return instanceIds;
     }
 
     /**
-     * set instanceIds
-     *
-     * @param instanceIds
-     */
+    * set instanceIds
+    *
+    * @param instanceIds
+    */
     public void setInstanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
     }
 
 
+
     /**
-     * set instanceIds
-     *
-     * @param instanceIds
-     */
+    * set instanceIds
+    *
+    * @param instanceIds
+    */
     public CreateInstancesResult instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
+
 
 
     /**
@@ -102,5 +105,4 @@ public class CreateInstancesResult extends JdcloudResult implements java.io.Seri
         }
         this.instanceIds.add(instanceId);
     }
-
 }

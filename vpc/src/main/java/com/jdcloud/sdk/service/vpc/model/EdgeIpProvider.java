@@ -58,6 +58,7 @@ public class EdgeIpProvider  implements java.io.Serializable {
     private String az;
 
 
+
     /**
      * get 边缘公网IP的线路
      *
@@ -75,6 +76,7 @@ public class EdgeIpProvider  implements java.io.Serializable {
     public void setProvider(String provider) {
         this.provider = provider;
     }
+
 
     /**
      * get 边缘公网IP的线路接入区
@@ -94,6 +96,7 @@ public class EdgeIpProvider  implements java.io.Serializable {
         this.pointOfAccess = pointOfAccess;
     }
 
+
     /**
      * get 边缘公网IP的资源关联范围
      *
@@ -112,6 +115,7 @@ public class EdgeIpProvider  implements java.io.Serializable {
         this.associationScope = associationScope;
     }
 
+
     /**
      * get 边缘公网IP的服务类型
      *
@@ -129,6 +133,7 @@ public class EdgeIpProvider  implements java.io.Serializable {
     public void setServiceType(String serviceType) {
         this.serviceType = serviceType;
     }
+
 
     /**
      * get 边缘公网IP的可用区
@@ -149,6 +154,7 @@ public class EdgeIpProvider  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 边缘公网IP的线路
      *
@@ -158,6 +164,7 @@ public class EdgeIpProvider  implements java.io.Serializable {
         this.provider = provider;
         return this;
     }
+
 
     /**
      * set 边缘公网IP的线路接入区
@@ -169,6 +176,7 @@ public class EdgeIpProvider  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 边缘公网IP的资源关联范围
      *
@@ -179,6 +187,7 @@ public class EdgeIpProvider  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 边缘公网IP的服务类型
      *
@@ -188,6 +197,7 @@ public class EdgeIpProvider  implements java.io.Serializable {
         this.serviceType = serviceType;
         return this;
     }
+
 
     /**
      * set 边缘公网IP的可用区

@@ -63,6 +63,7 @@ public class CreateSnapshotRequest extends JdcloudRequest implements java.io.Ser
     private String regionId;
 
 
+
     /**
      * get 创建快照规格
      *
@@ -81,6 +82,7 @@ public class CreateSnapshotRequest extends JdcloudRequest implements java.io.Ser
         this.snapshotSpec = snapshotSpec;
     }
 
+
     /**
      * get 幂等性校验参数
      *
@@ -98,6 +100,7 @@ public class CreateSnapshotRequest extends JdcloudRequest implements java.io.Ser
     public void setClientToken(String clientToken) {
         this.clientToken = clientToken;
     }
+
 
     /**
      * get 地域ID
@@ -118,6 +121,7 @@ public class CreateSnapshotRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 创建快照规格
      *
@@ -128,6 +132,7 @@ public class CreateSnapshotRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 幂等性校验参数
      *
@@ -137,6 +142,7 @@ public class CreateSnapshotRequest extends JdcloudRequest implements java.io.Ser
         this.clientToken = clientToken;
         return this;
     }
+
 
     /**
      * set 地域ID

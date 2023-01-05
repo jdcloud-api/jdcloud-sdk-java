@@ -43,8 +43,8 @@ public class DescribeSnapPolicesRequest extends JdcloudRequest implements java.i
     /**
      * 过滤条件
      */
+    
     private List<FilterGroups> filterGroups;
-
     /**
      * 排序字段，只支持create_time和update_time字段
      */
@@ -68,23 +68,25 @@ public class DescribeSnapPolicesRequest extends JdcloudRequest implements java.i
     private String regionId;
 
 
+
     /**
-     * get 过滤条件
-     *
-     * @return
-     */
+    * get 过滤条件
+    *
+    * @return
+    */
     public List<FilterGroups> getFilterGroups() {
         return filterGroups;
     }
 
     /**
-     * set 过滤条件
-     *
-     * @param filterGroups
-     */
+    * set 过滤条件
+    *
+    * @param filterGroups
+    */
     public void setFilterGroups(List<FilterGroups> filterGroups) {
         this.filterGroups = filterGroups;
     }
+
 
     /**
      * get 排序字段，只支持create_time和update_time字段
@@ -104,6 +106,7 @@ public class DescribeSnapPolicesRequest extends JdcloudRequest implements java.i
         this.order = order;
     }
 
+
     /**
      * get 页码, 默认为1, 取值范围：[1,∞)
      *
@@ -122,6 +125,7 @@ public class DescribeSnapPolicesRequest extends JdcloudRequest implements java.i
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -139,6 +143,7 @@ public class DescribeSnapPolicesRequest extends JdcloudRequest implements java.i
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 地域ID
@@ -159,15 +164,17 @@ public class DescribeSnapPolicesRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
-     * set 过滤条件
-     *
-     * @param filterGroups
-     */
+    * set 过滤条件
+    *
+    * @param filterGroups
+    */
     public DescribeSnapPolicesRequest filterGroups(List<FilterGroups> filterGroups) {
         this.filterGroups = filterGroups;
         return this;
     }
+
 
     /**
      * set 排序字段，只支持create_time和update_time字段
@@ -179,6 +186,7 @@ public class DescribeSnapPolicesRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
@@ -188,6 +196,7 @@ public class DescribeSnapPolicesRequest extends JdcloudRequest implements java.i
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
@@ -199,6 +208,7 @@ public class DescribeSnapPolicesRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 地域ID
      *
@@ -208,6 +218,7 @@ public class DescribeSnapPolicesRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -221,5 +232,4 @@ public class DescribeSnapPolicesRequest extends JdcloudRequest implements java.i
         }
         this.filterGroups.add(filterGroup);
     }
-
 }

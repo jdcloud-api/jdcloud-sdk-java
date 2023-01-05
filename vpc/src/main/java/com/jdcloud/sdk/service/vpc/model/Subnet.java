@@ -58,7 +58,7 @@ public class Subnet  implements java.io.Serializable {
     private Number availableIpCount;
 
     /**
-     * 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     * 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请(范围是[max{24, 子网掩码}, 28])
      */
     private Integer ipMaskLen;
 
@@ -102,6 +102,12 @@ public class Subnet  implements java.io.Serializable {
      */
     private String az;
 
+    /**
+     * 子网是否为外部子网（即子网路由表中存在下一跳为internet的路由）。true表示外部子网，false表示内部子网
+     */
+    private Boolean publicSubnet;
+
+
 
     /**
      * get Subnet的Id
@@ -121,6 +127,7 @@ public class Subnet  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+
     /**
      * get 子网名称
      *
@@ -138,6 +145,7 @@ public class Subnet  implements java.io.Serializable {
     public void setSubnetName(String subnetName) {
         this.subnetName = subnetName;
     }
+
 
     /**
      * get 子网所属VPC的Id
@@ -157,6 +165,7 @@ public class Subnet  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 子网网段，vpc内子网网段不能重叠，cidr的取值范围：10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间，如果VPC含有Cidr，则必须为VPC所在Cidr的子网
      *
@@ -174,6 +183,7 @@ public class Subnet  implements java.io.Serializable {
     public void setAddressPrefix(String addressPrefix) {
         this.addressPrefix = addressPrefix;
     }
+
 
     /**
      * get 子网可用ip数量
@@ -193,8 +203,9 @@ public class Subnet  implements java.io.Serializable {
         this.availableIpCount = availableIpCount;
     }
 
+
     /**
-     * get 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     * get 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请(范围是[max{24, 子网掩码}, 28])
      *
      * @return
      */
@@ -203,13 +214,14 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请(范围是[max{24, 子网掩码}, 28])
      *
      * @param ipMaskLen
      */
     public void setIpMaskLen(Integer ipMaskLen) {
         this.ipMaskLen = ipMaskLen;
     }
+
 
     /**
      * get 子网描述信息
@@ -229,6 +241,7 @@ public class Subnet  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 子网关联的路由表Id
      *
@@ -246,6 +259,7 @@ public class Subnet  implements java.io.Serializable {
     public void setRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
     }
+
 
     /**
      * get 子网关联的acl Id
@@ -265,6 +279,7 @@ public class Subnet  implements java.io.Serializable {
         this.aclId = aclId;
     }
 
+
     /**
      * get 子网的起始地址，子网第1个地位为路由器网关保留，第2个地址为dhcp服务保留
      *
@@ -282,6 +297,7 @@ public class Subnet  implements java.io.Serializable {
     public void setStartIp(String startIp) {
         this.startIp = startIp;
     }
+
 
     /**
      * get 子网的结束地址，子网第1个地位为路由器网关保留，第2个地址为dhcp服务保留
@@ -301,6 +317,7 @@ public class Subnet  implements java.io.Serializable {
         this.endIp = endIp;
     }
 
+
     /**
      * get 子网创建时间
      *
@@ -319,6 +336,7 @@ public class Subnet  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+
     /**
      * get 子网类型，取值：standard(标准子网)，edge(边缘子网)
      *
@@ -336,6 +354,7 @@ public class Subnet  implements java.io.Serializable {
     public void setSubnetType(String subnetType) {
         this.subnetType = subnetType;
     }
+
 
     /**
      * get 子网可用区
@@ -357,6 +376,26 @@ public class Subnet  implements java.io.Serializable {
 
 
     /**
+     * get 子网是否为外部子网（即子网路由表中存在下一跳为internet的路由）。true表示外部子网，false表示内部子网
+     *
+     * @return
+     */
+    public Boolean getPublicSubnet() {
+        return publicSubnet;
+    }
+
+    /**
+     * set 子网是否为外部子网（即子网路由表中存在下一跳为internet的路由）。true表示外部子网，false表示内部子网
+     *
+     * @param publicSubnet
+     */
+    public void setPublicSubnet(Boolean publicSubnet) {
+        this.publicSubnet = publicSubnet;
+    }
+
+
+
+    /**
      * set Subnet的Id
      *
      * @param subnetId
@@ -365,6 +404,7 @@ public class Subnet  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 子网名称
@@ -376,6 +416,7 @@ public class Subnet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网所属VPC的Id
      *
@@ -385,6 +426,7 @@ public class Subnet  implements java.io.Serializable {
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set 子网网段，vpc内子网网段不能重叠，cidr的取值范围：10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间，如果VPC含有Cidr，则必须为VPC所在Cidr的子网
@@ -396,6 +438,7 @@ public class Subnet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网可用ip数量
      *
@@ -406,8 +449,9 @@ public class Subnet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请(范围是[max{24, 子网掩码}, 28])
      *
      * @param ipMaskLen
      */
@@ -415,6 +459,7 @@ public class Subnet  implements java.io.Serializable {
         this.ipMaskLen = ipMaskLen;
         return this;
     }
+
 
     /**
      * set 子网描述信息
@@ -426,6 +471,7 @@ public class Subnet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网关联的路由表Id
      *
@@ -435,6 +481,7 @@ public class Subnet  implements java.io.Serializable {
         this.routeTableId = routeTableId;
         return this;
     }
+
 
     /**
      * set 子网关联的acl Id
@@ -446,6 +493,7 @@ public class Subnet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网的起始地址，子网第1个地位为路由器网关保留，第2个地址为dhcp服务保留
      *
@@ -455,6 +503,7 @@ public class Subnet  implements java.io.Serializable {
         this.startIp = startIp;
         return this;
     }
+
 
     /**
      * set 子网的结束地址，子网第1个地位为路由器网关保留，第2个地址为dhcp服务保留
@@ -466,6 +515,7 @@ public class Subnet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网创建时间
      *
@@ -475,6 +525,7 @@ public class Subnet  implements java.io.Serializable {
         this.createdTime = createdTime;
         return this;
     }
+
 
     /**
      * set 子网类型，取值：standard(标准子网)，edge(边缘子网)
@@ -486,6 +537,7 @@ public class Subnet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网可用区
      *
@@ -493,6 +545,17 @@ public class Subnet  implements java.io.Serializable {
      */
     public Subnet az(String az) {
         this.az = az;
+        return this;
+    }
+
+
+    /**
+     * set 子网是否为外部子网（即子网路由表中存在下一跳为internet的路由）。true表示外部子网，false表示内部子网
+     *
+     * @param publicSubnet
+     */
+    public Subnet publicSubnet(Boolean publicSubnet) {
+        this.publicSubnet = publicSubnet;
         return this;
     }
 

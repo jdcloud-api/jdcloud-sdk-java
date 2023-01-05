@@ -58,24 +58,25 @@ bandwidthPackageId - 共享带宽包ID，支持单个
 status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）、ALL（全部）。支持单个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * Tag筛选条件
      */
+    
     private List<TagFilter> tags;
-
     /**
      * 资源组筛选条件
      */
+    
     private List<String> resourceGroupIds;
-
     /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -96,6 +97,7 @@ status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -114,8 +116,9 @@ status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get elasticIpIds - elasticip id数组条件，支持多个
+    * get elasticIpIds - elasticip id数组条件，支持多个
 elasticIpAddress - eip的IP地址，支持单个
 chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
 ipType - eip类型，取值：all(所有类型)、standard(标准弹性IP)、edge(边缘弹性IP)，默认standard，支持单个
@@ -123,15 +126,15 @@ azs - eip可用区，支持多个
 bandwidthPackageId - 共享带宽包ID，支持单个
 status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）、ALL（全部）。支持单个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set elasticIpIds - elasticip id数组条件，支持多个
+    * set elasticIpIds - elasticip id数组条件，支持多个
 elasticIpAddress - eip的IP地址，支持单个
 chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
 ipType - eip类型，取值：all(所有类型)、standard(标准弹性IP)、edge(边缘弹性IP)，默认standard，支持单个
@@ -139,48 +142,51 @@ azs - eip可用区，支持多个
 bandwidthPackageId - 共享带宽包ID，支持单个
 status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）、ALL（全部）。支持单个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
+
     /**
-     * get Tag筛选条件
-     *
-     * @return
-     */
+    * get Tag筛选条件
+    *
+    * @return
+    */
     public List<TagFilter> getTags() {
         return tags;
     }
 
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public void setTags(List<TagFilter> tags) {
         this.tags = tags;
     }
 
+
     /**
-     * get 资源组筛选条件
-     *
-     * @return
-     */
+    * get 资源组筛选条件
+    *
+    * @return
+    */
     public List<String> getResourceGroupIds() {
         return resourceGroupIds;
     }
 
     /**
-     * set 资源组筛选条件
-     *
-     * @param resourceGroupIds
-     */
+    * set 资源组筛选条件
+    *
+    * @param resourceGroupIds
+    */
     public void setResourceGroupIds(List<String> resourceGroupIds) {
         this.resourceGroupIds = resourceGroupIds;
     }
+
 
     /**
      * get Region ID
@@ -201,6 +207,7 @@ status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
      *
@@ -210,6 +217,7 @@ status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
@@ -221,8 +229,9 @@ status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED
         return this;
     }
 
+
     /**
-     * set elasticIpIds - elasticip id数组条件，支持多个
+    * set elasticIpIds - elasticip id数组条件，支持多个
 elasticIpAddress - eip的IP地址，支持单个
 chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
 ipType - eip类型，取值：all(所有类型)、standard(标准弹性IP)、edge(边缘弹性IP)，默认standard，支持单个
@@ -230,33 +239,36 @@ azs - eip可用区，支持多个
 bandwidthPackageId - 共享带宽包ID，支持单个
 status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）、ALL（全部）。支持单个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeElasticIpsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public DescribeElasticIpsRequest tags(List<TagFilter> tags) {
         this.tags = tags;
         return this;
     }
 
+
     /**
-     * set 资源组筛选条件
-     *
-     * @param resourceGroupIds
-     */
+    * set 资源组筛选条件
+    *
+    * @param resourceGroupIds
+    */
     public DescribeElasticIpsRequest resourceGroupIds(List<String> resourceGroupIds) {
         this.resourceGroupIds = resourceGroupIds;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -267,6 +279,7 @@ status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -311,5 +324,4 @@ status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED
         }
         this.resourceGroupIds.add(resourceGroupId);
     }
-
 }

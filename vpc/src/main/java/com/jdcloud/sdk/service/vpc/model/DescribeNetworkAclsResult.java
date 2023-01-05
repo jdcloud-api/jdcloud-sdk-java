@@ -39,31 +39,33 @@ public class DescribeNetworkAclsResult extends JdcloudResult implements java.io.
     /**
      * networkAcls
      */
+    
     private List<NetworkAcl> networkAcls;
-
     /**
      * 总数量
      */
     private Number totalCount;
 
 
+
     /**
-     * get networkAcls
-     *
-     * @return
-     */
+    * get networkAcls
+    *
+    * @return
+    */
     public List<NetworkAcl> getNetworkAcls() {
         return networkAcls;
     }
 
     /**
-     * set networkAcls
-     *
-     * @param networkAcls
-     */
+    * set networkAcls
+    *
+    * @param networkAcls
+    */
     public void setNetworkAcls(List<NetworkAcl> networkAcls) {
         this.networkAcls = networkAcls;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeNetworkAclsResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
-     * set networkAcls
-     *
-     * @param networkAcls
-     */
+    * set networkAcls
+    *
+    * @param networkAcls
+    */
     public DescribeNetworkAclsResult networkAcls(List<NetworkAcl> networkAcls) {
         this.networkAcls = networkAcls;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeNetworkAclsResult extends JdcloudResult implements java.io.
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeNetworkAclsResult extends JdcloudResult implements java.io.
         }
         this.networkAcls.add(networkAcl);
     }
-
 }

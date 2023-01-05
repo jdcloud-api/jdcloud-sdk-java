@@ -124,8 +124,8 @@ public class Image  implements java.io.Serializable {
     /**
      * 镜像数据盘配置列表。
      */
+    
     private List<InstanceDiskAttachment> dataDisks;
-
     /**
      * 创建云盘系统盘所使用的快照ID。系统盘类型为本地盘的镜像，此参数为空。
      */
@@ -160,6 +160,7 @@ public class Image  implements java.io.Serializable {
     private Boolean imported;
 
 
+
     /**
      * get 镜像ID。
      *
@@ -178,6 +179,7 @@ public class Image  implements java.io.Serializable {
         this.imageId = imageId;
     }
 
+
     /**
      * get 镜像名称。
      *
@@ -195,6 +197,7 @@ public class Image  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 镜像的操作系统平台名称。
@@ -218,6 +221,7 @@ public class Image  implements java.io.Serializable {
         this.platform = platform;
     }
 
+
     /**
      * get 镜像的操作系统版本。
      *
@@ -235,6 +239,7 @@ public class Image  implements java.io.Serializable {
     public void setOsVersion(String osVersion) {
         this.osVersion = osVersion;
     }
+
 
     /**
      * get 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
@@ -254,6 +259,7 @@ public class Image  implements java.io.Serializable {
         this.architecture = architecture;
     }
 
+
     /**
      * get 镜像系统盘大小。
      *
@@ -271,6 +277,7 @@ public class Image  implements java.io.Serializable {
     public void setSystemDiskSizeGB(Integer systemDiskSizeGB) {
         this.systemDiskSizeGB = systemDiskSizeGB;
     }
+
 
     /**
      * get 镜像来源，取值范围：
@@ -302,6 +309,7 @@ public class Image  implements java.io.Serializable {
         this.imageSource = imageSource;
     }
 
+
     /**
      * get 镜像的操作系统类型。取值范围：&#x60;windows、linux&#x60;。
      *
@@ -319,6 +327,7 @@ public class Image  implements java.io.Serializable {
     public void setOsType(String osType) {
         this.osType = osType;
     }
+
 
     /**
      * get 镜像状态。参考 [镜像状态](https://docs.jdcloud.com/virtual-machines/api/image_status)。
@@ -338,6 +347,7 @@ public class Image  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 镜像的创建时间。
      *
@@ -355,6 +365,7 @@ public class Image  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 镜像文件的实际大小。
@@ -374,6 +385,7 @@ public class Image  implements java.io.Serializable {
         this.sizeMB = sizeMB;
     }
 
+
     /**
      * get 镜像描述。
      *
@@ -392,6 +404,7 @@ public class Image  implements java.io.Serializable {
         this.desc = desc;
     }
 
+
     /**
      * get 该镜像拥有者的用户PIN。
      *
@@ -409,6 +422,7 @@ public class Image  implements java.io.Serializable {
     public void setOwnerPin(String ownerPin) {
         this.ownerPin = ownerPin;
     }
+
 
     /**
      * get 镜像的使用权限。取值范围：
@@ -436,6 +450,7 @@ public class Image  implements java.io.Serializable {
         this.launchPermission = launchPermission;
     }
 
+
     /**
      * get 镜像系统盘配置。
      *
@@ -454,23 +469,25 @@ public class Image  implements java.io.Serializable {
         this.systemDisk = systemDisk;
     }
 
+
     /**
-     * get 镜像数据盘配置列表。
-     *
-     * @return
-     */
+    * get 镜像数据盘配置列表。
+    *
+    * @return
+    */
     public List<InstanceDiskAttachment> getDataDisks() {
         return dataDisks;
     }
 
     /**
-     * set 镜像数据盘配置列表。
-     *
-     * @param dataDisks
-     */
+    * set 镜像数据盘配置列表。
+    *
+    * @param dataDisks
+    */
     public void setDataDisks(List<InstanceDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
     }
+
 
     /**
      * get 创建云盘系统盘所使用的快照ID。系统盘类型为本地盘的镜像，此参数为空。
@@ -489,6 +506,7 @@ public class Image  implements java.io.Serializable {
     public void setSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
     }
+
 
     /**
      * get 镜像支持的系统盘类型。取值范围：
@@ -514,6 +532,7 @@ public class Image  implements java.io.Serializable {
         this.rootDeviceType = rootDeviceType;
     }
 
+
     /**
      * get 镜像复制和转换时的进度，仅显示数值，单位为百分比。
      *
@@ -531,6 +550,7 @@ public class Image  implements java.io.Serializable {
     public void setProgress(String progress) {
         this.progress = progress;
     }
+
 
     /**
      * get 镜像的上下线状态。&#x60;offline&#x3D;true&#x60; 的镜像不再允许创建云主机。
@@ -550,6 +570,7 @@ public class Image  implements java.io.Serializable {
         this.offline = offline;
     }
 
+
     /**
      * get 已废弃。
      *
@@ -567,6 +588,7 @@ public class Image  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 是否来自导入镜像。
@@ -587,6 +609,7 @@ public class Image  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 镜像ID。
      *
@@ -597,6 +620,7 @@ public class Image  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像名称。
      *
@@ -606,6 +630,7 @@ public class Image  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 镜像的操作系统平台名称。
@@ -619,6 +644,7 @@ public class Image  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像的操作系统版本。
      *
@@ -628,6 +654,7 @@ public class Image  implements java.io.Serializable {
         this.osVersion = osVersion;
         return this;
     }
+
 
     /**
      * set 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
@@ -639,6 +666,7 @@ public class Image  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像系统盘大小。
      *
@@ -648,6 +676,7 @@ public class Image  implements java.io.Serializable {
         this.systemDiskSizeGB = systemDiskSizeGB;
         return this;
     }
+
 
     /**
      * set 镜像来源，取值范围：
@@ -665,6 +694,7 @@ public class Image  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像的操作系统类型。取值范围：&#x60;windows、linux&#x60;。
      *
@@ -674,6 +704,7 @@ public class Image  implements java.io.Serializable {
         this.osType = osType;
         return this;
     }
+
 
     /**
      * set 镜像状态。参考 [镜像状态](https://docs.jdcloud.com/virtual-machines/api/image_status)。
@@ -685,6 +716,7 @@ public class Image  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像的创建时间。
      *
@@ -694,6 +726,7 @@ public class Image  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 镜像文件的实际大小。
@@ -705,6 +738,7 @@ public class Image  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像描述。
      *
@@ -715,6 +749,7 @@ public class Image  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 该镜像拥有者的用户PIN。
      *
@@ -724,6 +759,7 @@ public class Image  implements java.io.Serializable {
         this.ownerPin = ownerPin;
         return this;
     }
+
 
     /**
      * set 镜像的使用权限。取值范围：
@@ -739,6 +775,7 @@ public class Image  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像系统盘配置。
      *
@@ -749,15 +786,17 @@ public class Image  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 镜像数据盘配置列表。
-     *
-     * @param dataDisks
-     */
+    * set 镜像数据盘配置列表。
+    *
+    * @param dataDisks
+    */
     public Image dataDisks(List<InstanceDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
         return this;
     }
+
 
     /**
      * set 创建云盘系统盘所使用的快照ID。系统盘类型为本地盘的镜像，此参数为空。
@@ -768,6 +807,7 @@ public class Image  implements java.io.Serializable {
         this.snapshotId = snapshotId;
         return this;
     }
+
 
     /**
      * set 镜像支持的系统盘类型。取值范围：
@@ -782,6 +822,7 @@ public class Image  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像复制和转换时的进度，仅显示数值，单位为百分比。
      *
@@ -791,6 +832,7 @@ public class Image  implements java.io.Serializable {
         this.progress = progress;
         return this;
     }
+
 
     /**
      * set 镜像的上下线状态。&#x60;offline&#x3D;true&#x60; 的镜像不再允许创建云主机。
@@ -802,6 +844,7 @@ public class Image  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 已废弃。
      *
@@ -812,6 +855,7 @@ public class Image  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否来自导入镜像。
      *
@@ -821,6 +865,7 @@ public class Image  implements java.io.Serializable {
         this.imported = imported;
         return this;
     }
+
 
 
     /**
@@ -834,5 +879,4 @@ public class Image  implements java.io.Serializable {
         }
         this.dataDisks.add(dataDisk);
     }
-
 }

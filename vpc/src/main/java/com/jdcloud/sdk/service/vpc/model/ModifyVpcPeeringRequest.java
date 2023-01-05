@@ -59,6 +59,7 @@ public class ModifyVpcPeeringRequest extends JdcloudRequest implements java.io.S
     private String vpcPeeringId;
 
 
+
     /**
      * get VpcPeering的名字,不为空。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -76,6 +77,7 @@ public class ModifyVpcPeeringRequest extends JdcloudRequest implements java.io.S
     public void setVpcPeeringName(String vpcPeeringName) {
         this.vpcPeeringName = vpcPeeringName;
     }
+
 
     /**
      * get VpcPeering 描述，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
@@ -95,6 +97,7 @@ public class ModifyVpcPeeringRequest extends JdcloudRequest implements java.io.S
         this.description = description;
     }
 
+
     /**
      * get Region ID
      *
@@ -112,6 +115,7 @@ public class ModifyVpcPeeringRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get vpcPeeringId ID
@@ -132,6 +136,7 @@ public class ModifyVpcPeeringRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set VpcPeering的名字,不为空。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -141,6 +146,7 @@ public class ModifyVpcPeeringRequest extends JdcloudRequest implements java.io.S
         this.vpcPeeringName = vpcPeeringName;
         return this;
     }
+
 
     /**
      * set VpcPeering 描述，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
@@ -152,6 +158,7 @@ public class ModifyVpcPeeringRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -161,6 +168,7 @@ public class ModifyVpcPeeringRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set vpcPeeringId ID

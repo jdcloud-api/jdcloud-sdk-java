@@ -42,8 +42,8 @@ public class AddNetworkSecurityGroupRulesRequest extends JdcloudRequest implemen
      * Required:true
      */
     @Required
+    
     private List<AddSecurityGroupRules> networkSecurityGroupRuleSpecs;
-
     /**
      * Region ID
      * Required:true
@@ -59,23 +59,25 @@ public class AddNetworkSecurityGroupRulesRequest extends JdcloudRequest implemen
     private String networkSecurityGroupId;
 
 
+
     /**
-     * get 安全组规则信息
-     *
-     * @return
-     */
+    * get 安全组规则信息
+    *
+    * @return
+    */
     public List<AddSecurityGroupRules> getNetworkSecurityGroupRuleSpecs() {
         return networkSecurityGroupRuleSpecs;
     }
 
     /**
-     * set 安全组规则信息
-     *
-     * @param networkSecurityGroupRuleSpecs
-     */
+    * set 安全组规则信息
+    *
+    * @param networkSecurityGroupRuleSpecs
+    */
     public void setNetworkSecurityGroupRuleSpecs(List<AddSecurityGroupRules> networkSecurityGroupRuleSpecs) {
         this.networkSecurityGroupRuleSpecs = networkSecurityGroupRuleSpecs;
     }
+
 
     /**
      * get Region ID
@@ -94,6 +96,7 @@ public class AddNetworkSecurityGroupRulesRequest extends JdcloudRequest implemen
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get NetworkSecurityGroup ID
@@ -114,15 +117,17 @@ public class AddNetworkSecurityGroupRulesRequest extends JdcloudRequest implemen
     }
 
 
+
     /**
-     * set 安全组规则信息
-     *
-     * @param networkSecurityGroupRuleSpecs
-     */
+    * set 安全组规则信息
+    *
+    * @param networkSecurityGroupRuleSpecs
+    */
     public AddNetworkSecurityGroupRulesRequest networkSecurityGroupRuleSpecs(List<AddSecurityGroupRules> networkSecurityGroupRuleSpecs) {
         this.networkSecurityGroupRuleSpecs = networkSecurityGroupRuleSpecs;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -134,6 +139,7 @@ public class AddNetworkSecurityGroupRulesRequest extends JdcloudRequest implemen
         return this;
     }
 
+
     /**
      * set NetworkSecurityGroup ID
      *
@@ -143,6 +149,7 @@ public class AddNetworkSecurityGroupRulesRequest extends JdcloudRequest implemen
         this.networkSecurityGroupId = networkSecurityGroupId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class AddNetworkSecurityGroupRulesRequest extends JdcloudRequest implemen
         }
         this.networkSecurityGroupRuleSpecs.add(networkSecurityGroupRuleSpec);
     }
-
 }

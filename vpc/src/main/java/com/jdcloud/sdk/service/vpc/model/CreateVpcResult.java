@@ -39,6 +39,7 @@ public class CreateVpcResult extends JdcloudResult implements java.io.Serializab
     private String vpcId;
 
 
+
     /**
      * get 私有网络ID
      *
@@ -56,6 +57,7 @@ public class CreateVpcResult extends JdcloudResult implements java.io.Serializab
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
 
     /**

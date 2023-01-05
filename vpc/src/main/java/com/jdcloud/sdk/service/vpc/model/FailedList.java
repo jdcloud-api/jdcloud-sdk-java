@@ -43,6 +43,7 @@ public class FailedList  implements java.io.Serializable {
     private String reason;
 
 
+
     /**
      * get 失败ipaddress
      *
@@ -60,6 +61,7 @@ public class FailedList  implements java.io.Serializable {
     public void setIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
     }
+
 
     /**
      * get 失败原因
@@ -80,6 +82,7 @@ public class FailedList  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 失败ipaddress
      *
@@ -89,6 +92,7 @@ public class FailedList  implements java.io.Serializable {
         this.ipAddress = ipAddress;
         return this;
     }
+
 
     /**
      * set 失败原因

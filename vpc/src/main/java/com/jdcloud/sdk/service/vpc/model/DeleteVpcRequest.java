@@ -49,6 +49,7 @@ public class DeleteVpcRequest extends JdcloudRequest implements java.io.Serializ
     private String vpcId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DeleteVpcRequest extends JdcloudRequest implements java.io.Serializ
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Vpc ID
@@ -86,6 +88,7 @@ public class DeleteVpcRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DeleteVpcRequest extends JdcloudRequest implements java.io.Serializ
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Vpc ID

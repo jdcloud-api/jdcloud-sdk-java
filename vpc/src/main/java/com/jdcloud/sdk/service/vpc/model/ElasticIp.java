@@ -71,7 +71,7 @@ public class ElasticIp  implements java.io.Serializable {
     private String instanceId;
 
     /**
-     * 实例类型,取值为：compute、lb、container、pod
+     * 实例类型,取值为：compute、lb、container、pod、natgw
      */
     private String instanceType;
 
@@ -93,8 +93,8 @@ public class ElasticIp  implements java.io.Serializable {
     /**
      * Tag信息
      */
+    
     private List<Tag> tags;
-
     /**
      * 弹性公网IP的IP类型，取值：standard(标准弹性IP)、edge(边缘弹性IP)
      */
@@ -111,9 +111,15 @@ public class ElasticIp  implements java.io.Serializable {
     private String status;
 
     /**
+     * IP是否变更，取值：UP（正常使用）、DOWN（停止使用）、PROCESSING（配置变更中）
+     */
+    private String state;
+
+    /**
      * 资源所属资源组ID
      */
     private String resourceGroupId;
+
 
 
     /**
@@ -134,6 +140,7 @@ public class ElasticIp  implements java.io.Serializable {
         this.elasticIpId = elasticIpId;
     }
 
+
     /**
      * get 弹性公网IP的地址
      *
@@ -151,6 +158,7 @@ public class ElasticIp  implements java.io.Serializable {
     public void setElasticIpAddress(String elasticIpAddress) {
         this.elasticIpAddress = elasticIpAddress;
     }
+
 
     /**
      * get 弹性公网IP的限速（单位：Mbps)
@@ -170,6 +178,7 @@ public class ElasticIp  implements java.io.Serializable {
         this.bandwidthMbps = bandwidthMbps;
     }
 
+
     /**
      * get 弹性公网IP的线路，标准公网IP的线路、取值为bgp或no_bgp；边缘公网IP的线路、可通过describeEdgeIpProviders接口获取
      *
@@ -187,6 +196,7 @@ public class ElasticIp  implements java.io.Serializable {
     public void setProvider(String provider) {
         this.provider = provider;
     }
+
 
     /**
      * get 私有IP的IPV4地址
@@ -206,6 +216,7 @@ public class ElasticIp  implements java.io.Serializable {
         this.privateIpAddress = privateIpAddress;
     }
 
+
     /**
      * get 配置弹性网卡Id
      *
@@ -223,6 +234,7 @@ public class ElasticIp  implements java.io.Serializable {
     public void setNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
     }
+
 
     /**
      * get 实例Id
@@ -242,8 +254,9 @@ public class ElasticIp  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+
     /**
-     * get 实例类型,取值为：compute、lb、container、pod
+     * get 实例类型,取值为：compute、lb、container、pod、natgw
      *
      * @return
      */
@@ -252,13 +265,14 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型,取值为：compute、lb、container、pod
+     * set 实例类型,取值为：compute、lb、container、pod、natgw
      *
      * @param instanceType
      */
     public void setInstanceType(String instanceType) {
         this.instanceType = instanceType;
     }
+
 
     /**
      * get 计费配置
@@ -278,6 +292,7 @@ public class ElasticIp  implements java.io.Serializable {
         this.charge = charge;
     }
 
+
     /**
      * get 弹性公网IP的创建时间
      *
@@ -295,6 +310,7 @@ public class ElasticIp  implements java.io.Serializable {
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
+
 
     /**
      * get 弹性公网IP的可用区属性，如果为空，表示全可用区
@@ -314,23 +330,25 @@ public class ElasticIp  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
-     * get Tag信息
-     *
-     * @return
-     */
+    * get Tag信息
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set Tag信息
-     *
-     * @param tags
-     */
+    * set Tag信息
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
 
     /**
      * get 弹性公网IP的IP类型，取值：standard(标准弹性IP)、edge(边缘弹性IP)
@@ -350,6 +368,7 @@ public class ElasticIp  implements java.io.Serializable {
         this.ipType = ipType;
     }
 
+
     /**
      * get 加入的共享带宽包ID，如果没有加入共享带宽包该值为空
      *
@@ -368,6 +387,7 @@ public class ElasticIp  implements java.io.Serializable {
         this.bandwidthPackageId = bandwidthPackageId;
     }
 
+
     /**
      * get IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）
      *
@@ -385,6 +405,26 @@ public class ElasticIp  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
+
+    /**
+     * get IP是否变更，取值：UP（正常使用）、DOWN（停止使用）、PROCESSING（配置变更中）
+     *
+     * @return
+     */
+    public String getState() {
+        return state;
+    }
+
+    /**
+     * set IP是否变更，取值：UP（正常使用）、DOWN（停止使用）、PROCESSING（配置变更中）
+     *
+     * @param state
+     */
+    public void setState(String state) {
+        this.state = state;
+    }
+
 
     /**
      * get 资源所属资源组ID
@@ -405,6 +445,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 弹性公网IP的Id
      *
@@ -414,6 +455,7 @@ public class ElasticIp  implements java.io.Serializable {
         this.elasticIpId = elasticIpId;
         return this;
     }
+
 
     /**
      * set 弹性公网IP的地址
@@ -425,6 +467,7 @@ public class ElasticIp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 弹性公网IP的限速（单位：Mbps)
      *
@@ -434,6 +477,7 @@ public class ElasticIp  implements java.io.Serializable {
         this.bandwidthMbps = bandwidthMbps;
         return this;
     }
+
 
     /**
      * set 弹性公网IP的线路，标准公网IP的线路、取值为bgp或no_bgp；边缘公网IP的线路、可通过describeEdgeIpProviders接口获取
@@ -445,6 +489,7 @@ public class ElasticIp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 私有IP的IPV4地址
      *
@@ -454,6 +499,7 @@ public class ElasticIp  implements java.io.Serializable {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
+
 
     /**
      * set 配置弹性网卡Id
@@ -465,6 +511,7 @@ public class ElasticIp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例Id
      *
@@ -475,8 +522,9 @@ public class ElasticIp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 实例类型,取值为：compute、lb、container、pod
+     * set 实例类型,取值为：compute、lb、container、pod、natgw
      *
      * @param instanceType
      */
@@ -484,6 +532,7 @@ public class ElasticIp  implements java.io.Serializable {
         this.instanceType = instanceType;
         return this;
     }
+
 
     /**
      * set 计费配置
@@ -495,6 +544,7 @@ public class ElasticIp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 弹性公网IP的创建时间
      *
@@ -504,6 +554,7 @@ public class ElasticIp  implements java.io.Serializable {
         this.createdTime = createdTime;
         return this;
     }
+
 
     /**
      * set 弹性公网IP的可用区属性，如果为空，表示全可用区
@@ -515,15 +566,17 @@ public class ElasticIp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set Tag信息
-     *
-     * @param tags
-     */
+    * set Tag信息
+    *
+    * @param tags
+    */
     public ElasticIp tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
 
     /**
      * set 弹性公网IP的IP类型，取值：standard(标准弹性IP)、edge(边缘弹性IP)
@@ -535,6 +588,7 @@ public class ElasticIp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 加入的共享带宽包ID，如果没有加入共享带宽包该值为空
      *
@@ -544,6 +598,7 @@ public class ElasticIp  implements java.io.Serializable {
         this.bandwidthPackageId = bandwidthPackageId;
         return this;
     }
+
 
     /**
      * set IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）
@@ -555,6 +610,18 @@ public class ElasticIp  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set IP是否变更，取值：UP（正常使用）、DOWN（停止使用）、PROCESSING（配置变更中）
+     *
+     * @param state
+     */
+    public ElasticIp state(String state) {
+        this.state = state;
+        return this;
+    }
+
+
     /**
      * set 资源所属资源组ID
      *
@@ -564,6 +631,7 @@ public class ElasticIp  implements java.io.Serializable {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
+
 
 
     /**
@@ -577,5 +645,4 @@ public class ElasticIp  implements java.io.Serializable {
         }
         this.tags.add(tag);
     }
-
 }

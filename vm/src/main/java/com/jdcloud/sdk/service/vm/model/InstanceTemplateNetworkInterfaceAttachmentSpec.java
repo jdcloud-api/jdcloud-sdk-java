@@ -57,6 +57,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
     private InstanceTemplateNetworkInterfaceSpec networkInterface;
 
 
+
     /**
      * get 网卡设备Index。创建实例时此参数无须指定且指定无效。
 对于主网卡默认Index为1。
@@ -78,6 +79,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
     public void setDeviceIndex(Integer deviceIndex) {
         this.deviceIndex = deviceIndex;
     }
+
 
     /**
      * get 是否随实例一起删除。
@@ -105,6 +107,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
         this.autoDelete = autoDelete;
     }
 
+
     /**
      * get 网卡设备详细配置。
      *
@@ -124,6 +127,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
     }
 
 
+
     /**
      * set 网卡设备Index。创建实例时此参数无须指定且指定无效。
 对于主网卡默认Index为1。
@@ -135,6 +139,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
         this.deviceIndex = deviceIndex;
         return this;
     }
+
 
     /**
      * set 是否随实例一起删除。
@@ -149,6 +154,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
         this.autoDelete = autoDelete;
         return this;
     }
+
 
     /**
      * set 网卡设备详细配置。

@@ -47,37 +47,40 @@ public class DescribeImageConstraintsBatchResult extends JdcloudResult implement
     /**
      * imageConstraints
      */
+    
     private List<ImageConstraint> imageConstraints;
 
 
     /**
-     * get imageConstraints
-     *
-     * @return
-     */
+    * get imageConstraints
+    *
+    * @return
+    */
     public List<ImageConstraint> getImageConstraints() {
         return imageConstraints;
     }
 
     /**
-     * set imageConstraints
-     *
-     * @param imageConstraints
-     */
+    * set imageConstraints
+    *
+    * @param imageConstraints
+    */
     public void setImageConstraints(List<ImageConstraint> imageConstraints) {
         this.imageConstraints = imageConstraints;
     }
 
 
+
     /**
-     * set imageConstraints
-     *
-     * @param imageConstraints
-     */
+    * set imageConstraints
+    *
+    * @param imageConstraints
+    */
     public DescribeImageConstraintsBatchResult imageConstraints(List<ImageConstraint> imageConstraints) {
         this.imageConstraints = imageConstraints;
         return this;
     }
+
 
 
     /**
@@ -91,5 +94,4 @@ public class DescribeImageConstraintsBatchResult extends JdcloudResult implement
         }
         this.imageConstraints.add(imageConstraint);
     }
-
 }

@@ -44,6 +44,7 @@ public class DescribeSnapshotPolicyDiskRelationsResult extends JdcloudResult imp
     /**
      * relationResults
      */
+    
     private List<DescSnapshotRelationsData> relationResults;
 
 
@@ -65,23 +66,25 @@ public class DescribeSnapshotPolicyDiskRelationsResult extends JdcloudResult imp
         this.totalCount = totalCount;
     }
 
+
     /**
-     * get relationResults
-     *
-     * @return
-     */
+    * get relationResults
+    *
+    * @return
+    */
     public List<DescSnapshotRelationsData> getRelationResults() {
         return relationResults;
     }
 
     /**
-     * set relationResults
-     *
-     * @param relationResults
-     */
+    * set relationResults
+    *
+    * @param relationResults
+    */
     public void setRelationResults(List<DescSnapshotRelationsData> relationResults) {
         this.relationResults = relationResults;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class DescribeSnapshotPolicyDiskRelationsResult extends JdcloudResult imp
         return this;
     }
 
+
     /**
-     * set relationResults
-     *
-     * @param relationResults
-     */
+    * set relationResults
+    *
+    * @param relationResults
+    */
     public DescribeSnapshotPolicyDiskRelationsResult relationResults(List<DescSnapshotRelationsData> relationResults) {
         this.relationResults = relationResults;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeSnapshotPolicyDiskRelationsResult extends JdcloudResult imp
         }
         this.relationResults.add(relationResult);
     }
-
 }

@@ -48,37 +48,40 @@ public class CopyImagesResult extends JdcloudResult implements java.io.Serializa
     /**
      * copyImages
      */
+    
     private List<CopyImage> copyImages;
 
 
     /**
-     * get copyImages
-     *
-     * @return
-     */
+    * get copyImages
+    *
+    * @return
+    */
     public List<CopyImage> getCopyImages() {
         return copyImages;
     }
 
     /**
-     * set copyImages
-     *
-     * @param copyImages
-     */
+    * set copyImages
+    *
+    * @param copyImages
+    */
     public void setCopyImages(List<CopyImage> copyImages) {
         this.copyImages = copyImages;
     }
 
 
+
     /**
-     * set copyImages
-     *
-     * @param copyImages
-     */
+    * set copyImages
+    *
+    * @param copyImages
+    */
     public CopyImagesResult copyImages(List<CopyImage> copyImages) {
         this.copyImages = copyImages;
         return this;
     }
+
 
 
     /**
@@ -92,5 +95,4 @@ public class CopyImagesResult extends JdcloudResult implements java.io.Serializa
         }
         this.copyImages.add(copyImage);
     }
-
 }

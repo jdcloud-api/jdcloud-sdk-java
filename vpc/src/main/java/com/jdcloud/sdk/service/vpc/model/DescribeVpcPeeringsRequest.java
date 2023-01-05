@@ -56,14 +56,15 @@ azType - vpcPeering本端VPC az类型，取值：all(全部类型)，standard(�
 azs - vpcPeering本端VPC可用区，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -84,6 +85,7 @@ azs - vpcPeering本端VPC可用区，支持多个
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -102,35 +104,37 @@ azs - vpcPeering本端VPC可用区，支持多个
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get vpcPeeringIds - vpcPeering ID，支持多个
+    * get vpcPeeringIds - vpcPeering ID，支持多个
 vpcPeeringNames - vpcPeering名称列表，支持多个
 vpcId	- vpcPeering本端Vpc Id，支持单个
 remoteVpcId - vpcPeering对端Vpc Id，支持单个
 azType - vpcPeering本端VPC az类型，取值：all(全部类型)，standard(标准VPC)，edge(边缘VPC)，默认standard ，支持单个
 azs - vpcPeering本端VPC可用区，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set vpcPeeringIds - vpcPeering ID，支持多个
+    * set vpcPeeringIds - vpcPeering ID，支持多个
 vpcPeeringNames - vpcPeering名称列表，支持多个
 vpcId	- vpcPeering本端Vpc Id，支持单个
 remoteVpcId - vpcPeering对端Vpc Id，支持单个
 azType - vpcPeering本端VPC az类型，取值：all(全部类型)，standard(标准VPC)，edge(边缘VPC)，默认standard ，支持单个
 azs - vpcPeering本端VPC可用区，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get Region ID
@@ -151,6 +155,7 @@ azs - vpcPeering本端VPC可用区，支持多个
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
      *
@@ -160,6 +165,7 @@ azs - vpcPeering本端VPC可用区，支持多个
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
@@ -171,21 +177,23 @@ azs - vpcPeering本端VPC可用区，支持多个
         return this;
     }
 
+
     /**
-     * set vpcPeeringIds - vpcPeering ID，支持多个
+    * set vpcPeeringIds - vpcPeering ID，支持多个
 vpcPeeringNames - vpcPeering名称列表，支持多个
 vpcId	- vpcPeering本端Vpc Id，支持单个
 remoteVpcId - vpcPeering对端Vpc Id，支持单个
 azType - vpcPeering本端VPC az类型，取值：all(全部类型)，standard(标准VPC)，edge(边缘VPC)，默认standard ，支持单个
 azs - vpcPeering本端VPC可用区，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeVpcPeeringsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -196,6 +204,7 @@ azs - vpcPeering本端VPC可用区，支持多个
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -215,5 +224,4 @@ azs - vpcPeering本端VPC可用区，支持多个
         }
         this.filters.add(filter);
     }
-
 }

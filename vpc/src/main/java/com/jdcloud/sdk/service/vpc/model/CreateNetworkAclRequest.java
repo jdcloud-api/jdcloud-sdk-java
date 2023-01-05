@@ -61,6 +61,7 @@ public class CreateNetworkAclRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
      * get 私有网络id
      *
@@ -78,6 +79,7 @@ public class CreateNetworkAclRequest extends JdcloudRequest implements java.io.S
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
     /**
      * get networkAcl名称
@@ -97,6 +99,7 @@ public class CreateNetworkAclRequest extends JdcloudRequest implements java.io.S
         this.networkAclName = networkAclName;
     }
 
+
     /**
      * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -114,6 +117,7 @@ public class CreateNetworkAclRequest extends JdcloudRequest implements java.io.S
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get Region ID
@@ -134,6 +138,7 @@ public class CreateNetworkAclRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 私有网络id
      *
@@ -143,6 +148,7 @@ public class CreateNetworkAclRequest extends JdcloudRequest implements java.io.S
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set networkAcl名称
@@ -154,6 +160,7 @@ public class CreateNetworkAclRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -163,6 +170,7 @@ public class CreateNetworkAclRequest extends JdcloudRequest implements java.io.S
         this.description = description;
         return this;
     }
+
 
     /**
      * set Region ID

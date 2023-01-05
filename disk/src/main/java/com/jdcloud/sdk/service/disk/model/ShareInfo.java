@@ -43,6 +43,7 @@ public class ShareInfo  implements java.io.Serializable {
     private String shareTime;
 
 
+
     /**
      * get 被共享快照的用户的pin
      *
@@ -60,6 +61,7 @@ public class ShareInfo  implements java.io.Serializable {
     public void setShareTo(String shareTo) {
         this.shareTo = shareTo;
     }
+
 
     /**
      * get 共享时间
@@ -80,6 +82,7 @@ public class ShareInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 被共享快照的用户的pin
      *
@@ -89,6 +92,7 @@ public class ShareInfo  implements java.io.Serializable {
         this.shareTo = shareTo;
         return this;
     }
+
 
     /**
      * set 共享时间

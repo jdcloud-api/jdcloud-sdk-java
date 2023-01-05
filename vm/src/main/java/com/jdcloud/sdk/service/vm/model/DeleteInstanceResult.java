@@ -37,7 +37,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 - 不可以删除没有计费信息的云主机，该情况只限于创建过程中出现了异常。
 - 云主机状态必须为运行 &#x60;running&#x60;、停止 &#x60;stopped&#x60;、错误 &#x60;error&#x60;、状态，同时云主机没有正在进行中的任务才可以删除。
 - 如果云主机中挂载的数据盘为按配置计费的云硬盘且 &#x60;AutoDelete&#x60; 属性为 &#x60;true&#x60;，那么数据盘会随云主机一起删除。
-- 云主机中绑定的弹性公网IP不会随云主机一起删除，如果不需要保留，需要单独进行删除，需要使用者注意。
+- 云主机中绑定的弹性公网IP可以选择是否随云主机一起删除。
 - 如出现不能删除的情况请 [提交工单](https://ticket.jdcloud.com/applyorder/submit) 或联系京东云客服。
  [MFA enabled]
  */

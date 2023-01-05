@@ -40,37 +40,40 @@ public class AddRouteTableRulesSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<AddRouteTableRules> routeTableRuleSpecs;
 
 
     /**
-     * get 路由表规则信息
-     *
-     * @return
-     */
+    * get 路由表规则信息
+    *
+    * @return
+    */
     public List<AddRouteTableRules> getRouteTableRuleSpecs() {
         return routeTableRuleSpecs;
     }
 
     /**
-     * set 路由表规则信息
-     *
-     * @param routeTableRuleSpecs
-     */
+    * set 路由表规则信息
+    *
+    * @param routeTableRuleSpecs
+    */
     public void setRouteTableRuleSpecs(List<AddRouteTableRules> routeTableRuleSpecs) {
         this.routeTableRuleSpecs = routeTableRuleSpecs;
     }
 
 
+
     /**
-     * set 路由表规则信息
-     *
-     * @param routeTableRuleSpecs
-     */
+    * set 路由表规则信息
+    *
+    * @param routeTableRuleSpecs
+    */
     public AddRouteTableRulesSpec routeTableRuleSpecs(List<AddRouteTableRules> routeTableRuleSpecs) {
         this.routeTableRuleSpecs = routeTableRuleSpecs;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class AddRouteTableRulesSpec  implements java.io.Serializable {
         }
         this.routeTableRuleSpecs.add(routeTableRuleSpec);
     }
-
 }

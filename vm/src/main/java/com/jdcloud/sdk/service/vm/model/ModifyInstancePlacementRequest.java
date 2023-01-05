@@ -82,6 +82,7 @@ public class ModifyInstancePlacementRequest extends JdcloudRequest implements ja
     private String instanceId;
 
 
+
     /**
      * get 高可用组Id，必填项。
 可查询 [DescribeAgs](https://docs.jdcloud.com/cn/availability-group/api/describeags) 接口获得高可用组信息。
@@ -104,6 +105,7 @@ public class ModifyInstancePlacementRequest extends JdcloudRequest implements ja
         this.agId = agId;
     }
 
+
     /**
      * get 是否强制均衡，默认 false
 
@@ -123,6 +125,7 @@ public class ModifyInstancePlacementRequest extends JdcloudRequest implements ja
     public void setBalance(Boolean balance) {
         this.balance = balance;
     }
+
 
     /**
      * get 是否确认清除本地盘数据，默认 false
@@ -144,6 +147,7 @@ public class ModifyInstancePlacementRequest extends JdcloudRequest implements ja
         this.clearLocalDisk = clearLocalDisk;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -161,6 +165,7 @@ public class ModifyInstancePlacementRequest extends JdcloudRequest implements ja
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -181,6 +186,7 @@ public class ModifyInstancePlacementRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 高可用组Id，必填项。
 可查询 [DescribeAgs](https://docs.jdcloud.com/cn/availability-group/api/describeags) 接口获得高可用组信息。
@@ -193,6 +199,7 @@ public class ModifyInstancePlacementRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 是否强制均衡，默认 false
 
@@ -203,6 +210,7 @@ public class ModifyInstancePlacementRequest extends JdcloudRequest implements ja
         this.balance = balance;
         return this;
     }
+
 
     /**
      * set 是否确认清除本地盘数据，默认 false
@@ -215,6 +223,7 @@ public class ModifyInstancePlacementRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -224,6 +233,7 @@ public class ModifyInstancePlacementRequest extends JdcloudRequest implements ja
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云主机ID。

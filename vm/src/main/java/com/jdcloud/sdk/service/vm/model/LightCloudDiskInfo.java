@@ -48,6 +48,7 @@ public class LightCloudDiskInfo  implements java.io.Serializable {
     private Integer diskSizeGB;
 
 
+
     /**
      * get 云硬盘ID。
      *
@@ -66,6 +67,7 @@ public class LightCloudDiskInfo  implements java.io.Serializable {
         this.diskId = diskId;
     }
 
+
     /**
      * get 云硬盘类型。取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      *
@@ -83,6 +85,7 @@ public class LightCloudDiskInfo  implements java.io.Serializable {
     public void setDiskType(String diskType) {
         this.diskType = diskType;
     }
+
 
     /**
      * get 云硬盘大小，单位为 GiB。
@@ -103,6 +106,7 @@ public class LightCloudDiskInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云硬盘ID。
      *
@@ -113,6 +117,7 @@ public class LightCloudDiskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云硬盘类型。取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      *
@@ -122,6 +127,7 @@ public class LightCloudDiskInfo  implements java.io.Serializable {
         this.diskType = diskType;
         return this;
     }
+
 
     /**
      * set 云硬盘大小，单位为 GiB。

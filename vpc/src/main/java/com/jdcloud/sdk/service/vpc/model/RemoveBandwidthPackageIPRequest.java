@@ -50,8 +50,8 @@ public class RemoveBandwidthPackageIPRequest extends JdcloudRequest implements j
      * Required:true
      */
     @Required
+    
     private List<RemoveBandwidthPackageIPSpec> bandwidthPackageIPSpecs;
-
     /**
      * Region ID
      * Required:true
@@ -67,23 +67,25 @@ public class RemoveBandwidthPackageIPRequest extends JdcloudRequest implements j
     private String bandwidthPackageId;
 
 
+
     /**
-     * get 公网IP列表
-     *
-     * @return
-     */
+    * get 公网IP列表
+    *
+    * @return
+    */
     public List<RemoveBandwidthPackageIPSpec> getBandwidthPackageIPSpecs() {
         return bandwidthPackageIPSpecs;
     }
 
     /**
-     * set 公网IP列表
-     *
-     * @param bandwidthPackageIPSpecs
-     */
+    * set 公网IP列表
+    *
+    * @param bandwidthPackageIPSpecs
+    */
     public void setBandwidthPackageIPSpecs(List<RemoveBandwidthPackageIPSpec> bandwidthPackageIPSpecs) {
         this.bandwidthPackageIPSpecs = bandwidthPackageIPSpecs;
     }
+
 
     /**
      * get Region ID
@@ -102,6 +104,7 @@ public class RemoveBandwidthPackageIPRequest extends JdcloudRequest implements j
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 共享带宽包ID
@@ -122,15 +125,17 @@ public class RemoveBandwidthPackageIPRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
-     * set 公网IP列表
-     *
-     * @param bandwidthPackageIPSpecs
-     */
+    * set 公网IP列表
+    *
+    * @param bandwidthPackageIPSpecs
+    */
     public RemoveBandwidthPackageIPRequest bandwidthPackageIPSpecs(List<RemoveBandwidthPackageIPSpec> bandwidthPackageIPSpecs) {
         this.bandwidthPackageIPSpecs = bandwidthPackageIPSpecs;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -142,6 +147,7 @@ public class RemoveBandwidthPackageIPRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 共享带宽包ID
      *
@@ -151,6 +157,7 @@ public class RemoveBandwidthPackageIPRequest extends JdcloudRequest implements j
         this.bandwidthPackageId = bandwidthPackageId;
         return this;
     }
+
 
 
     /**
@@ -164,5 +171,4 @@ public class RemoveBandwidthPackageIPRequest extends JdcloudRequest implements j
         }
         this.bandwidthPackageIPSpecs.add(bandwidthPackageIPSpec);
     }
-
 }

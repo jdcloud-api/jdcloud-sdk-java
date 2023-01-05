@@ -49,6 +49,7 @@ public class DescribeNetworkInterfaceRequest extends JdcloudRequest implements j
     private String networkInterfaceId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DescribeNetworkInterfaceRequest extends JdcloudRequest implements j
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get networkInterface ID
@@ -86,6 +88,7 @@ public class DescribeNetworkInterfaceRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DescribeNetworkInterfaceRequest extends JdcloudRequest implements j
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set networkInterface ID

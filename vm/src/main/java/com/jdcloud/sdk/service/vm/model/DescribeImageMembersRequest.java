@@ -56,6 +56,7 @@ public class DescribeImageMembersRequest extends JdcloudRequest implements java.
     private String imageId;
 
 
+
     /**
      * get 地域ID。
      *
@@ -73,6 +74,7 @@ public class DescribeImageMembersRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 镜像ID。
@@ -93,6 +95,7 @@ public class DescribeImageMembersRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 地域ID。
      *
@@ -102,6 +105,7 @@ public class DescribeImageMembersRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 镜像ID。

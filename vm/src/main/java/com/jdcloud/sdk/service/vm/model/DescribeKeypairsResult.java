@@ -47,31 +47,33 @@ public class DescribeKeypairsResult extends JdcloudResult implements java.io.Ser
     /**
      * keypairs
      */
+    
     private List<Keypair> keypairs;
-
     /**
      * 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      */
     private Number totalCount;
 
 
+
     /**
-     * get keypairs
-     *
-     * @return
-     */
+    * get keypairs
+    *
+    * @return
+    */
     public List<Keypair> getKeypairs() {
         return keypairs;
     }
 
     /**
-     * set keypairs
-     *
-     * @param keypairs
-     */
+    * set keypairs
+    *
+    * @param keypairs
+    */
     public void setKeypairs(List<Keypair> keypairs) {
         this.keypairs = keypairs;
     }
+
 
     /**
      * get 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
@@ -92,15 +94,17 @@ public class DescribeKeypairsResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
-     * set keypairs
-     *
-     * @param keypairs
-     */
+    * set keypairs
+    *
+    * @param keypairs
+    */
     public DescribeKeypairsResult keypairs(List<Keypair> keypairs) {
         this.keypairs = keypairs;
         return this;
     }
+
 
     /**
      * set 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
@@ -111,6 +115,7 @@ public class DescribeKeypairsResult extends JdcloudResult implements java.io.Ser
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -124,5 +129,4 @@ public class DescribeKeypairsResult extends JdcloudResult implements java.io.Ser
         }
         this.keypairs.add(keypair);
     }
-
 }

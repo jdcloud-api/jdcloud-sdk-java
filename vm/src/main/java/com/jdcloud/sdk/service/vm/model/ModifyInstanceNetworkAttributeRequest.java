@@ -50,8 +50,8 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
      * Required:true
      */
     @Required
+    
     private List<InstanceNetworkAttribute> networks;
-
     /**
      * 地域ID。
      * Required:true
@@ -67,23 +67,25 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
     private String instanceId;
 
 
+
     /**
-     * get 弹性网卡列表。
-     *
-     * @return
-     */
+    * get 弹性网卡列表。
+    *
+    * @return
+    */
     public List<InstanceNetworkAttribute> getNetworks() {
         return networks;
     }
 
     /**
-     * set 弹性网卡列表。
-     *
-     * @param networks
-     */
+    * set 弹性网卡列表。
+    *
+    * @param networks
+    */
     public void setNetworks(List<InstanceNetworkAttribute> networks) {
         this.networks = networks;
     }
+
 
     /**
      * get 地域ID。
@@ -102,6 +104,7 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -122,15 +125,17 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
     }
 
 
+
     /**
-     * set 弹性网卡列表。
-     *
-     * @param networks
-     */
+    * set 弹性网卡列表。
+    *
+    * @param networks
+    */
     public ModifyInstanceNetworkAttributeRequest networks(List<InstanceNetworkAttribute> networks) {
         this.networks = networks;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -142,6 +147,7 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
         return this;
     }
 
+
     /**
      * set 云主机ID。
      *
@@ -151,6 +157,7 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -164,5 +171,4 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
         }
         this.networks.add(network);
     }
-
 }

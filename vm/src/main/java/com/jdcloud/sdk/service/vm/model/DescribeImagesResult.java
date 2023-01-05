@@ -51,31 +51,33 @@ public class DescribeImagesResult extends JdcloudResult implements java.io.Seria
     /**
      * images
      */
+    
     private List<Image> images;
-
     /**
      * 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      */
     private Integer totalCount;
 
 
+
     /**
-     * get images
-     *
-     * @return
-     */
+    * get images
+    *
+    * @return
+    */
     public List<Image> getImages() {
         return images;
     }
 
     /**
-     * set images
-     *
-     * @param images
-     */
+    * set images
+    *
+    * @param images
+    */
     public void setImages(List<Image> images) {
         this.images = images;
     }
+
 
     /**
      * get 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
@@ -96,15 +98,17 @@ public class DescribeImagesResult extends JdcloudResult implements java.io.Seria
     }
 
 
+
     /**
-     * set images
-     *
-     * @param images
-     */
+    * set images
+    *
+    * @param images
+    */
     public DescribeImagesResult images(List<Image> images) {
         this.images = images;
         return this;
     }
+
 
     /**
      * set 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
@@ -115,6 +119,7 @@ public class DescribeImagesResult extends JdcloudResult implements java.io.Seria
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -128,5 +133,4 @@ public class DescribeImagesResult extends JdcloudResult implements java.io.Seria
         }
         this.images.add(image);
     }
-
 }

@@ -40,6 +40,7 @@ public class DescribeSnapshotResult extends JdcloudResult implements java.io.Ser
     private Snapshot snapshot;
 
 
+
     /**
      * get snapshot
      *
@@ -57,6 +58,7 @@ public class DescribeSnapshotResult extends JdcloudResult implements java.io.Ser
     public void setSnapshot(Snapshot snapshot) {
         this.snapshot = snapshot;
     }
+
 
 
     /**

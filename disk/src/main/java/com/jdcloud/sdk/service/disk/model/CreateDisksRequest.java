@@ -63,8 +63,8 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
     /**
      * 用户标签,默认为空;tag标签的限制：每个资源最多允许绑定 10 个不同的标签，同一资源每个标签“键”上只能存在1个标签“值”；标签键/值只支持中文、数字、大小写字母、空格及特殊符号_.:/&#x3D;+-@;当无tags时,reps结果返回中tagmsg为空
      */
+    
     private List<Tag> userTags;
-
     /**
      * 幂等性校验参数
      * Required:true
@@ -73,11 +73,17 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
     private String clientToken;
 
     /**
+     * 资源组ID
+     */
+    private String resourceGroupId;
+
+    /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -98,6 +104,7 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
         this.diskSpec = diskSpec;
     }
 
+
     /**
      * get 购买实例数量；取值范围：[1,100]
      *
@@ -116,23 +123,25 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
         this.maxCount = maxCount;
     }
 
+
     /**
-     * get 用户标签,默认为空;tag标签的限制：每个资源最多允许绑定 10 个不同的标签，同一资源每个标签“键”上只能存在1个标签“值”；标签键/值只支持中文、数字、大小写字母、空格及特殊符号_.:/&#x3D;+-@;当无tags时,reps结果返回中tagmsg为空
-     *
-     * @return
-     */
+    * get 用户标签,默认为空;tag标签的限制：每个资源最多允许绑定 10 个不同的标签，同一资源每个标签“键”上只能存在1个标签“值”；标签键/值只支持中文、数字、大小写字母、空格及特殊符号_.:/&#x3D;+-@;当无tags时,reps结果返回中tagmsg为空
+    *
+    * @return
+    */
     public List<Tag> getUserTags() {
         return userTags;
     }
 
     /**
-     * set 用户标签,默认为空;tag标签的限制：每个资源最多允许绑定 10 个不同的标签，同一资源每个标签“键”上只能存在1个标签“值”；标签键/值只支持中文、数字、大小写字母、空格及特殊符号_.:/&#x3D;+-@;当无tags时,reps结果返回中tagmsg为空
-     *
-     * @param userTags
-     */
+    * set 用户标签,默认为空;tag标签的限制：每个资源最多允许绑定 10 个不同的标签，同一资源每个标签“键”上只能存在1个标签“值”；标签键/值只支持中文、数字、大小写字母、空格及特殊符号_.:/&#x3D;+-@;当无tags时,reps结果返回中tagmsg为空
+    *
+    * @param userTags
+    */
     public void setUserTags(List<Tag> userTags) {
         this.userTags = userTags;
     }
+
 
     /**
      * get 幂等性校验参数
@@ -151,6 +160,26 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
     public void setClientToken(String clientToken) {
         this.clientToken = clientToken;
     }
+
+
+    /**
+     * get 资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
 
     /**
      * get 地域ID
@@ -171,6 +200,7 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set 创建云硬盘规格
      *
@@ -180,6 +210,7 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
         this.diskSpec = diskSpec;
         return this;
     }
+
 
     /**
      * set 购买实例数量；取值范围：[1,100]
@@ -191,15 +222,17 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
-     * set 用户标签,默认为空;tag标签的限制：每个资源最多允许绑定 10 个不同的标签，同一资源每个标签“键”上只能存在1个标签“值”；标签键/值只支持中文、数字、大小写字母、空格及特殊符号_.:/&#x3D;+-@;当无tags时,reps结果返回中tagmsg为空
-     *
-     * @param userTags
-     */
+    * set 用户标签,默认为空;tag标签的限制：每个资源最多允许绑定 10 个不同的标签，同一资源每个标签“键”上只能存在1个标签“值”；标签键/值只支持中文、数字、大小写字母、空格及特殊符号_.:/&#x3D;+-@;当无tags时,reps结果返回中tagmsg为空
+    *
+    * @param userTags
+    */
     public CreateDisksRequest userTags(List<Tag> userTags) {
         this.userTags = userTags;
         return this;
     }
+
 
     /**
      * set 幂等性校验参数
@@ -211,6 +244,18 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public CreateDisksRequest resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
     /**
      * set 地域ID
      *
@@ -220,6 +265,7 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -233,5 +279,4 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
         }
         this.userTags.add(userTag);
     }
-
 }

@@ -43,6 +43,7 @@ public class ImageConstraint  implements java.io.Serializable {
     private ImageInstanceTypeConstraint imageInstanceTypeConstraint;
 
 
+
     /**
      * get 镜像ID。
      *
@@ -60,6 +61,7 @@ public class ImageConstraint  implements java.io.Serializable {
     public void setImageId(String imageId) {
         this.imageId = imageId;
     }
+
 
     /**
      * get 镜像对实例规格的约束信息。
@@ -80,6 +82,7 @@ public class ImageConstraint  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 镜像ID。
      *
@@ -89,6 +92,7 @@ public class ImageConstraint  implements java.io.Serializable {
         this.imageId = imageId;
         return this;
     }
+
 
     /**
      * set 镜像对实例规格的约束信息。

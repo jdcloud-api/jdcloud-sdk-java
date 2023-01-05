@@ -62,8 +62,8 @@ public class DescribeBriefInstancesRequest extends JdcloudRequest implements jav
     /**
      * Tag筛选条件
      */
+    
     private List<TagFilter> tags;
-
     /**
      * &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceId&#x60;: 云主机ID，精确匹配，支持多个
@@ -83,14 +83,15 @@ public class DescribeBriefInstancesRequest extends JdcloudRequest implements jav
 &#x60;elasticIpAddress&#x60;: 公网IP地址，精确匹配，支持单个。该条件会将公网IP转换成 &#x60;networkInterfaceId&#x60; 进行查询，所以与 &#x60;networkInterfaceId&#x60; 为或者的关系。
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -111,6 +112,7 @@ public class DescribeBriefInstancesRequest extends JdcloudRequest implements jav
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
@@ -129,26 +131,28 @@ public class DescribeBriefInstancesRequest extends JdcloudRequest implements jav
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get Tag筛选条件
-     *
-     * @return
-     */
+    * get Tag筛选条件
+    *
+    * @return
+    */
     public List<TagFilter> getTags() {
         return tags;
     }
 
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public void setTags(List<TagFilter> tags) {
         this.tags = tags;
     }
 
+
     /**
-     * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceId&#x60;: 云主机ID，精确匹配，支持多个
 &#x60;privateIpAddress&#x60;: 云主机挂载的网卡内网主IP地址，模糊匹配，支持多个
 &#x60;az&#x60;: 可用区，精确匹配，支持多个
@@ -165,15 +169,15 @@ public class DescribeBriefInstancesRequest extends JdcloudRequest implements jav
 &#x60;instanceType&#x60;: 实例规格，精确匹配，支持多个，可通过查询 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口获得实例规格
 &#x60;elasticIpAddress&#x60;: 公网IP地址，精确匹配，支持单个。该条件会将公网IP转换成 &#x60;networkInterfaceId&#x60; 进行查询，所以与 &#x60;networkInterfaceId&#x60; 为或者的关系。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceId&#x60;: 云主机ID，精确匹配，支持多个
 &#x60;privateIpAddress&#x60;: 云主机挂载的网卡内网主IP地址，模糊匹配，支持多个
 &#x60;az&#x60;: 可用区，精确匹配，支持多个
@@ -190,12 +194,13 @@ public class DescribeBriefInstancesRequest extends JdcloudRequest implements jav
 &#x60;instanceType&#x60;: 实例规格，精确匹配，支持多个，可通过查询 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口获得实例规格
 &#x60;elasticIpAddress&#x60;: 公网IP地址，精确匹配，支持单个。该条件会将公网IP转换成 &#x60;networkInterfaceId&#x60; 进行查询，所以与 &#x60;networkInterfaceId&#x60; 为或者的关系。
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID。
@@ -216,6 +221,7 @@ public class DescribeBriefInstancesRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 页码；默认为1。
      *
@@ -225,6 +231,7 @@ public class DescribeBriefInstancesRequest extends JdcloudRequest implements jav
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
@@ -236,18 +243,20 @@ public class DescribeBriefInstancesRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public DescribeBriefInstancesRequest tags(List<TagFilter> tags) {
         this.tags = tags;
         return this;
     }
 
+
     /**
-     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceId&#x60;: 云主机ID，精确匹配，支持多个
 &#x60;privateIpAddress&#x60;: 云主机挂载的网卡内网主IP地址，模糊匹配，支持多个
 &#x60;az&#x60;: 可用区，精确匹配，支持多个
@@ -264,13 +273,14 @@ public class DescribeBriefInstancesRequest extends JdcloudRequest implements jav
 &#x60;instanceType&#x60;: 实例规格，精确匹配，支持多个，可通过查询 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口获得实例规格
 &#x60;elasticIpAddress&#x60;: 公网IP地址，精确匹配，支持单个。该条件会将公网IP转换成 &#x60;networkInterfaceId&#x60; 进行查询，所以与 &#x60;networkInterfaceId&#x60; 为或者的关系。
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeBriefInstancesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -281,6 +291,7 @@ public class DescribeBriefInstancesRequest extends JdcloudRequest implements jav
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -322,5 +333,4 @@ public class DescribeBriefInstancesRequest extends JdcloudRequest implements jav
         }
         this.filters.add(filter);
     }
-
 }

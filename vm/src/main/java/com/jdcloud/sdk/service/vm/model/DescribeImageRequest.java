@@ -57,6 +57,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
     private String imageId;
 
 
+
     /**
      * get 地域ID。
      *
@@ -74,6 +75,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 镜像ID。
@@ -94,6 +96,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 地域ID。
      *
@@ -103,6 +106,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 镜像ID。

@@ -53,6 +53,7 @@ public class SnapshotSpec  implements java.io.Serializable {
     private String diskId;
 
 
+
     /**
      * get 快照名称
      *
@@ -71,6 +72,7 @@ public class SnapshotSpec  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 快照描述,默认为空
      *
@@ -88,6 +90,7 @@ public class SnapshotSpec  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 用于创建快照的云盘ID
@@ -108,6 +111,7 @@ public class SnapshotSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 快照名称
      *
@@ -118,6 +122,7 @@ public class SnapshotSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 快照描述,默认为空
      *
@@ -127,6 +132,7 @@ public class SnapshotSpec  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 用于创建快照的云盘ID

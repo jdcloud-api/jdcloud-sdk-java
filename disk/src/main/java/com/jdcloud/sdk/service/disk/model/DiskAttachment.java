@@ -63,6 +63,7 @@ public class DiskAttachment  implements java.io.Serializable {
     private String attachTime;
 
 
+
     /**
      * get 挂载ID
      *
@@ -80,6 +81,7 @@ public class DiskAttachment  implements java.io.Serializable {
     public void setAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
     }
+
 
     /**
      * get 云硬盘ID
@@ -99,6 +101,7 @@ public class DiskAttachment  implements java.io.Serializable {
         this.diskId = diskId;
     }
 
+
     /**
      * get 挂载实例的类型，取值为 vm、nc
      *
@@ -116,6 +119,7 @@ public class DiskAttachment  implements java.io.Serializable {
     public void setInstanceType(String instanceType) {
         this.instanceType = instanceType;
     }
+
 
     /**
      * get 挂载实例的ID
@@ -135,6 +139,7 @@ public class DiskAttachment  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 挂载状态，取值为 &quot;attaching&quot;, &quot;attached&quot;, &quot;detaching&quot;, &quot;detached&quot;
      *
@@ -152,6 +157,7 @@ public class DiskAttachment  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 挂载时间
@@ -172,6 +178,7 @@ public class DiskAttachment  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 挂载ID
      *
@@ -181,6 +188,7 @@ public class DiskAttachment  implements java.io.Serializable {
         this.attachmentId = attachmentId;
         return this;
     }
+
 
     /**
      * set 云硬盘ID
@@ -192,6 +200,7 @@ public class DiskAttachment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 挂载实例的类型，取值为 vm、nc
      *
@@ -201,6 +210,7 @@ public class DiskAttachment  implements java.io.Serializable {
         this.instanceType = instanceType;
         return this;
     }
+
 
     /**
      * set 挂载实例的ID
@@ -212,6 +222,7 @@ public class DiskAttachment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 挂载状态，取值为 &quot;attaching&quot;, &quot;attached&quot;, &quot;detaching&quot;, &quot;detached&quot;
      *
@@ -221,6 +232,7 @@ public class DiskAttachment  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 挂载时间

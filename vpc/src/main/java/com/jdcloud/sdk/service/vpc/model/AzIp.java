@@ -42,8 +42,8 @@ public class AzIp  implements java.io.Serializable {
     /**
      * 可用区内公网IP属性
      */
+    
     private List<PublicIp> publicIps;
-
     /**
      * 公网IP可用区属性
      */
@@ -53,6 +53,7 @@ public class AzIp  implements java.io.Serializable {
      * 公网IP的限速（单位：Mbps）
      */
     private Integer bandwidthMbps;
+
 
 
     /**
@@ -73,23 +74,25 @@ public class AzIp  implements java.io.Serializable {
         this.privateIpAddress = privateIpAddress;
     }
 
+
     /**
-     * get 可用区内公网IP属性
-     *
-     * @return
-     */
+    * get 可用区内公网IP属性
+    *
+    * @return
+    */
     public List<PublicIp> getPublicIps() {
         return publicIps;
     }
 
     /**
-     * set 可用区内公网IP属性
-     *
-     * @param publicIps
-     */
+    * set 可用区内公网IP属性
+    *
+    * @param publicIps
+    */
     public void setPublicIps(List<PublicIp> publicIps) {
         this.publicIps = publicIps;
     }
+
 
     /**
      * get 公网IP可用区属性
@@ -108,6 +111,7 @@ public class AzIp  implements java.io.Serializable {
     public void setAz(String az) {
         this.az = az;
     }
+
 
     /**
      * get 公网IP的限速（单位：Mbps）
@@ -128,6 +132,7 @@ public class AzIp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 私有IP的IPV4地址
      *
@@ -138,15 +143,17 @@ public class AzIp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 可用区内公网IP属性
-     *
-     * @param publicIps
-     */
+    * set 可用区内公网IP属性
+    *
+    * @param publicIps
+    */
     public AzIp publicIps(List<PublicIp> publicIps) {
         this.publicIps = publicIps;
         return this;
     }
+
 
     /**
      * set 公网IP可用区属性
@@ -158,6 +165,7 @@ public class AzIp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 公网IP的限速（单位：Mbps）
      *
@@ -167,6 +175,7 @@ public class AzIp  implements java.io.Serializable {
         this.bandwidthMbps = bandwidthMbps;
         return this;
     }
+
 
 
     /**
@@ -180,5 +189,4 @@ public class AzIp  implements java.io.Serializable {
         }
         this.publicIps.add(publicIp);
     }
-
 }

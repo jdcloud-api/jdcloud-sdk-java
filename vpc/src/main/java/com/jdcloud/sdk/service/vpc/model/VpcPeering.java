@@ -78,6 +78,7 @@ public class VpcPeering  implements java.io.Serializable {
     private String createdTime;
 
 
+
     /**
      * get VpcPeering的Id
      *
@@ -95,6 +96,7 @@ public class VpcPeering  implements java.io.Serializable {
     public void setVpcPeeringId(String vpcPeeringId) {
         this.vpcPeeringId = vpcPeeringId;
     }
+
 
     /**
      * get VpcPeering名称，同账号下不允许重名，取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
@@ -114,6 +116,7 @@ public class VpcPeering  implements java.io.Serializable {
         this.vpcPeeringName = vpcPeeringName;
     }
 
+
     /**
      * get 状态，取值为Connected，Disconnected，Initiated
      *
@@ -131,6 +134,7 @@ public class VpcPeering  implements java.io.Serializable {
     public void setVpcPeeringState(String vpcPeeringState) {
         this.vpcPeeringState = vpcPeeringState;
     }
+
 
     /**
      * get VpcPeering 描述，可为空值，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
@@ -150,6 +154,7 @@ public class VpcPeering  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 发起VpcPeering的Vpc信息
      *
@@ -167,6 +172,7 @@ public class VpcPeering  implements java.io.Serializable {
     public void setVpcInfo(VpcPeeringVpcInfo vpcInfo) {
         this.vpcInfo = vpcInfo;
     }
+
 
     /**
      * get VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
@@ -186,6 +192,7 @@ public class VpcPeering  implements java.io.Serializable {
         this.azType = azType;
     }
 
+
     /**
      * get VPC可用区，边缘VPC非空，标准VPC为&quot;&quot;
      *
@@ -204,6 +211,7 @@ public class VpcPeering  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
      * get 对端的Vpc信息
      *
@@ -221,6 +229,7 @@ public class VpcPeering  implements java.io.Serializable {
     public void setRemoteVpcInfo(VpcPeeringVpcInfo remoteVpcInfo) {
         this.remoteVpcInfo = remoteVpcInfo;
     }
+
 
     /**
      * get VpcPeering创建时间
@@ -241,6 +250,7 @@ public class VpcPeering  implements java.io.Serializable {
     }
 
 
+
     /**
      * set VpcPeering的Id
      *
@@ -250,6 +260,7 @@ public class VpcPeering  implements java.io.Serializable {
         this.vpcPeeringId = vpcPeeringId;
         return this;
     }
+
 
     /**
      * set VpcPeering名称，同账号下不允许重名，取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
@@ -261,6 +272,7 @@ public class VpcPeering  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态，取值为Connected，Disconnected，Initiated
      *
@@ -270,6 +282,7 @@ public class VpcPeering  implements java.io.Serializable {
         this.vpcPeeringState = vpcPeeringState;
         return this;
     }
+
 
     /**
      * set VpcPeering 描述，可为空值，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
@@ -281,6 +294,7 @@ public class VpcPeering  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 发起VpcPeering的Vpc信息
      *
@@ -290,6 +304,7 @@ public class VpcPeering  implements java.io.Serializable {
         this.vpcInfo = vpcInfo;
         return this;
     }
+
 
     /**
      * set VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
@@ -301,6 +316,7 @@ public class VpcPeering  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set VPC可用区，边缘VPC非空，标准VPC为&quot;&quot;
      *
@@ -311,6 +327,7 @@ public class VpcPeering  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 对端的Vpc信息
      *
@@ -320,6 +337,7 @@ public class VpcPeering  implements java.io.Serializable {
         this.remoteVpcInfo = remoteVpcInfo;
         return this;
     }
+
 
     /**
      * set VpcPeering创建时间

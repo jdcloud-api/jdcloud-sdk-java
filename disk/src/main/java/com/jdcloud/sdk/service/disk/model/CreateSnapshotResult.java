@@ -45,6 +45,7 @@ public class CreateSnapshotResult extends JdcloudResult implements java.io.Seria
     private String snapshotId;
 
 
+
     /**
      * get 创建的快照ID
      *
@@ -62,6 +63,7 @@ public class CreateSnapshotResult extends JdcloudResult implements java.io.Seria
     public void setSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
     }
+
 
 
     /**

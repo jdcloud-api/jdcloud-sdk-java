@@ -55,14 +55,15 @@ serviceTypes - 边缘公网IP的服务类型，取值：bgp(动态)，unicom(联
 azs - 边缘公网IP的可用区，分为全可用区（暂不支持）和边缘可用区ID(同线路接入区])，示例如cn-n1-sqxx1，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -83,6 +84,7 @@ azs - 边缘公网IP的可用区，分为全可用区（暂不支持）和边缘
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -101,33 +103,35 @@ azs - 边缘公网IP的可用区，分为全可用区（暂不支持）和边缘
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get providers - 边缘公网IP的线路，命名规则：[线路接入区].[资源关联范围].[服务类型]，示例如cn-n1-jinan1.ez.bgp，支持多个
+    * get providers - 边缘公网IP的线路，命名规则：[线路接入区].[资源关联范围].[服务类型]，示例如cn-n1-jinan1.ez.bgp，支持多个
 pointsOfAccess - 边缘公网IP的线路接入区，提供线路接入区具体位置信息，支持多个
 associationScope	- 边缘公网IP的资源关联范围，取值ez(边缘可用区)和az(中心可用区，暂不支持),支持单个
 serviceTypes - 边缘公网IP的服务类型，取值：bgp(动态)，unicom(联通)，telecom(电信)，mobile(移动)，支持多个
 azs - 边缘公网IP的可用区，分为全可用区（暂不支持）和边缘可用区ID(同线路接入区])，示例如cn-n1-sqxx1，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set providers - 边缘公网IP的线路，命名规则：[线路接入区].[资源关联范围].[服务类型]，示例如cn-n1-jinan1.ez.bgp，支持多个
+    * set providers - 边缘公网IP的线路，命名规则：[线路接入区].[资源关联范围].[服务类型]，示例如cn-n1-jinan1.ez.bgp，支持多个
 pointsOfAccess - 边缘公网IP的线路接入区，提供线路接入区具体位置信息，支持多个
 associationScope	- 边缘公网IP的资源关联范围，取值ez(边缘可用区)和az(中心可用区，暂不支持),支持单个
 serviceTypes - 边缘公网IP的服务类型，取值：bgp(动态)，unicom(联通)，telecom(电信)，mobile(移动)，支持多个
 azs - 边缘公网IP的可用区，分为全可用区（暂不支持）和边缘可用区ID(同线路接入区])，示例如cn-n1-sqxx1，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get Region ID
@@ -148,6 +152,7 @@ azs - 边缘公网IP的可用区，分为全可用区（暂不支持）和边缘
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
      *
@@ -157,6 +162,7 @@ azs - 边缘公网IP的可用区，分为全可用区（暂不支持）和边缘
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
@@ -168,20 +174,22 @@ azs - 边缘公网IP的可用区，分为全可用区（暂不支持）和边缘
         return this;
     }
 
+
     /**
-     * set providers - 边缘公网IP的线路，命名规则：[线路接入区].[资源关联范围].[服务类型]，示例如cn-n1-jinan1.ez.bgp，支持多个
+    * set providers - 边缘公网IP的线路，命名规则：[线路接入区].[资源关联范围].[服务类型]，示例如cn-n1-jinan1.ez.bgp，支持多个
 pointsOfAccess - 边缘公网IP的线路接入区，提供线路接入区具体位置信息，支持多个
 associationScope	- 边缘公网IP的资源关联范围，取值ez(边缘可用区)和az(中心可用区，暂不支持),支持单个
 serviceTypes - 边缘公网IP的服务类型，取值：bgp(动态)，unicom(联通)，telecom(电信)，mobile(移动)，支持多个
 azs - 边缘公网IP的可用区，分为全可用区（暂不支持）和边缘可用区ID(同线路接入区])，示例如cn-n1-sqxx1，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeEdgeIpProvidersRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -192,6 +200,7 @@ azs - 边缘公网IP的可用区，分为全可用区（暂不支持）和边缘
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -210,5 +219,4 @@ azs - 边缘公网IP的可用区，分为全可用区（暂不支持）和边缘
         }
         this.filters.add(filter);
     }
-
 }

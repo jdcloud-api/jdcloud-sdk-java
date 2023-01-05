@@ -74,8 +74,8 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
 注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
 
      */
+    
     private List<Metadata> metadata;
-
     /**
      * 自定义脚本。
 目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须Base64编码且编码前数据长度不能超过16KB。
@@ -83,8 +83,8 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60; ，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
      */
+    
     private List<Userdata> userdata;
-
     /**
      * 地域ID。
      * Required:true
@@ -98,6 +98,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
      */
     @Required
     private String instanceId;
+
 
 
     /**
@@ -120,6 +121,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
         this.name = name;
     }
 
+
     /**
      * get 实例描述。256字符以内。
 
@@ -139,6 +141,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 实例hostname。
@@ -164,55 +167,58 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
         this.hostname = hostname;
     }
 
+
     /**
-     * get 用户自定义元数据。
+    * get 用户自定义元数据。
 以 &#x60;key-value&#x60; 键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且 &#x60;key&#x60; 不超过256字符，&#x60;value&#x60; 不超过16KB，不区分大小写。
 注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Metadata> getMetadata() {
         return metadata;
     }
 
     /**
-     * set 用户自定义元数据。
+    * set 用户自定义元数据。
 以 &#x60;key-value&#x60; 键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且 &#x60;key&#x60; 不超过256字符，&#x60;value&#x60; 不超过16KB，不区分大小写。
 注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
 
-     *
-     * @param metadata
-     */
+    *
+    * @param metadata
+    */
     public void setMetadata(List<Metadata> metadata) {
         this.metadata = metadata;
     }
 
+
     /**
-     * get 自定义脚本。
+    * get 自定义脚本。
 目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须Base64编码且编码前数据长度不能超过16KB。
 **linux系统**：支持bash和python，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60; ，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Userdata> getUserdata() {
         return userdata;
     }
 
     /**
-     * set 自定义脚本。
+    * set 自定义脚本。
 目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须Base64编码且编码前数据长度不能超过16KB。
 **linux系统**：支持bash和python，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60; ，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
-     *
-     * @param userdata
-     */
+    *
+    * @param userdata
+    */
     public void setUserdata(List<Userdata> userdata) {
         this.userdata = userdata;
     }
+
 
     /**
      * get 地域ID。
@@ -231,6 +237,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -251,6 +258,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 实例名称。长度为2\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.），不能以（.）作为首尾。
 
@@ -262,6 +270,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 实例描述。256字符以内。
 
@@ -272,6 +281,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
         this.description = description;
         return this;
     }
+
 
     /**
      * set 实例hostname。
@@ -286,32 +296,35 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
-     * set 用户自定义元数据。
+    * set 用户自定义元数据。
 以 &#x60;key-value&#x60; 键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且 &#x60;key&#x60; 不超过256字符，&#x60;value&#x60; 不超过16KB，不区分大小写。
 注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
 
-     *
-     * @param metadata
-     */
+    *
+    * @param metadata
+    */
     public ModifyInstanceAttributeRequest metadata(List<Metadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
+
     /**
-     * set 自定义脚本。
+    * set 自定义脚本。
 目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须Base64编码且编码前数据长度不能超过16KB。
 **linux系统**：支持bash和python，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60; ，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
-     *
-     * @param userdata
-     */
+    *
+    * @param userdata
+    */
     public ModifyInstanceAttributeRequest userdata(List<Userdata> userdata) {
         this.userdata = userdata;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -323,6 +336,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 云主机ID。
      *
@@ -332,6 +346,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -364,5 +379,4 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
         }
         this.userdata.add(userdata);
     }
-
 }

@@ -49,6 +49,7 @@ public class DescribeInstanceVncUrlResult extends JdcloudResult implements java.
     private String vncUrl;
 
 
+
     /**
      * get 远程vnc地址。
      *
@@ -66,6 +67,7 @@ public class DescribeInstanceVncUrlResult extends JdcloudResult implements java.
     public void setVncUrl(String vncUrl) {
         this.vncUrl = vncUrl;
     }
+
 
 
     /**

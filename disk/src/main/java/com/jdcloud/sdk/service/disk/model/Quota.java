@@ -43,6 +43,7 @@ public class Quota  implements java.io.Serializable {
     private Integer used;
 
 
+
     /**
      * get 配额
      *
@@ -60,6 +61,7 @@ public class Quota  implements java.io.Serializable {
     public void setLimit(Integer limit) {
         this.limit = limit;
     }
+
 
     /**
      * get 已使用的数目
@@ -80,6 +82,7 @@ public class Quota  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 配额
      *
@@ -89,6 +92,7 @@ public class Quota  implements java.io.Serializable {
         this.limit = limit;
         return this;
     }
+
 
     /**
      * set 已使用的数目

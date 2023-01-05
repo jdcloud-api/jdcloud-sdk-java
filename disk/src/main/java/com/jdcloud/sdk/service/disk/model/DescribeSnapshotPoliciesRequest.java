@@ -45,13 +45,13 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
     /**
      * 策略ID,默认为空
      */
+    
     private List<String> policyId;
-
     /**
      * 策略状态。1: 启用 2：禁用
      */
+    
     private List<Integer> status;
-
     /**
      * 排序字段，只支持create_time和update_time字段
      */
@@ -75,6 +75,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
     private String regionId;
 
 
+
     /**
      * get 策略名称,默认为空
      *
@@ -93,41 +94,44 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
         this.name = name;
     }
 
+
     /**
-     * get 策略ID,默认为空
-     *
-     * @return
-     */
+    * get 策略ID,默认为空
+    *
+    * @return
+    */
     public List<String> getPolicyId() {
         return policyId;
     }
 
     /**
-     * set 策略ID,默认为空
-     *
-     * @param policyId
-     */
+    * set 策略ID,默认为空
+    *
+    * @param policyId
+    */
     public void setPolicyId(List<String> policyId) {
         this.policyId = policyId;
     }
 
+
     /**
-     * get 策略状态。1: 启用 2：禁用
-     *
-     * @return
-     */
+    * get 策略状态。1: 启用 2：禁用
+    *
+    * @return
+    */
     public List<Integer> getStatus() {
         return status;
     }
 
     /**
-     * set 策略状态。1: 启用 2：禁用
-     *
-     * @param status
-     */
+    * set 策略状态。1: 启用 2：禁用
+    *
+    * @param status
+    */
     public void setStatus(List<Integer> status) {
         this.status = status;
     }
+
 
     /**
      * get 排序字段，只支持create_time和update_time字段
@@ -147,6 +151,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
         this.order = order;
     }
 
+
     /**
      * get 页码, 默认为1, 取值范围：[1,∞)
      *
@@ -165,6 +170,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -182,6 +188,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 地域ID
@@ -202,6 +209,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set 策略名称,默认为空
      *
@@ -212,25 +220,28 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
-     * set 策略ID,默认为空
-     *
-     * @param policyId
-     */
+    * set 策略ID,默认为空
+    *
+    * @param policyId
+    */
     public DescribeSnapshotPoliciesRequest policyId(List<String> policyId) {
         this.policyId = policyId;
         return this;
     }
 
+
     /**
-     * set 策略状态。1: 启用 2：禁用
-     *
-     * @param status
-     */
+    * set 策略状态。1: 启用 2：禁用
+    *
+    * @param status
+    */
     public DescribeSnapshotPoliciesRequest status(List<Integer> status) {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 排序字段，只支持create_time和update_time字段
@@ -242,6 +253,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
@@ -251,6 +263,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
@@ -262,6 +275,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 地域ID
      *
@@ -271,6 +285,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -296,5 +311,4 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
         }
         this.status.add(statu);
     }
-
 }

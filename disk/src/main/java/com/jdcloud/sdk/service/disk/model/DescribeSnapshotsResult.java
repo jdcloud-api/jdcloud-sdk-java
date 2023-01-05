@@ -39,31 +39,33 @@ public class DescribeSnapshotsResult extends JdcloudResult implements java.io.Se
     /**
      * snapshots
      */
+    
     private List<Snapshot> snapshots;
-
     /**
      * 查询的快照数目
      */
     private Integer totalCount;
 
 
+
     /**
-     * get snapshots
-     *
-     * @return
-     */
+    * get snapshots
+    *
+    * @return
+    */
     public List<Snapshot> getSnapshots() {
         return snapshots;
     }
 
     /**
-     * set snapshots
-     *
-     * @param snapshots
-     */
+    * set snapshots
+    *
+    * @param snapshots
+    */
     public void setSnapshots(List<Snapshot> snapshots) {
         this.snapshots = snapshots;
     }
+
 
     /**
      * get 查询的快照数目
@@ -84,15 +86,17 @@ public class DescribeSnapshotsResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
-     * set snapshots
-     *
-     * @param snapshots
-     */
+    * set snapshots
+    *
+    * @param snapshots
+    */
     public DescribeSnapshotsResult snapshots(List<Snapshot> snapshots) {
         this.snapshots = snapshots;
         return this;
     }
+
 
     /**
      * set 查询的快照数目
@@ -103,6 +107,7 @@ public class DescribeSnapshotsResult extends JdcloudResult implements java.io.Se
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeSnapshotsResult extends JdcloudResult implements java.io.Se
         }
         this.snapshots.add(snapshot);
     }
-
 }

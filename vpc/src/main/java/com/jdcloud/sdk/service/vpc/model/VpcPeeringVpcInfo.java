@@ -47,8 +47,8 @@ public class VpcPeeringVpcInfo  implements java.io.Serializable {
     /**
      * 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
      */
+    
     private List<String> addressPrefix;
-
     /**
      * VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
      */
@@ -58,6 +58,7 @@ public class VpcPeeringVpcInfo  implements java.io.Serializable {
      * VPC可用区，中心VPC为&quot;&quot;
      */
     private String az;
+
 
 
     /**
@@ -78,6 +79,7 @@ public class VpcPeeringVpcInfo  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 私有网络名称，取值范围：1-60个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -96,23 +98,25 @@ public class VpcPeeringVpcInfo  implements java.io.Serializable {
         this.vpcName = vpcName;
     }
 
+
     /**
-     * get 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
-     *
-     * @return
-     */
+    * get 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
+    *
+    * @return
+    */
     public List<String> getAddressPrefix() {
         return addressPrefix;
     }
 
     /**
-     * set 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
-     *
-     * @param addressPrefix
-     */
+    * set 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
+    *
+    * @param addressPrefix
+    */
     public void setAddressPrefix(List<String> addressPrefix) {
         this.addressPrefix = addressPrefix;
     }
+
 
     /**
      * get VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
@@ -131,6 +135,7 @@ public class VpcPeeringVpcInfo  implements java.io.Serializable {
     public void setAzType(String azType) {
         this.azType = azType;
     }
+
 
     /**
      * get VPC可用区，中心VPC为&quot;&quot;
@@ -151,6 +156,7 @@ public class VpcPeeringVpcInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 子网所属VPC的Id
      *
@@ -160,6 +166,7 @@ public class VpcPeeringVpcInfo  implements java.io.Serializable {
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set 私有网络名称，取值范围：1-60个中文、英文大小写的字母、数字和下划线分隔符
@@ -171,15 +178,17 @@ public class VpcPeeringVpcInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
-     *
-     * @param addressPrefix
-     */
+    * set 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
+    *
+    * @param addressPrefix
+    */
     public VpcPeeringVpcInfo addressPrefix(List<String> addressPrefix) {
         this.addressPrefix = addressPrefix;
         return this;
     }
+
 
     /**
      * set VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
@@ -191,6 +200,7 @@ public class VpcPeeringVpcInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set VPC可用区，中心VPC为&quot;&quot;
      *
@@ -200,6 +210,7 @@ public class VpcPeeringVpcInfo  implements java.io.Serializable {
         this.az = az;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class VpcPeeringVpcInfo  implements java.io.Serializable {
         }
         this.addressPrefix.add(addressPrefix);
     }
-
 }

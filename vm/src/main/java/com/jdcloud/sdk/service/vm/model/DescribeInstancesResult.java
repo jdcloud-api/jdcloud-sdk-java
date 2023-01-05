@@ -50,31 +50,33 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     /**
      * instances
      */
+    
     private List<Instance> instances;
-
     /**
      * 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      */
     private Number totalCount;
 
 
+
     /**
-     * get instances
-     *
-     * @return
-     */
+    * get instances
+    *
+    * @return
+    */
     public List<Instance> getInstances() {
         return instances;
     }
 
     /**
-     * set instances
-     *
-     * @param instances
-     */
+    * set instances
+    *
+    * @param instances
+    */
     public void setInstances(List<Instance> instances) {
         this.instances = instances;
     }
+
 
     /**
      * get 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
@@ -95,15 +97,17 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
-     * set instances
-     *
-     * @param instances
-     */
+    * set instances
+    *
+    * @param instances
+    */
     public DescribeInstancesResult instances(List<Instance> instances) {
         this.instances = instances;
         return this;
     }
+
 
     /**
      * set 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
@@ -114,6 +118,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -127,5 +132,4 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
         }
         this.instances.add(instance);
     }
-
 }

@@ -41,6 +41,7 @@ public class ModifyElasticIpSpec  implements java.io.Serializable {
     private Integer bandwidthMbps;
 
 
+
     /**
      * get 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
      *
@@ -58,6 +59,7 @@ public class ModifyElasticIpSpec  implements java.io.Serializable {
     public void setBandwidthMbps(Integer bandwidthMbps) {
         this.bandwidthMbps = bandwidthMbps;
     }
+
 
 
     /**

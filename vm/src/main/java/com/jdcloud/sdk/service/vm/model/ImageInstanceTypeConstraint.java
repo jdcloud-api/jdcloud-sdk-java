@@ -45,6 +45,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
     /**
      * 实例规格列表。
      */
+    
     private List<String> instanceTypes;
 
 
@@ -72,23 +73,25 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
         this.constraintsType = constraintsType;
     }
 
+
     /**
-     * get 实例规格列表。
-     *
-     * @return
-     */
+    * get 实例规格列表。
+    *
+    * @return
+    */
     public List<String> getInstanceTypes() {
         return instanceTypes;
     }
 
     /**
-     * set 实例规格列表。
-     *
-     * @param instanceTypes
-     */
+    * set 实例规格列表。
+    *
+    * @param instanceTypes
+    */
     public void setInstanceTypes(List<String> instanceTypes) {
         this.instanceTypes = instanceTypes;
     }
+
 
 
     /**
@@ -104,15 +107,17 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 实例规格列表。
-     *
-     * @param instanceTypes
-     */
+    * set 实例规格列表。
+    *
+    * @param instanceTypes
+    */
     public ImageInstanceTypeConstraint instanceTypes(List<String> instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
     }
+
 
 
     /**
@@ -126,5 +131,4 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
         }
         this.instanceTypes.add(instanceType);
     }
-
 }

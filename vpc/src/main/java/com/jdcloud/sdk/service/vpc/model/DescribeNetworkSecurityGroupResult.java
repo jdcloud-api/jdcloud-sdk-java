@@ -40,6 +40,7 @@ public class DescribeNetworkSecurityGroupResult extends JdcloudResult implements
     private NetworkSecurityGroup networkSecurityGroup;
 
 
+
     /**
      * get 安全组资源信息
      *
@@ -57,6 +58,7 @@ public class DescribeNetworkSecurityGroupResult extends JdcloudResult implements
     public void setNetworkSecurityGroup(NetworkSecurityGroup networkSecurityGroup) {
         this.networkSecurityGroup = networkSecurityGroup;
     }
+
 
 
     /**

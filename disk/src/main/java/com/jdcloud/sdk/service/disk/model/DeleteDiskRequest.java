@@ -38,6 +38,11 @@ public class DeleteDiskRequest extends JdcloudRequest implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
+     * true 加入回收站 false 或者不传直接删除
+     */
+    private Boolean putInRecycleBin;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -50,6 +55,26 @@ public class DeleteDiskRequest extends JdcloudRequest implements java.io.Seriali
      */
     @Required
     private String diskId;
+
+
+
+    /**
+     * get true 加入回收站 false 或者不传直接删除
+     *
+     * @return
+     */
+    public Boolean getPutInRecycleBin() {
+        return putInRecycleBin;
+    }
+
+    /**
+     * set true 加入回收站 false 或者不传直接删除
+     *
+     * @param putInRecycleBin
+     */
+    public void setPutInRecycleBin(Boolean putInRecycleBin) {
+        this.putInRecycleBin = putInRecycleBin;
+    }
 
 
     /**
@@ -70,6 +95,7 @@ public class DeleteDiskRequest extends JdcloudRequest implements java.io.Seriali
         this.regionId = regionId;
     }
 
+
     /**
      * get 云硬盘ID
      *
@@ -89,6 +115,18 @@ public class DeleteDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
+    /**
+     * set true 加入回收站 false 或者不传直接删除
+     *
+     * @param putInRecycleBin
+     */
+    public DeleteDiskRequest putInRecycleBin(Boolean putInRecycleBin) {
+        this.putInRecycleBin = putInRecycleBin;
+        return this;
+    }
+
+
     /**
      * set 地域ID
      *
@@ -98,6 +136,7 @@ public class DeleteDiskRequest extends JdcloudRequest implements java.io.Seriali
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云硬盘ID

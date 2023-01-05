@@ -50,8 +50,8 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
      * Required:true
      */
     @Required
+    
     private List<String> pins;
-
     /**
      * 地域ID。
      * Required:true
@@ -67,23 +67,25 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
     private String imageId;
 
 
+
     /**
-     * get 共享的目标京东云帐户列表。
-     *
-     * @return
-     */
+    * get 共享的目标京东云帐户列表。
+    *
+    * @return
+    */
     public List<String> getPins() {
         return pins;
     }
 
     /**
-     * set 共享的目标京东云帐户列表。
-     *
-     * @param pins
-     */
+    * set 共享的目标京东云帐户列表。
+    *
+    * @param pins
+    */
     public void setPins(List<String> pins) {
         this.pins = pins;
     }
+
 
     /**
      * get 地域ID。
@@ -102,6 +104,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 镜像ID。
@@ -122,15 +125,17 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
-     * set 共享的目标京东云帐户列表。
-     *
-     * @param pins
-     */
+    * set 共享的目标京东云帐户列表。
+    *
+    * @param pins
+    */
     public ShareImageRequest pins(List<String> pins) {
         this.pins = pins;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -142,6 +147,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 镜像ID。
      *
@@ -151,6 +157,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
         this.imageId = imageId;
         return this;
     }
+
 
 
     /**
@@ -164,5 +171,4 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
         }
         this.pins.add(pin);
     }
-
 }

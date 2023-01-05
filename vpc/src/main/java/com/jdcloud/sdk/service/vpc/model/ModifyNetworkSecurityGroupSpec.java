@@ -43,6 +43,7 @@ public class ModifyNetworkSecurityGroupSpec  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get 安全组的名字。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -60,6 +61,7 @@ public class ModifyNetworkSecurityGroupSpec  implements java.io.Serializable {
     public void setNetworkSecurityGroupName(String networkSecurityGroupName) {
         this.networkSecurityGroupName = networkSecurityGroupName;
     }
+
 
     /**
      * get 安全组的描述，取值范围：0-256个UTF-8编码下的全部字符
@@ -80,6 +82,7 @@ public class ModifyNetworkSecurityGroupSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 安全组的名字。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -89,6 +92,7 @@ public class ModifyNetworkSecurityGroupSpec  implements java.io.Serializable {
         this.networkSecurityGroupName = networkSecurityGroupName;
         return this;
     }
+
 
     /**
      * set 安全组的描述，取值范围：0-256个UTF-8编码下的全部字符

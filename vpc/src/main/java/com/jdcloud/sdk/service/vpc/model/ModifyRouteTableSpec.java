@@ -43,6 +43,7 @@ public class ModifyRouteTableSpec  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get 路由表的名字。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -60,6 +61,7 @@ public class ModifyRouteTableSpec  implements java.io.Serializable {
     public void setRouteTableName(String routeTableName) {
         this.routeTableName = routeTableName;
     }
+
 
     /**
      * get 路由表的描述，取值范围：0-256个UTF-8编码下的全部字符
@@ -80,6 +82,7 @@ public class ModifyRouteTableSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 路由表的名字。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -89,6 +92,7 @@ public class ModifyRouteTableSpec  implements java.io.Serializable {
         this.routeTableName = routeTableName;
         return this;
     }
+
 
     /**
      * set 路由表的描述，取值范围：0-256个UTF-8编码下的全部字符

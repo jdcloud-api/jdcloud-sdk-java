@@ -64,6 +64,7 @@ public class DetachNetworkInterfaceRequest extends JdcloudRequest implements jav
     private String instanceId;
 
 
+
     /**
      * get 弹性网卡ID
      *
@@ -82,6 +83,7 @@ public class DetachNetworkInterfaceRequest extends JdcloudRequest implements jav
         this.networkInterfaceId = networkInterfaceId;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -99,6 +101,7 @@ public class DetachNetworkInterfaceRequest extends JdcloudRequest implements jav
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -119,6 +122,7 @@ public class DetachNetworkInterfaceRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 弹性网卡ID
      *
@@ -129,6 +133,7 @@ public class DetachNetworkInterfaceRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -138,6 +143,7 @@ public class DetachNetworkInterfaceRequest extends JdcloudRequest implements jav
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云主机ID。

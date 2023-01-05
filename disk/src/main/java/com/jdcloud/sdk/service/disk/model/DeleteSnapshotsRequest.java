@@ -44,8 +44,8 @@ public class DeleteSnapshotsRequest extends JdcloudRequest implements java.io.Se
      * Required:true
      */
     @Required
+    
     private List<String> snapshotIds;
-
     /**
      * 地域ID
      * Required:true
@@ -54,23 +54,25 @@ public class DeleteSnapshotsRequest extends JdcloudRequest implements java.io.Se
     private String regionId;
 
 
+
     /**
-     * get 快照ID列表
-     *
-     * @return
-     */
+    * get 快照ID列表
+    *
+    * @return
+    */
     public List<String> getSnapshotIds() {
         return snapshotIds;
     }
 
     /**
-     * set 快照ID列表
-     *
-     * @param snapshotIds
-     */
+    * set 快照ID列表
+    *
+    * @param snapshotIds
+    */
     public void setSnapshotIds(List<String> snapshotIds) {
         this.snapshotIds = snapshotIds;
     }
+
 
     /**
      * get 地域ID
@@ -91,15 +93,17 @@ public class DeleteSnapshotsRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
-     * set 快照ID列表
-     *
-     * @param snapshotIds
-     */
+    * set 快照ID列表
+    *
+    * @param snapshotIds
+    */
     public DeleteSnapshotsRequest snapshotIds(List<String> snapshotIds) {
         this.snapshotIds = snapshotIds;
         return this;
     }
+
 
     /**
      * set 地域ID
@@ -110,6 +114,7 @@ public class DeleteSnapshotsRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -123,5 +128,4 @@ public class DeleteSnapshotsRequest extends JdcloudRequest implements java.io.Se
         }
         this.snapshotIds.add(snapshotId);
     }
-
 }

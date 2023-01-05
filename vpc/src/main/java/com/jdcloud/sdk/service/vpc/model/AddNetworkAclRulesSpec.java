@@ -40,37 +40,40 @@ public class AddNetworkAclRulesSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<AddNetworkAclRuleSpec> networkAclRuleSpecs;
 
 
     /**
-     * get networkAcl规则列表
-     *
-     * @return
-     */
+    * get networkAcl规则列表
+    *
+    * @return
+    */
     public List<AddNetworkAclRuleSpec> getNetworkAclRuleSpecs() {
         return networkAclRuleSpecs;
     }
 
     /**
-     * set networkAcl规则列表
-     *
-     * @param networkAclRuleSpecs
-     */
+    * set networkAcl规则列表
+    *
+    * @param networkAclRuleSpecs
+    */
     public void setNetworkAclRuleSpecs(List<AddNetworkAclRuleSpec> networkAclRuleSpecs) {
         this.networkAclRuleSpecs = networkAclRuleSpecs;
     }
 
 
+
     /**
-     * set networkAcl规则列表
-     *
-     * @param networkAclRuleSpecs
-     */
+    * set networkAcl规则列表
+    *
+    * @param networkAclRuleSpecs
+    */
     public AddNetworkAclRulesSpec networkAclRuleSpecs(List<AddNetworkAclRuleSpec> networkAclRuleSpecs) {
         this.networkAclRuleSpecs = networkAclRuleSpecs;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class AddNetworkAclRulesSpec  implements java.io.Serializable {
         }
         this.networkAclRuleSpecs.add(networkAclRuleSpec);
     }
-
 }

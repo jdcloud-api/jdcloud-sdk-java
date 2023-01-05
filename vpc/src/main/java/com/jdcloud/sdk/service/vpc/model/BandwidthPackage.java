@@ -73,8 +73,8 @@ public class BandwidthPackage  implements java.io.Serializable {
     /**
      * 共享带宽包内公网IP信息
      */
+    
     private List<BwpIp> publicIps;
-
     /**
      * 共享带宽包内加入公网IP个数
      */
@@ -91,19 +91,20 @@ public class BandwidthPackage  implements java.io.Serializable {
     private Number guaranteedBandwidth;
 
     /**
-     * 是否欠费停服，UP正常，DOWN停服
+     * 是否欠费停服，UP正常，DOWN停服，PROCESSING处理中
      */
     private String adminStatus;
 
     /**
      * Tag信息
      */
+    
     private List<Tag> tags;
-
     /**
      * 资源所属资源组ID
      */
     private String resourceGroupId;
+
 
 
     /**
@@ -124,6 +125,7 @@ public class BandwidthPackage  implements java.io.Serializable {
         this.bandwidthPackageId = bandwidthPackageId;
     }
 
+
     /**
      * get 名称
      *
@@ -141,6 +143,7 @@ public class BandwidthPackage  implements java.io.Serializable {
     public void setBandwidthPackageName(String bandwidthPackageName) {
         this.bandwidthPackageName = bandwidthPackageName;
     }
+
 
     /**
      * get 描述
@@ -160,6 +163,7 @@ public class BandwidthPackage  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 共享带宽包带宽上限，取值范围200-5000，单位为Mbps，按用量计费模式的保底带宽 &#x3D; 共享带宽包带宽上限 * 20%
      *
@@ -177,6 +181,7 @@ public class BandwidthPackage  implements java.io.Serializable {
     public void setBandwidthMbps(Integer bandwidthMbps) {
         this.bandwidthMbps = bandwidthMbps;
     }
+
 
     /**
      * get 线路信息
@@ -196,6 +201,7 @@ public class BandwidthPackage  implements java.io.Serializable {
         this.provider = provider;
     }
 
+
     /**
      * get 计费配置
      *
@@ -213,6 +219,7 @@ public class BandwidthPackage  implements java.io.Serializable {
     public void setCharge(Charge charge) {
         this.charge = charge;
     }
+
 
     /**
      * get 创建时间，时间格式为UTC
@@ -232,23 +239,25 @@ public class BandwidthPackage  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+
     /**
-     * get 共享带宽包内公网IP信息
-     *
-     * @return
-     */
+    * get 共享带宽包内公网IP信息
+    *
+    * @return
+    */
     public List<BwpIp> getPublicIps() {
         return publicIps;
     }
 
     /**
-     * set 共享带宽包内公网IP信息
-     *
-     * @param publicIps
-     */
+    * set 共享带宽包内公网IP信息
+    *
+    * @param publicIps
+    */
     public void setPublicIps(List<BwpIp> publicIps) {
         this.publicIps = publicIps;
     }
+
 
     /**
      * get 共享带宽包内加入公网IP个数
@@ -268,6 +277,7 @@ public class BandwidthPackage  implements java.io.Serializable {
         this.ipCount = ipCount;
     }
 
+
     /**
      * get 按用量计费模式的保底带宽百分比，-1代表无效值 ，目前保底带宽百分比为20%
      *
@@ -285,6 +295,7 @@ public class BandwidthPackage  implements java.io.Serializable {
     public void setGuaranteedRatio(Integer guaranteedRatio) {
         this.guaranteedRatio = guaranteedRatio;
     }
+
 
     /**
      * get 按用量计费模式的保底带宽，-1代表无效值，保底带宽 &#x3D; 共享带宽包带宽上限 * 20%
@@ -304,8 +315,9 @@ public class BandwidthPackage  implements java.io.Serializable {
         this.guaranteedBandwidth = guaranteedBandwidth;
     }
 
+
     /**
-     * get 是否欠费停服，UP正常，DOWN停服
+     * get 是否欠费停服，UP正常，DOWN停服，PROCESSING处理中
      *
      * @return
      */
@@ -314,7 +326,7 @@ public class BandwidthPackage  implements java.io.Serializable {
     }
 
     /**
-     * set 是否欠费停服，UP正常，DOWN停服
+     * set 是否欠费停服，UP正常，DOWN停服，PROCESSING处理中
      *
      * @param adminStatus
      */
@@ -322,23 +334,25 @@ public class BandwidthPackage  implements java.io.Serializable {
         this.adminStatus = adminStatus;
     }
 
+
     /**
-     * get Tag信息
-     *
-     * @return
-     */
+    * get Tag信息
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set Tag信息
-     *
-     * @param tags
-     */
+    * set Tag信息
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
 
     /**
      * get 资源所属资源组ID
@@ -359,6 +373,7 @@ public class BandwidthPackage  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 共享带宽包ID
      *
@@ -368,6 +383,7 @@ public class BandwidthPackage  implements java.io.Serializable {
         this.bandwidthPackageId = bandwidthPackageId;
         return this;
     }
+
 
     /**
      * set 名称
@@ -379,6 +395,7 @@ public class BandwidthPackage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述
      *
@@ -388,6 +405,7 @@ public class BandwidthPackage  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 共享带宽包带宽上限，取值范围200-5000，单位为Mbps，按用量计费模式的保底带宽 &#x3D; 共享带宽包带宽上限 * 20%
@@ -399,6 +417,7 @@ public class BandwidthPackage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 线路信息
      *
@@ -408,6 +427,7 @@ public class BandwidthPackage  implements java.io.Serializable {
         this.provider = provider;
         return this;
     }
+
 
     /**
      * set 计费配置
@@ -419,6 +439,7 @@ public class BandwidthPackage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间，时间格式为UTC
      *
@@ -429,15 +450,17 @@ public class BandwidthPackage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 共享带宽包内公网IP信息
-     *
-     * @param publicIps
-     */
+    * set 共享带宽包内公网IP信息
+    *
+    * @param publicIps
+    */
     public BandwidthPackage publicIps(List<BwpIp> publicIps) {
         this.publicIps = publicIps;
         return this;
     }
+
 
     /**
      * set 共享带宽包内加入公网IP个数
@@ -449,6 +472,7 @@ public class BandwidthPackage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 按用量计费模式的保底带宽百分比，-1代表无效值 ，目前保底带宽百分比为20%
      *
@@ -458,6 +482,7 @@ public class BandwidthPackage  implements java.io.Serializable {
         this.guaranteedRatio = guaranteedRatio;
         return this;
     }
+
 
     /**
      * set 按用量计费模式的保底带宽，-1代表无效值，保底带宽 &#x3D; 共享带宽包带宽上限 * 20%
@@ -469,8 +494,9 @@ public class BandwidthPackage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 是否欠费停服，UP正常，DOWN停服
+     * set 是否欠费停服，UP正常，DOWN停服，PROCESSING处理中
      *
      * @param adminStatus
      */
@@ -479,15 +505,17 @@ public class BandwidthPackage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set Tag信息
-     *
-     * @param tags
-     */
+    * set Tag信息
+    *
+    * @param tags
+    */
     public BandwidthPackage tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
 
     /**
      * set 资源所属资源组ID
@@ -498,6 +526,7 @@ public class BandwidthPackage  implements java.io.Serializable {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
+
 
 
     /**
@@ -523,5 +552,4 @@ public class BandwidthPackage  implements java.io.Serializable {
         }
         this.tags.add(tag);
     }
-
 }

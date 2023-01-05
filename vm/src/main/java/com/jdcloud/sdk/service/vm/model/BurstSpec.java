@@ -38,6 +38,7 @@ public class BurstSpec  implements java.io.Serializable {
     private String burstMode;
 
 
+
     /**
      * get 突发模式，standard 为标准模式，unlimited 为无限模式，默认 standard。
      *
@@ -55,6 +56,7 @@ public class BurstSpec  implements java.io.Serializable {
     public void setBurstMode(String burstMode) {
         this.burstMode = burstMode;
     }
+
 
 
     /**

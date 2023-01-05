@@ -49,6 +49,7 @@ public class PublicIp  implements java.io.Serializable {
     private Charge ipCharge;
 
 
+
     /**
      * get 公网IP实例ID
      *
@@ -67,6 +68,7 @@ public class PublicIp  implements java.io.Serializable {
         this.publicIpId = publicIpId;
     }
 
+
     /**
      * get 公网IP实例地址
      *
@@ -84,6 +86,7 @@ public class PublicIp  implements java.io.Serializable {
     public void setPublicIpAddress(String publicIpAddress) {
         this.publicIpAddress = publicIpAddress;
     }
+
 
     /**
      * get 公网IP计费配置
@@ -104,6 +107,7 @@ public class PublicIp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 公网IP实例ID
      *
@@ -114,6 +118,7 @@ public class PublicIp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 公网IP实例地址
      *
@@ -123,6 +128,7 @@ public class PublicIp  implements java.io.Serializable {
         this.publicIpAddress = publicIpAddress;
         return this;
     }
+
 
     /**
      * set 公网IP计费配置

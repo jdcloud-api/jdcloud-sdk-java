@@ -47,11 +47,12 @@ public class ContactInfo  implements java.io.Serializable {
     /**
      * 联系人id,默认为空
      */
+    
     private List<Integer> personIds;
-
     /**
      * 联系组id,默认为空
      */
+    
     private List<Integer> groupIds;
 
 
@@ -73,6 +74,7 @@ public class ContactInfo  implements java.io.Serializable {
         this.sms = sms;
     }
 
+
     /**
      * get 是否发送短信。0:不发送 1:发送
      *
@@ -91,41 +93,44 @@ public class ContactInfo  implements java.io.Serializable {
         this.email = email;
     }
 
+
     /**
-     * get 联系人id,默认为空
-     *
-     * @return
-     */
+    * get 联系人id,默认为空
+    *
+    * @return
+    */
     public List<Integer> getPersonIds() {
         return personIds;
     }
 
     /**
-     * set 联系人id,默认为空
-     *
-     * @param personIds
-     */
+    * set 联系人id,默认为空
+    *
+    * @param personIds
+    */
     public void setPersonIds(List<Integer> personIds) {
         this.personIds = personIds;
     }
 
+
     /**
-     * get 联系组id,默认为空
-     *
-     * @return
-     */
+    * get 联系组id,默认为空
+    *
+    * @return
+    */
     public List<Integer> getGroupIds() {
         return groupIds;
     }
 
     /**
-     * set 联系组id,默认为空
-     *
-     * @param groupIds
-     */
+    * set 联系组id,默认为空
+    *
+    * @param groupIds
+    */
     public void setGroupIds(List<Integer> groupIds) {
         this.groupIds = groupIds;
     }
+
 
 
     /**
@@ -138,6 +143,7 @@ public class ContactInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否发送短信。0:不发送 1:发送
      *
@@ -148,25 +154,28 @@ public class ContactInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 联系人id,默认为空
-     *
-     * @param personIds
-     */
+    * set 联系人id,默认为空
+    *
+    * @param personIds
+    */
     public ContactInfo personIds(List<Integer> personIds) {
         this.personIds = personIds;
         return this;
     }
 
+
     /**
-     * set 联系组id,默认为空
-     *
-     * @param groupIds
-     */
+    * set 联系组id,默认为空
+    *
+    * @param groupIds
+    */
     public ContactInfo groupIds(List<Integer> groupIds) {
         this.groupIds = groupIds;
         return this;
     }
+
 
 
     /**
@@ -192,5 +201,4 @@ public class ContactInfo  implements java.io.Serializable {
         }
         this.groupIds.add(groupId);
     }
-
 }

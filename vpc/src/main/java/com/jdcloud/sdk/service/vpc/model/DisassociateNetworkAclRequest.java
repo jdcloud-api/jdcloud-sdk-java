@@ -56,6 +56,7 @@ public class DisassociateNetworkAclRequest extends JdcloudRequest implements jav
     private String networkAclId;
 
 
+
     /**
      * get networkAcl要解绑的子网ID
      *
@@ -74,6 +75,7 @@ public class DisassociateNetworkAclRequest extends JdcloudRequest implements jav
         this.subnetId = subnetId;
     }
 
+
     /**
      * get Region ID
      *
@@ -91,6 +93,7 @@ public class DisassociateNetworkAclRequest extends JdcloudRequest implements jav
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get networkAclId ID
@@ -111,6 +114,7 @@ public class DisassociateNetworkAclRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set networkAcl要解绑的子网ID
      *
@@ -121,6 +125,7 @@ public class DisassociateNetworkAclRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -130,6 +135,7 @@ public class DisassociateNetworkAclRequest extends JdcloudRequest implements jav
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set networkAclId ID

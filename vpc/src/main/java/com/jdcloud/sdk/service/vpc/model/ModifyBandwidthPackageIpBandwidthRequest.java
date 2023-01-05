@@ -48,8 +48,8 @@ public class ModifyBandwidthPackageIpBandwidthRequest extends JdcloudRequest imp
      * Required:true
      */
     @Required
+    
     private List<ModifyBandwidthPackageIpBandwidthSpec> bandwidthPackageIPSpecs;
-
     /**
      * Region ID
      * Required:true
@@ -65,23 +65,25 @@ public class ModifyBandwidthPackageIpBandwidthRequest extends JdcloudRequest imp
     private String bandwidthPackageId;
 
 
+
     /**
-     * get Ip列表
-     *
-     * @return
-     */
+    * get Ip列表
+    *
+    * @return
+    */
     public List<ModifyBandwidthPackageIpBandwidthSpec> getBandwidthPackageIPSpecs() {
         return bandwidthPackageIPSpecs;
     }
 
     /**
-     * set Ip列表
-     *
-     * @param bandwidthPackageIPSpecs
-     */
+    * set Ip列表
+    *
+    * @param bandwidthPackageIPSpecs
+    */
     public void setBandwidthPackageIPSpecs(List<ModifyBandwidthPackageIpBandwidthSpec> bandwidthPackageIPSpecs) {
         this.bandwidthPackageIPSpecs = bandwidthPackageIPSpecs;
     }
+
 
     /**
      * get Region ID
@@ -100,6 +102,7 @@ public class ModifyBandwidthPackageIpBandwidthRequest extends JdcloudRequest imp
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 共享带宽包ID
@@ -120,15 +123,17 @@ public class ModifyBandwidthPackageIpBandwidthRequest extends JdcloudRequest imp
     }
 
 
+
     /**
-     * set Ip列表
-     *
-     * @param bandwidthPackageIPSpecs
-     */
+    * set Ip列表
+    *
+    * @param bandwidthPackageIPSpecs
+    */
     public ModifyBandwidthPackageIpBandwidthRequest bandwidthPackageIPSpecs(List<ModifyBandwidthPackageIpBandwidthSpec> bandwidthPackageIPSpecs) {
         this.bandwidthPackageIPSpecs = bandwidthPackageIPSpecs;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -140,6 +145,7 @@ public class ModifyBandwidthPackageIpBandwidthRequest extends JdcloudRequest imp
         return this;
     }
 
+
     /**
      * set 共享带宽包ID
      *
@@ -149,6 +155,7 @@ public class ModifyBandwidthPackageIpBandwidthRequest extends JdcloudRequest imp
         this.bandwidthPackageId = bandwidthPackageId;
         return this;
     }
+
 
 
     /**
@@ -162,5 +169,4 @@ public class ModifyBandwidthPackageIpBandwidthRequest extends JdcloudRequest imp
         }
         this.bandwidthPackageIPSpecs.add(bandwidthPackageIPSpec);
     }
-
 }

@@ -45,6 +45,7 @@ public class InstanceNetworkAttribute  implements java.io.Serializable {
     private Boolean autoDelete;
 
 
+
     /**
      * get 弹性网卡ID。
      *
@@ -62,6 +63,7 @@ public class InstanceNetworkAttribute  implements java.io.Serializable {
     public void setNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
     }
+
 
     /**
      * get 是否随实例一起删除。
@@ -86,6 +88,7 @@ public class InstanceNetworkAttribute  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 弹性网卡ID。
      *
@@ -95,6 +98,7 @@ public class InstanceNetworkAttribute  implements java.io.Serializable {
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
+
 
     /**
      * set 是否随实例一起删除。

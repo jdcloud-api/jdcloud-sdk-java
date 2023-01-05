@@ -67,6 +67,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     private Integer iops;
 
 
+
     /**
      * get 云硬盘类型。取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      *
@@ -84,6 +85,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     public void setDiskType(String diskType) {
         this.diskType = diskType;
     }
+
 
     /**
      * get 云硬盘大小。单位为 GiB。
@@ -111,6 +113,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
         this.diskSizeGB = diskSizeGB;
     }
 
+
     /**
      * get 创建云硬盘的快照ID。
      *
@@ -128,6 +131,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     public void setSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
     }
+
 
     /**
      * get 云盘快照策略ID。
@@ -147,6 +151,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
         this.policyId = policyId;
     }
 
+
     /**
      * get 是否是加密云盘。&#x60;false&#x60;：（默认）不加密。&#x60;true&#x60;：加密。
      *
@@ -164,6 +169,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     public void setEncrypt(Boolean encrypt) {
         this.encrypt = encrypt;
     }
+
 
     /**
      * get 云硬盘的最大iops。
@@ -184,6 +190,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云硬盘类型。取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      *
@@ -193,6 +200,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
         this.diskType = diskType;
         return this;
     }
+
 
     /**
      * set 云硬盘大小。单位为 GiB。
@@ -208,6 +216,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建云硬盘的快照ID。
      *
@@ -217,6 +226,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
         this.snapshotId = snapshotId;
         return this;
     }
+
 
     /**
      * set 云盘快照策略ID。
@@ -228,6 +238,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否是加密云盘。&#x60;false&#x60;：（默认）不加密。&#x60;true&#x60;：加密。
      *
@@ -237,6 +248,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
         this.encrypt = encrypt;
         return this;
     }
+
 
     /**
      * set 云硬盘的最大iops。

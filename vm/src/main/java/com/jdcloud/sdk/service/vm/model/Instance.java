@@ -103,8 +103,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * 数据盘配置列表。
      */
+    
     private List<InstanceDiskAttachment> dataDisks;
-
     /**
      * 主网卡主IP关联的弹性公网IP配置。
      */
@@ -113,8 +113,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * 辅助网卡配置列表。
      */
+    
     private List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces;
-
     /**
      * 云主机实例的创建时间。
      */
@@ -128,8 +128,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * 云主机使用的密钥对名称。
      */
+    
     private List<String> keyNames;
-
     /**
      * 云主机的计费信息。
      */
@@ -148,8 +148,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * Tag信息。
      */
+    
     private List<Tag> tags;
-
     /**
      * 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
 &#x60;keepCharging&#x60;：关机后继续计费。
@@ -161,8 +161,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * 自动任务策略，关联了自动任务策略时可获取相应信息。
      */
+    
     private List<Policy> policies;
-
     /**
      * 云主机所属的专有宿主机池。
      */
@@ -183,6 +183,17 @@ public class Instance  implements java.io.Serializable {
      */
     private String resourceGroupId;
 
+    /**
+     * 云主机操作系统类型，如linux或者windows
+     */
+    private String osType;
+
+    /**
+     * 虚机CPU拓扑
+     */
+    private CpuTopology cpuTopology;
+
+
 
     /**
      * get 云主机ID。
@@ -202,6 +213,7 @@ public class Instance  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 云主机名称。
      *
@@ -219,6 +231,7 @@ public class Instance  implements java.io.Serializable {
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
     }
+
 
     /**
      * get 云主机hostname。
@@ -238,6 +251,7 @@ public class Instance  implements java.io.Serializable {
         this.hostname = hostname;
     }
 
+
     /**
      * get 实例规格。
      *
@@ -255,6 +269,7 @@ public class Instance  implements java.io.Serializable {
     public void setInstanceType(String instanceType) {
         this.instanceType = instanceType;
     }
+
 
     /**
      * get 主网卡所属VPC的ID。
@@ -274,6 +289,7 @@ public class Instance  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 主网卡所属子网的ID。
      *
@@ -291,6 +307,7 @@ public class Instance  implements java.io.Serializable {
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
     /**
      * get 主网卡主内网IP地址。
@@ -310,6 +327,7 @@ public class Instance  implements java.io.Serializable {
         this.privateIpAddress = privateIpAddress;
     }
 
+
     /**
      * get 主网卡主IP绑定弹性IP的ID。
      *
@@ -327,6 +345,7 @@ public class Instance  implements java.io.Serializable {
     public void setElasticIpId(String elasticIpId) {
         this.elasticIpId = elasticIpId;
     }
+
 
     /**
      * get 主网卡主IP绑定弹性IP的地址。
@@ -346,6 +365,7 @@ public class Instance  implements java.io.Serializable {
         this.elasticIpAddress = elasticIpAddress;
     }
 
+
     /**
      * get 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
      *
@@ -363,6 +383,7 @@ public class Instance  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 云主机描述。
@@ -382,6 +403,7 @@ public class Instance  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 云主机使用的镜像ID。
      *
@@ -399,6 +421,7 @@ public class Instance  implements java.io.Serializable {
     public void setImageId(String imageId) {
         this.imageId = imageId;
     }
+
 
     /**
      * get 系统盘配置。
@@ -418,23 +441,25 @@ public class Instance  implements java.io.Serializable {
         this.systemDisk = systemDisk;
     }
 
+
     /**
-     * get 数据盘配置列表。
-     *
-     * @return
-     */
+    * get 数据盘配置列表。
+    *
+    * @return
+    */
     public List<InstanceDiskAttachment> getDataDisks() {
         return dataDisks;
     }
 
     /**
-     * set 数据盘配置列表。
-     *
-     * @param dataDisks
-     */
+    * set 数据盘配置列表。
+    *
+    * @param dataDisks
+    */
     public void setDataDisks(List<InstanceDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
     }
+
 
     /**
      * get 主网卡主IP关联的弹性公网IP配置。
@@ -454,23 +479,25 @@ public class Instance  implements java.io.Serializable {
         this.primaryNetworkInterface = primaryNetworkInterface;
     }
 
+
     /**
-     * get 辅助网卡配置列表。
-     *
-     * @return
-     */
+    * get 辅助网卡配置列表。
+    *
+    * @return
+    */
     public List<InstanceNetworkInterfaceAttachment> getSecondaryNetworkInterfaces() {
         return secondaryNetworkInterfaces;
     }
 
     /**
-     * set 辅助网卡配置列表。
-     *
-     * @param secondaryNetworkInterfaces
-     */
+    * set 辅助网卡配置列表。
+    *
+    * @param secondaryNetworkInterfaces
+    */
     public void setSecondaryNetworkInterfaces(List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces) {
         this.secondaryNetworkInterfaces = secondaryNetworkInterfaces;
     }
+
 
     /**
      * get 云主机实例的创建时间。
@@ -490,6 +517,7 @@ public class Instance  implements java.io.Serializable {
         this.launchTime = launchTime;
     }
 
+
     /**
      * get 云主机所在可用区。
      *
@@ -508,23 +536,25 @@ public class Instance  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
-     * get 云主机使用的密钥对名称。
-     *
-     * @return
-     */
+    * get 云主机使用的密钥对名称。
+    *
+    * @return
+    */
     public List<String> getKeyNames() {
         return keyNames;
     }
 
     /**
-     * set 云主机使用的密钥对名称。
-     *
-     * @param keyNames
-     */
+    * set 云主机使用的密钥对名称。
+    *
+    * @param keyNames
+    */
     public void setKeyNames(List<String> keyNames) {
         this.keyNames = keyNames;
     }
+
 
     /**
      * get 云主机的计费信息。
@@ -544,6 +574,7 @@ public class Instance  implements java.io.Serializable {
         this.charge = charge;
     }
 
+
     /**
      * get 云主机关联的高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称。
      *
@@ -561,6 +592,7 @@ public class Instance  implements java.io.Serializable {
     public void setAg(Ag ag) {
         this.ag = ag;
     }
+
 
     /**
      * get 高可用组中的错误域。
@@ -580,23 +612,25 @@ public class Instance  implements java.io.Serializable {
         this.faultDomain = faultDomain;
     }
 
+
     /**
-     * get Tag信息。
-     *
-     * @return
-     */
+    * get Tag信息。
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set Tag信息。
-     *
-     * @param tags
-     */
+    * set Tag信息。
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
 
     /**
      * get 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
@@ -622,23 +656,25 @@ public class Instance  implements java.io.Serializable {
         this.chargeOnStopped = chargeOnStopped;
     }
 
+
     /**
-     * get 自动任务策略，关联了自动任务策略时可获取相应信息。
-     *
-     * @return
-     */
+    * get 自动任务策略，关联了自动任务策略时可获取相应信息。
+    *
+    * @return
+    */
     public List<Policy> getPolicies() {
         return policies;
     }
 
     /**
-     * set 自动任务策略，关联了自动任务策略时可获取相应信息。
-     *
-     * @param policies
-     */
+    * set 自动任务策略，关联了自动任务策略时可获取相应信息。
+    *
+    * @param policies
+    */
     public void setPolicies(List<Policy> policies) {
         this.policies = policies;
     }
+
 
     /**
      * get 云主机所属的专有宿主机池。
@@ -658,6 +694,7 @@ public class Instance  implements java.io.Serializable {
         this.dedicatedPoolId = dedicatedPoolId;
     }
 
+
     /**
      * get 云主机所属的专有宿主机ID。
      *
@@ -676,6 +713,7 @@ public class Instance  implements java.io.Serializable {
         this.dedicatedHostId = dedicatedHostId;
     }
 
+
     /**
      * get 突发型实例参数信息
      *
@@ -693,6 +731,7 @@ public class Instance  implements java.io.Serializable {
     public void setBurstInfo(BurstInfo burstInfo) {
         this.burstInfo = burstInfo;
     }
+
 
     /**
      * get 资源组ID
@@ -714,6 +753,45 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
+     * get 云主机操作系统类型，如linux或者windows
+     *
+     * @return
+     */
+    public String getOsType() {
+        return osType;
+    }
+
+    /**
+     * set 云主机操作系统类型，如linux或者windows
+     *
+     * @param osType
+     */
+    public void setOsType(String osType) {
+        this.osType = osType;
+    }
+
+
+    /**
+     * get 虚机CPU拓扑
+     *
+     * @return
+     */
+    public CpuTopology getCpuTopology() {
+        return cpuTopology;
+    }
+
+    /**
+     * set 虚机CPU拓扑
+     *
+     * @param cpuTopology
+     */
+    public void setCpuTopology(CpuTopology cpuTopology) {
+        this.cpuTopology = cpuTopology;
+    }
+
+
+
+    /**
      * set 云主机ID。
      *
      * @param instanceId
@@ -722,6 +800,7 @@ public class Instance  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 云主机名称。
@@ -733,6 +812,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机hostname。
      *
@@ -742,6 +822,7 @@ public class Instance  implements java.io.Serializable {
         this.hostname = hostname;
         return this;
     }
+
 
     /**
      * set 实例规格。
@@ -753,6 +834,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡所属VPC的ID。
      *
@@ -762,6 +844,7 @@ public class Instance  implements java.io.Serializable {
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set 主网卡所属子网的ID。
@@ -773,6 +856,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡主内网IP地址。
      *
@@ -782,6 +866,7 @@ public class Instance  implements java.io.Serializable {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
+
 
     /**
      * set 主网卡主IP绑定弹性IP的ID。
@@ -793,6 +878,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡主IP绑定弹性IP的地址。
      *
@@ -802,6 +888,7 @@ public class Instance  implements java.io.Serializable {
         this.elasticIpAddress = elasticIpAddress;
         return this;
     }
+
 
     /**
      * set 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
@@ -813,6 +900,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机描述。
      *
@@ -822,6 +910,7 @@ public class Instance  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 云主机使用的镜像ID。
@@ -833,6 +922,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 系统盘配置。
      *
@@ -843,15 +933,17 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 数据盘配置列表。
-     *
-     * @param dataDisks
-     */
+    * set 数据盘配置列表。
+    *
+    * @param dataDisks
+    */
     public Instance dataDisks(List<InstanceDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
         return this;
     }
+
 
     /**
      * set 主网卡主IP关联的弹性公网IP配置。
@@ -863,15 +955,17 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 辅助网卡配置列表。
-     *
-     * @param secondaryNetworkInterfaces
-     */
+    * set 辅助网卡配置列表。
+    *
+    * @param secondaryNetworkInterfaces
+    */
     public Instance secondaryNetworkInterfaces(List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces) {
         this.secondaryNetworkInterfaces = secondaryNetworkInterfaces;
         return this;
     }
+
 
     /**
      * set 云主机实例的创建时间。
@@ -883,6 +977,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机所在可用区。
      *
@@ -893,15 +988,17 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 云主机使用的密钥对名称。
-     *
-     * @param keyNames
-     */
+    * set 云主机使用的密钥对名称。
+    *
+    * @param keyNames
+    */
     public Instance keyNames(List<String> keyNames) {
         this.keyNames = keyNames;
         return this;
     }
+
 
     /**
      * set 云主机的计费信息。
@@ -913,6 +1010,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机关联的高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称。
      *
@@ -922,6 +1020,7 @@ public class Instance  implements java.io.Serializable {
         this.ag = ag;
         return this;
     }
+
 
     /**
      * set 高可用组中的错误域。
@@ -933,15 +1032,17 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set Tag信息。
-     *
-     * @param tags
-     */
+    * set Tag信息。
+    *
+    * @param tags
+    */
     public Instance tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
 
     /**
      * set 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
@@ -956,15 +1057,17 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 自动任务策略，关联了自动任务策略时可获取相应信息。
-     *
-     * @param policies
-     */
+    * set 自动任务策略，关联了自动任务策略时可获取相应信息。
+    *
+    * @param policies
+    */
     public Instance policies(List<Policy> policies) {
         this.policies = policies;
         return this;
     }
+
 
     /**
      * set 云主机所属的专有宿主机池。
@@ -976,6 +1079,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机所属的专有宿主机ID。
      *
@@ -985,6 +1089,7 @@ public class Instance  implements java.io.Serializable {
         this.dedicatedHostId = dedicatedHostId;
         return this;
     }
+
 
     /**
      * set 突发型实例参数信息
@@ -996,6 +1101,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源组ID
      *
@@ -1005,6 +1111,29 @@ public class Instance  implements java.io.Serializable {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
+
+
+    /**
+     * set 云主机操作系统类型，如linux或者windows
+     *
+     * @param osType
+     */
+    public Instance osType(String osType) {
+        this.osType = osType;
+        return this;
+    }
+
+
+    /**
+     * set 虚机CPU拓扑
+     *
+     * @param cpuTopology
+     */
+    public Instance cpuTopology(CpuTopology cpuTopology) {
+        this.cpuTopology = cpuTopology;
+        return this;
+    }
+
 
 
     /**
@@ -1066,5 +1195,4 @@ public class Instance  implements java.io.Serializable {
         }
         this.policies.add(policie);
     }
-
 }

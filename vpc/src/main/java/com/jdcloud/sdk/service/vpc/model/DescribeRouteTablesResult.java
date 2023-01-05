@@ -39,31 +39,33 @@ public class DescribeRouteTablesResult extends JdcloudResult implements java.io.
     /**
      * routeTables
      */
+    
     private List<RouteTable> routeTables;
-
     /**
      * 总数量
      */
     private Number totalCount;
 
 
+
     /**
-     * get routeTables
-     *
-     * @return
-     */
+    * get routeTables
+    *
+    * @return
+    */
     public List<RouteTable> getRouteTables() {
         return routeTables;
     }
 
     /**
-     * set routeTables
-     *
-     * @param routeTables
-     */
+    * set routeTables
+    *
+    * @param routeTables
+    */
     public void setRouteTables(List<RouteTable> routeTables) {
         this.routeTables = routeTables;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeRouteTablesResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
-     * set routeTables
-     *
-     * @param routeTables
-     */
+    * set routeTables
+    *
+    * @param routeTables
+    */
     public DescribeRouteTablesResult routeTables(List<RouteTable> routeTables) {
         this.routeTables = routeTables;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeRouteTablesResult extends JdcloudResult implements java.io.
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeRouteTablesResult extends JdcloudResult implements java.io.
         }
         this.routeTables.add(routeTable);
     }
-
 }

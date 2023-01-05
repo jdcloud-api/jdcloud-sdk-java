@@ -73,8 +73,8 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
      * 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
 
      */
+    
     private List<String> keyNames;
-
     /**
      * 实例hostname。
 若不指定hostname，则默认以实例名称&#x60;name&#x60;作为hostname，但是会以RFC 952和RFC 1123命名规范做一定转义。
@@ -90,8 +90,8 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
 注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
 
      */
+    
     private List<Metadata> metadata;
-
     /**
      * 自定义脚本。
 目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须Base64编码且编码前数据长度不能超过16KB。
@@ -99,8 +99,8 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
      */
+    
     private List<Userdata> userdata;
-
     /**
      * 密码授权，若存在密匙，则根据此参数决定是否使用密码，若没有密匙，此参数无效，会强制使用密码。
 若不使用密码，且密匙对解绑后，用户需重置密码，方可使用密码登录。
@@ -129,6 +129,7 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     private String instanceId;
 
 
+
     /**
      * get 实例密码。
 可用于SSH登录和VNC登录。
@@ -155,6 +156,7 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
         this.password = password;
     }
 
+
     /**
      * get 镜像ID。
 若不指定镜像ID，默认使用当前主机的原镜像重置系统。
@@ -179,25 +181,27 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
         this.imageId = imageId;
     }
 
-    /**
-     * get 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
 
-     *
-     * @return
-     */
+    /**
+    * get 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+
+    *
+    * @return
+    */
     public List<String> getKeyNames() {
         return keyNames;
     }
 
     /**
-     * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+    * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
 
-     *
-     * @param keyNames
-     */
+    *
+    * @param keyNames
+    */
     public void setKeyNames(List<String> keyNames) {
         this.keyNames = keyNames;
     }
+
 
     /**
      * get 实例hostname。
@@ -225,55 +229,58 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
         this.hostname = hostname;
     }
 
+
     /**
-     * get 用户自定义元数据。
+    * get 用户自定义元数据。
 以 &#x60;key-value&#x60; 键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且 &#x60;key&#x60; 不超过256字符，&#x60;value&#x60; 不超过16KB，不区分大小写。
 注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Metadata> getMetadata() {
         return metadata;
     }
 
     /**
-     * set 用户自定义元数据。
+    * set 用户自定义元数据。
 以 &#x60;key-value&#x60; 键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且 &#x60;key&#x60; 不超过256字符，&#x60;value&#x60; 不超过16KB，不区分大小写。
 注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
 
-     *
-     * @param metadata
-     */
+    *
+    * @param metadata
+    */
     public void setMetadata(List<Metadata> metadata) {
         this.metadata = metadata;
     }
 
+
     /**
-     * get 自定义脚本。
+    * get 自定义脚本。
 目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须Base64编码且编码前数据长度不能超过16KB。
 **linux系统**：支持bash和python，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Userdata> getUserdata() {
         return userdata;
     }
 
     /**
-     * set 自定义脚本。
+    * set 自定义脚本。
 目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须Base64编码且编码前数据长度不能超过16KB。
 **linux系统**：支持bash和python，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
-     *
-     * @param userdata
-     */
+    *
+    * @param userdata
+    */
     public void setUserdata(List<Userdata> userdata) {
         this.userdata = userdata;
     }
+
 
     /**
      * get 密码授权，若存在密匙，则根据此参数决定是否使用密码，若没有密匙，此参数无效，会强制使用密码。
@@ -299,6 +306,7 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
         this.passWordAuth = passWordAuth;
     }
 
+
     /**
      * get 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
      *
@@ -317,6 +325,7 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
         this.imageInherit = imageInherit;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -334,6 +343,7 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -354,6 +364,7 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 实例密码。
 可用于SSH登录和VNC登录。
@@ -368,6 +379,7 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 镜像ID。
 若不指定镜像ID，默认使用当前主机的原镜像重置系统。
@@ -381,16 +393,18 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
-    /**
-     * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
 
-     *
-     * @param keyNames
-     */
+    /**
+    * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+
+    *
+    * @param keyNames
+    */
     public RebuildInstanceRequest keyNames(List<String> keyNames) {
         this.keyNames = keyNames;
         return this;
     }
+
 
     /**
      * set 实例hostname。
@@ -406,32 +420,35 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
-     * set 用户自定义元数据。
+    * set 用户自定义元数据。
 以 &#x60;key-value&#x60; 键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且 &#x60;key&#x60; 不超过256字符，&#x60;value&#x60; 不超过16KB，不区分大小写。
 注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
 
-     *
-     * @param metadata
-     */
+    *
+    * @param metadata
+    */
     public RebuildInstanceRequest metadata(List<Metadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
+
     /**
-     * set 自定义脚本。
+    * set 自定义脚本。
 目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须Base64编码且编码前数据长度不能超过16KB。
 **linux系统**：支持bash和python，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
-     *
-     * @param userdata
-     */
+    *
+    * @param userdata
+    */
     public RebuildInstanceRequest userdata(List<Userdata> userdata) {
         this.userdata = userdata;
         return this;
     }
+
 
     /**
      * set 密码授权，若存在密匙，则根据此参数决定是否使用密码，若没有密匙，此参数无效，会强制使用密码。
@@ -446,6 +463,7 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
      *
@@ -455,6 +473,7 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
         this.imageInherit = imageInherit;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -466,6 +485,7 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 云主机ID。
      *
@@ -475,6 +495,7 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -520,5 +541,4 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
         }
         this.userdata.add(userdata);
     }
-
 }

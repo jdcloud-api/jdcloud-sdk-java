@@ -52,6 +52,7 @@ public class ImportImageResult extends JdcloudResult implements java.io.Serializ
     private String taskId;
 
 
+
     /**
      * get 镜像id。
      *
@@ -69,6 +70,7 @@ public class ImportImageResult extends JdcloudResult implements java.io.Serializ
     public void setImageId(String imageId) {
         this.imageId = imageId;
     }
+
 
     /**
      * get 导入任务id。
@@ -89,6 +91,7 @@ public class ImportImageResult extends JdcloudResult implements java.io.Serializ
     }
 
 
+
     /**
      * set 镜像id。
      *
@@ -98,6 +101,7 @@ public class ImportImageResult extends JdcloudResult implements java.io.Serializ
         this.imageId = imageId;
         return this;
     }
+
 
     /**
      * set 导入任务id。

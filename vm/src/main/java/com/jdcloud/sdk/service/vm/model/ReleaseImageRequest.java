@@ -59,6 +59,7 @@ public class ReleaseImageRequest extends JdcloudRequest implements java.io.Seria
     private String imageId;
 
 
+
     /**
      * get 地域ID。
      *
@@ -76,6 +77,7 @@ public class ReleaseImageRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 镜像ID。
@@ -96,6 +98,7 @@ public class ReleaseImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 地域ID。
      *
@@ -105,6 +108,7 @@ public class ReleaseImageRequest extends JdcloudRequest implements java.io.Seria
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 镜像ID。

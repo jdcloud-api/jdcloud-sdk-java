@@ -41,8 +41,8 @@ public class AssociateNetworkAclRequest extends JdcloudRequest implements java.i
      * Required:true
      */
     @Required
+    
     private List<String> subnetIds;
-
     /**
      * Region ID
      * Required:true
@@ -58,23 +58,25 @@ public class AssociateNetworkAclRequest extends JdcloudRequest implements java.i
     private String networkAclId;
 
 
+
     /**
-     * get networkAcl要绑定的子网ID列表, subnet已被其他networkAcl绑定时，自动解绑
-     *
-     * @return
-     */
+    * get networkAcl要绑定的子网ID列表, subnet已被其他networkAcl绑定时，自动解绑
+    *
+    * @return
+    */
     public List<String> getSubnetIds() {
         return subnetIds;
     }
 
     /**
-     * set networkAcl要绑定的子网ID列表, subnet已被其他networkAcl绑定时，自动解绑
-     *
-     * @param subnetIds
-     */
+    * set networkAcl要绑定的子网ID列表, subnet已被其他networkAcl绑定时，自动解绑
+    *
+    * @param subnetIds
+    */
     public void setSubnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
     }
+
 
     /**
      * get Region ID
@@ -93,6 +95,7 @@ public class AssociateNetworkAclRequest extends JdcloudRequest implements java.i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get networkAclId ID
@@ -113,15 +116,17 @@ public class AssociateNetworkAclRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
-     * set networkAcl要绑定的子网ID列表, subnet已被其他networkAcl绑定时，自动解绑
-     *
-     * @param subnetIds
-     */
+    * set networkAcl要绑定的子网ID列表, subnet已被其他networkAcl绑定时，自动解绑
+    *
+    * @param subnetIds
+    */
     public AssociateNetworkAclRequest subnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -133,6 +138,7 @@ public class AssociateNetworkAclRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set networkAclId ID
      *
@@ -142,6 +148,7 @@ public class AssociateNetworkAclRequest extends JdcloudRequest implements java.i
         this.networkAclId = networkAclId;
         return this;
     }
+
 
 
     /**
@@ -155,5 +162,4 @@ public class AssociateNetworkAclRequest extends JdcloudRequest implements java.i
         }
         this.subnetIds.add(subnetId);
     }
-
 }

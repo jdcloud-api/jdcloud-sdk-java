@@ -73,6 +73,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
     private Boolean noDevice;
 
 
+
     /**
      * get 磁盘类型。
 **系统盘**：取值为：&#x60;local&#x60; 本地系统盘 或 &#x60;cloud&#x60; 云盘系统盘。
@@ -96,6 +97,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
     public void setDiskCategory(String diskCategory) {
         this.diskCategory = diskCategory;
     }
+
 
     /**
      * get 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
@@ -121,6 +123,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
         this.autoDelete = autoDelete;
     }
 
+
     /**
      * get 云硬盘配置。
      *
@@ -138,6 +141,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
     public void setInstanceTemplateDisk(InstanceTemplateDisk instanceTemplateDisk) {
         this.instanceTemplateDisk = instanceTemplateDisk;
     }
+
 
     /**
      * get 磁盘逻辑挂载点。
@@ -162,6 +166,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
     public void setDeviceName(String deviceName) {
         this.deviceName = deviceName;
     }
+
 
     /**
      * get 排除设备，使用此参数 &#x60;noDevice&#x60; 配合 &#x60;deviceName&#x60; 一起使用。
@@ -194,6 +199,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 磁盘类型。
 **系统盘**：取值为：&#x60;local&#x60; 本地系统盘 或 &#x60;cloud&#x60; 云盘系统盘。
@@ -206,6 +212,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
         this.diskCategory = diskCategory;
         return this;
     }
+
 
     /**
      * set 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
@@ -220,6 +227,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云硬盘配置。
      *
@@ -229,6 +237,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
         this.instanceTemplateDisk = instanceTemplateDisk;
         return this;
     }
+
 
     /**
      * set 磁盘逻辑挂载点。
@@ -242,6 +251,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
         this.deviceName = deviceName;
         return this;
     }
+
 
     /**
      * set 排除设备，使用此参数 &#x60;noDevice&#x60; 配合 &#x60;deviceName&#x60; 一起使用。

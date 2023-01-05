@@ -57,12 +57,13 @@ public class NetworkInterfacePermission  implements java.io.Serializable {
     /**
      * 授权策略, 授权后，该弹性网卡可以关联的服务端账号的资源类型，取值范围，instance-attach：可以关联服务端账号的实例资源，eip-associate：可以关联服务端账号的弹性公网IP资源
      */
+    
     private List<String> policy;
-
     /**
      * 弹性网卡授权创建时间
      */
     private String createdTime;
+
 
 
     /**
@@ -83,6 +84,7 @@ public class NetworkInterfacePermission  implements java.io.Serializable {
         this.networkInterfacePermissionId = networkInterfacePermissionId;
     }
 
+
     /**
      * get 弹性网卡所属用户
      *
@@ -100,6 +102,7 @@ public class NetworkInterfacePermission  implements java.io.Serializable {
     public void setNetworkInterfaceOwner(String networkInterfaceOwner) {
         this.networkInterfaceOwner = networkInterfaceOwner;
     }
+
 
     /**
      * get 授信用户
@@ -119,6 +122,7 @@ public class NetworkInterfacePermission  implements java.io.Serializable {
         this.trustUser = trustUser;
     }
 
+
     /**
      * get 弹性网卡ID
      *
@@ -137,23 +141,25 @@ public class NetworkInterfacePermission  implements java.io.Serializable {
         this.networkInterfaceId = networkInterfaceId;
     }
 
+
     /**
-     * get 授权策略, 授权后，该弹性网卡可以关联的服务端账号的资源类型，取值范围，instance-attach：可以关联服务端账号的实例资源，eip-associate：可以关联服务端账号的弹性公网IP资源
-     *
-     * @return
-     */
+    * get 授权策略, 授权后，该弹性网卡可以关联的服务端账号的资源类型，取值范围，instance-attach：可以关联服务端账号的实例资源，eip-associate：可以关联服务端账号的弹性公网IP资源
+    *
+    * @return
+    */
     public List<String> getPolicy() {
         return policy;
     }
 
     /**
-     * set 授权策略, 授权后，该弹性网卡可以关联的服务端账号的资源类型，取值范围，instance-attach：可以关联服务端账号的实例资源，eip-associate：可以关联服务端账号的弹性公网IP资源
-     *
-     * @param policy
-     */
+    * set 授权策略, 授权后，该弹性网卡可以关联的服务端账号的资源类型，取值范围，instance-attach：可以关联服务端账号的实例资源，eip-associate：可以关联服务端账号的弹性公网IP资源
+    *
+    * @param policy
+    */
     public void setPolicy(List<String> policy) {
         this.policy = policy;
     }
+
 
     /**
      * get 弹性网卡授权创建时间
@@ -174,6 +180,7 @@ public class NetworkInterfacePermission  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 弹性网卡授权ID
      *
@@ -183,6 +190,7 @@ public class NetworkInterfacePermission  implements java.io.Serializable {
         this.networkInterfacePermissionId = networkInterfacePermissionId;
         return this;
     }
+
 
     /**
      * set 弹性网卡所属用户
@@ -194,6 +202,7 @@ public class NetworkInterfacePermission  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 授信用户
      *
@@ -203,6 +212,7 @@ public class NetworkInterfacePermission  implements java.io.Serializable {
         this.trustUser = trustUser;
         return this;
     }
+
 
     /**
      * set 弹性网卡ID
@@ -214,15 +224,17 @@ public class NetworkInterfacePermission  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 授权策略, 授权后，该弹性网卡可以关联的服务端账号的资源类型，取值范围，instance-attach：可以关联服务端账号的实例资源，eip-associate：可以关联服务端账号的弹性公网IP资源
-     *
-     * @param policy
-     */
+    * set 授权策略, 授权后，该弹性网卡可以关联的服务端账号的资源类型，取值范围，instance-attach：可以关联服务端账号的实例资源，eip-associate：可以关联服务端账号的弹性公网IP资源
+    *
+    * @param policy
+    */
     public NetworkInterfacePermission policy(List<String> policy) {
         this.policy = policy;
         return this;
     }
+
 
     /**
      * set 弹性网卡授权创建时间
@@ -233,6 +245,7 @@ public class NetworkInterfacePermission  implements java.io.Serializable {
         this.createdTime = createdTime;
         return this;
     }
+
 
 
     /**
@@ -246,5 +259,4 @@ public class NetworkInterfacePermission  implements java.io.Serializable {
         }
         this.policy.add(policy);
     }
-
 }

@@ -43,6 +43,7 @@ public class ModifyVpcSpec  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get 私有网络名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -60,6 +61,7 @@ public class ModifyVpcSpec  implements java.io.Serializable {
     public void setVpcName(String vpcName) {
         this.vpcName = vpcName;
     }
+
 
     /**
      * get vpc描述，允许输入UTF-8编码下的全部字符，不超过256字符。
@@ -80,6 +82,7 @@ public class ModifyVpcSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 私有网络名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -89,6 +92,7 @@ public class ModifyVpcSpec  implements java.io.Serializable {
         this.vpcName = vpcName;
         return this;
     }
+
 
     /**
      * set vpc描述，允许输入UTF-8编码下的全部字符，不超过256字符。

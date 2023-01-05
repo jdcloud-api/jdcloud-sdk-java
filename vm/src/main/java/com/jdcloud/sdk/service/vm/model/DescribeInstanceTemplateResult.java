@@ -48,6 +48,7 @@ public class DescribeInstanceTemplateResult extends JdcloudResult implements jav
     private InstanceTemplate instanceTemplate;
 
 
+
     /**
      * get 响应结果。
      *
@@ -65,6 +66,7 @@ public class DescribeInstanceTemplateResult extends JdcloudResult implements jav
     public void setInstanceTemplate(InstanceTemplate instanceTemplate) {
         this.instanceTemplate = instanceTemplate;
     }
+
 
 
     /**

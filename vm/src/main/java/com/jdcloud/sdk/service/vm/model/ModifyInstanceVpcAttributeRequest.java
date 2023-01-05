@@ -89,8 +89,8 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
 不更换 &#x60;vpc&#x60; 时不可以指定安全组。
 
      */
+    
     private List<String> securityGroups;
-
     /**
      * 地域ID。
      * Required:true
@@ -104,6 +104,7 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
      */
     @Required
     private String instanceId;
+
 
 
     /**
@@ -123,6 +124,7 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
     /**
      * get &#x60;true&#x60;: 分配IPV6地址。
@@ -146,6 +148,7 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
         this.assignIpv6 = assignIpv6;
     }
 
+
     /**
      * get Ipv4地址。
 不变更 &#x60;vpc&#x60; 及子网时必须指定Ipv4地址
@@ -168,29 +171,31 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
         this.privateIpAddress = privateIpAddress;
     }
 
+
     /**
-     * get 安全组列表。
+    * get 安全组列表。
 更换 &#x60;vpc&#x60; 时必须指定新的安全组。
 不更换 &#x60;vpc&#x60; 时不可以指定安全组。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<String> getSecurityGroups() {
         return securityGroups;
     }
 
     /**
-     * set 安全组列表。
+    * set 安全组列表。
 更换 &#x60;vpc&#x60; 时必须指定新的安全组。
 不更换 &#x60;vpc&#x60; 时不可以指定安全组。
 
-     *
-     * @param securityGroups
-     */
+    *
+    * @param securityGroups
+    */
     public void setSecurityGroups(List<String> securityGroups) {
         this.securityGroups = securityGroups;
     }
+
 
     /**
      * get 地域ID。
@@ -209,6 +214,7 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -229,6 +235,7 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
     }
 
 
+
     /**
      * set 子网Id。
      *
@@ -238,6 +245,7 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set &#x60;true&#x60;: 分配IPV6地址。
@@ -251,6 +259,7 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
         return this;
     }
 
+
     /**
      * set Ipv4地址。
 不变更 &#x60;vpc&#x60; 及子网时必须指定Ipv4地址
@@ -263,18 +272,20 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
         return this;
     }
 
+
     /**
-     * set 安全组列表。
+    * set 安全组列表。
 更换 &#x60;vpc&#x60; 时必须指定新的安全组。
 不更换 &#x60;vpc&#x60; 时不可以指定安全组。
 
-     *
-     * @param securityGroups
-     */
+    *
+    * @param securityGroups
+    */
     public ModifyInstanceVpcAttributeRequest securityGroups(List<String> securityGroups) {
         this.securityGroups = securityGroups;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -286,6 +297,7 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
         return this;
     }
 
+
     /**
      * set 云主机ID。
      *
@@ -295,6 +307,7 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -311,5 +324,4 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
         }
         this.securityGroups.add(securityGroup);
     }
-
 }

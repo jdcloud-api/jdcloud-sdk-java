@@ -71,6 +71,7 @@ public class DetachDiskRequest extends JdcloudRequest implements java.io.Seriali
     private String instanceId;
 
 
+
     /**
      * get 云硬盘ID。
      *
@@ -88,6 +89,7 @@ public class DetachDiskRequest extends JdcloudRequest implements java.io.Seriali
     public void setDiskId(String diskId) {
         this.diskId = diskId;
     }
+
 
     /**
      * get 是否强制缷载，默认False。
@@ -111,6 +113,7 @@ public class DetachDiskRequest extends JdcloudRequest implements java.io.Seriali
         this.force = force;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -128,6 +131,7 @@ public class DetachDiskRequest extends JdcloudRequest implements java.io.Seriali
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -148,6 +152,7 @@ public class DetachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 云硬盘ID。
      *
@@ -157,6 +162,7 @@ public class DetachDiskRequest extends JdcloudRequest implements java.io.Seriali
         this.diskId = diskId;
         return this;
     }
+
 
     /**
      * set 是否强制缷载，默认False。
@@ -170,6 +176,7 @@ public class DetachDiskRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -179,6 +186,7 @@ public class DetachDiskRequest extends JdcloudRequest implements java.io.Seriali
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云主机ID。

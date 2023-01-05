@@ -38,31 +38,33 @@ public class CreateElasticIpsResult extends JdcloudResult implements java.io.Ser
     /**
      * 弹性公网IP ID
      */
+    
     private List<String> elasticIpIds;
-
     /**
      * 请求ID
      */
     private String requestId;
 
 
+
     /**
-     * get 弹性公网IP ID
-     *
-     * @return
-     */
+    * get 弹性公网IP ID
+    *
+    * @return
+    */
     public List<String> getElasticIpIds() {
         return elasticIpIds;
     }
 
     /**
-     * set 弹性公网IP ID
-     *
-     * @param elasticIpIds
-     */
+    * set 弹性公网IP ID
+    *
+    * @param elasticIpIds
+    */
     public void setElasticIpIds(List<String> elasticIpIds) {
         this.elasticIpIds = elasticIpIds;
     }
+
 
     /**
      * get 请求ID
@@ -83,15 +85,17 @@ public class CreateElasticIpsResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
-     * set 弹性公网IP ID
-     *
-     * @param elasticIpIds
-     */
+    * set 弹性公网IP ID
+    *
+    * @param elasticIpIds
+    */
     public CreateElasticIpsResult elasticIpIds(List<String> elasticIpIds) {
         this.elasticIpIds = elasticIpIds;
         return this;
     }
+
 
     /**
      * set 请求ID
@@ -102,6 +106,7 @@ public class CreateElasticIpsResult extends JdcloudResult implements java.io.Ser
         this.requestId = requestId;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class CreateElasticIpsResult extends JdcloudResult implements java.io.Ser
         }
         this.elasticIpIds.add(elasticIpId);
     }
-
 }

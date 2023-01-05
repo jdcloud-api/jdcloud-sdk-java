@@ -47,6 +47,7 @@ public class ModifyNetworkInterfaceSpec  implements java.io.Serializable {
     /**
      * 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
      */
+    
     private List<String> securityGroups;
 
 
@@ -68,6 +69,7 @@ public class ModifyNetworkInterfaceSpec  implements java.io.Serializable {
         this.networkInterfaceName = networkInterfaceName;
     }
 
+
     /**
      * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -86,23 +88,25 @@ public class ModifyNetworkInterfaceSpec  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
-     * get 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
-     *
-     * @return
-     */
+    * get 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
+    *
+    * @return
+    */
     public List<String> getSecurityGroups() {
         return securityGroups;
     }
 
     /**
-     * set 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
-     *
-     * @param securityGroups
-     */
+    * set 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
+    *
+    * @param securityGroups
+    */
     public void setSecurityGroups(List<String> securityGroups) {
         this.securityGroups = securityGroups;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class ModifyNetworkInterfaceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -125,15 +130,17 @@ public class ModifyNetworkInterfaceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
-     *
-     * @param securityGroups
-     */
+    * set 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
+    *
+    * @param securityGroups
+    */
     public ModifyNetworkInterfaceSpec securityGroups(List<String> securityGroups) {
         this.securityGroups = securityGroups;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class ModifyNetworkInterfaceSpec  implements java.io.Serializable {
         }
         this.securityGroups.add(securityGroup);
     }
-
 }

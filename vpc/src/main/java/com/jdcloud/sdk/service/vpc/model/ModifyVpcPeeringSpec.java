@@ -43,6 +43,7 @@ public class ModifyVpcPeeringSpec  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get VpcPeering的名字,不为空。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -60,6 +61,7 @@ public class ModifyVpcPeeringSpec  implements java.io.Serializable {
     public void setVpcPeeringName(String vpcPeeringName) {
         this.vpcPeeringName = vpcPeeringName;
     }
+
 
     /**
      * get VpcPeering 描述，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
@@ -80,6 +82,7 @@ public class ModifyVpcPeeringSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set VpcPeering的名字,不为空。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -89,6 +92,7 @@ public class ModifyVpcPeeringSpec  implements java.io.Serializable {
         this.vpcPeeringName = vpcPeeringName;
         return this;
     }
+
 
     /**
      * set VpcPeering 描述，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符

@@ -48,9 +48,15 @@ public class RouteTableSpec  implements java.io.Serializable {
     private String routeTableName;
 
     /**
-     * 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
+     * 描述，允许输入UTF-8编码下的全部字符，不超过256字符
      */
     private String description;
+
+    /**
+     * 绑定资源类型，取值：subnet(缺省时默认值)，gateway
+     */
+    private String associateType;
+
 
 
     /**
@@ -71,6 +77,7 @@ public class RouteTableSpec  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 路由表名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -89,8 +96,9 @@ public class RouteTableSpec  implements java.io.Serializable {
         this.routeTableName = routeTableName;
     }
 
+
     /**
-     * get 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
+     * get 描述，允许输入UTF-8编码下的全部字符，不超过256字符
      *
      * @return
      */
@@ -99,13 +107,33 @@ public class RouteTableSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
+     * set 描述，允许输入UTF-8编码下的全部字符，不超过256字符
      *
      * @param description
      */
     public void setDescription(String description) {
         this.description = description;
     }
+
+
+    /**
+     * get 绑定资源类型，取值：subnet(缺省时默认值)，gateway
+     *
+     * @return
+     */
+    public String getAssociateType() {
+        return associateType;
+    }
+
+    /**
+     * set 绑定资源类型，取值：subnet(缺省时默认值)，gateway
+     *
+     * @param associateType
+     */
+    public void setAssociateType(String associateType) {
+        this.associateType = associateType;
+    }
+
 
 
     /**
@@ -118,6 +146,7 @@ public class RouteTableSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 路由表名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -128,13 +157,25 @@ public class RouteTableSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
+     * set 描述，允许输入UTF-8编码下的全部字符，不超过256字符
      *
      * @param description
      */
     public RouteTableSpec description(String description) {
         this.description = description;
+        return this;
+    }
+
+
+    /**
+     * set 绑定资源类型，取值：subnet(缺省时默认值)，gateway
+     *
+     * @param associateType
+     */
+    public RouteTableSpec associateType(String associateType) {
+        this.associateType = associateType;
         return this;
     }
 

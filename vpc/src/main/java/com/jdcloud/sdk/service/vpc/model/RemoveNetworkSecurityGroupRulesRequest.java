@@ -41,8 +41,8 @@ public class RemoveNetworkSecurityGroupRulesRequest extends JdcloudRequest imple
      * Required:true
      */
     @Required
+    
     private List<String> ruleIds;
-
     /**
      * Region ID
      * Required:true
@@ -58,23 +58,25 @@ public class RemoveNetworkSecurityGroupRulesRequest extends JdcloudRequest imple
     private String networkSecurityGroupId;
 
 
+
     /**
-     * get 安全组规则Id列表
-     *
-     * @return
-     */
+    * get 安全组规则Id列表
+    *
+    * @return
+    */
     public List<String> getRuleIds() {
         return ruleIds;
     }
 
     /**
-     * set 安全组规则Id列表
-     *
-     * @param ruleIds
-     */
+    * set 安全组规则Id列表
+    *
+    * @param ruleIds
+    */
     public void setRuleIds(List<String> ruleIds) {
         this.ruleIds = ruleIds;
     }
+
 
     /**
      * get Region ID
@@ -93,6 +95,7 @@ public class RemoveNetworkSecurityGroupRulesRequest extends JdcloudRequest imple
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get NetworkSecurityGroup ID
@@ -113,15 +116,17 @@ public class RemoveNetworkSecurityGroupRulesRequest extends JdcloudRequest imple
     }
 
 
+
     /**
-     * set 安全组规则Id列表
-     *
-     * @param ruleIds
-     */
+    * set 安全组规则Id列表
+    *
+    * @param ruleIds
+    */
     public RemoveNetworkSecurityGroupRulesRequest ruleIds(List<String> ruleIds) {
         this.ruleIds = ruleIds;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -133,6 +138,7 @@ public class RemoveNetworkSecurityGroupRulesRequest extends JdcloudRequest imple
         return this;
     }
 
+
     /**
      * set NetworkSecurityGroup ID
      *
@@ -142,6 +148,7 @@ public class RemoveNetworkSecurityGroupRulesRequest extends JdcloudRequest imple
         this.networkSecurityGroupId = networkSecurityGroupId;
         return this;
     }
+
 
 
     /**
@@ -155,5 +162,4 @@ public class RemoveNetworkSecurityGroupRulesRequest extends JdcloudRequest imple
         }
         this.ruleIds.add(ruleId);
     }
-
 }

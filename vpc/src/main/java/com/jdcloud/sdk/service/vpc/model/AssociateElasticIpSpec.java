@@ -48,6 +48,7 @@ public class AssociateElasticIpSpec  implements java.io.Serializable {
     private String elasticIpAddress;
 
 
+
     /**
      * get 绑定的弹性Ip Id
      *
@@ -66,6 +67,7 @@ public class AssociateElasticIpSpec  implements java.io.Serializable {
         this.elasticIpId = elasticIpId;
     }
 
+
     /**
      * get 绑定弹性Ip到指定的privateIp
      *
@@ -83,6 +85,7 @@ public class AssociateElasticIpSpec  implements java.io.Serializable {
     public void setPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
     }
+
 
     /**
      * get 绑定的弹性Ip地址
@@ -103,6 +106,7 @@ public class AssociateElasticIpSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 绑定的弹性Ip Id
      *
@@ -113,6 +117,7 @@ public class AssociateElasticIpSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 绑定弹性Ip到指定的privateIp
      *
@@ -122,6 +127,7 @@ public class AssociateElasticIpSpec  implements java.io.Serializable {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
+
 
     /**
      * set 绑定的弹性Ip地址

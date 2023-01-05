@@ -48,6 +48,7 @@ public class DescribeBandwidthPackageResult extends JdcloudResult implements jav
     private BandwidthPackage bandwidthPackage;
 
 
+
     /**
      * get 共享带宽包资源信息
      *
@@ -65,6 +66,7 @@ public class DescribeBandwidthPackageResult extends JdcloudResult implements jav
     public void setBandwidthPackage(BandwidthPackage bandwidthPackage) {
         this.bandwidthPackage = bandwidthPackage;
     }
+
 
 
     /**

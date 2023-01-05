@@ -52,6 +52,7 @@ public class ExportImageResult extends JdcloudResult implements java.io.Serializ
     private String taskId;
 
 
+
     /**
      * get 导出任务id。
      *
@@ -69,6 +70,7 @@ public class ExportImageResult extends JdcloudResult implements java.io.Serializ
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
 
     /**

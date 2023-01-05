@@ -57,6 +57,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
     private String instanceId;
 
 
+
     /**
      * get 地域ID。
      *
@@ -74,6 +75,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -94,6 +96,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 地域ID。
      *
@@ -103,6 +106,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云主机ID。

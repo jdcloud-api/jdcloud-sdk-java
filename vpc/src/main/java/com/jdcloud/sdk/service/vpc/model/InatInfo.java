@@ -43,6 +43,7 @@ public class InatInfo  implements java.io.Serializable {
     private String elasticIp;
 
 
+
     /**
      * get inat属于的vpc的ID
      *
@@ -60,6 +61,7 @@ public class InatInfo  implements java.io.Serializable {
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
     /**
      * get inat的出口IP或natgaway替换inat的出口IP(100段)
@@ -80,6 +82,7 @@ public class InatInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set inat属于的vpc的ID
      *
@@ -89,6 +92,7 @@ public class InatInfo  implements java.io.Serializable {
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set inat的出口IP或natgaway替换inat的出口IP(100段)

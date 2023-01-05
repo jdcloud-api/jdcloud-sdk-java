@@ -66,6 +66,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get 安全组规则的ID。
      *
@@ -83,6 +84,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
     public void setRuleId(String ruleId) {
         this.ruleId = ruleId;
     }
+
 
     /**
      * get 规则限定协议。300:All; 6:TCP; 17:UDP; 1:ICMP
@@ -102,6 +104,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
         this.protocol = protocol;
     }
 
+
     /**
      * get 安全组规则的起始端口。取值范围：1-65535
      *
@@ -119,6 +122,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
     public void setFromPort(Integer fromPort) {
         this.fromPort = fromPort;
     }
+
 
     /**
      * get 安全组规则的终端口。取值范围：1-65535
@@ -138,6 +142,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
         this.toPort = toPort;
     }
 
+
     /**
      * get 安全组规则前缀，取值范围：正确的CIDR
      *
@@ -155,6 +160,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
     public void setAddressPrefix(String addressPrefix) {
         this.addressPrefix = addressPrefix;
     }
+
 
     /**
      * get 安全组规则的描述，取值范围：0-256个UTF-8编码下的全部字符
@@ -175,6 +181,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 安全组规则的ID。
      *
@@ -184,6 +191,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
         this.ruleId = ruleId;
         return this;
     }
+
 
     /**
      * set 规则限定协议。300:All; 6:TCP; 17:UDP; 1:ICMP
@@ -195,6 +203,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 安全组规则的起始端口。取值范围：1-65535
      *
@@ -204,6 +213,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
         this.fromPort = fromPort;
         return this;
     }
+
 
     /**
      * set 安全组规则的终端口。取值范围：1-65535
@@ -215,6 +225,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 安全组规则前缀，取值范围：正确的CIDR
      *
@@ -224,6 +235,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
         this.addressPrefix = addressPrefix;
         return this;
     }
+
 
     /**
      * set 安全组规则的描述，取值范围：0-256个UTF-8编码下的全部字符

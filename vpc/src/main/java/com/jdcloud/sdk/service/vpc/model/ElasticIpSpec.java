@@ -35,7 +35,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
+     * 弹性公网IP的限速（单位：Mbps），计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
      * Required:true
      */
     @Required
@@ -54,8 +54,9 @@ public class ElasticIpSpec  implements java.io.Serializable {
     private ChargeSpec chargeSpec;
 
 
+
     /**
-     * get 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
+     * get 弹性公网IP的限速（单位：Mbps），计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
      *
      * @return
      */
@@ -64,13 +65,14 @@ public class ElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
+     * set 弹性公网IP的限速（单位：Mbps），计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
      *
      * @param bandwidthMbps
      */
     public void setBandwidthMbps(Integer bandwidthMbps) {
         this.bandwidthMbps = bandwidthMbps;
     }
+
 
     /**
      * get IP线路信息。当IP类型为标准公网IP时，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：bgp；cn-east-2：bgp。当IP类型为边缘公网IP时，其值可通过调用describeEdgeIpProviders、获取不同边缘节点的边缘公网IP线路信息
@@ -89,6 +91,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     public void setProvider(String provider) {
         this.provider = provider;
     }
+
 
     /**
      * get 计费配置。边缘公网IP支持包年包月、按配置；标准公网IP支持包年包月、按配置、按流量
@@ -109,8 +112,9 @@ public class ElasticIpSpec  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
+     * set 弹性公网IP的限速（单位：Mbps），计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
      *
      * @param bandwidthMbps
      */
@@ -118,6 +122,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
         this.bandwidthMbps = bandwidthMbps;
         return this;
     }
+
 
     /**
      * set IP线路信息。当IP类型为标准公网IP时，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：bgp；cn-east-2：bgp。当IP类型为边缘公网IP时，其值可通过调用describeEdgeIpProviders、获取不同边缘节点的边缘公网IP线路信息
@@ -128,6 +133,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
         this.provider = provider;
         return this;
     }
+
 
     /**
      * set 计费配置。边缘公网IP支持包年包月、按配置；标准公网IP支持包年包月、按配置、按流量

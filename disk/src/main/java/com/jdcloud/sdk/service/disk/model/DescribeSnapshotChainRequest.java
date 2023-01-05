@@ -52,6 +52,7 @@ public class DescribeSnapshotChainRequest extends JdcloudRequest implements java
     private String regionId;
 
 
+
     /**
      * get 云硬盘ID
      *
@@ -70,6 +71,7 @@ public class DescribeSnapshotChainRequest extends JdcloudRequest implements java
         this.diskId = diskId;
     }
 
+
     /**
      * get 快照ID
      *
@@ -87,6 +89,7 @@ public class DescribeSnapshotChainRequest extends JdcloudRequest implements java
     public void setSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
     }
+
 
     /**
      * get 地域ID
@@ -107,6 +110,7 @@ public class DescribeSnapshotChainRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 云硬盘ID
      *
@@ -117,6 +121,7 @@ public class DescribeSnapshotChainRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 快照ID
      *
@@ -126,6 +131,7 @@ public class DescribeSnapshotChainRequest extends JdcloudRequest implements java
         this.snapshotId = snapshotId;
         return this;
     }
+
 
     /**
      * set 地域ID

@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.disk.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.disk.model.Sort;
 import com.jdcloud.sdk.service.disk.model.TagFilter;
 import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
@@ -41,6 +42,13 @@ public class DescribeDisksRequest extends JdcloudRequest implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
+     * name - 排序字段，只支持create_time和trash_time字段
+direction - 排序规则
+
+     */
+    
+    private List<Sort> orders;
+    /**
      * 页码, 默认为1, 取值范围：[1,∞)
      */
     private Integer pageNumber;
@@ -53,8 +61,8 @@ public class DescribeDisksRequest extends JdcloudRequest implements java.io.Seri
     /**
      * Tag筛选条件
      */
+    
     private List<TagFilter> tags;
-
     /**
      * diskId - 云硬盘ID，精确匹配，支持多个
 diskType - 云硬盘类型，精确匹配，支持多个，取值为 ssd,premium-hdd,ssd.io1,ssd.gp1,hdd.std1
@@ -69,14 +77,43 @@ policyId - 绑定policyId的云硬盘，精确匹配，支持多个
 notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
 
      */
+    
     private List<Filter> filters;
-
+    /**
+     * 资源组筛选条件
+     */
+    
+    private List<String> resourceGroupIds;
     /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
+
+
+    /**
+    * get name - 排序字段，只支持create_time和trash_time字段
+direction - 排序规则
+
+    *
+    * @return
+    */
+    public List<Sort> getOrders() {
+        return orders;
+    }
+
+    /**
+    * set name - 排序字段，只支持create_time和trash_time字段
+direction - 排序规则
+
+    *
+    * @param orders
+    */
+    public void setOrders(List<Sort> orders) {
+        this.orders = orders;
+    }
 
 
     /**
@@ -97,6 +134,7 @@ notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -115,26 +153,28 @@ notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get Tag筛选条件
-     *
-     * @return
-     */
+    * get Tag筛选条件
+    *
+    * @return
+    */
     public List<TagFilter> getTags() {
         return tags;
     }
 
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public void setTags(List<TagFilter> tags) {
         this.tags = tags;
     }
 
+
     /**
-     * get diskId - 云硬盘ID，精确匹配，支持多个
+    * get diskId - 云硬盘ID，精确匹配，支持多个
 diskType - 云硬盘类型，精确匹配，支持多个，取值为 ssd,premium-hdd,ssd.io1,ssd.gp1,hdd.std1
 instanceId - 云硬盘所挂载主机的ID，精确匹配，支持多个
 instanceType - 云硬盘所挂载主机的类型，精确匹配，支持多个
@@ -146,15 +186,15 @@ encrypted - 云硬盘是否加密，精确匹配，支持单个
 policyId - 绑定policyId的云硬盘，精确匹配，支持多个
 notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set diskId - 云硬盘ID，精确匹配，支持多个
+    * set diskId - 云硬盘ID，精确匹配，支持多个
 diskType - 云硬盘类型，精确匹配，支持多个，取值为 ssd,premium-hdd,ssd.io1,ssd.gp1,hdd.std1
 instanceId - 云硬盘所挂载主机的ID，精确匹配，支持多个
 instanceType - 云硬盘所挂载主机的类型，精确匹配，支持多个
@@ -166,12 +206,32 @@ encrypted - 云硬盘是否加密，精确匹配，支持单个
 policyId - 绑定policyId的云硬盘，精确匹配，支持多个
 notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
+
+    /**
+    * get 资源组筛选条件
+    *
+    * @return
+    */
+    public List<String> getResourceGroupIds() {
+        return resourceGroupIds;
+    }
+
+    /**
+    * set 资源组筛选条件
+    *
+    * @param resourceGroupIds
+    */
+    public void setResourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+    }
+
 
     /**
      * get 地域ID
@@ -192,6 +252,20 @@ notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
     }
 
 
+
+    /**
+    * set name - 排序字段，只支持create_time和trash_time字段
+direction - 排序规则
+
+    *
+    * @param orders
+    */
+    public DescribeDisksRequest orders(List<Sort> orders) {
+        this.orders = orders;
+        return this;
+    }
+
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
@@ -201,6 +275,7 @@ notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
@@ -212,18 +287,20 @@ notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
         return this;
     }
 
+
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public DescribeDisksRequest tags(List<TagFilter> tags) {
         this.tags = tags;
         return this;
     }
 
+
     /**
-     * set diskId - 云硬盘ID，精确匹配，支持多个
+    * set diskId - 云硬盘ID，精确匹配，支持多个
 diskType - 云硬盘类型，精确匹配，支持多个，取值为 ssd,premium-hdd,ssd.io1,ssd.gp1,hdd.std1
 instanceId - 云硬盘所挂载主机的ID，精确匹配，支持多个
 instanceType - 云硬盘所挂载主机的类型，精确匹配，支持多个
@@ -235,13 +312,25 @@ encrypted - 云硬盘是否加密，精确匹配，支持单个
 policyId - 绑定policyId的云硬盘，精确匹配，支持多个
 notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeDisksRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
+
+    /**
+    * set 资源组筛选条件
+    *
+    * @param resourceGroupIds
+    */
+    public DescribeDisksRequest resourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+        return this;
+    }
+
 
     /**
      * set 地域ID
@@ -253,6 +342,21 @@ notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
         return this;
     }
 
+
+
+    /**
+     * add item to name - 排序字段，只支持create_time和trash_time字段
+direction - 排序规则
+
+     *
+     * @param order
+     */
+    public void addOrder(Sort order) {
+        if (this.orders == null) {
+            this.orders = new ArrayList<>();
+        }
+        this.orders.add(order);
+    }
 
     /**
      * add item to Tag筛选条件
@@ -289,4 +393,15 @@ notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
         this.filters.add(filter);
     }
 
+    /**
+     * add item to 资源组筛选条件
+     *
+     * @param resourceGroupId
+     */
+    public void addResourceGroupId(String resourceGroupId) {
+        if (this.resourceGroupIds == null) {
+            this.resourceGroupIds = new ArrayList<>();
+        }
+        this.resourceGroupIds.add(resourceGroupId);
+    }
 }

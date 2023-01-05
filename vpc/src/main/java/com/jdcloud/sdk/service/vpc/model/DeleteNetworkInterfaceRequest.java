@@ -49,6 +49,7 @@ public class DeleteNetworkInterfaceRequest extends JdcloudRequest implements jav
     private String networkInterfaceId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DeleteNetworkInterfaceRequest extends JdcloudRequest implements jav
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get networkInterface ID
@@ -86,6 +88,7 @@ public class DeleteNetworkInterfaceRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DeleteNetworkInterfaceRequest extends JdcloudRequest implements jav
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set networkInterface ID

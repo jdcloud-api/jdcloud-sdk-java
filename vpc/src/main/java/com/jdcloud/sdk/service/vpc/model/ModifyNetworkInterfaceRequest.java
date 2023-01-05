@@ -49,8 +49,8 @@ public class ModifyNetworkInterfaceRequest extends JdcloudRequest implements jav
     /**
      * 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
      */
+    
     private List<String> securityGroups;
-
     /**
      * Region ID
      * Required:true
@@ -64,6 +64,7 @@ public class ModifyNetworkInterfaceRequest extends JdcloudRequest implements jav
      */
     @Required
     private String networkInterfaceId;
+
 
 
     /**
@@ -84,6 +85,7 @@ public class ModifyNetworkInterfaceRequest extends JdcloudRequest implements jav
         this.networkInterfaceName = networkInterfaceName;
     }
 
+
     /**
      * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -102,23 +104,25 @@ public class ModifyNetworkInterfaceRequest extends JdcloudRequest implements jav
         this.description = description;
     }
 
+
     /**
-     * get 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
-     *
-     * @return
-     */
+    * get 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
+    *
+    * @return
+    */
     public List<String> getSecurityGroups() {
         return securityGroups;
     }
 
     /**
-     * set 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
-     *
-     * @param securityGroups
-     */
+    * set 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
+    *
+    * @param securityGroups
+    */
     public void setSecurityGroups(List<String> securityGroups) {
         this.securityGroups = securityGroups;
     }
+
 
     /**
      * get Region ID
@@ -137,6 +141,7 @@ public class ModifyNetworkInterfaceRequest extends JdcloudRequest implements jav
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get networkInterface ID
@@ -157,6 +162,7 @@ public class ModifyNetworkInterfaceRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 弹性网卡名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
      *
@@ -166,6 +172,7 @@ public class ModifyNetworkInterfaceRequest extends JdcloudRequest implements jav
         this.networkInterfaceName = networkInterfaceName;
         return this;
     }
+
 
     /**
      * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -177,15 +184,17 @@ public class ModifyNetworkInterfaceRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
-     * set 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
-     *
-     * @param securityGroups
-     */
+    * set 以覆盖原有安全组的方式更新的安全组。如果更新安全组ID列表，最多5个安全组
+    *
+    * @param securityGroups
+    */
     public ModifyNetworkInterfaceRequest securityGroups(List<String> securityGroups) {
         this.securityGroups = securityGroups;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -197,6 +206,7 @@ public class ModifyNetworkInterfaceRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set networkInterface ID
      *
@@ -206,6 +216,7 @@ public class ModifyNetworkInterfaceRequest extends JdcloudRequest implements jav
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
+
 
 
     /**
@@ -219,5 +230,4 @@ public class ModifyNetworkInterfaceRequest extends JdcloudRequest implements jav
         }
         this.securityGroups.add(securityGroup);
     }
-
 }

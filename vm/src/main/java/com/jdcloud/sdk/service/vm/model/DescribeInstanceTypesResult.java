@@ -49,54 +49,57 @@ public class DescribeInstanceTypesResult extends JdcloudResult implements java.i
     /**
      * instanceTypes
      */
+    
     private List<InstanceType> instanceTypes;
-
     /**
      * specificInstanceTypes
      */
+    
     private List<InstanceType> specificInstanceTypes;
-
     /**
      * 本次查询到的所有实例规格数量。
      */
     private Integer totalCount;
 
 
+
     /**
-     * get instanceTypes
-     *
-     * @return
-     */
+    * get instanceTypes
+    *
+    * @return
+    */
     public List<InstanceType> getInstanceTypes() {
         return instanceTypes;
     }
 
     /**
-     * set instanceTypes
-     *
-     * @param instanceTypes
-     */
+    * set instanceTypes
+    *
+    * @param instanceTypes
+    */
     public void setInstanceTypes(List<InstanceType> instanceTypes) {
         this.instanceTypes = instanceTypes;
     }
 
+
     /**
-     * get specificInstanceTypes
-     *
-     * @return
-     */
+    * get specificInstanceTypes
+    *
+    * @return
+    */
     public List<InstanceType> getSpecificInstanceTypes() {
         return specificInstanceTypes;
     }
 
     /**
-     * set specificInstanceTypes
-     *
-     * @param specificInstanceTypes
-     */
+    * set specificInstanceTypes
+    *
+    * @param specificInstanceTypes
+    */
     public void setSpecificInstanceTypes(List<InstanceType> specificInstanceTypes) {
         this.specificInstanceTypes = specificInstanceTypes;
     }
+
 
     /**
      * get 本次查询到的所有实例规格数量。
@@ -117,25 +120,28 @@ public class DescribeInstanceTypesResult extends JdcloudResult implements java.i
     }
 
 
+
     /**
-     * set instanceTypes
-     *
-     * @param instanceTypes
-     */
+    * set instanceTypes
+    *
+    * @param instanceTypes
+    */
     public DescribeInstanceTypesResult instanceTypes(List<InstanceType> instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
     }
 
+
     /**
-     * set specificInstanceTypes
-     *
-     * @param specificInstanceTypes
-     */
+    * set specificInstanceTypes
+    *
+    * @param specificInstanceTypes
+    */
     public DescribeInstanceTypesResult specificInstanceTypes(List<InstanceType> specificInstanceTypes) {
         this.specificInstanceTypes = specificInstanceTypes;
         return this;
     }
+
 
     /**
      * set 本次查询到的所有实例规格数量。
@@ -146,6 +152,7 @@ public class DescribeInstanceTypesResult extends JdcloudResult implements java.i
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -171,5 +178,4 @@ public class DescribeInstanceTypesResult extends JdcloudResult implements java.i
         }
         this.specificInstanceTypes.add(specificInstanceType);
     }
-
 }

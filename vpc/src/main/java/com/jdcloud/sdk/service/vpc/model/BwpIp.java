@@ -48,6 +48,7 @@ public class BwpIp  implements java.io.Serializable {
     private Integer bandwidthMbps;
 
 
+
     /**
      * get 公网IP实例ID
      *
@@ -66,6 +67,7 @@ public class BwpIp  implements java.io.Serializable {
         this.publicIpId = publicIpId;
     }
 
+
     /**
      * get 公网IP加入共享带宽包的时间，时间格式为UTC
      *
@@ -83,6 +85,7 @@ public class BwpIp  implements java.io.Serializable {
     public void setAddedTime(String addedTime) {
         this.addedTime = addedTime;
     }
+
 
     /**
      * get 单个公网IP带宽上限，大小不能超过共享带宽包的带宽上限，单位为Mbps，支持0和-1，0表示禁止流量通过，-1表示关闭单个公网IP带宽限速
@@ -103,6 +106,7 @@ public class BwpIp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 公网IP实例ID
      *
@@ -113,6 +117,7 @@ public class BwpIp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 公网IP加入共享带宽包的时间，时间格式为UTC
      *
@@ -122,6 +127,7 @@ public class BwpIp  implements java.io.Serializable {
         this.addedTime = addedTime;
         return this;
     }
+
 
     /**
      * set 单个公网IP带宽上限，大小不能超过共享带宽包的带宽上限，单位为Mbps，支持0和-1，0表示禁止流量通过，-1表示关闭单个公网IP带宽限速

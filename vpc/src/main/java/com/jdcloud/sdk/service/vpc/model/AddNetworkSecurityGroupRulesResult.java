@@ -24,6 +24,9 @@
 
 package com.jdcloud.sdk.service.vpc.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.vpc.model.SecurityGroupRule;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -33,7 +36,54 @@ public class AddNetworkSecurityGroupRulesResult extends JdcloudResult implements
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * securityGroupRules
+     */
+    
+    private List<SecurityGroupRule> securityGroupRules;
+
+
+    /**
+    * get securityGroupRules
+    *
+    * @return
+    */
+    public List<SecurityGroupRule> getSecurityGroupRules() {
+        return securityGroupRules;
+    }
+
+    /**
+    * set securityGroupRules
+    *
+    * @param securityGroupRules
+    */
+    public void setSecurityGroupRules(List<SecurityGroupRule> securityGroupRules) {
+        this.securityGroupRules = securityGroupRules;
+    }
 
 
 
+    /**
+    * set securityGroupRules
+    *
+    * @param securityGroupRules
+    */
+    public AddNetworkSecurityGroupRulesResult securityGroupRules(List<SecurityGroupRule> securityGroupRules) {
+        this.securityGroupRules = securityGroupRules;
+        return this;
+    }
+
+
+
+    /**
+     * add item to securityGroupRules
+     *
+     * @param securityGroupRule
+     */
+    public void addSecurityGroupRule(SecurityGroupRule securityGroupRule) {
+        if (this.securityGroupRules == null) {
+            this.securityGroupRules = new ArrayList<>();
+        }
+        this.securityGroupRules.add(securityGroupRule);
+    }
 }

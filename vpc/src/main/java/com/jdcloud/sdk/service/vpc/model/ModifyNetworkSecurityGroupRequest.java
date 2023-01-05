@@ -59,6 +59,7 @@ public class ModifyNetworkSecurityGroupRequest extends JdcloudRequest implements
     private String networkSecurityGroupId;
 
 
+
     /**
      * get 安全组的名字。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -76,6 +77,7 @@ public class ModifyNetworkSecurityGroupRequest extends JdcloudRequest implements
     public void setNetworkSecurityGroupName(String networkSecurityGroupName) {
         this.networkSecurityGroupName = networkSecurityGroupName;
     }
+
 
     /**
      * get 安全组的描述，取值范围：0-256个UTF-8编码下的全部字符
@@ -95,6 +97,7 @@ public class ModifyNetworkSecurityGroupRequest extends JdcloudRequest implements
         this.description = description;
     }
 
+
     /**
      * get Region ID
      *
@@ -112,6 +115,7 @@ public class ModifyNetworkSecurityGroupRequest extends JdcloudRequest implements
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get NetworkSecurityGroup ID
@@ -132,6 +136,7 @@ public class ModifyNetworkSecurityGroupRequest extends JdcloudRequest implements
     }
 
 
+
     /**
      * set 安全组的名字。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -141,6 +146,7 @@ public class ModifyNetworkSecurityGroupRequest extends JdcloudRequest implements
         this.networkSecurityGroupName = networkSecurityGroupName;
         return this;
     }
+
 
     /**
      * set 安全组的描述，取值范围：0-256个UTF-8编码下的全部字符
@@ -152,6 +158,7 @@ public class ModifyNetworkSecurityGroupRequest extends JdcloudRequest implements
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -161,6 +168,7 @@ public class ModifyNetworkSecurityGroupRequest extends JdcloudRequest implements
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set NetworkSecurityGroup ID

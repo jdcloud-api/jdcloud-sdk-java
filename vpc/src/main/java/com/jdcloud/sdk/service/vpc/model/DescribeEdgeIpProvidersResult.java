@@ -39,31 +39,33 @@ public class DescribeEdgeIpProvidersResult extends JdcloudResult implements java
     /**
      * edgeIpProviders
      */
+    
     private List<EdgeIpProvider> edgeIpProviders;
-
     /**
      * 总数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get edgeIpProviders
-     *
-     * @return
-     */
+    * get edgeIpProviders
+    *
+    * @return
+    */
     public List<EdgeIpProvider> getEdgeIpProviders() {
         return edgeIpProviders;
     }
 
     /**
-     * set edgeIpProviders
-     *
-     * @param edgeIpProviders
-     */
+    * set edgeIpProviders
+    *
+    * @param edgeIpProviders
+    */
     public void setEdgeIpProviders(List<EdgeIpProvider> edgeIpProviders) {
         this.edgeIpProviders = edgeIpProviders;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeEdgeIpProvidersResult extends JdcloudResult implements java
     }
 
 
+
     /**
-     * set edgeIpProviders
-     *
-     * @param edgeIpProviders
-     */
+    * set edgeIpProviders
+    *
+    * @param edgeIpProviders
+    */
     public DescribeEdgeIpProvidersResult edgeIpProviders(List<EdgeIpProvider> edgeIpProviders) {
         this.edgeIpProviders = edgeIpProviders;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeEdgeIpProvidersResult extends JdcloudResult implements java
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeEdgeIpProvidersResult extends JdcloudResult implements java
         }
         this.edgeIpProviders.add(edgeIpProvider);
     }
-
 }

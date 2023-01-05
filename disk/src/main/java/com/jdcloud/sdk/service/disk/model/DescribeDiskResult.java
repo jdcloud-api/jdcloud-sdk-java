@@ -40,6 +40,7 @@ public class DescribeDiskResult extends JdcloudResult implements java.io.Seriali
     private Disk disk;
 
 
+
     /**
      * get disk
      *
@@ -57,6 +58,7 @@ public class DescribeDiskResult extends JdcloudResult implements java.io.Seriali
     public void setDisk(Disk disk) {
         this.disk = disk;
     }
+
 
 
     /**

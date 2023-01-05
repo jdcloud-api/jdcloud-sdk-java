@@ -59,6 +59,7 @@ public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.i
     private String diskId;
 
 
+
     /**
      * get 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -76,6 +77,7 @@ public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.i
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 云硬盘描述，允许输入UTF-8编码下的全部字符，不超过256字符。
@@ -95,6 +97,7 @@ public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.i
         this.description = description;
     }
 
+
     /**
      * get 地域ID
      *
@@ -112,6 +115,7 @@ public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云硬盘ID
@@ -132,6 +136,7 @@ public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -141,6 +146,7 @@ public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.i
         this.name = name;
         return this;
     }
+
 
     /**
      * set 云硬盘描述，允许输入UTF-8编码下的全部字符，不超过256字符。
@@ -152,6 +158,7 @@ public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 地域ID
      *
@@ -161,6 +168,7 @@ public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云硬盘ID

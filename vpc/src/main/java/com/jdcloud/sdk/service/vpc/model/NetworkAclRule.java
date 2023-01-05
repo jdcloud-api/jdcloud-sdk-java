@@ -88,6 +88,7 @@ public class NetworkAclRule  implements java.io.Serializable {
     private String ruleType;
 
 
+
     /**
      * get networkAcl规则ID
      *
@@ -105,6 +106,7 @@ public class NetworkAclRule  implements java.io.Serializable {
     public void setRuleId(String ruleId) {
         this.ruleId = ruleId;
     }
+
 
     /**
      * get 规则限定协议。取值范围：All,TCP,UDP,ICMP
@@ -124,6 +126,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         this.protocol = protocol;
     }
 
+
     /**
      * get 规则限定起始传输层端口, 取值范围:1-65535, 若protocol为传输层协议，默认值为1，若protocol不是传输层协议，设置无效，恒为0。如果规则只限定一个端口号，fromPort和toPort填写同一个值
      *
@@ -141,6 +144,7 @@ public class NetworkAclRule  implements java.io.Serializable {
     public void setFromPort(Integer fromPort) {
         this.fromPort = fromPort;
     }
+
 
     /**
      * get 规则限定终止传输层端口, 取值范围:1-65535, 若protocol为传输层协议，默认值为65535，若protocol不是传输层协议，设置无效，恒为0。如果规则只限定一个端口号，fromPort和toPort填写同一个值
@@ -160,6 +164,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         this.toPort = toPort;
     }
 
+
     /**
      * get networkAcl规则方向。ingress：入规则; egress：出规则
      *
@@ -177,6 +182,7 @@ public class NetworkAclRule  implements java.io.Serializable {
     public void setDirection(String direction) {
         this.direction = direction;
     }
+
 
     /**
      * get 匹配地址前缀
@@ -196,6 +202,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         this.addressPrefix = addressPrefix;
     }
 
+
     /**
      * get 访问控制策略：allow:允许，deny：拒绝
      *
@@ -213,6 +220,7 @@ public class NetworkAclRule  implements java.io.Serializable {
     public void setRuleAction(String ruleAction) {
         this.ruleAction = ruleAction;
     }
+
 
     /**
      * get 规则匹配优先级，取值范围为[1,32768]，优先级数字越小优先级越高
@@ -232,6 +240,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         this.priority = priority;
     }
 
+
     /**
      * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -250,6 +259,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get networkAclRule创建时间
      *
@@ -267,6 +277,7 @@ public class NetworkAclRule  implements java.io.Serializable {
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
+
 
     /**
      * get 规则类型，default：默认规则，custom：自定义规则
@@ -287,6 +298,7 @@ public class NetworkAclRule  implements java.io.Serializable {
     }
 
 
+
     /**
      * set networkAcl规则ID
      *
@@ -296,6 +308,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         this.ruleId = ruleId;
         return this;
     }
+
 
     /**
      * set 规则限定协议。取值范围：All,TCP,UDP,ICMP
@@ -307,6 +320,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则限定起始传输层端口, 取值范围:1-65535, 若protocol为传输层协议，默认值为1，若protocol不是传输层协议，设置无效，恒为0。如果规则只限定一个端口号，fromPort和toPort填写同一个值
      *
@@ -316,6 +330,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         this.fromPort = fromPort;
         return this;
     }
+
 
     /**
      * set 规则限定终止传输层端口, 取值范围:1-65535, 若protocol为传输层协议，默认值为65535，若protocol不是传输层协议，设置无效，恒为0。如果规则只限定一个端口号，fromPort和toPort填写同一个值
@@ -327,6 +342,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set networkAcl规则方向。ingress：入规则; egress：出规则
      *
@@ -336,6 +352,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         this.direction = direction;
         return this;
     }
+
 
     /**
      * set 匹配地址前缀
@@ -347,6 +364,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 访问控制策略：allow:允许，deny：拒绝
      *
@@ -356,6 +374,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         this.ruleAction = ruleAction;
         return this;
     }
+
 
     /**
      * set 规则匹配优先级，取值范围为[1,32768]，优先级数字越小优先级越高
@@ -367,6 +386,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -377,6 +397,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set networkAclRule创建时间
      *
@@ -386,6 +407,7 @@ public class NetworkAclRule  implements java.io.Serializable {
         this.createdTime = createdTime;
         return this;
     }
+
 
     /**
      * set 规则类型，default：默认规则，custom：自定义规则

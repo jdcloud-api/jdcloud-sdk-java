@@ -48,6 +48,7 @@ public class SnapshotCapacity  implements java.io.Serializable {
     private Integer totalSize;
 
 
+
     /**
      * get 区域ID
      *
@@ -66,6 +67,7 @@ public class SnapshotCapacity  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 快照个数
      *
@@ -83,6 +85,7 @@ public class SnapshotCapacity  implements java.io.Serializable {
     public void setSnapshotCount(Integer snapshotCount) {
         this.snapshotCount = snapshotCount;
     }
+
 
     /**
      * get 快照总大小，单位：MB
@@ -103,6 +106,7 @@ public class SnapshotCapacity  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 区域ID
      *
@@ -113,6 +117,7 @@ public class SnapshotCapacity  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 快照个数
      *
@@ -122,6 +127,7 @@ public class SnapshotCapacity  implements java.io.Serializable {
         this.snapshotCount = snapshotCount;
         return this;
     }
+
 
     /**
      * set 快照总大小，单位：MB

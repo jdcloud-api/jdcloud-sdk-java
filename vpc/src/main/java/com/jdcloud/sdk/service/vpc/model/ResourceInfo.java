@@ -52,6 +52,7 @@ public class ResourceInfo  implements java.io.Serializable {
     /**
      * 绑定资源(如vm绑定ip)
      */
+    
     private List<ResourceInfo> bind;
 
 
@@ -73,6 +74,7 @@ public class ResourceInfo  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 资源名称
      *
@@ -90,6 +92,7 @@ public class ResourceInfo  implements java.io.Serializable {
     public void setResourceName(String resourceName) {
         this.resourceName = resourceName;
     }
+
 
     /**
      * get 备注
@@ -109,23 +112,25 @@ public class ResourceInfo  implements java.io.Serializable {
         this.remark = remark;
     }
 
+
     /**
-     * get 绑定资源(如vm绑定ip)
-     *
-     * @return
-     */
+    * get 绑定资源(如vm绑定ip)
+    *
+    * @return
+    */
     public List<ResourceInfo> getBind() {
         return bind;
     }
 
     /**
-     * set 绑定资源(如vm绑定ip)
-     *
-     * @param bind
-     */
+    * set 绑定资源(如vm绑定ip)
+    *
+    * @param bind
+    */
     public void setBind(List<ResourceInfo> bind) {
         this.bind = bind;
     }
+
 
 
     /**
@@ -138,6 +143,7 @@ public class ResourceInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源名称
      *
@@ -147,6 +153,7 @@ public class ResourceInfo  implements java.io.Serializable {
         this.resourceName = resourceName;
         return this;
     }
+
 
     /**
      * set 备注
@@ -158,15 +165,17 @@ public class ResourceInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 绑定资源(如vm绑定ip)
-     *
-     * @param bind
-     */
+    * set 绑定资源(如vm绑定ip)
+    *
+    * @param bind
+    */
     public ResourceInfo bind(List<ResourceInfo> bind) {
         this.bind = bind;
         return this;
     }
+
 
 
     /**
@@ -180,5 +189,4 @@ public class ResourceInfo  implements java.io.Serializable {
         }
         this.bind.add(bind);
     }
-
 }

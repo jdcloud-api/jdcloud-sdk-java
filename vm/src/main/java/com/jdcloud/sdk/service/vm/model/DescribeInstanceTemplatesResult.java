@@ -47,31 +47,33 @@ public class DescribeInstanceTemplatesResult extends JdcloudResult implements ja
     /**
      * instanceTemplates
      */
+    
     private List<InstanceTemplate> instanceTemplates;
-
     /**
      * 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      */
     private Number totalCount;
 
 
+
     /**
-     * get instanceTemplates
-     *
-     * @return
-     */
+    * get instanceTemplates
+    *
+    * @return
+    */
     public List<InstanceTemplate> getInstanceTemplates() {
         return instanceTemplates;
     }
 
     /**
-     * set instanceTemplates
-     *
-     * @param instanceTemplates
-     */
+    * set instanceTemplates
+    *
+    * @param instanceTemplates
+    */
     public void setInstanceTemplates(List<InstanceTemplate> instanceTemplates) {
         this.instanceTemplates = instanceTemplates;
     }
+
 
     /**
      * get 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
@@ -92,15 +94,17 @@ public class DescribeInstanceTemplatesResult extends JdcloudResult implements ja
     }
 
 
+
     /**
-     * set instanceTemplates
-     *
-     * @param instanceTemplates
-     */
+    * set instanceTemplates
+    *
+    * @param instanceTemplates
+    */
     public DescribeInstanceTemplatesResult instanceTemplates(List<InstanceTemplate> instanceTemplates) {
         this.instanceTemplates = instanceTemplates;
         return this;
     }
+
 
     /**
      * set 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
@@ -111,6 +115,7 @@ public class DescribeInstanceTemplatesResult extends JdcloudResult implements ja
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -124,5 +129,4 @@ public class DescribeInstanceTemplatesResult extends JdcloudResult implements ja
         }
         this.instanceTemplates.add(instanceTemplate);
     }
-
 }

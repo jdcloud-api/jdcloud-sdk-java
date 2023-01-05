@@ -39,31 +39,33 @@ public class DescribeNetworkInterfacesResult extends JdcloudResult implements ja
     /**
      * networkInterfaces
      */
+    
     private List<NetworkInterface> networkInterfaces;
-
     /**
      * 总数量
      */
     private Number totalCount;
 
 
+
     /**
-     * get networkInterfaces
-     *
-     * @return
-     */
+    * get networkInterfaces
+    *
+    * @return
+    */
     public List<NetworkInterface> getNetworkInterfaces() {
         return networkInterfaces;
     }
 
     /**
-     * set networkInterfaces
-     *
-     * @param networkInterfaces
-     */
+    * set networkInterfaces
+    *
+    * @param networkInterfaces
+    */
     public void setNetworkInterfaces(List<NetworkInterface> networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeNetworkInterfacesResult extends JdcloudResult implements ja
     }
 
 
+
     /**
-     * set networkInterfaces
-     *
-     * @param networkInterfaces
-     */
+    * set networkInterfaces
+    *
+    * @param networkInterfaces
+    */
     public DescribeNetworkInterfacesResult networkInterfaces(List<NetworkInterface> networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeNetworkInterfacesResult extends JdcloudResult implements ja
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeNetworkInterfacesResult extends JdcloudResult implements ja
         }
         this.networkInterfaces.add(networkInterface);
     }
-
 }

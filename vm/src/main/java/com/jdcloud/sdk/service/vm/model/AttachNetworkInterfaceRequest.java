@@ -76,6 +76,7 @@ public class AttachNetworkInterfaceRequest extends JdcloudRequest implements jav
     private String instanceId;
 
 
+
     /**
      * get 弹性网卡ID。
      *
@@ -93,6 +94,7 @@ public class AttachNetworkInterfaceRequest extends JdcloudRequest implements jav
     public void setNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
     }
+
 
     /**
      * get 随云主机实例自动删除，默认为False。
@@ -116,6 +118,7 @@ public class AttachNetworkInterfaceRequest extends JdcloudRequest implements jav
         this.autoDelete = autoDelete;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -133,6 +136,7 @@ public class AttachNetworkInterfaceRequest extends JdcloudRequest implements jav
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -153,6 +157,7 @@ public class AttachNetworkInterfaceRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 弹性网卡ID。
      *
@@ -162,6 +167,7 @@ public class AttachNetworkInterfaceRequest extends JdcloudRequest implements jav
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
+
 
     /**
      * set 随云主机实例自动删除，默认为False。
@@ -175,6 +181,7 @@ public class AttachNetworkInterfaceRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -184,6 +191,7 @@ public class AttachNetworkInterfaceRequest extends JdcloudRequest implements jav
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云主机ID。

@@ -68,12 +68,13 @@ public class CreateBandwidthPackageSpec  implements java.io.Serializable {
     /**
      * 用户标签
      */
+    
     private List<Tag> userTags;
-
     /**
      * 资源所属资源组ID
      */
     private String resourceGroupId;
+
 
 
     /**
@@ -94,6 +95,7 @@ public class CreateBandwidthPackageSpec  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 描述，长度不超过256个字符
      *
@@ -111,6 +113,7 @@ public class CreateBandwidthPackageSpec  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 共享带宽包带宽上限，取值范围200-5000，单位为Mbps，保底带宽 &#x3D; 共享带宽包带宽上限 * 20%
@@ -130,6 +133,7 @@ public class CreateBandwidthPackageSpec  implements java.io.Serializable {
         this.bandwidthMbps = bandwidthMbps;
     }
 
+
     /**
      * get 线路信息，默认bgp，目前只支持中心节点的BGP线路
      *
@@ -147,6 +151,7 @@ public class CreateBandwidthPackageSpec  implements java.io.Serializable {
     public void setProvider(String provider) {
         this.provider = provider;
     }
+
 
     /**
      * get 计费配置。支持包年包月、按配置、按用量计费模式
@@ -166,23 +171,25 @@ public class CreateBandwidthPackageSpec  implements java.io.Serializable {
         this.chargeSpec = chargeSpec;
     }
 
+
     /**
-     * get 用户标签
-     *
-     * @return
-     */
+    * get 用户标签
+    *
+    * @return
+    */
     public List<Tag> getUserTags() {
         return userTags;
     }
 
     /**
-     * set 用户标签
-     *
-     * @param userTags
-     */
+    * set 用户标签
+    *
+    * @param userTags
+    */
     public void setUserTags(List<Tag> userTags) {
         this.userTags = userTags;
     }
+
 
     /**
      * get 资源所属资源组ID
@@ -203,6 +210,7 @@ public class CreateBandwidthPackageSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 名称，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且长度不超过32个字符
      *
@@ -212,6 +220,7 @@ public class CreateBandwidthPackageSpec  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 描述，长度不超过256个字符
@@ -223,6 +232,7 @@ public class CreateBandwidthPackageSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 共享带宽包带宽上限，取值范围200-5000，单位为Mbps，保底带宽 &#x3D; 共享带宽包带宽上限 * 20%
      *
@@ -232,6 +242,7 @@ public class CreateBandwidthPackageSpec  implements java.io.Serializable {
         this.bandwidthMbps = bandwidthMbps;
         return this;
     }
+
 
     /**
      * set 线路信息，默认bgp，目前只支持中心节点的BGP线路
@@ -243,6 +254,7 @@ public class CreateBandwidthPackageSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费配置。支持包年包月、按配置、按用量计费模式
      *
@@ -253,15 +265,17 @@ public class CreateBandwidthPackageSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 用户标签
-     *
-     * @param userTags
-     */
+    * set 用户标签
+    *
+    * @param userTags
+    */
     public CreateBandwidthPackageSpec userTags(List<Tag> userTags) {
         this.userTags = userTags;
         return this;
     }
+
 
     /**
      * set 资源所属资源组ID
@@ -272,6 +286,7 @@ public class CreateBandwidthPackageSpec  implements java.io.Serializable {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
+
 
 
     /**
@@ -285,5 +300,4 @@ public class CreateBandwidthPackageSpec  implements java.io.Serializable {
         }
         this.userTags.add(userTag);
     }
-
 }

@@ -40,37 +40,40 @@ public class AssignNetworkInterfaceSecondaryIpsSpec  implements java.io.Serializ
      * Required:true
      */
     @Required
+    
     private List<AssignNetworkInterfaceSecondaryIps> networkInterfaceSecondaryIpsSpecs;
 
 
     /**
-     * get 网卡分配的IP信息
-     *
-     * @return
-     */
+    * get 网卡分配的IP信息
+    *
+    * @return
+    */
     public List<AssignNetworkInterfaceSecondaryIps> getNetworkInterfaceSecondaryIpsSpecs() {
         return networkInterfaceSecondaryIpsSpecs;
     }
 
     /**
-     * set 网卡分配的IP信息
-     *
-     * @param networkInterfaceSecondaryIpsSpecs
-     */
+    * set 网卡分配的IP信息
+    *
+    * @param networkInterfaceSecondaryIpsSpecs
+    */
     public void setNetworkInterfaceSecondaryIpsSpecs(List<AssignNetworkInterfaceSecondaryIps> networkInterfaceSecondaryIpsSpecs) {
         this.networkInterfaceSecondaryIpsSpecs = networkInterfaceSecondaryIpsSpecs;
     }
 
 
+
     /**
-     * set 网卡分配的IP信息
-     *
-     * @param networkInterfaceSecondaryIpsSpecs
-     */
+    * set 网卡分配的IP信息
+    *
+    * @param networkInterfaceSecondaryIpsSpecs
+    */
     public AssignNetworkInterfaceSecondaryIpsSpec networkInterfaceSecondaryIpsSpecs(List<AssignNetworkInterfaceSecondaryIps> networkInterfaceSecondaryIpsSpecs) {
         this.networkInterfaceSecondaryIpsSpecs = networkInterfaceSecondaryIpsSpecs;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class AssignNetworkInterfaceSecondaryIpsSpec  implements java.io.Serializ
         }
         this.networkInterfaceSecondaryIpsSpecs.add(networkInterfaceSecondaryIpsSpec);
     }
-
 }

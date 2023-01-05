@@ -98,6 +98,7 @@ public class TaskInfo  implements java.io.Serializable {
     private String imageUrl;
 
 
+
     /**
      * get 任务ID。
      *
@@ -115,6 +116,7 @@ public class TaskInfo  implements java.io.Serializable {
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
     /**
      * get 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
@@ -134,6 +136,7 @@ public class TaskInfo  implements java.io.Serializable {
         this.action = action;
     }
 
+
     /**
      * get 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
      *
@@ -151,6 +154,7 @@ public class TaskInfo  implements java.io.Serializable {
     public void setTaskStatus(String taskStatus) {
         this.taskStatus = taskStatus;
     }
+
 
     /**
      * get 任务进度，0% - 100%。
@@ -170,6 +174,7 @@ public class TaskInfo  implements java.io.Serializable {
         this.progress = progress;
     }
 
+
     /**
      * get 任务失败的原因。
      *
@@ -187,6 +192,7 @@ public class TaskInfo  implements java.io.Serializable {
     public void setErrorInfo(String errorInfo) {
         this.errorInfo = errorInfo;
     }
+
 
     /**
      * get 额外描述信息。
@@ -206,6 +212,7 @@ public class TaskInfo  implements java.io.Serializable {
         this.message = message;
     }
 
+
     /**
      * get 任务创建时间。
      *
@@ -223,6 +230,7 @@ public class TaskInfo  implements java.io.Serializable {
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
+
 
     /**
      * get 任务完成时间。
@@ -242,6 +250,7 @@ public class TaskInfo  implements java.io.Serializable {
         this.finishedTime = finishedTime;
     }
 
+
     /**
      * get 镜像ID。
      *
@@ -259,6 +268,7 @@ public class TaskInfo  implements java.io.Serializable {
     public void setImageId(String imageId) {
         this.imageId = imageId;
     }
+
 
     /**
      * get 导出镜像时有效，表示目标OSS存储地址。
@@ -278,6 +288,7 @@ public class TaskInfo  implements java.io.Serializable {
         this.ossUrl = ossUrl;
     }
 
+
     /**
      * get 导出镜像时有效，表示生成的ossObject名称。
      *
@@ -296,6 +307,7 @@ public class TaskInfo  implements java.io.Serializable {
         this.ossObject = ossObject;
     }
 
+
     /**
      * get 导入镜像时有效，表示用户指定的镜像名称。
      *
@@ -313,6 +325,7 @@ public class TaskInfo  implements java.io.Serializable {
     public void setImageName(String imageName) {
         this.imageName = imageName;
     }
+
 
     /**
      * get 导入镜像时有效，源OSS外链地址。
@@ -333,6 +346,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 任务ID。
      *
@@ -342,6 +356,7 @@ public class TaskInfo  implements java.io.Serializable {
         this.taskId = taskId;
         return this;
     }
+
 
     /**
      * set 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
@@ -353,6 +368,7 @@ public class TaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
      *
@@ -362,6 +378,7 @@ public class TaskInfo  implements java.io.Serializable {
         this.taskStatus = taskStatus;
         return this;
     }
+
 
     /**
      * set 任务进度，0% - 100%。
@@ -373,6 +390,7 @@ public class TaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 任务失败的原因。
      *
@@ -382,6 +400,7 @@ public class TaskInfo  implements java.io.Serializable {
         this.errorInfo = errorInfo;
         return this;
     }
+
 
     /**
      * set 额外描述信息。
@@ -393,6 +412,7 @@ public class TaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 任务创建时间。
      *
@@ -402,6 +422,7 @@ public class TaskInfo  implements java.io.Serializable {
         this.createdTime = createdTime;
         return this;
     }
+
 
     /**
      * set 任务完成时间。
@@ -413,6 +434,7 @@ public class TaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像ID。
      *
@@ -422,6 +444,7 @@ public class TaskInfo  implements java.io.Serializable {
         this.imageId = imageId;
         return this;
     }
+
 
     /**
      * set 导出镜像时有效，表示目标OSS存储地址。
@@ -433,6 +456,7 @@ public class TaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 导出镜像时有效，表示生成的ossObject名称。
      *
@@ -443,6 +467,7 @@ public class TaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 导入镜像时有效，表示用户指定的镜像名称。
      *
@@ -452,6 +477,7 @@ public class TaskInfo  implements java.io.Serializable {
         this.imageName = imageName;
         return this;
     }
+
 
     /**
      * set 导入镜像时有效，源OSS外链地址。

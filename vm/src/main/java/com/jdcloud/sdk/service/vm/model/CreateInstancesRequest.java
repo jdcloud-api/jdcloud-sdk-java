@@ -85,6 +85,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     private String regionId;
 
 
+
     /**
      * get 实例配置。
 
@@ -104,6 +105,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     public void setInstanceSpec(InstanceSpec instanceSpec) {
         this.instanceSpec = instanceSpec;
     }
+
 
     /**
      * get 创建实例的数量，不能超过用户配额。
@@ -129,6 +131,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
         this.maxCount = maxCount;
     }
 
+
     /**
      * get 用于保证请求的幂等性。由客户端生成，并确保不同请求中该参数唯一，长度不能超过64个字符。
 
@@ -149,6 +152,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
         this.clientToken = clientToken;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -168,6 +172,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 实例配置。
 
@@ -178,6 +183,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
         this.instanceSpec = instanceSpec;
         return this;
     }
+
 
     /**
      * set 创建实例的数量，不能超过用户配额。
@@ -192,6 +198,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 用于保证请求的幂等性。由客户端生成，并确保不同请求中该参数唯一，长度不能超过64个字符。
 
@@ -202,6 +209,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
         this.clientToken = clientToken;
         return this;
     }
+
 
     /**
      * set 地域ID。

@@ -33,12 +33,12 @@ public class Quota  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr
+     * 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、natGateway、natGatewayFip
      */
     private String type;
 
     /**
-     * vpc、elastic_ip、network_interface为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId
+     * vpc、elastic_ip、network_interface、natGateway为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId，natGatewayFip为natGatewayId
      */
     private String parentResourceId;
 
@@ -53,8 +53,9 @@ public class Quota  implements java.io.Serializable {
     private Number count;
 
 
+
     /**
-     * get 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr
+     * get 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、natGateway、natGatewayFip
      *
      * @return
      */
@@ -63,7 +64,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr
+     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、natGateway、natGatewayFip
      *
      * @param type
      */
@@ -71,8 +72,9 @@ public class Quota  implements java.io.Serializable {
         this.type = type;
     }
 
+
     /**
-     * get vpc、elastic_ip、network_interface为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId
+     * get vpc、elastic_ip、network_interface、natGateway为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId，natGatewayFip为natGatewayId
      *
      * @return
      */
@@ -81,13 +83,14 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set vpc、elastic_ip、network_interface为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId
+     * set vpc、elastic_ip、network_interface、natGateway为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId，natGatewayFip为natGatewayId
      *
      * @param parentResourceId
      */
     public void setParentResourceId(String parentResourceId) {
         this.parentResourceId = parentResourceId;
     }
+
 
     /**
      * get 配额大小
@@ -106,6 +109,7 @@ public class Quota  implements java.io.Serializable {
     public void setMaxLimit(Number maxLimit) {
         this.maxLimit = maxLimit;
     }
+
 
     /**
      * get 已存在的资源数量
@@ -126,8 +130,9 @@ public class Quota  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr
+     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、natGateway、natGatewayFip
      *
      * @param type
      */
@@ -136,8 +141,9 @@ public class Quota  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set vpc、elastic_ip、network_interface为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId
+     * set vpc、elastic_ip、network_interface、natGateway为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId，natGatewayFip为natGatewayId
      *
      * @param parentResourceId
      */
@@ -145,6 +151,7 @@ public class Quota  implements java.io.Serializable {
         this.parentResourceId = parentResourceId;
         return this;
     }
+
 
     /**
      * set 配额大小
@@ -155,6 +162,7 @@ public class Quota  implements java.io.Serializable {
         this.maxLimit = maxLimit;
         return this;
     }
+
 
     /**
      * set 已存在的资源数量

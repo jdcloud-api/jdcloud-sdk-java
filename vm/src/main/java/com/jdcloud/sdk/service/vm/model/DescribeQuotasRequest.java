@@ -47,8 +47,8 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
 &#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、instance_cpu、instance_memory、instance_local_disk、keypair、image、instanceTemplate、imageShare&#x60;
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 私有镜像Id。
 查询镜像共享 &#x60;imageShare&#x60; 的配额时，此参数必传。
@@ -64,27 +64,29 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     private String regionId;
 
 
+
     /**
-     * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、instance_cpu、instance_memory、instance_local_disk、keypair、image、instanceTemplate、imageShare&#x60;
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、instance_cpu、instance_memory、instance_local_disk、keypair、image、instanceTemplate、imageShare&#x60;
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 私有镜像Id。
@@ -108,6 +110,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
         this.imageId = imageId;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -127,17 +130,19 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
-     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、instance_cpu、instance_memory、instance_local_disk、keypair、image、instanceTemplate、imageShare&#x60;
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeQuotasRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 私有镜像Id。
@@ -151,6 +156,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -160,6 +166,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -175,5 +182,4 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
         }
         this.filters.add(filter);
     }
-
 }

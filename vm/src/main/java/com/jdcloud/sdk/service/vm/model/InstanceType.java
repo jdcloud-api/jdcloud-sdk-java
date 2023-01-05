@@ -77,8 +77,8 @@ public class InstanceType  implements java.io.Serializable {
     /**
      * 实例规格售卖状态。已售罄的实例规格无法使用。
      */
+    
     private List<InstanceTypeState> state;
-
     /**
      * GPU配置，针对GPU类型的实例规格有效。
      */
@@ -87,8 +87,8 @@ public class InstanceType  implements java.io.Serializable {
     /**
      * 本地数据盘配置（缓存盘），针对GPU类型、或本地存储型的实例规格有效。
      */
+    
     private List<LocalDisk> localDisks;
-
     /**
      * 实例规格代数。
      */
@@ -98,6 +98,12 @@ public class InstanceType  implements java.io.Serializable {
      * 突发型规格信息
      */
     private InstanceTypeBurstInfo burstInfo;
+
+    /**
+     * 支持的云盘类型
+     */
+    
+    private List<String> cloudDiskTypes;
 
 
     /**
@@ -118,6 +124,7 @@ public class InstanceType  implements java.io.Serializable {
         this.family = family;
     }
 
+
     /**
      * get 实例规格。
      *
@@ -135,6 +142,7 @@ public class InstanceType  implements java.io.Serializable {
     public void setInstanceType(String instanceType) {
         this.instanceType = instanceType;
     }
+
 
     /**
      * get cpu个数。
@@ -154,6 +162,7 @@ public class InstanceType  implements java.io.Serializable {
         this.cpu = cpu;
     }
 
+
     /**
      * get 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
      *
@@ -171,6 +180,7 @@ public class InstanceType  implements java.io.Serializable {
     public void setArchitecture(String architecture) {
         this.architecture = architecture;
     }
+
 
     /**
      * get 内存大小。
@@ -190,6 +200,7 @@ public class InstanceType  implements java.io.Serializable {
         this.memoryMB = memoryMB;
     }
 
+
     /**
      * get 支持绑定的弹性网卡数量，包括主网卡。
      *
@@ -207,6 +218,7 @@ public class InstanceType  implements java.io.Serializable {
     public void setNicLimit(Integer nicLimit) {
         this.nicLimit = nicLimit;
     }
+
 
     /**
      * get 支持挂载的云硬盘数量，包括云盘系统盘。
@@ -226,6 +238,7 @@ public class InstanceType  implements java.io.Serializable {
         this.cloudDiskCountLimit = cloudDiskCountLimit;
     }
 
+
     /**
      * get 实例规格描述。
      *
@@ -244,23 +257,25 @@ public class InstanceType  implements java.io.Serializable {
         this.desc = desc;
     }
 
+
     /**
-     * get 实例规格售卖状态。已售罄的实例规格无法使用。
-     *
-     * @return
-     */
+    * get 实例规格售卖状态。已售罄的实例规格无法使用。
+    *
+    * @return
+    */
     public List<InstanceTypeState> getState() {
         return state;
     }
 
     /**
-     * set 实例规格售卖状态。已售罄的实例规格无法使用。
-     *
-     * @param state
-     */
+    * set 实例规格售卖状态。已售罄的实例规格无法使用。
+    *
+    * @param state
+    */
     public void setState(List<InstanceTypeState> state) {
         this.state = state;
     }
+
 
     /**
      * get GPU配置，针对GPU类型的实例规格有效。
@@ -280,23 +295,25 @@ public class InstanceType  implements java.io.Serializable {
         this.gpu = gpu;
     }
 
+
     /**
-     * get 本地数据盘配置（缓存盘），针对GPU类型、或本地存储型的实例规格有效。
-     *
-     * @return
-     */
+    * get 本地数据盘配置（缓存盘），针对GPU类型、或本地存储型的实例规格有效。
+    *
+    * @return
+    */
     public List<LocalDisk> getLocalDisks() {
         return localDisks;
     }
 
     /**
-     * set 本地数据盘配置（缓存盘），针对GPU类型、或本地存储型的实例规格有效。
-     *
-     * @param localDisks
-     */
+    * set 本地数据盘配置（缓存盘），针对GPU类型、或本地存储型的实例规格有效。
+    *
+    * @param localDisks
+    */
     public void setLocalDisks(List<LocalDisk> localDisks) {
         this.localDisks = localDisks;
     }
+
 
     /**
      * get 实例规格代数。
@@ -315,6 +332,7 @@ public class InstanceType  implements java.io.Serializable {
     public void setGeneration(Integer generation) {
         this.generation = generation;
     }
+
 
     /**
      * get 突发型规格信息
@@ -336,6 +354,26 @@ public class InstanceType  implements java.io.Serializable {
 
 
     /**
+    * get 支持的云盘类型
+    *
+    * @return
+    */
+    public List<String> getCloudDiskTypes() {
+        return cloudDiskTypes;
+    }
+
+    /**
+    * set 支持的云盘类型
+    *
+    * @param cloudDiskTypes
+    */
+    public void setCloudDiskTypes(List<String> cloudDiskTypes) {
+        this.cloudDiskTypes = cloudDiskTypes;
+    }
+
+
+
+    /**
      * set 实例规格族。
      *
      * @param family
@@ -344,6 +382,7 @@ public class InstanceType  implements java.io.Serializable {
         this.family = family;
         return this;
     }
+
 
     /**
      * set 实例规格。
@@ -355,6 +394,7 @@ public class InstanceType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cpu个数。
      *
@@ -364,6 +404,7 @@ public class InstanceType  implements java.io.Serializable {
         this.cpu = cpu;
         return this;
     }
+
 
     /**
      * set 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
@@ -375,6 +416,7 @@ public class InstanceType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 内存大小。
      *
@@ -384,6 +426,7 @@ public class InstanceType  implements java.io.Serializable {
         this.memoryMB = memoryMB;
         return this;
     }
+
 
     /**
      * set 支持绑定的弹性网卡数量，包括主网卡。
@@ -395,6 +438,7 @@ public class InstanceType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 支持挂载的云硬盘数量，包括云盘系统盘。
      *
@@ -404,6 +448,7 @@ public class InstanceType  implements java.io.Serializable {
         this.cloudDiskCountLimit = cloudDiskCountLimit;
         return this;
     }
+
 
     /**
      * set 实例规格描述。
@@ -415,15 +460,17 @@ public class InstanceType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 实例规格售卖状态。已售罄的实例规格无法使用。
-     *
-     * @param state
-     */
+    * set 实例规格售卖状态。已售罄的实例规格无法使用。
+    *
+    * @param state
+    */
     public InstanceType state(List<InstanceTypeState> state) {
         this.state = state;
         return this;
     }
+
 
     /**
      * set GPU配置，针对GPU类型的实例规格有效。
@@ -435,15 +482,17 @@ public class InstanceType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 本地数据盘配置（缓存盘），针对GPU类型、或本地存储型的实例规格有效。
-     *
-     * @param localDisks
-     */
+    * set 本地数据盘配置（缓存盘），针对GPU类型、或本地存储型的实例规格有效。
+    *
+    * @param localDisks
+    */
     public InstanceType localDisks(List<LocalDisk> localDisks) {
         this.localDisks = localDisks;
         return this;
     }
+
 
     /**
      * set 实例规格代数。
@@ -455,6 +504,7 @@ public class InstanceType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 突发型规格信息
      *
@@ -464,6 +514,18 @@ public class InstanceType  implements java.io.Serializable {
         this.burstInfo = burstInfo;
         return this;
     }
+
+
+    /**
+    * set 支持的云盘类型
+    *
+    * @param cloudDiskTypes
+    */
+    public InstanceType cloudDiskTypes(List<String> cloudDiskTypes) {
+        this.cloudDiskTypes = cloudDiskTypes;
+        return this;
+    }
+
 
 
     /**
@@ -490,4 +552,15 @@ public class InstanceType  implements java.io.Serializable {
         this.localDisks.add(localDisk);
     }
 
+    /**
+     * add item to 支持的云盘类型
+     *
+     * @param cloudDiskType
+     */
+    public void addCloudDiskType(String cloudDiskType) {
+        if (this.cloudDiskTypes == null) {
+            this.cloudDiskTypes = new ArrayList<>();
+        }
+        this.cloudDiskTypes.add(cloudDiskType);
+    }
 }

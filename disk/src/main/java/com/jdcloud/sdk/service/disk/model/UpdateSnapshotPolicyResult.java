@@ -100,6 +100,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
     private Integer diskCount;
 
 
+
     /**
      * get 是否发送短信。0:不发送 1:发送
      *
@@ -117,6 +118,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get 是否发送短信。0:不发送 1:发送
@@ -136,6 +138,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         this.name = name;
     }
 
+
     /**
      * get 用户pin
      *
@@ -153,6 +156,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 策略执行间隔，单位:秒
@@ -172,6 +176,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         this.interval = interval;
     }
 
+
     /**
      * get 策略生效时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
      *
@@ -189,6 +194,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
     public void setEffectiveTime(String effectiveTime) {
         this.effectiveTime = effectiveTime;
     }
+
 
     /**
      * get 策略上次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
@@ -208,6 +214,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         this.lastTriggerTime = lastTriggerTime;
     }
 
+
     /**
      * get 策略下次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
      *
@@ -225,6 +232,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
     public void setNextTriggerTime(String nextTriggerTime) {
         this.nextTriggerTime = nextTriggerTime;
     }
+
 
     /**
      * get 快照保留时间。单位:秒。0：永久保留
@@ -244,6 +252,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         this.snapshotLifecycle = snapshotLifecycle;
     }
 
+
     /**
      * get 联系人信息
      *
@@ -261,6 +270,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
     public void setContactInfo(ContactInfo contactInfo) {
         this.contactInfo = contactInfo;
     }
+
 
     /**
      * get 策略下次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
@@ -280,6 +290,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         this.createTime = createTime;
     }
 
+
     /**
      * get 策略下次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
      *
@@ -298,6 +309,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 策略状态。1：启用 2：禁用
      *
@@ -315,6 +327,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 策略绑定的disk数量
@@ -335,6 +348,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
      * set 是否发送短信。0:不发送 1:发送
      *
@@ -344,6 +358,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         this.id = id;
         return this;
     }
+
 
     /**
      * set 是否发送短信。0:不发送 1:发送
@@ -355,6 +370,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 用户pin
      *
@@ -364,6 +380,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 策略执行间隔，单位:秒
@@ -375,6 +392,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 策略生效时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
      *
@@ -384,6 +402,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         this.effectiveTime = effectiveTime;
         return this;
     }
+
 
     /**
      * set 策略上次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
@@ -395,6 +414,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 策略下次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
      *
@@ -404,6 +424,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         this.nextTriggerTime = nextTriggerTime;
         return this;
     }
+
 
     /**
      * set 快照保留时间。单位:秒。0：永久保留
@@ -415,6 +436,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 联系人信息
      *
@@ -424,6 +446,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         this.contactInfo = contactInfo;
         return this;
     }
+
 
     /**
      * set 策略下次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
@@ -435,6 +458,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 策略下次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
      *
@@ -445,6 +469,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 策略状态。1：启用 2：禁用
      *
@@ -454,6 +479,7 @@ public class UpdateSnapshotPolicyResult extends JdcloudResult implements java.io
         this.status = status;
         return this;
     }
+
 
     /**
      * set 策略绑定的disk数量

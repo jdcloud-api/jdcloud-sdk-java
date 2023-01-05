@@ -76,15 +76,15 @@ public class Disk  implements java.io.Serializable {
     private Integer throughput;
 
     /**
-     * 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
+     * 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend、in-recyclebin 之一
      */
     private String status;
 
     /**
      * 挂载信息
      */
+    
     private List<DiskAttachment> attachments;
-
     /**
      * 创建该云硬盘的快照ID
      */
@@ -118,12 +118,28 @@ public class Disk  implements java.io.Serializable {
     /**
      * null
      */
+    
     private List<Tag> tags;
-
     /**
      * snapshotPolicies
      */
+    
     private List<SnapshotPolicy> snapshotPolicies;
+    /**
+     * 资源组ID
+     */
+    private String resourceGroupId;
+
+    /**
+     * 云盘是否可以加入回收站
+     */
+    private Boolean canPutInRecycleBin;
+
+    /**
+     * 加入回收站的时间
+     */
+    private String trashTime;
+
 
 
     /**
@@ -144,6 +160,7 @@ public class Disk  implements java.io.Serializable {
         this.diskId = diskId;
     }
 
+
     /**
      * get 云硬盘所属AZ
      *
@@ -161,6 +178,7 @@ public class Disk  implements java.io.Serializable {
     public void setAz(String az) {
         this.az = az;
     }
+
 
     /**
      * get 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -180,6 +198,7 @@ public class Disk  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 云硬盘描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
@@ -197,6 +216,7 @@ public class Disk  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 云硬盘类型，取值为 ssd,premium-hdd,ssd.gp1,ssd.io1,hdd.std1
@@ -216,6 +236,7 @@ public class Disk  implements java.io.Serializable {
         this.diskType = diskType;
     }
 
+
     /**
      * get 云硬盘大小，单位为 GiB
      *
@@ -233,6 +254,7 @@ public class Disk  implements java.io.Serializable {
     public void setDiskSizeGB(Integer diskSizeGB) {
         this.diskSizeGB = diskSizeGB;
     }
+
 
     /**
      * get 该云硬盘实际应用的iops值
@@ -252,6 +274,7 @@ public class Disk  implements java.io.Serializable {
         this.iops = iops;
     }
 
+
     /**
      * get 该云硬盘实际应用的吞吐量的数值
      *
@@ -270,8 +293,9 @@ public class Disk  implements java.io.Serializable {
         this.throughput = throughput;
     }
 
+
     /**
-     * get 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
+     * get 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend、in-recyclebin 之一
      *
      * @return
      */
@@ -280,7 +304,7 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
+     * set 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend、in-recyclebin 之一
      *
      * @param status
      */
@@ -288,23 +312,25 @@ public class Disk  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
-     * get 挂载信息
-     *
-     * @return
-     */
+    * get 挂载信息
+    *
+    * @return
+    */
     public List<DiskAttachment> getAttachments() {
         return attachments;
     }
 
     /**
-     * set 挂载信息
-     *
-     * @param attachments
-     */
+    * set 挂载信息
+    *
+    * @param attachments
+    */
     public void setAttachments(List<DiskAttachment> attachments) {
         this.attachments = attachments;
     }
+
 
     /**
      * get 创建该云硬盘的快照ID
@@ -324,6 +350,7 @@ public class Disk  implements java.io.Serializable {
         this.snapshotId = snapshotId;
     }
 
+
     /**
      * get 云盘是否支持多挂载
      *
@@ -341,6 +368,7 @@ public class Disk  implements java.io.Serializable {
     public void setMultiAttachable(Boolean multiAttachable) {
         this.multiAttachable = multiAttachable;
     }
+
 
     /**
      * get 云盘是否为加密盘
@@ -360,6 +388,7 @@ public class Disk  implements java.io.Serializable {
         this.encrypted = encrypted;
     }
 
+
     /**
      * get 云盘是否被暂停（IOPS限制为极低）
      *
@@ -377,6 +406,7 @@ public class Disk  implements java.io.Serializable {
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
     }
+
 
     /**
      * get 创建云硬盘时间
@@ -396,6 +426,7 @@ public class Disk  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 云硬盘计费配置信息
      *
@@ -414,41 +445,101 @@ public class Disk  implements java.io.Serializable {
         this.charge = charge;
     }
 
+
     /**
-     * get null
-     *
-     * @return
-     */
+    * get null
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set null
-     *
-     * @param tags
-     */
+    * set null
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
 
+
     /**
-     * get snapshotPolicies
-     *
-     * @return
-     */
+    * get snapshotPolicies
+    *
+    * @return
+    */
     public List<SnapshotPolicy> getSnapshotPolicies() {
         return snapshotPolicies;
     }
 
     /**
-     * set snapshotPolicies
-     *
-     * @param snapshotPolicies
-     */
+    * set snapshotPolicies
+    *
+    * @param snapshotPolicies
+    */
     public void setSnapshotPolicies(List<SnapshotPolicy> snapshotPolicies) {
         this.snapshotPolicies = snapshotPolicies;
     }
+
+
+    /**
+     * get 资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
+     * get 云盘是否可以加入回收站
+     *
+     * @return
+     */
+    public Boolean getCanPutInRecycleBin() {
+        return canPutInRecycleBin;
+    }
+
+    /**
+     * set 云盘是否可以加入回收站
+     *
+     * @param canPutInRecycleBin
+     */
+    public void setCanPutInRecycleBin(Boolean canPutInRecycleBin) {
+        this.canPutInRecycleBin = canPutInRecycleBin;
+    }
+
+
+    /**
+     * get 加入回收站的时间
+     *
+     * @return
+     */
+    public String getTrashTime() {
+        return trashTime;
+    }
+
+    /**
+     * set 加入回收站的时间
+     *
+     * @param trashTime
+     */
+    public void setTrashTime(String trashTime) {
+        this.trashTime = trashTime;
+    }
+
 
 
     /**
@@ -461,6 +552,7 @@ public class Disk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云硬盘所属AZ
      *
@@ -470,6 +562,7 @@ public class Disk  implements java.io.Serializable {
         this.az = az;
         return this;
     }
+
 
     /**
      * set 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -481,6 +574,7 @@ public class Disk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云硬盘描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
@@ -490,6 +584,7 @@ public class Disk  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 云硬盘类型，取值为 ssd,premium-hdd,ssd.gp1,ssd.io1,hdd.std1
@@ -501,6 +596,7 @@ public class Disk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云硬盘大小，单位为 GiB
      *
@@ -510,6 +606,7 @@ public class Disk  implements java.io.Serializable {
         this.diskSizeGB = diskSizeGB;
         return this;
     }
+
 
     /**
      * set 该云硬盘实际应用的iops值
@@ -521,6 +618,7 @@ public class Disk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 该云硬盘实际应用的吞吐量的数值
      *
@@ -531,8 +629,9 @@ public class Disk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
+     * set 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend、in-recyclebin 之一
      *
      * @param status
      */
@@ -541,15 +640,17 @@ public class Disk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 挂载信息
-     *
-     * @param attachments
-     */
+    * set 挂载信息
+    *
+    * @param attachments
+    */
     public Disk attachments(List<DiskAttachment> attachments) {
         this.attachments = attachments;
         return this;
     }
+
 
     /**
      * set 创建该云硬盘的快照ID
@@ -561,6 +662,7 @@ public class Disk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云盘是否支持多挂载
      *
@@ -570,6 +672,7 @@ public class Disk  implements java.io.Serializable {
         this.multiAttachable = multiAttachable;
         return this;
     }
+
 
     /**
      * set 云盘是否为加密盘
@@ -581,6 +684,7 @@ public class Disk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云盘是否被暂停（IOPS限制为极低）
      *
@@ -590,6 +694,7 @@ public class Disk  implements java.io.Serializable {
         this.enabled = enabled;
         return this;
     }
+
 
     /**
      * set 创建云硬盘时间
@@ -601,6 +706,7 @@ public class Disk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云硬盘计费配置信息
      *
@@ -611,25 +717,61 @@ public class Disk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set null
-     *
-     * @param tags
-     */
+    * set null
+    *
+    * @param tags
+    */
     public Disk tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
 
+
     /**
-     * set snapshotPolicies
-     *
-     * @param snapshotPolicies
-     */
+    * set snapshotPolicies
+    *
+    * @param snapshotPolicies
+    */
     public Disk snapshotPolicies(List<SnapshotPolicy> snapshotPolicies) {
         this.snapshotPolicies = snapshotPolicies;
         return this;
     }
+
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public Disk resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
+     * set 云盘是否可以加入回收站
+     *
+     * @param canPutInRecycleBin
+     */
+    public Disk canPutInRecycleBin(Boolean canPutInRecycleBin) {
+        this.canPutInRecycleBin = canPutInRecycleBin;
+        return this;
+    }
+
+
+    /**
+     * set 加入回收站的时间
+     *
+     * @param trashTime
+     */
+    public Disk trashTime(String trashTime) {
+        this.trashTime = trashTime;
+        return this;
+    }
+
 
 
     /**
@@ -667,5 +809,4 @@ public class Disk  implements java.io.Serializable {
         }
         this.snapshotPolicies.add(snapshotPolicie);
     }
-
 }

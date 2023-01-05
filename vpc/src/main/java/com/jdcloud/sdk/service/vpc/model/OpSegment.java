@@ -68,6 +68,7 @@ public class OpSegment  implements java.io.Serializable {
     private String endIp;
 
 
+
     /**
      * get 网段的Id
      *
@@ -85,6 +86,7 @@ public class OpSegment  implements java.io.Serializable {
     public void setSegmentId(String segmentId) {
         this.segmentId = segmentId;
     }
+
 
     /**
      * get 网段名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -104,6 +106,7 @@ public class OpSegment  implements java.io.Serializable {
         this.segmentName = segmentName;
     }
 
+
     /**
      * get 网络地址段
      *
@@ -121,6 +124,7 @@ public class OpSegment  implements java.io.Serializable {
     public void setAddressPrefix(String addressPrefix) {
         this.addressPrefix = addressPrefix;
     }
+
 
     /**
      * get 网段可用ip数量
@@ -140,6 +144,7 @@ public class OpSegment  implements java.io.Serializable {
         this.availableIpCount = availableIpCount;
     }
 
+
     /**
      * get inat类型provider，取值可以为inat或internal_private，新加的inat/natgateway都是inat类型。
      *
@@ -158,6 +163,7 @@ public class OpSegment  implements java.io.Serializable {
         this.provider = provider;
     }
 
+
     /**
      * get 网段的起始地址
      *
@@ -175,6 +181,7 @@ public class OpSegment  implements java.io.Serializable {
     public void setStartIp(String startIp) {
         this.startIp = startIp;
     }
+
 
     /**
      * get 网段的结束地址
@@ -195,6 +202,7 @@ public class OpSegment  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 网段的Id
      *
@@ -204,6 +212,7 @@ public class OpSegment  implements java.io.Serializable {
         this.segmentId = segmentId;
         return this;
     }
+
 
     /**
      * set 网段名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -215,6 +224,7 @@ public class OpSegment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网络地址段
      *
@@ -224,6 +234,7 @@ public class OpSegment  implements java.io.Serializable {
         this.addressPrefix = addressPrefix;
         return this;
     }
+
 
     /**
      * set 网段可用ip数量
@@ -235,6 +246,7 @@ public class OpSegment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set inat类型provider，取值可以为inat或internal_private，新加的inat/natgateway都是inat类型。
      *
@@ -245,6 +257,7 @@ public class OpSegment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网段的起始地址
      *
@@ -254,6 +267,7 @@ public class OpSegment  implements java.io.Serializable {
         this.startIp = startIp;
         return this;
     }
+
 
     /**
      * set 网段的结束地址

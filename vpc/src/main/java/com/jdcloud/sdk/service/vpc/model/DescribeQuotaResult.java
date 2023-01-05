@@ -39,6 +39,7 @@ public class DescribeQuotaResult extends JdcloudResult implements java.io.Serial
     private Object quota;
 
 
+
     /**
      * get quota
      *
@@ -56,6 +57,7 @@ public class DescribeQuotaResult extends JdcloudResult implements java.io.Serial
     public void setQuota(Object quota) {
         this.quota = quota;
     }
+
 
 
     /**

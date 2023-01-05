@@ -59,6 +59,7 @@ public class ModifyNetworkAclRequest extends JdcloudRequest implements java.io.S
     private String networkAclId;
 
 
+
     /**
      * get networkAcl名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
      *
@@ -76,6 +77,7 @@ public class ModifyNetworkAclRequest extends JdcloudRequest implements java.io.S
     public void setNetworkAclName(String networkAclName) {
         this.networkAclName = networkAclName;
     }
+
 
     /**
      * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -95,6 +97,7 @@ public class ModifyNetworkAclRequest extends JdcloudRequest implements java.io.S
         this.description = description;
     }
 
+
     /**
      * get Region ID
      *
@@ -112,6 +115,7 @@ public class ModifyNetworkAclRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get networkAclId ID
@@ -132,6 +136,7 @@ public class ModifyNetworkAclRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set networkAcl名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
      *
@@ -141,6 +146,7 @@ public class ModifyNetworkAclRequest extends JdcloudRequest implements java.io.S
         this.networkAclName = networkAclName;
         return this;
     }
+
 
     /**
      * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -152,6 +158,7 @@ public class ModifyNetworkAclRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -161,6 +168,7 @@ public class ModifyNetworkAclRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set networkAclId ID

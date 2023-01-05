@@ -48,6 +48,7 @@ public class DescribeImageResult extends JdcloudResult implements java.io.Serial
     private Image image;
 
 
+
     /**
      * get 镜像信息。
      *
@@ -65,6 +66,7 @@ public class DescribeImageResult extends JdcloudResult implements java.io.Serial
     public void setImage(Image image) {
         this.image = image;
     }
+
 
 
     /**

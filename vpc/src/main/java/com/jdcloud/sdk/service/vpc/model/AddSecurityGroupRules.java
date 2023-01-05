@@ -70,6 +70,7 @@ public class AddSecurityGroupRules  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get 规则限定协议。300:All; 6:TCP; 17:UDP; 1:ICMP
      *
@@ -87,6 +88,7 @@ public class AddSecurityGroupRules  implements java.io.Serializable {
     public void setProtocol(Number protocol) {
         this.protocol = protocol;
     }
+
 
     /**
      * get 安全组规则方向。0：入规则; 1：出规则
@@ -106,6 +108,7 @@ public class AddSecurityGroupRules  implements java.io.Serializable {
         this.direction = direction;
     }
 
+
     /**
      * get 匹配地址前缀
      *
@@ -123,6 +126,7 @@ public class AddSecurityGroupRules  implements java.io.Serializable {
     public void setAddressPrefix(String addressPrefix) {
         this.addressPrefix = addressPrefix;
     }
+
 
     /**
      * get 规则限定起始传输层端口, 取值范围:1-65535, 若protocol为传输层协议，默认值为1，若protocol不是传输层协议，恒为0。如果规则只限定一个端口号，fromPort和toPort填写同一个值
@@ -142,6 +146,7 @@ public class AddSecurityGroupRules  implements java.io.Serializable {
         this.fromPort = fromPort;
     }
 
+
     /**
      * get 规则限定终止传输层端口, 取值范围:1-65535, 若protocol为传输层协议，默认值为65535，若protocol不是传输层协议，恒为0。如果规则只限定一个端口号，fromPort和toPort填写同一个值
      *
@@ -159,6 +164,7 @@ public class AddSecurityGroupRules  implements java.io.Serializable {
     public void setToPort(Number toPort) {
         this.toPort = toPort;
     }
+
 
     /**
      * get 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
@@ -179,6 +185,7 @@ public class AddSecurityGroupRules  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则限定协议。300:All; 6:TCP; 17:UDP; 1:ICMP
      *
@@ -188,6 +195,7 @@ public class AddSecurityGroupRules  implements java.io.Serializable {
         this.protocol = protocol;
         return this;
     }
+
 
     /**
      * set 安全组规则方向。0：入规则; 1：出规则
@@ -199,6 +207,7 @@ public class AddSecurityGroupRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配地址前缀
      *
@@ -208,6 +217,7 @@ public class AddSecurityGroupRules  implements java.io.Serializable {
         this.addressPrefix = addressPrefix;
         return this;
     }
+
 
     /**
      * set 规则限定起始传输层端口, 取值范围:1-65535, 若protocol为传输层协议，默认值为1，若protocol不是传输层协议，恒为0。如果规则只限定一个端口号，fromPort和toPort填写同一个值
@@ -219,6 +229,7 @@ public class AddSecurityGroupRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则限定终止传输层端口, 取值范围:1-65535, 若protocol为传输层协议，默认值为65535，若protocol不是传输层协议，恒为0。如果规则只限定一个端口号，fromPort和toPort填写同一个值
      *
@@ -228,6 +239,7 @@ public class AddSecurityGroupRules  implements java.io.Serializable {
         this.toPort = toPort;
         return this;
     }
+
 
     /**
      * set 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符

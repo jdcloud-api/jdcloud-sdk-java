@@ -57,12 +57,13 @@ public class InstanceTemplate  implements java.io.Serializable {
     /**
      * 关联的高可用组(ag)信息。
      */
+    
     private List<Ag> ags;
-
     /**
      * 实例模板创建时间。
      */
     private String createdTime;
+
 
 
     /**
@@ -83,6 +84,7 @@ public class InstanceTemplate  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 实例模板名称。
      *
@@ -100,6 +102,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 实例模板描述。
@@ -119,6 +122,7 @@ public class InstanceTemplate  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 实例模板详细配置。
      *
@@ -137,23 +141,25 @@ public class InstanceTemplate  implements java.io.Serializable {
         this.instanceTemplateData = instanceTemplateData;
     }
 
+
     /**
-     * get 关联的高可用组(ag)信息。
-     *
-     * @return
-     */
+    * get 关联的高可用组(ag)信息。
+    *
+    * @return
+    */
     public List<Ag> getAgs() {
         return ags;
     }
 
     /**
-     * set 关联的高可用组(ag)信息。
-     *
-     * @param ags
-     */
+    * set 关联的高可用组(ag)信息。
+    *
+    * @param ags
+    */
     public void setAgs(List<Ag> ags) {
         this.ags = ags;
     }
+
 
     /**
      * get 实例模板创建时间。
@@ -174,6 +180,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例模板ID
      *
@@ -183,6 +190,7 @@ public class InstanceTemplate  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 实例模板名称。
@@ -194,6 +202,7 @@ public class InstanceTemplate  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例模板描述。
      *
@@ -203,6 +212,7 @@ public class InstanceTemplate  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 实例模板详细配置。
@@ -214,15 +224,17 @@ public class InstanceTemplate  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 关联的高可用组(ag)信息。
-     *
-     * @param ags
-     */
+    * set 关联的高可用组(ag)信息。
+    *
+    * @param ags
+    */
     public InstanceTemplate ags(List<Ag> ags) {
         this.ags = ags;
         return this;
     }
+
 
     /**
      * set 实例模板创建时间。
@@ -233,6 +245,7 @@ public class InstanceTemplate  implements java.io.Serializable {
         this.createdTime = createdTime;
         return this;
     }
+
 
 
     /**
@@ -246,5 +259,4 @@ public class InstanceTemplate  implements java.io.Serializable {
         }
         this.ags.add(ag);
     }
-
 }

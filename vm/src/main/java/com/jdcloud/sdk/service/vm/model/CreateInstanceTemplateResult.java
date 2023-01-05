@@ -54,6 +54,7 @@ public class CreateInstanceTemplateResult extends JdcloudResult implements java.
     private String instanceTemplateId;
 
 
+
     /**
      * get 实例模板ID。
      *
@@ -71,6 +72,7 @@ public class CreateInstanceTemplateResult extends JdcloudResult implements java.
     public void setInstanceTemplateId(String instanceTemplateId) {
         this.instanceTemplateId = instanceTemplateId;
     }
+
 
 
     /**

@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.disk.model.RecoverDiskRequest;
+import com.jdcloud.sdk.service.disk.model.RecoverDiskResponse;
+import com.jdcloud.sdk.service.disk.client.RecoverDiskExecutor;
 import com.jdcloud.sdk.service.disk.model.DescribeDiskRequest;
 import com.jdcloud.sdk.service.disk.model.DescribeDiskResponse;
 import com.jdcloud.sdk.service.disk.client.DescribeDiskExecutor;
@@ -114,7 +117,7 @@ public class DiskClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.4";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "disk.jdcloud-api.com";
     public final static String ServiceName = "disk";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -155,6 +158,18 @@ public class DiskClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * -   从回收站中恢复云盘，云盘的状态必须为in-recyclebin。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RecoverDiskResponse recoverDisk(RecoverDiskRequest request) throws JdcloudSdkException {
+        return new RecoverDiskExecutor().client(this).execute(request);
+    }
 
     /**
      * 查询某一块云硬盘的信息详情

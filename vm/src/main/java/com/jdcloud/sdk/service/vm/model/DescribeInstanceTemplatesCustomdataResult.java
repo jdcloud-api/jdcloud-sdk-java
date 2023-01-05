@@ -46,31 +46,33 @@ public class DescribeInstanceTemplatesCustomdataResult extends JdcloudResult imp
     /**
      * instanceTemplatesCustomData
      */
+    
     private List<InstanceTemplateCustomData> instanceTemplatesCustomData;
-
     /**
      * 本次查询的总记录数。
      */
     private Number totalCount;
 
 
+
     /**
-     * get instanceTemplatesCustomData
-     *
-     * @return
-     */
+    * get instanceTemplatesCustomData
+    *
+    * @return
+    */
     public List<InstanceTemplateCustomData> getInstanceTemplatesCustomData() {
         return instanceTemplatesCustomData;
     }
 
     /**
-     * set instanceTemplatesCustomData
-     *
-     * @param instanceTemplatesCustomData
-     */
+    * set instanceTemplatesCustomData
+    *
+    * @param instanceTemplatesCustomData
+    */
     public void setInstanceTemplatesCustomData(List<InstanceTemplateCustomData> instanceTemplatesCustomData) {
         this.instanceTemplatesCustomData = instanceTemplatesCustomData;
     }
+
 
     /**
      * get 本次查询的总记录数。
@@ -91,15 +93,17 @@ public class DescribeInstanceTemplatesCustomdataResult extends JdcloudResult imp
     }
 
 
+
     /**
-     * set instanceTemplatesCustomData
-     *
-     * @param instanceTemplatesCustomData
-     */
+    * set instanceTemplatesCustomData
+    *
+    * @param instanceTemplatesCustomData
+    */
     public DescribeInstanceTemplatesCustomdataResult instanceTemplatesCustomData(List<InstanceTemplateCustomData> instanceTemplatesCustomData) {
         this.instanceTemplatesCustomData = instanceTemplatesCustomData;
         return this;
     }
+
 
     /**
      * set 本次查询的总记录数。
@@ -110,6 +114,7 @@ public class DescribeInstanceTemplatesCustomdataResult extends JdcloudResult imp
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -123,5 +128,4 @@ public class DescribeInstanceTemplatesCustomdataResult extends JdcloudResult imp
         }
         this.instanceTemplatesCustomData.add(instanceTemplatesCustomData);
     }
-
 }

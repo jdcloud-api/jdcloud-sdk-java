@@ -64,6 +64,7 @@ public class PolicyDiskRelationOpResult extends JdcloudResult implements java.io
     private Integer op;
 
 
+
     /**
      * get 状态码
      *
@@ -81,6 +82,7 @@ public class PolicyDiskRelationOpResult extends JdcloudResult implements java.io
     public void setCode(Integer code) {
         this.code = code;
     }
+
 
     /**
      * get 失败信息
@@ -100,6 +102,7 @@ public class PolicyDiskRelationOpResult extends JdcloudResult implements java.io
         this.message = message;
     }
 
+
     /**
      * get 磁盘ID
      *
@@ -117,6 +120,7 @@ public class PolicyDiskRelationOpResult extends JdcloudResult implements java.io
     public void setDiskId(String diskId) {
         this.diskId = diskId;
     }
+
 
     /**
      * get 磁盘地域ID
@@ -136,6 +140,7 @@ public class PolicyDiskRelationOpResult extends JdcloudResult implements java.io
         this.diskRegion = diskRegion;
     }
 
+
     /**
      * get 快照策略ID
      *
@@ -153,6 +158,7 @@ public class PolicyDiskRelationOpResult extends JdcloudResult implements java.io
     public void setPolicyId(String policyId) {
         this.policyId = policyId;
     }
+
 
     /**
      * get 联系组id
@@ -173,6 +179,7 @@ public class PolicyDiskRelationOpResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
      * set 状态码
      *
@@ -182,6 +189,7 @@ public class PolicyDiskRelationOpResult extends JdcloudResult implements java.io
         this.code = code;
         return this;
     }
+
 
     /**
      * set 失败信息
@@ -193,6 +201,7 @@ public class PolicyDiskRelationOpResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 磁盘ID
      *
@@ -202,6 +211,7 @@ public class PolicyDiskRelationOpResult extends JdcloudResult implements java.io
         this.diskId = diskId;
         return this;
     }
+
 
     /**
      * set 磁盘地域ID
@@ -213,6 +223,7 @@ public class PolicyDiskRelationOpResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 快照策略ID
      *
@@ -222,6 +233,7 @@ public class PolicyDiskRelationOpResult extends JdcloudResult implements java.io
         this.policyId = policyId;
         return this;
     }
+
 
     /**
      * set 联系组id

@@ -52,17 +52,19 @@ public class DescribeRouteTablesRequest extends JdcloudRequest implements java.i
 routeTableNames - 路由表名称列表，支持多个
 vpcId	- 路由表所属vpc Id，支持单个
 azType - 路由表az类型，取值：all(全部类型)，standard(标准路由表)，edge(边缘路由表)，默认standard ，支持单个
+associateType - 绑定资源类型，取值：subnet，gateway，支持单个
 azs - 可用区，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -83,6 +85,7 @@ azs - 可用区，支持多个
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -101,33 +104,37 @@ azs - 可用区，支持多个
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get routeTableIds - 路由表ID列表，支持多个
+    * get routeTableIds - 路由表ID列表，支持多个
 routeTableNames - 路由表名称列表，支持多个
 vpcId	- 路由表所属vpc Id，支持单个
 azType - 路由表az类型，取值：all(全部类型)，standard(标准路由表)，edge(边缘路由表)，默认standard ，支持单个
+associateType - 绑定资源类型，取值：subnet，gateway，支持单个
 azs - 可用区，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set routeTableIds - 路由表ID列表，支持多个
+    * set routeTableIds - 路由表ID列表，支持多个
 routeTableNames - 路由表名称列表，支持多个
 vpcId	- 路由表所属vpc Id，支持单个
 azType - 路由表az类型，取值：all(全部类型)，standard(标准路由表)，edge(边缘路由表)，默认standard ，支持单个
+associateType - 绑定资源类型，取值：subnet，gateway，支持单个
 azs - 可用区，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get Region ID
@@ -148,6 +155,7 @@ azs - 可用区，支持多个
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
      *
@@ -157,6 +165,7 @@ azs - 可用区，支持多个
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
@@ -168,20 +177,23 @@ azs - 可用区，支持多个
         return this;
     }
 
+
     /**
-     * set routeTableIds - 路由表ID列表，支持多个
+    * set routeTableIds - 路由表ID列表，支持多个
 routeTableNames - 路由表名称列表，支持多个
 vpcId	- 路由表所属vpc Id，支持单个
 azType - 路由表az类型，取值：all(全部类型)，standard(标准路由表)，edge(边缘路由表)，默认standard ，支持单个
+associateType - 绑定资源类型，取值：subnet，gateway，支持单个
 azs - 可用区，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeRouteTablesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -194,11 +206,13 @@ azs - 可用区，支持多个
     }
 
 
+
     /**
      * add item to routeTableIds - 路由表ID列表，支持多个
 routeTableNames - 路由表名称列表，支持多个
 vpcId	- 路由表所属vpc Id，支持单个
 azType - 路由表az类型，取值：all(全部类型)，standard(标准路由表)，edge(边缘路由表)，默认standard ，支持单个
+associateType - 绑定资源类型，取值：subnet，gateway，支持单个
 azs - 可用区，支持多个
 
      *
@@ -210,5 +224,4 @@ azs - 可用区，支持多个
         }
         this.filters.add(filter);
     }
-
 }

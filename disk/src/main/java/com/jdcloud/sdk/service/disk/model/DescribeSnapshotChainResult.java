@@ -39,6 +39,7 @@ public class DescribeSnapshotChainResult extends JdcloudResult implements java.i
     private Object snapshotChain;
 
 
+
     /**
      * get snapshotChain
      *
@@ -56,6 +57,7 @@ public class DescribeSnapshotChainResult extends JdcloudResult implements java.i
     public void setSnapshotChain(Object snapshotChain) {
         this.snapshotChain = snapshotChain;
     }
+
 
 
     /**

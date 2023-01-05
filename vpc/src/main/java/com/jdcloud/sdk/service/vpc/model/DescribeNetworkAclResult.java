@@ -40,6 +40,7 @@ public class DescribeNetworkAclResult extends JdcloudResult implements java.io.S
     private NetworkAcl networkAcl;
 
 
+
     /**
      * get networkAcl资源信息
      *
@@ -57,6 +58,7 @@ public class DescribeNetworkAclResult extends JdcloudResult implements java.io.S
     public void setNetworkAcl(NetworkAcl networkAcl) {
         this.networkAcl = networkAcl;
     }
+
 
 
     /**

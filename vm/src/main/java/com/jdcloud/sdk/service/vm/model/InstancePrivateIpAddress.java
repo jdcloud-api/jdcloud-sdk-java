@@ -43,6 +43,7 @@ public class InstancePrivateIpAddress  implements java.io.Serializable {
     private String privateIpAddress;
 
 
+
     /**
      * get 云主机ID。
      *
@@ -60,6 +61,7 @@ public class InstancePrivateIpAddress  implements java.io.Serializable {
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 内网主IP地址。
@@ -80,6 +82,7 @@ public class InstancePrivateIpAddress  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云主机ID。
      *
@@ -89,6 +92,7 @@ public class InstancePrivateIpAddress  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 内网主IP地址。

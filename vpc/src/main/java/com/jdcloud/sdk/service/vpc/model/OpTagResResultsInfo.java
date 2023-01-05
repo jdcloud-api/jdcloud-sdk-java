@@ -51,6 +51,7 @@ public class OpTagResResultsInfo  implements java.io.Serializable {
     private String msg;
 
 
+
     /**
      * get 资源id
      *
@@ -68,6 +69,7 @@ public class OpTagResResultsInfo  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 操作标签与资源关系结果状态
@@ -88,6 +90,7 @@ public class OpTagResResultsInfo  implements java.io.Serializable {
     public void setSuccess(Integer success) {
         this.success = success;
     }
+
 
     /**
      * get 操作标签与资源关系结果描述
@@ -112,6 +115,7 @@ public class OpTagResResultsInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 资源id
      *
@@ -121,6 +125,7 @@ public class OpTagResResultsInfo  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 操作标签与资源关系结果状态
@@ -132,6 +137,7 @@ public class OpTagResResultsInfo  implements java.io.Serializable {
         this.success = success;
         return this;
     }
+
 
     /**
      * set 操作标签与资源关系结果描述

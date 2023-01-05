@@ -52,6 +52,7 @@ public class InstanceInfo  implements java.io.Serializable {
     /**
      * 绑定资源
      */
+    
     private List<BindInfo> bind;
 
 
@@ -73,6 +74,7 @@ public class InstanceInfo  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get vm 名称
      *
@@ -90,6 +92,7 @@ public class InstanceInfo  implements java.io.Serializable {
     public void setResourceName(String resourceName) {
         this.resourceName = resourceName;
     }
+
 
     /**
      * get 备注信息
@@ -109,23 +112,25 @@ public class InstanceInfo  implements java.io.Serializable {
         this.remark = remark;
     }
 
+
     /**
-     * get 绑定资源
-     *
-     * @return
-     */
+    * get 绑定资源
+    *
+    * @return
+    */
     public List<BindInfo> getBind() {
         return bind;
     }
 
     /**
-     * set 绑定资源
-     *
-     * @param bind
-     */
+    * set 绑定资源
+    *
+    * @param bind
+    */
     public void setBind(List<BindInfo> bind) {
         this.bind = bind;
     }
+
 
 
     /**
@@ -138,6 +143,7 @@ public class InstanceInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set vm 名称
      *
@@ -147,6 +153,7 @@ public class InstanceInfo  implements java.io.Serializable {
         this.resourceName = resourceName;
         return this;
     }
+
 
     /**
      * set 备注信息
@@ -158,15 +165,17 @@ public class InstanceInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 绑定资源
-     *
-     * @param bind
-     */
+    * set 绑定资源
+    *
+    * @param bind
+    */
     public InstanceInfo bind(List<BindInfo> bind) {
         this.bind = bind;
         return this;
     }
+
 
 
     /**
@@ -180,5 +189,4 @@ public class InstanceInfo  implements java.io.Serializable {
         }
         this.bind.add(bind);
     }
-
 }

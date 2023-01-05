@@ -53,6 +53,7 @@ public class DescSnapshotRelationsData  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get 云硬盘ID
      *
@@ -70,6 +71,7 @@ public class DescSnapshotRelationsData  implements java.io.Serializable {
     public void setDiskId(String diskId) {
         this.diskId = diskId;
     }
+
 
     /**
      * get 云硬盘地域ID
@@ -89,6 +91,7 @@ public class DescSnapshotRelationsData  implements java.io.Serializable {
         this.diskRegion = diskRegion;
     }
 
+
     /**
      * get 快照策略ID
      *
@@ -106,6 +109,7 @@ public class DescSnapshotRelationsData  implements java.io.Serializable {
     public void setPolicyId(String policyId) {
         this.policyId = policyId;
     }
+
 
     /**
      * get 绑定时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
@@ -126,6 +130,7 @@ public class DescSnapshotRelationsData  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云硬盘ID
      *
@@ -135,6 +140,7 @@ public class DescSnapshotRelationsData  implements java.io.Serializable {
         this.diskId = diskId;
         return this;
     }
+
 
     /**
      * set 云硬盘地域ID
@@ -146,6 +152,7 @@ public class DescSnapshotRelationsData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 快照策略ID
      *
@@ -155,6 +162,7 @@ public class DescSnapshotRelationsData  implements java.io.Serializable {
         this.policyId = policyId;
         return this;
     }
+
 
     /**
      * set 绑定时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;

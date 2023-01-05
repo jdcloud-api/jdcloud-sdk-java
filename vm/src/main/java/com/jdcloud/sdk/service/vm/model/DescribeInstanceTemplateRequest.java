@@ -57,6 +57,7 @@ public class DescribeInstanceTemplateRequest extends JdcloudRequest implements j
     private String instanceTemplateId;
 
 
+
     /**
      * get 地域ID。
      *
@@ -74,6 +75,7 @@ public class DescribeInstanceTemplateRequest extends JdcloudRequest implements j
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例模板ID。
@@ -94,6 +96,7 @@ public class DescribeInstanceTemplateRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set 地域ID。
      *
@@ -103,6 +106,7 @@ public class DescribeInstanceTemplateRequest extends JdcloudRequest implements j
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例模板ID。

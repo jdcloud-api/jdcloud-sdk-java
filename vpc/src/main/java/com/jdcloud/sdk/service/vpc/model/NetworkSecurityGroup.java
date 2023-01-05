@@ -57,8 +57,8 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
     /**
      * 安全组规则信息
      */
+    
     private List<SecurityGroupRule> securityGroupRules;
-
     /**
      * 安全组创建时间
      */
@@ -72,6 +72,7 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
     /**
      * 安全组绑定的弹性网卡列表
      */
+    
     private List<String> networkInterfaceIds;
 
 
@@ -93,6 +94,7 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
         this.networkSecurityGroupId = networkSecurityGroupId;
     }
 
+
     /**
      * get 安全组名称
      *
@@ -110,6 +112,7 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
     public void setNetworkSecurityGroupName(String networkSecurityGroupName) {
         this.networkSecurityGroupName = networkSecurityGroupName;
     }
+
 
     /**
      * get 安全组描述信息
@@ -129,6 +132,7 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 安全组所在vpc的Id
      *
@@ -147,23 +151,25 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
-     * get 安全组规则信息
-     *
-     * @return
-     */
+    * get 安全组规则信息
+    *
+    * @return
+    */
     public List<SecurityGroupRule> getSecurityGroupRules() {
         return securityGroupRules;
     }
 
     /**
-     * set 安全组规则信息
-     *
-     * @param securityGroupRules
-     */
+    * set 安全组规则信息
+    *
+    * @param securityGroupRules
+    */
     public void setSecurityGroupRules(List<SecurityGroupRule> securityGroupRules) {
         this.securityGroupRules = securityGroupRules;
     }
+
 
     /**
      * get 安全组创建时间
@@ -183,6 +189,7 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+
     /**
      * get 安全组类型, default：默认安全组，custom：自定义安全组
      *
@@ -201,23 +208,25 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
         this.networkSecurityGroupType = networkSecurityGroupType;
     }
 
+
     /**
-     * get 安全组绑定的弹性网卡列表
-     *
-     * @return
-     */
+    * get 安全组绑定的弹性网卡列表
+    *
+    * @return
+    */
     public List<String> getNetworkInterfaceIds() {
         return networkInterfaceIds;
     }
 
     /**
-     * set 安全组绑定的弹性网卡列表
-     *
-     * @param networkInterfaceIds
-     */
+    * set 安全组绑定的弹性网卡列表
+    *
+    * @param networkInterfaceIds
+    */
     public void setNetworkInterfaceIds(List<String> networkInterfaceIds) {
         this.networkInterfaceIds = networkInterfaceIds;
     }
+
 
 
     /**
@@ -230,6 +239,7 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 安全组名称
      *
@@ -239,6 +249,7 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
         this.networkSecurityGroupName = networkSecurityGroupName;
         return this;
     }
+
 
     /**
      * set 安全组描述信息
@@ -250,6 +261,7 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 安全组所在vpc的Id
      *
@@ -260,15 +272,17 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 安全组规则信息
-     *
-     * @param securityGroupRules
-     */
+    * set 安全组规则信息
+    *
+    * @param securityGroupRules
+    */
     public NetworkSecurityGroup securityGroupRules(List<SecurityGroupRule> securityGroupRules) {
         this.securityGroupRules = securityGroupRules;
         return this;
     }
+
 
     /**
      * set 安全组创建时间
@@ -280,6 +294,7 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 安全组类型, default：默认安全组，custom：自定义安全组
      *
@@ -290,15 +305,17 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 安全组绑定的弹性网卡列表
-     *
-     * @param networkInterfaceIds
-     */
+    * set 安全组绑定的弹性网卡列表
+    *
+    * @param networkInterfaceIds
+    */
     public NetworkSecurityGroup networkInterfaceIds(List<String> networkInterfaceIds) {
         this.networkInterfaceIds = networkInterfaceIds;
         return this;
     }
+
 
 
     /**
@@ -324,5 +341,4 @@ public class NetworkSecurityGroup  implements java.io.Serializable {
         }
         this.networkInterfaceIds.add(networkInterfaceId);
     }
-
 }

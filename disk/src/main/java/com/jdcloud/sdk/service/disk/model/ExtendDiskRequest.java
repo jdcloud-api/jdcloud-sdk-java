@@ -63,6 +63,7 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
     private String diskId;
 
 
+
     /**
      * get 扩容后的云硬盘大小，单位为GiB
      *
@@ -80,6 +81,7 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
     public void setDiskSizeGB(Integer diskSizeGB) {
         this.diskSizeGB = diskSizeGB;
     }
+
 
     /**
      * get 修改ssd.io1型云硬盘的iops数量，当且仅当ssd.io1型的云盘类型有效，步长是10; 默认iops为云硬盘原有iops值
@@ -99,6 +101,7 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
         this.iops = iops;
     }
 
+
     /**
      * get 地域ID
      *
@@ -116,6 +119,7 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云硬盘ID
@@ -136,6 +140,7 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 扩容后的云硬盘大小，单位为GiB
      *
@@ -145,6 +150,7 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
         this.diskSizeGB = diskSizeGB;
         return this;
     }
+
 
     /**
      * set 修改ssd.io1型云硬盘的iops数量，当且仅当ssd.io1型的云盘类型有效，步长是10; 默认iops为云硬盘原有iops值
@@ -156,6 +162,7 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 地域ID
      *
@@ -165,6 +172,7 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云硬盘ID

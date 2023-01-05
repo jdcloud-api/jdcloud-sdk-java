@@ -48,6 +48,7 @@ public class SnapshotChain  implements java.io.Serializable {
     private Integer snapshotChainSize;
 
 
+
     /**
      * get 快照链ID
      *
@@ -66,6 +67,7 @@ public class SnapshotChain  implements java.io.Serializable {
         this.diskId = diskId;
     }
 
+
     /**
      * get 快照链快照个数
      *
@@ -83,6 +85,7 @@ public class SnapshotChain  implements java.io.Serializable {
     public void setSnapshotTotalCount(Integer snapshotTotalCount) {
         this.snapshotTotalCount = snapshotTotalCount;
     }
+
 
     /**
      * get 快照链快照总容量，单位Byte
@@ -103,6 +106,7 @@ public class SnapshotChain  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 快照链ID
      *
@@ -113,6 +117,7 @@ public class SnapshotChain  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 快照链快照个数
      *
@@ -122,6 +127,7 @@ public class SnapshotChain  implements java.io.Serializable {
         this.snapshotTotalCount = snapshotTotalCount;
         return this;
     }
+
 
     /**
      * set 快照链快照总容量，单位Byte

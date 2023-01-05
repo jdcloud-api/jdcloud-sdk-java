@@ -39,37 +39,40 @@ public class ApplySnapshotPoliciesResult extends JdcloudResult implements java.i
     /**
      * opResults
      */
+    
     private List<PolicyDiskRelationOpResult> opResults;
 
 
     /**
-     * get opResults
-     *
-     * @return
-     */
+    * get opResults
+    *
+    * @return
+    */
     public List<PolicyDiskRelationOpResult> getOpResults() {
         return opResults;
     }
 
     /**
-     * set opResults
-     *
-     * @param opResults
-     */
+    * set opResults
+    *
+    * @param opResults
+    */
     public void setOpResults(List<PolicyDiskRelationOpResult> opResults) {
         this.opResults = opResults;
     }
 
 
+
     /**
-     * set opResults
-     *
-     * @param opResults
-     */
+    * set opResults
+    *
+    * @param opResults
+    */
     public ApplySnapshotPoliciesResult opResults(List<PolicyDiskRelationOpResult> opResults) {
         this.opResults = opResults;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class ApplySnapshotPoliciesResult extends JdcloudResult implements java.i
         }
         this.opResults.add(opResult);
     }
-
 }

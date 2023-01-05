@@ -45,14 +45,15 @@ public class InstanceTemplateCustomData  implements java.io.Serializable {
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
      */
+    
     private List<Metadata> metadata;
-
     /**
      * 自定义脚本。
 目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
 **linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
      */
+    
     private List<Userdata> userdata;
 
 
@@ -74,53 +75,56 @@ public class InstanceTemplateCustomData  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
-     * get 用户自定义元数据。
+    * get 用户自定义元数据。
 以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Metadata> getMetadata() {
         return metadata;
     }
 
     /**
-     * set 用户自定义元数据。
+    * set 用户自定义元数据。
 以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
-     *
-     * @param metadata
-     */
+    *
+    * @param metadata
+    */
     public void setMetadata(List<Metadata> metadata) {
         this.metadata = metadata;
     }
 
+
     /**
-     * get 自定义脚本。
+    * get 自定义脚本。
 目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
 **linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Userdata> getUserdata() {
         return userdata;
     }
 
     /**
-     * set 自定义脚本。
+    * set 自定义脚本。
 目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
 **linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
-     *
-     * @param userdata
-     */
+    *
+    * @param userdata
+    */
     public void setUserdata(List<Userdata> userdata) {
         this.userdata = userdata;
     }
+
 
 
     /**
@@ -133,31 +137,34 @@ public class InstanceTemplateCustomData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 用户自定义元数据。
+    * set 用户自定义元数据。
 以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
-     *
-     * @param metadata
-     */
+    *
+    * @param metadata
+    */
     public InstanceTemplateCustomData metadata(List<Metadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
+
     /**
-     * set 自定义脚本。
+    * set 自定义脚本。
 目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
 **linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
-     *
-     * @param userdata
-     */
+    *
+    * @param userdata
+    */
     public InstanceTemplateCustomData userdata(List<Userdata> userdata) {
         this.userdata = userdata;
         return this;
     }
+
 
 
     /**
@@ -189,5 +196,4 @@ public class InstanceTemplateCustomData  implements java.io.Serializable {
         }
         this.userdata.add(userdata);
     }
-
 }

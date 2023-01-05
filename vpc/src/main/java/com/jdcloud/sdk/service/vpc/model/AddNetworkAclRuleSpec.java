@@ -84,6 +84,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get 规则限定协议。取值范围：All,TCP,UDP,ICMP
      *
@@ -101,6 +102,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
     public void setProtocol(String protocol) {
         this.protocol = protocol;
     }
+
 
     /**
      * get 规则限定起始传输层端口, 取值范围:1-65535, 若protocol为传输层协议，默认值为1，若protocol不是传输层协议，设置无效，恒为0。如果规则只限定一个端口号，fromPort和toPort填写同一个值
@@ -120,6 +122,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
         this.fromPort = fromPort;
     }
 
+
     /**
      * get 规则限定终止传输层端口, 取值范围:1-65535, 若protocol为传输层协议，默认值为65535，若protocol不是传输层协议，设置无效，恒为0。如果规则只限定一个端口号，fromPort和toPort填写同一个值
      *
@@ -137,6 +140,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
     public void setToPort(Integer toPort) {
         this.toPort = toPort;
     }
+
 
     /**
      * get networkAcl规则方向。ingress：入规则; egress：出规则
@@ -156,6 +160,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
         this.direction = direction;
     }
 
+
     /**
      * get 匹配地址前缀
      *
@@ -173,6 +178,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
     public void setAddressPrefix(String addressPrefix) {
         this.addressPrefix = addressPrefix;
     }
+
 
     /**
      * get 访问控制策略：allow:允许，deny：拒绝
@@ -192,6 +198,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
         this.ruleAction = ruleAction;
     }
 
+
     /**
      * get 规则匹配优先级，取值范围为[1,32768]，优先级数字越小优先级越高
      *
@@ -209,6 +216,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
     public void setPriority(Integer priority) {
         this.priority = priority;
     }
+
 
     /**
      * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -229,6 +237,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则限定协议。取值范围：All,TCP,UDP,ICMP
      *
@@ -238,6 +247,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
         this.protocol = protocol;
         return this;
     }
+
 
     /**
      * set 规则限定起始传输层端口, 取值范围:1-65535, 若protocol为传输层协议，默认值为1，若protocol不是传输层协议，设置无效，恒为0。如果规则只限定一个端口号，fromPort和toPort填写同一个值
@@ -249,6 +259,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则限定终止传输层端口, 取值范围:1-65535, 若protocol为传输层协议，默认值为65535，若protocol不是传输层协议，设置无效，恒为0。如果规则只限定一个端口号，fromPort和toPort填写同一个值
      *
@@ -258,6 +269,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
         this.toPort = toPort;
         return this;
     }
+
 
     /**
      * set networkAcl规则方向。ingress：入规则; egress：出规则
@@ -269,6 +281,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配地址前缀
      *
@@ -278,6 +291,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
         this.addressPrefix = addressPrefix;
         return this;
     }
+
 
     /**
      * set 访问控制策略：allow:允许，deny：拒绝
@@ -289,6 +303,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则匹配优先级，取值范围为[1,32768]，优先级数字越小优先级越高
      *
@@ -298,6 +313,7 @@ public class AddNetworkAclRuleSpec  implements java.io.Serializable {
         this.priority = priority;
         return this;
     }
+
 
     /**
      * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符

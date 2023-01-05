@@ -52,6 +52,7 @@ public class Data  implements java.io.Serializable {
     /**
      * 绑定资源列表
      */
+    
     private List<Bind> bind;
 
 
@@ -73,6 +74,7 @@ public class Data  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -90,6 +92,7 @@ public class Data  implements java.io.Serializable {
     public void setResourceName(String resourceName) {
         this.resourceName = resourceName;
     }
+
 
     /**
      * get 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
@@ -109,23 +112,25 @@ public class Data  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
-     * get 绑定资源列表
-     *
-     * @return
-     */
+    * get 绑定资源列表
+    *
+    * @return
+    */
     public List<Bind> getBind() {
         return bind;
     }
 
     /**
-     * set 绑定资源列表
-     *
-     * @param bind
-     */
+    * set 绑定资源列表
+    *
+    * @param bind
+    */
     public void setBind(List<Bind> bind) {
         this.bind = bind;
     }
+
 
 
     /**
@@ -138,6 +143,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -147,6 +153,7 @@ public class Data  implements java.io.Serializable {
         this.resourceName = resourceName;
         return this;
     }
+
 
     /**
      * set 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
@@ -158,15 +165,17 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 绑定资源列表
-     *
-     * @param bind
-     */
+    * set 绑定资源列表
+    *
+    * @param bind
+    */
     public Data bind(List<Bind> bind) {
         this.bind = bind;
         return this;
     }
+
 
 
     /**
@@ -180,5 +189,4 @@ public class Data  implements java.io.Serializable {
         }
         this.bind.add(bind);
     }
-
 }

@@ -40,37 +40,40 @@ public class UnassignNetworkInterfaceSecondaryIpsSpec  implements java.io.Serial
      * Required:true
      */
     @Required
+    
     private List<UnassignNetworkInterfaceSecondaryIps> networkInterfaceSecondaryIpsSpecs;
 
 
     /**
-     * get 网卡分配的IP信息
-     *
-     * @return
-     */
+    * get 网卡分配的IP信息
+    *
+    * @return
+    */
     public List<UnassignNetworkInterfaceSecondaryIps> getNetworkInterfaceSecondaryIpsSpecs() {
         return networkInterfaceSecondaryIpsSpecs;
     }
 
     /**
-     * set 网卡分配的IP信息
-     *
-     * @param networkInterfaceSecondaryIpsSpecs
-     */
+    * set 网卡分配的IP信息
+    *
+    * @param networkInterfaceSecondaryIpsSpecs
+    */
     public void setNetworkInterfaceSecondaryIpsSpecs(List<UnassignNetworkInterfaceSecondaryIps> networkInterfaceSecondaryIpsSpecs) {
         this.networkInterfaceSecondaryIpsSpecs = networkInterfaceSecondaryIpsSpecs;
     }
 
 
+
     /**
-     * set 网卡分配的IP信息
-     *
-     * @param networkInterfaceSecondaryIpsSpecs
-     */
+    * set 网卡分配的IP信息
+    *
+    * @param networkInterfaceSecondaryIpsSpecs
+    */
     public UnassignNetworkInterfaceSecondaryIpsSpec networkInterfaceSecondaryIpsSpecs(List<UnassignNetworkInterfaceSecondaryIps> networkInterfaceSecondaryIpsSpecs) {
         this.networkInterfaceSecondaryIpsSpecs = networkInterfaceSecondaryIpsSpecs;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class UnassignNetworkInterfaceSecondaryIpsSpec  implements java.io.Serial
         }
         this.networkInterfaceSecondaryIpsSpecs.add(networkInterfaceSecondaryIpsSpec);
     }
-
 }

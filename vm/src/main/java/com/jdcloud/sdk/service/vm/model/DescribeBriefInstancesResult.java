@@ -50,31 +50,33 @@ public class DescribeBriefInstancesResult extends JdcloudResult implements java.
     /**
      * instances
      */
+    
     private List<BriefInstance> instances;
-
     /**
      * 本次查询可匹配到的总记录数，用户需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      */
     private Number totalCount;
 
 
+
     /**
-     * get instances
-     *
-     * @return
-     */
+    * get instances
+    *
+    * @return
+    */
     public List<BriefInstance> getInstances() {
         return instances;
     }
 
     /**
-     * set instances
-     *
-     * @param instances
-     */
+    * set instances
+    *
+    * @param instances
+    */
     public void setInstances(List<BriefInstance> instances) {
         this.instances = instances;
     }
+
 
     /**
      * get 本次查询可匹配到的总记录数，用户需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
@@ -95,15 +97,17 @@ public class DescribeBriefInstancesResult extends JdcloudResult implements java.
     }
 
 
+
     /**
-     * set instances
-     *
-     * @param instances
-     */
+    * set instances
+    *
+    * @param instances
+    */
     public DescribeBriefInstancesResult instances(List<BriefInstance> instances) {
         this.instances = instances;
         return this;
     }
+
 
     /**
      * set 本次查询可匹配到的总记录数，用户需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
@@ -114,6 +118,7 @@ public class DescribeBriefInstancesResult extends JdcloudResult implements java.
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -127,5 +132,4 @@ public class DescribeBriefInstancesResult extends JdcloudResult implements java.
         }
         this.instances.add(instance);
     }
-
 }

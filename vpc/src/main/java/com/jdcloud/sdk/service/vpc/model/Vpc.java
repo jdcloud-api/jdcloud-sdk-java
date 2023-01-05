@@ -57,18 +57,18 @@ public class Vpc  implements java.io.Serializable {
     /**
      * 同一vpc下的acl id 列表
      */
+    
     private List<String> aclIds;
-
     /**
      * routeTableIds
      */
+    
     private List<String> routeTableIds;
-
     /**
      * 私有网络包含的子网列表
      */
+    
     private List<Subnet> subnets;
-
     /**
      * vpc创建时间
      */
@@ -83,6 +83,12 @@ public class Vpc  implements java.io.Serializable {
      * VPC可用区, 标准VPC为&quot;&quot;， 边缘VPC为边缘az
      */
     private String az;
+
+    /**
+     * VPC关联的策略Id
+     */
+    private String vpcPolicyId;
+
 
 
     /**
@@ -103,6 +109,7 @@ public class Vpc  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
      *
@@ -120,6 +127,7 @@ public class Vpc  implements java.io.Serializable {
     public void setAddressPrefix(String addressPrefix) {
         this.addressPrefix = addressPrefix;
     }
+
 
     /**
      * get VPC 描述，取值范围：1~120个字符
@@ -139,6 +147,7 @@ public class Vpc  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 私有网络名称，取值范围：1-60个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -157,59 +166,63 @@ public class Vpc  implements java.io.Serializable {
         this.vpcName = vpcName;
     }
 
+
     /**
-     * get 同一vpc下的acl id 列表
-     *
-     * @return
-     */
+    * get 同一vpc下的acl id 列表
+    *
+    * @return
+    */
     public List<String> getAclIds() {
         return aclIds;
     }
 
     /**
-     * set 同一vpc下的acl id 列表
-     *
-     * @param aclIds
-     */
+    * set 同一vpc下的acl id 列表
+    *
+    * @param aclIds
+    */
     public void setAclIds(List<String> aclIds) {
         this.aclIds = aclIds;
     }
 
+
     /**
-     * get routeTableIds
-     *
-     * @return
-     */
+    * get routeTableIds
+    *
+    * @return
+    */
     public List<String> getRouteTableIds() {
         return routeTableIds;
     }
 
     /**
-     * set routeTableIds
-     *
-     * @param routeTableIds
-     */
+    * set routeTableIds
+    *
+    * @param routeTableIds
+    */
     public void setRouteTableIds(List<String> routeTableIds) {
         this.routeTableIds = routeTableIds;
     }
 
+
     /**
-     * get 私有网络包含的子网列表
-     *
-     * @return
-     */
+    * get 私有网络包含的子网列表
+    *
+    * @return
+    */
     public List<Subnet> getSubnets() {
         return subnets;
     }
 
     /**
-     * set 私有网络包含的子网列表
-     *
-     * @param subnets
-     */
+    * set 私有网络包含的子网列表
+    *
+    * @param subnets
+    */
     public void setSubnets(List<Subnet> subnets) {
         this.subnets = subnets;
     }
+
 
     /**
      * get vpc创建时间
@@ -229,6 +242,7 @@ public class Vpc  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+
     /**
      * get VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
      *
@@ -246,6 +260,7 @@ public class Vpc  implements java.io.Serializable {
     public void setAzType(String azType) {
         this.azType = azType;
     }
+
 
     /**
      * get VPC可用区, 标准VPC为&quot;&quot;， 边缘VPC为边缘az
@@ -267,6 +282,26 @@ public class Vpc  implements java.io.Serializable {
 
 
     /**
+     * get VPC关联的策略Id
+     *
+     * @return
+     */
+    public String getVpcPolicyId() {
+        return vpcPolicyId;
+    }
+
+    /**
+     * set VPC关联的策略Id
+     *
+     * @param vpcPolicyId
+     */
+    public void setVpcPolicyId(String vpcPolicyId) {
+        this.vpcPolicyId = vpcPolicyId;
+    }
+
+
+
+    /**
      * set Vpc的Id
      *
      * @param vpcId
@@ -275,6 +310,7 @@ public class Vpc  implements java.io.Serializable {
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
@@ -286,6 +322,7 @@ public class Vpc  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set VPC 描述，取值范围：1~120个字符
      *
@@ -295,6 +332,7 @@ public class Vpc  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 私有网络名称，取值范围：1-60个中文、英文大小写的字母、数字和下划线分隔符
@@ -306,35 +344,39 @@ public class Vpc  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 同一vpc下的acl id 列表
-     *
-     * @param aclIds
-     */
+    * set 同一vpc下的acl id 列表
+    *
+    * @param aclIds
+    */
     public Vpc aclIds(List<String> aclIds) {
         this.aclIds = aclIds;
         return this;
     }
 
+
     /**
-     * set routeTableIds
-     *
-     * @param routeTableIds
-     */
+    * set routeTableIds
+    *
+    * @param routeTableIds
+    */
     public Vpc routeTableIds(List<String> routeTableIds) {
         this.routeTableIds = routeTableIds;
         return this;
     }
 
+
     /**
-     * set 私有网络包含的子网列表
-     *
-     * @param subnets
-     */
+    * set 私有网络包含的子网列表
+    *
+    * @param subnets
+    */
     public Vpc subnets(List<Subnet> subnets) {
         this.subnets = subnets;
         return this;
     }
+
 
     /**
      * set vpc创建时间
@@ -346,6 +388,7 @@ public class Vpc  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
      *
@@ -356,6 +399,7 @@ public class Vpc  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set VPC可用区, 标准VPC为&quot;&quot;， 边缘VPC为边缘az
      *
@@ -365,6 +409,18 @@ public class Vpc  implements java.io.Serializable {
         this.az = az;
         return this;
     }
+
+
+    /**
+     * set VPC关联的策略Id
+     *
+     * @param vpcPolicyId
+     */
+    public Vpc vpcPolicyId(String vpcPolicyId) {
+        this.vpcPolicyId = vpcPolicyId;
+        return this;
+    }
+
 
 
     /**
@@ -402,5 +458,4 @@ public class Vpc  implements java.io.Serializable {
         }
         this.subnets.add(subnet);
     }
-
 }

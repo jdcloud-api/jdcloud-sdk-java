@@ -62,6 +62,7 @@ public class PolicyDiskRelationOp  implements java.io.Serializable {
     private Integer op;
 
 
+
     /**
      * get 磁盘ID
      *
@@ -79,6 +80,7 @@ public class PolicyDiskRelationOp  implements java.io.Serializable {
     public void setDiskId(String diskId) {
         this.diskId = diskId;
     }
+
 
     /**
      * get 磁盘地域ID
@@ -98,6 +100,7 @@ public class PolicyDiskRelationOp  implements java.io.Serializable {
         this.diskRegion = diskRegion;
     }
 
+
     /**
      * get 快照策略ID
      *
@@ -115,6 +118,7 @@ public class PolicyDiskRelationOp  implements java.io.Serializable {
     public void setPolicyId(String policyId) {
         this.policyId = policyId;
     }
+
 
     /**
      * get 联系组id
@@ -135,6 +139,7 @@ public class PolicyDiskRelationOp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 磁盘ID
      *
@@ -144,6 +149,7 @@ public class PolicyDiskRelationOp  implements java.io.Serializable {
         this.diskId = diskId;
         return this;
     }
+
 
     /**
      * set 磁盘地域ID
@@ -155,6 +161,7 @@ public class PolicyDiskRelationOp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 快照策略ID
      *
@@ -164,6 +171,7 @@ public class PolicyDiskRelationOp  implements java.io.Serializable {
         this.policyId = policyId;
         return this;
     }
+
 
     /**
      * set 联系组id

@@ -54,7 +54,7 @@ public class DiskSpec  implements java.io.Serializable {
     private String description;
 
     /**
-     * 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1之一
+     * 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1、ssd.io2、ssd.gp2之一
      * Required:true
      */
     @Required
@@ -98,6 +98,7 @@ public class DiskSpec  implements java.io.Serializable {
     private Boolean encrypt;
 
 
+
     /**
      * get 云硬盘所属的可用区
      *
@@ -115,6 +116,7 @@ public class DiskSpec  implements java.io.Serializable {
     public void setAz(String az) {
         this.az = az;
     }
+
 
     /**
      * get 云硬盘名称
@@ -134,6 +136,7 @@ public class DiskSpec  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 云硬盘描述,默认为空
      *
@@ -152,8 +155,9 @@ public class DiskSpec  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
-     * get 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1之一
+     * get 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1、ssd.io2、ssd.gp2之一
      *
      * @return
      */
@@ -162,13 +166,14 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1之一
+     * set 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1、ssd.io2、ssd.gp2之一
      *
      * @param diskType
      */
     public void setDiskType(String diskType) {
         this.diskType = diskType;
     }
+
 
     /**
      * get 云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G, ssd.gp1, ssd.io1, hdd.std1 类型取值均是范围[20,16000]GB，步长为10G
@@ -188,6 +193,7 @@ public class DiskSpec  implements java.io.Serializable {
         this.diskSizeGB = diskSizeGB;
     }
 
+
     /**
      * get 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.默认值为容量30，最大值为容量50
      *
@@ -205,6 +211,7 @@ public class DiskSpec  implements java.io.Serializable {
     public void setIops(Integer iops) {
         this.iops = iops;
     }
+
 
     /**
      * get 用于创建云硬盘的快照ID，默认为空
@@ -224,6 +231,7 @@ public class DiskSpec  implements java.io.Serializable {
         this.snapshotId = snapshotId;
     }
 
+
     /**
      * get 策略ID,默认为空;当策略Id为空时,reps结果返回中policyRelations为空
      *
@@ -241,6 +249,7 @@ public class DiskSpec  implements java.io.Serializable {
     public void setPolicyId(String policyId) {
         this.policyId = policyId;
     }
+
 
     /**
      * get 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
@@ -260,6 +269,7 @@ public class DiskSpec  implements java.io.Serializable {
         this.charge = charge;
     }
 
+
     /**
      * get 云硬盘是否支持一盘多主机挂载，默认为false（不支持）
      *
@@ -277,6 +287,7 @@ public class DiskSpec  implements java.io.Serializable {
     public void setMultiAttachable(Boolean multiAttachable) {
         this.multiAttachable = multiAttachable;
     }
+
 
     /**
      * get 云硬盘是否加密，默认为false（不加密）
@@ -297,6 +308,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云硬盘所属的可用区
      *
@@ -306,6 +318,7 @@ public class DiskSpec  implements java.io.Serializable {
         this.az = az;
         return this;
     }
+
 
     /**
      * set 云硬盘名称
@@ -317,6 +330,7 @@ public class DiskSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云硬盘描述,默认为空
      *
@@ -327,8 +341,9 @@ public class DiskSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1之一
+     * set 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1、ssd.io2、ssd.gp2之一
      *
      * @param diskType
      */
@@ -336,6 +351,7 @@ public class DiskSpec  implements java.io.Serializable {
         this.diskType = diskType;
         return this;
     }
+
 
     /**
      * set 云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G, ssd.gp1, ssd.io1, hdd.std1 类型取值均是范围[20,16000]GB，步长为10G
@@ -347,6 +363,7 @@ public class DiskSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.默认值为容量30，最大值为容量50
      *
@@ -356,6 +373,7 @@ public class DiskSpec  implements java.io.Serializable {
         this.iops = iops;
         return this;
     }
+
 
     /**
      * set 用于创建云硬盘的快照ID，默认为空
@@ -367,6 +385,7 @@ public class DiskSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 策略ID,默认为空;当策略Id为空时,reps结果返回中policyRelations为空
      *
@@ -376,6 +395,7 @@ public class DiskSpec  implements java.io.Serializable {
         this.policyId = policyId;
         return this;
     }
+
 
     /**
      * set 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
@@ -387,6 +407,7 @@ public class DiskSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云硬盘是否支持一盘多主机挂载，默认为false（不支持）
      *
@@ -396,6 +417,7 @@ public class DiskSpec  implements java.io.Serializable {
         this.multiAttachable = multiAttachable;
         return this;
     }
+
 
     /**
      * set 云硬盘是否加密，默认为false（不加密）

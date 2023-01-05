@@ -42,8 +42,8 @@ public class AddRouteTableRulesRequest extends JdcloudRequest implements java.io
      * Required:true
      */
     @Required
+    
     private List<AddRouteTableRules> routeTableRuleSpecs;
-
     /**
      * Region ID
      * Required:true
@@ -59,23 +59,25 @@ public class AddRouteTableRulesRequest extends JdcloudRequest implements java.io
     private String routeTableId;
 
 
+
     /**
-     * get 路由表规则信息
-     *
-     * @return
-     */
+    * get 路由表规则信息
+    *
+    * @return
+    */
     public List<AddRouteTableRules> getRouteTableRuleSpecs() {
         return routeTableRuleSpecs;
     }
 
     /**
-     * set 路由表规则信息
-     *
-     * @param routeTableRuleSpecs
-     */
+    * set 路由表规则信息
+    *
+    * @param routeTableRuleSpecs
+    */
     public void setRouteTableRuleSpecs(List<AddRouteTableRules> routeTableRuleSpecs) {
         this.routeTableRuleSpecs = routeTableRuleSpecs;
     }
+
 
     /**
      * get Region ID
@@ -94,6 +96,7 @@ public class AddRouteTableRulesRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RouteTable ID
@@ -114,15 +117,17 @@ public class AddRouteTableRulesRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
-     * set 路由表规则信息
-     *
-     * @param routeTableRuleSpecs
-     */
+    * set 路由表规则信息
+    *
+    * @param routeTableRuleSpecs
+    */
     public AddRouteTableRulesRequest routeTableRuleSpecs(List<AddRouteTableRules> routeTableRuleSpecs) {
         this.routeTableRuleSpecs = routeTableRuleSpecs;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -134,6 +139,7 @@ public class AddRouteTableRulesRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set RouteTable ID
      *
@@ -143,6 +149,7 @@ public class AddRouteTableRulesRequest extends JdcloudRequest implements java.io
         this.routeTableId = routeTableId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class AddRouteTableRulesRequest extends JdcloudRequest implements java.io
         }
         this.routeTableRuleSpecs.add(routeTableRuleSpec);
     }
-
 }

@@ -39,6 +39,7 @@ public class CreateNetworkAclResult extends JdcloudResult implements java.io.Ser
     private String networkAclId;
 
 
+
     /**
      * get networkAcl ID
      *
@@ -56,6 +57,7 @@ public class CreateNetworkAclResult extends JdcloudResult implements java.io.Ser
     public void setNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
     }
+
 
 
     /**

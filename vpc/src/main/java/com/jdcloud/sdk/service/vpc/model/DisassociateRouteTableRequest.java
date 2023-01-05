@@ -56,6 +56,7 @@ public class DisassociateRouteTableRequest extends JdcloudRequest implements jav
     private String routeTableId;
 
 
+
     /**
      * get 路由表要解绑的子网ID，解绑后子网绑定默认路由表
      *
@@ -74,6 +75,7 @@ public class DisassociateRouteTableRequest extends JdcloudRequest implements jav
         this.subnetId = subnetId;
     }
 
+
     /**
      * get Region ID
      *
@@ -91,6 +93,7 @@ public class DisassociateRouteTableRequest extends JdcloudRequest implements jav
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RouteTable ID
@@ -111,6 +114,7 @@ public class DisassociateRouteTableRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 路由表要解绑的子网ID，解绑后子网绑定默认路由表
      *
@@ -121,6 +125,7 @@ public class DisassociateRouteTableRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -130,6 +135,7 @@ public class DisassociateRouteTableRequest extends JdcloudRequest implements jav
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RouteTable ID

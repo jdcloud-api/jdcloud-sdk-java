@@ -38,6 +38,7 @@ public class InstanceTemplateBurstInfo  implements java.io.Serializable {
     private String burstMode;
 
 
+
     /**
      * get 突发模式
      *
@@ -55,6 +56,7 @@ public class InstanceTemplateBurstInfo  implements java.io.Serializable {
     public void setBurstMode(String burstMode) {
         this.burstMode = burstMode;
     }
+
 
 
     /**

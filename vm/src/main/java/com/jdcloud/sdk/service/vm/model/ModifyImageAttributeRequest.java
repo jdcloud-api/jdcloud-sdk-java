@@ -66,6 +66,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     private String imageId;
 
 
+
     /**
      * get 镜像名称。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      *
@@ -83,6 +84,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 镜像描述。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
@@ -102,6 +104,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
         this.description = description;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -119,6 +122,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 镜像ID。
@@ -139,6 +143,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 镜像名称。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      *
@@ -148,6 +153,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
         this.name = name;
         return this;
     }
+
 
     /**
      * set 镜像描述。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
@@ -159,6 +165,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -168,6 +175,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 镜像ID。

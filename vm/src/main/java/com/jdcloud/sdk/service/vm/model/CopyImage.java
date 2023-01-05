@@ -43,6 +43,7 @@ public class CopyImage  implements java.io.Serializable {
     private String sourceImageId;
 
 
+
     /**
      * get 跨区复制产生的目标镜像ID。
      *
@@ -60,6 +61,7 @@ public class CopyImage  implements java.io.Serializable {
     public void setDestinationImageId(String destinationImageId) {
         this.destinationImageId = destinationImageId;
     }
+
 
     /**
      * get 源镜像ID。
@@ -80,6 +82,7 @@ public class CopyImage  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 跨区复制产生的目标镜像ID。
      *
@@ -89,6 +92,7 @@ public class CopyImage  implements java.io.Serializable {
         this.destinationImageId = destinationImageId;
         return this;
     }
+
 
     /**
      * set 源镜像ID。

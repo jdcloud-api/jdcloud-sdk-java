@@ -56,6 +56,7 @@ public class DeleteInstanceTemplateRequest extends JdcloudRequest implements jav
     private String instanceTemplateId;
 
 
+
     /**
      * get 地域ID。
      *
@@ -73,6 +74,7 @@ public class DeleteInstanceTemplateRequest extends JdcloudRequest implements jav
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例模板ID。
@@ -93,6 +95,7 @@ public class DeleteInstanceTemplateRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 地域ID。
      *
@@ -102,6 +105,7 @@ public class DeleteInstanceTemplateRequest extends JdcloudRequest implements jav
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例模板ID。

@@ -43,6 +43,7 @@ public class InstanceStatus  implements java.io.Serializable {
     private String status;
 
 
+
     /**
      * get 云主机ID。
      *
@@ -60,6 +61,7 @@ public class InstanceStatus  implements java.io.Serializable {
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
@@ -80,6 +82,7 @@ public class InstanceStatus  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云主机ID。
      *
@@ -89,6 +92,7 @@ public class InstanceStatus  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。

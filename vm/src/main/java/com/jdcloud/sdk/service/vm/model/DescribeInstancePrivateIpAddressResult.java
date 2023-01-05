@@ -49,31 +49,33 @@ public class DescribeInstancePrivateIpAddressResult extends JdcloudResult implem
     /**
      * instancePrivateIpAddress
      */
+    
     private List<InstancePrivateIpAddress> instancePrivateIpAddress;
-
     /**
      * 本次查询可匹配到的总记录数，用户需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      */
     private Number totalCount;
 
 
+
     /**
-     * get instancePrivateIpAddress
-     *
-     * @return
-     */
+    * get instancePrivateIpAddress
+    *
+    * @return
+    */
     public List<InstancePrivateIpAddress> getInstancePrivateIpAddress() {
         return instancePrivateIpAddress;
     }
 
     /**
-     * set instancePrivateIpAddress
-     *
-     * @param instancePrivateIpAddress
-     */
+    * set instancePrivateIpAddress
+    *
+    * @param instancePrivateIpAddress
+    */
     public void setInstancePrivateIpAddress(List<InstancePrivateIpAddress> instancePrivateIpAddress) {
         this.instancePrivateIpAddress = instancePrivateIpAddress;
     }
+
 
     /**
      * get 本次查询可匹配到的总记录数，用户需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
@@ -94,15 +96,17 @@ public class DescribeInstancePrivateIpAddressResult extends JdcloudResult implem
     }
 
 
+
     /**
-     * set instancePrivateIpAddress
-     *
-     * @param instancePrivateIpAddress
-     */
+    * set instancePrivateIpAddress
+    *
+    * @param instancePrivateIpAddress
+    */
     public DescribeInstancePrivateIpAddressResult instancePrivateIpAddress(List<InstancePrivateIpAddress> instancePrivateIpAddress) {
         this.instancePrivateIpAddress = instancePrivateIpAddress;
         return this;
     }
+
 
     /**
      * set 本次查询可匹配到的总记录数，用户需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
@@ -113,6 +117,7 @@ public class DescribeInstancePrivateIpAddressResult extends JdcloudResult implem
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -126,5 +131,4 @@ public class DescribeInstancePrivateIpAddressResult extends JdcloudResult implem
         }
         this.instancePrivateIpAddress.add(instancePrivateIpAddres);
     }
-
 }

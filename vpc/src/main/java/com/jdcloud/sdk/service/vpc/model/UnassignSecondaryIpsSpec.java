@@ -37,70 +37,75 @@ public class UnassignSecondaryIpsSpec  implements java.io.Serializable {
     /**
      * 指定删除的secondaryIp地址
      */
+    
     private List<String> secondaryIps;
-
     /**
      * 指定删除的secondaryIp网段
      */
+    
     private List<String> secondaryCidrs;
 
 
     /**
-     * get 指定删除的secondaryIp地址
-     *
-     * @return
-     */
+    * get 指定删除的secondaryIp地址
+    *
+    * @return
+    */
     public List<String> getSecondaryIps() {
         return secondaryIps;
     }
 
     /**
-     * set 指定删除的secondaryIp地址
-     *
-     * @param secondaryIps
-     */
+    * set 指定删除的secondaryIp地址
+    *
+    * @param secondaryIps
+    */
     public void setSecondaryIps(List<String> secondaryIps) {
         this.secondaryIps = secondaryIps;
     }
 
+
     /**
-     * get 指定删除的secondaryIp网段
-     *
-     * @return
-     */
+    * get 指定删除的secondaryIp网段
+    *
+    * @return
+    */
     public List<String> getSecondaryCidrs() {
         return secondaryCidrs;
     }
 
     /**
-     * set 指定删除的secondaryIp网段
-     *
-     * @param secondaryCidrs
-     */
+    * set 指定删除的secondaryIp网段
+    *
+    * @param secondaryCidrs
+    */
     public void setSecondaryCidrs(List<String> secondaryCidrs) {
         this.secondaryCidrs = secondaryCidrs;
     }
 
 
+
     /**
-     * set 指定删除的secondaryIp地址
-     *
-     * @param secondaryIps
-     */
+    * set 指定删除的secondaryIp地址
+    *
+    * @param secondaryIps
+    */
     public UnassignSecondaryIpsSpec secondaryIps(List<String> secondaryIps) {
         this.secondaryIps = secondaryIps;
         return this;
     }
 
+
     /**
-     * set 指定删除的secondaryIp网段
-     *
-     * @param secondaryCidrs
-     */
+    * set 指定删除的secondaryIp网段
+    *
+    * @param secondaryCidrs
+    */
     public UnassignSecondaryIpsSpec secondaryCidrs(List<String> secondaryCidrs) {
         this.secondaryCidrs = secondaryCidrs;
         return this;
     }
+
 
 
     /**
@@ -126,5 +131,4 @@ public class UnassignSecondaryIpsSpec  implements java.io.Serializable {
         }
         this.secondaryCidrs.add(secondaryCidr);
     }
-
 }

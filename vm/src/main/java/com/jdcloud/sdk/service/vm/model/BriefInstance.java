@@ -87,8 +87,8 @@ public class BriefInstance  implements java.io.Serializable {
     /**
      * 数据盘配置列表。
      */
+    
     private List<BriefInstanceDiskAttachment> dataDisks;
-
     /**
      * 主网卡配置。
      */
@@ -97,8 +97,8 @@ public class BriefInstance  implements java.io.Serializable {
     /**
      * 辅助网卡配置列表。
      */
+    
     private List<BriefInstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces;
-
     /**
      * 云主机实例的创建时间。
      */
@@ -112,8 +112,8 @@ public class BriefInstance  implements java.io.Serializable {
     /**
      * 云主机使用的密钥对名称。
      */
+    
     private List<String> keyNames;
-
     /**
      * 高可用组中的错误域。
      */
@@ -138,6 +138,7 @@ public class BriefInstance  implements java.io.Serializable {
     private String dedicatedHostId;
 
 
+
     /**
      * get 云主机ID。
      *
@@ -155,6 +156,7 @@ public class BriefInstance  implements java.io.Serializable {
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 云主机名称。
@@ -174,6 +176,7 @@ public class BriefInstance  implements java.io.Serializable {
         this.instanceName = instanceName;
     }
 
+
     /**
      * get 实例规格。
      *
@@ -191,6 +194,7 @@ public class BriefInstance  implements java.io.Serializable {
     public void setInstanceType(String instanceType) {
         this.instanceType = instanceType;
     }
+
 
     /**
      * get 主网卡所属VPC的ID。
@@ -210,6 +214,7 @@ public class BriefInstance  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 主网卡所属子网的ID。
      *
@@ -227,6 +232,7 @@ public class BriefInstance  implements java.io.Serializable {
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
     /**
      * get 主网卡主内网IP地址。
@@ -246,6 +252,7 @@ public class BriefInstance  implements java.io.Serializable {
         this.privateIpAddress = privateIpAddress;
     }
 
+
     /**
      * get 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
      *
@@ -263,6 +270,7 @@ public class BriefInstance  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 云主机描述。
@@ -282,6 +290,7 @@ public class BriefInstance  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 云主机使用的镜像ID。
      *
@@ -299,6 +308,7 @@ public class BriefInstance  implements java.io.Serializable {
     public void setImageId(String imageId) {
         this.imageId = imageId;
     }
+
 
     /**
      * get 系统盘配置。
@@ -318,23 +328,25 @@ public class BriefInstance  implements java.io.Serializable {
         this.systemDisk = systemDisk;
     }
 
+
     /**
-     * get 数据盘配置列表。
-     *
-     * @return
-     */
+    * get 数据盘配置列表。
+    *
+    * @return
+    */
     public List<BriefInstanceDiskAttachment> getDataDisks() {
         return dataDisks;
     }
 
     /**
-     * set 数据盘配置列表。
-     *
-     * @param dataDisks
-     */
+    * set 数据盘配置列表。
+    *
+    * @param dataDisks
+    */
     public void setDataDisks(List<BriefInstanceDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
     }
+
 
     /**
      * get 主网卡配置。
@@ -354,23 +366,25 @@ public class BriefInstance  implements java.io.Serializable {
         this.primaryNetworkInterface = primaryNetworkInterface;
     }
 
+
     /**
-     * get 辅助网卡配置列表。
-     *
-     * @return
-     */
+    * get 辅助网卡配置列表。
+    *
+    * @return
+    */
     public List<BriefInstanceNetworkInterfaceAttachment> getSecondaryNetworkInterfaces() {
         return secondaryNetworkInterfaces;
     }
 
     /**
-     * set 辅助网卡配置列表。
-     *
-     * @param secondaryNetworkInterfaces
-     */
+    * set 辅助网卡配置列表。
+    *
+    * @param secondaryNetworkInterfaces
+    */
     public void setSecondaryNetworkInterfaces(List<BriefInstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces) {
         this.secondaryNetworkInterfaces = secondaryNetworkInterfaces;
     }
+
 
     /**
      * get 云主机实例的创建时间。
@@ -390,6 +404,7 @@ public class BriefInstance  implements java.io.Serializable {
         this.launchTime = launchTime;
     }
 
+
     /**
      * get 云主机所在可用区。
      *
@@ -408,23 +423,25 @@ public class BriefInstance  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
-     * get 云主机使用的密钥对名称。
-     *
-     * @return
-     */
+    * get 云主机使用的密钥对名称。
+    *
+    * @return
+    */
     public List<String> getKeyNames() {
         return keyNames;
     }
 
     /**
-     * set 云主机使用的密钥对名称。
-     *
-     * @param keyNames
-     */
+    * set 云主机使用的密钥对名称。
+    *
+    * @param keyNames
+    */
     public void setKeyNames(List<String> keyNames) {
         this.keyNames = keyNames;
     }
+
 
     /**
      * get 高可用组中的错误域。
@@ -443,6 +460,7 @@ public class BriefInstance  implements java.io.Serializable {
     public void setFaultDomain(String faultDomain) {
         this.faultDomain = faultDomain;
     }
+
 
     /**
      * get 关机模式，只支持云盘做系统盘的按配置计费云主机。
@@ -468,6 +486,7 @@ public class BriefInstance  implements java.io.Serializable {
         this.chargeOnStopped = chargeOnStopped;
     }
 
+
     /**
      * get 云主机所属的专有宿主机池。
      *
@@ -485,6 +504,7 @@ public class BriefInstance  implements java.io.Serializable {
     public void setDedicatedPoolId(String dedicatedPoolId) {
         this.dedicatedPoolId = dedicatedPoolId;
     }
+
 
     /**
      * get 云主机所属的专有宿主机ID。
@@ -505,6 +525,7 @@ public class BriefInstance  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云主机ID。
      *
@@ -514,6 +535,7 @@ public class BriefInstance  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 云主机名称。
@@ -525,6 +547,7 @@ public class BriefInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例规格。
      *
@@ -534,6 +557,7 @@ public class BriefInstance  implements java.io.Serializable {
         this.instanceType = instanceType;
         return this;
     }
+
 
     /**
      * set 主网卡所属VPC的ID。
@@ -545,6 +569,7 @@ public class BriefInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡所属子网的ID。
      *
@@ -554,6 +579,7 @@ public class BriefInstance  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 主网卡主内网IP地址。
@@ -565,6 +591,7 @@ public class BriefInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
      *
@@ -574,6 +601,7 @@ public class BriefInstance  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 云主机描述。
@@ -585,6 +613,7 @@ public class BriefInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机使用的镜像ID。
      *
@@ -594,6 +623,7 @@ public class BriefInstance  implements java.io.Serializable {
         this.imageId = imageId;
         return this;
     }
+
 
     /**
      * set 系统盘配置。
@@ -605,15 +635,17 @@ public class BriefInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 数据盘配置列表。
-     *
-     * @param dataDisks
-     */
+    * set 数据盘配置列表。
+    *
+    * @param dataDisks
+    */
     public BriefInstance dataDisks(List<BriefInstanceDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
         return this;
     }
+
 
     /**
      * set 主网卡配置。
@@ -625,15 +657,17 @@ public class BriefInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 辅助网卡配置列表。
-     *
-     * @param secondaryNetworkInterfaces
-     */
+    * set 辅助网卡配置列表。
+    *
+    * @param secondaryNetworkInterfaces
+    */
     public BriefInstance secondaryNetworkInterfaces(List<BriefInstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces) {
         this.secondaryNetworkInterfaces = secondaryNetworkInterfaces;
         return this;
     }
+
 
     /**
      * set 云主机实例的创建时间。
@@ -645,6 +679,7 @@ public class BriefInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机所在可用区。
      *
@@ -655,15 +690,17 @@ public class BriefInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 云主机使用的密钥对名称。
-     *
-     * @param keyNames
-     */
+    * set 云主机使用的密钥对名称。
+    *
+    * @param keyNames
+    */
     public BriefInstance keyNames(List<String> keyNames) {
         this.keyNames = keyNames;
         return this;
     }
+
 
     /**
      * set 高可用组中的错误域。
@@ -674,6 +711,7 @@ public class BriefInstance  implements java.io.Serializable {
         this.faultDomain = faultDomain;
         return this;
     }
+
 
     /**
      * set 关机模式，只支持云盘做系统盘的按配置计费云主机。
@@ -688,6 +726,7 @@ public class BriefInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机所属的专有宿主机池。
      *
@@ -698,6 +737,7 @@ public class BriefInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机所属的专有宿主机ID。
      *
@@ -707,6 +747,7 @@ public class BriefInstance  implements java.io.Serializable {
         this.dedicatedHostId = dedicatedHostId;
         return this;
     }
+
 
 
     /**
@@ -744,5 +785,4 @@ public class BriefInstance  implements java.io.Serializable {
         }
         this.keyNames.add(keyName);
     }
-
 }

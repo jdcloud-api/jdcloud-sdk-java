@@ -58,8 +58,8 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     /**
      * securityGroups
      */
+    
     private List<SecurityGroupSimple> securityGroups;
-
     /**
      * PortSecurity，源和目标IP地址校验，取值为0或者1。
      */
@@ -73,6 +73,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     /**
      * 网卡辅IP地址列表。
      */
+    
     private List<NetworkInterfacePrivateIp> secondaryIps;
 
 
@@ -94,6 +95,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
         this.networkInterfaceId = networkInterfaceId;
     }
 
+
     /**
      * get 弹性网卡MAC地址。
      *
@@ -111,6 +113,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     public void setMacAddress(String macAddress) {
         this.macAddress = macAddress;
     }
+
 
     /**
      * get 弹性网卡所属VPC的ID。
@@ -130,6 +133,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 子网ID。
      *
@@ -148,23 +152,25 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+
     /**
-     * get securityGroups
-     *
-     * @return
-     */
+    * get securityGroups
+    *
+    * @return
+    */
     public List<SecurityGroupSimple> getSecurityGroups() {
         return securityGroups;
     }
 
     /**
-     * set securityGroups
-     *
-     * @param securityGroups
-     */
+    * set securityGroups
+    *
+    * @param securityGroups
+    */
     public void setSecurityGroups(List<SecurityGroupSimple> securityGroups) {
         this.securityGroups = securityGroups;
     }
+
 
     /**
      * get PortSecurity，源和目标IP地址校验，取值为0或者1。
@@ -184,6 +190,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
         this.sanityCheck = sanityCheck;
     }
 
+
     /**
      * get 网卡主IP配置。
      *
@@ -202,23 +209,25 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
         this.primaryIp = primaryIp;
     }
 
+
     /**
-     * get 网卡辅IP地址列表。
-     *
-     * @return
-     */
+    * get 网卡辅IP地址列表。
+    *
+    * @return
+    */
     public List<NetworkInterfacePrivateIp> getSecondaryIps() {
         return secondaryIps;
     }
 
     /**
-     * set 网卡辅IP地址列表。
-     *
-     * @param secondaryIps
-     */
+    * set 网卡辅IP地址列表。
+    *
+    * @param secondaryIps
+    */
     public void setSecondaryIps(List<NetworkInterfacePrivateIp> secondaryIps) {
         this.secondaryIps = secondaryIps;
     }
+
 
 
     /**
@@ -231,6 +240,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 弹性网卡MAC地址。
      *
@@ -240,6 +250,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
         this.macAddress = macAddress;
         return this;
     }
+
 
     /**
      * set 弹性网卡所属VPC的ID。
@@ -251,6 +262,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网ID。
      *
@@ -261,15 +273,17 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set securityGroups
-     *
-     * @param securityGroups
-     */
+    * set securityGroups
+    *
+    * @param securityGroups
+    */
     public InstanceNetworkInterface securityGroups(List<SecurityGroupSimple> securityGroups) {
         this.securityGroups = securityGroups;
         return this;
     }
+
 
     /**
      * set PortSecurity，源和目标IP地址校验，取值为0或者1。
@@ -281,6 +295,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网卡主IP配置。
      *
@@ -291,15 +306,17 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 网卡辅IP地址列表。
-     *
-     * @param secondaryIps
-     */
+    * set 网卡辅IP地址列表。
+    *
+    * @param secondaryIps
+    */
     public InstanceNetworkInterface secondaryIps(List<NetworkInterfacePrivateIp> secondaryIps) {
         this.secondaryIps = secondaryIps;
         return this;
     }
+
 
 
     /**
@@ -325,5 +342,4 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
         }
         this.secondaryIps.add(secondaryIp);
     }
-
 }

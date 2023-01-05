@@ -58,6 +58,7 @@ public class Ipv6Info  implements java.io.Serializable {
     private String createdTime;
 
 
+
     /**
      * get 绑定资源所在私有网络的id
      *
@@ -75,6 +76,7 @@ public class Ipv6Info  implements java.io.Serializable {
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
     /**
      * get 绑定资源所在子网的id
@@ -94,6 +96,7 @@ public class Ipv6Info  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+
     /**
      * get 绑定资源的类型
      *
@@ -112,6 +115,7 @@ public class Ipv6Info  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
      * get 绑定资源所拥有的ipv6的地址
      *
@@ -129,6 +133,7 @@ public class Ipv6Info  implements java.io.Serializable {
     public void setIpv6Address(String ipv6Address) {
         this.ipv6Address = ipv6Address;
     }
+
 
     /**
      * get ip绑定资源创建时间
@@ -149,6 +154,7 @@ public class Ipv6Info  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 绑定资源所在私有网络的id
      *
@@ -158,6 +164,7 @@ public class Ipv6Info  implements java.io.Serializable {
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set 绑定资源所在子网的id
@@ -169,6 +176,7 @@ public class Ipv6Info  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 绑定资源的类型
      *
@@ -179,6 +187,7 @@ public class Ipv6Info  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 绑定资源所拥有的ipv6的地址
      *
@@ -188,6 +197,7 @@ public class Ipv6Info  implements java.io.Serializable {
         this.ipv6Address = ipv6Address;
         return this;
     }
+
 
     /**
      * set ip绑定资源创建时间

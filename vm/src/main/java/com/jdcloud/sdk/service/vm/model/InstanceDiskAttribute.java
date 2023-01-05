@@ -45,6 +45,7 @@ public class InstanceDiskAttribute  implements java.io.Serializable {
     private Boolean autoDelete;
 
 
+
     /**
      * get 云硬盘ID。
      *
@@ -62,6 +63,7 @@ public class InstanceDiskAttribute  implements java.io.Serializable {
     public void setDiskId(String diskId) {
         this.diskId = diskId;
     }
+
 
     /**
      * get 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
@@ -86,6 +88,7 @@ public class InstanceDiskAttribute  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云硬盘ID。
      *
@@ -95,6 +98,7 @@ public class InstanceDiskAttribute  implements java.io.Serializable {
         this.diskId = diskId;
         return this;
     }
+
 
     /**
      * set 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
