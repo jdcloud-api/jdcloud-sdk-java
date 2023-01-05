@@ -24,7 +24,9 @@
 
 package com.jdcloud.sdk.service.cloudsign.model;
 
-import com.jdcloud.sdk.service.cloudsign.model.VerifyInfo;
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.cloudsign.model.StampResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -35,41 +37,123 @@ public class VerifyContractResult extends JdcloudResult implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * verifyInfo
+     * 验签是否成功，true 成功 false 失败
      */
-    private VerifyInfo verifyInfo;
+    private Boolean success;
 
+    /**
+     * 验证消息
+     */
+    private String message;
+
+    /**
+     * results
+     */
+    
+    private List<StampResult> results;
 
 
     /**
-     * get verifyInfo
+     * get 验签是否成功，true 成功 false 失败
      *
      * @return
      */
-    public VerifyInfo getVerifyInfo() {
-        return verifyInfo;
+    public Boolean getSuccess() {
+        return success;
     }
 
     /**
-     * set verifyInfo
+     * set 验签是否成功，true 成功 false 失败
      *
-     * @param verifyInfo
+     * @param success
      */
-    public void setVerifyInfo(VerifyInfo verifyInfo) {
-        this.verifyInfo = verifyInfo;
+    public void setSuccess(Boolean success) {
+        this.success = success;
+    }
+
+
+    /**
+     * get 验证消息
+     *
+     * @return
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * set 验证消息
+     *
+     * @param message
+     */
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+
+    /**
+    * get results
+    *
+    * @return
+    */
+    public List<StampResult> getResults() {
+        return results;
+    }
+
+    /**
+    * set results
+    *
+    * @param results
+    */
+    public void setResults(List<StampResult> results) {
+        this.results = results;
     }
 
 
 
     /**
-     * set verifyInfo
+     * set 验签是否成功，true 成功 false 失败
      *
-     * @param verifyInfo
+     * @param success
      */
-    public VerifyContractResult verifyInfo(VerifyInfo verifyInfo) {
-        this.verifyInfo = verifyInfo;
+    public VerifyContractResult success(Boolean success) {
+        this.success = success;
         return this;
     }
 
 
+    /**
+     * set 验证消息
+     *
+     * @param message
+     */
+    public VerifyContractResult message(String message) {
+        this.message = message;
+        return this;
+    }
+
+
+    /**
+    * set results
+    *
+    * @param results
+    */
+    public VerifyContractResult results(List<StampResult> results) {
+        this.results = results;
+        return this;
+    }
+
+
+
+    /**
+     * add item to results
+     *
+     * @param result
+     */
+    public void addResult(StampResult result) {
+        if (this.results == null) {
+            this.results = new ArrayList<>();
+        }
+        this.results.add(result);
+    }
 }

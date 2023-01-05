@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.cloudsign.model;
 
+import com.jdcloud.sdk.service.cloudsign.model.StampInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -35,7 +36,42 @@ public class DownloadStampsResult extends JdcloudResult implements java.io.Seria
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * stampInfo
+     */
+    private StampInfo stampInfo;
 
+
+
+    /**
+     * get stampInfo
+     *
+     * @return
+     */
+    public StampInfo getStampInfo() {
+        return stampInfo;
+    }
+
+    /**
+     * set stampInfo
+     *
+     * @param stampInfo
+     */
+    public void setStampInfo(StampInfo stampInfo) {
+        this.stampInfo = stampInfo;
+    }
+
+
+
+    /**
+     * set stampInfo
+     *
+     * @param stampInfo
+     */
+    public DownloadStampsResult stampInfo(StampInfo stampInfo) {
+        this.stampInfo = stampInfo;
+        return this;
+    }
 
 
 }
