@@ -33,24 +33,34 @@ public class ChargeSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration.请参阅具体产品线帮助文档确认该产品线支持的计费类型
+     * 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration。请参阅具体产品线帮助文档确认该产品线支持的计费类型
      */
     private String chargeMode;
 
     /**
-     * 预付费计费单位，预付费必填，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
+     * 包年包月付费单位或按配置/按用量计费模式定时转换为包年包月付费单位。仅chargeMode&#x3D;prepaid_by_duration或chargeMode&#x3D;postpaid_by_duration且autoChangeChargeMode&#x3D;true时此参数有效。取值为：month、year，默认为month
      */
     private String chargeUnit;
 
     /**
-     * 预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
+     * 包年包月付费时长或按配置/按用量计费模式定时转换为包年包月付费时长。chargeMode&#x3D;prepaid_by_duration或chargeMode&#x3D;postpaid_by_duration且autoChangeChargeMode&#x3D;true时此参数有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
      */
     private Integer chargeDuration;
 
     /**
-     * True&#x3D;：OPEN——开通自动续费、False&#x3D;CLOSE—— 不开通自动续费，默认为CLOSE
+     * 自动续费。true为开通自动续费，false为不开通自动续费，默认为false，仅对包年包月资源有效。开通后，将以本次创建时的购买时长作为自动续费周期，自动续费周期可在续费管理功能中进行修改。
      */
     private Boolean autoRenew;
+
+    /**
+     * 计费模式定时转换，支持在某一时间内从按配置/按用量计费转换为包年包月计费。true为开通转换，false为不开通转换，默认false。且只有按配置/按用量计费支持开启。请参阅具体产品线帮助文档确认该产品线支持的计费类型转换。
+     */
+    private Boolean autoChangeChargeMode;
+
+    /**
+     * 计费模式定时转换日期，格式&quot;yyyy-MM-dd&quot; ,例&quot;2022-12-18&quot;。指定日期的0点开始执行转换 ,autoChangeChargeMode为true时必填。
+     */
+    private String autoChangeChargeModeDate;
 
     /**
      * 产品线统一活动凭证JSON字符串，需要BASE64编码，目前要求编码前格式为 {&quot;activity&quot;:{&quot;activityType&quot;:必填字段, &quot;activityIdentifier&quot;:必填字段}}
@@ -58,8 +68,9 @@ public class ChargeSpec  implements java.io.Serializable {
     private String buyScenario;
 
 
+
     /**
-     * get 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration.请参阅具体产品线帮助文档确认该产品线支持的计费类型
+     * get 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration。请参阅具体产品线帮助文档确认该产品线支持的计费类型
      *
      * @return
      */
@@ -68,7 +79,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration.请参阅具体产品线帮助文档确认该产品线支持的计费类型
+     * set 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration。请参阅具体产品线帮助文档确认该产品线支持的计费类型
      *
      * @param chargeMode
      */
@@ -76,8 +87,9 @@ public class ChargeSpec  implements java.io.Serializable {
         this.chargeMode = chargeMode;
     }
 
+
     /**
-     * get 预付费计费单位，预付费必填，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
+     * get 包年包月付费单位或按配置/按用量计费模式定时转换为包年包月付费单位。仅chargeMode&#x3D;prepaid_by_duration或chargeMode&#x3D;postpaid_by_duration且autoChangeChargeMode&#x3D;true时此参数有效。取值为：month、year，默认为month
      *
      * @return
      */
@@ -86,7 +98,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 预付费计费单位，预付费必填，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
+     * set 包年包月付费单位或按配置/按用量计费模式定时转换为包年包月付费单位。仅chargeMode&#x3D;prepaid_by_duration或chargeMode&#x3D;postpaid_by_duration且autoChangeChargeMode&#x3D;true时此参数有效。取值为：month、year，默认为month
      *
      * @param chargeUnit
      */
@@ -94,8 +106,9 @@ public class ChargeSpec  implements java.io.Serializable {
         this.chargeUnit = chargeUnit;
     }
 
+
     /**
-     * get 预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
+     * get 包年包月付费时长或按配置/按用量计费模式定时转换为包年包月付费时长。chargeMode&#x3D;prepaid_by_duration或chargeMode&#x3D;postpaid_by_duration且autoChangeChargeMode&#x3D;true时此参数有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
      *
      * @return
      */
@@ -104,7 +117,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
+     * set 包年包月付费时长或按配置/按用量计费模式定时转换为包年包月付费时长。chargeMode&#x3D;prepaid_by_duration或chargeMode&#x3D;postpaid_by_duration且autoChangeChargeMode&#x3D;true时此参数有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
      *
      * @param chargeDuration
      */
@@ -112,8 +125,9 @@ public class ChargeSpec  implements java.io.Serializable {
         this.chargeDuration = chargeDuration;
     }
 
+
     /**
-     * get True&#x3D;：OPEN——开通自动续费、False&#x3D;CLOSE—— 不开通自动续费，默认为CLOSE
+     * get 自动续费。true为开通自动续费，false为不开通自动续费，默认为false，仅对包年包月资源有效。开通后，将以本次创建时的购买时长作为自动续费周期，自动续费周期可在续费管理功能中进行修改。
      *
      * @return
      */
@@ -122,13 +136,52 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set True&#x3D;：OPEN——开通自动续费、False&#x3D;CLOSE—— 不开通自动续费，默认为CLOSE
+     * set 自动续费。true为开通自动续费，false为不开通自动续费，默认为false，仅对包年包月资源有效。开通后，将以本次创建时的购买时长作为自动续费周期，自动续费周期可在续费管理功能中进行修改。
      *
      * @param autoRenew
      */
     public void setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
     }
+
+
+    /**
+     * get 计费模式定时转换，支持在某一时间内从按配置/按用量计费转换为包年包月计费。true为开通转换，false为不开通转换，默认false。且只有按配置/按用量计费支持开启。请参阅具体产品线帮助文档确认该产品线支持的计费类型转换。
+     *
+     * @return
+     */
+    public Boolean getAutoChangeChargeMode() {
+        return autoChangeChargeMode;
+    }
+
+    /**
+     * set 计费模式定时转换，支持在某一时间内从按配置/按用量计费转换为包年包月计费。true为开通转换，false为不开通转换，默认false。且只有按配置/按用量计费支持开启。请参阅具体产品线帮助文档确认该产品线支持的计费类型转换。
+     *
+     * @param autoChangeChargeMode
+     */
+    public void setAutoChangeChargeMode(Boolean autoChangeChargeMode) {
+        this.autoChangeChargeMode = autoChangeChargeMode;
+    }
+
+
+    /**
+     * get 计费模式定时转换日期，格式&quot;yyyy-MM-dd&quot; ,例&quot;2022-12-18&quot;。指定日期的0点开始执行转换 ,autoChangeChargeMode为true时必填。
+     *
+     * @return
+     */
+    public String getAutoChangeChargeModeDate() {
+        return autoChangeChargeModeDate;
+    }
+
+    /**
+     * set 计费模式定时转换日期，格式&quot;yyyy-MM-dd&quot; ,例&quot;2022-12-18&quot;。指定日期的0点开始执行转换 ,autoChangeChargeMode为true时必填。
+     *
+     * @param autoChangeChargeModeDate
+     */
+    public void setAutoChangeChargeModeDate(String autoChangeChargeModeDate) {
+        this.autoChangeChargeModeDate = autoChangeChargeModeDate;
+    }
+
 
     /**
      * get 产品线统一活动凭证JSON字符串，需要BASE64编码，目前要求编码前格式为 {&quot;activity&quot;:{&quot;activityType&quot;:必填字段, &quot;activityIdentifier&quot;:必填字段}}
@@ -149,8 +202,9 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration.请参阅具体产品线帮助文档确认该产品线支持的计费类型
+     * set 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration。请参阅具体产品线帮助文档确认该产品线支持的计费类型
      *
      * @param chargeMode
      */
@@ -159,8 +213,9 @@ public class ChargeSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 预付费计费单位，预付费必填，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
+     * set 包年包月付费单位或按配置/按用量计费模式定时转换为包年包月付费单位。仅chargeMode&#x3D;prepaid_by_duration或chargeMode&#x3D;postpaid_by_duration且autoChangeChargeMode&#x3D;true时此参数有效。取值为：month、year，默认为month
      *
      * @param chargeUnit
      */
@@ -169,8 +224,9 @@ public class ChargeSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
+     * set 包年包月付费时长或按配置/按用量计费模式定时转换为包年包月付费时长。chargeMode&#x3D;prepaid_by_duration或chargeMode&#x3D;postpaid_by_duration且autoChangeChargeMode&#x3D;true时此参数有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
      *
      * @param chargeDuration
      */
@@ -179,8 +235,9 @@ public class ChargeSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set True&#x3D;：OPEN——开通自动续费、False&#x3D;CLOSE—— 不开通自动续费，默认为CLOSE
+     * set 自动续费。true为开通自动续费，false为不开通自动续费，默认为false，仅对包年包月资源有效。开通后，将以本次创建时的购买时长作为自动续费周期，自动续费周期可在续费管理功能中进行修改。
      *
      * @param autoRenew
      */
@@ -188,6 +245,29 @@ public class ChargeSpec  implements java.io.Serializable {
         this.autoRenew = autoRenew;
         return this;
     }
+
+
+    /**
+     * set 计费模式定时转换，支持在某一时间内从按配置/按用量计费转换为包年包月计费。true为开通转换，false为不开通转换，默认false。且只有按配置/按用量计费支持开启。请参阅具体产品线帮助文档确认该产品线支持的计费类型转换。
+     *
+     * @param autoChangeChargeMode
+     */
+    public ChargeSpec autoChangeChargeMode(Boolean autoChangeChargeMode) {
+        this.autoChangeChargeMode = autoChangeChargeMode;
+        return this;
+    }
+
+
+    /**
+     * set 计费模式定时转换日期，格式&quot;yyyy-MM-dd&quot; ,例&quot;2022-12-18&quot;。指定日期的0点开始执行转换 ,autoChangeChargeMode为true时必填。
+     *
+     * @param autoChangeChargeModeDate
+     */
+    public ChargeSpec autoChangeChargeModeDate(String autoChangeChargeModeDate) {
+        this.autoChangeChargeModeDate = autoChangeChargeModeDate;
+        return this;
+    }
+
 
     /**
      * set 产品线统一活动凭证JSON字符串，需要BASE64编码，目前要求编码前格式为 {&quot;activity&quot;:{&quot;activityType&quot;:必填字段, &quot;activityIdentifier&quot;:必填字段}}
