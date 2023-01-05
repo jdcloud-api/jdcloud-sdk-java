@@ -39,37 +39,40 @@ public class DescribeSnapshotsCapacityResult extends JdcloudResult implements ja
     /**
      * capacities
      */
+    
     private List<SnapshotCapacity> capacities;
 
 
     /**
-     * get capacities
-     *
-     * @return
-     */
+    * get capacities
+    *
+    * @return
+    */
     public List<SnapshotCapacity> getCapacities() {
         return capacities;
     }
 
     /**
-     * set capacities
-     *
-     * @param capacities
-     */
+    * set capacities
+    *
+    * @param capacities
+    */
     public void setCapacities(List<SnapshotCapacity> capacities) {
         this.capacities = capacities;
     }
 
 
+
     /**
-     * set capacities
-     *
-     * @param capacities
-     */
+    * set capacities
+    *
+    * @param capacities
+    */
     public DescribeSnapshotsCapacityResult capacities(List<SnapshotCapacity> capacities) {
         this.capacities = capacities;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeSnapshotsCapacityResult extends JdcloudResult implements ja
         }
         this.capacities.add(capacitie);
     }
-
 }

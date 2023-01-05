@@ -28,19 +28,12 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * -   删除一块按配置计费的云硬盘，云盘类型包括高效云盘、SSD云盘、通用型SSD、性能型SSD和容量型HDD。
--   删除云盘时，云盘的状态必须为 待挂载（Available）。
--   云盘被删除后，云硬盘快照可以被保留。
+ * -   从回收站中恢复云盘，云盘的状态必须为in-recyclebin。
 
  */
-public class DeleteDiskRequest extends JdcloudRequest implements java.io.Serializable {
+public class RecoverDiskRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * true 加入回收站 false 或者不传直接删除
-     */
-    private Boolean putInRecycleBin;
 
     /**
      * 地域ID
@@ -56,25 +49,6 @@ public class DeleteDiskRequest extends JdcloudRequest implements java.io.Seriali
     @Required
     private String diskId;
 
-
-
-    /**
-     * get true 加入回收站 false 或者不传直接删除
-     *
-     * @return
-     */
-    public Boolean getPutInRecycleBin() {
-        return putInRecycleBin;
-    }
-
-    /**
-     * set true 加入回收站 false 或者不传直接删除
-     *
-     * @param putInRecycleBin
-     */
-    public void setPutInRecycleBin(Boolean putInRecycleBin) {
-        this.putInRecycleBin = putInRecycleBin;
-    }
 
 
     /**
@@ -117,22 +91,11 @@ public class DeleteDiskRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * set true 加入回收站 false 或者不传直接删除
-     *
-     * @param putInRecycleBin
-     */
-    public DeleteDiskRequest putInRecycleBin(Boolean putInRecycleBin) {
-        this.putInRecycleBin = putInRecycleBin;
-        return this;
-    }
-
-
-    /**
      * set 地域ID
      *
      * @param regionId
      */
-    public DeleteDiskRequest regionId(String regionId) {
+    public RecoverDiskRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -143,7 +106,7 @@ public class DeleteDiskRequest extends JdcloudRequest implements java.io.Seriali
      *
      * @param diskId
      */
-    public DeleteDiskRequest diskId(String diskId) {
+    public RecoverDiskRequest diskId(String diskId) {
         this.diskId = diskId;
         return this;
     }

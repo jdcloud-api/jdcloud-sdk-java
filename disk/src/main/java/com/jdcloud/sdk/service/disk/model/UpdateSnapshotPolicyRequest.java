@@ -90,6 +90,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
     private String policyId;
 
 
+
     /**
      * get 策略名称
      *
@@ -107,6 +108,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 策略执行周期，单位:秒，不小于12小时
@@ -126,6 +128,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
         this.interval = interval;
     }
 
+
     /**
      * get 策略生效时间，格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
      *
@@ -143,6 +146,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
     public void setEffectiveTime(String effectiveTime) {
         this.effectiveTime = effectiveTime;
     }
+
 
     /**
      * get 快照保留时间，单位:秒，0:表示不删除
@@ -162,6 +166,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
         this.snapshotLifecycle = snapshotLifecycle;
     }
 
+
     /**
      * get 联系人信息
      *
@@ -179,6 +184,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
     public void setContactInfo(ContactInfo contactInfo) {
         this.contactInfo = contactInfo;
     }
+
 
     /**
      * get 策略状态。1:启用 2:禁用
@@ -198,6 +204,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
         this.status = status;
     }
 
+
     /**
      * get 地域ID
      *
@@ -215,6 +222,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 策略ID
@@ -235,6 +243,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 策略名称
      *
@@ -244,6 +253,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
         this.name = name;
         return this;
     }
+
 
     /**
      * set 策略执行周期，单位:秒，不小于12小时
@@ -255,6 +265,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 策略生效时间，格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
      *
@@ -264,6 +275,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
         this.effectiveTime = effectiveTime;
         return this;
     }
+
 
     /**
      * set 快照保留时间，单位:秒，0:表示不删除
@@ -275,6 +287,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 联系人信息
      *
@@ -284,6 +297,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
         this.contactInfo = contactInfo;
         return this;
     }
+
 
     /**
      * set 策略状态。1:启用 2:禁用
@@ -295,6 +309,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 地域ID
      *
@@ -304,6 +319,7 @@ public class UpdateSnapshotPolicyRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 策略ID

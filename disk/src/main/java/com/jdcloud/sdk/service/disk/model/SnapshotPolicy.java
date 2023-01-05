@@ -98,6 +98,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
     private Integer diskCount;
 
 
+
     /**
      * get 策略id
      *
@@ -115,6 +116,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get 策略名称
@@ -134,6 +136,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 用户pin
      *
@@ -151,6 +154,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 策略执行间隔，单位:秒
@@ -170,6 +174,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         this.interval = interval;
     }
 
+
     /**
      * get 策略生效时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
      *
@@ -187,6 +192,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
     public void setEffectiveTime(String effectiveTime) {
         this.effectiveTime = effectiveTime;
     }
+
 
     /**
      * get 策略上次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
@@ -206,6 +212,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         this.lastTriggerTime = lastTriggerTime;
     }
 
+
     /**
      * get 策略下次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
      *
@@ -223,6 +230,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
     public void setNextTriggerTime(String nextTriggerTime) {
         this.nextTriggerTime = nextTriggerTime;
     }
+
 
     /**
      * get 快照保留时间。单位:秒。0：永久保留
@@ -242,6 +250,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         this.snapshotLifecycle = snapshotLifecycle;
     }
 
+
     /**
      * get 联系人信息
      *
@@ -259,6 +268,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
     public void setContactInfo(ContactInfo contactInfo) {
         this.contactInfo = contactInfo;
     }
+
 
     /**
      * get 策略下次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
@@ -278,6 +288,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 策略下次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
      *
@@ -296,6 +307,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 策略状态。1：启用 2：禁用
      *
@@ -313,6 +325,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 策略绑定的disk数量
@@ -333,6 +346,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 策略id
      *
@@ -342,6 +356,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 策略名称
@@ -353,6 +368,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户pin
      *
@@ -362,6 +378,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 策略执行间隔，单位:秒
@@ -373,6 +390,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 策略生效时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
      *
@@ -382,6 +400,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         this.effectiveTime = effectiveTime;
         return this;
     }
+
 
     /**
      * set 策略上次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
@@ -393,6 +412,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 策略下次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
      *
@@ -402,6 +422,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         this.nextTriggerTime = nextTriggerTime;
         return this;
     }
+
 
     /**
      * set 快照保留时间。单位:秒。0：永久保留
@@ -413,6 +434,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 联系人信息
      *
@@ -422,6 +444,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         this.contactInfo = contactInfo;
         return this;
     }
+
 
     /**
      * set 策略下次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
@@ -433,6 +456,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 策略下次执行时间。格式&#x60;YYYY-MM-DDTHH:mm:ss+xx:xx&#x60;。如&#x60;2020-02-02T20:02:00+08:00&#x60;
      *
@@ -443,6 +467,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 策略状态。1：启用 2：禁用
      *
@@ -452,6 +477,7 @@ public class SnapshotPolicy  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 策略绑定的disk数量

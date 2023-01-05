@@ -49,6 +49,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     private String regionId;
 
 
+
     /**
      * get 资源类型  disk：用户能创建的云盘的配额  snapshot： 用户能创建的快照的配额 snapshot_policy： 用户能创建的快照策略的配额
      *
@@ -66,6 +67,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     public void setType(String type) {
         this.type = type;
     }
+
 
     /**
      * get 地域ID
@@ -86,6 +88,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 资源类型  disk：用户能创建的云盘的配额  snapshot： 用户能创建的快照的配额 snapshot_policy： 用户能创建的快照策略的配额
      *
@@ -95,6 +98,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
         this.type = type;
         return this;
     }
+
 
     /**
      * set 地域ID

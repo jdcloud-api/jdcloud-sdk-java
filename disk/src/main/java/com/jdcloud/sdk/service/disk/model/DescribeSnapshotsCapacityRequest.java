@@ -42,6 +42,7 @@ public class DescribeSnapshotsCapacityRequest extends JdcloudRequest implements 
     private String regionId;
 
 
+
     /**
      * get 地域ID
      *
@@ -59,6 +60,7 @@ public class DescribeSnapshotsCapacityRequest extends JdcloudRequest implements 
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
 
     /**

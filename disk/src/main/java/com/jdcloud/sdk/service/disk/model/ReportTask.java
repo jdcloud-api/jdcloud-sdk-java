@@ -58,6 +58,7 @@ public class ReportTask  implements java.io.Serializable {
     private String downloadUrl;
 
 
+
     /**
      * get 任务ID
      *
@@ -75,6 +76,7 @@ public class ReportTask  implements java.io.Serializable {
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
     /**
      * get 文件名
@@ -94,6 +96,7 @@ public class ReportTask  implements java.io.Serializable {
         this.filename = filename;
     }
 
+
     /**
      * get 状态。0：执行中；3：完成；4：失败
      *
@@ -112,6 +115,7 @@ public class ReportTask  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 创建时间
      *
@@ -129,6 +133,7 @@ public class ReportTask  implements java.io.Serializable {
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
+
 
     /**
      * get 下载链接
@@ -149,6 +154,7 @@ public class ReportTask  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 任务ID
      *
@@ -158,6 +164,7 @@ public class ReportTask  implements java.io.Serializable {
         this.taskId = taskId;
         return this;
     }
+
 
     /**
      * set 文件名
@@ -169,6 +176,7 @@ public class ReportTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态。0：执行中；3：完成；4：失败
      *
@@ -179,6 +187,7 @@ public class ReportTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -188,6 +197,7 @@ public class ReportTask  implements java.io.Serializable {
         this.createdAt = createdAt;
         return this;
     }
+
 
     /**
      * set 下载链接

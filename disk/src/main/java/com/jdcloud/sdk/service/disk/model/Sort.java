@@ -26,81 +26,81 @@ package com.jdcloud.sdk.service.disk.model;
 
 
 /**
- * tag
+ * sort
  */
-public class Tag  implements java.io.Serializable {
+public class Sort  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * Tag键
+     * 排序条件的名称
      */
-    private String key;
+    private String name;
 
     /**
-     * Tag值
+     * 排序条件的方向 0:升序 1:降序
      */
-    private String value;
+    private Integer direction;
 
 
 
     /**
-     * get Tag键
+     * get 排序条件的名称
      *
      * @return
      */
-    public String getKey() {
-        return key;
+    public String getName() {
+        return name;
     }
 
     /**
-     * set Tag键
+     * set 排序条件的名称
      *
-     * @param key
+     * @param name
      */
-    public void setKey(String key) {
-        this.key = key;
+    public void setName(String name) {
+        this.name = name;
     }
 
 
     /**
-     * get Tag值
+     * get 排序条件的方向 0:升序 1:降序
      *
      * @return
      */
-    public String getValue() {
-        return value;
+    public Integer getDirection() {
+        return direction;
     }
 
     /**
-     * set Tag值
+     * set 排序条件的方向 0:升序 1:降序
      *
-     * @param value
+     * @param direction
      */
-    public void setValue(String value) {
-        this.value = value;
+    public void setDirection(Integer direction) {
+        this.direction = direction;
     }
 
 
 
     /**
-     * set Tag键
+     * set 排序条件的名称
      *
-     * @param key
+     * @param name
      */
-    public Tag key(String key) {
-        this.key = key;
+    public Sort name(String name) {
+        this.name = name;
         return this;
     }
 
 
     /**
-     * set Tag值
+     * set 排序条件的方向 0:升序 1:降序
      *
-     * @param value
+     * @param direction
      */
-    public Tag value(String value) {
-        this.value = value;
+    public Sort direction(Integer direction) {
+        this.direction = direction;
         return this;
     }
 

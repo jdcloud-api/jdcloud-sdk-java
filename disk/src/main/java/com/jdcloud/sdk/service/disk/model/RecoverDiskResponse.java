@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 售罄相关接口
- * 查询售罄情况
+ * 云硬盘相关接口
+ * 云硬盘相关接口，提供批量创建云硬盘，查询云硬盘，删除云硬盘，对云硬盘进行扩容，修改云硬盘信息以及使用快照恢复云硬盘等功能。
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,54 +24,17 @@
 
 package com.jdcloud.sdk.service.disk.model;
 
-import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.JdcloudRequest;
+import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询云硬盘售罄情况列表
+ * -   从回收站中恢复云盘，云盘的状态必须为in-recyclebin。
+
  */
-public class DescribeSoldoutRequest extends JdcloudRequest implements java.io.Serializable {
+public class RecoverDiskResponse extends JdcloudResponse<RecoverDiskResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 地域ID
-     * Required:true
-     */
-    @Required
-    private String regionId;
 
-
-
-    /**
-     * get 地域ID
-     *
-     * @return
-     */
-    public String getRegionId() {
-        return regionId;
-    }
-
-    /**
-     * set 地域ID
-     *
-     * @param regionId
-     */
-    public void setRegionId(String regionId) {
-        this.regionId = regionId;
-    }
-
-
-
-    /**
-     * set 地域ID
-     *
-     * @param regionId
-     */
-    public DescribeSoldoutRequest regionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
 
 
 }

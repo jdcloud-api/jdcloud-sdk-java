@@ -38,6 +38,7 @@ public class Bind  implements java.io.Serializable {
     private String resourceId;
 
 
+
     /**
      * get 云硬盘绑定的InstanceUuid
      *
@@ -55,6 +56,7 @@ public class Bind  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
 
     /**

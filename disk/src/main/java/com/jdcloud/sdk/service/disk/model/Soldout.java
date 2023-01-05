@@ -55,6 +55,7 @@ public class Soldout  implements java.io.Serializable {
     private Boolean isSoldOut;
 
 
+
     /**
      * get 云硬盘所属的可用区
      *
@@ -73,6 +74,7 @@ public class Soldout  implements java.io.Serializable {
         this.azName = azName;
     }
 
+
     /**
      * get 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1之一
      *
@@ -90,6 +92,7 @@ public class Soldout  implements java.io.Serializable {
     public void setMediaType(String mediaType) {
         this.mediaType = mediaType;
     }
+
 
     /**
      * get 是否售罄
@@ -110,6 +113,7 @@ public class Soldout  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云硬盘所属的可用区
      *
@@ -120,6 +124,7 @@ public class Soldout  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1之一
      *
@@ -129,6 +134,7 @@ public class Soldout  implements java.io.Serializable {
         this.mediaType = mediaType;
         return this;
     }
+
 
     /**
      * set 是否售罄

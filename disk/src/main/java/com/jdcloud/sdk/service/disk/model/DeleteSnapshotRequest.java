@@ -52,6 +52,7 @@ public class DeleteSnapshotRequest extends JdcloudRequest implements java.io.Ser
     private String snapshotId;
 
 
+
     /**
      * get 地域ID
      *
@@ -69,6 +70,7 @@ public class DeleteSnapshotRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 快照ID
@@ -89,6 +91,7 @@ public class DeleteSnapshotRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 地域ID
      *
@@ -98,6 +101,7 @@ public class DeleteSnapshotRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 快照ID

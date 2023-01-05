@@ -48,6 +48,7 @@ public class DelSnapshot  implements java.io.Serializable {
     private String detail;
 
 
+
     /**
      * get 云硬盘快照ID
      *
@@ -66,6 +67,7 @@ public class DelSnapshot  implements java.io.Serializable {
         this.snapshotId = snapshotId;
     }
 
+
     /**
      * get 是否成功
      *
@@ -83,6 +85,7 @@ public class DelSnapshot  implements java.io.Serializable {
     public void setSuccess(Boolean success) {
         this.success = success;
     }
+
 
     /**
      * get 详细信息
@@ -103,6 +106,7 @@ public class DelSnapshot  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云硬盘快照ID
      *
@@ -113,6 +117,7 @@ public class DelSnapshot  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否成功
      *
@@ -122,6 +127,7 @@ public class DelSnapshot  implements java.io.Serializable {
         this.success = success;
         return this;
     }
+
 
     /**
      * set 详细信息

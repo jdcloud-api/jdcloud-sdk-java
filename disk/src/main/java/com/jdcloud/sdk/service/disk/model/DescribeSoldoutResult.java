@@ -39,31 +39,33 @@ public class DescribeSoldoutResult extends JdcloudResult implements java.io.Seri
     /**
      * soldout
      */
+    
     private List<Soldout> soldout;
-
     /**
      * 查询的可用区售罄情况数目
      */
     private Integer totalCount;
 
 
+
     /**
-     * get soldout
-     *
-     * @return
-     */
+    * get soldout
+    *
+    * @return
+    */
     public List<Soldout> getSoldout() {
         return soldout;
     }
 
     /**
-     * set soldout
-     *
-     * @param soldout
-     */
+    * set soldout
+    *
+    * @param soldout
+    */
     public void setSoldout(List<Soldout> soldout) {
         this.soldout = soldout;
     }
+
 
     /**
      * get 查询的可用区售罄情况数目
@@ -84,15 +86,17 @@ public class DescribeSoldoutResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
-     * set soldout
-     *
-     * @param soldout
-     */
+    * set soldout
+    *
+    * @param soldout
+    */
     public DescribeSoldoutResult soldout(List<Soldout> soldout) {
         this.soldout = soldout;
         return this;
     }
+
 
     /**
      * set 查询的可用区售罄情况数目
@@ -103,6 +107,7 @@ public class DescribeSoldoutResult extends JdcloudResult implements java.io.Seri
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeSoldoutResult extends JdcloudResult implements java.io.Seri
         }
         this.soldout.add(soldout);
     }
-
 }

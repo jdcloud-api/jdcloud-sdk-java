@@ -49,6 +49,7 @@ public class DescribeDiskRequest extends JdcloudRequest implements java.io.Seria
     private String diskId;
 
 
+
     /**
      * get 地域ID
      *
@@ -66,6 +67,7 @@ public class DescribeDiskRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云硬盘ID
@@ -86,6 +88,7 @@ public class DescribeDiskRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 地域ID
      *
@@ -95,6 +98,7 @@ public class DescribeDiskRequest extends JdcloudRequest implements java.io.Seria
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云硬盘ID

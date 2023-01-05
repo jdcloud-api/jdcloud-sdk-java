@@ -47,54 +47,57 @@ public class CreateDisksResult extends JdcloudResult implements java.io.Serializ
     /**
      * policyRelations
      */
+    
     private List<PolicyDiskRelationOpResult> policyRelations;
-
     /**
      * diskIds
      */
+    
     private List<String> diskIds;
-
     /**
      * 标签结果信息
      */
     private String tagmsg;
 
 
+
     /**
-     * get policyRelations
-     *
-     * @return
-     */
+    * get policyRelations
+    *
+    * @return
+    */
     public List<PolicyDiskRelationOpResult> getPolicyRelations() {
         return policyRelations;
     }
 
     /**
-     * set policyRelations
-     *
-     * @param policyRelations
-     */
+    * set policyRelations
+    *
+    * @param policyRelations
+    */
     public void setPolicyRelations(List<PolicyDiskRelationOpResult> policyRelations) {
         this.policyRelations = policyRelations;
     }
 
+
     /**
-     * get diskIds
-     *
-     * @return
-     */
+    * get diskIds
+    *
+    * @return
+    */
     public List<String> getDiskIds() {
         return diskIds;
     }
 
     /**
-     * set diskIds
-     *
-     * @param diskIds
-     */
+    * set diskIds
+    *
+    * @param diskIds
+    */
     public void setDiskIds(List<String> diskIds) {
         this.diskIds = diskIds;
     }
+
 
     /**
      * get 标签结果信息
@@ -115,25 +118,28 @@ public class CreateDisksResult extends JdcloudResult implements java.io.Serializ
     }
 
 
+
     /**
-     * set policyRelations
-     *
-     * @param policyRelations
-     */
+    * set policyRelations
+    *
+    * @param policyRelations
+    */
     public CreateDisksResult policyRelations(List<PolicyDiskRelationOpResult> policyRelations) {
         this.policyRelations = policyRelations;
         return this;
     }
 
+
     /**
-     * set diskIds
-     *
-     * @param diskIds
-     */
+    * set diskIds
+    *
+    * @param diskIds
+    */
     public CreateDisksResult diskIds(List<String> diskIds) {
         this.diskIds = diskIds;
         return this;
     }
+
 
     /**
      * set 标签结果信息
@@ -144,6 +150,7 @@ public class CreateDisksResult extends JdcloudResult implements java.io.Serializ
         this.tagmsg = tagmsg;
         return this;
     }
+
 
 
     /**
@@ -169,5 +176,4 @@ public class CreateDisksResult extends JdcloudResult implements java.io.Serializ
         }
         this.diskIds.add(diskId);
     }
-
 }

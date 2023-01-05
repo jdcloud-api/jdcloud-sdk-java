@@ -37,37 +37,40 @@ public class PolicyDiskRelationOps  implements java.io.Serializable {
     /**
      * items
      */
+    
     private List<PolicyDiskRelationOp> items;
 
 
     /**
-     * get items
-     *
-     * @return
-     */
+    * get items
+    *
+    * @return
+    */
     public List<PolicyDiskRelationOp> getItems() {
         return items;
     }
 
     /**
-     * set items
-     *
-     * @param items
-     */
+    * set items
+    *
+    * @param items
+    */
     public void setItems(List<PolicyDiskRelationOp> items) {
         this.items = items;
     }
 
 
+
     /**
-     * set items
-     *
-     * @param items
-     */
+    * set items
+    *
+    * @param items
+    */
     public PolicyDiskRelationOps items(List<PolicyDiskRelationOp> items) {
         this.items = items;
         return this;
     }
+
 
 
     /**
@@ -81,5 +84,4 @@ public class PolicyDiskRelationOps  implements java.io.Serializable {
         }
         this.items.add(item);
     }
-
 }

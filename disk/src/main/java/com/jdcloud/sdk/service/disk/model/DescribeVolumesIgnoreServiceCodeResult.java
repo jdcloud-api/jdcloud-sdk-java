@@ -41,31 +41,33 @@ public class DescribeVolumesIgnoreServiceCodeResult extends JdcloudResult implem
     /**
      * disks
      */
+    
     private List<Disk> disks;
-
     /**
      * 查询的云硬盘数目
      */
     private Integer totalCount;
 
 
+
     /**
-     * get disks
-     *
-     * @return
-     */
+    * get disks
+    *
+    * @return
+    */
     public List<Disk> getDisks() {
         return disks;
     }
 
     /**
-     * set disks
-     *
-     * @param disks
-     */
+    * set disks
+    *
+    * @param disks
+    */
     public void setDisks(List<Disk> disks) {
         this.disks = disks;
     }
+
 
     /**
      * get 查询的云硬盘数目
@@ -86,15 +88,17 @@ public class DescribeVolumesIgnoreServiceCodeResult extends JdcloudResult implem
     }
 
 
+
     /**
-     * set disks
-     *
-     * @param disks
-     */
+    * set disks
+    *
+    * @param disks
+    */
     public DescribeVolumesIgnoreServiceCodeResult disks(List<Disk> disks) {
         this.disks = disks;
         return this;
     }
+
 
     /**
      * set 查询的云硬盘数目
@@ -105,6 +109,7 @@ public class DescribeVolumesIgnoreServiceCodeResult extends JdcloudResult implem
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class DescribeVolumesIgnoreServiceCodeResult extends JdcloudResult implem
         }
         this.disks.add(disk);
     }
-
 }

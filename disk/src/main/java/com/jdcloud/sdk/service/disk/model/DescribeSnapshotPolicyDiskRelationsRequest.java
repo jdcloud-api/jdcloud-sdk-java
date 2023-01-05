@@ -39,18 +39,18 @@ public class DescribeSnapshotPolicyDiskRelationsRequest extends JdcloudRequest i
     /**
      * 磁盘ID
      */
+    
     private List<String> diskId;
-
     /**
      * 磁盘地域ID
      */
+    
     private List<String> diskRegion;
-
     /**
      * 策略ID
      */
+    
     private List<String> policyId;
-
     /**
      * 页码, 默认为1, 取值范围：[1,∞)
      */
@@ -69,59 +69,63 @@ public class DescribeSnapshotPolicyDiskRelationsRequest extends JdcloudRequest i
     private String regionId;
 
 
+
     /**
-     * get 磁盘ID
-     *
-     * @return
-     */
+    * get 磁盘ID
+    *
+    * @return
+    */
     public List<String> getDiskId() {
         return diskId;
     }
 
     /**
-     * set 磁盘ID
-     *
-     * @param diskId
-     */
+    * set 磁盘ID
+    *
+    * @param diskId
+    */
     public void setDiskId(List<String> diskId) {
         this.diskId = diskId;
     }
 
+
     /**
-     * get 磁盘地域ID
-     *
-     * @return
-     */
+    * get 磁盘地域ID
+    *
+    * @return
+    */
     public List<String> getDiskRegion() {
         return diskRegion;
     }
 
     /**
-     * set 磁盘地域ID
-     *
-     * @param diskRegion
-     */
+    * set 磁盘地域ID
+    *
+    * @param diskRegion
+    */
     public void setDiskRegion(List<String> diskRegion) {
         this.diskRegion = diskRegion;
     }
 
+
     /**
-     * get 策略ID
-     *
-     * @return
-     */
+    * get 策略ID
+    *
+    * @return
+    */
     public List<String> getPolicyId() {
         return policyId;
     }
 
     /**
-     * set 策略ID
-     *
-     * @param policyId
-     */
+    * set 策略ID
+    *
+    * @param policyId
+    */
     public void setPolicyId(List<String> policyId) {
         this.policyId = policyId;
     }
+
 
     /**
      * get 页码, 默认为1, 取值范围：[1,∞)
@@ -141,6 +145,7 @@ public class DescribeSnapshotPolicyDiskRelationsRequest extends JdcloudRequest i
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -158,6 +163,7 @@ public class DescribeSnapshotPolicyDiskRelationsRequest extends JdcloudRequest i
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 地域ID
@@ -178,35 +184,39 @@ public class DescribeSnapshotPolicyDiskRelationsRequest extends JdcloudRequest i
     }
 
 
+
     /**
-     * set 磁盘ID
-     *
-     * @param diskId
-     */
+    * set 磁盘ID
+    *
+    * @param diskId
+    */
     public DescribeSnapshotPolicyDiskRelationsRequest diskId(List<String> diskId) {
         this.diskId = diskId;
         return this;
     }
 
+
     /**
-     * set 磁盘地域ID
-     *
-     * @param diskRegion
-     */
+    * set 磁盘地域ID
+    *
+    * @param diskRegion
+    */
     public DescribeSnapshotPolicyDiskRelationsRequest diskRegion(List<String> diskRegion) {
         this.diskRegion = diskRegion;
         return this;
     }
 
+
     /**
-     * set 策略ID
-     *
-     * @param policyId
-     */
+    * set 策略ID
+    *
+    * @param policyId
+    */
     public DescribeSnapshotPolicyDiskRelationsRequest policyId(List<String> policyId) {
         this.policyId = policyId;
         return this;
     }
+
 
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
@@ -218,6 +228,7 @@ public class DescribeSnapshotPolicyDiskRelationsRequest extends JdcloudRequest i
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
@@ -228,6 +239,7 @@ public class DescribeSnapshotPolicyDiskRelationsRequest extends JdcloudRequest i
         return this;
     }
 
+
     /**
      * set 地域ID
      *
@@ -237,6 +249,7 @@ public class DescribeSnapshotPolicyDiskRelationsRequest extends JdcloudRequest i
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -274,5 +287,4 @@ public class DescribeSnapshotPolicyDiskRelationsRequest extends JdcloudRequest i
         }
         this.policyId.add(policyId);
     }
-
 }

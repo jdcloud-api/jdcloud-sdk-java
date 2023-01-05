@@ -49,6 +49,7 @@ public class DescribeSnapshotRequest extends JdcloudRequest implements java.io.S
     private String snapshotId;
 
 
+
     /**
      * get 地域ID
      *
@@ -66,6 +67,7 @@ public class DescribeSnapshotRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 快照ID
@@ -86,6 +88,7 @@ public class DescribeSnapshotRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 地域ID
      *
@@ -95,6 +98,7 @@ public class DescribeSnapshotRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 快照ID

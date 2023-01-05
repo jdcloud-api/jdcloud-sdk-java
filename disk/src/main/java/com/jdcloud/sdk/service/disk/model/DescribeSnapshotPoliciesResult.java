@@ -39,31 +39,33 @@ public class DescribeSnapshotPoliciesResult extends JdcloudResult implements jav
     /**
      * policies
      */
+    
     private List<SnapshotPolicy> policies;
-
     /**
      * 查询的快照策略数目
      */
     private Integer totalCount;
 
 
+
     /**
-     * get policies
-     *
-     * @return
-     */
+    * get policies
+    *
+    * @return
+    */
     public List<SnapshotPolicy> getPolicies() {
         return policies;
     }
 
     /**
-     * set policies
-     *
-     * @param policies
-     */
+    * set policies
+    *
+    * @param policies
+    */
     public void setPolicies(List<SnapshotPolicy> policies) {
         this.policies = policies;
     }
+
 
     /**
      * get 查询的快照策略数目
@@ -84,15 +86,17 @@ public class DescribeSnapshotPoliciesResult extends JdcloudResult implements jav
     }
 
 
+
     /**
-     * set policies
-     *
-     * @param policies
-     */
+    * set policies
+    *
+    * @param policies
+    */
     public DescribeSnapshotPoliciesResult policies(List<SnapshotPolicy> policies) {
         this.policies = policies;
         return this;
     }
+
 
     /**
      * set 查询的快照策略数目
@@ -103,6 +107,7 @@ public class DescribeSnapshotPoliciesResult extends JdcloudResult implements jav
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeSnapshotPoliciesResult extends JdcloudResult implements jav
         }
         this.policies.add(policie);
     }
-
 }

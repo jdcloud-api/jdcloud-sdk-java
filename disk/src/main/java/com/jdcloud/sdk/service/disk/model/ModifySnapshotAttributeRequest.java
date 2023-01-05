@@ -64,6 +64,7 @@ public class ModifySnapshotAttributeRequest extends JdcloudRequest implements ja
     private String snapshotId;
 
 
+
     /**
      * get 快照名称
      *
@@ -81,6 +82,7 @@ public class ModifySnapshotAttributeRequest extends JdcloudRequest implements ja
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 快照描述
@@ -100,6 +102,7 @@ public class ModifySnapshotAttributeRequest extends JdcloudRequest implements ja
         this.description = description;
     }
 
+
     /**
      * get 快照过期时间，三者至少指定一个
      *
@@ -118,6 +121,7 @@ public class ModifySnapshotAttributeRequest extends JdcloudRequest implements ja
         this.expireTime = expireTime;
     }
 
+
     /**
      * get 地域ID
      *
@@ -135,6 +139,7 @@ public class ModifySnapshotAttributeRequest extends JdcloudRequest implements ja
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 快照ID
@@ -155,6 +160,7 @@ public class ModifySnapshotAttributeRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 快照名称
      *
@@ -164,6 +170,7 @@ public class ModifySnapshotAttributeRequest extends JdcloudRequest implements ja
         this.name = name;
         return this;
     }
+
 
     /**
      * set 快照描述
@@ -175,6 +182,7 @@ public class ModifySnapshotAttributeRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 快照过期时间，三者至少指定一个
      *
@@ -185,6 +193,7 @@ public class ModifySnapshotAttributeRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 地域ID
      *
@@ -194,6 +203,7 @@ public class ModifySnapshotAttributeRequest extends JdcloudRequest implements ja
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 快照ID

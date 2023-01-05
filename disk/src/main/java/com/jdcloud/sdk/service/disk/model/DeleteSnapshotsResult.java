@@ -42,8 +42,8 @@ public class DeleteSnapshotsResult extends JdcloudResult implements java.io.Seri
     /**
      * snapshots
      */
+    
     private List<DelSnapshot> snapshots;
-
     /**
      * 删除快照成功的数量
      */
@@ -55,23 +55,25 @@ public class DeleteSnapshotsResult extends JdcloudResult implements java.io.Seri
     private Integer failedCount;
 
 
+
     /**
-     * get snapshots
-     *
-     * @return
-     */
+    * get snapshots
+    *
+    * @return
+    */
     public List<DelSnapshot> getSnapshots() {
         return snapshots;
     }
 
     /**
-     * set snapshots
-     *
-     * @param snapshots
-     */
+    * set snapshots
+    *
+    * @param snapshots
+    */
     public void setSnapshots(List<DelSnapshot> snapshots) {
         this.snapshots = snapshots;
     }
+
 
     /**
      * get 删除快照成功的数量
@@ -90,6 +92,7 @@ public class DeleteSnapshotsResult extends JdcloudResult implements java.io.Seri
     public void setSuccessCount(Integer successCount) {
         this.successCount = successCount;
     }
+
 
     /**
      * get 删除快照成功的数量
@@ -110,15 +113,17 @@ public class DeleteSnapshotsResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
-     * set snapshots
-     *
-     * @param snapshots
-     */
+    * set snapshots
+    *
+    * @param snapshots
+    */
     public DeleteSnapshotsResult snapshots(List<DelSnapshot> snapshots) {
         this.snapshots = snapshots;
         return this;
     }
+
 
     /**
      * set 删除快照成功的数量
@@ -130,6 +135,7 @@ public class DeleteSnapshotsResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 删除快照成功的数量
      *
@@ -139,6 +145,7 @@ public class DeleteSnapshotsResult extends JdcloudResult implements java.io.Seri
         this.failedCount = failedCount;
         return this;
     }
+
 
 
     /**
@@ -152,5 +159,4 @@ public class DeleteSnapshotsResult extends JdcloudResult implements java.io.Seri
         }
         this.snapshots.add(snapshot);
     }
-
 }

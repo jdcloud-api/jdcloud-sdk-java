@@ -41,46 +41,49 @@ status - 策略状态，精确匹配，支持多个
 name - 策略名称，模糊匹配，支持单个
 
      */
+    
     private List<Filter> filters;
 
 
     /**
-     * get policyId - 策略Id,精确匹配，支持多个
+    * get policyId - 策略Id,精确匹配，支持多个
 status - 策略状态，精确匹配，支持多个
 name - 策略名称，模糊匹配，支持单个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set policyId - 策略Id,精确匹配，支持多个
+    * set policyId - 策略Id,精确匹配，支持多个
 status - 策略状态，精确匹配，支持多个
 name - 策略名称，模糊匹配，支持单个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
 
+
     /**
-     * set policyId - 策略Id,精确匹配，支持多个
+    * set policyId - 策略Id,精确匹配，支持多个
 status - 策略状态，精确匹配，支持多个
 name - 策略名称，模糊匹配，支持单个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public FilterGroups filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
 
     /**
@@ -97,5 +100,4 @@ name - 策略名称，模糊匹配，支持单个
         }
         this.filters.add(filter);
     }
-
 }

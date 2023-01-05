@@ -103,6 +103,7 @@ public class DiskSpecification  implements java.io.Serializable {
     private Integer maxStepIOPS;
 
 
+
     /**
      * get 云硬盘类型
      *
@@ -120,6 +121,7 @@ public class DiskSpecification  implements java.io.Serializable {
     public void setDiskType(String diskType) {
         this.diskType = diskType;
     }
+
 
     /**
      * get 支持的最小尺寸，单位为 GiB
@@ -139,6 +141,7 @@ public class DiskSpecification  implements java.io.Serializable {
         this.minSizeGB = minSizeGB;
     }
 
+
     /**
      * get 支持的最大尺寸，单位为 GiB
      *
@@ -156,6 +159,7 @@ public class DiskSpecification  implements java.io.Serializable {
     public void setMaxSizeGB(Integer maxSizeGB) {
         this.maxSizeGB = maxSizeGB;
     }
+
 
     /**
      * get 步长尺寸，单位为 GiB
@@ -175,6 +179,7 @@ public class DiskSpecification  implements java.io.Serializable {
         this.stepSizeGB = stepSizeGB;
     }
 
+
     /**
      * get 描述信息
      *
@@ -192,6 +197,7 @@ public class DiskSpecification  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 类型名称
@@ -211,6 +217,7 @@ public class DiskSpecification  implements java.io.Serializable {
         this.diskTypeName = diskTypeName;
     }
 
+
     /**
      * get 默认的iops数量(基础iops数量)
      *
@@ -228,6 +235,7 @@ public class DiskSpecification  implements java.io.Serializable {
     public void setDefaultIOPS(Integer defaultIOPS) {
         this.defaultIOPS = defaultIOPS;
     }
+
 
     /**
      * get iops步长增量
@@ -247,6 +255,7 @@ public class DiskSpecification  implements java.io.Serializable {
         this.stepIOPS = stepIOPS;
     }
 
+
     /**
      * get 最大iops数量
      *
@@ -264,6 +273,7 @@ public class DiskSpecification  implements java.io.Serializable {
     public void setMaxIOPS(Integer maxIOPS) {
         this.maxIOPS = maxIOPS;
     }
+
 
     /**
      * get 默认的吞吐量
@@ -283,6 +293,7 @@ public class DiskSpecification  implements java.io.Serializable {
         this.defaultThroughput = defaultThroughput;
     }
 
+
     /**
      * get 吞吐量步长增量
      *
@@ -300,6 +311,7 @@ public class DiskSpecification  implements java.io.Serializable {
     public void setStepThroughput(Float stepThroughput) {
         this.stepThroughput = stepThroughput;
     }
+
 
     /**
      * get 最大吞吐量
@@ -319,6 +331,7 @@ public class DiskSpecification  implements java.io.Serializable {
         this.maxThroughput = maxThroughput;
     }
 
+
     /**
      * get 是否开启IOPS可调整
      *
@@ -336,6 +349,7 @@ public class DiskSpecification  implements java.io.Serializable {
     public void setScalableIOPS(Boolean scalableIOPS) {
         this.scalableIOPS = scalableIOPS;
     }
+
 
     /**
      * get 最大iops步长
@@ -356,6 +370,7 @@ public class DiskSpecification  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云硬盘类型
      *
@@ -365,6 +380,7 @@ public class DiskSpecification  implements java.io.Serializable {
         this.diskType = diskType;
         return this;
     }
+
 
     /**
      * set 支持的最小尺寸，单位为 GiB
@@ -376,6 +392,7 @@ public class DiskSpecification  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 支持的最大尺寸，单位为 GiB
      *
@@ -385,6 +402,7 @@ public class DiskSpecification  implements java.io.Serializable {
         this.maxSizeGB = maxSizeGB;
         return this;
     }
+
 
     /**
      * set 步长尺寸，单位为 GiB
@@ -396,6 +414,7 @@ public class DiskSpecification  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述信息
      *
@@ -405,6 +424,7 @@ public class DiskSpecification  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 类型名称
@@ -416,6 +436,7 @@ public class DiskSpecification  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 默认的iops数量(基础iops数量)
      *
@@ -425,6 +446,7 @@ public class DiskSpecification  implements java.io.Serializable {
         this.defaultIOPS = defaultIOPS;
         return this;
     }
+
 
     /**
      * set iops步长增量
@@ -436,6 +458,7 @@ public class DiskSpecification  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 最大iops数量
      *
@@ -445,6 +468,7 @@ public class DiskSpecification  implements java.io.Serializable {
         this.maxIOPS = maxIOPS;
         return this;
     }
+
 
     /**
      * set 默认的吞吐量
@@ -456,6 +480,7 @@ public class DiskSpecification  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 吞吐量步长增量
      *
@@ -465,6 +490,7 @@ public class DiskSpecification  implements java.io.Serializable {
         this.stepThroughput = stepThroughput;
         return this;
     }
+
 
     /**
      * set 最大吞吐量
@@ -476,6 +502,7 @@ public class DiskSpecification  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否开启IOPS可调整
      *
@@ -485,6 +512,7 @@ public class DiskSpecification  implements java.io.Serializable {
         this.scalableIOPS = scalableIOPS;
         return this;
     }
+
 
     /**
      * set 最大iops步长

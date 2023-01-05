@@ -57,8 +57,8 @@ public class Snapshot  implements java.io.Serializable {
     /**
      * 快照关联的所有镜像ID(snapshotSource为others时不展示)
      */
+    
     private List<String> images;
-
     /**
      * 快照名称
      */
@@ -87,17 +87,18 @@ public class Snapshot  implements java.io.Serializable {
     /**
      * 共享信息(已废弃，使用shareInfo)
      */
+    
     private List<ShareInfo> sharInfo;
-
     /**
      * 共享信息
      */
+    
     private List<ShareInfo> shareInfo;
-
     /**
      * 快照是否为加密盘的快照
      */
     private Boolean encrypted;
+
 
 
     /**
@@ -118,6 +119,7 @@ public class Snapshot  implements java.io.Serializable {
         this.snapshotId = snapshotId;
     }
 
+
     /**
      * get 快照来源 可以有self，others两种来源
      *
@@ -135,6 +137,7 @@ public class Snapshot  implements java.io.Serializable {
     public void setSnapshotSource(String snapshotSource) {
         this.snapshotSource = snapshotSource;
     }
+
 
     /**
      * get 创建快照的云硬盘ID(snapshotSource为others时不展示)
@@ -154,6 +157,7 @@ public class Snapshot  implements java.io.Serializable {
         this.diskId = diskId;
     }
 
+
     /**
      * get 快照大小，单位为GiB
      *
@@ -172,23 +176,25 @@ public class Snapshot  implements java.io.Serializable {
         this.snapshotSizeGB = snapshotSizeGB;
     }
 
+
     /**
-     * get 快照关联的所有镜像ID(snapshotSource为others时不展示)
-     *
-     * @return
-     */
+    * get 快照关联的所有镜像ID(snapshotSource为others时不展示)
+    *
+    * @return
+    */
     public List<String> getImages() {
         return images;
     }
 
     /**
-     * set 快照关联的所有镜像ID(snapshotSource为others时不展示)
-     *
-     * @param images
-     */
+    * set 快照关联的所有镜像ID(snapshotSource为others时不展示)
+    *
+    * @param images
+    */
     public void setImages(List<String> images) {
         this.images = images;
     }
+
 
     /**
      * get 快照名称
@@ -208,6 +214,7 @@ public class Snapshot  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 快照描述
      *
@@ -225,6 +232,7 @@ public class Snapshot  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 快照状态，取值为 creating、available、in-use、deleting、error_create、error_delete 之一
@@ -244,6 +252,7 @@ public class Snapshot  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 创建时间
      *
@@ -261,6 +270,7 @@ public class Snapshot  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 过期删除时间
@@ -280,41 +290,44 @@ public class Snapshot  implements java.io.Serializable {
         this.expireTime = expireTime;
     }
 
+
     /**
-     * get 共享信息(已废弃，使用shareInfo)
-     *
-     * @return
-     */
+    * get 共享信息(已废弃，使用shareInfo)
+    *
+    * @return
+    */
     public List<ShareInfo> getSharInfo() {
         return sharInfo;
     }
 
     /**
-     * set 共享信息(已废弃，使用shareInfo)
-     *
-     * @param sharInfo
-     */
+    * set 共享信息(已废弃，使用shareInfo)
+    *
+    * @param sharInfo
+    */
     public void setSharInfo(List<ShareInfo> sharInfo) {
         this.sharInfo = sharInfo;
     }
 
+
     /**
-     * get 共享信息
-     *
-     * @return
-     */
+    * get 共享信息
+    *
+    * @return
+    */
     public List<ShareInfo> getShareInfo() {
         return shareInfo;
     }
 
     /**
-     * set 共享信息
-     *
-     * @param shareInfo
-     */
+    * set 共享信息
+    *
+    * @param shareInfo
+    */
     public void setShareInfo(List<ShareInfo> shareInfo) {
         this.shareInfo = shareInfo;
     }
+
 
     /**
      * get 快照是否为加密盘的快照
@@ -335,6 +348,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云硬盘快照ID
      *
@@ -344,6 +358,7 @@ public class Snapshot  implements java.io.Serializable {
         this.snapshotId = snapshotId;
         return this;
     }
+
 
     /**
      * set 快照来源 可以有self，others两种来源
@@ -355,6 +370,7 @@ public class Snapshot  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建快照的云硬盘ID(snapshotSource为others时不展示)
      *
@@ -364,6 +380,7 @@ public class Snapshot  implements java.io.Serializable {
         this.diskId = diskId;
         return this;
     }
+
 
     /**
      * set 快照大小，单位为GiB
@@ -375,15 +392,17 @@ public class Snapshot  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 快照关联的所有镜像ID(snapshotSource为others时不展示)
-     *
-     * @param images
-     */
+    * set 快照关联的所有镜像ID(snapshotSource为others时不展示)
+    *
+    * @param images
+    */
     public Snapshot images(List<String> images) {
         this.images = images;
         return this;
     }
+
 
     /**
      * set 快照名称
@@ -395,6 +414,7 @@ public class Snapshot  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 快照描述
      *
@@ -404,6 +424,7 @@ public class Snapshot  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 快照状态，取值为 creating、available、in-use、deleting、error_create、error_delete 之一
@@ -415,6 +436,7 @@ public class Snapshot  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -424,6 +446,7 @@ public class Snapshot  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 过期删除时间
@@ -435,25 +458,28 @@ public class Snapshot  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 共享信息(已废弃，使用shareInfo)
-     *
-     * @param sharInfo
-     */
+    * set 共享信息(已废弃，使用shareInfo)
+    *
+    * @param sharInfo
+    */
     public Snapshot sharInfo(List<ShareInfo> sharInfo) {
         this.sharInfo = sharInfo;
         return this;
     }
 
+
     /**
-     * set 共享信息
-     *
-     * @param shareInfo
-     */
+    * set 共享信息
+    *
+    * @param shareInfo
+    */
     public Snapshot shareInfo(List<ShareInfo> shareInfo) {
         this.shareInfo = shareInfo;
         return this;
     }
+
 
     /**
      * set 快照是否为加密盘的快照
@@ -464,6 +490,7 @@ public class Snapshot  implements java.io.Serializable {
         this.encrypted = encrypted;
         return this;
     }
+
 
 
     /**
@@ -501,5 +528,4 @@ public class Snapshot  implements java.io.Serializable {
         }
         this.shareInfo.add(shareInfo);
     }
-
 }

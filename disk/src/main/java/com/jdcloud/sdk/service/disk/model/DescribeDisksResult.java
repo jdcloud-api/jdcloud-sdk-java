@@ -41,31 +41,33 @@ public class DescribeDisksResult extends JdcloudResult implements java.io.Serial
     /**
      * disks
      */
+    
     private List<Disk> disks;
-
     /**
      * 查询的云硬盘数目
      */
     private Integer totalCount;
 
 
+
     /**
-     * get disks
-     *
-     * @return
-     */
+    * get disks
+    *
+    * @return
+    */
     public List<Disk> getDisks() {
         return disks;
     }
 
     /**
-     * set disks
-     *
-     * @param disks
-     */
+    * set disks
+    *
+    * @param disks
+    */
     public void setDisks(List<Disk> disks) {
         this.disks = disks;
     }
+
 
     /**
      * get 查询的云硬盘数目
@@ -86,15 +88,17 @@ public class DescribeDisksResult extends JdcloudResult implements java.io.Serial
     }
 
 
+
     /**
-     * set disks
-     *
-     * @param disks
-     */
+    * set disks
+    *
+    * @param disks
+    */
     public DescribeDisksResult disks(List<Disk> disks) {
         this.disks = disks;
         return this;
     }
+
 
     /**
      * set 查询的云硬盘数目
@@ -105,6 +109,7 @@ public class DescribeDisksResult extends JdcloudResult implements java.io.Serial
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class DescribeDisksResult extends JdcloudResult implements java.io.Serial
         }
         this.disks.add(disk);
     }
-
 }

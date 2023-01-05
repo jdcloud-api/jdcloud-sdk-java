@@ -53,8 +53,8 @@ public class DescribeVolumesIgnoreServiceCodeRequest extends JdcloudRequest impl
     /**
      * Tag筛选条件
      */
+    
     private List<TagFilter> tags;
-
     /**
      * diskId - 云硬盘ID，精确匹配，支持多个
 diskType - 云硬盘类型，精确匹配，支持多个，取值为 ssd,premium-hdd,ssd.io1,ssd.gp1,hdd.std1
@@ -69,14 +69,15 @@ policyId - 绑定policyId的云硬盘，精确匹配，支持多个
 notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
 
      */
+    
     private List<FilterGroups> filterGroups;
-
     /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -97,6 +98,7 @@ notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -115,26 +117,28 @@ notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get Tag筛选条件
-     *
-     * @return
-     */
+    * get Tag筛选条件
+    *
+    * @return
+    */
     public List<TagFilter> getTags() {
         return tags;
     }
 
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public void setTags(List<TagFilter> tags) {
         this.tags = tags;
     }
 
+
     /**
-     * get diskId - 云硬盘ID，精确匹配，支持多个
+    * get diskId - 云硬盘ID，精确匹配，支持多个
 diskType - 云硬盘类型，精确匹配，支持多个，取值为 ssd,premium-hdd,ssd.io1,ssd.gp1,hdd.std1
 instanceId - 云硬盘所挂载主机的ID，精确匹配，支持多个
 instanceType - 云硬盘所挂载主机的类型，精确匹配，支持多个
@@ -146,15 +150,15 @@ encrypted - 云硬盘是否加密，精确匹配，支持单个
 policyId - 绑定policyId的云硬盘，精确匹配，支持多个
 notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<FilterGroups> getFilterGroups() {
         return filterGroups;
     }
 
     /**
-     * set diskId - 云硬盘ID，精确匹配，支持多个
+    * set diskId - 云硬盘ID，精确匹配，支持多个
 diskType - 云硬盘类型，精确匹配，支持多个，取值为 ssd,premium-hdd,ssd.io1,ssd.gp1,hdd.std1
 instanceId - 云硬盘所挂载主机的ID，精确匹配，支持多个
 instanceType - 云硬盘所挂载主机的类型，精确匹配，支持多个
@@ -166,12 +170,13 @@ encrypted - 云硬盘是否加密，精确匹配，支持单个
 policyId - 绑定policyId的云硬盘，精确匹配，支持多个
 notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
 
-     *
-     * @param filterGroups
-     */
+    *
+    * @param filterGroups
+    */
     public void setFilterGroups(List<FilterGroups> filterGroups) {
         this.filterGroups = filterGroups;
     }
+
 
     /**
      * get 地域ID
@@ -192,6 +197,7 @@ notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
@@ -201,6 +207,7 @@ notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
@@ -212,18 +219,20 @@ notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
         return this;
     }
 
+
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public DescribeVolumesIgnoreServiceCodeRequest tags(List<TagFilter> tags) {
         this.tags = tags;
         return this;
     }
 
+
     /**
-     * set diskId - 云硬盘ID，精确匹配，支持多个
+    * set diskId - 云硬盘ID，精确匹配，支持多个
 diskType - 云硬盘类型，精确匹配，支持多个，取值为 ssd,premium-hdd,ssd.io1,ssd.gp1,hdd.std1
 instanceId - 云硬盘所挂载主机的ID，精确匹配，支持多个
 instanceType - 云硬盘所挂载主机的类型，精确匹配，支持多个
@@ -235,13 +244,14 @@ encrypted - 云硬盘是否加密，精确匹配，支持单个
 policyId - 绑定policyId的云硬盘，精确匹配，支持多个
 notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
 
-     *
-     * @param filterGroups
-     */
+    *
+    * @param filterGroups
+    */
     public DescribeVolumesIgnoreServiceCodeRequest filterGroups(List<FilterGroups> filterGroups) {
         this.filterGroups = filterGroups;
         return this;
     }
+
 
     /**
      * set 地域ID
@@ -252,6 +262,7 @@ notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -288,5 +299,4 @@ notPolicyId - 未绑定policyId的云硬盘，精确匹配，支持多个
         }
         this.filterGroups.add(filterGroup);
     }
-
 }

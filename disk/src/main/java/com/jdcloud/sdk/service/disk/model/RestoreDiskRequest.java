@@ -59,6 +59,7 @@ public class RestoreDiskRequest extends JdcloudRequest implements java.io.Serial
     private String diskId;
 
 
+
     /**
      * get 用于恢复云盘的快照ID
      *
@@ -77,6 +78,7 @@ public class RestoreDiskRequest extends JdcloudRequest implements java.io.Serial
         this.snapshotId = snapshotId;
     }
 
+
     /**
      * get 地域ID
      *
@@ -94,6 +96,7 @@ public class RestoreDiskRequest extends JdcloudRequest implements java.io.Serial
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云硬盘ID
@@ -114,6 +117,7 @@ public class RestoreDiskRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set 用于恢复云盘的快照ID
      *
@@ -124,6 +128,7 @@ public class RestoreDiskRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 地域ID
      *
@@ -133,6 +138,7 @@ public class RestoreDiskRequest extends JdcloudRequest implements java.io.Serial
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云硬盘ID
