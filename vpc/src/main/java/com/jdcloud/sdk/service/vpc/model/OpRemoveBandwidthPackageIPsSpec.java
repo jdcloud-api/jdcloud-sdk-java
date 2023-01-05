@@ -40,31 +40,33 @@ public class OpRemoveBandwidthPackageIPsSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<RemoveBandwidthPackageIPSpec> bandwidthPackageIPSpecs;
-
     /**
      * 资源所属的用户pin
      */
     private String userPin;
 
 
+
     /**
-     * get Ip列表
-     *
-     * @return
-     */
+    * get Ip列表
+    *
+    * @return
+    */
     public List<RemoveBandwidthPackageIPSpec> getBandwidthPackageIPSpecs() {
         return bandwidthPackageIPSpecs;
     }
 
     /**
-     * set Ip列表
-     *
-     * @param bandwidthPackageIPSpecs
-     */
+    * set Ip列表
+    *
+    * @param bandwidthPackageIPSpecs
+    */
     public void setBandwidthPackageIPSpecs(List<RemoveBandwidthPackageIPSpec> bandwidthPackageIPSpecs) {
         this.bandwidthPackageIPSpecs = bandwidthPackageIPSpecs;
     }
+
 
     /**
      * get 资源所属的用户pin
@@ -85,15 +87,17 @@ public class OpRemoveBandwidthPackageIPsSpec  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set Ip列表
-     *
-     * @param bandwidthPackageIPSpecs
-     */
+    * set Ip列表
+    *
+    * @param bandwidthPackageIPSpecs
+    */
     public OpRemoveBandwidthPackageIPsSpec bandwidthPackageIPSpecs(List<RemoveBandwidthPackageIPSpec> bandwidthPackageIPSpecs) {
         this.bandwidthPackageIPSpecs = bandwidthPackageIPSpecs;
         return this;
     }
+
 
     /**
      * set 资源所属的用户pin
@@ -104,6 +108,7 @@ public class OpRemoveBandwidthPackageIPsSpec  implements java.io.Serializable {
         this.userPin = userPin;
         return this;
     }
+
 
 
     /**
@@ -117,5 +122,4 @@ public class OpRemoveBandwidthPackageIPsSpec  implements java.io.Serializable {
         }
         this.bandwidthPackageIPSpecs.add(bandwidthPackageIPSpec);
     }
-
 }

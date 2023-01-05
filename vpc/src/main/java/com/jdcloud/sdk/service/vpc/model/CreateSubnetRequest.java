@@ -71,11 +71,17 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     private Integer ipMaskLen;
 
     /**
+     * 是否只预检此次请求。true：不会创建子网，只会对参数进行校验；false：正常的创建请求。默认为false。
+     */
+    private Boolean dryRun;
+
+    /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -96,6 +102,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 子网名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -113,6 +120,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     public void setSubnetName(String subnetName) {
         this.subnetName = subnetName;
     }
+
 
     /**
      * get 子网网段，vpc内子网网段不能重叠，cidr的取值范围：10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间，如果vpc含有cidr，则必须为vpc所在cidr的子网
@@ -132,6 +140,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         this.addressPrefix = addressPrefix;
     }
 
+
     /**
      * get 子网关联的路由表Id, 默认为vpc的默认路由表,子网关联路由表需检查路由表中已绑定的子网与本子网类型是否一致（一致标准为：或者都为标准子网，或者都为相同边缘可用区的边缘子网）
      *
@@ -149,6 +158,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     public void setRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
     }
+
 
     /**
      * get 子网描述信息,允许输入UTF-8编码下的全部字符，不超过256字符。
@@ -168,6 +178,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         this.description = description;
     }
 
+
     /**
      * get 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
      *
@@ -185,6 +196,26 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     public void setIpMaskLen(Integer ipMaskLen) {
         this.ipMaskLen = ipMaskLen;
     }
+
+
+    /**
+     * get 是否只预检此次请求。true：不会创建子网，只会对参数进行校验；false：正常的创建请求。默认为false。
+     *
+     * @return
+     */
+    public Boolean getDryRun() {
+        return dryRun;
+    }
+
+    /**
+     * set 是否只预检此次请求。true：不会创建子网，只会对参数进行校验；false：正常的创建请求。默认为false。
+     *
+     * @param dryRun
+     */
+    public void setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+    }
+
 
     /**
      * get Region ID
@@ -205,6 +236,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 子网所属vpc的Id
      *
@@ -214,6 +246,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set 子网名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -225,6 +258,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 子网网段，vpc内子网网段不能重叠，cidr的取值范围：10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间，如果vpc含有cidr，则必须为vpc所在cidr的子网
      *
@@ -234,6 +268,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         this.addressPrefix = addressPrefix;
         return this;
     }
+
 
     /**
      * set 子网关联的路由表Id, 默认为vpc的默认路由表,子网关联路由表需检查路由表中已绑定的子网与本子网类型是否一致（一致标准为：或者都为标准子网，或者都为相同边缘可用区的边缘子网）
@@ -245,6 +280,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 子网描述信息,允许输入UTF-8编码下的全部字符，不超过256字符。
      *
@@ -255,6 +291,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
      *
@@ -264,6 +301,18 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         this.ipMaskLen = ipMaskLen;
         return this;
     }
+
+
+    /**
+     * set 是否只预检此次请求。true：不会创建子网，只会对参数进行校验；false：正常的创建请求。默认为false。
+     *
+     * @param dryRun
+     */
+    public CreateSubnetRequest dryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+
 
     /**
      * set Region ID

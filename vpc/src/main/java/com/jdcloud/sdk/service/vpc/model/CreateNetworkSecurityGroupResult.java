@@ -39,6 +39,7 @@ public class CreateNetworkSecurityGroupResult extends JdcloudResult implements j
     private String networkSecurityGroupId;
 
 
+
     /**
      * get 安全组ID
      *
@@ -56,6 +57,7 @@ public class CreateNetworkSecurityGroupResult extends JdcloudResult implements j
     public void setNetworkSecurityGroupId(String networkSecurityGroupId) {
         this.networkSecurityGroupId = networkSecurityGroupId;
     }
+
 
 
     /**

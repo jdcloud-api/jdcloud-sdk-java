@@ -53,6 +53,7 @@ public class OpModifyBandwidthPackageSpec  implements java.io.Serializable {
     private String userPin;
 
 
+
     /**
      * get 共享带宽包带宽上限，取值范围200-5000，单位为Mbps，限制取值必须为5的整倍数，且不能低于共享带宽包内公网IP带宽上限
      *
@@ -70,6 +71,7 @@ public class OpModifyBandwidthPackageSpec  implements java.io.Serializable {
     public void setBandwidthMbps(Integer bandwidthMbps) {
         this.bandwidthMbps = bandwidthMbps;
     }
+
 
     /**
      * get 名称，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且长度不超过32个字符
@@ -89,6 +91,7 @@ public class OpModifyBandwidthPackageSpec  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 描述，长度不超过256个字符
      *
@@ -106,6 +109,7 @@ public class OpModifyBandwidthPackageSpec  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 资源所属的用户pin
@@ -126,6 +130,7 @@ public class OpModifyBandwidthPackageSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 共享带宽包带宽上限，取值范围200-5000，单位为Mbps，限制取值必须为5的整倍数，且不能低于共享带宽包内公网IP带宽上限
      *
@@ -135,6 +140,7 @@ public class OpModifyBandwidthPackageSpec  implements java.io.Serializable {
         this.bandwidthMbps = bandwidthMbps;
         return this;
     }
+
 
     /**
      * set 名称，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且长度不超过32个字符
@@ -146,6 +152,7 @@ public class OpModifyBandwidthPackageSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述，长度不超过256个字符
      *
@@ -155,6 +162,7 @@ public class OpModifyBandwidthPackageSpec  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 资源所属的用户pin

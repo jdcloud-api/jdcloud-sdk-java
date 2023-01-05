@@ -59,6 +59,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
     private String networkInterfaceId;
 
 
+
     /**
      * get 指定解绑的弹性Ip Id
      *
@@ -76,6 +77,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
     public void setElasticIpId(String elasticIpId) {
         this.elasticIpId = elasticIpId;
     }
+
 
     /**
      * get 指定解绑的弹性Ip地址
@@ -95,6 +97,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
         this.elasticIpAddress = elasticIpAddress;
     }
 
+
     /**
      * get Region ID
      *
@@ -112,6 +115,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get networkInterface ID
@@ -132,6 +136,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 指定解绑的弹性Ip Id
      *
@@ -141,6 +146,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
         this.elasticIpId = elasticIpId;
         return this;
     }
+
 
     /**
      * set 指定解绑的弹性Ip地址
@@ -152,6 +158,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -161,6 +168,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set networkInterface ID

@@ -40,70 +40,75 @@ public class OpEipTagSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> resourceIds;
-
     /**
      * 主机用户标签
      */
+    
     private List<Tag> userTags;
 
 
     /**
-     * get 资源id列表
-     *
-     * @return
-     */
+    * get 资源id列表
+    *
+    * @return
+    */
     public List<String> getResourceIds() {
         return resourceIds;
     }
 
     /**
-     * set 资源id列表
-     *
-     * @param resourceIds
-     */
+    * set 资源id列表
+    *
+    * @param resourceIds
+    */
     public void setResourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
     }
 
+
     /**
-     * get 主机用户标签
-     *
-     * @return
-     */
+    * get 主机用户标签
+    *
+    * @return
+    */
     public List<Tag> getUserTags() {
         return userTags;
     }
 
     /**
-     * set 主机用户标签
-     *
-     * @param userTags
-     */
+    * set 主机用户标签
+    *
+    * @param userTags
+    */
     public void setUserTags(List<Tag> userTags) {
         this.userTags = userTags;
     }
 
 
+
     /**
-     * set 资源id列表
-     *
-     * @param resourceIds
-     */
+    * set 资源id列表
+    *
+    * @param resourceIds
+    */
     public OpEipTagSpec resourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
         return this;
     }
 
+
     /**
-     * set 主机用户标签
-     *
-     * @param userTags
-     */
+    * set 主机用户标签
+    *
+    * @param userTags
+    */
     public OpEipTagSpec userTags(List<Tag> userTags) {
         this.userTags = userTags;
         return this;
     }
+
 
 
     /**
@@ -129,5 +134,4 @@ public class OpEipTagSpec  implements java.io.Serializable {
         }
         this.userTags.add(userTag);
     }
-
 }

@@ -50,6 +50,11 @@ public class RouteTable  implements java.io.Serializable {
     private String routeTableType;
 
     /**
+     * 绑定资源类型，取值：subnet，gateway
+     */
+    private String associateType;
+
+    /**
      * 路由表描述信息，允许输入UTF-8编码下的全部字符，不超过256字符。
      */
     private String description;
@@ -62,18 +67,18 @@ public class RouteTable  implements java.io.Serializable {
     /**
      * 路由表规则信息
      */
+    
     private List<RouteTableRule> routeTableRules;
-
     /**
      * 路由传播列表
      */
+    
     private List<RoutePropagation> routePropagations;
-
     /**
      * 路由表绑定的子网列表
      */
+    
     private List<String> subnetIds;
-
     /**
      * 路由表az类型，取值：standard(标准路由表)，edge(边缘路由表)
      */
@@ -88,6 +93,7 @@ public class RouteTable  implements java.io.Serializable {
      * 路由表创建时间
      */
     private String createdTime;
+
 
 
     /**
@@ -108,6 +114,7 @@ public class RouteTable  implements java.io.Serializable {
         this.routeTableId = routeTableId;
     }
 
+
     /**
      * get 路由表名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -125,6 +132,7 @@ public class RouteTable  implements java.io.Serializable {
     public void setRouteTableName(String routeTableName) {
         this.routeTableName = routeTableName;
     }
+
 
     /**
      * get 路由表类型，default：默认路由表，custom：自定义路由表
@@ -144,6 +152,26 @@ public class RouteTable  implements java.io.Serializable {
         this.routeTableType = routeTableType;
     }
 
+
+    /**
+     * get 绑定资源类型，取值：subnet，gateway
+     *
+     * @return
+     */
+    public String getAssociateType() {
+        return associateType;
+    }
+
+    /**
+     * set 绑定资源类型，取值：subnet，gateway
+     *
+     * @param associateType
+     */
+    public void setAssociateType(String associateType) {
+        this.associateType = associateType;
+    }
+
+
     /**
      * get 路由表描述信息，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
@@ -161,6 +189,7 @@ public class RouteTable  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 私有网络ID
@@ -180,59 +209,63 @@ public class RouteTable  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
-     * get 路由表规则信息
-     *
-     * @return
-     */
+    * get 路由表规则信息
+    *
+    * @return
+    */
     public List<RouteTableRule> getRouteTableRules() {
         return routeTableRules;
     }
 
     /**
-     * set 路由表规则信息
-     *
-     * @param routeTableRules
-     */
+    * set 路由表规则信息
+    *
+    * @param routeTableRules
+    */
     public void setRouteTableRules(List<RouteTableRule> routeTableRules) {
         this.routeTableRules = routeTableRules;
     }
 
+
     /**
-     * get 路由传播列表
-     *
-     * @return
-     */
+    * get 路由传播列表
+    *
+    * @return
+    */
     public List<RoutePropagation> getRoutePropagations() {
         return routePropagations;
     }
 
     /**
-     * set 路由传播列表
-     *
-     * @param routePropagations
-     */
+    * set 路由传播列表
+    *
+    * @param routePropagations
+    */
     public void setRoutePropagations(List<RoutePropagation> routePropagations) {
         this.routePropagations = routePropagations;
     }
 
+
     /**
-     * get 路由表绑定的子网列表
-     *
-     * @return
-     */
+    * get 路由表绑定的子网列表
+    *
+    * @return
+    */
     public List<String> getSubnetIds() {
         return subnetIds;
     }
 
     /**
-     * set 路由表绑定的子网列表
-     *
-     * @param subnetIds
-     */
+    * set 路由表绑定的子网列表
+    *
+    * @param subnetIds
+    */
     public void setSubnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
     }
+
 
     /**
      * get 路由表az类型，取值：standard(标准路由表)，edge(边缘路由表)
@@ -252,6 +285,7 @@ public class RouteTable  implements java.io.Serializable {
         this.azType = azType;
     }
 
+
     /**
      * get 路由表可用区
      *
@@ -269,6 +303,7 @@ public class RouteTable  implements java.io.Serializable {
     public void setAz(String az) {
         this.az = az;
     }
+
 
     /**
      * get 路由表创建时间
@@ -289,6 +324,7 @@ public class RouteTable  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 路由表ID
      *
@@ -298,6 +334,7 @@ public class RouteTable  implements java.io.Serializable {
         this.routeTableId = routeTableId;
         return this;
     }
+
 
     /**
      * set 路由表名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -309,6 +346,7 @@ public class RouteTable  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 路由表类型，default：默认路由表，custom：自定义路由表
      *
@@ -318,6 +356,18 @@ public class RouteTable  implements java.io.Serializable {
         this.routeTableType = routeTableType;
         return this;
     }
+
+
+    /**
+     * set 绑定资源类型，取值：subnet，gateway
+     *
+     * @param associateType
+     */
+    public RouteTable associateType(String associateType) {
+        this.associateType = associateType;
+        return this;
+    }
+
 
     /**
      * set 路由表描述信息，允许输入UTF-8编码下的全部字符，不超过256字符。
@@ -329,6 +379,7 @@ public class RouteTable  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 私有网络ID
      *
@@ -339,35 +390,39 @@ public class RouteTable  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 路由表规则信息
-     *
-     * @param routeTableRules
-     */
+    * set 路由表规则信息
+    *
+    * @param routeTableRules
+    */
     public RouteTable routeTableRules(List<RouteTableRule> routeTableRules) {
         this.routeTableRules = routeTableRules;
         return this;
     }
 
+
     /**
-     * set 路由传播列表
-     *
-     * @param routePropagations
-     */
+    * set 路由传播列表
+    *
+    * @param routePropagations
+    */
     public RouteTable routePropagations(List<RoutePropagation> routePropagations) {
         this.routePropagations = routePropagations;
         return this;
     }
 
+
     /**
-     * set 路由表绑定的子网列表
-     *
-     * @param subnetIds
-     */
+    * set 路由表绑定的子网列表
+    *
+    * @param subnetIds
+    */
     public RouteTable subnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
+
 
     /**
      * set 路由表az类型，取值：standard(标准路由表)，edge(边缘路由表)
@@ -379,6 +434,7 @@ public class RouteTable  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 路由表可用区
      *
@@ -389,6 +445,7 @@ public class RouteTable  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 路由表创建时间
      *
@@ -398,6 +455,7 @@ public class RouteTable  implements java.io.Serializable {
         this.createdTime = createdTime;
         return this;
     }
+
 
 
     /**
@@ -435,5 +493,4 @@ public class RouteTable  implements java.io.Serializable {
         }
         this.subnetIds.add(subnetId);
     }
-
 }

@@ -32,7 +32,7 @@ import com.jdcloud.sdk.service.vpc.model.AddBandwidthPackageIPResponse;
  * 
 向共享带宽包内增加公网IP
 
-## 接口说明 
+## 接口说明
 
 - 确保已有至少一个共享带宽包资源。
 

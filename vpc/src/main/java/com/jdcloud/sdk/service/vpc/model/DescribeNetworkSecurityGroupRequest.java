@@ -49,6 +49,7 @@ public class DescribeNetworkSecurityGroupRequest extends JdcloudRequest implemen
     private String networkSecurityGroupId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DescribeNetworkSecurityGroupRequest extends JdcloudRequest implemen
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get NetworkSecurityGroup ID
@@ -86,6 +88,7 @@ public class DescribeNetworkSecurityGroupRequest extends JdcloudRequest implemen
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DescribeNetworkSecurityGroupRequest extends JdcloudRequest implemen
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set NetworkSecurityGroup ID

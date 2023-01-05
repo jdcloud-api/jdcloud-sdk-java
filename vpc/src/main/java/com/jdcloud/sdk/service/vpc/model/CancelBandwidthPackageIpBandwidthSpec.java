@@ -38,6 +38,7 @@ public class CancelBandwidthPackageIpBandwidthSpec  implements java.io.Serializa
     private String elasticIpId;
 
 
+
     /**
      * get 绑定的Ip Id
      *
@@ -55,6 +56,7 @@ public class CancelBandwidthPackageIpBandwidthSpec  implements java.io.Serializa
     public void setElasticIpId(String elasticIpId) {
         this.elasticIpId = elasticIpId;
     }
+
 
 
     /**

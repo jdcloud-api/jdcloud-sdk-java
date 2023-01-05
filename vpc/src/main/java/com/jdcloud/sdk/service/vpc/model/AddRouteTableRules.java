@@ -34,7 +34,7 @@ public class AddRouteTableRules  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
+     * 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡(主网卡不允许)
      * Required:true
      */
     @Required
@@ -65,8 +65,9 @@ public class AddRouteTableRules  implements java.io.Serializable {
     private String description;
 
 
+
     /**
-     * get 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
+     * get 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡(主网卡不允许)
      *
      * @return
      */
@@ -75,13 +76,14 @@ public class AddRouteTableRules  implements java.io.Serializable {
     }
 
     /**
-     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
+     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡(主网卡不允许)
      *
      * @param nextHopType
      */
     public void setNextHopType(String nextHopType) {
         this.nextHopType = nextHopType;
     }
+
 
     /**
      * get 下一跳id
@@ -101,6 +103,7 @@ public class AddRouteTableRules  implements java.io.Serializable {
         this.nextHopId = nextHopId;
     }
 
+
     /**
      * get 匹配地址前缀, internet类型路由跟其他类型的路由，addressPrefix不允许重复
      *
@@ -119,6 +122,7 @@ public class AddRouteTableRules  implements java.io.Serializable {
         this.addressPrefix = addressPrefix;
     }
 
+
     /**
      * get 规则匹配优先级，取值范围[1,255]，默认为100。当路由规则子网掩码不同时，路由最长匹配优先；当路由规则子网掩码相同时, 按照优先级匹配转发, 优先级数字越小优先级越高，路由规则子网掩码相同、优先级相同、下一跳不同时，形成等价路由，不同下一跳负载均担。
      *
@@ -136,6 +140,7 @@ public class AddRouteTableRules  implements java.io.Serializable {
     public void setPriority(Number priority) {
         this.priority = priority;
     }
+
 
     /**
      * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -156,8 +161,9 @@ public class AddRouteTableRules  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
+     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡(主网卡不允许)
      *
      * @param nextHopType
      */
@@ -165,6 +171,7 @@ public class AddRouteTableRules  implements java.io.Serializable {
         this.nextHopType = nextHopType;
         return this;
     }
+
 
     /**
      * set 下一跳id
@@ -176,6 +183,7 @@ public class AddRouteTableRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配地址前缀, internet类型路由跟其他类型的路由，addressPrefix不允许重复
      *
@@ -186,6 +194,7 @@ public class AddRouteTableRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则匹配优先级，取值范围[1,255]，默认为100。当路由规则子网掩码不同时，路由最长匹配优先；当路由规则子网掩码相同时, 按照优先级匹配转发, 优先级数字越小优先级越高，路由规则子网掩码相同、优先级相同、下一跳不同时，形成等价路由，不同下一跳负载均担。
      *
@@ -195,6 +204,7 @@ public class AddRouteTableRules  implements java.io.Serializable {
         this.priority = priority;
         return this;
     }
+
 
     /**
      * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符

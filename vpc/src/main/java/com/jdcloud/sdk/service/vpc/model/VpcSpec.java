@@ -61,6 +61,7 @@ public class VpcSpec  implements java.io.Serializable {
     private String az;
 
 
+
     /**
      * get 私有网络名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -78,6 +79,7 @@ public class VpcSpec  implements java.io.Serializable {
     public void setVpcName(String vpcName) {
         this.vpcName = vpcName;
     }
+
 
     /**
      * get 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
@@ -97,6 +99,7 @@ public class VpcSpec  implements java.io.Serializable {
         this.addressPrefix = addressPrefix;
     }
 
+
     /**
      * get vpc描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
@@ -115,6 +118,7 @@ public class VpcSpec  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
      *
@@ -132,6 +136,7 @@ public class VpcSpec  implements java.io.Serializable {
     public void setAzType(String azType) {
         this.azType = azType;
     }
+
 
     /**
      * get VPC可用区，边缘VPC必须指定可用区
@@ -152,6 +157,7 @@ public class VpcSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 私有网络名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -161,6 +167,7 @@ public class VpcSpec  implements java.io.Serializable {
         this.vpcName = vpcName;
         return this;
     }
+
 
     /**
      * set 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
@@ -172,6 +179,7 @@ public class VpcSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set vpc描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
@@ -182,6 +190,7 @@ public class VpcSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
      *
@@ -191,6 +200,7 @@ public class VpcSpec  implements java.io.Serializable {
         this.azType = azType;
         return this;
     }
+
 
     /**
      * set VPC可用区，边缘VPC必须指定可用区

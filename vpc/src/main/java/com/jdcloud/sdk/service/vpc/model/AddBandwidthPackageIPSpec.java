@@ -46,6 +46,7 @@ public class AddBandwidthPackageIPSpec  implements java.io.Serializable {
     private Integer bandwidthMbps;
 
 
+
     /**
      * get 公网IP ID，当加入弹性公网IP时，为elasticIpId。有如下限制：已欠费的公网IP不能加入共享带宽包；包年包月的公网IP不能加入共享带宽包；一个公网IP同时只能加入一个公网带宽包；公网IP和共享带宽包的地域不同或者线路不同时，公网IP不能加入对应共享带宽包；一个共享带宽包默认可加入20个公网IP
      *
@@ -63,6 +64,7 @@ public class AddBandwidthPackageIPSpec  implements java.io.Serializable {
     public void setPublicIpId(String publicIpId) {
         this.publicIpId = publicIpId;
     }
+
 
     /**
      * get 单个公网IP带宽上限，大小不能超过共享带宽包的带宽上限，单位为Mbps，可取值0或-1，0表示禁止流量通过， -1表示关闭单个公网IP带宽限速，默认值为-1，表示公网IP加入共享带宽包后带宽上限默认为共享带宽包的带宽上限
@@ -83,6 +85,7 @@ public class AddBandwidthPackageIPSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 公网IP ID，当加入弹性公网IP时，为elasticIpId。有如下限制：已欠费的公网IP不能加入共享带宽包；包年包月的公网IP不能加入共享带宽包；一个公网IP同时只能加入一个公网带宽包；公网IP和共享带宽包的地域不同或者线路不同时，公网IP不能加入对应共享带宽包；一个共享带宽包默认可加入20个公网IP
      *
@@ -92,6 +95,7 @@ public class AddBandwidthPackageIPSpec  implements java.io.Serializable {
         this.publicIpId = publicIpId;
         return this;
     }
+
 
     /**
      * set 单个公网IP带宽上限，大小不能超过共享带宽包的带宽上限，单位为Mbps，可取值0或-1，0表示禁止流量通过， -1表示关闭单个公网IP带宽限速，默认值为-1，表示公网IP加入共享带宽包后带宽上限默认为共享带宽包的带宽上限

@@ -59,6 +59,7 @@ public class ModifyRouteTableRequest extends JdcloudRequest implements java.io.S
     private String routeTableId;
 
 
+
     /**
      * get 路由表的名字。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -76,6 +77,7 @@ public class ModifyRouteTableRequest extends JdcloudRequest implements java.io.S
     public void setRouteTableName(String routeTableName) {
         this.routeTableName = routeTableName;
     }
+
 
     /**
      * get 路由表的描述，取值范围：0-256个UTF-8编码下的全部字符
@@ -95,6 +97,7 @@ public class ModifyRouteTableRequest extends JdcloudRequest implements java.io.S
         this.description = description;
     }
 
+
     /**
      * get Region ID
      *
@@ -112,6 +115,7 @@ public class ModifyRouteTableRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RouteTable ID
@@ -132,6 +136,7 @@ public class ModifyRouteTableRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 路由表的名字。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -141,6 +146,7 @@ public class ModifyRouteTableRequest extends JdcloudRequest implements java.io.S
         this.routeTableName = routeTableName;
         return this;
     }
+
 
     /**
      * set 路由表的描述，取值范围：0-256个UTF-8编码下的全部字符
@@ -152,6 +158,7 @@ public class ModifyRouteTableRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -161,6 +168,7 @@ public class ModifyRouteTableRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RouteTable ID

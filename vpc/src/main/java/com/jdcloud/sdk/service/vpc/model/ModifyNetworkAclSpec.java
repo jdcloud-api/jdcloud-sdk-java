@@ -43,6 +43,7 @@ public class ModifyNetworkAclSpec  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get networkAcl名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
      *
@@ -60,6 +61,7 @@ public class ModifyNetworkAclSpec  implements java.io.Serializable {
     public void setNetworkAclName(String networkAclName) {
         this.networkAclName = networkAclName;
     }
+
 
     /**
      * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -80,6 +82,7 @@ public class ModifyNetworkAclSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set networkAcl名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
      *
@@ -89,6 +92,7 @@ public class ModifyNetworkAclSpec  implements java.io.Serializable {
         this.networkAclName = networkAclName;
         return this;
     }
+
 
     /**
      * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符

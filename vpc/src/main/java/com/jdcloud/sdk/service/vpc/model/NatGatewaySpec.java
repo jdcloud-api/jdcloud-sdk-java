@@ -63,11 +63,29 @@ public class NatGatewaySpec  implements java.io.Serializable {
     private String subnetId;
 
     /**
-     * NAT网关的可用区属性，目前仅支持一个
-     * Required:true
+     * NAT网关的可用区属性，即将废弃
      */
-    @Required
+    
     private List<AzIpSpec> azIpSpecs;
+    /**
+     * NAT网关可用区
+     */
+    
+    private List<String> azs;
+    /**
+     * 选择已有公网IP列表。选择已有和新购公网IP可以同时配置，也可以配置其一
+     */
+    
+    private List<String> elasticIpIds;
+    /**
+     * 新购公网IP数量
+     */
+    private Integer elasticIpCount;
+
+    /**
+     * 新购公网IP配置。NAT网关仅支持打包创建标准公网IP，不支持边缘公网IP。且标准公网IP仅支持按配置、按用量两种计费模式。
+     */
+    private ElasticIpSpec elasticIpSpec;
 
     /**
      * 计费配置，仅支持按配置，默认按配置
@@ -78,6 +96,7 @@ public class NatGatewaySpec  implements java.io.Serializable {
      * 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
      */
     private String description;
+
 
 
     /**
@@ -98,6 +117,7 @@ public class NatGatewaySpec  implements java.io.Serializable {
         this.natGatewayName = natGatewayName;
     }
 
+
     /**
      * get NAT网关规格，取值small（100万并发连接数），medium（300万并发连接数），large（1000万并发连接数），默认small
      *
@@ -115,6 +135,7 @@ public class NatGatewaySpec  implements java.io.Serializable {
     public void setNatGatewaySpec(String natGatewaySpec) {
         this.natGatewaySpec = natGatewaySpec;
     }
+
 
     /**
      * get 私有网络ID
@@ -134,6 +155,7 @@ public class NatGatewaySpec  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 子网ID
      *
@@ -152,23 +174,101 @@ public class NatGatewaySpec  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+
     /**
-     * get NAT网关的可用区属性，目前仅支持一个
-     *
-     * @return
-     */
+    * get NAT网关的可用区属性，即将废弃
+    *
+    * @return
+    */
     public List<AzIpSpec> getAzIpSpecs() {
         return azIpSpecs;
     }
 
     /**
-     * set NAT网关的可用区属性，目前仅支持一个
-     *
-     * @param azIpSpecs
-     */
+    * set NAT网关的可用区属性，即将废弃
+    *
+    * @param azIpSpecs
+    */
     public void setAzIpSpecs(List<AzIpSpec> azIpSpecs) {
         this.azIpSpecs = azIpSpecs;
     }
+
+
+    /**
+    * get NAT网关可用区
+    *
+    * @return
+    */
+    public List<String> getAzs() {
+        return azs;
+    }
+
+    /**
+    * set NAT网关可用区
+    *
+    * @param azs
+    */
+    public void setAzs(List<String> azs) {
+        this.azs = azs;
+    }
+
+
+    /**
+    * get 选择已有公网IP列表。选择已有和新购公网IP可以同时配置，也可以配置其一
+    *
+    * @return
+    */
+    public List<String> getElasticIpIds() {
+        return elasticIpIds;
+    }
+
+    /**
+    * set 选择已有公网IP列表。选择已有和新购公网IP可以同时配置，也可以配置其一
+    *
+    * @param elasticIpIds
+    */
+    public void setElasticIpIds(List<String> elasticIpIds) {
+        this.elasticIpIds = elasticIpIds;
+    }
+
+
+    /**
+     * get 新购公网IP数量
+     *
+     * @return
+     */
+    public Integer getElasticIpCount() {
+        return elasticIpCount;
+    }
+
+    /**
+     * set 新购公网IP数量
+     *
+     * @param elasticIpCount
+     */
+    public void setElasticIpCount(Integer elasticIpCount) {
+        this.elasticIpCount = elasticIpCount;
+    }
+
+
+    /**
+     * get 新购公网IP配置。NAT网关仅支持打包创建标准公网IP，不支持边缘公网IP。且标准公网IP仅支持按配置、按用量两种计费模式。
+     *
+     * @return
+     */
+    public ElasticIpSpec getElasticIpSpec() {
+        return elasticIpSpec;
+    }
+
+    /**
+     * set 新购公网IP配置。NAT网关仅支持打包创建标准公网IP，不支持边缘公网IP。且标准公网IP仅支持按配置、按用量两种计费模式。
+     *
+     * @param elasticIpSpec
+     */
+    public void setElasticIpSpec(ElasticIpSpec elasticIpSpec) {
+        this.elasticIpSpec = elasticIpSpec;
+    }
+
 
     /**
      * get 计费配置，仅支持按配置，默认按配置
@@ -187,6 +287,7 @@ public class NatGatewaySpec  implements java.io.Serializable {
     public void setNatGatewayCharge(ChargeSpec natGatewayCharge) {
         this.natGatewayCharge = natGatewayCharge;
     }
+
 
     /**
      * get 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
@@ -207,6 +308,7 @@ public class NatGatewaySpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set NAT网关名称
      *
@@ -216,6 +318,7 @@ public class NatGatewaySpec  implements java.io.Serializable {
         this.natGatewayName = natGatewayName;
         return this;
     }
+
 
     /**
      * set NAT网关规格，取值small（100万并发连接数），medium（300万并发连接数），large（1000万并发连接数），默认small
@@ -227,6 +330,7 @@ public class NatGatewaySpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 私有网络ID
      *
@@ -236,6 +340,7 @@ public class NatGatewaySpec  implements java.io.Serializable {
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set 子网ID
@@ -247,15 +352,61 @@ public class NatGatewaySpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set NAT网关的可用区属性，目前仅支持一个
-     *
-     * @param azIpSpecs
-     */
+    * set NAT网关的可用区属性，即将废弃
+    *
+    * @param azIpSpecs
+    */
     public NatGatewaySpec azIpSpecs(List<AzIpSpec> azIpSpecs) {
         this.azIpSpecs = azIpSpecs;
         return this;
     }
+
+
+    /**
+    * set NAT网关可用区
+    *
+    * @param azs
+    */
+    public NatGatewaySpec azs(List<String> azs) {
+        this.azs = azs;
+        return this;
+    }
+
+
+    /**
+    * set 选择已有公网IP列表。选择已有和新购公网IP可以同时配置，也可以配置其一
+    *
+    * @param elasticIpIds
+    */
+    public NatGatewaySpec elasticIpIds(List<String> elasticIpIds) {
+        this.elasticIpIds = elasticIpIds;
+        return this;
+    }
+
+
+    /**
+     * set 新购公网IP数量
+     *
+     * @param elasticIpCount
+     */
+    public NatGatewaySpec elasticIpCount(Integer elasticIpCount) {
+        this.elasticIpCount = elasticIpCount;
+        return this;
+    }
+
+
+    /**
+     * set 新购公网IP配置。NAT网关仅支持打包创建标准公网IP，不支持边缘公网IP。且标准公网IP仅支持按配置、按用量两种计费模式。
+     *
+     * @param elasticIpSpec
+     */
+    public NatGatewaySpec elasticIpSpec(ElasticIpSpec elasticIpSpec) {
+        this.elasticIpSpec = elasticIpSpec;
+        return this;
+    }
+
 
     /**
      * set 计费配置，仅支持按配置，默认按配置
@@ -266,6 +417,7 @@ public class NatGatewaySpec  implements java.io.Serializable {
         this.natGatewayCharge = natGatewayCharge;
         return this;
     }
+
 
     /**
      * set 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
@@ -278,8 +430,9 @@ public class NatGatewaySpec  implements java.io.Serializable {
     }
 
 
+
     /**
-     * add item to NAT网关的可用区属性，目前仅支持一个
+     * add item to NAT网关的可用区属性，即将废弃
      *
      * @param azIpSpec
      */
@@ -290,4 +443,27 @@ public class NatGatewaySpec  implements java.io.Serializable {
         this.azIpSpecs.add(azIpSpec);
     }
 
+    /**
+     * add item to NAT网关可用区
+     *
+     * @param az
+     */
+    public void addAz(String az) {
+        if (this.azs == null) {
+            this.azs = new ArrayList<>();
+        }
+        this.azs.add(az);
+    }
+
+    /**
+     * add item to 选择已有公网IP列表。选择已有和新购公网IP可以同时配置，也可以配置其一
+     *
+     * @param elasticIpId
+     */
+    public void addElasticIpId(String elasticIpId) {
+        if (this.elasticIpIds == null) {
+            this.elasticIpIds = new ArrayList<>();
+        }
+        this.elasticIpIds.add(elasticIpId);
+    }
 }

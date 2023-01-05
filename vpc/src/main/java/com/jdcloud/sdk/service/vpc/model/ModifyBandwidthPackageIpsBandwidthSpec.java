@@ -40,37 +40,40 @@ public class ModifyBandwidthPackageIpsBandwidthSpec  implements java.io.Serializ
      * Required:true
      */
     @Required
+    
     private List<ModifyBandwidthPackageIpBandwidthSpec> bandwidthPackageIPSpecs;
 
 
     /**
-     * get Ip列表
-     *
-     * @return
-     */
+    * get Ip列表
+    *
+    * @return
+    */
     public List<ModifyBandwidthPackageIpBandwidthSpec> getBandwidthPackageIPSpecs() {
         return bandwidthPackageIPSpecs;
     }
 
     /**
-     * set Ip列表
-     *
-     * @param bandwidthPackageIPSpecs
-     */
+    * set Ip列表
+    *
+    * @param bandwidthPackageIPSpecs
+    */
     public void setBandwidthPackageIPSpecs(List<ModifyBandwidthPackageIpBandwidthSpec> bandwidthPackageIPSpecs) {
         this.bandwidthPackageIPSpecs = bandwidthPackageIPSpecs;
     }
 
 
+
     /**
-     * set Ip列表
-     *
-     * @param bandwidthPackageIPSpecs
-     */
+    * set Ip列表
+    *
+    * @param bandwidthPackageIPSpecs
+    */
     public ModifyBandwidthPackageIpsBandwidthSpec bandwidthPackageIPSpecs(List<ModifyBandwidthPackageIpBandwidthSpec> bandwidthPackageIPSpecs) {
         this.bandwidthPackageIPSpecs = bandwidthPackageIPSpecs;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class ModifyBandwidthPackageIpsBandwidthSpec  implements java.io.Serializ
         }
         this.bandwidthPackageIPSpecs.add(bandwidthPackageIPSpec);
     }
-
 }

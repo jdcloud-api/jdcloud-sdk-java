@@ -51,6 +51,7 @@ public class ModifyRoutePropagationSpec  implements java.io.Serializable {
     private String bgwId;
 
 
+
     /**
      * get 路由传播ID
      *
@@ -69,6 +70,7 @@ public class ModifyRoutePropagationSpec  implements java.io.Serializable {
         this.routePropagationId = routePropagationId;
     }
 
+
     /**
      * get 允许路由表学习的网段范围，多个网段通过&quot;,&quot;分隔
      *
@@ -86,6 +88,7 @@ public class ModifyRoutePropagationSpec  implements java.io.Serializable {
     public void setPropagationCidrs(String propagationCidrs) {
         this.propagationCidrs = propagationCidrs;
     }
+
 
     /**
      * get 传播的bgw ID
@@ -106,6 +109,7 @@ public class ModifyRoutePropagationSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 路由传播ID
      *
@@ -116,6 +120,7 @@ public class ModifyRoutePropagationSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 允许路由表学习的网段范围，多个网段通过&quot;,&quot;分隔
      *
@@ -125,6 +130,7 @@ public class ModifyRoutePropagationSpec  implements java.io.Serializable {
         this.propagationCidrs = propagationCidrs;
         return this;
     }
+
 
     /**
      * set 传播的bgw ID

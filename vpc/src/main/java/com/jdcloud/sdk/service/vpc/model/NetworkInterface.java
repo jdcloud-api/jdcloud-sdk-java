@@ -77,8 +77,8 @@ public class NetworkInterface  implements java.io.Serializable {
     /**
      * 安全组ID列表
      */
+    
     private List<String> networkSecurityGroupIds;
-
     /**
      * 源和目标IP地址校验，取值为0或者1
      */
@@ -92,13 +92,13 @@ public class NetworkInterface  implements java.io.Serializable {
     /**
      * 网卡附属IP列表
      */
+    
     private List<NetworkInterfacePrivateIp> secondaryIps;
-
     /**
      * 网卡附属IP网段
      */
+    
     private List<String> secondaryCidrs;
-
     /**
      * 关联实例类型，取值范围：vm
      */
@@ -140,6 +140,7 @@ public class NetworkInterface  implements java.io.Serializable {
     private String createdTime;
 
 
+
     /**
      * get 弹性网卡名称
      *
@@ -157,6 +158,7 @@ public class NetworkInterface  implements java.io.Serializable {
     public void setNetworkInterfaceName(String networkInterfaceName) {
         this.networkInterfaceName = networkInterfaceName;
     }
+
 
     /**
      * get 弹性网卡ID
@@ -176,6 +178,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.networkInterfaceId = networkInterfaceId;
     }
 
+
     /**
      * get 网卡所在az类型，取值：standard(标准Az)，edge(边缘Az)
      *
@@ -193,6 +196,7 @@ public class NetworkInterface  implements java.io.Serializable {
     public void setAzType(String azType) {
         this.azType = azType;
     }
+
 
     /**
      * get 网卡所在Az, 标准为&quot;&quot;， 边缘为边缘az
@@ -212,6 +216,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
      * get 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）
      *
@@ -229,6 +234,7 @@ public class NetworkInterface  implements java.io.Serializable {
     public void setRole(String role) {
         this.role = role;
     }
+
 
     /**
      * get 以太网地址
@@ -248,6 +254,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.macAddress = macAddress;
     }
 
+
     /**
      * get 虚拟网络ID
      *
@@ -265,6 +272,7 @@ public class NetworkInterface  implements java.io.Serializable {
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
     /**
      * get 子网ID
@@ -284,23 +292,25 @@ public class NetworkInterface  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+
     /**
-     * get 安全组ID列表
-     *
-     * @return
-     */
+    * get 安全组ID列表
+    *
+    * @return
+    */
     public List<String> getNetworkSecurityGroupIds() {
         return networkSecurityGroupIds;
     }
 
     /**
-     * set 安全组ID列表
-     *
-     * @param networkSecurityGroupIds
-     */
+    * set 安全组ID列表
+    *
+    * @param networkSecurityGroupIds
+    */
     public void setNetworkSecurityGroupIds(List<String> networkSecurityGroupIds) {
         this.networkSecurityGroupIds = networkSecurityGroupIds;
     }
+
 
     /**
      * get 源和目标IP地址校验，取值为0或者1
@@ -320,6 +330,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.sanityCheck = sanityCheck;
     }
 
+
     /**
      * get 网卡主IP
      *
@@ -338,41 +349,44 @@ public class NetworkInterface  implements java.io.Serializable {
         this.primaryIp = primaryIp;
     }
 
+
     /**
-     * get 网卡附属IP列表
-     *
-     * @return
-     */
+    * get 网卡附属IP列表
+    *
+    * @return
+    */
     public List<NetworkInterfacePrivateIp> getSecondaryIps() {
         return secondaryIps;
     }
 
     /**
-     * set 网卡附属IP列表
-     *
-     * @param secondaryIps
-     */
+    * set 网卡附属IP列表
+    *
+    * @param secondaryIps
+    */
     public void setSecondaryIps(List<NetworkInterfacePrivateIp> secondaryIps) {
         this.secondaryIps = secondaryIps;
     }
 
+
     /**
-     * get 网卡附属IP网段
-     *
-     * @return
-     */
+    * get 网卡附属IP网段
+    *
+    * @return
+    */
     public List<String> getSecondaryCidrs() {
         return secondaryCidrs;
     }
 
     /**
-     * set 网卡附属IP网段
-     *
-     * @param secondaryCidrs
-     */
+    * set 网卡附属IP网段
+    *
+    * @param secondaryCidrs
+    */
     public void setSecondaryCidrs(List<String> secondaryCidrs) {
         this.secondaryCidrs = secondaryCidrs;
     }
+
 
     /**
      * get 关联实例类型，取值范围：vm
@@ -392,6 +406,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
      * get 关联实例ID
      *
@@ -409,6 +424,7 @@ public class NetworkInterface  implements java.io.Serializable {
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 实例所属的账号
@@ -428,6 +444,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.instanceOwnerId = instanceOwnerId;
     }
 
+
     /**
      * get 网卡在实例上的设备索引号，取值范围：[0,8]，0：辅助网卡未绑定设备，1：主网卡，2-8：辅助网卡已绑定设备
      *
@@ -445,6 +462,7 @@ public class NetworkInterface  implements java.io.Serializable {
     public void setDeviceIndex(Integer deviceIndex) {
         this.deviceIndex = deviceIndex;
     }
+
 
     /**
      * get 网卡描述信息
@@ -464,6 +482,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 弹性网卡绑定实例状态，attached（已绑定）、detached（未绑定）
      *
@@ -482,6 +501,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.attachmentStatus = attachmentStatus;
     }
 
+
     /**
      * get 弹性网卡可用状态，enabled（启用）、disabled（停用）
      *
@@ -499,6 +519,7 @@ public class NetworkInterface  implements java.io.Serializable {
     public void setNetworkInterfaceStatus(String networkInterfaceStatus) {
         this.networkInterfaceStatus = networkInterfaceStatus;
     }
+
 
     /**
      * get 弹性网卡创建时间
@@ -519,6 +540,7 @@ public class NetworkInterface  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 弹性网卡名称
      *
@@ -528,6 +550,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.networkInterfaceName = networkInterfaceName;
         return this;
     }
+
 
     /**
      * set 弹性网卡ID
@@ -539,6 +562,7 @@ public class NetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网卡所在az类型，取值：standard(标准Az)，edge(边缘Az)
      *
@@ -548,6 +572,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.azType = azType;
         return this;
     }
+
 
     /**
      * set 网卡所在Az, 标准为&quot;&quot;， 边缘为边缘az
@@ -559,6 +584,7 @@ public class NetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）
      *
@@ -568,6 +594,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.role = role;
         return this;
     }
+
 
     /**
      * set 以太网地址
@@ -579,6 +606,7 @@ public class NetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 虚拟网络ID
      *
@@ -588,6 +616,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set 子网ID
@@ -599,15 +628,17 @@ public class NetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 安全组ID列表
-     *
-     * @param networkSecurityGroupIds
-     */
+    * set 安全组ID列表
+    *
+    * @param networkSecurityGroupIds
+    */
     public NetworkInterface networkSecurityGroupIds(List<String> networkSecurityGroupIds) {
         this.networkSecurityGroupIds = networkSecurityGroupIds;
         return this;
     }
+
 
     /**
      * set 源和目标IP地址校验，取值为0或者1
@@ -619,6 +650,7 @@ public class NetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网卡主IP
      *
@@ -629,25 +661,28 @@ public class NetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 网卡附属IP列表
-     *
-     * @param secondaryIps
-     */
+    * set 网卡附属IP列表
+    *
+    * @param secondaryIps
+    */
     public NetworkInterface secondaryIps(List<NetworkInterfacePrivateIp> secondaryIps) {
         this.secondaryIps = secondaryIps;
         return this;
     }
 
+
     /**
-     * set 网卡附属IP网段
-     *
-     * @param secondaryCidrs
-     */
+    * set 网卡附属IP网段
+    *
+    * @param secondaryCidrs
+    */
     public NetworkInterface secondaryCidrs(List<String> secondaryCidrs) {
         this.secondaryCidrs = secondaryCidrs;
         return this;
     }
+
 
     /**
      * set 关联实例类型，取值范围：vm
@@ -659,6 +694,7 @@ public class NetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 关联实例ID
      *
@@ -668,6 +704,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 实例所属的账号
@@ -679,6 +716,7 @@ public class NetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网卡在实例上的设备索引号，取值范围：[0,8]，0：辅助网卡未绑定设备，1：主网卡，2-8：辅助网卡已绑定设备
      *
@@ -688,6 +726,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.deviceIndex = deviceIndex;
         return this;
     }
+
 
     /**
      * set 网卡描述信息
@@ -699,6 +738,7 @@ public class NetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 弹性网卡绑定实例状态，attached（已绑定）、detached（未绑定）
      *
@@ -708,6 +748,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.attachmentStatus = attachmentStatus;
         return this;
     }
+
 
     /**
      * set 弹性网卡可用状态，enabled（启用）、disabled（停用）
@@ -719,6 +760,7 @@ public class NetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 弹性网卡创建时间
      *
@@ -728,6 +770,7 @@ public class NetworkInterface  implements java.io.Serializable {
         this.createdTime = createdTime;
         return this;
     }
+
 
 
     /**
@@ -765,5 +808,4 @@ public class NetworkInterface  implements java.io.Serializable {
         }
         this.secondaryCidrs.add(secondaryCidr);
     }
-
 }

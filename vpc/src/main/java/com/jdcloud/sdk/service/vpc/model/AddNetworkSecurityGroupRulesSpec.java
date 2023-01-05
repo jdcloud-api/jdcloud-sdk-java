@@ -40,37 +40,40 @@ public class AddNetworkSecurityGroupRulesSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<AddSecurityGroupRules> networkSecurityGroupRuleSpecs;
 
 
     /**
-     * get 安全组规则信息
-     *
-     * @return
-     */
+    * get 安全组规则信息
+    *
+    * @return
+    */
     public List<AddSecurityGroupRules> getNetworkSecurityGroupRuleSpecs() {
         return networkSecurityGroupRuleSpecs;
     }
 
     /**
-     * set 安全组规则信息
-     *
-     * @param networkSecurityGroupRuleSpecs
-     */
+    * set 安全组规则信息
+    *
+    * @param networkSecurityGroupRuleSpecs
+    */
     public void setNetworkSecurityGroupRuleSpecs(List<AddSecurityGroupRules> networkSecurityGroupRuleSpecs) {
         this.networkSecurityGroupRuleSpecs = networkSecurityGroupRuleSpecs;
     }
 
 
+
     /**
-     * set 安全组规则信息
-     *
-     * @param networkSecurityGroupRuleSpecs
-     */
+    * set 安全组规则信息
+    *
+    * @param networkSecurityGroupRuleSpecs
+    */
     public AddNetworkSecurityGroupRulesSpec networkSecurityGroupRuleSpecs(List<AddSecurityGroupRules> networkSecurityGroupRuleSpecs) {
         this.networkSecurityGroupRuleSpecs = networkSecurityGroupRuleSpecs;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class AddNetworkSecurityGroupRulesSpec  implements java.io.Serializable {
         }
         this.networkSecurityGroupRuleSpecs.add(networkSecurityGroupRuleSpec);
     }
-
 }

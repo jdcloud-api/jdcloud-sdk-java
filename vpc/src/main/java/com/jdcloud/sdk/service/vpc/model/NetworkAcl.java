@@ -52,13 +52,13 @@ public class NetworkAcl  implements java.io.Serializable {
     /**
      * networkAcl规则列表
      */
+    
     private List<NetworkAclRule> networkAclRules;
-
     /**
      * networkAcl绑定的子网列表
      */
+    
     private List<String> subnetIds;
-
     /**
      * 描述,允许输入UTF-8编码下的全部字符，不超过256字符
      */
@@ -68,6 +68,7 @@ public class NetworkAcl  implements java.io.Serializable {
      * networkAcl创建时间
      */
     private String createdTime;
+
 
 
     /**
@@ -88,6 +89,7 @@ public class NetworkAcl  implements java.io.Serializable {
         this.networkAclId = networkAclId;
     }
 
+
     /**
      * get networkAcl名称
      *
@@ -105,6 +107,7 @@ public class NetworkAcl  implements java.io.Serializable {
     public void setNetworkAclName(String networkAclName) {
         this.networkAclName = networkAclName;
     }
+
 
     /**
      * get 私有网络 ID
@@ -124,41 +127,44 @@ public class NetworkAcl  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
-     * get networkAcl规则列表
-     *
-     * @return
-     */
+    * get networkAcl规则列表
+    *
+    * @return
+    */
     public List<NetworkAclRule> getNetworkAclRules() {
         return networkAclRules;
     }
 
     /**
-     * set networkAcl规则列表
-     *
-     * @param networkAclRules
-     */
+    * set networkAcl规则列表
+    *
+    * @param networkAclRules
+    */
     public void setNetworkAclRules(List<NetworkAclRule> networkAclRules) {
         this.networkAclRules = networkAclRules;
     }
 
+
     /**
-     * get networkAcl绑定的子网列表
-     *
-     * @return
-     */
+    * get networkAcl绑定的子网列表
+    *
+    * @return
+    */
     public List<String> getSubnetIds() {
         return subnetIds;
     }
 
     /**
-     * set networkAcl绑定的子网列表
-     *
-     * @param subnetIds
-     */
+    * set networkAcl绑定的子网列表
+    *
+    * @param subnetIds
+    */
     public void setSubnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
     }
+
 
     /**
      * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -177,6 +183,7 @@ public class NetworkAcl  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get networkAcl创建时间
@@ -197,6 +204,7 @@ public class NetworkAcl  implements java.io.Serializable {
     }
 
 
+
     /**
      * set networkAcl ID
      *
@@ -206,6 +214,7 @@ public class NetworkAcl  implements java.io.Serializable {
         this.networkAclId = networkAclId;
         return this;
     }
+
 
     /**
      * set networkAcl名称
@@ -217,6 +226,7 @@ public class NetworkAcl  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 私有网络 ID
      *
@@ -227,25 +237,28 @@ public class NetworkAcl  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set networkAcl规则列表
-     *
-     * @param networkAclRules
-     */
+    * set networkAcl规则列表
+    *
+    * @param networkAclRules
+    */
     public NetworkAcl networkAclRules(List<NetworkAclRule> networkAclRules) {
         this.networkAclRules = networkAclRules;
         return this;
     }
 
+
     /**
-     * set networkAcl绑定的子网列表
-     *
-     * @param subnetIds
-     */
+    * set networkAcl绑定的子网列表
+    *
+    * @param subnetIds
+    */
     public NetworkAcl subnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
+
 
     /**
      * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -257,6 +270,7 @@ public class NetworkAcl  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set networkAcl创建时间
      *
@@ -266,6 +280,7 @@ public class NetworkAcl  implements java.io.Serializable {
         this.createdTime = createdTime;
         return this;
     }
+
 
 
     /**
@@ -291,5 +306,4 @@ public class NetworkAcl  implements java.io.Serializable {
         }
         this.subnetIds.add(subnetId);
     }
-
 }

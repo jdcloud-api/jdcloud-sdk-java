@@ -48,6 +48,7 @@ public class ModifyBandwidthPackageSpec  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get 共享带宽包带宽上限，取值范围200-5000，单位为Mbps，且不能低于共享带宽包内公网IP带宽上限
      *
@@ -66,6 +67,7 @@ public class ModifyBandwidthPackageSpec  implements java.io.Serializable {
         this.bandwidthMbps = bandwidthMbps;
     }
 
+
     /**
      * get 名称，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且长度不超过32个字符
      *
@@ -83,6 +85,7 @@ public class ModifyBandwidthPackageSpec  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 描述，长度不超过256个字符
@@ -103,6 +106,7 @@ public class ModifyBandwidthPackageSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 共享带宽包带宽上限，取值范围200-5000，单位为Mbps，且不能低于共享带宽包内公网IP带宽上限
      *
@@ -113,6 +117,7 @@ public class ModifyBandwidthPackageSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 名称，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且长度不超过32个字符
      *
@@ -122,6 +127,7 @@ public class ModifyBandwidthPackageSpec  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 描述，长度不超过256个字符

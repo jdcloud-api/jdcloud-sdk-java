@@ -40,37 +40,40 @@ public class ModifySecurityGroupRuleSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<ModifySecurityGroupRules> modifySecurityGroupRuleSpecs;
 
 
     /**
-     * get 安全组规则信息
-     *
-     * @return
-     */
+    * get 安全组规则信息
+    *
+    * @return
+    */
     public List<ModifySecurityGroupRules> getModifySecurityGroupRuleSpecs() {
         return modifySecurityGroupRuleSpecs;
     }
 
     /**
-     * set 安全组规则信息
-     *
-     * @param modifySecurityGroupRuleSpecs
-     */
+    * set 安全组规则信息
+    *
+    * @param modifySecurityGroupRuleSpecs
+    */
     public void setModifySecurityGroupRuleSpecs(List<ModifySecurityGroupRules> modifySecurityGroupRuleSpecs) {
         this.modifySecurityGroupRuleSpecs = modifySecurityGroupRuleSpecs;
     }
 
 
+
     /**
-     * set 安全组规则信息
-     *
-     * @param modifySecurityGroupRuleSpecs
-     */
+    * set 安全组规则信息
+    *
+    * @param modifySecurityGroupRuleSpecs
+    */
     public ModifySecurityGroupRuleSpec modifySecurityGroupRuleSpecs(List<ModifySecurityGroupRules> modifySecurityGroupRuleSpecs) {
         this.modifySecurityGroupRuleSpecs = modifySecurityGroupRuleSpecs;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class ModifySecurityGroupRuleSpec  implements java.io.Serializable {
         }
         this.modifySecurityGroupRuleSpecs.add(modifySecurityGroupRuleSpec);
     }
-
 }

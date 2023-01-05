@@ -48,6 +48,7 @@ public class RoutePropagation  implements java.io.Serializable {
     private String propagationCidrs;
 
 
+
     /**
      * get 路由传播Id
      *
@@ -66,6 +67,7 @@ public class RoutePropagation  implements java.io.Serializable {
         this.propagationId = propagationId;
     }
 
+
     /**
      * get 边界网关Id
      *
@@ -83,6 +85,7 @@ public class RoutePropagation  implements java.io.Serializable {
     public void setBgwId(String bgwId) {
         this.bgwId = bgwId;
     }
+
 
     /**
      * get 路由传播范围，指定路由传播网段，CIDR格式，多个CIDR之间以英文逗号“,”分隔，0.0.0.0/0表示接受所有传播路由，设置特定网段就只能接收该网段范围内或子网段的路由传播
@@ -103,6 +106,7 @@ public class RoutePropagation  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 路由传播Id
      *
@@ -113,6 +117,7 @@ public class RoutePropagation  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 边界网关Id
      *
@@ -122,6 +127,7 @@ public class RoutePropagation  implements java.io.Serializable {
         this.bgwId = bgwId;
         return this;
     }
+
 
     /**
      * set 路由传播范围，指定路由传播网段，CIDR格式，多个CIDR之间以英文逗号“,”分隔，0.0.0.0/0表示接受所有传播路由，设置特定网段就只能接收该网段范围内或子网段的路由传播

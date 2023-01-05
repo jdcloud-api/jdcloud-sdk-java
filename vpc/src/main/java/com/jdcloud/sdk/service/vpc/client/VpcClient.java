@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.vpc.client.DeleteElasticIpExecutor;
 import com.jdcloud.sdk.service.vpc.model.ModifyVpcPeeringRequest;
 import com.jdcloud.sdk.service.vpc.model.ModifyVpcPeeringResponse;
 import com.jdcloud.sdk.service.vpc.client.ModifyVpcPeeringExecutor;
+import com.jdcloud.sdk.service.vpc.model.CreateVpcPolicyRequest;
+import com.jdcloud.sdk.service.vpc.model.CreateVpcPolicyResponse;
+import com.jdcloud.sdk.service.vpc.client.CreateVpcPolicyExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeBandwidthPackageRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeBandwidthPackageResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeBandwidthPackageExecutor;
@@ -64,6 +67,9 @@ import com.jdcloud.sdk.service.vpc.client.RemoveBandwidthPackageIPExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeNetworkInterfacesRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeNetworkInterfacesResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeNetworkInterfacesExecutor;
+import com.jdcloud.sdk.service.vpc.model.DescribeVpcPolicyRequest;
+import com.jdcloud.sdk.service.vpc.model.DescribeVpcPolicyResponse;
+import com.jdcloud.sdk.service.vpc.client.DescribeVpcPolicyExecutor;
 import com.jdcloud.sdk.service.vpc.model.RemoveNetworkSecurityGroupRulesRequest;
 import com.jdcloud.sdk.service.vpc.model.RemoveNetworkSecurityGroupRulesResponse;
 import com.jdcloud.sdk.service.vpc.client.RemoveNetworkSecurityGroupRulesExecutor;
@@ -145,9 +151,15 @@ import com.jdcloud.sdk.service.vpc.client.DeleteRouteTableExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcPeeringRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcPeeringResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeVpcPeeringExecutor;
+import com.jdcloud.sdk.service.vpc.model.DeleteVpcPolicyRequest;
+import com.jdcloud.sdk.service.vpc.model.DeleteVpcPolicyResponse;
+import com.jdcloud.sdk.service.vpc.client.DeleteVpcPolicyExecutor;
 import com.jdcloud.sdk.service.vpc.model.RemoveRouteTableRulesRequest;
 import com.jdcloud.sdk.service.vpc.model.RemoveRouteTableRulesResponse;
 import com.jdcloud.sdk.service.vpc.client.RemoveRouteTableRulesExecutor;
+import com.jdcloud.sdk.service.vpc.model.ModifyVpcPolicyRequest;
+import com.jdcloud.sdk.service.vpc.model.ModifyVpcPolicyResponse;
+import com.jdcloud.sdk.service.vpc.client.ModifyVpcPolicyExecutor;
 import com.jdcloud.sdk.service.vpc.model.CreateVpcPeeringRequest;
 import com.jdcloud.sdk.service.vpc.model.CreateVpcPeeringResponse;
 import com.jdcloud.sdk.service.vpc.client.CreateVpcPeeringExecutor;
@@ -240,7 +252,7 @@ public class VpcClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.8";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "vpc.jdcloud-api.com";
     public final static String ServiceName = "vpc";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -302,6 +314,17 @@ public class VpcClient extends JdcloudClient {
      */
     public ModifyVpcPeeringResponse modifyVpcPeering(ModifyVpcPeeringRequest request) throws JdcloudSdkException {
         return new ModifyVpcPeeringExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建VpcPolicy接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateVpcPolicyResponse createVpcPolicy(CreateVpcPolicyRequest request) throws JdcloudSdkException {
+        return new CreateVpcPolicyExecutor().client(this).execute(request);
     }
 
     /**
@@ -428,6 +451,17 @@ public class VpcClient extends JdcloudClient {
      */
     public DescribeNetworkInterfacesResponse describeNetworkInterfaces(DescribeNetworkInterfacesRequest request) throws JdcloudSdkException {
         return new DescribeNetworkInterfacesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询VpcPolicy资源详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeVpcPolicyResponse describeVpcPolicy(DescribeVpcPolicyRequest request) throws JdcloudSdkException {
+        return new DescribeVpcPolicyExecutor().client(this).execute(request);
     }
 
     /**
@@ -634,7 +668,7 @@ public class VpcClient extends JdcloudClient {
      * 
 向共享带宽包内增加公网IP
 
-## 接口说明 
+## 接口说明
 
 - 确保已有至少一个共享带宽包资源。
 
@@ -759,6 +793,17 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
+     * 删除VpcPolicy接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVpcPolicyResponse deleteVpcPolicy(DeleteVpcPolicyRequest request) throws JdcloudSdkException {
+        return new DeleteVpcPolicyExecutor().client(this).execute(request);
+    }
+
+    /**
      * 移除路由表规则
      *
      * @param request
@@ -767,6 +812,17 @@ public class VpcClient extends JdcloudClient {
      */
     public RemoveRouteTableRulesResponse removeRouteTableRules(RemoveRouteTableRulesRequest request) throws JdcloudSdkException {
         return new RemoveRouteTableRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改VPC Policy接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyVpcPolicyResponse modifyVpcPolicy(ModifyVpcPolicyRequest request) throws JdcloudSdkException {
+        return new ModifyVpcPolicyExecutor().client(this).execute(request);
     }
 
     /**

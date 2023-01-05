@@ -59,6 +59,7 @@ public class AzIpSpec  implements java.io.Serializable {
     private ChargeSpec ipCharge;
 
 
+
     /**
      * get IP线路类型，仅支持bgp，默认值bgp
      *
@@ -76,6 +77,7 @@ public class AzIpSpec  implements java.io.Serializable {
     public void setProvider(String provider) {
         this.provider = provider;
     }
+
 
     /**
      * get 公网IP可用区属性
@@ -95,6 +97,7 @@ public class AzIpSpec  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
      * get NAT网关公网IP的限速（单位：Mbps）。计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
      *
@@ -112,6 +115,7 @@ public class AzIpSpec  implements java.io.Serializable {
     public void setBandwidthMbps(Integer bandwidthMbps) {
         this.bandwidthMbps = bandwidthMbps;
     }
+
 
     /**
      * get 计费配置,支持按配置、按用量，默认按配置
@@ -132,6 +136,7 @@ public class AzIpSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set IP线路类型，仅支持bgp，默认值bgp
      *
@@ -141,6 +146,7 @@ public class AzIpSpec  implements java.io.Serializable {
         this.provider = provider;
         return this;
     }
+
 
     /**
      * set 公网IP可用区属性
@@ -152,6 +158,7 @@ public class AzIpSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set NAT网关公网IP的限速（单位：Mbps）。计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
      *
@@ -161,6 +168,7 @@ public class AzIpSpec  implements java.io.Serializable {
         this.bandwidthMbps = bandwidthMbps;
         return this;
     }
+
 
     /**
      * set 计费配置,支持按配置、按用量，默认按配置

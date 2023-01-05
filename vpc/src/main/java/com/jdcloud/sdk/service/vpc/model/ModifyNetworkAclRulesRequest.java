@@ -42,8 +42,8 @@ public class ModifyNetworkAclRulesRequest extends JdcloudRequest implements java
      * Required:true
      */
     @Required
+    
     private List<ModifyNetworkAclRuleSpec> modifyNetworkAclRuleSpecs;
-
     /**
      * Region ID
      * Required:true
@@ -59,23 +59,25 @@ public class ModifyNetworkAclRulesRequest extends JdcloudRequest implements java
     private String networkAclId;
 
 
+
     /**
-     * get networkAcl规则列表
-     *
-     * @return
-     */
+    * get networkAcl规则列表
+    *
+    * @return
+    */
     public List<ModifyNetworkAclRuleSpec> getModifyNetworkAclRuleSpecs() {
         return modifyNetworkAclRuleSpecs;
     }
 
     /**
-     * set networkAcl规则列表
-     *
-     * @param modifyNetworkAclRuleSpecs
-     */
+    * set networkAcl规则列表
+    *
+    * @param modifyNetworkAclRuleSpecs
+    */
     public void setModifyNetworkAclRuleSpecs(List<ModifyNetworkAclRuleSpec> modifyNetworkAclRuleSpecs) {
         this.modifyNetworkAclRuleSpecs = modifyNetworkAclRuleSpecs;
     }
+
 
     /**
      * get Region ID
@@ -94,6 +96,7 @@ public class ModifyNetworkAclRulesRequest extends JdcloudRequest implements java
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get networkAclId ID
@@ -114,15 +117,17 @@ public class ModifyNetworkAclRulesRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
-     * set networkAcl规则列表
-     *
-     * @param modifyNetworkAclRuleSpecs
-     */
+    * set networkAcl规则列表
+    *
+    * @param modifyNetworkAclRuleSpecs
+    */
     public ModifyNetworkAclRulesRequest modifyNetworkAclRuleSpecs(List<ModifyNetworkAclRuleSpec> modifyNetworkAclRuleSpecs) {
         this.modifyNetworkAclRuleSpecs = modifyNetworkAclRuleSpecs;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -134,6 +139,7 @@ public class ModifyNetworkAclRulesRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set networkAclId ID
      *
@@ -143,6 +149,7 @@ public class ModifyNetworkAclRulesRequest extends JdcloudRequest implements java
         this.networkAclId = networkAclId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class ModifyNetworkAclRulesRequest extends JdcloudRequest implements java
         }
         this.modifyNetworkAclRuleSpecs.add(modifyNetworkAclRuleSpec);
     }
-
 }

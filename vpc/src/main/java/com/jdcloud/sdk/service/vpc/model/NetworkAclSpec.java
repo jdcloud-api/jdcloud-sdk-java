@@ -53,6 +53,7 @@ public class NetworkAclSpec  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get 私有网络id
      *
@@ -71,6 +72,7 @@ public class NetworkAclSpec  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get networkAcl名称
      *
@@ -88,6 +90,7 @@ public class NetworkAclSpec  implements java.io.Serializable {
     public void setNetworkAclName(String networkAclName) {
         this.networkAclName = networkAclName;
     }
+
 
     /**
      * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -108,6 +111,7 @@ public class NetworkAclSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 私有网络id
      *
@@ -118,6 +122,7 @@ public class NetworkAclSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set networkAcl名称
      *
@@ -127,6 +132,7 @@ public class NetworkAclSpec  implements java.io.Serializable {
         this.networkAclName = networkAclName;
         return this;
     }
+
 
     /**
      * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符

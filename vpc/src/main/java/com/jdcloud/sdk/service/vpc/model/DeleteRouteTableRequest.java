@@ -49,6 +49,7 @@ public class DeleteRouteTableRequest extends JdcloudRequest implements java.io.S
     private String routeTableId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DeleteRouteTableRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RouteTable ID
@@ -86,6 +88,7 @@ public class DeleteRouteTableRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DeleteRouteTableRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RouteTable ID

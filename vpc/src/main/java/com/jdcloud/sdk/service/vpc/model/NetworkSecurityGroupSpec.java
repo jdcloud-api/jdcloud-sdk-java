@@ -53,6 +53,7 @@ public class NetworkSecurityGroupSpec  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get 私有网络ID
      *
@@ -71,6 +72,7 @@ public class NetworkSecurityGroupSpec  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 安全组名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -88,6 +90,7 @@ public class NetworkSecurityGroupSpec  implements java.io.Serializable {
     public void setNetworkSecurityGroupName(String networkSecurityGroupName) {
         this.networkSecurityGroupName = networkSecurityGroupName;
     }
+
 
     /**
      * get 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
@@ -108,6 +111,7 @@ public class NetworkSecurityGroupSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 私有网络ID
      *
@@ -118,6 +122,7 @@ public class NetworkSecurityGroupSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 安全组名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -127,6 +132,7 @@ public class NetworkSecurityGroupSpec  implements java.io.Serializable {
         this.networkSecurityGroupName = networkSecurityGroupName;
         return this;
     }
+
 
     /**
      * set 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符

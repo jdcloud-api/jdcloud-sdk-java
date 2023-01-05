@@ -43,6 +43,7 @@ public class DisassociateElasticIpSpec  implements java.io.Serializable {
     private String elasticIpAddress;
 
 
+
     /**
      * get 指定解绑的弹性Ip Id
      *
@@ -60,6 +61,7 @@ public class DisassociateElasticIpSpec  implements java.io.Serializable {
     public void setElasticIpId(String elasticIpId) {
         this.elasticIpId = elasticIpId;
     }
+
 
     /**
      * get 指定解绑的弹性Ip地址
@@ -80,6 +82,7 @@ public class DisassociateElasticIpSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 指定解绑的弹性Ip Id
      *
@@ -89,6 +92,7 @@ public class DisassociateElasticIpSpec  implements java.io.Serializable {
         this.elasticIpId = elasticIpId;
         return this;
     }
+
 
     /**
      * set 指定解绑的弹性Ip地址

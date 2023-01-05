@@ -41,8 +41,8 @@ public class RemoveNetworkAclRulesRequest extends JdcloudRequest implements java
      * Required:true
      */
     @Required
+    
     private List<String> ruleIds;
-
     /**
      * Region ID
      * Required:true
@@ -58,23 +58,25 @@ public class RemoveNetworkAclRulesRequest extends JdcloudRequest implements java
     private String networkAclId;
 
 
+
     /**
-     * get networkAcl规则ID列表
-     *
-     * @return
-     */
+    * get networkAcl规则ID列表
+    *
+    * @return
+    */
     public List<String> getRuleIds() {
         return ruleIds;
     }
 
     /**
-     * set networkAcl规则ID列表
-     *
-     * @param ruleIds
-     */
+    * set networkAcl规则ID列表
+    *
+    * @param ruleIds
+    */
     public void setRuleIds(List<String> ruleIds) {
         this.ruleIds = ruleIds;
     }
+
 
     /**
      * get Region ID
@@ -93,6 +95,7 @@ public class RemoveNetworkAclRulesRequest extends JdcloudRequest implements java
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get networkAclId ID
@@ -113,15 +116,17 @@ public class RemoveNetworkAclRulesRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
-     * set networkAcl规则ID列表
-     *
-     * @param ruleIds
-     */
+    * set networkAcl规则ID列表
+    *
+    * @param ruleIds
+    */
     public RemoveNetworkAclRulesRequest ruleIds(List<String> ruleIds) {
         this.ruleIds = ruleIds;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -133,6 +138,7 @@ public class RemoveNetworkAclRulesRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set networkAclId ID
      *
@@ -142,6 +148,7 @@ public class RemoveNetworkAclRulesRequest extends JdcloudRequest implements java
         this.networkAclId = networkAclId;
         return this;
     }
+
 
 
     /**
@@ -155,5 +162,4 @@ public class RemoveNetworkAclRulesRequest extends JdcloudRequest implements java
         }
         this.ruleIds.add(ruleId);
     }
-
 }

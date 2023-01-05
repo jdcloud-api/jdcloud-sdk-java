@@ -41,6 +41,7 @@ public class DeletePropagationSpec  implements java.io.Serializable {
     private String routePropagationId;
 
 
+
     /**
      * get 路由传播 ID
      *
@@ -58,6 +59,7 @@ public class DeletePropagationSpec  implements java.io.Serializable {
     public void setRoutePropagationId(String routePropagationId) {
         this.routePropagationId = routePropagationId;
     }
+
 
 
     /**

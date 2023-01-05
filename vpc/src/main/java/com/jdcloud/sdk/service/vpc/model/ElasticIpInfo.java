@@ -43,6 +43,7 @@ public class ElasticIpInfo  implements java.io.Serializable {
     private Boolean isJDEip;
 
 
+
     /**
      * get 弹性公网IP的Ip地址
      *
@@ -60,6 +61,7 @@ public class ElasticIpInfo  implements java.io.Serializable {
     public void setElasticIpAddress(String elasticIpAddress) {
         this.elasticIpAddress = elasticIpAddress;
     }
+
 
     /**
      * get 是否存在且属于jd池
@@ -80,6 +82,7 @@ public class ElasticIpInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 弹性公网IP的Ip地址
      *
@@ -89,6 +92,7 @@ public class ElasticIpInfo  implements java.io.Serializable {
         this.elasticIpAddress = elasticIpAddress;
         return this;
     }
+
 
     /**
      * set 是否存在且属于jd池

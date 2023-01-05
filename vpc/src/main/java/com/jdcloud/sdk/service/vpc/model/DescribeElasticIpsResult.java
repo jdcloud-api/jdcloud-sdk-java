@@ -39,31 +39,33 @@ public class DescribeElasticIpsResult extends JdcloudResult implements java.io.S
     /**
      * elasticIps
      */
+    
     private List<ElasticIp> elasticIps;
-
     /**
      * 总数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get elasticIps
-     *
-     * @return
-     */
+    * get elasticIps
+    *
+    * @return
+    */
     public List<ElasticIp> getElasticIps() {
         return elasticIps;
     }
 
     /**
-     * set elasticIps
-     *
-     * @param elasticIps
-     */
+    * set elasticIps
+    *
+    * @param elasticIps
+    */
     public void setElasticIps(List<ElasticIp> elasticIps) {
         this.elasticIps = elasticIps;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeElasticIpsResult extends JdcloudResult implements java.io.S
     }
 
 
+
     /**
-     * set elasticIps
-     *
-     * @param elasticIps
-     */
+    * set elasticIps
+    *
+    * @param elasticIps
+    */
     public DescribeElasticIpsResult elasticIps(List<ElasticIp> elasticIps) {
         this.elasticIps = elasticIps;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeElasticIpsResult extends JdcloudResult implements java.io.S
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeElasticIpsResult extends JdcloudResult implements java.io.S
         }
         this.elasticIps.add(elasticIp);
     }
-
 }

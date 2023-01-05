@@ -59,6 +59,7 @@ public class ModifyVpcRequest extends JdcloudRequest implements java.io.Serializ
     private String vpcId;
 
 
+
     /**
      * get 私有网络名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -76,6 +77,7 @@ public class ModifyVpcRequest extends JdcloudRequest implements java.io.Serializ
     public void setVpcName(String vpcName) {
         this.vpcName = vpcName;
     }
+
 
     /**
      * get vpc描述，允许输入UTF-8编码下的全部字符，不超过256字符。
@@ -95,6 +97,7 @@ public class ModifyVpcRequest extends JdcloudRequest implements java.io.Serializ
         this.description = description;
     }
 
+
     /**
      * get Region ID
      *
@@ -112,6 +115,7 @@ public class ModifyVpcRequest extends JdcloudRequest implements java.io.Serializ
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Vpc ID
@@ -132,6 +136,7 @@ public class ModifyVpcRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set 私有网络名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -141,6 +146,7 @@ public class ModifyVpcRequest extends JdcloudRequest implements java.io.Serializ
         this.vpcName = vpcName;
         return this;
     }
+
 
     /**
      * set vpc描述，允许输入UTF-8编码下的全部字符，不超过256字符。
@@ -152,6 +158,7 @@ public class ModifyVpcRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -161,6 +168,7 @@ public class ModifyVpcRequest extends JdcloudRequest implements java.io.Serializ
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Vpc ID

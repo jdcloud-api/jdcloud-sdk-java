@@ -57,6 +57,7 @@ public class DescribeBandwidthPackageRequest extends JdcloudRequest implements j
     private String bandwidthPackageId;
 
 
+
     /**
      * get Region ID
      *
@@ -74,6 +75,7 @@ public class DescribeBandwidthPackageRequest extends JdcloudRequest implements j
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 共享带宽包ID
@@ -94,6 +96,7 @@ public class DescribeBandwidthPackageRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set Region ID
      *
@@ -103,6 +106,7 @@ public class DescribeBandwidthPackageRequest extends JdcloudRequest implements j
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 共享带宽包ID

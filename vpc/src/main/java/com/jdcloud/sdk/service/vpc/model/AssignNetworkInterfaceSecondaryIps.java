@@ -50,8 +50,8 @@ public class AssignNetworkInterfaceSecondaryIps  implements java.io.Serializable
     /**
      * 指定分配的secondaryIp地址
      */
+    
     private List<String> secondaryIps;
-
     /**
      * 指定自动分配的secondaryIp个数
      */
@@ -61,6 +61,7 @@ public class AssignNetworkInterfaceSecondaryIps  implements java.io.Serializable
      * 指定分配的网段掩码长度, 支持26、27、28，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
      */
     private Integer secondaryIpMaskLen;
+
 
 
     /**
@@ -81,6 +82,7 @@ public class AssignNetworkInterfaceSecondaryIps  implements java.io.Serializable
         this.networkInterfaceId = networkInterfaceId;
     }
 
+
     /**
      * get secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
      *
@@ -99,23 +101,25 @@ public class AssignNetworkInterfaceSecondaryIps  implements java.io.Serializable
         this.force = force;
     }
 
+
     /**
-     * get 指定分配的secondaryIp地址
-     *
-     * @return
-     */
+    * get 指定分配的secondaryIp地址
+    *
+    * @return
+    */
     public List<String> getSecondaryIps() {
         return secondaryIps;
     }
 
     /**
-     * set 指定分配的secondaryIp地址
-     *
-     * @param secondaryIps
-     */
+    * set 指定分配的secondaryIp地址
+    *
+    * @param secondaryIps
+    */
     public void setSecondaryIps(List<String> secondaryIps) {
         this.secondaryIps = secondaryIps;
     }
+
 
     /**
      * get 指定自动分配的secondaryIp个数
@@ -134,6 +138,7 @@ public class AssignNetworkInterfaceSecondaryIps  implements java.io.Serializable
     public void setSecondaryIpCount(Number secondaryIpCount) {
         this.secondaryIpCount = secondaryIpCount;
     }
+
 
     /**
      * get 指定分配的网段掩码长度, 支持26、27、28，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
@@ -154,6 +159,7 @@ public class AssignNetworkInterfaceSecondaryIps  implements java.io.Serializable
     }
 
 
+
     /**
      * set 网卡ID
      *
@@ -163,6 +169,7 @@ public class AssignNetworkInterfaceSecondaryIps  implements java.io.Serializable
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
+
 
     /**
      * set secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
@@ -174,15 +181,17 @@ public class AssignNetworkInterfaceSecondaryIps  implements java.io.Serializable
         return this;
     }
 
+
     /**
-     * set 指定分配的secondaryIp地址
-     *
-     * @param secondaryIps
-     */
+    * set 指定分配的secondaryIp地址
+    *
+    * @param secondaryIps
+    */
     public AssignNetworkInterfaceSecondaryIps secondaryIps(List<String> secondaryIps) {
         this.secondaryIps = secondaryIps;
         return this;
     }
+
 
     /**
      * set 指定自动分配的secondaryIp个数
@@ -194,6 +203,7 @@ public class AssignNetworkInterfaceSecondaryIps  implements java.io.Serializable
         return this;
     }
 
+
     /**
      * set 指定分配的网段掩码长度, 支持26、27、28，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
      *
@@ -203,6 +213,7 @@ public class AssignNetworkInterfaceSecondaryIps  implements java.io.Serializable
         this.secondaryIpMaskLen = secondaryIpMaskLen;
         return this;
     }
+
 
 
     /**
@@ -216,5 +227,4 @@ public class AssignNetworkInterfaceSecondaryIps  implements java.io.Serializable
         }
         this.secondaryIps.add(secondaryIp);
     }
-
 }

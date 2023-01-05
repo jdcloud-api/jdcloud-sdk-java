@@ -38,6 +38,7 @@ public class RemoveBandwidthPackageIPSpec  implements java.io.Serializable {
     private String publicIpId;
 
 
+
     /**
      * get 已加入共享带宽包的公网IP的ID，对于弹性公网IP为elasticIpId
      *
@@ -55,6 +56,7 @@ public class RemoveBandwidthPackageIPSpec  implements java.io.Serializable {
     public void setPublicIpId(String publicIpId) {
         this.publicIpId = publicIpId;
     }
+
 
 
     /**

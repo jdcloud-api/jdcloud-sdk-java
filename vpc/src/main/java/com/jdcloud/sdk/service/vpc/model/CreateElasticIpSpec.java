@@ -57,8 +57,8 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
     /**
      * 用户标签
      */
+    
     private List<Tag> userTags;
-
     /**
      * 弹性ip类型，取值：standard(标准公网IP)，edge(边缘公网IP)，默认为standard
      */
@@ -73,6 +73,7 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
      * 预检标识，默认false，dryRun为true时只作检查，不做变更
      */
     private Boolean dryRun;
+
 
 
     /**
@@ -93,6 +94,7 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
         this.maxCount = maxCount;
     }
 
+
     /**
      * get 指定弹性ip地址进行创建，当申请创建多个弹性ip时，必须为空
      *
@@ -110,6 +112,7 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
     public void setElasticIpAddress(String elasticIpAddress) {
         this.elasticIpAddress = elasticIpAddress;
     }
+
 
     /**
      * get 弹性ip规格
@@ -129,23 +132,25 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
         this.elasticIpSpec = elasticIpSpec;
     }
 
+
     /**
-     * get 用户标签
-     *
-     * @return
-     */
+    * get 用户标签
+    *
+    * @return
+    */
     public List<Tag> getUserTags() {
         return userTags;
     }
 
     /**
-     * set 用户标签
-     *
-     * @param userTags
-     */
+    * set 用户标签
+    *
+    * @param userTags
+    */
     public void setUserTags(List<Tag> userTags) {
         this.userTags = userTags;
     }
+
 
     /**
      * get 弹性ip类型，取值：standard(标准公网IP)，edge(边缘公网IP)，默认为standard
@@ -165,6 +170,7 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
         this.ipType = ipType;
     }
 
+
     /**
      * get 资源所属资源组ID
      *
@@ -182,6 +188,7 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
     public void setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
     }
+
 
     /**
      * get 预检标识，默认false，dryRun为true时只作检查，不做变更
@@ -202,6 +209,7 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 购买弹性ip数量；取值范围：[1,100]
      *
@@ -211,6 +219,7 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
         this.maxCount = maxCount;
         return this;
     }
+
 
     /**
      * set 指定弹性ip地址进行创建，当申请创建多个弹性ip时，必须为空
@@ -222,6 +231,7 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 弹性ip规格
      *
@@ -232,15 +242,17 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 用户标签
-     *
-     * @param userTags
-     */
+    * set 用户标签
+    *
+    * @param userTags
+    */
     public CreateElasticIpSpec userTags(List<Tag> userTags) {
         this.userTags = userTags;
         return this;
     }
+
 
     /**
      * set 弹性ip类型，取值：standard(标准公网IP)，edge(边缘公网IP)，默认为standard
@@ -252,6 +264,7 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源所属资源组ID
      *
@@ -262,6 +275,7 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 预检标识，默认false，dryRun为true时只作检查，不做变更
      *
@@ -271,6 +285,7 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
         this.dryRun = dryRun;
         return this;
     }
+
 
 
     /**
@@ -284,5 +299,4 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
         }
         this.userTags.add(userTag);
     }
-
 }

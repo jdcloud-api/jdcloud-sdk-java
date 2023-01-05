@@ -61,6 +61,7 @@ public class CreateNetworkSecurityGroupRequest extends JdcloudRequest implements
     private String regionId;
 
 
+
     /**
      * get 私有网络ID
      *
@@ -78,6 +79,7 @@ public class CreateNetworkSecurityGroupRequest extends JdcloudRequest implements
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
     /**
      * get 安全组名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -97,6 +99,7 @@ public class CreateNetworkSecurityGroupRequest extends JdcloudRequest implements
         this.networkSecurityGroupName = networkSecurityGroupName;
     }
 
+
     /**
      * get 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -114,6 +117,7 @@ public class CreateNetworkSecurityGroupRequest extends JdcloudRequest implements
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get Region ID
@@ -134,6 +138,7 @@ public class CreateNetworkSecurityGroupRequest extends JdcloudRequest implements
     }
 
 
+
     /**
      * set 私有网络ID
      *
@@ -143,6 +148,7 @@ public class CreateNetworkSecurityGroupRequest extends JdcloudRequest implements
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set 安全组名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -154,6 +160,7 @@ public class CreateNetworkSecurityGroupRequest extends JdcloudRequest implements
         return this;
     }
 
+
     /**
      * set 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -163,6 +170,7 @@ public class CreateNetworkSecurityGroupRequest extends JdcloudRequest implements
         this.description = description;
         return this;
     }
+
 
     /**
      * set Region ID

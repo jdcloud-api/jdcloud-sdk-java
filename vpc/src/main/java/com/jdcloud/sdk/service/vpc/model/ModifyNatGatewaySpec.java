@@ -53,6 +53,7 @@ public class ModifyNatGatewaySpec  implements java.io.Serializable {
     private String natGatewaySpec;
 
 
+
     /**
      * get NAT网关名称
      *
@@ -70,6 +71,7 @@ public class ModifyNatGatewaySpec  implements java.io.Serializable {
     public void setNatGatewayName(String natGatewayName) {
         this.natGatewayName = natGatewayName;
     }
+
 
     /**
      * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -89,6 +91,7 @@ public class ModifyNatGatewaySpec  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get NAT网关公网IP的限速（单位：Mbps）。计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
      *
@@ -106,6 +109,7 @@ public class ModifyNatGatewaySpec  implements java.io.Serializable {
     public void setBandwidthMbps(Integer bandwidthMbps) {
         this.bandwidthMbps = bandwidthMbps;
     }
+
 
     /**
      * get NAT网关规格，取值small（100万并发连接数）,medium(300万并发连接数),large（1000万并发连接数）
@@ -126,6 +130,7 @@ public class ModifyNatGatewaySpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set NAT网关名称
      *
@@ -135,6 +140,7 @@ public class ModifyNatGatewaySpec  implements java.io.Serializable {
         this.natGatewayName = natGatewayName;
         return this;
     }
+
 
     /**
      * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -146,6 +152,7 @@ public class ModifyNatGatewaySpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set NAT网关公网IP的限速（单位：Mbps）。计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
      *
@@ -155,6 +162,7 @@ public class ModifyNatGatewaySpec  implements java.io.Serializable {
         this.bandwidthMbps = bandwidthMbps;
         return this;
     }
+
 
     /**
      * set NAT网关规格，取值small（100万并发连接数）,medium(300万并发连接数),large（1000万并发连接数）

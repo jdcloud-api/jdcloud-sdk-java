@@ -38,6 +38,7 @@ public class NetworkInterfaceIpv6Address  implements java.io.Serializable {
     private String ipv6Address;
 
 
+
     /**
      * get 弹性网卡ipv6地址
      *
@@ -55,6 +56,7 @@ public class NetworkInterfaceIpv6Address  implements java.io.Serializable {
     public void setIpv6Address(String ipv6Address) {
         this.ipv6Address = ipv6Address;
     }
+
 
 
     /**

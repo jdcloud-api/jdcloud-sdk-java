@@ -42,8 +42,8 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
     /**
      * 指定分配的secondaryIp地址
      */
+    
     private List<String> secondaryIps;
-
     /**
      * 指定自动分配的secondaryIp个数
      */
@@ -58,6 +58,7 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
      * 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
      */
     private String secondaryIpAddress;
+
 
 
     /**
@@ -78,23 +79,25 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
         this.force = force;
     }
 
+
     /**
-     * get 指定分配的secondaryIp地址
-     *
-     * @return
-     */
+    * get 指定分配的secondaryIp地址
+    *
+    * @return
+    */
     public List<String> getSecondaryIps() {
         return secondaryIps;
     }
 
     /**
-     * set 指定分配的secondaryIp地址
-     *
-     * @param secondaryIps
-     */
+    * set 指定分配的secondaryIp地址
+    *
+    * @param secondaryIps
+    */
     public void setSecondaryIps(List<String> secondaryIps) {
         this.secondaryIps = secondaryIps;
     }
+
 
     /**
      * get 指定自动分配的secondaryIp个数
@@ -114,6 +117,7 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
         this.secondaryIpCount = secondaryIpCount;
     }
 
+
     /**
      * get 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
      *
@@ -131,6 +135,7 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
     public void setSecondaryIpMaskLen(Integer secondaryIpMaskLen) {
         this.secondaryIpMaskLen = secondaryIpMaskLen;
     }
+
 
     /**
      * get 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
@@ -151,6 +156,7 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配；按网段分配时，默认非抢占重分配，指定IP或者个数时，默认抢占重分配。
      *
@@ -161,15 +167,17 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 指定分配的secondaryIp地址
-     *
-     * @param secondaryIps
-     */
+    * set 指定分配的secondaryIp地址
+    *
+    * @param secondaryIps
+    */
     public AssignSecondaryIpsSpec secondaryIps(List<String> secondaryIps) {
         this.secondaryIps = secondaryIps;
         return this;
     }
+
 
     /**
      * set 指定自动分配的secondaryIp个数
@@ -181,6 +189,7 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
      *
@@ -191,6 +200,7 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
      *
@@ -200,6 +210,7 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
         this.secondaryIpAddress = secondaryIpAddress;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
         }
         this.secondaryIps.add(secondaryIp);
     }
-
 }

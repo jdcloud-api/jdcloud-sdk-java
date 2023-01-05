@@ -40,37 +40,40 @@ public class ModifyRouteTableRulesSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<ModifyRouteTableRules> modifyRouteTableRuleSpecs;
 
 
     /**
-     * get 路由表规则信息
-     *
-     * @return
-     */
+    * get 路由表规则信息
+    *
+    * @return
+    */
     public List<ModifyRouteTableRules> getModifyRouteTableRuleSpecs() {
         return modifyRouteTableRuleSpecs;
     }
 
     /**
-     * set 路由表规则信息
-     *
-     * @param modifyRouteTableRuleSpecs
-     */
+    * set 路由表规则信息
+    *
+    * @param modifyRouteTableRuleSpecs
+    */
     public void setModifyRouteTableRuleSpecs(List<ModifyRouteTableRules> modifyRouteTableRuleSpecs) {
         this.modifyRouteTableRuleSpecs = modifyRouteTableRuleSpecs;
     }
 
 
+
     /**
-     * set 路由表规则信息
-     *
-     * @param modifyRouteTableRuleSpecs
-     */
+    * set 路由表规则信息
+    *
+    * @param modifyRouteTableRuleSpecs
+    */
     public ModifyRouteTableRulesSpec modifyRouteTableRuleSpecs(List<ModifyRouteTableRules> modifyRouteTableRuleSpecs) {
         this.modifyRouteTableRuleSpecs = modifyRouteTableRuleSpecs;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class ModifyRouteTableRulesSpec  implements java.io.Serializable {
         }
         this.modifyRouteTableRuleSpecs.add(modifyRouteTableRuleSpec);
     }
-
 }

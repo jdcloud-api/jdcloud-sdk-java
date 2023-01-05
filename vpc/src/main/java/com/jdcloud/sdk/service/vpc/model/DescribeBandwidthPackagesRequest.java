@@ -67,24 +67,25 @@ public class DescribeBandwidthPackagesRequest extends JdcloudRequest implements 
 name - 共享带宽包名称，支持单个进行精确搜索
 
      */
+    
     private List<Filter> filters;
-
     /**
      * Tag筛选条件
      */
+    
     private List<TagFilter> tags;
-
     /**
      * 资源组筛选条件
      */
+    
     private List<String> resourceGroupIds;
-
     /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -105,6 +106,7 @@ name - 共享带宽包名称，支持单个进行精确搜索
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围为[10,100]
      *
@@ -123,63 +125,67 @@ name - 共享带宽包名称，支持单个进行精确搜索
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get bwpIds - 共享带宽包ID，支持多个进行精确搜索
+    * get bwpIds - 共享带宽包ID，支持多个进行精确搜索
 name - 共享带宽包名称，支持单个进行精确搜索
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set bwpIds - 共享带宽包ID，支持多个进行精确搜索
+    * set bwpIds - 共享带宽包ID，支持多个进行精确搜索
 name - 共享带宽包名称，支持单个进行精确搜索
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
+
     /**
-     * get Tag筛选条件
-     *
-     * @return
-     */
+    * get Tag筛选条件
+    *
+    * @return
+    */
     public List<TagFilter> getTags() {
         return tags;
     }
 
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public void setTags(List<TagFilter> tags) {
         this.tags = tags;
     }
 
+
     /**
-     * get 资源组筛选条件
-     *
-     * @return
-     */
+    * get 资源组筛选条件
+    *
+    * @return
+    */
     public List<String> getResourceGroupIds() {
         return resourceGroupIds;
     }
 
     /**
-     * set 资源组筛选条件
-     *
-     * @param resourceGroupIds
-     */
+    * set 资源组筛选条件
+    *
+    * @param resourceGroupIds
+    */
     public void setResourceGroupIds(List<String> resourceGroupIds) {
         this.resourceGroupIds = resourceGroupIds;
     }
+
 
     /**
      * get Region ID
@@ -200,6 +206,7 @@ name - 共享带宽包名称，支持单个进行精确搜索
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
      *
@@ -209,6 +216,7 @@ name - 共享带宽包名称，支持单个进行精确搜索
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围为[10,100]
@@ -220,37 +228,41 @@ name - 共享带宽包名称，支持单个进行精确搜索
         return this;
     }
 
+
     /**
-     * set bwpIds - 共享带宽包ID，支持多个进行精确搜索
+    * set bwpIds - 共享带宽包ID，支持多个进行精确搜索
 name - 共享带宽包名称，支持单个进行精确搜索
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeBandwidthPackagesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public DescribeBandwidthPackagesRequest tags(List<TagFilter> tags) {
         this.tags = tags;
         return this;
     }
 
+
     /**
-     * set 资源组筛选条件
-     *
-     * @param resourceGroupIds
-     */
+    * set 资源组筛选条件
+    *
+    * @param resourceGroupIds
+    */
     public DescribeBandwidthPackagesRequest resourceGroupIds(List<String> resourceGroupIds) {
         this.resourceGroupIds = resourceGroupIds;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -261,6 +273,7 @@ name - 共享带宽包名称，支持单个进行精确搜索
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -300,5 +313,4 @@ name - 共享带宽包名称，支持单个进行精确搜索
         }
         this.resourceGroupIds.add(resourceGroupId);
     }
-
 }

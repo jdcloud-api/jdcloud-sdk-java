@@ -34,7 +34,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
  * 
 向共享带宽包内增加公网IP
 
-## 接口说明 
+## 接口说明
 
 - 确保已有至少一个共享带宽包资源。
 
@@ -60,8 +60,8 @@ public class AddBandwidthPackageIPRequest extends JdcloudRequest implements java
      * Required:true
      */
     @Required
+    
     private List<AddBandwidthPackageIPSpec> bandwidthPackageIPSpecs;
-
     /**
      * Region ID
      * Required:true
@@ -77,23 +77,25 @@ public class AddBandwidthPackageIPRequest extends JdcloudRequest implements java
     private String bandwidthPackageId;
 
 
+
     /**
-     * get Ip列表
-     *
-     * @return
-     */
+    * get Ip列表
+    *
+    * @return
+    */
     public List<AddBandwidthPackageIPSpec> getBandwidthPackageIPSpecs() {
         return bandwidthPackageIPSpecs;
     }
 
     /**
-     * set Ip列表
-     *
-     * @param bandwidthPackageIPSpecs
-     */
+    * set Ip列表
+    *
+    * @param bandwidthPackageIPSpecs
+    */
     public void setBandwidthPackageIPSpecs(List<AddBandwidthPackageIPSpec> bandwidthPackageIPSpecs) {
         this.bandwidthPackageIPSpecs = bandwidthPackageIPSpecs;
     }
+
 
     /**
      * get Region ID
@@ -112,6 +114,7 @@ public class AddBandwidthPackageIPRequest extends JdcloudRequest implements java
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 共享带宽包ID
@@ -132,15 +135,17 @@ public class AddBandwidthPackageIPRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
-     * set Ip列表
-     *
-     * @param bandwidthPackageIPSpecs
-     */
+    * set Ip列表
+    *
+    * @param bandwidthPackageIPSpecs
+    */
     public AddBandwidthPackageIPRequest bandwidthPackageIPSpecs(List<AddBandwidthPackageIPSpec> bandwidthPackageIPSpecs) {
         this.bandwidthPackageIPSpecs = bandwidthPackageIPSpecs;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -152,6 +157,7 @@ public class AddBandwidthPackageIPRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 共享带宽包ID
      *
@@ -161,6 +167,7 @@ public class AddBandwidthPackageIPRequest extends JdcloudRequest implements java
         this.bandwidthPackageId = bandwidthPackageId;
         return this;
     }
+
 
 
     /**
@@ -174,5 +181,4 @@ public class AddBandwidthPackageIPRequest extends JdcloudRequest implements java
         }
         this.bandwidthPackageIPSpecs.add(bandwidthPackageIPSpec);
     }
-
 }

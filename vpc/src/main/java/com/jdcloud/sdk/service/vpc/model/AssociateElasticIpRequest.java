@@ -64,6 +64,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     private String networkInterfaceId;
 
 
+
     /**
      * get 绑定的弹性Ip Id
      *
@@ -81,6 +82,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     public void setElasticIpId(String elasticIpId) {
         this.elasticIpId = elasticIpId;
     }
+
 
     /**
      * get 绑定弹性Ip到指定的privateIp
@@ -100,6 +102,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
         this.privateIpAddress = privateIpAddress;
     }
 
+
     /**
      * get 绑定的弹性Ip地址
      *
@@ -118,6 +121,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
         this.elasticIpAddress = elasticIpAddress;
     }
 
+
     /**
      * get Region ID
      *
@@ -135,6 +139,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get networkInterface ID
@@ -155,6 +160,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 绑定的弹性Ip Id
      *
@@ -164,6 +170,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
         this.elasticIpId = elasticIpId;
         return this;
     }
+
 
     /**
      * set 绑定弹性Ip到指定的privateIp
@@ -175,6 +182,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 绑定的弹性Ip地址
      *
@@ -185,6 +193,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -194,6 +203,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set networkInterface ID

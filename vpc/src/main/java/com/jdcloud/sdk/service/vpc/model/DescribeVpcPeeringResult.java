@@ -40,6 +40,7 @@ public class DescribeVpcPeeringResult extends JdcloudResult implements java.io.S
     private VpcPeering vpcPeering;
 
 
+
     /**
      * get VpcPeering资源信息
      *
@@ -57,6 +58,7 @@ public class DescribeVpcPeeringResult extends JdcloudResult implements java.io.S
     public void setVpcPeering(VpcPeering vpcPeering) {
         this.vpcPeering = vpcPeering;
     }
+
 
 
     /**

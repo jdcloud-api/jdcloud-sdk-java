@@ -46,6 +46,7 @@ public class ModifyBandwidthPackageIpBandwidthSpec  implements java.io.Serializa
     private Integer bandwidthMbps;
 
 
+
     /**
      * get 公网IP ID，当为弹性公网IP时，为elasticIpId。
      *
@@ -63,6 +64,7 @@ public class ModifyBandwidthPackageIpBandwidthSpec  implements java.io.Serializa
     public void setPublicIpId(String publicIpId) {
         this.publicIpId = publicIpId;
     }
+
 
     /**
      * get 单个公网IP带宽上限，单位为Mbps，大小不能超过共享带宽包的带宽上限，还可配置0和-1，0表示禁止流量通过， -1表示关闭单个公网IP带宽限速，默认值为-1
@@ -83,6 +85,7 @@ public class ModifyBandwidthPackageIpBandwidthSpec  implements java.io.Serializa
     }
 
 
+
     /**
      * set 公网IP ID，当为弹性公网IP时，为elasticIpId。
      *
@@ -92,6 +95,7 @@ public class ModifyBandwidthPackageIpBandwidthSpec  implements java.io.Serializa
         this.publicIpId = publicIpId;
         return this;
     }
+
 
     /**
      * set 单个公网IP带宽上限，单位为Mbps，大小不能超过共享带宽包的带宽上限，还可配置0和-1，0表示禁止流量通过， -1表示关闭单个公网IP带宽限速，默认值为-1

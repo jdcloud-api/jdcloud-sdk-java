@@ -68,6 +68,7 @@ public class CreateVpcPeeringRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
      * get VpcPeering的名字,不为空。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -85,6 +86,7 @@ public class CreateVpcPeeringRequest extends JdcloudRequest implements java.io.S
     public void setVpcPeeringName(String vpcPeeringName) {
         this.vpcPeeringName = vpcPeeringName;
     }
+
 
     /**
      * get VpcPeering本端Vpc的Id
@@ -104,6 +106,7 @@ public class CreateVpcPeeringRequest extends JdcloudRequest implements java.io.S
         this.vpcId = vpcId;
     }
 
+
     /**
      * get VpcPeering对端Vpc的Id
      *
@@ -122,6 +125,7 @@ public class CreateVpcPeeringRequest extends JdcloudRequest implements java.io.S
         this.remoteVpcId = remoteVpcId;
     }
 
+
     /**
      * get VpcPeering 描述，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -139,6 +143,7 @@ public class CreateVpcPeeringRequest extends JdcloudRequest implements java.io.S
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get Region ID
@@ -159,6 +164,7 @@ public class CreateVpcPeeringRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set VpcPeering的名字,不为空。名称取值范围：1-32个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -168,6 +174,7 @@ public class CreateVpcPeeringRequest extends JdcloudRequest implements java.io.S
         this.vpcPeeringName = vpcPeeringName;
         return this;
     }
+
 
     /**
      * set VpcPeering本端Vpc的Id
@@ -179,6 +186,7 @@ public class CreateVpcPeeringRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set VpcPeering对端Vpc的Id
      *
@@ -189,6 +197,7 @@ public class CreateVpcPeeringRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set VpcPeering 描述，取值范围：0-256个中文、英文大小写的字母、数字和下划线分隔符
      *
@@ -198,6 +207,7 @@ public class CreateVpcPeeringRequest extends JdcloudRequest implements java.io.S
         this.description = description;
         return this;
     }
+
 
     /**
      * set Region ID

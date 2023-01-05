@@ -68,8 +68,8 @@ public class NatGateway  implements java.io.Serializable {
     /**
      * NAT网关可用区属性
      */
+    
     private List<String> azs;
-
     /**
      * 私有网络ID
      */
@@ -81,10 +81,20 @@ public class NatGateway  implements java.io.Serializable {
     private String subnetId;
 
     /**
-     * NAT网关的IP可用区属性
+     * NAT网关私有IP地址
      */
-    private List<AzIp> azIp;
+    private String privateIpAddress;
 
+    /**
+     * NAT网关公网IP
+     */
+    
+    private List<NatGatewayElasticIp> elasticIps;
+    /**
+     * NAT网关的IP可用区属性,即将废弃
+     */
+    
+    private List<AzIp> azIp;
     /**
      * NAT网关创建时间
      */
@@ -93,7 +103,13 @@ public class NatGateway  implements java.io.Serializable {
     /**
      * Tag信息
      */
+    
     private List<Tag> tags;
+    /**
+     * 包含下一跳为本NAT网关路由的子网路由表id列表
+     */
+    
+    private List<String> routeTableIds;
 
 
     /**
@@ -114,6 +130,7 @@ public class NatGateway  implements java.io.Serializable {
         this.natGatewayId = natGatewayId;
     }
 
+
     /**
      * get NAT网关名称
      *
@@ -131,6 +148,7 @@ public class NatGateway  implements java.io.Serializable {
     public void setNatGatewayName(String natGatewayName) {
         this.natGatewayName = natGatewayName;
     }
+
 
     /**
      * get NAT网关规格，取值small（100万并发连接数），medium（300万并发连接数），large（1000万并发连接数）
@@ -150,6 +168,7 @@ public class NatGateway  implements java.io.Serializable {
         this.natGatewaySpec = natGatewaySpec;
     }
 
+
     /**
      * get NAT网关的状态
      *
@@ -167,6 +186,7 @@ public class NatGateway  implements java.io.Serializable {
     public void setState(NatGatewayState state) {
         this.state = state;
     }
+
 
     /**
      * get NAT网关的描述信息
@@ -186,6 +206,7 @@ public class NatGateway  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get NAT网关计费配置
      *
@@ -204,23 +225,25 @@ public class NatGateway  implements java.io.Serializable {
         this.natGatewayCharge = natGatewayCharge;
     }
 
+
     /**
-     * get NAT网关可用区属性
-     *
-     * @return
-     */
+    * get NAT网关可用区属性
+    *
+    * @return
+    */
     public List<String> getAzs() {
         return azs;
     }
 
     /**
-     * set NAT网关可用区属性
-     *
-     * @param azs
-     */
+    * set NAT网关可用区属性
+    *
+    * @param azs
+    */
     public void setAzs(List<String> azs) {
         this.azs = azs;
     }
+
 
     /**
      * get 私有网络ID
@@ -240,6 +263,7 @@ public class NatGateway  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 子网ID
      *
@@ -258,23 +282,63 @@ public class NatGateway  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+
     /**
-     * get NAT网关的IP可用区属性
+     * get NAT网关私有IP地址
      *
      * @return
      */
+    public String getPrivateIpAddress() {
+        return privateIpAddress;
+    }
+
+    /**
+     * set NAT网关私有IP地址
+     *
+     * @param privateIpAddress
+     */
+    public void setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+    }
+
+
+    /**
+    * get NAT网关公网IP
+    *
+    * @return
+    */
+    public List<NatGatewayElasticIp> getElasticIps() {
+        return elasticIps;
+    }
+
+    /**
+    * set NAT网关公网IP
+    *
+    * @param elasticIps
+    */
+    public void setElasticIps(List<NatGatewayElasticIp> elasticIps) {
+        this.elasticIps = elasticIps;
+    }
+
+
+    /**
+    * get NAT网关的IP可用区属性,即将废弃
+    *
+    * @return
+    */
     public List<AzIp> getAzIp() {
         return azIp;
     }
 
     /**
-     * set NAT网关的IP可用区属性
-     *
-     * @param azIp
-     */
+    * set NAT网关的IP可用区属性,即将废弃
+    *
+    * @param azIp
+    */
     public void setAzIp(List<AzIp> azIp) {
         this.azIp = azIp;
     }
+
 
     /**
      * get NAT网关创建时间
@@ -294,23 +358,44 @@ public class NatGateway  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+
     /**
-     * get Tag信息
-     *
-     * @return
-     */
+    * get Tag信息
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set Tag信息
-     *
-     * @param tags
-     */
+    * set Tag信息
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
+
+    /**
+    * get 包含下一跳为本NAT网关路由的子网路由表id列表
+    *
+    * @return
+    */
+    public List<String> getRouteTableIds() {
+        return routeTableIds;
+    }
+
+    /**
+    * set 包含下一跳为本NAT网关路由的子网路由表id列表
+    *
+    * @param routeTableIds
+    */
+    public void setRouteTableIds(List<String> routeTableIds) {
+        this.routeTableIds = routeTableIds;
+    }
+
 
 
     /**
@@ -323,6 +408,7 @@ public class NatGateway  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set NAT网关名称
      *
@@ -332,6 +418,7 @@ public class NatGateway  implements java.io.Serializable {
         this.natGatewayName = natGatewayName;
         return this;
     }
+
 
     /**
      * set NAT网关规格，取值small（100万并发连接数），medium（300万并发连接数），large（1000万并发连接数）
@@ -343,6 +430,7 @@ public class NatGateway  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set NAT网关的状态
      *
@@ -352,6 +440,7 @@ public class NatGateway  implements java.io.Serializable {
         this.state = state;
         return this;
     }
+
 
     /**
      * set NAT网关的描述信息
@@ -363,6 +452,7 @@ public class NatGateway  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set NAT网关计费配置
      *
@@ -373,15 +463,17 @@ public class NatGateway  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set NAT网关可用区属性
-     *
-     * @param azs
-     */
+    * set NAT网关可用区属性
+    *
+    * @param azs
+    */
     public NatGateway azs(List<String> azs) {
         this.azs = azs;
         return this;
     }
+
 
     /**
      * set 私有网络ID
@@ -393,6 +485,7 @@ public class NatGateway  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网ID
      *
@@ -403,15 +496,39 @@ public class NatGateway  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set NAT网关的IP可用区属性
+     * set NAT网关私有IP地址
      *
-     * @param azIp
+     * @param privateIpAddress
      */
+    public NatGateway privateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+
+
+    /**
+    * set NAT网关公网IP
+    *
+    * @param elasticIps
+    */
+    public NatGateway elasticIps(List<NatGatewayElasticIp> elasticIps) {
+        this.elasticIps = elasticIps;
+        return this;
+    }
+
+
+    /**
+    * set NAT网关的IP可用区属性,即将废弃
+    *
+    * @param azIp
+    */
     public NatGateway azIp(List<AzIp> azIp) {
         this.azIp = azIp;
         return this;
     }
+
 
     /**
      * set NAT网关创建时间
@@ -423,15 +540,28 @@ public class NatGateway  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set Tag信息
-     *
-     * @param tags
-     */
+    * set Tag信息
+    *
+    * @param tags
+    */
     public NatGateway tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
+
+    /**
+    * set 包含下一跳为本NAT网关路由的子网路由表id列表
+    *
+    * @param routeTableIds
+    */
+    public NatGateway routeTableIds(List<String> routeTableIds) {
+        this.routeTableIds = routeTableIds;
+        return this;
+    }
+
 
 
     /**
@@ -447,7 +577,19 @@ public class NatGateway  implements java.io.Serializable {
     }
 
     /**
-     * add item to NAT网关的IP可用区属性
+     * add item to NAT网关公网IP
+     *
+     * @param elasticIp
+     */
+    public void addElasticIp(NatGatewayElasticIp elasticIp) {
+        if (this.elasticIps == null) {
+            this.elasticIps = new ArrayList<>();
+        }
+        this.elasticIps.add(elasticIp);
+    }
+
+    /**
+     * add item to NAT网关的IP可用区属性,即将废弃
      *
      * @param azIp
      */
@@ -470,4 +612,15 @@ public class NatGateway  implements java.io.Serializable {
         this.tags.add(tag);
     }
 
+    /**
+     * add item to 包含下一跳为本NAT网关路由的子网路由表id列表
+     *
+     * @param routeTableId
+     */
+    public void addRouteTableId(String routeTableId) {
+        if (this.routeTableIds == null) {
+            this.routeTableIds = new ArrayList<>();
+        }
+        this.routeTableIds.add(routeTableId);
+    }
 }

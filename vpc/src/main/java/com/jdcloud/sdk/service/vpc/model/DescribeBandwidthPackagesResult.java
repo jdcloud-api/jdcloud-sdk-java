@@ -53,31 +53,33 @@ public class DescribeBandwidthPackagesResult extends JdcloudResult implements ja
     /**
      * bandwidthPackages
      */
+    
     private List<BandwidthPackage> bandwidthPackages;
-
     /**
      * 总数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get bandwidthPackages
-     *
-     * @return
-     */
+    * get bandwidthPackages
+    *
+    * @return
+    */
     public List<BandwidthPackage> getBandwidthPackages() {
         return bandwidthPackages;
     }
 
     /**
-     * set bandwidthPackages
-     *
-     * @param bandwidthPackages
-     */
+    * set bandwidthPackages
+    *
+    * @param bandwidthPackages
+    */
     public void setBandwidthPackages(List<BandwidthPackage> bandwidthPackages) {
         this.bandwidthPackages = bandwidthPackages;
     }
+
 
     /**
      * get 总数量
@@ -98,15 +100,17 @@ public class DescribeBandwidthPackagesResult extends JdcloudResult implements ja
     }
 
 
+
     /**
-     * set bandwidthPackages
-     *
-     * @param bandwidthPackages
-     */
+    * set bandwidthPackages
+    *
+    * @param bandwidthPackages
+    */
     public DescribeBandwidthPackagesResult bandwidthPackages(List<BandwidthPackage> bandwidthPackages) {
         this.bandwidthPackages = bandwidthPackages;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -117,6 +121,7 @@ public class DescribeBandwidthPackagesResult extends JdcloudResult implements ja
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -130,5 +135,4 @@ public class DescribeBandwidthPackagesResult extends JdcloudResult implements ja
         }
         this.bandwidthPackages.add(bandwidthPackage);
     }
-
 }

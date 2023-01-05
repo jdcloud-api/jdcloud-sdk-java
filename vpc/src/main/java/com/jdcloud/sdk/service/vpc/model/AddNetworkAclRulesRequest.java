@@ -42,8 +42,8 @@ public class AddNetworkAclRulesRequest extends JdcloudRequest implements java.io
      * Required:true
      */
     @Required
+    
     private List<AddNetworkAclRuleSpec> networkAclRuleSpecs;
-
     /**
      * Region ID
      * Required:true
@@ -59,23 +59,25 @@ public class AddNetworkAclRulesRequest extends JdcloudRequest implements java.io
     private String networkAclId;
 
 
+
     /**
-     * get networkAcl规则列表
-     *
-     * @return
-     */
+    * get networkAcl规则列表
+    *
+    * @return
+    */
     public List<AddNetworkAclRuleSpec> getNetworkAclRuleSpecs() {
         return networkAclRuleSpecs;
     }
 
     /**
-     * set networkAcl规则列表
-     *
-     * @param networkAclRuleSpecs
-     */
+    * set networkAcl规则列表
+    *
+    * @param networkAclRuleSpecs
+    */
     public void setNetworkAclRuleSpecs(List<AddNetworkAclRuleSpec> networkAclRuleSpecs) {
         this.networkAclRuleSpecs = networkAclRuleSpecs;
     }
+
 
     /**
      * get Region ID
@@ -94,6 +96,7 @@ public class AddNetworkAclRulesRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get networkAclId ID
@@ -114,15 +117,17 @@ public class AddNetworkAclRulesRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
-     * set networkAcl规则列表
-     *
-     * @param networkAclRuleSpecs
-     */
+    * set networkAcl规则列表
+    *
+    * @param networkAclRuleSpecs
+    */
     public AddNetworkAclRulesRequest networkAclRuleSpecs(List<AddNetworkAclRuleSpec> networkAclRuleSpecs) {
         this.networkAclRuleSpecs = networkAclRuleSpecs;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -134,6 +139,7 @@ public class AddNetworkAclRulesRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set networkAclId ID
      *
@@ -143,6 +149,7 @@ public class AddNetworkAclRulesRequest extends JdcloudRequest implements java.io
         this.networkAclId = networkAclId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class AddNetworkAclRulesRequest extends JdcloudRequest implements java.io
         }
         this.networkAclRuleSpecs.add(networkAclRuleSpec);
     }
-
 }

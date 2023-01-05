@@ -43,6 +43,7 @@ public class NatGatewayState  implements java.io.Serializable {
     private String adminStatus;
 
 
+
     /**
      * get NAT网关的状态码，RUNNING,STOPPED
      *
@@ -60,6 +61,7 @@ public class NatGatewayState  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get NAT网关欠费停机状态，UP,DOWN
@@ -80,6 +82,7 @@ public class NatGatewayState  implements java.io.Serializable {
     }
 
 
+
     /**
      * set NAT网关的状态码，RUNNING,STOPPED
      *
@@ -89,6 +92,7 @@ public class NatGatewayState  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set NAT网关欠费停机状态，UP,DOWN

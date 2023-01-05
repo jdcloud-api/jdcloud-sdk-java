@@ -73,6 +73,7 @@ public class Segment  implements java.io.Serializable {
     private String endIp;
 
 
+
     /**
      * get 网段的Id
      *
@@ -90,6 +91,7 @@ public class Segment  implements java.io.Serializable {
     public void setSegmentId(String segmentId) {
         this.segmentId = segmentId;
     }
+
 
     /**
      * get 网段名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -109,6 +111,7 @@ public class Segment  implements java.io.Serializable {
         this.segmentName = segmentName;
     }
 
+
     /**
      * get 网段描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
@@ -126,6 +129,7 @@ public class Segment  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 网络地址段
@@ -145,6 +149,7 @@ public class Segment  implements java.io.Serializable {
         this.addressPrefix = addressPrefix;
     }
 
+
     /**
      * get 网段可用ip数量
      *
@@ -162,6 +167,7 @@ public class Segment  implements java.io.Serializable {
     public void setAvailableIpCount(Integer availableIpCount) {
         this.availableIpCount = availableIpCount;
     }
+
 
     /**
      * get IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：bgp；cn-east-2：bgp
@@ -181,6 +187,7 @@ public class Segment  implements java.io.Serializable {
         this.provider = provider;
     }
 
+
     /**
      * get 网段的起始地址
      *
@@ -198,6 +205,7 @@ public class Segment  implements java.io.Serializable {
     public void setStartIp(String startIp) {
         this.startIp = startIp;
     }
+
 
     /**
      * get 网段的结束地址
@@ -218,6 +226,7 @@ public class Segment  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 网段的Id
      *
@@ -227,6 +236,7 @@ public class Segment  implements java.io.Serializable {
         this.segmentId = segmentId;
         return this;
     }
+
 
     /**
      * set 网段名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -238,6 +248,7 @@ public class Segment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网段描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
@@ -247,6 +258,7 @@ public class Segment  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 网络地址段
@@ -258,6 +270,7 @@ public class Segment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网段可用ip数量
      *
@@ -267,6 +280,7 @@ public class Segment  implements java.io.Serializable {
         this.availableIpCount = availableIpCount;
         return this;
     }
+
 
     /**
      * set IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：bgp；cn-east-2：bgp
@@ -278,6 +292,7 @@ public class Segment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网段的起始地址
      *
@@ -287,6 +302,7 @@ public class Segment  implements java.io.Serializable {
         this.startIp = startIp;
         return this;
     }
+
 
     /**
      * set 网段的结束地址

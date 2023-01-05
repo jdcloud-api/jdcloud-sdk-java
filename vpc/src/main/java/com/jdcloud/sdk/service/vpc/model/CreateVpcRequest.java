@@ -69,6 +69,7 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
     private String regionId;
 
 
+
     /**
      * get 私有网络名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -86,6 +87,7 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
     public void setVpcName(String vpcName) {
         this.vpcName = vpcName;
     }
+
 
     /**
      * get 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
@@ -105,6 +107,7 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
         this.addressPrefix = addressPrefix;
     }
 
+
     /**
      * get vpc描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
@@ -122,6 +125,7 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
@@ -141,6 +145,7 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
         this.azType = azType;
     }
 
+
     /**
      * get VPC可用区，边缘VPC必须指定可用区
      *
@@ -158,6 +163,7 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
     public void setAz(String az) {
         this.az = az;
     }
+
 
     /**
      * get Region ID
@@ -178,6 +184,7 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set 私有网络名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -187,6 +194,7 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
         this.vpcName = vpcName;
         return this;
     }
+
 
     /**
      * set 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
@@ -198,6 +206,7 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set vpc描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
@@ -207,6 +216,7 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
         this.description = description;
         return this;
     }
+
 
     /**
      * set VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
@@ -218,6 +228,7 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set VPC可用区，边缘VPC必须指定可用区
      *
@@ -227,6 +238,7 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
         this.az = az;
         return this;
     }
+
 
     /**
      * set Region ID

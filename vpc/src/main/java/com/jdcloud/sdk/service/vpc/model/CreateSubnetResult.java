@@ -39,6 +39,7 @@ public class CreateSubnetResult extends JdcloudResult implements java.io.Seriali
     private String subnetId;
 
 
+
     /**
      * get 子网ID
      *
@@ -56,6 +57,7 @@ public class CreateSubnetResult extends JdcloudResult implements java.io.Seriali
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
 
     /**

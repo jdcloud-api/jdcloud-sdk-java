@@ -55,6 +55,7 @@ public class CreateBandwidthPackageResult extends JdcloudResult implements java.
     private String requestId;
 
 
+
     /**
      * get 共享带宽包ID
      *
@@ -72,6 +73,7 @@ public class CreateBandwidthPackageResult extends JdcloudResult implements java.
     public void setBandwidthPackageId(String bandwidthPackageId) {
         this.bandwidthPackageId = bandwidthPackageId;
     }
+
 
     /**
      * get 请求ID
@@ -92,6 +94,7 @@ public class CreateBandwidthPackageResult extends JdcloudResult implements java.
     }
 
 
+
     /**
      * set 共享带宽包ID
      *
@@ -101,6 +104,7 @@ public class CreateBandwidthPackageResult extends JdcloudResult implements java.
         this.bandwidthPackageId = bandwidthPackageId;
         return this;
     }
+
 
     /**
      * set 请求ID

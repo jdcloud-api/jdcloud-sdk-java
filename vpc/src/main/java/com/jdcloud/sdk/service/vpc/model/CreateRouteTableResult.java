@@ -39,6 +39,7 @@ public class CreateRouteTableResult extends JdcloudResult implements java.io.Ser
     private String routeTableId;
 
 
+
     /**
      * get 路由表ID
      *
@@ -56,6 +57,7 @@ public class CreateRouteTableResult extends JdcloudResult implements java.io.Ser
     public void setRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
     }
+
 
 
     /**

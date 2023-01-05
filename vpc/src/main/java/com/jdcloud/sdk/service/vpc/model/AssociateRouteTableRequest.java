@@ -37,12 +37,12 @@ public class AssociateRouteTableRequest extends JdcloudRequest implements java.i
     private static final long serialVersionUID = 1L;
 
     /**
-     * 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
+     * 路由表要绑定的子网ID列表, 只有associateType是subnet类型的路由表才支持绑定；subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
      * Required:true
      */
     @Required
+    
     private List<String> subnetIds;
-
     /**
      * Region ID
      * Required:true
@@ -58,23 +58,25 @@ public class AssociateRouteTableRequest extends JdcloudRequest implements java.i
     private String routeTableId;
 
 
+
     /**
-     * get 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
-     *
-     * @return
-     */
+    * get 路由表要绑定的子网ID列表, 只有associateType是subnet类型的路由表才支持绑定；subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
+    *
+    * @return
+    */
     public List<String> getSubnetIds() {
         return subnetIds;
     }
 
     /**
-     * set 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
-     *
-     * @param subnetIds
-     */
+    * set 路由表要绑定的子网ID列表, 只有associateType是subnet类型的路由表才支持绑定；subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
+    *
+    * @param subnetIds
+    */
     public void setSubnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
     }
+
 
     /**
      * get Region ID
@@ -93,6 +95,7 @@ public class AssociateRouteTableRequest extends JdcloudRequest implements java.i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RouteTable ID
@@ -113,15 +116,17 @@ public class AssociateRouteTableRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
-     * set 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
-     *
-     * @param subnetIds
-     */
+    * set 路由表要绑定的子网ID列表, 只有associateType是subnet类型的路由表才支持绑定；subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
+    *
+    * @param subnetIds
+    */
     public AssociateRouteTableRequest subnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -132,6 +137,7 @@ public class AssociateRouteTableRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RouteTable ID
@@ -144,8 +150,9 @@ public class AssociateRouteTableRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
-     * add item to 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
+     * add item to 路由表要绑定的子网ID列表, 只有associateType是subnet类型的路由表才支持绑定；subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
      *
      * @param subnetId
      */
@@ -155,5 +162,4 @@ public class AssociateRouteTableRequest extends JdcloudRequest implements java.i
         }
         this.subnetIds.add(subnetId);
     }
-
 }

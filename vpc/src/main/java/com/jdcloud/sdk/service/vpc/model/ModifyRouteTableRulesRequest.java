@@ -42,8 +42,8 @@ public class ModifyRouteTableRulesRequest extends JdcloudRequest implements java
      * Required:true
      */
     @Required
+    
     private List<ModifyRouteTableRules> modifyRouteTableRuleSpecs;
-
     /**
      * Region ID
      * Required:true
@@ -59,23 +59,25 @@ public class ModifyRouteTableRulesRequest extends JdcloudRequest implements java
     private String routeTableId;
 
 
+
     /**
-     * get 路由表规则信息
-     *
-     * @return
-     */
+    * get 路由表规则信息
+    *
+    * @return
+    */
     public List<ModifyRouteTableRules> getModifyRouteTableRuleSpecs() {
         return modifyRouteTableRuleSpecs;
     }
 
     /**
-     * set 路由表规则信息
-     *
-     * @param modifyRouteTableRuleSpecs
-     */
+    * set 路由表规则信息
+    *
+    * @param modifyRouteTableRuleSpecs
+    */
     public void setModifyRouteTableRuleSpecs(List<ModifyRouteTableRules> modifyRouteTableRuleSpecs) {
         this.modifyRouteTableRuleSpecs = modifyRouteTableRuleSpecs;
     }
+
 
     /**
      * get Region ID
@@ -94,6 +96,7 @@ public class ModifyRouteTableRulesRequest extends JdcloudRequest implements java
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RouteTable ID
@@ -114,15 +117,17 @@ public class ModifyRouteTableRulesRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
-     * set 路由表规则信息
-     *
-     * @param modifyRouteTableRuleSpecs
-     */
+    * set 路由表规则信息
+    *
+    * @param modifyRouteTableRuleSpecs
+    */
     public ModifyRouteTableRulesRequest modifyRouteTableRuleSpecs(List<ModifyRouteTableRules> modifyRouteTableRuleSpecs) {
         this.modifyRouteTableRuleSpecs = modifyRouteTableRuleSpecs;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -134,6 +139,7 @@ public class ModifyRouteTableRulesRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set RouteTable ID
      *
@@ -143,6 +149,7 @@ public class ModifyRouteTableRulesRequest extends JdcloudRequest implements java
         this.routeTableId = routeTableId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class ModifyRouteTableRulesRequest extends JdcloudRequest implements java
         }
         this.modifyRouteTableRuleSpecs.add(modifyRouteTableRuleSpec);
     }
-
 }

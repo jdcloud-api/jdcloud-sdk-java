@@ -41,6 +41,7 @@ public class DisassociateRouteTableSpec  implements java.io.Serializable {
     private String subnetId;
 
 
+
     /**
      * get 路由表要解绑的子网ID，解绑后子网绑定默认路由表
      *
@@ -58,6 +59,7 @@ public class DisassociateRouteTableSpec  implements java.io.Serializable {
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
 
     /**

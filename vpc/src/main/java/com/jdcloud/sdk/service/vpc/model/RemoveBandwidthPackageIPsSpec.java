@@ -40,37 +40,40 @@ public class RemoveBandwidthPackageIPsSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<RemoveBandwidthPackageIPSpec> bandwidthPackageIPSpecs;
 
 
     /**
-     * get 公网IP列表
-     *
-     * @return
-     */
+    * get 公网IP列表
+    *
+    * @return
+    */
     public List<RemoveBandwidthPackageIPSpec> getBandwidthPackageIPSpecs() {
         return bandwidthPackageIPSpecs;
     }
 
     /**
-     * set 公网IP列表
-     *
-     * @param bandwidthPackageIPSpecs
-     */
+    * set 公网IP列表
+    *
+    * @param bandwidthPackageIPSpecs
+    */
     public void setBandwidthPackageIPSpecs(List<RemoveBandwidthPackageIPSpec> bandwidthPackageIPSpecs) {
         this.bandwidthPackageIPSpecs = bandwidthPackageIPSpecs;
     }
 
 
+
     /**
-     * set 公网IP列表
-     *
-     * @param bandwidthPackageIPSpecs
-     */
+    * set 公网IP列表
+    *
+    * @param bandwidthPackageIPSpecs
+    */
     public RemoveBandwidthPackageIPsSpec bandwidthPackageIPSpecs(List<RemoveBandwidthPackageIPSpec> bandwidthPackageIPSpecs) {
         this.bandwidthPackageIPSpecs = bandwidthPackageIPSpecs;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class RemoveBandwidthPackageIPsSpec  implements java.io.Serializable {
         }
         this.bandwidthPackageIPSpecs.add(bandwidthPackageIPSpec);
     }
-
 }

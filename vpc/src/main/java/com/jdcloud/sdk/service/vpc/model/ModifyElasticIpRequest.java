@@ -56,6 +56,7 @@ public class ModifyElasticIpRequest extends JdcloudRequest implements java.io.Se
     private String elasticIpId;
 
 
+
     /**
      * get 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
      *
@@ -74,6 +75,7 @@ public class ModifyElasticIpRequest extends JdcloudRequest implements java.io.Se
         this.bandwidthMbps = bandwidthMbps;
     }
 
+
     /**
      * get Region ID
      *
@@ -91,6 +93,7 @@ public class ModifyElasticIpRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get ElasticIp ID
@@ -111,6 +114,7 @@ public class ModifyElasticIpRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
      *
@@ -121,6 +125,7 @@ public class ModifyElasticIpRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -130,6 +135,7 @@ public class ModifyElasticIpRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set ElasticIp ID

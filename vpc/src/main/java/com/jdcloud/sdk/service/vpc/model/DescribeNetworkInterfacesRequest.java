@@ -52,19 +52,20 @@ public class DescribeNetworkInterfacesRequest extends JdcloudRequest implements 
 networkInterfaceNames - 弹性网卡名称列表，支持多个
 vpcId - 弹性网卡所属vpc Id，支持单个
 subnetId	- 弹性网卡所属子网Id，支持单个
-role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）、Managed （受管网卡），支持单个
+role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）、Managed （受管网卡），支持多个
 azType - 网卡 az类型，取值：all(全部类型)，standard(标准Az网卡)，edge(边缘Az网卡)，默认为all，支持单个
 azs - 可用区 az名，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -85,6 +86,7 @@ azs - 可用区 az名，支持多个
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -103,37 +105,39 @@ azs - 可用区 az名，支持多个
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get networkInterfaceIds - 弹性网卡ID列表，支持多个
+    * get networkInterfaceIds - 弹性网卡ID列表，支持多个
 networkInterfaceNames - 弹性网卡名称列表，支持多个
 vpcId - 弹性网卡所属vpc Id，支持单个
 subnetId	- 弹性网卡所属子网Id，支持单个
-role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）、Managed （受管网卡），支持单个
+role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）、Managed （受管网卡），支持多个
 azType - 网卡 az类型，取值：all(全部类型)，standard(标准Az网卡)，edge(边缘Az网卡)，默认为all，支持单个
 azs - 可用区 az名，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set networkInterfaceIds - 弹性网卡ID列表，支持多个
+    * set networkInterfaceIds - 弹性网卡ID列表，支持多个
 networkInterfaceNames - 弹性网卡名称列表，支持多个
 vpcId - 弹性网卡所属vpc Id，支持单个
 subnetId	- 弹性网卡所属子网Id，支持单个
-role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）、Managed （受管网卡），支持单个
+role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）、Managed （受管网卡），支持多个
 azType - 网卡 az类型，取值：all(全部类型)，standard(标准Az网卡)，edge(边缘Az网卡)，默认为all，支持单个
 azs - 可用区 az名，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get Region ID
@@ -154,6 +158,7 @@ azs - 可用区 az名，支持多个
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
      *
@@ -163,6 +168,7 @@ azs - 可用区 az名，支持多个
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
@@ -174,22 +180,24 @@ azs - 可用区 az名，支持多个
         return this;
     }
 
+
     /**
-     * set networkInterfaceIds - 弹性网卡ID列表，支持多个
+    * set networkInterfaceIds - 弹性网卡ID列表，支持多个
 networkInterfaceNames - 弹性网卡名称列表，支持多个
 vpcId - 弹性网卡所属vpc Id，支持单个
 subnetId	- 弹性网卡所属子网Id，支持单个
-role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）、Managed （受管网卡），支持单个
+role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）、Managed （受管网卡），支持多个
 azType - 网卡 az类型，取值：all(全部类型)，standard(标准Az网卡)，edge(边缘Az网卡)，默认为all，支持单个
 azs - 可用区 az名，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeNetworkInterfacesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -202,12 +210,13 @@ azs - 可用区 az名，支持多个
     }
 
 
+
     /**
      * add item to networkInterfaceIds - 弹性网卡ID列表，支持多个
 networkInterfaceNames - 弹性网卡名称列表，支持多个
 vpcId - 弹性网卡所属vpc Id，支持单个
 subnetId	- 弹性网卡所属子网Id，支持单个
-role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）、Managed （受管网卡），支持单个
+role - 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）、Managed （受管网卡），支持多个
 azType - 网卡 az类型，取值：all(全部类型)，standard(标准Az网卡)，edge(边缘Az网卡)，默认为all，支持单个
 azs - 可用区 az名，支持多个
 
@@ -220,5 +229,4 @@ azs - 可用区 az名，支持多个
         }
         this.filters.add(filter);
     }
-
 }

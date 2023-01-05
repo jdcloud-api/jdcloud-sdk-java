@@ -72,6 +72,7 @@ public class ModifyBandwidthPackageRequest extends JdcloudRequest implements jav
     private String bandwidthPackageId;
 
 
+
     /**
      * get 共享带宽包带宽上限，取值范围200-5000，单位为Mbps，且不能低于共享带宽包内公网IP带宽上限
      *
@@ -89,6 +90,7 @@ public class ModifyBandwidthPackageRequest extends JdcloudRequest implements jav
     public void setBandwidthMbps(Integer bandwidthMbps) {
         this.bandwidthMbps = bandwidthMbps;
     }
+
 
     /**
      * get 名称，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且长度不超过32个字符
@@ -108,6 +110,7 @@ public class ModifyBandwidthPackageRequest extends JdcloudRequest implements jav
         this.name = name;
     }
 
+
     /**
      * get 描述，长度不超过256个字符
      *
@@ -126,6 +129,7 @@ public class ModifyBandwidthPackageRequest extends JdcloudRequest implements jav
         this.description = description;
     }
 
+
     /**
      * get Region ID
      *
@@ -143,6 +147,7 @@ public class ModifyBandwidthPackageRequest extends JdcloudRequest implements jav
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 共享带宽包ID
@@ -163,6 +168,7 @@ public class ModifyBandwidthPackageRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 共享带宽包带宽上限，取值范围200-5000，单位为Mbps，且不能低于共享带宽包内公网IP带宽上限
      *
@@ -172,6 +178,7 @@ public class ModifyBandwidthPackageRequest extends JdcloudRequest implements jav
         this.bandwidthMbps = bandwidthMbps;
         return this;
     }
+
 
     /**
      * set 名称，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且长度不超过32个字符
@@ -183,6 +190,7 @@ public class ModifyBandwidthPackageRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set 描述，长度不超过256个字符
      *
@@ -193,6 +201,7 @@ public class ModifyBandwidthPackageRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -202,6 +211,7 @@ public class ModifyBandwidthPackageRequest extends JdcloudRequest implements jav
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 共享带宽包ID

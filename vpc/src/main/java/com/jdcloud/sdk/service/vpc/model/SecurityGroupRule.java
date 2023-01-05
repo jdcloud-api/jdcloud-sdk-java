@@ -73,7 +73,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
     private String createdTime;
 
     /**
-     * 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
+     * 描述, 允许输入UTF-8编码下的全部字符，不超过256字符
      */
     private String description;
 
@@ -81,6 +81,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
      * 安全组规则类型, default：默认安全组规则，custom：自定义安全组规则
      */
     private String ruleType;
+
 
 
     /**
@@ -101,6 +102,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
         this.ruleId = ruleId;
     }
 
+
     /**
      * get 安全组规则方向。0：入规则; 1：出规则
      *
@@ -118,6 +120,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
     public void setDirection(Number direction) {
         this.direction = direction;
     }
+
 
     /**
      * get 规则限定协议。300:All; 6:TCP; 17:UDP; 1:ICMP
@@ -137,6 +140,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
         this.protocol = protocol;
     }
 
+
     /**
      * get 匹配地址前缀
      *
@@ -154,6 +158,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
     public void setAddressPrefix(String addressPrefix) {
         this.addressPrefix = addressPrefix;
     }
+
 
     /**
      * get 匹配地址协议版本。4：IPv4
@@ -173,6 +178,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
         this.ipVersion = ipVersion;
     }
 
+
     /**
      * get 规则限定起始传输层端口, 默认1 ，若protocal不是传输层协议，恒为0
      *
@@ -190,6 +196,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
     public void setFromPort(Number fromPort) {
         this.fromPort = fromPort;
     }
+
 
     /**
      * get 规则限定终止传输层端口, 默认1 ，若protocal不是传输层协议，恒为0
@@ -209,6 +216,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
         this.toPort = toPort;
     }
 
+
     /**
      * get 安全组规则创建时间
      *
@@ -227,8 +235,9 @@ public class SecurityGroupRule  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+
     /**
-     * get 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
+     * get 描述, 允许输入UTF-8编码下的全部字符，不超过256字符
      *
      * @return
      */
@@ -237,13 +246,14 @@ public class SecurityGroupRule  implements java.io.Serializable {
     }
 
     /**
-     * set 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
+     * set 描述, 允许输入UTF-8编码下的全部字符，不超过256字符
      *
      * @param description
      */
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 安全组规则类型, default：默认安全组规则，custom：自定义安全组规则
@@ -264,6 +274,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 安全组规则ID
      *
@@ -273,6 +284,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
         this.ruleId = ruleId;
         return this;
     }
+
 
     /**
      * set 安全组规则方向。0：入规则; 1：出规则
@@ -284,6 +296,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则限定协议。300:All; 6:TCP; 17:UDP; 1:ICMP
      *
@@ -293,6 +306,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
         this.protocol = protocol;
         return this;
     }
+
 
     /**
      * set 匹配地址前缀
@@ -304,6 +318,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配地址协议版本。4：IPv4
      *
@@ -313,6 +328,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
         this.ipVersion = ipVersion;
         return this;
     }
+
 
     /**
      * set 规则限定起始传输层端口, 默认1 ，若protocal不是传输层协议，恒为0
@@ -324,6 +340,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则限定终止传输层端口, 默认1 ，若protocal不是传输层协议，恒为0
      *
@@ -333,6 +350,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
         this.toPort = toPort;
         return this;
     }
+
 
     /**
      * set 安全组规则创建时间
@@ -344,8 +362,9 @@ public class SecurityGroupRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
+     * set 描述, 允许输入UTF-8编码下的全部字符，不超过256字符
      *
      * @param description
      */
@@ -353,6 +372,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 安全组规则类型, default：默认安全组规则，custom：自定义安全组规则

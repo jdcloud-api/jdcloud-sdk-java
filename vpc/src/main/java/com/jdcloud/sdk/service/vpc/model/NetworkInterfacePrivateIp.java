@@ -48,6 +48,7 @@ public class NetworkInterfacePrivateIp  implements java.io.Serializable {
     private String elasticIpAddress;
 
 
+
     /**
      * get 私有IP的IPV4地址
      *
@@ -66,6 +67,7 @@ public class NetworkInterfacePrivateIp  implements java.io.Serializable {
         this.privateIpAddress = privateIpAddress;
     }
 
+
     /**
      * get 弹性IP实例ID
      *
@@ -83,6 +85,7 @@ public class NetworkInterfacePrivateIp  implements java.io.Serializable {
     public void setElasticIpId(String elasticIpId) {
         this.elasticIpId = elasticIpId;
     }
+
 
     /**
      * get 弹性IP实例地址
@@ -103,6 +106,7 @@ public class NetworkInterfacePrivateIp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 私有IP的IPV4地址
      *
@@ -113,6 +117,7 @@ public class NetworkInterfacePrivateIp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 弹性IP实例ID
      *
@@ -122,6 +127,7 @@ public class NetworkInterfacePrivateIp  implements java.io.Serializable {
         this.elasticIpId = elasticIpId;
         return this;
     }
+
 
     /**
      * set 弹性IP实例地址

@@ -39,31 +39,33 @@ public class DescribeNetworkSecurityGroupsResult extends JdcloudResult implement
     /**
      * networkSecurityGroups
      */
+    
     private List<NetworkSecurityGroup> networkSecurityGroups;
-
     /**
      * 总数量
      */
     private Number totalCount;
 
 
+
     /**
-     * get networkSecurityGroups
-     *
-     * @return
-     */
+    * get networkSecurityGroups
+    *
+    * @return
+    */
     public List<NetworkSecurityGroup> getNetworkSecurityGroups() {
         return networkSecurityGroups;
     }
 
     /**
-     * set networkSecurityGroups
-     *
-     * @param networkSecurityGroups
-     */
+    * set networkSecurityGroups
+    *
+    * @param networkSecurityGroups
+    */
     public void setNetworkSecurityGroups(List<NetworkSecurityGroup> networkSecurityGroups) {
         this.networkSecurityGroups = networkSecurityGroups;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeNetworkSecurityGroupsResult extends JdcloudResult implement
     }
 
 
+
     /**
-     * set networkSecurityGroups
-     *
-     * @param networkSecurityGroups
-     */
+    * set networkSecurityGroups
+    *
+    * @param networkSecurityGroups
+    */
     public DescribeNetworkSecurityGroupsResult networkSecurityGroups(List<NetworkSecurityGroup> networkSecurityGroups) {
         this.networkSecurityGroups = networkSecurityGroups;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeNetworkSecurityGroupsResult extends JdcloudResult implement
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeNetworkSecurityGroupsResult extends JdcloudResult implement
         }
         this.networkSecurityGroups.add(networkSecurityGroup);
     }
-
 }

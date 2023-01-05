@@ -39,31 +39,33 @@ public class DescribeVpcsResult extends JdcloudResult implements java.io.Seriali
     /**
      * vpcs
      */
+    
     private List<Vpc> vpcs;
-
     /**
      * 总数量
      */
     private Number totalCount;
 
 
+
     /**
-     * get vpcs
-     *
-     * @return
-     */
+    * get vpcs
+    *
+    * @return
+    */
     public List<Vpc> getVpcs() {
         return vpcs;
     }
 
     /**
-     * set vpcs
-     *
-     * @param vpcs
-     */
+    * set vpcs
+    *
+    * @param vpcs
+    */
     public void setVpcs(List<Vpc> vpcs) {
         this.vpcs = vpcs;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeVpcsResult extends JdcloudResult implements java.io.Seriali
     }
 
 
+
     /**
-     * set vpcs
-     *
-     * @param vpcs
-     */
+    * set vpcs
+    *
+    * @param vpcs
+    */
     public DescribeVpcsResult vpcs(List<Vpc> vpcs) {
         this.vpcs = vpcs;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeVpcsResult extends JdcloudResult implements java.io.Seriali
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeVpcsResult extends JdcloudResult implements java.io.Seriali
         }
         this.vpcs.add(vpc);
     }
-
 }

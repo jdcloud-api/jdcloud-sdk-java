@@ -48,6 +48,7 @@ public class OpModifyNatGatewaySpec  implements java.io.Serializable {
     private String userPin;
 
 
+
     /**
      * get 公网IP的限速（单位：Mbps），取值范围为[1-4000]
      *
@@ -65,6 +66,7 @@ public class OpModifyNatGatewaySpec  implements java.io.Serializable {
     public void setBandwidthMbps(Integer bandwidthMbps) {
         this.bandwidthMbps = bandwidthMbps;
     }
+
 
     /**
      * get 资源所属的用户pin
@@ -85,6 +87,7 @@ public class OpModifyNatGatewaySpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 公网IP的限速（单位：Mbps），取值范围为[1-4000]
      *
@@ -94,6 +97,7 @@ public class OpModifyNatGatewaySpec  implements java.io.Serializable {
         this.bandwidthMbps = bandwidthMbps;
         return this;
     }
+
 
     /**
      * set 资源所属的用户pin

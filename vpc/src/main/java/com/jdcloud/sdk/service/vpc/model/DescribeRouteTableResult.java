@@ -40,6 +40,7 @@ public class DescribeRouteTableResult extends JdcloudResult implements java.io.S
     private RouteTable routeTable;
 
 
+
     /**
      * get 路由表资源信息
      *
@@ -57,6 +58,7 @@ public class DescribeRouteTableResult extends JdcloudResult implements java.io.S
     public void setRouteTable(RouteTable routeTable) {
         this.routeTable = routeTable;
     }
+
 
 
     /**

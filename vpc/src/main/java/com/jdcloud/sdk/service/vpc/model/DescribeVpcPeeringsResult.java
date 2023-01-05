@@ -39,31 +39,33 @@ public class DescribeVpcPeeringsResult extends JdcloudResult implements java.io.
     /**
      * vpcPeerings
      */
+    
     private List<VpcPeering> vpcPeerings;
-
     /**
      * 总数量
      */
     private Number totalCount;
 
 
+
     /**
-     * get vpcPeerings
-     *
-     * @return
-     */
+    * get vpcPeerings
+    *
+    * @return
+    */
     public List<VpcPeering> getVpcPeerings() {
         return vpcPeerings;
     }
 
     /**
-     * set vpcPeerings
-     *
-     * @param vpcPeerings
-     */
+    * set vpcPeerings
+    *
+    * @param vpcPeerings
+    */
     public void setVpcPeerings(List<VpcPeering> vpcPeerings) {
         this.vpcPeerings = vpcPeerings;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeVpcPeeringsResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
-     * set vpcPeerings
-     *
-     * @param vpcPeerings
-     */
+    * set vpcPeerings
+    *
+    * @param vpcPeerings
+    */
     public DescribeVpcPeeringsResult vpcPeerings(List<VpcPeering> vpcPeerings) {
         this.vpcPeerings = vpcPeerings;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeVpcPeeringsResult extends JdcloudResult implements java.io.
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeVpcPeeringsResult extends JdcloudResult implements java.io.
         }
         this.vpcPeerings.add(vpcPeering);
     }
-
 }

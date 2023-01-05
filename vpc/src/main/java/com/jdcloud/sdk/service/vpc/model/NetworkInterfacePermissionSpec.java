@@ -50,6 +50,7 @@ public class NetworkInterfacePermissionSpec  implements java.io.Serializable {
     /**
      * 授权策略, 授权后，该弹性网卡可以关联的服务端账号的资源类型，取值范围，instance-attach：可以关联服务端账号的实例资源，eip-associate：可以关联服务端账号的弹性公网IP资源
      */
+    
     private List<String> policy;
 
 
@@ -71,6 +72,7 @@ public class NetworkInterfacePermissionSpec  implements java.io.Serializable {
         this.networkInterfaceId = networkInterfaceId;
     }
 
+
     /**
      * get 授信用户,需要存在于京东云许可的服务账号名单中
      *
@@ -89,23 +91,25 @@ public class NetworkInterfacePermissionSpec  implements java.io.Serializable {
         this.trustUser = trustUser;
     }
 
+
     /**
-     * get 授权策略, 授权后，该弹性网卡可以关联的服务端账号的资源类型，取值范围，instance-attach：可以关联服务端账号的实例资源，eip-associate：可以关联服务端账号的弹性公网IP资源
-     *
-     * @return
-     */
+    * get 授权策略, 授权后，该弹性网卡可以关联的服务端账号的资源类型，取值范围，instance-attach：可以关联服务端账号的实例资源，eip-associate：可以关联服务端账号的弹性公网IP资源
+    *
+    * @return
+    */
     public List<String> getPolicy() {
         return policy;
     }
 
     /**
-     * set 授权策略, 授权后，该弹性网卡可以关联的服务端账号的资源类型，取值范围，instance-attach：可以关联服务端账号的实例资源，eip-associate：可以关联服务端账号的弹性公网IP资源
-     *
-     * @param policy
-     */
+    * set 授权策略, 授权后，该弹性网卡可以关联的服务端账号的资源类型，取值范围，instance-attach：可以关联服务端账号的实例资源，eip-associate：可以关联服务端账号的弹性公网IP资源
+    *
+    * @param policy
+    */
     public void setPolicy(List<String> policy) {
         this.policy = policy;
     }
+
 
 
     /**
@@ -118,6 +122,7 @@ public class NetworkInterfacePermissionSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 授信用户,需要存在于京东云许可的服务账号名单中
      *
@@ -128,15 +133,17 @@ public class NetworkInterfacePermissionSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 授权策略, 授权后，该弹性网卡可以关联的服务端账号的资源类型，取值范围，instance-attach：可以关联服务端账号的实例资源，eip-associate：可以关联服务端账号的弹性公网IP资源
-     *
-     * @param policy
-     */
+    * set 授权策略, 授权后，该弹性网卡可以关联的服务端账号的资源类型，取值范围，instance-attach：可以关联服务端账号的实例资源，eip-associate：可以关联服务端账号的弹性公网IP资源
+    *
+    * @param policy
+    */
     public NetworkInterfacePermissionSpec policy(List<String> policy) {
         this.policy = policy;
         return this;
     }
+
 
 
     /**
@@ -150,5 +157,4 @@ public class NetworkInterfacePermissionSpec  implements java.io.Serializable {
         }
         this.policy.add(policy);
     }
-
 }
