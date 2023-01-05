@@ -49,6 +49,7 @@ public class DescribeImageConstraintsResult extends JdcloudResult implements jav
     private ImageConstraint imageConstraints;
 
 
+
     /**
      * get 镜像限制信息。
      *
@@ -66,6 +67,7 @@ public class DescribeImageConstraintsResult extends JdcloudResult implements jav
     public void setImageConstraints(ImageConstraint imageConstraints) {
         this.imageConstraints = imageConstraints;
     }
+
 
 
     /**

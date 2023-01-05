@@ -50,31 +50,33 @@ public class ImageTasksResult extends JdcloudResult implements java.io.Serializa
     /**
      * taskSet
      */
+    
     private List<TaskInfo> taskSet;
-
     /**
      * 总数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get taskSet
-     *
-     * @return
-     */
+    * get taskSet
+    *
+    * @return
+    */
     public List<TaskInfo> getTaskSet() {
         return taskSet;
     }
 
     /**
-     * set taskSet
-     *
-     * @param taskSet
-     */
+    * set taskSet
+    *
+    * @param taskSet
+    */
     public void setTaskSet(List<TaskInfo> taskSet) {
         this.taskSet = taskSet;
     }
+
 
     /**
      * get 总数量
@@ -95,15 +97,17 @@ public class ImageTasksResult extends JdcloudResult implements java.io.Serializa
     }
 
 
+
     /**
-     * set taskSet
-     *
-     * @param taskSet
-     */
+    * set taskSet
+    *
+    * @param taskSet
+    */
     public ImageTasksResult taskSet(List<TaskInfo> taskSet) {
         this.taskSet = taskSet;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -114,6 +118,7 @@ public class ImageTasksResult extends JdcloudResult implements java.io.Serializa
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -127,5 +132,4 @@ public class ImageTasksResult extends JdcloudResult implements java.io.Serializa
         }
         this.taskSet.add(taskSet);
     }
-
 }

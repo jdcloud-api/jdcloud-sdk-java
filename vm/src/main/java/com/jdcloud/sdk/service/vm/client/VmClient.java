@@ -511,7 +511,7 @@ public class VmClient extends JdcloudClient {
 
 ## 接口说明
 - 名称、描述、实例模板配置信息至少要传一项。
-- 参数时，对应的参数不做更改。
+- 参数为 null 时，对应的参数不做更改。
 
      *
      * @param request
@@ -532,6 +532,7 @@ public class VmClient extends JdcloudClient {
 - 云主机和云硬盘都没有正在进行中的的任务时才可以操作。
 - 云主机状态必须是 &#x60;running&#x60; 或 &#x60;stopped&#x60; 状态。操作系统盘时必须先停止实例。
 - 实例挂载云硬盘的数量，不能超过实例规格的限制。可查询  [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes)  接口获得指定规格可挂载云硬盘的数量上限。
+- 实例可挂载的云硬盘类型，受实例规格限制。可查询  [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes)  接口获得指定规格支持挂载的云硬盘类型。
 - 云硬盘作为系统盘时，容量不能小于40GB，并且不能超过500GB。
 - 待挂载的云硬盘与云主机实例必须在同一个可用区下。
 - 共享型云硬盘最多可挂载16个云主机实例，并且只能用作数据盘，不能用于系统盘。非共享型云盘最多只能挂载一个云主机实例。
@@ -1315,7 +1316,7 @@ public class VmClient extends JdcloudClient {
 - 不可以删除没有计费信息的云主机，该情况只限于创建过程中出现了异常。
 - 云主机状态必须为运行 &#x60;running&#x60;、停止 &#x60;stopped&#x60;、错误 &#x60;error&#x60;、状态，同时云主机没有正在进行中的任务才可以删除。
 - 如果云主机中挂载的数据盘为按配置计费的云硬盘且 &#x60;AutoDelete&#x60; 属性为 &#x60;true&#x60;，那么数据盘会随云主机一起删除。
-- 云主机中绑定的弹性公网IP不会随云主机一起删除，如果不需要保留，需要单独进行删除，需要使用者注意。
+- 云主机中绑定的弹性公网IP可以选择是否随云主机一起删除。
 - 如出现不能删除的情况请 [提交工单](https://ticket.jdcloud.com/applyorder/submit) 或联系京东云客服。
  [MFA enabled]
      *

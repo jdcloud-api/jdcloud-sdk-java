@@ -43,6 +43,7 @@ public class InstanceTypeBurstInfo  implements java.io.Serializable {
     private Float basePerformance;
 
 
+
     /**
      * get 每小时获得的积分数
      *
@@ -60,6 +61,7 @@ public class InstanceTypeBurstInfo  implements java.io.Serializable {
     public void setCreditsEarnedPerHour(Float creditsEarnedPerHour) {
         this.creditsEarnedPerHour = creditsEarnedPerHour;
     }
+
 
     /**
      * get 基准性能倍率
@@ -80,6 +82,7 @@ public class InstanceTypeBurstInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 每小时获得的积分数
      *
@@ -89,6 +92,7 @@ public class InstanceTypeBurstInfo  implements java.io.Serializable {
         this.creditsEarnedPerHour = creditsEarnedPerHour;
         return this;
     }
+
 
     /**
      * set 基准性能倍率

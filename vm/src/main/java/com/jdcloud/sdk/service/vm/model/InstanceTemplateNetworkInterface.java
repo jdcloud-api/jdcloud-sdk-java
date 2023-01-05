@@ -45,8 +45,8 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
     /**
      * 安全组ID列表。
      */
+    
     private List<String> securityGroups;
-
     /**
      * PortSecurity，源和目标IP地址校验，取值为0或者1。
      */
@@ -56,6 +56,7 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
      * 自动分配的ipv6地址数量，取值范围[0,1]，默认为0
      */
     private Integer ipv6AddressCount;
+
 
 
     /**
@@ -76,23 +77,25 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+
     /**
-     * get 安全组ID列表。
-     *
-     * @return
-     */
+    * get 安全组ID列表。
+    *
+    * @return
+    */
     public List<String> getSecurityGroups() {
         return securityGroups;
     }
 
     /**
-     * set 安全组ID列表。
-     *
-     * @param securityGroups
-     */
+    * set 安全组ID列表。
+    *
+    * @param securityGroups
+    */
     public void setSecurityGroups(List<String> securityGroups) {
         this.securityGroups = securityGroups;
     }
+
 
     /**
      * get PortSecurity，源和目标IP地址校验，取值为0或者1。
@@ -111,6 +114,7 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
     public void setSanityCheck(Integer sanityCheck) {
         this.sanityCheck = sanityCheck;
     }
+
 
     /**
      * get 自动分配的ipv6地址数量，取值范围[0,1]，默认为0
@@ -131,6 +135,7 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 子网ID。
      *
@@ -141,15 +146,17 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 安全组ID列表。
-     *
-     * @param securityGroups
-     */
+    * set 安全组ID列表。
+    *
+    * @param securityGroups
+    */
     public InstanceTemplateNetworkInterface securityGroups(List<String> securityGroups) {
         this.securityGroups = securityGroups;
         return this;
     }
+
 
     /**
      * set PortSecurity，源和目标IP地址校验，取值为0或者1。
@@ -161,6 +168,7 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自动分配的ipv6地址数量，取值范围[0,1]，默认为0
      *
@@ -170,6 +178,7 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
         this.ipv6AddressCount = ipv6AddressCount;
         return this;
     }
+
 
 
     /**
@@ -183,5 +192,4 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
         }
         this.securityGroups.add(securityGroup);
     }
-
 }

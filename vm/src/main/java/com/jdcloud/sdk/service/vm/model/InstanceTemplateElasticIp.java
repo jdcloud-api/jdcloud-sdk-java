@@ -53,6 +53,7 @@ public class InstanceTemplateElasticIp  implements java.io.Serializable {
     private String chargeMode;
 
 
+
     /**
      * get 弹性公网IP的限速（单位：MB）。
      *
@@ -71,6 +72,7 @@ public class InstanceTemplateElasticIp  implements java.io.Serializable {
         this.bandwidthMbps = bandwidthMbps;
     }
 
+
     /**
      * get IP服务商，取值范围：&#x60;BGP、nonBGP&#x60;。
      *
@@ -88,6 +90,7 @@ public class InstanceTemplateElasticIp  implements java.io.Serializable {
     public void setProvider(String provider) {
         this.provider = provider;
     }
+
 
     /**
      * get 计费类型，支持按带宽计费 &#x60;bandwith&#x60;，按流量计费 &#x60;flow&#x60;。
@@ -108,6 +111,7 @@ public class InstanceTemplateElasticIp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 弹性公网IP的限速（单位：MB）。
      *
@@ -118,6 +122,7 @@ public class InstanceTemplateElasticIp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set IP服务商，取值范围：&#x60;BGP、nonBGP&#x60;。
      *
@@ -127,6 +132,7 @@ public class InstanceTemplateElasticIp  implements java.io.Serializable {
         this.provider = provider;
         return this;
     }
+
 
     /**
      * set 计费类型，支持按带宽计费 &#x60;bandwith&#x60;，按流量计费 &#x60;flow&#x60;。

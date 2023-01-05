@@ -36,7 +36,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 ## 接口说明
 - 名称、描述、实例模板配置信息至少要传一项。
-- 参数时，对应的参数不做更改。
+- 参数为 null 时，对应的参数不做更改。
 
  */
 public class UpdateInstanceTemplateRequest extends JdcloudRequest implements java.io.Serializable {
@@ -73,6 +73,7 @@ public class UpdateInstanceTemplateRequest extends JdcloudRequest implements jav
     private String instanceTemplateId;
 
 
+
     /**
      * get 实例模板的名称，参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      *
@@ -90,6 +91,7 @@ public class UpdateInstanceTemplateRequest extends JdcloudRequest implements jav
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 实例模板的描述，参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
@@ -109,6 +111,7 @@ public class UpdateInstanceTemplateRequest extends JdcloudRequest implements jav
         this.description = description;
     }
 
+
     /**
      * get 实例模板配置信息。
      *
@@ -127,6 +130,7 @@ public class UpdateInstanceTemplateRequest extends JdcloudRequest implements jav
         this.instanceTemplateData = instanceTemplateData;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -144,6 +148,7 @@ public class UpdateInstanceTemplateRequest extends JdcloudRequest implements jav
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例模板ID。
@@ -164,6 +169,7 @@ public class UpdateInstanceTemplateRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 实例模板的名称，参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      *
@@ -173,6 +179,7 @@ public class UpdateInstanceTemplateRequest extends JdcloudRequest implements jav
         this.name = name;
         return this;
     }
+
 
     /**
      * set 实例模板的描述，参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
@@ -184,6 +191,7 @@ public class UpdateInstanceTemplateRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set 实例模板配置信息。
      *
@@ -194,6 +202,7 @@ public class UpdateInstanceTemplateRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -203,6 +212,7 @@ public class UpdateInstanceTemplateRequest extends JdcloudRequest implements jav
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例模板ID。

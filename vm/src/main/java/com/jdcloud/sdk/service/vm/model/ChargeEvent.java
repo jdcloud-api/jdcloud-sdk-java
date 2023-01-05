@@ -43,6 +43,7 @@ public class ChargeEvent  implements java.io.Serializable {
     private String stopTime;
 
 
+
     /**
      * get 开机时间，格式 2020-03-19 00:24:02
      *
@@ -60,6 +61,7 @@ public class ChargeEvent  implements java.io.Serializable {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 关机时间，格式 2020-03-19 00:24:02
@@ -80,6 +82,7 @@ public class ChargeEvent  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 开机时间，格式 2020-03-19 00:24:02
      *
@@ -89,6 +92,7 @@ public class ChargeEvent  implements java.io.Serializable {
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 关机时间，格式 2020-03-19 00:24:02

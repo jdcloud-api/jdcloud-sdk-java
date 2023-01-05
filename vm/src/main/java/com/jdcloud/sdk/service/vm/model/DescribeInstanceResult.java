@@ -48,6 +48,7 @@ public class DescribeInstanceResult extends JdcloudResult implements java.io.Ser
     private Instance instance;
 
 
+
     /**
      * get 响应结果。
      *
@@ -65,6 +66,7 @@ public class DescribeInstanceResult extends JdcloudResult implements java.io.Ser
     public void setInstance(Instance instance) {
         this.instance = instance;
     }
+
 
 
     /**

@@ -43,6 +43,7 @@ public class Policy  implements java.io.Serializable {
     private String policyType;
 
 
+
     /**
      * get 自动任务策略ID。
      *
@@ -60,6 +61,7 @@ public class Policy  implements java.io.Serializable {
     public void setPolicyId(String policyId) {
         this.policyId = policyId;
     }
+
 
     /**
      * get 自动任务策略类型，当前只支持 &#x60;AutoImage&#x60; 自动备份镜像。
@@ -80,6 +82,7 @@ public class Policy  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 自动任务策略ID。
      *
@@ -89,6 +92,7 @@ public class Policy  implements java.io.Serializable {
         this.policyId = policyId;
         return this;
     }
+
 
     /**
      * set 自动任务策略类型，当前只支持 &#x60;AutoImage&#x60; 自动备份镜像。

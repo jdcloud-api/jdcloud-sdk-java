@@ -50,8 +50,8 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
      * Required:true
      */
     @Required
+    
     private List<String> sourceImageIds;
-
     /**
      * 目标地域。
      * Required:true
@@ -67,23 +67,25 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
     private String regionId;
 
 
+
     /**
-     * get 要复制的私有镜像ID列表，最多支持10个。
-     *
-     * @return
-     */
+    * get 要复制的私有镜像ID列表，最多支持10个。
+    *
+    * @return
+    */
     public List<String> getSourceImageIds() {
         return sourceImageIds;
     }
 
     /**
-     * set 要复制的私有镜像ID列表，最多支持10个。
-     *
-     * @param sourceImageIds
-     */
+    * set 要复制的私有镜像ID列表，最多支持10个。
+    *
+    * @param sourceImageIds
+    */
     public void setSourceImageIds(List<String> sourceImageIds) {
         this.sourceImageIds = sourceImageIds;
     }
+
 
     /**
      * get 目标地域。
@@ -102,6 +104,7 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
     public void setDestinationRegion(String destinationRegion) {
         this.destinationRegion = destinationRegion;
     }
+
 
     /**
      * get 地域ID。
@@ -122,15 +125,17 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
-     * set 要复制的私有镜像ID列表，最多支持10个。
-     *
-     * @param sourceImageIds
-     */
+    * set 要复制的私有镜像ID列表，最多支持10个。
+    *
+    * @param sourceImageIds
+    */
     public CopyImagesRequest sourceImageIds(List<String> sourceImageIds) {
         this.sourceImageIds = sourceImageIds;
         return this;
     }
+
 
     /**
      * set 目标地域。
@@ -142,6 +147,7 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -151,6 +157,7 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -164,5 +171,4 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
         }
         this.sourceImageIds.add(sourceImageId);
     }
-
 }

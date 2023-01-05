@@ -65,6 +65,7 @@ public class DeleteImageRequest extends JdcloudRequest implements java.io.Serial
     private String imageId;
 
 
+
     /**
      * get 删除镜像时是否删除关联的快照。默认为 &#x60;false&#x60;；如果指定为 &#x60;true&#x60;, 将会删除镜像关联的快照。
 
@@ -85,6 +86,7 @@ public class DeleteImageRequest extends JdcloudRequest implements java.io.Serial
         this.deleteSnapshot = deleteSnapshot;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -102,6 +104,7 @@ public class DeleteImageRequest extends JdcloudRequest implements java.io.Serial
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 镜像ID。
@@ -122,6 +125,7 @@ public class DeleteImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set 删除镜像时是否删除关联的快照。默认为 &#x60;false&#x60;；如果指定为 &#x60;true&#x60;, 将会删除镜像关联的快照。
 
@@ -133,6 +137,7 @@ public class DeleteImageRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -142,6 +147,7 @@ public class DeleteImageRequest extends JdcloudRequest implements java.io.Serial
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 镜像ID。

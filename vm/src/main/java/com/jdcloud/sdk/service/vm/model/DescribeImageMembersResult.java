@@ -45,37 +45,40 @@ public class DescribeImageMembersResult extends JdcloudResult implements java.io
     /**
      * pins
      */
+    
     private List<String> pins;
 
 
     /**
-     * get pins
-     *
-     * @return
-     */
+    * get pins
+    *
+    * @return
+    */
     public List<String> getPins() {
         return pins;
     }
 
     /**
-     * set pins
-     *
-     * @param pins
-     */
+    * set pins
+    *
+    * @param pins
+    */
     public void setPins(List<String> pins) {
         this.pins = pins;
     }
 
 
+
     /**
-     * set pins
-     *
-     * @param pins
-     */
+    * set pins
+    *
+    * @param pins
+    */
     public DescribeImageMembersResult pins(List<String> pins) {
         this.pins = pins;
         return this;
     }
+
 
 
     /**
@@ -89,5 +92,4 @@ public class DescribeImageMembersResult extends JdcloudResult implements java.io
         }
         this.pins.add(pin);
     }
-
 }

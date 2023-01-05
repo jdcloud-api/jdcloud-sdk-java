@@ -82,6 +82,7 @@ public class ResizeInstanceRequest extends JdcloudRequest implements java.io.Ser
     private String instanceId;
 
 
+
     /**
      * get 实例规格，可查询 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口获得指定地域或可用区的规格信息。
      *
@@ -99,6 +100,7 @@ public class ResizeInstanceRequest extends JdcloudRequest implements java.io.Ser
     public void setInstanceType(String instanceType) {
         this.instanceType = instanceType;
     }
+
 
     /**
      * get 是否强制调配，默认为 &#x60;false&#x60;。如果指定为 &#x60;true&#x60;, 将会清除本地数据盘。
@@ -118,6 +120,7 @@ public class ResizeInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.force = force;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -135,6 +138,7 @@ public class ResizeInstanceRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -155,6 +159,7 @@ public class ResizeInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 实例规格，可查询 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口获得指定地域或可用区的规格信息。
      *
@@ -164,6 +169,7 @@ public class ResizeInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.instanceType = instanceType;
         return this;
     }
+
 
     /**
      * set 是否强制调配，默认为 &#x60;false&#x60;。如果指定为 &#x60;true&#x60;, 将会清除本地数据盘。
@@ -175,6 +181,7 @@ public class ResizeInstanceRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -184,6 +191,7 @@ public class ResizeInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云主机ID。

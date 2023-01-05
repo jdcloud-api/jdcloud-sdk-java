@@ -49,31 +49,33 @@ public class DescribeInstanceStatusResult extends JdcloudResult implements java.
     /**
      * instanceStatuses
      */
+    
     private List<InstanceStatus> instanceStatuses;
-
     /**
      * 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      */
     private Number totalCount;
 
 
+
     /**
-     * get instanceStatuses
-     *
-     * @return
-     */
+    * get instanceStatuses
+    *
+    * @return
+    */
     public List<InstanceStatus> getInstanceStatuses() {
         return instanceStatuses;
     }
 
     /**
-     * set instanceStatuses
-     *
-     * @param instanceStatuses
-     */
+    * set instanceStatuses
+    *
+    * @param instanceStatuses
+    */
     public void setInstanceStatuses(List<InstanceStatus> instanceStatuses) {
         this.instanceStatuses = instanceStatuses;
     }
+
 
     /**
      * get 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
@@ -94,15 +96,17 @@ public class DescribeInstanceStatusResult extends JdcloudResult implements java.
     }
 
 
+
     /**
-     * set instanceStatuses
-     *
-     * @param instanceStatuses
-     */
+    * set instanceStatuses
+    *
+    * @param instanceStatuses
+    */
     public DescribeInstanceStatusResult instanceStatuses(List<InstanceStatus> instanceStatuses) {
         this.instanceStatuses = instanceStatuses;
         return this;
     }
+
 
     /**
      * set 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
@@ -113,6 +117,7 @@ public class DescribeInstanceStatusResult extends JdcloudResult implements java.
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -126,5 +131,4 @@ public class DescribeInstanceStatusResult extends JdcloudResult implements java.
         }
         this.instanceStatuses.add(instanceStatuse);
     }
-
 }

@@ -43,6 +43,7 @@ public class Gpu  implements java.io.Serializable {
     private Integer number;
 
 
+
     /**
      * get GPU卡型号。
      *
@@ -60,6 +61,7 @@ public class Gpu  implements java.io.Serializable {
     public void setModel(String model) {
         this.model = model;
     }
+
 
     /**
      * get GPU卡数量。
@@ -80,6 +82,7 @@ public class Gpu  implements java.io.Serializable {
     }
 
 
+
     /**
      * set GPU卡型号。
      *
@@ -89,6 +92,7 @@ public class Gpu  implements java.io.Serializable {
         this.model = model;
         return this;
     }
+
 
     /**
      * set GPU卡数量。

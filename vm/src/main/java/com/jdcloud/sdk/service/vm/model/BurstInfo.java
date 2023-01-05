@@ -43,6 +43,7 @@ public class BurstInfo  implements java.io.Serializable {
     private String creditChargeStatus;
 
 
+
     /**
      * get 突发模式
      *
@@ -60,6 +61,7 @@ public class BurstInfo  implements java.io.Serializable {
     public void setBurstMode(String burstMode) {
         this.burstMode = burstMode;
     }
+
 
     /**
      * get 积分费用支付状态，normal为正常, arrear为欠费
@@ -80,6 +82,7 @@ public class BurstInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 突发模式
      *
@@ -89,6 +92,7 @@ public class BurstInfo  implements java.io.Serializable {
         this.burstMode = burstMode;
         return this;
     }
+
 
     /**
      * set 积分费用支付状态，normal为正常, arrear为欠费

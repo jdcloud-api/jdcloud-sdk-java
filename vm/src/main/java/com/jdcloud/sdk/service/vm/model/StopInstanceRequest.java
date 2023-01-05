@@ -69,6 +69,7 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     private String instanceId;
 
 
+
     /**
      * get 停机不计费模式。
 该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
@@ -99,6 +100,7 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
         this.chargeOnStopped = chargeOnStopped;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -116,6 +118,7 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -136,6 +139,7 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 停机不计费模式。
 该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
@@ -152,6 +156,7 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -161,6 +166,7 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云主机ID。

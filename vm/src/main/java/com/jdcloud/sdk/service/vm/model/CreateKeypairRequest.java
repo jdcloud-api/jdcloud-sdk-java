@@ -60,6 +60,7 @@ public class CreateKeypairRequest extends JdcloudRequest implements java.io.Seri
     private String regionId;
 
 
+
     /**
      * get 密钥对名称，需要全局唯一。
 只允许数字、大小写字母、下划线“_”及中划线“-”，不超过32个字符。
@@ -82,6 +83,7 @@ public class CreateKeypairRequest extends JdcloudRequest implements java.io.Seri
         this.keyName = keyName;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -101,6 +103,7 @@ public class CreateKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 密钥对名称，需要全局唯一。
 只允许数字、大小写字母、下划线“_”及中划线“-”，不超过32个字符。
@@ -112,6 +115,7 @@ public class CreateKeypairRequest extends JdcloudRequest implements java.io.Seri
         this.keyName = keyName;
         return this;
     }
+
 
     /**
      * set 地域ID。

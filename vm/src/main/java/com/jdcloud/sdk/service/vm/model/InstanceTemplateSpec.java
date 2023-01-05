@@ -59,23 +59,23 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     /**
      * 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
      */
+    
     private List<String> keyNames;
-
     /**
      * 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
      */
+    
     private List<Metadata> metadata;
-
     /**
      * 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
 **linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
      */
+    
     private List<Userdata> userdata;
-
     /**
      * 主网卡主IP关联的弹性公网IP配置。
      */
@@ -96,8 +96,8 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     /**
      * 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
      */
+    
     private List<InstanceTemplateDiskAttachmentSpec> dataDisks;
-
     /**
      * 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。配置停机不计费且停机后，实例部分将停止计费，且释放实例自身包含的资源（CPU/内存/GPU/本地数据盘）。
 可选值：
@@ -135,6 +135,12 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
      */
     private InstanceTemplateBurstSpec burstSpec;
 
+    /**
+     * 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+     */
+    
+    private List<Tag> instanceTags;
+
 
     /**
      * get 实例规格，可查询 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口获得指定地域或可用区的规格信息。
@@ -154,6 +160,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
      * get 镜像ID，可查询 [DescribeImages](https://docs.jdcloud.com/virtual-machines/api/describeimages) 接口获得指定地域的镜像信息。
      *
@@ -171,6 +178,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     public void setImageId(String imageId) {
         this.imageId = imageId;
     }
+
 
     /**
      * get 实例密码。可用于SSH登录和VNC登录。长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
@@ -194,69 +202,73 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.password = password;
     }
 
+
     /**
-     * get 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
-     *
-     * @return
-     */
+    * get 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+    *
+    * @return
+    */
     public List<String> getKeyNames() {
         return keyNames;
     }
 
     /**
-     * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
-     *
-     * @param keyNames
-     */
+    * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+    *
+    * @param keyNames
+    */
     public void setKeyNames(List<String> keyNames) {
         this.keyNames = keyNames;
     }
 
+
     /**
-     * get 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+    * get 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Metadata> getMetadata() {
         return metadata;
     }
 
     /**
-     * set 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+    * set 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
-     *
-     * @param metadata
-     */
+    *
+    * @param metadata
+    */
     public void setMetadata(List<Metadata> metadata) {
         this.metadata = metadata;
     }
 
+
     /**
-     * get 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+    * get 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
 **linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Userdata> getUserdata() {
         return userdata;
     }
 
     /**
-     * set 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+    * set 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
 **linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
-     *
-     * @param userdata
-     */
+    *
+    * @param userdata
+    */
     public void setUserdata(List<Userdata> userdata) {
         this.userdata = userdata;
     }
+
 
     /**
      * get 主网卡主IP关联的弹性公网IP配置。
@@ -276,6 +288,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.elasticIp = elasticIp;
     }
 
+
     /**
      * get 主网卡配置。
      *
@@ -293,6 +306,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     public void setPrimaryNetworkInterface(InstanceTemplateNetworkInterfaceAttachmentSpec primaryNetworkInterface) {
         this.primaryNetworkInterface = primaryNetworkInterface;
     }
+
 
     /**
      * get 系统盘配置。
@@ -312,23 +326,25 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.systemDisk = systemDisk;
     }
 
+
     /**
-     * get 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
-     *
-     * @return
-     */
+    * get 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
+    *
+    * @return
+    */
     public List<InstanceTemplateDiskAttachmentSpec> getDataDisks() {
         return dataDisks;
     }
 
     /**
-     * set 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
-     *
-     * @param dataDisks
-     */
+    * set 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
+    *
+    * @param dataDisks
+    */
     public void setDataDisks(List<InstanceTemplateDiskAttachmentSpec> dataDisks) {
         this.dataDisks = dataDisks;
     }
+
 
     /**
      * get 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。配置停机不计费且停机后，实例部分将停止计费，且释放实例自身包含的资源（CPU/内存/GPU/本地数据盘）。
@@ -356,6 +372,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.chargeOnStopped = chargeOnStopped;
     }
 
+
     /**
      * get 自动任务策略ID。
      *
@@ -373,6 +390,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     public void setAutoImagePolicyId(String autoImagePolicyId) {
         this.autoImagePolicyId = autoImagePolicyId;
     }
+
 
     /**
      * get 是否允许SSH密码登录。
@@ -400,6 +418,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.passWordAuth = passWordAuth;
     }
 
+
     /**
      * get 是否使用镜像中的登录凭证，不再指定密码或密钥。
 &#x60;yes&#x60;：使用镜像登录凭证。
@@ -426,6 +445,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.imageInherit = imageInherit;
     }
 
+
     /**
      * get 突发型实例参数配置
      *
@@ -446,6 +466,26 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 
 
     /**
+    * get 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+    *
+    * @return
+    */
+    public List<Tag> getInstanceTags() {
+        return instanceTags;
+    }
+
+    /**
+    * set 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+    *
+    * @param instanceTags
+    */
+    public void setInstanceTags(List<Tag> instanceTags) {
+        this.instanceTags = instanceTags;
+    }
+
+
+
+    /**
      * set 实例规格，可查询 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口获得指定地域或可用区的规格信息。
      *
      * @param instanceType
@@ -454,6 +494,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.instanceType = instanceType;
         return this;
     }
+
 
     /**
      * set 镜像ID，可查询 [DescribeImages](https://docs.jdcloud.com/virtual-machines/api/describeimages) 接口获得指定地域的镜像信息。
@@ -464,6 +505,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.imageId = imageId;
         return this;
     }
+
 
     /**
      * set 实例密码。可用于SSH登录和VNC登录。长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
@@ -477,40 +519,44 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
-     *
-     * @param keyNames
-     */
+    * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+    *
+    * @param keyNames
+    */
     public InstanceTemplateSpec keyNames(List<String> keyNames) {
         this.keyNames = keyNames;
         return this;
     }
 
+
     /**
-     * set 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+    * set 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
-     *
-     * @param metadata
-     */
+    *
+    * @param metadata
+    */
     public InstanceTemplateSpec metadata(List<Metadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
+
     /**
-     * set 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+    * set 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
 **linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 **Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
-     *
-     * @param userdata
-     */
+    *
+    * @param userdata
+    */
     public InstanceTemplateSpec userdata(List<Userdata> userdata) {
         this.userdata = userdata;
         return this;
     }
+
 
     /**
      * set 主网卡主IP关联的弹性公网IP配置。
@@ -522,6 +568,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡配置。
      *
@@ -531,6 +578,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.primaryNetworkInterface = primaryNetworkInterface;
         return this;
     }
+
 
     /**
      * set 系统盘配置。
@@ -542,15 +590,17 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
-     *
-     * @param dataDisks
-     */
+    * set 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
+    *
+    * @param dataDisks
+    */
     public InstanceTemplateSpec dataDisks(List<InstanceTemplateDiskAttachmentSpec> dataDisks) {
         this.dataDisks = dataDisks;
         return this;
     }
+
 
     /**
      * set 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。配置停机不计费且停机后，实例部分将停止计费，且释放实例自身包含的资源（CPU/内存/GPU/本地数据盘）。
@@ -566,6 +616,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自动任务策略ID。
      *
@@ -575,6 +626,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.autoImagePolicyId = autoImagePolicyId;
         return this;
     }
+
 
     /**
      * set 是否允许SSH密码登录。
@@ -590,6 +642,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否使用镜像中的登录凭证，不再指定密码或密钥。
 &#x60;yes&#x60;：使用镜像登录凭证。
@@ -604,6 +657,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 突发型实例参数配置
      *
@@ -613,6 +667,18 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.burstSpec = burstSpec;
         return this;
     }
+
+
+    /**
+    * set 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+    *
+    * @param instanceTags
+    */
+    public InstanceTemplateSpec instanceTags(List<Tag> instanceTags) {
+        this.instanceTags = instanceTags;
+        return this;
+    }
+
 
 
     /**
@@ -668,4 +734,15 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.dataDisks.add(dataDisk);
     }
 
+    /**
+     * add item to 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+     *
+     * @param instanceTag
+     */
+    public void addInstanceTag(Tag instanceTag) {
+        if (this.instanceTags == null) {
+            this.instanceTags = new ArrayList<>();
+        }
+        this.instanceTags.add(instanceTag);
+    }
 }

@@ -58,6 +58,7 @@ public class UserSysDisk  implements java.io.Serializable {
     private String flavors;
 
 
+
     /**
      * get 用户pin。
      *
@@ -75,6 +76,7 @@ public class UserSysDisk  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 地域。
@@ -94,6 +96,7 @@ public class UserSysDisk  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 系统类型。支持范围：&#x60;linux、windows&#x60;。
      *
@@ -112,6 +115,7 @@ public class UserSysDisk  implements java.io.Serializable {
         this.systemType = systemType;
     }
 
+
     /**
      * get 默认本地盘系统盘大小，单位GB。
      *
@@ -129,6 +133,7 @@ public class UserSysDisk  implements java.io.Serializable {
     public void setSystemDiskSize(Integer systemDiskSize) {
         this.systemDiskSize = systemDiskSize;
     }
+
 
     /**
      * get 逗号分隔的规格列表，&#x60;*&#x60; 代表所有。
@@ -149,6 +154,7 @@ public class UserSysDisk  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户pin。
      *
@@ -158,6 +164,7 @@ public class UserSysDisk  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 地域。
@@ -169,6 +176,7 @@ public class UserSysDisk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 系统类型。支持范围：&#x60;linux、windows&#x60;。
      *
@@ -179,6 +187,7 @@ public class UserSysDisk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 默认本地盘系统盘大小，单位GB。
      *
@@ -188,6 +197,7 @@ public class UserSysDisk  implements java.io.Serializable {
         this.systemDiskSize = systemDiskSize;
         return this;
     }
+
 
     /**
      * set 逗号分隔的规格列表，&#x60;*&#x60; 代表所有。

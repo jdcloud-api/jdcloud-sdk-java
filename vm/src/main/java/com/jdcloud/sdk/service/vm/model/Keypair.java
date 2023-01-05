@@ -52,6 +52,7 @@ public class Keypair  implements java.io.Serializable {
     /**
      * 绑定了此密钥的云主机ID列表。
      */
+    
     private List<String> instanceIds;
 
 
@@ -73,6 +74,7 @@ public class Keypair  implements java.io.Serializable {
         this.keyName = keyName;
     }
 
+
     /**
      * get 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
      *
@@ -90,6 +92,7 @@ public class Keypair  implements java.io.Serializable {
     public void setKeyFingerprint(String keyFingerprint) {
         this.keyFingerprint = keyFingerprint;
     }
+
 
     /**
      * get 密钥创建时间。
@@ -109,23 +112,25 @@ public class Keypair  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
-     * get 绑定了此密钥的云主机ID列表。
-     *
-     * @return
-     */
+    * get 绑定了此密钥的云主机ID列表。
+    *
+    * @return
+    */
     public List<String> getInstanceIds() {
         return instanceIds;
     }
 
     /**
-     * set 绑定了此密钥的云主机ID列表。
-     *
-     * @param instanceIds
-     */
+    * set 绑定了此密钥的云主机ID列表。
+    *
+    * @param instanceIds
+    */
     public void setInstanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
     }
+
 
 
     /**
@@ -138,6 +143,7 @@ public class Keypair  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
      *
@@ -147,6 +153,7 @@ public class Keypair  implements java.io.Serializable {
         this.keyFingerprint = keyFingerprint;
         return this;
     }
+
 
     /**
      * set 密钥创建时间。
@@ -158,15 +165,17 @@ public class Keypair  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 绑定了此密钥的云主机ID列表。
-     *
-     * @param instanceIds
-     */
+    * set 绑定了此密钥的云主机ID列表。
+    *
+    * @param instanceIds
+    */
     public Keypair instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
+
 
 
     /**
@@ -180,5 +189,4 @@ public class Keypair  implements java.io.Serializable {
         }
         this.instanceIds.add(instanceId);
     }
-
 }

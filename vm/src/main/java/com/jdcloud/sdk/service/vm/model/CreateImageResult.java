@@ -52,6 +52,7 @@ public class CreateImageResult extends JdcloudResult implements java.io.Serializ
     private String imageId;
 
 
+
     /**
      * get 镜像ID。
      *
@@ -69,6 +70,7 @@ public class CreateImageResult extends JdcloudResult implements java.io.Serializ
     public void setImageId(String imageId) {
         this.imageId = imageId;
     }
+
 
 
     /**

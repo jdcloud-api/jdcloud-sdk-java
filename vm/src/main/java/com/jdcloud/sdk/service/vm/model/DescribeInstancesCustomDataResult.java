@@ -47,31 +47,33 @@ public class DescribeInstancesCustomDataResult extends JdcloudResult implements 
     /**
      * customData
      */
+    
     private List<CustomData> customData;
-
     /**
      * 本次查询可匹配到的总记录数，使用者需要结合&#x60;pageNumber&#x60;和&#x60;pageSize&#x60;计算是否可以继续分页。
      */
     private Number totalCount;
 
 
+
     /**
-     * get customData
-     *
-     * @return
-     */
+    * get customData
+    *
+    * @return
+    */
     public List<CustomData> getCustomData() {
         return customData;
     }
 
     /**
-     * set customData
-     *
-     * @param customData
-     */
+    * set customData
+    *
+    * @param customData
+    */
     public void setCustomData(List<CustomData> customData) {
         this.customData = customData;
     }
+
 
     /**
      * get 本次查询可匹配到的总记录数，使用者需要结合&#x60;pageNumber&#x60;和&#x60;pageSize&#x60;计算是否可以继续分页。
@@ -92,15 +94,17 @@ public class DescribeInstancesCustomDataResult extends JdcloudResult implements 
     }
 
 
+
     /**
-     * set customData
-     *
-     * @param customData
-     */
+    * set customData
+    *
+    * @param customData
+    */
     public DescribeInstancesCustomDataResult customData(List<CustomData> customData) {
         this.customData = customData;
         return this;
     }
+
 
     /**
      * set 本次查询可匹配到的总记录数，使用者需要结合&#x60;pageNumber&#x60;和&#x60;pageSize&#x60;计算是否可以继续分页。
@@ -111,6 +115,7 @@ public class DescribeInstancesCustomDataResult extends JdcloudResult implements 
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -124,5 +129,4 @@ public class DescribeInstancesCustomDataResult extends JdcloudResult implements 
         }
         this.customData.add(customData);
     }
-
 }

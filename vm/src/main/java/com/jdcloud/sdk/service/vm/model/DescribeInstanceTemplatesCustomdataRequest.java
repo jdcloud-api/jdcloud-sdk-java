@@ -49,8 +49,8 @@ public class DescribeInstanceTemplatesCustomdataRequest extends JdcloudRequest i
 &#x60;instanceTemplateId&#x60;: 实例模板ID，精确匹配，最多支持10个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID。
      * Required:true
@@ -59,27 +59,29 @@ public class DescribeInstanceTemplatesCustomdataRequest extends JdcloudRequest i
     private String regionId;
 
 
+
     /**
-     * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceTemplateId&#x60;: 实例模板ID，精确匹配，最多支持10个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceTemplateId&#x60;: 实例模板ID，精确匹配，最多支持10个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID。
@@ -100,17 +102,19 @@ public class DescribeInstanceTemplatesCustomdataRequest extends JdcloudRequest i
     }
 
 
+
     /**
-     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceTemplateId&#x60;: 实例模板ID，精确匹配，最多支持10个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeInstanceTemplatesCustomdataRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -121,6 +125,7 @@ public class DescribeInstanceTemplatesCustomdataRequest extends JdcloudRequest i
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -136,5 +141,4 @@ public class DescribeInstanceTemplatesCustomdataRequest extends JdcloudRequest i
         }
         this.filters.add(filter);
     }
-
 }

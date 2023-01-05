@@ -47,8 +47,8 @@ public class DescribeImageConstraintsBatchRequest extends JdcloudRequest impleme
     /**
      * 要查询的镜像ID列表，只支持官方镜像和第三方镜像。
      */
+    
     private List<String> ids;
-
     /**
      * 地域ID。
      * Required:true
@@ -57,23 +57,25 @@ public class DescribeImageConstraintsBatchRequest extends JdcloudRequest impleme
     private String regionId;
 
 
+
     /**
-     * get 要查询的镜像ID列表，只支持官方镜像和第三方镜像。
-     *
-     * @return
-     */
+    * get 要查询的镜像ID列表，只支持官方镜像和第三方镜像。
+    *
+    * @return
+    */
     public List<String> getIds() {
         return ids;
     }
 
     /**
-     * set 要查询的镜像ID列表，只支持官方镜像和第三方镜像。
-     *
-     * @param ids
-     */
+    * set 要查询的镜像ID列表，只支持官方镜像和第三方镜像。
+    *
+    * @param ids
+    */
     public void setIds(List<String> ids) {
         this.ids = ids;
     }
+
 
     /**
      * get 地域ID。
@@ -94,15 +96,17 @@ public class DescribeImageConstraintsBatchRequest extends JdcloudRequest impleme
     }
 
 
+
     /**
-     * set 要查询的镜像ID列表，只支持官方镜像和第三方镜像。
-     *
-     * @param ids
-     */
+    * set 要查询的镜像ID列表，只支持官方镜像和第三方镜像。
+    *
+    * @param ids
+    */
     public DescribeImageConstraintsBatchRequest ids(List<String> ids) {
         this.ids = ids;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -113,6 +117,7 @@ public class DescribeImageConstraintsBatchRequest extends JdcloudRequest impleme
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -126,5 +131,4 @@ public class DescribeImageConstraintsBatchRequest extends JdcloudRequest impleme
         }
         this.ids.add(id);
     }
-
 }

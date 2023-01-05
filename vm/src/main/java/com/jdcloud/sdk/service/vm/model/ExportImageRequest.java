@@ -86,6 +86,7 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
     private String imageId;
 
 
+
     /**
      * get 用户创建的服务角色名称。
      *
@@ -103,6 +104,7 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
     public void setRoleName(String roleName) {
         this.roleName = roleName;
     }
+
 
     /**
      * get 存储导出镜像文件的 &#x60;oss bucket&#x60; 的域名，请填写以 https:// 开头的完整url。
@@ -122,6 +124,7 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
         this.ossUrl = ossUrl;
     }
 
+
     /**
      * get 导出镜像文件名前缀，仅支持英文字母和数字，不能超过32个字符。
      *
@@ -139,6 +142,7 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
     public void setOssPrefix(String ossPrefix) {
         this.ossPrefix = ossPrefix;
     }
+
 
     /**
      * get 用户导出镜像的幂等性保证。每次导出请传入不同的值，如果传值与某次的clientToken相同，则返还同一个请求结果，不能超过64个字符。
@@ -158,6 +162,7 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
         this.clientToken = clientToken;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -175,6 +180,7 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 镜像ID。
@@ -195,6 +201,7 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set 用户创建的服务角色名称。
      *
@@ -204,6 +211,7 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
         this.roleName = roleName;
         return this;
     }
+
 
     /**
      * set 存储导出镜像文件的 &#x60;oss bucket&#x60; 的域名，请填写以 https:// 开头的完整url。
@@ -215,6 +223,7 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 导出镜像文件名前缀，仅支持英文字母和数字，不能超过32个字符。
      *
@@ -224,6 +233,7 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
         this.ossPrefix = ossPrefix;
         return this;
     }
+
 
     /**
      * set 用户导出镜像的幂等性保证。每次导出请传入不同的值，如果传值与某次的clientToken相同，则返还同一个请求结果，不能超过64个字符。
@@ -235,6 +245,7 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -244,6 +255,7 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 镜像ID。

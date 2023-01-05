@@ -48,6 +48,7 @@ public class BindInfo  implements java.io.Serializable {
     private String remark;
 
 
+
     /**
      * get 资源 ID
      *
@@ -66,6 +67,7 @@ public class BindInfo  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 资源 名称
      *
@@ -83,6 +85,7 @@ public class BindInfo  implements java.io.Serializable {
     public void setResourceName(String resourceName) {
         this.resourceName = resourceName;
     }
+
 
     /**
      * get 备注信息
@@ -103,6 +106,7 @@ public class BindInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 资源 ID
      *
@@ -113,6 +117,7 @@ public class BindInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源 名称
      *
@@ -122,6 +127,7 @@ public class BindInfo  implements java.io.Serializable {
         this.resourceName = resourceName;
         return this;
     }
+
 
     /**
      * set 备注信息

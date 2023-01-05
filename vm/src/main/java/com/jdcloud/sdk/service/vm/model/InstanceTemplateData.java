@@ -62,8 +62,8 @@ public class InstanceTemplateData  implements java.io.Serializable {
     /**
      * 数据盘配置列表。
      */
+    
     private List<InstanceTemplateDiskAttachment> dataDisks;
-
     /**
      * 主网卡配置。
      */
@@ -77,8 +77,8 @@ public class InstanceTemplateData  implements java.io.Serializable {
     /**
      * 云主机使用的密钥对名称。
      */
+    
     private List<String> keyNames;
-
     /**
      * 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
 &#x60;keepCharging&#x60;：关机后继续计费。
@@ -115,6 +115,12 @@ public class InstanceTemplateData  implements java.io.Serializable {
      */
     private InstanceTemplateBurstInfo burstInfo;
 
+    /**
+     * 自定义实例标签。
+     */
+    
+    private List<Tag> instanceTags;
+
 
     /**
      * get 实例规格。
@@ -134,6 +140,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
      * get 主网卡所属VPC的ID。
      *
@@ -151,6 +158,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
     /**
      * get 云主机使用的镜像ID。
@@ -170,6 +178,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.imageId = imageId;
     }
 
+
     /**
      * get 实例模板中是否包含自定义密码。&#x60;true&#x60;：包含自定义密码，&#x60;false&#x60;：不包含自定义密码。
      *
@@ -187,6 +196,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     public void setIncludePassword(Boolean includePassword) {
         this.includePassword = includePassword;
     }
+
 
     /**
      * get 系统盘配置。
@@ -206,23 +216,25 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.systemDisk = systemDisk;
     }
 
+
     /**
-     * get 数据盘配置列表。
-     *
-     * @return
-     */
+    * get 数据盘配置列表。
+    *
+    * @return
+    */
     public List<InstanceTemplateDiskAttachment> getDataDisks() {
         return dataDisks;
     }
 
     /**
-     * set 数据盘配置列表。
-     *
-     * @param dataDisks
-     */
+    * set 数据盘配置列表。
+    *
+    * @param dataDisks
+    */
     public void setDataDisks(List<InstanceTemplateDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
     }
+
 
     /**
      * get 主网卡配置。
@@ -242,6 +254,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.primaryNetworkInterface = primaryNetworkInterface;
     }
 
+
     /**
      * get 主网卡主IP关联的弹性公网IP配置。
      *
@@ -260,23 +273,25 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.elasticIp = elasticIp;
     }
 
+
     /**
-     * get 云主机使用的密钥对名称。
-     *
-     * @return
-     */
+    * get 云主机使用的密钥对名称。
+    *
+    * @return
+    */
     public List<String> getKeyNames() {
         return keyNames;
     }
 
     /**
-     * set 云主机使用的密钥对名称。
-     *
-     * @param keyNames
-     */
+    * set 云主机使用的密钥对名称。
+    *
+    * @param keyNames
+    */
     public void setKeyNames(List<String> keyNames) {
         this.keyNames = keyNames;
     }
+
 
     /**
      * get 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
@@ -302,6 +317,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.chargeOnStopped = chargeOnStopped;
     }
 
+
     /**
      * get 自动任务策略ID。
      *
@@ -319,6 +335,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     public void setAutoImagePolicyId(String autoImagePolicyId) {
         this.autoImagePolicyId = autoImagePolicyId;
     }
+
 
     /**
      * get 允许SSH密码登录。
@@ -346,6 +363,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.passwordAuth = passwordAuth;
     }
 
+
     /**
      * get 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
 &#x60;yes&#x60;：使用镜像登录凭证。
@@ -372,6 +390,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.imageInherit = imageInherit;
     }
 
+
     /**
      * get 突发型实例参数信息
      *
@@ -392,6 +411,26 @@ public class InstanceTemplateData  implements java.io.Serializable {
 
 
     /**
+    * get 自定义实例标签。
+    *
+    * @return
+    */
+    public List<Tag> getInstanceTags() {
+        return instanceTags;
+    }
+
+    /**
+    * set 自定义实例标签。
+    *
+    * @param instanceTags
+    */
+    public void setInstanceTags(List<Tag> instanceTags) {
+        this.instanceTags = instanceTags;
+    }
+
+
+
+    /**
      * set 实例规格。
      *
      * @param instanceType
@@ -400,6 +439,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.instanceType = instanceType;
         return this;
     }
+
 
     /**
      * set 主网卡所属VPC的ID。
@@ -411,6 +451,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机使用的镜像ID。
      *
@@ -420,6 +461,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.imageId = imageId;
         return this;
     }
+
 
     /**
      * set 实例模板中是否包含自定义密码。&#x60;true&#x60;：包含自定义密码，&#x60;false&#x60;：不包含自定义密码。
@@ -431,6 +473,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 系统盘配置。
      *
@@ -441,15 +484,17 @@ public class InstanceTemplateData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 数据盘配置列表。
-     *
-     * @param dataDisks
-     */
+    * set 数据盘配置列表。
+    *
+    * @param dataDisks
+    */
     public InstanceTemplateData dataDisks(List<InstanceTemplateDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
         return this;
     }
+
 
     /**
      * set 主网卡配置。
@@ -461,6 +506,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡主IP关联的弹性公网IP配置。
      *
@@ -471,15 +517,17 @@ public class InstanceTemplateData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 云主机使用的密钥对名称。
-     *
-     * @param keyNames
-     */
+    * set 云主机使用的密钥对名称。
+    *
+    * @param keyNames
+    */
     public InstanceTemplateData keyNames(List<String> keyNames) {
         this.keyNames = keyNames;
         return this;
     }
+
 
     /**
      * set 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
@@ -494,6 +542,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自动任务策略ID。
      *
@@ -503,6 +552,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.autoImagePolicyId = autoImagePolicyId;
         return this;
     }
+
 
     /**
      * set 允许SSH密码登录。
@@ -518,6 +568,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
 &#x60;yes&#x60;：使用镜像登录凭证。
@@ -532,6 +583,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 突发型实例参数信息
      *
@@ -541,6 +593,18 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.burstInfo = burstInfo;
         return this;
     }
+
+
+    /**
+    * set 自定义实例标签。
+    *
+    * @param instanceTags
+    */
+    public InstanceTemplateData instanceTags(List<Tag> instanceTags) {
+        this.instanceTags = instanceTags;
+        return this;
+    }
+
 
 
     /**
@@ -567,4 +631,15 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.keyNames.add(keyName);
     }
 
+    /**
+     * add item to 自定义实例标签。
+     *
+     * @param instanceTag
+     */
+    public void addInstanceTag(Tag instanceTag) {
+        if (this.instanceTags == null) {
+            this.instanceTags = new ArrayList<>();
+        }
+        this.instanceTags.add(instanceTag);
+    }
 }

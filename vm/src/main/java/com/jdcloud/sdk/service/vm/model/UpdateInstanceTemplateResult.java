@@ -34,7 +34,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 ## 接口说明
 - 名称、描述、实例模板配置信息至少要传一项。
-- 参数时，对应的参数不做更改。
+- 参数为 null 时，对应的参数不做更改。
 
  */
 public class UpdateInstanceTemplateResult extends JdcloudResult implements java.io.Serializable {

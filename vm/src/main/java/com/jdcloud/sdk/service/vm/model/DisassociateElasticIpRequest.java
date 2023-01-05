@@ -63,6 +63,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
     private String instanceId;
 
 
+
     /**
      * get 弹性公网IP的ID。
      *
@@ -81,6 +82,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
         this.elasticIpId = elasticIpId;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -98,6 +100,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -118,6 +121,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 弹性公网IP的ID。
      *
@@ -128,6 +132,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -137,6 +142,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云主机ID。

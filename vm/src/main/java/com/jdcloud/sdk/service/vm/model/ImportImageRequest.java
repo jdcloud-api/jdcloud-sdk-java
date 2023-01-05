@@ -121,6 +121,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
     private String regionId;
 
 
+
     /**
      * get 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
      *
@@ -139,6 +140,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         this.architecture = architecture;
     }
 
+
     /**
      * get 镜像的操作系统类型。取值范围：&#x60;windows、linux&#x60;。
      *
@@ -156,6 +158,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
     public void setOsType(String osType) {
         this.osType = osType;
     }
+
 
     /**
      * get 镜像的操作系统平台名称。
@@ -179,6 +182,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         this.platform = platform;
     }
 
+
     /**
      * get 磁盘格式，取值范围：&#x60;qcow2、vhd、vmdk、raw&#x60;。
      *
@@ -196,6 +200,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
     public void setDiskFormat(String diskFormat) {
         this.diskFormat = diskFormat;
     }
+
 
     /**
      * get 以此镜像需要制作的系统盘的默认大小，单位GB。最小值40，最大值500，要求值是10的整数倍。
@@ -215,6 +220,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         this.systemDiskSizeGB = systemDiskSizeGB;
     }
 
+
     /**
      * get 要导入镜像的对象存储外链地址。
      *
@@ -232,6 +238,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
 
     /**
      * get 镜像的操作系统版本。
@@ -251,6 +258,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         this.osVersion = osVersion;
     }
 
+
     /**
      * get 导入镜像的自定义名称。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      *
@@ -268,6 +276,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
     public void setImageName(String imageName) {
         this.imageName = imageName;
     }
+
 
     /**
      * get 导入镜像的描述信息。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
@@ -287,6 +296,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         this.description = description;
     }
 
+
     /**
      * get 是否强制导入。强制导入会忽略镜像的合规性检测。默认为false。
      *
@@ -305,6 +315,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         this.forceImport = forceImport;
     }
 
+
     /**
      * get 用户导出镜像的幂等性保证。每次导出请传入不同的值，如果传值与某次的clientToken相同，则返还同一个请求结果，不能超过64个字符。
      *
@@ -322,6 +333,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
     public void setClientToken(String clientToken) {
         this.clientToken = clientToken;
     }
+
 
     /**
      * get 地域ID。
@@ -342,6 +354,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
      *
@@ -352,6 +365,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 镜像的操作系统类型。取值范围：&#x60;windows、linux&#x60;。
      *
@@ -361,6 +375,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         this.osType = osType;
         return this;
     }
+
 
     /**
      * set 镜像的操作系统平台名称。
@@ -374,6 +389,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 磁盘格式，取值范围：&#x60;qcow2、vhd、vmdk、raw&#x60;。
      *
@@ -383,6 +399,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         this.diskFormat = diskFormat;
         return this;
     }
+
 
     /**
      * set 以此镜像需要制作的系统盘的默认大小，单位GB。最小值40，最大值500，要求值是10的整数倍。
@@ -394,6 +411,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 要导入镜像的对象存储外链地址。
      *
@@ -403,6 +421,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         this.imageUrl = imageUrl;
         return this;
     }
+
 
     /**
      * set 镜像的操作系统版本。
@@ -414,6 +433,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 导入镜像的自定义名称。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      *
@@ -423,6 +443,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         this.imageName = imageName;
         return this;
     }
+
 
     /**
      * set 导入镜像的描述信息。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
@@ -434,6 +455,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 是否强制导入。强制导入会忽略镜像的合规性检测。默认为false。
      *
@@ -444,6 +466,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 用户导出镜像的幂等性保证。每次导出请传入不同的值，如果传值与某次的clientToken相同，则返还同一个请求结果，不能超过64个字符。
      *
@@ -453,6 +476,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
         this.clientToken = clientToken;
         return this;
     }
+
 
     /**
      * set 地域ID。

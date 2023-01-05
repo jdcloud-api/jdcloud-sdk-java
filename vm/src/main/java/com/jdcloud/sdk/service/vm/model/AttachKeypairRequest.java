@@ -49,8 +49,8 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
      * Required:true
      */
     @Required
+    
     private List<String> instanceIds;
-
     /**
      * 绑定密钥后，根据此参数决定是否允许使用密码登录。可选范围：
 &#x60;yes&#x60;：允许SSH密码登录。
@@ -76,23 +76,25 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     private String keyName;
 
 
+
     /**
-     * get 要绑定的云主机Id列表。
-     *
-     * @return
-     */
+    * get 要绑定的云主机Id列表。
+    *
+    * @return
+    */
     public List<String> getInstanceIds() {
         return instanceIds;
     }
 
     /**
-     * set 要绑定的云主机Id列表。
-     *
-     * @param instanceIds
-     */
+    * set 要绑定的云主机Id列表。
+    *
+    * @param instanceIds
+    */
     public void setInstanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
     }
+
 
     /**
      * get 绑定密钥后，根据此参数决定是否允许使用密码登录。可选范围：
@@ -118,6 +120,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
         this.passWordAuth = passWordAuth;
     }
 
+
     /**
      * get 地域ID。
      *
@@ -135,6 +138,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 密钥名称。
@@ -155,15 +159,17 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
-     * set 要绑定的云主机Id列表。
-     *
-     * @param instanceIds
-     */
+    * set 要绑定的云主机Id列表。
+    *
+    * @param instanceIds
+    */
     public AttachKeypairRequest instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
+
 
     /**
      * set 绑定密钥后，根据此参数决定是否允许使用密码登录。可选范围：
@@ -178,6 +184,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -188,6 +195,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 密钥名称。
      *
@@ -197,6 +205,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
         this.keyName = keyName;
         return this;
     }
+
 
 
     /**
@@ -210,5 +219,4 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
         }
         this.instanceIds.add(instanceId);
     }
-
 }

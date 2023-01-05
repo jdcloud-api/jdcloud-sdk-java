@@ -72,8 +72,8 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
 如果使用 &#x60;deviceName&#x60; 指定了与实例中相同的盘符，那么实例中对应的云盘数据盘也不会制作快照，并使用新指定的参数进行替换。
 
      */
+    
     private List<InstanceDiskAttachmentSpec> dataDisks;
-
     /**
      * 地域ID。
      * Required:true
@@ -87,6 +87,7 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
      */
     @Required
     private String instanceId;
+
 
 
     /**
@@ -109,6 +110,7 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
         this.name = name;
     }
 
+
     /**
      * get 镜像描述。256字符以内。
 
@@ -129,33 +131,35 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
         this.description = description;
     }
 
+
     /**
-     * get 数据盘列表。
+    * get 数据盘列表。
 在不指定该参数的情况下，制作镜像的过程中会将该实例中的所有云盘数据盘制作快照，并与系统盘一起，制作成打包镜像。
 如果不希望将实例中的某个云盘数据盘制作快照，可使用 &#x60;noDevice&#x60; 的方式排除，例如：&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60; 就不会将 &#x60;vdb&#x60; 制作快照。
 如果希望在打包镜像中插入一块新盘，该盘不在实例中，可通过指定新的 &#x60;deviceName&#x60; 的方式实现，例如：&#x60;deviceName&#x3D;vdx&#x60; 将会在打包镜像中插入一块盘符为 &#x60;vdx&#x60; 的新盘，支持新盘使用或不使用快照都可以。
 如果使用 &#x60;deviceName&#x60; 指定了与实例中相同的盘符，那么实例中对应的云盘数据盘也不会制作快照，并使用新指定的参数进行替换。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<InstanceDiskAttachmentSpec> getDataDisks() {
         return dataDisks;
     }
 
     /**
-     * set 数据盘列表。
+    * set 数据盘列表。
 在不指定该参数的情况下，制作镜像的过程中会将该实例中的所有云盘数据盘制作快照，并与系统盘一起，制作成打包镜像。
 如果不希望将实例中的某个云盘数据盘制作快照，可使用 &#x60;noDevice&#x60; 的方式排除，例如：&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60; 就不会将 &#x60;vdb&#x60; 制作快照。
 如果希望在打包镜像中插入一块新盘，该盘不在实例中，可通过指定新的 &#x60;deviceName&#x60; 的方式实现，例如：&#x60;deviceName&#x3D;vdx&#x60; 将会在打包镜像中插入一块盘符为 &#x60;vdx&#x60; 的新盘，支持新盘使用或不使用快照都可以。
 如果使用 &#x60;deviceName&#x60; 指定了与实例中相同的盘符，那么实例中对应的云盘数据盘也不会制作快照，并使用新指定的参数进行替换。
 
-     *
-     * @param dataDisks
-     */
+    *
+    * @param dataDisks
+    */
     public void setDataDisks(List<InstanceDiskAttachmentSpec> dataDisks) {
         this.dataDisks = dataDisks;
     }
+
 
     /**
      * get 地域ID。
@@ -174,6 +178,7 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -194,6 +199,7 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set 镜像名称，长度为2\~32个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
 
@@ -204,6 +210,7 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
         this.name = name;
         return this;
     }
+
 
     /**
      * set 镜像描述。256字符以内。
@@ -216,20 +223,22 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
-     * set 数据盘列表。
+    * set 数据盘列表。
 在不指定该参数的情况下，制作镜像的过程中会将该实例中的所有云盘数据盘制作快照，并与系统盘一起，制作成打包镜像。
 如果不希望将实例中的某个云盘数据盘制作快照，可使用 &#x60;noDevice&#x60; 的方式排除，例如：&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60; 就不会将 &#x60;vdb&#x60; 制作快照。
 如果希望在打包镜像中插入一块新盘，该盘不在实例中，可通过指定新的 &#x60;deviceName&#x60; 的方式实现，例如：&#x60;deviceName&#x3D;vdx&#x60; 将会在打包镜像中插入一块盘符为 &#x60;vdx&#x60; 的新盘，支持新盘使用或不使用快照都可以。
 如果使用 &#x60;deviceName&#x60; 指定了与实例中相同的盘符，那么实例中对应的云盘数据盘也不会制作快照，并使用新指定的参数进行替换。
 
-     *
-     * @param dataDisks
-     */
+    *
+    * @param dataDisks
+    */
     public CreateImageRequest dataDisks(List<InstanceDiskAttachmentSpec> dataDisks) {
         this.dataDisks = dataDisks;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -241,6 +250,7 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 云主机ID。
      *
@@ -250,6 +260,7 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -268,5 +279,4 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
         }
         this.dataDisks.add(dataDisk);
     }
-
 }

@@ -48,8 +48,8 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
      * Required:true
      */
     @Required
+    
     private List<String> instanceIds;
-
     /**
      * 地域ID。
      * Required:true
@@ -65,23 +65,25 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
     private String keyName;
 
 
+
     /**
-     * get 要解绑的云主机实例ID列表。
-     *
-     * @return
-     */
+    * get 要解绑的云主机实例ID列表。
+    *
+    * @return
+    */
     public List<String> getInstanceIds() {
         return instanceIds;
     }
 
     /**
-     * set 要解绑的云主机实例ID列表。
-     *
-     * @param instanceIds
-     */
+    * set 要解绑的云主机实例ID列表。
+    *
+    * @param instanceIds
+    */
     public void setInstanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
     }
+
 
     /**
      * get 地域ID。
@@ -100,6 +102,7 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 密钥名称。
@@ -120,15 +123,17 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
-     * set 要解绑的云主机实例ID列表。
-     *
-     * @param instanceIds
-     */
+    * set 要解绑的云主机实例ID列表。
+    *
+    * @param instanceIds
+    */
     public DetachKeypairRequest instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -140,6 +145,7 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 密钥名称。
      *
@@ -149,6 +155,7 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
         this.keyName = keyName;
         return this;
     }
+
 
 
     /**
@@ -162,5 +169,4 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
         }
         this.instanceIds.add(instanceId);
     }
-
 }

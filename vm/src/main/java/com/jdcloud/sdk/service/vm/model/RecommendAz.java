@@ -48,6 +48,7 @@ public class RecommendAz  implements java.io.Serializable {
     private String region;
 
 
+
     /**
      * get 云主机所在可用区。
      *
@@ -66,6 +67,7 @@ public class RecommendAz  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
      * get 实例规格族。
      *
@@ -83,6 +85,7 @@ public class RecommendAz  implements java.io.Serializable {
     public void setFamily(String family) {
         this.family = family;
     }
+
 
     /**
      * get 地域信息
@@ -103,6 +106,7 @@ public class RecommendAz  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云主机所在可用区。
      *
@@ -113,6 +117,7 @@ public class RecommendAz  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例规格族。
      *
@@ -122,6 +127,7 @@ public class RecommendAz  implements java.io.Serializable {
         this.family = family;
         return this;
     }
+
 
     /**
      * set 地域信息

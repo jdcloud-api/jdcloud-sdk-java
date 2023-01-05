@@ -49,8 +49,8 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
     /**
      * 云硬盘列表。
      */
+    
     private List<InstanceDiskAttribute> dataDisks;
-
     /**
      * 地域ID。
      * Required:true
@@ -66,23 +66,25 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
     private String instanceId;
 
 
+
     /**
-     * get 云硬盘列表。
-     *
-     * @return
-     */
+    * get 云硬盘列表。
+    *
+    * @return
+    */
     public List<InstanceDiskAttribute> getDataDisks() {
         return dataDisks;
     }
 
     /**
-     * set 云硬盘列表。
-     *
-     * @param dataDisks
-     */
+    * set 云硬盘列表。
+    *
+    * @param dataDisks
+    */
     public void setDataDisks(List<InstanceDiskAttribute> dataDisks) {
         this.dataDisks = dataDisks;
     }
+
 
     /**
      * get 地域ID。
@@ -101,6 +103,7 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -121,15 +124,17 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
     }
 
 
+
     /**
-     * set 云硬盘列表。
-     *
-     * @param dataDisks
-     */
+    * set 云硬盘列表。
+    *
+    * @param dataDisks
+    */
     public ModifyInstanceDiskAttributeRequest dataDisks(List<InstanceDiskAttribute> dataDisks) {
         this.dataDisks = dataDisks;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -141,6 +146,7 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
         return this;
     }
 
+
     /**
      * set 云主机ID。
      *
@@ -150,6 +156,7 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -163,5 +170,4 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
         }
         this.dataDisks.add(dataDisk);
     }
-
 }

@@ -44,37 +44,40 @@ public class DescribeQuotasResult extends JdcloudResult implements java.io.Seria
     /**
      * quotas
      */
+    
     private List<Quota> quotas;
 
 
     /**
-     * get quotas
-     *
-     * @return
-     */
+    * get quotas
+    *
+    * @return
+    */
     public List<Quota> getQuotas() {
         return quotas;
     }
 
     /**
-     * set quotas
-     *
-     * @param quotas
-     */
+    * set quotas
+    *
+    * @param quotas
+    */
     public void setQuotas(List<Quota> quotas) {
         this.quotas = quotas;
     }
 
 
+
     /**
-     * set quotas
-     *
-     * @param quotas
-     */
+    * set quotas
+    *
+    * @param quotas
+    */
     public DescribeQuotasResult quotas(List<Quota> quotas) {
         this.quotas = quotas;
         return this;
     }
+
 
 
     /**
@@ -88,5 +91,4 @@ public class DescribeQuotasResult extends JdcloudResult implements java.io.Seria
         }
         this.quotas.add(quota);
     }
-
 }

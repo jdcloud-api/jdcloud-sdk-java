@@ -45,6 +45,7 @@ public class BriefInstanceNetworkInterfaceAttachment  implements java.io.Seriali
     private Boolean autoDelete;
 
 
+
     /**
      * get 网卡设备Index。创建实例时此参数无须指定且指定无效。
 对于主网卡默认Index为1，辅助网卡自动分配。
@@ -67,6 +68,7 @@ public class BriefInstanceNetworkInterfaceAttachment  implements java.io.Seriali
         this.deviceIndex = deviceIndex;
     }
 
+
     /**
      * get 是否随实例关联删除。
      *
@@ -86,6 +88,7 @@ public class BriefInstanceNetworkInterfaceAttachment  implements java.io.Seriali
     }
 
 
+
     /**
      * set 网卡设备Index。创建实例时此参数无须指定且指定无效。
 对于主网卡默认Index为1，辅助网卡自动分配。
@@ -97,6 +100,7 @@ public class BriefInstanceNetworkInterfaceAttachment  implements java.io.Seriali
         this.deviceIndex = deviceIndex;
         return this;
     }
+
 
     /**
      * set 是否随实例关联删除。

@@ -59,14 +59,15 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
 &#x60;architecture&#x60;: CPU架构，精确匹配，支持单个，可选范围:x86_64或arm64
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -87,31 +88,33 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
         this.serviceName = serviceName;
     }
 
+
     /**
-     * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceTypes&#x60;: 实例规格，精确匹配，支持多个
 &#x60;az&#x60;: 可用区，精确匹配，支持多个
 &#x60;architecture&#x60;: CPU架构，精确匹配，支持单个，可选范围:x86_64或arm64
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceTypes&#x60;: 实例规格，精确匹配，支持多个
 &#x60;az&#x60;: 可用区，精确匹配，支持多个
 &#x60;architecture&#x60;: CPU架构，精确匹配，支持单个，可选范围:x86_64或arm64
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID。
@@ -132,6 +135,7 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 产品线类型，默认为 &#x60;vm&#x60;。支持范围：&#x60;vm&#x60; 云主机，&#x60;nc&#x60; 原生容器。
      *
@@ -142,19 +146,21 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
-     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceTypes&#x60;: 实例规格，精确匹配，支持多个
 &#x60;az&#x60;: 可用区，精确匹配，支持多个
 &#x60;architecture&#x60;: CPU架构，精确匹配，支持单个，可选范围:x86_64或arm64
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeInstanceTypesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -165,6 +171,7 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -182,5 +189,4 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
         }
         this.filters.add(filter);
     }
-
 }

@@ -45,8 +45,8 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
     /**
      * 安全组ID列表。
      */
+    
     private List<String> securityGroups;
-
     /**
      * 参数已弃用，指定无效。
      */
@@ -56,6 +56,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
      * 自动分配的ipv6地址数量，取值范围[0,1]，默认为0。
      */
     private Integer ipv6AddressCount;
+
 
 
     /**
@@ -76,23 +77,25 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
         this.subnetId = subnetId;
     }
 
+
     /**
-     * get 安全组ID列表。
-     *
-     * @return
-     */
+    * get 安全组ID列表。
+    *
+    * @return
+    */
     public List<String> getSecurityGroups() {
         return securityGroups;
     }
 
     /**
-     * set 安全组ID列表。
-     *
-     * @param securityGroups
-     */
+    * set 安全组ID列表。
+    *
+    * @param securityGroups
+    */
     public void setSecurityGroups(List<String> securityGroups) {
         this.securityGroups = securityGroups;
     }
+
 
     /**
      * get 参数已弃用，指定无效。
@@ -111,6 +114,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
     public void setSanityCheck(Integer sanityCheck) {
         this.sanityCheck = sanityCheck;
     }
+
 
     /**
      * get 自动分配的ipv6地址数量，取值范围[0,1]，默认为0。
@@ -131,6 +135,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
     }
 
 
+
     /**
      * set 子网ID。
      *
@@ -141,15 +146,17 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
         return this;
     }
 
+
     /**
-     * set 安全组ID列表。
-     *
-     * @param securityGroups
-     */
+    * set 安全组ID列表。
+    *
+    * @param securityGroups
+    */
     public InstanceTemplateNetworkInterfaceSpec securityGroups(List<String> securityGroups) {
         this.securityGroups = securityGroups;
         return this;
     }
+
 
     /**
      * set 参数已弃用，指定无效。
@@ -161,6 +168,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set 自动分配的ipv6地址数量，取值范围[0,1]，默认为0。
      *
@@ -170,6 +178,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
         this.ipv6AddressCount = ipv6AddressCount;
         return this;
     }
+
 
 
     /**
@@ -183,5 +192,4 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
         }
         this.securityGroups.add(securityGroup);
     }
-
 }

@@ -58,6 +58,7 @@ public class DescribeImageConstraintsRequest extends JdcloudRequest implements j
     private String imageId;
 
 
+
     /**
      * get 地域ID。
      *
@@ -75,6 +76,7 @@ public class DescribeImageConstraintsRequest extends JdcloudRequest implements j
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 镜像ID。
@@ -95,6 +97,7 @@ public class DescribeImageConstraintsRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set 地域ID。
      *
@@ -104,6 +107,7 @@ public class DescribeImageConstraintsRequest extends JdcloudRequest implements j
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 镜像ID。

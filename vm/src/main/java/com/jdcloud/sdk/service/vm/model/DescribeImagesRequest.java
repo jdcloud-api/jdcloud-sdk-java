@@ -78,8 +78,8 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
      * 指定镜像ID查询，如果指定了此参数，其它参数可以不传。
 
      */
+    
     private List<String> ids;
-
     /**
      * 根据镜像名称模糊查询。
      */
@@ -132,6 +132,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     private String regionId;
 
 
+
     /**
      * get 镜像来源，如果没有指定 &#x60;ids&#x60; 参数，此参数必传。取值范围：
 &#x60;public&#x60;：官方镜像。
@@ -162,6 +163,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         this.imageSource = imageSource;
     }
 
+
     /**
      * get 查询已经下线的镜像时使用。
 只有查询 &#x60;官方镜像&#x60; 或者 &#x60;镜像市场镜像&#x60; 时，此参数才有意义，其它情况下此参数无效。
@@ -186,6 +188,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         this.offline = offline;
     }
 
+
     /**
      * get 根据镜像的操作系统发行版查询。
 取值范围：&#x60;Ubuntu、CentOS、Windows Server&#x60;。
@@ -208,25 +211,27 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         this.platform = platform;
     }
 
-    /**
-     * get 指定镜像ID查询，如果指定了此参数，其它参数可以不传。
 
-     *
-     * @return
-     */
+    /**
+    * get 指定镜像ID查询，如果指定了此参数，其它参数可以不传。
+
+    *
+    * @return
+    */
     public List<String> getIds() {
         return ids;
     }
 
     /**
-     * set 指定镜像ID查询，如果指定了此参数，其它参数可以不传。
+    * set 指定镜像ID查询，如果指定了此参数，其它参数可以不传。
 
-     *
-     * @param ids
-     */
+    *
+    * @param ids
+    */
     public void setIds(List<String> ids) {
         this.ids = ids;
     }
+
 
     /**
      * get 根据镜像名称模糊查询。
@@ -246,6 +251,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         this.imageName = imageName;
     }
 
+
     /**
      * get 根据镜像支持的系统盘类型查询。支持范围：&#x60;localDisk&#x60; 本地系统盘镜像；&#x60;cloudDisk&#x60; 云盘系统盘镜像。
      *
@@ -263,6 +269,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     public void setRootDeviceType(String rootDeviceType) {
         this.rootDeviceType = rootDeviceType;
     }
+
 
     /**
      * get 根据镜像的使用权限查询，可选参数，仅当 &#x60;imageSource&#x60; 为 &#x60;private&#x60; 时有效。取值范围：
@@ -290,6 +297,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         this.launchPermission = launchPermission;
     }
 
+
     /**
      * get 根据镜像状态查询。参考 [镜像状态](https://docs.jdcloud.com/virtual-machines/api/image_status)
      *
@@ -307,6 +315,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 已废弃。
@@ -326,6 +335,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get CPU架构。支持范围：&#x60;x86_64&#x60;、&#x60;arm64&#x60;。
      *
@@ -343,6 +353,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     public void setArchitecture(String architecture) {
         this.architecture = architecture;
     }
+
 
     /**
      * get 页码；默认为1。
@@ -362,6 +373,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
@@ -379,6 +391,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 地域ID。
@@ -399,6 +412,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 镜像来源，如果没有指定 &#x60;ids&#x60; 参数，此参数必传。取值范围：
 &#x60;public&#x60;：官方镜像。
@@ -415,6 +429,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 查询已经下线的镜像时使用。
 只有查询 &#x60;官方镜像&#x60; 或者 &#x60;镜像市场镜像&#x60; 时，此参数才有意义，其它情况下此参数无效。
@@ -428,6 +443,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 根据镜像的操作系统发行版查询。
 取值范围：&#x60;Ubuntu、CentOS、Windows Server&#x60;。
@@ -440,16 +456,18 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
-    /**
-     * set 指定镜像ID查询，如果指定了此参数，其它参数可以不传。
 
-     *
-     * @param ids
-     */
+    /**
+    * set 指定镜像ID查询，如果指定了此参数，其它参数可以不传。
+
+    *
+    * @param ids
+    */
     public DescribeImagesRequest ids(List<String> ids) {
         this.ids = ids;
         return this;
     }
+
 
     /**
      * set 根据镜像名称模糊查询。
@@ -461,6 +479,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 根据镜像支持的系统盘类型查询。支持范围：&#x60;localDisk&#x60; 本地系统盘镜像；&#x60;cloudDisk&#x60; 云盘系统盘镜像。
      *
@@ -470,6 +489,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         this.rootDeviceType = rootDeviceType;
         return this;
     }
+
 
     /**
      * set 根据镜像的使用权限查询，可选参数，仅当 &#x60;imageSource&#x60; 为 &#x60;private&#x60; 时有效。取值范围：
@@ -485,6 +505,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 根据镜像状态查询。参考 [镜像状态](https://docs.jdcloud.com/virtual-machines/api/image_status)
      *
@@ -494,6 +515,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         this.status = status;
         return this;
     }
+
 
     /**
      * set 已废弃。
@@ -505,6 +527,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set CPU架构。支持范围：&#x60;x86_64&#x60;、&#x60;arm64&#x60;。
      *
@@ -514,6 +537,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         this.architecture = architecture;
         return this;
     }
+
 
     /**
      * set 页码；默认为1。
@@ -525,6 +549,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
@@ -535,6 +560,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -544,6 +570,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -558,5 +585,4 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
         }
         this.ids.add(id);
     }
-
 }

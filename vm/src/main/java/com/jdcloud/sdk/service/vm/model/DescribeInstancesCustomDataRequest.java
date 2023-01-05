@@ -69,14 +69,15 @@ public class DescribeInstancesCustomDataRequest extends JdcloudRequest implement
 &#x60;subnetId&#x60;: 子网ID，精确匹配，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -97,6 +98,7 @@ public class DescribeInstancesCustomDataRequest extends JdcloudRequest implement
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认为10；取值范围[1, 10]。
      *
@@ -115,8 +117,9 @@ public class DescribeInstancesCustomDataRequest extends JdcloudRequest implement
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceId&#x60;: 云主机ID，精确匹配，支持多个
 &#x60;privateIpAddress&#x60;: 主网卡内网主IP地址，模糊匹配，支持多个
 &#x60;vpcId&#x60;: 私有网络ID，精确匹配，支持多个
@@ -128,15 +131,15 @@ public class DescribeInstancesCustomDataRequest extends JdcloudRequest implement
 &#x60;networkInterfaceId&#x60;: 弹性网卡ID，精确匹配，支持多个
 &#x60;subnetId&#x60;: 子网ID，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceId&#x60;: 云主机ID，精确匹配，支持多个
 &#x60;privateIpAddress&#x60;: 主网卡内网主IP地址，模糊匹配，支持多个
 &#x60;vpcId&#x60;: 私有网络ID，精确匹配，支持多个
@@ -148,12 +151,13 @@ public class DescribeInstancesCustomDataRequest extends JdcloudRequest implement
 &#x60;networkInterfaceId&#x60;: 弹性网卡ID，精确匹配，支持多个
 &#x60;subnetId&#x60;: 子网ID，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID。
@@ -174,6 +178,7 @@ public class DescribeInstancesCustomDataRequest extends JdcloudRequest implement
     }
 
 
+
     /**
      * set 页码；默认为1。
      *
@@ -183,6 +188,7 @@ public class DescribeInstancesCustomDataRequest extends JdcloudRequest implement
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；默认为10；取值范围[1, 10]。
@@ -194,8 +200,9 @@ public class DescribeInstancesCustomDataRequest extends JdcloudRequest implement
         return this;
     }
 
+
     /**
-     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+    * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceId&#x60;: 云主机ID，精确匹配，支持多个
 &#x60;privateIpAddress&#x60;: 主网卡内网主IP地址，模糊匹配，支持多个
 &#x60;vpcId&#x60;: 私有网络ID，精确匹配，支持多个
@@ -207,13 +214,14 @@ public class DescribeInstancesCustomDataRequest extends JdcloudRequest implement
 &#x60;networkInterfaceId&#x60;: 弹性网卡ID，精确匹配，支持多个
 &#x60;subnetId&#x60;: 子网ID，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeInstancesCustomDataRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域ID。
@@ -224,6 +232,7 @@ public class DescribeInstancesCustomDataRequest extends JdcloudRequest implement
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -248,5 +257,4 @@ public class DescribeInstancesCustomDataRequest extends JdcloudRequest implement
         }
         this.filters.add(filter);
     }
-
 }

@@ -58,6 +58,7 @@ public class LocalDevice  implements java.io.Serializable {
     private Object setting;
 
 
+
     /**
      * get 设备类型。
      *
@@ -75,6 +76,7 @@ public class LocalDevice  implements java.io.Serializable {
     public void setDeviceType(String deviceType) {
         this.deviceType = deviceType;
     }
+
 
     /**
      * get 设备的型号。
@@ -94,6 +96,7 @@ public class LocalDevice  implements java.io.Serializable {
         this.productModel = productModel;
     }
 
+
     /**
      * get 设备ID。
      *
@@ -112,6 +115,7 @@ public class LocalDevice  implements java.io.Serializable {
         this.deviceId = deviceId;
     }
 
+
     /**
      * get 挂载状态，attached、attaching、detaching。
      *
@@ -129,6 +133,7 @@ public class LocalDevice  implements java.io.Serializable {
     public void setAttachState(String attachState) {
         this.attachState = attachState;
     }
+
 
     /**
      * get 配置信息。
@@ -149,6 +154,7 @@ public class LocalDevice  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 设备类型。
      *
@@ -158,6 +164,7 @@ public class LocalDevice  implements java.io.Serializable {
         this.deviceType = deviceType;
         return this;
     }
+
 
     /**
      * set 设备的型号。
@@ -169,6 +176,7 @@ public class LocalDevice  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 设备ID。
      *
@@ -179,6 +187,7 @@ public class LocalDevice  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 挂载状态，attached、attaching、detaching。
      *
@@ -188,6 +197,7 @@ public class LocalDevice  implements java.io.Serializable {
         this.attachState = attachState;
         return this;
     }
+
 
     /**
      * set 配置信息。

@@ -57,6 +57,7 @@ public class DeleteKeypairRequest extends JdcloudRequest implements java.io.Seri
     private String keyName;
 
 
+
     /**
      * get 地域ID。
      *
@@ -74,6 +75,7 @@ public class DeleteKeypairRequest extends JdcloudRequest implements java.io.Seri
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 密钥名称。
@@ -94,6 +96,7 @@ public class DeleteKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 地域ID。
      *
@@ -103,6 +106,7 @@ public class DeleteKeypairRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 密钥名称。

@@ -58,6 +58,7 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
     private String keyFingerprint;
 
 
+
     /**
      * get 密钥对名称。
      *
@@ -76,6 +77,7 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
         this.keyName = keyName;
     }
 
+
     /**
      * get 密钥对的私钥部分，&#x60;PEM PKCS#8&#x60; 格式。
      *
@@ -93,6 +95,7 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
     public void setPrivateKey(String privateKey) {
         this.privateKey = privateKey;
     }
+
 
     /**
      * get 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
@@ -113,6 +116,7 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
     }
 
 
+
     /**
      * set 密钥对名称。
      *
@@ -123,6 +127,7 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 密钥对的私钥部分，&#x60;PEM PKCS#8&#x60; 格式。
      *
@@ -132,6 +137,7 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
         this.privateKey = privateKey;
         return this;
     }
+
 
     /**
      * set 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。

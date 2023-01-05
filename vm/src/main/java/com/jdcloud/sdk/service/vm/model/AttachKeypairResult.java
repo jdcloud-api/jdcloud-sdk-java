@@ -46,70 +46,75 @@ public class AttachKeypairResult extends JdcloudResult implements java.io.Serial
     /**
      * successInstanceId
      */
+    
     private List<String> successInstanceId;
-
     /**
      * failInstanceId
      */
+    
     private List<String> failInstanceId;
 
 
     /**
-     * get successInstanceId
-     *
-     * @return
-     */
+    * get successInstanceId
+    *
+    * @return
+    */
     public List<String> getSuccessInstanceId() {
         return successInstanceId;
     }
 
     /**
-     * set successInstanceId
-     *
-     * @param successInstanceId
-     */
+    * set successInstanceId
+    *
+    * @param successInstanceId
+    */
     public void setSuccessInstanceId(List<String> successInstanceId) {
         this.successInstanceId = successInstanceId;
     }
 
+
     /**
-     * get failInstanceId
-     *
-     * @return
-     */
+    * get failInstanceId
+    *
+    * @return
+    */
     public List<String> getFailInstanceId() {
         return failInstanceId;
     }
 
     /**
-     * set failInstanceId
-     *
-     * @param failInstanceId
-     */
+    * set failInstanceId
+    *
+    * @param failInstanceId
+    */
     public void setFailInstanceId(List<String> failInstanceId) {
         this.failInstanceId = failInstanceId;
     }
 
 
+
     /**
-     * set successInstanceId
-     *
-     * @param successInstanceId
-     */
+    * set successInstanceId
+    *
+    * @param successInstanceId
+    */
     public AttachKeypairResult successInstanceId(List<String> successInstanceId) {
         this.successInstanceId = successInstanceId;
         return this;
     }
 
+
     /**
-     * set failInstanceId
-     *
-     * @param failInstanceId
-     */
+    * set failInstanceId
+    *
+    * @param failInstanceId
+    */
     public AttachKeypairResult failInstanceId(List<String> failInstanceId) {
         this.failInstanceId = failInstanceId;
         return this;
     }
+
 
 
     /**
@@ -135,5 +140,4 @@ public class AttachKeypairResult extends JdcloudResult implements java.io.Serial
         }
         this.failInstanceId.add(failInstanceId);
     }
-
 }

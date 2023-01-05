@@ -53,6 +53,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
     private InstanceNetworkInterface networkInterface;
 
 
+
     /**
      * get 网卡设备Index。创建实例时此参数无须指定且指定无效。
 对于主网卡默认Index为1，辅助网卡自动分配。
@@ -74,6 +75,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
     public void setDeviceIndex(Integer deviceIndex) {
         this.deviceIndex = deviceIndex;
     }
+
 
     /**
      * get 是否随实例一起删除。
@@ -99,6 +101,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
         this.autoDelete = autoDelete;
     }
 
+
     /**
      * get 网卡设备详细配置。
      *
@@ -118,6 +121,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
     }
 
 
+
     /**
      * set 网卡设备Index。创建实例时此参数无须指定且指定无效。
 对于主网卡默认Index为1，辅助网卡自动分配。
@@ -129,6 +133,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
         this.deviceIndex = deviceIndex;
         return this;
     }
+
 
     /**
      * set 是否随实例一起删除。
@@ -142,6 +147,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
         this.autoDelete = autoDelete;
         return this;
     }
+
 
     /**
      * set 网卡设备详细配置。

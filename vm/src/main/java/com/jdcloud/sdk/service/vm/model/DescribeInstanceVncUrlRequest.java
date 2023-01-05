@@ -59,6 +59,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
     private String instanceId;
 
 
+
     /**
      * get 地域ID。
      *
@@ -76,6 +77,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 云主机ID。
@@ -96,6 +98,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 地域ID。
      *
@@ -105,6 +108,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 云主机ID。

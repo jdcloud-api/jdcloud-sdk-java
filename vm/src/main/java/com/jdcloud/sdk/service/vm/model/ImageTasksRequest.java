@@ -55,8 +55,8 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     /**
      * 任务id列表。
      */
+    
     private List<String> taskIds;
-
     /**
      * 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
      */
@@ -90,6 +90,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     private String regionId;
 
 
+
     /**
      * get 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
      *
@@ -108,23 +109,25 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
         this.taskAction = taskAction;
     }
 
+
     /**
-     * get 任务id列表。
-     *
-     * @return
-     */
+    * get 任务id列表。
+    *
+    * @return
+    */
     public List<String> getTaskIds() {
         return taskIds;
     }
 
     /**
-     * set 任务id列表。
-     *
-     * @param taskIds
-     */
+    * set 任务id列表。
+    *
+    * @param taskIds
+    */
     public void setTaskIds(List<String> taskIds) {
         this.taskIds = taskIds;
     }
+
 
     /**
      * get 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
@@ -144,6 +147,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
         this.taskStatus = taskStatus;
     }
 
+
     /**
      * get 任务开始时间
      *
@@ -161,6 +165,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 任务结束时间
@@ -180,6 +185,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
         this.endTime = endTime;
     }
 
+
     /**
      * get 页码；默认为1。
      *
@@ -198,6 +204,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；取值范围[10, 100]。
      *
@@ -215,6 +222,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 地域ID。
@@ -235,6 +243,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
      *
@@ -245,15 +254,17 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
-     * set 任务id列表。
-     *
-     * @param taskIds
-     */
+    * set 任务id列表。
+    *
+    * @param taskIds
+    */
     public ImageTasksRequest taskIds(List<String> taskIds) {
         this.taskIds = taskIds;
         return this;
     }
+
 
     /**
      * set 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
@@ -265,6 +276,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 任务开始时间
      *
@@ -274,6 +286,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 任务结束时间
@@ -285,6 +298,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 页码；默认为1。
      *
@@ -294,6 +308,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；取值范围[10, 100]。
@@ -305,6 +320,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 地域ID。
      *
@@ -314,6 +330,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -327,5 +344,4 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
         }
         this.taskIds.add(taskId);
     }
-
 }
