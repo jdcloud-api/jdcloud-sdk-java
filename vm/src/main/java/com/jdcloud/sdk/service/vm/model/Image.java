@@ -159,6 +159,11 @@ public class Image  implements java.io.Serializable {
      */
     private Boolean imported;
 
+    /**
+     * 镜像过期时间，空表示永久有效。
+     */
+    private String expiredTime;
+
 
 
     /**
@@ -609,6 +614,25 @@ public class Image  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 镜像过期时间，空表示永久有效。
+     *
+     * @return
+     */
+    public String getExpiredTime() {
+        return expiredTime;
+    }
+
+    /**
+     * set 镜像过期时间，空表示永久有效。
+     *
+     * @param expiredTime
+     */
+    public void setExpiredTime(String expiredTime) {
+        this.expiredTime = expiredTime;
+    }
+
+
 
     /**
      * set 镜像ID。
@@ -863,6 +887,17 @@ public class Image  implements java.io.Serializable {
      */
     public Image imported(Boolean imported) {
         this.imported = imported;
+        return this;
+    }
+
+
+    /**
+     * set 镜像过期时间，空表示永久有效。
+     *
+     * @param expiredTime
+     */
+    public Image expiredTime(String expiredTime) {
+        this.expiredTime = expiredTime;
         return this;
     }
 
