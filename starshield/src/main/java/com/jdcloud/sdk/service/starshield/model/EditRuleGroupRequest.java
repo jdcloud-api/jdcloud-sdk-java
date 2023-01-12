@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * WAF Rule Groups
+ * WAF-Rule-Groups
  * A group of web application firewall rules that share common functionality and traits
  *
  * OpenAPI spec version: v1
@@ -61,6 +61,7 @@ public class EditRuleGroupRequest extends JdcloudRequest implements java.io.Seri
     private String identifier;
 
 
+
     /**
      * get 该组中包含的规则是否可配置/可使用
      *
@@ -78,6 +79,7 @@ public class EditRuleGroupRequest extends JdcloudRequest implements java.io.Seri
     public void setMode(String mode) {
         this.mode = mode;
     }
+
 
     /**
      * get zone_identifier
@@ -97,6 +99,7 @@ public class EditRuleGroupRequest extends JdcloudRequest implements java.io.Seri
         this.zone_identifier = zone_identifier;
     }
 
+
     /**
      * get package_identifier
      *
@@ -114,6 +117,7 @@ public class EditRuleGroupRequest extends JdcloudRequest implements java.io.Seri
     public void setPackage_identifier(String package_identifier) {
         this.package_identifier = package_identifier;
     }
+
 
     /**
      * get identifier
@@ -134,6 +138,7 @@ public class EditRuleGroupRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 该组中包含的规则是否可配置/可使用
      *
@@ -143,6 +148,7 @@ public class EditRuleGroupRequest extends JdcloudRequest implements java.io.Seri
         this.mode = mode;
         return this;
     }
+
 
     /**
      * set zone_identifier
@@ -154,6 +160,7 @@ public class EditRuleGroupRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set package_identifier
      *
@@ -163,6 +170,7 @@ public class EditRuleGroupRequest extends JdcloudRequest implements java.io.Seri
         this.package_identifier = package_identifier;
         return this;
     }
+
 
     /**
      * set identifier

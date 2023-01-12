@@ -78,6 +78,7 @@ public class AccessLog  implements java.io.Serializable {
     private Integer responseBytes;
 
 
+
     /**
      * get timestamp
      *
@@ -95,6 +96,7 @@ public class AccessLog  implements java.io.Serializable {
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
+
 
     /**
      * get ip
@@ -114,6 +116,7 @@ public class AccessLog  implements java.io.Serializable {
         this.ip = ip;
     }
 
+
     /**
      * get country
      *
@@ -131,6 +134,7 @@ public class AccessLog  implements java.io.Serializable {
     public void setCountry(String country) {
         this.country = country;
     }
+
 
     /**
      * get httpMethod
@@ -150,6 +154,7 @@ public class AccessLog  implements java.io.Serializable {
         this.httpMethod = httpMethod;
     }
 
+
     /**
      * get host
      *
@@ -167,6 +172,7 @@ public class AccessLog  implements java.io.Serializable {
     public void setHost(String host) {
         this.host = host;
     }
+
 
     /**
      * get requestUri
@@ -186,6 +192,7 @@ public class AccessLog  implements java.io.Serializable {
         this.requestUri = requestUri;
     }
 
+
     /**
      * get httpProtocol
      *
@@ -204,6 +211,7 @@ public class AccessLog  implements java.io.Serializable {
         this.httpProtocol = httpProtocol;
     }
 
+
     /**
      * get responseStatus
      *
@@ -221,6 +229,7 @@ public class AccessLog  implements java.io.Serializable {
     public void setResponseStatus(Integer responseStatus) {
         this.responseStatus = responseStatus;
     }
+
 
     /**
      * get responseBytes
@@ -241,6 +250,7 @@ public class AccessLog  implements java.io.Serializable {
     }
 
 
+
     /**
      * set timestamp
      *
@@ -250,6 +260,7 @@ public class AccessLog  implements java.io.Serializable {
         this.timestamp = timestamp;
         return this;
     }
+
 
     /**
      * set ip
@@ -261,6 +272,7 @@ public class AccessLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set country
      *
@@ -270,6 +282,7 @@ public class AccessLog  implements java.io.Serializable {
         this.country = country;
         return this;
     }
+
 
     /**
      * set httpMethod
@@ -281,6 +294,7 @@ public class AccessLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set host
      *
@@ -290,6 +304,7 @@ public class AccessLog  implements java.io.Serializable {
         this.host = host;
         return this;
     }
+
 
     /**
      * set requestUri
@@ -301,6 +316,7 @@ public class AccessLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set httpProtocol
      *
@@ -311,6 +327,7 @@ public class AccessLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set responseStatus
      *
@@ -320,6 +337,7 @@ public class AccessLog  implements java.io.Serializable {
         this.responseStatus = responseStatus;
         return this;
     }
+
 
     /**
      * set responseBytes

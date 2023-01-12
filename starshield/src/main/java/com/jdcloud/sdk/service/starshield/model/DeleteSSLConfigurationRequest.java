@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Custom SSL for a Zone
+ * Custom-SSL-for-a-Zone
  * Custom SSL certificate for a zone
  *
  * OpenAPI spec version: v1
@@ -49,6 +49,7 @@ public class DeleteSSLConfigurationRequest extends JdcloudRequest implements jav
     private String identifier;
 
 
+
     /**
      * get zone_identifier
      *
@@ -66,6 +67,7 @@ public class DeleteSSLConfigurationRequest extends JdcloudRequest implements jav
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
     /**
      * get identifier
@@ -86,6 +88,7 @@ public class DeleteSSLConfigurationRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set zone_identifier
      *
@@ -95,6 +98,7 @@ public class DeleteSSLConfigurationRequest extends JdcloudRequest implements jav
         this.zone_identifier = zone_identifier;
         return this;
     }
+
 
     /**
      * set identifier

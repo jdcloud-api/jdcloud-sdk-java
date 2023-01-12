@@ -68,6 +68,7 @@ public class SRVdata  implements java.io.Serializable {
     private String target;
 
 
+
     /**
      * get priority
      *
@@ -85,6 +86,7 @@ public class SRVdata  implements java.io.Serializable {
     public void setPriority(Number priority) {
         this.priority = priority;
     }
+
 
     /**
      * get weight
@@ -104,6 +106,7 @@ public class SRVdata  implements java.io.Serializable {
         this.weight = weight;
     }
 
+
     /**
      * get port
      *
@@ -121,6 +124,7 @@ public class SRVdata  implements java.io.Serializable {
     public void setPort(Number port) {
         this.port = port;
     }
+
 
     /**
      * get name
@@ -140,6 +144,7 @@ public class SRVdata  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get proto
      *
@@ -158,6 +163,7 @@ public class SRVdata  implements java.io.Serializable {
         this.proto = proto;
     }
 
+
     /**
      * get service
      *
@@ -175,6 +181,7 @@ public class SRVdata  implements java.io.Serializable {
     public void setService(String service) {
         this.service = service;
     }
+
 
     /**
      * get target
@@ -195,6 +202,7 @@ public class SRVdata  implements java.io.Serializable {
     }
 
 
+
     /**
      * set priority
      *
@@ -204,6 +212,7 @@ public class SRVdata  implements java.io.Serializable {
         this.priority = priority;
         return this;
     }
+
 
     /**
      * set weight
@@ -215,6 +224,7 @@ public class SRVdata  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set port
      *
@@ -224,6 +234,7 @@ public class SRVdata  implements java.io.Serializable {
         this.port = port;
         return this;
     }
+
 
     /**
      * set name
@@ -235,6 +246,7 @@ public class SRVdata  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set proto
      *
@@ -245,6 +257,7 @@ public class SRVdata  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set service
      *
@@ -254,6 +267,7 @@ public class SRVdata  implements java.io.Serializable {
         this.service = service;
         return this;
     }
+
 
     /**
      * set target

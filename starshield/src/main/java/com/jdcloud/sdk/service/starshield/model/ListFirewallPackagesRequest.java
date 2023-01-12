@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * WAF Rule Packages
+ * WAF-Rule-Packages
  * Web application firewall rule package applied to a zone
  *
  * OpenAPI spec version: v1
@@ -72,6 +72,7 @@ public class ListFirewallPackagesRequest extends JdcloudRequest implements java.
     private String zone_identifier;
 
 
+
     /**
      * get Name of the firewall package
      *
@@ -89,6 +90,7 @@ public class ListFirewallPackagesRequest extends JdcloudRequest implements java.
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get Page number of paginated results
@@ -108,6 +110,7 @@ public class ListFirewallPackagesRequest extends JdcloudRequest implements java.
         this.page = page;
     }
 
+
     /**
      * get 每页的包数
      *
@@ -125,6 +128,7 @@ public class ListFirewallPackagesRequest extends JdcloudRequest implements java.
     public void setPer_page(Number per_page) {
         this.per_page = per_page;
     }
+
 
     /**
      * get 按字段对包排序
@@ -144,6 +148,7 @@ public class ListFirewallPackagesRequest extends JdcloudRequest implements java.
         this.order = order;
     }
 
+
     /**
      * get asc - 升序；desc - 降序
      *
@@ -162,6 +167,7 @@ public class ListFirewallPackagesRequest extends JdcloudRequest implements java.
         this.direction = direction;
     }
 
+
     /**
      * get 是否匹配所有搜索要求或至少一个（任何）
      *
@@ -179,6 +185,7 @@ public class ListFirewallPackagesRequest extends JdcloudRequest implements java.
     public void setMatch(String match) {
         this.match = match;
     }
+
 
     /**
      * get zone_identifier
@@ -199,6 +206,7 @@ public class ListFirewallPackagesRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set Name of the firewall package
      *
@@ -208,6 +216,7 @@ public class ListFirewallPackagesRequest extends JdcloudRequest implements java.
         this.name = name;
         return this;
     }
+
 
     /**
      * set Page number of paginated results
@@ -219,6 +228,7 @@ public class ListFirewallPackagesRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 每页的包数
      *
@@ -228,6 +238,7 @@ public class ListFirewallPackagesRequest extends JdcloudRequest implements java.
         this.per_page = per_page;
         return this;
     }
+
 
     /**
      * set 按字段对包排序
@@ -239,6 +250,7 @@ public class ListFirewallPackagesRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set asc - 升序；desc - 降序
      *
@@ -249,6 +261,7 @@ public class ListFirewallPackagesRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 是否匹配所有搜索要求或至少一个（任何）
      *
@@ -258,6 +271,7 @@ public class ListFirewallPackagesRequest extends JdcloudRequest implements java.
         this.match = match;
         return this;
     }
+
 
     /**
      * set zone_identifier

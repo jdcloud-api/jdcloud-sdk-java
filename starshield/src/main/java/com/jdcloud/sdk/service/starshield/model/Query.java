@@ -38,6 +38,7 @@ public class Query  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get 要重写的字面URI查询字符串。
      *
@@ -55,6 +56,7 @@ public class Query  implements java.io.Serializable {
     public void setValue(String value) {
         this.value = value;
     }
+
 
 
     /**

@@ -40,6 +40,7 @@ public class PurgeAllFilesResult extends JdcloudResult implements java.io.Serial
     private Zone data;
 
 
+
     /**
      * get data
      *
@@ -57,6 +58,7 @@ public class PurgeAllFilesResult extends JdcloudResult implements java.io.Serial
     public void setData(Zone data) {
         this.data = data;
     }
+
 
 
     /**

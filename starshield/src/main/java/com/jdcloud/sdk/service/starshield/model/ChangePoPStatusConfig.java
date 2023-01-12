@@ -43,6 +43,7 @@ public class ChangePoPStatusConfig  implements java.io.Serializable {
     private ServiceLevels serviceLevels;
 
 
+
     /**
      * get routingModes
      *
@@ -60,6 +61,7 @@ public class ChangePoPStatusConfig  implements java.io.Serializable {
     public void setRoutingModes(RoutingModes routingModes) {
         this.routingModes = routingModes;
     }
+
 
     /**
      * get serviceLevels
@@ -80,6 +82,7 @@ public class ChangePoPStatusConfig  implements java.io.Serializable {
     }
 
 
+
     /**
      * set routingModes
      *
@@ -89,6 +92,7 @@ public class ChangePoPStatusConfig  implements java.io.Serializable {
         this.routingModes = routingModes;
         return this;
     }
+
 
     /**
      * set serviceLevels

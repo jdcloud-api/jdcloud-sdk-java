@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Custom SSL for a Zone
+ * Custom-SSL-for-a-Zone
  * Custom SSL certificate for a zone
  *
  * OpenAPI spec version: v1

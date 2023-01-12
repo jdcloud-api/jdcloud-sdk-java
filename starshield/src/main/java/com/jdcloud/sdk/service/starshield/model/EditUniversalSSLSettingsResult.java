@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Universal SSL Settings for a Zone
+ * Universal-SSL-Settings-for-a-Zone
  * Universal SSL Settings for a Zone
  *
  * OpenAPI spec version: v1
@@ -40,6 +40,7 @@ public class EditUniversalSSLSettingsResult extends JdcloudResult implements jav
     private UniversalSSLSetting data;
 
 
+
     /**
      * get data
      *
@@ -57,6 +58,7 @@ public class EditUniversalSSLSettingsResult extends JdcloudResult implements jav
     public void setData(UniversalSSLSetting data) {
         this.data = data;
     }
+
 
 
     /**

@@ -58,6 +58,7 @@ public class ServiceLevels  implements java.io.Serializable {
     private String jdc_flagship;
 
 
+
     /**
      * get jdc_ent
      *
@@ -75,6 +76,7 @@ public class ServiceLevels  implements java.io.Serializable {
     public void setJdc_ent(String jdc_ent) {
         this.jdc_ent = jdc_ent;
     }
+
 
     /**
      * get jdc_pro
@@ -94,6 +96,7 @@ public class ServiceLevels  implements java.io.Serializable {
         this.jdc_pro = jdc_pro;
     }
 
+
     /**
      * get jdc_free
      *
@@ -112,6 +115,7 @@ public class ServiceLevels  implements java.io.Serializable {
         this.jdc_free = jdc_free;
     }
 
+
     /**
      * get jdc_basic
      *
@@ -129,6 +133,7 @@ public class ServiceLevels  implements java.io.Serializable {
     public void setJdc_basic(String jdc_basic) {
         this.jdc_basic = jdc_basic;
     }
+
 
     /**
      * get jdc_flagship
@@ -149,6 +154,7 @@ public class ServiceLevels  implements java.io.Serializable {
     }
 
 
+
     /**
      * set jdc_ent
      *
@@ -158,6 +164,7 @@ public class ServiceLevels  implements java.io.Serializable {
         this.jdc_ent = jdc_ent;
         return this;
     }
+
 
     /**
      * set jdc_pro
@@ -169,6 +176,7 @@ public class ServiceLevels  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set jdc_free
      *
@@ -179,6 +187,7 @@ public class ServiceLevels  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set jdc_basic
      *
@@ -188,6 +197,7 @@ public class ServiceLevels  implements java.io.Serializable {
         this.jdc_basic = jdc_basic;
         return this;
     }
+
 
     /**
      * set jdc_flagship

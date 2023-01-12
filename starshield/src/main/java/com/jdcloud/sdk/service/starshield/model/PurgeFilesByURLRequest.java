@@ -43,8 +43,8 @@ public class PurgeFilesByURLRequest extends JdcloudRequest implements java.io.Se
     /**
      * 应从缓存中删除的URL数组
      */
+    
     private List<String> files;
-
     /**
      * identifier
      * Required:true
@@ -53,23 +53,25 @@ public class PurgeFilesByURLRequest extends JdcloudRequest implements java.io.Se
     private String identifier;
 
 
+
     /**
-     * get 应从缓存中删除的URL数组
-     *
-     * @return
-     */
+    * get 应从缓存中删除的URL数组
+    *
+    * @return
+    */
     public List<String> getFiles() {
         return files;
     }
 
     /**
-     * set 应从缓存中删除的URL数组
-     *
-     * @param files
-     */
+    * set 应从缓存中删除的URL数组
+    *
+    * @param files
+    */
     public void setFiles(List<String> files) {
         this.files = files;
     }
+
 
     /**
      * get identifier
@@ -90,15 +92,17 @@ public class PurgeFilesByURLRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
-     * set 应从缓存中删除的URL数组
-     *
-     * @param files
-     */
+    * set 应从缓存中删除的URL数组
+    *
+    * @param files
+    */
     public PurgeFilesByURLRequest files(List<String> files) {
         this.files = files;
         return this;
     }
+
 
     /**
      * set identifier
@@ -109,6 +113,7 @@ public class PurgeFilesByURLRequest extends JdcloudRequest implements java.io.Se
         this.identifier = identifier;
         return this;
     }
+
 
 
     /**
@@ -122,5 +127,4 @@ public class PurgeFilesByURLRequest extends JdcloudRequest implements java.io.Se
         }
         this.files.add(file);
     }
-
 }

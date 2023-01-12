@@ -42,6 +42,7 @@ public class AvailablePageRule  implements java.io.Serializable {
     /**
      * 值的类型
      */
+    
     private List<String> properties;
 
 
@@ -63,23 +64,25 @@ public class AvailablePageRule  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
-     * get 值的类型
-     *
-     * @return
-     */
+    * get 值的类型
+    *
+    * @return
+    */
     public List<String> getProperties() {
         return properties;
     }
 
     /**
-     * set 值的类型
-     *
-     * @param properties
-     */
+    * set 值的类型
+    *
+    * @param properties
+    */
     public void setProperties(List<String> properties) {
         this.properties = properties;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class AvailablePageRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 值的类型
-     *
-     * @param properties
-     */
+    * set 值的类型
+    *
+    * @param properties
+    */
     public AvailablePageRule properties(List<String> properties) {
         this.properties = properties;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class AvailablePageRule  implements java.io.Serializable {
         }
         this.properties.add(propertie);
     }
-
 }

@@ -48,6 +48,7 @@ public class User_owner  implements java.io.Serializable {
     private String ty_pe;
 
 
+
     /**
      * get id
      *
@@ -66,6 +67,7 @@ public class User_owner  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get email
      *
@@ -83,6 +85,7 @@ public class User_owner  implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     /**
      * get ty_pe
@@ -103,6 +106,7 @@ public class User_owner  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -113,6 +117,7 @@ public class User_owner  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set email
      *
@@ -122,6 +127,7 @@ public class User_owner  implements java.io.Serializable {
         this.email = email;
         return this;
     }
+
 
     /**
      * set ty_pe

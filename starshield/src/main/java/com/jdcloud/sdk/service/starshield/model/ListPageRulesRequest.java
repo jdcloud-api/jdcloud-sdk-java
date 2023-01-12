@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Page Rules for a Zone
+ * Page-Rules-for-a-Zone
  * A rule describing target patterns for requests and actions to perform on matching requests
  *
  * OpenAPI spec version: v1
@@ -62,6 +62,7 @@ public class ListPageRulesRequest extends JdcloudRequest implements java.io.Seri
     private String zone_identifier;
 
 
+
     /**
      * get 页面规则的状态
      *
@@ -79,6 +80,7 @@ public class ListPageRulesRequest extends JdcloudRequest implements java.io.Seri
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 用于按顺序排列页面规则的字段
@@ -98,6 +100,7 @@ public class ListPageRulesRequest extends JdcloudRequest implements java.io.Seri
         this.order = order;
     }
 
+
     /**
      * get asc - 升序；desc - 降序
      *
@@ -116,6 +119,7 @@ public class ListPageRulesRequest extends JdcloudRequest implements java.io.Seri
         this.direction = direction;
     }
 
+
     /**
      * get 是否匹配所有搜索要求或至少一个（任何）
      *
@@ -133,6 +137,7 @@ public class ListPageRulesRequest extends JdcloudRequest implements java.io.Seri
     public void setMatch(String match) {
         this.match = match;
     }
+
 
     /**
      * get zone_identifier
@@ -153,6 +158,7 @@ public class ListPageRulesRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 页面规则的状态
      *
@@ -162,6 +168,7 @@ public class ListPageRulesRequest extends JdcloudRequest implements java.io.Seri
         this.status = status;
         return this;
     }
+
 
     /**
      * set 用于按顺序排列页面规则的字段
@@ -173,6 +180,7 @@ public class ListPageRulesRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set asc - 升序；desc - 降序
      *
@@ -183,6 +191,7 @@ public class ListPageRulesRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 是否匹配所有搜索要求或至少一个（任何）
      *
@@ -192,6 +201,7 @@ public class ListPageRulesRequest extends JdcloudRequest implements java.io.Seri
         this.match = match;
         return this;
     }
+
 
     /**
      * set zone_identifier

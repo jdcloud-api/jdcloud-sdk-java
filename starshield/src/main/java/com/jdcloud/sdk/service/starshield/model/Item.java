@@ -33,12 +33,16 @@ public class Item  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * name
+     * 项的名称
      */
     private String name;
 
     /**
-     * value
+     * 项的值。
+如果是带宽，值的单位是bps（bit per second）
+如果是流量，值的单位是Byte
+如果是请求量，值的单位是次数
+
      */
     private Number value;
 
@@ -48,8 +52,9 @@ public class Item  implements java.io.Serializable {
     private String unit;
 
 
+
     /**
-     * get name
+     * get 项的名称
      *
      * @return
      */
@@ -58,7 +63,7 @@ public class Item  implements java.io.Serializable {
     }
 
     /**
-     * set name
+     * set 项的名称
      *
      * @param name
      */
@@ -66,8 +71,13 @@ public class Item  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
-     * get value
+     * get 项的值。
+如果是带宽，值的单位是bps（bit per second）
+如果是流量，值的单位是Byte
+如果是请求量，值的单位是次数
+
      *
      * @return
      */
@@ -76,13 +86,18 @@ public class Item  implements java.io.Serializable {
     }
 
     /**
-     * set value
+     * set 项的值。
+如果是带宽，值的单位是bps（bit per second）
+如果是流量，值的单位是Byte
+如果是请求量，值的单位是次数
+
      *
      * @param value
      */
     public void setValue(Number value) {
         this.value = value;
     }
+
 
     /**
      * get unit
@@ -103,8 +118,9 @@ public class Item  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set name
+     * set 项的名称
      *
      * @param name
      */
@@ -113,8 +129,13 @@ public class Item  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set value
+     * set 项的值。
+如果是带宽，值的单位是bps（bit per second）
+如果是流量，值的单位是Byte
+如果是请求量，值的单位是次数
+
      *
      * @param value
      */
@@ -122,6 +143,7 @@ public class Item  implements java.io.Serializable {
         this.value = value;
         return this;
     }
+
 
     /**
      * set unit

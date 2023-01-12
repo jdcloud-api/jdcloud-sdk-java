@@ -87,11 +87,12 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
     /**
      * 告警联系人
      */
+    
     private List<Long> contactUsers;
-
     /**
      * 告警联系组
      */
+    
     private List<Long> contactGroups;
 
 
@@ -113,6 +114,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 告警类型 WEB_ATTACK-&gt;网站攻击 CC_ATTACK-&gt;CC攻击 DDOS_ATTACK-&gt;DDOS攻击 STATUS_CODE_ERROR-&gt;状态码错误
      *
@@ -130,6 +132,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
     public void setAlarmType(String alarmType) {
         this.alarmType = alarmType;
     }
+
 
     /**
      * get 统计周期
@@ -149,6 +152,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         this.statCycle = statCycle;
     }
 
+
     /**
      * get 统计周期单位
      *
@@ -166,6 +170,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
     public void setStatCycleUnit(String statCycleUnit) {
         this.statCycleUnit = statCycleUnit;
     }
+
 
     /**
      * get 统计阈值
@@ -185,6 +190,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         this.statThreshold = statThreshold;
     }
 
+
     /**
      * get 告警次数限制
      *
@@ -202,6 +208,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
     public void setAlarmTimesLimit(Integer alarmTimesLimit) {
         this.alarmTimesLimit = alarmTimesLimit;
     }
+
 
     /**
      * get 发送短信开关
@@ -221,6 +228,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         this.smsEnable = smsEnable;
     }
 
+
     /**
      * get 发送邮件开关
      *
@@ -238,6 +246,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
     public void setEmailEnable(Boolean emailEnable) {
         this.emailEnable = emailEnable;
     }
+
 
     /**
      * get 发送站内信开关
@@ -257,6 +266,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         this.webMsEnable = webMsEnable;
     }
 
+
     /**
      * get 规则开关
      *
@@ -275,41 +285,44 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         this.enable = enable;
     }
 
+
     /**
-     * get 告警联系人
-     *
-     * @return
-     */
+    * get 告警联系人
+    *
+    * @return
+    */
     public List<Long> getContactUsers() {
         return contactUsers;
     }
 
     /**
-     * set 告警联系人
-     *
-     * @param contactUsers
-     */
+    * set 告警联系人
+    *
+    * @param contactUsers
+    */
     public void setContactUsers(List<Long> contactUsers) {
         this.contactUsers = contactUsers;
     }
 
+
     /**
-     * get 告警联系组
-     *
-     * @return
-     */
+    * get 告警联系组
+    *
+    * @return
+    */
     public List<Long> getContactGroups() {
         return contactGroups;
     }
 
     /**
-     * set 告警联系组
-     *
-     * @param contactGroups
-     */
+    * set 告警联系组
+    *
+    * @param contactGroups
+    */
     public void setContactGroups(List<Long> contactGroups) {
         this.contactGroups = contactGroups;
     }
+
 
 
     /**
@@ -322,6 +335,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 告警类型 WEB_ATTACK-&gt;网站攻击 CC_ATTACK-&gt;CC攻击 DDOS_ATTACK-&gt;DDOS攻击 STATUS_CODE_ERROR-&gt;状态码错误
      *
@@ -331,6 +345,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         this.alarmType = alarmType;
         return this;
     }
+
 
     /**
      * set 统计周期
@@ -342,6 +357,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 统计周期单位
      *
@@ -351,6 +367,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         this.statCycleUnit = statCycleUnit;
         return this;
     }
+
 
     /**
      * set 统计阈值
@@ -362,6 +379,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 告警次数限制
      *
@@ -371,6 +389,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         this.alarmTimesLimit = alarmTimesLimit;
         return this;
     }
+
 
     /**
      * set 发送短信开关
@@ -382,6 +401,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 发送邮件开关
      *
@@ -391,6 +411,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         this.emailEnable = emailEnable;
         return this;
     }
+
 
     /**
      * set 发送站内信开关
@@ -402,6 +423,7 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则开关
      *
@@ -412,25 +434,28 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 告警联系人
-     *
-     * @param contactUsers
-     */
+    * set 告警联系人
+    *
+    * @param contactUsers
+    */
     public DescribeGlobalAlarmRes contactUsers(List<Long> contactUsers) {
         this.contactUsers = contactUsers;
         return this;
     }
 
+
     /**
-     * set 告警联系组
-     *
-     * @param contactGroups
-     */
+    * set 告警联系组
+    *
+    * @param contactGroups
+    */
     public DescribeGlobalAlarmRes contactGroups(List<Long> contactGroups) {
         this.contactGroups = contactGroups;
         return this;
     }
+
 
 
     /**
@@ -456,5 +481,4 @@ public class DescribeGlobalAlarmRes  implements java.io.Serializable {
         }
         this.contactGroups.add(contactGroup);
     }
-
 }

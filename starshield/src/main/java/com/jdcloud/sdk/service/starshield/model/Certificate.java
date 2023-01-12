@@ -48,8 +48,8 @@ public class Certificate  implements java.io.Serializable {
     /**
      * hosts
      */
+    
     private List<String> hosts;
-
     /**
      * 域标识符标签
      */
@@ -99,6 +99,7 @@ public class Certificate  implements java.io.Serializable {
     private String bundle_method;
 
 
+
     /**
      * get 在请求中使用证书的顺序/优先级。
 
@@ -119,6 +120,7 @@ public class Certificate  implements java.io.Serializable {
         this.priority = priority;
     }
 
+
     /**
      * get 来自授权机构的证书过期时间
      *
@@ -137,23 +139,25 @@ public class Certificate  implements java.io.Serializable {
         this.expires_on = expires_on;
     }
 
+
     /**
-     * get hosts
-     *
-     * @return
-     */
+    * get hosts
+    *
+    * @return
+    */
     public List<String> getHosts() {
         return hosts;
     }
 
     /**
-     * set hosts
-     *
-     * @param hosts
-     */
+    * set hosts
+    *
+    * @param hosts
+    */
     public void setHosts(List<String> hosts) {
         this.hosts = hosts;
     }
+
 
     /**
      * get 域标识符标签
@@ -173,6 +177,7 @@ public class Certificate  implements java.io.Serializable {
         this.zone_id = zone_id;
     }
 
+
     /**
      * get 域的自定义SSL的状态
      *
@@ -190,6 +195,7 @@ public class Certificate  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get geo_restrictions
@@ -209,6 +215,7 @@ public class Certificate  implements java.io.Serializable {
         this.geo_restrictions = geo_restrictions;
     }
 
+
     /**
      * get 上次修改证书的时间
      *
@@ -226,6 +233,7 @@ public class Certificate  implements java.io.Serializable {
     public void setModified_on(String modified_on) {
         this.modified_on = modified_on;
     }
+
 
     /**
      * get 用于证书的哈希类型
@@ -245,6 +253,7 @@ public class Certificate  implements java.io.Serializable {
         this.signature = signature;
     }
 
+
     /**
      * get 颁发证书的证书颁发机构
      *
@@ -262,6 +271,7 @@ public class Certificate  implements java.io.Serializable {
     public void setIssuer(String issuer) {
         this.issuer = issuer;
     }
+
 
     /**
      * get 自定义证书标识符标签
@@ -281,6 +291,7 @@ public class Certificate  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 证书上载到星盾的时间
      *
@@ -298,6 +309,7 @@ public class Certificate  implements java.io.Serializable {
     public void setUploaded_on(String uploaded_on) {
         this.uploaded_on = uploaded_on;
     }
+
 
     /**
      * get SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
@@ -324,6 +336,7 @@ public class Certificate  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 在请求中使用证书的顺序/优先级。
 
@@ -335,6 +348,7 @@ public class Certificate  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 来自授权机构的证书过期时间
      *
@@ -345,15 +359,17 @@ public class Certificate  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set hosts
-     *
-     * @param hosts
-     */
+    * set hosts
+    *
+    * @param hosts
+    */
     public Certificate hosts(List<String> hosts) {
         this.hosts = hosts;
         return this;
     }
+
 
     /**
      * set 域标识符标签
@@ -365,6 +381,7 @@ public class Certificate  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域的自定义SSL的状态
      *
@@ -374,6 +391,7 @@ public class Certificate  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set geo_restrictions
@@ -385,6 +403,7 @@ public class Certificate  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 上次修改证书的时间
      *
@@ -394,6 +413,7 @@ public class Certificate  implements java.io.Serializable {
         this.modified_on = modified_on;
         return this;
     }
+
 
     /**
      * set 用于证书的哈希类型
@@ -405,6 +425,7 @@ public class Certificate  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 颁发证书的证书颁发机构
      *
@@ -414,6 +435,7 @@ public class Certificate  implements java.io.Serializable {
         this.issuer = issuer;
         return this;
     }
+
 
     /**
      * set 自定义证书标识符标签
@@ -425,6 +447,7 @@ public class Certificate  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 证书上载到星盾的时间
      *
@@ -434,6 +457,7 @@ public class Certificate  implements java.io.Serializable {
         this.uploaded_on = uploaded_on;
         return this;
     }
+
 
     /**
      * set SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
@@ -449,6 +473,7 @@ public class Certificate  implements java.io.Serializable {
     }
 
 
+
     /**
      * add item to hosts
      *
@@ -460,5 +485,4 @@ public class Certificate  implements java.io.Serializable {
         }
         this.hosts.add(host);
     }
-
 }

@@ -73,6 +73,21 @@ public class DescribeInstancesRes  implements java.io.Serializable {
     private Double flowRemain;
 
     /**
+     * 套餐总流量
+     */
+    private String totalFlowStr;
+
+    /**
+     * 套餐已使用流量
+     */
+    private String usedFlowStr;
+
+    /**
+     * 套餐剩余流量
+     */
+    private String remainingFlowStr;
+
+    /**
      * 套餐模式(BASE-&gt;基础套餐 FLOW-&gt;流量套餐)
      */
     private String packMode;
@@ -98,6 +113,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
     private DescribePackRes packageInfo;
 
 
+
     /**
      * get 实例ID
      *
@@ -115,6 +131,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 实例名称
@@ -134,6 +151,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         this.instanceName = instanceName;
     }
 
+
     /**
      * get 套餐类型
      *
@@ -151,6 +169,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
     public void setPackType(String packType) {
         this.packType = packType;
     }
+
 
     /**
      * get 计费状态
@@ -170,6 +189,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         this.chargeState = chargeState;
     }
 
+
     /**
      * get 域名增量包数量
      *
@@ -187,6 +207,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
     public void setZonePackNum(Integer zonePackNum) {
         this.zonePackNum = zonePackNum;
     }
+
 
     /**
      * get 流量包数量
@@ -206,6 +227,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         this.trafficExpansion = trafficExpansion;
     }
 
+
     /**
      * get 已使用流量（单位：Byte）
      *
@@ -223,6 +245,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
     public void setFlowUsedCnt(Number flowUsedCnt) {
         this.flowUsedCnt = flowUsedCnt;
     }
+
 
     /**
      * get 剩余流量(单位：Gb)
@@ -242,6 +265,64 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         this.flowRemain = flowRemain;
     }
 
+
+    /**
+     * get 套餐总流量
+     *
+     * @return
+     */
+    public String getTotalFlowStr() {
+        return totalFlowStr;
+    }
+
+    /**
+     * set 套餐总流量
+     *
+     * @param totalFlowStr
+     */
+    public void setTotalFlowStr(String totalFlowStr) {
+        this.totalFlowStr = totalFlowStr;
+    }
+
+
+    /**
+     * get 套餐已使用流量
+     *
+     * @return
+     */
+    public String getUsedFlowStr() {
+        return usedFlowStr;
+    }
+
+    /**
+     * set 套餐已使用流量
+     *
+     * @param usedFlowStr
+     */
+    public void setUsedFlowStr(String usedFlowStr) {
+        this.usedFlowStr = usedFlowStr;
+    }
+
+
+    /**
+     * get 套餐剩余流量
+     *
+     * @return
+     */
+    public String getRemainingFlowStr() {
+        return remainingFlowStr;
+    }
+
+    /**
+     * set 套餐剩余流量
+     *
+     * @param remainingFlowStr
+     */
+    public void setRemainingFlowStr(String remainingFlowStr) {
+        this.remainingFlowStr = remainingFlowStr;
+    }
+
+
     /**
      * get 套餐模式(BASE-&gt;基础套餐 FLOW-&gt;流量套餐)
      *
@@ -259,6 +340,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
     public void setPackMode(String packMode) {
         this.packMode = packMode;
     }
+
 
     /**
      * get 备注
@@ -278,6 +360,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         this.memo = memo;
     }
 
+
     /**
      * get 购买时间, UTC时间格式，例如2017-11-10T23:00:00Z
      *
@@ -296,6 +379,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 到期时间, UTC时间格式，例如2017-11-10T23:00:00Z
      *
@@ -313,6 +397,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
     public void setExpireTime(String expireTime) {
         this.expireTime = expireTime;
     }
+
 
     /**
      * get 套餐信息
@@ -333,6 +418,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例ID
      *
@@ -342,6 +428,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 实例名称
@@ -353,6 +440,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 套餐类型
      *
@@ -362,6 +450,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         this.packType = packType;
         return this;
     }
+
 
     /**
      * set 计费状态
@@ -373,6 +462,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名增量包数量
      *
@@ -382,6 +472,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         this.zonePackNum = zonePackNum;
         return this;
     }
+
 
     /**
      * set 流量包数量
@@ -393,6 +484,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 已使用流量（单位：Byte）
      *
@@ -402,6 +494,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         this.flowUsedCnt = flowUsedCnt;
         return this;
     }
+
 
     /**
      * set 剩余流量(单位：Gb)
@@ -413,6 +506,40 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set 套餐总流量
+     *
+     * @param totalFlowStr
+     */
+    public DescribeInstancesRes totalFlowStr(String totalFlowStr) {
+        this.totalFlowStr = totalFlowStr;
+        return this;
+    }
+
+
+    /**
+     * set 套餐已使用流量
+     *
+     * @param usedFlowStr
+     */
+    public DescribeInstancesRes usedFlowStr(String usedFlowStr) {
+        this.usedFlowStr = usedFlowStr;
+        return this;
+    }
+
+
+    /**
+     * set 套餐剩余流量
+     *
+     * @param remainingFlowStr
+     */
+    public DescribeInstancesRes remainingFlowStr(String remainingFlowStr) {
+        this.remainingFlowStr = remainingFlowStr;
+        return this;
+    }
+
+
     /**
      * set 套餐模式(BASE-&gt;基础套餐 FLOW-&gt;流量套餐)
      *
@@ -422,6 +549,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         this.packMode = packMode;
         return this;
     }
+
 
     /**
      * set 备注
@@ -433,6 +561,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 购买时间, UTC时间格式，例如2017-11-10T23:00:00Z
      *
@@ -443,6 +572,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 到期时间, UTC时间格式，例如2017-11-10T23:00:00Z
      *
@@ -452,6 +582,7 @@ public class DescribeInstancesRes  implements java.io.Serializable {
         this.expireTime = expireTime;
         return this;
     }
+
 
     /**
      * set 套餐信息

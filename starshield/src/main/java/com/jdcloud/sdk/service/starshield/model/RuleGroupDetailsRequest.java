@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * WAF Rule Groups
+ * WAF-Rule-Groups
  * A group of web application firewall rules that share common functionality and traits
  *
  * OpenAPI spec version: v1
@@ -56,6 +56,7 @@ public class RuleGroupDetailsRequest extends JdcloudRequest implements java.io.S
     private String identifier;
 
 
+
     /**
      * get zone_identifier
      *
@@ -74,6 +75,7 @@ public class RuleGroupDetailsRequest extends JdcloudRequest implements java.io.S
         this.zone_identifier = zone_identifier;
     }
 
+
     /**
      * get package_identifier
      *
@@ -91,6 +93,7 @@ public class RuleGroupDetailsRequest extends JdcloudRequest implements java.io.S
     public void setPackage_identifier(String package_identifier) {
         this.package_identifier = package_identifier;
     }
+
 
     /**
      * get identifier
@@ -111,6 +114,7 @@ public class RuleGroupDetailsRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set zone_identifier
      *
@@ -121,6 +125,7 @@ public class RuleGroupDetailsRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set package_identifier
      *
@@ -130,6 +135,7 @@ public class RuleGroupDetailsRequest extends JdcloudRequest implements java.io.S
         this.package_identifier = package_identifier;
         return this;
     }
+
 
     /**
      * set identifier

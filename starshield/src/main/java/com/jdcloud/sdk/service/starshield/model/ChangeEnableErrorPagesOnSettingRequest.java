@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Zone Settings
+ * Zone-Settings
  * A Zone setting changes how the Zone works in relation to caching, security, or other features of JDC StarShield
  *
  * OpenAPI spec version: v1
@@ -48,6 +48,7 @@ public class ChangeEnableErrorPagesOnSettingRequest extends JdcloudRequest imple
     private String zone_identifier;
 
 
+
     /**
      * get on - 开启；off - 关闭
      *
@@ -65,6 +66,7 @@ public class ChangeEnableErrorPagesOnSettingRequest extends JdcloudRequest imple
     public void setValue(String value) {
         this.value = value;
     }
+
 
     /**
      * get zone_identifier
@@ -85,6 +87,7 @@ public class ChangeEnableErrorPagesOnSettingRequest extends JdcloudRequest imple
     }
 
 
+
     /**
      * set on - 开启；off - 关闭
      *
@@ -94,6 +97,7 @@ public class ChangeEnableErrorPagesOnSettingRequest extends JdcloudRequest imple
         this.value = value;
         return this;
     }
+
 
     /**
      * set zone_identifier

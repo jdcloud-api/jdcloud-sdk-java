@@ -49,6 +49,7 @@ public class SelectDetailListRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
      * get 资源列表
      *
@@ -66,6 +67,7 @@ public class SelectDetailListRequest extends JdcloudRequest implements java.io.S
     public void setResourceList(String resourceList) {
         this.resourceList = resourceList;
     }
+
 
     /**
      * get 地域ID
@@ -86,6 +88,7 @@ public class SelectDetailListRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 资源列表
      *
@@ -95,6 +98,7 @@ public class SelectDetailListRequest extends JdcloudRequest implements java.io.S
         this.resourceList = resourceList;
         return this;
     }
+
 
     /**
      * set 地域ID

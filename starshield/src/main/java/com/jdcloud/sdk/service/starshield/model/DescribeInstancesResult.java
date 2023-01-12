@@ -39,8 +39,8 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     /**
      * dataList
      */
+    
     private List<DescribeInstancesRes> dataList;
-
     /**
      * 当前页记录数量
      */
@@ -57,23 +57,25 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     private Integer totalPage;
 
 
+
     /**
-     * get dataList
-     *
-     * @return
-     */
+    * get dataList
+    *
+    * @return
+    */
     public List<DescribeInstancesRes> getDataList() {
         return dataList;
     }
 
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public void setDataList(List<DescribeInstancesRes> dataList) {
         this.dataList = dataList;
     }
+
 
     /**
      * get 当前页记录数量
@@ -93,6 +95,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
         this.currentCount = currentCount;
     }
 
+
     /**
      * get 总记录数量
      *
@@ -110,6 +113,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
     }
+
 
     /**
      * get 总页数
@@ -130,15 +134,17 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public DescribeInstancesResult dataList(List<DescribeInstancesRes> dataList) {
         this.dataList = dataList;
         return this;
     }
+
 
     /**
      * set 当前页记录数量
@@ -150,6 +156,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 总记录数量
      *
@@ -160,6 +167,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 总页数
      *
@@ -169,6 +177,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
         this.totalPage = totalPage;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
         }
         this.dataList.add(dataList);
     }
-
 }

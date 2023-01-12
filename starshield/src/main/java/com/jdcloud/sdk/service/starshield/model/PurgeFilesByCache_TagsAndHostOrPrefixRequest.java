@@ -42,20 +42,20 @@ public class PurgeFilesByCache_TagsAndHostOrPrefixRequest extends JdcloudRequest
     /**
      * 如何资产携带Cache-Tag头，并且它的值与提供的值之一匹配的话，该资产将从星盾缓存中清除
      */
+    
     private List<String> tags;
-
     /**
      * 如果资产的URL中的host与提供的值之一匹配的话，该资产将从星盾缓存中清除
      */
+    
     private List<String> hosts;
-
     /**
      * URL上与前缀匹配的任何资产都将从星盾缓存中清除。
 例如, a.com/b 意味着 a.com/b/c/d.png 会被删除，而 a.com/bc.png 不会被删除。前缀a.com/b和a.com/b/c是冗余的。
 
      */
+    
     private List<String> prefixes;
-
     /**
      * identifier
      * Required:true
@@ -64,63 +64,67 @@ public class PurgeFilesByCache_TagsAndHostOrPrefixRequest extends JdcloudRequest
     private String identifier;
 
 
+
     /**
-     * get 如何资产携带Cache-Tag头，并且它的值与提供的值之一匹配的话，该资产将从星盾缓存中清除
-     *
-     * @return
-     */
+    * get 如何资产携带Cache-Tag头，并且它的值与提供的值之一匹配的话，该资产将从星盾缓存中清除
+    *
+    * @return
+    */
     public List<String> getTags() {
         return tags;
     }
 
     /**
-     * set 如何资产携带Cache-Tag头，并且它的值与提供的值之一匹配的话，该资产将从星盾缓存中清除
-     *
-     * @param tags
-     */
+    * set 如何资产携带Cache-Tag头，并且它的值与提供的值之一匹配的话，该资产将从星盾缓存中清除
+    *
+    * @param tags
+    */
     public void setTags(List<String> tags) {
         this.tags = tags;
     }
 
+
     /**
-     * get 如果资产的URL中的host与提供的值之一匹配的话，该资产将从星盾缓存中清除
-     *
-     * @return
-     */
+    * get 如果资产的URL中的host与提供的值之一匹配的话，该资产将从星盾缓存中清除
+    *
+    * @return
+    */
     public List<String> getHosts() {
         return hosts;
     }
 
     /**
-     * set 如果资产的URL中的host与提供的值之一匹配的话，该资产将从星盾缓存中清除
-     *
-     * @param hosts
-     */
+    * set 如果资产的URL中的host与提供的值之一匹配的话，该资产将从星盾缓存中清除
+    *
+    * @param hosts
+    */
     public void setHosts(List<String> hosts) {
         this.hosts = hosts;
     }
 
+
     /**
-     * get URL上与前缀匹配的任何资产都将从星盾缓存中清除。
+    * get URL上与前缀匹配的任何资产都将从星盾缓存中清除。
 例如, a.com/b 意味着 a.com/b/c/d.png 会被删除，而 a.com/bc.png 不会被删除。前缀a.com/b和a.com/b/c是冗余的。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<String> getPrefixes() {
         return prefixes;
     }
 
     /**
-     * set URL上与前缀匹配的任何资产都将从星盾缓存中清除。
+    * set URL上与前缀匹配的任何资产都将从星盾缓存中清除。
 例如, a.com/b 意味着 a.com/b/c/d.png 会被删除，而 a.com/bc.png 不会被删除。前缀a.com/b和a.com/b/c是冗余的。
 
-     *
-     * @param prefixes
-     */
+    *
+    * @param prefixes
+    */
     public void setPrefixes(List<String> prefixes) {
         this.prefixes = prefixes;
     }
+
 
     /**
      * get identifier
@@ -141,37 +145,41 @@ public class PurgeFilesByCache_TagsAndHostOrPrefixRequest extends JdcloudRequest
     }
 
 
+
     /**
-     * set 如何资产携带Cache-Tag头，并且它的值与提供的值之一匹配的话，该资产将从星盾缓存中清除
-     *
-     * @param tags
-     */
+    * set 如何资产携带Cache-Tag头，并且它的值与提供的值之一匹配的话，该资产将从星盾缓存中清除
+    *
+    * @param tags
+    */
     public PurgeFilesByCache_TagsAndHostOrPrefixRequest tags(List<String> tags) {
         this.tags = tags;
         return this;
     }
 
+
     /**
-     * set 如果资产的URL中的host与提供的值之一匹配的话，该资产将从星盾缓存中清除
-     *
-     * @param hosts
-     */
+    * set 如果资产的URL中的host与提供的值之一匹配的话，该资产将从星盾缓存中清除
+    *
+    * @param hosts
+    */
     public PurgeFilesByCache_TagsAndHostOrPrefixRequest hosts(List<String> hosts) {
         this.hosts = hosts;
         return this;
     }
 
+
     /**
-     * set URL上与前缀匹配的任何资产都将从星盾缓存中清除。
+    * set URL上与前缀匹配的任何资产都将从星盾缓存中清除。
 例如, a.com/b 意味着 a.com/b/c/d.png 会被删除，而 a.com/bc.png 不会被删除。前缀a.com/b和a.com/b/c是冗余的。
 
-     *
-     * @param prefixes
-     */
+    *
+    * @param prefixes
+    */
     public PurgeFilesByCache_TagsAndHostOrPrefixRequest prefixes(List<String> prefixes) {
         this.prefixes = prefixes;
         return this;
     }
+
 
     /**
      * set identifier
@@ -182,6 +190,7 @@ public class PurgeFilesByCache_TagsAndHostOrPrefixRequest extends JdcloudRequest
         this.identifier = identifier;
         return this;
     }
+
 
 
     /**
@@ -221,5 +230,4 @@ public class PurgeFilesByCache_TagsAndHostOrPrefixRequest extends JdcloudRequest
         }
         this.prefixes.add(prefixe);
     }
-
 }

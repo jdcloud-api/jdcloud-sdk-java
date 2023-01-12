@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * WAF Rule Packages
+ * WAF-Rule-Packages
  * Web application firewall rule package applied to a zone
  *
  * OpenAPI spec version: v1
@@ -39,37 +39,40 @@ public class ListFirewallPackagesResult extends JdcloudResult implements java.io
     /**
      * dataList
      */
+    
     private List<WAFRulePackage> dataList;
 
 
     /**
-     * get dataList
-     *
-     * @return
-     */
+    * get dataList
+    *
+    * @return
+    */
     public List<WAFRulePackage> getDataList() {
         return dataList;
     }
 
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public void setDataList(List<WAFRulePackage> dataList) {
         this.dataList = dataList;
     }
 
 
+
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public ListFirewallPackagesResult dataList(List<WAFRulePackage> dataList) {
         this.dataList = dataList;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class ListFirewallPackagesResult extends JdcloudResult implements java.io
         }
         this.dataList.add(dataList);
     }
-
 }

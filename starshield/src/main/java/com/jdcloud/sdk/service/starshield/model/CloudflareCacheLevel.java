@@ -53,6 +53,7 @@ public class CloudflareCacheLevel  implements java.io.Serializable {
     private String modified_on;
 
 
+
     /**
      * get 域设置的ID
      *
@@ -70,6 +71,7 @@ public class CloudflareCacheLevel  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get 该设置的有效值
@@ -89,6 +91,7 @@ public class CloudflareCacheLevel  implements java.io.Serializable {
         this.value = value;
     }
 
+
     /**
      * get 该配置是否可以修改
      *
@@ -106,6 +109,7 @@ public class CloudflareCacheLevel  implements java.io.Serializable {
     public void setEditable(Boolean editable) {
         this.editable = editable;
     }
+
 
     /**
      * get 上次修改此设置的时间
@@ -126,6 +130,7 @@ public class CloudflareCacheLevel  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 域设置的ID
      *
@@ -135,6 +140,7 @@ public class CloudflareCacheLevel  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 该设置的有效值
@@ -146,6 +152,7 @@ public class CloudflareCacheLevel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 该配置是否可以修改
      *
@@ -155,6 +162,7 @@ public class CloudflareCacheLevel  implements java.io.Serializable {
         this.editable = editable;
         return this;
     }
+
 
     /**
      * set 上次修改此设置的时间

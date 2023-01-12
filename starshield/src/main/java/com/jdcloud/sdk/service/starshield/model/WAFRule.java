@@ -62,12 +62,18 @@ public class WAFRule  implements java.io.Serializable {
     /**
      * 定义触发规则时规则交互方式的可用模式。
      */
+    
     private List<String> allowed_modes;
+    /**
+     * 规则的默认模式。
+     */
+    private String default_mode;
 
     /**
      * 评估请求时是否使用基于异常的规则。
      */
     private String mode;
+
 
 
     /**
@@ -88,6 +94,7 @@ public class WAFRule  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 规则的公开说明
      *
@@ -105,6 +112,7 @@ public class WAFRule  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 在相关组中执行单个规则的顺序
@@ -124,6 +132,7 @@ public class WAFRule  implements java.io.Serializable {
         this.priority = priority;
     }
 
+
     /**
      * get group
      *
@@ -141,6 +150,7 @@ public class WAFRule  implements java.io.Serializable {
     public void setGroup(Group group) {
         this.group = group;
     }
+
 
     /**
      * get WAF包标识符标签
@@ -160,23 +170,44 @@ public class WAFRule  implements java.io.Serializable {
         this.package_id = package_id;
     }
 
+
     /**
-     * get 定义触发规则时规则交互方式的可用模式。
-     *
-     * @return
-     */
+    * get 定义触发规则时规则交互方式的可用模式。
+    *
+    * @return
+    */
     public List<String> getAllowed_modes() {
         return allowed_modes;
     }
 
     /**
-     * set 定义触发规则时规则交互方式的可用模式。
-     *
-     * @param allowed_modes
-     */
+    * set 定义触发规则时规则交互方式的可用模式。
+    *
+    * @param allowed_modes
+    */
     public void setAllowed_modes(List<String> allowed_modes) {
         this.allowed_modes = allowed_modes;
     }
+
+
+    /**
+     * get 规则的默认模式。
+     *
+     * @return
+     */
+    public String getDefault_mode() {
+        return default_mode;
+    }
+
+    /**
+     * set 规则的默认模式。
+     *
+     * @param default_mode
+     */
+    public void setDefault_mode(String default_mode) {
+        this.default_mode = default_mode;
+    }
+
 
     /**
      * get 评估请求时是否使用基于异常的规则。
@@ -197,6 +228,7 @@ public class WAFRule  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF规则标识符标签
      *
@@ -206,6 +238,7 @@ public class WAFRule  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 规则的公开说明
@@ -217,6 +250,7 @@ public class WAFRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 在相关组中执行单个规则的顺序
      *
@@ -226,6 +260,7 @@ public class WAFRule  implements java.io.Serializable {
         this.priority = priority;
         return this;
     }
+
 
     /**
      * set group
@@ -237,6 +272,7 @@ public class WAFRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set WAF包标识符标签
      *
@@ -247,15 +283,28 @@ public class WAFRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 定义触发规则时规则交互方式的可用模式。
-     *
-     * @param allowed_modes
-     */
+    * set 定义触发规则时规则交互方式的可用模式。
+    *
+    * @param allowed_modes
+    */
     public WAFRule allowed_modes(List<String> allowed_modes) {
         this.allowed_modes = allowed_modes;
         return this;
     }
+
+
+    /**
+     * set 规则的默认模式。
+     *
+     * @param default_mode
+     */
+    public WAFRule default_mode(String default_mode) {
+        this.default_mode = default_mode;
+        return this;
+    }
+
 
     /**
      * set 评估请求时是否使用基于异常的规则。
@@ -266,6 +315,7 @@ public class WAFRule  implements java.io.Serializable {
         this.mode = mode;
         return this;
     }
+
 
 
     /**
@@ -279,5 +329,4 @@ public class WAFRule  implements java.io.Serializable {
         }
         this.allowed_modes.add(allowed_mode);
     }
-
 }

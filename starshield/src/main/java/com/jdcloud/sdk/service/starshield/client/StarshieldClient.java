@@ -43,6 +43,9 @@ import com.jdcloud.sdk.service.starshield.client.GetWebSocketsSettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeEnableErrorPagesOnSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeEnableErrorPagesOnSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeEnableErrorPagesOnSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.EditSSLConfigurationRequest;
+import com.jdcloud.sdk.service.starshield.model.EditSSLConfigurationResponse;
+import com.jdcloud.sdk.service.starshield.client.EditSSLConfigurationExecutor;
 import com.jdcloud.sdk.service.starshield.model.EditZoneSettingsInfoRequest;
 import com.jdcloud.sdk.service.starshield.model.EditZoneSettingsInfoResponse;
 import com.jdcloud.sdk.service.starshield.client.EditZoneSettingsInfoExecutor;
@@ -432,7 +435,7 @@ public class StarshieldClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.4";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "starshield.jdcloud-api.com";
     public final static String ServiceName = "starshield";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -529,6 +532,19 @@ Basic+JPEG（有损），进一步减少JPEG文件的大小，以加快图像加
     }
 
     /**
+     * 上传SSL证书的新私钥和/或PEM/CRT。
+注意，更新sni_custom证书的配置将导致返回新的资源id，并删除之前的资源id。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EditSSLConfigurationResponse editSSLConfiguration(EditSSLConfigurationRequest request) throws JdcloudSdkException {
+        return new EditSSLConfigurationExecutor().client(this).execute(request);
+    }
+
+    /**
      * 批量更新域的设置
      *
      * @param request
@@ -553,7 +569,8 @@ Basic+JPEG（有损），进一步减少JPEG文件的大小，以加快图像加
     }
 
     /**
-     * 创建套餐实例
+     * 创建套餐实例，调用成功，将自动扣费（请保证账户充足，否则无法成功创建实例）。
+
      *
      * @param request
      * @return
@@ -916,7 +933,8 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
     }
 
     /**
-     * 购买流量包
+     * 购买流量包，调用成功，将自动扣费（请保证账户充足，否则无法成功创建流量包）。
+
      *
      * @param request
      * @return

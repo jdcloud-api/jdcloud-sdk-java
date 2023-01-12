@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * DNS Records for a Zone
+ * DNS-Record-Service
  * Documentation for JDC StarShield DNS records
  *
  * OpenAPI spec version: v1
@@ -90,6 +90,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
     private String zone_identifier;
 
 
+
     /**
      * get DNS记录类型
      *
@@ -107,6 +108,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
     public void setTy_pe(String ty_pe) {
         this.ty_pe = ty_pe;
     }
+
 
     /**
      * get DNS记录名称
@@ -126,6 +128,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.name = name;
     }
 
+
     /**
      * get DNS记录内容
      *
@@ -143,6 +146,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
     public void setContent(String content) {
         this.content = content;
     }
+
 
     /**
      * get DNS记录的生存时间。值为1是 &quot;自动&quot;。
@@ -162,6 +166,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.ttl = ttl;
     }
 
+
     /**
      * get 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
      *
@@ -179,6 +184,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
     public void setPriority(Number priority) {
         this.priority = priority;
     }
+
 
     /**
      * get 是否利用星盾的性能和安全优势
@@ -198,6 +204,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.proxied = proxied;
     }
 
+
     /**
      * get srvData
      *
@@ -216,6 +223,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.srvData = srvData;
     }
 
+
     /**
      * get caaData
      *
@@ -233,6 +241,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
     public void setCaaData(CAAdata caaData) {
         this.caaData = caaData;
     }
+
 
     /**
      * get zone_identifier
@@ -253,6 +262,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set DNS记录类型
      *
@@ -262,6 +272,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.ty_pe = ty_pe;
         return this;
     }
+
 
     /**
      * set DNS记录名称
@@ -273,6 +284,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set DNS记录内容
      *
@@ -282,6 +294,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.content = content;
         return this;
     }
+
 
     /**
      * set DNS记录的生存时间。值为1是 &quot;自动&quot;。
@@ -293,6 +306,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
      *
@@ -302,6 +316,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.priority = priority;
         return this;
     }
+
 
     /**
      * set 是否利用星盾的性能和安全优势
@@ -313,6 +328,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set srvData
      *
@@ -323,6 +339,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set caaData
      *
@@ -332,6 +349,7 @@ public class CreateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.caaData = caaData;
         return this;
     }
+
 
     /**
      * set zone_identifier

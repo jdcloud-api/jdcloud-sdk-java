@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Zone Settings
+ * Zone-Settings
  * A Zone setting changes how the Zone works in relation to caching, security, or other features of JDC StarShield
  *
  * OpenAPI spec version: v1
@@ -47,6 +47,7 @@ public class ChangeMinimumTLSVersionSettingRequest extends JdcloudRequest implem
     private String zone_identifier;
 
 
+
     /**
      * get TLS协议版本
      *
@@ -64,6 +65,7 @@ public class ChangeMinimumTLSVersionSettingRequest extends JdcloudRequest implem
     public void setValue(String value) {
         this.value = value;
     }
+
 
     /**
      * get zone_identifier
@@ -84,6 +86,7 @@ public class ChangeMinimumTLSVersionSettingRequest extends JdcloudRequest implem
     }
 
 
+
     /**
      * set TLS协议版本
      *
@@ -93,6 +96,7 @@ public class ChangeMinimumTLSVersionSettingRequest extends JdcloudRequest implem
         this.value = value;
         return this;
     }
+
 
     /**
      * set zone_identifier

@@ -38,6 +38,7 @@ public class DescribeCandidateZoneRes  implements java.io.Serializable {
     private String name;
 
 
+
     /**
      * get name
      *
@@ -55,6 +56,7 @@ public class DescribeCandidateZoneRes  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
 
     /**

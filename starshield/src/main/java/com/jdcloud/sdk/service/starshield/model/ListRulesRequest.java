@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * WAF Rules
+ * WAF-Rules
  * A firewall rule for a zone
  *
  * OpenAPI spec version: v1
@@ -94,6 +94,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
     private String package_id;
 
 
+
     /**
      * get 已将规则覆盖到的设置
      *
@@ -111,6 +112,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
     public void setMode(String mode) {
         this.mode = mode;
     }
+
 
     /**
      * get 在相关组中执行单个规则的顺序
@@ -130,6 +132,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         this.priority = priority;
     }
 
+
     /**
      * get 是否匹配所有搜索要求或至少一个（任何）
      *
@@ -147,6 +150,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
     public void setMatch(String match) {
         this.match = match;
     }
+
 
     /**
      * get 按指定字段排序
@@ -166,6 +170,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         this.order = order;
     }
 
+
     /**
      * get 分页结果的页码
      *
@@ -183,6 +188,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
     public void setPage(Number page) {
         this.page = page;
     }
+
 
     /**
      * get 每页的规则数
@@ -202,6 +208,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         this.per_page = per_page;
     }
 
+
     /**
      * get WAF组标识符标签
      *
@@ -219,6 +226,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
     public void setGroup_id(String group_id) {
         this.group_id = group_id;
     }
+
 
     /**
      * get 规则的公开说明
@@ -238,6 +246,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         this.description = description;
     }
 
+
     /**
      * get asc-升序；desc-降序
      *
@@ -256,6 +265,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         this.direction = direction;
     }
 
+
     /**
      * get zone_id
      *
@@ -273,6 +283,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
     public void setZone_id(String zone_id) {
         this.zone_id = zone_id;
     }
+
 
     /**
      * get package_id
@@ -293,6 +304,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set 已将规则覆盖到的设置
      *
@@ -302,6 +314,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         this.mode = mode;
         return this;
     }
+
 
     /**
      * set 在相关组中执行单个规则的顺序
@@ -313,6 +326,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 是否匹配所有搜索要求或至少一个（任何）
      *
@@ -322,6 +336,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         this.match = match;
         return this;
     }
+
 
     /**
      * set 按指定字段排序
@@ -333,6 +348,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 分页结果的页码
      *
@@ -342,6 +358,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         this.page = page;
         return this;
     }
+
 
     /**
      * set 每页的规则数
@@ -353,6 +370,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set WAF组标识符标签
      *
@@ -362,6 +380,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         this.group_id = group_id;
         return this;
     }
+
 
     /**
      * set 规则的公开说明
@@ -373,6 +392,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set asc-升序；desc-降序
      *
@@ -383,6 +403,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set zone_id
      *
@@ -392,6 +413,7 @@ public class ListRulesRequest extends JdcloudRequest implements java.io.Serializ
         this.zone_id = zone_id;
         return this;
     }
+
 
     /**
      * set package_id

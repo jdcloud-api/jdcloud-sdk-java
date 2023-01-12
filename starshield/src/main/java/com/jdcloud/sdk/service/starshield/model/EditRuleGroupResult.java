@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * WAF Rule Groups
+ * WAF-Rule-Groups
  * A group of web application firewall rules that share common functionality and traits
  *
  * OpenAPI spec version: v1
@@ -40,6 +40,7 @@ public class EditRuleGroupResult extends JdcloudResult implements java.io.Serial
     private WAFRuleGroup data;
 
 
+
     /**
      * get data
      *
@@ -57,6 +58,7 @@ public class EditRuleGroupResult extends JdcloudResult implements java.io.Serial
     public void setData(WAFRuleGroup data) {
         this.data = data;
     }
+
 
 
     /**

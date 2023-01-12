@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * WAF Rule Packages
+ * WAF-Rule-Packages
  * Web application firewall rule package applied to a zone
  *
  * OpenAPI spec version: v1
@@ -59,6 +59,7 @@ public class EditFirewallPackageRequest extends JdcloudRequest implements java.i
     private String identifier;
 
 
+
     /**
      * get 防火墙包的敏感度。
      *
@@ -76,6 +77,7 @@ public class EditFirewallPackageRequest extends JdcloudRequest implements java.i
     public void setSensitivity(String sensitivity) {
         this.sensitivity = sensitivity;
     }
+
 
     /**
      * get 将对防火墙包下的规则执行的默认操作。
@@ -95,6 +97,7 @@ public class EditFirewallPackageRequest extends JdcloudRequest implements java.i
         this.action_mode = action_mode;
     }
 
+
     /**
      * get zone_identifier
      *
@@ -112,6 +115,7 @@ public class EditFirewallPackageRequest extends JdcloudRequest implements java.i
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
     /**
      * get identifier
@@ -132,6 +136,7 @@ public class EditFirewallPackageRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 防火墙包的敏感度。
      *
@@ -141,6 +146,7 @@ public class EditFirewallPackageRequest extends JdcloudRequest implements java.i
         this.sensitivity = sensitivity;
         return this;
     }
+
 
     /**
      * set 将对防火墙包下的规则执行的默认操作。
@@ -152,6 +158,7 @@ public class EditFirewallPackageRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set zone_identifier
      *
@@ -161,6 +168,7 @@ public class EditFirewallPackageRequest extends JdcloudRequest implements java.i
         this.zone_identifier = zone_identifier;
         return this;
     }
+
 
     /**
      * set identifier

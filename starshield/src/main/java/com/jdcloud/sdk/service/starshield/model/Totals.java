@@ -53,6 +53,7 @@ public class Totals  implements java.io.Serializable {
     private Bandwidth bandwidth;
 
 
+
     /**
      * get since
      *
@@ -70,6 +71,7 @@ public class Totals  implements java.io.Serializable {
     public void setSince(String since) {
         this.since = since;
     }
+
 
     /**
      * get until
@@ -89,6 +91,7 @@ public class Totals  implements java.io.Serializable {
         this.until = until;
     }
 
+
     /**
      * get requests
      *
@@ -106,6 +109,7 @@ public class Totals  implements java.io.Serializable {
     public void setRequests(Requests requests) {
         this.requests = requests;
     }
+
 
     /**
      * get bandwidth
@@ -126,6 +130,7 @@ public class Totals  implements java.io.Serializable {
     }
 
 
+
     /**
      * set since
      *
@@ -135,6 +140,7 @@ public class Totals  implements java.io.Serializable {
         this.since = since;
         return this;
     }
+
 
     /**
      * set until
@@ -146,6 +152,7 @@ public class Totals  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set requests
      *
@@ -155,6 +162,7 @@ public class Totals  implements java.io.Serializable {
         this.requests = requests;
         return this;
     }
+
 
     /**
      * set bandwidth

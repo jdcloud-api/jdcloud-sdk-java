@@ -42,6 +42,7 @@ public class Geo_restrictions  implements java.io.Serializable {
     private String label;
 
 
+
     /**
      * get label
      *
@@ -59,6 +60,7 @@ public class Geo_restrictions  implements java.io.Serializable {
     public void setLabel(String label) {
         this.label = label;
     }
+
 
 
     /**

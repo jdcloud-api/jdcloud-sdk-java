@@ -43,6 +43,7 @@ public class ContactUserRes  implements java.io.Serializable {
     private String name;
 
 
+
     /**
      * get id
      *
@@ -60,6 +61,7 @@ public class ContactUserRes  implements java.io.Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
 
     /**
      * get name
@@ -80,6 +82,7 @@ public class ContactUserRes  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -89,6 +92,7 @@ public class ContactUserRes  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set name

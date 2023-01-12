@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Custom SSL for a Zone
+ * Custom-SSL-for-a-Zone
  * Custom SSL certificate for a zone
  *
  * OpenAPI spec version: v1
@@ -39,6 +39,7 @@ public class DeleteSSLConfigurationResult extends JdcloudResult implements java.
     private String data;
 
 
+
     /**
      * get data
      *
@@ -56,6 +57,7 @@ public class DeleteSSLConfigurationResult extends JdcloudResult implements java.
     public void setData(String data) {
         this.data = data;
     }
+
 
 
     /**

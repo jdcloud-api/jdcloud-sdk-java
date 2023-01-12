@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Custom Pages for a Zone
+ * Custom-Pages-for-a-Zone
  * Custom pages associated with a zone
  *
  * OpenAPI spec version: v1
@@ -59,6 +59,7 @@ public class UpdateCustomPageURLRequest extends JdcloudRequest implements java.i
     private String identifier;
 
 
+
     /**
      * get 与自定义页面关联的URL。
      *
@@ -76,6 +77,7 @@ public class UpdateCustomPageURLRequest extends JdcloudRequest implements java.i
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get 自定义页面状态
@@ -95,6 +97,7 @@ public class UpdateCustomPageURLRequest extends JdcloudRequest implements java.i
         this.state = state;
     }
 
+
     /**
      * get zone_identifier
      *
@@ -112,6 +115,7 @@ public class UpdateCustomPageURLRequest extends JdcloudRequest implements java.i
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
     /**
      * get identifier
@@ -132,6 +136,7 @@ public class UpdateCustomPageURLRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 与自定义页面关联的URL。
      *
@@ -141,6 +146,7 @@ public class UpdateCustomPageURLRequest extends JdcloudRequest implements java.i
         this.url = url;
         return this;
     }
+
 
     /**
      * set 自定义页面状态
@@ -152,6 +158,7 @@ public class UpdateCustomPageURLRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set zone_identifier
      *
@@ -161,6 +168,7 @@ public class UpdateCustomPageURLRequest extends JdcloudRequest implements java.i
         this.zone_identifier = zone_identifier;
         return this;
     }
+
 
     /**
      * set identifier

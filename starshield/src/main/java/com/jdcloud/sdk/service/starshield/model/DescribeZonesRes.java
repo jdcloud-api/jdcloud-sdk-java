@@ -45,7 +45,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
     private String name;
 
     /**
-     * zone状态
+     * zone状态(active-&gt;已激活 deleted-&gt;已删除 pending-&gt;未激活)
      */
     private String status;
 
@@ -55,7 +55,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
     private Boolean paused;
 
     /**
-     * zone接入类型
+     * zone接入类型(full-&gt;全接入 partial-&gt;半接入)
      */
     private String ty_pe;
 
@@ -77,8 +77,8 @@ public class DescribeZonesRes  implements java.io.Serializable {
     /**
      * 源ns
      */
+    
     private List<String> original_name_servers;
-
     /**
      * 源注册商
      */
@@ -107,17 +107,18 @@ public class DescribeZonesRes  implements java.io.Serializable {
     /**
      * name servers
      */
+    
     private List<String> name_servers;
-
     /**
      * 域名对应的ip信息
      */
+    
     private List<String> ips;
-
     /**
      * ip类型
      */
     private String ipType;
+
 
 
     /**
@@ -138,6 +139,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.zoneId = zoneId;
     }
 
+
     /**
      * get zone name
      *
@@ -156,8 +158,9 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
-     * get zone状态
+     * get zone状态(active-&gt;已激活 deleted-&gt;已删除 pending-&gt;未激活)
      *
      * @return
      */
@@ -166,13 +169,14 @@ public class DescribeZonesRes  implements java.io.Serializable {
     }
 
     /**
-     * set zone状态
+     * set zone状态(active-&gt;已激活 deleted-&gt;已删除 pending-&gt;未激活)
      *
      * @param status
      */
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 是否暂停
@@ -192,8 +196,9 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.paused = paused;
     }
 
+
     /**
-     * get zone接入类型
+     * get zone接入类型(full-&gt;全接入 partial-&gt;半接入)
      *
      * @return
      */
@@ -202,13 +207,14 @@ public class DescribeZonesRes  implements java.io.Serializable {
     }
 
     /**
-     * set zone接入类型
+     * set zone接入类型(full-&gt;全接入 partial-&gt;半接入)
      *
      * @param ty_pe
      */
     public void setTy_pe(String ty_pe) {
         this.ty_pe = ty_pe;
     }
+
 
     /**
      * get 开发者模式
@@ -228,6 +234,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.development_mode = development_mode;
     }
 
+
     /**
      * get 校验key
      *
@@ -245,6 +252,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
     public void setVerification_key(String verification_key) {
         this.verification_key = verification_key;
     }
+
 
     /**
      * get cname后缀
@@ -264,23 +272,25 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.cname_suffix = cname_suffix;
     }
 
+
     /**
-     * get 源ns
-     *
-     * @return
-     */
+    * get 源ns
+    *
+    * @return
+    */
     public List<String> getOriginal_name_servers() {
         return original_name_servers;
     }
 
     /**
-     * set 源ns
-     *
-     * @param original_name_servers
-     */
+    * set 源ns
+    *
+    * @param original_name_servers
+    */
     public void setOriginal_name_servers(List<String> original_name_servers) {
         this.original_name_servers = original_name_servers;
     }
+
 
     /**
      * get 源注册商
@@ -300,6 +310,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.original_registrar = original_registrar;
     }
 
+
     /**
      * get 源dns host
      *
@@ -317,6 +328,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
     public void setOriginal_dnshost(String original_dnshost) {
         this.original_dnshost = original_dnshost;
     }
+
 
     /**
      * get 修改时间
@@ -336,6 +348,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.modified_on = modified_on;
     }
 
+
     /**
      * get 创建时间
      *
@@ -353,6 +366,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
     public void setCreated_on(String created_on) {
         this.created_on = created_on;
     }
+
 
     /**
      * get 激活时间
@@ -372,41 +386,44 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.activated_on = activated_on;
     }
 
+
     /**
-     * get name servers
-     *
-     * @return
-     */
+    * get name servers
+    *
+    * @return
+    */
     public List<String> getName_servers() {
         return name_servers;
     }
 
     /**
-     * set name servers
-     *
-     * @param name_servers
-     */
+    * set name servers
+    *
+    * @param name_servers
+    */
     public void setName_servers(List<String> name_servers) {
         this.name_servers = name_servers;
     }
 
+
     /**
-     * get 域名对应的ip信息
-     *
-     * @return
-     */
+    * get 域名对应的ip信息
+    *
+    * @return
+    */
     public List<String> getIps() {
         return ips;
     }
 
     /**
-     * set 域名对应的ip信息
-     *
-     * @param ips
-     */
+    * set 域名对应的ip信息
+    *
+    * @param ips
+    */
     public void setIps(List<String> ips) {
         this.ips = ips;
     }
+
 
     /**
      * get ip类型
@@ -427,6 +444,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
     }
 
 
+
     /**
      * set zone id
      *
@@ -436,6 +454,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.zoneId = zoneId;
         return this;
     }
+
 
     /**
      * set zone name
@@ -447,8 +466,9 @@ public class DescribeZonesRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set zone状态
+     * set zone状态(active-&gt;已激活 deleted-&gt;已删除 pending-&gt;未激活)
      *
      * @param status
      */
@@ -456,6 +476,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 是否暂停
@@ -467,8 +488,9 @@ public class DescribeZonesRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set zone接入类型
+     * set zone接入类型(full-&gt;全接入 partial-&gt;半接入)
      *
      * @param ty_pe
      */
@@ -476,6 +498,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.ty_pe = ty_pe;
         return this;
     }
+
 
     /**
      * set 开发者模式
@@ -487,6 +510,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 校验key
      *
@@ -496,6 +520,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.verification_key = verification_key;
         return this;
     }
+
 
     /**
      * set cname后缀
@@ -507,15 +532,17 @@ public class DescribeZonesRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 源ns
-     *
-     * @param original_name_servers
-     */
+    * set 源ns
+    *
+    * @param original_name_servers
+    */
     public DescribeZonesRes original_name_servers(List<String> original_name_servers) {
         this.original_name_servers = original_name_servers;
         return this;
     }
+
 
     /**
      * set 源注册商
@@ -527,6 +554,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 源dns host
      *
@@ -536,6 +564,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.original_dnshost = original_dnshost;
         return this;
     }
+
 
     /**
      * set 修改时间
@@ -547,6 +576,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -556,6 +586,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.created_on = created_on;
         return this;
     }
+
 
     /**
      * set 激活时间
@@ -567,25 +598,28 @@ public class DescribeZonesRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set name servers
-     *
-     * @param name_servers
-     */
+    * set name servers
+    *
+    * @param name_servers
+    */
     public DescribeZonesRes name_servers(List<String> name_servers) {
         this.name_servers = name_servers;
         return this;
     }
 
+
     /**
-     * set 域名对应的ip信息
-     *
-     * @param ips
-     */
+    * set 域名对应的ip信息
+    *
+    * @param ips
+    */
     public DescribeZonesRes ips(List<String> ips) {
         this.ips = ips;
         return this;
     }
+
 
     /**
      * set ip类型
@@ -596,6 +630,7 @@ public class DescribeZonesRes  implements java.io.Serializable {
         this.ipType = ipType;
         return this;
     }
+
 
 
     /**
@@ -633,5 +668,4 @@ public class DescribeZonesRes  implements java.io.Serializable {
         }
         this.ips.add(ip);
     }
-
 }

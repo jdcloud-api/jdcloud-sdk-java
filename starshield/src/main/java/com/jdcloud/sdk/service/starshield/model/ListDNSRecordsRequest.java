@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * DNS Records for a Zone
+ * DNS-Record-Service
  * Documentation for JDC StarShield DNS records
  *
  * OpenAPI spec version: v1
@@ -87,6 +87,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
     private String zone_identifier;
 
 
+
     /**
      * get 是否匹配所有搜索要求或至少一个（任何）
      *
@@ -104,6 +105,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
     public void setMatch(String match) {
         this.match = match;
     }
+
 
     /**
      * get DNS record name
@@ -123,6 +125,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
         this.name = name;
     }
 
+
     /**
      * get 用于排序的字段
      *
@@ -140,6 +143,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
     public void setOrder(String order) {
         this.order = order;
     }
+
 
     /**
      * get 分页结果的页码
@@ -159,6 +163,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
         this.page = page;
     }
 
+
     /**
      * get 每页的DNS记录数
      *
@@ -176,6 +181,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
     public void setPer_page(Number per_page) {
         this.per_page = per_page;
     }
+
 
     /**
      * get DNS记录内容
@@ -195,6 +201,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
         this.content = content;
     }
 
+
     /**
      * get DNS记录类型
      *
@@ -212,6 +219,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
     public void setType(String type) {
         this.type = type;
     }
+
 
     /**
      * get DNS记录代理状态
@@ -231,6 +239,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
         this.proxied = proxied;
     }
 
+
     /**
      * get asc - 升序；desc - 降序
      *
@@ -248,6 +257,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
     public void setDirection(String direction) {
         this.direction = direction;
     }
+
 
     /**
      * get zone_identifier
@@ -268,6 +278,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 是否匹配所有搜索要求或至少一个（任何）
      *
@@ -277,6 +288,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
         this.match = match;
         return this;
     }
+
 
     /**
      * set DNS record name
@@ -288,6 +300,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 用于排序的字段
      *
@@ -297,6 +310,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
         this.order = order;
         return this;
     }
+
 
     /**
      * set 分页结果的页码
@@ -308,6 +322,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 每页的DNS记录数
      *
@@ -317,6 +332,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
         this.per_page = per_page;
         return this;
     }
+
 
     /**
      * set DNS记录内容
@@ -328,6 +344,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set DNS记录类型
      *
@@ -337,6 +354,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
         this.type = type;
         return this;
     }
+
 
     /**
      * set DNS记录代理状态
@@ -348,6 +366,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set asc - 升序；desc - 降序
      *
@@ -357,6 +376,7 @@ public class ListDNSRecordsRequest extends JdcloudRequest implements java.io.Ser
         this.direction = direction;
         return this;
     }
+
 
     /**
      * set zone_identifier

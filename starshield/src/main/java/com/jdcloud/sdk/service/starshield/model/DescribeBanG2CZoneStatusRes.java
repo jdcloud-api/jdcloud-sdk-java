@@ -43,6 +43,7 @@ public class DescribeBanG2CZoneStatusRes  implements java.io.Serializable {
     private Integer reason;
 
 
+
     /**
      * get 域名
      *
@@ -60,6 +61,7 @@ public class DescribeBanG2CZoneStatusRes  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 封禁原因
@@ -80,6 +82,7 @@ public class DescribeBanG2CZoneStatusRes  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 域名
      *
@@ -89,6 +92,7 @@ public class DescribeBanG2CZoneStatusRes  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 封禁原因

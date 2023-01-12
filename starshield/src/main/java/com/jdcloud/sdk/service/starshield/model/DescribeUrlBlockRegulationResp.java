@@ -98,6 +98,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
     private String updateUser;
 
 
+
     /**
      * get 封禁URL规则id
      *
@@ -115,6 +116,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get url对应的用户pin
@@ -134,6 +136,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         this.userPin = userPin;
     }
 
+
     /**
      * get 封禁URL规则名称
      *
@@ -151,6 +154,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
     public void setRegulationName(String regulationName) {
         this.regulationName = regulationName;
     }
+
 
     /**
      * get 封禁的url
@@ -170,6 +174,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         this.blockUrl = blockUrl;
     }
 
+
     /**
      * get zone id
      *
@@ -187,6 +192,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
     public void setZoneId(String zoneId) {
         this.zoneId = zoneId;
     }
+
 
     /**
      * get filter id
@@ -206,6 +212,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         this.filterId = filterId;
     }
 
+
     /**
      * get firewall rule id
      *
@@ -223,6 +230,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
     public void setFirewallRuleId(String firewallRuleId) {
         this.firewallRuleId = firewallRuleId;
     }
+
 
     /**
      * get 操作类型(0-&gt;阻断)
@@ -242,6 +250,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         this.opType = opType;
     }
 
+
     /**
      * get 规则开启状态(0-&gt;关闭  1-&gt;开启)
      *
@@ -259,6 +268,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
     public void setEnableRegulation(Integer enableRegulation) {
         this.enableRegulation = enableRegulation;
     }
+
 
     /**
      * get 规则创建时间
@@ -278,6 +288,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 规则创建者
      *
@@ -296,6 +307,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         this.createUser = createUser;
     }
 
+
     /**
      * get 规则更新时间
      *
@@ -313,6 +325,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 规则更新者
@@ -333,6 +346,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 封禁URL规则id
      *
@@ -342,6 +356,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set url对应的用户pin
@@ -353,6 +368,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 封禁URL规则名称
      *
@@ -362,6 +378,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         this.regulationName = regulationName;
         return this;
     }
+
 
     /**
      * set 封禁的url
@@ -373,6 +390,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set zone id
      *
@@ -382,6 +400,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         this.zoneId = zoneId;
         return this;
     }
+
 
     /**
      * set filter id
@@ -393,6 +412,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set firewall rule id
      *
@@ -402,6 +422,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         this.firewallRuleId = firewallRuleId;
         return this;
     }
+
 
     /**
      * set 操作类型(0-&gt;阻断)
@@ -413,6 +434,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则开启状态(0-&gt;关闭  1-&gt;开启)
      *
@@ -422,6 +444,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         this.enableRegulation = enableRegulation;
         return this;
     }
+
 
     /**
      * set 规则创建时间
@@ -433,6 +456,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则创建者
      *
@@ -443,6 +467,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则更新时间
      *
@@ -452,6 +477,7 @@ public class DescribeUrlBlockRegulationResp  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 规则更新者

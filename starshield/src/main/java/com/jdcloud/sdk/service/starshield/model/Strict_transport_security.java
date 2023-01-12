@@ -53,6 +53,7 @@ public class Strict_transport_security  implements java.io.Serializable {
     private Boolean nosniff;
 
 
+
     /**
      * get 是否启用了严格传输安全
      *
@@ -70,6 +71,7 @@ public class Strict_transport_security  implements java.io.Serializable {
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
     }
+
 
     /**
      * get 严格传输安全的最大时间（秒）。
@@ -89,6 +91,7 @@ public class Strict_transport_security  implements java.io.Serializable {
         this.max_age = max_age;
     }
 
+
     /**
      * get 包括所有子域，以保证严格传输安全
      *
@@ -106,6 +109,7 @@ public class Strict_transport_security  implements java.io.Serializable {
     public void setInclude_subdomains(Boolean include_subdomains) {
         this.include_subdomains = include_subdomains;
     }
+
 
     /**
      * get 是否包含&#39;X-Content-Type-Options.. nosniff&#39;头
@@ -126,6 +130,7 @@ public class Strict_transport_security  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否启用了严格传输安全
      *
@@ -135,6 +140,7 @@ public class Strict_transport_security  implements java.io.Serializable {
         this.enabled = enabled;
         return this;
     }
+
 
     /**
      * set 严格传输安全的最大时间（秒）。
@@ -146,6 +152,7 @@ public class Strict_transport_security  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 包括所有子域，以保证严格传输安全
      *
@@ -155,6 +162,7 @@ public class Strict_transport_security  implements java.io.Serializable {
         this.include_subdomains = include_subdomains;
         return this;
     }
+
 
     /**
      * set 是否包含&#39;X-Content-Type-Options.. nosniff&#39;头

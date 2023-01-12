@@ -51,6 +51,7 @@ public class PurgeAllFilesRequest extends JdcloudRequest implements java.io.Seri
     private String identifier;
 
 
+
     /**
      * get 指示星盾缓存中的所有资源都应该删除的标志。
 注意，执行此操作后，可能会对源服务器负载产生显著影响。
@@ -73,6 +74,7 @@ public class PurgeAllFilesRequest extends JdcloudRequest implements java.io.Seri
         this.purge_everything = purge_everything;
     }
 
+
     /**
      * get identifier
      *
@@ -92,6 +94,7 @@ public class PurgeAllFilesRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 指示星盾缓存中的所有资源都应该删除的标志。
 注意，执行此操作后，可能会对源服务器负载产生显著影响。
@@ -103,6 +106,7 @@ public class PurgeAllFilesRequest extends JdcloudRequest implements java.io.Seri
         this.purge_everything = purge_everything;
         return this;
     }
+
 
     /**
      * set identifier

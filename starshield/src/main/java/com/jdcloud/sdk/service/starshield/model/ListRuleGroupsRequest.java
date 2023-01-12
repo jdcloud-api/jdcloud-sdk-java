@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * WAF Rule Groups
+ * WAF-Rule-Groups
  * A group of web application firewall rules that share common functionality and traits
  *
  * OpenAPI spec version: v1
@@ -89,6 +89,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
     private String package_identifier;
 
 
+
     /**
      * get 防火墙规则组名称
      *
@@ -106,6 +107,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 此组中包含的规则是否可配置/可用
@@ -125,6 +127,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
         this.mode = mode;
     }
 
+
     /**
      * get 此组中包含多少条规则
      *
@@ -142,6 +145,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
     public void setRules_count(Number rules_count) {
         this.rules_count = rules_count;
     }
+
 
     /**
      * get 分页结果的页码
@@ -161,6 +165,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
         this.page = page;
     }
 
+
     /**
      * get 每页的组数
      *
@@ -178,6 +183,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
     public void setPer_page(Number per_page) {
         this.per_page = per_page;
     }
+
 
     /**
      * get 按字段对组进行排序
@@ -197,6 +203,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
         this.order = order;
     }
 
+
     /**
      * get asc-升序；desc-降序
      *
@@ -214,6 +221,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
     public void setDirection(String direction) {
         this.direction = direction;
     }
+
 
     /**
      * get 是否匹配所有搜索要求或至少一个（任何）
@@ -233,6 +241,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
         this.match = match;
     }
 
+
     /**
      * get zone_identifier
      *
@@ -250,6 +259,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
     /**
      * get package_identifier
@@ -270,6 +280,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 防火墙规则组名称
      *
@@ -279,6 +290,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
         this.name = name;
         return this;
     }
+
 
     /**
      * set 此组中包含的规则是否可配置/可用
@@ -290,6 +302,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 此组中包含多少条规则
      *
@@ -299,6 +312,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
         this.rules_count = rules_count;
         return this;
     }
+
 
     /**
      * set 分页结果的页码
@@ -310,6 +324,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 每页的组数
      *
@@ -319,6 +334,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
         this.per_page = per_page;
         return this;
     }
+
 
     /**
      * set 按字段对组进行排序
@@ -330,6 +346,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set asc-升序；desc-降序
      *
@@ -339,6 +356,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
         this.direction = direction;
         return this;
     }
+
 
     /**
      * set 是否匹配所有搜索要求或至少一个（任何）
@@ -350,6 +368,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set zone_identifier
      *
@@ -359,6 +378,7 @@ public class ListRuleGroupsRequest extends JdcloudRequest implements java.io.Ser
         this.zone_identifier = zone_identifier;
         return this;
     }
+
 
     /**
      * set package_identifier

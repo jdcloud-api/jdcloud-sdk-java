@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Custom Pages for a Zone
+ * Custom-Pages-for-a-Zone
  * Custom pages associated with a zone
  *
  * OpenAPI spec version: v1
@@ -42,6 +42,7 @@ public class ListAvailableCustomPagesRequest extends JdcloudRequest implements j
     private String zone_identifier;
 
 
+
     /**
      * get zone_identifier
      *
@@ -59,6 +60,7 @@ public class ListAvailableCustomPagesRequest extends JdcloudRequest implements j
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
 
     /**

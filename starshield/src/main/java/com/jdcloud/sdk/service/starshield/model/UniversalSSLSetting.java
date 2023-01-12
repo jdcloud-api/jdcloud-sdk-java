@@ -46,6 +46,7 @@ public class UniversalSSLSetting  implements java.io.Serializable {
     private Boolean enabled;
 
 
+
     /**
      * get 禁用通用SSL将从边缘上删除域的所有当前激活的通用SSL证书并且防止将来订购任何通用SSL证书。如果没有为域上载专用证书或自定义证书，访问者将无法通过HTTPS访问域。
 通过禁用通用SSL，您知道以下星盾设置和首选项将导致访问者无法访问您的域，除非您上载了自定义证书或购买了专用证书。
@@ -79,6 +80,7 @@ public class UniversalSSLSetting  implements java.io.Serializable {
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
     }
+
 
 
     /**

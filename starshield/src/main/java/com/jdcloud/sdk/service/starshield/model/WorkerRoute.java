@@ -48,6 +48,7 @@ public class WorkerRoute  implements java.io.Serializable {
     private String script;
 
 
+
     /**
      * get API item identifier tag
      *
@@ -66,6 +67,7 @@ public class WorkerRoute  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get pattern
      *
@@ -83,6 +85,7 @@ public class WorkerRoute  implements java.io.Serializable {
     public void setPattern(String pattern) {
         this.pattern = pattern;
     }
+
 
     /**
      * get Name of the script to apply when the route is matched. The route is skipped when this is blank/missing.
@@ -103,6 +106,7 @@ public class WorkerRoute  implements java.io.Serializable {
     }
 
 
+
     /**
      * set API item identifier tag
      *
@@ -113,6 +117,7 @@ public class WorkerRoute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pattern
      *
@@ -122,6 +127,7 @@ public class WorkerRoute  implements java.io.Serializable {
         this.pattern = pattern;
         return this;
     }
+
 
     /**
      * set Name of the script to apply when the route is matched. The route is skipped when this is blank/missing.

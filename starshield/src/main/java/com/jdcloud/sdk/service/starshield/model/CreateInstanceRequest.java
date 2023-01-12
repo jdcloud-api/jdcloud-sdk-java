@@ -28,7 +28,8 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建套餐实例
+ * 创建套餐实例，调用成功，将自动扣费（请保证账户充足，否则无法成功创建实例）。
+
  */
 public class CreateInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -94,11 +95,17 @@ SMB_BUSINESS 按流量 商业版
     private String returnUrl;
 
     /**
+     * 购买上下文JSON字符串
+     */
+    private String buyScenario;
+
+    /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -128,6 +135,7 @@ ONCE 一次性
     public void setChargeMode(String chargeMode) {
         this.chargeMode = chargeMode;
     }
+
 
     /**
      * get 套餐类型（BASIC、PROFESSIONAL、ENTERPRISE、ULTIMATE、SMB_EXPERIENCE、SMB_BASIC、SMB_BUSINESS）
@@ -165,6 +173,7 @@ SMB_BUSINESS 按流量 商业版
         this.packType = packType;
     }
 
+
     /**
      * get 域名增量包数量
      *
@@ -182,6 +191,7 @@ SMB_BUSINESS 按流量 商业版
     public void setZonePackNum(Integer zonePackNum) {
         this.zonePackNum = zonePackNum;
     }
+
 
     /**
      * get 计费时长
@@ -201,6 +211,7 @@ SMB_BUSINESS 按流量 商业版
         this.duration = duration;
     }
 
+
     /**
      * get 计费时长单位（MONTH、YEAR）
      *
@@ -218,6 +229,7 @@ SMB_BUSINESS 按流量 商业版
     public void setDurationUnit(String durationUnit) {
         this.durationUnit = durationUnit;
     }
+
 
     /**
      * get 自动续费状态(OPEN-&gt;开通自动续费 CLOSE-&gt;关闭自动续费)
@@ -237,6 +249,7 @@ SMB_BUSINESS 按流量 商业版
         this.autoRenewStatus = autoRenewStatus;
     }
 
+
     /**
      * get 实例名称
      *
@@ -254,6 +267,7 @@ SMB_BUSINESS 按流量 商业版
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
     }
+
 
     /**
      * get 备注
@@ -273,6 +287,7 @@ SMB_BUSINESS 按流量 商业版
         this.memo = memo;
     }
 
+
     /**
      * get 支付成功返回路径
      *
@@ -290,6 +305,26 @@ SMB_BUSINESS 按流量 商业版
     public void setReturnUrl(String returnUrl) {
         this.returnUrl = returnUrl;
     }
+
+
+    /**
+     * get 购买上下文JSON字符串
+     *
+     * @return
+     */
+    public String getBuyScenario() {
+        return buyScenario;
+    }
+
+    /**
+     * set 购买上下文JSON字符串
+     *
+     * @param buyScenario
+     */
+    public void setBuyScenario(String buyScenario) {
+        this.buyScenario = buyScenario;
+    }
+
 
     /**
      * get 地域ID
@@ -310,6 +345,7 @@ SMB_BUSINESS 按流量 商业版
     }
 
 
+
     /**
      * set 计费模式（CONFIG、FLOW、MONTHLY、ONCE）
 CONFIG 按配置
@@ -324,6 +360,7 @@ ONCE 一次性
         this.chargeMode = chargeMode;
         return this;
     }
+
 
     /**
      * set 套餐类型（BASIC、PROFESSIONAL、ENTERPRISE、ULTIMATE、SMB_EXPERIENCE、SMB_BASIC、SMB_BUSINESS）
@@ -344,6 +381,7 @@ SMB_BUSINESS 按流量 商业版
         return this;
     }
 
+
     /**
      * set 域名增量包数量
      *
@@ -353,6 +391,7 @@ SMB_BUSINESS 按流量 商业版
         this.zonePackNum = zonePackNum;
         return this;
     }
+
 
     /**
      * set 计费时长
@@ -364,6 +403,7 @@ SMB_BUSINESS 按流量 商业版
         return this;
     }
 
+
     /**
      * set 计费时长单位（MONTH、YEAR）
      *
@@ -373,6 +413,7 @@ SMB_BUSINESS 按流量 商业版
         this.durationUnit = durationUnit;
         return this;
     }
+
 
     /**
      * set 自动续费状态(OPEN-&gt;开通自动续费 CLOSE-&gt;关闭自动续费)
@@ -384,6 +425,7 @@ SMB_BUSINESS 按流量 商业版
         return this;
     }
 
+
     /**
      * set 实例名称
      *
@@ -393,6 +435,7 @@ SMB_BUSINESS 按流量 商业版
         this.instanceName = instanceName;
         return this;
     }
+
 
     /**
      * set 备注
@@ -404,6 +447,7 @@ SMB_BUSINESS 按流量 商业版
         return this;
     }
 
+
     /**
      * set 支付成功返回路径
      *
@@ -413,6 +457,18 @@ SMB_BUSINESS 按流量 商业版
         this.returnUrl = returnUrl;
         return this;
     }
+
+
+    /**
+     * set 购买上下文JSON字符串
+     *
+     * @param buyScenario
+     */
+    public CreateInstanceRequest buyScenario(String buyScenario) {
+        this.buyScenario = buyScenario;
+        return this;
+    }
+
 
     /**
      * set 地域ID

@@ -48,6 +48,7 @@ public class Value_0  implements java.io.Serializable {
     private Boolean strip_uri;
 
 
+
     /**
      * get 是否启用移动重定向
      *
@@ -66,6 +67,7 @@ public class Value_0  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 你希望将移动设备上的访客重定向到哪个子域前缀（子域必须已经存在）。
      *
@@ -83,6 +85,7 @@ public class Value_0  implements java.io.Serializable {
     public void setMobile_subdomain(String mobile_subdomain) {
         this.mobile_subdomain = mobile_subdomain;
     }
+
 
     /**
      * get 是放弃当前页面路径并重定向到移动子域的URL根，还是保留路径并重定向到移动子域的同一页面
@@ -103,6 +106,7 @@ public class Value_0  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否启用移动重定向
      *
@@ -113,6 +117,7 @@ public class Value_0  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 你希望将移动设备上的访客重定向到哪个子域前缀（子域必须已经存在）。
      *
@@ -122,6 +127,7 @@ public class Value_0  implements java.io.Serializable {
         this.mobile_subdomain = mobile_subdomain;
         return this;
     }
+
 
     /**
      * set 是放弃当前页面路径并重定向到移动子域的URL根，还是保留路径并重定向到移动子域的同一页面

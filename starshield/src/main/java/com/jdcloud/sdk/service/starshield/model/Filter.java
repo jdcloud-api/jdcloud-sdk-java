@@ -58,6 +58,7 @@ public class Filter  implements java.io.Serializable {
     private String ref;
 
 
+
     /**
      * get 筛选器标识符
      *
@@ -75,6 +76,7 @@ public class Filter  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get 要使用的筛选器表达式
@@ -94,6 +96,7 @@ public class Filter  implements java.io.Serializable {
         this.expression = expression;
     }
 
+
     /**
      * get 此筛选器当前是否已暂停
      *
@@ -112,6 +115,7 @@ public class Filter  implements java.io.Serializable {
         this.paused = paused;
     }
 
+
     /**
      * get 可用于描述过滤器用途的注释
      *
@@ -129,6 +133,7 @@ public class Filter  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 短引用标记，用于快速选择相关规则。
@@ -149,6 +154,7 @@ public class Filter  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 筛选器标识符
      *
@@ -158,6 +164,7 @@ public class Filter  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 要使用的筛选器表达式
@@ -169,6 +176,7 @@ public class Filter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 此筛选器当前是否已暂停
      *
@@ -179,6 +187,7 @@ public class Filter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 可用于描述过滤器用途的注释
      *
@@ -188,6 +197,7 @@ public class Filter  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 短引用标记，用于快速选择相关规则。

@@ -73,6 +73,7 @@ public class Plan_pending  implements java.io.Serializable {
     private Boolean can_subscribe;
 
 
+
     /**
      * get id
      *
@@ -90,6 +91,7 @@ public class Plan_pending  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get name
@@ -109,6 +111,7 @@ public class Plan_pending  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get price
      *
@@ -126,6 +129,7 @@ public class Plan_pending  implements java.io.Serializable {
     public void setPrice(Number price) {
         this.price = price;
     }
+
 
     /**
      * get currency
@@ -145,6 +149,7 @@ public class Plan_pending  implements java.io.Serializable {
         this.currency = currency;
     }
 
+
     /**
      * get frequency
      *
@@ -162,6 +167,7 @@ public class Plan_pending  implements java.io.Serializable {
     public void setFrequency(String frequency) {
         this.frequency = frequency;
     }
+
 
     /**
      * get legacy_id
@@ -181,6 +187,7 @@ public class Plan_pending  implements java.io.Serializable {
         this.legacy_id = legacy_id;
     }
 
+
     /**
      * get is_subscribed
      *
@@ -198,6 +205,7 @@ public class Plan_pending  implements java.io.Serializable {
     public void setIs_subscribed(Boolean is_subscribed) {
         this.is_subscribed = is_subscribed;
     }
+
 
     /**
      * get can_subscribe
@@ -218,6 +226,7 @@ public class Plan_pending  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -227,6 +236,7 @@ public class Plan_pending  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set name
@@ -238,6 +248,7 @@ public class Plan_pending  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set price
      *
@@ -247,6 +258,7 @@ public class Plan_pending  implements java.io.Serializable {
         this.price = price;
         return this;
     }
+
 
     /**
      * set currency
@@ -258,6 +270,7 @@ public class Plan_pending  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set frequency
      *
@@ -267,6 +280,7 @@ public class Plan_pending  implements java.io.Serializable {
         this.frequency = frequency;
         return this;
     }
+
 
     /**
      * set legacy_id
@@ -278,6 +292,7 @@ public class Plan_pending  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set is_subscribed
      *
@@ -287,6 +302,7 @@ public class Plan_pending  implements java.io.Serializable {
         this.is_subscribed = is_subscribed;
         return this;
     }
+
 
     /**
      * set can_subscribe

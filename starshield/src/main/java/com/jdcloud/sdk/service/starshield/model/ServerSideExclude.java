@@ -53,6 +53,7 @@ public class ServerSideExclude  implements java.io.Serializable {
     private String modified_on;
 
 
+
     /**
      * get ID of the zone setting
      *
@@ -70,6 +71,7 @@ public class ServerSideExclude  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get Value of the zone setting
@@ -89,6 +91,7 @@ public class ServerSideExclude  implements java.io.Serializable {
         this.value = value;
     }
 
+
     /**
      * get Whether or not this setting can be modified for this zone (based on your JDC StarShield plan level)
      *
@@ -106,6 +109,7 @@ public class ServerSideExclude  implements java.io.Serializable {
     public void setEditable(Boolean editable) {
         this.editable = editable;
     }
+
 
     /**
      * get last time this setting was modified
@@ -126,6 +130,7 @@ public class ServerSideExclude  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ID of the zone setting
      *
@@ -135,6 +140,7 @@ public class ServerSideExclude  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set Value of the zone setting
@@ -146,6 +152,7 @@ public class ServerSideExclude  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Whether or not this setting can be modified for this zone (based on your JDC StarShield plan level)
      *
@@ -155,6 +162,7 @@ public class ServerSideExclude  implements java.io.Serializable {
         this.editable = editable;
         return this;
     }
+
 
     /**
      * set last time this setting was modified

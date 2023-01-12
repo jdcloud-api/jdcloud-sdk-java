@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 套餐包管理模块
+ * Pack-Manage
  * 套餐包管理模块
  *
  * OpenAPI spec version: v1
@@ -39,8 +39,8 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
     /**
      * dataList
      */
+    
     private List<DescribePackRes> dataList;
-
     /**
      * 当前页记录数量
      */
@@ -57,23 +57,25 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
     private Integer totalPage;
 
 
+
     /**
-     * get dataList
-     *
-     * @return
-     */
+    * get dataList
+    *
+    * @return
+    */
     public List<DescribePackRes> getDataList() {
         return dataList;
     }
 
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public void setDataList(List<DescribePackRes> dataList) {
         this.dataList = dataList;
     }
+
 
     /**
      * get 当前页记录数量
@@ -93,6 +95,7 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
         this.currentCount = currentCount;
     }
 
+
     /**
      * get 总记录数量
      *
@@ -110,6 +113,7 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
     public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
     }
+
 
     /**
      * get 总页数
@@ -130,15 +134,17 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public DescribePackagesResult dataList(List<DescribePackRes> dataList) {
         this.dataList = dataList;
         return this;
     }
+
 
     /**
      * set 当前页记录数量
@@ -150,6 +156,7 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 总记录数量
      *
@@ -160,6 +167,7 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 总页数
      *
@@ -169,6 +177,7 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
         this.totalPage = totalPage;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
         }
         this.dataList.add(dataList);
     }
-
 }

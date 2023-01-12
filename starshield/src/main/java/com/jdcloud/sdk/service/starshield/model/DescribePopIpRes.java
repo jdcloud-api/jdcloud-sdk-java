@@ -47,12 +47,13 @@ public class DescribePopIpRes  implements java.io.Serializable {
     /**
      * ip对应域名信息
      */
+    
     private List<String> domains;
-
     /**
      * ip对应运营商信息
      */
     private Integer ipIsptype;
+
 
 
     /**
@@ -73,6 +74,7 @@ public class DescribePopIpRes  implements java.io.Serializable {
         this.ip = ip;
     }
 
+
     /**
      * get pop 节点id
      *
@@ -91,23 +93,25 @@ public class DescribePopIpRes  implements java.io.Serializable {
         this.coloId = coloId;
     }
 
+
     /**
-     * get ip对应域名信息
-     *
-     * @return
-     */
+    * get ip对应域名信息
+    *
+    * @return
+    */
     public List<String> getDomains() {
         return domains;
     }
 
     /**
-     * set ip对应域名信息
-     *
-     * @param domains
-     */
+    * set ip对应域名信息
+    *
+    * @param domains
+    */
     public void setDomains(List<String> domains) {
         this.domains = domains;
     }
+
 
     /**
      * get ip对应运营商信息
@@ -128,6 +132,7 @@ public class DescribePopIpRes  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ip
      *
@@ -137,6 +142,7 @@ public class DescribePopIpRes  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set pop 节点id
@@ -148,15 +154,17 @@ public class DescribePopIpRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set ip对应域名信息
-     *
-     * @param domains
-     */
+    * set ip对应域名信息
+    *
+    * @param domains
+    */
     public DescribePopIpRes domains(List<String> domains) {
         this.domains = domains;
         return this;
     }
+
 
     /**
      * set ip对应运营商信息
@@ -167,6 +175,7 @@ public class DescribePopIpRes  implements java.io.Serializable {
         this.ipIsptype = ipIsptype;
         return this;
     }
+
 
 
     /**
@@ -180,5 +189,4 @@ public class DescribePopIpRes  implements java.io.Serializable {
         }
         this.domains.add(domain);
     }
-
 }

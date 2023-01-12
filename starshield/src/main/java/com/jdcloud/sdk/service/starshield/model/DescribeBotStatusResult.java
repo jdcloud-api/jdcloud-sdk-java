@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Firewall rules
+ * Firewall-rules
  * Define Firewall rules using filter expressions for more control over how traffic is matched to the rule.
  *
  * OpenAPI spec version: v1
@@ -59,6 +59,7 @@ public class DescribeBotStatusResult extends JdcloudResult implements java.io.Se
     private String switchStatus;
 
 
+
     /**
      * get zone id
      *
@@ -76,6 +77,7 @@ public class DescribeBotStatusResult extends JdcloudResult implements java.io.Se
     public void setZoneId(String zoneId) {
         this.zoneId = zoneId;
     }
+
 
     /**
      * get 套餐实例id
@@ -95,6 +97,7 @@ public class DescribeBotStatusResult extends JdcloudResult implements java.io.Se
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 订阅类型
      *
@@ -113,6 +116,7 @@ public class DescribeBotStatusResult extends JdcloudResult implements java.io.Se
         this.subscriptionType = subscriptionType;
     }
 
+
     /**
      * get 订阅id
      *
@@ -130,6 +134,7 @@ public class DescribeBotStatusResult extends JdcloudResult implements java.io.Se
     public void setSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
     }
+
 
     /**
      * get 开关状态
@@ -150,6 +155,7 @@ public class DescribeBotStatusResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
      * set zone id
      *
@@ -159,6 +165,7 @@ public class DescribeBotStatusResult extends JdcloudResult implements java.io.Se
         this.zoneId = zoneId;
         return this;
     }
+
 
     /**
      * set 套餐实例id
@@ -170,6 +177,7 @@ public class DescribeBotStatusResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 订阅类型
      *
@@ -180,6 +188,7 @@ public class DescribeBotStatusResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 订阅id
      *
@@ -189,6 +198,7 @@ public class DescribeBotStatusResult extends JdcloudResult implements java.io.Se
         this.subscriptionId = subscriptionId;
         return this;
     }
+
 
     /**
      * set 开关状态

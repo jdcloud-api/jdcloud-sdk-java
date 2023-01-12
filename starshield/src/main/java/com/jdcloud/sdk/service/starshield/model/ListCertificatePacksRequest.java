@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Certificate Packs
+ * Certificate-Packs
  * Certificate Packs
  *
  * OpenAPI spec version: v1
@@ -47,6 +47,7 @@ public class ListCertificatePacksRequest extends JdcloudRequest implements java.
     private String zone_identifier;
 
 
+
     /**
      * get 包括所有状态的证书包，而不仅仅是激活状态的证书包。
      *
@@ -64,6 +65,7 @@ public class ListCertificatePacksRequest extends JdcloudRequest implements java.
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get zone_identifier
@@ -84,6 +86,7 @@ public class ListCertificatePacksRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 包括所有状态的证书包，而不仅仅是激活状态的证书包。
      *
@@ -93,6 +96,7 @@ public class ListCertificatePacksRequest extends JdcloudRequest implements java.
         this.status = status;
         return this;
     }
+
 
     /**
      * set zone_identifier

@@ -43,6 +43,7 @@ public class Meta  implements java.io.Serializable {
     private String source;
 
 
+
     /**
      * get 如果星盾在初始设置期间自动添加了此 DNS 记录，则会存在。
      *
@@ -60,6 +61,7 @@ public class Meta  implements java.io.Serializable {
     public void setAuto_added(Boolean auto_added) {
         this.auto_added = auto_added;
     }
+
 
     /**
      * get 记录来自哪里
@@ -80,6 +82,7 @@ public class Meta  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 如果星盾在初始设置期间自动添加了此 DNS 记录，则会存在。
      *
@@ -89,6 +92,7 @@ public class Meta  implements java.io.Serializable {
         this.auto_added = auto_added;
         return this;
     }
+
 
     /**
      * set 记录来自哪里

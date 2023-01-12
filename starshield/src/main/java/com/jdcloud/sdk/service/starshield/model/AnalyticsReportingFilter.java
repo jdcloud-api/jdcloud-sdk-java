@@ -51,6 +51,7 @@ ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent
     /**
      * 过滤条件的值
      */
+    
     private List<String> values;
 
 
@@ -80,6 +81,7 @@ ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent
         this.name = name;
     }
 
+
     /**
      * get 过滤条件的操作符
      *
@@ -98,23 +100,25 @@ ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent
         this.operator = operator;
     }
 
+
     /**
-     * get 过滤条件的值
-     *
-     * @return
-     */
+    * get 过滤条件的值
+    *
+    * @return
+    */
     public List<String> getValues() {
         return values;
     }
 
     /**
-     * set 过滤条件的值
-     *
-     * @param values
-     */
+    * set 过滤条件的值
+    *
+    * @param values
+    */
     public void setValues(List<String> values) {
         this.values = values;
     }
+
 
 
     /**
@@ -131,6 +135,7 @@ ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent
         return this;
     }
 
+
     /**
      * set 过滤条件的操作符
      *
@@ -141,15 +146,17 @@ ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent
         return this;
     }
 
+
     /**
-     * set 过滤条件的值
-     *
-     * @param values
-     */
+    * set 过滤条件的值
+    *
+    * @param values
+    */
     public AnalyticsReportingFilter values(List<String> values) {
         this.values = values;
         return this;
     }
+
 
 
     /**
@@ -163,5 +170,4 @@ ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent
         }
         this.values.add(value);
     }
-
 }

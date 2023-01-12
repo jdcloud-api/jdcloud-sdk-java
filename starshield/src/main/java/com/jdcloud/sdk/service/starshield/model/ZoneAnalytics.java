@@ -42,6 +42,7 @@ public class ZoneAnalytics  implements java.io.Serializable {
     /**
      * Time deltas containing metadata about each bucket of time. The number of buckets (resolution) is determined by the amount of time between the since and until parameters.
      */
+    
     private List<Totals> timeseries;
 
 
@@ -63,23 +64,25 @@ public class ZoneAnalytics  implements java.io.Serializable {
         this.totals = totals;
     }
 
+
     /**
-     * get Time deltas containing metadata about each bucket of time. The number of buckets (resolution) is determined by the amount of time between the since and until parameters.
-     *
-     * @return
-     */
+    * get Time deltas containing metadata about each bucket of time. The number of buckets (resolution) is determined by the amount of time between the since and until parameters.
+    *
+    * @return
+    */
     public List<Totals> getTimeseries() {
         return timeseries;
     }
 
     /**
-     * set Time deltas containing metadata about each bucket of time. The number of buckets (resolution) is determined by the amount of time between the since and until parameters.
-     *
-     * @param timeseries
-     */
+    * set Time deltas containing metadata about each bucket of time. The number of buckets (resolution) is determined by the amount of time between the since and until parameters.
+    *
+    * @param timeseries
+    */
     public void setTimeseries(List<Totals> timeseries) {
         this.timeseries = timeseries;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class ZoneAnalytics  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set Time deltas containing metadata about each bucket of time. The number of buckets (resolution) is determined by the amount of time between the since and until parameters.
-     *
-     * @param timeseries
-     */
+    * set Time deltas containing metadata about each bucket of time. The number of buckets (resolution) is determined by the amount of time between the since and until parameters.
+    *
+    * @param timeseries
+    */
     public ZoneAnalytics timeseries(List<Totals> timeseries) {
         this.timeseries = timeseries;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class ZoneAnalytics  implements java.io.Serializable {
         }
         this.timeseries.add(timeserie);
     }
-
 }

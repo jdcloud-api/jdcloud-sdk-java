@@ -43,6 +43,7 @@ public class PurgeFilesByCache_TagsAndHostOrPrefixResult extends JdcloudResult i
     private Zone data;
 
 
+
     /**
      * get data
      *
@@ -60,6 +61,7 @@ public class PurgeFilesByCache_TagsAndHostOrPrefixResult extends JdcloudResult i
     public void setData(Zone data) {
         this.data = data;
     }
+
 
 
     /**

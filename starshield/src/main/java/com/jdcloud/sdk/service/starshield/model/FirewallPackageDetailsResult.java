@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * WAF Rule Packages
+ * WAF-Rule-Packages
  * Web application firewall rule package applied to a zone
  *
  * OpenAPI spec version: v1
@@ -40,6 +40,7 @@ public class FirewallPackageDetailsResult extends JdcloudResult implements java.
     private WAFRulePackage data;
 
 
+
     /**
      * get data
      *
@@ -57,6 +58,7 @@ public class FirewallPackageDetailsResult extends JdcloudResult implements java.
     public void setData(WAFRulePackage data) {
         this.data = data;
     }
+
 
 
     /**

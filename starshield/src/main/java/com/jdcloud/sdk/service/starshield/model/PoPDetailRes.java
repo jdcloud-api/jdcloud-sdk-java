@@ -73,6 +73,7 @@ public class PoPDetailRes  implements java.io.Serializable {
     private Object service_levels;
 
 
+
     /**
      * get PoP节点ID
      *
@@ -90,6 +91,7 @@ public class PoPDetailRes  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get PoP节点名称
@@ -109,6 +111,7 @@ public class PoPDetailRes  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 区域
      *
@@ -126,6 +129,7 @@ public class PoPDetailRes  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 城市
@@ -145,6 +149,7 @@ public class PoPDetailRes  implements java.io.Serializable {
         this.city = city;
     }
 
+
     /**
      * get 节点状态
      *
@@ -162,6 +167,7 @@ public class PoPDetailRes  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 运营商信息(CT-&gt;中国电信 CM-&gt;中国移动 CU-&gt;中国联通)
@@ -181,6 +187,7 @@ public class PoPDetailRes  implements java.io.Serializable {
         this.isp = isp;
     }
 
+
     /**
      * get routing_modes
      *
@@ -198,6 +205,7 @@ public class PoPDetailRes  implements java.io.Serializable {
     public void setRouting_modes(Object routing_modes) {
         this.routing_modes = routing_modes;
     }
+
 
     /**
      * get service_levels
@@ -218,6 +226,7 @@ public class PoPDetailRes  implements java.io.Serializable {
     }
 
 
+
     /**
      * set PoP节点ID
      *
@@ -227,6 +236,7 @@ public class PoPDetailRes  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set PoP节点名称
@@ -238,6 +248,7 @@ public class PoPDetailRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 区域
      *
@@ -247,6 +258,7 @@ public class PoPDetailRes  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 城市
@@ -258,6 +270,7 @@ public class PoPDetailRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 节点状态
      *
@@ -267,6 +280,7 @@ public class PoPDetailRes  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 运营商信息(CT-&gt;中国电信 CM-&gt;中国移动 CU-&gt;中国联通)
@@ -278,6 +292,7 @@ public class PoPDetailRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set routing_modes
      *
@@ -287,6 +302,7 @@ public class PoPDetailRes  implements java.io.Serializable {
         this.routing_modes = routing_modes;
         return this;
     }
+
 
     /**
      * set service_levels

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Certificate Packs
+ * Certificate-Packs
  * Certificate Packs
  *
  * OpenAPI spec version: v1
@@ -44,8 +44,8 @@ public class OrderAdvancedCertificateManagerCertificatePackRequest extends Jdclo
     /**
      * 以逗号分隔的证书包的有效主机名称列表。必须包含域的顶级域名，不得包含50个以上的主机，也不得为空。
      */
+    
     private List<String> hosts;
-
     /**
      * 为订阅选择的验证方法
      */
@@ -77,6 +77,7 @@ validation_method必须是&#39;txt&#39;，validity_days必须是90，cloudflare_
     private String zone_identifier;
 
 
+
     /**
      * get 证书包的类型
      *
@@ -95,23 +96,25 @@ validation_method必须是&#39;txt&#39;，validity_days必须是90，cloudflare_
         this.ty_pe = ty_pe;
     }
 
+
     /**
-     * get 以逗号分隔的证书包的有效主机名称列表。必须包含域的顶级域名，不得包含50个以上的主机，也不得为空。
-     *
-     * @return
-     */
+    * get 以逗号分隔的证书包的有效主机名称列表。必须包含域的顶级域名，不得包含50个以上的主机，也不得为空。
+    *
+    * @return
+    */
     public List<String> getHosts() {
         return hosts;
     }
 
     /**
-     * set 以逗号分隔的证书包的有效主机名称列表。必须包含域的顶级域名，不得包含50个以上的主机，也不得为空。
-     *
-     * @param hosts
-     */
+    * set 以逗号分隔的证书包的有效主机名称列表。必须包含域的顶级域名，不得包含50个以上的主机，也不得为空。
+    *
+    * @param hosts
+    */
     public void setHosts(List<String> hosts) {
         this.hosts = hosts;
     }
+
 
     /**
      * get 为订阅选择的验证方法
@@ -131,6 +134,7 @@ validation_method必须是&#39;txt&#39;，validity_days必须是90，cloudflare_
         this.validation_method = validation_method;
     }
 
+
     /**
      * get 为订阅选择的有效日期
      *
@@ -148,6 +152,7 @@ validation_method必须是&#39;txt&#39;，validity_days必须是90，cloudflare_
     public void setValidity_days(Integer validity_days) {
         this.validity_days = validity_days;
     }
+
 
     /**
      * get 为该订阅选择的证书颁发机构。选择Let&#39;s Encrypt将减少对其他字段的定制。
@@ -173,6 +178,7 @@ validation_method必须是&#39;txt&#39;，validity_days必须是90，cloudflare_
         this.certificate_authority = certificate_authority;
     }
 
+
     /**
      * get 是否为订阅添加星盾品牌。
      *
@@ -190,6 +196,7 @@ validation_method必须是&#39;txt&#39;，validity_days必须是90，cloudflare_
     public void setCloudflare_branding(Boolean cloudflare_branding) {
         this.cloudflare_branding = cloudflare_branding;
     }
+
 
     /**
      * get zone_identifier
@@ -210,6 +217,7 @@ validation_method必须是&#39;txt&#39;，validity_days必须是90，cloudflare_
     }
 
 
+
     /**
      * set 证书包的类型
      *
@@ -220,15 +228,17 @@ validation_method必须是&#39;txt&#39;，validity_days必须是90，cloudflare_
         return this;
     }
 
+
     /**
-     * set 以逗号分隔的证书包的有效主机名称列表。必须包含域的顶级域名，不得包含50个以上的主机，也不得为空。
-     *
-     * @param hosts
-     */
+    * set 以逗号分隔的证书包的有效主机名称列表。必须包含域的顶级域名，不得包含50个以上的主机，也不得为空。
+    *
+    * @param hosts
+    */
     public OrderAdvancedCertificateManagerCertificatePackRequest hosts(List<String> hosts) {
         this.hosts = hosts;
         return this;
     }
+
 
     /**
      * set 为订阅选择的验证方法
@@ -240,6 +250,7 @@ validation_method必须是&#39;txt&#39;，validity_days必须是90，cloudflare_
         return this;
     }
 
+
     /**
      * set 为订阅选择的有效日期
      *
@@ -249,6 +260,7 @@ validation_method必须是&#39;txt&#39;，validity_days必须是90，cloudflare_
         this.validity_days = validity_days;
         return this;
     }
+
 
     /**
      * set 为该订阅选择的证书颁发机构。选择Let&#39;s Encrypt将减少对其他字段的定制。
@@ -263,6 +275,7 @@ validation_method必须是&#39;txt&#39;，validity_days必须是90，cloudflare_
         return this;
     }
 
+
     /**
      * set 是否为订阅添加星盾品牌。
      *
@@ -273,6 +286,7 @@ validation_method必须是&#39;txt&#39;，validity_days必须是90，cloudflare_
         return this;
     }
 
+
     /**
      * set zone_identifier
      *
@@ -282,6 +296,7 @@ validation_method必须是&#39;txt&#39;，validity_days必须是90，cloudflare_
         this.zone_identifier = zone_identifier;
         return this;
     }
+
 
 
     /**
@@ -295,5 +310,4 @@ validation_method必须是&#39;txt&#39;，validity_days必须是90，cloudflare_
         }
         this.hosts.add(host);
     }
-
 }

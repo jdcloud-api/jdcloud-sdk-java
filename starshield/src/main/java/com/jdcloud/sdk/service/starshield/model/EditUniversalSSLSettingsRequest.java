@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Universal SSL Settings for a Zone
+ * Universal-SSL-Settings-for-a-Zone
  * Universal SSL Settings for a Zone
  *
  * OpenAPI spec version: v1
@@ -56,6 +56,7 @@ public class EditUniversalSSLSettingsRequest extends JdcloudRequest implements j
     private String zone_identifier;
 
 
+
     /**
      * get 禁用通用SSL将从边缘上删除域的所有当前激活的通用SSL证书并且防止将来订购任何通用SSL证书。如果没有为域上载专用证书或自定义证书，访问者将无法通过HTTPS访问域。
 通过禁用通用SSL，您知道以下星盾设置和首选项将导致访问者无法访问您的域，除非您上载了自定义证书或购买了专用证书。
@@ -92,6 +93,7 @@ public class EditUniversalSSLSettingsRequest extends JdcloudRequest implements j
         this.enabled = enabled;
     }
 
+
     /**
      * get zone_identifier
      *
@@ -109,6 +111,7 @@ public class EditUniversalSSLSettingsRequest extends JdcloudRequest implements j
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
 
     /**
@@ -129,6 +132,7 @@ public class EditUniversalSSLSettingsRequest extends JdcloudRequest implements j
         this.enabled = enabled;
         return this;
     }
+
 
     /**
      * set zone_identifier

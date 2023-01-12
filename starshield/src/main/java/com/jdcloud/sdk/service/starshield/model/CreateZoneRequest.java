@@ -60,6 +60,7 @@ public class CreateZoneRequest extends JdcloudRequest implements java.io.Seriali
     private String ty_pe;
 
 
+
     /**
      * get 域名
      *
@@ -77,6 +78,7 @@ public class CreateZoneRequest extends JdcloudRequest implements java.io.Seriali
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get account
@@ -96,6 +98,7 @@ public class CreateZoneRequest extends JdcloudRequest implements java.io.Seriali
         this.account = account;
     }
 
+
     /**
      * get 自动尝试获取现有DNS记录
      *
@@ -113,6 +116,7 @@ public class CreateZoneRequest extends JdcloudRequest implements java.io.Seriali
     public void setJump_start(Boolean jump_start) {
         this.jump_start = jump_start;
     }
+
 
     /**
      * get 全接入域意味着DNS由星盾托管。半接入域通常是合作伙伴托管的域或CNAME设置。
@@ -133,6 +137,7 @@ public class CreateZoneRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 域名
      *
@@ -142,6 +147,7 @@ public class CreateZoneRequest extends JdcloudRequest implements java.io.Seriali
         this.name = name;
         return this;
     }
+
 
     /**
      * set account
@@ -153,6 +159,7 @@ public class CreateZoneRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 自动尝试获取现有DNS记录
      *
@@ -162,6 +169,7 @@ public class CreateZoneRequest extends JdcloudRequest implements java.io.Seriali
         this.jump_start = jump_start;
         return this;
     }
+
 
     /**
      * set 全接入域意味着DNS由星盾托管。半接入域通常是合作伙伴托管的域或CNAME设置。

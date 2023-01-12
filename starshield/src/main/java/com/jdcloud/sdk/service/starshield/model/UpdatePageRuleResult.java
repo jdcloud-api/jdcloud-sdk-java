@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Page Rules for a Zone
+ * Page-Rules-for-a-Zone
  * A rule describing target patterns for requests and actions to perform on matching requests
  *
  * OpenAPI spec version: v1
@@ -40,6 +40,7 @@ public class UpdatePageRuleResult extends JdcloudResult implements java.io.Seria
     private PageRule data;
 
 
+
     /**
      * get data
      *
@@ -57,6 +58,7 @@ public class UpdatePageRuleResult extends JdcloudResult implements java.io.Seria
     public void setData(PageRule data) {
         this.data = data;
     }
+
 
 
     /**

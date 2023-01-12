@@ -43,6 +43,7 @@ public class Account  implements java.io.Serializable {
     private String name;
 
 
+
     /**
      * get 帐户标识符标签
      *
@@ -60,6 +61,7 @@ public class Account  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get 帐户名
@@ -80,6 +82,7 @@ public class Account  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 帐户标识符标签
      *
@@ -89,6 +92,7 @@ public class Account  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 帐户名

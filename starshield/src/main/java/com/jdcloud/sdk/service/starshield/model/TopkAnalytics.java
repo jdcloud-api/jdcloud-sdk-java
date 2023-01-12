@@ -37,499 +37,530 @@ public class TopkAnalytics  implements java.io.Serializable {
     /**
      * countries
      */
+    
     private List<Item> countries;
-
     /**
      * topCountries
      */
+    
     private List<Item> topCountries;
-
     /**
      * topDeviceTypes
      */
+    
     private List<Item> topDeviceTypes;
-
     /**
      * topHosts
      */
+    
     private List<Item> topHosts;
-
     /**
      * topPaths
      */
+    
     private List<Item> topPaths;
-
     /**
      * topContentTypes
      */
+    
     private List<Item> topContentTypes;
-
     /**
      * topStatusCodes
      */
+    
     private List<Item> topStatusCodes;
-
     /**
      * topIPs
      */
+    
     private List<Item> topIPs;
-
     /**
      * topUserAgents
      */
+    
     private List<Item> topUserAgents;
-
     /**
      * topHttpMethods
      */
+    
     private List<Item> topHttpMethods;
-
     /**
      * topASNs
      */
+    
     private List<Item> topASNs;
-
     /**
      * topFirewallRuleIds
      */
+    
     private List<Item> topFirewallRuleIds;
-
     /**
      * topFirewallRules
      */
+    
     private List<Item> topFirewallRules;
-
     /**
      * topWafRuleIds
      */
+    
     private List<Item> topWafRuleIds;
-
     /**
      * topWafRules
      */
+    
     private List<Item> topWafRules;
 
 
     /**
-     * get countries
-     *
-     * @return
-     */
+    * get countries
+    *
+    * @return
+    */
     public List<Item> getCountries() {
         return countries;
     }
 
     /**
-     * set countries
-     *
-     * @param countries
-     */
+    * set countries
+    *
+    * @param countries
+    */
     public void setCountries(List<Item> countries) {
         this.countries = countries;
     }
 
+
     /**
-     * get topCountries
-     *
-     * @return
-     */
+    * get topCountries
+    *
+    * @return
+    */
     public List<Item> getTopCountries() {
         return topCountries;
     }
 
     /**
-     * set topCountries
-     *
-     * @param topCountries
-     */
+    * set topCountries
+    *
+    * @param topCountries
+    */
     public void setTopCountries(List<Item> topCountries) {
         this.topCountries = topCountries;
     }
 
+
     /**
-     * get topDeviceTypes
-     *
-     * @return
-     */
+    * get topDeviceTypes
+    *
+    * @return
+    */
     public List<Item> getTopDeviceTypes() {
         return topDeviceTypes;
     }
 
     /**
-     * set topDeviceTypes
-     *
-     * @param topDeviceTypes
-     */
+    * set topDeviceTypes
+    *
+    * @param topDeviceTypes
+    */
     public void setTopDeviceTypes(List<Item> topDeviceTypes) {
         this.topDeviceTypes = topDeviceTypes;
     }
 
+
     /**
-     * get topHosts
-     *
-     * @return
-     */
+    * get topHosts
+    *
+    * @return
+    */
     public List<Item> getTopHosts() {
         return topHosts;
     }
 
     /**
-     * set topHosts
-     *
-     * @param topHosts
-     */
+    * set topHosts
+    *
+    * @param topHosts
+    */
     public void setTopHosts(List<Item> topHosts) {
         this.topHosts = topHosts;
     }
 
+
     /**
-     * get topPaths
-     *
-     * @return
-     */
+    * get topPaths
+    *
+    * @return
+    */
     public List<Item> getTopPaths() {
         return topPaths;
     }
 
     /**
-     * set topPaths
-     *
-     * @param topPaths
-     */
+    * set topPaths
+    *
+    * @param topPaths
+    */
     public void setTopPaths(List<Item> topPaths) {
         this.topPaths = topPaths;
     }
 
+
     /**
-     * get topContentTypes
-     *
-     * @return
-     */
+    * get topContentTypes
+    *
+    * @return
+    */
     public List<Item> getTopContentTypes() {
         return topContentTypes;
     }
 
     /**
-     * set topContentTypes
-     *
-     * @param topContentTypes
-     */
+    * set topContentTypes
+    *
+    * @param topContentTypes
+    */
     public void setTopContentTypes(List<Item> topContentTypes) {
         this.topContentTypes = topContentTypes;
     }
 
+
     /**
-     * get topStatusCodes
-     *
-     * @return
-     */
+    * get topStatusCodes
+    *
+    * @return
+    */
     public List<Item> getTopStatusCodes() {
         return topStatusCodes;
     }
 
     /**
-     * set topStatusCodes
-     *
-     * @param topStatusCodes
-     */
+    * set topStatusCodes
+    *
+    * @param topStatusCodes
+    */
     public void setTopStatusCodes(List<Item> topStatusCodes) {
         this.topStatusCodes = topStatusCodes;
     }
 
+
     /**
-     * get topIPs
-     *
-     * @return
-     */
+    * get topIPs
+    *
+    * @return
+    */
     public List<Item> getTopIPs() {
         return topIPs;
     }
 
     /**
-     * set topIPs
-     *
-     * @param topIPs
-     */
+    * set topIPs
+    *
+    * @param topIPs
+    */
     public void setTopIPs(List<Item> topIPs) {
         this.topIPs = topIPs;
     }
 
+
     /**
-     * get topUserAgents
-     *
-     * @return
-     */
+    * get topUserAgents
+    *
+    * @return
+    */
     public List<Item> getTopUserAgents() {
         return topUserAgents;
     }
 
     /**
-     * set topUserAgents
-     *
-     * @param topUserAgents
-     */
+    * set topUserAgents
+    *
+    * @param topUserAgents
+    */
     public void setTopUserAgents(List<Item> topUserAgents) {
         this.topUserAgents = topUserAgents;
     }
 
+
     /**
-     * get topHttpMethods
-     *
-     * @return
-     */
+    * get topHttpMethods
+    *
+    * @return
+    */
     public List<Item> getTopHttpMethods() {
         return topHttpMethods;
     }
 
     /**
-     * set topHttpMethods
-     *
-     * @param topHttpMethods
-     */
+    * set topHttpMethods
+    *
+    * @param topHttpMethods
+    */
     public void setTopHttpMethods(List<Item> topHttpMethods) {
         this.topHttpMethods = topHttpMethods;
     }
 
+
     /**
-     * get topASNs
-     *
-     * @return
-     */
+    * get topASNs
+    *
+    * @return
+    */
     public List<Item> getTopASNs() {
         return topASNs;
     }
 
     /**
-     * set topASNs
-     *
-     * @param topASNs
-     */
+    * set topASNs
+    *
+    * @param topASNs
+    */
     public void setTopASNs(List<Item> topASNs) {
         this.topASNs = topASNs;
     }
 
+
     /**
-     * get topFirewallRuleIds
-     *
-     * @return
-     */
+    * get topFirewallRuleIds
+    *
+    * @return
+    */
     public List<Item> getTopFirewallRuleIds() {
         return topFirewallRuleIds;
     }
 
     /**
-     * set topFirewallRuleIds
-     *
-     * @param topFirewallRuleIds
-     */
+    * set topFirewallRuleIds
+    *
+    * @param topFirewallRuleIds
+    */
     public void setTopFirewallRuleIds(List<Item> topFirewallRuleIds) {
         this.topFirewallRuleIds = topFirewallRuleIds;
     }
 
+
     /**
-     * get topFirewallRules
-     *
-     * @return
-     */
+    * get topFirewallRules
+    *
+    * @return
+    */
     public List<Item> getTopFirewallRules() {
         return topFirewallRules;
     }
 
     /**
-     * set topFirewallRules
-     *
-     * @param topFirewallRules
-     */
+    * set topFirewallRules
+    *
+    * @param topFirewallRules
+    */
     public void setTopFirewallRules(List<Item> topFirewallRules) {
         this.topFirewallRules = topFirewallRules;
     }
 
+
     /**
-     * get topWafRuleIds
-     *
-     * @return
-     */
+    * get topWafRuleIds
+    *
+    * @return
+    */
     public List<Item> getTopWafRuleIds() {
         return topWafRuleIds;
     }
 
     /**
-     * set topWafRuleIds
-     *
-     * @param topWafRuleIds
-     */
+    * set topWafRuleIds
+    *
+    * @param topWafRuleIds
+    */
     public void setTopWafRuleIds(List<Item> topWafRuleIds) {
         this.topWafRuleIds = topWafRuleIds;
     }
 
+
     /**
-     * get topWafRules
-     *
-     * @return
-     */
+    * get topWafRules
+    *
+    * @return
+    */
     public List<Item> getTopWafRules() {
         return topWafRules;
     }
 
     /**
-     * set topWafRules
-     *
-     * @param topWafRules
-     */
+    * set topWafRules
+    *
+    * @param topWafRules
+    */
     public void setTopWafRules(List<Item> topWafRules) {
         this.topWafRules = topWafRules;
     }
 
 
+
     /**
-     * set countries
-     *
-     * @param countries
-     */
+    * set countries
+    *
+    * @param countries
+    */
     public TopkAnalytics countries(List<Item> countries) {
         this.countries = countries;
         return this;
     }
 
+
     /**
-     * set topCountries
-     *
-     * @param topCountries
-     */
+    * set topCountries
+    *
+    * @param topCountries
+    */
     public TopkAnalytics topCountries(List<Item> topCountries) {
         this.topCountries = topCountries;
         return this;
     }
 
+
     /**
-     * set topDeviceTypes
-     *
-     * @param topDeviceTypes
-     */
+    * set topDeviceTypes
+    *
+    * @param topDeviceTypes
+    */
     public TopkAnalytics topDeviceTypes(List<Item> topDeviceTypes) {
         this.topDeviceTypes = topDeviceTypes;
         return this;
     }
 
+
     /**
-     * set topHosts
-     *
-     * @param topHosts
-     */
+    * set topHosts
+    *
+    * @param topHosts
+    */
     public TopkAnalytics topHosts(List<Item> topHosts) {
         this.topHosts = topHosts;
         return this;
     }
 
+
     /**
-     * set topPaths
-     *
-     * @param topPaths
-     */
+    * set topPaths
+    *
+    * @param topPaths
+    */
     public TopkAnalytics topPaths(List<Item> topPaths) {
         this.topPaths = topPaths;
         return this;
     }
 
+
     /**
-     * set topContentTypes
-     *
-     * @param topContentTypes
-     */
+    * set topContentTypes
+    *
+    * @param topContentTypes
+    */
     public TopkAnalytics topContentTypes(List<Item> topContentTypes) {
         this.topContentTypes = topContentTypes;
         return this;
     }
 
+
     /**
-     * set topStatusCodes
-     *
-     * @param topStatusCodes
-     */
+    * set topStatusCodes
+    *
+    * @param topStatusCodes
+    */
     public TopkAnalytics topStatusCodes(List<Item> topStatusCodes) {
         this.topStatusCodes = topStatusCodes;
         return this;
     }
 
+
     /**
-     * set topIPs
-     *
-     * @param topIPs
-     */
+    * set topIPs
+    *
+    * @param topIPs
+    */
     public TopkAnalytics topIPs(List<Item> topIPs) {
         this.topIPs = topIPs;
         return this;
     }
 
+
     /**
-     * set topUserAgents
-     *
-     * @param topUserAgents
-     */
+    * set topUserAgents
+    *
+    * @param topUserAgents
+    */
     public TopkAnalytics topUserAgents(List<Item> topUserAgents) {
         this.topUserAgents = topUserAgents;
         return this;
     }
 
+
     /**
-     * set topHttpMethods
-     *
-     * @param topHttpMethods
-     */
+    * set topHttpMethods
+    *
+    * @param topHttpMethods
+    */
     public TopkAnalytics topHttpMethods(List<Item> topHttpMethods) {
         this.topHttpMethods = topHttpMethods;
         return this;
     }
 
+
     /**
-     * set topASNs
-     *
-     * @param topASNs
-     */
+    * set topASNs
+    *
+    * @param topASNs
+    */
     public TopkAnalytics topASNs(List<Item> topASNs) {
         this.topASNs = topASNs;
         return this;
     }
 
+
     /**
-     * set topFirewallRuleIds
-     *
-     * @param topFirewallRuleIds
-     */
+    * set topFirewallRuleIds
+    *
+    * @param topFirewallRuleIds
+    */
     public TopkAnalytics topFirewallRuleIds(List<Item> topFirewallRuleIds) {
         this.topFirewallRuleIds = topFirewallRuleIds;
         return this;
     }
 
+
     /**
-     * set topFirewallRules
-     *
-     * @param topFirewallRules
-     */
+    * set topFirewallRules
+    *
+    * @param topFirewallRules
+    */
     public TopkAnalytics topFirewallRules(List<Item> topFirewallRules) {
         this.topFirewallRules = topFirewallRules;
         return this;
     }
 
+
     /**
-     * set topWafRuleIds
-     *
-     * @param topWafRuleIds
-     */
+    * set topWafRuleIds
+    *
+    * @param topWafRuleIds
+    */
     public TopkAnalytics topWafRuleIds(List<Item> topWafRuleIds) {
         this.topWafRuleIds = topWafRuleIds;
         return this;
     }
 
+
     /**
-     * set topWafRules
-     *
-     * @param topWafRules
-     */
+    * set topWafRules
+    *
+    * @param topWafRules
+    */
     public TopkAnalytics topWafRules(List<Item> topWafRules) {
         this.topWafRules = topWafRules;
         return this;
     }
+
 
 
     /**
@@ -711,5 +742,4 @@ public class TopkAnalytics  implements java.io.Serializable {
         }
         this.topWafRules.add(topWafRule);
     }
-
 }

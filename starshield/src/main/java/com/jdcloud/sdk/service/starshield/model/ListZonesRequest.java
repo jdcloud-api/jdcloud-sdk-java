@@ -79,6 +79,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
     private String direction;
 
 
+
     /**
      * get 是否匹配所有搜索要求或至少一个（任何）
      *
@@ -96,6 +97,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
     public void setMatch(String match) {
         this.match = match;
     }
+
 
     /**
      * get 域名
@@ -115,6 +117,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
         this.name = name;
     }
 
+
     /**
      * get 帐户名
      *
@@ -132,6 +135,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
     public void set__account__name(String __account__name) {
         this.__account__name = __account__name;
     }
+
 
     /**
      * get 按字段对域进行排序
@@ -151,6 +155,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
         this.order = order;
     }
 
+
     /**
      * get 分页结果的页码
      *
@@ -168,6 +173,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
     public void setPage(Number page) {
         this.page = page;
     }
+
 
     /**
      * get 每页的域数
@@ -187,6 +193,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
         this.per_page = per_page;
     }
 
+
     /**
      * get 域的状态
      *
@@ -205,6 +212,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
         this.status = status;
     }
 
+
     /**
      * get 帐户标识符标签
      *
@@ -222,6 +230,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
     public void set__account__id(String __account__id) {
         this.__account__id = __account__id;
     }
+
 
     /**
      * get asc - 升序；desc - 降序
@@ -242,6 +251,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set 是否匹配所有搜索要求或至少一个（任何）
      *
@@ -251,6 +261,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
         this.match = match;
         return this;
     }
+
 
     /**
      * set 域名
@@ -262,6 +273,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 帐户名
      *
@@ -271,6 +283,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
         this.__account__name = __account__name;
         return this;
     }
+
 
     /**
      * set 按字段对域进行排序
@@ -282,6 +295,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 分页结果的页码
      *
@@ -291,6 +305,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
         this.page = page;
         return this;
     }
+
 
     /**
      * set 每页的域数
@@ -302,6 +317,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 域的状态
      *
@@ -312,6 +328,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 帐户标识符标签
      *
@@ -321,6 +338,7 @@ public class ListZonesRequest extends JdcloudRequest implements java.io.Serializ
         this.__account__id = __account__id;
         return this;
     }
+
 
     /**
      * set asc - 升序；desc - 降序

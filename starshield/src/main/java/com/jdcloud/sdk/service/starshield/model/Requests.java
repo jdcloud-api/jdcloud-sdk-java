@@ -38,6 +38,7 @@ public class Requests  implements java.io.Serializable {
     private Number all;
 
 
+
     /**
      * get Total number of requests served
      *
@@ -55,6 +56,7 @@ public class Requests  implements java.io.Serializable {
     public void setAll(Number all) {
         this.all = all;
     }
+
 
 
     /**

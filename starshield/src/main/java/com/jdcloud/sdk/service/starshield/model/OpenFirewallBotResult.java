@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Firewall rules
+ * Firewall-rules
  * Define Firewall rules using filter expressions for more control over how traffic is matched to the rule.
  *
  * OpenAPI spec version: v1
@@ -39,6 +39,7 @@ public class OpenFirewallBotResult extends JdcloudResult implements java.io.Seri
     private Boolean success;
 
 
+
     /**
      * get 操作是否成功
      *
@@ -56,6 +57,7 @@ public class OpenFirewallBotResult extends JdcloudResult implements java.io.Seri
     public void setSuccess(Boolean success) {
         this.success = success;
     }
+
 
 
     /**

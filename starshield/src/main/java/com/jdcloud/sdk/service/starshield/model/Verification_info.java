@@ -78,6 +78,7 @@ public class Verification_info  implements java.io.Serializable {
     private String txt_value;
 
 
+
     /**
      * get Name of CNAME record
      *
@@ -95,6 +96,7 @@ public class Verification_info  implements java.io.Serializable {
     public void setRecord_name(String record_name) {
         this.record_name = record_name;
     }
+
 
     /**
      * get Target of CNAME record
@@ -114,6 +116,7 @@ public class Verification_info  implements java.io.Serializable {
         this.record_target = record_target;
     }
 
+
     /**
      * get record_value
      *
@@ -131,6 +134,7 @@ public class Verification_info  implements java.io.Serializable {
     public void setRecord_value(String record_value) {
         this.record_value = record_value;
     }
+
 
     /**
      * get http_url
@@ -150,6 +154,7 @@ public class Verification_info  implements java.io.Serializable {
         this.http_url = http_url;
     }
 
+
     /**
      * get http_body
      *
@@ -167,6 +172,7 @@ public class Verification_info  implements java.io.Serializable {
     public void setHttp_body(String http_body) {
         this.http_body = http_body;
     }
+
 
     /**
      * get cname
@@ -186,6 +192,7 @@ public class Verification_info  implements java.io.Serializable {
         this.cname = cname;
     }
 
+
     /**
      * get cname_target
      *
@@ -204,6 +211,7 @@ public class Verification_info  implements java.io.Serializable {
         this.cname_target = cname_target;
     }
 
+
     /**
      * get txt_name
      *
@@ -221,6 +229,7 @@ public class Verification_info  implements java.io.Serializable {
     public void setTxt_name(String txt_name) {
         this.txt_name = txt_name;
     }
+
 
     /**
      * get txt_value
@@ -241,6 +250,7 @@ public class Verification_info  implements java.io.Serializable {
     }
 
 
+
     /**
      * set Name of CNAME record
      *
@@ -250,6 +260,7 @@ public class Verification_info  implements java.io.Serializable {
         this.record_name = record_name;
         return this;
     }
+
 
     /**
      * set Target of CNAME record
@@ -261,6 +272,7 @@ public class Verification_info  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set record_value
      *
@@ -270,6 +282,7 @@ public class Verification_info  implements java.io.Serializable {
         this.record_value = record_value;
         return this;
     }
+
 
     /**
      * set http_url
@@ -281,6 +294,7 @@ public class Verification_info  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set http_body
      *
@@ -290,6 +304,7 @@ public class Verification_info  implements java.io.Serializable {
         this.http_body = http_body;
         return this;
     }
+
 
     /**
      * set cname
@@ -301,6 +316,7 @@ public class Verification_info  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cname_target
      *
@@ -311,6 +327,7 @@ public class Verification_info  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set txt_name
      *
@@ -320,6 +337,7 @@ public class Verification_info  implements java.io.Serializable {
         this.txt_name = txt_name;
         return this;
     }
+
 
     /**
      * set txt_value

@@ -47,6 +47,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     private Integer priority;
 
 
+
     /**
      * get API item identifier tag
      *
@@ -64,6 +65,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get A number that indicates the preference for a page rule over another.
@@ -92,6 +94,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
 
+
     /**
      * set API item identifier tag
      *
@@ -101,6 +104,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
         this.id = id;
         return this;
     }
+
 
     /**
      * set A number that indicates the preference for a page rule over another.

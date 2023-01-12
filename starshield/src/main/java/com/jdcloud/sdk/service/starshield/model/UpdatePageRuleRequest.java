@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Page Rules for a Zone
+ * Page-Rules-for-a-Zone
  * A rule describing target patterns for requests and actions to perform on matching requests
  *
  * OpenAPI spec version: v1
@@ -39,13 +39,13 @@ public class UpdatePageRuleRequest extends JdcloudRequest implements java.io.Ser
     /**
      * 根据请求评估的目标
      */
+    
     private List<Target> targets;
-
     /**
      * 如果此规则的目标与请求匹配，则要执行的操作集。操作可以将url重定向到另一个url或覆盖设置（但不能同时覆盖两者）
      */
+    
     private List<Action> actions;
-
     /**
      * 一个数字，表示一个页面规则优先于另一个页面规则。
 如果您可能有一个全面的页面规则（例如#1 “/images/”）
@@ -75,41 +75,44 @@ public class UpdatePageRuleRequest extends JdcloudRequest implements java.io.Ser
     private String identifier;
 
 
+
     /**
-     * get 根据请求评估的目标
-     *
-     * @return
-     */
+    * get 根据请求评估的目标
+    *
+    * @return
+    */
     public List<Target> getTargets() {
         return targets;
     }
 
     /**
-     * set 根据请求评估的目标
-     *
-     * @param targets
-     */
+    * set 根据请求评估的目标
+    *
+    * @param targets
+    */
     public void setTargets(List<Target> targets) {
         this.targets = targets;
     }
 
+
     /**
-     * get 如果此规则的目标与请求匹配，则要执行的操作集。操作可以将url重定向到另一个url或覆盖设置（但不能同时覆盖两者）
-     *
-     * @return
-     */
+    * get 如果此规则的目标与请求匹配，则要执行的操作集。操作可以将url重定向到另一个url或覆盖设置（但不能同时覆盖两者）
+    *
+    * @return
+    */
     public List<Action> getActions() {
         return actions;
     }
 
     /**
-     * set 如果此规则的目标与请求匹配，则要执行的操作集。操作可以将url重定向到另一个url或覆盖设置（但不能同时覆盖两者）
-     *
-     * @param actions
-     */
+    * set 如果此规则的目标与请求匹配，则要执行的操作集。操作可以将url重定向到另一个url或覆盖设置（但不能同时覆盖两者）
+    *
+    * @param actions
+    */
     public void setActions(List<Action> actions) {
         this.actions = actions;
     }
+
 
     /**
      * get 一个数字，表示一个页面规则优先于另一个页面规则。
@@ -137,6 +140,7 @@ public class UpdatePageRuleRequest extends JdcloudRequest implements java.io.Ser
         this.priority = priority;
     }
 
+
     /**
      * get 页面规则的状态
      *
@@ -155,6 +159,7 @@ public class UpdatePageRuleRequest extends JdcloudRequest implements java.io.Ser
         this.status = status;
     }
 
+
     /**
      * get zone_identifier
      *
@@ -172,6 +177,7 @@ public class UpdatePageRuleRequest extends JdcloudRequest implements java.io.Ser
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
     /**
      * get identifier
@@ -192,25 +198,28 @@ public class UpdatePageRuleRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
-     * set 根据请求评估的目标
-     *
-     * @param targets
-     */
+    * set 根据请求评估的目标
+    *
+    * @param targets
+    */
     public UpdatePageRuleRequest targets(List<Target> targets) {
         this.targets = targets;
         return this;
     }
 
+
     /**
-     * set 如果此规则的目标与请求匹配，则要执行的操作集。操作可以将url重定向到另一个url或覆盖设置（但不能同时覆盖两者）
-     *
-     * @param actions
-     */
+    * set 如果此规则的目标与请求匹配，则要执行的操作集。操作可以将url重定向到另一个url或覆盖设置（但不能同时覆盖两者）
+    *
+    * @param actions
+    */
     public UpdatePageRuleRequest actions(List<Action> actions) {
         this.actions = actions;
         return this;
     }
+
 
     /**
      * set 一个数字，表示一个页面规则优先于另一个页面规则。
@@ -226,6 +235,7 @@ public class UpdatePageRuleRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 页面规则的状态
      *
@@ -235,6 +245,7 @@ public class UpdatePageRuleRequest extends JdcloudRequest implements java.io.Ser
         this.status = status;
         return this;
     }
+
 
     /**
      * set zone_identifier
@@ -246,6 +257,7 @@ public class UpdatePageRuleRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set identifier
      *
@@ -255,6 +267,7 @@ public class UpdatePageRuleRequest extends JdcloudRequest implements java.io.Ser
         this.identifier = identifier;
         return this;
     }
+
 
 
     /**
@@ -280,5 +293,4 @@ public class UpdatePageRuleRequest extends JdcloudRequest implements java.io.Ser
         }
         this.actions.add(action);
     }
-
 }

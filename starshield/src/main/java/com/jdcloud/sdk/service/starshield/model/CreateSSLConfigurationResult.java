@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Custom SSL for a Zone
+ * Custom-SSL-for-a-Zone
  * Custom SSL certificate for a zone
  *
  * OpenAPI spec version: v1
@@ -40,6 +40,7 @@ public class CreateSSLConfigurationResult extends JdcloudResult implements java.
     private CustomSSL data;
 
 
+
     /**
      * get data
      *
@@ -57,6 +58,7 @@ public class CreateSSLConfigurationResult extends JdcloudResult implements java.
     public void setData(CustomSSL data) {
         this.data = data;
     }
+
 
 
     /**

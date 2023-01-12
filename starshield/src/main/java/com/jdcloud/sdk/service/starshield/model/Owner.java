@@ -43,6 +43,7 @@ public class Owner  implements java.io.Serializable {
     private Organization_owner organization_owner;
 
 
+
     /**
      * get user_owner
      *
@@ -60,6 +61,7 @@ public class Owner  implements java.io.Serializable {
     public void setUser_owner(User_owner user_owner) {
         this.user_owner = user_owner;
     }
+
 
     /**
      * get organization_owner
@@ -80,6 +82,7 @@ public class Owner  implements java.io.Serializable {
     }
 
 
+
     /**
      * set user_owner
      *
@@ -89,6 +92,7 @@ public class Owner  implements java.io.Serializable {
         this.user_owner = user_owner;
         return this;
     }
+
 
     /**
      * set organization_owner

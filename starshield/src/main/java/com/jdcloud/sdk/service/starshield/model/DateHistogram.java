@@ -35,28 +35,36 @@ public class DateHistogram  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * name
+     * 项的名称
      */
     private String name;
 
     /**
-     * timeseries
-     */
-    private List<Number> timeseries;
+     * 数据点集合。
+如果是带宽，数据点的单位是bps（bit per second）
+如果是流量，数据点的单位是Byte
+如果是请求量，数据点的单位是次数
 
+     */
+    
+    private List<Number> timeseries;
     /**
      * unit
      */
     private String unit;
 
     /**
-     * total
+     * 如果是带宽，它的单位是bps（bit per second），代表数据点中的最大值。
+如果是流量，它的单位是Byte，代表数据点流量之和。
+如果是请求量，它的单位是次数，代表数据点请求量之和。
+
      */
     private Number total;
 
 
+
     /**
-     * get name
+     * get 项的名称
      *
      * @return
      */
@@ -65,7 +73,7 @@ public class DateHistogram  implements java.io.Serializable {
     }
 
     /**
-     * set name
+     * set 项的名称
      *
      * @param name
      */
@@ -73,23 +81,33 @@ public class DateHistogram  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
-     * get timeseries
-     *
-     * @return
-     */
+    * get 数据点集合。
+如果是带宽，数据点的单位是bps（bit per second）
+如果是流量，数据点的单位是Byte
+如果是请求量，数据点的单位是次数
+
+    *
+    * @return
+    */
     public List<Number> getTimeseries() {
         return timeseries;
     }
 
     /**
-     * set timeseries
-     *
-     * @param timeseries
-     */
+    * set 数据点集合。
+如果是带宽，数据点的单位是bps（bit per second）
+如果是流量，数据点的单位是Byte
+如果是请求量，数据点的单位是次数
+
+    *
+    * @param timeseries
+    */
     public void setTimeseries(List<Number> timeseries) {
         this.timeseries = timeseries;
     }
+
 
     /**
      * get unit
@@ -109,8 +127,12 @@ public class DateHistogram  implements java.io.Serializable {
         this.unit = unit;
     }
 
+
     /**
-     * get total
+     * get 如果是带宽，它的单位是bps（bit per second），代表数据点中的最大值。
+如果是流量，它的单位是Byte，代表数据点流量之和。
+如果是请求量，它的单位是次数，代表数据点请求量之和。
+
      *
      * @return
      */
@@ -119,7 +141,10 @@ public class DateHistogram  implements java.io.Serializable {
     }
 
     /**
-     * set total
+     * set 如果是带宽，它的单位是bps（bit per second），代表数据点中的最大值。
+如果是流量，它的单位是Byte，代表数据点流量之和。
+如果是请求量，它的单位是次数，代表数据点请求量之和。
+
      *
      * @param total
      */
@@ -128,8 +153,9 @@ public class DateHistogram  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set name
+     * set 项的名称
      *
      * @param name
      */
@@ -138,15 +164,21 @@ public class DateHistogram  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set timeseries
-     *
-     * @param timeseries
-     */
+    * set 数据点集合。
+如果是带宽，数据点的单位是bps（bit per second）
+如果是流量，数据点的单位是Byte
+如果是请求量，数据点的单位是次数
+
+    *
+    * @param timeseries
+    */
     public DateHistogram timeseries(List<Number> timeseries) {
         this.timeseries = timeseries;
         return this;
     }
+
 
     /**
      * set unit
@@ -158,8 +190,12 @@ public class DateHistogram  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set total
+     * set 如果是带宽，它的单位是bps（bit per second），代表数据点中的最大值。
+如果是流量，它的单位是Byte，代表数据点流量之和。
+如果是请求量，它的单位是次数，代表数据点请求量之和。
+
      *
      * @param total
      */
@@ -169,8 +205,13 @@ public class DateHistogram  implements java.io.Serializable {
     }
 
 
+
     /**
-     * add item to timeseries
+     * add item to 数据点集合。
+如果是带宽，数据点的单位是bps（bit per second）
+如果是流量，数据点的单位是Byte
+如果是请求量，数据点的单位是次数
+
      *
      * @param timeserie
      */
@@ -180,5 +221,4 @@ public class DateHistogram  implements java.io.Serializable {
         }
         this.timeseries.add(timeserie);
     }
-
 }

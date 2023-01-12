@@ -43,6 +43,7 @@ public class Constraint  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get operator
      *
@@ -60,6 +61,7 @@ public class Constraint  implements java.io.Serializable {
     public void setOperator(String operator) {
         this.operator = operator;
     }
+
 
     /**
      * get value
@@ -80,6 +82,7 @@ public class Constraint  implements java.io.Serializable {
     }
 
 
+
     /**
      * set operator
      *
@@ -89,6 +92,7 @@ public class Constraint  implements java.io.Serializable {
         this.operator = operator;
         return this;
     }
+
 
     /**
      * set value

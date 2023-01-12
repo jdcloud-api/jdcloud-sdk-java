@@ -218,6 +218,7 @@ public class Data  implements java.io.Serializable {
     private String content;
 
 
+
     /**
      * get 位置的大小（米）
      *
@@ -235,6 +236,7 @@ public class Data  implements java.io.Serializable {
     public void setSize(Number size) {
         this.size = size;
     }
+
 
     /**
      * get 位置高度（米）
@@ -254,6 +256,7 @@ public class Data  implements java.io.Serializable {
         this.altitude = altitude;
     }
 
+
     /**
      * get 经度
      *
@@ -271,6 +274,7 @@ public class Data  implements java.io.Serializable {
     public void setLong_degrees(Number long_degrees) {
         this.long_degrees = long_degrees;
     }
+
 
     /**
      * get 纬度
@@ -290,6 +294,7 @@ public class Data  implements java.io.Serializable {
         this.lat_degrees = lat_degrees;
     }
 
+
     /**
      * get 水平定位精度
      *
@@ -307,6 +312,7 @@ public class Data  implements java.io.Serializable {
     public void setPrecision_horz(Number precision_horz) {
         this.precision_horz = precision_horz;
     }
+
 
     /**
      * get 垂直定位精度
@@ -326,6 +332,7 @@ public class Data  implements java.io.Serializable {
         this.precision_vert = precision_vert;
     }
 
+
     /**
      * get 经度方向
      *
@@ -343,6 +350,7 @@ public class Data  implements java.io.Serializable {
     public void setLong_direction(String long_direction) {
         this.long_direction = long_direction;
     }
+
 
     /**
      * get 经度分
@@ -362,6 +370,7 @@ public class Data  implements java.io.Serializable {
         this.long_minutes = long_minutes;
     }
 
+
     /**
      * get 经度秒
      *
@@ -379,6 +388,7 @@ public class Data  implements java.io.Serializable {
     public void setLong_seconds(Number long_seconds) {
         this.long_seconds = long_seconds;
     }
+
 
     /**
      * get 纬度方向
@@ -398,6 +408,7 @@ public class Data  implements java.io.Serializable {
         this.lat_direction = lat_direction;
     }
 
+
     /**
      * get 纬度分
      *
@@ -415,6 +426,7 @@ public class Data  implements java.io.Serializable {
     public void setLat_minutes(Number lat_minutes) {
         this.lat_minutes = lat_minutes;
     }
+
 
     /**
      * get 纬度秒
@@ -434,6 +446,7 @@ public class Data  implements java.io.Serializable {
         this.lat_seconds = lat_seconds;
     }
 
+
     /**
      * get 以下划线为前缀的服务类型
      *
@@ -451,6 +464,7 @@ public class Data  implements java.io.Serializable {
     public void setService(String service) {
         this.service = service;
     }
+
 
     /**
      * get 有效的协议
@@ -470,6 +484,7 @@ public class Data  implements java.io.Serializable {
         this.proto = proto;
     }
 
+
     /**
      * get 有效的主机名
      *
@@ -487,6 +502,7 @@ public class Data  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
@@ -506,6 +522,7 @@ public class Data  implements java.io.Serializable {
         this.priority = priority;
     }
 
+
     /**
      * get 记录的权重
      *
@@ -523,6 +540,7 @@ public class Data  implements java.io.Serializable {
     public void setWeight(Number weight) {
         this.weight = weight;
     }
+
 
     /**
      * get 服务的端口
@@ -542,6 +560,7 @@ public class Data  implements java.io.Serializable {
         this.port = port;
     }
 
+
     /**
      * get 有效的主机名
      *
@@ -559,6 +578,7 @@ public class Data  implements java.io.Serializable {
     public void setTarget(String target) {
         this.target = target;
     }
+
 
     /**
      * get 类型
@@ -578,6 +598,7 @@ public class Data  implements java.io.Serializable {
         this.ty_pe = ty_pe;
     }
 
+
     /**
      * get Key Tag
      *
@@ -595,6 +616,7 @@ public class Data  implements java.io.Serializable {
     public void setKey_tag(Number key_tag) {
         this.key_tag = key_tag;
     }
+
 
     /**
      * get Algorithm
@@ -614,6 +636,7 @@ public class Data  implements java.io.Serializable {
         this.algorithm = algorithm;
     }
 
+
     /**
      * get 证书
      *
@@ -631,6 +654,7 @@ public class Data  implements java.io.Serializable {
     public void setCertificate(String certificate) {
         this.certificate = certificate;
     }
+
 
     /**
      * get Flags
@@ -650,6 +674,7 @@ public class Data  implements java.io.Serializable {
         this.flags = flags;
     }
 
+
     /**
      * get 协议
      *
@@ -667,6 +692,7 @@ public class Data  implements java.io.Serializable {
     public void setProtocol(Number protocol) {
         this.protocol = protocol;
     }
+
 
     /**
      * get 公钥
@@ -686,6 +712,7 @@ public class Data  implements java.io.Serializable {
         this.public_key = public_key;
     }
 
+
     /**
      * get 摘要类型
      *
@@ -703,6 +730,7 @@ public class Data  implements java.io.Serializable {
     public void setDigest_type(Number digest_type) {
         this.digest_type = digest_type;
     }
+
 
     /**
      * get 摘要
@@ -722,6 +750,7 @@ public class Data  implements java.io.Serializable {
         this.digest = digest;
     }
 
+
     /**
      * get Order
      *
@@ -739,6 +768,7 @@ public class Data  implements java.io.Serializable {
     public void setOrder(Number order) {
         this.order = order;
     }
+
 
     /**
      * get Preference
@@ -758,6 +788,7 @@ public class Data  implements java.io.Serializable {
         this.preference = preference;
     }
 
+
     /**
      * get Regex
      *
@@ -775,6 +806,7 @@ public class Data  implements java.io.Serializable {
     public void setRegex(String regex) {
         this.regex = regex;
     }
+
 
     /**
      * get Replacement
@@ -794,6 +826,7 @@ public class Data  implements java.io.Serializable {
         this.replacement = replacement;
     }
 
+
     /**
      * get Usage
      *
@@ -811,6 +844,7 @@ public class Data  implements java.io.Serializable {
     public void setUsage(Number usage) {
         this.usage = usage;
     }
+
 
     /**
      * get Selector
@@ -830,6 +864,7 @@ public class Data  implements java.io.Serializable {
         this.selector = selector;
     }
 
+
     /**
      * get Matching Type
      *
@@ -848,6 +883,7 @@ public class Data  implements java.io.Serializable {
         this.matching_type = matching_type;
     }
 
+
     /**
      * get 指纹
      *
@@ -865,6 +901,7 @@ public class Data  implements java.io.Serializable {
     public void setFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
     }
+
 
     /**
      * get 记录内容
@@ -885,6 +922,7 @@ public class Data  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 位置的大小（米）
      *
@@ -894,6 +932,7 @@ public class Data  implements java.io.Serializable {
         this.size = size;
         return this;
     }
+
 
     /**
      * set 位置高度（米）
@@ -905,6 +944,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 经度
      *
@@ -914,6 +954,7 @@ public class Data  implements java.io.Serializable {
         this.long_degrees = long_degrees;
         return this;
     }
+
 
     /**
      * set 纬度
@@ -925,6 +966,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 水平定位精度
      *
@@ -934,6 +976,7 @@ public class Data  implements java.io.Serializable {
         this.precision_horz = precision_horz;
         return this;
     }
+
 
     /**
      * set 垂直定位精度
@@ -945,6 +988,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 经度方向
      *
@@ -954,6 +998,7 @@ public class Data  implements java.io.Serializable {
         this.long_direction = long_direction;
         return this;
     }
+
 
     /**
      * set 经度分
@@ -965,6 +1010,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 经度秒
      *
@@ -974,6 +1020,7 @@ public class Data  implements java.io.Serializable {
         this.long_seconds = long_seconds;
         return this;
     }
+
 
     /**
      * set 纬度方向
@@ -985,6 +1032,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 纬度分
      *
@@ -994,6 +1042,7 @@ public class Data  implements java.io.Serializable {
         this.lat_minutes = lat_minutes;
         return this;
     }
+
 
     /**
      * set 纬度秒
@@ -1005,6 +1054,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 以下划线为前缀的服务类型
      *
@@ -1014,6 +1064,7 @@ public class Data  implements java.io.Serializable {
         this.service = service;
         return this;
     }
+
 
     /**
      * set 有效的协议
@@ -1025,6 +1076,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 有效的主机名
      *
@@ -1034,6 +1086,7 @@ public class Data  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
@@ -1045,6 +1098,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 记录的权重
      *
@@ -1054,6 +1108,7 @@ public class Data  implements java.io.Serializable {
         this.weight = weight;
         return this;
     }
+
 
     /**
      * set 服务的端口
@@ -1065,6 +1120,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 有效的主机名
      *
@@ -1074,6 +1130,7 @@ public class Data  implements java.io.Serializable {
         this.target = target;
         return this;
     }
+
 
     /**
      * set 类型
@@ -1085,6 +1142,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Key Tag
      *
@@ -1094,6 +1152,7 @@ public class Data  implements java.io.Serializable {
         this.key_tag = key_tag;
         return this;
     }
+
 
     /**
      * set Algorithm
@@ -1105,6 +1164,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 证书
      *
@@ -1114,6 +1174,7 @@ public class Data  implements java.io.Serializable {
         this.certificate = certificate;
         return this;
     }
+
 
     /**
      * set Flags
@@ -1125,6 +1186,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 协议
      *
@@ -1134,6 +1196,7 @@ public class Data  implements java.io.Serializable {
         this.protocol = protocol;
         return this;
     }
+
 
     /**
      * set 公钥
@@ -1145,6 +1208,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 摘要类型
      *
@@ -1154,6 +1218,7 @@ public class Data  implements java.io.Serializable {
         this.digest_type = digest_type;
         return this;
     }
+
 
     /**
      * set 摘要
@@ -1165,6 +1230,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Order
      *
@@ -1174,6 +1240,7 @@ public class Data  implements java.io.Serializable {
         this.order = order;
         return this;
     }
+
 
     /**
      * set Preference
@@ -1185,6 +1252,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Regex
      *
@@ -1194,6 +1262,7 @@ public class Data  implements java.io.Serializable {
         this.regex = regex;
         return this;
     }
+
 
     /**
      * set Replacement
@@ -1205,6 +1274,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Usage
      *
@@ -1214,6 +1284,7 @@ public class Data  implements java.io.Serializable {
         this.usage = usage;
         return this;
     }
+
 
     /**
      * set Selector
@@ -1225,6 +1296,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Matching Type
      *
@@ -1235,6 +1307,7 @@ public class Data  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 指纹
      *
@@ -1244,6 +1317,7 @@ public class Data  implements java.io.Serializable {
         this.fingerprint = fingerprint;
         return this;
     }
+
 
     /**
      * set 记录内容

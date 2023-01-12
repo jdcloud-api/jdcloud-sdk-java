@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Zone Settings
+ * Zone-Settings
  * A Zone setting changes how the Zone works in relation to caching, security, or other features of JDC StarShield
  *
  * OpenAPI spec version: v1
@@ -42,6 +42,7 @@ public class GetAllZoneSettingsRequest extends JdcloudRequest implements java.io
     private String zone_identifier;
 
 
+
     /**
      * get zone_identifier
      *
@@ -59,6 +60,7 @@ public class GetAllZoneSettingsRequest extends JdcloudRequest implements java.io
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
 
     /**

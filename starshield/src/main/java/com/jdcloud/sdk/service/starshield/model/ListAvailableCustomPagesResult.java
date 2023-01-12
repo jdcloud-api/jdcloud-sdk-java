@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Custom Pages for a Zone
+ * Custom-Pages-for-a-Zone
  * Custom pages associated with a zone
  *
  * OpenAPI spec version: v1
@@ -39,37 +39,40 @@ public class ListAvailableCustomPagesResult extends JdcloudResult implements jav
     /**
      * dataList
      */
+    
     private List<CustomPage> dataList;
 
 
     /**
-     * get dataList
-     *
-     * @return
-     */
+    * get dataList
+    *
+    * @return
+    */
     public List<CustomPage> getDataList() {
         return dataList;
     }
 
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public void setDataList(List<CustomPage> dataList) {
         this.dataList = dataList;
     }
 
 
+
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public ListAvailableCustomPagesResult dataList(List<CustomPage> dataList) {
         this.dataList = dataList;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class ListAvailableCustomPagesResult extends JdcloudResult implements jav
         }
         this.dataList.add(dataList);
     }
-
 }

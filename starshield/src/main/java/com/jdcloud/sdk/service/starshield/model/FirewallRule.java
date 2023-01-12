@@ -37,8 +37,8 @@ public class FirewallRule  implements java.io.Serializable {
     /**
      * products
      */
+    
     private List<String> products;
-
     /**
      * 规则的优先级，允许控制处理顺序。一个较小的数字表示高优先级。如果不提供，任何有优先权的规则将在没有优先权的规则之前排序。
      */
@@ -60,7 +60,13 @@ public class FirewallRule  implements java.io.Serializable {
     private Action_parameters action_parameters;
 
     /**
-     * 应用于匹配请求的行动。注意，行动 &quot;log &quot;只适用于企业客户。
+     * 对匹配到的请求采取的措施。有效值：js_challenge/block/challenge/allow/bypass
+js_challenge表示Js挑战
+block表示阻止
+challenge表示验证码
+allow表示允许
+bypass表示绕过
+
      */
     private String action;
 
@@ -80,23 +86,25 @@ public class FirewallRule  implements java.io.Serializable {
     private String description;
 
 
+
     /**
-     * get products
-     *
-     * @return
-     */
+    * get products
+    *
+    * @return
+    */
     public List<String> getProducts() {
         return products;
     }
 
     /**
-     * set products
-     *
-     * @param products
-     */
+    * set products
+    *
+    * @param products
+    */
     public void setProducts(List<String> products) {
         this.products = products;
     }
+
 
     /**
      * get 规则的优先级，允许控制处理顺序。一个较小的数字表示高优先级。如果不提供，任何有优先权的规则将在没有优先权的规则之前排序。
@@ -116,6 +124,7 @@ public class FirewallRule  implements java.io.Serializable {
         this.priority = priority;
     }
 
+
     /**
      * get 此防火墙规则当前是否已暂停。
      *
@@ -133,6 +142,7 @@ public class FirewallRule  implements java.io.Serializable {
     public void setPaused(Boolean paused) {
         this.paused = paused;
     }
+
 
     /**
      * get 短引用标记，用于快速选择相关规则。
@@ -152,6 +162,7 @@ public class FirewallRule  implements java.io.Serializable {
         this.ref = ref;
     }
 
+
     /**
      * get action_parameters
      *
@@ -170,8 +181,15 @@ public class FirewallRule  implements java.io.Serializable {
         this.action_parameters = action_parameters;
     }
 
+
     /**
-     * get 应用于匹配请求的行动。注意，行动 &quot;log &quot;只适用于企业客户。
+     * get 对匹配到的请求采取的措施。有效值：js_challenge/block/challenge/allow/bypass
+js_challenge表示Js挑战
+block表示阻止
+challenge表示验证码
+allow表示允许
+bypass表示绕过
+
      *
      * @return
      */
@@ -180,13 +198,20 @@ public class FirewallRule  implements java.io.Serializable {
     }
 
     /**
-     * set 应用于匹配请求的行动。注意，行动 &quot;log &quot;只适用于企业客户。
+     * set 对匹配到的请求采取的措施。有效值：js_challenge/block/challenge/allow/bypass
+js_challenge表示Js挑战
+block表示阻止
+challenge表示验证码
+allow表示允许
+bypass表示绕过
+
      *
      * @param action
      */
     public void setAction(String action) {
         this.action = action;
     }
+
 
     /**
      * get filter
@@ -206,6 +231,7 @@ public class FirewallRule  implements java.io.Serializable {
         this.filter = filter;
     }
 
+
     /**
      * get 防火墙规则标识符
      *
@@ -223,6 +249,7 @@ public class FirewallRule  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get 对规则的描述，以帮助识别它。
@@ -243,15 +270,17 @@ public class FirewallRule  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set products
-     *
-     * @param products
-     */
+    * set products
+    *
+    * @param products
+    */
     public FirewallRule products(List<String> products) {
         this.products = products;
         return this;
     }
+
 
     /**
      * set 规则的优先级，允许控制处理顺序。一个较小的数字表示高优先级。如果不提供，任何有优先权的规则将在没有优先权的规则之前排序。
@@ -263,6 +292,7 @@ public class FirewallRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 此防火墙规则当前是否已暂停。
      *
@@ -272,6 +302,7 @@ public class FirewallRule  implements java.io.Serializable {
         this.paused = paused;
         return this;
     }
+
 
     /**
      * set 短引用标记，用于快速选择相关规则。
@@ -283,6 +314,7 @@ public class FirewallRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set action_parameters
      *
@@ -293,8 +325,15 @@ public class FirewallRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 应用于匹配请求的行动。注意，行动 &quot;log &quot;只适用于企业客户。
+     * set 对匹配到的请求采取的措施。有效值：js_challenge/block/challenge/allow/bypass
+js_challenge表示Js挑战
+block表示阻止
+challenge表示验证码
+allow表示允许
+bypass表示绕过
+
      *
      * @param action
      */
@@ -302,6 +341,7 @@ public class FirewallRule  implements java.io.Serializable {
         this.action = action;
         return this;
     }
+
 
     /**
      * set filter
@@ -313,6 +353,7 @@ public class FirewallRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 防火墙规则标识符
      *
@@ -323,6 +364,7 @@ public class FirewallRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 对规则的描述，以帮助识别它。
      *
@@ -332,6 +374,7 @@ public class FirewallRule  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
 
     /**
@@ -345,5 +388,4 @@ public class FirewallRule  implements java.io.Serializable {
         }
         this.products.add(product);
     }
-
 }

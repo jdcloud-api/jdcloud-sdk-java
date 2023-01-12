@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Page Rules for a Zone
+ * Page-Rules-for-a-Zone
  * A rule describing target patterns for requests and actions to perform on matching requests
  *
  * OpenAPI spec version: v1
@@ -49,6 +49,7 @@ public class DeletePageRuleRequest extends JdcloudRequest implements java.io.Ser
     private String identifier;
 
 
+
     /**
      * get zone_identifier
      *
@@ -66,6 +67,7 @@ public class DeletePageRuleRequest extends JdcloudRequest implements java.io.Ser
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
     /**
      * get identifier
@@ -86,6 +88,7 @@ public class DeletePageRuleRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set zone_identifier
      *
@@ -95,6 +98,7 @@ public class DeletePageRuleRequest extends JdcloudRequest implements java.io.Ser
         this.zone_identifier = zone_identifier;
         return this;
     }
+
 
     /**
      * set identifier
