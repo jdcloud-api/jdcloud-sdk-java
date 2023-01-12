@@ -38,6 +38,7 @@ public class Value  implements java.io.Serializable {
     private Strict_transport_security strict_transport_security;
 
 
+
     /**
      * get strict_transport_security
      *
@@ -55,6 +56,7 @@ public class Value  implements java.io.Serializable {
     public void setStrict_transport_security(Strict_transport_security strict_transport_security) {
         this.strict_transport_security = strict_transport_security;
     }
+
 
 
     /**

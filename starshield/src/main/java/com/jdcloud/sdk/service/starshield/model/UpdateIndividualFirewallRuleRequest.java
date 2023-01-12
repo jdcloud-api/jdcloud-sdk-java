@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Firewall rules
+ * Firewall-rules
  * Define Firewall rules using filter expressions for more control over how traffic is matched to the rule.
  *
  * OpenAPI spec version: v1
@@ -51,8 +51,8 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
     /**
      * products
      */
+    
     private List<String> products;
-
     /**
      * 规则的优先级，允许控制处理顺序。一个较小的数字表示高优先级。如果不提供，任何有优先权的规则将在没有优先权的规则之前排序。
      */
@@ -93,6 +93,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
     private String id;
 
 
+
     /**
      * get 应用于匹配请求的行动。注意，行动 &quot;log &quot;只适用于企业客户。
      *
@@ -110,6 +111,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
     public void setAction(String action) {
         this.action = action;
     }
+
 
     /**
      * get filter
@@ -129,23 +131,25 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
         this.filter = filter;
     }
 
+
     /**
-     * get products
-     *
-     * @return
-     */
+    * get products
+    *
+    * @return
+    */
     public List<String> getProducts() {
         return products;
     }
 
     /**
-     * set products
-     *
-     * @param products
-     */
+    * set products
+    *
+    * @param products
+    */
     public void setProducts(List<String> products) {
         this.products = products;
     }
+
 
     /**
      * get 规则的优先级，允许控制处理顺序。一个较小的数字表示高优先级。如果不提供，任何有优先权的规则将在没有优先权的规则之前排序。
@@ -165,6 +169,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
         this.priority = priority;
     }
 
+
     /**
      * get 此防火墙规则当前是否已暂停。
      *
@@ -182,6 +187,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
     public void setPaused(Boolean paused) {
         this.paused = paused;
     }
+
 
     /**
      * get 短引用标记，用于快速选择相关规则。
@@ -201,6 +207,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
         this.ref = ref;
     }
 
+
     /**
      * get action_parameters
      *
@@ -218,6 +225,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
     public void setAction_parameters(Action_parameters action_parameters) {
         this.action_parameters = action_parameters;
     }
+
 
     /**
      * get 对规则的描述，以帮助识别它。
@@ -237,6 +245,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
         this.description = description;
     }
 
+
     /**
      * get zone_identifier
      *
@@ -254,6 +263,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
     /**
      * get id
@@ -274,6 +284,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
     }
 
 
+
     /**
      * set 应用于匹配请求的行动。注意，行动 &quot;log &quot;只适用于企业客户。
      *
@@ -283,6 +294,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
         this.action = action;
         return this;
     }
+
 
     /**
      * set filter
@@ -294,15 +306,17 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
         return this;
     }
 
+
     /**
-     * set products
-     *
-     * @param products
-     */
+    * set products
+    *
+    * @param products
+    */
     public UpdateIndividualFirewallRuleRequest products(List<String> products) {
         this.products = products;
         return this;
     }
+
 
     /**
      * set 规则的优先级，允许控制处理顺序。一个较小的数字表示高优先级。如果不提供，任何有优先权的规则将在没有优先权的规则之前排序。
@@ -314,6 +328,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
         return this;
     }
 
+
     /**
      * set 此防火墙规则当前是否已暂停。
      *
@@ -323,6 +338,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
         this.paused = paused;
         return this;
     }
+
 
     /**
      * set 短引用标记，用于快速选择相关规则。
@@ -334,6 +350,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
         return this;
     }
 
+
     /**
      * set action_parameters
      *
@@ -343,6 +360,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
         this.action_parameters = action_parameters;
         return this;
     }
+
 
     /**
      * set 对规则的描述，以帮助识别它。
@@ -354,6 +372,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
         return this;
     }
 
+
     /**
      * set zone_identifier
      *
@@ -364,6 +383,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
         return this;
     }
 
+
     /**
      * set id
      *
@@ -373,6 +393,7 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
         this.id = id;
         return this;
     }
+
 
 
     /**
@@ -386,5 +407,4 @@ public class UpdateIndividualFirewallRuleRequest extends JdcloudRequest implemen
         }
         this.products.add(product);
     }
-
 }

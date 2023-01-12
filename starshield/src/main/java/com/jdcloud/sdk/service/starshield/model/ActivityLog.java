@@ -88,6 +88,7 @@ public class ActivityLog  implements java.io.Serializable {
     private String ruleId;
 
 
+
     /**
      * get timestamp
      *
@@ -105,6 +106,7 @@ public class ActivityLog  implements java.io.Serializable {
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
+
 
     /**
      * get firewallAction
@@ -124,6 +126,7 @@ public class ActivityLog  implements java.io.Serializable {
         this.firewallAction = firewallAction;
     }
 
+
     /**
      * get country
      *
@@ -141,6 +144,7 @@ public class ActivityLog  implements java.io.Serializable {
     public void setCountry(String country) {
         this.country = country;
     }
+
 
     /**
      * get ip
@@ -160,6 +164,7 @@ public class ActivityLog  implements java.io.Serializable {
         this.ip = ip;
     }
 
+
     /**
      * get host
      *
@@ -177,6 +182,7 @@ public class ActivityLog  implements java.io.Serializable {
     public void setHost(String host) {
         this.host = host;
     }
+
 
     /**
      * get httpMethod
@@ -196,6 +202,7 @@ public class ActivityLog  implements java.io.Serializable {
         this.httpMethod = httpMethod;
     }
 
+
     /**
      * get httpProtocol
      *
@@ -213,6 +220,7 @@ public class ActivityLog  implements java.io.Serializable {
     public void setHttpProtocol(String httpProtocol) {
         this.httpProtocol = httpProtocol;
     }
+
 
     /**
      * get requestUri
@@ -232,6 +240,7 @@ public class ActivityLog  implements java.io.Serializable {
         this.requestUri = requestUri;
     }
 
+
     /**
      * get firewallSource
      *
@@ -250,6 +259,7 @@ public class ActivityLog  implements java.io.Serializable {
         this.firewallSource = firewallSource;
     }
 
+
     /**
      * get userAgent
      *
@@ -267,6 +277,7 @@ public class ActivityLog  implements java.io.Serializable {
     public void setUserAgent(String userAgent) {
         this.userAgent = userAgent;
     }
+
 
     /**
      * get ruleId
@@ -287,6 +298,7 @@ public class ActivityLog  implements java.io.Serializable {
     }
 
 
+
     /**
      * set timestamp
      *
@@ -296,6 +308,7 @@ public class ActivityLog  implements java.io.Serializable {
         this.timestamp = timestamp;
         return this;
     }
+
 
     /**
      * set firewallAction
@@ -307,6 +320,7 @@ public class ActivityLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set country
      *
@@ -316,6 +330,7 @@ public class ActivityLog  implements java.io.Serializable {
         this.country = country;
         return this;
     }
+
 
     /**
      * set ip
@@ -327,6 +342,7 @@ public class ActivityLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set host
      *
@@ -336,6 +352,7 @@ public class ActivityLog  implements java.io.Serializable {
         this.host = host;
         return this;
     }
+
 
     /**
      * set httpMethod
@@ -347,6 +364,7 @@ public class ActivityLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set httpProtocol
      *
@@ -356,6 +374,7 @@ public class ActivityLog  implements java.io.Serializable {
         this.httpProtocol = httpProtocol;
         return this;
     }
+
 
     /**
      * set requestUri
@@ -367,6 +386,7 @@ public class ActivityLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set firewallSource
      *
@@ -377,6 +397,7 @@ public class ActivityLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set userAgent
      *
@@ -386,6 +407,7 @@ public class ActivityLog  implements java.io.Serializable {
         this.userAgent = userAgent;
         return this;
     }
+
 
     /**
      * set ruleId

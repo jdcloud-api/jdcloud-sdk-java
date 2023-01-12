@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Zone Settings
+ * Zone-Settings
  * A Zone setting changes how the Zone works in relation to caching, security, or other features of JDC StarShield
  *
  * OpenAPI spec version: v1
@@ -39,8 +39,8 @@ public class EditZoneSettingsInfoRequest extends JdcloudRequest implements java.
     /**
      * 一或多个域配置对象。必须包含ID和值。
      */
+    
     private List<Item> items;
-
     /**
      * zone_identifier
      * Required:true
@@ -49,23 +49,25 @@ public class EditZoneSettingsInfoRequest extends JdcloudRequest implements java.
     private String zone_identifier;
 
 
+
     /**
-     * get 一或多个域配置对象。必须包含ID和值。
-     *
-     * @return
-     */
+    * get 一或多个域配置对象。必须包含ID和值。
+    *
+    * @return
+    */
     public List<Item> getItems() {
         return items;
     }
 
     /**
-     * set 一或多个域配置对象。必须包含ID和值。
-     *
-     * @param items
-     */
+    * set 一或多个域配置对象。必须包含ID和值。
+    *
+    * @param items
+    */
     public void setItems(List<Item> items) {
         this.items = items;
     }
+
 
     /**
      * get zone_identifier
@@ -86,15 +88,17 @@ public class EditZoneSettingsInfoRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
-     * set 一或多个域配置对象。必须包含ID和值。
-     *
-     * @param items
-     */
+    * set 一或多个域配置对象。必须包含ID和值。
+    *
+    * @param items
+    */
     public EditZoneSettingsInfoRequest items(List<Item> items) {
         this.items = items;
         return this;
     }
+
 
     /**
      * set zone_identifier
@@ -105,6 +109,7 @@ public class EditZoneSettingsInfoRequest extends JdcloudRequest implements java.
         this.zone_identifier = zone_identifier;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class EditZoneSettingsInfoRequest extends JdcloudRequest implements java.
         }
         this.items.add(item);
     }
-
 }

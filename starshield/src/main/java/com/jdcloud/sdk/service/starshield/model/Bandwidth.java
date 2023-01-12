@@ -58,6 +58,7 @@ public class Bandwidth  implements java.io.Serializable {
     private String cachedPercentage;
 
 
+
     /**
      * get The total number of bytes served within the time frame
      *
@@ -75,6 +76,7 @@ public class Bandwidth  implements java.io.Serializable {
     public void setAll(Number all) {
         this.all = all;
     }
+
 
     /**
      * get all_beautified
@@ -94,6 +96,7 @@ public class Bandwidth  implements java.io.Serializable {
         this.all_beautified = all_beautified;
     }
 
+
     /**
      * get The number of bytes that were cached (and served) by scdn
      *
@@ -112,6 +115,7 @@ public class Bandwidth  implements java.io.Serializable {
         this.cached = cached;
     }
 
+
     /**
      * get cached_beautified
      *
@@ -129,6 +133,7 @@ public class Bandwidth  implements java.io.Serializable {
     public void setCached_beautified(String cached_beautified) {
         this.cached_beautified = cached_beautified;
     }
+
 
     /**
      * get cachedPercentage
@@ -149,6 +154,7 @@ public class Bandwidth  implements java.io.Serializable {
     }
 
 
+
     /**
      * set The total number of bytes served within the time frame
      *
@@ -158,6 +164,7 @@ public class Bandwidth  implements java.io.Serializable {
         this.all = all;
         return this;
     }
+
 
     /**
      * set all_beautified
@@ -169,6 +176,7 @@ public class Bandwidth  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set The number of bytes that were cached (and served) by scdn
      *
@@ -179,6 +187,7 @@ public class Bandwidth  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cached_beautified
      *
@@ -188,6 +197,7 @@ public class Bandwidth  implements java.io.Serializable {
         this.cached_beautified = cached_beautified;
         return this;
     }
+
 
     /**
      * set cachedPercentage

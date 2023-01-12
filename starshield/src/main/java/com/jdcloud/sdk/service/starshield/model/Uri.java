@@ -43,6 +43,7 @@ public class Uri  implements java.io.Serializable {
     private Query query;
 
 
+
     /**
      * get path
      *
@@ -60,6 +61,7 @@ public class Uri  implements java.io.Serializable {
     public void setPath(Path path) {
         this.path = path;
     }
+
 
     /**
      * get query
@@ -80,6 +82,7 @@ public class Uri  implements java.io.Serializable {
     }
 
 
+
     /**
      * set path
      *
@@ -89,6 +92,7 @@ public class Uri  implements java.io.Serializable {
         this.path = path;
         return this;
     }
+
 
     /**
      * set query

@@ -43,6 +43,7 @@ public class RoutingModes  implements java.io.Serializable {
     private String ipv6;
 
 
+
     /**
      * get ipv4
      *
@@ -60,6 +61,7 @@ public class RoutingModes  implements java.io.Serializable {
     public void setIpv4(String ipv4) {
         this.ipv4 = ipv4;
     }
+
 
     /**
      * get ipv6
@@ -80,6 +82,7 @@ public class RoutingModes  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ipv4
      *
@@ -89,6 +92,7 @@ public class RoutingModes  implements java.io.Serializable {
         this.ipv4 = ipv4;
         return this;
     }
+
 
     /**
      * set ipv6

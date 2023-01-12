@@ -49,6 +49,7 @@ public class CheckInstancesNameRequest extends JdcloudRequest implements java.io
     private String regionId;
 
 
+
     /**
      * get 实例名称
      *
@@ -66,6 +67,7 @@ public class CheckInstancesNameRequest extends JdcloudRequest implements java.io
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
     }
+
 
     /**
      * get 地域ID
@@ -86,6 +88,7 @@ public class CheckInstancesNameRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 实例名称
      *
@@ -95,6 +98,7 @@ public class CheckInstancesNameRequest extends JdcloudRequest implements java.io
         this.instanceName = instanceName;
         return this;
     }
+
 
     /**
      * set 地域ID

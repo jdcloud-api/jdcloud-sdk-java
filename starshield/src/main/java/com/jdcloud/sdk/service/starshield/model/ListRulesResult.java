@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * WAF Rules
+ * WAF-Rules
  * A firewall rule for a zone
  *
  * OpenAPI spec version: v1
@@ -39,37 +39,40 @@ public class ListRulesResult extends JdcloudResult implements java.io.Serializab
     /**
      * dataList
      */
+    
     private List<WAFRule> dataList;
 
 
     /**
-     * get dataList
-     *
-     * @return
-     */
+    * get dataList
+    *
+    * @return
+    */
     public List<WAFRule> getDataList() {
         return dataList;
     }
 
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public void setDataList(List<WAFRule> dataList) {
         this.dataList = dataList;
     }
 
 
+
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public ListRulesResult dataList(List<WAFRule> dataList) {
         this.dataList = dataList;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class ListRulesResult extends JdcloudResult implements java.io.Serializab
         }
         this.dataList.add(dataList);
     }
-
 }

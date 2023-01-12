@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Firewall rules
+ * Firewall-rules
  * Define Firewall rules using filter expressions for more control over how traffic is matched to the rule.
  *
  * OpenAPI spec version: v1
@@ -72,6 +72,7 @@ public class ListOfFirewallRulesRequest extends JdcloudRequest implements java.i
     private String zone_identifier;
 
 
+
     /**
      * get 防火墙规则标识符
      *
@@ -89,6 +90,7 @@ public class ListOfFirewallRulesRequest extends JdcloudRequest implements java.i
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get 描述中不区分大小写的搜索
@@ -108,6 +110,7 @@ public class ListOfFirewallRulesRequest extends JdcloudRequest implements java.i
         this.description = description;
     }
 
+
     /**
      * get 规则操作上的精确匹配
      *
@@ -125,6 +128,7 @@ public class ListOfFirewallRulesRequest extends JdcloudRequest implements java.i
     public void setAction(String action) {
         this.action = action;
     }
+
 
     /**
      * get 此防火墙规则当前是否已暂停。
@@ -144,6 +148,7 @@ public class ListOfFirewallRulesRequest extends JdcloudRequest implements java.i
         this.paused = paused;
     }
 
+
     /**
      * get 分页结果的页码
      *
@@ -162,6 +167,7 @@ public class ListOfFirewallRulesRequest extends JdcloudRequest implements java.i
         this.page = page;
     }
 
+
     /**
      * get 每页的防火墙规则数
      *
@@ -179,6 +185,7 @@ public class ListOfFirewallRulesRequest extends JdcloudRequest implements java.i
     public void setPer_page(Number per_page) {
         this.per_page = per_page;
     }
+
 
     /**
      * get zone_identifier
@@ -199,6 +206,7 @@ public class ListOfFirewallRulesRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 防火墙规则标识符
      *
@@ -208,6 +216,7 @@ public class ListOfFirewallRulesRequest extends JdcloudRequest implements java.i
         this.id = id;
         return this;
     }
+
 
     /**
      * set 描述中不区分大小写的搜索
@@ -219,6 +228,7 @@ public class ListOfFirewallRulesRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 规则操作上的精确匹配
      *
@@ -228,6 +238,7 @@ public class ListOfFirewallRulesRequest extends JdcloudRequest implements java.i
         this.action = action;
         return this;
     }
+
 
     /**
      * set 此防火墙规则当前是否已暂停。
@@ -239,6 +250,7 @@ public class ListOfFirewallRulesRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 分页结果的页码
      *
@@ -249,6 +261,7 @@ public class ListOfFirewallRulesRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 每页的防火墙规则数
      *
@@ -258,6 +271,7 @@ public class ListOfFirewallRulesRequest extends JdcloudRequest implements java.i
         this.per_page = per_page;
         return this;
     }
+
 
     /**
      * set zone_identifier

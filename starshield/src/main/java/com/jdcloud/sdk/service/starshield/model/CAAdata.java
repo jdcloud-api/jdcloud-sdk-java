@@ -48,6 +48,7 @@ public class CAAdata  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get flags
      *
@@ -66,6 +67,7 @@ public class CAAdata  implements java.io.Serializable {
         this.flags = flags;
     }
 
+
     /**
      * get tag
      *
@@ -83,6 +85,7 @@ public class CAAdata  implements java.io.Serializable {
     public void setTag(String tag) {
         this.tag = tag;
     }
+
 
     /**
      * get value
@@ -103,6 +106,7 @@ public class CAAdata  implements java.io.Serializable {
     }
 
 
+
     /**
      * set flags
      *
@@ -113,6 +117,7 @@ public class CAAdata  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set tag
      *
@@ -122,6 +127,7 @@ public class CAAdata  implements java.io.Serializable {
         this.tag = tag;
         return this;
     }
+
 
     /**
      * set value

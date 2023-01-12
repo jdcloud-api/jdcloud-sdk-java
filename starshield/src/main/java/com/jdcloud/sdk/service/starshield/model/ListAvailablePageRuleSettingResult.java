@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Available Page Rules for a Zone
+ * Available-Page-Rules-for-a-Zone
  * A rule describing target patterns for requests and actions to perform on matching requests
  *
  * OpenAPI spec version: v1
@@ -39,37 +39,40 @@ public class ListAvailablePageRuleSettingResult extends JdcloudResult implements
     /**
      * dataList
      */
+    
     private List<AvailablePageRule> dataList;
 
 
     /**
-     * get dataList
-     *
-     * @return
-     */
+    * get dataList
+    *
+    * @return
+    */
     public List<AvailablePageRule> getDataList() {
         return dataList;
     }
 
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public void setDataList(List<AvailablePageRule> dataList) {
         this.dataList = dataList;
     }
 
 
+
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public ListAvailablePageRuleSettingResult dataList(List<AvailablePageRule> dataList) {
         this.dataList = dataList;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class ListAvailablePageRuleSettingResult extends JdcloudResult implements
         }
         this.dataList.add(dataList);
     }
-
 }

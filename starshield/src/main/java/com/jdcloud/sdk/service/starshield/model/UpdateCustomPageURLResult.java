@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Custom Pages for a Zone
+ * Custom-Pages-for-a-Zone
  * Custom pages associated with a zone
  *
  * OpenAPI spec version: v1
@@ -40,6 +40,7 @@ public class UpdateCustomPageURLResult extends JdcloudResult implements java.io.
     private CustomPage data;
 
 
+
     /**
      * get data
      *
@@ -57,6 +58,7 @@ public class UpdateCustomPageURLResult extends JdcloudResult implements java.io.
     public void setData(CustomPage data) {
         this.data = data;
     }
+
 
 
     /**

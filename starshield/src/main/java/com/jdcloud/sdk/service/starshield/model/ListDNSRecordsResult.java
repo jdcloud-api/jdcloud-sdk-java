@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * DNS Records for a Zone
+ * DNS-Record-Service
  * Documentation for JDC StarShield DNS records
  *
  * OpenAPI spec version: v1
@@ -39,37 +39,40 @@ public class ListDNSRecordsResult extends JdcloudResult implements java.io.Seria
     /**
      * dataList
      */
+    
     private List<DnsRecord> dataList;
 
 
     /**
-     * get dataList
-     *
-     * @return
-     */
+    * get dataList
+    *
+    * @return
+    */
     public List<DnsRecord> getDataList() {
         return dataList;
     }
 
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public void setDataList(List<DnsRecord> dataList) {
         this.dataList = dataList;
     }
 
 
+
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public ListDNSRecordsResult dataList(List<DnsRecord> dataList) {
         this.dataList = dataList;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class ListDNSRecordsResult extends JdcloudResult implements java.io.Seria
         }
         this.dataList.add(dataList);
     }
-
 }

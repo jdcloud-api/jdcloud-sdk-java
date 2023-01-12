@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Firewall rules
+ * Firewall-rules
  * Define Firewall rules using filter expressions for more control over how traffic is matched to the rule.
  *
  * OpenAPI spec version: v1
@@ -54,6 +54,7 @@ public class DeleteIndividualFirewallRulesRequest extends JdcloudRequest impleme
     private String id;
 
 
+
     /**
      * get delete_filter_if_unused
      *
@@ -72,6 +73,7 @@ public class DeleteIndividualFirewallRulesRequest extends JdcloudRequest impleme
         this.delete_filter_if_unused = delete_filter_if_unused;
     }
 
+
     /**
      * get zone_identifier
      *
@@ -89,6 +91,7 @@ public class DeleteIndividualFirewallRulesRequest extends JdcloudRequest impleme
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
     /**
      * get id
@@ -109,6 +112,7 @@ public class DeleteIndividualFirewallRulesRequest extends JdcloudRequest impleme
     }
 
 
+
     /**
      * set delete_filter_if_unused
      *
@@ -119,6 +123,7 @@ public class DeleteIndividualFirewallRulesRequest extends JdcloudRequest impleme
         return this;
     }
 
+
     /**
      * set zone_identifier
      *
@@ -128,6 +133,7 @@ public class DeleteIndividualFirewallRulesRequest extends JdcloudRequest impleme
         this.zone_identifier = zone_identifier;
         return this;
     }
+
 
     /**
      * set id

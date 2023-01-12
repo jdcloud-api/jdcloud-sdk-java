@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.starshield.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建套餐实例
+ * 创建套餐实例，调用成功，将自动扣费（请保证账户充足，否则无法成功创建实例）。
+
  */
 public class CreateInstanceResponse extends JdcloudResponse<CreateInstanceResult> implements java.io.Serializable {
 

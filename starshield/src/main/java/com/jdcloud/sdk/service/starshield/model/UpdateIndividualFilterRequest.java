@@ -69,6 +69,7 @@ public class UpdateIndividualFilterRequest extends JdcloudRequest implements jav
     private String id;
 
 
+
     /**
      * get 要使用的筛选器表达式
      *
@@ -86,6 +87,7 @@ public class UpdateIndividualFilterRequest extends JdcloudRequest implements jav
     public void setExpression(String expression) {
         this.expression = expression;
     }
+
 
     /**
      * get 此筛选器当前是否已暂停
@@ -105,6 +107,7 @@ public class UpdateIndividualFilterRequest extends JdcloudRequest implements jav
         this.paused = paused;
     }
 
+
     /**
      * get 可用于描述过滤器用途的注释
      *
@@ -122,6 +125,7 @@ public class UpdateIndividualFilterRequest extends JdcloudRequest implements jav
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 短引用标记，用于快速选择相关规则。
@@ -141,6 +145,7 @@ public class UpdateIndividualFilterRequest extends JdcloudRequest implements jav
         this.ref = ref;
     }
 
+
     /**
      * get zone_identifier
      *
@@ -158,6 +163,7 @@ public class UpdateIndividualFilterRequest extends JdcloudRequest implements jav
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
     /**
      * get id
@@ -178,6 +184,7 @@ public class UpdateIndividualFilterRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 要使用的筛选器表达式
      *
@@ -187,6 +194,7 @@ public class UpdateIndividualFilterRequest extends JdcloudRequest implements jav
         this.expression = expression;
         return this;
     }
+
 
     /**
      * set 此筛选器当前是否已暂停
@@ -198,6 +206,7 @@ public class UpdateIndividualFilterRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set 可用于描述过滤器用途的注释
      *
@@ -207,6 +216,7 @@ public class UpdateIndividualFilterRequest extends JdcloudRequest implements jav
         this.description = description;
         return this;
     }
+
 
     /**
      * set 短引用标记，用于快速选择相关规则。
@@ -218,6 +228,7 @@ public class UpdateIndividualFilterRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set zone_identifier
      *
@@ -227,6 +238,7 @@ public class UpdateIndividualFilterRequest extends JdcloudRequest implements jav
         this.zone_identifier = zone_identifier;
         return this;
     }
+
 
     /**
      * set id

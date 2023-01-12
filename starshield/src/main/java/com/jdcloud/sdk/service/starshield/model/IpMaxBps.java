@@ -47,6 +47,7 @@ public class IpMaxBps  implements java.io.Serializable {
     /**
      * zones
      */
+    
     private List<String> zones;
 
 
@@ -68,6 +69,7 @@ public class IpMaxBps  implements java.io.Serializable {
         this.ip = ip;
     }
 
+
     /**
      * get maxBps
      *
@@ -86,23 +88,25 @@ public class IpMaxBps  implements java.io.Serializable {
         this.maxBps = maxBps;
     }
 
+
     /**
-     * get zones
-     *
-     * @return
-     */
+    * get zones
+    *
+    * @return
+    */
     public List<String> getZones() {
         return zones;
     }
 
     /**
-     * set zones
-     *
-     * @param zones
-     */
+    * set zones
+    *
+    * @param zones
+    */
     public void setZones(List<String> zones) {
         this.zones = zones;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class IpMaxBps  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set maxBps
      *
@@ -125,15 +130,17 @@ public class IpMaxBps  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set zones
-     *
-     * @param zones
-     */
+    * set zones
+    *
+    * @param zones
+    */
     public IpMaxBps zones(List<String> zones) {
         this.zones = zones;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class IpMaxBps  implements java.io.Serializable {
         }
         this.zones.add(zone);
     }
-
 }

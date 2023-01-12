@@ -28,14 +28,25 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 购买流量包
+ * 购买流量包，调用成功，将自动扣费（请保证账户充足，否则无法成功创建流量包）。
+
  */
 public class CreateFlowPackRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 流量包数量
+     * 定量流量包类型(1-&gt;10TB 2-&gt;50TB 3-&gt;200TB 4-&gt;1PB 5-&gt;5PB)
+     */
+    private Integer fixedFlowPackType;
+
+    /**
+     * 定量流量包数量
+     */
+    private Integer fixedFlowPackNum;
+
+    /**
+     * 按需购买流量包数量
      */
     private Integer flowPackNum;
 
@@ -43,6 +54,11 @@ public class CreateFlowPackRequest extends JdcloudRequest implements java.io.Ser
      * 支付成功返回路径
      */
     private String returnUrl;
+
+    /**
+     * 购买上下文JSON字符串
+     */
+    private String buyScenario;
 
     /**
      * 地域ID
@@ -59,8 +75,47 @@ public class CreateFlowPackRequest extends JdcloudRequest implements java.io.Ser
     private String instanceId;
 
 
+
     /**
-     * get 流量包数量
+     * get 定量流量包类型(1-&gt;10TB 2-&gt;50TB 3-&gt;200TB 4-&gt;1PB 5-&gt;5PB)
+     *
+     * @return
+     */
+    public Integer getFixedFlowPackType() {
+        return fixedFlowPackType;
+    }
+
+    /**
+     * set 定量流量包类型(1-&gt;10TB 2-&gt;50TB 3-&gt;200TB 4-&gt;1PB 5-&gt;5PB)
+     *
+     * @param fixedFlowPackType
+     */
+    public void setFixedFlowPackType(Integer fixedFlowPackType) {
+        this.fixedFlowPackType = fixedFlowPackType;
+    }
+
+
+    /**
+     * get 定量流量包数量
+     *
+     * @return
+     */
+    public Integer getFixedFlowPackNum() {
+        return fixedFlowPackNum;
+    }
+
+    /**
+     * set 定量流量包数量
+     *
+     * @param fixedFlowPackNum
+     */
+    public void setFixedFlowPackNum(Integer fixedFlowPackNum) {
+        this.fixedFlowPackNum = fixedFlowPackNum;
+    }
+
+
+    /**
+     * get 按需购买流量包数量
      *
      * @return
      */
@@ -69,13 +124,14 @@ public class CreateFlowPackRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 流量包数量
+     * set 按需购买流量包数量
      *
      * @param flowPackNum
      */
     public void setFlowPackNum(Integer flowPackNum) {
         this.flowPackNum = flowPackNum;
     }
+
 
     /**
      * get 支付成功返回路径
@@ -95,6 +151,26 @@ public class CreateFlowPackRequest extends JdcloudRequest implements java.io.Ser
         this.returnUrl = returnUrl;
     }
 
+
+    /**
+     * get 购买上下文JSON字符串
+     *
+     * @return
+     */
+    public String getBuyScenario() {
+        return buyScenario;
+    }
+
+    /**
+     * set 购买上下文JSON字符串
+     *
+     * @param buyScenario
+     */
+    public void setBuyScenario(String buyScenario) {
+        this.buyScenario = buyScenario;
+    }
+
+
     /**
      * get 地域ID
      *
@@ -112,6 +188,7 @@ public class CreateFlowPackRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例ID
@@ -132,8 +209,31 @@ public class CreateFlowPackRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
-     * set 流量包数量
+     * set 定量流量包类型(1-&gt;10TB 2-&gt;50TB 3-&gt;200TB 4-&gt;1PB 5-&gt;5PB)
+     *
+     * @param fixedFlowPackType
+     */
+    public CreateFlowPackRequest fixedFlowPackType(Integer fixedFlowPackType) {
+        this.fixedFlowPackType = fixedFlowPackType;
+        return this;
+    }
+
+
+    /**
+     * set 定量流量包数量
+     *
+     * @param fixedFlowPackNum
+     */
+    public CreateFlowPackRequest fixedFlowPackNum(Integer fixedFlowPackNum) {
+        this.fixedFlowPackNum = fixedFlowPackNum;
+        return this;
+    }
+
+
+    /**
+     * set 按需购买流量包数量
      *
      * @param flowPackNum
      */
@@ -141,6 +241,7 @@ public class CreateFlowPackRequest extends JdcloudRequest implements java.io.Ser
         this.flowPackNum = flowPackNum;
         return this;
     }
+
 
     /**
      * set 支付成功返回路径
@@ -152,6 +253,18 @@ public class CreateFlowPackRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
+    /**
+     * set 购买上下文JSON字符串
+     *
+     * @param buyScenario
+     */
+    public CreateFlowPackRequest buyScenario(String buyScenario) {
+        this.buyScenario = buyScenario;
+        return this;
+    }
+
+
     /**
      * set 地域ID
      *
@@ -161,6 +274,7 @@ public class CreateFlowPackRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例ID

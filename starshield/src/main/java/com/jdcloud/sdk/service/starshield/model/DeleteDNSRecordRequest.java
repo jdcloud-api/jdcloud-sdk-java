@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * DNS Records for a Zone
+ * DNS-Record-Service
  * Documentation for JDC StarShield DNS records
  *
  * OpenAPI spec version: v1
@@ -49,6 +49,7 @@ public class DeleteDNSRecordRequest extends JdcloudRequest implements java.io.Se
     private String identifier;
 
 
+
     /**
      * get zone_identifier
      *
@@ -66,6 +67,7 @@ public class DeleteDNSRecordRequest extends JdcloudRequest implements java.io.Se
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
     /**
      * get identifier
@@ -86,6 +88,7 @@ public class DeleteDNSRecordRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set zone_identifier
      *
@@ -95,6 +98,7 @@ public class DeleteDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.zone_identifier = zone_identifier;
         return this;
     }
+
 
     /**
      * set identifier

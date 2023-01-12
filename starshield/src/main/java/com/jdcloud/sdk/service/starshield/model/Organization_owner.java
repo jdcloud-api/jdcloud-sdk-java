@@ -48,6 +48,7 @@ public class Organization_owner  implements java.io.Serializable {
     private String ty_pe;
 
 
+
     /**
      * get id
      *
@@ -66,6 +67,7 @@ public class Organization_owner  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get name
      *
@@ -83,6 +85,7 @@ public class Organization_owner  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get ty_pe
@@ -103,6 +106,7 @@ public class Organization_owner  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -113,6 +117,7 @@ public class Organization_owner  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set name
      *
@@ -122,6 +127,7 @@ public class Organization_owner  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set ty_pe

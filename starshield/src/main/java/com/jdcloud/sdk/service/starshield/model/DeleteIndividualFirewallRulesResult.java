@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Firewall rules
+ * Firewall-rules
  * Define Firewall rules using filter expressions for more control over how traffic is matched to the rule.
  *
  * OpenAPI spec version: v1
@@ -40,6 +40,7 @@ public class DeleteIndividualFirewallRulesResult extends JdcloudResult implement
     private FirewallRule data;
 
 
+
     /**
      * get data
      *
@@ -57,6 +58,7 @@ public class DeleteIndividualFirewallRulesResult extends JdcloudResult implement
     public void setData(FirewallRule data) {
         this.data = data;
     }
+
 
 
     /**

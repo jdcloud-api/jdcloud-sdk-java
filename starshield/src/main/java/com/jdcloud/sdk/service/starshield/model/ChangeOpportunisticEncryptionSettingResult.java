@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Zone Settings
+ * Zone-Settings
  * A Zone setting changes how the Zone works in relation to caching, security, or other features of JDC StarShield
  *
  * OpenAPI spec version: v1
@@ -40,6 +40,7 @@ public class ChangeOpportunisticEncryptionSettingResult extends JdcloudResult im
     private ZoneEnableOpportunisticEncryption data;
 
 
+
     /**
      * get data
      *
@@ -57,6 +58,7 @@ public class ChangeOpportunisticEncryptionSettingResult extends JdcloudResult im
     public void setData(ZoneEnableOpportunisticEncryption data) {
         this.data = data;
     }
+
 
 
     /**

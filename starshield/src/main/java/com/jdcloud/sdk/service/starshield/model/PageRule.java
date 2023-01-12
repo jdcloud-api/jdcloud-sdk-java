@@ -42,13 +42,13 @@ public class PageRule  implements java.io.Serializable {
     /**
      * 对请求进行评估的目标
      */
+    
     private List<Target> targets;
-
     /**
      * 如果此规则的目标与请求相匹配，要执行的一系列行动。行动可以将网址重定向到另一个网址或覆盖设置（但不能同时进行）。
      */
+    
     private List<Action> actions;
-
     /**
      * 一个数字，表示一个页面规则优先于另一个页面规则。
 如果您可能有一个全面页面规则（例如#1 &#39;/images/&#39;）
@@ -74,6 +74,7 @@ public class PageRule  implements java.io.Serializable {
     private String created_on;
 
 
+
     /**
      * get API条目标识符标签
      *
@@ -92,41 +93,44 @@ public class PageRule  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
-     * get 对请求进行评估的目标
-     *
-     * @return
-     */
+    * get 对请求进行评估的目标
+    *
+    * @return
+    */
     public List<Target> getTargets() {
         return targets;
     }
 
     /**
-     * set 对请求进行评估的目标
-     *
-     * @param targets
-     */
+    * set 对请求进行评估的目标
+    *
+    * @param targets
+    */
     public void setTargets(List<Target> targets) {
         this.targets = targets;
     }
 
+
     /**
-     * get 如果此规则的目标与请求相匹配，要执行的一系列行动。行动可以将网址重定向到另一个网址或覆盖设置（但不能同时进行）。
-     *
-     * @return
-     */
+    * get 如果此规则的目标与请求相匹配，要执行的一系列行动。行动可以将网址重定向到另一个网址或覆盖设置（但不能同时进行）。
+    *
+    * @return
+    */
     public List<Action> getActions() {
         return actions;
     }
 
     /**
-     * set 如果此规则的目标与请求相匹配，要执行的一系列行动。行动可以将网址重定向到另一个网址或覆盖设置（但不能同时进行）。
-     *
-     * @param actions
-     */
+    * set 如果此规则的目标与请求相匹配，要执行的一系列行动。行动可以将网址重定向到另一个网址或覆盖设置（但不能同时进行）。
+    *
+    * @param actions
+    */
     public void setActions(List<Action> actions) {
         this.actions = actions;
     }
+
 
     /**
      * get 一个数字，表示一个页面规则优先于另一个页面规则。
@@ -154,6 +158,7 @@ public class PageRule  implements java.io.Serializable {
         this.priority = priority;
     }
 
+
     /**
      * get 页面规则的状态
      *
@@ -172,6 +177,7 @@ public class PageRule  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 上次修改页面规则的时间
      *
@@ -189,6 +195,7 @@ public class PageRule  implements java.io.Serializable {
     public void setModified_on(String modified_on) {
         this.modified_on = modified_on;
     }
+
 
     /**
      * get 创建页面规则时间
@@ -209,6 +216,7 @@ public class PageRule  implements java.io.Serializable {
     }
 
 
+
     /**
      * set API条目标识符标签
      *
@@ -219,25 +227,28 @@ public class PageRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 对请求进行评估的目标
-     *
-     * @param targets
-     */
+    * set 对请求进行评估的目标
+    *
+    * @param targets
+    */
     public PageRule targets(List<Target> targets) {
         this.targets = targets;
         return this;
     }
 
+
     /**
-     * set 如果此规则的目标与请求相匹配，要执行的一系列行动。行动可以将网址重定向到另一个网址或覆盖设置（但不能同时进行）。
-     *
-     * @param actions
-     */
+    * set 如果此规则的目标与请求相匹配，要执行的一系列行动。行动可以将网址重定向到另一个网址或覆盖设置（但不能同时进行）。
+    *
+    * @param actions
+    */
     public PageRule actions(List<Action> actions) {
         this.actions = actions;
         return this;
     }
+
 
     /**
      * set 一个数字，表示一个页面规则优先于另一个页面规则。
@@ -253,6 +264,7 @@ public class PageRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 页面规则的状态
      *
@@ -262,6 +274,7 @@ public class PageRule  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 上次修改页面规则的时间
@@ -273,6 +286,7 @@ public class PageRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建页面规则时间
      *
@@ -282,6 +296,7 @@ public class PageRule  implements java.io.Serializable {
         this.created_on = created_on;
         return this;
     }
+
 
 
     /**
@@ -307,5 +322,4 @@ public class PageRule  implements java.io.Serializable {
         }
         this.actions.add(action);
     }
-
 }

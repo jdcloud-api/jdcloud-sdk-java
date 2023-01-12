@@ -62,8 +62,8 @@ public class CustomPage  implements java.io.Serializable {
     /**
      * 自定义HTML页面中必须存在的字符串标记
      */
+    
     private List<String> required_tokens;
-
     /**
      * 预览自定义页面时，需要将“target”作为查询字符串的一部分
      */
@@ -73,6 +73,7 @@ public class CustomPage  implements java.io.Serializable {
      * 自定义页面的简短描述。
      */
     private String description;
+
 
 
     /**
@@ -93,6 +94,7 @@ public class CustomPage  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 创建自定义页面时间
      *
@@ -110,6 +112,7 @@ public class CustomPage  implements java.io.Serializable {
     public void setCreated_on(String created_on) {
         this.created_on = created_on;
     }
+
 
     /**
      * get 上次修改自定义页面的时间
@@ -129,6 +132,7 @@ public class CustomPage  implements java.io.Serializable {
         this.modified_on = modified_on;
     }
 
+
     /**
      * get 与自定义页面关联的URL。
      *
@@ -146,6 +150,7 @@ public class CustomPage  implements java.io.Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get 自定义页面状态
@@ -165,23 +170,25 @@ public class CustomPage  implements java.io.Serializable {
         this.state = state;
     }
 
+
     /**
-     * get 自定义HTML页面中必须存在的字符串标记
-     *
-     * @return
-     */
+    * get 自定义HTML页面中必须存在的字符串标记
+    *
+    * @return
+    */
     public List<String> getRequired_tokens() {
         return required_tokens;
     }
 
     /**
-     * set 自定义HTML页面中必须存在的字符串标记
-     *
-     * @param required_tokens
-     */
+    * set 自定义HTML页面中必须存在的字符串标记
+    *
+    * @param required_tokens
+    */
     public void setRequired_tokens(List<String> required_tokens) {
         this.required_tokens = required_tokens;
     }
+
 
     /**
      * get 预览自定义页面时，需要将“target”作为查询字符串的一部分
@@ -200,6 +207,7 @@ public class CustomPage  implements java.io.Serializable {
     public void setPreview_target(String preview_target) {
         this.preview_target = preview_target;
     }
+
 
     /**
      * get 自定义页面的简短描述。
@@ -220,6 +228,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 自定义页面类型的名称
      *
@@ -229,6 +238,7 @@ public class CustomPage  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 创建自定义页面时间
@@ -240,6 +250,7 @@ public class CustomPage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 上次修改自定义页面的时间
      *
@@ -249,6 +260,7 @@ public class CustomPage  implements java.io.Serializable {
         this.modified_on = modified_on;
         return this;
     }
+
 
     /**
      * set 与自定义页面关联的URL。
@@ -260,6 +272,7 @@ public class CustomPage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自定义页面状态
      *
@@ -270,15 +283,17 @@ public class CustomPage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 自定义HTML页面中必须存在的字符串标记
-     *
-     * @param required_tokens
-     */
+    * set 自定义HTML页面中必须存在的字符串标记
+    *
+    * @param required_tokens
+    */
     public CustomPage required_tokens(List<String> required_tokens) {
         this.required_tokens = required_tokens;
         return this;
     }
+
 
     /**
      * set 预览自定义页面时，需要将“target”作为查询字符串的一部分
@@ -290,6 +305,7 @@ public class CustomPage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自定义页面的简短描述。
      *
@@ -299,6 +315,7 @@ public class CustomPage  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
 
     /**
@@ -312,5 +329,4 @@ public class CustomPage  implements java.io.Serializable {
         }
         this.required_tokens.add(required_token);
     }
-
 }

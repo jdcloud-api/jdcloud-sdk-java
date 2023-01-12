@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Available Page Rules for a Zone
+ * Available-Page-Rules-for-a-Zone
  * A rule describing target patterns for requests and actions to perform on matching requests
  *
  * OpenAPI spec version: v1

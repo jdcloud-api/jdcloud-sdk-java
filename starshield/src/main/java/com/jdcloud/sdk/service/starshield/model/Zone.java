@@ -47,8 +47,8 @@ public class Zone  implements java.io.Serializable {
     /**
      * 当前用户在域上的可用权限
      */
+    
     private List<String> permissions;
-
     /**
      * 域的开发模式过期（正整数）或上次过期（负整数）的时间间隔（秒）。如果从未启用过开发模式，则此值为0。
 
@@ -68,8 +68,8 @@ public class Zone  implements java.io.Serializable {
     /**
      * 迁移到星盾之前的原始域名服务器
      */
+    
     private List<String> original_name_servers;
-
     /**
      * 域名
      */
@@ -123,12 +123,18 @@ public class Zone  implements java.io.Serializable {
     /**
      * 星盾分配的域名服务器。这仅适用于使用星盾DNS的域
      */
+    
     private List<String> name_servers;
-
     /**
      * 切换到星盾时的域注册商
      */
     private String original_registrar;
+
+    /**
+     * cname解析状态。0为解析到云端VIP，1为解析到回源地址
+     */
+    private Integer enableCname2Rs;
+
 
 
     /**
@@ -149,6 +155,7 @@ public class Zone  implements java.io.Serializable {
         this.plan_pending = plan_pending;
     }
 
+
     /**
      * get 切换到星盾时的DNS主机
      *
@@ -167,23 +174,25 @@ public class Zone  implements java.io.Serializable {
         this.original_dnshost = original_dnshost;
     }
 
+
     /**
-     * get 当前用户在域上的可用权限
-     *
-     * @return
-     */
+    * get 当前用户在域上的可用权限
+    *
+    * @return
+    */
     public List<String> getPermissions() {
         return permissions;
     }
 
     /**
-     * set 当前用户在域上的可用权限
-     *
-     * @param permissions
-     */
+    * set 当前用户在域上的可用权限
+    *
+    * @param permissions
+    */
     public void setPermissions(List<String> permissions) {
         this.permissions = permissions;
     }
+
 
     /**
      * get 域的开发模式过期（正整数）或上次过期（负整数）的时间间隔（秒）。如果从未启用过开发模式，则此值为0。
@@ -205,6 +214,7 @@ public class Zone  implements java.io.Serializable {
         this.development_mode = development_mode;
     }
 
+
     /**
      * get verification_key
      *
@@ -222,6 +232,7 @@ public class Zone  implements java.io.Serializable {
     public void setVerification_key(String verification_key) {
         this.verification_key = verification_key;
     }
+
 
     /**
      * get plan
@@ -241,23 +252,25 @@ public class Zone  implements java.io.Serializable {
         this.plan = plan;
     }
 
+
     /**
-     * get 迁移到星盾之前的原始域名服务器
-     *
-     * @return
-     */
+    * get 迁移到星盾之前的原始域名服务器
+    *
+    * @return
+    */
     public List<String> getOriginal_name_servers() {
         return original_name_servers;
     }
 
     /**
-     * set 迁移到星盾之前的原始域名服务器
-     *
-     * @param original_name_servers
-     */
+    * set 迁移到星盾之前的原始域名服务器
+    *
+    * @param original_name_servers
+    */
     public void setOriginal_name_servers(List<String> original_name_servers) {
         this.original_name_servers = original_name_servers;
     }
+
 
     /**
      * get 域名
@@ -277,6 +290,7 @@ public class Zone  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get account
      *
@@ -294,6 +308,7 @@ public class Zone  implements java.io.Serializable {
     public void setAccount(Account account) {
         this.account = account;
     }
+
 
     /**
      * get 最后一次检测到所有权证明和该域激活的时间
@@ -313,6 +328,7 @@ public class Zone  implements java.io.Serializable {
         this.activated_on = activated_on;
     }
 
+
     /**
      * get 指示域是否仅使用星盾DNS服务。如果值为真，则表示该域将不会获得安全或性能方面的好处。
      *
@@ -330,6 +346,7 @@ public class Zone  implements java.io.Serializable {
     public void setPaused(Boolean paused) {
         this.paused = paused;
     }
+
 
     /**
      * get 域的状态
@@ -349,6 +366,7 @@ public class Zone  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get owner
      *
@@ -366,6 +384,7 @@ public class Zone  implements java.io.Serializable {
     public void setOwner(Owner owner) {
         this.owner = owner;
     }
+
 
     /**
      * get 上次修改域的时间
@@ -385,6 +404,7 @@ public class Zone  implements java.io.Serializable {
         this.modified_on = modified_on;
     }
 
+
     /**
      * get 创建域的时间
      *
@@ -402,6 +422,7 @@ public class Zone  implements java.io.Serializable {
     public void setCreated_on(String created_on) {
         this.created_on = created_on;
     }
+
 
     /**
      * get 全接入的域意味着DNS由星盾托管。半接入的域通常是合作伙伴托管的域或CNAME设置。
@@ -421,6 +442,7 @@ public class Zone  implements java.io.Serializable {
         this.ty_pe = ty_pe;
     }
 
+
     /**
      * get 域标识符标签
      *
@@ -439,23 +461,25 @@ public class Zone  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
-     * get 星盾分配的域名服务器。这仅适用于使用星盾DNS的域
-     *
-     * @return
-     */
+    * get 星盾分配的域名服务器。这仅适用于使用星盾DNS的域
+    *
+    * @return
+    */
     public List<String> getName_servers() {
         return name_servers;
     }
 
     /**
-     * set 星盾分配的域名服务器。这仅适用于使用星盾DNS的域
-     *
-     * @param name_servers
-     */
+    * set 星盾分配的域名服务器。这仅适用于使用星盾DNS的域
+    *
+    * @param name_servers
+    */
     public void setName_servers(List<String> name_servers) {
         this.name_servers = name_servers;
     }
+
 
     /**
      * get 切换到星盾时的域注册商
@@ -477,6 +501,26 @@ public class Zone  implements java.io.Serializable {
 
 
     /**
+     * get cname解析状态。0为解析到云端VIP，1为解析到回源地址
+     *
+     * @return
+     */
+    public Integer getEnableCname2Rs() {
+        return enableCname2Rs;
+    }
+
+    /**
+     * set cname解析状态。0为解析到云端VIP，1为解析到回源地址
+     *
+     * @param enableCname2Rs
+     */
+    public void setEnableCname2Rs(Integer enableCname2Rs) {
+        this.enableCname2Rs = enableCname2Rs;
+    }
+
+
+
+    /**
      * set plan_pending
      *
      * @param plan_pending
@@ -485,6 +529,7 @@ public class Zone  implements java.io.Serializable {
         this.plan_pending = plan_pending;
         return this;
     }
+
 
     /**
      * set 切换到星盾时的DNS主机
@@ -496,15 +541,17 @@ public class Zone  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 当前用户在域上的可用权限
-     *
-     * @param permissions
-     */
+    * set 当前用户在域上的可用权限
+    *
+    * @param permissions
+    */
     public Zone permissions(List<String> permissions) {
         this.permissions = permissions;
         return this;
     }
+
 
     /**
      * set 域的开发模式过期（正整数）或上次过期（负整数）的时间间隔（秒）。如果从未启用过开发模式，则此值为0。
@@ -517,6 +564,7 @@ public class Zone  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set verification_key
      *
@@ -526,6 +574,7 @@ public class Zone  implements java.io.Serializable {
         this.verification_key = verification_key;
         return this;
     }
+
 
     /**
      * set plan
@@ -537,15 +586,17 @@ public class Zone  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 迁移到星盾之前的原始域名服务器
-     *
-     * @param original_name_servers
-     */
+    * set 迁移到星盾之前的原始域名服务器
+    *
+    * @param original_name_servers
+    */
     public Zone original_name_servers(List<String> original_name_servers) {
         this.original_name_servers = original_name_servers;
         return this;
     }
+
 
     /**
      * set 域名
@@ -557,6 +608,7 @@ public class Zone  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set account
      *
@@ -566,6 +618,7 @@ public class Zone  implements java.io.Serializable {
         this.account = account;
         return this;
     }
+
 
     /**
      * set 最后一次检测到所有权证明和该域激活的时间
@@ -577,6 +630,7 @@ public class Zone  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 指示域是否仅使用星盾DNS服务。如果值为真，则表示该域将不会获得安全或性能方面的好处。
      *
@@ -586,6 +640,7 @@ public class Zone  implements java.io.Serializable {
         this.paused = paused;
         return this;
     }
+
 
     /**
      * set 域的状态
@@ -597,6 +652,7 @@ public class Zone  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set owner
      *
@@ -606,6 +662,7 @@ public class Zone  implements java.io.Serializable {
         this.owner = owner;
         return this;
     }
+
 
     /**
      * set 上次修改域的时间
@@ -617,6 +674,7 @@ public class Zone  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建域的时间
      *
@@ -626,6 +684,7 @@ public class Zone  implements java.io.Serializable {
         this.created_on = created_on;
         return this;
     }
+
 
     /**
      * set 全接入的域意味着DNS由星盾托管。半接入的域通常是合作伙伴托管的域或CNAME设置。
@@ -637,6 +696,7 @@ public class Zone  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域标识符标签
      *
@@ -647,15 +707,17 @@ public class Zone  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 星盾分配的域名服务器。这仅适用于使用星盾DNS的域
-     *
-     * @param name_servers
-     */
+    * set 星盾分配的域名服务器。这仅适用于使用星盾DNS的域
+    *
+    * @param name_servers
+    */
     public Zone name_servers(List<String> name_servers) {
         this.name_servers = name_servers;
         return this;
     }
+
 
     /**
      * set 切换到星盾时的域注册商
@@ -666,6 +728,18 @@ public class Zone  implements java.io.Serializable {
         this.original_registrar = original_registrar;
         return this;
     }
+
+
+    /**
+     * set cname解析状态。0为解析到云端VIP，1为解析到回源地址
+     *
+     * @param enableCname2Rs
+     */
+    public Zone enableCname2Rs(Integer enableCname2Rs) {
+        this.enableCname2Rs = enableCname2Rs;
+        return this;
+    }
+
 
 
     /**
@@ -703,5 +777,4 @@ public class Zone  implements java.io.Serializable {
         }
         this.name_servers.add(name_server);
     }
-
 }

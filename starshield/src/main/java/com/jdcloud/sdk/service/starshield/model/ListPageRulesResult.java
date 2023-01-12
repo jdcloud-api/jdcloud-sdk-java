@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Page Rules for a Zone
+ * Page-Rules-for-a-Zone
  * A rule describing target patterns for requests and actions to perform on matching requests
  *
  * OpenAPI spec version: v1
@@ -39,37 +39,40 @@ public class ListPageRulesResult extends JdcloudResult implements java.io.Serial
     /**
      * dataList
      */
+    
     private List<PageRule> dataList;
 
 
     /**
-     * get dataList
-     *
-     * @return
-     */
+    * get dataList
+    *
+    * @return
+    */
     public List<PageRule> getDataList() {
         return dataList;
     }
 
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public void setDataList(List<PageRule> dataList) {
         this.dataList = dataList;
     }
 
 
+
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public ListPageRulesResult dataList(List<PageRule> dataList) {
         this.dataList = dataList;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class ListPageRulesResult extends JdcloudResult implements java.io.Serial
         }
         this.dataList.add(dataList);
     }
-
 }

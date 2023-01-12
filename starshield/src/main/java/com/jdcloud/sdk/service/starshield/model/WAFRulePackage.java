@@ -73,6 +73,7 @@ public class WAFRulePackage  implements java.io.Serializable {
     private String action_mode;
 
 
+
     /**
      * get WAF包标识符标签
      *
@@ -90,6 +91,7 @@ public class WAFRulePackage  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get 防火墙包的名称
@@ -109,6 +111,7 @@ public class WAFRulePackage  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 防火墙包的目的/功能摘要
      *
@@ -126,6 +129,7 @@ public class WAFRulePackage  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get detection_mode
@@ -145,6 +149,7 @@ public class WAFRulePackage  implements java.io.Serializable {
         this.detection_mode = detection_mode;
     }
 
+
     /**
      * get 区标识符标签
      *
@@ -162,6 +167,7 @@ public class WAFRulePackage  implements java.io.Serializable {
     public void setZone_id(String zone_id) {
         this.zone_id = zone_id;
     }
+
 
     /**
      * get 指示对域应用防火墙包。
@@ -181,6 +187,7 @@ public class WAFRulePackage  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 防火墙包的敏感度。
      *
@@ -198,6 +205,7 @@ public class WAFRulePackage  implements java.io.Serializable {
     public void setSensitivity(String sensitivity) {
         this.sensitivity = sensitivity;
     }
+
 
     /**
      * get 将对防火墙包下的规则执行的默认操作。
@@ -218,6 +226,7 @@ public class WAFRulePackage  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF包标识符标签
      *
@@ -227,6 +236,7 @@ public class WAFRulePackage  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 防火墙包的名称
@@ -238,6 +248,7 @@ public class WAFRulePackage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 防火墙包的目的/功能摘要
      *
@@ -247,6 +258,7 @@ public class WAFRulePackage  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set detection_mode
@@ -258,6 +270,7 @@ public class WAFRulePackage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 区标识符标签
      *
@@ -267,6 +280,7 @@ public class WAFRulePackage  implements java.io.Serializable {
         this.zone_id = zone_id;
         return this;
     }
+
 
     /**
      * set 指示对域应用防火墙包。
@@ -278,6 +292,7 @@ public class WAFRulePackage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 防火墙包的敏感度。
      *
@@ -287,6 +302,7 @@ public class WAFRulePackage  implements java.io.Serializable {
         this.sensitivity = sensitivity;
         return this;
     }
+
 
     /**
      * set 将对防火墙包下的规则执行的默认操作。

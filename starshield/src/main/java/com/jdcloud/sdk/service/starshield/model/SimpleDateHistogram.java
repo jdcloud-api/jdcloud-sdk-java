@@ -35,76 +35,101 @@ public class SimpleDateHistogram  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * dataSeries
-     */
-    private List<Number> dataSeries;
+     * 数据点集合。
+如果是带宽，数据点的单位是bps（bit per second）
+如果是流量，数据点的单位是Byte
+如果是请求量，数据点的单位是次数
 
-    /**
-     * timeSeries
      */
+    
+    private List<Number> dataSeries;
+    /**
+     * 时间点集合。时间点的值为时间戳对应的long值。
+     */
+    
     private List<Number> timeSeries;
 
 
     /**
-     * get dataSeries
-     *
-     * @return
-     */
+    * get 数据点集合。
+如果是带宽，数据点的单位是bps（bit per second）
+如果是流量，数据点的单位是Byte
+如果是请求量，数据点的单位是次数
+
+    *
+    * @return
+    */
     public List<Number> getDataSeries() {
         return dataSeries;
     }
 
     /**
-     * set dataSeries
-     *
-     * @param dataSeries
-     */
+    * set 数据点集合。
+如果是带宽，数据点的单位是bps（bit per second）
+如果是流量，数据点的单位是Byte
+如果是请求量，数据点的单位是次数
+
+    *
+    * @param dataSeries
+    */
     public void setDataSeries(List<Number> dataSeries) {
         this.dataSeries = dataSeries;
     }
 
+
     /**
-     * get timeSeries
-     *
-     * @return
-     */
+    * get 时间点集合。时间点的值为时间戳对应的long值。
+    *
+    * @return
+    */
     public List<Number> getTimeSeries() {
         return timeSeries;
     }
 
     /**
-     * set timeSeries
-     *
-     * @param timeSeries
-     */
+    * set 时间点集合。时间点的值为时间戳对应的long值。
+    *
+    * @param timeSeries
+    */
     public void setTimeSeries(List<Number> timeSeries) {
         this.timeSeries = timeSeries;
     }
 
 
+
     /**
-     * set dataSeries
-     *
-     * @param dataSeries
-     */
+    * set 数据点集合。
+如果是带宽，数据点的单位是bps（bit per second）
+如果是流量，数据点的单位是Byte
+如果是请求量，数据点的单位是次数
+
+    *
+    * @param dataSeries
+    */
     public SimpleDateHistogram dataSeries(List<Number> dataSeries) {
         this.dataSeries = dataSeries;
         return this;
     }
 
+
     /**
-     * set timeSeries
-     *
-     * @param timeSeries
-     */
+    * set 时间点集合。时间点的值为时间戳对应的long值。
+    *
+    * @param timeSeries
+    */
     public SimpleDateHistogram timeSeries(List<Number> timeSeries) {
         this.timeSeries = timeSeries;
         return this;
     }
 
 
+
     /**
-     * add item to dataSeries
+     * add item to 数据点集合。
+如果是带宽，数据点的单位是bps（bit per second）
+如果是流量，数据点的单位是Byte
+如果是请求量，数据点的单位是次数
+
      *
      * @param dataSerie
      */
@@ -116,7 +141,7 @@ public class SimpleDateHistogram  implements java.io.Serializable {
     }
 
     /**
-     * add item to timeSeries
+     * add item to 时间点集合。时间点的值为时间戳对应的long值。
      *
      * @param timeSerie
      */
@@ -126,5 +151,4 @@ public class SimpleDateHistogram  implements java.io.Serializable {
         }
         this.timeSeries.add(timeSerie);
     }
-
 }

@@ -44,6 +44,7 @@ public class PurgeFilesByURLResult extends JdcloudResult implements java.io.Seri
     private Zone data;
 
 
+
     /**
      * get data
      *
@@ -61,6 +62,7 @@ public class PurgeFilesByURLResult extends JdcloudResult implements java.io.Seri
     public void setData(Zone data) {
         this.data = data;
     }
+
 
 
     /**

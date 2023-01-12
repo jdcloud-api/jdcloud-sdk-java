@@ -49,6 +49,7 @@ public class DescribeInstanceByOrderNoRequest extends JdcloudRequest implements 
     private String orderNumber;
 
 
+
     /**
      * get 地域ID
      *
@@ -66,6 +67,7 @@ public class DescribeInstanceByOrderNoRequest extends JdcloudRequest implements 
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get orderNumber
@@ -86,6 +88,7 @@ public class DescribeInstanceByOrderNoRequest extends JdcloudRequest implements 
     }
 
 
+
     /**
      * set 地域ID
      *
@@ -95,6 +98,7 @@ public class DescribeInstanceByOrderNoRequest extends JdcloudRequest implements 
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set orderNumber

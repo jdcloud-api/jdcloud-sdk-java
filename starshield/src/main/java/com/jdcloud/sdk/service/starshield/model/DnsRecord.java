@@ -108,6 +108,7 @@ public class DnsRecord  implements java.io.Serializable {
     private Number priority;
 
 
+
     /**
      * get meta
      *
@@ -125,6 +126,7 @@ public class DnsRecord  implements java.io.Serializable {
     public void setMeta(Meta meta) {
         this.meta = meta;
     }
+
 
     /**
      * get 此记录是否可以被修改/删除（true意味着它由星盾管理）。
@@ -144,6 +146,7 @@ public class DnsRecord  implements java.io.Serializable {
         this.locked = locked;
     }
 
+
     /**
      * get data
      *
@@ -161,6 +164,7 @@ public class DnsRecord  implements java.io.Serializable {
     public void setData(Data data) {
         this.data = data;
     }
+
 
     /**
      * get DNS记录名称
@@ -180,6 +184,7 @@ public class DnsRecord  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get DNS记录的生存时间。值为1是 &quot;自动&quot;。
      *
@@ -197,6 +202,7 @@ public class DnsRecord  implements java.io.Serializable {
     public void setTtl(Number ttl) {
         this.ttl = ttl;
     }
+
 
     /**
      * get 域标识符标签
@@ -216,6 +222,7 @@ public class DnsRecord  implements java.io.Serializable {
         this.zone_id = zone_id;
     }
 
+
     /**
      * get 记录最近修改时间
      *
@@ -233,6 +240,7 @@ public class DnsRecord  implements java.io.Serializable {
     public void setModified_on(String modified_on) {
         this.modified_on = modified_on;
     }
+
 
     /**
      * get 创建记录时间
@@ -252,6 +260,7 @@ public class DnsRecord  implements java.io.Serializable {
         this.created_on = created_on;
     }
 
+
     /**
      * get 记录是否由星盾代理
      *
@@ -269,6 +278,7 @@ public class DnsRecord  implements java.io.Serializable {
     public void setProxiable(Boolean proxiable) {
         this.proxiable = proxiable;
     }
+
 
     /**
      * get 有效的IPv4地址
@@ -288,6 +298,7 @@ public class DnsRecord  implements java.io.Serializable {
         this.content = content;
     }
 
+
     /**
      * get 记录类型
      *
@@ -305,6 +316,7 @@ public class DnsRecord  implements java.io.Serializable {
     public void setTy_pe(String ty_pe) {
         this.ty_pe = ty_pe;
     }
+
 
     /**
      * get DNS记录标识符标签
@@ -324,6 +336,7 @@ public class DnsRecord  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 是否利用星盾的性能和安全优势
      *
@@ -342,6 +355,7 @@ public class DnsRecord  implements java.io.Serializable {
         this.proxied = proxied;
     }
 
+
     /**
      * get 记录的域名
      *
@@ -359,6 +373,7 @@ public class DnsRecord  implements java.io.Serializable {
     public void setZone_name(String zone_name) {
         this.zone_name = zone_name;
     }
+
 
     /**
      * get 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
@@ -379,6 +394,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
 
+
     /**
      * set meta
      *
@@ -388,6 +404,7 @@ public class DnsRecord  implements java.io.Serializable {
         this.meta = meta;
         return this;
     }
+
 
     /**
      * set 此记录是否可以被修改/删除（true意味着它由星盾管理）。
@@ -399,6 +416,7 @@ public class DnsRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set data
      *
@@ -408,6 +426,7 @@ public class DnsRecord  implements java.io.Serializable {
         this.data = data;
         return this;
     }
+
 
     /**
      * set DNS记录名称
@@ -419,6 +438,7 @@ public class DnsRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set DNS记录的生存时间。值为1是 &quot;自动&quot;。
      *
@@ -428,6 +448,7 @@ public class DnsRecord  implements java.io.Serializable {
         this.ttl = ttl;
         return this;
     }
+
 
     /**
      * set 域标识符标签
@@ -439,6 +460,7 @@ public class DnsRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 记录最近修改时间
      *
@@ -448,6 +470,7 @@ public class DnsRecord  implements java.io.Serializable {
         this.modified_on = modified_on;
         return this;
     }
+
 
     /**
      * set 创建记录时间
@@ -459,6 +482,7 @@ public class DnsRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 记录是否由星盾代理
      *
@@ -468,6 +492,7 @@ public class DnsRecord  implements java.io.Serializable {
         this.proxiable = proxiable;
         return this;
     }
+
 
     /**
      * set 有效的IPv4地址
@@ -479,6 +504,7 @@ public class DnsRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 记录类型
      *
@@ -488,6 +514,7 @@ public class DnsRecord  implements java.io.Serializable {
         this.ty_pe = ty_pe;
         return this;
     }
+
 
     /**
      * set DNS记录标识符标签
@@ -499,6 +526,7 @@ public class DnsRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否利用星盾的性能和安全优势
      *
@@ -509,6 +537,7 @@ public class DnsRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 记录的域名
      *
@@ -518,6 +547,7 @@ public class DnsRecord  implements java.io.Serializable {
         this.zone_name = zone_name;
         return this;
     }
+
 
     /**
      * set 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。

@@ -58,6 +58,7 @@ public class DevelopmentMode  implements java.io.Serializable {
     private Number time_remaining;
 
 
+
     /**
      * get 域设置的ID
      *
@@ -75,6 +76,7 @@ public class DevelopmentMode  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get on - 开启；off - 关闭
@@ -94,6 +96,7 @@ public class DevelopmentMode  implements java.io.Serializable {
         this.value = value;
     }
 
+
     /**
      * get 该配置是否可以修改
      *
@@ -112,6 +115,7 @@ public class DevelopmentMode  implements java.io.Serializable {
         this.editable = editable;
     }
 
+
     /**
      * get 上次修改此设置的时间
      *
@@ -129,6 +133,7 @@ public class DevelopmentMode  implements java.io.Serializable {
     public void setModified_on(String modified_on) {
         this.modified_on = modified_on;
     }
+
 
     /**
      * get time_remaining
@@ -149,6 +154,7 @@ public class DevelopmentMode  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 域设置的ID
      *
@@ -158,6 +164,7 @@ public class DevelopmentMode  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set on - 开启；off - 关闭
@@ -169,6 +176,7 @@ public class DevelopmentMode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 该配置是否可以修改
      *
@@ -179,6 +187,7 @@ public class DevelopmentMode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 上次修改此设置的时间
      *
@@ -188,6 +197,7 @@ public class DevelopmentMode  implements java.io.Serializable {
         this.modified_on = modified_on;
         return this;
     }
+
 
     /**
      * set time_remaining

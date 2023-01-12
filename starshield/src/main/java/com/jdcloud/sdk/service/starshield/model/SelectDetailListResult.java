@@ -38,37 +38,40 @@ public class SelectDetailListResult extends JdcloudResult implements java.io.Ser
     /**
      * data
      */
+    
     private List<Object> data;
 
 
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<Object> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<Object> data) {
         this.data = data;
     }
 
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public SelectDetailListResult data(List<Object> data) {
         this.data = data;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class SelectDetailListResult extends JdcloudResult implements java.io.Ser
         }
         this.data.add(data);
     }
-
 }

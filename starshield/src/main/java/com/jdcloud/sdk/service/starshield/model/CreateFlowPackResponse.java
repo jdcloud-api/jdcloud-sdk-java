@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.starshield.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 购买流量包
+ * 购买流量包，调用成功，将自动扣费（请保证账户充足，否则无法成功创建流量包）。
+
  */
 public class CreateFlowPackResponse extends JdcloudResponse<CreateFlowPackResult> implements java.io.Serializable {
 

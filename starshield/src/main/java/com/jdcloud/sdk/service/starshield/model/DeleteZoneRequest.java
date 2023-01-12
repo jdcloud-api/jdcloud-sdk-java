@@ -42,6 +42,7 @@ public class DeleteZoneRequest extends JdcloudRequest implements java.io.Seriali
     private String identifier;
 
 
+
     /**
      * get identifier
      *
@@ -59,6 +60,7 @@ public class DeleteZoneRequest extends JdcloudRequest implements java.io.Seriali
     public void setIdentifier(String identifier) {
         this.identifier = identifier;
     }
+
 
 
     /**

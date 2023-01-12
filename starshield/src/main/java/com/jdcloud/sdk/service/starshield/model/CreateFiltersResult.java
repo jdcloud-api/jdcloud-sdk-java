@@ -39,37 +39,40 @@ public class CreateFiltersResult extends JdcloudResult implements java.io.Serial
     /**
      * dataList
      */
+    
     private List<Filter> dataList;
 
 
     /**
-     * get dataList
-     *
-     * @return
-     */
+    * get dataList
+    *
+    * @return
+    */
     public List<Filter> getDataList() {
         return dataList;
     }
 
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public void setDataList(List<Filter> dataList) {
         this.dataList = dataList;
     }
 
 
+
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public CreateFiltersResult dataList(List<Filter> dataList) {
         this.dataList = dataList;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class CreateFiltersResult extends JdcloudResult implements java.io.Serial
         }
         this.dataList.add(dataList);
     }
-
 }

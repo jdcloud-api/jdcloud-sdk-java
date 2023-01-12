@@ -53,15 +53,26 @@ public class CustomSSL  implements java.io.Serializable {
     /**
      * hosts
      */
+    
     private List<String> hosts;
-
     /**
      * 域标识符标签
      */
     private String zone_id;
 
     /**
-     * 域的自定义SSL的状态
+     * 域的自定义SSL的状态，
+active              激活
+expired             已过期
+deleted             已删除
+pending             待处理
+pending_validation  待验证
+pending_issuance    待签发
+pending_deployment  待部署
+holding_deployment  等待部署
+initializing        初始化
+inactive            未激活
+
      */
     private String status;
 
@@ -96,12 +107,14 @@ public class CustomSSL  implements java.io.Serializable {
     private String uploaded_on;
 
     /**
-     * SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
-最佳捆绑使用最短的认证链和最新的中间证书。
-而强制捆绑会验证证书链，但不以其他方式修改证书链。
+     * 合法值ubiquitous/optimal/force，默认值ubiquitous。
+ubiquitous：SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
+optimal：最佳捆绑使用最短的认证链和最新的中间证书。
+force：强制捆绑会验证证书链，但不以其他方式修改证书链。
 
      */
     private String bundle_method;
+
 
 
     /**
@@ -124,6 +137,7 @@ public class CustomSSL  implements java.io.Serializable {
         this.priority = priority;
     }
 
+
     /**
      * get keyless_server
      *
@@ -141,6 +155,7 @@ public class CustomSSL  implements java.io.Serializable {
     public void setKeyless_server(Keyless_server keyless_server) {
         this.keyless_server = keyless_server;
     }
+
 
     /**
      * get 来自授权机构的证书过期时间
@@ -160,23 +175,25 @@ public class CustomSSL  implements java.io.Serializable {
         this.expires_on = expires_on;
     }
 
+
     /**
-     * get hosts
-     *
-     * @return
-     */
+    * get hosts
+    *
+    * @return
+    */
     public List<String> getHosts() {
         return hosts;
     }
 
     /**
-     * set hosts
-     *
-     * @param hosts
-     */
+    * set hosts
+    *
+    * @param hosts
+    */
     public void setHosts(List<String> hosts) {
         this.hosts = hosts;
     }
+
 
     /**
      * get 域标识符标签
@@ -196,8 +213,20 @@ public class CustomSSL  implements java.io.Serializable {
         this.zone_id = zone_id;
     }
 
+
     /**
-     * get 域的自定义SSL的状态
+     * get 域的自定义SSL的状态，
+active              激活
+expired             已过期
+deleted             已删除
+pending             待处理
+pending_validation  待验证
+pending_issuance    待签发
+pending_deployment  待部署
+holding_deployment  等待部署
+initializing        初始化
+inactive            未激活
+
      *
      * @return
      */
@@ -206,13 +235,25 @@ public class CustomSSL  implements java.io.Serializable {
     }
 
     /**
-     * set 域的自定义SSL的状态
+     * set 域的自定义SSL的状态，
+active              激活
+expired             已过期
+deleted             已删除
+pending             待处理
+pending_validation  待验证
+pending_issuance    待签发
+pending_deployment  待部署
+holding_deployment  等待部署
+initializing        初始化
+inactive            未激活
+
      *
      * @param status
      */
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get geo_restrictions
@@ -232,6 +273,7 @@ public class CustomSSL  implements java.io.Serializable {
         this.geo_restrictions = geo_restrictions;
     }
 
+
     /**
      * get 上次修改证书的时间
      *
@@ -249,6 +291,7 @@ public class CustomSSL  implements java.io.Serializable {
     public void setModified_on(String modified_on) {
         this.modified_on = modified_on;
     }
+
 
     /**
      * get 用于证书的哈希类型
@@ -268,6 +311,7 @@ public class CustomSSL  implements java.io.Serializable {
         this.signature = signature;
     }
 
+
     /**
      * get 颁发证书的证书颁发机构
      *
@@ -285,6 +329,7 @@ public class CustomSSL  implements java.io.Serializable {
     public void setIssuer(String issuer) {
         this.issuer = issuer;
     }
+
 
     /**
      * get 自定义证书标识符标签
@@ -304,6 +349,7 @@ public class CustomSSL  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 证书上载到星盾的时间
      *
@@ -322,10 +368,12 @@ public class CustomSSL  implements java.io.Serializable {
         this.uploaded_on = uploaded_on;
     }
 
+
     /**
-     * get SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
-最佳捆绑使用最短的认证链和最新的中间证书。
-而强制捆绑会验证证书链，但不以其他方式修改证书链。
+     * get 合法值ubiquitous/optimal/force，默认值ubiquitous。
+ubiquitous：SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
+optimal：最佳捆绑使用最短的认证链和最新的中间证书。
+force：强制捆绑会验证证书链，但不以其他方式修改证书链。
 
      *
      * @return
@@ -335,9 +383,10 @@ public class CustomSSL  implements java.io.Serializable {
     }
 
     /**
-     * set SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
-最佳捆绑使用最短的认证链和最新的中间证书。
-而强制捆绑会验证证书链，但不以其他方式修改证书链。
+     * set 合法值ubiquitous/optimal/force，默认值ubiquitous。
+ubiquitous：SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
+optimal：最佳捆绑使用最短的认证链和最新的中间证书。
+force：强制捆绑会验证证书链，但不以其他方式修改证书链。
 
      *
      * @param bundle_method
@@ -345,6 +394,7 @@ public class CustomSSL  implements java.io.Serializable {
     public void setBundle_method(String bundle_method) {
         this.bundle_method = bundle_method;
     }
+
 
 
     /**
@@ -358,6 +408,7 @@ public class CustomSSL  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set keyless_server
      *
@@ -367,6 +418,7 @@ public class CustomSSL  implements java.io.Serializable {
         this.keyless_server = keyless_server;
         return this;
     }
+
 
     /**
      * set 来自授权机构的证书过期时间
@@ -378,15 +430,17 @@ public class CustomSSL  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set hosts
-     *
-     * @param hosts
-     */
+    * set hosts
+    *
+    * @param hosts
+    */
     public CustomSSL hosts(List<String> hosts) {
         this.hosts = hosts;
         return this;
     }
+
 
     /**
      * set 域标识符标签
@@ -398,8 +452,20 @@ public class CustomSSL  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 域的自定义SSL的状态
+     * set 域的自定义SSL的状态，
+active              激活
+expired             已过期
+deleted             已删除
+pending             待处理
+pending_validation  待验证
+pending_issuance    待签发
+pending_deployment  待部署
+holding_deployment  等待部署
+initializing        初始化
+inactive            未激活
+
      *
      * @param status
      */
@@ -407,6 +473,7 @@ public class CustomSSL  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set geo_restrictions
@@ -418,6 +485,7 @@ public class CustomSSL  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 上次修改证书的时间
      *
@@ -427,6 +495,7 @@ public class CustomSSL  implements java.io.Serializable {
         this.modified_on = modified_on;
         return this;
     }
+
 
     /**
      * set 用于证书的哈希类型
@@ -438,6 +507,7 @@ public class CustomSSL  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 颁发证书的证书颁发机构
      *
@@ -447,6 +517,7 @@ public class CustomSSL  implements java.io.Serializable {
         this.issuer = issuer;
         return this;
     }
+
 
     /**
      * set 自定义证书标识符标签
@@ -458,6 +529,7 @@ public class CustomSSL  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 证书上载到星盾的时间
      *
@@ -468,10 +540,12 @@ public class CustomSSL  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
-最佳捆绑使用最短的认证链和最新的中间证书。
-而强制捆绑会验证证书链，但不以其他方式修改证书链。
+     * set 合法值ubiquitous/optimal/force，默认值ubiquitous。
+ubiquitous：SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
+optimal：最佳捆绑使用最短的认证链和最新的中间证书。
+force：强制捆绑会验证证书链，但不以其他方式修改证书链。
 
      *
      * @param bundle_method
@@ -480,6 +554,7 @@ public class CustomSSL  implements java.io.Serializable {
         this.bundle_method = bundle_method;
         return this;
     }
+
 
 
     /**
@@ -493,5 +568,4 @@ public class CustomSSL  implements java.io.Serializable {
         }
         this.hosts.add(host);
     }
-
 }

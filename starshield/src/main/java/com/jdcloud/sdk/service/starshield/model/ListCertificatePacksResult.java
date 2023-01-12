@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Certificate Packs
+ * Certificate-Packs
  * Certificate Packs
  *
  * OpenAPI spec version: v1
@@ -39,37 +39,40 @@ public class ListCertificatePacksResult extends JdcloudResult implements java.io
     /**
      * dataList
      */
+    
     private List<CertificatePack> dataList;
 
 
     /**
-     * get dataList
-     *
-     * @return
-     */
+    * get dataList
+    *
+    * @return
+    */
     public List<CertificatePack> getDataList() {
         return dataList;
     }
 
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public void setDataList(List<CertificatePack> dataList) {
         this.dataList = dataList;
     }
 
 
+
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public ListCertificatePacksResult dataList(List<CertificatePack> dataList) {
         this.dataList = dataList;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class ListCertificatePacksResult extends JdcloudResult implements java.io
         }
         this.dataList.add(dataList);
     }
-
 }

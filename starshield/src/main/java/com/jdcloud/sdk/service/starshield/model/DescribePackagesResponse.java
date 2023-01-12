@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 套餐包管理模块
+ * Pack-Manage
  * 套餐包管理模块
  *
  * OpenAPI spec version: v1

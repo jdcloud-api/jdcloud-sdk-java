@@ -27,20 +27,22 @@ package com.jdcloud.sdk.service.starshield.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 购买流量包
+ * 购买流量包，调用成功，将自动扣费（请保证账户充足，否则无法成功创建流量包）。
+
  */
 public class CreateFlowPackResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 购买ID
+     * 购买ID，购买ID，可通过调用describeInstanceByOrderNo接口获取流量包实例详情
      */
     private String buyId;
 
 
+
     /**
-     * get 购买ID
+     * get 购买ID，购买ID，可通过调用describeInstanceByOrderNo接口获取流量包实例详情
      *
      * @return
      */
@@ -49,7 +51,7 @@ public class CreateFlowPackResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set 购买ID
+     * set 购买ID，购买ID，可通过调用describeInstanceByOrderNo接口获取流量包实例详情
      *
      * @param buyId
      */
@@ -58,8 +60,9 @@ public class CreateFlowPackResult extends JdcloudResult implements java.io.Seria
     }
 
 
+
     /**
-     * set 购买ID
+     * set 购买ID，购买ID，可通过调用describeInstanceByOrderNo接口获取流量包实例详情
      *
      * @param buyId
      */

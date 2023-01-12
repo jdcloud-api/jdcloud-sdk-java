@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 套餐包管理模块
+ * Pack-Manage
  * 套餐包管理模块
  *
  * OpenAPI spec version: v1
@@ -40,6 +40,7 @@ public class DescribePackageResult extends JdcloudResult implements java.io.Seri
     private DescribePackRes describePackRes;
 
 
+
     /**
      * get describePackRes
      *
@@ -57,6 +58,7 @@ public class DescribePackageResult extends JdcloudResult implements java.io.Seri
     public void setDescribePackRes(DescribePackRes describePackRes) {
         this.describePackRes = describePackRes;
     }
+
 
 
     /**

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * DNS Records for a Zone
+ * DNS-Record-Service
  * Documentation for JDC StarShield DNS records
  *
  * OpenAPI spec version: v1
@@ -97,6 +97,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
     private String identifier;
 
 
+
     /**
      * get DNS记录类型
      *
@@ -114,6 +115,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
     public void setTy_pe(String ty_pe) {
         this.ty_pe = ty_pe;
     }
+
 
     /**
      * get DNS记录名称
@@ -133,6 +135,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.name = name;
     }
 
+
     /**
      * get DNS记录内容
      *
@@ -150,6 +153,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
     public void setContent(String content) {
         this.content = content;
     }
+
 
     /**
      * get DNS记录的生存时间。值为1是 &quot;自动&quot;。
@@ -169,6 +173,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.ttl = ttl;
     }
 
+
     /**
      * get 是否利用星盾的性能和安全优势
      *
@@ -186,6 +191,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
     public void setProxied(Boolean proxied) {
         this.proxied = proxied;
     }
+
 
     /**
      * get 如果是MX记录，该属性是必需的
@@ -205,6 +211,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.priority = priority;
     }
 
+
     /**
      * get srvData
      *
@@ -222,6 +229,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
     public void setSrvData(SRVdata srvData) {
         this.srvData = srvData;
     }
+
 
     /**
      * get caaData
@@ -241,6 +249,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.caaData = caaData;
     }
 
+
     /**
      * get zone_identifier
      *
@@ -258,6 +267,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
     /**
      * get identifier
@@ -278,6 +288,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set DNS记录类型
      *
@@ -287,6 +298,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.ty_pe = ty_pe;
         return this;
     }
+
 
     /**
      * set DNS记录名称
@@ -298,6 +310,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set DNS记录内容
      *
@@ -307,6 +320,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.content = content;
         return this;
     }
+
 
     /**
      * set DNS记录的生存时间。值为1是 &quot;自动&quot;。
@@ -318,6 +332,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 是否利用星盾的性能和安全优势
      *
@@ -327,6 +342,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.proxied = proxied;
         return this;
     }
+
 
     /**
      * set 如果是MX记录，该属性是必需的
@@ -338,6 +354,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set srvData
      *
@@ -347,6 +364,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.srvData = srvData;
         return this;
     }
+
 
     /**
      * set caaData
@@ -358,6 +376,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set zone_identifier
      *
@@ -367,6 +386,7 @@ public class UpdateDNSRecordRequest extends JdcloudRequest implements java.io.Se
         this.zone_identifier = zone_identifier;
         return this;
     }
+
 
     /**
      * set identifier

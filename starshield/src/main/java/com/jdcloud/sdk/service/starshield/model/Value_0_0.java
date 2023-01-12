@@ -48,6 +48,7 @@ public class Value_0_0  implements java.io.Serializable {
     private String js;
 
 
+
     /**
      * get 为你的网站自动最小化所有的CSS
      *
@@ -66,6 +67,7 @@ public class Value_0_0  implements java.io.Serializable {
         this.css = css;
     }
 
+
     /**
      * get 为你的网站自动最小化所有的HTML
      *
@@ -83,6 +85,7 @@ public class Value_0_0  implements java.io.Serializable {
     public void setHtml(String html) {
         this.html = html;
     }
+
 
     /**
      * get 为你的网站自动最小化所有的JavaScript
@@ -103,6 +106,7 @@ public class Value_0_0  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 为你的网站自动最小化所有的CSS
      *
@@ -113,6 +117,7 @@ public class Value_0_0  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 为你的网站自动最小化所有的HTML
      *
@@ -122,6 +127,7 @@ public class Value_0_0  implements java.io.Serializable {
         this.html = html;
         return this;
     }
+
 
     /**
      * set 为你的网站自动最小化所有的JavaScript

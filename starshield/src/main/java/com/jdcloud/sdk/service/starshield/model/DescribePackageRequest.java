@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 套餐包管理模块
+ * Pack-Manage
  * 套餐包管理模块
  *
  * OpenAPI spec version: v1
@@ -49,6 +49,7 @@ public class DescribePackageRequest extends JdcloudRequest implements java.io.Se
     private Integer packType;
 
 
+
     /**
      * get 地域ID
      *
@@ -66,6 +67,7 @@ public class DescribePackageRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 套餐类型
@@ -86,6 +88,7 @@ public class DescribePackageRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 地域ID
      *
@@ -95,6 +98,7 @@ public class DescribePackageRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 套餐类型

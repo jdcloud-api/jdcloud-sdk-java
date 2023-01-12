@@ -38,6 +38,7 @@ public class Action_parameters  implements java.io.Serializable {
     private Uri uri;
 
 
+
     /**
      * get uri
      *
@@ -55,6 +56,7 @@ public class Action_parameters  implements java.io.Serializable {
     public void setUri(Uri uri) {
         this.uri = uri;
     }
+
 
 
     /**

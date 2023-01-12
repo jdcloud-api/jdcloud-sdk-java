@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * WAF Rules
+ * WAF-Rules
  * A firewall rule for a zone
  *
  * OpenAPI spec version: v1

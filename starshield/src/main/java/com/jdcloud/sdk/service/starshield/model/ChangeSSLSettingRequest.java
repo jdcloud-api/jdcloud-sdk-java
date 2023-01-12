@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Zone Settings
+ * Zone-Settings
  * A Zone setting changes how the Zone works in relation to caching, security, or other features of JDC StarShield
  *
  * OpenAPI spec version: v1
@@ -42,7 +42,7 @@ public class ChangeSSLSettingRequest extends JdcloudRequest implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * 该设置的有效值
+     * 该设置的有效值，off/flexible/full/strict
      */
     private String value;
 
@@ -54,8 +54,9 @@ public class ChangeSSLSettingRequest extends JdcloudRequest implements java.io.S
     private String zone_identifier;
 
 
+
     /**
-     * get 该设置的有效值
+     * get 该设置的有效值，off/flexible/full/strict
      *
      * @return
      */
@@ -64,13 +65,14 @@ public class ChangeSSLSettingRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 该设置的有效值
+     * set 该设置的有效值，off/flexible/full/strict
      *
      * @param value
      */
     public void setValue(String value) {
         this.value = value;
     }
+
 
     /**
      * get zone_identifier
@@ -91,8 +93,9 @@ public class ChangeSSLSettingRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
-     * set 该设置的有效值
+     * set 该设置的有效值，off/flexible/full/strict
      *
      * @param value
      */
@@ -100,6 +103,7 @@ public class ChangeSSLSettingRequest extends JdcloudRequest implements java.io.S
         this.value = value;
         return this;
     }
+
 
     /**
      * set zone_identifier

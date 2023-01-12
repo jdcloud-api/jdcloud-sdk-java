@@ -39,37 +39,40 @@ public class ListZonesResult extends JdcloudResult implements java.io.Serializab
     /**
      * dataList
      */
+    
     private List<Zone> dataList;
 
 
     /**
-     * get dataList
-     *
-     * @return
-     */
+    * get dataList
+    *
+    * @return
+    */
     public List<Zone> getDataList() {
         return dataList;
     }
 
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public void setDataList(List<Zone> dataList) {
         this.dataList = dataList;
     }
 
 
+
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public ListZonesResult dataList(List<Zone> dataList) {
         this.dataList = dataList;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class ListZonesResult extends JdcloudResult implements java.io.Serializab
         }
         this.dataList.add(dataList);
     }
-
 }

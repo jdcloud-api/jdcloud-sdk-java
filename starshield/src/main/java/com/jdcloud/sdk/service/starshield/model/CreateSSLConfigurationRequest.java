@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Custom SSL for a Zone
+ * Custom-SSL-for-a-Zone
  * Custom SSL certificate for a zone
  *
  * OpenAPI spec version: v1
@@ -36,7 +36,7 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
     private static final long serialVersionUID = 1L;
 
     /**
-     * 域的SSL证书或证书以及中间层
+     * 域的SSL证书或证书以及中间证书
      */
     private String certificate;
 
@@ -46,9 +46,10 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
     private String private_key;
 
     /**
-     * SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
-最佳捆绑使用最短的认证链和最新的中间证书。
-而强制捆绑会验证证书链，但不以其他方式修改证书链。
+     * 合法值ubiquitous/optimal/force，默认值ubiquitous。
+ubiquitous：SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
+optimal：最佳捆绑使用最短的认证链和最新的中间证书。
+force：强制捆绑会验证证书链，但不以其他方式修改证书链。
 
      */
     private String bundle_method;
@@ -60,6 +61,10 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
 
     /**
      * “legacy_custom”类型支持在TLS握手中不包含SNI的传统客户端。
+合法值：
+legacy_custom
+sni_custom
+
      */
     private String ty_pe;
 
@@ -71,8 +76,9 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
     private String zone_identifier;
 
 
+
     /**
-     * get 域的SSL证书或证书以及中间层
+     * get 域的SSL证书或证书以及中间证书
      *
      * @return
      */
@@ -81,13 +87,14 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 域的SSL证书或证书以及中间层
+     * set 域的SSL证书或证书以及中间证书
      *
      * @param certificate
      */
     public void setCertificate(String certificate) {
         this.certificate = certificate;
     }
+
 
     /**
      * get 域的私钥
@@ -107,10 +114,12 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
         this.private_key = private_key;
     }
 
+
     /**
-     * get SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
-最佳捆绑使用最短的认证链和最新的中间证书。
-而强制捆绑会验证证书链，但不以其他方式修改证书链。
+     * get 合法值ubiquitous/optimal/force，默认值ubiquitous。
+ubiquitous：SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
+optimal：最佳捆绑使用最短的认证链和最新的中间证书。
+force：强制捆绑会验证证书链，但不以其他方式修改证书链。
 
      *
      * @return
@@ -120,9 +129,10 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
-最佳捆绑使用最短的认证链和最新的中间证书。
-而强制捆绑会验证证书链，但不以其他方式修改证书链。
+     * set 合法值ubiquitous/optimal/force，默认值ubiquitous。
+ubiquitous：SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
+optimal：最佳捆绑使用最短的认证链和最新的中间证书。
+force：强制捆绑会验证证书链，但不以其他方式修改证书链。
 
      *
      * @param bundle_method
@@ -130,6 +140,7 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
     public void setBundle_method(String bundle_method) {
         this.bundle_method = bundle_method;
     }
+
 
     /**
      * get geo_restrictions
@@ -149,8 +160,13 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
         this.geo_restrictions = geo_restrictions;
     }
 
+
     /**
      * get “legacy_custom”类型支持在TLS握手中不包含SNI的传统客户端。
+合法值：
+legacy_custom
+sni_custom
+
      *
      * @return
      */
@@ -160,12 +176,17 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
 
     /**
      * set “legacy_custom”类型支持在TLS握手中不包含SNI的传统客户端。
+合法值：
+legacy_custom
+sni_custom
+
      *
      * @param ty_pe
      */
     public void setTy_pe(String ty_pe) {
         this.ty_pe = ty_pe;
     }
+
 
     /**
      * get zone_identifier
@@ -186,8 +207,9 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
-     * set 域的SSL证书或证书以及中间层
+     * set 域的SSL证书或证书以及中间证书
      *
      * @param certificate
      */
@@ -195,6 +217,7 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
         this.certificate = certificate;
         return this;
     }
+
 
     /**
      * set 域的私钥
@@ -206,10 +229,12 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
-     * set SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
-最佳捆绑使用最短的认证链和最新的中间证书。
-而强制捆绑会验证证书链，但不以其他方式修改证书链。
+     * set 合法值ubiquitous/optimal/force，默认值ubiquitous。
+ubiquitous：SSL泛捆绑在各处有着最高的概率被验证，甚至能被使用过时的或不寻常的信任存储的客户端验证。
+optimal：最佳捆绑使用最短的认证链和最新的中间证书。
+force：强制捆绑会验证证书链，但不以其他方式修改证书链。
 
      *
      * @param bundle_method
@@ -218,6 +243,7 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
         this.bundle_method = bundle_method;
         return this;
     }
+
 
     /**
      * set geo_restrictions
@@ -229,8 +255,13 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set “legacy_custom”类型支持在TLS握手中不包含SNI的传统客户端。
+合法值：
+legacy_custom
+sni_custom
+
      *
      * @param ty_pe
      */
@@ -238,6 +269,7 @@ public class CreateSSLConfigurationRequest extends JdcloudRequest implements jav
         this.ty_pe = ty_pe;
         return this;
     }
+
 
     /**
      * set zone_identifier

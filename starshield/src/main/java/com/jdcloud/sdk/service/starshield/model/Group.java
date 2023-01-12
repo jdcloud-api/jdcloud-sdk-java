@@ -33,18 +33,19 @@ public class Group  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * WAF group identifier tag
+     * WAF组标识符标签
      */
     private String id;
 
     /**
-     * Name of the firewall rule group
+     * 防火墙规则组的名称
      */
     private String name;
 
 
+
     /**
-     * get WAF group identifier tag
+     * get WAF组标识符标签
      *
      * @return
      */
@@ -53,7 +54,7 @@ public class Group  implements java.io.Serializable {
     }
 
     /**
-     * set WAF group identifier tag
+     * set WAF组标识符标签
      *
      * @param id
      */
@@ -61,8 +62,9 @@ public class Group  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
-     * get Name of the firewall rule group
+     * get 防火墙规则组的名称
      *
      * @return
      */
@@ -71,7 +73,7 @@ public class Group  implements java.io.Serializable {
     }
 
     /**
-     * set Name of the firewall rule group
+     * set 防火墙规则组的名称
      *
      * @param name
      */
@@ -80,8 +82,9 @@ public class Group  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set WAF group identifier tag
+     * set WAF组标识符标签
      *
      * @param id
      */
@@ -90,8 +93,9 @@ public class Group  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set Name of the firewall rule group
+     * set 防火墙规则组的名称
      *
      * @param name
      */

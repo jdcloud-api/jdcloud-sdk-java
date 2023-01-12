@@ -47,8 +47,8 @@ public class Keyless_server  implements java.io.Serializable {
     /**
      * 当前用户的无密钥SSL的可用权限
      */
+    
     private List<String> permissions;
-
     /**
      * 无密钥SSL主机名或ip
      */
@@ -80,6 +80,7 @@ public class Keyless_server  implements java.io.Serializable {
     private String id;
 
 
+
     /**
      * get 用于在星盾和客户的无密钥SSL服务器之间通信的无密钥SSL端口
      *
@@ -97,6 +98,7 @@ public class Keyless_server  implements java.io.Serializable {
     public void setPort(Number port) {
         this.port = port;
     }
+
 
     /**
      * get 无钥匙SSL是否开启或关闭
@@ -116,23 +118,25 @@ public class Keyless_server  implements java.io.Serializable {
         this.enabled = enabled;
     }
 
+
     /**
-     * get 当前用户的无密钥SSL的可用权限
-     *
-     * @return
-     */
+    * get 当前用户的无密钥SSL的可用权限
+    *
+    * @return
+    */
     public List<String> getPermissions() {
         return permissions;
     }
 
     /**
-     * set 当前用户的无密钥SSL的可用权限
-     *
-     * @param permissions
-     */
+    * set 当前用户的无密钥SSL的可用权限
+    *
+    * @param permissions
+    */
     public void setPermissions(List<String> permissions) {
         this.permissions = permissions;
     }
+
 
     /**
      * get 无密钥SSL主机名或ip
@@ -152,6 +156,7 @@ public class Keyless_server  implements java.io.Serializable {
         this.host = host;
     }
 
+
     /**
      * get 无密钥SSL名称
      *
@@ -169,6 +174,7 @@ public class Keyless_server  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 无密钥SSL的状态
@@ -188,6 +194,7 @@ public class Keyless_server  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 上次修改无密钥SSL的时间
      *
@@ -206,6 +213,7 @@ public class Keyless_server  implements java.io.Serializable {
         this.modified_on = modified_on;
     }
 
+
     /**
      * get 创建无密钥SSL的时间
      *
@@ -223,6 +231,7 @@ public class Keyless_server  implements java.io.Serializable {
     public void setCreated_on(String created_on) {
         this.created_on = created_on;
     }
+
 
     /**
      * get 无密钥证书标识符标签
@@ -243,6 +252,7 @@ public class Keyless_server  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用于在星盾和客户的无密钥SSL服务器之间通信的无密钥SSL端口
      *
@@ -252,6 +262,7 @@ public class Keyless_server  implements java.io.Serializable {
         this.port = port;
         return this;
     }
+
 
     /**
      * set 无钥匙SSL是否开启或关闭
@@ -263,15 +274,17 @@ public class Keyless_server  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 当前用户的无密钥SSL的可用权限
-     *
-     * @param permissions
-     */
+    * set 当前用户的无密钥SSL的可用权限
+    *
+    * @param permissions
+    */
     public Keyless_server permissions(List<String> permissions) {
         this.permissions = permissions;
         return this;
     }
+
 
     /**
      * set 无密钥SSL主机名或ip
@@ -283,6 +296,7 @@ public class Keyless_server  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 无密钥SSL名称
      *
@@ -292,6 +306,7 @@ public class Keyless_server  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 无密钥SSL的状态
@@ -303,6 +318,7 @@ public class Keyless_server  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 上次修改无密钥SSL的时间
      *
@@ -312,6 +328,7 @@ public class Keyless_server  implements java.io.Serializable {
         this.modified_on = modified_on;
         return this;
     }
+
 
     /**
      * set 创建无密钥SSL的时间
@@ -323,6 +340,7 @@ public class Keyless_server  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 无密钥证书标识符标签
      *
@@ -332,6 +350,7 @@ public class Keyless_server  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
 
     /**
@@ -345,5 +364,4 @@ public class Keyless_server  implements java.io.Serializable {
         }
         this.permissions.add(permission);
     }
-
 }

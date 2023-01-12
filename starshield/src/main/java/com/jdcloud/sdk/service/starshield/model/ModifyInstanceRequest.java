@@ -50,6 +50,11 @@ public class ModifyInstanceRequest extends JdcloudRequest implements java.io.Ser
     private String returnUrl;
 
     /**
+     * 购买上下文JSON字符串
+     */
+    private String buyScenario;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -62,6 +67,7 @@ public class ModifyInstanceRequest extends JdcloudRequest implements java.io.Ser
      */
     @Required
     private String instanceId;
+
 
 
     /**
@@ -82,6 +88,7 @@ public class ModifyInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.packType = packType;
     }
 
+
     /**
      * get 域名增量包数量
      *
@@ -99,6 +106,7 @@ public class ModifyInstanceRequest extends JdcloudRequest implements java.io.Ser
     public void setZonePackNum(Integer zonePackNum) {
         this.zonePackNum = zonePackNum;
     }
+
 
     /**
      * get 支付成功后返回到该路径
@@ -118,6 +126,26 @@ public class ModifyInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.returnUrl = returnUrl;
     }
 
+
+    /**
+     * get 购买上下文JSON字符串
+     *
+     * @return
+     */
+    public String getBuyScenario() {
+        return buyScenario;
+    }
+
+    /**
+     * set 购买上下文JSON字符串
+     *
+     * @param buyScenario
+     */
+    public void setBuyScenario(String buyScenario) {
+        this.buyScenario = buyScenario;
+    }
+
+
     /**
      * get 地域ID
      *
@@ -135,6 +163,7 @@ public class ModifyInstanceRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例ID
@@ -155,6 +184,7 @@ public class ModifyInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 套餐类型
      *
@@ -164,6 +194,7 @@ public class ModifyInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.packType = packType;
         return this;
     }
+
 
     /**
      * set 域名增量包数量
@@ -175,6 +206,7 @@ public class ModifyInstanceRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 支付成功后返回到该路径
      *
@@ -185,6 +217,18 @@ public class ModifyInstanceRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
+    /**
+     * set 购买上下文JSON字符串
+     *
+     * @param buyScenario
+     */
+    public ModifyInstanceRequest buyScenario(String buyScenario) {
+        this.buyScenario = buyScenario;
+        return this;
+    }
+
+
     /**
      * set 地域ID
      *
@@ -194,6 +238,7 @@ public class ModifyInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例ID

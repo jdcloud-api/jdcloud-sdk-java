@@ -53,6 +53,7 @@ public class ZoneSetting  implements java.io.Serializable {
     private Object value;
 
 
+
     /**
      * get id
      *
@@ -70,6 +71,7 @@ public class ZoneSetting  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get modified_on
@@ -89,6 +91,7 @@ public class ZoneSetting  implements java.io.Serializable {
         this.modified_on = modified_on;
     }
 
+
     /**
      * get editable
      *
@@ -106,6 +109,7 @@ public class ZoneSetting  implements java.io.Serializable {
     public void setEditable(Boolean editable) {
         this.editable = editable;
     }
+
 
     /**
      * get value
@@ -126,6 +130,7 @@ public class ZoneSetting  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -135,6 +140,7 @@ public class ZoneSetting  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set modified_on
@@ -146,6 +152,7 @@ public class ZoneSetting  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set editable
      *
@@ -155,6 +162,7 @@ public class ZoneSetting  implements java.io.Serializable {
         this.editable = editable;
         return this;
     }
+
 
     /**
      * set value

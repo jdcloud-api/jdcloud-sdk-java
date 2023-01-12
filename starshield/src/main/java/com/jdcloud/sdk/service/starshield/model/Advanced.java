@@ -43,6 +43,7 @@ public class Advanced  implements java.io.Serializable {
     private Number used;
 
 
+
     /**
      * get 分配数量
      *
@@ -60,6 +61,7 @@ public class Advanced  implements java.io.Serializable {
     public void setAllocated(Number allocated) {
         this.allocated = allocated;
     }
+
 
     /**
      * get 已使用数量
@@ -80,6 +82,7 @@ public class Advanced  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 分配数量
      *
@@ -89,6 +92,7 @@ public class Advanced  implements java.io.Serializable {
         this.allocated = allocated;
         return this;
     }
+
 
     /**
      * set 已使用数量

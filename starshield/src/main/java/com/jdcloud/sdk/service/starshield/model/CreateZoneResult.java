@@ -40,6 +40,7 @@ public class CreateZoneResult extends JdcloudResult implements java.io.Serializa
     private Zone data;
 
 
+
     /**
      * get data
      *
@@ -57,6 +58,7 @@ public class CreateZoneResult extends JdcloudResult implements java.io.Serializa
     public void setData(Zone data) {
         this.data = data;
     }
+
 
 
     /**

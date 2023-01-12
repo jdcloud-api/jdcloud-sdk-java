@@ -57,6 +57,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private String regionId;
 
 
+
     /**
      * get 页容量，默认10, 范围（1-100）
      *
@@ -74,6 +75,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 页序号，默认1，不能小于1
@@ -93,6 +95,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 实例名称
      *
@@ -110,6 +113,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
     }
+
 
     /**
      * get 地域ID
@@ -130,6 +134,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 页容量，默认10, 范围（1-100）
      *
@@ -139,6 +144,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 页序号，默认1，不能小于1
@@ -150,6 +156,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 实例名称
      *
@@ -159,6 +166,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
         this.instanceName = instanceName;
         return this;
     }
+
 
     /**
      * set 地域ID

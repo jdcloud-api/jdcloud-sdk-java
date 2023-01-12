@@ -73,6 +73,7 @@ public class WorkerScript  implements java.io.Serializable {
     private Number requestCount;
 
 
+
     /**
      * get worker name
      *
@@ -90,6 +91,7 @@ public class WorkerScript  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get Raw script content, as a string
@@ -109,6 +111,7 @@ public class WorkerScript  implements java.io.Serializable {
         this.script = script;
     }
 
+
     /**
      * get Hashed script content, can be used in a If-None-Match header when updating
      *
@@ -126,6 +129,7 @@ public class WorkerScript  implements java.io.Serializable {
     public void setEtag(String etag) {
         this.etag = etag;
     }
+
 
     /**
      * get Size of the script, in bytes
@@ -145,6 +149,7 @@ public class WorkerScript  implements java.io.Serializable {
         this.size = size;
     }
 
+
     /**
      * get When the script was created
      *
@@ -162,6 +167,7 @@ public class WorkerScript  implements java.io.Serializable {
     public void setCreated_on(String created_on) {
         this.created_on = created_on;
     }
+
 
     /**
      * get When the script was last modified
@@ -181,6 +187,7 @@ public class WorkerScript  implements java.io.Serializable {
         this.modified_on = modified_on;
     }
 
+
     /**
      * get available_on_subdomain
      *
@@ -198,6 +205,7 @@ public class WorkerScript  implements java.io.Serializable {
     public void setAvailable_on_subdomain(Boolean available_on_subdomain) {
         this.available_on_subdomain = available_on_subdomain;
     }
+
 
     /**
      * get 过去24小时的请求数
@@ -218,6 +226,7 @@ public class WorkerScript  implements java.io.Serializable {
     }
 
 
+
     /**
      * set worker name
      *
@@ -227,6 +236,7 @@ public class WorkerScript  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set Raw script content, as a string
@@ -238,6 +248,7 @@ public class WorkerScript  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Hashed script content, can be used in a If-None-Match header when updating
      *
@@ -247,6 +258,7 @@ public class WorkerScript  implements java.io.Serializable {
         this.etag = etag;
         return this;
     }
+
 
     /**
      * set Size of the script, in bytes
@@ -258,6 +270,7 @@ public class WorkerScript  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set When the script was created
      *
@@ -267,6 +280,7 @@ public class WorkerScript  implements java.io.Serializable {
         this.created_on = created_on;
         return this;
     }
+
 
     /**
      * set When the script was last modified
@@ -278,6 +292,7 @@ public class WorkerScript  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set available_on_subdomain
      *
@@ -287,6 +302,7 @@ public class WorkerScript  implements java.io.Serializable {
         this.available_on_subdomain = available_on_subdomain;
         return this;
     }
+
 
     /**
      * set 过去24小时的请求数

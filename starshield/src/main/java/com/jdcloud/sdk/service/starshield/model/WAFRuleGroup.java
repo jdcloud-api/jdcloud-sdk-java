@@ -72,6 +72,7 @@ public class WAFRuleGroup  implements java.io.Serializable {
     /**
      * 组可以具有的可用状态。这将影响此组中规则的状态。
      */
+    
     private List<String> allowed_modes;
 
 
@@ -93,6 +94,7 @@ public class WAFRuleGroup  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 防火墙规则组的名称
      *
@@ -110,6 +112,7 @@ public class WAFRuleGroup  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get WAF规则集的功能摘要
@@ -129,6 +132,7 @@ public class WAFRuleGroup  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 此组中包含多少条规则
      *
@@ -146,6 +150,7 @@ public class WAFRuleGroup  implements java.io.Serializable {
     public void setRules_count(Number rules_count) {
         this.rules_count = rules_count;
     }
+
 
     /**
      * get 组中有多少规则已从默认规则修改
@@ -165,6 +170,7 @@ public class WAFRuleGroup  implements java.io.Serializable {
         this.modified_rules_count = modified_rules_count;
     }
 
+
     /**
      * get WAF包标识符标签
      *
@@ -182,6 +188,7 @@ public class WAFRuleGroup  implements java.io.Serializable {
     public void setPackage_id(String package_id) {
         this.package_id = package_id;
     }
+
 
     /**
      * get 此组中包含的规则是否可配置/可用
@@ -201,23 +208,25 @@ public class WAFRuleGroup  implements java.io.Serializable {
         this.mode = mode;
     }
 
+
     /**
-     * get 组可以具有的可用状态。这将影响此组中规则的状态。
-     *
-     * @return
-     */
+    * get 组可以具有的可用状态。这将影响此组中规则的状态。
+    *
+    * @return
+    */
     public List<String> getAllowed_modes() {
         return allowed_modes;
     }
 
     /**
-     * set 组可以具有的可用状态。这将影响此组中规则的状态。
-     *
-     * @param allowed_modes
-     */
+    * set 组可以具有的可用状态。这将影响此组中规则的状态。
+    *
+    * @param allowed_modes
+    */
     public void setAllowed_modes(List<String> allowed_modes) {
         this.allowed_modes = allowed_modes;
     }
+
 
 
     /**
@@ -230,6 +239,7 @@ public class WAFRuleGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 防火墙规则组的名称
      *
@@ -239,6 +249,7 @@ public class WAFRuleGroup  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set WAF规则集的功能摘要
@@ -250,6 +261,7 @@ public class WAFRuleGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 此组中包含多少条规则
      *
@@ -259,6 +271,7 @@ public class WAFRuleGroup  implements java.io.Serializable {
         this.rules_count = rules_count;
         return this;
     }
+
 
     /**
      * set 组中有多少规则已从默认规则修改
@@ -270,6 +283,7 @@ public class WAFRuleGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set WAF包标识符标签
      *
@@ -279,6 +293,7 @@ public class WAFRuleGroup  implements java.io.Serializable {
         this.package_id = package_id;
         return this;
     }
+
 
     /**
      * set 此组中包含的规则是否可配置/可用
@@ -290,15 +305,17 @@ public class WAFRuleGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 组可以具有的可用状态。这将影响此组中规则的状态。
-     *
-     * @param allowed_modes
-     */
+    * set 组可以具有的可用状态。这将影响此组中规则的状态。
+    *
+    * @param allowed_modes
+    */
     public WAFRuleGroup allowed_modes(List<String> allowed_modes) {
         this.allowed_modes = allowed_modes;
         return this;
     }
+
 
 
     /**
@@ -312,5 +329,4 @@ public class WAFRuleGroup  implements java.io.Serializable {
         }
         this.allowed_modes.add(allowed_mode);
     }
-
 }

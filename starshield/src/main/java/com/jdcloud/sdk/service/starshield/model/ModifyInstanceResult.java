@@ -39,6 +39,7 @@ public class ModifyInstanceResult extends JdcloudResult implements java.io.Seria
     private String buyId;
 
 
+
     /**
      * get 购买ID
      *
@@ -56,6 +57,7 @@ public class ModifyInstanceResult extends JdcloudResult implements java.io.Seria
     public void setBuyId(String buyId) {
         this.buyId = buyId;
     }
+
 
 
     /**

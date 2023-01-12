@@ -40,6 +40,7 @@ public class UpdateIndividualFilterResult extends JdcloudResult implements java.
     private Filter data;
 
 
+
     /**
      * get data
      *
@@ -57,6 +58,7 @@ public class UpdateIndividualFilterResult extends JdcloudResult implements java.
     public void setData(Filter data) {
         this.data = data;
     }
+
 
 
     /**

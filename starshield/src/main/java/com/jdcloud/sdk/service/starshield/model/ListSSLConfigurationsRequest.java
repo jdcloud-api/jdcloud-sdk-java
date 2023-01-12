@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Custom SSL for a Zone
+ * Custom-SSL-for-a-Zone
  * Custom SSL certificate for a zone
  *
  * OpenAPI spec version: v1
@@ -63,6 +63,7 @@ public class ListSSLConfigurationsRequest extends JdcloudRequest implements java
     private String zone_identifier;
 
 
+
     /**
      * get 域的自定义SSL的状态
      *
@@ -80,6 +81,7 @@ public class ListSSLConfigurationsRequest extends JdcloudRequest implements java
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 分页结果的页码
@@ -99,6 +101,7 @@ public class ListSSLConfigurationsRequest extends JdcloudRequest implements java
         this.page = page;
     }
 
+
     /**
      * get 每页的域数
      *
@@ -117,6 +120,7 @@ public class ListSSLConfigurationsRequest extends JdcloudRequest implements java
         this.per_page = per_page;
     }
 
+
     /**
      * get 是否匹配所有搜索要求或至少一个（任何）
      *
@@ -134,6 +138,7 @@ public class ListSSLConfigurationsRequest extends JdcloudRequest implements java
     public void setMatch(String match) {
         this.match = match;
     }
+
 
     /**
      * get zone_identifier
@@ -154,6 +159,7 @@ public class ListSSLConfigurationsRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 域的自定义SSL的状态
      *
@@ -163,6 +169,7 @@ public class ListSSLConfigurationsRequest extends JdcloudRequest implements java
         this.status = status;
         return this;
     }
+
 
     /**
      * set 分页结果的页码
@@ -174,6 +181,7 @@ public class ListSSLConfigurationsRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 每页的域数
      *
@@ -184,6 +192,7 @@ public class ListSSLConfigurationsRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 是否匹配所有搜索要求或至少一个（任何）
      *
@@ -193,6 +202,7 @@ public class ListSSLConfigurationsRequest extends JdcloudRequest implements java
         this.match = match;
         return this;
     }
+
 
     /**
      * set zone_identifier

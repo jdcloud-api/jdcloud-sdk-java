@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.starshield.model.CreateFlowPackResponse;
 
 /**
- * 购买流量包
+ * 购买流量包，调用成功，将自动扣费（请保证账户充足，否则无法成功创建流量包）。
+
  */
 class CreateFlowPackExecutor extends JdcloudExecutor {
 

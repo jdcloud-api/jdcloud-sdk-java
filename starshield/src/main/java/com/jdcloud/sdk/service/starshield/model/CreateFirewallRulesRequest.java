@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Firewall rules
+ * Firewall-rules
  * Define Firewall rules using filter expressions for more control over how traffic is matched to the rule.
  *
  * OpenAPI spec version: v1
@@ -39,8 +39,8 @@ public class CreateFirewallRulesRequest extends JdcloudRequest implements java.i
     /**
      * firewallRules
      */
+    
     private List<FirewallRule> firewallRules;
-
     /**
      * zone_identifier
      * Required:true
@@ -49,23 +49,25 @@ public class CreateFirewallRulesRequest extends JdcloudRequest implements java.i
     private String zone_identifier;
 
 
+
     /**
-     * get firewallRules
-     *
-     * @return
-     */
+    * get firewallRules
+    *
+    * @return
+    */
     public List<FirewallRule> getFirewallRules() {
         return firewallRules;
     }
 
     /**
-     * set firewallRules
-     *
-     * @param firewallRules
-     */
+    * set firewallRules
+    *
+    * @param firewallRules
+    */
     public void setFirewallRules(List<FirewallRule> firewallRules) {
         this.firewallRules = firewallRules;
     }
+
 
     /**
      * get zone_identifier
@@ -86,15 +88,17 @@ public class CreateFirewallRulesRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
-     * set firewallRules
-     *
-     * @param firewallRules
-     */
+    * set firewallRules
+    *
+    * @param firewallRules
+    */
     public CreateFirewallRulesRequest firewallRules(List<FirewallRule> firewallRules) {
         this.firewallRules = firewallRules;
         return this;
     }
+
 
     /**
      * set zone_identifier
@@ -105,6 +109,7 @@ public class CreateFirewallRulesRequest extends JdcloudRequest implements java.i
         this.zone_identifier = zone_identifier;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class CreateFirewallRulesRequest extends JdcloudRequest implements java.i
         }
         this.firewallRules.add(firewallRule);
     }
-
 }

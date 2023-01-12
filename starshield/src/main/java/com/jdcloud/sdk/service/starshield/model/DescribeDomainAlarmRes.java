@@ -45,9 +45,19 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
     private String ruleName;
 
     /**
-     * 告警类型 WEB_ATTACK-&gt;网站攻击 CC_ATTACK-&gt;CC攻击 DDOS_ATTACK-&gt;DDOS攻击 STATUS_CODE_ERROR-&gt;状态码错误
+     * 告警类型 WEB_ATTACK-&gt;网站攻击 CC_ATTACK-&gt;CC攻击 DDOS_ATTACK-&gt;DDOS攻击 STATUS_CODE_ERROR-&gt;状态码错误 UPSTREAM_STATUS-&gt;回源IP异常告警
      */
     private String alarmType;
+
+    /**
+     * warnType为statusCode时为要检测的状态码
+     */
+    
+    private List<String> detectItems;
+    /**
+     * 阈值单位，&quot;&quot;-个数，&quot;percent&quot;-百分比。缺省为个数
+     */
+    private String unit;
 
     /**
      * 统计周期
@@ -97,16 +107,17 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
     /**
      * 域名
      */
+    
     private List<String> domains;
-
     /**
      * 告警联系人
      */
+    
     private List<Long> contactUsers;
-
     /**
      * 告警联系组
      */
+    
     private List<Long> contactGroups;
 
 
@@ -128,6 +139,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 规则名称
      *
@@ -146,8 +158,9 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         this.ruleName = ruleName;
     }
 
+
     /**
-     * get 告警类型 WEB_ATTACK-&gt;网站攻击 CC_ATTACK-&gt;CC攻击 DDOS_ATTACK-&gt;DDOS攻击 STATUS_CODE_ERROR-&gt;状态码错误
+     * get 告警类型 WEB_ATTACK-&gt;网站攻击 CC_ATTACK-&gt;CC攻击 DDOS_ATTACK-&gt;DDOS攻击 STATUS_CODE_ERROR-&gt;状态码错误 UPSTREAM_STATUS-&gt;回源IP异常告警
      *
      * @return
      */
@@ -156,13 +169,52 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
     }
 
     /**
-     * set 告警类型 WEB_ATTACK-&gt;网站攻击 CC_ATTACK-&gt;CC攻击 DDOS_ATTACK-&gt;DDOS攻击 STATUS_CODE_ERROR-&gt;状态码错误
+     * set 告警类型 WEB_ATTACK-&gt;网站攻击 CC_ATTACK-&gt;CC攻击 DDOS_ATTACK-&gt;DDOS攻击 STATUS_CODE_ERROR-&gt;状态码错误 UPSTREAM_STATUS-&gt;回源IP异常告警
      *
      * @param alarmType
      */
     public void setAlarmType(String alarmType) {
         this.alarmType = alarmType;
     }
+
+
+    /**
+    * get warnType为statusCode时为要检测的状态码
+    *
+    * @return
+    */
+    public List<String> getDetectItems() {
+        return detectItems;
+    }
+
+    /**
+    * set warnType为statusCode时为要检测的状态码
+    *
+    * @param detectItems
+    */
+    public void setDetectItems(List<String> detectItems) {
+        this.detectItems = detectItems;
+    }
+
+
+    /**
+     * get 阈值单位，&quot;&quot;-个数，&quot;percent&quot;-百分比。缺省为个数
+     *
+     * @return
+     */
+    public String getUnit() {
+        return unit;
+    }
+
+    /**
+     * set 阈值单位，&quot;&quot;-个数，&quot;percent&quot;-百分比。缺省为个数
+     *
+     * @param unit
+     */
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
 
     /**
      * get 统计周期
@@ -182,6 +234,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         this.statCycle = statCycle;
     }
 
+
     /**
      * get 统计周期单位
      *
@@ -199,6 +252,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
     public void setStatCycleUnit(String statCycleUnit) {
         this.statCycleUnit = statCycleUnit;
     }
+
 
     /**
      * get 统计阈值
@@ -218,6 +272,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         this.statThreshold = statThreshold;
     }
 
+
     /**
      * get 告警次数限制
      *
@@ -235,6 +290,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
     public void setAlarmTimesLimit(Integer alarmTimesLimit) {
         this.alarmTimesLimit = alarmTimesLimit;
     }
+
 
     /**
      * get 发送短信开关
@@ -254,6 +310,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         this.smsEnable = smsEnable;
     }
 
+
     /**
      * get 发送邮件开关
      *
@@ -271,6 +328,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
     public void setEmailEnable(Boolean emailEnable) {
         this.emailEnable = emailEnable;
     }
+
 
     /**
      * get 发送站内信开关
@@ -290,6 +348,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         this.webMsEnable = webMsEnable;
     }
 
+
     /**
      * get 规则开关
      *
@@ -307,6 +366,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
     public void setEnable(Boolean enable) {
         this.enable = enable;
     }
+
 
     /**
      * get 实例ID
@@ -326,59 +386,63 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+
     /**
-     * get 域名
-     *
-     * @return
-     */
+    * get 域名
+    *
+    * @return
+    */
     public List<String> getDomains() {
         return domains;
     }
 
     /**
-     * set 域名
-     *
-     * @param domains
-     */
+    * set 域名
+    *
+    * @param domains
+    */
     public void setDomains(List<String> domains) {
         this.domains = domains;
     }
 
+
     /**
-     * get 告警联系人
-     *
-     * @return
-     */
+    * get 告警联系人
+    *
+    * @return
+    */
     public List<Long> getContactUsers() {
         return contactUsers;
     }
 
     /**
-     * set 告警联系人
-     *
-     * @param contactUsers
-     */
+    * set 告警联系人
+    *
+    * @param contactUsers
+    */
     public void setContactUsers(List<Long> contactUsers) {
         this.contactUsers = contactUsers;
     }
 
+
     /**
-     * get 告警联系组
-     *
-     * @return
-     */
+    * get 告警联系组
+    *
+    * @return
+    */
     public List<Long> getContactGroups() {
         return contactGroups;
     }
 
     /**
-     * set 告警联系组
-     *
-     * @param contactGroups
-     */
+    * set 告警联系组
+    *
+    * @param contactGroups
+    */
     public void setContactGroups(List<Long> contactGroups) {
         this.contactGroups = contactGroups;
     }
+
 
 
     /**
@@ -391,6 +455,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则名称
      *
@@ -401,8 +466,9 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 告警类型 WEB_ATTACK-&gt;网站攻击 CC_ATTACK-&gt;CC攻击 DDOS_ATTACK-&gt;DDOS攻击 STATUS_CODE_ERROR-&gt;状态码错误
+     * set 告警类型 WEB_ATTACK-&gt;网站攻击 CC_ATTACK-&gt;CC攻击 DDOS_ATTACK-&gt;DDOS攻击 STATUS_CODE_ERROR-&gt;状态码错误 UPSTREAM_STATUS-&gt;回源IP异常告警
      *
      * @param alarmType
      */
@@ -410,6 +476,29 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         this.alarmType = alarmType;
         return this;
     }
+
+
+    /**
+    * set warnType为statusCode时为要检测的状态码
+    *
+    * @param detectItems
+    */
+    public DescribeDomainAlarmRes detectItems(List<String> detectItems) {
+        this.detectItems = detectItems;
+        return this;
+    }
+
+
+    /**
+     * set 阈值单位，&quot;&quot;-个数，&quot;percent&quot;-百分比。缺省为个数
+     *
+     * @param unit
+     */
+    public DescribeDomainAlarmRes unit(String unit) {
+        this.unit = unit;
+        return this;
+    }
+
 
     /**
      * set 统计周期
@@ -421,6 +510,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 统计周期单位
      *
@@ -430,6 +520,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         this.statCycleUnit = statCycleUnit;
         return this;
     }
+
 
     /**
      * set 统计阈值
@@ -441,6 +532,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 告警次数限制
      *
@@ -450,6 +542,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         this.alarmTimesLimit = alarmTimesLimit;
         return this;
     }
+
 
     /**
      * set 发送短信开关
@@ -461,6 +554,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 发送邮件开关
      *
@@ -470,6 +564,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         this.emailEnable = emailEnable;
         return this;
     }
+
 
     /**
      * set 发送站内信开关
@@ -481,6 +576,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则开关
      *
@@ -490,6 +586,7 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         this.enable = enable;
         return this;
     }
+
 
     /**
      * set 实例ID
@@ -501,36 +598,52 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 域名
-     *
-     * @param domains
-     */
+    * set 域名
+    *
+    * @param domains
+    */
     public DescribeDomainAlarmRes domains(List<String> domains) {
         this.domains = domains;
         return this;
     }
 
+
     /**
-     * set 告警联系人
-     *
-     * @param contactUsers
-     */
+    * set 告警联系人
+    *
+    * @param contactUsers
+    */
     public DescribeDomainAlarmRes contactUsers(List<Long> contactUsers) {
         this.contactUsers = contactUsers;
         return this;
     }
 
+
     /**
-     * set 告警联系组
-     *
-     * @param contactGroups
-     */
+    * set 告警联系组
+    *
+    * @param contactGroups
+    */
     public DescribeDomainAlarmRes contactGroups(List<Long> contactGroups) {
         this.contactGroups = contactGroups;
         return this;
     }
 
+
+
+    /**
+     * add item to warnType为statusCode时为要检测的状态码
+     *
+     * @param detectItem
+     */
+    public void addDetectItem(String detectItem) {
+        if (this.detectItems == null) {
+            this.detectItems = new ArrayList<>();
+        }
+        this.detectItems.add(detectItem);
+    }
 
     /**
      * add item to 域名
@@ -567,5 +680,4 @@ public class DescribeDomainAlarmRes  implements java.io.Serializable {
         }
         this.contactGroups.add(contactGroup);
     }
-
 }

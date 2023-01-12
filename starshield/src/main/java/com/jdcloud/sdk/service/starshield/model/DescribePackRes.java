@@ -243,6 +243,7 @@ public class DescribePackRes  implements java.io.Serializable {
     private Boolean firewalRegularRule;
 
 
+
     /**
      * get 套餐类型
      *
@@ -260,6 +261,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setPackType(String packType) {
         this.packType = packType;
     }
+
 
     /**
      * get 套餐模型(BASE-&gt;基础版 FLOW-&gt;流量版)
@@ -279,6 +281,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.packMode = packMode;
     }
 
+
     /**
      * get 套餐流量
      *
@@ -296,6 +299,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setFlowLimit(Long flowLimit) {
         this.flowLimit = flowLimit;
     }
+
 
     /**
      * get 可用域名数
@@ -315,6 +319,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.availableZoneNum = availableZoneNum;
     }
 
+
     /**
      * get cdn加速流量
      *
@@ -332,6 +337,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setCdnSpeedTraffic(Integer cdnSpeedTraffic) {
         this.cdnSpeedTraffic = cdnSpeedTraffic;
     }
+
 
     /**
      * get DDoS保底防护
@@ -351,6 +357,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.ddosBaseProtect = ddosBaseProtect;
     }
 
+
     /**
      * get 是否支持DDoS弹性防护
      *
@@ -368,6 +375,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setDdosElasticProtect(Boolean ddosElasticProtect) {
         this.ddosElasticProtect = ddosElasticProtect;
     }
+
 
     /**
      * get 是否提供免费证书
@@ -387,6 +395,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.freeCert = freeCert;
     }
 
+
     /**
      * get 是否支持BOT功能
      *
@@ -404,6 +413,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setBotManage(Boolean botManage) {
         this.botManage = botManage;
     }
+
 
     /**
      * get 是否支持WAF
@@ -423,6 +433,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.waf = waf;
     }
 
+
     /**
      * get 自定义上传证书数量
      *
@@ -440,6 +451,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setCustomUploadCert(Integer customUploadCert) {
         this.customUploadCert = customUploadCert;
     }
+
 
     /**
      * get 单节点CC攻击QPS
@@ -459,6 +471,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.ccAttackQpsSingle = ccAttackQpsSingle;
     }
 
+
     /**
      * get CC攻击QPS总量
      *
@@ -476,6 +489,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setCcAttackQpsTotal(Integer ccAttackQpsTotal) {
         this.ccAttackQpsTotal = ccAttackQpsTotal;
     }
+
 
     /**
      * get 独享IP数量
@@ -495,6 +509,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.dedicatedIp = dedicatedIp;
     }
 
+
     /**
      * get 可用节点数量
      *
@@ -512,6 +527,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setAvailableNodeNum(Integer availableNodeNum) {
         this.availableNodeNum = availableNodeNum;
     }
+
 
     /**
      * get 域名专用证书数
@@ -531,6 +547,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.specialCertNum = specialCertNum;
     }
 
+
     /**
      * get 是否支持TrueCLientIp
      *
@@ -548,6 +565,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setTrueClientIp(Boolean trueClientIp) {
         this.trueClientIp = trueClientIp;
     }
+
 
     /**
      * get 是否支持RriginErrorPagePass
@@ -567,6 +585,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.originErrorPagePass = originErrorPagePass;
     }
 
+
     /**
      * get 是否支持静态内容缓存
      *
@@ -584,6 +603,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setStaticContentCache(Boolean staticContentCache) {
         this.staticContentCache = staticContentCache;
     }
+
 
     /**
      * get 基于URL自定义清除
@@ -603,6 +623,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.customClearByUrl = customClearByUrl;
     }
 
+
     /**
      * get 高级自定义清除(主机名、Tag、前缀目录)
      *
@@ -620,6 +641,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setAdvanceCustomClear(Boolean advanceCustomClear) {
         this.advanceCustomClear = advanceCustomClear;
     }
+
 
     /**
      * get 最小缓存TTL时间
@@ -639,6 +661,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.minCacheTtl = minCacheTtl;
     }
 
+
     /**
      * get 客户端上传文件限制
      *
@@ -656,6 +679,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setClientUploadFileLimit(Integer clientUploadFileLimit) {
         this.clientUploadFileLimit = clientUploadFileLimit;
     }
+
 
     /**
      * get 最大缓存文件限制
@@ -675,6 +699,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.maxCacheFileLimit = maxCacheFileLimit;
     }
 
+
     /**
      * get 是否支持基于URL预取
      *
@@ -692,6 +717,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setUrlPrefetch(Boolean urlPrefetch) {
         this.urlPrefetch = urlPrefetch;
     }
+
 
     /**
      * get 页面规则数量
@@ -711,6 +737,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.pageRuleNum = pageRuleNum;
     }
 
+
     /**
      * get 是否支持页面优化
      *
@@ -728,6 +755,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setImageOptimize(Boolean imageOptimize) {
         this.imageOptimize = imageOptimize;
     }
+
 
     /**
      * get 是否支持HTTP2
@@ -747,6 +775,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.http2 = http2;
     }
 
+
     /**
      * get 是否支持开发模式
      *
@@ -764,6 +793,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setDevelopMode(Boolean developMode) {
         this.developMode = developMode;
     }
+
 
     /**
      * get 是否支持查询字符串排序
@@ -783,6 +813,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.queryStringSort = queryStringSort;
     }
 
+
     /**
      * get 是否支持自定义名称服务器（忽略）
      *
@@ -800,6 +831,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setCustomNameServer(Boolean customNameServer) {
         this.customNameServer = customNameServer;
     }
+
 
     /**
      * get 是否支持通用证书
@@ -819,6 +851,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.generalCert = generalCert;
     }
 
+
     /**
      * get 自定义证书数量
      *
@@ -836,6 +869,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setCustomCertNum(Integer customCertNum) {
         this.customCertNum = customCertNum;
     }
+
 
     /**
      * get 网站分析时间规格
@@ -855,6 +889,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.websiteAnalyseTimeSpecs = websiteAnalyseTimeSpecs;
     }
 
+
     /**
      * get DNS分析时间（历史时间）
      *
@@ -872,6 +907,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setDnsAnalyseTime(Integer dnsAnalyseTime) {
         this.dnsAnalyseTime = dnsAnalyseTime;
     }
+
 
     /**
      * get 攻击分析时间（历史时间）
@@ -891,6 +927,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.attackAnalyseTime = attackAnalyseTime;
     }
 
+
     /**
      * get 是否支持审计日志
      *
@@ -908,6 +945,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setAuditLog(Boolean auditLog) {
         this.auditLog = auditLog;
     }
+
 
     /**
      * get 是否支持请求日志
@@ -927,6 +965,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.requestLog = requestLog;
     }
 
+
     /**
      * get 是否支持OWASP核心规则
      *
@@ -944,6 +983,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setOwaspCoreRule(Boolean owaspCoreRule) {
         this.owaspCoreRule = owaspCoreRule;
     }
+
 
     /**
      * get 是否支持内置预定义规则
@@ -963,6 +1003,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.builtInPredefinedRule = builtInPredefinedRule;
     }
 
+
     /**
      * get 防火墙规则数量
      *
@@ -980,6 +1021,7 @@ public class DescribePackRes  implements java.io.Serializable {
     public void setFirewallRuleNum(Integer firewallRuleNum) {
         this.firewallRuleNum = firewallRuleNum;
     }
+
 
     /**
      * get 是否支持防火墙正则表达式规则
@@ -1000,6 +1042,7 @@ public class DescribePackRes  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 套餐类型
      *
@@ -1009,6 +1052,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.packType = packType;
         return this;
     }
+
 
     /**
      * set 套餐模型(BASE-&gt;基础版 FLOW-&gt;流量版)
@@ -1020,6 +1064,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 套餐流量
      *
@@ -1029,6 +1074,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.flowLimit = flowLimit;
         return this;
     }
+
 
     /**
      * set 可用域名数
@@ -1040,6 +1086,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cdn加速流量
      *
@@ -1049,6 +1096,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.cdnSpeedTraffic = cdnSpeedTraffic;
         return this;
     }
+
 
     /**
      * set DDoS保底防护
@@ -1060,6 +1108,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否支持DDoS弹性防护
      *
@@ -1069,6 +1118,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.ddosElasticProtect = ddosElasticProtect;
         return this;
     }
+
 
     /**
      * set 是否提供免费证书
@@ -1080,6 +1130,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否支持BOT功能
      *
@@ -1089,6 +1140,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.botManage = botManage;
         return this;
     }
+
 
     /**
      * set 是否支持WAF
@@ -1100,6 +1152,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自定义上传证书数量
      *
@@ -1109,6 +1162,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.customUploadCert = customUploadCert;
         return this;
     }
+
 
     /**
      * set 单节点CC攻击QPS
@@ -1120,6 +1174,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set CC攻击QPS总量
      *
@@ -1129,6 +1184,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.ccAttackQpsTotal = ccAttackQpsTotal;
         return this;
     }
+
 
     /**
      * set 独享IP数量
@@ -1140,6 +1196,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 可用节点数量
      *
@@ -1149,6 +1206,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.availableNodeNum = availableNodeNum;
         return this;
     }
+
 
     /**
      * set 域名专用证书数
@@ -1160,6 +1218,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否支持TrueCLientIp
      *
@@ -1169,6 +1228,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.trueClientIp = trueClientIp;
         return this;
     }
+
 
     /**
      * set 是否支持RriginErrorPagePass
@@ -1180,6 +1240,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否支持静态内容缓存
      *
@@ -1189,6 +1250,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.staticContentCache = staticContentCache;
         return this;
     }
+
 
     /**
      * set 基于URL自定义清除
@@ -1200,6 +1262,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 高级自定义清除(主机名、Tag、前缀目录)
      *
@@ -1209,6 +1272,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.advanceCustomClear = advanceCustomClear;
         return this;
     }
+
 
     /**
      * set 最小缓存TTL时间
@@ -1220,6 +1284,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 客户端上传文件限制
      *
@@ -1229,6 +1294,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.clientUploadFileLimit = clientUploadFileLimit;
         return this;
     }
+
 
     /**
      * set 最大缓存文件限制
@@ -1240,6 +1306,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否支持基于URL预取
      *
@@ -1249,6 +1316,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.urlPrefetch = urlPrefetch;
         return this;
     }
+
 
     /**
      * set 页面规则数量
@@ -1260,6 +1328,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否支持页面优化
      *
@@ -1269,6 +1338,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.imageOptimize = imageOptimize;
         return this;
     }
+
 
     /**
      * set 是否支持HTTP2
@@ -1280,6 +1350,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否支持开发模式
      *
@@ -1289,6 +1360,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.developMode = developMode;
         return this;
     }
+
 
     /**
      * set 是否支持查询字符串排序
@@ -1300,6 +1372,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否支持自定义名称服务器（忽略）
      *
@@ -1309,6 +1382,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.customNameServer = customNameServer;
         return this;
     }
+
 
     /**
      * set 是否支持通用证书
@@ -1320,6 +1394,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自定义证书数量
      *
@@ -1329,6 +1404,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.customCertNum = customCertNum;
         return this;
     }
+
 
     /**
      * set 网站分析时间规格
@@ -1340,6 +1416,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set DNS分析时间（历史时间）
      *
@@ -1349,6 +1426,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.dnsAnalyseTime = dnsAnalyseTime;
         return this;
     }
+
 
     /**
      * set 攻击分析时间（历史时间）
@@ -1360,6 +1438,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否支持审计日志
      *
@@ -1369,6 +1448,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.auditLog = auditLog;
         return this;
     }
+
 
     /**
      * set 是否支持请求日志
@@ -1380,6 +1460,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否支持OWASP核心规则
      *
@@ -1389,6 +1470,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.owaspCoreRule = owaspCoreRule;
         return this;
     }
+
 
     /**
      * set 是否支持内置预定义规则
@@ -1400,6 +1482,7 @@ public class DescribePackRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 防火墙规则数量
      *
@@ -1409,6 +1492,7 @@ public class DescribePackRes  implements java.io.Serializable {
         this.firewallRuleNum = firewallRuleNum;
         return this;
     }
+
 
     /**
      * set 是否支持防火墙正则表达式规则

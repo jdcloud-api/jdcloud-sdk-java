@@ -42,11 +42,12 @@ public class NetworkDateHistogram  implements java.io.Serializable {
     /**
      * dataSeries
      */
+    
     private List<Number> dataSeries;
-
     /**
      * timeSeries
      */
+    
     private List<Number> timeSeries;
 
 
@@ -68,41 +69,44 @@ public class NetworkDateHistogram  implements java.io.Serializable {
         this.resultType = resultType;
     }
 
+
     /**
-     * get dataSeries
-     *
-     * @return
-     */
+    * get dataSeries
+    *
+    * @return
+    */
     public List<Number> getDataSeries() {
         return dataSeries;
     }
 
     /**
-     * set dataSeries
-     *
-     * @param dataSeries
-     */
+    * set dataSeries
+    *
+    * @param dataSeries
+    */
     public void setDataSeries(List<Number> dataSeries) {
         this.dataSeries = dataSeries;
     }
 
+
     /**
-     * get timeSeries
-     *
-     * @return
-     */
+    * get timeSeries
+    *
+    * @return
+    */
     public List<Number> getTimeSeries() {
         return timeSeries;
     }
 
     /**
-     * set timeSeries
-     *
-     * @param timeSeries
-     */
+    * set timeSeries
+    *
+    * @param timeSeries
+    */
     public void setTimeSeries(List<Number> timeSeries) {
         this.timeSeries = timeSeries;
     }
+
 
 
     /**
@@ -115,25 +119,28 @@ public class NetworkDateHistogram  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set dataSeries
-     *
-     * @param dataSeries
-     */
+    * set dataSeries
+    *
+    * @param dataSeries
+    */
     public NetworkDateHistogram dataSeries(List<Number> dataSeries) {
         this.dataSeries = dataSeries;
         return this;
     }
 
+
     /**
-     * set timeSeries
-     *
-     * @param timeSeries
-     */
+    * set timeSeries
+    *
+    * @param timeSeries
+    */
     public NetworkDateHistogram timeSeries(List<Number> timeSeries) {
         this.timeSeries = timeSeries;
         return this;
     }
+
 
 
     /**
@@ -159,5 +166,4 @@ public class NetworkDateHistogram  implements java.io.Serializable {
         }
         this.timeSeries.add(timeSerie);
     }
-
 }

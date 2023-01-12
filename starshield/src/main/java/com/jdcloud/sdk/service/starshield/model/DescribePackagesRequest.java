@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 套餐包管理模块
+ * Pack-Manage
  * 套餐包管理模块
  *
  * OpenAPI spec version: v1
@@ -52,6 +52,7 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
      * get 页容量，默认10, 范围（1-100）
      *
@@ -70,6 +71,7 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 页序号，默认1，不能小于1
      *
@@ -87,6 +89,7 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 地域ID
@@ -107,6 +110,7 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 页容量，默认10, 范围（1-100）
      *
@@ -117,6 +121,7 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 页序号，默认1，不能小于1
      *
@@ -126,6 +131,7 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 地域ID

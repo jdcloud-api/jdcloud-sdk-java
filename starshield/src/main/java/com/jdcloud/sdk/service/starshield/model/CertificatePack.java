@@ -40,24 +40,29 @@ public class CertificatePack  implements java.io.Serializable {
     private String id;
 
     /**
-     * 证书包的类型
+     * 证书包的类型，有效值universal/sni_custom/advanced
+universal    通用
+sni_custom   自定义
+advanced     专用
+
      */
     private String ty_pe;
 
     /**
      * 证书包的有效主机名的逗号分隔列表。必须包含域的顶级域名，不能包含超过50个主机，并且不能为空。
      */
+    
     private List<String> hosts;
-
     /**
      * certificates
      */
+    
     private List<Certificate> certificates;
-
     /**
      * 包中主证书的标识符
      */
     private String primary_certificate;
+
 
 
     /**
@@ -78,8 +83,13 @@ public class CertificatePack  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
-     * get 证书包的类型
+     * get 证书包的类型，有效值universal/sni_custom/advanced
+universal    通用
+sni_custom   自定义
+advanced     专用
+
      *
      * @return
      */
@@ -88,7 +98,11 @@ public class CertificatePack  implements java.io.Serializable {
     }
 
     /**
-     * set 证书包的类型
+     * set 证书包的类型，有效值universal/sni_custom/advanced
+universal    通用
+sni_custom   自定义
+advanced     专用
+
      *
      * @param ty_pe
      */
@@ -96,41 +110,44 @@ public class CertificatePack  implements java.io.Serializable {
         this.ty_pe = ty_pe;
     }
 
+
     /**
-     * get 证书包的有效主机名的逗号分隔列表。必须包含域的顶级域名，不能包含超过50个主机，并且不能为空。
-     *
-     * @return
-     */
+    * get 证书包的有效主机名的逗号分隔列表。必须包含域的顶级域名，不能包含超过50个主机，并且不能为空。
+    *
+    * @return
+    */
     public List<String> getHosts() {
         return hosts;
     }
 
     /**
-     * set 证书包的有效主机名的逗号分隔列表。必须包含域的顶级域名，不能包含超过50个主机，并且不能为空。
-     *
-     * @param hosts
-     */
+    * set 证书包的有效主机名的逗号分隔列表。必须包含域的顶级域名，不能包含超过50个主机，并且不能为空。
+    *
+    * @param hosts
+    */
     public void setHosts(List<String> hosts) {
         this.hosts = hosts;
     }
 
+
     /**
-     * get certificates
-     *
-     * @return
-     */
+    * get certificates
+    *
+    * @return
+    */
     public List<Certificate> getCertificates() {
         return certificates;
     }
 
     /**
-     * set certificates
-     *
-     * @param certificates
-     */
+    * set certificates
+    *
+    * @param certificates
+    */
     public void setCertificates(List<Certificate> certificates) {
         this.certificates = certificates;
     }
+
 
     /**
      * get 包中主证书的标识符
@@ -151,6 +168,7 @@ public class CertificatePack  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 证书包的唯一标识符
      *
@@ -161,8 +179,13 @@ public class CertificatePack  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 证书包的类型
+     * set 证书包的类型，有效值universal/sni_custom/advanced
+universal    通用
+sni_custom   自定义
+advanced     专用
+
      *
      * @param ty_pe
      */
@@ -171,25 +194,28 @@ public class CertificatePack  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 证书包的有效主机名的逗号分隔列表。必须包含域的顶级域名，不能包含超过50个主机，并且不能为空。
-     *
-     * @param hosts
-     */
+    * set 证书包的有效主机名的逗号分隔列表。必须包含域的顶级域名，不能包含超过50个主机，并且不能为空。
+    *
+    * @param hosts
+    */
     public CertificatePack hosts(List<String> hosts) {
         this.hosts = hosts;
         return this;
     }
 
+
     /**
-     * set certificates
-     *
-     * @param certificates
-     */
+    * set certificates
+    *
+    * @param certificates
+    */
     public CertificatePack certificates(List<Certificate> certificates) {
         this.certificates = certificates;
         return this;
     }
+
 
     /**
      * set 包中主证书的标识符
@@ -200,6 +226,7 @@ public class CertificatePack  implements java.io.Serializable {
         this.primary_certificate = primary_certificate;
         return this;
     }
+
 
 
     /**
@@ -225,5 +252,4 @@ public class CertificatePack  implements java.io.Serializable {
         }
         this.certificates.add(certificate);
     }
-
 }

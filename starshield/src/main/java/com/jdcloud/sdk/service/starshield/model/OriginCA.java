@@ -47,8 +47,8 @@ public class OriginCA  implements java.io.Serializable {
     /**
      * Array of hostnames or wildcard names (e.g., *.example.com) bound to the certificate
      */
+    
     private List<String> hostnames;
-
     /**
      * When the certificate will expire
      */
@@ -70,6 +70,7 @@ public class OriginCA  implements java.io.Serializable {
     private String csr;
 
 
+
     /**
      * get The x509 serial number of the Origin CA certificate
      *
@@ -87,6 +88,7 @@ public class OriginCA  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get The Origin CA certificate. Will be newline-encoded.
@@ -106,23 +108,25 @@ public class OriginCA  implements java.io.Serializable {
         this.certificate = certificate;
     }
 
+
     /**
-     * get Array of hostnames or wildcard names (e.g., *.example.com) bound to the certificate
-     *
-     * @return
-     */
+    * get Array of hostnames or wildcard names (e.g., *.example.com) bound to the certificate
+    *
+    * @return
+    */
     public List<String> getHostnames() {
         return hostnames;
     }
 
     /**
-     * set Array of hostnames or wildcard names (e.g., *.example.com) bound to the certificate
-     *
-     * @param hostnames
-     */
+    * set Array of hostnames or wildcard names (e.g., *.example.com) bound to the certificate
+    *
+    * @param hostnames
+    */
     public void setHostnames(List<String> hostnames) {
         this.hostnames = hostnames;
     }
+
 
     /**
      * get When the certificate will expire
@@ -142,6 +146,7 @@ public class OriginCA  implements java.io.Serializable {
         this.expires_on = expires_on;
     }
 
+
     /**
      * get Signature type desired on certificate (&quot;origin-rsa&quot; (rsa), &quot;origin-ecc&quot; (ecdsa), or &quot;keyless-certificate&quot; (for Keyless SSL servers)
      *
@@ -160,6 +165,7 @@ public class OriginCA  implements java.io.Serializable {
         this.request_type = request_type;
     }
 
+
     /**
      * get The number of days for which the certificate should be valid
      *
@@ -177,6 +183,7 @@ public class OriginCA  implements java.io.Serializable {
     public void setRequested_validity(Number requested_validity) {
         this.requested_validity = requested_validity;
     }
+
 
     /**
      * get The Certificate Signing Request (CSR). Must be newline-encoded.
@@ -197,6 +204,7 @@ public class OriginCA  implements java.io.Serializable {
     }
 
 
+
     /**
      * set The x509 serial number of the Origin CA certificate
      *
@@ -206,6 +214,7 @@ public class OriginCA  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set The Origin CA certificate. Will be newline-encoded.
@@ -217,15 +226,17 @@ public class OriginCA  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set Array of hostnames or wildcard names (e.g., *.example.com) bound to the certificate
-     *
-     * @param hostnames
-     */
+    * set Array of hostnames or wildcard names (e.g., *.example.com) bound to the certificate
+    *
+    * @param hostnames
+    */
     public OriginCA hostnames(List<String> hostnames) {
         this.hostnames = hostnames;
         return this;
     }
+
 
     /**
      * set When the certificate will expire
@@ -237,6 +248,7 @@ public class OriginCA  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Signature type desired on certificate (&quot;origin-rsa&quot; (rsa), &quot;origin-ecc&quot; (ecdsa), or &quot;keyless-certificate&quot; (for Keyless SSL servers)
      *
@@ -246,6 +258,7 @@ public class OriginCA  implements java.io.Serializable {
         this.request_type = request_type;
         return this;
     }
+
 
     /**
      * set The number of days for which the certificate should be valid
@@ -257,6 +270,7 @@ public class OriginCA  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set The Certificate Signing Request (CSR). Must be newline-encoded.
      *
@@ -266,6 +280,7 @@ public class OriginCA  implements java.io.Serializable {
         this.csr = csr;
         return this;
     }
+
 
 
     /**
@@ -279,5 +294,4 @@ public class OriginCA  implements java.io.Serializable {
         }
         this.hostnames.add(hostname);
     }
-
 }

@@ -47,8 +47,8 @@ public class KeylessSSL  implements java.io.Serializable {
     /**
      * Available permissions for the Keyless SSL for the current user requesting the item
      */
+    
     private List<String> permissions;
-
     /**
      * The keyless SSL name
      */
@@ -80,6 +80,7 @@ public class KeylessSSL  implements java.io.Serializable {
     private String id;
 
 
+
     /**
      * get The keyless SSL port used to commmunicate between JDC StarShield and the client&#39;s Keyless SSL server
      *
@@ -97,6 +98,7 @@ public class KeylessSSL  implements java.io.Serializable {
     public void setPort(Number port) {
         this.port = port;
     }
+
 
     /**
      * get Whether or not the Keyless SSL is on or off
@@ -116,23 +118,25 @@ public class KeylessSSL  implements java.io.Serializable {
         this.enabled = enabled;
     }
 
+
     /**
-     * get Available permissions for the Keyless SSL for the current user requesting the item
-     *
-     * @return
-     */
+    * get Available permissions for the Keyless SSL for the current user requesting the item
+    *
+    * @return
+    */
     public List<String> getPermissions() {
         return permissions;
     }
 
     /**
-     * set Available permissions for the Keyless SSL for the current user requesting the item
-     *
-     * @param permissions
-     */
+    * set Available permissions for the Keyless SSL for the current user requesting the item
+    *
+    * @param permissions
+    */
     public void setPermissions(List<String> permissions) {
         this.permissions = permissions;
     }
+
 
     /**
      * get The keyless SSL name
@@ -152,6 +156,7 @@ public class KeylessSSL  implements java.io.Serializable {
         this.host = host;
     }
 
+
     /**
      * get The keyless SSL name
      *
@@ -169,6 +174,7 @@ public class KeylessSSL  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get Status of the Keyless SSL
@@ -188,6 +194,7 @@ public class KeylessSSL  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get When the Keyless SSL was last modified
      *
@@ -206,6 +213,7 @@ public class KeylessSSL  implements java.io.Serializable {
         this.modified_on = modified_on;
     }
 
+
     /**
      * get When the Keyless SSL was created
      *
@@ -223,6 +231,7 @@ public class KeylessSSL  implements java.io.Serializable {
     public void setCreated_on(String created_on) {
         this.created_on = created_on;
     }
+
 
     /**
      * get Keyless certificate identifier tag
@@ -243,6 +252,7 @@ public class KeylessSSL  implements java.io.Serializable {
     }
 
 
+
     /**
      * set The keyless SSL port used to commmunicate between JDC StarShield and the client&#39;s Keyless SSL server
      *
@@ -252,6 +262,7 @@ public class KeylessSSL  implements java.io.Serializable {
         this.port = port;
         return this;
     }
+
 
     /**
      * set Whether or not the Keyless SSL is on or off
@@ -263,15 +274,17 @@ public class KeylessSSL  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set Available permissions for the Keyless SSL for the current user requesting the item
-     *
-     * @param permissions
-     */
+    * set Available permissions for the Keyless SSL for the current user requesting the item
+    *
+    * @param permissions
+    */
     public KeylessSSL permissions(List<String> permissions) {
         this.permissions = permissions;
         return this;
     }
+
 
     /**
      * set The keyless SSL name
@@ -283,6 +296,7 @@ public class KeylessSSL  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set The keyless SSL name
      *
@@ -292,6 +306,7 @@ public class KeylessSSL  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set Status of the Keyless SSL
@@ -303,6 +318,7 @@ public class KeylessSSL  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set When the Keyless SSL was last modified
      *
@@ -312,6 +328,7 @@ public class KeylessSSL  implements java.io.Serializable {
         this.modified_on = modified_on;
         return this;
     }
+
 
     /**
      * set When the Keyless SSL was created
@@ -323,6 +340,7 @@ public class KeylessSSL  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Keyless certificate identifier tag
      *
@@ -332,6 +350,7 @@ public class KeylessSSL  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
 
     /**
@@ -345,5 +364,4 @@ public class KeylessSSL  implements java.io.Serializable {
         }
         this.permissions.add(permission);
     }
-
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Zone Settings
+ * Zone-Settings
  * A Zone setting changes how the Zone works in relation to caching, security, or other features of JDC StarShield
  *
  * OpenAPI spec version: v1
@@ -39,8 +39,8 @@ public class ChangeCiphersSettingRequest extends JdcloudRequest implements java.
     /**
      * 该设置的值
      */
+    
     private List<String> value;
-
     /**
      * zone_identifier
      * Required:true
@@ -49,23 +49,25 @@ public class ChangeCiphersSettingRequest extends JdcloudRequest implements java.
     private String zone_identifier;
 
 
+
     /**
-     * get 该设置的值
-     *
-     * @return
-     */
+    * get 该设置的值
+    *
+    * @return
+    */
     public List<String> getValue() {
         return value;
     }
 
     /**
-     * set 该设置的值
-     *
-     * @param value
-     */
+    * set 该设置的值
+    *
+    * @param value
+    */
     public void setValue(List<String> value) {
         this.value = value;
     }
+
 
     /**
      * get zone_identifier
@@ -86,15 +88,17 @@ public class ChangeCiphersSettingRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
-     * set 该设置的值
-     *
-     * @param value
-     */
+    * set 该设置的值
+    *
+    * @param value
+    */
     public ChangeCiphersSettingRequest value(List<String> value) {
         this.value = value;
         return this;
     }
+
 
     /**
      * set zone_identifier
@@ -105,6 +109,7 @@ public class ChangeCiphersSettingRequest extends JdcloudRequest implements java.
         this.zone_identifier = zone_identifier;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class ChangeCiphersSettingRequest extends JdcloudRequest implements java.
         }
         this.value.add(value);
     }
-
 }

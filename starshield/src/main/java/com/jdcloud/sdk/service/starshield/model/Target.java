@@ -43,6 +43,7 @@ public class Target  implements java.io.Serializable {
     private Constraint constraint;
 
 
+
     /**
      * get target
      *
@@ -60,6 +61,7 @@ public class Target  implements java.io.Serializable {
     public void setTarget(String target) {
         this.target = target;
     }
+
 
     /**
      * get constraint
@@ -80,6 +82,7 @@ public class Target  implements java.io.Serializable {
     }
 
 
+
     /**
      * set target
      *
@@ -89,6 +92,7 @@ public class Target  implements java.io.Serializable {
         this.target = target;
         return this;
     }
+
 
     /**
      * set constraint

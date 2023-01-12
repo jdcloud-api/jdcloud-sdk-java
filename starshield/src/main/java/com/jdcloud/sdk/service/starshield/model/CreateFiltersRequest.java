@@ -39,8 +39,8 @@ public class CreateFiltersRequest extends JdcloudRequest implements java.io.Seri
     /**
      * filters
      */
+    
     private List<Filter> filters;
-
     /**
      * zone_identifier
      * Required:true
@@ -49,23 +49,25 @@ public class CreateFiltersRequest extends JdcloudRequest implements java.io.Seri
     private String zone_identifier;
 
 
+
     /**
-     * get filters
-     *
-     * @return
-     */
+    * get filters
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set filters
-     *
-     * @param filters
-     */
+    * set filters
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get zone_identifier
@@ -86,15 +88,17 @@ public class CreateFiltersRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
-     * set filters
-     *
-     * @param filters
-     */
+    * set filters
+    *
+    * @param filters
+    */
     public CreateFiltersRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set zone_identifier
@@ -105,6 +109,7 @@ public class CreateFiltersRequest extends JdcloudRequest implements java.io.Seri
         this.zone_identifier = zone_identifier;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class CreateFiltersRequest extends JdcloudRequest implements java.io.Seri
         }
         this.filters.add(filter);
     }
-
 }

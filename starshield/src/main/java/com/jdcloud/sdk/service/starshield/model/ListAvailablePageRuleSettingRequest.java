@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Available Page Rules for a Zone
+ * Available-Page-Rules-for-a-Zone
  * A rule describing target patterns for requests and actions to perform on matching requests
  *
  * OpenAPI spec version: v1
@@ -42,6 +42,7 @@ public class ListAvailablePageRuleSettingRequest extends JdcloudRequest implemen
     private String zone_identifier;
 
 
+
     /**
      * get zone_identifier
      *
@@ -59,6 +60,7 @@ public class ListAvailablePageRuleSettingRequest extends JdcloudRequest implemen
     public void setZone_identifier(String zone_identifier) {
         this.zone_identifier = zone_identifier;
     }
+
 
 
     /**

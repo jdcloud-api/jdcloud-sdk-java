@@ -73,6 +73,7 @@ public class SSLVerification  implements java.io.Serializable {
     private String cert_pack_uuid;
 
 
+
     /**
      * get Current status of certificate
      *
@@ -90,6 +91,7 @@ public class SSLVerification  implements java.io.Serializable {
     public void setCertificate_status(String certificate_status) {
         this.certificate_status = certificate_status;
     }
+
 
     /**
      * get Certificate&#39;s signature algorithm
@@ -109,6 +111,7 @@ public class SSLVerification  implements java.io.Serializable {
         this.signature = signature;
     }
 
+
     /**
      * get Method of verification
      *
@@ -126,6 +129,7 @@ public class SSLVerification  implements java.io.Serializable {
     public void setVerification_type(String verification_type) {
         this.verification_type = verification_type;
     }
+
 
     /**
      * get Status of the required verification information, omitted if verification status is unknown.
@@ -145,6 +149,7 @@ public class SSLVerification  implements java.io.Serializable {
         this.verification_status = verification_status;
     }
 
+
     /**
      * get verification_info
      *
@@ -162,6 +167,7 @@ public class SSLVerification  implements java.io.Serializable {
     public void setVerification_info(Verification_info verification_info) {
         this.verification_info = verification_info;
     }
+
 
     /**
      * get Certificate Authority is manually reviewing the order
@@ -181,6 +187,7 @@ public class SSLVerification  implements java.io.Serializable {
         this.brand_check = brand_check;
     }
 
+
     /**
      * get Validation method in use for a certificate pack order.
      *
@@ -198,6 +205,7 @@ public class SSLVerification  implements java.io.Serializable {
     public void setValidation_method(String validation_method) {
         this.validation_method = validation_method;
     }
+
 
     /**
      * get Certificate Pack UUID
@@ -218,6 +226,7 @@ public class SSLVerification  implements java.io.Serializable {
     }
 
 
+
     /**
      * set Current status of certificate
      *
@@ -227,6 +236,7 @@ public class SSLVerification  implements java.io.Serializable {
         this.certificate_status = certificate_status;
         return this;
     }
+
 
     /**
      * set Certificate&#39;s signature algorithm
@@ -238,6 +248,7 @@ public class SSLVerification  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Method of verification
      *
@@ -247,6 +258,7 @@ public class SSLVerification  implements java.io.Serializable {
         this.verification_type = verification_type;
         return this;
     }
+
 
     /**
      * set Status of the required verification information, omitted if verification status is unknown.
@@ -258,6 +270,7 @@ public class SSLVerification  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set verification_info
      *
@@ -267,6 +280,7 @@ public class SSLVerification  implements java.io.Serializable {
         this.verification_info = verification_info;
         return this;
     }
+
 
     /**
      * set Certificate Authority is manually reviewing the order
@@ -278,6 +292,7 @@ public class SSLVerification  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Validation method in use for a certificate pack order.
      *
@@ -287,6 +302,7 @@ public class SSLVerification  implements java.io.Serializable {
         this.validation_method = validation_method;
         return this;
     }
+
 
     /**
      * set Certificate Pack UUID

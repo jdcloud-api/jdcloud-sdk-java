@@ -40,6 +40,7 @@ public class DescribeInstanceByOrderNoResult extends JdcloudResult implements ja
     private DescribeInstancesRes describeInstancesRes;
 
 
+
     /**
      * get describeInstancesRes
      *
@@ -57,6 +58,7 @@ public class DescribeInstanceByOrderNoResult extends JdcloudResult implements ja
     public void setDescribeInstancesRes(DescribeInstancesRes describeInstancesRes) {
         this.describeInstancesRes = describeInstancesRes;
     }
+
 
 
     /**
