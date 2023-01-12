@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>vm</artifactId>
-  <version>1.5.9</version>
+  <version>1.5.10</version>
   <packaging>jar</packaging>
   <name>vm</name>
   <url>http://www.jdcloud.com</url>
