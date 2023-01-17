@@ -68,6 +68,7 @@ public class LocalDevice  implements java.io.Serializable {
     private String resourceId;
 
 
+
     /**
      * get 设备类型。
      *
@@ -85,6 +86,7 @@ public class LocalDevice  implements java.io.Serializable {
     public void setDeviceType(String deviceType) {
         this.deviceType = deviceType;
     }
+
 
     /**
      * get 设备的型号。
@@ -104,6 +106,7 @@ public class LocalDevice  implements java.io.Serializable {
         this.productModel = productModel;
     }
 
+
     /**
      * get 设备ID。
      *
@@ -121,6 +124,7 @@ public class LocalDevice  implements java.io.Serializable {
     public void setDeviceId(String deviceId) {
         this.deviceId = deviceId;
     }
+
 
     /**
      * get 配置信息。
@@ -140,6 +144,7 @@ public class LocalDevice  implements java.io.Serializable {
         this.setting = setting;
     }
 
+
     /**
      * get 设备的描述信息。
      *
@@ -158,6 +163,7 @@ public class LocalDevice  implements java.io.Serializable {
         this.deviceInfo = deviceInfo;
     }
 
+
     /**
      * get 设备的状态信息，enable，disable。
      *
@@ -175,6 +181,7 @@ public class LocalDevice  implements java.io.Serializable {
     public void setState(String state) {
         this.state = state;
     }
+
 
     /**
      * get 设备被哪个实例使用，如果为空，表示未被占用。
@@ -195,6 +202,7 @@ public class LocalDevice  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 设备类型。
      *
@@ -204,6 +212,7 @@ public class LocalDevice  implements java.io.Serializable {
         this.deviceType = deviceType;
         return this;
     }
+
 
     /**
      * set 设备的型号。
@@ -215,6 +224,7 @@ public class LocalDevice  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 设备ID。
      *
@@ -224,6 +234,7 @@ public class LocalDevice  implements java.io.Serializable {
         this.deviceId = deviceId;
         return this;
     }
+
 
     /**
      * set 配置信息。
@@ -235,6 +246,7 @@ public class LocalDevice  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 设备的描述信息。
      *
@@ -245,6 +257,7 @@ public class LocalDevice  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 设备的状态信息，enable，disable。
      *
@@ -254,6 +267,7 @@ public class LocalDevice  implements java.io.Serializable {
         this.state = state;
         return this;
     }
+
 
     /**
      * set 设备被哪个实例使用，如果为空，表示未被占用。

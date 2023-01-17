@@ -40,37 +40,40 @@ public class AllocDedicatedHostsResult extends JdcloudResult implements java.io.
     /**
      * dedicatedHostIds
      */
+    
     private List<String> dedicatedHostIds;
 
 
     /**
-     * get dedicatedHostIds
-     *
-     * @return
-     */
+    * get dedicatedHostIds
+    *
+    * @return
+    */
     public List<String> getDedicatedHostIds() {
         return dedicatedHostIds;
     }
 
     /**
-     * set dedicatedHostIds
-     *
-     * @param dedicatedHostIds
-     */
+    * set dedicatedHostIds
+    *
+    * @param dedicatedHostIds
+    */
     public void setDedicatedHostIds(List<String> dedicatedHostIds) {
         this.dedicatedHostIds = dedicatedHostIds;
     }
 
 
+
     /**
-     * set dedicatedHostIds
-     *
-     * @param dedicatedHostIds
-     */
+    * set dedicatedHostIds
+    *
+    * @param dedicatedHostIds
+    */
     public AllocDedicatedHostsResult dedicatedHostIds(List<String> dedicatedHostIds) {
         this.dedicatedHostIds = dedicatedHostIds;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class AllocDedicatedHostsResult extends JdcloudResult implements java.io.
         }
         this.dedicatedHostIds.add(dedicatedHostId);
     }
-
 }

@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.dh.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.charge.model.ChargeSpec;
 
@@ -61,8 +63,21 @@ public class DedicatedHostSpec  implements java.io.Serializable {
     /**
      * 计费配置。
 专有宿主机不支持按用量方式计费，默认为按配置计费。
+
      */
     private ChargeSpec charge;
+
+    /**
+     * 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+
+     */
+    
+    private List<Tag> userTags;
+    /**
+     * 资源组ID
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -83,6 +98,7 @@ public class DedicatedHostSpec  implements java.io.Serializable {
         this.dedicatedPoolId = dedicatedPoolId;
     }
 
+
     /**
      * get 专有宿主机所属的可用区，不传入该参数时可用区属性从专有宿主机池中继承；指定的可用区必须是对应专有宿主机池中设置的可用区的子集
      *
@@ -100,6 +116,7 @@ public class DedicatedHostSpec  implements java.io.Serializable {
     public void setAz(String az) {
         this.az = az;
     }
+
 
     /**
      * get 专有宿主机名称
@@ -119,6 +136,7 @@ public class DedicatedHostSpec  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 专有宿主机描述
      *
@@ -137,9 +155,11 @@ public class DedicatedHostSpec  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 计费配置。
 专有宿主机不支持按用量方式计费，默认为按配置计费。
+
      *
      * @return
      */
@@ -150,12 +170,54 @@ public class DedicatedHostSpec  implements java.io.Serializable {
     /**
      * set 计费配置。
 专有宿主机不支持按用量方式计费，默认为按配置计费。
+
      *
      * @param charge
      */
     public void setCharge(ChargeSpec charge) {
         this.charge = charge;
     }
+
+
+    /**
+    * get 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+
+    *
+    * @return
+    */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+    * set 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+
+    *
+    * @param userTags
+    */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
+
+    /**
+     * get 资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
 
 
     /**
@@ -168,6 +230,7 @@ public class DedicatedHostSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 专有宿主机所属的可用区，不传入该参数时可用区属性从专有宿主机池中继承；指定的可用区必须是对应专有宿主机池中设置的可用区的子集
      *
@@ -177,6 +240,7 @@ public class DedicatedHostSpec  implements java.io.Serializable {
         this.az = az;
         return this;
     }
+
 
     /**
      * set 专有宿主机名称
@@ -188,6 +252,7 @@ public class DedicatedHostSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 专有宿主机描述
      *
@@ -198,9 +263,11 @@ public class DedicatedHostSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费配置。
 专有宿主机不支持按用量方式计费，默认为按配置计费。
+
      *
      * @param charge
      */
@@ -210,4 +277,40 @@ public class DedicatedHostSpec  implements java.io.Serializable {
     }
 
 
+    /**
+    * set 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+
+    *
+    * @param userTags
+    */
+    public DedicatedHostSpec userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public DedicatedHostSpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
+    }
 }

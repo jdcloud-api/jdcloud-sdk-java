@@ -42,8 +42,8 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
      * resourceTypes - 资源类型，支持多个[dedicatedHost，dedicatedPool]
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
@@ -52,25 +52,27 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     private String regionId;
 
 
-    /**
-     * get resourceTypes - 资源类型，支持多个[dedicatedHost，dedicatedPool]
 
-     *
-     * @return
-     */
+    /**
+    * get resourceTypes - 资源类型，支持多个[dedicatedHost，dedicatedPool]
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set resourceTypes - 资源类型，支持多个[dedicatedHost，dedicatedPool]
+    * set resourceTypes - 资源类型，支持多个[dedicatedHost，dedicatedPool]
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -91,16 +93,18 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
-    /**
-     * set resourceTypes - 资源类型，支持多个[dedicatedHost，dedicatedPool]
 
-     *
-     * @param filters
-     */
+    /**
+    * set resourceTypes - 资源类型，支持多个[dedicatedHost，dedicatedPool]
+
+    *
+    * @param filters
+    */
     public DescribeQuotasRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域ID
@@ -111,6 +115,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -125,5 +130,4 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
         }
         this.filters.add(filter);
     }
-
 }

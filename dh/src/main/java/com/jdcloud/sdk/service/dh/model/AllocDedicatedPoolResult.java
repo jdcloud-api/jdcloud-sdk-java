@@ -43,6 +43,7 @@ public class AllocDedicatedPoolResult extends JdcloudResult implements java.io.S
     private String dedicatedPoolId;
 
 
+
     /**
      * get dedicatedPoolId
      *
@@ -60,6 +61,7 @@ public class AllocDedicatedPoolResult extends JdcloudResult implements java.io.S
     public void setDedicatedPoolId(String dedicatedPoolId) {
         this.dedicatedPoolId = dedicatedPoolId;
     }
+
 
 
     /**

@@ -26,12 +26,11 @@ package com.jdcloud.sdk.service.dh.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.charge.model.Charge;
 
 /**
- * dedicatedHost
+ * dedicatedHostInternal
  */
-public class DedicatedHost  implements java.io.Serializable {
+public class DedicatedHostInternal  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -91,30 +90,25 @@ public class DedicatedHost  implements java.io.Serializable {
     
     private List<String> instanceIds;
     /**
-     * 计费信息
-     */
-    private Charge charge;
-
-    /**
      * 创建时间
      */
     private String createTime;
 
     /**
-     * 专有宿主机cpu拓扑。
+     * 本地设备列表。
 
+     */
+    
+    private List<LocalDevice> localDevices;
+    /**
+     * CPU拓扑信息
      */
     private CpuTopology cpuTopology;
 
     /**
-     * Tag信息。
+     * 机架信息
      */
-    
-    private List<Tag> tags;
-    /**
-     * 资源组ID
-     */
-    private String resourceGroupId;
+    private String rack;
 
 
 
@@ -328,25 +322,6 @@ public class DedicatedHost  implements java.io.Serializable {
 
 
     /**
-     * get 计费信息
-     *
-     * @return
-     */
-    public Charge getCharge() {
-        return charge;
-    }
-
-    /**
-     * set 计费信息
-     *
-     * @param charge
-     */
-    public void setCharge(Charge charge) {
-        this.charge = charge;
-    }
-
-
-    /**
      * get 创建时间
      *
      * @return
@@ -366,8 +341,28 @@ public class DedicatedHost  implements java.io.Serializable {
 
 
     /**
-     * get 专有宿主机cpu拓扑。
+    * get 本地设备列表。
 
+    *
+    * @return
+    */
+    public List<LocalDevice> getLocalDevices() {
+        return localDevices;
+    }
+
+    /**
+    * set 本地设备列表。
+
+    *
+    * @param localDevices
+    */
+    public void setLocalDevices(List<LocalDevice> localDevices) {
+        this.localDevices = localDevices;
+    }
+
+
+    /**
+     * get CPU拓扑信息
      *
      * @return
      */
@@ -376,8 +371,7 @@ public class DedicatedHost  implements java.io.Serializable {
     }
 
     /**
-     * set 专有宿主机cpu拓扑。
-
+     * set CPU拓扑信息
      *
      * @param cpuTopology
      */
@@ -387,40 +381,21 @@ public class DedicatedHost  implements java.io.Serializable {
 
 
     /**
-    * get Tag信息。
-    *
-    * @return
-    */
-    public List<Tag> getTags() {
-        return tags;
-    }
-
-    /**
-    * set Tag信息。
-    *
-    * @param tags
-    */
-    public void setTags(List<Tag> tags) {
-        this.tags = tags;
-    }
-
-
-    /**
-     * get 资源组ID
+     * get 机架信息
      *
      * @return
      */
-    public String getResourceGroupId() {
-        return resourceGroupId;
+    public String getRack() {
+        return rack;
     }
 
     /**
-     * set 资源组ID
+     * set 机架信息
      *
-     * @param resourceGroupId
+     * @param rack
      */
-    public void setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public void setRack(String rack) {
+        this.rack = rack;
     }
 
 
@@ -430,7 +405,7 @@ public class DedicatedHost  implements java.io.Serializable {
      *
      * @param dedicatedHostId
      */
-    public DedicatedHost dedicatedHostId(String dedicatedHostId) {
+    public DedicatedHostInternal dedicatedHostId(String dedicatedHostId) {
         this.dedicatedHostId = dedicatedHostId;
         return this;
     }
@@ -441,7 +416,7 @@ public class DedicatedHost  implements java.io.Serializable {
      *
      * @param name
      */
-    public DedicatedHost name(String name) {
+    public DedicatedHostInternal name(String name) {
         this.name = name;
         return this;
     }
@@ -452,7 +427,7 @@ public class DedicatedHost  implements java.io.Serializable {
      *
      * @param az
      */
-    public DedicatedHost az(String az) {
+    public DedicatedHostInternal az(String az) {
         this.az = az;
         return this;
     }
@@ -463,7 +438,7 @@ public class DedicatedHost  implements java.io.Serializable {
      *
      * @param dedicatedHostType
      */
-    public DedicatedHost dedicatedHostType(String dedicatedHostType) {
+    public DedicatedHostInternal dedicatedHostType(String dedicatedHostType) {
         this.dedicatedHostType = dedicatedHostType;
         return this;
     }
@@ -474,7 +449,7 @@ public class DedicatedHost  implements java.io.Serializable {
      *
      * @param description
      */
-    public DedicatedHost description(String description) {
+    public DedicatedHostInternal description(String description) {
         this.description = description;
         return this;
     }
@@ -485,7 +460,7 @@ public class DedicatedHost  implements java.io.Serializable {
      *
      * @param status
      */
-    public DedicatedHost status(String status) {
+    public DedicatedHostInternal status(String status) {
         this.status = status;
         return this;
     }
@@ -496,7 +471,7 @@ public class DedicatedHost  implements java.io.Serializable {
      *
      * @param dedicatedPoolId
      */
-    public DedicatedHost dedicatedPoolId(String dedicatedPoolId) {
+    public DedicatedHostInternal dedicatedPoolId(String dedicatedPoolId) {
         this.dedicatedPoolId = dedicatedPoolId;
         return this;
     }
@@ -507,7 +482,7 @@ public class DedicatedHost  implements java.io.Serializable {
      *
      * @param logicRack
      */
-    public DedicatedHost logicRack(Integer logicRack) {
+    public DedicatedHostInternal logicRack(Integer logicRack) {
         this.logicRack = logicRack;
         return this;
     }
@@ -518,7 +493,7 @@ public class DedicatedHost  implements java.io.Serializable {
     *
     * @param supportedInstanceType
     */
-    public DedicatedHost supportedInstanceType(List<String> supportedInstanceType) {
+    public DedicatedHostInternal supportedInstanceType(List<String> supportedInstanceType) {
         this.supportedInstanceType = supportedInstanceType;
         return this;
     }
@@ -529,7 +504,7 @@ public class DedicatedHost  implements java.io.Serializable {
      *
      * @param capacity
      */
-    public DedicatedHost capacity(ResourceCapacity capacity) {
+    public DedicatedHostInternal capacity(ResourceCapacity capacity) {
         this.capacity = capacity;
         return this;
     }
@@ -540,19 +515,8 @@ public class DedicatedHost  implements java.io.Serializable {
     *
     * @param instanceIds
     */
-    public DedicatedHost instanceIds(List<String> instanceIds) {
+    public DedicatedHostInternal instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
-        return this;
-    }
-
-
-    /**
-     * set 计费信息
-     *
-     * @param charge
-     */
-    public DedicatedHost charge(Charge charge) {
-        this.charge = charge;
         return this;
     }
 
@@ -562,42 +526,42 @@ public class DedicatedHost  implements java.io.Serializable {
      *
      * @param createTime
      */
-    public DedicatedHost createTime(String createTime) {
+    public DedicatedHostInternal createTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
 
 
     /**
-     * set 专有宿主机cpu拓扑。
+    * set 本地设备列表。
 
+    *
+    * @param localDevices
+    */
+    public DedicatedHostInternal localDevices(List<LocalDevice> localDevices) {
+        this.localDevices = localDevices;
+        return this;
+    }
+
+
+    /**
+     * set CPU拓扑信息
      *
      * @param cpuTopology
      */
-    public DedicatedHost cpuTopology(CpuTopology cpuTopology) {
+    public DedicatedHostInternal cpuTopology(CpuTopology cpuTopology) {
         this.cpuTopology = cpuTopology;
         return this;
     }
 
 
     /**
-    * set Tag信息。
-    *
-    * @param tags
-    */
-    public DedicatedHost tags(List<Tag> tags) {
-        this.tags = tags;
-        return this;
-    }
-
-
-    /**
-     * set 资源组ID
+     * set 机架信息
      *
-     * @param resourceGroupId
+     * @param rack
      */
-    public DedicatedHost resourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public DedicatedHostInternal rack(String rack) {
+        this.rack = rack;
         return this;
     }
 
@@ -628,14 +592,15 @@ public class DedicatedHost  implements java.io.Serializable {
     }
 
     /**
-     * add item to Tag信息。
+     * add item to 本地设备列表。
+
      *
-     * @param tag
+     * @param localDevice
      */
-    public void addTag(Tag tag) {
-        if (this.tags == null) {
-            this.tags = new ArrayList<>();
+    public void addLocalDevice(LocalDevice localDevice) {
+        if (this.localDevices == null) {
+            this.localDevices = new ArrayList<>();
         }
-        this.tags.add(tag);
+        this.localDevices.add(localDevice);
     }
 }

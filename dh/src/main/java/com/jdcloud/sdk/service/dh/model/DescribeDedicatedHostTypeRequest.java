@@ -43,8 +43,8 @@ public class DescribeDedicatedHostTypeRequest extends JdcloudRequest implements 
 az - 可用区，精确匹配，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
@@ -53,27 +53,29 @@ az - 可用区，精确匹配，支持多个
     private String regionId;
 
 
+
     /**
-     * get dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
+    * get dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
+    * set dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -94,17 +96,19 @@ az - 可用区，精确匹配，支持多个
     }
 
 
+
     /**
-     * set dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
+    * set dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeDedicatedHostTypeRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域ID
@@ -115,6 +119,7 @@ az - 可用区，精确匹配，支持多个
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -130,5 +135,4 @@ az - 可用区，精确匹配，支持多个
         }
         this.filters.add(filter);
     }
-
 }

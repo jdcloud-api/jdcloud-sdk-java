@@ -42,6 +42,7 @@ public class DedicatedHostsBreif  implements java.io.Serializable {
     /**
      * 专有宿主机信息
      */
+    
     private List<DedicatedHostBreif> dedicatedHost;
 
 
@@ -63,23 +64,25 @@ public class DedicatedHostsBreif  implements java.io.Serializable {
         this.count = count;
     }
 
+
     /**
-     * get 专有宿主机信息
-     *
-     * @return
-     */
+    * get 专有宿主机信息
+    *
+    * @return
+    */
     public List<DedicatedHostBreif> getDedicatedHost() {
         return dedicatedHost;
     }
 
     /**
-     * set 专有宿主机信息
-     *
-     * @param dedicatedHost
-     */
+    * set 专有宿主机信息
+    *
+    * @param dedicatedHost
+    */
     public void setDedicatedHost(List<DedicatedHostBreif> dedicatedHost) {
         this.dedicatedHost = dedicatedHost;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class DedicatedHostsBreif  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 专有宿主机信息
-     *
-     * @param dedicatedHost
-     */
+    * set 专有宿主机信息
+    *
+    * @param dedicatedHost
+    */
     public DedicatedHostsBreif dedicatedHost(List<DedicatedHostBreif> dedicatedHost) {
         this.dedicatedHost = dedicatedHost;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class DedicatedHostsBreif  implements java.io.Serializable {
         }
         this.dedicatedHost.add(dedicatedHost);
     }
-
 }

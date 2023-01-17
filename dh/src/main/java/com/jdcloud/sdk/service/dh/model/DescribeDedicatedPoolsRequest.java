@@ -54,14 +54,15 @@ name - 专有宿主机名称，模糊匹配，支持单个
 dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -82,6 +83,7 @@ dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认为20；取值范围[10, 100]
      *
@@ -100,29 +102,31 @@ dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
+    * get dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
 name - 专有宿主机名称，模糊匹配，支持单个
 dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
+    * set dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
 name - 专有宿主机名称，模糊匹配，支持单个
 dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -143,6 +147,7 @@ dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
     }
 
 
+
     /**
      * set 页码；默认为1
      *
@@ -152,6 +157,7 @@ dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；默认为20；取值范围[10, 100]
@@ -163,18 +169,20 @@ dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
         return this;
     }
 
+
     /**
-     * set dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
+    * set dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
 name - 专有宿主机名称，模糊匹配，支持单个
 dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeDedicatedPoolsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域ID
@@ -185,6 +193,7 @@ dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -201,5 +210,4 @@ dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
         }
         this.filters.add(filter);
     }
-
 }

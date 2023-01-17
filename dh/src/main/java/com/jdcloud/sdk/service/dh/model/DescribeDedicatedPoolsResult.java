@@ -40,31 +40,33 @@ public class DescribeDedicatedPoolsResult extends JdcloudResult implements java.
     /**
      * dedicatedPools
      */
+    
     private List<DedicatedPool> dedicatedPools;
-
     /**
      * totalCount
      */
     private Number totalCount;
 
 
+
     /**
-     * get dedicatedPools
-     *
-     * @return
-     */
+    * get dedicatedPools
+    *
+    * @return
+    */
     public List<DedicatedPool> getDedicatedPools() {
         return dedicatedPools;
     }
 
     /**
-     * set dedicatedPools
-     *
-     * @param dedicatedPools
-     */
+    * set dedicatedPools
+    *
+    * @param dedicatedPools
+    */
     public void setDedicatedPools(List<DedicatedPool> dedicatedPools) {
         this.dedicatedPools = dedicatedPools;
     }
+
 
     /**
      * get totalCount
@@ -85,15 +87,17 @@ public class DescribeDedicatedPoolsResult extends JdcloudResult implements java.
     }
 
 
+
     /**
-     * set dedicatedPools
-     *
-     * @param dedicatedPools
-     */
+    * set dedicatedPools
+    *
+    * @param dedicatedPools
+    */
     public DescribeDedicatedPoolsResult dedicatedPools(List<DedicatedPool> dedicatedPools) {
         this.dedicatedPools = dedicatedPools;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -104,6 +108,7 @@ public class DescribeDedicatedPoolsResult extends JdcloudResult implements java.
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -117,5 +122,4 @@ public class DescribeDedicatedPoolsResult extends JdcloudResult implements java.
         }
         this.dedicatedPools.add(dedicatedPool);
     }
-
 }

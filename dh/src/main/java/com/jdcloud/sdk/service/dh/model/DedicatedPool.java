@@ -57,8 +57,8 @@ public class DedicatedPool  implements java.io.Serializable {
     /**
      * 有宿主机池选定的AZ列表
      */
+    
     private List<String> az;
-
     /**
      * 专有宿主机池资源使用信息
      */
@@ -67,8 +67,8 @@ public class DedicatedPool  implements java.io.Serializable {
     /**
      * 专有宿主机支持的云主机实例规格
      */
+    
     private List<String> supportedInstanceType;
-
     /**
      * 专有宿主机池下的专有宿主机简要信息
      */
@@ -77,12 +77,13 @@ public class DedicatedPool  implements java.io.Serializable {
     /**
      * 专有宿主机池中的云主机ID列表
      */
+    
     private List<String> instanceIds;
-
     /**
      * 创建时间
      */
     private String createTime;
+
 
 
     /**
@@ -103,6 +104,7 @@ public class DedicatedPool  implements java.io.Serializable {
         this.dedicatedPoolId = dedicatedPoolId;
     }
 
+
     /**
      * get 专有宿主机池名称
      *
@@ -120,6 +122,7 @@ public class DedicatedPool  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 专有宿主机池支持的机型
@@ -139,6 +142,7 @@ public class DedicatedPool  implements java.io.Serializable {
         this.dedicatedHostType = dedicatedHostType;
     }
 
+
     /**
      * get 专有宿主机池描述
      *
@@ -157,23 +161,25 @@ public class DedicatedPool  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
-     * get 有宿主机池选定的AZ列表
-     *
-     * @return
-     */
+    * get 有宿主机池选定的AZ列表
+    *
+    * @return
+    */
     public List<String> getAz() {
         return az;
     }
 
     /**
-     * set 有宿主机池选定的AZ列表
-     *
-     * @param az
-     */
+    * set 有宿主机池选定的AZ列表
+    *
+    * @param az
+    */
     public void setAz(List<String> az) {
         this.az = az;
     }
+
 
     /**
      * get 专有宿主机池资源使用信息
@@ -193,23 +199,25 @@ public class DedicatedPool  implements java.io.Serializable {
         this.capacity = capacity;
     }
 
+
     /**
-     * get 专有宿主机支持的云主机实例规格
-     *
-     * @return
-     */
+    * get 专有宿主机支持的云主机实例规格
+    *
+    * @return
+    */
     public List<String> getSupportedInstanceType() {
         return supportedInstanceType;
     }
 
     /**
-     * set 专有宿主机支持的云主机实例规格
-     *
-     * @param supportedInstanceType
-     */
+    * set 专有宿主机支持的云主机实例规格
+    *
+    * @param supportedInstanceType
+    */
     public void setSupportedInstanceType(List<String> supportedInstanceType) {
         this.supportedInstanceType = supportedInstanceType;
     }
+
 
     /**
      * get 专有宿主机池下的专有宿主机简要信息
@@ -229,23 +237,25 @@ public class DedicatedPool  implements java.io.Serializable {
         this.dedicatedHosts = dedicatedHosts;
     }
 
+
     /**
-     * get 专有宿主机池中的云主机ID列表
-     *
-     * @return
-     */
+    * get 专有宿主机池中的云主机ID列表
+    *
+    * @return
+    */
     public List<String> getInstanceIds() {
         return instanceIds;
     }
 
     /**
-     * set 专有宿主机池中的云主机ID列表
-     *
-     * @param instanceIds
-     */
+    * set 专有宿主机池中的云主机ID列表
+    *
+    * @param instanceIds
+    */
     public void setInstanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
     }
+
 
     /**
      * get 创建时间
@@ -266,6 +276,7 @@ public class DedicatedPool  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 专有宿主机池ID
      *
@@ -275,6 +286,7 @@ public class DedicatedPool  implements java.io.Serializable {
         this.dedicatedPoolId = dedicatedPoolId;
         return this;
     }
+
 
     /**
      * set 专有宿主机池名称
@@ -286,6 +298,7 @@ public class DedicatedPool  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 专有宿主机池支持的机型
      *
@@ -295,6 +308,7 @@ public class DedicatedPool  implements java.io.Serializable {
         this.dedicatedHostType = dedicatedHostType;
         return this;
     }
+
 
     /**
      * set 专有宿主机池描述
@@ -306,15 +320,17 @@ public class DedicatedPool  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 有宿主机池选定的AZ列表
-     *
-     * @param az
-     */
+    * set 有宿主机池选定的AZ列表
+    *
+    * @param az
+    */
     public DedicatedPool az(List<String> az) {
         this.az = az;
         return this;
     }
+
 
     /**
      * set 专有宿主机池资源使用信息
@@ -326,15 +342,17 @@ public class DedicatedPool  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 专有宿主机支持的云主机实例规格
-     *
-     * @param supportedInstanceType
-     */
+    * set 专有宿主机支持的云主机实例规格
+    *
+    * @param supportedInstanceType
+    */
     public DedicatedPool supportedInstanceType(List<String> supportedInstanceType) {
         this.supportedInstanceType = supportedInstanceType;
         return this;
     }
+
 
     /**
      * set 专有宿主机池下的专有宿主机简要信息
@@ -346,15 +364,17 @@ public class DedicatedPool  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 专有宿主机池中的云主机ID列表
-     *
-     * @param instanceIds
-     */
+    * set 专有宿主机池中的云主机ID列表
+    *
+    * @param instanceIds
+    */
     public DedicatedPool instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -365,6 +385,7 @@ public class DedicatedPool  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
 
     /**
@@ -402,5 +423,4 @@ public class DedicatedPool  implements java.io.Serializable {
         }
         this.instanceIds.add(instanceId);
     }
-
 }

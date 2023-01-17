@@ -40,31 +40,33 @@ public class DescribeDedicatedHostTypeResult extends JdcloudResult implements ja
     /**
      * dedicatedHostTypes
      */
+    
     private List<HostType> dedicatedHostTypes;
-
     /**
      * totalCount
      */
     private Number totalCount;
 
 
+
     /**
-     * get dedicatedHostTypes
-     *
-     * @return
-     */
+    * get dedicatedHostTypes
+    *
+    * @return
+    */
     public List<HostType> getDedicatedHostTypes() {
         return dedicatedHostTypes;
     }
 
     /**
-     * set dedicatedHostTypes
-     *
-     * @param dedicatedHostTypes
-     */
+    * set dedicatedHostTypes
+    *
+    * @param dedicatedHostTypes
+    */
     public void setDedicatedHostTypes(List<HostType> dedicatedHostTypes) {
         this.dedicatedHostTypes = dedicatedHostTypes;
     }
+
 
     /**
      * get totalCount
@@ -85,15 +87,17 @@ public class DescribeDedicatedHostTypeResult extends JdcloudResult implements ja
     }
 
 
+
     /**
-     * set dedicatedHostTypes
-     *
-     * @param dedicatedHostTypes
-     */
+    * set dedicatedHostTypes
+    *
+    * @param dedicatedHostTypes
+    */
     public DescribeDedicatedHostTypeResult dedicatedHostTypes(List<HostType> dedicatedHostTypes) {
         this.dedicatedHostTypes = dedicatedHostTypes;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -104,6 +108,7 @@ public class DescribeDedicatedHostTypeResult extends JdcloudResult implements ja
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -117,5 +122,4 @@ public class DescribeDedicatedHostTypeResult extends JdcloudResult implements ja
         }
         this.dedicatedHostTypes.add(dedicatedHostType);
     }
-
 }

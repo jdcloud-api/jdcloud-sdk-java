@@ -51,6 +51,7 @@ public class ReleaseDedicatedHostRequest extends JdcloudRequest implements java.
     private String dedicatedHostId;
 
 
+
     /**
      * get 地域ID
      *
@@ -68,6 +69,7 @@ public class ReleaseDedicatedHostRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 专有宿主机ID
@@ -88,6 +90,7 @@ public class ReleaseDedicatedHostRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 地域ID
      *
@@ -97,6 +100,7 @@ public class ReleaseDedicatedHostRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 专有宿主机ID

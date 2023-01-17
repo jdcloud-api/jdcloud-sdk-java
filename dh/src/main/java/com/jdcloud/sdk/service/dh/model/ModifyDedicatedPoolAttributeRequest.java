@@ -52,8 +52,8 @@ public class ModifyDedicatedPoolAttributeRequest extends JdcloudRequest implemen
 修改可用区时旧可用区必须是新可用区的子集，即可用区只能添加，不能减少。
 
      */
+    
     private List<String> az;
-
     /**
      * 地域ID
      * Required:true
@@ -67,6 +67,7 @@ public class ModifyDedicatedPoolAttributeRequest extends JdcloudRequest implemen
      */
     @Required
     private String dedicatedPoolId;
+
 
 
     /**
@@ -87,6 +88,7 @@ public class ModifyDedicatedPoolAttributeRequest extends JdcloudRequest implemen
         this.name = name;
     }
 
+
     /**
      * get 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
@@ -105,27 +107,29 @@ public class ModifyDedicatedPoolAttributeRequest extends JdcloudRequest implemen
         this.description = description;
     }
 
+
     /**
-     * get 指定宿主机池申请专有宿主机时默认继承的可用区。&lt;br&gt;
+    * get 指定宿主机池申请专有宿主机时默认继承的可用区。&lt;br&gt;
 修改可用区时旧可用区必须是新可用区的子集，即可用区只能添加，不能减少。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<String> getAz() {
         return az;
     }
 
     /**
-     * set 指定宿主机池申请专有宿主机时默认继承的可用区。&lt;br&gt;
+    * set 指定宿主机池申请专有宿主机时默认继承的可用区。&lt;br&gt;
 修改可用区时旧可用区必须是新可用区的子集，即可用区只能添加，不能减少。
 
-     *
-     * @param az
-     */
+    *
+    * @param az
+    */
     public void setAz(List<String> az) {
         this.az = az;
     }
+
 
     /**
      * get 地域ID
@@ -144,6 +148,7 @@ public class ModifyDedicatedPoolAttributeRequest extends JdcloudRequest implemen
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 专有宿主机ID
@@ -164,6 +169,7 @@ public class ModifyDedicatedPoolAttributeRequest extends JdcloudRequest implemen
     }
 
 
+
     /**
      * set 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
@@ -173,6 +179,7 @@ public class ModifyDedicatedPoolAttributeRequest extends JdcloudRequest implemen
         this.name = name;
         return this;
     }
+
 
     /**
      * set 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
@@ -184,17 +191,19 @@ public class ModifyDedicatedPoolAttributeRequest extends JdcloudRequest implemen
         return this;
     }
 
+
     /**
-     * set 指定宿主机池申请专有宿主机时默认继承的可用区。&lt;br&gt;
+    * set 指定宿主机池申请专有宿主机时默认继承的可用区。&lt;br&gt;
 修改可用区时旧可用区必须是新可用区的子集，即可用区只能添加，不能减少。
 
-     *
-     * @param az
-     */
+    *
+    * @param az
+    */
     public ModifyDedicatedPoolAttributeRequest az(List<String> az) {
         this.az = az;
         return this;
     }
+
 
     /**
      * set 地域ID
@@ -206,6 +215,7 @@ public class ModifyDedicatedPoolAttributeRequest extends JdcloudRequest implemen
         return this;
     }
 
+
     /**
      * set 专有宿主机ID
      *
@@ -215,6 +225,7 @@ public class ModifyDedicatedPoolAttributeRequest extends JdcloudRequest implemen
         this.dedicatedPoolId = dedicatedPoolId;
         return this;
     }
+
 
 
     /**
@@ -230,5 +241,4 @@ public class ModifyDedicatedPoolAttributeRequest extends JdcloudRequest implemen
         }
         this.az.add(az);
     }
-
 }

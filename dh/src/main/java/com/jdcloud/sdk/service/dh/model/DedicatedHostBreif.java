@@ -48,6 +48,7 @@ public class DedicatedHostBreif  implements java.io.Serializable {
     private Integer logicRack;
 
 
+
     /**
      * get 专有宿主机ID
      *
@@ -66,6 +67,7 @@ public class DedicatedHostBreif  implements java.io.Serializable {
         this.dedicatedHostId = dedicatedHostId;
     }
 
+
     /**
      * get 专有宿主机所在的可用区
      *
@@ -83,6 +85,7 @@ public class DedicatedHostBreif  implements java.io.Serializable {
     public void setAz(String az) {
         this.az = az;
     }
+
 
     /**
      * get 专有宿主机所在的逻辑机架
@@ -103,6 +106,7 @@ public class DedicatedHostBreif  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 专有宿主机ID
      *
@@ -113,6 +117,7 @@ public class DedicatedHostBreif  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 专有宿主机所在的可用区
      *
@@ -122,6 +127,7 @@ public class DedicatedHostBreif  implements java.io.Serializable {
         this.az = az;
         return this;
     }
+
 
     /**
      * set 专有宿主机所在的逻辑机架

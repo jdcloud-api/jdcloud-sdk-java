@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.dh.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.dh.model.TagFilter;
 import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
@@ -50,6 +51,11 @@ public class DescribeDedicatedHostsRequest extends JdcloudRequest implements jav
     private Integer pageSize;
 
     /**
+     * Tag筛选条件。
+     */
+    
+    private List<TagFilter> tags;
+    /**
      * dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 status - 专有宿主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/dedicated-hosts/api/dh_status&quot;&gt;参考专有宿主机状态&lt;/a&gt;
@@ -58,14 +64,15 @@ dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
 dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -86,6 +93,7 @@ dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认为20；取值范围[10, 100]
      *
@@ -104,35 +112,56 @@ dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
+    * get Tag筛选条件。
+    *
+    * @return
+    */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Tag筛选条件。
+    *
+    * @param tags
+    */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+    * get dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 status - 专有宿主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/dedicated-hosts/api/dh_status&quot;&gt;参考专有宿主机状态&lt;/a&gt;
 name - 专有宿主机名称，模糊匹配，支持单个
 dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
 dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
+    * set dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 status - 专有宿主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/dedicated-hosts/api/dh_status&quot;&gt;参考专有宿主机状态&lt;/a&gt;
 name - 专有宿主机名称，模糊匹配，支持单个
 dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
 dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -153,6 +182,7 @@ dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
     }
 
 
+
     /**
      * set 页码；默认为1
      *
@@ -162,6 +192,7 @@ dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；默认为20；取值范围[10, 100]
@@ -173,21 +204,34 @@ dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
         return this;
     }
 
+
     /**
-     * set dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
+    * set Tag筛选条件。
+    *
+    * @param tags
+    */
+    public DescribeDedicatedHostsRequest tags(List<TagFilter> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+    * set dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 status - 专有宿主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/dedicated-hosts/api/dh_status&quot;&gt;参考专有宿主机状态&lt;/a&gt;
 name - 专有宿主机名称，模糊匹配，支持单个
 dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
 dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeDedicatedHostsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域ID
@@ -199,6 +243,19 @@ dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
         return this;
     }
 
+
+
+    /**
+     * add item to Tag筛选条件。
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 
     /**
      * add item to dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
@@ -217,5 +274,4 @@ dedicatedHostType - 专有宿主机机型，精确匹配，支持多个
         }
         this.filters.add(filter);
     }
-
 }
