@@ -46,6 +46,12 @@ public class ModifyDedicatedHostAttributeRequest extends JdcloudRequest implemen
     private String description;
 
     /**
+     * 是否开启cpu拓扑，true:开启，false:关闭，只有宿主机是非超卖模式，且没有资源的时候才能开启；开启后，该宿主机上的虚机可以配置cpu拓扑和NUMA映射等。
+
+     */
+    private Boolean enableCpuTopology;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -58,6 +64,7 @@ public class ModifyDedicatedHostAttributeRequest extends JdcloudRequest implemen
      */
     @Required
     private String dedicatedHostId;
+
 
 
     /**
@@ -78,6 +85,7 @@ public class ModifyDedicatedHostAttributeRequest extends JdcloudRequest implemen
         this.name = name;
     }
 
+
     /**
      * get 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
@@ -96,6 +104,28 @@ public class ModifyDedicatedHostAttributeRequest extends JdcloudRequest implemen
         this.description = description;
     }
 
+
+    /**
+     * get 是否开启cpu拓扑，true:开启，false:关闭，只有宿主机是非超卖模式，且没有资源的时候才能开启；开启后，该宿主机上的虚机可以配置cpu拓扑和NUMA映射等。
+
+     *
+     * @return
+     */
+    public Boolean getEnableCpuTopology() {
+        return enableCpuTopology;
+    }
+
+    /**
+     * set 是否开启cpu拓扑，true:开启，false:关闭，只有宿主机是非超卖模式，且没有资源的时候才能开启；开启后，该宿主机上的虚机可以配置cpu拓扑和NUMA映射等。
+
+     *
+     * @param enableCpuTopology
+     */
+    public void setEnableCpuTopology(Boolean enableCpuTopology) {
+        this.enableCpuTopology = enableCpuTopology;
+    }
+
+
     /**
      * get 地域ID
      *
@@ -113,6 +143,7 @@ public class ModifyDedicatedHostAttributeRequest extends JdcloudRequest implemen
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 专有宿主机ID
@@ -133,6 +164,7 @@ public class ModifyDedicatedHostAttributeRequest extends JdcloudRequest implemen
     }
 
 
+
     /**
      * set 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
@@ -142,6 +174,7 @@ public class ModifyDedicatedHostAttributeRequest extends JdcloudRequest implemen
         this.name = name;
         return this;
     }
+
 
     /**
      * set 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
@@ -153,6 +186,19 @@ public class ModifyDedicatedHostAttributeRequest extends JdcloudRequest implemen
         return this;
     }
 
+
+    /**
+     * set 是否开启cpu拓扑，true:开启，false:关闭，只有宿主机是非超卖模式，且没有资源的时候才能开启；开启后，该宿主机上的虚机可以配置cpu拓扑和NUMA映射等。
+
+     *
+     * @param enableCpuTopology
+     */
+    public ModifyDedicatedHostAttributeRequest enableCpuTopology(Boolean enableCpuTopology) {
+        this.enableCpuTopology = enableCpuTopology;
+        return this;
+    }
+
+
     /**
      * set 地域ID
      *
@@ -162,6 +208,7 @@ public class ModifyDedicatedHostAttributeRequest extends JdcloudRequest implemen
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 专有宿主机ID

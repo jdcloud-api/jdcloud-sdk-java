@@ -64,11 +64,18 @@ public class AllocDedicatedHostsRequest extends JdcloudRequest implements java.i
     private String clientToken;
 
     /**
+     * 是否开启cpu拓扑，true:开启，false:关闭，只有宿主机是非超卖模式，且没有资源的时候才能开启；开启后，该宿主机上的虚机可以配置cpu拓扑和NUMA映射等。
+
+     */
+    private Boolean enableCpuTopology;
+
+    /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -91,6 +98,7 @@ public class AllocDedicatedHostsRequest extends JdcloudRequest implements java.i
         this.dedicatedHostSpec = dedicatedHostSpec;
     }
 
+
     /**
      * get 是否支持AZ内专有宿主机强制均衡，默认为preferred--非强制，取值[preferred--非强制,required--强制]
 
@@ -110,6 +118,7 @@ public class AllocDedicatedHostsRequest extends JdcloudRequest implements java.i
     public void setDeployPolicy(String deployPolicy) {
         this.deployPolicy = deployPolicy;
     }
+
 
     /**
      * get 购买云主机的数量；取值范围：[1,100]，默认为1。
@@ -131,6 +140,7 @@ public class AllocDedicatedHostsRequest extends JdcloudRequest implements java.i
         this.maxCount = maxCount;
     }
 
+
     /**
      * get 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
 
@@ -151,6 +161,28 @@ public class AllocDedicatedHostsRequest extends JdcloudRequest implements java.i
         this.clientToken = clientToken;
     }
 
+
+    /**
+     * get 是否开启cpu拓扑，true:开启，false:关闭，只有宿主机是非超卖模式，且没有资源的时候才能开启；开启后，该宿主机上的虚机可以配置cpu拓扑和NUMA映射等。
+
+     *
+     * @return
+     */
+    public Boolean getEnableCpuTopology() {
+        return enableCpuTopology;
+    }
+
+    /**
+     * set 是否开启cpu拓扑，true:开启，false:关闭，只有宿主机是非超卖模式，且没有资源的时候才能开启；开启后，该宿主机上的虚机可以配置cpu拓扑和NUMA映射等。
+
+     *
+     * @param enableCpuTopology
+     */
+    public void setEnableCpuTopology(Boolean enableCpuTopology) {
+        this.enableCpuTopology = enableCpuTopology;
+    }
+
+
     /**
      * get 地域ID
      *
@@ -170,6 +202,7 @@ public class AllocDedicatedHostsRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 描述专有宿主机配置
 
@@ -180,6 +213,7 @@ public class AllocDedicatedHostsRequest extends JdcloudRequest implements java.i
         this.dedicatedHostSpec = dedicatedHostSpec;
         return this;
     }
+
 
     /**
      * set 是否支持AZ内专有宿主机强制均衡，默认为preferred--非强制，取值[preferred--非强制,required--强制]
@@ -192,6 +226,7 @@ public class AllocDedicatedHostsRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 购买云主机的数量；取值范围：[1,100]，默认为1。
 
@@ -203,6 +238,7 @@ public class AllocDedicatedHostsRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
 
@@ -213,6 +249,19 @@ public class AllocDedicatedHostsRequest extends JdcloudRequest implements java.i
         this.clientToken = clientToken;
         return this;
     }
+
+
+    /**
+     * set 是否开启cpu拓扑，true:开启，false:关闭，只有宿主机是非超卖模式，且没有资源的时候才能开启；开启后，该宿主机上的虚机可以配置cpu拓扑和NUMA映射等。
+
+     *
+     * @param enableCpuTopology
+     */
+    public AllocDedicatedHostsRequest enableCpuTopology(Boolean enableCpuTopology) {
+        this.enableCpuTopology = enableCpuTopology;
+        return this;
+    }
+
 
     /**
      * set 地域ID

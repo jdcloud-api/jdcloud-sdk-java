@@ -42,8 +42,8 @@ public class HostType  implements java.io.Serializable {
     /**
      * 专有宿主机机型售卖状态
      */
+    
     private List<HostTypeState> state;
-
     /**
      * CPU总数
      */
@@ -67,6 +67,7 @@ public class HostType  implements java.io.Serializable {
     /**
      * 专有宿主机支持的云主机实例规格
      */
+    
     private List<String> supportedInstanceType;
 
 
@@ -88,23 +89,25 @@ public class HostType  implements java.io.Serializable {
         this.dedicatedHostType = dedicatedHostType;
     }
 
+
     /**
-     * get 专有宿主机机型售卖状态
-     *
-     * @return
-     */
+    * get 专有宿主机机型售卖状态
+    *
+    * @return
+    */
     public List<HostTypeState> getState() {
         return state;
     }
 
     /**
-     * set 专有宿主机机型售卖状态
-     *
-     * @param state
-     */
+    * set 专有宿主机机型售卖状态
+    *
+    * @param state
+    */
     public void setState(List<HostTypeState> state) {
         this.state = state;
     }
+
 
     /**
      * get CPU总数
@@ -124,6 +127,7 @@ public class HostType  implements java.io.Serializable {
         this.totalVCPUs = totalVCPUs;
     }
 
+
     /**
      * get 内存总大小，单位MB
      *
@@ -141,6 +145,7 @@ public class HostType  implements java.io.Serializable {
     public void setTotalMemoryMB(Integer totalMemoryMB) {
         this.totalMemoryMB = totalMemoryMB;
     }
+
 
     /**
      * get 本地磁盘总大小，单位GB
@@ -160,6 +165,7 @@ public class HostType  implements java.io.Serializable {
         this.totalDiskGB = totalDiskGB;
     }
 
+
     /**
      * get GPU总个数
      *
@@ -178,23 +184,25 @@ public class HostType  implements java.io.Serializable {
         this.totalGPUs = totalGPUs;
     }
 
+
     /**
-     * get 专有宿主机支持的云主机实例规格
-     *
-     * @return
-     */
+    * get 专有宿主机支持的云主机实例规格
+    *
+    * @return
+    */
     public List<String> getSupportedInstanceType() {
         return supportedInstanceType;
     }
 
     /**
-     * set 专有宿主机支持的云主机实例规格
-     *
-     * @param supportedInstanceType
-     */
+    * set 专有宿主机支持的云主机实例规格
+    *
+    * @param supportedInstanceType
+    */
     public void setSupportedInstanceType(List<String> supportedInstanceType) {
         this.supportedInstanceType = supportedInstanceType;
     }
+
 
 
     /**
@@ -207,15 +215,17 @@ public class HostType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 专有宿主机机型售卖状态
-     *
-     * @param state
-     */
+    * set 专有宿主机机型售卖状态
+    *
+    * @param state
+    */
     public HostType state(List<HostTypeState> state) {
         this.state = state;
         return this;
     }
+
 
     /**
      * set CPU总数
@@ -227,6 +237,7 @@ public class HostType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 内存总大小，单位MB
      *
@@ -236,6 +247,7 @@ public class HostType  implements java.io.Serializable {
         this.totalMemoryMB = totalMemoryMB;
         return this;
     }
+
 
     /**
      * set 本地磁盘总大小，单位GB
@@ -247,6 +259,7 @@ public class HostType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set GPU总个数
      *
@@ -257,15 +270,17 @@ public class HostType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 专有宿主机支持的云主机实例规格
-     *
-     * @param supportedInstanceType
-     */
+    * set 专有宿主机支持的云主机实例规格
+    *
+    * @param supportedInstanceType
+    */
     public HostType supportedInstanceType(List<String> supportedInstanceType) {
         this.supportedInstanceType = supportedInstanceType;
         return this;
     }
+
 
 
     /**
@@ -291,5 +306,4 @@ public class HostType  implements java.io.Serializable {
         }
         this.supportedInstanceType.add(supportedInstanceType);
     }
-
 }

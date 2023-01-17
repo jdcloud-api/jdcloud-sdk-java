@@ -48,6 +48,7 @@ public class HostTypeState  implements java.io.Serializable {
     private Boolean online;
 
 
+
     /**
      * get 可用区
      *
@@ -66,6 +67,7 @@ public class HostTypeState  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
      * get 售卖信息，true:可用、false:已售罄不可用
      *
@@ -83,6 +85,7 @@ public class HostTypeState  implements java.io.Serializable {
     public void setInStock(Boolean inStock) {
         this.inStock = inStock;
     }
+
 
     /**
      * get 在线状态，true:可用、false:已下线
@@ -103,6 +106,7 @@ public class HostTypeState  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 可用区
      *
@@ -113,6 +117,7 @@ public class HostTypeState  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 售卖信息，true:可用、false:已售罄不可用
      *
@@ -122,6 +127,7 @@ public class HostTypeState  implements java.io.Serializable {
         this.inStock = inStock;
         return this;
     }
+
 
     /**
      * set 在线状态，true:可用、false:已下线

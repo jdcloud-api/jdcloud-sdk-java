@@ -56,8 +56,8 @@ public class AllocDedicatedPoolRequest extends JdcloudRequest implements java.io
      * 指定专有宿主机池支持的可用区，可指定多个。
 
      */
+    
     private List<String> az;
-
     /**
      * 专有宿主机池的描述信息。
 
@@ -70,6 +70,7 @@ public class AllocDedicatedPoolRequest extends JdcloudRequest implements java.io
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -92,6 +93,7 @@ public class AllocDedicatedPoolRequest extends JdcloudRequest implements java.io
         this.dedicatedHostType = dedicatedHostType;
     }
 
+
     /**
      * get 专有宿主机池名称
 
@@ -112,25 +114,27 @@ public class AllocDedicatedPoolRequest extends JdcloudRequest implements java.io
         this.name = name;
     }
 
-    /**
-     * get 指定专有宿主机池支持的可用区，可指定多个。
 
-     *
-     * @return
-     */
+    /**
+    * get 指定专有宿主机池支持的可用区，可指定多个。
+
+    *
+    * @return
+    */
     public List<String> getAz() {
         return az;
     }
 
     /**
-     * set 指定专有宿主机池支持的可用区，可指定多个。
+    * set 指定专有宿主机池支持的可用区，可指定多个。
 
-     *
-     * @param az
-     */
+    *
+    * @param az
+    */
     public void setAz(List<String> az) {
         this.az = az;
     }
+
 
     /**
      * get 专有宿主机池的描述信息。
@@ -152,6 +156,7 @@ public class AllocDedicatedPoolRequest extends JdcloudRequest implements java.io
         this.description = description;
     }
 
+
     /**
      * get 地域ID
      *
@@ -171,6 +176,7 @@ public class AllocDedicatedPoolRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 支持的专有宿主机机型，每个专有宿主机池只能且必须指定一个专有宿主机机型
 
@@ -181,6 +187,7 @@ public class AllocDedicatedPoolRequest extends JdcloudRequest implements java.io
         this.dedicatedHostType = dedicatedHostType;
         return this;
     }
+
 
     /**
      * set 专有宿主机池名称
@@ -193,16 +200,18 @@ public class AllocDedicatedPoolRequest extends JdcloudRequest implements java.io
         return this;
     }
 
-    /**
-     * set 指定专有宿主机池支持的可用区，可指定多个。
 
-     *
-     * @param az
-     */
+    /**
+    * set 指定专有宿主机池支持的可用区，可指定多个。
+
+    *
+    * @param az
+    */
     public AllocDedicatedPoolRequest az(List<String> az) {
         this.az = az;
         return this;
     }
+
 
     /**
      * set 专有宿主机池的描述信息。
@@ -215,6 +224,7 @@ public class AllocDedicatedPoolRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 地域ID
      *
@@ -224,6 +234,7 @@ public class AllocDedicatedPoolRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -238,5 +249,4 @@ public class AllocDedicatedPoolRequest extends JdcloudRequest implements java.io
         }
         this.az.add(az);
     }
-
 }

@@ -41,31 +41,33 @@ public class DescribeDedicatedHostsResult extends JdcloudResult implements java.
     /**
      * dedicatedHosts
      */
+    
     private List<DedicatedHost> dedicatedHosts;
-
     /**
      * totalCount
      */
     private Number totalCount;
 
 
+
     /**
-     * get dedicatedHosts
-     *
-     * @return
-     */
+    * get dedicatedHosts
+    *
+    * @return
+    */
     public List<DedicatedHost> getDedicatedHosts() {
         return dedicatedHosts;
     }
 
     /**
-     * set dedicatedHosts
-     *
-     * @param dedicatedHosts
-     */
+    * set dedicatedHosts
+    *
+    * @param dedicatedHosts
+    */
     public void setDedicatedHosts(List<DedicatedHost> dedicatedHosts) {
         this.dedicatedHosts = dedicatedHosts;
     }
+
 
     /**
      * get totalCount
@@ -86,15 +88,17 @@ public class DescribeDedicatedHostsResult extends JdcloudResult implements java.
     }
 
 
+
     /**
-     * set dedicatedHosts
-     *
-     * @param dedicatedHosts
-     */
+    * set dedicatedHosts
+    *
+    * @param dedicatedHosts
+    */
     public DescribeDedicatedHostsResult dedicatedHosts(List<DedicatedHost> dedicatedHosts) {
         this.dedicatedHosts = dedicatedHosts;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -105,6 +109,7 @@ public class DescribeDedicatedHostsResult extends JdcloudResult implements java.
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class DescribeDedicatedHostsResult extends JdcloudResult implements java.
         }
         this.dedicatedHosts.add(dedicatedHost);
     }
-
 }

@@ -83,6 +83,7 @@ public class ResourceCapacity  implements java.io.Serializable {
     private Integer instanceCount;
 
 
+
     /**
      * get 专有宿主机总VCPU数
      *
@@ -100,6 +101,7 @@ public class ResourceCapacity  implements java.io.Serializable {
     public void setTotalVCPUs(Integer totalVCPUs) {
         this.totalVCPUs = totalVCPUs;
     }
+
 
     /**
      * get 专有宿主机总内存大小，单位MB
@@ -119,6 +121,7 @@ public class ResourceCapacity  implements java.io.Serializable {
         this.totalMemoryMB = totalMemoryMB;
     }
 
+
     /**
      * get 专有宿主机总本地磁盘大小，单位GB
      *
@@ -136,6 +139,7 @@ public class ResourceCapacity  implements java.io.Serializable {
     public void setTotalDiskGB(Integer totalDiskGB) {
         this.totalDiskGB = totalDiskGB;
     }
+
 
     /**
      * get 专有宿主机总GPU个数
@@ -155,6 +159,7 @@ public class ResourceCapacity  implements java.io.Serializable {
         this.totalGPUs = totalGPUs;
     }
 
+
     /**
      * get 专有宿主机已分配的VCPU数
      *
@@ -172,6 +177,7 @@ public class ResourceCapacity  implements java.io.Serializable {
     public void setUsedVCPUs(Integer usedVCPUs) {
         this.usedVCPUs = usedVCPUs;
     }
+
 
     /**
      * get 专有宿主机已分配的内存大小，单位MB
@@ -191,6 +197,7 @@ public class ResourceCapacity  implements java.io.Serializable {
         this.usedMemoryMB = usedMemoryMB;
     }
 
+
     /**
      * get 专有宿主机已分配的本地磁盘大小，单位GB
      *
@@ -208,6 +215,7 @@ public class ResourceCapacity  implements java.io.Serializable {
     public void setUsedDiskGB(Integer usedDiskGB) {
         this.usedDiskGB = usedDiskGB;
     }
+
 
     /**
      * get 专有宿主机已分配的GPU个数
@@ -227,6 +235,7 @@ public class ResourceCapacity  implements java.io.Serializable {
         this.usedGPUs = usedGPUs;
     }
 
+
     /**
      * get 专有宿主机本地盘类型
      *
@@ -244,6 +253,7 @@ public class ResourceCapacity  implements java.io.Serializable {
     public void setLocalDiskType(String localDiskType) {
         this.localDiskType = localDiskType;
     }
+
 
     /**
      * get 专有宿主机上的云主机个数
@@ -264,6 +274,7 @@ public class ResourceCapacity  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 专有宿主机总VCPU数
      *
@@ -273,6 +284,7 @@ public class ResourceCapacity  implements java.io.Serializable {
         this.totalVCPUs = totalVCPUs;
         return this;
     }
+
 
     /**
      * set 专有宿主机总内存大小，单位MB
@@ -284,6 +296,7 @@ public class ResourceCapacity  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 专有宿主机总本地磁盘大小，单位GB
      *
@@ -293,6 +306,7 @@ public class ResourceCapacity  implements java.io.Serializable {
         this.totalDiskGB = totalDiskGB;
         return this;
     }
+
 
     /**
      * set 专有宿主机总GPU个数
@@ -304,6 +318,7 @@ public class ResourceCapacity  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 专有宿主机已分配的VCPU数
      *
@@ -313,6 +328,7 @@ public class ResourceCapacity  implements java.io.Serializable {
         this.usedVCPUs = usedVCPUs;
         return this;
     }
+
 
     /**
      * set 专有宿主机已分配的内存大小，单位MB
@@ -324,6 +340,7 @@ public class ResourceCapacity  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 专有宿主机已分配的本地磁盘大小，单位GB
      *
@@ -333,6 +350,7 @@ public class ResourceCapacity  implements java.io.Serializable {
         this.usedDiskGB = usedDiskGB;
         return this;
     }
+
 
     /**
      * set 专有宿主机已分配的GPU个数
@@ -344,6 +362,7 @@ public class ResourceCapacity  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 专有宿主机本地盘类型
      *
@@ -353,6 +372,7 @@ public class ResourceCapacity  implements java.io.Serializable {
         this.localDiskType = localDiskType;
         return this;
     }
+
 
     /**
      * set 专有宿主机上的云主机个数

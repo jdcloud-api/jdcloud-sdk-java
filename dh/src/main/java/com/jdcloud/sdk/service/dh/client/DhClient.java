@@ -69,7 +69,7 @@ public class DhClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.8";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "dh.jdcloud-api.com";
     public final static String ServiceName = "dh";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
