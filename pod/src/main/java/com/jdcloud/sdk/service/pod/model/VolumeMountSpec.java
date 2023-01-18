@@ -58,6 +58,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     private String subPath;
 
 
+
     /**
      * get 要挂载的云盘，必须使用pod volumeSpec.name。
      *
@@ -75,6 +76,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 容器内挂载点，绝对路径，不得重复和嵌套挂载，不得挂载到根目录(&quot;/&quot;)。长度范围：[1-1024]
@@ -94,6 +96,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
         this.mountPath = mountPath;
     }
 
+
     /**
      * get 是否以只读方式挂载。默认 读写模式
      *
@@ -111,6 +114,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     public void setReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
     }
+
 
     /**
      * get configFile挂载子目录 新增
@@ -131,6 +135,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 要挂载的云盘，必须使用pod volumeSpec.name。
      *
@@ -140,6 +145,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 容器内挂载点，绝对路径，不得重复和嵌套挂载，不得挂载到根目录(&quot;/&quot;)。长度范围：[1-1024]
@@ -151,6 +157,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否以只读方式挂载。默认 读写模式
      *
@@ -160,6 +167,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
         this.readOnly = readOnly;
         return this;
     }
+
 
     /**
      * set configFile挂载子目录 新增

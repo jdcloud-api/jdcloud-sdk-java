@@ -63,6 +63,7 @@ public class PodCondition  implements java.io.Serializable {
     private String conditionType;
 
 
+
     /**
      * get 最后一次探测状态的时间
      *
@@ -80,6 +81,7 @@ public class PodCondition  implements java.io.Serializable {
     public void setLastProbeTime(String lastProbeTime) {
         this.lastProbeTime = lastProbeTime;
     }
+
 
     /**
      * get 最后一次改变状态的时间
@@ -99,6 +101,7 @@ public class PodCondition  implements java.io.Serializable {
         this.lastTransitionTime = lastTransitionTime;
     }
 
+
     /**
      * get 最后一次状态改变的简要原因
      *
@@ -116,6 +119,7 @@ public class PodCondition  implements java.io.Serializable {
     public void setReason(String reason) {
         this.reason = reason;
     }
+
 
     /**
      * get Status is the status of the condition. Can be True, False, Unknown.
@@ -135,6 +139,7 @@ public class PodCondition  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 最后一次状态改变的信息
      *
@@ -152,6 +157,7 @@ public class PodCondition  implements java.io.Serializable {
     public void setMessage(String message) {
         this.message = message;
     }
+
 
     /**
      * get 状态的条件。目前仅限 Ready.
@@ -172,6 +178,7 @@ public class PodCondition  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 最后一次探测状态的时间
      *
@@ -181,6 +188,7 @@ public class PodCondition  implements java.io.Serializable {
         this.lastProbeTime = lastProbeTime;
         return this;
     }
+
 
     /**
      * set 最后一次改变状态的时间
@@ -192,6 +200,7 @@ public class PodCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 最后一次状态改变的简要原因
      *
@@ -201,6 +210,7 @@ public class PodCondition  implements java.io.Serializable {
         this.reason = reason;
         return this;
     }
+
 
     /**
      * set Status is the status of the condition. Can be True, False, Unknown.
@@ -212,6 +222,7 @@ public class PodCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 最后一次状态改变的信息
      *
@@ -221,6 +232,7 @@ public class PodCondition  implements java.io.Serializable {
         this.message = message;
         return this;
     }
+
 
     /**
      * set 状态的条件。目前仅限 Ready.

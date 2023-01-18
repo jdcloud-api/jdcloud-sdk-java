@@ -56,8 +56,8 @@ public class ResizePodRequest extends JdcloudRequest implements java.io.Serializ
     /**
      * 新实例类型，不可与原实例类型相同
      */
+    
     private List<ContainerResourceSpec> containerResources;
-
     /**
      * Region ID
      * Required:true
@@ -71,6 +71,7 @@ public class ResizePodRequest extends JdcloudRequest implements java.io.Serializ
      */
     @Required
     private String podId;
+
 
 
     /**
@@ -91,23 +92,25 @@ public class ResizePodRequest extends JdcloudRequest implements java.io.Serializ
         this.instanceType = instanceType;
     }
 
+
     /**
-     * get 新实例类型，不可与原实例类型相同
-     *
-     * @return
-     */
+    * get 新实例类型，不可与原实例类型相同
+    *
+    * @return
+    */
     public List<ContainerResourceSpec> getContainerResources() {
         return containerResources;
     }
 
     /**
-     * set 新实例类型，不可与原实例类型相同
-     *
-     * @param containerResources
-     */
+    * set 新实例类型，不可与原实例类型相同
+    *
+    * @param containerResources
+    */
     public void setContainerResources(List<ContainerResourceSpec> containerResources) {
         this.containerResources = containerResources;
     }
+
 
     /**
      * get Region ID
@@ -126,6 +129,7 @@ public class ResizePodRequest extends JdcloudRequest implements java.io.Serializ
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Pod ID
@@ -146,6 +150,7 @@ public class ResizePodRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set 新实例类型，不可与原实例类型相同
      *
@@ -156,15 +161,17 @@ public class ResizePodRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
-     * set 新实例类型，不可与原实例类型相同
-     *
-     * @param containerResources
-     */
+    * set 新实例类型，不可与原实例类型相同
+    *
+    * @param containerResources
+    */
     public ResizePodRequest containerResources(List<ContainerResourceSpec> containerResources) {
         this.containerResources = containerResources;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -176,6 +183,7 @@ public class ResizePodRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set Pod ID
      *
@@ -185,6 +193,7 @@ public class ResizePodRequest extends JdcloudRequest implements java.io.Serializ
         this.podId = podId;
         return this;
     }
+
 
 
     /**
@@ -198,5 +207,4 @@ public class ResizePodRequest extends JdcloudRequest implements java.io.Serializ
         }
         this.containerResources.add(containerResource);
     }
-
 }

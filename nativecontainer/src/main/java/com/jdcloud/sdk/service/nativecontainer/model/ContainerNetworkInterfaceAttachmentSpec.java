@@ -39,7 +39,7 @@ public class ContainerNetworkInterfaceAttachmentSpec  implements java.io.Seriali
     private Boolean autoDelete;
 
     /**
-     * 设备Index，主网卡为1
+     * 设备Index，主网卡为1，暂不提供辅助网卡index
      */
     private Integer deviceIndex;
 
@@ -49,6 +49,7 @@ public class ContainerNetworkInterfaceAttachmentSpec  implements java.io.Seriali
      */
     @Required
     private NetworkInterfaceSpec networkInterface;
+
 
 
     /**
@@ -69,8 +70,9 @@ public class ContainerNetworkInterfaceAttachmentSpec  implements java.io.Seriali
         this.autoDelete = autoDelete;
     }
 
+
     /**
-     * get 设备Index，主网卡为1
+     * get 设备Index，主网卡为1，暂不提供辅助网卡index
      *
      * @return
      */
@@ -79,13 +81,14 @@ public class ContainerNetworkInterfaceAttachmentSpec  implements java.io.Seriali
     }
 
     /**
-     * set 设备Index，主网卡为1
+     * set 设备Index，主网卡为1，暂不提供辅助网卡index
      *
      * @param deviceIndex
      */
     public void setDeviceIndex(Integer deviceIndex) {
         this.deviceIndex = deviceIndex;
     }
+
 
     /**
      * get 网卡接口规范
@@ -106,6 +109,7 @@ public class ContainerNetworkInterfaceAttachmentSpec  implements java.io.Seriali
     }
 
 
+
     /**
      * set 指明删除容器时是否删除网卡，默认True；当前只能是True
      *
@@ -116,8 +120,9 @@ public class ContainerNetworkInterfaceAttachmentSpec  implements java.io.Seriali
         return this;
     }
 
+
     /**
-     * set 设备Index，主网卡为1
+     * set 设备Index，主网卡为1，暂不提供辅助网卡index
      *
      * @param deviceIndex
      */
@@ -125,6 +130,7 @@ public class ContainerNetworkInterfaceAttachmentSpec  implements java.io.Seriali
         this.deviceIndex = deviceIndex;
         return this;
     }
+
 
     /**
      * set 网卡接口规范

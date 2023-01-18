@@ -57,6 +57,7 @@ public class ExecGetExitCodeRequest extends JdcloudRequest implements java.io.Se
     private String containerId;
 
 
+
     /**
      * get exec ID
      *
@@ -75,6 +76,7 @@ public class ExecGetExitCodeRequest extends JdcloudRequest implements java.io.Se
         this.execId = execId;
     }
 
+
     /**
      * get Region ID
      *
@@ -92,6 +94,7 @@ public class ExecGetExitCodeRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Container ID
@@ -112,6 +115,7 @@ public class ExecGetExitCodeRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set exec ID
      *
@@ -122,6 +126,7 @@ public class ExecGetExitCodeRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -131,6 +136,7 @@ public class ExecGetExitCodeRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Container ID

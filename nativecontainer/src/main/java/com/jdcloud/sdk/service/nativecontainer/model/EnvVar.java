@@ -46,6 +46,7 @@ public class EnvVar  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get 环境变量名称
      *
@@ -63,6 +64,7 @@ public class EnvVar  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 环境变量的值
@@ -83,6 +85,7 @@ public class EnvVar  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 环境变量名称
      *
@@ -92,6 +95,7 @@ public class EnvVar  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 环境变量的值

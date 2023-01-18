@@ -124,6 +124,7 @@ public class CreatePodsRequest extends JdcloudRequest implements java.io.Seriali
     private String regionId;
 
 
+
     /**
      * get pod 创建参数
      *
@@ -141,6 +142,7 @@ public class CreatePodsRequest extends JdcloudRequest implements java.io.Seriali
     public void setPodSpec(PodSpec podSpec) {
         this.podSpec = podSpec;
     }
+
 
     /**
      * get 购买实例数量；取值范围：[1,100]
@@ -160,6 +162,7 @@ public class CreatePodsRequest extends JdcloudRequest implements java.io.Seriali
         this.maxCount = maxCount;
     }
 
+
     /**
      * get 保证请求幂等性的字符串；最大长度64个ASCII字符
      *
@@ -177,6 +180,7 @@ public class CreatePodsRequest extends JdcloudRequest implements java.io.Seriali
     public void setClientToken(String clientToken) {
         this.clientToken = clientToken;
     }
+
 
     /**
      * get Region ID
@@ -197,6 +201,7 @@ public class CreatePodsRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set pod 创建参数
      *
@@ -206,6 +211,7 @@ public class CreatePodsRequest extends JdcloudRequest implements java.io.Seriali
         this.podSpec = podSpec;
         return this;
     }
+
 
     /**
      * set 购买实例数量；取值范围：[1,100]
@@ -217,6 +223,7 @@ public class CreatePodsRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 保证请求幂等性的字符串；最大长度64个ASCII字符
      *
@@ -226,6 +233,7 @@ public class CreatePodsRequest extends JdcloudRequest implements java.io.Seriali
         this.clientToken = clientToken;
         return this;
     }
+
 
     /**
      * set Region ID

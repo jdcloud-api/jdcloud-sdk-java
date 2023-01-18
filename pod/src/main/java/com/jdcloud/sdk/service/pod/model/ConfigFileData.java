@@ -48,6 +48,7 @@ public class ConfigFileData  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get 键名称，不能重复，最大长度不超过128（字母、数字、-、_和.）
      *
@@ -65,6 +66,7 @@ public class ConfigFileData  implements java.io.Serializable {
     public void setKey(String key) {
         this.key = key;
     }
+
 
     /**
      * get 内容（base64） 每个value长度上限为32KB，整个data的长度不能超过1M;
@@ -85,6 +87,7 @@ public class ConfigFileData  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 键名称，不能重复，最大长度不超过128（字母、数字、-、_和.）
      *
@@ -94,6 +97,7 @@ public class ConfigFileData  implements java.io.Serializable {
         this.key = key;
         return this;
     }
+
 
     /**
      * set 内容（base64） 每个value长度上限为32KB，整个data的长度不能超过1M;

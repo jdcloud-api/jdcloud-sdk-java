@@ -40,6 +40,7 @@ public class DescribeContainerResult extends JdcloudResult implements java.io.Se
     private Container container;
 
 
+
     /**
      * get container
      *
@@ -57,6 +58,7 @@ public class DescribeContainerResult extends JdcloudResult implements java.io.Se
     public void setContainer(Container container) {
         this.container = container;
     }
+
 
 
     /**

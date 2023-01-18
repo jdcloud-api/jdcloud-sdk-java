@@ -73,6 +73,7 @@ public class CloudDisk  implements java.io.Serializable {
     private Boolean autoDelete;
 
 
+
     /**
      * get category
      *
@@ -90,6 +91,7 @@ public class CloudDisk  implements java.io.Serializable {
     public void setCategory(String category) {
         this.category = category;
     }
+
 
     /**
      * get 云盘ID。
@@ -109,6 +111,7 @@ public class CloudDisk  implements java.io.Serializable {
         this.volumeId = volumeId;
     }
 
+
     /**
      * get 云盘快照ID。
      *
@@ -126,6 +129,7 @@ public class CloudDisk  implements java.io.Serializable {
     public void setSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
     }
+
 
     /**
      * get 云盘类型：hdd.std1,ssd.gp1,ssd.io1。
@@ -145,6 +149,7 @@ public class CloudDisk  implements java.io.Serializable {
         this.diskType = diskType;
     }
 
+
     /**
      * get 云盘size,单位 GB。
      *
@@ -162,6 +167,7 @@ public class CloudDisk  implements java.io.Serializable {
     public void setSizeGB(Integer sizeGB) {
         this.sizeGB = sizeGB;
     }
+
 
     /**
      * get 指定volume文件系统类型，目前支持[xfs, ext4]。
@@ -181,6 +187,7 @@ public class CloudDisk  implements java.io.Serializable {
         this.fsType = fsType;
     }
 
+
     /**
      * get 云盘的 iops 值，目前只有 ssd.io1 类型有效。
      *
@@ -198,6 +205,7 @@ public class CloudDisk  implements java.io.Serializable {
     public void setIops(Integer iops) {
         this.iops = iops;
     }
+
 
     /**
      * get 是否随pod删除。
@@ -218,6 +226,7 @@ public class CloudDisk  implements java.io.Serializable {
     }
 
 
+
     /**
      * set category
      *
@@ -227,6 +236,7 @@ public class CloudDisk  implements java.io.Serializable {
         this.category = category;
         return this;
     }
+
 
     /**
      * set 云盘ID。
@@ -238,6 +248,7 @@ public class CloudDisk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云盘快照ID。
      *
@@ -247,6 +258,7 @@ public class CloudDisk  implements java.io.Serializable {
         this.snapshotId = snapshotId;
         return this;
     }
+
 
     /**
      * set 云盘类型：hdd.std1,ssd.gp1,ssd.io1。
@@ -258,6 +270,7 @@ public class CloudDisk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云盘size,单位 GB。
      *
@@ -267,6 +280,7 @@ public class CloudDisk  implements java.io.Serializable {
         this.sizeGB = sizeGB;
         return this;
     }
+
 
     /**
      * set 指定volume文件系统类型，目前支持[xfs, ext4]。
@@ -278,6 +292,7 @@ public class CloudDisk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云盘的 iops 值，目前只有 ssd.io1 类型有效。
      *
@@ -287,6 +302,7 @@ public class CloudDisk  implements java.io.Serializable {
         this.iops = iops;
         return this;
     }
+
 
     /**
      * set 是否随pod删除。

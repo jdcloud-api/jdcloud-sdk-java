@@ -43,8 +43,8 @@ public class RebuildPodRequest extends JdcloudRequest implements java.io.Seriali
      * Required:true
      */
     @Required
+    
     private List<RebuildContainerSpec> containers;
-
     /**
      * Region ID
      * Required:true
@@ -60,23 +60,25 @@ public class RebuildPodRequest extends JdcloudRequest implements java.io.Seriali
     private String podId;
 
 
+
     /**
-     * get 重置容器相关参数
-     *
-     * @return
-     */
+    * get 重置容器相关参数
+    *
+    * @return
+    */
     public List<RebuildContainerSpec> getContainers() {
         return containers;
     }
 
     /**
-     * set 重置容器相关参数
-     *
-     * @param containers
-     */
+    * set 重置容器相关参数
+    *
+    * @param containers
+    */
     public void setContainers(List<RebuildContainerSpec> containers) {
         this.containers = containers;
     }
+
 
     /**
      * get Region ID
@@ -95,6 +97,7 @@ public class RebuildPodRequest extends JdcloudRequest implements java.io.Seriali
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Pod ID
@@ -115,15 +118,17 @@ public class RebuildPodRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
-     * set 重置容器相关参数
-     *
-     * @param containers
-     */
+    * set 重置容器相关参数
+    *
+    * @param containers
+    */
     public RebuildPodRequest containers(List<RebuildContainerSpec> containers) {
         this.containers = containers;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -135,6 +140,7 @@ public class RebuildPodRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set Pod ID
      *
@@ -144,6 +150,7 @@ public class RebuildPodRequest extends JdcloudRequest implements java.io.Seriali
         this.podId = podId;
         return this;
     }
+
 
 
     /**
@@ -157,5 +164,4 @@ public class RebuildPodRequest extends JdcloudRequest implements java.io.Seriali
         }
         this.containers.add(container);
     }
-
 }

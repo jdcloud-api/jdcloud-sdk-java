@@ -68,6 +68,7 @@ public class VolumeMount  implements java.io.Serializable {
     private String fsType;
 
 
+
     /**
      * get 磁盘分类
      *
@@ -85,6 +86,7 @@ public class VolumeMount  implements java.io.Serializable {
     public void setCategory(String category) {
         this.category = category;
     }
+
 
     /**
      * get 自动删除，删除容器时自动删除此volume
@@ -104,6 +106,7 @@ public class VolumeMount  implements java.io.Serializable {
         this.autoDelete = autoDelete;
     }
 
+
     /**
      * get 容器内的挂载目录
      *
@@ -121,6 +124,7 @@ public class VolumeMount  implements java.io.Serializable {
     public void setMountPath(String mountPath) {
         this.mountPath = mountPath;
     }
+
 
     /**
      * get 只读，默认false；只针对data volume有效，root volume为false
@@ -140,6 +144,7 @@ public class VolumeMount  implements java.io.Serializable {
         this.readOnly = readOnly;
     }
 
+
     /**
      * get 云硬盘规格
      *
@@ -158,6 +163,7 @@ public class VolumeMount  implements java.io.Serializable {
         this.cloudDisk = cloudDisk;
     }
 
+
     /**
      * get 云硬盘规格
      *
@@ -175,6 +181,7 @@ public class VolumeMount  implements java.io.Serializable {
     public void setLocalDisk(InstanceLocalDisk localDisk) {
         this.localDisk = localDisk;
     }
+
 
     /**
      * get 指定volume文件系统类型，目前支持[xfs, ext4]
@@ -195,6 +202,7 @@ public class VolumeMount  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 磁盘分类
      *
@@ -204,6 +212,7 @@ public class VolumeMount  implements java.io.Serializable {
         this.category = category;
         return this;
     }
+
 
     /**
      * set 自动删除，删除容器时自动删除此volume
@@ -215,6 +224,7 @@ public class VolumeMount  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器内的挂载目录
      *
@@ -224,6 +234,7 @@ public class VolumeMount  implements java.io.Serializable {
         this.mountPath = mountPath;
         return this;
     }
+
 
     /**
      * set 只读，默认false；只针对data volume有效，root volume为false
@@ -235,6 +246,7 @@ public class VolumeMount  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云硬盘规格
      *
@@ -245,6 +257,7 @@ public class VolumeMount  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云硬盘规格
      *
@@ -254,6 +267,7 @@ public class VolumeMount  implements java.io.Serializable {
         this.localDisk = localDisk;
         return this;
     }
+
 
     /**
      * set 指定volume文件系统类型，目前支持[xfs, ext4]

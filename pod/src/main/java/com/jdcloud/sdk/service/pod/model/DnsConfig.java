@@ -38,110 +38,117 @@ public class DnsConfig  implements java.io.Serializable {
      * DNS服务器IP地址列表。
 
      */
+    
     private List<String> nameservers;
-
     /**
      * DNS搜索域列表，用于主机名查找。
 
      */
+    
     private List<String> searches;
-
     /**
      * DNS解析器选项列表。
      */
+    
     private List<PodDnsConfigOption> options;
 
 
     /**
-     * get DNS服务器IP地址列表。
+    * get DNS服务器IP地址列表。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<String> getNameservers() {
         return nameservers;
     }
 
     /**
-     * set DNS服务器IP地址列表。
+    * set DNS服务器IP地址列表。
 
-     *
-     * @param nameservers
-     */
+    *
+    * @param nameservers
+    */
     public void setNameservers(List<String> nameservers) {
         this.nameservers = nameservers;
     }
 
-    /**
-     * get DNS搜索域列表，用于主机名查找。
 
-     *
-     * @return
-     */
+    /**
+    * get DNS搜索域列表，用于主机名查找。
+
+    *
+    * @return
+    */
     public List<String> getSearches() {
         return searches;
     }
 
     /**
-     * set DNS搜索域列表，用于主机名查找。
+    * set DNS搜索域列表，用于主机名查找。
 
-     *
-     * @param searches
-     */
+    *
+    * @param searches
+    */
     public void setSearches(List<String> searches) {
         this.searches = searches;
     }
 
+
     /**
-     * get DNS解析器选项列表。
-     *
-     * @return
-     */
+    * get DNS解析器选项列表。
+    *
+    * @return
+    */
     public List<PodDnsConfigOption> getOptions() {
         return options;
     }
 
     /**
-     * set DNS解析器选项列表。
-     *
-     * @param options
-     */
+    * set DNS解析器选项列表。
+    *
+    * @param options
+    */
     public void setOptions(List<PodDnsConfigOption> options) {
         this.options = options;
     }
 
 
-    /**
-     * set DNS服务器IP地址列表。
 
-     *
-     * @param nameservers
-     */
+    /**
+    * set DNS服务器IP地址列表。
+
+    *
+    * @param nameservers
+    */
     public DnsConfig nameservers(List<String> nameservers) {
         this.nameservers = nameservers;
         return this;
     }
 
-    /**
-     * set DNS搜索域列表，用于主机名查找。
 
-     *
-     * @param searches
-     */
+    /**
+    * set DNS搜索域列表，用于主机名查找。
+
+    *
+    * @param searches
+    */
     public DnsConfig searches(List<String> searches) {
         this.searches = searches;
         return this;
     }
 
+
     /**
-     * set DNS解析器选项列表。
-     *
-     * @param options
-     */
+    * set DNS解析器选项列表。
+    *
+    * @param options
+    */
     public DnsConfig options(List<PodDnsConfigOption> options) {
         this.options = options;
         return this;
     }
+
 
 
     /**
@@ -181,5 +188,4 @@ public class DnsConfig  implements java.io.Serializable {
         }
         this.options.add(option);
     }
-
 }

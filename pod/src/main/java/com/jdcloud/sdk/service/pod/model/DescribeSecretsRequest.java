@@ -53,14 +53,15 @@ public class DescribeSecretsRequest extends JdcloudRequest implements java.io.Se
      * name - secret名称，支持模糊搜索
 
      */
+    
     private List<Filter> filters;
-
     /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -81,6 +82,7 @@ public class DescribeSecretsRequest extends JdcloudRequest implements java.io.Se
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认为20；取值范围[10, 100]
      *
@@ -99,25 +101,27 @@ public class DescribeSecretsRequest extends JdcloudRequest implements java.io.Se
         this.pageSize = pageSize;
     }
 
-    /**
-     * get name - secret名称，支持模糊搜索
 
-     *
-     * @return
-     */
+    /**
+    * get name - secret名称，支持模糊搜索
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set name - secret名称，支持模糊搜索
+    * set name - secret名称，支持模糊搜索
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get Region ID
@@ -138,6 +142,7 @@ public class DescribeSecretsRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 页码；默认为1
      *
@@ -147,6 +152,7 @@ public class DescribeSecretsRequest extends JdcloudRequest implements java.io.Se
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；默认为20；取值范围[10, 100]
@@ -158,16 +164,18 @@ public class DescribeSecretsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
-    /**
-     * set name - secret名称，支持模糊搜索
 
-     *
-     * @param filters
-     */
+    /**
+    * set name - secret名称，支持模糊搜索
+
+    *
+    * @param filters
+    */
     public DescribeSecretsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -178,6 +186,7 @@ public class DescribeSecretsRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -192,5 +201,4 @@ public class DescribeSecretsRequest extends JdcloudRequest implements java.io.Se
         }
         this.filters.add(filter);
     }
-
 }

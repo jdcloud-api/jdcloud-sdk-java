@@ -51,6 +51,7 @@ public class ConfigFileToPathSpec  implements java.io.Serializable {
     private String mode;
 
 
+
     /**
      * get 配置文件Key
      *
@@ -69,6 +70,7 @@ public class ConfigFileToPathSpec  implements java.io.Serializable {
         this.key = key;
     }
 
+
     /**
      * get 相关文件路径
      *
@@ -86,6 +88,7 @@ public class ConfigFileToPathSpec  implements java.io.Serializable {
     public void setPath(String path) {
         this.path = path;
     }
+
 
     /**
      * get 文件目录权限
@@ -106,6 +109,7 @@ public class ConfigFileToPathSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 配置文件Key
      *
@@ -116,6 +120,7 @@ public class ConfigFileToPathSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 相关文件路径
      *
@@ -125,6 +130,7 @@ public class ConfigFileToPathSpec  implements java.io.Serializable {
         this.path = path;
         return this;
     }
+
 
     /**
      * set 文件目录权限

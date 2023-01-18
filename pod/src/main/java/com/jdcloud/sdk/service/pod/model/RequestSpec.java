@@ -43,6 +43,7 @@ public class RequestSpec  implements java.io.Serializable {
     private String memoryMB;
 
 
+
     /**
      * get 容器必需的计算资源，例：300m，1000m
      *
@@ -60,6 +61,7 @@ public class RequestSpec  implements java.io.Serializable {
     public void setCpu(String cpu) {
         this.cpu = cpu;
     }
+
 
     /**
      * get 容器使用计算资源上限，例：1024Mi，16384Mi
@@ -80,6 +82,7 @@ public class RequestSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 容器必需的计算资源，例：300m，1000m
      *
@@ -89,6 +92,7 @@ public class RequestSpec  implements java.io.Serializable {
         this.cpu = cpu;
         return this;
     }
+
 
     /**
      * set 容器使用计算资源上限，例：1024Mi，16384Mi

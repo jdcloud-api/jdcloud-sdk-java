@@ -42,8 +42,8 @@ eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素�
      * Required:true
      */
     @Required
+    
     private List<String> hostnames;
-
     /**
      * ipv4地址；eg &quot;127.0.0.1&quot;
      * Required:true
@@ -52,27 +52,29 @@ eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素�
     private String ip;
 
 
+
     /**
-     * get 域名列表。&lt;br&gt;
+    * get 域名列表。&lt;br&gt;
 eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素符合hostname命名规范。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<String> getHostnames() {
         return hostnames;
     }
 
     /**
-     * set 域名列表。&lt;br&gt;
+    * set 域名列表。&lt;br&gt;
 eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素符合hostname命名规范。
 
-     *
-     * @param hostnames
-     */
+    *
+    * @param hostnames
+    */
     public void setHostnames(List<String> hostnames) {
         this.hostnames = hostnames;
     }
+
 
     /**
      * get ipv4地址；eg &quot;127.0.0.1&quot;
@@ -93,17 +95,19 @@ eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素�
     }
 
 
+
     /**
-     * set 域名列表。&lt;br&gt;
+    * set 域名列表。&lt;br&gt;
 eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素符合hostname命名规范。
 
-     *
-     * @param hostnames
-     */
+    *
+    * @param hostnames
+    */
     public HostAliasSpec hostnames(List<String> hostnames) {
         this.hostnames = hostnames;
         return this;
     }
+
 
     /**
      * set ipv4地址；eg &quot;127.0.0.1&quot;
@@ -114,6 +118,7 @@ eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素�
         this.ip = ip;
         return this;
     }
+
 
 
     /**
@@ -129,5 +134,4 @@ eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素�
         }
         this.hostnames.add(hostname);
     }
-
 }

@@ -40,37 +40,40 @@ public class ExecSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> command;
 
 
     /**
-     * get 执行的命令，总长度256个字符。
-     *
-     * @return
-     */
+    * get 执行的命令，总长度256个字符。
+    *
+    * @return
+    */
     public List<String> getCommand() {
         return command;
     }
 
     /**
-     * set 执行的命令，总长度256个字符。
-     *
-     * @param command
-     */
+    * set 执行的命令，总长度256个字符。
+    *
+    * @param command
+    */
     public void setCommand(List<String> command) {
         this.command = command;
     }
 
 
+
     /**
-     * set 执行的命令，总长度256个字符。
-     *
-     * @param command
-     */
+    * set 执行的命令，总长度256个字符。
+    *
+    * @param command
+    */
     public ExecSpec command(List<String> command) {
         this.command = command;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class ExecSpec  implements java.io.Serializable {
         }
         this.command.add(command);
     }
-
 }

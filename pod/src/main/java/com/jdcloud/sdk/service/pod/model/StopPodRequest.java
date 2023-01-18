@@ -50,6 +50,7 @@ public class StopPodRequest extends JdcloudRequest implements java.io.Serializab
     private String podId;
 
 
+
     /**
      * get Region ID
      *
@@ -67,6 +68,7 @@ public class StopPodRequest extends JdcloudRequest implements java.io.Serializab
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Pod ID
@@ -87,6 +89,7 @@ public class StopPodRequest extends JdcloudRequest implements java.io.Serializab
     }
 
 
+
     /**
      * set Region ID
      *
@@ -96,6 +99,7 @@ public class StopPodRequest extends JdcloudRequest implements java.io.Serializab
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Pod ID

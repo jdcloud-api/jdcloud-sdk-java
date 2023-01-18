@@ -48,6 +48,7 @@ public class HhSpec  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get http header 键，需满足http的规则。长度范围:[1-64]
      *
@@ -65,6 +66,7 @@ public class HhSpec  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get http header 值
@@ -85,6 +87,7 @@ public class HhSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set http header 键，需满足http的规则。长度范围:[1-64]
      *
@@ -94,6 +97,7 @@ public class HhSpec  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set http header 值

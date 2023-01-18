@@ -41,31 +41,33 @@ public class DescribeContainersResult extends JdcloudResult implements java.io.S
     /**
      * containers
      */
+    
     private List<Container> containers;
-
     /**
      * totalCount
      */
     private Number totalCount;
 
 
+
     /**
-     * get containers
-     *
-     * @return
-     */
+    * get containers
+    *
+    * @return
+    */
     public List<Container> getContainers() {
         return containers;
     }
 
     /**
-     * set containers
-     *
-     * @param containers
-     */
+    * set containers
+    *
+    * @param containers
+    */
     public void setContainers(List<Container> containers) {
         this.containers = containers;
     }
+
 
     /**
      * get totalCount
@@ -86,15 +88,17 @@ public class DescribeContainersResult extends JdcloudResult implements java.io.S
     }
 
 
+
     /**
-     * set containers
-     *
-     * @param containers
-     */
+    * set containers
+    *
+    * @param containers
+    */
     public DescribeContainersResult containers(List<Container> containers) {
         this.containers = containers;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -105,6 +109,7 @@ public class DescribeContainersResult extends JdcloudResult implements java.io.S
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class DescribeContainersResult extends JdcloudResult implements java.io.S
         }
         this.containers.add(container);
     }
-
 }

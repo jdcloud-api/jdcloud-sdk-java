@@ -38,6 +38,7 @@ public class LocalDiskSpec  implements java.io.Serializable {
     private Integer diskSize;
 
 
+
     /**
      * get 本地盘大小(GB)
      *
@@ -55,6 +56,7 @@ public class LocalDiskSpec  implements java.io.Serializable {
     public void setDiskSize(Integer diskSize) {
         this.diskSize = diskSize;
     }
+
 
 
     /**

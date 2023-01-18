@@ -57,6 +57,7 @@ public class Hg  implements java.io.Serializable {
     /**
      * 自定义Http headers
      */
+    
     private List<Hh> httpHeader;
 
 
@@ -78,6 +79,7 @@ public class Hg  implements java.io.Serializable {
         this.scheme = scheme;
     }
 
+
     /**
      * get 连接到pod的host信息。
      *
@@ -95,6 +97,7 @@ public class Hg  implements java.io.Serializable {
     public void setHost(String host) {
         this.host = host;
     }
+
 
     /**
      * get 端口号。
@@ -114,6 +117,7 @@ public class Hg  implements java.io.Serializable {
         this.port = port;
     }
 
+
     /**
      * get HTTP的路径。
      *
@@ -132,23 +136,25 @@ public class Hg  implements java.io.Serializable {
         this.path = path;
     }
 
+
     /**
-     * get 自定义Http headers
-     *
-     * @return
-     */
+    * get 自定义Http headers
+    *
+    * @return
+    */
     public List<Hh> getHttpHeader() {
         return httpHeader;
     }
 
     /**
-     * set 自定义Http headers
-     *
-     * @param httpHeader
-     */
+    * set 自定义Http headers
+    *
+    * @param httpHeader
+    */
     public void setHttpHeader(List<Hh> httpHeader) {
         this.httpHeader = httpHeader;
     }
+
 
 
     /**
@@ -161,6 +167,7 @@ public class Hg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 连接到pod的host信息。
      *
@@ -170,6 +177,7 @@ public class Hg  implements java.io.Serializable {
         this.host = host;
         return this;
     }
+
 
     /**
      * set 端口号。
@@ -181,6 +189,7 @@ public class Hg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set HTTP的路径。
      *
@@ -191,15 +200,17 @@ public class Hg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 自定义Http headers
-     *
-     * @param httpHeader
-     */
+    * set 自定义Http headers
+    *
+    * @param httpHeader
+    */
     public Hg httpHeader(List<Hh> httpHeader) {
         this.httpHeader = httpHeader;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class Hg  implements java.io.Serializable {
         }
         this.httpHeader.add(httpHeader);
     }
-
 }

@@ -87,6 +87,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
     private String containerName;
 
 
+
     /**
      * get 返回日志文件中倒数 tailLines 行，如不指定，默认从容器启动时或 sinceSeconds 指定的时间读取。
 
@@ -106,6 +107,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
     public void setTailLines(Integer tailLines) {
         this.tailLines = tailLines;
     }
+
 
     /**
      * get 返回相对于当前时间之前sinceSeconds之内的日志。
@@ -127,6 +129,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
         this.sinceSeconds = sinceSeconds;
     }
 
+
     /**
      * get 限制返回的日志文件内容字节数，取值范围 [1-4]KB，最大 4KB.
 
@@ -146,6 +149,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
     public void setLimitBytes(Integer limitBytes) {
         this.limitBytes = limitBytes;
     }
+
 
     /**
      * get 日志时间上限，不传表示不限时间
@@ -167,6 +171,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
         this.startTime = startTime;
     }
 
+
     /**
      * get 日志时间下限，不传表示不限时间
 
@@ -187,6 +192,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
         this.endTime = endTime;
     }
 
+
     /**
      * get Region ID
      *
@@ -205,6 +211,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
     }
 
+
     /**
      * get Pod ID
      *
@@ -222,6 +229,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
     public void setPodId(String podId) {
         this.podId = podId;
     }
+
 
     /**
      * get container name
@@ -242,6 +250,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 返回日志文件中倒数 tailLines 行，如不指定，默认从容器启动时或 sinceSeconds 指定的时间读取。
 
@@ -252,6 +261,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
         this.tailLines = tailLines;
         return this;
     }
+
 
     /**
      * set 返回相对于当前时间之前sinceSeconds之内的日志。
@@ -264,6 +274,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 限制返回的日志文件内容字节数，取值范围 [1-4]KB，最大 4KB.
 
@@ -274,6 +285,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
         this.limitBytes = limitBytes;
         return this;
     }
+
 
     /**
      * set 日志时间上限，不传表示不限时间
@@ -286,6 +298,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 日志时间下限，不传表示不限时间
 
@@ -297,6 +310,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -307,6 +321,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set Pod ID
      *
@@ -316,6 +331,7 @@ public class GetContainerLogsRequest extends JdcloudRequest implements java.io.S
         this.podId = podId;
         return this;
     }
+
 
     /**
      * set container name

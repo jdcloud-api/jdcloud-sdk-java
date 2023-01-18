@@ -75,6 +75,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
     private String containerName;
 
 
+
     /**
      * get tty row，取值范围：[10, 2000]
      *
@@ -92,6 +93,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
     public void setHeight(Integer height) {
         this.height = height;
     }
+
 
     /**
      * get tty column，取值范围：[10, 1000]
@@ -111,6 +113,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
         this.width = width;
     }
 
+
     /**
      * get exec ID
      *
@@ -128,6 +131,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
     public void setExecId(String execId) {
         this.execId = execId;
     }
+
 
     /**
      * get Region ID
@@ -147,6 +151,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
         this.regionId = regionId;
     }
 
+
     /**
      * get Pod ID
      *
@@ -164,6 +169,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
     public void setPodId(String podId) {
         this.podId = podId;
     }
+
 
     /**
      * get container name
@@ -184,6 +190,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set tty row，取值范围：[10, 2000]
      *
@@ -193,6 +200,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
         this.height = height;
         return this;
     }
+
 
     /**
      * set tty column，取值范围：[10, 1000]
@@ -204,6 +212,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set exec ID
      *
@@ -213,6 +222,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
         this.execId = execId;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -224,6 +234,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set Pod ID
      *
@@ -233,6 +244,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
         this.podId = podId;
         return this;
     }
+
 
     /**
      * set container name

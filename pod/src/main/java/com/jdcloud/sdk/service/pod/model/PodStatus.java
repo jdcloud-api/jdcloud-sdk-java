@@ -57,12 +57,13 @@ public class PodStatus  implements java.io.Serializable {
     /**
      * 目前pod的状态。
      */
+    
     private List<PodCondition> conditions;
-
     /**
      * Pod生命周期开始的时间。
      */
     private String startTime;
+
 
 
     /**
@@ -83,6 +84,7 @@ public class PodStatus  implements java.io.Serializable {
         this.phase = phase;
     }
 
+
     /**
      * get （简要）pod处于当前状态的原因
      *
@@ -100,6 +102,7 @@ public class PodStatus  implements java.io.Serializable {
     public void setReason(String reason) {
         this.reason = reason;
     }
+
 
     /**
      * get pod处于当前状态原因的详细信息
@@ -119,6 +122,7 @@ public class PodStatus  implements java.io.Serializable {
         this.message = message;
     }
 
+
     /**
      * get 分配给pod的IP地址。至少在集群内是可路由的。未分配则为空。
      *
@@ -137,23 +141,25 @@ public class PodStatus  implements java.io.Serializable {
         this.podIP = podIP;
     }
 
+
     /**
-     * get 目前pod的状态。
-     *
-     * @return
-     */
+    * get 目前pod的状态。
+    *
+    * @return
+    */
     public List<PodCondition> getConditions() {
         return conditions;
     }
 
     /**
-     * set 目前pod的状态。
-     *
-     * @param conditions
-     */
+    * set 目前pod的状态。
+    *
+    * @param conditions
+    */
     public void setConditions(List<PodCondition> conditions) {
         this.conditions = conditions;
     }
+
 
     /**
      * get Pod生命周期开始的时间。
@@ -174,6 +180,7 @@ public class PodStatus  implements java.io.Serializable {
     }
 
 
+
     /**
      * set pod当前状态
      *
@@ -183,6 +190,7 @@ public class PodStatus  implements java.io.Serializable {
         this.phase = phase;
         return this;
     }
+
 
     /**
      * set （简要）pod处于当前状态的原因
@@ -194,6 +202,7 @@ public class PodStatus  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pod处于当前状态原因的详细信息
      *
@@ -203,6 +212,7 @@ public class PodStatus  implements java.io.Serializable {
         this.message = message;
         return this;
     }
+
 
     /**
      * set 分配给pod的IP地址。至少在集群内是可路由的。未分配则为空。
@@ -214,15 +224,17 @@ public class PodStatus  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 目前pod的状态。
-     *
-     * @param conditions
-     */
+    * set 目前pod的状态。
+    *
+    * @param conditions
+    */
     public PodStatus conditions(List<PodCondition> conditions) {
         this.conditions = conditions;
         return this;
     }
+
 
     /**
      * set Pod生命周期开始的时间。
@@ -233,6 +245,7 @@ public class PodStatus  implements java.io.Serializable {
         this.startTime = startTime;
         return this;
     }
+
 
 
     /**
@@ -246,5 +259,4 @@ public class PodStatus  implements java.io.Serializable {
         }
         this.conditions.add(condition);
     }
-
 }

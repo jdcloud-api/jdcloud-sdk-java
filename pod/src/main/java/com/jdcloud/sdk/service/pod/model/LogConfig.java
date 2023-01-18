@@ -38,6 +38,7 @@ public class LogConfig  implements java.io.Serializable {
     private String logDriver;
 
 
+
     /**
      * get 日志Driver名称。
      *
@@ -55,6 +56,7 @@ public class LogConfig  implements java.io.Serializable {
     public void setLogDriver(String logDriver) {
         this.logDriver = logDriver;
     }
+
 
 
     /**

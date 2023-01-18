@@ -38,6 +38,7 @@ public class AvailablityGroup  implements java.io.Serializable {
     private String id;
 
 
+
     /**
      * get 高可用组ID
      *
@@ -55,6 +56,7 @@ public class AvailablityGroup  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
 
     /**

@@ -61,6 +61,7 @@ public class ModifyContainerAttributeRequest extends JdcloudRequest implements j
     private String containerId;
 
 
+
     /**
      * get 容器名称
      *
@@ -78,6 +79,7 @@ public class ModifyContainerAttributeRequest extends JdcloudRequest implements j
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 容器描述
@@ -97,6 +99,7 @@ public class ModifyContainerAttributeRequest extends JdcloudRequest implements j
         this.description = description;
     }
 
+
     /**
      * get Region ID
      *
@@ -114,6 +117,7 @@ public class ModifyContainerAttributeRequest extends JdcloudRequest implements j
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Container ID
@@ -134,6 +138,7 @@ public class ModifyContainerAttributeRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set 容器名称
      *
@@ -143,6 +148,7 @@ public class ModifyContainerAttributeRequest extends JdcloudRequest implements j
         this.name = name;
         return this;
     }
+
 
     /**
      * set 容器描述
@@ -154,6 +160,7 @@ public class ModifyContainerAttributeRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -163,6 +170,7 @@ public class ModifyContainerAttributeRequest extends JdcloudRequest implements j
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Container ID

@@ -40,6 +40,7 @@ public class CreateConfigFileResult extends JdcloudResult implements java.io.Ser
     private String name;
 
 
+
     /**
      * get name
      *
@@ -57,6 +58,7 @@ public class CreateConfigFileResult extends JdcloudResult implements java.io.Ser
     public void setName(String name) {
         this.name = name;
     }
+
 
 
     /**

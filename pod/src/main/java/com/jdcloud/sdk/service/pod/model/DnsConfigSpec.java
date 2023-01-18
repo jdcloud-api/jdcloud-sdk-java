@@ -39,121 +39,128 @@ public class DnsConfigSpec  implements java.io.Serializable {
 eg [&quot;8.8.8.8&quot;, &quot;4.2.2.2&quot;]。列表长度：[0-20]，列表中元素符合IPv4格式。
 
      */
+    
     private List<String> nameservers;
-
     /**
      * DNS搜索域列表，用于主机名查找。&lt;br&gt;
 eg [&quot;ns1.svc.cluster.local&quot;, &quot;my.dns.search.suffix&quot;]。列表长度：[0-6]，列表中所有字符总长度不超过256个。
 
      */
+    
     private List<String> searches;
-
     /**
      * DNS解析器选项列表。&lt;br&gt;
 eg [&quot;ndots&quot;:&quot;2&quot;, &quot;edns0&quot;:&quot;&quot;]。列表长度：[0-10]
      */
+    
     private List<PodDnsConfigOptionSpec> options;
 
 
     /**
-     * get DNS服务器IP地址列表，重复的将会被移除。&lt;br&gt;
+    * get DNS服务器IP地址列表，重复的将会被移除。&lt;br&gt;
 eg [&quot;8.8.8.8&quot;, &quot;4.2.2.2&quot;]。列表长度：[0-20]，列表中元素符合IPv4格式。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<String> getNameservers() {
         return nameservers;
     }
 
     /**
-     * set DNS服务器IP地址列表，重复的将会被移除。&lt;br&gt;
+    * set DNS服务器IP地址列表，重复的将会被移除。&lt;br&gt;
 eg [&quot;8.8.8.8&quot;, &quot;4.2.2.2&quot;]。列表长度：[0-20]，列表中元素符合IPv4格式。
 
-     *
-     * @param nameservers
-     */
+    *
+    * @param nameservers
+    */
     public void setNameservers(List<String> nameservers) {
         this.nameservers = nameservers;
     }
 
+
     /**
-     * get DNS搜索域列表，用于主机名查找。&lt;br&gt;
+    * get DNS搜索域列表，用于主机名查找。&lt;br&gt;
 eg [&quot;ns1.svc.cluster.local&quot;, &quot;my.dns.search.suffix&quot;]。列表长度：[0-6]，列表中所有字符总长度不超过256个。
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<String> getSearches() {
         return searches;
     }
 
     /**
-     * set DNS搜索域列表，用于主机名查找。&lt;br&gt;
+    * set DNS搜索域列表，用于主机名查找。&lt;br&gt;
 eg [&quot;ns1.svc.cluster.local&quot;, &quot;my.dns.search.suffix&quot;]。列表长度：[0-6]，列表中所有字符总长度不超过256个。
 
-     *
-     * @param searches
-     */
+    *
+    * @param searches
+    */
     public void setSearches(List<String> searches) {
         this.searches = searches;
     }
 
+
     /**
-     * get DNS解析器选项列表。&lt;br&gt;
+    * get DNS解析器选项列表。&lt;br&gt;
 eg [&quot;ndots&quot;:&quot;2&quot;, &quot;edns0&quot;:&quot;&quot;]。列表长度：[0-10]
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<PodDnsConfigOptionSpec> getOptions() {
         return options;
     }
 
     /**
-     * set DNS解析器选项列表。&lt;br&gt;
+    * set DNS解析器选项列表。&lt;br&gt;
 eg [&quot;ndots&quot;:&quot;2&quot;, &quot;edns0&quot;:&quot;&quot;]。列表长度：[0-10]
-     *
-     * @param options
-     */
+    *
+    * @param options
+    */
     public void setOptions(List<PodDnsConfigOptionSpec> options) {
         this.options = options;
     }
 
 
+
     /**
-     * set DNS服务器IP地址列表，重复的将会被移除。&lt;br&gt;
+    * set DNS服务器IP地址列表，重复的将会被移除。&lt;br&gt;
 eg [&quot;8.8.8.8&quot;, &quot;4.2.2.2&quot;]。列表长度：[0-20]，列表中元素符合IPv4格式。
 
-     *
-     * @param nameservers
-     */
+    *
+    * @param nameservers
+    */
     public DnsConfigSpec nameservers(List<String> nameservers) {
         this.nameservers = nameservers;
         return this;
     }
 
+
     /**
-     * set DNS搜索域列表，用于主机名查找。&lt;br&gt;
+    * set DNS搜索域列表，用于主机名查找。&lt;br&gt;
 eg [&quot;ns1.svc.cluster.local&quot;, &quot;my.dns.search.suffix&quot;]。列表长度：[0-6]，列表中所有字符总长度不超过256个。
 
-     *
-     * @param searches
-     */
+    *
+    * @param searches
+    */
     public DnsConfigSpec searches(List<String> searches) {
         this.searches = searches;
         return this;
     }
 
+
     /**
-     * set DNS解析器选项列表。&lt;br&gt;
+    * set DNS解析器选项列表。&lt;br&gt;
 eg [&quot;ndots&quot;:&quot;2&quot;, &quot;edns0&quot;:&quot;&quot;]。列表长度：[0-10]
-     *
-     * @param options
-     */
+    *
+    * @param options
+    */
     public DnsConfigSpec options(List<PodDnsConfigOptionSpec> options) {
         this.options = options;
         return this;
     }
+
 
 
     /**
@@ -196,5 +203,4 @@ eg [&quot;ndots&quot;:&quot;2&quot;, &quot;edns0&quot;:&quot;&quot;]。列表长
         }
         this.options.add(option);
     }
-
 }

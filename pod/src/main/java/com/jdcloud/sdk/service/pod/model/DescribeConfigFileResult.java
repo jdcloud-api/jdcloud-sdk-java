@@ -41,6 +41,7 @@ public class DescribeConfigFileResult extends JdcloudResult implements java.io.S
     private ConfigFile configFile;
 
 
+
     /**
      * get configFile
      *
@@ -58,6 +59,7 @@ public class DescribeConfigFileResult extends JdcloudResult implements java.io.S
     public void setConfigFile(ConfigFile configFile) {
         this.configFile = configFile;
     }
+
 
 
     /**

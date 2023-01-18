@@ -50,6 +50,7 @@ public class DeleteSecretRequest extends JdcloudRequest implements java.io.Seria
     private String name;
 
 
+
     /**
      * get Region ID
      *
@@ -67,6 +68,7 @@ public class DeleteSecretRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Secret Name
@@ -87,6 +89,7 @@ public class DeleteSecretRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set Region ID
      *
@@ -96,6 +99,7 @@ public class DeleteSecretRequest extends JdcloudRequest implements java.io.Seria
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Secret Name

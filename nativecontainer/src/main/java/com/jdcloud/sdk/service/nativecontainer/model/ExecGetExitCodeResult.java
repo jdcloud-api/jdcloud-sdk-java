@@ -40,6 +40,7 @@ public class ExecGetExitCodeResult extends JdcloudResult implements java.io.Seri
     private Integer exitCode;
 
 
+
     /**
      * get exitCode
      *
@@ -57,6 +58,7 @@ public class ExecGetExitCodeResult extends JdcloudResult implements java.io.Seri
     public void setExitCode(Integer exitCode) {
         this.exitCode = exitCode;
     }
+
 
 
     /**

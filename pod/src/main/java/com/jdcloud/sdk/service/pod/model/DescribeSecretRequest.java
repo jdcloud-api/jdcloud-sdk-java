@@ -50,6 +50,7 @@ public class DescribeSecretRequest extends JdcloudRequest implements java.io.Ser
     private String name;
 
 
+
     /**
      * get Region ID
      *
@@ -67,6 +68,7 @@ public class DescribeSecretRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Secret Name
@@ -87,6 +89,7 @@ public class DescribeSecretRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set Region ID
      *
@@ -96,6 +99,7 @@ public class DescribeSecretRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Secret Name

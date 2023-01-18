@@ -47,6 +47,7 @@ public class ConfigFileVolumeSource  implements java.io.Serializable {
     /**
      * 提供给Pod的configFile.
      */
+    
     private List<ConfigFileToPathSource> fileToPath;
 
 
@@ -68,6 +69,7 @@ public class ConfigFileVolumeSource  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 默认文件目录权限
      *
@@ -86,23 +88,25 @@ public class ConfigFileVolumeSource  implements java.io.Serializable {
         this.defaultMode = defaultMode;
     }
 
+
     /**
-     * get 提供给Pod的configFile.
-     *
-     * @return
-     */
+    * get 提供给Pod的configFile.
+    *
+    * @return
+    */
     public List<ConfigFileToPathSource> getFileToPath() {
         return fileToPath;
     }
 
     /**
-     * set 提供给Pod的configFile.
-     *
-     * @param fileToPath
-     */
+    * set 提供给Pod的configFile.
+    *
+    * @param fileToPath
+    */
     public void setFileToPath(List<ConfigFileToPathSource> fileToPath) {
         this.fileToPath = fileToPath;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class ConfigFileVolumeSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 默认文件目录权限
      *
@@ -125,15 +130,17 @@ public class ConfigFileVolumeSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 提供给Pod的configFile.
-     *
-     * @param fileToPath
-     */
+    * set 提供给Pod的configFile.
+    *
+    * @param fileToPath
+    */
     public ConfigFileVolumeSource fileToPath(List<ConfigFileToPathSource> fileToPath) {
         this.fileToPath = fileToPath;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class ConfigFileVolumeSource  implements java.io.Serializable {
         }
         this.fileToPath.add(fileToPath);
     }
-
 }

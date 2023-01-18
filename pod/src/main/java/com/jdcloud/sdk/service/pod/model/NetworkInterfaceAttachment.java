@@ -58,6 +58,7 @@ public class NetworkInterfaceAttachment  implements java.io.Serializable {
     private InstanceNetworkInterface networkInterface;
 
 
+
     /**
      * get 指明删除pod时是否删除网卡。
      *
@@ -75,6 +76,7 @@ public class NetworkInterfaceAttachment  implements java.io.Serializable {
     public void setAutoDelete(Boolean autoDelete) {
         this.autoDelete = autoDelete;
     }
+
 
     /**
      * get 设备Index，目前pod只支持一个网卡，所以只能设置为1
@@ -94,6 +96,7 @@ public class NetworkInterfaceAttachment  implements java.io.Serializable {
         this.deviceIndex = deviceIndex;
     }
 
+
     /**
      * get 绑定状态
      *
@@ -112,6 +115,7 @@ public class NetworkInterfaceAttachment  implements java.io.Serializable {
         this.attachStatus = attachStatus;
     }
 
+
     /**
      * get 绑定时间
      *
@@ -129,6 +133,7 @@ public class NetworkInterfaceAttachment  implements java.io.Serializable {
     public void setAttachTime(String attachTime) {
         this.attachTime = attachTime;
     }
+
 
     /**
      * get 网卡接口规范
@@ -149,6 +154,7 @@ public class NetworkInterfaceAttachment  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 指明删除pod时是否删除网卡。
      *
@@ -158,6 +164,7 @@ public class NetworkInterfaceAttachment  implements java.io.Serializable {
         this.autoDelete = autoDelete;
         return this;
     }
+
 
     /**
      * set 设备Index，目前pod只支持一个网卡，所以只能设置为1
@@ -169,6 +176,7 @@ public class NetworkInterfaceAttachment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 绑定状态
      *
@@ -179,6 +187,7 @@ public class NetworkInterfaceAttachment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 绑定时间
      *
@@ -188,6 +197,7 @@ public class NetworkInterfaceAttachment  implements java.io.Serializable {
         this.attachTime = attachTime;
         return this;
     }
+
 
     /**
      * set 网卡接口规范

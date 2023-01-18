@@ -52,6 +52,7 @@ public class DeleteContainerRequest extends JdcloudRequest implements java.io.Se
     private String containerId;
 
 
+
     /**
      * get Region ID
      *
@@ -69,6 +70,7 @@ public class DeleteContainerRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Container ID
@@ -89,6 +91,7 @@ public class DeleteContainerRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set Region ID
      *
@@ -98,6 +101,7 @@ public class DeleteContainerRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Container ID

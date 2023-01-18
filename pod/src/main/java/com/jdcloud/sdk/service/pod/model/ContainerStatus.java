@@ -58,6 +58,7 @@ public class ContainerStatus  implements java.io.Serializable {
     private ContainerState lastState;
 
 
+
     /**
      * get 容器名称
      *
@@ -75,6 +76,7 @@ public class ContainerStatus  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 容器被重新启动的次数
@@ -94,6 +96,7 @@ public class ContainerStatus  implements java.io.Serializable {
         this.restartCount = restartCount;
     }
 
+
     /**
      * get 容器是否通过了就绪探针探测
      *
@@ -112,6 +115,7 @@ public class ContainerStatus  implements java.io.Serializable {
         this.ready = ready;
     }
 
+
     /**
      * get 关于容器当前状态详细信息
      *
@@ -129,6 +133,7 @@ public class ContainerStatus  implements java.io.Serializable {
     public void setState(ContainerState state) {
         this.state = state;
     }
+
 
     /**
      * get 关于容器最后一次termination详细信息
@@ -149,6 +154,7 @@ public class ContainerStatus  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 容器名称
      *
@@ -158,6 +164,7 @@ public class ContainerStatus  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 容器被重新启动的次数
@@ -169,6 +176,7 @@ public class ContainerStatus  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器是否通过了就绪探针探测
      *
@@ -179,6 +187,7 @@ public class ContainerStatus  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 关于容器当前状态详细信息
      *
@@ -188,6 +197,7 @@ public class ContainerStatus  implements java.io.Serializable {
         this.state = state;
         return this;
     }
+
 
     /**
      * set 关于容器最后一次termination详细信息

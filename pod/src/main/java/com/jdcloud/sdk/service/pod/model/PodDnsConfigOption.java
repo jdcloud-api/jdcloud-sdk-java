@@ -43,6 +43,7 @@ public class PodDnsConfigOption  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get 长度范围：[1-63]，需满足linux resolver限制
      *
@@ -60,6 +61,7 @@ public class PodDnsConfigOption  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 长度范围：[0-100]，仅限timeout, attempts, ndots
@@ -80,6 +82,7 @@ public class PodDnsConfigOption  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 长度范围：[1-63]，需满足linux resolver限制
      *
@@ -89,6 +92,7 @@ public class PodDnsConfigOption  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 长度范围：[0-100]，仅限timeout, attempts, ndots

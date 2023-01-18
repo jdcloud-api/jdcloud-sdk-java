@@ -63,28 +63,33 @@ public class Container  implements java.io.Serializable {
     /**
      * 域名和IP映射的信息
      */
+    
     private List<HostAlias> hostAliases;
-
     /**
      * 主机名
      */
     private String hostname;
 
     /**
+     * 高可用组
+     */
+    private AvailablityGroup ag;
+
+    /**
      * 容器执行命令
      */
+    
     private List<String> command;
-
     /**
      * 容器执行命令的参数
      */
+    
     private List<String> args;
-
     /**
      * 动态指定的容器执行的环境变量
      */
+    
     private List<EnvVar> envs;
-
     /**
      * 镜像名称
      */
@@ -113,8 +118,8 @@ public class Container  implements java.io.Serializable {
     /**
      * 挂载的数据Volume信息
      */
+    
     private List<VolumeMount> dataVolumes;
-
     /**
      * 主网卡所属VPC的ID
      */
@@ -148,8 +153,8 @@ public class Container  implements java.io.Serializable {
     /**
      * 辅助网卡配置信息
      */
+    
     private List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces;
-
     /**
      * 容器日志配置信息
      */
@@ -158,8 +163,8 @@ public class Container  implements java.io.Serializable {
     /**
      * tags
      */
+    
     private List<Tag> tags;
-
     /**
      * 计费配置信息
      */
@@ -180,6 +185,12 @@ public class Container  implements java.io.Serializable {
      */
     private String description;
 
+    /**
+     * 资源组ID
+     */
+    private String resourceGroupId;
+
+
 
     /**
      * get 容器ID
@@ -199,6 +210,7 @@ public class Container  implements java.io.Serializable {
         this.containerId = containerId;
     }
 
+
     /**
      * get 容器状态
      *
@@ -216,6 +228,7 @@ public class Container  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 实例类型
@@ -235,6 +248,7 @@ public class Container  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
      * get 可用区
      *
@@ -252,6 +266,7 @@ public class Container  implements java.io.Serializable {
     public void setAz(String az) {
         this.az = az;
     }
+
 
     /**
      * get 容器名称
@@ -271,23 +286,25 @@ public class Container  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
-     * get 域名和IP映射的信息
-     *
-     * @return
-     */
+    * get 域名和IP映射的信息
+    *
+    * @return
+    */
     public List<HostAlias> getHostAliases() {
         return hostAliases;
     }
 
     /**
-     * set 域名和IP映射的信息
-     *
-     * @param hostAliases
-     */
+    * set 域名和IP映射的信息
+    *
+    * @param hostAliases
+    */
     public void setHostAliases(List<HostAlias> hostAliases) {
         this.hostAliases = hostAliases;
     }
+
 
     /**
      * get 主机名
@@ -307,59 +324,82 @@ public class Container  implements java.io.Serializable {
         this.hostname = hostname;
     }
 
+
     /**
-     * get 容器执行命令
+     * get 高可用组
      *
      * @return
      */
+    public AvailablityGroup getAg() {
+        return ag;
+    }
+
+    /**
+     * set 高可用组
+     *
+     * @param ag
+     */
+    public void setAg(AvailablityGroup ag) {
+        this.ag = ag;
+    }
+
+
+    /**
+    * get 容器执行命令
+    *
+    * @return
+    */
     public List<String> getCommand() {
         return command;
     }
 
     /**
-     * set 容器执行命令
-     *
-     * @param command
-     */
+    * set 容器执行命令
+    *
+    * @param command
+    */
     public void setCommand(List<String> command) {
         this.command = command;
     }
 
+
     /**
-     * get 容器执行命令的参数
-     *
-     * @return
-     */
+    * get 容器执行命令的参数
+    *
+    * @return
+    */
     public List<String> getArgs() {
         return args;
     }
 
     /**
-     * set 容器执行命令的参数
-     *
-     * @param args
-     */
+    * set 容器执行命令的参数
+    *
+    * @param args
+    */
     public void setArgs(List<String> args) {
         this.args = args;
     }
 
+
     /**
-     * get 动态指定的容器执行的环境变量
-     *
-     * @return
-     */
+    * get 动态指定的容器执行的环境变量
+    *
+    * @return
+    */
     public List<EnvVar> getEnvs() {
         return envs;
     }
 
     /**
-     * set 动态指定的容器执行的环境变量
-     *
-     * @param envs
-     */
+    * set 动态指定的容器执行的环境变量
+    *
+    * @param envs
+    */
     public void setEnvs(List<EnvVar> envs) {
         this.envs = envs;
     }
+
 
     /**
      * get 镜像名称
@@ -379,6 +419,7 @@ public class Container  implements java.io.Serializable {
         this.image = image;
     }
 
+
     /**
      * get 镜像仓库认证信息名称
      *
@@ -396,6 +437,7 @@ public class Container  implements java.io.Serializable {
     public void setSecret(String secret) {
         this.secret = secret;
     }
+
 
     /**
      * get 容器是否分配tty
@@ -415,6 +457,7 @@ public class Container  implements java.io.Serializable {
         this.tty = tty;
     }
 
+
     /**
      * get 容器的工作目录
      *
@@ -432,6 +475,7 @@ public class Container  implements java.io.Serializable {
     public void setWorkingDir(String workingDir) {
         this.workingDir = workingDir;
     }
+
 
     /**
      * get 根Volume信息
@@ -451,23 +495,25 @@ public class Container  implements java.io.Serializable {
         this.rootVolume = rootVolume;
     }
 
+
     /**
-     * get 挂载的数据Volume信息
-     *
-     * @return
-     */
+    * get 挂载的数据Volume信息
+    *
+    * @return
+    */
     public List<VolumeMount> getDataVolumes() {
         return dataVolumes;
     }
 
     /**
-     * set 挂载的数据Volume信息
-     *
-     * @param dataVolumes
-     */
+    * set 挂载的数据Volume信息
+    *
+    * @param dataVolumes
+    */
     public void setDataVolumes(List<VolumeMount> dataVolumes) {
         this.dataVolumes = dataVolumes;
     }
+
 
     /**
      * get 主网卡所属VPC的ID
@@ -487,6 +533,7 @@ public class Container  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 主网卡所属子网的ID
      *
@@ -504,6 +551,7 @@ public class Container  implements java.io.Serializable {
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
     /**
      * get 主网卡主IP地址
@@ -523,6 +571,7 @@ public class Container  implements java.io.Serializable {
         this.privateIpAddress = privateIpAddress;
     }
 
+
     /**
      * get 主网卡主IP绑定弹性IP的ID
      *
@@ -540,6 +589,7 @@ public class Container  implements java.io.Serializable {
     public void setElasticIpId(String elasticIpId) {
         this.elasticIpId = elasticIpId;
     }
+
 
     /**
      * get 主网卡主IP绑定弹性IP的地址
@@ -559,6 +609,7 @@ public class Container  implements java.io.Serializable {
         this.elasticIpAddress = elasticIpAddress;
     }
 
+
     /**
      * get 主网卡配置信息
      *
@@ -577,23 +628,25 @@ public class Container  implements java.io.Serializable {
         this.primaryNetworkInterface = primaryNetworkInterface;
     }
 
+
     /**
-     * get 辅助网卡配置信息
-     *
-     * @return
-     */
+    * get 辅助网卡配置信息
+    *
+    * @return
+    */
     public List<InstanceNetworkInterfaceAttachment> getSecondaryNetworkInterfaces() {
         return secondaryNetworkInterfaces;
     }
 
     /**
-     * set 辅助网卡配置信息
-     *
-     * @param secondaryNetworkInterfaces
-     */
+    * set 辅助网卡配置信息
+    *
+    * @param secondaryNetworkInterfaces
+    */
     public void setSecondaryNetworkInterfaces(List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces) {
         this.secondaryNetworkInterfaces = secondaryNetworkInterfaces;
     }
+
 
     /**
      * get 容器日志配置信息
@@ -613,23 +666,25 @@ public class Container  implements java.io.Serializable {
         this.logConfiguration = logConfiguration;
     }
 
+
     /**
-     * get tags
-     *
-     * @return
-     */
+    * get tags
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set tags
-     *
-     * @param tags
-     */
+    * set tags
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
 
     /**
      * get 计费配置信息
@@ -649,6 +704,7 @@ public class Container  implements java.io.Serializable {
         this.charge = charge;
     }
 
+
     /**
      * get 创建时间
      *
@@ -667,6 +723,7 @@ public class Container  implements java.io.Serializable {
         this.launchTime = launchTime;
     }
 
+
     /**
      * get 容器终止原因
      *
@@ -684,6 +741,7 @@ public class Container  implements java.io.Serializable {
     public void setReason(String reason) {
         this.reason = reason;
     }
+
 
     /**
      * get 容器描述
@@ -705,6 +763,26 @@ public class Container  implements java.io.Serializable {
 
 
     /**
+     * get 资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+
+    /**
      * set 容器ID
      *
      * @param containerId
@@ -713,6 +791,7 @@ public class Container  implements java.io.Serializable {
         this.containerId = containerId;
         return this;
     }
+
 
     /**
      * set 容器状态
@@ -724,6 +803,7 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例类型
      *
@@ -733,6 +813,7 @@ public class Container  implements java.io.Serializable {
         this.instanceType = instanceType;
         return this;
     }
+
 
     /**
      * set 可用区
@@ -744,6 +825,7 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器名称
      *
@@ -754,15 +836,17 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 域名和IP映射的信息
-     *
-     * @param hostAliases
-     */
+    * set 域名和IP映射的信息
+    *
+    * @param hostAliases
+    */
     public Container hostAliases(List<HostAlias> hostAliases) {
         this.hostAliases = hostAliases;
         return this;
     }
+
 
     /**
      * set 主机名
@@ -774,35 +858,50 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 容器执行命令
+     * set 高可用组
      *
-     * @param command
+     * @param ag
      */
+    public Container ag(AvailablityGroup ag) {
+        this.ag = ag;
+        return this;
+    }
+
+
+    /**
+    * set 容器执行命令
+    *
+    * @param command
+    */
     public Container command(List<String> command) {
         this.command = command;
         return this;
     }
 
+
     /**
-     * set 容器执行命令的参数
-     *
-     * @param args
-     */
+    * set 容器执行命令的参数
+    *
+    * @param args
+    */
     public Container args(List<String> args) {
         this.args = args;
         return this;
     }
 
+
     /**
-     * set 动态指定的容器执行的环境变量
-     *
-     * @param envs
-     */
+    * set 动态指定的容器执行的环境变量
+    *
+    * @param envs
+    */
     public Container envs(List<EnvVar> envs) {
         this.envs = envs;
         return this;
     }
+
 
     /**
      * set 镜像名称
@@ -814,6 +913,7 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像仓库认证信息名称
      *
@@ -823,6 +923,7 @@ public class Container  implements java.io.Serializable {
         this.secret = secret;
         return this;
     }
+
 
     /**
      * set 容器是否分配tty
@@ -834,6 +935,7 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器的工作目录
      *
@@ -843,6 +945,7 @@ public class Container  implements java.io.Serializable {
         this.workingDir = workingDir;
         return this;
     }
+
 
     /**
      * set 根Volume信息
@@ -854,15 +957,17 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 挂载的数据Volume信息
-     *
-     * @param dataVolumes
-     */
+    * set 挂载的数据Volume信息
+    *
+    * @param dataVolumes
+    */
     public Container dataVolumes(List<VolumeMount> dataVolumes) {
         this.dataVolumes = dataVolumes;
         return this;
     }
+
 
     /**
      * set 主网卡所属VPC的ID
@@ -874,6 +979,7 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡所属子网的ID
      *
@@ -883,6 +989,7 @@ public class Container  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 主网卡主IP地址
@@ -894,6 +1001,7 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡主IP绑定弹性IP的ID
      *
@@ -903,6 +1011,7 @@ public class Container  implements java.io.Serializable {
         this.elasticIpId = elasticIpId;
         return this;
     }
+
 
     /**
      * set 主网卡主IP绑定弹性IP的地址
@@ -914,6 +1023,7 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡配置信息
      *
@@ -924,15 +1034,17 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 辅助网卡配置信息
-     *
-     * @param secondaryNetworkInterfaces
-     */
+    * set 辅助网卡配置信息
+    *
+    * @param secondaryNetworkInterfaces
+    */
     public Container secondaryNetworkInterfaces(List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces) {
         this.secondaryNetworkInterfaces = secondaryNetworkInterfaces;
         return this;
     }
+
 
     /**
      * set 容器日志配置信息
@@ -944,15 +1056,17 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set tags
-     *
-     * @param tags
-     */
+    * set tags
+    *
+    * @param tags
+    */
     public Container tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
 
     /**
      * set 计费配置信息
@@ -964,6 +1078,7 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -973,6 +1088,7 @@ public class Container  implements java.io.Serializable {
         this.launchTime = launchTime;
         return this;
     }
+
 
     /**
      * set 容器终止原因
@@ -984,6 +1100,7 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器描述
      *
@@ -993,6 +1110,18 @@ public class Container  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public Container resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
 
 
     /**
@@ -1078,5 +1207,4 @@ public class Container  implements java.io.Serializable {
         }
         this.tags.add(tag);
     }
-
 }

@@ -52,6 +52,7 @@ public class NetworkInterfaceAttachmentSpec  implements java.io.Serializable {
     private NetworkInterfaceSpec networkInterface;
 
 
+
     /**
      * get 指明删除pod时是否删除网卡，默认True；当前只能是True
      *
@@ -70,6 +71,7 @@ public class NetworkInterfaceAttachmentSpec  implements java.io.Serializable {
         this.autoDelete = autoDelete;
     }
 
+
     /**
      * get 设备Index，目前pod只支持一个网卡，所以只能设置为1
      *
@@ -87,6 +89,7 @@ public class NetworkInterfaceAttachmentSpec  implements java.io.Serializable {
     public void setDeviceIndex(Integer deviceIndex) {
         this.deviceIndex = deviceIndex;
     }
+
 
     /**
      * get 网卡接口规范
@@ -107,6 +110,7 @@ public class NetworkInterfaceAttachmentSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 指明删除pod时是否删除网卡，默认True；当前只能是True
      *
@@ -117,6 +121,7 @@ public class NetworkInterfaceAttachmentSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 设备Index，目前pod只支持一个网卡，所以只能设置为1
      *
@@ -126,6 +131,7 @@ public class NetworkInterfaceAttachmentSpec  implements java.io.Serializable {
         this.deviceIndex = deviceIndex;
         return this;
     }
+
 
     /**
      * set 网卡接口规范

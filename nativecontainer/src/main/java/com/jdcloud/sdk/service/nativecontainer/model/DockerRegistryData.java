@@ -60,6 +60,7 @@ public class DockerRegistryData  implements java.io.Serializable {
     private String email;
 
 
+
     /**
      * get registry服务器地址
      *
@@ -77,6 +78,7 @@ public class DockerRegistryData  implements java.io.Serializable {
     public void setServer(String server) {
         this.server = server;
     }
+
 
     /**
      * get 用户名
@@ -96,6 +98,7 @@ public class DockerRegistryData  implements java.io.Serializable {
         this.username = username;
     }
 
+
     /**
      * get 密码
      *
@@ -113,6 +116,7 @@ public class DockerRegistryData  implements java.io.Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
 
     /**
      * get 邮件地址
@@ -133,6 +137,7 @@ public class DockerRegistryData  implements java.io.Serializable {
     }
 
 
+
     /**
      * set registry服务器地址
      *
@@ -142,6 +147,7 @@ public class DockerRegistryData  implements java.io.Serializable {
         this.server = server;
         return this;
     }
+
 
     /**
      * set 用户名
@@ -153,6 +159,7 @@ public class DockerRegistryData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 密码
      *
@@ -162,6 +169,7 @@ public class DockerRegistryData  implements java.io.Serializable {
         this.password = password;
         return this;
     }
+
 
     /**
      * set 邮件地址

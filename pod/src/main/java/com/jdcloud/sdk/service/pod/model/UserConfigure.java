@@ -58,6 +58,7 @@ public class UserConfigure  implements java.io.Serializable {
     private Integer status;
 
 
+
     /**
      * get 用户 pin
      *
@@ -75,6 +76,7 @@ public class UserConfigure  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 本地盘容量
@@ -94,6 +96,7 @@ public class UserConfigure  implements java.io.Serializable {
         this.localDiskSize = localDiskSize;
     }
 
+
     /**
      * get 创建时间
      *
@@ -112,6 +115,7 @@ public class UserConfigure  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 更新时间
      *
@@ -129,6 +133,7 @@ public class UserConfigure  implements java.io.Serializable {
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 配置状态
@@ -149,6 +154,7 @@ public class UserConfigure  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户 pin
      *
@@ -158,6 +164,7 @@ public class UserConfigure  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 本地盘容量
@@ -169,6 +176,7 @@ public class UserConfigure  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -179,6 +187,7 @@ public class UserConfigure  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 更新时间
      *
@@ -188,6 +197,7 @@ public class UserConfigure  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 配置状态

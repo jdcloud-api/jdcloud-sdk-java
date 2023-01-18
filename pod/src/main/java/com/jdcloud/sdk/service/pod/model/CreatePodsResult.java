@@ -100,37 +100,40 @@ public class CreatePodsResult extends JdcloudResult implements java.io.Serializa
     /**
      * podIds
      */
+    
     private List<String> podIds;
 
 
     /**
-     * get podIds
-     *
-     * @return
-     */
+    * get podIds
+    *
+    * @return
+    */
     public List<String> getPodIds() {
         return podIds;
     }
 
     /**
-     * set podIds
-     *
-     * @param podIds
-     */
+    * set podIds
+    *
+    * @param podIds
+    */
     public void setPodIds(List<String> podIds) {
         this.podIds = podIds;
     }
 
 
+
     /**
-     * set podIds
-     *
-     * @param podIds
-     */
+    * set podIds
+    *
+    * @param podIds
+    */
     public CreatePodsResult podIds(List<String> podIds) {
         this.podIds = podIds;
         return this;
     }
+
 
 
     /**
@@ -144,5 +147,4 @@ public class CreatePodsResult extends JdcloudResult implements java.io.Serializa
         }
         this.podIds.add(podId);
     }
-
 }

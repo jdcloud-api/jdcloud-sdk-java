@@ -45,6 +45,7 @@ public class CheckPodNameResult extends JdcloudResult implements java.io.Seriali
     private String reason;
 
 
+
     /**
      * get 用户指定 podName 是否通过校验 0 通过 1 名称为空 2 不符合规范 3 重名。
      *
@@ -62,6 +63,7 @@ public class CheckPodNameResult extends JdcloudResult implements java.io.Seriali
     public void setCode(Integer code) {
         this.code = code;
     }
+
 
     /**
      * get code 字段非零时，给出详细原因。
@@ -82,6 +84,7 @@ public class CheckPodNameResult extends JdcloudResult implements java.io.Seriali
     }
 
 
+
     /**
      * set 用户指定 podName 是否通过校验 0 通过 1 名称为空 2 不符合规范 3 重名。
      *
@@ -91,6 +94,7 @@ public class CheckPodNameResult extends JdcloudResult implements java.io.Seriali
         this.code = code;
         return this;
     }
+
 
     /**
      * set code 字段非零时，给出详细原因。

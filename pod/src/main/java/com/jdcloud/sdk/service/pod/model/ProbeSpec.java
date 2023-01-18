@@ -75,6 +75,7 @@ public class ProbeSpec  implements java.io.Serializable {
     private TcpSocketSpec tcpSocket;
 
 
+
     /**
      * get 容器启动多长时间后，触发探针。默认值：10秒；范围:[0-300]
      *
@@ -92,6 +93,7 @@ public class ProbeSpec  implements java.io.Serializable {
     public void setInitialDelaySeconds(Integer initialDelaySeconds) {
         this.initialDelaySeconds = initialDelaySeconds;
     }
+
 
     /**
      * get 探测的时间间隔。默认值 10秒，范围:[1-300]
@@ -111,6 +113,7 @@ public class ProbeSpec  implements java.io.Serializable {
         this.periodSeconds = periodSeconds;
     }
 
+
     /**
      * get 探测的超时时间。默认值 1秒；范围:[1-300]
      *
@@ -128,6 +131,7 @@ public class ProbeSpec  implements java.io.Serializable {
     public void setTimeoutSeconds(Integer timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
     }
+
 
     /**
      * get 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围:[1-10]
@@ -147,6 +151,7 @@ public class ProbeSpec  implements java.io.Serializable {
         this.failureThreshold = failureThreshold;
     }
 
+
     /**
      * get 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围:[1-10]
      *
@@ -165,6 +170,7 @@ public class ProbeSpec  implements java.io.Serializable {
         this.successThreshold = successThreshold;
     }
 
+
     /**
      * get 在容器内执行指定命令；如果命令退出时返回码为 0 则认为诊断成功。
      *
@@ -182,6 +188,7 @@ public class ProbeSpec  implements java.io.Serializable {
     public void setExec(ExecSpec exec) {
         this.exec = exec;
     }
+
 
     /**
      * get 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。&lt;br&gt;
@@ -205,6 +212,7 @@ public class ProbeSpec  implements java.io.Serializable {
         this.httpGet = httpGet;
     }
 
+
     /**
      * get 对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则诊断被认为是成功的。
      *
@@ -224,6 +232,7 @@ public class ProbeSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 容器启动多长时间后，触发探针。默认值：10秒；范围:[0-300]
      *
@@ -233,6 +242,7 @@ public class ProbeSpec  implements java.io.Serializable {
         this.initialDelaySeconds = initialDelaySeconds;
         return this;
     }
+
 
     /**
      * set 探测的时间间隔。默认值 10秒，范围:[1-300]
@@ -244,6 +254,7 @@ public class ProbeSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 探测的超时时间。默认值 1秒；范围:[1-300]
      *
@@ -253,6 +264,7 @@ public class ProbeSpec  implements java.io.Serializable {
         this.timeoutSeconds = timeoutSeconds;
         return this;
     }
+
 
     /**
      * set 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围:[1-10]
@@ -264,6 +276,7 @@ public class ProbeSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围:[1-10]
      *
@@ -274,6 +287,7 @@ public class ProbeSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 在容器内执行指定命令；如果命令退出时返回码为 0 则认为诊断成功。
      *
@@ -283,6 +297,7 @@ public class ProbeSpec  implements java.io.Serializable {
         this.exec = exec;
         return this;
     }
+
 
     /**
      * set 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。&lt;br&gt;
@@ -295,6 +310,7 @@ public class ProbeSpec  implements java.io.Serializable {
         this.httpGet = httpGet;
         return this;
     }
+
 
     /**
      * set 对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则诊断被认为是成功的。

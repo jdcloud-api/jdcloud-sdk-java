@@ -43,6 +43,7 @@ public class SecurityGroupSimple  implements java.io.Serializable {
     private String groupName;
 
 
+
     /**
      * get 安全组ID
      *
@@ -60,6 +61,7 @@ public class SecurityGroupSimple  implements java.io.Serializable {
     public void setGroupId(String groupId) {
         this.groupId = groupId;
     }
+
 
     /**
      * get 安全组名称
@@ -80,6 +82,7 @@ public class SecurityGroupSimple  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 安全组ID
      *
@@ -89,6 +92,7 @@ public class SecurityGroupSimple  implements java.io.Serializable {
         this.groupId = groupId;
         return this;
     }
+
 
     /**
      * set 安全组名称

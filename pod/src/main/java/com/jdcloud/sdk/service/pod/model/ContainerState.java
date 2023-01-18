@@ -48,6 +48,7 @@ public class ContainerState  implements java.io.Serializable {
     private ContainerStateWaiting waiting;
 
 
+
     /**
      * get 容器运行的详细信息
      *
@@ -66,6 +67,7 @@ public class ContainerState  implements java.io.Serializable {
         this.running = running;
     }
 
+
     /**
      * get 容器终止的详细信息
      *
@@ -83,6 +85,7 @@ public class ContainerState  implements java.io.Serializable {
     public void setTerminated(ContainerStateTerminated terminated) {
         this.terminated = terminated;
     }
+
 
     /**
      * get 容器等待的详细信息
@@ -103,6 +106,7 @@ public class ContainerState  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 容器运行的详细信息
      *
@@ -113,6 +117,7 @@ public class ContainerState  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器终止的详细信息
      *
@@ -122,6 +127,7 @@ public class ContainerState  implements java.io.Serializable {
         this.terminated = terminated;
         return this;
     }
+
 
     /**
      * set 容器等待的详细信息

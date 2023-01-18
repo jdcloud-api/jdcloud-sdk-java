@@ -67,7 +67,13 @@ public class InstanceType  implements java.io.Serializable {
     /**
      * 规格状态
      */
+    
     private List<InstanceTypeState> state;
+    /**
+     * 支持的云盘类型
+     */
+    
+    private List<String> cloudDiskTypes;
 
 
     /**
@@ -88,6 +94,7 @@ public class InstanceType  implements java.io.Serializable {
         this.family = family;
     }
 
+
     /**
      * get 实例规格，比如g.b1.2xlarge
      *
@@ -105,6 +112,7 @@ public class InstanceType  implements java.io.Serializable {
     public void setInstanceType(String instanceType) {
         this.instanceType = instanceType;
     }
+
 
     /**
      * get cpu个数
@@ -124,6 +132,7 @@ public class InstanceType  implements java.io.Serializable {
         this.cpu = cpu;
     }
 
+
     /**
      * get 内存大小
      *
@@ -141,6 +150,7 @@ public class InstanceType  implements java.io.Serializable {
     public void setMemoryMB(Integer memoryMB) {
         this.memoryMB = memoryMB;
     }
+
 
     /**
      * get 支持弹性网卡的数量
@@ -160,6 +170,7 @@ public class InstanceType  implements java.io.Serializable {
         this.nicLimit = nicLimit;
     }
 
+
     /**
      * get 描述
      *
@@ -178,23 +189,44 @@ public class InstanceType  implements java.io.Serializable {
         this.desc = desc;
     }
 
+
     /**
-     * get 规格状态
-     *
-     * @return
-     */
+    * get 规格状态
+    *
+    * @return
+    */
     public List<InstanceTypeState> getState() {
         return state;
     }
 
     /**
-     * set 规格状态
-     *
-     * @param state
-     */
+    * set 规格状态
+    *
+    * @param state
+    */
     public void setState(List<InstanceTypeState> state) {
         this.state = state;
     }
+
+
+    /**
+    * get 支持的云盘类型
+    *
+    * @return
+    */
+    public List<String> getCloudDiskTypes() {
+        return cloudDiskTypes;
+    }
+
+    /**
+    * set 支持的云盘类型
+    *
+    * @param cloudDiskTypes
+    */
+    public void setCloudDiskTypes(List<String> cloudDiskTypes) {
+        this.cloudDiskTypes = cloudDiskTypes;
+    }
+
 
 
     /**
@@ -207,6 +239,7 @@ public class InstanceType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例规格，比如g.b1.2xlarge
      *
@@ -216,6 +249,7 @@ public class InstanceType  implements java.io.Serializable {
         this.instanceType = instanceType;
         return this;
     }
+
 
     /**
      * set cpu个数
@@ -227,6 +261,7 @@ public class InstanceType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 内存大小
      *
@@ -236,6 +271,7 @@ public class InstanceType  implements java.io.Serializable {
         this.memoryMB = memoryMB;
         return this;
     }
+
 
     /**
      * set 支持弹性网卡的数量
@@ -247,6 +283,7 @@ public class InstanceType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述
      *
@@ -257,15 +294,28 @@ public class InstanceType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 规格状态
-     *
-     * @param state
-     */
+    * set 规格状态
+    *
+    * @param state
+    */
     public InstanceType state(List<InstanceTypeState> state) {
         this.state = state;
         return this;
     }
+
+
+    /**
+    * set 支持的云盘类型
+    *
+    * @param cloudDiskTypes
+    */
+    public InstanceType cloudDiskTypes(List<String> cloudDiskTypes) {
+        this.cloudDiskTypes = cloudDiskTypes;
+        return this;
+    }
+
 
 
     /**
@@ -280,4 +330,15 @@ public class InstanceType  implements java.io.Serializable {
         this.state.add(state);
     }
 
+    /**
+     * add item to 支持的云盘类型
+     *
+     * @param cloudDiskType
+     */
+    public void addCloudDiskType(String cloudDiskType) {
+        if (this.cloudDiskTypes == null) {
+            this.cloudDiskTypes = new ArrayList<>();
+        }
+        this.cloudDiskTypes.add(cloudDiskType);
+    }
 }

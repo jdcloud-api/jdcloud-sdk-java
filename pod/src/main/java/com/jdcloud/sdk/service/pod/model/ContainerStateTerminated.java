@@ -63,6 +63,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     private String startedAt;
 
 
+
     /**
      * get 容器被终止的信号。
      *
@@ -80,6 +81,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     public void setSignal(Integer signal) {
         this.signal = signal;
     }
+
 
     /**
      * get 容器被终止的退出码。
@@ -99,6 +101,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
         this.exitCode = exitCode;
     }
 
+
     /**
      * get （简要）容器被终止的原因。
      *
@@ -116,6 +119,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     public void setReason(String reason) {
         this.reason = reason;
     }
+
 
     /**
      * get 容器被终止的详细信息。
@@ -135,6 +139,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
         this.message = message;
     }
 
+
     /**
      * get 容器被终止的时间。
      *
@@ -152,6 +157,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     public void setFinishedAt(String finishedAt) {
         this.finishedAt = finishedAt;
     }
+
 
     /**
      * get 容器开始执行的时间。
@@ -172,6 +178,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 容器被终止的信号。
      *
@@ -181,6 +188,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
         this.signal = signal;
         return this;
     }
+
 
     /**
      * set 容器被终止的退出码。
@@ -192,6 +200,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set （简要）容器被终止的原因。
      *
@@ -201,6 +210,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
         this.reason = reason;
         return this;
     }
+
 
     /**
      * set 容器被终止的详细信息。
@@ -212,6 +222,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器被终止的时间。
      *
@@ -221,6 +232,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
         this.finishedAt = finishedAt;
         return this;
     }
+
 
     /**
      * set 容器开始执行的时间。

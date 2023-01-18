@@ -40,6 +40,7 @@ public class CreateSecretResult extends JdcloudResult implements java.io.Seriali
     private String secretName;
 
 
+
     /**
      * get secretName
      *
@@ -57,6 +58,7 @@ public class CreateSecretResult extends JdcloudResult implements java.io.Seriali
     public void setSecretName(String secretName) {
         this.secretName = secretName;
     }
+
 
 
     /**

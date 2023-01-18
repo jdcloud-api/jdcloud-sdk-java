@@ -50,6 +50,7 @@ public class DescribeConfigFileRequest extends JdcloudRequest implements java.io
     private String name;
 
 
+
     /**
      * get Region ID
      *
@@ -67,6 +68,7 @@ public class DescribeConfigFileRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Name
@@ -87,6 +89,7 @@ public class DescribeConfigFileRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set Region ID
      *
@@ -96,6 +99,7 @@ public class DescribeConfigFileRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Name

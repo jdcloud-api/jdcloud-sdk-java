@@ -57,6 +57,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
     private String containerId;
 
 
+
     /**
      * get 弹性IP ID
      *
@@ -75,6 +76,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
         this.elasticIpId = elasticIpId;
     }
 
+
     /**
      * get Region ID
      *
@@ -92,6 +94,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Container ID
@@ -112,6 +115,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 弹性IP ID
      *
@@ -122,6 +126,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -131,6 +136,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Container ID

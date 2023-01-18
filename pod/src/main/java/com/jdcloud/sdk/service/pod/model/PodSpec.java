@@ -90,20 +90,20 @@ public class PodSpec  implements java.io.Serializable {
     /**
      * 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
      */
+    
     private List<HostAliasSpec> hostAliases;
-
     /**
      * Pod的volume列表，可以挂载到container上。长度范围：[0,7]
      */
+    
     private List<VolumeSpec> volumes;
-
     /**
      * Pod的容器列表，至少一个容器。长度范围[1,8]
      * Required:true
      */
     @Required
+    
     private List<ContainerSpec> containers;
-
     /**
      * 计费模式：包年包月预付费（prepaid_by_duration）, 按配置后付费（postpaid_by_duration）。默认：按配置后付费
      */
@@ -124,7 +124,13 @@ public class PodSpec  implements java.io.Serializable {
     /**
      * 用户普通标签集合
      */
+    
     private List<Tag> userTags;
+    /**
+     * 资源组ID
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -145,6 +151,7 @@ public class PodSpec  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 描述信息，默认为空；允许输入UTF-8编码下的全部字符，不超过256字符。
      *
@@ -162,6 +169,7 @@ public class PodSpec  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 主机名；符合hostname规范，默认值为 podId
@@ -181,6 +189,7 @@ public class PodSpec  implements java.io.Serializable {
         this.hostname = hostname;
     }
 
+
     /**
      * get pod中容器重启策略；Always, OnFailure, Never；默认：Always
      *
@@ -198,6 +207,7 @@ public class PodSpec  implements java.io.Serializable {
     public void setRestartPolicy(String restartPolicy) {
         this.restartPolicy = restartPolicy;
     }
+
 
     /**
      * get 优雅关机宽限时长，如果超时，则触发强制关机。默认：30s，值不能是负数，范围：[0-300]
@@ -217,6 +227,7 @@ public class PodSpec  implements java.io.Serializable {
         this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
     }
 
+
     /**
      * get 实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)
      *
@@ -234,6 +245,7 @@ public class PodSpec  implements java.io.Serializable {
     public void setInstanceType(String instanceType) {
         this.instanceType = instanceType;
     }
+
 
     /**
      * get Pod所属可用区，指定agId时非必传&lt;br&gt; Pod、已有云盘的az必须相同，且包含在AG中
@@ -253,6 +265,7 @@ public class PodSpec  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
      * get pod内容器的/etc/resolv.conf配置
      *
@@ -270,6 +283,7 @@ public class PodSpec  implements java.io.Serializable {
     public void setDnsConfig(DnsConfigSpec dnsConfig) {
         this.dnsConfig = dnsConfig;
     }
+
 
     /**
      * get 容器日志配置信息；默认会在本地分配10MB的存储空间
@@ -289,59 +303,63 @@ public class PodSpec  implements java.io.Serializable {
         this.logConfig = logConfig;
     }
 
+
     /**
-     * get 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
-     *
-     * @return
-     */
+    * get 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+    *
+    * @return
+    */
     public List<HostAliasSpec> getHostAliases() {
         return hostAliases;
     }
 
     /**
-     * set 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
-     *
-     * @param hostAliases
-     */
+    * set 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+    *
+    * @param hostAliases
+    */
     public void setHostAliases(List<HostAliasSpec> hostAliases) {
         this.hostAliases = hostAliases;
     }
 
+
     /**
-     * get Pod的volume列表，可以挂载到container上。长度范围：[0,7]
-     *
-     * @return
-     */
+    * get Pod的volume列表，可以挂载到container上。长度范围：[0,7]
+    *
+    * @return
+    */
     public List<VolumeSpec> getVolumes() {
         return volumes;
     }
 
     /**
-     * set Pod的volume列表，可以挂载到container上。长度范围：[0,7]
-     *
-     * @param volumes
-     */
+    * set Pod的volume列表，可以挂载到container上。长度范围：[0,7]
+    *
+    * @param volumes
+    */
     public void setVolumes(List<VolumeSpec> volumes) {
         this.volumes = volumes;
     }
 
+
     /**
-     * get Pod的容器列表，至少一个容器。长度范围[1,8]
-     *
-     * @return
-     */
+    * get Pod的容器列表，至少一个容器。长度范围[1,8]
+    *
+    * @return
+    */
     public List<ContainerSpec> getContainers() {
         return containers;
     }
 
     /**
-     * set Pod的容器列表，至少一个容器。长度范围[1,8]
-     *
-     * @param containers
-     */
+    * set Pod的容器列表，至少一个容器。长度范围[1,8]
+    *
+    * @param containers
+    */
     public void setContainers(List<ContainerSpec> containers) {
         this.containers = containers;
     }
+
 
     /**
      * get 计费模式：包年包月预付费（prepaid_by_duration）, 按配置后付费（postpaid_by_duration）。默认：按配置后付费
@@ -361,6 +379,7 @@ public class PodSpec  implements java.io.Serializable {
         this.charge = charge;
     }
 
+
     /**
      * get 主网卡主IP关联的弹性IP规格
      *
@@ -378,6 +397,7 @@ public class PodSpec  implements java.io.Serializable {
     public void setElasticIp(ElasticIpSpec elasticIp) {
         this.elasticIp = elasticIp;
     }
+
 
     /**
      * get 主网卡配置信息
@@ -397,23 +417,44 @@ public class PodSpec  implements java.io.Serializable {
         this.primaryNetworkInterface = primaryNetworkInterface;
     }
 
+
     /**
-     * get 用户普通标签集合
-     *
-     * @return
-     */
+    * get 用户普通标签集合
+    *
+    * @return
+    */
     public List<Tag> getUserTags() {
         return userTags;
     }
 
     /**
-     * set 用户普通标签集合
-     *
-     * @param userTags
-     */
+    * set 用户普通标签集合
+    *
+    * @param userTags
+    */
     public void setUserTags(List<Tag> userTags) {
         this.userTags = userTags;
     }
+
+
+    /**
+     * get 资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
 
 
     /**
@@ -426,6 +467,7 @@ public class PodSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述信息，默认为空；允许输入UTF-8编码下的全部字符，不超过256字符。
      *
@@ -435,6 +477,7 @@ public class PodSpec  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 主机名；符合hostname规范，默认值为 podId
@@ -446,6 +489,7 @@ public class PodSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pod中容器重启策略；Always, OnFailure, Never；默认：Always
      *
@@ -455,6 +499,7 @@ public class PodSpec  implements java.io.Serializable {
         this.restartPolicy = restartPolicy;
         return this;
     }
+
 
     /**
      * set 优雅关机宽限时长，如果超时，则触发强制关机。默认：30s，值不能是负数，范围：[0-300]
@@ -466,6 +511,7 @@ public class PodSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)
      *
@@ -475,6 +521,7 @@ public class PodSpec  implements java.io.Serializable {
         this.instanceType = instanceType;
         return this;
     }
+
 
     /**
      * set Pod所属可用区，指定agId时非必传&lt;br&gt; Pod、已有云盘的az必须相同，且包含在AG中
@@ -486,6 +533,7 @@ public class PodSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pod内容器的/etc/resolv.conf配置
      *
@@ -495,6 +543,7 @@ public class PodSpec  implements java.io.Serializable {
         this.dnsConfig = dnsConfig;
         return this;
     }
+
 
     /**
      * set 容器日志配置信息；默认会在本地分配10MB的存储空间
@@ -506,35 +555,39 @@ public class PodSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
-     *
-     * @param hostAliases
-     */
+    * set 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+    *
+    * @param hostAliases
+    */
     public PodSpec hostAliases(List<HostAliasSpec> hostAliases) {
         this.hostAliases = hostAliases;
         return this;
     }
 
+
     /**
-     * set Pod的volume列表，可以挂载到container上。长度范围：[0,7]
-     *
-     * @param volumes
-     */
+    * set Pod的volume列表，可以挂载到container上。长度范围：[0,7]
+    *
+    * @param volumes
+    */
     public PodSpec volumes(List<VolumeSpec> volumes) {
         this.volumes = volumes;
         return this;
     }
 
+
     /**
-     * set Pod的容器列表，至少一个容器。长度范围[1,8]
-     *
-     * @param containers
-     */
+    * set Pod的容器列表，至少一个容器。长度范围[1,8]
+    *
+    * @param containers
+    */
     public PodSpec containers(List<ContainerSpec> containers) {
         this.containers = containers;
         return this;
     }
+
 
     /**
      * set 计费模式：包年包月预付费（prepaid_by_duration）, 按配置后付费（postpaid_by_duration）。默认：按配置后付费
@@ -546,6 +599,7 @@ public class PodSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡主IP关联的弹性IP规格
      *
@@ -555,6 +609,7 @@ public class PodSpec  implements java.io.Serializable {
         this.elasticIp = elasticIp;
         return this;
     }
+
 
     /**
      * set 主网卡配置信息
@@ -566,15 +621,28 @@ public class PodSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 用户普通标签集合
-     *
-     * @param userTags
-     */
+    * set 用户普通标签集合
+    *
+    * @param userTags
+    */
     public PodSpec userTags(List<Tag> userTags) {
         this.userTags = userTags;
         return this;
     }
+
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public PodSpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
 
 
     /**
@@ -624,5 +692,4 @@ public class PodSpec  implements java.io.Serializable {
         }
         this.userTags.add(userTag);
     }
-
 }
