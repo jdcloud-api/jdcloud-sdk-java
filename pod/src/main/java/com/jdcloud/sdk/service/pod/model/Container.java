@@ -42,18 +42,18 @@ public class Container  implements java.io.Serializable {
     /**
      * 容器执行的命令。
      */
+    
     private List<String> command;
-
     /**
      * 容器执行命令的参数。
      */
+    
     private List<String> args;
-
     /**
      * 容器执行的环境变量。
      */
+    
     private List<Env> env;
-
     /**
      * 容器镜像名称。
      */
@@ -97,12 +97,13 @@ public class Container  implements java.io.Serializable {
     /**
      * 容器计算资源配置
      */
+    
     private List<VolumeMount> volumeMounts;
-
     /**
      * 容器状态信息
      */
     private ContainerStatus containerStatus;
+
 
 
     /**
@@ -123,59 +124,63 @@ public class Container  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
-     * get 容器执行的命令。
-     *
-     * @return
-     */
+    * get 容器执行的命令。
+    *
+    * @return
+    */
     public List<String> getCommand() {
         return command;
     }
 
     /**
-     * set 容器执行的命令。
-     *
-     * @param command
-     */
+    * set 容器执行的命令。
+    *
+    * @param command
+    */
     public void setCommand(List<String> command) {
         this.command = command;
     }
 
+
     /**
-     * get 容器执行命令的参数。
-     *
-     * @return
-     */
+    * get 容器执行命令的参数。
+    *
+    * @return
+    */
     public List<String> getArgs() {
         return args;
     }
 
     /**
-     * set 容器执行命令的参数。
-     *
-     * @param args
-     */
+    * set 容器执行命令的参数。
+    *
+    * @param args
+    */
     public void setArgs(List<String> args) {
         this.args = args;
     }
 
+
     /**
-     * get 容器执行的环境变量。
-     *
-     * @return
-     */
+    * get 容器执行的环境变量。
+    *
+    * @return
+    */
     public List<Env> getEnv() {
         return env;
     }
 
     /**
-     * set 容器执行的环境变量。
-     *
-     * @param env
-     */
+    * set 容器执行的环境变量。
+    *
+    * @param env
+    */
     public void setEnv(List<Env> env) {
         this.env = env;
     }
+
 
     /**
      * get 容器镜像名称。
@@ -195,6 +200,7 @@ public class Container  implements java.io.Serializable {
         this.image = image;
     }
 
+
     /**
      * get 容器镜像仓库认证信息。
      *
@@ -212,6 +218,7 @@ public class Container  implements java.io.Serializable {
     public void setSecret(String secret) {
         this.secret = secret;
     }
+
 
     /**
      * get 容器是否分配tty。
@@ -231,6 +238,7 @@ public class Container  implements java.io.Serializable {
         this.tty = tty;
     }
 
+
     /**
      * get 容器的工作目录。
      *
@@ -248,6 +256,7 @@ public class Container  implements java.io.Serializable {
     public void setWorkingDir(String workingDir) {
         this.workingDir = workingDir;
     }
+
 
     /**
      * get 容器存活探针配置
@@ -267,6 +276,7 @@ public class Container  implements java.io.Serializable {
         this.livenessProbe = livenessProbe;
     }
 
+
     /**
      * get 容器服务就绪探针配置
      *
@@ -284,6 +294,7 @@ public class Container  implements java.io.Serializable {
     public void setReadinessProbe(Probe readinessProbe) {
         this.readinessProbe = readinessProbe;
     }
+
 
     /**
      * get 容器计算资源配置
@@ -303,6 +314,7 @@ public class Container  implements java.io.Serializable {
         this.resources = resources;
     }
 
+
     /**
      * get 容器计算资源配置
      *
@@ -321,23 +333,25 @@ public class Container  implements java.io.Serializable {
         this.systemDisk = systemDisk;
     }
 
+
     /**
-     * get 容器计算资源配置
-     *
-     * @return
-     */
+    * get 容器计算资源配置
+    *
+    * @return
+    */
     public List<VolumeMount> getVolumeMounts() {
         return volumeMounts;
     }
 
     /**
-     * set 容器计算资源配置
-     *
-     * @param volumeMounts
-     */
+    * set 容器计算资源配置
+    *
+    * @param volumeMounts
+    */
     public void setVolumeMounts(List<VolumeMount> volumeMounts) {
         this.volumeMounts = volumeMounts;
     }
+
 
     /**
      * get 容器状态信息
@@ -358,6 +372,7 @@ public class Container  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 容器名称
      *
@@ -368,35 +383,39 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 容器执行的命令。
-     *
-     * @param command
-     */
+    * set 容器执行的命令。
+    *
+    * @param command
+    */
     public Container command(List<String> command) {
         this.command = command;
         return this;
     }
 
+
     /**
-     * set 容器执行命令的参数。
-     *
-     * @param args
-     */
+    * set 容器执行命令的参数。
+    *
+    * @param args
+    */
     public Container args(List<String> args) {
         this.args = args;
         return this;
     }
 
+
     /**
-     * set 容器执行的环境变量。
-     *
-     * @param env
-     */
+    * set 容器执行的环境变量。
+    *
+    * @param env
+    */
     public Container env(List<Env> env) {
         this.env = env;
         return this;
     }
+
 
     /**
      * set 容器镜像名称。
@@ -408,6 +427,7 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器镜像仓库认证信息。
      *
@@ -417,6 +437,7 @@ public class Container  implements java.io.Serializable {
         this.secret = secret;
         return this;
     }
+
 
     /**
      * set 容器是否分配tty。
@@ -428,6 +449,7 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器的工作目录。
      *
@@ -437,6 +459,7 @@ public class Container  implements java.io.Serializable {
         this.workingDir = workingDir;
         return this;
     }
+
 
     /**
      * set 容器存活探针配置
@@ -448,6 +471,7 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器服务就绪探针配置
      *
@@ -457,6 +481,7 @@ public class Container  implements java.io.Serializable {
         this.readinessProbe = readinessProbe;
         return this;
     }
+
 
     /**
      * set 容器计算资源配置
@@ -468,6 +493,7 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器计算资源配置
      *
@@ -478,15 +504,17 @@ public class Container  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 容器计算资源配置
-     *
-     * @param volumeMounts
-     */
+    * set 容器计算资源配置
+    *
+    * @param volumeMounts
+    */
     public Container volumeMounts(List<VolumeMount> volumeMounts) {
         this.volumeMounts = volumeMounts;
         return this;
     }
+
 
     /**
      * set 容器状态信息
@@ -497,6 +525,7 @@ public class Container  implements java.io.Serializable {
         this.containerStatus = containerStatus;
         return this;
     }
+
 
 
     /**
@@ -546,5 +575,4 @@ public class Container  implements java.io.Serializable {
         }
         this.volumeMounts.add(volumeMount);
     }
-
 }

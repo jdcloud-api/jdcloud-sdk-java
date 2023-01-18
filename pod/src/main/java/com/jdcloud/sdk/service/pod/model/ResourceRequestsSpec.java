@@ -45,6 +45,7 @@ public class ResourceRequestsSpec  implements java.io.Serializable {
     private RequestSpec limits;
 
 
+
     /**
      * get 容器必需的计算资源
      *
@@ -62,6 +63,7 @@ public class ResourceRequestsSpec  implements java.io.Serializable {
     public void setRequests(RequestSpec requests) {
         this.requests = requests;
     }
+
 
     /**
      * get 容器使用计算资源上限
@@ -82,6 +84,7 @@ public class ResourceRequestsSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 容器必需的计算资源
      *
@@ -91,6 +94,7 @@ public class ResourceRequestsSpec  implements java.io.Serializable {
         this.requests = requests;
         return this;
     }
+
 
     /**
      * set 容器使用计算资源上限

@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>pod</artifactId>
-  <version>2.3.3</version>
+  <version>2.3.4</version>
   <packaging>jar</packaging>
   <name>pod</name>
   <url>http://www.jdcloud.com</url>
@@ -59,12 +59,12 @@
     <dependency>
       <groupId>com.jdcloud.sdk</groupId>
       <artifactId>charge</artifactId>
-      <version>0.4.0</version>
+      <version>0.4.1</version>
     </dependency>
     <dependency>
       <groupId>com.jdcloud.sdk</groupId>
       <artifactId>vpc</artifactId>
-      <version>1.0.1</version>
+      <version>1.1.0</version>
     </dependency>
   </dependencies>
 

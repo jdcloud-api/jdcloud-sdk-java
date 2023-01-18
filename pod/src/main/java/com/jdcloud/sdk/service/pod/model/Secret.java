@@ -53,6 +53,7 @@ public class Secret  implements java.io.Serializable {
     private DockerRegistryData data;
 
 
+
     /**
      * get 镜像仓库认证信息名称
      *
@@ -70,6 +71,7 @@ public class Secret  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 镜像仓库认证信息类型
@@ -89,6 +91,7 @@ public class Secret  implements java.io.Serializable {
         this.type = type;
     }
 
+
     /**
      * get 镜像仓库认证信息创建时间
      *
@@ -106,6 +109,7 @@ public class Secret  implements java.io.Serializable {
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
+
 
     /**
      * get 镜像仓库认证信息数据
@@ -126,6 +130,7 @@ public class Secret  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 镜像仓库认证信息名称
      *
@@ -135,6 +140,7 @@ public class Secret  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 镜像仓库认证信息类型
@@ -146,6 +152,7 @@ public class Secret  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像仓库认证信息创建时间
      *
@@ -155,6 +162,7 @@ public class Secret  implements java.io.Serializable {
         this.createdAt = createdAt;
         return this;
     }
+
 
     /**
      * set 镜像仓库认证信息数据

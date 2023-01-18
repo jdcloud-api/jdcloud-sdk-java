@@ -43,6 +43,7 @@ public class Request  implements java.io.Serializable {
     private String memoryMB;
 
 
+
     /**
      * get 容器必需的计算资源
      *
@@ -60,6 +61,7 @@ public class Request  implements java.io.Serializable {
     public void setCpu(String cpu) {
         this.cpu = cpu;
     }
+
 
     /**
      * get 容器使用计算资源上限
@@ -80,6 +82,7 @@ public class Request  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 容器必需的计算资源
      *
@@ -89,6 +92,7 @@ public class Request  implements java.io.Serializable {
         this.cpu = cpu;
         return this;
     }
+
 
     /**
      * set 容器使用计算资源上限

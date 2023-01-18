@@ -39,6 +39,7 @@ public class ExecGetExitCodeResult extends JdcloudResult implements java.io.Seri
     private Integer execCode;
 
 
+
     /**
      * get exec命令执行的退出码
      *
@@ -56,6 +57,7 @@ public class ExecGetExitCodeResult extends JdcloudResult implements java.io.Seri
     public void setExecCode(Integer execCode) {
         this.execCode = execCode;
     }
+
 
 
     /**

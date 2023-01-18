@@ -41,6 +41,7 @@ public class TcpSocketSpec  implements java.io.Serializable {
     private Integer port;
 
 
+
     /**
      * get 端口号，范围：[1-65535]
      *
@@ -58,6 +59,7 @@ public class TcpSocketSpec  implements java.io.Serializable {
     public void setPort(Integer port) {
         this.port = port;
     }
+
 
 
     /**

@@ -38,6 +38,7 @@ public class LogConfigSpec  implements java.io.Serializable {
     private String logDriver;
 
 
+
     /**
      * get 日志Driver名称，目前只支持默认为每一个容器在本地分配10MB的存储空间，自动rotate。目前仅支持default。默认值：default。
      *
@@ -55,6 +56,7 @@ public class LogConfigSpec  implements java.io.Serializable {
     public void setLogDriver(String logDriver) {
         this.logDriver = logDriver;
     }
+
 
 
     /**

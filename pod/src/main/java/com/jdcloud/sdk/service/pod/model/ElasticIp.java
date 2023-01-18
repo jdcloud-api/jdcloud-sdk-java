@@ -43,6 +43,7 @@ public class ElasticIp  implements java.io.Serializable {
     private String elasticIpAddress;
 
 
+
     /**
      * get 弹性ip的Id
      *
@@ -60,6 +61,7 @@ public class ElasticIp  implements java.io.Serializable {
     public void setElasticIpId(String elasticIpId) {
         this.elasticIpId = elasticIpId;
     }
+
 
     /**
      * get 弹性ip地址
@@ -80,6 +82,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 弹性ip的Id
      *
@@ -89,6 +92,7 @@ public class ElasticIp  implements java.io.Serializable {
         this.elasticIpId = elasticIpId;
         return this;
     }
+
 
     /**
      * set 弹性ip地址

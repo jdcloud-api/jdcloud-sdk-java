@@ -58,6 +58,7 @@ public class VolumeSpec  implements java.io.Serializable {
     private ConfigFileVolumeSourceSpec configFile;
 
 
+
     /**
      * get volume名字，符合DNS-1123 label规范，在一个Pod内唯一。
      *
@@ -75,6 +76,7 @@ public class VolumeSpec  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 提供给Pod的cloud disk.
@@ -94,6 +96,7 @@ public class VolumeSpec  implements java.io.Serializable {
         this.jdcloudDisk = jdcloudDisk;
     }
 
+
     /**
      * get 提供给Pod的CFS.
      *
@@ -111,6 +114,7 @@ public class VolumeSpec  implements java.io.Serializable {
     public void setCfs(CFSVolumeSourceSpec cfs) {
         this.cfs = cfs;
     }
+
 
     /**
      * get 提供给Pod的ConfigFile.
@@ -131,6 +135,7 @@ public class VolumeSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set volume名字，符合DNS-1123 label规范，在一个Pod内唯一。
      *
@@ -140,6 +145,7 @@ public class VolumeSpec  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 提供给Pod的cloud disk.
@@ -151,6 +157,7 @@ public class VolumeSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 提供给Pod的CFS.
      *
@@ -160,6 +167,7 @@ public class VolumeSpec  implements java.io.Serializable {
         this.cfs = cfs;
         return this;
     }
+
 
     /**
      * set 提供给Pod的ConfigFile.

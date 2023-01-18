@@ -42,6 +42,7 @@ public class ConfigFile  implements java.io.Serializable {
     /**
      * configFile数据
      */
+    
     private List<ConfigFileData> data;
 
 
@@ -63,23 +64,25 @@ public class ConfigFile  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
-     * get configFile数据
-     *
-     * @return
-     */
+    * get configFile数据
+    *
+    * @return
+    */
     public List<ConfigFileData> getData() {
         return data;
     }
 
     /**
-     * set configFile数据
-     *
-     * @param data
-     */
+    * set configFile数据
+    *
+    * @param data
+    */
     public void setData(List<ConfigFileData> data) {
         this.data = data;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class ConfigFile  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set configFile数据
-     *
-     * @param data
-     */
+    * set configFile数据
+    *
+    * @param data
+    */
     public ConfigFile data(List<ConfigFileData> data) {
         this.data = data;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class ConfigFile  implements java.io.Serializable {
         }
         this.data.add(data);
     }
-
 }

@@ -45,6 +45,7 @@ eg ContainerCreating
     private String message;
 
 
+
     /**
      * get （简要）容器还没有运行原因。&lt;br&gt;
 eg ContainerCreating     
@@ -67,6 +68,7 @@ eg ContainerCreating
         this.reason = reason;
     }
 
+
     /**
      * get 容器还没有运行的详细信息。
      *
@@ -86,6 +88,7 @@ eg ContainerCreating
     }
 
 
+
     /**
      * set （简要）容器还没有运行原因。&lt;br&gt;
 eg ContainerCreating     
@@ -97,6 +100,7 @@ eg ContainerCreating
         this.reason = reason;
         return this;
     }
+
 
     /**
      * set 容器还没有运行的详细信息。

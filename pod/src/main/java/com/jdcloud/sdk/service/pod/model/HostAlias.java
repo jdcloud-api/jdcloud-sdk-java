@@ -38,33 +38,35 @@ public class HostAlias  implements java.io.Serializable {
      * 域名列表。
 
      */
+    
     private List<String> hostnames;
-
     /**
      * ipv4地址。
      */
     private String ip;
 
 
-    /**
-     * get 域名列表。
 
-     *
-     * @return
-     */
+    /**
+    * get 域名列表。
+
+    *
+    * @return
+    */
     public List<String> getHostnames() {
         return hostnames;
     }
 
     /**
-     * set 域名列表。
+    * set 域名列表。
 
-     *
-     * @param hostnames
-     */
+    *
+    * @param hostnames
+    */
     public void setHostnames(List<String> hostnames) {
         this.hostnames = hostnames;
     }
+
 
     /**
      * get ipv4地址。
@@ -85,16 +87,18 @@ public class HostAlias  implements java.io.Serializable {
     }
 
 
-    /**
-     * set 域名列表。
 
-     *
-     * @param hostnames
-     */
+    /**
+    * set 域名列表。
+
+    *
+    * @param hostnames
+    */
     public HostAlias hostnames(List<String> hostnames) {
         this.hostnames = hostnames;
         return this;
     }
+
 
     /**
      * set ipv4地址。
@@ -105,6 +109,7 @@ public class HostAlias  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
 
     /**
@@ -119,5 +124,4 @@ public class HostAlias  implements java.io.Serializable {
         }
         this.hostnames.add(hostname);
     }
-
 }

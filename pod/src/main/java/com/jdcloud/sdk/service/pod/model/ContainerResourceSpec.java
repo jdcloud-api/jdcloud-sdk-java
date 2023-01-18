@@ -52,6 +52,7 @@ public class ContainerResourceSpec  implements java.io.Serializable {
     private ResourceRequestsSpec resources;
 
 
+
     /**
      * get 容器名称
      *
@@ -69,6 +70,7 @@ public class ContainerResourceSpec  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 容器计算资源配置
@@ -89,6 +91,7 @@ public class ContainerResourceSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 容器名称
      *
@@ -98,6 +101,7 @@ public class ContainerResourceSpec  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 容器计算资源配置

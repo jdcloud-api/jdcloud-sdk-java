@@ -38,6 +38,7 @@ public class Logs  implements java.io.Serializable {
     private String content;
 
 
+
     /**
      * get 容器日志内容，最多返回4KB
      *
@@ -55,6 +56,7 @@ public class Logs  implements java.io.Serializable {
     public void setContent(String content) {
         this.content = content;
     }
+
 
 
     /**

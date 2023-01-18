@@ -41,31 +41,33 @@ public class DescribePodsResult extends JdcloudResult implements java.io.Seriali
     /**
      * pods
      */
+    
     private List<Pod> pods;
-
     /**
      * totalCount
      */
     private Number totalCount;
 
 
+
     /**
-     * get pods
-     *
-     * @return
-     */
+    * get pods
+    *
+    * @return
+    */
     public List<Pod> getPods() {
         return pods;
     }
 
     /**
-     * set pods
-     *
-     * @param pods
-     */
+    * set pods
+    *
+    * @param pods
+    */
     public void setPods(List<Pod> pods) {
         this.pods = pods;
     }
+
 
     /**
      * get totalCount
@@ -86,15 +88,17 @@ public class DescribePodsResult extends JdcloudResult implements java.io.Seriali
     }
 
 
+
     /**
-     * set pods
-     *
-     * @param pods
-     */
+    * set pods
+    *
+    * @param pods
+    */
     public DescribePodsResult pods(List<Pod> pods) {
         this.pods = pods;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -105,6 +109,7 @@ public class DescribePodsResult extends JdcloudResult implements java.io.Seriali
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class DescribePodsResult extends JdcloudResult implements java.io.Seriali
         }
         this.pods.add(pod);
     }
-
 }

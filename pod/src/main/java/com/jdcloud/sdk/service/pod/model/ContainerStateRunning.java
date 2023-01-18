@@ -38,6 +38,7 @@ public class ContainerStateRunning  implements java.io.Serializable {
     private String startedAt;
 
 
+
     /**
      * get 容器最后一次重启或启动的时间。
      *
@@ -55,6 +56,7 @@ public class ContainerStateRunning  implements java.io.Serializable {
     public void setStartedAt(String startedAt) {
         this.startedAt = startedAt;
     }
+
 
 
     /**

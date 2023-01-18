@@ -78,6 +78,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
     private Boolean autoDelete;
 
 
+
     /**
      * get 磁盘类型，cloud 云盘，local 本地盘（需工单申请）
      *
@@ -95,6 +96,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
     public void setCategory(String category) {
         this.category = category;
     }
+
 
     /**
      * get 云盘ID，指定使用已有云盘
@@ -114,6 +116,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
         this.volumeId = volumeId;
     }
 
+
     /**
      * get 云盘名称
      *
@@ -131,6 +134,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 云盘快照ID，根据云盘快照创建云盘。
@@ -150,6 +154,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
         this.snapshotId = snapshotId;
     }
 
+
     /**
      * get 云盘类型：hdd.std1,ssd.gp1,ssd.io1
      *
@@ -167,6 +172,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
     public void setDiskType(String diskType) {
         this.diskType = diskType;
     }
+
 
     /**
      * get 云盘size,单位 GB,要求
@@ -186,6 +192,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
         this.sizeGB = sizeGB;
     }
 
+
     /**
      * get 指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs
      *
@@ -204,6 +211,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
         this.fsType = fsType;
     }
 
+
     /**
      * get 云盘的 iops 值，目前只有 ssd.io1 类型有效
      *
@@ -221,6 +229,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
     public void setIops(Integer iops) {
         this.iops = iops;
     }
+
 
     /**
      * get 是否随pod删除。默认：true
@@ -241,6 +250,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 磁盘类型，cloud 云盘，local 本地盘（需工单申请）
      *
@@ -250,6 +260,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
         this.category = category;
         return this;
     }
+
 
     /**
      * set 云盘ID，指定使用已有云盘
@@ -261,6 +272,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云盘名称
      *
@@ -270,6 +282,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 云盘快照ID，根据云盘快照创建云盘。
@@ -281,6 +294,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云盘类型：hdd.std1,ssd.gp1,ssd.io1
      *
@@ -290,6 +304,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
         this.diskType = diskType;
         return this;
     }
+
 
     /**
      * set 云盘size,单位 GB,要求
@@ -301,6 +316,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs
      *
@@ -311,6 +327,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云盘的 iops 值，目前只有 ssd.io1 类型有效
      *
@@ -320,6 +337,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
         this.iops = iops;
         return this;
     }
+
 
     /**
      * set 是否随pod删除。默认：true

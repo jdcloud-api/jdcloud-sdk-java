@@ -37,37 +37,40 @@ public class Exec  implements java.io.Serializable {
     /**
      * 执行的命令。
      */
+    
     private List<String> command;
 
 
     /**
-     * get 执行的命令。
-     *
-     * @return
-     */
+    * get 执行的命令。
+    *
+    * @return
+    */
     public List<String> getCommand() {
         return command;
     }
 
     /**
-     * set 执行的命令。
-     *
-     * @param command
-     */
+    * set 执行的命令。
+    *
+    * @param command
+    */
     public void setCommand(List<String> command) {
         this.command = command;
     }
 
 
+
     /**
-     * set 执行的命令。
-     *
-     * @param command
-     */
+    * set 执行的命令。
+    *
+    * @param command
+    */
     public Exec command(List<String> command) {
         this.command = command;
         return this;
     }
+
 
 
     /**
@@ -81,5 +84,4 @@ public class Exec  implements java.io.Serializable {
         }
         this.command.add(command);
     }
-
 }

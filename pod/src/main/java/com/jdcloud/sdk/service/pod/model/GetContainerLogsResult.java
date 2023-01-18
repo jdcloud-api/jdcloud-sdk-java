@@ -41,6 +41,7 @@ public class GetContainerLogsResult extends JdcloudResult implements java.io.Ser
     private Logs logs;
 
 
+
     /**
      * get logs
      *
@@ -58,6 +59,7 @@ public class GetContainerLogsResult extends JdcloudResult implements java.io.Ser
     public void setLogs(Logs logs) {
         this.logs = logs;
     }
+
 
 
     /**

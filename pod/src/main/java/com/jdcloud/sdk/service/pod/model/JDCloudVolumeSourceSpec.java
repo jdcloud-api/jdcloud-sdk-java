@@ -81,6 +81,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
     private Boolean autoDelete;
 
 
+
     /**
      * get 云盘id，使用已有云盘
      *
@@ -98,6 +99,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
     public void setVolumeId(String volumeId) {
         this.volumeId = volumeId;
     }
+
 
     /**
      * get 云盘名称
@@ -117,6 +119,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 云盘快照id，根据云盘快照创建云盘。
      *
@@ -134,6 +137,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
     public void setSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
     }
+
 
     /**
      * get 云盘类型：hdd.std1,ssd.gp1,ssd.io1
@@ -153,6 +157,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
         this.diskType = diskType;
     }
 
+
     /**
      * get 云盘size,单位 GB
      *
@@ -170,6 +175,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
     public void setSizeGB(Integer sizeGB) {
         this.sizeGB = sizeGB;
     }
+
 
     /**
      * get 指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs。
@@ -189,6 +195,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
         this.fsType = fsType;
     }
 
+
     /**
      * get 随容器自动创建的新盘，会自动格式化成指定的文件系统类型；挂载已有的盘，默认不会格式化，只会按照指定的fsType去挂载；如果希望格式化，必须设置此字段为true。
      *
@@ -207,6 +214,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
         this.formatVolume = formatVolume;
     }
 
+
     /**
      * get 云盘的 iops 值，目前只有 ssd.io1 类型有效。
      *
@@ -224,6 +232,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
     public void setIops(Integer iops) {
         this.iops = iops;
     }
+
 
     /**
      * get 是否随pod删除。默认：true
@@ -244,6 +253,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云盘id，使用已有云盘
      *
@@ -253,6 +263,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
         this.volumeId = volumeId;
         return this;
     }
+
 
     /**
      * set 云盘名称
@@ -264,6 +275,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云盘快照id，根据云盘快照创建云盘。
      *
@@ -273,6 +285,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
         this.snapshotId = snapshotId;
         return this;
     }
+
 
     /**
      * set 云盘类型：hdd.std1,ssd.gp1,ssd.io1
@@ -284,6 +297,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云盘size,单位 GB
      *
@@ -293,6 +307,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
         this.sizeGB = sizeGB;
         return this;
     }
+
 
     /**
      * set 指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs。
@@ -304,6 +319,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 随容器自动创建的新盘，会自动格式化成指定的文件系统类型；挂载已有的盘，默认不会格式化，只会按照指定的fsType去挂载；如果希望格式化，必须设置此字段为true。
      *
@@ -314,6 +330,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云盘的 iops 值，目前只有 ssd.io1 类型有效。
      *
@@ -323,6 +340,7 @@ public class JDCloudVolumeSourceSpec  implements java.io.Serializable {
         this.iops = iops;
         return this;
     }
+
 
     /**
      * set 是否随pod删除。默认：true

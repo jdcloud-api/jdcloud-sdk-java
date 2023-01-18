@@ -57,6 +57,7 @@ public class AttachRequest extends JdcloudRequest implements java.io.Serializabl
     private String containerName;
 
 
+
     /**
      * get Region ID
      *
@@ -75,6 +76,7 @@ public class AttachRequest extends JdcloudRequest implements java.io.Serializabl
         this.regionId = regionId;
     }
 
+
     /**
      * get Pod ID
      *
@@ -92,6 +94,7 @@ public class AttachRequest extends JdcloudRequest implements java.io.Serializabl
     public void setPodId(String podId) {
         this.podId = podId;
     }
+
 
     /**
      * get container name
@@ -112,6 +115,7 @@ public class AttachRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
 
+
     /**
      * set Region ID
      *
@@ -122,6 +126,7 @@ public class AttachRequest extends JdcloudRequest implements java.io.Serializabl
         return this;
     }
 
+
     /**
      * set Pod ID
      *
@@ -131,6 +136,7 @@ public class AttachRequest extends JdcloudRequest implements java.io.Serializabl
         this.podId = podId;
         return this;
     }
+
 
     /**
      * set container name

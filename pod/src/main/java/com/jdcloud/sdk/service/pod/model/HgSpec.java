@@ -62,6 +62,7 @@ public class HgSpec  implements java.io.Serializable {
     /**
      * 自定义Http headers
      */
+    
     private List<HhSpec> httpHeader;
 
 
@@ -83,6 +84,7 @@ public class HgSpec  implements java.io.Serializable {
         this.scheme = scheme;
     }
 
+
     /**
      * get 连接到pod的host信息，默认使用pod_ip，满足hostname或者ipv4格式. 长度范围:[0-253]
      *
@@ -100,6 +102,7 @@ public class HgSpec  implements java.io.Serializable {
     public void setHost(String host) {
         this.host = host;
     }
+
 
     /**
      * get 端口号。范围：[1-65535]
@@ -119,6 +122,7 @@ public class HgSpec  implements java.io.Serializable {
         this.port = port;
     }
 
+
     /**
      * get HTTP的路径。范围：[1-256]
      *
@@ -137,23 +141,25 @@ public class HgSpec  implements java.io.Serializable {
         this.path = path;
     }
 
+
     /**
-     * get 自定义Http headers
-     *
-     * @return
-     */
+    * get 自定义Http headers
+    *
+    * @return
+    */
     public List<HhSpec> getHttpHeader() {
         return httpHeader;
     }
 
     /**
-     * set 自定义Http headers
-     *
-     * @param httpHeader
-     */
+    * set 自定义Http headers
+    *
+    * @param httpHeader
+    */
     public void setHttpHeader(List<HhSpec> httpHeader) {
         this.httpHeader = httpHeader;
     }
+
 
 
     /**
@@ -166,6 +172,7 @@ public class HgSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 连接到pod的host信息，默认使用pod_ip，满足hostname或者ipv4格式. 长度范围:[0-253]
      *
@@ -175,6 +182,7 @@ public class HgSpec  implements java.io.Serializable {
         this.host = host;
         return this;
     }
+
 
     /**
      * set 端口号。范围：[1-65535]
@@ -186,6 +194,7 @@ public class HgSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set HTTP的路径。范围：[1-256]
      *
@@ -196,15 +205,17 @@ public class HgSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 自定义Http headers
-     *
-     * @param httpHeader
-     */
+    * set 自定义Http headers
+    *
+    * @param httpHeader
+    */
     public HgSpec httpHeader(List<HhSpec> httpHeader) {
         this.httpHeader = httpHeader;
         return this;
     }
+
 
 
     /**
@@ -218,5 +229,4 @@ public class HgSpec  implements java.io.Serializable {
         }
         this.httpHeader.add(httpHeader);
     }
-
 }

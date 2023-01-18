@@ -55,6 +55,7 @@ public class CheckPodNameRequest extends JdcloudRequest implements java.io.Seria
     private String regionId;
 
 
+
     /**
      * get 用户定义的 pod 名称，符合 DNS-1123 subdomain 规范。
      *
@@ -73,6 +74,7 @@ public class CheckPodNameRequest extends JdcloudRequest implements java.io.Seria
         this.podName = podName;
     }
 
+
     /**
      * get 需要创建的 pod 总数，默认创建一个，不同的总数会对校验结果产生影响。
      *
@@ -90,6 +92,7 @@ public class CheckPodNameRequest extends JdcloudRequest implements java.io.Seria
     public void setMaxCount(Integer maxCount) {
         this.maxCount = maxCount;
     }
+
 
     /**
      * get Region ID
@@ -110,6 +113,7 @@ public class CheckPodNameRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 用户定义的 pod 名称，符合 DNS-1123 subdomain 规范。
      *
@@ -120,6 +124,7 @@ public class CheckPodNameRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 需要创建的 pod 总数，默认创建一个，不同的总数会对校验结果产生影响。
      *
@@ -129,6 +134,7 @@ public class CheckPodNameRequest extends JdcloudRequest implements java.io.Seria
         this.maxCount = maxCount;
         return this;
     }
+
 
     /**
      * set Region ID

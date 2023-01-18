@@ -52,6 +52,7 @@ public class DeletePodRequest extends JdcloudRequest implements java.io.Serializ
     private String podId;
 
 
+
     /**
      * get Region ID
      *
@@ -69,6 +70,7 @@ public class DeletePodRequest extends JdcloudRequest implements java.io.Serializ
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Pod ID
@@ -89,6 +91,7 @@ public class DeletePodRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set Region ID
      *
@@ -98,6 +101,7 @@ public class DeletePodRequest extends JdcloudRequest implements java.io.Serializ
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Pod ID

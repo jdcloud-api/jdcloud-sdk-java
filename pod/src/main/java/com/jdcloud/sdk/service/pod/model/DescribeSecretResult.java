@@ -41,6 +41,7 @@ public class DescribeSecretResult extends JdcloudResult implements java.io.Seria
     private Secret secret;
 
 
+
     /**
      * get secret
      *
@@ -58,6 +59,7 @@ public class DescribeSecretResult extends JdcloudResult implements java.io.Seria
     public void setSecret(Secret secret) {
         this.secret = secret;
     }
+
 
 
     /**

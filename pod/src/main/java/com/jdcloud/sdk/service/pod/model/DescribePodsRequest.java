@@ -61,19 +61,20 @@ subnetId - 镜像ID，精确匹配，支持多个
 agId - 镜像ID，精确匹配，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * Tag筛选条件
      */
+    
     private List<TagFilter> tags;
-
     /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -94,6 +95,7 @@ agId - 镜像ID，精确匹配，支持多个
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认为20；取值范围[10, 100]
      *
@@ -112,8 +114,9 @@ agId - 镜像ID，精确匹配，支持多个
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get podId - pod ID，精确匹配，支持多个
+    * get podId - pod ID，精确匹配，支持多个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
@@ -122,15 +125,15 @@ name - 实例名称，模糊匹配，支持单个
 subnetId - 镜像ID，精确匹配，支持多个
 agId - 镜像ID，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set podId - pod ID，精确匹配，支持多个
+    * set podId - pod ID，精确匹配，支持多个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
@@ -139,30 +142,32 @@ name - 实例名称，模糊匹配，支持单个
 subnetId - 镜像ID，精确匹配，支持多个
 agId - 镜像ID，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
+
     /**
-     * get Tag筛选条件
-     *
-     * @return
-     */
+    * get Tag筛选条件
+    *
+    * @return
+    */
     public List<TagFilter> getTags() {
         return tags;
     }
 
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public void setTags(List<TagFilter> tags) {
         this.tags = tags;
     }
+
 
     /**
      * get Region ID
@@ -183,6 +188,7 @@ agId - 镜像ID，精确匹配，支持多个
     }
 
 
+
     /**
      * set 页码；默认为1
      *
@@ -192,6 +198,7 @@ agId - 镜像ID，精确匹配，支持多个
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；默认为20；取值范围[10, 100]
@@ -203,8 +210,9 @@ agId - 镜像ID，精确匹配，支持多个
         return this;
     }
 
+
     /**
-     * set podId - pod ID，精确匹配，支持多个
+    * set podId - pod ID，精确匹配，支持多个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
@@ -213,23 +221,25 @@ name - 实例名称，模糊匹配，支持单个
 subnetId - 镜像ID，精确匹配，支持多个
 agId - 镜像ID，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribePodsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public DescribePodsRequest tags(List<TagFilter> tags) {
         this.tags = tags;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -240,6 +250,7 @@ agId - 镜像ID，精确匹配，支持多个
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -273,5 +284,4 @@ agId - 镜像ID，精确匹配，支持多个
         }
         this.tags.add(tag);
     }
-
 }

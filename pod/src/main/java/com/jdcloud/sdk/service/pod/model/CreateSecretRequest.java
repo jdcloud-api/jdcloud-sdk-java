@@ -71,6 +71,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
     private String regionId;
 
 
+
     /**
      * get 机密数据名称，不能重复
 
@@ -91,6 +92,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
         this.name = name;
     }
 
+
     /**
      * get 机密数据的类型，目前仅支持：docker-registry 类型，用来和docker registry认证的类型。
 
@@ -110,6 +112,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
     public void setSecretType(String secretType) {
         this.secretType = secretType;
     }
+
 
     /**
      * get 机密的数据。&lt;br&gt;
@@ -137,6 +140,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
         this.data = data;
     }
 
+
     /**
      * get Region ID
      *
@@ -156,6 +160,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
     }
 
 
+
     /**
      * set 机密数据名称，不能重复
 
@@ -167,6 +172,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
         return this;
     }
 
+
     /**
      * set 机密数据的类型，目前仅支持：docker-registry 类型，用来和docker registry认证的类型。
 
@@ -177,6 +183,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
         this.secretType = secretType;
         return this;
     }
+
 
     /**
      * set 机密的数据。&lt;br&gt;
@@ -191,6 +198,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
         this.data = data;
         return this;
     }
+
 
     /**
      * set Region ID

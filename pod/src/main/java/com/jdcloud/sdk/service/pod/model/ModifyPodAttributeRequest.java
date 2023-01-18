@@ -55,6 +55,7 @@ public class ModifyPodAttributeRequest extends JdcloudRequest implements java.io
     private String podId;
 
 
+
     /**
      * get 修改后的描述
      *
@@ -73,6 +74,7 @@ public class ModifyPodAttributeRequest extends JdcloudRequest implements java.io
         this.description = description;
     }
 
+
     /**
      * get Region ID
      *
@@ -90,6 +92,7 @@ public class ModifyPodAttributeRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Pod ID
@@ -110,6 +113,7 @@ public class ModifyPodAttributeRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 修改后的描述
      *
@@ -120,6 +124,7 @@ public class ModifyPodAttributeRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -129,6 +134,7 @@ public class ModifyPodAttributeRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Pod ID

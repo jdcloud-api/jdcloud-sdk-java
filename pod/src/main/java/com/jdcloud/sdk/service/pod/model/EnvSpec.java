@@ -46,6 +46,7 @@ public class EnvSpec  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
      *
@@ -63,6 +64,7 @@ public class EnvSpec  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 环境变量取值。范围：[0-1024]
@@ -83,6 +85,7 @@ public class EnvSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
      *
@@ -92,6 +95,7 @@ public class EnvSpec  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 环境变量取值。范围：[0-1024]

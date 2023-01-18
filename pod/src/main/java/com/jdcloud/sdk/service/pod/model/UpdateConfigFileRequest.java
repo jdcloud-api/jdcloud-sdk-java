@@ -52,14 +52,15 @@ public class UpdateConfigFileRequest extends JdcloudRequest implements java.io.S
      * Required:true
      */
     @Required
+    
     private List<ConfigFileData> data;
-
     /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -82,25 +83,27 @@ public class UpdateConfigFileRequest extends JdcloudRequest implements java.io.S
         this.name = name;
     }
 
-    /**
-     * get configFile数据，个数不超过32个
 
-     *
-     * @return
-     */
+    /**
+    * get configFile数据，个数不超过32个
+
+    *
+    * @return
+    */
     public List<ConfigFileData> getData() {
         return data;
     }
 
     /**
-     * set configFile数据，个数不超过32个
+    * set configFile数据，个数不超过32个
 
-     *
-     * @param data
-     */
+    *
+    * @param data
+    */
     public void setData(List<ConfigFileData> data) {
         this.data = data;
     }
+
 
     /**
      * get Region ID
@@ -121,6 +124,7 @@ public class UpdateConfigFileRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 想要挂载的 ConfigFile 的名字，不能重复
 
@@ -132,16 +136,18 @@ public class UpdateConfigFileRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
-    /**
-     * set configFile数据，个数不超过32个
 
-     *
-     * @param data
-     */
+    /**
+    * set configFile数据，个数不超过32个
+
+    *
+    * @param data
+    */
     public UpdateConfigFileRequest data(List<ConfigFileData> data) {
         this.data = data;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -152,6 +158,7 @@ public class UpdateConfigFileRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -166,5 +173,4 @@ public class UpdateConfigFileRequest extends JdcloudRequest implements java.io.S
         }
         this.data.add(data);
     }
-
 }

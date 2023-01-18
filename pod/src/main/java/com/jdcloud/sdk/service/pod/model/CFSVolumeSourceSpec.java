@@ -46,6 +46,7 @@ public class CFSVolumeSourceSpec  implements java.io.Serializable {
     private String path;
 
 
+
     /**
      * get 挂载目标 ID
      *
@@ -63,6 +64,7 @@ public class CFSVolumeSourceSpec  implements java.io.Serializable {
     public void setMountTargetId(String mountTargetId) {
         this.mountTargetId = mountTargetId;
     }
+
 
     /**
      * get 云文件系统所在容器内的目录
@@ -83,6 +85,7 @@ public class CFSVolumeSourceSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 挂载目标 ID
      *
@@ -92,6 +95,7 @@ public class CFSVolumeSourceSpec  implements java.io.Serializable {
         this.mountTargetId = mountTargetId;
         return this;
     }
+
 
     /**
      * set 云文件系统所在容器内的目录

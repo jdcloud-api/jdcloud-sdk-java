@@ -108,18 +108,18 @@ public class Pod  implements java.io.Serializable {
     /**
      * pod内容器的/etc/hosts配置
      */
+    
     private List<HostAlias> hostAliases;
-
     /**
      * 属于Pod的volume列表，提供挂载到containers上。
      */
+    
     private List<Volume> volumes;
-
     /**
      * pod内的容器信息
      */
+    
     private List<Container> containers;
-
     /**
      * pod状态信息
      */
@@ -138,8 +138,8 @@ public class Pod  implements java.io.Serializable {
     /**
      * tags
      */
+    
     private List<Tag> tags;
-
     /**
      * 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
      */
@@ -149,6 +149,12 @@ public class Pod  implements java.io.Serializable {
      * Pod创建时间
      */
     private String createTime;
+
+    /**
+     * 资源组ID
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -169,6 +175,7 @@ public class Pod  implements java.io.Serializable {
         this.podId = podId;
     }
 
+
     /**
      * get pod 名称
      *
@@ -186,6 +193,7 @@ public class Pod  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 描述信息，默认为空。
@@ -205,6 +213,7 @@ public class Pod  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 可用区
      *
@@ -222,6 +231,7 @@ public class Pod  implements java.io.Serializable {
     public void setAz(String az) {
         this.az = az;
     }
+
 
     /**
      * get 主机名
@@ -241,6 +251,7 @@ public class Pod  implements java.io.Serializable {
         this.hostname = hostname;
     }
 
+
     /**
      * get 高可用组
      *
@@ -258,6 +269,7 @@ public class Pod  implements java.io.Serializable {
     public void setAg(AvailablityGroup ag) {
         this.ag = ag;
     }
+
 
     /**
      * get pod 所需的计算资源规格
@@ -277,6 +289,7 @@ public class Pod  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
      * get pod重启策略
      *
@@ -294,6 +307,7 @@ public class Pod  implements java.io.Serializable {
     public void setRestartPolicy(String restartPolicy) {
         this.restartPolicy = restartPolicy;
     }
+
 
     /**
      * get 优雅关闭的时间
@@ -313,6 +327,7 @@ public class Pod  implements java.io.Serializable {
         this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
     }
 
+
     /**
      * get 主网卡所属vpcId
      *
@@ -330,6 +345,7 @@ public class Pod  implements java.io.Serializable {
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
     /**
      * get 主网卡所属子网的ID
@@ -349,6 +365,7 @@ public class Pod  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+
     /**
      * get 主网卡主IP地址
      *
@@ -366,6 +383,7 @@ public class Pod  implements java.io.Serializable {
     public void setPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
     }
+
 
     /**
      * get pod内容器的/etc/resolv.conf配置
@@ -385,6 +403,7 @@ public class Pod  implements java.io.Serializable {
         this.dnsConfig = dnsConfig;
     }
 
+
     /**
      * get 容器日志配置信息；默认会在本地分配10MB的存储空间
      *
@@ -403,59 +422,63 @@ public class Pod  implements java.io.Serializable {
         this.logConfig = logConfig;
     }
 
+
     /**
-     * get pod内容器的/etc/hosts配置
-     *
-     * @return
-     */
+    * get pod内容器的/etc/hosts配置
+    *
+    * @return
+    */
     public List<HostAlias> getHostAliases() {
         return hostAliases;
     }
 
     /**
-     * set pod内容器的/etc/hosts配置
-     *
-     * @param hostAliases
-     */
+    * set pod内容器的/etc/hosts配置
+    *
+    * @param hostAliases
+    */
     public void setHostAliases(List<HostAlias> hostAliases) {
         this.hostAliases = hostAliases;
     }
 
+
     /**
-     * get 属于Pod的volume列表，提供挂载到containers上。
-     *
-     * @return
-     */
+    * get 属于Pod的volume列表，提供挂载到containers上。
+    *
+    * @return
+    */
     public List<Volume> getVolumes() {
         return volumes;
     }
 
     /**
-     * set 属于Pod的volume列表，提供挂载到containers上。
-     *
-     * @param volumes
-     */
+    * set 属于Pod的volume列表，提供挂载到containers上。
+    *
+    * @param volumes
+    */
     public void setVolumes(List<Volume> volumes) {
         this.volumes = volumes;
     }
 
+
     /**
-     * get pod内的容器信息
-     *
-     * @return
-     */
+    * get pod内的容器信息
+    *
+    * @return
+    */
     public List<Container> getContainers() {
         return containers;
     }
 
     /**
-     * set pod内的容器信息
-     *
-     * @param containers
-     */
+    * set pod内的容器信息
+    *
+    * @param containers
+    */
     public void setContainers(List<Container> containers) {
         this.containers = containers;
     }
+
 
     /**
      * get pod状态信息
@@ -475,6 +498,7 @@ public class Pod  implements java.io.Serializable {
         this.podStatus = podStatus;
     }
 
+
     /**
      * get 主网卡主IP关联的弹性IP规格
      *
@@ -492,6 +516,7 @@ public class Pod  implements java.io.Serializable {
     public void setElasticIp(ElasticIp elasticIp) {
         this.elasticIp = elasticIp;
     }
+
 
     /**
      * get 主网卡配置信息
@@ -511,23 +536,25 @@ public class Pod  implements java.io.Serializable {
         this.primaryNetworkInterface = primaryNetworkInterface;
     }
 
+
     /**
-     * get tags
-     *
-     * @return
-     */
+    * get tags
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set tags
-     *
-     * @param tags
-     */
+    * set tags
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
 
     /**
      * get 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
@@ -546,6 +573,7 @@ public class Pod  implements java.io.Serializable {
     public void setCharge(Charge charge) {
         this.charge = charge;
     }
+
 
     /**
      * get Pod创建时间
@@ -567,6 +595,26 @@ public class Pod  implements java.io.Serializable {
 
 
     /**
+     * get 资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+
+    /**
      * set pod ID
      *
      * @param podId
@@ -575,6 +623,7 @@ public class Pod  implements java.io.Serializable {
         this.podId = podId;
         return this;
     }
+
 
     /**
      * set pod 名称
@@ -586,6 +635,7 @@ public class Pod  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述信息，默认为空。
      *
@@ -595,6 +645,7 @@ public class Pod  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 可用区
@@ -606,6 +657,7 @@ public class Pod  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主机名
      *
@@ -615,6 +667,7 @@ public class Pod  implements java.io.Serializable {
         this.hostname = hostname;
         return this;
     }
+
 
     /**
      * set 高可用组
@@ -626,6 +679,7 @@ public class Pod  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pod 所需的计算资源规格
      *
@@ -635,6 +689,7 @@ public class Pod  implements java.io.Serializable {
         this.instanceType = instanceType;
         return this;
     }
+
 
     /**
      * set pod重启策略
@@ -646,6 +701,7 @@ public class Pod  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 优雅关闭的时间
      *
@@ -655,6 +711,7 @@ public class Pod  implements java.io.Serializable {
         this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
         return this;
     }
+
 
     /**
      * set 主网卡所属vpcId
@@ -666,6 +723,7 @@ public class Pod  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡所属子网的ID
      *
@@ -675,6 +733,7 @@ public class Pod  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 主网卡主IP地址
@@ -686,6 +745,7 @@ public class Pod  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pod内容器的/etc/resolv.conf配置
      *
@@ -695,6 +755,7 @@ public class Pod  implements java.io.Serializable {
         this.dnsConfig = dnsConfig;
         return this;
     }
+
 
     /**
      * set 容器日志配置信息；默认会在本地分配10MB的存储空间
@@ -706,35 +767,39 @@ public class Pod  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set pod内容器的/etc/hosts配置
-     *
-     * @param hostAliases
-     */
+    * set pod内容器的/etc/hosts配置
+    *
+    * @param hostAliases
+    */
     public Pod hostAliases(List<HostAlias> hostAliases) {
         this.hostAliases = hostAliases;
         return this;
     }
 
+
     /**
-     * set 属于Pod的volume列表，提供挂载到containers上。
-     *
-     * @param volumes
-     */
+    * set 属于Pod的volume列表，提供挂载到containers上。
+    *
+    * @param volumes
+    */
     public Pod volumes(List<Volume> volumes) {
         this.volumes = volumes;
         return this;
     }
 
+
     /**
-     * set pod内的容器信息
-     *
-     * @param containers
-     */
+    * set pod内的容器信息
+    *
+    * @param containers
+    */
     public Pod containers(List<Container> containers) {
         this.containers = containers;
         return this;
     }
+
 
     /**
      * set pod状态信息
@@ -746,6 +811,7 @@ public class Pod  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡主IP关联的弹性IP规格
      *
@@ -755,6 +821,7 @@ public class Pod  implements java.io.Serializable {
         this.elasticIp = elasticIp;
         return this;
     }
+
 
     /**
      * set 主网卡配置信息
@@ -766,15 +833,17 @@ public class Pod  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set tags
-     *
-     * @param tags
-     */
+    * set tags
+    *
+    * @param tags
+    */
     public Pod tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
 
     /**
      * set 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
@@ -786,6 +855,7 @@ public class Pod  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Pod创建时间
      *
@@ -795,6 +865,18 @@ public class Pod  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public Pod resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
 
 
     /**
@@ -844,5 +926,4 @@ public class Pod  implements java.io.Serializable {
         }
         this.tags.add(tag);
     }
-
 }

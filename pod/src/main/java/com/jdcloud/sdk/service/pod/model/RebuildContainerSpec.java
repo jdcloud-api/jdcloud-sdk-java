@@ -45,18 +45,18 @@ public class RebuildContainerSpec  implements java.io.Serializable {
     /**
      * 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。
      */
+    
     private List<String> command;
-
     /**
      * 容器执行命令的参数，如果不指定默认是docker镜像的CMD。总长度2048个字符。
      */
+    
     private List<String> args;
-
     /**
      * 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
      */
+    
     private List<EnvSpec> env;
-
     /**
      * 镜像名称 &lt;/br&gt;
 容器镜像名字。 nginx:latest。长度范围：[1-639]
@@ -96,6 +96,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
     /**
      * 云盘挂载信息
      */
+    
     private List<VolumeMountSpec> volumeMounts;
 
 
@@ -117,59 +118,63 @@ public class RebuildContainerSpec  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
-     * get 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。
-     *
-     * @return
-     */
+    * get 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。
+    *
+    * @return
+    */
     public List<String> getCommand() {
         return command;
     }
 
     /**
-     * set 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。
-     *
-     * @param command
-     */
+    * set 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。
+    *
+    * @param command
+    */
     public void setCommand(List<String> command) {
         this.command = command;
     }
 
+
     /**
-     * get 容器执行命令的参数，如果不指定默认是docker镜像的CMD。总长度2048个字符。
-     *
-     * @return
-     */
+    * get 容器执行命令的参数，如果不指定默认是docker镜像的CMD。总长度2048个字符。
+    *
+    * @return
+    */
     public List<String> getArgs() {
         return args;
     }
 
     /**
-     * set 容器执行命令的参数，如果不指定默认是docker镜像的CMD。总长度2048个字符。
-     *
-     * @param args
-     */
+    * set 容器执行命令的参数，如果不指定默认是docker镜像的CMD。总长度2048个字符。
+    *
+    * @param args
+    */
     public void setArgs(List<String> args) {
         this.args = args;
     }
 
+
     /**
-     * get 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
-     *
-     * @return
-     */
+    * get 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+    *
+    * @return
+    */
     public List<EnvSpec> getEnv() {
         return env;
     }
 
     /**
-     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
-     *
-     * @param env
-     */
+    * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+    *
+    * @param env
+    */
     public void setEnv(List<EnvSpec> env) {
         this.env = env;
     }
+
 
     /**
      * get 镜像名称 &lt;/br&gt;
@@ -197,6 +202,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
         this.image = image;
     }
 
+
     /**
      * get 镜像仓库认证信息。如果目前不传，默认选择dockerHub镜像
      *
@@ -214,6 +220,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
     public void setSecret(String secret) {
         this.secret = secret;
     }
+
 
     /**
      * get 容器是否分配tty。默认不分配
@@ -233,6 +240,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
         this.tty = tty;
     }
 
+
     /**
      * get 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径；长度范围：[0-1024]
      *
@@ -250,6 +258,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
     public void setWorkingDir(String workingDir) {
         this.workingDir = workingDir;
     }
+
 
     /**
      * get 容器存活探针配置
@@ -269,6 +278,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
         this.livenessProbe = livenessProbe;
     }
 
+
     /**
      * get 容器服务就绪探针配置
      *
@@ -287,23 +297,25 @@ public class RebuildContainerSpec  implements java.io.Serializable {
         this.readinessProbe = readinessProbe;
     }
 
+
     /**
-     * get 云盘挂载信息
-     *
-     * @return
-     */
+    * get 云盘挂载信息
+    *
+    * @return
+    */
     public List<VolumeMountSpec> getVolumeMounts() {
         return volumeMounts;
     }
 
     /**
-     * set 云盘挂载信息
-     *
-     * @param volumeMounts
-     */
+    * set 云盘挂载信息
+    *
+    * @param volumeMounts
+    */
     public void setVolumeMounts(List<VolumeMountSpec> volumeMounts) {
         this.volumeMounts = volumeMounts;
     }
+
 
 
     /**
@@ -316,35 +328,39 @@ public class RebuildContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。
-     *
-     * @param command
-     */
+    * set 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。
+    *
+    * @param command
+    */
     public RebuildContainerSpec command(List<String> command) {
         this.command = command;
         return this;
     }
 
+
     /**
-     * set 容器执行命令的参数，如果不指定默认是docker镜像的CMD。总长度2048个字符。
-     *
-     * @param args
-     */
+    * set 容器执行命令的参数，如果不指定默认是docker镜像的CMD。总长度2048个字符。
+    *
+    * @param args
+    */
     public RebuildContainerSpec args(List<String> args) {
         this.args = args;
         return this;
     }
 
+
     /**
-     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
-     *
-     * @param env
-     */
+    * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+    *
+    * @param env
+    */
     public RebuildContainerSpec env(List<EnvSpec> env) {
         this.env = env;
         return this;
     }
+
 
     /**
      * set 镜像名称 &lt;/br&gt;
@@ -360,6 +376,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像仓库认证信息。如果目前不传，默认选择dockerHub镜像
      *
@@ -369,6 +386,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
         this.secret = secret;
         return this;
     }
+
 
     /**
      * set 容器是否分配tty。默认不分配
@@ -380,6 +398,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径；长度范围：[0-1024]
      *
@@ -389,6 +408,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
         this.workingDir = workingDir;
         return this;
     }
+
 
     /**
      * set 容器存活探针配置
@@ -400,6 +420,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器服务就绪探针配置
      *
@@ -410,15 +431,17 @@ public class RebuildContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 云盘挂载信息
-     *
-     * @param volumeMounts
-     */
+    * set 云盘挂载信息
+    *
+    * @param volumeMounts
+    */
     public RebuildContainerSpec volumeMounts(List<VolumeMountSpec> volumeMounts) {
         this.volumeMounts = volumeMounts;
         return this;
     }
+
 
 
     /**
@@ -468,5 +491,4 @@ public class RebuildContainerSpec  implements java.io.Serializable {
         }
         this.volumeMounts.add(volumeMount);
     }
-
 }

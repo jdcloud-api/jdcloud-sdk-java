@@ -41,6 +41,7 @@ public class DescribePodResult extends JdcloudResult implements java.io.Serializ
     private Pod pod;
 
 
+
     /**
      * get pod
      *
@@ -58,6 +59,7 @@ public class DescribePodResult extends JdcloudResult implements java.io.Serializ
     public void setPod(Pod pod) {
         this.pod = pod;
     }
+
 
 
     /**
