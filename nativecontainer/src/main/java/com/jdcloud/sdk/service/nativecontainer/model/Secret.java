@@ -53,6 +53,7 @@ public class Secret  implements java.io.Serializable {
     private DockerRegistryData data;
 
 
+
     /**
      * get 机密数据名称
      *
@@ -70,6 +71,7 @@ public class Secret  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型
@@ -89,6 +91,7 @@ public class Secret  implements java.io.Serializable {
         this.secretType = secretType;
     }
 
+
     /**
      * get 创建时间
      *
@@ -106,6 +109,7 @@ public class Secret  implements java.io.Serializable {
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
+
 
     /**
      * get 机密的数据
@@ -126,6 +130,7 @@ public class Secret  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 机密数据名称
      *
@@ -135,6 +140,7 @@ public class Secret  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型
@@ -146,6 +152,7 @@ public class Secret  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -155,6 +162,7 @@ public class Secret  implements java.io.Serializable {
         this.createdAt = createdAt;
         return this;
     }
+
 
     /**
      * set 机密的数据

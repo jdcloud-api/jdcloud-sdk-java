@@ -26,81 +26,81 @@ package com.jdcloud.sdk.service.nativecontainer.model;
 
 
 /**
- * tag
+ * status
  */
-public class Tag  implements java.io.Serializable {
+public class Status  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * Tag键
+     * 资源ID
      */
-    private String key;
+    private String resourceId;
 
     /**
-     * Tag值
+     * 资源有效性
      */
-    private String value;
+    private Boolean validity;
 
 
 
     /**
-     * get Tag键
+     * get 资源ID
      *
      * @return
      */
-    public String getKey() {
-        return key;
+    public String getResourceId() {
+        return resourceId;
     }
 
     /**
-     * set Tag键
+     * set 资源ID
      *
-     * @param key
+     * @param resourceId
      */
-    public void setKey(String key) {
-        this.key = key;
+    public void setResourceId(String resourceId) {
+        this.resourceId = resourceId;
     }
 
 
     /**
-     * get Tag值
+     * get 资源有效性
      *
      * @return
      */
-    public String getValue() {
-        return value;
+    public Boolean getValidity() {
+        return validity;
     }
 
     /**
-     * set Tag值
+     * set 资源有效性
      *
-     * @param value
+     * @param validity
      */
-    public void setValue(String value) {
-        this.value = value;
+    public void setValidity(Boolean validity) {
+        this.validity = validity;
     }
 
 
 
     /**
-     * set Tag键
+     * set 资源ID
      *
-     * @param key
+     * @param resourceId
      */
-    public Tag key(String key) {
-        this.key = key;
+    public Status resourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
 
 
     /**
-     * set Tag值
+     * set 资源有效性
      *
-     * @param value
+     * @param validity
      */
-    public Tag value(String value) {
-        this.value = value;
+    public Status validity(Boolean validity) {
+        this.validity = validity;
         return this;
     }
 

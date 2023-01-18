@@ -41,31 +41,33 @@ public class DescribeSecretsResult extends JdcloudResult implements java.io.Seri
     /**
      * secrets
      */
+    
     private List<Secret> secrets;
-
     /**
      * totalCount
      */
     private Number totalCount;
 
 
+
     /**
-     * get secrets
-     *
-     * @return
-     */
+    * get secrets
+    *
+    * @return
+    */
     public List<Secret> getSecrets() {
         return secrets;
     }
 
     /**
-     * set secrets
-     *
-     * @param secrets
-     */
+    * set secrets
+    *
+    * @param secrets
+    */
     public void setSecrets(List<Secret> secrets) {
         this.secrets = secrets;
     }
+
 
     /**
      * get totalCount
@@ -86,15 +88,17 @@ public class DescribeSecretsResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
-     * set secrets
-     *
-     * @param secrets
-     */
+    * set secrets
+    *
+    * @param secrets
+    */
     public DescribeSecretsResult secrets(List<Secret> secrets) {
         this.secrets = secrets;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -105,6 +109,7 @@ public class DescribeSecretsResult extends JdcloudResult implements java.io.Seri
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class DescribeSecretsResult extends JdcloudResult implements java.io.Seri
         }
         this.secrets.add(secret);
     }
-
 }

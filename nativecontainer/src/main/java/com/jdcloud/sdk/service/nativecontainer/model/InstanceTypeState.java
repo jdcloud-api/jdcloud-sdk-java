@@ -48,6 +48,7 @@ public class InstanceTypeState  implements java.io.Serializable {
     private Boolean online;
 
 
+
     /**
      * get 可用区
      *
@@ -66,6 +67,7 @@ public class InstanceTypeState  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
      * get 可售卖情况，true:可售卖、false:已售罄不可用
      *
@@ -83,6 +85,7 @@ public class InstanceTypeState  implements java.io.Serializable {
     public void setInStock(Boolean inStock) {
         this.inStock = inStock;
     }
+
 
     /**
      * get 在线情况，true:在线、false:已下线不可用
@@ -103,6 +106,7 @@ public class InstanceTypeState  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 可用区
      *
@@ -113,6 +117,7 @@ public class InstanceTypeState  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 可售卖情况，true:可售卖、false:已售罄不可用
      *
@@ -122,6 +127,7 @@ public class InstanceTypeState  implements java.io.Serializable {
         this.inStock = inStock;
         return this;
     }
+
 
     /**
      * set 在线情况，true:在线、false:已下线不可用

@@ -26,46 +26,46 @@ package com.jdcloud.sdk.service.nativecontainer.model;
 
 
 /**
- * 本地盘规格
+ * bindInfo
  */
-public class LocalDiskSpec  implements java.io.Serializable {
+public class AvailablityGroup  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 本地盘大小(GB)
+     * 高可用组ID
      */
-    private Integer diskSize;
+    private String id;
 
 
 
     /**
-     * get 本地盘大小(GB)
+     * get 高可用组ID
      *
      * @return
      */
-    public Integer getDiskSize() {
-        return diskSize;
+    public String getId() {
+        return id;
     }
 
     /**
-     * set 本地盘大小(GB)
+     * set 高可用组ID
      *
-     * @param diskSize
+     * @param id
      */
-    public void setDiskSize(Integer diskSize) {
-        this.diskSize = diskSize;
+    public void setId(String id) {
+        this.id = id;
     }
 
 
 
     /**
-     * set 本地盘大小(GB)
+     * set 高可用组ID
      *
-     * @param diskSize
+     * @param id
      */
-    public LocalDiskSpec diskSize(Integer diskSize) {
-        this.diskSize = diskSize;
+    public AvailablityGroup id(String id) {
+        this.id = id;
         return this;
     }
 

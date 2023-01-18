@@ -50,6 +50,7 @@ public class StopContainerRequest extends JdcloudRequest implements java.io.Seri
     private String containerId;
 
 
+
     /**
      * get Region ID
      *
@@ -67,6 +68,7 @@ public class StopContainerRequest extends JdcloudRequest implements java.io.Seri
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Container ID
@@ -87,6 +89,7 @@ public class StopContainerRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set Region ID
      *
@@ -96,6 +99,7 @@ public class StopContainerRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Container ID

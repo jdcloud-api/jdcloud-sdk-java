@@ -44,7 +44,7 @@ public class ContainerSpec  implements java.io.Serializable {
     private String instanceType;
 
     /**
-     * 容器所属可用区
+     * 容器所属可用区，指定agId时非必传&lt;br&gt; 容器、已有云盘的az必须相同，且包含在AG中
      * Required:true
      */
     @Required
@@ -60,8 +60,8 @@ public class ContainerSpec  implements java.io.Serializable {
     /**
      * 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
      */
+    
     private List<HostAliasSpec> hostAliases;
-
     /**
      * 主机名，规范请参考说明文档；默认容器ID
      */
@@ -70,18 +70,18 @@ public class ContainerSpec  implements java.io.Serializable {
     /**
      * 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT
      */
+    
     private List<String> command;
-
     /**
      * 容器执行命令的参数，如果不指定默认是docker镜像的CMD
      */
+    
     private List<String> args;
-
     /**
      * 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
      */
+    
     private List<EnvVar> envs;
-
     /**
      * 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符
      * Required:true
@@ -114,8 +114,8 @@ public class ContainerSpec  implements java.io.Serializable {
     /**
      * 挂载的数据Volume信息；最多7个
      */
+    
     private List<VolumeMountSpec> dataVolumes;
-
     /**
      * 主网卡主IP关联的弹性IP规格
      */
@@ -146,7 +146,13 @@ public class ContainerSpec  implements java.io.Serializable {
     /**
      * 用户普通标签集合
      */
+    
     private List<Tag> userTags;
+    /**
+     * 资源组ID
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -167,8 +173,9 @@ public class ContainerSpec  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
-     * get 容器所属可用区
+     * get 容器所属可用区，指定agId时非必传&lt;br&gt; 容器、已有云盘的az必须相同，且包含在AG中
      *
      * @return
      */
@@ -177,13 +184,14 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器所属可用区
+     * set 容器所属可用区，指定agId时非必传&lt;br&gt; 容器、已有云盘的az必须相同，且包含在AG中
      *
      * @param az
      */
     public void setAz(String az) {
         this.az = az;
     }
+
 
     /**
      * get 容器名称，不可为空，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符
@@ -203,23 +211,25 @@ public class ContainerSpec  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
-     * get 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
-     *
-     * @return
-     */
+    * get 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+    *
+    * @return
+    */
     public List<HostAliasSpec> getHostAliases() {
         return hostAliases;
     }
 
     /**
-     * set 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
-     *
-     * @param hostAliases
-     */
+    * set 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+    *
+    * @param hostAliases
+    */
     public void setHostAliases(List<HostAliasSpec> hostAliases) {
         this.hostAliases = hostAliases;
     }
+
 
     /**
      * get 主机名，规范请参考说明文档；默认容器ID
@@ -239,59 +249,63 @@ public class ContainerSpec  implements java.io.Serializable {
         this.hostname = hostname;
     }
 
+
     /**
-     * get 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT
-     *
-     * @return
-     */
+    * get 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT
+    *
+    * @return
+    */
     public List<String> getCommand() {
         return command;
     }
 
     /**
-     * set 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT
-     *
-     * @param command
-     */
+    * set 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT
+    *
+    * @param command
+    */
     public void setCommand(List<String> command) {
         this.command = command;
     }
 
+
     /**
-     * get 容器执行命令的参数，如果不指定默认是docker镜像的CMD
-     *
-     * @return
-     */
+    * get 容器执行命令的参数，如果不指定默认是docker镜像的CMD
+    *
+    * @return
+    */
     public List<String> getArgs() {
         return args;
     }
 
     /**
-     * set 容器执行命令的参数，如果不指定默认是docker镜像的CMD
-     *
-     * @param args
-     */
+    * set 容器执行命令的参数，如果不指定默认是docker镜像的CMD
+    *
+    * @param args
+    */
     public void setArgs(List<String> args) {
         this.args = args;
     }
 
+
     /**
-     * get 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
-     *
-     * @return
-     */
+    * get 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
+    *
+    * @return
+    */
     public List<EnvVar> getEnvs() {
         return envs;
     }
 
     /**
-     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
-     *
-     * @param envs
-     */
+    * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
+    *
+    * @param envs
+    */
     public void setEnvs(List<EnvVar> envs) {
         this.envs = envs;
     }
+
 
     /**
      * get 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符
@@ -311,6 +325,7 @@ public class ContainerSpec  implements java.io.Serializable {
         this.image = image;
     }
 
+
     /**
      * get 镜像仓库认证信息；使用Docker Hub和京东云CR的镜像不需要secret
      *
@@ -328,6 +343,7 @@ public class ContainerSpec  implements java.io.Serializable {
     public void setSecret(String secret) {
         this.secret = secret;
     }
+
 
     /**
      * get 容器是否分配tty。默认不分配
@@ -347,6 +363,7 @@ public class ContainerSpec  implements java.io.Serializable {
         this.tty = tty;
     }
 
+
     /**
      * get 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径
      *
@@ -364,6 +381,7 @@ public class ContainerSpec  implements java.io.Serializable {
     public void setWorkingDir(String workingDir) {
         this.workingDir = workingDir;
     }
+
 
     /**
      * get 根Volume信息
@@ -383,23 +401,25 @@ public class ContainerSpec  implements java.io.Serializable {
         this.rootVolume = rootVolume;
     }
 
+
     /**
-     * get 挂载的数据Volume信息；最多7个
-     *
-     * @return
-     */
+    * get 挂载的数据Volume信息；最多7个
+    *
+    * @return
+    */
     public List<VolumeMountSpec> getDataVolumes() {
         return dataVolumes;
     }
 
     /**
-     * set 挂载的数据Volume信息；最多7个
-     *
-     * @param dataVolumes
-     */
+    * set 挂载的数据Volume信息；最多7个
+    *
+    * @param dataVolumes
+    */
     public void setDataVolumes(List<VolumeMountSpec> dataVolumes) {
         this.dataVolumes = dataVolumes;
     }
+
 
     /**
      * get 主网卡主IP关联的弹性IP规格
@@ -419,6 +439,7 @@ public class ContainerSpec  implements java.io.Serializable {
         this.elasticIp = elasticIp;
     }
 
+
     /**
      * get 主网卡配置信息
      *
@@ -436,6 +457,7 @@ public class ContainerSpec  implements java.io.Serializable {
     public void setPrimaryNetworkInterface(ContainerNetworkInterfaceAttachmentSpec primaryNetworkInterface) {
         this.primaryNetworkInterface = primaryNetworkInterface;
     }
+
 
     /**
      * get 容器日志配置信息；默认会在本地分配10MB的存储空间
@@ -455,6 +477,7 @@ public class ContainerSpec  implements java.io.Serializable {
         this.logConfiguration = logConfiguration;
     }
 
+
     /**
      * get 容器描述
      *
@@ -472,6 +495,7 @@ public class ContainerSpec  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
@@ -491,23 +515,44 @@ public class ContainerSpec  implements java.io.Serializable {
         this.charge = charge;
     }
 
+
     /**
-     * get 用户普通标签集合
-     *
-     * @return
-     */
+    * get 用户普通标签集合
+    *
+    * @return
+    */
     public List<Tag> getUserTags() {
         return userTags;
     }
 
     /**
-     * set 用户普通标签集合
-     *
-     * @param userTags
-     */
+    * set 用户普通标签集合
+    *
+    * @param userTags
+    */
     public void setUserTags(List<Tag> userTags) {
         this.userTags = userTags;
     }
+
+
+    /**
+     * get 资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
 
 
     /**
@@ -520,8 +565,9 @@ public class ContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 容器所属可用区
+     * set 容器所属可用区，指定agId时非必传&lt;br&gt; 容器、已有云盘的az必须相同，且包含在AG中
      *
      * @param az
      */
@@ -529,6 +575,7 @@ public class ContainerSpec  implements java.io.Serializable {
         this.az = az;
         return this;
     }
+
 
     /**
      * set 容器名称，不可为空，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符
@@ -540,15 +587,17 @@ public class ContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
-     *
-     * @param hostAliases
-     */
+    * set 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+    *
+    * @param hostAliases
+    */
     public ContainerSpec hostAliases(List<HostAliasSpec> hostAliases) {
         this.hostAliases = hostAliases;
         return this;
     }
+
 
     /**
      * set 主机名，规范请参考说明文档；默认容器ID
@@ -560,35 +609,39 @@ public class ContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT
-     *
-     * @param command
-     */
+    * set 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT
+    *
+    * @param command
+    */
     public ContainerSpec command(List<String> command) {
         this.command = command;
         return this;
     }
 
+
     /**
-     * set 容器执行命令的参数，如果不指定默认是docker镜像的CMD
-     *
-     * @param args
-     */
+    * set 容器执行命令的参数，如果不指定默认是docker镜像的CMD
+    *
+    * @param args
+    */
     public ContainerSpec args(List<String> args) {
         this.args = args;
         return this;
     }
 
+
     /**
-     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
-     *
-     * @param envs
-     */
+    * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
+    *
+    * @param envs
+    */
     public ContainerSpec envs(List<EnvVar> envs) {
         this.envs = envs;
         return this;
     }
+
 
     /**
      * set 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符
@@ -600,6 +653,7 @@ public class ContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像仓库认证信息；使用Docker Hub和京东云CR的镜像不需要secret
      *
@@ -609,6 +663,7 @@ public class ContainerSpec  implements java.io.Serializable {
         this.secret = secret;
         return this;
     }
+
 
     /**
      * set 容器是否分配tty。默认不分配
@@ -620,6 +675,7 @@ public class ContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径
      *
@@ -629,6 +685,7 @@ public class ContainerSpec  implements java.io.Serializable {
         this.workingDir = workingDir;
         return this;
     }
+
 
     /**
      * set 根Volume信息
@@ -640,15 +697,17 @@ public class ContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 挂载的数据Volume信息；最多7个
-     *
-     * @param dataVolumes
-     */
+    * set 挂载的数据Volume信息；最多7个
+    *
+    * @param dataVolumes
+    */
     public ContainerSpec dataVolumes(List<VolumeMountSpec> dataVolumes) {
         this.dataVolumes = dataVolumes;
         return this;
     }
+
 
     /**
      * set 主网卡主IP关联的弹性IP规格
@@ -660,6 +719,7 @@ public class ContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡配置信息
      *
@@ -669,6 +729,7 @@ public class ContainerSpec  implements java.io.Serializable {
         this.primaryNetworkInterface = primaryNetworkInterface;
         return this;
     }
+
 
     /**
      * set 容器日志配置信息；默认会在本地分配10MB的存储空间
@@ -680,6 +741,7 @@ public class ContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 容器描述
      *
@@ -689,6 +751,7 @@ public class ContainerSpec  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
@@ -700,15 +763,28 @@ public class ContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 用户普通标签集合
-     *
-     * @param userTags
-     */
+    * set 用户普通标签集合
+    *
+    * @param userTags
+    */
     public ContainerSpec userTags(List<Tag> userTags) {
         this.userTags = userTags;
         return this;
     }
+
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public ContainerSpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
 
 
     /**
@@ -782,5 +858,4 @@ public class ContainerSpec  implements java.io.Serializable {
         }
         this.userTags.add(userTag);
     }
-
 }

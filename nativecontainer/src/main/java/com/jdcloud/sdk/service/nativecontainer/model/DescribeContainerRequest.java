@@ -50,6 +50,7 @@ public class DescribeContainerRequest extends JdcloudRequest implements java.io.
     private String containerId;
 
 
+
     /**
      * get Region ID
      *
@@ -67,6 +68,7 @@ public class DescribeContainerRequest extends JdcloudRequest implements java.io.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Container ID
@@ -87,6 +89,7 @@ public class DescribeContainerRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set Region ID
      *
@@ -96,6 +99,7 @@ public class DescribeContainerRequest extends JdcloudRequest implements java.io.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Container ID

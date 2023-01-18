@@ -40,6 +40,7 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
     private Object logs;
 
 
+
     /**
      * get logs
      *
@@ -57,6 +58,7 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
     public void setLogs(Object logs) {
         this.logs = logs;
     }
+
 
 
     /**

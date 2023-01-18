@@ -51,6 +51,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     private String regionId;
 
 
+
     /**
      * get resourceType - 资源类型，支持 [container, pod, secret]
 
@@ -71,6 +72,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
         this.resourceType = resourceType;
     }
 
+
     /**
      * get Region ID
      *
@@ -90,6 +92,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set resourceType - 资源类型，支持 [container, pod, secret]
 
@@ -100,6 +103,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
         this.resourceType = resourceType;
         return this;
     }
+
 
     /**
      * set Region ID

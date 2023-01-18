@@ -43,6 +43,7 @@ public class LogOption  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get null
      *
@@ -60,6 +61,7 @@ public class LogOption  implements java.io.Serializable {
     public void setKey(String key) {
         this.key = key;
     }
+
 
     /**
      * get null
@@ -80,6 +82,7 @@ public class LogOption  implements java.io.Serializable {
     }
 
 
+
     /**
      * set null
      *
@@ -89,6 +92,7 @@ public class LogOption  implements java.io.Serializable {
         this.key = key;
         return this;
     }
+
 
     /**
      * set null

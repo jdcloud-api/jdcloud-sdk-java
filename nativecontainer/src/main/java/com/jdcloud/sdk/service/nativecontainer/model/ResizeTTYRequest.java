@@ -69,6 +69,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
     private String containerId;
 
 
+
     /**
      * get tty row
      *
@@ -86,6 +87,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
     public void setHeight(Integer height) {
         this.height = height;
     }
+
 
     /**
      * get tty column
@@ -105,6 +107,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
         this.width = width;
     }
 
+
     /**
      * get exec ID
      *
@@ -123,6 +126,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
         this.execId = execId;
     }
 
+
     /**
      * get Region ID
      *
@@ -140,6 +144,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Container ID
@@ -160,6 +165,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set tty row
      *
@@ -169,6 +175,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
         this.height = height;
         return this;
     }
+
 
     /**
      * set tty column
@@ -180,6 +187,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set exec ID
      *
@@ -190,6 +198,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -199,6 +208,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Container ID

@@ -68,6 +68,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     private String containerId;
 
 
+
     /**
      * get 返回日志文件中倒数 tailLines 行，如不指定，默认从容器启动时或 sinceSeconds 指定的时间读取。
 
@@ -87,6 +88,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     public void setTailLines(Integer tailLines) {
         this.tailLines = tailLines;
     }
+
 
     /**
      * get 返回相对于当前时间之前sinceSeconds之内的日志。
@@ -108,6 +110,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         this.sinceSeconds = sinceSeconds;
     }
 
+
     /**
      * get 限制返回的日志文件内容字节数，取值范围 [1-4]KB，最大 4KB.
 
@@ -128,6 +131,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         this.limitBytes = limitBytes;
     }
 
+
     /**
      * get Region ID
      *
@@ -145,6 +149,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Container ID
@@ -165,6 +170,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     }
 
 
+
     /**
      * set 返回日志文件中倒数 tailLines 行，如不指定，默认从容器启动时或 sinceSeconds 指定的时间读取。
 
@@ -175,6 +181,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         this.tailLines = tailLines;
         return this;
     }
+
 
     /**
      * set 返回相对于当前时间之前sinceSeconds之内的日志。
@@ -187,6 +194,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set 限制返回的日志文件内容字节数，取值范围 [1-4]KB，最大 4KB.
 
@@ -198,6 +206,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -207,6 +216,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Container ID

@@ -42,8 +42,8 @@ public class ExecCreateRequest extends JdcloudRequest implements java.io.Seriali
      * Required:true
      */
     @Required
+    
     private List<String> command;
-
     /**
      * 执行命令是否添加tty
      */
@@ -64,23 +64,25 @@ public class ExecCreateRequest extends JdcloudRequest implements java.io.Seriali
     private String containerId;
 
 
+
     /**
-     * get 执行命令
-     *
-     * @return
-     */
+    * get 执行命令
+    *
+    * @return
+    */
     public List<String> getCommand() {
         return command;
     }
 
     /**
-     * set 执行命令
-     *
-     * @param command
-     */
+    * set 执行命令
+    *
+    * @param command
+    */
     public void setCommand(List<String> command) {
         this.command = command;
     }
+
 
     /**
      * get 执行命令是否添加tty
@@ -100,6 +102,7 @@ public class ExecCreateRequest extends JdcloudRequest implements java.io.Seriali
         this.tty = tty;
     }
 
+
     /**
      * get Region ID
      *
@@ -117,6 +120,7 @@ public class ExecCreateRequest extends JdcloudRequest implements java.io.Seriali
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Container ID
@@ -137,15 +141,17 @@ public class ExecCreateRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
-     * set 执行命令
-     *
-     * @param command
-     */
+    * set 执行命令
+    *
+    * @param command
+    */
     public ExecCreateRequest command(List<String> command) {
         this.command = command;
         return this;
     }
+
 
     /**
      * set 执行命令是否添加tty
@@ -157,6 +163,7 @@ public class ExecCreateRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -167,6 +174,7 @@ public class ExecCreateRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set Container ID
      *
@@ -176,6 +184,7 @@ public class ExecCreateRequest extends JdcloudRequest implements java.io.Seriali
         this.containerId = containerId;
         return this;
     }
+
 
 
     /**
@@ -189,5 +198,4 @@ public class ExecCreateRequest extends JdcloudRequest implements java.io.Seriali
         }
         this.command.add(command);
     }
-
 }

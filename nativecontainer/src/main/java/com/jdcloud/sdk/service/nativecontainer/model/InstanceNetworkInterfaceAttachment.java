@@ -38,7 +38,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
     private Boolean autoDelete;
 
     /**
-     * 设备Index
+     * 设备Index，暂不提供辅助网卡index
      */
     private Integer deviceIndex;
 
@@ -56,6 +56,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
      * 弹性网卡信息
      */
     private InstanceNetworkInterface networkInterface;
+
 
 
     /**
@@ -76,8 +77,9 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
         this.autoDelete = autoDelete;
     }
 
+
     /**
-     * get 设备Index
+     * get 设备Index，暂不提供辅助网卡index
      *
      * @return
      */
@@ -86,13 +88,14 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
     }
 
     /**
-     * set 设备Index
+     * set 设备Index，暂不提供辅助网卡index
      *
      * @param deviceIndex
      */
     public void setDeviceIndex(Integer deviceIndex) {
         this.deviceIndex = deviceIndex;
     }
+
 
     /**
      * get 绑定状态
@@ -112,6 +115,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
         this.attachStatus = attachStatus;
     }
 
+
     /**
      * get 绑定时间
      *
@@ -129,6 +133,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
     public void setAttachTime(String attachTime) {
         this.attachTime = attachTime;
     }
+
 
     /**
      * get 弹性网卡信息
@@ -149,6 +154,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
     }
 
 
+
     /**
      * set 指明删除实例时是否删除网卡
      *
@@ -159,8 +165,9 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
         return this;
     }
 
+
     /**
-     * set 设备Index
+     * set 设备Index，暂不提供辅助网卡index
      *
      * @param deviceIndex
      */
@@ -168,6 +175,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
         this.deviceIndex = deviceIndex;
         return this;
     }
+
 
     /**
      * set 绑定状态
@@ -179,6 +187,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
         return this;
     }
 
+
     /**
      * set 绑定时间
      *
@@ -188,6 +197,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
         this.attachTime = attachTime;
         return this;
     }
+
 
     /**
      * set 弹性网卡信息

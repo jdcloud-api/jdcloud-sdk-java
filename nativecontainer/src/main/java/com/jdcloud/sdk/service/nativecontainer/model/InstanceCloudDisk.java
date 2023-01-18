@@ -78,6 +78,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get 云硬盘ID
      *
@@ -95,6 +96,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
     public void setDiskId(String diskId) {
         this.diskId = diskId;
     }
+
 
     /**
      * get 所属AZ
@@ -114,6 +116,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
      * get 硬盘名称
      *
@@ -131,6 +134,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 硬盘描述
@@ -150,6 +154,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 磁盘类型
      *
@@ -167,6 +172,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
     public void setDiskType(String diskType) {
         this.diskType = diskType;
     }
+
 
     /**
      * get 磁盘大小（GiB）
@@ -186,6 +192,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
         this.diskSize = diskSize;
     }
 
+
     /**
      * get 用户指定购买的iops值，目前只支持 ssd.io1 类型云盘
      *
@@ -204,6 +211,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
         this.iops = iops;
     }
 
+
     /**
      * get 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_creating、error_deleting、error_restoring、error_extending 之一
      *
@@ -221,6 +229,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 创建时间
@@ -241,6 +250,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云硬盘ID
      *
@@ -250,6 +260,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
         this.diskId = diskId;
         return this;
     }
+
 
     /**
      * set 所属AZ
@@ -261,6 +272,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 硬盘名称
      *
@@ -270,6 +282,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 硬盘描述
@@ -281,6 +294,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 磁盘类型
      *
@@ -290,6 +304,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
         this.diskType = diskType;
         return this;
     }
+
 
     /**
      * set 磁盘大小（GiB）
@@ -301,6 +316,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户指定购买的iops值，目前只支持 ssd.io1 类型云盘
      *
@@ -311,6 +327,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_creating、error_deleting、error_restoring、error_extending 之一
      *
@@ -320,6 +337,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 创建时间

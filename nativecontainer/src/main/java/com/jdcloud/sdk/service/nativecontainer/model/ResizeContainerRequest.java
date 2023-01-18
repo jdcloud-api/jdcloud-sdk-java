@@ -62,6 +62,7 @@ public class ResizeContainerRequest extends JdcloudRequest implements java.io.Se
     private String containerId;
 
 
+
     /**
      * get 新实例类型，不可与原实例类型相同
      *
@@ -80,6 +81,7 @@ public class ResizeContainerRequest extends JdcloudRequest implements java.io.Se
         this.instanceType = instanceType;
     }
 
+
     /**
      * get Region ID
      *
@@ -97,6 +99,7 @@ public class ResizeContainerRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Container ID
@@ -117,6 +120,7 @@ public class ResizeContainerRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 新实例类型，不可与原实例类型相同
      *
@@ -127,6 +131,7 @@ public class ResizeContainerRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -136,6 +141,7 @@ public class ResizeContainerRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Container ID

@@ -69,6 +69,7 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
     private String regionId;
 
 
+
     /**
      * get 镜像仓库认证信息名称，不能重复
 
@@ -89,6 +90,7 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
         this.name = name;
     }
 
+
     /**
      * get 镜像仓库认证信息类型，目前仅支持：docker-registry 类型，用来和docker registry认证的类型。
 
@@ -108,6 +110,7 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
     public void setSecretType(String secretType) {
         this.secretType = secretType;
     }
+
 
     /**
      * get 镜像仓库认证信息数据。&lt;br&gt;
@@ -131,6 +134,7 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
         this.data = data;
     }
 
+
     /**
      * get Region ID
      *
@@ -150,6 +154,7 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 镜像仓库认证信息名称，不能重复
 
@@ -160,6 +165,7 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
         this.name = name;
         return this;
     }
+
 
     /**
      * set 镜像仓库认证信息类型，目前仅支持：docker-registry 类型，用来和docker registry认证的类型。
@@ -172,6 +178,7 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 镜像仓库认证信息数据。&lt;br&gt;
 必须包含server、username、password 字段，email 字段是可选的。&lt;br&gt;
@@ -183,6 +190,7 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
         this.data = data;
         return this;
     }
+
 
     /**
      * set Region ID

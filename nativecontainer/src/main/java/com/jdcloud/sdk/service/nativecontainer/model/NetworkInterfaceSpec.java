@@ -57,8 +57,8 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     /**
      * 网卡辅助IP，暂不支持
      */
+    
     private List<String> secondaryIpAddresses;
-
     /**
      * 自动分配的辅助Ip数量，暂不支持
      */
@@ -67,8 +67,8 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     /**
      * 要绑定的安全组ID列表，最多指定5个安全组
      */
+    
     private List<String> securityGroups;
-
     /**
      * 源和目标IP地址校验，取值为0或者1，默认为1，暂不支持此功能
      */
@@ -78,6 +78,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
      * 描述，最大长度256字符
      */
     private String description;
+
 
 
     /**
@@ -98,6 +99,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+
     /**
      * get 可用区，用户的默认可用区，暂不支持
      *
@@ -115,6 +117,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     public void setAz(String az) {
         this.az = az;
     }
+
 
     /**
      * get 网卡主IP
@@ -134,23 +137,25 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
         this.primaryIpAddress = primaryIpAddress;
     }
 
+
     /**
-     * get 网卡辅助IP，暂不支持
-     *
-     * @return
-     */
+    * get 网卡辅助IP，暂不支持
+    *
+    * @return
+    */
     public List<String> getSecondaryIpAddresses() {
         return secondaryIpAddresses;
     }
 
     /**
-     * set 网卡辅助IP，暂不支持
-     *
-     * @param secondaryIpAddresses
-     */
+    * set 网卡辅助IP，暂不支持
+    *
+    * @param secondaryIpAddresses
+    */
     public void setSecondaryIpAddresses(List<String> secondaryIpAddresses) {
         this.secondaryIpAddresses = secondaryIpAddresses;
     }
+
 
     /**
      * get 自动分配的辅助Ip数量，暂不支持
@@ -170,23 +175,25 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
         this.secondaryIpCount = secondaryIpCount;
     }
 
+
     /**
-     * get 要绑定的安全组ID列表，最多指定5个安全组
-     *
-     * @return
-     */
+    * get 要绑定的安全组ID列表，最多指定5个安全组
+    *
+    * @return
+    */
     public List<String> getSecurityGroups() {
         return securityGroups;
     }
 
     /**
-     * set 要绑定的安全组ID列表，最多指定5个安全组
-     *
-     * @param securityGroups
-     */
+    * set 要绑定的安全组ID列表，最多指定5个安全组
+    *
+    * @param securityGroups
+    */
     public void setSecurityGroups(List<String> securityGroups) {
         this.securityGroups = securityGroups;
     }
+
 
     /**
      * get 源和目标IP地址校验，取值为0或者1，默认为1，暂不支持此功能
@@ -205,6 +212,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     public void setSanityCheck(Boolean sanityCheck) {
         this.sanityCheck = sanityCheck;
     }
+
 
     /**
      * get 描述，最大长度256字符
@@ -225,6 +233,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 子网ID
      *
@@ -234,6 +243,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 可用区，用户的默认可用区，暂不支持
@@ -245,6 +255,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网卡主IP
      *
@@ -255,15 +266,17 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 网卡辅助IP，暂不支持
-     *
-     * @param secondaryIpAddresses
-     */
+    * set 网卡辅助IP，暂不支持
+    *
+    * @param secondaryIpAddresses
+    */
     public NetworkInterfaceSpec secondaryIpAddresses(List<String> secondaryIpAddresses) {
         this.secondaryIpAddresses = secondaryIpAddresses;
         return this;
     }
+
 
     /**
      * set 自动分配的辅助Ip数量，暂不支持
@@ -275,15 +288,17 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 要绑定的安全组ID列表，最多指定5个安全组
-     *
-     * @param securityGroups
-     */
+    * set 要绑定的安全组ID列表，最多指定5个安全组
+    *
+    * @param securityGroups
+    */
     public NetworkInterfaceSpec securityGroups(List<String> securityGroups) {
         this.securityGroups = securityGroups;
         return this;
     }
+
 
     /**
      * set 源和目标IP地址校验，取值为0或者1，默认为1，暂不支持此功能
@@ -295,6 +310,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述，最大长度256字符
      *
@@ -304,6 +320,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
 
     /**
@@ -329,5 +346,4 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
         }
         this.securityGroups.add(securityGroup);
     }
-
 }

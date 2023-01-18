@@ -40,8 +40,8 @@ public class HostAliasSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> hostnames;
-
     /**
      * IP地址
      * Required:true
@@ -50,23 +50,25 @@ public class HostAliasSpec  implements java.io.Serializable {
     private String ip;
 
 
+
     /**
-     * get 域名列表
-     *
-     * @return
-     */
+    * get 域名列表
+    *
+    * @return
+    */
     public List<String> getHostnames() {
         return hostnames;
     }
 
     /**
-     * set 域名列表
-     *
-     * @param hostnames
-     */
+    * set 域名列表
+    *
+    * @param hostnames
+    */
     public void setHostnames(List<String> hostnames) {
         this.hostnames = hostnames;
     }
+
 
     /**
      * get IP地址
@@ -87,15 +89,17 @@ public class HostAliasSpec  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 域名列表
-     *
-     * @param hostnames
-     */
+    * set 域名列表
+    *
+    * @param hostnames
+    */
     public HostAliasSpec hostnames(List<String> hostnames) {
         this.hostnames = hostnames;
         return this;
     }
+
 
     /**
      * set IP地址
@@ -106,6 +110,7 @@ public class HostAliasSpec  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
 
     /**
@@ -119,5 +124,4 @@ public class HostAliasSpec  implements java.io.Serializable {
         }
         this.hostnames.add(hostname);
     }
-
 }
