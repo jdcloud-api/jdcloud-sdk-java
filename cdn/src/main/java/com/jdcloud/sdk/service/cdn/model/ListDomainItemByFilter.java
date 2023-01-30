@@ -85,6 +85,11 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
     private String accelerateRegion;
 
     /**
+     * 海外状态(-1:不涉及海外加速,0:未激活,1:已激活,2:域名在cf不存在)
+     */
+    private Long overseaStatus;
+
+    /**
      * tags
      */
     
@@ -282,6 +287,25 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
 
 
     /**
+     * get 海外状态(-1:不涉及海外加速,0:未激活,1:已激活,2:域名在cf不存在)
+     *
+     * @return
+     */
+    public Long getOverseaStatus() {
+        return overseaStatus;
+    }
+
+    /**
+     * set 海外状态(-1:不涉及海外加速,0:未激活,1:已激活,2:域名在cf不存在)
+     *
+     * @param overseaStatus
+     */
+    public void setOverseaStatus(Long overseaStatus) {
+        this.overseaStatus = overseaStatus;
+    }
+
+
+    /**
     * get tags
     *
     * @return
@@ -407,6 +431,17 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
      */
     public ListDomainItemByFilter accelerateRegion(String accelerateRegion) {
         this.accelerateRegion = accelerateRegion;
+        return this;
+    }
+
+
+    /**
+     * set 海外状态(-1:不涉及海外加速,0:未激活,1:已激活,2:域名在cf不存在)
+     *
+     * @param overseaStatus
+     */
+    public ListDomainItemByFilter overseaStatus(Long overseaStatus) {
+        this.overseaStatus = overseaStatus;
         return this;
     }
 
