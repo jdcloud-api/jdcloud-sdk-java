@@ -76,6 +76,11 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
      */
     
     private List<TagFilter> tagFilters;
+    /**
+     * 筛选依据（false不需要查询, true 需要查询海外状态)默认false
+     */
+    private Boolean withThirdPartyStatus;
+
 
 
     /**
@@ -230,6 +235,25 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     }
 
 
+    /**
+     * get 筛选依据（false不需要查询, true 需要查询海外状态)默认false
+     *
+     * @return
+     */
+    public Boolean getWithThirdPartyStatus() {
+        return withThirdPartyStatus;
+    }
+
+    /**
+     * set 筛选依据（false不需要查询, true 需要查询海外状态)默认false
+     *
+     * @param withThirdPartyStatus
+     */
+    public void setWithThirdPartyStatus(Boolean withThirdPartyStatus) {
+        this.withThirdPartyStatus = withThirdPartyStatus;
+    }
+
+
 
     /**
      * set 根据关键字进行模糊匹配，域名或者回源信息
@@ -315,6 +339,17 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     */
     public GetDomainListByFilterRequest tagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
+        return this;
+    }
+
+
+    /**
+     * set 筛选依据（false不需要查询, true 需要查询海外状态)默认false
+     *
+     * @param withThirdPartyStatus
+     */
+    public GetDomainListByFilterRequest withThirdPartyStatus(Boolean withThirdPartyStatus) {
+        this.withThirdPartyStatus = withThirdPartyStatus;
         return this;
     }
 
