@@ -72,6 +72,11 @@ public class ContractSpec  implements java.io.Serializable {
      */
     private String caType;
 
+    /**
+     * 自定义签章类型（如需增加时间戳，此字段传time）
+     */
+    private String stampStyle;
+
 
 
     /**
@@ -207,6 +212,25 @@ public class ContractSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 自定义签章类型（如需增加时间戳，此字段传time）
+     *
+     * @return
+     */
+    public String getStampStyle() {
+        return stampStyle;
+    }
+
+    /**
+     * set 自定义签章类型（如需增加时间戳，此字段传time）
+     *
+     * @param stampStyle
+     */
+    public void setStampStyle(String stampStyle) {
+        this.stampStyle = stampStyle;
+    }
+
+
 
     /**
     * set 个人用户盖章信息
@@ -281,6 +305,17 @@ public class ContractSpec  implements java.io.Serializable {
      */
     public ContractSpec caType(String caType) {
         this.caType = caType;
+        return this;
+    }
+
+
+    /**
+     * set 自定义签章类型（如需增加时间戳，此字段传time）
+     *
+     * @param stampStyle
+     */
+    public ContractSpec stampStyle(String stampStyle) {
+        this.stampStyle = stampStyle;
         return this;
     }
 
