@@ -43,6 +43,11 @@ public class Qps  implements java.io.Serializable {
     private ChartItemValue wafAnti;
 
     /**
+     * bot防护统计数据
+     */
+    private ChartItemValue botAnti;
+
+    /**
      * cc防护统计数据
      */
     private ChartItemValue ccAnti;
@@ -94,6 +99,25 @@ public class Qps  implements java.io.Serializable {
      */
     public void setWafAnti(ChartItemValue wafAnti) {
         this.wafAnti = wafAnti;
+    }
+
+
+    /**
+     * get bot防护统计数据
+     *
+     * @return
+     */
+    public ChartItemValue getBotAnti() {
+        return botAnti;
+    }
+
+    /**
+     * set bot防护统计数据
+     *
+     * @param botAnti
+     */
+    public void setBotAnti(ChartItemValue botAnti) {
+        this.botAnti = botAnti;
     }
 
 
@@ -173,6 +197,17 @@ public class Qps  implements java.io.Serializable {
      */
     public Qps wafAnti(ChartItemValue wafAnti) {
         this.wafAnti = wafAnti;
+        return this;
+    }
+
+
+    /**
+     * set bot防护统计数据
+     *
+     * @param botAnti
+     */
+    public Qps botAnti(ChartItemValue botAnti) {
+        this.botAnti = botAnti;
         return this;
     }
 
