@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.tidb.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.tidb.model.DescribeInstancesResponse;
+import com.jdcloud.sdk.service.tidb.model.CreateInstanceByTimeResponse;
 
 /**
- * 查询当前账号下所有的 TiDB 实例。
+ * 根据日志备份创建一个新的 TiDB 实例
  */
-class DescribeInstancesExecutor extends JdcloudExecutor {
+class CreateInstanceByTimeExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "GET";
+        return "POST";
     }
 
     @Override
     public String url() {
-        return "/regions/{regionId}/instances:describeInstances";
+        return "/regions/{regionId}/instances/{instanceId}:createInstanceByTime";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return DescribeInstancesResponse.class;
+        return CreateInstanceByTimeResponse.class;
     }
 }

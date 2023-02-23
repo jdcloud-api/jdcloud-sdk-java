@@ -49,6 +49,13 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     private String engineVersion;
 
     /**
+     * CPU架构
+     * Required:true
+     */
+    @Required
+    private String architecture;
+
+    /**
      * TiDB节点规格和数目
      * Required:true
      */
@@ -156,6 +163,25 @@ public class TidbInstanceSpec  implements java.io.Serializable {
      */
     public void setEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
+    }
+
+
+    /**
+     * get CPU架构
+     *
+     * @return
+     */
+    public String getArchitecture() {
+        return architecture;
+    }
+
+    /**
+     * set CPU架构
+     *
+     * @param architecture
+     */
+    public void setArchitecture(String architecture) {
+        this.architecture = architecture;
     }
 
 
@@ -387,6 +413,17 @@ public class TidbInstanceSpec  implements java.io.Serializable {
      */
     public TidbInstanceSpec engineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
+        return this;
+    }
+
+
+    /**
+     * set CPU架构
+     *
+     * @param architecture
+     */
+    public TidbInstanceSpec architecture(String architecture) {
+        this.architecture = architecture;
         return this;
     }
 

@@ -26,12 +26,12 @@ package com.jdcloud.sdk.service.tidb.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.tidb.model.DescribeInstancesResponse;
+import com.jdcloud.sdk.service.tidb.model.DescribeRestoreTimeIntervalResponse;
 
 /**
- * 查询当前账号下所有的 TiDB 实例。
+ * 获取实例按时间点创建时间，可选择的最早时间和最晚时间
  */
-class DescribeInstancesExecutor extends JdcloudExecutor {
+class DescribeRestoreTimeIntervalExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -40,11 +40,11 @@ class DescribeInstancesExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/instances:describeInstances";
+        return "/regions/{regionId}/instances/{instanceId}:describeRestoreTimeInterval";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return DescribeInstancesResponse.class;
+        return DescribeRestoreTimeIntervalResponse.class;
     }
 }

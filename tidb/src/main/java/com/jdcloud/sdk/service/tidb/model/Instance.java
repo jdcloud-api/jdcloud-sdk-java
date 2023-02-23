@@ -51,6 +51,11 @@ public class Instance  implements java.io.Serializable {
     private String engineVersion;
 
     /**
+     * CPU架构
+     */
+    private String architecture;
+
+    /**
      * 实例引擎版本的详细版本号
      */
     private String minorVersion;
@@ -171,6 +176,25 @@ public class Instance  implements java.io.Serializable {
      */
     public void setEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
+    }
+
+
+    /**
+     * get CPU架构
+     *
+     * @return
+     */
+    public String getArchitecture() {
+        return architecture;
+    }
+
+    /**
+     * set CPU架构
+     *
+     * @param architecture
+     */
+    public void setArchitecture(String architecture) {
+        this.architecture = architecture;
     }
 
 
@@ -451,6 +475,17 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance engineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
+        return this;
+    }
+
+
+    /**
+     * set CPU架构
+     *
+     * @param architecture
+     */
+    public Instance architecture(String architecture) {
+        this.architecture = architecture;
         return this;
     }
 

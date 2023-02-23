@@ -26,12 +26,12 @@ package com.jdcloud.sdk.service.tidb.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.tidb.model.DescribeInstancesResponse;
+import com.jdcloud.sdk.service.tidb.model.DescribeAvailableDBInfoInternelResponse;
 
 /**
- * 查询当前账号下所有的 TiDB 实例。
+ * 查询 TiDB支持的基本信息。
  */
-class DescribeInstancesExecutor extends JdcloudExecutor {
+class DescribeAvailableDBInfoInternelExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -40,11 +40,11 @@ class DescribeInstancesExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/instances:describeInstances";
+        return "/regions/{regionId}/instances:describeAvailableDBInfoInternel";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return DescribeInstancesResponse.class;
+        return DescribeAvailableDBInfoInternelResponse.class;
     }
 }
