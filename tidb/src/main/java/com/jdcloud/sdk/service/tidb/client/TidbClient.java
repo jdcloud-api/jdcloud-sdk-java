@@ -43,6 +43,9 @@ import com.jdcloud.sdk.service.tidb.client.DeleteWhiteListGroupExecutor;
 import com.jdcloud.sdk.service.tidb.model.DescribeReplicationsRequest;
 import com.jdcloud.sdk.service.tidb.model.DescribeReplicationsResponse;
 import com.jdcloud.sdk.service.tidb.client.DescribeReplicationsExecutor;
+import com.jdcloud.sdk.service.tidb.model.DescribeRestoreTimeIntervalRequest;
+import com.jdcloud.sdk.service.tidb.model.DescribeRestoreTimeIntervalResponse;
+import com.jdcloud.sdk.service.tidb.client.DescribeRestoreTimeIntervalExecutor;
 import com.jdcloud.sdk.service.tidb.model.UpgradeEngineVersionRequest;
 import com.jdcloud.sdk.service.tidb.model.UpgradeEngineVersionResponse;
 import com.jdcloud.sdk.service.tidb.client.UpgradeEngineVersionExecutor;
@@ -82,6 +85,9 @@ import com.jdcloud.sdk.service.tidb.client.DescribeInstancesExecutor;
 import com.jdcloud.sdk.service.tidb.model.AddWhiteListGroupRequest;
 import com.jdcloud.sdk.service.tidb.model.AddWhiteListGroupResponse;
 import com.jdcloud.sdk.service.tidb.client.AddWhiteListGroupExecutor;
+import com.jdcloud.sdk.service.tidb.model.CreateInstanceByTimeRequest;
+import com.jdcloud.sdk.service.tidb.model.CreateInstanceByTimeResponse;
+import com.jdcloud.sdk.service.tidb.client.CreateInstanceByTimeExecutor;
 import com.jdcloud.sdk.service.tidb.model.ModifyNodeNumRequest;
 import com.jdcloud.sdk.service.tidb.model.ModifyNodeNumResponse;
 import com.jdcloud.sdk.service.tidb.client.ModifyNodeNumExecutor;
@@ -163,6 +169,9 @@ import com.jdcloud.sdk.service.tidb.client.DescribeUpgradePlanExecutor;
 import com.jdcloud.sdk.service.tidb.model.DescribeUpgradeVersionsRequest;
 import com.jdcloud.sdk.service.tidb.model.DescribeUpgradeVersionsResponse;
 import com.jdcloud.sdk.service.tidb.client.DescribeUpgradeVersionsExecutor;
+import com.jdcloud.sdk.service.tidb.model.DescribeAvailableDBInfoInternelRequest;
+import com.jdcloud.sdk.service.tidb.model.DescribeAvailableDBInfoInternelResponse;
+import com.jdcloud.sdk.service.tidb.client.DescribeAvailableDBInfoInternelExecutor;
 
 /**
  * tidbClient
@@ -255,6 +264,17 @@ public class TidbClient extends JdcloudClient {
      */
     public DescribeReplicationsResponse describeReplications(DescribeReplicationsRequest request) throws JdcloudSdkException {
         return new DescribeReplicationsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取实例按时间点创建时间，可选择的最早时间和最晚时间
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRestoreTimeIntervalResponse describeRestoreTimeInterval(DescribeRestoreTimeIntervalRequest request) throws JdcloudSdkException {
+        return new DescribeRestoreTimeIntervalExecutor().client(this).execute(request);
     }
 
     /**
@@ -398,6 +418,17 @@ public class TidbClient extends JdcloudClient {
      */
     public AddWhiteListGroupResponse addWhiteListGroup(AddWhiteListGroupRequest request) throws JdcloudSdkException {
         return new AddWhiteListGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据日志备份创建一个新的 TiDB 实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateInstanceByTimeResponse createInstanceByTime(CreateInstanceByTimeRequest request) throws JdcloudSdkException {
+        return new CreateInstanceByTimeExecutor().client(this).execute(request);
     }
 
     /**
@@ -695,6 +726,17 @@ public class TidbClient extends JdcloudClient {
      */
     public DescribeUpgradeVersionsResponse describeUpgradeVersions(DescribeUpgradeVersionsRequest request) throws JdcloudSdkException {
         return new DescribeUpgradeVersionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询 TiDB支持的基本信息。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAvailableDBInfoInternelResponse describeAvailableDBInfoInternel(DescribeAvailableDBInfoInternelRequest request) throws JdcloudSdkException {
+        return new DescribeAvailableDBInfoInternelExecutor().client(this).execute(request);
     }
 
 
