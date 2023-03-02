@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.starshield.model;
 
-import com.jdcloud.sdk.service.starshield.model.CdnSingleMetric;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -35,39 +34,55 @@ public class ZoneRequestSumResult extends JdcloudResult implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * data
+     * 单指标的值
+如果是带宽，值的单位是bps（bit per second）
+如果是流量，值的单位是Byte
+如果是请求量，值的单位是次数
+
      */
-    private CdnSingleMetric data;
+    private Number value;
 
 
 
     /**
-     * get data
+     * get 单指标的值
+如果是带宽，值的单位是bps（bit per second）
+如果是流量，值的单位是Byte
+如果是请求量，值的单位是次数
+
      *
      * @return
      */
-    public CdnSingleMetric getData() {
-        return data;
+    public Number getValue() {
+        return value;
     }
 
     /**
-     * set data
+     * set 单指标的值
+如果是带宽，值的单位是bps（bit per second）
+如果是流量，值的单位是Byte
+如果是请求量，值的单位是次数
+
      *
-     * @param data
+     * @param value
      */
-    public void setData(CdnSingleMetric data) {
-        this.data = data;
+    public void setValue(Number value) {
+        this.value = value;
     }
 
 
 
     /**
-     * set data
+     * set 单指标的值
+如果是带宽，值的单位是bps（bit per second）
+如果是流量，值的单位是Byte
+如果是请求量，值的单位是次数
+
      *
-     * @param data
+     * @param value
      */
-    public ZoneRequestSumResult data(CdnSingleMetric data) {
-        this.data = data;
+    public ZoneRequestSumResult value(Number value) {
+        this.value = value;
         return this;
     }
 

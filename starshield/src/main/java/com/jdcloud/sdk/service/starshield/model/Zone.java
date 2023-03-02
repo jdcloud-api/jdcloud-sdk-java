@@ -135,6 +135,11 @@ public class Zone  implements java.io.Serializable {
      */
     private Integer enableCname2Rs;
 
+    /**
+     * CNAME后缀
+     */
+    private String cname_suffix;
+
 
 
     /**
@@ -519,6 +524,25 @@ public class Zone  implements java.io.Serializable {
     }
 
 
+    /**
+     * get CNAME后缀
+     *
+     * @return
+     */
+    public String getCname_suffix() {
+        return cname_suffix;
+    }
+
+    /**
+     * set CNAME后缀
+     *
+     * @param cname_suffix
+     */
+    public void setCname_suffix(String cname_suffix) {
+        this.cname_suffix = cname_suffix;
+    }
+
+
 
     /**
      * set plan_pending
@@ -737,6 +761,17 @@ public class Zone  implements java.io.Serializable {
      */
     public Zone enableCname2Rs(Integer enableCname2Rs) {
         this.enableCname2Rs = enableCname2Rs;
+        return this;
+    }
+
+
+    /**
+     * set CNAME后缀
+     *
+     * @param cname_suffix
+     */
+    public Zone cname_suffix(String cname_suffix) {
+        this.cname_suffix = cname_suffix;
         return this;
     }
 

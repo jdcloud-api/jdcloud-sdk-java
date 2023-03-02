@@ -496,6 +496,9 @@ import com.jdcloud.sdk.service.starshield.client.PurgeAllFilesExecutor;
 import com.jdcloud.sdk.service.starshield.model.DateHistogramRequest;
 import com.jdcloud.sdk.service.starshield.model.DateHistogramResponse;
 import com.jdcloud.sdk.service.starshield.client.DateHistogramExecutor;
+import com.jdcloud.sdk.service.starshield.model.CloseFirewallBotRequest;
+import com.jdcloud.sdk.service.starshield.model.CloseFirewallBotResponse;
+import com.jdcloud.sdk.service.starshield.client.CloseFirewallBotExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeHTTP3SettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeHTTP3SettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeHTTP3SettingExecutor;
@@ -2436,6 +2439,17 @@ Full (Strict), 访客和星盾之间的 SSL -- 访客在您的网站上看到 HT
      */
     public DateHistogramResponse dateHistogram(DateHistogramRequest request) throws JdcloudSdkException {
         return new DateHistogramExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭BOT
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CloseFirewallBotResponse closeFirewallBot(CloseFirewallBotRequest request) throws JdcloudSdkException {
+        return new CloseFirewallBotExecutor().client(this).execute(request);
     }
 
     /**
