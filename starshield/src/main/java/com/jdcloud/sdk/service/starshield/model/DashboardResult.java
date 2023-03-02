@@ -24,7 +24,9 @@
 
 package com.jdcloud.sdk.service.starshield.model;
 
-import com.jdcloud.sdk.service.starshield.model.ZoneAnalytics;
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.starshield.model.Totals;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -35,41 +37,88 @@ public class DashboardResult extends JdcloudResult implements java.io.Serializab
     private static final long serialVersionUID = 1L;
 
     /**
-     * zoneAnalytics
+     * totals
      */
-    private ZoneAnalytics zoneAnalytics;
+    private Totals totals;
 
+    /**
+     * Time deltas containing metadata about each bucket of time. The number of buckets (resolution) is determined by the amount of time between the since and until parameters.
+     */
+    
+    private List<Totals> timeseries;
 
 
     /**
-     * get zoneAnalytics
+     * get totals
      *
      * @return
      */
-    public ZoneAnalytics getZoneAnalytics() {
-        return zoneAnalytics;
+    public Totals getTotals() {
+        return totals;
     }
 
     /**
-     * set zoneAnalytics
+     * set totals
      *
-     * @param zoneAnalytics
+     * @param totals
      */
-    public void setZoneAnalytics(ZoneAnalytics zoneAnalytics) {
-        this.zoneAnalytics = zoneAnalytics;
+    public void setTotals(Totals totals) {
+        this.totals = totals;
+    }
+
+
+    /**
+    * get Time deltas containing metadata about each bucket of time. The number of buckets (resolution) is determined by the amount of time between the since and until parameters.
+    *
+    * @return
+    */
+    public List<Totals> getTimeseries() {
+        return timeseries;
+    }
+
+    /**
+    * set Time deltas containing metadata about each bucket of time. The number of buckets (resolution) is determined by the amount of time between the since and until parameters.
+    *
+    * @param timeseries
+    */
+    public void setTimeseries(List<Totals> timeseries) {
+        this.timeseries = timeseries;
     }
 
 
 
     /**
-     * set zoneAnalytics
+     * set totals
      *
-     * @param zoneAnalytics
+     * @param totals
      */
-    public DashboardResult zoneAnalytics(ZoneAnalytics zoneAnalytics) {
-        this.zoneAnalytics = zoneAnalytics;
+    public DashboardResult totals(Totals totals) {
+        this.totals = totals;
         return this;
     }
 
 
+    /**
+    * set Time deltas containing metadata about each bucket of time. The number of buckets (resolution) is determined by the amount of time between the since and until parameters.
+    *
+    * @param timeseries
+    */
+    public DashboardResult timeseries(List<Totals> timeseries) {
+        this.timeseries = timeseries;
+        return this;
+    }
+
+
+
+    /**
+     * add item to Time deltas containing metadata about each bucket of time. The number of buckets (resolution) is determined by the amount of time between the since and until parameters.
+     *
+     * @param timeserie
+     */
+    public void addTimeserie(Totals timeserie) {
+        if (this.timeseries == null) {
+            this.timeseries = new ArrayList<>();
+        }
+        this.timeseries.add(timeserie);
+    }
 }

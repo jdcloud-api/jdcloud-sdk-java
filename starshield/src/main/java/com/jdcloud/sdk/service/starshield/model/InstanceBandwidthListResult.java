@@ -42,10 +42,10 @@ public class InstanceBandwidthListResult extends JdcloudResult implements java.i
     private Number total;
 
     /**
-     * dataList
+     * cdnZoneBandwidths
      */
     
-    private List<CdnZoneBandwidth> dataList;
+    private List<CdnZoneBandwidth> cdnZoneBandwidths;
 
 
     /**
@@ -68,21 +68,21 @@ public class InstanceBandwidthListResult extends JdcloudResult implements java.i
 
 
     /**
-    * get dataList
+    * get cdnZoneBandwidths
     *
     * @return
     */
-    public List<CdnZoneBandwidth> getDataList() {
-        return dataList;
+    public List<CdnZoneBandwidth> getCdnZoneBandwidths() {
+        return cdnZoneBandwidths;
     }
 
     /**
-    * set dataList
+    * set cdnZoneBandwidths
     *
-    * @param dataList
+    * @param cdnZoneBandwidths
     */
-    public void setDataList(List<CdnZoneBandwidth> dataList) {
-        this.dataList = dataList;
+    public void setCdnZoneBandwidths(List<CdnZoneBandwidth> cdnZoneBandwidths) {
+        this.cdnZoneBandwidths = cdnZoneBandwidths;
     }
 
 
@@ -99,26 +99,26 @@ public class InstanceBandwidthListResult extends JdcloudResult implements java.i
 
 
     /**
-    * set dataList
+    * set cdnZoneBandwidths
     *
-    * @param dataList
+    * @param cdnZoneBandwidths
     */
-    public InstanceBandwidthListResult dataList(List<CdnZoneBandwidth> dataList) {
-        this.dataList = dataList;
+    public InstanceBandwidthListResult cdnZoneBandwidths(List<CdnZoneBandwidth> cdnZoneBandwidths) {
+        this.cdnZoneBandwidths = cdnZoneBandwidths;
         return this;
     }
 
 
 
     /**
-     * add item to dataList
+     * add item to cdnZoneBandwidths
      *
-     * @param dataList
+     * @param cdnZoneBandwidth
      */
-    public void addDataList(CdnZoneBandwidth dataList) {
-        if (this.dataList == null) {
-            this.dataList = new ArrayList<>();
+    public void addCdnZoneBandwidth(CdnZoneBandwidth cdnZoneBandwidth) {
+        if (this.cdnZoneBandwidths == null) {
+            this.cdnZoneBandwidths = new ArrayList<>();
         }
-        this.dataList.add(dataList);
+        this.cdnZoneBandwidths.add(cdnZoneBandwidth);
     }
 }

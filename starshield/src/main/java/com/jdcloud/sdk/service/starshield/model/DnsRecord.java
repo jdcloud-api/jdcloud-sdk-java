@@ -85,6 +85,11 @@ public class DnsRecord  implements java.io.Serializable {
     /**
      * 记录类型
      */
+    private String type;
+
+    /**
+     * 记录类型(值同type)
+     */
     private String ty_pe;
 
     /**
@@ -304,12 +309,31 @@ public class DnsRecord  implements java.io.Serializable {
      *
      * @return
      */
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * set 记录类型
+     *
+     * @param type
+     */
+    public void setType(String type) {
+        this.type = type;
+    }
+
+
+    /**
+     * get 记录类型(值同type)
+     *
+     * @return
+     */
     public String getTy_pe() {
         return ty_pe;
     }
 
     /**
-     * set 记录类型
+     * set 记录类型(值同type)
      *
      * @param ty_pe
      */
@@ -507,6 +531,17 @@ public class DnsRecord  implements java.io.Serializable {
 
     /**
      * set 记录类型
+     *
+     * @param type
+     */
+    public DnsRecord type(String type) {
+        this.type = type;
+        return this;
+    }
+
+
+    /**
+     * set 记录类型(值同type)
      *
      * @param ty_pe
      */

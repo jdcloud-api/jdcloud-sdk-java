@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.starshield.model;
 
-import com.jdcloud.sdk.service.starshield.model.CdnBandwidthMax;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -35,39 +34,74 @@ public class ZoneBandwidthMaxResult extends JdcloudResult implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * data
+     * 带宽峰值，单位bps（bit per second）
      */
-    private CdnBandwidthMax data;
+    private Double value;
+
+    /**
+     * 带宽峰值的发生时间。值为时间戳对应的long值。
+     */
+    private Number timestamp;
 
 
 
     /**
-     * get data
+     * get 带宽峰值，单位bps（bit per second）
      *
      * @return
      */
-    public CdnBandwidthMax getData() {
-        return data;
+    public Double getValue() {
+        return value;
     }
 
     /**
-     * set data
+     * set 带宽峰值，单位bps（bit per second）
      *
-     * @param data
+     * @param value
      */
-    public void setData(CdnBandwidthMax data) {
-        this.data = data;
+    public void setValue(Double value) {
+        this.value = value;
+    }
+
+
+    /**
+     * get 带宽峰值的发生时间。值为时间戳对应的long值。
+     *
+     * @return
+     */
+    public Number getTimestamp() {
+        return timestamp;
+    }
+
+    /**
+     * set 带宽峰值的发生时间。值为时间戳对应的long值。
+     *
+     * @param timestamp
+     */
+    public void setTimestamp(Number timestamp) {
+        this.timestamp = timestamp;
     }
 
 
 
     /**
-     * set data
+     * set 带宽峰值，单位bps（bit per second）
      *
-     * @param data
+     * @param value
      */
-    public ZoneBandwidthMaxResult data(CdnBandwidthMax data) {
-        this.data = data;
+    public ZoneBandwidthMaxResult value(Double value) {
+        this.value = value;
+        return this;
+    }
+
+
+    /**
+     * set 带宽峰值的发生时间。值为时间戳对应的long值。
+     *
+     * @param timestamp
+     */
+    public ZoneBandwidthMaxResult timestamp(Number timestamp) {
+        this.timestamp = timestamp;
         return this;
     }
 
