@@ -53,6 +53,11 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
     private String serviceName;
 
     /**
+     * 目前支持postpaid_by_spot：抢占式实例(后付费)。
+     */
+    private String chargeMode;
+
+    /**
      * &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceTypes&#x60;: 实例规格，精确匹配，支持多个
 &#x60;az&#x60;: 可用区，精确匹配，支持多个
@@ -86,6 +91,25 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
      */
     public void setServiceName(String serviceName) {
         this.serviceName = serviceName;
+    }
+
+
+    /**
+     * get 目前支持postpaid_by_spot：抢占式实例(后付费)。
+     *
+     * @return
+     */
+    public String getChargeMode() {
+        return chargeMode;
+    }
+
+    /**
+     * set 目前支持postpaid_by_spot：抢占式实例(后付费)。
+     *
+     * @param chargeMode
+     */
+    public void setChargeMode(String chargeMode) {
+        this.chargeMode = chargeMode;
     }
 
 
@@ -143,6 +167,17 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
      */
     public DescribeInstanceTypesRequest serviceName(String serviceName) {
         this.serviceName = serviceName;
+        return this;
+    }
+
+
+    /**
+     * set 目前支持postpaid_by_spot：抢占式实例(后付费)。
+     *
+     * @param chargeMode
+     */
+    public DescribeInstanceTypesRequest chargeMode(String chargeMode) {
+        this.chargeMode = chargeMode;
         return this;
     }
 

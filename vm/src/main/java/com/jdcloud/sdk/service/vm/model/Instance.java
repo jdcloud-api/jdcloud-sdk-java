@@ -136,6 +136,11 @@ public class Instance  implements java.io.Serializable {
     private Charge charge;
 
     /**
+     * 抢占实例状态机
+     */
+    private String spotStatus;
+
+    /**
      * 云主机关联的高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称。
      */
     private Ag ag;
@@ -192,6 +197,21 @@ public class Instance  implements java.io.Serializable {
      * 虚机CPU拓扑
      */
     private CpuTopology cpuTopology;
+
+    /**
+     * 云主机操作系统版本，如7.6
+     */
+    private String osVersion;
+
+    /**
+     * 具体操作系统CentOS
+     */
+    private String platform;
+
+    /**
+     * 架构信息，如x86_64
+     */
+    private String architecture;
 
 
 
@@ -576,6 +596,25 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
+     * get 抢占实例状态机
+     *
+     * @return
+     */
+    public String getSpotStatus() {
+        return spotStatus;
+    }
+
+    /**
+     * set 抢占实例状态机
+     *
+     * @param spotStatus
+     */
+    public void setSpotStatus(String spotStatus) {
+        this.spotStatus = spotStatus;
+    }
+
+
+    /**
      * get 云主机关联的高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称。
      *
      * @return
@@ -787,6 +826,63 @@ public class Instance  implements java.io.Serializable {
      */
     public void setCpuTopology(CpuTopology cpuTopology) {
         this.cpuTopology = cpuTopology;
+    }
+
+
+    /**
+     * get 云主机操作系统版本，如7.6
+     *
+     * @return
+     */
+    public String getOsVersion() {
+        return osVersion;
+    }
+
+    /**
+     * set 云主机操作系统版本，如7.6
+     *
+     * @param osVersion
+     */
+    public void setOsVersion(String osVersion) {
+        this.osVersion = osVersion;
+    }
+
+
+    /**
+     * get 具体操作系统CentOS
+     *
+     * @return
+     */
+    public String getPlatform() {
+        return platform;
+    }
+
+    /**
+     * set 具体操作系统CentOS
+     *
+     * @param platform
+     */
+    public void setPlatform(String platform) {
+        this.platform = platform;
+    }
+
+
+    /**
+     * get 架构信息，如x86_64
+     *
+     * @return
+     */
+    public String getArchitecture() {
+        return architecture;
+    }
+
+    /**
+     * set 架构信息，如x86_64
+     *
+     * @param architecture
+     */
+    public void setArchitecture(String architecture) {
+        this.architecture = architecture;
     }
 
 
@@ -1012,6 +1108,17 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
+     * set 抢占实例状态机
+     *
+     * @param spotStatus
+     */
+    public Instance spotStatus(String spotStatus) {
+        this.spotStatus = spotStatus;
+        return this;
+    }
+
+
+    /**
      * set 云主机关联的高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称。
      *
      * @param ag
@@ -1131,6 +1238,39 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance cpuTopology(CpuTopology cpuTopology) {
         this.cpuTopology = cpuTopology;
+        return this;
+    }
+
+
+    /**
+     * set 云主机操作系统版本，如7.6
+     *
+     * @param osVersion
+     */
+    public Instance osVersion(String osVersion) {
+        this.osVersion = osVersion;
+        return this;
+    }
+
+
+    /**
+     * set 具体操作系统CentOS
+     *
+     * @param platform
+     */
+    public Instance platform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+
+
+    /**
+     * set 架构信息，如x86_64
+     *
+     * @param architecture
+     */
+    public Instance architecture(String architecture) {
+        this.architecture = architecture;
         return this;
     }
 
