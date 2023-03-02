@@ -72,6 +72,11 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
     private String clientToken;
 
     /**
+     * 是否导出整机镜像（包含数据盘），默认为false，仅导出系统盘。
+     */
+    private Boolean isAllDisk;
+
+    /**
      * 地域ID。
      * Required:true
      */
@@ -164,6 +169,25 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
+     * get 是否导出整机镜像（包含数据盘），默认为false，仅导出系统盘。
+     *
+     * @return
+     */
+    public Boolean getIsAllDisk() {
+        return isAllDisk;
+    }
+
+    /**
+     * set 是否导出整机镜像（包含数据盘），默认为false，仅导出系统盘。
+     *
+     * @param isAllDisk
+     */
+    public void setIsAllDisk(Boolean isAllDisk) {
+        this.isAllDisk = isAllDisk;
+    }
+
+
+    /**
      * get 地域ID。
      *
      * @return
@@ -242,6 +266,17 @@ public class ExportImageRequest extends JdcloudRequest implements java.io.Serial
      */
     public ExportImageRequest clientToken(String clientToken) {
         this.clientToken = clientToken;
+        return this;
+    }
+
+
+    /**
+     * set 是否导出整机镜像（包含数据盘），默认为false，仅导出系统盘。
+     *
+     * @param isAllDisk
+     */
+    public ExportImageRequest isAllDisk(Boolean isAllDisk) {
+        this.isAllDisk = isAllDisk;
         return this;
     }
 

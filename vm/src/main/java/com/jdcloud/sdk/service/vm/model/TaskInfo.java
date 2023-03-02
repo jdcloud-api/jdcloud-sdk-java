@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.vm.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 镜像导入导出任务详情。
@@ -83,10 +85,15 @@ public class TaskInfo  implements java.io.Serializable {
     private String ossUrl;
 
     /**
-     * 导出镜像时有效，表示生成的ossObject名称。
+     * 导出镜像时有效，表示生成的系统盘对应的ossObject名称。
      */
     private String ossObject;
 
+    /**
+     * 导出镜像时有效，表示生成的系统盘和数据盘对应的ossObject名称列表。
+     */
+    
+    private List<String> ossObjects;
     /**
      * 导入镜像时有效，表示用户指定的镜像名称。
      */
@@ -290,7 +297,7 @@ public class TaskInfo  implements java.io.Serializable {
 
 
     /**
-     * get 导出镜像时有效，表示生成的ossObject名称。
+     * get 导出镜像时有效，表示生成的系统盘对应的ossObject名称。
      *
      * @return
      */
@@ -299,12 +306,31 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 导出镜像时有效，表示生成的ossObject名称。
+     * set 导出镜像时有效，表示生成的系统盘对应的ossObject名称。
      *
      * @param ossObject
      */
     public void setOssObject(String ossObject) {
         this.ossObject = ossObject;
+    }
+
+
+    /**
+    * get 导出镜像时有效，表示生成的系统盘和数据盘对应的ossObject名称列表。
+    *
+    * @return
+    */
+    public List<String> getOssObjects() {
+        return ossObjects;
+    }
+
+    /**
+    * set 导出镜像时有效，表示生成的系统盘和数据盘对应的ossObject名称列表。
+    *
+    * @param ossObjects
+    */
+    public void setOssObjects(List<String> ossObjects) {
+        this.ossObjects = ossObjects;
     }
 
 
@@ -458,12 +484,23 @@ public class TaskInfo  implements java.io.Serializable {
 
 
     /**
-     * set 导出镜像时有效，表示生成的ossObject名称。
+     * set 导出镜像时有效，表示生成的系统盘对应的ossObject名称。
      *
      * @param ossObject
      */
     public TaskInfo ossObject(String ossObject) {
         this.ossObject = ossObject;
+        return this;
+    }
+
+
+    /**
+    * set 导出镜像时有效，表示生成的系统盘和数据盘对应的ossObject名称列表。
+    *
+    * @param ossObjects
+    */
+    public TaskInfo ossObjects(List<String> ossObjects) {
+        this.ossObjects = ossObjects;
         return this;
     }
 
@@ -490,4 +527,16 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
 
+
+    /**
+     * add item to 导出镜像时有效，表示生成的系统盘和数据盘对应的ossObject名称列表。
+     *
+     * @param ossObject
+     */
+    public void addOssObject(String ossObject) {
+        if (this.ossObjects == null) {
+            this.ossObjects = new ArrayList<>();
+        }
+        this.ossObjects.add(ossObject);
+    }
 }
