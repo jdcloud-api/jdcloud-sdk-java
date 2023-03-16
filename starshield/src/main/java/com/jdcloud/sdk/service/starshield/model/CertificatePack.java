@@ -46,6 +46,16 @@ sni_custom   自定义
 advanced     专用
 
      */
+    private String type;
+
+    /**
+     * 证书包的类型，有效值universal/sni_custom/advanced
+universal    通用
+sni_custom   自定义
+advanced     专用
+(值同type)
+
+     */
     private String ty_pe;
 
     /**
@@ -93,6 +103,34 @@ advanced     专用
      *
      * @return
      */
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * set 证书包的类型，有效值universal/sni_custom/advanced
+universal    通用
+sni_custom   自定义
+advanced     专用
+
+     *
+     * @param type
+     */
+    public void setType(String type) {
+        this.type = type;
+    }
+
+
+    /**
+     * get 证书包的类型，有效值universal/sni_custom/advanced
+universal    通用
+sni_custom   自定义
+advanced     专用
+(值同type)
+
+     *
+     * @return
+     */
     public String getTy_pe() {
         return ty_pe;
     }
@@ -102,6 +140,7 @@ advanced     专用
 universal    通用
 sni_custom   自定义
 advanced     专用
+(值同type)
 
      *
      * @param ty_pe
@@ -185,6 +224,22 @@ advanced     专用
 universal    通用
 sni_custom   自定义
 advanced     专用
+
+     *
+     * @param type
+     */
+    public CertificatePack type(String type) {
+        this.type = type;
+        return this;
+    }
+
+
+    /**
+     * set 证书包的类型，有效值universal/sni_custom/advanced
+universal    通用
+sni_custom   自定义
+advanced     专用
+(值同type)
 
      *
      * @param ty_pe
