@@ -87,6 +87,16 @@ public class ActivityLog  implements java.io.Serializable {
      */
     private String ruleId;
 
+    /**
+     * group
+     */
+    private String group;
+
+    /**
+     * ruleMessage
+     */
+    private String ruleMessage;
+
 
 
     /**
@@ -298,6 +308,44 @@ public class ActivityLog  implements java.io.Serializable {
     }
 
 
+    /**
+     * get group
+     *
+     * @return
+     */
+    public String getGroup() {
+        return group;
+    }
+
+    /**
+     * set group
+     *
+     * @param group
+     */
+    public void setGroup(String group) {
+        this.group = group;
+    }
+
+
+    /**
+     * get ruleMessage
+     *
+     * @return
+     */
+    public String getRuleMessage() {
+        return ruleMessage;
+    }
+
+    /**
+     * set ruleMessage
+     *
+     * @param ruleMessage
+     */
+    public void setRuleMessage(String ruleMessage) {
+        this.ruleMessage = ruleMessage;
+    }
+
+
 
     /**
      * set timestamp
@@ -416,6 +464,28 @@ public class ActivityLog  implements java.io.Serializable {
      */
     public ActivityLog ruleId(String ruleId) {
         this.ruleId = ruleId;
+        return this;
+    }
+
+
+    /**
+     * set group
+     *
+     * @param group
+     */
+    public ActivityLog group(String group) {
+        this.group = group;
+        return this;
+    }
+
+
+    /**
+     * set ruleMessage
+     *
+     * @param ruleMessage
+     */
+    public ActivityLog ruleMessage(String ruleMessage) {
+        this.ruleMessage = ruleMessage;
         return this;
     }
 
