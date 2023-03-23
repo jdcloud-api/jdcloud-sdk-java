@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Mount-Target
- * 挂载目标相关接口。
+ * File-System
+ * 文件系统相关接口。
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,15 +26,13 @@ package com.jdcloud.sdk.service.zfs.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * -   查询挂载目标列表。
-
+ * 查询挂载客户端IP
  */
-public class DescribeMountTargetsRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeMountedClientsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -44,17 +42,27 @@ public class DescribeMountTargetsRequest extends JdcloudRequest implements java.
     private Integer pageNumber;
 
     /**
-     * 分页大小，默认为20，取值范围：[10,100]
+     * 分页大小，默认为10，取值范围：[10,100]
      */
     private Integer pageSize;
 
     /**
-     * fileSystemId - 文件系统ID，精确匹配，支持多个
-mountTargetId - 挂载目标ID，精确匹配，支持多个
+     * 文件系统ID
+     * Required:true
+     */
+    @Required
+    private String fileSystemId;
 
+    /**
+     * 挂载目标ID
+     */
+    private String mountTargetId;
+
+    /**
+     * 查询客户端IP数组
      */
     
-    private List<Filter> filters;
+    private List<String> clientIP;
     /**
      * 地域ID
      * Required:true
@@ -84,7 +92,7 @@ mountTargetId - 挂载目标ID，精确匹配，支持多个
 
 
     /**
-     * get 分页大小，默认为20，取值范围：[10,100]
+     * get 分页大小，默认为10，取值范围：[10,100]
      *
      * @return
      */
@@ -93,7 +101,7 @@ mountTargetId - 挂载目标ID，精确匹配，支持多个
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,100]
+     * set 分页大小，默认为10，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -103,25 +111,59 @@ mountTargetId - 挂载目标ID，精确匹配，支持多个
 
 
     /**
-    * get fileSystemId - 文件系统ID，精确匹配，支持多个
-mountTargetId - 挂载目标ID，精确匹配，支持多个
-
-    *
-    * @return
-    */
-    public List<Filter> getFilters() {
-        return filters;
+     * get 文件系统ID
+     *
+     * @return
+     */
+    public String getFileSystemId() {
+        return fileSystemId;
     }
 
     /**
-    * set fileSystemId - 文件系统ID，精确匹配，支持多个
-mountTargetId - 挂载目标ID，精确匹配，支持多个
+     * set 文件系统ID
+     *
+     * @param fileSystemId
+     */
+    public void setFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+    }
 
+
+    /**
+     * get 挂载目标ID
+     *
+     * @return
+     */
+    public String getMountTargetId() {
+        return mountTargetId;
+    }
+
+    /**
+     * set 挂载目标ID
+     *
+     * @param mountTargetId
+     */
+    public void setMountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
+    }
+
+
+    /**
+    * get 查询客户端IP数组
     *
-    * @param filters
+    * @return
     */
-    public void setFilters(List<Filter> filters) {
-        this.filters = filters;
+    public List<String> getClientIP() {
+        return clientIP;
+    }
+
+    /**
+    * set 查询客户端IP数组
+    *
+    * @param clientIP
+    */
+    public void setClientIP(List<String> clientIP) {
+        this.clientIP = clientIP;
     }
 
 
@@ -150,32 +192,52 @@ mountTargetId - 挂载目标ID，精确匹配，支持多个
      *
      * @param pageNumber
      */
-    public DescribeMountTargetsRequest pageNumber(Integer pageNumber) {
+    public DescribeMountedClientsRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,100]
+     * set 分页大小，默认为10，取值范围：[10,100]
      *
      * @param pageSize
      */
-    public DescribeMountTargetsRequest pageSize(Integer pageSize) {
+    public DescribeMountedClientsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
 
     /**
-    * set fileSystemId - 文件系统ID，精确匹配，支持多个
-mountTargetId - 挂载目标ID，精确匹配，支持多个
+     * set 文件系统ID
+     *
+     * @param fileSystemId
+     */
+    public DescribeMountedClientsRequest fileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+        return this;
+    }
 
+
+    /**
+     * set 挂载目标ID
+     *
+     * @param mountTargetId
+     */
+    public DescribeMountedClientsRequest mountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
+        return this;
+    }
+
+
+    /**
+    * set 查询客户端IP数组
     *
-    * @param filters
+    * @param clientIP
     */
-    public DescribeMountTargetsRequest filters(List<Filter> filters) {
-        this.filters = filters;
+    public DescribeMountedClientsRequest clientIP(List<String> clientIP) {
+        this.clientIP = clientIP;
         return this;
     }
 
@@ -185,7 +247,7 @@ mountTargetId - 挂载目标ID，精确匹配，支持多个
      *
      * @param regionId
      */
-    public DescribeMountTargetsRequest regionId(String regionId) {
+    public DescribeMountedClientsRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -193,16 +255,14 @@ mountTargetId - 挂载目标ID，精确匹配，支持多个
 
 
     /**
-     * add item to fileSystemId - 文件系统ID，精确匹配，支持多个
-mountTargetId - 挂载目标ID，精确匹配，支持多个
-
+     * add item to 查询客户端IP数组
      *
-     * @param filter
+     * @param clientIP
      */
-    public void addFilter(Filter filter) {
-        if (this.filters == null) {
-            this.filters = new ArrayList<>();
+    public void addClientIP(String clientIP) {
+        if (this.clientIP == null) {
+            this.clientIP = new ArrayList<>();
         }
-        this.filters.add(filter);
+        this.clientIP.add(clientIP);
     }
 }

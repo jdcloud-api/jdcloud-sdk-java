@@ -47,6 +47,7 @@ public class TagFilter  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> values;
 
 
@@ -68,23 +69,25 @@ public class TagFilter  implements java.io.Serializable {
         this.key = key;
     }
 
+
     /**
-     * get Tag值
-     *
-     * @return
-     */
+    * get Tag值
+    *
+    * @return
+    */
     public List<String> getValues() {
         return values;
     }
 
     /**
-     * set Tag值
-     *
-     * @param values
-     */
+    * set Tag值
+    *
+    * @param values
+    */
     public void setValues(List<String> values) {
         this.values = values;
     }
+
 
 
     /**
@@ -97,15 +100,17 @@ public class TagFilter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set Tag值
-     *
-     * @param values
-     */
+    * set Tag值
+    *
+    * @param values
+    */
     public TagFilter values(List<String> values) {
         this.values = values;
         return this;
     }
+
 
 
     /**
@@ -119,5 +124,4 @@ public class TagFilter  implements java.io.Serializable {
         }
         this.values.add(value);
     }
-
 }

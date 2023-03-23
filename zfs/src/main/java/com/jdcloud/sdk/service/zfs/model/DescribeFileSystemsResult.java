@@ -41,31 +41,33 @@ public class DescribeFileSystemsResult extends JdcloudResult implements java.io.
     /**
      * fileSystems
      */
+    
     private List<FileSystem> fileSystems;
-
     /**
      * 查询的文件系统数目
      */
     private Integer totalCount;
 
 
+
     /**
-     * get fileSystems
-     *
-     * @return
-     */
+    * get fileSystems
+    *
+    * @return
+    */
     public List<FileSystem> getFileSystems() {
         return fileSystems;
     }
 
     /**
-     * set fileSystems
-     *
-     * @param fileSystems
-     */
+    * set fileSystems
+    *
+    * @param fileSystems
+    */
     public void setFileSystems(List<FileSystem> fileSystems) {
         this.fileSystems = fileSystems;
     }
+
 
     /**
      * get 查询的文件系统数目
@@ -86,15 +88,17 @@ public class DescribeFileSystemsResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
-     * set fileSystems
-     *
-     * @param fileSystems
-     */
+    * set fileSystems
+    *
+    * @param fileSystems
+    */
     public DescribeFileSystemsResult fileSystems(List<FileSystem> fileSystems) {
         this.fileSystems = fileSystems;
         return this;
     }
+
 
     /**
      * set 查询的文件系统数目
@@ -105,6 +109,7 @@ public class DescribeFileSystemsResult extends JdcloudResult implements java.io.
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class DescribeFileSystemsResult extends JdcloudResult implements java.io.
         }
         this.fileSystems.add(fileSystem);
     }
-
 }

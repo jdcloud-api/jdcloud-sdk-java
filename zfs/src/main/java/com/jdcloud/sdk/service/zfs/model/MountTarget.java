@@ -78,6 +78,7 @@ public class MountTarget  implements java.io.Serializable {
     private String dnsName;
 
 
+
     /**
      * get 文件系统ID
      *
@@ -95,6 +96,7 @@ public class MountTarget  implements java.io.Serializable {
     public void setFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
     }
+
 
     /**
      * get ipv4地址
@@ -114,6 +116,7 @@ public class MountTarget  implements java.io.Serializable {
         this.ipAddress = ipAddress;
     }
 
+
     /**
      * get 挂载目标状态
      *
@@ -131,6 +134,7 @@ public class MountTarget  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 挂载目标ID
@@ -150,6 +154,7 @@ public class MountTarget  implements java.io.Serializable {
         this.mountTargetId = mountTargetId;
     }
 
+
     /**
      * get 子网ID
      *
@@ -167,6 +172,7 @@ public class MountTarget  implements java.io.Serializable {
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
     /**
      * get vpcID
@@ -186,6 +192,7 @@ public class MountTarget  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 安全组ID
      *
@@ -204,6 +211,7 @@ public class MountTarget  implements java.io.Serializable {
         this.securityGroupId = securityGroupId;
     }
 
+
     /**
      * get 创建时间
      *
@@ -221,6 +229,7 @@ public class MountTarget  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get dns名称
@@ -241,6 +250,7 @@ public class MountTarget  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 文件系统ID
      *
@@ -250,6 +260,7 @@ public class MountTarget  implements java.io.Serializable {
         this.fileSystemId = fileSystemId;
         return this;
     }
+
 
     /**
      * set ipv4地址
@@ -261,6 +272,7 @@ public class MountTarget  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 挂载目标状态
      *
@@ -270,6 +282,7 @@ public class MountTarget  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 挂载目标ID
@@ -281,6 +294,7 @@ public class MountTarget  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网ID
      *
@@ -290,6 +304,7 @@ public class MountTarget  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set vpcID
@@ -301,6 +316,7 @@ public class MountTarget  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 安全组ID
      *
@@ -311,6 +327,7 @@ public class MountTarget  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -320,6 +337,7 @@ public class MountTarget  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set dns名称

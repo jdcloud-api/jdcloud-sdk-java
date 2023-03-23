@@ -41,6 +41,7 @@ public class CreateMountTargetResult extends JdcloudResult implements java.io.Se
     private String mountTargetId;
 
 
+
     /**
      * get 挂载目标 ID
      *
@@ -58,6 +59,7 @@ public class CreateMountTargetResult extends JdcloudResult implements java.io.Se
     public void setMountTargetId(String mountTargetId) {
         this.mountTargetId = mountTargetId;
     }
+
 
 
     /**

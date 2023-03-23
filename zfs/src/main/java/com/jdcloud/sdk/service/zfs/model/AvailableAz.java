@@ -42,6 +42,7 @@ public class AvailableAz  implements java.io.Serializable {
     /**
      * 可用az列表
      */
+    
     private List<String> azs;
 
 
@@ -63,23 +64,25 @@ public class AvailableAz  implements java.io.Serializable {
         this.fileSystemType = fileSystemType;
     }
 
+
     /**
-     * get 可用az列表
-     *
-     * @return
-     */
+    * get 可用az列表
+    *
+    * @return
+    */
     public List<String> getAzs() {
         return azs;
     }
 
     /**
-     * set 可用az列表
-     *
-     * @param azs
-     */
+    * set 可用az列表
+    *
+    * @param azs
+    */
     public void setAzs(List<String> azs) {
         this.azs = azs;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class AvailableAz  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 可用az列表
-     *
-     * @param azs
-     */
+    * set 可用az列表
+    *
+    * @param azs
+    */
     public AvailableAz azs(List<String> azs) {
         this.azs = azs;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class AvailableAz  implements java.io.Serializable {
         }
         this.azs.add(az);
     }
-
 }

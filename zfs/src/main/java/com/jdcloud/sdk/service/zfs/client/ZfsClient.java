@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.zfs.model.CreateMountTargetRequest;
 import com.jdcloud.sdk.service.zfs.model.CreateMountTargetResponse;
 import com.jdcloud.sdk.service.zfs.client.CreateMountTargetExecutor;
+import com.jdcloud.sdk.service.zfs.model.DescribeMountedClientsRequest;
+import com.jdcloud.sdk.service.zfs.model.DescribeMountedClientsResponse;
+import com.jdcloud.sdk.service.zfs.client.DescribeMountedClientsExecutor;
 import com.jdcloud.sdk.service.zfs.model.CreateFileSystemRequest;
 import com.jdcloud.sdk.service.zfs.model.CreateFileSystemResponse;
 import com.jdcloud.sdk.service.zfs.client.CreateFileSystemExecutor;
@@ -119,6 +122,17 @@ public class ZfsClient extends JdcloudClient {
      */
     public CreateMountTargetResponse createMountTarget(CreateMountTargetRequest request) throws JdcloudSdkException {
         return new CreateMountTargetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询挂载客户端IP
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeMountedClientsResponse describeMountedClients(DescribeMountedClientsRequest request) throws JdcloudSdkException {
+        return new DescribeMountedClientsExecutor().client(this).execute(request);
     }
 
     /**

@@ -74,6 +74,7 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
      * get 文件系统名称
      *
@@ -91,6 +92,7 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 文件系统描述
@@ -110,6 +112,7 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
         this.description = description;
     }
 
+
     /**
      * get 幂等性参数(只支持数字、大小写字母，且不能超过64字符)
      *
@@ -127,6 +130,7 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
     public void setClientToken(String clientToken) {
         this.clientToken = clientToken;
     }
+
 
     /**
      * get 文件系统类型(通用型:gp1,容量型:std1),默认为通用型
@@ -146,6 +150,7 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
         this.fileSystemType = fileSystemType;
     }
 
+
     /**
      * get 文件系统的serviceCode，默认为zfs
      *
@@ -163,6 +168,7 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 地域ID
@@ -183,6 +189,7 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 文件系统名称
      *
@@ -192,6 +199,7 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
         this.name = name;
         return this;
     }
+
 
     /**
      * set 文件系统描述
@@ -203,6 +211,7 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 幂等性参数(只支持数字、大小写字母，且不能超过64字符)
      *
@@ -212,6 +221,7 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
         this.clientToken = clientToken;
         return this;
     }
+
 
     /**
      * set 文件系统类型(通用型:gp1,容量型:std1),默认为通用型
@@ -223,6 +233,7 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 文件系统的serviceCode，默认为zfs
      *
@@ -232,6 +243,7 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set 地域ID

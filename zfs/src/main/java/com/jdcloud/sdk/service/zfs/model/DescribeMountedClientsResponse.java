@@ -24,52 +24,16 @@
 
 package com.jdcloud.sdk.service.zfs.model;
 
-import com.jdcloud.sdk.service.JdcloudResult;
+import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * - 创建一个新的文件系统，为这个文件系统分配一个Id
-
+ * 查询挂载客户端IP
  */
-public class CreateFileSystemResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeMountedClientsResponse extends JdcloudResponse<DescribeMountedClientsResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 文件系统 ID
-     */
-    private String fileSystemId;
 
-
-
-    /**
-     * get 文件系统 ID
-     *
-     * @return
-     */
-    public String getFileSystemId() {
-        return fileSystemId;
-    }
-
-    /**
-     * set 文件系统 ID
-     *
-     * @param fileSystemId
-     */
-    public void setFileSystemId(String fileSystemId) {
-        this.fileSystemId = fileSystemId;
-    }
-
-
-
-    /**
-     * set 文件系统 ID
-     *
-     * @param fileSystemId
-     */
-    public CreateFileSystemResult fileSystemId(String fileSystemId) {
-        this.fileSystemId = fileSystemId;
-        return this;
-    }
 
 
 }

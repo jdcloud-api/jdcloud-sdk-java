@@ -50,6 +50,7 @@ public class DeleteFileSystemRequest extends JdcloudRequest implements java.io.S
     private String fileSystemId;
 
 
+
     /**
      * get 地域ID
      *
@@ -67,6 +68,7 @@ public class DeleteFileSystemRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 文件系统ID
@@ -87,6 +89,7 @@ public class DeleteFileSystemRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 地域ID
      *
@@ -96,6 +99,7 @@ public class DeleteFileSystemRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 文件系统ID

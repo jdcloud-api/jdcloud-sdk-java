@@ -59,6 +59,7 @@ public class ModifyFileSystemAttributeRequest extends JdcloudRequest implements 
     private String fileSystemId;
 
 
+
     /**
      * get 文件系统名称(参数规则：不可为空，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符)
      *
@@ -76,6 +77,7 @@ public class ModifyFileSystemAttributeRequest extends JdcloudRequest implements 
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 文件系统描述(参数规则：不能超过256字符)
@@ -95,6 +97,7 @@ public class ModifyFileSystemAttributeRequest extends JdcloudRequest implements 
         this.description = description;
     }
 
+
     /**
      * get 地域ID
      *
@@ -112,6 +115,7 @@ public class ModifyFileSystemAttributeRequest extends JdcloudRequest implements 
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 文件系统ID
@@ -132,6 +136,7 @@ public class ModifyFileSystemAttributeRequest extends JdcloudRequest implements 
     }
 
 
+
     /**
      * set 文件系统名称(参数规则：不可为空，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符)
      *
@@ -141,6 +146,7 @@ public class ModifyFileSystemAttributeRequest extends JdcloudRequest implements 
         this.name = name;
         return this;
     }
+
 
     /**
      * set 文件系统描述(参数规则：不能超过256字符)
@@ -152,6 +158,7 @@ public class ModifyFileSystemAttributeRequest extends JdcloudRequest implements 
         return this;
     }
 
+
     /**
      * set 地域ID
      *
@@ -161,6 +168,7 @@ public class ModifyFileSystemAttributeRequest extends JdcloudRequest implements 
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 文件系统ID

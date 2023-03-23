@@ -43,6 +43,7 @@ public class SizeByte  implements java.io.Serializable {
     private Long value;
 
 
+
     /**
      * get 时间戳
      *
@@ -60,6 +61,7 @@ public class SizeByte  implements java.io.Serializable {
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
+
 
     /**
      * get 文件系统使用量，单位为:Byte
@@ -80,6 +82,7 @@ public class SizeByte  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 时间戳
      *
@@ -89,6 +92,7 @@ public class SizeByte  implements java.io.Serializable {
         this.timestamp = timestamp;
         return this;
     }
+
 
     /**
      * set 文件系统使用量，单位为:Byte
