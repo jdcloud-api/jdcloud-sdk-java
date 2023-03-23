@@ -50,6 +50,7 @@ public class DeleteMountTargetRequest extends JdcloudRequest implements java.io.
     private String mountTargetId;
 
 
+
     /**
      * get 地域ID
      *
@@ -67,6 +68,7 @@ public class DeleteMountTargetRequest extends JdcloudRequest implements java.io.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 挂载目标ID
@@ -87,6 +89,7 @@ public class DeleteMountTargetRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 地域ID
      *
@@ -96,6 +99,7 @@ public class DeleteMountTargetRequest extends JdcloudRequest implements java.io.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 挂载目标ID

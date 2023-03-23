@@ -53,22 +53,23 @@ public class DescribeFileSystemsRequest extends JdcloudRequest implements java.i
     /**
      * Tag筛选条件
      */
+    
     private List<TagFilter> tags;
-
     /**
      * fileSystemId - 文件系统ID，精确匹配，支持多个
 name - 文件系统名称，模糊匹配，支持单个
 status - 文件系统状态，精确匹配，支持多个 FileSystem Status/creating、available、in-use
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -89,6 +90,7 @@ status - 文件系统状态，精确匹配，支持多个 FileSystem Status/crea
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -107,47 +109,50 @@ status - 文件系统状态，精确匹配，支持多个 FileSystem Status/crea
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get Tag筛选条件
-     *
-     * @return
-     */
+    * get Tag筛选条件
+    *
+    * @return
+    */
     public List<TagFilter> getTags() {
         return tags;
     }
 
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public void setTags(List<TagFilter> tags) {
         this.tags = tags;
     }
 
+
     /**
-     * get fileSystemId - 文件系统ID，精确匹配，支持多个
+    * get fileSystemId - 文件系统ID，精确匹配，支持多个
 name - 文件系统名称，模糊匹配，支持单个
 status - 文件系统状态，精确匹配，支持多个 FileSystem Status/creating、available、in-use
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set fileSystemId - 文件系统ID，精确匹配，支持多个
+    * set fileSystemId - 文件系统ID，精确匹配，支持多个
 name - 文件系统名称，模糊匹配，支持单个
 status - 文件系统状态，精确匹配，支持多个 FileSystem Status/creating、available、in-use
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -168,6 +173,7 @@ status - 文件系统状态，精确匹配，支持多个 FileSystem Status/crea
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
@@ -177,6 +183,7 @@ status - 文件系统状态，精确匹配，支持多个 FileSystem Status/crea
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
@@ -188,28 +195,31 @@ status - 文件系统状态，精确匹配，支持多个 FileSystem Status/crea
         return this;
     }
 
+
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public DescribeFileSystemsRequest tags(List<TagFilter> tags) {
         this.tags = tags;
         return this;
     }
 
+
     /**
-     * set fileSystemId - 文件系统ID，精确匹配，支持多个
+    * set fileSystemId - 文件系统ID，精确匹配，支持多个
 name - 文件系统名称，模糊匹配，支持单个
 status - 文件系统状态，精确匹配，支持多个 FileSystem Status/creating、available、in-use
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeFileSystemsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域ID
@@ -220,6 +230,7 @@ status - 文件系统状态，精确匹配，支持多个 FileSystem Status/crea
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -248,5 +259,4 @@ status - 文件系统状态，精确匹配，支持多个 FileSystem Status/crea
         }
         this.filters.add(filter);
     }
-
 }

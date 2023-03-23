@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Mount-Target
- * 挂载目标相关接口。
+ * File-System
+ * 文件系统相关接口。
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,50 +26,48 @@ package com.jdcloud.sdk.service.zfs.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.zfs.model.MountTarget;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * -   查询挂载目标列表。
-
+ * 查询挂载客户端IP
  */
-public class DescribeMountTargetsResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeMountedClientsResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * mountTargets
+     * clientsIPs
      */
     
-    private List<MountTarget> mountTargets;
+    private List<String> clientsIPs;
     /**
-     * 查询的挂载目标数目
+     * 结果集数目
      */
     private Integer totalCount;
 
 
 
     /**
-    * get mountTargets
+    * get clientsIPs
     *
     * @return
     */
-    public List<MountTarget> getMountTargets() {
-        return mountTargets;
+    public List<String> getClientsIPs() {
+        return clientsIPs;
     }
 
     /**
-    * set mountTargets
+    * set clientsIPs
     *
-    * @param mountTargets
+    * @param clientsIPs
     */
-    public void setMountTargets(List<MountTarget> mountTargets) {
-        this.mountTargets = mountTargets;
+    public void setClientsIPs(List<String> clientsIPs) {
+        this.clientsIPs = clientsIPs;
     }
 
 
     /**
-     * get 查询的挂载目标数目
+     * get 结果集数目
      *
      * @return
      */
@@ -78,7 +76,7 @@ public class DescribeMountTargetsResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 查询的挂载目标数目
+     * set 结果集数目
      *
      * @param totalCount
      */
@@ -89,22 +87,22 @@ public class DescribeMountTargetsResult extends JdcloudResult implements java.io
 
 
     /**
-    * set mountTargets
+    * set clientsIPs
     *
-    * @param mountTargets
+    * @param clientsIPs
     */
-    public DescribeMountTargetsResult mountTargets(List<MountTarget> mountTargets) {
-        this.mountTargets = mountTargets;
+    public DescribeMountedClientsResult clientsIPs(List<String> clientsIPs) {
+        this.clientsIPs = clientsIPs;
         return this;
     }
 
 
     /**
-     * set 查询的挂载目标数目
+     * set 结果集数目
      *
      * @param totalCount
      */
-    public DescribeMountTargetsResult totalCount(Integer totalCount) {
+    public DescribeMountedClientsResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
@@ -112,14 +110,14 @@ public class DescribeMountTargetsResult extends JdcloudResult implements java.io
 
 
     /**
-     * add item to mountTargets
+     * add item to clientsIPs
      *
-     * @param mountTarget
+     * @param clientsIP
      */
-    public void addMountTarget(MountTarget mountTarget) {
-        if (this.mountTargets == null) {
-            this.mountTargets = new ArrayList<>();
+    public void addClientsIP(String clientsIP) {
+        if (this.clientsIPs == null) {
+            this.clientsIPs = new ArrayList<>();
         }
-        this.mountTargets.add(mountTarget);
+        this.clientsIPs.add(clientsIP);
     }
 }

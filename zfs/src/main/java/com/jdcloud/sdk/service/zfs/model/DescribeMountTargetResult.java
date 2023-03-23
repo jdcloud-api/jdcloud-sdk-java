@@ -40,6 +40,7 @@ public class DescribeMountTargetResult extends JdcloudResult implements java.io.
     private MountTarget mountTarget;
 
 
+
     /**
      * get mountTarget
      *
@@ -57,6 +58,7 @@ public class DescribeMountTargetResult extends JdcloudResult implements java.io.
     public void setMountTarget(MountTarget mountTarget) {
         this.mountTarget = mountTarget;
     }
+
 
 
     /**

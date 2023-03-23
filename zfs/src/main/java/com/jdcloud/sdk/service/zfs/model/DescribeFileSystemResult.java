@@ -40,6 +40,7 @@ public class DescribeFileSystemResult extends JdcloudResult implements java.io.S
     private FileSystem fileSystem;
 
 
+
     /**
      * get fileSystem
      *
@@ -57,6 +58,7 @@ public class DescribeFileSystemResult extends JdcloudResult implements java.io.S
     public void setFileSystem(FileSystem fileSystem) {
         this.fileSystem = fileSystem;
     }
+
 
 
     /**

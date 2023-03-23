@@ -49,6 +49,7 @@ public class DescribeFileSystemRequest extends JdcloudRequest implements java.io
     private String fileSystemId;
 
 
+
     /**
      * get 地域ID
      *
@@ -66,6 +67,7 @@ public class DescribeFileSystemRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 文件系统ID
@@ -86,6 +88,7 @@ public class DescribeFileSystemRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 地域ID
      *
@@ -95,6 +98,7 @@ public class DescribeFileSystemRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 文件系统ID

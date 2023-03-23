@@ -77,6 +77,7 @@ public class CreateMountTargetRequest extends JdcloudRequest implements java.io.
     private String regionId;
 
 
+
     /**
      * get 创建挂载目标的文件系统
      *
@@ -94,6 +95,7 @@ public class CreateMountTargetRequest extends JdcloudRequest implements java.io.
     public void setFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
     }
+
 
     /**
      * get 子网id
@@ -113,6 +115,7 @@ public class CreateMountTargetRequest extends JdcloudRequest implements java.io.
         this.subnetId = subnetId;
     }
 
+
     /**
      * get vpcId
      *
@@ -130,6 +133,7 @@ public class CreateMountTargetRequest extends JdcloudRequest implements java.io.
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
     /**
      * get 安全组id
@@ -149,6 +153,7 @@ public class CreateMountTargetRequest extends JdcloudRequest implements java.io.
         this.securityGroupId = securityGroupId;
     }
 
+
     /**
      * get 幂等性参数(只支持数字、大小写字母，且不能超过64字符)
      *
@@ -166,6 +171,7 @@ public class CreateMountTargetRequest extends JdcloudRequest implements java.io.
     public void setClientToken(String clientToken) {
         this.clientToken = clientToken;
     }
+
 
     /**
      * get 地域ID
@@ -186,6 +192,7 @@ public class CreateMountTargetRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 创建挂载目标的文件系统
      *
@@ -195,6 +202,7 @@ public class CreateMountTargetRequest extends JdcloudRequest implements java.io.
         this.fileSystemId = fileSystemId;
         return this;
     }
+
 
     /**
      * set 子网id
@@ -206,6 +214,7 @@ public class CreateMountTargetRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set vpcId
      *
@@ -215,6 +224,7 @@ public class CreateMountTargetRequest extends JdcloudRequest implements java.io.
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set 安全组id
@@ -226,6 +236,7 @@ public class CreateMountTargetRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 幂等性参数(只支持数字、大小写字母，且不能超过64字符)
      *
@@ -235,6 +246,7 @@ public class CreateMountTargetRequest extends JdcloudRequest implements java.io.
         this.clientToken = clientToken;
         return this;
     }
+
 
     /**
      * set 地域ID

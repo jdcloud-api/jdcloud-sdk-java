@@ -87,6 +87,7 @@ public class FileSystem  implements java.io.Serializable {
     /**
      * Tag信息
      */
+    
     private List<Tag> tags;
 
 
@@ -108,6 +109,7 @@ public class FileSystem  implements java.io.Serializable {
         this.fileSystemId = fileSystemId;
     }
 
+
     /**
      * get 文件系统名称(参数规则：不可为空，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符)
      *
@@ -125,6 +127,7 @@ public class FileSystem  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 文件系统描述(参数规则：不能超过256字符)
@@ -144,6 +147,7 @@ public class FileSystem  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 挂载目标个数
      *
@@ -161,6 +165,7 @@ public class FileSystem  implements java.io.Serializable {
     public void setNumberOfMountTargets(Integer numberOfMountTargets) {
         this.numberOfMountTargets = numberOfMountTargets;
     }
+
 
     /**
      * get 最近一次统计的文件系统的使用量单位为:Byte
@@ -180,6 +185,7 @@ public class FileSystem  implements java.io.Serializable {
         this.sizeByte = sizeByte;
     }
 
+
     /**
      * get 文件系统状态(创建中:creating、可用:available、使用中:in-use、删除中:deleting)
      *
@@ -197,6 +203,7 @@ public class FileSystem  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 文件系统类型(通用型:gp1,容量型:std1)
@@ -216,6 +223,7 @@ public class FileSystem  implements java.io.Serializable {
         this.fileSystemType = fileSystemType;
     }
 
+
     /**
      * get 文件系统所属的可用区
      *
@@ -233,6 +241,7 @@ public class FileSystem  implements java.io.Serializable {
     public void setAz(String az) {
         this.az = az;
     }
+
 
     /**
      * get 创建时间
@@ -252,6 +261,7 @@ public class FileSystem  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get dns名称
      *
@@ -270,23 +280,25 @@ public class FileSystem  implements java.io.Serializable {
         this.dnsName = dnsName;
     }
 
+
     /**
-     * get Tag信息
-     *
-     * @return
-     */
+    * get Tag信息
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set Tag信息
-     *
-     * @param tags
-     */
+    * set Tag信息
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
 
 
     /**
@@ -299,6 +311,7 @@ public class FileSystem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 文件系统名称(参数规则：不可为空，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符)
      *
@@ -308,6 +321,7 @@ public class FileSystem  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 文件系统描述(参数规则：不能超过256字符)
@@ -319,6 +333,7 @@ public class FileSystem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 挂载目标个数
      *
@@ -328,6 +343,7 @@ public class FileSystem  implements java.io.Serializable {
         this.numberOfMountTargets = numberOfMountTargets;
         return this;
     }
+
 
     /**
      * set 最近一次统计的文件系统的使用量单位为:Byte
@@ -339,6 +355,7 @@ public class FileSystem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 文件系统状态(创建中:creating、可用:available、使用中:in-use、删除中:deleting)
      *
@@ -348,6 +365,7 @@ public class FileSystem  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 文件系统类型(通用型:gp1,容量型:std1)
@@ -359,6 +377,7 @@ public class FileSystem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 文件系统所属的可用区
      *
@@ -368,6 +387,7 @@ public class FileSystem  implements java.io.Serializable {
         this.az = az;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -379,6 +399,7 @@ public class FileSystem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set dns名称
      *
@@ -389,15 +410,17 @@ public class FileSystem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set Tag信息
-     *
-     * @param tags
-     */
+    * set Tag信息
+    *
+    * @param tags
+    */
     public FileSystem tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
 
 
     /**
@@ -411,5 +434,4 @@ public class FileSystem  implements java.io.Serializable {
         }
         this.tags.add(tag);
     }
-
 }
