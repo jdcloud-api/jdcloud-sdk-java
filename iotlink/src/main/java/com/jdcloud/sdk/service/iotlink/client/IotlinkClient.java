@@ -31,51 +31,60 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.iotlink.model.OnOffStatusRequest;
-import com.jdcloud.sdk.service.iotlink.model.OnOffStatusResponse;
-import com.jdcloud.sdk.service.iotlink.client.OnOffStatusExecutor;
-import com.jdcloud.sdk.service.iotlink.model.LifeStatusByIMSIRequest;
-import com.jdcloud.sdk.service.iotlink.model.LifeStatusByIMSIResponse;
-import com.jdcloud.sdk.service.iotlink.client.LifeStatusByIMSIExecutor;
 import com.jdcloud.sdk.service.iotlink.model.CloseIotCardRequest;
 import com.jdcloud.sdk.service.iotlink.model.CloseIotCardResponse;
 import com.jdcloud.sdk.service.iotlink.client.CloseIotCardExecutor;
 import com.jdcloud.sdk.service.iotlink.model.OperateRequest;
 import com.jdcloud.sdk.service.iotlink.model.OperateResponse;
 import com.jdcloud.sdk.service.iotlink.client.OperateExecutor;
-import com.jdcloud.sdk.service.iotlink.model.LifeStatusRequest;
-import com.jdcloud.sdk.service.iotlink.model.LifeStatusResponse;
-import com.jdcloud.sdk.service.iotlink.client.LifeStatusExecutor;
-import com.jdcloud.sdk.service.iotlink.model.CloseIotFlowRequest;
-import com.jdcloud.sdk.service.iotlink.model.CloseIotFlowResponse;
-import com.jdcloud.sdk.service.iotlink.client.CloseIotFlowExecutor;
 import com.jdcloud.sdk.service.iotlink.model.GprsStatusRequest;
 import com.jdcloud.sdk.service.iotlink.model.GprsStatusResponse;
 import com.jdcloud.sdk.service.iotlink.client.GprsStatusExecutor;
-import com.jdcloud.sdk.service.iotlink.model.GprsStatusByIMSIRequest;
-import com.jdcloud.sdk.service.iotlink.model.GprsStatusByIMSIResponse;
-import com.jdcloud.sdk.service.iotlink.client.GprsStatusByIMSIExecutor;
 import com.jdcloud.sdk.service.iotlink.model.QueryValidPeriodForNBRequest;
 import com.jdcloud.sdk.service.iotlink.model.QueryValidPeriodForNBResponse;
 import com.jdcloud.sdk.service.iotlink.client.QueryValidPeriodForNBExecutor;
 import com.jdcloud.sdk.service.iotlink.model.OpenIotFlowRequest;
 import com.jdcloud.sdk.service.iotlink.model.OpenIotFlowResponse;
 import com.jdcloud.sdk.service.iotlink.client.OpenIotFlowExecutor;
-import com.jdcloud.sdk.service.iotlink.model.OnOffStatusByIMSIRequest;
-import com.jdcloud.sdk.service.iotlink.model.OnOffStatusByIMSIResponse;
-import com.jdcloud.sdk.service.iotlink.client.OnOffStatusByIMSIExecutor;
 import com.jdcloud.sdk.service.iotlink.model.GprsRealtimeInfoRequest;
 import com.jdcloud.sdk.service.iotlink.model.GprsRealtimeInfoResponse;
 import com.jdcloud.sdk.service.iotlink.client.GprsRealtimeInfoExecutor;
-import com.jdcloud.sdk.service.iotlink.model.QueryDayHistoryTrafficRequest;
-import com.jdcloud.sdk.service.iotlink.model.QueryDayHistoryTrafficResponse;
-import com.jdcloud.sdk.service.iotlink.client.QueryDayHistoryTrafficExecutor;
 import com.jdcloud.sdk.service.iotlink.model.SpeedLimitActionRequest;
 import com.jdcloud.sdk.service.iotlink.model.SpeedLimitActionResponse;
 import com.jdcloud.sdk.service.iotlink.client.SpeedLimitActionExecutor;
 import com.jdcloud.sdk.service.iotlink.model.OpenIotCardRequest;
 import com.jdcloud.sdk.service.iotlink.model.OpenIotCardResponse;
 import com.jdcloud.sdk.service.iotlink.client.OpenIotCardExecutor;
+import com.jdcloud.sdk.service.iotlink.model.OrdinaryRealNameClearRequest;
+import com.jdcloud.sdk.service.iotlink.model.OrdinaryRealNameClearResponse;
+import com.jdcloud.sdk.service.iotlink.client.OrdinaryRealNameClearExecutor;
+import com.jdcloud.sdk.service.iotlink.model.CardInfoRequest;
+import com.jdcloud.sdk.service.iotlink.model.CardInfoResponse;
+import com.jdcloud.sdk.service.iotlink.client.CardInfoExecutor;
+import com.jdcloud.sdk.service.iotlink.model.OnOffStatusRequest;
+import com.jdcloud.sdk.service.iotlink.model.OnOffStatusResponse;
+import com.jdcloud.sdk.service.iotlink.client.OnOffStatusExecutor;
+import com.jdcloud.sdk.service.iotlink.model.LifeStatusByIMSIRequest;
+import com.jdcloud.sdk.service.iotlink.model.LifeStatusByIMSIResponse;
+import com.jdcloud.sdk.service.iotlink.client.LifeStatusByIMSIExecutor;
+import com.jdcloud.sdk.service.iotlink.model.LifeStatusRequest;
+import com.jdcloud.sdk.service.iotlink.model.LifeStatusResponse;
+import com.jdcloud.sdk.service.iotlink.client.LifeStatusExecutor;
+import com.jdcloud.sdk.service.iotlink.model.CloseIotFlowRequest;
+import com.jdcloud.sdk.service.iotlink.model.CloseIotFlowResponse;
+import com.jdcloud.sdk.service.iotlink.client.CloseIotFlowExecutor;
+import com.jdcloud.sdk.service.iotlink.model.GprsStatusByIMSIRequest;
+import com.jdcloud.sdk.service.iotlink.model.GprsStatusByIMSIResponse;
+import com.jdcloud.sdk.service.iotlink.client.GprsStatusByIMSIExecutor;
+import com.jdcloud.sdk.service.iotlink.model.OnOffStatusByIMSIRequest;
+import com.jdcloud.sdk.service.iotlink.model.OnOffStatusByIMSIResponse;
+import com.jdcloud.sdk.service.iotlink.client.OnOffStatusByIMSIExecutor;
+import com.jdcloud.sdk.service.iotlink.model.GetOnlineStatusRequest;
+import com.jdcloud.sdk.service.iotlink.model.GetOnlineStatusResponse;
+import com.jdcloud.sdk.service.iotlink.client.GetOnlineStatusExecutor;
+import com.jdcloud.sdk.service.iotlink.model.QueryDayHistoryTrafficRequest;
+import com.jdcloud.sdk.service.iotlink.model.QueryDayHistoryTrafficResponse;
+import com.jdcloud.sdk.service.iotlink.client.QueryDayHistoryTrafficExecutor;
 import com.jdcloud.sdk.service.iotlink.model.SearchRequest;
 import com.jdcloud.sdk.service.iotlink.model.SearchResponse;
 import com.jdcloud.sdk.service.iotlink.client.SearchExecutor;
@@ -91,9 +100,9 @@ import com.jdcloud.sdk.service.iotlink.client.RealNameQueryIotExecutor;
 import com.jdcloud.sdk.service.iotlink.model.QueryTrafficByDateRequest;
 import com.jdcloud.sdk.service.iotlink.model.QueryTrafficByDateResponse;
 import com.jdcloud.sdk.service.iotlink.client.QueryTrafficByDateExecutor;
-import com.jdcloud.sdk.service.iotlink.model.CardInfoRequest;
-import com.jdcloud.sdk.service.iotlink.model.CardInfoResponse;
-import com.jdcloud.sdk.service.iotlink.client.CardInfoExecutor;
+import com.jdcloud.sdk.service.iotlink.model.CardBindStatusRequest;
+import com.jdcloud.sdk.service.iotlink.model.CardBindStatusResponse;
+import com.jdcloud.sdk.service.iotlink.client.CardBindStatusExecutor;
 
 /**
  * iotlinkClient
@@ -145,28 +154,6 @@ public class IotlinkClient extends JdcloudClient {
 
 
     /**
-     * 根据物联网卡iccid查询该卡的开关机状态信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public OnOffStatusResponse onOffStatus(OnOffStatusRequest request) throws JdcloudSdkException {
-        return new OnOffStatusExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据物联网卡imsi查询该卡的生命周期信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public LifeStatusByIMSIResponse lifeStatusByIMSI(LifeStatusByIMSIRequest request) throws JdcloudSdkException {
-        return new LifeStatusByIMSIExecutor().client(this).execute(request);
-    }
-
-    /**
      * 物联网卡停机操作
      *
      * @param request
@@ -189,28 +176,6 @@ public class IotlinkClient extends JdcloudClient {
     }
 
     /**
-     * 根据物联网卡iccid查询该卡的生命周期信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public LifeStatusResponse lifeStatus(LifeStatusRequest request) throws JdcloudSdkException {
-        return new LifeStatusExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 物联网卡停流量操作
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CloseIotFlowResponse closeIotFlow(CloseIotFlowRequest request) throws JdcloudSdkException {
-        return new CloseIotFlowExecutor().client(this).execute(request);
-    }
-
-    /**
      * 根据物联网卡iccid查询该卡的gprs状态信息
      *
      * @param request
@@ -219,17 +184,6 @@ public class IotlinkClient extends JdcloudClient {
      */
     public GprsStatusResponse gprsStatus(GprsStatusRequest request) throws JdcloudSdkException {
         return new GprsStatusExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据物联网卡IMSI查询该卡的GPRS状态信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GprsStatusByIMSIResponse gprsStatusByIMSI(GprsStatusByIMSIRequest request) throws JdcloudSdkException {
-        return new GprsStatusByIMSIExecutor().client(this).execute(request);
     }
 
     /**
@@ -255,17 +209,6 @@ public class IotlinkClient extends JdcloudClient {
     }
 
     /**
-     * 根据物联网卡imsi查询该卡的开关机状态信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public OnOffStatusByIMSIResponse onOffStatusByIMSI(OnOffStatusByIMSIRequest request) throws JdcloudSdkException {
-        return new OnOffStatusByIMSIExecutor().client(this).execute(request);
-    }
-
-    /**
      * 根据物联网卡iccid查询该卡的当月套餐内的GPRS实时使用量
      *
      * @param request
@@ -274,17 +217,6 @@ public class IotlinkClient extends JdcloudClient {
      */
     public GprsRealtimeInfoResponse gprsRealtimeInfo(GprsRealtimeInfoRequest request) throws JdcloudSdkException {
         return new GprsRealtimeInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 物联网卡日历史流量查询接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryDayHistoryTrafficResponse queryDayHistoryTraffic(QueryDayHistoryTrafficRequest request) throws JdcloudSdkException {
-        return new QueryDayHistoryTrafficExecutor().client(this).execute(request);
     }
 
     /**
@@ -307,6 +239,116 @@ public class IotlinkClient extends JdcloudClient {
      */
     public OpenIotCardResponse openIotCard(OpenIotCardRequest request) throws JdcloudSdkException {
         return new OpenIotCardExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 物联网卡实名制信息清除
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OrdinaryRealNameClearResponse ordinaryRealNameClear(OrdinaryRealNameClearRequest request) throws JdcloudSdkException {
+        return new OrdinaryRealNameClearExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据物联网卡iccid查询该卡的基本信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CardInfoResponse cardInfo(CardInfoRequest request) throws JdcloudSdkException {
+        return new CardInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据物联网卡iccid查询该卡的开关机状态信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OnOffStatusResponse onOffStatus(OnOffStatusRequest request) throws JdcloudSdkException {
+        return new OnOffStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据物联网卡imsi查询该卡的生命周期信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public LifeStatusByIMSIResponse lifeStatusByIMSI(LifeStatusByIMSIRequest request) throws JdcloudSdkException {
+        return new LifeStatusByIMSIExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据物联网卡iccid查询该卡的生命周期信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public LifeStatusResponse lifeStatus(LifeStatusRequest request) throws JdcloudSdkException {
+        return new LifeStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 物联网卡停流量操作
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CloseIotFlowResponse closeIotFlow(CloseIotFlowRequest request) throws JdcloudSdkException {
+        return new CloseIotFlowExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据物联网卡IMSI查询该卡的GPRS状态信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GprsStatusByIMSIResponse gprsStatusByIMSI(GprsStatusByIMSIRequest request) throws JdcloudSdkException {
+        return new GprsStatusByIMSIExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据物联网卡imsi查询该卡的开关机状态信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OnOffStatusByIMSIResponse onOffStatusByIMSI(OnOffStatusByIMSIRequest request) throws JdcloudSdkException {
+        return new OnOffStatusByIMSIExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 在线状态和会话信息查询
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetOnlineStatusResponse getOnlineStatus(GetOnlineStatusRequest request) throws JdcloudSdkException {
+        return new GetOnlineStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 物联网卡日历史流量查询接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryDayHistoryTrafficResponse queryDayHistoryTraffic(QueryDayHistoryTrafficRequest request) throws JdcloudSdkException {
+        return new QueryDayHistoryTrafficExecutor().client(this).execute(request);
     }
 
     /**
@@ -365,14 +407,14 @@ public class IotlinkClient extends JdcloudClient {
     }
 
     /**
-     * 根据物联网卡iccid查询该卡的基本信息
+     * 机卡分离状态查询
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CardInfoResponse cardInfo(CardInfoRequest request) throws JdcloudSdkException {
-        return new CardInfoExecutor().client(this).execute(request);
+    public CardBindStatusResponse cardBindStatus(CardBindStatusRequest request) throws JdcloudSdkException {
+        return new CardBindStatusExecutor().client(this).execute(request);
     }
 
 
