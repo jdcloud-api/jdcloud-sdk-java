@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.cloudsign.model;
 
-import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -36,41 +35,23 @@ public class GetMultiEvidenceRequest extends JdcloudRequest implements java.io.S
 
     /**
      * 业务流水号
-     * Required:true
      */
-    @Required
     private String businessId;
 
     /**
      * 存证编号
-     * Required:true
      */
-    @Required
     private String evidenceId;
 
     /**
      * 申请取证主体的ID类型
-     * Required:true
      */
-    @Required
     private String applicantIdType;
 
     /**
      * 申请取证主体的ID
-     * Required:true
      */
-    @Required
     private String applicantIdNum;
-
-    /**
-     * 证据链代码
-     */
-    private String businessCode;
-
-    /**
-     * 业务token
-     */
-    private String token;
 
     /**
      * 请求流水号
@@ -167,44 +148,6 @@ public class GetMultiEvidenceRequest extends JdcloudRequest implements java.io.S
      */
     public void setApplicantIdNum(String applicantIdNum) {
         this.applicantIdNum = applicantIdNum;
-    }
-
-
-    /**
-     * get 证据链代码
-     *
-     * @return
-     */
-    public String getBusinessCode() {
-        return businessCode;
-    }
-
-    /**
-     * set 证据链代码
-     *
-     * @param businessCode
-     */
-    public void setBusinessCode(String businessCode) {
-        this.businessCode = businessCode;
-    }
-
-
-    /**
-     * get 业务token
-     *
-     * @return
-     */
-    public String getToken() {
-        return token;
-    }
-
-    /**
-     * set 业务token
-     *
-     * @param token
-     */
-    public void setToken(String token) {
-        this.token = token;
     }
 
 
@@ -325,28 +268,6 @@ public class GetMultiEvidenceRequest extends JdcloudRequest implements java.io.S
      */
     public GetMultiEvidenceRequest applicantIdNum(String applicantIdNum) {
         this.applicantIdNum = applicantIdNum;
-        return this;
-    }
-
-
-    /**
-     * set 证据链代码
-     *
-     * @param businessCode
-     */
-    public GetMultiEvidenceRequest businessCode(String businessCode) {
-        this.businessCode = businessCode;
-        return this;
-    }
-
-
-    /**
-     * set 业务token
-     *
-     * @param token
-     */
-    public GetMultiEvidenceRequest token(String token) {
-        this.token = token;
         return this;
     }
 
