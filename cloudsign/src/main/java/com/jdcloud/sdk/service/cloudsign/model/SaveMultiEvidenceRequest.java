@@ -50,15 +50,8 @@ public class SaveMultiEvidenceRequest extends JdcloudRequest implements java.io.
 
     /**
      * 证据链代码
-     * Required:true
      */
-    @Required
     private String businessCode;
-
-    /**
-     * 业务token
-     */
-    private String token;
 
     /**
      * 资方信息（借钱传：ZY；票据传 PJ_SHOUXIN--授信,PJ_JIEKUAN--借款）
@@ -136,25 +129,6 @@ public class SaveMultiEvidenceRequest extends JdcloudRequest implements java.io.
      */
     public void setBusinessCode(String businessCode) {
         this.businessCode = businessCode;
-    }
-
-
-    /**
-     * get 业务token
-     *
-     * @return
-     */
-    public String getToken() {
-        return token;
-    }
-
-    /**
-     * set 业务token
-     *
-     * @param token
-     */
-    public void setToken(String token) {
-        this.token = token;
     }
 
 
@@ -264,17 +238,6 @@ public class SaveMultiEvidenceRequest extends JdcloudRequest implements java.io.
      */
     public SaveMultiEvidenceRequest businessCode(String businessCode) {
         this.businessCode = businessCode;
-        return this;
-    }
-
-
-    /**
-     * set 业务token
-     *
-     * @param token
-     */
-    public SaveMultiEvidenceRequest token(String token) {
-        this.token = token;
         return this;
     }
 
