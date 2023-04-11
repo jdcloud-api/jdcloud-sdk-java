@@ -388,6 +388,9 @@ import com.jdcloud.sdk.service.cdn.client.SetCustomErrorPageExecutor;
 import com.jdcloud.sdk.service.cdn.model.DisableWafBlackRulesRequest;
 import com.jdcloud.sdk.service.cdn.model.DisableWafBlackRulesResponse;
 import com.jdcloud.sdk.service.cdn.client.DisableWafBlackRulesExecutor;
+import com.jdcloud.sdk.service.cdn.model.DomainTxtGenerateRequest;
+import com.jdcloud.sdk.service.cdn.model.DomainTxtGenerateResponse;
+import com.jdcloud.sdk.service.cdn.client.DomainTxtGenerateExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryWebProtectSettingsRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryWebProtectSettingsResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryWebProtectSettingsExecutor;
@@ -439,6 +442,9 @@ import com.jdcloud.sdk.service.cdn.client.DeleteForbiddenStreamExecutor;
 import com.jdcloud.sdk.service.cdn.model.ConfigBackSourceRulesRequest;
 import com.jdcloud.sdk.service.cdn.model.ConfigBackSourceRulesResponse;
 import com.jdcloud.sdk.service.cdn.client.ConfigBackSourceRulesExecutor;
+import com.jdcloud.sdk.service.cdn.model.DomainTxtValidateRequest;
+import com.jdcloud.sdk.service.cdn.model.DomainTxtValidateResponse;
+import com.jdcloud.sdk.service.cdn.client.DomainTxtValidateExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryStatisticsDataGroupSumRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryStatisticsDataGroupSumResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryStatisticsDataGroupSumExecutor;
@@ -1991,6 +1997,17 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
+     * 域名txt记录生成
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DomainTxtGenerateResponse domainTxtGenerate(DomainTxtGenerateRequest request) throws JdcloudSdkException {
+        return new DomainTxtGenerateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询web防护开关
      *
      * @param request
@@ -2175,6 +2192,17 @@ public class CdnClient extends JdcloudClient {
      */
     public ConfigBackSourceRulesResponse configBackSourceRules(ConfigBackSourceRulesRequest request) throws JdcloudSdkException {
         return new ConfigBackSourceRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 域名txt校验
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DomainTxtValidateResponse domainTxtValidate(DomainTxtValidateRequest request) throws JdcloudSdkException {
+        return new DomainTxtValidateExecutor().client(this).execute(request);
     }
 
     /**
