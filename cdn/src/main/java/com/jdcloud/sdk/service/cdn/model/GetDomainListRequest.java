@@ -63,6 +63,11 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
      */
     private String accelerateRegion;
 
+    /**
+     * 筛选依据（false不需要查询, true 需要查询海外状态)默认false
+     */
+    private Boolean withThirdPartyStatus;
+
 
 
     /**
@@ -179,6 +184,25 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+    /**
+     * get 筛选依据（false不需要查询, true 需要查询海外状态)默认false
+     *
+     * @return
+     */
+    public Boolean getWithThirdPartyStatus() {
+        return withThirdPartyStatus;
+    }
+
+    /**
+     * set 筛选依据（false不需要查询, true 需要查询海外状态)默认false
+     *
+     * @param withThirdPartyStatus
+     */
+    public void setWithThirdPartyStatus(Boolean withThirdPartyStatus) {
+        this.withThirdPartyStatus = withThirdPartyStatus;
+    }
+
+
 
     /**
      * set 根据关键字进行模糊匹配
@@ -242,6 +266,17 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
      */
     public GetDomainListRequest accelerateRegion(String accelerateRegion) {
         this.accelerateRegion = accelerateRegion;
+        return this;
+    }
+
+
+    /**
+     * set 筛选依据（false不需要查询, true 需要查询海外状态)默认false
+     *
+     * @param withThirdPartyStatus
+     */
+    public GetDomainListRequest withThirdPartyStatus(Boolean withThirdPartyStatus) {
+        this.withThirdPartyStatus = withThirdPartyStatus;
         return this;
     }
 
