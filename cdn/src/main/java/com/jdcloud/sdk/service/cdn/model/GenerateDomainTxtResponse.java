@@ -24,12 +24,12 @@
 
 package com.jdcloud.sdk.service.cdn.model;
 
-import com.jdcloud.sdk.service.JdcloudResult;
+import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 域名txt记录生成
+ * 生成域名txt记录
  */
-public class DomainTxtGenerateResult extends JdcloudResult implements java.io.Serializable {
+public class GenerateDomainTxtResponse extends JdcloudResponse<GenerateDomainTxtResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

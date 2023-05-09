@@ -26,12 +26,12 @@ package com.jdcloud.sdk.service.cdn.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.cdn.model.DomainTxtGenerateResponse;
+import com.jdcloud.sdk.service.cdn.model.GenerateDomainTxtResponse;
 
 /**
- * 域名txt记录生成
+ * 生成域名txt记录
  */
-class DomainTxtGenerateExecutor extends JdcloudExecutor {
+class GenerateDomainTxtExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -40,11 +40,11 @@ class DomainTxtGenerateExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/domainTxtGenerate";
+        return "/generateDomainTxt";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return DomainTxtGenerateResponse.class;
+        return GenerateDomainTxtResponse.class;
     }
 }

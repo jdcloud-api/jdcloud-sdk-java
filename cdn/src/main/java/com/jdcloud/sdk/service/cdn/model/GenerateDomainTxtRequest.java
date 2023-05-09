@@ -24,16 +24,51 @@
 
 package com.jdcloud.sdk.service.cdn.model;
 
-import com.jdcloud.sdk.service.JdcloudResponse;
+import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 域名txt记录生成
+ * 生成域名txt记录
  */
-public class DomainTxtGenerateResponse extends JdcloudResponse<DomainTxtGenerateResult> implements java.io.Serializable {
+public class GenerateDomainTxtRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 域名
+     */
+    private String domain;
 
+
+
+    /**
+     * get 域名
+     *
+     * @return
+     */
+    public String getDomain() {
+        return domain;
+    }
+
+    /**
+     * set 域名
+     *
+     * @param domain
+     */
+    public void setDomain(String domain) {
+        this.domain = domain;
+    }
+
+
+
+    /**
+     * set 域名
+     *
+     * @param domain
+     */
+    public GenerateDomainTxtRequest domain(String domain) {
+        this.domain = domain;
+        return this;
+    }
 
 
 }
