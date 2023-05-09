@@ -202,6 +202,9 @@ import com.jdcloud.sdk.service.cdn.client.StopPrefetchTaskExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryMixTrafficGroupSumRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryMixTrafficGroupSumResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryMixTrafficGroupSumExecutor;
+import com.jdcloud.sdk.service.cdn.model.GenerateDomainTxtRequest;
+import com.jdcloud.sdk.service.cdn.model.GenerateDomainTxtResponse;
+import com.jdcloud.sdk.service.cdn.client.GenerateDomainTxtExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryOssBucketsRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryOssBucketsResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryOssBucketsExecutor;
@@ -388,9 +391,6 @@ import com.jdcloud.sdk.service.cdn.client.SetCustomErrorPageExecutor;
 import com.jdcloud.sdk.service.cdn.model.DisableWafBlackRulesRequest;
 import com.jdcloud.sdk.service.cdn.model.DisableWafBlackRulesResponse;
 import com.jdcloud.sdk.service.cdn.client.DisableWafBlackRulesExecutor;
-import com.jdcloud.sdk.service.cdn.model.DomainTxtGenerateRequest;
-import com.jdcloud.sdk.service.cdn.model.DomainTxtGenerateResponse;
-import com.jdcloud.sdk.service.cdn.client.DomainTxtGenerateExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryWebProtectSettingsRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryWebProtectSettingsResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryWebProtectSettingsExecutor;
@@ -1315,6 +1315,17 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
+     * 生成域名txt记录
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GenerateDomainTxtResponse generateDomainTxt(GenerateDomainTxtRequest request) throws JdcloudSdkException {
+        return new GenerateDomainTxtExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询oss存储域名
      *
      * @param request
@@ -1994,17 +2005,6 @@ public class CdnClient extends JdcloudClient {
      */
     public DisableWafBlackRulesResponse disableWafBlackRules(DisableWafBlackRulesRequest request) throws JdcloudSdkException {
         return new DisableWafBlackRulesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 域名txt记录生成
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DomainTxtGenerateResponse domainTxtGenerate(DomainTxtGenerateRequest request) throws JdcloudSdkException {
-        return new DomainTxtGenerateExecutor().client(this).execute(request);
     }
 
     /**
