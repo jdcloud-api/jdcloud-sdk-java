@@ -40,7 +40,7 @@ public class ZoneBandwidthAvgResult extends JdcloudResult implements java.io.Ser
 如果是请求量，值的单位是次数
 
      */
-    private Number value;
+    private Double value;
 
 
 
@@ -53,7 +53,7 @@ public class ZoneBandwidthAvgResult extends JdcloudResult implements java.io.Ser
      *
      * @return
      */
-    public Number getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -66,7 +66,7 @@ public class ZoneBandwidthAvgResult extends JdcloudResult implements java.io.Ser
      *
      * @param value
      */
-    public void setValue(Number value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -81,7 +81,7 @@ public class ZoneBandwidthAvgResult extends JdcloudResult implements java.io.Ser
      *
      * @param value
      */
-    public ZoneBandwidthAvgResult value(Number value) {
+    public ZoneBandwidthAvgResult value(Double value) {
         this.value = value;
         return this;
     }

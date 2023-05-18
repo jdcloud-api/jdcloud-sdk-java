@@ -39,7 +39,7 @@ public class CdnSingleMetric  implements java.io.Serializable {
 如果是请求量，值的单位是次数
 
      */
-    private Number value;
+    private Double value;
 
 
 
@@ -52,7 +52,7 @@ public class CdnSingleMetric  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -65,7 +65,7 @@ public class CdnSingleMetric  implements java.io.Serializable {
      *
      * @param value
      */
-    public void setValue(Number value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -80,7 +80,7 @@ public class CdnSingleMetric  implements java.io.Serializable {
      *
      * @param value
      */
-    public CdnSingleMetric value(Number value) {
+    public CdnSingleMetric value(Double value) {
         this.value = value;
         return this;
     }

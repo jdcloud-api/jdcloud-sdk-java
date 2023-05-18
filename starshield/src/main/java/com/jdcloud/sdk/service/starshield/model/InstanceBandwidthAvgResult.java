@@ -40,7 +40,7 @@ public class InstanceBandwidthAvgResult extends JdcloudResult implements java.io
 如果是请求量，值的单位是次数
 
      */
-    private Number value;
+    private Double value;
 
 
 
@@ -53,7 +53,7 @@ public class InstanceBandwidthAvgResult extends JdcloudResult implements java.io
      *
      * @return
      */
-    public Number getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -66,7 +66,7 @@ public class InstanceBandwidthAvgResult extends JdcloudResult implements java.io
      *
      * @param value
      */
-    public void setValue(Number value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -81,7 +81,7 @@ public class InstanceBandwidthAvgResult extends JdcloudResult implements java.io
      *
      * @param value
      */
-    public InstanceBandwidthAvgResult value(Number value) {
+    public InstanceBandwidthAvgResult value(Double value) {
         this.value = value;
         return this;
     }

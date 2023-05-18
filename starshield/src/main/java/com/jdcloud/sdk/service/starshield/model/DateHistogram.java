@@ -47,7 +47,7 @@ public class DateHistogram  implements java.io.Serializable {
 
      */
     
-    private List<Number> timeseries;
+    private List<Double> timeseries;
     /**
      * unit
      */
@@ -59,7 +59,7 @@ public class DateHistogram  implements java.io.Serializable {
 如果是请求量，它的单位是次数，代表数据点请求量之和。
 
      */
-    private Number total;
+    private Double total;
 
 
 
@@ -91,7 +91,7 @@ public class DateHistogram  implements java.io.Serializable {
     *
     * @return
     */
-    public List<Number> getTimeseries() {
+    public List<Double> getTimeseries() {
         return timeseries;
     }
 
@@ -104,7 +104,7 @@ public class DateHistogram  implements java.io.Serializable {
     *
     * @param timeseries
     */
-    public void setTimeseries(List<Number> timeseries) {
+    public void setTimeseries(List<Double> timeseries) {
         this.timeseries = timeseries;
     }
 
@@ -136,7 +136,7 @@ public class DateHistogram  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getTotal() {
+    public Double getTotal() {
         return total;
     }
 
@@ -148,7 +148,7 @@ public class DateHistogram  implements java.io.Serializable {
      *
      * @param total
      */
-    public void setTotal(Number total) {
+    public void setTotal(Double total) {
         this.total = total;
     }
 
@@ -174,7 +174,7 @@ public class DateHistogram  implements java.io.Serializable {
     *
     * @param timeseries
     */
-    public DateHistogram timeseries(List<Number> timeseries) {
+    public DateHistogram timeseries(List<Double> timeseries) {
         this.timeseries = timeseries;
         return this;
     }
@@ -199,7 +199,7 @@ public class DateHistogram  implements java.io.Serializable {
      *
      * @param total
      */
-    public DateHistogram total(Number total) {
+    public DateHistogram total(Double total) {
         this.total = total;
         return this;
     }
@@ -215,7 +215,7 @@ public class DateHistogram  implements java.io.Serializable {
      *
      * @param timeserie
      */
-    public void addTimeserie(Number timeserie) {
+    public void addTimeserie(Double timeserie) {
         if (this.timeseries == null) {
             this.timeseries = new ArrayList<>();
         }

@@ -40,7 +40,7 @@ public class ZoneRequestSumResult extends JdcloudResult implements java.io.Seria
 如果是请求量，值的单位是次数
 
      */
-    private Number value;
+    private Double value;
 
 
 
@@ -53,7 +53,7 @@ public class ZoneRequestSumResult extends JdcloudResult implements java.io.Seria
      *
      * @return
      */
-    public Number getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -66,7 +66,7 @@ public class ZoneRequestSumResult extends JdcloudResult implements java.io.Seria
      *
      * @param value
      */
-    public void setValue(Number value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -81,7 +81,7 @@ public class ZoneRequestSumResult extends JdcloudResult implements java.io.Seria
      *
      * @param value
      */
-    public ZoneRequestSumResult value(Number value) {
+    public ZoneRequestSumResult value(Double value) {
         this.value = value;
         return this;
     }
