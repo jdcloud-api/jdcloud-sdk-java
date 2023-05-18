@@ -40,7 +40,7 @@ public class InstanceTrafficSumResult extends JdcloudResult implements java.io.S
 如果是请求量，值的单位是次数
 
      */
-    private Number value;
+    private Double value;
 
 
 
@@ -53,7 +53,7 @@ public class InstanceTrafficSumResult extends JdcloudResult implements java.io.S
      *
      * @return
      */
-    public Number getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -66,7 +66,7 @@ public class InstanceTrafficSumResult extends JdcloudResult implements java.io.S
      *
      * @param value
      */
-    public void setValue(Number value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -81,7 +81,7 @@ public class InstanceTrafficSumResult extends JdcloudResult implements java.io.S
      *
      * @param value
      */
-    public InstanceTrafficSumResult value(Number value) {
+    public InstanceTrafficSumResult value(Double value) {
         this.value = value;
         return this;
     }
