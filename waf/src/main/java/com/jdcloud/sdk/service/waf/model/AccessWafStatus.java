@@ -48,6 +48,7 @@ public class AccessWafStatus  implements java.io.Serializable {
     private String statusMsg;
 
 
+
     /**
      * get 域名
      *
@@ -66,6 +67,7 @@ public class AccessWafStatus  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 接入状态 0代表既没有cname，也没有流量，1代表有cname接入，没有流量，2代表两者都有
      *
@@ -83,6 +85,7 @@ public class AccessWafStatus  implements java.io.Serializable {
     public void setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
     }
+
 
     /**
      * get 接入状态描述
@@ -103,6 +106,7 @@ public class AccessWafStatus  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 域名
      *
@@ -113,6 +117,7 @@ public class AccessWafStatus  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 接入状态 0代表既没有cname，也没有流量，1代表有cname接入，没有流量，2代表两者都有
      *
@@ -122,6 +127,7 @@ public class AccessWafStatus  implements java.io.Serializable {
         this.statusCode = statusCode;
         return this;
     }
+
 
     /**
      * set 接入状态描述

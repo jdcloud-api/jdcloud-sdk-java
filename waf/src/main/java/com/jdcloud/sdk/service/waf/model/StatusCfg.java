@@ -67,6 +67,7 @@ public class StatusCfg  implements java.io.Serializable {
     private String val;
 
 
+
     /**
      * get 更新时必传
      *
@@ -84,6 +85,7 @@ public class StatusCfg  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 规则名称
@@ -103,6 +105,7 @@ public class StatusCfg  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 原有状态码，不能为&quot;200&quot;，&quot;493&quot;，&quot;593&quot;
      *
@@ -121,6 +124,7 @@ public class StatusCfg  implements java.io.Serializable {
         this.oriStatus = oriStatus;
     }
 
+
     /**
      * get 设置状态码，只能为&quot;200&quot;，&quot;302&quot;
      *
@@ -138,6 +142,7 @@ public class StatusCfg  implements java.io.Serializable {
     public void setSetStatus(String setStatus) {
         this.setStatus = setStatus;
     }
+
 
     /**
      * get 设置状态码为&quot;200&quot;时，改值为自定义页面名称，&quot;302&quot;时为跳转url
@@ -158,6 +163,7 @@ public class StatusCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 更新时必传
      *
@@ -167,6 +173,7 @@ public class StatusCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 规则名称
@@ -178,6 +185,7 @@ public class StatusCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 原有状态码，不能为&quot;200&quot;，&quot;493&quot;，&quot;593&quot;
      *
@@ -188,6 +196,7 @@ public class StatusCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 设置状态码，只能为&quot;200&quot;，&quot;302&quot;
      *
@@ -197,6 +206,7 @@ public class StatusCfg  implements java.io.Serializable {
         this.setStatus = setStatus;
         return this;
     }
+
 
     /**
      * set 设置状态码为&quot;200&quot;时，改值为自定义页面名称，&quot;302&quot;时为跳转url

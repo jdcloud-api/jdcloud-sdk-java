@@ -110,6 +110,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
     private String dmvalue;
 
 
+
     /**
      * get WAF实例id
      *
@@ -127,6 +128,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -146,6 +148,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 规则名称
      *
@@ -163,6 +166,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
     public void setRuleName(String ruleName) {
         this.ruleName = ruleName;
     }
+
 
     /**
      * get uri以/开头
@@ -182,6 +186,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         this.uri = uri;
     }
 
+
     /**
      * get 精确匹配0  前缀匹配1 包含匹配2 后缀匹配5
      *
@@ -199,6 +204,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
     public void setMatchType(Integer matchType) {
         this.matchType = matchType;
     }
+
 
     /**
      * get 检测周期，单位是秒，[30~600]
@@ -218,6 +224,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         this.detectPeriod = detectPeriod;
     }
 
+
     /**
      * get ip访问次数，[1~9999999]
      *
@@ -235,6 +242,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
     public void setSingleIpLimit(Integer singleIpLimit) {
         this.singleIpLimit = singleIpLimit;
     }
+
 
     /**
      * get 阻断类型 1:302跳转到指定页面 2:验证码 3:拦截返回自定义页面 4:js跳转 5:观察 6:重定向
@@ -254,6 +262,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         this.blockType = blockType;
     }
 
+
     /**
      * get block 持续时间，单位为分钟 [1~24*60]
      *
@@ -271,6 +280,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
     public void setBlockTime(Integer blockTime) {
         this.blockTime = blockTime;
     }
+
 
     /**
      * get blockType 为3 时，为自定义页面名称，缺省为default
@@ -290,6 +300,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         this.redirection = redirection;
     }
 
+
     /**
      * get cc 统计维度，ip或cookie
      *
@@ -307,6 +318,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
     public void setDimension(String dimension) {
         this.dimension = dimension;
     }
+
 
     /**
      * get cookiename, 只有当 dimension 为 cookie 时才有效
@@ -327,6 +339,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -336,6 +349,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -347,6 +361,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则名称
      *
@@ -356,6 +371,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         this.ruleName = ruleName;
         return this;
     }
+
 
     /**
      * set uri以/开头
@@ -367,6 +383,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 精确匹配0  前缀匹配1 包含匹配2 后缀匹配5
      *
@@ -376,6 +393,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         this.matchType = matchType;
         return this;
     }
+
 
     /**
      * set 检测周期，单位是秒，[30~600]
@@ -387,6 +405,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set ip访问次数，[1~9999999]
      *
@@ -396,6 +415,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         this.singleIpLimit = singleIpLimit;
         return this;
     }
+
 
     /**
      * set 阻断类型 1:302跳转到指定页面 2:验证码 3:拦截返回自定义页面 4:js跳转 5:观察 6:重定向
@@ -407,6 +427,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set block 持续时间，单位为分钟 [1~24*60]
      *
@@ -416,6 +437,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         this.blockTime = blockTime;
         return this;
     }
+
 
     /**
      * set blockType 为3 时，为自定义页面名称，缺省为default
@@ -427,6 +449,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cc 统计维度，ip或cookie
      *
@@ -436,6 +459,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
         this.dimension = dimension;
         return this;
     }
+
 
     /**
      * set cookiename, 只有当 dimension 为 cookie 时才有效

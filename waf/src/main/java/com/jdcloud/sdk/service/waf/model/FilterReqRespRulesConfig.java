@@ -88,6 +88,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
     private Integer isForceApply;
 
 
+
     /**
      * get id为0时为新增，否则为更新
      *
@@ -105,6 +106,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 规则名称
@@ -124,6 +126,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 操作对象，[&quot;req&quot;/&quot;resp&quot;]
      *
@@ -141,6 +144,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
     public void setOpObject(String opObject) {
         this.opObject = opObject;
     }
+
 
     /**
      * get 匹配类型，[&quot;cookie&quot;/&quot;header&quot;]
@@ -160,6 +164,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         this.matchType = matchType;
     }
 
+
     /**
      * get 匹配模式，[&quot;del&quot;/&quot;set&quot;]
      *
@@ -177,6 +182,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
     public void setMatchOp(String matchOp) {
         this.matchOp = matchOp;
     }
+
 
     /**
      * get filter key
@@ -196,6 +202,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         this.key = key;
     }
 
+
     /**
      * get 匹配值，当匹配模式为&quot;del&quot;时val应为空
      *
@@ -213,6 +220,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
     public void setVal(String val) {
         this.val = val;
     }
+
 
     /**
      * get 匹配值类型，&quot;str&quot;(字符型)，&quot;php&quot;(脚本类型)
@@ -232,6 +240,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         this.valType = valType;
     }
 
+
     /**
      * get 更新时间，s
      *
@@ -250,6 +259,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 0-使用中 1-禁用
      *
@@ -267,6 +277,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
     public void setDisable(Integer disable) {
         this.disable = disable;
     }
+
 
     /**
      * get 0-用户添加 1-运营后台强制添加
@@ -287,6 +298,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id为0时为新增，否则为更新
      *
@@ -296,6 +308,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 规则名称
@@ -307,6 +320,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 操作对象，[&quot;req&quot;/&quot;resp&quot;]
      *
@@ -316,6 +330,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         this.opObject = opObject;
         return this;
     }
+
 
     /**
      * set 匹配类型，[&quot;cookie&quot;/&quot;header&quot;]
@@ -327,6 +342,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配模式，[&quot;del&quot;/&quot;set&quot;]
      *
@@ -336,6 +352,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         this.matchOp = matchOp;
         return this;
     }
+
 
     /**
      * set filter key
@@ -347,6 +364,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配值，当匹配模式为&quot;del&quot;时val应为空
      *
@@ -356,6 +374,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         this.val = val;
         return this;
     }
+
 
     /**
      * set 匹配值类型，&quot;str&quot;(字符型)，&quot;php&quot;(脚本类型)
@@ -367,6 +386,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 更新时间，s
      *
@@ -377,6 +397,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0-使用中 1-禁用
      *
@@ -386,6 +407,7 @@ public class FilterReqRespRulesConfig  implements java.io.Serializable {
         this.disable = disable;
         return this;
     }
+
 
     /**
      * set 0-用户添加 1-运营后台强制添加

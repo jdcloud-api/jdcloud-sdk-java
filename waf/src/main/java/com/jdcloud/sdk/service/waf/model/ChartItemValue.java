@@ -37,37 +37,40 @@ public class ChartItemValue  implements java.io.Serializable {
     /**
      * value
      */
-    private List<Integer> value;
+    
+    private List<Long> value;
 
 
     /**
-     * get value
-     *
-     * @return
-     */
-    public List<Integer> getValue() {
+    * get value
+    *
+    * @return
+    */
+    public List<Long> getValue() {
         return value;
     }
 
     /**
-     * set value
-     *
-     * @param value
-     */
-    public void setValue(List<Integer> value) {
+    * set value
+    *
+    * @param value
+    */
+    public void setValue(List<Long> value) {
         this.value = value;
     }
+
 
 
     /**
-     * set value
-     *
-     * @param value
-     */
-    public ChartItemValue value(List<Integer> value) {
+    * set value
+    *
+    * @param value
+    */
+    public ChartItemValue value(List<Long> value) {
         this.value = value;
         return this;
     }
+
 
 
     /**
@@ -75,11 +78,10 @@ public class ChartItemValue  implements java.io.Serializable {
      *
      * @param value
      */
-    public void addValue(Integer value) {
+    public void addValue(Long value) {
         if (this.value == null) {
             this.value = new ArrayList<>();
         }
         this.value.add(value);
     }
-
 }

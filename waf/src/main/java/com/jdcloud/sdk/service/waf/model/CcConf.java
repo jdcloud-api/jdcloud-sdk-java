@@ -58,6 +58,7 @@ public class CcConf  implements java.io.Serializable {
     private DenyActionCfg action;
 
 
+
     /**
      * get 是否使能 0表示否
      *
@@ -75,6 +76,7 @@ public class CcConf  implements java.io.Serializable {
     public void setEnable(Integer enable) {
         this.enable = enable;
     }
+
 
     /**
      * get 防护模式
@@ -94,6 +96,7 @@ public class CcConf  implements java.io.Serializable {
         this.ccMode = ccMode;
     }
 
+
     /**
      * get 是否支持自定义cc，0表示否
      *
@@ -112,6 +115,7 @@ public class CcConf  implements java.io.Serializable {
         this.enableUserDefine = enableUserDefine;
     }
 
+
     /**
      * get cc自定义规则个数
      *
@@ -129,6 +133,7 @@ public class CcConf  implements java.io.Serializable {
     public void setRulesCount(Integer rulesCount) {
         this.rulesCount = rulesCount;
     }
+
 
     /**
      * get 动作配置，默认为告警，支持1，2，3和5四种类型动作
@@ -149,6 +154,7 @@ public class CcConf  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否使能 0表示否
      *
@@ -158,6 +164,7 @@ public class CcConf  implements java.io.Serializable {
         this.enable = enable;
         return this;
     }
+
 
     /**
      * set 防护模式
@@ -169,6 +176,7 @@ public class CcConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否支持自定义cc，0表示否
      *
@@ -179,6 +187,7 @@ public class CcConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cc自定义规则个数
      *
@@ -188,6 +197,7 @@ public class CcConf  implements java.io.Serializable {
         this.rulesCount = rulesCount;
         return this;
     }
+
 
     /**
      * set 动作配置，默认为告警，支持1，2，3和5四种类型动作

@@ -72,6 +72,7 @@ public class ListJsPageReq  implements java.io.Serializable {
     private String ruleType;
 
 
+
     /**
      * get WAF实例id
      *
@@ -89,6 +90,7 @@ public class ListJsPageReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -108,6 +110,7 @@ public class ListJsPageReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 匹配逻辑
      *
@@ -125,6 +128,7 @@ public class ListJsPageReq  implements java.io.Serializable {
     public void setMatchOp(String matchOp) {
         this.matchOp = matchOp;
     }
+
 
     /**
      * get 页码，[1-100]，默认是1
@@ -144,6 +148,7 @@ public class ListJsPageReq  implements java.io.Serializable {
         this.pageIndex = pageIndex;
     }
 
+
     /**
      * get 页大小，[1-100]，默认是10
      *
@@ -161,6 +166,7 @@ public class ListJsPageReq  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get risk-风控js，bot-bot js
@@ -181,6 +187,7 @@ public class ListJsPageReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -190,6 +197,7 @@ public class ListJsPageReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -201,6 +209,7 @@ public class ListJsPageReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配逻辑
      *
@@ -210,6 +219,7 @@ public class ListJsPageReq  implements java.io.Serializable {
         this.matchOp = matchOp;
         return this;
     }
+
 
     /**
      * set 页码，[1-100]，默认是1
@@ -221,6 +231,7 @@ public class ListJsPageReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 页大小，[1-100]，默认是10
      *
@@ -230,6 +241,7 @@ public class ListJsPageReq  implements java.io.Serializable {
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set risk-风控js，bot-bot js

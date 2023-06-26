@@ -39,31 +39,33 @@ public class GetQpsDataResult extends JdcloudResult implements java.io.Serializa
     /**
      * timeScope
      */
+    
     private List<Long> timeScope;
-
     /**
      * qps数据
      */
     private Qps qps;
 
 
+
     /**
-     * get timeScope
-     *
-     * @return
-     */
+    * get timeScope
+    *
+    * @return
+    */
     public List<Long> getTimeScope() {
         return timeScope;
     }
 
     /**
-     * set timeScope
-     *
-     * @param timeScope
-     */
+    * set timeScope
+    *
+    * @param timeScope
+    */
     public void setTimeScope(List<Long> timeScope) {
         this.timeScope = timeScope;
     }
+
 
     /**
      * get qps数据
@@ -84,15 +86,17 @@ public class GetQpsDataResult extends JdcloudResult implements java.io.Serializa
     }
 
 
+
     /**
-     * set timeScope
-     *
-     * @param timeScope
-     */
+    * set timeScope
+    *
+    * @param timeScope
+    */
     public GetQpsDataResult timeScope(List<Long> timeScope) {
         this.timeScope = timeScope;
         return this;
     }
+
 
     /**
      * set qps数据
@@ -103,6 +107,7 @@ public class GetQpsDataResult extends JdcloudResult implements java.io.Serializa
         this.qps = qps;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class GetQpsDataResult extends JdcloudResult implements java.io.Serializa
         }
         this.timeScope.add(timeScope);
     }
-
 }

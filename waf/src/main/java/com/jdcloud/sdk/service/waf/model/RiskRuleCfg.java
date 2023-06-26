@@ -93,6 +93,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
     private String redirection;
 
 
+
     /**
      * get 规则id
      *
@@ -110,6 +111,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get WAF实例id
@@ -129,6 +131,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -146,6 +149,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 规则名称
@@ -165,6 +169,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get uri 以/开头
      *
@@ -182,6 +187,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
     public void setUri(String uri) {
         this.uri = uri;
     }
+
 
     /**
      * get 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
@@ -201,6 +207,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         this.action = action;
     }
 
+
     /**
      * get 请求方法 支持 POST:1,GET:1,PUT:1
      *
@@ -218,6 +225,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
     public void setMethods(String methods) {
         this.methods = methods;
     }
+
 
     /**
      * get 场景 支持 account_login / account_register
@@ -237,6 +245,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         this.sceneRef = sceneRef;
     }
 
+
     /**
      * get 事件 支持 passwd:JSON_BODY.passwd,username:ARGS.username,session:ARGS_BODY.session
      *
@@ -254,6 +263,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
     public void setEvent(String event) {
         this.event = event;
     }
+
 
     /**
      * get 0-使用中 1-禁用
@@ -273,6 +283,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         this.disable = disable;
     }
 
+
     /**
      * get 更新时间，s
      *
@@ -290,6 +301,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
     public void setUpdateTime(Integer updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 跳转地址，Action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
@@ -310,6 +322,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id
      *
@@ -319,6 +332,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set WAF实例id
@@ -330,6 +344,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -339,6 +354,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 规则名称
@@ -350,6 +366,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set uri 以/开头
      *
@@ -359,6 +376,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         this.uri = uri;
         return this;
     }
+
 
     /**
      * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
@@ -370,6 +388,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 请求方法 支持 POST:1,GET:1,PUT:1
      *
@@ -379,6 +398,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         this.methods = methods;
         return this;
     }
+
 
     /**
      * set 场景 支持 account_login / account_register
@@ -390,6 +410,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 事件 支持 passwd:JSON_BODY.passwd,username:ARGS.username,session:ARGS_BODY.session
      *
@@ -399,6 +420,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         this.event = event;
         return this;
     }
+
 
     /**
      * set 0-使用中 1-禁用
@@ -410,6 +432,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 更新时间，s
      *
@@ -419,6 +442,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 跳转地址，Action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称

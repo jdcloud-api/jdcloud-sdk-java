@@ -41,6 +41,7 @@ public class ReNickNameReq  implements java.io.Serializable {
     private String nickName;
 
 
+
     /**
      * get 实例名
      *
@@ -58,6 +59,7 @@ public class ReNickNameReq  implements java.io.Serializable {
     public void setNickName(String nickName) {
         this.nickName = nickName;
     }
+
 
 
     /**

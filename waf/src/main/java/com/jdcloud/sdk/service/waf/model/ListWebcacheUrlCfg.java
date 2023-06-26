@@ -68,6 +68,7 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
     private Integer updateTime;
 
 
+
     /**
      * get 实例id，WAF实例
      *
@@ -85,6 +86,7 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -104,6 +106,7 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 名称
      *
@@ -121,6 +124,7 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 0 网页防篡改 1 网站防篡改
@@ -140,6 +144,7 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
         this.website = website;
     }
 
+
     /**
      * get 是否使能，0表示否
      *
@@ -158,6 +163,7 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
         this.enable = enable;
     }
 
+
     /**
      * get url
      *
@@ -175,6 +181,7 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get 更新时间，s
@@ -195,6 +202,7 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例id，WAF实例
      *
@@ -204,6 +212,7 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -215,6 +224,7 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 名称
      *
@@ -224,6 +234,7 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 0 网页防篡改 1 网站防篡改
@@ -235,6 +246,7 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否使能，0表示否
      *
@@ -245,6 +257,7 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set url
      *
@@ -254,6 +267,7 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
         this.url = url;
         return this;
     }
+
 
     /**
      * set 更新时间，s

@@ -43,6 +43,7 @@ public class SignatureRuleGroup  implements java.io.Serializable {
     private String ruleType;
 
 
+
     /**
      * get 规则个数
      *
@@ -60,6 +61,7 @@ public class SignatureRuleGroup  implements java.io.Serializable {
     public void setCount(Integer count) {
         this.count = count;
     }
+
 
     /**
      * get 攻击类型
@@ -80,6 +82,7 @@ public class SignatureRuleGroup  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则个数
      *
@@ -89,6 +92,7 @@ public class SignatureRuleGroup  implements java.io.Serializable {
         this.count = count;
         return this;
     }
+
 
     /**
      * set 攻击类型

@@ -73,6 +73,7 @@ public class ListWafConditionsReq  implements java.io.Serializable {
     private Integer id;
 
 
+
     /**
      * get WAF实例id
      *
@@ -90,6 +91,7 @@ public class ListWafConditionsReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -109,6 +111,7 @@ public class ListWafConditionsReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 页码，[1-100]，默认是1
      *
@@ -126,6 +129,7 @@ public class ListWafConditionsReq  implements java.io.Serializable {
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
     }
+
 
     /**
      * get 页大小，[1-100]，默认是10
@@ -145,6 +149,7 @@ public class ListWafConditionsReq  implements java.io.Serializable {
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 可选，筛选条件，对值不做校验
      *
@@ -163,6 +168,7 @@ public class ListWafConditionsReq  implements java.io.Serializable {
         this.conditionName = conditionName;
     }
 
+
     /**
      * get 可选，筛选条件，模糊匹配
      *
@@ -180,6 +186,7 @@ public class ListWafConditionsReq  implements java.io.Serializable {
     public void setConditionType(String conditionType) {
         this.conditionType = conditionType;
     }
+
 
     /**
      * get 可选，筛选条件
@@ -200,6 +207,7 @@ public class ListWafConditionsReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -209,6 +217,7 @@ public class ListWafConditionsReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -220,6 +229,7 @@ public class ListWafConditionsReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 页码，[1-100]，默认是1
      *
@@ -229,6 +239,7 @@ public class ListWafConditionsReq  implements java.io.Serializable {
         this.pageIndex = pageIndex;
         return this;
     }
+
 
     /**
      * set 页大小，[1-100]，默认是10
@@ -240,6 +251,7 @@ public class ListWafConditionsReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 可选，筛选条件，对值不做校验
      *
@@ -250,6 +262,7 @@ public class ListWafConditionsReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 可选，筛选条件，模糊匹配
      *
@@ -259,6 +272,7 @@ public class ListWafConditionsReq  implements java.io.Serializable {
         this.conditionType = conditionType;
         return this;
     }
+
 
     /**
      * set 可选，筛选条件

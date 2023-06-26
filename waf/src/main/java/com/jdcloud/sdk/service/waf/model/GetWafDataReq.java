@@ -37,8 +37,8 @@ public class GetWafDataReq  implements java.io.Serializable {
     /**
      * userPins
      */
+    
     private List<String> userPin;
-
     /**
      * 起始时间, utc时间戳
      */
@@ -50,23 +50,25 @@ public class GetWafDataReq  implements java.io.Serializable {
     private Long endTime;
 
 
+
     /**
-     * get userPins
-     *
-     * @return
-     */
+    * get userPins
+    *
+    * @return
+    */
     public List<String> getUserPin() {
         return userPin;
     }
 
     /**
-     * set userPins
-     *
-     * @param userPin
-     */
+    * set userPins
+    *
+    * @param userPin
+    */
     public void setUserPin(List<String> userPin) {
         this.userPin = userPin;
     }
+
 
     /**
      * get 起始时间, utc时间戳
@@ -85,6 +87,7 @@ public class GetWafDataReq  implements java.io.Serializable {
     public void setStartTime(Long startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 结束时间, utc时间戳，必须大于起始时间
@@ -105,15 +108,17 @@ public class GetWafDataReq  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set userPins
-     *
-     * @param userPin
-     */
+    * set userPins
+    *
+    * @param userPin
+    */
     public GetWafDataReq userPin(List<String> userPin) {
         this.userPin = userPin;
         return this;
     }
+
 
     /**
      * set 起始时间, utc时间戳
@@ -125,6 +130,7 @@ public class GetWafDataReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 结束时间, utc时间戳，必须大于起始时间
      *
@@ -134,6 +140,7 @@ public class GetWafDataReq  implements java.io.Serializable {
         this.endTime = endTime;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class GetWafDataReq  implements java.io.Serializable {
         }
         this.userPin.add(userPin);
     }
-
 }

@@ -48,6 +48,7 @@ public class DomainRegionInfo  implements java.io.Serializable {
     private RegionVipInfo hn;
 
 
+
     /**
      * get 域名的在华北的vip和选中信息
      *
@@ -66,6 +67,7 @@ public class DomainRegionInfo  implements java.io.Serializable {
         this.hb_bgp = hb_bgp;
     }
 
+
     /**
      * get 域名的在华东的vip和选中信息
      *
@@ -83,6 +85,7 @@ public class DomainRegionInfo  implements java.io.Serializable {
     public void setHd_bgp(RegionVipInfo hd_bgp) {
         this.hd_bgp = hd_bgp;
     }
+
 
     /**
      * get 域名的在华南的vip和选中信息
@@ -103,6 +106,7 @@ public class DomainRegionInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 域名的在华北的vip和选中信息
      *
@@ -113,6 +117,7 @@ public class DomainRegionInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名的在华东的vip和选中信息
      *
@@ -122,6 +127,7 @@ public class DomainRegionInfo  implements java.io.Serializable {
         this.hd_bgp = hd_bgp;
         return this;
     }
+
 
     /**
      * set 域名的在华南的vip和选中信息

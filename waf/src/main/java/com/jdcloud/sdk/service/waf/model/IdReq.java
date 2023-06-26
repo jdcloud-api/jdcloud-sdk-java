@@ -41,6 +41,7 @@ public class IdReq  implements java.io.Serializable {
     private Integer id;
 
 
+
     /**
      * get id序号
      *
@@ -58,6 +59,7 @@ public class IdReq  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
 
     /**

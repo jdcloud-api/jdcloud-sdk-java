@@ -48,6 +48,7 @@ public class TopValue  implements java.io.Serializable {
     private Integer pv;
 
 
+
     /**
      * get 排名
      *
@@ -66,6 +67,7 @@ public class TopValue  implements java.io.Serializable {
         this.rank = rank;
     }
 
+
     /**
      * get 具体值
      *
@@ -83,6 +85,7 @@ public class TopValue  implements java.io.Serializable {
     public void setSrc(String src) {
         this.src = src;
     }
+
 
     /**
      * get 统计值
@@ -103,6 +106,7 @@ public class TopValue  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 排名
      *
@@ -113,6 +117,7 @@ public class TopValue  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 具体值
      *
@@ -122,6 +127,7 @@ public class TopValue  implements java.io.Serializable {
         this.src = src;
         return this;
     }
+
 
     /**
      * set 统计值

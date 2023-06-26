@@ -43,6 +43,7 @@ public class IpVipInfo  implements java.io.Serializable {
     private Boolean isVip;
 
 
+
     /**
      * get ip
      *
@@ -60,6 +61,7 @@ public class IpVipInfo  implements java.io.Serializable {
     public void setIp(String ip) {
         this.ip = ip;
     }
+
 
     /**
      * get 是否waf的vip，true-是，false-不是
@@ -80,6 +82,7 @@ public class IpVipInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ip
      *
@@ -89,6 +92,7 @@ public class IpVipInfo  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set 是否waf的vip，true-是，false-不是

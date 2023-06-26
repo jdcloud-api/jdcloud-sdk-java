@@ -39,7 +39,7 @@ public class IpCfg  implements java.io.Serializable {
     private Integer id;
 
     /**
-     * 支持 ipv4/8 ipv4/16 ipv4/24 ipv4/32 ipv6/64
+     * ruleType为0时,支持ipv4/8,ipv4/16,ipv4/24,ipv4/32,ipv6/64;ruleType为1时,为ip集名称
      * Required:true
      */
     @Required
@@ -56,6 +56,7 @@ public class IpCfg  implements java.io.Serializable {
      * 备注
      */
     private String tag;
+
 
 
     /**
@@ -76,8 +77,9 @@ public class IpCfg  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
-     * get 支持 ipv4/8 ipv4/16 ipv4/24 ipv4/32 ipv6/64
+     * get ruleType为0时,支持ipv4/8,ipv4/16,ipv4/24,ipv4/32,ipv6/64;ruleType为1时,为ip集名称
      *
      * @return
      */
@@ -86,13 +88,14 @@ public class IpCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 支持 ipv4/8 ipv4/16 ipv4/24 ipv4/32 ipv6/64
+     * set ruleType为0时,支持ipv4/8,ipv4/16,ipv4/24,ipv4/32,ipv6/64;ruleType为1时,为ip集名称
      *
      * @param val
      */
     public void setVal(String val) {
         this.val = val;
     }
+
 
     /**
      * get 动作配置,旗舰版全部支持,其它套餐不支持观察
@@ -111,6 +114,7 @@ public class IpCfg  implements java.io.Serializable {
     public void setAtCfg(AtCfg atCfg) {
         this.atCfg = atCfg;
     }
+
 
     /**
      * get 备注
@@ -131,6 +135,7 @@ public class IpCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 序号id,更新时需要
      *
@@ -141,8 +146,9 @@ public class IpCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 支持 ipv4/8 ipv4/16 ipv4/24 ipv4/32 ipv6/64
+     * set ruleType为0时,支持ipv4/8,ipv4/16,ipv4/24,ipv4/32,ipv6/64;ruleType为1时,为ip集名称
      *
      * @param val
      */
@@ -150,6 +156,7 @@ public class IpCfg  implements java.io.Serializable {
         this.val = val;
         return this;
     }
+
 
     /**
      * set 动作配置,旗舰版全部支持,其它套餐不支持观察
@@ -160,6 +167,7 @@ public class IpCfg  implements java.io.Serializable {
         this.atCfg = atCfg;
         return this;
     }
+
 
     /**
      * set 备注

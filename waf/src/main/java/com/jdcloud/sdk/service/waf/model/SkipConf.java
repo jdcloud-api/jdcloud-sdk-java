@@ -43,6 +43,7 @@ public class SkipConf  implements java.io.Serializable {
     private Integer listNum;
 
 
+
     /**
      * get 是否使能 0表示否
      *
@@ -60,6 +61,7 @@ public class SkipConf  implements java.io.Serializable {
     public void setEnable(Integer enable) {
         this.enable = enable;
     }
+
 
     /**
      * get 规则条数
@@ -80,6 +82,7 @@ public class SkipConf  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否使能 0表示否
      *
@@ -89,6 +92,7 @@ public class SkipConf  implements java.io.Serializable {
         this.enable = enable;
         return this;
     }
+
 
     /**
      * set 规则条数

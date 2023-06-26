@@ -66,11 +66,12 @@ public class SetRiskEventVarsReq  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<RiskVarCfg> vars;
-
     /**
      * 策略集
      */
+    
     private List<RiskPolicyCfg> policys;
 
 
@@ -92,6 +93,7 @@ public class SetRiskEventVarsReq  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get WAF实例id
      *
@@ -109,6 +111,7 @@ public class SetRiskEventVarsReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -128,6 +131,7 @@ public class SetRiskEventVarsReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 事件
      *
@@ -146,41 +150,44 @@ public class SetRiskEventVarsReq  implements java.io.Serializable {
         this.event = event;
     }
 
+
     /**
-     * get 变量集
-     *
-     * @return
-     */
+    * get 变量集
+    *
+    * @return
+    */
     public List<RiskVarCfg> getVars() {
         return vars;
     }
 
     /**
-     * set 变量集
-     *
-     * @param vars
-     */
+    * set 变量集
+    *
+    * @param vars
+    */
     public void setVars(List<RiskVarCfg> vars) {
         this.vars = vars;
     }
 
+
     /**
-     * get 策略集
-     *
-     * @return
-     */
+    * get 策略集
+    *
+    * @return
+    */
     public List<RiskPolicyCfg> getPolicys() {
         return policys;
     }
 
     /**
-     * set 策略集
-     *
-     * @param policys
-     */
+    * set 策略集
+    *
+    * @param policys
+    */
     public void setPolicys(List<RiskPolicyCfg> policys) {
         this.policys = policys;
     }
+
 
 
     /**
@@ -193,6 +200,7 @@ public class SetRiskEventVarsReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set WAF实例id
      *
@@ -202,6 +210,7 @@ public class SetRiskEventVarsReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -213,6 +222,7 @@ public class SetRiskEventVarsReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 事件
      *
@@ -223,25 +233,28 @@ public class SetRiskEventVarsReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 变量集
-     *
-     * @param vars
-     */
+    * set 变量集
+    *
+    * @param vars
+    */
     public SetRiskEventVarsReq vars(List<RiskVarCfg> vars) {
         this.vars = vars;
         return this;
     }
 
+
     /**
-     * set 策略集
-     *
-     * @param policys
-     */
+    * set 策略集
+    *
+    * @param policys
+    */
     public SetRiskEventVarsReq policys(List<RiskPolicyCfg> policys) {
         this.policys = policys;
         return this;
     }
+
 
 
     /**
@@ -267,5 +280,4 @@ public class SetRiskEventVarsReq  implements java.io.Serializable {
         }
         this.policys.add(policy);
     }
-
 }

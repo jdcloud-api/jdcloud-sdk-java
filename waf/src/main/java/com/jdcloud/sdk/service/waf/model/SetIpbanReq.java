@@ -62,6 +62,7 @@ public class SetIpbanReq  implements java.io.Serializable {
     private DenyActionCfg action;
 
 
+
     /**
      * get WAF实例id
      *
@@ -79,6 +80,7 @@ public class SetIpbanReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -98,6 +100,7 @@ public class SetIpbanReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 防护模式 1宽松模式，2正常模式，3严格模式
      *
@@ -115,6 +118,7 @@ public class SetIpbanReq  implements java.io.Serializable {
     public void setIpbanMode(Integer ipbanMode) {
         this.ipbanMode = ipbanMode;
     }
+
 
     /**
      * get 动作配置
@@ -135,6 +139,7 @@ public class SetIpbanReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -144,6 +149,7 @@ public class SetIpbanReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -155,6 +161,7 @@ public class SetIpbanReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 防护模式 1宽松模式，2正常模式，3严格模式
      *
@@ -164,6 +171,7 @@ public class SetIpbanReq  implements java.io.Serializable {
         this.ipbanMode = ipbanMode;
         return this;
     }
+
 
     /**
      * set 动作配置

@@ -48,6 +48,7 @@ public class LbConfig  implements java.io.Serializable {
     private LbConf lbConf;
 
 
+
     /**
      * get 域名
      *
@@ -65,6 +66,7 @@ public class LbConfig  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 网站lb配置
@@ -85,6 +87,7 @@ public class LbConfig  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 域名
      *
@@ -94,6 +97,7 @@ public class LbConfig  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 网站lb配置

@@ -68,6 +68,7 @@ public class FilterCfg  implements java.io.Serializable {
     private String isBase64Decode;
 
 
+
     /**
      * get 序号,不作更新使用
      *
@@ -85,6 +86,7 @@ public class FilterCfg  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 请求位置 当匹配类型为&quot;str&quot;/&quot;regex&quot;/&quot;size&quot;时，可选字段：[&quot;headers&quot;/&quot;cookie&quot;/&quot;args&quot;/&quot;body&quot;/&quot;uri&quot;/&quot;method&quot;] | 匹配类型为&quot;SQLi&quot;/&quot;XSS&quot;时:可选字段：[&quot;headers&quot;/&quot;cookie&quot;/&quot;args&quot;/&quot;body&quot;/&quot;uri&quot;]|当匹配类型为&quot;geo&quot;/&quot;ip&quot;时，该字段为空
@@ -104,6 +106,7 @@ public class FilterCfg  implements java.io.Serializable {
         this.partOfReq = partOfReq;
     }
 
+
     /**
      * get 指定key，匹配类型为&quot;geo&quot;/&quot;ip&quot;时，该字段为空,|  partOfReq为uri/body/method 时，该字段为空，header/cookie时非空，args时选填
      *
@@ -121,6 +124,7 @@ public class FilterCfg  implements java.io.Serializable {
     public void setReqKey(String reqKey) {
         this.reqKey = reqKey;
     }
+
 
     /**
      * get 匹配类型&quot;str&quot;时：[&quot;startsWith&quot;/&quot;endsWith&quot;/&quot;contains&quot;/&quot;equal&quot;]|匹配类型为&quot;geo&quot;/&quot;SQLi&quot;/&quot;XSS&quot;/&quot;regex&quot;时：&quot;&quot;|匹配类型为&quot;size&quot;时：[&quot;equal&quot;/&quot;notEquals&quot;/&quot;greaterThan&quot;/&quot;greaterThanOrEqual&quot;/&quot;lessThan&quot;/&quot;lessThanOrEqual&quot;]
@@ -140,6 +144,7 @@ public class FilterCfg  implements java.io.Serializable {
         this.matchLogic = matchLogic;
     }
 
+
     /**
      * get // 匹配类型为&quot;SQLi&quot;/&quot;XSS&quot;时:&quot;&quot;，匹配类型为&quot;geo&quot;时:该值为省份名称。匹配类型为&quot;ip&quot;时，该值为 ipv4/8/16/24/32)/ipv6/64 ipv6/128)| 匹配类型为&quot;size&quot;时:数字字符串 其他类型不限
      *
@@ -158,6 +163,7 @@ public class FilterCfg  implements java.io.Serializable {
         this.reqValue = reqValue;
     }
 
+
     /**
      * get 仅type为str regex SQLi XSS时可非空，取值&quot;&quot;,&quot;lowercase&quot;,&quot;trim&quot;,&quot;base64Decode&quot;,&quot;urlDecode&quot;,&quot;htmlDecode&quot;,&quot;hexDecode&quot;,&quot;sqlTrim&quot;按先后顺序，多个时用 , 分隔
      *
@@ -175,6 +181,7 @@ public class FilterCfg  implements java.io.Serializable {
     public void setDecodeFunc(String decodeFunc) {
         this.decodeFunc = decodeFunc;
     }
+
 
     /**
      * get 不解码&quot;base64Decode&quot;解码,str时才有
@@ -195,6 +202,7 @@ public class FilterCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 序号,不作更新使用
      *
@@ -204,6 +212,7 @@ public class FilterCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 请求位置 当匹配类型为&quot;str&quot;/&quot;regex&quot;/&quot;size&quot;时，可选字段：[&quot;headers&quot;/&quot;cookie&quot;/&quot;args&quot;/&quot;body&quot;/&quot;uri&quot;/&quot;method&quot;] | 匹配类型为&quot;SQLi&quot;/&quot;XSS&quot;时:可选字段：[&quot;headers&quot;/&quot;cookie&quot;/&quot;args&quot;/&quot;body&quot;/&quot;uri&quot;]|当匹配类型为&quot;geo&quot;/&quot;ip&quot;时，该字段为空
@@ -215,6 +224,7 @@ public class FilterCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 指定key，匹配类型为&quot;geo&quot;/&quot;ip&quot;时，该字段为空,|  partOfReq为uri/body/method 时，该字段为空，header/cookie时非空，args时选填
      *
@@ -224,6 +234,7 @@ public class FilterCfg  implements java.io.Serializable {
         this.reqKey = reqKey;
         return this;
     }
+
 
     /**
      * set 匹配类型&quot;str&quot;时：[&quot;startsWith&quot;/&quot;endsWith&quot;/&quot;contains&quot;/&quot;equal&quot;]|匹配类型为&quot;geo&quot;/&quot;SQLi&quot;/&quot;XSS&quot;/&quot;regex&quot;时：&quot;&quot;|匹配类型为&quot;size&quot;时：[&quot;equal&quot;/&quot;notEquals&quot;/&quot;greaterThan&quot;/&quot;greaterThanOrEqual&quot;/&quot;lessThan&quot;/&quot;lessThanOrEqual&quot;]
@@ -235,6 +246,7 @@ public class FilterCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set // 匹配类型为&quot;SQLi&quot;/&quot;XSS&quot;时:&quot;&quot;，匹配类型为&quot;geo&quot;时:该值为省份名称。匹配类型为&quot;ip&quot;时，该值为 ipv4/8/16/24/32)/ipv6/64 ipv6/128)| 匹配类型为&quot;size&quot;时:数字字符串 其他类型不限
      *
@@ -245,6 +257,7 @@ public class FilterCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 仅type为str regex SQLi XSS时可非空，取值&quot;&quot;,&quot;lowercase&quot;,&quot;trim&quot;,&quot;base64Decode&quot;,&quot;urlDecode&quot;,&quot;htmlDecode&quot;,&quot;hexDecode&quot;,&quot;sqlTrim&quot;按先后顺序，多个时用 , 分隔
      *
@@ -254,6 +267,7 @@ public class FilterCfg  implements java.io.Serializable {
         this.decodeFunc = decodeFunc;
         return this;
     }
+
 
     /**
      * set 不解码&quot;base64Decode&quot;解码,str时才有

@@ -130,6 +130,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
     private String key;
 
 
+
     /**
      * get 规则id,新增时传0
      *
@@ -147,6 +148,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get WAF实例id
@@ -166,6 +168,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -183,6 +186,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 规则名称
@@ -202,6 +206,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get desc
      *
@@ -219,6 +224,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
 
     /**
      * get 0-使用中 1用-禁
@@ -238,6 +244,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.disable = disable;
     }
 
+
     /**
      * get 时间编码
      *
@@ -255,6 +262,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
     public void setEventCode(String eventCode) {
         this.eventCode = eventCode;
     }
+
 
     /**
      * get 变量类型 template \|  userDefine \|  online \| offline
@@ -274,6 +282,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.varType = varType;
     }
 
+
     /**
      * get 消耗时间
      *
@@ -291,6 +300,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
     public void setCost(String cost) {
         this.cost = cost;
     }
+
 
     /**
      * get 输出
@@ -310,6 +320,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.output = output;
     }
 
+
     /**
      * get 属性
      *
@@ -327,6 +338,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
     public void setProperty(String property) {
         this.property = property;
     }
+
 
     /**
      * get 持续时间，单位为秒
@@ -346,6 +358,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.dura = dura;
     }
 
+
     /**
      * get 逻辑  and \| or
      *
@@ -363,6 +376,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
     public void setLogic(String logic) {
         this.logic = logic;
     }
+
 
     /**
      * get 离线统计规则
@@ -382,6 +396,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.rules = rules;
     }
 
+
     /**
      * get 参数获取位置
      *
@@ -399,6 +414,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
     public void setPos(String pos) {
         this.pos = pos;
     }
+
 
     /**
      * get 参数的key
@@ -419,6 +435,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id,新增时传0
      *
@@ -428,6 +445,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set WAF实例id
@@ -439,6 +457,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -448,6 +467,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 规则名称
@@ -459,6 +479,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set desc
      *
@@ -468,6 +489,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.desc = desc;
         return this;
     }
+
 
     /**
      * set 0-使用中 1用-禁
@@ -479,6 +501,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 时间编码
      *
@@ -488,6 +511,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.eventCode = eventCode;
         return this;
     }
+
 
     /**
      * set 变量类型 template \|  userDefine \|  online \| offline
@@ -499,6 +523,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 消耗时间
      *
@@ -508,6 +533,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.cost = cost;
         return this;
     }
+
 
     /**
      * set 输出
@@ -519,6 +545,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 属性
      *
@@ -528,6 +555,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.property = property;
         return this;
     }
+
 
     /**
      * set 持续时间，单位为秒
@@ -539,6 +567,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 逻辑  and \| or
      *
@@ -548,6 +577,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.logic = logic;
         return this;
     }
+
 
     /**
      * set 离线统计规则
@@ -559,6 +589,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 参数获取位置
      *
@@ -568,6 +599,7 @@ public class SetRiskVarReq  implements java.io.Serializable {
         this.pos = pos;
         return this;
     }
+
 
     /**
      * set 参数的key

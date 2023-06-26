@@ -65,6 +65,7 @@ public class SetProxycacheUrlReq  implements java.io.Serializable {
     private Integer matchOp;
 
 
+
     /**
      * get 规则id,新增时传0
      *
@@ -82,6 +83,7 @@ public class SetProxycacheUrlReq  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 域名
@@ -101,6 +103,7 @@ public class SetProxycacheUrlReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 缓存的uri
      *
@@ -119,6 +122,7 @@ public class SetProxycacheUrlReq  implements java.io.Serializable {
         this.uri = uri;
     }
 
+
     /**
      * get 协议
      *
@@ -136,6 +140,7 @@ public class SetProxycacheUrlReq  implements java.io.Serializable {
     public void setProto(String proto) {
         this.proto = proto;
     }
+
 
     /**
      * get 完全匹配0(默认值)  后缀5
@@ -156,6 +161,7 @@ public class SetProxycacheUrlReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id,新增时传0
      *
@@ -165,6 +171,7 @@ public class SetProxycacheUrlReq  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 域名
@@ -176,6 +183,7 @@ public class SetProxycacheUrlReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 缓存的uri
      *
@@ -186,6 +194,7 @@ public class SetProxycacheUrlReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 协议
      *
@@ -195,6 +204,7 @@ public class SetProxycacheUrlReq  implements java.io.Serializable {
         this.proto = proto;
         return this;
     }
+
 
     /**
      * set 完全匹配0(默认值)  后缀5

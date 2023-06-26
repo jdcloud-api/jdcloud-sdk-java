@@ -48,6 +48,7 @@ public class AntiStatus  implements java.io.Serializable {
     private Integer waf;
 
 
+
     /**
      * get 自定义规则
      *
@@ -66,6 +67,7 @@ public class AntiStatus  implements java.io.Serializable {
         this.acl = acl;
     }
 
+
     /**
      * get cc防护
      *
@@ -83,6 +85,7 @@ public class AntiStatus  implements java.io.Serializable {
     public void setCc(Integer cc) {
         this.cc = cc;
     }
+
 
     /**
      * get waf防护
@@ -103,6 +106,7 @@ public class AntiStatus  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 自定义规则
      *
@@ -113,6 +117,7 @@ public class AntiStatus  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cc防护
      *
@@ -122,6 +127,7 @@ public class AntiStatus  implements java.io.Serializable {
         this.cc = cc;
         return this;
     }
+
 
     /**
      * set waf防护

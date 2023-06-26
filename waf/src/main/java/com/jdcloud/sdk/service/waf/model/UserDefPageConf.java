@@ -38,6 +38,7 @@ public class UserDefPageConf  implements java.io.Serializable {
     private Integer pageNum;
 
 
+
     /**
      * get 条数
      *
@@ -55,6 +56,7 @@ public class UserDefPageConf  implements java.io.Serializable {
     public void setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
     }
+
 
 
     /**

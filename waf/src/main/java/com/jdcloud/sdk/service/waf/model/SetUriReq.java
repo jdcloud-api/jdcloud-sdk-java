@@ -55,11 +55,17 @@ public class SetUriReq  implements java.io.Serializable {
     private Integer iswhite;
 
     /**
+     * 白名单不检查指定Web防护规则id, 多个逗号分隔
+     */
+    private String skipRuleId;
+
+    /**
      * uri配置
      * Required:true
      */
     @Required
-    private List<ValCfg> uris;
+    
+    private List<UriCfg> uris;
 
 
     /**
@@ -80,6 +86,7 @@ public class SetUriReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -97,6 +104,7 @@ public class SetUriReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 0表示黑名单，1表示白名单
@@ -116,23 +124,44 @@ public class SetUriReq  implements java.io.Serializable {
         this.iswhite = iswhite;
     }
 
+
     /**
-     * get uri配置
+     * get 白名单不检查指定Web防护规则id, 多个逗号分隔
      *
      * @return
      */
-    public List<ValCfg> getUris() {
+    public String getSkipRuleId() {
+        return skipRuleId;
+    }
+
+    /**
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @param skipRuleId
+     */
+    public void setSkipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+    }
+
+
+    /**
+    * get uri配置
+    *
+    * @return
+    */
+    public List<UriCfg> getUris() {
         return uris;
     }
 
     /**
-     * set uri配置
-     *
-     * @param uris
-     */
-    public void setUris(List<ValCfg> uris) {
+    * set uri配置
+    *
+    * @param uris
+    */
+    public void setUris(List<UriCfg> uris) {
         this.uris = uris;
     }
+
 
 
     /**
@@ -145,6 +174,7 @@ public class SetUriReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -154,6 +184,7 @@ public class SetUriReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 0表示黑名单，1表示白名单
@@ -165,15 +196,28 @@ public class SetUriReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set uri配置
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
      *
-     * @param uris
+     * @param skipRuleId
      */
-    public SetUriReq uris(List<ValCfg> uris) {
+    public SetUriReq skipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+        return this;
+    }
+
+
+    /**
+    * set uri配置
+    *
+    * @param uris
+    */
+    public SetUriReq uris(List<UriCfg> uris) {
         this.uris = uris;
         return this;
     }
+
 
 
     /**
@@ -181,11 +225,10 @@ public class SetUriReq  implements java.io.Serializable {
      *
      * @param uri
      */
-    public void addUri(ValCfg uri) {
+    public void addUri(UriCfg uri) {
         if (this.uris == null) {
             this.uris = new ArrayList<>();
         }
         this.uris.add(uri);
     }
-
 }

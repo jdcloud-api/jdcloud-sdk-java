@@ -65,6 +65,7 @@ public class KeyValCfg  implements java.io.Serializable {
     private AtCfg atCfg;
 
 
+
     /**
      * get 序号id，更新时不能为空
      *
@@ -82,6 +83,7 @@ public class KeyValCfg  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
@@ -101,6 +103,7 @@ public class KeyValCfg  implements java.io.Serializable {
         this.matchOp = matchOp;
     }
 
+
     /**
      * get cookie key
      *
@@ -119,6 +122,7 @@ public class KeyValCfg  implements java.io.Serializable {
         this.key = key;
     }
 
+
     /**
      * get val
      *
@@ -136,6 +140,7 @@ public class KeyValCfg  implements java.io.Serializable {
     public void setVal(String val) {
         this.val = val;
     }
+
 
     /**
      * get 动作配置,旗舰版全部支持,其它套餐不支持观察
@@ -156,6 +161,7 @@ public class KeyValCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 序号id，更新时不能为空
      *
@@ -165,6 +171,7 @@ public class KeyValCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
@@ -176,6 +183,7 @@ public class KeyValCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cookie key
      *
@@ -186,6 +194,7 @@ public class KeyValCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set val
      *
@@ -195,6 +204,7 @@ public class KeyValCfg  implements java.io.Serializable {
         this.val = val;
         return this;
     }
+
 
     /**
      * set 动作配置,旗舰版全部支持,其它套餐不支持观察

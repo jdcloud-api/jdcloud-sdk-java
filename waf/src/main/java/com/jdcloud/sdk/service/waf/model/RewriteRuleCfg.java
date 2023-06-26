@@ -53,6 +53,7 @@ public class RewriteRuleCfg  implements java.io.Serializable {
     private String setVal;
 
 
+
     /**
      * get 序号id,更新时需要
      *
@@ -71,6 +72,7 @@ public class RewriteRuleCfg  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 原始值
      *
@@ -88,6 +90,7 @@ public class RewriteRuleCfg  implements java.io.Serializable {
     public void setOriVal(String oriVal) {
         this.oriVal = oriVal;
     }
+
 
     /**
      * get 重写值
@@ -108,6 +111,7 @@ public class RewriteRuleCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 序号id,更新时需要
      *
@@ -118,6 +122,7 @@ public class RewriteRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 原始值
      *
@@ -127,6 +132,7 @@ public class RewriteRuleCfg  implements java.io.Serializable {
         this.oriVal = oriVal;
         return this;
     }
+
 
     /**
      * set 重写值

@@ -57,11 +57,12 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
     /**
      * 变量信息
      */
+    
     private List<RiskVarCfg> vars;
-
     /**
      * 策略信息
      */
+    
     private List<RiskPolicyCfg> policys;
 
 
@@ -83,6 +84,7 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -100,6 +102,7 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 名称
@@ -119,6 +122,7 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 事件信息
      *
@@ -137,41 +141,44 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
         this.event = event;
     }
 
+
     /**
-     * get 变量信息
-     *
-     * @return
-     */
+    * get 变量信息
+    *
+    * @return
+    */
     public List<RiskVarCfg> getVars() {
         return vars;
     }
 
     /**
-     * set 变量信息
-     *
-     * @param vars
-     */
+    * set 变量信息
+    *
+    * @param vars
+    */
     public void setVars(List<RiskVarCfg> vars) {
         this.vars = vars;
     }
 
+
     /**
-     * get 策略信息
-     *
-     * @return
-     */
+    * get 策略信息
+    *
+    * @return
+    */
     public List<RiskPolicyCfg> getPolicys() {
         return policys;
     }
 
     /**
-     * set 策略信息
-     *
-     * @param policys
-     */
+    * set 策略信息
+    *
+    * @param policys
+    */
     public void setPolicys(List<RiskPolicyCfg> policys) {
         this.policys = policys;
     }
+
 
 
     /**
@@ -184,6 +191,7 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -193,6 +201,7 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 名称
@@ -204,6 +213,7 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 事件信息
      *
@@ -214,25 +224,28 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 变量信息
-     *
-     * @param vars
-     */
+    * set 变量信息
+    *
+    * @param vars
+    */
     public RiskEventVarsCfg vars(List<RiskVarCfg> vars) {
         this.vars = vars;
         return this;
     }
 
+
     /**
-     * set 策略信息
-     *
-     * @param policys
-     */
+    * set 策略信息
+    *
+    * @param policys
+    */
     public RiskEventVarsCfg policys(List<RiskPolicyCfg> policys) {
         this.policys = policys;
         return this;
     }
+
 
 
     /**
@@ -258,5 +271,4 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
         }
         this.policys.add(policy);
     }
-
 }

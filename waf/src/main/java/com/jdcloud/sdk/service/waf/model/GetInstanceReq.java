@@ -38,6 +38,7 @@ public class GetInstanceReq  implements java.io.Serializable {
     private String region;
 
 
+
     /**
      * get 地域信息
      *
@@ -55,6 +56,7 @@ public class GetInstanceReq  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
 
     /**

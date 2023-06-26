@@ -60,10 +60,21 @@ public class SetIpReq  implements java.io.Serializable {
     private Integer isEnable;
 
     /**
+     * 0-单ip，1-ip集
+     */
+    private Integer ruleType;
+
+    /**
+     * 白名单不检查指定Web防护规则id, 多个逗号分隔
+     */
+    private String skipRuleId;
+
+    /**
      * ip配置
      * Required:true
      */
     @Required
+    
     private List<IpCfg> ips;
 
 
@@ -85,6 +96,7 @@ public class SetIpReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -102,6 +114,7 @@ public class SetIpReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 0表示黑名单，1表示白名单
@@ -121,6 +134,7 @@ public class SetIpReq  implements java.io.Serializable {
         this.iswhite = iswhite;
     }
 
+
     /**
      * get 0默认关闭，1默认打开
      *
@@ -139,23 +153,63 @@ public class SetIpReq  implements java.io.Serializable {
         this.isEnable = isEnable;
     }
 
+
     /**
-     * get ip配置
+     * get 0-单ip，1-ip集
      *
      * @return
      */
+    public Integer getRuleType() {
+        return ruleType;
+    }
+
+    /**
+     * set 0-单ip，1-ip集
+     *
+     * @param ruleType
+     */
+    public void setRuleType(Integer ruleType) {
+        this.ruleType = ruleType;
+    }
+
+
+    /**
+     * get 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @return
+     */
+    public String getSkipRuleId() {
+        return skipRuleId;
+    }
+
+    /**
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @param skipRuleId
+     */
+    public void setSkipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+    }
+
+
+    /**
+    * get ip配置
+    *
+    * @return
+    */
     public List<IpCfg> getIps() {
         return ips;
     }
 
     /**
-     * set ip配置
-     *
-     * @param ips
-     */
+    * set ip配置
+    *
+    * @param ips
+    */
     public void setIps(List<IpCfg> ips) {
         this.ips = ips;
     }
+
 
 
     /**
@@ -168,6 +222,7 @@ public class SetIpReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -177,6 +232,7 @@ public class SetIpReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 0表示黑名单，1表示白名单
@@ -188,6 +244,7 @@ public class SetIpReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0默认关闭，1默认打开
      *
@@ -198,15 +255,39 @@ public class SetIpReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set ip配置
+     * set 0-单ip，1-ip集
      *
-     * @param ips
+     * @param ruleType
      */
+    public SetIpReq ruleType(Integer ruleType) {
+        this.ruleType = ruleType;
+        return this;
+    }
+
+
+    /**
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @param skipRuleId
+     */
+    public SetIpReq skipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+        return this;
+    }
+
+
+    /**
+    * set ip配置
+    *
+    * @param ips
+    */
     public SetIpReq ips(List<IpCfg> ips) {
         this.ips = ips;
         return this;
     }
+
 
 
     /**
@@ -220,5 +301,4 @@ public class SetIpReq  implements java.io.Serializable {
         }
         this.ips.add(ip);
     }
-
 }

@@ -58,6 +58,7 @@ public class WafConf  implements java.io.Serializable {
     private String redirection;
 
 
+
     /**
      * get 是否使能 0表示否
      *
@@ -75,6 +76,7 @@ public class WafConf  implements java.io.Serializable {
     public void setEnable(Integer enable) {
         this.enable = enable;
     }
+
 
     /**
      * get 0表示防护，1表示预警
@@ -94,6 +96,7 @@ public class WafConf  implements java.io.Serializable {
         this.wafMode = wafMode;
     }
 
+
     /**
      * get 0表示宽松，1表示正常，2表示严格, 3表示自定义
      *
@@ -112,6 +115,7 @@ public class WafConf  implements java.io.Serializable {
         this.wafLevel = wafLevel;
     }
 
+
     /**
      * get 自定义规则集Id
      *
@@ -129,6 +133,7 @@ public class WafConf  implements java.io.Serializable {
     public void setUsrPolicy(Long usrPolicy) {
         this.usrPolicy = usrPolicy;
     }
+
 
     /**
      * get 自定义页面名称
@@ -149,6 +154,7 @@ public class WafConf  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否使能 0表示否
      *
@@ -158,6 +164,7 @@ public class WafConf  implements java.io.Serializable {
         this.enable = enable;
         return this;
     }
+
 
     /**
      * set 0表示防护，1表示预警
@@ -169,6 +176,7 @@ public class WafConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0表示宽松，1表示正常，2表示严格, 3表示自定义
      *
@@ -179,6 +187,7 @@ public class WafConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自定义规则集Id
      *
@@ -188,6 +197,7 @@ public class WafConf  implements java.io.Serializable {
         this.usrPolicy = usrPolicy;
         return this;
     }
+
 
     /**
      * set 自定义页面名称

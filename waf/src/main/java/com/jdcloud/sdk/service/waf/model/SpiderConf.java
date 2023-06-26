@@ -48,6 +48,7 @@ public class SpiderConf  implements java.io.Serializable {
     private DenyActionCfg action;
 
 
+
     /**
      * get 是否使能 0表示否
      *
@@ -66,6 +67,7 @@ public class SpiderConf  implements java.io.Serializable {
         this.enable = enable;
     }
 
+
     /**
      * get 防护模式
      *
@@ -83,6 +85,7 @@ public class SpiderConf  implements java.io.Serializable {
     public void setSpiderMode(Integer spiderMode) {
         this.spiderMode = spiderMode;
     }
+
 
     /**
      * get 动作配置，默认为告警，支持1，2，5四种类型动作
@@ -103,6 +106,7 @@ public class SpiderConf  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否使能 0表示否
      *
@@ -113,6 +117,7 @@ public class SpiderConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 防护模式
      *
@@ -122,6 +127,7 @@ public class SpiderConf  implements java.io.Serializable {
         this.spiderMode = spiderMode;
         return this;
     }
+
 
     /**
      * set 动作配置，默认为告警，支持1，2，5四种类型动作

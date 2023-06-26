@@ -52,12 +52,13 @@ public class ListWafConditionCfg  implements java.io.Serializable {
     /**
      * 规则名称
      */
+    
     private List<String> ruleNames;
-
     /**
      * 更新时间，s
      */
     private Integer updateTime;
+
 
 
     /**
@@ -78,6 +79,7 @@ public class ListWafConditionCfg  implements java.io.Serializable {
         this.conditionName = conditionName;
     }
 
+
     /**
      * get 匹配类型
      *
@@ -95,6 +97,7 @@ public class ListWafConditionCfg  implements java.io.Serializable {
     public void setConditionType(String conditionType) {
         this.conditionType = conditionType;
     }
+
 
     /**
      * get 序号
@@ -114,23 +117,25 @@ public class ListWafConditionCfg  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
-     * get 规则名称
-     *
-     * @return
-     */
+    * get 规则名称
+    *
+    * @return
+    */
     public List<String> getRuleNames() {
         return ruleNames;
     }
 
     /**
-     * set 规则名称
-     *
-     * @param ruleNames
-     */
+    * set 规则名称
+    *
+    * @param ruleNames
+    */
     public void setRuleNames(List<String> ruleNames) {
         this.ruleNames = ruleNames;
     }
+
 
     /**
      * get 更新时间，s
@@ -151,6 +156,7 @@ public class ListWafConditionCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 名称
      *
@@ -160,6 +166,7 @@ public class ListWafConditionCfg  implements java.io.Serializable {
         this.conditionName = conditionName;
         return this;
     }
+
 
     /**
      * set 匹配类型
@@ -171,6 +178,7 @@ public class ListWafConditionCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 序号
      *
@@ -181,15 +189,17 @@ public class ListWafConditionCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 规则名称
-     *
-     * @param ruleNames
-     */
+    * set 规则名称
+    *
+    * @param ruleNames
+    */
     public ListWafConditionCfg ruleNames(List<String> ruleNames) {
         this.ruleNames = ruleNames;
         return this;
     }
+
 
     /**
      * set 更新时间，s
@@ -200,6 +210,7 @@ public class ListWafConditionCfg  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class ListWafConditionCfg  implements java.io.Serializable {
         }
         this.ruleNames.add(ruleName);
     }
-
 }

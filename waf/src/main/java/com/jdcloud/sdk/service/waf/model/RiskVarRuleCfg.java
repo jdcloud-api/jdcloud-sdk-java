@@ -58,6 +58,7 @@ public class RiskVarRuleCfg  implements java.io.Serializable {
     private String resultRight;
 
 
+
     /**
      * get 左表达式
      *
@@ -75,6 +76,7 @@ public class RiskVarRuleCfg  implements java.io.Serializable {
     public void setLeft(String left) {
         this.left = left;
     }
+
 
     /**
      * get 操作符
@@ -94,6 +96,7 @@ public class RiskVarRuleCfg  implements java.io.Serializable {
         this.operator = operator;
     }
 
+
     /**
      * get 右表达式
      *
@@ -112,6 +115,7 @@ public class RiskVarRuleCfg  implements java.io.Serializable {
         this.right = right;
     }
 
+
     /**
      * get 结果比较运算符
      *
@@ -129,6 +133,7 @@ public class RiskVarRuleCfg  implements java.io.Serializable {
     public void setResultOpt(String resultOpt) {
         this.resultOpt = resultOpt;
     }
+
 
     /**
      * get 结果右表达式
@@ -149,6 +154,7 @@ public class RiskVarRuleCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 左表达式
      *
@@ -158,6 +164,7 @@ public class RiskVarRuleCfg  implements java.io.Serializable {
         this.left = left;
         return this;
     }
+
 
     /**
      * set 操作符
@@ -169,6 +176,7 @@ public class RiskVarRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 右表达式
      *
@@ -179,6 +187,7 @@ public class RiskVarRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 结果比较运算符
      *
@@ -188,6 +197,7 @@ public class RiskVarRuleCfg  implements java.io.Serializable {
         this.resultOpt = resultOpt;
         return this;
     }
+
 
     /**
      * set 结果右表达式

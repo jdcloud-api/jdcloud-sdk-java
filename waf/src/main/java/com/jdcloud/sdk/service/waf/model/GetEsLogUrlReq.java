@@ -48,6 +48,7 @@ public class GetEsLogUrlReq  implements java.io.Serializable {
     private String wafInstanceId;
 
 
+
     /**
      * get 日志唯一key
      *
@@ -65,6 +66,7 @@ public class GetEsLogUrlReq  implements java.io.Serializable {
     public void setKey(String key) {
         this.key = key;
     }
+
 
     /**
      * get 实例id，代表要查询的WAF实例
@@ -85,6 +87,7 @@ public class GetEsLogUrlReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 日志唯一key
      *
@@ -94,6 +97,7 @@ public class GetEsLogUrlReq  implements java.io.Serializable {
         this.key = key;
         return this;
     }
+
 
     /**
      * set 实例id，代表要查询的WAF实例

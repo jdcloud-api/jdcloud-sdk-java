@@ -50,6 +50,7 @@ public class GetQpsDataRequest extends JdcloudRequest implements java.io.Seriali
     private String regionId;
 
 
+
     /**
      * get 请求
      *
@@ -67,6 +68,7 @@ public class GetQpsDataRequest extends JdcloudRequest implements java.io.Seriali
     public void setReq(GetChartReq req) {
         this.req = req;
     }
+
 
     /**
      * get 实例所属的地域ID
@@ -87,6 +89,7 @@ public class GetQpsDataRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 请求
      *
@@ -96,6 +99,7 @@ public class GetQpsDataRequest extends JdcloudRequest implements java.io.Seriali
         this.req = req;
         return this;
     }
+
 
     /**
      * set 实例所属的地域ID

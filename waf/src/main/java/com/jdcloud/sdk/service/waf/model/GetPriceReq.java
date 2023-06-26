@@ -98,6 +98,7 @@ public class GetPriceReq  implements java.io.Serializable {
     private String serviceCode;
 
 
+
     /**
      * get 地域信息
      *
@@ -115,6 +116,7 @@ public class GetPriceReq  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 购买类型, 1:创建 2:续费 3:升配
@@ -134,6 +136,7 @@ public class GetPriceReq  implements java.io.Serializable {
         this.buyType = buyType;
     }
 
+
     /**
      * get 购买时长
      *
@@ -151,6 +154,7 @@ public class GetPriceReq  implements java.io.Serializable {
     public void setTimeSpan(Integer timeSpan) {
         this.timeSpan = timeSpan;
     }
+
 
     /**
      * get 时间单位，month, year
@@ -170,6 +174,7 @@ public class GetPriceReq  implements java.io.Serializable {
         this.timeUnit = timeUnit;
     }
 
+
     /**
      * get 实例id，除新建必传
      *
@@ -187,6 +192,7 @@ public class GetPriceReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版(仅支持新用户)
@@ -206,6 +212,7 @@ public class GetPriceReq  implements java.io.Serializable {
         this.packageType = packageType;
     }
 
+
     /**
      * get 额外的域名扩展包
      *
@@ -223,6 +230,7 @@ public class GetPriceReq  implements java.io.Serializable {
     public void setExtraDomainsNum(Integer extraDomainsNum) {
         this.extraDomainsNum = extraDomainsNum;
     }
+
 
     /**
      * get 额外的qps扩展包,单位为M 该值为50M的倍数
@@ -242,6 +250,7 @@ public class GetPriceReq  implements java.io.Serializable {
         this.extraBitsLimit = extraBitsLimit;
     }
 
+
     /**
      * get 云鼎的appCode
      *
@@ -259,6 +268,7 @@ public class GetPriceReq  implements java.io.Serializable {
     public void setAppCode(String appCode) {
         this.appCode = appCode;
     }
+
 
     /**
      * get 云鼎的serviceCode
@@ -279,6 +289,7 @@ public class GetPriceReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 地域信息
      *
@@ -288,6 +299,7 @@ public class GetPriceReq  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 购买类型, 1:创建 2:续费 3:升配
@@ -299,6 +311,7 @@ public class GetPriceReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 购买时长
      *
@@ -308,6 +321,7 @@ public class GetPriceReq  implements java.io.Serializable {
         this.timeSpan = timeSpan;
         return this;
     }
+
 
     /**
      * set 时间单位，month, year
@@ -319,6 +333,7 @@ public class GetPriceReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例id，除新建必传
      *
@@ -328,6 +343,7 @@ public class GetPriceReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版(仅支持新用户)
@@ -339,6 +355,7 @@ public class GetPriceReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 额外的域名扩展包
      *
@@ -348,6 +365,7 @@ public class GetPriceReq  implements java.io.Serializable {
         this.extraDomainsNum = extraDomainsNum;
         return this;
     }
+
 
     /**
      * set 额外的qps扩展包,单位为M 该值为50M的倍数
@@ -359,6 +377,7 @@ public class GetPriceReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云鼎的appCode
      *
@@ -368,6 +387,7 @@ public class GetPriceReq  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set 云鼎的serviceCode

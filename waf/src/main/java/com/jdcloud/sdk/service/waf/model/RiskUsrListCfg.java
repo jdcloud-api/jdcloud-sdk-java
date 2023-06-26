@@ -77,6 +77,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
     /**
      * rules，format:[&quot;13311112222&quot;,&quot;13211112222&quot;]
      */
+    
     private List<String> rules;
 
 
@@ -98,6 +99,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get WAF实例id
      *
@@ -115,6 +117,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -134,6 +137,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 名称
      *
@@ -151,6 +155,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 编码信息
@@ -170,6 +175,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
         this.code = code;
     }
 
+
     /**
      * get 描述信息
      *
@@ -187,6 +193,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
 
     /**
      * get 0-使用中 1-禁用
@@ -206,6 +213,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
         this.disable = disable;
     }
 
+
     /**
      * get 更新时间，s
      *
@@ -224,23 +232,25 @@ public class RiskUsrListCfg  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
-     * get rules，format:[&quot;13311112222&quot;,&quot;13211112222&quot;]
-     *
-     * @return
-     */
+    * get rules，format:[&quot;13311112222&quot;,&quot;13211112222&quot;]
+    *
+    * @return
+    */
     public List<String> getRules() {
         return rules;
     }
 
     /**
-     * set rules，format:[&quot;13311112222&quot;,&quot;13211112222&quot;]
-     *
-     * @param rules
-     */
+    * set rules，format:[&quot;13311112222&quot;,&quot;13211112222&quot;]
+    *
+    * @param rules
+    */
     public void setRules(List<String> rules) {
         this.rules = rules;
     }
+
 
 
     /**
@@ -253,6 +263,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set WAF实例id
      *
@@ -262,6 +273,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -273,6 +285,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 名称
      *
@@ -282,6 +295,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 编码信息
@@ -293,6 +307,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述信息
      *
@@ -302,6 +317,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
         this.desc = desc;
         return this;
     }
+
 
     /**
      * set 0-使用中 1-禁用
@@ -313,6 +329,7 @@ public class RiskUsrListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 更新时间，s
      *
@@ -323,15 +340,17 @@ public class RiskUsrListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set rules，format:[&quot;13311112222&quot;,&quot;13211112222&quot;]
-     *
-     * @param rules
-     */
+    * set rules，format:[&quot;13311112222&quot;,&quot;13211112222&quot;]
+    *
+    * @param rules
+    */
     public RiskUsrListCfg rules(List<String> rules) {
         this.rules = rules;
         return this;
     }
+
 
 
     /**
@@ -345,5 +364,4 @@ public class RiskUsrListCfg  implements java.io.Serializable {
         }
         this.rules.add(rule);
     }
-
 }

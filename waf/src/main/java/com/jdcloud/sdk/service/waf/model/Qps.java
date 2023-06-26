@@ -43,6 +43,11 @@ public class Qps  implements java.io.Serializable {
     private ChartItemValue wafAnti;
 
     /**
+     * bot防护统计数据
+     */
+    private ChartItemValue botAnti;
+
+    /**
      * cc防护统计数据
      */
     private ChartItemValue ccAnti;
@@ -56,6 +61,7 @@ public class Qps  implements java.io.Serializable {
      * 网站合规异常统计数据
      */
     private ChartItemValue cacheTotal;
+
 
 
     /**
@@ -76,6 +82,7 @@ public class Qps  implements java.io.Serializable {
         this.qpsTotal = qpsTotal;
     }
 
+
     /**
      * get waf防护统计数据
      *
@@ -93,6 +100,26 @@ public class Qps  implements java.io.Serializable {
     public void setWafAnti(ChartItemValue wafAnti) {
         this.wafAnti = wafAnti;
     }
+
+
+    /**
+     * get bot防护统计数据
+     *
+     * @return
+     */
+    public ChartItemValue getBotAnti() {
+        return botAnti;
+    }
+
+    /**
+     * set bot防护统计数据
+     *
+     * @param botAnti
+     */
+    public void setBotAnti(ChartItemValue botAnti) {
+        this.botAnti = botAnti;
+    }
+
 
     /**
      * get cc防护统计数据
@@ -112,6 +139,7 @@ public class Qps  implements java.io.Serializable {
         this.ccAnti = ccAnti;
     }
 
+
     /**
      * get 精准访问控制防护统计数据
      *
@@ -129,6 +157,7 @@ public class Qps  implements java.io.Serializable {
     public void setAclAnti(ChartItemValue aclAnti) {
         this.aclAnti = aclAnti;
     }
+
 
     /**
      * get 网站合规异常统计数据
@@ -149,6 +178,7 @@ public class Qps  implements java.io.Serializable {
     }
 
 
+
     /**
      * set qps统计数据
      *
@@ -158,6 +188,7 @@ public class Qps  implements java.io.Serializable {
         this.qpsTotal = qpsTotal;
         return this;
     }
+
 
     /**
      * set waf防护统计数据
@@ -169,6 +200,18 @@ public class Qps  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set bot防护统计数据
+     *
+     * @param botAnti
+     */
+    public Qps botAnti(ChartItemValue botAnti) {
+        this.botAnti = botAnti;
+        return this;
+    }
+
+
     /**
      * set cc防护统计数据
      *
@@ -179,6 +222,7 @@ public class Qps  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 精准访问控制防护统计数据
      *
@@ -188,6 +232,7 @@ public class Qps  implements java.io.Serializable {
         this.aclAnti = aclAnti;
         return this;
     }
+
 
     /**
      * set 网站合规异常统计数据

@@ -69,6 +69,7 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
     private String url;
 
 
+
     /**
      * get WAF实例id
      *
@@ -86,6 +87,7 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -105,6 +107,7 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 名称
      *
@@ -123,6 +126,7 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 0 网页防篡改 1 网站防篡改
      *
@@ -140,6 +144,7 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
     public void setWebsite(Integer website) {
         this.website = website;
     }
+
 
     /**
      * get url
@@ -160,6 +165,7 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -169,6 +175,7 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -180,6 +187,7 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 名称
      *
@@ -190,6 +198,7 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0 网页防篡改 1 网站防篡改
      *
@@ -199,6 +208,7 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
         this.website = website;
         return this;
     }
+
 
     /**
      * set url

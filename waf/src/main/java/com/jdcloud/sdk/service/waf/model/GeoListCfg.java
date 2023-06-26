@@ -58,6 +58,7 @@ public class GeoListCfg  implements java.io.Serializable {
     private AtCfg atCfg;
 
 
+
     /**
      * get 序号id
      *
@@ -75,6 +76,7 @@ public class GeoListCfg  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 规则更新时间，秒级时间戳, 0 表示历史数据无记录
@@ -94,6 +96,7 @@ public class GeoListCfg  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 0-使用中 1-禁用
      *
@@ -112,6 +115,7 @@ public class GeoListCfg  implements java.io.Serializable {
         this.disable = disable;
     }
 
+
     /**
      * get geo名称 黑名单支持海外和大陆某个省份或直辖市 白名单支持配置大陆省份/城市
      *
@@ -129,6 +133,7 @@ public class GeoListCfg  implements java.io.Serializable {
     public void setGeo(String geo) {
         this.geo = geo;
     }
+
 
     /**
      * get action配置
@@ -149,6 +154,7 @@ public class GeoListCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 序号id
      *
@@ -158,6 +164,7 @@ public class GeoListCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 规则更新时间，秒级时间戳, 0 表示历史数据无记录
@@ -169,6 +176,7 @@ public class GeoListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0-使用中 1-禁用
      *
@@ -179,6 +187,7 @@ public class GeoListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set geo名称 黑名单支持海外和大陆某个省份或直辖市 白名单支持配置大陆省份/城市
      *
@@ -188,6 +197,7 @@ public class GeoListCfg  implements java.io.Serializable {
         this.geo = geo;
         return this;
     }
+
 
     /**
      * set action配置

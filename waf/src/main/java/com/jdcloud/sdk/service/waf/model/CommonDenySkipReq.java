@@ -55,6 +55,7 @@ public class CommonDenySkipReq  implements java.io.Serializable {
     private Integer iswhite;
 
 
+
     /**
      * get WAF实例id
      *
@@ -73,6 +74,7 @@ public class CommonDenySkipReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -90,6 +92,7 @@ public class CommonDenySkipReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 0表示黑名单 1表示白名单
@@ -110,6 +113,7 @@ public class CommonDenySkipReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -120,6 +124,7 @@ public class CommonDenySkipReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -129,6 +134,7 @@ public class CommonDenySkipReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 0表示黑名单 1表示白名单

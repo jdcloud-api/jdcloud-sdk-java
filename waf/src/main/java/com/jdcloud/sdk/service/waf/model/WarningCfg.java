@@ -52,8 +52,8 @@ public class WarningCfg  implements java.io.Serializable {
     /**
      * 域名集
      */
+    
     private List<String> domains;
-
     /**
      * 全局告警globle 自定义告警userdefine
      */
@@ -97,22 +97,33 @@ public class WarningCfg  implements java.io.Serializable {
     /**
      * 告警方式
      */
+    
     private List<String> contactWays;
-
     /**
      * 告警通知人
      */
+    
     private List<ContactPerson> contactorPersons;
-
     /**
      * 告警通知群组
      */
+    
     private List<ContactGroup> contactorGroups;
-
     /**
      * warnType为statusCode时为要检测的状态码
      */
+    
     private List<String> detectItems;
+    /**
+     * 产品类型, 0waf, 1scdn
+     */
+    private Integer mode;
+
+    /**
+     * scdn用户名
+     */
+    private String userPinScdn;
+
 
 
     /**
@@ -133,6 +144,7 @@ public class WarningCfg  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 用户名
      *
@@ -150,6 +162,7 @@ public class WarningCfg  implements java.io.Serializable {
     public void setUserPin(String userPin) {
         this.userPin = userPin;
     }
+
 
     /**
      * get WAF实例id
@@ -169,23 +182,25 @@ public class WarningCfg  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
-     * get 域名集
-     *
-     * @return
-     */
+    * get 域名集
+    *
+    * @return
+    */
     public List<String> getDomains() {
         return domains;
     }
 
     /**
-     * set 域名集
-     *
-     * @param domains
-     */
+    * set 域名集
+    *
+    * @param domains
+    */
     public void setDomains(List<String> domains) {
         this.domains = domains;
     }
+
 
     /**
      * get 全局告警globle 自定义告警userdefine
@@ -205,6 +220,7 @@ public class WarningCfg  implements java.io.Serializable {
         this.ruleType = ruleType;
     }
 
+
     /**
      * get 规则名称
      *
@@ -222,6 +238,7 @@ public class WarningCfg  implements java.io.Serializable {
     public void setRuleName(String ruleName) {
         this.ruleName = ruleName;
     }
+
 
     /**
      * get 告警类型
@@ -241,6 +258,7 @@ public class WarningCfg  implements java.io.Serializable {
         this.warnType = warnType;
     }
 
+
     /**
      * get 是否生效，0-不生效，1-生效
      *
@@ -258,6 +276,7 @@ public class WarningCfg  implements java.io.Serializable {
     public void setEnable(Integer enable) {
         this.enable = enable;
     }
+
 
     /**
      * get 检测周期
@@ -277,6 +296,7 @@ public class WarningCfg  implements java.io.Serializable {
         this.detectSpan = detectSpan;
     }
 
+
     /**
      * get 告警阈值
      *
@@ -294,6 +314,7 @@ public class WarningCfg  implements java.io.Serializable {
     public void setDetectThreshold(Integer detectThreshold) {
         this.detectThreshold = detectThreshold;
     }
+
 
     /**
      * get 阈值单位，&quot;&quot;-个数，&quot;percent&quot;-百分比，缺省为个数
@@ -313,6 +334,7 @@ public class WarningCfg  implements java.io.Serializable {
         this.unit = unit;
     }
 
+
     /**
      * get 检测时长单位，hour/minute
      *
@@ -331,77 +353,120 @@ public class WarningCfg  implements java.io.Serializable {
         this.detectUnit = detectUnit;
     }
 
+
     /**
-     * get 告警方式
-     *
-     * @return
-     */
+    * get 告警方式
+    *
+    * @return
+    */
     public List<String> getContactWays() {
         return contactWays;
     }
 
     /**
-     * set 告警方式
-     *
-     * @param contactWays
-     */
+    * set 告警方式
+    *
+    * @param contactWays
+    */
     public void setContactWays(List<String> contactWays) {
         this.contactWays = contactWays;
     }
 
+
     /**
-     * get 告警通知人
-     *
-     * @return
-     */
+    * get 告警通知人
+    *
+    * @return
+    */
     public List<ContactPerson> getContactorPersons() {
         return contactorPersons;
     }
 
     /**
-     * set 告警通知人
-     *
-     * @param contactorPersons
-     */
+    * set 告警通知人
+    *
+    * @param contactorPersons
+    */
     public void setContactorPersons(List<ContactPerson> contactorPersons) {
         this.contactorPersons = contactorPersons;
     }
 
+
     /**
-     * get 告警通知群组
-     *
-     * @return
-     */
+    * get 告警通知群组
+    *
+    * @return
+    */
     public List<ContactGroup> getContactorGroups() {
         return contactorGroups;
     }
 
     /**
-     * set 告警通知群组
-     *
-     * @param contactorGroups
-     */
+    * set 告警通知群组
+    *
+    * @param contactorGroups
+    */
     public void setContactorGroups(List<ContactGroup> contactorGroups) {
         this.contactorGroups = contactorGroups;
     }
 
+
     /**
-     * get warnType为statusCode时为要检测的状态码
-     *
-     * @return
-     */
+    * get warnType为statusCode时为要检测的状态码
+    *
+    * @return
+    */
     public List<String> getDetectItems() {
         return detectItems;
     }
 
     /**
-     * set warnType为statusCode时为要检测的状态码
-     *
-     * @param detectItems
-     */
+    * set warnType为statusCode时为要检测的状态码
+    *
+    * @param detectItems
+    */
     public void setDetectItems(List<String> detectItems) {
         this.detectItems = detectItems;
     }
+
+
+    /**
+     * get 产品类型, 0waf, 1scdn
+     *
+     * @return
+     */
+    public Integer getMode() {
+        return mode;
+    }
+
+    /**
+     * set 产品类型, 0waf, 1scdn
+     *
+     * @param mode
+     */
+    public void setMode(Integer mode) {
+        this.mode = mode;
+    }
+
+
+    /**
+     * get scdn用户名
+     *
+     * @return
+     */
+    public String getUserPinScdn() {
+        return userPinScdn;
+    }
+
+    /**
+     * set scdn用户名
+     *
+     * @param userPinScdn
+     */
+    public void setUserPinScdn(String userPinScdn) {
+        this.userPinScdn = userPinScdn;
+    }
+
 
 
     /**
@@ -414,6 +479,7 @@ public class WarningCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户名
      *
@@ -423,6 +489,7 @@ public class WarningCfg  implements java.io.Serializable {
         this.userPin = userPin;
         return this;
     }
+
 
     /**
      * set WAF实例id
@@ -434,15 +501,17 @@ public class WarningCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 域名集
-     *
-     * @param domains
-     */
+    * set 域名集
+    *
+    * @param domains
+    */
     public WarningCfg domains(List<String> domains) {
         this.domains = domains;
         return this;
     }
+
 
     /**
      * set 全局告警globle 自定义告警userdefine
@@ -454,6 +523,7 @@ public class WarningCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则名称
      *
@@ -463,6 +533,7 @@ public class WarningCfg  implements java.io.Serializable {
         this.ruleName = ruleName;
         return this;
     }
+
 
     /**
      * set 告警类型
@@ -474,6 +545,7 @@ public class WarningCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否生效，0-不生效，1-生效
      *
@@ -483,6 +555,7 @@ public class WarningCfg  implements java.io.Serializable {
         this.enable = enable;
         return this;
     }
+
 
     /**
      * set 检测周期
@@ -494,6 +567,7 @@ public class WarningCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 告警阈值
      *
@@ -503,6 +577,7 @@ public class WarningCfg  implements java.io.Serializable {
         this.detectThreshold = detectThreshold;
         return this;
     }
+
 
     /**
      * set 阈值单位，&quot;&quot;-个数，&quot;percent&quot;-百分比，缺省为个数
@@ -514,6 +589,7 @@ public class WarningCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 检测时长单位，hour/minute
      *
@@ -524,45 +600,72 @@ public class WarningCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 告警方式
-     *
-     * @param contactWays
-     */
+    * set 告警方式
+    *
+    * @param contactWays
+    */
     public WarningCfg contactWays(List<String> contactWays) {
         this.contactWays = contactWays;
         return this;
     }
 
+
     /**
-     * set 告警通知人
-     *
-     * @param contactorPersons
-     */
+    * set 告警通知人
+    *
+    * @param contactorPersons
+    */
     public WarningCfg contactorPersons(List<ContactPerson> contactorPersons) {
         this.contactorPersons = contactorPersons;
         return this;
     }
 
+
     /**
-     * set 告警通知群组
-     *
-     * @param contactorGroups
-     */
+    * set 告警通知群组
+    *
+    * @param contactorGroups
+    */
     public WarningCfg contactorGroups(List<ContactGroup> contactorGroups) {
         this.contactorGroups = contactorGroups;
         return this;
     }
 
+
     /**
-     * set warnType为statusCode时为要检测的状态码
-     *
-     * @param detectItems
-     */
+    * set warnType为statusCode时为要检测的状态码
+    *
+    * @param detectItems
+    */
     public WarningCfg detectItems(List<String> detectItems) {
         this.detectItems = detectItems;
         return this;
     }
+
+
+    /**
+     * set 产品类型, 0waf, 1scdn
+     *
+     * @param mode
+     */
+    public WarningCfg mode(Integer mode) {
+        this.mode = mode;
+        return this;
+    }
+
+
+    /**
+     * set scdn用户名
+     *
+     * @param userPinScdn
+     */
+    public WarningCfg userPinScdn(String userPinScdn) {
+        this.userPinScdn = userPinScdn;
+        return this;
+    }
+
 
 
     /**
@@ -624,5 +727,4 @@ public class WarningCfg  implements java.io.Serializable {
         }
         this.detectItems.add(detectItem);
     }
-
 }

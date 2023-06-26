@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.waf.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * topN
@@ -35,202 +37,286 @@ public class TopN  implements java.io.Serializable {
     /**
      * addr_top10
      */
-    private TopValue addr_top10;
-
+    
+    private List<TopValue> addr_top10;
     /**
      * area_top10
      */
-    private TopValue area_top10;
-
+    
+    private List<TopValue> area_top10;
     /**
      * url_top10
      */
-    private TopValue url_top10;
-
+    
+    private List<TopValue> url_top10;
     /**
      * ua_top10
      */
-    private TopValue ua_top10;
-
+    
+    private List<TopValue> ua_top10;
     /**
      * domain_anti_top10
      */
-    private TopAntiValue domain_anti_top10;
-
+    
+    private List<TopAntiValue> domain_anti_top10;
     /**
      * url_anti_top10
      */
-    private TopAntiValue url_anti_top10;
+    
+    private List<TopAntiValue> url_anti_top10;
 
 
     /**
-     * get addr_top10
-     *
-     * @return
-     */
-    public TopValue getAddr_top10() {
+    * get addr_top10
+    *
+    * @return
+    */
+    public List<TopValue> getAddr_top10() {
         return addr_top10;
     }
 
     /**
-     * set addr_top10
-     *
-     * @param addr_top10
-     */
-    public void setAddr_top10(TopValue addr_top10) {
+    * set addr_top10
+    *
+    * @param addr_top10
+    */
+    public void setAddr_top10(List<TopValue> addr_top10) {
         this.addr_top10 = addr_top10;
     }
 
+
     /**
-     * get area_top10
-     *
-     * @return
-     */
-    public TopValue getArea_top10() {
+    * get area_top10
+    *
+    * @return
+    */
+    public List<TopValue> getArea_top10() {
         return area_top10;
     }
 
     /**
-     * set area_top10
-     *
-     * @param area_top10
-     */
-    public void setArea_top10(TopValue area_top10) {
+    * set area_top10
+    *
+    * @param area_top10
+    */
+    public void setArea_top10(List<TopValue> area_top10) {
         this.area_top10 = area_top10;
     }
 
+
     /**
-     * get url_top10
-     *
-     * @return
-     */
-    public TopValue getUrl_top10() {
+    * get url_top10
+    *
+    * @return
+    */
+    public List<TopValue> getUrl_top10() {
         return url_top10;
     }
 
     /**
-     * set url_top10
-     *
-     * @param url_top10
-     */
-    public void setUrl_top10(TopValue url_top10) {
+    * set url_top10
+    *
+    * @param url_top10
+    */
+    public void setUrl_top10(List<TopValue> url_top10) {
         this.url_top10 = url_top10;
     }
 
+
     /**
-     * get ua_top10
-     *
-     * @return
-     */
-    public TopValue getUa_top10() {
+    * get ua_top10
+    *
+    * @return
+    */
+    public List<TopValue> getUa_top10() {
         return ua_top10;
     }
 
     /**
-     * set ua_top10
-     *
-     * @param ua_top10
-     */
-    public void setUa_top10(TopValue ua_top10) {
+    * set ua_top10
+    *
+    * @param ua_top10
+    */
+    public void setUa_top10(List<TopValue> ua_top10) {
         this.ua_top10 = ua_top10;
     }
 
+
     /**
-     * get domain_anti_top10
-     *
-     * @return
-     */
-    public TopAntiValue getDomain_anti_top10() {
+    * get domain_anti_top10
+    *
+    * @return
+    */
+    public List<TopAntiValue> getDomain_anti_top10() {
         return domain_anti_top10;
     }
 
     /**
-     * set domain_anti_top10
-     *
-     * @param domain_anti_top10
-     */
-    public void setDomain_anti_top10(TopAntiValue domain_anti_top10) {
+    * set domain_anti_top10
+    *
+    * @param domain_anti_top10
+    */
+    public void setDomain_anti_top10(List<TopAntiValue> domain_anti_top10) {
         this.domain_anti_top10 = domain_anti_top10;
     }
 
+
     /**
-     * get url_anti_top10
-     *
-     * @return
-     */
-    public TopAntiValue getUrl_anti_top10() {
+    * get url_anti_top10
+    *
+    * @return
+    */
+    public List<TopAntiValue> getUrl_anti_top10() {
         return url_anti_top10;
     }
 
     /**
-     * set url_anti_top10
-     *
-     * @param url_anti_top10
-     */
-    public void setUrl_anti_top10(TopAntiValue url_anti_top10) {
+    * set url_anti_top10
+    *
+    * @param url_anti_top10
+    */
+    public void setUrl_anti_top10(List<TopAntiValue> url_anti_top10) {
         this.url_anti_top10 = url_anti_top10;
     }
 
 
+
     /**
-     * set addr_top10
-     *
-     * @param addr_top10
-     */
-    public TopN addr_top10(TopValue addr_top10) {
+    * set addr_top10
+    *
+    * @param addr_top10
+    */
+    public TopN addr_top10(List<TopValue> addr_top10) {
         this.addr_top10 = addr_top10;
         return this;
     }
 
+
     /**
-     * set area_top10
-     *
-     * @param area_top10
-     */
-    public TopN area_top10(TopValue area_top10) {
+    * set area_top10
+    *
+    * @param area_top10
+    */
+    public TopN area_top10(List<TopValue> area_top10) {
         this.area_top10 = area_top10;
         return this;
     }
 
+
     /**
-     * set url_top10
-     *
-     * @param url_top10
-     */
-    public TopN url_top10(TopValue url_top10) {
+    * set url_top10
+    *
+    * @param url_top10
+    */
+    public TopN url_top10(List<TopValue> url_top10) {
         this.url_top10 = url_top10;
         return this;
     }
 
+
     /**
-     * set ua_top10
-     *
-     * @param ua_top10
-     */
-    public TopN ua_top10(TopValue ua_top10) {
+    * set ua_top10
+    *
+    * @param ua_top10
+    */
+    public TopN ua_top10(List<TopValue> ua_top10) {
         this.ua_top10 = ua_top10;
         return this;
     }
 
+
     /**
-     * set domain_anti_top10
-     *
-     * @param domain_anti_top10
-     */
-    public TopN domain_anti_top10(TopAntiValue domain_anti_top10) {
+    * set domain_anti_top10
+    *
+    * @param domain_anti_top10
+    */
+    public TopN domain_anti_top10(List<TopAntiValue> domain_anti_top10) {
         this.domain_anti_top10 = domain_anti_top10;
         return this;
     }
 
+
     /**
-     * set url_anti_top10
-     *
-     * @param url_anti_top10
-     */
-    public TopN url_anti_top10(TopAntiValue url_anti_top10) {
+    * set url_anti_top10
+    *
+    * @param url_anti_top10
+    */
+    public TopN url_anti_top10(List<TopAntiValue> url_anti_top10) {
         this.url_anti_top10 = url_anti_top10;
         return this;
     }
 
 
+
+    /**
+     * add item to addr_top10
+     *
+     * @param addr_top10
+     */
+    public void addAddr_top10(TopValue addr_top10) {
+        if (this.addr_top10 == null) {
+            this.addr_top10 = new ArrayList<>();
+        }
+        this.addr_top10.add(addr_top10);
+    }
+
+    /**
+     * add item to area_top10
+     *
+     * @param area_top10
+     */
+    public void addArea_top10(TopValue area_top10) {
+        if (this.area_top10 == null) {
+            this.area_top10 = new ArrayList<>();
+        }
+        this.area_top10.add(area_top10);
+    }
+
+    /**
+     * add item to url_top10
+     *
+     * @param url_top10
+     */
+    public void addUrl_top10(TopValue url_top10) {
+        if (this.url_top10 == null) {
+            this.url_top10 = new ArrayList<>();
+        }
+        this.url_top10.add(url_top10);
+    }
+
+    /**
+     * add item to ua_top10
+     *
+     * @param ua_top10
+     */
+    public void addUa_top10(TopValue ua_top10) {
+        if (this.ua_top10 == null) {
+            this.ua_top10 = new ArrayList<>();
+        }
+        this.ua_top10.add(ua_top10);
+    }
+
+    /**
+     * add item to domain_anti_top10
+     *
+     * @param domain_anti_top10
+     */
+    public void addDomain_anti_top10(TopAntiValue domain_anti_top10) {
+        if (this.domain_anti_top10 == null) {
+            this.domain_anti_top10 = new ArrayList<>();
+        }
+        this.domain_anti_top10.add(domain_anti_top10);
+    }
+
+    /**
+     * add item to url_anti_top10
+     *
+     * @param url_anti_top10
+     */
+    public void addUrl_anti_top10(TopAntiValue url_anti_top10) {
+        if (this.url_anti_top10 == null) {
+            this.url_anti_top10 = new ArrayList<>();
+        }
+        this.url_anti_top10.add(url_anti_top10);
+    }
 }

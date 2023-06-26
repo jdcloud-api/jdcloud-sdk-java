@@ -67,6 +67,12 @@ public class KeyValListCfg  implements java.io.Serializable {
      */
     private AtCfg atCfg;
 
+    /**
+     * 白名单不检查指定Web防护规则id, 多个逗号分隔
+     */
+    private String skipRuleId;
+
+
 
     /**
      * get 序号id
@@ -86,6 +92,7 @@ public class KeyValListCfg  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 规则更新时间，秒级时间戳, 0 表示历史数据无记录
      *
@@ -103,6 +110,7 @@ public class KeyValListCfg  implements java.io.Serializable {
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 0-使用中 1-禁用
@@ -122,6 +130,7 @@ public class KeyValListCfg  implements java.io.Serializable {
         this.disable = disable;
     }
 
+
     /**
      * get 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
      *
@@ -139,6 +148,7 @@ public class KeyValListCfg  implements java.io.Serializable {
     public void setMatchOp(Integer matchOp) {
         this.matchOp = matchOp;
     }
+
 
     /**
      * get cookie key
@@ -158,6 +168,7 @@ public class KeyValListCfg  implements java.io.Serializable {
         this.key = key;
     }
 
+
     /**
      * get val
      *
@@ -175,6 +186,7 @@ public class KeyValListCfg  implements java.io.Serializable {
     public void setVal(String val) {
         this.val = val;
     }
+
 
     /**
      * get action配置
@@ -196,6 +208,26 @@ public class KeyValListCfg  implements java.io.Serializable {
 
 
     /**
+     * get 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @return
+     */
+    public String getSkipRuleId() {
+        return skipRuleId;
+    }
+
+    /**
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @param skipRuleId
+     */
+    public void setSkipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+    }
+
+
+
+    /**
      * set 序号id
      *
      * @param id
@@ -204,6 +236,7 @@ public class KeyValListCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 规则更新时间，秒级时间戳, 0 表示历史数据无记录
@@ -215,6 +248,7 @@ public class KeyValListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0-使用中 1-禁用
      *
@@ -224,6 +258,7 @@ public class KeyValListCfg  implements java.io.Serializable {
         this.disable = disable;
         return this;
     }
+
 
     /**
      * set 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
@@ -235,6 +270,7 @@ public class KeyValListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cookie key
      *
@@ -244,6 +280,7 @@ public class KeyValListCfg  implements java.io.Serializable {
         this.key = key;
         return this;
     }
+
 
     /**
      * set val
@@ -255,6 +292,7 @@ public class KeyValListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set action配置
      *
@@ -262,6 +300,17 @@ public class KeyValListCfg  implements java.io.Serializable {
      */
     public KeyValListCfg atCfg(AtCfg atCfg) {
         this.atCfg = atCfg;
+        return this;
+    }
+
+
+    /**
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @param skipRuleId
+     */
+    public KeyValListCfg skipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
         return this;
     }
 

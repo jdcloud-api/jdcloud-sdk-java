@@ -57,6 +57,7 @@ public class AntiModeWafRequest extends JdcloudRequest implements java.io.Serial
     private String wafInstanceId;
 
 
+
     /**
      * get 请求
      *
@@ -75,6 +76,7 @@ public class AntiModeWafRequest extends JdcloudRequest implements java.io.Serial
         this.req = req;
     }
 
+
     /**
      * get 实例所属的地域ID
      *
@@ -92,6 +94,7 @@ public class AntiModeWafRequest extends JdcloudRequest implements java.io.Serial
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例Id
@@ -112,6 +115,7 @@ public class AntiModeWafRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set 请求
      *
@@ -122,6 +126,7 @@ public class AntiModeWafRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 实例所属的地域ID
      *
@@ -131,6 +136,7 @@ public class AntiModeWafRequest extends JdcloudRequest implements java.io.Serial
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例Id

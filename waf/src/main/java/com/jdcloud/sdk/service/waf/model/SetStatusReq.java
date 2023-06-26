@@ -54,6 +54,7 @@ public class SetStatusReq  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<StatusCfg> status;
 
 
@@ -75,6 +76,7 @@ public class SetStatusReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -93,23 +95,25 @@ public class SetStatusReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
-     * get 状态码设置
-     *
-     * @return
-     */
+    * get 状态码设置
+    *
+    * @return
+    */
     public List<StatusCfg> getStatus() {
         return status;
     }
 
     /**
-     * set 状态码设置
-     *
-     * @param status
-     */
+    * set 状态码设置
+    *
+    * @param status
+    */
     public void setStatus(List<StatusCfg> status) {
         this.status = status;
     }
+
 
 
     /**
@@ -122,6 +126,7 @@ public class SetStatusReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -132,15 +137,17 @@ public class SetStatusReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 状态码设置
-     *
-     * @param status
-     */
+    * set 状态码设置
+    *
+    * @param status
+    */
     public SetStatusReq status(List<StatusCfg> status) {
         this.status = status;
         return this;
     }
+
 
 
     /**
@@ -154,5 +161,4 @@ public class SetStatusReq  implements java.io.Serializable {
         }
         this.status.add(statu);
     }
-
 }

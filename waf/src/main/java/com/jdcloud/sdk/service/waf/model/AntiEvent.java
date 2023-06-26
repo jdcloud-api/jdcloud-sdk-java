@@ -55,7 +55,7 @@ public class AntiEvent  implements java.io.Serializable {
     /**
      * 产生时间
      */
-    private Integer accessTime;
+    private Long accessTime;
 
     /**
      * 方法
@@ -105,7 +105,7 @@ public class AntiEvent  implements java.io.Serializable {
     /**
      * 状态码
      */
-    private String antiStatus;
+    private String status;
 
     /**
      * 状态标识
@@ -121,6 +121,12 @@ public class AntiEvent  implements java.io.Serializable {
      * 是否已加入黑名单，0表示否
      */
     private Integer denyExist;
+
+    /**
+     * 攻击详情
+     */
+    private String antiReqRaw;
+
 
 
     /**
@@ -141,6 +147,7 @@ public class AntiEvent  implements java.io.Serializable {
         this.remoteAddr = remoteAddr;
     }
 
+
     /**
      * get 情报标签
      *
@@ -158,6 +165,7 @@ public class AntiEvent  implements java.io.Serializable {
     public void setCsaInfo(String csaInfo) {
         this.csaInfo = csaInfo;
     }
+
 
     /**
      * get 风险等级
@@ -177,6 +185,7 @@ public class AntiEvent  implements java.io.Serializable {
         this.riskLevel = riskLevel;
     }
 
+
     /**
      * get 来源地区
      *
@@ -195,12 +204,13 @@ public class AntiEvent  implements java.io.Serializable {
         this.area = area;
     }
 
+
     /**
      * get 产生时间
      *
      * @return
      */
-    public Integer getAccessTime() {
+    public Long getAccessTime() {
         return accessTime;
     }
 
@@ -209,9 +219,10 @@ public class AntiEvent  implements java.io.Serializable {
      *
      * @param accessTime
      */
-    public void setAccessTime(Integer accessTime) {
+    public void setAccessTime(Long accessTime) {
         this.accessTime = accessTime;
     }
+
 
     /**
      * get 方法
@@ -231,6 +242,7 @@ public class AntiEvent  implements java.io.Serializable {
         this.method = method;
     }
 
+
     /**
      * get 攻击类型
      *
@@ -248,6 +260,7 @@ public class AntiEvent  implements java.io.Serializable {
     public void setAttackType(String attackType) {
         this.attackType = attackType;
     }
+
 
     /**
      * get url
@@ -267,6 +280,7 @@ public class AntiEvent  implements java.io.Serializable {
         this.url = url;
     }
 
+
     /**
      * get 恶意负载
      *
@@ -284,6 +298,7 @@ public class AntiEvent  implements java.io.Serializable {
     public void setPayLoad(String payLoad) {
         this.payLoad = payLoad;
     }
+
 
     /**
      * get 动作
@@ -303,6 +318,7 @@ public class AntiEvent  implements java.io.Serializable {
         this.action = action;
     }
 
+
     /**
      * get 规则名称
      *
@@ -320,6 +336,7 @@ public class AntiEvent  implements java.io.Serializable {
     public void setRuleName(String ruleName) {
         this.ruleName = ruleName;
     }
+
 
     /**
      * get 日志Id
@@ -339,6 +356,7 @@ public class AntiEvent  implements java.io.Serializable {
         this.logId = logId;
     }
 
+
     /**
      * get 该信息是否已上报AI平台，0表示否
      *
@@ -356,6 +374,7 @@ public class AntiEvent  implements java.io.Serializable {
     public void setIsReported(Integer isReported) {
         this.isReported = isReported;
     }
+
 
     /**
      * get 实例id
@@ -375,23 +394,25 @@ public class AntiEvent  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 状态码
      *
      * @return
      */
-    public String getAntiStatus() {
-        return antiStatus;
+    public String getStatus() {
+        return status;
     }
 
     /**
      * set 状态码
      *
-     * @param antiStatus
+     * @param status
      */
-    public void setAntiStatus(String antiStatus) {
-        this.antiStatus = antiStatus;
+    public void setStatus(String status) {
+        this.status = status;
     }
+
 
     /**
      * get 状态标识
@@ -411,6 +432,7 @@ public class AntiEvent  implements java.io.Serializable {
         this.upstreamErr = upstreamErr;
     }
 
+
     /**
      * get 是否已加入白名单，0表示否
      *
@@ -428,6 +450,7 @@ public class AntiEvent  implements java.io.Serializable {
     public void setSkipExist(Integer skipExist) {
         this.skipExist = skipExist;
     }
+
 
     /**
      * get 是否已加入黑名单，0表示否
@@ -449,6 +472,26 @@ public class AntiEvent  implements java.io.Serializable {
 
 
     /**
+     * get 攻击详情
+     *
+     * @return
+     */
+    public String getAntiReqRaw() {
+        return antiReqRaw;
+    }
+
+    /**
+     * set 攻击详情
+     *
+     * @param antiReqRaw
+     */
+    public void setAntiReqRaw(String antiReqRaw) {
+        this.antiReqRaw = antiReqRaw;
+    }
+
+
+
+    /**
      * set 源ip
      *
      * @param remoteAddr
@@ -457,6 +500,7 @@ public class AntiEvent  implements java.io.Serializable {
         this.remoteAddr = remoteAddr;
         return this;
     }
+
 
     /**
      * set 情报标签
@@ -468,6 +512,7 @@ public class AntiEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 风险等级
      *
@@ -477,6 +522,7 @@ public class AntiEvent  implements java.io.Serializable {
         this.riskLevel = riskLevel;
         return this;
     }
+
 
     /**
      * set 来源地区
@@ -488,15 +534,17 @@ public class AntiEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产生时间
      *
      * @param accessTime
      */
-    public AntiEvent accessTime(Integer accessTime) {
+    public AntiEvent accessTime(Long accessTime) {
         this.accessTime = accessTime;
         return this;
     }
+
 
     /**
      * set 方法
@@ -508,6 +556,7 @@ public class AntiEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 攻击类型
      *
@@ -517,6 +566,7 @@ public class AntiEvent  implements java.io.Serializable {
         this.attackType = attackType;
         return this;
     }
+
 
     /**
      * set url
@@ -528,6 +578,7 @@ public class AntiEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 恶意负载
      *
@@ -537,6 +588,7 @@ public class AntiEvent  implements java.io.Serializable {
         this.payLoad = payLoad;
         return this;
     }
+
 
     /**
      * set 动作
@@ -548,6 +600,7 @@ public class AntiEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则名称
      *
@@ -557,6 +610,7 @@ public class AntiEvent  implements java.io.Serializable {
         this.ruleName = ruleName;
         return this;
     }
+
 
     /**
      * set 日志Id
@@ -568,6 +622,7 @@ public class AntiEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 该信息是否已上报AI平台，0表示否
      *
@@ -577,6 +632,7 @@ public class AntiEvent  implements java.io.Serializable {
         this.isReported = isReported;
         return this;
     }
+
 
     /**
      * set 实例id
@@ -588,15 +644,17 @@ public class AntiEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态码
      *
-     * @param antiStatus
+     * @param status
      */
-    public AntiEvent antiStatus(String antiStatus) {
-        this.antiStatus = antiStatus;
+    public AntiEvent status(String status) {
+        this.status = status;
         return this;
     }
+
 
     /**
      * set 状态标识
@@ -608,6 +666,7 @@ public class AntiEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否已加入白名单，0表示否
      *
@@ -618,6 +677,7 @@ public class AntiEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否已加入黑名单，0表示否
      *
@@ -625,6 +685,17 @@ public class AntiEvent  implements java.io.Serializable {
      */
     public AntiEvent denyExist(Integer denyExist) {
         this.denyExist = denyExist;
+        return this;
+    }
+
+
+    /**
+     * set 攻击详情
+     *
+     * @param antiReqRaw
+     */
+    public AntiEvent antiReqRaw(String antiReqRaw) {
+        this.antiReqRaw = antiReqRaw;
         return this;
     }
 

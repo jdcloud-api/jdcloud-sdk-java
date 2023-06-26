@@ -48,6 +48,7 @@ public class MatchOpValCfg  implements java.io.Serializable {
     private String val;
 
 
+
     /**
      * get 完全匹配0，后缀匹配1
      *
@@ -65,6 +66,7 @@ public class MatchOpValCfg  implements java.io.Serializable {
     public void setMatchOp(Integer matchOp) {
         this.matchOp = matchOp;
     }
+
 
     /**
      * get 匹配值
@@ -85,6 +87,7 @@ public class MatchOpValCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 完全匹配0，后缀匹配1
      *
@@ -94,6 +97,7 @@ public class MatchOpValCfg  implements java.io.Serializable {
         this.matchOp = matchOp;
         return this;
     }
+
 
     /**
      * set 匹配值

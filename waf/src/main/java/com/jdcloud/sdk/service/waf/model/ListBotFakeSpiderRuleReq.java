@@ -51,6 +51,7 @@ public class ListBotFakeSpiderRuleReq  implements java.io.Serializable {
     private Integer pageIndex;
 
 
+
     /**
      * get 域名
      *
@@ -69,6 +70,7 @@ public class ListBotFakeSpiderRuleReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 页面大小，默认20
      *
@@ -86,6 +88,7 @@ public class ListBotFakeSpiderRuleReq  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 页码，默认1
@@ -106,6 +109,7 @@ public class ListBotFakeSpiderRuleReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 域名
      *
@@ -116,6 +120,7 @@ public class ListBotFakeSpiderRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 页面大小，默认20
      *
@@ -125,6 +130,7 @@ public class ListBotFakeSpiderRuleReq  implements java.io.Serializable {
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 页码，默认1

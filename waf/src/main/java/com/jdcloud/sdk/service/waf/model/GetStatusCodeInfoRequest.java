@@ -50,6 +50,7 @@ public class GetStatusCodeInfoRequest extends JdcloudRequest implements java.io.
     private String regionId;
 
 
+
     /**
      * get 请求
      *
@@ -67,6 +68,7 @@ public class GetStatusCodeInfoRequest extends JdcloudRequest implements java.io.
     public void setReq(GetStatusCodeReq req) {
         this.req = req;
     }
+
 
     /**
      * get 实例所属的地域ID
@@ -87,6 +89,7 @@ public class GetStatusCodeInfoRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 请求
      *
@@ -96,6 +99,7 @@ public class GetStatusCodeInfoRequest extends JdcloudRequest implements java.io.
         this.req = req;
         return this;
     }
+
 
     /**
      * set 实例所属的地域ID

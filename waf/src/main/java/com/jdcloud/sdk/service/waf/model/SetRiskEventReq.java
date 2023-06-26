@@ -81,6 +81,7 @@ public class SetRiskEventReq  implements java.io.Serializable {
     private Integer disable;
 
 
+
     /**
      * get 规则id,新增时传0
      *
@@ -98,6 +99,7 @@ public class SetRiskEventReq  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get WAF实例id
@@ -117,6 +119,7 @@ public class SetRiskEventReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -134,6 +137,7 @@ public class SetRiskEventReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 规则名称
@@ -153,6 +157,7 @@ public class SetRiskEventReq  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get uri 以/开头
      *
@@ -171,6 +176,7 @@ public class SetRiskEventReq  implements java.io.Serializable {
         this.uri = uri;
     }
 
+
     /**
      * get desc
      *
@@ -188,6 +194,7 @@ public class SetRiskEventReq  implements java.io.Serializable {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
 
     /**
      * get 0-使用中 1-禁用
@@ -208,6 +215,7 @@ public class SetRiskEventReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id,新增时传0
      *
@@ -217,6 +225,7 @@ public class SetRiskEventReq  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set WAF实例id
@@ -228,6 +237,7 @@ public class SetRiskEventReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -237,6 +247,7 @@ public class SetRiskEventReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 规则名称
@@ -248,6 +259,7 @@ public class SetRiskEventReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set uri 以/开头
      *
@@ -258,6 +270,7 @@ public class SetRiskEventReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set desc
      *
@@ -267,6 +280,7 @@ public class SetRiskEventReq  implements java.io.Serializable {
         this.desc = desc;
         return this;
     }
+
 
     /**
      * set 0-使用中 1-禁用

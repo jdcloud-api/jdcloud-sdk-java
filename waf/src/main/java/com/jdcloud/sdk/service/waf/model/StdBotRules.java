@@ -42,8 +42,8 @@ public class StdBotRules  implements java.io.Serializable {
     /**
      * bot子类
      */
+    
     private List<String> subType;
-
     /**
      * 0-使用中，1-禁用
      */
@@ -53,6 +53,7 @@ public class StdBotRules  implements java.io.Serializable {
      * 动作配置
      */
     private DenyActionCfg action;
+
 
 
     /**
@@ -73,23 +74,25 @@ public class StdBotRules  implements java.io.Serializable {
         this.botType = botType;
     }
 
+
     /**
-     * get bot子类
-     *
-     * @return
-     */
+    * get bot子类
+    *
+    * @return
+    */
     public List<String> getSubType() {
         return subType;
     }
 
     /**
-     * set bot子类
-     *
-     * @param subType
-     */
+    * set bot子类
+    *
+    * @param subType
+    */
     public void setSubType(List<String> subType) {
         this.subType = subType;
     }
+
 
     /**
      * get 0-使用中，1-禁用
@@ -108,6 +111,7 @@ public class StdBotRules  implements java.io.Serializable {
     public void setDisable(Integer disable) {
         this.disable = disable;
     }
+
 
     /**
      * get 动作配置
@@ -128,6 +132,7 @@ public class StdBotRules  implements java.io.Serializable {
     }
 
 
+
     /**
      * set bot类型
      *
@@ -138,15 +143,17 @@ public class StdBotRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set bot子类
-     *
-     * @param subType
-     */
+    * set bot子类
+    *
+    * @param subType
+    */
     public StdBotRules subType(List<String> subType) {
         this.subType = subType;
         return this;
     }
+
 
     /**
      * set 0-使用中，1-禁用
@@ -158,6 +165,7 @@ public class StdBotRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 动作配置
      *
@@ -167,6 +175,7 @@ public class StdBotRules  implements java.io.Serializable {
         this.action = action;
         return this;
     }
+
 
 
     /**
@@ -180,5 +189,4 @@ public class StdBotRules  implements java.io.Serializable {
         }
         this.subType.add(subType);
     }
-
 }

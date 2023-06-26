@@ -33,14 +33,49 @@ public class ConditionNameSet  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 条件id
+     */
+    private Integer conditionId;
+
+    /**
      * 条件名称
      */
     private String conditionName;
 
     /**
+     * 条件类型
+     */
+    private String conditionType;
+
+    /**
      * 对条件结果的取反操作，does不取反，doesnot取反
      */
     private String opposite;
+
+    /**
+     * 与或逻辑
+     */
+    private String nand;
+
+
+
+    /**
+     * get 条件id
+     *
+     * @return
+     */
+    public Integer getConditionId() {
+        return conditionId;
+    }
+
+    /**
+     * set 条件id
+     *
+     * @param conditionId
+     */
+    public void setConditionId(Integer conditionId) {
+        this.conditionId = conditionId;
+    }
 
 
     /**
@@ -60,6 +95,26 @@ public class ConditionNameSet  implements java.io.Serializable {
     public void setConditionName(String conditionName) {
         this.conditionName = conditionName;
     }
+
+
+    /**
+     * get 条件类型
+     *
+     * @return
+     */
+    public String getConditionType() {
+        return conditionType;
+    }
+
+    /**
+     * set 条件类型
+     *
+     * @param conditionType
+     */
+    public void setConditionType(String conditionType) {
+        this.conditionType = conditionType;
+    }
+
 
     /**
      * get 对条件结果的取反操作，does不取反，doesnot取反
@@ -81,6 +136,37 @@ public class ConditionNameSet  implements java.io.Serializable {
 
 
     /**
+     * get 与或逻辑
+     *
+     * @return
+     */
+    public String getNand() {
+        return nand;
+    }
+
+    /**
+     * set 与或逻辑
+     *
+     * @param nand
+     */
+    public void setNand(String nand) {
+        this.nand = nand;
+    }
+
+
+
+    /**
+     * set 条件id
+     *
+     * @param conditionId
+     */
+    public ConditionNameSet conditionId(Integer conditionId) {
+        this.conditionId = conditionId;
+        return this;
+    }
+
+
+    /**
      * set 条件名称
      *
      * @param conditionName
@@ -90,6 +176,18 @@ public class ConditionNameSet  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set 条件类型
+     *
+     * @param conditionType
+     */
+    public ConditionNameSet conditionType(String conditionType) {
+        this.conditionType = conditionType;
+        return this;
+    }
+
+
     /**
      * set 对条件结果的取反操作，does不取反，doesnot取反
      *
@@ -97,6 +195,17 @@ public class ConditionNameSet  implements java.io.Serializable {
      */
     public ConditionNameSet opposite(String opposite) {
         this.opposite = opposite;
+        return this;
+    }
+
+
+    /**
+     * set 与或逻辑
+     *
+     * @param nand
+     */
+    public ConditionNameSet nand(String nand) {
+        this.nand = nand;
         return this;
     }
 

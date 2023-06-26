@@ -51,6 +51,7 @@ public class ActiveFuncReq  implements java.io.Serializable {
     private Integer enable;
 
 
+
     /**
      * get 实例id，代表要设置的WAF实例
      *
@@ -69,6 +70,7 @@ public class ActiveFuncReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -86,6 +88,7 @@ public class ActiveFuncReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 是否使能 0表示否
@@ -106,6 +109,7 @@ public class ActiveFuncReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例id，代表要设置的WAF实例
      *
@@ -116,6 +120,7 @@ public class ActiveFuncReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -125,6 +130,7 @@ public class ActiveFuncReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 是否使能 0表示否

@@ -35,7 +35,7 @@ public class ContactGroup  implements java.io.Serializable {
     /**
      * 联系群组Id
      */
-    private Integer contactId;
+    private String contactId;
 
     /**
      * 联系群组名
@@ -48,12 +48,13 @@ public class ContactGroup  implements java.io.Serializable {
     private Integer selected;
 
 
+
     /**
      * get 联系群组Id
      *
      * @return
      */
-    public Integer getContactId() {
+    public String getContactId() {
         return contactId;
     }
 
@@ -62,9 +63,10 @@ public class ContactGroup  implements java.io.Serializable {
      *
      * @param contactId
      */
-    public void setContactId(Integer contactId) {
+    public void setContactId(String contactId) {
         this.contactId = contactId;
     }
+
 
     /**
      * get 联系群组名
@@ -83,6 +85,7 @@ public class ContactGroup  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 是否选中，1-选中，0-未选中
@@ -103,15 +106,17 @@ public class ContactGroup  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 联系群组Id
      *
      * @param contactId
      */
-    public ContactGroup contactId(Integer contactId) {
+    public ContactGroup contactId(String contactId) {
         this.contactId = contactId;
         return this;
     }
+
 
     /**
      * set 联系群组名
@@ -122,6 +127,7 @@ public class ContactGroup  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 是否选中，1-选中，0-未选中

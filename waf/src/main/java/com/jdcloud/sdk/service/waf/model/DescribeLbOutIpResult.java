@@ -39,6 +39,7 @@ public class DescribeLbOutIpResult extends JdcloudResult implements java.io.Seri
     private Object list;
 
 
+
     /**
      * get list
      *
@@ -56,6 +57,7 @@ public class DescribeLbOutIpResult extends JdcloudResult implements java.io.Seri
     public void setList(Object list) {
         this.list = list;
     }
+
 
 
     /**

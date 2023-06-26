@@ -52,6 +52,7 @@ public class TopCodeValue  implements java.io.Serializable {
     /**
      * status_code
      */
+    
     private List<KVPair> status_code;
 
 
@@ -73,6 +74,7 @@ public class TopCodeValue  implements java.io.Serializable {
         this.rank = rank;
     }
 
+
     /**
      * get 具体值
      *
@@ -90,6 +92,7 @@ public class TopCodeValue  implements java.io.Serializable {
     public void setSrc(String src) {
         this.src = src;
     }
+
 
     /**
      * get 统计值
@@ -109,23 +112,25 @@ public class TopCodeValue  implements java.io.Serializable {
         this.pv = pv;
     }
 
+
     /**
-     * get status_code
-     *
-     * @return
-     */
+    * get status_code
+    *
+    * @return
+    */
     public List<KVPair> getStatus_code() {
         return status_code;
     }
 
     /**
-     * set status_code
-     *
-     * @param status_code
-     */
+    * set status_code
+    *
+    * @param status_code
+    */
     public void setStatus_code(List<KVPair> status_code) {
         this.status_code = status_code;
     }
+
 
 
     /**
@@ -138,6 +143,7 @@ public class TopCodeValue  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 具体值
      *
@@ -147,6 +153,7 @@ public class TopCodeValue  implements java.io.Serializable {
         this.src = src;
         return this;
     }
+
 
     /**
      * set 统计值
@@ -158,15 +165,17 @@ public class TopCodeValue  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set status_code
-     *
-     * @param status_code
-     */
+    * set status_code
+    *
+    * @param status_code
+    */
     public TopCodeValue status_code(List<KVPair> status_code) {
         this.status_code = status_code;
         return this;
     }
+
 
 
     /**
@@ -180,5 +189,4 @@ public class TopCodeValue  implements java.io.Serializable {
         }
         this.status_code.add(status_code);
     }
-
 }

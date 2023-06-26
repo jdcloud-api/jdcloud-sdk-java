@@ -53,6 +53,7 @@ public class FilterSenseConf  implements java.io.Serializable {
     private Integer total;
 
 
+
     /**
      * get 是否使能 0表示否
      *
@@ -70,6 +71,7 @@ public class FilterSenseConf  implements java.io.Serializable {
     public void setEnable(Integer enable) {
         this.enable = enable;
     }
+
 
     /**
      * get 响应码条数  即将废弃
@@ -89,6 +91,7 @@ public class FilterSenseConf  implements java.io.Serializable {
         this.respCodeNum = respCodeNum;
     }
 
+
     /**
      * get 敏感信息条数
      *
@@ -106,6 +109,7 @@ public class FilterSenseConf  implements java.io.Serializable {
     public void setSenseinfoNum(Integer senseinfoNum) {
         this.senseinfoNum = senseinfoNum;
     }
+
 
     /**
      * get 总条数
@@ -126,6 +130,7 @@ public class FilterSenseConf  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否使能 0表示否
      *
@@ -135,6 +140,7 @@ public class FilterSenseConf  implements java.io.Serializable {
         this.enable = enable;
         return this;
     }
+
 
     /**
      * set 响应码条数  即将废弃
@@ -146,6 +152,7 @@ public class FilterSenseConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 敏感信息条数
      *
@@ -155,6 +162,7 @@ public class FilterSenseConf  implements java.io.Serializable {
         this.senseinfoNum = senseinfoNum;
         return this;
     }
+
 
     /**
      * set 总条数

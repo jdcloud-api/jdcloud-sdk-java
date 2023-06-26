@@ -71,6 +71,7 @@ public class SetWafConditionReq  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<FilterCfg> filters;
 
 
@@ -92,6 +93,7 @@ public class SetWafConditionReq  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get WAF实例id
      *
@@ -109,6 +111,7 @@ public class SetWafConditionReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -128,6 +131,7 @@ public class SetWafConditionReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 条件名称，新增时必须
      *
@@ -145,6 +149,7 @@ public class SetWafConditionReq  implements java.io.Serializable {
     public void setConditionName(String conditionName) {
         this.conditionName = conditionName;
     }
+
 
     /**
      * get 匹配类型，&quot;str&quot;/&quot;regex&quot;/&quot;geo&quot;/&quot;size&quot;/&quot;ip&quot;/&quot;SQLi&quot;/&quot;XSS&quot;
@@ -164,23 +169,25 @@ public class SetWafConditionReq  implements java.io.Serializable {
         this.conditionType = conditionType;
     }
 
+
     /**
-     * get 过滤器配置
-     *
-     * @return
-     */
+    * get 过滤器配置
+    *
+    * @return
+    */
     public List<FilterCfg> getFilters() {
         return filters;
     }
 
     /**
-     * set 过滤器配置
-     *
-     * @param filters
-     */
+    * set 过滤器配置
+    *
+    * @param filters
+    */
     public void setFilters(List<FilterCfg> filters) {
         this.filters = filters;
     }
+
 
 
     /**
@@ -193,6 +200,7 @@ public class SetWafConditionReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set WAF实例id
      *
@@ -202,6 +210,7 @@ public class SetWafConditionReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -213,6 +222,7 @@ public class SetWafConditionReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 条件名称，新增时必须
      *
@@ -222,6 +232,7 @@ public class SetWafConditionReq  implements java.io.Serializable {
         this.conditionName = conditionName;
         return this;
     }
+
 
     /**
      * set 匹配类型，&quot;str&quot;/&quot;regex&quot;/&quot;geo&quot;/&quot;size&quot;/&quot;ip&quot;/&quot;SQLi&quot;/&quot;XSS&quot;
@@ -233,15 +244,17 @@ public class SetWafConditionReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 过滤器配置
-     *
-     * @param filters
-     */
+    * set 过滤器配置
+    *
+    * @param filters
+    */
     public SetWafConditionReq filters(List<FilterCfg> filters) {
         this.filters = filters;
         return this;
     }
+
 
 
     /**
@@ -255,5 +268,4 @@ public class SetWafConditionReq  implements java.io.Serializable {
         }
         this.filters.add(filter);
     }
-
 }

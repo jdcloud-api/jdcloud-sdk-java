@@ -33,6 +33,11 @@ public class StatusListCfg  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * id
+     */
+    private Integer id;
+
+    /**
      * 规则名称
      */
     private String name;
@@ -63,6 +68,26 @@ public class StatusListCfg  implements java.io.Serializable {
     private Integer disable;
 
 
+
+    /**
+     * get id
+     *
+     * @return
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * set id
+     *
+     * @param id
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+
     /**
      * get 规则名称
      *
@@ -80,6 +105,7 @@ public class StatusListCfg  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 原有状态码
@@ -99,6 +125,7 @@ public class StatusListCfg  implements java.io.Serializable {
         this.oriStatus = oriStatus;
     }
 
+
     /**
      * get 设置状态码，只能为&quot;200&quot;，&quot;302&quot;
      *
@@ -116,6 +143,7 @@ public class StatusListCfg  implements java.io.Serializable {
     public void setSetStatus(String setStatus) {
         this.setStatus = setStatus;
     }
+
 
     /**
      * get 设置状态码为&quot;200&quot;时，改值为自定义页面名称，&quot;302&quot;时为跳转url
@@ -135,6 +163,7 @@ public class StatusListCfg  implements java.io.Serializable {
         this.val = val;
     }
 
+
     /**
      * get 更新时间，s
      *
@@ -152,6 +181,7 @@ public class StatusListCfg  implements java.io.Serializable {
     public void setUpdateTime(Integer updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 0-使用中 1-禁用
@@ -172,6 +202,18 @@ public class StatusListCfg  implements java.io.Serializable {
     }
 
 
+
+    /**
+     * set id
+     *
+     * @param id
+     */
+    public StatusListCfg id(Integer id) {
+        this.id = id;
+        return this;
+    }
+
+
     /**
      * set 规则名称
      *
@@ -181,6 +223,7 @@ public class StatusListCfg  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 原有状态码
@@ -192,6 +235,7 @@ public class StatusListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 设置状态码，只能为&quot;200&quot;，&quot;302&quot;
      *
@@ -201,6 +245,7 @@ public class StatusListCfg  implements java.io.Serializable {
         this.setStatus = setStatus;
         return this;
     }
+
 
     /**
      * set 设置状态码为&quot;200&quot;时，改值为自定义页面名称，&quot;302&quot;时为跳转url
@@ -212,6 +257,7 @@ public class StatusListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 更新时间，s
      *
@@ -221,6 +267,7 @@ public class StatusListCfg  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 0-使用中 1-禁用

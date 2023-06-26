@@ -62,6 +62,7 @@ public class ListWafFilterCfg  implements java.io.Serializable {
     /**
      * 过滤器配置
      */
+    
     private List<FilterCfg> filters;
 
 
@@ -83,6 +84,7 @@ public class ListWafFilterCfg  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -100,6 +102,7 @@ public class ListWafFilterCfg  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 所属条件的id
@@ -119,6 +122,7 @@ public class ListWafFilterCfg  implements java.io.Serializable {
         this.conditionId = conditionId;
     }
 
+
     /**
      * get 名称
      *
@@ -136,6 +140,7 @@ public class ListWafFilterCfg  implements java.io.Serializable {
     public void setConditionName(String conditionName) {
         this.conditionName = conditionName;
     }
+
 
     /**
      * get 匹配类型
@@ -155,23 +160,25 @@ public class ListWafFilterCfg  implements java.io.Serializable {
         this.conditionType = conditionType;
     }
 
+
     /**
-     * get 过滤器配置
-     *
-     * @return
-     */
+    * get 过滤器配置
+    *
+    * @return
+    */
     public List<FilterCfg> getFilters() {
         return filters;
     }
 
     /**
-     * set 过滤器配置
-     *
-     * @param filters
-     */
+    * set 过滤器配置
+    *
+    * @param filters
+    */
     public void setFilters(List<FilterCfg> filters) {
         this.filters = filters;
     }
+
 
 
     /**
@@ -184,6 +191,7 @@ public class ListWafFilterCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -193,6 +201,7 @@ public class ListWafFilterCfg  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 所属条件的id
@@ -204,6 +213,7 @@ public class ListWafFilterCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 名称
      *
@@ -213,6 +223,7 @@ public class ListWafFilterCfg  implements java.io.Serializable {
         this.conditionName = conditionName;
         return this;
     }
+
 
     /**
      * set 匹配类型
@@ -224,15 +235,17 @@ public class ListWafFilterCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 过滤器配置
-     *
-     * @param filters
-     */
+    * set 过滤器配置
+    *
+    * @param filters
+    */
     public ListWafFilterCfg filters(List<FilterCfg> filters) {
         this.filters = filters;
         return this;
     }
+
 
 
     /**
@@ -246,5 +259,4 @@ public class ListWafFilterCfg  implements java.io.Serializable {
         }
         this.filters.add(filter);
     }
-
 }

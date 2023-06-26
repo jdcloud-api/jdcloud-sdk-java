@@ -48,9 +48,14 @@ public class IpListCfg  implements java.io.Serializable {
     private Integer disable;
 
     /**
-     * 支持 ipv4/8 ipv4/16 ipv4/24 ipv4/32 ipv6/64
+     * ruleType为0时,支持ipv4/8,ipv4/16,ipv4/24,ipv4/32,ipv6/64;ruleType为1时,为ip集名称
      */
-    private String ip;
+    private String val;
+
+    /**
+     * 0-单ip 1-ip集
+     */
+    private Integer ruleType;
 
     /**
      * action配置
@@ -61,6 +66,12 @@ public class IpListCfg  implements java.io.Serializable {
      * 备注
      */
     private String tag;
+
+    /**
+     * 白名单不检查指定Web防护规则id, 多个逗号分隔
+     */
+    private String skipRuleId;
+
 
 
     /**
@@ -81,6 +92,7 @@ public class IpListCfg  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 规则更新时间，秒级时间戳, 0 表示历史数据无记录
      *
@@ -98,6 +110,7 @@ public class IpListCfg  implements java.io.Serializable {
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 0-使用中 1-禁用
@@ -117,23 +130,44 @@ public class IpListCfg  implements java.io.Serializable {
         this.disable = disable;
     }
 
+
     /**
-     * get 支持 ipv4/8 ipv4/16 ipv4/24 ipv4/32 ipv6/64
+     * get ruleType为0时,支持ipv4/8,ipv4/16,ipv4/24,ipv4/32,ipv6/64;ruleType为1时,为ip集名称
      *
      * @return
      */
-    public String getIp() {
-        return ip;
+    public String getVal() {
+        return val;
     }
 
     /**
-     * set 支持 ipv4/8 ipv4/16 ipv4/24 ipv4/32 ipv6/64
+     * set ruleType为0时,支持ipv4/8,ipv4/16,ipv4/24,ipv4/32,ipv6/64;ruleType为1时,为ip集名称
      *
-     * @param ip
+     * @param val
      */
-    public void setIp(String ip) {
-        this.ip = ip;
+    public void setVal(String val) {
+        this.val = val;
     }
+
+
+    /**
+     * get 0-单ip 1-ip集
+     *
+     * @return
+     */
+    public Integer getRuleType() {
+        return ruleType;
+    }
+
+    /**
+     * set 0-单ip 1-ip集
+     *
+     * @param ruleType
+     */
+    public void setRuleType(Integer ruleType) {
+        this.ruleType = ruleType;
+    }
+
 
     /**
      * get action配置
@@ -152,6 +186,7 @@ public class IpListCfg  implements java.io.Serializable {
     public void setAtCfg(AtCfg atCfg) {
         this.atCfg = atCfg;
     }
+
 
     /**
      * get 备注
@@ -173,6 +208,26 @@ public class IpListCfg  implements java.io.Serializable {
 
 
     /**
+     * get 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @return
+     */
+    public String getSkipRuleId() {
+        return skipRuleId;
+    }
+
+    /**
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @param skipRuleId
+     */
+    public void setSkipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+    }
+
+
+
+    /**
      * set 序号id
      *
      * @param id
@@ -181,6 +236,7 @@ public class IpListCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 规则更新时间，秒级时间戳, 0 表示历史数据无记录
@@ -192,6 +248,7 @@ public class IpListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0-使用中 1-禁用
      *
@@ -202,15 +259,28 @@ public class IpListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 支持 ipv4/8 ipv4/16 ipv4/24 ipv4/32 ipv6/64
+     * set ruleType为0时,支持ipv4/8,ipv4/16,ipv4/24,ipv4/32,ipv6/64;ruleType为1时,为ip集名称
      *
-     * @param ip
+     * @param val
      */
-    public IpListCfg ip(String ip) {
-        this.ip = ip;
+    public IpListCfg val(String val) {
+        this.val = val;
         return this;
     }
+
+
+    /**
+     * set 0-单ip 1-ip集
+     *
+     * @param ruleType
+     */
+    public IpListCfg ruleType(Integer ruleType) {
+        this.ruleType = ruleType;
+        return this;
+    }
+
 
     /**
      * set action配置
@@ -222,6 +292,7 @@ public class IpListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 备注
      *
@@ -229,6 +300,17 @@ public class IpListCfg  implements java.io.Serializable {
      */
     public IpListCfg tag(String tag) {
         this.tag = tag;
+        return this;
+    }
+
+
+    /**
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @param skipRuleId
+     */
+    public IpListCfg skipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
         return this;
     }
 

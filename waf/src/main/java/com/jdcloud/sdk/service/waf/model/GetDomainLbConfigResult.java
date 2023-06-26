@@ -45,6 +45,7 @@ public class GetDomainLbConfigResult extends JdcloudResult implements java.io.Se
     private LbConfig config;
 
 
+
     /**
      * get 实例id
      *
@@ -62,6 +63,7 @@ public class GetDomainLbConfigResult extends JdcloudResult implements java.io.Se
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 网站lb配置
@@ -82,6 +84,7 @@ public class GetDomainLbConfigResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
      * set 实例id
      *
@@ -91,6 +94,7 @@ public class GetDomainLbConfigResult extends JdcloudResult implements java.io.Se
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 网站lb配置

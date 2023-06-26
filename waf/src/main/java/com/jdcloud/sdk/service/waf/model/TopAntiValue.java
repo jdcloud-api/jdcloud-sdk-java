@@ -24,8 +24,6 @@
 
 package com.jdcloud.sdk.service.waf.model;
 
-import java.util.List;
-import java.util.ArrayList;
 
 /**
  * topAntiValue
@@ -50,9 +48,10 @@ public class TopAntiValue  implements java.io.Serializable {
     private Integer pv;
 
     /**
-     * count
+     * 攻击分布
      */
-    private List<KVPair> count;
+    private AntiValue count;
+
 
 
     /**
@@ -73,6 +72,7 @@ public class TopAntiValue  implements java.io.Serializable {
         this.rank = rank;
     }
 
+
     /**
      * get 具体值
      *
@@ -90,6 +90,7 @@ public class TopAntiValue  implements java.io.Serializable {
     public void setSrc(String src) {
         this.src = src;
     }
+
 
     /**
      * get 统计值
@@ -109,23 +110,25 @@ public class TopAntiValue  implements java.io.Serializable {
         this.pv = pv;
     }
 
+
     /**
-     * get count
+     * get 攻击分布
      *
      * @return
      */
-    public List<KVPair> getCount() {
+    public AntiValue getCount() {
         return count;
     }
 
     /**
-     * set count
+     * set 攻击分布
      *
      * @param count
      */
-    public void setCount(List<KVPair> count) {
+    public void setCount(AntiValue count) {
         this.count = count;
     }
+
 
 
     /**
@@ -138,6 +141,7 @@ public class TopAntiValue  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 具体值
      *
@@ -147,6 +151,7 @@ public class TopAntiValue  implements java.io.Serializable {
         this.src = src;
         return this;
     }
+
 
     /**
      * set 统计值
@@ -158,27 +163,16 @@ public class TopAntiValue  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set count
+     * set 攻击分布
      *
      * @param count
      */
-    public TopAntiValue count(List<KVPair> count) {
+    public TopAntiValue count(AntiValue count) {
         this.count = count;
         return this;
     }
 
-
-    /**
-     * add item to count
-     *
-     * @param count
-     */
-    public void addCount(KVPair count) {
-        if (this.count == null) {
-            this.count = new ArrayList<>();
-        }
-        this.count.add(count);
-    }
 
 }

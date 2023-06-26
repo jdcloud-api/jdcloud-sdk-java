@@ -57,6 +57,7 @@ public class EnableWafUserDefineRequest extends JdcloudRequest implements java.i
     private String wafInstanceId;
 
 
+
     /**
      * get 请求
      *
@@ -75,6 +76,7 @@ public class EnableWafUserDefineRequest extends JdcloudRequest implements java.i
         this.req = req;
     }
 
+
     /**
      * get 实例所属的地域ID
      *
@@ -92,6 +94,7 @@ public class EnableWafUserDefineRequest extends JdcloudRequest implements java.i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例Id
@@ -112,6 +115,7 @@ public class EnableWafUserDefineRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 请求
      *
@@ -122,6 +126,7 @@ public class EnableWafUserDefineRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 实例所属的地域ID
      *
@@ -131,6 +136,7 @@ public class EnableWafUserDefineRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例Id

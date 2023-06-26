@@ -38,6 +38,7 @@ public class DisableReq  implements java.io.Serializable {
     private Integer disable;
 
 
+
     /**
      * get 0:使用规则，1：禁用规则
      *
@@ -55,6 +56,7 @@ public class DisableReq  implements java.io.Serializable {
     public void setDisable(Integer disable) {
         this.disable = disable;
     }
+
 
 
     /**

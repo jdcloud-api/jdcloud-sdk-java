@@ -58,6 +58,7 @@ public class FuncList  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get id
      *
@@ -75,6 +76,7 @@ public class FuncList  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 用户名
@@ -94,6 +96,7 @@ public class FuncList  implements java.io.Serializable {
         this.userPin = userPin;
     }
 
+
     /**
      * get 规则类型
      *
@@ -112,6 +115,7 @@ public class FuncList  implements java.io.Serializable {
         this.ruleType = ruleType;
     }
 
+
     /**
      * get 应用添加人erp
      *
@@ -129,6 +133,7 @@ public class FuncList  implements java.io.Serializable {
     public void setOperator(String operator) {
         this.operator = operator;
     }
+
 
     /**
      * get 添加时间 &quot;2020-09-14T10:21:37+08:00&quot;
@@ -149,6 +154,7 @@ public class FuncList  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -158,6 +164,7 @@ public class FuncList  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 用户名
@@ -169,6 +176,7 @@ public class FuncList  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则类型
      *
@@ -179,6 +187,7 @@ public class FuncList  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应用添加人erp
      *
@@ -188,6 +197,7 @@ public class FuncList  implements java.io.Serializable {
         this.operator = operator;
         return this;
     }
+
 
     /**
      * set 添加时间 &quot;2020-09-14T10:21:37+08:00&quot;

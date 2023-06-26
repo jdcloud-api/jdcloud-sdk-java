@@ -55,6 +55,7 @@ public class ListWafFilterResult extends JdcloudResult implements java.io.Serial
     private ListWafFilterCfg list;
 
 
+
     /**
      * get 页码
      *
@@ -72,6 +73,7 @@ public class ListWafFilterResult extends JdcloudResult implements java.io.Serial
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
     }
+
 
     /**
      * get 页大小
@@ -91,6 +93,7 @@ public class ListWafFilterResult extends JdcloudResult implements java.io.Serial
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 配置总数
      *
@@ -108,6 +111,7 @@ public class ListWafFilterResult extends JdcloudResult implements java.io.Serial
     public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
     }
+
 
     /**
      * get 网站waf自定义防护过滤器设置
@@ -128,6 +132,7 @@ public class ListWafFilterResult extends JdcloudResult implements java.io.Serial
     }
 
 
+
     /**
      * set 页码
      *
@@ -137,6 +142,7 @@ public class ListWafFilterResult extends JdcloudResult implements java.io.Serial
         this.pageIndex = pageIndex;
         return this;
     }
+
 
     /**
      * set 页大小
@@ -148,6 +154,7 @@ public class ListWafFilterResult extends JdcloudResult implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 配置总数
      *
@@ -157,6 +164,7 @@ public class ListWafFilterResult extends JdcloudResult implements java.io.Serial
         this.totalCount = totalCount;
         return this;
     }
+
 
     /**
      * set 网站waf自定义防护过滤器设置

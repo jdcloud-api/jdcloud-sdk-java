@@ -83,6 +83,7 @@ public class SkipActionCfg  implements java.io.Serializable {
     private Integer risk;
 
 
+
     /**
      * get 是否跳过所有阶段，1表示是，0表示否
      *
@@ -100,6 +101,7 @@ public class SkipActionCfg  implements java.io.Serializable {
     public void setPassAll(Integer passAll) {
         this.passAll = passAll;
     }
+
 
     /**
      * get 是否执行cc防护，1表示是，0表示否
@@ -119,6 +121,7 @@ public class SkipActionCfg  implements java.io.Serializable {
         this.cc = cc;
     }
 
+
     /**
      * get 是否执行waf防护，1表示是，0表示否
      *
@@ -136,6 +139,7 @@ public class SkipActionCfg  implements java.io.Serializable {
     public void setWaf(Integer waf) {
         this.waf = waf;
     }
+
 
     /**
      * get 是否执行deny防护，1表示是，0表示否
@@ -155,6 +159,7 @@ public class SkipActionCfg  implements java.io.Serializable {
         this.deny = deny;
     }
 
+
     /**
      * get 是否执行限速，1表示是，0表示否
      *
@@ -173,6 +178,7 @@ public class SkipActionCfg  implements java.io.Serializable {
         this.rateLimit = rateLimit;
     }
 
+
     /**
      * get 是否执行bot，1表示是，0表示否
      *
@@ -190,6 +196,7 @@ public class SkipActionCfg  implements java.io.Serializable {
     public void setBot(Integer bot) {
         this.bot = bot;
     }
+
 
     /**
      * get 是否执行风控，1表示是，0表示否
@@ -210,6 +217,7 @@ public class SkipActionCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否跳过所有阶段，1表示是，0表示否
      *
@@ -219,6 +227,7 @@ public class SkipActionCfg  implements java.io.Serializable {
         this.passAll = passAll;
         return this;
     }
+
 
     /**
      * set 是否执行cc防护，1表示是，0表示否
@@ -230,6 +239,7 @@ public class SkipActionCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否执行waf防护，1表示是，0表示否
      *
@@ -239,6 +249,7 @@ public class SkipActionCfg  implements java.io.Serializable {
         this.waf = waf;
         return this;
     }
+
 
     /**
      * set 是否执行deny防护，1表示是，0表示否
@@ -250,6 +261,7 @@ public class SkipActionCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否执行限速，1表示是，0表示否
      *
@@ -260,6 +272,7 @@ public class SkipActionCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否执行bot，1表示是，0表示否
      *
@@ -269,6 +282,7 @@ public class SkipActionCfg  implements java.io.Serializable {
         this.bot = bot;
         return this;
     }
+
 
     /**
      * set 是否执行风控，1表示是，0表示否

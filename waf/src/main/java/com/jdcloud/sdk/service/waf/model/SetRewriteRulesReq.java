@@ -61,6 +61,7 @@ public class SetRewriteRulesReq  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<RewriteRuleCfg> rewriteRules;
 
 
@@ -82,6 +83,7 @@ public class SetRewriteRulesReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -99,6 +101,7 @@ public class SetRewriteRulesReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 重写类型 目前支持&quot;uri&quot;
@@ -118,23 +121,25 @@ public class SetRewriteRulesReq  implements java.io.Serializable {
         this.rewriteType = rewriteType;
     }
 
+
     /**
-     * get 重写规则配置
-     *
-     * @return
-     */
+    * get 重写规则配置
+    *
+    * @return
+    */
     public List<RewriteRuleCfg> getRewriteRules() {
         return rewriteRules;
     }
 
     /**
-     * set 重写规则配置
-     *
-     * @param rewriteRules
-     */
+    * set 重写规则配置
+    *
+    * @param rewriteRules
+    */
     public void setRewriteRules(List<RewriteRuleCfg> rewriteRules) {
         this.rewriteRules = rewriteRules;
     }
+
 
 
     /**
@@ -147,6 +152,7 @@ public class SetRewriteRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -156,6 +162,7 @@ public class SetRewriteRulesReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 重写类型 目前支持&quot;uri&quot;
@@ -167,15 +174,17 @@ public class SetRewriteRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 重写规则配置
-     *
-     * @param rewriteRules
-     */
+    * set 重写规则配置
+    *
+    * @param rewriteRules
+    */
     public SetRewriteRulesReq rewriteRules(List<RewriteRuleCfg> rewriteRules) {
         this.rewriteRules = rewriteRules;
         return this;
     }
+
 
 
     /**
@@ -189,5 +198,4 @@ public class SetRewriteRulesReq  implements java.io.Serializable {
         }
         this.rewriteRules.add(rewriteRule);
     }
-
 }

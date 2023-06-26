@@ -37,70 +37,75 @@ public class AclTopN  implements java.io.Serializable {
     /**
      * 来源ip的top10
      */
+    
     private List<TopValue> addr_top10;
-
     /**
      * acl规则匹配top10
      */
+    
     private List<TopValue> rulename_top10;
 
 
     /**
-     * get 来源ip的top10
-     *
-     * @return
-     */
+    * get 来源ip的top10
+    *
+    * @return
+    */
     public List<TopValue> getAddr_top10() {
         return addr_top10;
     }
 
     /**
-     * set 来源ip的top10
-     *
-     * @param addr_top10
-     */
+    * set 来源ip的top10
+    *
+    * @param addr_top10
+    */
     public void setAddr_top10(List<TopValue> addr_top10) {
         this.addr_top10 = addr_top10;
     }
 
+
     /**
-     * get acl规则匹配top10
-     *
-     * @return
-     */
+    * get acl规则匹配top10
+    *
+    * @return
+    */
     public List<TopValue> getRulename_top10() {
         return rulename_top10;
     }
 
     /**
-     * set acl规则匹配top10
-     *
-     * @param rulename_top10
-     */
+    * set acl规则匹配top10
+    *
+    * @param rulename_top10
+    */
     public void setRulename_top10(List<TopValue> rulename_top10) {
         this.rulename_top10 = rulename_top10;
     }
 
 
+
     /**
-     * set 来源ip的top10
-     *
-     * @param addr_top10
-     */
+    * set 来源ip的top10
+    *
+    * @param addr_top10
+    */
     public AclTopN addr_top10(List<TopValue> addr_top10) {
         this.addr_top10 = addr_top10;
         return this;
     }
 
+
     /**
-     * set acl规则匹配top10
-     *
-     * @param rulename_top10
-     */
+    * set acl规则匹配top10
+    *
+    * @param rulename_top10
+    */
     public AclTopN rulename_top10(List<TopValue> rulename_top10) {
         this.rulename_top10 = rulename_top10;
         return this;
     }
+
 
 
     /**
@@ -126,5 +131,4 @@ public class AclTopN  implements java.io.Serializable {
         }
         this.rulename_top10.add(rulename_top10);
     }
-
 }

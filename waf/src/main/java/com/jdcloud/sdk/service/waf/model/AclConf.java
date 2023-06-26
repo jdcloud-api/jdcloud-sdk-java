@@ -43,6 +43,7 @@ public class AclConf  implements java.io.Serializable {
     private Integer aclRuleNum;
 
 
+
     /**
      * get 是否使能 0表示否
      *
@@ -60,6 +61,7 @@ public class AclConf  implements java.io.Serializable {
     public void setEnable(Integer enable) {
         this.enable = enable;
     }
+
 
     /**
      * get acl规则个数
@@ -80,6 +82,7 @@ public class AclConf  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否使能 0表示否
      *
@@ -89,6 +92,7 @@ public class AclConf  implements java.io.Serializable {
         this.enable = enable;
         return this;
     }
+
 
     /**
      * set acl规则个数

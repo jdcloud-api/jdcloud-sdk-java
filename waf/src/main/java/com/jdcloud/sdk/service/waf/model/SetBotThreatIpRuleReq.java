@@ -58,6 +58,7 @@ public class SetBotThreatIpRuleReq  implements java.io.Serializable {
     private Integer enable;
 
 
+
     /**
      * get 域名
      *
@@ -75,6 +76,7 @@ public class SetBotThreatIpRuleReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 要设置的bot威胁情报库类型，list列表中的值en
@@ -94,6 +96,7 @@ public class SetBotThreatIpRuleReq  implements java.io.Serializable {
         this.botType = botType;
     }
 
+
     /**
      * get 动作配置
      *
@@ -111,6 +114,7 @@ public class SetBotThreatIpRuleReq  implements java.io.Serializable {
     public void setAction(DenyActionCfg action) {
         this.action = action;
     }
+
 
     /**
      * get 1-启用 0-禁用
@@ -131,6 +135,7 @@ public class SetBotThreatIpRuleReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 域名
      *
@@ -140,6 +145,7 @@ public class SetBotThreatIpRuleReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 要设置的bot威胁情报库类型，list列表中的值en
@@ -151,6 +157,7 @@ public class SetBotThreatIpRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 动作配置
      *
@@ -160,6 +167,7 @@ public class SetBotThreatIpRuleReq  implements java.io.Serializable {
         this.action = action;
         return this;
     }
+
 
     /**
      * set 1-启用 0-禁用

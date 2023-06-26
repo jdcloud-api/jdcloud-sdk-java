@@ -35,7 +35,7 @@ public class Contactor  implements java.io.Serializable {
     /**
      * 联系人/群组Id
      */
-    private Integer contactId;
+    private String contactId;
 
     /**
      * 是否选中，1-选中，0-未选中
@@ -43,12 +43,13 @@ public class Contactor  implements java.io.Serializable {
     private Integer selected;
 
 
+
     /**
      * get 联系人/群组Id
      *
      * @return
      */
-    public Integer getContactId() {
+    public String getContactId() {
         return contactId;
     }
 
@@ -57,9 +58,10 @@ public class Contactor  implements java.io.Serializable {
      *
      * @param contactId
      */
-    public void setContactId(Integer contactId) {
+    public void setContactId(String contactId) {
         this.contactId = contactId;
     }
+
 
     /**
      * get 是否选中，1-选中，0-未选中
@@ -80,15 +82,17 @@ public class Contactor  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 联系人/群组Id
      *
      * @param contactId
      */
-    public Contactor contactId(Integer contactId) {
+    public Contactor contactId(String contactId) {
         this.contactId = contactId;
         return this;
     }
+
 
     /**
      * set 是否选中，1-选中，0-未选中

@@ -54,6 +54,7 @@ public class SetPagesReq  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<PageCfg> pages;
 
 
@@ -75,6 +76,7 @@ public class SetPagesReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -93,23 +95,25 @@ public class SetPagesReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
-     * get 自定义页面配置
-     *
-     * @return
-     */
+    * get 自定义页面配置
+    *
+    * @return
+    */
     public List<PageCfg> getPages() {
         return pages;
     }
 
     /**
-     * set 自定义页面配置
-     *
-     * @param pages
-     */
+    * set 自定义页面配置
+    *
+    * @param pages
+    */
     public void setPages(List<PageCfg> pages) {
         this.pages = pages;
     }
+
 
 
     /**
@@ -122,6 +126,7 @@ public class SetPagesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -132,15 +137,17 @@ public class SetPagesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 自定义页面配置
-     *
-     * @param pages
-     */
+    * set 自定义页面配置
+    *
+    * @param pages
+    */
     public SetPagesReq pages(List<PageCfg> pages) {
         this.pages = pages;
         return this;
     }
+
 
 
     /**
@@ -154,5 +161,4 @@ public class SetPagesReq  implements java.io.Serializable {
         }
         this.pages.add(page);
     }
-
 }

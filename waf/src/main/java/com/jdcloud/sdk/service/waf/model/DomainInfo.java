@@ -47,8 +47,8 @@ public class DomainInfo  implements java.io.Serializable {
     /**
      * 回源ip列表
      */
+    
     private List<String> rsAddr;
-
     /**
      * waf防护状态，rs-回源，vip-云端
      */
@@ -58,6 +58,7 @@ public class DomainInfo  implements java.io.Serializable {
      * cname
      */
     private String cname;
+
 
 
     /**
@@ -78,6 +79,7 @@ public class DomainInfo  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -96,23 +98,25 @@ public class DomainInfo  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
-     * get 回源ip列表
-     *
-     * @return
-     */
+    * get 回源ip列表
+    *
+    * @return
+    */
     public List<String> getRsAddr() {
         return rsAddr;
     }
 
     /**
-     * set 回源ip列表
-     *
-     * @param rsAddr
-     */
+    * set 回源ip列表
+    *
+    * @param rsAddr
+    */
     public void setRsAddr(List<String> rsAddr) {
         this.rsAddr = rsAddr;
     }
+
 
     /**
      * get waf防护状态，rs-回源，vip-云端
@@ -131,6 +135,7 @@ public class DomainInfo  implements java.io.Serializable {
     public void setDnsType(String dnsType) {
         this.dnsType = dnsType;
     }
+
 
     /**
      * get cname
@@ -151,6 +156,7 @@ public class DomainInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例
      *
@@ -160,6 +166,7 @@ public class DomainInfo  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -171,15 +178,17 @@ public class DomainInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 回源ip列表
-     *
-     * @param rsAddr
-     */
+    * set 回源ip列表
+    *
+    * @param rsAddr
+    */
     public DomainInfo rsAddr(List<String> rsAddr) {
         this.rsAddr = rsAddr;
         return this;
     }
+
 
     /**
      * set waf防护状态，rs-回源，vip-云端
@@ -191,6 +200,7 @@ public class DomainInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cname
      *
@@ -200,6 +210,7 @@ public class DomainInfo  implements java.io.Serializable {
         this.cname = cname;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class DomainInfo  implements java.io.Serializable {
         }
         this.rsAddr.add(rsAddr);
     }
-
 }

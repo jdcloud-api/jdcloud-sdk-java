@@ -49,6 +49,7 @@ public class UpgradeInstanceResult extends JdcloudResult implements java.io.Seri
     private String orderNumber;
 
 
+
     /**
      * get 订单编号
      *
@@ -67,6 +68,7 @@ public class UpgradeInstanceResult extends JdcloudResult implements java.io.Seri
         this.buyId = buyId;
     }
 
+
     /**
      * get wafInstancdId
      *
@@ -84,6 +86,7 @@ public class UpgradeInstanceResult extends JdcloudResult implements java.io.Seri
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get orderNumber
@@ -104,6 +107,7 @@ public class UpgradeInstanceResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
      * set 订单编号
      *
@@ -114,6 +118,7 @@ public class UpgradeInstanceResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
      * set wafInstancdId
      *
@@ -123,6 +128,7 @@ public class UpgradeInstanceResult extends JdcloudResult implements java.io.Seri
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set orderNumber

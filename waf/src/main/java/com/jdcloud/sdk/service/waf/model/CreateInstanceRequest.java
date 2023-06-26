@@ -50,6 +50,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     private String regionId;
 
 
+
     /**
      * get 请求
      *
@@ -67,6 +68,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     public void setReq(OrderReq req) {
         this.req = req;
     }
+
 
     /**
      * get 实例所属的地域ID
@@ -87,6 +89,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 请求
      *
@@ -96,6 +99,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.req = req;
         return this;
     }
+
 
     /**
      * set 实例所属的地域ID

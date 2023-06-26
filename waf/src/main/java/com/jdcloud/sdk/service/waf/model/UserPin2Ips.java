@@ -42,6 +42,7 @@ public class UserPin2Ips  implements java.io.Serializable {
     /**
      * ipInfo
      */
+    
     private List<UserPinIpInfo> ips;
 
 
@@ -63,23 +64,25 @@ public class UserPin2Ips  implements java.io.Serializable {
         this.userPin = userPin;
     }
 
+
     /**
-     * get ipInfo
-     *
-     * @return
-     */
+    * get ipInfo
+    *
+    * @return
+    */
     public List<UserPinIpInfo> getIps() {
         return ips;
     }
 
     /**
-     * set ipInfo
-     *
-     * @param ips
-     */
+    * set ipInfo
+    *
+    * @param ips
+    */
     public void setIps(List<UserPinIpInfo> ips) {
         this.ips = ips;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class UserPin2Ips  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set ipInfo
-     *
-     * @param ips
-     */
+    * set ipInfo
+    *
+    * @param ips
+    */
     public UserPin2Ips ips(List<UserPinIpInfo> ips) {
         this.ips = ips;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class UserPin2Ips  implements java.io.Serializable {
         }
         this.ips.add(ip);
     }
-
 }

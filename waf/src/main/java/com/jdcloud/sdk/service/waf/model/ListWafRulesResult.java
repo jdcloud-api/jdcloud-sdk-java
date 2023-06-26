@@ -54,6 +54,7 @@ public class ListWafRulesResult extends JdcloudResult implements java.io.Seriali
     /**
      * list
      */
+    
     private List<ListWafRuleCfg> list;
 
 
@@ -75,6 +76,7 @@ public class ListWafRulesResult extends JdcloudResult implements java.io.Seriali
         this.pageIndex = pageIndex;
     }
 
+
     /**
      * get 页大小
      *
@@ -92,6 +94,7 @@ public class ListWafRulesResult extends JdcloudResult implements java.io.Seriali
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 配置总数
@@ -111,23 +114,25 @@ public class ListWafRulesResult extends JdcloudResult implements java.io.Seriali
         this.totalCount = totalCount;
     }
 
+
     /**
-     * get list
-     *
-     * @return
-     */
+    * get list
+    *
+    * @return
+    */
     public List<ListWafRuleCfg> getList() {
         return list;
     }
 
     /**
-     * set list
-     *
-     * @param list
-     */
+    * set list
+    *
+    * @param list
+    */
     public void setList(List<ListWafRuleCfg> list) {
         this.list = list;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class ListWafRulesResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 页大小
      *
@@ -149,6 +155,7 @@ public class ListWafRulesResult extends JdcloudResult implements java.io.Seriali
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 配置总数
@@ -160,15 +167,17 @@ public class ListWafRulesResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
-     * set list
-     *
-     * @param list
-     */
+    * set list
+    *
+    * @param list
+    */
     public ListWafRulesResult list(List<ListWafRuleCfg> list) {
         this.list = list;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class ListWafRulesResult extends JdcloudResult implements java.io.Seriali
         }
         this.list.add(list);
     }
-
 }

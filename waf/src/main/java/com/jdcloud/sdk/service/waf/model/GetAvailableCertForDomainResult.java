@@ -48,13 +48,13 @@ public class GetAvailableCertForDomainResult extends JdcloudResult implements ja
     /**
      * certIds
      */
+    
     private List<String> certIds;
-
     /**
      * certNames
      */
+    
     private List<String> certNames;
-
     /**
      * 可用证书个数
      */
@@ -64,6 +64,7 @@ public class GetAvailableCertForDomainResult extends JdcloudResult implements ja
      * 域名
      */
     private String domain;
+
 
 
     /**
@@ -84,6 +85,7 @@ public class GetAvailableCertForDomainResult extends JdcloudResult implements ja
         this.bindCertId = bindCertId;
     }
 
+
     /**
      * get 现绑定证书名称
      *
@@ -102,41 +104,44 @@ public class GetAvailableCertForDomainResult extends JdcloudResult implements ja
         this.bindCertName = bindCertName;
     }
 
+
     /**
-     * get certIds
-     *
-     * @return
-     */
+    * get certIds
+    *
+    * @return
+    */
     public List<String> getCertIds() {
         return certIds;
     }
 
     /**
-     * set certIds
-     *
-     * @param certIds
-     */
+    * set certIds
+    *
+    * @param certIds
+    */
     public void setCertIds(List<String> certIds) {
         this.certIds = certIds;
     }
 
+
     /**
-     * get certNames
-     *
-     * @return
-     */
+    * get certNames
+    *
+    * @return
+    */
     public List<String> getCertNames() {
         return certNames;
     }
 
     /**
-     * set certNames
-     *
-     * @param certNames
-     */
+    * set certNames
+    *
+    * @param certNames
+    */
     public void setCertNames(List<String> certNames) {
         this.certNames = certNames;
     }
+
 
     /**
      * get 可用证书个数
@@ -155,6 +160,7 @@ public class GetAvailableCertForDomainResult extends JdcloudResult implements ja
     public void setCount(Integer count) {
         this.count = count;
     }
+
 
     /**
      * get 域名
@@ -175,6 +181,7 @@ public class GetAvailableCertForDomainResult extends JdcloudResult implements ja
     }
 
 
+
     /**
      * set 现绑定证书id
      *
@@ -184,6 +191,7 @@ public class GetAvailableCertForDomainResult extends JdcloudResult implements ja
         this.bindCertId = bindCertId;
         return this;
     }
+
 
     /**
      * set 现绑定证书名称
@@ -195,25 +203,28 @@ public class GetAvailableCertForDomainResult extends JdcloudResult implements ja
         return this;
     }
 
+
     /**
-     * set certIds
-     *
-     * @param certIds
-     */
+    * set certIds
+    *
+    * @param certIds
+    */
     public GetAvailableCertForDomainResult certIds(List<String> certIds) {
         this.certIds = certIds;
         return this;
     }
 
+
     /**
-     * set certNames
-     *
-     * @param certNames
-     */
+    * set certNames
+    *
+    * @param certNames
+    */
     public GetAvailableCertForDomainResult certNames(List<String> certNames) {
         this.certNames = certNames;
         return this;
     }
+
 
     /**
      * set 可用证书个数
@@ -225,6 +236,7 @@ public class GetAvailableCertForDomainResult extends JdcloudResult implements ja
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -234,6 +246,7 @@ public class GetAvailableCertForDomainResult extends JdcloudResult implements ja
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -259,5 +272,4 @@ public class GetAvailableCertForDomainResult extends JdcloudResult implements ja
         }
         this.certNames.add(certName);
     }
-
 }

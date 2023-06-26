@@ -84,8 +84,8 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     /**
      * 日志类型，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部日志类型)，&quot;access&quot;(访问日志)，&quot;waf&quot;(wafSDK)，&quot;acl&quot;(自定义规则)，&quot;skip&quot;(白名单)，&quot;deny&quot;(黑名单)，&quot;cc&quot;(CC攻击)，&quot;webcache&quot;(网页防篡改)，&quot;css&quot;(跨站脚本攻击)，&quot;sqli&quot;(SQL注入攻击)，&quot;&quot;fileinc&quot;(文件读取/包含攻击)，&quot;cmding&quot;(命令/代码执行攻击)，&quot;sdd&quot;(敏感文件探测)，&quot;malscan&quot;(恶意扫描攻击)，&quot;bckack&quot;(恶意/后门文件攻击)，&quot;xmli&quot;(XML注入攻击)，&quot;dirt&quot;(目录遍历攻击)
      */
+    
     private List<String> logType;
-
     /**
      * 日志Id，检索字段
      */
@@ -132,6 +132,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     private String regionId;
 
 
+
     /**
      * get 实例id，代表要查询的WAF实例，为空时表示当前用户下的所有实例
      *
@@ -149,6 +150,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名，为空时表示当前实例下的所有域名
@@ -168,6 +170,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.domain = domain;
     }
 
+
     /**
      * get 来源ip，检索字段
      *
@@ -185,6 +188,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     public void setRemote_addr(String remote_addr) {
         this.remote_addr = remote_addr;
     }
+
 
     /**
      * get URI，检索字段
@@ -204,6 +208,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.document_uri = document_uri;
     }
 
+
     /**
      * get url，检索字段
      *
@@ -221,6 +226,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get 来源地域，检索字段
@@ -240,6 +246,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.anti_geo = anti_geo;
     }
 
+
     /**
      * get 请求方法，检索字段
      *
@@ -257,6 +264,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     public void setRequest_method(String request_method) {
         this.request_method = request_method;
     }
+
 
     /**
      * get 动作，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部动作类型)，&quot;-&quot;(放行)，&quot;notice&quot;(观察)，&quot;forbidden OR status&quot;(拦截)，&quot;redirect&quot;(浏览器跳转)，&quot;verify&quot;(人机交互)
@@ -276,6 +284,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.action = action;
     }
 
+
     /**
      * get 状态码，检索字段
      *
@@ -294,23 +303,25 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.status = status;
     }
 
+
     /**
-     * get 日志类型，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部日志类型)，&quot;access&quot;(访问日志)，&quot;waf&quot;(wafSDK)，&quot;acl&quot;(自定义规则)，&quot;skip&quot;(白名单)，&quot;deny&quot;(黑名单)，&quot;cc&quot;(CC攻击)，&quot;webcache&quot;(网页防篡改)，&quot;css&quot;(跨站脚本攻击)，&quot;sqli&quot;(SQL注入攻击)，&quot;&quot;fileinc&quot;(文件读取/包含攻击)，&quot;cmding&quot;(命令/代码执行攻击)，&quot;sdd&quot;(敏感文件探测)，&quot;malscan&quot;(恶意扫描攻击)，&quot;bckack&quot;(恶意/后门文件攻击)，&quot;xmli&quot;(XML注入攻击)，&quot;dirt&quot;(目录遍历攻击)
-     *
-     * @return
-     */
+    * get 日志类型，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部日志类型)，&quot;access&quot;(访问日志)，&quot;waf&quot;(wafSDK)，&quot;acl&quot;(自定义规则)，&quot;skip&quot;(白名单)，&quot;deny&quot;(黑名单)，&quot;cc&quot;(CC攻击)，&quot;webcache&quot;(网页防篡改)，&quot;css&quot;(跨站脚本攻击)，&quot;sqli&quot;(SQL注入攻击)，&quot;&quot;fileinc&quot;(文件读取/包含攻击)，&quot;cmding&quot;(命令/代码执行攻击)，&quot;sdd&quot;(敏感文件探测)，&quot;malscan&quot;(恶意扫描攻击)，&quot;bckack&quot;(恶意/后门文件攻击)，&quot;xmli&quot;(XML注入攻击)，&quot;dirt&quot;(目录遍历攻击)
+    *
+    * @return
+    */
     public List<String> getLogType() {
         return logType;
     }
 
     /**
-     * set 日志类型，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部日志类型)，&quot;access&quot;(访问日志)，&quot;waf&quot;(wafSDK)，&quot;acl&quot;(自定义规则)，&quot;skip&quot;(白名单)，&quot;deny&quot;(黑名单)，&quot;cc&quot;(CC攻击)，&quot;webcache&quot;(网页防篡改)，&quot;css&quot;(跨站脚本攻击)，&quot;sqli&quot;(SQL注入攻击)，&quot;&quot;fileinc&quot;(文件读取/包含攻击)，&quot;cmding&quot;(命令/代码执行攻击)，&quot;sdd&quot;(敏感文件探测)，&quot;malscan&quot;(恶意扫描攻击)，&quot;bckack&quot;(恶意/后门文件攻击)，&quot;xmli&quot;(XML注入攻击)，&quot;dirt&quot;(目录遍历攻击)
-     *
-     * @param logType
-     */
+    * set 日志类型，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部日志类型)，&quot;access&quot;(访问日志)，&quot;waf&quot;(wafSDK)，&quot;acl&quot;(自定义规则)，&quot;skip&quot;(白名单)，&quot;deny&quot;(黑名单)，&quot;cc&quot;(CC攻击)，&quot;webcache&quot;(网页防篡改)，&quot;css&quot;(跨站脚本攻击)，&quot;sqli&quot;(SQL注入攻击)，&quot;&quot;fileinc&quot;(文件读取/包含攻击)，&quot;cmding&quot;(命令/代码执行攻击)，&quot;sdd&quot;(敏感文件探测)，&quot;malscan&quot;(恶意扫描攻击)，&quot;bckack&quot;(恶意/后门文件攻击)，&quot;xmli&quot;(XML注入攻击)，&quot;dirt&quot;(目录遍历攻击)
+    *
+    * @param logType
+    */
     public void setLogType(List<String> logType) {
         this.logType = logType;
     }
+
 
     /**
      * get 日志Id，检索字段
@@ -330,6 +341,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.logId = logId;
     }
 
+
     /**
      * get 请求Id，检索字段
      *
@@ -347,6 +359,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     public void setRequest_id(String request_id) {
         this.request_id = request_id;
     }
+
 
     /**
      * get 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
@@ -366,6 +379,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.start = start;
     }
 
+
     /**
      * get 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
@@ -383,6 +397,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     public void setEnd(Integer end) {
         this.end = end;
     }
+
 
     /**
      * get 每页显示的个数，默认是10。
@@ -402,6 +417,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 页数，默认是1。
      *
@@ -419,6 +435,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
     }
+
 
     /**
      * get 实例所属的地域ID
@@ -439,6 +456,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 实例id，代表要查询的WAF实例，为空时表示当前用户下的所有实例
      *
@@ -448,6 +466,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名，为空时表示当前实例下的所有域名
@@ -459,6 +478,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 来源ip，检索字段
      *
@@ -468,6 +488,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.remote_addr = remote_addr;
         return this;
     }
+
 
     /**
      * set URI，检索字段
@@ -479,6 +500,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set url，检索字段
      *
@@ -488,6 +510,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.url = url;
         return this;
     }
+
 
     /**
      * set 来源地域，检索字段
@@ -499,6 +522,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 请求方法，检索字段
      *
@@ -508,6 +532,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.request_method = request_method;
         return this;
     }
+
 
     /**
      * set 动作，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部动作类型)，&quot;-&quot;(放行)，&quot;notice&quot;(观察)，&quot;forbidden OR status&quot;(拦截)，&quot;redirect&quot;(浏览器跳转)，&quot;verify&quot;(人机交互)
@@ -519,6 +544,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 状态码，检索字段
      *
@@ -529,15 +555,17 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
-     * set 日志类型，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部日志类型)，&quot;access&quot;(访问日志)，&quot;waf&quot;(wafSDK)，&quot;acl&quot;(自定义规则)，&quot;skip&quot;(白名单)，&quot;deny&quot;(黑名单)，&quot;cc&quot;(CC攻击)，&quot;webcache&quot;(网页防篡改)，&quot;css&quot;(跨站脚本攻击)，&quot;sqli&quot;(SQL注入攻击)，&quot;&quot;fileinc&quot;(文件读取/包含攻击)，&quot;cmding&quot;(命令/代码执行攻击)，&quot;sdd&quot;(敏感文件探测)，&quot;malscan&quot;(恶意扫描攻击)，&quot;bckack&quot;(恶意/后门文件攻击)，&quot;xmli&quot;(XML注入攻击)，&quot;dirt&quot;(目录遍历攻击)
-     *
-     * @param logType
-     */
+    * set 日志类型，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部日志类型)，&quot;access&quot;(访问日志)，&quot;waf&quot;(wafSDK)，&quot;acl&quot;(自定义规则)，&quot;skip&quot;(白名单)，&quot;deny&quot;(黑名单)，&quot;cc&quot;(CC攻击)，&quot;webcache&quot;(网页防篡改)，&quot;css&quot;(跨站脚本攻击)，&quot;sqli&quot;(SQL注入攻击)，&quot;&quot;fileinc&quot;(文件读取/包含攻击)，&quot;cmding&quot;(命令/代码执行攻击)，&quot;sdd&quot;(敏感文件探测)，&quot;malscan&quot;(恶意扫描攻击)，&quot;bckack&quot;(恶意/后门文件攻击)，&quot;xmli&quot;(XML注入攻击)，&quot;dirt&quot;(目录遍历攻击)
+    *
+    * @param logType
+    */
     public GetEsLogDetailRequest logType(List<String> logType) {
         this.logType = logType;
         return this;
     }
+
 
     /**
      * set 日志Id，检索字段
@@ -549,6 +577,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 请求Id，检索字段
      *
@@ -558,6 +587,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.request_id = request_id;
         return this;
     }
+
 
     /**
      * set 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
@@ -569,6 +599,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
@@ -578,6 +609,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.end = end;
         return this;
     }
+
 
     /**
      * set 每页显示的个数，默认是10。
@@ -589,6 +621,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 页数，默认是1。
      *
@@ -599,6 +632,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 实例所属的地域ID
      *
@@ -608,6 +642,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -621,5 +656,4 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
         }
         this.logType.add(logType);
     }
-
 }

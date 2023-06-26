@@ -53,6 +53,7 @@ public class WarnContactor  implements java.io.Serializable {
     private String email;
 
 
+
     /**
      * get 联系人/群组Id
      *
@@ -70,6 +71,7 @@ public class WarnContactor  implements java.io.Serializable {
     public void setContactId(Integer contactId) {
         this.contactId = contactId;
     }
+
 
     /**
      * get 名称
@@ -89,6 +91,7 @@ public class WarnContactor  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 手机号
      *
@@ -106,6 +109,7 @@ public class WarnContactor  implements java.io.Serializable {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
 
     /**
      * get 邮箱
@@ -126,6 +130,7 @@ public class WarnContactor  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 联系人/群组Id
      *
@@ -135,6 +140,7 @@ public class WarnContactor  implements java.io.Serializable {
         this.contactId = contactId;
         return this;
     }
+
 
     /**
      * set 名称
@@ -146,6 +152,7 @@ public class WarnContactor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 手机号
      *
@@ -155,6 +162,7 @@ public class WarnContactor  implements java.io.Serializable {
         this.phoneNumber = phoneNumber;
         return this;
     }
+
 
     /**
      * set 邮箱

@@ -53,6 +53,7 @@ public class AntiModeWafReq  implements java.io.Serializable {
     private Integer wafMode;
 
 
+
     /**
      * get WAF实例id
      *
@@ -71,6 +72,7 @@ public class AntiModeWafReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -88,6 +90,7 @@ public class AntiModeWafReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 0表示防护，1表示预警
@@ -108,6 +111,7 @@ public class AntiModeWafReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -118,6 +122,7 @@ public class AntiModeWafReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -127,6 +132,7 @@ public class AntiModeWafReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 0表示防护，1表示预警

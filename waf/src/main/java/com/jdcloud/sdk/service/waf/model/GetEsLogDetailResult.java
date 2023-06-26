@@ -54,6 +54,7 @@ public class GetEsLogDetailResult extends JdcloudResult implements java.io.Seria
     /**
      * events
      */
+    
     private List<EsLogEvent> events;
 
 
@@ -75,6 +76,7 @@ public class GetEsLogDetailResult extends JdcloudResult implements java.io.Seria
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 页数。
      *
@@ -92,6 +94,7 @@ public class GetEsLogDetailResult extends JdcloudResult implements java.io.Seria
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
     }
+
 
     /**
      * get 总个数。
@@ -111,23 +114,25 @@ public class GetEsLogDetailResult extends JdcloudResult implements java.io.Seria
         this.total = total;
     }
 
+
     /**
-     * get events
-     *
-     * @return
-     */
+    * get events
+    *
+    * @return
+    */
     public List<EsLogEvent> getEvents() {
         return events;
     }
 
     /**
-     * set events
-     *
-     * @param events
-     */
+    * set events
+    *
+    * @param events
+    */
     public void setEvents(List<EsLogEvent> events) {
         this.events = events;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class GetEsLogDetailResult extends JdcloudResult implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 页数。
      *
@@ -149,6 +155,7 @@ public class GetEsLogDetailResult extends JdcloudResult implements java.io.Seria
         this.pageIndex = pageIndex;
         return this;
     }
+
 
     /**
      * set 总个数。
@@ -160,15 +167,17 @@ public class GetEsLogDetailResult extends JdcloudResult implements java.io.Seria
         return this;
     }
 
+
     /**
-     * set events
-     *
-     * @param events
-     */
+    * set events
+    *
+    * @param events
+    */
     public GetEsLogDetailResult events(List<EsLogEvent> events) {
         this.events = events;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class GetEsLogDetailResult extends JdcloudResult implements java.io.Seria
         }
         this.events.add(event);
     }
-
 }

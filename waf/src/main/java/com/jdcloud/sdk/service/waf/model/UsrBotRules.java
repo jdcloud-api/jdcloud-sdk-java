@@ -57,8 +57,8 @@ public class UsrBotRules  implements java.io.Serializable {
     /**
      * 匹配条件集,总长度不能超过4096
      */
+    
     private List<BotMatchItem> matchItems;
-
     /**
      * 动作配置
      */
@@ -110,6 +110,7 @@ public class UsrBotRules  implements java.io.Serializable {
     private Integer blockTime;
 
 
+
     /**
      * get 规则id
      *
@@ -127,6 +128,7 @@ public class UsrBotRules  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 规则名
@@ -146,6 +148,7 @@ public class UsrBotRules  implements java.io.Serializable {
         this.ruleName = ruleName;
     }
 
+
     /**
      * get 次数阈值
      *
@@ -163,6 +166,7 @@ public class UsrBotRules  implements java.io.Serializable {
     public void setDetectThrsd(Integer detectThrsd) {
         this.detectThrsd = detectThrsd;
     }
+
 
     /**
      * get 检测时长，秒
@@ -182,23 +186,25 @@ public class UsrBotRules  implements java.io.Serializable {
         this.detectPeriod = detectPeriod;
     }
 
+
     /**
-     * get 匹配条件集,总长度不能超过4096
-     *
-     * @return
-     */
+    * get 匹配条件集,总长度不能超过4096
+    *
+    * @return
+    */
     public List<BotMatchItem> getMatchItems() {
         return matchItems;
     }
 
     /**
-     * set 匹配条件集,总长度不能超过4096
-     *
-     * @param matchItems
-     */
+    * set 匹配条件集,总长度不能超过4096
+    *
+    * @param matchItems
+    */
     public void setMatchItems(List<BotMatchItem> matchItems) {
         this.matchItems = matchItems;
     }
+
 
     /**
      * get 动作配置
@@ -218,6 +224,7 @@ public class UsrBotRules  implements java.io.Serializable {
         this.action = action;
     }
 
+
     /**
      * get 0-使用中 1-禁用
      *
@@ -235,6 +242,7 @@ public class UsrBotRules  implements java.io.Serializable {
     public void setDisable(Integer disable) {
         this.disable = disable;
     }
+
 
     /**
      * get 更新时间
@@ -254,6 +262,7 @@ public class UsrBotRules  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 响应状态码
      *
@@ -271,6 +280,7 @@ public class UsrBotRules  implements java.io.Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 状态码数量阀值
@@ -290,6 +300,7 @@ public class UsrBotRules  implements java.io.Serializable {
         this.ststhrst = ststhrst;
     }
 
+
     /**
      * get 状态码比例阀值
      *
@@ -307,6 +318,7 @@ public class UsrBotRules  implements java.io.Serializable {
     public void setStsthrstRatio(Integer ststhrstRatio) {
         this.ststhrstRatio = ststhrstRatio;
     }
+
 
     /**
      * get 响应码功能是否启用
@@ -326,6 +338,7 @@ public class UsrBotRules  implements java.io.Serializable {
         this.statusDisable = statusDisable;
     }
 
+
     /**
      * get 规则生效时间是否启用
      *
@@ -344,6 +357,7 @@ public class UsrBotRules  implements java.io.Serializable {
         this.dateDisable = dateDisable;
     }
 
+
     /**
      * get 统计维度
      *
@@ -361,6 +375,7 @@ public class UsrBotRules  implements java.io.Serializable {
     public void setUnit(String unit) {
         this.unit = unit;
     }
+
 
     /**
      * get 持续时间, 单位分钟，范围[1-24*60]
@@ -381,6 +396,7 @@ public class UsrBotRules  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id
      *
@@ -390,6 +406,7 @@ public class UsrBotRules  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 规则名
@@ -401,6 +418,7 @@ public class UsrBotRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 次数阈值
      *
@@ -410,6 +428,7 @@ public class UsrBotRules  implements java.io.Serializable {
         this.detectThrsd = detectThrsd;
         return this;
     }
+
 
     /**
      * set 检测时长，秒
@@ -421,15 +440,17 @@ public class UsrBotRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 匹配条件集,总长度不能超过4096
-     *
-     * @param matchItems
-     */
+    * set 匹配条件集,总长度不能超过4096
+    *
+    * @param matchItems
+    */
     public UsrBotRules matchItems(List<BotMatchItem> matchItems) {
         this.matchItems = matchItems;
         return this;
     }
+
 
     /**
      * set 动作配置
@@ -441,6 +462,7 @@ public class UsrBotRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0-使用中 1-禁用
      *
@@ -450,6 +472,7 @@ public class UsrBotRules  implements java.io.Serializable {
         this.disable = disable;
         return this;
     }
+
 
     /**
      * set 更新时间
@@ -461,6 +484,7 @@ public class UsrBotRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 响应状态码
      *
@@ -470,6 +494,7 @@ public class UsrBotRules  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 状态码数量阀值
@@ -481,6 +506,7 @@ public class UsrBotRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态码比例阀值
      *
@@ -490,6 +516,7 @@ public class UsrBotRules  implements java.io.Serializable {
         this.ststhrstRatio = ststhrstRatio;
         return this;
     }
+
 
     /**
      * set 响应码功能是否启用
@@ -501,6 +528,7 @@ public class UsrBotRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则生效时间是否启用
      *
@@ -510,6 +538,7 @@ public class UsrBotRules  implements java.io.Serializable {
         this.dateDisable = dateDisable;
         return this;
     }
+
 
     /**
      * set 统计维度
@@ -521,6 +550,7 @@ public class UsrBotRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 持续时间, 单位分钟，范围[1-24*60]
      *
@@ -530,6 +560,7 @@ public class UsrBotRules  implements java.io.Serializable {
         this.blockTime = blockTime;
         return this;
     }
+
 
 
     /**
@@ -543,5 +574,4 @@ public class UsrBotRules  implements java.io.Serializable {
         }
         this.matchItems.add(matchItem);
     }
-
 }

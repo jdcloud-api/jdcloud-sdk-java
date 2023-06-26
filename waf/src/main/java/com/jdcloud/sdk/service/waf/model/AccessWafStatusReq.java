@@ -46,6 +46,7 @@ public class AccessWafStatusReq  implements java.io.Serializable {
     private String domain;
 
 
+
     /**
      * get WAF实例id
      *
@@ -63,6 +64,7 @@ public class AccessWafStatusReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -83,6 +85,7 @@ public class AccessWafStatusReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -92,6 +95,7 @@ public class AccessWafStatusReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名

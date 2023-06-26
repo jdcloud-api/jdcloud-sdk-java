@@ -43,6 +43,7 @@ public class RiskConf  implements java.io.Serializable {
     private Integer enableAccount;
 
 
+
     /**
      * get 数据风控。1-使能 0-禁止
      *
@@ -60,6 +61,7 @@ public class RiskConf  implements java.io.Serializable {
     public void setEnable(Integer enable) {
         this.enable = enable;
     }
+
 
     /**
      * get 账户安全。1-使能 0-禁止
@@ -80,6 +82,7 @@ public class RiskConf  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 数据风控。1-使能 0-禁止
      *
@@ -89,6 +92,7 @@ public class RiskConf  implements java.io.Serializable {
         this.enable = enable;
         return this;
     }
+
 
     /**
      * set 账户安全。1-使能 0-禁止

@@ -47,6 +47,7 @@ public class IpDomainInfo  implements java.io.Serializable {
     /**
      * 域名信息
      */
+    
     private List<DomainInfo> domainInfo;
 
 
@@ -68,6 +69,7 @@ public class IpDomainInfo  implements java.io.Serializable {
         this.ip = ip;
     }
 
+
     /**
      * get 是否waf的vip，true-是，false-不是
      *
@@ -86,23 +88,25 @@ public class IpDomainInfo  implements java.io.Serializable {
         this.isVip = isVip;
     }
 
+
     /**
-     * get 域名信息
-     *
-     * @return
-     */
+    * get 域名信息
+    *
+    * @return
+    */
     public List<DomainInfo> getDomainInfo() {
         return domainInfo;
     }
 
     /**
-     * set 域名信息
-     *
-     * @param domainInfo
-     */
+    * set 域名信息
+    *
+    * @param domainInfo
+    */
     public void setDomainInfo(List<DomainInfo> domainInfo) {
         this.domainInfo = domainInfo;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class IpDomainInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否waf的vip，true-是，false-不是
      *
@@ -125,15 +130,17 @@ public class IpDomainInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 域名信息
-     *
-     * @param domainInfo
-     */
+    * set 域名信息
+    *
+    * @param domainInfo
+    */
     public IpDomainInfo domainInfo(List<DomainInfo> domainInfo) {
         this.domainInfo = domainInfo;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class IpDomainInfo  implements java.io.Serializable {
         }
         this.domainInfo.add(domainInfo);
     }
-
 }

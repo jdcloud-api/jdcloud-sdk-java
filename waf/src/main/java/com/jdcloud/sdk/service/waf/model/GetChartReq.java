@@ -82,12 +82,13 @@ public class GetChartReq  implements java.io.Serializable {
     /**
      * 指定状态码，仅getStatusCodeInfo时有效
      */
+    
     private List<String> statusCode;
-
     /**
      * true表示获取状态码统计图、占比图。
      */
     private Boolean isStaCode;
+
 
 
     /**
@@ -108,6 +109,7 @@ public class GetChartReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名，为空时表示当前实例下的所有域名
      *
@@ -125,6 +127,7 @@ public class GetChartReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
@@ -144,6 +147,7 @@ public class GetChartReq  implements java.io.Serializable {
         this.start = start;
     }
 
+
     /**
      * get 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
@@ -161,6 +165,7 @@ public class GetChartReq  implements java.io.Serializable {
     public void setEnd(Integer end) {
         this.end = end;
     }
+
 
     /**
      * get true表示和值图，false表示均值图，仅getBpsData， getQpsData时有效。
@@ -180,6 +185,7 @@ public class GetChartReq  implements java.io.Serializable {
         this.isSum = isSum;
     }
 
+
     /**
      * get true表示查找命中不同规则的waf攻击对应数目。
      *
@@ -197,6 +203,7 @@ public class GetChartReq  implements java.io.Serializable {
     public void setIsWafRule(Boolean isWafRule) {
         this.isWafRule = isWafRule;
     }
+
 
     /**
      * get true表示源站返回给waf的异常响应，false表示waf返回给客户端的异常响应，仅getExceptionData时有效。
@@ -216,6 +223,7 @@ public class GetChartReq  implements java.io.Serializable {
         this.isRs = isRs;
     }
 
+
     /**
      * get ua表示返回ua的饼图数据，仅getPieChart时有效。
      *
@@ -234,23 +242,25 @@ public class GetChartReq  implements java.io.Serializable {
         this.pieItem = pieItem;
     }
 
+
     /**
-     * get 指定状态码，仅getStatusCodeInfo时有效
-     *
-     * @return
-     */
+    * get 指定状态码，仅getStatusCodeInfo时有效
+    *
+    * @return
+    */
     public List<String> getStatusCode() {
         return statusCode;
     }
 
     /**
-     * set 指定状态码，仅getStatusCodeInfo时有效
-     *
-     * @param statusCode
-     */
+    * set 指定状态码，仅getStatusCodeInfo时有效
+    *
+    * @param statusCode
+    */
     public void setStatusCode(List<String> statusCode) {
         this.statusCode = statusCode;
     }
+
 
     /**
      * get true表示获取状态码统计图、占比图。
@@ -271,6 +281,7 @@ public class GetChartReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例id，代表要查询的WAF实例，为空时表示当前用户下的所有实例
      *
@@ -280,6 +291,7 @@ public class GetChartReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名，为空时表示当前实例下的所有域名
@@ -291,6 +303,7 @@ public class GetChartReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
@@ -300,6 +313,7 @@ public class GetChartReq  implements java.io.Serializable {
         this.start = start;
         return this;
     }
+
 
     /**
      * set 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
@@ -311,6 +325,7 @@ public class GetChartReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set true表示和值图，false表示均值图，仅getBpsData， getQpsData时有效。
      *
@@ -320,6 +335,7 @@ public class GetChartReq  implements java.io.Serializable {
         this.isSum = isSum;
         return this;
     }
+
 
     /**
      * set true表示查找命中不同规则的waf攻击对应数目。
@@ -331,6 +347,7 @@ public class GetChartReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set true表示源站返回给waf的异常响应，false表示waf返回给客户端的异常响应，仅getExceptionData时有效。
      *
@@ -340,6 +357,7 @@ public class GetChartReq  implements java.io.Serializable {
         this.isRs = isRs;
         return this;
     }
+
 
     /**
      * set ua表示返回ua的饼图数据，仅getPieChart时有效。
@@ -351,15 +369,17 @@ public class GetChartReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 指定状态码，仅getStatusCodeInfo时有效
-     *
-     * @param statusCode
-     */
+    * set 指定状态码，仅getStatusCodeInfo时有效
+    *
+    * @param statusCode
+    */
     public GetChartReq statusCode(List<String> statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+
 
     /**
      * set true表示获取状态码统计图、占比图。
@@ -370,6 +390,7 @@ public class GetChartReq  implements java.io.Serializable {
         this.isStaCode = isStaCode;
         return this;
     }
+
 
 
     /**
@@ -383,5 +404,4 @@ public class GetChartReq  implements java.io.Serializable {
         }
         this.statusCode.add(statusCode);
     }
-
 }

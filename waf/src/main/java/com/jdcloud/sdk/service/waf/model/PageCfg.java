@@ -63,6 +63,7 @@ public class PageCfg  implements java.io.Serializable {
     private String content;
 
 
+
     /**
      * get 序号id,新增时为0，更新时必传
      *
@@ -80,6 +81,7 @@ public class PageCfg  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get WAF实例id
@@ -99,6 +101,7 @@ public class PageCfg  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -117,6 +120,7 @@ public class PageCfg  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 自定义页面名称
      *
@@ -134,6 +138,7 @@ public class PageCfg  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 内容
@@ -154,6 +159,7 @@ public class PageCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 序号id,新增时为0，更新时必传
      *
@@ -163,6 +169,7 @@ public class PageCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set WAF实例id
@@ -174,6 +181,7 @@ public class PageCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -184,6 +192,7 @@ public class PageCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自定义页面名称
      *
@@ -193,6 +202,7 @@ public class PageCfg  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 内容

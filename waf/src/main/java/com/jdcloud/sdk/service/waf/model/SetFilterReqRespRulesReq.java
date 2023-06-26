@@ -100,6 +100,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
     private String valType;
 
 
+
     /**
      * get WAF实例id
      *
@@ -117,6 +118,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -136,6 +138,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get id为0时为新增，更新时该参数不能为空
      *
@@ -153,6 +156,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 规则名称
@@ -172,6 +176,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 操作对象，[&quot;req&quot;/&quot;resp&quot;]，更新时该字段不更新
      *
@@ -189,6 +194,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
     public void setOpObject(String opObject) {
         this.opObject = opObject;
     }
+
 
     /**
      * get 匹配类型，[&quot;cookie&quot;/&quot;header&quot;]
@@ -208,6 +214,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
         this.matchType = matchType;
     }
 
+
     /**
      * get 匹配模式，[&quot;del&quot;/&quot;set&quot;]
      *
@@ -225,6 +232,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
     public void setMatchOp(String matchOp) {
         this.matchOp = matchOp;
     }
+
 
     /**
      * get filter key
@@ -244,6 +252,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
         this.key = key;
     }
 
+
     /**
      * get 匹配值，当匹配模式为&quot;del&quot;时val应为空
      *
@@ -261,6 +270,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
     public void setVal(String val) {
         this.val = val;
     }
+
 
     /**
      * get 匹配值类型，默认为&quot;str&quot;(字符型)，当设置请求头时，该字段可配置为&quot;php&quot;(表示脚本类型)
@@ -281,6 +291,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -290,6 +301,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -301,6 +313,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set id为0时为新增，更新时该参数不能为空
      *
@@ -310,6 +323,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 规则名称
@@ -321,6 +335,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 操作对象，[&quot;req&quot;/&quot;resp&quot;]，更新时该字段不更新
      *
@@ -330,6 +345,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
         this.opObject = opObject;
         return this;
     }
+
 
     /**
      * set 匹配类型，[&quot;cookie&quot;/&quot;header&quot;]
@@ -341,6 +357,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配模式，[&quot;del&quot;/&quot;set&quot;]
      *
@@ -350,6 +367,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
         this.matchOp = matchOp;
         return this;
     }
+
 
     /**
      * set filter key
@@ -361,6 +379,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配值，当匹配模式为&quot;del&quot;时val应为空
      *
@@ -370,6 +389,7 @@ public class SetFilterReqRespRulesReq  implements java.io.Serializable {
         this.val = val;
         return this;
     }
+
 
     /**
      * set 匹配值类型，默认为&quot;str&quot;(字符型)，当设置请求头时，该字段可配置为&quot;php&quot;(表示脚本类型)

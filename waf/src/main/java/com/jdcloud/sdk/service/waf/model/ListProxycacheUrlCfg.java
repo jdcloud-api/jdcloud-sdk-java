@@ -42,6 +42,7 @@ public class ListProxycacheUrlCfg  implements java.io.Serializable {
     /**
      * urls
      */
+    
     private List<ListProxycacheUrl> urls;
 
 
@@ -63,23 +64,25 @@ public class ListProxycacheUrlCfg  implements java.io.Serializable {
         this.total = total;
     }
 
+
     /**
-     * get urls
-     *
-     * @return
-     */
+    * get urls
+    *
+    * @return
+    */
     public List<ListProxycacheUrl> getUrls() {
         return urls;
     }
 
     /**
-     * set urls
-     *
-     * @param urls
-     */
+    * set urls
+    *
+    * @param urls
+    */
     public void setUrls(List<ListProxycacheUrl> urls) {
         this.urls = urls;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class ListProxycacheUrlCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set urls
-     *
-     * @param urls
-     */
+    * set urls
+    *
+    * @param urls
+    */
     public ListProxycacheUrlCfg urls(List<ListProxycacheUrl> urls) {
         this.urls = urls;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class ListProxycacheUrlCfg  implements java.io.Serializable {
         }
         this.urls.add(url);
     }
-
 }

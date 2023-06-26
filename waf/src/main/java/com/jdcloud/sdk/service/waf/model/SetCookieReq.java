@@ -55,10 +55,16 @@ public class SetCookieReq  implements java.io.Serializable {
     private Integer iswhite;
 
     /**
+     * 白名单不检查指定Web防护规则id, 多个逗号分隔
+     */
+    private String skipRuleId;
+
+    /**
      * cookie配置
      * Required:true
      */
     @Required
+    
     private List<KeyValCfg> cookies;
 
 
@@ -80,6 +86,7 @@ public class SetCookieReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -97,6 +104,7 @@ public class SetCookieReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 0表示黑名单，1表示白名单
@@ -116,23 +124,44 @@ public class SetCookieReq  implements java.io.Serializable {
         this.iswhite = iswhite;
     }
 
+
     /**
-     * get cookie配置
+     * get 白名单不检查指定Web防护规则id, 多个逗号分隔
      *
      * @return
      */
+    public String getSkipRuleId() {
+        return skipRuleId;
+    }
+
+    /**
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @param skipRuleId
+     */
+    public void setSkipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+    }
+
+
+    /**
+    * get cookie配置
+    *
+    * @return
+    */
     public List<KeyValCfg> getCookies() {
         return cookies;
     }
 
     /**
-     * set cookie配置
-     *
-     * @param cookies
-     */
+    * set cookie配置
+    *
+    * @param cookies
+    */
     public void setCookies(List<KeyValCfg> cookies) {
         this.cookies = cookies;
     }
+
 
 
     /**
@@ -145,6 +174,7 @@ public class SetCookieReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -154,6 +184,7 @@ public class SetCookieReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 0表示黑名单，1表示白名单
@@ -165,15 +196,28 @@ public class SetCookieReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set cookie配置
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
      *
-     * @param cookies
+     * @param skipRuleId
      */
+    public SetCookieReq skipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+        return this;
+    }
+
+
+    /**
+    * set cookie配置
+    *
+    * @param cookies
+    */
     public SetCookieReq cookies(List<KeyValCfg> cookies) {
         this.cookies = cookies;
         return this;
     }
+
 
 
     /**
@@ -187,5 +231,4 @@ public class SetCookieReq  implements java.io.Serializable {
         }
         this.cookies.add(cookie);
     }
-
 }
