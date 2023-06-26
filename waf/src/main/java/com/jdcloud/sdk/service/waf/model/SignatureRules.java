@@ -43,6 +43,11 @@ public class SignatureRules  implements java.io.Serializable {
     private String ruleName;
 
     /**
+     * 规则类型
+     */
+    private String ruleType;
+
+    /**
      * 规则等级
      */
     private Integer ruleLevel;
@@ -63,6 +68,7 @@ public class SignatureRules  implements java.io.Serializable {
     private String ruleDesc;
 
 
+
     /**
      * get 规则id
      *
@@ -80,6 +86,7 @@ public class SignatureRules  implements java.io.Serializable {
     public void setRuleId(Long ruleId) {
         this.ruleId = ruleId;
     }
+
 
     /**
      * get 规则名称
@@ -99,6 +106,26 @@ public class SignatureRules  implements java.io.Serializable {
         this.ruleName = ruleName;
     }
 
+
+    /**
+     * get 规则类型
+     *
+     * @return
+     */
+    public String getRuleType() {
+        return ruleType;
+    }
+
+    /**
+     * set 规则类型
+     *
+     * @param ruleType
+     */
+    public void setRuleType(String ruleType) {
+        this.ruleType = ruleType;
+    }
+
+
     /**
      * get 规则等级
      *
@@ -116,6 +143,7 @@ public class SignatureRules  implements java.io.Serializable {
     public void setRuleLevel(Integer ruleLevel) {
         this.ruleLevel = ruleLevel;
     }
+
 
     /**
      * get 应用漏洞
@@ -135,6 +163,7 @@ public class SignatureRules  implements java.io.Serializable {
         this.cve = cve;
     }
 
+
     /**
      * get 更新时间
      *
@@ -152,6 +181,7 @@ public class SignatureRules  implements java.io.Serializable {
     public void setUpdateTime(Long updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 规则描述
@@ -172,6 +202,7 @@ public class SignatureRules  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id
      *
@@ -181,6 +212,7 @@ public class SignatureRules  implements java.io.Serializable {
         this.ruleId = ruleId;
         return this;
     }
+
 
     /**
      * set 规则名称
@@ -192,6 +224,18 @@ public class SignatureRules  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set 规则类型
+     *
+     * @param ruleType
+     */
+    public SignatureRules ruleType(String ruleType) {
+        this.ruleType = ruleType;
+        return this;
+    }
+
+
     /**
      * set 规则等级
      *
@@ -201,6 +245,7 @@ public class SignatureRules  implements java.io.Serializable {
         this.ruleLevel = ruleLevel;
         return this;
     }
+
 
     /**
      * set 应用漏洞
@@ -212,6 +257,7 @@ public class SignatureRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 更新时间
      *
@@ -221,6 +267,7 @@ public class SignatureRules  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 规则描述

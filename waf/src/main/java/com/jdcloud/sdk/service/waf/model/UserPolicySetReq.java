@@ -57,6 +57,7 @@ public class UserPolicySetReq  implements java.io.Serializable {
     /**
      * 规则id
      */
+    
     private List<Integer> ruleIds;
 
 
@@ -78,6 +79,7 @@ public class UserPolicySetReq  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 规则组名字
      *
@@ -95,6 +97,7 @@ public class UserPolicySetReq  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 规则是否自动更新, 0/1, importLevel &#x3D; 0时，autoAdd不能开启
@@ -114,6 +117,7 @@ public class UserPolicySetReq  implements java.io.Serializable {
         this.autoAdd = autoAdd;
     }
 
+
     /**
      * get 导入规则集的等级，0-未导入/1-宽松/2-正常/3-严格
      *
@@ -132,23 +136,25 @@ public class UserPolicySetReq  implements java.io.Serializable {
         this.importLevel = importLevel;
     }
 
+
     /**
-     * get 规则id
-     *
-     * @return
-     */
+    * get 规则id
+    *
+    * @return
+    */
     public List<Integer> getRuleIds() {
         return ruleIds;
     }
 
     /**
-     * set 规则id
-     *
-     * @param ruleIds
-     */
+    * set 规则id
+    *
+    * @param ruleIds
+    */
     public void setRuleIds(List<Integer> ruleIds) {
         this.ruleIds = ruleIds;
     }
+
 
 
     /**
@@ -161,6 +167,7 @@ public class UserPolicySetReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则组名字
      *
@@ -170,6 +177,7 @@ public class UserPolicySetReq  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 规则是否自动更新, 0/1, importLevel &#x3D; 0时，autoAdd不能开启
@@ -181,6 +189,7 @@ public class UserPolicySetReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 导入规则集的等级，0-未导入/1-宽松/2-正常/3-严格
      *
@@ -191,15 +200,17 @@ public class UserPolicySetReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 规则id
-     *
-     * @param ruleIds
-     */
+    * set 规则id
+    *
+    * @param ruleIds
+    */
     public UserPolicySetReq ruleIds(List<Integer> ruleIds) {
         this.ruleIds = ruleIds;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class UserPolicySetReq  implements java.io.Serializable {
         }
         this.ruleIds.add(ruleId);
     }
-
 }

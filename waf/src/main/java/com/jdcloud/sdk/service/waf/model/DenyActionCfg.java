@@ -48,6 +48,7 @@ public class DenyActionCfg  implements java.io.Serializable {
     private String atVal;
 
 
+
     /**
      * get 黑名单匹配动作类型 观察 5:notice 人机识别 3:verify@captcha, 4:verify@jscookie, 6:verify@rdtcookie 拦截 1:forbidden@, 2:redirect@ 动态防护 7:cc动态防护(仅cc安全防护支持)
      *
@@ -65,6 +66,7 @@ public class DenyActionCfg  implements java.io.Serializable {
     public void setAtOp(Integer atOp) {
         this.atOp = atOp;
     }
+
 
     /**
      * get 黑名单匹配动作内容 当atOp为3-7时，atVal为空，atOp&#x3D;1时，atVal为自定义页面,atOp&#x3D;2时，atVal为跳转url。
@@ -85,6 +87,7 @@ public class DenyActionCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 黑名单匹配动作类型 观察 5:notice 人机识别 3:verify@captcha, 4:verify@jscookie, 6:verify@rdtcookie 拦截 1:forbidden@, 2:redirect@ 动态防护 7:cc动态防护(仅cc安全防护支持)
      *
@@ -94,6 +97,7 @@ public class DenyActionCfg  implements java.io.Serializable {
         this.atOp = atOp;
         return this;
     }
+
 
     /**
      * set 黑名单匹配动作内容 当atOp为3-7时，atVal为空，atOp&#x3D;1时，atVal为自定义页面,atOp&#x3D;2时，atVal为跳转url。

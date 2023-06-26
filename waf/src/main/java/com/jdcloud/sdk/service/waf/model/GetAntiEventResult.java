@@ -54,6 +54,7 @@ public class GetAntiEventResult extends JdcloudResult implements java.io.Seriali
     /**
      * events
      */
+    
     private List<AntiEvent> events;
 
 
@@ -75,6 +76,7 @@ public class GetAntiEventResult extends JdcloudResult implements java.io.Seriali
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 页数。
      *
@@ -92,6 +94,7 @@ public class GetAntiEventResult extends JdcloudResult implements java.io.Seriali
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
     }
+
 
     /**
      * get 总个数。
@@ -111,23 +114,25 @@ public class GetAntiEventResult extends JdcloudResult implements java.io.Seriali
         this.total = total;
     }
 
+
     /**
-     * get events
-     *
-     * @return
-     */
+    * get events
+    *
+    * @return
+    */
     public List<AntiEvent> getEvents() {
         return events;
     }
 
     /**
-     * set events
-     *
-     * @param events
-     */
+    * set events
+    *
+    * @param events
+    */
     public void setEvents(List<AntiEvent> events) {
         this.events = events;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class GetAntiEventResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 页数。
      *
@@ -149,6 +155,7 @@ public class GetAntiEventResult extends JdcloudResult implements java.io.Seriali
         this.pageIndex = pageIndex;
         return this;
     }
+
 
     /**
      * set 总个数。
@@ -160,15 +167,17 @@ public class GetAntiEventResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
-     * set events
-     *
-     * @param events
-     */
+    * set events
+    *
+    * @param events
+    */
     public GetAntiEventResult events(List<AntiEvent> events) {
         this.events = events;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class GetAntiEventResult extends JdcloudResult implements java.io.Seriali
         }
         this.events.add(event);
     }
-
 }

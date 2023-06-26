@@ -43,6 +43,7 @@ public class AtCfg  implements java.io.Serializable {
     private SkipActionCfg skipAction;
 
 
+
     /**
      * get 黑名单动作配置
      *
@@ -60,6 +61,7 @@ public class AtCfg  implements java.io.Serializable {
     public void setDenyAction(DenyActionCfg denyAction) {
         this.denyAction = denyAction;
     }
+
 
     /**
      * get 白名单动作配置
@@ -80,6 +82,7 @@ public class AtCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 黑名单动作配置
      *
@@ -89,6 +92,7 @@ public class AtCfg  implements java.io.Serializable {
         this.denyAction = denyAction;
         return this;
     }
+
 
     /**
      * set 白名单动作配置

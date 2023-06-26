@@ -42,6 +42,7 @@ public class DescribeLbOutIpRequest extends JdcloudRequest implements java.io.Se
     private String regionId;
 
 
+
     /**
      * get regionId
      *
@@ -59,6 +60,7 @@ public class DescribeLbOutIpRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
 
     /**

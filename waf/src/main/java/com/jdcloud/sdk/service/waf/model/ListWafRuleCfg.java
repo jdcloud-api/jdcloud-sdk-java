@@ -37,8 +37,8 @@ public class ListWafRuleCfg  implements java.io.Serializable {
     /**
      * 使用的条件集
      */
+    
     private List<ConditionNameSet> conditions;
-
     /**
      * 规则id
      */
@@ -70,23 +70,25 @@ public class ListWafRuleCfg  implements java.io.Serializable {
     private Integer disable;
 
 
+
     /**
-     * get 使用的条件集
-     *
-     * @return
-     */
+    * get 使用的条件集
+    *
+    * @return
+    */
     public List<ConditionNameSet> getConditions() {
         return conditions;
     }
 
     /**
-     * set 使用的条件集
-     *
-     * @param conditions
-     */
+    * set 使用的条件集
+    *
+    * @param conditions
+    */
     public void setConditions(List<ConditionNameSet> conditions) {
         this.conditions = conditions;
     }
+
 
     /**
      * get 规则id
@@ -106,6 +108,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
@@ -123,6 +126,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
     public void setMatchAction(String matchAction) {
         this.matchAction = matchAction;
     }
+
 
     /**
      * get 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
@@ -142,6 +146,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
         this.redirection = redirection;
     }
 
+
     /**
      * get 规则名称
      *
@@ -160,6 +165,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
         this.ruleName = ruleName;
     }
 
+
     /**
      * get 规则更新时间
      *
@@ -177,6 +183,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
     public void setUpdateTime(Integer updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 0-使用中，1-禁用
@@ -197,15 +204,17 @@ public class ListWafRuleCfg  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 使用的条件集
-     *
-     * @param conditions
-     */
+    * set 使用的条件集
+    *
+    * @param conditions
+    */
     public ListWafRuleCfg conditions(List<ConditionNameSet> conditions) {
         this.conditions = conditions;
         return this;
     }
+
 
     /**
      * set 规则id
@@ -217,6 +226,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
@@ -226,6 +236,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
         this.matchAction = matchAction;
         return this;
     }
+
 
     /**
      * set 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
@@ -237,6 +248,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则名称
      *
@@ -246,6 +258,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
         this.ruleName = ruleName;
         return this;
     }
+
 
     /**
      * set 规则更新时间
@@ -257,6 +270,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0-使用中，1-禁用
      *
@@ -266,6 +280,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
         this.disable = disable;
         return this;
     }
+
 
 
     /**
@@ -279,5 +294,4 @@ public class ListWafRuleCfg  implements java.io.Serializable {
         }
         this.conditions.add(condition);
     }
-
 }

@@ -41,6 +41,7 @@ public class HandlePackReq  implements java.io.Serializable {
     private String operation;
 
 
+
     /**
      * get 操作，expireDisable：停止；renew：启动；expireDelete：过期删除
      *
@@ -58,6 +59,7 @@ public class HandlePackReq  implements java.io.Serializable {
     public void setOperation(String operation) {
         this.operation = operation;
     }
+
 
 
     /**

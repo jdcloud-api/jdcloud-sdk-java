@@ -83,6 +83,7 @@ public class RiskEventCfg  implements java.io.Serializable {
     private Integer updateTime;
 
 
+
     /**
      * get 规则id
      *
@@ -100,6 +101,7 @@ public class RiskEventCfg  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get WAF实例id
@@ -119,6 +121,7 @@ public class RiskEventCfg  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -136,6 +139,7 @@ public class RiskEventCfg  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 名称
@@ -155,6 +159,7 @@ public class RiskEventCfg  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 请求uri
      *
@@ -172,6 +177,7 @@ public class RiskEventCfg  implements java.io.Serializable {
     public void setUri(String uri) {
         this.uri = uri;
     }
+
 
     /**
      * get 编码信息
@@ -191,6 +197,7 @@ public class RiskEventCfg  implements java.io.Serializable {
         this.code = code;
     }
 
+
     /**
      * get 描述信息
      *
@@ -208,6 +215,7 @@ public class RiskEventCfg  implements java.io.Serializable {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
 
     /**
      * get 已配置策略数
@@ -227,6 +235,7 @@ public class RiskEventCfg  implements java.io.Serializable {
         this.policyCount = policyCount;
     }
 
+
     /**
      * get 0-使用中 1-禁用
      *
@@ -244,6 +253,7 @@ public class RiskEventCfg  implements java.io.Serializable {
     public void setDisable(Integer disable) {
         this.disable = disable;
     }
+
 
     /**
      * get 更新时间，s
@@ -264,6 +274,7 @@ public class RiskEventCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id
      *
@@ -273,6 +284,7 @@ public class RiskEventCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set WAF实例id
@@ -284,6 +296,7 @@ public class RiskEventCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -293,6 +306,7 @@ public class RiskEventCfg  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 名称
@@ -304,6 +318,7 @@ public class RiskEventCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 请求uri
      *
@@ -313,6 +328,7 @@ public class RiskEventCfg  implements java.io.Serializable {
         this.uri = uri;
         return this;
     }
+
 
     /**
      * set 编码信息
@@ -324,6 +340,7 @@ public class RiskEventCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述信息
      *
@@ -333,6 +350,7 @@ public class RiskEventCfg  implements java.io.Serializable {
         this.desc = desc;
         return this;
     }
+
 
     /**
      * set 已配置策略数
@@ -344,6 +362,7 @@ public class RiskEventCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0-使用中 1-禁用
      *
@@ -353,6 +372,7 @@ public class RiskEventCfg  implements java.io.Serializable {
         this.disable = disable;
         return this;
     }
+
 
     /**
      * set 更新时间，s

@@ -93,6 +93,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
     private String uriRewriteEnable;
 
 
+
     /**
      * get WAF实例id
      *
@@ -110,6 +111,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -129,6 +131,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 是否开启头管理，&quot;1&quot;表示使能,&quot;0&quot;表示否，即将废弃
      *
@@ -146,6 +149,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
     public void setFilterHeaderEnable(String filterHeaderEnable) {
         this.filterHeaderEnable = filterHeaderEnable;
     }
+
 
     /**
      * get 是否开启请求头管理，&quot;1&quot;表示使能,&quot;0&quot;表示否
@@ -165,6 +169,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         this.reqHeaderEnable = reqHeaderEnable;
     }
 
+
     /**
      * get 是否开启响应头管理，&quot;1&quot;表示使能,&quot;0&quot;表示否
      *
@@ -182,6 +187,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
     public void setRespHeaderEnable(String respHeaderEnable) {
         this.respHeaderEnable = respHeaderEnable;
     }
+
 
     /**
      * get 是否开启敏感信息防泄漏，&quot;1&quot;表示使能,&quot;0&quot;表示否
@@ -201,6 +207,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         this.filterSenseEnable = filterSenseEnable;
     }
 
+
     /**
      * get 是否开启状态码修改，&quot;1&quot;表示使能,&quot;0&quot;表示否
      *
@@ -218,6 +225,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
     public void setStatusEnable(String statusEnable) {
         this.statusEnable = statusEnable;
     }
+
 
     /**
      * get 是否开启白名单，&quot;1&quot;表示使能,&quot;0&quot;表示否
@@ -237,6 +245,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         this.skipEnable = skipEnable;
     }
 
+
     /**
      * get 是否开启黑名单，&quot;1&quot;表示使能,&quot;0&quot;表示否
      *
@@ -255,6 +264,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         this.denyEnable = denyEnable;
     }
 
+
     /**
      * get 是否开启限速，&quot;1&quot;表示使能,&quot;0&quot;表示否
      *
@@ -272,6 +282,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
     public void setRatelimitEnable(String ratelimitEnable) {
         this.ratelimitEnable = ratelimitEnable;
     }
+
 
     /**
      * get 是否开启uri重写，&quot;1&quot;表示使能,&quot;0&quot;表示否
@@ -292,6 +303,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -301,6 +313,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -312,6 +325,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否开启头管理，&quot;1&quot;表示使能,&quot;0&quot;表示否，即将废弃
      *
@@ -321,6 +335,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         this.filterHeaderEnable = filterHeaderEnable;
         return this;
     }
+
 
     /**
      * set 是否开启请求头管理，&quot;1&quot;表示使能,&quot;0&quot;表示否
@@ -332,6 +347,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否开启响应头管理，&quot;1&quot;表示使能,&quot;0&quot;表示否
      *
@@ -341,6 +357,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         this.respHeaderEnable = respHeaderEnable;
         return this;
     }
+
 
     /**
      * set 是否开启敏感信息防泄漏，&quot;1&quot;表示使能,&quot;0&quot;表示否
@@ -352,6 +369,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否开启状态码修改，&quot;1&quot;表示使能,&quot;0&quot;表示否
      *
@@ -361,6 +379,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         this.statusEnable = statusEnable;
         return this;
     }
+
 
     /**
      * set 是否开启白名单，&quot;1&quot;表示使能,&quot;0&quot;表示否
@@ -372,6 +391,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否开启黑名单，&quot;1&quot;表示使能,&quot;0&quot;表示否
      *
@@ -382,6 +402,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否开启限速，&quot;1&quot;表示使能,&quot;0&quot;表示否
      *
@@ -391,6 +412,7 @@ public class SetUserAntiCfgReq  implements java.io.Serializable {
         this.ratelimitEnable = ratelimitEnable;
         return this;
     }
+
 
     /**
      * set 是否开启uri重写，&quot;1&quot;表示使能,&quot;0&quot;表示否

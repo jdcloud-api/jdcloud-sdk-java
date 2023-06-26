@@ -53,6 +53,7 @@ public class EsLogFile  implements java.io.Serializable {
     private Integer size;
 
 
+
     /**
      * get 日志唯一key值
      *
@@ -70,6 +71,7 @@ public class EsLogFile  implements java.io.Serializable {
     public void setKey(String key) {
         this.key = key;
     }
+
 
     /**
      * get 日志文件名称
@@ -89,6 +91,7 @@ public class EsLogFile  implements java.io.Serializable {
         this.fileName = fileName;
     }
 
+
     /**
      * get 日志更新时间
      *
@@ -106,6 +109,7 @@ public class EsLogFile  implements java.io.Serializable {
     public void setUpdateTime(Integer updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 文件大小
@@ -126,6 +130,7 @@ public class EsLogFile  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 日志唯一key值
      *
@@ -135,6 +140,7 @@ public class EsLogFile  implements java.io.Serializable {
         this.key = key;
         return this;
     }
+
 
     /**
      * set 日志文件名称
@@ -146,6 +152,7 @@ public class EsLogFile  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志更新时间
      *
@@ -155,6 +162,7 @@ public class EsLogFile  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 文件大小

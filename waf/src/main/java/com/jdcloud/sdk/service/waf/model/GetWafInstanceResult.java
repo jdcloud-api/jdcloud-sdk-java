@@ -44,6 +44,7 @@ public class GetWafInstanceResult extends JdcloudResult implements java.io.Seria
     /**
      * instanceIdCfg
      */
+    
     private List<InstanceIdCfg> instanceIdCfg;
 
 
@@ -65,23 +66,25 @@ public class GetWafInstanceResult extends JdcloudResult implements java.io.Seria
         this.total = total;
     }
 
+
     /**
-     * get instanceIdCfg
-     *
-     * @return
-     */
+    * get instanceIdCfg
+    *
+    * @return
+    */
     public List<InstanceIdCfg> getInstanceIdCfg() {
         return instanceIdCfg;
     }
 
     /**
-     * set instanceIdCfg
-     *
-     * @param instanceIdCfg
-     */
+    * set instanceIdCfg
+    *
+    * @param instanceIdCfg
+    */
     public void setInstanceIdCfg(List<InstanceIdCfg> instanceIdCfg) {
         this.instanceIdCfg = instanceIdCfg;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class GetWafInstanceResult extends JdcloudResult implements java.io.Seria
         return this;
     }
 
+
     /**
-     * set instanceIdCfg
-     *
-     * @param instanceIdCfg
-     */
+    * set instanceIdCfg
+    *
+    * @param instanceIdCfg
+    */
     public GetWafInstanceResult instanceIdCfg(List<InstanceIdCfg> instanceIdCfg) {
         this.instanceIdCfg = instanceIdCfg;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class GetWafInstanceResult extends JdcloudResult implements java.io.Seria
         }
         this.instanceIdCfg.add(instanceIdCfg);
     }
-
 }

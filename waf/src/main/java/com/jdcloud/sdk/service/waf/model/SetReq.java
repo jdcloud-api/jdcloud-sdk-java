@@ -55,8 +55,8 @@ public class SetReq  implements java.io.Serializable {
     /**
      * 域名集
      */
+    
     private List<String> domains;
-
     /**
      * 告警类型，wafAnti-waf攻击告警，ccAnti-cc攻击告警，statusCode-状态码告警，upstreamStatus-回源IP监控
      * Required:true
@@ -73,6 +73,71 @@ public class SetReq  implements java.io.Serializable {
      * 检测时长单位，hour/minute,缺省为hour
      */
     private String detectUnit;
+
+    /**
+     * 检测周期
+     * Required:true
+     */
+    @Required
+    private Integer detectSpan;
+
+    /**
+     * 告警阈值
+     * Required:true
+     */
+    @Required
+    private Integer detectThreshold;
+
+    /**
+     * warnType为statusCode时为要检测的状态码
+     */
+    
+    private List<String> detectItems;
+    /**
+     * 告警方式
+     */
+    
+    private List<String> contactWays;
+    /**
+     * 告警通知人
+     */
+    
+    private List<ContactPerson> contactorPersons;
+    /**
+     * 告警通知群组
+     */
+    
+    private List<ContactGroup> contactorGroups;
+    /**
+     * 是否生效，0-不生效，1-生效
+     */
+    private Integer enable;
+
+    /**
+     * 全局告警状态
+     */
+    private Integer glbDisable;
+
+    /**
+     * 自定义告警状态
+     */
+    private Integer usrDisable;
+
+    /**
+     * 全局告警globle 自定义告警userdefine ,默认是全局告警
+     */
+    private String ruleType;
+
+    /**
+     * 产品类型, 0waf, 1scdn
+     */
+    private Integer mode;
+
+    /**
+     * scdn用户名
+     */
+    private String userPinScdn;
+
 
 
     /**
@@ -93,6 +158,7 @@ public class SetReq  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 规则名称
      *
@@ -110,6 +176,7 @@ public class SetReq  implements java.io.Serializable {
     public void setRuleName(String ruleName) {
         this.ruleName = ruleName;
     }
+
 
     /**
      * get WAF实例id
@@ -129,23 +196,25 @@ public class SetReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
-     * get 域名集
-     *
-     * @return
-     */
+    * get 域名集
+    *
+    * @return
+    */
     public List<String> getDomains() {
         return domains;
     }
 
     /**
-     * set 域名集
-     *
-     * @param domains
-     */
+    * set 域名集
+    *
+    * @param domains
+    */
     public void setDomains(List<String> domains) {
         this.domains = domains;
     }
+
 
     /**
      * get 告警类型，wafAnti-waf攻击告警，ccAnti-cc攻击告警，statusCode-状态码告警，upstreamStatus-回源IP监控
@@ -165,6 +234,7 @@ public class SetReq  implements java.io.Serializable {
         this.warnType = warnType;
     }
 
+
     /**
      * get 阈值单位，&quot;&quot;-个数，&quot;percent&quot;-百分比。缺省为个数
      *
@@ -182,6 +252,7 @@ public class SetReq  implements java.io.Serializable {
     public void setUnit(String unit) {
         this.unit = unit;
     }
+
 
     /**
      * get 检测时长单位，hour/minute,缺省为hour
@@ -203,6 +274,235 @@ public class SetReq  implements java.io.Serializable {
 
 
     /**
+     * get 检测周期
+     *
+     * @return
+     */
+    public Integer getDetectSpan() {
+        return detectSpan;
+    }
+
+    /**
+     * set 检测周期
+     *
+     * @param detectSpan
+     */
+    public void setDetectSpan(Integer detectSpan) {
+        this.detectSpan = detectSpan;
+    }
+
+
+    /**
+     * get 告警阈值
+     *
+     * @return
+     */
+    public Integer getDetectThreshold() {
+        return detectThreshold;
+    }
+
+    /**
+     * set 告警阈值
+     *
+     * @param detectThreshold
+     */
+    public void setDetectThreshold(Integer detectThreshold) {
+        this.detectThreshold = detectThreshold;
+    }
+
+
+    /**
+    * get warnType为statusCode时为要检测的状态码
+    *
+    * @return
+    */
+    public List<String> getDetectItems() {
+        return detectItems;
+    }
+
+    /**
+    * set warnType为statusCode时为要检测的状态码
+    *
+    * @param detectItems
+    */
+    public void setDetectItems(List<String> detectItems) {
+        this.detectItems = detectItems;
+    }
+
+
+    /**
+    * get 告警方式
+    *
+    * @return
+    */
+    public List<String> getContactWays() {
+        return contactWays;
+    }
+
+    /**
+    * set 告警方式
+    *
+    * @param contactWays
+    */
+    public void setContactWays(List<String> contactWays) {
+        this.contactWays = contactWays;
+    }
+
+
+    /**
+    * get 告警通知人
+    *
+    * @return
+    */
+    public List<ContactPerson> getContactorPersons() {
+        return contactorPersons;
+    }
+
+    /**
+    * set 告警通知人
+    *
+    * @param contactorPersons
+    */
+    public void setContactorPersons(List<ContactPerson> contactorPersons) {
+        this.contactorPersons = contactorPersons;
+    }
+
+
+    /**
+    * get 告警通知群组
+    *
+    * @return
+    */
+    public List<ContactGroup> getContactorGroups() {
+        return contactorGroups;
+    }
+
+    /**
+    * set 告警通知群组
+    *
+    * @param contactorGroups
+    */
+    public void setContactorGroups(List<ContactGroup> contactorGroups) {
+        this.contactorGroups = contactorGroups;
+    }
+
+
+    /**
+     * get 是否生效，0-不生效，1-生效
+     *
+     * @return
+     */
+    public Integer getEnable() {
+        return enable;
+    }
+
+    /**
+     * set 是否生效，0-不生效，1-生效
+     *
+     * @param enable
+     */
+    public void setEnable(Integer enable) {
+        this.enable = enable;
+    }
+
+
+    /**
+     * get 全局告警状态
+     *
+     * @return
+     */
+    public Integer getGlbDisable() {
+        return glbDisable;
+    }
+
+    /**
+     * set 全局告警状态
+     *
+     * @param glbDisable
+     */
+    public void setGlbDisable(Integer glbDisable) {
+        this.glbDisable = glbDisable;
+    }
+
+
+    /**
+     * get 自定义告警状态
+     *
+     * @return
+     */
+    public Integer getUsrDisable() {
+        return usrDisable;
+    }
+
+    /**
+     * set 自定义告警状态
+     *
+     * @param usrDisable
+     */
+    public void setUsrDisable(Integer usrDisable) {
+        this.usrDisable = usrDisable;
+    }
+
+
+    /**
+     * get 全局告警globle 自定义告警userdefine ,默认是全局告警
+     *
+     * @return
+     */
+    public String getRuleType() {
+        return ruleType;
+    }
+
+    /**
+     * set 全局告警globle 自定义告警userdefine ,默认是全局告警
+     *
+     * @param ruleType
+     */
+    public void setRuleType(String ruleType) {
+        this.ruleType = ruleType;
+    }
+
+
+    /**
+     * get 产品类型, 0waf, 1scdn
+     *
+     * @return
+     */
+    public Integer getMode() {
+        return mode;
+    }
+
+    /**
+     * set 产品类型, 0waf, 1scdn
+     *
+     * @param mode
+     */
+    public void setMode(Integer mode) {
+        this.mode = mode;
+    }
+
+
+    /**
+     * get scdn用户名
+     *
+     * @return
+     */
+    public String getUserPinScdn() {
+        return userPinScdn;
+    }
+
+    /**
+     * set scdn用户名
+     *
+     * @param userPinScdn
+     */
+    public void setUserPinScdn(String userPinScdn) {
+        this.userPinScdn = userPinScdn;
+    }
+
+
+
+    /**
      * set 规则id
      *
      * @param id
@@ -211,6 +511,7 @@ public class SetReq  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 规则名称
@@ -222,6 +523,7 @@ public class SetReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set WAF实例id
      *
@@ -232,15 +534,17 @@ public class SetReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 域名集
-     *
-     * @param domains
-     */
+    * set 域名集
+    *
+    * @param domains
+    */
     public SetReq domains(List<String> domains) {
         this.domains = domains;
         return this;
     }
+
 
     /**
      * set 告警类型，wafAnti-waf攻击告警，ccAnti-cc攻击告警，statusCode-状态码告警，upstreamStatus-回源IP监控
@@ -252,6 +556,7 @@ public class SetReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 阈值单位，&quot;&quot;-个数，&quot;percent&quot;-百分比。缺省为个数
      *
@@ -262,6 +567,7 @@ public class SetReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 检测时长单位，hour/minute,缺省为hour
      *
@@ -271,6 +577,139 @@ public class SetReq  implements java.io.Serializable {
         this.detectUnit = detectUnit;
         return this;
     }
+
+
+    /**
+     * set 检测周期
+     *
+     * @param detectSpan
+     */
+    public SetReq detectSpan(Integer detectSpan) {
+        this.detectSpan = detectSpan;
+        return this;
+    }
+
+
+    /**
+     * set 告警阈值
+     *
+     * @param detectThreshold
+     */
+    public SetReq detectThreshold(Integer detectThreshold) {
+        this.detectThreshold = detectThreshold;
+        return this;
+    }
+
+
+    /**
+    * set warnType为statusCode时为要检测的状态码
+    *
+    * @param detectItems
+    */
+    public SetReq detectItems(List<String> detectItems) {
+        this.detectItems = detectItems;
+        return this;
+    }
+
+
+    /**
+    * set 告警方式
+    *
+    * @param contactWays
+    */
+    public SetReq contactWays(List<String> contactWays) {
+        this.contactWays = contactWays;
+        return this;
+    }
+
+
+    /**
+    * set 告警通知人
+    *
+    * @param contactorPersons
+    */
+    public SetReq contactorPersons(List<ContactPerson> contactorPersons) {
+        this.contactorPersons = contactorPersons;
+        return this;
+    }
+
+
+    /**
+    * set 告警通知群组
+    *
+    * @param contactorGroups
+    */
+    public SetReq contactorGroups(List<ContactGroup> contactorGroups) {
+        this.contactorGroups = contactorGroups;
+        return this;
+    }
+
+
+    /**
+     * set 是否生效，0-不生效，1-生效
+     *
+     * @param enable
+     */
+    public SetReq enable(Integer enable) {
+        this.enable = enable;
+        return this;
+    }
+
+
+    /**
+     * set 全局告警状态
+     *
+     * @param glbDisable
+     */
+    public SetReq glbDisable(Integer glbDisable) {
+        this.glbDisable = glbDisable;
+        return this;
+    }
+
+
+    /**
+     * set 自定义告警状态
+     *
+     * @param usrDisable
+     */
+    public SetReq usrDisable(Integer usrDisable) {
+        this.usrDisable = usrDisable;
+        return this;
+    }
+
+
+    /**
+     * set 全局告警globle 自定义告警userdefine ,默认是全局告警
+     *
+     * @param ruleType
+     */
+    public SetReq ruleType(String ruleType) {
+        this.ruleType = ruleType;
+        return this;
+    }
+
+
+    /**
+     * set 产品类型, 0waf, 1scdn
+     *
+     * @param mode
+     */
+    public SetReq mode(Integer mode) {
+        this.mode = mode;
+        return this;
+    }
+
+
+    /**
+     * set scdn用户名
+     *
+     * @param userPinScdn
+     */
+    public SetReq userPinScdn(String userPinScdn) {
+        this.userPinScdn = userPinScdn;
+        return this;
+    }
+
 
 
     /**
@@ -285,4 +724,51 @@ public class SetReq  implements java.io.Serializable {
         this.domains.add(domain);
     }
 
+    /**
+     * add item to warnType为statusCode时为要检测的状态码
+     *
+     * @param detectItem
+     */
+    public void addDetectItem(String detectItem) {
+        if (this.detectItems == null) {
+            this.detectItems = new ArrayList<>();
+        }
+        this.detectItems.add(detectItem);
+    }
+
+    /**
+     * add item to 告警方式
+     *
+     * @param contactWay
+     */
+    public void addContactWay(String contactWay) {
+        if (this.contactWays == null) {
+            this.contactWays = new ArrayList<>();
+        }
+        this.contactWays.add(contactWay);
+    }
+
+    /**
+     * add item to 告警通知人
+     *
+     * @param contactorPerson
+     */
+    public void addContactorPerson(ContactPerson contactorPerson) {
+        if (this.contactorPersons == null) {
+            this.contactorPersons = new ArrayList<>();
+        }
+        this.contactorPersons.add(contactorPerson);
+    }
+
+    /**
+     * add item to 告警通知群组
+     *
+     * @param contactorGroup
+     */
+    public void addContactorGroup(ContactGroup contactorGroup) {
+        if (this.contactorGroups == null) {
+            this.contactorGroups = new ArrayList<>();
+        }
+        this.contactorGroups.add(contactorGroup);
+    }
 }

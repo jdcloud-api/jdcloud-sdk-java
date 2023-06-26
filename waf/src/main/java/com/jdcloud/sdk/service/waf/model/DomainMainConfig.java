@@ -52,13 +52,13 @@ public class DomainMainConfig  implements java.io.Serializable {
     /**
      * 使用协议，[&quot;http&quot;,&quot;https&quot;]
      */
+    
     private List<String> protocols;
-
     /**
      * ssl协议，[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
      */
+    
     private List<String> sslProtocols;
-
     /**
      * 前置代理，1：使用 0：不使用
      */
@@ -88,6 +88,11 @@ public class DomainMainConfig  implements java.io.Serializable {
      * 防护状态，0：关闭 1：开启
      */
     private AntiStatus antiStatus;
+
+    /**
+     * 防护模式
+     */
+    private AntiMode antiMode;
 
     /**
      * 1：bypass 0：防护模式
@@ -120,6 +125,7 @@ public class DomainMainConfig  implements java.io.Serializable {
     private DomainRegionInfo region;
 
 
+
     /**
      * get 域名
      *
@@ -137,6 +143,7 @@ public class DomainMainConfig  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get cname域名
@@ -156,6 +163,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.cname = cname;
     }
 
+
     /**
      * get 绑定的证书名称
      *
@@ -174,41 +182,44 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.certName = certName;
     }
 
+
     /**
-     * get 使用协议，[&quot;http&quot;,&quot;https&quot;]
-     *
-     * @return
-     */
+    * get 使用协议，[&quot;http&quot;,&quot;https&quot;]
+    *
+    * @return
+    */
     public List<String> getProtocols() {
         return protocols;
     }
 
     /**
-     * set 使用协议，[&quot;http&quot;,&quot;https&quot;]
-     *
-     * @param protocols
-     */
+    * set 使用协议，[&quot;http&quot;,&quot;https&quot;]
+    *
+    * @param protocols
+    */
     public void setProtocols(List<String> protocols) {
         this.protocols = protocols;
     }
 
+
     /**
-     * get ssl协议，[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
-     *
-     * @return
-     */
+    * get ssl协议，[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
+    *
+    * @return
+    */
     public List<String> getSslProtocols() {
         return sslProtocols;
     }
 
     /**
-     * set ssl协议，[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
-     *
-     * @param sslProtocols
-     */
+    * set ssl协议，[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
+    *
+    * @param sslProtocols
+    */
     public void setSslProtocols(List<String> sslProtocols) {
         this.sslProtocols = sslProtocols;
     }
+
 
     /**
      * get 前置代理，1：使用 0：不使用
@@ -228,6 +239,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.pureClient = pureClient;
     }
 
+
     /**
      * get 协议状态，0：正常
      *
@@ -245,6 +257,7 @@ public class DomainMainConfig  implements java.io.Serializable {
     public void setHttpStatus(Integer httpStatus) {
         this.httpStatus = httpStatus;
     }
+
 
     /**
      * get https证书绑定状态
@@ -264,6 +277,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.httpsCertUpdateStatus = httpsCertUpdateStatus;
     }
 
+
     /**
      * get 国密https证书绑定状态
      *
@@ -281,6 +295,7 @@ public class DomainMainConfig  implements java.io.Serializable {
     public void setGmHttpsCertUpdateStatus(Integer gmHttpsCertUpdateStatus) {
         this.gmHttpsCertUpdateStatus = gmHttpsCertUpdateStatus;
     }
+
 
     /**
      * get 是否支持国密证书
@@ -300,6 +315,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.gmCertSupport = gmCertSupport;
     }
 
+
     /**
      * get 防护状态，0：关闭 1：开启
      *
@@ -317,6 +333,26 @@ public class DomainMainConfig  implements java.io.Serializable {
     public void setAntiStatus(AntiStatus antiStatus) {
         this.antiStatus = antiStatus;
     }
+
+
+    /**
+     * get 防护模式
+     *
+     * @return
+     */
+    public AntiMode getAntiMode() {
+        return antiMode;
+    }
+
+    /**
+     * set 防护模式
+     *
+     * @param antiMode
+     */
+    public void setAntiMode(AntiMode antiMode) {
+        this.antiMode = antiMode;
+    }
+
 
     /**
      * get 1：bypass 0：防护模式
@@ -336,6 +372,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.disableWaf = disableWaf;
     }
 
+
     /**
      * get 近七天攻击详情
      *
@@ -353,6 +390,7 @@ public class DomainMainConfig  implements java.io.Serializable {
     public void setAttackInfo(AttackInfo attackInfo) {
         this.attackInfo = attackInfo;
     }
+
 
     /**
      * get 网站dns配置
@@ -372,6 +410,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.dnsStatus = dnsStatus;
     }
 
+
     /**
      * get cname解析状态。0为解析到VIP，1为解析到回源地址
      *
@@ -390,6 +429,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.enableCname2Rs = enableCname2Rs;
     }
 
+
     /**
      * get cname解析状态。0为解析到VIP，1为解析到回源地址
      *
@@ -407,6 +447,7 @@ public class DomainMainConfig  implements java.io.Serializable {
     public void setEnableIpv6(Integer enableIpv6) {
         this.enableIpv6 = enableIpv6;
     }
+
 
     /**
      * get 域名的地域信息，类型是map[string]regionVipInfo
@@ -427,6 +468,7 @@ public class DomainMainConfig  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 域名
      *
@@ -436,6 +478,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set cname域名
@@ -447,6 +490,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 绑定的证书名称
      *
@@ -457,25 +501,28 @@ public class DomainMainConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 使用协议，[&quot;http&quot;,&quot;https&quot;]
-     *
-     * @param protocols
-     */
+    * set 使用协议，[&quot;http&quot;,&quot;https&quot;]
+    *
+    * @param protocols
+    */
     public DomainMainConfig protocols(List<String> protocols) {
         this.protocols = protocols;
         return this;
     }
 
+
     /**
-     * set ssl协议，[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
-     *
-     * @param sslProtocols
-     */
+    * set ssl协议，[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
+    *
+    * @param sslProtocols
+    */
     public DomainMainConfig sslProtocols(List<String> sslProtocols) {
         this.sslProtocols = sslProtocols;
         return this;
     }
+
 
     /**
      * set 前置代理，1：使用 0：不使用
@@ -487,6 +534,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 协议状态，0：正常
      *
@@ -496,6 +544,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.httpStatus = httpStatus;
         return this;
     }
+
 
     /**
      * set https证书绑定状态
@@ -507,6 +556,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 国密https证书绑定状态
      *
@@ -516,6 +566,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.gmHttpsCertUpdateStatus = gmHttpsCertUpdateStatus;
         return this;
     }
+
 
     /**
      * set 是否支持国密证书
@@ -527,6 +578,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 防护状态，0：关闭 1：开启
      *
@@ -536,6 +588,18 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.antiStatus = antiStatus;
         return this;
     }
+
+
+    /**
+     * set 防护模式
+     *
+     * @param antiMode
+     */
+    public DomainMainConfig antiMode(AntiMode antiMode) {
+        this.antiMode = antiMode;
+        return this;
+    }
+
 
     /**
      * set 1：bypass 0：防护模式
@@ -547,6 +611,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 近七天攻击详情
      *
@@ -556,6 +621,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.attackInfo = attackInfo;
         return this;
     }
+
 
     /**
      * set 网站dns配置
@@ -567,6 +633,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cname解析状态。0为解析到VIP，1为解析到回源地址
      *
@@ -576,6 +643,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.enableCname2Rs = enableCname2Rs;
         return this;
     }
+
 
     /**
      * set cname解析状态。0为解析到VIP，1为解析到回源地址
@@ -587,6 +655,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名的地域信息，类型是map[string]regionVipInfo
      *
@@ -596,6 +665,7 @@ public class DomainMainConfig  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
 
     /**
@@ -621,5 +691,4 @@ public class DomainMainConfig  implements java.io.Serializable {
         }
         this.sslProtocols.add(sslProtocol);
     }
-
 }

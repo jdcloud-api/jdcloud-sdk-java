@@ -40,100 +40,105 @@ public class RsConfig  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> rsAddr;
-
     /**
      * 回源地址权重，与rsAddr顺序对应
      */
+    
     private List<Integer> weight;
-
     /**
      * http回源端口
      */
+    
     private List<String> httpRsPort;
-
     /**
      * https回源端口
      */
+    
     private List<String> httpsRsPort;
-
     /**
      * 回源地址类型，0为ip，1为域名
      */
     private Integer rsType;
 
 
+
     /**
-     * get 回源地址
-     *
-     * @return
-     */
+    * get 回源地址
+    *
+    * @return
+    */
     public List<String> getRsAddr() {
         return rsAddr;
     }
 
     /**
-     * set 回源地址
-     *
-     * @param rsAddr
-     */
+    * set 回源地址
+    *
+    * @param rsAddr
+    */
     public void setRsAddr(List<String> rsAddr) {
         this.rsAddr = rsAddr;
     }
 
+
     /**
-     * get 回源地址权重，与rsAddr顺序对应
-     *
-     * @return
-     */
+    * get 回源地址权重，与rsAddr顺序对应
+    *
+    * @return
+    */
     public List<Integer> getWeight() {
         return weight;
     }
 
     /**
-     * set 回源地址权重，与rsAddr顺序对应
-     *
-     * @param weight
-     */
+    * set 回源地址权重，与rsAddr顺序对应
+    *
+    * @param weight
+    */
     public void setWeight(List<Integer> weight) {
         this.weight = weight;
     }
 
+
     /**
-     * get http回源端口
-     *
-     * @return
-     */
+    * get http回源端口
+    *
+    * @return
+    */
     public List<String> getHttpRsPort() {
         return httpRsPort;
     }
 
     /**
-     * set http回源端口
-     *
-     * @param httpRsPort
-     */
+    * set http回源端口
+    *
+    * @param httpRsPort
+    */
     public void setHttpRsPort(List<String> httpRsPort) {
         this.httpRsPort = httpRsPort;
     }
 
+
     /**
-     * get https回源端口
-     *
-     * @return
-     */
+    * get https回源端口
+    *
+    * @return
+    */
     public List<String> getHttpsRsPort() {
         return httpsRsPort;
     }
 
     /**
-     * set https回源端口
-     *
-     * @param httpsRsPort
-     */
+    * set https回源端口
+    *
+    * @param httpsRsPort
+    */
     public void setHttpsRsPort(List<String> httpsRsPort) {
         this.httpsRsPort = httpsRsPort;
     }
+
 
     /**
      * get 回源地址类型，0为ip，1为域名
@@ -154,45 +159,50 @@ public class RsConfig  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 回源地址
-     *
-     * @param rsAddr
-     */
+    * set 回源地址
+    *
+    * @param rsAddr
+    */
     public RsConfig rsAddr(List<String> rsAddr) {
         this.rsAddr = rsAddr;
         return this;
     }
 
+
     /**
-     * set 回源地址权重，与rsAddr顺序对应
-     *
-     * @param weight
-     */
+    * set 回源地址权重，与rsAddr顺序对应
+    *
+    * @param weight
+    */
     public RsConfig weight(List<Integer> weight) {
         this.weight = weight;
         return this;
     }
 
+
     /**
-     * set http回源端口
-     *
-     * @param httpRsPort
-     */
+    * set http回源端口
+    *
+    * @param httpRsPort
+    */
     public RsConfig httpRsPort(List<String> httpRsPort) {
         this.httpRsPort = httpRsPort;
         return this;
     }
 
+
     /**
-     * set https回源端口
-     *
-     * @param httpsRsPort
-     */
+    * set https回源端口
+    *
+    * @param httpsRsPort
+    */
     public RsConfig httpsRsPort(List<String> httpsRsPort) {
         this.httpsRsPort = httpsRsPort;
         return this;
     }
+
 
     /**
      * set 回源地址类型，0为ip，1为域名
@@ -203,6 +213,7 @@ public class RsConfig  implements java.io.Serializable {
         this.rsType = rsType;
         return this;
     }
+
 
 
     /**
@@ -252,5 +263,4 @@ public class RsConfig  implements java.io.Serializable {
         }
         this.httpsRsPort.add(httpsRsPort);
     }
-
 }

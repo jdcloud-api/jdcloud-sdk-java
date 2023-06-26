@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.waf.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.waf.model.ListRulesReq;
+import com.jdcloud.sdk.service.waf.model.ListWafRulesReq;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class ListWafRulesRequest extends JdcloudRequest implements java.io.Seria
      * Required:true
      */
     @Required
-    private ListRulesReq req;
+    private ListWafRulesReq req;
 
     /**
      * 实例所属的地域ID
@@ -57,12 +57,13 @@ public class ListWafRulesRequest extends JdcloudRequest implements java.io.Seria
     private String wafInstanceId;
 
 
+
     /**
      * get 请求
      *
      * @return
      */
-    public ListRulesReq getReq() {
+    public ListWafRulesReq getReq() {
         return req;
     }
 
@@ -71,9 +72,10 @@ public class ListWafRulesRequest extends JdcloudRequest implements java.io.Seria
      *
      * @param req
      */
-    public void setReq(ListRulesReq req) {
+    public void setReq(ListWafRulesReq req) {
         this.req = req;
     }
+
 
     /**
      * get 实例所属的地域ID
@@ -92,6 +94,7 @@ public class ListWafRulesRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例Id
@@ -112,15 +115,17 @@ public class ListWafRulesRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 请求
      *
      * @param req
      */
-    public ListWafRulesRequest req(ListRulesReq req) {
+    public ListWafRulesRequest req(ListWafRulesReq req) {
         this.req = req;
         return this;
     }
+
 
     /**
      * set 实例所属的地域ID
@@ -131,6 +136,7 @@ public class ListWafRulesRequest extends JdcloudRequest implements java.io.Seria
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例Id

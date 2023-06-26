@@ -40,6 +40,7 @@ public class GetStatusCodeInfoResult extends JdcloudResult implements java.io.Se
     private StatusCodeData statusCodeData;
 
 
+
     /**
      * get 状态码TopN
      *
@@ -57,6 +58,7 @@ public class GetStatusCodeInfoResult extends JdcloudResult implements java.io.Se
     public void setStatusCodeData(StatusCodeData statusCodeData) {
         this.statusCodeData = statusCodeData;
     }
+
 
 
     /**

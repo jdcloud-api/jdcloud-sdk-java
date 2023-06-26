@@ -88,6 +88,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
     private Integer valid;
 
 
+
     /**
      * get 实例id
      *
@@ -105,6 +106,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 实例id别称
@@ -124,6 +126,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         this.nickName = nickName;
     }
 
+
     /**
      * get 套餐类型 0:内测版，1:高级版， 2:企业版 3:旗舰版
      *
@@ -141,6 +144,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
     public void setPackageType(Integer packageType) {
         this.packageType = packageType;
     }
+
 
     /**
      * get 地域信息
@@ -160,6 +164,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 资源ID，续费,标签用
      *
@@ -177,6 +182,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
     public void setSourceId(String sourceId) {
         this.sourceId = sourceId;
     }
+
 
     /**
      * get 额外的域名扩展包
@@ -196,6 +202,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         this.domainPackages = domainPackages;
     }
 
+
     /**
      * get 额外的qps扩展包，单位为M
      *
@@ -213,6 +220,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
     public void setExtraBitsLimit(Integer extraBitsLimit) {
         this.extraBitsLimit = extraBitsLimit;
     }
+
 
     /**
      * get 创建时间
@@ -232,6 +240,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get 资源预计释放时间，仅过期且未释放时有效
      *
@@ -250,6 +259,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         this.releaseingTime = releaseingTime;
     }
 
+
     /**
      * get 资源的计费状态，1-服务中，2-过期停服，3-过期释放
      *
@@ -267,6 +277,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 资源的可用状态，1-可用，其他不可用
@@ -287,6 +298,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例id
      *
@@ -296,6 +308,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 实例id别称
@@ -307,6 +320,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 套餐类型 0:内测版，1:高级版， 2:企业版 3:旗舰版
      *
@@ -316,6 +330,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         this.packageType = packageType;
         return this;
     }
+
 
     /**
      * set 地域信息
@@ -327,6 +342,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源ID，续费,标签用
      *
@@ -336,6 +352,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         this.sourceId = sourceId;
         return this;
     }
+
 
     /**
      * set 额外的域名扩展包
@@ -347,6 +364,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 额外的qps扩展包，单位为M
      *
@@ -356,6 +374,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         this.extraBitsLimit = extraBitsLimit;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -367,6 +386,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源预计释放时间，仅过期且未释放时有效
      *
@@ -377,6 +397,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源的计费状态，1-服务中，2-过期停服，3-过期释放
      *
@@ -386,6 +407,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 资源的可用状态，1-可用，其他不可用

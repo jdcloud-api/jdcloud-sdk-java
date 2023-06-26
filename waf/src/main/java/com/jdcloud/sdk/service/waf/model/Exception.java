@@ -26,16 +26,16 @@ package com.jdcloud.sdk.service.waf.model;
 
 
 /**
- * abnormal
+ * exception
  */
-public class Abnormal  implements java.io.Serializable {
+public class Exception  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * noResp
+     * s499
      */
-    private ChartItemValue noResp;
+    private ChartItemValue s499;
 
     /**
      * s503
@@ -63,23 +63,25 @@ public class Abnormal  implements java.io.Serializable {
     private ChartItemValue s5XX;
 
 
+
     /**
-     * get noResp
+     * get s499
      *
      * @return
      */
-    public ChartItemValue getNoResp() {
-        return noResp;
+    public ChartItemValue getS499() {
+        return s499;
     }
 
     /**
-     * set noResp
+     * set s499
      *
-     * @param noResp
+     * @param s499
      */
-    public void setNoResp(ChartItemValue noResp) {
-        this.noResp = noResp;
+    public void setS499(ChartItemValue s499) {
+        this.s499 = s499;
     }
+
 
     /**
      * get s503
@@ -99,6 +101,7 @@ public class Abnormal  implements java.io.Serializable {
         this.s503 = s503;
     }
 
+
     /**
      * get s404
      *
@@ -116,6 +119,7 @@ public class Abnormal  implements java.io.Serializable {
     public void setS404(ChartItemValue s404) {
         this.s404 = s404;
     }
+
 
     /**
      * get s502
@@ -135,6 +139,7 @@ public class Abnormal  implements java.io.Serializable {
         this.s502 = s502;
     }
 
+
     /**
      * get s504
      *
@@ -152,6 +157,7 @@ public class Abnormal  implements java.io.Serializable {
     public void setS504(ChartItemValue s504) {
         this.s504 = s504;
     }
+
 
     /**
      * get s5XX
@@ -172,62 +178,68 @@ public class Abnormal  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set noResp
+     * set s499
      *
-     * @param noResp
+     * @param s499
      */
-    public Abnormal noResp(ChartItemValue noResp) {
-        this.noResp = noResp;
+    public Exception s499(ChartItemValue s499) {
+        this.s499 = s499;
         return this;
     }
+
 
     /**
      * set s503
      *
      * @param s503
      */
-    public Abnormal s503(ChartItemValue s503) {
+    public Exception s503(ChartItemValue s503) {
         this.s503 = s503;
         return this;
     }
+
 
     /**
      * set s404
      *
      * @param s404
      */
-    public Abnormal s404(ChartItemValue s404) {
+    public Exception s404(ChartItemValue s404) {
         this.s404 = s404;
         return this;
     }
+
 
     /**
      * set s502
      *
      * @param s502
      */
-    public Abnormal s502(ChartItemValue s502) {
+    public Exception s502(ChartItemValue s502) {
         this.s502 = s502;
         return this;
     }
+
 
     /**
      * set s504
      *
      * @param s504
      */
-    public Abnormal s504(ChartItemValue s504) {
+    public Exception s504(ChartItemValue s504) {
         this.s504 = s504;
         return this;
     }
+
 
     /**
      * set s5XX
      *
      * @param s5XX
      */
-    public Abnormal s5XX(ChartItemValue s5XX) {
+    public Exception s5XX(ChartItemValue s5XX) {
         this.s5XX = s5XX;
         return this;
     }

@@ -57,7 +57,8 @@ public class LogReportReq  implements java.io.Serializable {
      * Required:true
      */
     @Required
-    private Integer accessTime;
+    private Long accessTime;
+
 
 
     /**
@@ -78,6 +79,7 @@ public class LogReportReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -95,6 +97,7 @@ public class LogReportReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 日志Id
@@ -114,12 +117,13 @@ public class LogReportReq  implements java.io.Serializable {
         this.logId = logId;
     }
 
+
     /**
      * get 产生时间
      *
      * @return
      */
-    public Integer getAccessTime() {
+    public Long getAccessTime() {
         return accessTime;
     }
 
@@ -128,9 +132,10 @@ public class LogReportReq  implements java.io.Serializable {
      *
      * @param accessTime
      */
-    public void setAccessTime(Integer accessTime) {
+    public void setAccessTime(Long accessTime) {
         this.accessTime = accessTime;
     }
+
 
 
     /**
@@ -143,6 +148,7 @@ public class LogReportReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -152,6 +158,7 @@ public class LogReportReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 日志Id
@@ -163,12 +170,13 @@ public class LogReportReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产生时间
      *
      * @param accessTime
      */
-    public LogReportReq accessTime(Integer accessTime) {
+    public LogReportReq accessTime(Long accessTime) {
         this.accessTime = accessTime;
         return this;
     }

@@ -81,6 +81,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     private String redirection;
 
 
+
     /**
      * get 序号id,更新时需要
      *
@@ -98,6 +99,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 规则名称
@@ -117,6 +119,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 限速host配置
      *
@@ -134,6 +137,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     public void setHost(MatchOpValCfg host) {
         this.host = host;
     }
+
 
     /**
      * get 限速url配置
@@ -153,6 +157,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
         this.url = url;
     }
 
+
     /**
      * get ip配置
      *
@@ -170,6 +175,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     public void setIp(String ip) {
         this.ip = ip;
     }
+
 
     /**
      * get 限速大小
@@ -189,6 +195,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
         this.rate = rate;
     }
 
+
     /**
      * get 限速burst大小
      *
@@ -207,6 +214,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
         this.burst = burst;
     }
 
+
     /**
      * get 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
@@ -224,6 +232,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     public void setMatchAction(String matchAction) {
         this.matchAction = matchAction;
     }
+
 
     /**
      * get 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
@@ -244,6 +253,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 序号id,更新时需要
      *
@@ -253,6 +263,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 规则名称
@@ -264,6 +275,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 限速host配置
      *
@@ -273,6 +285,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
         this.host = host;
         return this;
     }
+
 
     /**
      * set 限速url配置
@@ -284,6 +297,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set ip配置
      *
@@ -293,6 +307,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set 限速大小
@@ -304,6 +319,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 限速burst大小
      *
@@ -314,6 +330,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
@@ -323,6 +340,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
         this.matchAction = matchAction;
         return this;
     }
+
 
     /**
      * set 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称

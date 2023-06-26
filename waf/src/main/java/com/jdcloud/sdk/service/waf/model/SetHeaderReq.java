@@ -55,10 +55,16 @@ public class SetHeaderReq  implements java.io.Serializable {
     private Integer iswhite;
 
     /**
+     * 白名单不检查指定Web防护规则id, 多个逗号分隔
+     */
+    private String skipRuleId;
+
+    /**
      * header配置
      * Required:true
      */
     @Required
+    
     private List<KeyValCfg> headers;
 
 
@@ -80,6 +86,7 @@ public class SetHeaderReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -97,6 +104,7 @@ public class SetHeaderReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 0表示黑名单，1表示白名单
@@ -116,23 +124,44 @@ public class SetHeaderReq  implements java.io.Serializable {
         this.iswhite = iswhite;
     }
 
+
     /**
-     * get header配置
+     * get 白名单不检查指定Web防护规则id, 多个逗号分隔
      *
      * @return
      */
+    public String getSkipRuleId() {
+        return skipRuleId;
+    }
+
+    /**
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @param skipRuleId
+     */
+    public void setSkipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+    }
+
+
+    /**
+    * get header配置
+    *
+    * @return
+    */
     public List<KeyValCfg> getHeaders() {
         return headers;
     }
 
     /**
-     * set header配置
-     *
-     * @param headers
-     */
+    * set header配置
+    *
+    * @param headers
+    */
     public void setHeaders(List<KeyValCfg> headers) {
         this.headers = headers;
     }
+
 
 
     /**
@@ -145,6 +174,7 @@ public class SetHeaderReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -154,6 +184,7 @@ public class SetHeaderReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 0表示黑名单，1表示白名单
@@ -165,15 +196,28 @@ public class SetHeaderReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set header配置
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
      *
-     * @param headers
+     * @param skipRuleId
      */
+    public SetHeaderReq skipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+        return this;
+    }
+
+
+    /**
+    * set header配置
+    *
+    * @param headers
+    */
     public SetHeaderReq headers(List<KeyValCfg> headers) {
         this.headers = headers;
         return this;
     }
+
 
 
     /**
@@ -187,5 +231,4 @@ public class SetHeaderReq  implements java.io.Serializable {
         }
         this.headers.add(header);
     }
-
 }

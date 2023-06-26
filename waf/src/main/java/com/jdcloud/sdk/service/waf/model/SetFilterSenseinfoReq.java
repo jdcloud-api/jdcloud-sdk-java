@@ -88,6 +88,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
     private String matchVal;
 
 
+
     /**
      * get 更新时必须且非0，新增时可选若传需传0
      *
@@ -105,6 +106,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get WAF实例id
@@ -124,6 +126,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -141,6 +144,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get equal prefix contain之一
@@ -160,6 +164,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
         this.matchLogic = matchLogic;
     }
 
+
     /**
      * get 从 idcard creditcard phone选，多选时使用&#39;,&#39;分隔
      *
@@ -177,6 +182,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
     public void setMatchType(String matchType) {
         this.matchType = matchType;
     }
+
 
     /**
      * get notice或filter
@@ -196,6 +202,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
         this.matchAction = matchAction;
     }
 
+
     /**
      * get 规则名称
      *
@@ -213,6 +220,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
     public void setRuleName(String ruleName) {
         this.ruleName = ruleName;
     }
+
 
     /**
      * get uri匹配值
@@ -233,6 +241,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 更新时必须且非0，新增时可选若传需传0
      *
@@ -242,6 +251,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set WAF实例id
@@ -253,6 +263,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -262,6 +273,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set equal prefix contain之一
@@ -273,6 +285,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 从 idcard creditcard phone选，多选时使用&#39;,&#39;分隔
      *
@@ -282,6 +295,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
         this.matchType = matchType;
         return this;
     }
+
 
     /**
      * set notice或filter
@@ -293,6 +307,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则名称
      *
@@ -302,6 +317,7 @@ public class SetFilterSenseinfoReq  implements java.io.Serializable {
         this.ruleName = ruleName;
         return this;
     }
+
 
     /**
      * set uri匹配值

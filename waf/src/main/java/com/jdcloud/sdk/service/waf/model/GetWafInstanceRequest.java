@@ -55,8 +55,8 @@ public class GetWafInstanceRequest extends JdcloudRequest implements java.io.Ser
     /**
      * wafInstanceId - 实例id
      */
+    
     private List<Filter> filters;
-
     /**
      * 资源id 多个时，以逗号,分隔。
      */
@@ -68,6 +68,7 @@ public class GetWafInstanceRequest extends JdcloudRequest implements java.io.Ser
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -88,6 +89,7 @@ public class GetWafInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.idc = idc;
     }
 
+
     /**
      * get 页码
      *
@@ -105,6 +107,7 @@ public class GetWafInstanceRequest extends JdcloudRequest implements java.io.Ser
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小
@@ -124,23 +127,25 @@ public class GetWafInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get wafInstanceId - 实例id
-     *
-     * @return
-     */
+    * get wafInstanceId - 实例id
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set wafInstanceId - 实例id
-     *
-     * @param filters
-     */
+    * set wafInstanceId - 实例id
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 资源id 多个时，以逗号,分隔。
@@ -159,6 +164,7 @@ public class GetWafInstanceRequest extends JdcloudRequest implements java.io.Ser
     public void setSourceIds(String sourceIds) {
         this.sourceIds = sourceIds;
     }
+
 
     /**
      * get 实例所属的地域ID
@@ -179,6 +185,7 @@ public class GetWafInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 所属地区， 模糊匹配
      *
@@ -188,6 +195,7 @@ public class GetWafInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.idc = idc;
         return this;
     }
+
 
     /**
      * set 页码
@@ -199,6 +207,7 @@ public class GetWafInstanceRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 分页大小
      *
@@ -209,15 +218,17 @@ public class GetWafInstanceRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
-     * set wafInstanceId - 实例id
-     *
-     * @param filters
-     */
+    * set wafInstanceId - 实例id
+    *
+    * @param filters
+    */
     public GetWafInstanceRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 资源id 多个时，以逗号,分隔。
@@ -229,6 +240,7 @@ public class GetWafInstanceRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 实例所属的地域ID
      *
@@ -238,6 +250,7 @@ public class GetWafInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -251,5 +264,4 @@ public class GetWafInstanceRequest extends JdcloudRequest implements java.io.Ser
         }
         this.filters.add(filter);
     }
-
 }

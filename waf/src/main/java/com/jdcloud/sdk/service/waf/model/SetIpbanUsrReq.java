@@ -90,6 +90,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
     private DenyActionCfg action;
 
 
+
     /**
      * get WAF实例id
      *
@@ -107,6 +108,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -126,6 +128,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 规则名
      *
@@ -143,6 +146,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
     public void setRuleName(String ruleName) {
         this.ruleName = ruleName;
     }
+
 
     /**
      * get 检测时间 单位秒， 限制[60-600]
@@ -162,6 +166,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
         this.detectTime = detectTime;
     }
 
+
     /**
      * get 封禁阈值，限制[1-20000]
      *
@@ -179,6 +184,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
     public void setThreshold(Integer threshold) {
         this.threshold = threshold;
     }
+
 
     /**
      * get 封禁时间，限制[1-86400]
@@ -198,6 +204,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
         this.ipbanTime = ipbanTime;
     }
 
+
     /**
      * get 0-使用中 1-禁用
      *
@@ -215,6 +222,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
     public void setDisable(Integer disable) {
         this.disable = disable;
     }
+
 
     /**
      * get 动作配置
@@ -235,6 +243,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -244,6 +253,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -255,6 +265,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则名
      *
@@ -264,6 +275,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
         this.ruleName = ruleName;
         return this;
     }
+
 
     /**
      * set 检测时间 单位秒， 限制[60-600]
@@ -275,6 +287,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 封禁阈值，限制[1-20000]
      *
@@ -284,6 +297,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
         this.threshold = threshold;
         return this;
     }
+
 
     /**
      * set 封禁时间，限制[1-86400]
@@ -295,6 +309,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0-使用中 1-禁用
      *
@@ -304,6 +319,7 @@ public class SetIpbanUsrReq  implements java.io.Serializable {
         this.disable = disable;
         return this;
     }
+
 
     /**
      * set 动作配置

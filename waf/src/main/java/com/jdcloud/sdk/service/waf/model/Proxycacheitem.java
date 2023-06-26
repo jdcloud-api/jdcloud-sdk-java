@@ -37,31 +37,33 @@ public class Proxycacheitem  implements java.io.Serializable {
     /**
      * 状态码
      */
+    
     private List<String> code;
-
     /**
      * 缓存过期时间
      */
     private String time;
 
 
+
     /**
-     * get 状态码
-     *
-     * @return
-     */
+    * get 状态码
+    *
+    * @return
+    */
     public List<String> getCode() {
         return code;
     }
 
     /**
-     * set 状态码
-     *
-     * @param code
-     */
+    * set 状态码
+    *
+    * @param code
+    */
     public void setCode(List<String> code) {
         this.code = code;
     }
+
 
     /**
      * get 缓存过期时间
@@ -82,15 +84,17 @@ public class Proxycacheitem  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 状态码
-     *
-     * @param code
-     */
+    * set 状态码
+    *
+    * @param code
+    */
     public Proxycacheitem code(List<String> code) {
         this.code = code;
         return this;
     }
+
 
     /**
      * set 缓存过期时间
@@ -101,6 +105,7 @@ public class Proxycacheitem  implements java.io.Serializable {
         this.time = time;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class Proxycacheitem  implements java.io.Serializable {
         }
         this.code.add(code);
     }
-
 }

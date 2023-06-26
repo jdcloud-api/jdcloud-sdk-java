@@ -52,20 +52,20 @@ public class AddDomain  implements java.io.Serializable {
     /**
      * 域名数组
      */
+    
     private List<String> domains;
-
     /**
      * 使用协议，eg:[&quot;http&quot;,&quot;https&quot;]
      * Required:true
      */
     @Required
+    
     private List<String> protocols;
-
     /**
      * ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
      */
+    
     private List<String> sslProtocols;
-
     /**
      * 负载均衡算法，eg:&quot;rr&quot;，&quot;ip_hash&quot;,&quot;weight_rr&quot;
      * Required:true
@@ -118,8 +118,8 @@ public class AddDomain  implements java.io.Serializable {
     /**
      * 自定义加密套件
      */
+    
     private List<String> userSuiteLevel;
-
     /**
      * 请求头是否支持下划线，0-否，1-是。缺省为0
      */
@@ -134,6 +134,7 @@ public class AddDomain  implements java.io.Serializable {
      * 连接超时时间，3-60s
      */
     private Integer proxyConnectTimeout;
+
 
 
     /**
@@ -154,6 +155,7 @@ public class AddDomain  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名，单个
      *
@@ -172,59 +174,63 @@ public class AddDomain  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
-     * get 域名数组
-     *
-     * @return
-     */
+    * get 域名数组
+    *
+    * @return
+    */
     public List<String> getDomains() {
         return domains;
     }
 
     /**
-     * set 域名数组
-     *
-     * @param domains
-     */
+    * set 域名数组
+    *
+    * @param domains
+    */
     public void setDomains(List<String> domains) {
         this.domains = domains;
     }
 
+
     /**
-     * get 使用协议，eg:[&quot;http&quot;,&quot;https&quot;]
-     *
-     * @return
-     */
+    * get 使用协议，eg:[&quot;http&quot;,&quot;https&quot;]
+    *
+    * @return
+    */
     public List<String> getProtocols() {
         return protocols;
     }
 
     /**
-     * set 使用协议，eg:[&quot;http&quot;,&quot;https&quot;]
-     *
-     * @param protocols
-     */
+    * set 使用协议，eg:[&quot;http&quot;,&quot;https&quot;]
+    *
+    * @param protocols
+    */
     public void setProtocols(List<String> protocols) {
         this.protocols = protocols;
     }
 
+
     /**
-     * get ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
-     *
-     * @return
-     */
+    * get ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
+    *
+    * @return
+    */
     public List<String> getSslProtocols() {
         return sslProtocols;
     }
 
     /**
-     * set ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
-     *
-     * @param sslProtocols
-     */
+    * set ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
+    *
+    * @param sslProtocols
+    */
     public void setSslProtocols(List<String> sslProtocols) {
         this.sslProtocols = sslProtocols;
     }
+
 
     /**
      * get 负载均衡算法，eg:&quot;rr&quot;，&quot;ip_hash&quot;,&quot;weight_rr&quot;
@@ -244,6 +250,7 @@ public class AddDomain  implements java.io.Serializable {
         this.lbType = lbType;
     }
 
+
     /**
      * get 回源配置
      *
@@ -261,6 +268,7 @@ public class AddDomain  implements java.io.Serializable {
     public void setRsConfig(RsConfig rsConfig) {
         this.rsConfig = rsConfig;
     }
+
 
     /**
      * get 是否使用前置代理，0为未使用，1为使用
@@ -280,6 +288,7 @@ public class AddDomain  implements java.io.Serializable {
         this.pureClient = pureClient;
     }
 
+
     /**
      * get 1为跳转 0为不跳转
      *
@@ -297,6 +306,7 @@ public class AddDomain  implements java.io.Serializable {
     public void setHttpsRedirect(Integer httpsRedirect) {
         this.httpsRedirect = httpsRedirect;
     }
+
 
     /**
      * get 用户服务器是否只能http回源，1为是，0为否
@@ -316,6 +326,7 @@ public class AddDomain  implements java.io.Serializable {
         this.rsOnlySupportHttp = rsOnlySupportHttp;
     }
 
+
     /**
      * get 是否支持国密证书
      *
@@ -333,6 +344,7 @@ public class AddDomain  implements java.io.Serializable {
     public void setGmCertSupport(Integer gmCertSupport) {
         this.gmCertSupport = gmCertSupport;
     }
+
 
     /**
      * get Waf侧支持http版本，不传时默认值为http1.1,传&quot;http2&quot;为http2
@@ -352,6 +364,7 @@ public class AddDomain  implements java.io.Serializable {
         this.httpVersion = httpVersion;
     }
 
+
     /**
      * get 回源是否支持长链接，0为否
      *
@@ -369,6 +382,7 @@ public class AddDomain  implements java.io.Serializable {
     public void setEnableKeepalive(Integer enableKeepalive) {
         this.enableKeepalive = enableKeepalive;
     }
+
 
     /**
      * get 加密套件等级，0表示默认为中级，1表示高级，2表示低级, 3表示自定义
@@ -388,23 +402,25 @@ public class AddDomain  implements java.io.Serializable {
         this.suiteLevel = suiteLevel;
     }
 
+
     /**
-     * get 自定义加密套件
-     *
-     * @return
-     */
+    * get 自定义加密套件
+    *
+    * @return
+    */
     public List<String> getUserSuiteLevel() {
         return userSuiteLevel;
     }
 
     /**
-     * set 自定义加密套件
-     *
-     * @param userSuiteLevel
-     */
+    * set 自定义加密套件
+    *
+    * @param userSuiteLevel
+    */
     public void setUserSuiteLevel(List<String> userSuiteLevel) {
         this.userSuiteLevel = userSuiteLevel;
     }
+
 
     /**
      * get 请求头是否支持下划线，0-否，1-是。缺省为0
@@ -424,6 +440,7 @@ public class AddDomain  implements java.io.Serializable {
         this.enableUnderscores = enableUnderscores;
     }
 
+
     /**
      * get 禁用被动健康检查，缺省为0-否
      *
@@ -441,6 +458,7 @@ public class AddDomain  implements java.io.Serializable {
     public void setDisableHealthCheck(Integer disableHealthCheck) {
         this.disableHealthCheck = disableHealthCheck;
     }
+
 
     /**
      * get 连接超时时间，3-60s
@@ -461,6 +479,7 @@ public class AddDomain  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例id，代表要设置的WAF实例
      *
@@ -470,6 +489,7 @@ public class AddDomain  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名，单个
@@ -481,35 +501,39 @@ public class AddDomain  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 域名数组
-     *
-     * @param domains
-     */
+    * set 域名数组
+    *
+    * @param domains
+    */
     public AddDomain domains(List<String> domains) {
         this.domains = domains;
         return this;
     }
 
+
     /**
-     * set 使用协议，eg:[&quot;http&quot;,&quot;https&quot;]
-     *
-     * @param protocols
-     */
+    * set 使用协议，eg:[&quot;http&quot;,&quot;https&quot;]
+    *
+    * @param protocols
+    */
     public AddDomain protocols(List<String> protocols) {
         this.protocols = protocols;
         return this;
     }
 
+
     /**
-     * set ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
-     *
-     * @param sslProtocols
-     */
+    * set ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
+    *
+    * @param sslProtocols
+    */
     public AddDomain sslProtocols(List<String> sslProtocols) {
         this.sslProtocols = sslProtocols;
         return this;
     }
+
 
     /**
      * set 负载均衡算法，eg:&quot;rr&quot;，&quot;ip_hash&quot;,&quot;weight_rr&quot;
@@ -521,6 +545,7 @@ public class AddDomain  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 回源配置
      *
@@ -530,6 +555,7 @@ public class AddDomain  implements java.io.Serializable {
         this.rsConfig = rsConfig;
         return this;
     }
+
 
     /**
      * set 是否使用前置代理，0为未使用，1为使用
@@ -541,6 +567,7 @@ public class AddDomain  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 1为跳转 0为不跳转
      *
@@ -550,6 +577,7 @@ public class AddDomain  implements java.io.Serializable {
         this.httpsRedirect = httpsRedirect;
         return this;
     }
+
 
     /**
      * set 用户服务器是否只能http回源，1为是，0为否
@@ -561,6 +589,7 @@ public class AddDomain  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否支持国密证书
      *
@@ -570,6 +599,7 @@ public class AddDomain  implements java.io.Serializable {
         this.gmCertSupport = gmCertSupport;
         return this;
     }
+
 
     /**
      * set Waf侧支持http版本，不传时默认值为http1.1,传&quot;http2&quot;为http2
@@ -581,6 +611,7 @@ public class AddDomain  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 回源是否支持长链接，0为否
      *
@@ -590,6 +621,7 @@ public class AddDomain  implements java.io.Serializable {
         this.enableKeepalive = enableKeepalive;
         return this;
     }
+
 
     /**
      * set 加密套件等级，0表示默认为中级，1表示高级，2表示低级, 3表示自定义
@@ -601,15 +633,17 @@ public class AddDomain  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 自定义加密套件
-     *
-     * @param userSuiteLevel
-     */
+    * set 自定义加密套件
+    *
+    * @param userSuiteLevel
+    */
     public AddDomain userSuiteLevel(List<String> userSuiteLevel) {
         this.userSuiteLevel = userSuiteLevel;
         return this;
     }
+
 
     /**
      * set 请求头是否支持下划线，0-否，1-是。缺省为0
@@ -621,6 +655,7 @@ public class AddDomain  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 禁用被动健康检查，缺省为0-否
      *
@@ -631,6 +666,7 @@ public class AddDomain  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 连接超时时间，3-60s
      *
@@ -640,6 +676,7 @@ public class AddDomain  implements java.io.Serializable {
         this.proxyConnectTimeout = proxyConnectTimeout;
         return this;
     }
+
 
 
     /**
@@ -689,5 +726,4 @@ public class AddDomain  implements java.io.Serializable {
         }
         this.userSuiteLevel.add(userSuiteLevel);
     }
-
 }

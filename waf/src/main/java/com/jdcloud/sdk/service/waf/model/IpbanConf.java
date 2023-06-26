@@ -48,6 +48,7 @@ public class IpbanConf  implements java.io.Serializable {
     private DenyActionCfg action;
 
 
+
     /**
      * get 是否使能 0表示否
      *
@@ -66,6 +67,7 @@ public class IpbanConf  implements java.io.Serializable {
         this.enable = enable;
     }
 
+
     /**
      * get 防护模式
      *
@@ -83,6 +85,7 @@ public class IpbanConf  implements java.io.Serializable {
     public void setIpbanMode(Integer ipbanMode) {
         this.ipbanMode = ipbanMode;
     }
+
 
     /**
      * get 动作配置
@@ -103,6 +106,7 @@ public class IpbanConf  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否使能 0表示否
      *
@@ -113,6 +117,7 @@ public class IpbanConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 防护模式
      *
@@ -122,6 +127,7 @@ public class IpbanConf  implements java.io.Serializable {
         this.ipbanMode = ipbanMode;
         return this;
     }
+
 
     /**
      * set 动作配置

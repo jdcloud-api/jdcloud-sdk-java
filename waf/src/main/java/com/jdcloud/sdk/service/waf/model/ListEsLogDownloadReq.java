@@ -70,6 +70,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
     private Integer pageIndex;
 
 
+
     /**
      * get 实例id，代表要查询的WAF实例
      *
@@ -87,6 +88,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名，为空时表示当前实例下的所有域名
@@ -106,6 +108,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
@@ -123,6 +126,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
     public void setStart(Integer start) {
         this.start = start;
     }
+
 
     /**
      * get 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
@@ -142,6 +146,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
         this.end = end;
     }
 
+
     /**
      * get 每页显示的个数，默认是10。
      *
@@ -159,6 +164,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 页数，默认是1。
@@ -179,6 +185,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例id，代表要查询的WAF实例
      *
@@ -188,6 +195,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名，为空时表示当前实例下的所有域名
@@ -199,6 +207,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
@@ -208,6 +217,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
         this.start = start;
         return this;
     }
+
 
     /**
      * set 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
@@ -219,6 +229,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 每页显示的个数，默认是10。
      *
@@ -228,6 +239,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 页数，默认是1。

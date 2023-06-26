@@ -49,6 +49,7 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
     private String orderNumber;
 
 
+
     /**
      * get buyId
      *
@@ -67,6 +68,7 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
         this.buyId = buyId;
     }
 
+
     /**
      * get wafInstanceId
      *
@@ -84,6 +86,7 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get orderNumber
@@ -104,6 +107,7 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
     }
 
 
+
     /**
      * set buyId
      *
@@ -114,6 +118,7 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
         return this;
     }
 
+
     /**
      * set wafInstanceId
      *
@@ -123,6 +128,7 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set orderNumber

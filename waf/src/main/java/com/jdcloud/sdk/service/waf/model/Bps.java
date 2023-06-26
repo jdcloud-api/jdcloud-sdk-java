@@ -43,6 +43,7 @@ public class Bps  implements java.io.Serializable {
     private ChartItemValue downBps;
 
 
+
     /**
      * get upBps
      *
@@ -60,6 +61,7 @@ public class Bps  implements java.io.Serializable {
     public void setUpBps(ChartItemValue upBps) {
         this.upBps = upBps;
     }
+
 
     /**
      * get downBps
@@ -80,6 +82,7 @@ public class Bps  implements java.io.Serializable {
     }
 
 
+
     /**
      * set upBps
      *
@@ -89,6 +92,7 @@ public class Bps  implements java.io.Serializable {
         this.upBps = upBps;
         return this;
     }
+
 
     /**
      * set downBps

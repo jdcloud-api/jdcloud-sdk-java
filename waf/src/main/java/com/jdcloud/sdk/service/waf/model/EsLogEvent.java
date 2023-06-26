@@ -35,7 +35,7 @@ public class EsLogEvent  implements java.io.Serializable {
     /**
      * 产生时间
      */
-    private Integer accessTime;
+    private Long accessTime;
 
     /**
      * 源ip
@@ -233,12 +233,13 @@ public class EsLogEvent  implements java.io.Serializable {
     private String antiRiskRaw;
 
 
+
     /**
      * get 产生时间
      *
      * @return
      */
-    public Integer getAccessTime() {
+    public Long getAccessTime() {
         return accessTime;
     }
 
@@ -247,9 +248,10 @@ public class EsLogEvent  implements java.io.Serializable {
      *
      * @param accessTime
      */
-    public void setAccessTime(Integer accessTime) {
+    public void setAccessTime(Long accessTime) {
         this.accessTime = accessTime;
     }
+
 
     /**
      * get 源ip
@@ -269,6 +271,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.remoteAddr = remoteAddr;
     }
 
+
     /**
      * get 客户端port
      *
@@ -286,6 +289,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setRemotePort(String remotePort) {
         this.remotePort = remotePort;
     }
+
 
     /**
      * get 域名
@@ -305,6 +309,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 来源地区
      *
@@ -322,6 +327,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setArea(String area) {
         this.area = area;
     }
+
 
     /**
      * get 方法
@@ -341,6 +347,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.method = method;
     }
 
+
     /**
      * get url
      *
@@ -358,6 +365,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get 恶意负载
@@ -377,6 +385,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.payLoad = payLoad;
     }
 
+
     /**
      * get 响应信息
      *
@@ -394,6 +403,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 日志类型
@@ -413,6 +423,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.logType = logType;
     }
 
+
     /**
      * get 动作
      *
@@ -430,6 +441,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setAction(String action) {
         this.action = action;
     }
+
 
     /**
      * get 请求ID
@@ -449,6 +461,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.requestId = requestId;
     }
 
+
     /**
      * get 回源错误信息
      *
@@ -466,6 +479,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setUpstreamErr(String upstreamErr) {
         this.upstreamErr = upstreamErr;
     }
+
 
     /**
      * get 日志记录时间
@@ -485,6 +499,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.timeLocal = timeLocal;
     }
 
+
     /**
      * get 本机域名
      *
@@ -502,6 +517,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setHostname(String hostname) {
         this.hostname = hostname;
     }
+
 
     /**
      * get 响应长度
@@ -521,6 +537,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.bytesSent = bytesSent;
     }
 
+
     /**
      * get 请求长度
      *
@@ -538,6 +555,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setRequestLength(String requestLength) {
         this.requestLength = requestLength;
     }
+
 
     /**
      * get 客户端请求的域名
@@ -557,6 +575,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.host = host;
     }
 
+
     /**
      * get jfe的server块监听IP
      *
@@ -574,6 +593,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setServerAddr(String serverAddr) {
         this.serverAddr = serverAddr;
     }
+
 
     /**
      * get jfe的server块监听port
@@ -593,6 +613,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.serverPort = serverPort;
     }
 
+
     /**
      * get 请求所连接的upstream名称
      *
@@ -610,6 +631,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setUpstreamHttpName(String upstreamHttpName) {
         this.upstreamHttpName = upstreamHttpName;
     }
+
 
     /**
      * get 请求所连接的upstream服务器IP
@@ -629,6 +651,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.upstreamAddr = upstreamAddr;
     }
 
+
     /**
      * get 请求所连接的upstream服务器port
      *
@@ -646,6 +669,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setUpstreamHttpPort(String upstreamHttpPort) {
         this.upstreamHttpPort = upstreamHttpPort;
     }
+
 
     /**
      * get 等待upstream建立连接的时间
@@ -665,6 +689,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.upstreamConnectTime = upstreamConnectTime;
     }
 
+
     /**
      * get 接收upstream请求头的时间
      *
@@ -682,6 +707,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setUpstreamHeaderTime(String upstreamHeaderTime) {
         this.upstreamHeaderTime = upstreamHeaderTime;
     }
+
 
     /**
      * get 接收upstream响应头的时间
@@ -701,6 +727,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.upstreamResponseTime = upstreamResponseTime;
     }
 
+
     /**
      * get 请求处理时间
      *
@@ -718,6 +745,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setRequestTime(String requestTime) {
         this.requestTime = requestTime;
     }
+
 
     /**
      * get 请求头的UA字段
@@ -737,6 +765,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.httpUserAgent = httpUserAgent;
     }
 
+
     /**
      * get 攻击类型
      *
@@ -754,6 +783,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setAntiReason(String antiReason) {
         this.antiReason = antiReason;
     }
+
 
     /**
      * get 请求来源
@@ -773,6 +803,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.httpReferer = httpReferer;
     }
 
+
     /**
      * get 请求协议
      *
@@ -790,6 +821,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setScheme(String scheme) {
         this.scheme = scheme;
     }
+
 
     /**
      * get uri
@@ -809,6 +841,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.uri = uri;
     }
 
+
     /**
      * get 断点续传响应分片位置
      *
@@ -826,6 +859,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setSentHttpContentRange(String sentHttpContentRange) {
         this.sentHttpContentRange = sentHttpContentRange;
     }
+
 
     /**
      * get 客户端IP
@@ -845,6 +879,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.antiRemoteAddr = antiRemoteAddr;
     }
 
+
     /**
      * get 原响应码
      *
@@ -862,6 +897,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setAntiStatus(String antiStatus) {
         this.antiStatus = antiStatus;
     }
+
 
     /**
      * get 命中规则请求原始请求报文
@@ -881,6 +917,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.antiReqRaw = antiReqRaw;
     }
 
+
     /**
      * get 命中规则请求原始响应报文
      *
@@ -898,6 +935,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setAntiRespRaw(String antiRespRaw) {
         this.antiRespRaw = antiRespRaw;
     }
+
 
     /**
      * get 来源地域信息
@@ -917,6 +955,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.antiGeo = antiGeo;
     }
 
+
     /**
      * get 指纹ID
      *
@@ -934,6 +973,7 @@ public class EsLogEvent  implements java.io.Serializable {
     public void setAntiRiskFid(String antiRiskFid) {
         this.antiRiskFid = antiRiskFid;
     }
+
 
     /**
      * get 指纹采集详细信息
@@ -954,15 +994,17 @@ public class EsLogEvent  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 产生时间
      *
      * @param accessTime
      */
-    public EsLogEvent accessTime(Integer accessTime) {
+    public EsLogEvent accessTime(Long accessTime) {
         this.accessTime = accessTime;
         return this;
     }
+
 
     /**
      * set 源ip
@@ -974,6 +1016,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 客户端port
      *
@@ -983,6 +1026,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.remotePort = remotePort;
         return this;
     }
+
 
     /**
      * set 域名
@@ -994,6 +1038,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 来源地区
      *
@@ -1003,6 +1048,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.area = area;
         return this;
     }
+
 
     /**
      * set 方法
@@ -1014,6 +1060,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set url
      *
@@ -1023,6 +1070,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.url = url;
         return this;
     }
+
 
     /**
      * set 恶意负载
@@ -1034,6 +1082,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 响应信息
      *
@@ -1043,6 +1092,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 日志类型
@@ -1054,6 +1104,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 动作
      *
@@ -1063,6 +1114,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.action = action;
         return this;
     }
+
 
     /**
      * set 请求ID
@@ -1074,6 +1126,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 回源错误信息
      *
@@ -1083,6 +1136,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.upstreamErr = upstreamErr;
         return this;
     }
+
 
     /**
      * set 日志记录时间
@@ -1094,6 +1148,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 本机域名
      *
@@ -1103,6 +1158,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.hostname = hostname;
         return this;
     }
+
 
     /**
      * set 响应长度
@@ -1114,6 +1170,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 请求长度
      *
@@ -1123,6 +1180,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.requestLength = requestLength;
         return this;
     }
+
 
     /**
      * set 客户端请求的域名
@@ -1134,6 +1192,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set jfe的server块监听IP
      *
@@ -1143,6 +1202,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.serverAddr = serverAddr;
         return this;
     }
+
 
     /**
      * set jfe的server块监听port
@@ -1154,6 +1214,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 请求所连接的upstream名称
      *
@@ -1163,6 +1224,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.upstreamHttpName = upstreamHttpName;
         return this;
     }
+
 
     /**
      * set 请求所连接的upstream服务器IP
@@ -1174,6 +1236,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 请求所连接的upstream服务器port
      *
@@ -1183,6 +1246,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.upstreamHttpPort = upstreamHttpPort;
         return this;
     }
+
 
     /**
      * set 等待upstream建立连接的时间
@@ -1194,6 +1258,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 接收upstream请求头的时间
      *
@@ -1203,6 +1268,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.upstreamHeaderTime = upstreamHeaderTime;
         return this;
     }
+
 
     /**
      * set 接收upstream响应头的时间
@@ -1214,6 +1280,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 请求处理时间
      *
@@ -1223,6 +1290,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.requestTime = requestTime;
         return this;
     }
+
 
     /**
      * set 请求头的UA字段
@@ -1234,6 +1302,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 攻击类型
      *
@@ -1243,6 +1312,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.antiReason = antiReason;
         return this;
     }
+
 
     /**
      * set 请求来源
@@ -1254,6 +1324,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 请求协议
      *
@@ -1263,6 +1334,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.scheme = scheme;
         return this;
     }
+
 
     /**
      * set uri
@@ -1274,6 +1346,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 断点续传响应分片位置
      *
@@ -1283,6 +1356,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.sentHttpContentRange = sentHttpContentRange;
         return this;
     }
+
 
     /**
      * set 客户端IP
@@ -1294,6 +1368,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 原响应码
      *
@@ -1303,6 +1378,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.antiStatus = antiStatus;
         return this;
     }
+
 
     /**
      * set 命中规则请求原始请求报文
@@ -1314,6 +1390,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 命中规则请求原始响应报文
      *
@@ -1323,6 +1400,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.antiRespRaw = antiRespRaw;
         return this;
     }
+
 
     /**
      * set 来源地域信息
@@ -1334,6 +1412,7 @@ public class EsLogEvent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 指纹ID
      *
@@ -1343,6 +1422,7 @@ public class EsLogEvent  implements java.io.Serializable {
         this.antiRiskFid = antiRiskFid;
         return this;
     }
+
 
     /**
      * set 指纹采集详细信息

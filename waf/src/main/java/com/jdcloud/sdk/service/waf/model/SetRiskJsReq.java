@@ -65,6 +65,7 @@ public class SetRiskJsReq  implements java.io.Serializable {
     private String uri;
 
 
+
     /**
      * get 规则id,新增时传0
      *
@@ -82,6 +83,7 @@ public class SetRiskJsReq  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get WAF实例id
@@ -101,6 +103,7 @@ public class SetRiskJsReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -119,6 +122,7 @@ public class SetRiskJsReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 匹配类型   完全匹配&quot;&quot; 前缀匹配:&quot;sw&quot;
      *
@@ -136,6 +140,7 @@ public class SetRiskJsReq  implements java.io.Serializable {
     public void setMatchOp(String matchOp) {
         this.matchOp = matchOp;
     }
+
 
     /**
      * get uri 以/开头
@@ -156,6 +161,7 @@ public class SetRiskJsReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id,新增时传0
      *
@@ -165,6 +171,7 @@ public class SetRiskJsReq  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set WAF实例id
@@ -176,6 +183,7 @@ public class SetRiskJsReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -186,6 +194,7 @@ public class SetRiskJsReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配类型   完全匹配&quot;&quot; 前缀匹配:&quot;sw&quot;
      *
@@ -195,6 +204,7 @@ public class SetRiskJsReq  implements java.io.Serializable {
         this.matchOp = matchOp;
         return this;
     }
+
 
     /**
      * set uri 以/开头

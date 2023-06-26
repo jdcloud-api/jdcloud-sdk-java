@@ -60,6 +60,7 @@ public class AssignCertReq  implements java.io.Serializable {
     private Integer isGm;
 
 
+
     /**
      * get 实例id，代表要查询的WAF实例
      *
@@ -77,6 +78,7 @@ public class AssignCertReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -96,6 +98,7 @@ public class AssignCertReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 要绑定证书的Id
      *
@@ -113,6 +116,7 @@ public class AssignCertReq  implements java.io.Serializable {
     public void setCertId(String certId) {
         this.certId = certId;
     }
+
 
     /**
      * get 是否国密
@@ -133,6 +137,7 @@ public class AssignCertReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例id，代表要查询的WAF实例
      *
@@ -142,6 +147,7 @@ public class AssignCertReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -153,6 +159,7 @@ public class AssignCertReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 要绑定证书的Id
      *
@@ -162,6 +169,7 @@ public class AssignCertReq  implements java.io.Serializable {
         this.certId = certId;
         return this;
     }
+
 
     /**
      * set 是否国密

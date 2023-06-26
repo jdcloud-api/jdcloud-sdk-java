@@ -56,6 +56,7 @@ public class ListBotStdRuleReq  implements java.io.Serializable {
     private Integer pageIndex;
 
 
+
     /**
      * get 域名
      *
@@ -73,6 +74,7 @@ public class ListBotStdRuleReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get bot类型，模糊检索
@@ -92,6 +94,7 @@ public class ListBotStdRuleReq  implements java.io.Serializable {
         this.botType = botType;
     }
 
+
     /**
      * get 页面大小，默认10
      *
@@ -109,6 +112,7 @@ public class ListBotStdRuleReq  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 页码，默认1
@@ -129,6 +133,7 @@ public class ListBotStdRuleReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 域名
      *
@@ -138,6 +143,7 @@ public class ListBotStdRuleReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set bot类型，模糊检索
@@ -149,6 +155,7 @@ public class ListBotStdRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 页面大小，默认10
      *
@@ -158,6 +165,7 @@ public class ListBotStdRuleReq  implements java.io.Serializable {
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 页码，默认1

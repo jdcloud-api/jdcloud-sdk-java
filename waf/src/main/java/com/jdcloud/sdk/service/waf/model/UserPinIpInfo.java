@@ -43,6 +43,7 @@ public class UserPinIpInfo  implements java.io.Serializable {
     private String ip;
 
 
+
     /**
      * get 带宽，单位M
      *
@@ -60,6 +61,7 @@ public class UserPinIpInfo  implements java.io.Serializable {
     public void setBandwidth(Long bandwidth) {
         this.bandwidth = bandwidth;
     }
+
 
     /**
      * get ip addr
@@ -80,6 +82,7 @@ public class UserPinIpInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 带宽，单位M
      *
@@ -89,6 +92,7 @@ public class UserPinIpInfo  implements java.io.Serializable {
         this.bandwidth = bandwidth;
         return this;
     }
+
 
     /**
      * set ip addr

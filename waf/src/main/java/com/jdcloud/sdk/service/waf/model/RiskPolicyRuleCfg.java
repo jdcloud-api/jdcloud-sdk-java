@@ -63,6 +63,7 @@ public class RiskPolicyRuleCfg  implements java.io.Serializable {
     private String right;
 
 
+
     /**
      * get 名称
      *
@@ -80,6 +81,7 @@ public class RiskPolicyRuleCfg  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 左变量类型
@@ -99,6 +101,7 @@ public class RiskPolicyRuleCfg  implements java.io.Serializable {
         this.leftType = leftType;
     }
 
+
     /**
      * get 左变量
      *
@@ -116,6 +119,7 @@ public class RiskPolicyRuleCfg  implements java.io.Serializable {
     public void setLeft(String left) {
         this.left = left;
     }
+
 
     /**
      * get 操作符
@@ -135,6 +139,7 @@ public class RiskPolicyRuleCfg  implements java.io.Serializable {
         this.operator = operator;
     }
 
+
     /**
      * get 右变量类型
      *
@@ -152,6 +157,7 @@ public class RiskPolicyRuleCfg  implements java.io.Serializable {
     public void setRightType(String rightType) {
         this.rightType = rightType;
     }
+
 
     /**
      * get 右变量
@@ -172,6 +178,7 @@ public class RiskPolicyRuleCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 名称
      *
@@ -181,6 +188,7 @@ public class RiskPolicyRuleCfg  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 左变量类型
@@ -192,6 +200,7 @@ public class RiskPolicyRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 左变量
      *
@@ -201,6 +210,7 @@ public class RiskPolicyRuleCfg  implements java.io.Serializable {
         this.left = left;
         return this;
     }
+
 
     /**
      * set 操作符
@@ -212,6 +222,7 @@ public class RiskPolicyRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 右变量类型
      *
@@ -221,6 +232,7 @@ public class RiskPolicyRuleCfg  implements java.io.Serializable {
         this.rightType = rightType;
         return this;
     }
+
 
     /**
      * set 右变量

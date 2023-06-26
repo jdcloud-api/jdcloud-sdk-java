@@ -57,14 +57,15 @@ public class DisableRulesReq  implements java.io.Serializable {
     /**
      * 操作的规则id, ruleType非&quot;waf&quot;时必填
      */
+    
     private List<Integer> ids;
-
     /**
-     * 操作的规则类型，&quot;waf&quot;:waf总体防护开关，&quot;cc&quot;:cc规则，&quot;ratelimit&quot;：限速，&quot;usrdefCookie&quot;:cookie类型的黑白名单，&quot;usrdefGeo&quot;:geo类型的黑白名单，&quot;usrdefHeaders&quot;:header类型的黑白名单，&quot;usrdefIP&quot;:ip类型的黑白名单，&quot;usrdefURI&quot;:uri类型的黑白名单，&quot;filterReqresp&quot;:请求头类型的流量管理，&quot;filterSenseinfo&quot;:敏感信息防泄漏，&quot;usrdefWaf&quot;:waf自定义规则,&quot;rewriteRule&quot;:重写规则（目前是uri重写规则）,&quot;listRule&quot;:黑白名单规则（目前指method黑白名单）,&quot;proxycache&quot;:url缓存，&quot;botUsr&quot;:自定义类型BOT规则,&quot;risk&quot;:风险防护规则,&quot;riskEvent&quot;:风险控制事件,&quot;riskUsrList&quot;:风险控制用户自定义名单
+     * 操作的规则类型，&quot;waf&quot;:waf总体防护开关，&quot;cc&quot;:cc规则，&quot;ratelimit&quot;：限速，&quot;usrdefCookie&quot;:cookie类型的黑白名单，&quot;usrdefGeo&quot;:geo类型的黑白名单，&quot;usrdefOwner&quot;:owner类型的黑白名单,&quot;usrdefHeaders&quot;:header类型的黑白名单，&quot;usrdefIP&quot;:ip类型的黑白名单，&quot;usrdefURI&quot;:uri类型的黑白名单，&quot;filterReqresp&quot;:请求头类型的流量管理，&quot;filterSenseinfo&quot;:敏感信息防泄漏，&quot;usrdefWaf&quot;:waf自定义规则,&quot;rewriteRule&quot;:重写规则（目前是uri重写规则）,&quot;listRule&quot;:黑白名单规则（目前指method黑白名单）,&quot;proxycache&quot;:url缓存，&quot;botUsr&quot;:自定义类型BOT规则,&quot;risk&quot;:风险防护规则,&quot;riskEvent&quot;:风险控制事件,&quot;riskUsrList&quot;:风险控制用户自定义名单
      * Required:true
      */
     @Required
     private String ruleType;
+
 
 
     /**
@@ -85,6 +86,7 @@ public class DisableRulesReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -102,6 +104,7 @@ public class DisableRulesReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 0:使用规则，1：禁用规则
@@ -121,26 +124,28 @@ public class DisableRulesReq  implements java.io.Serializable {
         this.disable = disable;
     }
 
+
     /**
-     * get 操作的规则id, ruleType非&quot;waf&quot;时必填
-     *
-     * @return
-     */
+    * get 操作的规则id, ruleType非&quot;waf&quot;时必填
+    *
+    * @return
+    */
     public List<Integer> getIds() {
         return ids;
     }
 
     /**
-     * set 操作的规则id, ruleType非&quot;waf&quot;时必填
-     *
-     * @param ids
-     */
+    * set 操作的规则id, ruleType非&quot;waf&quot;时必填
+    *
+    * @param ids
+    */
     public void setIds(List<Integer> ids) {
         this.ids = ids;
     }
 
+
     /**
-     * get 操作的规则类型，&quot;waf&quot;:waf总体防护开关，&quot;cc&quot;:cc规则，&quot;ratelimit&quot;：限速，&quot;usrdefCookie&quot;:cookie类型的黑白名单，&quot;usrdefGeo&quot;:geo类型的黑白名单，&quot;usrdefHeaders&quot;:header类型的黑白名单，&quot;usrdefIP&quot;:ip类型的黑白名单，&quot;usrdefURI&quot;:uri类型的黑白名单，&quot;filterReqresp&quot;:请求头类型的流量管理，&quot;filterSenseinfo&quot;:敏感信息防泄漏，&quot;usrdefWaf&quot;:waf自定义规则,&quot;rewriteRule&quot;:重写规则（目前是uri重写规则）,&quot;listRule&quot;:黑白名单规则（目前指method黑白名单）,&quot;proxycache&quot;:url缓存，&quot;botUsr&quot;:自定义类型BOT规则,&quot;risk&quot;:风险防护规则,&quot;riskEvent&quot;:风险控制事件,&quot;riskUsrList&quot;:风险控制用户自定义名单
+     * get 操作的规则类型，&quot;waf&quot;:waf总体防护开关，&quot;cc&quot;:cc规则，&quot;ratelimit&quot;：限速，&quot;usrdefCookie&quot;:cookie类型的黑白名单，&quot;usrdefGeo&quot;:geo类型的黑白名单，&quot;usrdefOwner&quot;:owner类型的黑白名单,&quot;usrdefHeaders&quot;:header类型的黑白名单，&quot;usrdefIP&quot;:ip类型的黑白名单，&quot;usrdefURI&quot;:uri类型的黑白名单，&quot;filterReqresp&quot;:请求头类型的流量管理，&quot;filterSenseinfo&quot;:敏感信息防泄漏，&quot;usrdefWaf&quot;:waf自定义规则,&quot;rewriteRule&quot;:重写规则（目前是uri重写规则）,&quot;listRule&quot;:黑白名单规则（目前指method黑白名单）,&quot;proxycache&quot;:url缓存，&quot;botUsr&quot;:自定义类型BOT规则,&quot;risk&quot;:风险防护规则,&quot;riskEvent&quot;:风险控制事件,&quot;riskUsrList&quot;:风险控制用户自定义名单
      *
      * @return
      */
@@ -149,13 +154,14 @@ public class DisableRulesReq  implements java.io.Serializable {
     }
 
     /**
-     * set 操作的规则类型，&quot;waf&quot;:waf总体防护开关，&quot;cc&quot;:cc规则，&quot;ratelimit&quot;：限速，&quot;usrdefCookie&quot;:cookie类型的黑白名单，&quot;usrdefGeo&quot;:geo类型的黑白名单，&quot;usrdefHeaders&quot;:header类型的黑白名单，&quot;usrdefIP&quot;:ip类型的黑白名单，&quot;usrdefURI&quot;:uri类型的黑白名单，&quot;filterReqresp&quot;:请求头类型的流量管理，&quot;filterSenseinfo&quot;:敏感信息防泄漏，&quot;usrdefWaf&quot;:waf自定义规则,&quot;rewriteRule&quot;:重写规则（目前是uri重写规则）,&quot;listRule&quot;:黑白名单规则（目前指method黑白名单）,&quot;proxycache&quot;:url缓存，&quot;botUsr&quot;:自定义类型BOT规则,&quot;risk&quot;:风险防护规则,&quot;riskEvent&quot;:风险控制事件,&quot;riskUsrList&quot;:风险控制用户自定义名单
+     * set 操作的规则类型，&quot;waf&quot;:waf总体防护开关，&quot;cc&quot;:cc规则，&quot;ratelimit&quot;：限速，&quot;usrdefCookie&quot;:cookie类型的黑白名单，&quot;usrdefGeo&quot;:geo类型的黑白名单，&quot;usrdefOwner&quot;:owner类型的黑白名单,&quot;usrdefHeaders&quot;:header类型的黑白名单，&quot;usrdefIP&quot;:ip类型的黑白名单，&quot;usrdefURI&quot;:uri类型的黑白名单，&quot;filterReqresp&quot;:请求头类型的流量管理，&quot;filterSenseinfo&quot;:敏感信息防泄漏，&quot;usrdefWaf&quot;:waf自定义规则,&quot;rewriteRule&quot;:重写规则（目前是uri重写规则）,&quot;listRule&quot;:黑白名单规则（目前指method黑白名单）,&quot;proxycache&quot;:url缓存，&quot;botUsr&quot;:自定义类型BOT规则,&quot;risk&quot;:风险防护规则,&quot;riskEvent&quot;:风险控制事件,&quot;riskUsrList&quot;:风险控制用户自定义名单
      *
      * @param ruleType
      */
     public void setRuleType(String ruleType) {
         this.ruleType = ruleType;
     }
+
 
 
     /**
@@ -168,6 +174,7 @@ public class DisableRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -177,6 +184,7 @@ public class DisableRulesReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 0:使用规则，1：禁用规则
@@ -188,18 +196,20 @@ public class DisableRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 操作的规则id, ruleType非&quot;waf&quot;时必填
-     *
-     * @param ids
-     */
+    * set 操作的规则id, ruleType非&quot;waf&quot;时必填
+    *
+    * @param ids
+    */
     public DisableRulesReq ids(List<Integer> ids) {
         this.ids = ids;
         return this;
     }
 
+
     /**
-     * set 操作的规则类型，&quot;waf&quot;:waf总体防护开关，&quot;cc&quot;:cc规则，&quot;ratelimit&quot;：限速，&quot;usrdefCookie&quot;:cookie类型的黑白名单，&quot;usrdefGeo&quot;:geo类型的黑白名单，&quot;usrdefHeaders&quot;:header类型的黑白名单，&quot;usrdefIP&quot;:ip类型的黑白名单，&quot;usrdefURI&quot;:uri类型的黑白名单，&quot;filterReqresp&quot;:请求头类型的流量管理，&quot;filterSenseinfo&quot;:敏感信息防泄漏，&quot;usrdefWaf&quot;:waf自定义规则,&quot;rewriteRule&quot;:重写规则（目前是uri重写规则）,&quot;listRule&quot;:黑白名单规则（目前指method黑白名单）,&quot;proxycache&quot;:url缓存，&quot;botUsr&quot;:自定义类型BOT规则,&quot;risk&quot;:风险防护规则,&quot;riskEvent&quot;:风险控制事件,&quot;riskUsrList&quot;:风险控制用户自定义名单
+     * set 操作的规则类型，&quot;waf&quot;:waf总体防护开关，&quot;cc&quot;:cc规则，&quot;ratelimit&quot;：限速，&quot;usrdefCookie&quot;:cookie类型的黑白名单，&quot;usrdefGeo&quot;:geo类型的黑白名单，&quot;usrdefOwner&quot;:owner类型的黑白名单,&quot;usrdefHeaders&quot;:header类型的黑白名单，&quot;usrdefIP&quot;:ip类型的黑白名单，&quot;usrdefURI&quot;:uri类型的黑白名单，&quot;filterReqresp&quot;:请求头类型的流量管理，&quot;filterSenseinfo&quot;:敏感信息防泄漏，&quot;usrdefWaf&quot;:waf自定义规则,&quot;rewriteRule&quot;:重写规则（目前是uri重写规则）,&quot;listRule&quot;:黑白名单规则（目前指method黑白名单）,&quot;proxycache&quot;:url缓存，&quot;botUsr&quot;:自定义类型BOT规则,&quot;risk&quot;:风险防护规则,&quot;riskEvent&quot;:风险控制事件,&quot;riskUsrList&quot;:风险控制用户自定义名单
      *
      * @param ruleType
      */
@@ -207,6 +217,7 @@ public class DisableRulesReq  implements java.io.Serializable {
         this.ruleType = ruleType;
         return this;
     }
+
 
 
     /**
@@ -220,5 +231,4 @@ public class DisableRulesReq  implements java.io.Serializable {
         }
         this.ids.add(id);
     }
-
 }

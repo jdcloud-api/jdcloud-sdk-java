@@ -50,6 +50,7 @@ public class GetAntiEventRequest extends JdcloudRequest implements java.io.Seria
     private String regionId;
 
 
+
     /**
      * get 请求
      *
@@ -67,6 +68,7 @@ public class GetAntiEventRequest extends JdcloudRequest implements java.io.Seria
     public void setReq(GetAntiEventReq req) {
         this.req = req;
     }
+
 
     /**
      * get 实例所属的地域ID
@@ -87,6 +89,7 @@ public class GetAntiEventRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 请求
      *
@@ -96,6 +99,7 @@ public class GetAntiEventRequest extends JdcloudRequest implements java.io.Seria
         this.req = req;
         return this;
     }
+
 
     /**
      * set 实例所属的地域ID

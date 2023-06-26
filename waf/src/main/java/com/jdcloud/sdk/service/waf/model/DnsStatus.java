@@ -43,6 +43,7 @@ public class DnsStatus  implements java.io.Serializable {
     private String statusMsg;
 
 
+
     /**
      * get 接入状态。0表示既没有cname，也没有流量，1表示有cname接入，没有流量，2代表两者都有
      *
@@ -60,6 +61,7 @@ public class DnsStatus  implements java.io.Serializable {
     public void setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
     }
+
 
     /**
      * get 接入状态描述
@@ -80,6 +82,7 @@ public class DnsStatus  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 接入状态。0表示既没有cname，也没有流量，1表示有cname接入，没有流量，2代表两者都有
      *
@@ -89,6 +92,7 @@ public class DnsStatus  implements java.io.Serializable {
         this.statusCode = statusCode;
         return this;
     }
+
 
     /**
      * set 接入状态描述

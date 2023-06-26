@@ -73,8 +73,8 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<BotMatchItem> matchItems;
-
     /**
      * 动作配置
      * Required:true
@@ -123,6 +123,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     private Integer blockTime;
 
 
+
     /**
      * get 规则id，新增时为0或不传
      *
@@ -140,6 +141,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 域名
@@ -159,6 +161,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 规则名
      *
@@ -176,6 +179,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     public void setRuleName(String ruleName) {
         this.ruleName = ruleName;
     }
+
 
     /**
      * get 次数阈值，[1-20000]
@@ -195,6 +199,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         this.detectThrsd = detectThrsd;
     }
 
+
     /**
      * get 检测时长，秒，[1-20000]
      *
@@ -213,23 +218,25 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         this.detectPeriod = detectPeriod;
     }
 
+
     /**
-     * get 匹配条件集,总长度不能超过4096
-     *
-     * @return
-     */
+    * get 匹配条件集,总长度不能超过4096
+    *
+    * @return
+    */
     public List<BotMatchItem> getMatchItems() {
         return matchItems;
     }
 
     /**
-     * set 匹配条件集,总长度不能超过4096
-     *
-     * @param matchItems
-     */
+    * set 匹配条件集,总长度不能超过4096
+    *
+    * @param matchItems
+    */
     public void setMatchItems(List<BotMatchItem> matchItems) {
         this.matchItems = matchItems;
     }
+
 
     /**
      * get 动作配置
@@ -249,6 +256,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         this.action = action;
     }
 
+
     /**
      * get 规则类型，general-通用规则，advanced-高级规则，evaluate-智能规则 缺省为general
      *
@@ -266,6 +274,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     public void setRuleType(String ruleType) {
         this.ruleType = ruleType;
     }
+
 
     /**
      * get 响应状态码
@@ -285,6 +294,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 状态码数量阀值
      *
@@ -302,6 +312,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     public void setStsthrst(Integer ststhrst) {
         this.ststhrst = ststhrst;
     }
+
 
     /**
      * get 状态码比例阀值
@@ -321,6 +332,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         this.ststhrstRatio = ststhrstRatio;
     }
 
+
     /**
      * get 响应码功能是否启用
      *
@@ -338,6 +350,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     public void setStatusDisable(Integer statusDisable) {
         this.statusDisable = statusDisable;
     }
+
 
     /**
      * get 规则生效时间是否启用
@@ -357,6 +370,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         this.dateDisable = dateDisable;
     }
 
+
     /**
      * get 统计维度
      *
@@ -374,6 +388,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     public void setUnit(String unit) {
         this.unit = unit;
     }
+
 
     /**
      * get 持续时间, 单位分钟，范围[1-24*60]
@@ -394,6 +409,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id，新增时为0或不传
      *
@@ -403,6 +419,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 域名
@@ -414,6 +431,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则名
      *
@@ -423,6 +441,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         this.ruleName = ruleName;
         return this;
     }
+
 
     /**
      * set 次数阈值，[1-20000]
@@ -434,6 +453,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 检测时长，秒，[1-20000]
      *
@@ -444,15 +464,17 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 匹配条件集,总长度不能超过4096
-     *
-     * @param matchItems
-     */
+    * set 匹配条件集,总长度不能超过4096
+    *
+    * @param matchItems
+    */
     public SetBotUsrRuleReq matchItems(List<BotMatchItem> matchItems) {
         this.matchItems = matchItems;
         return this;
     }
+
 
     /**
      * set 动作配置
@@ -464,6 +486,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则类型，general-通用规则，advanced-高级规则，evaluate-智能规则 缺省为general
      *
@@ -473,6 +496,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         this.ruleType = ruleType;
         return this;
     }
+
 
     /**
      * set 响应状态码
@@ -484,6 +508,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态码数量阀值
      *
@@ -493,6 +518,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         this.ststhrst = ststhrst;
         return this;
     }
+
 
     /**
      * set 状态码比例阀值
@@ -504,6 +530,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 响应码功能是否启用
      *
@@ -513,6 +540,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         this.statusDisable = statusDisable;
         return this;
     }
+
 
     /**
      * set 规则生效时间是否启用
@@ -524,6 +552,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 统计维度
      *
@@ -534,6 +563,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 持续时间, 单位分钟，范围[1-24*60]
      *
@@ -543,6 +573,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         this.blockTime = blockTime;
         return this;
     }
+
 
 
     /**
@@ -556,5 +587,4 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         }
         this.matchItems.add(matchItem);
     }
-
 }

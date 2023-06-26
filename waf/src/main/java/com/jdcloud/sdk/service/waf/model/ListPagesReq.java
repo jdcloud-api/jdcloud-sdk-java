@@ -58,6 +58,7 @@ public class ListPagesReq  implements java.io.Serializable {
     private Integer pageSize;
 
 
+
     /**
      * get WAF实例id
      *
@@ -75,6 +76,7 @@ public class ListPagesReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -94,6 +96,7 @@ public class ListPagesReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get -1表示该项不是查询条件 0审核中 1通过 2不通过
      *
@@ -111,6 +114,7 @@ public class ListPagesReq  implements java.io.Serializable {
     public void setCheckStatus(Integer checkStatus) {
         this.checkStatus = checkStatus;
     }
+
 
     /**
      * get 页大小，[1-100]，默认是10
@@ -131,6 +135,7 @@ public class ListPagesReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -140,6 +145,7 @@ public class ListPagesReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -151,6 +157,7 @@ public class ListPagesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set -1表示该项不是查询条件 0审核中 1通过 2不通过
      *
@@ -160,6 +167,7 @@ public class ListPagesReq  implements java.io.Serializable {
         this.checkStatus = checkStatus;
         return this;
     }
+
 
     /**
      * set 页大小，[1-100]，默认是10

@@ -60,6 +60,7 @@ public class SetIntSemReq  implements java.io.Serializable {
     private String intSemMode;
 
 
+
     /**
      * get WAF实例id
      *
@@ -77,6 +78,7 @@ public class SetIntSemReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -96,6 +98,7 @@ public class SetIntSemReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 0表示禁止，1表示激活，默认为0
      *
@@ -113,6 +116,7 @@ public class SetIntSemReq  implements java.io.Serializable {
     public void setEnableIntSem(Integer enableIntSem) {
         this.enableIntSem = enableIntSem;
     }
+
 
     /**
      * get 模式，forbidden:拦截模式 或 notice:检测模式
@@ -133,6 +137,7 @@ public class SetIntSemReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -142,6 +147,7 @@ public class SetIntSemReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -153,6 +159,7 @@ public class SetIntSemReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0表示禁止，1表示激活，默认为0
      *
@@ -162,6 +169,7 @@ public class SetIntSemReq  implements java.io.Serializable {
         this.enableIntSem = enableIntSem;
         return this;
     }
+
 
     /**
      * set 模式，forbidden:拦截模式 或 notice:检测模式

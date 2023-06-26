@@ -65,6 +65,7 @@ public class ListRewriteRulesReq  implements java.io.Serializable {
     private Integer pageSize;
 
 
+
     /**
      * get WAF实例id
      *
@@ -82,6 +83,7 @@ public class ListRewriteRulesReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -101,6 +103,7 @@ public class ListRewriteRulesReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 重写类型 目前支持&quot;uri&quot;
      *
@@ -119,6 +122,7 @@ public class ListRewriteRulesReq  implements java.io.Serializable {
         this.rewriteType = rewriteType;
     }
 
+
     /**
      * get 页码，[1-100]，默认是1
      *
@@ -136,6 +140,7 @@ public class ListRewriteRulesReq  implements java.io.Serializable {
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
     }
+
 
     /**
      * get 页大小，[1-100]，默认是10
@@ -156,6 +161,7 @@ public class ListRewriteRulesReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -165,6 +171,7 @@ public class ListRewriteRulesReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -176,6 +183,7 @@ public class ListRewriteRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 重写类型 目前支持&quot;uri&quot;
      *
@@ -186,6 +194,7 @@ public class ListRewriteRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 页码，[1-100]，默认是1
      *
@@ -195,6 +204,7 @@ public class ListRewriteRulesReq  implements java.io.Serializable {
         this.pageIndex = pageIndex;
         return this;
     }
+
 
     /**
      * set 页大小，[1-100]，默认是10

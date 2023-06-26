@@ -43,6 +43,7 @@ public class UserPolicyIdInfo  implements java.io.Serializable {
     private Long id;
 
 
+
     /**
      * get WAF实例id
      *
@@ -60,6 +61,7 @@ public class UserPolicyIdInfo  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 自定义规则组id
@@ -80,6 +82,7 @@ public class UserPolicyIdInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -89,6 +92,7 @@ public class UserPolicyIdInfo  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 自定义规则组id

@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.waf.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * valCfg
+ * ownerCfg
  */
-public class ValCfg  implements java.io.Serializable {
+public class OwnerCfg  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -39,12 +39,7 @@ public class ValCfg  implements java.io.Serializable {
     private Integer id;
 
     /**
-     * 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
-     */
-    private Integer matchOp;
-
-    /**
-     * val
+     * owner名称
      * Required:true
      */
     @Required
@@ -56,6 +51,7 @@ public class ValCfg  implements java.io.Serializable {
      */
     @Required
     private AtCfg atCfg;
+
 
 
     /**
@@ -76,26 +72,9 @@ public class ValCfg  implements java.io.Serializable {
         this.id = id;
     }
 
-    /**
-     * get 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
-     *
-     * @return
-     */
-    public Integer getMatchOp() {
-        return matchOp;
-    }
 
     /**
-     * set 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
-     *
-     * @param matchOp
-     */
-    public void setMatchOp(Integer matchOp) {
-        this.matchOp = matchOp;
-    }
-
-    /**
-     * get val
+     * get owner名称
      *
      * @return
      */
@@ -104,13 +83,14 @@ public class ValCfg  implements java.io.Serializable {
     }
 
     /**
-     * set val
+     * set owner名称
      *
      * @param val
      */
     public void setVal(String val) {
         this.val = val;
     }
+
 
     /**
      * get 动作配置,旗舰版全部支持,其它套餐不支持观察
@@ -131,42 +111,35 @@ public class ValCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 序号id,更新时需要
      *
      * @param id
      */
-    public ValCfg id(Integer id) {
+    public OwnerCfg id(Integer id) {
         this.id = id;
         return this;
     }
 
-    /**
-     * set 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
-     *
-     * @param matchOp
-     */
-    public ValCfg matchOp(Integer matchOp) {
-        this.matchOp = matchOp;
-        return this;
-    }
 
     /**
-     * set val
+     * set owner名称
      *
      * @param val
      */
-    public ValCfg val(String val) {
+    public OwnerCfg val(String val) {
         this.val = val;
         return this;
     }
+
 
     /**
      * set 动作配置,旗舰版全部支持,其它套餐不支持观察
      *
      * @param atCfg
      */
-    public ValCfg atCfg(AtCfg atCfg) {
+    public OwnerCfg atCfg(AtCfg atCfg) {
         this.atCfg = atCfg;
         return this;
     }

@@ -38,6 +38,7 @@ public class GetUserPinVipInfoReq  implements java.io.Serializable {
     private String userPins;
 
 
+
     /**
      * get userPins, 以,间隔, allJDCloudpin表示获取全部
      *
@@ -55,6 +56,7 @@ public class GetUserPinVipInfoReq  implements java.io.Serializable {
     public void setUserPins(String userPins) {
         this.userPins = userPins;
     }
+
 
 
     /**

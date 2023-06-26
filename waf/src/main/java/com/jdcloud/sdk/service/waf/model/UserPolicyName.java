@@ -43,6 +43,7 @@ public class UserPolicyName  implements java.io.Serializable {
     private String name;
 
 
+
     /**
      * get 规则组id
      *
@@ -60,6 +61,7 @@ public class UserPolicyName  implements java.io.Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
 
     /**
      * get 规则组名字
@@ -80,6 +82,7 @@ public class UserPolicyName  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则组id
      *
@@ -89,6 +92,7 @@ public class UserPolicyName  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 规则组名字

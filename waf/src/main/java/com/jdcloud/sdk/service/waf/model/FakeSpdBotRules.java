@@ -48,6 +48,7 @@ public class FakeSpdBotRules  implements java.io.Serializable {
     private DenyActionCfg action;
 
 
+
     /**
      * get 伪造蜘蛛库名称
      *
@@ -66,6 +67,7 @@ public class FakeSpdBotRules  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 1-使用中，0-禁用
      *
@@ -83,6 +85,7 @@ public class FakeSpdBotRules  implements java.io.Serializable {
     public void setEnable(Integer enable) {
         this.enable = enable;
     }
+
 
     /**
      * get 动作配置
@@ -103,6 +106,7 @@ public class FakeSpdBotRules  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 伪造蜘蛛库名称
      *
@@ -113,6 +117,7 @@ public class FakeSpdBotRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 1-使用中，0-禁用
      *
@@ -122,6 +127,7 @@ public class FakeSpdBotRules  implements java.io.Serializable {
         this.enable = enable;
         return this;
     }
+
 
     /**
      * set 动作配置

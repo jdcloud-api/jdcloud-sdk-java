@@ -58,7 +58,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
     /**
      * 状态码，检索字段
      */
-    private String antiStatus;
+    private String status;
 
     /**
      * 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
@@ -104,6 +104,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
     private Boolean isExport;
 
 
+
     /**
      * get 实例id，代表要查询的WAF实例，为空时表示当前用户下的所有实例
      *
@@ -121,6 +122,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名，为空时表示当前实例下的所有域名
@@ -140,6 +142,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 攻击类型，支持类型：&quot;cc&quot;(cc攻击)，&quot;waf&quot;(Web攻击)，&quot;acl&quot;(自定义规则)
      *
@@ -157,6 +160,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
     public void setAntiType(String antiType) {
         this.antiType = antiType;
     }
+
 
     /**
      * get 源ip，检索字段
@@ -176,23 +180,25 @@ public class GetAntiEventReq  implements java.io.Serializable {
         this.remoteAddr = remoteAddr;
     }
 
+
     /**
      * get 状态码，检索字段
      *
      * @return
      */
-    public String getAntiStatus() {
-        return antiStatus;
+    public String getStatus() {
+        return status;
     }
 
     /**
      * set 状态码，检索字段
      *
-     * @param antiStatus
+     * @param status
      */
-    public void setAntiStatus(String antiStatus) {
-        this.antiStatus = antiStatus;
+    public void setStatus(String status) {
+        this.status = status;
     }
+
 
     /**
      * get 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
@@ -212,6 +218,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
         this.start = start;
     }
 
+
     /**
      * get 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
@@ -229,6 +236,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
     public void setEnd(Integer end) {
         this.end = end;
     }
+
 
     /**
      * get 每页显示的个数。
@@ -248,6 +256,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 页数。
      *
@@ -265,6 +274,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
     }
+
 
     /**
      * get 排序字段，document_uri:uri, remote_addr:源ip, time:时间
@@ -284,6 +294,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
         this.sortKey = sortKey;
     }
 
+
     /**
      * get 排序方式，desc-倒序 asc-增序
      *
@@ -301,6 +312,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
     public void setSortDesc(String sortDesc) {
         this.sortDesc = sortDesc;
     }
+
 
     /**
      * get false表示查询，true表示导出
@@ -321,6 +333,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例id，代表要查询的WAF实例，为空时表示当前用户下的所有实例
      *
@@ -330,6 +343,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名，为空时表示当前实例下的所有域名
@@ -341,6 +355,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 攻击类型，支持类型：&quot;cc&quot;(cc攻击)，&quot;waf&quot;(Web攻击)，&quot;acl&quot;(自定义规则)
      *
@@ -350,6 +365,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
         this.antiType = antiType;
         return this;
     }
+
 
     /**
      * set 源ip，检索字段
@@ -361,15 +377,17 @@ public class GetAntiEventReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态码，检索字段
      *
-     * @param antiStatus
+     * @param status
      */
-    public GetAntiEventReq antiStatus(String antiStatus) {
-        this.antiStatus = antiStatus;
+    public GetAntiEventReq status(String status) {
+        this.status = status;
         return this;
     }
+
 
     /**
      * set 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
@@ -381,6 +399,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
@@ -390,6 +409,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
         this.end = end;
         return this;
     }
+
 
     /**
      * set 每页显示的个数。
@@ -401,6 +421,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 页数。
      *
@@ -410,6 +431,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
         this.pageIndex = pageIndex;
         return this;
     }
+
 
     /**
      * set 排序字段，document_uri:uri, remote_addr:源ip, time:时间
@@ -421,6 +443,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 排序方式，desc-倒序 asc-增序
      *
@@ -430,6 +453,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
         this.sortDesc = sortDesc;
         return this;
     }
+
 
     /**
      * set false表示查询，true表示导出

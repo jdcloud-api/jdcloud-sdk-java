@@ -50,6 +50,7 @@ public class SetProxycacheConfigReq  implements java.io.Serializable {
     /**
      * 缓存配置
      */
+    
     private List<CacheItemCfg> itemCfg;
 
 
@@ -71,6 +72,7 @@ public class SetProxycacheConfigReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 是否使能，0表示否
      *
@@ -89,23 +91,25 @@ public class SetProxycacheConfigReq  implements java.io.Serializable {
         this.enable = enable;
     }
 
+
     /**
-     * get 缓存配置
-     *
-     * @return
-     */
+    * get 缓存配置
+    *
+    * @return
+    */
     public List<CacheItemCfg> getItemCfg() {
         return itemCfg;
     }
 
     /**
-     * set 缓存配置
-     *
-     * @param itemCfg
-     */
+    * set 缓存配置
+    *
+    * @param itemCfg
+    */
     public void setItemCfg(List<CacheItemCfg> itemCfg) {
         this.itemCfg = itemCfg;
     }
+
 
 
     /**
@@ -118,6 +122,7 @@ public class SetProxycacheConfigReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否使能，0表示否
      *
@@ -128,15 +133,17 @@ public class SetProxycacheConfigReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 缓存配置
-     *
-     * @param itemCfg
-     */
+    * set 缓存配置
+    *
+    * @param itemCfg
+    */
     public SetProxycacheConfigReq itemCfg(List<CacheItemCfg> itemCfg) {
         this.itemCfg = itemCfg;
         return this;
     }
+
 
 
     /**
@@ -150,5 +157,4 @@ public class SetProxycacheConfigReq  implements java.io.Serializable {
         }
         this.itemCfg.add(itemCfg);
     }
-
 }

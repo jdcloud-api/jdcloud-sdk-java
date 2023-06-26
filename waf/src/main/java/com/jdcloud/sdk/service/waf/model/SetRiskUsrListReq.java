@@ -84,6 +84,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
     private String bz64File;
 
 
+
     /**
      * get 规则id,新增时传0
      *
@@ -101,6 +102,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get WAF实例id
@@ -120,6 +122,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -137,6 +140,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 规则名称
@@ -156,6 +160,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get desc
      *
@@ -173,6 +178,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
 
     /**
      * get 0-使用中 1-禁用
@@ -192,6 +198,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
         this.disable = disable;
     }
 
+
     /**
      * get 策略规则, 格式：[&quot;13311112222&quot;,&quot;13211112222&quot;]
      *
@@ -209,6 +216,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
     public void setRules(String rules) {
         this.rules = rules;
     }
+
 
     /**
      * get 自定义名单上传文件内容,base64编码
@@ -229,6 +237,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id,新增时传0
      *
@@ -238,6 +247,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set WAF实例id
@@ -249,6 +259,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -258,6 +269,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 规则名称
@@ -269,6 +281,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set desc
      *
@@ -278,6 +291,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
         this.desc = desc;
         return this;
     }
+
 
     /**
      * set 0-使用中 1-禁用
@@ -289,6 +303,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 策略规则, 格式：[&quot;13311112222&quot;,&quot;13211112222&quot;]
      *
@@ -298,6 +313,7 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
         this.rules = rules;
         return this;
     }
+
 
     /**
      * set 自定义名单上传文件内容,base64编码

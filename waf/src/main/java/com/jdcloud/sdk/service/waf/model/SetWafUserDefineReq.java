@@ -53,6 +53,7 @@ public class SetWafUserDefineReq  implements java.io.Serializable {
     private Integer enableUserDef;
 
 
+
     /**
      * get WAF实例id
      *
@@ -71,6 +72,7 @@ public class SetWafUserDefineReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -88,6 +90,7 @@ public class SetWafUserDefineReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 0禁止，1表示激活，默认为0
@@ -108,6 +111,7 @@ public class SetWafUserDefineReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -118,6 +122,7 @@ public class SetWafUserDefineReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -127,6 +132,7 @@ public class SetWafUserDefineReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 0禁止，1表示激活，默认为0

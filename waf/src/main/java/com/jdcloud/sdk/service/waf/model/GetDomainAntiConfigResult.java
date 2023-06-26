@@ -63,6 +63,11 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     private Integer disableWaf;
 
     /**
+     * js验证全局开关 0表示关闭
+     */
+    private Integer enableJs;
+
+    /**
      * 网站waf防护配置
      */
     private AclConf aclConf;
@@ -168,6 +173,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     private BotConf botConf;
 
 
+
     /**
      * get 域名
      *
@@ -185,6 +191,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get waf状态 1表示关闭waf
@@ -204,6 +211,26 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.disableWaf = disableWaf;
     }
 
+
+    /**
+     * get js验证全局开关 0表示关闭
+     *
+     * @return
+     */
+    public Integer getEnableJs() {
+        return enableJs;
+    }
+
+    /**
+     * set js验证全局开关 0表示关闭
+     *
+     * @param enableJs
+     */
+    public void setEnableJs(Integer enableJs) {
+        this.enableJs = enableJs;
+    }
+
+
     /**
      * get 网站waf防护配置
      *
@@ -221,6 +248,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     public void setAclConf(AclConf aclConf) {
         this.aclConf = aclConf;
     }
+
 
     /**
      * get 网站防爬虫防护配置
@@ -240,6 +268,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.antispiderConf = antispiderConf;
     }
 
+
     /**
      * get 网站cc防护配置
      *
@@ -257,6 +286,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     public void setCcConf(CcConf ccConf) {
         this.ccConf = ccConf;
     }
+
 
     /**
      * get 网站黑名单防护配置
@@ -276,6 +306,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.denyConf = denyConf;
     }
 
+
     /**
      * get 网站智能语义引擎防护配置
      *
@@ -293,6 +324,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     public void setIntSemConf(IntSemConf intSemConf) {
         this.intSemConf = intSemConf;
     }
+
 
     /**
      * get 网站恶意ip防护配置
@@ -312,6 +344,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.ipbanConf = ipbanConf;
     }
 
+
     /**
      * get 网站恶意ip自定义防护配置
      *
@@ -329,6 +362,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     public void setIpbanUsrConf(IpbanUsrConf ipbanUsrConf) {
         this.ipbanUsrConf = ipbanUsrConf;
     }
+
 
     /**
      * get 网站限速规则防护配置
@@ -348,6 +382,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.ratelimitConf = ratelimitConf;
     }
 
+
     /**
      * get 网站威胁情报防护配置
      *
@@ -365,6 +400,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     public void setThreatinfoConf(EnableConf threatinfoConf) {
         this.threatinfoConf = threatinfoConf;
     }
+
 
     /**
      * get 网站自定义页面配置
@@ -384,6 +420,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.userDefPageConf = userDefPageConf;
     }
 
+
     /**
      * get 网站waf防护配置
      *
@@ -401,6 +438,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     public void setWafConf(WafConf wafConf) {
         this.wafConf = wafConf;
     }
+
 
     /**
      * get 网站web自定义规则防护配置
@@ -420,6 +458,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.webUserdefConf = webUserdefConf;
     }
 
+
     /**
      * get 网站防篡改防护配置
      *
@@ -437,6 +476,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     public void setWebcacheConf(EnableConf webcacheConf) {
         this.webcacheConf = webcacheConf;
     }
+
 
     /**
      * get 网站白名单防护配置
@@ -456,6 +496,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.skipConf = skipConf;
     }
 
+
     /**
      * get 网站请求头管理防护配置
      *
@@ -473,6 +514,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     public void setFilterHeaderConf(FilterHeaderConf filterHeaderConf) {
         this.filterHeaderConf = filterHeaderConf;
     }
+
 
     /**
      * get 网站敏感信息防护配置
@@ -492,6 +534,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.filterSenseConf = filterSenseConf;
     }
 
+
     /**
      * get 状态码修改配置
      *
@@ -509,6 +552,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     public void setStatusConf(StatusConf statusConf) {
         this.statusConf = statusConf;
     }
+
 
     /**
      * get 网站uri重写规则配置
@@ -528,6 +572,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.uriRewriteConf = uriRewriteConf;
     }
 
+
     /**
      * get proxy缓存配置
      *
@@ -546,6 +591,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.proxycacheConf = proxycacheConf;
     }
 
+
     /**
      * get risk配置
      *
@@ -563,6 +609,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     public void setRiskConf(RiskConf riskConf) {
         this.riskConf = riskConf;
     }
+
 
     /**
      * get bot配置
@@ -583,6 +630,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
      * set 域名
      *
@@ -592,6 +640,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set waf状态 1表示关闭waf
@@ -603,6 +652,18 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
+    /**
+     * set js验证全局开关 0表示关闭
+     *
+     * @param enableJs
+     */
+    public GetDomainAntiConfigResult enableJs(Integer enableJs) {
+        this.enableJs = enableJs;
+        return this;
+    }
+
+
     /**
      * set 网站waf防护配置
      *
@@ -612,6 +673,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.aclConf = aclConf;
         return this;
     }
+
 
     /**
      * set 网站防爬虫防护配置
@@ -623,6 +685,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 网站cc防护配置
      *
@@ -632,6 +695,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.ccConf = ccConf;
         return this;
     }
+
 
     /**
      * set 网站黑名单防护配置
@@ -643,6 +707,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 网站智能语义引擎防护配置
      *
@@ -652,6 +717,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.intSemConf = intSemConf;
         return this;
     }
+
 
     /**
      * set 网站恶意ip防护配置
@@ -663,6 +729,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 网站恶意ip自定义防护配置
      *
@@ -672,6 +739,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.ipbanUsrConf = ipbanUsrConf;
         return this;
     }
+
 
     /**
      * set 网站限速规则防护配置
@@ -683,6 +751,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 网站威胁情报防护配置
      *
@@ -692,6 +761,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.threatinfoConf = threatinfoConf;
         return this;
     }
+
 
     /**
      * set 网站自定义页面配置
@@ -703,6 +773,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 网站waf防护配置
      *
@@ -712,6 +783,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.wafConf = wafConf;
         return this;
     }
+
 
     /**
      * set 网站web自定义规则防护配置
@@ -723,6 +795,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 网站防篡改防护配置
      *
@@ -732,6 +805,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.webcacheConf = webcacheConf;
         return this;
     }
+
 
     /**
      * set 网站白名单防护配置
@@ -743,6 +817,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 网站请求头管理防护配置
      *
@@ -752,6 +827,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.filterHeaderConf = filterHeaderConf;
         return this;
     }
+
 
     /**
      * set 网站敏感信息防护配置
@@ -763,6 +839,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 状态码修改配置
      *
@@ -772,6 +849,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.statusConf = statusConf;
         return this;
     }
+
 
     /**
      * set 网站uri重写规则配置
@@ -783,6 +861,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set proxy缓存配置
      *
@@ -793,6 +872,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set risk配置
      *
@@ -802,6 +882,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.riskConf = riskConf;
         return this;
     }
+
 
     /**
      * set bot配置

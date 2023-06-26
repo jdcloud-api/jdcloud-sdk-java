@@ -47,6 +47,7 @@ public class UserPolicyWafDomain  implements java.io.Serializable {
     /**
      * 自定义规则组应用的域名
      */
+    
     private List<String> domains;
 
 
@@ -68,6 +69,7 @@ public class UserPolicyWafDomain  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 自定义规则组应用的实例nickName
      *
@@ -86,23 +88,25 @@ public class UserPolicyWafDomain  implements java.io.Serializable {
         this.nickName = nickName;
     }
 
+
     /**
-     * get 自定义规则组应用的域名
-     *
-     * @return
-     */
+    * get 自定义规则组应用的域名
+    *
+    * @return
+    */
     public List<String> getDomains() {
         return domains;
     }
 
     /**
-     * set 自定义规则组应用的域名
-     *
-     * @param domains
-     */
+    * set 自定义规则组应用的域名
+    *
+    * @param domains
+    */
     public void setDomains(List<String> domains) {
         this.domains = domains;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class UserPolicyWafDomain  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自定义规则组应用的实例nickName
      *
@@ -125,15 +130,17 @@ public class UserPolicyWafDomain  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 自定义规则组应用的域名
-     *
-     * @param domains
-     */
+    * set 自定义规则组应用的域名
+    *
+    * @param domains
+    */
     public UserPolicyWafDomain domains(List<String> domains) {
         this.domains = domains;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class UserPolicyWafDomain  implements java.io.Serializable {
         }
         this.domains.add(domain);
     }
-
 }

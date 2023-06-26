@@ -68,6 +68,7 @@ public class PageListCfg  implements java.io.Serializable {
     private Integer checkStatus;
 
 
+
     /**
      * get 序号id
      *
@@ -85,6 +86,7 @@ public class PageListCfg  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get WAF实例id
@@ -104,6 +106,7 @@ public class PageListCfg  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -121,6 +124,7 @@ public class PageListCfg  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 自定义页面名称
@@ -140,6 +144,7 @@ public class PageListCfg  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 规则更新时间，秒级时间戳
      *
@@ -158,6 +163,7 @@ public class PageListCfg  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 内容
      *
@@ -175,6 +181,7 @@ public class PageListCfg  implements java.io.Serializable {
     public void setContent(String content) {
         this.content = content;
     }
+
 
     /**
      * get 审核状态，0审核中，1通过，2未通过
@@ -195,6 +202,7 @@ public class PageListCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 序号id
      *
@@ -204,6 +212,7 @@ public class PageListCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set WAF实例id
@@ -215,6 +224,7 @@ public class PageListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -224,6 +234,7 @@ public class PageListCfg  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 自定义页面名称
@@ -235,6 +246,7 @@ public class PageListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则更新时间，秒级时间戳
      *
@@ -245,6 +257,7 @@ public class PageListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 内容
      *
@@ -254,6 +267,7 @@ public class PageListCfg  implements java.io.Serializable {
         this.content = content;
         return this;
     }
+
 
     /**
      * set 审核状态，0审核中，1通过，2未通过

@@ -68,6 +68,7 @@ public class SignatureRuleReq  implements java.io.Serializable {
     private String orderTime;
 
 
+
     /**
      * get WAF实例id
      *
@@ -85,6 +86,7 @@ public class SignatureRuleReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 攻击类型
@@ -104,6 +106,7 @@ public class SignatureRuleReq  implements java.io.Serializable {
         this.ruleType = ruleType;
     }
 
+
     /**
      * get 危险等级
      *
@@ -121,6 +124,7 @@ public class SignatureRuleReq  implements java.io.Serializable {
     public void setRuleLevel(Integer ruleLevel) {
         this.ruleLevel = ruleLevel;
     }
+
 
     /**
      * get 规则名字
@@ -140,6 +144,7 @@ public class SignatureRuleReq  implements java.io.Serializable {
         this.ruleName = ruleName;
     }
 
+
     /**
      * get CVE
      *
@@ -158,6 +163,7 @@ public class SignatureRuleReq  implements java.io.Serializable {
         this.cve = cve;
     }
 
+
     /**
      * get 规则id
      *
@@ -175,6 +181,7 @@ public class SignatureRuleReq  implements java.io.Serializable {
     public void setRuleId(Integer ruleId) {
         this.ruleId = ruleId;
     }
+
 
     /**
      * get 时间排序 asc 升序/desc降序
@@ -195,6 +202,7 @@ public class SignatureRuleReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -204,6 +212,7 @@ public class SignatureRuleReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 攻击类型
@@ -215,6 +224,7 @@ public class SignatureRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 危险等级
      *
@@ -224,6 +234,7 @@ public class SignatureRuleReq  implements java.io.Serializable {
         this.ruleLevel = ruleLevel;
         return this;
     }
+
 
     /**
      * set 规则名字
@@ -235,6 +246,7 @@ public class SignatureRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set CVE
      *
@@ -245,6 +257,7 @@ public class SignatureRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则id
      *
@@ -254,6 +267,7 @@ public class SignatureRuleReq  implements java.io.Serializable {
         this.ruleId = ruleId;
         return this;
     }
+
 
     /**
      * set 时间排序 asc 升序/desc降序

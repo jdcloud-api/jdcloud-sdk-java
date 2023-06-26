@@ -63,6 +63,7 @@ public class FilterHeaderConf  implements java.io.Serializable {
     private Integer total;
 
 
+
     /**
      * get 是否使能 0表示否
      *
@@ -80,6 +81,7 @@ public class FilterHeaderConf  implements java.io.Serializable {
     public void setEnable(Integer enable) {
         this.enable = enable;
     }
+
 
     /**
      * get 是否使能请求头 0表示否
@@ -99,6 +101,7 @@ public class FilterHeaderConf  implements java.io.Serializable {
         this.reqEnable = reqEnable;
     }
 
+
     /**
      * get 是否使能响应头 0表示否
      *
@@ -116,6 +119,7 @@ public class FilterHeaderConf  implements java.io.Serializable {
     public void setRespEnable(Integer respEnable) {
         this.respEnable = respEnable;
     }
+
 
     /**
      * get 请求头条数
@@ -135,6 +139,7 @@ public class FilterHeaderConf  implements java.io.Serializable {
         this.reqHeaderNum = reqHeaderNum;
     }
 
+
     /**
      * get 响应头条数
      *
@@ -152,6 +157,7 @@ public class FilterHeaderConf  implements java.io.Serializable {
     public void setRespHeaderNum(Integer respHeaderNum) {
         this.respHeaderNum = respHeaderNum;
     }
+
 
     /**
      * get 总条数
@@ -172,6 +178,7 @@ public class FilterHeaderConf  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否使能 0表示否
      *
@@ -181,6 +188,7 @@ public class FilterHeaderConf  implements java.io.Serializable {
         this.enable = enable;
         return this;
     }
+
 
     /**
      * set 是否使能请求头 0表示否
@@ -192,6 +200,7 @@ public class FilterHeaderConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否使能响应头 0表示否
      *
@@ -201,6 +210,7 @@ public class FilterHeaderConf  implements java.io.Serializable {
         this.respEnable = respEnable;
         return this;
     }
+
 
     /**
      * set 请求头条数
@@ -212,6 +222,7 @@ public class FilterHeaderConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 响应头条数
      *
@@ -221,6 +232,7 @@ public class FilterHeaderConf  implements java.io.Serializable {
         this.respHeaderNum = respHeaderNum;
         return this;
     }
+
 
     /**
      * set 总条数

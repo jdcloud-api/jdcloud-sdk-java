@@ -43,6 +43,7 @@ public class DomainActive  implements java.io.Serializable {
     private String domain;
 
 
+
     /**
      * get 0-未选择，1-选择
      *
@@ -60,6 +61,7 @@ public class DomainActive  implements java.io.Serializable {
     public void setActive(Integer active) {
         this.active = active;
     }
+
 
     /**
      * get 域名
@@ -80,6 +82,7 @@ public class DomainActive  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 0-未选择，1-选择
      *
@@ -89,6 +92,7 @@ public class DomainActive  implements java.io.Serializable {
         this.active = active;
         return this;
     }
+
 
     /**
      * set 域名

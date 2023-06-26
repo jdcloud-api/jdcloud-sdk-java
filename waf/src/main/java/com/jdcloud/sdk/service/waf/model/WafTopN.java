@@ -37,136 +37,110 @@ public class WafTopN  implements java.io.Serializable {
     /**
      * 来源ip的top10,当请求字段isWafRule为false时返回
      */
+    
     private List<TopValue> addr_top10;
-
     /**
      * web攻击路径top10,当请求字段isWafRule为false时返回
      */
+    
     private List<TopValue> url_top10;
-
     /**
      * web攻击来源top50,当请求字段isWafRule为false时返回
      */
+    
     private List<TopValue> area_top50;
 
-    /**
-     * web攻击规则个数,当请求字段isWafRule为true时返回
-     */
-    private List<TopValue> waf_rule_sum;
-
 
     /**
-     * get 来源ip的top10,当请求字段isWafRule为false时返回
-     *
-     * @return
-     */
+    * get 来源ip的top10,当请求字段isWafRule为false时返回
+    *
+    * @return
+    */
     public List<TopValue> getAddr_top10() {
         return addr_top10;
     }
 
     /**
-     * set 来源ip的top10,当请求字段isWafRule为false时返回
-     *
-     * @param addr_top10
-     */
+    * set 来源ip的top10,当请求字段isWafRule为false时返回
+    *
+    * @param addr_top10
+    */
     public void setAddr_top10(List<TopValue> addr_top10) {
         this.addr_top10 = addr_top10;
     }
 
+
     /**
-     * get web攻击路径top10,当请求字段isWafRule为false时返回
-     *
-     * @return
-     */
+    * get web攻击路径top10,当请求字段isWafRule为false时返回
+    *
+    * @return
+    */
     public List<TopValue> getUrl_top10() {
         return url_top10;
     }
 
     /**
-     * set web攻击路径top10,当请求字段isWafRule为false时返回
-     *
-     * @param url_top10
-     */
+    * set web攻击路径top10,当请求字段isWafRule为false时返回
+    *
+    * @param url_top10
+    */
     public void setUrl_top10(List<TopValue> url_top10) {
         this.url_top10 = url_top10;
     }
 
+
     /**
-     * get web攻击来源top50,当请求字段isWafRule为false时返回
-     *
-     * @return
-     */
+    * get web攻击来源top50,当请求字段isWafRule为false时返回
+    *
+    * @return
+    */
     public List<TopValue> getArea_top50() {
         return area_top50;
     }
 
     /**
-     * set web攻击来源top50,当请求字段isWafRule为false时返回
-     *
-     * @param area_top50
-     */
+    * set web攻击来源top50,当请求字段isWafRule为false时返回
+    *
+    * @param area_top50
+    */
     public void setArea_top50(List<TopValue> area_top50) {
         this.area_top50 = area_top50;
     }
 
-    /**
-     * get web攻击规则个数,当请求字段isWafRule为true时返回
-     *
-     * @return
-     */
-    public List<TopValue> getWaf_rule_sum() {
-        return waf_rule_sum;
-    }
-
-    /**
-     * set web攻击规则个数,当请求字段isWafRule为true时返回
-     *
-     * @param waf_rule_sum
-     */
-    public void setWaf_rule_sum(List<TopValue> waf_rule_sum) {
-        this.waf_rule_sum = waf_rule_sum;
-    }
 
 
     /**
-     * set 来源ip的top10,当请求字段isWafRule为false时返回
-     *
-     * @param addr_top10
-     */
+    * set 来源ip的top10,当请求字段isWafRule为false时返回
+    *
+    * @param addr_top10
+    */
     public WafTopN addr_top10(List<TopValue> addr_top10) {
         this.addr_top10 = addr_top10;
         return this;
     }
 
+
     /**
-     * set web攻击路径top10,当请求字段isWafRule为false时返回
-     *
-     * @param url_top10
-     */
+    * set web攻击路径top10,当请求字段isWafRule为false时返回
+    *
+    * @param url_top10
+    */
     public WafTopN url_top10(List<TopValue> url_top10) {
         this.url_top10 = url_top10;
         return this;
     }
 
+
     /**
-     * set web攻击来源top50,当请求字段isWafRule为false时返回
-     *
-     * @param area_top50
-     */
+    * set web攻击来源top50,当请求字段isWafRule为false时返回
+    *
+    * @param area_top50
+    */
     public WafTopN area_top50(List<TopValue> area_top50) {
         this.area_top50 = area_top50;
         return this;
     }
 
-    /**
-     * set web攻击规则个数,当请求字段isWafRule为true时返回
-     *
-     * @param waf_rule_sum
-     */
-    public WafTopN waf_rule_sum(List<TopValue> waf_rule_sum) {
-        this.waf_rule_sum = waf_rule_sum;
-        return this;
-    }
 
 
     /**
@@ -204,17 +178,4 @@ public class WafTopN  implements java.io.Serializable {
         }
         this.area_top50.add(area_top50);
     }
-
-    /**
-     * add item to web攻击规则个数,当请求字段isWafRule为true时返回
-     *
-     * @param waf_rule_sum
-     */
-    public void addWaf_rule_sum(TopValue waf_rule_sum) {
-        if (this.waf_rule_sum == null) {
-            this.waf_rule_sum = new ArrayList<>();
-        }
-        this.waf_rule_sum.add(waf_rule_sum);
-    }
-
 }

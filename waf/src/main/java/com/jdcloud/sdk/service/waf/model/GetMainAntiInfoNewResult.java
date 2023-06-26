@@ -109,6 +109,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
     private Integer botAntiPre;
 
 
+
     /**
      * get ip访问量
      *
@@ -126,6 +127,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
     public void setIp(Integer ip) {
         this.ip = ip;
     }
+
 
     /**
      * get 之前ip访问量，当时间跨度大于7天时，该值无意义。
@@ -145,6 +147,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         this.ipPre = ipPre;
     }
 
+
     /**
      * get PV访问量
      *
@@ -162,6 +165,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
     public void setPv(Integer pv) {
         this.pv = pv;
     }
+
 
     /**
      * get 之前PV访问量，当时间跨度大于7天时，该值无意义。
@@ -181,6 +185,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         this.pvPre = pvPre;
     }
 
+
     /**
      * get 流量峰值
      *
@@ -198,6 +203,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
     public void setMaxBps(Integer maxBps) {
         this.maxBps = maxBps;
     }
+
 
     /**
      * get 之前流量峰值，当时间跨度大于7天时，该值无意义。
@@ -217,6 +223,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         this.maxBpsPre = maxBpsPre;
     }
 
+
     /**
      * get Web防护攻击数
      *
@@ -234,6 +241,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
     public void setWafAnti(Integer wafAnti) {
         this.wafAnti = wafAnti;
     }
+
 
     /**
      * get 之前Web防护攻击数，当时间跨度大于7天时，该值无意义。
@@ -253,6 +261,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         this.wafAntiPre = wafAntiPre;
     }
 
+
     /**
      * get 防护网站数
      *
@@ -270,6 +279,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
     public void setDomainCount(Integer domainCount) {
         this.domainCount = domainCount;
     }
+
 
     /**
      * get 自定义规则防护攻击数
@@ -289,6 +299,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         this.aclAnti = aclAnti;
     }
 
+
     /**
      * get 之前自定义规则防护攻击数
      *
@@ -306,6 +317,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
     public void setAclAntiPre(Integer aclAntiPre) {
         this.aclAntiPre = aclAntiPre;
     }
+
 
     /**
      * get cc防护攻击数
@@ -325,6 +337,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         this.ccAnti = ccAnti;
     }
 
+
     /**
      * get 之前cc防护攻击数
      *
@@ -343,6 +356,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         this.ccAntiPre = ccAntiPre;
     }
 
+
     /**
      * get bot防护攻击数
      *
@@ -360,6 +374,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
     public void setBotAnti(Integer botAnti) {
         this.botAnti = botAnti;
     }
+
 
     /**
      * get 之前bot防护攻击数
@@ -380,6 +395,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
     }
 
 
+
     /**
      * set ip访问量
      *
@@ -389,6 +405,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set 之前ip访问量，当时间跨度大于7天时，该值无意义。
@@ -400,6 +417,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
      * set PV访问量
      *
@@ -409,6 +427,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         this.pv = pv;
         return this;
     }
+
 
     /**
      * set 之前PV访问量，当时间跨度大于7天时，该值无意义。
@@ -420,6 +439,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
      * set 流量峰值
      *
@@ -429,6 +449,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         this.maxBps = maxBps;
         return this;
     }
+
 
     /**
      * set 之前流量峰值，当时间跨度大于7天时，该值无意义。
@@ -440,6 +461,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
      * set Web防护攻击数
      *
@@ -449,6 +471,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         this.wafAnti = wafAnti;
         return this;
     }
+
 
     /**
      * set 之前Web防护攻击数，当时间跨度大于7天时，该值无意义。
@@ -460,6 +483,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
      * set 防护网站数
      *
@@ -469,6 +493,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         this.domainCount = domainCount;
         return this;
     }
+
 
     /**
      * set 自定义规则防护攻击数
@@ -480,6 +505,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
      * set 之前自定义规则防护攻击数
      *
@@ -489,6 +515,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         this.aclAntiPre = aclAntiPre;
         return this;
     }
+
 
     /**
      * set cc防护攻击数
@@ -500,6 +527,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
      * set 之前cc防护攻击数
      *
@@ -510,6 +538,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
      * set bot防护攻击数
      *
@@ -519,6 +548,7 @@ public class GetMainAntiInfoNewResult extends JdcloudResult implements java.io.S
         this.botAnti = botAnti;
         return this;
     }
+
 
     /**
      * set 之前bot防护攻击数

@@ -35,7 +35,7 @@ public class ContactPerson  implements java.io.Serializable {
     /**
      * 联系人Id
      */
-    private Integer contactId;
+    private String contactId;
 
     /**
      * 联系人姓名
@@ -58,12 +58,13 @@ public class ContactPerson  implements java.io.Serializable {
     private Integer selected;
 
 
+
     /**
      * get 联系人Id
      *
      * @return
      */
-    public Integer getContactId() {
+    public String getContactId() {
         return contactId;
     }
 
@@ -72,9 +73,10 @@ public class ContactPerson  implements java.io.Serializable {
      *
      * @param contactId
      */
-    public void setContactId(Integer contactId) {
+    public void setContactId(String contactId) {
         this.contactId = contactId;
     }
+
 
     /**
      * get 联系人姓名
@@ -94,6 +96,7 @@ public class ContactPerson  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 联系人电话，非账号联系人时不加密
      *
@@ -112,6 +115,7 @@ public class ContactPerson  implements java.io.Serializable {
         this.phoneNumber = phoneNumber;
     }
 
+
     /**
      * get 联系人邮箱
      *
@@ -129,6 +133,7 @@ public class ContactPerson  implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     /**
      * get 是否选中，1-选中，0-未选中
@@ -149,15 +154,17 @@ public class ContactPerson  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 联系人Id
      *
      * @param contactId
      */
-    public ContactPerson contactId(Integer contactId) {
+    public ContactPerson contactId(String contactId) {
         this.contactId = contactId;
         return this;
     }
+
 
     /**
      * set 联系人姓名
@@ -169,6 +176,7 @@ public class ContactPerson  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 联系人电话，非账号联系人时不加密
      *
@@ -179,6 +187,7 @@ public class ContactPerson  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 联系人邮箱
      *
@@ -188,6 +197,7 @@ public class ContactPerson  implements java.io.Serializable {
         this.email = email;
         return this;
     }
+
 
     /**
      * set 是否选中，1-选中，0-未选中

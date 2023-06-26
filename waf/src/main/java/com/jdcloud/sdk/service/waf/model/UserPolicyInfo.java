@@ -67,8 +67,8 @@ public class UserPolicyInfo  implements java.io.Serializable {
     /**
      * 规则id
      */
+    
     private List<Integer> ruleIds;
-
     /**
      * 更新时间
      */
@@ -77,6 +77,7 @@ public class UserPolicyInfo  implements java.io.Serializable {
     /**
      * 自定义规则集应用的域名信息
      */
+    
     private List<UserPolicyWafDomain> wafDomains;
 
 
@@ -98,6 +99,7 @@ public class UserPolicyInfo  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 规则组名字
      *
@@ -115,6 +117,7 @@ public class UserPolicyInfo  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 规则组里的规则个数
@@ -134,6 +137,7 @@ public class UserPolicyInfo  implements java.io.Serializable {
         this.count = count;
     }
 
+
     /**
      * get 规则组应用的域名个数
      *
@@ -151,6 +155,7 @@ public class UserPolicyInfo  implements java.io.Serializable {
     public void setDomainCnt(Integer domainCnt) {
         this.domainCnt = domainCnt;
     }
+
 
     /**
      * get 规则是否自动更新, 0/1
@@ -170,6 +175,7 @@ public class UserPolicyInfo  implements java.io.Serializable {
         this.autoAdd = autoAdd;
     }
 
+
     /**
      * get 导入规则集的等级，0/1/2/-1
      *
@@ -188,23 +194,25 @@ public class UserPolicyInfo  implements java.io.Serializable {
         this.importLevel = importLevel;
     }
 
+
     /**
-     * get 规则id
-     *
-     * @return
-     */
+    * get 规则id
+    *
+    * @return
+    */
     public List<Integer> getRuleIds() {
         return ruleIds;
     }
 
     /**
-     * set 规则id
-     *
-     * @param ruleIds
-     */
+    * set 规则id
+    *
+    * @param ruleIds
+    */
     public void setRuleIds(List<Integer> ruleIds) {
         this.ruleIds = ruleIds;
     }
+
 
     /**
      * get 更新时间
@@ -224,23 +232,25 @@ public class UserPolicyInfo  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
-     * get 自定义规则集应用的域名信息
-     *
-     * @return
-     */
+    * get 自定义规则集应用的域名信息
+    *
+    * @return
+    */
     public List<UserPolicyWafDomain> getWafDomains() {
         return wafDomains;
     }
 
     /**
-     * set 自定义规则集应用的域名信息
-     *
-     * @param wafDomains
-     */
+    * set 自定义规则集应用的域名信息
+    *
+    * @param wafDomains
+    */
     public void setWafDomains(List<UserPolicyWafDomain> wafDomains) {
         this.wafDomains = wafDomains;
     }
+
 
 
     /**
@@ -253,6 +263,7 @@ public class UserPolicyInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则组名字
      *
@@ -262,6 +273,7 @@ public class UserPolicyInfo  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 规则组里的规则个数
@@ -273,6 +285,7 @@ public class UserPolicyInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则组应用的域名个数
      *
@@ -282,6 +295,7 @@ public class UserPolicyInfo  implements java.io.Serializable {
         this.domainCnt = domainCnt;
         return this;
     }
+
 
     /**
      * set 规则是否自动更新, 0/1
@@ -293,6 +307,7 @@ public class UserPolicyInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 导入规则集的等级，0/1/2/-1
      *
@@ -303,15 +318,17 @@ public class UserPolicyInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 规则id
-     *
-     * @param ruleIds
-     */
+    * set 规则id
+    *
+    * @param ruleIds
+    */
     public UserPolicyInfo ruleIds(List<Integer> ruleIds) {
         this.ruleIds = ruleIds;
         return this;
     }
+
 
     /**
      * set 更新时间
@@ -323,15 +340,17 @@ public class UserPolicyInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 自定义规则集应用的域名信息
-     *
-     * @param wafDomains
-     */
+    * set 自定义规则集应用的域名信息
+    *
+    * @param wafDomains
+    */
     public UserPolicyInfo wafDomains(List<UserPolicyWafDomain> wafDomains) {
         this.wafDomains = wafDomains;
         return this;
     }
+
 
 
     /**
@@ -357,5 +376,4 @@ public class UserPolicyInfo  implements java.io.Serializable {
         }
         this.wafDomains.add(wafDomain);
     }
-
 }

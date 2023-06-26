@@ -48,6 +48,7 @@ public class DelReq  implements java.io.Serializable {
     private String ruleType;
 
 
+
     /**
      * get 规则id
      *
@@ -65,6 +66,7 @@ public class DelReq  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 全局告警globle 自定义告警userdefine ,默认是全局告警
@@ -85,6 +87,7 @@ public class DelReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id
      *
@@ -94,6 +97,7 @@ public class DelReq  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 全局告警globle 自定义告警userdefine ,默认是全局告警

@@ -56,6 +56,7 @@ public class AntiSpiderConfReq  implements java.io.Serializable {
     private DenyActionCfg action;
 
 
+
     /**
      * get WAF实例id
      *
@@ -73,6 +74,7 @@ public class AntiSpiderConfReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -92,6 +94,7 @@ public class AntiSpiderConfReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 防护模式 1宽松模式，2正常模式，3严格模式
      *
@@ -109,6 +112,7 @@ public class AntiSpiderConfReq  implements java.io.Serializable {
     public void setSpiderMode(Integer spiderMode) {
         this.spiderMode = spiderMode;
     }
+
 
     /**
      * get 动作配置
@@ -129,6 +133,7 @@ public class AntiSpiderConfReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -138,6 +143,7 @@ public class AntiSpiderConfReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -149,6 +155,7 @@ public class AntiSpiderConfReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 防护模式 1宽松模式，2正常模式，3严格模式
      *
@@ -158,6 +165,7 @@ public class AntiSpiderConfReq  implements java.io.Serializable {
         this.spiderMode = spiderMode;
         return this;
     }
+
 
     /**
      * set 动作配置

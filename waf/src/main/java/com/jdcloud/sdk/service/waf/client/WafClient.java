@@ -64,6 +64,9 @@ import com.jdcloud.sdk.service.waf.client.UpdateDomainExecutor;
 import com.jdcloud.sdk.service.waf.model.ListMainCfgRequest;
 import com.jdcloud.sdk.service.waf.model.ListMainCfgResponse;
 import com.jdcloud.sdk.service.waf.client.ListMainCfgExecutor;
+import com.jdcloud.sdk.service.waf.model.EnableJsRequest;
+import com.jdcloud.sdk.service.waf.model.EnableJsResponse;
+import com.jdcloud.sdk.service.waf.client.EnableJsExecutor;
 import com.jdcloud.sdk.service.waf.model.EnableCname2RsExternalRequest;
 import com.jdcloud.sdk.service.waf.model.EnableCname2RsExternalResponse;
 import com.jdcloud.sdk.service.waf.client.EnableCname2RsExternalExecutor;
@@ -79,9 +82,15 @@ import com.jdcloud.sdk.service.waf.client.AntiLevelWafExecutor;
 import com.jdcloud.sdk.service.waf.model.DisableRulesRequest;
 import com.jdcloud.sdk.service.waf.model.DisableRulesResponse;
 import com.jdcloud.sdk.service.waf.client.DisableRulesExecutor;
+import com.jdcloud.sdk.service.waf.model.RefreshUrlCacheRequest;
+import com.jdcloud.sdk.service.waf.model.RefreshUrlCacheResponse;
+import com.jdcloud.sdk.service.waf.client.RefreshUrlCacheExecutor;
 import com.jdcloud.sdk.service.waf.model.GetDomainLbConfigRequest;
 import com.jdcloud.sdk.service.waf.model.GetDomainLbConfigResponse;
 import com.jdcloud.sdk.service.waf.client.GetDomainLbConfigExecutor;
+import com.jdcloud.sdk.service.waf.model.AddDomainScdnRequest;
+import com.jdcloud.sdk.service.waf.model.AddDomainScdnResponse;
+import com.jdcloud.sdk.service.waf.client.AddDomainScdnExecutor;
 import com.jdcloud.sdk.service.waf.model.EnableWafUserDefineRequest;
 import com.jdcloud.sdk.service.waf.model.EnableWafUserDefineResponse;
 import com.jdcloud.sdk.service.waf.client.EnableWafUserDefineExecutor;
@@ -94,6 +103,9 @@ import com.jdcloud.sdk.service.waf.client.EnableWafExecutor;
 import com.jdcloud.sdk.service.waf.model.GetEsLogDetailRequest;
 import com.jdcloud.sdk.service.waf.model.GetEsLogDetailResponse;
 import com.jdcloud.sdk.service.waf.client.GetEsLogDetailExecutor;
+import com.jdcloud.sdk.service.waf.model.ListMainCfgFactorRequest;
+import com.jdcloud.sdk.service.waf.model.ListMainCfgFactorResponse;
+import com.jdcloud.sdk.service.waf.client.ListMainCfgFactorExecutor;
 import com.jdcloud.sdk.service.waf.model.DescribeLbOutIpRequest;
 import com.jdcloud.sdk.service.waf.model.DescribeLbOutIpResponse;
 import com.jdcloud.sdk.service.waf.client.DescribeLbOutIpExecutor;
@@ -127,6 +139,9 @@ import com.jdcloud.sdk.service.waf.client.SetWafConditionExecutor;
 import com.jdcloud.sdk.service.waf.model.ListWafConditionsRequest;
 import com.jdcloud.sdk.service.waf.model.ListWafConditionsResponse;
 import com.jdcloud.sdk.service.waf.client.ListWafConditionsExecutor;
+import com.jdcloud.sdk.service.waf.model.UpdateDomainScdnRequest;
+import com.jdcloud.sdk.service.waf.model.UpdateDomainScdnResponse;
+import com.jdcloud.sdk.service.waf.client.UpdateDomainScdnExecutor;
 import com.jdcloud.sdk.service.waf.model.GetMainAntiInfoNewRequest;
 import com.jdcloud.sdk.service.waf.model.GetMainAntiInfoNewResponse;
 import com.jdcloud.sdk.service.waf.client.GetMainAntiInfoNewExecutor;
@@ -138,7 +153,7 @@ public class WafClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.9";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "waf.jdcloud-api.com";
     public final static String ServiceName = "waf";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -302,6 +317,17 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
+     * 激活 js 验证
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableJsResponse enableJs(EnableJsRequest request) throws JdcloudSdkException {
+        return new EnableJsExecutor().client(this).execute(request);
+    }
+
+    /**
      * cname解析到回源
      *
      * @param request
@@ -357,6 +383,17 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
+     * 刷新某条防篡改条目
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RefreshUrlCacheResponse refreshUrlCache(RefreshUrlCacheRequest request) throws JdcloudSdkException {
+        return new RefreshUrlCacheExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取网站lb配置
      *
      * @param request
@@ -365,6 +402,17 @@ public class WafClient extends JdcloudClient {
      */
     public GetDomainLbConfigResponse getDomainLbConfig(GetDomainLbConfigRequest request) throws JdcloudSdkException {
         return new GetDomainLbConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 新增网站scdn专属
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddDomainScdnResponse addDomainScdn(AddDomainScdnRequest request) throws JdcloudSdkException {
+        return new AddDomainScdnExecutor().client(this).execute(request);
     }
 
     /**
@@ -409,6 +457,17 @@ public class WafClient extends JdcloudClient {
      */
     public GetEsLogDetailResponse getEsLogDetail(GetEsLogDetailRequest request) throws JdcloudSdkException {
         return new GetEsLogDetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取网站
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListMainCfgFactorResponse listMainCfgFactor(ListMainCfgFactorRequest request) throws JdcloudSdkException {
+        return new ListMainCfgFactorExecutor().client(this).execute(request);
     }
 
     /**
@@ -530,6 +589,17 @@ public class WafClient extends JdcloudClient {
      */
     public ListWafConditionsResponse listWafConditions(ListWafConditionsRequest request) throws JdcloudSdkException {
         return new ListWafConditionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新网站scdn专属
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateDomainScdnResponse updateDomainScdn(UpdateDomainScdnRequest request) throws JdcloudSdkException {
+        return new UpdateDomainScdnExecutor().client(this).execute(request);
     }
 
     /**

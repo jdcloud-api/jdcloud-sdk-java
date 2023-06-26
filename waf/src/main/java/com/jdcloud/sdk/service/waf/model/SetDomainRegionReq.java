@@ -53,6 +53,7 @@ public class SetDomainRegionReq  implements java.io.Serializable {
     private Integer isGm;
 
 
+
     /**
      * get 地域，多个以逗号分隔
      *
@@ -71,6 +72,7 @@ public class SetDomainRegionReq  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 域名
      *
@@ -88,6 +90,7 @@ public class SetDomainRegionReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 是否国密
@@ -108,6 +111,7 @@ public class SetDomainRegionReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 地域，多个以逗号分隔
      *
@@ -118,6 +122,7 @@ public class SetDomainRegionReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -127,6 +132,7 @@ public class SetDomainRegionReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 是否国密

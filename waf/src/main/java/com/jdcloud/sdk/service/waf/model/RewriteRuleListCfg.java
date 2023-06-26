@@ -58,6 +58,7 @@ public class RewriteRuleListCfg  implements java.io.Serializable {
     private String setVal;
 
 
+
     /**
      * get 序号id
      *
@@ -75,6 +76,7 @@ public class RewriteRuleListCfg  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 规则更新时间，秒级时间戳, 0 表示历史数据无记录
@@ -94,6 +96,7 @@ public class RewriteRuleListCfg  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 0-使用中 1-禁用
      *
@@ -112,6 +115,7 @@ public class RewriteRuleListCfg  implements java.io.Serializable {
         this.disable = disable;
     }
 
+
     /**
      * get 原始值
      *
@@ -129,6 +133,7 @@ public class RewriteRuleListCfg  implements java.io.Serializable {
     public void setOriVal(String oriVal) {
         this.oriVal = oriVal;
     }
+
 
     /**
      * get 重写值
@@ -149,6 +154,7 @@ public class RewriteRuleListCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 序号id
      *
@@ -158,6 +164,7 @@ public class RewriteRuleListCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 规则更新时间，秒级时间戳, 0 表示历史数据无记录
@@ -169,6 +176,7 @@ public class RewriteRuleListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0-使用中 1-禁用
      *
@@ -179,6 +187,7 @@ public class RewriteRuleListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 原始值
      *
@@ -188,6 +197,7 @@ public class RewriteRuleListCfg  implements java.io.Serializable {
         this.oriVal = oriVal;
         return this;
     }
+
 
     /**
      * set 重写值

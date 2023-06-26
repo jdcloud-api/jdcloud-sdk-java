@@ -53,6 +53,7 @@ public class ListReq  implements java.io.Serializable {
     private Integer pageSize;
 
 
+
     /**
      * get 指定规则id
      *
@@ -70,6 +71,7 @@ public class ListReq  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 全局告警globle 自定义告警userdefine ,默认是全局告警
@@ -89,6 +91,7 @@ public class ListReq  implements java.io.Serializable {
         this.ruleType = ruleType;
     }
 
+
     /**
      * get 页码，[1-100]，默认是1
      *
@@ -106,6 +109,7 @@ public class ListReq  implements java.io.Serializable {
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
     }
+
 
     /**
      * get 页大小，[1-100]，默认是10
@@ -126,6 +130,7 @@ public class ListReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 指定规则id
      *
@@ -135,6 +140,7 @@ public class ListReq  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 全局告警globle 自定义告警userdefine ,默认是全局告警
@@ -146,6 +152,7 @@ public class ListReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 页码，[1-100]，默认是1
      *
@@ -155,6 +162,7 @@ public class ListReq  implements java.io.Serializable {
         this.pageIndex = pageIndex;
         return this;
     }
+
 
     /**
      * set 页大小，[1-100]，默认是10

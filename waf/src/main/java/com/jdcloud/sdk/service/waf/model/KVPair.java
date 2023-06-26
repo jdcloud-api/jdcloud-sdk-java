@@ -43,6 +43,7 @@ public class KVPair  implements java.io.Serializable {
     private Number value;
 
 
+
     /**
      * get key
      *
@@ -60,6 +61,7 @@ public class KVPair  implements java.io.Serializable {
     public void setKey(String key) {
         this.key = key;
     }
+
 
     /**
      * get value
@@ -80,6 +82,7 @@ public class KVPair  implements java.io.Serializable {
     }
 
 
+
     /**
      * set key
      *
@@ -89,6 +92,7 @@ public class KVPair  implements java.io.Serializable {
         this.key = key;
         return this;
     }
+
 
     /**
      * set value

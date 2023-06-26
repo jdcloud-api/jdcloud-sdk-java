@@ -62,6 +62,12 @@ public class ListRuleListCfg  implements java.io.Serializable {
      */
     private AtCfg atCfg;
 
+    /**
+     * 白名单不检查指定Web防护规则id, 多个逗号分隔
+     */
+    private String skipRuleId;
+
+
 
     /**
      * get 序号id
@@ -81,6 +87,7 @@ public class ListRuleListCfg  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 规则更新时间，秒级时间戳, 0 表示历史数据无记录
      *
@@ -98,6 +105,7 @@ public class ListRuleListCfg  implements java.io.Serializable {
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 0-使用中 1-禁用
@@ -117,6 +125,7 @@ public class ListRuleListCfg  implements java.io.Serializable {
         this.disable = disable;
     }
 
+
     /**
      * get 设置值,method黑白名单支持&quot;GET&quot;/&quot;HEAD&quot;/&quot;PUT&quot;/&quot;POST&quot;/&quot;COPY&quot;/&quot;OPTIONS&quot;/&quot;LINK&quot;/&quot;UNLINK&quot;/&quot;PURGE&quot;/&quot;LOCK&quot;/&quot;UNLOCK&quot;/&quot;PROPFIND&quot;/&quot;DELETE&quot;/&quot;PATCH&quot;/&quot;VIEW&quot;
      *
@@ -135,6 +144,7 @@ public class ListRuleListCfg  implements java.io.Serializable {
         this.val = val;
     }
 
+
     /**
      * get 匹配类型 method黑白名单支持0（完全匹配）
      *
@@ -152,6 +162,7 @@ public class ListRuleListCfg  implements java.io.Serializable {
     public void setMatchOp(Integer matchOp) {
         this.matchOp = matchOp;
     }
+
 
     /**
      * get action配置
@@ -173,6 +184,26 @@ public class ListRuleListCfg  implements java.io.Serializable {
 
 
     /**
+     * get 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @return
+     */
+    public String getSkipRuleId() {
+        return skipRuleId;
+    }
+
+    /**
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @param skipRuleId
+     */
+    public void setSkipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+    }
+
+
+
+    /**
      * set 序号id
      *
      * @param id
@@ -181,6 +212,7 @@ public class ListRuleListCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 规则更新时间，秒级时间戳, 0 表示历史数据无记录
@@ -192,6 +224,7 @@ public class ListRuleListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0-使用中 1-禁用
      *
@@ -201,6 +234,7 @@ public class ListRuleListCfg  implements java.io.Serializable {
         this.disable = disable;
         return this;
     }
+
 
     /**
      * set 设置值,method黑白名单支持&quot;GET&quot;/&quot;HEAD&quot;/&quot;PUT&quot;/&quot;POST&quot;/&quot;COPY&quot;/&quot;OPTIONS&quot;/&quot;LINK&quot;/&quot;UNLINK&quot;/&quot;PURGE&quot;/&quot;LOCK&quot;/&quot;UNLOCK&quot;/&quot;PROPFIND&quot;/&quot;DELETE&quot;/&quot;PATCH&quot;/&quot;VIEW&quot;
@@ -212,6 +246,7 @@ public class ListRuleListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配类型 method黑白名单支持0（完全匹配）
      *
@@ -222,6 +257,7 @@ public class ListRuleListCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set action配置
      *
@@ -229,6 +265,17 @@ public class ListRuleListCfg  implements java.io.Serializable {
      */
     public ListRuleListCfg atCfg(AtCfg atCfg) {
         this.atCfg = atCfg;
+        return this;
+    }
+
+
+    /**
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @param skipRuleId
+     */
+    public ListRuleListCfg skipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
         return this;
     }
 

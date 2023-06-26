@@ -60,6 +60,7 @@ public class EnableNameReq  implements java.io.Serializable {
     private Integer enable;
 
 
+
     /**
      * get 实例id，WAF实例
      *
@@ -77,6 +78,7 @@ public class EnableNameReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -96,6 +98,7 @@ public class EnableNameReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 名称
      *
@@ -113,6 +116,7 @@ public class EnableNameReq  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 是否使能，0表示否
@@ -133,6 +137,7 @@ public class EnableNameReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例id，WAF实例
      *
@@ -142,6 +147,7 @@ public class EnableNameReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -153,6 +159,7 @@ public class EnableNameReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 名称
      *
@@ -162,6 +169,7 @@ public class EnableNameReq  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 是否使能，0表示否

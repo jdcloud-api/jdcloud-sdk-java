@@ -43,6 +43,7 @@ public class LastAttackReport  implements java.io.Serializable {
     private Integer attackCount;
 
 
+
     /**
      * get 最后攻击时间，时间戳
      *
@@ -60,6 +61,7 @@ public class LastAttackReport  implements java.io.Serializable {
     public void setLastAttackTime(Integer lastAttackTime) {
         this.lastAttackTime = lastAttackTime;
     }
+
 
     /**
      * get 攻击个数
@@ -80,6 +82,7 @@ public class LastAttackReport  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 最后攻击时间，时间戳
      *
@@ -89,6 +92,7 @@ public class LastAttackReport  implements java.io.Serializable {
         this.lastAttackTime = lastAttackTime;
         return this;
     }
+
 
     /**
      * set 攻击个数

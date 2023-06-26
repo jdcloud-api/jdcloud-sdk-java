@@ -53,6 +53,7 @@ public class RiskConfDefaultCfg  implements java.io.Serializable {
     private Integer updateTime;
 
 
+
     /**
      * get 规则id
      *
@@ -70,6 +71,7 @@ public class RiskConfDefaultCfg  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 配置键
@@ -89,6 +91,7 @@ public class RiskConfDefaultCfg  implements java.io.Serializable {
         this.key = key;
     }
 
+
     /**
      * get 配置值
      *
@@ -106,6 +109,7 @@ public class RiskConfDefaultCfg  implements java.io.Serializable {
     public void setValue(String value) {
         this.value = value;
     }
+
 
     /**
      * get 更新时间，s
@@ -126,6 +130,7 @@ public class RiskConfDefaultCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id
      *
@@ -135,6 +140,7 @@ public class RiskConfDefaultCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 配置键
@@ -146,6 +152,7 @@ public class RiskConfDefaultCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 配置值
      *
@@ -155,6 +162,7 @@ public class RiskConfDefaultCfg  implements java.io.Serializable {
         this.value = value;
         return this;
     }
+
 
     /**
      * set 更新时间，s

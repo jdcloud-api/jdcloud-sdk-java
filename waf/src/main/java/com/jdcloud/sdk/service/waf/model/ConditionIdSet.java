@@ -48,6 +48,7 @@ public class ConditionIdSet  implements java.io.Serializable {
     private String opposite;
 
 
+
     /**
      * get 条件Id
      *
@@ -65,6 +66,7 @@ public class ConditionIdSet  implements java.io.Serializable {
     public void setConditionId(Integer conditionId) {
         this.conditionId = conditionId;
     }
+
 
     /**
      * get 对条件结果的取反操作，does不取反，doesnot取反
@@ -85,6 +87,7 @@ public class ConditionIdSet  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 条件Id
      *
@@ -94,6 +97,7 @@ public class ConditionIdSet  implements java.io.Serializable {
         this.conditionId = conditionId;
         return this;
     }
+
 
     /**
      * set 对条件结果的取反操作，does不取反，doesnot取反

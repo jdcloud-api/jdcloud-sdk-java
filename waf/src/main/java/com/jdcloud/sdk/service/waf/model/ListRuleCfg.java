@@ -58,6 +58,7 @@ public class ListRuleCfg  implements java.io.Serializable {
     private AtCfg atCfg;
 
 
+
     /**
      * get 序号id,更新时需要
      *
@@ -75,6 +76,7 @@ public class ListRuleCfg  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 设置值,method黑白名单支持&quot;GET&quot;/&quot;HEAD&quot;/&quot;PUT&quot;/&quot;POST&quot;/&quot;COPY&quot;/&quot;OPTIONS&quot;/&quot;LINK&quot;/&quot;UNLINK&quot;/&quot;PURGE&quot;/&quot;LOCK&quot;/&quot;UNLOCK&quot;/&quot;PROPFIND&quot;/&quot;DELETE&quot;/&quot;PATCH&quot;/&quot;VIEW&quot;
@@ -94,6 +96,7 @@ public class ListRuleCfg  implements java.io.Serializable {
         this.val = val;
     }
 
+
     /**
      * get 匹配类型 method黑白名单支持0（完全匹配）
      *
@@ -111,6 +114,7 @@ public class ListRuleCfg  implements java.io.Serializable {
     public void setMatchOp(Integer matchOp) {
         this.matchOp = matchOp;
     }
+
 
     /**
      * get action配置
@@ -131,6 +135,7 @@ public class ListRuleCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 序号id,更新时需要
      *
@@ -140,6 +145,7 @@ public class ListRuleCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 设置值,method黑白名单支持&quot;GET&quot;/&quot;HEAD&quot;/&quot;PUT&quot;/&quot;POST&quot;/&quot;COPY&quot;/&quot;OPTIONS&quot;/&quot;LINK&quot;/&quot;UNLINK&quot;/&quot;PURGE&quot;/&quot;LOCK&quot;/&quot;UNLOCK&quot;/&quot;PROPFIND&quot;/&quot;DELETE&quot;/&quot;PATCH&quot;/&quot;VIEW&quot;
@@ -151,6 +157,7 @@ public class ListRuleCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配类型 method黑白名单支持0（完全匹配）
      *
@@ -160,6 +167,7 @@ public class ListRuleCfg  implements java.io.Serializable {
         this.matchOp = matchOp;
         return this;
     }
+
 
     /**
      * set action配置

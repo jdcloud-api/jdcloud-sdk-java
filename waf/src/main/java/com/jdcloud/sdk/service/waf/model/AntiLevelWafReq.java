@@ -58,6 +58,7 @@ public class AntiLevelWafReq  implements java.io.Serializable {
     private Long usrPolicy;
 
 
+
     /**
      * get WAF实例id
      *
@@ -75,6 +76,7 @@ public class AntiLevelWafReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -94,6 +96,7 @@ public class AntiLevelWafReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 0表示宽松，1表示正常，2表示严格, 3表示自定义
      *
@@ -111,6 +114,7 @@ public class AntiLevelWafReq  implements java.io.Serializable {
     public void setWafLevel(Integer wafLevel) {
         this.wafLevel = wafLevel;
     }
+
 
     /**
      * get 自定义规则集id，wafLevel为3时可以设置
@@ -131,6 +135,7 @@ public class AntiLevelWafReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -140,6 +145,7 @@ public class AntiLevelWafReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -151,6 +157,7 @@ public class AntiLevelWafReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0表示宽松，1表示正常，2表示严格, 3表示自定义
      *
@@ -160,6 +167,7 @@ public class AntiLevelWafReq  implements java.io.Serializable {
         this.wafLevel = wafLevel;
         return this;
     }
+
 
     /**
      * set 自定义规则集id，wafLevel为3时可以设置

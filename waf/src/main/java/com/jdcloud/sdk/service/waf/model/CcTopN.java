@@ -37,70 +37,75 @@ public class CcTopN  implements java.io.Serializable {
     /**
      * 来源ip的top10
      */
+    
     private List<TopValue> addr_top10;
-
     /**
      * 攻击路径top10
      */
+    
     private List<TopValue> url_top10;
 
 
     /**
-     * get 来源ip的top10
-     *
-     * @return
-     */
+    * get 来源ip的top10
+    *
+    * @return
+    */
     public List<TopValue> getAddr_top10() {
         return addr_top10;
     }
 
     /**
-     * set 来源ip的top10
-     *
-     * @param addr_top10
-     */
+    * set 来源ip的top10
+    *
+    * @param addr_top10
+    */
     public void setAddr_top10(List<TopValue> addr_top10) {
         this.addr_top10 = addr_top10;
     }
 
+
     /**
-     * get 攻击路径top10
-     *
-     * @return
-     */
+    * get 攻击路径top10
+    *
+    * @return
+    */
     public List<TopValue> getUrl_top10() {
         return url_top10;
     }
 
     /**
-     * set 攻击路径top10
-     *
-     * @param url_top10
-     */
+    * set 攻击路径top10
+    *
+    * @param url_top10
+    */
     public void setUrl_top10(List<TopValue> url_top10) {
         this.url_top10 = url_top10;
     }
 
 
+
     /**
-     * set 来源ip的top10
-     *
-     * @param addr_top10
-     */
+    * set 来源ip的top10
+    *
+    * @param addr_top10
+    */
     public CcTopN addr_top10(List<TopValue> addr_top10) {
         this.addr_top10 = addr_top10;
         return this;
     }
 
+
     /**
-     * set 攻击路径top10
-     *
-     * @param url_top10
-     */
+    * set 攻击路径top10
+    *
+    * @param url_top10
+    */
     public CcTopN url_top10(List<TopValue> url_top10) {
         this.url_top10 = url_top10;
         return this;
     }
+
 
 
     /**
@@ -126,5 +131,4 @@ public class CcTopN  implements java.io.Serializable {
         }
         this.url_top10.add(url_top10);
     }
-
 }

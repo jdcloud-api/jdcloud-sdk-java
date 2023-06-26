@@ -54,6 +54,7 @@ public class SetRatelimitRulesReq  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<RateLimitRuleCfg> rules;
 
 
@@ -75,6 +76,7 @@ public class SetRatelimitRulesReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -93,23 +95,25 @@ public class SetRatelimitRulesReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
-     * get 限速规则配置
-     *
-     * @return
-     */
+    * get 限速规则配置
+    *
+    * @return
+    */
     public List<RateLimitRuleCfg> getRules() {
         return rules;
     }
 
     /**
-     * set 限速规则配置
-     *
-     * @param rules
-     */
+    * set 限速规则配置
+    *
+    * @param rules
+    */
     public void setRules(List<RateLimitRuleCfg> rules) {
         this.rules = rules;
     }
+
 
 
     /**
@@ -122,6 +126,7 @@ public class SetRatelimitRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -132,15 +137,17 @@ public class SetRatelimitRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 限速规则配置
-     *
-     * @param rules
-     */
+    * set 限速规则配置
+    *
+    * @param rules
+    */
     public SetRatelimitRulesReq rules(List<RateLimitRuleCfg> rules) {
         this.rules = rules;
         return this;
     }
+
 
 
     /**
@@ -154,5 +161,4 @@ public class SetRatelimitRulesReq  implements java.io.Serializable {
         }
         this.rules.add(rule);
     }
-
 }

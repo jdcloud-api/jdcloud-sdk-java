@@ -82,6 +82,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<ConditionIdSet> conditions;
 
 
@@ -103,6 +104,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get WAF实例id
      *
@@ -120,6 +122,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -139,6 +142,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 规则名称
      *
@@ -156,6 +160,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
     public void setRuleName(String ruleName) {
         this.ruleName = ruleName;
     }
+
 
     /**
      * get 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
@@ -175,6 +180,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
         this.matchAction = matchAction;
     }
 
+
     /**
      * get 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
      *
@@ -193,23 +199,25 @@ public class SetWafRuleReq  implements java.io.Serializable {
         this.redirection = redirection;
     }
 
+
     /**
-     * get 条件集
-     *
-     * @return
-     */
+    * get 条件集
+    *
+    * @return
+    */
     public List<ConditionIdSet> getConditions() {
         return conditions;
     }
 
     /**
-     * set 条件集
-     *
-     * @param conditions
-     */
+    * set 条件集
+    *
+    * @param conditions
+    */
     public void setConditions(List<ConditionIdSet> conditions) {
         this.conditions = conditions;
     }
+
 
 
     /**
@@ -222,6 +230,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set WAF实例id
      *
@@ -231,6 +240,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -242,6 +252,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则名称
      *
@@ -251,6 +262,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
         this.ruleName = ruleName;
         return this;
     }
+
 
     /**
      * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
@@ -262,6 +274,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
      *
@@ -272,15 +285,17 @@ public class SetWafRuleReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 条件集
-     *
-     * @param conditions
-     */
+    * set 条件集
+    *
+    * @param conditions
+    */
     public SetWafRuleReq conditions(List<ConditionIdSet> conditions) {
         this.conditions = conditions;
         return this;
     }
+
 
 
     /**
@@ -294,5 +309,4 @@ public class SetWafRuleReq  implements java.io.Serializable {
         }
         this.conditions.add(condition);
     }
-
 }

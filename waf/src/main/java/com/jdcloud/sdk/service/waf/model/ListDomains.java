@@ -51,9 +51,10 @@ public class ListDomains  implements java.io.Serializable {
     private Integer pageIndex;
 
     /**
-     * 页大小，[1-100]，默认为10
+     * 页大小，[1-100]，默认为20
      */
     private Integer pageSize;
+
 
 
     /**
@@ -74,6 +75,7 @@ public class ListDomains  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -91,6 +93,7 @@ public class ListDomains  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 页码，[1-100]，默认为1
@@ -110,8 +113,9 @@ public class ListDomains  implements java.io.Serializable {
         this.pageIndex = pageIndex;
     }
 
+
     /**
-     * get 页大小，[1-100]，默认为10
+     * get 页大小，[1-100]，默认为20
      *
      * @return
      */
@@ -120,13 +124,14 @@ public class ListDomains  implements java.io.Serializable {
     }
 
     /**
-     * set 页大小，[1-100]，默认为10
+     * set 页大小，[1-100]，默认为20
      *
      * @param pageSize
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
 
     /**
@@ -139,6 +144,7 @@ public class ListDomains  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -148,6 +154,7 @@ public class ListDomains  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 页码，[1-100]，默认为1
@@ -159,8 +166,9 @@ public class ListDomains  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 页大小，[1-100]，默认为10
+     * set 页大小，[1-100]，默认为20
      *
      * @param pageSize
      */

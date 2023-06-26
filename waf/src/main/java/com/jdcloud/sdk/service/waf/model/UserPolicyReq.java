@@ -38,6 +38,7 @@ public class UserPolicyReq  implements java.io.Serializable {
     private String wafInstanceId;
 
 
+
     /**
      * get WAF实例id
      *
@@ -55,6 +56,7 @@ public class UserPolicyReq  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
 
     /**

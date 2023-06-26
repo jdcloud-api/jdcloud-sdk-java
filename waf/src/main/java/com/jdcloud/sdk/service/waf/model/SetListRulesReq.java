@@ -64,10 +64,16 @@ public class SetListRulesReq  implements java.io.Serializable {
     private String listType;
 
     /**
+     * 白名单不检查指定Web防护规则id, 多个逗号分隔
+     */
+    private String skipRuleId;
+
+    /**
      * 黑白名单规则
      * Required:true
      */
     @Required
+    
     private List<ListRuleCfg> listRules;
 
 
@@ -89,6 +95,7 @@ public class SetListRulesReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -106,6 +113,7 @@ public class SetListRulesReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 0表示黑名单，1表示白名单
@@ -125,6 +133,7 @@ public class SetListRulesReq  implements java.io.Serializable {
         this.iswhite = iswhite;
     }
 
+
     /**
      * get 黑白名单类型，目前支持&quot;method&quot;
      *
@@ -143,23 +152,44 @@ public class SetListRulesReq  implements java.io.Serializable {
         this.listType = listType;
     }
 
+
     /**
-     * get 黑白名单规则
+     * get 白名单不检查指定Web防护规则id, 多个逗号分隔
      *
      * @return
      */
+    public String getSkipRuleId() {
+        return skipRuleId;
+    }
+
+    /**
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @param skipRuleId
+     */
+    public void setSkipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+    }
+
+
+    /**
+    * get 黑白名单规则
+    *
+    * @return
+    */
     public List<ListRuleCfg> getListRules() {
         return listRules;
     }
 
     /**
-     * set 黑白名单规则
-     *
-     * @param listRules
-     */
+    * set 黑白名单规则
+    *
+    * @param listRules
+    */
     public void setListRules(List<ListRuleCfg> listRules) {
         this.listRules = listRules;
     }
+
 
 
     /**
@@ -172,6 +202,7 @@ public class SetListRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -181,6 +212,7 @@ public class SetListRulesReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 0表示黑名单，1表示白名单
@@ -192,6 +224,7 @@ public class SetListRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 黑白名单类型，目前支持&quot;method&quot;
      *
@@ -202,15 +235,28 @@ public class SetListRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 黑白名单规则
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
      *
-     * @param listRules
+     * @param skipRuleId
      */
+    public SetListRulesReq skipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+        return this;
+    }
+
+
+    /**
+    * set 黑白名单规则
+    *
+    * @param listRules
+    */
     public SetListRulesReq listRules(List<ListRuleCfg> listRules) {
         this.listRules = listRules;
         return this;
     }
+
 
 
     /**
@@ -224,5 +270,4 @@ public class SetListRulesReq  implements java.io.Serializable {
         }
         this.listRules.add(listRule);
     }
-
 }

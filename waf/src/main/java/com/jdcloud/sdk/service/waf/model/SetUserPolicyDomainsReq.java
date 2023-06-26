@@ -47,6 +47,7 @@ public class SetUserPolicyDomainsReq  implements java.io.Serializable {
     /**
      * domains
      */
+    
     private List<DomainActive> domains;
 
 
@@ -68,6 +69,7 @@ public class SetUserPolicyDomainsReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 自定义规则组id
      *
@@ -86,23 +88,25 @@ public class SetUserPolicyDomainsReq  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
-     * get domains
-     *
-     * @return
-     */
+    * get domains
+    *
+    * @return
+    */
     public List<DomainActive> getDomains() {
         return domains;
     }
 
     /**
-     * set domains
-     *
-     * @param domains
-     */
+    * set domains
+    *
+    * @param domains
+    */
     public void setDomains(List<DomainActive> domains) {
         this.domains = domains;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class SetUserPolicyDomainsReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自定义规则组id
      *
@@ -125,15 +130,17 @@ public class SetUserPolicyDomainsReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set domains
-     *
-     * @param domains
-     */
+    * set domains
+    *
+    * @param domains
+    */
     public SetUserPolicyDomainsReq domains(List<DomainActive> domains) {
         this.domains = domains;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class SetUserPolicyDomainsReq  implements java.io.Serializable {
         }
         this.domains.add(domain);
     }
-
 }

@@ -102,8 +102,8 @@ public class RiskVarCfg  implements java.io.Serializable {
     /**
      * 规则
      */
+    
     private List<RiskVarRuleCfg> rules;
-
     /**
      * 参数获取位置
      */
@@ -113,6 +113,7 @@ public class RiskVarCfg  implements java.io.Serializable {
      * 参数的key
      */
     private String key;
+
 
 
     /**
@@ -133,6 +134,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get WAF实例id
      *
@@ -150,6 +152,7 @@ public class RiskVarCfg  implements java.io.Serializable {
     public void setWafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
     }
+
 
     /**
      * get 域名
@@ -169,6 +172,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 规则名称
      *
@@ -186,6 +190,7 @@ public class RiskVarCfg  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get desc
@@ -205,6 +210,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         this.desc = desc;
     }
 
+
     /**
      * get 0-使用中 1用-禁
      *
@@ -222,6 +228,7 @@ public class RiskVarCfg  implements java.io.Serializable {
     public void setDisable(Integer disable) {
         this.disable = disable;
     }
+
 
     /**
      * get 时间编码
@@ -241,6 +248,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         this.eventCode = eventCode;
     }
 
+
     /**
      * get 变量类型 template \|  userDefine \|  online \| offline
      *
@@ -258,6 +266,7 @@ public class RiskVarCfg  implements java.io.Serializable {
     public void setVarType(String varType) {
         this.varType = varType;
     }
+
 
     /**
      * get 消耗时间
@@ -277,6 +286,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         this.cost = cost;
     }
 
+
     /**
      * get 输出
      *
@@ -294,6 +304,7 @@ public class RiskVarCfg  implements java.io.Serializable {
     public void setOutput(String output) {
         this.output = output;
     }
+
 
     /**
      * get 属性
@@ -313,6 +324,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         this.property = property;
     }
 
+
     /**
      * get 持续时间，单位为秒
      *
@@ -330,6 +342,7 @@ public class RiskVarCfg  implements java.io.Serializable {
     public void setDura(String dura) {
         this.dura = dura;
     }
+
 
     /**
      * get 逻辑  and \| or
@@ -349,23 +362,25 @@ public class RiskVarCfg  implements java.io.Serializable {
         this.logic = logic;
     }
 
+
     /**
-     * get 规则
-     *
-     * @return
-     */
+    * get 规则
+    *
+    * @return
+    */
     public List<RiskVarRuleCfg> getRules() {
         return rules;
     }
 
     /**
-     * set 规则
-     *
-     * @param rules
-     */
+    * set 规则
+    *
+    * @param rules
+    */
     public void setRules(List<RiskVarRuleCfg> rules) {
         this.rules = rules;
     }
+
 
     /**
      * get 参数获取位置
@@ -384,6 +399,7 @@ public class RiskVarCfg  implements java.io.Serializable {
     public void setPos(String pos) {
         this.pos = pos;
     }
+
 
     /**
      * get 参数的key
@@ -404,6 +420,7 @@ public class RiskVarCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id
      *
@@ -413,6 +430,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set WAF实例id
@@ -424,6 +442,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -433,6 +452,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 规则名称
@@ -444,6 +464,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set desc
      *
@@ -453,6 +474,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         this.desc = desc;
         return this;
     }
+
 
     /**
      * set 0-使用中 1用-禁
@@ -464,6 +486,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 时间编码
      *
@@ -473,6 +496,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         this.eventCode = eventCode;
         return this;
     }
+
 
     /**
      * set 变量类型 template \|  userDefine \|  online \| offline
@@ -484,6 +508,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 消耗时间
      *
@@ -493,6 +518,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         this.cost = cost;
         return this;
     }
+
 
     /**
      * set 输出
@@ -504,6 +530,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 属性
      *
@@ -513,6 +540,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         this.property = property;
         return this;
     }
+
 
     /**
      * set 持续时间，单位为秒
@@ -524,6 +552,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 逻辑  and \| or
      *
@@ -534,15 +563,17 @@ public class RiskVarCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 规则
-     *
-     * @param rules
-     */
+    * set 规则
+    *
+    * @param rules
+    */
     public RiskVarCfg rules(List<RiskVarRuleCfg> rules) {
         this.rules = rules;
         return this;
     }
+
 
     /**
      * set 参数获取位置
@@ -554,6 +585,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 参数的key
      *
@@ -563,6 +595,7 @@ public class RiskVarCfg  implements java.io.Serializable {
         this.key = key;
         return this;
     }
+
 
 
     /**
@@ -576,5 +609,4 @@ public class RiskVarCfg  implements java.io.Serializable {
         }
         this.rules.add(rule);
     }
-
 }

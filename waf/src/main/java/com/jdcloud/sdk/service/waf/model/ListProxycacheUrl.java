@@ -63,6 +63,7 @@ public class ListProxycacheUrl  implements java.io.Serializable {
     private Integer updateTime;
 
 
+
     /**
      * get 规则id
      *
@@ -80,6 +81,7 @@ public class ListProxycacheUrl  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 缓存的uri
@@ -99,6 +101,7 @@ public class ListProxycacheUrl  implements java.io.Serializable {
         this.uri = uri;
     }
 
+
     /**
      * get 协议
      *
@@ -116,6 +119,7 @@ public class ListProxycacheUrl  implements java.io.Serializable {
     public void setProto(String proto) {
         this.proto = proto;
     }
+
 
     /**
      * get 0-缓存生效，1-缓存不生效
@@ -135,6 +139,7 @@ public class ListProxycacheUrl  implements java.io.Serializable {
         this.disable = disable;
     }
 
+
     /**
      * get 匹配模式
      *
@@ -152,6 +157,7 @@ public class ListProxycacheUrl  implements java.io.Serializable {
     public void setMatchOp(Integer matchOp) {
         this.matchOp = matchOp;
     }
+
 
     /**
      * get 更新时间，s时间戳
@@ -172,6 +178,7 @@ public class ListProxycacheUrl  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id
      *
@@ -181,6 +188,7 @@ public class ListProxycacheUrl  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 缓存的uri
@@ -192,6 +200,7 @@ public class ListProxycacheUrl  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 协议
      *
@@ -201,6 +210,7 @@ public class ListProxycacheUrl  implements java.io.Serializable {
         this.proto = proto;
         return this;
     }
+
 
     /**
      * set 0-缓存生效，1-缓存不生效
@@ -212,6 +222,7 @@ public class ListProxycacheUrl  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配模式
      *
@@ -221,6 +232,7 @@ public class ListProxycacheUrl  implements java.io.Serializable {
         this.matchOp = matchOp;
         return this;
     }
+
 
     /**
      * set 更新时间，s时间戳

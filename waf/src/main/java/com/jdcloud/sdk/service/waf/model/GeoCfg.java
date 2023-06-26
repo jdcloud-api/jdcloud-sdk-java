@@ -53,6 +53,7 @@ public class GeoCfg  implements java.io.Serializable {
     private AtCfg atCfg;
 
 
+
     /**
      * get 序号id,更新时需要
      *
@@ -71,6 +72,7 @@ public class GeoCfg  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get geo名称
      *
@@ -88,6 +90,7 @@ public class GeoCfg  implements java.io.Serializable {
     public void setVal(String val) {
         this.val = val;
     }
+
 
     /**
      * get 动作配置,旗舰版全部支持,其它套餐不支持观察
@@ -108,6 +111,7 @@ public class GeoCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 序号id,更新时需要
      *
@@ -118,6 +122,7 @@ public class GeoCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set geo名称
      *
@@ -127,6 +132,7 @@ public class GeoCfg  implements java.io.Serializable {
         this.val = val;
         return this;
     }
+
 
     /**
      * set 动作配置,旗舰版全部支持,其它套餐不支持观察

@@ -127,6 +127,7 @@ public class OrderReq  implements java.io.Serializable {
     private Boolean needPay;
 
 
+
     /**
      * get 地域信息, hb_bgp, hn, hd_bgp 企业版支持两个，旗舰版支持3个，多个以 , 分隔
      *
@@ -144,6 +145,7 @@ public class OrderReq  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 购买类型, 1:创建 2:续费 3:升配
@@ -163,6 +165,7 @@ public class OrderReq  implements java.io.Serializable {
         this.buyType = buyType;
     }
 
+
     /**
      * get 购买时长
      *
@@ -180,6 +183,7 @@ public class OrderReq  implements java.io.Serializable {
     public void setTimeSpan(Integer timeSpan) {
         this.timeSpan = timeSpan;
     }
+
 
     /**
      * get 时间单位，month, year
@@ -199,6 +203,7 @@ public class OrderReq  implements java.io.Serializable {
         this.timeUnit = timeUnit;
     }
 
+
     /**
      * get 创建时间
      *
@@ -216,6 +221,7 @@ public class OrderReq  implements java.io.Serializable {
     public void setStartTime(Long startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 实例id，除新建必传
@@ -235,6 +241,7 @@ public class OrderReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版(仅支持新用户)
      *
@@ -252,6 +259,7 @@ public class OrderReq  implements java.io.Serializable {
     public void setPackageType(Integer packageType) {
         this.packageType = packageType;
     }
+
 
     /**
      * get 额外的域名扩展包
@@ -271,6 +279,7 @@ public class OrderReq  implements java.io.Serializable {
         this.extraDomainsNum = extraDomainsNum;
     }
 
+
     /**
      * get 实例名，新建订单时必传，只能包含汉字、英文字母、下划线、破折号、数字，且长度不能超过16
      *
@@ -288,6 +297,7 @@ public class OrderReq  implements java.io.Serializable {
     public void setNickName(String nickName) {
         this.nickName = nickName;
     }
+
 
     /**
      * get 下单成功后返回的url, eg:http://abc.com
@@ -307,6 +317,7 @@ public class OrderReq  implements java.io.Serializable {
         this.returnURL = returnURL;
     }
 
+
     /**
      * get 额外的qps扩展包,单位为M 该值为50M的倍数
      *
@@ -324,6 +335,7 @@ public class OrderReq  implements java.io.Serializable {
     public void setExtraBitsLimit(Integer extraBitsLimit) {
         this.extraBitsLimit = extraBitsLimit;
     }
+
 
     /**
      * get 云鼎的appCode
@@ -343,6 +355,7 @@ public class OrderReq  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
      * get 云鼎的serviceCode
      *
@@ -361,6 +374,7 @@ public class OrderReq  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get 购物车活动参数
      *
@@ -378,6 +392,7 @@ public class OrderReq  implements java.io.Serializable {
     public void setBuyScenario(String buyScenario) {
         this.buyScenario = buyScenario;
     }
+
 
     /**
      * get true表示支持autoPay
@@ -398,6 +413,7 @@ public class OrderReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 地域信息, hb_bgp, hn, hd_bgp 企业版支持两个，旗舰版支持3个，多个以 , 分隔
      *
@@ -407,6 +423,7 @@ public class OrderReq  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 购买类型, 1:创建 2:续费 3:升配
@@ -418,6 +435,7 @@ public class OrderReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 购买时长
      *
@@ -427,6 +445,7 @@ public class OrderReq  implements java.io.Serializable {
         this.timeSpan = timeSpan;
         return this;
     }
+
 
     /**
      * set 时间单位，month, year
@@ -438,6 +457,7 @@ public class OrderReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -447,6 +467,7 @@ public class OrderReq  implements java.io.Serializable {
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 实例id，除新建必传
@@ -458,6 +479,7 @@ public class OrderReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版(仅支持新用户)
      *
@@ -467,6 +489,7 @@ public class OrderReq  implements java.io.Serializable {
         this.packageType = packageType;
         return this;
     }
+
 
     /**
      * set 额外的域名扩展包
@@ -478,6 +501,7 @@ public class OrderReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例名，新建订单时必传，只能包含汉字、英文字母、下划线、破折号、数字，且长度不能超过16
      *
@@ -487,6 +511,7 @@ public class OrderReq  implements java.io.Serializable {
         this.nickName = nickName;
         return this;
     }
+
 
     /**
      * set 下单成功后返回的url, eg:http://abc.com
@@ -498,6 +523,7 @@ public class OrderReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 额外的qps扩展包,单位为M 该值为50M的倍数
      *
@@ -507,6 +533,7 @@ public class OrderReq  implements java.io.Serializable {
         this.extraBitsLimit = extraBitsLimit;
         return this;
     }
+
 
     /**
      * set 云鼎的appCode
@@ -518,6 +545,7 @@ public class OrderReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云鼎的serviceCode
      *
@@ -528,6 +556,7 @@ public class OrderReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 购物车活动参数
      *
@@ -537,6 +566,7 @@ public class OrderReq  implements java.io.Serializable {
         this.buyScenario = buyScenario;
         return this;
     }
+
 
     /**
      * set true表示支持autoPay

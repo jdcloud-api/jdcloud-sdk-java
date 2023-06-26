@@ -40,8 +40,8 @@ public class CacheItemCfg  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> code;
-
     /**
      * 缓存过期时间，1m~30m
      * Required:true
@@ -50,23 +50,25 @@ public class CacheItemCfg  implements java.io.Serializable {
     private String time;
 
 
+
     /**
-     * get 需要缓存的状态码, 当前支持 404 200 302
-     *
-     * @return
-     */
+    * get 需要缓存的状态码, 当前支持 404 200 302
+    *
+    * @return
+    */
     public List<String> getCode() {
         return code;
     }
 
     /**
-     * set 需要缓存的状态码, 当前支持 404 200 302
-     *
-     * @param code
-     */
+    * set 需要缓存的状态码, 当前支持 404 200 302
+    *
+    * @param code
+    */
     public void setCode(List<String> code) {
         this.code = code;
     }
+
 
     /**
      * get 缓存过期时间，1m~30m
@@ -87,15 +89,17 @@ public class CacheItemCfg  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 需要缓存的状态码, 当前支持 404 200 302
-     *
-     * @param code
-     */
+    * set 需要缓存的状态码, 当前支持 404 200 302
+    *
+    * @param code
+    */
     public CacheItemCfg code(List<String> code) {
         this.code = code;
         return this;
     }
+
 
     /**
      * set 缓存过期时间，1m~30m
@@ -106,6 +110,7 @@ public class CacheItemCfg  implements java.io.Serializable {
         this.time = time;
         return this;
     }
+
 
 
     /**
@@ -119,5 +124,4 @@ public class CacheItemCfg  implements java.io.Serializable {
         }
         this.code.add(code);
     }
-
 }

@@ -38,6 +38,7 @@ public class EnableConf  implements java.io.Serializable {
     private Integer enable;
 
 
+
     /**
      * get 是否使能 0表示否
      *
@@ -55,6 +56,7 @@ public class EnableConf  implements java.io.Serializable {
     public void setEnable(Integer enable) {
         this.enable = enable;
     }
+
 
 
     /**

@@ -41,6 +41,7 @@ public class SetWafInstanceIdRegionReq  implements java.io.Serializable {
     private String region;
 
 
+
     /**
      * get 地域，多个以逗号分隔
      *
@@ -58,6 +59,7 @@ public class SetWafInstanceIdRegionReq  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
 
     /**

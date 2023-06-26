@@ -44,8 +44,8 @@ public class ListMainCfgResult extends JdcloudResult implements java.io.Serializ
     /**
      * list
      */
+    
     private List<DomainMainConfig> list;
-
     /**
      * 页码
      */
@@ -60,6 +60,37 @@ public class ListMainCfgResult extends JdcloudResult implements java.io.Serializ
      * 最大支持的数目
      */
     private Integer maxLimit;
+
+    /**
+     * 当前实例域名总数
+     */
+    private Integer totalCount;
+
+    /**
+     * 最大支持一级域名的数目
+     */
+    private Integer tldLimit;
+
+    /**
+     * 一级域名个数
+     */
+    private Integer tldNum;
+
+    /**
+     * 本次查询域名个数
+     */
+    private Integer count;
+
+    /**
+     * invalidRegion
+     */
+    
+    private List<String> invalidRegion;
+    /**
+     * Ipv6是否故障,1:故障 0:健康
+     */
+    private Integer invalidIpv6;
+
 
 
     /**
@@ -80,23 +111,25 @@ public class ListMainCfgResult extends JdcloudResult implements java.io.Serializ
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
-     * get list
-     *
-     * @return
-     */
+    * get list
+    *
+    * @return
+    */
     public List<DomainMainConfig> getList() {
         return list;
     }
 
     /**
-     * set list
-     *
-     * @param list
-     */
+    * set list
+    *
+    * @param list
+    */
     public void setList(List<DomainMainConfig> list) {
         this.list = list;
     }
+
 
     /**
      * get 页码
@@ -116,6 +149,7 @@ public class ListMainCfgResult extends JdcloudResult implements java.io.Serializ
         this.pageIndex = pageIndex;
     }
 
+
     /**
      * get 页大小
      *
@@ -133,6 +167,7 @@ public class ListMainCfgResult extends JdcloudResult implements java.io.Serializ
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 最大支持的数目
@@ -154,6 +189,121 @@ public class ListMainCfgResult extends JdcloudResult implements java.io.Serializ
 
 
     /**
+     * get 当前实例域名总数
+     *
+     * @return
+     */
+    public Integer getTotalCount() {
+        return totalCount;
+    }
+
+    /**
+     * set 当前实例域名总数
+     *
+     * @param totalCount
+     */
+    public void setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+    }
+
+
+    /**
+     * get 最大支持一级域名的数目
+     *
+     * @return
+     */
+    public Integer getTldLimit() {
+        return tldLimit;
+    }
+
+    /**
+     * set 最大支持一级域名的数目
+     *
+     * @param tldLimit
+     */
+    public void setTldLimit(Integer tldLimit) {
+        this.tldLimit = tldLimit;
+    }
+
+
+    /**
+     * get 一级域名个数
+     *
+     * @return
+     */
+    public Integer getTldNum() {
+        return tldNum;
+    }
+
+    /**
+     * set 一级域名个数
+     *
+     * @param tldNum
+     */
+    public void setTldNum(Integer tldNum) {
+        this.tldNum = tldNum;
+    }
+
+
+    /**
+     * get 本次查询域名个数
+     *
+     * @return
+     */
+    public Integer getCount() {
+        return count;
+    }
+
+    /**
+     * set 本次查询域名个数
+     *
+     * @param count
+     */
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
+
+    /**
+    * get invalidRegion
+    *
+    * @return
+    */
+    public List<String> getInvalidRegion() {
+        return invalidRegion;
+    }
+
+    /**
+    * set invalidRegion
+    *
+    * @param invalidRegion
+    */
+    public void setInvalidRegion(List<String> invalidRegion) {
+        this.invalidRegion = invalidRegion;
+    }
+
+
+    /**
+     * get Ipv6是否故障,1:故障 0:健康
+     *
+     * @return
+     */
+    public Integer getInvalidIpv6() {
+        return invalidIpv6;
+    }
+
+    /**
+     * set Ipv6是否故障,1:故障 0:健康
+     *
+     * @param invalidIpv6
+     */
+    public void setInvalidIpv6(Integer invalidIpv6) {
+        this.invalidIpv6 = invalidIpv6;
+    }
+
+
+
+    /**
      * set 实例id
      *
      * @param wafInstanceId
@@ -163,15 +313,17 @@ public class ListMainCfgResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
-     * set list
-     *
-     * @param list
-     */
+    * set list
+    *
+    * @param list
+    */
     public ListMainCfgResult list(List<DomainMainConfig> list) {
         this.list = list;
         return this;
     }
+
 
     /**
      * set 页码
@@ -183,6 +335,7 @@ public class ListMainCfgResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 页大小
      *
@@ -193,6 +346,7 @@ public class ListMainCfgResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 最大支持的数目
      *
@@ -202,6 +356,73 @@ public class ListMainCfgResult extends JdcloudResult implements java.io.Serializ
         this.maxLimit = maxLimit;
         return this;
     }
+
+
+    /**
+     * set 当前实例域名总数
+     *
+     * @param totalCount
+     */
+    public ListMainCfgResult totalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+
+
+    /**
+     * set 最大支持一级域名的数目
+     *
+     * @param tldLimit
+     */
+    public ListMainCfgResult tldLimit(Integer tldLimit) {
+        this.tldLimit = tldLimit;
+        return this;
+    }
+
+
+    /**
+     * set 一级域名个数
+     *
+     * @param tldNum
+     */
+    public ListMainCfgResult tldNum(Integer tldNum) {
+        this.tldNum = tldNum;
+        return this;
+    }
+
+
+    /**
+     * set 本次查询域名个数
+     *
+     * @param count
+     */
+    public ListMainCfgResult count(Integer count) {
+        this.count = count;
+        return this;
+    }
+
+
+    /**
+    * set invalidRegion
+    *
+    * @param invalidRegion
+    */
+    public ListMainCfgResult invalidRegion(List<String> invalidRegion) {
+        this.invalidRegion = invalidRegion;
+        return this;
+    }
+
+
+    /**
+     * set Ipv6是否故障,1:故障 0:健康
+     *
+     * @param invalidIpv6
+     */
+    public ListMainCfgResult invalidIpv6(Integer invalidIpv6) {
+        this.invalidIpv6 = invalidIpv6;
+        return this;
+    }
+
 
 
     /**
@@ -216,4 +437,15 @@ public class ListMainCfgResult extends JdcloudResult implements java.io.Serializ
         this.list.add(list);
     }
 
+    /**
+     * add item to invalidRegion
+     *
+     * @param invalidRegion
+     */
+    public void addInvalidRegion(String invalidRegion) {
+        if (this.invalidRegion == null) {
+            this.invalidRegion = new ArrayList<>();
+        }
+        this.invalidRegion.add(invalidRegion);
+    }
 }

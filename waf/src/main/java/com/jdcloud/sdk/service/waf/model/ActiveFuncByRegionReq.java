@@ -53,6 +53,7 @@ public class ActiveFuncByRegionReq  implements java.io.Serializable {
     private Integer enable;
 
 
+
     /**
      * get 按地区设置，仅运营后台支持
      *
@@ -70,6 +71,7 @@ public class ActiveFuncByRegionReq  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 实例id，代表要设置的WAF实例，仅运营后台支持按实例设置
@@ -89,6 +91,7 @@ public class ActiveFuncByRegionReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -106,6 +109,7 @@ public class ActiveFuncByRegionReq  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 是否使能 0表示否
@@ -126,6 +130,7 @@ public class ActiveFuncByRegionReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 按地区设置，仅运营后台支持
      *
@@ -135,6 +140,7 @@ public class ActiveFuncByRegionReq  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 实例id，代表要设置的WAF实例，仅运营后台支持按实例设置
@@ -146,6 +152,7 @@ public class ActiveFuncByRegionReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -155,6 +162,7 @@ public class ActiveFuncByRegionReq  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 是否使能 0表示否

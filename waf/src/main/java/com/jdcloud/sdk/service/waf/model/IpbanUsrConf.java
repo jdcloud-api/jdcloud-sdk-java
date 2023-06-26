@@ -58,6 +58,7 @@ public class IpbanUsrConf  implements java.io.Serializable {
     private DenyActionCfg action;
 
 
+
     /**
      * get 是否使能 0表示否
      *
@@ -75,6 +76,7 @@ public class IpbanUsrConf  implements java.io.Serializable {
     public void setEnable(Integer enable) {
         this.enable = enable;
     }
+
 
     /**
      * get 封禁时间，秒
@@ -94,6 +96,7 @@ public class IpbanUsrConf  implements java.io.Serializable {
         this.ipbanTime = ipbanTime;
     }
 
+
     /**
      * get 检测时间，秒
      *
@@ -112,6 +115,7 @@ public class IpbanUsrConf  implements java.io.Serializable {
         this.detectTime = detectTime;
     }
 
+
     /**
      * get 封禁阈值
      *
@@ -129,6 +133,7 @@ public class IpbanUsrConf  implements java.io.Serializable {
     public void setThreshold(Integer threshold) {
         this.threshold = threshold;
     }
+
 
     /**
      * get 动作配置
@@ -149,6 +154,7 @@ public class IpbanUsrConf  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否使能 0表示否
      *
@@ -158,6 +164,7 @@ public class IpbanUsrConf  implements java.io.Serializable {
         this.enable = enable;
         return this;
     }
+
 
     /**
      * set 封禁时间，秒
@@ -169,6 +176,7 @@ public class IpbanUsrConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 检测时间，秒
      *
@@ -179,6 +187,7 @@ public class IpbanUsrConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 封禁阈值
      *
@@ -188,6 +197,7 @@ public class IpbanUsrConf  implements java.io.Serializable {
         this.threshold = threshold;
         return this;
     }
+
 
     /**
      * set 动作配置

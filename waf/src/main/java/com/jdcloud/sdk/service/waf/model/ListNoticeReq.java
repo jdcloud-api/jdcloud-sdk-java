@@ -51,6 +51,7 @@ public class ListNoticeReq  implements java.io.Serializable {
     private Integer pageSize;
 
 
+
     /**
      * get 公告类型,1-规则更新通知，2-功能更新公告
      *
@@ -69,6 +70,7 @@ public class ListNoticeReq  implements java.io.Serializable {
         this.noticeType = noticeType;
     }
 
+
     /**
      * get 页码，默认为1
      *
@@ -86,6 +88,7 @@ public class ListNoticeReq  implements java.io.Serializable {
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
     }
+
 
     /**
      * get 页大小，默认为10
@@ -106,6 +109,7 @@ public class ListNoticeReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 公告类型,1-规则更新通知，2-功能更新公告
      *
@@ -116,6 +120,7 @@ public class ListNoticeReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 页码，默认为1
      *
@@ -125,6 +130,7 @@ public class ListNoticeReq  implements java.io.Serializable {
         this.pageIndex = pageIndex;
         return this;
     }
+
 
     /**
      * set 页大小，默认为10

@@ -37,13 +37,13 @@ public class StatusCodeData  implements java.io.Serializable {
     /**
      * 异常状态码域名TOP10
      */
+    
     private List<TopCodeValue> domainTop10;
-
     /**
      * 异常状态码URL的TOP10
      */
+    
     private List<TopCodeValue> urlTop10;
-
     /**
      * 状态码响应统计，当请求字段isStaCode为true时返回
      */
@@ -52,44 +52,47 @@ public class StatusCodeData  implements java.io.Serializable {
     /**
      * 状态码响应占比，当请求字段isStaCode为true时返回
      */
+    
     private List<TopValue> statusCodePie;
 
 
     /**
-     * get 异常状态码域名TOP10
-     *
-     * @return
-     */
+    * get 异常状态码域名TOP10
+    *
+    * @return
+    */
     public List<TopCodeValue> getDomainTop10() {
         return domainTop10;
     }
 
     /**
-     * set 异常状态码域名TOP10
-     *
-     * @param domainTop10
-     */
+    * set 异常状态码域名TOP10
+    *
+    * @param domainTop10
+    */
     public void setDomainTop10(List<TopCodeValue> domainTop10) {
         this.domainTop10 = domainTop10;
     }
 
+
     /**
-     * get 异常状态码URL的TOP10
-     *
-     * @return
-     */
+    * get 异常状态码URL的TOP10
+    *
+    * @return
+    */
     public List<TopCodeValue> getUrlTop10() {
         return urlTop10;
     }
 
     /**
-     * set 异常状态码URL的TOP10
-     *
-     * @param urlTop10
-     */
+    * set 异常状态码URL的TOP10
+    *
+    * @param urlTop10
+    */
     public void setUrlTop10(List<TopCodeValue> urlTop10) {
         this.urlTop10 = urlTop10;
     }
+
 
     /**
      * get 状态码响应统计，当请求字段isStaCode为true时返回
@@ -109,44 +112,48 @@ public class StatusCodeData  implements java.io.Serializable {
         this.statusCodeTotal = statusCodeTotal;
     }
 
+
     /**
-     * get 状态码响应占比，当请求字段isStaCode为true时返回
-     *
-     * @return
-     */
+    * get 状态码响应占比，当请求字段isStaCode为true时返回
+    *
+    * @return
+    */
     public List<TopValue> getStatusCodePie() {
         return statusCodePie;
     }
 
     /**
-     * set 状态码响应占比，当请求字段isStaCode为true时返回
-     *
-     * @param statusCodePie
-     */
+    * set 状态码响应占比，当请求字段isStaCode为true时返回
+    *
+    * @param statusCodePie
+    */
     public void setStatusCodePie(List<TopValue> statusCodePie) {
         this.statusCodePie = statusCodePie;
     }
 
 
+
     /**
-     * set 异常状态码域名TOP10
-     *
-     * @param domainTop10
-     */
+    * set 异常状态码域名TOP10
+    *
+    * @param domainTop10
+    */
     public StatusCodeData domainTop10(List<TopCodeValue> domainTop10) {
         this.domainTop10 = domainTop10;
         return this;
     }
 
+
     /**
-     * set 异常状态码URL的TOP10
-     *
-     * @param urlTop10
-     */
+    * set 异常状态码URL的TOP10
+    *
+    * @param urlTop10
+    */
     public StatusCodeData urlTop10(List<TopCodeValue> urlTop10) {
         this.urlTop10 = urlTop10;
         return this;
     }
+
 
     /**
      * set 状态码响应统计，当请求字段isStaCode为true时返回
@@ -158,15 +165,17 @@ public class StatusCodeData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 状态码响应占比，当请求字段isStaCode为true时返回
-     *
-     * @param statusCodePie
-     */
+    * set 状态码响应占比，当请求字段isStaCode为true时返回
+    *
+    * @param statusCodePie
+    */
     public StatusCodeData statusCodePie(List<TopValue> statusCodePie) {
         this.statusCodePie = statusCodePie;
         return this;
     }
+
 
 
     /**
@@ -204,5 +213,4 @@ public class StatusCodeData  implements java.io.Serializable {
         }
         this.statusCodePie.add(statusCodePie);
     }
-
 }

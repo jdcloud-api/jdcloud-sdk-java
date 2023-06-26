@@ -48,6 +48,7 @@ public class AttackInfo  implements java.io.Serializable {
     private Long wafAnti;
 
 
+
     /**
      * get 自定义规则防护
      *
@@ -66,6 +67,7 @@ public class AttackInfo  implements java.io.Serializable {
         this.aclAnti = aclAnti;
     }
 
+
     /**
      * get cc防护
      *
@@ -83,6 +85,7 @@ public class AttackInfo  implements java.io.Serializable {
     public void setCcAnti(Long ccAnti) {
         this.ccAnti = ccAnti;
     }
+
 
     /**
      * get web防护
@@ -103,6 +106,7 @@ public class AttackInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 自定义规则防护
      *
@@ -113,6 +117,7 @@ public class AttackInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cc防护
      *
@@ -122,6 +127,7 @@ public class AttackInfo  implements java.io.Serializable {
         this.ccAnti = ccAnti;
         return this;
     }
+
 
     /**
      * set web防护

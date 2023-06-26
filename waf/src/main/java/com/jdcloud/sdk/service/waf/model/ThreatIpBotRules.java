@@ -53,6 +53,7 @@ public class ThreatIpBotRules  implements java.io.Serializable {
     private DenyActionCfg action;
 
 
+
     /**
      * get 威胁情报库类型en
      *
@@ -70,6 +71,7 @@ public class ThreatIpBotRules  implements java.io.Serializable {
     public void setBotType(String botType) {
         this.botType = botType;
     }
+
 
     /**
      * get 威胁情报库类型zh
@@ -89,6 +91,7 @@ public class ThreatIpBotRules  implements java.io.Serializable {
         this.botTypeZh = botTypeZh;
     }
 
+
     /**
      * get 1-使用中，0-禁用
      *
@@ -106,6 +109,7 @@ public class ThreatIpBotRules  implements java.io.Serializable {
     public void setEnable(Integer enable) {
         this.enable = enable;
     }
+
 
     /**
      * get 动作配置
@@ -126,6 +130,7 @@ public class ThreatIpBotRules  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 威胁情报库类型en
      *
@@ -135,6 +140,7 @@ public class ThreatIpBotRules  implements java.io.Serializable {
         this.botType = botType;
         return this;
     }
+
 
     /**
      * set 威胁情报库类型zh
@@ -146,6 +152,7 @@ public class ThreatIpBotRules  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 1-使用中，0-禁用
      *
@@ -155,6 +162,7 @@ public class ThreatIpBotRules  implements java.io.Serializable {
         this.enable = enable;
         return this;
     }
+
 
     /**
      * set 动作配置

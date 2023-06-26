@@ -24,11 +24,13 @@
 
 package com.jdcloud.sdk.service.waf.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
- * valListCfg
+ * groupListCfg
  */
-public class ValListCfg  implements java.io.Serializable {
+public class GroupListCfg  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -36,6 +38,11 @@ public class ValListCfg  implements java.io.Serializable {
      * 序号id
      */
     private Integer id;
+
+    /**
+     * 规则名称
+     */
+    private String ruleName;
 
     /**
      * 规则更新时间，秒级时间戳, 0 表示历史数据无记录
@@ -48,19 +55,20 @@ public class ValListCfg  implements java.io.Serializable {
     private Integer disable;
 
     /**
-     * 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
+     * group配置
      */
-    private Integer matchOp;
-
-    /**
-     * val
-     */
-    private String val;
-
+    
+    private List<GroupCfg> groupMatchItems;
     /**
      * action配置
      */
     private AtCfg atCfg;
+
+    /**
+     * 白名单不检查指定Web防护规则id, 多个逗号分隔
+     */
+    private String skipRuleId;
+
 
 
     /**
@@ -81,6 +89,26 @@ public class ValListCfg  implements java.io.Serializable {
         this.id = id;
     }
 
+
+    /**
+     * get 规则名称
+     *
+     * @return
+     */
+    public String getRuleName() {
+        return ruleName;
+    }
+
+    /**
+     * set 规则名称
+     *
+     * @param ruleName
+     */
+    public void setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+    }
+
+
     /**
      * get 规则更新时间，秒级时间戳, 0 表示历史数据无记录
      *
@@ -98,6 +126,7 @@ public class ValListCfg  implements java.io.Serializable {
     public void setUpdateTime(Integer updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 0-使用中 1-禁用
@@ -117,41 +146,25 @@ public class ValListCfg  implements java.io.Serializable {
         this.disable = disable;
     }
 
+
     /**
-     * get 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
-     *
-     * @return
-     */
-    public Integer getMatchOp() {
-        return matchOp;
+    * get group配置
+    *
+    * @return
+    */
+    public List<GroupCfg> getGroupMatchItems() {
+        return groupMatchItems;
     }
 
     /**
-     * set 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
-     *
-     * @param matchOp
-     */
-    public void setMatchOp(Integer matchOp) {
-        this.matchOp = matchOp;
+    * set group配置
+    *
+    * @param groupMatchItems
+    */
+    public void setGroupMatchItems(List<GroupCfg> groupMatchItems) {
+        this.groupMatchItems = groupMatchItems;
     }
 
-    /**
-     * get val
-     *
-     * @return
-     */
-    public String getVal() {
-        return val;
-    }
-
-    /**
-     * set val
-     *
-     * @param val
-     */
-    public void setVal(String val) {
-        this.val = val;
-    }
 
     /**
      * get action配置
@@ -173,64 +186,112 @@ public class ValListCfg  implements java.io.Serializable {
 
 
     /**
+     * get 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @return
+     */
+    public String getSkipRuleId() {
+        return skipRuleId;
+    }
+
+    /**
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @param skipRuleId
+     */
+    public void setSkipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+    }
+
+
+
+    /**
      * set 序号id
      *
      * @param id
      */
-    public ValListCfg id(Integer id) {
+    public GroupListCfg id(Integer id) {
         this.id = id;
         return this;
     }
+
+
+    /**
+     * set 规则名称
+     *
+     * @param ruleName
+     */
+    public GroupListCfg ruleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+
 
     /**
      * set 规则更新时间，秒级时间戳, 0 表示历史数据无记录
      *
      * @param updateTime
      */
-    public ValListCfg updateTime(Integer updateTime) {
+    public GroupListCfg updateTime(Integer updateTime) {
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 0-使用中 1-禁用
      *
      * @param disable
      */
-    public ValListCfg disable(Integer disable) {
+    public GroupListCfg disable(Integer disable) {
         this.disable = disable;
         return this;
     }
 
+
     /**
-     * set 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
-     *
-     * @param matchOp
-     */
-    public ValListCfg matchOp(Integer matchOp) {
-        this.matchOp = matchOp;
+    * set group配置
+    *
+    * @param groupMatchItems
+    */
+    public GroupListCfg groupMatchItems(List<GroupCfg> groupMatchItems) {
+        this.groupMatchItems = groupMatchItems;
         return this;
     }
 
-    /**
-     * set val
-     *
-     * @param val
-     */
-    public ValListCfg val(String val) {
-        this.val = val;
-        return this;
-    }
 
     /**
      * set action配置
      *
      * @param atCfg
      */
-    public ValListCfg atCfg(AtCfg atCfg) {
+    public GroupListCfg atCfg(AtCfg atCfg) {
         this.atCfg = atCfg;
         return this;
     }
 
 
+    /**
+     * set 白名单不检查指定Web防护规则id, 多个逗号分隔
+     *
+     * @param skipRuleId
+     */
+    public GroupListCfg skipRuleId(String skipRuleId) {
+        this.skipRuleId = skipRuleId;
+        return this;
+    }
+
+
+
+    /**
+     * add item to group配置
+     *
+     * @param groupMatchItem
+     */
+    public void addGroupMatchItem(GroupCfg groupMatchItem) {
+        if (this.groupMatchItems == null) {
+            this.groupMatchItems = new ArrayList<>();
+        }
+        this.groupMatchItems.add(groupMatchItem);
+    }
 }

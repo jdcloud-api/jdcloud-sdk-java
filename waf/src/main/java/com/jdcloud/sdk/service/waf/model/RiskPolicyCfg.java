@@ -98,6 +98,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
     private String redirection;
 
 
+
     /**
      * get 规则id
      *
@@ -115,6 +116,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get WAF实例id
@@ -134,6 +136,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -151,6 +154,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 名称
@@ -170,6 +174,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 编码信息
      *
@@ -187,6 +192,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
     public void setCode(String code) {
         this.code = code;
     }
+
 
     /**
      * get 描述信息
@@ -206,6 +212,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         this.desc = desc;
     }
 
+
     /**
      * get 0-使用中 1-禁用
      *
@@ -223,6 +230,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
     public void setDisable(Integer disable) {
         this.disable = disable;
     }
+
 
     /**
      * get 更新时间，s
@@ -242,6 +250,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 事件编码
      *
@@ -259,6 +268,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
     public void setEventCode(String eventCode) {
         this.eventCode = eventCode;
     }
+
 
     /**
      * get 策略编排逻辑, 1&amp;2&amp;(3\|4)
@@ -278,6 +288,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         this.logic = logic;
     }
 
+
     /**
      * get rules
      *
@@ -296,6 +307,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         this.rules = rules;
     }
 
+
     /**
      * get 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
@@ -313,6 +325,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
     public void setAction(String action) {
         this.action = action;
     }
+
 
     /**
      * get 跳转地址，Action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
@@ -333,6 +346,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则id
      *
@@ -342,6 +356,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set WAF实例id
@@ -353,6 +368,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -362,6 +378,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 名称
@@ -373,6 +390,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 编码信息
      *
@@ -382,6 +400,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         this.code = code;
         return this;
     }
+
 
     /**
      * set 描述信息
@@ -393,6 +412,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 0-使用中 1-禁用
      *
@@ -402,6 +422,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         this.disable = disable;
         return this;
     }
+
 
     /**
      * set 更新时间，s
@@ -413,6 +434,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 事件编码
      *
@@ -422,6 +444,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         this.eventCode = eventCode;
         return this;
     }
+
 
     /**
      * set 策略编排逻辑, 1&amp;2&amp;(3\|4)
@@ -433,6 +456,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set rules
      *
@@ -443,6 +467,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
@@ -452,6 +477,7 @@ public class RiskPolicyCfg  implements java.io.Serializable {
         this.action = action;
         return this;
     }
+
 
     /**
      * set 跳转地址，Action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称

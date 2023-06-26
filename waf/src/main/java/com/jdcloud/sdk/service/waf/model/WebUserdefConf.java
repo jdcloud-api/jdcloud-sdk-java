@@ -48,6 +48,7 @@ public class WebUserdefConf  implements java.io.Serializable {
     private Integer ruleNum;
 
 
+
     /**
      * get 是否使能 0表示否
      *
@@ -66,6 +67,7 @@ public class WebUserdefConf  implements java.io.Serializable {
         this.enable = enable;
     }
 
+
     /**
      * get 条件条数
      *
@@ -83,6 +85,7 @@ public class WebUserdefConf  implements java.io.Serializable {
     public void setConditionNum(Integer conditionNum) {
         this.conditionNum = conditionNum;
     }
+
 
     /**
      * get 规则条数
@@ -103,6 +106,7 @@ public class WebUserdefConf  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否使能 0表示否
      *
@@ -113,6 +117,7 @@ public class WebUserdefConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 条件条数
      *
@@ -122,6 +127,7 @@ public class WebUserdefConf  implements java.io.Serializable {
         this.conditionNum = conditionNum;
         return this;
     }
+
 
     /**
      * set 规则条数

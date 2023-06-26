@@ -57,6 +57,7 @@ public class EnableWafRequest extends JdcloudRequest implements java.io.Serializ
     private String wafInstanceId;
 
 
+
     /**
      * get 请求
      *
@@ -75,6 +76,7 @@ public class EnableWafRequest extends JdcloudRequest implements java.io.Serializ
         this.req = req;
     }
 
+
     /**
      * get 实例所属的地域ID
      *
@@ -92,6 +94,7 @@ public class EnableWafRequest extends JdcloudRequest implements java.io.Serializ
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例Id
@@ -112,6 +115,7 @@ public class EnableWafRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set 请求
      *
@@ -122,6 +126,7 @@ public class EnableWafRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 实例所属的地域ID
      *
@@ -131,6 +136,7 @@ public class EnableWafRequest extends JdcloudRequest implements java.io.Serializ
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例Id

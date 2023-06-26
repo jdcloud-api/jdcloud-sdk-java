@@ -42,6 +42,7 @@ public class RegionVipInfo  implements java.io.Serializable {
     /**
      * vip
      */
+    
     private List<String> vips;
 
 
@@ -63,23 +64,25 @@ public class RegionVipInfo  implements java.io.Serializable {
         this.chosen = chosen;
     }
 
+
     /**
-     * get vip
-     *
-     * @return
-     */
+    * get vip
+    *
+    * @return
+    */
     public List<String> getVips() {
         return vips;
     }
 
     /**
-     * set vip
-     *
-     * @param vips
-     */
+    * set vip
+    *
+    * @param vips
+    */
     public void setVips(List<String> vips) {
         this.vips = vips;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class RegionVipInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set vip
-     *
-     * @param vips
-     */
+    * set vip
+    *
+    * @param vips
+    */
     public RegionVipInfo vips(List<String> vips) {
         this.vips = vips;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class RegionVipInfo  implements java.io.Serializable {
         }
         this.vips.add(vip);
     }
-
 }

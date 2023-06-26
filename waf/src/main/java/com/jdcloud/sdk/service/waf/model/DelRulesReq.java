@@ -54,12 +54,13 @@ public class DelRulesReq  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<Integer> ids;
-
     /**
      * 类型
      */
     private String ruleType;
+
 
 
     /**
@@ -80,6 +81,7 @@ public class DelRulesReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
      * get 域名
      *
@@ -98,23 +100,25 @@ public class DelRulesReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
-     * get 要删除的id
-     *
-     * @return
-     */
+    * get 要删除的id
+    *
+    * @return
+    */
     public List<Integer> getIds() {
         return ids;
     }
 
     /**
-     * set 要删除的id
-     *
-     * @param ids
-     */
+    * set 要删除的id
+    *
+    * @param ids
+    */
     public void setIds(List<Integer> ids) {
         this.ids = ids;
     }
+
 
     /**
      * get 类型
@@ -135,6 +139,7 @@ public class DelRulesReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set WAF实例id
      *
@@ -144,6 +149,7 @@ public class DelRulesReq  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
+
 
     /**
      * set 域名
@@ -155,15 +161,17 @@ public class DelRulesReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 要删除的id
-     *
-     * @param ids
-     */
+    * set 要删除的id
+    *
+    * @param ids
+    */
     public DelRulesReq ids(List<Integer> ids) {
         this.ids = ids;
         return this;
     }
+
 
     /**
      * set 类型
@@ -174,6 +182,7 @@ public class DelRulesReq  implements java.io.Serializable {
         this.ruleType = ruleType;
         return this;
     }
+
 
 
     /**
@@ -187,5 +196,4 @@ public class DelRulesReq  implements java.io.Serializable {
         }
         this.ids.add(id);
     }
-
 }

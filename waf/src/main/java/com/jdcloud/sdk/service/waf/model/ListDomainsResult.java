@@ -43,8 +43,8 @@ public class ListDomainsResult extends JdcloudResult implements java.io.Serializ
     /**
      * list
      */
+    
     private List<String> list;
-
     /**
      * 页码
      */
@@ -66,6 +66,7 @@ public class ListDomainsResult extends JdcloudResult implements java.io.Serializ
     private Integer maxLimit;
 
 
+
     /**
      * get 实例id
      *
@@ -84,23 +85,25 @@ public class ListDomainsResult extends JdcloudResult implements java.io.Serializ
         this.wafInstanceId = wafInstanceId;
     }
 
+
     /**
-     * get list
-     *
-     * @return
-     */
+    * get list
+    *
+    * @return
+    */
     public List<String> getList() {
         return list;
     }
 
     /**
-     * set list
-     *
-     * @param list
-     */
+    * set list
+    *
+    * @param list
+    */
     public void setList(List<String> list) {
         this.list = list;
     }
+
 
     /**
      * get 页码
@@ -120,6 +123,7 @@ public class ListDomainsResult extends JdcloudResult implements java.io.Serializ
         this.pageIndex = pageIndex;
     }
 
+
     /**
      * get 页大小
      *
@@ -138,6 +142,7 @@ public class ListDomainsResult extends JdcloudResult implements java.io.Serializ
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 该实例下总共的域名数量
      *
@@ -155,6 +160,7 @@ public class ListDomainsResult extends JdcloudResult implements java.io.Serializ
     public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
     }
+
 
     /**
      * get 最大支持的数目
@@ -175,6 +181,7 @@ public class ListDomainsResult extends JdcloudResult implements java.io.Serializ
     }
 
 
+
     /**
      * set 实例id
      *
@@ -185,15 +192,17 @@ public class ListDomainsResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
-     * set list
-     *
-     * @param list
-     */
+    * set list
+    *
+    * @param list
+    */
     public ListDomainsResult list(List<String> list) {
         this.list = list;
         return this;
     }
+
 
     /**
      * set 页码
@@ -205,6 +214,7 @@ public class ListDomainsResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 页大小
      *
@@ -214,6 +224,7 @@ public class ListDomainsResult extends JdcloudResult implements java.io.Serializ
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 该实例下总共的域名数量
@@ -225,6 +236,7 @@ public class ListDomainsResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 最大支持的数目
      *
@@ -234,6 +246,7 @@ public class ListDomainsResult extends JdcloudResult implements java.io.Serializ
         this.maxLimit = maxLimit;
         return this;
     }
+
 
 
     /**
@@ -247,5 +260,4 @@ public class ListDomainsResult extends JdcloudResult implements java.io.Serializ
         }
         this.list.add(list);
     }
-
 }

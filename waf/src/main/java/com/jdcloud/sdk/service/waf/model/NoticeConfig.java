@@ -58,6 +58,7 @@ public class NoticeConfig  implements java.io.Serializable {
     private Integer updateTime;
 
 
+
     /**
      * get id序号
      *
@@ -75,6 +76,7 @@ public class NoticeConfig  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 公告类型,1-规则更新通知，2-功能更新公告
@@ -94,6 +96,7 @@ public class NoticeConfig  implements java.io.Serializable {
         this.noticeType = noticeType;
     }
 
+
     /**
      * get 标题
      *
@@ -112,6 +115,7 @@ public class NoticeConfig  implements java.io.Serializable {
         this.title = title;
     }
 
+
     /**
      * get 内容类型
      *
@@ -129,6 +133,7 @@ public class NoticeConfig  implements java.io.Serializable {
     public void setDocType(Integer docType) {
         this.docType = docType;
     }
+
 
     /**
      * get 更新时间，s
@@ -149,6 +154,7 @@ public class NoticeConfig  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id序号
      *
@@ -158,6 +164,7 @@ public class NoticeConfig  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 公告类型,1-规则更新通知，2-功能更新公告
@@ -169,6 +176,7 @@ public class NoticeConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 标题
      *
@@ -179,6 +187,7 @@ public class NoticeConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 内容类型
      *
@@ -188,6 +197,7 @@ public class NoticeConfig  implements java.io.Serializable {
         this.docType = docType;
         return this;
     }
+
 
     /**
      * set 更新时间，s

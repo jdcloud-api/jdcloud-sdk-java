@@ -54,6 +54,7 @@ public class ListBotStdRulesResult extends JdcloudResult implements java.io.Seri
     /**
      * list
      */
+    
     private List<StdBotRules> list;
 
 
@@ -75,6 +76,7 @@ public class ListBotStdRulesResult extends JdcloudResult implements java.io.Seri
         this.pageIndex = pageIndex;
     }
 
+
     /**
      * get 页大小
      *
@@ -92,6 +94,7 @@ public class ListBotStdRulesResult extends JdcloudResult implements java.io.Seri
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 配置总数
@@ -111,23 +114,25 @@ public class ListBotStdRulesResult extends JdcloudResult implements java.io.Seri
         this.totalCount = totalCount;
     }
 
+
     /**
-     * get list
-     *
-     * @return
-     */
+    * get list
+    *
+    * @return
+    */
     public List<StdBotRules> getList() {
         return list;
     }
 
     /**
-     * set list
-     *
-     * @param list
-     */
+    * set list
+    *
+    * @param list
+    */
     public void setList(List<StdBotRules> list) {
         this.list = list;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class ListBotStdRulesResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 页大小
      *
@@ -149,6 +155,7 @@ public class ListBotStdRulesResult extends JdcloudResult implements java.io.Seri
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 配置总数
@@ -160,15 +167,17 @@ public class ListBotStdRulesResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
-     * set list
-     *
-     * @param list
-     */
+    * set list
+    *
+    * @param list
+    */
     public ListBotStdRulesResult list(List<StdBotRules> list) {
         this.list = list;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class ListBotStdRulesResult extends JdcloudResult implements java.io.Seri
         }
         this.list.add(list);
     }
-
 }
