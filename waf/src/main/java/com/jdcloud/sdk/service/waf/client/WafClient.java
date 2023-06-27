@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.waf.model.ListWafFilterRequest;
 import com.jdcloud.sdk.service.waf.model.ListWafFilterResponse;
 import com.jdcloud.sdk.service.waf.client.ListWafFilterExecutor;
+import com.jdcloud.sdk.service.waf.model.AddIpsRequest;
+import com.jdcloud.sdk.service.waf.model.AddIpsResponse;
+import com.jdcloud.sdk.service.waf.client.AddIpsExecutor;
 import com.jdcloud.sdk.service.waf.model.GetQpsDataRequest;
 import com.jdcloud.sdk.service.waf.model.GetQpsDataResponse;
 import com.jdcloud.sdk.service.waf.client.GetQpsDataExecutor;
@@ -46,6 +49,9 @@ import com.jdcloud.sdk.service.waf.client.AddDomainExecutor;
 import com.jdcloud.sdk.service.waf.model.GetWafInstanceRequest;
 import com.jdcloud.sdk.service.waf.model.GetWafInstanceResponse;
 import com.jdcloud.sdk.service.waf.client.GetWafInstanceExecutor;
+import com.jdcloud.sdk.service.waf.model.UpdateIpsRequest;
+import com.jdcloud.sdk.service.waf.model.UpdateIpsResponse;
+import com.jdcloud.sdk.service.waf.client.UpdateIpsExecutor;
 import com.jdcloud.sdk.service.waf.model.DeleteDomainRequest;
 import com.jdcloud.sdk.service.waf.model.DeleteDomainResponse;
 import com.jdcloud.sdk.service.waf.client.DeleteDomainExecutor;
@@ -64,9 +70,6 @@ import com.jdcloud.sdk.service.waf.client.UpdateDomainExecutor;
 import com.jdcloud.sdk.service.waf.model.ListMainCfgRequest;
 import com.jdcloud.sdk.service.waf.model.ListMainCfgResponse;
 import com.jdcloud.sdk.service.waf.client.ListMainCfgExecutor;
-import com.jdcloud.sdk.service.waf.model.EnableJsRequest;
-import com.jdcloud.sdk.service.waf.model.EnableJsResponse;
-import com.jdcloud.sdk.service.waf.client.EnableJsExecutor;
 import com.jdcloud.sdk.service.waf.model.EnableCname2RsExternalRequest;
 import com.jdcloud.sdk.service.waf.model.EnableCname2RsExternalResponse;
 import com.jdcloud.sdk.service.waf.client.EnableCname2RsExternalExecutor;
@@ -88,9 +91,6 @@ import com.jdcloud.sdk.service.waf.client.RefreshUrlCacheExecutor;
 import com.jdcloud.sdk.service.waf.model.GetDomainLbConfigRequest;
 import com.jdcloud.sdk.service.waf.model.GetDomainLbConfigResponse;
 import com.jdcloud.sdk.service.waf.client.GetDomainLbConfigExecutor;
-import com.jdcloud.sdk.service.waf.model.AddDomainScdnRequest;
-import com.jdcloud.sdk.service.waf.model.AddDomainScdnResponse;
-import com.jdcloud.sdk.service.waf.client.AddDomainScdnExecutor;
 import com.jdcloud.sdk.service.waf.model.EnableWafUserDefineRequest;
 import com.jdcloud.sdk.service.waf.model.EnableWafUserDefineResponse;
 import com.jdcloud.sdk.service.waf.client.EnableWafUserDefineExecutor;
@@ -103,9 +103,9 @@ import com.jdcloud.sdk.service.waf.client.EnableWafExecutor;
 import com.jdcloud.sdk.service.waf.model.GetEsLogDetailRequest;
 import com.jdcloud.sdk.service.waf.model.GetEsLogDetailResponse;
 import com.jdcloud.sdk.service.waf.client.GetEsLogDetailExecutor;
-import com.jdcloud.sdk.service.waf.model.ListMainCfgFactorRequest;
-import com.jdcloud.sdk.service.waf.model.ListMainCfgFactorResponse;
-import com.jdcloud.sdk.service.waf.client.ListMainCfgFactorExecutor;
+import com.jdcloud.sdk.service.waf.model.ListIpsRequest;
+import com.jdcloud.sdk.service.waf.model.ListIpsResponse;
+import com.jdcloud.sdk.service.waf.client.ListIpsExecutor;
 import com.jdcloud.sdk.service.waf.model.DescribeLbOutIpRequest;
 import com.jdcloud.sdk.service.waf.model.DescribeLbOutIpResponse;
 import com.jdcloud.sdk.service.waf.client.DescribeLbOutIpExecutor;
@@ -124,6 +124,9 @@ import com.jdcloud.sdk.service.waf.client.ListWafRulesExecutor;
 import com.jdcloud.sdk.service.waf.model.ListBotStdRulesRequest;
 import com.jdcloud.sdk.service.waf.model.ListBotStdRulesResponse;
 import com.jdcloud.sdk.service.waf.client.ListBotStdRulesExecutor;
+import com.jdcloud.sdk.service.waf.model.AddWebcacheUrlRequest;
+import com.jdcloud.sdk.service.waf.model.AddWebcacheUrlResponse;
+import com.jdcloud.sdk.service.waf.client.AddWebcacheUrlExecutor;
 import com.jdcloud.sdk.service.waf.model.AntiModeWafRequest;
 import com.jdcloud.sdk.service.waf.model.AntiModeWafResponse;
 import com.jdcloud.sdk.service.waf.client.AntiModeWafExecutor;
@@ -139,9 +142,9 @@ import com.jdcloud.sdk.service.waf.client.SetWafConditionExecutor;
 import com.jdcloud.sdk.service.waf.model.ListWafConditionsRequest;
 import com.jdcloud.sdk.service.waf.model.ListWafConditionsResponse;
 import com.jdcloud.sdk.service.waf.client.ListWafConditionsExecutor;
-import com.jdcloud.sdk.service.waf.model.UpdateDomainScdnRequest;
-import com.jdcloud.sdk.service.waf.model.UpdateDomainScdnResponse;
-import com.jdcloud.sdk.service.waf.client.UpdateDomainScdnExecutor;
+import com.jdcloud.sdk.service.waf.model.DelIpsRequest;
+import com.jdcloud.sdk.service.waf.model.DelIpsResponse;
+import com.jdcloud.sdk.service.waf.client.DelIpsExecutor;
 import com.jdcloud.sdk.service.waf.model.GetMainAntiInfoNewRequest;
 import com.jdcloud.sdk.service.waf.model.GetMainAntiInfoNewResponse;
 import com.jdcloud.sdk.service.waf.client.GetMainAntiInfoNewExecutor;
@@ -207,6 +210,17 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
+     * 设置网站黑白名单ip配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddIpsResponse addIps(AddIpsRequest request) throws JdcloudSdkException {
+        return new AddIpsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取网站在一定时间内的qps信息。
      *
      * @param request
@@ -248,6 +262,17 @@ public class WafClient extends JdcloudClient {
      */
     public GetWafInstanceResponse getWafInstance(GetWafInstanceRequest request) throws JdcloudSdkException {
         return new GetWafInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新网站黑白名单ip配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateIpsResponse updateIps(UpdateIpsRequest request) throws JdcloudSdkException {
+        return new UpdateIpsExecutor().client(this).execute(request);
     }
 
     /**
@@ -314,17 +339,6 @@ public class WafClient extends JdcloudClient {
      */
     public ListMainCfgResponse listMainCfg(ListMainCfgRequest request) throws JdcloudSdkException {
         return new ListMainCfgExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 激活 js 验证
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public EnableJsResponse enableJs(EnableJsRequest request) throws JdcloudSdkException {
-        return new EnableJsExecutor().client(this).execute(request);
     }
 
     /**
@@ -405,17 +419,6 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 新增网站scdn专属
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AddDomainScdnResponse addDomainScdn(AddDomainScdnRequest request) throws JdcloudSdkException {
-        return new AddDomainScdnExecutor().client(this).execute(request);
-    }
-
-    /**
      * 激活waf自定义规则
      *
      * @param request
@@ -460,14 +463,14 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 获取网站
+     * 获取网站黑白名单ip配置
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ListMainCfgFactorResponse listMainCfgFactor(ListMainCfgFactorRequest request) throws JdcloudSdkException {
-        return new ListMainCfgFactorExecutor().client(this).execute(request);
+    public ListIpsResponse listIps(ListIpsRequest request) throws JdcloudSdkException {
+        return new ListIpsExecutor().client(this).execute(request);
     }
 
     /**
@@ -537,6 +540,17 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
+     * 新增防篡改条目
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddWebcacheUrlResponse addWebcacheUrl(AddWebcacheUrlRequest request) throws JdcloudSdkException {
+        return new AddWebcacheUrlExecutor().client(this).execute(request);
+    }
+
+    /**
      * 设置waf防护模式
      *
      * @param request
@@ -592,14 +606,14 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 更新网站scdn专属
+     * 删除网站黑白名单ip配置
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UpdateDomainScdnResponse updateDomainScdn(UpdateDomainScdnRequest request) throws JdcloudSdkException {
-        return new UpdateDomainScdnExecutor().client(this).execute(request);
+    public DelIpsResponse delIps(DelIpsRequest request) throws JdcloudSdkException {
+        return new DelIpsExecutor().client(this).execute(request);
     }
 
     /**

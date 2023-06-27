@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Domain
- * Domain API
+ * Domain-Protection
+ * Domain-Protection API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,12 +24,12 @@
 
 package com.jdcloud.sdk.service.waf.model;
 
-import com.jdcloud.sdk.service.JdcloudResult;
+import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 更新网站scdn专属
+ * 获取网站黑白名单ip配置
  */
-public class UpdateDomainScdnResult extends JdcloudResult implements java.io.Serializable {
+public class ListIpsResponse extends JdcloudResponse<ListIpsResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

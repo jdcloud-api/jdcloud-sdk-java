@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Domain
- * Domain API
+ * Domain-Protection
+ * Domain-Protection API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -25,13 +25,13 @@
 package com.jdcloud.sdk.service.waf.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.waf.model.AddDomainScdn;
+import com.jdcloud.sdk.service.waf.model.SetIpReq;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 更新网站scdn专属
+ * 设置网站黑白名单ip配置
  */
-public class UpdateDomainScdnRequest extends JdcloudRequest implements java.io.Serializable {
+public class AddIpsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -40,7 +40,7 @@ public class UpdateDomainScdnRequest extends JdcloudRequest implements java.io.S
      * Required:true
      */
     @Required
-    private AddDomainScdn req;
+    private SetIpReq req;
 
     /**
      * 实例所属的地域ID
@@ -63,7 +63,7 @@ public class UpdateDomainScdnRequest extends JdcloudRequest implements java.io.S
      *
      * @return
      */
-    public AddDomainScdn getReq() {
+    public SetIpReq getReq() {
         return req;
     }
 
@@ -72,7 +72,7 @@ public class UpdateDomainScdnRequest extends JdcloudRequest implements java.io.S
      *
      * @param req
      */
-    public void setReq(AddDomainScdn req) {
+    public void setReq(SetIpReq req) {
         this.req = req;
     }
 
@@ -121,7 +121,7 @@ public class UpdateDomainScdnRequest extends JdcloudRequest implements java.io.S
      *
      * @param req
      */
-    public UpdateDomainScdnRequest req(AddDomainScdn req) {
+    public AddIpsRequest req(SetIpReq req) {
         this.req = req;
         return this;
     }
@@ -132,7 +132,7 @@ public class UpdateDomainScdnRequest extends JdcloudRequest implements java.io.S
      *
      * @param regionId
      */
-    public UpdateDomainScdnRequest regionId(String regionId) {
+    public AddIpsRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -143,7 +143,7 @@ public class UpdateDomainScdnRequest extends JdcloudRequest implements java.io.S
      *
      * @param wafInstanceId
      */
-    public UpdateDomainScdnRequest wafInstanceId(String wafInstanceId) {
+    public AddIpsRequest wafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
         return this;
     }

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Domain
- * Domain API
+ * Domain-Protection
+ * Domain-Protection API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -25,13 +25,13 @@
 package com.jdcloud.sdk.service.waf.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.waf.model.AddDomainScdn;
+import com.jdcloud.sdk.service.waf.model.DelRulesReq;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 新增网站scdn专属
+ * 删除网站黑白名单ip配置
  */
-public class AddDomainScdnRequest extends JdcloudRequest implements java.io.Serializable {
+public class DelIpsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -40,7 +40,7 @@ public class AddDomainScdnRequest extends JdcloudRequest implements java.io.Seri
      * Required:true
      */
     @Required
-    private AddDomainScdn req;
+    private DelRulesReq req;
 
     /**
      * 实例所属的地域ID
@@ -63,7 +63,7 @@ public class AddDomainScdnRequest extends JdcloudRequest implements java.io.Seri
      *
      * @return
      */
-    public AddDomainScdn getReq() {
+    public DelRulesReq getReq() {
         return req;
     }
 
@@ -72,7 +72,7 @@ public class AddDomainScdnRequest extends JdcloudRequest implements java.io.Seri
      *
      * @param req
      */
-    public void setReq(AddDomainScdn req) {
+    public void setReq(DelRulesReq req) {
         this.req = req;
     }
 
@@ -121,7 +121,7 @@ public class AddDomainScdnRequest extends JdcloudRequest implements java.io.Seri
      *
      * @param req
      */
-    public AddDomainScdnRequest req(AddDomainScdn req) {
+    public DelIpsRequest req(DelRulesReq req) {
         this.req = req;
         return this;
     }
@@ -132,7 +132,7 @@ public class AddDomainScdnRequest extends JdcloudRequest implements java.io.Seri
      *
      * @param regionId
      */
-    public AddDomainScdnRequest regionId(String regionId) {
+    public DelIpsRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -143,7 +143,7 @@ public class AddDomainScdnRequest extends JdcloudRequest implements java.io.Seri
      *
      * @param wafInstanceId
      */
-    public AddDomainScdnRequest wafInstanceId(String wafInstanceId) {
+    public DelIpsRequest wafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
         return this;
     }

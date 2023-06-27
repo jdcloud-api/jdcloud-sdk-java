@@ -74,7 +74,7 @@ public class OrderReq  implements java.io.Serializable {
     private String wafInstanceId;
 
     /**
-     * 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版(仅支持新用户)
+     * 套餐类型 1:高级版, 2:企业版 3:旗舰版
      * Required:true
      */
     @Required
@@ -243,7 +243,7 @@ public class OrderReq  implements java.io.Serializable {
 
 
     /**
-     * get 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版(仅支持新用户)
+     * get 套餐类型 1:高级版, 2:企业版 3:旗舰版
      *
      * @return
      */
@@ -252,7 +252,7 @@ public class OrderReq  implements java.io.Serializable {
     }
 
     /**
-     * set 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版(仅支持新用户)
+     * set 套餐类型 1:高级版, 2:企业版 3:旗舰版
      *
      * @param packageType
      */
@@ -481,7 +481,7 @@ public class OrderReq  implements java.io.Serializable {
 
 
     /**
-     * set 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版(仅支持新用户)
+     * set 套餐类型 1:高级版, 2:企业版 3:旗舰版
      *
      * @param packageType
      */

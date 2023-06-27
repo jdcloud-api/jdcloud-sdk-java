@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Domain
- * Domain API
+ * Domain-Protection
+ * Domain-Protection API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,12 +26,12 @@ package com.jdcloud.sdk.service.waf.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.waf.model.AddDomainScdnResponse;
+import com.jdcloud.sdk.service.waf.model.ListIpsResponse;
 
 /**
- * 新增网站scdn专属
+ * 获取网站黑白名单ip配置
  */
-class AddDomainScdnExecutor extends JdcloudExecutor {
+class ListIpsExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -40,11 +40,11 @@ class AddDomainScdnExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/wafInstanceIds/{wafInstanceId}/domain:addScdn";
+        return "/regions/{regionId}/wafInstanceIds/{wafInstanceId}/userdefine:listIps";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return AddDomainScdnResponse.class;
+        return ListIpsResponse.class;
     }
 }

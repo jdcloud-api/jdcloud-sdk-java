@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Domain
- * Domain API
+ * Domain-Protection
+ * Domain-Protection API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -25,13 +25,13 @@
 package com.jdcloud.sdk.service.waf.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.waf.model.ListMainFactor;
+import com.jdcloud.sdk.service.waf.model.ListDenySkipRulesReq;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取网站
+ * 获取网站黑白名单ip配置
  */
-public class ListMainCfgFactorRequest extends JdcloudRequest implements java.io.Serializable {
+public class ListIpsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -40,7 +40,7 @@ public class ListMainCfgFactorRequest extends JdcloudRequest implements java.io.
      * Required:true
      */
     @Required
-    private ListMainFactor req;
+    private ListDenySkipRulesReq req;
 
     /**
      * 实例所属的地域ID
@@ -63,7 +63,7 @@ public class ListMainCfgFactorRequest extends JdcloudRequest implements java.io.
      *
      * @return
      */
-    public ListMainFactor getReq() {
+    public ListDenySkipRulesReq getReq() {
         return req;
     }
 
@@ -72,7 +72,7 @@ public class ListMainCfgFactorRequest extends JdcloudRequest implements java.io.
      *
      * @param req
      */
-    public void setReq(ListMainFactor req) {
+    public void setReq(ListDenySkipRulesReq req) {
         this.req = req;
     }
 
@@ -121,7 +121,7 @@ public class ListMainCfgFactorRequest extends JdcloudRequest implements java.io.
      *
      * @param req
      */
-    public ListMainCfgFactorRequest req(ListMainFactor req) {
+    public ListIpsRequest req(ListDenySkipRulesReq req) {
         this.req = req;
         return this;
     }
@@ -132,7 +132,7 @@ public class ListMainCfgFactorRequest extends JdcloudRequest implements java.io.
      *
      * @param regionId
      */
-    public ListMainCfgFactorRequest regionId(String regionId) {
+    public ListIpsRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -143,7 +143,7 @@ public class ListMainCfgFactorRequest extends JdcloudRequest implements java.io.
      *
      * @param wafInstanceId
      */
-    public ListMainCfgFactorRequest wafInstanceId(String wafInstanceId) {
+    public ListIpsRequest wafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
         return this;
     }

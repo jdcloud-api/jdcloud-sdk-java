@@ -25,13 +25,13 @@
 package com.jdcloud.sdk.service.waf.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.waf.model.EnableReq;
+import com.jdcloud.sdk.service.waf.model.SetWebcacheUrlReq;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 激活 js 验证
+ * 新增防篡改条目
  */
-public class EnableJsRequest extends JdcloudRequest implements java.io.Serializable {
+public class AddWebcacheUrlRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -40,7 +40,7 @@ public class EnableJsRequest extends JdcloudRequest implements java.io.Serializa
      * Required:true
      */
     @Required
-    private EnableReq req;
+    private SetWebcacheUrlReq req;
 
     /**
      * 实例所属的地域ID
@@ -63,7 +63,7 @@ public class EnableJsRequest extends JdcloudRequest implements java.io.Serializa
      *
      * @return
      */
-    public EnableReq getReq() {
+    public SetWebcacheUrlReq getReq() {
         return req;
     }
 
@@ -72,7 +72,7 @@ public class EnableJsRequest extends JdcloudRequest implements java.io.Serializa
      *
      * @param req
      */
-    public void setReq(EnableReq req) {
+    public void setReq(SetWebcacheUrlReq req) {
         this.req = req;
     }
 
@@ -121,7 +121,7 @@ public class EnableJsRequest extends JdcloudRequest implements java.io.Serializa
      *
      * @param req
      */
-    public EnableJsRequest req(EnableReq req) {
+    public AddWebcacheUrlRequest req(SetWebcacheUrlReq req) {
         this.req = req;
         return this;
     }
@@ -132,7 +132,7 @@ public class EnableJsRequest extends JdcloudRequest implements java.io.Serializa
      *
      * @param regionId
      */
-    public EnableJsRequest regionId(String regionId) {
+    public AddWebcacheUrlRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -143,7 +143,7 @@ public class EnableJsRequest extends JdcloudRequest implements java.io.Serializa
      *
      * @param wafInstanceId
      */
-    public EnableJsRequest wafInstanceId(String wafInstanceId) {
+    public AddWebcacheUrlRequest wafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
