@@ -56,7 +56,7 @@ public class Certificate  implements java.io.Serializable {
     private String zone_id;
 
     /**
-     * 域的自定义SSL的状态
+     * 证书的状态，值active/expired/deleted/pending/initializing
      */
     private String status;
 
@@ -179,7 +179,7 @@ public class Certificate  implements java.io.Serializable {
 
 
     /**
-     * get 域的自定义SSL的状态
+     * get 证书的状态，值active/expired/deleted/pending/initializing
      *
      * @return
      */
@@ -188,7 +188,7 @@ public class Certificate  implements java.io.Serializable {
     }
 
     /**
-     * set 域的自定义SSL的状态
+     * set 证书的状态，值active/expired/deleted/pending/initializing
      *
      * @param status
      */
@@ -383,7 +383,7 @@ public class Certificate  implements java.io.Serializable {
 
 
     /**
-     * set 域的自定义SSL的状态
+     * set 证书的状态，值active/expired/deleted/pending/initializing
      *
      * @param status
      */

@@ -35,6 +35,16 @@ public class CertificatePack  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 证书颁发机构
+     */
+    private String certificate_authority;
+
+    /**
+     * 创建时间
+     */
+    private String created_on;
+
+    /**
      * 证书包的唯一标识符
      */
     private String id;
@@ -59,6 +69,26 @@ advanced     专用
     private String ty_pe;
 
     /**
+     * 证书包的状态，active/expired/deleted/pending/initializing
+     */
+    private String status;
+
+    /**
+     * 校验方式，http/txt
+     */
+    private String validation_method;
+
+    /**
+     * validation_records
+     */
+    
+    private List<Validation_record> validation_records;
+    /**
+     * 有效期
+     */
+    private Integer validity_days;
+
+    /**
      * 证书包的有效主机名的逗号分隔列表。必须包含域的顶级域名，不能包含超过50个主机，并且不能为空。
      */
     
@@ -73,6 +103,44 @@ advanced     专用
      */
     private String primary_certificate;
 
+
+
+    /**
+     * get 证书颁发机构
+     *
+     * @return
+     */
+    public String getCertificate_authority() {
+        return certificate_authority;
+    }
+
+    /**
+     * set 证书颁发机构
+     *
+     * @param certificate_authority
+     */
+    public void setCertificate_authority(String certificate_authority) {
+        this.certificate_authority = certificate_authority;
+    }
+
+
+    /**
+     * get 创建时间
+     *
+     * @return
+     */
+    public String getCreated_on() {
+        return created_on;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param created_on
+     */
+    public void setCreated_on(String created_on) {
+        this.created_on = created_on;
+    }
 
 
     /**
@@ -151,6 +219,82 @@ advanced     专用
 
 
     /**
+     * get 证书包的状态，active/expired/deleted/pending/initializing
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set 证书包的状态，active/expired/deleted/pending/initializing
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+
+    /**
+     * get 校验方式，http/txt
+     *
+     * @return
+     */
+    public String getValidation_method() {
+        return validation_method;
+    }
+
+    /**
+     * set 校验方式，http/txt
+     *
+     * @param validation_method
+     */
+    public void setValidation_method(String validation_method) {
+        this.validation_method = validation_method;
+    }
+
+
+    /**
+    * get validation_records
+    *
+    * @return
+    */
+    public List<Validation_record> getValidation_records() {
+        return validation_records;
+    }
+
+    /**
+    * set validation_records
+    *
+    * @param validation_records
+    */
+    public void setValidation_records(List<Validation_record> validation_records) {
+        this.validation_records = validation_records;
+    }
+
+
+    /**
+     * get 有效期
+     *
+     * @return
+     */
+    public Integer getValidity_days() {
+        return validity_days;
+    }
+
+    /**
+     * set 有效期
+     *
+     * @param validity_days
+     */
+    public void setValidity_days(Integer validity_days) {
+        this.validity_days = validity_days;
+    }
+
+
+    /**
     * get 证书包的有效主机名的逗号分隔列表。必须包含域的顶级域名，不能包含超过50个主机，并且不能为空。
     *
     * @return
@@ -209,6 +353,28 @@ advanced     专用
 
 
     /**
+     * set 证书颁发机构
+     *
+     * @param certificate_authority
+     */
+    public CertificatePack certificate_authority(String certificate_authority) {
+        this.certificate_authority = certificate_authority;
+        return this;
+    }
+
+
+    /**
+     * set 创建时间
+     *
+     * @param created_on
+     */
+    public CertificatePack created_on(String created_on) {
+        this.created_on = created_on;
+        return this;
+    }
+
+
+    /**
      * set 证书包的唯一标识符
      *
      * @param id
@@ -251,6 +417,50 @@ advanced     专用
 
 
     /**
+     * set 证书包的状态，active/expired/deleted/pending/initializing
+     *
+     * @param status
+     */
+    public CertificatePack status(String status) {
+        this.status = status;
+        return this;
+    }
+
+
+    /**
+     * set 校验方式，http/txt
+     *
+     * @param validation_method
+     */
+    public CertificatePack validation_method(String validation_method) {
+        this.validation_method = validation_method;
+        return this;
+    }
+
+
+    /**
+    * set validation_records
+    *
+    * @param validation_records
+    */
+    public CertificatePack validation_records(List<Validation_record> validation_records) {
+        this.validation_records = validation_records;
+        return this;
+    }
+
+
+    /**
+     * set 有效期
+     *
+     * @param validity_days
+     */
+    public CertificatePack validity_days(Integer validity_days) {
+        this.validity_days = validity_days;
+        return this;
+    }
+
+
+    /**
     * set 证书包的有效主机名的逗号分隔列表。必须包含域的顶级域名，不能包含超过50个主机，并且不能为空。
     *
     * @param hosts
@@ -283,6 +493,18 @@ advanced     专用
     }
 
 
+
+    /**
+     * add item to validation_records
+     *
+     * @param validation_record
+     */
+    public void addValidation_record(Validation_record validation_record) {
+        if (this.validation_records == null) {
+            this.validation_records = new ArrayList<>();
+        }
+        this.validation_records.add(validation_record);
+    }
 
     /**
      * add item to 证书包的有效主机名的逗号分隔列表。必须包含域的顶级域名，不能包含超过50个主机，并且不能为空。
