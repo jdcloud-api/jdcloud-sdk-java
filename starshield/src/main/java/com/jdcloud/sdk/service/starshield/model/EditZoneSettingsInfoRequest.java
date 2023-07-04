@@ -40,7 +40,7 @@ public class EditZoneSettingsInfoRequest extends JdcloudRequest implements java.
      * 一或多个域配置对象。必须包含ID和值。
      */
     
-    private List<Item> items;
+    private List<ZoneConfItem> items;
     /**
      * zone_identifier
      * Required:true
@@ -55,7 +55,7 @@ public class EditZoneSettingsInfoRequest extends JdcloudRequest implements java.
     *
     * @return
     */
-    public List<Item> getItems() {
+    public List<ZoneConfItem> getItems() {
         return items;
     }
 
@@ -64,7 +64,7 @@ public class EditZoneSettingsInfoRequest extends JdcloudRequest implements java.
     *
     * @param items
     */
-    public void setItems(List<Item> items) {
+    public void setItems(List<ZoneConfItem> items) {
         this.items = items;
     }
 
@@ -94,7 +94,7 @@ public class EditZoneSettingsInfoRequest extends JdcloudRequest implements java.
     *
     * @param items
     */
-    public EditZoneSettingsInfoRequest items(List<Item> items) {
+    public EditZoneSettingsInfoRequest items(List<ZoneConfItem> items) {
         this.items = items;
         return this;
     }
@@ -117,7 +117,7 @@ public class EditZoneSettingsInfoRequest extends JdcloudRequest implements java.
      *
      * @param item
      */
-    public void addItem(Item item) {
+    public void addItem(ZoneConfItem item) {
         if (this.items == null) {
             this.items = new ArrayList<>();
         }
