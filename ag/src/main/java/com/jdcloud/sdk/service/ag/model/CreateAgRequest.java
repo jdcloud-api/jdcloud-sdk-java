@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.ag.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.ag.model.AutoscalingSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -41,8 +42,8 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
      * Required:true
      */
     @Required
+    
     private List<String> azs;
-
     /**
      * 高可用组名称，只支持中文、数字、大小写字母、英文下划线 “_” 及中划线 “-”，且不能超过 32 字符
      * Required:true
@@ -76,6 +77,11 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     private String placementType;
 
     /**
+     * 伸缩组详细信息，当创建时选择打开弹性伸缩功能时需要传该参数
+     */
+    private AutoscalingSpec autoscalingSpec;
+
+    /**
      * 地域
      * Required:true
      */
@@ -83,23 +89,25 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     private String regionId;
 
 
+
     /**
-     * get 支持的可用区，最少一个
-     *
-     * @return
-     */
+    * get 支持的可用区，最少一个
+    *
+    * @return
+    */
     public List<String> getAzs() {
         return azs;
     }
 
     /**
-     * set 支持的可用区，最少一个
-     *
-     * @param azs
-     */
+    * set 支持的可用区，最少一个
+    *
+    * @param azs
+    */
     public void setAzs(List<String> azs) {
         this.azs = azs;
     }
+
 
     /**
      * get 高可用组名称，只支持中文、数字、大小写字母、英文下划线 “_” 及中划线 “-”，且不能超过 32 字符
@@ -119,6 +127,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
         this.agName = agName;
     }
 
+
     /**
      * get 高可用组资源类型，支持vm
      *
@@ -136,6 +145,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     public void setAgType(String agType) {
         this.agType = agType;
     }
+
 
     /**
      * get 实例模板的ID
@@ -155,6 +165,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
         this.instanceTemplateId = instanceTemplateId;
     }
 
+
     /**
      * get 描述，长度不超过 256 字符
      *
@@ -172,6 +183,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 高可用组配置类型，支持strict(关联模板型)、loose(自定义配置型)
@@ -191,6 +203,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
         this.configurationType = configurationType;
     }
 
+
     /**
      * get 高可用资源放置类型，支持fd、switch、host
      *
@@ -208,6 +221,26 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     public void setPlacementType(String placementType) {
         this.placementType = placementType;
     }
+
+
+    /**
+     * get 伸缩组详细信息，当创建时选择打开弹性伸缩功能时需要传该参数
+     *
+     * @return
+     */
+    public AutoscalingSpec getAutoscalingSpec() {
+        return autoscalingSpec;
+    }
+
+    /**
+     * set 伸缩组详细信息，当创建时选择打开弹性伸缩功能时需要传该参数
+     *
+     * @param autoscalingSpec
+     */
+    public void setAutoscalingSpec(AutoscalingSpec autoscalingSpec) {
+        this.autoscalingSpec = autoscalingSpec;
+    }
+
 
     /**
      * get 地域
@@ -228,15 +261,17 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     }
 
 
+
     /**
-     * set 支持的可用区，最少一个
-     *
-     * @param azs
-     */
+    * set 支持的可用区，最少一个
+    *
+    * @param azs
+    */
     public CreateAgRequest azs(List<String> azs) {
         this.azs = azs;
         return this;
     }
+
 
     /**
      * set 高可用组名称，只支持中文、数字、大小写字母、英文下划线 “_” 及中划线 “-”，且不能超过 32 字符
@@ -248,6 +283,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 高可用组资源类型，支持vm
      *
@@ -257,6 +293,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
         this.agType = agType;
         return this;
     }
+
 
     /**
      * set 实例模板的ID
@@ -268,6 +305,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 描述，长度不超过 256 字符
      *
@@ -277,6 +315,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
         this.description = description;
         return this;
     }
+
 
     /**
      * set 高可用组配置类型，支持strict(关联模板型)、loose(自定义配置型)
@@ -288,6 +327,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 高可用资源放置类型，支持fd、switch、host
      *
@@ -298,6 +338,18 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
         return this;
     }
 
+
+    /**
+     * set 伸缩组详细信息，当创建时选择打开弹性伸缩功能时需要传该参数
+     *
+     * @param autoscalingSpec
+     */
+    public CreateAgRequest autoscalingSpec(AutoscalingSpec autoscalingSpec) {
+        this.autoscalingSpec = autoscalingSpec;
+        return this;
+    }
+
+
     /**
      * set 地域
      *
@@ -307,6 +359,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -320,5 +373,4 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
         }
         this.azs.add(az);
     }
-
 }

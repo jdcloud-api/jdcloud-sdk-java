@@ -34,27 +34,90 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.ag.model.UpdateAgRequest;
 import com.jdcloud.sdk.service.ag.model.UpdateAgResponse;
 import com.jdcloud.sdk.service.ag.client.UpdateAgExecutor;
-import com.jdcloud.sdk.service.ag.model.DeleteAgRequest;
-import com.jdcloud.sdk.service.ag.model.DeleteAgResponse;
-import com.jdcloud.sdk.service.ag.client.DeleteAgExecutor;
-import com.jdcloud.sdk.service.ag.model.SetInstanceTemplateRequest;
-import com.jdcloud.sdk.service.ag.model.SetInstanceTemplateResponse;
-import com.jdcloud.sdk.service.ag.client.SetInstanceTemplateExecutor;
-import com.jdcloud.sdk.service.ag.model.DescribeQuotasRequest;
-import com.jdcloud.sdk.service.ag.model.DescribeQuotasResponse;
-import com.jdcloud.sdk.service.ag.client.DescribeQuotasExecutor;
-import com.jdcloud.sdk.service.ag.model.AbandonInstancesRequest;
-import com.jdcloud.sdk.service.ag.model.AbandonInstancesResponse;
-import com.jdcloud.sdk.service.ag.client.AbandonInstancesExecutor;
+import com.jdcloud.sdk.service.ag.model.DisableAsCronRequest;
+import com.jdcloud.sdk.service.ag.model.DisableAsCronResponse;
+import com.jdcloud.sdk.service.ag.client.DisableAsCronExecutor;
+import com.jdcloud.sdk.service.ag.model.EnableAsCronRequest;
+import com.jdcloud.sdk.service.ag.model.EnableAsCronResponse;
+import com.jdcloud.sdk.service.ag.client.EnableAsCronExecutor;
 import com.jdcloud.sdk.service.ag.model.CreateAgRequest;
 import com.jdcloud.sdk.service.ag.model.CreateAgResponse;
 import com.jdcloud.sdk.service.ag.client.CreateAgExecutor;
 import com.jdcloud.sdk.service.ag.model.DescribeAgRequest;
 import com.jdcloud.sdk.service.ag.model.DescribeAgResponse;
 import com.jdcloud.sdk.service.ag.client.DescribeAgExecutor;
+import com.jdcloud.sdk.service.ag.model.DescribeAsAlarmsRequest;
+import com.jdcloud.sdk.service.ag.model.DescribeAsAlarmsResponse;
+import com.jdcloud.sdk.service.ag.client.DescribeAsAlarmsExecutor;
+import com.jdcloud.sdk.service.ag.model.ExecuteAsRuleRequest;
+import com.jdcloud.sdk.service.ag.model.ExecuteAsRuleResponse;
+import com.jdcloud.sdk.service.ag.client.ExecuteAsRuleExecutor;
+import com.jdcloud.sdk.service.ag.model.UpdateAsAlarmRequest;
+import com.jdcloud.sdk.service.ag.model.UpdateAsAlarmResponse;
+import com.jdcloud.sdk.service.ag.client.UpdateAsAlarmExecutor;
+import com.jdcloud.sdk.service.ag.model.DescribeScalingActivitiesRequest;
+import com.jdcloud.sdk.service.ag.model.DescribeScalingActivitiesResponse;
+import com.jdcloud.sdk.service.ag.client.DescribeScalingActivitiesExecutor;
+import com.jdcloud.sdk.service.ag.model.CreateAsRuleRequest;
+import com.jdcloud.sdk.service.ag.model.CreateAsRuleResponse;
+import com.jdcloud.sdk.service.ag.client.CreateAsRuleExecutor;
+import com.jdcloud.sdk.service.ag.model.UpdateAsCronRequest;
+import com.jdcloud.sdk.service.ag.model.UpdateAsCronResponse;
+import com.jdcloud.sdk.service.ag.client.UpdateAsCronExecutor;
+import com.jdcloud.sdk.service.ag.model.DescribeAsRulesRequest;
+import com.jdcloud.sdk.service.ag.model.DescribeAsRulesResponse;
+import com.jdcloud.sdk.service.ag.client.DescribeAsRulesExecutor;
+import com.jdcloud.sdk.service.ag.model.CreateAsAlarmRequest;
+import com.jdcloud.sdk.service.ag.model.CreateAsAlarmResponse;
+import com.jdcloud.sdk.service.ag.client.CreateAsAlarmExecutor;
+import com.jdcloud.sdk.service.ag.model.EnableAsAlarmRequest;
+import com.jdcloud.sdk.service.ag.model.EnableAsAlarmResponse;
+import com.jdcloud.sdk.service.ag.client.EnableAsAlarmExecutor;
+import com.jdcloud.sdk.service.ag.model.DescribeQuotasRequest;
+import com.jdcloud.sdk.service.ag.model.DescribeQuotasResponse;
+import com.jdcloud.sdk.service.ag.client.DescribeQuotasExecutor;
+import com.jdcloud.sdk.service.ag.model.EnableAutoScalingRequest;
+import com.jdcloud.sdk.service.ag.model.EnableAutoScalingResponse;
+import com.jdcloud.sdk.service.ag.client.EnableAutoScalingExecutor;
+import com.jdcloud.sdk.service.ag.model.CreateAsCronRequest;
+import com.jdcloud.sdk.service.ag.model.CreateAsCronResponse;
+import com.jdcloud.sdk.service.ag.client.CreateAsCronExecutor;
+import com.jdcloud.sdk.service.ag.model.DeleteAgRequest;
+import com.jdcloud.sdk.service.ag.model.DeleteAgResponse;
+import com.jdcloud.sdk.service.ag.client.DeleteAgExecutor;
+import com.jdcloud.sdk.service.ag.model.DisableAsAlarmRequest;
+import com.jdcloud.sdk.service.ag.model.DisableAsAlarmResponse;
+import com.jdcloud.sdk.service.ag.client.DisableAsAlarmExecutor;
+import com.jdcloud.sdk.service.ag.model.UpdateAutoScalingRequest;
+import com.jdcloud.sdk.service.ag.model.UpdateAutoScalingResponse;
+import com.jdcloud.sdk.service.ag.client.UpdateAutoScalingExecutor;
+import com.jdcloud.sdk.service.ag.model.SetInstanceTemplateRequest;
+import com.jdcloud.sdk.service.ag.model.SetInstanceTemplateResponse;
+import com.jdcloud.sdk.service.ag.client.SetInstanceTemplateExecutor;
+import com.jdcloud.sdk.service.ag.model.DeleteAsRuleRequest;
+import com.jdcloud.sdk.service.ag.model.DeleteAsRuleResponse;
+import com.jdcloud.sdk.service.ag.client.DeleteAsRuleExecutor;
 import com.jdcloud.sdk.service.ag.model.DescribeAgsRequest;
 import com.jdcloud.sdk.service.ag.model.DescribeAgsResponse;
 import com.jdcloud.sdk.service.ag.client.DescribeAgsExecutor;
+import com.jdcloud.sdk.service.ag.model.DescribeAsCronsRequest;
+import com.jdcloud.sdk.service.ag.model.DescribeAsCronsResponse;
+import com.jdcloud.sdk.service.ag.client.DescribeAsCronsExecutor;
+import com.jdcloud.sdk.service.ag.model.DeleteAsCronRequest;
+import com.jdcloud.sdk.service.ag.model.DeleteAsCronResponse;
+import com.jdcloud.sdk.service.ag.client.DeleteAsCronExecutor;
+import com.jdcloud.sdk.service.ag.model.DisableAutoScalingRequest;
+import com.jdcloud.sdk.service.ag.model.DisableAutoScalingResponse;
+import com.jdcloud.sdk.service.ag.client.DisableAutoScalingExecutor;
+import com.jdcloud.sdk.service.ag.model.UpdateAsRuleRequest;
+import com.jdcloud.sdk.service.ag.model.UpdateAsRuleResponse;
+import com.jdcloud.sdk.service.ag.client.UpdateAsRuleExecutor;
+import com.jdcloud.sdk.service.ag.model.AbandonInstancesRequest;
+import com.jdcloud.sdk.service.ag.model.AbandonInstancesResponse;
+import com.jdcloud.sdk.service.ag.client.AbandonInstancesExecutor;
+import com.jdcloud.sdk.service.ag.model.DeleteAsAlarmRequest;
+import com.jdcloud.sdk.service.ag.model.DeleteAsAlarmResponse;
+import com.jdcloud.sdk.service.ag.client.DeleteAsAlarmExecutor;
 
 /**
  * agClient
@@ -63,7 +126,7 @@ public class AgClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.9";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "ag.jdcloud-api.com";
     public final static String ServiceName = "ag";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -117,47 +180,31 @@ public class AgClient extends JdcloudClient {
     }
 
     /**
-     * 根据 ID 删除高可用组，需确保 AG 中云主机实例已全部删除
+     * 禁用定时任务
+- 所有参数取值为字符串类型的都严格区分大小写
+- 伸缩功能开启或者关闭的情况下，都支持调用此接口
+
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteAgResponse deleteAg(DeleteAgRequest request) throws JdcloudSdkException {
-        return new DeleteAgExecutor().client(this).execute(request);
+    public DisableAsCronResponse disableAsCron(DisableAsCronRequest request) throws JdcloudSdkException {
+        return new DisableAsCronExecutor().client(this).execute(request);
     }
 
     /**
-     * 修改高可用组的实例模板&lt;br&gt;- 对于更换实例模板来说，如果已经关联负载均衡，则VPC不可以更改。&lt;br&gt;- 自定义配置型不可更改实例模板。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetInstanceTemplateResponse setInstanceTemplate(SetInstanceTemplateRequest request) throws JdcloudSdkException {
-        return new SetInstanceTemplateExecutor().client(this).execute(request);
-    }
+     * 启用定时任务
+- 所有参数取值为字符串类型的都严格区分大小写
+- 伸缩功能关闭的情况下，不支持调用此接口
 
-    /**
-     * 查询(ag)配额
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeQuotasResponse describeQuotas(DescribeQuotasRequest request) throws JdcloudSdkException {
-        return new DescribeQuotasExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 从高可用组中剔除实例
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AbandonInstancesResponse abandonInstances(AbandonInstancesRequest request) throws JdcloudSdkException {
-        return new AbandonInstancesExecutor().client(this).execute(request);
+    public EnableAsCronResponse enableAsCron(EnableAsCronRequest request) throws JdcloudSdkException {
+        return new EnableAsCronExecutor().client(this).execute(request);
     }
 
     /**
@@ -183,6 +230,241 @@ public class AgClient extends JdcloudClient {
     }
 
     /**
+     * 查看告警任务
+- 所有参数取值为字符串类型的都严格区分大小写
+- 伸缩功能开启或者关闭的情况下，都支持调用此接口
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAsAlarmsResponse describeAsAlarms(DescribeAsAlarmsRequest request) throws JdcloudSdkException {
+        return new DescribeAsAlarmsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 执行伸缩规则
+- 所有参数取值为字符串类型的都严格区分大小写
+- 只支持手动执行简单规则
+- 伸缩功能关闭的情况下，不支持调用此接口
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ExecuteAsRuleResponse executeAsRule(ExecuteAsRuleRequest request) throws JdcloudSdkException {
+        return new ExecuteAsRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改告警任务
+- 所有参数取值为字符串类型的都严格区分大小写
+- 所有告警任务不允许修改高可用组
+- 所有告警任务不允许修改监控类型
+- 目标跟踪规则生成的告警任务不允许修改任何内容
+- 监控类型为自定义监控的告警任务不允许修改命名空间
+- 步进规则绑定的告警任务不允许修改报警指标相关内容
+- 所有参数都为非必传，但是至少需要传入一个参数，否则报错
+- 伸缩功能开启或者关闭的情况下，都支持调用此接口
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateAsAlarmResponse updateAsAlarm(UpdateAsAlarmRequest request) throws JdcloudSdkException {
+        return new UpdateAsAlarmExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 使用过滤条件查询一个或多个弹性伸缩活动
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeScalingActivitiesResponse describeScalingActivities(DescribeScalingActivitiesRequest request) throws JdcloudSdkException {
+        return new DescribeScalingActivitiesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建伸缩规则
+- 所有参数取值为字符串类型的都严格区分大小写
+- 伸缩功能关闭的情况下，不支持调用此接口
+- 目标跟踪规则创建后会自动生成两个告警任务，分别用于扩容和缩容
+- 步进规则必须绑定一个告警任务
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateAsRuleResponse createAsRule(CreateAsRuleRequest request) throws JdcloudSdkException {
+        return new CreateAsRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改定时任务
+- 所有参数取值为字符串类型的都严格区分大小写
+- 定时任务换绑高可用组，如果目前伸缩方式是执行简单规则，那么需要重新从新的高可用组中选择一个简单规则
+- 伸缩功能开启或者关闭的情况下，都支持调用此接口
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateAsCronResponse updateAsCron(UpdateAsCronRequest request) throws JdcloudSdkException {
+        return new UpdateAsCronExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看伸缩规则
+- 所有参数取值为字符串类型的都严格区分大小写
+- 伸缩功能开启或者关闭的情况下，都支持调用此接口
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAsRulesResponse describeAsRules(DescribeAsRulesRequest request) throws JdcloudSdkException {
+        return new DescribeAsRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建告警任务
+- 所有参数取值为字符串类型的都严格区分大小写
+- 伸缩功能关闭的情况下，不支持调用此接口
+- 创建告警可以不选择简单伸缩规则，但是最终一个告警只允许关联一个简单规则和一个步进规则，步进规则优先级高于简单规则
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateAsAlarmResponse createAsAlarm(CreateAsAlarmRequest request) throws JdcloudSdkException {
+        return new CreateAsAlarmExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 启用告警任务
+- 所有参数取值为字符串类型的都严格区分大小写
+- 伸缩功能关闭的情况下，不支持调用此接口
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableAsAlarmResponse enableAsAlarm(EnableAsAlarmRequest request) throws JdcloudSdkException {
+        return new EnableAsAlarmExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询(ag)配额
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeQuotasResponse describeQuotas(DescribeQuotasRequest request) throws JdcloudSdkException {
+        return new DescribeQuotasExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 开启弹性伸缩功能
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableAutoScalingResponse enableAutoScaling(EnableAutoScalingRequest request) throws JdcloudSdkException {
+        return new EnableAutoScalingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建定时任务
+- 所有参数取值为字符串类型的都严格区分大小写
+- 伸缩功能关闭的情况下，不支持调用此接口
+- 定时任务如果关联伸缩规则，只能关联简单规则，且一个定时任务只能关联一个简单规则
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateAsCronResponse createAsCron(CreateAsCronRequest request) throws JdcloudSdkException {
+        return new CreateAsCronExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据 ID 删除高可用组，需确保 AG 中云主机实例已全部删除
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteAgResponse deleteAg(DeleteAgRequest request) throws JdcloudSdkException {
+        return new DeleteAgExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 禁用告警任务
+- 所有参数取值为字符串类型的都严格区分大小写
+- 伸缩功能开启或者关闭的情况下，都支持调用此接口
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableAsAlarmResponse disableAsAlarm(DisableAsAlarmRequest request) throws JdcloudSdkException {
+        return new DisableAsAlarmExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新弹性伸缩组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateAutoScalingResponse updateAutoScaling(UpdateAutoScalingRequest request) throws JdcloudSdkException {
+        return new UpdateAutoScalingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改高可用组的实例模板&lt;br&gt;- 对于更换实例模板来说，如果已经关联负载均衡，则VPC不可以更改。&lt;br&gt;- 自定义配置型不可更改实例模板。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetInstanceTemplateResponse setInstanceTemplate(SetInstanceTemplateRequest request) throws JdcloudSdkException {
+        return new SetInstanceTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除伸缩规则
+- 所有参数取值为字符串类型的都严格区分大小写
+- 伸缩功能开启或者关闭的情况下，都支持调用此接口
+- 删除目标跟踪规则后，会自动删除目标跟踪规则下的所有告警规则
+- 删除步进规则后，关联的告警规则会保留
+- 简单规则关联告警任务或者定时任务时，不允许删除简单规则
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteAsRuleResponse deleteAsRule(DeleteAsRuleRequest request) throws JdcloudSdkException {
+        return new DeleteAsRuleExecutor().client(this).execute(request);
+    }
+
+    /**
      * 使用过滤条件查询一个或多个高可用组
      *
      * @param request
@@ -191,6 +473,94 @@ public class AgClient extends JdcloudClient {
      */
     public DescribeAgsResponse describeAgs(DescribeAgsRequest request) throws JdcloudSdkException {
         return new DescribeAgsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看定时任务
+- 所有参数取值为字符串类型的都严格区分大小写
+- 所有参数都为非必传，但是至少需要传入一个参数，否则报错
+- 伸缩功能开启或者关闭的情况下，都支持调用此接口
+- 定时任务如果关联伸缩规则，只能关联简单规则，且一个定时任务只能关联一个简单规则
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAsCronsResponse describeAsCrons(DescribeAsCronsRequest request) throws JdcloudSdkException {
+        return new DescribeAsCronsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除定时任务
+- 所有参数取值为字符串类型的都严格区分大小写
+- 伸缩功能开启或者关闭的情况下，都支持调用此接口
+- 定时任务关联简单规则，定时任务可以删除
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteAsCronResponse deleteAsCron(DeleteAsCronRequest request) throws JdcloudSdkException {
+        return new DeleteAsCronExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭弹性伸缩组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableAutoScalingResponse disableAutoScaling(DisableAutoScalingRequest request) throws JdcloudSdkException {
+        return new DisableAutoScalingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改伸缩规则
+- 所有参数取值为字符串类型的都严格区分大小写
+- 所有伸缩规则不允许更换高可用组
+- 所有伸缩规则不允许修改伸缩规则类型
+- 步进规则不允许修改监控类型
+- 所有参数都为非必传，但是至少需要传入一个参数，否则报错
+- 伸缩功能开启或者关闭的情况下，都支持调用此接口
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateAsRuleResponse updateAsRule(UpdateAsRuleRequest request) throws JdcloudSdkException {
+        return new UpdateAsRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 从高可用组中剔除实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AbandonInstancesResponse abandonInstances(AbandonInstancesRequest request) throws JdcloudSdkException {
+        return new AbandonInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除告警任务
+- 所有参数取值为字符串类型的都严格区分大小写
+- 伸缩功能开启或者关闭的情况下，都支持调用此接口
+- 目标跟踪规则生成的告警任务不允许删除
+- 告警任务关联简单规则，告警任务可以删除
+- 告警任务关联步进规则，告警任务不允许删除，但是可以删除步进规则，删除步进规则后，关联的告警任务会保留
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteAsAlarmResponse deleteAsAlarm(DeleteAsAlarmRequest request) throws JdcloudSdkException {
+        return new DeleteAsAlarmExecutor().client(this).execute(request);
     }
 
 

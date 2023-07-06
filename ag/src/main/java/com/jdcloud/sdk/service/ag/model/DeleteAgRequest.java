@@ -49,6 +49,7 @@ public class DeleteAgRequest extends JdcloudRequest implements java.io.Serializa
     private String agId;
 
 
+
     /**
      * get 地域
      *
@@ -66,6 +67,7 @@ public class DeleteAgRequest extends JdcloudRequest implements java.io.Serializa
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 高可用组 ID
@@ -86,6 +88,7 @@ public class DeleteAgRequest extends JdcloudRequest implements java.io.Serializa
     }
 
 
+
     /**
      * set 地域
      *
@@ -95,6 +98,7 @@ public class DeleteAgRequest extends JdcloudRequest implements java.io.Serializa
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 高可用组 ID

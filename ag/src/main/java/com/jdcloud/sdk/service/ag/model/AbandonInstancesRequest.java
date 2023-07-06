@@ -41,8 +41,8 @@ public class AbandonInstancesRequest extends JdcloudRequest implements java.io.S
      * Required:true
      */
     @Required
+    
     private List<String> instanceIds;
-
     /**
      * 地域
      * Required:true
@@ -58,23 +58,25 @@ public class AbandonInstancesRequest extends JdcloudRequest implements java.io.S
     private String agId;
 
 
+
     /**
-     * get 准备剔除出高可用组的实例 ID
-     *
-     * @return
-     */
+    * get 准备剔除出高可用组的实例 ID
+    *
+    * @return
+    */
     public List<String> getInstanceIds() {
         return instanceIds;
     }
 
     /**
-     * set 准备剔除出高可用组的实例 ID
-     *
-     * @param instanceIds
-     */
+    * set 准备剔除出高可用组的实例 ID
+    *
+    * @param instanceIds
+    */
     public void setInstanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
     }
+
 
     /**
      * get 地域
@@ -93,6 +95,7 @@ public class AbandonInstancesRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 高可用组 ID
@@ -113,15 +116,17 @@ public class AbandonInstancesRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
-     * set 准备剔除出高可用组的实例 ID
-     *
-     * @param instanceIds
-     */
+    * set 准备剔除出高可用组的实例 ID
+    *
+    * @param instanceIds
+    */
     public AbandonInstancesRequest instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
+
 
     /**
      * set 地域
@@ -133,6 +138,7 @@ public class AbandonInstancesRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 高可用组 ID
      *
@@ -142,6 +148,7 @@ public class AbandonInstancesRequest extends JdcloudRequest implements java.io.S
         this.agId = agId;
         return this;
     }
+
 
 
     /**
@@ -155,5 +162,4 @@ public class AbandonInstancesRequest extends JdcloudRequest implements java.io.S
         }
         this.instanceIds.add(instanceId);
     }
-
 }

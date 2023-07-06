@@ -48,6 +48,7 @@ public class InstancesQuota  implements java.io.Serializable {
     private Integer used;
 
 
+
     /**
      * get az
      *
@@ -66,6 +67,7 @@ public class InstancesQuota  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
      * get 配额上限
      *
@@ -83,6 +85,7 @@ public class InstancesQuota  implements java.io.Serializable {
     public void setLimit(Integer limit) {
         this.limit = limit;
     }
+
 
     /**
      * get 已用配额
@@ -103,6 +106,7 @@ public class InstancesQuota  implements java.io.Serializable {
     }
 
 
+
     /**
      * set az
      *
@@ -113,6 +117,7 @@ public class InstancesQuota  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 配额上限
      *
@@ -122,6 +127,7 @@ public class InstancesQuota  implements java.io.Serializable {
         this.limit = limit;
         return this;
     }
+
 
     /**
      * set 已用配额

@@ -57,8 +57,8 @@ public class AvailabilityGroup  implements java.io.Serializable {
     /**
      * 可用区域
      */
+    
     private List<String> azs;
-
     /**
      * 高可用组资源类型
      */
@@ -92,7 +92,18 @@ public class AvailabilityGroup  implements java.io.Serializable {
     /**
      * 高可用组中实例数量的限制。
      */
+    
     private List<InstancesQuota> instancesQuotas;
+    /**
+     * instances
+     */
+    
+    private List<InstanceSpec> instances;
+    /**
+     * autoscalingSpec
+     */
+    private AutoscalingSpec autoscalingSpec;
+
 
 
     /**
@@ -113,6 +124,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 高可用组名称
      *
@@ -130,6 +142,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 描述
@@ -149,6 +162,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 实例模板的ID
      *
@@ -167,23 +181,25 @@ public class AvailabilityGroup  implements java.io.Serializable {
         this.instanceTemplateId = instanceTemplateId;
     }
 
+
     /**
-     * get 可用区域
-     *
-     * @return
-     */
+    * get 可用区域
+    *
+    * @return
+    */
     public List<String> getAzs() {
         return azs;
     }
 
     /**
-     * set 可用区域
-     *
-     * @param azs
-     */
+    * set 可用区域
+    *
+    * @param azs
+    */
     public void setAzs(List<String> azs) {
         this.azs = azs;
     }
+
 
     /**
      * get 高可用组资源类型
@@ -203,6 +219,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
         this.agType = agType;
     }
 
+
     /**
      * get 创建时间
      *
@@ -220,6 +237,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 高可用组中实例的数量
@@ -239,6 +257,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
         this.count = count;
     }
 
+
     /**
      * get 是否开启自动伸缩
      *
@@ -256,6 +275,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     public void setAutoScaling(Boolean autoScaling) {
         this.autoScaling = autoScaling;
     }
+
 
     /**
      * get 高可用组配置类型
@@ -275,6 +295,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
         this.configurationType = configurationType;
     }
 
+
     /**
      * get 高可用组放置类型
      *
@@ -293,23 +314,63 @@ public class AvailabilityGroup  implements java.io.Serializable {
         this.placementType = placementType;
     }
 
+
     /**
-     * get 高可用组中实例数量的限制。
-     *
-     * @return
-     */
+    * get 高可用组中实例数量的限制。
+    *
+    * @return
+    */
     public List<InstancesQuota> getInstancesQuotas() {
         return instancesQuotas;
     }
 
     /**
-     * set 高可用组中实例数量的限制。
-     *
-     * @param instancesQuotas
-     */
+    * set 高可用组中实例数量的限制。
+    *
+    * @param instancesQuotas
+    */
     public void setInstancesQuotas(List<InstancesQuota> instancesQuotas) {
         this.instancesQuotas = instancesQuotas;
     }
+
+
+    /**
+    * get instances
+    *
+    * @return
+    */
+    public List<InstanceSpec> getInstances() {
+        return instances;
+    }
+
+    /**
+    * set instances
+    *
+    * @param instances
+    */
+    public void setInstances(List<InstanceSpec> instances) {
+        this.instances = instances;
+    }
+
+
+    /**
+     * get autoscalingSpec
+     *
+     * @return
+     */
+    public AutoscalingSpec getAutoscalingSpec() {
+        return autoscalingSpec;
+    }
+
+    /**
+     * set autoscalingSpec
+     *
+     * @param autoscalingSpec
+     */
+    public void setAutoscalingSpec(AutoscalingSpec autoscalingSpec) {
+        this.autoscalingSpec = autoscalingSpec;
+    }
+
 
 
     /**
@@ -322,6 +383,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 高可用组名称
      *
@@ -331,6 +393,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 描述
@@ -342,6 +405,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例模板的ID
      *
@@ -352,15 +416,17 @@ public class AvailabilityGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 可用区域
-     *
-     * @param azs
-     */
+    * set 可用区域
+    *
+    * @param azs
+    */
     public AvailabilityGroup azs(List<String> azs) {
         this.azs = azs;
         return this;
     }
+
 
     /**
      * set 高可用组资源类型
@@ -372,6 +438,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -381,6 +448,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 高可用组中实例的数量
@@ -392,6 +460,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否开启自动伸缩
      *
@@ -401,6 +470,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
         this.autoScaling = autoScaling;
         return this;
     }
+
 
     /**
      * set 高可用组配置类型
@@ -412,6 +482,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 高可用组放置类型
      *
@@ -422,15 +493,39 @@ public class AvailabilityGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 高可用组中实例数量的限制。
-     *
-     * @param instancesQuotas
-     */
+    * set 高可用组中实例数量的限制。
+    *
+    * @param instancesQuotas
+    */
     public AvailabilityGroup instancesQuotas(List<InstancesQuota> instancesQuotas) {
         this.instancesQuotas = instancesQuotas;
         return this;
     }
+
+
+    /**
+    * set instances
+    *
+    * @param instances
+    */
+    public AvailabilityGroup instances(List<InstanceSpec> instances) {
+        this.instances = instances;
+        return this;
+    }
+
+
+    /**
+     * set autoscalingSpec
+     *
+     * @param autoscalingSpec
+     */
+    public AvailabilityGroup autoscalingSpec(AutoscalingSpec autoscalingSpec) {
+        this.autoscalingSpec = autoscalingSpec;
+        return this;
+    }
+
 
 
     /**
@@ -457,4 +552,15 @@ public class AvailabilityGroup  implements java.io.Serializable {
         this.instancesQuotas.add(instancesQuota);
     }
 
+    /**
+     * add item to instances
+     *
+     * @param instance
+     */
+    public void addInstance(InstanceSpec instance) {
+        if (this.instances == null) {
+            this.instances = new ArrayList<>();
+        }
+        this.instances.add(instance);
+    }
 }

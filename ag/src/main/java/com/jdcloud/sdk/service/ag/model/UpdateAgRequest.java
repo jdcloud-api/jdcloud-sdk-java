@@ -59,6 +59,7 @@ public class UpdateAgRequest extends JdcloudRequest implements java.io.Serializa
     private String agId;
 
 
+
     /**
      * get 描述，长度不超过 256 字符
      *
@@ -76,6 +77,7 @@ public class UpdateAgRequest extends JdcloudRequest implements java.io.Serializa
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 高可用组名称，只支持中文、数字、大小写字母、英文下划线 “_” 及中划线 “-”，且不能超过 32 字符
@@ -95,6 +97,7 @@ public class UpdateAgRequest extends JdcloudRequest implements java.io.Serializa
         this.name = name;
     }
 
+
     /**
      * get 地域
      *
@@ -112,6 +115,7 @@ public class UpdateAgRequest extends JdcloudRequest implements java.io.Serializa
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 高可用组 ID
@@ -132,6 +136,7 @@ public class UpdateAgRequest extends JdcloudRequest implements java.io.Serializa
     }
 
 
+
     /**
      * set 描述，长度不超过 256 字符
      *
@@ -141,6 +146,7 @@ public class UpdateAgRequest extends JdcloudRequest implements java.io.Serializa
         this.description = description;
         return this;
     }
+
 
     /**
      * set 高可用组名称，只支持中文、数字、大小写字母、英文下划线 “_” 及中划线 “-”，且不能超过 32 字符
@@ -152,6 +158,7 @@ public class UpdateAgRequest extends JdcloudRequest implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 地域
      *
@@ -161,6 +168,7 @@ public class UpdateAgRequest extends JdcloudRequest implements java.io.Serializa
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 高可用组 ID
