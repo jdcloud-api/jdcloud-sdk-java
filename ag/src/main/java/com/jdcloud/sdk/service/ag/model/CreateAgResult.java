@@ -39,6 +39,7 @@ public class CreateAgResult extends JdcloudResult implements java.io.Serializabl
     private String agId;
 
 
+
     /**
      * get 创建成功的高可用组 ID
      *
@@ -56,6 +57,7 @@ public class CreateAgResult extends JdcloudResult implements java.io.Serializabl
     public void setAgId(String agId) {
         this.agId = agId;
     }
+
 
 
     /**

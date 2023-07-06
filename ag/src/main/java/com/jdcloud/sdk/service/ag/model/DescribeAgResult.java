@@ -40,6 +40,7 @@ public class DescribeAgResult extends JdcloudResult implements java.io.Serializa
     private AvailabilityGroup ag;
 
 
+
     /**
      * get ag
      *
@@ -57,6 +58,7 @@ public class DescribeAgResult extends JdcloudResult implements java.io.Serializa
     public void setAg(AvailabilityGroup ag) {
         this.ag = ag;
     }
+
 
 
     /**

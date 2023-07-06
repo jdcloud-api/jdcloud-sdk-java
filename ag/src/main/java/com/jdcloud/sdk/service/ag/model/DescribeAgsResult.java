@@ -39,31 +39,33 @@ public class DescribeAgsResult extends JdcloudResult implements java.io.Serializ
     /**
      * ags
      */
+    
     private List<AvailabilityGroup> ags;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get ags
-     *
-     * @return
-     */
+    * get ags
+    *
+    * @return
+    */
     public List<AvailabilityGroup> getAgs() {
         return ags;
     }
 
     /**
-     * set ags
-     *
-     * @param ags
-     */
+    * set ags
+    *
+    * @param ags
+    */
     public void setAgs(List<AvailabilityGroup> ags) {
         this.ags = ags;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeAgsResult extends JdcloudResult implements java.io.Serializ
     }
 
 
+
     /**
-     * set ags
-     *
-     * @param ags
-     */
+    * set ags
+    *
+    * @param ags
+    */
     public DescribeAgsResult ags(List<AvailabilityGroup> ags) {
         this.ags = ags;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeAgsResult extends JdcloudResult implements java.io.Serializ
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeAgsResult extends JdcloudResult implements java.io.Serializ
         }
         this.ags.add(ag);
     }
-
 }

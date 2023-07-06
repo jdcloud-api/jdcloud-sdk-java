@@ -56,6 +56,7 @@ public class SetInstanceTemplateRequest extends JdcloudRequest implements java.i
     private String agId;
 
 
+
     /**
      * get 实例模板 ID
      *
@@ -74,6 +75,7 @@ public class SetInstanceTemplateRequest extends JdcloudRequest implements java.i
         this.instanceTemplateId = instanceTemplateId;
     }
 
+
     /**
      * get 地域
      *
@@ -91,6 +93,7 @@ public class SetInstanceTemplateRequest extends JdcloudRequest implements java.i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 高可用组 ID
@@ -111,6 +114,7 @@ public class SetInstanceTemplateRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 实例模板 ID
      *
@@ -121,6 +125,7 @@ public class SetInstanceTemplateRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 地域
      *
@@ -130,6 +135,7 @@ public class SetInstanceTemplateRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 高可用组 ID

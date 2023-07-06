@@ -55,14 +55,15 @@ vpcId - vpc id，精确匹配
 placementType - placement type，放置策略
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -83,6 +84,7 @@ placementType - placement type，放置策略
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认为20；取值范围[10, 100]
      *
@@ -101,33 +103,35 @@ placementType - placement type，放置策略
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get agName - ag名字，支持模糊匹配
+    * get agName - ag名字，支持模糊匹配
 agId - ag id，精确匹配
 instanceTemplateId - 实例模板id，精确匹配
 vpcId - vpc id，精确匹配
 placementType - placement type，放置策略
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set agName - ag名字，支持模糊匹配
+    * set agName - ag名字，支持模糊匹配
 agId - ag id，精确匹配
 instanceTemplateId - 实例模板id，精确匹配
 vpcId - vpc id，精确匹配
 placementType - placement type，放置策略
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域
@@ -148,6 +152,7 @@ placementType - placement type，放置策略
     }
 
 
+
     /**
      * set 页码；默认为1
      *
@@ -157,6 +162,7 @@ placementType - placement type，放置策略
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；默认为20；取值范围[10, 100]
@@ -168,20 +174,22 @@ placementType - placement type，放置策略
         return this;
     }
 
+
     /**
-     * set agName - ag名字，支持模糊匹配
+    * set agName - ag名字，支持模糊匹配
 agId - ag id，精确匹配
 instanceTemplateId - 实例模板id，精确匹配
 vpcId - vpc id，精确匹配
 placementType - placement type，放置策略
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeAgsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域
@@ -192,6 +200,7 @@ placementType - placement type，放置策略
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -210,5 +219,4 @@ placementType - placement type，放置策略
         }
         this.filters.add(filter);
     }
-
 }
