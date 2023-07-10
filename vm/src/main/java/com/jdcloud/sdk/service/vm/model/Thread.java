@@ -40,7 +40,7 @@ public class Thread  implements java.io.Serializable {
     /**
      * physical cpu pinned to
      */
-    private Integer pin;
+    private String pin;
 
 
 
@@ -68,7 +68,7 @@ public class Thread  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getPin() {
+    public String getPin() {
         return pin;
     }
 
@@ -77,7 +77,7 @@ public class Thread  implements java.io.Serializable {
      *
      * @param pin
      */
-    public void setPin(Integer pin) {
+    public void setPin(String pin) {
         this.pin = pin;
     }
 
@@ -99,7 +99,7 @@ public class Thread  implements java.io.Serializable {
      *
      * @param pin
      */
-    public Thread pin(Integer pin) {
+    public Thread pin(String pin) {
         this.pin = pin;
         return this;
     }

@@ -138,6 +138,11 @@ public class InternalInstance  implements java.io.Serializable {
     private String dedicatedHostId;
 
     /**
+     * 虚机CPU拓扑
+     */
+    private CpuTopology cpuTopology;
+
+    /**
      * 实例所在的物理机IP地址。
      */
     private String hostIp;
@@ -541,6 +546,25 @@ public class InternalInstance  implements java.io.Serializable {
 
 
     /**
+     * get 虚机CPU拓扑
+     *
+     * @return
+     */
+    public CpuTopology getCpuTopology() {
+        return cpuTopology;
+    }
+
+    /**
+     * set 虚机CPU拓扑
+     *
+     * @param cpuTopology
+     */
+    public void setCpuTopology(CpuTopology cpuTopology) {
+        this.cpuTopology = cpuTopology;
+    }
+
+
+    /**
      * get 实例所在的物理机IP地址。
      *
      * @return
@@ -817,6 +841,17 @@ public class InternalInstance  implements java.io.Serializable {
      */
     public InternalInstance dedicatedHostId(String dedicatedHostId) {
         this.dedicatedHostId = dedicatedHostId;
+        return this;
+    }
+
+
+    /**
+     * set 虚机CPU拓扑
+     *
+     * @param cpuTopology
+     */
+    public InternalInstance cpuTopology(CpuTopology cpuTopology) {
+        this.cpuTopology = cpuTopology;
         return this;
     }
 

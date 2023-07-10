@@ -68,6 +68,12 @@ public class ModifyInstancePlacementRequest extends JdcloudRequest implements ja
     private Boolean clearLocalDisk;
 
     /**
+     * 是否托管实例的生命周期，默认为false；若为包年包月实例，可加入但不支持托管；该字段仅AG开启AS时生效。托管实例将在缩容或健康检查失败时被删除，非托管实例仅移出伸缩组
+
+     */
+    private Boolean isManaged;
+
+    /**
      * 地域ID。
      * Required:true
      */
@@ -149,6 +155,27 @@ public class ModifyInstancePlacementRequest extends JdcloudRequest implements ja
 
 
     /**
+     * get 是否托管实例的生命周期，默认为false；若为包年包月实例，可加入但不支持托管；该字段仅AG开启AS时生效。托管实例将在缩容或健康检查失败时被删除，非托管实例仅移出伸缩组
+
+     *
+     * @return
+     */
+    public Boolean getIsManaged() {
+        return isManaged;
+    }
+
+    /**
+     * set 是否托管实例的生命周期，默认为false；若为包年包月实例，可加入但不支持托管；该字段仅AG开启AS时生效。托管实例将在缩容或健康检查失败时被删除，非托管实例仅移出伸缩组
+
+     *
+     * @param isManaged
+     */
+    public void setIsManaged(Boolean isManaged) {
+        this.isManaged = isManaged;
+    }
+
+
+    /**
      * get 地域ID。
      *
      * @return
@@ -220,6 +247,18 @@ public class ModifyInstancePlacementRequest extends JdcloudRequest implements ja
      */
     public ModifyInstancePlacementRequest clearLocalDisk(Boolean clearLocalDisk) {
         this.clearLocalDisk = clearLocalDisk;
+        return this;
+    }
+
+
+    /**
+     * set 是否托管实例的生命周期，默认为false；若为包年包月实例，可加入但不支持托管；该字段仅AG开启AS时生效。托管实例将在缩容或健康检查失败时被删除，非托管实例仅移出伸缩组
+
+     *
+     * @param isManaged
+     */
+    public ModifyInstancePlacementRequest isManaged(Boolean isManaged) {
+        this.isManaged = isManaged;
         return this;
     }
 
