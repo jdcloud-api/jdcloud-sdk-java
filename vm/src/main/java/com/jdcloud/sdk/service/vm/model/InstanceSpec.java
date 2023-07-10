@@ -108,7 +108,7 @@ public class InstanceSpec  implements java.io.Serializable {
 
     /**
      * 实例密码。可用于SSH登录和VNC登录。长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
-如指定密钥且 &#x60;passwordAuth&#x60; 设置为 &#x60;true&#x60; ，则密码不会生成注入，否则即使不指定密码系统也将默认自动生成随机密码，并以短信和邮件通知。
+如指定密钥且 &#x60;passwordAuth&#x60; 设置为 &#x60;no&#x60; ，则密码不会生成注入，否则即使不指定密码系统也将默认自动生成随机密码，并以短信和邮件通知。
 
      */
     private String password;
@@ -484,7 +484,7 @@ autoChangeChargeMode和autoChangeChargeModeDate字段只有在按配置计费按
 
     /**
      * get 实例密码。可用于SSH登录和VNC登录。长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
-如指定密钥且 &#x60;passwordAuth&#x60; 设置为 &#x60;true&#x60; ，则密码不会生成注入，否则即使不指定密码系统也将默认自动生成随机密码，并以短信和邮件通知。
+如指定密钥且 &#x60;passwordAuth&#x60; 设置为 &#x60;no&#x60; ，则密码不会生成注入，否则即使不指定密码系统也将默认自动生成随机密码，并以短信和邮件通知。
 
      *
      * @return
@@ -495,7 +495,7 @@ autoChangeChargeMode和autoChangeChargeModeDate字段只有在按配置计费按
 
     /**
      * set 实例密码。可用于SSH登录和VNC登录。长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
-如指定密钥且 &#x60;passwordAuth&#x60; 设置为 &#x60;true&#x60; ，则密码不会生成注入，否则即使不指定密码系统也将默认自动生成随机密码，并以短信和邮件通知。
+如指定密钥且 &#x60;passwordAuth&#x60; 设置为 &#x60;no&#x60; ，则密码不会生成注入，否则即使不指定密码系统也将默认自动生成随机密码，并以短信和邮件通知。
 
      *
      * @param password
@@ -1101,7 +1101,7 @@ autoChangeChargeMode和autoChangeChargeModeDate字段只有在按配置计费按
 
     /**
      * set 实例密码。可用于SSH登录和VNC登录。长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
-如指定密钥且 &#x60;passwordAuth&#x60; 设置为 &#x60;true&#x60; ，则密码不会生成注入，否则即使不指定密码系统也将默认自动生成随机密码，并以短信和邮件通知。
+如指定密钥且 &#x60;passwordAuth&#x60; 设置为 &#x60;no&#x60; ，则密码不会生成注入，否则即使不指定密码系统也将默认自动生成随机密码，并以短信和邮件通知。
 
      *
      * @param password
