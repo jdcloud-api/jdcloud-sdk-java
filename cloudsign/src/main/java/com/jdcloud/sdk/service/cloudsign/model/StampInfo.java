@@ -57,6 +57,16 @@ public class StampInfo  implements java.io.Serializable {
      */
     private String createTime;
 
+    /**
+     * 印章下载地址
+     */
+    private String stampUrl;
+
+    /**
+     * 印章属性
+     */
+    private String stampAttributes;
+
 
 
     /**
@@ -154,6 +164,44 @@ public class StampInfo  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 印章下载地址
+     *
+     * @return
+     */
+    public String getStampUrl() {
+        return stampUrl;
+    }
+
+    /**
+     * set 印章下载地址
+     *
+     * @param stampUrl
+     */
+    public void setStampUrl(String stampUrl) {
+        this.stampUrl = stampUrl;
+    }
+
+
+    /**
+     * get 印章属性
+     *
+     * @return
+     */
+    public String getStampAttributes() {
+        return stampAttributes;
+    }
+
+    /**
+     * set 印章属性
+     *
+     * @param stampAttributes
+     */
+    public void setStampAttributes(String stampAttributes) {
+        this.stampAttributes = stampAttributes;
+    }
+
+
 
     /**
      * set 印章ID
@@ -206,6 +254,28 @@ public class StampInfo  implements java.io.Serializable {
      */
     public StampInfo createTime(String createTime) {
         this.createTime = createTime;
+        return this;
+    }
+
+
+    /**
+     * set 印章下载地址
+     *
+     * @param stampUrl
+     */
+    public StampInfo stampUrl(String stampUrl) {
+        this.stampUrl = stampUrl;
+        return this;
+    }
+
+
+    /**
+     * set 印章属性
+     *
+     * @param stampAttributes
+     */
+    public StampInfo stampAttributes(String stampAttributes) {
+        this.stampAttributes = stampAttributes;
         return this;
     }
 

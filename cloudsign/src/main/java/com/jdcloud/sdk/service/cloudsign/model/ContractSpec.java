@@ -77,6 +77,26 @@ public class ContractSpec  implements java.io.Serializable {
      */
     private String stampStyle;
 
+    /**
+     * 0：普通证书 1：事件证书（默认为0，普通证书）
+     */
+    private Integer certExpire;
+
+    /**
+     * 证书类型
+     */
+    private String businessId;
+
+    /**
+     * 签署完的合同是否在京东云存储（默认为false，不存储）
+     */
+    private Boolean needStorage;
+
+    /**
+     * 是否需要返回已签署的合同（默认为true）
+     */
+    private Boolean needContract;
+
 
 
     /**
@@ -231,6 +251,82 @@ public class ContractSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 0：普通证书 1：事件证书（默认为0，普通证书）
+     *
+     * @return
+     */
+    public Integer getCertExpire() {
+        return certExpire;
+    }
+
+    /**
+     * set 0：普通证书 1：事件证书（默认为0，普通证书）
+     *
+     * @param certExpire
+     */
+    public void setCertExpire(Integer certExpire) {
+        this.certExpire = certExpire;
+    }
+
+
+    /**
+     * get 证书类型
+     *
+     * @return
+     */
+    public String getBusinessId() {
+        return businessId;
+    }
+
+    /**
+     * set 证书类型
+     *
+     * @param businessId
+     */
+    public void setBusinessId(String businessId) {
+        this.businessId = businessId;
+    }
+
+
+    /**
+     * get 签署完的合同是否在京东云存储（默认为false，不存储）
+     *
+     * @return
+     */
+    public Boolean getNeedStorage() {
+        return needStorage;
+    }
+
+    /**
+     * set 签署完的合同是否在京东云存储（默认为false，不存储）
+     *
+     * @param needStorage
+     */
+    public void setNeedStorage(Boolean needStorage) {
+        this.needStorage = needStorage;
+    }
+
+
+    /**
+     * get 是否需要返回已签署的合同（默认为true）
+     *
+     * @return
+     */
+    public Boolean getNeedContract() {
+        return needContract;
+    }
+
+    /**
+     * set 是否需要返回已签署的合同（默认为true）
+     *
+     * @param needContract
+     */
+    public void setNeedContract(Boolean needContract) {
+        this.needContract = needContract;
+    }
+
+
 
     /**
     * set 个人用户盖章信息
@@ -316,6 +412,50 @@ public class ContractSpec  implements java.io.Serializable {
      */
     public ContractSpec stampStyle(String stampStyle) {
         this.stampStyle = stampStyle;
+        return this;
+    }
+
+
+    /**
+     * set 0：普通证书 1：事件证书（默认为0，普通证书）
+     *
+     * @param certExpire
+     */
+    public ContractSpec certExpire(Integer certExpire) {
+        this.certExpire = certExpire;
+        return this;
+    }
+
+
+    /**
+     * set 证书类型
+     *
+     * @param businessId
+     */
+    public ContractSpec businessId(String businessId) {
+        this.businessId = businessId;
+        return this;
+    }
+
+
+    /**
+     * set 签署完的合同是否在京东云存储（默认为false，不存储）
+     *
+     * @param needStorage
+     */
+    public ContractSpec needStorage(Boolean needStorage) {
+        this.needStorage = needStorage;
+        return this;
+    }
+
+
+    /**
+     * set 是否需要返回已签署的合同（默认为true）
+     *
+     * @param needContract
+     */
+    public ContractSpec needContract(Boolean needContract) {
+        this.needContract = needContract;
         return this;
     }
 

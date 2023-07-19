@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 印章管理接口
+ * 司马签印章管理接口
  * 电子签章-印章管理接口
  *
  * OpenAPI spec version: v1
@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.cloudsign.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.cloudsign.model.StampInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
@@ -37,41 +39,53 @@ public class DownloadStampsResult extends JdcloudResult implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * stampInfo
+     * stampList
      */
-    private StampInfo stampInfo;
-
+    
+    private List<StampInfo> stampList;
 
 
     /**
-     * get stampInfo
-     *
-     * @return
-     */
-    public StampInfo getStampInfo() {
-        return stampInfo;
+    * get stampList
+    *
+    * @return
+    */
+    public List<StampInfo> getStampList() {
+        return stampList;
     }
 
     /**
-     * set stampInfo
-     *
-     * @param stampInfo
-     */
-    public void setStampInfo(StampInfo stampInfo) {
-        this.stampInfo = stampInfo;
+    * set stampList
+    *
+    * @param stampList
+    */
+    public void setStampList(List<StampInfo> stampList) {
+        this.stampList = stampList;
     }
 
 
 
     /**
-     * set stampInfo
-     *
-     * @param stampInfo
-     */
-    public DownloadStampsResult stampInfo(StampInfo stampInfo) {
-        this.stampInfo = stampInfo;
+    * set stampList
+    *
+    * @param stampList
+    */
+    public DownloadStampsResult stampList(List<StampInfo> stampList) {
+        this.stampList = stampList;
         return this;
     }
 
 
+
+    /**
+     * add item to stampList
+     *
+     * @param stampList
+     */
+    public void addStampList(StampInfo stampList) {
+        if (this.stampList == null) {
+            this.stampList = new ArrayList<>();
+        }
+        this.stampList.add(stampList);
+    }
 }
