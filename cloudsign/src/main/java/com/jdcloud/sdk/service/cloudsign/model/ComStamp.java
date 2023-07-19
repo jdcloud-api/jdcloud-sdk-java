@@ -152,6 +152,21 @@ public class ComStamp  implements java.io.Serializable {
      */
     private String identifyValue;
 
+    /**
+     * 自定义签章类型（如需增加时间戳，此字段传time，会覆盖contractSpec中的定义）
+     */
+    private String stampStyle;
+
+    /**
+     * 0：普通证书 1：事件证书（默认为0，普通证书。会覆盖contractSpec中的定义）
+     */
+    private Integer certExpire;
+
+    /**
+     * 页范围，仅在坐标签章生效 | 1. all，表示所有页码 2. 数字以逗号分隔，形如：&quot;1,2,3&quot;&quot;1,2,3&quot; 3. 以短横线：以短横线&#39;-&#39;分隔的两个数字，会被扩展为⼀段范围，形如：&quot;2-4&quot; 4：规则2和3可以混用，形如：&quot;2-4,7&quot;
+     */
+    private String pageRange;
+
 
 
     /**
@@ -610,6 +625,63 @@ public class ComStamp  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 自定义签章类型（如需增加时间戳，此字段传time，会覆盖contractSpec中的定义）
+     *
+     * @return
+     */
+    public String getStampStyle() {
+        return stampStyle;
+    }
+
+    /**
+     * set 自定义签章类型（如需增加时间戳，此字段传time，会覆盖contractSpec中的定义）
+     *
+     * @param stampStyle
+     */
+    public void setStampStyle(String stampStyle) {
+        this.stampStyle = stampStyle;
+    }
+
+
+    /**
+     * get 0：普通证书 1：事件证书（默认为0，普通证书。会覆盖contractSpec中的定义）
+     *
+     * @return
+     */
+    public Integer getCertExpire() {
+        return certExpire;
+    }
+
+    /**
+     * set 0：普通证书 1：事件证书（默认为0，普通证书。会覆盖contractSpec中的定义）
+     *
+     * @param certExpire
+     */
+    public void setCertExpire(Integer certExpire) {
+        this.certExpire = certExpire;
+    }
+
+
+    /**
+     * get 页范围，仅在坐标签章生效 | 1. all，表示所有页码 2. 数字以逗号分隔，形如：&quot;1,2,3&quot;&quot;1,2,3&quot; 3. 以短横线：以短横线&#39;-&#39;分隔的两个数字，会被扩展为⼀段范围，形如：&quot;2-4&quot; 4：规则2和3可以混用，形如：&quot;2-4,7&quot;
+     *
+     * @return
+     */
+    public String getPageRange() {
+        return pageRange;
+    }
+
+    /**
+     * set 页范围，仅在坐标签章生效 | 1. all，表示所有页码 2. 数字以逗号分隔，形如：&quot;1,2,3&quot;&quot;1,2,3&quot; 3. 以短横线：以短横线&#39;-&#39;分隔的两个数字，会被扩展为⼀段范围，形如：&quot;2-4&quot; 4：规则2和3可以混用，形如：&quot;2-4,7&quot;
+     *
+     * @param pageRange
+     */
+    public void setPageRange(String pageRange) {
+        this.pageRange = pageRange;
+    }
+
+
 
     /**
      * set 最多盖章数目（默认10）
@@ -871,6 +943,39 @@ public class ComStamp  implements java.io.Serializable {
      */
     public ComStamp identifyValue(String identifyValue) {
         this.identifyValue = identifyValue;
+        return this;
+    }
+
+
+    /**
+     * set 自定义签章类型（如需增加时间戳，此字段传time，会覆盖contractSpec中的定义）
+     *
+     * @param stampStyle
+     */
+    public ComStamp stampStyle(String stampStyle) {
+        this.stampStyle = stampStyle;
+        return this;
+    }
+
+
+    /**
+     * set 0：普通证书 1：事件证书（默认为0，普通证书。会覆盖contractSpec中的定义）
+     *
+     * @param certExpire
+     */
+    public ComStamp certExpire(Integer certExpire) {
+        this.certExpire = certExpire;
+        return this;
+    }
+
+
+    /**
+     * set 页范围，仅在坐标签章生效 | 1. all，表示所有页码 2. 数字以逗号分隔，形如：&quot;1,2,3&quot;&quot;1,2,3&quot; 3. 以短横线：以短横线&#39;-&#39;分隔的两个数字，会被扩展为⼀段范围，形如：&quot;2-4&quot; 4：规则2和3可以混用，形如：&quot;2-4,7&quot;
+     *
+     * @param pageRange
+     */
+    public ComStamp pageRange(String pageRange) {
+        this.pageRange = pageRange;
         return this;
     }
 

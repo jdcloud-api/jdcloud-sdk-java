@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 合同模板管理接口
+ * 司马签合同模板管理接口
  * 电子签章-合同模板管理接口
  *
  * OpenAPI spec version: v1
@@ -34,14 +34,14 @@ public class UploadTemplateResult extends JdcloudResult implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 合同模板ID
+     * 模板ID
      */
     private String templateId;
 
 
 
     /**
-     * get 合同模板ID
+     * get 模板ID
      *
      * @return
      */
@@ -50,7 +50,7 @@ public class UploadTemplateResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set 合同模板ID
+     * set 模板ID
      *
      * @param templateId
      */
@@ -61,7 +61,7 @@ public class UploadTemplateResult extends JdcloudResult implements java.io.Seria
 
 
     /**
-     * set 合同模板ID
+     * set 模板ID
      *
      * @param templateId
      */

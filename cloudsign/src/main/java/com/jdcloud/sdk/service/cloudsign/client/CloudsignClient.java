@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.cloudsign.client.GetMultiEvidenceExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.DescribeApplyStatusRequest;
 import com.jdcloud.sdk.service.cloudsign.model.DescribeApplyStatusResponse;
 import com.jdcloud.sdk.service.cloudsign.client.DescribeApplyStatusExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.DescribeStampHistoryListRequest;
+import com.jdcloud.sdk.service.cloudsign.model.DescribeStampHistoryListResponse;
+import com.jdcloud.sdk.service.cloudsign.client.DescribeStampHistoryListExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.EnableContractSaveRequest;
 import com.jdcloud.sdk.service.cloudsign.model.EnableContractSaveResponse;
 import com.jdcloud.sdk.service.cloudsign.client.EnableContractSaveExecutor;
@@ -46,48 +49,24 @@ import com.jdcloud.sdk.service.cloudsign.client.DescribeTemplateListExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.DescribeContractListRequest;
 import com.jdcloud.sdk.service.cloudsign.model.DescribeContractListResponse;
 import com.jdcloud.sdk.service.cloudsign.client.DescribeContractListExecutor;
-import com.jdcloud.sdk.service.cloudsign.model.UploadStampRequest;
-import com.jdcloud.sdk.service.cloudsign.model.UploadStampResponse;
-import com.jdcloud.sdk.service.cloudsign.client.UploadStampExecutor;
-import com.jdcloud.sdk.service.cloudsign.model.DownloadStampsRequest;
-import com.jdcloud.sdk.service.cloudsign.model.DownloadStampsResponse;
-import com.jdcloud.sdk.service.cloudsign.client.DownloadStampsExecutor;
-import com.jdcloud.sdk.service.cloudsign.model.PaddingTemplateRequest;
-import com.jdcloud.sdk.service.cloudsign.model.PaddingTemplateResponse;
-import com.jdcloud.sdk.service.cloudsign.client.PaddingTemplateExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.SaveMultiEvidenceRequest;
 import com.jdcloud.sdk.service.cloudsign.model.SaveMultiEvidenceResponse;
 import com.jdcloud.sdk.service.cloudsign.client.SaveMultiEvidenceExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.SignContractRequest;
 import com.jdcloud.sdk.service.cloudsign.model.SignContractResponse;
 import com.jdcloud.sdk.service.cloudsign.client.SignContractExecutor;
-import com.jdcloud.sdk.service.cloudsign.model.GetEvidenceRequest;
-import com.jdcloud.sdk.service.cloudsign.model.GetEvidenceResponse;
-import com.jdcloud.sdk.service.cloudsign.client.GetEvidenceExecutor;
-import com.jdcloud.sdk.service.cloudsign.model.DownloadContractsRequest;
-import com.jdcloud.sdk.service.cloudsign.model.DownloadContractsResponse;
-import com.jdcloud.sdk.service.cloudsign.client.DownloadContractsExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.DownloadTemplatesRequest;
 import com.jdcloud.sdk.service.cloudsign.model.DownloadTemplatesResponse;
 import com.jdcloud.sdk.service.cloudsign.client.DownloadTemplatesExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.VerifyContractRequest;
 import com.jdcloud.sdk.service.cloudsign.model.VerifyContractResponse;
 import com.jdcloud.sdk.service.cloudsign.client.VerifyContractExecutor;
-import com.jdcloud.sdk.service.cloudsign.model.UploadTemplateRequest;
-import com.jdcloud.sdk.service.cloudsign.model.UploadTemplateResponse;
-import com.jdcloud.sdk.service.cloudsign.client.UploadTemplateExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.DeleteTemplateRequest;
 import com.jdcloud.sdk.service.cloudsign.model.DeleteTemplateResponse;
 import com.jdcloud.sdk.service.cloudsign.client.DeleteTemplateExecutor;
-import com.jdcloud.sdk.service.cloudsign.model.SaveEvidenceRequest;
-import com.jdcloud.sdk.service.cloudsign.model.SaveEvidenceResponse;
-import com.jdcloud.sdk.service.cloudsign.client.SaveEvidenceExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.DeleteContractRequest;
 import com.jdcloud.sdk.service.cloudsign.model.DeleteContractResponse;
 import com.jdcloud.sdk.service.cloudsign.client.DeleteContractExecutor;
-import com.jdcloud.sdk.service.cloudsign.model.DisableContractSaveRequest;
-import com.jdcloud.sdk.service.cloudsign.model.DisableContractSaveResponse;
-import com.jdcloud.sdk.service.cloudsign.client.DisableContractSaveExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.SetKmsKeyIdRequest;
 import com.jdcloud.sdk.service.cloudsign.model.SetKmsKeyIdResponse;
 import com.jdcloud.sdk.service.cloudsign.client.SetKmsKeyIdExecutor;
@@ -97,6 +76,36 @@ import com.jdcloud.sdk.service.cloudsign.client.DeleteStampExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.DescribeStampListRequest;
 import com.jdcloud.sdk.service.cloudsign.model.DescribeStampListResponse;
 import com.jdcloud.sdk.service.cloudsign.client.DescribeStampListExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.UploadStampRequest;
+import com.jdcloud.sdk.service.cloudsign.model.UploadStampResponse;
+import com.jdcloud.sdk.service.cloudsign.client.UploadStampExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.DownloadStampsRequest;
+import com.jdcloud.sdk.service.cloudsign.model.DownloadStampsResponse;
+import com.jdcloud.sdk.service.cloudsign.client.DownloadStampsExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.PaddingTemplateRequest;
+import com.jdcloud.sdk.service.cloudsign.model.PaddingTemplateResponse;
+import com.jdcloud.sdk.service.cloudsign.client.PaddingTemplateExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.GetEvidenceRequest;
+import com.jdcloud.sdk.service.cloudsign.model.GetEvidenceResponse;
+import com.jdcloud.sdk.service.cloudsign.client.GetEvidenceExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.DownloadContractsRequest;
+import com.jdcloud.sdk.service.cloudsign.model.DownloadContractsResponse;
+import com.jdcloud.sdk.service.cloudsign.client.DownloadContractsExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.UploadTemplateRequest;
+import com.jdcloud.sdk.service.cloudsign.model.UploadTemplateResponse;
+import com.jdcloud.sdk.service.cloudsign.client.UploadTemplateExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.SaveEvidenceRequest;
+import com.jdcloud.sdk.service.cloudsign.model.SaveEvidenceResponse;
+import com.jdcloud.sdk.service.cloudsign.client.SaveEvidenceExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.DisableContractSaveRequest;
+import com.jdcloud.sdk.service.cloudsign.model.DisableContractSaveResponse;
+import com.jdcloud.sdk.service.cloudsign.client.DisableContractSaveExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.GetSaveReportRequest;
+import com.jdcloud.sdk.service.cloudsign.model.GetSaveReportResponse;
+import com.jdcloud.sdk.service.cloudsign.client.GetSaveReportExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.EditStampRequest;
+import com.jdcloud.sdk.service.cloudsign.model.EditStampResponse;
+import com.jdcloud.sdk.service.cloudsign.client.EditStampExecutor;
 
 /**
  * cloudsignClient
@@ -105,7 +114,7 @@ public class CloudsignClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.9";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "cloudsign.jdcloud-api.com";
     public final static String ServiceName = "cloudsign";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -170,6 +179,17 @@ public class CloudsignClient extends JdcloudClient {
     }
 
     /**
+     * 获取印章列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeStampHistoryListResponse describeStampHistoryList(DescribeStampHistoryListRequest request) throws JdcloudSdkException {
+        return new DescribeStampHistoryListExecutor().client(this).execute(request);
+    }
+
+    /**
      * 启用合同存管
      *
      * @param request
@@ -200,6 +220,112 @@ public class CloudsignClient extends JdcloudClient {
      */
     public DescribeContractListResponse describeContractList(DescribeContractListRequest request) throws JdcloudSdkException {
         return new DescribeContractListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 多证据链存证接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SaveMultiEvidenceResponse saveMultiEvidence(SaveMultiEvidenceRequest request) throws JdcloudSdkException {
+        return new SaveMultiEvidenceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 合同签章四种方式：
+1. 合同文件 + 印章文件：contractContent + stampContent
+2. 合同文件 + 印章ID：contractContent + stampId
+3. 模板ID + 印章文件：templateId + stampContent
+4. 模板ID + 印章ID：templateId + stampId
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SignContractResponse signContract(SignContractRequest request) throws JdcloudSdkException {
+        return new SignContractExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 1. 下载合同模板
+2. 多个合同id用逗号分隔
+ [MFA enabled]
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DownloadTemplatesResponse downloadTemplates(DownloadTemplatesRequest request) throws JdcloudSdkException {
+        return new DownloadTemplatesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 验签已签章合同
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public VerifyContractResponse verifyContract(VerifyContractRequest request) throws JdcloudSdkException {
+        return new VerifyContractExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除合同模板 [MFA enabled]
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteTemplateResponse deleteTemplate(DeleteTemplateRequest request) throws JdcloudSdkException {
+        return new DeleteTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除已签章合同 [MFA enabled]
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteContractResponse deleteContract(DeleteContractRequest request) throws JdcloudSdkException {
+        return new DeleteContractExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 签章系统加密密钥 [MFA enabled]
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetKmsKeyIdResponse setKmsKeyId(SetKmsKeyIdRequest request) throws JdcloudSdkException {
+        return new SetKmsKeyIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除印章 [MFA enabled]
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteStampResponse deleteStamp(DeleteStampRequest request) throws JdcloudSdkException {
+        return new DeleteStampExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取印章列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeStampListResponse describeStampList(DescribeStampListRequest request) throws JdcloudSdkException {
+        return new DescribeStampListExecutor().client(this).execute(request);
     }
 
     /**
@@ -238,33 +364,6 @@ public class CloudsignClient extends JdcloudClient {
     }
 
     /**
-     * 多证据链存证接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SaveMultiEvidenceResponse saveMultiEvidence(SaveMultiEvidenceRequest request) throws JdcloudSdkException {
-        return new SaveMultiEvidenceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 合同签章四种方式：
-1. 合同文件 + 印章文件：contractContent + stampContent
-2. 合同文件 + 印章ID：contractContent + stampId
-3. 模板ID + 印章文件：templateId + stampContent
-4. 模板ID + 印章ID：templateId + stampId
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SignContractResponse signContract(SignContractRequest request) throws JdcloudSdkException {
-        return new SignContractExecutor().client(this).execute(request);
-    }
-
-    /**
      * 单证据链取证接口
      *
      * @param request
@@ -289,30 +388,6 @@ public class CloudsignClient extends JdcloudClient {
     }
 
     /**
-     * 1. 下载合同模板
-2. 多个合同id用逗号分隔
- [MFA enabled]
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DownloadTemplatesResponse downloadTemplates(DownloadTemplatesRequest request) throws JdcloudSdkException {
-        return new DownloadTemplatesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 验签已签章合同
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public VerifyContractResponse verifyContract(VerifyContractRequest request) throws JdcloudSdkException {
-        return new VerifyContractExecutor().client(this).execute(request);
-    }
-
-    /**
      * 上传合同模板
      *
      * @param request
@@ -321,17 +396,6 @@ public class CloudsignClient extends JdcloudClient {
      */
     public UploadTemplateResponse uploadTemplate(UploadTemplateRequest request) throws JdcloudSdkException {
         return new UploadTemplateExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除合同模板 [MFA enabled]
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteTemplateResponse deleteTemplate(DeleteTemplateRequest request) throws JdcloudSdkException {
-        return new DeleteTemplateExecutor().client(this).execute(request);
     }
 
     /**
@@ -346,17 +410,6 @@ public class CloudsignClient extends JdcloudClient {
     }
 
     /**
-     * 删除已签章的合同 [MFA enabled]
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteContractResponse deleteContract(DeleteContractRequest request) throws JdcloudSdkException {
-        return new DeleteContractExecutor().client(this).execute(request);
-    }
-
-    /**
      * 禁用合同存管
      *
      * @param request
@@ -368,36 +421,25 @@ public class CloudsignClient extends JdcloudClient {
     }
 
     /**
-     * 签章系统加密密钥 [MFA enabled]
+     * 获取存证报告接口
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public SetKmsKeyIdResponse setKmsKeyId(SetKmsKeyIdRequest request) throws JdcloudSdkException {
-        return new SetKmsKeyIdExecutor().client(this).execute(request);
+    public GetSaveReportResponse getSaveReport(GetSaveReportRequest request) throws JdcloudSdkException {
+        return new GetSaveReportExecutor().client(this).execute(request);
     }
 
     /**
-     * 删除印章 [MFA enabled]
+     * 编辑印章 [MFA enabled]
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteStampResponse deleteStamp(DeleteStampRequest request) throws JdcloudSdkException {
-        return new DeleteStampExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取印章列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeStampListResponse describeStampList(DescribeStampListRequest request) throws JdcloudSdkException {
-        return new DescribeStampListExecutor().client(this).execute(request);
+    public EditStampResponse editStamp(EditStampRequest request) throws JdcloudSdkException {
+        return new EditStampExecutor().client(this).execute(request);
     }
 
 
