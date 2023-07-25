@@ -55,6 +55,9 @@ import com.jdcloud.sdk.service.vpc.client.ModifyNetworkAclRulesExecutor;
 import com.jdcloud.sdk.service.vpc.model.DeleteNetworkAclRequest;
 import com.jdcloud.sdk.service.vpc.model.DeleteNetworkAclResponse;
 import com.jdcloud.sdk.service.vpc.client.DeleteNetworkAclExecutor;
+import com.jdcloud.sdk.service.vpc.model.DisassociateElasticIpsRequest;
+import com.jdcloud.sdk.service.vpc.model.DisassociateElasticIpsResponse;
+import com.jdcloud.sdk.service.vpc.client.DisassociateElasticIpsExecutor;
 import com.jdcloud.sdk.service.vpc.model.DeleteSubnetRequest;
 import com.jdcloud.sdk.service.vpc.model.DeleteSubnetResponse;
 import com.jdcloud.sdk.service.vpc.client.DeleteSubnetExecutor;
@@ -64,6 +67,9 @@ import com.jdcloud.sdk.service.vpc.client.DescribeSubnetsExecutor;
 import com.jdcloud.sdk.service.vpc.model.RemoveBandwidthPackageIPRequest;
 import com.jdcloud.sdk.service.vpc.model.RemoveBandwidthPackageIPResponse;
 import com.jdcloud.sdk.service.vpc.client.RemoveBandwidthPackageIPExecutor;
+import com.jdcloud.sdk.service.vpc.model.AssociateElasticIpsRequest;
+import com.jdcloud.sdk.service.vpc.model.AssociateElasticIpsResponse;
+import com.jdcloud.sdk.service.vpc.client.AssociateElasticIpsExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeNetworkInterfacesRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeNetworkInterfacesResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeNetworkInterfacesExecutor;
@@ -76,12 +82,18 @@ import com.jdcloud.sdk.service.vpc.client.RemoveNetworkSecurityGroupRulesExecuto
 import com.jdcloud.sdk.service.vpc.model.ModifyNetworkSecurityGroupRequest;
 import com.jdcloud.sdk.service.vpc.model.ModifyNetworkSecurityGroupResponse;
 import com.jdcloud.sdk.service.vpc.client.ModifyNetworkSecurityGroupExecutor;
+import com.jdcloud.sdk.service.vpc.model.DescribeNatGatewayRequest;
+import com.jdcloud.sdk.service.vpc.model.DescribeNatGatewayResponse;
+import com.jdcloud.sdk.service.vpc.client.DescribeNatGatewayExecutor;
 import com.jdcloud.sdk.service.vpc.model.AddNetworkSecurityGroupRulesRequest;
 import com.jdcloud.sdk.service.vpc.model.AddNetworkSecurityGroupRulesResponse;
 import com.jdcloud.sdk.service.vpc.client.AddNetworkSecurityGroupRulesExecutor;
 import com.jdcloud.sdk.service.vpc.model.CreateNetworkAclRequest;
 import com.jdcloud.sdk.service.vpc.model.CreateNetworkAclResponse;
 import com.jdcloud.sdk.service.vpc.client.CreateNetworkAclExecutor;
+import com.jdcloud.sdk.service.vpc.model.StartNatGatewayRequest;
+import com.jdcloud.sdk.service.vpc.model.StartNatGatewayResponse;
+import com.jdcloud.sdk.service.vpc.client.StartNatGatewayExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeQuotaRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeQuotaResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeQuotaExecutor;
@@ -130,9 +142,15 @@ import com.jdcloud.sdk.service.vpc.client.DisassociateNetworkAclExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeEdgeIpProvidersRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeEdgeIpProvidersResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeEdgeIpProvidersExecutor;
+import com.jdcloud.sdk.service.vpc.model.DeleteNatGatewayRequest;
+import com.jdcloud.sdk.service.vpc.model.DeleteNatGatewayResponse;
+import com.jdcloud.sdk.service.vpc.client.DeleteNatGatewayExecutor;
 import com.jdcloud.sdk.service.vpc.model.RemoveNetworkAclRulesRequest;
 import com.jdcloud.sdk.service.vpc.model.RemoveNetworkAclRulesResponse;
 import com.jdcloud.sdk.service.vpc.client.RemoveNetworkAclRulesExecutor;
+import com.jdcloud.sdk.service.vpc.model.SetElasticIpStatusRequest;
+import com.jdcloud.sdk.service.vpc.model.SetElasticIpStatusResponse;
+import com.jdcloud.sdk.service.vpc.client.SetElasticIpStatusExecutor;
 import com.jdcloud.sdk.service.vpc.model.AssociateRouteTableRequest;
 import com.jdcloud.sdk.service.vpc.model.AssociateRouteTableResponse;
 import com.jdcloud.sdk.service.vpc.client.AssociateRouteTableExecutor;
@@ -142,6 +160,9 @@ import com.jdcloud.sdk.service.vpc.client.DescribeVpcsExecutor;
 import com.jdcloud.sdk.service.vpc.model.CreateNetworkSecurityGroupRequest;
 import com.jdcloud.sdk.service.vpc.model.CreateNetworkSecurityGroupResponse;
 import com.jdcloud.sdk.service.vpc.client.CreateNetworkSecurityGroupExecutor;
+import com.jdcloud.sdk.service.vpc.model.CreateNatGatewayRequest;
+import com.jdcloud.sdk.service.vpc.model.CreateNatGatewayResponse;
+import com.jdcloud.sdk.service.vpc.client.CreateNatGatewayExecutor;
 import com.jdcloud.sdk.service.vpc.model.CreateSubnetRequest;
 import com.jdcloud.sdk.service.vpc.model.CreateSubnetResponse;
 import com.jdcloud.sdk.service.vpc.client.CreateSubnetExecutor;
@@ -202,6 +223,9 @@ import com.jdcloud.sdk.service.vpc.client.CreateNetworkInterfaceExecutor;
 import com.jdcloud.sdk.service.vpc.model.CreateVpcRequest;
 import com.jdcloud.sdk.service.vpc.model.CreateVpcResponse;
 import com.jdcloud.sdk.service.vpc.client.CreateVpcExecutor;
+import com.jdcloud.sdk.service.vpc.model.DescribeNatGatewaysRequest;
+import com.jdcloud.sdk.service.vpc.model.DescribeNatGatewaysResponse;
+import com.jdcloud.sdk.service.vpc.client.DescribeNatGatewaysExecutor;
 import com.jdcloud.sdk.service.vpc.model.ModifyRouteTableRulesRequest;
 import com.jdcloud.sdk.service.vpc.model.ModifyRouteTableRulesResponse;
 import com.jdcloud.sdk.service.vpc.client.ModifyRouteTableRulesExecutor;
@@ -217,6 +241,9 @@ import com.jdcloud.sdk.service.vpc.client.UnassignSecondaryIpsExecutor;
 import com.jdcloud.sdk.service.vpc.model.ModifyRouteTableRequest;
 import com.jdcloud.sdk.service.vpc.model.ModifyRouteTableResponse;
 import com.jdcloud.sdk.service.vpc.client.ModifyRouteTableExecutor;
+import com.jdcloud.sdk.service.vpc.model.StopNatGatewayRequest;
+import com.jdcloud.sdk.service.vpc.model.StopNatGatewayResponse;
+import com.jdcloud.sdk.service.vpc.client.StopNatGatewayExecutor;
 import com.jdcloud.sdk.service.vpc.model.AssociateElasticIpRequest;
 import com.jdcloud.sdk.service.vpc.model.AssociateElasticIpResponse;
 import com.jdcloud.sdk.service.vpc.client.AssociateElasticIpExecutor;
@@ -238,6 +265,9 @@ import com.jdcloud.sdk.service.vpc.client.CreateElasticIpsExecutor;
 import com.jdcloud.sdk.service.vpc.model.DeleteNetworkInterfaceRequest;
 import com.jdcloud.sdk.service.vpc.model.DeleteNetworkInterfaceResponse;
 import com.jdcloud.sdk.service.vpc.client.DeleteNetworkInterfaceExecutor;
+import com.jdcloud.sdk.service.vpc.model.ModifyNatGatewayRequest;
+import com.jdcloud.sdk.service.vpc.model.ModifyNatGatewayResponse;
+import com.jdcloud.sdk.service.vpc.client.ModifyNatGatewayExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeNetworkAclRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeNetworkAclResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeNetworkAclExecutor;
@@ -252,7 +282,7 @@ public class VpcClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.9";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "vpc.jdcloud-api.com";
     public final static String ServiceName = "vpc";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -402,6 +432,17 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
+     * 解绑NAT网关上的公网IP接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisassociateElasticIpsResponse disassociateElasticIps(DisassociateElasticIpsRequest request) throws JdcloudSdkException {
+        return new DisassociateElasticIpsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除子网
      *
      * @param request
@@ -440,6 +481,17 @@ public class VpcClient extends JdcloudClient {
      */
     public RemoveBandwidthPackageIPResponse removeBandwidthPackageIP(RemoveBandwidthPackageIPRequest request) throws JdcloudSdkException {
         return new RemoveBandwidthPackageIPExecutor().client(this).execute(request);
+    }
+
+    /**
+     * NAT网关绑定已有公网IP接口，NAT网关支持绑定一个或多个公网IP。当NAT网关绑定多个公网IP时，同一内网服务器的业务流量出公网将随机选取其中一个公网IP。由于每个内网服务器的业务流量大小不同，可能出现NAT多公网IP流量不均的情况。建议将多公网IP加入同一个共享带宽包，避免因业务流量达到单公网IP带宽上限，影响业务转发。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssociateElasticIpsResponse associateElasticIps(AssociateElasticIpsRequest request) throws JdcloudSdkException {
+        return new AssociateElasticIpsExecutor().client(this).execute(request);
     }
 
     /**
@@ -487,6 +539,17 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
+     * 查询NAT网关信息详情接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeNatGatewayResponse describeNatGateway(DescribeNatGatewayRequest request) throws JdcloudSdkException {
+        return new DescribeNatGatewayExecutor().client(this).execute(request);
+    }
+
+    /**
      * 添加安全组规则
      *
      * @param request
@@ -506,6 +569,17 @@ public class VpcClient extends JdcloudClient {
      */
     public CreateNetworkAclResponse createNetworkAcl(CreateNetworkAclRequest request) throws JdcloudSdkException {
         return new CreateNetworkAclExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 启动NAT网关接口，欠费停服客户不允许启动
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StartNatGatewayResponse startNatGateway(StartNatGatewayRequest request) throws JdcloudSdkException {
+        return new StartNatGatewayExecutor().client(this).execute(request);
     }
 
     /**
@@ -716,6 +790,17 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
+     * 删除NAT网关接口，NAT网关需要先停止再删除
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteNatGatewayResponse deleteNatGateway(DeleteNatGatewayRequest request) throws JdcloudSdkException {
+        return new DeleteNatGatewayExecutor().client(this).execute(request);
+    }
+
+    /**
      * 移除networkAcl规则
      *
      * @param request
@@ -724,6 +809,17 @@ public class VpcClient extends JdcloudClient {
      */
     public RemoveNetworkAclRulesResponse removeNetworkAclRules(RemoveNetworkAclRulesRequest request) throws JdcloudSdkException {
         return new RemoveNetworkAclRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置NAT网关已绑定的公网IP状态接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetElasticIpStatusResponse setElasticIpStatus(SetElasticIpStatusRequest request) throws JdcloudSdkException {
+        return new SetElasticIpStatusExecutor().client(this).execute(request);
     }
 
     /**
@@ -757,6 +853,17 @@ public class VpcClient extends JdcloudClient {
      */
     public CreateNetworkSecurityGroupResponse createNetworkSecurityGroup(CreateNetworkSecurityGroupRequest request) throws JdcloudSdkException {
         return new CreateNetworkSecurityGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建NAT网关接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateNatGatewayResponse createNatGateway(CreateNatGatewayRequest request) throws JdcloudSdkException {
+        return new CreateNatGatewayExecutor().client(this).execute(request);
     }
 
     /**
@@ -1000,6 +1107,17 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
+     * 查询NAT网关列表接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeNatGatewaysResponse describeNatGateways(DescribeNatGatewaysRequest request) throws JdcloudSdkException {
+        return new DescribeNatGatewaysExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改路由表规则
      *
      * @param request
@@ -1052,6 +1170,17 @@ public class VpcClient extends JdcloudClient {
      */
     public ModifyRouteTableResponse modifyRouteTable(ModifyRouteTableRequest request) throws JdcloudSdkException {
         return new ModifyRouteTableExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止NAT网关接口，非欠费停服，由客户自己停止的NAT网关继续计费
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopNatGatewayResponse stopNatGateway(StopNatGatewayRequest request) throws JdcloudSdkException {
+        return new StopNatGatewayExecutor().client(this).execute(request);
     }
 
     /**
@@ -1129,6 +1258,17 @@ public class VpcClient extends JdcloudClient {
      */
     public DeleteNetworkInterfaceResponse deleteNetworkInterface(DeleteNetworkInterfaceRequest request) throws JdcloudSdkException {
         return new DeleteNetworkInterfaceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改NAT网关接口，修改网关规格或带宽需要先停止网关
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyNatGatewayResponse modifyNatGateway(ModifyNatGatewayRequest request) throws JdcloudSdkException {
+        return new ModifyNatGatewayExecutor().client(this).execute(request);
     }
 
     /**

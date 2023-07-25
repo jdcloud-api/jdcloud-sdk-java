@@ -63,11 +63,6 @@ public class NatGatewaySpec  implements java.io.Serializable {
     private String subnetId;
 
     /**
-     * NAT网关的可用区属性，即将废弃
-     */
-    
-    private List<AzIpSpec> azIpSpecs;
-    /**
      * NAT网关可用区
      */
     
@@ -172,25 +167,6 @@ public class NatGatewaySpec  implements java.io.Serializable {
      */
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
-    }
-
-
-    /**
-    * get NAT网关的可用区属性，即将废弃
-    *
-    * @return
-    */
-    public List<AzIpSpec> getAzIpSpecs() {
-        return azIpSpecs;
-    }
-
-    /**
-    * set NAT网关的可用区属性，即将废弃
-    *
-    * @param azIpSpecs
-    */
-    public void setAzIpSpecs(List<AzIpSpec> azIpSpecs) {
-        this.azIpSpecs = azIpSpecs;
     }
 
 
@@ -354,17 +330,6 @@ public class NatGatewaySpec  implements java.io.Serializable {
 
 
     /**
-    * set NAT网关的可用区属性，即将废弃
-    *
-    * @param azIpSpecs
-    */
-    public NatGatewaySpec azIpSpecs(List<AzIpSpec> azIpSpecs) {
-        this.azIpSpecs = azIpSpecs;
-        return this;
-    }
-
-
-    /**
     * set NAT网关可用区
     *
     * @param azs
@@ -430,18 +395,6 @@ public class NatGatewaySpec  implements java.io.Serializable {
     }
 
 
-
-    /**
-     * add item to NAT网关的可用区属性，即将废弃
-     *
-     * @param azIpSpec
-     */
-    public void addAzIpSpec(AzIpSpec azIpSpec) {
-        if (this.azIpSpecs == null) {
-            this.azIpSpecs = new ArrayList<>();
-        }
-        this.azIpSpecs.add(azIpSpec);
-    }
 
     /**
      * add item to NAT网关可用区

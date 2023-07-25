@@ -89,6 +89,11 @@ public class Vpc  implements java.io.Serializable {
      */
     private String vpcPolicyId;
 
+    /**
+     * 取值包括true、false，是否开启组播。
+     */
+    private Boolean enableMulticast;
+
 
 
     /**
@@ -300,6 +305,25 @@ public class Vpc  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 取值包括true、false，是否开启组播。
+     *
+     * @return
+     */
+    public Boolean getEnableMulticast() {
+        return enableMulticast;
+    }
+
+    /**
+     * set 取值包括true、false，是否开启组播。
+     *
+     * @param enableMulticast
+     */
+    public void setEnableMulticast(Boolean enableMulticast) {
+        this.enableMulticast = enableMulticast;
+    }
+
+
 
     /**
      * set Vpc的Id
@@ -418,6 +442,17 @@ public class Vpc  implements java.io.Serializable {
      */
     public Vpc vpcPolicyId(String vpcPolicyId) {
         this.vpcPolicyId = vpcPolicyId;
+        return this;
+    }
+
+
+    /**
+     * set 取值包括true、false，是否开启组播。
+     *
+     * @param enableMulticast
+     */
+    public Vpc enableMulticast(Boolean enableMulticast) {
+        this.enableMulticast = enableMulticast;
         return this;
     }
 

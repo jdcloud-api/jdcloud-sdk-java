@@ -43,11 +43,6 @@ public class ModifyNatGatewaySpec  implements java.io.Serializable {
     private String description;
 
     /**
-     * NAT网关公网IP的限速（单位：Mbps）。计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
-     */
-    private Integer bandwidthMbps;
-
-    /**
      * NAT网关规格，取值small（100万并发连接数）,medium(300万并发连接数),large（1000万并发连接数）
      */
     private String natGatewaySpec;
@@ -93,25 +88,6 @@ public class ModifyNatGatewaySpec  implements java.io.Serializable {
 
 
     /**
-     * get NAT网关公网IP的限速（单位：Mbps）。计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
-     *
-     * @return
-     */
-    public Integer getBandwidthMbps() {
-        return bandwidthMbps;
-    }
-
-    /**
-     * set NAT网关公网IP的限速（单位：Mbps）。计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
-     *
-     * @param bandwidthMbps
-     */
-    public void setBandwidthMbps(Integer bandwidthMbps) {
-        this.bandwidthMbps = bandwidthMbps;
-    }
-
-
-    /**
      * get NAT网关规格，取值small（100万并发连接数）,medium(300万并发连接数),large（1000万并发连接数）
      *
      * @return
@@ -149,17 +125,6 @@ public class ModifyNatGatewaySpec  implements java.io.Serializable {
      */
     public ModifyNatGatewaySpec description(String description) {
         this.description = description;
-        return this;
-    }
-
-
-    /**
-     * set NAT网关公网IP的限速（单位：Mbps）。计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
-     *
-     * @param bandwidthMbps
-     */
-    public ModifyNatGatewaySpec bandwidthMbps(Integer bandwidthMbps) {
-        this.bandwidthMbps = bandwidthMbps;
         return this;
     }
 

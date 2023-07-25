@@ -91,11 +91,6 @@ public class NatGateway  implements java.io.Serializable {
     
     private List<NatGatewayElasticIp> elasticIps;
     /**
-     * NAT网关的IP可用区属性,即将废弃
-     */
-    
-    private List<AzIp> azIp;
-    /**
      * NAT网关创建时间
      */
     private String createdTime;
@@ -322,25 +317,6 @@ public class NatGateway  implements java.io.Serializable {
 
 
     /**
-    * get NAT网关的IP可用区属性,即将废弃
-    *
-    * @return
-    */
-    public List<AzIp> getAzIp() {
-        return azIp;
-    }
-
-    /**
-    * set NAT网关的IP可用区属性,即将废弃
-    *
-    * @param azIp
-    */
-    public void setAzIp(List<AzIp> azIp) {
-        this.azIp = azIp;
-    }
-
-
-    /**
      * get NAT网关创建时间
      *
      * @return
@@ -520,17 +496,6 @@ public class NatGateway  implements java.io.Serializable {
 
 
     /**
-    * set NAT网关的IP可用区属性,即将废弃
-    *
-    * @param azIp
-    */
-    public NatGateway azIp(List<AzIp> azIp) {
-        this.azIp = azIp;
-        return this;
-    }
-
-
-    /**
      * set NAT网关创建时间
      *
      * @param createdTime
@@ -586,18 +551,6 @@ public class NatGateway  implements java.io.Serializable {
             this.elasticIps = new ArrayList<>();
         }
         this.elasticIps.add(elasticIp);
-    }
-
-    /**
-     * add item to NAT网关的IP可用区属性,即将废弃
-     *
-     * @param azIp
-     */
-    public void addAzIp(AzIp azIp) {
-        if (this.azIp == null) {
-            this.azIp = new ArrayList<>();
-        }
-        this.azIp.add(azIp);
     }
 
     /**

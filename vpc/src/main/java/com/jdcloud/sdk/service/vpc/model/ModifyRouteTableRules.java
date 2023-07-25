@@ -46,7 +46,7 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
     private Number priority;
 
     /**
-     * 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡(主网卡不允许)
+     * 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡(主网卡不允许), havip:高可用虚拟ip
      */
     private String nextHopType;
 
@@ -106,7 +106,7 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
 
 
     /**
-     * get 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡(主网卡不允许)
+     * get 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡(主网卡不允许), havip:高可用虚拟ip
      *
      * @return
      */
@@ -115,7 +115,7 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
     }
 
     /**
-     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡(主网卡不允许)
+     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡(主网卡不允许), havip:高可用虚拟ip
      *
      * @param nextHopType
      */
@@ -205,7 +205,7 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
 
 
     /**
-     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡(主网卡不允许)
+     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡(主网卡不允许), havip:高可用虚拟ip
      *
      * @param nextHopType
      */

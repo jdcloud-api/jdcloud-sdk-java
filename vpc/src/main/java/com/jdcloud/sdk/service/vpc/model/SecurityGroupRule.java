@@ -43,6 +43,16 @@ public class SecurityGroupRule  implements java.io.Serializable {
     private Number direction;
 
     /**
+     * 访问控制策略：allow:允许，deny：拒绝
+     */
+    private String ruleAction;
+
+    /**
+     * 规则匹配优先级，取值范围为[1,100]，优先级数字越小优先级越高
+     */
+    private Integer priority;
+
+    /**
      * 规则限定协议。300:All; 6:TCP; 17:UDP; 1:ICMP
      */
     private Number protocol;
@@ -119,6 +129,44 @@ public class SecurityGroupRule  implements java.io.Serializable {
      */
     public void setDirection(Number direction) {
         this.direction = direction;
+    }
+
+
+    /**
+     * get 访问控制策略：allow:允许，deny：拒绝
+     *
+     * @return
+     */
+    public String getRuleAction() {
+        return ruleAction;
+    }
+
+    /**
+     * set 访问控制策略：allow:允许，deny：拒绝
+     *
+     * @param ruleAction
+     */
+    public void setRuleAction(String ruleAction) {
+        this.ruleAction = ruleAction;
+    }
+
+
+    /**
+     * get 规则匹配优先级，取值范围为[1,100]，优先级数字越小优先级越高
+     *
+     * @return
+     */
+    public Integer getPriority() {
+        return priority;
+    }
+
+    /**
+     * set 规则匹配优先级，取值范围为[1,100]，优先级数字越小优先级越高
+     *
+     * @param priority
+     */
+    public void setPriority(Integer priority) {
+        this.priority = priority;
     }
 
 
@@ -293,6 +341,28 @@ public class SecurityGroupRule  implements java.io.Serializable {
      */
     public SecurityGroupRule direction(Number direction) {
         this.direction = direction;
+        return this;
+    }
+
+
+    /**
+     * set 访问控制策略：allow:允许，deny：拒绝
+     *
+     * @param ruleAction
+     */
+    public SecurityGroupRule ruleAction(String ruleAction) {
+        this.ruleAction = ruleAction;
+        return this;
+    }
+
+
+    /**
+     * set 规则匹配优先级，取值范围为[1,100]，优先级数字越小优先级越高
+     *
+     * @param priority
+     */
+    public SecurityGroupRule priority(Integer priority) {
+        this.priority = priority;
         return this;
     }
 

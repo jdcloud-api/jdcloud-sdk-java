@@ -33,19 +33,38 @@ public class ElasticIpInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 弹性公网IP的Ip地址
+     * 高可用虚拟ip绑定的公网id
+     */
+    private String elasticIpId;
+
+    /**
+     * 高可用虚拟ip绑定的公网ip
      */
     private String elasticIpAddress;
 
+
+
     /**
-     * 是否存在且属于jd池
+     * get 高可用虚拟ip绑定的公网id
+     *
+     * @return
      */
-    private Boolean isJDEip;
+    public String getElasticIpId() {
+        return elasticIpId;
+    }
 
+    /**
+     * set 高可用虚拟ip绑定的公网id
+     *
+     * @param elasticIpId
+     */
+    public void setElasticIpId(String elasticIpId) {
+        this.elasticIpId = elasticIpId;
+    }
 
 
     /**
-     * get 弹性公网IP的Ip地址
+     * get 高可用虚拟ip绑定的公网ip
      *
      * @return
      */
@@ -54,7 +73,7 @@ public class ElasticIpInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性公网IP的Ip地址
+     * set 高可用虚拟ip绑定的公网ip
      *
      * @param elasticIpAddress
      */
@@ -63,44 +82,25 @@ public class ElasticIpInfo  implements java.io.Serializable {
     }
 
 
-    /**
-     * get 是否存在且属于jd池
-     *
-     * @return
-     */
-    public Boolean getIsJDEip() {
-        return isJDEip;
-    }
 
     /**
-     * set 是否存在且属于jd池
+     * set 高可用虚拟ip绑定的公网id
      *
-     * @param isJDEip
+     * @param elasticIpId
      */
-    public void setIsJDEip(Boolean isJDEip) {
-        this.isJDEip = isJDEip;
-    }
-
-
-
-    /**
-     * set 弹性公网IP的Ip地址
-     *
-     * @param elasticIpAddress
-     */
-    public ElasticIpInfo elasticIpAddress(String elasticIpAddress) {
-        this.elasticIpAddress = elasticIpAddress;
+    public ElasticIpInfo elasticIpId(String elasticIpId) {
+        this.elasticIpId = elasticIpId;
         return this;
     }
 
 
     /**
-     * set 是否存在且属于jd池
+     * set 高可用虚拟ip绑定的公网ip
      *
-     * @param isJDEip
+     * @param elasticIpAddress
      */
-    public ElasticIpInfo isJDEip(Boolean isJDEip) {
-        this.isJDEip = isJDEip;
+    public ElasticIpInfo elasticIpAddress(String elasticIpAddress) {
+        this.elasticIpAddress = elasticIpAddress;
         return this;
     }
 

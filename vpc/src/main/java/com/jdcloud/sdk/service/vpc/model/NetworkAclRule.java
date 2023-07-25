@@ -83,7 +83,7 @@ public class NetworkAclRule  implements java.io.Serializable {
     private String createdTime;
 
     /**
-     * 规则类型，default：默认规则，custom：自定义规则
+     * 规则类型，default：默认规则，custom：自定义规则，service：服务创建规则
      */
     private String ruleType;
 
@@ -280,7 +280,7 @@ public class NetworkAclRule  implements java.io.Serializable {
 
 
     /**
-     * get 规则类型，default：默认规则，custom：自定义规则
+     * get 规则类型，default：默认规则，custom：自定义规则，service：服务创建规则
      *
      * @return
      */
@@ -289,7 +289,7 @@ public class NetworkAclRule  implements java.io.Serializable {
     }
 
     /**
-     * set 规则类型，default：默认规则，custom：自定义规则
+     * set 规则类型，default：默认规则，custom：自定义规则，service：服务创建规则
      *
      * @param ruleType
      */
@@ -410,7 +410,7 @@ public class NetworkAclRule  implements java.io.Serializable {
 
 
     /**
-     * set 规则类型，default：默认规则，custom：自定义规则
+     * set 规则类型，default：默认规则，custom：自定义规则，service：服务创建规则
      *
      * @param ruleType
      */

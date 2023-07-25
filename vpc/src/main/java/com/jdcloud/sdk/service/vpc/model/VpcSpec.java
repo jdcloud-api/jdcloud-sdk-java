@@ -51,6 +51,11 @@ public class VpcSpec  implements java.io.Serializable {
     private String description;
 
     /**
+     * 取值包括true、false，默认为false，不开启组播。
+     */
+    private Boolean enableMulticast;
+
+    /**
      * VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
      */
     private String azType;
@@ -116,6 +121,25 @@ public class VpcSpec  implements java.io.Serializable {
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+
+    /**
+     * get 取值包括true、false，默认为false，不开启组播。
+     *
+     * @return
+     */
+    public Boolean getEnableMulticast() {
+        return enableMulticast;
+    }
+
+    /**
+     * set 取值包括true、false，默认为false，不开启组播。
+     *
+     * @param enableMulticast
+     */
+    public void setEnableMulticast(Boolean enableMulticast) {
+        this.enableMulticast = enableMulticast;
     }
 
 
@@ -187,6 +211,17 @@ public class VpcSpec  implements java.io.Serializable {
      */
     public VpcSpec description(String description) {
         this.description = description;
+        return this;
+    }
+
+
+    /**
+     * set 取值包括true、false，默认为false，不开启组播。
+     *
+     * @param enableMulticast
+     */
+    public VpcSpec enableMulticast(Boolean enableMulticast) {
+        this.enableMulticast = enableMulticast;
         return this;
     }
 
