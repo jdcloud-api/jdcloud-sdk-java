@@ -46,14 +46,24 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
     private Number protocol;
 
     /**
+     * 访问控制策略：allow:允许，deny：拒绝
+     */
+    private String ruleAction;
+
+    /**
+     * 规则匹配优先级，取值范围为[1,100]，优先级数字越小优先级越高
+     */
+    private Number priority;
+
+    /**
      * 安全组规则的起始端口。取值范围：1-65535
      */
-    private Integer fromPort;
+    private Number fromPort;
 
     /**
      * 安全组规则的终端口。取值范围：1-65535
      */
-    private Integer toPort;
+    private Number toPort;
 
     /**
      * 安全组规则前缀，取值范围：正确的CIDR
@@ -106,11 +116,49 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
 
 
     /**
+     * get 访问控制策略：allow:允许，deny：拒绝
+     *
+     * @return
+     */
+    public String getRuleAction() {
+        return ruleAction;
+    }
+
+    /**
+     * set 访问控制策略：allow:允许，deny：拒绝
+     *
+     * @param ruleAction
+     */
+    public void setRuleAction(String ruleAction) {
+        this.ruleAction = ruleAction;
+    }
+
+
+    /**
+     * get 规则匹配优先级，取值范围为[1,100]，优先级数字越小优先级越高
+     *
+     * @return
+     */
+    public Number getPriority() {
+        return priority;
+    }
+
+    /**
+     * set 规则匹配优先级，取值范围为[1,100]，优先级数字越小优先级越高
+     *
+     * @param priority
+     */
+    public void setPriority(Number priority) {
+        this.priority = priority;
+    }
+
+
+    /**
      * get 安全组规则的起始端口。取值范围：1-65535
      *
      * @return
      */
-    public Integer getFromPort() {
+    public Number getFromPort() {
         return fromPort;
     }
 
@@ -119,7 +167,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
      *
      * @param fromPort
      */
-    public void setFromPort(Integer fromPort) {
+    public void setFromPort(Number fromPort) {
         this.fromPort = fromPort;
     }
 
@@ -129,7 +177,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getToPort() {
+    public Number getToPort() {
         return toPort;
     }
 
@@ -138,7 +186,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
      *
      * @param toPort
      */
-    public void setToPort(Integer toPort) {
+    public void setToPort(Number toPort) {
         this.toPort = toPort;
     }
 
@@ -205,11 +253,33 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
 
 
     /**
+     * set 访问控制策略：allow:允许，deny：拒绝
+     *
+     * @param ruleAction
+     */
+    public ModifySecurityGroupRules ruleAction(String ruleAction) {
+        this.ruleAction = ruleAction;
+        return this;
+    }
+
+
+    /**
+     * set 规则匹配优先级，取值范围为[1,100]，优先级数字越小优先级越高
+     *
+     * @param priority
+     */
+    public ModifySecurityGroupRules priority(Number priority) {
+        this.priority = priority;
+        return this;
+    }
+
+
+    /**
      * set 安全组规则的起始端口。取值范围：1-65535
      *
      * @param fromPort
      */
-    public ModifySecurityGroupRules fromPort(Integer fromPort) {
+    public ModifySecurityGroupRules fromPort(Number fromPort) {
         this.fromPort = fromPort;
         return this;
     }
@@ -220,7 +290,7 @@ public class ModifySecurityGroupRules  implements java.io.Serializable {
      *
      * @param toPort
      */
-    public ModifySecurityGroupRules toPort(Integer toPort) {
+    public ModifySecurityGroupRules toPort(Number toPort) {
         this.toPort = toPort;
         return this;
     }

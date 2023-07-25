@@ -71,7 +71,7 @@ public class ElasticIp  implements java.io.Serializable {
     private String instanceId;
 
     /**
-     * 实例类型,取值为：compute、lb、container、pod、natgw
+     * 实例类型,取值为：compute、lb、container、pod、natgw、havip
      */
     private String instanceType;
 
@@ -256,7 +256,7 @@ public class ElasticIp  implements java.io.Serializable {
 
 
     /**
-     * get 实例类型,取值为：compute、lb、container、pod、natgw
+     * get 实例类型,取值为：compute、lb、container、pod、natgw、havip
      *
      * @return
      */
@@ -265,7 +265,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型,取值为：compute、lb、container、pod、natgw
+     * set 实例类型,取值为：compute、lb、container、pod、natgw、havip
      *
      * @param instanceType
      */
@@ -524,7 +524,7 @@ public class ElasticIp  implements java.io.Serializable {
 
 
     /**
-     * set 实例类型,取值为：compute、lb、container、pod、natgw
+     * set 实例类型,取值为：compute、lb、container、pod、natgw、havip
      *
      * @param instanceType
      */

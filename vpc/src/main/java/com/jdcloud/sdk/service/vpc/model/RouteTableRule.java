@@ -43,7 +43,7 @@ public class RouteTableRule  implements java.io.Serializable {
     private Number priority;
 
     /**
-     * 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡
+     * 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡, havip:高可用虚拟ip
      */
     private String nextHopType;
 
@@ -108,7 +108,7 @@ public class RouteTableRule  implements java.io.Serializable {
 
 
     /**
-     * get 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡
+     * get 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡, havip:高可用虚拟ip
      *
      * @return
      */
@@ -117,7 +117,7 @@ public class RouteTableRule  implements java.io.Serializable {
     }
 
     /**
-     * set 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡
+     * set 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡, havip:高可用虚拟ip
      *
      * @param nextHopType
      */
@@ -226,7 +226,7 @@ public class RouteTableRule  implements java.io.Serializable {
 
 
     /**
-     * set 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡
+     * set 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关, elastic_network_interface:弹性网卡, havip:高可用虚拟ip
      *
      * @param nextHopType
      */

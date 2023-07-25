@@ -33,12 +33,12 @@ public class Quota  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、natGateway、natGatewayFip
+     * 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、natGateway、natGatewayFip、trafficMirrorSession、trafficMirrorFilter、trafficMirrorFilterRule、trafficMirrorSource
      */
     private String type;
 
     /**
-     * vpc、elastic_ip、network_interface、natGateway为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId，natGatewayFip为natGatewayId
+     * vpc、elastic_ip、network_interface、natGateway、trafficMirrorSession、trafficMirrorFilter为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId，natGatewayFip为natGatewayId,trafficMirrorFilterRule设置为trafficMirrorFilterId,trafficMirrorSource设置为trafficMirrorSessionId
      */
     private String parentResourceId;
 
@@ -55,7 +55,7 @@ public class Quota  implements java.io.Serializable {
 
 
     /**
-     * get 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、natGateway、natGatewayFip
+     * get 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、natGateway、natGatewayFip、trafficMirrorSession、trafficMirrorFilter、trafficMirrorFilterRule、trafficMirrorSource
      *
      * @return
      */
@@ -64,7 +64,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、natGateway、natGatewayFip
+     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、natGateway、natGatewayFip、trafficMirrorSession、trafficMirrorFilter、trafficMirrorFilterRule、trafficMirrorSource
      *
      * @param type
      */
@@ -74,7 +74,7 @@ public class Quota  implements java.io.Serializable {
 
 
     /**
-     * get vpc、elastic_ip、network_interface、natGateway为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId，natGatewayFip为natGatewayId
+     * get vpc、elastic_ip、network_interface、natGateway、trafficMirrorSession、trafficMirrorFilter为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId，natGatewayFip为natGatewayId,trafficMirrorFilterRule设置为trafficMirrorFilterId,trafficMirrorSource设置为trafficMirrorSessionId
      *
      * @return
      */
@@ -83,7 +83,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set vpc、elastic_ip、network_interface、natGateway为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId，natGatewayFip为natGatewayId
+     * set vpc、elastic_ip、network_interface、natGateway、trafficMirrorSession、trafficMirrorFilter为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId，natGatewayFip为natGatewayId,trafficMirrorFilterRule设置为trafficMirrorFilterId,trafficMirrorSource设置为trafficMirrorSessionId
      *
      * @param parentResourceId
      */
@@ -132,7 +132,7 @@ public class Quota  implements java.io.Serializable {
 
 
     /**
-     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、natGateway、natGatewayFip
+     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、natGateway、natGatewayFip、trafficMirrorSession、trafficMirrorFilter、trafficMirrorFilterRule、trafficMirrorSource
      *
      * @param type
      */
@@ -143,7 +143,7 @@ public class Quota  implements java.io.Serializable {
 
 
     /**
-     * set vpc、elastic_ip、network_interface、natGateway为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId，natGatewayFip为natGatewayId
+     * set vpc、elastic_ip、network_interface、natGateway、trafficMirrorSession、trafficMirrorFilter为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId, network_interface_cidr为networkInterfaceId，natGatewayFip为natGatewayId,trafficMirrorFilterRule设置为trafficMirrorFilterId,trafficMirrorSource设置为trafficMirrorSessionId
      *
      * @param parentResourceId
      */

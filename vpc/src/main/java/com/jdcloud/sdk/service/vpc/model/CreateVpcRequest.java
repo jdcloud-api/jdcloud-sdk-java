@@ -52,6 +52,11 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
     private String description;
 
     /**
+     * 取值包括true、false，默认为false，不开启组播。
+     */
+    private Boolean enableMulticast;
+
+    /**
      * VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
      */
     private String azType;
@@ -124,6 +129,25 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+
+    /**
+     * get 取值包括true、false，默认为false，不开启组播。
+     *
+     * @return
+     */
+    public Boolean getEnableMulticast() {
+        return enableMulticast;
+    }
+
+    /**
+     * set 取值包括true、false，默认为false，不开启组播。
+     *
+     * @param enableMulticast
+     */
+    public void setEnableMulticast(Boolean enableMulticast) {
+        this.enableMulticast = enableMulticast;
     }
 
 
@@ -214,6 +238,17 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
      */
     public CreateVpcRequest description(String description) {
         this.description = description;
+        return this;
+    }
+
+
+    /**
+     * set 取值包括true、false，默认为false，不开启组播。
+     *
+     * @param enableMulticast
+     */
+    public CreateVpcRequest enableMulticast(Boolean enableMulticast) {
+        this.enableMulticast = enableMulticast;
         return this;
     }
 

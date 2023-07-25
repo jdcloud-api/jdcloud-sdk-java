@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.vpc.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -70,6 +72,16 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
      */
     private Integer ipMaskLen;
 
+    /**
+     * 域名后缀，不限制个数。总长度最长254个字符，仅支持字母，数字，中划线，下划线和点。
+     */
+    
+    private List<String> domainNames;
+    /**
+     * 域名服务器地址。最多支持5个IPv4地址，不同IPv4地址使用逗号分隔。如不输入或输入空数组，默认使用京东云默认DNS域名服务器地址。如不添加默认DNS域名服务器，可能会导致您无法访问京东云云上基础服务，请谨慎操作
+     */
+    
+    private List<String> domainNameServers;
     /**
      * 是否只预检此次请求。true：不会创建子网，只会对参数进行校验；false：正常的创建请求。默认为false。
      */
@@ -199,6 +211,44 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
+    * get 域名后缀，不限制个数。总长度最长254个字符，仅支持字母，数字，中划线，下划线和点。
+    *
+    * @return
+    */
+    public List<String> getDomainNames() {
+        return domainNames;
+    }
+
+    /**
+    * set 域名后缀，不限制个数。总长度最长254个字符，仅支持字母，数字，中划线，下划线和点。
+    *
+    * @param domainNames
+    */
+    public void setDomainNames(List<String> domainNames) {
+        this.domainNames = domainNames;
+    }
+
+
+    /**
+    * get 域名服务器地址。最多支持5个IPv4地址，不同IPv4地址使用逗号分隔。如不输入或输入空数组，默认使用京东云默认DNS域名服务器地址。如不添加默认DNS域名服务器，可能会导致您无法访问京东云云上基础服务，请谨慎操作
+    *
+    * @return
+    */
+    public List<String> getDomainNameServers() {
+        return domainNameServers;
+    }
+
+    /**
+    * set 域名服务器地址。最多支持5个IPv4地址，不同IPv4地址使用逗号分隔。如不输入或输入空数组，默认使用京东云默认DNS域名服务器地址。如不添加默认DNS域名服务器，可能会导致您无法访问京东云云上基础服务，请谨慎操作
+    *
+    * @param domainNameServers
+    */
+    public void setDomainNameServers(List<String> domainNameServers) {
+        this.domainNameServers = domainNameServers;
+    }
+
+
+    /**
      * get 是否只预检此次请求。true：不会创建子网，只会对参数进行校验；false：正常的创建请求。默认为false。
      *
      * @return
@@ -304,6 +354,28 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
+    * set 域名后缀，不限制个数。总长度最长254个字符，仅支持字母，数字，中划线，下划线和点。
+    *
+    * @param domainNames
+    */
+    public CreateSubnetRequest domainNames(List<String> domainNames) {
+        this.domainNames = domainNames;
+        return this;
+    }
+
+
+    /**
+    * set 域名服务器地址。最多支持5个IPv4地址，不同IPv4地址使用逗号分隔。如不输入或输入空数组，默认使用京东云默认DNS域名服务器地址。如不添加默认DNS域名服务器，可能会导致您无法访问京东云云上基础服务，请谨慎操作
+    *
+    * @param domainNameServers
+    */
+    public CreateSubnetRequest domainNameServers(List<String> domainNameServers) {
+        this.domainNameServers = domainNameServers;
+        return this;
+    }
+
+
+    /**
      * set 是否只预检此次请求。true：不会创建子网，只会对参数进行校验；false：正常的创建请求。默认为false。
      *
      * @param dryRun
@@ -325,4 +397,28 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
+    /**
+     * add item to 域名后缀，不限制个数。总长度最长254个字符，仅支持字母，数字，中划线，下划线和点。
+     *
+     * @param domainName
+     */
+    public void addDomainName(String domainName) {
+        if (this.domainNames == null) {
+            this.domainNames = new ArrayList<>();
+        }
+        this.domainNames.add(domainName);
+    }
+
+    /**
+     * add item to 域名服务器地址。最多支持5个IPv4地址，不同IPv4地址使用逗号分隔。如不输入或输入空数组，默认使用京东云默认DNS域名服务器地址。如不添加默认DNS域名服务器，可能会导致您无法访问京东云云上基础服务，请谨慎操作
+     *
+     * @param domainNameServer
+     */
+    public void addDomainNameServer(String domainNameServer) {
+        if (this.domainNameServers == null) {
+            this.domainNameServers = new ArrayList<>();
+        }
+        this.domainNameServers.add(domainNameServer);
+    }
 }
