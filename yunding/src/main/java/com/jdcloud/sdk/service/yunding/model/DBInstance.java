@@ -26,9 +26,7 @@ package com.jdcloud.sdk.service.yunding.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.rds.model.BackupSynchronicityAbstract;
 import com.jdcloud.sdk.service.charge.model.Charge;
-import com.jdcloud.sdk.service.rds.model.Tag;
 
 /**
  * dBInstance

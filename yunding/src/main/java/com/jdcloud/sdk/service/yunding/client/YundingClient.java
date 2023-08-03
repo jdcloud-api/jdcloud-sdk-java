@@ -88,6 +88,9 @@ import com.jdcloud.sdk.service.yunding.client.ModifyRdsWhiteListExecutor;
 import com.jdcloud.sdk.service.yunding.model.CreateRdsDatabaseRequest;
 import com.jdcloud.sdk.service.yunding.model.CreateRdsDatabaseResponse;
 import com.jdcloud.sdk.service.yunding.client.CreateRdsDatabaseExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeMetricDataRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeMetricDataResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeMetricDataExecutor;
 import com.jdcloud.sdk.service.yunding.model.GrantRdsPrivilegeRequest;
 import com.jdcloud.sdk.service.yunding.model.GrantRdsPrivilegeResponse;
 import com.jdcloud.sdk.service.yunding.client.GrantRdsPrivilegeExecutor;
@@ -103,6 +106,9 @@ import com.jdcloud.sdk.service.yunding.client.DescribeSubnetExecutor;
 import com.jdcloud.sdk.service.yunding.model.DetachNetworkInterfaceRequest;
 import com.jdcloud.sdk.service.yunding.model.DetachNetworkInterfaceResponse;
 import com.jdcloud.sdk.service.yunding.client.DetachNetworkInterfaceExecutor;
+import com.jdcloud.sdk.service.yunding.model.BatchDescribeMetricDataRequest;
+import com.jdcloud.sdk.service.yunding.model.BatchDescribeMetricDataResponse;
+import com.jdcloud.sdk.service.yunding.client.BatchDescribeMetricDataExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsInstancesRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsInstancesResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeRdsInstancesExecutor;
@@ -118,12 +124,18 @@ import com.jdcloud.sdk.service.yunding.client.DescribeVmInstanceExecutor;
 import com.jdcloud.sdk.service.yunding.model.CreateRdsAccountRequest;
 import com.jdcloud.sdk.service.yunding.model.CreateRdsAccountResponse;
 import com.jdcloud.sdk.service.yunding.client.CreateRdsAccountExecutor;
+import com.jdcloud.sdk.service.yunding.model.LastDownsampleRequest;
+import com.jdcloud.sdk.service.yunding.model.LastDownsampleResponse;
+import com.jdcloud.sdk.service.yunding.client.LastDownsampleExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsWhiteListRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsWhiteListResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeRdsWhiteListExecutor;
 import com.jdcloud.sdk.service.yunding.model.DeleteRdsAccountRequest;
 import com.jdcloud.sdk.service.yunding.model.DeleteRdsAccountResponse;
 import com.jdcloud.sdk.service.yunding.client.DeleteRdsAccountExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeServicesRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeServicesResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeServicesExecutor;
 
 /**
  * yundingClient
@@ -132,7 +144,7 @@ public class YundingClient extends JdcloudClient {
 
     public final static String ApiVersion = "v2";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.9";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "yunding.jdcloud-api.com";
     public final static String ServiceName = "yunding";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -390,6 +402,17 @@ public class YundingClient extends JdcloudClient {
     }
 
     /**
+     * 查看某资源单个监控项数据，metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;，可以使用接口&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;describeMetrics&lt;/a&gt;：查询产品线可用的metric列表。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeMetricDataResponse describeMetricData(DescribeMetricDataRequest request) throws JdcloudSdkException {
+        return new DescribeMetricDataExecutor().client(this).execute(request);
+    }
+
+    /**
      * 授予账号的数据库访问权限，即该账号对数据库拥有什么权限。一个账号可以对多个数据库具有访问权限。&lt;br&gt;为便于管理，RDS对权限进行了归类，目前提供以下两种权限&lt;br&gt;- ro：只读权限，用户只能读取数据库中的数据，不能进行创建、插入、删除、更改等操作。&lt;br&gt;- rw：读写权限，用户可以对数据库进行增删改查等操作
      *
      * @param request
@@ -448,6 +471,17 @@ public class YundingClient extends JdcloudClient {
     }
 
     /**
+     * 查看某资源多个监控项数据，metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;，可以使用接口&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;describeMetrics&lt;/a&gt;：查询产品线可用的metric列表。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public BatchDescribeMetricDataResponse batchDescribeMetricData(BatchDescribeMetricDataRequest request) throws JdcloudSdkException {
+        return new BatchDescribeMetricDataExecutor().client(this).execute(request);
+    }
+
+    /**
      * 批量查询云数据库实例列表信息&lt;br&gt;此接口支持分页查询，默认每页20条。
      *
      * @param request
@@ -503,6 +537,17 @@ public class YundingClient extends JdcloudClient {
     }
 
     /**
+     * 根据不同的聚合方式将metric的数据聚合为一个点。downAggrType：last(最后一个点)、max(最大值)、min(最小值)、avg(平均值)。该接口返回值为上报metric的原始值，没有做单位转换。metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public LastDownsampleResponse lastDownsample(LastDownsampleRequest request) throws JdcloudSdkException {
+        return new LastDownsampleExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查看RDS实例当前白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
      *
      * @param request
@@ -522,6 +567,17 @@ public class YundingClient extends JdcloudClient {
      */
     public DeleteRdsAccountResponse deleteRdsAccount(DeleteRdsAccountRequest request) throws JdcloudSdkException {
         return new DeleteRdsAccountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询监控图可用的产品线列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeServicesResponse describeServices(DescribeServicesRequest request) throws JdcloudSdkException {
+        return new DescribeServicesExecutor().client(this).execute(request);
     }
 
 

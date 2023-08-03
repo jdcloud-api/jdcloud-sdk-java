@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.yunding.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.rds.model.AccountPrivilege;
+import com.jdcloud.sdk.service.yunding.model.AccountPrivilege;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
