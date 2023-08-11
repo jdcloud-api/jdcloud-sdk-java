@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>starshield</artifactId>
-  <version>0.0.11</version>
+  <version>0.0.12</version>
   <packaging>jar</packaging>
   <name>starshield</name>
   <url>http://www.jdcloud.com</url>
