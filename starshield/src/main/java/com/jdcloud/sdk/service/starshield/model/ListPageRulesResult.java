@@ -41,6 +41,21 @@ public class ListPageRulesResult extends JdcloudResult implements java.io.Serial
      */
     
     private List<PageRule> dataList;
+    /**
+     * 当前页记录数量
+     */
+    private Integer currentCount;
+
+    /**
+     * 总记录数量
+     */
+    private Integer totalCount;
+
+    /**
+     * 总页数
+     */
+    private Integer totalPage;
+
 
 
     /**
@@ -62,6 +77,63 @@ public class ListPageRulesResult extends JdcloudResult implements java.io.Serial
     }
 
 
+    /**
+     * get 当前页记录数量
+     *
+     * @return
+     */
+    public Integer getCurrentCount() {
+        return currentCount;
+    }
+
+    /**
+     * set 当前页记录数量
+     *
+     * @param currentCount
+     */
+    public void setCurrentCount(Integer currentCount) {
+        this.currentCount = currentCount;
+    }
+
+
+    /**
+     * get 总记录数量
+     *
+     * @return
+     */
+    public Integer getTotalCount() {
+        return totalCount;
+    }
+
+    /**
+     * set 总记录数量
+     *
+     * @param totalCount
+     */
+    public void setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+    }
+
+
+    /**
+     * get 总页数
+     *
+     * @return
+     */
+    public Integer getTotalPage() {
+        return totalPage;
+    }
+
+    /**
+     * set 总页数
+     *
+     * @param totalPage
+     */
+    public void setTotalPage(Integer totalPage) {
+        this.totalPage = totalPage;
+    }
+
+
 
     /**
     * set dataList
@@ -70,6 +142,39 @@ public class ListPageRulesResult extends JdcloudResult implements java.io.Serial
     */
     public ListPageRulesResult dataList(List<PageRule> dataList) {
         this.dataList = dataList;
+        return this;
+    }
+
+
+    /**
+     * set 当前页记录数量
+     *
+     * @param currentCount
+     */
+    public ListPageRulesResult currentCount(Integer currentCount) {
+        this.currentCount = currentCount;
+        return this;
+    }
+
+
+    /**
+     * set 总记录数量
+     *
+     * @param totalCount
+     */
+    public ListPageRulesResult totalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+
+
+    /**
+     * set 总页数
+     *
+     * @param totalPage
+     */
+    public ListPageRulesResult totalPage(Integer totalPage) {
+        this.totalPage = totalPage;
         return this;
     }
 

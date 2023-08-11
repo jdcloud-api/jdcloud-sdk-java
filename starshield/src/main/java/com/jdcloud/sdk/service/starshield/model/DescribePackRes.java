@@ -48,17 +48,17 @@ public class DescribePackRes  implements java.io.Serializable {
     private Long flowLimit;
 
     /**
-     * 可用域名数
+     * 可添加域名总数
      */
     private Integer availableZoneNum;
 
     /**
-     * cdn加速流量
+     * 业务带宽
      */
     private Integer cdnSpeedTraffic;
 
     /**
-     * DDoS保底防护
+     * DDoS攻击防护（L4）
      */
     private Integer ddosBaseProtect;
 
@@ -113,7 +113,7 @@ public class DescribePackRes  implements java.io.Serializable {
     private Integer specialCertNum;
 
     /**
-     * 是否支持TrueCLientIp
+     * 是否支持True-Client-IP标头
      */
     private Boolean trueClientIp;
 
@@ -158,7 +158,7 @@ public class DescribePackRes  implements java.io.Serializable {
     private Boolean urlPrefetch;
 
     /**
-     * 页面规则数量
+     * 自定义页面规则
      */
     private Integer pageRuleNum;
 
@@ -188,7 +188,7 @@ public class DescribePackRes  implements java.io.Serializable {
     private Boolean customNameServer;
 
     /**
-     * 是否支持通用证书
+     * 是否支持免费通用证书
      */
     private Boolean generalCert;
 
@@ -233,7 +233,7 @@ public class DescribePackRes  implements java.io.Serializable {
     private Boolean builtInPredefinedRule;
 
     /**
-     * 防火墙规则数量
+     * WAF自定义规则
      */
     private Integer firewallRuleNum;
 
@@ -241,6 +241,61 @@ public class DescribePackRes  implements java.io.Serializable {
      * 是否支持防火墙正则表达式规则
      */
     private Boolean firewalRegularRule;
+
+    /**
+     * 单域名解析记录数量上限
+     */
+    private Integer availableDnsRecordNum;
+
+    /**
+     * 域名接入方式 1-&gt;CNAME 2-&gt;NS 3-&gt;IP(Spectrum) 逗号拼接(1,2)
+     */
+    private String zoneAccessType;
+
+    /**
+     * 速率限制Ratelimit数量 0-&gt;不支持 大于0-&gt;N条
+     */
+    private Integer rateLimit;
+
+    /**
+     * 日志推送服务 False-&gt;不支持 True-&gt;支持
+     */
+    private Boolean logPush;
+
+    /**
+     * 支持的协议类型 1-&gt;HTTP 2-&gt;HTTPS 3-&gt;HTTP2 4-&gt;HTTP3 5-&gt;TCP 逗号拼接(1,2)
+     */
+    private String protocol;
+
+    /**
+     * 应用攻击防护 False-&gt;不支持 True-&gt;支持
+     */
+    private Boolean appAttackProtection;
+
+    /**
+     * CC攻击标准防护 False-&gt;不支持 True-&gt;自动防护
+     */
+    private Boolean ccAttackStandardProtection;
+
+    /**
+     * CC攻击高级防护 False-&gt;不支持 True-&gt;BOT+Rate Limiting
+     */
+    private Boolean ccAttackAdvancedProtection;
+
+    /**
+     * 技术支持 1-&gt;客服工单 2-&gt;产品技术专家 逗号拼接(1,2)
+     */
+    private String technicalSupport;
+
+    /**
+     * 域名扩展包 False-&gt;不支持 True-&gt;支持
+     */
+    private Boolean zoneExtPack;
+
+    /**
+     * Websocket False-&gt;不支持 True-&gt;支持
+     */
+    private Boolean websocket;
 
 
 
@@ -302,7 +357,7 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
-     * get 可用域名数
+     * get 可添加域名总数
      *
      * @return
      */
@@ -311,7 +366,7 @@ public class DescribePackRes  implements java.io.Serializable {
     }
 
     /**
-     * set 可用域名数
+     * set 可添加域名总数
      *
      * @param availableZoneNum
      */
@@ -321,7 +376,7 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
-     * get cdn加速流量
+     * get 业务带宽
      *
      * @return
      */
@@ -330,7 +385,7 @@ public class DescribePackRes  implements java.io.Serializable {
     }
 
     /**
-     * set cdn加速流量
+     * set 业务带宽
      *
      * @param cdnSpeedTraffic
      */
@@ -340,7 +395,7 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
-     * get DDoS保底防护
+     * get DDoS攻击防护（L4）
      *
      * @return
      */
@@ -349,7 +404,7 @@ public class DescribePackRes  implements java.io.Serializable {
     }
 
     /**
-     * set DDoS保底防护
+     * set DDoS攻击防护（L4）
      *
      * @param ddosBaseProtect
      */
@@ -549,7 +604,7 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
-     * get 是否支持TrueCLientIp
+     * get 是否支持True-Client-IP标头
      *
      * @return
      */
@@ -558,7 +613,7 @@ public class DescribePackRes  implements java.io.Serializable {
     }
 
     /**
-     * set 是否支持TrueCLientIp
+     * set 是否支持True-Client-IP标头
      *
      * @param trueClientIp
      */
@@ -720,7 +775,7 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
-     * get 页面规则数量
+     * get 自定义页面规则
      *
      * @return
      */
@@ -729,7 +784,7 @@ public class DescribePackRes  implements java.io.Serializable {
     }
 
     /**
-     * set 页面规则数量
+     * set 自定义页面规则
      *
      * @param pageRuleNum
      */
@@ -834,7 +889,7 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
-     * get 是否支持通用证书
+     * get 是否支持免费通用证书
      *
      * @return
      */
@@ -843,7 +898,7 @@ public class DescribePackRes  implements java.io.Serializable {
     }
 
     /**
-     * set 是否支持通用证书
+     * set 是否支持免费通用证书
      *
      * @param generalCert
      */
@@ -1005,7 +1060,7 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
-     * get 防火墙规则数量
+     * get WAF自定义规则
      *
      * @return
      */
@@ -1014,7 +1069,7 @@ public class DescribePackRes  implements java.io.Serializable {
     }
 
     /**
-     * set 防火墙规则数量
+     * set WAF自定义规则
      *
      * @param firewallRuleNum
      */
@@ -1039,6 +1094,215 @@ public class DescribePackRes  implements java.io.Serializable {
      */
     public void setFirewalRegularRule(Boolean firewalRegularRule) {
         this.firewalRegularRule = firewalRegularRule;
+    }
+
+
+    /**
+     * get 单域名解析记录数量上限
+     *
+     * @return
+     */
+    public Integer getAvailableDnsRecordNum() {
+        return availableDnsRecordNum;
+    }
+
+    /**
+     * set 单域名解析记录数量上限
+     *
+     * @param availableDnsRecordNum
+     */
+    public void setAvailableDnsRecordNum(Integer availableDnsRecordNum) {
+        this.availableDnsRecordNum = availableDnsRecordNum;
+    }
+
+
+    /**
+     * get 域名接入方式 1-&gt;CNAME 2-&gt;NS 3-&gt;IP(Spectrum) 逗号拼接(1,2)
+     *
+     * @return
+     */
+    public String getZoneAccessType() {
+        return zoneAccessType;
+    }
+
+    /**
+     * set 域名接入方式 1-&gt;CNAME 2-&gt;NS 3-&gt;IP(Spectrum) 逗号拼接(1,2)
+     *
+     * @param zoneAccessType
+     */
+    public void setZoneAccessType(String zoneAccessType) {
+        this.zoneAccessType = zoneAccessType;
+    }
+
+
+    /**
+     * get 速率限制Ratelimit数量 0-&gt;不支持 大于0-&gt;N条
+     *
+     * @return
+     */
+    public Integer getRateLimit() {
+        return rateLimit;
+    }
+
+    /**
+     * set 速率限制Ratelimit数量 0-&gt;不支持 大于0-&gt;N条
+     *
+     * @param rateLimit
+     */
+    public void setRateLimit(Integer rateLimit) {
+        this.rateLimit = rateLimit;
+    }
+
+
+    /**
+     * get 日志推送服务 False-&gt;不支持 True-&gt;支持
+     *
+     * @return
+     */
+    public Boolean getLogPush() {
+        return logPush;
+    }
+
+    /**
+     * set 日志推送服务 False-&gt;不支持 True-&gt;支持
+     *
+     * @param logPush
+     */
+    public void setLogPush(Boolean logPush) {
+        this.logPush = logPush;
+    }
+
+
+    /**
+     * get 支持的协议类型 1-&gt;HTTP 2-&gt;HTTPS 3-&gt;HTTP2 4-&gt;HTTP3 5-&gt;TCP 逗号拼接(1,2)
+     *
+     * @return
+     */
+    public String getProtocol() {
+        return protocol;
+    }
+
+    /**
+     * set 支持的协议类型 1-&gt;HTTP 2-&gt;HTTPS 3-&gt;HTTP2 4-&gt;HTTP3 5-&gt;TCP 逗号拼接(1,2)
+     *
+     * @param protocol
+     */
+    public void setProtocol(String protocol) {
+        this.protocol = protocol;
+    }
+
+
+    /**
+     * get 应用攻击防护 False-&gt;不支持 True-&gt;支持
+     *
+     * @return
+     */
+    public Boolean getAppAttackProtection() {
+        return appAttackProtection;
+    }
+
+    /**
+     * set 应用攻击防护 False-&gt;不支持 True-&gt;支持
+     *
+     * @param appAttackProtection
+     */
+    public void setAppAttackProtection(Boolean appAttackProtection) {
+        this.appAttackProtection = appAttackProtection;
+    }
+
+
+    /**
+     * get CC攻击标准防护 False-&gt;不支持 True-&gt;自动防护
+     *
+     * @return
+     */
+    public Boolean getCcAttackStandardProtection() {
+        return ccAttackStandardProtection;
+    }
+
+    /**
+     * set CC攻击标准防护 False-&gt;不支持 True-&gt;自动防护
+     *
+     * @param ccAttackStandardProtection
+     */
+    public void setCcAttackStandardProtection(Boolean ccAttackStandardProtection) {
+        this.ccAttackStandardProtection = ccAttackStandardProtection;
+    }
+
+
+    /**
+     * get CC攻击高级防护 False-&gt;不支持 True-&gt;BOT+Rate Limiting
+     *
+     * @return
+     */
+    public Boolean getCcAttackAdvancedProtection() {
+        return ccAttackAdvancedProtection;
+    }
+
+    /**
+     * set CC攻击高级防护 False-&gt;不支持 True-&gt;BOT+Rate Limiting
+     *
+     * @param ccAttackAdvancedProtection
+     */
+    public void setCcAttackAdvancedProtection(Boolean ccAttackAdvancedProtection) {
+        this.ccAttackAdvancedProtection = ccAttackAdvancedProtection;
+    }
+
+
+    /**
+     * get 技术支持 1-&gt;客服工单 2-&gt;产品技术专家 逗号拼接(1,2)
+     *
+     * @return
+     */
+    public String getTechnicalSupport() {
+        return technicalSupport;
+    }
+
+    /**
+     * set 技术支持 1-&gt;客服工单 2-&gt;产品技术专家 逗号拼接(1,2)
+     *
+     * @param technicalSupport
+     */
+    public void setTechnicalSupport(String technicalSupport) {
+        this.technicalSupport = technicalSupport;
+    }
+
+
+    /**
+     * get 域名扩展包 False-&gt;不支持 True-&gt;支持
+     *
+     * @return
+     */
+    public Boolean getZoneExtPack() {
+        return zoneExtPack;
+    }
+
+    /**
+     * set 域名扩展包 False-&gt;不支持 True-&gt;支持
+     *
+     * @param zoneExtPack
+     */
+    public void setZoneExtPack(Boolean zoneExtPack) {
+        this.zoneExtPack = zoneExtPack;
+    }
+
+
+    /**
+     * get Websocket False-&gt;不支持 True-&gt;支持
+     *
+     * @return
+     */
+    public Boolean getWebsocket() {
+        return websocket;
+    }
+
+    /**
+     * set Websocket False-&gt;不支持 True-&gt;支持
+     *
+     * @param websocket
+     */
+    public void setWebsocket(Boolean websocket) {
+        this.websocket = websocket;
     }
 
 
@@ -1077,7 +1341,7 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
-     * set 可用域名数
+     * set 可添加域名总数
      *
      * @param availableZoneNum
      */
@@ -1088,7 +1352,7 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
-     * set cdn加速流量
+     * set 业务带宽
      *
      * @param cdnSpeedTraffic
      */
@@ -1099,7 +1363,7 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
-     * set DDoS保底防护
+     * set DDoS攻击防护（L4）
      *
      * @param ddosBaseProtect
      */
@@ -1220,7 +1484,7 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
-     * set 是否支持TrueCLientIp
+     * set 是否支持True-Client-IP标头
      *
      * @param trueClientIp
      */
@@ -1319,7 +1583,7 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
-     * set 页面规则数量
+     * set 自定义页面规则
      *
      * @param pageRuleNum
      */
@@ -1385,7 +1649,7 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
-     * set 是否支持通用证书
+     * set 是否支持免费通用证书
      *
      * @param generalCert
      */
@@ -1484,7 +1748,7 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
-     * set 防火墙规则数量
+     * set WAF自定义规则
      *
      * @param firewallRuleNum
      */
@@ -1501,6 +1765,127 @@ public class DescribePackRes  implements java.io.Serializable {
      */
     public DescribePackRes firewalRegularRule(Boolean firewalRegularRule) {
         this.firewalRegularRule = firewalRegularRule;
+        return this;
+    }
+
+
+    /**
+     * set 单域名解析记录数量上限
+     *
+     * @param availableDnsRecordNum
+     */
+    public DescribePackRes availableDnsRecordNum(Integer availableDnsRecordNum) {
+        this.availableDnsRecordNum = availableDnsRecordNum;
+        return this;
+    }
+
+
+    /**
+     * set 域名接入方式 1-&gt;CNAME 2-&gt;NS 3-&gt;IP(Spectrum) 逗号拼接(1,2)
+     *
+     * @param zoneAccessType
+     */
+    public DescribePackRes zoneAccessType(String zoneAccessType) {
+        this.zoneAccessType = zoneAccessType;
+        return this;
+    }
+
+
+    /**
+     * set 速率限制Ratelimit数量 0-&gt;不支持 大于0-&gt;N条
+     *
+     * @param rateLimit
+     */
+    public DescribePackRes rateLimit(Integer rateLimit) {
+        this.rateLimit = rateLimit;
+        return this;
+    }
+
+
+    /**
+     * set 日志推送服务 False-&gt;不支持 True-&gt;支持
+     *
+     * @param logPush
+     */
+    public DescribePackRes logPush(Boolean logPush) {
+        this.logPush = logPush;
+        return this;
+    }
+
+
+    /**
+     * set 支持的协议类型 1-&gt;HTTP 2-&gt;HTTPS 3-&gt;HTTP2 4-&gt;HTTP3 5-&gt;TCP 逗号拼接(1,2)
+     *
+     * @param protocol
+     */
+    public DescribePackRes protocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+
+
+    /**
+     * set 应用攻击防护 False-&gt;不支持 True-&gt;支持
+     *
+     * @param appAttackProtection
+     */
+    public DescribePackRes appAttackProtection(Boolean appAttackProtection) {
+        this.appAttackProtection = appAttackProtection;
+        return this;
+    }
+
+
+    /**
+     * set CC攻击标准防护 False-&gt;不支持 True-&gt;自动防护
+     *
+     * @param ccAttackStandardProtection
+     */
+    public DescribePackRes ccAttackStandardProtection(Boolean ccAttackStandardProtection) {
+        this.ccAttackStandardProtection = ccAttackStandardProtection;
+        return this;
+    }
+
+
+    /**
+     * set CC攻击高级防护 False-&gt;不支持 True-&gt;BOT+Rate Limiting
+     *
+     * @param ccAttackAdvancedProtection
+     */
+    public DescribePackRes ccAttackAdvancedProtection(Boolean ccAttackAdvancedProtection) {
+        this.ccAttackAdvancedProtection = ccAttackAdvancedProtection;
+        return this;
+    }
+
+
+    /**
+     * set 技术支持 1-&gt;客服工单 2-&gt;产品技术专家 逗号拼接(1,2)
+     *
+     * @param technicalSupport
+     */
+    public DescribePackRes technicalSupport(String technicalSupport) {
+        this.technicalSupport = technicalSupport;
+        return this;
+    }
+
+
+    /**
+     * set 域名扩展包 False-&gt;不支持 True-&gt;支持
+     *
+     * @param zoneExtPack
+     */
+    public DescribePackRes zoneExtPack(Boolean zoneExtPack) {
+        this.zoneExtPack = zoneExtPack;
+        return this;
+    }
+
+
+    /**
+     * set Websocket False-&gt;不支持 True-&gt;支持
+     *
+     * @param websocket
+     */
+    public DescribePackRes websocket(Boolean websocket) {
+        this.websocket = websocket;
         return this;
     }
 

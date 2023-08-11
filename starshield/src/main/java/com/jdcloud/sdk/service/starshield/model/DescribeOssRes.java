@@ -48,6 +48,16 @@ public class DescribeOssRes  implements java.io.Serializable {
     private String fileName;
 
     /**
+     * 数据集类型(0-默认 1-logpush)
+     */
+    private Integer datasetType;
+
+    /**
+     * 数据集事件(0-http事件 1-firewall事件)
+     */
+    private Integer event;
+
+    /**
      * 时间间隔类型(0-&gt;天 1-&gt;小时)
      */
     private Integer intervalType;
@@ -148,6 +158,44 @@ public class DescribeOssRes  implements java.io.Serializable {
      */
     public void setFileName(String fileName) {
         this.fileName = fileName;
+    }
+
+
+    /**
+     * get 数据集类型(0-默认 1-logpush)
+     *
+     * @return
+     */
+    public Integer getDatasetType() {
+        return datasetType;
+    }
+
+    /**
+     * set 数据集类型(0-默认 1-logpush)
+     *
+     * @param datasetType
+     */
+    public void setDatasetType(Integer datasetType) {
+        this.datasetType = datasetType;
+    }
+
+
+    /**
+     * get 数据集事件(0-http事件 1-firewall事件)
+     *
+     * @return
+     */
+    public Integer getEvent() {
+        return event;
+    }
+
+    /**
+     * set 数据集事件(0-http事件 1-firewall事件)
+     *
+     * @param event
+     */
+    public void setEvent(Integer event) {
+        this.event = event;
     }
 
 
@@ -352,6 +400,28 @@ public class DescribeOssRes  implements java.io.Serializable {
      */
     public DescribeOssRes fileName(String fileName) {
         this.fileName = fileName;
+        return this;
+    }
+
+
+    /**
+     * set 数据集类型(0-默认 1-logpush)
+     *
+     * @param datasetType
+     */
+    public DescribeOssRes datasetType(Integer datasetType) {
+        this.datasetType = datasetType;
+        return this;
+    }
+
+
+    /**
+     * set 数据集事件(0-http事件 1-firewall事件)
+     *
+     * @param event
+     */
+    public DescribeOssRes event(Integer event) {
+        this.event = event;
         return this;
     }
 

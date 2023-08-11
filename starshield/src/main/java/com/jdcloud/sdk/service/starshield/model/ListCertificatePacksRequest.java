@@ -40,6 +40,16 @@ public class ListCertificatePacksRequest extends JdcloudRequest implements java.
     private String status;
 
     /**
+     * 分页结果的页码
+     */
+    private Number page;
+
+    /**
+     * 每页的域数
+     */
+    private Number per_page;
+
+    /**
      * zone_identifier
      * Required:true
      */
@@ -64,6 +74,44 @@ public class ListCertificatePacksRequest extends JdcloudRequest implements java.
      */
     public void setStatus(String status) {
         this.status = status;
+    }
+
+
+    /**
+     * get 分页结果的页码
+     *
+     * @return
+     */
+    public Number getPage() {
+        return page;
+    }
+
+    /**
+     * set 分页结果的页码
+     *
+     * @param page
+     */
+    public void setPage(Number page) {
+        this.page = page;
+    }
+
+
+    /**
+     * get 每页的域数
+     *
+     * @return
+     */
+    public Number getPer_page() {
+        return per_page;
+    }
+
+    /**
+     * set 每页的域数
+     *
+     * @param per_page
+     */
+    public void setPer_page(Number per_page) {
+        this.per_page = per_page;
     }
 
 
@@ -94,6 +142,28 @@ public class ListCertificatePacksRequest extends JdcloudRequest implements java.
      */
     public ListCertificatePacksRequest status(String status) {
         this.status = status;
+        return this;
+    }
+
+
+    /**
+     * set 分页结果的页码
+     *
+     * @param page
+     */
+    public ListCertificatePacksRequest page(Number page) {
+        this.page = page;
+        return this;
+    }
+
+
+    /**
+     * set 每页的域数
+     *
+     * @param per_page
+     */
+    public ListCertificatePacksRequest per_page(Number per_page) {
+        this.per_page = per_page;
         return this;
     }
 

@@ -38,7 +38,7 @@ public class AnalyticsReportingFilter  implements java.io.Serializable {
      * 过滤条件的名称。有效值：
 HttpHost/URI/ResponseStatusCode/ClientDeviceType/
 ServedBy/CacheStatus/ClientHttpMethod/ResponseContentType/
-ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent
+ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent/RuleId
 
      */
     private String name;
@@ -59,7 +59,7 @@ ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent
      * get 过滤条件的名称。有效值：
 HttpHost/URI/ResponseStatusCode/ClientDeviceType/
 ServedBy/CacheStatus/ClientHttpMethod/ResponseContentType/
-ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent
+ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent/RuleId
 
      *
      * @return
@@ -72,7 +72,7 @@ ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent
      * set 过滤条件的名称。有效值：
 HttpHost/URI/ResponseStatusCode/ClientDeviceType/
 ServedBy/CacheStatus/ClientHttpMethod/ResponseContentType/
-ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent
+ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent/RuleId
 
      *
      * @param name
@@ -125,7 +125,7 @@ ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent
      * set 过滤条件的名称。有效值：
 HttpHost/URI/ResponseStatusCode/ClientDeviceType/
 ServedBy/CacheStatus/ClientHttpMethod/ResponseContentType/
-ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent
+ASN/IP/ClientHttpProtocol/FirewallSource/UserAgent/RuleId
 
      *
      * @param name
