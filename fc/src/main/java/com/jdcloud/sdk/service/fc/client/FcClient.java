@@ -34,15 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.fc.model.DescribeFunctionsRequest;
 import com.jdcloud.sdk.service.fc.model.DescribeFunctionsResponse;
 import com.jdcloud.sdk.service.fc.client.DescribeFunctionsExecutor;
-import com.jdcloud.sdk.service.fc.model.CheckFunctionRequest;
-import com.jdcloud.sdk.service.fc.model.CheckFunctionResponse;
-import com.jdcloud.sdk.service.fc.client.CheckFunctionExecutor;
 import com.jdcloud.sdk.service.fc.model.DeleteFunctionRequest;
 import com.jdcloud.sdk.service.fc.model.DeleteFunctionResponse;
 import com.jdcloud.sdk.service.fc.client.DeleteFunctionExecutor;
-import com.jdcloud.sdk.service.fc.model.InternalCreateFunctionRequest;
-import com.jdcloud.sdk.service.fc.model.InternalCreateFunctionResponse;
-import com.jdcloud.sdk.service.fc.client.InternalCreateFunctionExecutor;
 import com.jdcloud.sdk.service.fc.model.UpdateFunctionRequest;
 import com.jdcloud.sdk.service.fc.model.UpdateFunctionResponse;
 import com.jdcloud.sdk.service.fc.client.UpdateFunctionExecutor;
@@ -61,9 +55,6 @@ import com.jdcloud.sdk.service.fc.client.DescribeTriggerExecutor;
 import com.jdcloud.sdk.service.fc.model.DeleteTriggerRequest;
 import com.jdcloud.sdk.service.fc.model.DeleteTriggerResponse;
 import com.jdcloud.sdk.service.fc.client.DeleteTriggerExecutor;
-import com.jdcloud.sdk.service.fc.model.InternalUpdateFunctionRequest;
-import com.jdcloud.sdk.service.fc.model.InternalUpdateFunctionResponse;
-import com.jdcloud.sdk.service.fc.client.InternalUpdateFunctionExecutor;
 import com.jdcloud.sdk.service.fc.model.DescribeFunctionRequest;
 import com.jdcloud.sdk.service.fc.model.DescribeFunctionResponse;
 import com.jdcloud.sdk.service.fc.client.DescribeFunctionExecutor;
@@ -94,15 +85,9 @@ import com.jdcloud.sdk.service.fc.client.DescribeFunctionCodeExecutor;
 import com.jdcloud.sdk.service.fc.model.DeleteServiceRequest;
 import com.jdcloud.sdk.service.fc.model.DeleteServiceResponse;
 import com.jdcloud.sdk.service.fc.client.DeleteServiceExecutor;
-import com.jdcloud.sdk.service.fc.model.DescribeAllFunctionsRequest;
-import com.jdcloud.sdk.service.fc.model.DescribeAllFunctionsResponse;
-import com.jdcloud.sdk.service.fc.client.DescribeAllFunctionsExecutor;
 import com.jdcloud.sdk.service.fc.model.DescribeServicesRequest;
 import com.jdcloud.sdk.service.fc.model.DescribeServicesResponse;
 import com.jdcloud.sdk.service.fc.client.DescribeServicesExecutor;
-import com.jdcloud.sdk.service.fc.model.CheckServiceRequest;
-import com.jdcloud.sdk.service.fc.model.CheckServiceResponse;
-import com.jdcloud.sdk.service.fc.client.CheckServiceExecutor;
 
 /**
  * fcClient
@@ -167,20 +152,7 @@ public class FcClient extends JdcloudClient {
     }
 
     /**
-     * functionName 名称校验。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CheckFunctionResponse checkFunction(CheckFunctionRequest request) throws JdcloudSdkException {
-        return new CheckFunctionExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除function
-function 状态必须为 active、failed状态。 &lt;br&gt;
  [MFA enabled]
      *
      * @param request
@@ -189,18 +161,6 @@ function 状态必须为 active、failed状态。 &lt;br&gt;
      */
     public DeleteFunctionResponse deleteFunction(DeleteFunctionRequest request) throws JdcloudSdkException {
         return new DeleteFunctionExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 内部创建函数
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public InternalCreateFunctionResponse internalCreateFunction(InternalCreateFunctionRequest request) throws JdcloudSdkException {
-        return new InternalCreateFunctionExecutor().client(this).execute(request);
     }
 
     /**
@@ -281,18 +241,6 @@ function 状态必须为 active、failed状态。 &lt;br&gt;
      */
     public DeleteTriggerResponse deleteTrigger(DeleteTriggerRequest request) throws JdcloudSdkException {
         return new DeleteTriggerExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改 function
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public InternalUpdateFunctionResponse internalUpdateFunction(InternalUpdateFunctionRequest request) throws JdcloudSdkException {
-        return new InternalUpdateFunctionExecutor().client(this).execute(request);
     }
 
     /**
@@ -423,19 +371,6 @@ function 状态必须为 active、failed状态。 &lt;br&gt;
     }
 
     /**
-     * 批量查询 function 的详细信息&lt;br&gt;
-此接口支持分页查询，默认每页20条。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeAllFunctionsResponse describeAllFunctions(DescribeAllFunctionsRequest request) throws JdcloudSdkException {
-        return new DescribeAllFunctionsExecutor().client(this).execute(request);
-    }
-
-    /**
      * 批量查询 service 的详细信息&lt;br&gt;
 此接口支持分页查询，默认每页20条。
 
@@ -446,18 +381,6 @@ function 状态必须为 active、failed状态。 &lt;br&gt;
      */
     public DescribeServicesResponse describeServices(DescribeServicesRequest request) throws JdcloudSdkException {
         return new DescribeServicesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * serviceName 名称校验。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CheckServiceResponse checkService(CheckServiceRequest request) throws JdcloudSdkException {
-        return new CheckServiceExecutor().client(this).execute(request);
     }
 
 

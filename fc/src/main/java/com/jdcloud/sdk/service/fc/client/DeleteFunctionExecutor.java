@@ -30,7 +30,6 @@ import com.jdcloud.sdk.service.fc.model.DeleteFunctionResponse;
 
 /**
  * 删除function
-function 状态必须为 active、failed状态。 &lt;br&gt;
  [MFA enabled]
  */
 class DeleteFunctionExecutor extends JdcloudExecutor {

@@ -28,7 +28,6 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
  * 删除function
-function 状态必须为 active、failed状态。 &lt;br&gt;
  [MFA enabled]
  */
 public class DeleteFunctionResult extends JdcloudResult implements java.io.Serializable {
