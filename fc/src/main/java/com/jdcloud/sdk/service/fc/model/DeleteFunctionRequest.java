@@ -29,12 +29,16 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 删除function
-function 状态必须为 active、failed状态。 &lt;br&gt;
  [MFA enabled]
  */
 public class DeleteFunctionRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 触发器是否随函数删除
+     */
+    private Boolean deleteTrigger;
 
     /**
      * Region ID
@@ -57,6 +61,25 @@ public class DeleteFunctionRequest extends JdcloudRequest implements java.io.Ser
     @Required
     private String functionName;
 
+
+
+    /**
+     * get 触发器是否随函数删除
+     *
+     * @return
+     */
+    public Boolean getDeleteTrigger() {
+        return deleteTrigger;
+    }
+
+    /**
+     * set 触发器是否随函数删除
+     *
+     * @param deleteTrigger
+     */
+    public void setDeleteTrigger(Boolean deleteTrigger) {
+        this.deleteTrigger = deleteTrigger;
+    }
 
 
     /**
@@ -115,6 +138,17 @@ public class DeleteFunctionRequest extends JdcloudRequest implements java.io.Ser
         this.functionName = functionName;
     }
 
+
+
+    /**
+     * set 触发器是否随函数删除
+     *
+     * @param deleteTrigger
+     */
+    public DeleteFunctionRequest deleteTrigger(Boolean deleteTrigger) {
+        this.deleteTrigger = deleteTrigger;
+        return this;
+    }
 
 
     /**
