@@ -39,37 +39,40 @@ public class DescribeParameterGroupParametersResult extends JdcloudResult implem
     /**
      * parameters
      */
+    
     private List<ParameterGroupParameter> parameters;
 
 
     /**
-     * get parameters
-     *
-     * @return
-     */
+    * get parameters
+    *
+    * @return
+    */
     public List<ParameterGroupParameter> getParameters() {
         return parameters;
     }
 
     /**
-     * set parameters
-     *
-     * @param parameters
-     */
+    * set parameters
+    *
+    * @param parameters
+    */
     public void setParameters(List<ParameterGroupParameter> parameters) {
         this.parameters = parameters;
     }
 
 
+
     /**
-     * set parameters
-     *
-     * @param parameters
-     */
+    * set parameters
+    *
+    * @param parameters
+    */
     public DescribeParameterGroupParametersResult parameters(List<ParameterGroupParameter> parameters) {
         this.parameters = parameters;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeParameterGroupParametersResult extends JdcloudResult implem
         }
         this.parameters.add(parameter);
     }
-
 }

@@ -47,7 +47,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     private Integer threshold;
 
     /**
-     * 显示数据的页码，默认为1，取值范围：[-1,1000]。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * 显示数据的页码，默认为1，取值范围：[-1,1000]。pageNumber为-1时，返回所有数据页码；
      */
     private Integer pageNumber;
 
@@ -71,6 +71,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     private String instanceId;
 
 
+
     /**
      * get 查询类型，不同的查询类型按照相应的字段从高到低返回结果。&lt;br&gt;支持如下类型：&lt;br&gt;ExecutionCount：执行次数&lt;br&gt;LastRows：上次返回行数&lt;br&gt;ElapsedTime：平均执行时间&lt;br&gt;CPUTime：平均CPU时间&lt;br&gt;LogicalReads：平均逻辑读&lt;br&gt;LogicalWrites：平均逻辑写&lt;br&gt;PhysicalReads：平均物理读&lt;br&gt;
      *
@@ -88,6 +89,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     public void setQueryType(String queryType) {
         this.queryType = queryType;
     }
+
 
     /**
      * get 只返回查询条件大于等于threshold的记录，默认为0
@@ -107,8 +109,9 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
         this.threshold = threshold;
     }
 
+
     /**
-     * get 显示数据的页码，默认为1，取值范围：[-1,1000]。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * get 显示数据的页码，默认为1，取值范围：[-1,1000]。pageNumber为-1时，返回所有数据页码；
      *
      * @return
      */
@@ -117,13 +120,14 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,1000]。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * set 显示数据的页码，默认为1，取值范围：[-1,1000]。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数，用于查询列表的接口
@@ -143,6 +147,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -160,6 +165,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -180,6 +186,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set 查询类型，不同的查询类型按照相应的字段从高到低返回结果。&lt;br&gt;支持如下类型：&lt;br&gt;ExecutionCount：执行次数&lt;br&gt;LastRows：上次返回行数&lt;br&gt;ElapsedTime：平均执行时间&lt;br&gt;CPUTime：平均CPU时间&lt;br&gt;LogicalReads：平均逻辑读&lt;br&gt;LogicalWrites：平均逻辑写&lt;br&gt;PhysicalReads：平均物理读&lt;br&gt;
      *
@@ -189,6 +196,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
         this.queryType = queryType;
         return this;
     }
+
 
     /**
      * set 只返回查询条件大于等于threshold的记录，默认为0
@@ -200,8 +208,9 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,1000]。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * set 显示数据的页码，默认为1，取值范围：[-1,1000]。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
@@ -209,6 +218,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数，用于查询列表的接口
@@ -220,6 +230,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -229,6 +240,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

@@ -42,11 +42,12 @@ public class DatabasePrivilege  implements java.io.Serializable {
     /**
      * 账号对数据库所具有的细粒度权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      */
+    
     private List<String> privileges;
-
     /**
      * 数据库表的细粒度权限内容
      */
+    
     private List<TablePrivilege> tablePrivileges;
 
 
@@ -68,41 +69,44 @@ public class DatabasePrivilege  implements java.io.Serializable {
         this.dbName = dbName;
     }
 
+
     /**
-     * get 账号对数据库所具有的细粒度权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
-     *
-     * @return
-     */
+    * get 账号对数据库所具有的细粒度权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+    *
+    * @return
+    */
     public List<String> getPrivileges() {
         return privileges;
     }
 
     /**
-     * set 账号对数据库所具有的细粒度权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
-     *
-     * @param privileges
-     */
+    * set 账号对数据库所具有的细粒度权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+    *
+    * @param privileges
+    */
     public void setPrivileges(List<String> privileges) {
         this.privileges = privileges;
     }
 
+
     /**
-     * get 数据库表的细粒度权限内容
-     *
-     * @return
-     */
+    * get 数据库表的细粒度权限内容
+    *
+    * @return
+    */
     public List<TablePrivilege> getTablePrivileges() {
         return tablePrivileges;
     }
 
     /**
-     * set 数据库表的细粒度权限内容
-     *
-     * @param tablePrivileges
-     */
+    * set 数据库表的细粒度权限内容
+    *
+    * @param tablePrivileges
+    */
     public void setTablePrivileges(List<TablePrivilege> tablePrivileges) {
         this.tablePrivileges = tablePrivileges;
     }
+
 
 
     /**
@@ -115,25 +119,28 @@ public class DatabasePrivilege  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 账号对数据库所具有的细粒度权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
-     *
-     * @param privileges
-     */
+    * set 账号对数据库所具有的细粒度权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+    *
+    * @param privileges
+    */
     public DatabasePrivilege privileges(List<String> privileges) {
         this.privileges = privileges;
         return this;
     }
 
+
     /**
-     * set 数据库表的细粒度权限内容
-     *
-     * @param tablePrivileges
-     */
+    * set 数据库表的细粒度权限内容
+    *
+    * @param tablePrivileges
+    */
     public DatabasePrivilege tablePrivileges(List<TablePrivilege> tablePrivileges) {
         this.tablePrivileges = tablePrivileges;
         return this;
     }
+
 
 
     /**
@@ -159,5 +166,4 @@ public class DatabasePrivilege  implements java.io.Serializable {
         }
         this.tablePrivileges.add(tablePrivilege);
     }
-
 }

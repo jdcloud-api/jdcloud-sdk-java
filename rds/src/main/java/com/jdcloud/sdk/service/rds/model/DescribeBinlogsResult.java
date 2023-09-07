@@ -44,6 +44,7 @@ public class DescribeBinlogsResult extends JdcloudResult implements java.io.Seri
     /**
      * binlogs
      */
+    
     private List<Binlog> binlogs;
 
 
@@ -65,23 +66,25 @@ public class DescribeBinlogsResult extends JdcloudResult implements java.io.Seri
         this.totalCount = totalCount;
     }
 
+
     /**
-     * get binlogs
-     *
-     * @return
-     */
+    * get binlogs
+    *
+    * @return
+    */
     public List<Binlog> getBinlogs() {
         return binlogs;
     }
 
     /**
-     * set binlogs
-     *
-     * @param binlogs
-     */
+    * set binlogs
+    *
+    * @param binlogs
+    */
     public void setBinlogs(List<Binlog> binlogs) {
         this.binlogs = binlogs;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class DescribeBinlogsResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
-     * set binlogs
-     *
-     * @param binlogs
-     */
+    * set binlogs
+    *
+    * @param binlogs
+    */
     public DescribeBinlogsResult binlogs(List<Binlog> binlogs) {
         this.binlogs = binlogs;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeBinlogsResult extends JdcloudResult implements java.io.Seri
         }
         this.binlogs.add(binlog);
     }
-
 }

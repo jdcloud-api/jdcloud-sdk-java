@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看RDS读写分离代理列表&lt;br&gt;- 仅支持MySQL
+ * 查看RDS读写分离代理列表&lt;br&gt;- 仅支持MySQL、PostgreSQL
  */
 public class DescribeReadWriteProxiesResponse extends JdcloudResponse<DescribeReadWriteProxiesResult> implements java.io.Serializable {
 

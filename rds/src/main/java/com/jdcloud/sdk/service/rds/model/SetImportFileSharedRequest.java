@@ -63,6 +63,7 @@ public class SetImportFileSharedRequest extends JdcloudRequest implements java.i
     private String fileName;
 
 
+
     /**
      * get 文件是否共享&lt;br&gt;true:共享&lt;br&gt;false:不共享
      *
@@ -80,6 +81,7 @@ public class SetImportFileSharedRequest extends JdcloudRequest implements java.i
     public void setShared(String shared) {
         this.shared = shared;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -99,6 +101,7 @@ public class SetImportFileSharedRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -116,6 +119,7 @@ public class SetImportFileSharedRequest extends JdcloudRequest implements java.i
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 单库上云文件名
@@ -136,6 +140,7 @@ public class SetImportFileSharedRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 文件是否共享&lt;br&gt;true:共享&lt;br&gt;false:不共享
      *
@@ -145,6 +150,7 @@ public class SetImportFileSharedRequest extends JdcloudRequest implements java.i
         this.shared = shared;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -156,6 +162,7 @@ public class SetImportFileSharedRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -165,6 +172,7 @@ public class SetImportFileSharedRequest extends JdcloudRequest implements java.i
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 单库上云文件名

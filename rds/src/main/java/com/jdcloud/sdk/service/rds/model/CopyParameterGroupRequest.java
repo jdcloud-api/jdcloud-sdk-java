@@ -61,6 +61,7 @@ public class CopyParameterGroupRequest extends JdcloudRequest implements java.io
     private String regionId;
 
 
+
     /**
      * get 参数组ID
      *
@@ -78,6 +79,7 @@ public class CopyParameterGroupRequest extends JdcloudRequest implements java.io
     public void setParameterGroupId(String parameterGroupId) {
         this.parameterGroupId = parameterGroupId;
     }
+
 
     /**
      * get 参数组的名字
@@ -97,6 +99,7 @@ public class CopyParameterGroupRequest extends JdcloudRequest implements java.io
         this.parameterGroupName = parameterGroupName;
     }
 
+
     /**
      * get 参数组的描述
      *
@@ -114,6 +117,7 @@ public class CopyParameterGroupRequest extends JdcloudRequest implements java.io
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get Region ID
@@ -134,6 +138,7 @@ public class CopyParameterGroupRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 参数组ID
      *
@@ -143,6 +148,7 @@ public class CopyParameterGroupRequest extends JdcloudRequest implements java.io
         this.parameterGroupId = parameterGroupId;
         return this;
     }
+
 
     /**
      * set 参数组的名字
@@ -154,6 +160,7 @@ public class CopyParameterGroupRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 参数组的描述
      *
@@ -163,6 +170,7 @@ public class CopyParameterGroupRequest extends JdcloudRequest implements java.io
         this.description = description;
         return this;
     }
+
 
     /**
      * set Region ID

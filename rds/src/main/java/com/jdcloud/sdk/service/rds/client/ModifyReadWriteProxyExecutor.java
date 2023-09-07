@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.ModifyReadWriteProxyResponse;
 
 /**
- * 修改数据库读写分离代理服务配置&lt;br&gt;- 仅支持MySQL
+ * 修改数据库读写分离代理服务配置&lt;br&gt;- 仅支持MySQL、PostgreSQL
  */
 class ModifyReadWriteProxyExecutor extends JdcloudExecutor {
 

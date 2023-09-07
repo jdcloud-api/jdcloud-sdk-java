@@ -74,6 +74,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
     private Integer userSeeks;
 
 
+
     /**
      * get 数据库名
      *
@@ -91,6 +92,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
     public void setDb(String db) {
         this.db = db;
     }
+
 
     /**
      * get 表名
@@ -110,6 +112,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
         this.table = table;
     }
 
+
     /**
      * get 构成相等谓词的列的逗号分隔列表，谓词的形式如下：&lt;br&gt;table.column &#x3D;constant_value
      *
@@ -127,6 +130,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
     public void setEqualityColumns(String equalityColumns) {
         this.equalityColumns = equalityColumns;
     }
+
 
     /**
      * get 用于查询的涵盖列的逗号分隔列表,即创建索引的SQL语句中，Include后的字段
@@ -146,6 +150,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
         this.inequalityColumns = inequalityColumns;
     }
 
+
     /**
      * get 构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：&lt;br&gt;table.column &gt; constant_value&lt;br&gt;“&#x3D;”之外的任何比较运算符都表示不相等。
      *
@@ -163,6 +168,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
     public void setIncludedColumns(String includedColumns) {
         this.includedColumns = includedColumns;
     }
+
 
     /**
      * get 实现此缺失索引后，用户查询可能获得的平均百分比收益。 该值表示如果实现此缺失索引，则查询成本将按此百分比平均下降。
@@ -182,6 +188,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
         this.avgUserImpact = avgUserImpact;
     }
 
+
     /**
      * get 由可能使用了组中建议索引的用户查询所导致的扫描次数。
      *
@@ -199,6 +206,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
     public void setUserScans(Integer userScans) {
         this.userScans = userScans;
     }
+
 
     /**
      * get 由可能使用了组中建议索引的用户查询所导致的搜索次数。
@@ -219,6 +227,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
     }
 
 
+
     /**
      * set 数据库名
      *
@@ -228,6 +237,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
         this.db = db;
         return this;
     }
+
 
     /**
      * set 表名
@@ -239,6 +249,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 构成相等谓词的列的逗号分隔列表，谓词的形式如下：&lt;br&gt;table.column &#x3D;constant_value
      *
@@ -248,6 +259,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
         this.equalityColumns = equalityColumns;
         return this;
     }
+
 
     /**
      * set 用于查询的涵盖列的逗号分隔列表,即创建索引的SQL语句中，Include后的字段
@@ -259,6 +271,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：&lt;br&gt;table.column &gt; constant_value&lt;br&gt;“&#x3D;”之外的任何比较运算符都表示不相等。
      *
@@ -268,6 +281,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
         this.includedColumns = includedColumns;
         return this;
     }
+
 
     /**
      * set 实现此缺失索引后，用户查询可能获得的平均百分比收益。 该值表示如果实现此缺失索引，则查询成本将按此百分比平均下降。
@@ -279,6 +293,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 由可能使用了组中建议索引的用户查询所导致的扫描次数。
      *
@@ -288,6 +303,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
         this.userScans = userScans;
         return this;
     }
+
 
     /**
      * set 由可能使用了组中建议索引的用户查询所导致的搜索次数。

@@ -63,6 +63,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
     private String accountName;
 
 
+
     /**
      * get 新密码，密码的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
@@ -80,6 +81,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
     public void setAccountPassword(String accountPassword) {
         this.accountPassword = accountPassword;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -99,6 +101,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -116,6 +119,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 账号名，在同一个实例中账号名不能重复
@@ -136,6 +140,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 新密码，密码的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
@@ -145,6 +150,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
         this.accountPassword = accountPassword;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -156,6 +162,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -165,6 +172,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 账号名，在同一个实例中账号名不能重复

@@ -39,7 +39,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码；
      */
     private Integer pageNumber;
 
@@ -60,15 +60,22 @@ vpcId, 支持operator选项：eq
 instanceType, 支持operator选项：eq
 internalDomainName, 支持operator选项：eq
 publicDomainName, 支持operator选项：eq
+roInstanceProxyInternalDomainName, 支持operator选项：like
+readWriteProxyInternalDomainName, 支持operator选项：like
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 资源标签
      */
+    
     private List<TagFilter> tagFilters;
-
+    /**
+     * 资源组id
+     */
+    
+    private List<String> resourceGroupIds;
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
@@ -77,8 +84,9 @@ publicDomainName, 支持operator选项：eq
     private String regionId;
 
 
+
     /**
-     * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * get 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码；
      *
      * @return
      */
@@ -87,13 +95,14 @@ publicDomainName, 支持operator选项：eq
     }
 
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍
@@ -113,8 +122,9 @@ publicDomainName, 支持operator选项：eq
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get 过滤参数，多个过滤参数之间的关系为“与”(and)
+    * get 过滤参数，多个过滤参数之间的关系为“与”(and)
 支持以下属性的过滤：
 instanceId, 支持operator选项：eq
 instanceName, 支持operator选项：eq, like
@@ -125,16 +135,18 @@ vpcId, 支持operator选项：eq
 instanceType, 支持operator选项：eq
 internalDomainName, 支持operator选项：eq
 publicDomainName, 支持operator选项：eq
+roInstanceProxyInternalDomainName, 支持operator选项：like
+readWriteProxyInternalDomainName, 支持operator选项：like
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 过滤参数，多个过滤参数之间的关系为“与”(and)
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and)
 支持以下属性的过滤：
 instanceId, 支持operator选项：eq
 instanceName, 支持operator选项：eq, like
@@ -145,31 +157,54 @@ vpcId, 支持operator选项：eq
 instanceType, 支持operator选项：eq
 internalDomainName, 支持operator选项：eq
 publicDomainName, 支持operator选项：eq
+roInstanceProxyInternalDomainName, 支持operator选项：like
+readWriteProxyInternalDomainName, 支持operator选项：like
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
+
     /**
-     * get 资源标签
-     *
-     * @return
-     */
+    * get 资源标签
+    *
+    * @return
+    */
     public List<TagFilter> getTagFilters() {
         return tagFilters;
     }
 
     /**
-     * set 资源标签
-     *
-     * @param tagFilters
-     */
+    * set 资源标签
+    *
+    * @param tagFilters
+    */
     public void setTagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
     }
+
+
+    /**
+    * get 资源组id
+    *
+    * @return
+    */
+    public List<String> getResourceGroupIds() {
+        return resourceGroupIds;
+    }
+
+    /**
+    * set 资源组id
+    *
+    * @param resourceGroupIds
+    */
+    public void setResourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+    }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -190,8 +225,9 @@ publicDomainName, 支持operator选项：eq
     }
 
 
+
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
@@ -199,6 +235,7 @@ publicDomainName, 支持operator选项：eq
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍
@@ -210,8 +247,9 @@ publicDomainName, 支持operator选项：eq
         return this;
     }
 
+
     /**
-     * set 过滤参数，多个过滤参数之间的关系为“与”(and)
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and)
 支持以下属性的过滤：
 instanceId, 支持operator选项：eq
 instanceName, 支持operator选项：eq, like
@@ -222,24 +260,39 @@ vpcId, 支持operator选项：eq
 instanceType, 支持operator选项：eq
 internalDomainName, 支持operator选项：eq
 publicDomainName, 支持operator选项：eq
+roInstanceProxyInternalDomainName, 支持operator选项：like
+readWriteProxyInternalDomainName, 支持operator选项：like
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeInstancesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
-     * set 资源标签
-     *
-     * @param tagFilters
-     */
+    * set 资源标签
+    *
+    * @param tagFilters
+    */
     public DescribeInstancesRequest tagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
         return this;
     }
+
+
+    /**
+    * set 资源组id
+    *
+    * @param resourceGroupIds
+    */
+    public DescribeInstancesRequest resourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+        return this;
+    }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -250,6 +303,7 @@ publicDomainName, 支持operator选项：eq
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -264,6 +318,8 @@ vpcId, 支持operator选项：eq
 instanceType, 支持operator选项：eq
 internalDomainName, 支持operator选项：eq
 publicDomainName, 支持operator选项：eq
+roInstanceProxyInternalDomainName, 支持operator选项：like
+readWriteProxyInternalDomainName, 支持operator选项：like
 
      *
      * @param filter
@@ -287,4 +343,15 @@ publicDomainName, 支持operator选项：eq
         this.tagFilters.add(tagFilter);
     }
 
+    /**
+     * add item to 资源组id
+     *
+     * @param resourceGroupId
+     */
+    public void addResourceGroupId(String resourceGroupId) {
+        if (this.resourceGroupIds == null) {
+            this.resourceGroupIds = new ArrayList<>();
+        }
+        this.resourceGroupIds.add(resourceGroupId);
+    }
 }

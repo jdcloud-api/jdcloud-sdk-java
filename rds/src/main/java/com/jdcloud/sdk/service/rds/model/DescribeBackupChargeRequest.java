@@ -49,6 +49,7 @@ public class DescribeBackupChargeRequest extends JdcloudRequest implements java.
     private String regionId;
 
 
+
     /**
      * get 实例引擎类型
      *
@@ -66,6 +67,7 @@ public class DescribeBackupChargeRequest extends JdcloudRequest implements java.
     public void setEngine(String engine) {
         this.engine = engine;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -86,6 +88,7 @@ public class DescribeBackupChargeRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 实例引擎类型
      *
@@ -95,6 +98,7 @@ public class DescribeBackupChargeRequest extends JdcloudRequest implements java.
         this.engine = engine;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

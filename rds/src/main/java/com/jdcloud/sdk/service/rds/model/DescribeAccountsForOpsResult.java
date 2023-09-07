@@ -39,31 +39,33 @@ public class DescribeAccountsForOpsResult extends JdcloudResult implements java.
     /**
      * accounts
      */
+    
     private List<DBInstanceAccountForOps> accounts;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get accounts
-     *
-     * @return
-     */
+    * get accounts
+    *
+    * @return
+    */
     public List<DBInstanceAccountForOps> getAccounts() {
         return accounts;
     }
 
     /**
-     * set accounts
-     *
-     * @param accounts
-     */
+    * set accounts
+    *
+    * @param accounts
+    */
     public void setAccounts(List<DBInstanceAccountForOps> accounts) {
         this.accounts = accounts;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeAccountsForOpsResult extends JdcloudResult implements java.
     }
 
 
+
     /**
-     * set accounts
-     *
-     * @param accounts
-     */
+    * set accounts
+    *
+    * @param accounts
+    */
     public DescribeAccountsForOpsResult accounts(List<DBInstanceAccountForOps> accounts) {
         this.accounts = accounts;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeAccountsForOpsResult extends JdcloudResult implements java.
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeAccountsForOpsResult extends JdcloudResult implements java.
         }
         this.accounts.add(account);
     }
-
 }

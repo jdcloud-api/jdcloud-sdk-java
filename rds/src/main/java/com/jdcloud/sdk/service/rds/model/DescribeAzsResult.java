@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.rds.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.rds.model.AzInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -38,37 +39,75 @@ public class DescribeAzsResult extends JdcloudResult implements java.io.Serializ
     /**
      * azs
      */
+    
     private List<String> azs;
+    /**
+     * azInfos
+     */
+    
+    private List<AzInfo> azInfos;
 
 
     /**
-     * get azs
-     *
-     * @return
-     */
+    * get azs
+    *
+    * @return
+    */
     public List<String> getAzs() {
         return azs;
     }
 
     /**
-     * set azs
-     *
-     * @param azs
-     */
+    * set azs
+    *
+    * @param azs
+    */
     public void setAzs(List<String> azs) {
         this.azs = azs;
     }
 
 
     /**
-     * set azs
-     *
-     * @param azs
-     */
+    * get azInfos
+    *
+    * @return
+    */
+    public List<AzInfo> getAzInfos() {
+        return azInfos;
+    }
+
+    /**
+    * set azInfos
+    *
+    * @param azInfos
+    */
+    public void setAzInfos(List<AzInfo> azInfos) {
+        this.azInfos = azInfos;
+    }
+
+
+
+    /**
+    * set azs
+    *
+    * @param azs
+    */
     public DescribeAzsResult azs(List<String> azs) {
         this.azs = azs;
         return this;
     }
+
+
+    /**
+    * set azInfos
+    *
+    * @param azInfos
+    */
+    public DescribeAzsResult azInfos(List<AzInfo> azInfos) {
+        this.azInfos = azInfos;
+        return this;
+    }
+
 
 
     /**
@@ -83,4 +122,15 @@ public class DescribeAzsResult extends JdcloudResult implements java.io.Serializ
         this.azs.add(az);
     }
 
+    /**
+     * add item to azInfos
+     *
+     * @param azInfo
+     */
+    public void addAzInfo(AzInfo azInfo) {
+        if (this.azInfos == null) {
+            this.azInfos = new ArrayList<>();
+        }
+        this.azInfos.add(azInfo);
+    }
 }

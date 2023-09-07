@@ -39,37 +39,40 @@ public class DescribeImportFilesResult extends JdcloudResult implements java.io.
     /**
      * importFiles
      */
+    
     private List<ImportFile> importFiles;
 
 
     /**
-     * get importFiles
-     *
-     * @return
-     */
+    * get importFiles
+    *
+    * @return
+    */
     public List<ImportFile> getImportFiles() {
         return importFiles;
     }
 
     /**
-     * set importFiles
-     *
-     * @param importFiles
-     */
+    * set importFiles
+    *
+    * @param importFiles
+    */
     public void setImportFiles(List<ImportFile> importFiles) {
         this.importFiles = importFiles;
     }
 
 
+
     /**
-     * set importFiles
-     *
-     * @param importFiles
-     */
+    * set importFiles
+    *
+    * @param importFiles
+    */
     public DescribeImportFilesResult importFiles(List<ImportFile> importFiles) {
         this.importFiles = importFiles;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeImportFilesResult extends JdcloudResult implements java.io.
         }
         this.importFiles.add(importFile);
     }
-
 }

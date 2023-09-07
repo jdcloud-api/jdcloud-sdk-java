@@ -42,8 +42,8 @@ public class OrderableInstanceType  implements java.io.Serializable {
     /**
      * 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      */
+    
     private List<String> engineVersions;
-
     /**
      * 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      */
@@ -57,11 +57,12 @@ public class OrderableInstanceType  implements java.io.Serializable {
     /**
      * 支持售卖的可用区列表
      */
+    
     private List<OrderableAZ> orderableAZs;
-
     /**
      * 支持售卖的实例存储规格集合
      */
+    
     private List<OrderableStorageType> orderableStorageTypes;
 
 
@@ -83,23 +84,25 @@ public class OrderableInstanceType  implements java.io.Serializable {
         this.engine = engine;
     }
 
+
     /**
-     * get 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
-     *
-     * @return
-     */
+    * get 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+    *
+    * @return
+    */
     public List<String> getEngineVersions() {
         return engineVersions;
     }
 
     /**
-     * set 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
-     *
-     * @param engineVersions
-     */
+    * set 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+    *
+    * @param engineVersions
+    */
     public void setEngineVersions(List<String> engineVersions) {
         this.engineVersions = engineVersions;
     }
+
 
     /**
      * get 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -119,6 +122,7 @@ public class OrderableInstanceType  implements java.io.Serializable {
         this.engineStatus = engineStatus;
     }
 
+
     /**
      * get 地域ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
      *
@@ -137,41 +141,44 @@ public class OrderableInstanceType  implements java.io.Serializable {
         this.regionId = regionId;
     }
 
+
     /**
-     * get 支持售卖的可用区列表
-     *
-     * @return
-     */
+    * get 支持售卖的可用区列表
+    *
+    * @return
+    */
     public List<OrderableAZ> getOrderableAZs() {
         return orderableAZs;
     }
 
     /**
-     * set 支持售卖的可用区列表
-     *
-     * @param orderableAZs
-     */
+    * set 支持售卖的可用区列表
+    *
+    * @param orderableAZs
+    */
     public void setOrderableAZs(List<OrderableAZ> orderableAZs) {
         this.orderableAZs = orderableAZs;
     }
 
+
     /**
-     * get 支持售卖的实例存储规格集合
-     *
-     * @return
-     */
+    * get 支持售卖的实例存储规格集合
+    *
+    * @return
+    */
     public List<OrderableStorageType> getOrderableStorageTypes() {
         return orderableStorageTypes;
     }
 
     /**
-     * set 支持售卖的实例存储规格集合
-     *
-     * @param orderableStorageTypes
-     */
+    * set 支持售卖的实例存储规格集合
+    *
+    * @param orderableStorageTypes
+    */
     public void setOrderableStorageTypes(List<OrderableStorageType> orderableStorageTypes) {
         this.orderableStorageTypes = orderableStorageTypes;
     }
+
 
 
     /**
@@ -184,15 +191,17 @@ public class OrderableInstanceType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
-     *
-     * @param engineVersions
-     */
+    * set 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+    *
+    * @param engineVersions
+    */
     public OrderableInstanceType engineVersions(List<String> engineVersions) {
         this.engineVersions = engineVersions;
         return this;
     }
+
 
     /**
      * set 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -204,6 +213,7 @@ public class OrderableInstanceType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 地域ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
      *
@@ -214,25 +224,28 @@ public class OrderableInstanceType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 支持售卖的可用区列表
-     *
-     * @param orderableAZs
-     */
+    * set 支持售卖的可用区列表
+    *
+    * @param orderableAZs
+    */
     public OrderableInstanceType orderableAZs(List<OrderableAZ> orderableAZs) {
         this.orderableAZs = orderableAZs;
         return this;
     }
 
+
     /**
-     * set 支持售卖的实例存储规格集合
-     *
-     * @param orderableStorageTypes
-     */
+    * set 支持售卖的实例存储规格集合
+    *
+    * @param orderableStorageTypes
+    */
     public OrderableInstanceType orderableStorageTypes(List<OrderableStorageType> orderableStorageTypes) {
         this.orderableStorageTypes = orderableStorageTypes;
         return this;
     }
+
 
 
     /**
@@ -270,5 +283,4 @@ public class OrderableInstanceType  implements java.io.Serializable {
         }
         this.orderableStorageTypes.add(orderableStorageType);
     }
-
 }

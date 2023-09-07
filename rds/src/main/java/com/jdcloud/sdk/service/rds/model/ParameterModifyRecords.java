@@ -53,6 +53,7 @@ public class ParameterModifyRecords  implements java.io.Serializable {
     private String updateTime;
 
 
+
     /**
      * get 参数名称
      *
@@ -70,6 +71,7 @@ public class ParameterModifyRecords  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 修改前的参数值
@@ -89,6 +91,7 @@ public class ParameterModifyRecords  implements java.io.Serializable {
         this.preModify = preModify;
     }
 
+
     /**
      * get 修改后的参数值
      *
@@ -106,6 +109,7 @@ public class ParameterModifyRecords  implements java.io.Serializable {
     public void setPostModify(String postModify) {
         this.postModify = postModify;
     }
+
 
     /**
      * get 修改时间
@@ -126,6 +130,7 @@ public class ParameterModifyRecords  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 参数名称
      *
@@ -135,6 +140,7 @@ public class ParameterModifyRecords  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 修改前的参数值
@@ -146,6 +152,7 @@ public class ParameterModifyRecords  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改后的参数值
      *
@@ -155,6 +162,7 @@ public class ParameterModifyRecords  implements java.io.Serializable {
         this.postModify = postModify;
         return this;
     }
+
 
     /**
      * set 修改时间

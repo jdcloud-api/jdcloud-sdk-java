@@ -39,31 +39,33 @@ public class DescribeParameterModifyRecordsResult extends JdcloudResult implemen
     /**
      * records
      */
+    
     private List<ParameterModifyRecords> records;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get records
-     *
-     * @return
-     */
+    * get records
+    *
+    * @return
+    */
     public List<ParameterModifyRecords> getRecords() {
         return records;
     }
 
     /**
-     * set records
-     *
-     * @param records
-     */
+    * set records
+    *
+    * @param records
+    */
     public void setRecords(List<ParameterModifyRecords> records) {
         this.records = records;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeParameterModifyRecordsResult extends JdcloudResult implemen
     }
 
 
+
     /**
-     * set records
-     *
-     * @param records
-     */
+    * set records
+    *
+    * @param records
+    */
     public DescribeParameterModifyRecordsResult records(List<ParameterModifyRecords> records) {
         this.records = records;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeParameterModifyRecordsResult extends JdcloudResult implemen
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeParameterModifyRecordsResult extends JdcloudResult implemen
         }
         this.records.add(record);
     }
-
 }

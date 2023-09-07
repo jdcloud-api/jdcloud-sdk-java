@@ -64,6 +64,7 @@ public class CreateInstanceFromBackupRequest extends JdcloudRequest implements j
     private String regionId;
 
 
+
     /**
      * get 备份ID
      *
@@ -81,6 +82,7 @@ public class CreateInstanceFromBackupRequest extends JdcloudRequest implements j
     public void setBackupId(String backupId) {
         this.backupId = backupId;
     }
+
 
     /**
      * get 标识是创建什么类型的实例，例如MySQL，SQL Server等,具体可参见文档[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;**注意：备份来源实例的engine和要创建的实例的engine必须一致**
@@ -100,6 +102,7 @@ public class CreateInstanceFromBackupRequest extends JdcloudRequest implements j
         this.engine = engine;
     }
 
+
     /**
      * get 新建实例规格
      *
@@ -117,6 +120,7 @@ public class CreateInstanceFromBackupRequest extends JdcloudRequest implements j
     public void setInstanceSpec(RestoredNewDBInstanceSpec instanceSpec) {
         this.instanceSpec = instanceSpec;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -137,6 +141,7 @@ public class CreateInstanceFromBackupRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set 备份ID
      *
@@ -146,6 +151,7 @@ public class CreateInstanceFromBackupRequest extends JdcloudRequest implements j
         this.backupId = backupId;
         return this;
     }
+
 
     /**
      * set 标识是创建什么类型的实例，例如MySQL，SQL Server等,具体可参见文档[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;**注意：备份来源实例的engine和要创建的实例的engine必须一致**
@@ -157,6 +163,7 @@ public class CreateInstanceFromBackupRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 新建实例规格
      *
@@ -166,6 +173,7 @@ public class CreateInstanceFromBackupRequest extends JdcloudRequest implements j
         this.instanceSpec = instanceSpec;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

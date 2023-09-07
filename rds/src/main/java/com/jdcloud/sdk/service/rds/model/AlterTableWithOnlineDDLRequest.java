@@ -70,6 +70,7 @@ public class AlterTableWithOnlineDDLRequest extends JdcloudRequest implements ja
     private String instanceId;
 
 
+
     /**
      * get DDL命令修改的库名
      *
@@ -87,6 +88,7 @@ public class AlterTableWithOnlineDDLRequest extends JdcloudRequest implements ja
     public void setDatabase(String database) {
         this.database = database;
     }
+
 
     /**
      * get DDL命令修改的表名
@@ -106,6 +108,7 @@ public class AlterTableWithOnlineDDLRequest extends JdcloudRequest implements ja
         this.table = table;
     }
 
+
     /**
      * get 需要执行的的DDL命令
      *
@@ -124,6 +127,7 @@ public class AlterTableWithOnlineDDLRequest extends JdcloudRequest implements ja
         this.command = command;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -141,6 +145,7 @@ public class AlterTableWithOnlineDDLRequest extends JdcloudRequest implements ja
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -161,6 +166,7 @@ public class AlterTableWithOnlineDDLRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set DDL命令修改的库名
      *
@@ -170,6 +176,7 @@ public class AlterTableWithOnlineDDLRequest extends JdcloudRequest implements ja
         this.database = database;
         return this;
     }
+
 
     /**
      * set DDL命令修改的表名
@@ -181,6 +188,7 @@ public class AlterTableWithOnlineDDLRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 需要执行的的DDL命令
      *
@@ -191,6 +199,7 @@ public class AlterTableWithOnlineDDLRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -200,6 +209,7 @@ public class AlterTableWithOnlineDDLRequest extends JdcloudRequest implements ja
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

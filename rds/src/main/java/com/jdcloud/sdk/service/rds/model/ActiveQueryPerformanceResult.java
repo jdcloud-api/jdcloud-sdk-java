@@ -69,6 +69,7 @@ public class ActiveQueryPerformanceResult extends JdcloudResult implements java.
     private String status;
 
 
+
     /**
      * get sql语句
      *
@@ -86,6 +87,7 @@ public class ActiveQueryPerformanceResult extends JdcloudResult implements java.
     public void setSql(String sql) {
         this.sql = sql;
     }
+
 
     /**
      * get 开始执行时间，格式为YYYY-MM-DD hh:mm:ss
@@ -105,6 +107,7 @@ public class ActiveQueryPerformanceResult extends JdcloudResult implements java.
         this.startTime = startTime;
     }
 
+
     /**
      * get 执行时长，单位秒
      *
@@ -122,6 +125,7 @@ public class ActiveQueryPerformanceResult extends JdcloudResult implements java.
     public void setElapsedTime(Integer elapsedTime) {
         this.elapsedTime = elapsedTime;
     }
+
 
     /**
      * get 数据库名
@@ -141,6 +145,7 @@ public class ActiveQueryPerformanceResult extends JdcloudResult implements java.
         this.db = db;
     }
 
+
     /**
      * get 该SQL执行时的Session ID
      *
@@ -159,6 +164,7 @@ public class ActiveQueryPerformanceResult extends JdcloudResult implements java.
         this.sessionId = sessionId;
     }
 
+
     /**
      * get 执行该SQL的用户名
      *
@@ -176,6 +182,7 @@ public class ActiveQueryPerformanceResult extends JdcloudResult implements java.
     public void setUser(String user) {
         this.user = user;
     }
+
 
     /**
      * get SQL 的执行状态
@@ -196,6 +203,7 @@ public class ActiveQueryPerformanceResult extends JdcloudResult implements java.
     }
 
 
+
     /**
      * set sql语句
      *
@@ -205,6 +213,7 @@ public class ActiveQueryPerformanceResult extends JdcloudResult implements java.
         this.sql = sql;
         return this;
     }
+
 
     /**
      * set 开始执行时间，格式为YYYY-MM-DD hh:mm:ss
@@ -216,6 +225,7 @@ public class ActiveQueryPerformanceResult extends JdcloudResult implements java.
         return this;
     }
 
+
     /**
      * set 执行时长，单位秒
      *
@@ -225,6 +235,7 @@ public class ActiveQueryPerformanceResult extends JdcloudResult implements java.
         this.elapsedTime = elapsedTime;
         return this;
     }
+
 
     /**
      * set 数据库名
@@ -236,6 +247,7 @@ public class ActiveQueryPerformanceResult extends JdcloudResult implements java.
         return this;
     }
 
+
     /**
      * set 该SQL执行时的Session ID
      *
@@ -246,6 +258,7 @@ public class ActiveQueryPerformanceResult extends JdcloudResult implements java.
         return this;
     }
 
+
     /**
      * set 执行该SQL的用户名
      *
@@ -255,6 +268,7 @@ public class ActiveQueryPerformanceResult extends JdcloudResult implements java.
         this.user = user;
         return this;
     }
+
 
     /**
      * set SQL 的执行状态

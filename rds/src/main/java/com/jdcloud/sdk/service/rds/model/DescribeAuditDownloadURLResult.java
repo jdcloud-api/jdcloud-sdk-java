@@ -44,6 +44,7 @@ public class DescribeAuditDownloadURLResult extends JdcloudResult implements jav
     private String internalURL;
 
 
+
     /**
      * get 公网下载链接，若当前不可下载，则为空串
      *
@@ -61,6 +62,7 @@ public class DescribeAuditDownloadURLResult extends JdcloudResult implements jav
     public void setPublicURL(String publicURL) {
         this.publicURL = publicURL;
     }
+
 
     /**
      * get 内网下载链接，若当前不可下载，则为空串
@@ -81,6 +83,7 @@ public class DescribeAuditDownloadURLResult extends JdcloudResult implements jav
     }
 
 
+
     /**
      * set 公网下载链接，若当前不可下载，则为空串
      *
@@ -90,6 +93,7 @@ public class DescribeAuditDownloadURLResult extends JdcloudResult implements jav
         this.publicURL = publicURL;
         return this;
     }
+
 
     /**
      * set 内网下载链接，若当前不可下载，则为空串

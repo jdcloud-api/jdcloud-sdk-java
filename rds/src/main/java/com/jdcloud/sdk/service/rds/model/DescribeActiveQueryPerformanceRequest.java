@@ -45,7 +45,7 @@ public class DescribeActiveQueryPerformanceRequest extends JdcloudRequest implem
     private Integer threshold;
 
     /**
-     * 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码；
      */
     private Integer pageNumber;
 
@@ -69,6 +69,7 @@ public class DescribeActiveQueryPerformanceRequest extends JdcloudRequest implem
     private String instanceId;
 
 
+
     /**
      * get 需要查询的数据库名，多个数据库名之间用英文逗号分隔，默认所有数据库
      *
@@ -86,6 +87,7 @@ public class DescribeActiveQueryPerformanceRequest extends JdcloudRequest implem
     public void setDb(String db) {
         this.db = db;
     }
+
 
     /**
      * get 返回执行时间大于等于threshold的记录，默认10，单位秒
@@ -105,8 +107,9 @@ public class DescribeActiveQueryPerformanceRequest extends JdcloudRequest implem
         this.threshold = threshold;
     }
 
+
     /**
-     * get 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * get 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码；
      *
      * @return
      */
@@ -115,13 +118,14 @@ public class DescribeActiveQueryPerformanceRequest extends JdcloudRequest implem
     }
 
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数
@@ -141,6 +145,7 @@ public class DescribeActiveQueryPerformanceRequest extends JdcloudRequest implem
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -158,6 +163,7 @@ public class DescribeActiveQueryPerformanceRequest extends JdcloudRequest implem
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -178,6 +184,7 @@ public class DescribeActiveQueryPerformanceRequest extends JdcloudRequest implem
     }
 
 
+
     /**
      * set 需要查询的数据库名，多个数据库名之间用英文逗号分隔，默认所有数据库
      *
@@ -187,6 +194,7 @@ public class DescribeActiveQueryPerformanceRequest extends JdcloudRequest implem
         this.db = db;
         return this;
     }
+
 
     /**
      * set 返回执行时间大于等于threshold的记录，默认10，单位秒
@@ -198,8 +206,9 @@ public class DescribeActiveQueryPerformanceRequest extends JdcloudRequest implem
         return this;
     }
 
+
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
@@ -207,6 +216,7 @@ public class DescribeActiveQueryPerformanceRequest extends JdcloudRequest implem
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数
@@ -218,6 +228,7 @@ public class DescribeActiveQueryPerformanceRequest extends JdcloudRequest implem
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -227,6 +238,7 @@ public class DescribeActiveQueryPerformanceRequest extends JdcloudRequest implem
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

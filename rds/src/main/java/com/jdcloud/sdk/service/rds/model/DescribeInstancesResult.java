@@ -39,31 +39,33 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     /**
      * dbInstances
      */
+    
     private List<DBInstance> dbInstances;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get dbInstances
-     *
-     * @return
-     */
+    * get dbInstances
+    *
+    * @return
+    */
     public List<DBInstance> getDbInstances() {
         return dbInstances;
     }
 
     /**
-     * set dbInstances
-     *
-     * @param dbInstances
-     */
+    * set dbInstances
+    *
+    * @param dbInstances
+    */
     public void setDbInstances(List<DBInstance> dbInstances) {
         this.dbInstances = dbInstances;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
-     * set dbInstances
-     *
-     * @param dbInstances
-     */
+    * set dbInstances
+    *
+    * @param dbInstances
+    */
     public DescribeInstancesResult dbInstances(List<DBInstance> dbInstances) {
         this.dbInstances = dbInstances;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
         }
         this.dbInstances.add(dbInstance);
     }
-
 }

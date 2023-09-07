@@ -56,6 +56,7 @@ public class ExchangeInstanceDnsRequest extends JdcloudRequest implements java.i
     private String instanceId;
 
 
+
     /**
      * get 要交换的实例ID
      *
@@ -74,6 +75,7 @@ public class ExchangeInstanceDnsRequest extends JdcloudRequest implements java.i
         this.targetInstanceId = targetInstanceId;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -91,6 +93,7 @@ public class ExchangeInstanceDnsRequest extends JdcloudRequest implements java.i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -111,6 +114,7 @@ public class ExchangeInstanceDnsRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 要交换的实例ID
      *
@@ -121,6 +125,7 @@ public class ExchangeInstanceDnsRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -130,6 +135,7 @@ public class ExchangeInstanceDnsRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

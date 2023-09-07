@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 开启读写分离代理服务的外网访问功能。开启后，用户可以通过 internet 连接读写分离代理服务&lt;br&gt;- 仅支持MySQL
+ * 开启读写分离代理服务的外网访问功能。开启后，用户可以通过 internet 连接读写分离代理服务&lt;br&gt;- 仅支持MySQL、PostgreSQL
  */
 public class EnableReadWriteProxyInternetAccessResult extends JdcloudResult implements java.io.Serializable {
 

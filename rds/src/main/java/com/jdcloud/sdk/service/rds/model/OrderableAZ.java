@@ -37,31 +37,33 @@ public class OrderableAZ  implements java.io.Serializable {
     /**
      * 可售卖的可用区ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
      */
+    
     private List<String> azId;
-
     /**
      * 可售卖的可用区状态，可能的返回值：0-售罄；1-可售卖
      */
     private Integer azStatus;
 
 
+
     /**
-     * get 可售卖的可用区ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
-     *
-     * @return
-     */
+    * get 可售卖的可用区ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
+    *
+    * @return
+    */
     public List<String> getAzId() {
         return azId;
     }
 
     /**
-     * set 可售卖的可用区ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
-     *
-     * @param azId
-     */
+    * set 可售卖的可用区ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
+    *
+    * @param azId
+    */
     public void setAzId(List<String> azId) {
         this.azId = azId;
     }
+
 
     /**
      * get 可售卖的可用区状态，可能的返回值：0-售罄；1-可售卖
@@ -82,15 +84,17 @@ public class OrderableAZ  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 可售卖的可用区ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
-     *
-     * @param azId
-     */
+    * set 可售卖的可用区ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
+    *
+    * @param azId
+    */
     public OrderableAZ azId(List<String> azId) {
         this.azId = azId;
         return this;
     }
+
 
     /**
      * set 可售卖的可用区状态，可能的返回值：0-售罄；1-可售卖
@@ -101,6 +105,7 @@ public class OrderableAZ  implements java.io.Serializable {
         this.azStatus = azStatus;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class OrderableAZ  implements java.io.Serializable {
         }
         this.azId.add(azId);
     }
-
 }

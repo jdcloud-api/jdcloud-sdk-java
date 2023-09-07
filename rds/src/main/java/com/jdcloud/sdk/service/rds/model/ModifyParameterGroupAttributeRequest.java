@@ -61,6 +61,7 @@ public class ModifyParameterGroupAttributeRequest extends JdcloudRequest impleme
     private String parameterGroupId;
 
 
+
     /**
      * get 参数组名称
      *
@@ -78,6 +79,7 @@ public class ModifyParameterGroupAttributeRequest extends JdcloudRequest impleme
     public void setParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
     }
+
 
     /**
      * get 参数组描述
@@ -97,6 +99,7 @@ public class ModifyParameterGroupAttributeRequest extends JdcloudRequest impleme
         this.description = description;
     }
 
+
     /**
      * get Region ID
      *
@@ -114,6 +117,7 @@ public class ModifyParameterGroupAttributeRequest extends JdcloudRequest impleme
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Parameter Group ID
@@ -134,6 +138,7 @@ public class ModifyParameterGroupAttributeRequest extends JdcloudRequest impleme
     }
 
 
+
     /**
      * set 参数组名称
      *
@@ -143,6 +148,7 @@ public class ModifyParameterGroupAttributeRequest extends JdcloudRequest impleme
         this.parameterGroupName = parameterGroupName;
         return this;
     }
+
 
     /**
      * set 参数组描述
@@ -154,6 +160,7 @@ public class ModifyParameterGroupAttributeRequest extends JdcloudRequest impleme
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -163,6 +170,7 @@ public class ModifyParameterGroupAttributeRequest extends JdcloudRequest impleme
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Parameter Group ID

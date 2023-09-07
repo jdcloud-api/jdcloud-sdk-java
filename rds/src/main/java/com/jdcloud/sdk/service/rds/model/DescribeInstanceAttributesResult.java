@@ -40,6 +40,7 @@ public class DescribeInstanceAttributesResult extends JdcloudResult implements j
     private DBInstanceAttribute dbInstanceAttributes;
 
 
+
     /**
      * get dbInstanceAttributes
      *
@@ -57,6 +58,7 @@ public class DescribeInstanceAttributesResult extends JdcloudResult implements j
     public void setDbInstanceAttributes(DBInstanceAttribute dbInstanceAttributes) {
         this.dbInstanceAttributes = dbInstanceAttributes;
     }
+
 
 
     /**

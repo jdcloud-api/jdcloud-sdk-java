@@ -63,6 +63,7 @@ public class ModifyDatabaseCommentRequest extends JdcloudRequest implements java
     private String dbName;
 
 
+
     /**
      * get 数据库的备注信息，支持中午，ASCII字符，最大长度64
      *
@@ -80,6 +81,7 @@ public class ModifyDatabaseCommentRequest extends JdcloudRequest implements java
     public void setComment(String comment) {
         this.comment = comment;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -99,6 +101,7 @@ public class ModifyDatabaseCommentRequest extends JdcloudRequest implements java
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -116,6 +119,7 @@ public class ModifyDatabaseCommentRequest extends JdcloudRequest implements java
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 库名称
@@ -136,6 +140,7 @@ public class ModifyDatabaseCommentRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 数据库的备注信息，支持中午，ASCII字符，最大长度64
      *
@@ -145,6 +150,7 @@ public class ModifyDatabaseCommentRequest extends JdcloudRequest implements java
         this.comment = comment;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -156,6 +162,7 @@ public class ModifyDatabaseCommentRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -165,6 +172,7 @@ public class ModifyDatabaseCommentRequest extends JdcloudRequest implements java
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 库名称

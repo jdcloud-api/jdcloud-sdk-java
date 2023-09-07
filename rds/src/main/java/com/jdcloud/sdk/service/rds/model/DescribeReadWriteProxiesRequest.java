@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看RDS读写分离代理列表&lt;br&gt;- 仅支持MySQL
+ * 查看RDS读写分离代理列表&lt;br&gt;- 仅支持MySQL、PostgreSQL
  */
 public class DescribeReadWriteProxiesRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -49,6 +49,7 @@ public class DescribeReadWriteProxiesRequest extends JdcloudRequest implements j
     private String regionId;
 
 
+
     /**
      * get RDS实例ID，唯一标识一个实例
      *
@@ -66,6 +67,7 @@ public class DescribeReadWriteProxiesRequest extends JdcloudRequest implements j
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -86,6 +88,7 @@ public class DescribeReadWriteProxiesRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set RDS实例ID，唯一标识一个实例
      *
@@ -95,6 +98,7 @@ public class DescribeReadWriteProxiesRequest extends JdcloudRequest implements j
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

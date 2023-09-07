@@ -56,6 +56,7 @@ public class CreateBackupSynchronicityRequest extends JdcloudRequest implements 
     private String regionId;
 
 
+
     /**
      * get 源实例ID
      *
@@ -74,6 +75,7 @@ public class CreateBackupSynchronicityRequest extends JdcloudRequest implements 
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 备份同步的目标地域
      *
@@ -91,6 +93,7 @@ public class CreateBackupSynchronicityRequest extends JdcloudRequest implements 
     public void setDestRegion(String destRegion) {
         this.destRegion = destRegion;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -111,6 +114,7 @@ public class CreateBackupSynchronicityRequest extends JdcloudRequest implements 
     }
 
 
+
     /**
      * set 源实例ID
      *
@@ -121,6 +125,7 @@ public class CreateBackupSynchronicityRequest extends JdcloudRequest implements 
         return this;
     }
 
+
     /**
      * set 备份同步的目标地域
      *
@@ -130,6 +135,7 @@ public class CreateBackupSynchronicityRequest extends JdcloudRequest implements 
         this.destRegion = destRegion;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

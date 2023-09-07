@@ -39,6 +39,7 @@ public class DescribeLatestRestoreTimeResult extends JdcloudResult implements ja
     private String latestRestoreTime;
 
 
+
     /**
      * get 实例按时间点恢复时,可恢复到的最后的一个时间点
      *
@@ -56,6 +57,7 @@ public class DescribeLatestRestoreTimeResult extends JdcloudResult implements ja
     public void setLatestRestoreTime(String latestRestoreTime) {
         this.latestRestoreTime = latestRestoreTime;
     }
+
 
 
     /**

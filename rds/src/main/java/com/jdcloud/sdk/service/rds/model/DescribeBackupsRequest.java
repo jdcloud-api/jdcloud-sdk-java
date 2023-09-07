@@ -24,7 +24,10 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -67,25 +70,38 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     private String backupTimeRangeEndFilter;
 
     /**
-     * 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      * Required:true
      */
     @Required
     private Integer pageNumber;
 
     /**
-     * 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * 每页显示的数据条数，默认为10，取值范围：[10,100]
      * Required:true
      */
     @Required
     private Integer pageSize;
 
     /**
+     * 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- instanceId：RDS实例ID，唯一标识一个实例，operator仅支持eq
+- instanceName：RDS实例名称，模糊搜索，operator仅支持eq、like
+- backupId：备份ID，唯一标识一个备份，operator仅支持eq
+- backupName：备份名称，模糊搜索，operator仅支持eq、like
+- auto：备份类型，0为手动备份，1为自动备份，operator仅支持eq
+- backupMethod：返回backupMethod等于指定值的备份列表，physical为物理备份，snapshot为快照备份备注，operator仅支持eq
+
+     */
+    
+    private List<Filter> filters;
+    /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -106,6 +122,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 查询备份类型，0为手动备份，1为自动备份，不传表示全部. &lt;br&gt;**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
      *
@@ -123,6 +140,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     public void setAuto(Integer auto) {
         this.auto = auto;
     }
+
 
     /**
      * get 返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份&lt;br&gt;**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
@@ -142,6 +160,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         this.backupTypeFilter = backupTypeFilter;
     }
 
+
     /**
      * get 返回dbName等于指定值的备份列表，不传或为空返回全部&lt;br&gt;**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
      *
@@ -159,6 +178,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     public void setDbNameFilter(String dbNameFilter) {
         this.dbNameFilter = dbNameFilter;
     }
+
 
     /**
      * get 返回备份开始时间大于该时间的备份列表&lt;br&gt;**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
@@ -178,6 +198,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         this.backupTimeRangeStartFilter = backupTimeRangeStartFilter;
     }
 
+
     /**
      * get 返回备份开始时间小于等于该时间的备份列表&lt;br&gt;**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
      *
@@ -196,8 +217,9 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         this.backupTimeRangeEndFilter = backupTimeRangeEndFilter;
     }
 
+
     /**
-     * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @return
      */
@@ -206,7 +228,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
@@ -214,8 +236,9 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         this.pageNumber = pageNumber;
     }
 
+
     /**
-     * get 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * get 每页显示的数据条数，默认为10，取值范围：[10,100]
      *
      * @return
      */
@@ -224,13 +247,47 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * set 每页显示的数据条数，默认为10，取值范围：[10,100]
      *
      * @param pageSize
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
+
+    /**
+    * get 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- instanceId：RDS实例ID，唯一标识一个实例，operator仅支持eq
+- instanceName：RDS实例名称，模糊搜索，operator仅支持eq、like
+- backupId：备份ID，唯一标识一个备份，operator仅支持eq
+- backupName：备份名称，模糊搜索，operator仅支持eq、like
+- auto：备份类型，0为手动备份，1为自动备份，operator仅支持eq
+- backupMethod：返回backupMethod等于指定值的备份列表，physical为物理备份，snapshot为快照备份备注，operator仅支持eq
+
+    *
+    * @return
+    */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- instanceId：RDS实例ID，唯一标识一个实例，operator仅支持eq
+- instanceName：RDS实例名称，模糊搜索，operator仅支持eq、like
+- backupId：备份ID，唯一标识一个备份，operator仅支持eq
+- backupName：备份名称，模糊搜索，operator仅支持eq、like
+- auto：备份类型，0为手动备份，1为自动备份，operator仅支持eq
+- backupMethod：返回backupMethod等于指定值的备份列表，physical为物理备份，snapshot为快照备份备注，operator仅支持eq
+
+    *
+    * @param filters
+    */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -251,6 +308,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set RDS实例ID，唯一标识一个实例
      *
@@ -260,6 +318,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 查询备份类型，0为手动备份，1为自动备份，不传表示全部. &lt;br&gt;**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
@@ -271,6 +330,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份&lt;br&gt;**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
      *
@@ -280,6 +340,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         this.backupTypeFilter = backupTypeFilter;
         return this;
     }
+
 
     /**
      * set 返回dbName等于指定值的备份列表，不传或为空返回全部&lt;br&gt;**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
@@ -291,6 +352,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 返回备份开始时间大于该时间的备份列表&lt;br&gt;**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
      *
@@ -300,6 +362,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         this.backupTimeRangeStartFilter = backupTimeRangeStartFilter;
         return this;
     }
+
 
     /**
      * set 返回备份开始时间小于等于该时间的备份列表&lt;br&gt;**- 测试参数，仅支持SQL Server，后续可能被其他参数取代**
@@ -311,8 +374,9 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
@@ -321,8 +385,9 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
-     * set 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * set 每页显示的数据条数，默认为10，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -330,6 +395,25 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         this.pageSize = pageSize;
         return this;
     }
+
+
+    /**
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- instanceId：RDS实例ID，唯一标识一个实例，operator仅支持eq
+- instanceName：RDS实例名称，模糊搜索，operator仅支持eq、like
+- backupId：备份ID，唯一标识一个备份，operator仅支持eq
+- backupName：备份名称，模糊搜索，operator仅支持eq、like
+- auto：备份类型，0为手动备份，1为自动备份，operator仅支持eq
+- backupMethod：返回backupMethod等于指定值的备份列表，physical为物理备份，snapshot为快照备份备注，operator仅支持eq
+
+    *
+    * @param filters
+    */
+    public DescribeBackupsRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -342,4 +426,23 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
+    /**
+     * add item to 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- instanceId：RDS实例ID，唯一标识一个实例，operator仅支持eq
+- instanceName：RDS实例名称，模糊搜索，operator仅支持eq、like
+- backupId：备份ID，唯一标识一个备份，operator仅支持eq
+- backupName：备份名称，模糊搜索，operator仅支持eq、like
+- auto：备份类型，0为手动备份，1为自动备份，operator仅支持eq
+- backupMethod：返回backupMethod等于指定值的备份列表，physical为物理备份，snapshot为快照备份备注，operator仅支持eq
+
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
 }

@@ -39,31 +39,33 @@ public class DescribeParameterGroupAttachedInstancesResult extends JdcloudResult
     /**
      * instances
      */
+    
     private List<AttachedDBInstance> instances;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get instances
-     *
-     * @return
-     */
+    * get instances
+    *
+    * @return
+    */
     public List<AttachedDBInstance> getInstances() {
         return instances;
     }
 
     /**
-     * set instances
-     *
-     * @param instances
-     */
+    * set instances
+    *
+    * @param instances
+    */
     public void setInstances(List<AttachedDBInstance> instances) {
         this.instances = instances;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeParameterGroupAttachedInstancesResult extends JdcloudResult
     }
 
 
+
     /**
-     * set instances
-     *
-     * @param instances
-     */
+    * set instances
+    *
+    * @param instances
+    */
     public DescribeParameterGroupAttachedInstancesResult instances(List<AttachedDBInstance> instances) {
         this.instances = instances;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeParameterGroupAttachedInstancesResult extends JdcloudResult
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeParameterGroupAttachedInstancesResult extends JdcloudResult
         }
         this.instances.add(instance);
     }
-
 }

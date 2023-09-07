@@ -49,6 +49,7 @@ public class DeleteParameterGroupRequest extends JdcloudRequest implements java.
     private String parameterGroupId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DeleteParameterGroupRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Parameter Group ID
@@ -86,6 +88,7 @@ public class DeleteParameterGroupRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DeleteParameterGroupRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Parameter Group ID

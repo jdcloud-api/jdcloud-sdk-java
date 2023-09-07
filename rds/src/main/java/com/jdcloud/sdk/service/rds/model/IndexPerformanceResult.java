@@ -84,6 +84,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
     private String lastUserUpdate;
 
 
+
     /**
      * get 数据库名
      *
@@ -101,6 +102,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
     public void setDb(String db) {
         this.db = db;
     }
+
 
     /**
      * get 表名
@@ -120,6 +122,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
         this.table = table;
     }
 
+
     /**
      * get 索引名
      *
@@ -137,6 +140,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
     public void setIndex(String index) {
         this.index = index;
     }
+
 
     /**
      * get 索引大小，单位KB
@@ -156,6 +160,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
         this.sizeKB = sizeKB;
     }
 
+
     /**
      * get 服务器启动以来，累计索引搜索次数
      *
@@ -173,6 +178,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
     public void setUserSeeks(Integer userSeeks) {
         this.userSeeks = userSeeks;
     }
+
 
     /**
      * get 服务器启动以来，累计表扫描次数
@@ -192,6 +198,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
         this.userScans = userScans;
     }
 
+
     /**
      * get 服务器启动以来，累计索引更新次数
      *
@@ -209,6 +216,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
     public void setUserUpdates(Integer userUpdates) {
         this.userUpdates = userUpdates;
     }
+
 
     /**
      * get 最近索引搜索时间，格式为YYYY-MM-DD hh:mm:ss
@@ -228,6 +236,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
         this.lastUserSeek = lastUserSeek;
     }
 
+
     /**
      * get 最近表扫描时间，格式为YYYY-MM-DD hh:mm:ss
      *
@@ -245,6 +254,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
     public void setLastUserScan(String lastUserScan) {
         this.lastUserScan = lastUserScan;
     }
+
 
     /**
      * get 最近索引更新时间，格式为YYYY-MM-DD hh:mm:ss
@@ -265,6 +275,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set 数据库名
      *
@@ -274,6 +285,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
         this.db = db;
         return this;
     }
+
 
     /**
      * set 表名
@@ -285,6 +297,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 索引名
      *
@@ -294,6 +307,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
         this.index = index;
         return this;
     }
+
 
     /**
      * set 索引大小，单位KB
@@ -305,6 +319,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 服务器启动以来，累计索引搜索次数
      *
@@ -314,6 +329,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
         this.userSeeks = userSeeks;
         return this;
     }
+
 
     /**
      * set 服务器启动以来，累计表扫描次数
@@ -325,6 +341,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 服务器启动以来，累计索引更新次数
      *
@@ -334,6 +351,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
         this.userUpdates = userUpdates;
         return this;
     }
+
 
     /**
      * set 最近索引搜索时间，格式为YYYY-MM-DD hh:mm:ss
@@ -345,6 +363,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 最近表扫描时间，格式为YYYY-MM-DD hh:mm:ss
      *
@@ -354,6 +373,7 @@ public class IndexPerformanceResult extends JdcloudResult implements java.io.Ser
         this.lastUserScan = lastUserScan;
         return this;
     }
+
 
     /**
      * set 最近索引更新时间，格式为YYYY-MM-DD hh:mm:ss

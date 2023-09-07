@@ -42,6 +42,7 @@ public class BackupSpec  implements java.io.Serializable {
     /**
      * 需要备份的数据库名称列表。如不填，则备份整个实例&lt;br&gt;- **MySQL：不支持该参数**&lt;br&gt;- **SQL Server：支持**
      */
+    
     private List<String> dbNames;
 
 
@@ -63,23 +64,25 @@ public class BackupSpec  implements java.io.Serializable {
         this.backupName = backupName;
     }
 
+
     /**
-     * get 需要备份的数据库名称列表。如不填，则备份整个实例&lt;br&gt;- **MySQL：不支持该参数**&lt;br&gt;- **SQL Server：支持**
-     *
-     * @return
-     */
+    * get 需要备份的数据库名称列表。如不填，则备份整个实例&lt;br&gt;- **MySQL：不支持该参数**&lt;br&gt;- **SQL Server：支持**
+    *
+    * @return
+    */
     public List<String> getDbNames() {
         return dbNames;
     }
 
     /**
-     * set 需要备份的数据库名称列表。如不填，则备份整个实例&lt;br&gt;- **MySQL：不支持该参数**&lt;br&gt;- **SQL Server：支持**
-     *
-     * @param dbNames
-     */
+    * set 需要备份的数据库名称列表。如不填，则备份整个实例&lt;br&gt;- **MySQL：不支持该参数**&lt;br&gt;- **SQL Server：支持**
+    *
+    * @param dbNames
+    */
     public void setDbNames(List<String> dbNames) {
         this.dbNames = dbNames;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class BackupSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 需要备份的数据库名称列表。如不填，则备份整个实例&lt;br&gt;- **MySQL：不支持该参数**&lt;br&gt;- **SQL Server：支持**
-     *
-     * @param dbNames
-     */
+    * set 需要备份的数据库名称列表。如不填，则备份整个实例&lt;br&gt;- **MySQL：不支持该参数**&lt;br&gt;- **SQL Server：支持**
+    *
+    * @param dbNames
+    */
     public BackupSpec dbNames(List<String> dbNames) {
         this.dbNames = dbNames;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class BackupSpec  implements java.io.Serializable {
         }
         this.dbNames.add(dbName);
     }
-
 }

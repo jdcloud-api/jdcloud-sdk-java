@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.rds.model.Tag;
+import com.jdcloud.sdk.service.charge.model.ChargeSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -103,7 +104,17 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
     /**
      * 标签信息
      */
+    
     private List<Tag> tagSpec;
+    /**
+     * 资源组id
+     */
+    private String resourceGroupId;
+
+    /**
+     * 计费规格，包括计费类型，计费周期等
+     */
+    private ChargeSpec chargeSpec;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -118,6 +129,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
      */
     @Required
     private String instanceId;
+
 
 
     /**
@@ -138,6 +150,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         this.instanceName = instanceName;
     }
 
+
     /**
      * get 只读实例规格FlavorId
      *
@@ -155,6 +168,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
     public void setInstanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
     }
+
 
     /**
      * get 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)，缺省值为：LOCAL_SSD
@@ -174,6 +188,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         this.instanceStorageType = instanceStorageType;
     }
 
+
     /**
      * get 磁盘空间
      *
@@ -191,6 +206,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
     public void setInstanceStorageGB(Integer instanceStorageGB) {
         this.instanceStorageGB = instanceStorageGB;
     }
+
 
     /**
      * get 可用区ID
@@ -210,6 +226,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         this.azId = azId;
     }
 
+
     /**
      * get VPC的ID，如果没有填写就保持和常规实例一样的VPC
      *
@@ -227,6 +244,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
     /**
      * get 子网ID，如果没有填写就保持和常规实例一样的subnet
@@ -246,6 +264,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         this.subnetId = subnetId;
     }
 
+
     /**
      * get 参数组ID，缺省采用和常规实例一样的参数组
      *
@@ -263,6 +282,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
     public void setParameterGroup(String parameterGroup) {
         this.parameterGroup = parameterGroup;
     }
+
 
     /**
      * get 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密；true：加密。缺省为false。
@@ -282,6 +302,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         this.storageEncrypted = storageEncrypted;
     }
 
+
     /**
      * get 创建只读实例的数目,缺省为1
      *
@@ -299,6 +320,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
     public void setCount(Integer count) {
         this.count = count;
     }
+
 
     /**
      * get 只读代理服务的ID，缺省值为 “NULL”，表示不绑定代理服务
@@ -318,23 +340,63 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         this.roInstanceProxy = roInstanceProxy;
     }
 
+
     /**
-     * get 标签信息
-     *
-     * @return
-     */
+    * get 标签信息
+    *
+    * @return
+    */
     public List<Tag> getTagSpec() {
         return tagSpec;
     }
 
     /**
-     * set 标签信息
-     *
-     * @param tagSpec
-     */
+    * set 标签信息
+    *
+    * @param tagSpec
+    */
     public void setTagSpec(List<Tag> tagSpec) {
         this.tagSpec = tagSpec;
     }
+
+
+    /**
+     * get 资源组id
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组id
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
+     * get 计费规格，包括计费类型，计费周期等
+     *
+     * @return
+     */
+    public ChargeSpec getChargeSpec() {
+        return chargeSpec;
+    }
+
+    /**
+     * set 计费规格，包括计费类型，计费周期等
+     *
+     * @param chargeSpec
+     */
+    public void setChargeSpec(ChargeSpec chargeSpec) {
+        this.chargeSpec = chargeSpec;
+    }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -353,6 +415,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -373,6 +436,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
@@ -382,6 +446,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         this.instanceName = instanceName;
         return this;
     }
+
 
     /**
      * set 只读实例规格FlavorId
@@ -393,6 +458,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)，缺省值为：LOCAL_SSD
      *
@@ -402,6 +468,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         this.instanceStorageType = instanceStorageType;
         return this;
     }
+
 
     /**
      * set 磁盘空间
@@ -413,6 +480,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 可用区ID
      *
@@ -422,6 +490,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         this.azId = azId;
         return this;
     }
+
 
     /**
      * set VPC的ID，如果没有填写就保持和常规实例一样的VPC
@@ -433,6 +502,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 子网ID，如果没有填写就保持和常规实例一样的subnet
      *
@@ -442,6 +512,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 参数组ID，缺省采用和常规实例一样的参数组
@@ -453,6 +524,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密；true：加密。缺省为false。
      *
@@ -462,6 +534,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         this.storageEncrypted = storageEncrypted;
         return this;
     }
+
 
     /**
      * set 创建只读实例的数目,缺省为1
@@ -473,6 +546,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 只读代理服务的ID，缺省值为 “NULL”，表示不绑定代理服务
      *
@@ -483,15 +557,39 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
-     * set 标签信息
-     *
-     * @param tagSpec
-     */
+    * set 标签信息
+    *
+    * @param tagSpec
+    */
     public CreateROInstanceRequest tagSpec(List<Tag> tagSpec) {
         this.tagSpec = tagSpec;
         return this;
     }
+
+
+    /**
+     * set 资源组id
+     *
+     * @param resourceGroupId
+     */
+    public CreateROInstanceRequest resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
+     * set 计费规格，包括计费类型，计费周期等
+     *
+     * @param chargeSpec
+     */
+    public CreateROInstanceRequest chargeSpec(ChargeSpec chargeSpec) {
+        this.chargeSpec = chargeSpec;
+        return this;
+    }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -503,6 +601,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -512,6 +611,7 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -525,5 +625,4 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         }
         this.tagSpec.add(tagSpec);
     }
-
 }

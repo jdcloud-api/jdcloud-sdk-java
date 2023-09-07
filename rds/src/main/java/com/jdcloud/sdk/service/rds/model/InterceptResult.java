@@ -64,6 +64,7 @@ public class InterceptResult extends JdcloudResult implements java.io.Serializab
     private String sql;
 
 
+
     /**
      * get SQL开始执行时间
      *
@@ -81,6 +82,7 @@ public class InterceptResult extends JdcloudResult implements java.io.Serializab
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 源IP
@@ -100,6 +102,7 @@ public class InterceptResult extends JdcloudResult implements java.io.Serializab
         this.ip = ip;
     }
 
+
     /**
      * get 账号名
      *
@@ -117,6 +120,7 @@ public class InterceptResult extends JdcloudResult implements java.io.Serializab
     public void setAccountName(String accountName) {
         this.accountName = accountName;
     }
+
 
     /**
      * get 线程ID
@@ -136,6 +140,7 @@ public class InterceptResult extends JdcloudResult implements java.io.Serializab
         this.threadId = threadId;
     }
 
+
     /**
      * get 数据库名
      *
@@ -153,6 +158,7 @@ public class InterceptResult extends JdcloudResult implements java.io.Serializab
     public void setDbName(String dbName) {
         this.dbName = dbName;
     }
+
 
     /**
      * get sql语句
@@ -173,6 +179,7 @@ public class InterceptResult extends JdcloudResult implements java.io.Serializab
     }
 
 
+
     /**
      * set SQL开始执行时间
      *
@@ -182,6 +189,7 @@ public class InterceptResult extends JdcloudResult implements java.io.Serializab
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 源IP
@@ -193,6 +201,7 @@ public class InterceptResult extends JdcloudResult implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set 账号名
      *
@@ -202,6 +211,7 @@ public class InterceptResult extends JdcloudResult implements java.io.Serializab
         this.accountName = accountName;
         return this;
     }
+
 
     /**
      * set 线程ID
@@ -213,6 +223,7 @@ public class InterceptResult extends JdcloudResult implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set 数据库名
      *
@@ -222,6 +233,7 @@ public class InterceptResult extends JdcloudResult implements java.io.Serializab
         this.dbName = dbName;
         return this;
     }
+
 
     /**
      * set sql语句

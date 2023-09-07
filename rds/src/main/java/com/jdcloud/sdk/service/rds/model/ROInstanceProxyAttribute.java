@@ -67,11 +67,12 @@ public class ROInstanceProxyAttribute  implements java.io.Serializable {
     /**
      * 绑定的只读实例 ID 列表
      */
+    
     private List<String> roInstanceId;
-
     /**
      * 只读实例列表
      */
+    
     private List<RoInstanceList> roInstanceList;
 
 
@@ -93,6 +94,7 @@ public class ROInstanceProxyAttribute  implements java.io.Serializable {
         this.roInstanceProxyID = roInstanceProxyID;
     }
 
+
     /**
      * get 只读代理服务名称
      *
@@ -110,6 +112,7 @@ public class ROInstanceProxyAttribute  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 只读代理服务公网域名
@@ -129,6 +132,7 @@ public class ROInstanceProxyAttribute  implements java.io.Serializable {
         this.publicDomainName = publicDomainName;
     }
 
+
     /**
      * get 只读代理服务内网域名
      *
@@ -146,6 +150,7 @@ public class ROInstanceProxyAttribute  implements java.io.Serializable {
     public void setInternalDomainName(String internalDomainName) {
         this.internalDomainName = internalDomainName;
     }
+
 
     /**
      * get 只读代理服务访问端口
@@ -165,6 +170,7 @@ public class ROInstanceProxyAttribute  implements java.io.Serializable {
         this.port = port;
     }
 
+
     /**
      * get 只读代理服务转发策略
      *
@@ -183,41 +189,44 @@ public class ROInstanceProxyAttribute  implements java.io.Serializable {
         this.strategy = strategy;
     }
 
+
     /**
-     * get 绑定的只读实例 ID 列表
-     *
-     * @return
-     */
+    * get 绑定的只读实例 ID 列表
+    *
+    * @return
+    */
     public List<String> getRoInstanceId() {
         return roInstanceId;
     }
 
     /**
-     * set 绑定的只读实例 ID 列表
-     *
-     * @param roInstanceId
-     */
+    * set 绑定的只读实例 ID 列表
+    *
+    * @param roInstanceId
+    */
     public void setRoInstanceId(List<String> roInstanceId) {
         this.roInstanceId = roInstanceId;
     }
 
+
     /**
-     * get 只读实例列表
-     *
-     * @return
-     */
+    * get 只读实例列表
+    *
+    * @return
+    */
     public List<RoInstanceList> getRoInstanceList() {
         return roInstanceList;
     }
 
     /**
-     * set 只读实例列表
-     *
-     * @param roInstanceList
-     */
+    * set 只读实例列表
+    *
+    * @param roInstanceList
+    */
     public void setRoInstanceList(List<RoInstanceList> roInstanceList) {
         this.roInstanceList = roInstanceList;
     }
+
 
 
     /**
@@ -230,6 +239,7 @@ public class ROInstanceProxyAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 只读代理服务名称
      *
@@ -239,6 +249,7 @@ public class ROInstanceProxyAttribute  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 只读代理服务公网域名
@@ -250,6 +261,7 @@ public class ROInstanceProxyAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 只读代理服务内网域名
      *
@@ -259,6 +271,7 @@ public class ROInstanceProxyAttribute  implements java.io.Serializable {
         this.internalDomainName = internalDomainName;
         return this;
     }
+
 
     /**
      * set 只读代理服务访问端口
@@ -270,6 +283,7 @@ public class ROInstanceProxyAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 只读代理服务转发策略
      *
@@ -280,25 +294,28 @@ public class ROInstanceProxyAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 绑定的只读实例 ID 列表
-     *
-     * @param roInstanceId
-     */
+    * set 绑定的只读实例 ID 列表
+    *
+    * @param roInstanceId
+    */
     public ROInstanceProxyAttribute roInstanceId(List<String> roInstanceId) {
         this.roInstanceId = roInstanceId;
         return this;
     }
 
+
     /**
-     * set 只读实例列表
-     *
-     * @param roInstanceList
-     */
+    * set 只读实例列表
+    *
+    * @param roInstanceList
+    */
     public ROInstanceProxyAttribute roInstanceList(List<RoInstanceList> roInstanceList) {
         this.roInstanceList = roInstanceList;
         return this;
     }
+
 
 
     /**
@@ -324,5 +341,4 @@ public class ROInstanceProxyAttribute  implements java.io.Serializable {
         }
         this.roInstanceList.add(roInstanceList);
     }
-
 }

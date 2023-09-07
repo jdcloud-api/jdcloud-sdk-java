@@ -57,6 +57,27 @@ public class Binlog  implements java.io.Serializable {
      */
     private String binlogEndTime;
 
+    /**
+     * 加密秘钥
+     */
+    private String descriptionkey;
+
+    /**
+     * binlog所属实例ID
+     */
+    private String instanceId;
+
+    /**
+     * 备份所属实例名称
+     */
+    private String instanceName;
+
+    /**
+     * serverId
+     */
+    private String serverId;
+
+
 
     /**
      * get binlog日志备份ID
@@ -76,6 +97,7 @@ public class Binlog  implements java.io.Serializable {
         this.binlogBackupId = binlogBackupId;
     }
 
+
     /**
      * get binlog日志名称
      *
@@ -93,6 +115,7 @@ public class Binlog  implements java.io.Serializable {
     public void setBinlogName(String binlogName) {
         this.binlogName = binlogName;
     }
+
 
     /**
      * get binlog日志大小，单位KB
@@ -112,6 +135,7 @@ public class Binlog  implements java.io.Serializable {
         this.binlogSizeKB = binlogSizeKB;
     }
 
+
     /**
      * get binlog开始时间,格式为：YYYY-MM-DD HH:mm:ss
      *
@@ -129,6 +153,7 @@ public class Binlog  implements java.io.Serializable {
     public void setBinlogStartTime(String binlogStartTime) {
         this.binlogStartTime = binlogStartTime;
     }
+
 
     /**
      * get binlog结束时间,格式为：YYYY-MM-DD HH:mm:ss
@@ -150,6 +175,83 @@ public class Binlog  implements java.io.Serializable {
 
 
     /**
+     * get 加密秘钥
+     *
+     * @return
+     */
+    public String getDescriptionkey() {
+        return descriptionkey;
+    }
+
+    /**
+     * set 加密秘钥
+     *
+     * @param descriptionkey
+     */
+    public void setDescriptionkey(String descriptionkey) {
+        this.descriptionkey = descriptionkey;
+    }
+
+
+    /**
+     * get binlog所属实例ID
+     *
+     * @return
+     */
+    public String getInstanceId() {
+        return instanceId;
+    }
+
+    /**
+     * set binlog所属实例ID
+     *
+     * @param instanceId
+     */
+    public void setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+    }
+
+
+    /**
+     * get 备份所属实例名称
+     *
+     * @return
+     */
+    public String getInstanceName() {
+        return instanceName;
+    }
+
+    /**
+     * set 备份所属实例名称
+     *
+     * @param instanceName
+     */
+    public void setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+    }
+
+
+    /**
+     * get serverId
+     *
+     * @return
+     */
+    public String getServerId() {
+        return serverId;
+    }
+
+    /**
+     * set serverId
+     *
+     * @param serverId
+     */
+    public void setServerId(String serverId) {
+        this.serverId = serverId;
+    }
+
+
+
+    /**
      * set binlog日志备份ID
      *
      * @param binlogBackupId
@@ -158,6 +260,7 @@ public class Binlog  implements java.io.Serializable {
         this.binlogBackupId = binlogBackupId;
         return this;
     }
+
 
     /**
      * set binlog日志名称
@@ -169,6 +272,7 @@ public class Binlog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set binlog日志大小，单位KB
      *
@@ -178,6 +282,7 @@ public class Binlog  implements java.io.Serializable {
         this.binlogSizeKB = binlogSizeKB;
         return this;
     }
+
 
     /**
      * set binlog开始时间,格式为：YYYY-MM-DD HH:mm:ss
@@ -189,6 +294,7 @@ public class Binlog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set binlog结束时间,格式为：YYYY-MM-DD HH:mm:ss
      *
@@ -196,6 +302,50 @@ public class Binlog  implements java.io.Serializable {
      */
     public Binlog binlogEndTime(String binlogEndTime) {
         this.binlogEndTime = binlogEndTime;
+        return this;
+    }
+
+
+    /**
+     * set 加密秘钥
+     *
+     * @param descriptionkey
+     */
+    public Binlog descriptionkey(String descriptionkey) {
+        this.descriptionkey = descriptionkey;
+        return this;
+    }
+
+
+    /**
+     * set binlog所属实例ID
+     *
+     * @param instanceId
+     */
+    public Binlog instanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+
+
+    /**
+     * set 备份所属实例名称
+     *
+     * @param instanceName
+     */
+    public Binlog instanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+
+
+    /**
+     * set serverId
+     *
+     * @param serverId
+     */
+    public Binlog serverId(String serverId) {
+        this.serverId = serverId;
         return this;
     }
 

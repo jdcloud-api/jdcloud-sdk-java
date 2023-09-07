@@ -39,31 +39,33 @@ public class DescribeLogsResult extends JdcloudResult implements java.io.Seriali
     /**
      * logs
      */
+    
     private List<Log> logs;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get logs
-     *
-     * @return
-     */
+    * get logs
+    *
+    * @return
+    */
     public List<Log> getLogs() {
         return logs;
     }
 
     /**
-     * set logs
-     *
-     * @param logs
-     */
+    * set logs
+    *
+    * @param logs
+    */
     public void setLogs(List<Log> logs) {
         this.logs = logs;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeLogsResult extends JdcloudResult implements java.io.Seriali
     }
 
 
+
     /**
-     * set logs
-     *
-     * @param logs
-     */
+    * set logs
+    *
+    * @param logs
+    */
     public DescribeLogsResult logs(List<Log> logs) {
         this.logs = logs;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeLogsResult extends JdcloudResult implements java.io.Seriali
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeLogsResult extends JdcloudResult implements java.io.Seriali
         }
         this.logs.add(log);
     }
-
 }

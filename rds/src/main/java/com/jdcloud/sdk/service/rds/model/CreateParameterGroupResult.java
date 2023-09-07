@@ -39,6 +39,7 @@ public class CreateParameterGroupResult extends JdcloudResult implements java.io
     private String parameterGroupId;
 
 
+
     /**
      * get parameterGroupId
      *
@@ -56,6 +57,7 @@ public class CreateParameterGroupResult extends JdcloudResult implements java.io
     public void setParameterGroupId(String parameterGroupId) {
         this.parameterGroupId = parameterGroupId;
     }
+
 
 
     /**

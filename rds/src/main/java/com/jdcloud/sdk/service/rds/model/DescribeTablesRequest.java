@@ -35,7 +35,7 @@ public class DescribeTablesRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      */
     private Integer pageNumber;
 
@@ -66,8 +66,9 @@ public class DescribeTablesRequest extends JdcloudRequest implements java.io.Ser
     private String dbName;
 
 
+
     /**
-     * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @return
      */
@@ -76,13 +77,14 @@ public class DescribeTablesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
@@ -102,6 +104,7 @@ public class DescribeTablesRequest extends JdcloudRequest implements java.io.Ser
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -120,6 +123,7 @@ public class DescribeTablesRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -137,6 +141,7 @@ public class DescribeTablesRequest extends JdcloudRequest implements java.io.Ser
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 库名称
@@ -157,8 +162,9 @@ public class DescribeTablesRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
@@ -166,6 +172,7 @@ public class DescribeTablesRequest extends JdcloudRequest implements java.io.Ser
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
@@ -177,6 +184,7 @@ public class DescribeTablesRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -187,6 +195,7 @@ public class DescribeTablesRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -196,6 +205,7 @@ public class DescribeTablesRequest extends JdcloudRequest implements java.io.Ser
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 库名称

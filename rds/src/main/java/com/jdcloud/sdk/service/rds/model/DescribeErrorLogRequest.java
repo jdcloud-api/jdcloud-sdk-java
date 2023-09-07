@@ -28,38 +28,38 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询PostgreSQL实例的错误日志的概要信息。&lt;br&gt;- 仅支持PostgreSQL
+ * 查询错误日志的概要信息
  */
 public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
+     * 错误日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      * Required:true
      */
     @Required
     private String startTime;
 
     /**
-     * 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
+     * 错误日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      * Required:true
      */
     @Required
     private String endTime;
 
     /**
-     * 查询哪个数据库的慢日志，不填表示返回所有数据库的慢日志
+     * 查询哪个数据库的慢日志，不填表示返回所有数据库的错误日志。&lt;br&gt;- MySQL不支持
      */
     private String dbName;
 
     /**
-     * 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码；
      */
     private Integer pageNumber;
 
     /**
-     * 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数
      */
     private Integer pageSize;
 
@@ -78,8 +78,9 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
     private String instanceId;
 
 
+
     /**
-     * get 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
+     * get 错误日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      *
      * @return
      */
@@ -88,7 +89,7 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
+     * set 错误日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      *
      * @param startTime
      */
@@ -96,8 +97,9 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
         this.startTime = startTime;
     }
 
+
     /**
-     * get 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
+     * get 错误日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      *
      * @return
      */
@@ -106,7 +108,7 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
+     * set 错误日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      *
      * @param endTime
      */
@@ -114,8 +116,9 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
         this.endTime = endTime;
     }
 
+
     /**
-     * get 查询哪个数据库的慢日志，不填表示返回所有数据库的慢日志
+     * get 查询哪个数据库的慢日志，不填表示返回所有数据库的错误日志。&lt;br&gt;- MySQL不支持
      *
      * @return
      */
@@ -124,7 +127,7 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 查询哪个数据库的慢日志，不填表示返回所有数据库的慢日志
+     * set 查询哪个数据库的慢日志，不填表示返回所有数据库的错误日志。&lt;br&gt;- MySQL不支持
      *
      * @param dbName
      */
@@ -132,8 +135,9 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
         this.dbName = dbName;
     }
 
+
     /**
-     * get 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * get 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码；
      *
      * @return
      */
@@ -142,7 +146,7 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
@@ -150,8 +154,9 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
         this.pageNumber = pageNumber;
     }
 
+
     /**
-     * get 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * get 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数
      *
      * @return
      */
@@ -160,13 +165,14 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * set 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数
      *
      * @param pageSize
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -185,6 +191,7 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -205,8 +212,9 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
-     * set 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
+     * set 错误日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      *
      * @param startTime
      */
@@ -215,8 +223,9 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
-     * set 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
+     * set 错误日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      *
      * @param endTime
      */
@@ -225,8 +234,9 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
-     * set 查询哪个数据库的慢日志，不填表示返回所有数据库的慢日志
+     * set 查询哪个数据库的慢日志，不填表示返回所有数据库的错误日志。&lt;br&gt;- MySQL不支持
      *
      * @param dbName
      */
@@ -235,8 +245,9 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
@@ -245,8 +256,9 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
-     * set 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * set 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数
      *
      * @param pageSize
      */
@@ -254,6 +266,7 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -264,6 +277,7 @@ public class DescribeErrorLogRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DescribeErrorLogResponse;
 
 /**
- * 查询PostgreSQL实例的错误日志的概要信息。&lt;br&gt;- 仅支持PostgreSQL
+ * 查询错误日志的概要信息
  */
 class DescribeErrorLogExecutor extends JdcloudExecutor {
 

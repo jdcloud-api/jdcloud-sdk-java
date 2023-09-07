@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DisableReadWriteProxyInternetAccessResponse;
 
 /**
- * 关闭读写分离代理服务的外网访问功能。关闭后，用户无法通过 Internet 连接读写分离代理服务，但可以在京东云内网通过内网域名连接&lt;br&gt;- 仅支持MySQL
+ * 关闭读写分离代理服务的外网访问功能。关闭后，用户无法通过 Internet 连接读写分离代理服务，但可以在京东云内网通过内网域名连接&lt;br&gt;- 仅支持MySQL、PostgreSQL
  */
 class DisableReadWriteProxyInternetAccessExecutor extends JdcloudExecutor {
 

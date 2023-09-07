@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.rds.model.ReadWriteProxy;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看指定RDS读写分离代理详情&lt;br&gt;- 仅支持MySQL
+ * 查看指定RDS读写分离代理详情&lt;br&gt;- 仅支持MySQL、PostgreSQL
  */
 public class DescribeReadWriteProxyAttributeResult extends JdcloudResult implements java.io.Serializable {
 
@@ -38,6 +38,7 @@ public class DescribeReadWriteProxyAttributeResult extends JdcloudResult impleme
      * readWriteProxy
      */
     private ReadWriteProxy readWriteProxy;
+
 
 
     /**
@@ -57,6 +58,7 @@ public class DescribeReadWriteProxyAttributeResult extends JdcloudResult impleme
     public void setReadWriteProxy(ReadWriteProxy readWriteProxy) {
         this.readWriteProxy = readWriteProxy;
     }
+
 
 
     /**

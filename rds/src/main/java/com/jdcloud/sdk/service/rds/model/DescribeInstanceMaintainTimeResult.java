@@ -43,6 +43,7 @@ public class DescribeInstanceMaintainTimeResult extends JdcloudResult implements
     /**
      * Monday、Tuesday、Wednesday、Thursday、Friday、Saturday、Sunday
      */
+    
     private List<String> maintainPeriod;
 
 
@@ -64,23 +65,25 @@ public class DescribeInstanceMaintainTimeResult extends JdcloudResult implements
         this.maintainTime = maintainTime;
     }
 
+
     /**
-     * get Monday、Tuesday、Wednesday、Thursday、Friday、Saturday、Sunday
-     *
-     * @return
-     */
+    * get Monday、Tuesday、Wednesday、Thursday、Friday、Saturday、Sunday
+    *
+    * @return
+    */
     public List<String> getMaintainPeriod() {
         return maintainPeriod;
     }
 
     /**
-     * set Monday、Tuesday、Wednesday、Thursday、Friday、Saturday、Sunday
-     *
-     * @param maintainPeriod
-     */
+    * set Monday、Tuesday、Wednesday、Thursday、Friday、Saturday、Sunday
+    *
+    * @param maintainPeriod
+    */
     public void setMaintainPeriod(List<String> maintainPeriod) {
         this.maintainPeriod = maintainPeriod;
     }
+
 
 
     /**
@@ -93,15 +96,17 @@ public class DescribeInstanceMaintainTimeResult extends JdcloudResult implements
         return this;
     }
 
+
     /**
-     * set Monday、Tuesday、Wednesday、Thursday、Friday、Saturday、Sunday
-     *
-     * @param maintainPeriod
-     */
+    * set Monday、Tuesday、Wednesday、Thursday、Friday、Saturday、Sunday
+    *
+    * @param maintainPeriod
+    */
     public DescribeInstanceMaintainTimeResult maintainPeriod(List<String> maintainPeriod) {
         this.maintainPeriod = maintainPeriod;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class DescribeInstanceMaintainTimeResult extends JdcloudResult implements
         }
         this.maintainPeriod.add(maintainPeriod);
     }
-
 }

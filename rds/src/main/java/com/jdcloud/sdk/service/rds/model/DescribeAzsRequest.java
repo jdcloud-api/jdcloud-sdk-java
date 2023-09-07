@@ -49,6 +49,7 @@ public class DescribeAzsRequest extends JdcloudRequest implements java.io.Serial
     private String regionId;
 
 
+
     /**
      * get RDS引擎类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -66,6 +67,7 @@ public class DescribeAzsRequest extends JdcloudRequest implements java.io.Serial
     public void setEngine(String engine) {
         this.engine = engine;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -86,6 +88,7 @@ public class DescribeAzsRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set RDS引擎类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -95,6 +98,7 @@ public class DescribeAzsRequest extends JdcloudRequest implements java.io.Serial
         this.engine = engine;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

@@ -52,6 +52,7 @@ public class DBInstanceAccountForOps  implements java.io.Serializable {
     /**
      * global权限
      */
+    
     private List<String> globalPrivileges;
 
 
@@ -73,6 +74,7 @@ public class DBInstanceAccountForOps  implements java.io.Serializable {
         this.accountName = accountName;
     }
 
+
     /**
      * get 运维账号创建时间，UTC时间格式
      *
@@ -90,6 +92,7 @@ public class DBInstanceAccountForOps  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 运维账号到期时间，UTC时间格式
@@ -109,23 +112,25 @@ public class DBInstanceAccountForOps  implements java.io.Serializable {
         this.expiredTime = expiredTime;
     }
 
+
     /**
-     * get global权限
-     *
-     * @return
-     */
+    * get global权限
+    *
+    * @return
+    */
     public List<String> getGlobalPrivileges() {
         return globalPrivileges;
     }
 
     /**
-     * set global权限
-     *
-     * @param globalPrivileges
-     */
+    * set global权限
+    *
+    * @param globalPrivileges
+    */
     public void setGlobalPrivileges(List<String> globalPrivileges) {
         this.globalPrivileges = globalPrivileges;
     }
+
 
 
     /**
@@ -138,6 +143,7 @@ public class DBInstanceAccountForOps  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 运维账号创建时间，UTC时间格式
      *
@@ -147,6 +153,7 @@ public class DBInstanceAccountForOps  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 运维账号到期时间，UTC时间格式
@@ -158,15 +165,17 @@ public class DBInstanceAccountForOps  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set global权限
-     *
-     * @param globalPrivileges
-     */
+    * set global权限
+    *
+    * @param globalPrivileges
+    */
     public DBInstanceAccountForOps globalPrivileges(List<String> globalPrivileges) {
         this.globalPrivileges = globalPrivileges;
         return this;
     }
+
 
 
     /**
@@ -180,5 +189,4 @@ public class DBInstanceAccountForOps  implements java.io.Serializable {
         }
         this.globalPrivileges.add(globalPrivilege);
     }
-
 }

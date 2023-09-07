@@ -42,8 +42,8 @@ public class ModifyParametersRequest extends JdcloudRequest implements java.io.S
      * Required:true
      */
     @Required
+    
     private List<Parameter> parameters;
-
     /**
      * Region ID
      * Required:true
@@ -59,23 +59,25 @@ public class ModifyParametersRequest extends JdcloudRequest implements java.io.S
     private String instanceId;
 
 
+
     /**
-     * get 修改的实例参数
-     *
-     * @return
-     */
+    * get 修改的实例参数
+    *
+    * @return
+    */
     public List<Parameter> getParameters() {
         return parameters;
     }
 
     /**
-     * set 修改的实例参数
-     *
-     * @param parameters
-     */
+    * set 修改的实例参数
+    *
+    * @param parameters
+    */
     public void setParameters(List<Parameter> parameters) {
         this.parameters = parameters;
     }
+
 
     /**
      * get Region ID
@@ -94,6 +96,7 @@ public class ModifyParametersRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Instance ID
@@ -114,15 +117,17 @@ public class ModifyParametersRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
-     * set 修改的实例参数
-     *
-     * @param parameters
-     */
+    * set 修改的实例参数
+    *
+    * @param parameters
+    */
     public ModifyParametersRequest parameters(List<Parameter> parameters) {
         this.parameters = parameters;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -134,6 +139,7 @@ public class ModifyParametersRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set Instance ID
      *
@@ -143,6 +149,7 @@ public class ModifyParametersRequest extends JdcloudRequest implements java.io.S
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class ModifyParametersRequest extends JdcloudRequest implements java.io.S
         }
         this.parameters.add(parameter);
     }
-
 }

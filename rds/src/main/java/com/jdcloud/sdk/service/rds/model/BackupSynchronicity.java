@@ -78,6 +78,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
     private String newestDataTime;
 
 
+
     /**
      * get 跨地域备份同步服务ID
      *
@@ -95,6 +96,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
     public void setServiceId(String serviceId) {
         this.serviceId = serviceId;
     }
+
 
     /**
      * get RDS 实例ID
@@ -114,6 +116,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 跨地域备份同步服务状态，正常，running；错误，error
      *
@@ -131,6 +134,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
     public void setServiceStatus(String serviceStatus) {
         this.serviceStatus = serviceStatus;
     }
+
 
     /**
      * get 源实例所在地域
@@ -150,6 +154,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
         this.srcRegion = srcRegion;
     }
 
+
     /**
      * get 备份同步的目标地域
      *
@@ -167,6 +172,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
     public void setDestRegion(String destRegion) {
         this.destRegion = destRegion;
     }
+
 
     /**
      * get 数据库类型
@@ -186,6 +192,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
         this.engine = engine;
     }
 
+
     /**
      * get 数据库版本
      *
@@ -204,6 +211,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
         this.engineVersion = engineVersion;
     }
 
+
     /**
      * get 创建时间
      *
@@ -221,6 +229,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 跨地域备份的最新数据时间点
@@ -241,6 +250,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 跨地域备份同步服务ID
      *
@@ -250,6 +260,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
         this.serviceId = serviceId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID
@@ -261,6 +272,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 跨地域备份同步服务状态，正常，running；错误，error
      *
@@ -270,6 +282,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
         this.serviceStatus = serviceStatus;
         return this;
     }
+
 
     /**
      * set 源实例所在地域
@@ -281,6 +294,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 备份同步的目标地域
      *
@@ -290,6 +304,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
         this.destRegion = destRegion;
         return this;
     }
+
 
     /**
      * set 数据库类型
@@ -301,6 +316,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据库版本
      *
@@ -311,6 +327,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -320,6 +337,7 @@ public class BackupSynchronicity  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 跨地域备份的最新数据时间点

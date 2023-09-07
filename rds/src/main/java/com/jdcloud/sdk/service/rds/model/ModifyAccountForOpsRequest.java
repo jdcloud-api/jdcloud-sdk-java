@@ -44,8 +44,8 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
     /**
      * globalPrivileges
      */
+    
     private List<String> globalPrivileges;
-
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
@@ -59,6 +59,7 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
      */
     @Required
     private String instanceId;
+
 
 
     /**
@@ -79,23 +80,25 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
         this.expiredTime = expiredTime;
     }
 
+
     /**
-     * get globalPrivileges
-     *
-     * @return
-     */
+    * get globalPrivileges
+    *
+    * @return
+    */
     public List<String> getGlobalPrivileges() {
         return globalPrivileges;
     }
 
     /**
-     * set globalPrivileges
-     *
-     * @param globalPrivileges
-     */
+    * set globalPrivileges
+    *
+    * @param globalPrivileges
+    */
     public void setGlobalPrivileges(List<String> globalPrivileges) {
         this.globalPrivileges = globalPrivileges;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -114,6 +117,7 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -134,6 +138,7 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 运维账号到期时间，UTC时间格式
      *
@@ -144,15 +149,17 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
-     * set globalPrivileges
-     *
-     * @param globalPrivileges
-     */
+    * set globalPrivileges
+    *
+    * @param globalPrivileges
+    */
     public ModifyAccountForOpsRequest globalPrivileges(List<String> globalPrivileges) {
         this.globalPrivileges = globalPrivileges;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -164,6 +171,7 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -173,6 +181,7 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -186,5 +195,4 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
         }
         this.globalPrivileges.add(globalPrivilege);
     }
-
 }

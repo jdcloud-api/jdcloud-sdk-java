@@ -35,6 +35,11 @@ public class DescribeInstanceAttributesRequest extends JdcloudRequest implements
     private static final long serialVersionUID = 1L;
 
     /**
+     * 默认不传，返回当前未删除的实例的实例详情 **仅支持 MySQL，Percona，MariaDB。&lt;br&gt;请求参数：&lt;br&gt;- 0:当前存在的实例；&lt;br&gt;- 1:已删除的实例；&lt;br&gt;- 2:全部实例，不区分实例是否删除;
+     */
+    private Integer instanceExistence;
+
+    /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
@@ -47,6 +52,26 @@ public class DescribeInstanceAttributesRequest extends JdcloudRequest implements
      */
     @Required
     private String instanceId;
+
+
+
+    /**
+     * get 默认不传，返回当前未删除的实例的实例详情 **仅支持 MySQL，Percona，MariaDB。&lt;br&gt;请求参数：&lt;br&gt;- 0:当前存在的实例；&lt;br&gt;- 1:已删除的实例；&lt;br&gt;- 2:全部实例，不区分实例是否删除;
+     *
+     * @return
+     */
+    public Integer getInstanceExistence() {
+        return instanceExistence;
+    }
+
+    /**
+     * set 默认不传，返回当前未删除的实例的实例详情 **仅支持 MySQL，Percona，MariaDB。&lt;br&gt;请求参数：&lt;br&gt;- 0:当前存在的实例；&lt;br&gt;- 1:已删除的实例；&lt;br&gt;- 2:全部实例，不区分实例是否删除;
+     *
+     * @param instanceExistence
+     */
+    public void setInstanceExistence(Integer instanceExistence) {
+        this.instanceExistence = instanceExistence;
+    }
 
 
     /**
@@ -67,6 +92,7 @@ public class DescribeInstanceAttributesRequest extends JdcloudRequest implements
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -86,6 +112,18 @@ public class DescribeInstanceAttributesRequest extends JdcloudRequest implements
     }
 
 
+
+    /**
+     * set 默认不传，返回当前未删除的实例的实例详情 **仅支持 MySQL，Percona，MariaDB。&lt;br&gt;请求参数：&lt;br&gt;- 0:当前存在的实例；&lt;br&gt;- 1:已删除的实例；&lt;br&gt;- 2:全部实例，不区分实例是否删除;
+     *
+     * @param instanceExistence
+     */
+    public DescribeInstanceAttributesRequest instanceExistence(Integer instanceExistence) {
+        this.instanceExistence = instanceExistence;
+        return this;
+    }
+
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -95,6 +133,7 @@ public class DescribeInstanceAttributesRequest extends JdcloudRequest implements
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

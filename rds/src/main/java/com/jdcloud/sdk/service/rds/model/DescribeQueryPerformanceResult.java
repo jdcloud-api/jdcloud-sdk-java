@@ -39,8 +39,8 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
     /**
      * queryPerformanceResult
      */
+    
     private List<QueryPerformanceResult> queryPerformanceResult;
-
     /**
      * 总记录条数
      */
@@ -57,23 +57,25 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
     private Integer pageSize;
 
 
+
     /**
-     * get queryPerformanceResult
-     *
-     * @return
-     */
+    * get queryPerformanceResult
+    *
+    * @return
+    */
     public List<QueryPerformanceResult> getQueryPerformanceResult() {
         return queryPerformanceResult;
     }
 
     /**
-     * set queryPerformanceResult
-     *
-     * @param queryPerformanceResult
-     */
+    * set queryPerformanceResult
+    *
+    * @param queryPerformanceResult
+    */
     public void setQueryPerformanceResult(List<QueryPerformanceResult> queryPerformanceResult) {
         this.queryPerformanceResult = queryPerformanceResult;
     }
+
 
     /**
      * get 总记录条数
@@ -93,6 +95,7 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
         this.totalCount = totalCount;
     }
 
+
     /**
      * get 当前数据的页码
      *
@@ -110,6 +113,7 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 每页显示的数据条数
@@ -130,15 +134,17 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
     }
 
 
+
     /**
-     * set queryPerformanceResult
-     *
-     * @param queryPerformanceResult
-     */
+    * set queryPerformanceResult
+    *
+    * @param queryPerformanceResult
+    */
     public DescribeQueryPerformanceResult queryPerformanceResult(List<QueryPerformanceResult> queryPerformanceResult) {
         this.queryPerformanceResult = queryPerformanceResult;
         return this;
     }
+
 
     /**
      * set 总记录条数
@@ -150,6 +156,7 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
      * set 当前数据的页码
      *
@@ -160,6 +167,7 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
      * set 每页显示的数据条数
      *
@@ -169,6 +177,7 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
         this.pageSize = pageSize;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
         }
         this.queryPerformanceResult.add(queryPerformanceResult);
     }
-
 }

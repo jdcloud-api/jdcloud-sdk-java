@@ -63,9 +63,14 @@ public class ReadWriteProxy  implements java.io.Serializable {
     private String port;
 
     /**
-     * 延迟阈值
+     * 延迟阈值，仅MySQL
      */
     private Integer delayThreshold;
+
+    /**
+     * WAL日志延迟阈值，仅PostgreSQL
+     */
+    private Integer walDelayThreshold;
 
     /**
      * 读写分离代理后端实例负载均衡策略；当前支持的负载均衡策略请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -76,6 +81,7 @@ public class ReadWriteProxy  implements java.io.Serializable {
      * 后端实例健康检查配置详情
      */
     private HealthCheck healthCheck;
+
 
 
     /**
@@ -96,6 +102,7 @@ public class ReadWriteProxy  implements java.io.Serializable {
         this.readWriteProxyId = readWriteProxyId;
     }
 
+
     /**
      * get 读写分离代理服务的状态；参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -113,6 +120,7 @@ public class ReadWriteProxy  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 读写分离代理服务关联的RDS实例 ID
@@ -132,6 +140,7 @@ public class ReadWriteProxy  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 读写分离代理服务公网域名
      *
@@ -149,6 +158,7 @@ public class ReadWriteProxy  implements java.io.Serializable {
     public void setPublicDomainName(String publicDomainName) {
         this.publicDomainName = publicDomainName;
     }
+
 
     /**
      * get 读写分离代理服务内网域名
@@ -168,6 +178,7 @@ public class ReadWriteProxy  implements java.io.Serializable {
         this.internalDomainName = internalDomainName;
     }
 
+
     /**
      * get 读写分离代理服务访问端口
      *
@@ -186,8 +197,9 @@ public class ReadWriteProxy  implements java.io.Serializable {
         this.port = port;
     }
 
+
     /**
-     * get 延迟阈值
+     * get 延迟阈值，仅MySQL
      *
      * @return
      */
@@ -196,13 +208,33 @@ public class ReadWriteProxy  implements java.io.Serializable {
     }
 
     /**
-     * set 延迟阈值
+     * set 延迟阈值，仅MySQL
      *
      * @param delayThreshold
      */
     public void setDelayThreshold(Integer delayThreshold) {
         this.delayThreshold = delayThreshold;
     }
+
+
+    /**
+     * get WAL日志延迟阈值，仅PostgreSQL
+     *
+     * @return
+     */
+    public Integer getWalDelayThreshold() {
+        return walDelayThreshold;
+    }
+
+    /**
+     * set WAL日志延迟阈值，仅PostgreSQL
+     *
+     * @param walDelayThreshold
+     */
+    public void setWalDelayThreshold(Integer walDelayThreshold) {
+        this.walDelayThreshold = walDelayThreshold;
+    }
+
 
     /**
      * get 读写分离代理后端实例负载均衡策略；当前支持的负载均衡策略请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -221,6 +253,7 @@ public class ReadWriteProxy  implements java.io.Serializable {
     public void setLoadBalancerPolicy(String loadBalancerPolicy) {
         this.loadBalancerPolicy = loadBalancerPolicy;
     }
+
 
     /**
      * get 后端实例健康检查配置详情
@@ -241,6 +274,7 @@ public class ReadWriteProxy  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 读写分离代理服务 ID
      *
@@ -250,6 +284,7 @@ public class ReadWriteProxy  implements java.io.Serializable {
         this.readWriteProxyId = readWriteProxyId;
         return this;
     }
+
 
     /**
      * set 读写分离代理服务的状态；参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -261,6 +296,7 @@ public class ReadWriteProxy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 读写分离代理服务关联的RDS实例 ID
      *
@@ -270,6 +306,7 @@ public class ReadWriteProxy  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 读写分离代理服务公网域名
@@ -281,6 +318,7 @@ public class ReadWriteProxy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 读写分离代理服务内网域名
      *
@@ -290,6 +328,7 @@ public class ReadWriteProxy  implements java.io.Serializable {
         this.internalDomainName = internalDomainName;
         return this;
     }
+
 
     /**
      * set 读写分离代理服务访问端口
@@ -301,8 +340,9 @@ public class ReadWriteProxy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 延迟阈值
+     * set 延迟阈值，仅MySQL
      *
      * @param delayThreshold
      */
@@ -310,6 +350,18 @@ public class ReadWriteProxy  implements java.io.Serializable {
         this.delayThreshold = delayThreshold;
         return this;
     }
+
+
+    /**
+     * set WAL日志延迟阈值，仅PostgreSQL
+     *
+     * @param walDelayThreshold
+     */
+    public ReadWriteProxy walDelayThreshold(Integer walDelayThreshold) {
+        this.walDelayThreshold = walDelayThreshold;
+        return this;
+    }
+
 
     /**
      * set 读写分离代理后端实例负载均衡策略；当前支持的负载均衡策略请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -320,6 +372,7 @@ public class ReadWriteProxy  implements java.io.Serializable {
         this.loadBalancerPolicy = loadBalancerPolicy;
         return this;
     }
+
 
     /**
      * set 后端实例健康检查配置详情

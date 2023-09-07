@@ -64,6 +64,7 @@ public class CreateInstanceByTimeInCrossRegionRequest extends JdcloudRequest imp
     private String regionId;
 
 
+
     /**
      * get 根据源实例的哪个时间点创建新实例
      *
@@ -81,6 +82,7 @@ public class CreateInstanceByTimeInCrossRegionRequest extends JdcloudRequest imp
     public void setRestoreTime(String restoreTime) {
         this.restoreTime = restoreTime;
     }
+
 
     /**
      * get 跨地域备份同步服务ID
@@ -100,6 +102,7 @@ public class CreateInstanceByTimeInCrossRegionRequest extends JdcloudRequest imp
         this.serviceId = serviceId;
     }
 
+
     /**
      * get 新建实例规格
      *
@@ -117,6 +120,7 @@ public class CreateInstanceByTimeInCrossRegionRequest extends JdcloudRequest imp
     public void setInstanceSpec(RestoredNewDBInstanceSpec instanceSpec) {
         this.instanceSpec = instanceSpec;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -137,6 +141,7 @@ public class CreateInstanceByTimeInCrossRegionRequest extends JdcloudRequest imp
     }
 
 
+
     /**
      * set 根据源实例的哪个时间点创建新实例
      *
@@ -146,6 +151,7 @@ public class CreateInstanceByTimeInCrossRegionRequest extends JdcloudRequest imp
         this.restoreTime = restoreTime;
         return this;
     }
+
 
     /**
      * set 跨地域备份同步服务ID
@@ -157,6 +163,7 @@ public class CreateInstanceByTimeInCrossRegionRequest extends JdcloudRequest imp
         return this;
     }
 
+
     /**
      * set 新建实例规格
      *
@@ -166,6 +173,7 @@ public class CreateInstanceByTimeInCrossRegionRequest extends JdcloudRequest imp
         this.instanceSpec = instanceSpec;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

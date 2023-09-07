@@ -62,6 +62,7 @@ public class Database  implements java.io.Serializable {
     /**
      * 该数据库相关账户权限列表
      */
+    
     private List<DBAccessPrivilege> accessPrivilege;
 
 
@@ -83,6 +84,7 @@ public class Database  implements java.io.Serializable {
         this.dbName = dbName;
     }
 
+
     /**
      * get 数据库状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **MySQL：不支持，不返回该字段**&lt;br&gt;- **SQL Server：返回该字段**
      *
@@ -100,6 +102,7 @@ public class Database  implements java.io.Serializable {
     public void setDbStatus(String dbStatus) {
         this.dbStatus = dbStatus;
     }
+
 
     /**
      * get 字符集，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -119,6 +122,7 @@ public class Database  implements java.io.Serializable {
         this.characterSetName = characterSetName;
     }
 
+
     /**
      * get 数据库创建时间，格式YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持SQL Server
      *
@@ -136,6 +140,7 @@ public class Database  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 数据库备注&lt;br&gt;- 仅支持MySQL
@@ -155,23 +160,25 @@ public class Database  implements java.io.Serializable {
         this.comment = comment;
     }
 
+
     /**
-     * get 该数据库相关账户权限列表
-     *
-     * @return
-     */
+    * get 该数据库相关账户权限列表
+    *
+    * @return
+    */
     public List<DBAccessPrivilege> getAccessPrivilege() {
         return accessPrivilege;
     }
 
     /**
-     * set 该数据库相关账户权限列表
-     *
-     * @param accessPrivilege
-     */
+    * set 该数据库相关账户权限列表
+    *
+    * @param accessPrivilege
+    */
     public void setAccessPrivilege(List<DBAccessPrivilege> accessPrivilege) {
         this.accessPrivilege = accessPrivilege;
     }
+
 
 
     /**
@@ -184,6 +191,7 @@ public class Database  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据库状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **MySQL：不支持，不返回该字段**&lt;br&gt;- **SQL Server：返回该字段**
      *
@@ -193,6 +201,7 @@ public class Database  implements java.io.Serializable {
         this.dbStatus = dbStatus;
         return this;
     }
+
 
     /**
      * set 字符集，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -204,6 +213,7 @@ public class Database  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据库创建时间，格式YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持SQL Server
      *
@@ -213,6 +223,7 @@ public class Database  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 数据库备注&lt;br&gt;- 仅支持MySQL
@@ -224,15 +235,17 @@ public class Database  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 该数据库相关账户权限列表
-     *
-     * @param accessPrivilege
-     */
+    * set 该数据库相关账户权限列表
+    *
+    * @param accessPrivilege
+    */
     public Database accessPrivilege(List<DBAccessPrivilege> accessPrivilege) {
         this.accessPrivilege = accessPrivilege;
         return this;
     }
+
 
 
     /**
@@ -246,5 +259,4 @@ public class Database  implements java.io.Serializable {
         }
         this.accessPrivilege.add(accessPrivilege);
     }
-
 }

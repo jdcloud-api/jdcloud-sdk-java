@@ -39,44 +39,47 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间，结束时间不能大于当前时间
+     * 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间
      * Required:true
      */
     @Required
     private String startTime;
 
     /**
-     * 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间，结束时间不能大于当前时间
+     * 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间
      * Required:true
      */
     @Required
     private String endTime;
 
     /**
-     * 查询哪个数据库的慢日志，不填表示返回所有数据库的慢日志
+     * 废弃字段，查询哪个数据库的慢日志，不填表示返回所有数据库的慢日志。
      */
     private String dbName;
 
     /**
-     * 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码
      */
     private Integer pageNumber;
 
     /**
-     * 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * 每页显示的数据条数，默认为10，取值范围：[10,100]
      */
     private Integer pageSize;
 
     /**
      * 慢日志明细的排序规则，不指定时按上报日志的时间戳降序返回所有的日志
      */
+    
     private List<Sort> sorts;
-
     /**
-     * filters
-     */
-    private List<Filter> filters;
+     * 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- account：实例账号名，operator仅支持eq或者in
+- keyword：SQL 关键词，模糊查询，operator仅支持eq或者in
 
+     */
+    
+    private List<Filter> filters;
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
@@ -92,8 +95,9 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
     private String instanceId;
 
 
+
     /**
-     * get 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间，结束时间不能大于当前时间
+     * get 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间
      *
      * @return
      */
@@ -102,7 +106,7 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间，结束时间不能大于当前时间
+     * set 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间
      *
      * @param startTime
      */
@@ -110,8 +114,9 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
         this.startTime = startTime;
     }
 
+
     /**
-     * get 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间，结束时间不能大于当前时间
+     * get 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间
      *
      * @return
      */
@@ -120,7 +125,7 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间，结束时间不能大于当前时间
+     * set 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间
      *
      * @param endTime
      */
@@ -128,8 +133,9 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
         this.endTime = endTime;
     }
 
+
     /**
-     * get 查询哪个数据库的慢日志，不填表示返回所有数据库的慢日志
+     * get 废弃字段，查询哪个数据库的慢日志，不填表示返回所有数据库的慢日志。
      *
      * @return
      */
@@ -138,7 +144,7 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 查询哪个数据库的慢日志，不填表示返回所有数据库的慢日志
+     * set 废弃字段，查询哪个数据库的慢日志，不填表示返回所有数据库的慢日志。
      *
      * @param dbName
      */
@@ -146,8 +152,9 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
         this.dbName = dbName;
     }
 
+
     /**
-     * get 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * get 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码
      *
      * @return
      */
@@ -156,7 +163,7 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码
      *
      * @param pageNumber
      */
@@ -164,8 +171,9 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
         this.pageNumber = pageNumber;
     }
 
+
     /**
-     * get 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * get 每页显示的数据条数，默认为10，取值范围：[10,100]
      *
      * @return
      */
@@ -174,7 +182,7 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * set 每页显示的数据条数，默认为10，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -182,41 +190,50 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get 慢日志明细的排序规则，不指定时按上报日志的时间戳降序返回所有的日志
-     *
-     * @return
-     */
+    * get 慢日志明细的排序规则，不指定时按上报日志的时间戳降序返回所有的日志
+    *
+    * @return
+    */
     public List<Sort> getSorts() {
         return sorts;
     }
 
     /**
-     * set 慢日志明细的排序规则，不指定时按上报日志的时间戳降序返回所有的日志
-     *
-     * @param sorts
-     */
+    * set 慢日志明细的排序规则，不指定时按上报日志的时间戳降序返回所有的日志
+    *
+    * @param sorts
+    */
     public void setSorts(List<Sort> sorts) {
         this.sorts = sorts;
     }
 
+
     /**
-     * get filters
-     *
-     * @return
-     */
+    * get 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- account：实例账号名，operator仅支持eq或者in
+- keyword：SQL 关键词，模糊查询，operator仅支持eq或者in
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set filters
-     *
-     * @param filters
-     */
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- account：实例账号名，operator仅支持eq或者in
+- keyword：SQL 关键词，模糊查询，operator仅支持eq或者in
+
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -235,6 +252,7 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -255,8 +273,9 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
     }
 
 
+
     /**
-     * set 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间，结束时间不能大于当前时间
+     * set 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间
      *
      * @param startTime
      */
@@ -265,8 +284,9 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
         return this;
     }
 
+
     /**
-     * set 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间，结束时间不能大于当前时间
+     * set 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天, 开始时间不能大于结束时间
      *
      * @param endTime
      */
@@ -275,8 +295,9 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
         return this;
     }
 
+
     /**
-     * set 查询哪个数据库的慢日志，不填表示返回所有数据库的慢日志
+     * set 废弃字段，查询哪个数据库的慢日志，不填表示返回所有数据库的慢日志。
      *
      * @param dbName
      */
@@ -285,8 +306,9 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
         return this;
     }
 
+
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞]。pageNumber为-1时，返回所有数据页码
      *
      * @param pageNumber
      */
@@ -295,8 +317,9 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
         return this;
     }
 
+
     /**
-     * set 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * set 每页显示的数据条数，默认为10，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -305,25 +328,31 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
         return this;
     }
 
+
     /**
-     * set 慢日志明细的排序规则，不指定时按上报日志的时间戳降序返回所有的日志
-     *
-     * @param sorts
-     */
+    * set 慢日志明细的排序规则，不指定时按上报日志的时间戳降序返回所有的日志
+    *
+    * @param sorts
+    */
     public DescribeSlowLogAttributesRequest sorts(List<Sort> sorts) {
         this.sorts = sorts;
         return this;
     }
 
+
     /**
-     * set filters
-     *
-     * @param filters
-     */
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- account：实例账号名，operator仅支持eq或者in
+- keyword：SQL 关键词，模糊查询，operator仅支持eq或者in
+
+    *
+    * @param filters
+    */
     public DescribeSlowLogAttributesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -335,6 +364,7 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -344,6 +374,7 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -359,7 +390,10 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
     }
 
     /**
-     * add item to filters
+     * add item to 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- account：实例账号名，operator仅支持eq或者in
+- keyword：SQL 关键词，模糊查询，operator仅支持eq或者in
+
      *
      * @param filter
      */
@@ -369,5 +403,4 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
         }
         this.filters.add(filter);
     }
-
 }

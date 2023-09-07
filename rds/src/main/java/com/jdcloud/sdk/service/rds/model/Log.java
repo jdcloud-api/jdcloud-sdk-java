@@ -63,6 +63,7 @@ public class Log  implements java.io.Serializable {
     private String internalURL;
 
 
+
     /**
      * get 日志文件id
      *
@@ -80,6 +81,7 @@ public class Log  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get 日志文件名称
@@ -99,6 +101,7 @@ public class Log  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 日志文件大小，单位Byte
      *
@@ -116,6 +119,7 @@ public class Log  implements java.io.Serializable {
     public void setSizeByte(Integer sizeByte) {
         this.sizeByte = sizeByte;
     }
+
 
     /**
      * get 日志最后更改时间
@@ -135,6 +139,7 @@ public class Log  implements java.io.Serializable {
         this.lastModified = lastModified;
     }
 
+
     /**
      * get 公网下载链接
      *
@@ -152,6 +157,7 @@ public class Log  implements java.io.Serializable {
     public void setPublicURL(String publicURL) {
         this.publicURL = publicURL;
     }
+
 
     /**
      * get 内网下载链接
@@ -172,6 +178,7 @@ public class Log  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 日志文件id
      *
@@ -181,6 +188,7 @@ public class Log  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 日志文件名称
@@ -192,6 +200,7 @@ public class Log  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志文件大小，单位Byte
      *
@@ -201,6 +210,7 @@ public class Log  implements java.io.Serializable {
         this.sizeByte = sizeByte;
         return this;
     }
+
 
     /**
      * set 日志最后更改时间
@@ -212,6 +222,7 @@ public class Log  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 公网下载链接
      *
@@ -221,6 +232,7 @@ public class Log  implements java.io.Serializable {
         this.publicURL = publicURL;
         return this;
     }
+
 
     /**
      * set 内网下载链接

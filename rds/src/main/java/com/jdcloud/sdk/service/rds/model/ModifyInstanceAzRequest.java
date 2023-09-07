@@ -41,8 +41,8 @@ public class ModifyInstanceAzRequest extends JdcloudRequest implements java.io.S
      * Required:true
      */
     @Required
+    
     private List<String> newAzId;
-
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
@@ -58,23 +58,25 @@ public class ModifyInstanceAzRequest extends JdcloudRequest implements java.io.S
     private String instanceId;
 
 
+
     /**
-     * get 新可用区ID。 如果是单机实例，只需输入一个可用区；如果是主备实例，则必须输入两个可用区ID：第一个为主节点所在可用区，第二个为备节点所在可用区。主备两个可用区可以相同，也可以不同
-     *
-     * @return
-     */
+    * get 新可用区ID。 如果是单机实例，只需输入一个可用区；如果是主备实例，则必须输入两个可用区ID：第一个为主节点所在可用区，第二个为备节点所在可用区。主备两个可用区可以相同，也可以不同
+    *
+    * @return
+    */
     public List<String> getNewAzId() {
         return newAzId;
     }
 
     /**
-     * set 新可用区ID。 如果是单机实例，只需输入一个可用区；如果是主备实例，则必须输入两个可用区ID：第一个为主节点所在可用区，第二个为备节点所在可用区。主备两个可用区可以相同，也可以不同
-     *
-     * @param newAzId
-     */
+    * set 新可用区ID。 如果是单机实例，只需输入一个可用区；如果是主备实例，则必须输入两个可用区ID：第一个为主节点所在可用区，第二个为备节点所在可用区。主备两个可用区可以相同，也可以不同
+    *
+    * @param newAzId
+    */
     public void setNewAzId(List<String> newAzId) {
         this.newAzId = newAzId;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -93,6 +95,7 @@ public class ModifyInstanceAzRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -113,15 +116,17 @@ public class ModifyInstanceAzRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
-     * set 新可用区ID。 如果是单机实例，只需输入一个可用区；如果是主备实例，则必须输入两个可用区ID：第一个为主节点所在可用区，第二个为备节点所在可用区。主备两个可用区可以相同，也可以不同
-     *
-     * @param newAzId
-     */
+    * set 新可用区ID。 如果是单机实例，只需输入一个可用区；如果是主备实例，则必须输入两个可用区ID：第一个为主节点所在可用区，第二个为备节点所在可用区。主备两个可用区可以相同，也可以不同
+    *
+    * @param newAzId
+    */
     public ModifyInstanceAzRequest newAzId(List<String> newAzId) {
         this.newAzId = newAzId;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -133,6 +138,7 @@ public class ModifyInstanceAzRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -142,6 +148,7 @@ public class ModifyInstanceAzRequest extends JdcloudRequest implements java.io.S
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -155,5 +162,4 @@ public class ModifyInstanceAzRequest extends JdcloudRequest implements java.io.S
         }
         this.newAzId.add(newAzId);
     }
-
 }

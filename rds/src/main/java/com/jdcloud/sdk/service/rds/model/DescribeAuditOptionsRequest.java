@@ -56,6 +56,7 @@ public class DescribeAuditOptionsRequest extends JdcloudRequest implements java.
     private String instanceId;
 
 
+
     /**
      * get 审计选项类别，**大小写敏感**，目前支持两种类型：&lt;br&gt;（1）AuditOptions开头：在disalbed参数中返回SQL Server各个版本支持的所有选项，支持的名称为&lt;br&gt;AuditOptions2008R2&lt;br&gt;AuditOptions2012&lt;br&gt;AuditOptions2014&lt;br&gt;AuditOptions2016&lt;br&gt;例如输入参数为&quot;AuditOptions2016&quot;，则在disabled字段中返回SQL Server 2016 版本所支持的所有的审计选项&lt;br&gt;（2）AuditDefault开头：京东云建议的默认选项,在enabled参数中返回建议开启的选项，在disabled参数中返回不开启的选项，支持的名称为：&lt;br&gt;AuditDefault2008R2&lt;br&gt;AuditDefault2012&lt;br&gt;AuditDefault2014&lt;br&gt;AuditDefault2016&lt;br&gt;例如输入参数为&quot;AuditDefault2016&quot;，则在enabled字段返回SQL Server 2016 版本中京东云建议开启的审计选项，在disabled字段中返回建议不开启的选项
      *
@@ -74,6 +75,7 @@ public class DescribeAuditOptionsRequest extends JdcloudRequest implements java.
         this.name = name;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -91,6 +93,7 @@ public class DescribeAuditOptionsRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -111,6 +114,7 @@ public class DescribeAuditOptionsRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 审计选项类别，**大小写敏感**，目前支持两种类型：&lt;br&gt;（1）AuditOptions开头：在disalbed参数中返回SQL Server各个版本支持的所有选项，支持的名称为&lt;br&gt;AuditOptions2008R2&lt;br&gt;AuditOptions2012&lt;br&gt;AuditOptions2014&lt;br&gt;AuditOptions2016&lt;br&gt;例如输入参数为&quot;AuditOptions2016&quot;，则在disabled字段中返回SQL Server 2016 版本所支持的所有的审计选项&lt;br&gt;（2）AuditDefault开头：京东云建议的默认选项,在enabled参数中返回建议开启的选项，在disabled参数中返回不开启的选项，支持的名称为：&lt;br&gt;AuditDefault2008R2&lt;br&gt;AuditDefault2012&lt;br&gt;AuditDefault2014&lt;br&gt;AuditDefault2016&lt;br&gt;例如输入参数为&quot;AuditDefault2016&quot;，则在enabled字段返回SQL Server 2016 版本中京东云建议开启的审计选项，在disabled字段中返回建议不开启的选项
      *
@@ -121,6 +125,7 @@ public class DescribeAuditOptionsRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -130,6 +135,7 @@ public class DescribeAuditOptionsRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

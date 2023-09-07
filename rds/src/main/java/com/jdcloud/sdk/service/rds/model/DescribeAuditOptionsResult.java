@@ -38,70 +38,75 @@ public class DescribeAuditOptionsResult extends JdcloudResult implements java.io
     /**
      * AuditDefault类模板：返回建议开启的审计选项。&lt;br&gt; AuditOptions类模板：不返回该参数
      */
+    
     private List<String> enabled;
-
     /**
      * AuditDefault类模板：返回未开启的审计选项&lt;br&gt;AuditOptions类模板：返回所有的审计选项
      */
+    
     private List<String> disabled;
 
 
     /**
-     * get AuditDefault类模板：返回建议开启的审计选项。&lt;br&gt; AuditOptions类模板：不返回该参数
-     *
-     * @return
-     */
+    * get AuditDefault类模板：返回建议开启的审计选项。&lt;br&gt; AuditOptions类模板：不返回该参数
+    *
+    * @return
+    */
     public List<String> getEnabled() {
         return enabled;
     }
 
     /**
-     * set AuditDefault类模板：返回建议开启的审计选项。&lt;br&gt; AuditOptions类模板：不返回该参数
-     *
-     * @param enabled
-     */
+    * set AuditDefault类模板：返回建议开启的审计选项。&lt;br&gt; AuditOptions类模板：不返回该参数
+    *
+    * @param enabled
+    */
     public void setEnabled(List<String> enabled) {
         this.enabled = enabled;
     }
 
+
     /**
-     * get AuditDefault类模板：返回未开启的审计选项&lt;br&gt;AuditOptions类模板：返回所有的审计选项
-     *
-     * @return
-     */
+    * get AuditDefault类模板：返回未开启的审计选项&lt;br&gt;AuditOptions类模板：返回所有的审计选项
+    *
+    * @return
+    */
     public List<String> getDisabled() {
         return disabled;
     }
 
     /**
-     * set AuditDefault类模板：返回未开启的审计选项&lt;br&gt;AuditOptions类模板：返回所有的审计选项
-     *
-     * @param disabled
-     */
+    * set AuditDefault类模板：返回未开启的审计选项&lt;br&gt;AuditOptions类模板：返回所有的审计选项
+    *
+    * @param disabled
+    */
     public void setDisabled(List<String> disabled) {
         this.disabled = disabled;
     }
 
 
+
     /**
-     * set AuditDefault类模板：返回建议开启的审计选项。&lt;br&gt; AuditOptions类模板：不返回该参数
-     *
-     * @param enabled
-     */
+    * set AuditDefault类模板：返回建议开启的审计选项。&lt;br&gt; AuditOptions类模板：不返回该参数
+    *
+    * @param enabled
+    */
     public DescribeAuditOptionsResult enabled(List<String> enabled) {
         this.enabled = enabled;
         return this;
     }
 
+
     /**
-     * set AuditDefault类模板：返回未开启的审计选项&lt;br&gt;AuditOptions类模板：返回所有的审计选项
-     *
-     * @param disabled
-     */
+    * set AuditDefault类模板：返回未开启的审计选项&lt;br&gt;AuditOptions类模板：返回所有的审计选项
+    *
+    * @param disabled
+    */
     public DescribeAuditOptionsResult disabled(List<String> disabled) {
         this.disabled = disabled;
         return this;
     }
+
 
 
     /**
@@ -127,5 +132,4 @@ public class DescribeAuditOptionsResult extends JdcloudResult implements java.io
         }
         this.disabled.add(disabled);
     }
-
 }

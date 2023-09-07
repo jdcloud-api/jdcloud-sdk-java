@@ -68,6 +68,7 @@ public class ParameterGroupParameter  implements java.io.Serializable {
     private String needRestart;
 
 
+
     /**
      * get 参数名称
      *
@@ -85,6 +86,7 @@ public class ParameterGroupParameter  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 参数描述
@@ -104,6 +106,7 @@ public class ParameterGroupParameter  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 参数修改后的数值，但不一定生效，需要视该参数生效是否需要重启
      *
@@ -121,6 +124,7 @@ public class ParameterGroupParameter  implements java.io.Serializable {
     public void setConfigureValue(String configureValue) {
         this.configureValue = configureValue;
     }
+
 
     /**
      * get 参数默认值
@@ -140,6 +144,7 @@ public class ParameterGroupParameter  implements java.io.Serializable {
         this.defaultValue = defaultValue;
     }
 
+
     /**
      * get 该参数数值的允许修改范围
      *
@@ -158,6 +163,7 @@ public class ParameterGroupParameter  implements java.io.Serializable {
         this.range = range;
     }
 
+
     /**
      * get 参数数值的类型
      *
@@ -175,6 +181,7 @@ public class ParameterGroupParameter  implements java.io.Serializable {
     public void setType(String type) {
         this.type = type;
     }
+
 
     /**
      * get 参数修改是否需要重启生效.- true:参数需要重启才能生效- false:参数生效无需重启
@@ -195,6 +202,7 @@ public class ParameterGroupParameter  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 参数名称
      *
@@ -204,6 +212,7 @@ public class ParameterGroupParameter  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 参数描述
@@ -215,6 +224,7 @@ public class ParameterGroupParameter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 参数修改后的数值，但不一定生效，需要视该参数生效是否需要重启
      *
@@ -224,6 +234,7 @@ public class ParameterGroupParameter  implements java.io.Serializable {
         this.configureValue = configureValue;
         return this;
     }
+
 
     /**
      * set 参数默认值
@@ -235,6 +246,7 @@ public class ParameterGroupParameter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 该参数数值的允许修改范围
      *
@@ -245,6 +257,7 @@ public class ParameterGroupParameter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 参数数值的类型
      *
@@ -254,6 +267,7 @@ public class ParameterGroupParameter  implements java.io.Serializable {
         this.type = type;
         return this;
     }
+
 
     /**
      * set 参数修改是否需要重启生效.- true:参数需要重启才能生效- false:参数生效无需重启

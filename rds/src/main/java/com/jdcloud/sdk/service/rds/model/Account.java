@@ -67,6 +67,7 @@ public class Account  implements java.io.Serializable {
     /**
      * 具有的权限
      */
+    
     private List<AccountPrivilege> accountPrivileges;
 
 
@@ -88,6 +89,7 @@ public class Account  implements java.io.Serializable {
         this.accountName = accountName;
     }
 
+
     /**
      * get 账号状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **MySQL：不支持，不返回该字段**&lt;br&gt;- **SQL Server：返回该字段**
      *
@@ -105,6 +107,7 @@ public class Account  implements java.io.Serializable {
     public void setAccountStatus(String accountStatus) {
         this.accountStatus = accountStatus;
     }
+
 
     /**
      * get 账号类型，normal：普通，super：高权限&lt;br&gt;- 仅支持SQL Server
@@ -124,6 +127,7 @@ public class Account  implements java.io.Serializable {
         this.accountType = accountType;
     }
 
+
     /**
      * get 创建账号时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持PostgreSQL
      *
@@ -141,6 +145,7 @@ public class Account  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 修改账号时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持PostgreSQL
@@ -160,6 +165,7 @@ public class Account  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 账号备注内容&lt;br&gt;- 仅支持PostgreSQL
      *
@@ -178,23 +184,25 @@ public class Account  implements java.io.Serializable {
         this.notes = notes;
     }
 
+
     /**
-     * get 具有的权限
-     *
-     * @return
-     */
+    * get 具有的权限
+    *
+    * @return
+    */
     public List<AccountPrivilege> getAccountPrivileges() {
         return accountPrivileges;
     }
 
     /**
-     * set 具有的权限
-     *
-     * @param accountPrivileges
-     */
+    * set 具有的权限
+    *
+    * @param accountPrivileges
+    */
     public void setAccountPrivileges(List<AccountPrivilege> accountPrivileges) {
         this.accountPrivileges = accountPrivileges;
     }
+
 
 
     /**
@@ -207,6 +215,7 @@ public class Account  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账号状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **MySQL：不支持，不返回该字段**&lt;br&gt;- **SQL Server：返回该字段**
      *
@@ -216,6 +225,7 @@ public class Account  implements java.io.Serializable {
         this.accountStatus = accountStatus;
         return this;
     }
+
 
     /**
      * set 账号类型，normal：普通，super：高权限&lt;br&gt;- 仅支持SQL Server
@@ -227,6 +237,7 @@ public class Account  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建账号时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持PostgreSQL
      *
@@ -236,6 +247,7 @@ public class Account  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 修改账号时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持PostgreSQL
@@ -247,6 +259,7 @@ public class Account  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账号备注内容&lt;br&gt;- 仅支持PostgreSQL
      *
@@ -257,15 +270,17 @@ public class Account  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 具有的权限
-     *
-     * @param accountPrivileges
-     */
+    * set 具有的权限
+    *
+    * @param accountPrivileges
+    */
     public Account accountPrivileges(List<AccountPrivilege> accountPrivileges) {
         this.accountPrivileges = accountPrivileges;
         return this;
     }
+
 
 
     /**
@@ -279,5 +294,4 @@ public class Account  implements java.io.Serializable {
         }
         this.accountPrivileges.add(accountPrivilege);
     }
-
 }

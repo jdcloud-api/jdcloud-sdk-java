@@ -48,6 +48,7 @@ public class Parameter  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get 参数名称
      *
@@ -65,6 +66,7 @@ public class Parameter  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 参数修改值
@@ -85,6 +87,7 @@ public class Parameter  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 参数名称
      *
@@ -94,6 +97,7 @@ public class Parameter  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 参数修改值

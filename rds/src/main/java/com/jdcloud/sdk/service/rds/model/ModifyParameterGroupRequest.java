@@ -56,6 +56,7 @@ public class ModifyParameterGroupRequest extends JdcloudRequest implements java.
     private String instanceId;
 
 
+
     /**
      * get 参数组ID
      *
@@ -74,6 +75,7 @@ public class ModifyParameterGroupRequest extends JdcloudRequest implements java.
         this.parameterGroupId = parameterGroupId;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -91,6 +93,7 @@ public class ModifyParameterGroupRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -111,6 +114,7 @@ public class ModifyParameterGroupRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 参数组ID
      *
@@ -121,6 +125,7 @@ public class ModifyParameterGroupRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -130,6 +135,7 @@ public class ModifyParameterGroupRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

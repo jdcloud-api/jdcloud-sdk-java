@@ -68,6 +68,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
     private String regionId;
 
 
+
     /**
      * get 实例引擎类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -85,6 +86,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
     public void setEngine(String engine) {
         this.engine = engine;
     }
+
 
     /**
      * get 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -104,6 +106,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
         this.engineVersion = engineVersion;
     }
 
+
     /**
      * get 参数组的名字
      *
@@ -122,6 +125,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
         this.parameterGroupName = parameterGroupName;
     }
 
+
     /**
      * get 参数组的描述
      *
@@ -139,6 +143,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get Region ID
@@ -159,6 +164,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 实例引擎类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -168,6 +174,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
         this.engine = engine;
         return this;
     }
+
 
     /**
      * set 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -179,6 +186,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 参数组的名字
      *
@@ -189,6 +197,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 参数组的描述
      *
@@ -198,6 +207,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
         this.description = description;
         return this;
     }
+
 
     /**
      * set Region ID

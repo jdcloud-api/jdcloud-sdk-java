@@ -38,12 +38,12 @@ public class ErrorLogDigest  implements java.io.Serializable {
     private String startTime;
 
     /**
-     * 数据库名，表示该SQL是在哪个数据库中执行的
+     * 数据库名，表示该SQL是在哪个数据库中执行的&lt;br&gt;- MySQL不支持
      */
     private String dbName;
 
     /**
-     * 数据库账号，表示该数据库在哪个账号下面
+     * 数据库账号，表示该数据库在哪个账号下面&lt;br&gt;- MySQL不支持
      */
     private String dbNameAccount;
 
@@ -53,9 +53,10 @@ public class ErrorLogDigest  implements java.io.Serializable {
     private String errorLogInformation;
 
     /**
-     * 错误日志级别
+     * 错误日志级别&lt;br&gt;- MySQL不支持
      */
     private String errorSeverity;
+
 
 
     /**
@@ -76,8 +77,9 @@ public class ErrorLogDigest  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
-     * get 数据库名，表示该SQL是在哪个数据库中执行的
+     * get 数据库名，表示该SQL是在哪个数据库中执行的&lt;br&gt;- MySQL不支持
      *
      * @return
      */
@@ -86,7 +88,7 @@ public class ErrorLogDigest  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库名，表示该SQL是在哪个数据库中执行的
+     * set 数据库名，表示该SQL是在哪个数据库中执行的&lt;br&gt;- MySQL不支持
      *
      * @param dbName
      */
@@ -94,8 +96,9 @@ public class ErrorLogDigest  implements java.io.Serializable {
         this.dbName = dbName;
     }
 
+
     /**
-     * get 数据库账号，表示该数据库在哪个账号下面
+     * get 数据库账号，表示该数据库在哪个账号下面&lt;br&gt;- MySQL不支持
      *
      * @return
      */
@@ -104,13 +107,14 @@ public class ErrorLogDigest  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库账号，表示该数据库在哪个账号下面
+     * set 数据库账号，表示该数据库在哪个账号下面&lt;br&gt;- MySQL不支持
      *
      * @param dbNameAccount
      */
     public void setDbNameAccount(String dbNameAccount) {
         this.dbNameAccount = dbNameAccount;
     }
+
 
     /**
      * get 错误日志信息
@@ -130,8 +134,9 @@ public class ErrorLogDigest  implements java.io.Serializable {
         this.errorLogInformation = errorLogInformation;
     }
 
+
     /**
-     * get 错误日志级别
+     * get 错误日志级别&lt;br&gt;- MySQL不支持
      *
      * @return
      */
@@ -140,13 +145,14 @@ public class ErrorLogDigest  implements java.io.Serializable {
     }
 
     /**
-     * set 错误日志级别
+     * set 错误日志级别&lt;br&gt;- MySQL不支持
      *
      * @param errorSeverity
      */
     public void setErrorSeverity(String errorSeverity) {
         this.errorSeverity = errorSeverity;
     }
+
 
 
     /**
@@ -159,8 +165,9 @@ public class ErrorLogDigest  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 数据库名，表示该SQL是在哪个数据库中执行的
+     * set 数据库名，表示该SQL是在哪个数据库中执行的&lt;br&gt;- MySQL不支持
      *
      * @param dbName
      */
@@ -169,8 +176,9 @@ public class ErrorLogDigest  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 数据库账号，表示该数据库在哪个账号下面
+     * set 数据库账号，表示该数据库在哪个账号下面&lt;br&gt;- MySQL不支持
      *
      * @param dbNameAccount
      */
@@ -178,6 +186,7 @@ public class ErrorLogDigest  implements java.io.Serializable {
         this.dbNameAccount = dbNameAccount;
         return this;
     }
+
 
     /**
      * set 错误日志信息
@@ -189,8 +198,9 @@ public class ErrorLogDigest  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 错误日志级别
+     * set 错误日志级别&lt;br&gt;- MySQL不支持
      *
      * @param errorSeverity
      */

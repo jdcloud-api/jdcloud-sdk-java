@@ -63,6 +63,7 @@ public class DBInstanceParameter  implements java.io.Serializable {
     private String needRestart;
 
 
+
     /**
      * get 参数名称
      *
@@ -80,6 +81,7 @@ public class DBInstanceParameter  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 参数描述
@@ -99,6 +101,7 @@ public class DBInstanceParameter  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 参数修改后的数值，但不一定生效，需要视该参数生效是否需要重启
      *
@@ -116,6 +119,7 @@ public class DBInstanceParameter  implements java.io.Serializable {
     public void setConfigureValue(String configureValue) {
         this.configureValue = configureValue;
     }
+
 
     /**
      * get 当前在实例中生效的数值
@@ -135,6 +139,7 @@ public class DBInstanceParameter  implements java.io.Serializable {
         this.runningValue = runningValue;
     }
 
+
     /**
      * get 该参数数值的允许范围
      *
@@ -152,6 +157,7 @@ public class DBInstanceParameter  implements java.io.Serializable {
     public void setRange(String range) {
         this.range = range;
     }
+
 
     /**
      * get 修改是否需要重启生效.- true:参数需要重启才能生效- false:参数生效无需重启
@@ -172,6 +178,7 @@ public class DBInstanceParameter  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 参数名称
      *
@@ -181,6 +188,7 @@ public class DBInstanceParameter  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 参数描述
@@ -192,6 +200,7 @@ public class DBInstanceParameter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 参数修改后的数值，但不一定生效，需要视该参数生效是否需要重启
      *
@@ -201,6 +210,7 @@ public class DBInstanceParameter  implements java.io.Serializable {
         this.configureValue = configureValue;
         return this;
     }
+
 
     /**
      * set 当前在实例中生效的数值
@@ -212,6 +222,7 @@ public class DBInstanceParameter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 该参数数值的允许范围
      *
@@ -221,6 +232,7 @@ public class DBInstanceParameter  implements java.io.Serializable {
         this.range = range;
         return this;
     }
+
 
     /**
      * set 修改是否需要重启生效.- true:参数需要重启才能生效- false:参数生效无需重启

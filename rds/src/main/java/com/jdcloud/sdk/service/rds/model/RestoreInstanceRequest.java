@@ -54,6 +54,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
     private String instanceId;
 
 
+
     /**
      * get 用于恢复的备份Id，仅限于本实例生成的备份
      *
@@ -72,6 +73,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
         this.backupId = backupId;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -89,6 +91,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -109,6 +112,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 用于恢复的备份Id，仅限于本实例生成的备份
      *
@@ -119,6 +123,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -128,6 +133,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

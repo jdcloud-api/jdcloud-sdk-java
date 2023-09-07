@@ -38,37 +38,40 @@ public class DescribeAuditResult extends JdcloudResult implements java.io.Serial
     /**
      * 当前已开启的审计选项。如当前实例未开启审计，则返回空数组
      */
+    
     private List<String> enabled;
 
 
     /**
-     * get 当前已开启的审计选项。如当前实例未开启审计，则返回空数组
-     *
-     * @return
-     */
+    * get 当前已开启的审计选项。如当前实例未开启审计，则返回空数组
+    *
+    * @return
+    */
     public List<String> getEnabled() {
         return enabled;
     }
 
     /**
-     * set 当前已开启的审计选项。如当前实例未开启审计，则返回空数组
-     *
-     * @param enabled
-     */
+    * set 当前已开启的审计选项。如当前实例未开启审计，则返回空数组
+    *
+    * @param enabled
+    */
     public void setEnabled(List<String> enabled) {
         this.enabled = enabled;
     }
 
 
+
     /**
-     * set 当前已开启的审计选项。如当前实例未开启审计，则返回空数组
-     *
-     * @param enabled
-     */
+    * set 当前已开启的审计选项。如当前实例未开启审计，则返回空数组
+    *
+    * @param enabled
+    */
     public DescribeAuditResult enabled(List<String> enabled) {
         this.enabled = enabled;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class DescribeAuditResult extends JdcloudResult implements java.io.Serial
         }
         this.enabled.add(enabled);
     }
-
 }

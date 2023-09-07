@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.ErrorLogDigest;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询PostgreSQL实例的错误日志的概要信息。&lt;br&gt;- 仅支持PostgreSQL
+ * 查询错误日志的概要信息
  */
 public class DescribeErrorLogResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,31 +39,33 @@ public class DescribeErrorLogResult extends JdcloudResult implements java.io.Ser
     /**
      * errorLogs
      */
+    
     private List<ErrorLogDigest> errorLogs;
-
     /**
      * 总记录条数
      */
     private Integer totalCount;
 
 
+
     /**
-     * get errorLogs
-     *
-     * @return
-     */
+    * get errorLogs
+    *
+    * @return
+    */
     public List<ErrorLogDigest> getErrorLogs() {
         return errorLogs;
     }
 
     /**
-     * set errorLogs
-     *
-     * @param errorLogs
-     */
+    * set errorLogs
+    *
+    * @param errorLogs
+    */
     public void setErrorLogs(List<ErrorLogDigest> errorLogs) {
         this.errorLogs = errorLogs;
     }
+
 
     /**
      * get 总记录条数
@@ -84,15 +86,17 @@ public class DescribeErrorLogResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
-     * set errorLogs
-     *
-     * @param errorLogs
-     */
+    * set errorLogs
+    *
+    * @param errorLogs
+    */
     public DescribeErrorLogResult errorLogs(List<ErrorLogDigest> errorLogs) {
         this.errorLogs = errorLogs;
         return this;
     }
+
 
     /**
      * set 总记录条数
@@ -103,6 +107,7 @@ public class DescribeErrorLogResult extends JdcloudResult implements java.io.Ser
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeErrorLogResult extends JdcloudResult implements java.io.Ser
         }
         this.errorLogs.add(errorLog);
     }
-
 }

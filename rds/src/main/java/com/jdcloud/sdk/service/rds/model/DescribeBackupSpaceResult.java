@@ -49,6 +49,7 @@ public class DescribeBackupSpaceResult extends JdcloudResult implements java.io.
     private Double current;
 
 
+
     /**
      * get 当前地域下总的免费备份空间大小，单位GB
      *
@@ -67,6 +68,7 @@ public class DescribeBackupSpaceResult extends JdcloudResult implements java.io.
         this.totalFreeSpace = totalFreeSpace;
     }
 
+
     /**
      * get 当前地域下所有实例的备份大小，单位GB
      *
@@ -84,6 +86,7 @@ public class DescribeBackupSpaceResult extends JdcloudResult implements java.io.
     public void setTotalUsedSpace(Double totalUsedSpace) {
         this.totalUsedSpace = totalUsedSpace;
     }
+
 
     /**
      * get 当前实例的备份大小，单位GB
@@ -104,6 +107,7 @@ public class DescribeBackupSpaceResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
      * set 当前地域下总的免费备份空间大小，单位GB
      *
@@ -114,6 +118,7 @@ public class DescribeBackupSpaceResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 当前地域下所有实例的备份大小，单位GB
      *
@@ -123,6 +128,7 @@ public class DescribeBackupSpaceResult extends JdcloudResult implements java.io.
         this.totalUsedSpace = totalUsedSpace;
         return this;
     }
+
 
     /**
      * set 当前实例的备份大小，单位GB

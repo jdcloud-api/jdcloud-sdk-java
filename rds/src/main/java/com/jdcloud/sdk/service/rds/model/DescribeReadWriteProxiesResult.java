@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.ReadWriteProxy;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看RDS读写分离代理列表&lt;br&gt;- 仅支持MySQL
+ * 查看RDS读写分离代理列表&lt;br&gt;- 仅支持MySQL、PostgreSQL
  */
 public class DescribeReadWriteProxiesResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,31 +39,33 @@ public class DescribeReadWriteProxiesResult extends JdcloudResult implements jav
     /**
      * readWriteProxies
      */
+    
     private List<ReadWriteProxy> readWriteProxies;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get readWriteProxies
-     *
-     * @return
-     */
+    * get readWriteProxies
+    *
+    * @return
+    */
     public List<ReadWriteProxy> getReadWriteProxies() {
         return readWriteProxies;
     }
 
     /**
-     * set readWriteProxies
-     *
-     * @param readWriteProxies
-     */
+    * set readWriteProxies
+    *
+    * @param readWriteProxies
+    */
     public void setReadWriteProxies(List<ReadWriteProxy> readWriteProxies) {
         this.readWriteProxies = readWriteProxies;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeReadWriteProxiesResult extends JdcloudResult implements jav
     }
 
 
+
     /**
-     * set readWriteProxies
-     *
-     * @param readWriteProxies
-     */
+    * set readWriteProxies
+    *
+    * @param readWriteProxies
+    */
     public DescribeReadWriteProxiesResult readWriteProxies(List<ReadWriteProxy> readWriteProxies) {
         this.readWriteProxies = readWriteProxies;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeReadWriteProxiesResult extends JdcloudResult implements jav
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeReadWriteProxiesResult extends JdcloudResult implements jav
         }
         this.readWriteProxies.add(readWriteProxie);
     }
-
 }

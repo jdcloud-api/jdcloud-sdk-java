@@ -43,6 +43,7 @@ public class FileDownloadURL  implements java.io.Serializable {
     private String internalURL;
 
 
+
     /**
      * get 公网下载链接，若当前不可下载，则为空串
      *
@@ -60,6 +61,7 @@ public class FileDownloadURL  implements java.io.Serializable {
     public void setPublicURL(String publicURL) {
         this.publicURL = publicURL;
     }
+
 
     /**
      * get 内网下载链接，若当前不可下载，则为空串
@@ -80,6 +82,7 @@ public class FileDownloadURL  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 公网下载链接，若当前不可下载，则为空串
      *
@@ -89,6 +92,7 @@ public class FileDownloadURL  implements java.io.Serializable {
         this.publicURL = publicURL;
         return this;
     }
+
 
     /**
      * set 内网下载链接，若当前不可下载，则为空串

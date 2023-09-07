@@ -44,6 +44,7 @@ public class DescribeUpgradePlanResult extends JdcloudResult implements java.io.
     private Integer upgradeSchedule;
 
 
+
     /**
      * get 升级后的新版本
      *
@@ -61,6 +62,7 @@ public class DescribeUpgradePlanResult extends JdcloudResult implements java.io.
     public void setNewVersion(String newVersion) {
         this.newVersion = newVersion;
     }
+
 
     /**
      * get 计划开始升级的时间，1：立即开始升级，2：维护时间窗口升级
@@ -81,6 +83,7 @@ public class DescribeUpgradePlanResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
      * set 升级后的新版本
      *
@@ -90,6 +93,7 @@ public class DescribeUpgradePlanResult extends JdcloudResult implements java.io.
         this.newVersion = newVersion;
         return this;
     }
+
 
     /**
      * set 计划开始升级的时间，1：立即开始升级，2：维护时间窗口升级

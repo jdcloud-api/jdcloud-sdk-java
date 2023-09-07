@@ -56,6 +56,7 @@ public class ModifyInstanceNameRequest extends JdcloudRequest implements java.io
     private String instanceId;
 
 
+
     /**
      * get 实例名称，名称支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
@@ -74,6 +75,7 @@ public class ModifyInstanceNameRequest extends JdcloudRequest implements java.io
         this.instanceName = instanceName;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -91,6 +93,7 @@ public class ModifyInstanceNameRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -111,6 +114,7 @@ public class ModifyInstanceNameRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 实例名称，名称支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
@@ -121,6 +125,7 @@ public class ModifyInstanceNameRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -130,6 +135,7 @@ public class ModifyInstanceNameRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

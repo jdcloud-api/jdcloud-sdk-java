@@ -39,13 +39,13 @@ public class GrantAccountPrivilegeRequest extends JdcloudRequest implements java
     /**
      * 设置数据库细粒度权限内容
      */
+    
     private List<DatabasePrivilege> databasePrivileges;
-
     /**
      * 设置全局权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      */
+    
     private List<String> globalPrivileges;
-
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
@@ -68,41 +68,44 @@ public class GrantAccountPrivilegeRequest extends JdcloudRequest implements java
     private String accountName;
 
 
+
     /**
-     * get 设置数据库细粒度权限内容
-     *
-     * @return
-     */
+    * get 设置数据库细粒度权限内容
+    *
+    * @return
+    */
     public List<DatabasePrivilege> getDatabasePrivileges() {
         return databasePrivileges;
     }
 
     /**
-     * set 设置数据库细粒度权限内容
-     *
-     * @param databasePrivileges
-     */
+    * set 设置数据库细粒度权限内容
+    *
+    * @param databasePrivileges
+    */
     public void setDatabasePrivileges(List<DatabasePrivilege> databasePrivileges) {
         this.databasePrivileges = databasePrivileges;
     }
 
+
     /**
-     * get 设置全局权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
-     *
-     * @return
-     */
+    * get 设置全局权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+    *
+    * @return
+    */
     public List<String> getGlobalPrivileges() {
         return globalPrivileges;
     }
 
     /**
-     * set 设置全局权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
-     *
-     * @param globalPrivileges
-     */
+    * set 设置全局权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+    *
+    * @param globalPrivileges
+    */
     public void setGlobalPrivileges(List<String> globalPrivileges) {
         this.globalPrivileges = globalPrivileges;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -122,6 +125,7 @@ public class GrantAccountPrivilegeRequest extends JdcloudRequest implements java
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -139,6 +143,7 @@ public class GrantAccountPrivilegeRequest extends JdcloudRequest implements java
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 账号名，在同一个实例中账号名不能重复
@@ -159,25 +164,28 @@ public class GrantAccountPrivilegeRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
-     * set 设置数据库细粒度权限内容
-     *
-     * @param databasePrivileges
-     */
+    * set 设置数据库细粒度权限内容
+    *
+    * @param databasePrivileges
+    */
     public GrantAccountPrivilegeRequest databasePrivileges(List<DatabasePrivilege> databasePrivileges) {
         this.databasePrivileges = databasePrivileges;
         return this;
     }
 
+
     /**
-     * set 设置全局权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
-     *
-     * @param globalPrivileges
-     */
+    * set 设置全局权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+    *
+    * @param globalPrivileges
+    */
     public GrantAccountPrivilegeRequest globalPrivileges(List<String> globalPrivileges) {
         this.globalPrivileges = globalPrivileges;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -189,6 +197,7 @@ public class GrantAccountPrivilegeRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -199,6 +208,7 @@ public class GrantAccountPrivilegeRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 账号名，在同一个实例中账号名不能重复
      *
@@ -208,6 +218,7 @@ public class GrantAccountPrivilegeRequest extends JdcloudRequest implements java
         this.accountName = accountName;
         return this;
     }
+
 
 
     /**
@@ -233,5 +244,4 @@ public class GrantAccountPrivilegeRequest extends JdcloudRequest implements java
         }
         this.globalPrivileges.add(globalPrivilege);
     }
-
 }

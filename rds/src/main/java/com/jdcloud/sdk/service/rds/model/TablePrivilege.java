@@ -42,6 +42,7 @@ public class TablePrivilege  implements java.io.Serializable {
     /**
      * 账号对数据库表所具有的细粒度权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      */
+    
     private List<String> privileges;
 
 
@@ -63,23 +64,25 @@ public class TablePrivilege  implements java.io.Serializable {
         this.tableName = tableName;
     }
 
+
     /**
-     * get 账号对数据库表所具有的细粒度权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
-     *
-     * @return
-     */
+    * get 账号对数据库表所具有的细粒度权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+    *
+    * @return
+    */
     public List<String> getPrivileges() {
         return privileges;
     }
 
     /**
-     * set 账号对数据库表所具有的细粒度权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
-     *
-     * @param privileges
-     */
+    * set 账号对数据库表所具有的细粒度权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+    *
+    * @param privileges
+    */
     public void setPrivileges(List<String> privileges) {
         this.privileges = privileges;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class TablePrivilege  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 账号对数据库表所具有的细粒度权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
-     *
-     * @param privileges
-     */
+    * set 账号对数据库表所具有的细粒度权限，权限的具体定义参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+    *
+    * @param privileges
+    */
     public TablePrivilege privileges(List<String> privileges) {
         this.privileges = privileges;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class TablePrivilege  implements java.io.Serializable {
         }
         this.privileges.add(privilege);
     }
-
 }

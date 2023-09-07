@@ -79,6 +79,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
     private Integer lastRows;
 
 
+
     /**
      * get sql语句
      *
@@ -96,6 +97,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
     public void setSql(String sql) {
         this.sql = sql;
     }
+
 
     /**
      * get 上次执行时间，格式为YYYY-MM-DD hh:mm:ss
@@ -115,6 +117,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
         this.lastExecutionTime = lastExecutionTime;
     }
 
+
     /**
      * get 平均执行时长，单位毫秒(ms)
      *
@@ -132,6 +135,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
     public void setElapsedTime(Integer elapsedTime) {
         this.elapsedTime = elapsedTime;
     }
+
 
     /**
      * get 执行次数
@@ -151,6 +155,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
         this.executionCount = executionCount;
     }
 
+
     /**
      * get 平均CPU使用时间，单位毫秒(ms)
      *
@@ -168,6 +173,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
     public void setWorkerTime(Integer workerTime) {
         this.workerTime = workerTime;
     }
+
 
     /**
      * get 平均逻辑读次数
@@ -187,6 +193,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
         this.logicalReads = logicalReads;
     }
 
+
     /**
      * get 平均逻辑写次数
      *
@@ -205,6 +212,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
         this.logicalWrites = logicalWrites;
     }
 
+
     /**
      * get 平均物理读次数
      *
@@ -222,6 +230,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
     public void setPhysicalReads(Integer physicalReads) {
         this.physicalReads = physicalReads;
     }
+
 
     /**
      * get 上次返回记录数
@@ -242,6 +251,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set sql语句
      *
@@ -251,6 +261,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
         this.sql = sql;
         return this;
     }
+
 
     /**
      * set 上次执行时间，格式为YYYY-MM-DD hh:mm:ss
@@ -262,6 +273,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 平均执行时长，单位毫秒(ms)
      *
@@ -271,6 +283,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
         this.elapsedTime = elapsedTime;
         return this;
     }
+
 
     /**
      * set 执行次数
@@ -282,6 +295,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 平均CPU使用时间，单位毫秒(ms)
      *
@@ -291,6 +305,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
         this.workerTime = workerTime;
         return this;
     }
+
 
     /**
      * set 平均逻辑读次数
@@ -302,6 +317,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 平均逻辑写次数
      *
@@ -312,6 +328,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 平均物理读次数
      *
@@ -321,6 +338,7 @@ public class QueryPerformanceResult extends JdcloudResult implements java.io.Ser
         this.physicalReads = physicalReads;
         return this;
     }
+
 
     /**
      * set 上次返回记录数

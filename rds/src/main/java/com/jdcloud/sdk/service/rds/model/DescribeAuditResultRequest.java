@@ -31,14 +31,14 @@ import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 仅支持查看MySQL实例的审计内容&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB, PostgreSQL
+ * 查看RDS实例的审计内容&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB, PostgreSQL
  */
 public class DescribeAuditResultRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 查询开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间不能早于当前时间30天
+     * 查询开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间不能早于当前时间3天
      * Required:true
      */
     @Required
@@ -52,12 +52,12 @@ public class DescribeAuditResultRequest extends JdcloudRequest implements java.i
     private String endTime;
 
     /**
-     * 数据库名
+     * 废弃，使用filter，数据库名
      */
     private String dbName;
 
     /**
-     * 账号名
+     * 废弃，使用filter，账号名
      */
     private String accountName;
 
@@ -67,18 +67,21 @@ public class DescribeAuditResultRequest extends JdcloudRequest implements java.i
     private Integer pageNumber;
 
     /**
-     * 每页显示的数据条数，默认为10，取值范围：10、20、50
+     * 每页显示的数据条数，默认为10，取值范围：[10,100]
      */
     private Integer pageSize;
 
     /**
-     * 过滤参数，多个过滤参数之间的关系为“与”(and)
-支持以下属性的过滤：
-operation
+     * 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- operation：仅第一个value生效，语句类型【create/alter/drop/truncate/select/insert/update/delete/replace/ddl/dml/disconnect/connect/failed_connect/query】,operator仅支持eq或者in
+- account：实例账号名，operator仅支持eq或者in
+- keyword：SQL 关键词，模糊查询，operator仅支持eq或者in
+- database：实例库名，operator仅支持eq或者in
+- threadId：会话id，operator仅支持eq或者in
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
@@ -94,8 +97,9 @@ operation
     private String instanceId;
 
 
+
     /**
-     * get 查询开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间不能早于当前时间30天
+     * get 查询开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间不能早于当前时间3天
      *
      * @return
      */
@@ -104,13 +108,14 @@ operation
     }
 
     /**
-     * set 查询开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间不能早于当前时间30天
+     * set 查询开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间不能早于当前时间3天
      *
      * @param startTime
      */
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 查询截止时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到结束时间不能超过3天
@@ -130,8 +135,9 @@ operation
         this.endTime = endTime;
     }
 
+
     /**
-     * get 数据库名
+     * get 废弃，使用filter，数据库名
      *
      * @return
      */
@@ -140,7 +146,7 @@ operation
     }
 
     /**
-     * set 数据库名
+     * set 废弃，使用filter，数据库名
      *
      * @param dbName
      */
@@ -148,8 +154,9 @@ operation
         this.dbName = dbName;
     }
 
+
     /**
-     * get 账号名
+     * get 废弃，使用filter，账号名
      *
      * @return
      */
@@ -158,13 +165,14 @@ operation
     }
 
     /**
-     * set 账号名
+     * set 废弃，使用filter，账号名
      *
      * @param accountName
      */
     public void setAccountName(String accountName) {
         this.accountName = accountName;
     }
+
 
     /**
      * get 显示数据的页码，默认为1，取值范围：[-1,∞)
@@ -184,8 +192,9 @@ operation
         this.pageNumber = pageNumber;
     }
 
+
     /**
-     * get 每页显示的数据条数，默认为10，取值范围：10、20、50
+     * get 每页显示的数据条数，默认为10，取值范围：[10,100]
      *
      * @return
      */
@@ -194,7 +203,7 @@ operation
     }
 
     /**
-     * set 每页显示的数据条数，默认为10，取值范围：10、20、50
+     * set 每页显示的数据条数，默认为10，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -202,29 +211,37 @@ operation
         this.pageSize = pageSize;
     }
 
-    /**
-     * get 过滤参数，多个过滤参数之间的关系为“与”(and)
-支持以下属性的过滤：
-operation
 
-     *
-     * @return
-     */
+    /**
+    * get 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- operation：仅第一个value生效，语句类型【create/alter/drop/truncate/select/insert/update/delete/replace/ddl/dml/disconnect/connect/failed_connect/query】,operator仅支持eq或者in
+- account：实例账号名，operator仅支持eq或者in
+- keyword：SQL 关键词，模糊查询，operator仅支持eq或者in
+- database：实例库名，operator仅支持eq或者in
+- threadId：会话id，operator仅支持eq或者in
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 过滤参数，多个过滤参数之间的关系为“与”(and)
-支持以下属性的过滤：
-operation
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- operation：仅第一个value生效，语句类型【create/alter/drop/truncate/select/insert/update/delete/replace/ddl/dml/disconnect/connect/failed_connect/query】,operator仅支持eq或者in
+- account：实例账号名，operator仅支持eq或者in
+- keyword：SQL 关键词，模糊查询，operator仅支持eq或者in
+- database：实例库名，operator仅支持eq或者in
+- threadId：会话id，operator仅支持eq或者in
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -243,6 +260,7 @@ operation
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -263,8 +281,9 @@ operation
     }
 
 
+
     /**
-     * set 查询开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间不能早于当前时间30天
+     * set 查询开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间不能早于当前时间3天
      *
      * @param startTime
      */
@@ -272,6 +291,7 @@ operation
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询截止时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到结束时间不能超过3天
@@ -283,8 +303,9 @@ operation
         return this;
     }
 
+
     /**
-     * set 数据库名
+     * set 废弃，使用filter，数据库名
      *
      * @param dbName
      */
@@ -293,8 +314,9 @@ operation
         return this;
     }
 
+
     /**
-     * set 账号名
+     * set 废弃，使用filter，账号名
      *
      * @param accountName
      */
@@ -302,6 +324,7 @@ operation
         this.accountName = accountName;
         return this;
     }
+
 
     /**
      * set 显示数据的页码，默认为1，取值范围：[-1,∞)
@@ -313,8 +336,9 @@ operation
         return this;
     }
 
+
     /**
-     * set 每页显示的数据条数，默认为10，取值范围：10、20、50
+     * set 每页显示的数据条数，默认为10，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -323,18 +347,23 @@ operation
         return this;
     }
 
-    /**
-     * set 过滤参数，多个过滤参数之间的关系为“与”(and)
-支持以下属性的过滤：
-operation
 
-     *
-     * @param filters
-     */
+    /**
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- operation：仅第一个value生效，语句类型【create/alter/drop/truncate/select/insert/update/delete/replace/ddl/dml/disconnect/connect/failed_connect/query】,operator仅支持eq或者in
+- account：实例账号名，operator仅支持eq或者in
+- keyword：SQL 关键词，模糊查询，operator仅支持eq或者in
+- database：实例库名，operator仅支持eq或者in
+- threadId：会话id，operator仅支持eq或者in
+
+    *
+    * @param filters
+    */
     public DescribeAuditResultRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -345,6 +374,7 @@ operation
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
@@ -357,10 +387,14 @@ operation
     }
 
 
+
     /**
-     * add item to 过滤参数，多个过滤参数之间的关系为“与”(and)
-支持以下属性的过滤：
-operation
+     * add item to 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- operation：仅第一个value生效，语句类型【create/alter/drop/truncate/select/insert/update/delete/replace/ddl/dml/disconnect/connect/failed_connect/query】,operator仅支持eq或者in
+- account：实例账号名，operator仅支持eq或者in
+- keyword：SQL 关键词，模糊查询，operator仅支持eq或者in
+- database：实例库名，operator仅支持eq或者in
+- threadId：会话id，operator仅支持eq或者in
 
      *
      * @param filter
@@ -371,5 +405,4 @@ operation
         }
         this.filters.add(filter);
     }
-
 }

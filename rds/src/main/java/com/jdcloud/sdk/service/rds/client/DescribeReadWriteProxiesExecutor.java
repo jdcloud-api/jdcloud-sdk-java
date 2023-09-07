@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DescribeReadWriteProxiesResponse;
 
 /**
- * 查看RDS读写分离代理列表&lt;br&gt;- 仅支持MySQL
+ * 查看RDS读写分离代理列表&lt;br&gt;- 仅支持MySQL、PostgreSQL
  */
 class DescribeReadWriteProxiesExecutor extends JdcloudExecutor {
 

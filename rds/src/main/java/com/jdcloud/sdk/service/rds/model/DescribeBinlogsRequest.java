@@ -24,6 +24,9 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -35,25 +38,35 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      */
     private Integer pageNumber;
 
     /**
-     * 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * 每页显示的数据条数，默认为10，取值范围：[10,100]
      */
     private Integer pageSize;
 
     /**
-     * 查询开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到结束时间不超过三天
+     * 查询开始时间，格式为：YYYY-MM-DDTHH:mm:ssZ，开始时间到结束时间不超过7天
      */
     private String startTime;
 
     /**
-     * 查询结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到结束时间不超过三天
+     * 查询结束时间，格式为：YYYY-MM-DDTHH:mm:ssZ，开始时间到结束时间不超过7天
      */
     private String endTime;
 
+    /**
+     * 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- instanceId：RDS实例ID，唯一标识一个实例，operator仅支持eq
+- instanceName：RDS实例名称，模糊搜索，operator仅支持eq、like
+- binlogId：Binlog ID，唯一标识一个备份，operator仅支持eq
+- binlogName：Binlog名称，模糊搜索，operator仅支持eq、like
+
+     */
+    
+    private List<Filter> filters;
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
@@ -69,8 +82,9 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
     private String instanceId;
 
 
+
     /**
-     * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @return
      */
@@ -79,7 +93,7 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
@@ -87,8 +101,9 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
         this.pageNumber = pageNumber;
     }
 
+
     /**
-     * get 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * get 每页显示的数据条数，默认为10，取值范围：[10,100]
      *
      * @return
      */
@@ -97,7 +112,7 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * set 每页显示的数据条数，默认为10，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -105,8 +120,9 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get 查询开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到结束时间不超过三天
+     * get 查询开始时间，格式为：YYYY-MM-DDTHH:mm:ssZ，开始时间到结束时间不超过7天
      *
      * @return
      */
@@ -115,7 +131,7 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 查询开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到结束时间不超过三天
+     * set 查询开始时间，格式为：YYYY-MM-DDTHH:mm:ssZ，开始时间到结束时间不超过7天
      *
      * @param startTime
      */
@@ -123,8 +139,9 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
         this.startTime = startTime;
     }
 
+
     /**
-     * get 查询结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到结束时间不超过三天
+     * get 查询结束时间，格式为：YYYY-MM-DDTHH:mm:ssZ，开始时间到结束时间不超过7天
      *
      * @return
      */
@@ -133,13 +150,43 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 查询结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到结束时间不超过三天
+     * set 查询结束时间，格式为：YYYY-MM-DDTHH:mm:ssZ，开始时间到结束时间不超过7天
      *
      * @param endTime
      */
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
+
+    /**
+    * get 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- instanceId：RDS实例ID，唯一标识一个实例，operator仅支持eq
+- instanceName：RDS实例名称，模糊搜索，operator仅支持eq、like
+- binlogId：Binlog ID，唯一标识一个备份，operator仅支持eq
+- binlogName：Binlog名称，模糊搜索，operator仅支持eq、like
+
+    *
+    * @return
+    */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- instanceId：RDS实例ID，唯一标识一个实例，operator仅支持eq
+- instanceName：RDS实例名称，模糊搜索，operator仅支持eq、like
+- binlogId：Binlog ID，唯一标识一个备份，operator仅支持eq
+- binlogName：Binlog名称，模糊搜索，operator仅支持eq、like
+
+    *
+    * @param filters
+    */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -158,6 +205,7 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -178,8 +226,9 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
@@ -188,8 +237,9 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
-     * set 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
+     * set 每页显示的数据条数，默认为10，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -198,8 +248,9 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
-     * set 查询开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到结束时间不超过三天
+     * set 查询开始时间，格式为：YYYY-MM-DDTHH:mm:ssZ，开始时间到结束时间不超过7天
      *
      * @param startTime
      */
@@ -208,8 +259,9 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
-     * set 查询结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到结束时间不超过三天
+     * set 查询结束时间，格式为：YYYY-MM-DDTHH:mm:ssZ，开始时间到结束时间不超过7天
      *
      * @param endTime
      */
@@ -217,6 +269,23 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
         this.endTime = endTime;
         return this;
     }
+
+
+    /**
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- instanceId：RDS实例ID，唯一标识一个实例，operator仅支持eq
+- instanceName：RDS实例名称，模糊搜索，operator仅支持eq、like
+- binlogId：Binlog ID，唯一标识一个备份，operator仅支持eq
+- binlogName：Binlog名称，模糊搜索，operator仅支持eq、like
+
+    *
+    * @param filters
+    */
+    public DescribeBinlogsRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -227,6 +296,7 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
@@ -239,4 +309,21 @@ public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
+    /**
+     * add item to 过滤参数，多个过滤参数之间的关系为“与”(and支持以下属性的过滤(默认等值)：)
+- instanceId：RDS实例ID，唯一标识一个实例，operator仅支持eq
+- instanceName：RDS实例名称，模糊搜索，operator仅支持eq、like
+- binlogId：Binlog ID，唯一标识一个备份，operator仅支持eq
+- binlogName：Binlog名称，模糊搜索，operator仅支持eq、like
+
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
 }
