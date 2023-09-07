@@ -67,6 +67,9 @@ import com.jdcloud.sdk.service.rds.client.GrantPrivilegeExecutor;
 import com.jdcloud.sdk.service.rds.model.DisableReadWriteProxyInternetAccessRequest;
 import com.jdcloud.sdk.service.rds.model.DisableReadWriteProxyInternetAccessResponse;
 import com.jdcloud.sdk.service.rds.client.DisableReadWriteProxyInternetAccessExecutor;
+import com.jdcloud.sdk.service.rds.model.CreateWhiteListGroupRequest;
+import com.jdcloud.sdk.service.rds.model.CreateWhiteListGroupResponse;
+import com.jdcloud.sdk.service.rds.client.CreateWhiteListGroupExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeReadWriteProxyAttributeRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeReadWriteProxyAttributeResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeReadWriteProxyAttributeExecutor;
@@ -94,6 +97,9 @@ import com.jdcloud.sdk.service.rds.client.DeleteBackupSynchronicityExecutor;
 import com.jdcloud.sdk.service.rds.model.DeleteImportFileRequest;
 import com.jdcloud.sdk.service.rds.model.DeleteImportFileResponse;
 import com.jdcloud.sdk.service.rds.client.DeleteImportFileExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeBinlogDownloadInternalURLRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeBinlogDownloadInternalURLResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeBinlogDownloadInternalURLExecutor;
 import com.jdcloud.sdk.service.rds.model.ModifyAuditRequest;
 import com.jdcloud.sdk.service.rds.model.ModifyAuditResponse;
 import com.jdcloud.sdk.service.rds.client.ModifyAuditExecutor;
@@ -274,6 +280,9 @@ import com.jdcloud.sdk.service.rds.client.DescribeQueryPerformanceExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeParameterGroupAttachedInstancesRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeParameterGroupAttachedInstancesResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeParameterGroupAttachedInstancesExecutor;
+import com.jdcloud.sdk.service.rds.model.DeleteWhiteListGroupRequest;
+import com.jdcloud.sdk.service.rds.model.DeleteWhiteListGroupResponse;
+import com.jdcloud.sdk.service.rds.client.DeleteWhiteListGroupExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeTdeRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeTdeResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeTdeExecutor;
@@ -396,7 +405,7 @@ public class RdsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "rds.jdcloud-api.com";
     public final static String ServiceName = "rds";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -560,7 +569,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 关闭读写分离代理服务的外网访问功能。关闭后，用户无法通过 Internet 连接读写分离代理服务，但可以在京东云内网通过内网域名连接&lt;br&gt;- 仅支持MySQL
+     * 关闭读写分离代理服务的外网访问功能。关闭后，用户无法通过 Internet 连接读写分离代理服务，但可以在京东云内网通过内网域名连接&lt;br&gt;- 仅支持MySQL、PostgreSQL
      *
      * @param request
      * @return
@@ -571,7 +580,18 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 查看指定RDS读写分离代理详情&lt;br&gt;- 仅支持MySQL
+     * 创建一个白名单分组并设置白名单允许访问的IP，仅MySQL、Percona、MariaDB支持。修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateWhiteListGroupResponse createWhiteListGroup(CreateWhiteListGroupRequest request) throws JdcloudSdkException {
+        return new CreateWhiteListGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看指定RDS读写分离代理详情&lt;br&gt;- 仅支持MySQL、PostgreSQL
      *
      * @param request
      * @return
@@ -667,6 +687,17 @@ public class RdsClient extends JdcloudClient {
      */
     public DeleteImportFileResponse deleteImportFile(DeleteImportFileRequest request) throws JdcloudSdkException {
         return new DeleteImportFileExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取MySQL实例的binlog的内网下载链接&lt;br&gt;- 仅支持 MySQL, Percona, MariaDB
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBinlogDownloadInternalURLResponse describeBinlogDownloadInternalURL(DescribeBinlogDownloadInternalURLRequest request) throws JdcloudSdkException {
+        return new DescribeBinlogDownloadInternalURLExecutor().client(this).execute(request);
     }
 
     /**
@@ -769,7 +800,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 查询PostgreSQL实例的错误日志的概要信息。&lt;br&gt;- 仅支持PostgreSQL
+     * 查询错误日志的概要信息
      *
      * @param request
      * @return
@@ -945,7 +976,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 开启读写分离代理服务的外网访问功能。开启后，用户可以通过 internet 连接读写分离代理服务&lt;br&gt;- 仅支持MySQL
+     * 开启读写分离代理服务的外网访问功能。开启后，用户可以通过 internet 连接读写分离代理服务&lt;br&gt;- 仅支持MySQL、PostgreSQL
      *
      * @param request
      * @return
@@ -1033,7 +1064,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 创建数据库读写分离代理服务&lt;br&gt;- 仅支持MySQL
+     * 创建数据库读写分离代理服务&lt;br&gt;- 仅支持MySQL、PostgreSQL
      *
      * @param request
      * @return
@@ -1330,6 +1361,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 当该白名单分组用户无需使用时，可进行删除。仅适用于MySQL、Percona、MariaDB。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteWhiteListGroupResponse deleteWhiteListGroup(DeleteWhiteListGroupRequest request) throws JdcloudSdkException {
+        return new DeleteWhiteListGroupExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查看当前实例是否开启TDE
      *
      * @param request
@@ -1374,7 +1416,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 仅支持查看MySQL实例的审计内容&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB, PostgreSQL
+     * 查看RDS实例的审计内容&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB, PostgreSQL
      *
      * @param request
      * @return
@@ -1495,7 +1537,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 查看RDS读写分离代理列表&lt;br&gt;- 仅支持MySQL
+     * 查看RDS读写分离代理列表&lt;br&gt;- 仅支持MySQL、PostgreSQL
      *
      * @param request
      * @return
@@ -1638,7 +1680,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 修改数据库读写分离代理服务配置&lt;br&gt;- 仅支持MySQL
+     * 修改数据库读写分离代理服务配置&lt;br&gt;- 仅支持MySQL、PostgreSQL
      *
      * @param request
      * @return

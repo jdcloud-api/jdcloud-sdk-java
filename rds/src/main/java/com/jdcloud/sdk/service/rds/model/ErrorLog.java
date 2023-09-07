@@ -63,6 +63,7 @@ public class ErrorLog  implements java.io.Serializable {
     private String internalURL;
 
 
+
     /**
      * get 错误日志文件名称
      *
@@ -80,6 +81,7 @@ public class ErrorLog  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 错误日志文件大小，单位Byte
@@ -99,6 +101,7 @@ public class ErrorLog  implements java.io.Serializable {
         this.sizeByte = sizeByte;
     }
 
+
     /**
      * get 错误日志最后更新时间，格式为：YYYY-MM-DD HH:mm:ss
      *
@@ -116,6 +119,7 @@ public class ErrorLog  implements java.io.Serializable {
     public void setLastUpdateTime(String lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
     }
+
 
     /**
      * get 错误日志上传时间，格式为：YYYY-MM-DD HH:mm:ss
@@ -135,6 +139,7 @@ public class ErrorLog  implements java.io.Serializable {
         this.uploadTime = uploadTime;
     }
 
+
     /**
      * get 公网下载链接
      *
@@ -152,6 +157,7 @@ public class ErrorLog  implements java.io.Serializable {
     public void setPublicURL(String publicURL) {
         this.publicURL = publicURL;
     }
+
 
     /**
      * get 内网下载链接
@@ -172,6 +178,7 @@ public class ErrorLog  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 错误日志文件名称
      *
@@ -181,6 +188,7 @@ public class ErrorLog  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 错误日志文件大小，单位Byte
@@ -192,6 +200,7 @@ public class ErrorLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 错误日志最后更新时间，格式为：YYYY-MM-DD HH:mm:ss
      *
@@ -201,6 +210,7 @@ public class ErrorLog  implements java.io.Serializable {
         this.lastUpdateTime = lastUpdateTime;
         return this;
     }
+
 
     /**
      * set 错误日志上传时间，格式为：YYYY-MM-DD HH:mm:ss
@@ -212,6 +222,7 @@ public class ErrorLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 公网下载链接
      *
@@ -221,6 +232,7 @@ public class ErrorLog  implements java.io.Serializable {
         this.publicURL = publicURL;
         return this;
     }
+
 
     /**
      * set 内网下载链接

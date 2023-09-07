@@ -49,6 +49,7 @@ public class DescribeParametersRequest extends JdcloudRequest implements java.io
     private String instanceId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DescribeParametersRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Instance ID
@@ -86,6 +88,7 @@ public class DescribeParametersRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DescribeParametersRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Instance ID

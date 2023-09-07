@@ -48,6 +48,7 @@ public class DBInstanceNode  implements java.io.Serializable {
     private String status;
 
 
+
     /**
      * get 节点id
      *
@@ -66,6 +67,7 @@ public class DBInstanceNode  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 节点名称
      *
@@ -83,6 +85,7 @@ public class DBInstanceNode  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 节点状态
@@ -103,6 +106,7 @@ public class DBInstanceNode  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 节点id
      *
@@ -113,6 +117,7 @@ public class DBInstanceNode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 节点名称
      *
@@ -122,6 +127,7 @@ public class DBInstanceNode  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 节点状态

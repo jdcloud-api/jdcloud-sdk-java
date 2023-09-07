@@ -61,6 +61,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
     private String instanceId;
 
 
+
     /**
      * get 计划开始升级的时间，1：立即开始升级，2：维护时间窗口升级，0：取消升级
      *
@@ -78,6 +79,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
     public void setUpgradeSchedule(Integer upgradeSchedule) {
         this.upgradeSchedule = upgradeSchedule;
     }
+
 
     /**
      * get 升级到的新版本，默认为当前实例可升级到的最新版本
@@ -97,6 +99,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
         this.newVersion = newVersion;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -114,6 +117,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -134,6 +138,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 计划开始升级的时间，1：立即开始升级，2：维护时间窗口升级，0：取消升级
      *
@@ -143,6 +148,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
         this.upgradeSchedule = upgradeSchedule;
         return this;
     }
+
 
     /**
      * set 升级到的新版本，默认为当前实例可升级到的最新版本
@@ -154,6 +160,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -163,6 +170,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

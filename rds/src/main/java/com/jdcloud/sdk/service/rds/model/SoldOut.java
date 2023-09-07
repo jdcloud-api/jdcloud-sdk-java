@@ -47,6 +47,7 @@ public class SoldOut  implements java.io.Serializable {
     /**
      * 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
      */
+    
     private List<String> azId;
 
 
@@ -68,6 +69,7 @@ public class SoldOut  implements java.io.Serializable {
         this.engine = engine;
     }
 
+
     /**
      * get 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -86,23 +88,25 @@ public class SoldOut  implements java.io.Serializable {
         this.instanceStorageType = instanceStorageType;
     }
 
+
     /**
-     * get 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
-     *
-     * @return
-     */
+    * get 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
+    *
+    * @return
+    */
     public List<String> getAzId() {
         return azId;
     }
 
     /**
-     * set 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
-     *
-     * @param azId
-     */
+    * set 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
+    *
+    * @param azId
+    */
     public void setAzId(List<String> azId) {
         this.azId = azId;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class SoldOut  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -125,15 +130,17 @@ public class SoldOut  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
-     *
-     * @param azId
-     */
+    * set 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
+    *
+    * @param azId
+    */
     public SoldOut azId(List<String> azId) {
         this.azId = azId;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class SoldOut  implements java.io.Serializable {
         }
         this.azId.add(azId);
     }
-
 }

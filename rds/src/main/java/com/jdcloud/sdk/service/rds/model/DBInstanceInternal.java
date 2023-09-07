@@ -62,6 +62,32 @@ public class DBInstanceInternal  implements java.io.Serializable {
      */
     private Integer accessibleStatus;
 
+    /**
+     * 物理机IP
+     */
+    private String hostIp;
+
+    /**
+     * 实例ip
+     */
+    private String userIp;
+
+    /**
+     * 云主机ID
+     */
+    private String vmId;
+
+    /**
+     * 实例内网域名
+     */
+    private String internalDomainName;
+
+    /**
+     * 应用访问端口
+     */
+    private String instancePort;
+
+
 
     /**
      * get 实例ID
@@ -81,6 +107,7 @@ public class DBInstanceInternal  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
@@ -98,6 +125,7 @@ public class DBInstanceInternal  implements java.io.Serializable {
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
     }
+
 
     /**
      * get 实例引擎类型，如MySQL或SQL Server等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -117,6 +145,7 @@ public class DBInstanceInternal  implements java.io.Serializable {
         this.engine = engine;
     }
 
+
     /**
      * get 实例类别，例如主实例，只读实例等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -135,6 +164,7 @@ public class DBInstanceInternal  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
      * get 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -152,6 +182,7 @@ public class DBInstanceInternal  implements java.io.Serializable {
     public void setInstanceStatus(String instanceStatus) {
         this.instanceStatus = instanceStatus;
     }
+
 
     /**
      * get 实例的网络状态；0表示实例的网络处于中断状态，1表示实例的网络处于正常状态
@@ -173,6 +204,102 @@ public class DBInstanceInternal  implements java.io.Serializable {
 
 
     /**
+     * get 物理机IP
+     *
+     * @return
+     */
+    public String getHostIp() {
+        return hostIp;
+    }
+
+    /**
+     * set 物理机IP
+     *
+     * @param hostIp
+     */
+    public void setHostIp(String hostIp) {
+        this.hostIp = hostIp;
+    }
+
+
+    /**
+     * get 实例ip
+     *
+     * @return
+     */
+    public String getUserIp() {
+        return userIp;
+    }
+
+    /**
+     * set 实例ip
+     *
+     * @param userIp
+     */
+    public void setUserIp(String userIp) {
+        this.userIp = userIp;
+    }
+
+
+    /**
+     * get 云主机ID
+     *
+     * @return
+     */
+    public String getVmId() {
+        return vmId;
+    }
+
+    /**
+     * set 云主机ID
+     *
+     * @param vmId
+     */
+    public void setVmId(String vmId) {
+        this.vmId = vmId;
+    }
+
+
+    /**
+     * get 实例内网域名
+     *
+     * @return
+     */
+    public String getInternalDomainName() {
+        return internalDomainName;
+    }
+
+    /**
+     * set 实例内网域名
+     *
+     * @param internalDomainName
+     */
+    public void setInternalDomainName(String internalDomainName) {
+        this.internalDomainName = internalDomainName;
+    }
+
+
+    /**
+     * get 应用访问端口
+     *
+     * @return
+     */
+    public String getInstancePort() {
+        return instancePort;
+    }
+
+    /**
+     * set 应用访问端口
+     *
+     * @param instancePort
+     */
+    public void setInstancePort(String instancePort) {
+        this.instancePort = instancePort;
+    }
+
+
+
+    /**
      * set 实例ID
      *
      * @param instanceId
@@ -181,6 +308,7 @@ public class DBInstanceInternal  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
@@ -192,6 +320,7 @@ public class DBInstanceInternal  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例引擎类型，如MySQL或SQL Server等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -201,6 +330,7 @@ public class DBInstanceInternal  implements java.io.Serializable {
         this.engine = engine;
         return this;
     }
+
 
     /**
      * set 实例类别，例如主实例，只读实例等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -212,6 +342,7 @@ public class DBInstanceInternal  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -222,6 +353,7 @@ public class DBInstanceInternal  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例的网络状态；0表示实例的网络处于中断状态，1表示实例的网络处于正常状态
      *
@@ -229,6 +361,61 @@ public class DBInstanceInternal  implements java.io.Serializable {
      */
     public DBInstanceInternal accessibleStatus(Integer accessibleStatus) {
         this.accessibleStatus = accessibleStatus;
+        return this;
+    }
+
+
+    /**
+     * set 物理机IP
+     *
+     * @param hostIp
+     */
+    public DBInstanceInternal hostIp(String hostIp) {
+        this.hostIp = hostIp;
+        return this;
+    }
+
+
+    /**
+     * set 实例ip
+     *
+     * @param userIp
+     */
+    public DBInstanceInternal userIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+
+
+    /**
+     * set 云主机ID
+     *
+     * @param vmId
+     */
+    public DBInstanceInternal vmId(String vmId) {
+        this.vmId = vmId;
+        return this;
+    }
+
+
+    /**
+     * set 实例内网域名
+     *
+     * @param internalDomainName
+     */
+    public DBInstanceInternal internalDomainName(String internalDomainName) {
+        this.internalDomainName = internalDomainName;
+        return this;
+    }
+
+
+    /**
+     * set 应用访问端口
+     *
+     * @param instancePort
+     */
+    public DBInstanceInternal instancePort(String instancePort) {
+        this.instancePort = instancePort;
         return this;
     }
 

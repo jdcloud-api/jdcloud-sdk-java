@@ -72,6 +72,12 @@ public class SlowLogAttributes  implements java.io.Serializable {
      */
     private Integer rowsReturned;
 
+    /**
+     * 客户端IP
+     */
+    private String clientIp;
+
+
 
     /**
      * get 数据库名，表示该SQL是在哪个数据库中执行的
@@ -91,6 +97,7 @@ public class SlowLogAttributes  implements java.io.Serializable {
         this.dbName = dbName;
     }
 
+
     /**
      * get 数据库账号，表示该SQL是哪个数据库账号发起的
      *
@@ -108,6 +115,7 @@ public class SlowLogAttributes  implements java.io.Serializable {
     public void setUser(String user) {
         this.user = user;
     }
+
 
     /**
      * get SQL语句
@@ -127,6 +135,7 @@ public class SlowLogAttributes  implements java.io.Serializable {
         this.sql = sql;
     }
 
+
     /**
      * get SQL语句执行的开始时间，格式为YYYY-MM-DD hh:mm:ss
      *
@@ -144,6 +153,7 @@ public class SlowLogAttributes  implements java.io.Serializable {
     public void setExecutionTime(String executionTime) {
         this.executionTime = executionTime;
     }
+
 
     /**
      * get SQL语句执行的时长，单位秒
@@ -163,6 +173,7 @@ public class SlowLogAttributes  implements java.io.Serializable {
         this.elapsedTime = elapsedTime;
     }
 
+
     /**
      * get SQL语句等待锁的时间，单位秒
      *
@@ -181,6 +192,7 @@ public class SlowLogAttributes  implements java.io.Serializable {
         this.lockTime = lockTime;
     }
 
+
     /**
      * get SQL语句扫描的行数
      *
@@ -198,6 +210,7 @@ public class SlowLogAttributes  implements java.io.Serializable {
     public void setRowsExamined(Integer rowsExamined) {
         this.rowsExamined = rowsExamined;
     }
+
 
     /**
      * get SQL语句返回的行数
@@ -219,6 +232,26 @@ public class SlowLogAttributes  implements java.io.Serializable {
 
 
     /**
+     * get 客户端IP
+     *
+     * @return
+     */
+    public String getClientIp() {
+        return clientIp;
+    }
+
+    /**
+     * set 客户端IP
+     *
+     * @param clientIp
+     */
+    public void setClientIp(String clientIp) {
+        this.clientIp = clientIp;
+    }
+
+
+
+    /**
      * set 数据库名，表示该SQL是在哪个数据库中执行的
      *
      * @param dbName
@@ -227,6 +260,7 @@ public class SlowLogAttributes  implements java.io.Serializable {
         this.dbName = dbName;
         return this;
     }
+
 
     /**
      * set 数据库账号，表示该SQL是哪个数据库账号发起的
@@ -238,6 +272,7 @@ public class SlowLogAttributes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set SQL语句
      *
@@ -247,6 +282,7 @@ public class SlowLogAttributes  implements java.io.Serializable {
         this.sql = sql;
         return this;
     }
+
 
     /**
      * set SQL语句执行的开始时间，格式为YYYY-MM-DD hh:mm:ss
@@ -258,6 +294,7 @@ public class SlowLogAttributes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set SQL语句执行的时长，单位秒
      *
@@ -267,6 +304,7 @@ public class SlowLogAttributes  implements java.io.Serializable {
         this.elapsedTime = elapsedTime;
         return this;
     }
+
 
     /**
      * set SQL语句等待锁的时间，单位秒
@@ -278,6 +316,7 @@ public class SlowLogAttributes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set SQL语句扫描的行数
      *
@@ -288,6 +327,7 @@ public class SlowLogAttributes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set SQL语句返回的行数
      *
@@ -295,6 +335,17 @@ public class SlowLogAttributes  implements java.io.Serializable {
      */
     public SlowLogAttributes rowsReturned(Integer rowsReturned) {
         this.rowsReturned = rowsReturned;
+        return this;
+    }
+
+
+    /**
+     * set 客户端IP
+     *
+     * @param clientIp
+     */
+    public SlowLogAttributes clientIp(String clientIp) {
+        this.clientIp = clientIp;
         return this;
     }
 

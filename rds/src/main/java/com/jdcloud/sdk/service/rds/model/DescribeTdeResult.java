@@ -45,6 +45,7 @@ public class DescribeTdeResult extends JdcloudResult implements java.io.Serializ
     private StatusDetail statusDetail;
 
 
+
     /**
      * get 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending；已开启未生效时返回inProgress
      *
@@ -62,6 +63,7 @@ public class DescribeTdeResult extends JdcloudResult implements java.io.Serializ
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get TDE加密已开启未生效时返回实例重启状态的详细进度；TDE加密已开启未生效或未开启时返回空;&lt;当实例类型为MySQL时有效&gt;
@@ -82,6 +84,7 @@ public class DescribeTdeResult extends JdcloudResult implements java.io.Serializ
     }
 
 
+
     /**
      * set 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending；已开启未生效时返回inProgress
      *
@@ -91,6 +94,7 @@ public class DescribeTdeResult extends JdcloudResult implements java.io.Serializ
         this.status = status;
         return this;
     }
+
 
     /**
      * set TDE加密已开启未生效时返回实例重启状态的详细进度；TDE加密已开启未生效或未开启时返回空;&lt;当实例类型为MySQL时有效&gt;

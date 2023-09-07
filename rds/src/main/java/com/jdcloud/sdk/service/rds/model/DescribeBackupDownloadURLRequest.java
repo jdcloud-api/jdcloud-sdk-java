@@ -59,6 +59,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
     private String backupId;
 
 
+
     /**
      * get 文件名称&lt;br&gt;- MySQL：不支持该参数&lt;br&gt;- SQL Server：必须输入该参数，指定该备份中需要获取下载链接的文件名称。备份中的文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份
      *
@@ -76,6 +77,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
     public void setFileName(String fileName) {
         this.fileName = fileName;
     }
+
 
     /**
      * get 指定下载链接的过期时间，单位秒, 取值范围为 1 ~ 86400 秒；支持 SQL Server：缺省为 86400 秒。支持 MySQL, Percona, MariaDB：缺省为 300 秒。
@@ -95,6 +97,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
         this.urlExpirationSecond = urlExpirationSecond;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -112,6 +115,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 备份ID
@@ -132,6 +136,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
     }
 
 
+
     /**
      * set 文件名称&lt;br&gt;- MySQL：不支持该参数&lt;br&gt;- SQL Server：必须输入该参数，指定该备份中需要获取下载链接的文件名称。备份中的文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份
      *
@@ -141,6 +146,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
         this.fileName = fileName;
         return this;
     }
+
 
     /**
      * set 指定下载链接的过期时间，单位秒, 取值范围为 1 ~ 86400 秒；支持 SQL Server：缺省为 86400 秒。支持 MySQL, Percona, MariaDB：缺省为 300 秒。
@@ -152,6 +158,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -161,6 +168,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 备份ID

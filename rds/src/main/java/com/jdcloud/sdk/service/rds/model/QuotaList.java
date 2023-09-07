@@ -48,6 +48,7 @@ public class QuotaList  implements java.io.Serializable {
     private Integer max;
 
 
+
     /**
      * get 资源类型
      *
@@ -66,6 +67,7 @@ public class QuotaList  implements java.io.Serializable {
         this.resourceType = resourceType;
     }
 
+
     /**
      * get 已使用的配额数量
      *
@@ -83,6 +85,7 @@ public class QuotaList  implements java.io.Serializable {
     public void setUsed(Integer used) {
         this.used = used;
     }
+
 
     /**
      * get 配额上限
@@ -103,6 +106,7 @@ public class QuotaList  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 资源类型
      *
@@ -113,6 +117,7 @@ public class QuotaList  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 已使用的配额数量
      *
@@ -122,6 +127,7 @@ public class QuotaList  implements java.io.Serializable {
         this.used = used;
         return this;
     }
+
 
     /**
      * set 配额上限

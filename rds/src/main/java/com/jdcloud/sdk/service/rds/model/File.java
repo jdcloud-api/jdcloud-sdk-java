@@ -43,6 +43,7 @@ public class File  implements java.io.Serializable {
     private Integer sizeByte;
 
 
+
     /**
      * get 文件名
      *
@@ -60,6 +61,7 @@ public class File  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 文件大小，单位Byte
@@ -80,6 +82,7 @@ public class File  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 文件名
      *
@@ -89,6 +92,7 @@ public class File  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 文件大小，单位Byte

@@ -39,6 +39,7 @@ public class CopyParameterGroupResult extends JdcloudResult implements java.io.S
     private String parameterGroupId;
 
 
+
     /**
      * get parameterGroupId
      *
@@ -56,6 +57,7 @@ public class CopyParameterGroupResult extends JdcloudResult implements java.io.S
     public void setParameterGroupId(String parameterGroupId) {
         this.parameterGroupId = parameterGroupId;
     }
+
 
 
     /**

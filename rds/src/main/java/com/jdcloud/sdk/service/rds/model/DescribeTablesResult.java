@@ -38,31 +38,33 @@ public class DescribeTablesResult extends JdcloudResult implements java.io.Seria
     /**
      * tables
      */
+    
     private List<String> tables;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get tables
-     *
-     * @return
-     */
+    * get tables
+    *
+    * @return
+    */
     public List<String> getTables() {
         return tables;
     }
 
     /**
-     * set tables
-     *
-     * @param tables
-     */
+    * set tables
+    *
+    * @param tables
+    */
     public void setTables(List<String> tables) {
         this.tables = tables;
     }
+
 
     /**
      * get totalCount
@@ -83,15 +85,17 @@ public class DescribeTablesResult extends JdcloudResult implements java.io.Seria
     }
 
 
+
     /**
-     * set tables
-     *
-     * @param tables
-     */
+    * set tables
+    *
+    * @param tables
+    */
     public DescribeTablesResult tables(List<String> tables) {
         this.tables = tables;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -102,6 +106,7 @@ public class DescribeTablesResult extends JdcloudResult implements java.io.Seria
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class DescribeTablesResult extends JdcloudResult implements java.io.Seria
         }
         this.tables.add(table);
     }
-
 }

@@ -42,8 +42,8 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
      * Required:true
      */
     @Required
+    
     private List<AccountPrivilege> accountPrivileges;
-
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
@@ -66,23 +66,25 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
     private String accountName;
 
 
+
     /**
-     * get 账号的访问权限
-     *
-     * @return
-     */
+    * get 账号的访问权限
+    *
+    * @return
+    */
     public List<AccountPrivilege> getAccountPrivileges() {
         return accountPrivileges;
     }
 
     /**
-     * set 账号的访问权限
-     *
-     * @param accountPrivileges
-     */
+    * set 账号的访问权限
+    *
+    * @param accountPrivileges
+    */
     public void setAccountPrivileges(List<AccountPrivilege> accountPrivileges) {
         this.accountPrivileges = accountPrivileges;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -102,6 +104,7 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -119,6 +122,7 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 账号名，在同一个实例中账号名不能重复
@@ -139,15 +143,17 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
-     * set 账号的访问权限
-     *
-     * @param accountPrivileges
-     */
+    * set 账号的访问权限
+    *
+    * @param accountPrivileges
+    */
     public GrantPrivilegeRequest accountPrivileges(List<AccountPrivilege> accountPrivileges) {
         this.accountPrivileges = accountPrivileges;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -159,6 +165,7 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -169,6 +176,7 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 账号名，在同一个实例中账号名不能重复
      *
@@ -178,6 +186,7 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
         this.accountName = accountName;
         return this;
     }
+
 
 
     /**
@@ -191,5 +200,4 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
         }
         this.accountPrivileges.add(accountPrivilege);
     }
-
 }

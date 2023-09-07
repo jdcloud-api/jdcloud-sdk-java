@@ -64,6 +64,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
     private String instanceId;
 
 
+
     /**
      * get 是否重启主节点。&lt;br&gt; - 仅SQL Server 支持该参数
      *
@@ -81,6 +82,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
     public void setRebootMaster(Boolean rebootMaster) {
         this.rebootMaster = rebootMaster;
     }
+
 
     /**
      * get 是否重启备节点。&lt;br&gt; - 仅SQL Server 支持该参数
@@ -100,6 +102,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.rebootSlave = rebootSlave;
     }
 
+
     /**
      * get 是否强制重启 &lt;br&gt;- 仅支持MySQL
      *
@@ -118,6 +121,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.force = force;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -135,6 +139,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -155,6 +160,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 是否重启主节点。&lt;br&gt; - 仅SQL Server 支持该参数
      *
@@ -164,6 +170,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.rebootMaster = rebootMaster;
         return this;
     }
+
 
     /**
      * set 是否重启备节点。&lt;br&gt; - 仅SQL Server 支持该参数
@@ -175,6 +182,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 是否强制重启 &lt;br&gt;- 仅支持MySQL
      *
@@ -185,6 +193,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -194,6 +203,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

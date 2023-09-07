@@ -39,6 +39,7 @@ public class ModifyInstanceSpecResult extends JdcloudResult implements java.io.S
     private String orderId;
 
 
+
     /**
      * get 生成的订单号
      *
@@ -56,6 +57,7 @@ public class ModifyInstanceSpecResult extends JdcloudResult implements java.io.S
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
+
 
 
     /**

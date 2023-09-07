@@ -44,6 +44,7 @@ public class CreateInstanceByTimeInCrossRegionResult extends JdcloudResult imple
     private String orderId;
 
 
+
     /**
      * get 新创建的实例ID
      *
@@ -61,6 +62,7 @@ public class CreateInstanceByTimeInCrossRegionResult extends JdcloudResult imple
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 订单ID
@@ -81,6 +83,7 @@ public class CreateInstanceByTimeInCrossRegionResult extends JdcloudResult imple
     }
 
 
+
     /**
      * set 新创建的实例ID
      *
@@ -90,6 +93,7 @@ public class CreateInstanceByTimeInCrossRegionResult extends JdcloudResult imple
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 订单ID

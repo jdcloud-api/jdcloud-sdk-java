@@ -43,6 +43,7 @@ public class AccountPrivilege  implements java.io.Serializable {
     private String privilege;
 
 
+
     /**
      * get 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
@@ -60,6 +61,7 @@ public class AccountPrivilege  implements java.io.Serializable {
     public void setDbName(String dbName) {
         this.dbName = dbName;
     }
+
 
     /**
      * get 账号对数据库所具有的权限，权限的具体定义可以参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -80,6 +82,7 @@ public class AccountPrivilege  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
@@ -89,6 +92,7 @@ public class AccountPrivilege  implements java.io.Serializable {
         this.dbName = dbName;
         return this;
     }
+
 
     /**
      * set 账号对数据库所具有的权限，权限的具体定义可以参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)

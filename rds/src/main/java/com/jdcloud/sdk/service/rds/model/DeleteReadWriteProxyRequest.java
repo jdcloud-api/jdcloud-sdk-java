@@ -49,6 +49,7 @@ public class DeleteReadWriteProxyRequest extends JdcloudRequest implements java.
     private String readWriteProxyId;
 
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -66,6 +67,7 @@ public class DeleteReadWriteProxyRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 读写分离代理服务ID
@@ -86,6 +88,7 @@ public class DeleteReadWriteProxyRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -95,6 +98,7 @@ public class DeleteReadWriteProxyRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 读写分离代理服务ID

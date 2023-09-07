@@ -63,6 +63,7 @@ public class ModifyActiveDirectoryRequest extends JdcloudRequest implements java
     private String instanceId;
 
 
+
     /**
      * get 目录服务的资源ID&lt;br&gt;- 加入目录服务：要加入的目录服务的资源ID&lt;br&gt;- 修改目录服务：新目录服务的资源ID&lt;br&gt;- 移除目录服务：传入字符串“none”，不区分大小写
      *
@@ -80,6 +81,7 @@ public class ModifyActiveDirectoryRequest extends JdcloudRequest implements java
     public void setAdResourceId(String adResourceId) {
         this.adResourceId = adResourceId;
     }
+
 
     /**
      * get 修改后，是否强制重启实例，使修改生效。&lt;br&gt; - true 修改后立即重启&lt;br&gt;- false：默认值，修改后不重启，需用户自行重启
@@ -99,6 +101,7 @@ public class ModifyActiveDirectoryRequest extends JdcloudRequest implements java
         this.forceRestart = forceRestart;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -116,6 +119,7 @@ public class ModifyActiveDirectoryRequest extends JdcloudRequest implements java
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -136,6 +140,7 @@ public class ModifyActiveDirectoryRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 目录服务的资源ID&lt;br&gt;- 加入目录服务：要加入的目录服务的资源ID&lt;br&gt;- 修改目录服务：新目录服务的资源ID&lt;br&gt;- 移除目录服务：传入字符串“none”，不区分大小写
      *
@@ -145,6 +150,7 @@ public class ModifyActiveDirectoryRequest extends JdcloudRequest implements java
         this.adResourceId = adResourceId;
         return this;
     }
+
 
     /**
      * set 修改后，是否强制重启实例，使修改生效。&lt;br&gt; - true 修改后立即重启&lt;br&gt;- false：默认值，修改后不重启，需用户自行重启
@@ -156,6 +162,7 @@ public class ModifyActiveDirectoryRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -165,6 +172,7 @@ public class ModifyActiveDirectoryRequest extends JdcloudRequest implements java
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

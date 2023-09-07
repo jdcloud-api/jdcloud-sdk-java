@@ -61,6 +61,7 @@ public class DeleteImportFileRequest extends JdcloudRequest implements java.io.S
     private String fileName;
 
 
+
     /**
      * get 共享文件的全局ID，可从上传文件查询接口describeImportFiles中获取；如果该文件不是共享文件，则无须输入该字段
      *
@@ -78,6 +79,7 @@ public class DeleteImportFileRequest extends JdcloudRequest implements java.io.S
     public void setSharedFileGid(String sharedFileGid) {
         this.sharedFileGid = sharedFileGid;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -97,6 +99,7 @@ public class DeleteImportFileRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -114,6 +117,7 @@ public class DeleteImportFileRequest extends JdcloudRequest implements java.io.S
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 单库上云文件名
@@ -134,6 +138,7 @@ public class DeleteImportFileRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 共享文件的全局ID，可从上传文件查询接口describeImportFiles中获取；如果该文件不是共享文件，则无须输入该字段
      *
@@ -143,6 +148,7 @@ public class DeleteImportFileRequest extends JdcloudRequest implements java.io.S
         this.sharedFileGid = sharedFileGid;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -154,6 +160,7 @@ public class DeleteImportFileRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -163,6 +170,7 @@ public class DeleteImportFileRequest extends JdcloudRequest implements java.io.S
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 单库上云文件名

@@ -61,6 +61,7 @@ public class DescribeLogDownloadURLRequest extends JdcloudRequest implements jav
     private String logId;
 
 
+
     /**
      * get 设置链接地址的过期时间，单位是秒，默认值是 300 秒，最长不能超过取值范围为 1 ~ 86400 秒
      *
@@ -78,6 +79,7 @@ public class DescribeLogDownloadURLRequest extends JdcloudRequest implements jav
     public void setSeconds(Integer seconds) {
         this.seconds = seconds;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -97,6 +99,7 @@ public class DescribeLogDownloadURLRequest extends JdcloudRequest implements jav
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -114,6 +117,7 @@ public class DescribeLogDownloadURLRequest extends JdcloudRequest implements jav
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 日志文件ID
@@ -134,6 +138,7 @@ public class DescribeLogDownloadURLRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 设置链接地址的过期时间，单位是秒，默认值是 300 秒，最长不能超过取值范围为 1 ~ 86400 秒
      *
@@ -143,6 +148,7 @@ public class DescribeLogDownloadURLRequest extends JdcloudRequest implements jav
         this.seconds = seconds;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -154,6 +160,7 @@ public class DescribeLogDownloadURLRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -163,6 +170,7 @@ public class DescribeLogDownloadURLRequest extends JdcloudRequest implements jav
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 日志文件ID

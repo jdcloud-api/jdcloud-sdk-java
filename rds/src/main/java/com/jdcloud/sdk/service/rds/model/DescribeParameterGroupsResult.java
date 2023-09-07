@@ -39,31 +39,33 @@ public class DescribeParameterGroupsResult extends JdcloudResult implements java
     /**
      * parameterGroups
      */
+    
     private List<ParameterGroup> parameterGroups;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get parameterGroups
-     *
-     * @return
-     */
+    * get parameterGroups
+    *
+    * @return
+    */
     public List<ParameterGroup> getParameterGroups() {
         return parameterGroups;
     }
 
     /**
-     * set parameterGroups
-     *
-     * @param parameterGroups
-     */
+    * set parameterGroups
+    *
+    * @param parameterGroups
+    */
     public void setParameterGroups(List<ParameterGroup> parameterGroups) {
         this.parameterGroups = parameterGroups;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeParameterGroupsResult extends JdcloudResult implements java
     }
 
 
+
     /**
-     * set parameterGroups
-     *
-     * @param parameterGroups
-     */
+    * set parameterGroups
+    *
+    * @param parameterGroups
+    */
     public DescribeParameterGroupsResult parameterGroups(List<ParameterGroup> parameterGroups) {
         this.parameterGroups = parameterGroups;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeParameterGroupsResult extends JdcloudResult implements java
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeParameterGroupsResult extends JdcloudResult implements java
         }
         this.parameterGroups.add(parameterGroup);
     }
-
 }

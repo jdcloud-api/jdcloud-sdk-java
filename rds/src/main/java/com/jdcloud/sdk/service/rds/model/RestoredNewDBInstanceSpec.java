@@ -60,8 +60,8 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> azId;
-
     /**
      * VPC的ID
      * Required:true
@@ -104,14 +104,20 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     private Boolean storageEncrypted;
 
     /**
-     * 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster&lt;br&gt;- 仅支持SQL Server
+     * 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster，multi-replica：三副本&lt;br&gt;- 仅支持SQL Server
      */
     private String instanceType;
 
     /**
      * 标签信息
      */
+    
     private List<Tag> tagSpec;
+    /**
+     * 资源组id
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -132,6 +138,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         this.instanceName = instanceName;
     }
 
+
     /**
      * get 实例规格代码，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
      *
@@ -149,6 +156,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     public void setInstanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
     }
+
 
     /**
      * get 磁盘大小，单位GB
@@ -168,23 +176,25 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         this.instanceStorageGB = instanceStorageGB;
     }
 
+
     /**
-     * get 可用区ID， 第一个ID必须为主实例所在的可用区。如两个可用区一样，也需输入两个azId
-     *
-     * @return
-     */
+    * get 可用区ID， 第一个ID必须为主实例所在的可用区。如两个可用区一样，也需输入两个azId
+    *
+    * @return
+    */
     public List<String> getAzId() {
         return azId;
     }
 
     /**
-     * set 可用区ID， 第一个ID必须为主实例所在的可用区。如两个可用区一样，也需输入两个azId
-     *
-     * @param azId
-     */
+    * set 可用区ID， 第一个ID必须为主实例所在的可用区。如两个可用区一样，也需输入两个azId
+    *
+    * @param azId
+    */
     public void setAzId(List<String> azId) {
         this.azId = azId;
     }
+
 
     /**
      * get VPC的ID
@@ -204,6 +214,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 子网ID
      *
@@ -221,6 +232,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
     /**
      * get 参数组ID, 缺省系统会创建一个默认参数组&lt;br&gt;- 仅支持MySQL
@@ -240,6 +252,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         this.parameterGroup = parameterGroup;
     }
 
+
     /**
      * get 计费规格，包括计费类型，计费周期等
      *
@@ -257,6 +270,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     public void setChargeSpec(ChargeSpec chargeSpec) {
         this.chargeSpec = chargeSpec;
     }
+
 
     /**
      * get 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md), 缺省值为：LOCAL_SSD&lt;br&gt;- 仅支持MySQL
@@ -276,6 +290,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         this.instanceStorageType = instanceStorageType;
     }
 
+
     /**
      * get 应用访问端口，支持的端口范围：1150～5999。MySQL、Percona、MariaDB的默认值为 3306；PostgreSQL的默认端口号为5432；
      *
@@ -293,6 +308,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     public void setInstancePort(String instancePort) {
         this.instancePort = instancePort;
     }
+
 
     /**
      * get 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
@@ -312,8 +328,9 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         this.storageEncrypted = storageEncrypted;
     }
 
+
     /**
-     * get 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster&lt;br&gt;- 仅支持SQL Server
+     * get 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster，multi-replica：三副本&lt;br&gt;- 仅支持SQL Server
      *
      * @return
      */
@@ -322,7 +339,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster&lt;br&gt;- 仅支持SQL Server
+     * set 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster，multi-replica：三副本&lt;br&gt;- 仅支持SQL Server
      *
      * @param instanceType
      */
@@ -330,23 +347,44 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
-     * get 标签信息
-     *
-     * @return
-     */
+    * get 标签信息
+    *
+    * @return
+    */
     public List<Tag> getTagSpec() {
         return tagSpec;
     }
 
     /**
-     * set 标签信息
-     *
-     * @param tagSpec
-     */
+    * set 标签信息
+    *
+    * @param tagSpec
+    */
     public void setTagSpec(List<Tag> tagSpec) {
         this.tagSpec = tagSpec;
     }
+
+
+    /**
+     * get 资源组id
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组id
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
 
 
     /**
@@ -359,6 +397,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例规格代码，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
      *
@@ -368,6 +407,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         this.instanceClass = instanceClass;
         return this;
     }
+
 
     /**
      * set 磁盘大小，单位GB
@@ -379,15 +419,17 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 可用区ID， 第一个ID必须为主实例所在的可用区。如两个可用区一样，也需输入两个azId
-     *
-     * @param azId
-     */
+    * set 可用区ID， 第一个ID必须为主实例所在的可用区。如两个可用区一样，也需输入两个azId
+    *
+    * @param azId
+    */
     public RestoredNewDBInstanceSpec azId(List<String> azId) {
         this.azId = azId;
         return this;
     }
+
 
     /**
      * set VPC的ID
@@ -399,6 +441,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网ID
      *
@@ -408,6 +451,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 参数组ID, 缺省系统会创建一个默认参数组&lt;br&gt;- 仅支持MySQL
@@ -419,6 +463,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费规格，包括计费类型，计费周期等
      *
@@ -428,6 +473,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         this.chargeSpec = chargeSpec;
         return this;
     }
+
 
     /**
      * set 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md), 缺省值为：LOCAL_SSD&lt;br&gt;- 仅支持MySQL
@@ -439,6 +485,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应用访问端口，支持的端口范围：1150～5999。MySQL、Percona、MariaDB的默认值为 3306；PostgreSQL的默认端口号为5432；
      *
@@ -448,6 +495,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         this.instancePort = instancePort;
         return this;
     }
+
 
     /**
      * set 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
@@ -459,8 +507,9 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster&lt;br&gt;- 仅支持SQL Server
+     * set 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster，multi-replica：三副本&lt;br&gt;- 仅支持SQL Server
      *
      * @param instanceType
      */
@@ -469,15 +518,28 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 标签信息
-     *
-     * @param tagSpec
-     */
+    * set 标签信息
+    *
+    * @param tagSpec
+    */
     public RestoredNewDBInstanceSpec tagSpec(List<Tag> tagSpec) {
         this.tagSpec = tagSpec;
         return this;
     }
+
+
+    /**
+     * set 资源组id
+     *
+     * @param resourceGroupId
+     */
+    public RestoredNewDBInstanceSpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
 
 
     /**
@@ -503,5 +565,4 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         }
         this.tagSpec.add(tagSpec);
     }
-
 }

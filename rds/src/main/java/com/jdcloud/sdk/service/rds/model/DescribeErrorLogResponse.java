@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询PostgreSQL实例的错误日志的概要信息。&lt;br&gt;- 仅支持PostgreSQL
+ * 查询错误日志的概要信息
  */
 public class DescribeErrorLogResponse extends JdcloudResponse<DescribeErrorLogResult> implements java.io.Serializable {
 

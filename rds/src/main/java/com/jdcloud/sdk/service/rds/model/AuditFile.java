@@ -53,6 +53,7 @@ public class AuditFile  implements java.io.Serializable {
     private String uploadTime;
 
 
+
     /**
      * get 审计日志文件名称
      *
@@ -70,6 +71,7 @@ public class AuditFile  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 审计日志文件大小，单位Byte
@@ -89,6 +91,7 @@ public class AuditFile  implements java.io.Serializable {
         this.sizeByte = sizeByte;
     }
 
+
     /**
      * get 审计日志文件最后更新时间
      *
@@ -106,6 +109,7 @@ public class AuditFile  implements java.io.Serializable {
     public void setLastUpdateTime(String lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
     }
+
 
     /**
      * get 审计日志文件上传时间
@@ -126,6 +130,7 @@ public class AuditFile  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 审计日志文件名称
      *
@@ -135,6 +140,7 @@ public class AuditFile  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 审计日志文件大小，单位Byte
@@ -146,6 +152,7 @@ public class AuditFile  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 审计日志文件最后更新时间
      *
@@ -155,6 +162,7 @@ public class AuditFile  implements java.io.Serializable {
         this.lastUpdateTime = lastUpdateTime;
         return this;
     }
+
 
     /**
      * set 审计日志文件上传时间

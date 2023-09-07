@@ -58,6 +58,7 @@ public class Schema  implements java.io.Serializable {
     private String newTableName;
 
 
+
     /**
      * get 原数据库名
      *
@@ -75,6 +76,7 @@ public class Schema  implements java.io.Serializable {
     public void setDbName(String dbName) {
         this.dbName = dbName;
     }
+
 
     /**
      * get 新数据库名
@@ -94,6 +96,7 @@ public class Schema  implements java.io.Serializable {
         this.newDBName = newDBName;
     }
 
+
     /**
      * get 原数据库表名
      *
@@ -111,6 +114,7 @@ public class Schema  implements java.io.Serializable {
     public void setTableName(String tableName) {
         this.tableName = tableName;
     }
+
 
     /**
      * get 新数据库表名
@@ -131,6 +135,7 @@ public class Schema  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 原数据库名
      *
@@ -140,6 +145,7 @@ public class Schema  implements java.io.Serializable {
         this.dbName = dbName;
         return this;
     }
+
 
     /**
      * set 新数据库名
@@ -151,6 +157,7 @@ public class Schema  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 原数据库表名
      *
@@ -160,6 +167,7 @@ public class Schema  implements java.io.Serializable {
         this.tableName = tableName;
         return this;
     }
+
 
     /**
      * set 新数据库表名

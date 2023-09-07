@@ -103,6 +103,7 @@ public class SlowLogDigest  implements java.io.Serializable {
     private DigestData rowsReturned;
 
 
+
     /**
      * get 数据库名，表示该SQL是在哪个数据库中执行的
      *
@@ -120,6 +121,7 @@ public class SlowLogDigest  implements java.io.Serializable {
     public void setDbName(String dbName) {
         this.dbName = dbName;
     }
+
 
     /**
      * get 数据库账号，表示该SQL是哪个数据库账号发起的
@@ -139,6 +141,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         this.user = user;
     }
 
+
     /**
      * get SQL语句
      *
@@ -156,6 +159,7 @@ public class SlowLogDigest  implements java.io.Serializable {
     public void setSql(String sql) {
         this.sql = sql;
     }
+
 
     /**
      * get SQL语句执行的开始时间，格式为YYYY-MM-DD hh:mm:ss
@@ -175,6 +179,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         this.executionTime = executionTime;
     }
 
+
     /**
      * get SQL语句的执行次数
      *
@@ -192,6 +197,7 @@ public class SlowLogDigest  implements java.io.Serializable {
     public void setExecutionCount(Integer executionCount) {
         this.executionCount = executionCount;
     }
+
 
     /**
      * get 执行总时间
@@ -211,6 +217,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         this.executionTimeSum = executionTimeSum;
     }
 
+
     /**
      * get 扫描总行数
      *
@@ -228,6 +235,7 @@ public class SlowLogDigest  implements java.io.Serializable {
     public void setRowsExaminedSum(Integer rowsExaminedSum) {
         this.rowsExaminedSum = rowsExaminedSum;
     }
+
 
     /**
      * get 返回总行数
@@ -247,6 +255,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         this.rowsSentSum = rowsSentSum;
     }
 
+
     /**
      * get 锁定总时间
      *
@@ -264,6 +273,7 @@ public class SlowLogDigest  implements java.io.Serializable {
     public void setLockTimeSum(Float lockTimeSum) {
         this.lockTimeSum = lockTimeSum;
     }
+
 
     /**
      * get SQL语句执行的时长，单位秒
@@ -283,6 +293,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         this.elapsedTime = elapsedTime;
     }
 
+
     /**
      * get SQL语句等待锁的时间，单位秒
      *
@@ -300,6 +311,7 @@ public class SlowLogDigest  implements java.io.Serializable {
     public void setLockTime(DigestData lockTime) {
         this.lockTime = lockTime;
     }
+
 
     /**
      * get SQL语句的长度
@@ -319,6 +331,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         this.sqlLength = sqlLength;
     }
 
+
     /**
      * get SQL语句扫描的行数
      *
@@ -336,6 +349,7 @@ public class SlowLogDigest  implements java.io.Serializable {
     public void setRowsExamined(DigestData rowsExamined) {
         this.rowsExamined = rowsExamined;
     }
+
 
     /**
      * get SQL语句返回的行数
@@ -356,6 +370,7 @@ public class SlowLogDigest  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 数据库名，表示该SQL是在哪个数据库中执行的
      *
@@ -365,6 +380,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         this.dbName = dbName;
         return this;
     }
+
 
     /**
      * set 数据库账号，表示该SQL是哪个数据库账号发起的
@@ -376,6 +392,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set SQL语句
      *
@@ -385,6 +402,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         this.sql = sql;
         return this;
     }
+
 
     /**
      * set SQL语句执行的开始时间，格式为YYYY-MM-DD hh:mm:ss
@@ -396,6 +414,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set SQL语句的执行次数
      *
@@ -405,6 +424,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         this.executionCount = executionCount;
         return this;
     }
+
 
     /**
      * set 执行总时间
@@ -416,6 +436,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 扫描总行数
      *
@@ -425,6 +446,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         this.rowsExaminedSum = rowsExaminedSum;
         return this;
     }
+
 
     /**
      * set 返回总行数
@@ -436,6 +458,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 锁定总时间
      *
@@ -445,6 +468,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         this.lockTimeSum = lockTimeSum;
         return this;
     }
+
 
     /**
      * set SQL语句执行的时长，单位秒
@@ -456,6 +480,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set SQL语句等待锁的时间，单位秒
      *
@@ -465,6 +490,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         this.lockTime = lockTime;
         return this;
     }
+
 
     /**
      * set SQL语句的长度
@@ -476,6 +502,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set SQL语句扫描的行数
      *
@@ -485,6 +512,7 @@ public class SlowLogDigest  implements java.io.Serializable {
         this.rowsExamined = rowsExamined;
         return this;
     }
+
 
     /**
      * set SQL语句返回的行数

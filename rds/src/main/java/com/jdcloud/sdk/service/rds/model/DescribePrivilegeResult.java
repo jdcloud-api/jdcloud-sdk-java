@@ -38,103 +38,110 @@ public class DescribePrivilegeResult extends JdcloudResult implements java.io.Se
     /**
      * globalPrivileges
      */
+    
     private List<String> globalPrivileges;
-
     /**
      * databasePrivileges
      */
+    
     private List<String> databasePrivileges;
-
     /**
      * tablePrivileges
      */
+    
     private List<String> tablePrivileges;
 
 
     /**
-     * get globalPrivileges
-     *
-     * @return
-     */
+    * get globalPrivileges
+    *
+    * @return
+    */
     public List<String> getGlobalPrivileges() {
         return globalPrivileges;
     }
 
     /**
-     * set globalPrivileges
-     *
-     * @param globalPrivileges
-     */
+    * set globalPrivileges
+    *
+    * @param globalPrivileges
+    */
     public void setGlobalPrivileges(List<String> globalPrivileges) {
         this.globalPrivileges = globalPrivileges;
     }
 
+
     /**
-     * get databasePrivileges
-     *
-     * @return
-     */
+    * get databasePrivileges
+    *
+    * @return
+    */
     public List<String> getDatabasePrivileges() {
         return databasePrivileges;
     }
 
     /**
-     * set databasePrivileges
-     *
-     * @param databasePrivileges
-     */
+    * set databasePrivileges
+    *
+    * @param databasePrivileges
+    */
     public void setDatabasePrivileges(List<String> databasePrivileges) {
         this.databasePrivileges = databasePrivileges;
     }
 
+
     /**
-     * get tablePrivileges
-     *
-     * @return
-     */
+    * get tablePrivileges
+    *
+    * @return
+    */
     public List<String> getTablePrivileges() {
         return tablePrivileges;
     }
 
     /**
-     * set tablePrivileges
-     *
-     * @param tablePrivileges
-     */
+    * set tablePrivileges
+    *
+    * @param tablePrivileges
+    */
     public void setTablePrivileges(List<String> tablePrivileges) {
         this.tablePrivileges = tablePrivileges;
     }
 
 
+
     /**
-     * set globalPrivileges
-     *
-     * @param globalPrivileges
-     */
+    * set globalPrivileges
+    *
+    * @param globalPrivileges
+    */
     public DescribePrivilegeResult globalPrivileges(List<String> globalPrivileges) {
         this.globalPrivileges = globalPrivileges;
         return this;
     }
 
+
     /**
-     * set databasePrivileges
-     *
-     * @param databasePrivileges
-     */
+    * set databasePrivileges
+    *
+    * @param databasePrivileges
+    */
     public DescribePrivilegeResult databasePrivileges(List<String> databasePrivileges) {
         this.databasePrivileges = databasePrivileges;
         return this;
     }
 
+
     /**
-     * set tablePrivileges
-     *
-     * @param tablePrivileges
-     */
+    * set tablePrivileges
+    *
+    * @param tablePrivileges
+    */
     public DescribePrivilegeResult tablePrivileges(List<String> tablePrivileges) {
         this.tablePrivileges = tablePrivileges;
         return this;
     }
+
 
 
     /**
@@ -172,5 +179,4 @@ public class DescribePrivilegeResult extends JdcloudResult implements java.io.Se
         }
         this.tablePrivileges.add(tablePrivilege);
     }
-
 }

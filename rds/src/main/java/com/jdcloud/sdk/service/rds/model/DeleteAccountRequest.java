@@ -56,6 +56,7 @@ public class DeleteAccountRequest extends JdcloudRequest implements java.io.Seri
     private String accountName;
 
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -74,6 +75,7 @@ public class DeleteAccountRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -91,6 +93,7 @@ public class DeleteAccountRequest extends JdcloudRequest implements java.io.Seri
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 账号名，在同一个实例中账号名不能重复
@@ -111,6 +114,7 @@ public class DeleteAccountRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -121,6 +125,7 @@ public class DeleteAccountRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -130,6 +135,7 @@ public class DeleteAccountRequest extends JdcloudRequest implements java.io.Seri
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 账号名，在同一个实例中账号名不能重复

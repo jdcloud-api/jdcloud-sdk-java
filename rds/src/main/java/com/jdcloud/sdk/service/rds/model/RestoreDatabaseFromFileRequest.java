@@ -68,6 +68,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     private String dbName;
 
 
+
     /**
      * get 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../Cloud-on-Single-Database/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
      *
@@ -85,6 +86,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     public void setSharedFileGid(String sharedFileGid) {
         this.sharedFileGid = sharedFileGid;
     }
+
 
     /**
      * get 用户上传的备份文件名称（包括文件后缀名），例如mydb1.bak
@@ -104,6 +106,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
         this.fileName = fileName;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -122,6 +125,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -139,6 +143,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 库名称
@@ -159,6 +164,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../Cloud-on-Single-Database/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
      *
@@ -168,6 +174,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
         this.sharedFileGid = sharedFileGid;
         return this;
     }
+
 
     /**
      * set 用户上传的备份文件名称（包括文件后缀名），例如mydb1.bak
@@ -179,6 +186,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -189,6 +197,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -198,6 +207,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 库名称

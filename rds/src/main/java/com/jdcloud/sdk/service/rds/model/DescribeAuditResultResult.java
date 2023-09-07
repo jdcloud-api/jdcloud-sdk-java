@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.AuditResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 仅支持查看MySQL实例的审计内容&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB, PostgreSQL
+ * 查看RDS实例的审计内容&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB, PostgreSQL
  */
 public class DescribeAuditResultResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,31 +39,33 @@ public class DescribeAuditResultResult extends JdcloudResult implements java.io.
     /**
      * auditResult
      */
+    
     private List<AuditResult> auditResult;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get auditResult
-     *
-     * @return
-     */
+    * get auditResult
+    *
+    * @return
+    */
     public List<AuditResult> getAuditResult() {
         return auditResult;
     }
 
     /**
-     * set auditResult
-     *
-     * @param auditResult
-     */
+    * set auditResult
+    *
+    * @param auditResult
+    */
     public void setAuditResult(List<AuditResult> auditResult) {
         this.auditResult = auditResult;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeAuditResultResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
-     * set auditResult
-     *
-     * @param auditResult
-     */
+    * set auditResult
+    *
+    * @param auditResult
+    */
     public DescribeAuditResultResult auditResult(List<AuditResult> auditResult) {
         this.auditResult = auditResult;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeAuditResultResult extends JdcloudResult implements java.io.
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeAuditResultResult extends JdcloudResult implements java.io.
         }
         this.auditResult.add(auditResult);
     }
-
 }

@@ -48,6 +48,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     private Integer backendConnectAttempts;
 
 
+
     /**
      * get 健康检查时间间隔，范围为1～600，单位为秒；默认值为100
      *
@@ -66,6 +67,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
         this.monitorInterval = monitorInterval;
     }
 
+
     /**
      * get 后端实例连接超时时间，范围为1～60，单位为秒；默认值为3
      *
@@ -83,6 +85,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     public void setBackendConnectTimeout(Integer backendConnectTimeout) {
         this.backendConnectTimeout = backendConnectTimeout;
     }
+
 
     /**
      * get 后端实例连接重试次数，范围为1～10，单位为次；默认值为1
@@ -103,6 +106,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 健康检查时间间隔，范围为1～600，单位为秒；默认值为100
      *
@@ -113,6 +117,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 后端实例连接超时时间，范围为1～60，单位为秒；默认值为3
      *
@@ -122,6 +127,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
         this.backendConnectTimeout = backendConnectTimeout;
         return this;
     }
+
 
     /**
      * set 后端实例连接重试次数，范围为1～10，单位为次；默认值为1

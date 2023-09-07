@@ -43,6 +43,7 @@ public class RoInstanceList  implements java.io.Serializable {
     private String name;
 
 
+
     /**
      * get 只读实例ID
      *
@@ -60,6 +61,7 @@ public class RoInstanceList  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get 只读实例名称
@@ -80,6 +82,7 @@ public class RoInstanceList  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 只读实例ID
      *
@@ -89,6 +92,7 @@ public class RoInstanceList  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 只读实例名称

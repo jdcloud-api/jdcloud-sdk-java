@@ -35,7 +35,7 @@ public class DescribeParameterGroupsRequest extends JdcloudRequest implements ja
     private static final long serialVersionUID = 1L;
 
     /**
-     * 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      */
     private Integer pageNumber;
 
@@ -52,8 +52,9 @@ public class DescribeParameterGroupsRequest extends JdcloudRequest implements ja
     private String regionId;
 
 
+
     /**
-     * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @return
      */
@@ -62,13 +63,14 @@ public class DescribeParameterGroupsRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍
@@ -87,6 +89,7 @@ public class DescribeParameterGroupsRequest extends JdcloudRequest implements ja
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get Region ID
@@ -107,8 +110,9 @@ public class DescribeParameterGroupsRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
@@ -116,6 +120,7 @@ public class DescribeParameterGroupsRequest extends JdcloudRequest implements ja
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍
@@ -126,6 +131,7 @@ public class DescribeParameterGroupsRequest extends JdcloudRequest implements ja
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set Region ID

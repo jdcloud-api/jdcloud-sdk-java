@@ -56,6 +56,7 @@ public class ModifyConnectionModeRequest extends JdcloudRequest implements java.
     private String instanceId;
 
 
+
     /**
      * get 连接模式&lt;br&gt; - standard：标准模式(缺省)，响应时间短，但没有 SQL 审计和拦截的能力 &lt;br&gt;- security：高安全模式，具备一定的 SQL注入拦截能力，并可开启 SQL 审计，但会增加一定的响应时间
      *
@@ -74,6 +75,7 @@ public class ModifyConnectionModeRequest extends JdcloudRequest implements java.
         this.connectionMode = connectionMode;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -91,6 +93,7 @@ public class ModifyConnectionModeRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -111,6 +114,7 @@ public class ModifyConnectionModeRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 连接模式&lt;br&gt; - standard：标准模式(缺省)，响应时间短，但没有 SQL 审计和拦截的能力 &lt;br&gt;- security：高安全模式，具备一定的 SQL注入拦截能力，并可开启 SQL 审计，但会增加一定的响应时间
      *
@@ -121,6 +125,7 @@ public class ModifyConnectionModeRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -130,6 +135,7 @@ public class ModifyConnectionModeRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -40,22 +42,22 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
     private String startWindow;
 
     /**
-     * binlog本地保留周期，单位小时,范围1-168
+     * binlog本地保留周期，单位小时，范围1-168，默认为24
      */
     private Integer binlogRetentionPeriod;
 
     /**
-     * binlog本地占用空间上限，单位%，范围1-50
+     * binlog本地占用空间上限，单位%，范围5-50，默认为30
      */
     private Integer binlogUsageLimit;
 
     /**
-     * 设置空间保护，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     * 设置空间保护，开启：on，关闭：off；开启后，磁盘剩余空间小于20%或剩余空间不足5GB时，将自动清理本地binlog。 &lt;br&gt;- 仅支持MySQL
      */
     private String binlogSpaceProtection;
 
     /**
-     * 自动备份保留周期，单位天，范围7-730&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
+     * 自动备份保留周期，单位天，范围7-730&lt;br&gt;SQL Server需要当enhancedBackup为true时才可修改
      */
     private Integer retentionPeriod;
 
@@ -63,6 +65,21 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
      * 自动备份循环模式&lt;br&gt;1：表示每天都是全量备份&lt;br&gt;2：表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
      */
     private Integer cycleMode;
+
+    /**
+     * 已删除实例的备份保留策略,取值：&lt;br&gt;• CreateAndKeep：删除时新创建备份并保留&lt;br&gt;• All：全部保留&lt;br&gt;• None：不保留
+     */
+    private String releasedKeepPolicy;
+
+    /**
+     * 备份周期。至少需要指定2天，取值：&lt;br&gt;• Monday：周一&lt;br&gt;• Tuesday：周二&lt;br&gt;• Wednesday：周三&lt;br&gt;• Thursday：周四&lt;br&gt;• Friday：周五&lt;br&gt;• Saturday：周六&lt;br&gt;• Sunday：周日
+     */
+    
+    private List<String> backupPeriod;
+    /**
+     * 本地binlog最大保留数量，支持设置保留个数为6-1000个，可传-1表示不限保留个数，默认为-1。
+     */
+    private Integer binlogRetentionNumber;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -77,6 +94,7 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
      */
     @Required
     private String instanceId;
+
 
 
     /**
@@ -97,8 +115,9 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
         this.startWindow = startWindow;
     }
 
+
     /**
-     * get binlog本地保留周期，单位小时,范围1-168
+     * get binlog本地保留周期，单位小时，范围1-168，默认为24
      *
      * @return
      */
@@ -107,7 +126,7 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set binlog本地保留周期，单位小时,范围1-168
+     * set binlog本地保留周期，单位小时，范围1-168，默认为24
      *
      * @param binlogRetentionPeriod
      */
@@ -115,8 +134,9 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
         this.binlogRetentionPeriod = binlogRetentionPeriod;
     }
 
+
     /**
-     * get binlog本地占用空间上限，单位%，范围1-50
+     * get binlog本地占用空间上限，单位%，范围5-50，默认为30
      *
      * @return
      */
@@ -125,7 +145,7 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set binlog本地占用空间上限，单位%，范围1-50
+     * set binlog本地占用空间上限，单位%，范围5-50，默认为30
      *
      * @param binlogUsageLimit
      */
@@ -133,8 +153,9 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
         this.binlogUsageLimit = binlogUsageLimit;
     }
 
+
     /**
-     * get 设置空间保护，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     * get 设置空间保护，开启：on，关闭：off；开启后，磁盘剩余空间小于20%或剩余空间不足5GB时，将自动清理本地binlog。 &lt;br&gt;- 仅支持MySQL
      *
      * @return
      */
@@ -143,7 +164,7 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 设置空间保护，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     * set 设置空间保护，开启：on，关闭：off；开启后，磁盘剩余空间小于20%或剩余空间不足5GB时，将自动清理本地binlog。 &lt;br&gt;- 仅支持MySQL
      *
      * @param binlogSpaceProtection
      */
@@ -151,8 +172,9 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
         this.binlogSpaceProtection = binlogSpaceProtection;
     }
 
+
     /**
-     * get 自动备份保留周期，单位天，范围7-730&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
+     * get 自动备份保留周期，单位天，范围7-730&lt;br&gt;SQL Server需要当enhancedBackup为true时才可修改
      *
      * @return
      */
@@ -161,13 +183,14 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 自动备份保留周期，单位天，范围7-730&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
+     * set 自动备份保留周期，单位天，范围7-730&lt;br&gt;SQL Server需要当enhancedBackup为true时才可修改
      *
      * @param retentionPeriod
      */
     public void setRetentionPeriod(Integer retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
     }
+
 
     /**
      * get 自动备份循环模式&lt;br&gt;1：表示每天都是全量备份&lt;br&gt;2：表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
@@ -187,6 +210,64 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
         this.cycleMode = cycleMode;
     }
 
+
+    /**
+     * get 已删除实例的备份保留策略,取值：&lt;br&gt;• CreateAndKeep：删除时新创建备份并保留&lt;br&gt;• All：全部保留&lt;br&gt;• None：不保留
+     *
+     * @return
+     */
+    public String getReleasedKeepPolicy() {
+        return releasedKeepPolicy;
+    }
+
+    /**
+     * set 已删除实例的备份保留策略,取值：&lt;br&gt;• CreateAndKeep：删除时新创建备份并保留&lt;br&gt;• All：全部保留&lt;br&gt;• None：不保留
+     *
+     * @param releasedKeepPolicy
+     */
+    public void setReleasedKeepPolicy(String releasedKeepPolicy) {
+        this.releasedKeepPolicy = releasedKeepPolicy;
+    }
+
+
+    /**
+    * get 备份周期。至少需要指定2天，取值：&lt;br&gt;• Monday：周一&lt;br&gt;• Tuesday：周二&lt;br&gt;• Wednesday：周三&lt;br&gt;• Thursday：周四&lt;br&gt;• Friday：周五&lt;br&gt;• Saturday：周六&lt;br&gt;• Sunday：周日
+    *
+    * @return
+    */
+    public List<String> getBackupPeriod() {
+        return backupPeriod;
+    }
+
+    /**
+    * set 备份周期。至少需要指定2天，取值：&lt;br&gt;• Monday：周一&lt;br&gt;• Tuesday：周二&lt;br&gt;• Wednesday：周三&lt;br&gt;• Thursday：周四&lt;br&gt;• Friday：周五&lt;br&gt;• Saturday：周六&lt;br&gt;• Sunday：周日
+    *
+    * @param backupPeriod
+    */
+    public void setBackupPeriod(List<String> backupPeriod) {
+        this.backupPeriod = backupPeriod;
+    }
+
+
+    /**
+     * get 本地binlog最大保留数量，支持设置保留个数为6-1000个，可传-1表示不限保留个数，默认为-1。
+     *
+     * @return
+     */
+    public Integer getBinlogRetentionNumber() {
+        return binlogRetentionNumber;
+    }
+
+    /**
+     * set 本地binlog最大保留数量，支持设置保留个数为6-1000个，可传-1表示不限保留个数，默认为-1。
+     *
+     * @param binlogRetentionNumber
+     */
+    public void setBinlogRetentionNumber(Integer binlogRetentionNumber) {
+        this.binlogRetentionNumber = binlogRetentionNumber;
+    }
+
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -204,6 +285,7 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -224,6 +306,7 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 自动备份开始时间窗口,例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中&lt;br&gt;SQL Server:范围00:00-23:59，时间范围差不得小于30分钟。&lt;br&gt;MySQL,只能是以下取值:&lt;br&gt;00:00-01:00&lt;br&gt;01:00-02:00&lt;br&gt;......&lt;br&gt;23:00-24:00
      *
@@ -234,8 +317,9 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
-     * set binlog本地保留周期，单位小时,范围1-168
+     * set binlog本地保留周期，单位小时，范围1-168，默认为24
      *
      * @param binlogRetentionPeriod
      */
@@ -244,8 +328,9 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
-     * set binlog本地占用空间上限，单位%，范围1-50
+     * set binlog本地占用空间上限，单位%，范围5-50，默认为30
      *
      * @param binlogUsageLimit
      */
@@ -254,8 +339,9 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
-     * set 设置空间保护，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     * set 设置空间保护，开启：on，关闭：off；开启后，磁盘剩余空间小于20%或剩余空间不足5GB时，将自动清理本地binlog。 &lt;br&gt;- 仅支持MySQL
      *
      * @param binlogSpaceProtection
      */
@@ -264,8 +350,9 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
-     * set 自动备份保留周期，单位天，范围7-730&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
+     * set 自动备份保留周期，单位天，范围7-730&lt;br&gt;SQL Server需要当enhancedBackup为true时才可修改
      *
      * @param retentionPeriod
      */
@@ -273,6 +360,7 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
         this.retentionPeriod = retentionPeriod;
         return this;
     }
+
 
     /**
      * set 自动备份循环模式&lt;br&gt;1：表示每天都是全量备份&lt;br&gt;2：表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
@@ -284,6 +372,40 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
+    /**
+     * set 已删除实例的备份保留策略,取值：&lt;br&gt;• CreateAndKeep：删除时新创建备份并保留&lt;br&gt;• All：全部保留&lt;br&gt;• None：不保留
+     *
+     * @param releasedKeepPolicy
+     */
+    public ModifyBackupPolicyRequest releasedKeepPolicy(String releasedKeepPolicy) {
+        this.releasedKeepPolicy = releasedKeepPolicy;
+        return this;
+    }
+
+
+    /**
+    * set 备份周期。至少需要指定2天，取值：&lt;br&gt;• Monday：周一&lt;br&gt;• Tuesday：周二&lt;br&gt;• Wednesday：周三&lt;br&gt;• Thursday：周四&lt;br&gt;• Friday：周五&lt;br&gt;• Saturday：周六&lt;br&gt;• Sunday：周日
+    *
+    * @param backupPeriod
+    */
+    public ModifyBackupPolicyRequest backupPeriod(List<String> backupPeriod) {
+        this.backupPeriod = backupPeriod;
+        return this;
+    }
+
+
+    /**
+     * set 本地binlog最大保留数量，支持设置保留个数为6-1000个，可传-1表示不限保留个数，默认为-1。
+     *
+     * @param binlogRetentionNumber
+     */
+    public ModifyBackupPolicyRequest binlogRetentionNumber(Integer binlogRetentionNumber) {
+        this.binlogRetentionNumber = binlogRetentionNumber;
+        return this;
+    }
+
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -293,6 +415,7 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
@@ -305,4 +428,16 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
     }
 
 
+
+    /**
+     * add item to 备份周期。至少需要指定2天，取值：&lt;br&gt;• Monday：周一&lt;br&gt;• Tuesday：周二&lt;br&gt;• Wednesday：周三&lt;br&gt;• Thursday：周四&lt;br&gt;• Friday：周五&lt;br&gt;• Saturday：周六&lt;br&gt;• Sunday：周日
+     *
+     * @param backupPeriod
+     */
+    public void addBackupPeriod(String backupPeriod) {
+        if (this.backupPeriod == null) {
+            this.backupPeriod = new ArrayList<>();
+        }
+        this.backupPeriod.add(backupPeriod);
+    }
 }

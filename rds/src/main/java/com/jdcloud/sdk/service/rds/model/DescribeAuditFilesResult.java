@@ -39,37 +39,40 @@ public class DescribeAuditFilesResult extends JdcloudResult implements java.io.S
     /**
      * auditFiles
      */
+    
     private List<AuditFile> auditFiles;
 
 
     /**
-     * get auditFiles
-     *
-     * @return
-     */
+    * get auditFiles
+    *
+    * @return
+    */
     public List<AuditFile> getAuditFiles() {
         return auditFiles;
     }
 
     /**
-     * set auditFiles
-     *
-     * @param auditFiles
-     */
+    * set auditFiles
+    *
+    * @param auditFiles
+    */
     public void setAuditFiles(List<AuditFile> auditFiles) {
         this.auditFiles = auditFiles;
     }
 
 
+
     /**
-     * set auditFiles
-     *
-     * @param auditFiles
-     */
+    * set auditFiles
+    *
+    * @param auditFiles
+    */
     public DescribeAuditFilesResult auditFiles(List<AuditFile> auditFiles) {
         this.auditFiles = auditFiles;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeAuditFilesResult extends JdcloudResult implements java.io.S
         }
         this.auditFiles.add(auditFile);
     }
-
 }

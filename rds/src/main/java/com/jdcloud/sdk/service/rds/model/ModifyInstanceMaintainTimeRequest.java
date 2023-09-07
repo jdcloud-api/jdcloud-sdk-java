@@ -44,8 +44,8 @@ public class ModifyInstanceMaintainTimeRequest extends JdcloudRequest implements
     /**
      * 选择维护周期，可选择一周中的某一天或多天
      */
+    
     private List<String> maintainPeriod;
-
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
@@ -59,6 +59,7 @@ public class ModifyInstanceMaintainTimeRequest extends JdcloudRequest implements
      */
     @Required
     private String instanceId;
+
 
 
     /**
@@ -79,23 +80,25 @@ public class ModifyInstanceMaintainTimeRequest extends JdcloudRequest implements
         this.maintainTime = maintainTime;
     }
 
+
     /**
-     * get 选择维护周期，可选择一周中的某一天或多天
-     *
-     * @return
-     */
+    * get 选择维护周期，可选择一周中的某一天或多天
+    *
+    * @return
+    */
     public List<String> getMaintainPeriod() {
         return maintainPeriod;
     }
 
     /**
-     * set 选择维护周期，可选择一周中的某一天或多天
-     *
-     * @param maintainPeriod
-     */
+    * set 选择维护周期，可选择一周中的某一天或多天
+    *
+    * @param maintainPeriod
+    */
     public void setMaintainPeriod(List<String> maintainPeriod) {
         this.maintainPeriod = maintainPeriod;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -114,6 +117,7 @@ public class ModifyInstanceMaintainTimeRequest extends JdcloudRequest implements
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -134,6 +138,7 @@ public class ModifyInstanceMaintainTimeRequest extends JdcloudRequest implements
     }
 
 
+
     /**
      * set 实例的可维护时间段。格式：HH:mm-HH:mm，取值为一个小时整点
      *
@@ -144,15 +149,17 @@ public class ModifyInstanceMaintainTimeRequest extends JdcloudRequest implements
         return this;
     }
 
+
     /**
-     * set 选择维护周期，可选择一周中的某一天或多天
-     *
-     * @param maintainPeriod
-     */
+    * set 选择维护周期，可选择一周中的某一天或多天
+    *
+    * @param maintainPeriod
+    */
     public ModifyInstanceMaintainTimeRequest maintainPeriod(List<String> maintainPeriod) {
         this.maintainPeriod = maintainPeriod;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -164,6 +171,7 @@ public class ModifyInstanceMaintainTimeRequest extends JdcloudRequest implements
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -173,6 +181,7 @@ public class ModifyInstanceMaintainTimeRequest extends JdcloudRequest implements
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -186,5 +195,4 @@ public class ModifyInstanceMaintainTimeRequest extends JdcloudRequest implements
         }
         this.maintainPeriod.add(maintainPeriod);
     }
-
 }

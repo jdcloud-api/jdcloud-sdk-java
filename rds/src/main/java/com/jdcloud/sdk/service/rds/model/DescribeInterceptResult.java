@@ -39,6 +39,7 @@ public class DescribeInterceptResult extends JdcloudResult implements java.io.Se
     private Boolean available;
 
 
+
     /**
      * get available
      *
@@ -56,6 +57,7 @@ public class DescribeInterceptResult extends JdcloudResult implements java.io.Se
     public void setAvailable(Boolean available) {
         this.available = available;
     }
+
 
 
     /**

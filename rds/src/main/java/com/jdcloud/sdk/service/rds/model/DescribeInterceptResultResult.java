@@ -39,31 +39,33 @@ public class DescribeInterceptResultResult extends JdcloudResult implements java
     /**
      * interceptResult
      */
+    
     private List<InterceptResult> interceptResult;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get interceptResult
-     *
-     * @return
-     */
+    * get interceptResult
+    *
+    * @return
+    */
     public List<InterceptResult> getInterceptResult() {
         return interceptResult;
     }
 
     /**
-     * set interceptResult
-     *
-     * @param interceptResult
-     */
+    * set interceptResult
+    *
+    * @param interceptResult
+    */
     public void setInterceptResult(List<InterceptResult> interceptResult) {
         this.interceptResult = interceptResult;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeInterceptResultResult extends JdcloudResult implements java
     }
 
 
+
     /**
-     * set interceptResult
-     *
-     * @param interceptResult
-     */
+    * set interceptResult
+    *
+    * @param interceptResult
+    */
     public DescribeInterceptResultResult interceptResult(List<InterceptResult> interceptResult) {
         this.interceptResult = interceptResult;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeInterceptResultResult extends JdcloudResult implements java
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeInterceptResultResult extends JdcloudResult implements java
         }
         this.interceptResult.add(interceptResult);
     }
-
 }

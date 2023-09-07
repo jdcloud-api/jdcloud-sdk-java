@@ -53,6 +53,7 @@ public class StatusDetail  implements java.io.Serializable {
     private String tdeStatus;
 
 
+
     /**
      * get 实例ID
      *
@@ -70,6 +71,7 @@ public class StatusDetail  implements java.io.Serializable {
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
@@ -89,6 +91,7 @@ public class StatusDetail  implements java.io.Serializable {
         this.instanceName = instanceName;
     }
 
+
     /**
      * get 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -106,6 +109,7 @@ public class StatusDetail  implements java.io.Serializable {
     public void setInstanceStatus(String instanceStatus) {
         this.instanceStatus = instanceStatus;
     }
+
 
     /**
      * get 开启TDE加密后，实例级别的TDE生效状态，TDE加密已生效，返回true；如未生效，返回false；
@@ -126,6 +130,7 @@ public class StatusDetail  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例ID
      *
@@ -135,6 +140,7 @@ public class StatusDetail  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
@@ -146,6 +152,7 @@ public class StatusDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -155,6 +162,7 @@ public class StatusDetail  implements java.io.Serializable {
         this.instanceStatus = instanceStatus;
         return this;
     }
+
 
     /**
      * set 开启TDE加密后，实例级别的TDE生效状态，TDE加密已生效，返回true；如未生效，返回false；

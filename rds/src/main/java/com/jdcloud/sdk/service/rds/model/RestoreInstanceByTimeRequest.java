@@ -48,8 +48,8 @@ public class RestoreInstanceByTimeRequest extends JdcloudRequest implements java
      * Required:true
      */
     @Required
+    
     private List<Schema> restoreSchema;
-
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
@@ -63,6 +63,7 @@ public class RestoreInstanceByTimeRequest extends JdcloudRequest implements java
      */
     @Required
     private String instanceId;
+
 
 
     /**
@@ -83,23 +84,25 @@ public class RestoreInstanceByTimeRequest extends JdcloudRequest implements java
         this.restoreTime = restoreTime;
     }
 
+
     /**
-     * get 需要进行单库，单表恢复的概要信息
-     *
-     * @return
-     */
+    * get 需要进行单库，单表恢复的概要信息
+    *
+    * @return
+    */
     public List<Schema> getRestoreSchema() {
         return restoreSchema;
     }
 
     /**
-     * set 需要进行单库，单表恢复的概要信息
-     *
-     * @param restoreSchema
-     */
+    * set 需要进行单库，单表恢复的概要信息
+    *
+    * @param restoreSchema
+    */
     public void setRestoreSchema(List<Schema> restoreSchema) {
         this.restoreSchema = restoreSchema;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -118,6 +121,7 @@ public class RestoreInstanceByTimeRequest extends JdcloudRequest implements java
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -138,6 +142,7 @@ public class RestoreInstanceByTimeRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 根据源实例的哪个时间点创建新实例
      *
@@ -148,15 +153,17 @@ public class RestoreInstanceByTimeRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
-     * set 需要进行单库，单表恢复的概要信息
-     *
-     * @param restoreSchema
-     */
+    * set 需要进行单库，单表恢复的概要信息
+    *
+    * @param restoreSchema
+    */
     public RestoreInstanceByTimeRequest restoreSchema(List<Schema> restoreSchema) {
         this.restoreSchema = restoreSchema;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -168,6 +175,7 @@ public class RestoreInstanceByTimeRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -177,6 +185,7 @@ public class RestoreInstanceByTimeRequest extends JdcloudRequest implements java
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -190,5 +199,4 @@ public class RestoreInstanceByTimeRequest extends JdcloudRequest implements java
         }
         this.restoreSchema.add(restoreSchema);
     }
-
 }

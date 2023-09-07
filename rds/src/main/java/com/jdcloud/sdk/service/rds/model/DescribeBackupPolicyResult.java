@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -39,22 +41,22 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     private String startWindow;
 
     /**
-     * 自动备份保留周期，单位天,缺省为7天，范围7-730
+     * 自动备份保留周期，单位天，默认为7
      */
     private Integer retentionPeriod;
 
     /**
-     * binlog本地保留周期，单位天，范围1-7，默认为1
+     * binlog本地保留周期，单位小时，默认为24
      */
     private Integer binlogRetentionPeriod;
 
     /**
-     * binlog本地占用空间上限，单位%，范围1-50，默认为10
+     * binlog本地占用空间上限，单位%，默认为30
      */
     private Integer binlogUsageLimit;
 
     /**
-     * 空间保护是否开启，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     * 空间保护是否开启，开启后，磁盘剩余空间小于20%或剩余空间不足5GB时，将自动清理本地binlog。开启：on，关闭：off，默认为off &lt;br&gt;- 仅支持MySQL
      */
     private String binlogSpaceProtection;
 
@@ -64,7 +66,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     private Integer cycleMode;
 
     /**
-     * 是否备份binlog&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **仅支持 MySQL，Percona，MariaDB
+     * 是否备份binlog，默认为true&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **仅支持 MySQL，Percona，MariaDB
      */
     private String backupBinlog;
 
@@ -72,6 +74,22 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
      * 是否开启增强备份模式&lt;br&gt;true:当前实例已开启增强备份模式&lt;br&gt;false或为空：表示当前实例未开启增强备份模式&lt;br&gt; - **仅支持 SQL Server
      */
     private String enhancedBackup;
+
+    /**
+     * 已删除实例的备份保留策略,取值：&lt;br&gt;• CreateAndKeep：删除时新创建备份并保留&lt;br&gt;• All：全部保留&lt;br&gt;• None：不保留&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB&lt;br&gt; - **仅支持 SQL Server
+     */
+    private String releasedKeepPolicy;
+
+    /**
+     * 备份周期
+     */
+    
+    private List<String> backupPeriod;
+    /**
+     * 本地binlog最大保留数量，默认为-1，不限保留个数。
+     */
+    private Integer binlogRetentionNumber;
+
 
 
     /**
@@ -92,8 +110,9 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.startWindow = startWindow;
     }
 
+
     /**
-     * get 自动备份保留周期，单位天,缺省为7天，范围7-730
+     * get 自动备份保留周期，单位天，默认为7
      *
      * @return
      */
@@ -102,7 +121,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 自动备份保留周期，单位天,缺省为7天，范围7-730
+     * set 自动备份保留周期，单位天，默认为7
      *
      * @param retentionPeriod
      */
@@ -110,8 +129,9 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.retentionPeriod = retentionPeriod;
     }
 
+
     /**
-     * get binlog本地保留周期，单位天，范围1-7，默认为1
+     * get binlog本地保留周期，单位小时，默认为24
      *
      * @return
      */
@@ -120,7 +140,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set binlog本地保留周期，单位天，范围1-7，默认为1
+     * set binlog本地保留周期，单位小时，默认为24
      *
      * @param binlogRetentionPeriod
      */
@@ -128,8 +148,9 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.binlogRetentionPeriod = binlogRetentionPeriod;
     }
 
+
     /**
-     * get binlog本地占用空间上限，单位%，范围1-50，默认为10
+     * get binlog本地占用空间上限，单位%，默认为30
      *
      * @return
      */
@@ -138,7 +159,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set binlog本地占用空间上限，单位%，范围1-50，默认为10
+     * set binlog本地占用空间上限，单位%，默认为30
      *
      * @param binlogUsageLimit
      */
@@ -146,8 +167,9 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.binlogUsageLimit = binlogUsageLimit;
     }
 
+
     /**
-     * get 空间保护是否开启，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     * get 空间保护是否开启，开启后，磁盘剩余空间小于20%或剩余空间不足5GB时，将自动清理本地binlog。开启：on，关闭：off，默认为off &lt;br&gt;- 仅支持MySQL
      *
      * @return
      */
@@ -156,13 +178,14 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 空间保护是否开启，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     * set 空间保护是否开启，开启后，磁盘剩余空间小于20%或剩余空间不足5GB时，将自动清理本地binlog。开启：on，关闭：off，默认为off &lt;br&gt;- 仅支持MySQL
      *
      * @param binlogSpaceProtection
      */
     public void setBinlogSpaceProtection(String binlogSpaceProtection) {
         this.binlogSpaceProtection = binlogSpaceProtection;
     }
+
 
     /**
      * get 自动备份循环模式&lt;br&gt;1:表示每天都是全量备份&lt;br&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推.&lt;br&gt; - 仅支持 SQL Server
@@ -182,8 +205,9 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.cycleMode = cycleMode;
     }
 
+
     /**
-     * get 是否备份binlog&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **仅支持 MySQL，Percona，MariaDB
+     * get 是否备份binlog，默认为true&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **仅支持 MySQL，Percona，MariaDB
      *
      * @return
      */
@@ -192,13 +216,14 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 是否备份binlog&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **仅支持 MySQL，Percona，MariaDB
+     * set 是否备份binlog，默认为true&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **仅支持 MySQL，Percona，MariaDB
      *
      * @param backupBinlog
      */
     public void setBackupBinlog(String backupBinlog) {
         this.backupBinlog = backupBinlog;
     }
+
 
     /**
      * get 是否开启增强备份模式&lt;br&gt;true:当前实例已开启增强备份模式&lt;br&gt;false或为空：表示当前实例未开启增强备份模式&lt;br&gt; - **仅支持 SQL Server
@@ -220,6 +245,64 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
 
 
     /**
+     * get 已删除实例的备份保留策略,取值：&lt;br&gt;• CreateAndKeep：删除时新创建备份并保留&lt;br&gt;• All：全部保留&lt;br&gt;• None：不保留&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB&lt;br&gt; - **仅支持 SQL Server
+     *
+     * @return
+     */
+    public String getReleasedKeepPolicy() {
+        return releasedKeepPolicy;
+    }
+
+    /**
+     * set 已删除实例的备份保留策略,取值：&lt;br&gt;• CreateAndKeep：删除时新创建备份并保留&lt;br&gt;• All：全部保留&lt;br&gt;• None：不保留&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB&lt;br&gt; - **仅支持 SQL Server
+     *
+     * @param releasedKeepPolicy
+     */
+    public void setReleasedKeepPolicy(String releasedKeepPolicy) {
+        this.releasedKeepPolicy = releasedKeepPolicy;
+    }
+
+
+    /**
+    * get 备份周期
+    *
+    * @return
+    */
+    public List<String> getBackupPeriod() {
+        return backupPeriod;
+    }
+
+    /**
+    * set 备份周期
+    *
+    * @param backupPeriod
+    */
+    public void setBackupPeriod(List<String> backupPeriod) {
+        this.backupPeriod = backupPeriod;
+    }
+
+
+    /**
+     * get 本地binlog最大保留数量，默认为-1，不限保留个数。
+     *
+     * @return
+     */
+    public Integer getBinlogRetentionNumber() {
+        return binlogRetentionNumber;
+    }
+
+    /**
+     * set 本地binlog最大保留数量，默认为-1，不限保留个数。
+     *
+     * @param binlogRetentionNumber
+     */
+    public void setBinlogRetentionNumber(Integer binlogRetentionNumber) {
+        this.binlogRetentionNumber = binlogRetentionNumber;
+    }
+
+
+
+    /**
      * set 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。&lt;br&gt;例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
      *
      * @param startWindow
@@ -229,8 +312,9 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
-     * set 自动备份保留周期，单位天,缺省为7天，范围7-730
+     * set 自动备份保留周期，单位天，默认为7
      *
      * @param retentionPeriod
      */
@@ -239,8 +323,9 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
-     * set binlog本地保留周期，单位天，范围1-7，默认为1
+     * set binlog本地保留周期，单位小时，默认为24
      *
      * @param binlogRetentionPeriod
      */
@@ -249,8 +334,9 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
-     * set binlog本地占用空间上限，单位%，范围1-50，默认为10
+     * set binlog本地占用空间上限，单位%，默认为30
      *
      * @param binlogUsageLimit
      */
@@ -259,8 +345,9 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
-     * set 空间保护是否开启，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     * set 空间保护是否开启，开启后，磁盘剩余空间小于20%或剩余空间不足5GB时，将自动清理本地binlog。开启：on，关闭：off，默认为off &lt;br&gt;- 仅支持MySQL
      *
      * @param binlogSpaceProtection
      */
@@ -268,6 +355,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.binlogSpaceProtection = binlogSpaceProtection;
         return this;
     }
+
 
     /**
      * set 自动备份循环模式&lt;br&gt;1:表示每天都是全量备份&lt;br&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推.&lt;br&gt; - 仅支持 SQL Server
@@ -279,8 +367,9 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
-     * set 是否备份binlog&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **仅支持 MySQL，Percona，MariaDB
+     * set 是否备份binlog，默认为true&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **仅支持 MySQL，Percona，MariaDB
      *
      * @param backupBinlog
      */
@@ -288,6 +377,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.backupBinlog = backupBinlog;
         return this;
     }
+
 
     /**
      * set 是否开启增强备份模式&lt;br&gt;true:当前实例已开启增强备份模式&lt;br&gt;false或为空：表示当前实例未开启增强备份模式&lt;br&gt; - **仅支持 SQL Server
@@ -300,4 +390,49 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     }
 
 
+    /**
+     * set 已删除实例的备份保留策略,取值：&lt;br&gt;• CreateAndKeep：删除时新创建备份并保留&lt;br&gt;• All：全部保留&lt;br&gt;• None：不保留&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB&lt;br&gt; - **仅支持 SQL Server
+     *
+     * @param releasedKeepPolicy
+     */
+    public DescribeBackupPolicyResult releasedKeepPolicy(String releasedKeepPolicy) {
+        this.releasedKeepPolicy = releasedKeepPolicy;
+        return this;
+    }
+
+
+    /**
+    * set 备份周期
+    *
+    * @param backupPeriod
+    */
+    public DescribeBackupPolicyResult backupPeriod(List<String> backupPeriod) {
+        this.backupPeriod = backupPeriod;
+        return this;
+    }
+
+
+    /**
+     * set 本地binlog最大保留数量，默认为-1，不限保留个数。
+     *
+     * @param binlogRetentionNumber
+     */
+    public DescribeBackupPolicyResult binlogRetentionNumber(Integer binlogRetentionNumber) {
+        this.binlogRetentionNumber = binlogRetentionNumber;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 备份周期
+     *
+     * @param backupPeriod
+     */
+    public void addBackupPeriod(String backupPeriod) {
+        if (this.backupPeriod == null) {
+            this.backupPeriod = new ArrayList<>();
+        }
+        this.backupPeriod.add(backupPeriod);
+    }
 }

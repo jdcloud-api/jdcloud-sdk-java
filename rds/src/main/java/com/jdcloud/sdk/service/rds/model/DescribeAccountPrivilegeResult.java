@@ -39,70 +39,75 @@ public class DescribeAccountPrivilegeResult extends JdcloudResult implements jav
     /**
      * 数据库细粒度权限内容
      */
+    
     private List<DatabasePrivilege> databasePrivileges;
-
     /**
      * globalPrivileges
      */
+    
     private List<String> globalPrivileges;
 
 
     /**
-     * get 数据库细粒度权限内容
-     *
-     * @return
-     */
+    * get 数据库细粒度权限内容
+    *
+    * @return
+    */
     public List<DatabasePrivilege> getDatabasePrivileges() {
         return databasePrivileges;
     }
 
     /**
-     * set 数据库细粒度权限内容
-     *
-     * @param databasePrivileges
-     */
+    * set 数据库细粒度权限内容
+    *
+    * @param databasePrivileges
+    */
     public void setDatabasePrivileges(List<DatabasePrivilege> databasePrivileges) {
         this.databasePrivileges = databasePrivileges;
     }
 
+
     /**
-     * get globalPrivileges
-     *
-     * @return
-     */
+    * get globalPrivileges
+    *
+    * @return
+    */
     public List<String> getGlobalPrivileges() {
         return globalPrivileges;
     }
 
     /**
-     * set globalPrivileges
-     *
-     * @param globalPrivileges
-     */
+    * set globalPrivileges
+    *
+    * @param globalPrivileges
+    */
     public void setGlobalPrivileges(List<String> globalPrivileges) {
         this.globalPrivileges = globalPrivileges;
     }
 
 
+
     /**
-     * set 数据库细粒度权限内容
-     *
-     * @param databasePrivileges
-     */
+    * set 数据库细粒度权限内容
+    *
+    * @param databasePrivileges
+    */
     public DescribeAccountPrivilegeResult databasePrivileges(List<DatabasePrivilege> databasePrivileges) {
         this.databasePrivileges = databasePrivileges;
         return this;
     }
 
+
     /**
-     * set globalPrivileges
-     *
-     * @param globalPrivileges
-     */
+    * set globalPrivileges
+    *
+    * @param globalPrivileges
+    */
     public DescribeAccountPrivilegeResult globalPrivileges(List<String> globalPrivileges) {
         this.globalPrivileges = globalPrivileges;
         return this;
     }
+
 
 
     /**
@@ -128,5 +133,4 @@ public class DescribeAccountPrivilegeResult extends JdcloudResult implements jav
         }
         this.globalPrivileges.add(globalPrivilege);
     }
-
 }

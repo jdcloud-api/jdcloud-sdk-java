@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.EnableReadWriteProxyInternetAccessResponse;
 
 /**
- * 开启读写分离代理服务的外网访问功能。开启后，用户可以通过 internet 连接读写分离代理服务&lt;br&gt;- 仅支持MySQL
+ * 开启读写分离代理服务的外网访问功能。开启后，用户可以通过 internet 连接读写分离代理服务&lt;br&gt;- 仅支持MySQL、PostgreSQL
  */
 class EnableReadWriteProxyInternetAccessExecutor extends JdcloudExecutor {
 

@@ -68,6 +68,7 @@ public class ImportFile  implements java.io.Serializable {
     private String importTime;
 
 
+
     /**
      * get 文件名称
      *
@@ -85,6 +86,7 @@ public class ImportFile  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 如果该文件是共享文件，则有全局ID，如不是共享文件，则为空。该全局ID在文件删除时，需要用到
@@ -104,6 +106,7 @@ public class ImportFile  implements java.io.Serializable {
         this.sharedFileGid = sharedFileGid;
     }
 
+
     /**
      * get 文件大小，单位Byte
      *
@@ -121,6 +124,7 @@ public class ImportFile  implements java.io.Serializable {
     public void setSizeByte(Integer sizeByte) {
         this.sizeByte = sizeByte;
     }
+
 
     /**
      * get 文件上传完成时间，格式为：YYYY-MM-DD HH:mm:ss
@@ -140,6 +144,7 @@ public class ImportFile  implements java.io.Serializable {
         this.uploadTime = uploadTime;
     }
 
+
     /**
      * get 是否所属当前实例.&lt;br&gt; 1：当前实例；&lt;br&gt;0：不是当前实例，为共享文件
      *
@@ -158,6 +163,7 @@ public class ImportFile  implements java.io.Serializable {
         this.isLocal = isLocal;
     }
 
+
     /**
      * get 文件状态&lt;br&gt;- 仅支持SQL Server
      *
@@ -175,6 +181,7 @@ public class ImportFile  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 导入完成时间,格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持SQL Server
@@ -195,6 +202,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 文件名称
      *
@@ -204,6 +212,7 @@ public class ImportFile  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 如果该文件是共享文件，则有全局ID，如不是共享文件，则为空。该全局ID在文件删除时，需要用到
@@ -215,6 +224,7 @@ public class ImportFile  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 文件大小，单位Byte
      *
@@ -224,6 +234,7 @@ public class ImportFile  implements java.io.Serializable {
         this.sizeByte = sizeByte;
         return this;
     }
+
 
     /**
      * set 文件上传完成时间，格式为：YYYY-MM-DD HH:mm:ss
@@ -235,6 +246,7 @@ public class ImportFile  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否所属当前实例.&lt;br&gt; 1：当前实例；&lt;br&gt;0：不是当前实例，为共享文件
      *
@@ -245,6 +257,7 @@ public class ImportFile  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 文件状态&lt;br&gt;- 仅支持SQL Server
      *
@@ -254,6 +267,7 @@ public class ImportFile  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 导入完成时间,格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持SQL Server

@@ -39,37 +39,40 @@ public class DescribeParametersResult extends JdcloudResult implements java.io.S
     /**
      * parameters
      */
+    
     private List<DBInstanceParameter> parameters;
 
 
     /**
-     * get parameters
-     *
-     * @return
-     */
+    * get parameters
+    *
+    * @return
+    */
     public List<DBInstanceParameter> getParameters() {
         return parameters;
     }
 
     /**
-     * set parameters
-     *
-     * @param parameters
-     */
+    * set parameters
+    *
+    * @param parameters
+    */
     public void setParameters(List<DBInstanceParameter> parameters) {
         this.parameters = parameters;
     }
 
 
+
     /**
-     * set parameters
-     *
-     * @param parameters
-     */
+    * set parameters
+    *
+    * @param parameters
+    */
     public DescribeParametersResult parameters(List<DBInstanceParameter> parameters) {
         this.parameters = parameters;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeParametersResult extends JdcloudResult implements java.io.S
         }
         this.parameters.add(parameter);
     }
-
 }

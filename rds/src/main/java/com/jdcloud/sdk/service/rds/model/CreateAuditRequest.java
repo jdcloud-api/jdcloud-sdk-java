@@ -56,6 +56,7 @@ public class CreateAuditRequest extends JdcloudRequest implements java.io.Serial
     private String instanceId;
 
 
+
     /**
      * get 要开启的审计选项，各个选项之间用英文逗号或空格进行分割，例如：DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROU等&lt;br&gt;各个数据库版本支持的审计选项可以通过接口[describeAuditOptions](./describeAuditOptions.md)获得，各个审计项的具体含义可以参看微软的官方文档
      *
@@ -74,6 +75,7 @@ public class CreateAuditRequest extends JdcloudRequest implements java.io.Serial
         this.enabled = enabled;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -91,6 +93,7 @@ public class CreateAuditRequest extends JdcloudRequest implements java.io.Serial
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -111,6 +114,7 @@ public class CreateAuditRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set 要开启的审计选项，各个选项之间用英文逗号或空格进行分割，例如：DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROU等&lt;br&gt;各个数据库版本支持的审计选项可以通过接口[describeAuditOptions](./describeAuditOptions.md)获得，各个审计项的具体含义可以参看微软的官方文档
      *
@@ -121,6 +125,7 @@ public class CreateAuditRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -130,6 +135,7 @@ public class CreateAuditRequest extends JdcloudRequest implements java.io.Serial
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

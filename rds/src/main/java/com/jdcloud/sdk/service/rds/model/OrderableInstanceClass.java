@@ -62,6 +62,7 @@ public class OrderableInstanceClass  implements java.io.Serializable {
     /**
      * 磁盘，单位GB
      */
+    
     private List<Integer> instanceStorageGB;
 
 
@@ -83,6 +84,7 @@ public class OrderableInstanceClass  implements java.io.Serializable {
         this.instanceClass = instanceClass;
     }
 
+
     /**
      * get 实例规格族，可能的参数值：S1：标准型，C1：内存优化型
      *
@@ -100,6 +102,7 @@ public class OrderableInstanceClass  implements java.io.Serializable {
     public void setInstanCluster(String instanCluster) {
         this.instanCluster = instanCluster;
     }
+
 
     /**
      * get cpu核数
@@ -119,6 +122,7 @@ public class OrderableInstanceClass  implements java.io.Serializable {
         this.cpu = cpu;
     }
 
+
     /**
      * get 内存大小
      *
@@ -136,6 +140,7 @@ public class OrderableInstanceClass  implements java.io.Serializable {
     public void setMemoryMB(Integer memoryMB) {
         this.memoryMB = memoryMB;
     }
+
 
     /**
      * get 存储空间可取值类型；0：表示列表；1：表示区间
@@ -155,23 +160,25 @@ public class OrderableInstanceClass  implements java.io.Serializable {
         this.instanceStorageFieldType = instanceStorageFieldType;
     }
 
+
     /**
-     * get 磁盘，单位GB
-     *
-     * @return
-     */
+    * get 磁盘，单位GB
+    *
+    * @return
+    */
     public List<Integer> getInstanceStorageGB() {
         return instanceStorageGB;
     }
 
     /**
-     * set 磁盘，单位GB
-     *
-     * @param instanceStorageGB
-     */
+    * set 磁盘，单位GB
+    *
+    * @param instanceStorageGB
+    */
     public void setInstanceStorageGB(List<Integer> instanceStorageGB) {
         this.instanceStorageGB = instanceStorageGB;
     }
+
 
 
     /**
@@ -184,6 +191,7 @@ public class OrderableInstanceClass  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例规格族，可能的参数值：S1：标准型，C1：内存优化型
      *
@@ -193,6 +201,7 @@ public class OrderableInstanceClass  implements java.io.Serializable {
         this.instanCluster = instanCluster;
         return this;
     }
+
 
     /**
      * set cpu核数
@@ -204,6 +213,7 @@ public class OrderableInstanceClass  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 内存大小
      *
@@ -213,6 +223,7 @@ public class OrderableInstanceClass  implements java.io.Serializable {
         this.memoryMB = memoryMB;
         return this;
     }
+
 
     /**
      * set 存储空间可取值类型；0：表示列表；1：表示区间
@@ -224,15 +235,17 @@ public class OrderableInstanceClass  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 磁盘，单位GB
-     *
-     * @param instanceStorageGB
-     */
+    * set 磁盘，单位GB
+    *
+    * @param instanceStorageGB
+    */
     public OrderableInstanceClass instanceStorageGB(List<Integer> instanceStorageGB) {
         this.instanceStorageGB = instanceStorageGB;
         return this;
     }
+
 
 
     /**
@@ -246,5 +259,4 @@ public class OrderableInstanceClass  implements java.io.Serializable {
         }
         this.instanceStorageGB.add(instanceStorageGB);
     }
-
 }

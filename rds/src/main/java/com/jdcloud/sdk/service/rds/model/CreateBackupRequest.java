@@ -53,6 +53,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     private String regionId;
 
 
+
     /**
      * get RDS实例ID，唯一标识一个实例
      *
@@ -71,6 +72,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 备份规格
      *
@@ -88,6 +90,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     public void setBackupSpec(BackupSpec backupSpec) {
         this.backupSpec = backupSpec;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -108,6 +111,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set RDS实例ID，唯一标识一个实例
      *
@@ -118,6 +122,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 备份规格
      *
@@ -127,6 +132,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
         this.backupSpec = backupSpec;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

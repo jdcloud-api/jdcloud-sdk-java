@@ -53,6 +53,7 @@ public class K8SServiceAddr  implements java.io.Serializable {
     private String port;
 
 
+
     /**
      * get 连接信息的类型，目前支持以下类型：&lt;br&gt;- database 通常数据访问，读写等 &lt;br&gt;- pd 数据迁移时连接PD节点 &lt;br&gt;- monitor 查看监控数据 &lt;br&gt;- dms 使用DMS客户端，访问数据库 &lt;br&gt;-其他需要的类型等，各产品可视需要添加&lt;br&gt;参数大小敏感
      *
@@ -70,6 +71,7 @@ public class K8SServiceAddr  implements java.io.Serializable {
     public void setAddrType(String addrType) {
         this.addrType = addrType;
     }
+
 
     /**
      * get 从K8S集群外部访问实例的方式，目前支持以下两种类型 - NodePort - LoadBalancer  参数大小敏感
@@ -89,6 +91,7 @@ public class K8SServiceAddr  implements java.io.Serializable {
         this.accessType = accessType;
     }
 
+
     /**
      * get 从K8S集群外部访问实例的地址,如域名或IP
      *
@@ -106,6 +109,7 @@ public class K8SServiceAddr  implements java.io.Serializable {
     public void setAddr(String addr) {
         this.addr = addr;
     }
+
 
     /**
      * get 端口
@@ -126,6 +130,7 @@ public class K8SServiceAddr  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 连接信息的类型，目前支持以下类型：&lt;br&gt;- database 通常数据访问，读写等 &lt;br&gt;- pd 数据迁移时连接PD节点 &lt;br&gt;- monitor 查看监控数据 &lt;br&gt;- dms 使用DMS客户端，访问数据库 &lt;br&gt;-其他需要的类型等，各产品可视需要添加&lt;br&gt;参数大小敏感
      *
@@ -135,6 +140,7 @@ public class K8SServiceAddr  implements java.io.Serializable {
         this.addrType = addrType;
         return this;
     }
+
 
     /**
      * set 从K8S集群外部访问实例的方式，目前支持以下两种类型 - NodePort - LoadBalancer  参数大小敏感
@@ -146,6 +152,7 @@ public class K8SServiceAddr  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 从K8S集群外部访问实例的地址,如域名或IP
      *
@@ -155,6 +162,7 @@ public class K8SServiceAddr  implements java.io.Serializable {
         this.addr = addr;
         return this;
     }
+
 
     /**
      * set 端口

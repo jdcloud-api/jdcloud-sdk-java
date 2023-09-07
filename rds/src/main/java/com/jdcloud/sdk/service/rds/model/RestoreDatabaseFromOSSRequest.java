@@ -63,6 +63,7 @@ public class RestoreDatabaseFromOSSRequest extends JdcloudRequest implements jav
     private String dbName;
 
 
+
     /**
      * get 用户上传到对象存储OSS上的备份文件的路径。&lt;br&gt;例如用户备份上传的bucket为db_backup，文件为test_server/db1.bak，那么ossULR为db_backup/test_server/db1.bak。&lt;br&gt;**授权说明**：需要授予账户ID：785455908940，对这个bucket的读取权限，具体步骤可以查看[文档](https://docs.jdcloud.com/cn/object-storage-service/set-bucket-policy-2)。
      *
@@ -80,6 +81,7 @@ public class RestoreDatabaseFromOSSRequest extends JdcloudRequest implements jav
     public void setOssURL(String ossURL) {
         this.ossURL = ossURL;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -99,6 +101,7 @@ public class RestoreDatabaseFromOSSRequest extends JdcloudRequest implements jav
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -116,6 +119,7 @@ public class RestoreDatabaseFromOSSRequest extends JdcloudRequest implements jav
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 库名称
@@ -136,6 +140,7 @@ public class RestoreDatabaseFromOSSRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 用户上传到对象存储OSS上的备份文件的路径。&lt;br&gt;例如用户备份上传的bucket为db_backup，文件为test_server/db1.bak，那么ossULR为db_backup/test_server/db1.bak。&lt;br&gt;**授权说明**：需要授予账户ID：785455908940，对这个bucket的读取权限，具体步骤可以查看[文档](https://docs.jdcloud.com/cn/object-storage-service/set-bucket-policy-2)。
      *
@@ -145,6 +150,7 @@ public class RestoreDatabaseFromOSSRequest extends JdcloudRequest implements jav
         this.ossURL = ossURL;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -156,6 +162,7 @@ public class RestoreDatabaseFromOSSRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -165,6 +172,7 @@ public class RestoreDatabaseFromOSSRequest extends JdcloudRequest implements jav
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 库名称

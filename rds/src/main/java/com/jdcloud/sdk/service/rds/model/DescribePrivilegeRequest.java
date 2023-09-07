@@ -59,6 +59,7 @@ public class DescribePrivilegeRequest extends JdcloudRequest implements java.io.
     private String regionId;
 
 
+
     /**
      * get 设置可见的引擎类型，如 MySQL 等
      *
@@ -76,6 +77,7 @@ public class DescribePrivilegeRequest extends JdcloudRequest implements java.io.
     public void setEngine(String engine) {
         this.engine = engine;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -95,6 +97,7 @@ public class DescribePrivilegeRequest extends JdcloudRequest implements java.io.
         this.instanceId = instanceId;
     }
 
+
     /**
      * get true表示展示高权限，默认false
      *
@@ -112,6 +115,7 @@ public class DescribePrivilegeRequest extends JdcloudRequest implements java.io.
     public void setAllAdminPrivileges(Boolean allAdminPrivileges) {
         this.allAdminPrivileges = allAdminPrivileges;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -132,6 +136,7 @@ public class DescribePrivilegeRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 设置可见的引擎类型，如 MySQL 等
      *
@@ -141,6 +146,7 @@ public class DescribePrivilegeRequest extends JdcloudRequest implements java.io.
         this.engine = engine;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
@@ -152,6 +158,7 @@ public class DescribePrivilegeRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set true表示展示高权限，默认false
      *
@@ -161,6 +168,7 @@ public class DescribePrivilegeRequest extends JdcloudRequest implements java.io.
         this.allAdminPrivileges = allAdminPrivileges;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

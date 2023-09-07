@@ -40,6 +40,7 @@ public class DescribeBackupChargeResult extends JdcloudResult implements java.io
     private Charge charge;
 
 
+
     /**
      * get 计费配置
      *
@@ -57,6 +58,7 @@ public class DescribeBackupChargeResult extends JdcloudResult implements java.io
     public void setCharge(Charge charge) {
         this.charge = charge;
     }
+
 
 
     /**

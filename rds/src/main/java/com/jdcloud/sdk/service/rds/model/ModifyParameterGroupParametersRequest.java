@@ -41,8 +41,8 @@ public class ModifyParameterGroupParametersRequest extends JdcloudRequest implem
      * Required:true
      */
     @Required
+    
     private List<Parameter> parameters;
-
     /**
      * Region ID
      * Required:true
@@ -58,23 +58,25 @@ public class ModifyParameterGroupParametersRequest extends JdcloudRequest implem
     private String parameterGroupId;
 
 
+
     /**
-     * get 修改的参数
-     *
-     * @return
-     */
+    * get 修改的参数
+    *
+    * @return
+    */
     public List<Parameter> getParameters() {
         return parameters;
     }
 
     /**
-     * set 修改的参数
-     *
-     * @param parameters
-     */
+    * set 修改的参数
+    *
+    * @param parameters
+    */
     public void setParameters(List<Parameter> parameters) {
         this.parameters = parameters;
     }
+
 
     /**
      * get Region ID
@@ -93,6 +95,7 @@ public class ModifyParameterGroupParametersRequest extends JdcloudRequest implem
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Parameter Group ID
@@ -113,15 +116,17 @@ public class ModifyParameterGroupParametersRequest extends JdcloudRequest implem
     }
 
 
+
     /**
-     * set 修改的参数
-     *
-     * @param parameters
-     */
+    * set 修改的参数
+    *
+    * @param parameters
+    */
     public ModifyParameterGroupParametersRequest parameters(List<Parameter> parameters) {
         this.parameters = parameters;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -133,6 +138,7 @@ public class ModifyParameterGroupParametersRequest extends JdcloudRequest implem
         return this;
     }
 
+
     /**
      * set Parameter Group ID
      *
@@ -142,6 +148,7 @@ public class ModifyParameterGroupParametersRequest extends JdcloudRequest implem
         this.parameterGroupId = parameterGroupId;
         return this;
     }
+
 
 
     /**
@@ -155,5 +162,4 @@ public class ModifyParameterGroupParametersRequest extends JdcloudRequest implem
         }
         this.parameters.add(parameter);
     }
-
 }

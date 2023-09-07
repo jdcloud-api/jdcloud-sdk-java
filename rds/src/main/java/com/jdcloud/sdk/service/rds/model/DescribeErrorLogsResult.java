@@ -39,37 +39,40 @@ public class DescribeErrorLogsResult extends JdcloudResult implements java.io.Se
     /**
      * errorLogs
      */
+    
     private List<ErrorLog> errorLogs;
 
 
     /**
-     * get errorLogs
-     *
-     * @return
-     */
+    * get errorLogs
+    *
+    * @return
+    */
     public List<ErrorLog> getErrorLogs() {
         return errorLogs;
     }
 
     /**
-     * set errorLogs
-     *
-     * @param errorLogs
-     */
+    * set errorLogs
+    *
+    * @param errorLogs
+    */
     public void setErrorLogs(List<ErrorLog> errorLogs) {
         this.errorLogs = errorLogs;
     }
 
 
+
     /**
-     * set errorLogs
-     *
-     * @param errorLogs
-     */
+    * set errorLogs
+    *
+    * @param errorLogs
+    */
     public DescribeErrorLogsResult errorLogs(List<ErrorLog> errorLogs) {
         this.errorLogs = errorLogs;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeErrorLogsResult extends JdcloudResult implements java.io.Se
         }
         this.errorLogs.add(errorLog);
     }
-
 }

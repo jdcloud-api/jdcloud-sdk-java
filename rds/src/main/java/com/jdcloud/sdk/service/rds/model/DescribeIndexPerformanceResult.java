@@ -40,13 +40,13 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
     /**
      * missingIndexResult
      */
+    
     private List<MissingIndexResult> missingIndexResult;
-
     /**
      * indexPerformanceResult
      */
+    
     private List<IndexPerformanceResult> indexPerformanceResult;
-
     /**
      * 总记录条数
      */
@@ -63,41 +63,44 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
     private Integer pageSize;
 
 
+
     /**
-     * get missingIndexResult
-     *
-     * @return
-     */
+    * get missingIndexResult
+    *
+    * @return
+    */
     public List<MissingIndexResult> getMissingIndexResult() {
         return missingIndexResult;
     }
 
     /**
-     * set missingIndexResult
-     *
-     * @param missingIndexResult
-     */
+    * set missingIndexResult
+    *
+    * @param missingIndexResult
+    */
     public void setMissingIndexResult(List<MissingIndexResult> missingIndexResult) {
         this.missingIndexResult = missingIndexResult;
     }
 
+
     /**
-     * get indexPerformanceResult
-     *
-     * @return
-     */
+    * get indexPerformanceResult
+    *
+    * @return
+    */
     public List<IndexPerformanceResult> getIndexPerformanceResult() {
         return indexPerformanceResult;
     }
 
     /**
-     * set indexPerformanceResult
-     *
-     * @param indexPerformanceResult
-     */
+    * set indexPerformanceResult
+    *
+    * @param indexPerformanceResult
+    */
     public void setIndexPerformanceResult(List<IndexPerformanceResult> indexPerformanceResult) {
         this.indexPerformanceResult = indexPerformanceResult;
     }
+
 
     /**
      * get 总记录条数
@@ -117,6 +120,7 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
         this.totalCount = totalCount;
     }
 
+
     /**
      * get 当前数据的页码
      *
@@ -134,6 +138,7 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 每页显示的数据条数
@@ -154,25 +159,28 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
     }
 
 
+
     /**
-     * set missingIndexResult
-     *
-     * @param missingIndexResult
-     */
+    * set missingIndexResult
+    *
+    * @param missingIndexResult
+    */
     public DescribeIndexPerformanceResult missingIndexResult(List<MissingIndexResult> missingIndexResult) {
         this.missingIndexResult = missingIndexResult;
         return this;
     }
 
+
     /**
-     * set indexPerformanceResult
-     *
-     * @param indexPerformanceResult
-     */
+    * set indexPerformanceResult
+    *
+    * @param indexPerformanceResult
+    */
     public DescribeIndexPerformanceResult indexPerformanceResult(List<IndexPerformanceResult> indexPerformanceResult) {
         this.indexPerformanceResult = indexPerformanceResult;
         return this;
     }
+
 
     /**
      * set 总记录条数
@@ -184,6 +192,7 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
      * set 当前数据的页码
      *
@@ -194,6 +203,7 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
      * set 每页显示的数据条数
      *
@@ -203,6 +213,7 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
         this.pageSize = pageSize;
         return this;
     }
+
 
 
     /**
@@ -228,5 +239,4 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
         }
         this.indexPerformanceResult.add(indexPerformanceResult);
     }
-
 }

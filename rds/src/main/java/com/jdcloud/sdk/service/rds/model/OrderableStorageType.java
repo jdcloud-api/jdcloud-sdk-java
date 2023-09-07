@@ -47,6 +47,7 @@ public class OrderableStorageType  implements java.io.Serializable {
     /**
      * 实例跨地域备份服务开启相关信息
      */
+    
     private List<OrderableInstanceClass> orderableInstanceClasses;
 
 
@@ -68,6 +69,7 @@ public class OrderableStorageType  implements java.io.Serializable {
         this.instanceStorageType = instanceStorageType;
     }
 
+
     /**
      * get 存储可售卖状态。可能的返回值：0-售罄；1-可售卖
      *
@@ -86,23 +88,25 @@ public class OrderableStorageType  implements java.io.Serializable {
         this.storageTypeStatus = storageTypeStatus;
     }
 
+
     /**
-     * get 实例跨地域备份服务开启相关信息
-     *
-     * @return
-     */
+    * get 实例跨地域备份服务开启相关信息
+    *
+    * @return
+    */
     public List<OrderableInstanceClass> getOrderableInstanceClasses() {
         return orderableInstanceClasses;
     }
 
     /**
-     * set 实例跨地域备份服务开启相关信息
-     *
-     * @param orderableInstanceClasses
-     */
+    * set 实例跨地域备份服务开启相关信息
+    *
+    * @param orderableInstanceClasses
+    */
     public void setOrderableInstanceClasses(List<OrderableInstanceClass> orderableInstanceClasses) {
         this.orderableInstanceClasses = orderableInstanceClasses;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class OrderableStorageType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 存储可售卖状态。可能的返回值：0-售罄；1-可售卖
      *
@@ -125,15 +130,17 @@ public class OrderableStorageType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 实例跨地域备份服务开启相关信息
-     *
-     * @param orderableInstanceClasses
-     */
+    * set 实例跨地域备份服务开启相关信息
+    *
+    * @param orderableInstanceClasses
+    */
     public OrderableStorageType orderableInstanceClasses(List<OrderableInstanceClass> orderableInstanceClasses) {
         this.orderableInstanceClasses = orderableInstanceClasses;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class OrderableStorageType  implements java.io.Serializable {
         }
         this.orderableInstanceClasses.add(orderableInstanceClasse);
     }
-
 }

@@ -59,6 +59,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
     private String instanceId;
 
 
+
     /**
      * get 在原有审计项基础上，增加新的审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP
      *
@@ -76,6 +77,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
     public void setAdd(String add) {
         this.add = add;
     }
+
 
     /**
      * get 删除审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP&lt;br&gt;如删除了所有审计项，则审计自动关闭
@@ -95,6 +97,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
         this.drop = drop;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -112,6 +115,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -132,6 +136,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set 在原有审计项基础上，增加新的审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP
      *
@@ -141,6 +146,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
         this.add = add;
         return this;
     }
+
 
     /**
      * set 删除审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP&lt;br&gt;如删除了所有审计项，则审计自动关闭
@@ -152,6 +158,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -161,6 +168,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

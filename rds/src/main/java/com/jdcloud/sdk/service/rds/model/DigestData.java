@@ -58,6 +58,7 @@ public class DigestData  implements java.io.Serializable {
     private Double total;
 
 
+
     /**
      * get 表示执行结果中95% 数据小于或等于此数值
      *
@@ -75,6 +76,7 @@ public class DigestData  implements java.io.Serializable {
     public void setPct95(Float pct95) {
         this.pct95 = pct95;
     }
+
 
     /**
      * get 执行结果的最大值
@@ -94,6 +96,7 @@ public class DigestData  implements java.io.Serializable {
         this.max = max;
     }
 
+
     /**
      * get 执行结果的平均值
      *
@@ -112,6 +115,7 @@ public class DigestData  implements java.io.Serializable {
         this.avg = avg;
     }
 
+
     /**
      * get 执行结果的最小值
      *
@@ -129,6 +133,7 @@ public class DigestData  implements java.io.Serializable {
     public void setMin(Float min) {
         this.min = min;
     }
+
 
     /**
      * get 执行结果的合计值
@@ -149,6 +154,7 @@ public class DigestData  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 表示执行结果中95% 数据小于或等于此数值
      *
@@ -158,6 +164,7 @@ public class DigestData  implements java.io.Serializable {
         this.pct95 = pct95;
         return this;
     }
+
 
     /**
      * set 执行结果的最大值
@@ -169,6 +176,7 @@ public class DigestData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 执行结果的平均值
      *
@@ -179,6 +187,7 @@ public class DigestData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 执行结果的最小值
      *
@@ -188,6 +197,7 @@ public class DigestData  implements java.io.Serializable {
         this.min = min;
         return this;
     }
+
 
     /**
      * set 执行结果的合计值

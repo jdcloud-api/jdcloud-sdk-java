@@ -75,8 +75,8 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> azId;
-
     /**
      * VPC的ID
      * Required:true
@@ -107,9 +107,10 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
     private Boolean storageEncrypted;
 
     /**
-     * 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster&lt;br&gt;- 仅支持SQL Server
+     * 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster，multi-replica：三副本&lt;br&gt;- 仅支持SQL Server
      */
     private String instanceType;
+
 
 
     /**
@@ -130,6 +131,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         this.instanceName = instanceName;
     }
 
+
     /**
      * get 实例引擎类型，参见[枚举参数定义](https://docs.jdcloud.com/cn/rds/api/enum-definitions)
      *
@@ -147,6 +149,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
     public void setEngine(String engine) {
         this.engine = engine;
     }
+
 
     /**
      * get 实例引擎版本，参见[枚举参数定义](https://docs.jdcloud.com/cn/rds/api/enum-definitions)
@@ -166,6 +169,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         this.engineVersion = engineVersion;
     }
 
+
     /**
      * get 实例规格代码，可以查看文档[MySQL 实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-mysql)、[SQL Server实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-sqlserver)
      *
@@ -183,6 +187,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
     public void setInstanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
     }
+
 
     /**
      * get 磁盘大小，单位GB，可以查看文档[MySQL 实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-mysql)、[SQL Server实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-sqlserver)
@@ -202,23 +207,25 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         this.instanceStorageGB = instanceStorageGB;
     }
 
+
     /**
-     * get 可用区ID， 第一个ID必须为主实例所在的可用区。如两个可用区一样，也需输入两个azId
-     *
-     * @return
-     */
+    * get 可用区ID， 第一个ID必须为主实例所在的可用区。如两个可用区一样，也需输入两个azId
+    *
+    * @return
+    */
     public List<String> getAzId() {
         return azId;
     }
 
     /**
-     * set 可用区ID， 第一个ID必须为主实例所在的可用区。如两个可用区一样，也需输入两个azId
-     *
-     * @param azId
-     */
+    * set 可用区ID， 第一个ID必须为主实例所在的可用区。如两个可用区一样，也需输入两个azId
+    *
+    * @param azId
+    */
     public void setAzId(List<String> azId) {
         this.azId = azId;
     }
+
 
     /**
      * get VPC的ID
@@ -238,6 +245,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 子网ID
      *
@@ -255,6 +263,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
     /**
      * get 参数组ID, 缺省系统会创建一个默认参数组&lt;br&gt;- 仅支持MySQL
@@ -274,6 +283,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         this.parameterGroup = parameterGroup;
     }
 
+
     /**
      * get 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md), 缺省值为：LOCAL_SSD&lt;br&gt;- 仅支持MySQL
      *
@@ -291,6 +301,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
     public void setInstanceStorageType(String instanceStorageType) {
         this.instanceStorageType = instanceStorageType;
     }
+
 
     /**
      * get 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
@@ -310,8 +321,9 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         this.storageEncrypted = storageEncrypted;
     }
 
+
     /**
-     * get 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster&lt;br&gt;- 仅支持SQL Server
+     * get 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster，multi-replica：三副本&lt;br&gt;- 仅支持SQL Server
      *
      * @return
      */
@@ -320,13 +332,14 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
     }
 
     /**
-     * set 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster&lt;br&gt;- 仅支持SQL Server
+     * set 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster，multi-replica：三副本&lt;br&gt;- 仅支持SQL Server
      *
      * @param instanceType
      */
     public void setInstanceType(String instanceType) {
         this.instanceType = instanceType;
     }
+
 
 
     /**
@@ -339,6 +352,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例引擎类型，参见[枚举参数定义](https://docs.jdcloud.com/cn/rds/api/enum-definitions)
      *
@@ -348,6 +362,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         this.engine = engine;
         return this;
     }
+
 
     /**
      * set 实例引擎版本，参见[枚举参数定义](https://docs.jdcloud.com/cn/rds/api/enum-definitions)
@@ -359,6 +374,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例规格代码，可以查看文档[MySQL 实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-mysql)、[SQL Server实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-sqlserver)
      *
@@ -368,6 +384,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         this.instanceClass = instanceClass;
         return this;
     }
+
 
     /**
      * set 磁盘大小，单位GB，可以查看文档[MySQL 实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-mysql)、[SQL Server实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-sqlserver)
@@ -379,15 +396,17 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 可用区ID， 第一个ID必须为主实例所在的可用区。如两个可用区一样，也需输入两个azId
-     *
-     * @param azId
-     */
+    * set 可用区ID， 第一个ID必须为主实例所在的可用区。如两个可用区一样，也需输入两个azId
+    *
+    * @param azId
+    */
     public DBInstanceSpecWithoutCharge azId(List<String> azId) {
         this.azId = azId;
         return this;
     }
+
 
     /**
      * set VPC的ID
@@ -399,6 +418,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网ID
      *
@@ -408,6 +428,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 参数组ID, 缺省系统会创建一个默认参数组&lt;br&gt;- 仅支持MySQL
@@ -419,6 +440,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md), 缺省值为：LOCAL_SSD&lt;br&gt;- 仅支持MySQL
      *
@@ -428,6 +450,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         this.instanceStorageType = instanceStorageType;
         return this;
     }
+
 
     /**
      * set 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
@@ -439,8 +462,9 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster&lt;br&gt;- 仅支持SQL Server
+     * set 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster，multi-replica：三副本&lt;br&gt;- 仅支持SQL Server
      *
      * @param instanceType
      */
@@ -448,6 +472,7 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         this.instanceType = instanceType;
         return this;
     }
+
 
 
     /**
@@ -461,5 +486,4 @@ public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
         }
         this.azId.add(azId);
     }
-
 }

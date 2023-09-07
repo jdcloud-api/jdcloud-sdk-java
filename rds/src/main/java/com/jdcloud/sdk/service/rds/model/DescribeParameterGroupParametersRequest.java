@@ -49,6 +49,7 @@ public class DescribeParameterGroupParametersRequest extends JdcloudRequest impl
     private String parameterGroupId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DescribeParameterGroupParametersRequest extends JdcloudRequest impl
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Parameter Group ID
@@ -86,6 +88,7 @@ public class DescribeParameterGroupParametersRequest extends JdcloudRequest impl
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DescribeParameterGroupParametersRequest extends JdcloudRequest impl
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Parameter Group ID

@@ -39,31 +39,33 @@ public class DescribeSlowLogsResult extends JdcloudResult implements java.io.Ser
     /**
      * slowLogs
      */
+    
     private List<SlowLogDigest> slowLogs;
-
     /**
      * 总记录条数
      */
     private Integer totalCount;
 
 
+
     /**
-     * get slowLogs
-     *
-     * @return
-     */
+    * get slowLogs
+    *
+    * @return
+    */
     public List<SlowLogDigest> getSlowLogs() {
         return slowLogs;
     }
 
     /**
-     * set slowLogs
-     *
-     * @param slowLogs
-     */
+    * set slowLogs
+    *
+    * @param slowLogs
+    */
     public void setSlowLogs(List<SlowLogDigest> slowLogs) {
         this.slowLogs = slowLogs;
     }
+
 
     /**
      * get 总记录条数
@@ -84,15 +86,17 @@ public class DescribeSlowLogsResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
-     * set slowLogs
-     *
-     * @param slowLogs
-     */
+    * set slowLogs
+    *
+    * @param slowLogs
+    */
     public DescribeSlowLogsResult slowLogs(List<SlowLogDigest> slowLogs) {
         this.slowLogs = slowLogs;
         return this;
     }
+
 
     /**
      * set 总记录条数
@@ -103,6 +107,7 @@ public class DescribeSlowLogsResult extends JdcloudResult implements java.io.Ser
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeSlowLogsResult extends JdcloudResult implements java.io.Ser
         }
         this.slowLogs.add(slowLog);
     }
-
 }

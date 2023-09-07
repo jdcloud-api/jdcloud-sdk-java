@@ -74,6 +74,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
     private String sql;
 
 
+
     /**
      * get SQL开始执行时间
      *
@@ -91,6 +92,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 源IP
@@ -110,6 +112,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
         this.ip = ip;
     }
 
+
     /**
      * get 账号名
      *
@@ -127,6 +130,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
     public void setAccountName(String accountName) {
         this.accountName = accountName;
     }
+
 
     /**
      * get 操作类型
@@ -146,6 +150,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
         this.operation = operation;
     }
 
+
     /**
      * get 线程ID
      *
@@ -163,6 +168,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
     public void setThreadId(String threadId) {
         this.threadId = threadId;
     }
+
 
     /**
      * get 线程ID，仅 PostgreSQL 支持此参数
@@ -182,6 +188,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
         this.processId = processId;
     }
 
+
     /**
      * get 数据库名
      *
@@ -199,6 +206,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
     public void setDbName(String dbName) {
         this.dbName = dbName;
     }
+
 
     /**
      * get sql语句
@@ -219,6 +227,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
     }
 
 
+
     /**
      * set SQL开始执行时间
      *
@@ -228,6 +237,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 源IP
@@ -239,6 +249,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账号名
      *
@@ -248,6 +259,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
         this.accountName = accountName;
         return this;
     }
+
 
     /**
      * set 操作类型
@@ -259,6 +271,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 线程ID
      *
@@ -268,6 +281,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
         this.threadId = threadId;
         return this;
     }
+
 
     /**
      * set 线程ID，仅 PostgreSQL 支持此参数
@@ -279,6 +293,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据库名
      *
@@ -288,6 +303,7 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
         this.dbName = dbName;
         return this;
     }
+
 
     /**
      * set sql语句

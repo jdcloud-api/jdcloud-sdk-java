@@ -39,31 +39,33 @@ public class DescribeSlowLogAttributesResult extends JdcloudResult implements ja
     /**
      * slowLogsAttributes
      */
+    
     private List<SlowLogAttributes> slowLogsAttributes;
-
     /**
      * 总记录条数
      */
     private Integer totalCount;
 
 
+
     /**
-     * get slowLogsAttributes
-     *
-     * @return
-     */
+    * get slowLogsAttributes
+    *
+    * @return
+    */
     public List<SlowLogAttributes> getSlowLogsAttributes() {
         return slowLogsAttributes;
     }
 
     /**
-     * set slowLogsAttributes
-     *
-     * @param slowLogsAttributes
-     */
+    * set slowLogsAttributes
+    *
+    * @param slowLogsAttributes
+    */
     public void setSlowLogsAttributes(List<SlowLogAttributes> slowLogsAttributes) {
         this.slowLogsAttributes = slowLogsAttributes;
     }
+
 
     /**
      * get 总记录条数
@@ -84,15 +86,17 @@ public class DescribeSlowLogAttributesResult extends JdcloudResult implements ja
     }
 
 
+
     /**
-     * set slowLogsAttributes
-     *
-     * @param slowLogsAttributes
-     */
+    * set slowLogsAttributes
+    *
+    * @param slowLogsAttributes
+    */
     public DescribeSlowLogAttributesResult slowLogsAttributes(List<SlowLogAttributes> slowLogsAttributes) {
         this.slowLogsAttributes = slowLogsAttributes;
         return this;
     }
+
 
     /**
      * set 总记录条数
@@ -103,6 +107,7 @@ public class DescribeSlowLogAttributesResult extends JdcloudResult implements ja
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeSlowLogAttributesResult extends JdcloudResult implements ja
         }
         this.slowLogsAttributes.add(slowLogsAttribute);
     }
-
 }

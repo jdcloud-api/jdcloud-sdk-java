@@ -43,6 +43,7 @@ public class BackupSynchronicityAbstract  implements java.io.Serializable {
     private String destRegion;
 
 
+
     /**
      * get 跨地域备份同步服务ID
      *
@@ -60,6 +61,7 @@ public class BackupSynchronicityAbstract  implements java.io.Serializable {
     public void setServiceId(String serviceId) {
         this.serviceId = serviceId;
     }
+
 
     /**
      * get 备份同步的目标地域
@@ -80,6 +82,7 @@ public class BackupSynchronicityAbstract  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 跨地域备份同步服务ID
      *
@@ -89,6 +92,7 @@ public class BackupSynchronicityAbstract  implements java.io.Serializable {
         this.serviceId = serviceId;
         return this;
     }
+
 
     /**
      * set 备份同步的目标地域

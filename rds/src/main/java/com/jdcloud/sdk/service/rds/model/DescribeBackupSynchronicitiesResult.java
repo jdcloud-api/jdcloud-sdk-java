@@ -39,31 +39,33 @@ public class DescribeBackupSynchronicitiesResult extends JdcloudResult implement
     /**
      * backupSynchronicities
      */
+    
     private List<BackupSynchronicity> backupSynchronicities;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get backupSynchronicities
-     *
-     * @return
-     */
+    * get backupSynchronicities
+    *
+    * @return
+    */
     public List<BackupSynchronicity> getBackupSynchronicities() {
         return backupSynchronicities;
     }
 
     /**
-     * set backupSynchronicities
-     *
-     * @param backupSynchronicities
-     */
+    * set backupSynchronicities
+    *
+    * @param backupSynchronicities
+    */
     public void setBackupSynchronicities(List<BackupSynchronicity> backupSynchronicities) {
         this.backupSynchronicities = backupSynchronicities;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeBackupSynchronicitiesResult extends JdcloudResult implement
     }
 
 
+
     /**
-     * set backupSynchronicities
-     *
-     * @param backupSynchronicities
-     */
+    * set backupSynchronicities
+    *
+    * @param backupSynchronicities
+    */
     public DescribeBackupSynchronicitiesResult backupSynchronicities(List<BackupSynchronicity> backupSynchronicities) {
         this.backupSynchronicities = backupSynchronicities;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeBackupSynchronicitiesResult extends JdcloudResult implement
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeBackupSynchronicitiesResult extends JdcloudResult implement
         }
         this.backupSynchronicities.add(backupSynchronicitie);
     }
-
 }

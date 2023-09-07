@@ -38,7 +38,7 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
     private static final long serialVersionUID = 1L;
 
     /**
-     * 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      */
     private Integer pageNumber;
 
@@ -52,8 +52,8 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
 支持以下属性的过滤：account,database,keyword; 支持operator选项：eq,in; 仅支持 MySQL，Percona，MariaDB
 
      */
+    
     private List<Filter> filters;
-
     /**
      * Region ID
      * Required:true
@@ -69,8 +69,9 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
     private String instanceId;
 
 
+
     /**
-     * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @return
      */
@@ -79,13 +80,14 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍
@@ -105,27 +107,29 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get 过滤参数，多个过滤参数之间的关系为“与”(and);
+    * get 过滤参数，多个过滤参数之间的关系为“与”(and);
 支持以下属性的过滤：account,database,keyword; 支持operator选项：eq,in; 仅支持 MySQL，Percona，MariaDB
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 过滤参数，多个过滤参数之间的关系为“与”(and);
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and);
 支持以下属性的过滤：account,database,keyword; 支持operator选项：eq,in; 仅支持 MySQL，Percona，MariaDB
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get Region ID
@@ -144,6 +148,7 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Instance ID
@@ -164,8 +169,9 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
-     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；
      *
      * @param pageNumber
      */
@@ -173,6 +179,7 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍
@@ -184,17 +191,19 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
-     * set 过滤参数，多个过滤参数之间的关系为“与”(and);
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and);
 支持以下属性的过滤：account,database,keyword; 支持operator选项：eq,in; 仅支持 MySQL，Percona，MariaDB
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeInterceptResultRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -206,6 +215,7 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set Instance ID
      *
@@ -215,6 +225,7 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -230,5 +241,4 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
         }
         this.filters.add(filter);
     }
-
 }

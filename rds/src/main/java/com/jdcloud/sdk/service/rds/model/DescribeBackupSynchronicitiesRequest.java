@@ -35,7 +35,7 @@ public class DescribeBackupSynchronicitiesRequest extends JdcloudRequest impleme
     private static final long serialVersionUID = 1L;
 
     /**
-     * 显示数据的页码，默认为1，取值范围：[1,∞)，页码超过总页数时，显示最后一页，用于查询列表的接口
+     * 显示数据的页码，默认为1，取值范围：[1,∞)，用于查询列表的接口
      */
     private Integer pageNumber;
 
@@ -52,8 +52,9 @@ public class DescribeBackupSynchronicitiesRequest extends JdcloudRequest impleme
     private String regionId;
 
 
+
     /**
-     * get 显示数据的页码，默认为1，取值范围：[1,∞)，页码超过总页数时，显示最后一页，用于查询列表的接口
+     * get 显示数据的页码，默认为1，取值范围：[1,∞)，用于查询列表的接口
      *
      * @return
      */
@@ -62,13 +63,14 @@ public class DescribeBackupSynchronicitiesRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 显示数据的页码，默认为1，取值范围：[1,∞)，页码超过总页数时，显示最后一页，用于查询列表的接口
+     * set 显示数据的页码，默认为1，取值范围：[1,∞)，用于查询列表的接口
      *
      * @param pageNumber
      */
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
@@ -87,6 +89,7 @@ public class DescribeBackupSynchronicitiesRequest extends JdcloudRequest impleme
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -107,8 +110,9 @@ public class DescribeBackupSynchronicitiesRequest extends JdcloudRequest impleme
     }
 
 
+
     /**
-     * set 显示数据的页码，默认为1，取值范围：[1,∞)，页码超过总页数时，显示最后一页，用于查询列表的接口
+     * set 显示数据的页码，默认为1，取值范围：[1,∞)，用于查询列表的接口
      *
      * @param pageNumber
      */
@@ -116,6 +120,7 @@ public class DescribeBackupSynchronicitiesRequest extends JdcloudRequest impleme
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
@@ -126,6 +131,7 @@ public class DescribeBackupSynchronicitiesRequest extends JdcloudRequest impleme
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

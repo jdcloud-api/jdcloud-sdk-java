@@ -43,6 +43,7 @@ public class ADService  implements java.io.Serializable {
     private String adStatus;
 
 
+
     /**
      * get 对接的目录服务的资源ID
      *
@@ -60,6 +61,7 @@ public class ADService  implements java.io.Serializable {
     public void setAdResourceId(String adResourceId) {
         this.adResourceId = adResourceId;
     }
+
 
     /**
      * get 目录服务的状态
@@ -80,6 +82,7 @@ public class ADService  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 对接的目录服务的资源ID
      *
@@ -89,6 +92,7 @@ public class ADService  implements java.io.Serializable {
         this.adResourceId = adResourceId;
         return this;
     }
+
 
     /**
      * set 目录服务的状态

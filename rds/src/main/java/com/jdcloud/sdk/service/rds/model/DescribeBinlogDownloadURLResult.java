@@ -44,6 +44,7 @@ public class DescribeBinlogDownloadURLResult extends JdcloudResult implements ja
     private String internalURL;
 
 
+
     /**
      * get 公网下载链接
      *
@@ -61,6 +62,7 @@ public class DescribeBinlogDownloadURLResult extends JdcloudResult implements ja
     public void setPublicURL(String publicURL) {
         this.publicURL = publicURL;
     }
+
 
     /**
      * get 内网下载链接
@@ -81,6 +83,7 @@ public class DescribeBinlogDownloadURLResult extends JdcloudResult implements ja
     }
 
 
+
     /**
      * set 公网下载链接
      *
@@ -90,6 +93,7 @@ public class DescribeBinlogDownloadURLResult extends JdcloudResult implements ja
         this.publicURL = publicURL;
         return this;
     }
+
 
     /**
      * set 内网下载链接

@@ -63,6 +63,7 @@ public class CreateSuperAccountRequest extends JdcloudRequest implements java.io
     private String instanceId;
 
 
+
     /**
      * get 账号名，在同一个RDS实例中，账号名不能重复。账号名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
@@ -80,6 +81,7 @@ public class CreateSuperAccountRequest extends JdcloudRequest implements java.io
     public void setAccountName(String accountName) {
         this.accountName = accountName;
     }
+
 
     /**
      * get 密码,密码的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
@@ -99,6 +101,7 @@ public class CreateSuperAccountRequest extends JdcloudRequest implements java.io
         this.accountPassword = accountPassword;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -116,6 +119,7 @@ public class CreateSuperAccountRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -136,6 +140,7 @@ public class CreateSuperAccountRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 账号名，在同一个RDS实例中，账号名不能重复。账号名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
@@ -145,6 +150,7 @@ public class CreateSuperAccountRequest extends JdcloudRequest implements java.io
         this.accountName = accountName;
         return this;
     }
+
 
     /**
      * set 密码,密码的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
@@ -156,6 +162,7 @@ public class CreateSuperAccountRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -165,6 +172,7 @@ public class CreateSuperAccountRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

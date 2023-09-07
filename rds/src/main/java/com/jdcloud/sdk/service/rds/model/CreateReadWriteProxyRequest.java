@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.rds.model.HealthCheckSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建数据库读写分离代理服务&lt;br&gt;- 仅支持MySQL
+ * 创建数据库读写分离代理服务&lt;br&gt;- 仅支持MySQL、PostgreSQL
  */
 public class CreateReadWriteProxyRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -43,9 +43,14 @@ public class CreateReadWriteProxyRequest extends JdcloudRequest implements java.
     private String instanceId;
 
     /**
-     * 延迟阈值，范围是0~1000，单位：秒，默认为100
+     * 延迟阈值，范围是1~1000，单位：秒，默认为100，仅MySQL
      */
     private Integer delayThreshold;
+
+    /**
+     * wal日志延迟阈值，范围是1~1024，单位：MB，默认为200，仅PostgreSQL
+     */
+    private Integer walDelayThreshold;
 
     /**
      * 读写分离代理后端实例负载均衡策略，默认值为LEAST_CURRENT_OPERATIONS；当前支持的负载均衡策略请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -63,6 +68,7 @@ public class CreateReadWriteProxyRequest extends JdcloudRequest implements java.
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -83,8 +89,9 @@ public class CreateReadWriteProxyRequest extends JdcloudRequest implements java.
         this.instanceId = instanceId;
     }
 
+
     /**
-     * get 延迟阈值，范围是0~1000，单位：秒，默认为100
+     * get 延迟阈值，范围是1~1000，单位：秒，默认为100，仅MySQL
      *
      * @return
      */
@@ -93,13 +100,33 @@ public class CreateReadWriteProxyRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 延迟阈值，范围是0~1000，单位：秒，默认为100
+     * set 延迟阈值，范围是1~1000，单位：秒，默认为100，仅MySQL
      *
      * @param delayThreshold
      */
     public void setDelayThreshold(Integer delayThreshold) {
         this.delayThreshold = delayThreshold;
     }
+
+
+    /**
+     * get wal日志延迟阈值，范围是1~1024，单位：MB，默认为200，仅PostgreSQL
+     *
+     * @return
+     */
+    public Integer getWalDelayThreshold() {
+        return walDelayThreshold;
+    }
+
+    /**
+     * set wal日志延迟阈值，范围是1~1024，单位：MB，默认为200，仅PostgreSQL
+     *
+     * @param walDelayThreshold
+     */
+    public void setWalDelayThreshold(Integer walDelayThreshold) {
+        this.walDelayThreshold = walDelayThreshold;
+    }
+
 
     /**
      * get 读写分离代理后端实例负载均衡策略，默认值为LEAST_CURRENT_OPERATIONS；当前支持的负载均衡策略请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -119,6 +146,7 @@ public class CreateReadWriteProxyRequest extends JdcloudRequest implements java.
         this.loadBalancerPolicy = loadBalancerPolicy;
     }
 
+
     /**
      * get 后端实例健康检查配置
      *
@@ -136,6 +164,7 @@ public class CreateReadWriteProxyRequest extends JdcloudRequest implements java.
     public void setHealthCheckSpec(HealthCheckSpec healthCheckSpec) {
         this.healthCheckSpec = healthCheckSpec;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -156,6 +185,7 @@ public class CreateReadWriteProxyRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set RDS 实例ID
      *
@@ -166,8 +196,9 @@ public class CreateReadWriteProxyRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
-     * set 延迟阈值，范围是0~1000，单位：秒，默认为100
+     * set 延迟阈值，范围是1~1000，单位：秒，默认为100，仅MySQL
      *
      * @param delayThreshold
      */
@@ -175,6 +206,18 @@ public class CreateReadWriteProxyRequest extends JdcloudRequest implements java.
         this.delayThreshold = delayThreshold;
         return this;
     }
+
+
+    /**
+     * set wal日志延迟阈值，范围是1~1024，单位：MB，默认为200，仅PostgreSQL
+     *
+     * @param walDelayThreshold
+     */
+    public CreateReadWriteProxyRequest walDelayThreshold(Integer walDelayThreshold) {
+        this.walDelayThreshold = walDelayThreshold;
+        return this;
+    }
+
 
     /**
      * set 读写分离代理后端实例负载均衡策略，默认值为LEAST_CURRENT_OPERATIONS；当前支持的负载均衡策略请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -186,6 +229,7 @@ public class CreateReadWriteProxyRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 后端实例健康检查配置
      *
@@ -195,6 +239,7 @@ public class CreateReadWriteProxyRequest extends JdcloudRequest implements java.
         this.healthCheckSpec = healthCheckSpec;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

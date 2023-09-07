@@ -39,6 +39,7 @@ public class GetUploadKeyResult extends JdcloudResult implements java.io.Seriali
     private String key;
 
 
+
     /**
      * get 上传文件需要用到的Key
      *
@@ -56,6 +57,7 @@ public class GetUploadKeyResult extends JdcloudResult implements java.io.Seriali
     public void setKey(String key) {
         this.key = key;
     }
+
 
 
     /**

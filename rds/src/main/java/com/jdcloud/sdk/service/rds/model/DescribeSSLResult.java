@@ -39,6 +39,7 @@ public class DescribeSSLResult extends JdcloudResult implements java.io.Serializ
     private Boolean available;
 
 
+
     /**
      * get 当前实例是否已经开启加密连接，如已开启，返回true，如未开启，返回false.
      *
@@ -56,6 +57,7 @@ public class DescribeSSLResult extends JdcloudResult implements java.io.Serializ
     public void setAvailable(Boolean available) {
         this.available = available;
     }
+
 
 
     /**

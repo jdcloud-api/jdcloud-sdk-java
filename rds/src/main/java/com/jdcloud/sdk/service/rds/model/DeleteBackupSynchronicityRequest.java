@@ -49,6 +49,7 @@ public class DeleteBackupSynchronicityRequest extends JdcloudRequest implements 
     private String serviceId;
 
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -66,6 +67,7 @@ public class DeleteBackupSynchronicityRequest extends JdcloudRequest implements 
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 跨地域备份同步服务ID
@@ -86,6 +88,7 @@ public class DeleteBackupSynchronicityRequest extends JdcloudRequest implements 
     }
 
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -95,6 +98,7 @@ public class DeleteBackupSynchronicityRequest extends JdcloudRequest implements 
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 跨地域备份同步服务ID

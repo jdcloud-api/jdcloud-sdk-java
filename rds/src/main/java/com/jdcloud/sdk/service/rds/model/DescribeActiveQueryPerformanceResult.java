@@ -39,8 +39,8 @@ public class DescribeActiveQueryPerformanceResult extends JdcloudResult implemen
     /**
      * activeQueryPerformanceResult
      */
+    
     private List<ActiveQueryPerformanceResult> activeQueryPerformanceResult;
-
     /**
      * 总记录条数
      */
@@ -57,23 +57,25 @@ public class DescribeActiveQueryPerformanceResult extends JdcloudResult implemen
     private Integer pageSize;
 
 
+
     /**
-     * get activeQueryPerformanceResult
-     *
-     * @return
-     */
+    * get activeQueryPerformanceResult
+    *
+    * @return
+    */
     public List<ActiveQueryPerformanceResult> getActiveQueryPerformanceResult() {
         return activeQueryPerformanceResult;
     }
 
     /**
-     * set activeQueryPerformanceResult
-     *
-     * @param activeQueryPerformanceResult
-     */
+    * set activeQueryPerformanceResult
+    *
+    * @param activeQueryPerformanceResult
+    */
     public void setActiveQueryPerformanceResult(List<ActiveQueryPerformanceResult> activeQueryPerformanceResult) {
         this.activeQueryPerformanceResult = activeQueryPerformanceResult;
     }
+
 
     /**
      * get 总记录条数
@@ -93,6 +95,7 @@ public class DescribeActiveQueryPerformanceResult extends JdcloudResult implemen
         this.totalCount = totalCount;
     }
 
+
     /**
      * get 当前数据的页码
      *
@@ -110,6 +113,7 @@ public class DescribeActiveQueryPerformanceResult extends JdcloudResult implemen
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 每页显示的数据条数
@@ -130,15 +134,17 @@ public class DescribeActiveQueryPerformanceResult extends JdcloudResult implemen
     }
 
 
+
     /**
-     * set activeQueryPerformanceResult
-     *
-     * @param activeQueryPerformanceResult
-     */
+    * set activeQueryPerformanceResult
+    *
+    * @param activeQueryPerformanceResult
+    */
     public DescribeActiveQueryPerformanceResult activeQueryPerformanceResult(List<ActiveQueryPerformanceResult> activeQueryPerformanceResult) {
         this.activeQueryPerformanceResult = activeQueryPerformanceResult;
         return this;
     }
+
 
     /**
      * set 总记录条数
@@ -150,6 +156,7 @@ public class DescribeActiveQueryPerformanceResult extends JdcloudResult implemen
         return this;
     }
 
+
     /**
      * set 当前数据的页码
      *
@@ -160,6 +167,7 @@ public class DescribeActiveQueryPerformanceResult extends JdcloudResult implemen
         return this;
     }
 
+
     /**
      * set 每页显示的数据条数
      *
@@ -169,6 +177,7 @@ public class DescribeActiveQueryPerformanceResult extends JdcloudResult implemen
         this.pageSize = pageSize;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class DescribeActiveQueryPerformanceResult extends JdcloudResult implemen
         }
         this.activeQueryPerformanceResult.add(activeQueryPerformanceResult);
     }
-
 }

@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 关闭读写分离代理服务的外网访问功能。关闭后，用户无法通过 Internet 连接读写分离代理服务，但可以在京东云内网通过内网域名连接&lt;br&gt;- 仅支持MySQL
+ * 关闭读写分离代理服务的外网访问功能。关闭后，用户无法通过 Internet 连接读写分离代理服务，但可以在京东云内网通过内网域名连接&lt;br&gt;- 仅支持MySQL、PostgreSQL
  */
 public class DisableReadWriteProxyInternetAccessRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -49,6 +49,7 @@ public class DisableReadWriteProxyInternetAccessRequest extends JdcloudRequest i
     private String readWriteProxyId;
 
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -66,6 +67,7 @@ public class DisableReadWriteProxyInternetAccessRequest extends JdcloudRequest i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 读写分离代理服务ID
@@ -86,6 +88,7 @@ public class DisableReadWriteProxyInternetAccessRequest extends JdcloudRequest i
     }
 
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -95,6 +98,7 @@ public class DisableReadWriteProxyInternetAccessRequest extends JdcloudRequest i
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 读写分离代理服务ID

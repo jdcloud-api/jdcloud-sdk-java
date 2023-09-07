@@ -35,6 +35,11 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
+     * 白名单名称，默认Default
+     */
+    private String whiteListName;
+
+    /**
      * IP或IP段，不同的IP/IP段之间用英文逗号分隔，例如0.0.0.0/0,192.168.0.10
      * Required:true
      */
@@ -56,6 +61,26 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
     private String instanceId;
 
 
+
+    /**
+     * get 白名单名称，默认Default
+     *
+     * @return
+     */
+    public String getWhiteListName() {
+        return whiteListName;
+    }
+
+    /**
+     * set 白名单名称，默认Default
+     *
+     * @param whiteListName
+     */
+    public void setWhiteListName(String whiteListName) {
+        this.whiteListName = whiteListName;
+    }
+
+
     /**
      * get IP或IP段，不同的IP/IP段之间用英文逗号分隔，例如0.0.0.0/0,192.168.0.10
      *
@@ -74,6 +99,7 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
         this.ips = ips;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -91,6 +117,7 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -111,6 +138,18 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
+    /**
+     * set 白名单名称，默认Default
+     *
+     * @param whiteListName
+     */
+    public ModifyWhiteListRequest whiteListName(String whiteListName) {
+        this.whiteListName = whiteListName;
+        return this;
+    }
+
+
     /**
      * set IP或IP段，不同的IP/IP段之间用英文逗号分隔，例如0.0.0.0/0,192.168.0.10
      *
@@ -121,6 +160,7 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -130,6 +170,7 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

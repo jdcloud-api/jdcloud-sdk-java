@@ -88,6 +88,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     private String instanceId;
 
 
+
     /**
      * get 扩容后实例规格
      *
@@ -105,6 +106,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     public void setNewInstanceClass(String newInstanceClass) {
         this.newInstanceClass = newInstanceClass;
     }
+
 
     /**
      * get 扩容后实例磁盘大小
@@ -124,6 +126,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.newInstanceStorageGB = newInstanceStorageGB;
     }
 
+
     /**
      * get 存储类型，如果不指定，默认会采用实例原存储类型.
      *
@@ -141,6 +144,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     public void setNewInstanceStorageType(String newInstanceStorageType) {
         this.newInstanceStorageType = newInstanceStorageType;
     }
+
 
     /**
      * get 实例数据加密(存储类型为云硬盘才支持数据加密). false：不加密; true：加密. 如果实例从本地盘变为云硬盘，缺省为false. 如果实例本来就是使用云硬盘的，缺省和源实例保持一致
@@ -160,6 +164,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.storageEncrypted = storageEncrypted;
     }
 
+
     /**
      * get 变配后的子网ID
      *
@@ -177,6 +182,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
     /**
      * get 生效时间，取值：&lt;br&gt;immediate：立即生效&lt;br&gt;maintainTime：在可维护时间段内生效。&lt;br&gt;postpone：延后生效。
@@ -196,6 +202,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.effectiveTime = effectiveTime;
     }
 
+
     /**
      * get 延后生效的时间，单位为分钟。effectiveTime为postpone时必传，取值1-1440分钟
      *
@@ -214,6 +221,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.postponeTime = postponeTime;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -231,6 +239,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -251,6 +260,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 扩容后实例规格
      *
@@ -260,6 +270,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.newInstanceClass = newInstanceClass;
         return this;
     }
+
 
     /**
      * set 扩容后实例磁盘大小
@@ -271,6 +282,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 存储类型，如果不指定，默认会采用实例原存储类型.
      *
@@ -280,6 +292,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.newInstanceStorageType = newInstanceStorageType;
         return this;
     }
+
 
     /**
      * set 实例数据加密(存储类型为云硬盘才支持数据加密). false：不加密; true：加密. 如果实例从本地盘变为云硬盘，缺省为false. 如果实例本来就是使用云硬盘的，缺省和源实例保持一致
@@ -291,6 +304,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 变配后的子网ID
      *
@@ -300,6 +314,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 生效时间，取值：&lt;br&gt;immediate：立即生效&lt;br&gt;maintainTime：在可维护时间段内生效。&lt;br&gt;postpone：延后生效。
@@ -311,6 +326,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 延后生效的时间，单位为分钟。effectiveTime为postpone时必传，取值1-1440分钟
      *
@@ -321,6 +337,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -330,6 +347,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

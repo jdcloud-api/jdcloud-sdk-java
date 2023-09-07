@@ -70,6 +70,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
     private String dbName;
 
 
+
     /**
      * get 备份ID，可从备份查询接口describeBackups获取
      *
@@ -87,6 +88,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
     public void setBackupId(String backupId) {
         this.backupId = backupId;
     }
+
 
     /**
      * get 指定该备份中用于恢复数据库的文件名称。通常情况下文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份
@@ -106,6 +108,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
         this.backupFileName = backupFileName;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -124,6 +127,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -141,6 +145,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 库名称
@@ -161,6 +166,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
     }
 
 
+
     /**
      * set 备份ID，可从备份查询接口describeBackups获取
      *
@@ -170,6 +176,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
         this.backupId = backupId;
         return this;
     }
+
 
     /**
      * set 指定该备份中用于恢复数据库的文件名称。通常情况下文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份
@@ -181,6 +188,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -191,6 +199,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -200,6 +209,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 库名称

@@ -38,31 +38,33 @@ public class CreateROInstanceResult extends JdcloudResult implements java.io.Ser
     /**
      * 新创建的只读实例ID
      */
+    
     private List<String> roInstanceId;
-
     /**
      * 订单ID
      */
     private String orderId;
 
 
+
     /**
-     * get 新创建的只读实例ID
-     *
-     * @return
-     */
+    * get 新创建的只读实例ID
+    *
+    * @return
+    */
     public List<String> getRoInstanceId() {
         return roInstanceId;
     }
 
     /**
-     * set 新创建的只读实例ID
-     *
-     * @param roInstanceId
-     */
+    * set 新创建的只读实例ID
+    *
+    * @param roInstanceId
+    */
     public void setRoInstanceId(List<String> roInstanceId) {
         this.roInstanceId = roInstanceId;
     }
+
 
     /**
      * get 订单ID
@@ -83,15 +85,17 @@ public class CreateROInstanceResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
-     * set 新创建的只读实例ID
-     *
-     * @param roInstanceId
-     */
+    * set 新创建的只读实例ID
+    *
+    * @param roInstanceId
+    */
     public CreateROInstanceResult roInstanceId(List<String> roInstanceId) {
         this.roInstanceId = roInstanceId;
         return this;
     }
+
 
     /**
      * set 订单ID
@@ -102,6 +106,7 @@ public class CreateROInstanceResult extends JdcloudResult implements java.io.Ser
         this.orderId = orderId;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class CreateROInstanceResult extends JdcloudResult implements java.io.Ser
         }
         this.roInstanceId.add(roInstanceId);
     }
-
 }

@@ -43,6 +43,7 @@ public class WhiteList  implements java.io.Serializable {
     private String ips;
 
 
+
     /**
      * get 白名单名称
      *
@@ -60,6 +61,7 @@ public class WhiteList  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get IP或IP段，不同的IP/IP段之间用英文逗号分隔，例如0.0.0.0/0,192.168.0.10
@@ -80,6 +82,7 @@ public class WhiteList  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 白名单名称
      *
@@ -89,6 +92,7 @@ public class WhiteList  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set IP或IP段，不同的IP/IP段之间用英文逗号分隔，例如0.0.0.0/0,192.168.0.10

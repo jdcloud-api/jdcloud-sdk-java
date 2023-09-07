@@ -73,6 +73,7 @@ public class ParameterGroup  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get 参数组ID
      *
@@ -90,6 +91,7 @@ public class ParameterGroup  implements java.io.Serializable {
     public void setParameterGroupId(String parameterGroupId) {
         this.parameterGroupId = parameterGroupId;
     }
+
 
     /**
      * get 参数组名称
@@ -109,6 +111,7 @@ public class ParameterGroup  implements java.io.Serializable {
         this.parameterGroupName = parameterGroupName;
     }
 
+
     /**
      * get 参数组状态
      *
@@ -126,6 +129,7 @@ public class ParameterGroup  implements java.io.Serializable {
     public void setParameterGroupStatus(String parameterGroupStatus) {
         this.parameterGroupStatus = parameterGroupStatus;
     }
+
 
     /**
      * get 参数组描述
@@ -145,6 +149,7 @@ public class ParameterGroup  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 实例引擎类型
      *
@@ -162,6 +167,7 @@ public class ParameterGroup  implements java.io.Serializable {
     public void setEngine(String engine) {
         this.engine = engine;
     }
+
 
     /**
      * get 数据库版本
@@ -181,6 +187,7 @@ public class ParameterGroup  implements java.io.Serializable {
         this.engineVersion = engineVersion;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -198,6 +205,7 @@ public class ParameterGroup  implements java.io.Serializable {
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 参数组创建时间
@@ -218,6 +226,7 @@ public class ParameterGroup  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 参数组ID
      *
@@ -227,6 +236,7 @@ public class ParameterGroup  implements java.io.Serializable {
         this.parameterGroupId = parameterGroupId;
         return this;
     }
+
 
     /**
      * set 参数组名称
@@ -238,6 +248,7 @@ public class ParameterGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 参数组状态
      *
@@ -247,6 +258,7 @@ public class ParameterGroup  implements java.io.Serializable {
         this.parameterGroupStatus = parameterGroupStatus;
         return this;
     }
+
 
     /**
      * set 参数组描述
@@ -258,6 +270,7 @@ public class ParameterGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例引擎类型
      *
@@ -267,6 +280,7 @@ public class ParameterGroup  implements java.io.Serializable {
         this.engine = engine;
         return this;
     }
+
 
     /**
      * set 数据库版本
@@ -278,6 +292,7 @@ public class ParameterGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -287,6 +302,7 @@ public class ParameterGroup  implements java.io.Serializable {
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 参数组创建时间

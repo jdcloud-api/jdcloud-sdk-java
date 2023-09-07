@@ -39,6 +39,7 @@ public class CreateBackupSynchronicityResult extends JdcloudResult implements ja
     private String serviceId;
 
 
+
     /**
      * get 跨地域备份同步服务ID
      *
@@ -56,6 +57,7 @@ public class CreateBackupSynchronicityResult extends JdcloudResult implements ja
     public void setServiceId(String serviceId) {
         this.serviceId = serviceId;
     }
+
 
 
     /**

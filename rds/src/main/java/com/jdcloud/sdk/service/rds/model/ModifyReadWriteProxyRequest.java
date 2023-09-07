@@ -29,16 +29,21 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改数据库读写分离代理服务配置&lt;br&gt;- 仅支持MySQL
+ * 修改数据库读写分离代理服务配置&lt;br&gt;- 仅支持MySQL、PostgreSQL
  */
 public class ModifyReadWriteProxyRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 延迟阈值，范围是0~1000，单位：秒，默认为100
+     * 延迟阈值，范围是1~1000，单位：秒，默认为100，仅MySQL
      */
     private Integer delayThreshold;
+
+    /**
+     * wal日志延迟阈值，范围是1~1024，单位：MB，默认为200，仅PostgreSQL
+     */
+    private Integer walDelayThreshold;
 
     /**
      * 读写分离代理后端实例负载均衡策略，默认值为LEAST_CURRENT_OPERATIONS；当前支持的负载均衡策略请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -65,8 +70,9 @@ public class ModifyReadWriteProxyRequest extends JdcloudRequest implements java.
     private String readWriteProxyId;
 
 
+
     /**
-     * get 延迟阈值，范围是0~1000，单位：秒，默认为100
+     * get 延迟阈值，范围是1~1000，单位：秒，默认为100，仅MySQL
      *
      * @return
      */
@@ -75,13 +81,33 @@ public class ModifyReadWriteProxyRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 延迟阈值，范围是0~1000，单位：秒，默认为100
+     * set 延迟阈值，范围是1~1000，单位：秒，默认为100，仅MySQL
      *
      * @param delayThreshold
      */
     public void setDelayThreshold(Integer delayThreshold) {
         this.delayThreshold = delayThreshold;
     }
+
+
+    /**
+     * get wal日志延迟阈值，范围是1~1024，单位：MB，默认为200，仅PostgreSQL
+     *
+     * @return
+     */
+    public Integer getWalDelayThreshold() {
+        return walDelayThreshold;
+    }
+
+    /**
+     * set wal日志延迟阈值，范围是1~1024，单位：MB，默认为200，仅PostgreSQL
+     *
+     * @param walDelayThreshold
+     */
+    public void setWalDelayThreshold(Integer walDelayThreshold) {
+        this.walDelayThreshold = walDelayThreshold;
+    }
+
 
     /**
      * get 读写分离代理后端实例负载均衡策略，默认值为LEAST_CURRENT_OPERATIONS；当前支持的负载均衡策略请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -101,6 +127,7 @@ public class ModifyReadWriteProxyRequest extends JdcloudRequest implements java.
         this.loadBalancerPolicy = loadBalancerPolicy;
     }
 
+
     /**
      * get 后端实例健康检查配置
      *
@@ -119,6 +146,7 @@ public class ModifyReadWriteProxyRequest extends JdcloudRequest implements java.
         this.healthCheckSpec = healthCheckSpec;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -136,6 +164,7 @@ public class ModifyReadWriteProxyRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 读写分离代理服务ID
@@ -156,8 +185,9 @@ public class ModifyReadWriteProxyRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
-     * set 延迟阈值，范围是0~1000，单位：秒，默认为100
+     * set 延迟阈值，范围是1~1000，单位：秒，默认为100，仅MySQL
      *
      * @param delayThreshold
      */
@@ -165,6 +195,18 @@ public class ModifyReadWriteProxyRequest extends JdcloudRequest implements java.
         this.delayThreshold = delayThreshold;
         return this;
     }
+
+
+    /**
+     * set wal日志延迟阈值，范围是1~1024，单位：MB，默认为200，仅PostgreSQL
+     *
+     * @param walDelayThreshold
+     */
+    public ModifyReadWriteProxyRequest walDelayThreshold(Integer walDelayThreshold) {
+        this.walDelayThreshold = walDelayThreshold;
+        return this;
+    }
+
 
     /**
      * set 读写分离代理后端实例负载均衡策略，默认值为LEAST_CURRENT_OPERATIONS；当前支持的负载均衡策略请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -176,6 +218,7 @@ public class ModifyReadWriteProxyRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 后端实例健康检查配置
      *
@@ -186,6 +229,7 @@ public class ModifyReadWriteProxyRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -195,6 +239,7 @@ public class ModifyReadWriteProxyRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 读写分离代理服务ID
