@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 司马签合同模板管理接口
+ * 合同模板管理接口
  * 电子签章-合同模板管理接口
  *
  * OpenAPI spec version: v1
@@ -24,9 +24,6 @@
 
 package com.jdcloud.sdk.service.cloudsign.model;
 
-import java.util.List;
-import java.util.ArrayList;
-import com.jdcloud.sdk.service.cloudsign.model.TemplateInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -38,54 +35,7 @@ public class DownloadTemplatesResult extends JdcloudResult implements java.io.Se
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * templateList
-     */
-    
-    private List<TemplateInfo> templateList;
-
-
-    /**
-    * get templateList
-    *
-    * @return
-    */
-    public List<TemplateInfo> getTemplateList() {
-        return templateList;
-    }
-
-    /**
-    * set templateList
-    *
-    * @param templateList
-    */
-    public void setTemplateList(List<TemplateInfo> templateList) {
-        this.templateList = templateList;
-    }
 
 
 
-    /**
-    * set templateList
-    *
-    * @param templateList
-    */
-    public DownloadTemplatesResult templateList(List<TemplateInfo> templateList) {
-        this.templateList = templateList;
-        return this;
-    }
-
-
-
-    /**
-     * add item to templateList
-     *
-     * @param templateList
-     */
-    public void addTemplateList(TemplateInfo templateList) {
-        if (this.templateList == null) {
-            this.templateList = new ArrayList<>();
-        }
-        this.templateList.add(templateList);
-    }
 }

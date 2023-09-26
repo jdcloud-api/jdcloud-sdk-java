@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 司马签合同模板管理接口
+ * 合同模板管理接口
  * 电子签章-合同模板管理接口
  *
  * OpenAPI spec version: v1
@@ -45,16 +45,6 @@ public class DescribeTemplateListResult extends JdcloudResult implements java.io
      * 合同模板数量
      */
     private Integer totalCount;
-
-    /**
-     * 页码，默认为1
-     */
-    private Integer pageNumber;
-
-    /**
-     * 分页大小, 默认为10, 取值范围[10, 100]
-     */
-    private Integer pageSize;
 
 
 
@@ -96,44 +86,6 @@ public class DescribeTemplateListResult extends JdcloudResult implements java.io
     }
 
 
-    /**
-     * get 页码，默认为1
-     *
-     * @return
-     */
-    public Integer getPageNumber() {
-        return pageNumber;
-    }
-
-    /**
-     * set 页码，默认为1
-     *
-     * @param pageNumber
-     */
-    public void setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-    }
-
-
-    /**
-     * get 分页大小, 默认为10, 取值范围[10, 100]
-     *
-     * @return
-     */
-    public Integer getPageSize() {
-        return pageSize;
-    }
-
-    /**
-     * set 分页大小, 默认为10, 取值范围[10, 100]
-     *
-     * @param pageSize
-     */
-    public void setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-    }
-
-
 
     /**
     * set templateList
@@ -153,28 +105,6 @@ public class DescribeTemplateListResult extends JdcloudResult implements java.io
      */
     public DescribeTemplateListResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
-        return this;
-    }
-
-
-    /**
-     * set 页码，默认为1
-     *
-     * @param pageNumber
-     */
-    public DescribeTemplateListResult pageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-
-
-    /**
-     * set 分页大小, 默认为10, 取值范围[10, 100]
-     *
-     * @param pageSize
-     */
-    public DescribeTemplateListResult pageSize(Integer pageSize) {
-        this.pageSize = pageSize;
         return this;
     }
 

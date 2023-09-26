@@ -42,11 +42,6 @@ public class StampSpec  implements java.io.Serializable {
      */
     private String stampName;
 
-    /**
-     * 备注
-     */
-    private String note;
-
 
 
     /**
@@ -87,25 +82,6 @@ public class StampSpec  implements java.io.Serializable {
     }
 
 
-    /**
-     * get 备注
-     *
-     * @return
-     */
-    public String getNote() {
-        return note;
-    }
-
-    /**
-     * set 备注
-     *
-     * @param note
-     */
-    public void setNote(String note) {
-        this.note = note;
-    }
-
-
 
     /**
      * set 印章图片（base64）
@@ -125,17 +101,6 @@ public class StampSpec  implements java.io.Serializable {
      */
     public StampSpec stampName(String stampName) {
         this.stampName = stampName;
-        return this;
-    }
-
-
-    /**
-     * set 备注
-     *
-     * @param note
-     */
-    public StampSpec note(String note) {
-        this.note = note;
         return this;
     }
 
