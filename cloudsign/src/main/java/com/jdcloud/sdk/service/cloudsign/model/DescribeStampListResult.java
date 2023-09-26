@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 司马签印章管理接口
+ * 印章管理接口
  * 电子签章-印章管理接口
  *
  * OpenAPI spec version: v1
@@ -42,19 +42,9 @@ public class DescribeStampListResult extends JdcloudResult implements java.io.Se
     
     private List<StampInfo> stampList;
     /**
-     * 印章数量
+     * 印章的数量
      */
     private Integer totalCount;
-
-    /**
-     * 页码,默认为1
-     */
-    private Integer pageNumber;
-
-    /**
-     * 分页大小, 默认为10, 取值范围[10, 100]
-     */
-    private Integer pageSize;
 
 
 
@@ -78,7 +68,7 @@ public class DescribeStampListResult extends JdcloudResult implements java.io.Se
 
 
     /**
-     * get 印章数量
+     * get 印章的数量
      *
      * @return
      */
@@ -87,50 +77,12 @@ public class DescribeStampListResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * set 印章数量
+     * set 印章的数量
      *
      * @param totalCount
      */
     public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
-    }
-
-
-    /**
-     * get 页码,默认为1
-     *
-     * @return
-     */
-    public Integer getPageNumber() {
-        return pageNumber;
-    }
-
-    /**
-     * set 页码,默认为1
-     *
-     * @param pageNumber
-     */
-    public void setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-    }
-
-
-    /**
-     * get 分页大小, 默认为10, 取值范围[10, 100]
-     *
-     * @return
-     */
-    public Integer getPageSize() {
-        return pageSize;
-    }
-
-    /**
-     * set 分页大小, 默认为10, 取值范围[10, 100]
-     *
-     * @param pageSize
-     */
-    public void setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
     }
 
 
@@ -147,34 +99,12 @@ public class DescribeStampListResult extends JdcloudResult implements java.io.Se
 
 
     /**
-     * set 印章数量
+     * set 印章的数量
      *
      * @param totalCount
      */
     public DescribeStampListResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
-        return this;
-    }
-
-
-    /**
-     * set 页码,默认为1
-     *
-     * @param pageNumber
-     */
-    public DescribeStampListResult pageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-
-
-    /**
-     * set 分页大小, 默认为10, 取值范围[10, 100]
-     *
-     * @param pageSize
-     */
-    public DescribeStampListResult pageSize(Integer pageSize) {
-        this.pageSize = pageSize;
         return this;
     }
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 司马签合同模板管理接口
+ * 合同模板管理接口
  * 电子签章-合同模板管理接口
  *
  * OpenAPI spec version: v1
@@ -34,14 +34,14 @@ public class PaddingTemplateResult extends JdcloudResult implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * 模板ID
+     * 填充完成的合同模板ID
      */
     private String templateId;
 
 
 
     /**
-     * get 模板ID
+     * get 填充完成的合同模板ID
      *
      * @return
      */
@@ -50,7 +50,7 @@ public class PaddingTemplateResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set 模板ID
+     * set 填充完成的合同模板ID
      *
      * @param templateId
      */
@@ -61,7 +61,7 @@ public class PaddingTemplateResult extends JdcloudResult implements java.io.Seri
 
 
     /**
-     * set 模板ID
+     * set 填充完成的合同模板ID
      *
      * @param templateId
      */

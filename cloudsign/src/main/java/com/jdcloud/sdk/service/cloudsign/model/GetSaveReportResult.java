@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.cloudsign.model;
 
+import com.jdcloud.sdk.service.cloudsign.model.EvidenceFile;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -49,9 +50,9 @@ public class GetSaveReportResult extends JdcloudResult implements java.io.Serial
     private Boolean success;
 
     /**
-     * data
+     * 存证报告文件
      */
-    private Object data;
+    private EvidenceFile data;
 
 
 
@@ -113,20 +114,20 @@ public class GetSaveReportResult extends JdcloudResult implements java.io.Serial
 
 
     /**
-     * get data
+     * get 存证报告文件
      *
      * @return
      */
-    public Object getData() {
+    public EvidenceFile getData() {
         return data;
     }
 
     /**
-     * set data
+     * set 存证报告文件
      *
      * @param data
      */
-    public void setData(Object data) {
+    public void setData(EvidenceFile data) {
         this.data = data;
     }
 
@@ -166,11 +167,11 @@ public class GetSaveReportResult extends JdcloudResult implements java.io.Serial
 
 
     /**
-     * set data
+     * set 存证报告文件
      *
      * @param data
      */
-    public GetSaveReportResult data(Object data) {
+    public GetSaveReportResult data(EvidenceFile data) {
         this.data = data;
         return this;
     }

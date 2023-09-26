@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 司马签合同模板管理接口
+ * 合同模板管理接口
  * 电子签章-合同模板管理接口
  *
  * OpenAPI spec version: v1
@@ -42,7 +42,7 @@ class DownloadTemplatesExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/smqTmplate/{templateId}:downloadTemplates";
+        return "/template/{templateId}";
     }
 
     @Override

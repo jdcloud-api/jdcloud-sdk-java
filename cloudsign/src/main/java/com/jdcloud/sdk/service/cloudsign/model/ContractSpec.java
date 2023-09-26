@@ -78,24 +78,14 @@ public class ContractSpec  implements java.io.Serializable {
     private String stampStyle;
 
     /**
-     * 0：普通证书 1：事件证书（默认为0，普通证书）
+     * 部门信息
      */
-    private Integer certExpire;
+    private String dept;
 
     /**
-     * 证书类型
+     * 盖章范围
      */
-    private String businessId;
-
-    /**
-     * 签署完的合同是否在京东云存储（默认为false，不存储）
-     */
-    private Boolean needStorage;
-
-    /**
-     * 是否需要返回已签署的合同（默认为true）
-     */
-    private Boolean needContract;
+    private String pageRange;
 
 
 
@@ -252,78 +242,40 @@ public class ContractSpec  implements java.io.Serializable {
 
 
     /**
-     * get 0：普通证书 1：事件证书（默认为0，普通证书）
+     * get 部门信息
      *
      * @return
      */
-    public Integer getCertExpire() {
-        return certExpire;
+    public String getDept() {
+        return dept;
     }
 
     /**
-     * set 0：普通证书 1：事件证书（默认为0，普通证书）
+     * set 部门信息
      *
-     * @param certExpire
+     * @param dept
      */
-    public void setCertExpire(Integer certExpire) {
-        this.certExpire = certExpire;
+    public void setDept(String dept) {
+        this.dept = dept;
     }
 
 
     /**
-     * get 证书类型
-     *
-     * @return
-     */
-    public String getBusinessId() {
-        return businessId;
-    }
-
-    /**
-     * set 证书类型
-     *
-     * @param businessId
-     */
-    public void setBusinessId(String businessId) {
-        this.businessId = businessId;
-    }
-
-
-    /**
-     * get 签署完的合同是否在京东云存储（默认为false，不存储）
+     * get 盖章范围
      *
      * @return
      */
-    public Boolean getNeedStorage() {
-        return needStorage;
+    public String getPageRange() {
+        return pageRange;
     }
 
     /**
-     * set 签署完的合同是否在京东云存储（默认为false，不存储）
+     * set 盖章范围
      *
-     * @param needStorage
+     * @param pageRange
      */
-    public void setNeedStorage(Boolean needStorage) {
-        this.needStorage = needStorage;
-    }
-
-
-    /**
-     * get 是否需要返回已签署的合同（默认为true）
-     *
-     * @return
-     */
-    public Boolean getNeedContract() {
-        return needContract;
-    }
-
-    /**
-     * set 是否需要返回已签署的合同（默认为true）
-     *
-     * @param needContract
-     */
-    public void setNeedContract(Boolean needContract) {
-        this.needContract = needContract;
+    public void setPageRange(String pageRange) {
+        this.pageRange = pageRange;
     }
 
 
@@ -417,45 +369,23 @@ public class ContractSpec  implements java.io.Serializable {
 
 
     /**
-     * set 0：普通证书 1：事件证书（默认为0，普通证书）
+     * set 部门信息
      *
-     * @param certExpire
+     * @param dept
      */
-    public ContractSpec certExpire(Integer certExpire) {
-        this.certExpire = certExpire;
+    public ContractSpec dept(String dept) {
+        this.dept = dept;
         return this;
     }
 
 
     /**
-     * set 证书类型
+     * set 盖章范围
      *
-     * @param businessId
+     * @param pageRange
      */
-    public ContractSpec businessId(String businessId) {
-        this.businessId = businessId;
-        return this;
-    }
-
-
-    /**
-     * set 签署完的合同是否在京东云存储（默认为false，不存储）
-     *
-     * @param needStorage
-     */
-    public ContractSpec needStorage(Boolean needStorage) {
-        this.needStorage = needStorage;
-        return this;
-    }
-
-
-    /**
-     * set 是否需要返回已签署的合同（默认为true）
-     *
-     * @param needContract
-     */
-    public ContractSpec needContract(Boolean needContract) {
-        this.needContract = needContract;
+    public ContractSpec pageRange(String pageRange) {
+        this.pageRange = pageRange;
         return this;
     }
 

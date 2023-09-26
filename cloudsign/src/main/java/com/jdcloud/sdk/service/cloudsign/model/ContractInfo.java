@@ -64,11 +64,6 @@ public class ContractInfo  implements java.io.Serializable {
      */
     private String createTime;
 
-    /**
-     * 业务流水号
-     */
-    private String businessId;
-
 
 
     /**
@@ -185,25 +180,6 @@ public class ContractInfo  implements java.io.Serializable {
     }
 
 
-    /**
-     * get 业务流水号
-     *
-     * @return
-     */
-    public String getBusinessId() {
-        return businessId;
-    }
-
-    /**
-     * set 业务流水号
-     *
-     * @param businessId
-     */
-    public void setBusinessId(String businessId) {
-        this.businessId = businessId;
-    }
-
-
 
     /**
      * set 合同ID
@@ -267,17 +243,6 @@ public class ContractInfo  implements java.io.Serializable {
      */
     public ContractInfo createTime(String createTime) {
         this.createTime = createTime;
-        return this;
-    }
-
-
-    /**
-     * set 业务流水号
-     *
-     * @param businessId
-     */
-    public ContractInfo businessId(String businessId) {
-        this.businessId = businessId;
         return this;
     }
 

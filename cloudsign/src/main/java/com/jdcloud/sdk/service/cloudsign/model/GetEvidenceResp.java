@@ -53,7 +53,7 @@ public class GetEvidenceResp  implements java.io.Serializable {
      * 取证结果文件
      */
     
-    private List<Object> evidenceFileList;
+    private List<EvidenceFile> evidenceFileList;
 
 
     /**
@@ -118,7 +118,7 @@ public class GetEvidenceResp  implements java.io.Serializable {
     *
     * @return
     */
-    public List<Object> getEvidenceFileList() {
+    public List<EvidenceFile> getEvidenceFileList() {
         return evidenceFileList;
     }
 
@@ -127,7 +127,7 @@ public class GetEvidenceResp  implements java.io.Serializable {
     *
     * @param evidenceFileList
     */
-    public void setEvidenceFileList(List<Object> evidenceFileList) {
+    public void setEvidenceFileList(List<EvidenceFile> evidenceFileList) {
         this.evidenceFileList = evidenceFileList;
     }
 
@@ -171,7 +171,7 @@ public class GetEvidenceResp  implements java.io.Serializable {
     *
     * @param evidenceFileList
     */
-    public GetEvidenceResp evidenceFileList(List<Object> evidenceFileList) {
+    public GetEvidenceResp evidenceFileList(List<EvidenceFile> evidenceFileList) {
         this.evidenceFileList = evidenceFileList;
         return this;
     }
@@ -183,7 +183,7 @@ public class GetEvidenceResp  implements java.io.Serializable {
      *
      * @param evidenceFileList
      */
-    public void addEvidenceFileList(Object evidenceFileList) {
+    public void addEvidenceFileList(EvidenceFile evidenceFileList) {
         if (this.evidenceFileList == null) {
             this.evidenceFileList = new ArrayList<>();
         }

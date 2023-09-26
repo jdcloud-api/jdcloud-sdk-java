@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 司马签印章管理接口
+ * 印章管理接口
  * 电子签章-印章管理接口
  *
  * OpenAPI spec version: v1
