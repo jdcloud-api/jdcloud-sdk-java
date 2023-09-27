@@ -43,6 +43,7 @@ public class PersonalAuthRequest extends JdcloudRequest implements java.io.Seria
     private PersonalSpec personalSpec;
 
 
+
     /**
      * get personalSpec
      *
@@ -60,6 +61,7 @@ public class PersonalAuthRequest extends JdcloudRequest implements java.io.Seria
     public void setPersonalSpec(PersonalSpec personalSpec) {
         this.personalSpec = personalSpec;
     }
+
 
 
     /**

@@ -24,55 +24,16 @@
 
 package com.jdcloud.sdk.service.cloudauth.model;
 
-import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.cloudauth.model.CheckInfo;
-import com.jdcloud.sdk.service.JdcloudRequest;
+import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 对公打款查询
+ * 对公银行账户打款(随机小额)——简单版
  */
-public class CheckCompanyTransferRequest extends JdcloudRequest implements java.io.Serializable {
+public class CompanyTransferSimpleResponse extends JdcloudResponse<CompanyTransferSimpleResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * checkInfo
-     * Required:true
-     */
-    @Required
-    private CheckInfo checkInfo;
 
-
-
-    /**
-     * get checkInfo
-     *
-     * @return
-     */
-    public CheckInfo getCheckInfo() {
-        return checkInfo;
-    }
-
-    /**
-     * set checkInfo
-     *
-     * @param checkInfo
-     */
-    public void setCheckInfo(CheckInfo checkInfo) {
-        this.checkInfo = checkInfo;
-    }
-
-
-
-    /**
-     * set checkInfo
-     *
-     * @param checkInfo
-     */
-    public CheckCompanyTransferRequest checkInfo(CheckInfo checkInfo) {
-        this.checkInfo = checkInfo;
-        return this;
-    }
 
 
 }

@@ -37,70 +37,75 @@ public class StatisticInfo  implements java.io.Serializable {
     /**
      * 认证次数统计[24小时，7天，30天]
      */
+    
     private List<AuthItem> perAuthStatistic;
-
     /**
      * 认证次数统计[24小时，7天，30天]
      */
+    
     private List<AuthItem> comAuthStatistic;
 
 
     /**
-     * get 认证次数统计[24小时，7天，30天]
-     *
-     * @return
-     */
+    * get 认证次数统计[24小时，7天，30天]
+    *
+    * @return
+    */
     public List<AuthItem> getPerAuthStatistic() {
         return perAuthStatistic;
     }
 
     /**
-     * set 认证次数统计[24小时，7天，30天]
-     *
-     * @param perAuthStatistic
-     */
+    * set 认证次数统计[24小时，7天，30天]
+    *
+    * @param perAuthStatistic
+    */
     public void setPerAuthStatistic(List<AuthItem> perAuthStatistic) {
         this.perAuthStatistic = perAuthStatistic;
     }
 
+
     /**
-     * get 认证次数统计[24小时，7天，30天]
-     *
-     * @return
-     */
+    * get 认证次数统计[24小时，7天，30天]
+    *
+    * @return
+    */
     public List<AuthItem> getComAuthStatistic() {
         return comAuthStatistic;
     }
 
     /**
-     * set 认证次数统计[24小时，7天，30天]
-     *
-     * @param comAuthStatistic
-     */
+    * set 认证次数统计[24小时，7天，30天]
+    *
+    * @param comAuthStatistic
+    */
     public void setComAuthStatistic(List<AuthItem> comAuthStatistic) {
         this.comAuthStatistic = comAuthStatistic;
     }
 
 
+
     /**
-     * set 认证次数统计[24小时，7天，30天]
-     *
-     * @param perAuthStatistic
-     */
+    * set 认证次数统计[24小时，7天，30天]
+    *
+    * @param perAuthStatistic
+    */
     public StatisticInfo perAuthStatistic(List<AuthItem> perAuthStatistic) {
         this.perAuthStatistic = perAuthStatistic;
         return this;
     }
 
+
     /**
-     * set 认证次数统计[24小时，7天，30天]
-     *
-     * @param comAuthStatistic
-     */
+    * set 认证次数统计[24小时，7天，30天]
+    *
+    * @param comAuthStatistic
+    */
     public StatisticInfo comAuthStatistic(List<AuthItem> comAuthStatistic) {
         this.comAuthStatistic = comAuthStatistic;
         return this;
     }
+
 
 
     /**
@@ -126,5 +131,4 @@ public class StatisticInfo  implements java.io.Serializable {
         }
         this.comAuthStatistic.add(comAuthStatistic);
     }
-
 }

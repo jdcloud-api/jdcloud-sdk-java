@@ -55,6 +55,7 @@ public class PersonalSpec  implements java.io.Serializable {
     private PersonalUser personalUser;
 
 
+
     /**
      * get 认证方式（0 银行卡四要素，1 银行卡三要素，2 姓名身份证二要素，3 人像三要素，4 手机号三要素）
 选择其中一种方式，对应的参数则为必传项
@@ -87,6 +88,7 @@ public class PersonalSpec  implements java.io.Serializable {
         this.checkType = checkType;
     }
 
+
     /**
      * get 个人认证要素信息
      *
@@ -106,6 +108,7 @@ public class PersonalSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 认证方式（0 银行卡四要素，1 银行卡三要素，2 姓名身份证二要素，3 人像三要素，4 手机号三要素）
 选择其中一种方式，对应的参数则为必传项
@@ -122,6 +125,7 @@ public class PersonalSpec  implements java.io.Serializable {
         this.checkType = checkType;
         return this;
     }
+
 
     /**
      * set 个人认证要素信息

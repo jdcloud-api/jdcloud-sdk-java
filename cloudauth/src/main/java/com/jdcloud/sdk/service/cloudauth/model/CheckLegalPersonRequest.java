@@ -43,6 +43,7 @@ public class CheckLegalPersonRequest extends JdcloudRequest implements java.io.S
     private LegalPersonSpec legalPersonSpec;
 
 
+
     /**
      * get legalPersonSpec
      *
@@ -60,6 +61,7 @@ public class CheckLegalPersonRequest extends JdcloudRequest implements java.io.S
     public void setLegalPersonSpec(LegalPersonSpec legalPersonSpec) {
         this.legalPersonSpec = legalPersonSpec;
     }
+
 
 
     /**

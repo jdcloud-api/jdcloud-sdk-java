@@ -48,6 +48,7 @@ public class AuthDetail  implements java.io.Serializable {
     private String orderNumber;
 
 
+
     /**
      * get 返回信息描述
      *
@@ -65,6 +66,7 @@ public class AuthDetail  implements java.io.Serializable {
     public void setMessage(String message) {
         this.message = message;
     }
+
 
     /**
      * get 业务流水号
@@ -85,6 +87,7 @@ public class AuthDetail  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 返回信息描述
      *
@@ -94,6 +97,7 @@ public class AuthDetail  implements java.io.Serializable {
         this.message = message;
         return this;
     }
+
 
     /**
      * set 业务流水号

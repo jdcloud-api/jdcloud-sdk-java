@@ -24,12 +24,13 @@
 
 package com.jdcloud.sdk.service.cloudauth.model;
 
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询省份下城市编码
+ * 对公银行账户打款(随机小额)——简单版
  */
-public class QueryCityListResult extends JdcloudResult implements java.io.Serializable {
+public class CompanyTransferSimpleResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -45,17 +46,28 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
 
     /**
      * 认证结果状态码
+     * Required:true
      */
+    @Required
     private String code;
 
     /**
-     * 认证结果
+     * 1. 认证结果信息
+2. 查询结果信息
+3. 状态码信息
+
+     * Required:true
      */
+    @Required
     private String message;
 
     /**
-     * 字符串形式的查询结果，内容为json
+     * 1. 认证结果信息
+2. 查询结果信息
+
+     * Required:true
      */
+    @Required
     private String detail;
 
 
@@ -118,7 +130,10 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
 
 
     /**
-     * get 认证结果
+     * get 1. 认证结果信息
+2. 查询结果信息
+3. 状态码信息
+
      *
      * @return
      */
@@ -127,7 +142,10 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * set 认证结果
+     * set 1. 认证结果信息
+2. 查询结果信息
+3. 状态码信息
+
      *
      * @param message
      */
@@ -137,7 +155,9 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
 
 
     /**
-     * get 字符串形式的查询结果，内容为json
+     * get 1. 认证结果信息
+2. 查询结果信息
+
      *
      * @return
      */
@@ -146,7 +166,9 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * set 字符串形式的查询结果，内容为json
+     * set 1. 认证结果信息
+2. 查询结果信息
+
      *
      * @param detail
      */
@@ -161,7 +183,7 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
      *
      * @param success
      */
-    public QueryCityListResult success(Boolean success) {
+    public CompanyTransferSimpleResult success(Boolean success) {
         this.success = success;
         return this;
     }
@@ -172,7 +194,7 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
      *
      * @param hasException
      */
-    public QueryCityListResult hasException(Boolean hasException) {
+    public CompanyTransferSimpleResult hasException(Boolean hasException) {
         this.hasException = hasException;
         return this;
     }
@@ -183,29 +205,34 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
      *
      * @param code
      */
-    public QueryCityListResult code(String code) {
+    public CompanyTransferSimpleResult code(String code) {
         this.code = code;
         return this;
     }
 
 
     /**
-     * set 认证结果
+     * set 1. 认证结果信息
+2. 查询结果信息
+3. 状态码信息
+
      *
      * @param message
      */
-    public QueryCityListResult message(String message) {
+    public CompanyTransferSimpleResult message(String message) {
         this.message = message;
         return this;
     }
 
 
     /**
-     * set 字符串形式的查询结果，内容为json
+     * set 1. 认证结果信息
+2. 查询结果信息
+
      *
      * @param detail
      */
-    public QueryCityListResult detail(String detail) {
+    public CompanyTransferSimpleResult detail(String detail) {
         this.detail = detail;
         return this;
     }

@@ -73,6 +73,7 @@ public class LegalPersonSpec  implements java.io.Serializable {
     private String legalPersonId;
 
 
+
     /**
      * get 企业类型：
 0: 企业(ET_PE_QiYe)
@@ -99,6 +100,7 @@ public class LegalPersonSpec  implements java.io.Serializable {
         this.companyType = companyType;
     }
 
+
     /**
      * get 企业名称
      *
@@ -116,6 +118,7 @@ public class LegalPersonSpec  implements java.io.Serializable {
     public void setCompanyName(String companyName) {
         this.companyName = companyName;
     }
+
 
     /**
      * get 统一社会信用代码或营业执照注册号
@@ -135,6 +138,7 @@ public class LegalPersonSpec  implements java.io.Serializable {
         this.idCode = idCode;
     }
 
+
     /**
      * get 法定代表人姓名
      *
@@ -152,6 +156,7 @@ public class LegalPersonSpec  implements java.io.Serializable {
     public void setLegalPersonName(String legalPersonName) {
         this.legalPersonName = legalPersonName;
     }
+
 
     /**
      * get 法定代表人身份证号
@@ -172,6 +177,7 @@ public class LegalPersonSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 企业类型：
 0: 企业(ET_PE_QiYe)
@@ -186,6 +192,7 @@ public class LegalPersonSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 企业名称
      *
@@ -195,6 +202,7 @@ public class LegalPersonSpec  implements java.io.Serializable {
         this.companyName = companyName;
         return this;
     }
+
 
     /**
      * set 统一社会信用代码或营业执照注册号
@@ -206,6 +214,7 @@ public class LegalPersonSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 法定代表人姓名
      *
@@ -215,6 +224,7 @@ public class LegalPersonSpec  implements java.io.Serializable {
         this.legalPersonName = legalPersonName;
         return this;
     }
+
 
     /**
      * set 法定代表人身份证号

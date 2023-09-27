@@ -25,88 +25,52 @@
 package com.jdcloud.sdk.service.cloudauth.model;
 
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.cloudauth.model.AccountInfoSimple;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询城市下银行分行列表
+ * 对公银行账户打款(随机小额)——简单版
  */
-public class QueryBankBranchListRequest extends JdcloudRequest implements java.io.Serializable {
+public class CompanyTransferSimpleRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 银行代码
+     * accountInfo
      * Required:true
      */
     @Required
-    private String bankCode;
-
-    /**
-     * 城市代码
-     * Required:true
-     */
-    @Required
-    private String cityCode;
+    private AccountInfoSimple accountInfo;
 
 
 
     /**
-     * get 银行代码
+     * get accountInfo
      *
      * @return
      */
-    public String getBankCode() {
-        return bankCode;
+    public AccountInfoSimple getAccountInfo() {
+        return accountInfo;
     }
 
     /**
-     * set 银行代码
+     * set accountInfo
      *
-     * @param bankCode
+     * @param accountInfo
      */
-    public void setBankCode(String bankCode) {
-        this.bankCode = bankCode;
-    }
-
-
-    /**
-     * get 城市代码
-     *
-     * @return
-     */
-    public String getCityCode() {
-        return cityCode;
-    }
-
-    /**
-     * set 城市代码
-     *
-     * @param cityCode
-     */
-    public void setCityCode(String cityCode) {
-        this.cityCode = cityCode;
+    public void setAccountInfo(AccountInfoSimple accountInfo) {
+        this.accountInfo = accountInfo;
     }
 
 
 
     /**
-     * set 银行代码
+     * set accountInfo
      *
-     * @param bankCode
+     * @param accountInfo
      */
-    public QueryBankBranchListRequest bankCode(String bankCode) {
-        this.bankCode = bankCode;
-        return this;
-    }
-
-
-    /**
-     * set 城市代码
-     *
-     * @param cityCode
-     */
-    public QueryBankBranchListRequest cityCode(String cityCode) {
-        this.cityCode = cityCode;
+    public CompanyTransferSimpleRequest accountInfo(AccountInfoSimple accountInfo) {
+        this.accountInfo = accountInfo;
         return this;
     }
 
