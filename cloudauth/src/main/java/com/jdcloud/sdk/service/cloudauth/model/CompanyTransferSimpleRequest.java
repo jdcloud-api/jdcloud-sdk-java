@@ -25,50 +25,52 @@
 package com.jdcloud.sdk.service.cloudauth.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.cloudauth.model.LegalPersonAndAgentSpec;
+import com.jdcloud.sdk.service.cloudauth.model.AccountInfoSimple;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 企业所有信息核验
+ * 对公银行账户打款(随机小额)——简单版
  */
-public class CheckLegalPersonAndAgentRequest extends JdcloudRequest implements java.io.Serializable {
+public class CompanyTransferSimpleRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * legalPersonAndAgentSpec
+     * accountInfo
      * Required:true
      */
     @Required
-    private LegalPersonAndAgentSpec legalPersonAndAgentSpec;
+    private AccountInfoSimple accountInfo;
+
 
 
     /**
-     * get legalPersonAndAgentSpec
+     * get accountInfo
      *
      * @return
      */
-    public LegalPersonAndAgentSpec getLegalPersonAndAgentSpec() {
-        return legalPersonAndAgentSpec;
+    public AccountInfoSimple getAccountInfo() {
+        return accountInfo;
     }
 
     /**
-     * set legalPersonAndAgentSpec
+     * set accountInfo
      *
-     * @param legalPersonAndAgentSpec
+     * @param accountInfo
      */
-    public void setLegalPersonAndAgentSpec(LegalPersonAndAgentSpec legalPersonAndAgentSpec) {
-        this.legalPersonAndAgentSpec = legalPersonAndAgentSpec;
+    public void setAccountInfo(AccountInfoSimple accountInfo) {
+        this.accountInfo = accountInfo;
     }
 
 
+
     /**
-     * set legalPersonAndAgentSpec
+     * set accountInfo
      *
-     * @param legalPersonAndAgentSpec
+     * @param accountInfo
      */
-    public CheckLegalPersonAndAgentRequest legalPersonAndAgentSpec(LegalPersonAndAgentSpec legalPersonAndAgentSpec) {
-        this.legalPersonAndAgentSpec = legalPersonAndAgentSpec;
+    public CompanyTransferSimpleRequest accountInfo(AccountInfoSimple accountInfo) {
+        this.accountInfo = accountInfo;
         return this;
     }
 

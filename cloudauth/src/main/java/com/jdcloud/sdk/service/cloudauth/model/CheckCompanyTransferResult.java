@@ -71,6 +71,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
     private String detail;
 
 
+
     /**
      * get 认证结果true 成功, false 失败
      *
@@ -88,6 +89,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
     public void setSuccess(Boolean success) {
         this.success = success;
     }
+
 
     /**
      * get 是否有异常 true 有异常, false 无异常
@@ -107,6 +109,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
         this.hasException = hasException;
     }
 
+
     /**
      * get 认证结果状态码
      *
@@ -124,6 +127,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
     public void setCode(String code) {
         this.code = code;
     }
+
 
     /**
      * get 1. 认证结果信息
@@ -149,6 +153,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
         this.message = message;
     }
 
+
     /**
      * get 1. 认证结果信息
 2. 查询结果信息
@@ -172,6 +177,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
      * set 认证结果true 成功, false 失败
      *
@@ -181,6 +187,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
         this.success = success;
         return this;
     }
+
 
     /**
      * set 是否有异常 true 有异常, false 无异常
@@ -192,6 +199,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 认证结果状态码
      *
@@ -201,6 +209,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
         this.code = code;
         return this;
     }
+
 
     /**
      * set 1. 认证结果信息
@@ -214,6 +223,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
         this.message = message;
         return this;
     }
+
 
     /**
      * set 1. 认证结果信息

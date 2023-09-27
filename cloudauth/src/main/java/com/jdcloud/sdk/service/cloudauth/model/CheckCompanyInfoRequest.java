@@ -43,6 +43,7 @@ public class CheckCompanyInfoRequest extends JdcloudRequest implements java.io.S
     private CompanyInfo companyInfo;
 
 
+
     /**
      * get companyInfo
      *
@@ -60,6 +61,7 @@ public class CheckCompanyInfoRequest extends JdcloudRequest implements java.io.S
     public void setCompanyInfo(CompanyInfo companyInfo) {
         this.companyInfo = companyInfo;
     }
+
 
 
     /**

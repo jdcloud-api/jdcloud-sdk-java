@@ -49,6 +49,7 @@ public class QueryBankBranchListRequest extends JdcloudRequest implements java.i
     private String cityCode;
 
 
+
     /**
      * get 银行代码
      *
@@ -66,6 +67,7 @@ public class QueryBankBranchListRequest extends JdcloudRequest implements java.i
     public void setBankCode(String bankCode) {
         this.bankCode = bankCode;
     }
+
 
     /**
      * get 城市代码
@@ -86,6 +88,7 @@ public class QueryBankBranchListRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 银行代码
      *
@@ -95,6 +98,7 @@ public class QueryBankBranchListRequest extends JdcloudRequest implements java.i
         this.bankCode = bankCode;
         return this;
     }
+
 
     /**
      * set 城市代码

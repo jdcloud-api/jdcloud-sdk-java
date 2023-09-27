@@ -56,9 +56,10 @@ public class PersonalUser  implements java.io.Serializable {
     private String mobile;
 
     /**
-     * 人像图片
+     * 人像图片(5-150k)
      */
     private String imgBase64;
+
 
 
     /**
@@ -79,6 +80,7 @@ public class PersonalUser  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 身份证号码
      *
@@ -96,6 +98,7 @@ public class PersonalUser  implements java.io.Serializable {
     public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
+
 
     /**
      * get 银行卡号
@@ -115,6 +118,7 @@ public class PersonalUser  implements java.io.Serializable {
         this.bankcard = bankcard;
     }
 
+
     /**
      * get 手机号
      *
@@ -133,8 +137,9 @@ public class PersonalUser  implements java.io.Serializable {
         this.mobile = mobile;
     }
 
+
     /**
-     * get 人像图片
+     * get 人像图片(5-150k)
      *
      * @return
      */
@@ -143,13 +148,14 @@ public class PersonalUser  implements java.io.Serializable {
     }
 
     /**
-     * set 人像图片
+     * set 人像图片(5-150k)
      *
      * @param imgBase64
      */
     public void setImgBase64(String imgBase64) {
         this.imgBase64 = imgBase64;
     }
+
 
 
     /**
@@ -162,6 +168,7 @@ public class PersonalUser  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 身份证号码
      *
@@ -171,6 +178,7 @@ public class PersonalUser  implements java.io.Serializable {
         this.idCard = idCard;
         return this;
     }
+
 
     /**
      * set 银行卡号
@@ -182,6 +190,7 @@ public class PersonalUser  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 手机号
      *
@@ -192,8 +201,9 @@ public class PersonalUser  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 人像图片
+     * set 人像图片(5-150k)
      *
      * @param imgBase64
      */

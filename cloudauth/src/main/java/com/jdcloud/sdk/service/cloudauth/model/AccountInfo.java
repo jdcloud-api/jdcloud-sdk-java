@@ -82,6 +82,7 @@ public class AccountInfo  implements java.io.Serializable {
     private String provinceCode;
 
 
+
     /**
      * get 机构名称
      *
@@ -99,6 +100,7 @@ public class AccountInfo  implements java.io.Serializable {
     public void setOrgName(String orgName) {
         this.orgName = orgName;
     }
+
 
     /**
      * get 企业银行账户
@@ -118,6 +120,7 @@ public class AccountInfo  implements java.io.Serializable {
         this.bankCardNum = bankCardNum;
     }
 
+
     /**
      * get 企业手机号
      *
@@ -135,6 +138,7 @@ public class AccountInfo  implements java.io.Serializable {
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
+
 
     /**
      * get 银行名称
@@ -154,6 +158,7 @@ public class AccountInfo  implements java.io.Serializable {
         this.bankName = bankName;
     }
 
+
     /**
      * get 开户行所在分行网点名称
      *
@@ -171,6 +176,7 @@ public class AccountInfo  implements java.io.Serializable {
     public void setBranchBankName(String branchBankName) {
         this.branchBankName = branchBankName;
     }
+
 
     /**
      * get 开户行所在的银行编码
@@ -190,6 +196,7 @@ public class AccountInfo  implements java.io.Serializable {
         this.bankCode = bankCode;
     }
 
+
     /**
      * get 开户行所在的城市编码
      *
@@ -207,6 +214,7 @@ public class AccountInfo  implements java.io.Serializable {
     public void setCityCode(String cityCode) {
         this.cityCode = cityCode;
     }
+
 
     /**
      * get 开户行所在的省份编码
@@ -227,6 +235,7 @@ public class AccountInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 机构名称
      *
@@ -236,6 +245,7 @@ public class AccountInfo  implements java.io.Serializable {
         this.orgName = orgName;
         return this;
     }
+
 
     /**
      * set 企业银行账户
@@ -247,6 +257,7 @@ public class AccountInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 企业手机号
      *
@@ -256,6 +267,7 @@ public class AccountInfo  implements java.io.Serializable {
         this.mobile = mobile;
         return this;
     }
+
 
     /**
      * set 银行名称
@@ -267,6 +279,7 @@ public class AccountInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 开户行所在分行网点名称
      *
@@ -276,6 +289,7 @@ public class AccountInfo  implements java.io.Serializable {
         this.branchBankName = branchBankName;
         return this;
     }
+
 
     /**
      * set 开户行所在的银行编码
@@ -287,6 +301,7 @@ public class AccountInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 开户行所在的城市编码
      *
@@ -296,6 +311,7 @@ public class AccountInfo  implements java.io.Serializable {
         this.cityCode = cityCode;
         return this;
     }
+
 
     /**
      * set 开户行所在的省份编码

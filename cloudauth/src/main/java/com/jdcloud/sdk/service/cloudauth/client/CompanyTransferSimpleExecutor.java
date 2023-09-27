@@ -26,12 +26,12 @@ package com.jdcloud.sdk.service.cloudauth.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.cloudauth.model.CheckAgentResponse;
+import com.jdcloud.sdk.service.cloudauth.model.CompanyTransferSimpleResponse;
 
 /**
- * 代理人信息核验
+ * 对公银行账户打款(随机小额)——简单版
  */
-class CheckAgentExecutor extends JdcloudExecutor {
+class CompanyTransferSimpleExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -40,11 +40,11 @@ class CheckAgentExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/company:agent";
+        return "/company:transferSimple";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return CheckAgentResponse.class;
+        return CompanyTransferSimpleResponse.class;
     }
 }

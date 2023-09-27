@@ -59,6 +59,7 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
     private String detail;
 
 
+
     /**
      * get 认证结果true 成功, false 失败
      *
@@ -76,6 +77,7 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
     public void setSuccess(Boolean success) {
         this.success = success;
     }
+
 
     /**
      * get 是否有异常 true 有异常, false 无异常
@@ -95,6 +97,7 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
         this.hasException = hasException;
     }
 
+
     /**
      * get 认证结果状态码
      *
@@ -113,6 +116,7 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
         this.code = code;
     }
 
+
     /**
      * get 认证结果
      *
@@ -130,6 +134,7 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
     public void setMessage(String message) {
         this.message = message;
     }
+
 
     /**
      * get 字符串形式的查询结果，内容为json
@@ -150,6 +155,7 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
     }
 
 
+
     /**
      * set 认证结果true 成功, false 失败
      *
@@ -159,6 +165,7 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
         this.success = success;
         return this;
     }
+
 
     /**
      * set 是否有异常 true 有异常, false 无异常
@@ -170,6 +177,7 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 认证结果状态码
      *
@@ -180,6 +188,7 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 认证结果
      *
@@ -189,6 +198,7 @@ public class QueryCityListResult extends JdcloudResult implements java.io.Serial
         this.message = message;
         return this;
     }
+
 
     /**
      * set 字符串形式的查询结果，内容为json

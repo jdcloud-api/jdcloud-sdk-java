@@ -42,6 +42,7 @@ public class QueryCityListRequest extends JdcloudRequest implements java.io.Seri
     private String provinceCode;
 
 
+
     /**
      * get 省份代码
      *
@@ -59,6 +60,7 @@ public class QueryCityListRequest extends JdcloudRequest implements java.io.Seri
     public void setProvinceCode(String provinceCode) {
         this.provinceCode = provinceCode;
     }
+
 
 
     /**

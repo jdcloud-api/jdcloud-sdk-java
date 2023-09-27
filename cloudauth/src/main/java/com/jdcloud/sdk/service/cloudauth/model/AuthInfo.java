@@ -74,6 +74,7 @@ public class AuthInfo  implements java.io.Serializable {
     private String detail;
 
 
+
     /**
      * get 认证结果true 成功, false 失败
      *
@@ -91,6 +92,7 @@ public class AuthInfo  implements java.io.Serializable {
     public void setSuccess(Boolean success) {
         this.success = success;
     }
+
 
     /**
      * get 是否有异常 true 有异常, false 无异常
@@ -110,6 +112,7 @@ public class AuthInfo  implements java.io.Serializable {
         this.hasException = hasException;
     }
 
+
     /**
      * get 认证结果状态码
      *
@@ -127,6 +130,7 @@ public class AuthInfo  implements java.io.Serializable {
     public void setCode(String code) {
         this.code = code;
     }
+
 
     /**
      * get 1. 认证结果信息
@@ -152,6 +156,7 @@ public class AuthInfo  implements java.io.Serializable {
         this.message = message;
     }
 
+
     /**
      * get 1. 认证结果信息
 2. 查询结果信息
@@ -175,6 +180,7 @@ public class AuthInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 认证结果true 成功, false 失败
      *
@@ -184,6 +190,7 @@ public class AuthInfo  implements java.io.Serializable {
         this.success = success;
         return this;
     }
+
 
     /**
      * set 是否有异常 true 有异常, false 无异常
@@ -195,6 +202,7 @@ public class AuthInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 认证结果状态码
      *
@@ -204,6 +212,7 @@ public class AuthInfo  implements java.io.Serializable {
         this.code = code;
         return this;
     }
+
 
     /**
      * set 1. 认证结果信息
@@ -217,6 +226,7 @@ public class AuthInfo  implements java.io.Serializable {
         this.message = message;
         return this;
     }
+
 
     /**
      * set 1. 认证结果信息

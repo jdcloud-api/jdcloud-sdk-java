@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.cloudauth.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 代理人信息核验
+ * 个人身份证OCR
  */
-public class CheckAgentResponse extends JdcloudResponse<CheckAgentResult> implements java.io.Serializable {
+public class IDCardResponse extends JdcloudResponse<IDCardResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

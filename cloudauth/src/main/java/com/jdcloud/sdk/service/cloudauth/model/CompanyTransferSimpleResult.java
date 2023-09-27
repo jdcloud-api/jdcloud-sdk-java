@@ -28,9 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 企业所有信息核验
+ * 对公银行账户打款(随机小额)——简单版
  */
-public class CheckLegalPersonAndAgentResult extends JdcloudResult implements java.io.Serializable {
+public class CompanyTransferSimpleResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -71,6 +71,7 @@ public class CheckLegalPersonAndAgentResult extends JdcloudResult implements jav
     private String detail;
 
 
+
     /**
      * get 认证结果true 成功, false 失败
      *
@@ -88,6 +89,7 @@ public class CheckLegalPersonAndAgentResult extends JdcloudResult implements jav
     public void setSuccess(Boolean success) {
         this.success = success;
     }
+
 
     /**
      * get 是否有异常 true 有异常, false 无异常
@@ -107,6 +109,7 @@ public class CheckLegalPersonAndAgentResult extends JdcloudResult implements jav
         this.hasException = hasException;
     }
 
+
     /**
      * get 认证结果状态码
      *
@@ -124,6 +127,7 @@ public class CheckLegalPersonAndAgentResult extends JdcloudResult implements jav
     public void setCode(String code) {
         this.code = code;
     }
+
 
     /**
      * get 1. 认证结果信息
@@ -149,6 +153,7 @@ public class CheckLegalPersonAndAgentResult extends JdcloudResult implements jav
         this.message = message;
     }
 
+
     /**
      * get 1. 认证结果信息
 2. 查询结果信息
@@ -172,35 +177,39 @@ public class CheckLegalPersonAndAgentResult extends JdcloudResult implements jav
     }
 
 
+
     /**
      * set 认证结果true 成功, false 失败
      *
      * @param success
      */
-    public CheckLegalPersonAndAgentResult success(Boolean success) {
+    public CompanyTransferSimpleResult success(Boolean success) {
         this.success = success;
         return this;
     }
+
 
     /**
      * set 是否有异常 true 有异常, false 无异常
      *
      * @param hasException
      */
-    public CheckLegalPersonAndAgentResult hasException(Boolean hasException) {
+    public CompanyTransferSimpleResult hasException(Boolean hasException) {
         this.hasException = hasException;
         return this;
     }
+
 
     /**
      * set 认证结果状态码
      *
      * @param code
      */
-    public CheckLegalPersonAndAgentResult code(String code) {
+    public CompanyTransferSimpleResult code(String code) {
         this.code = code;
         return this;
     }
+
 
     /**
      * set 1. 认证结果信息
@@ -210,10 +219,11 @@ public class CheckLegalPersonAndAgentResult extends JdcloudResult implements jav
      *
      * @param message
      */
-    public CheckLegalPersonAndAgentResult message(String message) {
+    public CompanyTransferSimpleResult message(String message) {
         this.message = message;
         return this;
     }
+
 
     /**
      * set 1. 认证结果信息
@@ -222,7 +232,7 @@ public class CheckLegalPersonAndAgentResult extends JdcloudResult implements jav
      *
      * @param detail
      */
-    public CheckLegalPersonAndAgentResult detail(String detail) {
+    public CompanyTransferSimpleResult detail(String detail) {
         this.detail = detail;
         return this;
     }

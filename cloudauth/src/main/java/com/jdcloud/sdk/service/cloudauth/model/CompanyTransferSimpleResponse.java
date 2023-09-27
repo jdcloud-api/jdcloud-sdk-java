@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.cloudauth.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 企业所有信息核验
+ * 对公银行账户打款(随机小额)——简单版
  */
-public class CheckLegalPersonAndAgentResponse extends JdcloudResponse<CheckLegalPersonAndAgentResult> implements java.io.Serializable {
+public class CompanyTransferSimpleResponse extends JdcloudResponse<CompanyTransferSimpleResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

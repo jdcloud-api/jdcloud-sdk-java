@@ -43,6 +43,7 @@ public class CompanyTransferRequest extends JdcloudRequest implements java.io.Se
     private AccountInfo accountInfo;
 
 
+
     /**
      * get accountInfo
      *
@@ -60,6 +61,7 @@ public class CompanyTransferRequest extends JdcloudRequest implements java.io.Se
     public void setAccountInfo(AccountInfo accountInfo) {
         this.accountInfo = accountInfo;
     }
+
 
 
     /**

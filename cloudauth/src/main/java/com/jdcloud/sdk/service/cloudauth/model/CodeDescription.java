@@ -24,88 +24,83 @@
 
 package com.jdcloud.sdk.service.cloudauth.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
- * checkInfo
+ * codeDescription
  */
-public class CheckInfo  implements java.io.Serializable {
+public class CodeDescription  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 金额
-     * Required:true
+     * code
      */
-    @Required
-    private String paymentAmount;
+    private Integer code;
 
     /**
-     * 订单号
-     * Required:true
+     * 描述
      */
-    @Required
-    private String orderNumber;
+    private String description;
 
 
 
     /**
-     * get 金额
+     * get code
      *
      * @return
      */
-    public String getPaymentAmount() {
-        return paymentAmount;
+    public Integer getCode() {
+        return code;
     }
 
     /**
-     * set 金额
+     * set code
      *
-     * @param paymentAmount
+     * @param code
      */
-    public void setPaymentAmount(String paymentAmount) {
-        this.paymentAmount = paymentAmount;
+    public void setCode(Integer code) {
+        this.code = code;
     }
 
 
     /**
-     * get 订单号
+     * get 描述
      *
      * @return
      */
-    public String getOrderNumber() {
-        return orderNumber;
+    public String getDescription() {
+        return description;
     }
 
     /**
-     * set 订单号
+     * set 描述
      *
-     * @param orderNumber
+     * @param description
      */
-    public void setOrderNumber(String orderNumber) {
-        this.orderNumber = orderNumber;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 
 
     /**
-     * set 金额
+     * set code
      *
-     * @param paymentAmount
+     * @param code
      */
-    public CheckInfo paymentAmount(String paymentAmount) {
-        this.paymentAmount = paymentAmount;
+    public CodeDescription code(Integer code) {
+        this.code = code;
         return this;
     }
 
 
     /**
-     * set 订单号
+     * set 描述
      *
-     * @param orderNumber
+     * @param description
      */
-    public CheckInfo orderNumber(String orderNumber) {
-        this.orderNumber = orderNumber;
+    public CodeDescription description(String description) {
+        this.description = description;
         return this;
     }
 

@@ -26,12 +26,12 @@ package com.jdcloud.sdk.service.cloudauth.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.cloudauth.model.CheckLegalPersonAndAgentResponse;
+import com.jdcloud.sdk.service.cloudauth.model.IDCardResponse;
 
 /**
- * 企业所有信息核验
+ * 个人身份证OCR
  */
-class CheckLegalPersonAndAgentExecutor extends JdcloudExecutor {
+class IDCardExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -40,11 +40,11 @@ class CheckLegalPersonAndAgentExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/company:legalPersonAndAgent";
+        return "/ocr:IDCard";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return CheckLegalPersonAndAgentResponse.class;
+        return IDCardResponse.class;
     }
 }

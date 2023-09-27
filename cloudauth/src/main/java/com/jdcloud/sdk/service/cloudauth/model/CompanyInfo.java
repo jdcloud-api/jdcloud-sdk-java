@@ -64,6 +64,7 @@ public class CompanyInfo  implements java.io.Serializable {
     private String orgCode;
 
 
+
     /**
      * get 企业类型：
 0: 企业(ET_PE_QiYe)
@@ -90,6 +91,7 @@ public class CompanyInfo  implements java.io.Serializable {
         this.companyType = companyType;
     }
 
+
     /**
      * get 企业名称
      *
@@ -108,6 +110,7 @@ public class CompanyInfo  implements java.io.Serializable {
         this.companyName = companyName;
     }
 
+
     /**
      * get 统一社会信用代码或营业执照注册号
      *
@@ -125,6 +128,7 @@ public class CompanyInfo  implements java.io.Serializable {
     public void setIdCode(String idCode) {
         this.idCode = idCode;
     }
+
 
     /**
      * get 组织机构代码
@@ -145,6 +149,7 @@ public class CompanyInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 企业类型：
 0: 企业(ET_PE_QiYe)
@@ -159,6 +164,7 @@ public class CompanyInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 企业名称
      *
@@ -169,6 +175,7 @@ public class CompanyInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 统一社会信用代码或营业执照注册号
      *
@@ -178,6 +185,7 @@ public class CompanyInfo  implements java.io.Serializable {
         this.idCode = idCode;
         return this;
     }
+
 
     /**
      * set 组织机构代码
