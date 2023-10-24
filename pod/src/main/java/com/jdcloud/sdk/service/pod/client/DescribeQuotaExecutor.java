@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.pod.model.DescribeQuotaResponse;
 
 /**
- * 查询资源的配额，支持：原生容器 pod 和 secret.
+ * 查询资源的配额，支持：原生容器,pod,secret,镜像缓存
 
  */
 class DescribeQuotaExecutor extends JdcloudExecutor {

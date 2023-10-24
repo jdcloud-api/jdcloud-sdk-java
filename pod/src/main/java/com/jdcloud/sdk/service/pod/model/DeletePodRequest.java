@@ -38,6 +38,12 @@ public class DeletePodRequest extends JdcloudRequest implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
+     * 是否删除主机的主网卡绑定的所有弹性公网IP，默认为否。可选值：&#x60;true&#x60;，&#x60;false&#x60;。
+
+     */
+    private Boolean deletePrimaryNetworkInterfaceAllElasticIp;
+
+    /**
      * Region ID
      * Required:true
      */
@@ -51,6 +57,27 @@ public class DeletePodRequest extends JdcloudRequest implements java.io.Serializ
     @Required
     private String podId;
 
+
+
+    /**
+     * get 是否删除主机的主网卡绑定的所有弹性公网IP，默认为否。可选值：&#x60;true&#x60;，&#x60;false&#x60;。
+
+     *
+     * @return
+     */
+    public Boolean getDeletePrimaryNetworkInterfaceAllElasticIp() {
+        return deletePrimaryNetworkInterfaceAllElasticIp;
+    }
+
+    /**
+     * set 是否删除主机的主网卡绑定的所有弹性公网IP，默认为否。可选值：&#x60;true&#x60;，&#x60;false&#x60;。
+
+     *
+     * @param deletePrimaryNetworkInterfaceAllElasticIp
+     */
+    public void setDeletePrimaryNetworkInterfaceAllElasticIp(Boolean deletePrimaryNetworkInterfaceAllElasticIp) {
+        this.deletePrimaryNetworkInterfaceAllElasticIp = deletePrimaryNetworkInterfaceAllElasticIp;
+    }
 
 
     /**
@@ -90,6 +117,18 @@ public class DeletePodRequest extends JdcloudRequest implements java.io.Serializ
         this.podId = podId;
     }
 
+
+
+    /**
+     * set 是否删除主机的主网卡绑定的所有弹性公网IP，默认为否。可选值：&#x60;true&#x60;，&#x60;false&#x60;。
+
+     *
+     * @param deletePrimaryNetworkInterfaceAllElasticIp
+     */
+    public DeletePodRequest deletePrimaryNetworkInterfaceAllElasticIp(Boolean deletePrimaryNetworkInterfaceAllElasticIp) {
+        this.deletePrimaryNetworkInterfaceAllElasticIp = deletePrimaryNetworkInterfaceAllElasticIp;
+        return this;
+    }
 
 
     /**

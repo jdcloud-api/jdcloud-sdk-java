@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询资源的配额，支持：原生容器 pod 和 secret.
+ * 查询资源的配额，支持：原生容器,pod,secret,镜像缓存
 
  */
 public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Serializable {
@@ -36,7 +36,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * resourceType - 资源类型，支持 [container, pod, secret]
+     * resourceType - 资源类型，支持 [container, pod, secret, imageCache]
 
      * Required:true
      */
@@ -53,7 +53,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get resourceType - 资源类型，支持 [container, pod, secret]
+     * get resourceType - 资源类型，支持 [container, pod, secret, imageCache]
 
      *
      * @return
@@ -63,7 +63,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set resourceType - 资源类型，支持 [container, pod, secret]
+     * set resourceType - 资源类型，支持 [container, pod, secret, imageCache]
 
      *
      * @param resourceType
@@ -94,7 +94,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set resourceType - 资源类型，支持 [container, pod, secret]
+     * set resourceType - 资源类型，支持 [container, pod, secret, imageCache]
 
      *
      * @param resourceType

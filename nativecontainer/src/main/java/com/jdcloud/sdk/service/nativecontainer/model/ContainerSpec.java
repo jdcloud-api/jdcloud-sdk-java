@@ -84,9 +84,7 @@ public class ContainerSpec  implements java.io.Serializable {
     private List<EnvVar> envs;
     /**
      * 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符
-     * Required:true
      */
-    @Required
     private String image;
 
     /**
@@ -152,6 +150,21 @@ public class ContainerSpec  implements java.io.Serializable {
      * 资源组ID
      */
     private String resourceGroupId;
+
+    /**
+     * 镜像缓存ID,与镜像名称至少指定一个
+     */
+    private String imageCacheId;
+
+    /**
+     * 是否自动匹配镜像缓存，默认不开启
+     */
+    private Boolean autoMatchImageCache;
+
+    /**
+     * 匹配失败后，是否自动创建镜像缓存，默认不创建
+     */
+    private Boolean autoCreateImageCache;
 
 
 
@@ -554,6 +567,63 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 镜像缓存ID,与镜像名称至少指定一个
+     *
+     * @return
+     */
+    public String getImageCacheId() {
+        return imageCacheId;
+    }
+
+    /**
+     * set 镜像缓存ID,与镜像名称至少指定一个
+     *
+     * @param imageCacheId
+     */
+    public void setImageCacheId(String imageCacheId) {
+        this.imageCacheId = imageCacheId;
+    }
+
+
+    /**
+     * get 是否自动匹配镜像缓存，默认不开启
+     *
+     * @return
+     */
+    public Boolean getAutoMatchImageCache() {
+        return autoMatchImageCache;
+    }
+
+    /**
+     * set 是否自动匹配镜像缓存，默认不开启
+     *
+     * @param autoMatchImageCache
+     */
+    public void setAutoMatchImageCache(Boolean autoMatchImageCache) {
+        this.autoMatchImageCache = autoMatchImageCache;
+    }
+
+
+    /**
+     * get 匹配失败后，是否自动创建镜像缓存，默认不创建
+     *
+     * @return
+     */
+    public Boolean getAutoCreateImageCache() {
+        return autoCreateImageCache;
+    }
+
+    /**
+     * set 匹配失败后，是否自动创建镜像缓存，默认不创建
+     *
+     * @param autoCreateImageCache
+     */
+    public void setAutoCreateImageCache(Boolean autoCreateImageCache) {
+        this.autoCreateImageCache = autoCreateImageCache;
+    }
+
+
 
     /**
      * set 实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)
@@ -782,6 +852,39 @@ public class ContainerSpec  implements java.io.Serializable {
      */
     public ContainerSpec resourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
+     * set 镜像缓存ID,与镜像名称至少指定一个
+     *
+     * @param imageCacheId
+     */
+    public ContainerSpec imageCacheId(String imageCacheId) {
+        this.imageCacheId = imageCacheId;
+        return this;
+    }
+
+
+    /**
+     * set 是否自动匹配镜像缓存，默认不开启
+     *
+     * @param autoMatchImageCache
+     */
+    public ContainerSpec autoMatchImageCache(Boolean autoMatchImageCache) {
+        this.autoMatchImageCache = autoMatchImageCache;
+        return this;
+    }
+
+
+    /**
+     * set 匹配失败后，是否自动创建镜像缓存，默认不创建
+     *
+     * @param autoCreateImageCache
+     */
+    public ContainerSpec autoCreateImageCache(Boolean autoCreateImageCache) {
+        this.autoCreateImageCache = autoCreateImageCache;
         return this;
     }
 

@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.pod.model.DescribeQuotaRequest;
 import com.jdcloud.sdk.service.pod.model.DescribeQuotaResponse;
 import com.jdcloud.sdk.service.pod.client.DescribeQuotaExecutor;
+import com.jdcloud.sdk.service.pod.model.UpdateImageCacheRequest;
+import com.jdcloud.sdk.service.pod.model.UpdateImageCacheResponse;
+import com.jdcloud.sdk.service.pod.client.UpdateImageCacheExecutor;
 import com.jdcloud.sdk.service.pod.model.DescribeContainerRequest;
 import com.jdcloud.sdk.service.pod.model.DescribeContainerResponse;
 import com.jdcloud.sdk.service.pod.client.DescribeContainerExecutor;
@@ -52,9 +55,18 @@ import com.jdcloud.sdk.service.pod.client.DisassociateElasticIpExecutor;
 import com.jdcloud.sdk.service.pod.model.CreateConfigFileRequest;
 import com.jdcloud.sdk.service.pod.model.CreateConfigFileResponse;
 import com.jdcloud.sdk.service.pod.client.CreateConfigFileExecutor;
+import com.jdcloud.sdk.service.pod.model.DeleteImageCacheRequest;
+import com.jdcloud.sdk.service.pod.model.DeleteImageCacheResponse;
+import com.jdcloud.sdk.service.pod.client.DeleteImageCacheExecutor;
 import com.jdcloud.sdk.service.pod.model.ResizeTTYRequest;
 import com.jdcloud.sdk.service.pod.model.ResizeTTYResponse;
 import com.jdcloud.sdk.service.pod.client.ResizeTTYExecutor;
+import com.jdcloud.sdk.service.pod.model.DescribeImageCachesRequest;
+import com.jdcloud.sdk.service.pod.model.DescribeImageCachesResponse;
+import com.jdcloud.sdk.service.pod.client.DescribeImageCachesExecutor;
+import com.jdcloud.sdk.service.pod.model.GetMostSuitableImageCacheRequest;
+import com.jdcloud.sdk.service.pod.model.GetMostSuitableImageCacheResponse;
+import com.jdcloud.sdk.service.pod.client.GetMostSuitableImageCacheExecutor;
 import com.jdcloud.sdk.service.pod.model.AttachRequest;
 import com.jdcloud.sdk.service.pod.model.AttachResponse;
 import com.jdcloud.sdk.service.pod.client.AttachExecutor;
@@ -70,6 +82,9 @@ import com.jdcloud.sdk.service.pod.client.DescribePodsExecutor;
 import com.jdcloud.sdk.service.pod.model.ExecGetExitCodeRequest;
 import com.jdcloud.sdk.service.pod.model.ExecGetExitCodeResponse;
 import com.jdcloud.sdk.service.pod.client.ExecGetExitCodeExecutor;
+import com.jdcloud.sdk.service.pod.model.DescribeImageCacheRequest;
+import com.jdcloud.sdk.service.pod.model.DescribeImageCacheResponse;
+import com.jdcloud.sdk.service.pod.client.DescribeImageCacheExecutor;
 import com.jdcloud.sdk.service.pod.model.CreatePodsRequest;
 import com.jdcloud.sdk.service.pod.model.CreatePodsResponse;
 import com.jdcloud.sdk.service.pod.client.CreatePodsExecutor;
@@ -79,6 +94,12 @@ import com.jdcloud.sdk.service.pod.client.CheckPodNameExecutor;
 import com.jdcloud.sdk.service.pod.model.DeleteConfigFileRequest;
 import com.jdcloud.sdk.service.pod.model.DeleteConfigFileResponse;
 import com.jdcloud.sdk.service.pod.client.DeleteConfigFileExecutor;
+import com.jdcloud.sdk.service.pod.model.CreateImageCacheRequest;
+import com.jdcloud.sdk.service.pod.model.CreateImageCacheResponse;
+import com.jdcloud.sdk.service.pod.client.CreateImageCacheExecutor;
+import com.jdcloud.sdk.service.pod.model.CreateImageCachesRequest;
+import com.jdcloud.sdk.service.pod.model.CreateImageCachesResponse;
+import com.jdcloud.sdk.service.pod.client.CreateImageCachesExecutor;
 import com.jdcloud.sdk.service.pod.model.UpdateConfigFileRequest;
 import com.jdcloud.sdk.service.pod.model.UpdateConfigFileResponse;
 import com.jdcloud.sdk.service.pod.client.UpdateConfigFileExecutor;
@@ -126,7 +147,7 @@ public class PodClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.9";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "pod.jdcloud-api.com";
     public final static String ServiceName = "pod";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -169,7 +190,7 @@ public class PodClient extends JdcloudClient {
 
 
     /**
-     * 查询资源的配额，支持：原生容器 pod 和 secret.
+     * 查询资源的配额，支持：原生容器,pod,secret,镜像缓存
 
      *
      * @param request
@@ -178,6 +199,18 @@ public class PodClient extends JdcloudClient {
      */
     public DescribeQuotaResponse describeQuota(DescribeQuotaRequest request) throws JdcloudSdkException {
         return new DescribeQuotaExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改镜像缓存的属性。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateImageCacheResponse updateImageCache(UpdateImageCacheRequest request) throws JdcloudSdkException {
+        return new UpdateImageCacheExecutor().client(this).execute(request);
     }
 
     /**
@@ -253,6 +286,18 @@ public class PodClient extends JdcloudClient {
     }
 
     /**
+     * 删除镜像缓存，镜像缓存状态必须为Ready或Error状态。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteImageCacheResponse deleteImageCache(DeleteImageCacheRequest request) throws JdcloudSdkException {
+        return new DeleteImageCacheExecutor().client(this).execute(request);
+    }
+
+    /**
      * 设置TTY大小
      *
      * @param request
@@ -261,6 +306,29 @@ public class PodClient extends JdcloudClient {
      */
     public ResizeTTYResponse resizeTTY(ResizeTTYRequest request) throws JdcloudSdkException {
         return new ResizeTTYExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量查询镜像缓存。支持分页查询，默认每页20条。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeImageCachesResponse describeImageCaches(DescribeImageCachesRequest request) throws JdcloudSdkException {
+        return new DescribeImageCachesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据镜像信息匹配镜像缓存，根据镜像缓存的体积（体积小的优先）和创建时间（创建时间晚的优先）进行匹配
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetMostSuitableImageCacheResponse getMostSuitableImageCache(GetMostSuitableImageCacheRequest request) throws JdcloudSdkException {
+        return new GetMostSuitableImageCacheExecutor().client(this).execute(request);
     }
 
     /**
@@ -321,6 +389,18 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
      */
     public ExecGetExitCodeResponse execGetExitCode(ExecGetExitCodeRequest request) throws JdcloudSdkException {
         return new ExecGetExitCodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询镜像缓存的详细信息
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeImageCacheResponse describeImageCache(DescribeImageCacheRequest request) throws JdcloudSdkException {
+        return new DescribeImageCacheExecutor().client(this).execute(request);
     }
 
     /**
@@ -418,6 +498,31 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
      */
     public DeleteConfigFileResponse deleteConfigFile(DeleteConfigFileRequest request) throws JdcloudSdkException {
         return new DeleteConfigFileExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建一个镜像缓存信息。镜像缓存加速是将镜像预先拉取到一个云盘中并制作为云盘快照，
+用户在创建Pod/NC时，若使用的镜像已经有镜像缓存，则可以直接基于该镜像缓存对应的快照制作云盘，并挂载为该容器的系统盘，避免重复拉取镜像并加快创建速度。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateImageCacheResponse createImageCache(CreateImageCacheRequest request) throws JdcloudSdkException {
+        return new CreateImageCacheExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量创建镜像缓存。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateImageCachesResponse createImageCaches(CreateImageCachesRequest request) throws JdcloudSdkException {
+        return new CreateImageCachesExecutor().client(this).execute(request);
     }
 
     /**

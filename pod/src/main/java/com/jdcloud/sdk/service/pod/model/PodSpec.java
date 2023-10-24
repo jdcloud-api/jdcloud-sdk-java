@@ -122,6 +122,11 @@ public class PodSpec  implements java.io.Serializable {
     private NetworkInterfaceAttachmentSpec primaryNetworkInterface;
 
     /**
+     * 辅助网卡配置信息
+     */
+    
+    private List<NetworkInterfaceAttachmentSpec> secondaryNetworkInterfaces;
+    /**
      * 用户普通标签集合
      */
     
@@ -130,6 +135,16 @@ public class PodSpec  implements java.io.Serializable {
      * 资源组ID
      */
     private String resourceGroupId;
+
+    /**
+     * 是否自动匹配镜像缓存，默认不开启。
+     */
+    private Boolean autoMatchImageCache;
+
+    /**
+     * 匹配失败后，是否自动创建镜像缓存，默认不创建。
+     */
+    private Boolean autoCreateImageCache;
 
 
 
@@ -419,6 +434,25 @@ public class PodSpec  implements java.io.Serializable {
 
 
     /**
+    * get 辅助网卡配置信息
+    *
+    * @return
+    */
+    public List<NetworkInterfaceAttachmentSpec> getSecondaryNetworkInterfaces() {
+        return secondaryNetworkInterfaces;
+    }
+
+    /**
+    * set 辅助网卡配置信息
+    *
+    * @param secondaryNetworkInterfaces
+    */
+    public void setSecondaryNetworkInterfaces(List<NetworkInterfaceAttachmentSpec> secondaryNetworkInterfaces) {
+        this.secondaryNetworkInterfaces = secondaryNetworkInterfaces;
+    }
+
+
+    /**
     * get 用户普通标签集合
     *
     * @return
@@ -453,6 +487,44 @@ public class PodSpec  implements java.io.Serializable {
      */
     public void setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
+     * get 是否自动匹配镜像缓存，默认不开启。
+     *
+     * @return
+     */
+    public Boolean getAutoMatchImageCache() {
+        return autoMatchImageCache;
+    }
+
+    /**
+     * set 是否自动匹配镜像缓存，默认不开启。
+     *
+     * @param autoMatchImageCache
+     */
+    public void setAutoMatchImageCache(Boolean autoMatchImageCache) {
+        this.autoMatchImageCache = autoMatchImageCache;
+    }
+
+
+    /**
+     * get 匹配失败后，是否自动创建镜像缓存，默认不创建。
+     *
+     * @return
+     */
+    public Boolean getAutoCreateImageCache() {
+        return autoCreateImageCache;
+    }
+
+    /**
+     * set 匹配失败后，是否自动创建镜像缓存，默认不创建。
+     *
+     * @param autoCreateImageCache
+     */
+    public void setAutoCreateImageCache(Boolean autoCreateImageCache) {
+        this.autoCreateImageCache = autoCreateImageCache;
     }
 
 
@@ -623,6 +695,17 @@ public class PodSpec  implements java.io.Serializable {
 
 
     /**
+    * set 辅助网卡配置信息
+    *
+    * @param secondaryNetworkInterfaces
+    */
+    public PodSpec secondaryNetworkInterfaces(List<NetworkInterfaceAttachmentSpec> secondaryNetworkInterfaces) {
+        this.secondaryNetworkInterfaces = secondaryNetworkInterfaces;
+        return this;
+    }
+
+
+    /**
     * set 用户普通标签集合
     *
     * @param userTags
@@ -640,6 +723,28 @@ public class PodSpec  implements java.io.Serializable {
      */
     public PodSpec resourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
+     * set 是否自动匹配镜像缓存，默认不开启。
+     *
+     * @param autoMatchImageCache
+     */
+    public PodSpec autoMatchImageCache(Boolean autoMatchImageCache) {
+        this.autoMatchImageCache = autoMatchImageCache;
+        return this;
+    }
+
+
+    /**
+     * set 匹配失败后，是否自动创建镜像缓存，默认不创建。
+     *
+     * @param autoCreateImageCache
+     */
+    public PodSpec autoCreateImageCache(Boolean autoCreateImageCache) {
+        this.autoCreateImageCache = autoCreateImageCache;
         return this;
     }
 
@@ -679,6 +784,18 @@ public class PodSpec  implements java.io.Serializable {
             this.containers = new ArrayList<>();
         }
         this.containers.add(container);
+    }
+
+    /**
+     * add item to 辅助网卡配置信息
+     *
+     * @param secondaryNetworkInterface
+     */
+    public void addSecondaryNetworkInterface(NetworkInterfaceAttachmentSpec secondaryNetworkInterface) {
+        if (this.secondaryNetworkInterfaces == null) {
+            this.secondaryNetworkInterfaces = new ArrayList<>();
+        }
+        this.secondaryNetworkInterfaces.add(secondaryNetworkInterface);
     }
 
     /**

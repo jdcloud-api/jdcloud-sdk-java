@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.nativecontainer.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询一台原生容器的详细信息
+ * &quot;查询一台原生容器的详细信息&quot;
 
  */
 public class DescribeContainerResponse extends JdcloudResponse<DescribeContainerResult> implements java.io.Serializable {
