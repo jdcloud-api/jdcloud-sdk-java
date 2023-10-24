@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 配额
- * 可用组配额相关接口
+ * ImageCache
+ * 镜像缓存相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,51 +24,51 @@
 
 package com.jdcloud.sdk.service.pod.model;
 
-import com.jdcloud.sdk.service.pod.model.Quota;
+import com.jdcloud.sdk.service.pod.model.ImageCache;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询资源的配额，支持：原生容器,pod,secret,镜像缓存
+ * 查询镜像缓存的详细信息
 
  */
-public class DescribeQuotaResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeImageCacheResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * quota
+     * imageCache
      */
-    private Quota quota;
+    private ImageCache imageCache;
 
 
 
     /**
-     * get quota
+     * get imageCache
      *
      * @return
      */
-    public Quota getQuota() {
-        return quota;
+    public ImageCache getImageCache() {
+        return imageCache;
     }
 
     /**
-     * set quota
+     * set imageCache
      *
-     * @param quota
+     * @param imageCache
      */
-    public void setQuota(Quota quota) {
-        this.quota = quota;
+    public void setImageCache(ImageCache imageCache) {
+        this.imageCache = imageCache;
     }
 
 
 
     /**
-     * set quota
+     * set imageCache
      *
-     * @param quota
+     * @param imageCache
      */
-    public DescribeQuotaResult quota(Quota quota) {
-        this.quota = quota;
+    public DescribeImageCacheResult imageCache(ImageCache imageCache) {
+        this.imageCache = imageCache;
         return this;
     }
 

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 配额
- * 可用组配额相关接口
+ * ImageCache
+ * 镜像缓存相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,26 +26,27 @@ package com.jdcloud.sdk.service.pod.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.pod.model.DescribeQuotaResponse;
+import com.jdcloud.sdk.service.pod.model.CreateImageCacheResponse;
 
 /**
- * 查询资源的配额，支持：原生容器,pod,secret,镜像缓存
+ * 创建一个镜像缓存信息。镜像缓存加速是将镜像预先拉取到一个云盘中并制作为云盘快照，
+用户在创建Pod/NC时，若使用的镜像已经有镜像缓存，则可以直接基于该镜像缓存对应的快照制作云盘，并挂载为该容器的系统盘，避免重复拉取镜像并加快创建速度。
 
  */
-class DescribeQuotaExecutor extends JdcloudExecutor {
+class CreateImageCacheExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "GET";
+        return "POST";
     }
 
     @Override
     public String url() {
-        return "/regions/{regionId}/quotas";
+        return "/regions/{regionId}/imageCache";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return DescribeQuotaResponse.class;
+        return CreateImageCacheResponse.class;
     }
 }

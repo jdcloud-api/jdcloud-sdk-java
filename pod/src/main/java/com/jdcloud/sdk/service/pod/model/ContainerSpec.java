@@ -63,9 +63,7 @@ public class ContainerSpec  implements java.io.Serializable {
 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 
 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 
 
-     * Required:true
      */
-    @Required
     private String image;
 
     /**
@@ -110,6 +108,11 @@ public class ContainerSpec  implements java.io.Serializable {
      */
     
     private List<VolumeMountSpec> volumeMounts;
+    /**
+     * 镜像缓存ID，与镜像名称至少指定一个
+     */
+    private String imageCacheId;
+
 
 
     /**
@@ -367,6 +370,25 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 镜像缓存ID，与镜像名称至少指定一个
+     *
+     * @return
+     */
+    public String getImageCacheId() {
+        return imageCacheId;
+    }
+
+    /**
+     * set 镜像缓存ID，与镜像名称至少指定一个
+     *
+     * @param imageCacheId
+     */
+    public void setImageCacheId(String imageCacheId) {
+        this.imageCacheId = imageCacheId;
+    }
+
+
 
     /**
      * set 容器名称，符合DNS-1123 label规范，在一个Pod内不可重复、不支持修改
@@ -511,6 +533,17 @@ public class ContainerSpec  implements java.io.Serializable {
     */
     public ContainerSpec volumeMounts(List<VolumeMountSpec> volumeMounts) {
         this.volumeMounts = volumeMounts;
+        return this;
+    }
+
+
+    /**
+     * set 镜像缓存ID，与镜像名称至少指定一个
+     *
+     * @param imageCacheId
+     */
+    public ContainerSpec imageCacheId(String imageCacheId) {
+        this.imageCacheId = imageCacheId;
         return this;
     }
 

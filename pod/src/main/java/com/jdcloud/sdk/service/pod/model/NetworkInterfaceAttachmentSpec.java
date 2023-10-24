@@ -35,7 +35,7 @@ public class NetworkInterfaceAttachmentSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 指明删除pod时是否删除网卡，默认True；当前只能是True
+     * 指明删除pod时是否删除网卡，主网卡默认是true,辅助网卡默认false
      */
     private Boolean autoDelete;
 
@@ -54,7 +54,7 @@ public class NetworkInterfaceAttachmentSpec  implements java.io.Serializable {
 
 
     /**
-     * get 指明删除pod时是否删除网卡，默认True；当前只能是True
+     * get 指明删除pod时是否删除网卡，主网卡默认是true,辅助网卡默认false
      *
      * @return
      */
@@ -63,7 +63,7 @@ public class NetworkInterfaceAttachmentSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 指明删除pod时是否删除网卡，默认True；当前只能是True
+     * set 指明删除pod时是否删除网卡，主网卡默认是true,辅助网卡默认false
      *
      * @param autoDelete
      */
@@ -112,7 +112,7 @@ public class NetworkInterfaceAttachmentSpec  implements java.io.Serializable {
 
 
     /**
-     * set 指明删除pod时是否删除网卡，默认True；当前只能是True
+     * set 指明删除pod时是否删除网卡，主网卡默认是true,辅助网卡默认false
      *
      * @param autoDelete
      */
