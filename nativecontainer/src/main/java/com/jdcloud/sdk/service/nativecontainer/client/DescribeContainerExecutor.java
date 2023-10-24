@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.nativecontainer.model.DescribeContainerResponse;
 
 /**
- * 查询一台原生容器的详细信息
+ * &quot;查询一台原生容器的详细信息&quot;
 
  */
 class DescribeContainerExecutor extends JdcloudExecutor {

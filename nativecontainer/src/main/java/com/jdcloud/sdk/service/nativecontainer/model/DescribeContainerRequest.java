@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询一台原生容器的详细信息
+ * &quot;查询一台原生容器的详细信息&quot;
 
  */
 public class DescribeContainerRequest extends JdcloudRequest implements java.io.Serializable {
