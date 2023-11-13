@@ -27,20 +27,11 @@ package com.jdcloud.sdk.service.cloudauth.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * legalPersonSpec
+ * companyInfo3Spec
  */
-public class LegalPersonSpec  implements java.io.Serializable {
+public class CompanyInfo3Spec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * 企业类型：
-0: 企业(ET_PE_QiYe)
-1: 个体工商户(ET_SE_GeTiGongShangHu)
-2: 政府机构/事业单位(ET_OU_ZhengFu_ShiYeDanWei)
-
-     */
-    private Integer companyType;
 
     /**
      * 企业名称
@@ -63,40 +54,6 @@ public class LegalPersonSpec  implements java.io.Serializable {
     @Required
     private String legalPersonName;
 
-    /**
-     * 法定代表人身份证号
-     * Required:true
-     */
-    @Required
-    private String legalPersonId;
-
-
-
-    /**
-     * get 企业类型：
-0: 企业(ET_PE_QiYe)
-1: 个体工商户(ET_SE_GeTiGongShangHu)
-2: 政府机构/事业单位(ET_OU_ZhengFu_ShiYeDanWei)
-
-     *
-     * @return
-     */
-    public Integer getCompanyType() {
-        return companyType;
-    }
-
-    /**
-     * set 企业类型：
-0: 企业(ET_PE_QiYe)
-1: 个体工商户(ET_SE_GeTiGongShangHu)
-2: 政府机构/事业单位(ET_OU_ZhengFu_ShiYeDanWei)
-
-     *
-     * @param companyType
-     */
-    public void setCompanyType(Integer companyType) {
-        this.companyType = companyType;
-    }
 
 
     /**
@@ -156,47 +113,13 @@ public class LegalPersonSpec  implements java.io.Serializable {
     }
 
 
-    /**
-     * get 法定代表人身份证号
-     *
-     * @return
-     */
-    public String getLegalPersonId() {
-        return legalPersonId;
-    }
-
-    /**
-     * set 法定代表人身份证号
-     *
-     * @param legalPersonId
-     */
-    public void setLegalPersonId(String legalPersonId) {
-        this.legalPersonId = legalPersonId;
-    }
-
-
-
-    /**
-     * set 企业类型：
-0: 企业(ET_PE_QiYe)
-1: 个体工商户(ET_SE_GeTiGongShangHu)
-2: 政府机构/事业单位(ET_OU_ZhengFu_ShiYeDanWei)
-
-     *
-     * @param companyType
-     */
-    public LegalPersonSpec companyType(Integer companyType) {
-        this.companyType = companyType;
-        return this;
-    }
-
 
     /**
      * set 企业名称
      *
      * @param companyName
      */
-    public LegalPersonSpec companyName(String companyName) {
+    public CompanyInfo3Spec companyName(String companyName) {
         this.companyName = companyName;
         return this;
     }
@@ -207,7 +130,7 @@ public class LegalPersonSpec  implements java.io.Serializable {
      *
      * @param idCode
      */
-    public LegalPersonSpec idCode(String idCode) {
+    public CompanyInfo3Spec idCode(String idCode) {
         this.idCode = idCode;
         return this;
     }
@@ -218,19 +141,8 @@ public class LegalPersonSpec  implements java.io.Serializable {
      *
      * @param legalPersonName
      */
-    public LegalPersonSpec legalPersonName(String legalPersonName) {
+    public CompanyInfo3Spec legalPersonName(String legalPersonName) {
         this.legalPersonName = legalPersonName;
-        return this;
-    }
-
-
-    /**
-     * set 法定代表人身份证号
-     *
-     * @param legalPersonId
-     */
-    public LegalPersonSpec legalPersonId(String legalPersonId) {
-        this.legalPersonId = legalPersonId;
         return this;
     }
 

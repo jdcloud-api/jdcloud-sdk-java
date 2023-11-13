@@ -34,15 +34,7 @@ public class IDCardResult extends JdcloudResult implements java.io.Serializable 
     private static final long serialVersionUID = 1L;
 
     /**
-     * normal-识别正常
-reversed_side-身份证正反面颠倒
-non_idcard-上传的图片中不包含身份证
-blurred-身份证模糊
-other_type_card-其他类型证照
-over_exposure-身份证关键字段反光或过曝
-over_dark-身份证欠曝（亮度过低）
-unknown-未知状态
-
+     * 识别状态
      */
     private String status;
 
@@ -76,18 +68,25 @@ unknown-未知状态
      */
     private String gender;
 
+    /**
+     * 签发机构
+     */
+    private String authority;
+
+    /**
+     * 签发时间
+     */
+    private String issueTime;
+
+    /**
+     * 到期时间
+     */
+    private String dueTime;
+
 
 
     /**
-     * get normal-识别正常
-reversed_side-身份证正反面颠倒
-non_idcard-上传的图片中不包含身份证
-blurred-身份证模糊
-other_type_card-其他类型证照
-over_exposure-身份证关键字段反光或过曝
-over_dark-身份证欠曝（亮度过低）
-unknown-未知状态
-
+     * get 识别状态
      *
      * @return
      */
@@ -96,15 +95,7 @@ unknown-未知状态
     }
 
     /**
-     * set normal-识别正常
-reversed_side-身份证正反面颠倒
-non_idcard-上传的图片中不包含身份证
-blurred-身份证模糊
-other_type_card-其他类型证照
-over_exposure-身份证关键字段反光或过曝
-over_dark-身份证欠曝（亮度过低）
-unknown-未知状态
-
+     * set 识别状态
      *
      * @param status
      */
@@ -227,17 +218,66 @@ unknown-未知状态
     }
 
 
+    /**
+     * get 签发机构
+     *
+     * @return
+     */
+    public String getAuthority() {
+        return authority;
+    }
 
     /**
-     * set normal-识别正常
-reversed_side-身份证正反面颠倒
-non_idcard-上传的图片中不包含身份证
-blurred-身份证模糊
-other_type_card-其他类型证照
-over_exposure-身份证关键字段反光或过曝
-over_dark-身份证欠曝（亮度过低）
-unknown-未知状态
+     * set 签发机构
+     *
+     * @param authority
+     */
+    public void setAuthority(String authority) {
+        this.authority = authority;
+    }
 
+
+    /**
+     * get 签发时间
+     *
+     * @return
+     */
+    public String getIssueTime() {
+        return issueTime;
+    }
+
+    /**
+     * set 签发时间
+     *
+     * @param issueTime
+     */
+    public void setIssueTime(String issueTime) {
+        this.issueTime = issueTime;
+    }
+
+
+    /**
+     * get 到期时间
+     *
+     * @return
+     */
+    public String getDueTime() {
+        return dueTime;
+    }
+
+    /**
+     * set 到期时间
+     *
+     * @param dueTime
+     */
+    public void setDueTime(String dueTime) {
+        this.dueTime = dueTime;
+    }
+
+
+
+    /**
+     * set 识别状态
      *
      * @param status
      */
@@ -309,6 +349,39 @@ unknown-未知状态
      */
     public IDCardResult gender(String gender) {
         this.gender = gender;
+        return this;
+    }
+
+
+    /**
+     * set 签发机构
+     *
+     * @param authority
+     */
+    public IDCardResult authority(String authority) {
+        this.authority = authority;
+        return this;
+    }
+
+
+    /**
+     * set 签发时间
+     *
+     * @param issueTime
+     */
+    public IDCardResult issueTime(String issueTime) {
+        this.issueTime = issueTime;
+        return this;
+    }
+
+
+    /**
+     * set 到期时间
+     *
+     * @param dueTime
+     */
+    public IDCardResult dueTime(String dueTime) {
+        this.dueTime = dueTime;
         return this;
     }
 

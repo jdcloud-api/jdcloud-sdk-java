@@ -31,12 +31,30 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.cloudauth.model.QueryBankBranchListRequest;
-import com.jdcloud.sdk.service.cloudauth.model.QueryBankBranchListResponse;
-import com.jdcloud.sdk.service.cloudauth.client.QueryBankBranchListExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.DescribeApplyStatusRequest;
 import com.jdcloud.sdk.service.cloudauth.model.DescribeApplyStatusResponse;
 import com.jdcloud.sdk.service.cloudauth.client.DescribeApplyStatusExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.GetAliveResultRequest;
+import com.jdcloud.sdk.service.cloudauth.model.GetAliveResultResponse;
+import com.jdcloud.sdk.service.cloudauth.client.GetAliveResultExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.GetAliveUrlRequest;
+import com.jdcloud.sdk.service.cloudauth.model.GetAliveUrlResponse;
+import com.jdcloud.sdk.service.cloudauth.client.GetAliveUrlExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.PersonalMobileRequest;
+import com.jdcloud.sdk.service.cloudauth.model.PersonalMobileResponse;
+import com.jdcloud.sdk.service.cloudauth.client.PersonalMobileExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.CompanyTransferSimpleRequest;
+import com.jdcloud.sdk.service.cloudauth.model.CompanyTransferSimpleResponse;
+import com.jdcloud.sdk.service.cloudauth.client.CompanyTransferSimpleExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyTransferRequest;
+import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyTransferResponse;
+import com.jdcloud.sdk.service.cloudauth.client.CheckCompanyTransferExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyInfoRequest;
+import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyInfoResponse;
+import com.jdcloud.sdk.service.cloudauth.client.CheckCompanyInfoExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.QueryBankBranchListRequest;
+import com.jdcloud.sdk.service.cloudauth.model.QueryBankBranchListResponse;
+import com.jdcloud.sdk.service.cloudauth.client.QueryBankBranchListExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.CheckLegalPersonRequest;
 import com.jdcloud.sdk.service.cloudauth.model.CheckLegalPersonResponse;
 import com.jdcloud.sdk.service.cloudauth.client.CheckLegalPersonExecutor;
@@ -55,15 +73,12 @@ import com.jdcloud.sdk.service.cloudauth.client.CompanyTransferExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.QueryCityListRequest;
 import com.jdcloud.sdk.service.cloudauth.model.QueryCityListResponse;
 import com.jdcloud.sdk.service.cloudauth.client.QueryCityListExecutor;
-import com.jdcloud.sdk.service.cloudauth.model.CompanyTransferSimpleRequest;
-import com.jdcloud.sdk.service.cloudauth.model.CompanyTransferSimpleResponse;
-import com.jdcloud.sdk.service.cloudauth.client.CompanyTransferSimpleExecutor;
-import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyTransferRequest;
-import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyTransferResponse;
-import com.jdcloud.sdk.service.cloudauth.client.CheckCompanyTransferExecutor;
-import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyInfoRequest;
-import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyInfoResponse;
-import com.jdcloud.sdk.service.cloudauth.client.CheckCompanyInfoExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.CheckLegalPersonDetailRequest;
+import com.jdcloud.sdk.service.cloudauth.model.CheckLegalPersonDetailResponse;
+import com.jdcloud.sdk.service.cloudauth.client.CheckLegalPersonDetailExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyInfo3Request;
+import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyInfo3Response;
+import com.jdcloud.sdk.service.cloudauth.client.CheckCompanyInfo3Executor;
 import com.jdcloud.sdk.service.cloudauth.model.QueryProvinceListRequest;
 import com.jdcloud.sdk.service.cloudauth.model.QueryProvinceListResponse;
 import com.jdcloud.sdk.service.cloudauth.client.QueryProvinceListExecutor;
@@ -118,17 +133,6 @@ public class CloudauthClient extends JdcloudClient {
 
 
     /**
-     * 查询城市下银行分行列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryBankBranchListResponse queryBankBranchList(QueryBankBranchListRequest request) throws JdcloudSdkException {
-        return new QueryBankBranchListExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询服务开通状态
      *
      * @param request
@@ -137,6 +141,83 @@ public class CloudauthClient extends JdcloudClient {
      */
     public DescribeApplyStatusResponse describeApplyStatus(DescribeApplyStatusRequest request) throws JdcloudSdkException {
         return new DescribeApplyStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * H5活体检测结果
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetAliveResultResponse getAliveResult(GetAliveResultRequest request) throws JdcloudSdkException {
+        return new GetAliveResultExecutor().client(this).execute(request);
+    }
+
+    /**
+     * H5活体检测获取采集页面链接
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetAliveUrlResponse getAliveUrl(GetAliveUrlRequest request) throws JdcloudSdkException {
+        return new GetAliveUrlExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 个人手机号三要素详版
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PersonalMobileResponse personalMobile(PersonalMobileRequest request) throws JdcloudSdkException {
+        return new PersonalMobileExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 对公银行账户打款(随机小额)——简单版
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CompanyTransferSimpleResponse companyTransferSimple(CompanyTransferSimpleRequest request) throws JdcloudSdkException {
+        return new CompanyTransferSimpleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 对公打款查询
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CheckCompanyTransferResponse checkCompanyTransfer(CheckCompanyTransferRequest request) throws JdcloudSdkException {
+        return new CheckCompanyTransferExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 企业基础信息核验
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CheckCompanyInfoResponse checkCompanyInfo(CheckCompanyInfoRequest request) throws JdcloudSdkException {
+        return new CheckCompanyInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询城市下银行分行列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryBankBranchListResponse queryBankBranchList(QueryBankBranchListRequest request) throws JdcloudSdkException {
+        return new QueryBankBranchListExecutor().client(this).execute(request);
     }
 
     /**
@@ -206,36 +287,25 @@ public class CloudauthClient extends JdcloudClient {
     }
 
     /**
-     * 对公银行账户打款(随机小额)——简单版
+     * 法人信息校验(详版)
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CompanyTransferSimpleResponse companyTransferSimple(CompanyTransferSimpleRequest request) throws JdcloudSdkException {
-        return new CompanyTransferSimpleExecutor().client(this).execute(request);
+    public CheckLegalPersonDetailResponse checkLegalPersonDetail(CheckLegalPersonDetailRequest request) throws JdcloudSdkException {
+        return new CheckLegalPersonDetailExecutor().client(this).execute(request);
     }
 
     /**
-     * 对公打款查询
+     * 企业三要素
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CheckCompanyTransferResponse checkCompanyTransfer(CheckCompanyTransferRequest request) throws JdcloudSdkException {
-        return new CheckCompanyTransferExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 企业基础信息核验
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CheckCompanyInfoResponse checkCompanyInfo(CheckCompanyInfoRequest request) throws JdcloudSdkException {
-        return new CheckCompanyInfoExecutor().client(this).execute(request);
+    public CheckCompanyInfo3Response checkCompanyInfo3(CheckCompanyInfo3Request request) throws JdcloudSdkException {
+        return new CheckCompanyInfo3Executor().client(this).execute(request);
     }
 
     /**
