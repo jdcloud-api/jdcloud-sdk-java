@@ -39,9 +39,7 @@ public class CompanyInfo  implements java.io.Serializable {
 1: 个体工商户(ET_SE_GeTiGongShangHu)
 2: 政府机构/事业单位(ET_OU_ZhengFu_ShiYeDanWei)
 
-     * Required:true
      */
-    @Required
     private Integer companyType;
 
     /**
