@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.ag.model.ModifyInstancesManagedRequest;
+import com.jdcloud.sdk.service.ag.model.ModifyInstancesManagedResponse;
+import com.jdcloud.sdk.service.ag.client.ModifyInstancesManagedExecutor;
 import com.jdcloud.sdk.service.ag.model.UpdateAgRequest;
 import com.jdcloud.sdk.service.ag.model.UpdateAgResponse;
 import com.jdcloud.sdk.service.ag.client.UpdateAgExecutor;
@@ -167,6 +170,17 @@ public class AgClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * 弹性伸缩组内资源是否托管修改
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyInstancesManagedResponse modifyInstancesManaged(ModifyInstancesManagedRequest request) throws JdcloudSdkException {
+        return new ModifyInstancesManagedExecutor().client(this).execute(request);
+    }
 
     /**
      * 修改一个高可用组的信息
