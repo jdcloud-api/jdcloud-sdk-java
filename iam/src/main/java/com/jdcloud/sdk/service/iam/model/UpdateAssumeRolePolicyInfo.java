@@ -38,6 +38,7 @@ public class UpdateAssumeRolePolicyInfo  implements java.io.Serializable {
     private String assumeRolePolicyDocument;
 
 
+
     /**
      * get 信任实体信息
      *
@@ -55,6 +56,7 @@ public class UpdateAssumeRolePolicyInfo  implements java.io.Serializable {
     public void setAssumeRolePolicyDocument(String assumeRolePolicyDocument) {
         this.assumeRolePolicyDocument = assumeRolePolicyDocument;
     }
+
 
 
     /**

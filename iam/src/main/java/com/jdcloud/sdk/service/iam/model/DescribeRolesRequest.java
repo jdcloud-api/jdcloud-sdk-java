@@ -59,6 +59,7 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
     private Integer sort;
 
 
+
     /**
      * get 页码，默认1
      *
@@ -76,6 +77,7 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小，默认50，取值范围[10, 100]
@@ -95,6 +97,7 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 角色名称关键词
      *
@@ -113,6 +116,7 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
         this.roleName = roleName;
     }
 
+
     /**
      * get 角色类型，默认查找所有类型，2-服务相关角色，3-服务角色，4-用户角色
      *
@@ -130,6 +134,7 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
     public void setType(Integer type) {
         this.type = type;
     }
+
 
     /**
      * get 排序策略,0-按创建时间顺序排序,1-按创建时间倒序排序
@@ -150,6 +155,7 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 页码，默认1
      *
@@ -159,6 +165,7 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认50，取值范围[10, 100]
@@ -170,6 +177,7 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 角色名称关键词
      *
@@ -180,6 +188,7 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 角色类型，默认查找所有类型，2-服务相关角色，3-服务角色，4-用户角色
      *
@@ -189,6 +198,7 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
         this.type = type;
         return this;
     }
+
 
     /**
      * set 排序策略,0-按创建时间顺序排序,1-按创建时间倒序排序

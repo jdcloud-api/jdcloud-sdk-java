@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.iam.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 启用主账号AccessKey
+ * 启用主账号AccessKey, &lt;br&gt; 启用后accessKey的状态变成 1 &lt;b&gt;启用&lt;/b&gt;
+
  */
 public class EnabledUserAccessKeyResponse extends JdcloudResponse<EnabledUserAccessKeyResult> implements java.io.Serializable {
 

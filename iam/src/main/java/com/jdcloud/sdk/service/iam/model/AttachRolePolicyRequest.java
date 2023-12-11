@@ -42,11 +42,22 @@ public class AttachRolePolicyRequest extends JdcloudRequest implements java.io.S
     private String policyName;
 
     /**
+     * 资源组id
+     */
+    private String scopeId;
+
+    /**
+     * 允许添加策略绑定：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     */
+    private String allowAddPolicy;
+
+    /**
      * 角色名称
      * Required:true
      */
     @Required
     private String roleName;
+
 
 
     /**
@@ -67,6 +78,45 @@ public class AttachRolePolicyRequest extends JdcloudRequest implements java.io.S
         this.policyName = policyName;
     }
 
+
+    /**
+     * get 资源组id
+     *
+     * @return
+     */
+    public String getScopeId() {
+        return scopeId;
+    }
+
+    /**
+     * set 资源组id
+     *
+     * @param scopeId
+     */
+    public void setScopeId(String scopeId) {
+        this.scopeId = scopeId;
+    }
+
+
+    /**
+     * get 允许添加策略绑定：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     *
+     * @return
+     */
+    public String getAllowAddPolicy() {
+        return allowAddPolicy;
+    }
+
+    /**
+     * set 允许添加策略绑定：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     *
+     * @param allowAddPolicy
+     */
+    public void setAllowAddPolicy(String allowAddPolicy) {
+        this.allowAddPolicy = allowAddPolicy;
+    }
+
+
     /**
      * get 角色名称
      *
@@ -86,6 +136,7 @@ public class AttachRolePolicyRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 策略名称
      *
@@ -95,6 +146,29 @@ public class AttachRolePolicyRequest extends JdcloudRequest implements java.io.S
         this.policyName = policyName;
         return this;
     }
+
+
+    /**
+     * set 资源组id
+     *
+     * @param scopeId
+     */
+    public AttachRolePolicyRequest scopeId(String scopeId) {
+        this.scopeId = scopeId;
+        return this;
+    }
+
+
+    /**
+     * set 允许添加策略绑定：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     *
+     * @param allowAddPolicy
+     */
+    public AttachRolePolicyRequest allowAddPolicy(String allowAddPolicy) {
+        this.allowAddPolicy = allowAddPolicy;
+        return this;
+    }
+
 
     /**
      * set 角色名称

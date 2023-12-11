@@ -29,6 +29,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 删除子用户的AccessKey
+
  */
 public class DeleteSubUserAccessKeyRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -49,6 +50,7 @@ public class DeleteSubUserAccessKeyRequest extends JdcloudRequest implements jav
     private String accessKey;
 
 
+
     /**
      * get 子用户名称
      *
@@ -66,6 +68,7 @@ public class DeleteSubUserAccessKeyRequest extends JdcloudRequest implements jav
     public void setSubUser(String subUser) {
         this.subUser = subUser;
     }
+
 
     /**
      * get accessKey
@@ -86,6 +89,7 @@ public class DeleteSubUserAccessKeyRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 子用户名称
      *
@@ -95,6 +99,7 @@ public class DeleteSubUserAccessKeyRequest extends JdcloudRequest implements jav
         this.subUser = subUser;
         return this;
     }
+
 
     /**
      * set accessKey

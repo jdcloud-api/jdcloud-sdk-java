@@ -49,6 +49,7 @@ public class RemoveSubUserFromGroupRequest extends JdcloudRequest implements jav
     private String groupName;
 
 
+
     /**
      * get 子用户名
      *
@@ -66,6 +67,7 @@ public class RemoveSubUserFromGroupRequest extends JdcloudRequest implements jav
     public void setSubUser(String subUser) {
         this.subUser = subUser;
     }
+
 
     /**
      * get 用户组名称
@@ -86,6 +88,7 @@ public class RemoveSubUserFromGroupRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 子用户名
      *
@@ -95,6 +98,7 @@ public class RemoveSubUserFromGroupRequest extends JdcloudRequest implements jav
         this.subUser = subUser;
         return this;
     }
+
 
     /**
      * set 用户组名称

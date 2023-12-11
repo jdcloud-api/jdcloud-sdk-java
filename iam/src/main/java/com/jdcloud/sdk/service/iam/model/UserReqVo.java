@@ -108,6 +108,7 @@ public class UserReqVo  implements java.io.Serializable {
     private Integer currentPage;
 
 
+
     /**
      * get 用户pin
      *
@@ -125,6 +126,7 @@ public class UserReqVo  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 用户手机号
@@ -144,6 +146,7 @@ public class UserReqVo  implements java.io.Serializable {
         this.cscPhone = cscPhone;
     }
 
+
     /**
      * get 用户邮箱
      *
@@ -161,6 +164,7 @@ public class UserReqVo  implements java.io.Serializable {
     public void setCscEmail(String cscEmail) {
         this.cscEmail = cscEmail;
     }
+
 
     /**
      * get 用户名
@@ -180,6 +184,7 @@ public class UserReqVo  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 用户类型
      *
@@ -197,6 +202,7 @@ public class UserReqVo  implements java.io.Serializable {
     public void setUserType(Integer userType) {
         this.userType = userType;
     }
+
 
     /**
      * get 公司名
@@ -216,6 +222,7 @@ public class UserReqVo  implements java.io.Serializable {
         this.companyName = companyName;
     }
 
+
     /**
      * get 起始时间
      *
@@ -233,6 +240,7 @@ public class UserReqVo  implements java.io.Serializable {
     public void setCreateTimeStart(String createTimeStart) {
         this.createTimeStart = createTimeStart;
     }
+
 
     /**
      * get 结束时间
@@ -252,6 +260,7 @@ public class UserReqVo  implements java.io.Serializable {
         this.createTimeEnd = createTimeEnd;
     }
 
+
     /**
      * get 欠费状态：
      *
@@ -269,6 +278,7 @@ public class UserReqVo  implements java.io.Serializable {
     public void setArrearageStatus(Integer arrearageStatus) {
         this.arrearageStatus = arrearageStatus;
     }
+
 
     /**
      * get 用户分组，多个逗号分隔:1-自然流量，2-内部测试，3-内部重点，4-渠道用户
@@ -288,6 +298,7 @@ public class UserReqVo  implements java.io.Serializable {
         this.groups = groups;
     }
 
+
     /**
      * get 用户分组:1-自然流量，2-内部测试，3-内部重点，4-渠道用户
      *
@@ -305,6 +316,7 @@ public class UserReqVo  implements java.io.Serializable {
     public void setGroup(Integer group) {
         this.group = group;
     }
+
 
     /**
      * get 计费白名单：1、在白名单  2、不在白名单
@@ -324,6 +336,7 @@ public class UserReqVo  implements java.io.Serializable {
         this.billingWhite = billingWhite;
     }
 
+
     /**
      * get 渠道等级;1普通用户2测试用户4VIP用户8其他VIP用户16boss迁移账户
      *
@@ -342,6 +355,7 @@ public class UserReqVo  implements java.io.Serializable {
         this.tag = tag;
     }
 
+
     /**
      * get 页大小
      *
@@ -359,6 +373,7 @@ public class UserReqVo  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 当前页
@@ -379,6 +394,7 @@ public class UserReqVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户pin
      *
@@ -388,6 +404,7 @@ public class UserReqVo  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 用户手机号
@@ -399,6 +416,7 @@ public class UserReqVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户邮箱
      *
@@ -408,6 +426,7 @@ public class UserReqVo  implements java.io.Serializable {
         this.cscEmail = cscEmail;
         return this;
     }
+
 
     /**
      * set 用户名
@@ -419,6 +438,7 @@ public class UserReqVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户类型
      *
@@ -428,6 +448,7 @@ public class UserReqVo  implements java.io.Serializable {
         this.userType = userType;
         return this;
     }
+
 
     /**
      * set 公司名
@@ -439,6 +460,7 @@ public class UserReqVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 起始时间
      *
@@ -448,6 +470,7 @@ public class UserReqVo  implements java.io.Serializable {
         this.createTimeStart = createTimeStart;
         return this;
     }
+
 
     /**
      * set 结束时间
@@ -459,6 +482,7 @@ public class UserReqVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 欠费状态：
      *
@@ -468,6 +492,7 @@ public class UserReqVo  implements java.io.Serializable {
         this.arrearageStatus = arrearageStatus;
         return this;
     }
+
 
     /**
      * set 用户分组，多个逗号分隔:1-自然流量，2-内部测试，3-内部重点，4-渠道用户
@@ -479,6 +504,7 @@ public class UserReqVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户分组:1-自然流量，2-内部测试，3-内部重点，4-渠道用户
      *
@@ -488,6 +514,7 @@ public class UserReqVo  implements java.io.Serializable {
         this.group = group;
         return this;
     }
+
 
     /**
      * set 计费白名单：1、在白名单  2、不在白名单
@@ -499,6 +526,7 @@ public class UserReqVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 渠道等级;1普通用户2测试用户4VIP用户8其他VIP用户16boss迁移账户
      *
@@ -509,6 +537,7 @@ public class UserReqVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 页大小
      *
@@ -518,6 +547,7 @@ public class UserReqVo  implements java.io.Serializable {
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 当前页

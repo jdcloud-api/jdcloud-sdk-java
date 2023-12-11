@@ -42,11 +42,22 @@ public class DetachSubUserPolicyRequest extends JdcloudRequest implements java.i
     private String policyName;
 
     /**
+     * 资源组id
+     */
+    private String scopeId;
+
+    /**
+     * 允许解除策略：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     */
+    private String allowDetachAddPolicy;
+
+    /**
      * 子用户名
      * Required:true
      */
     @Required
     private String subUser;
+
 
 
     /**
@@ -67,6 +78,45 @@ public class DetachSubUserPolicyRequest extends JdcloudRequest implements java.i
         this.policyName = policyName;
     }
 
+
+    /**
+     * get 资源组id
+     *
+     * @return
+     */
+    public String getScopeId() {
+        return scopeId;
+    }
+
+    /**
+     * set 资源组id
+     *
+     * @param scopeId
+     */
+    public void setScopeId(String scopeId) {
+        this.scopeId = scopeId;
+    }
+
+
+    /**
+     * get 允许解除策略：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     *
+     * @return
+     */
+    public String getAllowDetachAddPolicy() {
+        return allowDetachAddPolicy;
+    }
+
+    /**
+     * set 允许解除策略：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     *
+     * @param allowDetachAddPolicy
+     */
+    public void setAllowDetachAddPolicy(String allowDetachAddPolicy) {
+        this.allowDetachAddPolicy = allowDetachAddPolicy;
+    }
+
+
     /**
      * get 子用户名
      *
@@ -86,6 +136,7 @@ public class DetachSubUserPolicyRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 策略名称
      *
@@ -95,6 +146,29 @@ public class DetachSubUserPolicyRequest extends JdcloudRequest implements java.i
         this.policyName = policyName;
         return this;
     }
+
+
+    /**
+     * set 资源组id
+     *
+     * @param scopeId
+     */
+    public DetachSubUserPolicyRequest scopeId(String scopeId) {
+        this.scopeId = scopeId;
+        return this;
+    }
+
+
+    /**
+     * set 允许解除策略：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     *
+     * @param allowDetachAddPolicy
+     */
+    public DetachSubUserPolicyRequest allowDetachAddPolicy(String allowDetachAddPolicy) {
+        this.allowDetachAddPolicy = allowDetachAddPolicy;
+        return this;
+    }
+
 
     /**
      * set 子用户名

@@ -39,31 +39,33 @@ public class DescribeSubUsersResult extends JdcloudResult implements java.io.Ser
     /**
      * subUsers
      */
+    
     private List<SubUser> subUsers;
-
     /**
      * total
      */
     private Integer total;
 
 
+
     /**
-     * get subUsers
-     *
-     * @return
-     */
+    * get subUsers
+    *
+    * @return
+    */
     public List<SubUser> getSubUsers() {
         return subUsers;
     }
 
     /**
-     * set subUsers
-     *
-     * @param subUsers
-     */
+    * set subUsers
+    *
+    * @param subUsers
+    */
     public void setSubUsers(List<SubUser> subUsers) {
         this.subUsers = subUsers;
     }
+
 
     /**
      * get total
@@ -84,15 +86,17 @@ public class DescribeSubUsersResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
-     * set subUsers
-     *
-     * @param subUsers
-     */
+    * set subUsers
+    *
+    * @param subUsers
+    */
     public DescribeSubUsersResult subUsers(List<SubUser> subUsers) {
         this.subUsers = subUsers;
         return this;
     }
+
 
     /**
      * set total
@@ -103,6 +107,7 @@ public class DescribeSubUsersResult extends JdcloudResult implements java.io.Ser
         this.total = total;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeSubUsersResult extends JdcloudResult implements java.io.Ser
         }
         this.subUsers.add(subUser);
     }
-
 }

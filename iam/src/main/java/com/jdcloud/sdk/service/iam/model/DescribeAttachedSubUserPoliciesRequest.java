@@ -42,6 +42,7 @@ public class DescribeAttachedSubUserPoliciesRequest extends JdcloudRequest imple
     private String subUser;
 
 
+
     /**
      * get 子用户名
      *
@@ -59,6 +60,7 @@ public class DescribeAttachedSubUserPoliciesRequest extends JdcloudRequest imple
     public void setSubUser(String subUser) {
         this.subUser = subUser;
     }
+
 
 
     /**

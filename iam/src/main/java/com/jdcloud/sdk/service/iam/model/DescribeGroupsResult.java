@@ -44,6 +44,7 @@ public class DescribeGroupsResult extends JdcloudResult implements java.io.Seria
     /**
      * groups
      */
+    
     private List<Group> groups;
 
 
@@ -65,23 +66,25 @@ public class DescribeGroupsResult extends JdcloudResult implements java.io.Seria
         this.total = total;
     }
 
+
     /**
-     * get groups
-     *
-     * @return
-     */
+    * get groups
+    *
+    * @return
+    */
     public List<Group> getGroups() {
         return groups;
     }
 
     /**
-     * set groups
-     *
-     * @param groups
-     */
+    * set groups
+    *
+    * @param groups
+    */
     public void setGroups(List<Group> groups) {
         this.groups = groups;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class DescribeGroupsResult extends JdcloudResult implements java.io.Seria
         return this;
     }
 
+
     /**
-     * set groups
-     *
-     * @param groups
-     */
+    * set groups
+    *
+    * @param groups
+    */
     public DescribeGroupsResult groups(List<Group> groups) {
         this.groups = groups;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeGroupsResult extends JdcloudResult implements java.io.Seria
         }
         this.groups.add(group);
     }
-
 }

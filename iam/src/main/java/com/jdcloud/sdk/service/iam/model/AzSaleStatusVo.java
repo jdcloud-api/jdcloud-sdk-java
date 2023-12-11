@@ -33,7 +33,7 @@ public class AzSaleStatusVo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * null
+     * az
      */
     private String az;
 
@@ -47,9 +47,15 @@ public class AzSaleStatusVo  implements java.io.Serializable {
      */
     private Integer visible;
 
+    /**
+     * 可用区类别:AZ-center EZ-edge
+     */
+    private String zoneType;
+
+
 
     /**
-     * get null
+     * get az
      *
      * @return
      */
@@ -58,13 +64,14 @@ public class AzSaleStatusVo  implements java.io.Serializable {
     }
 
     /**
-     * set null
+     * set az
      *
      * @param az
      */
     public void setAz(String az) {
         this.az = az;
     }
+
 
     /**
      * get 是否售罄 (0未售罄 1售罄)
@@ -83,6 +90,7 @@ public class AzSaleStatusVo  implements java.io.Serializable {
     public void setCanSale(Integer canSale) {
         this.canSale = canSale;
     }
+
 
     /**
      * get 是否可见(1可见 0不可见)
@@ -104,7 +112,27 @@ public class AzSaleStatusVo  implements java.io.Serializable {
 
 
     /**
-     * set null
+     * get 可用区类别:AZ-center EZ-edge
+     *
+     * @return
+     */
+    public String getZoneType() {
+        return zoneType;
+    }
+
+    /**
+     * set 可用区类别:AZ-center EZ-edge
+     *
+     * @param zoneType
+     */
+    public void setZoneType(String zoneType) {
+        this.zoneType = zoneType;
+    }
+
+
+
+    /**
+     * set az
      *
      * @param az
      */
@@ -112,6 +140,7 @@ public class AzSaleStatusVo  implements java.io.Serializable {
         this.az = az;
         return this;
     }
+
 
     /**
      * set 是否售罄 (0未售罄 1售罄)
@@ -123,6 +152,7 @@ public class AzSaleStatusVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否可见(1可见 0不可见)
      *
@@ -130,6 +160,17 @@ public class AzSaleStatusVo  implements java.io.Serializable {
      */
     public AzSaleStatusVo visible(Integer visible) {
         this.visible = visible;
+        return this;
+    }
+
+
+    /**
+     * set 可用区类别:AZ-center EZ-edge
+     *
+     * @param zoneType
+     */
+    public AzSaleStatusVo zoneType(String zoneType) {
+        this.zoneType = zoneType;
         return this;
     }
 

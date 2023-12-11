@@ -72,6 +72,7 @@ public class Permission  implements java.io.Serializable {
     /**
      * 权限详细信息
      */
+    
     private List<PermissionDetail> permissionDetailList;
 
 
@@ -93,6 +94,7 @@ public class Permission  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 主账号pin
      *
@@ -110,6 +112,7 @@ public class Permission  implements java.io.Serializable {
     public void setAccount(String account) {
         this.account = account;
     }
+
 
     /**
      * get 权限名称
@@ -129,6 +132,7 @@ public class Permission  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 描述
      *
@@ -146,6 +150,7 @@ public class Permission  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 权限类型
@@ -165,6 +170,7 @@ public class Permission  implements java.io.Serializable {
         this.permissionType = permissionType;
     }
 
+
     /**
      * get 权限版本号
      *
@@ -182,6 +188,7 @@ public class Permission  implements java.io.Serializable {
     public void setVersion(String version) {
         this.version = version;
     }
+
 
     /**
      * get 权限内容
@@ -201,23 +208,25 @@ public class Permission  implements java.io.Serializable {
         this.content = content;
     }
 
+
     /**
-     * get 权限详细信息
-     *
-     * @return
-     */
+    * get 权限详细信息
+    *
+    * @return
+    */
     public List<PermissionDetail> getPermissionDetailList() {
         return permissionDetailList;
     }
 
     /**
-     * set 权限详细信息
-     *
-     * @param permissionDetailList
-     */
+    * set 权限详细信息
+    *
+    * @param permissionDetailList
+    */
     public void setPermissionDetailList(List<PermissionDetail> permissionDetailList) {
         this.permissionDetailList = permissionDetailList;
     }
+
 
 
     /**
@@ -230,6 +239,7 @@ public class Permission  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主账号pin
      *
@@ -239,6 +249,7 @@ public class Permission  implements java.io.Serializable {
         this.account = account;
         return this;
     }
+
 
     /**
      * set 权限名称
@@ -250,6 +261,7 @@ public class Permission  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述
      *
@@ -259,6 +271,7 @@ public class Permission  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 权限类型
@@ -270,6 +283,7 @@ public class Permission  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 权限版本号
      *
@@ -279,6 +293,7 @@ public class Permission  implements java.io.Serializable {
         this.version = version;
         return this;
     }
+
 
     /**
      * set 权限内容
@@ -290,15 +305,17 @@ public class Permission  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 权限详细信息
-     *
-     * @param permissionDetailList
-     */
+    * set 权限详细信息
+    *
+    * @param permissionDetailList
+    */
     public Permission permissionDetailList(List<PermissionDetail> permissionDetailList) {
         this.permissionDetailList = permissionDetailList;
         return this;
     }
+
 
 
     /**
@@ -312,5 +329,4 @@ public class Permission  implements java.io.Serializable {
         }
         this.permissionDetailList.add(permissionDetailList);
     }
-
 }

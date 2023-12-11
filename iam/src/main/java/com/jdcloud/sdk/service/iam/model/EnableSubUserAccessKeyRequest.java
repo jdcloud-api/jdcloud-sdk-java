@@ -28,7 +28,8 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 启用子用户AccessKey
+ * 启用子用户AccessKey &lt;br&gt;, 启用后accessKey 的状态变成 1 &lt;b&gt;启用&lt;/b&gt;
+
  */
 public class EnableSubUserAccessKeyRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -49,6 +50,7 @@ public class EnableSubUserAccessKeyRequest extends JdcloudRequest implements jav
     private String accessKey;
 
 
+
     /**
      * get 子用户名称
      *
@@ -66,6 +68,7 @@ public class EnableSubUserAccessKeyRequest extends JdcloudRequest implements jav
     public void setSubUser(String subUser) {
         this.subUser = subUser;
     }
+
 
     /**
      * get accessKey
@@ -86,6 +89,7 @@ public class EnableSubUserAccessKeyRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 子用户名称
      *
@@ -95,6 +99,7 @@ public class EnableSubUserAccessKeyRequest extends JdcloudRequest implements jav
         this.subUser = subUser;
         return this;
     }
+
 
     /**
      * set accessKey

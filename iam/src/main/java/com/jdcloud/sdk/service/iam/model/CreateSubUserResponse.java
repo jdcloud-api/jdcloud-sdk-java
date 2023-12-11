@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.iam.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建子用户
+ * 创建子用户, &lt;br&gt;
+请访问&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/subuser-management&quot;&gt;子用户管理&lt;/a&gt;了解更多 &lt;br&gt;
+
  */
 public class CreateSubUserResponse extends JdcloudResponse<CreateSubUserResult> implements java.io.Serializable {
 

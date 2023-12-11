@@ -42,6 +42,7 @@ public class VirtualMFADevice  implements java.io.Serializable {
     /**
      * 创建MFA设备相关信息
      */
+    
     private List<MFAInfo> mFAInfos;
 
 
@@ -63,23 +64,25 @@ public class VirtualMFADevice  implements java.io.Serializable {
         this.base64Qr = base64Qr;
     }
 
+
     /**
-     * get 创建MFA设备相关信息
-     *
-     * @return
-     */
+    * get 创建MFA设备相关信息
+    *
+    * @return
+    */
     public List<MFAInfo> getMFAInfos() {
         return mFAInfos;
     }
 
     /**
-     * set 创建MFA设备相关信息
-     *
-     * @param mFAInfos
-     */
+    * set 创建MFA设备相关信息
+    *
+    * @param mFAInfos
+    */
     public void setMFAInfos(List<MFAInfo> mFAInfos) {
         this.mFAInfos = mFAInfos;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class VirtualMFADevice  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 创建MFA设备相关信息
-     *
-     * @param mFAInfos
-     */
+    * set 创建MFA设备相关信息
+    *
+    * @param mFAInfos
+    */
     public VirtualMFADevice mFAInfos(List<MFAInfo> mFAInfos) {
         this.mFAInfos = mFAInfos;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class VirtualMFADevice  implements java.io.Serializable {
         }
         this.mFAInfos.add(mFAInfo);
     }
-
 }

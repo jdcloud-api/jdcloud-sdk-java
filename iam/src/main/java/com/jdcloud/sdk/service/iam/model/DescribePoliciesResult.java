@@ -44,6 +44,7 @@ public class DescribePoliciesResult extends JdcloudResult implements java.io.Ser
     /**
      * policies
      */
+    
     private List<Policy> policies;
 
 
@@ -65,23 +66,25 @@ public class DescribePoliciesResult extends JdcloudResult implements java.io.Ser
         this.total = total;
     }
 
+
     /**
-     * get policies
-     *
-     * @return
-     */
+    * get policies
+    *
+    * @return
+    */
     public List<Policy> getPolicies() {
         return policies;
     }
 
     /**
-     * set policies
-     *
-     * @param policies
-     */
+    * set policies
+    *
+    * @param policies
+    */
     public void setPolicies(List<Policy> policies) {
         this.policies = policies;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class DescribePoliciesResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
-     * set policies
-     *
-     * @param policies
-     */
+    * set policies
+    *
+    * @param policies
+    */
     public DescribePoliciesResult policies(List<Policy> policies) {
         this.policies = policies;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribePoliciesResult extends JdcloudResult implements java.io.Ser
         }
         this.policies.add(policie);
     }
-
 }

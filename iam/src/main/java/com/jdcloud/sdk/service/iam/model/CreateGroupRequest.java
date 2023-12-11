@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.iam.model.CreateGroupInfo;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建用户组
+ * 创建用户组, &lt;br&gt;
+可访问&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/group-management&quot;&gt;用户组管理&lt;/a&gt;了解更多&lt;br&gt;
+
  */
 public class CreateGroupRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -41,6 +43,7 @@ public class CreateGroupRequest extends JdcloudRequest implements java.io.Serial
      */
     @Required
     private CreateGroupInfo createGroupInfo;
+
 
 
     /**
@@ -60,6 +63,7 @@ public class CreateGroupRequest extends JdcloudRequest implements java.io.Serial
     public void setCreateGroupInfo(CreateGroupInfo createGroupInfo) {
         this.createGroupInfo = createGroupInfo;
     }
+
 
 
     /**

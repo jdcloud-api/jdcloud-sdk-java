@@ -59,6 +59,7 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
     private Integer sort;
 
 
+
     /**
      * get 页码，默认1
      *
@@ -76,6 +77,7 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小，默认50，取值范围[10, 100]
@@ -95,6 +97,7 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 关键字
      *
@@ -113,6 +116,7 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
         this.keyword = keyword;
     }
 
+
     /**
      * get 策略类型：0-全部（默认），1-系统策略，2-自定义策略
      *
@@ -130,6 +134,7 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
     public void setQueryType(Integer queryType) {
         this.queryType = queryType;
     }
+
 
     /**
      * get 排序规则：0-创建时间顺序排序，1-创建时间倒序排序
@@ -150,6 +155,7 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 页码，默认1
      *
@@ -159,6 +165,7 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认50，取值范围[10, 100]
@@ -170,6 +177,7 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 关键字
      *
@@ -180,6 +188,7 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 策略类型：0-全部（默认），1-系统策略，2-自定义策略
      *
@@ -189,6 +198,7 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
         this.queryType = queryType;
         return this;
     }
+
 
     /**
      * set 排序规则：0-创建时间顺序排序，1-创建时间倒序排序

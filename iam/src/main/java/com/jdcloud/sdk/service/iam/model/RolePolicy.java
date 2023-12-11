@@ -33,6 +33,11 @@ public class RolePolicy  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 策略id
+     */
+    private String policyId;
+
+    /**
      * 策略名称
      */
     private String policyName;
@@ -45,12 +50,37 @@ public class RolePolicy  implements java.io.Serializable {
     /**
      * 策略类型：0-系统策略，1-用户策略
      */
-    private String type;
+    private Integer type;
 
     /**
      * 京东云策略资源描述
      */
     private String policyJrn;
+
+    /**
+     * 授权范围类型：1-全部资源，2-指定资源
+     */
+    private Integer scopeType;
+
+
+
+    /**
+     * get 策略id
+     *
+     * @return
+     */
+    public String getPolicyId() {
+        return policyId;
+    }
+
+    /**
+     * set 策略id
+     *
+     * @param policyId
+     */
+    public void setPolicyId(String policyId) {
+        this.policyId = policyId;
+    }
 
 
     /**
@@ -71,6 +101,7 @@ public class RolePolicy  implements java.io.Serializable {
         this.policyName = policyName;
     }
 
+
     /**
      * get 描述
      *
@@ -89,12 +120,13 @@ public class RolePolicy  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 策略类型：0-系统策略，1-用户策略
      *
      * @return
      */
-    public String getType() {
+    public Integer getType() {
         return type;
     }
 
@@ -103,9 +135,10 @@ public class RolePolicy  implements java.io.Serializable {
      *
      * @param type
      */
-    public void setType(String type) {
+    public void setType(Integer type) {
         this.type = type;
     }
+
 
     /**
      * get 京东云策略资源描述
@@ -127,6 +160,37 @@ public class RolePolicy  implements java.io.Serializable {
 
 
     /**
+     * get 授权范围类型：1-全部资源，2-指定资源
+     *
+     * @return
+     */
+    public Integer getScopeType() {
+        return scopeType;
+    }
+
+    /**
+     * set 授权范围类型：1-全部资源，2-指定资源
+     *
+     * @param scopeType
+     */
+    public void setScopeType(Integer scopeType) {
+        this.scopeType = scopeType;
+    }
+
+
+
+    /**
+     * set 策略id
+     *
+     * @param policyId
+     */
+    public RolePolicy policyId(String policyId) {
+        this.policyId = policyId;
+        return this;
+    }
+
+
+    /**
      * set 策略名称
      *
      * @param policyName
@@ -135,6 +199,7 @@ public class RolePolicy  implements java.io.Serializable {
         this.policyName = policyName;
         return this;
     }
+
 
     /**
      * set 描述
@@ -146,15 +211,17 @@ public class RolePolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 策略类型：0-系统策略，1-用户策略
      *
      * @param type
      */
-    public RolePolicy type(String type) {
+    public RolePolicy type(Integer type) {
         this.type = type;
         return this;
     }
+
 
     /**
      * set 京东云策略资源描述
@@ -163,6 +230,17 @@ public class RolePolicy  implements java.io.Serializable {
      */
     public RolePolicy policyJrn(String policyJrn) {
         this.policyJrn = policyJrn;
+        return this;
+    }
+
+
+    /**
+     * set 授权范围类型：1-全部资源，2-指定资源
+     *
+     * @param scopeType
+     */
+    public RolePolicy scopeType(Integer scopeType) {
+        this.scopeType = scopeType;
         return this;
     }
 

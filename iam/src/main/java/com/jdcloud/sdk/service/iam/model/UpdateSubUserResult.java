@@ -40,6 +40,7 @@ public class UpdateSubUserResult extends JdcloudResult implements java.io.Serial
     private CreateSubUserRes subUser;
 
 
+
     /**
      * get subUser
      *
@@ -57,6 +58,7 @@ public class UpdateSubUserResult extends JdcloudResult implements java.io.Serial
     public void setSubUser(CreateSubUserRes subUser) {
         this.subUser = subUser;
     }
+
 
 
     /**

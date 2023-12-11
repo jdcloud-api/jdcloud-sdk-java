@@ -44,6 +44,7 @@ public class DescribeRolePoliciesResult extends JdcloudResult implements java.io
     /**
      * policies
      */
+    
     private List<RolePolicy> policies;
 
 
@@ -65,23 +66,25 @@ public class DescribeRolePoliciesResult extends JdcloudResult implements java.io
         this.total = total;
     }
 
+
     /**
-     * get policies
-     *
-     * @return
-     */
+    * get policies
+    *
+    * @return
+    */
     public List<RolePolicy> getPolicies() {
         return policies;
     }
 
     /**
-     * set policies
-     *
-     * @param policies
-     */
+    * set policies
+    *
+    * @param policies
+    */
     public void setPolicies(List<RolePolicy> policies) {
         this.policies = policies;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class DescribeRolePoliciesResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
-     * set policies
-     *
-     * @param policies
-     */
+    * set policies
+    *
+    * @param policies
+    */
     public DescribeRolePoliciesResult policies(List<RolePolicy> policies) {
         this.policies = policies;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeRolePoliciesResult extends JdcloudResult implements java.io
         }
         this.policies.add(policie);
     }
-
 }

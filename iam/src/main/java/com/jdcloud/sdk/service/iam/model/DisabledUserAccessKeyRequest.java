@@ -28,7 +28,8 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 禁用主账号AccessKey
+ * 禁用主账号AccessKey, &lt;br&gt; 禁用后accessKey的状态变成 0 &lt;b&gt;禁用&lt;/b&gt;
+
  */
 public class DisabledUserAccessKeyRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -49,6 +50,7 @@ public class DisabledUserAccessKeyRequest extends JdcloudRequest implements java
     private String accessKey;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +68,7 @@ public class DisabledUserAccessKeyRequest extends JdcloudRequest implements java
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get accessKey
@@ -86,6 +89,7 @@ public class DisabledUserAccessKeyRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +99,7 @@ public class DisabledUserAccessKeyRequest extends JdcloudRequest implements java
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set accessKey

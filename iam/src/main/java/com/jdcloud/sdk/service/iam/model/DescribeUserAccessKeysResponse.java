@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.iam.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询主账号AccessKey列表
+ * 查询主账号AccessKey列表 &lt;br&gt;
+关于AccessKey的介绍和使用，请参考 &lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/account-management/accesskey-management&quot;&gt;Accesskey管理&lt;/a&gt; &lt;br&gt;
+
  */
 public class DescribeUserAccessKeysResponse extends JdcloudResponse<DescribeUserAccessKeysResult> implements java.io.Serializable {
 

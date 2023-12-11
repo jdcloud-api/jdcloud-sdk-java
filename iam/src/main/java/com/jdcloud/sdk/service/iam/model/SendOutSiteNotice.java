@@ -71,14 +71,15 @@ public class SendOutSiteNotice  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> templateParam;
-
     /**
      * 业务编码(和产品申请)
      * Required:true
      */
     @Required
     private String smsMessageSource;
+
 
 
     /**
@@ -99,6 +100,7 @@ public class SendOutSiteNotice  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 邮件标题
      *
@@ -116,6 +118,7 @@ public class SendOutSiteNotice  implements java.io.Serializable {
     public void setEmailSubject(String emailSubject) {
         this.emailSubject = emailSubject;
     }
+
 
     /**
      * get 邮件内容
@@ -135,6 +138,7 @@ public class SendOutSiteNotice  implements java.io.Serializable {
         this.emailContent = emailContent;
     }
 
+
     /**
      * get 消息类型
      *
@@ -152,6 +156,7 @@ public class SendOutSiteNotice  implements java.io.Serializable {
     public void setNotifyBusinessTypeEnum(String notifyBusinessTypeEnum) {
         this.notifyBusinessTypeEnum = notifyBusinessTypeEnum;
     }
+
 
     /**
      * get 模版code
@@ -171,23 +176,25 @@ public class SendOutSiteNotice  implements java.io.Serializable {
         this.templateId = templateId;
     }
 
+
     /**
-     * get 模版参数
-     *
-     * @return
-     */
+    * get 模版参数
+    *
+    * @return
+    */
     public List<String> getTemplateParam() {
         return templateParam;
     }
 
     /**
-     * set 模版参数
-     *
-     * @param templateParam
-     */
+    * set 模版参数
+    *
+    * @param templateParam
+    */
     public void setTemplateParam(List<String> templateParam) {
         this.templateParam = templateParam;
     }
+
 
     /**
      * get 业务编码(和产品申请)
@@ -208,6 +215,7 @@ public class SendOutSiteNotice  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户pin
      *
@@ -217,6 +225,7 @@ public class SendOutSiteNotice  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 邮件标题
@@ -228,6 +237,7 @@ public class SendOutSiteNotice  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 邮件内容
      *
@@ -237,6 +247,7 @@ public class SendOutSiteNotice  implements java.io.Serializable {
         this.emailContent = emailContent;
         return this;
     }
+
 
     /**
      * set 消息类型
@@ -248,6 +259,7 @@ public class SendOutSiteNotice  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 模版code
      *
@@ -258,15 +270,17 @@ public class SendOutSiteNotice  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 模版参数
-     *
-     * @param templateParam
-     */
+    * set 模版参数
+    *
+    * @param templateParam
+    */
     public SendOutSiteNotice templateParam(List<String> templateParam) {
         this.templateParam = templateParam;
         return this;
     }
+
 
     /**
      * set 业务编码(和产品申请)
@@ -277,6 +291,7 @@ public class SendOutSiteNotice  implements java.io.Serializable {
         this.smsMessageSource = smsMessageSource;
         return this;
     }
+
 
 
     /**
@@ -290,5 +305,4 @@ public class SendOutSiteNotice  implements java.io.Serializable {
         }
         this.templateParam.add(templateParam);
     }
-
 }

@@ -58,6 +58,7 @@ public class ListRoleInfo  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get 角色名称
      *
@@ -75,6 +76,7 @@ public class ListRoleInfo  implements java.io.Serializable {
     public void setRoleName(String roleName) {
         this.roleName = roleName;
     }
+
 
     /**
      * get 角色类型，2-服务相关角色，3-服务角色，4-用户角色
@@ -94,6 +96,7 @@ public class ListRoleInfo  implements java.io.Serializable {
         this.type = type;
     }
 
+
     /**
      * get 角色信任关系策略
      *
@@ -112,6 +115,7 @@ public class ListRoleInfo  implements java.io.Serializable {
         this.assumeRolePolicyDocument = assumeRolePolicyDocument;
     }
 
+
     /**
      * get 描述，0~1000个字符
      *
@@ -129,6 +133,7 @@ public class ListRoleInfo  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 创建角色的时间
@@ -149,6 +154,7 @@ public class ListRoleInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 角色名称
      *
@@ -158,6 +164,7 @@ public class ListRoleInfo  implements java.io.Serializable {
         this.roleName = roleName;
         return this;
     }
+
 
     /**
      * set 角色类型，2-服务相关角色，3-服务角色，4-用户角色
@@ -169,6 +176,7 @@ public class ListRoleInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 角色信任关系策略
      *
@@ -179,6 +187,7 @@ public class ListRoleInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述，0~1000个字符
      *
@@ -188,6 +197,7 @@ public class ListRoleInfo  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 创建角色的时间

@@ -47,6 +47,12 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
      */
     private String email;
 
+    /**
+     * 姓名
+     */
+    private String nickName;
+
+
 
     /**
      * get 描述，0~256个字符
@@ -66,6 +72,7 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 手机号码，区号-手机号
      *
@@ -83,6 +90,7 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
 
     /**
      * get 邮箱
@@ -104,6 +112,26 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
 
 
     /**
+     * get 姓名
+     *
+     * @return
+     */
+    public String getNickName() {
+        return nickName;
+    }
+
+    /**
+     * set 姓名
+     *
+     * @param nickName
+     */
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+
+
+    /**
      * set 描述，0~256个字符
      *
      * @param description
@@ -112,6 +140,7 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 手机号码，区号-手机号
@@ -123,6 +152,7 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 邮箱
      *
@@ -130,6 +160,17 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
      */
     public UpdateSubUserInfo email(String email) {
         this.email = email;
+        return this;
+    }
+
+
+    /**
+     * set 姓名
+     *
+     * @param nickName
+     */
+    public UpdateSubUserInfo nickName(String nickName) {
+        this.nickName = nickName;
         return this;
     }
 

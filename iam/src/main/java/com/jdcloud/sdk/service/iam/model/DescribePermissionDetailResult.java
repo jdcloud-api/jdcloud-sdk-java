@@ -40,6 +40,7 @@ public class DescribePermissionDetailResult extends JdcloudResult implements jav
     private Permission permission;
 
 
+
     /**
      * get 权限信息
      *
@@ -57,6 +58,7 @@ public class DescribePermissionDetailResult extends JdcloudResult implements jav
     public void setPermission(Permission permission) {
         this.permission = permission;
     }
+
 
 
     /**

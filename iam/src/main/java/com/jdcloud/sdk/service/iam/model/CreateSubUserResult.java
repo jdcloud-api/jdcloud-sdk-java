@@ -28,7 +28,9 @@ import com.jdcloud.sdk.service.iam.model.CreateSubUserRes;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建子用户
+ * 创建子用户, &lt;br&gt;
+请访问&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/subuser-management&quot;&gt;子用户管理&lt;/a&gt;了解更多 &lt;br&gt;
+
  */
 public class CreateSubUserResult extends JdcloudResult implements java.io.Serializable {
 
@@ -38,6 +40,7 @@ public class CreateSubUserResult extends JdcloudResult implements java.io.Serial
      * subUser
      */
     private CreateSubUserRes subUser;
+
 
 
     /**
@@ -57,6 +60,7 @@ public class CreateSubUserResult extends JdcloudResult implements java.io.Serial
     public void setSubUser(CreateSubUserRes subUser) {
         this.subUser = subUser;
     }
+
 
 
     /**

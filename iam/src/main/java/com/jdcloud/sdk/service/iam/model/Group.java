@@ -73,6 +73,7 @@ public class Group  implements java.io.Serializable {
     private String updateTime;
 
 
+
     /**
      * get 用户组ID
      *
@@ -90,6 +91,7 @@ public class Group  implements java.io.Serializable {
     public void setGroupId(String groupId) {
         this.groupId = groupId;
     }
+
 
     /**
      * get 用户组名
@@ -109,6 +111,7 @@ public class Group  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 京东云资源标识(jrn)
      *
@@ -126,6 +129,7 @@ public class Group  implements java.io.Serializable {
     public void setJrn(String jrn) {
         this.jrn = jrn;
     }
+
 
     /**
      * get 用户组描述
@@ -145,6 +149,7 @@ public class Group  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 子用户个数
      *
@@ -162,6 +167,7 @@ public class Group  implements java.io.Serializable {
     public void setSubUserSum(Integer subUserSum) {
         this.subUserSum = subUserSum;
     }
+
 
     /**
      * get 绑定策略个数
@@ -181,6 +187,7 @@ public class Group  implements java.io.Serializable {
         this.policySum = policySum;
     }
 
+
     /**
      * get 用户组创建时间
      *
@@ -198,6 +205,7 @@ public class Group  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 用户组更新时间
@@ -218,6 +226,7 @@ public class Group  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户组ID
      *
@@ -227,6 +236,7 @@ public class Group  implements java.io.Serializable {
         this.groupId = groupId;
         return this;
     }
+
 
     /**
      * set 用户组名
@@ -238,6 +248,7 @@ public class Group  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 京东云资源标识(jrn)
      *
@@ -247,6 +258,7 @@ public class Group  implements java.io.Serializable {
         this.jrn = jrn;
         return this;
     }
+
 
     /**
      * set 用户组描述
@@ -258,6 +270,7 @@ public class Group  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子用户个数
      *
@@ -267,6 +280,7 @@ public class Group  implements java.io.Serializable {
         this.subUserSum = subUserSum;
         return this;
     }
+
 
     /**
      * set 绑定策略个数
@@ -278,6 +292,7 @@ public class Group  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户组创建时间
      *
@@ -287,6 +302,7 @@ public class Group  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 用户组更新时间

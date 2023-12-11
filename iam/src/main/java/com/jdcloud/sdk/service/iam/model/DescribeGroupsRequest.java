@@ -54,6 +54,7 @@ public class DescribeGroupsRequest extends JdcloudRequest implements java.io.Ser
     private Integer sort;
 
 
+
     /**
      * get 页码，默认1
      *
@@ -71,6 +72,7 @@ public class DescribeGroupsRequest extends JdcloudRequest implements java.io.Ser
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小，默认50，取值范围[10, 100]
@@ -90,6 +92,7 @@ public class DescribeGroupsRequest extends JdcloudRequest implements java.io.Ser
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 关键字
      *
@@ -107,6 +110,7 @@ public class DescribeGroupsRequest extends JdcloudRequest implements java.io.Ser
     public void setKeyword(String keyword) {
         this.keyword = keyword;
     }
+
 
     /**
      * get 排序规则：0-创建时间顺序排序，1-创建时间倒序排序
@@ -127,6 +131,7 @@ public class DescribeGroupsRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 页码，默认1
      *
@@ -136,6 +141,7 @@ public class DescribeGroupsRequest extends JdcloudRequest implements java.io.Ser
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认50，取值范围[10, 100]
@@ -147,6 +153,7 @@ public class DescribeGroupsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 关键字
      *
@@ -156,6 +163,7 @@ public class DescribeGroupsRequest extends JdcloudRequest implements java.io.Ser
         this.keyword = keyword;
         return this;
     }
+
 
     /**
      * set 排序规则：0-创建时间顺序排序，1-创建时间倒序排序

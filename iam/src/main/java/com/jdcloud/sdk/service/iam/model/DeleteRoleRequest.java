@@ -42,6 +42,7 @@ public class DeleteRoleRequest extends JdcloudRequest implements java.io.Seriali
     private String roleName;
 
 
+
     /**
      * get 角色名称
      *
@@ -59,6 +60,7 @@ public class DeleteRoleRequest extends JdcloudRequest implements java.io.Seriali
     public void setRoleName(String roleName) {
         this.roleName = roleName;
     }
+
 
 
     /**

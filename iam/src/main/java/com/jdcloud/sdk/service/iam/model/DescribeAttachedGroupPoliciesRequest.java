@@ -42,6 +42,7 @@ public class DescribeAttachedGroupPoliciesRequest extends JdcloudRequest impleme
     private String groupName;
 
 
+
     /**
      * get 用户组名称
      *
@@ -59,6 +60,7 @@ public class DescribeAttachedGroupPoliciesRequest extends JdcloudRequest impleme
     public void setGroupName(String groupName) {
         this.groupName = groupName;
     }
+
 
 
     /**

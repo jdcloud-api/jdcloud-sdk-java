@@ -28,7 +28,8 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建主账号AccessKey
+ * 创建主账号AccessKey, &lt;br&gt; 最多可创建5个
+
  */
 public class CreateUserAccessKeyRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -40,6 +41,7 @@ public class CreateUserAccessKeyRequest extends JdcloudRequest implements java.i
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -59,6 +61,7 @@ public class CreateUserAccessKeyRequest extends JdcloudRequest implements java.i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
 
     /**

@@ -25,6 +25,7 @@
 package com.jdcloud.sdk.service.iam.model;
 
 import com.jdcloud.sdk.service.iam.model.PolicyDetail;
+import com.jdcloud.sdk.service.iam.model.PolicyEdition;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -35,13 +36,19 @@ public class DescribePolicyResult extends JdcloudResult implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 策略信息
+     * 权限策略信息
      */
     private PolicyDetail policy;
 
+    /**
+     * 权限策略的默认版本信息
+     */
+    private PolicyEdition defaultPolicyEdition;
+
+
 
     /**
-     * get 策略信息
+     * get 权限策略信息
      *
      * @return
      */
@@ -50,7 +57,7 @@ public class DescribePolicyResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set 策略信息
+     * set 权限策略信息
      *
      * @param policy
      */
@@ -60,12 +67,43 @@ public class DescribePolicyResult extends JdcloudResult implements java.io.Seria
 
 
     /**
-     * set 策略信息
+     * get 权限策略的默认版本信息
+     *
+     * @return
+     */
+    public PolicyEdition getDefaultPolicyEdition() {
+        return defaultPolicyEdition;
+    }
+
+    /**
+     * set 权限策略的默认版本信息
+     *
+     * @param defaultPolicyEdition
+     */
+    public void setDefaultPolicyEdition(PolicyEdition defaultPolicyEdition) {
+        this.defaultPolicyEdition = defaultPolicyEdition;
+    }
+
+
+
+    /**
+     * set 权限策略信息
      *
      * @param policy
      */
     public DescribePolicyResult policy(PolicyDetail policy) {
         this.policy = policy;
+        return this;
+    }
+
+
+    /**
+     * set 权限策略的默认版本信息
+     *
+     * @param defaultPolicyEdition
+     */
+    public DescribePolicyResult defaultPolicyEdition(PolicyEdition defaultPolicyEdition) {
+        this.defaultPolicyEdition = defaultPolicyEdition;
         return this;
     }
 

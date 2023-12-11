@@ -88,6 +88,7 @@ public class UserAttachment  implements java.io.Serializable {
     private String cpTelphone;
 
 
+
     /**
      * get 公司名称
      *
@@ -105,6 +106,7 @@ public class UserAttachment  implements java.io.Serializable {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
 
     /**
      * get 主营行业
@@ -124,6 +126,7 @@ public class UserAttachment  implements java.io.Serializable {
         this.industry = industry;
     }
 
+
     /**
      * get 主营行业子选项
      *
@@ -141,6 +144,7 @@ public class UserAttachment  implements java.io.Serializable {
     public void setSubIndustry(String subIndustry) {
         this.subIndustry = subIndustry;
     }
+
 
     /**
      * get 主营业务
@@ -160,6 +164,7 @@ public class UserAttachment  implements java.io.Serializable {
         this.business = business;
     }
 
+
     /**
      * get 网站
      *
@@ -177,6 +182,7 @@ public class UserAttachment  implements java.io.Serializable {
     public void setWebsite(String website) {
         this.website = website;
     }
+
 
     /**
      * get 国家
@@ -196,6 +202,7 @@ public class UserAttachment  implements java.io.Serializable {
         this.cpState = cpState;
     }
 
+
     /**
      * get 省
      *
@@ -213,6 +220,7 @@ public class UserAttachment  implements java.io.Serializable {
     public void setCpProvince(String cpProvince) {
         this.cpProvince = cpProvince;
     }
+
 
     /**
      * get 市
@@ -232,6 +240,7 @@ public class UserAttachment  implements java.io.Serializable {
         this.cpCity = cpCity;
     }
 
+
     /**
      * get 区县
      *
@@ -250,6 +259,7 @@ public class UserAttachment  implements java.io.Serializable {
         this.cpCountry = cpCountry;
     }
 
+
     /**
      * get 详细地址
      *
@@ -267,6 +277,7 @@ public class UserAttachment  implements java.io.Serializable {
     public void setCpAddress(String cpAddress) {
         this.cpAddress = cpAddress;
     }
+
 
     /**
      * get 联系手机
@@ -287,6 +298,7 @@ public class UserAttachment  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 公司名称
      *
@@ -296,6 +308,7 @@ public class UserAttachment  implements java.io.Serializable {
         this.remark = remark;
         return this;
     }
+
 
     /**
      * set 主营行业
@@ -307,6 +320,7 @@ public class UserAttachment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主营行业子选项
      *
@@ -316,6 +330,7 @@ public class UserAttachment  implements java.io.Serializable {
         this.subIndustry = subIndustry;
         return this;
     }
+
 
     /**
      * set 主营业务
@@ -327,6 +342,7 @@ public class UserAttachment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网站
      *
@@ -336,6 +352,7 @@ public class UserAttachment  implements java.io.Serializable {
         this.website = website;
         return this;
     }
+
 
     /**
      * set 国家
@@ -347,6 +364,7 @@ public class UserAttachment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 省
      *
@@ -356,6 +374,7 @@ public class UserAttachment  implements java.io.Serializable {
         this.cpProvince = cpProvince;
         return this;
     }
+
 
     /**
      * set 市
@@ -367,6 +386,7 @@ public class UserAttachment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 区县
      *
@@ -377,6 +397,7 @@ public class UserAttachment  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 详细地址
      *
@@ -386,6 +407,7 @@ public class UserAttachment  implements java.io.Serializable {
         this.cpAddress = cpAddress;
         return this;
     }
+
 
     /**
      * set 联系手机

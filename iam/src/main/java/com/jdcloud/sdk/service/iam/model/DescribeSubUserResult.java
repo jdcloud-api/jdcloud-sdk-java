@@ -40,6 +40,7 @@ public class DescribeSubUserResult extends JdcloudResult implements java.io.Seri
     private SubUser subUser;
 
 
+
     /**
      * get subUser
      *
@@ -57,6 +58,7 @@ public class DescribeSubUserResult extends JdcloudResult implements java.io.Seri
     public void setSubUser(SubUser subUser) {
         this.subUser = subUser;
     }
+
 
 
     /**

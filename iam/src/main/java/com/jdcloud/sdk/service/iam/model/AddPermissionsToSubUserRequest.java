@@ -57,6 +57,7 @@ public class AddPermissionsToSubUserRequest extends JdcloudRequest implements ja
     private String subUser;
 
 
+
     /**
      * get 权限信息
      *
@@ -75,6 +76,7 @@ public class AddPermissionsToSubUserRequest extends JdcloudRequest implements ja
         this.addPermissionsInfo = addPermissionsInfo;
     }
 
+
     /**
      * get Region ID
      *
@@ -92,6 +94,7 @@ public class AddPermissionsToSubUserRequest extends JdcloudRequest implements ja
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 子用户用户名
@@ -112,6 +115,7 @@ public class AddPermissionsToSubUserRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 权限信息
      *
@@ -122,6 +126,7 @@ public class AddPermissionsToSubUserRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -131,6 +136,7 @@ public class AddPermissionsToSubUserRequest extends JdcloudRequest implements ja
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 子用户用户名

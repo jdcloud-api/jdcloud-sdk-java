@@ -40,6 +40,7 @@ public class DescribeGroupResult extends JdcloudResult implements java.io.Serial
     private GroupDetail group;
 
 
+
     /**
      * get 用户组信息
      *
@@ -57,6 +58,7 @@ public class DescribeGroupResult extends JdcloudResult implements java.io.Serial
     public void setGroup(GroupDetail group) {
         this.group = group;
     }
+
 
 
     /**

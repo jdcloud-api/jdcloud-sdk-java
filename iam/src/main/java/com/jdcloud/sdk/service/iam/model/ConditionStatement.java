@@ -37,37 +37,40 @@ public class ConditionStatement  implements java.io.Serializable {
     /**
      * ConditionMapping列表，ConditionStatement 之间是“或”关系，同一个ConditionStatement下ConditionMapping是“且”关系，同一个ConditionMapping下多个value是“或”关系
      */
+    
     private List<ConditionMappingVo> conditionMappings;
 
 
     /**
-     * get ConditionMapping列表，ConditionStatement 之间是“或”关系，同一个ConditionStatement下ConditionMapping是“且”关系，同一个ConditionMapping下多个value是“或”关系
-     *
-     * @return
-     */
+    * get ConditionMapping列表，ConditionStatement 之间是“或”关系，同一个ConditionStatement下ConditionMapping是“且”关系，同一个ConditionMapping下多个value是“或”关系
+    *
+    * @return
+    */
     public List<ConditionMappingVo> getConditionMappings() {
         return conditionMappings;
     }
 
     /**
-     * set ConditionMapping列表，ConditionStatement 之间是“或”关系，同一个ConditionStatement下ConditionMapping是“且”关系，同一个ConditionMapping下多个value是“或”关系
-     *
-     * @param conditionMappings
-     */
+    * set ConditionMapping列表，ConditionStatement 之间是“或”关系，同一个ConditionStatement下ConditionMapping是“且”关系，同一个ConditionMapping下多个value是“或”关系
+    *
+    * @param conditionMappings
+    */
     public void setConditionMappings(List<ConditionMappingVo> conditionMappings) {
         this.conditionMappings = conditionMappings;
     }
 
 
+
     /**
-     * set ConditionMapping列表，ConditionStatement 之间是“或”关系，同一个ConditionStatement下ConditionMapping是“且”关系，同一个ConditionMapping下多个value是“或”关系
-     *
-     * @param conditionMappings
-     */
+    * set ConditionMapping列表，ConditionStatement 之间是“或”关系，同一个ConditionStatement下ConditionMapping是“且”关系，同一个ConditionMapping下多个value是“或”关系
+    *
+    * @param conditionMappings
+    */
     public ConditionStatement conditionMappings(List<ConditionMappingVo> conditionMappings) {
         this.conditionMappings = conditionMappings;
         return this;
     }
+
 
 
     /**
@@ -81,5 +84,4 @@ public class ConditionStatement  implements java.io.Serializable {
         }
         this.conditionMappings.add(conditionMapping);
     }
-
 }

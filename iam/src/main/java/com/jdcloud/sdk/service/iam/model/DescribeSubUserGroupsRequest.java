@@ -42,6 +42,7 @@ public class DescribeSubUserGroupsRequest extends JdcloudRequest implements java
     private String subUser;
 
 
+
     /**
      * get 子用户名
      *
@@ -59,6 +60,7 @@ public class DescribeSubUserGroupsRequest extends JdcloudRequest implements java
     public void setSubUser(String subUser) {
         this.subUser = subUser;
     }
+
 
 
     /**

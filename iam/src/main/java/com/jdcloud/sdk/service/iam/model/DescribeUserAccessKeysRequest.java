@@ -28,7 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询主账号AccessKey列表
+ * 查询主账号AccessKey列表 &lt;br&gt;
+关于AccessKey的介绍和使用，请参考 &lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/account-management/accesskey-management&quot;&gt;Accesskey管理&lt;/a&gt; &lt;br&gt;
+
  */
 public class DescribeUserAccessKeysRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -40,6 +42,7 @@ public class DescribeUserAccessKeysRequest extends JdcloudRequest implements jav
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -59,6 +62,7 @@ public class DescribeUserAccessKeysRequest extends JdcloudRequest implements jav
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
 
     /**

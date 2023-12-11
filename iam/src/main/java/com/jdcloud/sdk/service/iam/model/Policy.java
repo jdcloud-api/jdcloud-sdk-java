@@ -55,7 +55,7 @@ public class Policy  implements java.io.Serializable {
     /**
      * 策略类型：0-系统策略，1-用户策略
      */
-    private String policyType;
+    private Integer policyType;
 
     /**
      * 策略版本号
@@ -63,9 +63,9 @@ public class Policy  implements java.io.Serializable {
     private String version;
 
     /**
-     * 默认策略文档版本
+     * 当前默认策略文档版本
      */
-    private Integer defaultEdition;
+    private String currentDefaultEdition;
 
     /**
      * 策略创建时间
@@ -76,6 +76,12 @@ public class Policy  implements java.io.Serializable {
      * 策略更新时间
      */
     private String updateTime;
+
+    /**
+     * 授权范围类型：1-全部资源，2-指定资源
+     */
+    private Integer scopeType;
+
 
 
     /**
@@ -96,6 +102,7 @@ public class Policy  implements java.io.Serializable {
         this.policyId = policyId;
     }
 
+
     /**
      * get 策略名称
      *
@@ -113,6 +120,7 @@ public class Policy  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 京东云资源标识(jrn)
@@ -132,6 +140,7 @@ public class Policy  implements java.io.Serializable {
         this.jrn = jrn;
     }
 
+
     /**
      * get 描述
      *
@@ -150,12 +159,13 @@ public class Policy  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 策略类型：0-系统策略，1-用户策略
      *
      * @return
      */
-    public String getPolicyType() {
+    public Integer getPolicyType() {
         return policyType;
     }
 
@@ -164,9 +174,10 @@ public class Policy  implements java.io.Serializable {
      *
      * @param policyType
      */
-    public void setPolicyType(String policyType) {
+    public void setPolicyType(Integer policyType) {
         this.policyType = policyType;
     }
+
 
     /**
      * get 策略版本号
@@ -186,23 +197,25 @@ public class Policy  implements java.io.Serializable {
         this.version = version;
     }
 
+
     /**
-     * get 默认策略文档版本
+     * get 当前默认策略文档版本
      *
      * @return
      */
-    public Integer getDefaultEdition() {
-        return defaultEdition;
+    public String getCurrentDefaultEdition() {
+        return currentDefaultEdition;
     }
 
     /**
-     * set 默认策略文档版本
+     * set 当前默认策略文档版本
      *
-     * @param defaultEdition
+     * @param currentDefaultEdition
      */
-    public void setDefaultEdition(Integer defaultEdition) {
-        this.defaultEdition = defaultEdition;
+    public void setCurrentDefaultEdition(String currentDefaultEdition) {
+        this.currentDefaultEdition = currentDefaultEdition;
     }
+
 
     /**
      * get 策略创建时间
@@ -221,6 +234,7 @@ public class Policy  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 策略更新时间
@@ -242,6 +256,26 @@ public class Policy  implements java.io.Serializable {
 
 
     /**
+     * get 授权范围类型：1-全部资源，2-指定资源
+     *
+     * @return
+     */
+    public Integer getScopeType() {
+        return scopeType;
+    }
+
+    /**
+     * set 授权范围类型：1-全部资源，2-指定资源
+     *
+     * @param scopeType
+     */
+    public void setScopeType(Integer scopeType) {
+        this.scopeType = scopeType;
+    }
+
+
+
+    /**
      * set 策略id
      *
      * @param policyId
@@ -250,6 +284,7 @@ public class Policy  implements java.io.Serializable {
         this.policyId = policyId;
         return this;
     }
+
 
     /**
      * set 策略名称
@@ -261,6 +296,7 @@ public class Policy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 京东云资源标识(jrn)
      *
@@ -270,6 +306,7 @@ public class Policy  implements java.io.Serializable {
         this.jrn = jrn;
         return this;
     }
+
 
     /**
      * set 描述
@@ -281,15 +318,17 @@ public class Policy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 策略类型：0-系统策略，1-用户策略
      *
      * @param policyType
      */
-    public Policy policyType(String policyType) {
+    public Policy policyType(Integer policyType) {
         this.policyType = policyType;
         return this;
     }
+
 
     /**
      * set 策略版本号
@@ -301,15 +340,17 @@ public class Policy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 默认策略文档版本
+     * set 当前默认策略文档版本
      *
-     * @param defaultEdition
+     * @param currentDefaultEdition
      */
-    public Policy defaultEdition(Integer defaultEdition) {
-        this.defaultEdition = defaultEdition;
+    public Policy currentDefaultEdition(String currentDefaultEdition) {
+        this.currentDefaultEdition = currentDefaultEdition;
         return this;
     }
+
 
     /**
      * set 策略创建时间
@@ -321,6 +362,7 @@ public class Policy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 策略更新时间
      *
@@ -328,6 +370,17 @@ public class Policy  implements java.io.Serializable {
      */
     public Policy updateTime(String updateTime) {
         this.updateTime = updateTime;
+        return this;
+    }
+
+
+    /**
+     * set 授权范围类型：1-全部资源，2-指定资源
+     *
+     * @param scopeType
+     */
+    public Policy scopeType(Integer scopeType) {
+        this.scopeType = scopeType;
         return this;
     }
 

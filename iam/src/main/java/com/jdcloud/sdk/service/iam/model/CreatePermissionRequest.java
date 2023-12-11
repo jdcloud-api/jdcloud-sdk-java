@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.iam.model.CreatePermissionInfo;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建策略
+ * 创建策略 &lt;br&gt;
+关于策略的详细介绍，可以查询&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/policy-overview&quot;&gt;策略概览&lt;/a&gt; &lt;br&gt;
+
  */
 public class CreatePermissionRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -50,6 +52,7 @@ public class CreatePermissionRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
      * get 权限信息
      *
@@ -67,6 +70,7 @@ public class CreatePermissionRequest extends JdcloudRequest implements java.io.S
     public void setCreatePermissionInfo(CreatePermissionInfo createPermissionInfo) {
         this.createPermissionInfo = createPermissionInfo;
     }
+
 
     /**
      * get Region ID
@@ -87,6 +91,7 @@ public class CreatePermissionRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 权限信息
      *
@@ -96,6 +101,7 @@ public class CreatePermissionRequest extends JdcloudRequest implements java.io.S
         this.createPermissionInfo = createPermissionInfo;
         return this;
     }
+
 
     /**
      * set Region ID

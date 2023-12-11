@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.iam.model.DisableSubUserAccessKeyResponse;
 
 /**
- * 禁用子用户的AccessKey
+ * 禁用子用户的AccessKey &lt;br&gt;, 禁用后accessKey 的状态变成 0 &lt;b&gt;禁用&lt;/b&gt;
+
  */
 class DisableSubUserAccessKeyExecutor extends JdcloudExecutor {
 

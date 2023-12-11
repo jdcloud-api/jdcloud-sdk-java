@@ -42,6 +42,7 @@ public class DeleteGroupRequest extends JdcloudRequest implements java.io.Serial
     private String groupName;
 
 
+
     /**
      * get 用户组名称
      *
@@ -59,6 +60,7 @@ public class DeleteGroupRequest extends JdcloudRequest implements java.io.Serial
     public void setGroupName(String groupName) {
         this.groupName = groupName;
     }
+
 
 
     /**

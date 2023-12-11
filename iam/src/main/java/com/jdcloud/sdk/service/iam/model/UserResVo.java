@@ -83,6 +83,7 @@ public class UserResVo  implements java.io.Serializable {
     private UserAttachment attachment;
 
 
+
     /**
      * get 用户pin
      *
@@ -100,6 +101,7 @@ public class UserResVo  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 用户手机号
@@ -119,6 +121,7 @@ public class UserResVo  implements java.io.Serializable {
         this.cscPhone = cscPhone;
     }
 
+
     /**
      * get 用户邮箱
      *
@@ -136,6 +139,7 @@ public class UserResVo  implements java.io.Serializable {
     public void setCscEmail(String cscEmail) {
         this.cscEmail = cscEmail;
     }
+
 
     /**
      * get 创建时间
@@ -155,6 +159,7 @@ public class UserResVo  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 用户类型
      *
@@ -172,6 +177,7 @@ public class UserResVo  implements java.io.Serializable {
     public void setUserType(Integer userType) {
         this.userType = userType;
     }
+
 
     /**
      * get 公司名
@@ -191,6 +197,7 @@ public class UserResVo  implements java.io.Serializable {
         this.companyName = companyName;
     }
 
+
     /**
      * get 姓名
      *
@@ -208,6 +215,7 @@ public class UserResVo  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 欠费时间
@@ -227,6 +235,7 @@ public class UserResVo  implements java.io.Serializable {
         this.arrearageTime = arrearageTime;
     }
 
+
     /**
      * get 用户标签：
      *
@@ -244,6 +253,7 @@ public class UserResVo  implements java.io.Serializable {
     public void setUserTagObject(Flags userTagObject) {
         this.userTagObject = userTagObject;
     }
+
 
     /**
      * get 用户标签：
@@ -264,6 +274,7 @@ public class UserResVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户pin
      *
@@ -273,6 +284,7 @@ public class UserResVo  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 用户手机号
@@ -284,6 +296,7 @@ public class UserResVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户邮箱
      *
@@ -293,6 +306,7 @@ public class UserResVo  implements java.io.Serializable {
         this.cscEmail = cscEmail;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -304,6 +318,7 @@ public class UserResVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户类型
      *
@@ -313,6 +328,7 @@ public class UserResVo  implements java.io.Serializable {
         this.userType = userType;
         return this;
     }
+
 
     /**
      * set 公司名
@@ -324,6 +340,7 @@ public class UserResVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 姓名
      *
@@ -333,6 +350,7 @@ public class UserResVo  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 欠费时间
@@ -344,6 +362,7 @@ public class UserResVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户标签：
      *
@@ -353,6 +372,7 @@ public class UserResVo  implements java.io.Serializable {
         this.userTagObject = userTagObject;
         return this;
     }
+
 
     /**
      * set 用户标签：

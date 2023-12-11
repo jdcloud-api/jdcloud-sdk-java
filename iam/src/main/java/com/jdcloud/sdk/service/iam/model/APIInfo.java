@@ -68,6 +68,7 @@ public class APIInfo  implements java.io.Serializable {
     private String terResourceType;
 
 
+
     /**
      * get 访问级别
      *
@@ -85,6 +86,7 @@ public class APIInfo  implements java.io.Serializable {
     public void setAccessLevel(Integer accessLevel) {
         this.accessLevel = accessLevel;
     }
+
 
     /**
      * get action name
@@ -104,6 +106,7 @@ public class APIInfo  implements java.io.Serializable {
         this.actionName = actionName;
     }
 
+
     /**
      * get action type
      *
@@ -121,6 +124,7 @@ public class APIInfo  implements java.io.Serializable {
     public void setActionType(String actionType) {
         this.actionType = actionType;
     }
+
 
     /**
      * get 资源
@@ -140,6 +144,7 @@ public class APIInfo  implements java.io.Serializable {
         this.resource = resource;
     }
 
+
     /**
      * get 资源类型
      *
@@ -158,6 +163,7 @@ public class APIInfo  implements java.io.Serializable {
         this.resourceType = resourceType;
     }
 
+
     /**
      * get 子资源类型
      *
@@ -175,6 +181,7 @@ public class APIInfo  implements java.io.Serializable {
     public void setSubResourceType(String subResourceType) {
         this.subResourceType = subResourceType;
     }
+
 
     /**
      * get 三级资源类型
@@ -195,6 +202,7 @@ public class APIInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 访问级别
      *
@@ -204,6 +212,7 @@ public class APIInfo  implements java.io.Serializable {
         this.accessLevel = accessLevel;
         return this;
     }
+
 
     /**
      * set action name
@@ -215,6 +224,7 @@ public class APIInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set action type
      *
@@ -224,6 +234,7 @@ public class APIInfo  implements java.io.Serializable {
         this.actionType = actionType;
         return this;
     }
+
 
     /**
      * set 资源
@@ -235,6 +246,7 @@ public class APIInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源类型
      *
@@ -245,6 +257,7 @@ public class APIInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子资源类型
      *
@@ -254,6 +267,7 @@ public class APIInfo  implements java.io.Serializable {
         this.subResourceType = subResourceType;
         return this;
     }
+
 
     /**
      * set 三级资源类型

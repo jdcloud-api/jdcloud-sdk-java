@@ -33,6 +33,11 @@ public class SubUser  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 用户pin
+     */
+    private String pin;
+
+    /**
      * 用户名
      */
     private String name;
@@ -67,6 +72,31 @@ public class SubUser  implements java.io.Serializable {
      */
     private String updateTime;
 
+    /**
+     * 姓名
+     */
+    private String nickName;
+
+
+
+    /**
+     * get 用户pin
+     *
+     * @return
+     */
+    public String getPin() {
+        return pin;
+    }
+
+    /**
+     * set 用户pin
+     *
+     * @param pin
+     */
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
+
 
     /**
      * get 用户名
@@ -86,6 +116,7 @@ public class SubUser  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 手机号码
      *
@@ -103,6 +134,7 @@ public class SubUser  implements java.io.Serializable {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
 
     /**
      * get 邮箱
@@ -122,6 +154,7 @@ public class SubUser  implements java.io.Serializable {
         this.email = email;
     }
 
+
     /**
      * get 描述信息
      *
@@ -139,6 +172,7 @@ public class SubUser  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 主账号
@@ -158,6 +192,7 @@ public class SubUser  implements java.io.Serializable {
         this.account = account;
     }
 
+
     /**
      * get 用户创建时间
      *
@@ -175,6 +210,7 @@ public class SubUser  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 用户更新时间
@@ -196,6 +232,37 @@ public class SubUser  implements java.io.Serializable {
 
 
     /**
+     * get 姓名
+     *
+     * @return
+     */
+    public String getNickName() {
+        return nickName;
+    }
+
+    /**
+     * set 姓名
+     *
+     * @param nickName
+     */
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+
+
+    /**
+     * set 用户pin
+     *
+     * @param pin
+     */
+    public SubUser pin(String pin) {
+        this.pin = pin;
+        return this;
+    }
+
+
+    /**
      * set 用户名
      *
      * @param name
@@ -204,6 +271,7 @@ public class SubUser  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 手机号码
@@ -215,6 +283,7 @@ public class SubUser  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 邮箱
      *
@@ -224,6 +293,7 @@ public class SubUser  implements java.io.Serializable {
         this.email = email;
         return this;
     }
+
 
     /**
      * set 描述信息
@@ -235,6 +305,7 @@ public class SubUser  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主账号
      *
@@ -244,6 +315,7 @@ public class SubUser  implements java.io.Serializable {
         this.account = account;
         return this;
     }
+
 
     /**
      * set 用户创建时间
@@ -255,6 +327,7 @@ public class SubUser  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户更新时间
      *
@@ -262,6 +335,17 @@ public class SubUser  implements java.io.Serializable {
      */
     public SubUser updateTime(String updateTime) {
         this.updateTime = updateTime;
+        return this;
+    }
+
+
+    /**
+     * set 姓名
+     *
+     * @param nickName
+     */
+    public SubUser nickName(String nickName) {
+        this.nickName = nickName;
         return this;
     }
 

@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.iam.model.DeleteUserAccessKeyResponse;
 
 /**
- * 删除AccessKey
+ * 删除主账号AccessKey, &lt;br&gt;
+
  */
 class DeleteUserAccessKeyExecutor extends JdcloudExecutor {
 
