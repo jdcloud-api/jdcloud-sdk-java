@@ -42,11 +42,22 @@ public class AttachGroupPolicyRequest extends JdcloudRequest implements java.io.
     private String policyName;
 
     /**
+     * 资源组id
+     */
+    private String scopeId;
+
+    /**
+     * 允许添加策略绑定：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     */
+    private String allowAddPolicy;
+
+    /**
      * 用户组名称
      * Required:true
      */
     @Required
     private String groupName;
+
 
 
     /**
@@ -67,6 +78,45 @@ public class AttachGroupPolicyRequest extends JdcloudRequest implements java.io.
         this.policyName = policyName;
     }
 
+
+    /**
+     * get 资源组id
+     *
+     * @return
+     */
+    public String getScopeId() {
+        return scopeId;
+    }
+
+    /**
+     * set 资源组id
+     *
+     * @param scopeId
+     */
+    public void setScopeId(String scopeId) {
+        this.scopeId = scopeId;
+    }
+
+
+    /**
+     * get 允许添加策略绑定：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     *
+     * @return
+     */
+    public String getAllowAddPolicy() {
+        return allowAddPolicy;
+    }
+
+    /**
+     * set 允许添加策略绑定：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     *
+     * @param allowAddPolicy
+     */
+    public void setAllowAddPolicy(String allowAddPolicy) {
+        this.allowAddPolicy = allowAddPolicy;
+    }
+
+
     /**
      * get 用户组名称
      *
@@ -86,6 +136,7 @@ public class AttachGroupPolicyRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 策略名称
      *
@@ -95,6 +146,29 @@ public class AttachGroupPolicyRequest extends JdcloudRequest implements java.io.
         this.policyName = policyName;
         return this;
     }
+
+
+    /**
+     * set 资源组id
+     *
+     * @param scopeId
+     */
+    public AttachGroupPolicyRequest scopeId(String scopeId) {
+        this.scopeId = scopeId;
+        return this;
+    }
+
+
+    /**
+     * set 允许添加策略绑定：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     *
+     * @param allowAddPolicy
+     */
+    public AttachGroupPolicyRequest allowAddPolicy(String allowAddPolicy) {
+        this.allowAddPolicy = allowAddPolicy;
+        return this;
+    }
+
 
     /**
      * set 用户组名称

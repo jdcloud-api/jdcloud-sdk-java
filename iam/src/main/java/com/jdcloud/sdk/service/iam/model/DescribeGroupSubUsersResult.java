@@ -44,6 +44,7 @@ public class DescribeGroupSubUsersResult extends JdcloudResult implements java.i
     /**
      * subUsers
      */
+    
     private List<SubUserInfo> subUsers;
 
 
@@ -65,23 +66,25 @@ public class DescribeGroupSubUsersResult extends JdcloudResult implements java.i
         this.total = total;
     }
 
+
     /**
-     * get subUsers
-     *
-     * @return
-     */
+    * get subUsers
+    *
+    * @return
+    */
     public List<SubUserInfo> getSubUsers() {
         return subUsers;
     }
 
     /**
-     * set subUsers
-     *
-     * @param subUsers
-     */
+    * set subUsers
+    *
+    * @param subUsers
+    */
     public void setSubUsers(List<SubUserInfo> subUsers) {
         this.subUsers = subUsers;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class DescribeGroupSubUsersResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
-     * set subUsers
-     *
-     * @param subUsers
-     */
+    * set subUsers
+    *
+    * @param subUsers
+    */
     public DescribeGroupSubUsersResult subUsers(List<SubUserInfo> subUsers) {
         this.subUsers = subUsers;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeGroupSubUsersResult extends JdcloudResult implements java.i
         }
         this.subUsers.add(subUser);
     }
-
 }

@@ -42,6 +42,7 @@ public class DescribePolicyRequest extends JdcloudRequest implements java.io.Ser
     private String policyName;
 
 
+
     /**
      * get 策略名称
      *
@@ -59,6 +60,7 @@ public class DescribePolicyRequest extends JdcloudRequest implements java.io.Ser
     public void setPolicyName(String policyName) {
         this.policyName = policyName;
     }
+
 
 
     /**

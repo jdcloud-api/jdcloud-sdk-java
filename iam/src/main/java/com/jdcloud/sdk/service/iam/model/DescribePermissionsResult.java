@@ -44,6 +44,7 @@ public class DescribePermissionsResult extends JdcloudResult implements java.io.
     /**
      * permissions
      */
+    
     private List<Permission> permissions;
 
 
@@ -65,23 +66,25 @@ public class DescribePermissionsResult extends JdcloudResult implements java.io.
         this.total = total;
     }
 
+
     /**
-     * get permissions
-     *
-     * @return
-     */
+    * get permissions
+    *
+    * @return
+    */
     public List<Permission> getPermissions() {
         return permissions;
     }
 
     /**
-     * set permissions
-     *
-     * @param permissions
-     */
+    * set permissions
+    *
+    * @param permissions
+    */
     public void setPermissions(List<Permission> permissions) {
         this.permissions = permissions;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class DescribePermissionsResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
-     * set permissions
-     *
-     * @param permissions
-     */
+    * set permissions
+    *
+    * @param permissions
+    */
     public DescribePermissionsResult permissions(List<Permission> permissions) {
         this.permissions = permissions;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribePermissionsResult extends JdcloudResult implements java.io.
         }
         this.permissions.add(permission);
     }
-
 }

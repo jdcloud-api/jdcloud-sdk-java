@@ -56,6 +56,7 @@ public class RemovePermissionOfSubUserRequest extends JdcloudRequest implements 
     private String subUser;
 
 
+
     /**
      * get Region ID
      *
@@ -74,6 +75,7 @@ public class RemovePermissionOfSubUserRequest extends JdcloudRequest implements 
         this.regionId = regionId;
     }
 
+
     /**
      * get 权限id
      *
@@ -91,6 +93,7 @@ public class RemovePermissionOfSubUserRequest extends JdcloudRequest implements 
     public void setPermissionId(Integer permissionId) {
         this.permissionId = permissionId;
     }
+
 
     /**
      * get 子用户用户名
@@ -111,6 +114,7 @@ public class RemovePermissionOfSubUserRequest extends JdcloudRequest implements 
     }
 
 
+
     /**
      * set Region ID
      *
@@ -121,6 +125,7 @@ public class RemovePermissionOfSubUserRequest extends JdcloudRequest implements 
         return this;
     }
 
+
     /**
      * set 权限id
      *
@@ -130,6 +135,7 @@ public class RemovePermissionOfSubUserRequest extends JdcloudRequest implements 
         this.permissionId = permissionId;
         return this;
     }
+
 
     /**
      * set 子用户用户名

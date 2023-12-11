@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.iam.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除AccessKey
+ * 删除主账号AccessKey, &lt;br&gt;
+
  */
 public class DeleteUserAccessKeyResponse extends JdcloudResponse<DeleteUserAccessKeyResult> implements java.io.Serializable {
 

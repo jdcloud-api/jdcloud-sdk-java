@@ -41,6 +41,7 @@ public class UpdatePolicyDescriptionInfo  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get 描述，0~256个字符
      *
@@ -58,6 +59,7 @@ public class UpdatePolicyDescriptionInfo  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
 
     /**

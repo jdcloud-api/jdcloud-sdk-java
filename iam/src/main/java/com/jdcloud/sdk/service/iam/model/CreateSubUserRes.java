@@ -48,6 +48,11 @@ public class CreateSubUserRes  implements java.io.Serializable {
     private String email;
 
     /**
+     * 手机号码
+     */
+    private String phone;
+
+    /**
      * accessKey
      */
     private String accessKey;
@@ -66,6 +71,12 @@ public class CreateSubUserRes  implements java.io.Serializable {
      * 更新时间
      */
     private String updateTime;
+
+    /**
+     * 姓名
+     */
+    private String nickName;
+
 
 
     /**
@@ -86,6 +97,7 @@ public class CreateSubUserRes  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 密码
      *
@@ -103,6 +115,7 @@ public class CreateSubUserRes  implements java.io.Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
 
     /**
      * get 邮箱
@@ -122,6 +135,26 @@ public class CreateSubUserRes  implements java.io.Serializable {
         this.email = email;
     }
 
+
+    /**
+     * get 手机号码
+     *
+     * @return
+     */
+    public String getPhone() {
+        return phone;
+    }
+
+    /**
+     * set 手机号码
+     *
+     * @param phone
+     */
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+
     /**
      * get accessKey
      *
@@ -139,6 +172,7 @@ public class CreateSubUserRes  implements java.io.Serializable {
     public void setAccessKey(String accessKey) {
         this.accessKey = accessKey;
     }
+
 
     /**
      * get AccessKey secret
@@ -158,6 +192,7 @@ public class CreateSubUserRes  implements java.io.Serializable {
         this.secretAccessKey = secretAccessKey;
     }
 
+
     /**
      * get 创建时间
      *
@@ -175,6 +210,7 @@ public class CreateSubUserRes  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 更新时间
@@ -196,6 +232,26 @@ public class CreateSubUserRes  implements java.io.Serializable {
 
 
     /**
+     * get 姓名
+     *
+     * @return
+     */
+    public String getNickName() {
+        return nickName;
+    }
+
+    /**
+     * set 姓名
+     *
+     * @param nickName
+     */
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+
+
+    /**
      * set 用户名
      *
      * @param name
@@ -204,6 +260,7 @@ public class CreateSubUserRes  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 密码
@@ -215,6 +272,7 @@ public class CreateSubUserRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 邮箱
      *
@@ -224,6 +282,18 @@ public class CreateSubUserRes  implements java.io.Serializable {
         this.email = email;
         return this;
     }
+
+
+    /**
+     * set 手机号码
+     *
+     * @param phone
+     */
+    public CreateSubUserRes phone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+
 
     /**
      * set accessKey
@@ -235,6 +305,7 @@ public class CreateSubUserRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set AccessKey secret
      *
@@ -244,6 +315,7 @@ public class CreateSubUserRes  implements java.io.Serializable {
         this.secretAccessKey = secretAccessKey;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -255,6 +327,7 @@ public class CreateSubUserRes  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 更新时间
      *
@@ -262,6 +335,17 @@ public class CreateSubUserRes  implements java.io.Serializable {
      */
     public CreateSubUserRes updateTime(String updateTime) {
         this.updateTime = updateTime;
+        return this;
+    }
+
+
+    /**
+     * set 姓名
+     *
+     * @param nickName
+     */
+    public CreateSubUserRes nickName(String nickName) {
+        this.nickName = nickName;
         return this;
     }
 

@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.iam.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建用户组
+ * 创建用户组, &lt;br&gt;
+可访问&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/group-management&quot;&gt;用户组管理&lt;/a&gt;了解更多&lt;br&gt;
+
  */
 public class CreateGroupResponse extends JdcloudResponse<CreateGroupResult> implements java.io.Serializable {
 

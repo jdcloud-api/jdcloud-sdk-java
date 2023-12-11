@@ -49,6 +49,7 @@ public class DescribePermissionDetailRequest extends JdcloudRequest implements j
     private Integer permissionId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DescribePermissionDetailRequest extends JdcloudRequest implements j
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 权限id
@@ -86,6 +88,7 @@ public class DescribePermissionDetailRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DescribePermissionDetailRequest extends JdcloudRequest implements j
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 权限id

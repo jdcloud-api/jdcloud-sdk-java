@@ -53,6 +53,7 @@ public class CreatePolicyInfo  implements java.io.Serializable {
     private String content;
 
 
+
     /**
      * get 策略名，支持4~64位的字母，数字以及-和_, 以字母开头
      *
@@ -71,6 +72,7 @@ public class CreatePolicyInfo  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 描述，0~256个字符
      *
@@ -88,6 +90,7 @@ public class CreatePolicyInfo  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 策略文档，最多6144个字符
@@ -108,6 +111,7 @@ public class CreatePolicyInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 策略名，支持4~64位的字母，数字以及-和_, 以字母开头
      *
@@ -118,6 +122,7 @@ public class CreatePolicyInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述，0~256个字符
      *
@@ -127,6 +132,7 @@ public class CreatePolicyInfo  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 策略文档，最多6144个字符

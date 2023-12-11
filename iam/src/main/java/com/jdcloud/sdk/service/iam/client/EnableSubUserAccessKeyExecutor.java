@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.iam.model.EnableSubUserAccessKeyResponse;
 
 /**
- * 启用子用户AccessKey
+ * 启用子用户AccessKey &lt;br&gt;, 启用后accessKey 的状态变成 1 &lt;b&gt;启用&lt;/b&gt;
+
  */
 class EnableSubUserAccessKeyExecutor extends JdcloudExecutor {
 

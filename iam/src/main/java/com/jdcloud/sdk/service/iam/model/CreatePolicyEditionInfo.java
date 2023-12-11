@@ -34,22 +34,30 @@ public class CreatePolicyEditionInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 策略文档，最多6144个字符
+     * 权限策略文档，最多6144个字符
      * Required:true
      */
     @Required
     private String policyDocument;
 
     /**
-     * 是否设置当前策略文档为默认版本
-     * Required:true
+     * 是否设置当前权限策略文档为默认权限策略，默认值为false
      */
-    @Required
     private Boolean setAsDefault;
+
+    /**
+     * 权限策略版本自动化轮转机制，可以删除历史权限策略版本。
+  ·None：关闭轮转机制
+  ·DeleteOldestNonDefaultVersionWhenLimitExceeded：当权限策略版本数量超限时，删除最早且非活跃的版本
+默认值为None
+
+     */
+    private String rotateStrategy;
+
 
 
     /**
-     * get 策略文档，最多6144个字符
+     * get 权限策略文档，最多6144个字符
      *
      * @return
      */
@@ -58,7 +66,7 @@ public class CreatePolicyEditionInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 策略文档，最多6144个字符
+     * set 权限策略文档，最多6144个字符
      *
      * @param policyDocument
      */
@@ -66,8 +74,9 @@ public class CreatePolicyEditionInfo  implements java.io.Serializable {
         this.policyDocument = policyDocument;
     }
 
+
     /**
-     * get 是否设置当前策略文档为默认版本
+     * get 是否设置当前权限策略文档为默认权限策略，默认值为false
      *
      * @return
      */
@@ -76,7 +85,7 @@ public class CreatePolicyEditionInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 是否设置当前策略文档为默认版本
+     * set 是否设置当前权限策略文档为默认权限策略，默认值为false
      *
      * @param setAsDefault
      */
@@ -86,7 +95,35 @@ public class CreatePolicyEditionInfo  implements java.io.Serializable {
 
 
     /**
-     * set 策略文档，最多6144个字符
+     * get 权限策略版本自动化轮转机制，可以删除历史权限策略版本。
+  ·None：关闭轮转机制
+  ·DeleteOldestNonDefaultVersionWhenLimitExceeded：当权限策略版本数量超限时，删除最早且非活跃的版本
+默认值为None
+
+     *
+     * @return
+     */
+    public String getRotateStrategy() {
+        return rotateStrategy;
+    }
+
+    /**
+     * set 权限策略版本自动化轮转机制，可以删除历史权限策略版本。
+  ·None：关闭轮转机制
+  ·DeleteOldestNonDefaultVersionWhenLimitExceeded：当权限策略版本数量超限时，删除最早且非活跃的版本
+默认值为None
+
+     *
+     * @param rotateStrategy
+     */
+    public void setRotateStrategy(String rotateStrategy) {
+        this.rotateStrategy = rotateStrategy;
+    }
+
+
+
+    /**
+     * set 权限策略文档，最多6144个字符
      *
      * @param policyDocument
      */
@@ -95,13 +132,29 @@ public class CreatePolicyEditionInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 是否设置当前策略文档为默认版本
+     * set 是否设置当前权限策略文档为默认权限策略，默认值为false
      *
      * @param setAsDefault
      */
     public CreatePolicyEditionInfo setAsDefault(Boolean setAsDefault) {
         this.setAsDefault = setAsDefault;
+        return this;
+    }
+
+
+    /**
+     * set 权限策略版本自动化轮转机制，可以删除历史权限策略版本。
+  ·None：关闭轮转机制
+  ·DeleteOldestNonDefaultVersionWhenLimitExceeded：当权限策略版本数量超限时，删除最早且非活跃的版本
+默认值为None
+
+     *
+     * @param rotateStrategy
+     */
+    public CreatePolicyEditionInfo rotateStrategy(String rotateStrategy) {
+        this.rotateStrategy = rotateStrategy;
         return this;
     }
 

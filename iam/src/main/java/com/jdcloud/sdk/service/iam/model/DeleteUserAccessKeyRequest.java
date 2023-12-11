@@ -28,7 +28,8 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除AccessKey
+ * 删除主账号AccessKey, &lt;br&gt;
+
  */
 public class DeleteUserAccessKeyRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -49,6 +50,7 @@ public class DeleteUserAccessKeyRequest extends JdcloudRequest implements java.i
     private String accessKey;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +68,7 @@ public class DeleteUserAccessKeyRequest extends JdcloudRequest implements java.i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get accessKey
@@ -86,6 +89,7 @@ public class DeleteUserAccessKeyRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +99,7 @@ public class DeleteUserAccessKeyRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set accessKey

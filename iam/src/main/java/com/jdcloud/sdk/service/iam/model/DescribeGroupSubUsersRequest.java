@@ -52,6 +52,7 @@ public class DescribeGroupSubUsersRequest extends JdcloudRequest implements java
     private String groupName;
 
 
+
     /**
      * get 页码，默认1
      *
@@ -70,6 +71,7 @@ public class DescribeGroupSubUsersRequest extends JdcloudRequest implements java
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认50，取值范围[10, 100]
      *
@@ -87,6 +89,7 @@ public class DescribeGroupSubUsersRequest extends JdcloudRequest implements java
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 用户组名称
@@ -107,6 +110,7 @@ public class DescribeGroupSubUsersRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 页码，默认1
      *
@@ -117,6 +121,7 @@ public class DescribeGroupSubUsersRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 分页大小，默认50，取值范围[10, 100]
      *
@@ -126,6 +131,7 @@ public class DescribeGroupSubUsersRequest extends JdcloudRequest implements java
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 用户组名称

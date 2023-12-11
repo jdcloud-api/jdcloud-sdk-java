@@ -53,6 +53,7 @@ public class PolicyEditionDetail  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get 策略文档
      *
@@ -70,6 +71,7 @@ public class PolicyEditionDetail  implements java.io.Serializable {
     public void setDocument(String document) {
         this.document = document;
     }
+
 
     /**
      * get 是否为默认版本
@@ -89,6 +91,7 @@ public class PolicyEditionDetail  implements java.io.Serializable {
         this.isDefaultEdition = isDefaultEdition;
     }
 
+
     /**
      * get 策略文档版本
      *
@@ -106,6 +109,7 @@ public class PolicyEditionDetail  implements java.io.Serializable {
     public void setEdition(Integer edition) {
         this.edition = edition;
     }
+
 
     /**
      * get 策略创建时间
@@ -126,6 +130,7 @@ public class PolicyEditionDetail  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 策略文档
      *
@@ -135,6 +140,7 @@ public class PolicyEditionDetail  implements java.io.Serializable {
         this.document = document;
         return this;
     }
+
 
     /**
      * set 是否为默认版本
@@ -146,6 +152,7 @@ public class PolicyEditionDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 策略文档版本
      *
@@ -155,6 +162,7 @@ public class PolicyEditionDetail  implements java.io.Serializable {
         this.edition = edition;
         return this;
     }
+
 
     /**
      * set 策略创建时间

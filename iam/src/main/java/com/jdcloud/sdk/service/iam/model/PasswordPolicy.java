@@ -69,7 +69,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     private Integer retryTimes;
 
     /**
-     * validLoginDuration
+     * 登录有效期（分钟），15~720
      * Required:true
      */
     @Required
@@ -81,6 +81,7 @@ public class PasswordPolicy  implements java.io.Serializable {
      */
     @Required
     private PasswordPolicyRule rule;
+
 
 
     /**
@@ -101,6 +102,7 @@ public class PasswordPolicy  implements java.io.Serializable {
         this.length = length;
     }
 
+
     /**
      * get 密码有效期（天），0~1095，0表示永不过期
      *
@@ -118,6 +120,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     public void setAge(Integer age) {
         this.age = age;
     }
+
 
     /**
      * get 密码过期后重置方式：0-联系主账号重置，1-子用户登录后重置
@@ -137,6 +140,7 @@ public class PasswordPolicy  implements java.io.Serializable {
         this.expirationOperation = expirationOperation;
     }
 
+
     /**
      * get 历史密码检查策略，禁止使用前(0~10)次密码，0表示不启用
      *
@@ -154,6 +158,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     public void setReusePrevention(Integer reusePrevention) {
         this.reusePrevention = reusePrevention;
     }
+
 
     /**
      * get 1小时内使用错误密码最多(1~16)次
@@ -173,8 +178,9 @@ public class PasswordPolicy  implements java.io.Serializable {
         this.retryTimes = retryTimes;
     }
 
+
     /**
-     * get validLoginDuration
+     * get 登录有效期（分钟），15~720
      *
      * @return
      */
@@ -183,13 +189,14 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
     /**
-     * set validLoginDuration
+     * set 登录有效期（分钟），15~720
      *
      * @param validLoginDuration
      */
     public void setValidLoginDuration(Integer validLoginDuration) {
         this.validLoginDuration = validLoginDuration;
     }
+
 
     /**
      * get 密码字符类型，至少包含一种
@@ -210,6 +217,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 密码长度，6~20位，默认8位
      *
@@ -219,6 +227,7 @@ public class PasswordPolicy  implements java.io.Serializable {
         this.length = length;
         return this;
     }
+
 
     /**
      * set 密码有效期（天），0~1095，0表示永不过期
@@ -230,6 +239,7 @@ public class PasswordPolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 密码过期后重置方式：0-联系主账号重置，1-子用户登录后重置
      *
@@ -239,6 +249,7 @@ public class PasswordPolicy  implements java.io.Serializable {
         this.expirationOperation = expirationOperation;
         return this;
     }
+
 
     /**
      * set 历史密码检查策略，禁止使用前(0~10)次密码，0表示不启用
@@ -250,6 +261,7 @@ public class PasswordPolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 1小时内使用错误密码最多(1~16)次
      *
@@ -260,8 +272,9 @@ public class PasswordPolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set validLoginDuration
+     * set 登录有效期（分钟），15~720
      *
      * @param validLoginDuration
      */
@@ -269,6 +282,7 @@ public class PasswordPolicy  implements java.io.Serializable {
         this.validLoginDuration = validLoginDuration;
         return this;
     }
+
 
     /**
      * set 密码字符类型，至少包含一种

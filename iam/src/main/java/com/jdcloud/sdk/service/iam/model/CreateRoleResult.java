@@ -28,7 +28,9 @@ import com.jdcloud.sdk.service.iam.model.RoleInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建角色
+ * 创建角色 &lt;br&gt;
+关于角色的详细介绍，请请参考 &lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/role-overview&quot;&gt;角色概览&lt;/a&gt; &lt;br&gt;
+
  */
 public class CreateRoleResult extends JdcloudResult implements java.io.Serializable {
 
@@ -38,6 +40,7 @@ public class CreateRoleResult extends JdcloudResult implements java.io.Serializa
      * 角色信息
      */
     private RoleInfo roleInfo;
+
 
 
     /**
@@ -57,6 +60,7 @@ public class CreateRoleResult extends JdcloudResult implements java.io.Serializa
     public void setRoleInfo(RoleInfo roleInfo) {
         this.roleInfo = roleInfo;
     }
+
 
 
     /**

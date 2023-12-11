@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.iam.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建主账号AccessKey
+ * 创建主账号AccessKey, &lt;br&gt; 最多可创建5个
+
  */
 public class CreateUserAccessKeyResult extends JdcloudResult implements java.io.Serializable {
 

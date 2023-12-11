@@ -42,6 +42,7 @@ public class DeletePolicyRequest extends JdcloudRequest implements java.io.Seria
     private String policyName;
 
 
+
     /**
      * get 策略名称
      *
@@ -59,6 +60,7 @@ public class DeletePolicyRequest extends JdcloudRequest implements java.io.Seria
     public void setPolicyName(String policyName) {
         this.policyName = policyName;
     }
+
 
 
     /**

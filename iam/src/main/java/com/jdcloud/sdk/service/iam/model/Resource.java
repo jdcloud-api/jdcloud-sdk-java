@@ -40,8 +40,8 @@ public class Resource  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> ids;
-
     /**
      * 资源类型，云主机-server、镜像-image、云硬盘-volume、vpc-vpc、公网Ip-floatingIp、负载均衡-loadbalance、云数据库(mysql)-database、云缓存-cache
      * Required:true
@@ -50,23 +50,25 @@ public class Resource  implements java.io.Serializable {
     private String type;
 
 
+
     /**
-     * get 资源id集合，传*表示对所有id生效
-     *
-     * @return
-     */
+    * get 资源id集合，传*表示对所有id生效
+    *
+    * @return
+    */
     public List<String> getIds() {
         return ids;
     }
 
     /**
-     * set 资源id集合，传*表示对所有id生效
-     *
-     * @param ids
-     */
+    * set 资源id集合，传*表示对所有id生效
+    *
+    * @param ids
+    */
     public void setIds(List<String> ids) {
         this.ids = ids;
     }
+
 
     /**
      * get 资源类型，云主机-server、镜像-image、云硬盘-volume、vpc-vpc、公网Ip-floatingIp、负载均衡-loadbalance、云数据库(mysql)-database、云缓存-cache
@@ -87,15 +89,17 @@ public class Resource  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 资源id集合，传*表示对所有id生效
-     *
-     * @param ids
-     */
+    * set 资源id集合，传*表示对所有id生效
+    *
+    * @param ids
+    */
     public Resource ids(List<String> ids) {
         this.ids = ids;
         return this;
     }
+
 
     /**
      * set 资源类型，云主机-server、镜像-image、云硬盘-volume、vpc-vpc、公网Ip-floatingIp、负载均衡-loadbalance、云数据库(mysql)-database、云缓存-cache
@@ -106,6 +110,7 @@ public class Resource  implements java.io.Serializable {
         this.type = type;
         return this;
     }
+
 
 
     /**
@@ -119,5 +124,4 @@ public class Resource  implements java.io.Serializable {
         }
         this.ids.add(id);
     }
-
 }

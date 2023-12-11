@@ -52,6 +52,7 @@ public class UpdatePermissionInfo  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<PermissionDetail> content;
 
 
@@ -73,6 +74,7 @@ public class UpdatePermissionInfo  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 描述，0~256个字符
      *
@@ -91,23 +93,25 @@ public class UpdatePermissionInfo  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
-     * get 权限详细信息
-     *
-     * @return
-     */
+    * get 权限详细信息
+    *
+    * @return
+    */
     public List<PermissionDetail> getContent() {
         return content;
     }
 
     /**
-     * set 权限详细信息
-     *
-     * @param content
-     */
+    * set 权限详细信息
+    *
+    * @param content
+    */
     public void setContent(List<PermissionDetail> content) {
         this.content = content;
     }
+
 
 
     /**
@@ -120,6 +124,7 @@ public class UpdatePermissionInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述，0~256个字符
      *
@@ -130,15 +135,17 @@ public class UpdatePermissionInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 权限详细信息
-     *
-     * @param content
-     */
+    * set 权限详细信息
+    *
+    * @param content
+    */
     public UpdatePermissionInfo content(List<PermissionDetail> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -152,5 +159,4 @@ public class UpdatePermissionInfo  implements java.io.Serializable {
         }
         this.content.add(content);
     }
-
 }

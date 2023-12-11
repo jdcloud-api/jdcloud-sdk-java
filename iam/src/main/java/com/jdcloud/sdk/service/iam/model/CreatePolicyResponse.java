@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.iam.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建策略
+ * 创建策略, &lt;br&gt;
+访问 &lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/policy-overview&quot;&gt;策略管理&lt;/a&gt; 了解更多内容 &lt;br&gt;
+
  */
 public class CreatePolicyResponse extends JdcloudResponse<CreatePolicyResult> implements java.io.Serializable {
 

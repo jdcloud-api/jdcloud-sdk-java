@@ -64,6 +64,7 @@ public class DescribeRolePoliciesRequest extends JdcloudRequest implements java.
     private String roleName;
 
 
+
     /**
      * get 页码
      *
@@ -81,6 +82,7 @@ public class DescribeRolePoliciesRequest extends JdcloudRequest implements java.
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 每页显示数目[10~100] 默认50条
@@ -100,6 +102,7 @@ public class DescribeRolePoliciesRequest extends JdcloudRequest implements java.
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 关键字
      *
@@ -118,6 +121,7 @@ public class DescribeRolePoliciesRequest extends JdcloudRequest implements java.
         this.keyword = keyword;
     }
 
+
     /**
      * get 排序策略,0-按创建时间顺序排序  1-按创建时间倒序
      *
@@ -135,6 +139,7 @@ public class DescribeRolePoliciesRequest extends JdcloudRequest implements java.
     public void setSort(Integer sort) {
         this.sort = sort;
     }
+
 
     /**
      * get 角色名称
@@ -155,6 +160,7 @@ public class DescribeRolePoliciesRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 页码
      *
@@ -164,6 +170,7 @@ public class DescribeRolePoliciesRequest extends JdcloudRequest implements java.
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 每页显示数目[10~100] 默认50条
@@ -175,6 +182,7 @@ public class DescribeRolePoliciesRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 关键字
      *
@@ -185,6 +193,7 @@ public class DescribeRolePoliciesRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 排序策略,0-按创建时间顺序排序  1-按创建时间倒序
      *
@@ -194,6 +203,7 @@ public class DescribeRolePoliciesRequest extends JdcloudRequest implements java.
         this.sort = sort;
         return this;
     }
+
 
     /**
      * set 角色名称

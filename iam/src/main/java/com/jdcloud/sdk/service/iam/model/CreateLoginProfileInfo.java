@@ -53,6 +53,7 @@ public class CreateLoginProfileInfo  implements java.io.Serializable {
     private Boolean mFABindRequired;
 
 
+
     /**
      * get 子用户登录是否需要重置密码，默认false
      *
@@ -70,6 +71,7 @@ public class CreateLoginProfileInfo  implements java.io.Serializable {
     public void setPasswordResetRequired(Boolean passwordResetRequired) {
         this.passwordResetRequired = passwordResetRequired;
     }
+
 
     /**
      * get 指定密码，密码必须符合密码强度要求。关于密码强度设置接口，请参考describePasswordPolicy
@@ -89,6 +91,7 @@ public class CreateLoginProfileInfo  implements java.io.Serializable {
         this.password = password;
     }
 
+
     /**
      * get 是否自动生成密码，默认false
      *
@@ -106,6 +109,7 @@ public class CreateLoginProfileInfo  implements java.io.Serializable {
     public void setAutoGeneratePassword(Boolean autoGeneratePassword) {
         this.autoGeneratePassword = autoGeneratePassword;
     }
+
 
     /**
      * get 指定子用户在下次登录时是否必须绑定虚拟MFA设备
@@ -126,6 +130,7 @@ public class CreateLoginProfileInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 子用户登录是否需要重置密码，默认false
      *
@@ -135,6 +140,7 @@ public class CreateLoginProfileInfo  implements java.io.Serializable {
         this.passwordResetRequired = passwordResetRequired;
         return this;
     }
+
 
     /**
      * set 指定密码，密码必须符合密码强度要求。关于密码强度设置接口，请参考describePasswordPolicy
@@ -146,6 +152,7 @@ public class CreateLoginProfileInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否自动生成密码，默认false
      *
@@ -155,6 +162,7 @@ public class CreateLoginProfileInfo  implements java.io.Serializable {
         this.autoGeneratePassword = autoGeneratePassword;
         return this;
     }
+
 
     /**
      * set 指定子用户在下次登录时是否必须绑定虚拟MFA设备

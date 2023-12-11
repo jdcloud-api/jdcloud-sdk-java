@@ -47,6 +47,7 @@ public class PermissionDetail  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<Resource> resource;
 
 
@@ -68,23 +69,25 @@ public class PermissionDetail  implements java.io.Serializable {
         this.permission = permission;
     }
 
+
     /**
-     * get 资源信息
-     *
-     * @return
-     */
+    * get 资源信息
+    *
+    * @return
+    */
     public List<Resource> getResource() {
         return resource;
     }
 
     /**
-     * set 资源信息
-     *
-     * @param resource
-     */
+    * set 资源信息
+    *
+    * @param resource
+    */
     public void setResource(List<Resource> resource) {
         this.resource = resource;
     }
+
 
 
     /**
@@ -97,15 +100,17 @@ public class PermissionDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 资源信息
-     *
-     * @param resource
-     */
+    * set 资源信息
+    *
+    * @param resource
+    */
     public PermissionDetail resource(List<Resource> resource) {
         this.resource = resource;
         return this;
     }
+
 
 
     /**
@@ -119,5 +124,4 @@ public class PermissionDetail  implements java.io.Serializable {
         }
         this.resource.add(resource);
     }
-
 }

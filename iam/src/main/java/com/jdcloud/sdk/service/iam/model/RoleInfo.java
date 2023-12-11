@@ -78,6 +78,7 @@ public class RoleInfo  implements java.io.Serializable {
     private String account;
 
 
+
     /**
      * get 角色ID
      *
@@ -95,6 +96,7 @@ public class RoleInfo  implements java.io.Serializable {
     public void setRoleId(String roleId) {
         this.roleId = roleId;
     }
+
 
     /**
      * get 角色名称
@@ -114,6 +116,7 @@ public class RoleInfo  implements java.io.Serializable {
         this.roleName = roleName;
     }
 
+
     /**
      * get 角色类型，2-服务相关角色，3-服务角色，4-用户角色
      *
@@ -131,6 +134,7 @@ public class RoleInfo  implements java.io.Serializable {
     public void setType(Integer type) {
         this.type = type;
     }
+
 
     /**
      * get 信任实体信息
@@ -150,6 +154,7 @@ public class RoleInfo  implements java.io.Serializable {
         this.assumeRolePolicyDocument = assumeRolePolicyDocument;
     }
 
+
     /**
      * get 描述，0~256个字符
      *
@@ -167,6 +172,7 @@ public class RoleInfo  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 最大会话时长3600~43200秒，默认3600秒
@@ -186,6 +192,7 @@ public class RoleInfo  implements java.io.Serializable {
         this.maxSessionDuration = maxSessionDuration;
     }
 
+
     /**
      * get 京东云资源标识(jrn)
      *
@@ -204,6 +211,7 @@ public class RoleInfo  implements java.io.Serializable {
         this.jrn = jrn;
     }
 
+
     /**
      * get 创建角色的时间
      *
@@ -221,6 +229,7 @@ public class RoleInfo  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 角色所属主账号
@@ -241,6 +250,7 @@ public class RoleInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 角色ID
      *
@@ -250,6 +260,7 @@ public class RoleInfo  implements java.io.Serializable {
         this.roleId = roleId;
         return this;
     }
+
 
     /**
      * set 角色名称
@@ -261,6 +272,7 @@ public class RoleInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 角色类型，2-服务相关角色，3-服务角色，4-用户角色
      *
@@ -270,6 +282,7 @@ public class RoleInfo  implements java.io.Serializable {
         this.type = type;
         return this;
     }
+
 
     /**
      * set 信任实体信息
@@ -281,6 +294,7 @@ public class RoleInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述，0~256个字符
      *
@@ -290,6 +304,7 @@ public class RoleInfo  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 最大会话时长3600~43200秒，默认3600秒
@@ -301,6 +316,7 @@ public class RoleInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 京东云资源标识(jrn)
      *
@@ -311,6 +327,7 @@ public class RoleInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建角色的时间
      *
@@ -320,6 +337,7 @@ public class RoleInfo  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 角色所属主账号

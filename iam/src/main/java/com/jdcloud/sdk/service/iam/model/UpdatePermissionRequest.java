@@ -57,6 +57,7 @@ public class UpdatePermissionRequest extends JdcloudRequest implements java.io.S
     private Integer permissionId;
 
 
+
     /**
      * get 权限信息
      *
@@ -75,6 +76,7 @@ public class UpdatePermissionRequest extends JdcloudRequest implements java.io.S
         this.updatePermissionInfo = updatePermissionInfo;
     }
 
+
     /**
      * get Region ID
      *
@@ -92,6 +94,7 @@ public class UpdatePermissionRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 权限id
@@ -112,6 +115,7 @@ public class UpdatePermissionRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 权限信息
      *
@@ -122,6 +126,7 @@ public class UpdatePermissionRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -131,6 +136,7 @@ public class UpdatePermissionRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 权限id

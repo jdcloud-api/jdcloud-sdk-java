@@ -40,37 +40,40 @@ public class AddPermissionsInfo  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<Integer> permissionIds;
 
 
     /**
-     * get 权限id集合
-     *
-     * @return
-     */
+    * get 权限id集合
+    *
+    * @return
+    */
     public List<Integer> getPermissionIds() {
         return permissionIds;
     }
 
     /**
-     * set 权限id集合
-     *
-     * @param permissionIds
-     */
+    * set 权限id集合
+    *
+    * @param permissionIds
+    */
     public void setPermissionIds(List<Integer> permissionIds) {
         this.permissionIds = permissionIds;
     }
 
 
+
     /**
-     * set 权限id集合
-     *
-     * @param permissionIds
-     */
+    * set 权限id集合
+    *
+    * @param permissionIds
+    */
     public AddPermissionsInfo permissionIds(List<Integer> permissionIds) {
         this.permissionIds = permissionIds;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class AddPermissionsInfo  implements java.io.Serializable {
         }
         this.permissionIds.add(permissionId);
     }
-
 }

@@ -48,6 +48,7 @@ public class SubUserInfo  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get 子用户名
      *
@@ -66,6 +67,7 @@ public class SubUserInfo  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 描述信息
      *
@@ -83,6 +85,7 @@ public class SubUserInfo  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 用户创建时间
@@ -103,6 +106,7 @@ public class SubUserInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 子用户名
      *
@@ -113,6 +117,7 @@ public class SubUserInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述信息
      *
@@ -122,6 +127,7 @@ public class SubUserInfo  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 用户创建时间

@@ -30,7 +30,9 @@ import com.jdcloud.sdk.service.iam.model.UserAccessKey;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询主账号AccessKey列表
+ * 查询主账号AccessKey列表 &lt;br&gt;
+关于AccessKey的介绍和使用，请参考 &lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/account-management/accesskey-management&quot;&gt;Accesskey管理&lt;/a&gt; &lt;br&gt;
+
  */
 public class DescribeUserAccessKeysResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,37 +41,40 @@ public class DescribeUserAccessKeysResult extends JdcloudResult implements java.
     /**
      * userAccessKeys
      */
+    
     private List<UserAccessKey> userAccessKeys;
 
 
     /**
-     * get userAccessKeys
-     *
-     * @return
-     */
+    * get userAccessKeys
+    *
+    * @return
+    */
     public List<UserAccessKey> getUserAccessKeys() {
         return userAccessKeys;
     }
 
     /**
-     * set userAccessKeys
-     *
-     * @param userAccessKeys
-     */
+    * set userAccessKeys
+    *
+    * @param userAccessKeys
+    */
     public void setUserAccessKeys(List<UserAccessKey> userAccessKeys) {
         this.userAccessKeys = userAccessKeys;
     }
 
 
+
     /**
-     * set userAccessKeys
-     *
-     * @param userAccessKeys
-     */
+    * set userAccessKeys
+    *
+    * @param userAccessKeys
+    */
     public DescribeUserAccessKeysResult userAccessKeys(List<UserAccessKey> userAccessKeys) {
         this.userAccessKeys = userAccessKeys;
         return this;
     }
+
 
 
     /**
@@ -83,5 +88,4 @@ public class DescribeUserAccessKeysResult extends JdcloudResult implements java.
         }
         this.userAccessKeys.add(userAccessKey);
     }
-
 }

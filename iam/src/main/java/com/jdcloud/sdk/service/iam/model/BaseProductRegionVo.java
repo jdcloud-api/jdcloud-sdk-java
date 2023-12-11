@@ -42,6 +42,7 @@ public class BaseProductRegionVo  implements java.io.Serializable {
     /**
      * az信息
      */
+    
     private List<RegionAzVo> regionAzVos;
 
 
@@ -63,23 +64,25 @@ public class BaseProductRegionVo  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
-     * get az信息
-     *
-     * @return
-     */
+    * get az信息
+    *
+    * @return
+    */
     public List<RegionAzVo> getRegionAzVos() {
         return regionAzVos;
     }
 
     /**
-     * set az信息
-     *
-     * @param regionAzVos
-     */
+    * set az信息
+    *
+    * @param regionAzVos
+    */
     public void setRegionAzVos(List<RegionAzVo> regionAzVos) {
         this.regionAzVos = regionAzVos;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class BaseProductRegionVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set az信息
-     *
-     * @param regionAzVos
-     */
+    * set az信息
+    *
+    * @param regionAzVos
+    */
     public BaseProductRegionVo regionAzVos(List<RegionAzVo> regionAzVos) {
         this.regionAzVos = regionAzVos;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class BaseProductRegionVo  implements java.io.Serializable {
         }
         this.regionAzVos.add(regionAzVo);
     }
-
 }

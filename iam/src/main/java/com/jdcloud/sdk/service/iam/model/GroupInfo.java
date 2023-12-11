@@ -67,6 +67,7 @@ public class GroupInfo  implements java.io.Serializable {
     /**
      * policies
      */
+    
     private List<String> policies;
 
 
@@ -88,6 +89,7 @@ public class GroupInfo  implements java.io.Serializable {
         this.groupId = groupId;
     }
 
+
     /**
      * get 用户组名
      *
@@ -105,6 +107,7 @@ public class GroupInfo  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 京东云资源标识(jrn)
@@ -124,6 +127,7 @@ public class GroupInfo  implements java.io.Serializable {
         this.jrn = jrn;
     }
 
+
     /**
      * get description
      *
@@ -141,6 +145,7 @@ public class GroupInfo  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 用户组创建时间
@@ -160,6 +165,7 @@ public class GroupInfo  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 用户组更新时间
      *
@@ -178,23 +184,25 @@ public class GroupInfo  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
-     * get policies
-     *
-     * @return
-     */
+    * get policies
+    *
+    * @return
+    */
     public List<String> getPolicies() {
         return policies;
     }
 
     /**
-     * set policies
-     *
-     * @param policies
-     */
+    * set policies
+    *
+    * @param policies
+    */
     public void setPolicies(List<String> policies) {
         this.policies = policies;
     }
+
 
 
     /**
@@ -207,6 +215,7 @@ public class GroupInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户组名
      *
@@ -216,6 +225,7 @@ public class GroupInfo  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 京东云资源标识(jrn)
@@ -227,6 +237,7 @@ public class GroupInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set description
      *
@@ -236,6 +247,7 @@ public class GroupInfo  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 用户组创建时间
@@ -247,6 +259,7 @@ public class GroupInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户组更新时间
      *
@@ -257,15 +270,17 @@ public class GroupInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set policies
-     *
-     * @param policies
-     */
+    * set policies
+    *
+    * @param policies
+    */
     public GroupInfo policies(List<String> policies) {
         this.policies = policies;
         return this;
     }
+
 
 
     /**
@@ -279,5 +294,4 @@ public class GroupInfo  implements java.io.Serializable {
         }
         this.policies.add(policie);
     }
-
 }

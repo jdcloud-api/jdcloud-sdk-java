@@ -39,31 +39,33 @@ public class DescribeSubUserGroupsResult extends JdcloudResult implements java.i
     /**
      * groups
      */
+    
     private List<GroupInfo> groups;
-
     /**
      * total
      */
     private Integer total;
 
 
+
     /**
-     * get groups
-     *
-     * @return
-     */
+    * get groups
+    *
+    * @return
+    */
     public List<GroupInfo> getGroups() {
         return groups;
     }
 
     /**
-     * set groups
-     *
-     * @param groups
-     */
+    * set groups
+    *
+    * @param groups
+    */
     public void setGroups(List<GroupInfo> groups) {
         this.groups = groups;
     }
+
 
     /**
      * get total
@@ -84,15 +86,17 @@ public class DescribeSubUserGroupsResult extends JdcloudResult implements java.i
     }
 
 
+
     /**
-     * set groups
-     *
-     * @param groups
-     */
+    * set groups
+    *
+    * @param groups
+    */
     public DescribeSubUserGroupsResult groups(List<GroupInfo> groups) {
         this.groups = groups;
         return this;
     }
+
 
     /**
      * set total
@@ -103,6 +107,7 @@ public class DescribeSubUserGroupsResult extends JdcloudResult implements java.i
         this.total = total;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeSubUserGroupsResult extends JdcloudResult implements java.i
         }
         this.groups.add(group);
     }
-
 }

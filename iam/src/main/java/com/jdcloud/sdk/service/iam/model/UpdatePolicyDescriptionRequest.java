@@ -50,6 +50,7 @@ public class UpdatePolicyDescriptionRequest extends JdcloudRequest implements ja
     private String policyName;
 
 
+
     /**
      * get 策略描述信息
      *
@@ -67,6 +68,7 @@ public class UpdatePolicyDescriptionRequest extends JdcloudRequest implements ja
     public void setUpdatePolicyDescriptionInfo(UpdatePolicyDescriptionInfo updatePolicyDescriptionInfo) {
         this.updatePolicyDescriptionInfo = updatePolicyDescriptionInfo;
     }
+
 
     /**
      * get 策略名称
@@ -87,6 +89,7 @@ public class UpdatePolicyDescriptionRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 策略描述信息
      *
@@ -96,6 +99,7 @@ public class UpdatePolicyDescriptionRequest extends JdcloudRequest implements ja
         this.updatePolicyDescriptionInfo = updatePolicyDescriptionInfo;
         return this;
     }
+
 
     /**
      * set 策略名称

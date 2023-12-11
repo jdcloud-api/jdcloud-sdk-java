@@ -43,7 +43,7 @@ public class EmailSmsInfo  implements java.io.Serializable {
     private String createPin;
 
     /**
-     * 邮件标题
+     * 邮件标题，短信不填
      */
     private String title;
 
@@ -55,7 +55,7 @@ public class EmailSmsInfo  implements java.io.Serializable {
     private Integer sendType;
 
     /**
-     * 邮件内容
+     * 邮件内容，短信不填
      */
     private String content;
 
@@ -64,28 +64,29 @@ public class EmailSmsInfo  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> receives;
-
     /**
-     * 模版code
+     * 模版code，短信必填，邮件不填
      * Required:true
      */
     @Required
     private Integer templateId;
 
     /**
-     * 模版参数
+     * 模版参数，短信必填，邮件不填
      * Required:true
      */
     @Required
+    
     private List<String> templateParam;
-
     /**
-     * 业务编码(和产品申请)
+     * 业务编码(和产品申请),短信必填，邮件不填
      * Required:true
      */
     @Required
     private String smsMessageSource;
+
 
 
     /**
@@ -106,8 +107,9 @@ public class EmailSmsInfo  implements java.io.Serializable {
         this.createPin = createPin;
     }
 
+
     /**
-     * get 邮件标题
+     * get 邮件标题，短信不填
      *
      * @return
      */
@@ -116,13 +118,14 @@ public class EmailSmsInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 邮件标题
+     * set 邮件标题，短信不填
      *
      * @param title
      */
     public void setTitle(String title) {
         this.title = title;
     }
+
 
     /**
      * get 发送类型 1 发邮件 2 发短信
@@ -142,8 +145,9 @@ public class EmailSmsInfo  implements java.io.Serializable {
         this.sendType = sendType;
     }
 
+
     /**
-     * get 邮件内容
+     * get 邮件内容，短信不填
      *
      * @return
      */
@@ -152,7 +156,7 @@ public class EmailSmsInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 邮件内容
+     * set 邮件内容，短信不填
      *
      * @param content
      */
@@ -160,26 +164,28 @@ public class EmailSmsInfo  implements java.io.Serializable {
         this.content = content;
     }
 
+
     /**
-     * get 接收人
-     *
-     * @return
-     */
+    * get 接收人
+    *
+    * @return
+    */
     public List<String> getReceives() {
         return receives;
     }
 
     /**
-     * set 接收人
-     *
-     * @param receives
-     */
+    * set 接收人
+    *
+    * @param receives
+    */
     public void setReceives(List<String> receives) {
         this.receives = receives;
     }
 
+
     /**
-     * get 模版code
+     * get 模版code，短信必填，邮件不填
      *
      * @return
      */
@@ -188,7 +194,7 @@ public class EmailSmsInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 模版code
+     * set 模版code，短信必填，邮件不填
      *
      * @param templateId
      */
@@ -196,26 +202,28 @@ public class EmailSmsInfo  implements java.io.Serializable {
         this.templateId = templateId;
     }
 
+
     /**
-     * get 模版参数
-     *
-     * @return
-     */
+    * get 模版参数，短信必填，邮件不填
+    *
+    * @return
+    */
     public List<String> getTemplateParam() {
         return templateParam;
     }
 
     /**
-     * set 模版参数
-     *
-     * @param templateParam
-     */
+    * set 模版参数，短信必填，邮件不填
+    *
+    * @param templateParam
+    */
     public void setTemplateParam(List<String> templateParam) {
         this.templateParam = templateParam;
     }
 
+
     /**
-     * get 业务编码(和产品申请)
+     * get 业务编码(和产品申请),短信必填，邮件不填
      *
      * @return
      */
@@ -224,13 +232,14 @@ public class EmailSmsInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 业务编码(和产品申请)
+     * set 业务编码(和产品申请),短信必填，邮件不填
      *
      * @param smsMessageSource
      */
     public void setSmsMessageSource(String smsMessageSource) {
         this.smsMessageSource = smsMessageSource;
     }
+
 
 
     /**
@@ -243,8 +252,9 @@ public class EmailSmsInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 邮件标题
+     * set 邮件标题，短信不填
      *
      * @param title
      */
@@ -252,6 +262,7 @@ public class EmailSmsInfo  implements java.io.Serializable {
         this.title = title;
         return this;
     }
+
 
     /**
      * set 发送类型 1 发邮件 2 发短信
@@ -263,8 +274,9 @@ public class EmailSmsInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 邮件内容
+     * set 邮件内容，短信不填
      *
      * @param content
      */
@@ -273,18 +285,20 @@ public class EmailSmsInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 接收人
-     *
-     * @param receives
-     */
+    * set 接收人
+    *
+    * @param receives
+    */
     public EmailSmsInfo receives(List<String> receives) {
         this.receives = receives;
         return this;
     }
 
+
     /**
-     * set 模版code
+     * set 模版code，短信必填，邮件不填
      *
      * @param templateId
      */
@@ -293,18 +307,20 @@ public class EmailSmsInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 模版参数
-     *
-     * @param templateParam
-     */
+    * set 模版参数，短信必填，邮件不填
+    *
+    * @param templateParam
+    */
     public EmailSmsInfo templateParam(List<String> templateParam) {
         this.templateParam = templateParam;
         return this;
     }
 
+
     /**
-     * set 业务编码(和产品申请)
+     * set 业务编码(和产品申请),短信必填，邮件不填
      *
      * @param smsMessageSource
      */
@@ -312,6 +328,7 @@ public class EmailSmsInfo  implements java.io.Serializable {
         this.smsMessageSource = smsMessageSource;
         return this;
     }
+
 
 
     /**
@@ -327,7 +344,7 @@ public class EmailSmsInfo  implements java.io.Serializable {
     }
 
     /**
-     * add item to 模版参数
+     * add item to 模版参数，短信必填，邮件不填
      *
      * @param templateParam
      */
@@ -337,5 +354,4 @@ public class EmailSmsInfo  implements java.io.Serializable {
         }
         this.templateParam.add(templateParam);
     }
-
 }

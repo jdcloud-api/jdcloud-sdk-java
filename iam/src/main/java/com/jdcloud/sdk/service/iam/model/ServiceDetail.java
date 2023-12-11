@@ -47,13 +47,14 @@ public class ServiceDetail  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<APIInfo> apiList;
-
     /**
      * 资源列表
      * Required:true
      */
     @Required
+    
     private List<String> resourceList;
 
 
@@ -75,41 +76,44 @@ public class ServiceDetail  implements java.io.Serializable {
         this.serviceName = serviceName;
     }
 
+
     /**
-     * get 策略相关OpenAPI的Action列表
-     *
-     * @return
-     */
+    * get 策略相关OpenAPI的Action列表
+    *
+    * @return
+    */
     public List<APIInfo> getApiList() {
         return apiList;
     }
 
     /**
-     * set 策略相关OpenAPI的Action列表
-     *
-     * @param apiList
-     */
+    * set 策略相关OpenAPI的Action列表
+    *
+    * @param apiList
+    */
     public void setApiList(List<APIInfo> apiList) {
         this.apiList = apiList;
     }
 
+
     /**
-     * get 资源列表
-     *
-     * @return
-     */
+    * get 资源列表
+    *
+    * @return
+    */
     public List<String> getResourceList() {
         return resourceList;
     }
 
     /**
-     * set 资源列表
-     *
-     * @param resourceList
-     */
+    * set 资源列表
+    *
+    * @param resourceList
+    */
     public void setResourceList(List<String> resourceList) {
         this.resourceList = resourceList;
     }
+
 
 
     /**
@@ -122,25 +126,28 @@ public class ServiceDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 策略相关OpenAPI的Action列表
-     *
-     * @param apiList
-     */
+    * set 策略相关OpenAPI的Action列表
+    *
+    * @param apiList
+    */
     public ServiceDetail apiList(List<APIInfo> apiList) {
         this.apiList = apiList;
         return this;
     }
 
+
     /**
-     * set 资源列表
-     *
-     * @param resourceList
-     */
+    * set 资源列表
+    *
+    * @param resourceList
+    */
     public ServiceDetail resourceList(List<String> resourceList) {
         this.resourceList = resourceList;
         return this;
     }
+
 
 
     /**
@@ -166,5 +173,4 @@ public class ServiceDetail  implements java.io.Serializable {
         }
         this.resourceList.add(resourceList);
     }
-
 }

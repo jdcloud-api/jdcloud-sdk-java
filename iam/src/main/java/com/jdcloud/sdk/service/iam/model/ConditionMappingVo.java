@@ -42,6 +42,7 @@ public class ConditionMappingVo  implements java.io.Serializable {
     /**
      * 符合条件键的值列表
      */
+    
     private List<String> values;
 
 
@@ -63,23 +64,25 @@ public class ConditionMappingVo  implements java.io.Serializable {
         this.conditionKey = conditionKey;
     }
 
+
     /**
-     * get 符合条件键的值列表
-     *
-     * @return
-     */
+    * get 符合条件键的值列表
+    *
+    * @return
+    */
     public List<String> getValues() {
         return values;
     }
 
     /**
-     * set 符合条件键的值列表
-     *
-     * @param values
-     */
+    * set 符合条件键的值列表
+    *
+    * @param values
+    */
     public void setValues(List<String> values) {
         this.values = values;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class ConditionMappingVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 符合条件键的值列表
-     *
-     * @param values
-     */
+    * set 符合条件键的值列表
+    *
+    * @param values
+    */
     public ConditionMappingVo values(List<String> values) {
         this.values = values;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class ConditionMappingVo  implements java.io.Serializable {
         }
         this.values.add(value);
     }
-
 }

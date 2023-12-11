@@ -31,24 +31,12 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.iam.model.DescribeSubUserPermissionsRequest;
-import com.jdcloud.sdk.service.iam.model.DescribeSubUserPermissionsResponse;
-import com.jdcloud.sdk.service.iam.client.DescribeSubUserPermissionsExecutor;
 import com.jdcloud.sdk.service.iam.model.DeleteSubUserRequest;
 import com.jdcloud.sdk.service.iam.model.DeleteSubUserResponse;
 import com.jdcloud.sdk.service.iam.client.DeleteSubUserExecutor;
-import com.jdcloud.sdk.service.iam.model.UpdatePermissionRequest;
-import com.jdcloud.sdk.service.iam.model.UpdatePermissionResponse;
-import com.jdcloud.sdk.service.iam.client.UpdatePermissionExecutor;
-import com.jdcloud.sdk.service.iam.model.AttachSubUserPolicyRequest;
-import com.jdcloud.sdk.service.iam.model.AttachSubUserPolicyResponse;
-import com.jdcloud.sdk.service.iam.client.AttachSubUserPolicyExecutor;
 import com.jdcloud.sdk.service.iam.model.DescribeGroupsRequest;
 import com.jdcloud.sdk.service.iam.model.DescribeGroupsResponse;
 import com.jdcloud.sdk.service.iam.client.DescribeGroupsExecutor;
-import com.jdcloud.sdk.service.iam.model.DescribeSubUsersRequest;
-import com.jdcloud.sdk.service.iam.model.DescribeSubUsersResponse;
-import com.jdcloud.sdk.service.iam.client.DescribeSubUsersExecutor;
 import com.jdcloud.sdk.service.iam.model.DescribeAttachedGroupPoliciesRequest;
 import com.jdcloud.sdk.service.iam.model.DescribeAttachedGroupPoliciesResponse;
 import com.jdcloud.sdk.service.iam.client.DescribeAttachedGroupPoliciesExecutor;
@@ -58,63 +46,132 @@ import com.jdcloud.sdk.service.iam.client.CreateSubUserExecutor;
 import com.jdcloud.sdk.service.iam.model.DeletePolicyRequest;
 import com.jdcloud.sdk.service.iam.model.DeletePolicyResponse;
 import com.jdcloud.sdk.service.iam.client.DeletePolicyExecutor;
-import com.jdcloud.sdk.service.iam.model.DisableSubUserAccessKeyRequest;
-import com.jdcloud.sdk.service.iam.model.DisableSubUserAccessKeyResponse;
-import com.jdcloud.sdk.service.iam.client.DisableSubUserAccessKeyExecutor;
 import com.jdcloud.sdk.service.iam.model.DetachRolePolicyRequest;
 import com.jdcloud.sdk.service.iam.model.DetachRolePolicyResponse;
 import com.jdcloud.sdk.service.iam.client.DetachRolePolicyExecutor;
-import com.jdcloud.sdk.service.iam.model.DescribePoliciesRequest;
-import com.jdcloud.sdk.service.iam.model.DescribePoliciesResponse;
-import com.jdcloud.sdk.service.iam.client.DescribePoliciesExecutor;
+import com.jdcloud.sdk.service.iam.model.DescribeUserPinRequest;
+import com.jdcloud.sdk.service.iam.model.DescribeUserPinResponse;
+import com.jdcloud.sdk.service.iam.client.DescribeUserPinExecutor;
 import com.jdcloud.sdk.service.iam.model.DescribeSubUserGroupsRequest;
 import com.jdcloud.sdk.service.iam.model.DescribeSubUserGroupsResponse;
 import com.jdcloud.sdk.service.iam.client.DescribeSubUserGroupsExecutor;
-import com.jdcloud.sdk.service.iam.model.DescribePermissionsRequest;
-import com.jdcloud.sdk.service.iam.model.DescribePermissionsResponse;
-import com.jdcloud.sdk.service.iam.client.DescribePermissionsExecutor;
-import com.jdcloud.sdk.service.iam.model.CreatePolicyRequest;
-import com.jdcloud.sdk.service.iam.model.CreatePolicyResponse;
-import com.jdcloud.sdk.service.iam.client.CreatePolicyExecutor;
 import com.jdcloud.sdk.service.iam.model.DescribeGroupRequest;
 import com.jdcloud.sdk.service.iam.model.DescribeGroupResponse;
 import com.jdcloud.sdk.service.iam.client.DescribeGroupExecutor;
+import com.jdcloud.sdk.service.iam.model.DescribeRolePoliciesScopeRequest;
+import com.jdcloud.sdk.service.iam.model.DescribeRolePoliciesScopeResponse;
+import com.jdcloud.sdk.service.iam.client.DescribeRolePoliciesScopeExecutor;
 import com.jdcloud.sdk.service.iam.model.DescribeSubUserRequest;
 import com.jdcloud.sdk.service.iam.model.DescribeSubUserResponse;
 import com.jdcloud.sdk.service.iam.client.DescribeSubUserExecutor;
 import com.jdcloud.sdk.service.iam.model.UpdatePolicyDescriptionRequest;
 import com.jdcloud.sdk.service.iam.model.UpdatePolicyDescriptionResponse;
 import com.jdcloud.sdk.service.iam.client.UpdatePolicyDescriptionExecutor;
-import com.jdcloud.sdk.service.iam.model.DescribeRolePoliciesRequest;
-import com.jdcloud.sdk.service.iam.model.DescribeRolePoliciesResponse;
-import com.jdcloud.sdk.service.iam.client.DescribeRolePoliciesExecutor;
-import com.jdcloud.sdk.service.iam.model.DeleteUserAccessKeyRequest;
-import com.jdcloud.sdk.service.iam.model.DeleteUserAccessKeyResponse;
-import com.jdcloud.sdk.service.iam.client.DeleteUserAccessKeyExecutor;
 import com.jdcloud.sdk.service.iam.model.EnabledUserAccessKeyRequest;
 import com.jdcloud.sdk.service.iam.model.EnabledUserAccessKeyResponse;
 import com.jdcloud.sdk.service.iam.client.EnabledUserAccessKeyExecutor;
-import com.jdcloud.sdk.service.iam.model.DetachSubUserPolicyRequest;
-import com.jdcloud.sdk.service.iam.model.DetachSubUserPolicyResponse;
-import com.jdcloud.sdk.service.iam.client.DetachSubUserPolicyExecutor;
 import com.jdcloud.sdk.service.iam.model.UpdateGroupRequest;
 import com.jdcloud.sdk.service.iam.model.UpdateGroupResponse;
 import com.jdcloud.sdk.service.iam.client.UpdateGroupExecutor;
+import com.jdcloud.sdk.service.iam.model.UnbindMFADeviceRequest;
+import com.jdcloud.sdk.service.iam.model.UnbindMFADeviceResponse;
+import com.jdcloud.sdk.service.iam.client.UnbindMFADeviceExecutor;
+import com.jdcloud.sdk.service.iam.model.DescribeAttachedGroupPoliciesScopeRequest;
+import com.jdcloud.sdk.service.iam.model.DescribeAttachedGroupPoliciesScopeResponse;
+import com.jdcloud.sdk.service.iam.client.DescribeAttachedGroupPoliciesScopeExecutor;
 import com.jdcloud.sdk.service.iam.model.RemovePermissionOfSubUserRequest;
 import com.jdcloud.sdk.service.iam.model.RemovePermissionOfSubUserResponse;
 import com.jdcloud.sdk.service.iam.client.RemovePermissionOfSubUserExecutor;
+import com.jdcloud.sdk.service.iam.model.DescribeAttachedSubUserPoliciesRequest;
+import com.jdcloud.sdk.service.iam.model.DescribeAttachedSubUserPoliciesResponse;
+import com.jdcloud.sdk.service.iam.client.DescribeAttachedSubUserPoliciesExecutor;
+import com.jdcloud.sdk.service.iam.model.CreateVirtualMFADeviceRequest;
+import com.jdcloud.sdk.service.iam.model.CreateVirtualMFADeviceResponse;
+import com.jdcloud.sdk.service.iam.client.CreateVirtualMFADeviceExecutor;
+import com.jdcloud.sdk.service.iam.model.UpdatePolicyRequest;
+import com.jdcloud.sdk.service.iam.model.UpdatePolicyResponse;
+import com.jdcloud.sdk.service.iam.client.UpdatePolicyExecutor;
+import com.jdcloud.sdk.service.iam.model.AddSubUserToGroupRequest;
+import com.jdcloud.sdk.service.iam.model.AddSubUserToGroupResponse;
+import com.jdcloud.sdk.service.iam.client.AddSubUserToGroupExecutor;
+import com.jdcloud.sdk.service.iam.model.CreateGroupRequest;
+import com.jdcloud.sdk.service.iam.model.CreateGroupResponse;
+import com.jdcloud.sdk.service.iam.client.CreateGroupExecutor;
+import com.jdcloud.sdk.service.iam.model.CreateSubUserInnerRequest;
+import com.jdcloud.sdk.service.iam.model.CreateSubUserInnerResponse;
+import com.jdcloud.sdk.service.iam.client.CreateSubUserInnerExecutor;
+import com.jdcloud.sdk.service.iam.model.DescribeVirtualMFARequest;
+import com.jdcloud.sdk.service.iam.model.DescribeVirtualMFAResponse;
+import com.jdcloud.sdk.service.iam.client.DescribeVirtualMFAExecutor;
+import com.jdcloud.sdk.service.iam.model.DeleteSubUserAccessKeyRequest;
+import com.jdcloud.sdk.service.iam.model.DeleteSubUserAccessKeyResponse;
+import com.jdcloud.sdk.service.iam.client.DeleteSubUserAccessKeyExecutor;
+import com.jdcloud.sdk.service.iam.model.AttachRolePolicyRequest;
+import com.jdcloud.sdk.service.iam.model.AttachRolePolicyResponse;
+import com.jdcloud.sdk.service.iam.client.AttachRolePolicyExecutor;
+import com.jdcloud.sdk.service.iam.model.DisabledUserAccessKeyRequest;
+import com.jdcloud.sdk.service.iam.model.DisabledUserAccessKeyResponse;
+import com.jdcloud.sdk.service.iam.client.DisabledUserAccessKeyExecutor;
+import com.jdcloud.sdk.service.iam.model.CreateRoleRequest;
+import com.jdcloud.sdk.service.iam.model.CreateRoleResponse;
+import com.jdcloud.sdk.service.iam.client.CreateRoleExecutor;
+import com.jdcloud.sdk.service.iam.model.AddOrganizationUserRelationRequest;
+import com.jdcloud.sdk.service.iam.model.AddOrganizationUserRelationResponse;
+import com.jdcloud.sdk.service.iam.client.AddOrganizationUserRelationExecutor;
+import com.jdcloud.sdk.service.iam.model.DescribeSubUserPermissionsRequest;
+import com.jdcloud.sdk.service.iam.model.DescribeSubUserPermissionsResponse;
+import com.jdcloud.sdk.service.iam.client.DescribeSubUserPermissionsExecutor;
+import com.jdcloud.sdk.service.iam.model.UpdatePermissionRequest;
+import com.jdcloud.sdk.service.iam.model.UpdatePermissionResponse;
+import com.jdcloud.sdk.service.iam.client.UpdatePermissionExecutor;
+import com.jdcloud.sdk.service.iam.model.AttachSubUserPolicyRequest;
+import com.jdcloud.sdk.service.iam.model.AttachSubUserPolicyResponse;
+import com.jdcloud.sdk.service.iam.client.AttachSubUserPolicyExecutor;
+import com.jdcloud.sdk.service.iam.model.DescribeSubUsersRequest;
+import com.jdcloud.sdk.service.iam.model.DescribeSubUsersResponse;
+import com.jdcloud.sdk.service.iam.client.DescribeSubUsersExecutor;
+import com.jdcloud.sdk.service.iam.model.DisableSubUserAccessKeyRequest;
+import com.jdcloud.sdk.service.iam.model.DisableSubUserAccessKeyResponse;
+import com.jdcloud.sdk.service.iam.client.DisableSubUserAccessKeyExecutor;
+import com.jdcloud.sdk.service.iam.model.DescribePoliciesRequest;
+import com.jdcloud.sdk.service.iam.model.DescribePoliciesResponse;
+import com.jdcloud.sdk.service.iam.client.DescribePoliciesExecutor;
+import com.jdcloud.sdk.service.iam.model.BindMFADeviceByOneCodeRequest;
+import com.jdcloud.sdk.service.iam.model.BindMFADeviceByOneCodeResponse;
+import com.jdcloud.sdk.service.iam.client.BindMFADeviceByOneCodeExecutor;
+import com.jdcloud.sdk.service.iam.model.DescribePermissionsRequest;
+import com.jdcloud.sdk.service.iam.model.DescribePermissionsResponse;
+import com.jdcloud.sdk.service.iam.client.DescribePermissionsExecutor;
+import com.jdcloud.sdk.service.iam.model.CreatePolicyRequest;
+import com.jdcloud.sdk.service.iam.model.CreatePolicyResponse;
+import com.jdcloud.sdk.service.iam.client.CreatePolicyExecutor;
+import com.jdcloud.sdk.service.iam.model.BindMFADeviceRequest;
+import com.jdcloud.sdk.service.iam.model.BindMFADeviceResponse;
+import com.jdcloud.sdk.service.iam.client.BindMFADeviceExecutor;
+import com.jdcloud.sdk.service.iam.model.DescribeRolePoliciesRequest;
+import com.jdcloud.sdk.service.iam.model.DescribeRolePoliciesResponse;
+import com.jdcloud.sdk.service.iam.client.DescribeRolePoliciesExecutor;
+import com.jdcloud.sdk.service.iam.model.DescribeAttachedSubUserPoliciesScopeRequest;
+import com.jdcloud.sdk.service.iam.model.DescribeAttachedSubUserPoliciesScopeResponse;
+import com.jdcloud.sdk.service.iam.client.DescribeAttachedSubUserPoliciesScopeExecutor;
+import com.jdcloud.sdk.service.iam.model.DeleteUserAccessKeyRequest;
+import com.jdcloud.sdk.service.iam.model.DeleteUserAccessKeyResponse;
+import com.jdcloud.sdk.service.iam.client.DeleteUserAccessKeyExecutor;
+import com.jdcloud.sdk.service.iam.model.DetachSubUserPolicyRequest;
+import com.jdcloud.sdk.service.iam.model.DetachSubUserPolicyResponse;
+import com.jdcloud.sdk.service.iam.client.DetachSubUserPolicyExecutor;
 import com.jdcloud.sdk.service.iam.model.DescribeUserAccessKeysRequest;
 import com.jdcloud.sdk.service.iam.model.DescribeUserAccessKeysResponse;
 import com.jdcloud.sdk.service.iam.client.DescribeUserAccessKeysExecutor;
 import com.jdcloud.sdk.service.iam.model.AttachGroupPolicyRequest;
 import com.jdcloud.sdk.service.iam.model.AttachGroupPolicyResponse;
 import com.jdcloud.sdk.service.iam.client.AttachGroupPolicyExecutor;
-import com.jdcloud.sdk.service.iam.model.DescribeAttachedSubUserPoliciesRequest;
-import com.jdcloud.sdk.service.iam.model.DescribeAttachedSubUserPoliciesResponse;
-import com.jdcloud.sdk.service.iam.client.DescribeAttachedSubUserPoliciesExecutor;
 import com.jdcloud.sdk.service.iam.model.UpdateSubUserRequest;
 import com.jdcloud.sdk.service.iam.model.UpdateSubUserResponse;
 import com.jdcloud.sdk.service.iam.client.UpdateSubUserExecutor;
+import com.jdcloud.sdk.service.iam.model.CopyRoleRequest;
+import com.jdcloud.sdk.service.iam.model.CopyRoleResponse;
+import com.jdcloud.sdk.service.iam.client.CopyRoleExecutor;
 import com.jdcloud.sdk.service.iam.model.DescribeGroupSubUsersRequest;
 import com.jdcloud.sdk.service.iam.model.DescribeGroupSubUsersResponse;
 import com.jdcloud.sdk.service.iam.client.DescribeGroupSubUsersExecutor;
@@ -127,18 +184,12 @@ import com.jdcloud.sdk.service.iam.client.DetachGroupPolicyExecutor;
 import com.jdcloud.sdk.service.iam.model.DescribeRoleRequest;
 import com.jdcloud.sdk.service.iam.model.DescribeRoleResponse;
 import com.jdcloud.sdk.service.iam.client.DescribeRoleExecutor;
-import com.jdcloud.sdk.service.iam.model.AddSubUserToGroupRequest;
-import com.jdcloud.sdk.service.iam.model.AddSubUserToGroupResponse;
-import com.jdcloud.sdk.service.iam.client.AddSubUserToGroupExecutor;
 import com.jdcloud.sdk.service.iam.model.UpdateAssumeRolePolicyRequest;
 import com.jdcloud.sdk.service.iam.model.UpdateAssumeRolePolicyResponse;
 import com.jdcloud.sdk.service.iam.client.UpdateAssumeRolePolicyExecutor;
 import com.jdcloud.sdk.service.iam.model.DescribeRolesRequest;
 import com.jdcloud.sdk.service.iam.model.DescribeRolesResponse;
 import com.jdcloud.sdk.service.iam.client.DescribeRolesExecutor;
-import com.jdcloud.sdk.service.iam.model.CreateGroupRequest;
-import com.jdcloud.sdk.service.iam.model.CreateGroupResponse;
-import com.jdcloud.sdk.service.iam.client.CreateGroupExecutor;
 import com.jdcloud.sdk.service.iam.model.DeleteGroupRequest;
 import com.jdcloud.sdk.service.iam.model.DeleteGroupResponse;
 import com.jdcloud.sdk.service.iam.client.DeleteGroupExecutor;
@@ -151,15 +202,6 @@ import com.jdcloud.sdk.service.iam.client.AddPermissionsToSubUserExecutor;
 import com.jdcloud.sdk.service.iam.model.DescribePolicyRequest;
 import com.jdcloud.sdk.service.iam.model.DescribePolicyResponse;
 import com.jdcloud.sdk.service.iam.client.DescribePolicyExecutor;
-import com.jdcloud.sdk.service.iam.model.DeleteSubUserAccessKeyRequest;
-import com.jdcloud.sdk.service.iam.model.DeleteSubUserAccessKeyResponse;
-import com.jdcloud.sdk.service.iam.client.DeleteSubUserAccessKeyExecutor;
-import com.jdcloud.sdk.service.iam.model.AttachRolePolicyRequest;
-import com.jdcloud.sdk.service.iam.model.AttachRolePolicyResponse;
-import com.jdcloud.sdk.service.iam.client.AttachRolePolicyExecutor;
-import com.jdcloud.sdk.service.iam.model.DisabledUserAccessKeyRequest;
-import com.jdcloud.sdk.service.iam.model.DisabledUserAccessKeyResponse;
-import com.jdcloud.sdk.service.iam.client.DisabledUserAccessKeyExecutor;
 import com.jdcloud.sdk.service.iam.model.CreateUserAccessKeyRequest;
 import com.jdcloud.sdk.service.iam.model.CreateUserAccessKeyResponse;
 import com.jdcloud.sdk.service.iam.client.CreateUserAccessKeyExecutor;
@@ -169,9 +211,6 @@ import com.jdcloud.sdk.service.iam.client.RemoveSubUserFromGroupExecutor;
 import com.jdcloud.sdk.service.iam.model.EnableSubUserAccessKeyRequest;
 import com.jdcloud.sdk.service.iam.model.EnableSubUserAccessKeyResponse;
 import com.jdcloud.sdk.service.iam.client.EnableSubUserAccessKeyExecutor;
-import com.jdcloud.sdk.service.iam.model.CreateRoleRequest;
-import com.jdcloud.sdk.service.iam.model.CreateRoleResponse;
-import com.jdcloud.sdk.service.iam.client.CreateRoleExecutor;
 import com.jdcloud.sdk.service.iam.model.DeleteRoleRequest;
 import com.jdcloud.sdk.service.iam.model.DeleteRoleResponse;
 import com.jdcloud.sdk.service.iam.client.DeleteRoleExecutor;
@@ -183,7 +222,7 @@ public class IamClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "iam.jdcloud-api.com";
     public final static String ServiceName = "iam";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -226,17 +265,6 @@ public class IamClient extends JdcloudClient {
 
 
     /**
-     * 查询子用户策略列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeSubUserPermissionsResponse describeSubUserPermissions(DescribeSubUserPermissionsRequest request) throws JdcloudSdkException {
-        return new DescribeSubUserPermissionsExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除子用户信息
      *
      * @param request
@@ -245,28 +273,6 @@ public class IamClient extends JdcloudClient {
      */
     public DeleteSubUserResponse deleteSubUser(DeleteSubUserRequest request) throws JdcloudSdkException {
         return new DeleteSubUserExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改策略
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdatePermissionResponse updatePermission(UpdatePermissionRequest request) throws JdcloudSdkException {
-        return new UpdatePermissionExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 为子用户绑定策略
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AttachSubUserPolicyResponse attachSubUserPolicy(AttachSubUserPolicyRequest request) throws JdcloudSdkException {
-        return new AttachSubUserPolicyExecutor().client(this).execute(request);
     }
 
     /**
@@ -281,17 +287,6 @@ public class IamClient extends JdcloudClient {
     }
 
     /**
-     * 查询子用户列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeSubUsersResponse describeSubUsers(DescribeSubUsersRequest request) throws JdcloudSdkException {
-        return new DescribeSubUsersExecutor().client(this).execute(request);
-    }
-
-    /**
      * 列举用户组的策略
      *
      * @param request
@@ -303,7 +298,9 @@ public class IamClient extends JdcloudClient {
     }
 
     /**
-     * 创建子用户
+     * 创建子用户, &lt;br&gt;
+请访问&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/subuser-management&quot;&gt;子用户管理&lt;/a&gt;了解更多 &lt;br&gt;
+
      *
      * @param request
      * @return
@@ -325,17 +322,6 @@ public class IamClient extends JdcloudClient {
     }
 
     /**
-     * 禁用子用户的AccessKey
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DisableSubUserAccessKeyResponse disableSubUserAccessKey(DisableSubUserAccessKeyRequest request) throws JdcloudSdkException {
-        return new DisableSubUserAccessKeyExecutor().client(this).execute(request);
-    }
-
-    /**
      * 为角色绑定策略
      *
      * @param request
@@ -347,14 +333,14 @@ public class IamClient extends JdcloudClient {
     }
 
     /**
-     * 查询策略列表
+     * 根据AccessKey或者AccountId获取用户Pin
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribePoliciesResponse describePolicies(DescribePoliciesRequest request) throws JdcloudSdkException {
-        return new DescribePoliciesExecutor().client(this).execute(request);
+    public DescribeUserPinResponse describeUserPin(DescribeUserPinRequest request) throws JdcloudSdkException {
+        return new DescribeUserPinExecutor().client(this).execute(request);
     }
 
     /**
@@ -369,28 +355,6 @@ public class IamClient extends JdcloudClient {
     }
 
     /**
-     * 查询策略列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribePermissionsResponse describePermissions(DescribePermissionsRequest request) throws JdcloudSdkException {
-        return new DescribePermissionsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建策略
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreatePolicyResponse createPolicy(CreatePolicyRequest request) throws JdcloudSdkException {
-        return new CreatePolicyExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询用户组详情
      *
      * @param request
@@ -399,6 +363,17 @@ public class IamClient extends JdcloudClient {
      */
     public DescribeGroupResponse describeGroup(DescribeGroupRequest request) throws JdcloudSdkException {
         return new DescribeGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询角色授权策略列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRolePoliciesScopeResponse describeRolePoliciesScope(DescribeRolePoliciesScopeRequest request) throws JdcloudSdkException {
+        return new DescribeRolePoliciesScopeExecutor().client(this).execute(request);
     }
 
     /**
@@ -424,29 +399,8 @@ public class IamClient extends JdcloudClient {
     }
 
     /**
-     * 查询角色授权策略列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeRolePoliciesResponse describeRolePolicies(DescribeRolePoliciesRequest request) throws JdcloudSdkException {
-        return new DescribeRolePoliciesExecutor().client(this).execute(request);
-    }
+     * 启用主账号AccessKey, &lt;br&gt; 启用后accessKey的状态变成 1 &lt;b&gt;启用&lt;/b&gt;
 
-    /**
-     * 删除AccessKey
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteUserAccessKeyResponse deleteUserAccessKey(DeleteUserAccessKeyRequest request) throws JdcloudSdkException {
-        return new DeleteUserAccessKeyExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 启用主账号AccessKey
      *
      * @param request
      * @return
@@ -454,17 +408,6 @@ public class IamClient extends JdcloudClient {
      */
     public EnabledUserAccessKeyResponse enabledUserAccessKey(EnabledUserAccessKeyRequest request) throws JdcloudSdkException {
         return new EnabledUserAccessKeyExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 为子用户解绑策略
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DetachSubUserPolicyResponse detachSubUserPolicy(DetachSubUserPolicyRequest request) throws JdcloudSdkException {
-        return new DetachSubUserPolicyExecutor().client(this).execute(request);
     }
 
     /**
@@ -479,6 +422,28 @@ public class IamClient extends JdcloudClient {
     }
 
     /**
+     * 解绑虚拟MFA设备
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UnbindMFADeviceResponse unbindMFADevice(UnbindMFADeviceRequest request) throws JdcloudSdkException {
+        return new UnbindMFADeviceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列举用户组的策略的资源组列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAttachedGroupPoliciesScopeResponse describeAttachedGroupPoliciesScope(DescribeAttachedGroupPoliciesScopeRequest request) throws JdcloudSdkException {
+        return new DescribeAttachedGroupPoliciesScopeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 为子用户解绑策略
      *
      * @param request
@@ -490,7 +455,307 @@ public class IamClient extends JdcloudClient {
     }
 
     /**
-     * 查询主账号AccessKey列表
+     * 查询子用户绑定的策略列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAttachedSubUserPoliciesResponse describeAttachedSubUserPolicies(DescribeAttachedSubUserPoliciesRequest request) throws JdcloudSdkException {
+        return new DescribeAttachedSubUserPoliciesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 初始化虚拟MFA设备
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateVirtualMFADeviceResponse createVirtualMFADevice(CreateVirtualMFADeviceRequest request) throws JdcloudSdkException {
+        return new CreateVirtualMFADeviceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改权限策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdatePolicyResponse updatePolicy(UpdatePolicyRequest request) throws JdcloudSdkException {
+        return new UpdatePolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加子用户到用户组中
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddSubUserToGroupResponse addSubUserToGroup(AddSubUserToGroupRequest request) throws JdcloudSdkException {
+        return new AddSubUserToGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建用户组, &lt;br&gt;
+可访问&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/group-management&quot;&gt;用户组管理&lt;/a&gt;了解更多&lt;br&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateGroupResponse createGroup(CreateGroupRequest request) throws JdcloudSdkException {
+        return new CreateGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建子用户, &lt;br&gt;
+请访问&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/subuser-management&quot;&gt;子用户管理&lt;/a&gt;了解更多 &lt;br&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateSubUserInnerResponse createSubUserInner(CreateSubUserInnerRequest request) throws JdcloudSdkException {
+        return new CreateSubUserInnerExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询虚拟MFA设备状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeVirtualMFAResponse describeVirtualMFA(DescribeVirtualMFARequest request) throws JdcloudSdkException {
+        return new DescribeVirtualMFAExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除子用户的AccessKey
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSubUserAccessKeyResponse deleteSubUserAccessKey(DeleteSubUserAccessKeyRequest request) throws JdcloudSdkException {
+        return new DeleteSubUserAccessKeyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 为角色绑定策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AttachRolePolicyResponse attachRolePolicy(AttachRolePolicyRequest request) throws JdcloudSdkException {
+        return new AttachRolePolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 禁用主账号AccessKey, &lt;br&gt; 禁用后accessKey的状态变成 0 &lt;b&gt;禁用&lt;/b&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisabledUserAccessKeyResponse disabledUserAccessKey(DisabledUserAccessKeyRequest request) throws JdcloudSdkException {
+        return new DisabledUserAccessKeyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建角色 &lt;br&gt;
+关于角色的详细介绍，请请参考 &lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/role-overview&quot;&gt;角色概览&lt;/a&gt; &lt;br&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateRoleResponse createRole(CreateRoleRequest request) throws JdcloudSdkException {
+        return new CreateRoleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 新建组织用户关联关系
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddOrganizationUserRelationResponse addOrganizationUserRelation(AddOrganizationUserRelationRequest request) throws JdcloudSdkException {
+        return new AddOrganizationUserRelationExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询子用户策略列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSubUserPermissionsResponse describeSubUserPermissions(DescribeSubUserPermissionsRequest request) throws JdcloudSdkException {
+        return new DescribeSubUserPermissionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdatePermissionResponse updatePermission(UpdatePermissionRequest request) throws JdcloudSdkException {
+        return new UpdatePermissionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 为子用户绑定策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AttachSubUserPolicyResponse attachSubUserPolicy(AttachSubUserPolicyRequest request) throws JdcloudSdkException {
+        return new AttachSubUserPolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询子用户列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSubUsersResponse describeSubUsers(DescribeSubUsersRequest request) throws JdcloudSdkException {
+        return new DescribeSubUsersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 禁用子用户的AccessKey &lt;br&gt;, 禁用后accessKey 的状态变成 0 &lt;b&gt;禁用&lt;/b&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableSubUserAccessKeyResponse disableSubUserAccessKey(DisableSubUserAccessKeyRequest request) throws JdcloudSdkException {
+        return new DisableSubUserAccessKeyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询策略列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribePoliciesResponse describePolicies(DescribePoliciesRequest request) throws JdcloudSdkException {
+        return new DescribePoliciesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 绑定虚拟MFA设备（一组动态密码）
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public BindMFADeviceByOneCodeResponse bindMFADeviceByOneCode(BindMFADeviceByOneCodeRequest request) throws JdcloudSdkException {
+        return new BindMFADeviceByOneCodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询策略列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribePermissionsResponse describePermissions(DescribePermissionsRequest request) throws JdcloudSdkException {
+        return new DescribePermissionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建策略, &lt;br&gt;
+访问 &lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/policy-overview&quot;&gt;策略管理&lt;/a&gt; 了解更多内容 &lt;br&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreatePolicyResponse createPolicy(CreatePolicyRequest request) throws JdcloudSdkException {
+        return new CreatePolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 绑定虚拟MFA设备
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public BindMFADeviceResponse bindMFADevice(BindMFADeviceRequest request) throws JdcloudSdkException {
+        return new BindMFADeviceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询角色授权策略列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRolePoliciesResponse describeRolePolicies(DescribeRolePoliciesRequest request) throws JdcloudSdkException {
+        return new DescribeRolePoliciesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询子用户绑定的策略对应资源组列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAttachedSubUserPoliciesScopeResponse describeAttachedSubUserPoliciesScope(DescribeAttachedSubUserPoliciesScopeRequest request) throws JdcloudSdkException {
+        return new DescribeAttachedSubUserPoliciesScopeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除主账号AccessKey, &lt;br&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteUserAccessKeyResponse deleteUserAccessKey(DeleteUserAccessKeyRequest request) throws JdcloudSdkException {
+        return new DeleteUserAccessKeyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 为子用户解绑策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DetachSubUserPolicyResponse detachSubUserPolicy(DetachSubUserPolicyRequest request) throws JdcloudSdkException {
+        return new DetachSubUserPolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询主账号AccessKey列表 &lt;br&gt;
+关于AccessKey的介绍和使用，请参考 &lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/account-management/accesskey-management&quot;&gt;Accesskey管理&lt;/a&gt; &lt;br&gt;
+
      *
      * @param request
      * @return
@@ -512,17 +777,6 @@ public class IamClient extends JdcloudClient {
     }
 
     /**
-     * 查询子用户绑定的策略列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeAttachedSubUserPoliciesResponse describeAttachedSubUserPolicies(DescribeAttachedSubUserPoliciesRequest request) throws JdcloudSdkException {
-        return new DescribeAttachedSubUserPoliciesExecutor().client(this).execute(request);
-    }
-
-    /**
      * 修改子用户信息
      *
      * @param request
@@ -531,6 +785,17 @@ public class IamClient extends JdcloudClient {
      */
     public UpdateSubUserResponse updateSubUser(UpdateSubUserRequest request) throws JdcloudSdkException {
         return new UpdateSubUserExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 复制角色
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CopyRoleResponse copyRole(CopyRoleRequest request) throws JdcloudSdkException {
+        return new CopyRoleExecutor().client(this).execute(request);
     }
 
     /**
@@ -545,7 +810,9 @@ public class IamClient extends JdcloudClient {
     }
 
     /**
-     * 创建策略
+     * 创建策略 &lt;br&gt;
+关于策略的详细介绍，可以查询&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/policy-overview&quot;&gt;策略概览&lt;/a&gt; &lt;br&gt;
+
      *
      * @param request
      * @return
@@ -578,17 +845,6 @@ public class IamClient extends JdcloudClient {
     }
 
     /**
-     * 添加子用户到用户组中
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AddSubUserToGroupResponse addSubUserToGroup(AddSubUserToGroupRequest request) throws JdcloudSdkException {
-        return new AddSubUserToGroupExecutor().client(this).execute(request);
-    }
-
-    /**
      * 修改角色内置policy
      *
      * @param request
@@ -608,17 +864,6 @@ public class IamClient extends JdcloudClient {
      */
     public DescribeRolesResponse describeRoles(DescribeRolesRequest request) throws JdcloudSdkException {
         return new DescribeRolesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建用户组
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateGroupResponse createGroup(CreateGroupRequest request) throws JdcloudSdkException {
-        return new CreateGroupExecutor().client(this).execute(request);
     }
 
     /**
@@ -666,40 +911,8 @@ public class IamClient extends JdcloudClient {
     }
 
     /**
-     * 删除子用户的AccessKey
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteSubUserAccessKeyResponse deleteSubUserAccessKey(DeleteSubUserAccessKeyRequest request) throws JdcloudSdkException {
-        return new DeleteSubUserAccessKeyExecutor().client(this).execute(request);
-    }
+     * 创建主账号AccessKey, &lt;br&gt; 最多可创建5个
 
-    /**
-     * 为角色绑定策略
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AttachRolePolicyResponse attachRolePolicy(AttachRolePolicyRequest request) throws JdcloudSdkException {
-        return new AttachRolePolicyExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 禁用主账号AccessKey
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DisabledUserAccessKeyResponse disabledUserAccessKey(DisabledUserAccessKeyRequest request) throws JdcloudSdkException {
-        return new DisabledUserAccessKeyExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建主账号AccessKey
      *
      * @param request
      * @return
@@ -721,7 +934,8 @@ public class IamClient extends JdcloudClient {
     }
 
     /**
-     * 启用子用户AccessKey
+     * 启用子用户AccessKey &lt;br&gt;, 启用后accessKey 的状态变成 1 &lt;b&gt;启用&lt;/b&gt;
+
      *
      * @param request
      * @return
@@ -729,17 +943,6 @@ public class IamClient extends JdcloudClient {
      */
     public EnableSubUserAccessKeyResponse enableSubUserAccessKey(EnableSubUserAccessKeyRequest request) throws JdcloudSdkException {
         return new EnableSubUserAccessKeyExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建角色
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateRoleResponse createRole(CreateRoleRequest request) throws JdcloudSdkException {
-        return new CreateRoleExecutor().client(this).execute(request);
     }
 
     /**

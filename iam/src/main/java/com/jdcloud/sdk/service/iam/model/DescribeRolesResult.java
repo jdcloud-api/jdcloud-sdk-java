@@ -44,6 +44,7 @@ public class DescribeRolesResult extends JdcloudResult implements java.io.Serial
     /**
      * roles
      */
+    
     private List<ListRoleInfo> roles;
 
 
@@ -65,23 +66,25 @@ public class DescribeRolesResult extends JdcloudResult implements java.io.Serial
         this.total = total;
     }
 
+
     /**
-     * get roles
-     *
-     * @return
-     */
+    * get roles
+    *
+    * @return
+    */
     public List<ListRoleInfo> getRoles() {
         return roles;
     }
 
     /**
-     * set roles
-     *
-     * @param roles
-     */
+    * set roles
+    *
+    * @param roles
+    */
     public void setRoles(List<ListRoleInfo> roles) {
         this.roles = roles;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class DescribeRolesResult extends JdcloudResult implements java.io.Serial
         return this;
     }
 
+
     /**
-     * set roles
-     *
-     * @param roles
-     */
+    * set roles
+    *
+    * @param roles
+    */
     public DescribeRolesResult roles(List<ListRoleInfo> roles) {
         this.roles = roles;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeRolesResult extends JdcloudResult implements java.io.Serial
         }
         this.roles.add(role);
     }
-
 }

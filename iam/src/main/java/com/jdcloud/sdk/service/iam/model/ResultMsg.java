@@ -43,6 +43,7 @@ public class ResultMsg  implements java.io.Serializable {
     private String errorMsg;
 
 
+
     /**
      * get 错误编码
      *
@@ -60,6 +61,7 @@ public class ResultMsg  implements java.io.Serializable {
     public void setErrorCode(String errorCode) {
         this.errorCode = errorCode;
     }
+
 
     /**
      * get 错误信息
@@ -80,6 +82,7 @@ public class ResultMsg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 错误编码
      *
@@ -89,6 +92,7 @@ public class ResultMsg  implements java.io.Serializable {
         this.errorCode = errorCode;
         return this;
     }
+
 
     /**
      * set 错误信息

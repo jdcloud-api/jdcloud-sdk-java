@@ -28,7 +28,8 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 禁用子用户的AccessKey
+ * 禁用子用户的AccessKey &lt;br&gt;, 禁用后accessKey 的状态变成 0 &lt;b&gt;禁用&lt;/b&gt;
+
  */
 public class DisableSubUserAccessKeyRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -49,6 +50,7 @@ public class DisableSubUserAccessKeyRequest extends JdcloudRequest implements ja
     private String accessKey;
 
 
+
     /**
      * get 子用户名称
      *
@@ -66,6 +68,7 @@ public class DisableSubUserAccessKeyRequest extends JdcloudRequest implements ja
     public void setSubUser(String subUser) {
         this.subUser = subUser;
     }
+
 
     /**
      * get accessKey
@@ -86,6 +89,7 @@ public class DisableSubUserAccessKeyRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 子用户名称
      *
@@ -95,6 +99,7 @@ public class DisableSubUserAccessKeyRequest extends JdcloudRequest implements ja
         this.subUser = subUser;
         return this;
     }
+
 
     /**
      * set accessKey

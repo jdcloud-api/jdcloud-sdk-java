@@ -50,6 +50,7 @@ public class UpdateAssumeRolePolicyRequest extends JdcloudRequest implements jav
     private String roleName;
 
 
+
     /**
      * get 角色权限信息
      *
@@ -67,6 +68,7 @@ public class UpdateAssumeRolePolicyRequest extends JdcloudRequest implements jav
     public void setUpdateAssumeRolePolicyInfo(UpdateAssumeRolePolicyInfo updateAssumeRolePolicyInfo) {
         this.updateAssumeRolePolicyInfo = updateAssumeRolePolicyInfo;
     }
+
 
     /**
      * get 角色名称
@@ -87,6 +89,7 @@ public class UpdateAssumeRolePolicyRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 角色权限信息
      *
@@ -96,6 +99,7 @@ public class UpdateAssumeRolePolicyRequest extends JdcloudRequest implements jav
         this.updateAssumeRolePolicyInfo = updateAssumeRolePolicyInfo;
         return this;
     }
+
 
     /**
      * set 角色名称

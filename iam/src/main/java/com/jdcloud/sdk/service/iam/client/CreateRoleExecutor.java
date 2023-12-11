@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.iam.model.CreateRoleResponse;
 
 /**
- * 创建角色
+ * 创建角色 &lt;br&gt;
+关于角色的详细介绍，请请参考 &lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/role-overview&quot;&gt;角色概览&lt;/a&gt; &lt;br&gt;
+
  */
 class CreateRoleExecutor extends JdcloudExecutor {
 

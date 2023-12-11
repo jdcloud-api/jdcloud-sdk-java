@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.iam.model.CreateSubUserInfo;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建子用户
+ * 创建子用户, &lt;br&gt;
+请访问&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/subuser-management&quot;&gt;子用户管理&lt;/a&gt;了解更多 &lt;br&gt;
+
  */
 public class CreateSubUserRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -41,6 +43,7 @@ public class CreateSubUserRequest extends JdcloudRequest implements java.io.Seri
      */
     @Required
     private CreateSubUserInfo createSubUserInfo;
+
 
 
     /**
@@ -60,6 +63,7 @@ public class CreateSubUserRequest extends JdcloudRequest implements java.io.Seri
     public void setCreateSubUserInfo(CreateSubUserInfo createSubUserInfo) {
         this.createSubUserInfo = createSubUserInfo;
     }
+
 
 
     /**

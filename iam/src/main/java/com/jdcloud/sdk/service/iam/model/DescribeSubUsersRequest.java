@@ -53,6 +53,32 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
      */
     private Integer sort;
 
+    /**
+     * 手机号，和keyword互斥，不要都传
+     */
+    private String phone;
+
+    /**
+     * 邮箱，和keyword互斥，不要都传
+     */
+    private String email;
+
+    /**
+     * 用户姓名，和keyword互斥，不要都传
+     */
+    private String description;
+
+    /**
+     * 子用户别名
+     */
+    private String nickName;
+
+    /**
+     * 子用户姓名
+     */
+    private String name;
+
+
 
     /**
      * get 页码，默认1
@@ -72,6 +98,7 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认50，取值范围[10, 100]
      *
@@ -90,6 +117,7 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 关键字
      *
@@ -107,6 +135,7 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
     public void setKeyword(String keyword) {
         this.keyword = keyword;
     }
+
 
     /**
      * get 排序规则：0-创建时间顺序排序，1-创建时间倒序排序
@@ -128,6 +157,102 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
 
 
     /**
+     * get 手机号，和keyword互斥，不要都传
+     *
+     * @return
+     */
+    public String getPhone() {
+        return phone;
+    }
+
+    /**
+     * set 手机号，和keyword互斥，不要都传
+     *
+     * @param phone
+     */
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+
+    /**
+     * get 邮箱，和keyword互斥，不要都传
+     *
+     * @return
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * set 邮箱，和keyword互斥，不要都传
+     *
+     * @param email
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+    /**
+     * get 用户姓名，和keyword互斥，不要都传
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 用户姓名，和keyword互斥，不要都传
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
+    /**
+     * get 子用户别名
+     *
+     * @return
+     */
+    public String getNickName() {
+        return nickName;
+    }
+
+    /**
+     * set 子用户别名
+     *
+     * @param nickName
+     */
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+
+    /**
+     * get 子用户姓名
+     *
+     * @return
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * set 子用户姓名
+     *
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+
+    /**
      * set 页码，默认1
      *
      * @param pageNumber
@@ -136,6 +261,7 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认50，取值范围[10, 100]
@@ -147,6 +273,7 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 关键字
      *
@@ -157,6 +284,7 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 排序规则：0-创建时间顺序排序，1-创建时间倒序排序
      *
@@ -164,6 +292,61 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
      */
     public DescribeSubUsersRequest sort(Integer sort) {
         this.sort = sort;
+        return this;
+    }
+
+
+    /**
+     * set 手机号，和keyword互斥，不要都传
+     *
+     * @param phone
+     */
+    public DescribeSubUsersRequest phone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+
+
+    /**
+     * set 邮箱，和keyword互斥，不要都传
+     *
+     * @param email
+     */
+    public DescribeSubUsersRequest email(String email) {
+        this.email = email;
+        return this;
+    }
+
+
+    /**
+     * set 用户姓名，和keyword互斥，不要都传
+     *
+     * @param description
+     */
+    public DescribeSubUsersRequest description(String description) {
+        this.description = description;
+        return this;
+    }
+
+
+    /**
+     * set 子用户别名
+     *
+     * @param nickName
+     */
+    public DescribeSubUsersRequest nickName(String nickName) {
+        this.nickName = nickName;
+        return this;
+    }
+
+
+    /**
+     * set 子用户姓名
+     *
+     * @param name
+     */
+    public DescribeSubUsersRequest name(String name) {
+        this.name = name;
         return this;
     }
 

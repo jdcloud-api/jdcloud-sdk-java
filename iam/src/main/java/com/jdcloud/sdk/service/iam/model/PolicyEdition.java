@@ -40,12 +40,18 @@ public class PolicyEdition  implements java.io.Serializable {
     /**
      * 策略文档版本
      */
-    private Integer edition;
+    private String edition;
 
     /**
-     * 策略创建时间
+     * 权限策略内容
+     */
+    private String policyDocument;
+
+    /**
+     * 创建时间
      */
     private String createTime;
+
 
 
     /**
@@ -66,12 +72,13 @@ public class PolicyEdition  implements java.io.Serializable {
         this.isDefaultEdition = isDefaultEdition;
     }
 
+
     /**
      * get 策略文档版本
      *
      * @return
      */
-    public Integer getEdition() {
+    public String getEdition() {
         return edition;
     }
 
@@ -80,12 +87,32 @@ public class PolicyEdition  implements java.io.Serializable {
      *
      * @param edition
      */
-    public void setEdition(Integer edition) {
+    public void setEdition(String edition) {
         this.edition = edition;
     }
 
+
     /**
-     * get 策略创建时间
+     * get 权限策略内容
+     *
+     * @return
+     */
+    public String getPolicyDocument() {
+        return policyDocument;
+    }
+
+    /**
+     * set 权限策略内容
+     *
+     * @param policyDocument
+     */
+    public void setPolicyDocument(String policyDocument) {
+        this.policyDocument = policyDocument;
+    }
+
+
+    /**
+     * get 创建时间
      *
      * @return
      */
@@ -94,13 +121,14 @@ public class PolicyEdition  implements java.io.Serializable {
     }
 
     /**
-     * set 策略创建时间
+     * set 创建时间
      *
      * @param createTime
      */
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
 
     /**
@@ -113,18 +141,31 @@ public class PolicyEdition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 策略文档版本
      *
      * @param edition
      */
-    public PolicyEdition edition(Integer edition) {
+    public PolicyEdition edition(String edition) {
         this.edition = edition;
         return this;
     }
 
+
     /**
-     * set 策略创建时间
+     * set 权限策略内容
+     *
+     * @param policyDocument
+     */
+    public PolicyEdition policyDocument(String policyDocument) {
+        this.policyDocument = policyDocument;
+        return this;
+    }
+
+
+    /**
+     * set 创建时间
      *
      * @param createTime
      */

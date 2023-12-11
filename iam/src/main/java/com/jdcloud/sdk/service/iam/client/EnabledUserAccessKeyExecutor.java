@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.iam.model.EnabledUserAccessKeyResponse;
 
 /**
- * 启用主账号AccessKey
+ * 启用主账号AccessKey, &lt;br&gt; 启用后accessKey的状态变成 1 &lt;b&gt;启用&lt;/b&gt;
+
  */
 class EnabledUserAccessKeyExecutor extends JdcloudExecutor {
 

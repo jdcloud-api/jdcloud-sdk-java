@@ -41,6 +41,7 @@ public class Flags  implements java.io.Serializable {
     private Integer value;
 
 
+
     /**
      * get value
      *
@@ -58,6 +59,7 @@ public class Flags  implements java.io.Serializable {
     public void setValue(Integer value) {
         this.value = value;
     }
+
 
 
     /**

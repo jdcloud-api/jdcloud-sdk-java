@@ -46,6 +46,7 @@ public class CreateGroupInfo  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get 群组名：支持4-32位的字母，数字以及-和_, 以字母开头
      *
@@ -63,6 +64,7 @@ public class CreateGroupInfo  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 描述，0~256个字符
@@ -83,6 +85,7 @@ public class CreateGroupInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 群组名：支持4-32位的字母，数字以及-和_, 以字母开头
      *
@@ -92,6 +95,7 @@ public class CreateGroupInfo  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 描述，0~256个字符

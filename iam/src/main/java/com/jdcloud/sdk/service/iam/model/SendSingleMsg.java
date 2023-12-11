@@ -47,8 +47,8 @@ public class SendSingleMsg  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> templateParam;
-
     /**
      * 业务编码(和产品申请)
      * Required:true
@@ -71,6 +71,7 @@ public class SendSingleMsg  implements java.io.Serializable {
     private String mobileNum;
 
 
+
     /**
      * get 模版code
      *
@@ -89,23 +90,25 @@ public class SendSingleMsg  implements java.io.Serializable {
         this.templateId = templateId;
     }
 
+
     /**
-     * get 模版参数
-     *
-     * @return
-     */
+    * get 模版参数
+    *
+    * @return
+    */
     public List<String> getTemplateParam() {
         return templateParam;
     }
 
     /**
-     * set 模版参数
-     *
-     * @param templateParam
-     */
+    * set 模版参数
+    *
+    * @param templateParam
+    */
     public void setTemplateParam(List<String> templateParam) {
         this.templateParam = templateParam;
     }
+
 
     /**
      * get 业务编码(和产品申请)
@@ -125,6 +128,7 @@ public class SendSingleMsg  implements java.io.Serializable {
         this.smsMessageSource = smsMessageSource;
     }
 
+
     /**
      * get 用户pin
      *
@@ -142,6 +146,7 @@ public class SendSingleMsg  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 手机号
@@ -162,6 +167,7 @@ public class SendSingleMsg  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 模版code
      *
@@ -172,15 +178,17 @@ public class SendSingleMsg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 模版参数
-     *
-     * @param templateParam
-     */
+    * set 模版参数
+    *
+    * @param templateParam
+    */
     public SendSingleMsg templateParam(List<String> templateParam) {
         this.templateParam = templateParam;
         return this;
     }
+
 
     /**
      * set 业务编码(和产品申请)
@@ -192,6 +200,7 @@ public class SendSingleMsg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户pin
      *
@@ -202,6 +211,7 @@ public class SendSingleMsg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 手机号
      *
@@ -211,6 +221,7 @@ public class SendSingleMsg  implements java.io.Serializable {
         this.mobileNum = mobileNum;
         return this;
     }
+
 
 
     /**
@@ -224,5 +235,4 @@ public class SendSingleMsg  implements java.io.Serializable {
         }
         this.templateParam.add(templateParam);
     }
-
 }

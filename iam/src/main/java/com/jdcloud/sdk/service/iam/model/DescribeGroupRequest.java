@@ -42,6 +42,7 @@ public class DescribeGroupRequest extends JdcloudRequest implements java.io.Seri
     private String groupName;
 
 
+
     /**
      * get 用户组名称
      *
@@ -59,6 +60,7 @@ public class DescribeGroupRequest extends JdcloudRequest implements java.io.Seri
     public void setGroupName(String groupName) {
         this.groupName = groupName;
     }
+
 
 
     /**

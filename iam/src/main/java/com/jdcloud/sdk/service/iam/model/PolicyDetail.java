@@ -63,12 +63,12 @@ public class PolicyDetail  implements java.io.Serializable {
     private String version;
 
     /**
-     * 默认策略文档版本
+     * 当前默认策略文档版本
      */
-    private Integer defaultEdition;
+    private String currentDefaultEdition;
 
     /**
-     * 策略文档
+     * 权限策略内容（已废弃）
      */
     private String content;
 
@@ -81,6 +81,7 @@ public class PolicyDetail  implements java.io.Serializable {
      * 策略更新时间
      */
     private String updateTime;
+
 
 
     /**
@@ -101,6 +102,7 @@ public class PolicyDetail  implements java.io.Serializable {
         this.policyId = policyId;
     }
 
+
     /**
      * get 策略名称
      *
@@ -118,6 +120,7 @@ public class PolicyDetail  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 京东云资源标识(jrn)
@@ -137,6 +140,7 @@ public class PolicyDetail  implements java.io.Serializable {
         this.jrn = jrn;
     }
 
+
     /**
      * get 描述
      *
@@ -154,6 +158,7 @@ public class PolicyDetail  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 策略类型
@@ -173,6 +178,7 @@ public class PolicyDetail  implements java.io.Serializable {
         this.policyType = policyType;
     }
 
+
     /**
      * get 策略版本号
      *
@@ -191,26 +197,28 @@ public class PolicyDetail  implements java.io.Serializable {
         this.version = version;
     }
 
+
     /**
-     * get 默认策略文档版本
+     * get 当前默认策略文档版本
      *
      * @return
      */
-    public Integer getDefaultEdition() {
-        return defaultEdition;
+    public String getCurrentDefaultEdition() {
+        return currentDefaultEdition;
     }
 
     /**
-     * set 默认策略文档版本
+     * set 当前默认策略文档版本
      *
-     * @param defaultEdition
+     * @param currentDefaultEdition
      */
-    public void setDefaultEdition(Integer defaultEdition) {
-        this.defaultEdition = defaultEdition;
+    public void setCurrentDefaultEdition(String currentDefaultEdition) {
+        this.currentDefaultEdition = currentDefaultEdition;
     }
 
+
     /**
-     * get 策略文档
+     * get 权限策略内容（已废弃）
      *
      * @return
      */
@@ -219,13 +227,14 @@ public class PolicyDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 策略文档
+     * set 权限策略内容（已废弃）
      *
      * @param content
      */
     public void setContent(String content) {
         this.content = content;
     }
+
 
     /**
      * get 策略创建时间
@@ -244,6 +253,7 @@ public class PolicyDetail  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 策略更新时间
@@ -264,6 +274,7 @@ public class PolicyDetail  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 策略id
      *
@@ -273,6 +284,7 @@ public class PolicyDetail  implements java.io.Serializable {
         this.policyId = policyId;
         return this;
     }
+
 
     /**
      * set 策略名称
@@ -284,6 +296,7 @@ public class PolicyDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 京东云资源标识(jrn)
      *
@@ -293,6 +306,7 @@ public class PolicyDetail  implements java.io.Serializable {
         this.jrn = jrn;
         return this;
     }
+
 
     /**
      * set 描述
@@ -304,6 +318,7 @@ public class PolicyDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 策略类型
      *
@@ -313,6 +328,7 @@ public class PolicyDetail  implements java.io.Serializable {
         this.policyType = policyType;
         return this;
     }
+
 
     /**
      * set 策略版本号
@@ -324,18 +340,20 @@ public class PolicyDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 默认策略文档版本
+     * set 当前默认策略文档版本
      *
-     * @param defaultEdition
+     * @param currentDefaultEdition
      */
-    public PolicyDetail defaultEdition(Integer defaultEdition) {
-        this.defaultEdition = defaultEdition;
+    public PolicyDetail currentDefaultEdition(String currentDefaultEdition) {
+        this.currentDefaultEdition = currentDefaultEdition;
         return this;
     }
 
+
     /**
-     * set 策略文档
+     * set 权限策略内容（已废弃）
      *
      * @param content
      */
@@ -343,6 +361,7 @@ public class PolicyDetail  implements java.io.Serializable {
         this.content = content;
         return this;
     }
+
 
     /**
      * set 策略创建时间
@@ -353,6 +372,7 @@ public class PolicyDetail  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 策略更新时间

@@ -28,7 +28,9 @@ import com.jdcloud.sdk.service.iam.model.Policy;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建策略
+ * 创建策略, &lt;br&gt;
+访问 &lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/iam/policy-overview&quot;&gt;策略管理&lt;/a&gt; 了解更多内容 &lt;br&gt;
+
  */
 public class CreatePolicyResult extends JdcloudResult implements java.io.Serializable {
 
@@ -38,6 +40,7 @@ public class CreatePolicyResult extends JdcloudResult implements java.io.Seriali
      * 策略信息
      */
     private Policy policy;
+
 
 
     /**
@@ -57,6 +60,7 @@ public class CreatePolicyResult extends JdcloudResult implements java.io.Seriali
     public void setPolicy(Policy policy) {
         this.policy = policy;
     }
+
 
 
     /**

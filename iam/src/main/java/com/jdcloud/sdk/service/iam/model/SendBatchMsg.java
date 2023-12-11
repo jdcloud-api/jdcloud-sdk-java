@@ -47,8 +47,8 @@ public class SendBatchMsg  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> templateParam;
-
     /**
      * 业务编码(和产品申请)
      * Required:true
@@ -68,6 +68,7 @@ public class SendBatchMsg  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> mobileNumSet;
 
 
@@ -89,23 +90,25 @@ public class SendBatchMsg  implements java.io.Serializable {
         this.templateId = templateId;
     }
 
+
     /**
-     * get 模版参数
-     *
-     * @return
-     */
+    * get 模版参数
+    *
+    * @return
+    */
     public List<String> getTemplateParam() {
         return templateParam;
     }
 
     /**
-     * set 模版参数
-     *
-     * @param templateParam
-     */
+    * set 模版参数
+    *
+    * @param templateParam
+    */
     public void setTemplateParam(List<String> templateParam) {
         this.templateParam = templateParam;
     }
+
 
     /**
      * get 业务编码(和产品申请)
@@ -125,6 +128,7 @@ public class SendBatchMsg  implements java.io.Serializable {
         this.smsMessageSource = smsMessageSource;
     }
 
+
     /**
      * get 用户pin
      *
@@ -143,23 +147,25 @@ public class SendBatchMsg  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
-     * get 手机号
-     *
-     * @return
-     */
+    * get 手机号
+    *
+    * @return
+    */
     public List<String> getMobileNumSet() {
         return mobileNumSet;
     }
 
     /**
-     * set 手机号
-     *
-     * @param mobileNumSet
-     */
+    * set 手机号
+    *
+    * @param mobileNumSet
+    */
     public void setMobileNumSet(List<String> mobileNumSet) {
         this.mobileNumSet = mobileNumSet;
     }
+
 
 
     /**
@@ -172,15 +178,17 @@ public class SendBatchMsg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 模版参数
-     *
-     * @param templateParam
-     */
+    * set 模版参数
+    *
+    * @param templateParam
+    */
     public SendBatchMsg templateParam(List<String> templateParam) {
         this.templateParam = templateParam;
         return this;
     }
+
 
     /**
      * set 业务编码(和产品申请)
@@ -192,6 +200,7 @@ public class SendBatchMsg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户pin
      *
@@ -202,15 +211,17 @@ public class SendBatchMsg  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 手机号
-     *
-     * @param mobileNumSet
-     */
+    * set 手机号
+    *
+    * @param mobileNumSet
+    */
     public SendBatchMsg mobileNumSet(List<String> mobileNumSet) {
         this.mobileNumSet = mobileNumSet;
         return this;
     }
+
 
 
     /**
@@ -236,5 +247,4 @@ public class SendBatchMsg  implements java.io.Serializable {
         }
         this.mobileNumSet.add(mobileNumSet);
     }
-
 }

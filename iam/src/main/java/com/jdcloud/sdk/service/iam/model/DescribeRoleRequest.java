@@ -42,6 +42,7 @@ public class DescribeRoleRequest extends JdcloudRequest implements java.io.Seria
     private String roleName;
 
 
+
     /**
      * get 角色名称
      *
@@ -59,6 +60,7 @@ public class DescribeRoleRequest extends JdcloudRequest implements java.io.Seria
     public void setRoleName(String roleName) {
         this.roleName = roleName;
     }
+
 
 
     /**

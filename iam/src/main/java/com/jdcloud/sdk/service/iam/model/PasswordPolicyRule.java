@@ -62,6 +62,7 @@ public class PasswordPolicyRule  implements java.io.Serializable {
     private Boolean requireSpecialCharacters;
 
 
+
     /**
      * get 是否包含大写字母
      *
@@ -79,6 +80,7 @@ public class PasswordPolicyRule  implements java.io.Serializable {
     public void setRequireUppercaseCharacters(Boolean requireUppercaseCharacters) {
         this.requireUppercaseCharacters = requireUppercaseCharacters;
     }
+
 
     /**
      * get 是否包含小写字母
@@ -98,6 +100,7 @@ public class PasswordPolicyRule  implements java.io.Serializable {
         this.requireLowercaseCharacters = requireLowercaseCharacters;
     }
 
+
     /**
      * get 是否包含数字
      *
@@ -115,6 +118,7 @@ public class PasswordPolicyRule  implements java.io.Serializable {
     public void setRequireNumbers(Boolean requireNumbers) {
         this.requireNumbers = requireNumbers;
     }
+
 
     /**
      * get 是否包含特殊字符
@@ -135,6 +139,7 @@ public class PasswordPolicyRule  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否包含大写字母
      *
@@ -144,6 +149,7 @@ public class PasswordPolicyRule  implements java.io.Serializable {
         this.requireUppercaseCharacters = requireUppercaseCharacters;
         return this;
     }
+
 
     /**
      * set 是否包含小写字母
@@ -155,6 +161,7 @@ public class PasswordPolicyRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否包含数字
      *
@@ -164,6 +171,7 @@ public class PasswordPolicyRule  implements java.io.Serializable {
         this.requireNumbers = requireNumbers;
         return this;
     }
+
 
     /**
      * set 是否包含特殊字符

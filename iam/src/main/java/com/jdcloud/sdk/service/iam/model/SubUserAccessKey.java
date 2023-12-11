@@ -48,6 +48,16 @@ public class SubUserAccessKey  implements java.io.Serializable {
     private String createTime;
 
     /**
+     * 最近一次使用AK访问时间
+     */
+    private String lastVisitTime;
+
+    /**
+     * 最近一次使用AK访问事件
+     */
+    private String lastVisitEvent;
+
+    /**
      * 禁用/启用状态[0-禁用,1-启用]
      */
     private Integer status;
@@ -56,6 +66,12 @@ public class SubUserAccessKey  implements java.io.Serializable {
      * 删除/有效状态[0-删除,1-有效]
      */
     private Integer yn;
+
+    /**
+     * AK备注信息
+     */
+    private String remark;
+
 
 
     /**
@@ -76,6 +92,7 @@ public class SubUserAccessKey  implements java.io.Serializable {
         this.accessKey = accessKey;
     }
 
+
     /**
      * get secretAccessKey
      *
@@ -93,6 +110,7 @@ public class SubUserAccessKey  implements java.io.Serializable {
     public void setSecretAccessKey(String secretAccessKey) {
         this.secretAccessKey = secretAccessKey;
     }
+
 
     /**
      * get 创建时间
@@ -112,6 +130,45 @@ public class SubUserAccessKey  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
+    /**
+     * get 最近一次使用AK访问时间
+     *
+     * @return
+     */
+    public String getLastVisitTime() {
+        return lastVisitTime;
+    }
+
+    /**
+     * set 最近一次使用AK访问时间
+     *
+     * @param lastVisitTime
+     */
+    public void setLastVisitTime(String lastVisitTime) {
+        this.lastVisitTime = lastVisitTime;
+    }
+
+
+    /**
+     * get 最近一次使用AK访问事件
+     *
+     * @return
+     */
+    public String getLastVisitEvent() {
+        return lastVisitEvent;
+    }
+
+    /**
+     * set 最近一次使用AK访问事件
+     *
+     * @param lastVisitEvent
+     */
+    public void setLastVisitEvent(String lastVisitEvent) {
+        this.lastVisitEvent = lastVisitEvent;
+    }
+
+
     /**
      * get 禁用/启用状态[0-禁用,1-启用]
      *
@@ -129,6 +186,7 @@ public class SubUserAccessKey  implements java.io.Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 删除/有效状态[0-删除,1-有效]
@@ -150,6 +208,26 @@ public class SubUserAccessKey  implements java.io.Serializable {
 
 
     /**
+     * get AK备注信息
+     *
+     * @return
+     */
+    public String getRemark() {
+        return remark;
+    }
+
+    /**
+     * set AK备注信息
+     *
+     * @param remark
+     */
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+
+
+    /**
      * set accessKey
      *
      * @param accessKey
@@ -158,6 +236,7 @@ public class SubUserAccessKey  implements java.io.Serializable {
         this.accessKey = accessKey;
         return this;
     }
+
 
     /**
      * set secretAccessKey
@@ -169,6 +248,7 @@ public class SubUserAccessKey  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -178,6 +258,29 @@ public class SubUserAccessKey  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
+
+    /**
+     * set 最近一次使用AK访问时间
+     *
+     * @param lastVisitTime
+     */
+    public SubUserAccessKey lastVisitTime(String lastVisitTime) {
+        this.lastVisitTime = lastVisitTime;
+        return this;
+    }
+
+
+    /**
+     * set 最近一次使用AK访问事件
+     *
+     * @param lastVisitEvent
+     */
+    public SubUserAccessKey lastVisitEvent(String lastVisitEvent) {
+        this.lastVisitEvent = lastVisitEvent;
+        return this;
+    }
+
 
     /**
      * set 禁用/启用状态[0-禁用,1-启用]
@@ -189,6 +292,7 @@ public class SubUserAccessKey  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 删除/有效状态[0-删除,1-有效]
      *
@@ -196,6 +300,17 @@ public class SubUserAccessKey  implements java.io.Serializable {
      */
     public SubUserAccessKey yn(Integer yn) {
         this.yn = yn;
+        return this;
+    }
+
+
+    /**
+     * set AK备注信息
+     *
+     * @param remark
+     */
+    public SubUserAccessKey remark(String remark) {
+        this.remark = remark;
         return this;
     }
 

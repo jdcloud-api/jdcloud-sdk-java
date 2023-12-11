@@ -28,6 +28,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
  * 删除子用户的AccessKey
+
  */
 public class DeleteSubUserAccessKeyResult extends JdcloudResult implements java.io.Serializable {
 

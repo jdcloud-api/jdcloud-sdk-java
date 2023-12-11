@@ -65,6 +65,7 @@ public class CreateRoleInfo  implements java.io.Serializable {
     private Integer maxSessionDuration;
 
 
+
     /**
      * get 角色名，支持4~64位的字母，数字以及-和_, 以字母开头
      *
@@ -82,6 +83,7 @@ public class CreateRoleInfo  implements java.io.Serializable {
     public void setRoleName(String roleName) {
         this.roleName = roleName;
     }
+
 
     /**
      * get 角色类型，3-服务角色，4-用户角色
@@ -101,6 +103,7 @@ public class CreateRoleInfo  implements java.io.Serializable {
         this.type = type;
     }
 
+
     /**
      * get 角色信任关系策略
      *
@@ -119,6 +122,7 @@ public class CreateRoleInfo  implements java.io.Serializable {
         this.assumeRolePolicyDocument = assumeRolePolicyDocument;
     }
 
+
     /**
      * get 描述，0~256个字符
      *
@@ -136,6 +140,7 @@ public class CreateRoleInfo  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 最大会话时长3600~43200秒，默认3600秒
@@ -156,6 +161,7 @@ public class CreateRoleInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 角色名，支持4~64位的字母，数字以及-和_, 以字母开头
      *
@@ -165,6 +171,7 @@ public class CreateRoleInfo  implements java.io.Serializable {
         this.roleName = roleName;
         return this;
     }
+
 
     /**
      * set 角色类型，3-服务角色，4-用户角色
@@ -176,6 +183,7 @@ public class CreateRoleInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 角色信任关系策略
      *
@@ -186,6 +194,7 @@ public class CreateRoleInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述，0~256个字符
      *
@@ -195,6 +204,7 @@ public class CreateRoleInfo  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 最大会话时长3600~43200秒，默认3600秒

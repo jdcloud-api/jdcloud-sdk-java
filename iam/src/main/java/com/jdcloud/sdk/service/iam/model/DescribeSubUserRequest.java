@@ -42,6 +42,7 @@ public class DescribeSubUserRequest extends JdcloudRequest implements java.io.Se
     private String subUser;
 
 
+
     /**
      * get 子用户名
      *
@@ -59,6 +60,7 @@ public class DescribeSubUserRequest extends JdcloudRequest implements java.io.Se
     public void setSubUser(String subUser) {
         this.subUser = subUser;
     }
+
 
 
     /**

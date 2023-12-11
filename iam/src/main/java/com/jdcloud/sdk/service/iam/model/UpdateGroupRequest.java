@@ -50,6 +50,7 @@ public class UpdateGroupRequest extends JdcloudRequest implements java.io.Serial
     private String groupName;
 
 
+
     /**
      * get updateGroupInfo
      *
@@ -67,6 +68,7 @@ public class UpdateGroupRequest extends JdcloudRequest implements java.io.Serial
     public void setUpdateGroupInfo(UpdateGroupInfo updateGroupInfo) {
         this.updateGroupInfo = updateGroupInfo;
     }
+
 
     /**
      * get 用户组名称
@@ -87,6 +89,7 @@ public class UpdateGroupRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set updateGroupInfo
      *
@@ -96,6 +99,7 @@ public class UpdateGroupRequest extends JdcloudRequest implements java.io.Serial
         this.updateGroupInfo = updateGroupInfo;
         return this;
     }
+
 
     /**
      * set 用户组名称
