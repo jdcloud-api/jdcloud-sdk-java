@@ -33,12 +33,12 @@ public class AliveResultInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 人脸照片
+     * 人脸照片base64
      */
     private String faceImage;
 
     /**
-     * 场景照片
+     * 场景照片base64
      */
     private String sceneImage;
 
@@ -70,7 +70,7 @@ public class AliveResultInfo  implements java.io.Serializable {
 
 
     /**
-     * get 人脸照片
+     * get 人脸照片base64
      *
      * @return
      */
@@ -79,7 +79,7 @@ public class AliveResultInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 人脸照片
+     * set 人脸照片base64
      *
      * @param faceImage
      */
@@ -89,7 +89,7 @@ public class AliveResultInfo  implements java.io.Serializable {
 
 
     /**
-     * get 场景照片
+     * get 场景照片base64
      *
      * @return
      */
@@ -98,7 +98,7 @@ public class AliveResultInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 场景照片
+     * set 场景照片base64
      *
      * @param sceneImage
      */
@@ -204,7 +204,7 @@ public class AliveResultInfo  implements java.io.Serializable {
 
 
     /**
-     * set 人脸照片
+     * set 人脸照片base64
      *
      * @param faceImage
      */
@@ -215,7 +215,7 @@ public class AliveResultInfo  implements java.io.Serializable {
 
 
     /**
-     * set 场景照片
+     * set 场景照片base64
      *
      * @param sceneImage
      */

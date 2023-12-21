@@ -82,6 +82,11 @@ public class OCRInfo  implements java.io.Serializable {
      */
     private String dueTime;
 
+    /**
+     * 1收费，0不收费
+     */
+    private String chargeFlag;
+
 
 
     /**
@@ -274,6 +279,25 @@ public class OCRInfo  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 1收费，0不收费
+     *
+     * @return
+     */
+    public String getChargeFlag() {
+        return chargeFlag;
+    }
+
+    /**
+     * set 1收费，0不收费
+     *
+     * @param chargeFlag
+     */
+    public void setChargeFlag(String chargeFlag) {
+        this.chargeFlag = chargeFlag;
+    }
+
+
 
     /**
      * set 识别状态
@@ -381,6 +405,17 @@ public class OCRInfo  implements java.io.Serializable {
      */
     public OCRInfo dueTime(String dueTime) {
         this.dueTime = dueTime;
+        return this;
+    }
+
+
+    /**
+     * set 1收费，0不收费
+     *
+     * @param chargeFlag
+     */
+    public OCRInfo chargeFlag(String chargeFlag) {
+        this.chargeFlag = chargeFlag;
         return this;
     }
 

@@ -34,12 +34,12 @@ public class GetAliveResultResult extends JdcloudResult implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 人脸照片
+     * 人脸照片base64
      */
     private String faceImage;
 
     /**
-     * 场景照片
+     * 场景照片base64
      */
     private String sceneImage;
 
@@ -71,7 +71,7 @@ public class GetAliveResultResult extends JdcloudResult implements java.io.Seria
 
 
     /**
-     * get 人脸照片
+     * get 人脸照片base64
      *
      * @return
      */
@@ -80,7 +80,7 @@ public class GetAliveResultResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set 人脸照片
+     * set 人脸照片base64
      *
      * @param faceImage
      */
@@ -90,7 +90,7 @@ public class GetAliveResultResult extends JdcloudResult implements java.io.Seria
 
 
     /**
-     * get 场景照片
+     * get 场景照片base64
      *
      * @return
      */
@@ -99,7 +99,7 @@ public class GetAliveResultResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set 场景照片
+     * set 场景照片base64
      *
      * @param sceneImage
      */
@@ -205,7 +205,7 @@ public class GetAliveResultResult extends JdcloudResult implements java.io.Seria
 
 
     /**
-     * set 人脸照片
+     * set 人脸照片base64
      *
      * @param faceImage
      */
@@ -216,7 +216,7 @@ public class GetAliveResultResult extends JdcloudResult implements java.io.Seria
 
 
     /**
-     * set 场景照片
+     * set 场景照片base64
      *
      * @param sceneImage
      */
