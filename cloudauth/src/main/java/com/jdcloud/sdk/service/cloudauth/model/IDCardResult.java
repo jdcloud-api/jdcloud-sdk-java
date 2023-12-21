@@ -83,6 +83,11 @@ public class IDCardResult extends JdcloudResult implements java.io.Serializable 
      */
     private String dueTime;
 
+    /**
+     * 1收费，0不收费
+     */
+    private String chargeFlag;
+
 
 
     /**
@@ -275,6 +280,25 @@ public class IDCardResult extends JdcloudResult implements java.io.Serializable 
     }
 
 
+    /**
+     * get 1收费，0不收费
+     *
+     * @return
+     */
+    public String getChargeFlag() {
+        return chargeFlag;
+    }
+
+    /**
+     * set 1收费，0不收费
+     *
+     * @param chargeFlag
+     */
+    public void setChargeFlag(String chargeFlag) {
+        this.chargeFlag = chargeFlag;
+    }
+
+
 
     /**
      * set 识别状态
@@ -382,6 +406,17 @@ public class IDCardResult extends JdcloudResult implements java.io.Serializable 
      */
     public IDCardResult dueTime(String dueTime) {
         this.dueTime = dueTime;
+        return this;
+    }
+
+
+    /**
+     * set 1收费，0不收费
+     *
+     * @param chargeFlag
+     */
+    public IDCardResult chargeFlag(String chargeFlag) {
+        this.chargeFlag = chargeFlag;
         return this;
     }
 

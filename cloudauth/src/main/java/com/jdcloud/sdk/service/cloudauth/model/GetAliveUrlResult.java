@@ -53,6 +53,11 @@ public class GetAliveUrlResult extends JdcloudResult implements java.io.Serializ
      */
     private String token;
 
+    /**
+     * 1收费，0不收费
+     */
+    private String chargeFlag;
+
 
 
     /**
@@ -131,6 +136,25 @@ public class GetAliveUrlResult extends JdcloudResult implements java.io.Serializ
     }
 
 
+    /**
+     * get 1收费，0不收费
+     *
+     * @return
+     */
+    public String getChargeFlag() {
+        return chargeFlag;
+    }
+
+    /**
+     * set 1收费，0不收费
+     *
+     * @param chargeFlag
+     */
+    public void setChargeFlag(String chargeFlag) {
+        this.chargeFlag = chargeFlag;
+    }
+
+
 
     /**
      * set 状态码
@@ -172,6 +196,17 @@ public class GetAliveUrlResult extends JdcloudResult implements java.io.Serializ
      */
     public GetAliveUrlResult token(String token) {
         this.token = token;
+        return this;
+    }
+
+
+    /**
+     * set 1收费，0不收费
+     *
+     * @param chargeFlag
+     */
+    public GetAliveUrlResult chargeFlag(String chargeFlag) {
+        this.chargeFlag = chargeFlag;
         return this;
     }
 

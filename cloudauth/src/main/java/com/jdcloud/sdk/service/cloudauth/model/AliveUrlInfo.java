@@ -52,6 +52,11 @@ public class AliveUrlInfo  implements java.io.Serializable {
      */
     private String token;
 
+    /**
+     * 1收费，0不收费
+     */
+    private String chargeFlag;
+
 
 
     /**
@@ -130,6 +135,25 @@ public class AliveUrlInfo  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 1收费，0不收费
+     *
+     * @return
+     */
+    public String getChargeFlag() {
+        return chargeFlag;
+    }
+
+    /**
+     * set 1收费，0不收费
+     *
+     * @param chargeFlag
+     */
+    public void setChargeFlag(String chargeFlag) {
+        this.chargeFlag = chargeFlag;
+    }
+
+
 
     /**
      * set 状态码
@@ -171,6 +195,17 @@ public class AliveUrlInfo  implements java.io.Serializable {
      */
     public AliveUrlInfo token(String token) {
         this.token = token;
+        return this;
+    }
+
+
+    /**
+     * set 1收费，0不收费
+     *
+     * @param chargeFlag
+     */
+    public AliveUrlInfo chargeFlag(String chargeFlag) {
+        this.chargeFlag = chargeFlag;
         return this;
     }
 
