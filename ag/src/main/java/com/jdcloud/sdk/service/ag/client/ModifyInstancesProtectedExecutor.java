@@ -26,12 +26,12 @@ package com.jdcloud.sdk.service.ag.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.ag.model.ModifyInstancesManagedResponse;
+import com.jdcloud.sdk.service.ag.model.ModifyInstancesProtectedResponse;
 
 /**
- * 弹性伸缩组内资源托管设置
+ * 弹性伸缩组内资源保护设置
  */
-class ModifyInstancesManagedExecutor extends JdcloudExecutor {
+class ModifyInstancesProtectedExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -40,11 +40,11 @@ class ModifyInstancesManagedExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/autoScaling/{agId}:modifyInstancesManaged";
+        return "/regions/{regionId}/autoScaling/{agId}:modifyInstancesProtected";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return ModifyInstancesManagedResponse.class;
+        return ModifyInstancesProtectedResponse.class;
     }
 }

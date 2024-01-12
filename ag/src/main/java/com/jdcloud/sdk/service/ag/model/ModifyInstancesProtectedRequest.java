@@ -30,18 +30,18 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 弹性伸缩组内资源托管设置
+ * 弹性伸缩组内资源保护设置
  */
-public class ModifyInstancesManagedRequest extends JdcloudRequest implements java.io.Serializable {
+public class ModifyInstancesProtectedRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例是否托管给弹性伸缩组，托管后缩容时可以删除该实例。
+     * 实例在弹性伸缩组是否为保护状态，保护状态的实例缩容时不可以删除。
      * Required:true
      */
     @Required
-    private Boolean isManaged;
+    private Boolean isProtected;
 
     /**
      * 资源ID数组。
@@ -67,21 +67,21 @@ public class ModifyInstancesManagedRequest extends JdcloudRequest implements jav
 
 
     /**
-     * get 实例是否托管给弹性伸缩组，托管后缩容时可以删除该实例。
+     * get 实例在弹性伸缩组是否为保护状态，保护状态的实例缩容时不可以删除。
      *
      * @return
      */
-    public Boolean getIsManaged() {
-        return isManaged;
+    public Boolean getIsProtected() {
+        return isProtected;
     }
 
     /**
-     * set 实例是否托管给弹性伸缩组，托管后缩容时可以删除该实例。
+     * set 实例在弹性伸缩组是否为保护状态，保护状态的实例缩容时不可以删除。
      *
-     * @param isManaged
+     * @param isProtected
      */
-    public void setIsManaged(Boolean isManaged) {
-        this.isManaged = isManaged;
+    public void setIsProtected(Boolean isProtected) {
+        this.isProtected = isProtected;
     }
 
 
@@ -144,12 +144,12 @@ public class ModifyInstancesManagedRequest extends JdcloudRequest implements jav
 
 
     /**
-     * set 实例是否托管给弹性伸缩组，托管后缩容时可以删除该实例。
+     * set 实例在弹性伸缩组是否为保护状态，保护状态的实例缩容时不可以删除。
      *
-     * @param isManaged
+     * @param isProtected
      */
-    public ModifyInstancesManagedRequest isManaged(Boolean isManaged) {
-        this.isManaged = isManaged;
+    public ModifyInstancesProtectedRequest isProtected(Boolean isProtected) {
+        this.isProtected = isProtected;
         return this;
     }
 
@@ -159,7 +159,7 @@ public class ModifyInstancesManagedRequest extends JdcloudRequest implements jav
     *
     * @param instanceIds
     */
-    public ModifyInstancesManagedRequest instanceIds(List<String> instanceIds) {
+    public ModifyInstancesProtectedRequest instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
@@ -170,7 +170,7 @@ public class ModifyInstancesManagedRequest extends JdcloudRequest implements jav
      *
      * @param regionId
      */
-    public ModifyInstancesManagedRequest regionId(String regionId) {
+    public ModifyInstancesProtectedRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -181,7 +181,7 @@ public class ModifyInstancesManagedRequest extends JdcloudRequest implements jav
      *
      * @param agId
      */
-    public ModifyInstancesManagedRequest agId(String agId) {
+    public ModifyInstancesProtectedRequest agId(String agId) {
         this.agId = agId;
         return this;
     }

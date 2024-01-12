@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ag.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 弹性伸缩组内资源是否托管修改
+ * 弹性伸缩组内资源托管设置
  */
 public class ModifyInstancesManagedResponse extends JdcloudResponse<ModifyInstancesManagedResult> implements java.io.Serializable {
 

@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.ag.client.ModifyInstancesManagedExecutor;
 import com.jdcloud.sdk.service.ag.model.UpdateAgRequest;
 import com.jdcloud.sdk.service.ag.model.UpdateAgResponse;
 import com.jdcloud.sdk.service.ag.client.UpdateAgExecutor;
+import com.jdcloud.sdk.service.ag.model.ModifyInstancesProtectedRequest;
+import com.jdcloud.sdk.service.ag.model.ModifyInstancesProtectedResponse;
+import com.jdcloud.sdk.service.ag.client.ModifyInstancesProtectedExecutor;
 import com.jdcloud.sdk.service.ag.model.DisableAsCronRequest;
 import com.jdcloud.sdk.service.ag.model.DisableAsCronResponse;
 import com.jdcloud.sdk.service.ag.client.DisableAsCronExecutor;
@@ -172,7 +175,7 @@ public class AgClient extends JdcloudClient {
 
 
     /**
-     * 弹性伸缩组内资源是否托管修改
+     * 弹性伸缩组内资源托管设置
      *
      * @param request
      * @return
@@ -191,6 +194,17 @@ public class AgClient extends JdcloudClient {
      */
     public UpdateAgResponse updateAg(UpdateAgRequest request) throws JdcloudSdkException {
         return new UpdateAgExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 弹性伸缩组内资源保护设置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyInstancesProtectedResponse modifyInstancesProtected(ModifyInstancesProtectedRequest request) throws JdcloudSdkException {
+        return new ModifyInstancesProtectedExecutor().client(this).execute(request);
     }
 
     /**
