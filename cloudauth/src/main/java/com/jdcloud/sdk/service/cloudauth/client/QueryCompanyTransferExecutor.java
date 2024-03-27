@@ -26,12 +26,12 @@ package com.jdcloud.sdk.service.cloudauth.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyTransferResponse;
+import com.jdcloud.sdk.service.cloudauth.model.QueryCompanyTransferResponse;
 
 /**
- * 对公打款验证
+ * 对公打款状态查询
  */
-class CheckCompanyTransferExecutor extends JdcloudExecutor {
+class QueryCompanyTransferExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -40,11 +40,11 @@ class CheckCompanyTransferExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/company:check";
+        return "/company:transferStatus";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return CheckCompanyTransferResponse.class;
+        return QueryCompanyTransferResponse.class;
     }
 }

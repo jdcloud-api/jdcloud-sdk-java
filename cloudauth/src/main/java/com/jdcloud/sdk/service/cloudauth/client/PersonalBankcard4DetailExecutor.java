@@ -26,12 +26,12 @@ package com.jdcloud.sdk.service.cloudauth.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyTransferResponse;
+import com.jdcloud.sdk.service.cloudauth.model.PersonalBankcard4DetailResponse;
 
 /**
- * 对公打款验证
+ * 个人银行卡四要素详版
  */
-class CheckCompanyTransferExecutor extends JdcloudExecutor {
+class PersonalBankcard4DetailExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -40,11 +40,11 @@ class CheckCompanyTransferExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/company:check";
+        return "/detail:bankcard4";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return CheckCompanyTransferResponse.class;
+        return PersonalBankcard4DetailResponse.class;
     }
 }

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.cloudauth.model.CheckInfo;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 对公打款查询
+ * 对公打款验证
  */
 public class CheckCompanyTransferRequest extends JdcloudRequest implements java.io.Serializable {
 

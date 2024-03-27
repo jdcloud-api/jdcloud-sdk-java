@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cloudauth.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 对公打款查询
+ * 对公打款验证
  */
 public class CheckCompanyTransferResponse extends JdcloudResponse<CheckCompanyTransferResult> implements java.io.Serializable {
 

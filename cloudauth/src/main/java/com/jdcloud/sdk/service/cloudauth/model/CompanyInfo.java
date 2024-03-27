@@ -56,11 +56,6 @@ public class CompanyInfo  implements java.io.Serializable {
     @Required
     private String idCode;
 
-    /**
-     * 组织机构代码
-     */
-    private String orgCode;
-
 
 
     /**
@@ -128,25 +123,6 @@ public class CompanyInfo  implements java.io.Serializable {
     }
 
 
-    /**
-     * get 组织机构代码
-     *
-     * @return
-     */
-    public String getOrgCode() {
-        return orgCode;
-    }
-
-    /**
-     * set 组织机构代码
-     *
-     * @param orgCode
-     */
-    public void setOrgCode(String orgCode) {
-        this.orgCode = orgCode;
-    }
-
-
 
     /**
      * set 企业类型：
@@ -181,17 +157,6 @@ public class CompanyInfo  implements java.io.Serializable {
      */
     public CompanyInfo idCode(String idCode) {
         this.idCode = idCode;
-        return this;
-    }
-
-
-    /**
-     * set 组织机构代码
-     *
-     * @param orgCode
-     */
-    public CompanyInfo orgCode(String orgCode) {
-        this.orgCode = orgCode;
         return this;
     }
 

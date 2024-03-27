@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.cloudauth.model.DescribeApplyStatusRequest;
 import com.jdcloud.sdk.service.cloudauth.model.DescribeApplyStatusResponse;
 import com.jdcloud.sdk.service.cloudauth.client.DescribeApplyStatusExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.PersonalBankcard4OtherRequest;
+import com.jdcloud.sdk.service.cloudauth.model.PersonalBankcard4OtherResponse;
+import com.jdcloud.sdk.service.cloudauth.client.PersonalBankcard4OtherExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.GetAliveResultRequest;
 import com.jdcloud.sdk.service.cloudauth.model.GetAliveResultResponse;
 import com.jdcloud.sdk.service.cloudauth.client.GetAliveResultExecutor;
@@ -46,6 +49,9 @@ import com.jdcloud.sdk.service.cloudauth.client.PersonalMobileExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.CompanyTransferSimpleRequest;
 import com.jdcloud.sdk.service.cloudauth.model.CompanyTransferSimpleResponse;
 import com.jdcloud.sdk.service.cloudauth.client.CompanyTransferSimpleExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.PersonalBankcard4DetailRequest;
+import com.jdcloud.sdk.service.cloudauth.model.PersonalBankcard4DetailResponse;
+import com.jdcloud.sdk.service.cloudauth.client.PersonalBankcard4DetailExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyTransferRequest;
 import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyTransferResponse;
 import com.jdcloud.sdk.service.cloudauth.client.CheckCompanyTransferExecutor;
@@ -55,6 +61,12 @@ import com.jdcloud.sdk.service.cloudauth.client.CheckCompanyInfoExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.QueryBankBranchListRequest;
 import com.jdcloud.sdk.service.cloudauth.model.QueryBankBranchListResponse;
 import com.jdcloud.sdk.service.cloudauth.client.QueryBankBranchListExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.OneClickRequest;
+import com.jdcloud.sdk.service.cloudauth.model.OneClickResponse;
+import com.jdcloud.sdk.service.cloudauth.client.OneClickExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.PersonalBankcard3OtherRequest;
+import com.jdcloud.sdk.service.cloudauth.model.PersonalBankcard3OtherResponse;
+import com.jdcloud.sdk.service.cloudauth.client.PersonalBankcard3OtherExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.CheckLegalPersonRequest;
 import com.jdcloud.sdk.service.cloudauth.model.CheckLegalPersonResponse;
 import com.jdcloud.sdk.service.cloudauth.client.CheckLegalPersonExecutor;
@@ -70,9 +82,15 @@ import com.jdcloud.sdk.service.cloudauth.client.IDCardExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.CompanyTransferRequest;
 import com.jdcloud.sdk.service.cloudauth.model.CompanyTransferResponse;
 import com.jdcloud.sdk.service.cloudauth.client.CompanyTransferExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.QueryCompanyTransferRequest;
+import com.jdcloud.sdk.service.cloudauth.model.QueryCompanyTransferResponse;
+import com.jdcloud.sdk.service.cloudauth.client.QueryCompanyTransferExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.QueryCityListRequest;
 import com.jdcloud.sdk.service.cloudauth.model.QueryCityListResponse;
 import com.jdcloud.sdk.service.cloudauth.client.QueryCityListExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.PersonalBankcard3DetailRequest;
+import com.jdcloud.sdk.service.cloudauth.model.PersonalBankcard3DetailResponse;
+import com.jdcloud.sdk.service.cloudauth.client.PersonalBankcard3DetailExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.CheckLegalPersonDetailRequest;
 import com.jdcloud.sdk.service.cloudauth.model.CheckLegalPersonDetailResponse;
 import com.jdcloud.sdk.service.cloudauth.client.CheckLegalPersonDetailExecutor;
@@ -144,6 +162,17 @@ public class CloudauthClient extends JdcloudClient {
     }
 
     /**
+     * 个人银行卡四要素非身份证版
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PersonalBankcard4OtherResponse personalBankcard4Other(PersonalBankcard4OtherRequest request) throws JdcloudSdkException {
+        return new PersonalBankcard4OtherExecutor().client(this).execute(request);
+    }
+
+    /**
      * H5活体检测结果
      *
      * @param request
@@ -188,7 +217,18 @@ public class CloudauthClient extends JdcloudClient {
     }
 
     /**
-     * 对公打款查询
+     * 个人银行卡四要素详版
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PersonalBankcard4DetailResponse personalBankcard4Detail(PersonalBankcard4DetailRequest request) throws JdcloudSdkException {
+        return new PersonalBankcard4DetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 对公打款验证
      *
      * @param request
      * @return
@@ -218,6 +258,28 @@ public class CloudauthClient extends JdcloudClient {
      */
     public QueryBankBranchListResponse queryBankBranchList(QueryBankBranchListRequest request) throws JdcloudSdkException {
         return new QueryBankBranchListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 一键登录
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OneClickResponse oneClick(OneClickRequest request) throws JdcloudSdkException {
+        return new OneClickExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 个人银行卡三要素非身份证版
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PersonalBankcard3OtherResponse personalBankcard3Other(PersonalBankcard3OtherRequest request) throws JdcloudSdkException {
+        return new PersonalBankcard3OtherExecutor().client(this).execute(request);
     }
 
     /**
@@ -276,6 +338,17 @@ public class CloudauthClient extends JdcloudClient {
     }
 
     /**
+     * 对公打款状态查询
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryCompanyTransferResponse queryCompanyTransfer(QueryCompanyTransferRequest request) throws JdcloudSdkException {
+        return new QueryCompanyTransferExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询省份下城市编码
      *
      * @param request
@@ -284,6 +357,17 @@ public class CloudauthClient extends JdcloudClient {
      */
     public QueryCityListResponse queryCityList(QueryCityListRequest request) throws JdcloudSdkException {
         return new QueryCityListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 个人银行卡三要素详版
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PersonalBankcard3DetailResponse personalBankcard3Detail(PersonalBankcard3DetailRequest request) throws JdcloudSdkException {
+        return new PersonalBankcard3DetailExecutor().client(this).execute(request);
     }
 
     /**
