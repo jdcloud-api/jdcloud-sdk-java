@@ -56,7 +56,7 @@ public class CreateCommandRequest extends JdcloudRequest implements java.io.Seri
     private String commandType;
 
     /**
-     * 以base64编码的命令内容，编码后长度小于16KB
+     * 以base64编码的命令内容，编码后长度小于36KB
 
      * Required:true
      */
@@ -144,7 +144,7 @@ public class CreateCommandRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 以base64编码的命令内容，编码后长度小于16KB
+     * get 以base64编码的命令内容，编码后长度小于36KB
 
      *
      * @return
@@ -154,7 +154,7 @@ public class CreateCommandRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 以base64编码的命令内容，编码后长度小于16KB
+     * set 以base64编码的命令内容，编码后长度小于36KB
 
      *
      * @param commandContent
@@ -312,7 +312,7 @@ public class CreateCommandRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 以base64编码的命令内容，编码后长度小于16KB
+     * set 以base64编码的命令内容，编码后长度小于36KB
 
      *
      * @param commandContent

@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.assistant.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.common.model.TagFilter;
 
 /**
  * 用户自定义命令
@@ -35,7 +36,7 @@ public class Invocation  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 命令执行状态,取值为：[pending,running,stopping,failed,partial_failed,stopped,finished]
+     * 命令执行状态,取值为：[&#x60;waiting&#x60;,&#x60;pending&#x60;,&#x60;running&#x60;,&#x60;stopping&#x60;,&#x60;failed&#x60;,&#x60;partial_failed&#x60;,&#x60;stopped&#x60;,&#x60;finish&#x60;]
      */
     private String status;
 
@@ -50,10 +51,30 @@ public class Invocation  implements java.io.Serializable {
     private String commandName;
 
     /**
+     * 命令来源，[&#x60;jdcloud&#x60;:公共命令, &#x60;self&#x60;:私有命令]
+     */
+    private String sourceType;
+
+    /**
      * 命令内容调用Id
      */
     private String invokeId;
 
+    /**
+     * 请求执行命令的云主机Id
+     */
+    
+    private List<String> instances;
+    /**
+     * 请求执行命令的云主机标签
+     */
+    
+    private List<TagFilter> tags;
+    /**
+     * 执行命令的云主机
+     */
+    
+    private List<String> invokeInstances;
     /**
      * 命令类型
      */
@@ -95,14 +116,24 @@ public class Invocation  implements java.io.Serializable {
     private String workdir;
 
     /**
+     * 命令调用的错误信息
+     */
+    private String errorInfo;
+
+    /**
      * 该次命令调用的开始时间
      */
     private String createTime;
 
+    /**
+     * 该次命令配置的定时执行时间
+     */
+    private String execTime;
+
 
 
     /**
-     * get 命令执行状态,取值为：[pending,running,stopping,failed,partial_failed,stopped,finished]
+     * get 命令执行状态,取值为：[&#x60;waiting&#x60;,&#x60;pending&#x60;,&#x60;running&#x60;,&#x60;stopping&#x60;,&#x60;failed&#x60;,&#x60;partial_failed&#x60;,&#x60;stopped&#x60;,&#x60;finish&#x60;]
      *
      * @return
      */
@@ -111,7 +142,7 @@ public class Invocation  implements java.io.Serializable {
     }
 
     /**
-     * set 命令执行状态,取值为：[pending,running,stopping,failed,partial_failed,stopped,finished]
+     * set 命令执行状态,取值为：[&#x60;waiting&#x60;,&#x60;pending&#x60;,&#x60;running&#x60;,&#x60;stopping&#x60;,&#x60;failed&#x60;,&#x60;partial_failed&#x60;,&#x60;stopped&#x60;,&#x60;finish&#x60;]
      *
      * @param status
      */
@@ -159,6 +190,25 @@ public class Invocation  implements java.io.Serializable {
 
 
     /**
+     * get 命令来源，[&#x60;jdcloud&#x60;:公共命令, &#x60;self&#x60;:私有命令]
+     *
+     * @return
+     */
+    public String getSourceType() {
+        return sourceType;
+    }
+
+    /**
+     * set 命令来源，[&#x60;jdcloud&#x60;:公共命令, &#x60;self&#x60;:私有命令]
+     *
+     * @param sourceType
+     */
+    public void setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+    }
+
+
+    /**
      * get 命令内容调用Id
      *
      * @return
@@ -174,6 +224,63 @@ public class Invocation  implements java.io.Serializable {
      */
     public void setInvokeId(String invokeId) {
         this.invokeId = invokeId;
+    }
+
+
+    /**
+    * get 请求执行命令的云主机Id
+    *
+    * @return
+    */
+    public List<String> getInstances() {
+        return instances;
+    }
+
+    /**
+    * set 请求执行命令的云主机Id
+    *
+    * @param instances
+    */
+    public void setInstances(List<String> instances) {
+        this.instances = instances;
+    }
+
+
+    /**
+    * get 请求执行命令的云主机标签
+    *
+    * @return
+    */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 请求执行命令的云主机标签
+    *
+    * @param tags
+    */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+    * get 执行命令的云主机
+    *
+    * @return
+    */
+    public List<String> getInvokeInstances() {
+        return invokeInstances;
+    }
+
+    /**
+    * set 执行命令的云主机
+    *
+    * @param invokeInstances
+    */
+    public void setInvokeInstances(List<String> invokeInstances) {
+        this.invokeInstances = invokeInstances;
     }
 
 
@@ -330,6 +437,25 @@ public class Invocation  implements java.io.Serializable {
 
 
     /**
+     * get 命令调用的错误信息
+     *
+     * @return
+     */
+    public String getErrorInfo() {
+        return errorInfo;
+    }
+
+    /**
+     * set 命令调用的错误信息
+     *
+     * @param errorInfo
+     */
+    public void setErrorInfo(String errorInfo) {
+        this.errorInfo = errorInfo;
+    }
+
+
+    /**
      * get 该次命令调用的开始时间
      *
      * @return
@@ -348,9 +474,28 @@ public class Invocation  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 该次命令配置的定时执行时间
+     *
+     * @return
+     */
+    public String getExecTime() {
+        return execTime;
+    }
 
     /**
-     * set 命令执行状态,取值为：[pending,running,stopping,failed,partial_failed,stopped,finished]
+     * set 该次命令配置的定时执行时间
+     *
+     * @param execTime
+     */
+    public void setExecTime(String execTime) {
+        this.execTime = execTime;
+    }
+
+
+
+    /**
+     * set 命令执行状态,取值为：[&#x60;waiting&#x60;,&#x60;pending&#x60;,&#x60;running&#x60;,&#x60;stopping&#x60;,&#x60;failed&#x60;,&#x60;partial_failed&#x60;,&#x60;stopped&#x60;,&#x60;finish&#x60;]
      *
      * @param status
      */
@@ -383,12 +528,56 @@ public class Invocation  implements java.io.Serializable {
 
 
     /**
+     * set 命令来源，[&#x60;jdcloud&#x60;:公共命令, &#x60;self&#x60;:私有命令]
+     *
+     * @param sourceType
+     */
+    public Invocation sourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+
+
+    /**
      * set 命令内容调用Id
      *
      * @param invokeId
      */
     public Invocation invokeId(String invokeId) {
         this.invokeId = invokeId;
+        return this;
+    }
+
+
+    /**
+    * set 请求执行命令的云主机Id
+    *
+    * @param instances
+    */
+    public Invocation instances(List<String> instances) {
+        this.instances = instances;
+        return this;
+    }
+
+
+    /**
+    * set 请求执行命令的云主机标签
+    *
+    * @param tags
+    */
+    public Invocation tags(List<TagFilter> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+    * set 执行命令的云主机
+    *
+    * @param invokeInstances
+    */
+    public Invocation invokeInstances(List<String> invokeInstances) {
+        this.invokeInstances = invokeInstances;
         return this;
     }
 
@@ -482,6 +671,17 @@ public class Invocation  implements java.io.Serializable {
 
 
     /**
+     * set 命令调用的错误信息
+     *
+     * @param errorInfo
+     */
+    public Invocation errorInfo(String errorInfo) {
+        this.errorInfo = errorInfo;
+        return this;
+    }
+
+
+    /**
      * set 该次命令调用的开始时间
      *
      * @param createTime
@@ -492,6 +692,53 @@ public class Invocation  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 该次命令配置的定时执行时间
+     *
+     * @param execTime
+     */
+    public Invocation execTime(String execTime) {
+        this.execTime = execTime;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 请求执行命令的云主机Id
+     *
+     * @param instance
+     */
+    public void addInstance(String instance) {
+        if (this.instances == null) {
+            this.instances = new ArrayList<>();
+        }
+        this.instances.add(instance);
+    }
+
+    /**
+     * add item to 请求执行命令的云主机标签
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
+
+    /**
+     * add item to 执行命令的云主机
+     *
+     * @param invokeInstance
+     */
+    public void addInvokeInstance(String invokeInstance) {
+        if (this.invokeInstances == null) {
+            this.invokeInstances = new ArrayList<>();
+        }
+        this.invokeInstances.add(invokeInstance);
+    }
 
     /**
      * add item to 每个云主机的执行详情

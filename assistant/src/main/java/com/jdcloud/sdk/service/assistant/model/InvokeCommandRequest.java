@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.assistant.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.common.model.TagFilter;
 import com.jdcloud.sdk.service.assistant.model.Parameter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -53,13 +54,23 @@ public class InvokeCommandRequest extends JdcloudRequest implements java.io.Seri
     private String commandId;
 
     /**
-     * 运行该命令的云主机，最多云主机数50
+     * 运行该命令的云主机，与tags查到云主机取并集，一次最多云主机数50
 
-     * Required:true
      */
-    @Required
     
     private List<String> instances;
+    /**
+     * 根据tags确定运行该命令的云主机，与指定instances云主机取并集，一次最多云主机数50
+
+     */
+    
+    private List<TagFilter> tags;
+    /**
+     * 配置运行该命令的时刻，格式&#x60;yyyy-MM-dd HH:mm:ss&#x60;。不传该参数，立即执行命令。默认为空，可配置的时间范围为&#x60;当前时间+10minute&#x60;~&#x60;当前时间+6month&#x60;。
+
+     */
+    private String execTime;
+
     /**
      * 超时时间，取值范围：[10, 86400], 超过该时间后，尚未执行完的命令会置为失败。默认60s
 
@@ -127,7 +138,7 @@ public class InvokeCommandRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-    * get 运行该命令的云主机，最多云主机数50
+    * get 运行该命令的云主机，与tags查到云主机取并集，一次最多云主机数50
 
     *
     * @return
@@ -137,13 +148,55 @@ public class InvokeCommandRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-    * set 运行该命令的云主机，最多云主机数50
+    * set 运行该命令的云主机，与tags查到云主机取并集，一次最多云主机数50
 
     *
     * @param instances
     */
     public void setInstances(List<String> instances) {
         this.instances = instances;
+    }
+
+
+    /**
+    * get 根据tags确定运行该命令的云主机，与指定instances云主机取并集，一次最多云主机数50
+
+    *
+    * @return
+    */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 根据tags确定运行该命令的云主机，与指定instances云主机取并集，一次最多云主机数50
+
+    *
+    * @param tags
+    */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get 配置运行该命令的时刻，格式&#x60;yyyy-MM-dd HH:mm:ss&#x60;。不传该参数，立即执行命令。默认为空，可配置的时间范围为&#x60;当前时间+10minute&#x60;~&#x60;当前时间+6month&#x60;。
+
+     *
+     * @return
+     */
+    public String getExecTime() {
+        return execTime;
+    }
+
+    /**
+     * set 配置运行该命令的时刻，格式&#x60;yyyy-MM-dd HH:mm:ss&#x60;。不传该参数，立即执行命令。默认为空，可配置的时间范围为&#x60;当前时间+10minute&#x60;~&#x60;当前时间+6month&#x60;。
+
+     *
+     * @param execTime
+     */
+    public void setExecTime(String execTime) {
+        this.execTime = execTime;
     }
 
 
@@ -306,13 +359,37 @@ public class InvokeCommandRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-    * set 运行该命令的云主机，最多云主机数50
+    * set 运行该命令的云主机，与tags查到云主机取并集，一次最多云主机数50
 
     *
     * @param instances
     */
     public InvokeCommandRequest instances(List<String> instances) {
         this.instances = instances;
+        return this;
+    }
+
+
+    /**
+    * set 根据tags确定运行该命令的云主机，与指定instances云主机取并集，一次最多云主机数50
+
+    *
+    * @param tags
+    */
+    public InvokeCommandRequest tags(List<TagFilter> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set 配置运行该命令的时刻，格式&#x60;yyyy-MM-dd HH:mm:ss&#x60;。不传该参数，立即执行命令。默认为空，可配置的时间范围为&#x60;当前时间+10minute&#x60;~&#x60;当前时间+6month&#x60;。
+
+     *
+     * @param execTime
+     */
+    public InvokeCommandRequest execTime(String execTime) {
+        this.execTime = execTime;
         return this;
     }
 
@@ -402,7 +479,7 @@ public class InvokeCommandRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * add item to 运行该命令的云主机，最多云主机数50
+     * add item to 运行该命令的云主机，与tags查到云主机取并集，一次最多云主机数50
 
      *
      * @param instance
@@ -412,6 +489,19 @@ public class InvokeCommandRequest extends JdcloudRequest implements java.io.Seri
             this.instances = new ArrayList<>();
         }
         this.instances.add(instance);
+    }
+
+    /**
+     * add item to 根据tags确定运行该命令的云主机，与指定instances云主机取并集，一次最多云主机数50
+
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
     /**

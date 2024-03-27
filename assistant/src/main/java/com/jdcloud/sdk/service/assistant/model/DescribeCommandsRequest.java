@@ -56,13 +56,13 @@ public class DescribeCommandsRequest extends JdcloudRequest implements java.io.S
     private Integer pageSize;
 
     /**
-     * 命令Id
+     * 命令Id，最多可传入100个命令Id
 
      */
     
     private List<String> commandIds;
     /**
-     * 命令名称，长度为1\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
+     * 命令名称，长度为1\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。最多可传入100个命令名称。
 
      */
     
@@ -137,7 +137,7 @@ public class DescribeCommandsRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-    * get 命令Id
+    * get 命令Id，最多可传入100个命令Id
 
     *
     * @return
@@ -147,7 +147,7 @@ public class DescribeCommandsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-    * set 命令Id
+    * set 命令Id，最多可传入100个命令Id
 
     *
     * @param commandIds
@@ -158,7 +158,7 @@ public class DescribeCommandsRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-    * get 命令名称，长度为1\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
+    * get 命令名称，长度为1\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。最多可传入100个命令名称。
 
     *
     * @return
@@ -168,7 +168,7 @@ public class DescribeCommandsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-    * set 命令名称，长度为1\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
+    * set 命令名称，长度为1\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。最多可传入100个命令名称。
 
     *
     * @param commandNames
@@ -286,7 +286,7 @@ public class DescribeCommandsRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-    * set 命令Id
+    * set 命令Id，最多可传入100个命令Id
 
     *
     * @param commandIds
@@ -298,7 +298,7 @@ public class DescribeCommandsRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-    * set 命令名称，长度为1\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
+    * set 命令名称，长度为1\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。最多可传入100个命令名称。
 
     *
     * @param commandNames
@@ -358,7 +358,7 @@ public class DescribeCommandsRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * add item to 命令Id
+     * add item to 命令Id，最多可传入100个命令Id
 
      *
      * @param commandId
@@ -371,7 +371,7 @@ public class DescribeCommandsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * add item to 命令名称，长度为1\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
+     * add item to 命令名称，长度为1\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。最多可传入100个命令名称。
 
      *
      * @param commandName

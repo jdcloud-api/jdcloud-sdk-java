@@ -31,36 +31,21 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.assistant.model.ModifyCommandRequest;
-import com.jdcloud.sdk.service.assistant.model.ModifyCommandResponse;
-import com.jdcloud.sdk.service.assistant.client.ModifyCommandExecutor;
-import com.jdcloud.sdk.service.assistant.model.DescribeInvocationsRequest;
-import com.jdcloud.sdk.service.assistant.model.DescribeInvocationsResponse;
-import com.jdcloud.sdk.service.assistant.client.DescribeInvocationsExecutor;
-import com.jdcloud.sdk.service.assistant.model.DeleteCommandsRequest;
-import com.jdcloud.sdk.service.assistant.model.DeleteCommandsResponse;
-import com.jdcloud.sdk.service.assistant.client.DeleteCommandsExecutor;
-import com.jdcloud.sdk.service.assistant.model.ModifyLogConfigRequest;
-import com.jdcloud.sdk.service.assistant.model.ModifyLogConfigResponse;
-import com.jdcloud.sdk.service.assistant.client.ModifyLogConfigExecutor;
-import com.jdcloud.sdk.service.assistant.model.DescribeAssistantsRequest;
-import com.jdcloud.sdk.service.assistant.model.DescribeAssistantsResponse;
-import com.jdcloud.sdk.service.assistant.client.DescribeAssistantsExecutor;
 import com.jdcloud.sdk.service.assistant.model.CreateCommandRequest;
 import com.jdcloud.sdk.service.assistant.model.CreateCommandResponse;
 import com.jdcloud.sdk.service.assistant.client.CreateCommandExecutor;
 import com.jdcloud.sdk.service.assistant.model.AddLogConfigRequest;
 import com.jdcloud.sdk.service.assistant.model.AddLogConfigResponse;
 import com.jdcloud.sdk.service.assistant.client.AddLogConfigExecutor;
-import com.jdcloud.sdk.service.assistant.model.RunCommandRequest;
-import com.jdcloud.sdk.service.assistant.model.RunCommandResponse;
-import com.jdcloud.sdk.service.assistant.client.RunCommandExecutor;
-import com.jdcloud.sdk.service.assistant.model.StopInvocationRequest;
-import com.jdcloud.sdk.service.assistant.model.StopInvocationResponse;
-import com.jdcloud.sdk.service.assistant.client.StopInvocationExecutor;
+import com.jdcloud.sdk.service.assistant.model.DescribeInvocationsRequest;
+import com.jdcloud.sdk.service.assistant.model.DescribeInvocationsResponse;
+import com.jdcloud.sdk.service.assistant.client.DescribeInvocationsExecutor;
 import com.jdcloud.sdk.service.assistant.model.DescribeCommandsRequest;
 import com.jdcloud.sdk.service.assistant.model.DescribeCommandsResponse;
 import com.jdcloud.sdk.service.assistant.client.DescribeCommandsExecutor;
+import com.jdcloud.sdk.service.assistant.model.DeleteCommandsRequest;
+import com.jdcloud.sdk.service.assistant.model.DeleteCommandsResponse;
+import com.jdcloud.sdk.service.assistant.client.DeleteCommandsExecutor;
 import com.jdcloud.sdk.service.assistant.model.InvokeCommandRequest;
 import com.jdcloud.sdk.service.assistant.model.InvokeCommandResponse;
 import com.jdcloud.sdk.service.assistant.client.InvokeCommandExecutor;
@@ -116,96 +101,6 @@ public class AssistantClient extends JdcloudClient {
 
     /**
      * 
-修改用户自定义命令。
-
-详细操作说明请参考帮助文档：[用户自定义命令概述](https://docs.jdcloud.com/cn/virtual-machines/assistant-overview)
-
-## 接口说明
-- 该接口用于修改用户自定义命令。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyCommandResponse modifyCommand(ModifyCommandRequest request) throws JdcloudSdkException {
-        return new ModifyCommandExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 
-查询命令调用。
-
-详细操作说明请参考帮助文档：[用户自定义命令概述](https://docs.jdcloud.com/cn/virtual-machines/assistant-overview)
-
-## 接口说明
-- 该接口用于查询命令调用。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeInvocationsResponse describeInvocations(DescribeInvocationsRequest request) throws JdcloudSdkException {
-        return new DescribeInvocationsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 
-删除用户自定义命令。
-
-详细操作说明请参考帮助文档：[用户自定义命令概述](https://docs.jdcloud.com/cn/virtual-machines/assistant-overview)
-
-## 接口说明
-- 该接口用于删除用户自定义命令。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteCommandsResponse deleteCommands(DeleteCommandsRequest request) throws JdcloudSdkException {
-        return new DeleteCommandsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 
-配置用户日志信息。
-
-详细操作说明请参考帮助文档：[用户自定义命令概述](https://docs.jdcloud.com/cn/virtual-machines/assistant-overview)
-
-## 接口说明
-- 该接口用于配置用户日志信息。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyLogConfigResponse modifyLogConfig(ModifyLogConfigRequest request) throws JdcloudSdkException {
-        return new ModifyLogConfigExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 
-查询云助手客户端状态。
-
-详细操作说明请参考帮助文档：[用户自定义命令概述](https://docs.jdcloud.com/cn/virtual-machines/assistant-overview)
-
-## 接口说明
-- 该接口用于查询云助手客户端状态。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeAssistantsResponse describeAssistants(DescribeAssistantsRequest request) throws JdcloudSdkException {
-        return new DescribeAssistantsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 
 保存用户自定义命令。
 
 详细操作说明请参考帮助文档：[用户自定义命令概述](https://docs.jdcloud.com/cn/virtual-machines/assistant-overview)
@@ -242,39 +137,20 @@ public class AssistantClient extends JdcloudClient {
 
     /**
      * 
-执行用户保存的自定义命令。
+查询命令调用。
 
 详细操作说明请参考帮助文档：[用户自定义命令概述](https://docs.jdcloud.com/cn/virtual-machines/assistant-overview)
 
 ## 接口说明
-- 该接口用于执行用户保存的自定义命令。
+- 该接口用于查询命令调用。
 
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public RunCommandResponse runCommand(RunCommandRequest request) throws JdcloudSdkException {
-        return new RunCommandExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 
-停止执行命令。
-
-详细操作说明请参考帮助文档：[用户自定义命令概述](https://docs.jdcloud.com/cn/virtual-machines/assistant-overview)
-
-## 接口说明
-- 该接口用于停止执行命令。
-- 对于已经开始执行的命令，有可能会停止失败
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public StopInvocationResponse stopInvocation(StopInvocationRequest request) throws JdcloudSdkException {
-        return new StopInvocationExecutor().client(this).execute(request);
+    public DescribeInvocationsResponse describeInvocations(DescribeInvocationsRequest request) throws JdcloudSdkException {
+        return new DescribeInvocationsExecutor().client(this).execute(request);
     }
 
     /**
@@ -293,6 +169,24 @@ public class AssistantClient extends JdcloudClient {
      */
     public DescribeCommandsResponse describeCommands(DescribeCommandsRequest request) throws JdcloudSdkException {
         return new DescribeCommandsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+删除用户自定义命令。
+
+详细操作说明请参考帮助文档：[用户自定义命令概述](https://docs.jdcloud.com/cn/virtual-machines/assistant-overview)
+
+## 接口说明
+- 该接口用于删除用户自定义命令。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteCommandsResponse deleteCommands(DeleteCommandsRequest request) throws JdcloudSdkException {
+        return new DeleteCommandsExecutor().client(this).execute(request);
     }
 
     /**
