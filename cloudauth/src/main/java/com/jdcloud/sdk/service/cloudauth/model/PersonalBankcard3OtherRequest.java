@@ -25,51 +25,52 @@
 package com.jdcloud.sdk.service.cloudauth.model;
 
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.cloudauth.model.PersonalBankcardOther;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 个人身份证OCR
+ * 个人银行卡三要素非身份证版
  */
-public class IDCardRequest extends JdcloudRequest implements java.io.Serializable {
+public class PersonalBankcard3OtherRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 身份证图像base64(支持base64编码后小于4M，分辨率不高于4096x4096的图像)
+     * personalSpec
      * Required:true
      */
     @Required
-    private String imageData;
+    private PersonalBankcardOther personalSpec;
 
 
 
     /**
-     * get 身份证图像base64(支持base64编码后小于4M，分辨率不高于4096x4096的图像)
+     * get personalSpec
      *
      * @return
      */
-    public String getImageData() {
-        return imageData;
+    public PersonalBankcardOther getPersonalSpec() {
+        return personalSpec;
     }
 
     /**
-     * set 身份证图像base64(支持base64编码后小于4M，分辨率不高于4096x4096的图像)
+     * set personalSpec
      *
-     * @param imageData
+     * @param personalSpec
      */
-    public void setImageData(String imageData) {
-        this.imageData = imageData;
+    public void setPersonalSpec(PersonalBankcardOther personalSpec) {
+        this.personalSpec = personalSpec;
     }
 
 
 
     /**
-     * set 身份证图像base64(支持base64编码后小于4M，分辨率不高于4096x4096的图像)
+     * set personalSpec
      *
-     * @param imageData
+     * @param personalSpec
      */
-    public IDCardRequest imageData(String imageData) {
-        this.imageData = imageData;
+    public PersonalBankcard3OtherRequest personalSpec(PersonalBankcardOther personalSpec) {
+        this.personalSpec = personalSpec;
         return this;
     }
 

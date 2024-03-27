@@ -26,12 +26,12 @@ package com.jdcloud.sdk.service.cloudauth.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyTransferResponse;
+import com.jdcloud.sdk.service.cloudauth.model.OneClickResponse;
 
 /**
- * 对公打款验证
+ * 一键登录
  */
-class CheckCompanyTransferExecutor extends JdcloudExecutor {
+class OneClickExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -40,11 +40,11 @@ class CheckCompanyTransferExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/company:check";
+        return "/oneClick:login";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return CheckCompanyTransferResponse.class;
+        return OneClickResponse.class;
     }
 }

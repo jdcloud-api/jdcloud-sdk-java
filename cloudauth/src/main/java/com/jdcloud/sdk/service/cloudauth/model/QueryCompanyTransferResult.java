@@ -28,9 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 对公打款验证
+ * 对公打款状态查询
  */
-public class CheckCompanyTransferResult extends JdcloudResult implements java.io.Serializable {
+public class QueryCompanyTransferResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -183,7 +183,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
      *
      * @param success
      */
-    public CheckCompanyTransferResult success(Boolean success) {
+    public QueryCompanyTransferResult success(Boolean success) {
         this.success = success;
         return this;
     }
@@ -194,7 +194,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
      *
      * @param hasException
      */
-    public CheckCompanyTransferResult hasException(Boolean hasException) {
+    public QueryCompanyTransferResult hasException(Boolean hasException) {
         this.hasException = hasException;
         return this;
     }
@@ -205,7 +205,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
      *
      * @param code
      */
-    public CheckCompanyTransferResult code(String code) {
+    public QueryCompanyTransferResult code(String code) {
         this.code = code;
         return this;
     }
@@ -219,7 +219,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
      *
      * @param message
      */
-    public CheckCompanyTransferResult message(String message) {
+    public QueryCompanyTransferResult message(String message) {
         this.message = message;
         return this;
     }
@@ -232,7 +232,7 @@ public class CheckCompanyTransferResult extends JdcloudResult implements java.io
      *
      * @param detail
      */
-    public CheckCompanyTransferResult detail(String detail) {
+    public QueryCompanyTransferResult detail(String detail) {
         this.detail = detail;
         return this;
     }

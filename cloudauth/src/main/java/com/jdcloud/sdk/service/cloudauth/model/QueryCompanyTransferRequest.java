@@ -28,48 +28,48 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 个人身份证OCR
+ * 对公打款状态查询
  */
-public class IDCardRequest extends JdcloudRequest implements java.io.Serializable {
+public class QueryCompanyTransferRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 身份证图像base64(支持base64编码后小于4M，分辨率不高于4096x4096的图像)
+     * 订单号
      * Required:true
      */
     @Required
-    private String imageData;
+    private String orderNumber;
 
 
 
     /**
-     * get 身份证图像base64(支持base64编码后小于4M，分辨率不高于4096x4096的图像)
+     * get 订单号
      *
      * @return
      */
-    public String getImageData() {
-        return imageData;
+    public String getOrderNumber() {
+        return orderNumber;
     }
 
     /**
-     * set 身份证图像base64(支持base64编码后小于4M，分辨率不高于4096x4096的图像)
+     * set 订单号
      *
-     * @param imageData
+     * @param orderNumber
      */
-    public void setImageData(String imageData) {
-        this.imageData = imageData;
+    public void setOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
 
 
     /**
-     * set 身份证图像base64(支持base64编码后小于4M，分辨率不高于4096x4096的图像)
+     * set 订单号
      *
-     * @param imageData
+     * @param orderNumber
      */
-    public IDCardRequest imageData(String imageData) {
-        this.imageData = imageData;
+    public QueryCompanyTransferRequest orderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
         return this;
     }
 
