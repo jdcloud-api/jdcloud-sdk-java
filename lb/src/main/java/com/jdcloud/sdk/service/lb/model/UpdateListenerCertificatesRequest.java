@@ -42,8 +42,8 @@ public class UpdateListenerCertificatesRequest extends JdcloudRequest implements
      * Required:true
      */
     @Required
+    
     private List<ExtCertificateUpdateSpec> certificates;
-
     /**
      * Region ID
      * Required:true
@@ -59,23 +59,25 @@ public class UpdateListenerCertificatesRequest extends JdcloudRequest implements
     private String listenerId;
 
 
+
     /**
-     * get 【alb Https和Tls协议】Listener绑定的扩展证书列表
-     *
-     * @return
-     */
+    * get 【alb Https和Tls协议】Listener绑定的扩展证书列表
+    *
+    * @return
+    */
     public List<ExtCertificateUpdateSpec> getCertificates() {
         return certificates;
     }
 
     /**
-     * set 【alb Https和Tls协议】Listener绑定的扩展证书列表
-     *
-     * @param certificates
-     */
+    * set 【alb Https和Tls协议】Listener绑定的扩展证书列表
+    *
+    * @param certificates
+    */
     public void setCertificates(List<ExtCertificateUpdateSpec> certificates) {
         this.certificates = certificates;
     }
+
 
     /**
      * get Region ID
@@ -94,6 +96,7 @@ public class UpdateListenerCertificatesRequest extends JdcloudRequest implements
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 监听器ID
@@ -114,15 +117,17 @@ public class UpdateListenerCertificatesRequest extends JdcloudRequest implements
     }
 
 
+
     /**
-     * set 【alb Https和Tls协议】Listener绑定的扩展证书列表
-     *
-     * @param certificates
-     */
+    * set 【alb Https和Tls协议】Listener绑定的扩展证书列表
+    *
+    * @param certificates
+    */
     public UpdateListenerCertificatesRequest certificates(List<ExtCertificateUpdateSpec> certificates) {
         this.certificates = certificates;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -134,6 +139,7 @@ public class UpdateListenerCertificatesRequest extends JdcloudRequest implements
         return this;
     }
 
+
     /**
      * set 监听器ID
      *
@@ -143,6 +149,7 @@ public class UpdateListenerCertificatesRequest extends JdcloudRequest implements
         this.listenerId = listenerId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class UpdateListenerCertificatesRequest extends JdcloudRequest implements
         }
         this.certificates.add(certificate);
     }
-
 }

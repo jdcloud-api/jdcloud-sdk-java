@@ -56,6 +56,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     private String loadBalancerId;
 
 
+
     /**
      * get 弹性公网IP ID
      *
@@ -74,6 +75,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
         this.elasticIpId = elasticIpId;
     }
 
+
     /**
      * get Region ID
      *
@@ -91,6 +93,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get LB ID
@@ -111,6 +114,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 弹性公网IP ID
      *
@@ -121,6 +125,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -130,6 +135,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set LB ID

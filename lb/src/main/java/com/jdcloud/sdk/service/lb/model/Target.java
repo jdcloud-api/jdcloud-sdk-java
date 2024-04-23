@@ -38,9 +38,14 @@ public class Target  implements java.io.Serializable {
     private String targetId;
 
     /**
-     * TargetGroup的Id
+     * TargetGroup的Id, target 属于 targetGroup 或者 AG, target 从属于 AG 时,该字段无用
      */
     private String targetGroupId;
+
+    /**
+     * 高可用组(ag)的id, target 属于 targetGroup 或者 AG, target 从属于 targetGroup 时,该字段无用
+     */
+    private String agId;
 
     /**
      * Target的类型，取值为vm、container或ip, 默认为vm
@@ -73,6 +78,7 @@ public class Target  implements java.io.Serializable {
     private String ipAddress;
 
 
+
     /**
      * get Target的Id
      *
@@ -91,8 +97,9 @@ public class Target  implements java.io.Serializable {
         this.targetId = targetId;
     }
 
+
     /**
-     * get TargetGroup的Id
+     * get TargetGroup的Id, target 属于 targetGroup 或者 AG, target 从属于 AG 时,该字段无用
      *
      * @return
      */
@@ -101,13 +108,33 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * set TargetGroup的Id
+     * set TargetGroup的Id, target 属于 targetGroup 或者 AG, target 从属于 AG 时,该字段无用
      *
      * @param targetGroupId
      */
     public void setTargetGroupId(String targetGroupId) {
         this.targetGroupId = targetGroupId;
     }
+
+
+    /**
+     * get 高可用组(ag)的id, target 属于 targetGroup 或者 AG, target 从属于 targetGroup 时,该字段无用
+     *
+     * @return
+     */
+    public String getAgId() {
+        return agId;
+    }
+
+    /**
+     * set 高可用组(ag)的id, target 属于 targetGroup 或者 AG, target 从属于 targetGroup 时,该字段无用
+     *
+     * @param agId
+     */
+    public void setAgId(String agId) {
+        this.agId = agId;
+    }
+
 
     /**
      * get Target的类型，取值为vm、container或ip, 默认为vm
@@ -127,6 +154,7 @@ public class Target  implements java.io.Serializable {
         this.type = type;
     }
 
+
     /**
      * get Target所属实例（vm或container）的Id
      *
@@ -144,6 +172,7 @@ public class Target  implements java.io.Serializable {
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0。 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
@@ -163,6 +192,7 @@ public class Target  implements java.io.Serializable {
         this.port = port;
     }
 
+
     /**
      * get 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发，仅alb支持权重为0的target
      *
@@ -181,6 +211,7 @@ public class Target  implements java.io.Serializable {
         this.weight = weight;
     }
 
+
     /**
      * get Target所属实例（vm或container）的内网IP地址
      *
@@ -198,6 +229,7 @@ public class Target  implements java.io.Serializable {
     public void setPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
     }
+
 
     /**
      * get Target的IP地址。当Target类型为vm或container时，表示vm或container的内网IP地址；当Target类型为ip时，表示注册Target时指定的IP地址
@@ -218,6 +250,7 @@ public class Target  implements java.io.Serializable {
     }
 
 
+
     /**
      * set Target的Id
      *
@@ -228,8 +261,9 @@ public class Target  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set TargetGroup的Id
+     * set TargetGroup的Id, target 属于 targetGroup 或者 AG, target 从属于 AG 时,该字段无用
      *
      * @param targetGroupId
      */
@@ -237,6 +271,18 @@ public class Target  implements java.io.Serializable {
         this.targetGroupId = targetGroupId;
         return this;
     }
+
+
+    /**
+     * set 高可用组(ag)的id, target 属于 targetGroup 或者 AG, target 从属于 targetGroup 时,该字段无用
+     *
+     * @param agId
+     */
+    public Target agId(String agId) {
+        this.agId = agId;
+        return this;
+    }
+
 
     /**
      * set Target的类型，取值为vm、container或ip, 默认为vm
@@ -248,6 +294,7 @@ public class Target  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Target所属实例（vm或container）的Id
      *
@@ -257,6 +304,7 @@ public class Target  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0。 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
@@ -268,6 +316,7 @@ public class Target  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发，仅alb支持权重为0的target
      *
@@ -278,6 +327,7 @@ public class Target  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Target所属实例（vm或container）的内网IP地址
      *
@@ -287,6 +337,7 @@ public class Target  implements java.io.Serializable {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
+
 
     /**
      * set Target的IP地址。当Target类型为vm或container时，表示vm或container的内网IP地址；当Target类型为ip时，表示注册Target时指定的IP地址

@@ -41,8 +41,8 @@ public class DeleteRulesRequest extends JdcloudRequest implements java.io.Serial
      * Required:true
      */
     @Required
+    
     private List<String> ruleIds;
-
     /**
      * Region ID
      * Required:true
@@ -58,23 +58,25 @@ public class DeleteRulesRequest extends JdcloudRequest implements java.io.Serial
     private String urlMapId;
 
 
+
     /**
-     * get rule Id列表
-     *
-     * @return
-     */
+    * get rule Id列表
+    *
+    * @return
+    */
     public List<String> getRuleIds() {
         return ruleIds;
     }
 
     /**
-     * set rule Id列表
-     *
-     * @param ruleIds
-     */
+    * set rule Id列表
+    *
+    * @param ruleIds
+    */
     public void setRuleIds(List<String> ruleIds) {
         this.ruleIds = ruleIds;
     }
+
 
     /**
      * get Region ID
@@ -93,6 +95,7 @@ public class DeleteRulesRequest extends JdcloudRequest implements java.io.Serial
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 转发规则组Id
@@ -113,15 +116,17 @@ public class DeleteRulesRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
-     * set rule Id列表
-     *
-     * @param ruleIds
-     */
+    * set rule Id列表
+    *
+    * @param ruleIds
+    */
     public DeleteRulesRequest ruleIds(List<String> ruleIds) {
         this.ruleIds = ruleIds;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -133,6 +138,7 @@ public class DeleteRulesRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 转发规则组Id
      *
@@ -142,6 +148,7 @@ public class DeleteRulesRequest extends JdcloudRequest implements java.io.Serial
         this.urlMapId = urlMapId;
         return this;
     }
+
 
 
     /**
@@ -155,5 +162,4 @@ public class DeleteRulesRequest extends JdcloudRequest implements java.io.Serial
         }
         this.ruleIds.add(ruleId);
     }
-
 }

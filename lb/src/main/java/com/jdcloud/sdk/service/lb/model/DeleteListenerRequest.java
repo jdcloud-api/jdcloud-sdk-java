@@ -49,6 +49,7 @@ public class DeleteListenerRequest extends JdcloudRequest implements java.io.Ser
     private String listenerId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DeleteListenerRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 监听器ID
@@ -86,6 +88,7 @@ public class DeleteListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DeleteListenerRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 监听器ID

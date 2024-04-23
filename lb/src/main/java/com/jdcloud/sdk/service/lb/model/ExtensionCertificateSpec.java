@@ -51,6 +51,7 @@ public class ExtensionCertificateSpec  implements java.io.Serializable {
     private String domain;
 
 
+
     /**
      * get 证书Id
      *
@@ -69,6 +70,7 @@ public class ExtensionCertificateSpec  implements java.io.Serializable {
         this.certificateId = certificateId;
     }
 
+
     /**
      * get 证书绑定Id
      *
@@ -86,6 +88,7 @@ public class ExtensionCertificateSpec  implements java.io.Serializable {
     public void setCertificateBindId(String certificateBindId) {
         this.certificateBindId = certificateBindId;
     }
+
 
     /**
      * get 域名,支持输入精确域名和通配符域名：1、仅支持输入大小写字母、数字、英文中划线“-”和点“.”，最少包括一个点&quot;.&quot;，不能以点&quot;.&quot;和中划线&quot;-&quot;开头或结尾，中划线&quot;-&quot;前后不能为点&quot;.&quot;，不区分大小写，且不能超过110字符；2、通配符匹配支持包括一个星&quot;\*&quot;，输入格式为\*.XXX,不支持仅输入一个星“\*”。监听器创建时绑定的默认证书不允许修改域名。
@@ -106,6 +109,7 @@ public class ExtensionCertificateSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 证书Id
      *
@@ -116,6 +120,7 @@ public class ExtensionCertificateSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 证书绑定Id
      *
@@ -125,6 +130,7 @@ public class ExtensionCertificateSpec  implements java.io.Serializable {
         this.certificateBindId = certificateBindId;
         return this;
     }
+
 
     /**
      * set 域名,支持输入精确域名和通配符域名：1、仅支持输入大小写字母、数字、英文中划线“-”和点“.”，最少包括一个点&quot;.&quot;，不能以点&quot;.&quot;和中划线&quot;-&quot;开头或结尾，中划线&quot;-&quot;前后不能为点&quot;.&quot;，不区分大小写，且不能超过110字符；2、通配符匹配支持包括一个星&quot;\*&quot;，输入格式为\*.XXX,不支持仅输入一个星“\*”。监听器创建时绑定的默认证书不允许修改域名。

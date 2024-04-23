@@ -42,8 +42,8 @@ public class RegisterTargetsRequest extends JdcloudRequest implements java.io.Se
      * Required:true
      */
     @Required
+    
     private List<TargetSpec> targetSpecs;
-
     /**
      * Region ID
      * Required:true
@@ -59,23 +59,25 @@ public class RegisterTargetsRequest extends JdcloudRequest implements java.io.Se
     private String targetGroupId;
 
 
+
     /**
-     * get 注册Target列表
-     *
-     * @return
-     */
+    * get 注册Target列表
+    *
+    * @return
+    */
     public List<TargetSpec> getTargetSpecs() {
         return targetSpecs;
     }
 
     /**
-     * set 注册Target列表
-     *
-     * @param targetSpecs
-     */
+    * set 注册Target列表
+    *
+    * @param targetSpecs
+    */
     public void setTargetSpecs(List<TargetSpec> targetSpecs) {
         this.targetSpecs = targetSpecs;
     }
+
 
     /**
      * get Region ID
@@ -94,6 +96,7 @@ public class RegisterTargetsRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get TargetGroup Id
@@ -114,15 +117,17 @@ public class RegisterTargetsRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
-     * set 注册Target列表
-     *
-     * @param targetSpecs
-     */
+    * set 注册Target列表
+    *
+    * @param targetSpecs
+    */
     public RegisterTargetsRequest targetSpecs(List<TargetSpec> targetSpecs) {
         this.targetSpecs = targetSpecs;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -134,6 +139,7 @@ public class RegisterTargetsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set TargetGroup Id
      *
@@ -143,6 +149,7 @@ public class RegisterTargetsRequest extends JdcloudRequest implements java.io.Se
         this.targetGroupId = targetGroupId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class RegisterTargetsRequest extends JdcloudRequest implements java.io.Se
         }
         this.targetSpecs.add(targetSpec);
     }
-
 }

@@ -58,6 +58,7 @@ public class TargetSpec  implements java.io.Serializable {
     private String ipAddress;
 
 
+
     /**
      * get Target所属实例的Id，只有type为vm或container时此项才需要
      *
@@ -75,6 +76,7 @@ public class TargetSpec  implements java.io.Serializable {
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get Target所属的type，取值为vm、container或ip，默认为vm。vm和container类型对应服务器组的instance类型，ip类型对应服务器组的ip类型。
@@ -94,6 +96,7 @@ public class TargetSpec  implements java.io.Serializable {
         this.type = type;
     }
 
+
     /**
      * get Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0。 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
      *
@@ -112,6 +115,7 @@ public class TargetSpec  implements java.io.Serializable {
         this.port = port;
     }
 
+
     /**
      * get 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发，仅alb支持权重为0的target
      *
@@ -129,6 +133,7 @@ public class TargetSpec  implements java.io.Serializable {
     public void setWeight(Integer weight) {
         this.weight = weight;
     }
+
 
     /**
      * get Target的ip地址。仅当type为ip时，此项必须配置。
@@ -149,6 +154,7 @@ public class TargetSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set Target所属实例的Id，只有type为vm或container时此项才需要
      *
@@ -158,6 +164,7 @@ public class TargetSpec  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set Target所属的type，取值为vm、container或ip，默认为vm。vm和container类型对应服务器组的instance类型，ip类型对应服务器组的ip类型。
@@ -169,6 +176,7 @@ public class TargetSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0。 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
      *
@@ -179,6 +187,7 @@ public class TargetSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发，仅alb支持权重为0的target
      *
@@ -188,6 +197,7 @@ public class TargetSpec  implements java.io.Serializable {
         this.weight = weight;
         return this;
     }
+
 
     /**
      * set Target的ip地址。仅当type为ip时，此项必须配置。

@@ -40,6 +40,7 @@ public class DescribeTargetGroupResult extends JdcloudResult implements java.io.
     private TargetGroup targetGroup;
 
 
+
     /**
      * get TargetGroup资源信息
      *
@@ -57,6 +58,7 @@ public class DescribeTargetGroupResult extends JdcloudResult implements java.io.
     public void setTargetGroup(TargetGroup targetGroup) {
         this.targetGroup = targetGroup;
     }
+
 
 
     /**

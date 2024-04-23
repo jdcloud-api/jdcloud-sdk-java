@@ -39,37 +39,75 @@ public class DescribeTargetHealthResult extends JdcloudResult implements java.io
     /**
      * targetHealths
      */
+    
     private List<TargetHealth> targetHealths;
+    /**
+     * 总数量
+     */
+    private Integer totalCount;
+
 
 
     /**
-     * get targetHealths
-     *
-     * @return
-     */
+    * get targetHealths
+    *
+    * @return
+    */
     public List<TargetHealth> getTargetHealths() {
         return targetHealths;
     }
 
     /**
-     * set targetHealths
-     *
-     * @param targetHealths
-     */
+    * set targetHealths
+    *
+    * @param targetHealths
+    */
     public void setTargetHealths(List<TargetHealth> targetHealths) {
         this.targetHealths = targetHealths;
     }
 
 
     /**
-     * set targetHealths
+     * get 总数量
      *
-     * @param targetHealths
+     * @return
      */
+    public Integer getTotalCount() {
+        return totalCount;
+    }
+
+    /**
+     * set 总数量
+     *
+     * @param totalCount
+     */
+    public void setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+    }
+
+
+
+    /**
+    * set targetHealths
+    *
+    * @param targetHealths
+    */
     public DescribeTargetHealthResult targetHealths(List<TargetHealth> targetHealths) {
         this.targetHealths = targetHealths;
         return this;
     }
+
+
+    /**
+     * set 总数量
+     *
+     * @param totalCount
+     */
+    public DescribeTargetHealthResult totalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+
 
 
     /**
@@ -83,5 +121,4 @@ public class DescribeTargetHealthResult extends JdcloudResult implements java.io
         }
         this.targetHealths.add(targetHealth);
     }
-
 }

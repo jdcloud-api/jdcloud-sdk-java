@@ -54,6 +54,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     private ChargeSpec chargeSpec;
 
 
+
     /**
      * get 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
      *
@@ -72,6 +73,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
         this.bandwidth = bandwidth;
     }
 
+
     /**
      * get IP服务商，取值为bgp或no_bgp &lt;br&gt;【cn-north-1】：bgp； &lt;br&gt;【cn-south-1】：bgp； &lt;br&gt;【cn-east-1】：bgp； &lt;br&gt;【cn-east-2】：bgp
      *
@@ -89,6 +91,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     public void setProvider(String provider) {
         this.provider = provider;
     }
+
 
     /**
      * get 计费配置
@@ -109,6 +112,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
      *
@@ -119,6 +123,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set IP服务商，取值为bgp或no_bgp &lt;br&gt;【cn-north-1】：bgp； &lt;br&gt;【cn-south-1】：bgp； &lt;br&gt;【cn-east-1】：bgp； &lt;br&gt;【cn-east-2】：bgp
      *
@@ -128,6 +133,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
         this.provider = provider;
         return this;
     }
+
 
     /**
      * set 计费配置

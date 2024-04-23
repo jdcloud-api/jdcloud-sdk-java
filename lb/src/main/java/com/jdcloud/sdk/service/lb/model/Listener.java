@@ -102,7 +102,12 @@ public class Listener  implements java.io.Serializable {
     /**
      * 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
      */
+    
     private List<CertificateSpec> certificateSpecs;
+    /**
+     * 【仅ALB支持】限速配置
+     */
+    private LimitationSpec limitation;
 
     /**
      * Listener的描述信息
@@ -117,7 +122,13 @@ public class Listener  implements java.io.Serializable {
     /**
      * 【alb Https和Tls协议】Listener绑定的扩展证书列表
      */
+    
     private List<ExtensionCertificateSpec> extensionCertificateSpecs;
+    /**
+     * 绑定的安全策略id，仅支持应用负载均衡的HTTPS、TLS监听配置
+     */
+    private String securityPolicyId;
+
 
 
     /**
@@ -138,6 +149,7 @@ public class Listener  implements java.io.Serializable {
         this.listenerId = listenerId;
     }
 
+
     /**
      * get Listener的名称
      *
@@ -155,6 +167,7 @@ public class Listener  implements java.io.Serializable {
     public void setListenerName(String listenerName) {
         this.listenerName = listenerName;
     }
+
 
     /**
      * get Listener状态, 取值为On或者为Off
@@ -174,6 +187,7 @@ public class Listener  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get Listener所属loadBalancer的Id
      *
@@ -191,6 +205,7 @@ public class Listener  implements java.io.Serializable {
     public void setLoadBalancerId(String loadBalancerId) {
         this.loadBalancerId = loadBalancerId;
     }
+
 
     /**
      * get Listener所属负载均衡类型，取值为：alb、nlb、dnlb
@@ -210,6 +225,7 @@ public class Listener  implements java.io.Serializable {
         this.loadBalancerType = loadBalancerType;
     }
 
+
     /**
      * get 监听协议, 取值为Tcp, Tls, Http, Https, Udp &lt;br&gt;【alb】支持Http, Https, Tcp, Tls和Udp &lt;br&gt;【nlb】支持Tcp, Udp  &lt;br&gt;【dnlb】支持Tcp, Udp
      *
@@ -227,6 +243,7 @@ public class Listener  implements java.io.Serializable {
     public void setProtocol(String protocol) {
         this.protocol = protocol;
     }
+
 
     /**
      * get 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)
@@ -246,6 +263,7 @@ public class Listener  implements java.io.Serializable {
         this.hstsEnable = hstsEnable;
     }
 
+
     /**
      * get 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]
      *
@@ -263,6 +281,7 @@ public class Listener  implements java.io.Serializable {
     public void setHstsMaxAge(Integer hstsMaxAge) {
         this.hstsMaxAge = hstsMaxAge;
     }
+
 
     /**
      * get 监听端口，取值范围为[1, 65535]
@@ -282,6 +301,7 @@ public class Listener  implements java.io.Serializable {
         this.port = port;
     }
 
+
     /**
      * get 默认后端服务的转发策略,取值为Forward或Redirect, 现只支持Forward
      *
@@ -299,6 +319,7 @@ public class Listener  implements java.io.Serializable {
     public void setAction(String action) {
         this.action = action;
     }
+
 
     /**
      * get 默认的后端服务Id
@@ -318,6 +339,7 @@ public class Listener  implements java.io.Serializable {
         this.backendId = backendId;
     }
 
+
     /**
      * get 【alb Https和Http协议】转发规则组Id
      *
@@ -335,6 +357,7 @@ public class Listener  implements java.io.Serializable {
     public void setUrlMapId(String urlMapId) {
         this.urlMapId = urlMapId;
     }
+
 
     /**
      * get 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Udp协议）默认为：300s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持
@@ -354,23 +377,44 @@ public class Listener  implements java.io.Serializable {
         this.connectionIdleTimeSeconds = connectionIdleTimeSeconds;
     }
 
+
     /**
-     * get 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
-     *
-     * @return
-     */
+    * get 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
+    *
+    * @return
+    */
     public List<CertificateSpec> getCertificateSpecs() {
         return certificateSpecs;
     }
 
     /**
-     * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
-     *
-     * @param certificateSpecs
-     */
+    * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
+    *
+    * @param certificateSpecs
+    */
     public void setCertificateSpecs(List<CertificateSpec> certificateSpecs) {
         this.certificateSpecs = certificateSpecs;
     }
+
+
+    /**
+     * get 【仅ALB支持】限速配置
+     *
+     * @return
+     */
+    public LimitationSpec getLimitation() {
+        return limitation;
+    }
+
+    /**
+     * set 【仅ALB支持】限速配置
+     *
+     * @param limitation
+     */
+    public void setLimitation(LimitationSpec limitation) {
+        this.limitation = limitation;
+    }
+
 
     /**
      * get Listener的描述信息
@@ -390,6 +434,7 @@ public class Listener  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get Listener的创建时间
      *
@@ -408,23 +453,44 @@ public class Listener  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+
     /**
-     * get 【alb Https和Tls协议】Listener绑定的扩展证书列表
-     *
-     * @return
-     */
+    * get 【alb Https和Tls协议】Listener绑定的扩展证书列表
+    *
+    * @return
+    */
     public List<ExtensionCertificateSpec> getExtensionCertificateSpecs() {
         return extensionCertificateSpecs;
     }
 
     /**
-     * set 【alb Https和Tls协议】Listener绑定的扩展证书列表
-     *
-     * @param extensionCertificateSpecs
-     */
+    * set 【alb Https和Tls协议】Listener绑定的扩展证书列表
+    *
+    * @param extensionCertificateSpecs
+    */
     public void setExtensionCertificateSpecs(List<ExtensionCertificateSpec> extensionCertificateSpecs) {
         this.extensionCertificateSpecs = extensionCertificateSpecs;
     }
+
+
+    /**
+     * get 绑定的安全策略id，仅支持应用负载均衡的HTTPS、TLS监听配置
+     *
+     * @return
+     */
+    public String getSecurityPolicyId() {
+        return securityPolicyId;
+    }
+
+    /**
+     * set 绑定的安全策略id，仅支持应用负载均衡的HTTPS、TLS监听配置
+     *
+     * @param securityPolicyId
+     */
+    public void setSecurityPolicyId(String securityPolicyId) {
+        this.securityPolicyId = securityPolicyId;
+    }
+
 
 
     /**
@@ -437,6 +503,7 @@ public class Listener  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Listener的名称
      *
@@ -446,6 +513,7 @@ public class Listener  implements java.io.Serializable {
         this.listenerName = listenerName;
         return this;
     }
+
 
     /**
      * set Listener状态, 取值为On或者为Off
@@ -457,6 +525,7 @@ public class Listener  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Listener所属loadBalancer的Id
      *
@@ -466,6 +535,7 @@ public class Listener  implements java.io.Serializable {
         this.loadBalancerId = loadBalancerId;
         return this;
     }
+
 
     /**
      * set Listener所属负载均衡类型，取值为：alb、nlb、dnlb
@@ -477,6 +547,7 @@ public class Listener  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 监听协议, 取值为Tcp, Tls, Http, Https, Udp &lt;br&gt;【alb】支持Http, Https, Tcp, Tls和Udp &lt;br&gt;【nlb】支持Tcp, Udp  &lt;br&gt;【dnlb】支持Tcp, Udp
      *
@@ -486,6 +557,7 @@ public class Listener  implements java.io.Serializable {
         this.protocol = protocol;
         return this;
     }
+
 
     /**
      * set 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)
@@ -497,6 +569,7 @@ public class Listener  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]
      *
@@ -506,6 +579,7 @@ public class Listener  implements java.io.Serializable {
         this.hstsMaxAge = hstsMaxAge;
         return this;
     }
+
 
     /**
      * set 监听端口，取值范围为[1, 65535]
@@ -517,6 +591,7 @@ public class Listener  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 默认后端服务的转发策略,取值为Forward或Redirect, 现只支持Forward
      *
@@ -526,6 +601,7 @@ public class Listener  implements java.io.Serializable {
         this.action = action;
         return this;
     }
+
 
     /**
      * set 默认的后端服务Id
@@ -537,6 +613,7 @@ public class Listener  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 【alb Https和Http协议】转发规则组Id
      *
@@ -546,6 +623,7 @@ public class Listener  implements java.io.Serializable {
         this.urlMapId = urlMapId;
         return this;
     }
+
 
     /**
      * set 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Udp协议）默认为：300s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持
@@ -557,15 +635,28 @@ public class Listener  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
-     *
-     * @param certificateSpecs
-     */
+    * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
+    *
+    * @param certificateSpecs
+    */
     public Listener certificateSpecs(List<CertificateSpec> certificateSpecs) {
         this.certificateSpecs = certificateSpecs;
         return this;
     }
+
+
+    /**
+     * set 【仅ALB支持】限速配置
+     *
+     * @param limitation
+     */
+    public Listener limitation(LimitationSpec limitation) {
+        this.limitation = limitation;
+        return this;
+    }
+
 
     /**
      * set Listener的描述信息
@@ -577,6 +668,7 @@ public class Listener  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Listener的创建时间
      *
@@ -587,15 +679,28 @@ public class Listener  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 【alb Https和Tls协议】Listener绑定的扩展证书列表
-     *
-     * @param extensionCertificateSpecs
-     */
+    * set 【alb Https和Tls协议】Listener绑定的扩展证书列表
+    *
+    * @param extensionCertificateSpecs
+    */
     public Listener extensionCertificateSpecs(List<ExtensionCertificateSpec> extensionCertificateSpecs) {
         this.extensionCertificateSpecs = extensionCertificateSpecs;
         return this;
     }
+
+
+    /**
+     * set 绑定的安全策略id，仅支持应用负载均衡的HTTPS、TLS监听配置
+     *
+     * @param securityPolicyId
+     */
+    public Listener securityPolicyId(String securityPolicyId) {
+        this.securityPolicyId = securityPolicyId;
+        return this;
+    }
+
 
 
     /**
@@ -621,5 +726,4 @@ public class Listener  implements java.io.Serializable {
         }
         this.extensionCertificateSpecs.add(extensionCertificateSpec);
     }
-
 }

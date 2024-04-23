@@ -66,6 +66,7 @@ public class CreateTargetGroupRequest extends JdcloudRequest implements java.io.
     private String regionId;
 
 
+
     /**
      * get 虚拟服务器组名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
      *
@@ -83,6 +84,7 @@ public class CreateTargetGroupRequest extends JdcloudRequest implements java.io.
     public void setTargetGroupName(String targetGroupName) {
         this.targetGroupName = targetGroupName;
     }
+
 
     /**
      * get 负载均衡的Id
@@ -102,6 +104,7 @@ public class CreateTargetGroupRequest extends JdcloudRequest implements java.io.
         this.loadBalancerId = loadBalancerId;
     }
 
+
     /**
      * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -120,6 +123,7 @@ public class CreateTargetGroupRequest extends JdcloudRequest implements java.io.
         this.description = description;
     }
 
+
     /**
      * get 类型，取值为instance或ip
      *
@@ -137,6 +141,7 @@ public class CreateTargetGroupRequest extends JdcloudRequest implements java.io.
     public void setType(String type) {
         this.type = type;
     }
+
 
     /**
      * get Region ID
@@ -157,6 +162,7 @@ public class CreateTargetGroupRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 虚拟服务器组名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
      *
@@ -166,6 +172,7 @@ public class CreateTargetGroupRequest extends JdcloudRequest implements java.io.
         this.targetGroupName = targetGroupName;
         return this;
     }
+
 
     /**
      * set 负载均衡的Id
@@ -177,6 +184,7 @@ public class CreateTargetGroupRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -187,6 +195,7 @@ public class CreateTargetGroupRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 类型，取值为instance或ip
      *
@@ -196,6 +205,7 @@ public class CreateTargetGroupRequest extends JdcloudRequest implements java.io.
         this.type = type;
         return this;
     }
+
 
     /**
      * set Region ID

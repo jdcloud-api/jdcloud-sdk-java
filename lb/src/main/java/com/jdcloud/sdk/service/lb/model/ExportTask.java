@@ -68,6 +68,7 @@ public class ExportTask  implements java.io.Serializable {
     private String downloadUrl;
 
 
+
     /**
      * get 导出地域
      *
@@ -85,6 +86,7 @@ public class ExportTask  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 导出lb的类型：alb, nlb, dnlb
@@ -104,6 +106,7 @@ public class ExportTask  implements java.io.Serializable {
         this.loadBalancerType = loadBalancerType;
     }
 
+
     /**
      * get 导出任务的任务Id
      *
@@ -121,6 +124,7 @@ public class ExportTask  implements java.io.Serializable {
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
     /**
      * get 导出文件的文件名
@@ -140,6 +144,7 @@ public class ExportTask  implements java.io.Serializable {
         this.fileName = fileName;
     }
 
+
     /**
      * get 导出任务的状态：2. 任务处理中; 3. 任务完成; 4. 任务失败
      *
@@ -158,6 +163,7 @@ public class ExportTask  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 导出任务的创建时间
      *
@@ -175,6 +181,7 @@ public class ExportTask  implements java.io.Serializable {
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
+
 
     /**
      * get 导出文件的下载地址
@@ -195,6 +202,7 @@ public class ExportTask  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 导出地域
      *
@@ -204,6 +212,7 @@ public class ExportTask  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 导出lb的类型：alb, nlb, dnlb
@@ -215,6 +224,7 @@ public class ExportTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 导出任务的任务Id
      *
@@ -224,6 +234,7 @@ public class ExportTask  implements java.io.Serializable {
         this.taskId = taskId;
         return this;
     }
+
 
     /**
      * set 导出文件的文件名
@@ -235,6 +246,7 @@ public class ExportTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 导出任务的状态：2. 任务处理中; 3. 任务完成; 4. 任务失败
      *
@@ -245,6 +257,7 @@ public class ExportTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 导出任务的创建时间
      *
@@ -254,6 +267,7 @@ public class ExportTask  implements java.io.Serializable {
         this.createdTime = createdTime;
         return this;
     }
+
 
     /**
      * set 导出文件的下载地址

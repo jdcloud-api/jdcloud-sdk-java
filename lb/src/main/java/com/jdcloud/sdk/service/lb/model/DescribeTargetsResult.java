@@ -39,31 +39,33 @@ public class DescribeTargetsResult extends JdcloudResult implements java.io.Seri
     /**
      * targets
      */
+    
     private List<Target> targets;
-
     /**
      * 总数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get targets
-     *
-     * @return
-     */
+    * get targets
+    *
+    * @return
+    */
     public List<Target> getTargets() {
         return targets;
     }
 
     /**
-     * set targets
-     *
-     * @param targets
-     */
+    * set targets
+    *
+    * @param targets
+    */
     public void setTargets(List<Target> targets) {
         this.targets = targets;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeTargetsResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
-     * set targets
-     *
-     * @param targets
-     */
+    * set targets
+    *
+    * @param targets
+    */
     public DescribeTargetsResult targets(List<Target> targets) {
         this.targets = targets;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeTargetsResult extends JdcloudResult implements java.io.Seri
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeTargetsResult extends JdcloudResult implements java.io.Seri
         }
         this.targets.add(target);
     }
-
 }

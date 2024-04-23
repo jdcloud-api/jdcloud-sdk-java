@@ -39,6 +39,7 @@ public class CreateUrlMapResult extends JdcloudResult implements java.io.Seriali
     private String urlMapId;
 
 
+
     /**
      * get 转发规则组id
      *
@@ -56,6 +57,7 @@ public class CreateUrlMapResult extends JdcloudResult implements java.io.Seriali
     public void setUrlMapId(String urlMapId) {
         this.urlMapId = urlMapId;
     }
+
 
 
     /**

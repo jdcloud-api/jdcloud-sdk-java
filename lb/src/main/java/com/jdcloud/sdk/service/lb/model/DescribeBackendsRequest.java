@@ -56,14 +56,15 @@ loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb
 protocol - 后端服务的协议【alb】支持Http、Tcp和Udp，【nlb】支持Tcp、Udp，【dnlb】支持Tcp、Udp，默认查询所有，支持单个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -84,6 +85,7 @@ protocol - 后端服务的协议【alb】支持Http、Tcp和Udp，【nlb】支�
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -102,35 +104,37 @@ protocol - 后端服务的协议【alb】支持Http、Tcp和Udp，【nlb】支�
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get backendIds - 后端服务Id列表，支持多个
+    * get backendIds - 后端服务Id列表，支持多个
 backendNames - 后端服务名字列表，支持多个
 loadBalancerId - 负载均衡器Id，支持单个
 agId - 可用性组Id，支持单个
 loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb，支持单个
 protocol - 后端服务的协议【alb】支持Http、Tcp和Udp，【nlb】支持Tcp、Udp，【dnlb】支持Tcp、Udp，默认查询所有，支持单个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set backendIds - 后端服务Id列表，支持多个
+    * set backendIds - 后端服务Id列表，支持多个
 backendNames - 后端服务名字列表，支持多个
 loadBalancerId - 负载均衡器Id，支持单个
 agId - 可用性组Id，支持单个
 loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb，支持单个
 protocol - 后端服务的协议【alb】支持Http、Tcp和Udp，【nlb】支持Tcp、Udp，【dnlb】支持Tcp、Udp，默认查询所有，支持单个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get Region ID
@@ -151,6 +155,7 @@ protocol - 后端服务的协议【alb】支持Http、Tcp和Udp，【nlb】支�
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
      *
@@ -160,6 +165,7 @@ protocol - 后端服务的协议【alb】支持Http、Tcp和Udp，【nlb】支�
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
@@ -171,21 +177,23 @@ protocol - 后端服务的协议【alb】支持Http、Tcp和Udp，【nlb】支�
         return this;
     }
 
+
     /**
-     * set backendIds - 后端服务Id列表，支持多个
+    * set backendIds - 后端服务Id列表，支持多个
 backendNames - 后端服务名字列表，支持多个
 loadBalancerId - 负载均衡器Id，支持单个
 agId - 可用性组Id，支持单个
 loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb，支持单个
 protocol - 后端服务的协议【alb】支持Http、Tcp和Udp，【nlb】支持Tcp、Udp，【dnlb】支持Tcp、Udp，默认查询所有，支持单个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeBackendsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -196,6 +204,7 @@ protocol - 后端服务的协议【alb】支持Http、Tcp和Udp，【nlb】支�
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -215,5 +224,4 @@ protocol - 后端服务的协议【alb】支持Http、Tcp和Udp，【nlb】支�
         }
         this.filters.add(filter);
     }
-
 }

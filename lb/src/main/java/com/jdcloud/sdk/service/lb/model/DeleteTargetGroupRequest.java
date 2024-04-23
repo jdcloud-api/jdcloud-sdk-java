@@ -49,6 +49,7 @@ public class DeleteTargetGroupRequest extends JdcloudRequest implements java.io.
     private String targetGroupId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DeleteTargetGroupRequest extends JdcloudRequest implements java.io.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get TargetGroup Id
@@ -86,6 +88,7 @@ public class DeleteTargetGroupRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DeleteTargetGroupRequest extends JdcloudRequest implements java.io.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set TargetGroup Id

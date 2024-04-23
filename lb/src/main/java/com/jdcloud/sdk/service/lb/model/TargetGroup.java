@@ -72,12 +72,13 @@ public class TargetGroup  implements java.io.Serializable {
     /**
      * Target列表。该字段即将下线，请勿使用，已经使用该字段查询Target详情的服务请尽快切换使用describeTargets接口
      */
+    
     private List<Target> targets;
-
     /**
      * 实例或IP
      */
     private String type;
+
 
 
     /**
@@ -98,6 +99,7 @@ public class TargetGroup  implements java.io.Serializable {
         this.targetGroupId = targetGroupId;
     }
 
+
     /**
      * get TargetGroup的名字
      *
@@ -115,6 +117,7 @@ public class TargetGroup  implements java.io.Serializable {
     public void setTargetGroupName(String targetGroupName) {
         this.targetGroupName = targetGroupName;
     }
+
 
     /**
      * get TargetGroup所属LoadBalancer的Id
@@ -134,6 +137,7 @@ public class TargetGroup  implements java.io.Serializable {
         this.loadBalancerId = loadBalancerId;
     }
 
+
     /**
      * get TargetGroup所属负载均衡类型，取值为：alb、nlb、dnlb
      *
@@ -151,6 +155,7 @@ public class TargetGroup  implements java.io.Serializable {
     public void setLoadBalancerType(String loadBalancerType) {
         this.loadBalancerType = loadBalancerType;
     }
+
 
     /**
      * get TargetGroup所属LoadBalancer的名称
@@ -170,6 +175,7 @@ public class TargetGroup  implements java.io.Serializable {
         this.loadBalancerName = loadBalancerName;
     }
 
+
     /**
      * get TargetGroup的描述信息
      *
@@ -187,6 +193,7 @@ public class TargetGroup  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get TargetGroup的创建时间
@@ -206,23 +213,25 @@ public class TargetGroup  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+
     /**
-     * get Target列表。该字段即将下线，请勿使用，已经使用该字段查询Target详情的服务请尽快切换使用describeTargets接口
-     *
-     * @return
-     */
+    * get Target列表。该字段即将下线，请勿使用，已经使用该字段查询Target详情的服务请尽快切换使用describeTargets接口
+    *
+    * @return
+    */
     public List<Target> getTargets() {
         return targets;
     }
 
     /**
-     * set Target列表。该字段即将下线，请勿使用，已经使用该字段查询Target详情的服务请尽快切换使用describeTargets接口
-     *
-     * @param targets
-     */
+    * set Target列表。该字段即将下线，请勿使用，已经使用该字段查询Target详情的服务请尽快切换使用describeTargets接口
+    *
+    * @param targets
+    */
     public void setTargets(List<Target> targets) {
         this.targets = targets;
     }
+
 
     /**
      * get 实例或IP
@@ -243,6 +252,7 @@ public class TargetGroup  implements java.io.Serializable {
     }
 
 
+
     /**
      * set TargetGroup的Id
      *
@@ -252,6 +262,7 @@ public class TargetGroup  implements java.io.Serializable {
         this.targetGroupId = targetGroupId;
         return this;
     }
+
 
     /**
      * set TargetGroup的名字
@@ -263,6 +274,7 @@ public class TargetGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set TargetGroup所属LoadBalancer的Id
      *
@@ -272,6 +284,7 @@ public class TargetGroup  implements java.io.Serializable {
         this.loadBalancerId = loadBalancerId;
         return this;
     }
+
 
     /**
      * set TargetGroup所属负载均衡类型，取值为：alb、nlb、dnlb
@@ -283,6 +296,7 @@ public class TargetGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set TargetGroup所属LoadBalancer的名称
      *
@@ -292,6 +306,7 @@ public class TargetGroup  implements java.io.Serializable {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
+
 
     /**
      * set TargetGroup的描述信息
@@ -303,6 +318,7 @@ public class TargetGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set TargetGroup的创建时间
      *
@@ -313,15 +329,17 @@ public class TargetGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set Target列表。该字段即将下线，请勿使用，已经使用该字段查询Target详情的服务请尽快切换使用describeTargets接口
-     *
-     * @param targets
-     */
+    * set Target列表。该字段即将下线，请勿使用，已经使用该字段查询Target详情的服务请尽快切换使用describeTargets接口
+    *
+    * @param targets
+    */
     public TargetGroup targets(List<Target> targets) {
         this.targets = targets;
         return this;
     }
+
 
     /**
      * set 实例或IP
@@ -332,6 +350,7 @@ public class TargetGroup  implements java.io.Serializable {
         this.type = type;
         return this;
     }
+
 
 
     /**
@@ -345,5 +364,4 @@ public class TargetGroup  implements java.io.Serializable {
         }
         this.targets.add(target);
     }
-
 }

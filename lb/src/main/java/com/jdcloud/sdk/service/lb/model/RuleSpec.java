@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.lb.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * ruleSpec
@@ -33,12 +35,12 @@ public class RuleSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 域名，用于匹配URL的host字段,支持输入IPv4地址和域名。域名支持精确匹配和通配符匹配：1、仅支持输入大小写字母、数字、英文中划线“-”和点“.”，最少包括一个点&quot;.&quot;，不能以点&quot;.&quot;和中划线&quot;-&quot;开头或结尾，中划线&quot;-&quot;前后不能为点&quot;.&quot;，不区分大小写，且不能超过110字符；2、通配符匹配支持包括一个星&quot;\*&quot;，输入格式为\*.XXX或XXX.\*，不支持仅输入一个星“\*”。 host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
+     * 域名，用于匹配URL的host字段,支持输入IPv4地址和域名。域名支持精确匹配和通配符匹配：1、仅支持输入大小写字母、数字、英文中划线“-”和点“.”，最少包括一个点&quot;.&quot;，不能以点&quot;.&quot;和中划线&quot;-&quot;开头或结尾，中划线&quot;-&quot;前后不能为点&quot;.&quot;，不区分大小写，且不能超过110字符；2、通配符匹配支持包括一个星&quot;\*&quot;，输入格式为\*.XXX或XXX.\*，不支持仅输入一个星“\*”。 host和path至少配置其一，host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
      */
     private String host;
 
     /**
-     * URL访问路径，用于匹配URL的path字段。URL路径支持精确匹配和前缀匹配：1、必须以/开头，仅支持输入大小写字母、数字和特殊字符：$-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符；2、前缀匹配支持包括一个星&quot;\*&quot;，输入格式为/XXX\*或/\*，仅输入&quot;/&quot;表示精确匹配。 host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
+     * URL访问路径，用于匹配URL的path字段。URL路径支持精确匹配和前缀匹配：1、必须以/开头，仅支持输入大小写字母、数字和特殊字符：$-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符；2、前缀匹配支持包括一个星&quot;\*&quot;，输入格式为/XXX\*或/\*，仅输入&quot;/&quot;表示精确匹配。 host和path至少配置其一，host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
      */
     private String path;
 
@@ -57,9 +59,20 @@ public class RuleSpec  implements java.io.Serializable {
      */
     private RedirectActionSpec redirectActionSpec;
 
+    /**
+     * 负载均衡将客户端流量向后端服务器转发时的前置动作配置，当action选择Forward时可以配置本参数
+     */
+    
+    private List<PreActionSpec> preActions;
+    /**
+     * 负载均衡将后端服务器应答流量转发给客户端时的后置动作配置，当action选择Forward/Redirect时可以配置本参数
+     */
+    
+    private List<PostActionSpec> postActions;
+
 
     /**
-     * get 域名，用于匹配URL的host字段,支持输入IPv4地址和域名。域名支持精确匹配和通配符匹配：1、仅支持输入大小写字母、数字、英文中划线“-”和点“.”，最少包括一个点&quot;.&quot;，不能以点&quot;.&quot;和中划线&quot;-&quot;开头或结尾，中划线&quot;-&quot;前后不能为点&quot;.&quot;，不区分大小写，且不能超过110字符；2、通配符匹配支持包括一个星&quot;\*&quot;，输入格式为\*.XXX或XXX.\*，不支持仅输入一个星“\*”。 host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
+     * get 域名，用于匹配URL的host字段,支持输入IPv4地址和域名。域名支持精确匹配和通配符匹配：1、仅支持输入大小写字母、数字、英文中划线“-”和点“.”，最少包括一个点&quot;.&quot;，不能以点&quot;.&quot;和中划线&quot;-&quot;开头或结尾，中划线&quot;-&quot;前后不能为点&quot;.&quot;，不区分大小写，且不能超过110字符；2、通配符匹配支持包括一个星&quot;\*&quot;，输入格式为\*.XXX或XXX.\*，不支持仅输入一个星“\*”。 host和path至少配置其一，host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
      *
      * @return
      */
@@ -68,7 +81,7 @@ public class RuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 域名，用于匹配URL的host字段,支持输入IPv4地址和域名。域名支持精确匹配和通配符匹配：1、仅支持输入大小写字母、数字、英文中划线“-”和点“.”，最少包括一个点&quot;.&quot;，不能以点&quot;.&quot;和中划线&quot;-&quot;开头或结尾，中划线&quot;-&quot;前后不能为点&quot;.&quot;，不区分大小写，且不能超过110字符；2、通配符匹配支持包括一个星&quot;\*&quot;，输入格式为\*.XXX或XXX.\*，不支持仅输入一个星“\*”。 host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
+     * set 域名，用于匹配URL的host字段,支持输入IPv4地址和域名。域名支持精确匹配和通配符匹配：1、仅支持输入大小写字母、数字、英文中划线“-”和点“.”，最少包括一个点&quot;.&quot;，不能以点&quot;.&quot;和中划线&quot;-&quot;开头或结尾，中划线&quot;-&quot;前后不能为点&quot;.&quot;，不区分大小写，且不能超过110字符；2、通配符匹配支持包括一个星&quot;\*&quot;，输入格式为\*.XXX或XXX.\*，不支持仅输入一个星“\*”。 host和path至少配置其一，host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
      *
      * @param host
      */
@@ -76,8 +89,9 @@ public class RuleSpec  implements java.io.Serializable {
         this.host = host;
     }
 
+
     /**
-     * get URL访问路径，用于匹配URL的path字段。URL路径支持精确匹配和前缀匹配：1、必须以/开头，仅支持输入大小写字母、数字和特殊字符：$-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符；2、前缀匹配支持包括一个星&quot;\*&quot;，输入格式为/XXX\*或/\*，仅输入&quot;/&quot;表示精确匹配。 host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
+     * get URL访问路径，用于匹配URL的path字段。URL路径支持精确匹配和前缀匹配：1、必须以/开头，仅支持输入大小写字母、数字和特殊字符：$-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符；2、前缀匹配支持包括一个星&quot;\*&quot;，输入格式为/XXX\*或/\*，仅输入&quot;/&quot;表示精确匹配。 host和path至少配置其一，host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
      *
      * @return
      */
@@ -86,13 +100,14 @@ public class RuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set URL访问路径，用于匹配URL的path字段。URL路径支持精确匹配和前缀匹配：1、必须以/开头，仅支持输入大小写字母、数字和特殊字符：$-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符；2、前缀匹配支持包括一个星&quot;\*&quot;，输入格式为/XXX\*或/\*，仅输入&quot;/&quot;表示精确匹配。 host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
+     * set URL访问路径，用于匹配URL的path字段。URL路径支持精确匹配和前缀匹配：1、必须以/开头，仅支持输入大小写字母、数字和特殊字符：$-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符；2、前缀匹配支持包括一个星&quot;\*&quot;，输入格式为/XXX\*或/\*，仅输入&quot;/&quot;表示精确匹配。 host和path至少配置其一，host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
      *
      * @param path
      */
     public void setPath(String path) {
         this.path = path;
     }
+
 
     /**
      * get 匹配转发规则后执行的动作，取值为Forward或Redirect。默认为Forward
@@ -112,6 +127,7 @@ public class RuleSpec  implements java.io.Serializable {
         this.action = action;
     }
 
+
     /**
      * get 后端服务的Id。当action选择Forward时需配置本参数
      *
@@ -129,6 +145,7 @@ public class RuleSpec  implements java.io.Serializable {
     public void setBackendId(String backendId) {
         this.backendId = backendId;
     }
+
 
     /**
      * get 重定向动作配置。当action选择Redirect时需配置本参数，且重定向配置参数protocol、port、host、path和query至少配置其一
@@ -150,7 +167,46 @@ public class RuleSpec  implements java.io.Serializable {
 
 
     /**
-     * set 域名，用于匹配URL的host字段,支持输入IPv4地址和域名。域名支持精确匹配和通配符匹配：1、仅支持输入大小写字母、数字、英文中划线“-”和点“.”，最少包括一个点&quot;.&quot;，不能以点&quot;.&quot;和中划线&quot;-&quot;开头或结尾，中划线&quot;-&quot;前后不能为点&quot;.&quot;，不区分大小写，且不能超过110字符；2、通配符匹配支持包括一个星&quot;\*&quot;，输入格式为\*.XXX或XXX.\*，不支持仅输入一个星“\*”。 host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
+    * get 负载均衡将客户端流量向后端服务器转发时的前置动作配置，当action选择Forward时可以配置本参数
+    *
+    * @return
+    */
+    public List<PreActionSpec> getPreActions() {
+        return preActions;
+    }
+
+    /**
+    * set 负载均衡将客户端流量向后端服务器转发时的前置动作配置，当action选择Forward时可以配置本参数
+    *
+    * @param preActions
+    */
+    public void setPreActions(List<PreActionSpec> preActions) {
+        this.preActions = preActions;
+    }
+
+
+    /**
+    * get 负载均衡将后端服务器应答流量转发给客户端时的后置动作配置，当action选择Forward/Redirect时可以配置本参数
+    *
+    * @return
+    */
+    public List<PostActionSpec> getPostActions() {
+        return postActions;
+    }
+
+    /**
+    * set 负载均衡将后端服务器应答流量转发给客户端时的后置动作配置，当action选择Forward/Redirect时可以配置本参数
+    *
+    * @param postActions
+    */
+    public void setPostActions(List<PostActionSpec> postActions) {
+        this.postActions = postActions;
+    }
+
+
+
+    /**
+     * set 域名，用于匹配URL的host字段,支持输入IPv4地址和域名。域名支持精确匹配和通配符匹配：1、仅支持输入大小写字母、数字、英文中划线“-”和点“.”，最少包括一个点&quot;.&quot;，不能以点&quot;.&quot;和中划线&quot;-&quot;开头或结尾，中划线&quot;-&quot;前后不能为点&quot;.&quot;，不区分大小写，且不能超过110字符；2、通配符匹配支持包括一个星&quot;\*&quot;，输入格式为\*.XXX或XXX.\*，不支持仅输入一个星“\*”。 host和path至少配置其一，host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
      *
      * @param host
      */
@@ -159,8 +215,9 @@ public class RuleSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set URL访问路径，用于匹配URL的path字段。URL路径支持精确匹配和前缀匹配：1、必须以/开头，仅支持输入大小写字母、数字和特殊字符：$-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符；2、前缀匹配支持包括一个星&quot;\*&quot;，输入格式为/XXX\*或/\*，仅输入&quot;/&quot;表示精确匹配。 host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
+     * set URL访问路径，用于匹配URL的path字段。URL路径支持精确匹配和前缀匹配：1、必须以/开头，仅支持输入大小写字母、数字和特殊字符：$-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符；2、前缀匹配支持包括一个星&quot;\*&quot;，输入格式为/XXX\*或/\*，仅输入&quot;/&quot;表示精确匹配。 host和path至少配置其一，host缺省为空（含义是匹配所有） ，path缺省为/\*（含义是匹配所有）
      *
      * @param path
      */
@@ -168,6 +225,7 @@ public class RuleSpec  implements java.io.Serializable {
         this.path = path;
         return this;
     }
+
 
     /**
      * set 匹配转发规则后执行的动作，取值为Forward或Redirect。默认为Forward
@@ -179,6 +237,7 @@ public class RuleSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 后端服务的Id。当action选择Forward时需配置本参数
      *
@@ -188,6 +247,7 @@ public class RuleSpec  implements java.io.Serializable {
         this.backendId = backendId;
         return this;
     }
+
 
     /**
      * set 重定向动作配置。当action选择Redirect时需配置本参数，且重定向配置参数protocol、port、host、path和query至少配置其一
@@ -200,4 +260,50 @@ public class RuleSpec  implements java.io.Serializable {
     }
 
 
+    /**
+    * set 负载均衡将客户端流量向后端服务器转发时的前置动作配置，当action选择Forward时可以配置本参数
+    *
+    * @param preActions
+    */
+    public RuleSpec preActions(List<PreActionSpec> preActions) {
+        this.preActions = preActions;
+        return this;
+    }
+
+
+    /**
+    * set 负载均衡将后端服务器应答流量转发给客户端时的后置动作配置，当action选择Forward/Redirect时可以配置本参数
+    *
+    * @param postActions
+    */
+    public RuleSpec postActions(List<PostActionSpec> postActions) {
+        this.postActions = postActions;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 负载均衡将客户端流量向后端服务器转发时的前置动作配置，当action选择Forward时可以配置本参数
+     *
+     * @param preAction
+     */
+    public void addPreAction(PreActionSpec preAction) {
+        if (this.preActions == null) {
+            this.preActions = new ArrayList<>();
+        }
+        this.preActions.add(preAction);
+    }
+
+    /**
+     * add item to 负载均衡将后端服务器应答流量转发给客户端时的后置动作配置，当action选择Forward/Redirect时可以配置本参数
+     *
+     * @param postAction
+     */
+    public void addPostAction(PostActionSpec postAction) {
+        if (this.postActions == null) {
+            this.postActions = new ArrayList<>();
+        }
+        this.postActions.add(postAction);
+    }
 }

@@ -39,31 +39,33 @@ public class DescribeUrlMapsResult extends JdcloudResult implements java.io.Seri
     /**
      * urlMaps
      */
+    
     private List<UrlMap> urlMaps;
-
     /**
      * 总数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get urlMaps
-     *
-     * @return
-     */
+    * get urlMaps
+    *
+    * @return
+    */
     public List<UrlMap> getUrlMaps() {
         return urlMaps;
     }
 
     /**
-     * set urlMaps
-     *
-     * @param urlMaps
-     */
+    * set urlMaps
+    *
+    * @param urlMaps
+    */
     public void setUrlMaps(List<UrlMap> urlMaps) {
         this.urlMaps = urlMaps;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeUrlMapsResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
-     * set urlMaps
-     *
-     * @param urlMaps
-     */
+    * set urlMaps
+    *
+    * @param urlMaps
+    */
     public DescribeUrlMapsResult urlMaps(List<UrlMap> urlMaps) {
         this.urlMaps = urlMaps;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeUrlMapsResult extends JdcloudResult implements java.io.Seri
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeUrlMapsResult extends JdcloudResult implements java.io.Seri
         }
         this.urlMaps.add(urlMap);
     }
-
 }

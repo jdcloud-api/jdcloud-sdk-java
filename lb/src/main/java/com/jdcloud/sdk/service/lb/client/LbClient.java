@@ -31,18 +31,12 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.lb.model.DescribeListenersRequest;
-import com.jdcloud.sdk.service.lb.model.DescribeListenersResponse;
-import com.jdcloud.sdk.service.lb.client.DescribeListenersExecutor;
-import com.jdcloud.sdk.service.lb.model.DescribeBackendRequest;
-import com.jdcloud.sdk.service.lb.model.DescribeBackendResponse;
-import com.jdcloud.sdk.service.lb.client.DescribeBackendExecutor;
+import com.jdcloud.sdk.service.lb.model.DescribeSupportedCiphersRequest;
+import com.jdcloud.sdk.service.lb.model.DescribeSupportedCiphersResponse;
+import com.jdcloud.sdk.service.lb.client.DescribeSupportedCiphersExecutor;
 import com.jdcloud.sdk.service.lb.model.RegisterTargetsRequest;
 import com.jdcloud.sdk.service.lb.model.RegisterTargetsResponse;
 import com.jdcloud.sdk.service.lb.client.RegisterTargetsExecutor;
-import com.jdcloud.sdk.service.lb.model.DescribeUrlMapRequest;
-import com.jdcloud.sdk.service.lb.model.DescribeUrlMapResponse;
-import com.jdcloud.sdk.service.lb.client.DescribeUrlMapExecutor;
 import com.jdcloud.sdk.service.lb.model.DeleteRulesRequest;
 import com.jdcloud.sdk.service.lb.model.DeleteRulesResponse;
 import com.jdcloud.sdk.service.lb.client.DeleteRulesExecutor;
@@ -58,78 +52,135 @@ import com.jdcloud.sdk.service.lb.client.UpdateTargetsExecutor;
 import com.jdcloud.sdk.service.lb.model.DescribeTargetGroupRequest;
 import com.jdcloud.sdk.service.lb.model.DescribeTargetGroupResponse;
 import com.jdcloud.sdk.service.lb.client.DescribeTargetGroupExecutor;
+import com.jdcloud.sdk.service.lb.model.UpdateAgTargetsRequest;
+import com.jdcloud.sdk.service.lb.model.UpdateAgTargetsResponse;
+import com.jdcloud.sdk.service.lb.client.UpdateAgTargetsExecutor;
 import com.jdcloud.sdk.service.lb.model.DeleteBackendRequest;
 import com.jdcloud.sdk.service.lb.model.DeleteBackendResponse;
 import com.jdcloud.sdk.service.lb.client.DeleteBackendExecutor;
 import com.jdcloud.sdk.service.lb.model.DeleteListenerCertificatesRequest;
 import com.jdcloud.sdk.service.lb.model.DeleteListenerCertificatesResponse;
 import com.jdcloud.sdk.service.lb.client.DeleteListenerCertificatesExecutor;
-import com.jdcloud.sdk.service.lb.model.AddRulesRequest;
-import com.jdcloud.sdk.service.lb.model.AddRulesResponse;
-import com.jdcloud.sdk.service.lb.client.AddRulesExecutor;
-import com.jdcloud.sdk.service.lb.model.UpdateUrlMapRequest;
-import com.jdcloud.sdk.service.lb.model.UpdateUrlMapResponse;
-import com.jdcloud.sdk.service.lb.client.UpdateUrlMapExecutor;
 import com.jdcloud.sdk.service.lb.model.UpdateBackendRequest;
 import com.jdcloud.sdk.service.lb.model.UpdateBackendResponse;
 import com.jdcloud.sdk.service.lb.client.UpdateBackendExecutor;
 import com.jdcloud.sdk.service.lb.model.AssociateElasticIpRequest;
 import com.jdcloud.sdk.service.lb.model.AssociateElasticIpResponse;
 import com.jdcloud.sdk.service.lb.client.AssociateElasticIpExecutor;
-import com.jdcloud.sdk.service.lb.model.CreateUrlMapRequest;
-import com.jdcloud.sdk.service.lb.model.CreateUrlMapResponse;
-import com.jdcloud.sdk.service.lb.client.CreateUrlMapExecutor;
 import com.jdcloud.sdk.service.lb.model.CreateBackendRequest;
 import com.jdcloud.sdk.service.lb.model.CreateBackendResponse;
 import com.jdcloud.sdk.service.lb.client.CreateBackendExecutor;
 import com.jdcloud.sdk.service.lb.model.CreateTargetGroupRequest;
 import com.jdcloud.sdk.service.lb.model.CreateTargetGroupResponse;
 import com.jdcloud.sdk.service.lb.client.CreateTargetGroupExecutor;
-import com.jdcloud.sdk.service.lb.model.UpdateTargetGroupRequest;
-import com.jdcloud.sdk.service.lb.model.UpdateTargetGroupResponse;
-import com.jdcloud.sdk.service.lb.client.UpdateTargetGroupExecutor;
 import com.jdcloud.sdk.service.lb.model.DescribeLoadBalancerRequest;
 import com.jdcloud.sdk.service.lb.model.DescribeLoadBalancerResponse;
 import com.jdcloud.sdk.service.lb.client.DescribeLoadBalancerExecutor;
+import com.jdcloud.sdk.service.lb.model.DeleteSecurityPolicyRequest;
+import com.jdcloud.sdk.service.lb.model.DeleteSecurityPolicyResponse;
+import com.jdcloud.sdk.service.lb.client.DeleteSecurityPolicyExecutor;
 import com.jdcloud.sdk.service.lb.model.UpdateListenerRequest;
 import com.jdcloud.sdk.service.lb.model.UpdateListenerResponse;
 import com.jdcloud.sdk.service.lb.client.UpdateListenerExecutor;
+import com.jdcloud.sdk.service.lb.model.DescribeLoadBalancersBySecurityGroupRequest;
+import com.jdcloud.sdk.service.lb.model.DescribeLoadBalancersBySecurityGroupResponse;
+import com.jdcloud.sdk.service.lb.client.DescribeLoadBalancersBySecurityGroupExecutor;
 import com.jdcloud.sdk.service.lb.model.DescribeListenerRequest;
 import com.jdcloud.sdk.service.lb.model.DescribeListenerResponse;
 import com.jdcloud.sdk.service.lb.client.DescribeListenerExecutor;
-import com.jdcloud.sdk.service.lb.model.DescribeTargetGroupsRequest;
-import com.jdcloud.sdk.service.lb.model.DescribeTargetGroupsResponse;
-import com.jdcloud.sdk.service.lb.client.DescribeTargetGroupsExecutor;
 import com.jdcloud.sdk.service.lb.model.DeleteLoadBalancerRequest;
 import com.jdcloud.sdk.service.lb.model.DeleteLoadBalancerResponse;
 import com.jdcloud.sdk.service.lb.client.DeleteLoadBalancerExecutor;
+import com.jdcloud.sdk.service.lb.model.UpdateCustomizedConfigurationRequest;
+import com.jdcloud.sdk.service.lb.model.UpdateCustomizedConfigurationResponse;
+import com.jdcloud.sdk.service.lb.client.UpdateCustomizedConfigurationExecutor;
+import com.jdcloud.sdk.service.lb.model.DeleteCustomizedConfigurationRequest;
+import com.jdcloud.sdk.service.lb.model.DeleteCustomizedConfigurationResponse;
+import com.jdcloud.sdk.service.lb.client.DeleteCustomizedConfigurationExecutor;
 import com.jdcloud.sdk.service.lb.model.DisassociateSecurityGroupRequest;
 import com.jdcloud.sdk.service.lb.model.DisassociateSecurityGroupResponse;
 import com.jdcloud.sdk.service.lb.client.DisassociateSecurityGroupExecutor;
 import com.jdcloud.sdk.service.lb.model.DescribeBackendsRequest;
 import com.jdcloud.sdk.service.lb.model.DescribeBackendsResponse;
 import com.jdcloud.sdk.service.lb.client.DescribeBackendsExecutor;
-import com.jdcloud.sdk.service.lb.model.AssociateSecurityGroupRequest;
-import com.jdcloud.sdk.service.lb.model.AssociateSecurityGroupResponse;
-import com.jdcloud.sdk.service.lb.client.AssociateSecurityGroupExecutor;
-import com.jdcloud.sdk.service.lb.model.DeRegisterTargetsRequest;
-import com.jdcloud.sdk.service.lb.model.DeRegisterTargetsResponse;
-import com.jdcloud.sdk.service.lb.client.DeRegisterTargetsExecutor;
 import com.jdcloud.sdk.service.lb.model.DescribeTargetsRequest;
 import com.jdcloud.sdk.service.lb.model.DescribeTargetsResponse;
 import com.jdcloud.sdk.service.lb.client.DescribeTargetsExecutor;
+import com.jdcloud.sdk.service.lb.model.DescribeCustomizedConfigurationRequest;
+import com.jdcloud.sdk.service.lb.model.DescribeCustomizedConfigurationResponse;
+import com.jdcloud.sdk.service.lb.client.DescribeCustomizedConfigurationExecutor;
 import com.jdcloud.sdk.service.lb.model.CreateLoadBalancerRequest;
 import com.jdcloud.sdk.service.lb.model.CreateLoadBalancerResponse;
 import com.jdcloud.sdk.service.lb.client.CreateLoadBalancerExecutor;
+import com.jdcloud.sdk.service.lb.model.DeleteTargetGroupRequest;
+import com.jdcloud.sdk.service.lb.model.DeleteTargetGroupResponse;
+import com.jdcloud.sdk.service.lb.client.DeleteTargetGroupExecutor;
+import com.jdcloud.sdk.service.lb.model.DeleteListenerRequest;
+import com.jdcloud.sdk.service.lb.model.DeleteListenerResponse;
+import com.jdcloud.sdk.service.lb.client.DeleteListenerExecutor;
+import com.jdcloud.sdk.service.lb.model.DescribeListenersRequest;
+import com.jdcloud.sdk.service.lb.model.DescribeListenersResponse;
+import com.jdcloud.sdk.service.lb.client.DescribeListenersExecutor;
+import com.jdcloud.sdk.service.lb.model.DescribeBackendRequest;
+import com.jdcloud.sdk.service.lb.model.DescribeBackendResponse;
+import com.jdcloud.sdk.service.lb.client.DescribeBackendExecutor;
+import com.jdcloud.sdk.service.lb.model.DescribeUrlMapRequest;
+import com.jdcloud.sdk.service.lb.model.DescribeUrlMapResponse;
+import com.jdcloud.sdk.service.lb.client.DescribeUrlMapExecutor;
+import com.jdcloud.sdk.service.lb.model.CreateCustomizedConfigurationRequest;
+import com.jdcloud.sdk.service.lb.model.CreateCustomizedConfigurationResponse;
+import com.jdcloud.sdk.service.lb.client.CreateCustomizedConfigurationExecutor;
+import com.jdcloud.sdk.service.lb.model.DescribeAgTargetsRequest;
+import com.jdcloud.sdk.service.lb.model.DescribeAgTargetsResponse;
+import com.jdcloud.sdk.service.lb.client.DescribeAgTargetsExecutor;
+import com.jdcloud.sdk.service.lb.model.AddRulesRequest;
+import com.jdcloud.sdk.service.lb.model.AddRulesResponse;
+import com.jdcloud.sdk.service.lb.client.AddRulesExecutor;
+import com.jdcloud.sdk.service.lb.model.UpdateUrlMapRequest;
+import com.jdcloud.sdk.service.lb.model.UpdateUrlMapResponse;
+import com.jdcloud.sdk.service.lb.client.UpdateUrlMapExecutor;
+import com.jdcloud.sdk.service.lb.model.CreateSecurityPolicyRequest;
+import com.jdcloud.sdk.service.lb.model.CreateSecurityPolicyResponse;
+import com.jdcloud.sdk.service.lb.client.CreateSecurityPolicyExecutor;
+import com.jdcloud.sdk.service.lb.model.DescribeCustomizedConfigurationsRequest;
+import com.jdcloud.sdk.service.lb.model.DescribeCustomizedConfigurationsResponse;
+import com.jdcloud.sdk.service.lb.client.DescribeCustomizedConfigurationsExecutor;
+import com.jdcloud.sdk.service.lb.model.CreateUrlMapRequest;
+import com.jdcloud.sdk.service.lb.model.CreateUrlMapResponse;
+import com.jdcloud.sdk.service.lb.client.CreateUrlMapExecutor;
+import com.jdcloud.sdk.service.lb.model.UpdateSecurityPolicyRequest;
+import com.jdcloud.sdk.service.lb.model.UpdateSecurityPolicyResponse;
+import com.jdcloud.sdk.service.lb.client.UpdateSecurityPolicyExecutor;
+import com.jdcloud.sdk.service.lb.model.UpdateTargetGroupRequest;
+import com.jdcloud.sdk.service.lb.model.UpdateTargetGroupResponse;
+import com.jdcloud.sdk.service.lb.client.UpdateTargetGroupExecutor;
+import com.jdcloud.sdk.service.lb.model.DescribeSecurityPoliciesRequest;
+import com.jdcloud.sdk.service.lb.model.DescribeSecurityPoliciesResponse;
+import com.jdcloud.sdk.service.lb.client.DescribeSecurityPoliciesExecutor;
+import com.jdcloud.sdk.service.lb.model.AssociateCustomizedConfigurationRequest;
+import com.jdcloud.sdk.service.lb.model.AssociateCustomizedConfigurationResponse;
+import com.jdcloud.sdk.service.lb.client.AssociateCustomizedConfigurationExecutor;
+import com.jdcloud.sdk.service.lb.model.DescribeTargetGroupsRequest;
+import com.jdcloud.sdk.service.lb.model.DescribeTargetGroupsResponse;
+import com.jdcloud.sdk.service.lb.client.DescribeTargetGroupsExecutor;
+import com.jdcloud.sdk.service.lb.model.DisassociateCustomizedConfigurationRequest;
+import com.jdcloud.sdk.service.lb.model.DisassociateCustomizedConfigurationResponse;
+import com.jdcloud.sdk.service.lb.client.DisassociateCustomizedConfigurationExecutor;
+import com.jdcloud.sdk.service.lb.model.AssociateSecurityGroupRequest;
+import com.jdcloud.sdk.service.lb.model.AssociateSecurityGroupResponse;
+import com.jdcloud.sdk.service.lb.client.AssociateSecurityGroupExecutor;
+import com.jdcloud.sdk.service.lb.model.DescribeSecurityPolicyRequest;
+import com.jdcloud.sdk.service.lb.model.DescribeSecurityPolicyResponse;
+import com.jdcloud.sdk.service.lb.client.DescribeSecurityPolicyExecutor;
+import com.jdcloud.sdk.service.lb.model.DeRegisterTargetsRequest;
+import com.jdcloud.sdk.service.lb.model.DeRegisterTargetsResponse;
+import com.jdcloud.sdk.service.lb.client.DeRegisterTargetsExecutor;
 import com.jdcloud.sdk.service.lb.model.CreateListenerRequest;
 import com.jdcloud.sdk.service.lb.model.CreateListenerResponse;
 import com.jdcloud.sdk.service.lb.client.CreateListenerExecutor;
 import com.jdcloud.sdk.service.lb.model.DeleteUrlMapRequest;
 import com.jdcloud.sdk.service.lb.model.DeleteUrlMapResponse;
 import com.jdcloud.sdk.service.lb.client.DeleteUrlMapExecutor;
-import com.jdcloud.sdk.service.lb.model.DeleteTargetGroupRequest;
-import com.jdcloud.sdk.service.lb.model.DeleteTargetGroupResponse;
-import com.jdcloud.sdk.service.lb.client.DeleteTargetGroupExecutor;
 import com.jdcloud.sdk.service.lb.model.DescribeTargetHealthRequest;
 import com.jdcloud.sdk.service.lb.model.DescribeTargetHealthResponse;
 import com.jdcloud.sdk.service.lb.client.DescribeTargetHealthExecutor;
@@ -145,9 +196,6 @@ import com.jdcloud.sdk.service.lb.client.UpdateRulesExecutor;
 import com.jdcloud.sdk.service.lb.model.UpdateListenerCertificatesRequest;
 import com.jdcloud.sdk.service.lb.model.UpdateListenerCertificatesResponse;
 import com.jdcloud.sdk.service.lb.client.UpdateListenerCertificatesExecutor;
-import com.jdcloud.sdk.service.lb.model.DeleteListenerRequest;
-import com.jdcloud.sdk.service.lb.model.DeleteListenerResponse;
-import com.jdcloud.sdk.service.lb.client.DeleteListenerExecutor;
 import com.jdcloud.sdk.service.lb.model.DescribeUrlMapsRequest;
 import com.jdcloud.sdk.service.lb.model.DescribeUrlMapsResponse;
 import com.jdcloud.sdk.service.lb.client.DescribeUrlMapsExecutor;
@@ -159,7 +207,7 @@ public class LbClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.7";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "lb.jdcloud-api.com";
     public final static String ServiceName = "lb";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -202,25 +250,14 @@ public class LbClient extends JdcloudClient {
 
 
     /**
-     * 查询监听器列表
+     * 查询安全策略支持Cipher列表详情
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeListenersResponse describeListeners(DescribeListenersRequest request) throws JdcloudSdkException {
-        return new DescribeListenersExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询后端服务详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeBackendResponse describeBackend(DescribeBackendRequest request) throws JdcloudSdkException {
-        return new DescribeBackendExecutor().client(this).execute(request);
+    public DescribeSupportedCiphersResponse describeSupportedCiphers(DescribeSupportedCiphersRequest request) throws JdcloudSdkException {
+        return new DescribeSupportedCiphersExecutor().client(this).execute(request);
     }
 
     /**
@@ -232,17 +269,6 @@ public class LbClient extends JdcloudClient {
      */
     public RegisterTargetsResponse registerTargets(RegisterTargetsRequest request) throws JdcloudSdkException {
         return new RegisterTargetsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询转发规则组详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeUrlMapResponse describeUrlMap(DescribeUrlMapRequest request) throws JdcloudSdkException {
-        return new DescribeUrlMapExecutor().client(this).execute(request);
     }
 
     /**
@@ -301,6 +327,17 @@ public class LbClient extends JdcloudClient {
     }
 
     /**
+     * 修改后端服务-高可用组(ag)下target信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateAgTargetsResponse updateAgTargets(UpdateAgTargetsRequest request) throws JdcloudSdkException {
+        return new UpdateAgTargetsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除一个后端服务
      *
      * @param request
@@ -320,28 +357,6 @@ public class LbClient extends JdcloudClient {
      */
     public DeleteListenerCertificatesResponse deleteListenerCertificates(DeleteListenerCertificatesRequest request) throws JdcloudSdkException {
         return new DeleteListenerCertificatesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 往转发规则组加入转发规则
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AddRulesResponse addRules(AddRulesRequest request) throws JdcloudSdkException {
-        return new AddRulesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改转发规则组
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdateUrlMapResponse updateUrlMap(UpdateUrlMapRequest request) throws JdcloudSdkException {
-        return new UpdateUrlMapExecutor().client(this).execute(request);
     }
 
     /**
@@ -367,17 +382,6 @@ public class LbClient extends JdcloudClient {
     }
 
     /**
-     * 创建转发规则组,仅alb支持
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateUrlMapResponse createUrlMap(CreateUrlMapRequest request) throws JdcloudSdkException {
-        return new CreateUrlMapExecutor().client(this).execute(request);
-    }
-
-    /**
      * 创建一个后端服务
      *
      * @param request
@@ -400,17 +404,6 @@ public class LbClient extends JdcloudClient {
     }
 
     /**
-     * 修改一个虚拟服务器组的信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdateTargetGroupResponse updateTargetGroup(UpdateTargetGroupRequest request) throws JdcloudSdkException {
-        return new UpdateTargetGroupExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询负载均衡详情
      *
      * @param request
@@ -419,6 +412,17 @@ public class LbClient extends JdcloudClient {
      */
     public DescribeLoadBalancerResponse describeLoadBalancer(DescribeLoadBalancerRequest request) throws JdcloudSdkException {
         return new DescribeLoadBalancerExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除一个安全策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSecurityPolicyResponse deleteSecurityPolicy(DeleteSecurityPolicyRequest request) throws JdcloudSdkException {
+        return new DeleteSecurityPolicyExecutor().client(this).execute(request);
     }
 
     /**
@@ -433,6 +437,17 @@ public class LbClient extends JdcloudClient {
     }
 
     /**
+     * 查询安全组绑定负载均衡列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLoadBalancersBySecurityGroupResponse describeLoadBalancersBySecurityGroup(DescribeLoadBalancersBySecurityGroupRequest request) throws JdcloudSdkException {
+        return new DescribeLoadBalancersBySecurityGroupExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询监听器详情
      *
      * @param request
@@ -444,17 +459,6 @@ public class LbClient extends JdcloudClient {
     }
 
     /**
-     * 查询虚拟服务器组列表详情，返回target详情功能3个月后将会下线，建议用户直接使用describeTargets接口查询target详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeTargetGroupsResponse describeTargetGroups(DescribeTargetGroupsRequest request) throws JdcloudSdkException {
-        return new DescribeTargetGroupsExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除负载均衡，负载均衡下的监听器，转发规则组(仅alb支持)，后端服务，服务器组会一起删除
      *
      * @param request
@@ -463,6 +467,28 @@ public class LbClient extends JdcloudClient {
      */
     public DeleteLoadBalancerResponse deleteLoadBalancer(DeleteLoadBalancerRequest request) throws JdcloudSdkException {
         return new DeleteLoadBalancerExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改一个个性化配置的信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateCustomizedConfigurationResponse updateCustomizedConfiguration(UpdateCustomizedConfigurationRequest request) throws JdcloudSdkException {
+        return new UpdateCustomizedConfigurationExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除一个个性化配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteCustomizedConfigurationResponse deleteCustomizedConfiguration(DeleteCustomizedConfigurationRequest request) throws JdcloudSdkException {
+        return new DeleteCustomizedConfigurationExecutor().client(this).execute(request);
     }
 
     /**
@@ -488,28 +514,6 @@ public class LbClient extends JdcloudClient {
     }
 
     /**
-     * 负载均衡绑定安全组
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AssociateSecurityGroupResponse associateSecurityGroup(AssociateSecurityGroupRequest request) throws JdcloudSdkException {
-        return new AssociateSecurityGroupExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 从TargetGroup中移除一个或多个Target，失败则全部回滚。 成功移除的target将不会再接收来自loadbalancer新建连接的流量
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeRegisterTargetsResponse deRegisterTargets(DeRegisterTargetsRequest request) throws JdcloudSdkException {
-        return new DeRegisterTargetsExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询Target列表详情
      *
      * @param request
@@ -521,6 +525,17 @@ public class LbClient extends JdcloudClient {
     }
 
     /**
+     * 查询个性化配置详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCustomizedConfigurationResponse describeCustomizedConfiguration(DescribeCustomizedConfigurationRequest request) throws JdcloudSdkException {
+        return new DescribeCustomizedConfigurationExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建负载均衡
      *
      * @param request
@@ -529,6 +544,237 @@ public class LbClient extends JdcloudClient {
      */
     public CreateLoadBalancerResponse createLoadBalancer(CreateLoadBalancerRequest request) throws JdcloudSdkException {
         return new CreateLoadBalancerExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除一个虚拟服务器组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteTargetGroupResponse deleteTargetGroup(DeleteTargetGroupRequest request) throws JdcloudSdkException {
+        return new DeleteTargetGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除一个监听器
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteListenerResponse deleteListener(DeleteListenerRequest request) throws JdcloudSdkException {
+        return new DeleteListenerExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询监听器列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeListenersResponse describeListeners(DescribeListenersRequest request) throws JdcloudSdkException {
+        return new DescribeListenersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询后端服务详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBackendResponse describeBackend(DescribeBackendRequest request) throws JdcloudSdkException {
+        return new DescribeBackendExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询转发规则组详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeUrlMapResponse describeUrlMap(DescribeUrlMapRequest request) throws JdcloudSdkException {
+        return new DescribeUrlMapExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建一个个性化配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateCustomizedConfigurationResponse createCustomizedConfiguration(CreateCustomizedConfigurationRequest request) throws JdcloudSdkException {
+        return new CreateCustomizedConfigurationExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询 后端服务-高可用组 Target列表详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAgTargetsResponse describeAgTargets(DescribeAgTargetsRequest request) throws JdcloudSdkException {
+        return new DescribeAgTargetsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 往转发规则组加入转发规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddRulesResponse addRules(AddRulesRequest request) throws JdcloudSdkException {
+        return new AddRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改转发规则组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateUrlMapResponse updateUrlMap(UpdateUrlMapRequest request) throws JdcloudSdkException {
+        return new UpdateUrlMapExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建一个安全策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateSecurityPolicyResponse createSecurityPolicy(CreateSecurityPolicyRequest request) throws JdcloudSdkException {
+        return new CreateSecurityPolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询个性化配置列表详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCustomizedConfigurationsResponse describeCustomizedConfigurations(DescribeCustomizedConfigurationsRequest request) throws JdcloudSdkException {
+        return new DescribeCustomizedConfigurationsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建转发规则组,仅alb支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateUrlMapResponse createUrlMap(CreateUrlMapRequest request) throws JdcloudSdkException {
+        return new CreateUrlMapExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改一个安全策略的信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateSecurityPolicyResponse updateSecurityPolicy(UpdateSecurityPolicyRequest request) throws JdcloudSdkException {
+        return new UpdateSecurityPolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改一个虚拟服务器组的信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateTargetGroupResponse updateTargetGroup(UpdateTargetGroupRequest request) throws JdcloudSdkException {
+        return new UpdateTargetGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询安全策略列表详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSecurityPoliciesResponse describeSecurityPolicies(DescribeSecurityPoliciesRequest request) throws JdcloudSdkException {
+        return new DescribeSecurityPoliciesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 给资源绑定个性化配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssociateCustomizedConfigurationResponse associateCustomizedConfiguration(AssociateCustomizedConfigurationRequest request) throws JdcloudSdkException {
+        return new AssociateCustomizedConfigurationExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询虚拟服务器组列表详情，返回target详情功能3个月后将会下线，建议用户直接使用describeTargets接口查询target详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeTargetGroupsResponse describeTargetGroups(DescribeTargetGroupsRequest request) throws JdcloudSdkException {
+        return new DescribeTargetGroupsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 给资源解绑个性化配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisassociateCustomizedConfigurationResponse disassociateCustomizedConfiguration(DisassociateCustomizedConfigurationRequest request) throws JdcloudSdkException {
+        return new DisassociateCustomizedConfigurationExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 负载均衡绑定安全组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssociateSecurityGroupResponse associateSecurityGroup(AssociateSecurityGroupRequest request) throws JdcloudSdkException {
+        return new AssociateSecurityGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询安全策略详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSecurityPolicyResponse describeSecurityPolicy(DescribeSecurityPolicyRequest request) throws JdcloudSdkException {
+        return new DescribeSecurityPolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 从TargetGroup中移除一个或多个Target，失败则全部回滚。 成功移除的target将不会再接收来自loadbalancer新建连接的流量
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeRegisterTargetsResponse deRegisterTargets(DeRegisterTargetsRequest request) throws JdcloudSdkException {
+        return new DeRegisterTargetsExecutor().client(this).execute(request);
     }
 
     /**
@@ -551,17 +797,6 @@ public class LbClient extends JdcloudClient {
      */
     public DeleteUrlMapResponse deleteUrlMap(DeleteUrlMapRequest request) throws JdcloudSdkException {
         return new DeleteUrlMapExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除一个虚拟服务器组
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteTargetGroupResponse deleteTargetGroup(DeleteTargetGroupRequest request) throws JdcloudSdkException {
-        return new DeleteTargetGroupExecutor().client(this).execute(request);
     }
 
     /**
@@ -617,17 +852,6 @@ public class LbClient extends JdcloudClient {
      */
     public UpdateListenerCertificatesResponse updateListenerCertificates(UpdateListenerCertificatesRequest request) throws JdcloudSdkException {
         return new UpdateListenerCertificatesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除一个监听器
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteListenerResponse deleteListener(DeleteListenerRequest request) throws JdcloudSdkException {
-        return new DeleteListenerExecutor().client(this).execute(request);
     }
 
     /**

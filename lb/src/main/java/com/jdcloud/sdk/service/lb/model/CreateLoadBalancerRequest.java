@@ -61,8 +61,8 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     /**
      * 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】中心可用区，dnlb不需要传该参数，全可用区可用；边缘可用区，仅支持传入单可用区
      */
+    
     private List<String> azs;
-
     /**
      * 【alb】支持按用量计费，默认为按用量。【nlb】支持按用量计费。【dnlb】支持按配置计费
      */
@@ -81,8 +81,8 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     /**
      * 【alb】 安全组 ID列表
      */
+    
     private List<String> securityGroupIds;
-
     /**
      * LoadBalancer的描述信息,允许输入UTF-8编码下的全部字符，不超过256字符
      */
@@ -96,14 +96,15 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     /**
      * 用户tag 信息
      */
+    
     private List<Tag> userTags;
-
     /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -124,6 +125,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         this.loadBalancerName = loadBalancerName;
     }
 
+
     /**
      * get LoadBalancer所属子网的Id
      *
@@ -141,6 +143,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
     /**
      * get LoadBalancer的类型，取值：alb、nlb、dnlb，默认为alb
@@ -160,23 +163,25 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         this.type = type;
     }
 
+
     /**
-     * get 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】中心可用区，dnlb不需要传该参数，全可用区可用；边缘可用区，仅支持传入单可用区
-     *
-     * @return
-     */
+    * get 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】中心可用区，dnlb不需要传该参数，全可用区可用；边缘可用区，仅支持传入单可用区
+    *
+    * @return
+    */
     public List<String> getAzs() {
         return azs;
     }
 
     /**
-     * set 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】中心可用区，dnlb不需要传该参数，全可用区可用；边缘可用区，仅支持传入单可用区
-     *
-     * @param azs
-     */
+    * set 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】中心可用区，dnlb不需要传该参数，全可用区可用；边缘可用区，仅支持传入单可用区
+    *
+    * @param azs
+    */
     public void setAzs(List<String> azs) {
         this.azs = azs;
     }
+
 
     /**
      * get 【alb】支持按用量计费，默认为按用量。【nlb】支持按用量计费。【dnlb】支持按配置计费
@@ -196,6 +201,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         this.chargeSpec = chargeSpec;
     }
 
+
     /**
      * get 负载均衡关联的弹性IP规格
      *
@@ -213,6 +219,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     public void setElasticIp(ElasticIpSpec elasticIp) {
         this.elasticIp = elasticIp;
     }
+
 
     /**
      * get 指定LoadBalancer的VIP(内网IPv4地址)，需要属于指定的子网并且未被占用
@@ -232,23 +239,25 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         this.privateIpAddress = privateIpAddress;
     }
 
+
     /**
-     * get 【alb】 安全组 ID列表
-     *
-     * @return
-     */
+    * get 【alb】 安全组 ID列表
+    *
+    * @return
+    */
     public List<String> getSecurityGroupIds() {
         return securityGroupIds;
     }
 
     /**
-     * set 【alb】 安全组 ID列表
-     *
-     * @param securityGroupIds
-     */
+    * set 【alb】 安全组 ID列表
+    *
+    * @param securityGroupIds
+    */
     public void setSecurityGroupIds(List<String> securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
     }
+
 
     /**
      * get LoadBalancer的描述信息,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -268,6 +277,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         this.description = description;
     }
 
+
     /**
      * get 删除保护，取值为True(开启)或False(关闭)，默认为False
      *
@@ -286,23 +296,25 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         this.deleteProtection = deleteProtection;
     }
 
+
     /**
-     * get 用户tag 信息
-     *
-     * @return
-     */
+    * get 用户tag 信息
+    *
+    * @return
+    */
     public List<Tag> getUserTags() {
         return userTags;
     }
 
     /**
-     * set 用户tag 信息
-     *
-     * @param userTags
-     */
+    * set 用户tag 信息
+    *
+    * @param userTags
+    */
     public void setUserTags(List<Tag> userTags) {
         this.userTags = userTags;
     }
+
 
     /**
      * get Region ID
@@ -323,6 +335,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set LoadBalancer的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
      *
@@ -332,6 +345,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         this.loadBalancerName = loadBalancerName;
         return this;
     }
+
 
     /**
      * set LoadBalancer所属子网的Id
@@ -343,6 +357,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set LoadBalancer的类型，取值：alb、nlb、dnlb，默认为alb
      *
@@ -353,15 +368,17 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
-     * set 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】中心可用区，dnlb不需要传该参数，全可用区可用；边缘可用区，仅支持传入单可用区
-     *
-     * @param azs
-     */
+    * set 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】中心可用区，dnlb不需要传该参数，全可用区可用；边缘可用区，仅支持传入单可用区
+    *
+    * @param azs
+    */
     public CreateLoadBalancerRequest azs(List<String> azs) {
         this.azs = azs;
         return this;
     }
+
 
     /**
      * set 【alb】支持按用量计费，默认为按用量。【nlb】支持按用量计费。【dnlb】支持按配置计费
@@ -373,6 +390,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 负载均衡关联的弹性IP规格
      *
@@ -382,6 +400,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         this.elasticIp = elasticIp;
         return this;
     }
+
 
     /**
      * set 指定LoadBalancer的VIP(内网IPv4地址)，需要属于指定的子网并且未被占用
@@ -393,15 +412,17 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
-     * set 【alb】 安全组 ID列表
-     *
-     * @param securityGroupIds
-     */
+    * set 【alb】 安全组 ID列表
+    *
+    * @param securityGroupIds
+    */
     public CreateLoadBalancerRequest securityGroupIds(List<String> securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
     }
+
 
     /**
      * set LoadBalancer的描述信息,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -413,6 +434,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 删除保护，取值为True(开启)或False(关闭)，默认为False
      *
@@ -423,15 +445,17 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
-     * set 用户tag 信息
-     *
-     * @param userTags
-     */
+    * set 用户tag 信息
+    *
+    * @param userTags
+    */
     public CreateLoadBalancerRequest userTags(List<Tag> userTags) {
         this.userTags = userTags;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -442,6 +466,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -479,5 +504,4 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
         }
         this.userTags.add(userTag);
     }
-
 }

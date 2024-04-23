@@ -40,6 +40,7 @@ public class DescribeBackendResult extends JdcloudResult implements java.io.Seri
     private Backend backend;
 
 
+
     /**
      * get 后端服务的信息
      *
@@ -57,6 +58,7 @@ public class DescribeBackendResult extends JdcloudResult implements java.io.Seri
     public void setBackend(Backend backend) {
         this.backend = backend;
     }
+
 
 
     /**

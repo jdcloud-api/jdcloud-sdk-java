@@ -42,8 +42,8 @@ public class UpdateRulesRequest extends JdcloudRequest implements java.io.Serial
      * Required:true
      */
     @Required
+    
     private List<RuleUpdateSpec> ruleUpdateSpecs;
-
     /**
      * Region ID
      * Required:true
@@ -59,23 +59,25 @@ public class UpdateRulesRequest extends JdcloudRequest implements java.io.Serial
     private String urlMapId;
 
 
+
     /**
-     * get 更新转发规则rules信息
-     *
-     * @return
-     */
+    * get 更新转发规则rules信息
+    *
+    * @return
+    */
     public List<RuleUpdateSpec> getRuleUpdateSpecs() {
         return ruleUpdateSpecs;
     }
 
     /**
-     * set 更新转发规则rules信息
-     *
-     * @param ruleUpdateSpecs
-     */
+    * set 更新转发规则rules信息
+    *
+    * @param ruleUpdateSpecs
+    */
     public void setRuleUpdateSpecs(List<RuleUpdateSpec> ruleUpdateSpecs) {
         this.ruleUpdateSpecs = ruleUpdateSpecs;
     }
+
 
     /**
      * get Region ID
@@ -94,6 +96,7 @@ public class UpdateRulesRequest extends JdcloudRequest implements java.io.Serial
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 转发规则组Id
@@ -114,15 +117,17 @@ public class UpdateRulesRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
-     * set 更新转发规则rules信息
-     *
-     * @param ruleUpdateSpecs
-     */
+    * set 更新转发规则rules信息
+    *
+    * @param ruleUpdateSpecs
+    */
     public UpdateRulesRequest ruleUpdateSpecs(List<RuleUpdateSpec> ruleUpdateSpecs) {
         this.ruleUpdateSpecs = ruleUpdateSpecs;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -134,6 +139,7 @@ public class UpdateRulesRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 转发规则组Id
      *
@@ -143,6 +149,7 @@ public class UpdateRulesRequest extends JdcloudRequest implements java.io.Serial
         this.urlMapId = urlMapId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class UpdateRulesRequest extends JdcloudRequest implements java.io.Serial
         }
         this.ruleUpdateSpecs.add(ruleUpdateSpec);
     }
-
 }

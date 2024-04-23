@@ -40,37 +40,40 @@ public class AssAndDisassSecurityGroupsSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> securityGroupIds;
 
 
     /**
-     * get 安全组 ID列表
-     *
-     * @return
-     */
+    * get 安全组 ID列表
+    *
+    * @return
+    */
     public List<String> getSecurityGroupIds() {
         return securityGroupIds;
     }
 
     /**
-     * set 安全组 ID列表
-     *
-     * @param securityGroupIds
-     */
+    * set 安全组 ID列表
+    *
+    * @param securityGroupIds
+    */
     public void setSecurityGroupIds(List<String> securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
     }
 
 
+
     /**
-     * set 安全组 ID列表
-     *
-     * @param securityGroupIds
-     */
+    * set 安全组 ID列表
+    *
+    * @param securityGroupIds
+    */
     public AssAndDisassSecurityGroupsSpec securityGroupIds(List<String> securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class AssAndDisassSecurityGroupsSpec  implements java.io.Serializable {
         }
         this.securityGroupIds.add(securityGroupId);
     }
-
 }

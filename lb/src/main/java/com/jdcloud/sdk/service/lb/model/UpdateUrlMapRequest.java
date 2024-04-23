@@ -59,6 +59,7 @@ public class UpdateUrlMapRequest extends JdcloudRequest implements java.io.Seria
     private String urlMapId;
 
 
+
     /**
      * get 转发规则组描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -76,6 +77,7 @@ public class UpdateUrlMapRequest extends JdcloudRequest implements java.io.Seria
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 转发规则组名称，同一个负载均衡下，名称不能重复,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
@@ -95,6 +97,7 @@ public class UpdateUrlMapRequest extends JdcloudRequest implements java.io.Seria
         this.urlMapName = urlMapName;
     }
 
+
     /**
      * get Region ID
      *
@@ -112,6 +115,7 @@ public class UpdateUrlMapRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 转发规则组Id
@@ -132,6 +136,7 @@ public class UpdateUrlMapRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 转发规则组描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -141,6 +146,7 @@ public class UpdateUrlMapRequest extends JdcloudRequest implements java.io.Seria
         this.description = description;
         return this;
     }
+
 
     /**
      * set 转发规则组名称，同一个负载均衡下，名称不能重复,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
@@ -152,6 +158,7 @@ public class UpdateUrlMapRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -161,6 +168,7 @@ public class UpdateUrlMapRequest extends JdcloudRequest implements java.io.Seria
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 转发规则组Id

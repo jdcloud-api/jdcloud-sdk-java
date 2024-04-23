@@ -41,8 +41,8 @@ public class DeRegisterTargetsRequest extends JdcloudRequest implements java.io.
      * Required:true
      */
     @Required
+    
     private List<String> targetIds;
-
     /**
      * Region ID
      * Required:true
@@ -58,23 +58,25 @@ public class DeRegisterTargetsRequest extends JdcloudRequest implements java.io.
     private String targetGroupId;
 
 
+
     /**
-     * get Target Id列表
-     *
-     * @return
-     */
+    * get Target Id列表
+    *
+    * @return
+    */
     public List<String> getTargetIds() {
         return targetIds;
     }
 
     /**
-     * set Target Id列表
-     *
-     * @param targetIds
-     */
+    * set Target Id列表
+    *
+    * @param targetIds
+    */
     public void setTargetIds(List<String> targetIds) {
         this.targetIds = targetIds;
     }
+
 
     /**
      * get Region ID
@@ -93,6 +95,7 @@ public class DeRegisterTargetsRequest extends JdcloudRequest implements java.io.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get TargetGroup Id
@@ -113,15 +116,17 @@ public class DeRegisterTargetsRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
-     * set Target Id列表
-     *
-     * @param targetIds
-     */
+    * set Target Id列表
+    *
+    * @param targetIds
+    */
     public DeRegisterTargetsRequest targetIds(List<String> targetIds) {
         this.targetIds = targetIds;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -133,6 +138,7 @@ public class DeRegisterTargetsRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set TargetGroup Id
      *
@@ -142,6 +148,7 @@ public class DeRegisterTargetsRequest extends JdcloudRequest implements java.io.
         this.targetGroupId = targetGroupId;
         return this;
     }
+
 
 
     /**
@@ -155,5 +162,4 @@ public class DeRegisterTargetsRequest extends JdcloudRequest implements java.io.
         }
         this.targetIds.add(targetId);
     }
-
 }

@@ -40,37 +40,40 @@ public class DeleteRulesSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> ruleIds;
 
 
     /**
-     * get rule Id列表
-     *
-     * @return
-     */
+    * get rule Id列表
+    *
+    * @return
+    */
     public List<String> getRuleIds() {
         return ruleIds;
     }
 
     /**
-     * set rule Id列表
-     *
-     * @param ruleIds
-     */
+    * set rule Id列表
+    *
+    * @param ruleIds
+    */
     public void setRuleIds(List<String> ruleIds) {
         this.ruleIds = ruleIds;
     }
 
 
+
     /**
-     * set rule Id列表
-     *
-     * @param ruleIds
-     */
+    * set rule Id列表
+    *
+    * @param ruleIds
+    */
     public DeleteRulesSpec ruleIds(List<String> ruleIds) {
         this.ruleIds = ruleIds;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class DeleteRulesSpec  implements java.io.Serializable {
         }
         this.ruleIds.add(ruleId);
     }
-
 }

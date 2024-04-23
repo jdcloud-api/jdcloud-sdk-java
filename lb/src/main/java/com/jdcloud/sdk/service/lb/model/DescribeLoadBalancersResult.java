@@ -39,31 +39,33 @@ public class DescribeLoadBalancersResult extends JdcloudResult implements java.i
     /**
      * loadBalancers
      */
+    
     private List<LoadBalancer> loadBalancers;
-
     /**
      * 总数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get loadBalancers
-     *
-     * @return
-     */
+    * get loadBalancers
+    *
+    * @return
+    */
     public List<LoadBalancer> getLoadBalancers() {
         return loadBalancers;
     }
 
     /**
-     * set loadBalancers
-     *
-     * @param loadBalancers
-     */
+    * set loadBalancers
+    *
+    * @param loadBalancers
+    */
     public void setLoadBalancers(List<LoadBalancer> loadBalancers) {
         this.loadBalancers = loadBalancers;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeLoadBalancersResult extends JdcloudResult implements java.i
     }
 
 
+
     /**
-     * set loadBalancers
-     *
-     * @param loadBalancers
-     */
+    * set loadBalancers
+    *
+    * @param loadBalancers
+    */
     public DescribeLoadBalancersResult loadBalancers(List<LoadBalancer> loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeLoadBalancersResult extends JdcloudResult implements java.i
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeLoadBalancersResult extends JdcloudResult implements java.i
         }
         this.loadBalancers.add(loadBalancer);
     }
-
 }

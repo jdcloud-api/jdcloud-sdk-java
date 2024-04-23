@@ -39,6 +39,7 @@ public class CreateLoadBalancerResult extends JdcloudResult implements java.io.S
     private String loadBalancerId;
 
 
+
     /**
      * get 负载均衡id
      *
@@ -56,6 +57,7 @@ public class CreateLoadBalancerResult extends JdcloudResult implements java.io.S
     public void setLoadBalancerId(String loadBalancerId) {
         this.loadBalancerId = loadBalancerId;
     }
+
 
 
     /**

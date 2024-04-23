@@ -42,8 +42,8 @@ public class AddRulesRequest extends JdcloudRequest implements java.io.Serializa
      * Required:true
      */
     @Required
+    
     private List<RuleSpec> ruleSpecs;
-
     /**
      * Region ID
      * Required:true
@@ -59,23 +59,25 @@ public class AddRulesRequest extends JdcloudRequest implements java.io.Serializa
     private String urlMapId;
 
 
+
     /**
-     * get 转发规则的信息
-     *
-     * @return
-     */
+    * get 转发规则的信息
+    *
+    * @return
+    */
     public List<RuleSpec> getRuleSpecs() {
         return ruleSpecs;
     }
 
     /**
-     * set 转发规则的信息
-     *
-     * @param ruleSpecs
-     */
+    * set 转发规则的信息
+    *
+    * @param ruleSpecs
+    */
     public void setRuleSpecs(List<RuleSpec> ruleSpecs) {
         this.ruleSpecs = ruleSpecs;
     }
+
 
     /**
      * get Region ID
@@ -94,6 +96,7 @@ public class AddRulesRequest extends JdcloudRequest implements java.io.Serializa
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 转发规则组Id
@@ -114,15 +117,17 @@ public class AddRulesRequest extends JdcloudRequest implements java.io.Serializa
     }
 
 
+
     /**
-     * set 转发规则的信息
-     *
-     * @param ruleSpecs
-     */
+    * set 转发规则的信息
+    *
+    * @param ruleSpecs
+    */
     public AddRulesRequest ruleSpecs(List<RuleSpec> ruleSpecs) {
         this.ruleSpecs = ruleSpecs;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -134,6 +139,7 @@ public class AddRulesRequest extends JdcloudRequest implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 转发规则组Id
      *
@@ -143,6 +149,7 @@ public class AddRulesRequest extends JdcloudRequest implements java.io.Serializa
         this.urlMapId = urlMapId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class AddRulesRequest extends JdcloudRequest implements java.io.Serializa
         }
         this.ruleSpecs.add(ruleSpec);
     }
-
 }
