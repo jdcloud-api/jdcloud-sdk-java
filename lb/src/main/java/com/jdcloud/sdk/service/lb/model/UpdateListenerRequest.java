@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.lb.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.lb.model.CertificateSpec;
+import com.jdcloud.sdk.service.lb.model.LimitationSpec;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -60,7 +61,12 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
     /**
      * 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
      */
+    
     private List<CertificateSpec> certificateSpecs;
+    /**
+     * 【仅ALB支持】限速配置
+     */
+    private LimitationSpec limitation;
 
     /**
      * 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持该功能
@@ -83,6 +89,11 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
     private String description;
 
     /**
+     * 绑定的安全策略id，仅支持应用负载均衡的HTTPS、TLS监听配置
+     */
+    private String securityPolicyId;
+
+    /**
      * Region ID
      * Required:true
      */
@@ -95,6 +106,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
      */
     @Required
     private String listenerId;
+
 
 
     /**
@@ -115,6 +127,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         this.listenerName = listenerName;
     }
 
+
     /**
      * get Listener状态, 取值为On或者为Off
      *
@@ -132,6 +145,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)，缺省为不改变原值
@@ -151,6 +165,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         this.hstsEnable = hstsEnable;
     }
 
+
     /**
      * get 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]，缺省为不改变原值
      *
@@ -169,23 +184,44 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         this.hstsMaxAge = hstsMaxAge;
     }
 
+
     /**
-     * get 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
-     *
-     * @return
-     */
+    * get 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
+    *
+    * @return
+    */
     public List<CertificateSpec> getCertificateSpecs() {
         return certificateSpecs;
     }
 
     /**
-     * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
-     *
-     * @param certificateSpecs
-     */
+    * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
+    *
+    * @param certificateSpecs
+    */
     public void setCertificateSpecs(List<CertificateSpec> certificateSpecs) {
         this.certificateSpecs = certificateSpecs;
     }
+
+
+    /**
+     * get 【仅ALB支持】限速配置
+     *
+     * @return
+     */
+    public LimitationSpec getLimitation() {
+        return limitation;
+    }
+
+    /**
+     * set 【仅ALB支持】限速配置
+     *
+     * @param limitation
+     */
+    public void setLimitation(LimitationSpec limitation) {
+        this.limitation = limitation;
+    }
+
 
     /**
      * get 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持该功能
@@ -205,6 +241,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         this.connectionIdleTimeSeconds = connectionIdleTimeSeconds;
     }
 
+
     /**
      * get 默认后端服务Id
      *
@@ -222,6 +259,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
     public void setBackendId(String backendId) {
         this.backendId = backendId;
     }
+
 
     /**
      * get 【alb Https和Http协议】转发规则组Id
@@ -241,6 +279,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         this.urlMapId = urlMapId;
     }
 
+
     /**
      * get 监听器描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -259,6 +298,26 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         this.description = description;
     }
 
+
+    /**
+     * get 绑定的安全策略id，仅支持应用负载均衡的HTTPS、TLS监听配置
+     *
+     * @return
+     */
+    public String getSecurityPolicyId() {
+        return securityPolicyId;
+    }
+
+    /**
+     * set 绑定的安全策略id，仅支持应用负载均衡的HTTPS、TLS监听配置
+     *
+     * @param securityPolicyId
+     */
+    public void setSecurityPolicyId(String securityPolicyId) {
+        this.securityPolicyId = securityPolicyId;
+    }
+
+
     /**
      * get Region ID
      *
@@ -276,6 +335,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 监听器ID
@@ -296,6 +356,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 监听器名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
      *
@@ -305,6 +366,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         this.listenerName = listenerName;
         return this;
     }
+
 
     /**
      * set Listener状态, 取值为On或者为Off
@@ -316,6 +378,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)，缺省为不改变原值
      *
@@ -325,6 +388,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         this.hstsEnable = hstsEnable;
         return this;
     }
+
 
     /**
      * set 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]，缺省为不改变原值
@@ -336,15 +400,28 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
-     * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
-     *
-     * @param certificateSpecs
-     */
+    * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
+    *
+    * @param certificateSpecs
+    */
     public UpdateListenerRequest certificateSpecs(List<CertificateSpec> certificateSpecs) {
         this.certificateSpecs = certificateSpecs;
         return this;
     }
+
+
+    /**
+     * set 【仅ALB支持】限速配置
+     *
+     * @param limitation
+     */
+    public UpdateListenerRequest limitation(LimitationSpec limitation) {
+        this.limitation = limitation;
+        return this;
+    }
+
 
     /**
      * set 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持该功能
@@ -356,6 +433,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 默认后端服务Id
      *
@@ -365,6 +443,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         this.backendId = backendId;
         return this;
     }
+
 
     /**
      * set 【alb Https和Http协议】转发规则组Id
@@ -376,6 +455,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 监听器描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -385,6 +465,18 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         this.description = description;
         return this;
     }
+
+
+    /**
+     * set 绑定的安全策略id，仅支持应用负载均衡的HTTPS、TLS监听配置
+     *
+     * @param securityPolicyId
+     */
+    public UpdateListenerRequest securityPolicyId(String securityPolicyId) {
+        this.securityPolicyId = securityPolicyId;
+        return this;
+    }
+
 
     /**
      * set Region ID
@@ -396,6 +488,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 监听器ID
      *
@@ -405,6 +498,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         this.listenerId = listenerId;
         return this;
     }
+
 
 
     /**
@@ -418,5 +512,4 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
         }
         this.certificateSpecs.add(certificateSpec);
     }
-
 }

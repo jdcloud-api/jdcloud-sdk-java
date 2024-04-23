@@ -40,37 +40,40 @@ public class UpdateListenerCertificatesSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<ExtCertificateUpdateSpec> certificates;
 
 
     /**
-     * get 【alb Https和Tls协议】Listener绑定的扩展证书列表
-     *
-     * @return
-     */
+    * get 【alb Https和Tls协议】Listener绑定的扩展证书列表
+    *
+    * @return
+    */
     public List<ExtCertificateUpdateSpec> getCertificates() {
         return certificates;
     }
 
     /**
-     * set 【alb Https和Tls协议】Listener绑定的扩展证书列表
-     *
-     * @param certificates
-     */
+    * set 【alb Https和Tls协议】Listener绑定的扩展证书列表
+    *
+    * @param certificates
+    */
     public void setCertificates(List<ExtCertificateUpdateSpec> certificates) {
         this.certificates = certificates;
     }
 
 
+
     /**
-     * set 【alb Https和Tls协议】Listener绑定的扩展证书列表
-     *
-     * @param certificates
-     */
+    * set 【alb Https和Tls协议】Listener绑定的扩展证书列表
+    *
+    * @param certificates
+    */
     public UpdateListenerCertificatesSpec certificates(List<ExtCertificateUpdateSpec> certificates) {
         this.certificates = certificates;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class UpdateListenerCertificatesSpec  implements java.io.Serializable {
         }
         this.certificates.add(certificate);
     }
-
 }

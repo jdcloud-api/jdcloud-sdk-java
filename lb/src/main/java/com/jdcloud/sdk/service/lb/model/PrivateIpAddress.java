@@ -48,6 +48,7 @@ public class PrivateIpAddress  implements java.io.Serializable {
     private String elasticIpAddress;
 
 
+
     /**
      * get LoadBalancer的VIP(IPv4地址)
      *
@@ -66,6 +67,7 @@ public class PrivateIpAddress  implements java.io.Serializable {
         this.privateIpAddress = privateIpAddress;
     }
 
+
     /**
      * get 弹性公网IP ID
      *
@@ -83,6 +85,7 @@ public class PrivateIpAddress  implements java.io.Serializable {
     public void setElasticIpId(String elasticIpId) {
         this.elasticIpId = elasticIpId;
     }
+
 
     /**
      * get 弹性公网IP地址
@@ -103,6 +106,7 @@ public class PrivateIpAddress  implements java.io.Serializable {
     }
 
 
+
     /**
      * set LoadBalancer的VIP(IPv4地址)
      *
@@ -113,6 +117,7 @@ public class PrivateIpAddress  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 弹性公网IP ID
      *
@@ -122,6 +127,7 @@ public class PrivateIpAddress  implements java.io.Serializable {
         this.elasticIpId = elasticIpId;
         return this;
     }
+
 
     /**
      * set 弹性公网IP地址

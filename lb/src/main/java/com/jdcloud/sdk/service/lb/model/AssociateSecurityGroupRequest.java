@@ -41,8 +41,8 @@ public class AssociateSecurityGroupRequest extends JdcloudRequest implements jav
      * Required:true
      */
     @Required
+    
     private List<String> securityGroupIds;
-
     /**
      * Region ID
      * Required:true
@@ -58,23 +58,25 @@ public class AssociateSecurityGroupRequest extends JdcloudRequest implements jav
     private String loadBalancerId;
 
 
+
     /**
-     * get 安全组 ID列表
-     *
-     * @return
-     */
+    * get 安全组 ID列表
+    *
+    * @return
+    */
     public List<String> getSecurityGroupIds() {
         return securityGroupIds;
     }
 
     /**
-     * set 安全组 ID列表
-     *
-     * @param securityGroupIds
-     */
+    * set 安全组 ID列表
+    *
+    * @param securityGroupIds
+    */
     public void setSecurityGroupIds(List<String> securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
     }
+
 
     /**
      * get Region ID
@@ -93,6 +95,7 @@ public class AssociateSecurityGroupRequest extends JdcloudRequest implements jav
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get LB ID
@@ -113,15 +116,17 @@ public class AssociateSecurityGroupRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
-     * set 安全组 ID列表
-     *
-     * @param securityGroupIds
-     */
+    * set 安全组 ID列表
+    *
+    * @param securityGroupIds
+    */
     public AssociateSecurityGroupRequest securityGroupIds(List<String> securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -133,6 +138,7 @@ public class AssociateSecurityGroupRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set LB ID
      *
@@ -142,6 +148,7 @@ public class AssociateSecurityGroupRequest extends JdcloudRequest implements jav
         this.loadBalancerId = loadBalancerId;
         return this;
     }
+
 
 
     /**
@@ -155,5 +162,4 @@ public class AssociateSecurityGroupRequest extends JdcloudRequest implements jav
         }
         this.securityGroupIds.add(securityGroupId);
     }
-
 }

@@ -53,16 +53,18 @@ listenerIds - 监听器Id列表，支持多个
 loadBalancerId - 负载均衡器Id，支持单个
 loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb，支持单个
 urlMapIds - 【仅alb支持】转发规则组Id列表，支持多个
+securityPolicyIds - 监听器绑定的安全策略ID，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -83,6 +85,7 @@ urlMapIds - 【仅alb支持】转发规则组Id列表，支持多个
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -101,33 +104,37 @@ urlMapIds - 【仅alb支持】转发规则组Id列表，支持多个
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get listenerNames - 监听器名称列表，支持多个
+    * get listenerNames - 监听器名称列表，支持多个
 listenerIds - 监听器Id列表，支持多个
 loadBalancerId - 负载均衡器Id，支持单个
 loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb，支持单个
 urlMapIds - 【仅alb支持】转发规则组Id列表，支持多个
+securityPolicyIds - 监听器绑定的安全策略ID，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set listenerNames - 监听器名称列表，支持多个
+    * set listenerNames - 监听器名称列表，支持多个
 listenerIds - 监听器Id列表，支持多个
 loadBalancerId - 负载均衡器Id，支持单个
 loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb，支持单个
 urlMapIds - 【仅alb支持】转发规则组Id列表，支持多个
+securityPolicyIds - 监听器绑定的安全策略ID，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get Region ID
@@ -148,6 +155,7 @@ urlMapIds - 【仅alb支持】转发规则组Id列表，支持多个
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
      *
@@ -157,6 +165,7 @@ urlMapIds - 【仅alb支持】转发规则组Id列表，支持多个
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
@@ -168,20 +177,23 @@ urlMapIds - 【仅alb支持】转发规则组Id列表，支持多个
         return this;
     }
 
+
     /**
-     * set listenerNames - 监听器名称列表，支持多个
+    * set listenerNames - 监听器名称列表，支持多个
 listenerIds - 监听器Id列表，支持多个
 loadBalancerId - 负载均衡器Id，支持单个
 loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb，支持单个
 urlMapIds - 【仅alb支持】转发规则组Id列表，支持多个
+securityPolicyIds - 监听器绑定的安全策略ID，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeListenersRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -194,12 +206,14 @@ urlMapIds - 【仅alb支持】转发规则组Id列表，支持多个
     }
 
 
+
     /**
      * add item to listenerNames - 监听器名称列表，支持多个
 listenerIds - 监听器Id列表，支持多个
 loadBalancerId - 负载均衡器Id，支持单个
 loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb，支持单个
 urlMapIds - 【仅alb支持】转发规则组Id列表，支持多个
+securityPolicyIds - 监听器绑定的安全策略ID，支持多个
 
      *
      * @param filter
@@ -210,5 +224,4 @@ urlMapIds - 【仅alb支持】转发规则组Id列表，支持多个
         }
         this.filters.add(filter);
     }
-
 }

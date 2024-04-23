@@ -49,6 +49,7 @@ public class DescribeTargetGroupRequest extends JdcloudRequest implements java.i
     private String targetGroupId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DescribeTargetGroupRequest extends JdcloudRequest implements java.i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get TargetGroup Id
@@ -86,6 +88,7 @@ public class DescribeTargetGroupRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DescribeTargetGroupRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set TargetGroup Id

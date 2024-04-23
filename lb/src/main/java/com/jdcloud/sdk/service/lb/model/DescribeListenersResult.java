@@ -39,31 +39,33 @@ public class DescribeListenersResult extends JdcloudResult implements java.io.Se
     /**
      * listeners
      */
+    
     private List<Listener> listeners;
-
     /**
      * 总数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get listeners
-     *
-     * @return
-     */
+    * get listeners
+    *
+    * @return
+    */
     public List<Listener> getListeners() {
         return listeners;
     }
 
     /**
-     * set listeners
-     *
-     * @param listeners
-     */
+    * set listeners
+    *
+    * @param listeners
+    */
     public void setListeners(List<Listener> listeners) {
         this.listeners = listeners;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeListenersResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
-     * set listeners
-     *
-     * @param listeners
-     */
+    * set listeners
+    *
+    * @param listeners
+    */
     public DescribeListenersResult listeners(List<Listener> listeners) {
         this.listeners = listeners;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeListenersResult extends JdcloudResult implements java.io.Se
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeListenersResult extends JdcloudResult implements java.io.Se
         }
         this.listeners.add(listener);
     }
-
 }

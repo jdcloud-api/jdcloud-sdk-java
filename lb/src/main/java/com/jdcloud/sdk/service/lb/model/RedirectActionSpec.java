@@ -49,7 +49,7 @@ public class RedirectActionSpec  implements java.io.Serializable {
     private String host;
 
     /**
-     * 重定向后URL路径。不设置，表示重定向不修改请求URL路径，与客户端请求URL路径一致。必须以/开头，仅支持输入大小写字母、数字和特殊字符：$-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符
+     * 重定向后URL路径。不设置，表示重定向不修改请求URL路径，与客户端请求URL路径一致。必须以/开头，仅支持输入大小写字母、数字和特殊字符：-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符
      */
     private String path;
 
@@ -59,11 +59,12 @@ public class RedirectActionSpec  implements java.io.Serializable {
     private String query;
 
     /**
-     * 取值为http_301、http_302。301表示永久性转移，302表示暂时性转移
+     * 取值为http_301、http_302、http_307、http_308。301对应308表示永久重定向，302对应307表示暂时重定向，有些浏览器在收到301、302状态码，在自动重定向时候会错误的把POST方法转为GET方法
      * Required:true
      */
     @Required
     private String statusCode;
+
 
 
     /**
@@ -84,6 +85,7 @@ public class RedirectActionSpec  implements java.io.Serializable {
         this.protocol = protocol;
     }
 
+
     /**
      * get 重定向后端口，取值范围为1-65535。不设置，表示重定向不修改请求端口，与客户端请求端口一致
      *
@@ -101,6 +103,7 @@ public class RedirectActionSpec  implements java.io.Serializable {
     public void setPort(Integer port) {
         this.port = port;
     }
+
 
     /**
      * get 重定向后域名。不设置，表示重定向不修改请求域名，与客户端请求域名一致。支持输入IPv4地址和域名。域名输入限制为：仅支持输入大小写字母、数字、英文中划线“-”和点“.”，最少包括一个点&quot;.&quot;，不能以点&quot;.&quot;和中划线&quot;-&quot;开头或结尾，中划线&quot;-&quot;前后不能为点&quot;.&quot;，不区分大小写，且不能超过110字符
@@ -120,8 +123,9 @@ public class RedirectActionSpec  implements java.io.Serializable {
         this.host = host;
     }
 
+
     /**
-     * get 重定向后URL路径。不设置，表示重定向不修改请求URL路径，与客户端请求URL路径一致。必须以/开头，仅支持输入大小写字母、数字和特殊字符：$-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符
+     * get 重定向后URL路径。不设置，表示重定向不修改请求URL路径，与客户端请求URL路径一致。必须以/开头，仅支持输入大小写字母、数字和特殊字符：-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符
      *
      * @return
      */
@@ -130,13 +134,14 @@ public class RedirectActionSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 重定向后URL路径。不设置，表示重定向不修改请求URL路径，与客户端请求URL路径一致。必须以/开头，仅支持输入大小写字母、数字和特殊字符：$-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符
+     * set 重定向后URL路径。不设置，表示重定向不修改请求URL路径，与客户端请求URL路径一致。必须以/开头，仅支持输入大小写字母、数字和特殊字符：-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符
      *
      * @param path
      */
     public void setPath(String path) {
         this.path = path;
     }
+
 
     /**
      * get 重定向后查询参数，不需手动输入?，系统默认添加，不超过128字符，不设置，表示重定向不修改查询参数，与客户端请求查询参数一致。
@@ -156,8 +161,9 @@ public class RedirectActionSpec  implements java.io.Serializable {
         this.query = query;
     }
 
+
     /**
-     * get 取值为http_301、http_302。301表示永久性转移，302表示暂时性转移
+     * get 取值为http_301、http_302、http_307、http_308。301对应308表示永久重定向，302对应307表示暂时重定向，有些浏览器在收到301、302状态码，在自动重定向时候会错误的把POST方法转为GET方法
      *
      * @return
      */
@@ -166,13 +172,14 @@ public class RedirectActionSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 取值为http_301、http_302。301表示永久性转移，302表示暂时性转移
+     * set 取值为http_301、http_302、http_307、http_308。301对应308表示永久重定向，302对应307表示暂时重定向，有些浏览器在收到301、302状态码，在自动重定向时候会错误的把POST方法转为GET方法
      *
      * @param statusCode
      */
     public void setStatusCode(String statusCode) {
         this.statusCode = statusCode;
     }
+
 
 
     /**
@@ -185,6 +192,7 @@ public class RedirectActionSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 重定向后端口，取值范围为1-65535。不设置，表示重定向不修改请求端口，与客户端请求端口一致
      *
@@ -194,6 +202,7 @@ public class RedirectActionSpec  implements java.io.Serializable {
         this.port = port;
         return this;
     }
+
 
     /**
      * set 重定向后域名。不设置，表示重定向不修改请求域名，与客户端请求域名一致。支持输入IPv4地址和域名。域名输入限制为：仅支持输入大小写字母、数字、英文中划线“-”和点“.”，最少包括一个点&quot;.&quot;，不能以点&quot;.&quot;和中划线&quot;-&quot;开头或结尾，中划线&quot;-&quot;前后不能为点&quot;.&quot;，不区分大小写，且不能超过110字符
@@ -205,8 +214,9 @@ public class RedirectActionSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 重定向后URL路径。不设置，表示重定向不修改请求URL路径，与客户端请求URL路径一致。必须以/开头，仅支持输入大小写字母、数字和特殊字符：$-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符
+     * set 重定向后URL路径。不设置，表示重定向不修改请求URL路径，与客户端请求URL路径一致。必须以/开头，仅支持输入大小写字母、数字和特殊字符：-_.+!&#39;()%:@&amp;&#x3D;/，区分大小写，且不能超过128字符
      *
      * @param path
      */
@@ -214,6 +224,7 @@ public class RedirectActionSpec  implements java.io.Serializable {
         this.path = path;
         return this;
     }
+
 
     /**
      * set 重定向后查询参数，不需手动输入?，系统默认添加，不超过128字符，不设置，表示重定向不修改查询参数，与客户端请求查询参数一致。
@@ -225,8 +236,9 @@ public class RedirectActionSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 取值为http_301、http_302。301表示永久性转移，302表示暂时性转移
+     * set 取值为http_301、http_302、http_307、http_308。301对应308表示永久重定向，302对应307表示暂时重定向，有些浏览器在收到301、302状态码，在自动重定向时候会错误的把POST方法转为GET方法
      *
      * @param statusCode
      */

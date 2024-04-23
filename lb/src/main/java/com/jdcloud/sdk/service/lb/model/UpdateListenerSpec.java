@@ -57,7 +57,12 @@ public class UpdateListenerSpec  implements java.io.Serializable {
     /**
      * 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
      */
+    
     private List<CertificateSpec> certificateSpecs;
+    /**
+     * 【仅ALB支持】限速配置
+     */
+    private LimitationSpec limitation;
 
     /**
      * 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持该功能
@@ -79,6 +84,12 @@ public class UpdateListenerSpec  implements java.io.Serializable {
      */
     private String description;
 
+    /**
+     * 绑定的安全策略id，仅支持应用负载均衡的HTTPS、TLS监听配置
+     */
+    private String securityPolicyId;
+
+
 
     /**
      * get 监听器名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
@@ -98,6 +109,7 @@ public class UpdateListenerSpec  implements java.io.Serializable {
         this.listenerName = listenerName;
     }
 
+
     /**
      * get Listener状态, 取值为On或者为Off
      *
@@ -115,6 +127,7 @@ public class UpdateListenerSpec  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)，缺省为不改变原值
@@ -134,6 +147,7 @@ public class UpdateListenerSpec  implements java.io.Serializable {
         this.hstsEnable = hstsEnable;
     }
 
+
     /**
      * get 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]，缺省为不改变原值
      *
@@ -152,23 +166,44 @@ public class UpdateListenerSpec  implements java.io.Serializable {
         this.hstsMaxAge = hstsMaxAge;
     }
 
+
     /**
-     * get 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
-     *
-     * @return
-     */
+    * get 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
+    *
+    * @return
+    */
     public List<CertificateSpec> getCertificateSpecs() {
         return certificateSpecs;
     }
 
     /**
-     * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
-     *
-     * @param certificateSpecs
-     */
+    * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
+    *
+    * @param certificateSpecs
+    */
     public void setCertificateSpecs(List<CertificateSpec> certificateSpecs) {
         this.certificateSpecs = certificateSpecs;
     }
+
+
+    /**
+     * get 【仅ALB支持】限速配置
+     *
+     * @return
+     */
+    public LimitationSpec getLimitation() {
+        return limitation;
+    }
+
+    /**
+     * set 【仅ALB支持】限速配置
+     *
+     * @param limitation
+     */
+    public void setLimitation(LimitationSpec limitation) {
+        this.limitation = limitation;
+    }
+
 
     /**
      * get 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持该功能
@@ -188,6 +223,7 @@ public class UpdateListenerSpec  implements java.io.Serializable {
         this.connectionIdleTimeSeconds = connectionIdleTimeSeconds;
     }
 
+
     /**
      * get 默认后端服务Id
      *
@@ -206,6 +242,7 @@ public class UpdateListenerSpec  implements java.io.Serializable {
         this.backendId = backendId;
     }
 
+
     /**
      * get 【alb Https和Http协议】转发规则组Id
      *
@@ -223,6 +260,7 @@ public class UpdateListenerSpec  implements java.io.Serializable {
     public void setUrlMapId(String urlMapId) {
         this.urlMapId = urlMapId;
     }
+
 
     /**
      * get 监听器描述,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -244,6 +282,26 @@ public class UpdateListenerSpec  implements java.io.Serializable {
 
 
     /**
+     * get 绑定的安全策略id，仅支持应用负载均衡的HTTPS、TLS监听配置
+     *
+     * @return
+     */
+    public String getSecurityPolicyId() {
+        return securityPolicyId;
+    }
+
+    /**
+     * set 绑定的安全策略id，仅支持应用负载均衡的HTTPS、TLS监听配置
+     *
+     * @param securityPolicyId
+     */
+    public void setSecurityPolicyId(String securityPolicyId) {
+        this.securityPolicyId = securityPolicyId;
+    }
+
+
+
+    /**
      * set 监听器名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
      *
      * @param listenerName
@@ -252,6 +310,7 @@ public class UpdateListenerSpec  implements java.io.Serializable {
         this.listenerName = listenerName;
         return this;
     }
+
 
     /**
      * set Listener状态, 取值为On或者为Off
@@ -263,6 +322,7 @@ public class UpdateListenerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)，缺省为不改变原值
      *
@@ -272,6 +332,7 @@ public class UpdateListenerSpec  implements java.io.Serializable {
         this.hstsEnable = hstsEnable;
         return this;
     }
+
 
     /**
      * set 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]，缺省为不改变原值
@@ -283,15 +344,28 @@ public class UpdateListenerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
-     *
-     * @param certificateSpecs
-     */
+    * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
+    *
+    * @param certificateSpecs
+    */
     public UpdateListenerSpec certificateSpecs(List<CertificateSpec> certificateSpecs) {
         this.certificateSpecs = certificateSpecs;
         return this;
     }
+
+
+    /**
+     * set 【仅ALB支持】限速配置
+     *
+     * @param limitation
+     */
+    public UpdateListenerSpec limitation(LimitationSpec limitation) {
+        this.limitation = limitation;
+        return this;
+    }
+
 
     /**
      * set 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持该功能
@@ -303,6 +377,7 @@ public class UpdateListenerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 默认后端服务Id
      *
@@ -313,6 +388,7 @@ public class UpdateListenerSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 【alb Https和Http协议】转发规则组Id
      *
@@ -322,6 +398,7 @@ public class UpdateListenerSpec  implements java.io.Serializable {
         this.urlMapId = urlMapId;
         return this;
     }
+
 
     /**
      * set 监听器描述,允许输入UTF-8编码下的全部字符，不超过256字符
@@ -335,6 +412,18 @@ public class UpdateListenerSpec  implements java.io.Serializable {
 
 
     /**
+     * set 绑定的安全策略id，仅支持应用负载均衡的HTTPS、TLS监听配置
+     *
+     * @param securityPolicyId
+     */
+    public UpdateListenerSpec securityPolicyId(String securityPolicyId) {
+        this.securityPolicyId = securityPolicyId;
+        return this;
+    }
+
+
+
+    /**
      * add item to 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
      *
      * @param certificateSpec
@@ -345,5 +434,4 @@ public class UpdateListenerSpec  implements java.io.Serializable {
         }
         this.certificateSpecs.add(certificateSpec);
     }
-
 }

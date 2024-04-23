@@ -68,6 +68,11 @@ public class HealthCheckSpec  implements java.io.Serializable {
     private Integer port;
 
     /**
+     * 健康检查的协议类型 HTTP1.0/HTTP1.1 默认选择HTTP1.0
+     */
+    private String httpVersion;
+
+    /**
      * 健康检查的目标域名，仅支持HTTP协议。支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
      */
     private String httpDomain;
@@ -78,8 +83,9 @@ public class HealthCheckSpec  implements java.io.Serializable {
     private String httpPath;
 
     /**
-     * 检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
+     * 健康检查的期望状态码，仅支持HTTP协议。检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
      */
+    
     private List<String> httpCode;
 
 
@@ -101,6 +107,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
         this.protocol = protocol;
     }
 
+
     /**
      * get 健康阀值，取值范围为[1,5]，默认为3
      *
@@ -118,6 +125,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     public void setHealthyThresholdCount(Integer healthyThresholdCount) {
         this.healthyThresholdCount = healthyThresholdCount;
     }
+
 
     /**
      * get 不健康阀值，取值范围为[1,5], 默认为3
@@ -137,6 +145,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
         this.unhealthyThresholdCount = unhealthyThresholdCount;
     }
 
+
     /**
      * get 响应超时时间, 取值范围为[2,60]，默认为3s
      *
@@ -154,6 +163,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     public void setCheckTimeoutSeconds(Integer checkTimeoutSeconds) {
         this.checkTimeoutSeconds = checkTimeoutSeconds;
     }
+
 
     /**
      * get 健康检查间隔, 范围为[5,300], 默认为5s
@@ -173,6 +183,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
         this.intervalSeconds = intervalSeconds;
     }
 
+
     /**
      * get 健康检查的目标端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp类型不支持配置端口
      *
@@ -190,6 +201,26 @@ public class HealthCheckSpec  implements java.io.Serializable {
     public void setPort(Integer port) {
         this.port = port;
     }
+
+
+    /**
+     * get 健康检查的协议类型 HTTP1.0/HTTP1.1 默认选择HTTP1.0
+     *
+     * @return
+     */
+    public String getHttpVersion() {
+        return httpVersion;
+    }
+
+    /**
+     * set 健康检查的协议类型 HTTP1.0/HTTP1.1 默认选择HTTP1.0
+     *
+     * @param httpVersion
+     */
+    public void setHttpVersion(String httpVersion) {
+        this.httpVersion = httpVersion;
+    }
+
 
     /**
      * get 健康检查的目标域名，仅支持HTTP协议。支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
@@ -209,6 +240,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
         this.httpDomain = httpDomain;
     }
 
+
     /**
      * get 健康检查的目标路径，仅支持HTTP协议。必须以&quot;/&quot;开头，支持大小写字母、数字、汉字和英文字符-/.%?#&amp;_;~!()*[]@^:&#39;,+&#x3D;&lt;&gt;{}。%后仅支持输入URL编码后字符，且不超过1000个字符
      *
@@ -227,23 +259,25 @@ public class HealthCheckSpec  implements java.io.Serializable {
         this.httpPath = httpPath;
     }
 
+
     /**
-     * get 检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
-     *
-     * @return
-     */
+    * get 健康检查的期望状态码，仅支持HTTP协议。检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
+    *
+    * @return
+    */
     public List<String> getHttpCode() {
         return httpCode;
     }
 
     /**
-     * set 检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
-     *
-     * @param httpCode
-     */
+    * set 健康检查的期望状态码，仅支持HTTP协议。检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
+    *
+    * @param httpCode
+    */
     public void setHttpCode(List<String> httpCode) {
         this.httpCode = httpCode;
     }
+
 
 
     /**
@@ -256,6 +290,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 健康阀值，取值范围为[1,5]，默认为3
      *
@@ -265,6 +300,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
         this.healthyThresholdCount = healthyThresholdCount;
         return this;
     }
+
 
     /**
      * set 不健康阀值，取值范围为[1,5], 默认为3
@@ -276,6 +312,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 响应超时时间, 取值范围为[2,60]，默认为3s
      *
@@ -285,6 +322,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
         this.checkTimeoutSeconds = checkTimeoutSeconds;
         return this;
     }
+
 
     /**
      * set 健康检查间隔, 范围为[5,300], 默认为5s
@@ -296,6 +334,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 健康检查的目标端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp类型不支持配置端口
      *
@@ -305,6 +344,18 @@ public class HealthCheckSpec  implements java.io.Serializable {
         this.port = port;
         return this;
     }
+
+
+    /**
+     * set 健康检查的协议类型 HTTP1.0/HTTP1.1 默认选择HTTP1.0
+     *
+     * @param httpVersion
+     */
+    public HealthCheckSpec httpVersion(String httpVersion) {
+        this.httpVersion = httpVersion;
+        return this;
+    }
+
 
     /**
      * set 健康检查的目标域名，仅支持HTTP协议。支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
@@ -316,6 +367,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 健康检查的目标路径，仅支持HTTP协议。必须以&quot;/&quot;开头，支持大小写字母、数字、汉字和英文字符-/.%?#&amp;_;~!()*[]@^:&#39;,+&#x3D;&lt;&gt;{}。%后仅支持输入URL编码后字符，且不超过1000个字符
      *
@@ -326,19 +378,21 @@ public class HealthCheckSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
-     *
-     * @param httpCode
-     */
+    * set 健康检查的期望状态码，仅支持HTTP协议。检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
+    *
+    * @param httpCode
+    */
     public HealthCheckSpec httpCode(List<String> httpCode) {
         this.httpCode = httpCode;
         return this;
     }
 
 
+
     /**
-     * add item to 检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
+     * add item to 健康检查的期望状态码，仅支持HTTP协议。检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
      *
      * @param httpCode
      */
@@ -348,5 +402,4 @@ public class HealthCheckSpec  implements java.io.Serializable {
         }
         this.httpCode.add(httpCode);
     }
-
 }

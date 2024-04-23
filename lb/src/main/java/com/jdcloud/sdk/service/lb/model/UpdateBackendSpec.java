@@ -52,13 +52,18 @@ public class UpdateBackendSpec  implements java.io.Serializable {
     /**
      * 虚拟服务器组的Id列表，目前只支持一个，且与agIds不能同时存在
      */
+    
     private List<String> targetGroupIds;
-
     /**
      * 高可用组的Id列表，目前只支持一个，且与targetGroupIds不能同时存在
      */
+    
     private List<String> agIds;
-
+    /**
+     * 高可用组属性设置:1.defatult_weight:默认权重, 优先级 agInfoSpec &gt; agIds
+     */
+    
+    private List<AgInfoSpec> agInfoSpec;
     /**
      * 【alb Tcp、Udp协议】是否启用Proxy ProtocolV1协议获取真实源ip, 取值为false(不开启)或者true(开启), 默认为false
      */
@@ -120,6 +125,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
     private Boolean closeHealthCheck;
 
 
+
     /**
      * get 后端服务名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
      *
@@ -137,6 +143,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
     public void setBackendName(String backendName) {
         this.backendName = backendName;
     }
+
 
     /**
      * get 健康检查信息
@@ -156,6 +163,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.healthCheckSpec = healthCheckSpec;
     }
 
+
     /**
      * get 调度算法 &lt;br&gt;【alb,nlb】取值范围为[IpHash, RoundRobin, LeastConn]（含义分别为：加权源Ip哈希，加权轮询和加权最小连接） &lt;br&gt;【dnlb】取值范围为[IpHash, QuintupleHash]（含义分别为：加权源Ip哈希和加权五元组哈希）
      *
@@ -174,41 +182,63 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.algorithm = algorithm;
     }
 
+
     /**
-     * get 虚拟服务器组的Id列表，目前只支持一个，且与agIds不能同时存在
-     *
-     * @return
-     */
+    * get 虚拟服务器组的Id列表，目前只支持一个，且与agIds不能同时存在
+    *
+    * @return
+    */
     public List<String> getTargetGroupIds() {
         return targetGroupIds;
     }
 
     /**
-     * set 虚拟服务器组的Id列表，目前只支持一个，且与agIds不能同时存在
-     *
-     * @param targetGroupIds
-     */
+    * set 虚拟服务器组的Id列表，目前只支持一个，且与agIds不能同时存在
+    *
+    * @param targetGroupIds
+    */
     public void setTargetGroupIds(List<String> targetGroupIds) {
         this.targetGroupIds = targetGroupIds;
     }
 
+
     /**
-     * get 高可用组的Id列表，目前只支持一个，且与targetGroupIds不能同时存在
-     *
-     * @return
-     */
+    * get 高可用组的Id列表，目前只支持一个，且与targetGroupIds不能同时存在
+    *
+    * @return
+    */
     public List<String> getAgIds() {
         return agIds;
     }
 
     /**
-     * set 高可用组的Id列表，目前只支持一个，且与targetGroupIds不能同时存在
-     *
-     * @param agIds
-     */
+    * set 高可用组的Id列表，目前只支持一个，且与targetGroupIds不能同时存在
+    *
+    * @param agIds
+    */
     public void setAgIds(List<String> agIds) {
         this.agIds = agIds;
     }
+
+
+    /**
+    * get 高可用组属性设置:1.defatult_weight:默认权重, 优先级 agInfoSpec &gt; agIds
+    *
+    * @return
+    */
+    public List<AgInfoSpec> getAgInfoSpec() {
+        return agInfoSpec;
+    }
+
+    /**
+    * set 高可用组属性设置:1.defatult_weight:默认权重, 优先级 agInfoSpec &gt; agIds
+    *
+    * @param agInfoSpec
+    */
+    public void setAgInfoSpec(List<AgInfoSpec> agInfoSpec) {
+        this.agInfoSpec = agInfoSpec;
+    }
+
 
     /**
      * get 【alb Tcp、Udp协议】是否启用Proxy ProtocolV1协议获取真实源ip, 取值为false(不开启)或者true(开启), 默认为false
@@ -228,6 +258,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.proxyProtocol = proxyProtocol;
     }
 
+
     /**
      * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -245,6 +276,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 会话保持, 取值为false(不开启)或者true(开启)，默认为false &lt;br&gt;【alb Http协议，RoundRobin算法】支持基于cookie的会话保持 &lt;br&gt;【nlb】支持基于报文源目的IP的会话保持
@@ -264,6 +296,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.sessionStickiness = sessionStickiness;
     }
 
+
     /**
      * get 【nlb】会话保持超时时间，sessionStickiness开启时生效, 取值范围[1-3600]
      *
@@ -281,6 +314,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
     public void setSessionStickyTimeout(Integer sessionStickyTimeout) {
         this.sessionStickyTimeout = sessionStickyTimeout;
     }
+
 
     /**
      * get 【nlb】连接耗尽超时，移除target前，连接的最大保持时间，默认300s，取值范围[0-3600]
@@ -300,6 +334,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.connectionDrainingSeconds = connectionDrainingSeconds;
     }
 
+
     /**
      * get 【alb Http协议】cookie的过期时间,sessionStickiness开启时生效，取值范围为[0-86400], 0表示cookie与浏览器同生命周期
      *
@@ -317,6 +352,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
     public void setHttpCookieExpireSeconds(Integer httpCookieExpireSeconds) {
         this.httpCookieExpireSeconds = httpCookieExpireSeconds;
     }
+
 
     /**
      * get 【alb Http协议】获取负载均衡的协议, 取值为False(不获取)或True(获取)
@@ -336,6 +372,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.httpForwardedProtocol = httpForwardedProtocol;
     }
 
+
     /**
      * get 【alb Http协议】获取负载均衡的端口, 取值为False(不获取)或True(获取)
      *
@@ -353,6 +390,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
     public void setHttpForwardedPort(Boolean httpForwardedPort) {
         this.httpForwardedPort = httpForwardedPort;
     }
+
 
     /**
      * get 【alb Http协议】获取负载均衡的host信息, 取值为False(不获取)或True(获取)
@@ -372,6 +410,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.httpForwardedHost = httpForwardedHost;
     }
 
+
     /**
      * get 【alb Http协议】获取负载均衡的vip, 取值为False(不获取)或True(获取)
      *
@@ -390,6 +429,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.httpForwardedVip = httpForwardedVip;
     }
 
+
     /**
      * get 【alb Http协议】获取请求端使用的端口, 取值为False(不获取)或True(获取)
      *
@@ -407,6 +447,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
     public void setHttpForwardedClientPort(Boolean httpForwardedClientPort) {
         this.httpForwardedClientPort = httpForwardedClientPort;
     }
+
 
     /**
      * get 【alb,dnlb】关闭健康检查，取值为false(不关闭)或true(关闭)
@@ -427,6 +468,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 后端服务名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
      *
@@ -436,6 +478,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.backendName = backendName;
         return this;
     }
+
 
     /**
      * set 健康检查信息
@@ -447,6 +490,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 调度算法 &lt;br&gt;【alb,nlb】取值范围为[IpHash, RoundRobin, LeastConn]（含义分别为：加权源Ip哈希，加权轮询和加权最小连接） &lt;br&gt;【dnlb】取值范围为[IpHash, QuintupleHash]（含义分别为：加权源Ip哈希和加权五元组哈希）
      *
@@ -457,25 +501,39 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 虚拟服务器组的Id列表，目前只支持一个，且与agIds不能同时存在
-     *
-     * @param targetGroupIds
-     */
+    * set 虚拟服务器组的Id列表，目前只支持一个，且与agIds不能同时存在
+    *
+    * @param targetGroupIds
+    */
     public UpdateBackendSpec targetGroupIds(List<String> targetGroupIds) {
         this.targetGroupIds = targetGroupIds;
         return this;
     }
 
+
     /**
-     * set 高可用组的Id列表，目前只支持一个，且与targetGroupIds不能同时存在
-     *
-     * @param agIds
-     */
+    * set 高可用组的Id列表，目前只支持一个，且与targetGroupIds不能同时存在
+    *
+    * @param agIds
+    */
     public UpdateBackendSpec agIds(List<String> agIds) {
         this.agIds = agIds;
         return this;
     }
+
+
+    /**
+    * set 高可用组属性设置:1.defatult_weight:默认权重, 优先级 agInfoSpec &gt; agIds
+    *
+    * @param agInfoSpec
+    */
+    public UpdateBackendSpec agInfoSpec(List<AgInfoSpec> agInfoSpec) {
+        this.agInfoSpec = agInfoSpec;
+        return this;
+    }
+
 
     /**
      * set 【alb Tcp、Udp协议】是否启用Proxy ProtocolV1协议获取真实源ip, 取值为false(不开启)或者true(开启), 默认为false
@@ -487,6 +545,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -496,6 +555,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 会话保持, 取值为false(不开启)或者true(开启)，默认为false &lt;br&gt;【alb Http协议，RoundRobin算法】支持基于cookie的会话保持 &lt;br&gt;【nlb】支持基于报文源目的IP的会话保持
@@ -507,6 +567,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 【nlb】会话保持超时时间，sessionStickiness开启时生效, 取值范围[1-3600]
      *
@@ -516,6 +577,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.sessionStickyTimeout = sessionStickyTimeout;
         return this;
     }
+
 
     /**
      * set 【nlb】连接耗尽超时，移除target前，连接的最大保持时间，默认300s，取值范围[0-3600]
@@ -527,6 +589,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 【alb Http协议】cookie的过期时间,sessionStickiness开启时生效，取值范围为[0-86400], 0表示cookie与浏览器同生命周期
      *
@@ -536,6 +599,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.httpCookieExpireSeconds = httpCookieExpireSeconds;
         return this;
     }
+
 
     /**
      * set 【alb Http协议】获取负载均衡的协议, 取值为False(不获取)或True(获取)
@@ -547,6 +611,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 【alb Http协议】获取负载均衡的端口, 取值为False(不获取)或True(获取)
      *
@@ -556,6 +621,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.httpForwardedPort = httpForwardedPort;
         return this;
     }
+
 
     /**
      * set 【alb Http协议】获取负载均衡的host信息, 取值为False(不获取)或True(获取)
@@ -567,6 +633,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 【alb Http协议】获取负载均衡的vip, 取值为False(不获取)或True(获取)
      *
@@ -576,6 +643,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.httpForwardedVip = httpForwardedVip;
         return this;
     }
+
 
     /**
      * set 【alb Http协议】获取请求端使用的端口, 取值为False(不获取)或True(获取)
@@ -587,6 +655,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 【alb,dnlb】关闭健康检查，取值为false(不关闭)或true(关闭)
      *
@@ -596,6 +665,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.closeHealthCheck = closeHealthCheck;
         return this;
     }
+
 
 
     /**
@@ -622,4 +692,15 @@ public class UpdateBackendSpec  implements java.io.Serializable {
         this.agIds.add(agId);
     }
 
+    /**
+     * add item to 高可用组属性设置:1.defatult_weight:默认权重, 优先级 agInfoSpec &gt; agIds
+     *
+     * @param agInfoSpec
+     */
+    public void addAgInfoSpec(AgInfoSpec agInfoSpec) {
+        if (this.agInfoSpec == null) {
+            this.agInfoSpec = new ArrayList<>();
+        }
+        this.agInfoSpec.add(agInfoSpec);
+    }
 }

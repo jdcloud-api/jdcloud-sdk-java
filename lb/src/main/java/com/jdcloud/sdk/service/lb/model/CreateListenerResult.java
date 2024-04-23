@@ -39,6 +39,7 @@ public class CreateListenerResult extends JdcloudResult implements java.io.Seria
     private String listenerId;
 
 
+
     /**
      * get 监听器id
      *
@@ -56,6 +57,7 @@ public class CreateListenerResult extends JdcloudResult implements java.io.Seria
     public void setListenerId(String listenerId) {
         this.listenerId = listenerId;
     }
+
 
 
     /**

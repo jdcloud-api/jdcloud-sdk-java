@@ -40,37 +40,40 @@ public class DeleteListenerCertificatesSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> certificateBindIds;
 
 
     /**
-     * get 【alb Https和Tls协议】扩展证书绑定Id
-     *
-     * @return
-     */
+    * get 【alb Https和Tls协议】扩展证书绑定Id
+    *
+    * @return
+    */
     public List<String> getCertificateBindIds() {
         return certificateBindIds;
     }
 
     /**
-     * set 【alb Https和Tls协议】扩展证书绑定Id
-     *
-     * @param certificateBindIds
-     */
+    * set 【alb Https和Tls协议】扩展证书绑定Id
+    *
+    * @param certificateBindIds
+    */
     public void setCertificateBindIds(List<String> certificateBindIds) {
         this.certificateBindIds = certificateBindIds;
     }
 
 
+
     /**
-     * set 【alb Https和Tls协议】扩展证书绑定Id
-     *
-     * @param certificateBindIds
-     */
+    * set 【alb Https和Tls协议】扩展证书绑定Id
+    *
+    * @param certificateBindIds
+    */
     public DeleteListenerCertificatesSpec certificateBindIds(List<String> certificateBindIds) {
         this.certificateBindIds = certificateBindIds;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class DeleteListenerCertificatesSpec  implements java.io.Serializable {
         }
         this.certificateBindIds.add(certificateBindId);
     }
-
 }

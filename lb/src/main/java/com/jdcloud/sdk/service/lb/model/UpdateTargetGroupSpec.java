@@ -43,6 +43,7 @@ public class UpdateTargetGroupSpec  implements java.io.Serializable {
     private String targetGroupName;
 
 
+
     /**
      * get 虚拟服务器组描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -60,6 +61,7 @@ public class UpdateTargetGroupSpec  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 虚拟服务器组名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
@@ -80,6 +82,7 @@ public class UpdateTargetGroupSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 虚拟服务器组描述,允许输入UTF-8编码下的全部字符，不超过256字符
      *
@@ -89,6 +92,7 @@ public class UpdateTargetGroupSpec  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 虚拟服务器组名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符

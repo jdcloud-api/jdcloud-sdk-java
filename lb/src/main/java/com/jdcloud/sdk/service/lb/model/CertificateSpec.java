@@ -46,6 +46,7 @@ public class CertificateSpec  implements java.io.Serializable {
     private Boolean isDefault;
 
 
+
     /**
      * get 证书Id
      *
@@ -63,6 +64,7 @@ public class CertificateSpec  implements java.io.Serializable {
     public void setCertificateId(String certificateId) {
         this.certificateId = certificateId;
     }
+
 
     /**
      * get 是否为默认证书，取值为True或False,默认为True，目前此字段暂不支持设置
@@ -83,6 +85,7 @@ public class CertificateSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 证书Id
      *
@@ -92,6 +95,7 @@ public class CertificateSpec  implements java.io.Serializable {
         this.certificateId = certificateId;
         return this;
     }
+
 
     /**
      * set 是否为默认证书，取值为True或False,默认为True，目前此字段暂不支持设置

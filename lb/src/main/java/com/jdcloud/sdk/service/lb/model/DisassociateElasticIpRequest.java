@@ -42,6 +42,11 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
     private String elasticIpId;
 
     /**
+     * 解绑时是否同时删除弹性公网IP，取值范围：true、false，默认false。true表示解绑弹性公网IP时删除该弹性公网IP；false表示解绑弹性公网IP时不删除该弹性公网IP。包年包月和无计费信息的弹性公网IP不支持解绑时删除
+     */
+    private Boolean deleteElasticIp;
+
+    /**
      * Region ID
      * Required:true
      */
@@ -54,6 +59,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
      */
     @Required
     private String loadBalancerId;
+
 
 
     /**
@@ -74,6 +80,26 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
         this.elasticIpId = elasticIpId;
     }
 
+
+    /**
+     * get 解绑时是否同时删除弹性公网IP，取值范围：true、false，默认false。true表示解绑弹性公网IP时删除该弹性公网IP；false表示解绑弹性公网IP时不删除该弹性公网IP。包年包月和无计费信息的弹性公网IP不支持解绑时删除
+     *
+     * @return
+     */
+    public Boolean getDeleteElasticIp() {
+        return deleteElasticIp;
+    }
+
+    /**
+     * set 解绑时是否同时删除弹性公网IP，取值范围：true、false，默认false。true表示解绑弹性公网IP时删除该弹性公网IP；false表示解绑弹性公网IP时不删除该弹性公网IP。包年包月和无计费信息的弹性公网IP不支持解绑时删除
+     *
+     * @param deleteElasticIp
+     */
+    public void setDeleteElasticIp(Boolean deleteElasticIp) {
+        this.deleteElasticIp = deleteElasticIp;
+    }
+
+
     /**
      * get Region ID
      *
@@ -91,6 +117,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get LB ID
@@ -111,6 +138,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 弹性公网IP ID
      *
@@ -121,6 +149,18 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
         return this;
     }
 
+
+    /**
+     * set 解绑时是否同时删除弹性公网IP，取值范围：true、false，默认false。true表示解绑弹性公网IP时删除该弹性公网IP；false表示解绑弹性公网IP时不删除该弹性公网IP。包年包月和无计费信息的弹性公网IP不支持解绑时删除
+     *
+     * @param deleteElasticIp
+     */
+    public DisassociateElasticIpRequest deleteElasticIp(Boolean deleteElasticIp) {
+        this.deleteElasticIp = deleteElasticIp;
+        return this;
+    }
+
+
     /**
      * set Region ID
      *
@@ -130,6 +170,7 @@ public class DisassociateElasticIpRequest extends JdcloudRequest implements java
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set LB ID

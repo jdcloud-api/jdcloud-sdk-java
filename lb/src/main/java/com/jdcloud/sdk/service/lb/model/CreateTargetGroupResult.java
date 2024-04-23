@@ -39,6 +39,7 @@ public class CreateTargetGroupResult extends JdcloudResult implements java.io.Se
     private String targetGroupId;
 
 
+
     /**
      * get 虚拟服务器组Id 
      *
@@ -56,6 +57,7 @@ public class CreateTargetGroupResult extends JdcloudResult implements java.io.Se
     public void setTargetGroupId(String targetGroupId) {
         this.targetGroupId = targetGroupId;
     }
+
 
 
     /**

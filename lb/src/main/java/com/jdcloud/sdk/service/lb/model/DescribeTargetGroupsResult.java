@@ -39,31 +39,33 @@ public class DescribeTargetGroupsResult extends JdcloudResult implements java.io
     /**
      * targetGroups
      */
+    
     private List<TargetGroup> targetGroups;
-
     /**
      * 总数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get targetGroups
-     *
-     * @return
-     */
+    * get targetGroups
+    *
+    * @return
+    */
     public List<TargetGroup> getTargetGroups() {
         return targetGroups;
     }
 
     /**
-     * set targetGroups
-     *
-     * @param targetGroups
-     */
+    * set targetGroups
+    *
+    * @param targetGroups
+    */
     public void setTargetGroups(List<TargetGroup> targetGroups) {
         this.targetGroups = targetGroups;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeTargetGroupsResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
-     * set targetGroups
-     *
-     * @param targetGroups
-     */
+    * set targetGroups
+    *
+    * @param targetGroups
+    */
     public DescribeTargetGroupsResult targetGroups(List<TargetGroup> targetGroups) {
         this.targetGroups = targetGroups;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeTargetGroupsResult extends JdcloudResult implements java.io
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeTargetGroupsResult extends JdcloudResult implements java.io
         }
         this.targetGroups.add(targetGroup);
     }
-
 }

@@ -72,6 +72,12 @@ public class TargetHealth  implements java.io.Serializable {
      */
     private String ipAddress;
 
+    /**
+     * 健康异常结构
+     */
+    private UnhealthReason unhealthReason;
+
+
 
     /**
      * get Target所在的虚拟服务器组Id, 与agId不能并存
@@ -91,6 +97,7 @@ public class TargetHealth  implements java.io.Serializable {
         this.targetGroupId = targetGroupId;
     }
 
+
     /**
      * get Target所在的高可用组Id，与targetGroupId不能并存
      *
@@ -108,6 +115,7 @@ public class TargetHealth  implements java.io.Serializable {
     public void setAgId(String agId) {
         this.agId = agId;
     }
+
 
     /**
      * get Target所属实例的Id（type为vm或container时显示）
@@ -127,6 +135,7 @@ public class TargetHealth  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+
     /**
      * get Target所属的type，取值为vm、container或ip,默认为vm
      *
@@ -144,6 +153,7 @@ public class TargetHealth  implements java.io.Serializable {
     public void setType(String type) {
         this.type = type;
     }
+
 
     /**
      * get 健康检查的port
@@ -163,6 +173,7 @@ public class TargetHealth  implements java.io.Serializable {
         this.port = port;
     }
 
+
     /**
      * get 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发
      *
@@ -181,6 +192,7 @@ public class TargetHealth  implements java.io.Serializable {
         this.weight = weight;
     }
 
+
     /**
      * get 该Target的健康状态，取值为healthy、unhealthy
      *
@@ -198,6 +210,7 @@ public class TargetHealth  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get Target的IP地址。当Target type为vm或container时，表示vm或container的私网IP；当Target type为ip时，表示注册Target时指定的IP地址
@@ -219,6 +232,26 @@ public class TargetHealth  implements java.io.Serializable {
 
 
     /**
+     * get 健康异常结构
+     *
+     * @return
+     */
+    public UnhealthReason getUnhealthReason() {
+        return unhealthReason;
+    }
+
+    /**
+     * set 健康异常结构
+     *
+     * @param unhealthReason
+     */
+    public void setUnhealthReason(UnhealthReason unhealthReason) {
+        this.unhealthReason = unhealthReason;
+    }
+
+
+
+    /**
      * set Target所在的虚拟服务器组Id, 与agId不能并存
      *
      * @param targetGroupId
@@ -227,6 +260,7 @@ public class TargetHealth  implements java.io.Serializable {
         this.targetGroupId = targetGroupId;
         return this;
     }
+
 
     /**
      * set Target所在的高可用组Id，与targetGroupId不能并存
@@ -238,6 +272,7 @@ public class TargetHealth  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Target所属实例的Id（type为vm或container时显示）
      *
@@ -247,6 +282,7 @@ public class TargetHealth  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set Target所属的type，取值为vm、container或ip,默认为vm
@@ -258,6 +294,7 @@ public class TargetHealth  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 健康检查的port
      *
@@ -267,6 +304,7 @@ public class TargetHealth  implements java.io.Serializable {
         this.port = port;
         return this;
     }
+
 
     /**
      * set 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发
@@ -278,6 +316,7 @@ public class TargetHealth  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 该Target的健康状态，取值为healthy、unhealthy
      *
@@ -288,6 +327,7 @@ public class TargetHealth  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Target的IP地址。当Target type为vm或container时，表示vm或container的私网IP；当Target type为ip时，表示注册Target时指定的IP地址
      *
@@ -295,6 +335,17 @@ public class TargetHealth  implements java.io.Serializable {
      */
     public TargetHealth ipAddress(String ipAddress) {
         this.ipAddress = ipAddress;
+        return this;
+    }
+
+
+    /**
+     * set 健康异常结构
+     *
+     * @param unhealthReason
+     */
+    public TargetHealth unhealthReason(UnhealthReason unhealthReason) {
+        this.unhealthReason = unhealthReason;
         return this;
     }
 

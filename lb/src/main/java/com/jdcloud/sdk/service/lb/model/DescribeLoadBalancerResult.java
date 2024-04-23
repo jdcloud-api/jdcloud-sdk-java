@@ -40,6 +40,7 @@ public class DescribeLoadBalancerResult extends JdcloudResult implements java.io
     private LoadBalancer loadBalancer;
 
 
+
     /**
      * get 负载均衡的信息
      *
@@ -57,6 +58,7 @@ public class DescribeLoadBalancerResult extends JdcloudResult implements java.io
     public void setLoadBalancer(LoadBalancer loadBalancer) {
         this.loadBalancer = loadBalancer;
     }
+
 
 
     /**

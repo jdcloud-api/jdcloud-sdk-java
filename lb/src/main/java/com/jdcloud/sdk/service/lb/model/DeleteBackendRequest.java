@@ -49,6 +49,7 @@ public class DeleteBackendRequest extends JdcloudRequest implements java.io.Seri
     private String backendId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DeleteBackendRequest extends JdcloudRequest implements java.io.Seri
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Backend Id
@@ -86,6 +88,7 @@ public class DeleteBackendRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DeleteBackendRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Backend Id

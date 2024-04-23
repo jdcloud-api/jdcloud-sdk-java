@@ -35,6 +35,16 @@ public class DescribeTargetHealthRequest extends JdcloudRequest implements java.
     private static final long serialVersionUID = 1L;
 
     /**
+     * 页码, 默认为1,取值范围：[1,∞), 页码超过总页数时, 显示最后一页
+     */
+    private Integer pageNumber;
+
+    /**
+     * 分页大小，默认返回全部，取值范围：[10,100]
+     */
+    private Integer pageSize;
+
+    /**
      * Region ID
      * Required:true
      */
@@ -47,6 +57,45 @@ public class DescribeTargetHealthRequest extends JdcloudRequest implements java.
      */
     @Required
     private String backendId;
+
+
+
+    /**
+     * get 页码, 默认为1,取值范围：[1,∞), 页码超过总页数时, 显示最后一页
+     *
+     * @return
+     */
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 页码, 默认为1,取值范围：[1,∞), 页码超过总页数时, 显示最后一页
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+
+    /**
+     * get 分页大小，默认返回全部，取值范围：[10,100]
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 分页大小，默认返回全部，取值范围：[10,100]
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
 
 
     /**
@@ -67,6 +116,7 @@ public class DescribeTargetHealthRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
     }
 
+
     /**
      * get Backend Id
      *
@@ -86,6 +136,29 @@ public class DescribeTargetHealthRequest extends JdcloudRequest implements java.
     }
 
 
+
+    /**
+     * set 页码, 默认为1,取值范围：[1,∞), 页码超过总页数时, 显示最后一页
+     *
+     * @param pageNumber
+     */
+    public DescribeTargetHealthRequest pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+
+    /**
+     * set 分页大小，默认返回全部，取值范围：[10,100]
+     *
+     * @param pageSize
+     */
+    public DescribeTargetHealthRequest pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+
+
     /**
      * set Region ID
      *
@@ -95,6 +168,7 @@ public class DescribeTargetHealthRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Backend Id

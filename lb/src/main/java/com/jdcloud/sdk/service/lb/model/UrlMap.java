@@ -52,8 +52,8 @@ public class UrlMap  implements java.io.Serializable {
     /**
      * 关联的监听器Id列表
      */
+    
     private List<String> listenerIds;
-
     /**
      * 转发规则组的描述信息
      */
@@ -67,6 +67,7 @@ public class UrlMap  implements java.io.Serializable {
     /**
      * 转发规则列表
      */
+    
     private List<Rule> rules;
 
 
@@ -88,6 +89,7 @@ public class UrlMap  implements java.io.Serializable {
         this.urlMapId = urlMapId;
     }
 
+
     /**
      * get 转发规则组的名称
      *
@@ -105,6 +107,7 @@ public class UrlMap  implements java.io.Serializable {
     public void setUrlMapName(String urlMapName) {
         this.urlMapName = urlMapName;
     }
+
 
     /**
      * get 转发规则组所属LoadBalancer的Id
@@ -124,23 +127,25 @@ public class UrlMap  implements java.io.Serializable {
         this.loadBalancerId = loadBalancerId;
     }
 
+
     /**
-     * get 关联的监听器Id列表
-     *
-     * @return
-     */
+    * get 关联的监听器Id列表
+    *
+    * @return
+    */
     public List<String> getListenerIds() {
         return listenerIds;
     }
 
     /**
-     * set 关联的监听器Id列表
-     *
-     * @param listenerIds
-     */
+    * set 关联的监听器Id列表
+    *
+    * @param listenerIds
+    */
     public void setListenerIds(List<String> listenerIds) {
         this.listenerIds = listenerIds;
     }
+
 
     /**
      * get 转发规则组的描述信息
@@ -160,6 +165,7 @@ public class UrlMap  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 转发规则组的创建时间
      *
@@ -178,23 +184,25 @@ public class UrlMap  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+
     /**
-     * get 转发规则列表
-     *
-     * @return
-     */
+    * get 转发规则列表
+    *
+    * @return
+    */
     public List<Rule> getRules() {
         return rules;
     }
 
     /**
-     * set 转发规则列表
-     *
-     * @param rules
-     */
+    * set 转发规则列表
+    *
+    * @param rules
+    */
     public void setRules(List<Rule> rules) {
         this.rules = rules;
     }
+
 
 
     /**
@@ -207,6 +215,7 @@ public class UrlMap  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 转发规则组的名称
      *
@@ -216,6 +225,7 @@ public class UrlMap  implements java.io.Serializable {
         this.urlMapName = urlMapName;
         return this;
     }
+
 
     /**
      * set 转发规则组所属LoadBalancer的Id
@@ -227,15 +237,17 @@ public class UrlMap  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 关联的监听器Id列表
-     *
-     * @param listenerIds
-     */
+    * set 关联的监听器Id列表
+    *
+    * @param listenerIds
+    */
     public UrlMap listenerIds(List<String> listenerIds) {
         this.listenerIds = listenerIds;
         return this;
     }
+
 
     /**
      * set 转发规则组的描述信息
@@ -247,6 +259,7 @@ public class UrlMap  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 转发规则组的创建时间
      *
@@ -257,15 +270,17 @@ public class UrlMap  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 转发规则列表
-     *
-     * @param rules
-     */
+    * set 转发规则列表
+    *
+    * @param rules
+    */
     public UrlMap rules(List<Rule> rules) {
         this.rules = rules;
         return this;
     }
+
 
 
     /**
@@ -291,5 +306,4 @@ public class UrlMap  implements java.io.Serializable {
         }
         this.rules.add(rule);
     }
-
 }

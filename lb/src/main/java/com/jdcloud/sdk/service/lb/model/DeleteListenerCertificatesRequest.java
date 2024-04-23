@@ -41,8 +41,8 @@ public class DeleteListenerCertificatesRequest extends JdcloudRequest implements
      * Required:true
      */
     @Required
+    
     private List<String> certificateBindIds;
-
     /**
      * Region ID
      * Required:true
@@ -58,23 +58,25 @@ public class DeleteListenerCertificatesRequest extends JdcloudRequest implements
     private String listenerId;
 
 
+
     /**
-     * get 【alb Https和Tls协议】扩展证书绑定Id
-     *
-     * @return
-     */
+    * get 【alb Https和Tls协议】扩展证书绑定Id
+    *
+    * @return
+    */
     public List<String> getCertificateBindIds() {
         return certificateBindIds;
     }
 
     /**
-     * set 【alb Https和Tls协议】扩展证书绑定Id
-     *
-     * @param certificateBindIds
-     */
+    * set 【alb Https和Tls协议】扩展证书绑定Id
+    *
+    * @param certificateBindIds
+    */
     public void setCertificateBindIds(List<String> certificateBindIds) {
         this.certificateBindIds = certificateBindIds;
     }
+
 
     /**
      * get Region ID
@@ -93,6 +95,7 @@ public class DeleteListenerCertificatesRequest extends JdcloudRequest implements
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 监听器ID
@@ -113,15 +116,17 @@ public class DeleteListenerCertificatesRequest extends JdcloudRequest implements
     }
 
 
+
     /**
-     * set 【alb Https和Tls协议】扩展证书绑定Id
-     *
-     * @param certificateBindIds
-     */
+    * set 【alb Https和Tls协议】扩展证书绑定Id
+    *
+    * @param certificateBindIds
+    */
     public DeleteListenerCertificatesRequest certificateBindIds(List<String> certificateBindIds) {
         this.certificateBindIds = certificateBindIds;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -133,6 +138,7 @@ public class DeleteListenerCertificatesRequest extends JdcloudRequest implements
         return this;
     }
 
+
     /**
      * set 监听器ID
      *
@@ -142,6 +148,7 @@ public class DeleteListenerCertificatesRequest extends JdcloudRequest implements
         this.listenerId = listenerId;
         return this;
     }
+
 
 
     /**
@@ -155,5 +162,4 @@ public class DeleteListenerCertificatesRequest extends JdcloudRequest implements
         }
         this.certificateBindIds.add(certificateBindId);
     }
-
 }

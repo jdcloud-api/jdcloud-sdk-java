@@ -35,6 +35,11 @@ public class DeleteLoadBalancerRequest extends JdcloudRequest implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
+     * 是否打包删除弹性公网IP，取值范围：true、false，默认false。true表示删除负载均衡时打包删除其绑定的弹性公网IP；false表示删除负载均衡时不删除其绑定的弹性公网IP。包年包月和无计费信息的弹性公网IP不支持打包删除
+     */
+    private Boolean deleteElasticIp;
+
+    /**
      * Region ID
      * Required:true
      */
@@ -47,6 +52,26 @@ public class DeleteLoadBalancerRequest extends JdcloudRequest implements java.io
      */
     @Required
     private String loadBalancerId;
+
+
+
+    /**
+     * get 是否打包删除弹性公网IP，取值范围：true、false，默认false。true表示删除负载均衡时打包删除其绑定的弹性公网IP；false表示删除负载均衡时不删除其绑定的弹性公网IP。包年包月和无计费信息的弹性公网IP不支持打包删除
+     *
+     * @return
+     */
+    public Boolean getDeleteElasticIp() {
+        return deleteElasticIp;
+    }
+
+    /**
+     * set 是否打包删除弹性公网IP，取值范围：true、false，默认false。true表示删除负载均衡时打包删除其绑定的弹性公网IP；false表示删除负载均衡时不删除其绑定的弹性公网IP。包年包月和无计费信息的弹性公网IP不支持打包删除
+     *
+     * @param deleteElasticIp
+     */
+    public void setDeleteElasticIp(Boolean deleteElasticIp) {
+        this.deleteElasticIp = deleteElasticIp;
+    }
 
 
     /**
@@ -67,6 +92,7 @@ public class DeleteLoadBalancerRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
     }
 
+
     /**
      * get LB ID
      *
@@ -86,6 +112,18 @@ public class DeleteLoadBalancerRequest extends JdcloudRequest implements java.io
     }
 
 
+
+    /**
+     * set 是否打包删除弹性公网IP，取值范围：true、false，默认false。true表示删除负载均衡时打包删除其绑定的弹性公网IP；false表示删除负载均衡时不删除其绑定的弹性公网IP。包年包月和无计费信息的弹性公网IP不支持打包删除
+     *
+     * @param deleteElasticIp
+     */
+    public DeleteLoadBalancerRequest deleteElasticIp(Boolean deleteElasticIp) {
+        this.deleteElasticIp = deleteElasticIp;
+        return this;
+    }
+
+
     /**
      * set Region ID
      *
@@ -95,6 +133,7 @@ public class DeleteLoadBalancerRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set LB ID

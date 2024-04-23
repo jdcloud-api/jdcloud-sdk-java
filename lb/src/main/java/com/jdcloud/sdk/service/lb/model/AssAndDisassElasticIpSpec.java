@@ -41,6 +41,7 @@ public class AssAndDisassElasticIpSpec  implements java.io.Serializable {
     private String elasticIpId;
 
 
+
     /**
      * get 弹性公网IP ID
      *
@@ -58,6 +59,7 @@ public class AssAndDisassElasticIpSpec  implements java.io.Serializable {
     public void setElasticIpId(String elasticIpId) {
         this.elasticIpId = elasticIpId;
     }
+
 
 
     /**

@@ -68,13 +68,13 @@ public class LoadBalancer  implements java.io.Serializable {
     /**
      * LoadBalancer所属availability Zone列表
      */
+    
     private List<String> azs;
-
     /**
      * LoadBalancer绑定的安全组列表
      */
+    
     private List<String> securityGroupIds;
-
     /**
      * 描述LB的私有对象信息
      */
@@ -88,8 +88,8 @@ public class LoadBalancer  implements java.io.Serializable {
     /**
      * tag信息
      */
+    
     private List<Tag> tags;
-
     /**
      * LoadBalancer的描述信息
      */
@@ -110,6 +110,12 @@ public class LoadBalancer  implements java.io.Serializable {
      */
     private String azType;
 
+    /**
+     * 负载均衡绑定的个性化配置id
+     */
+    private String customizedConfigurationId;
+
+
 
     /**
      * get LoadBalancer的Id
@@ -129,6 +135,7 @@ public class LoadBalancer  implements java.io.Serializable {
         this.loadBalancerId = loadBalancerId;
     }
 
+
     /**
      * get LoadBalancer的名称
      *
@@ -146,6 +153,7 @@ public class LoadBalancer  implements java.io.Serializable {
     public void setLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
     }
+
 
     /**
      * get LoadBalancer所属子网的Id
@@ -165,6 +173,7 @@ public class LoadBalancer  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+
     /**
      * get 负载均衡所属vpc Id
      *
@@ -182,6 +191,7 @@ public class LoadBalancer  implements java.io.Serializable {
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
     /**
      * get LoadBalancer的类型
@@ -201,6 +211,7 @@ public class LoadBalancer  implements java.io.Serializable {
         this.type = type;
     }
 
+
     /**
      * get LoadBalancer的状态
      *
@@ -219,41 +230,44 @@ public class LoadBalancer  implements java.io.Serializable {
         this.state = state;
     }
 
+
     /**
-     * get LoadBalancer所属availability Zone列表
-     *
-     * @return
-     */
+    * get LoadBalancer所属availability Zone列表
+    *
+    * @return
+    */
     public List<String> getAzs() {
         return azs;
     }
 
     /**
-     * set LoadBalancer所属availability Zone列表
-     *
-     * @param azs
-     */
+    * set LoadBalancer所属availability Zone列表
+    *
+    * @param azs
+    */
     public void setAzs(List<String> azs) {
         this.azs = azs;
     }
 
+
     /**
-     * get LoadBalancer绑定的安全组列表
-     *
-     * @return
-     */
+    * get LoadBalancer绑定的安全组列表
+    *
+    * @return
+    */
     public List<String> getSecurityGroupIds() {
         return securityGroupIds;
     }
 
     /**
-     * set LoadBalancer绑定的安全组列表
-     *
-     * @param securityGroupIds
-     */
+    * set LoadBalancer绑定的安全组列表
+    *
+    * @param securityGroupIds
+    */
     public void setSecurityGroupIds(List<String> securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
     }
+
 
     /**
      * get 描述LB的私有对象信息
@@ -273,6 +287,7 @@ public class LoadBalancer  implements java.io.Serializable {
         this.privateIp = privateIp;
     }
 
+
     /**
      * get 计费配置
      *
@@ -291,23 +306,25 @@ public class LoadBalancer  implements java.io.Serializable {
         this.charge = charge;
     }
 
+
     /**
-     * get tag信息
-     *
-     * @return
-     */
+    * get tag信息
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set tag信息
-     *
-     * @param tags
-     */
+    * set tag信息
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
 
     /**
      * get LoadBalancer的描述信息
@@ -327,6 +344,7 @@ public class LoadBalancer  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 删除保护，取值为True(开启)或False(关闭)
      *
@@ -345,6 +363,7 @@ public class LoadBalancer  implements java.io.Serializable {
         this.deleteProtection = deleteProtection;
     }
 
+
     /**
      * get LoadBalancer的创建时间
      *
@@ -362,6 +381,7 @@ public class LoadBalancer  implements java.io.Serializable {
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
+
 
     /**
      * get 负载均衡所在可用区类型，取值包括：standard(标准可用区)、edge(边缘可用区)
@@ -383,6 +403,26 @@ public class LoadBalancer  implements java.io.Serializable {
 
 
     /**
+     * get 负载均衡绑定的个性化配置id
+     *
+     * @return
+     */
+    public String getCustomizedConfigurationId() {
+        return customizedConfigurationId;
+    }
+
+    /**
+     * set 负载均衡绑定的个性化配置id
+     *
+     * @param customizedConfigurationId
+     */
+    public void setCustomizedConfigurationId(String customizedConfigurationId) {
+        this.customizedConfigurationId = customizedConfigurationId;
+    }
+
+
+
+    /**
      * set LoadBalancer的Id
      *
      * @param loadBalancerId
@@ -391,6 +431,7 @@ public class LoadBalancer  implements java.io.Serializable {
         this.loadBalancerId = loadBalancerId;
         return this;
     }
+
 
     /**
      * set LoadBalancer的名称
@@ -402,6 +443,7 @@ public class LoadBalancer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set LoadBalancer所属子网的Id
      *
@@ -411,6 +453,7 @@ public class LoadBalancer  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 负载均衡所属vpc Id
@@ -422,6 +465,7 @@ public class LoadBalancer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set LoadBalancer的类型
      *
@@ -431,6 +475,7 @@ public class LoadBalancer  implements java.io.Serializable {
         this.type = type;
         return this;
     }
+
 
     /**
      * set LoadBalancer的状态
@@ -442,25 +487,28 @@ public class LoadBalancer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set LoadBalancer所属availability Zone列表
-     *
-     * @param azs
-     */
+    * set LoadBalancer所属availability Zone列表
+    *
+    * @param azs
+    */
     public LoadBalancer azs(List<String> azs) {
         this.azs = azs;
         return this;
     }
 
+
     /**
-     * set LoadBalancer绑定的安全组列表
-     *
-     * @param securityGroupIds
-     */
+    * set LoadBalancer绑定的安全组列表
+    *
+    * @param securityGroupIds
+    */
     public LoadBalancer securityGroupIds(List<String> securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
     }
+
 
     /**
      * set 描述LB的私有对象信息
@@ -472,6 +520,7 @@ public class LoadBalancer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费配置
      *
@@ -482,15 +531,17 @@ public class LoadBalancer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set tag信息
-     *
-     * @param tags
-     */
+    * set tag信息
+    *
+    * @param tags
+    */
     public LoadBalancer tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
 
     /**
      * set LoadBalancer的描述信息
@@ -502,6 +553,7 @@ public class LoadBalancer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 删除保护，取值为True(开启)或False(关闭)
      *
@@ -511,6 +563,7 @@ public class LoadBalancer  implements java.io.Serializable {
         this.deleteProtection = deleteProtection;
         return this;
     }
+
 
     /**
      * set LoadBalancer的创建时间
@@ -522,6 +575,7 @@ public class LoadBalancer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 负载均衡所在可用区类型，取值包括：standard(标准可用区)、edge(边缘可用区)
      *
@@ -531,6 +585,18 @@ public class LoadBalancer  implements java.io.Serializable {
         this.azType = azType;
         return this;
     }
+
+
+    /**
+     * set 负载均衡绑定的个性化配置id
+     *
+     * @param customizedConfigurationId
+     */
+    public LoadBalancer customizedConfigurationId(String customizedConfigurationId) {
+        this.customizedConfigurationId = customizedConfigurationId;
+        return this;
+    }
+
 
 
     /**
@@ -568,5 +634,4 @@ public class LoadBalancer  implements java.io.Serializable {
         }
         this.tags.add(tag);
     }
-
 }

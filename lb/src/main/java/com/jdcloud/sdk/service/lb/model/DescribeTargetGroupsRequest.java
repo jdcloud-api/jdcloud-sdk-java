@@ -54,14 +54,15 @@ loadBalancerId － TargetGroup所属负载均衡的Id，支持单个
 loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb，支持单个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -82,6 +83,7 @@ loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -100,31 +102,33 @@ loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get targetGroupIds - TargetGroup ID列表，支持多个
+    * get targetGroupIds - TargetGroup ID列表，支持多个
 targetGroupNames - TargetGroup名称列表，支持多个
 loadBalancerId － TargetGroup所属负载均衡的Id，支持单个
 loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb，支持单个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set targetGroupIds - TargetGroup ID列表，支持多个
+    * set targetGroupIds - TargetGroup ID列表，支持多个
 targetGroupNames - TargetGroup名称列表，支持多个
 loadBalancerId － TargetGroup所属负载均衡的Id，支持单个
 loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb，支持单个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get Region ID
@@ -145,6 +149,7 @@ loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
      *
@@ -154,6 +159,7 @@ loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
@@ -165,19 +171,21 @@ loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb
         return this;
     }
 
+
     /**
-     * set targetGroupIds - TargetGroup ID列表，支持多个
+    * set targetGroupIds - TargetGroup ID列表，支持多个
 targetGroupNames - TargetGroup名称列表，支持多个
 loadBalancerId － TargetGroup所属负载均衡的Id，支持单个
 loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb，支持单个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeTargetGroupsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -188,6 +196,7 @@ loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -205,5 +214,4 @@ loadBalancerType - 负载均衡类型，取值为：alb、nlb、dnlb，默认alb
         }
         this.filters.add(filter);
     }
-
 }

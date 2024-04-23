@@ -33,12 +33,12 @@ public class Quota  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate(仅alb支持)
+     * 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate(仅alb支持)、customizedConfiguration、securityPolicy
      */
     private String type;
 
     /**
-     * type为loadbalancer不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId，type为extensionCertificate设置为listenerId
+     * type为loadbalancer、customizedConfiguration、securityPolicy不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId，type为extensionCertificate设置为listenerId
      */
     private String parentResourceId;
 
@@ -53,8 +53,9 @@ public class Quota  implements java.io.Serializable {
     private Integer count;
 
 
+
     /**
-     * get 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate(仅alb支持)
+     * get 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate(仅alb支持)、customizedConfiguration、securityPolicy
      *
      * @return
      */
@@ -63,7 +64,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate(仅alb支持)
+     * set 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate(仅alb支持)、customizedConfiguration、securityPolicy
      *
      * @param type
      */
@@ -71,8 +72,9 @@ public class Quota  implements java.io.Serializable {
         this.type = type;
     }
 
+
     /**
-     * get type为loadbalancer不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId，type为extensionCertificate设置为listenerId
+     * get type为loadbalancer、customizedConfiguration、securityPolicy不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId，type为extensionCertificate设置为listenerId
      *
      * @return
      */
@@ -81,13 +83,14 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set type为loadbalancer不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId，type为extensionCertificate设置为listenerId
+     * set type为loadbalancer、customizedConfiguration、securityPolicy不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId，type为extensionCertificate设置为listenerId
      *
      * @param parentResourceId
      */
     public void setParentResourceId(String parentResourceId) {
         this.parentResourceId = parentResourceId;
     }
+
 
     /**
      * get 配额大小
@@ -106,6 +109,7 @@ public class Quota  implements java.io.Serializable {
     public void setMaxLimit(Integer maxLimit) {
         this.maxLimit = maxLimit;
     }
+
 
     /**
      * get 已存在的资源数量
@@ -126,8 +130,9 @@ public class Quota  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate(仅alb支持)
+     * set 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate(仅alb支持)、customizedConfiguration、securityPolicy
      *
      * @param type
      */
@@ -136,8 +141,9 @@ public class Quota  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set type为loadbalancer不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId，type为extensionCertificate设置为listenerId
+     * set type为loadbalancer、customizedConfiguration、securityPolicy不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId，type为extensionCertificate设置为listenerId
      *
      * @param parentResourceId
      */
@@ -145,6 +151,7 @@ public class Quota  implements java.io.Serializable {
         this.parentResourceId = parentResourceId;
         return this;
     }
+
 
     /**
      * set 配额大小
@@ -155,6 +162,7 @@ public class Quota  implements java.io.Serializable {
         this.maxLimit = maxLimit;
         return this;
     }
+
 
     /**
      * set 已存在的资源数量

@@ -43,6 +43,7 @@ public class LoadBalancerState  implements java.io.Serializable {
     private String reason;
 
 
+
     /**
      * get Lb的状态码，CREATING,ACTIVE,DOWN,DELETING,STOPPING,STARTING,CREATE_FAILED
      *
@@ -60,6 +61,7 @@ public class LoadBalancerState  implements java.io.Serializable {
     public void setCode(String code) {
         this.code = code;
     }
+
 
     /**
      * get state的描述
@@ -80,6 +82,7 @@ public class LoadBalancerState  implements java.io.Serializable {
     }
 
 
+
     /**
      * set Lb的状态码，CREATING,ACTIVE,DOWN,DELETING,STOPPING,STARTING,CREATE_FAILED
      *
@@ -89,6 +92,7 @@ public class LoadBalancerState  implements java.io.Serializable {
         this.code = code;
         return this;
     }
+
 
     /**
      * set state的描述

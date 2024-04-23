@@ -40,37 +40,40 @@ public class AddRulesSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<RuleSpec> ruleSpecs;
 
 
     /**
-     * get 转发规则的信息
-     *
-     * @return
-     */
+    * get 转发规则的信息
+    *
+    * @return
+    */
     public List<RuleSpec> getRuleSpecs() {
         return ruleSpecs;
     }
 
     /**
-     * set 转发规则的信息
-     *
-     * @param ruleSpecs
-     */
+    * set 转发规则的信息
+    *
+    * @param ruleSpecs
+    */
     public void setRuleSpecs(List<RuleSpec> ruleSpecs) {
         this.ruleSpecs = ruleSpecs;
     }
 
 
+
     /**
-     * set 转发规则的信息
-     *
-     * @param ruleSpecs
-     */
+    * set 转发规则的信息
+    *
+    * @param ruleSpecs
+    */
     public AddRulesSpec ruleSpecs(List<RuleSpec> ruleSpecs) {
         this.ruleSpecs = ruleSpecs;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class AddRulesSpec  implements java.io.Serializable {
         }
         this.ruleSpecs.add(ruleSpec);
     }
-
 }

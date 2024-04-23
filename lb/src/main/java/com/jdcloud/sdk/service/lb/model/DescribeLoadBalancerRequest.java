@@ -49,6 +49,7 @@ public class DescribeLoadBalancerRequest extends JdcloudRequest implements java.
     private String loadBalancerId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DescribeLoadBalancerRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get LB ID
@@ -86,6 +88,7 @@ public class DescribeLoadBalancerRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DescribeLoadBalancerRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set LB ID

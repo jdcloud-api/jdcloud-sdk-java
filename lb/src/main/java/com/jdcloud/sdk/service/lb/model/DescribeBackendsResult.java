@@ -39,31 +39,33 @@ public class DescribeBackendsResult extends JdcloudResult implements java.io.Ser
     /**
      * backends
      */
+    
     private List<Backend> backends;
-
     /**
      * 总数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get backends
-     *
-     * @return
-     */
+    * get backends
+    *
+    * @return
+    */
     public List<Backend> getBackends() {
         return backends;
     }
 
     /**
-     * set backends
-     *
-     * @param backends
-     */
+    * set backends
+    *
+    * @param backends
+    */
     public void setBackends(List<Backend> backends) {
         this.backends = backends;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeBackendsResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
-     * set backends
-     *
-     * @param backends
-     */
+    * set backends
+    *
+    * @param backends
+    */
     public DescribeBackendsResult backends(List<Backend> backends) {
         this.backends = backends;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeBackendsResult extends JdcloudResult implements java.io.Ser
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeBackendsResult extends JdcloudResult implements java.io.Ser
         }
         this.backends.add(backend);
     }
-
 }

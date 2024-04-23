@@ -40,6 +40,7 @@ public class DescribeUrlMapResult extends JdcloudResult implements java.io.Seria
     private UrlMap urlMap;
 
 
+
     /**
      * get 转发规则组的信息
      *
@@ -57,6 +58,7 @@ public class DescribeUrlMapResult extends JdcloudResult implements java.io.Seria
     public void setUrlMap(UrlMap urlMap) {
         this.urlMap = urlMap;
     }
+
 
 
     /**

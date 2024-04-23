@@ -40,6 +40,7 @@ public class DescribeListenerResult extends JdcloudResult implements java.io.Ser
     private Listener listener;
 
 
+
     /**
      * get 监听器的信息
      *
@@ -57,6 +58,7 @@ public class DescribeListenerResult extends JdcloudResult implements java.io.Ser
     public void setListener(Listener listener) {
         this.listener = listener;
     }
+
 
 
     /**

@@ -42,8 +42,8 @@ public class AddListenerCertificatesRequest extends JdcloudRequest implements ja
      * Required:true
      */
     @Required
+    
     private List<ExtCertificateSpec> certificates;
-
     /**
      * Region ID
      * Required:true
@@ -59,23 +59,25 @@ public class AddListenerCertificatesRequest extends JdcloudRequest implements ja
     private String listenerId;
 
 
+
     /**
-     * get 【alb Https和Tls协议】ssl server证书列表
-     *
-     * @return
-     */
+    * get 【alb Https和Tls协议】ssl server证书列表
+    *
+    * @return
+    */
     public List<ExtCertificateSpec> getCertificates() {
         return certificates;
     }
 
     /**
-     * set 【alb Https和Tls协议】ssl server证书列表
-     *
-     * @param certificates
-     */
+    * set 【alb Https和Tls协议】ssl server证书列表
+    *
+    * @param certificates
+    */
     public void setCertificates(List<ExtCertificateSpec> certificates) {
         this.certificates = certificates;
     }
+
 
     /**
      * get Region ID
@@ -94,6 +96,7 @@ public class AddListenerCertificatesRequest extends JdcloudRequest implements ja
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 监听器ID
@@ -114,15 +117,17 @@ public class AddListenerCertificatesRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
-     * set 【alb Https和Tls协议】ssl server证书列表
-     *
-     * @param certificates
-     */
+    * set 【alb Https和Tls协议】ssl server证书列表
+    *
+    * @param certificates
+    */
     public AddListenerCertificatesRequest certificates(List<ExtCertificateSpec> certificates) {
         this.certificates = certificates;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -134,6 +139,7 @@ public class AddListenerCertificatesRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 监听器ID
      *
@@ -143,6 +149,7 @@ public class AddListenerCertificatesRequest extends JdcloudRequest implements ja
         this.listenerId = listenerId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class AddListenerCertificatesRequest extends JdcloudRequest implements ja
         }
         this.certificates.add(certificate);
     }
-
 }

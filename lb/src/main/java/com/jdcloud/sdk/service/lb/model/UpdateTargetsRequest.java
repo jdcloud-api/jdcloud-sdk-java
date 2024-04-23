@@ -42,8 +42,8 @@ public class UpdateTargetsRequest extends JdcloudRequest implements java.io.Seri
      * Required:true
      */
     @Required
+    
     private List<TargetUpdateSpec> targetUpdateSpecs;
-
     /**
      * Region ID
      * Required:true
@@ -59,23 +59,25 @@ public class UpdateTargetsRequest extends JdcloudRequest implements java.io.Seri
     private String targetGroupId;
 
 
+
     /**
-     * get 修改target信息
-     *
-     * @return
-     */
+    * get 修改target信息
+    *
+    * @return
+    */
     public List<TargetUpdateSpec> getTargetUpdateSpecs() {
         return targetUpdateSpecs;
     }
 
     /**
-     * set 修改target信息
-     *
-     * @param targetUpdateSpecs
-     */
+    * set 修改target信息
+    *
+    * @param targetUpdateSpecs
+    */
     public void setTargetUpdateSpecs(List<TargetUpdateSpec> targetUpdateSpecs) {
         this.targetUpdateSpecs = targetUpdateSpecs;
     }
+
 
     /**
      * get Region ID
@@ -94,6 +96,7 @@ public class UpdateTargetsRequest extends JdcloudRequest implements java.io.Seri
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get TargetGroup Id
@@ -114,15 +117,17 @@ public class UpdateTargetsRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
-     * set 修改target信息
-     *
-     * @param targetUpdateSpecs
-     */
+    * set 修改target信息
+    *
+    * @param targetUpdateSpecs
+    */
     public UpdateTargetsRequest targetUpdateSpecs(List<TargetUpdateSpec> targetUpdateSpecs) {
         this.targetUpdateSpecs = targetUpdateSpecs;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -134,6 +139,7 @@ public class UpdateTargetsRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set TargetGroup Id
      *
@@ -143,6 +149,7 @@ public class UpdateTargetsRequest extends JdcloudRequest implements java.io.Seri
         this.targetGroupId = targetGroupId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class UpdateTargetsRequest extends JdcloudRequest implements java.io.Seri
         }
         this.targetUpdateSpecs.add(targetUpdateSpec);
     }
-
 }

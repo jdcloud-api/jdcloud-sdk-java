@@ -40,37 +40,40 @@ public class UpdateRulesSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<RuleUpdateSpec> ruleUpdateSpecs;
 
 
     /**
-     * get 更新转发规则rules信息
-     *
-     * @return
-     */
+    * get 更新转发规则rules信息
+    *
+    * @return
+    */
     public List<RuleUpdateSpec> getRuleUpdateSpecs() {
         return ruleUpdateSpecs;
     }
 
     /**
-     * set 更新转发规则rules信息
-     *
-     * @param ruleUpdateSpecs
-     */
+    * set 更新转发规则rules信息
+    *
+    * @param ruleUpdateSpecs
+    */
     public void setRuleUpdateSpecs(List<RuleUpdateSpec> ruleUpdateSpecs) {
         this.ruleUpdateSpecs = ruleUpdateSpecs;
     }
 
 
+
     /**
-     * set 更新转发规则rules信息
-     *
-     * @param ruleUpdateSpecs
-     */
+    * set 更新转发规则rules信息
+    *
+    * @param ruleUpdateSpecs
+    */
     public UpdateRulesSpec ruleUpdateSpecs(List<RuleUpdateSpec> ruleUpdateSpecs) {
         this.ruleUpdateSpecs = ruleUpdateSpecs;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class UpdateRulesSpec  implements java.io.Serializable {
         }
         this.ruleUpdateSpecs.add(ruleUpdateSpec);
     }
-
 }

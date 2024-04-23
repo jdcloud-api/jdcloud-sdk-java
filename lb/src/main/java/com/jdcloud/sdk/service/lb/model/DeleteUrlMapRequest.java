@@ -49,6 +49,7 @@ public class DeleteUrlMapRequest extends JdcloudRequest implements java.io.Seria
     private String urlMapId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DeleteUrlMapRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 转发规则组Id
@@ -86,6 +88,7 @@ public class DeleteUrlMapRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DeleteUrlMapRequest extends JdcloudRequest implements java.io.Seria
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 转发规则组Id
