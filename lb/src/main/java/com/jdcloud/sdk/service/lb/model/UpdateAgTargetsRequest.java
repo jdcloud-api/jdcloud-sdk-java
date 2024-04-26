@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.lb.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.lb.model.TargetUpdateSpec;
+import com.jdcloud.sdk.service.lb.model.AgTargetUpdateSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -43,7 +43,7 @@ public class UpdateAgTargetsRequest extends JdcloudRequest implements java.io.Se
      */
     @Required
     
-    private List<TargetUpdateSpec> targetUpdateSpecs;
+    private List<AgTargetUpdateSpec> targetUpdateSpecs;
     /**
      * Region ID
      * Required:true
@@ -65,7 +65,7 @@ public class UpdateAgTargetsRequest extends JdcloudRequest implements java.io.Se
     *
     * @return
     */
-    public List<TargetUpdateSpec> getTargetUpdateSpecs() {
+    public List<AgTargetUpdateSpec> getTargetUpdateSpecs() {
         return targetUpdateSpecs;
     }
 
@@ -74,7 +74,7 @@ public class UpdateAgTargetsRequest extends JdcloudRequest implements java.io.Se
     *
     * @param targetUpdateSpecs
     */
-    public void setTargetUpdateSpecs(List<TargetUpdateSpec> targetUpdateSpecs) {
+    public void setTargetUpdateSpecs(List<AgTargetUpdateSpec> targetUpdateSpecs) {
         this.targetUpdateSpecs = targetUpdateSpecs;
     }
 
@@ -123,7 +123,7 @@ public class UpdateAgTargetsRequest extends JdcloudRequest implements java.io.Se
     *
     * @param targetUpdateSpecs
     */
-    public UpdateAgTargetsRequest targetUpdateSpecs(List<TargetUpdateSpec> targetUpdateSpecs) {
+    public UpdateAgTargetsRequest targetUpdateSpecs(List<AgTargetUpdateSpec> targetUpdateSpecs) {
         this.targetUpdateSpecs = targetUpdateSpecs;
         return this;
     }
@@ -157,7 +157,7 @@ public class UpdateAgTargetsRequest extends JdcloudRequest implements java.io.Se
      *
      * @param targetUpdateSpec
      */
-    public void addTargetUpdateSpec(TargetUpdateSpec targetUpdateSpec) {
+    public void addTargetUpdateSpec(AgTargetUpdateSpec targetUpdateSpec) {
         if (this.targetUpdateSpecs == null) {
             this.targetUpdateSpecs = new ArrayList<>();
         }
