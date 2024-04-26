@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.lb.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * targetUpdateSpec
+ * agTargetUpdateSpec
  */
-public class TargetUpdateSpec  implements java.io.Serializable {
+public class AgTargetUpdateSpec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -39,11 +39,6 @@ public class TargetUpdateSpec  implements java.io.Serializable {
      */
     @Required
     private String targetId;
-
-    /**
-     * Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
-     */
-    private Integer port;
 
     /**
      * Target的权重，取值范围：0-100。0表示不参与流量转发
@@ -72,25 +67,6 @@ public class TargetUpdateSpec  implements java.io.Serializable {
 
 
     /**
-     * get Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
-     *
-     * @return
-     */
-    public Integer getPort() {
-        return port;
-    }
-
-    /**
-     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
-     *
-     * @param port
-     */
-    public void setPort(Integer port) {
-        this.port = port;
-    }
-
-
-    /**
      * get Target的权重，取值范围：0-100。0表示不参与流量转发
      *
      * @return
@@ -115,19 +91,8 @@ public class TargetUpdateSpec  implements java.io.Serializable {
      *
      * @param targetId
      */
-    public TargetUpdateSpec targetId(String targetId) {
+    public AgTargetUpdateSpec targetId(String targetId) {
         this.targetId = targetId;
-        return this;
-    }
-
-
-    /**
-     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
-     *
-     * @param port
-     */
-    public TargetUpdateSpec port(Integer port) {
-        this.port = port;
         return this;
     }
 
@@ -137,7 +102,7 @@ public class TargetUpdateSpec  implements java.io.Serializable {
      *
      * @param weight
      */
-    public TargetUpdateSpec weight(Integer weight) {
+    public AgTargetUpdateSpec weight(Integer weight) {
         this.weight = weight;
         return this;
     }
