@@ -57,6 +57,7 @@ public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements 
     private String idc;
 
 
+
     /**
      * get 页码, 默认为1
      *
@@ -74,6 +75,7 @@ public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements 
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小，默认为20
@@ -93,6 +95,7 @@ public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements 
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 带宽（出口）名称
      *
@@ -110,6 +113,7 @@ public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements 
     public void setBandwidthName(String bandwidthName) {
         this.bandwidthName = bandwidthName;
     }
+
 
     /**
      * get IDC机房ID
@@ -130,6 +134,7 @@ public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements 
     }
 
 
+
     /**
      * set 页码, 默认为1
      *
@@ -139,6 +144,7 @@ public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements 
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20
@@ -150,6 +156,7 @@ public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements 
         return this;
     }
 
+
     /**
      * set 带宽（出口）名称
      *
@@ -159,6 +166,7 @@ public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements 
         this.bandwidthName = bandwidthName;
         return this;
     }
+
 
     /**
      * set IDC机房ID

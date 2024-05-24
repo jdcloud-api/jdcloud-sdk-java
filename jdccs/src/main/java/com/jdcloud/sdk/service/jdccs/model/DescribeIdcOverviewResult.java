@@ -58,6 +58,7 @@ public class DescribeIdcOverviewResult extends JdcloudResult implements java.io.
     private BandwidthOverview bandwidth;
 
 
+
     /**
      * get cabinet
      *
@@ -75,6 +76,7 @@ public class DescribeIdcOverviewResult extends JdcloudResult implements java.io.
     public void setCabinet(CabinetOverview cabinet) {
         this.cabinet = cabinet;
     }
+
 
     /**
      * get device
@@ -94,6 +96,7 @@ public class DescribeIdcOverviewResult extends JdcloudResult implements java.io.
         this.device = device;
     }
 
+
     /**
      * get ip
      *
@@ -111,6 +114,7 @@ public class DescribeIdcOverviewResult extends JdcloudResult implements java.io.
     public void setIp(IpOverview ip) {
         this.ip = ip;
     }
+
 
     /**
      * get bandwidth
@@ -131,6 +135,7 @@ public class DescribeIdcOverviewResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
      * set cabinet
      *
@@ -140,6 +145,7 @@ public class DescribeIdcOverviewResult extends JdcloudResult implements java.io.
         this.cabinet = cabinet;
         return this;
     }
+
 
     /**
      * set device
@@ -151,6 +157,7 @@ public class DescribeIdcOverviewResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set ip
      *
@@ -160,6 +167,7 @@ public class DescribeIdcOverviewResult extends JdcloudResult implements java.io.
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set bandwidth

@@ -42,6 +42,7 @@ public class OpenDevicesData  implements java.io.Serializable {
     /**
      * 数据点集合
      */
+    
     private List<Point> points;
 
 
@@ -63,23 +64,25 @@ public class OpenDevicesData  implements java.io.Serializable {
         this.deviceCode = deviceCode;
     }
 
+
     /**
-     * get 数据点集合
-     *
-     * @return
-     */
+    * get 数据点集合
+    *
+    * @return
+    */
     public List<Point> getPoints() {
         return points;
     }
 
     /**
-     * set 数据点集合
-     *
-     * @param points
-     */
+    * set 数据点集合
+    *
+    * @param points
+    */
     public void setPoints(List<Point> points) {
         this.points = points;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class OpenDevicesData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 数据点集合
-     *
-     * @param points
-     */
+    * set 数据点集合
+    *
+    * @param points
+    */
     public OpenDevicesData points(List<Point> points) {
         this.points = points;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class OpenDevicesData  implements java.io.Serializable {
         }
         this.points.add(point);
     }
-
 }

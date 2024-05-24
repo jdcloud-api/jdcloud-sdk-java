@@ -70,6 +70,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
      * alarmId - 规则实施ID，精确匹配，支持多个
 
      */
+    
     private List<Filter> filters;
 
 
@@ -91,6 +92,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20
      *
@@ -108,6 +110,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 资源类型 bandwidth:带宽
@@ -127,6 +130,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
         this.resourceType = resourceType;
     }
 
+
     /**
      * get 资源ID，指定resourceId时须指定resourceType
      *
@@ -144,6 +148,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 机房英文标识
@@ -163,6 +168,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
         this.idc = idc;
     }
 
+
     /**
      * get 规则状态 disabled:禁用 enabled:启用
      *
@@ -181,25 +187,27 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
         this.status = status;
     }
 
-    /**
-     * get alarmId - 规则实施ID，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    /**
+    * get alarmId - 规则实施ID，精确匹配，支持多个
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set alarmId - 规则实施ID，精确匹配，支持多个
+    * set alarmId - 规则实施ID，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
 
     /**
@@ -212,6 +220,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20
      *
@@ -221,6 +230,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 资源类型 bandwidth:带宽
@@ -232,6 +242,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 资源ID，指定resourceId时须指定resourceType
      *
@@ -241,6 +252,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 机房英文标识
@@ -252,6 +264,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 规则状态 disabled:禁用 enabled:启用
      *
@@ -262,16 +275,18 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
-    /**
-     * set alarmId - 规则实施ID，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    /**
+    * set alarmId - 规则实施ID，精确匹配，支持多个
+
+    *
+    * @param filters
+    */
     public DescribeAlarmsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
 
     /**
@@ -286,5 +301,4 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
         }
         this.filters.add(filter);
     }
-
 }

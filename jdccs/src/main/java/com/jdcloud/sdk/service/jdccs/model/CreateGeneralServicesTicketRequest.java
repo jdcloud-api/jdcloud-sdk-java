@@ -84,6 +84,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
     /**
      * 附件
      */
+    
     private List<Attach> attach;
 
 
@@ -105,6 +106,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         this.phone = phone;
     }
 
+
     /**
      * get 提单人邮箱
      *
@@ -122,6 +124,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     /**
      * get idc机房实例id
@@ -141,6 +144,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         this.idc = idc;
     }
 
+
     /**
      * get 是否是商业化外部机房
      *
@@ -158,6 +162,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
     public void setIsExternalIdc(Boolean isExternalIdc) {
         this.isExternalIdc = isExternalIdc;
     }
+
 
     /**
      * get 数量
@@ -177,6 +182,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         this.count = count;
     }
 
+
     /**
      * get 外部机房地址
      *
@@ -194,6 +200,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
     public void setExternalIdcAddress(String externalIdcAddress) {
         this.externalIdcAddress = externalIdcAddress;
     }
+
 
     /**
      * get 外部机房联系人
@@ -213,6 +220,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         this.externalIdcContactPerson = externalIdcContactPerson;
     }
 
+
     /**
      * get 外部机房联系电话
      *
@@ -230,6 +238,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
     public void setExternalIdcContactPhone(String externalIdcContactPhone) {
         this.externalIdcContactPhone = externalIdcContactPhone;
     }
+
 
     /**
      * get 描述
@@ -249,23 +258,25 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         this.remarks = remarks;
     }
 
+
     /**
-     * get 附件
-     *
-     * @return
-     */
+    * get 附件
+    *
+    * @return
+    */
     public List<Attach> getAttach() {
         return attach;
     }
 
     /**
-     * set 附件
-     *
-     * @param attach
-     */
+    * set 附件
+    *
+    * @param attach
+    */
     public void setAttach(List<Attach> attach) {
         this.attach = attach;
     }
+
 
 
     /**
@@ -278,6 +289,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         return this;
     }
 
+
     /**
      * set 提单人邮箱
      *
@@ -287,6 +299,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         this.email = email;
         return this;
     }
+
 
     /**
      * set idc机房实例id
@@ -298,6 +311,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         return this;
     }
 
+
     /**
      * set 是否是商业化外部机房
      *
@@ -307,6 +321,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         this.isExternalIdc = isExternalIdc;
         return this;
     }
+
 
     /**
      * set 数量
@@ -318,6 +333,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         return this;
     }
 
+
     /**
      * set 外部机房地址
      *
@@ -327,6 +343,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         this.externalIdcAddress = externalIdcAddress;
         return this;
     }
+
 
     /**
      * set 外部机房联系人
@@ -338,6 +355,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         return this;
     }
 
+
     /**
      * set 外部机房联系电话
      *
@@ -347,6 +365,7 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         this.externalIdcContactPhone = externalIdcContactPhone;
         return this;
     }
+
 
     /**
      * set 描述
@@ -358,15 +377,17 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         return this;
     }
 
+
     /**
-     * set 附件
-     *
-     * @param attach
-     */
+    * set 附件
+    *
+    * @param attach
+    */
     public CreateGeneralServicesTicketRequest attach(List<Attach> attach) {
         this.attach = attach;
         return this;
     }
+
 
 
     /**
@@ -380,5 +401,4 @@ public class CreateGeneralServicesTicketRequest extends JdcloudRequest implement
         }
         this.attach.add(attach);
     }
-
 }

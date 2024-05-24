@@ -39,8 +39,8 @@ public class DescribeBandwidthsResult extends JdcloudResult implements java.io.S
     /**
      * bandwidths
      */
+    
     private List<DescribeBandwidth> bandwidths;
-
     /**
      * 页码
      */
@@ -57,23 +57,25 @@ public class DescribeBandwidthsResult extends JdcloudResult implements java.io.S
     private Integer totalCount;
 
 
+
     /**
-     * get bandwidths
-     *
-     * @return
-     */
+    * get bandwidths
+    *
+    * @return
+    */
     public List<DescribeBandwidth> getBandwidths() {
         return bandwidths;
     }
 
     /**
-     * set bandwidths
-     *
-     * @param bandwidths
-     */
+    * set bandwidths
+    *
+    * @param bandwidths
+    */
     public void setBandwidths(List<DescribeBandwidth> bandwidths) {
         this.bandwidths = bandwidths;
     }
+
 
     /**
      * get 页码
@@ -93,6 +95,7 @@ public class DescribeBandwidthsResult extends JdcloudResult implements java.io.S
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小
      *
@@ -110,6 +113,7 @@ public class DescribeBandwidthsResult extends JdcloudResult implements java.io.S
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 总数量
@@ -130,15 +134,17 @@ public class DescribeBandwidthsResult extends JdcloudResult implements java.io.S
     }
 
 
+
     /**
-     * set bandwidths
-     *
-     * @param bandwidths
-     */
+    * set bandwidths
+    *
+    * @param bandwidths
+    */
     public DescribeBandwidthsResult bandwidths(List<DescribeBandwidth> bandwidths) {
         this.bandwidths = bandwidths;
         return this;
     }
+
 
     /**
      * set 页码
@@ -150,6 +156,7 @@ public class DescribeBandwidthsResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
      * set 分页大小
      *
@@ -160,6 +167,7 @@ public class DescribeBandwidthsResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
      * set 总数量
      *
@@ -169,6 +177,7 @@ public class DescribeBandwidthsResult extends JdcloudResult implements java.io.S
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class DescribeBandwidthsResult extends JdcloudResult implements java.io.S
         }
         this.bandwidths.add(bandwidth);
     }
-
 }

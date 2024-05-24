@@ -39,37 +39,40 @@ public class DescribeRangetimeCabinetCurrentResult extends JdcloudResult impleme
     /**
      * data
      */
+    
     private List<CabinetCurrentRespItem> data;
 
 
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<CabinetCurrentRespItem> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<CabinetCurrentRespItem> data) {
         this.data = data;
     }
 
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public DescribeRangetimeCabinetCurrentResult data(List<CabinetCurrentRespItem> data) {
         this.data = data;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeRangetimeCabinetCurrentResult extends JdcloudResult impleme
         }
         this.data.add(data);
     }
-
 }

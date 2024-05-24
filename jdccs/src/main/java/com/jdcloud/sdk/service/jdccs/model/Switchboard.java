@@ -43,6 +43,7 @@ public class Switchboard  implements java.io.Serializable {
     private String port;
 
 
+
     /**
      * get IP
      *
@@ -60,6 +61,7 @@ public class Switchboard  implements java.io.Serializable {
     public void setIp(String ip) {
         this.ip = ip;
     }
+
 
     /**
      * get 端口
@@ -80,6 +82,7 @@ public class Switchboard  implements java.io.Serializable {
     }
 
 
+
     /**
      * set IP
      *
@@ -89,6 +92,7 @@ public class Switchboard  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set 端口

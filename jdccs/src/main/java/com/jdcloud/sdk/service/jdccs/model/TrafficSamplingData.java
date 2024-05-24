@@ -83,6 +83,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
     private String operatorType;
 
 
+
     /**
      * get 源IP
      *
@@ -100,6 +101,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
     public void setSrcIp(String srcIp) {
         this.srcIp = srcIp;
     }
+
 
     /**
      * get 目的IP
@@ -119,6 +121,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
         this.dstIp = dstIp;
     }
 
+
     /**
      * get 源端口
      *
@@ -136,6 +139,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
     public void setSrcPort(Integer srcPort) {
         this.srcPort = srcPort;
     }
+
 
     /**
      * get 目的端口
@@ -155,6 +159,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
         this.dstPort = dstPort;
     }
 
+
     /**
      * get 采样包长度
      *
@@ -172,6 +177,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
     public void setSampleDataLength(Integer sampleDataLength) {
         this.sampleDataLength = sampleDataLength;
     }
+
 
     /**
      * get 采样比
@@ -191,6 +197,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
         this.samplingInterval = samplingInterval;
     }
 
+
     /**
      * get 协议
      *
@@ -208,6 +215,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
     public void setProtocolName(String protocolName) {
         this.protocolName = protocolName;
     }
+
 
     /**
      * get 时间戳
@@ -227,6 +235,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
         this.timestamp = timestamp;
     }
 
+
     /**
      * get 唯一ID标识
      *
@@ -244,6 +253,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
     public void setUniqueId(String uniqueId) {
         this.uniqueId = uniqueId;
     }
+
 
     /**
      * get 运营商类型 移动:CM 联通:CU 电信:CT
@@ -264,6 +274,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 源IP
      *
@@ -273,6 +284,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
         this.srcIp = srcIp;
         return this;
     }
+
 
     /**
      * set 目的IP
@@ -284,6 +296,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 源端口
      *
@@ -293,6 +306,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
         this.srcPort = srcPort;
         return this;
     }
+
 
     /**
      * set 目的端口
@@ -304,6 +318,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 采样包长度
      *
@@ -313,6 +328,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
         this.sampleDataLength = sampleDataLength;
         return this;
     }
+
 
     /**
      * set 采样比
@@ -324,6 +340,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 协议
      *
@@ -333,6 +350,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
         this.protocolName = protocolName;
         return this;
     }
+
 
     /**
      * set 时间戳
@@ -344,6 +362,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 唯一ID标识
      *
@@ -353,6 +372,7 @@ public class TrafficSamplingData  implements java.io.Serializable {
         this.uniqueId = uniqueId;
         return this;
     }
+
 
     /**
      * set 运营商类型 移动:CM 联通:CU 电信:CT

@@ -43,6 +43,7 @@ public class DataPoint  implements java.io.Serializable {
     private Double value;
 
 
+
     /**
      * get UNIX时间戳
      *
@@ -60,6 +61,7 @@ public class DataPoint  implements java.io.Serializable {
     public void setTimestamp(Integer timestamp) {
         this.timestamp = timestamp;
     }
+
 
     /**
      * get 采样值
@@ -80,6 +82,7 @@ public class DataPoint  implements java.io.Serializable {
     }
 
 
+
     /**
      * set UNIX时间戳
      *
@@ -89,6 +92,7 @@ public class DataPoint  implements java.io.Serializable {
         this.timestamp = timestamp;
         return this;
     }
+
 
     /**
      * set 采样值

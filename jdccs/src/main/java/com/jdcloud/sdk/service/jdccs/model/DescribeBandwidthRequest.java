@@ -49,6 +49,7 @@ public class DescribeBandwidthRequest extends JdcloudRequest implements java.io.
     private String bandwidthId;
 
 
+
     /**
      * get IDC机房ID
      *
@@ -66,6 +67,7 @@ public class DescribeBandwidthRequest extends JdcloudRequest implements java.io.
     public void setIdc(String idc) {
         this.idc = idc;
     }
+
 
     /**
      * get 带宽（出口）实例ID
@@ -86,6 +88,7 @@ public class DescribeBandwidthRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set IDC机房ID
      *
@@ -95,6 +98,7 @@ public class DescribeBandwidthRequest extends JdcloudRequest implements java.io.
         this.idc = idc;
         return this;
     }
+
 
     /**
      * set 带宽（出口）实例ID

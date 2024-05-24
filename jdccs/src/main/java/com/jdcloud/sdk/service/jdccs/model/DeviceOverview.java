@@ -83,6 +83,7 @@ public class DeviceOverview  implements java.io.Serializable {
     private Integer canceling;
 
 
+
     /**
      * get 设备总数目
      *
@@ -100,6 +101,7 @@ public class DeviceOverview  implements java.io.Serializable {
     public void setSum(Integer sum) {
         this.sum = sum;
     }
+
 
     /**
      * get 服务器总数目
@@ -119,6 +121,7 @@ public class DeviceOverview  implements java.io.Serializable {
         this.server = server;
     }
 
+
     /**
      * get 网络设备总数目
      *
@@ -136,6 +139,7 @@ public class DeviceOverview  implements java.io.Serializable {
     public void setNetwork(Integer network) {
         this.network = network;
     }
+
 
     /**
      * get 存储设备总数目
@@ -155,6 +159,7 @@ public class DeviceOverview  implements java.io.Serializable {
         this.storage = storage;
     }
 
+
     /**
      * get 其它设备总数目
      *
@@ -172,6 +177,7 @@ public class DeviceOverview  implements java.io.Serializable {
     public void setOther(Integer other) {
         this.other = other;
     }
+
 
     /**
      * get 已开通
@@ -191,6 +197,7 @@ public class DeviceOverview  implements java.io.Serializable {
         this.opened = opened;
     }
 
+
     /**
      * get 已上架
      *
@@ -208,6 +215,7 @@ public class DeviceOverview  implements java.io.Serializable {
     public void setLaunched(Integer launched) {
         this.launched = launched;
     }
+
 
     /**
      * get 操作中
@@ -227,6 +235,7 @@ public class DeviceOverview  implements java.io.Serializable {
         this.operating = operating;
     }
 
+
     /**
      * get 变更中
      *
@@ -244,6 +253,7 @@ public class DeviceOverview  implements java.io.Serializable {
     public void setModifying(Integer modifying) {
         this.modifying = modifying;
     }
+
 
     /**
      * get 退订中
@@ -264,6 +274,7 @@ public class DeviceOverview  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 设备总数目
      *
@@ -273,6 +284,7 @@ public class DeviceOverview  implements java.io.Serializable {
         this.sum = sum;
         return this;
     }
+
 
     /**
      * set 服务器总数目
@@ -284,6 +296,7 @@ public class DeviceOverview  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网络设备总数目
      *
@@ -293,6 +306,7 @@ public class DeviceOverview  implements java.io.Serializable {
         this.network = network;
         return this;
     }
+
 
     /**
      * set 存储设备总数目
@@ -304,6 +318,7 @@ public class DeviceOverview  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 其它设备总数目
      *
@@ -313,6 +328,7 @@ public class DeviceOverview  implements java.io.Serializable {
         this.other = other;
         return this;
     }
+
 
     /**
      * set 已开通
@@ -324,6 +340,7 @@ public class DeviceOverview  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 已上架
      *
@@ -333,6 +350,7 @@ public class DeviceOverview  implements java.io.Serializable {
         this.launched = launched;
         return this;
     }
+
 
     /**
      * set 操作中
@@ -344,6 +362,7 @@ public class DeviceOverview  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 变更中
      *
@@ -353,6 +372,7 @@ public class DeviceOverview  implements java.io.Serializable {
         this.modifying = modifying;
         return this;
     }
+
 
     /**
      * set 退订中

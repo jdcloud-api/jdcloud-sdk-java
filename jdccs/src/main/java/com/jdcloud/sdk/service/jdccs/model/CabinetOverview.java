@@ -58,6 +58,7 @@ public class CabinetOverview  implements java.io.Serializable {
     private Integer disabling;
 
 
+
     /**
      * get 机柜总数目
      *
@@ -75,6 +76,7 @@ public class CabinetOverview  implements java.io.Serializable {
     public void setSum(Integer sum) {
         this.sum = sum;
     }
+
 
     /**
      * get 已开通机柜数目
@@ -94,6 +96,7 @@ public class CabinetOverview  implements java.io.Serializable {
         this.enabled = enabled;
     }
 
+
     /**
      * get 未开通机柜数目
      *
@@ -112,6 +115,7 @@ public class CabinetOverview  implements java.io.Serializable {
         this.disabled = disabled;
     }
 
+
     /**
      * get 开通中机柜数目
      *
@@ -129,6 +133,7 @@ public class CabinetOverview  implements java.io.Serializable {
     public void setEnabling(Integer enabling) {
         this.enabling = enabling;
     }
+
 
     /**
      * get 关闭中机柜数目
@@ -149,6 +154,7 @@ public class CabinetOverview  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 机柜总数目
      *
@@ -158,6 +164,7 @@ public class CabinetOverview  implements java.io.Serializable {
         this.sum = sum;
         return this;
     }
+
 
     /**
      * set 已开通机柜数目
@@ -169,6 +176,7 @@ public class CabinetOverview  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 未开通机柜数目
      *
@@ -179,6 +187,7 @@ public class CabinetOverview  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 开通中机柜数目
      *
@@ -188,6 +197,7 @@ public class CabinetOverview  implements java.io.Serializable {
         this.enabling = enabling;
         return this;
     }
+
 
     /**
      * set 关闭中机柜数目

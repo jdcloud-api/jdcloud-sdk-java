@@ -77,11 +77,12 @@ public class BandwidthTraffic  implements java.io.Serializable {
     /**
      * 关联的公网IP
      */
+    
     private List<RelatedIp> relatedIp;
-
     /**
      * 交换机信息
      */
+    
     private List<DescribeSwitchboard> switchboard;
 
 
@@ -103,6 +104,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
         this.idc = idc;
     }
 
+
     /**
      * get 机房名称
      *
@@ -120,6 +122,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
     public void setIdcName(String idcName) {
         this.idcName = idcName;
     }
+
 
     /**
      * get 带宽实例ID
@@ -139,6 +142,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
         this.bandwidthId = bandwidthId;
     }
 
+
     /**
      * get 带宽名称
      *
@@ -156,6 +160,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
     public void setBandwidthName(String bandwidthName) {
         this.bandwidthName = bandwidthName;
     }
+
 
     /**
      * get 总上行实时流量
@@ -175,6 +180,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
         this.totalTrafficIn = totalTrafficIn;
     }
 
+
     /**
      * get 总下行实时流量
      *
@@ -192,6 +198,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
     public void setTotalTrafficOut(Double totalTrafficOut) {
         this.totalTrafficOut = totalTrafficOut;
     }
+
 
     /**
      * get 总带宽
@@ -211,6 +218,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
         this.bandwidth = bandwidth;
     }
 
+
     /**
      * get 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      *
@@ -229,41 +237,44 @@ public class BandwidthTraffic  implements java.io.Serializable {
         this.lineType = lineType;
     }
 
+
     /**
-     * get 关联的公网IP
-     *
-     * @return
-     */
+    * get 关联的公网IP
+    *
+    * @return
+    */
     public List<RelatedIp> getRelatedIp() {
         return relatedIp;
     }
 
     /**
-     * set 关联的公网IP
-     *
-     * @param relatedIp
-     */
+    * set 关联的公网IP
+    *
+    * @param relatedIp
+    */
     public void setRelatedIp(List<RelatedIp> relatedIp) {
         this.relatedIp = relatedIp;
     }
 
+
     /**
-     * get 交换机信息
-     *
-     * @return
-     */
+    * get 交换机信息
+    *
+    * @return
+    */
     public List<DescribeSwitchboard> getSwitchboard() {
         return switchboard;
     }
 
     /**
-     * set 交换机信息
-     *
-     * @param switchboard
-     */
+    * set 交换机信息
+    *
+    * @param switchboard
+    */
     public void setSwitchboard(List<DescribeSwitchboard> switchboard) {
         this.switchboard = switchboard;
     }
+
 
 
     /**
@@ -276,6 +287,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 机房名称
      *
@@ -285,6 +297,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
         this.idcName = idcName;
         return this;
     }
+
 
     /**
      * set 带宽实例ID
@@ -296,6 +309,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 带宽名称
      *
@@ -305,6 +319,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
         this.bandwidthName = bandwidthName;
         return this;
     }
+
 
     /**
      * set 总上行实时流量
@@ -316,6 +331,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 总下行实时流量
      *
@@ -325,6 +341,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
         this.totalTrafficOut = totalTrafficOut;
         return this;
     }
+
 
     /**
      * set 总带宽
@@ -336,6 +353,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      *
@@ -346,25 +364,28 @@ public class BandwidthTraffic  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 关联的公网IP
-     *
-     * @param relatedIp
-     */
+    * set 关联的公网IP
+    *
+    * @param relatedIp
+    */
     public BandwidthTraffic relatedIp(List<RelatedIp> relatedIp) {
         this.relatedIp = relatedIp;
         return this;
     }
 
+
     /**
-     * set 交换机信息
-     *
-     * @param switchboard
-     */
+    * set 交换机信息
+    *
+    * @param switchboard
+    */
     public BandwidthTraffic switchboard(List<DescribeSwitchboard> switchboard) {
         this.switchboard = switchboard;
         return this;
     }
+
 
 
     /**
@@ -390,5 +411,4 @@ public class BandwidthTraffic  implements java.io.Serializable {
         }
         this.switchboard.add(switchboard);
     }
-
 }

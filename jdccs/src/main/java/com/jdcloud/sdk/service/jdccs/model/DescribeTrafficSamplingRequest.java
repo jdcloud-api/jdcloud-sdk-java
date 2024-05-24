@@ -56,6 +56,7 @@ public class DescribeTrafficSamplingRequest extends JdcloudRequest implements ja
     private Integer endTime;
 
 
+
     /**
      * get 资源ID，支持多个resourceId批量查询，每个id用英文竖线分隔
      *
@@ -74,6 +75,7 @@ public class DescribeTrafficSamplingRequest extends JdcloudRequest implements ja
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 查询时间范围的开始时间， UNIX时间戳，（支持查询最近30分钟数据且时间范围不超过5分钟）
      *
@@ -91,6 +93,7 @@ public class DescribeTrafficSamplingRequest extends JdcloudRequest implements ja
     public void setStartTime(Integer startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 查询时间范围的结束时间， UNIX时间戳，（支持查询最近30分钟数据且时间范围不超过5分钟）
@@ -111,6 +114,7 @@ public class DescribeTrafficSamplingRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 资源ID，支持多个resourceId批量查询，每个id用英文竖线分隔
      *
@@ -121,6 +125,7 @@ public class DescribeTrafficSamplingRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 查询时间范围的开始时间， UNIX时间戳，（支持查询最近30分钟数据且时间范围不超过5分钟）
      *
@@ -130,6 +135,7 @@ public class DescribeTrafficSamplingRequest extends JdcloudRequest implements ja
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询时间范围的结束时间， UNIX时间戳，（支持查询最近30分钟数据且时间范围不超过5分钟）

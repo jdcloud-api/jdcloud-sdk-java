@@ -48,6 +48,7 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
     private Double value;
 
 
+
     /**
      * get 监控项英文标识
      *
@@ -66,6 +67,7 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
         this.metric = metric;
     }
 
+
     /**
      * get 资源ID
      *
@@ -83,6 +85,7 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 采样值
@@ -103,6 +106,7 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 监控项英文标识
      *
@@ -113,6 +117,7 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源ID
      *
@@ -122,6 +127,7 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 采样值

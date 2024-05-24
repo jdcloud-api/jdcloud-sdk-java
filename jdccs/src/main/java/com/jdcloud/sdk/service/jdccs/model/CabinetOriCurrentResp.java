@@ -26,116 +26,116 @@ package com.jdcloud.sdk.service.jdccs.model;
 
 
 /**
- * 统计值
+ * 机柜AB路电流-原始数据
  */
-public class Statistic  implements java.io.Serializable {
+public class CabinetOriCurrentResp  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 最大值
+     * A路电流
      */
-    private Double max;
+    private Object aValue;
 
     /**
-     * 最小值
+     * B路电流
      */
-    private Double min;
+    private Object bValue;
 
     /**
-     * 平均值
+     * 资源ID
      */
-    private Double avg;
+    private String resourceId;
 
 
 
     /**
-     * get 最大值
+     * get A路电流
      *
      * @return
      */
-    public Double getMax() {
-        return max;
+    public Object getAValue() {
+        return aValue;
     }
 
     /**
-     * set 最大值
+     * set A路电流
      *
-     * @param max
+     * @param aValue
      */
-    public void setMax(Double max) {
-        this.max = max;
+    public void setAValue(Object aValue) {
+        this.aValue = aValue;
     }
 
 
     /**
-     * get 最小值
-     *
-     * @return
-     */
-    public Double getMin() {
-        return min;
-    }
-
-    /**
-     * set 最小值
-     *
-     * @param min
-     */
-    public void setMin(Double min) {
-        this.min = min;
-    }
-
-
-    /**
-     * get 平均值
+     * get B路电流
      *
      * @return
      */
-    public Double getAvg() {
-        return avg;
+    public Object getBValue() {
+        return bValue;
     }
 
     /**
-     * set 平均值
+     * set B路电流
      *
-     * @param avg
+     * @param bValue
      */
-    public void setAvg(Double avg) {
-        this.avg = avg;
+    public void setBValue(Object bValue) {
+        this.bValue = bValue;
+    }
+
+
+    /**
+     * get 资源ID
+     *
+     * @return
+     */
+    public String getResourceId() {
+        return resourceId;
+    }
+
+    /**
+     * set 资源ID
+     *
+     * @param resourceId
+     */
+    public void setResourceId(String resourceId) {
+        this.resourceId = resourceId;
     }
 
 
 
     /**
-     * set 最大值
+     * set A路电流
      *
-     * @param max
+     * @param aValue
      */
-    public Statistic max(Double max) {
-        this.max = max;
+    public CabinetOriCurrentResp aValue(Object aValue) {
+        this.aValue = aValue;
         return this;
     }
 
 
     /**
-     * set 最小值
+     * set B路电流
      *
-     * @param min
+     * @param bValue
      */
-    public Statistic min(Double min) {
-        this.min = min;
+    public CabinetOriCurrentResp bValue(Object bValue) {
+        this.bValue = bValue;
         return this;
     }
 
 
     /**
-     * set 平均值
+     * set 资源ID
      *
-     * @param avg
+     * @param resourceId
      */
-    public Statistic avg(Double avg) {
-        this.avg = avg;
+    public CabinetOriCurrentResp resourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
 

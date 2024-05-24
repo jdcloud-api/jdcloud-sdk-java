@@ -39,37 +39,40 @@ public class DescribeMetricsResult extends JdcloudResult implements java.io.Seri
     /**
      * metrics
      */
+    
     private List<Metric> metrics;
 
 
     /**
-     * get metrics
-     *
-     * @return
-     */
+    * get metrics
+    *
+    * @return
+    */
     public List<Metric> getMetrics() {
         return metrics;
     }
 
     /**
-     * set metrics
-     *
-     * @param metrics
-     */
+    * set metrics
+    *
+    * @param metrics
+    */
     public void setMetrics(List<Metric> metrics) {
         this.metrics = metrics;
     }
 
 
+
     /**
-     * set metrics
-     *
-     * @param metrics
-     */
+    * set metrics
+    *
+    * @param metrics
+    */
     public DescribeMetricsResult metrics(List<Metric> metrics) {
         this.metrics = metrics;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeMetricsResult extends JdcloudResult implements java.io.Seri
         }
         this.metrics.add(metric);
     }
-
 }

@@ -122,6 +122,7 @@ public class Alarm  implements java.io.Serializable {
     /**
      * 交换机信息
      */
+    
     private List<Switchboard> switchboard;
 
 
@@ -143,6 +144,7 @@ public class Alarm  implements java.io.Serializable {
         this.alarmId = alarmId;
     }
 
+
     /**
      * get 规则名称
      *
@@ -160,6 +162,7 @@ public class Alarm  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 机房英文标识
@@ -179,6 +182,7 @@ public class Alarm  implements java.io.Serializable {
         this.idc = idc;
     }
 
+
     /**
      * get 机房名称
      *
@@ -196,6 +200,7 @@ public class Alarm  implements java.io.Serializable {
     public void setIdcName(String idcName) {
         this.idcName = idcName;
     }
+
 
     /**
      * get 资源类型 bandwidth:带宽
@@ -215,6 +220,7 @@ public class Alarm  implements java.io.Serializable {
         this.resourceType = resourceType;
     }
 
+
     /**
      * get 资源ID
      *
@@ -232,6 +238,7 @@ public class Alarm  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 资源名称
@@ -251,6 +258,7 @@ public class Alarm  implements java.io.Serializable {
         this.resourceName = resourceName;
     }
 
+
     /**
      * get 监控项英文标识
      *
@@ -268,6 +276,7 @@ public class Alarm  implements java.io.Serializable {
     public void setMetric(String metric) {
         this.metric = metric;
     }
+
 
     /**
      * get 监控项名称
@@ -287,6 +296,7 @@ public class Alarm  implements java.io.Serializable {
         this.metricName = metricName;
     }
 
+
     /**
      * get 统计周期（单位：分钟）
      *
@@ -304,6 +314,7 @@ public class Alarm  implements java.io.Serializable {
     public void setPeriod(Integer period) {
         this.period = period;
     }
+
 
     /**
      * get 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min
@@ -323,6 +334,7 @@ public class Alarm  implements java.io.Serializable {
         this.statisticMethod = statisticMethod;
     }
 
+
     /**
      * get 计算方式 &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
      *
@@ -340,6 +352,7 @@ public class Alarm  implements java.io.Serializable {
     public void setOperator(String operator) {
         this.operator = operator;
     }
+
 
     /**
      * get 阈值
@@ -359,6 +372,7 @@ public class Alarm  implements java.io.Serializable {
         this.threshold = threshold;
     }
 
+
     /**
      * get 连续多少次后报警
      *
@@ -376,6 +390,7 @@ public class Alarm  implements java.io.Serializable {
     public void setTimes(Integer times) {
         this.times = times;
     }
+
 
     /**
      * get 通知周期 单位：小时
@@ -395,6 +410,7 @@ public class Alarm  implements java.io.Serializable {
         this.noticePeriod = noticePeriod;
     }
 
+
     /**
      * get 规则状态 disabled:禁用 enabled:启用
      *
@@ -412,6 +428,7 @@ public class Alarm  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 通知方式 all:全部 sms：短信 email:邮件
@@ -431,23 +448,25 @@ public class Alarm  implements java.io.Serializable {
         this.noticeMethod = noticeMethod;
     }
 
+
     /**
-     * get 交换机信息
-     *
-     * @return
-     */
+    * get 交换机信息
+    *
+    * @return
+    */
     public List<Switchboard> getSwitchboard() {
         return switchboard;
     }
 
     /**
-     * set 交换机信息
-     *
-     * @param switchboard
-     */
+    * set 交换机信息
+    *
+    * @param switchboard
+    */
     public void setSwitchboard(List<Switchboard> switchboard) {
         this.switchboard = switchboard;
     }
+
 
 
     /**
@@ -460,6 +479,7 @@ public class Alarm  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则名称
      *
@@ -469,6 +489,7 @@ public class Alarm  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 机房英文标识
@@ -480,6 +501,7 @@ public class Alarm  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 机房名称
      *
@@ -489,6 +511,7 @@ public class Alarm  implements java.io.Serializable {
         this.idcName = idcName;
         return this;
     }
+
 
     /**
      * set 资源类型 bandwidth:带宽
@@ -500,6 +523,7 @@ public class Alarm  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源ID
      *
@@ -509,6 +533,7 @@ public class Alarm  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 资源名称
@@ -520,6 +545,7 @@ public class Alarm  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 监控项英文标识
      *
@@ -529,6 +555,7 @@ public class Alarm  implements java.io.Serializable {
         this.metric = metric;
         return this;
     }
+
 
     /**
      * set 监控项名称
@@ -540,6 +567,7 @@ public class Alarm  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 统计周期（单位：分钟）
      *
@@ -549,6 +577,7 @@ public class Alarm  implements java.io.Serializable {
         this.period = period;
         return this;
     }
+
 
     /**
      * set 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min
@@ -560,6 +589,7 @@ public class Alarm  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计算方式 &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
      *
@@ -569,6 +599,7 @@ public class Alarm  implements java.io.Serializable {
         this.operator = operator;
         return this;
     }
+
 
     /**
      * set 阈值
@@ -580,6 +611,7 @@ public class Alarm  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 连续多少次后报警
      *
@@ -589,6 +621,7 @@ public class Alarm  implements java.io.Serializable {
         this.times = times;
         return this;
     }
+
 
     /**
      * set 通知周期 单位：小时
@@ -600,6 +633,7 @@ public class Alarm  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则状态 disabled:禁用 enabled:启用
      *
@@ -609,6 +643,7 @@ public class Alarm  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 通知方式 all:全部 sms：短信 email:邮件
@@ -620,15 +655,17 @@ public class Alarm  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 交换机信息
-     *
-     * @param switchboard
-     */
+    * set 交换机信息
+    *
+    * @param switchboard
+    */
     public Alarm switchboard(List<Switchboard> switchboard) {
         this.switchboard = switchboard;
         return this;
     }
+
 
 
     /**
@@ -642,5 +679,4 @@ public class Alarm  implements java.io.Serializable {
         }
         this.switchboard.add(switchboard);
     }
-
 }

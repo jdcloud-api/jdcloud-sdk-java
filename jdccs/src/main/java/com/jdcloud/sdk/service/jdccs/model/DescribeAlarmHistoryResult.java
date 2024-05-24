@@ -39,8 +39,8 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
     /**
      * alarmHistory
      */
+    
     private List<AlarmHistory> alarmHistory;
-
     /**
      * 页码
      */
@@ -57,23 +57,25 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
     private Integer totalCount;
 
 
+
     /**
-     * get alarmHistory
-     *
-     * @return
-     */
+    * get alarmHistory
+    *
+    * @return
+    */
     public List<AlarmHistory> getAlarmHistory() {
         return alarmHistory;
     }
 
     /**
-     * set alarmHistory
-     *
-     * @param alarmHistory
-     */
+    * set alarmHistory
+    *
+    * @param alarmHistory
+    */
     public void setAlarmHistory(List<AlarmHistory> alarmHistory) {
         this.alarmHistory = alarmHistory;
     }
+
 
     /**
      * get 页码
@@ -93,6 +95,7 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小
      *
@@ -110,6 +113,7 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 总数量
@@ -130,15 +134,17 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
-     * set alarmHistory
-     *
-     * @param alarmHistory
-     */
+    * set alarmHistory
+    *
+    * @param alarmHistory
+    */
     public DescribeAlarmHistoryResult alarmHistory(List<AlarmHistory> alarmHistory) {
         this.alarmHistory = alarmHistory;
         return this;
     }
+
 
     /**
      * set 页码
@@ -150,6 +156,7 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 分页大小
      *
@@ -160,6 +167,7 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 总数量
      *
@@ -169,6 +177,7 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
         }
         this.alarmHistory.add(alarmHistory);
     }
-
 }

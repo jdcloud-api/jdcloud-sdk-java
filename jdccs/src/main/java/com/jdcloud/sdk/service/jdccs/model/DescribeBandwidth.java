@@ -83,11 +83,12 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
     /**
      * 关联的公网IP
      */
+    
     private List<RelatedIp> relatedIp;
-
     /**
      * 交换机信息
      */
+    
     private List<Switchboard> switchboard;
 
 
@@ -109,6 +110,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
         this.idc = idc;
     }
 
+
     /**
      * get 机房名称
      *
@@ -126,6 +128,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
     public void setIdcName(String idcName) {
         this.idcName = idcName;
     }
+
 
     /**
      * get 带宽实例ID
@@ -145,6 +148,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
         this.bandwidthId = bandwidthId;
     }
 
+
     /**
      * get 带宽（出口）名称
      *
@@ -162,6 +166,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
     public void setBandwidthName(String bandwidthName) {
         this.bandwidthName = bandwidthName;
     }
+
 
     /**
      * get 状态 normal:正常 abnormal:异常
@@ -181,6 +186,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
         this.status = status;
     }
 
+
     /**
      * get 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      *
@@ -198,6 +204,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
     public void setLineType(String lineType) {
         this.lineType = lineType;
     }
+
 
     /**
      * get 计费方式
@@ -229,6 +236,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
         this.chargeType = chargeType;
     }
 
+
     /**
      * get 合同带宽（Mbps）
      *
@@ -247,41 +255,44 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
         this.bandwidth = bandwidth;
     }
 
+
     /**
-     * get 关联的公网IP
-     *
-     * @return
-     */
+    * get 关联的公网IP
+    *
+    * @return
+    */
     public List<RelatedIp> getRelatedIp() {
         return relatedIp;
     }
 
     /**
-     * set 关联的公网IP
-     *
-     * @param relatedIp
-     */
+    * set 关联的公网IP
+    *
+    * @param relatedIp
+    */
     public void setRelatedIp(List<RelatedIp> relatedIp) {
         this.relatedIp = relatedIp;
     }
 
+
     /**
-     * get 交换机信息
-     *
-     * @return
-     */
+    * get 交换机信息
+    *
+    * @return
+    */
     public List<Switchboard> getSwitchboard() {
         return switchboard;
     }
 
     /**
-     * set 交换机信息
-     *
-     * @param switchboard
-     */
+    * set 交换机信息
+    *
+    * @param switchboard
+    */
     public void setSwitchboard(List<Switchboard> switchboard) {
         this.switchboard = switchboard;
     }
+
 
 
     /**
@@ -294,6 +305,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
         return this;
     }
 
+
     /**
      * set 机房名称
      *
@@ -303,6 +315,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
         this.idcName = idcName;
         return this;
     }
+
 
     /**
      * set 带宽实例ID
@@ -314,6 +327,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
         return this;
     }
 
+
     /**
      * set 带宽（出口）名称
      *
@@ -323,6 +337,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
         this.bandwidthName = bandwidthName;
         return this;
     }
+
 
     /**
      * set 状态 normal:正常 abnormal:异常
@@ -334,6 +349,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
         return this;
     }
 
+
     /**
      * set 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      *
@@ -343,6 +359,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
         this.lineType = lineType;
         return this;
     }
+
 
     /**
      * set 计费方式
@@ -360,6 +377,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
         return this;
     }
 
+
     /**
      * set 合同带宽（Mbps）
      *
@@ -370,25 +388,28 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
         return this;
     }
 
+
     /**
-     * set 关联的公网IP
-     *
-     * @param relatedIp
-     */
+    * set 关联的公网IP
+    *
+    * @param relatedIp
+    */
     public DescribeBandwidth relatedIp(List<RelatedIp> relatedIp) {
         this.relatedIp = relatedIp;
         return this;
     }
 
+
     /**
-     * set 交换机信息
-     *
-     * @param switchboard
-     */
+    * set 交换机信息
+    *
+    * @param switchboard
+    */
     public DescribeBandwidth switchboard(List<Switchboard> switchboard) {
         this.switchboard = switchboard;
         return this;
     }
+
 
 
     /**
@@ -414,5 +435,4 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
         }
         this.switchboard.add(switchboard);
     }
-
 }

@@ -128,6 +128,7 @@ public class Device  implements java.io.Serializable {
     private String disk;
 
 
+
     /**
      * get 机房英文标识
      *
@@ -145,6 +146,7 @@ public class Device  implements java.io.Serializable {
     public void setIdc(String idc) {
         this.idc = idc;
     }
+
 
     /**
      * get 机房名称
@@ -164,6 +166,7 @@ public class Device  implements java.io.Serializable {
         this.idcName = idcName;
     }
 
+
     /**
      * get 设备Id
      *
@@ -181,6 +184,7 @@ public class Device  implements java.io.Serializable {
     public void setDeviceId(String deviceId) {
         this.deviceId = deviceId;
     }
+
 
     /**
      * get 设备编码
@@ -200,6 +204,7 @@ public class Device  implements java.io.Serializable {
         this.deviceNo = deviceNo;
     }
 
+
     /**
      * get 设备SN号
      *
@@ -217,6 +222,7 @@ public class Device  implements java.io.Serializable {
     public void setSnNo(String snNo) {
         this.snNo = snNo;
     }
+
 
     /**
      * get 机柜编码
@@ -236,6 +242,7 @@ public class Device  implements java.io.Serializable {
         this.cabinetNo = cabinetNo;
     }
 
+
     /**
      * get 所在U位
      *
@@ -253,6 +260,7 @@ public class Device  implements java.io.Serializable {
     public void setRackUIndex(String rackUIndex) {
         this.rackUIndex = rackUIndex;
     }
+
 
     /**
      * get U数（U）
@@ -272,6 +280,7 @@ public class Device  implements java.io.Serializable {
         this.uNum = uNum;
     }
 
+
     /**
      * get 品牌
      *
@@ -289,6 +298,7 @@ public class Device  implements java.io.Serializable {
     public void setBrand(String brand) {
         this.brand = brand;
     }
+
 
     /**
      * get 型号
@@ -308,6 +318,7 @@ public class Device  implements java.io.Serializable {
         this.model = model;
     }
 
+
     /**
      * get 系统IP
      *
@@ -325,6 +336,7 @@ public class Device  implements java.io.Serializable {
     public void setSysIp(String sysIp) {
         this.sysIp = sysIp;
     }
+
 
     /**
      * get 管理IP
@@ -344,6 +356,7 @@ public class Device  implements java.io.Serializable {
         this.manageIp = manageIp;
     }
 
+
     /**
      * get 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
      *
@@ -361,6 +374,7 @@ public class Device  implements java.io.Serializable {
     public void setDeviceType(String deviceType) {
         this.deviceType = deviceType;
     }
+
 
     /**
      * get 资产归属 own:自备 lease:租赁
@@ -380,6 +394,7 @@ public class Device  implements java.io.Serializable {
         this.assetBelong = assetBelong;
     }
 
+
     /**
      * get 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifying:变更中
      *
@@ -397,6 +412,7 @@ public class Device  implements java.io.Serializable {
     public void setAssetStatus(String assetStatus) {
         this.assetStatus = assetStatus;
     }
+
 
     /**
      * get 开通时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
@@ -416,6 +432,7 @@ public class Device  implements java.io.Serializable {
         this.deviceOpenTime = deviceOpenTime;
     }
 
+
     /**
      * get CPU
      *
@@ -434,6 +451,7 @@ public class Device  implements java.io.Serializable {
         this.cpuCore = cpuCore;
     }
 
+
     /**
      * get 内存
      *
@@ -451,6 +469,7 @@ public class Device  implements java.io.Serializable {
     public void setMemory(String memory) {
         this.memory = memory;
     }
+
 
     /**
      * get 磁盘
@@ -471,6 +490,7 @@ public class Device  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 机房英文标识
      *
@@ -480,6 +500,7 @@ public class Device  implements java.io.Serializable {
         this.idc = idc;
         return this;
     }
+
 
     /**
      * set 机房名称
@@ -491,6 +512,7 @@ public class Device  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 设备Id
      *
@@ -500,6 +522,7 @@ public class Device  implements java.io.Serializable {
         this.deviceId = deviceId;
         return this;
     }
+
 
     /**
      * set 设备编码
@@ -511,6 +534,7 @@ public class Device  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 设备SN号
      *
@@ -520,6 +544,7 @@ public class Device  implements java.io.Serializable {
         this.snNo = snNo;
         return this;
     }
+
 
     /**
      * set 机柜编码
@@ -531,6 +556,7 @@ public class Device  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 所在U位
      *
@@ -540,6 +566,7 @@ public class Device  implements java.io.Serializable {
         this.rackUIndex = rackUIndex;
         return this;
     }
+
 
     /**
      * set U数（U）
@@ -551,6 +578,7 @@ public class Device  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 品牌
      *
@@ -560,6 +588,7 @@ public class Device  implements java.io.Serializable {
         this.brand = brand;
         return this;
     }
+
 
     /**
      * set 型号
@@ -571,6 +600,7 @@ public class Device  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 系统IP
      *
@@ -580,6 +610,7 @@ public class Device  implements java.io.Serializable {
         this.sysIp = sysIp;
         return this;
     }
+
 
     /**
      * set 管理IP
@@ -591,6 +622,7 @@ public class Device  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
      *
@@ -600,6 +632,7 @@ public class Device  implements java.io.Serializable {
         this.deviceType = deviceType;
         return this;
     }
+
 
     /**
      * set 资产归属 own:自备 lease:租赁
@@ -611,6 +644,7 @@ public class Device  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifying:变更中
      *
@@ -620,6 +654,7 @@ public class Device  implements java.io.Serializable {
         this.assetStatus = assetStatus;
         return this;
     }
+
 
     /**
      * set 开通时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
@@ -631,6 +666,7 @@ public class Device  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set CPU
      *
@@ -641,6 +677,7 @@ public class Device  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 内存
      *
@@ -650,6 +687,7 @@ public class Device  implements java.io.Serializable {
         this.memory = memory;
         return this;
     }
+
 
     /**
      * set 磁盘

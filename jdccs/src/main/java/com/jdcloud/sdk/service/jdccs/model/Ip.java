@@ -88,6 +88,7 @@ public class Ip  implements java.io.Serializable {
     private String status;
 
 
+
     /**
      * get 机房英文标识
      *
@@ -105,6 +106,7 @@ public class Ip  implements java.io.Serializable {
     public void setIdc(String idc) {
         this.idc = idc;
     }
+
 
     /**
      * get 机房名称
@@ -124,6 +126,7 @@ public class Ip  implements java.io.Serializable {
         this.idcName = idcName;
     }
 
+
     /**
      * get 公网IP实例ID
      *
@@ -141,6 +144,7 @@ public class Ip  implements java.io.Serializable {
     public void setIpId(String ipId) {
         this.ipId = ipId;
     }
+
 
     /**
      * get IP地址段
@@ -160,6 +164,7 @@ public class Ip  implements java.io.Serializable {
         this.cidrAddr = cidrAddr;
     }
 
+
     /**
      * get IP数量
      *
@@ -177,6 +182,7 @@ public class Ip  implements java.io.Serializable {
     public void setIpQuantity(String ipQuantity) {
         this.ipQuantity = ipQuantity;
     }
+
 
     /**
      * get IP类型 IPV4/IPV6
@@ -196,6 +202,7 @@ public class Ip  implements java.io.Serializable {
         this.ipType = ipType;
     }
 
+
     /**
      * get 网络位地址
      *
@@ -213,6 +220,7 @@ public class Ip  implements java.io.Serializable {
     public void setNetworkAddr(String networkAddr) {
         this.networkAddr = networkAddr;
     }
+
 
     /**
      * get 网关地址
@@ -232,6 +240,7 @@ public class Ip  implements java.io.Serializable {
         this.gatewayAddr = gatewayAddr;
     }
 
+
     /**
      * get 广播地址
      *
@@ -250,6 +259,7 @@ public class Ip  implements java.io.Serializable {
         this.broadcastAddr = broadcastAddr;
     }
 
+
     /**
      * get 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      *
@@ -267,6 +277,7 @@ public class Ip  implements java.io.Serializable {
     public void setLineType(String lineType) {
         this.lineType = lineType;
     }
+
 
     /**
      * get 状态 normal:正常 abnormal:异常
@@ -287,6 +298,7 @@ public class Ip  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 机房英文标识
      *
@@ -296,6 +308,7 @@ public class Ip  implements java.io.Serializable {
         this.idc = idc;
         return this;
     }
+
 
     /**
      * set 机房名称
@@ -307,6 +320,7 @@ public class Ip  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 公网IP实例ID
      *
@@ -316,6 +330,7 @@ public class Ip  implements java.io.Serializable {
         this.ipId = ipId;
         return this;
     }
+
 
     /**
      * set IP地址段
@@ -327,6 +342,7 @@ public class Ip  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set IP数量
      *
@@ -336,6 +352,7 @@ public class Ip  implements java.io.Serializable {
         this.ipQuantity = ipQuantity;
         return this;
     }
+
 
     /**
      * set IP类型 IPV4/IPV6
@@ -347,6 +364,7 @@ public class Ip  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网络位地址
      *
@@ -356,6 +374,7 @@ public class Ip  implements java.io.Serializable {
         this.networkAddr = networkAddr;
         return this;
     }
+
 
     /**
      * set 网关地址
@@ -367,6 +386,7 @@ public class Ip  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 广播地址
      *
@@ -377,6 +397,7 @@ public class Ip  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      *
@@ -386,6 +407,7 @@ public class Ip  implements java.io.Serializable {
         this.lineType = lineType;
         return this;
     }
+
 
     /**
      * set 状态 normal:正常 abnormal:异常

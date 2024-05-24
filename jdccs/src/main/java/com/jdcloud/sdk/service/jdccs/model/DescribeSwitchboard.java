@@ -58,6 +58,7 @@ public class DescribeSwitchboard  implements java.io.Serializable {
     private String alarmStatus;
 
 
+
     /**
      * get IP
      *
@@ -75,6 +76,7 @@ public class DescribeSwitchboard  implements java.io.Serializable {
     public void setIp(String ip) {
         this.ip = ip;
     }
+
 
     /**
      * get 端口
@@ -94,6 +96,7 @@ public class DescribeSwitchboard  implements java.io.Serializable {
         this.port = port;
     }
 
+
     /**
      * get 上行实时流量
      *
@@ -112,6 +115,7 @@ public class DescribeSwitchboard  implements java.io.Serializable {
         this.trafficIn = trafficIn;
     }
 
+
     /**
      * get 下行实时流量
      *
@@ -129,6 +133,7 @@ public class DescribeSwitchboard  implements java.io.Serializable {
     public void setTrafficOut(Double trafficOut) {
         this.trafficOut = trafficOut;
     }
+
 
     /**
      * get 报警状态 normal:正常 alarm:报警
@@ -149,6 +154,7 @@ public class DescribeSwitchboard  implements java.io.Serializable {
     }
 
 
+
     /**
      * set IP
      *
@@ -158,6 +164,7 @@ public class DescribeSwitchboard  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set 端口
@@ -169,6 +176,7 @@ public class DescribeSwitchboard  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 上行实时流量
      *
@@ -179,6 +187,7 @@ public class DescribeSwitchboard  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 下行实时流量
      *
@@ -188,6 +197,7 @@ public class DescribeSwitchboard  implements java.io.Serializable {
         this.trafficOut = trafficOut;
         return this;
     }
+
 
     /**
      * set 报警状态 normal:正常 alarm:报警

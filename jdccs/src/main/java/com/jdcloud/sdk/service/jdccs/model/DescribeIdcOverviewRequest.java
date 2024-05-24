@@ -42,6 +42,7 @@ public class DescribeIdcOverviewRequest extends JdcloudRequest implements java.i
     private String idc;
 
 
+
     /**
      * get IDC机房ID
      *
@@ -59,6 +60,7 @@ public class DescribeIdcOverviewRequest extends JdcloudRequest implements java.i
     public void setIdc(String idc) {
         this.idc = idc;
     }
+
 
 
     /**

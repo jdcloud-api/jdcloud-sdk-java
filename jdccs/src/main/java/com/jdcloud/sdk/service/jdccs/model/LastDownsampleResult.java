@@ -39,37 +39,40 @@ public class LastDownsampleResult extends JdcloudResult implements java.io.Seria
     /**
      * items
      */
+    
     private List<LastDownsampleRespItem> items;
 
 
     /**
-     * get items
-     *
-     * @return
-     */
+    * get items
+    *
+    * @return
+    */
     public List<LastDownsampleRespItem> getItems() {
         return items;
     }
 
     /**
-     * set items
-     *
-     * @param items
-     */
+    * set items
+    *
+    * @param items
+    */
     public void setItems(List<LastDownsampleRespItem> items) {
         this.items = items;
     }
 
 
+
     /**
-     * set items
-     *
-     * @param items
-     */
+    * set items
+    *
+    * @param items
+    */
     public LastDownsampleResult items(List<LastDownsampleRespItem> items) {
         this.items = items;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class LastDownsampleResult extends JdcloudResult implements java.io.Seria
         }
         this.items.add(item);
     }
-
 }

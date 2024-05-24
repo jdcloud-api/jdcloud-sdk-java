@@ -39,37 +39,40 @@ public class DescribeOpenDevicesDataResult extends JdcloudResult implements java
     /**
      * data
      */
+    
     private List<OpenDevicesData> data;
 
 
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<OpenDevicesData> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<OpenDevicesData> data) {
         this.data = data;
     }
 
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public DescribeOpenDevicesDataResult data(List<OpenDevicesData> data) {
         this.data = data;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeOpenDevicesDataResult extends JdcloudResult implements java
         }
         this.data.add(data);
     }
-
 }

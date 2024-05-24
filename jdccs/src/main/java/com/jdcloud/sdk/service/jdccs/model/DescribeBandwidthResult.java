@@ -40,6 +40,7 @@ public class DescribeBandwidthResult extends JdcloudResult implements java.io.Se
     private Bandwidth bandwidth;
 
 
+
     /**
      * get bandwidth
      *
@@ -57,6 +58,7 @@ public class DescribeBandwidthResult extends JdcloudResult implements java.io.Se
     public void setBandwidth(Bandwidth bandwidth) {
         this.bandwidth = bandwidth;
     }
+
 
 
     /**

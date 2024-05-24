@@ -39,8 +39,8 @@ public class DescribeCabinetsResult extends JdcloudResult implements java.io.Ser
     /**
      * cabinets
      */
+    
     private List<DescribeCabinet> cabinets;
-
     /**
      * 页码
      */
@@ -57,23 +57,25 @@ public class DescribeCabinetsResult extends JdcloudResult implements java.io.Ser
     private Integer totalCount;
 
 
+
     /**
-     * get cabinets
-     *
-     * @return
-     */
+    * get cabinets
+    *
+    * @return
+    */
     public List<DescribeCabinet> getCabinets() {
         return cabinets;
     }
 
     /**
-     * set cabinets
-     *
-     * @param cabinets
-     */
+    * set cabinets
+    *
+    * @param cabinets
+    */
     public void setCabinets(List<DescribeCabinet> cabinets) {
         this.cabinets = cabinets;
     }
+
 
     /**
      * get 页码
@@ -93,6 +95,7 @@ public class DescribeCabinetsResult extends JdcloudResult implements java.io.Ser
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小
      *
@@ -110,6 +113,7 @@ public class DescribeCabinetsResult extends JdcloudResult implements java.io.Ser
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 总数量
@@ -130,15 +134,17 @@ public class DescribeCabinetsResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
-     * set cabinets
-     *
-     * @param cabinets
-     */
+    * set cabinets
+    *
+    * @param cabinets
+    */
     public DescribeCabinetsResult cabinets(List<DescribeCabinet> cabinets) {
         this.cabinets = cabinets;
         return this;
     }
+
 
     /**
      * set 页码
@@ -150,6 +156,7 @@ public class DescribeCabinetsResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 分页大小
      *
@@ -160,6 +167,7 @@ public class DescribeCabinetsResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 总数量
      *
@@ -169,6 +177,7 @@ public class DescribeCabinetsResult extends JdcloudResult implements java.io.Ser
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class DescribeCabinetsResult extends JdcloudResult implements java.io.Ser
         }
         this.cabinets.add(cabinet);
     }
-
 }

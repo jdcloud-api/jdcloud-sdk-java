@@ -40,6 +40,7 @@ public class DescribeDeviceResult extends JdcloudResult implements java.io.Seria
     private Device device;
 
 
+
     /**
      * get device
      *
@@ -57,6 +58,7 @@ public class DescribeDeviceResult extends JdcloudResult implements java.io.Seria
     public void setDevice(Device device) {
         this.device = device;
     }
+
 
 
     /**

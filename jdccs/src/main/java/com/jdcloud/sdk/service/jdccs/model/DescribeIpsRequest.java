@@ -67,19 +67,20 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
      * ipId - 公网IP实例ID，精确匹配，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * null
      */
+    
     private List<Sort> sorts;
-
     /**
      * IDC机房ID
      * Required:true
      */
     @Required
     private String idc;
+
 
 
     /**
@@ -100,6 +101,7 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20
      *
@@ -117,6 +119,7 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
@@ -136,6 +139,7 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
         this.lineType = lineType;
     }
 
+
     /**
      * get 状态 normal:正常 abnormal:异常
      *
@@ -153,6 +157,7 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get IP地址段
@@ -172,43 +177,46 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
         this.cidrAddr = cidrAddr;
     }
 
-    /**
-     * get ipId - 公网IP实例ID，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    /**
+    * get ipId - 公网IP实例ID，精确匹配，支持多个
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set ipId - 公网IP实例ID，精确匹配，支持多个
+    * set ipId - 公网IP实例ID，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
+
     /**
-     * get null
-     *
-     * @return
-     */
+    * get null
+    *
+    * @return
+    */
     public List<Sort> getSorts() {
         return sorts;
     }
 
     /**
-     * set null
-     *
-     * @param sorts
-     */
+    * set null
+    *
+    * @param sorts
+    */
     public void setSorts(List<Sort> sorts) {
         this.sorts = sorts;
     }
+
 
     /**
      * get IDC机房ID
@@ -229,6 +237,7 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set 页码, 默认为1
      *
@@ -238,6 +247,7 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20
@@ -249,6 +259,7 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      *
@@ -258,6 +269,7 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
         this.lineType = lineType;
         return this;
     }
+
 
     /**
      * set 状态 normal:正常 abnormal:异常
@@ -269,6 +281,7 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set IP地址段
      *
@@ -279,26 +292,29 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
-    /**
-     * set ipId - 公网IP实例ID，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    /**
+    * set ipId - 公网IP实例ID，精确匹配，支持多个
+
+    *
+    * @param filters
+    */
     public DescribeIpsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
-     * set null
-     *
-     * @param sorts
-     */
+    * set null
+    *
+    * @param sorts
+    */
     public DescribeIpsRequest sorts(List<Sort> sorts) {
         this.sorts = sorts;
         return this;
     }
+
 
     /**
      * set IDC机房ID
@@ -309,6 +325,7 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
         this.idc = idc;
         return this;
     }
+
 
 
     /**
@@ -335,5 +352,4 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
         }
         this.sorts.add(sort);
     }
-
 }

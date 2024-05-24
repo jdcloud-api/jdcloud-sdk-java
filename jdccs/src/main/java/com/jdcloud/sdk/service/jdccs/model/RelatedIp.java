@@ -43,6 +43,7 @@ public class RelatedIp  implements java.io.Serializable {
     private String lineType;
 
 
+
     /**
      * get IP地址段
      *
@@ -60,6 +61,7 @@ public class RelatedIp  implements java.io.Serializable {
     public void setCidrAddr(String cidrAddr) {
         this.cidrAddr = cidrAddr;
     }
+
 
     /**
      * get 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
@@ -80,6 +82,7 @@ public class RelatedIp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set IP地址段
      *
@@ -89,6 +92,7 @@ public class RelatedIp  implements java.io.Serializable {
         this.cidrAddr = cidrAddr;
         return this;
     }
+
 
     /**
      * set 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线

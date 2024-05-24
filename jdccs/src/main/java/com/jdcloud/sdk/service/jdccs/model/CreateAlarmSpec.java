@@ -113,6 +113,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     private String groupId;
 
 
+
     /**
      * get idc机房实例ID
      *
@@ -130,6 +131,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     public void setIdc(String idc) {
         this.idc = idc;
     }
+
 
     /**
      * get 资源类型，bandwidth:带宽
@@ -149,6 +151,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.resourceType = resourceType;
     }
 
+
     /**
      * get 带宽实例ID
      *
@@ -166,6 +169,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 规则名称
@@ -185,6 +189,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 监控项，bandwidthTrafficIn:上行实时流量 bandwidthTrafficOut:下行实时流量
      *
@@ -202,6 +207,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     public void setMetric(String metric) {
         this.metric = metric;
     }
+
 
     /**
      * get 统计周期（单位：分钟）
@@ -221,6 +227,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.period = period;
     }
 
+
     /**
      * get 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min
      *
@@ -238,6 +245,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     public void setStatisticMethod(String statisticMethod) {
         this.statisticMethod = statisticMethod;
     }
+
 
     /**
      * get 计算方式 &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
@@ -257,6 +265,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.operator = operator;
     }
 
+
     /**
      * get 阈值
      *
@@ -274,6 +283,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     public void setThreshold(Double threshold) {
         this.threshold = threshold;
     }
+
 
     /**
      * get 连续多少次后报警
@@ -293,6 +303,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.times = times;
     }
 
+
     /**
      * get 通知周期 单位：小时
      *
@@ -310,6 +321,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     public void setNoticePeriod(Integer noticePeriod) {
         this.noticePeriod = noticePeriod;
     }
+
 
     /**
      * get 规则状态 disabled:禁用 enabled:启用
@@ -329,6 +341,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 通知方式 all:全部 sms：短信 email:邮件
      *
@@ -346,6 +359,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     public void setNoticeMethod(String noticeMethod) {
         this.noticeMethod = noticeMethod;
     }
+
 
     /**
      * get 通知对象 all:全部 persons：个人 groups:角色组
@@ -365,6 +379,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.noticeObj = noticeObj;
     }
 
+
     /**
      * get 通知对象用户ID,若多个用逗号分隔
      *
@@ -382,6 +397,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get 通知对象组ID
@@ -402,6 +418,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set idc机房实例ID
      *
@@ -411,6 +428,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.idc = idc;
         return this;
     }
+
 
     /**
      * set 资源类型，bandwidth:带宽
@@ -422,6 +440,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 带宽实例ID
      *
@@ -431,6 +450,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 规则名称
@@ -442,6 +462,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 监控项，bandwidthTrafficIn:上行实时流量 bandwidthTrafficOut:下行实时流量
      *
@@ -451,6 +472,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.metric = metric;
         return this;
     }
+
 
     /**
      * set 统计周期（单位：分钟）
@@ -462,6 +484,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min
      *
@@ -471,6 +494,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.statisticMethod = statisticMethod;
         return this;
     }
+
 
     /**
      * set 计算方式 &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
@@ -482,6 +506,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 阈值
      *
@@ -491,6 +516,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.threshold = threshold;
         return this;
     }
+
 
     /**
      * set 连续多少次后报警
@@ -502,6 +528,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 通知周期 单位：小时
      *
@@ -511,6 +538,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.noticePeriod = noticePeriod;
         return this;
     }
+
 
     /**
      * set 规则状态 disabled:禁用 enabled:启用
@@ -522,6 +550,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 通知方式 all:全部 sms：短信 email:邮件
      *
@@ -531,6 +560,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.noticeMethod = noticeMethod;
         return this;
     }
+
 
     /**
      * set 通知对象 all:全部 persons：个人 groups:角色组
@@ -542,6 +572,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 通知对象用户ID,若多个用逗号分隔
      *
@@ -551,6 +582,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.userId = userId;
         return this;
     }
+
 
     /**
      * set 通知对象组ID

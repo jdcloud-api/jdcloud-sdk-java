@@ -85,6 +85,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     private String metric;
 
 
+
     /**
      * get 资源ID
      *
@@ -102,6 +103,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 查询时间范围的开始时间， UNIX时间戳，（机柜电流最多支持最近90天数据查询、带宽流量最多支持最近30天数据查询）
@@ -121,6 +123,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
         this.startTime = startTime;
     }
 
+
     /**
      * get 查询时间范围的结束时间， UNIX时间戳，（机柜电流最多支持最近90天数据查询、带宽流量最多支持最近30天数据查询）
      *
@@ -138,6 +141,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     public void setEndTime(Integer endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，时间间隔：1m、5m，默认5m。1m时间间隔支持的最大时间范围为2小时
@@ -157,6 +161,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
         this.timeInterval = timeInterval;
     }
 
+
     /**
      * get 交换机IP，指定ip时须同时指定port
      *
@@ -174,6 +179,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     public void setIp(String ip) {
         this.ip = ip;
     }
+
 
     /**
      * get 端口，指定port时须同时指定ip
@@ -193,6 +199,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
         this.port = port;
     }
 
+
     /**
      * get IDC机房ID
      *
@@ -210,6 +217,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     public void setIdc(String idc) {
         this.idc = idc;
     }
+
 
     /**
      * get 监控项英文标识(id)
@@ -230,6 +238,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 资源ID
      *
@@ -239,6 +248,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 查询时间范围的开始时间， UNIX时间戳，（机柜电流最多支持最近90天数据查询、带宽流量最多支持最近30天数据查询）
@@ -250,6 +260,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 查询时间范围的结束时间， UNIX时间戳，（机柜电流最多支持最近90天数据查询、带宽流量最多支持最近30天数据查询）
      *
@@ -259,6 +270,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，时间间隔：1m、5m，默认5m。1m时间间隔支持的最大时间范围为2小时
@@ -270,6 +282,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 交换机IP，指定ip时须同时指定port
      *
@@ -279,6 +292,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set 端口，指定port时须同时指定ip
@@ -290,6 +304,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set IDC机房ID
      *
@@ -299,6 +314,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
         this.idc = idc;
         return this;
     }
+
 
     /**
      * set 监控项英文标识(id)

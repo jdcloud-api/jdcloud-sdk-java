@@ -39,8 +39,8 @@ public class DescribeBandwidthTrafficsResult extends JdcloudResult implements ja
     /**
      * bandwidthTraffics
      */
+    
     private List<DescribeBandwidthTraffic> bandwidthTraffics;
-
     /**
      * 页码
      */
@@ -57,23 +57,25 @@ public class DescribeBandwidthTrafficsResult extends JdcloudResult implements ja
     private Integer totalCount;
 
 
+
     /**
-     * get bandwidthTraffics
-     *
-     * @return
-     */
+    * get bandwidthTraffics
+    *
+    * @return
+    */
     public List<DescribeBandwidthTraffic> getBandwidthTraffics() {
         return bandwidthTraffics;
     }
 
     /**
-     * set bandwidthTraffics
-     *
-     * @param bandwidthTraffics
-     */
+    * set bandwidthTraffics
+    *
+    * @param bandwidthTraffics
+    */
     public void setBandwidthTraffics(List<DescribeBandwidthTraffic> bandwidthTraffics) {
         this.bandwidthTraffics = bandwidthTraffics;
     }
+
 
     /**
      * get 页码
@@ -93,6 +95,7 @@ public class DescribeBandwidthTrafficsResult extends JdcloudResult implements ja
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小
      *
@@ -110,6 +113,7 @@ public class DescribeBandwidthTrafficsResult extends JdcloudResult implements ja
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 总数量
@@ -130,15 +134,17 @@ public class DescribeBandwidthTrafficsResult extends JdcloudResult implements ja
     }
 
 
+
     /**
-     * set bandwidthTraffics
-     *
-     * @param bandwidthTraffics
-     */
+    * set bandwidthTraffics
+    *
+    * @param bandwidthTraffics
+    */
     public DescribeBandwidthTrafficsResult bandwidthTraffics(List<DescribeBandwidthTraffic> bandwidthTraffics) {
         this.bandwidthTraffics = bandwidthTraffics;
         return this;
     }
+
 
     /**
      * set 页码
@@ -150,6 +156,7 @@ public class DescribeBandwidthTrafficsResult extends JdcloudResult implements ja
         return this;
     }
 
+
     /**
      * set 分页大小
      *
@@ -160,6 +167,7 @@ public class DescribeBandwidthTrafficsResult extends JdcloudResult implements ja
         return this;
     }
 
+
     /**
      * set 总数量
      *
@@ -169,6 +177,7 @@ public class DescribeBandwidthTrafficsResult extends JdcloudResult implements ja
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class DescribeBandwidthTrafficsResult extends JdcloudResult implements ja
         }
         this.bandwidthTraffics.add(bandwidthTraffic);
     }
-
 }

@@ -85,19 +85,20 @@ deviceNo - 设备编码，精确匹配，支持多个
 cabinetNo - 机柜编码，精确匹配，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * deviceNo - 设备编码 cabinetNo - 机柜编码
      */
+    
     private List<Sort> sorts;
-
     /**
      * IDC机房ID
      * Required:true
      */
     @Required
     private String idc;
+
 
 
     /**
@@ -118,6 +119,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20
      *
@@ -135,6 +137,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 机柜ID
@@ -154,6 +157,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         this.cabinetId = cabinetId;
     }
 
+
     /**
      * get 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
      *
@@ -171,6 +175,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
     public void setDeviceType(String deviceType) {
         this.deviceType = deviceType;
     }
+
 
     /**
      * get 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
@@ -190,6 +195,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         this.assetStatus = assetStatus;
     }
 
+
     /**
      * get 资产归属 own:自备 lease:租赁
      *
@@ -207,6 +213,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
     public void setAssetBelong(String assetBelong) {
         this.assetBelong = assetBelong;
     }
+
 
     /**
      * get 设备编码
@@ -226,6 +233,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         this.deviceNo = deviceNo;
     }
 
+
     /**
      * get 设备SN号
      *
@@ -244,49 +252,52 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         this.snNo = snNo;
     }
 
+
     /**
-     * get deviceId - 设备实例ID，精确匹配，支持多个
+    * get deviceId - 设备实例ID，精确匹配，支持多个
 snNo - 设备SN号，精确匹配，支持多个
 deviceNo - 设备编码，精确匹配，支持多个
 cabinetNo - 机柜编码，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set deviceId - 设备实例ID，精确匹配，支持多个
+    * set deviceId - 设备实例ID，精确匹配，支持多个
 snNo - 设备SN号，精确匹配，支持多个
 deviceNo - 设备编码，精确匹配，支持多个
 cabinetNo - 机柜编码，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
+
     /**
-     * get deviceNo - 设备编码 cabinetNo - 机柜编码
-     *
-     * @return
-     */
+    * get deviceNo - 设备编码 cabinetNo - 机柜编码
+    *
+    * @return
+    */
     public List<Sort> getSorts() {
         return sorts;
     }
 
     /**
-     * set deviceNo - 设备编码 cabinetNo - 机柜编码
-     *
-     * @param sorts
-     */
+    * set deviceNo - 设备编码 cabinetNo - 机柜编码
+    *
+    * @param sorts
+    */
     public void setSorts(List<Sort> sorts) {
         this.sorts = sorts;
     }
+
 
     /**
      * get IDC机房ID
@@ -307,6 +318,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
     }
 
 
+
     /**
      * set 页码, 默认为1
      *
@@ -316,6 +328,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20
@@ -327,6 +340,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         return this;
     }
 
+
     /**
      * set 机柜ID
      *
@@ -336,6 +350,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         this.cabinetId = cabinetId;
         return this;
     }
+
 
     /**
      * set 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
@@ -347,6 +362,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         return this;
     }
 
+
     /**
      * set 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
      *
@@ -356,6 +372,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         this.assetStatus = assetStatus;
         return this;
     }
+
 
     /**
      * set 资产归属 own:自备 lease:租赁
@@ -367,6 +384,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         return this;
     }
 
+
     /**
      * set 设备编码
      *
@@ -376,6 +394,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         this.deviceNo = deviceNo;
         return this;
     }
+
 
     /**
      * set 设备SN号
@@ -387,29 +406,32 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         return this;
     }
 
+
     /**
-     * set deviceId - 设备实例ID，精确匹配，支持多个
+    * set deviceId - 设备实例ID，精确匹配，支持多个
 snNo - 设备SN号，精确匹配，支持多个
 deviceNo - 设备编码，精确匹配，支持多个
 cabinetNo - 机柜编码，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeDevicesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
-     * set deviceNo - 设备编码 cabinetNo - 机柜编码
-     *
-     * @param sorts
-     */
+    * set deviceNo - 设备编码 cabinetNo - 机柜编码
+    *
+    * @param sorts
+    */
     public DescribeDevicesRequest sorts(List<Sort> sorts) {
         this.sorts = sorts;
         return this;
     }
+
 
     /**
      * set IDC机房ID
@@ -420,6 +442,7 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         this.idc = idc;
         return this;
     }
+
 
 
     /**
@@ -449,5 +472,4 @@ cabinetNo - 机柜编码，精确匹配，支持多个
         }
         this.sorts.add(sort);
     }
-
 }

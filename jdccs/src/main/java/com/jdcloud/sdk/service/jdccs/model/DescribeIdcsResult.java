@@ -39,8 +39,8 @@ public class DescribeIdcsResult extends JdcloudResult implements java.io.Seriali
     /**
      * idcs
      */
+    
     private List<Idc> idcs;
-
     /**
      * 页码
      */
@@ -57,23 +57,25 @@ public class DescribeIdcsResult extends JdcloudResult implements java.io.Seriali
     private Integer totalCount;
 
 
+
     /**
-     * get idcs
-     *
-     * @return
-     */
+    * get idcs
+    *
+    * @return
+    */
     public List<Idc> getIdcs() {
         return idcs;
     }
 
     /**
-     * set idcs
-     *
-     * @param idcs
-     */
+    * set idcs
+    *
+    * @param idcs
+    */
     public void setIdcs(List<Idc> idcs) {
         this.idcs = idcs;
     }
+
 
     /**
      * get 页码
@@ -93,6 +95,7 @@ public class DescribeIdcsResult extends JdcloudResult implements java.io.Seriali
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小
      *
@@ -110,6 +113,7 @@ public class DescribeIdcsResult extends JdcloudResult implements java.io.Seriali
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 总数量
@@ -130,15 +134,17 @@ public class DescribeIdcsResult extends JdcloudResult implements java.io.Seriali
     }
 
 
+
     /**
-     * set idcs
-     *
-     * @param idcs
-     */
+    * set idcs
+    *
+    * @param idcs
+    */
     public DescribeIdcsResult idcs(List<Idc> idcs) {
         this.idcs = idcs;
         return this;
     }
+
 
     /**
      * set 页码
@@ -150,6 +156,7 @@ public class DescribeIdcsResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 分页大小
      *
@@ -160,6 +167,7 @@ public class DescribeIdcsResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 总数量
      *
@@ -169,6 +177,7 @@ public class DescribeIdcsResult extends JdcloudResult implements java.io.Seriali
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class DescribeIdcsResult extends JdcloudResult implements java.io.Seriali
         }
         this.idcs.add(idc);
     }
-
 }

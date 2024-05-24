@@ -47,6 +47,7 @@ public class SwitchAlarmRequest extends JdcloudRequest implements java.io.Serial
     private String alarmId;
 
 
+
     /**
      * get 规则状态 disabled:禁用 enabled:启用
      *
@@ -64,6 +65,7 @@ public class SwitchAlarmRequest extends JdcloudRequest implements java.io.Serial
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 报警规则ID
@@ -84,6 +86,7 @@ public class SwitchAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set 规则状态 disabled:禁用 enabled:启用
      *
@@ -93,6 +96,7 @@ public class SwitchAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.status = status;
         return this;
     }
+
 
     /**
      * set 报警规则ID

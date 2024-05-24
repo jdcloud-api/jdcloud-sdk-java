@@ -39,8 +39,8 @@ public class DescribeTicketsResult extends JdcloudResult implements java.io.Seri
     /**
      * tickets
      */
+    
     private List<Ticket> tickets;
-
     /**
      * 页码
      */
@@ -57,23 +57,25 @@ public class DescribeTicketsResult extends JdcloudResult implements java.io.Seri
     private Integer totalCount;
 
 
+
     /**
-     * get tickets
-     *
-     * @return
-     */
+    * get tickets
+    *
+    * @return
+    */
     public List<Ticket> getTickets() {
         return tickets;
     }
 
     /**
-     * set tickets
-     *
-     * @param tickets
-     */
+    * set tickets
+    *
+    * @param tickets
+    */
     public void setTickets(List<Ticket> tickets) {
         this.tickets = tickets;
     }
+
 
     /**
      * get 页码
@@ -93,6 +95,7 @@ public class DescribeTicketsResult extends JdcloudResult implements java.io.Seri
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小
      *
@@ -110,6 +113,7 @@ public class DescribeTicketsResult extends JdcloudResult implements java.io.Seri
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 总数量
@@ -130,15 +134,17 @@ public class DescribeTicketsResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
-     * set tickets
-     *
-     * @param tickets
-     */
+    * set tickets
+    *
+    * @param tickets
+    */
     public DescribeTicketsResult tickets(List<Ticket> tickets) {
         this.tickets = tickets;
         return this;
     }
+
 
     /**
      * set 页码
@@ -150,6 +156,7 @@ public class DescribeTicketsResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 分页大小
      *
@@ -160,6 +167,7 @@ public class DescribeTicketsResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 总数量
      *
@@ -169,6 +177,7 @@ public class DescribeTicketsResult extends JdcloudResult implements java.io.Seri
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class DescribeTicketsResult extends JdcloudResult implements java.io.Seri
         }
         this.tickets.add(ticket);
     }
-
 }

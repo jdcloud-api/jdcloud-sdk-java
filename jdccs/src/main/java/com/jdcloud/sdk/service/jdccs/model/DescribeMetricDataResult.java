@@ -40,6 +40,7 @@ public class DescribeMetricDataResult extends JdcloudResult implements java.io.S
     private MetricData metricData;
 
 
+
     /**
      * get metricData
      *
@@ -57,6 +58,7 @@ public class DescribeMetricDataResult extends JdcloudResult implements java.io.S
     public void setMetricData(MetricData metricData) {
         this.metricData = metricData;
     }
+
 
 
     /**
