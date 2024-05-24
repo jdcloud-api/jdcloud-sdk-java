@@ -39,8 +39,8 @@ public class DescribeIpsResult extends JdcloudResult implements java.io.Serializ
     /**
      * ips
      */
+    
     private List<Ip> ips;
-
     /**
      * 页码
      */
@@ -57,23 +57,25 @@ public class DescribeIpsResult extends JdcloudResult implements java.io.Serializ
     private Integer totalCount;
 
 
+
     /**
-     * get ips
-     *
-     * @return
-     */
+    * get ips
+    *
+    * @return
+    */
     public List<Ip> getIps() {
         return ips;
     }
 
     /**
-     * set ips
-     *
-     * @param ips
-     */
+    * set ips
+    *
+    * @param ips
+    */
     public void setIps(List<Ip> ips) {
         this.ips = ips;
     }
+
 
     /**
      * get 页码
@@ -93,6 +95,7 @@ public class DescribeIpsResult extends JdcloudResult implements java.io.Serializ
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小
      *
@@ -110,6 +113,7 @@ public class DescribeIpsResult extends JdcloudResult implements java.io.Serializ
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 总数量
@@ -130,15 +134,17 @@ public class DescribeIpsResult extends JdcloudResult implements java.io.Serializ
     }
 
 
+
     /**
-     * set ips
-     *
-     * @param ips
-     */
+    * set ips
+    *
+    * @param ips
+    */
     public DescribeIpsResult ips(List<Ip> ips) {
         this.ips = ips;
         return this;
     }
+
 
     /**
      * set 页码
@@ -150,6 +156,7 @@ public class DescribeIpsResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 分页大小
      *
@@ -160,6 +167,7 @@ public class DescribeIpsResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 总数量
      *
@@ -169,6 +177,7 @@ public class DescribeIpsResult extends JdcloudResult implements java.io.Serializ
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class DescribeIpsResult extends JdcloudResult implements java.io.Serializ
         }
         this.ips.add(ip);
     }
-
 }

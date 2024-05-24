@@ -98,6 +98,7 @@ public class IdcInspection  implements java.io.Serializable {
     private String physicalEnv;
 
 
+
     /**
      * get 巡检时间,UTC时间
      *
@@ -115,6 +116,7 @@ public class IdcInspection  implements java.io.Serializable {
     public void setInspectionTime(String inspectionTime) {
         this.inspectionTime = inspectionTime;
     }
+
 
     /**
      * get 温度数值
@@ -134,6 +136,7 @@ public class IdcInspection  implements java.io.Serializable {
         this.temperature = temperature;
     }
 
+
     /**
      * get 湿度数值
      *
@@ -151,6 +154,7 @@ public class IdcInspection  implements java.io.Serializable {
     public void setHumidity(String humidity) {
         this.humidity = humidity;
     }
+
 
     /**
      * get 物品摆放
@@ -170,6 +174,7 @@ public class IdcInspection  implements java.io.Serializable {
         this.goodsPlacement = goodsPlacement;
     }
 
+
     /**
      * get 漏水
      *
@@ -187,6 +192,7 @@ public class IdcInspection  implements java.io.Serializable {
     public void setLeakWater(String leakWater) {
         this.leakWater = leakWater;
     }
+
 
     /**
      * get 门禁
@@ -206,6 +212,7 @@ public class IdcInspection  implements java.io.Serializable {
         this.accessControl = accessControl;
     }
 
+
     /**
      * get 安防（监控）
      *
@@ -223,6 +230,7 @@ public class IdcInspection  implements java.io.Serializable {
     public void setMonitor(String monitor) {
         this.monitor = monitor;
     }
+
 
     /**
      * get 消防
@@ -242,6 +250,7 @@ public class IdcInspection  implements java.io.Serializable {
         this.fire = fire;
     }
 
+
     /**
      * get 防雷
      *
@@ -259,6 +268,7 @@ public class IdcInspection  implements java.io.Serializable {
     public void setThunder(String thunder) {
         this.thunder = thunder;
     }
+
 
     /**
      * get 空调
@@ -278,6 +288,7 @@ public class IdcInspection  implements java.io.Serializable {
         this.airConditioning = airConditioning;
     }
 
+
     /**
      * get UPS
      *
@@ -296,6 +307,7 @@ public class IdcInspection  implements java.io.Serializable {
         this.ups = ups;
     }
 
+
     /**
      * get 供电
      *
@@ -313,6 +325,7 @@ public class IdcInspection  implements java.io.Serializable {
     public void setPower(String power) {
         this.power = power;
     }
+
 
     /**
      * get 物理环境异常描述
@@ -333,6 +346,7 @@ public class IdcInspection  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 巡检时间,UTC时间
      *
@@ -342,6 +356,7 @@ public class IdcInspection  implements java.io.Serializable {
         this.inspectionTime = inspectionTime;
         return this;
     }
+
 
     /**
      * set 温度数值
@@ -353,6 +368,7 @@ public class IdcInspection  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 湿度数值
      *
@@ -362,6 +378,7 @@ public class IdcInspection  implements java.io.Serializable {
         this.humidity = humidity;
         return this;
     }
+
 
     /**
      * set 物品摆放
@@ -373,6 +390,7 @@ public class IdcInspection  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 漏水
      *
@@ -382,6 +400,7 @@ public class IdcInspection  implements java.io.Serializable {
         this.leakWater = leakWater;
         return this;
     }
+
 
     /**
      * set 门禁
@@ -393,6 +412,7 @@ public class IdcInspection  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 安防（监控）
      *
@@ -402,6 +422,7 @@ public class IdcInspection  implements java.io.Serializable {
         this.monitor = monitor;
         return this;
     }
+
 
     /**
      * set 消防
@@ -413,6 +434,7 @@ public class IdcInspection  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 防雷
      *
@@ -422,6 +444,7 @@ public class IdcInspection  implements java.io.Serializable {
         this.thunder = thunder;
         return this;
     }
+
 
     /**
      * set 空调
@@ -433,6 +456,7 @@ public class IdcInspection  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set UPS
      *
@@ -443,6 +467,7 @@ public class IdcInspection  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 供电
      *
@@ -452,6 +477,7 @@ public class IdcInspection  implements java.io.Serializable {
         this.power = power;
         return this;
     }
+
 
     /**
      * set 物理环境异常描述

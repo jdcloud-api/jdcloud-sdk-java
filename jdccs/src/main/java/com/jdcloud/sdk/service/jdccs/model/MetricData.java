@@ -37,8 +37,8 @@ public class MetricData  implements java.io.Serializable {
     /**
      * data
      */
+    
     private List<DataPoint> data;
-
     /**
      * statistic
      */
@@ -50,23 +50,25 @@ public class MetricData  implements java.io.Serializable {
     private Metric metric;
 
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<DataPoint> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<DataPoint> data) {
         this.data = data;
     }
+
 
     /**
      * get statistic
@@ -85,6 +87,7 @@ public class MetricData  implements java.io.Serializable {
     public void setStatistic(Statistic statistic) {
         this.statistic = statistic;
     }
+
 
     /**
      * get metric
@@ -105,15 +108,17 @@ public class MetricData  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public MetricData data(List<DataPoint> data) {
         this.data = data;
         return this;
     }
+
 
     /**
      * set statistic
@@ -125,6 +130,7 @@ public class MetricData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set metric
      *
@@ -134,6 +140,7 @@ public class MetricData  implements java.io.Serializable {
         this.metric = metric;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class MetricData  implements java.io.Serializable {
         }
         this.data.add(data);
     }
-
 }

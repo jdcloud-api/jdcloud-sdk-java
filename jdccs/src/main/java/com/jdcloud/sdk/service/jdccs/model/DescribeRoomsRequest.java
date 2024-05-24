@@ -56,14 +56,15 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
      * roomNo - 房间号，精确匹配，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * IDC机房ID
      * Required:true
      */
     @Required
     private String idc;
+
 
 
     /**
@@ -84,6 +85,7 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20
      *
@@ -101,6 +103,7 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 是否查询全部，默认分页
@@ -120,25 +123,27 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
         this.all = all;
     }
 
-    /**
-     * get roomNo - 房间号，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    /**
+    * get roomNo - 房间号，精确匹配，支持多个
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set roomNo - 房间号，精确匹配，支持多个
+    * set roomNo - 房间号，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get IDC机房ID
@@ -159,6 +164,7 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 页码, 默认为1
      *
@@ -168,6 +174,7 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20
@@ -179,6 +186,7 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 是否查询全部，默认分页
      *
@@ -189,16 +197,18 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
-    /**
-     * set roomNo - 房间号，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    /**
+    * set roomNo - 房间号，精确匹配，支持多个
+
+    *
+    * @param filters
+    */
     public DescribeRoomsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set IDC机房ID
@@ -209,6 +219,7 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
         this.idc = idc;
         return this;
     }
+
 
 
     /**
@@ -223,5 +234,4 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
         }
         this.filters.add(filter);
     }
-
 }

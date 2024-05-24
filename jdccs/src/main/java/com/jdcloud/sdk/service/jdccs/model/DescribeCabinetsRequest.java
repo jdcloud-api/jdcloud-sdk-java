@@ -70,19 +70,20 @@ cabinetNo - 机柜编码，精确匹配，支持多个
 cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * cabinetNo - 机柜编码 roomNo - 房间号
      */
+    
     private List<Sort> sorts;
-
     /**
      * IDC机房ID
      * Required:true
      */
     @Required
     private String idc;
+
 
 
     /**
@@ -103,6 +104,7 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20
      *
@@ -120,6 +122,7 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 机柜类型 formal:正式机柜 reserved:预留机柜
@@ -139,6 +142,7 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
         this.cabinetType = cabinetType;
     }
 
+
     /**
      * get 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
      *
@@ -156,6 +160,7 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
     public void setCabinetOpenStatus(String cabinetOpenStatus) {
         this.cabinetOpenStatus = cabinetOpenStatus;
     }
+
 
     /**
      * get 机柜编码
@@ -175,49 +180,52 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
         this.cabinetNo = cabinetNo;
     }
 
+
     /**
-     * get roomNo - 房间号，精确匹配，支持多个
+    * get roomNo - 房间号，精确匹配，支持多个
 cabinetId - 机柜ID，精确匹配，支持多个
 cabinetNo - 机柜编码，精确匹配，支持多个
 cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set roomNo - 房间号，精确匹配，支持多个
+    * set roomNo - 房间号，精确匹配，支持多个
 cabinetId - 机柜ID，精确匹配，支持多个
 cabinetNo - 机柜编码，精确匹配，支持多个
 cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
+
     /**
-     * get cabinetNo - 机柜编码 roomNo - 房间号
-     *
-     * @return
-     */
+    * get cabinetNo - 机柜编码 roomNo - 房间号
+    *
+    * @return
+    */
     public List<Sort> getSorts() {
         return sorts;
     }
 
     /**
-     * set cabinetNo - 机柜编码 roomNo - 房间号
-     *
-     * @param sorts
-     */
+    * set cabinetNo - 机柜编码 roomNo - 房间号
+    *
+    * @param sorts
+    */
     public void setSorts(List<Sort> sorts) {
         this.sorts = sorts;
     }
+
 
     /**
      * get IDC机房ID
@@ -238,6 +246,7 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
     }
 
 
+
     /**
      * set 页码, 默认为1
      *
@@ -247,6 +256,7 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20
@@ -258,6 +268,7 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
         return this;
     }
 
+
     /**
      * set 机柜类型 formal:正式机柜 reserved:预留机柜
      *
@@ -267,6 +278,7 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
         this.cabinetType = cabinetType;
         return this;
     }
+
 
     /**
      * set 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
@@ -278,6 +290,7 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
         return this;
     }
 
+
     /**
      * set 机柜编码
      *
@@ -288,29 +301,32 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
         return this;
     }
 
+
     /**
-     * set roomNo - 房间号，精确匹配，支持多个
+    * set roomNo - 房间号，精确匹配，支持多个
 cabinetId - 机柜ID，精确匹配，支持多个
 cabinetNo - 机柜编码，精确匹配，支持多个
 cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeCabinetsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
-     * set cabinetNo - 机柜编码 roomNo - 房间号
-     *
-     * @param sorts
-     */
+    * set cabinetNo - 机柜编码 roomNo - 房间号
+    *
+    * @param sorts
+    */
     public DescribeCabinetsRequest sorts(List<Sort> sorts) {
         this.sorts = sorts;
         return this;
     }
+
 
     /**
      * set IDC机房ID
@@ -321,6 +337,7 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
         this.idc = idc;
         return this;
     }
+
 
 
     /**
@@ -350,5 +367,4 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
         }
         this.sorts.add(sort);
     }
-
 }

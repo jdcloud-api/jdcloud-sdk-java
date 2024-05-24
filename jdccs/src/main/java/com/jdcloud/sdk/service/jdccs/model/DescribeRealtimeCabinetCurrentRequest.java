@@ -49,6 +49,7 @@ public class DescribeRealtimeCabinetCurrentRequest extends JdcloudRequest implem
     private String idc;
 
 
+
     /**
      * get 资源ID，支持多个resourceId批量查询，每个id用英文竖线分隔
      *
@@ -66,6 +67,7 @@ public class DescribeRealtimeCabinetCurrentRequest extends JdcloudRequest implem
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get IDC机房ID
@@ -86,6 +88,7 @@ public class DescribeRealtimeCabinetCurrentRequest extends JdcloudRequest implem
     }
 
 
+
     /**
      * set 资源ID，支持多个resourceId批量查询，每个id用英文竖线分隔
      *
@@ -95,6 +98,7 @@ public class DescribeRealtimeCabinetCurrentRequest extends JdcloudRequest implem
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set IDC机房ID

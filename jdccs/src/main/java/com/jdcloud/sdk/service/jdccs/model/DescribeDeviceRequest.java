@@ -49,6 +49,7 @@ public class DescribeDeviceRequest extends JdcloudRequest implements java.io.Ser
     private String deviceId;
 
 
+
     /**
      * get IDC机房ID
      *
@@ -66,6 +67,7 @@ public class DescribeDeviceRequest extends JdcloudRequest implements java.io.Ser
     public void setIdc(String idc) {
         this.idc = idc;
     }
+
 
     /**
      * get 设备实例ID
@@ -86,6 +88,7 @@ public class DescribeDeviceRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set IDC机房ID
      *
@@ -95,6 +98,7 @@ public class DescribeDeviceRequest extends JdcloudRequest implements java.io.Ser
         this.idc = idc;
         return this;
     }
+
 
     /**
      * set 设备实例ID

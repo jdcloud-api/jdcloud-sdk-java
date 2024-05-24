@@ -43,6 +43,7 @@ public class Metric  implements java.io.Serializable {
     private String metricName;
 
 
+
     /**
      * get 监控项英文标识
      *
@@ -60,6 +61,7 @@ public class Metric  implements java.io.Serializable {
     public void setMetric(String metric) {
         this.metric = metric;
     }
+
 
     /**
      * get 监控项名称
@@ -80,6 +82,7 @@ public class Metric  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 监控项英文标识
      *
@@ -89,6 +92,7 @@ public class Metric  implements java.io.Serializable {
         this.metric = metric;
         return this;
     }
+
 
     /**
      * set 监控项名称

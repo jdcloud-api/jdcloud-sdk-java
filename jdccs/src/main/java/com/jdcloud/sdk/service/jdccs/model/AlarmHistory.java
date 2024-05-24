@@ -143,6 +143,7 @@ public class AlarmHistory  implements java.io.Serializable {
     private String condition;
 
 
+
     /**
      * get 规则实例ID
      *
@@ -160,6 +161,7 @@ public class AlarmHistory  implements java.io.Serializable {
     public void setAlarmId(String alarmId) {
         this.alarmId = alarmId;
     }
+
 
     /**
      * get 规则名称
@@ -179,6 +181,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 机房英文标识
      *
@@ -196,6 +199,7 @@ public class AlarmHistory  implements java.io.Serializable {
     public void setIdc(String idc) {
         this.idc = idc;
     }
+
 
     /**
      * get 机房名称
@@ -215,6 +219,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.idcName = idcName;
     }
 
+
     /**
      * get 资源类型 bandwidth:带宽
      *
@@ -232,6 +237,7 @@ public class AlarmHistory  implements java.io.Serializable {
     public void setResourceType(String resourceType) {
         this.resourceType = resourceType;
     }
+
 
     /**
      * get 资源ID
@@ -251,6 +257,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 资源名称
      *
@@ -268,6 +275,7 @@ public class AlarmHistory  implements java.io.Serializable {
     public void setResourceName(String resourceName) {
         this.resourceName = resourceName;
     }
+
 
     /**
      * get 监控项英文标识
@@ -287,6 +295,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.metric = metric;
     }
 
+
     /**
      * get 监控项名称
      *
@@ -304,6 +313,7 @@ public class AlarmHistory  implements java.io.Serializable {
     public void setMetricName(String metricName) {
         this.metricName = metricName;
     }
+
 
     /**
      * get 统计周期（单位：分钟）
@@ -323,6 +333,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.period = period;
     }
 
+
     /**
      * get 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min
      *
@@ -340,6 +351,7 @@ public class AlarmHistory  implements java.io.Serializable {
     public void setStatisticMethod(String statisticMethod) {
         this.statisticMethod = statisticMethod;
     }
+
 
     /**
      * get 计算方式 &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
@@ -359,6 +371,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.operator = operator;
     }
 
+
     /**
      * get 阈值
      *
@@ -376,6 +389,7 @@ public class AlarmHistory  implements java.io.Serializable {
     public void setThreshold(Double threshold) {
         this.threshold = threshold;
     }
+
 
     /**
      * get 连续多少次后报警
@@ -395,6 +409,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.times = times;
     }
 
+
     /**
      * get 通知周期 单位：小时
      *
@@ -412,6 +427,7 @@ public class AlarmHistory  implements java.io.Serializable {
     public void setNoticePeriod(Integer noticePeriod) {
         this.noticePeriod = noticePeriod;
     }
+
 
     /**
      * get 规则状态 disabled:禁用 enabled:启用
@@ -431,6 +447,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get IP地址
      *
@@ -448,6 +465,7 @@ public class AlarmHistory  implements java.io.Serializable {
     public void setManagementIp(String managementIp) {
         this.managementIp = managementIp;
     }
+
 
     /**
      * get 端口名称
@@ -467,6 +485,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.ifName = ifName;
     }
 
+
     /**
      * get 报警状态 normal:正常 alarm:报警
      *
@@ -484,6 +503,7 @@ public class AlarmHistory  implements java.io.Serializable {
     public void setAlarmStatus(String alarmStatus) {
         this.alarmStatus = alarmStatus;
     }
+
 
     /**
      * get 报警值
@@ -503,6 +523,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.value = value;
     }
 
+
     /**
      * get 报警时间 遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
@@ -520,6 +541,7 @@ public class AlarmHistory  implements java.io.Serializable {
     public void setNoticeTime(String noticeTime) {
         this.noticeTime = noticeTime;
     }
+
 
     /**
      * get 报警条件
@@ -540,6 +562,7 @@ public class AlarmHistory  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规则实例ID
      *
@@ -549,6 +572,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.alarmId = alarmId;
         return this;
     }
+
 
     /**
      * set 规则名称
@@ -560,6 +584,7 @@ public class AlarmHistory  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 机房英文标识
      *
@@ -569,6 +594,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.idc = idc;
         return this;
     }
+
 
     /**
      * set 机房名称
@@ -580,6 +606,7 @@ public class AlarmHistory  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源类型 bandwidth:带宽
      *
@@ -589,6 +616,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.resourceType = resourceType;
         return this;
     }
+
 
     /**
      * set 资源ID
@@ -600,6 +628,7 @@ public class AlarmHistory  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源名称
      *
@@ -609,6 +638,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.resourceName = resourceName;
         return this;
     }
+
 
     /**
      * set 监控项英文标识
@@ -620,6 +650,7 @@ public class AlarmHistory  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 监控项名称
      *
@@ -629,6 +660,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.metricName = metricName;
         return this;
     }
+
 
     /**
      * set 统计周期（单位：分钟）
@@ -640,6 +672,7 @@ public class AlarmHistory  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min
      *
@@ -649,6 +682,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.statisticMethod = statisticMethod;
         return this;
     }
+
 
     /**
      * set 计算方式 &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
@@ -660,6 +694,7 @@ public class AlarmHistory  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 阈值
      *
@@ -669,6 +704,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.threshold = threshold;
         return this;
     }
+
 
     /**
      * set 连续多少次后报警
@@ -680,6 +716,7 @@ public class AlarmHistory  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 通知周期 单位：小时
      *
@@ -689,6 +726,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.noticePeriod = noticePeriod;
         return this;
     }
+
 
     /**
      * set 规则状态 disabled:禁用 enabled:启用
@@ -700,6 +738,7 @@ public class AlarmHistory  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set IP地址
      *
@@ -709,6 +748,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.managementIp = managementIp;
         return this;
     }
+
 
     /**
      * set 端口名称
@@ -720,6 +760,7 @@ public class AlarmHistory  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 报警状态 normal:正常 alarm:报警
      *
@@ -729,6 +770,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.alarmStatus = alarmStatus;
         return this;
     }
+
 
     /**
      * set 报警值
@@ -740,6 +782,7 @@ public class AlarmHistory  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 报警时间 遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
@@ -749,6 +792,7 @@ public class AlarmHistory  implements java.io.Serializable {
         this.noticeTime = noticeTime;
         return this;
     }
+
 
     /**
      * set 报警条件

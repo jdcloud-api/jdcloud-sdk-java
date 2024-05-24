@@ -39,6 +39,7 @@ public class CreateGeneralServicesTicketResult extends JdcloudResult implements 
     private String ticketNo;
 
 
+
     /**
      * get ticketNo
      *
@@ -56,6 +57,7 @@ public class CreateGeneralServicesTicketResult extends JdcloudResult implements 
     public void setTicketNo(String ticketNo) {
         this.ticketNo = ticketNo;
     }
+
 
 
     /**

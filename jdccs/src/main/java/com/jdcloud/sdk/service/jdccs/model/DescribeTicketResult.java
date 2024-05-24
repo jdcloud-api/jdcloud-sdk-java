@@ -40,6 +40,7 @@ public class DescribeTicketResult extends JdcloudResult implements java.io.Seria
     private Ticket ticket;
 
 
+
     /**
      * get 工单详情
      *
@@ -57,6 +58,7 @@ public class DescribeTicketResult extends JdcloudResult implements java.io.Seria
     public void setTicket(Ticket ticket) {
         this.ticket = ticket;
     }
+
 
 
     /**

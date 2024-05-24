@@ -40,6 +40,7 @@ public class DescribeBandwidthTrafficResult extends JdcloudResult implements jav
     private BandwidthTraffic bandwidthTraffic;
 
 
+
     /**
      * get 带宽（出口）流量（资源）详情
      *
@@ -57,6 +58,7 @@ public class DescribeBandwidthTrafficResult extends JdcloudResult implements jav
     public void setBandwidthTraffic(BandwidthTraffic bandwidthTraffic) {
         this.bandwidthTraffic = bandwidthTraffic;
     }
+
 
 
     /**

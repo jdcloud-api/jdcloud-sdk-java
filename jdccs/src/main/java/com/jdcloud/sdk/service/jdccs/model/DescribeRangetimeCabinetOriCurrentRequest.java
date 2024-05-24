@@ -28,9 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 按照时间段查询单个机柜AB路电流
+ * 按照时间段查询单个机柜AB路电流-原始数据
  */
-public class DescribeRangetimeCabinetCurrentRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeRangetimeCabinetOriCurrentRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -54,11 +54,6 @@ public class DescribeRangetimeCabinetCurrentRequest extends JdcloudRequest imple
      */
     @Required
     private Integer endTime;
-
-    /**
-     * 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，时间间隔：1m、5m，默认5m。时间间隔支持的最大时间范围为2小时
-     */
-    private String timeInterval;
 
     /**
      * IDC机房ID
@@ -127,25 +122,6 @@ public class DescribeRangetimeCabinetCurrentRequest extends JdcloudRequest imple
 
 
     /**
-     * get 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，时间间隔：1m、5m，默认5m。时间间隔支持的最大时间范围为2小时
-     *
-     * @return
-     */
-    public String getTimeInterval() {
-        return timeInterval;
-    }
-
-    /**
-     * set 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，时间间隔：1m、5m，默认5m。时间间隔支持的最大时间范围为2小时
-     *
-     * @param timeInterval
-     */
-    public void setTimeInterval(String timeInterval) {
-        this.timeInterval = timeInterval;
-    }
-
-
-    /**
      * get IDC机房ID
      *
      * @return
@@ -170,7 +146,7 @@ public class DescribeRangetimeCabinetCurrentRequest extends JdcloudRequest imple
      *
      * @param resourceId
      */
-    public DescribeRangetimeCabinetCurrentRequest resourceId(String resourceId) {
+    public DescribeRangetimeCabinetOriCurrentRequest resourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
@@ -181,7 +157,7 @@ public class DescribeRangetimeCabinetCurrentRequest extends JdcloudRequest imple
      *
      * @param startTime
      */
-    public DescribeRangetimeCabinetCurrentRequest startTime(Integer startTime) {
+    public DescribeRangetimeCabinetOriCurrentRequest startTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -192,19 +168,8 @@ public class DescribeRangetimeCabinetCurrentRequest extends JdcloudRequest imple
      *
      * @param endTime
      */
-    public DescribeRangetimeCabinetCurrentRequest endTime(Integer endTime) {
+    public DescribeRangetimeCabinetOriCurrentRequest endTime(Integer endTime) {
         this.endTime = endTime;
-        return this;
-    }
-
-
-    /**
-     * set 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，时间间隔：1m、5m，默认5m。时间间隔支持的最大时间范围为2小时
-     *
-     * @param timeInterval
-     */
-    public DescribeRangetimeCabinetCurrentRequest timeInterval(String timeInterval) {
-        this.timeInterval = timeInterval;
         return this;
     }
 
@@ -214,7 +179,7 @@ public class DescribeRangetimeCabinetCurrentRequest extends JdcloudRequest imple
      *
      * @param idc
      */
-    public DescribeRangetimeCabinetCurrentRequest idc(String idc) {
+    public DescribeRangetimeCabinetOriCurrentRequest idc(String idc) {
         this.idc = idc;
         return this;
     }

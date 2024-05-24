@@ -48,6 +48,7 @@ public class Point  implements java.io.Serializable {
     private String pointTag;
 
 
+
     /**
      * get 数据点名称
      *
@@ -66,6 +67,7 @@ public class Point  implements java.io.Serializable {
         this.pointName = pointName;
     }
 
+
     /**
      * get 数据点数据
      *
@@ -83,6 +85,7 @@ public class Point  implements java.io.Serializable {
     public void setPointData(Double pointData) {
         this.pointData = pointData;
     }
+
 
     /**
      * get 数据点标签 currentA A支路电流 currentB B支路电流 powerA A支路功率 powerB B支路功率 voltageA A支路电压 voltageB B支路电压 temperature温度 humidity湿度 averageVoltage三相平均相电压 totalPower总功率 totalCurrent总电流
@@ -103,6 +106,7 @@ public class Point  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 数据点名称
      *
@@ -113,6 +117,7 @@ public class Point  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据点数据
      *
@@ -122,6 +127,7 @@ public class Point  implements java.io.Serializable {
         this.pointData = pointData;
         return this;
     }
+
 
     /**
      * set 数据点标签 currentA A支路电流 currentB B支路电流 powerA A支路功率 powerB B支路功率 voltageA A支路电压 voltageB B支路电压 temperature温度 humidity湿度 averageVoltage三相平均相电压 totalPower总功率 totalCurrent总电流

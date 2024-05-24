@@ -42,6 +42,7 @@ public class DescribeAlarmRequest extends JdcloudRequest implements java.io.Seri
     private String alarmId;
 
 
+
     /**
      * get 报警规则ID
      *
@@ -59,6 +60,7 @@ public class DescribeAlarmRequest extends JdcloudRequest implements java.io.Seri
     public void setAlarmId(String alarmId) {
         this.alarmId = alarmId;
     }
+
 
 
     /**

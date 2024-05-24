@@ -53,6 +53,7 @@ public class DescribeIdcInspection  implements java.io.Serializable {
     private String status;
 
 
+
     /**
      * get 巡检日期
      *
@@ -70,6 +71,7 @@ public class DescribeIdcInspection  implements java.io.Serializable {
     public void setInspectionDate(String inspectionDate) {
         this.inspectionDate = inspectionDate;
     }
+
 
     /**
      * get 机房英文标识
@@ -89,6 +91,7 @@ public class DescribeIdcInspection  implements java.io.Serializable {
         this.idc = idc;
     }
 
+
     /**
      * get 机房名称
      *
@@ -106,6 +109,7 @@ public class DescribeIdcInspection  implements java.io.Serializable {
     public void setIdcName(String idcName) {
         this.idcName = idcName;
     }
+
 
     /**
      * get 巡检状态
@@ -126,6 +130,7 @@ public class DescribeIdcInspection  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 巡检日期
      *
@@ -135,6 +140,7 @@ public class DescribeIdcInspection  implements java.io.Serializable {
         this.inspectionDate = inspectionDate;
         return this;
     }
+
 
     /**
      * set 机房英文标识
@@ -146,6 +152,7 @@ public class DescribeIdcInspection  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 机房名称
      *
@@ -155,6 +162,7 @@ public class DescribeIdcInspection  implements java.io.Serializable {
         this.idcName = idcName;
         return this;
     }
+
 
     /**
      * set 巡检状态

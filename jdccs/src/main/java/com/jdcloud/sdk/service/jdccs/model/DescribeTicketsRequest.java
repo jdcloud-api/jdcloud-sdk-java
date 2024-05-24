@@ -91,11 +91,12 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
      * ticketNo - 工单编号，精确匹配，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * createdTime - 创建时间 closedTime - 关闭时间
      */
+    
     private List<Sort> sorts;
 
 
@@ -117,6 +118,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20
      *
@@ -134,6 +136,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 工单TAB类型 pendingProcess:待我处理 pendingReview:待审核 processing:处理中 all:全部(默认)
@@ -153,6 +156,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         this.type = type;
     }
 
+
     /**
      * get 工单类型
      *
@@ -170,6 +174,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
     public void setTicketTypeName(String ticketTypeName) {
         this.ticketTypeName = ticketTypeName;
     }
+
 
     /**
      * get 工单状态 pendingReview:待审核 revoked:已撤销 processing:处理中 pendingVerification:待核验 pendingClose:待关单 rejected:已拒绝 completed:已完成 cancelled:已取消 draft:草稿中
@@ -189,6 +194,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         this.status = status;
     }
 
+
     /**
      * get 工单编号
      *
@@ -206,6 +212,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
     public void setTicketNo(String ticketNo) {
         this.ticketNo = ticketNo;
     }
+
 
     /**
      * get 工单名称
@@ -225,6 +232,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         this.ticketTemplateName = ticketTemplateName;
     }
 
+
     /**
      * get 描述
      *
@@ -242,6 +250,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 创建开始时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
@@ -261,6 +270,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         this.startTime = startTime;
     }
 
+
     /**
      * get 创建结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
@@ -279,43 +289,46 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         this.endTime = endTime;
     }
 
-    /**
-     * get ticketNo - 工单编号，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    /**
+    * get ticketNo - 工单编号，精确匹配，支持多个
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set ticketNo - 工单编号，精确匹配，支持多个
+    * set ticketNo - 工单编号，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
+
     /**
-     * get createdTime - 创建时间 closedTime - 关闭时间
-     *
-     * @return
-     */
+    * get createdTime - 创建时间 closedTime - 关闭时间
+    *
+    * @return
+    */
     public List<Sort> getSorts() {
         return sorts;
     }
 
     /**
-     * set createdTime - 创建时间 closedTime - 关闭时间
-     *
-     * @param sorts
-     */
+    * set createdTime - 创建时间 closedTime - 关闭时间
+    *
+    * @param sorts
+    */
     public void setSorts(List<Sort> sorts) {
         this.sorts = sorts;
     }
+
 
 
     /**
@@ -328,6 +341,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20
      *
@@ -337,6 +351,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 工单TAB类型 pendingProcess:待我处理 pendingReview:待审核 processing:处理中 all:全部(默认)
@@ -348,6 +363,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 工单类型
      *
@@ -357,6 +373,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         this.ticketTypeName = ticketTypeName;
         return this;
     }
+
 
     /**
      * set 工单状态 pendingReview:待审核 revoked:已撤销 processing:处理中 pendingVerification:待核验 pendingClose:待关单 rejected:已拒绝 completed:已完成 cancelled:已取消 draft:草稿中
@@ -368,6 +385,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 工单编号
      *
@@ -377,6 +395,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         this.ticketNo = ticketNo;
         return this;
     }
+
 
     /**
      * set 工单名称
@@ -388,6 +407,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 描述
      *
@@ -397,6 +417,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         this.description = description;
         return this;
     }
+
 
     /**
      * set 创建开始时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
@@ -408,6 +429,7 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 创建结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
@@ -418,26 +440,29 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
-    /**
-     * set ticketNo - 工单编号，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    /**
+    * set ticketNo - 工单编号，精确匹配，支持多个
+
+    *
+    * @param filters
+    */
     public DescribeTicketsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
-     * set createdTime - 创建时间 closedTime - 关闭时间
-     *
-     * @param sorts
-     */
+    * set createdTime - 创建时间 closedTime - 关闭时间
+    *
+    * @param sorts
+    */
     public DescribeTicketsRequest sorts(List<Sort> sorts) {
         this.sorts = sorts;
         return this;
     }
+
 
 
     /**
@@ -464,5 +489,4 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         }
         this.sorts.add(sort);
     }
-
 }

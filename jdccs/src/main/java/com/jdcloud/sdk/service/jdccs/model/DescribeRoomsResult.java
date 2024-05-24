@@ -39,8 +39,8 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
     /**
      * rooms
      */
+    
     private List<Room> rooms;
-
     /**
      * 页码
      */
@@ -57,23 +57,25 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
     private Integer totalCount;
 
 
+
     /**
-     * get rooms
-     *
-     * @return
-     */
+    * get rooms
+    *
+    * @return
+    */
     public List<Room> getRooms() {
         return rooms;
     }
 
     /**
-     * set rooms
-     *
-     * @param rooms
-     */
+    * set rooms
+    *
+    * @param rooms
+    */
     public void setRooms(List<Room> rooms) {
         this.rooms = rooms;
     }
+
 
     /**
      * get 页码
@@ -93,6 +95,7 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小
      *
@@ -110,6 +113,7 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 总数量
@@ -130,15 +134,17 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
     }
 
 
+
     /**
-     * set rooms
-     *
-     * @param rooms
-     */
+    * set rooms
+    *
+    * @param rooms
+    */
     public DescribeRoomsResult rooms(List<Room> rooms) {
         this.rooms = rooms;
         return this;
     }
+
 
     /**
      * set 页码
@@ -150,6 +156,7 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 分页大小
      *
@@ -160,6 +167,7 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 总数量
      *
@@ -169,6 +177,7 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
         }
         this.rooms.add(room);
     }
-
 }

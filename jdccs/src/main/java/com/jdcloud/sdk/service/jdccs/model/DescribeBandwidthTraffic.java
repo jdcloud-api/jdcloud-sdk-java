@@ -68,6 +68,7 @@ public class DescribeBandwidthTraffic  implements java.io.Serializable {
     private Integer bandwidth;
 
 
+
     /**
      * get 机房英文标识
      *
@@ -85,6 +86,7 @@ public class DescribeBandwidthTraffic  implements java.io.Serializable {
     public void setIdc(String idc) {
         this.idc = idc;
     }
+
 
     /**
      * get 机房名称
@@ -104,6 +106,7 @@ public class DescribeBandwidthTraffic  implements java.io.Serializable {
         this.idcName = idcName;
     }
 
+
     /**
      * get 带宽实例ID
      *
@@ -121,6 +124,7 @@ public class DescribeBandwidthTraffic  implements java.io.Serializable {
     public void setBandwidthId(String bandwidthId) {
         this.bandwidthId = bandwidthId;
     }
+
 
     /**
      * get 带宽名称
@@ -140,6 +144,7 @@ public class DescribeBandwidthTraffic  implements java.io.Serializable {
         this.bandwidthName = bandwidthName;
     }
 
+
     /**
      * get 总上行实时流量
      *
@@ -158,6 +163,7 @@ public class DescribeBandwidthTraffic  implements java.io.Serializable {
         this.totalTrafficIn = totalTrafficIn;
     }
 
+
     /**
      * get 总下行实时流量
      *
@@ -175,6 +181,7 @@ public class DescribeBandwidthTraffic  implements java.io.Serializable {
     public void setTotalTrafficOut(Double totalTrafficOut) {
         this.totalTrafficOut = totalTrafficOut;
     }
+
 
     /**
      * get 总带宽
@@ -195,6 +202,7 @@ public class DescribeBandwidthTraffic  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 机房英文标识
      *
@@ -204,6 +212,7 @@ public class DescribeBandwidthTraffic  implements java.io.Serializable {
         this.idc = idc;
         return this;
     }
+
 
     /**
      * set 机房名称
@@ -215,6 +224,7 @@ public class DescribeBandwidthTraffic  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 带宽实例ID
      *
@@ -224,6 +234,7 @@ public class DescribeBandwidthTraffic  implements java.io.Serializable {
         this.bandwidthId = bandwidthId;
         return this;
     }
+
 
     /**
      * set 带宽名称
@@ -235,6 +246,7 @@ public class DescribeBandwidthTraffic  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 总上行实时流量
      *
@@ -245,6 +257,7 @@ public class DescribeBandwidthTraffic  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 总下行实时流量
      *
@@ -254,6 +267,7 @@ public class DescribeBandwidthTraffic  implements java.io.Serializable {
         this.totalTrafficOut = totalTrafficOut;
         return this;
     }
+
 
     /**
      * set 总带宽

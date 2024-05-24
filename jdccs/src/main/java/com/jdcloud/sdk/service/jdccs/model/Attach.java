@@ -43,6 +43,7 @@ public class Attach  implements java.io.Serializable {
     private String attachPath;
 
 
+
     /**
      * get 附件名
      *
@@ -60,6 +61,7 @@ public class Attach  implements java.io.Serializable {
     public void setAttachName(String attachName) {
         this.attachName = attachName;
     }
+
 
     /**
      * get 附件地址
@@ -80,6 +82,7 @@ public class Attach  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 附件名
      *
@@ -89,6 +92,7 @@ public class Attach  implements java.io.Serializable {
         this.attachName = attachName;
         return this;
     }
+
 
     /**
      * set 附件地址

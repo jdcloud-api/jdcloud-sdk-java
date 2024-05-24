@@ -42,6 +42,7 @@ public class DeleteAlarmRequest extends JdcloudRequest implements java.io.Serial
     private String alarmId;
 
 
+
     /**
      * get 报警规则ID
      *
@@ -59,6 +60,7 @@ public class DeleteAlarmRequest extends JdcloudRequest implements java.io.Serial
     public void setAlarmId(String alarmId) {
         this.alarmId = alarmId;
     }
+
 
 
     /**

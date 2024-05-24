@@ -39,6 +39,7 @@ public class SwitchAlarmResult extends JdcloudResult implements java.io.Serializ
     private Boolean success;
 
 
+
     /**
      * get success
      *
@@ -56,6 +57,7 @@ public class SwitchAlarmResult extends JdcloudResult implements java.io.Serializ
     public void setSuccess(Boolean success) {
         this.success = success;
     }
+
 
 
     /**

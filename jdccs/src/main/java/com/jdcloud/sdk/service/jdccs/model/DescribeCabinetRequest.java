@@ -49,6 +49,7 @@ public class DescribeCabinetRequest extends JdcloudRequest implements java.io.Se
     private String cabinetId;
 
 
+
     /**
      * get IDC机房ID
      *
@@ -66,6 +67,7 @@ public class DescribeCabinetRequest extends JdcloudRequest implements java.io.Se
     public void setIdc(String idc) {
         this.idc = idc;
     }
+
 
     /**
      * get 机柜实例ID
@@ -86,6 +88,7 @@ public class DescribeCabinetRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set IDC机房ID
      *
@@ -95,6 +98,7 @@ public class DescribeCabinetRequest extends JdcloudRequest implements java.io.Se
         this.idc = idc;
         return this;
     }
+
 
     /**
      * set 机柜实例ID

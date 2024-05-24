@@ -42,6 +42,7 @@ public class DescribeTicketRequest extends JdcloudRequest implements java.io.Ser
     private String ticketNo;
 
 
+
     /**
      * get 工单编号
      *
@@ -59,6 +60,7 @@ public class DescribeTicketRequest extends JdcloudRequest implements java.io.Ser
     public void setTicketNo(String ticketNo) {
         this.ticketNo = ticketNo;
     }
+
 
 
     /**

@@ -38,6 +38,7 @@ public class SwitchAlarmSpec  implements java.io.Serializable {
     private String status;
 
 
+
     /**
      * get 规则状态 disabled:禁用 enabled:启用
      *
@@ -55,6 +56,7 @@ public class SwitchAlarmSpec  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
 
     /**

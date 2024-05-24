@@ -48,6 +48,7 @@ public class OpenDevices  implements java.io.Serializable {
     private String deviceName;
 
 
+
     /**
      * get 设备编码
      *
@@ -66,6 +67,7 @@ public class OpenDevices  implements java.io.Serializable {
         this.deviceCode = deviceCode;
     }
 
+
     /**
      * get 设备类型 cabinet机柜 frontCabinet列头柜 sensor温湿度传感器
      *
@@ -83,6 +85,7 @@ public class OpenDevices  implements java.io.Serializable {
     public void setDeviceType(String deviceType) {
         this.deviceType = deviceType;
     }
+
 
     /**
      * get 设备名称
@@ -103,6 +106,7 @@ public class OpenDevices  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 设备编码
      *
@@ -113,6 +117,7 @@ public class OpenDevices  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 设备类型 cabinet机柜 frontCabinet列头柜 sensor温湿度传感器
      *
@@ -122,6 +127,7 @@ public class OpenDevices  implements java.io.Serializable {
         this.deviceType = deviceType;
         return this;
     }
+
 
     /**
      * set 设备名称

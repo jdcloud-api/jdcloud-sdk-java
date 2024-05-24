@@ -73,6 +73,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
     private String faultType;
 
 
+
     /**
      * get 巡检时间,UTC时间
      *
@@ -90,6 +91,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
     public void setInspectionTime(String inspectionTime) {
         this.inspectionTime = inspectionTime;
     }
+
 
     /**
      * get 机房英文标识
@@ -109,6 +111,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
         this.idc = idc;
     }
 
+
     /**
      * get 机房名称
      *
@@ -126,6 +129,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
     public void setIdcName(String idcName) {
         this.idcName = idcName;
     }
+
 
     /**
      * get 故障状态
@@ -145,6 +149,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 设备编码
      *
@@ -162,6 +167,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
     public void setDeviceNo(String deviceNo) {
         this.deviceNo = deviceNo;
     }
+
 
     /**
      * get 设备SN号
@@ -181,6 +187,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
         this.snNo = snNo;
     }
 
+
     /**
      * get 设备类型
      *
@@ -198,6 +205,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
     public void setDeviceType(String deviceType) {
         this.deviceType = deviceType;
     }
+
 
     /**
      * get 故障类型
@@ -218,6 +226,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 巡检时间,UTC时间
      *
@@ -227,6 +236,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
         this.inspectionTime = inspectionTime;
         return this;
     }
+
 
     /**
      * set 机房英文标识
@@ -238,6 +248,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 机房名称
      *
@@ -247,6 +258,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
         this.idcName = idcName;
         return this;
     }
+
 
     /**
      * set 故障状态
@@ -258,6 +270,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 设备编码
      *
@@ -267,6 +280,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
         this.deviceNo = deviceNo;
         return this;
     }
+
 
     /**
      * set 设备SN号
@@ -278,6 +292,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 设备类型
      *
@@ -287,6 +302,7 @@ public class DescribeDeviceInspection  implements java.io.Serializable {
         this.deviceType = deviceType;
         return this;
     }
+
 
     /**
      * set 故障类型

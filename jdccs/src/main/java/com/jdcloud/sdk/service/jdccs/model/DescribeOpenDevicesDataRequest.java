@@ -47,6 +47,7 @@ public class DescribeOpenDevicesDataRequest extends JdcloudRequest implements ja
     private String deviceType;
 
 
+
     /**
      * get 设备编码,支持多个deviceCode批量查询，每个id用英文竖线分隔
      *
@@ -64,6 +65,7 @@ public class DescribeOpenDevicesDataRequest extends JdcloudRequest implements ja
     public void setDeviceCodes(String deviceCodes) {
         this.deviceCodes = deviceCodes;
     }
+
 
     /**
      * get 设备类型
@@ -84,6 +86,7 @@ public class DescribeOpenDevicesDataRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 设备编码,支持多个deviceCode批量查询，每个id用英文竖线分隔
      *
@@ -93,6 +96,7 @@ public class DescribeOpenDevicesDataRequest extends JdcloudRequest implements ja
         this.deviceCodes = deviceCodes;
         return this;
     }
+
 
     /**
      * set 设备类型

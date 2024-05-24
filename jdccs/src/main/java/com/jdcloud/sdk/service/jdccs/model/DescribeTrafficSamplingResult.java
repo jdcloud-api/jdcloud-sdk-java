@@ -39,37 +39,40 @@ public class DescribeTrafficSamplingResult extends JdcloudResult implements java
     /**
      * data
      */
+    
     private List<TrafficSamplingData> data;
 
 
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<TrafficSamplingData> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<TrafficSamplingData> data) {
         this.data = data;
     }
 
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public DescribeTrafficSamplingResult data(List<TrafficSamplingData> data) {
         this.data = data;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeTrafficSamplingResult extends JdcloudResult implements java
         }
         this.data.add(data);
     }
-
 }

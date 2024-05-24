@@ -39,8 +39,8 @@ public class DescribeAlarmsResult extends JdcloudResult implements java.io.Seria
     /**
      * alarms
      */
+    
     private List<DescribeAlarm> alarms;
-
     /**
      * 页码
      */
@@ -57,23 +57,25 @@ public class DescribeAlarmsResult extends JdcloudResult implements java.io.Seria
     private Integer totalCount;
 
 
+
     /**
-     * get alarms
-     *
-     * @return
-     */
+    * get alarms
+    *
+    * @return
+    */
     public List<DescribeAlarm> getAlarms() {
         return alarms;
     }
 
     /**
-     * set alarms
-     *
-     * @param alarms
-     */
+    * set alarms
+    *
+    * @param alarms
+    */
     public void setAlarms(List<DescribeAlarm> alarms) {
         this.alarms = alarms;
     }
+
 
     /**
      * get 页码
@@ -93,6 +95,7 @@ public class DescribeAlarmsResult extends JdcloudResult implements java.io.Seria
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小
      *
@@ -110,6 +113,7 @@ public class DescribeAlarmsResult extends JdcloudResult implements java.io.Seria
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 总数量
@@ -130,15 +134,17 @@ public class DescribeAlarmsResult extends JdcloudResult implements java.io.Seria
     }
 
 
+
     /**
-     * set alarms
-     *
-     * @param alarms
-     */
+    * set alarms
+    *
+    * @param alarms
+    */
     public DescribeAlarmsResult alarms(List<DescribeAlarm> alarms) {
         this.alarms = alarms;
         return this;
     }
+
 
     /**
      * set 页码
@@ -150,6 +156,7 @@ public class DescribeAlarmsResult extends JdcloudResult implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 分页大小
      *
@@ -160,6 +167,7 @@ public class DescribeAlarmsResult extends JdcloudResult implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 总数量
      *
@@ -169,6 +177,7 @@ public class DescribeAlarmsResult extends JdcloudResult implements java.io.Seria
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class DescribeAlarmsResult extends JdcloudResult implements java.io.Seria
         }
         this.alarms.add(alarm);
     }
-
 }

@@ -39,37 +39,40 @@ public class DescribeOpenDevicesResult extends JdcloudResult implements java.io.
     /**
      * openDevices
      */
+    
     private List<OpenDevices> openDevices;
 
 
     /**
-     * get openDevices
-     *
-     * @return
-     */
+    * get openDevices
+    *
+    * @return
+    */
     public List<OpenDevices> getOpenDevices() {
         return openDevices;
     }
 
     /**
-     * set openDevices
-     *
-     * @param openDevices
-     */
+    * set openDevices
+    *
+    * @param openDevices
+    */
     public void setOpenDevices(List<OpenDevices> openDevices) {
         this.openDevices = openDevices;
     }
 
 
+
     /**
-     * set openDevices
-     *
-     * @param openDevices
-     */
+    * set openDevices
+    *
+    * @param openDevices
+    */
     public DescribeOpenDevicesResult openDevices(List<OpenDevices> openDevices) {
         this.openDevices = openDevices;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeOpenDevicesResult extends JdcloudResult implements java.io.
         }
         this.openDevices.add(openDevice);
     }
-
 }

@@ -40,6 +40,7 @@ public class DescribeAlarmResult extends JdcloudResult implements java.io.Serial
     private Alarm alarm;
 
 
+
     /**
      * get alarm
      *
@@ -57,6 +58,7 @@ public class DescribeAlarmResult extends JdcloudResult implements java.io.Serial
     public void setAlarm(Alarm alarm) {
         this.alarm = alarm;
     }
+
 
 
     /**

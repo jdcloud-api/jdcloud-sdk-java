@@ -118,6 +118,7 @@ public class Ticket  implements java.io.Serializable {
     private String externalIdcContactPhone;
 
 
+
     /**
      * get 工单编号
      *
@@ -135,6 +136,7 @@ public class Ticket  implements java.io.Serializable {
     public void setTicketNo(String ticketNo) {
         this.ticketNo = ticketNo;
     }
+
 
     /**
      * get 工单名称
@@ -154,6 +156,7 @@ public class Ticket  implements java.io.Serializable {
         this.ticketTemplateName = ticketTemplateName;
     }
 
+
     /**
      * get 工单模板CODE
      *
@@ -171,6 +174,7 @@ public class Ticket  implements java.io.Serializable {
     public void setTicketTemplateCode(String ticketTemplateCode) {
         this.ticketTemplateCode = ticketTemplateCode;
     }
+
 
     /**
      * get 工单类型
@@ -190,6 +194,7 @@ public class Ticket  implements java.io.Serializable {
         this.ticketTypeName = ticketTypeName;
     }
 
+
     /**
      * get 工单状态 pendingReview:待审核 已撤销 revoked:已撤销 processing:处理中 pendingVerification:待核验 pendingClose:待关单 rejected:已拒绝 completed:已完成 cancelled:已取消 draft:草稿中
      *
@@ -207,6 +212,7 @@ public class Ticket  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 描述
@@ -226,6 +232,7 @@ public class Ticket  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 创建时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
@@ -243,6 +250,7 @@ public class Ticket  implements java.io.Serializable {
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
+
 
     /**
      * get 关闭时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
@@ -262,6 +270,7 @@ public class Ticket  implements java.io.Serializable {
         this.closedTime = closedTime;
     }
 
+
     /**
      * get 电话
      *
@@ -279,6 +288,7 @@ public class Ticket  implements java.io.Serializable {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
 
     /**
      * get 邮箱
@@ -298,6 +308,7 @@ public class Ticket  implements java.io.Serializable {
         this.email = email;
     }
 
+
     /**
      * get 机房英文标识
      *
@@ -315,6 +326,7 @@ public class Ticket  implements java.io.Serializable {
     public void setIdc(String idc) {
         this.idc = idc;
     }
+
 
     /**
      * get 机房名称
@@ -334,6 +346,7 @@ public class Ticket  implements java.io.Serializable {
         this.idcName = idcName;
     }
 
+
     /**
      * get 通用服务工单申请数量
      *
@@ -351,6 +364,7 @@ public class Ticket  implements java.io.Serializable {
     public void setCount(Integer count) {
         this.count = count;
     }
+
 
     /**
      * get 是否是商业化外部机房
@@ -370,6 +384,7 @@ public class Ticket  implements java.io.Serializable {
         this.isExternalIdc = isExternalIdc;
     }
 
+
     /**
      * get 外部机房地址
      *
@@ -388,6 +403,7 @@ public class Ticket  implements java.io.Serializable {
         this.externalIdcAddress = externalIdcAddress;
     }
 
+
     /**
      * get 外部机房联系人
      *
@@ -405,6 +421,7 @@ public class Ticket  implements java.io.Serializable {
     public void setExternalIdcContactPerson(String externalIdcContactPerson) {
         this.externalIdcContactPerson = externalIdcContactPerson;
     }
+
 
     /**
      * get 外部机房联系电话
@@ -425,6 +442,7 @@ public class Ticket  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 工单编号
      *
@@ -434,6 +452,7 @@ public class Ticket  implements java.io.Serializable {
         this.ticketNo = ticketNo;
         return this;
     }
+
 
     /**
      * set 工单名称
@@ -445,6 +464,7 @@ public class Ticket  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 工单模板CODE
      *
@@ -454,6 +474,7 @@ public class Ticket  implements java.io.Serializable {
         this.ticketTemplateCode = ticketTemplateCode;
         return this;
     }
+
 
     /**
      * set 工单类型
@@ -465,6 +486,7 @@ public class Ticket  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 工单状态 pendingReview:待审核 已撤销 revoked:已撤销 processing:处理中 pendingVerification:待核验 pendingClose:待关单 rejected:已拒绝 completed:已完成 cancelled:已取消 draft:草稿中
      *
@@ -474,6 +496,7 @@ public class Ticket  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 描述
@@ -485,6 +508,7 @@ public class Ticket  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
@@ -494,6 +518,7 @@ public class Ticket  implements java.io.Serializable {
         this.createdTime = createdTime;
         return this;
     }
+
 
     /**
      * set 关闭时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
@@ -505,6 +530,7 @@ public class Ticket  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 电话
      *
@@ -514,6 +540,7 @@ public class Ticket  implements java.io.Serializable {
         this.phone = phone;
         return this;
     }
+
 
     /**
      * set 邮箱
@@ -525,6 +552,7 @@ public class Ticket  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 机房英文标识
      *
@@ -534,6 +562,7 @@ public class Ticket  implements java.io.Serializable {
         this.idc = idc;
         return this;
     }
+
 
     /**
      * set 机房名称
@@ -545,6 +574,7 @@ public class Ticket  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 通用服务工单申请数量
      *
@@ -554,6 +584,7 @@ public class Ticket  implements java.io.Serializable {
         this.count = count;
         return this;
     }
+
 
     /**
      * set 是否是商业化外部机房
@@ -565,6 +596,7 @@ public class Ticket  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 外部机房地址
      *
@@ -575,6 +607,7 @@ public class Ticket  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 外部机房联系人
      *
@@ -584,6 +617,7 @@ public class Ticket  implements java.io.Serializable {
         this.externalIdcContactPerson = externalIdcContactPerson;
         return this;
     }
+
 
     /**
      * set 外部机房联系电话

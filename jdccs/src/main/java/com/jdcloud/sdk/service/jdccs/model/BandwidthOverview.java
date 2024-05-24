@@ -63,6 +63,7 @@ public class BandwidthOverview  implements java.io.Serializable {
     private Integer mobile;
 
 
+
     /**
      * get 带宽（出口）总数目
      *
@@ -80,6 +81,7 @@ public class BandwidthOverview  implements java.io.Serializable {
     public void setSum(Integer sum) {
         this.sum = sum;
     }
+
 
     /**
      * get 动态BGP
@@ -99,6 +101,7 @@ public class BandwidthOverview  implements java.io.Serializable {
         this.dynamicBGP = dynamicBGP;
     }
 
+
     /**
      * get 三线BGP
      *
@@ -116,6 +119,7 @@ public class BandwidthOverview  implements java.io.Serializable {
     public void setThirdLineBGP(Integer thirdLineBGP) {
         this.thirdLineBGP = thirdLineBGP;
     }
+
 
     /**
      * get 电信单线
@@ -135,6 +139,7 @@ public class BandwidthOverview  implements java.io.Serializable {
         this.telecom = telecom;
     }
 
+
     /**
      * get 联通单线
      *
@@ -152,6 +157,7 @@ public class BandwidthOverview  implements java.io.Serializable {
     public void setUnicom(Integer unicom) {
         this.unicom = unicom;
     }
+
 
     /**
      * get 移动单线
@@ -172,6 +178,7 @@ public class BandwidthOverview  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 带宽（出口）总数目
      *
@@ -181,6 +188,7 @@ public class BandwidthOverview  implements java.io.Serializable {
         this.sum = sum;
         return this;
     }
+
 
     /**
      * set 动态BGP
@@ -192,6 +200,7 @@ public class BandwidthOverview  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 三线BGP
      *
@@ -201,6 +210,7 @@ public class BandwidthOverview  implements java.io.Serializable {
         this.thirdLineBGP = thirdLineBGP;
         return this;
     }
+
 
     /**
      * set 电信单线
@@ -212,6 +222,7 @@ public class BandwidthOverview  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 联通单线
      *
@@ -221,6 +232,7 @@ public class BandwidthOverview  implements java.io.Serializable {
         this.unicom = unicom;
         return this;
     }
+
 
     /**
      * set 移动单线

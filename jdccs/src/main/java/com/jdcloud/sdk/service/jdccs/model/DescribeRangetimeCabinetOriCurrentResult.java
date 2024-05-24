@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Alarm API
- * 云托管服务的报警API
+ * Monitor API
+ * 云托管服务的监控API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,46 +27,46 @@ package com.jdcloud.sdk.service.jdccs.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 修改报警规则
+ * 按照时间段查询单个机柜AB路电流-原始数据
  */
-public class UpdateAlarmResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeRangetimeCabinetOriCurrentResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * success
+     * data
      */
-    private Boolean success;
+    private Object data;
 
 
 
     /**
-     * get success
+     * get data
      *
      * @return
      */
-    public Boolean getSuccess() {
-        return success;
+    public Object getData() {
+        return data;
     }
 
     /**
-     * set success
+     * set data
      *
-     * @param success
+     * @param data
      */
-    public void setSuccess(Boolean success) {
-        this.success = success;
+    public void setData(Object data) {
+        this.data = data;
     }
 
 
 
     /**
-     * set success
+     * set data
      *
-     * @param success
+     * @param data
      */
-    public UpdateAlarmResult success(Boolean success) {
-        this.success = success;
+    public DescribeRangetimeCabinetOriCurrentResult data(Object data) {
+        this.data = data;
         return this;
     }
 

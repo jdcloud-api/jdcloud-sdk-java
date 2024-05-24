@@ -88,6 +88,9 @@ import com.jdcloud.sdk.service.jdccs.client.DescribeBandwidthTrafficsExecutor;
 import com.jdcloud.sdk.service.jdccs.model.DescribeAlarmsRequest;
 import com.jdcloud.sdk.service.jdccs.model.DescribeAlarmsResponse;
 import com.jdcloud.sdk.service.jdccs.client.DescribeAlarmsExecutor;
+import com.jdcloud.sdk.service.jdccs.model.DescribeRangetimeCabinetOriCurrentRequest;
+import com.jdcloud.sdk.service.jdccs.model.DescribeRangetimeCabinetOriCurrentResponse;
+import com.jdcloud.sdk.service.jdccs.client.DescribeRangetimeCabinetOriCurrentExecutor;
 import com.jdcloud.sdk.service.jdccs.model.DescribeBandwidthsRequest;
 import com.jdcloud.sdk.service.jdccs.model.DescribeBandwidthsResponse;
 import com.jdcloud.sdk.service.jdccs.client.DescribeBandwidthsExecutor;
@@ -129,7 +132,7 @@ public class JdccsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.9";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "jdccs.jdcloud-api.com";
     public final static String ServiceName = "jdccs";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -378,6 +381,17 @@ public class JdccsClient extends JdcloudClient {
      */
     public DescribeAlarmsResponse describeAlarms(DescribeAlarmsRequest request) throws JdcloudSdkException {
         return new DescribeAlarmsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 按照时间段查询单个机柜AB路电流-原始数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRangetimeCabinetOriCurrentResponse describeRangetimeCabinetOriCurrent(DescribeRangetimeCabinetOriCurrentRequest request) throws JdcloudSdkException {
+        return new DescribeRangetimeCabinetOriCurrentExecutor().client(this).execute(request);
     }
 
     /**

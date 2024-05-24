@@ -102,6 +102,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     private String alarmId;
 
 
+
     /**
      * get 规则名称
      *
@@ -119,6 +120,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 监控项，bandwidthTrafficIn:上行实时流量 bandwidthTrafficOut:下行实时流量
@@ -138,6 +140,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.metric = metric;
     }
 
+
     /**
      * get 统计周期（单位：分钟）
      *
@@ -155,6 +158,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     public void setPeriod(Integer period) {
         this.period = period;
     }
+
 
     /**
      * get 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min
@@ -174,6 +178,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.statisticMethod = statisticMethod;
     }
 
+
     /**
      * get 计算方式 &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
      *
@@ -191,6 +196,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     public void setOperator(String operator) {
         this.operator = operator;
     }
+
 
     /**
      * get 阈值
@@ -210,6 +216,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.threshold = threshold;
     }
 
+
     /**
      * get 连续多少次后报警
      *
@@ -227,6 +234,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     public void setTimes(Integer times) {
         this.times = times;
     }
+
 
     /**
      * get 通知周期 单位：小时
@@ -246,6 +254,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.noticePeriod = noticePeriod;
     }
 
+
     /**
      * get 规则状态 disabled:禁用 enabled:启用
      *
@@ -263,6 +272,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 通知方式 all:全部 sms：短信 email:邮件
@@ -282,6 +292,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.noticeMethod = noticeMethod;
     }
 
+
     /**
      * get 通知对象用户ID,若多个用逗号分隔
      *
@@ -300,6 +311,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.userId = userId;
     }
 
+
     /**
      * get 通知对象组ID
      *
@@ -317,6 +329,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     public void setGroupId(String groupId) {
         this.groupId = groupId;
     }
+
 
     /**
      * get 报警规则ID
@@ -337,6 +350,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set 规则名称
      *
@@ -346,6 +360,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.name = name;
         return this;
     }
+
 
     /**
      * set 监控项，bandwidthTrafficIn:上行实时流量 bandwidthTrafficOut:下行实时流量
@@ -357,6 +372,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 统计周期（单位：分钟）
      *
@@ -366,6 +382,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.period = period;
         return this;
     }
+
 
     /**
      * set 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min
@@ -377,6 +394,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 计算方式 &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
      *
@@ -386,6 +404,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.operator = operator;
         return this;
     }
+
 
     /**
      * set 阈值
@@ -397,6 +416,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 连续多少次后报警
      *
@@ -406,6 +426,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.times = times;
         return this;
     }
+
 
     /**
      * set 通知周期 单位：小时
@@ -417,6 +438,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 规则状态 disabled:禁用 enabled:启用
      *
@@ -426,6 +448,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.status = status;
         return this;
     }
+
 
     /**
      * set 通知方式 all:全部 sms：短信 email:邮件
@@ -437,6 +460,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 通知对象用户ID,若多个用逗号分隔
      *
@@ -447,6 +471,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 通知对象组ID
      *
@@ -456,6 +481,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.groupId = groupId;
         return this;
     }
+
 
     /**
      * set 报警规则ID

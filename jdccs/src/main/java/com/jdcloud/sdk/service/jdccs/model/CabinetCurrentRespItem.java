@@ -58,6 +58,7 @@ public class CabinetCurrentRespItem  implements java.io.Serializable {
     private Double value;
 
 
+
     /**
      * get 资源ID
      *
@@ -75,6 +76,7 @@ public class CabinetCurrentRespItem  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get UNIX时间戳
@@ -94,6 +96,7 @@ public class CabinetCurrentRespItem  implements java.io.Serializable {
         this.timestamp = timestamp;
     }
 
+
     /**
      * get A路电流
      *
@@ -112,6 +115,7 @@ public class CabinetCurrentRespItem  implements java.io.Serializable {
         this.aValue = aValue;
     }
 
+
     /**
      * get B路电流
      *
@@ -129,6 +133,7 @@ public class CabinetCurrentRespItem  implements java.io.Serializable {
     public void setBValue(Double bValue) {
         this.bValue = bValue;
     }
+
 
     /**
      * get 总电流
@@ -149,6 +154,7 @@ public class CabinetCurrentRespItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 资源ID
      *
@@ -158,6 +164,7 @@ public class CabinetCurrentRespItem  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set UNIX时间戳
@@ -169,6 +176,7 @@ public class CabinetCurrentRespItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set A路电流
      *
@@ -179,6 +187,7 @@ public class CabinetCurrentRespItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set B路电流
      *
@@ -188,6 +197,7 @@ public class CabinetCurrentRespItem  implements java.io.Serializable {
         this.bValue = bValue;
         return this;
     }
+
 
     /**
      * set 总电流

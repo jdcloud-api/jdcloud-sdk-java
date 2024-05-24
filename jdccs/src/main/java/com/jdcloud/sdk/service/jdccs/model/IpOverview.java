@@ -48,6 +48,7 @@ public class IpOverview  implements java.io.Serializable {
     private Integer abnormal;
 
 
+
     /**
      * get 公网IP总数目
      *
@@ -66,6 +67,7 @@ public class IpOverview  implements java.io.Serializable {
         this.sum = sum;
     }
 
+
     /**
      * get 正常IP总数目
      *
@@ -83,6 +85,7 @@ public class IpOverview  implements java.io.Serializable {
     public void setNormal(Integer normal) {
         this.normal = normal;
     }
+
 
     /**
      * get 异常IP总数目
@@ -103,6 +106,7 @@ public class IpOverview  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 公网IP总数目
      *
@@ -113,6 +117,7 @@ public class IpOverview  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 正常IP总数目
      *
@@ -122,6 +127,7 @@ public class IpOverview  implements java.io.Serializable {
         this.normal = normal;
         return this;
     }
+
 
     /**
      * set 异常IP总数目

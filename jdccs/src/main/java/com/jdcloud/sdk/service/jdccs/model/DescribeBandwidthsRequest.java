@@ -72,19 +72,20 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
      * bandwidthId - 带宽实例ID，精确匹配，支持多个
 
      */
+    
     private List<Filter> filters;
-
     /**
      * null
      */
+    
     private List<Sort> sorts;
-
     /**
      * IDC机房ID
      * Required:true
      */
     @Required
     private String idc;
+
 
 
     /**
@@ -105,6 +106,7 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20
      *
@@ -122,6 +124,7 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
@@ -141,6 +144,7 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
         this.lineType = lineType;
     }
 
+
     /**
      * get 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
      *
@@ -158,6 +162,7 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
     public void setChargeType(String chargeType) {
         this.chargeType = chargeType;
     }
+
 
     /**
      * get 带宽（出口）名称
@@ -177,6 +182,7 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
         this.bandwidthName = bandwidthName;
     }
 
+
     /**
      * get 关联的公网IP
      *
@@ -195,43 +201,46 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
         this.relatedIp = relatedIp;
     }
 
-    /**
-     * get bandwidthId - 带宽实例ID，精确匹配，支持多个
 
-     *
-     * @return
-     */
+    /**
+    * get bandwidthId - 带宽实例ID，精确匹配，支持多个
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set bandwidthId - 带宽实例ID，精确匹配，支持多个
+    * set bandwidthId - 带宽实例ID，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
+
     /**
-     * get null
-     *
-     * @return
-     */
+    * get null
+    *
+    * @return
+    */
     public List<Sort> getSorts() {
         return sorts;
     }
 
     /**
-     * set null
-     *
-     * @param sorts
-     */
+    * set null
+    *
+    * @param sorts
+    */
     public void setSorts(List<Sort> sorts) {
         this.sorts = sorts;
     }
+
 
     /**
      * get IDC机房ID
@@ -252,6 +261,7 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 页码, 默认为1
      *
@@ -261,6 +271,7 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小，默认为20
@@ -272,6 +283,7 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      *
@@ -281,6 +293,7 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
         this.lineType = lineType;
         return this;
     }
+
 
     /**
      * set 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
@@ -292,6 +305,7 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 带宽（出口）名称
      *
@@ -301,6 +315,7 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
         this.bandwidthName = bandwidthName;
         return this;
     }
+
 
     /**
      * set 关联的公网IP
@@ -312,26 +327,29 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
         return this;
     }
 
-    /**
-     * set bandwidthId - 带宽实例ID，精确匹配，支持多个
 
-     *
-     * @param filters
-     */
+    /**
+    * set bandwidthId - 带宽实例ID，精确匹配，支持多个
+
+    *
+    * @param filters
+    */
     public DescribeBandwidthsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
-     * set null
-     *
-     * @param sorts
-     */
+    * set null
+    *
+    * @param sorts
+    */
     public DescribeBandwidthsRequest sorts(List<Sort> sorts) {
         this.sorts = sorts;
         return this;
     }
+
 
     /**
      * set IDC机房ID
@@ -342,6 +360,7 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
         this.idc = idc;
         return this;
     }
+
 
 
     /**
@@ -368,5 +387,4 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
         }
         this.sorts.add(sort);
     }
-
 }

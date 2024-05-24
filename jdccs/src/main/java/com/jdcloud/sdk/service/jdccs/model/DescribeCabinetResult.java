@@ -40,6 +40,7 @@ public class DescribeCabinetResult extends JdcloudResult implements java.io.Seri
     private Cabinet cabinet;
 
 
+
     /**
      * get cabinet
      *
@@ -57,6 +58,7 @@ public class DescribeCabinetResult extends JdcloudResult implements java.io.Seri
     public void setCabinet(Cabinet cabinet) {
         this.cabinet = cabinet;
     }
+
 
 
     /**

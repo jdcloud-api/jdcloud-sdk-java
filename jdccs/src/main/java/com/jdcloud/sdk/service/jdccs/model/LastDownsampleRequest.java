@@ -56,6 +56,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     private String metric;
 
 
+
     /**
      * get 资源ID，支持多个resourceId批量查询，每个id用英文竖线分隔
      *
@@ -74,6 +75,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
         this.resourceId = resourceId;
     }
 
+
     /**
      * get IDC机房ID
      *
@@ -91,6 +93,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     public void setIdc(String idc) {
         this.idc = idc;
     }
+
 
     /**
      * get 监控项英文标识(id)
@@ -111,6 +114,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 资源ID，支持多个resourceId批量查询，每个id用英文竖线分隔
      *
@@ -121,6 +125,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set IDC机房ID
      *
@@ -130,6 +135,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
         this.idc = idc;
         return this;
     }
+
 
     /**
      * set 监控项英文标识(id)

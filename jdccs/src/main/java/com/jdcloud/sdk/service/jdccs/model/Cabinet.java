@@ -118,6 +118,7 @@ public class Cabinet  implements java.io.Serializable {
     private Integer billingType;
 
 
+
     /**
      * get 机房英文标识
      *
@@ -135,6 +136,7 @@ public class Cabinet  implements java.io.Serializable {
     public void setIdc(String idc) {
         this.idc = idc;
     }
+
 
     /**
      * get 机房名称
@@ -154,6 +156,7 @@ public class Cabinet  implements java.io.Serializable {
         this.idcName = idcName;
     }
 
+
     /**
      * get 机柜Id
      *
@@ -171,6 +174,7 @@ public class Cabinet  implements java.io.Serializable {
     public void setCabinetId(String cabinetId) {
         this.cabinetId = cabinetId;
     }
+
 
     /**
      * get 机柜编码
@@ -190,6 +194,7 @@ public class Cabinet  implements java.io.Serializable {
         this.cabinetNo = cabinetNo;
     }
 
+
     /**
      * get 房间号
      *
@@ -207,6 +212,7 @@ public class Cabinet  implements java.io.Serializable {
     public void setRoomNo(String roomNo) {
         this.roomNo = roomNo;
     }
+
 
     /**
      * get 机柜空间(U)
@@ -226,6 +232,7 @@ public class Cabinet  implements java.io.Serializable {
         this.cabinetSpace = cabinetSpace;
     }
 
+
     /**
      * get 额定电流(A)
      *
@@ -243,6 +250,7 @@ public class Cabinet  implements java.io.Serializable {
     public void setCabinetPower(Integer cabinetPower) {
         this.cabinetPower = cabinetPower;
     }
+
 
     /**
      * get 机柜类型 formal:正式机柜 reserved:预留机柜
@@ -262,6 +270,7 @@ public class Cabinet  implements java.io.Serializable {
         this.cabinetType = cabinetType;
     }
 
+
     /**
      * get 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
      *
@@ -279,6 +288,7 @@ public class Cabinet  implements java.io.Serializable {
     public void setCabinetOpenStatus(String cabinetOpenStatus) {
         this.cabinetOpenStatus = cabinetOpenStatus;
     }
+
 
     /**
      * get 开通时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
@@ -298,6 +308,7 @@ public class Cabinet  implements java.io.Serializable {
         this.cabinetOpenTime = cabinetOpenTime;
     }
 
+
     /**
      * get 到期时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
@@ -315,6 +326,7 @@ public class Cabinet  implements java.io.Serializable {
     public void setExpireTime(String expireTime) {
         this.expireTime = expireTime;
     }
+
 
     /**
      * get 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
@@ -334,6 +346,7 @@ public class Cabinet  implements java.io.Serializable {
         this.reserveStartTime = reserveStartTime;
     }
 
+
     /**
      * get 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
@@ -351,6 +364,7 @@ public class Cabinet  implements java.io.Serializable {
     public void setReserveEndTime(String reserveEndTime) {
         this.reserveEndTime = reserveEndTime;
     }
+
 
     /**
      * get 设备数量
@@ -370,6 +384,7 @@ public class Cabinet  implements java.io.Serializable {
         this.deviceNum = deviceNum;
     }
 
+
     /**
      * get 占用U数(U)
      *
@@ -388,6 +403,7 @@ public class Cabinet  implements java.io.Serializable {
         this.rackUOccupy = rackUOccupy;
     }
 
+
     /**
      * get 空闲U数(U)
      *
@@ -405,6 +421,7 @@ public class Cabinet  implements java.io.Serializable {
     public void setRackUFree(Integer rackUFree) {
         this.rackUFree = rackUFree;
     }
+
 
     /**
      * get 计费类型 1:按配置 2:按用量 3:包年包月 4:一次性（目前仅支持包年包月）
@@ -425,6 +442,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 机房英文标识
      *
@@ -434,6 +452,7 @@ public class Cabinet  implements java.io.Serializable {
         this.idc = idc;
         return this;
     }
+
 
     /**
      * set 机房名称
@@ -445,6 +464,7 @@ public class Cabinet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 机柜Id
      *
@@ -454,6 +474,7 @@ public class Cabinet  implements java.io.Serializable {
         this.cabinetId = cabinetId;
         return this;
     }
+
 
     /**
      * set 机柜编码
@@ -465,6 +486,7 @@ public class Cabinet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 房间号
      *
@@ -474,6 +496,7 @@ public class Cabinet  implements java.io.Serializable {
         this.roomNo = roomNo;
         return this;
     }
+
 
     /**
      * set 机柜空间(U)
@@ -485,6 +508,7 @@ public class Cabinet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 额定电流(A)
      *
@@ -494,6 +518,7 @@ public class Cabinet  implements java.io.Serializable {
         this.cabinetPower = cabinetPower;
         return this;
     }
+
 
     /**
      * set 机柜类型 formal:正式机柜 reserved:预留机柜
@@ -505,6 +530,7 @@ public class Cabinet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
      *
@@ -514,6 +540,7 @@ public class Cabinet  implements java.io.Serializable {
         this.cabinetOpenStatus = cabinetOpenStatus;
         return this;
     }
+
 
     /**
      * set 开通时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
@@ -525,6 +552,7 @@ public class Cabinet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 到期时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
@@ -534,6 +562,7 @@ public class Cabinet  implements java.io.Serializable {
         this.expireTime = expireTime;
         return this;
     }
+
 
     /**
      * set 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
@@ -545,6 +574,7 @@ public class Cabinet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
@@ -554,6 +584,7 @@ public class Cabinet  implements java.io.Serializable {
         this.reserveEndTime = reserveEndTime;
         return this;
     }
+
 
     /**
      * set 设备数量
@@ -565,6 +596,7 @@ public class Cabinet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 占用U数(U)
      *
@@ -575,6 +607,7 @@ public class Cabinet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 空闲U数(U)
      *
@@ -584,6 +617,7 @@ public class Cabinet  implements java.io.Serializable {
         this.rackUFree = rackUFree;
         return this;
     }
+
 
     /**
      * set 计费类型 1:按配置 2:按用量 3:包年包月 4:一次性（目前仅支持包年包月）
