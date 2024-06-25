@@ -35,6 +35,12 @@ public class Command  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 命令Id
+
+     */
+    private String commandId;
+
+    /**
      * 命令名称，长度为1\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
 
      */
@@ -96,6 +102,27 @@ public class Command  implements java.io.Serializable {
      */
     private String updateTime;
 
+
+
+    /**
+     * get 命令Id
+
+     *
+     * @return
+     */
+    public String getCommandId() {
+        return commandId;
+    }
+
+    /**
+     * set 命令Id
+
+     *
+     * @param commandId
+     */
+    public void setCommandId(String commandId) {
+        this.commandId = commandId;
+    }
 
 
     /**
@@ -320,6 +347,18 @@ public class Command  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
+
+    /**
+     * set 命令Id
+
+     *
+     * @param commandId
+     */
+    public Command commandId(String commandId) {
+        this.commandId = commandId;
+        return this;
+    }
 
 
     /**
