@@ -113,6 +113,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
     private String billTime;
 
 
+
     /**
      * get pin
      *
@@ -130,6 +131,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 名称
@@ -149,6 +151,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 真实名称
      *
@@ -166,6 +169,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
     public void setRealName(String realName) {
         this.realName = realName;
     }
+
 
     /**
      * get serviceCode
@@ -185,6 +189,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get serviceCodeName
      *
@@ -202,6 +207,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
     public void setServiceCodeName(String serviceCodeName) {
         this.serviceCodeName = serviceCodeName;
     }
+
 
     /**
      * get 帐户名
@@ -221,6 +227,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.loginName = loginName;
     }
 
+
     /**
      * get 时间
      *
@@ -238,6 +245,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
     public void setConsumeDate(String consumeDate) {
         this.consumeDate = consumeDate;
     }
+
 
     /**
      * get 优惠前金额
@@ -257,6 +265,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.consumeCount = consumeCount;
     }
 
+
     /**
      * get 现金支付
      *
@@ -274,6 +283,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
     public void setCashPayFeeCount(Number cashPayFeeCount) {
         this.cashPayFeeCount = cashPayFeeCount;
     }
+
 
     /**
      * get 业绩金额
@@ -293,6 +303,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.achievmentCount = achievmentCount;
     }
 
+
     /**
      * get 付费代金卷金额
      *
@@ -310,6 +321,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
     public void setPayCouponFeeCount(Number payCouponFeeCount) {
         this.payCouponFeeCount = payCouponFeeCount;
     }
+
 
     /**
      * get 免费代金卷金额
@@ -329,6 +341,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.freeCouponFeeCount = freeCouponFeeCount;
     }
 
+
     /**
      * get 订单编号
      *
@@ -346,6 +359,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
     public void setOrderId(Number orderId) {
         this.orderId = orderId;
     }
+
 
     /**
      * get 类型
@@ -365,6 +379,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.opType = opType;
     }
 
+
     /**
      * get 类型名称
      *
@@ -382,6 +397,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
     public void setOpTypeName(String opTypeName) {
         this.opTypeName = opTypeName;
     }
+
 
     /**
      * get 创建时间
@@ -402,6 +418,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
     }
 
 
+
     /**
      * set pin
      *
@@ -411,6 +428,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 名称
@@ -422,6 +440,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 真实名称
      *
@@ -431,6 +450,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.realName = realName;
         return this;
     }
+
 
     /**
      * set serviceCode
@@ -442,6 +462,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set serviceCodeName
      *
@@ -451,6 +472,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.serviceCodeName = serviceCodeName;
         return this;
     }
+
 
     /**
      * set 帐户名
@@ -462,6 +484,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 时间
      *
@@ -471,6 +494,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.consumeDate = consumeDate;
         return this;
     }
+
 
     /**
      * set 优惠前金额
@@ -482,6 +506,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 现金支付
      *
@@ -491,6 +516,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.cashPayFeeCount = cashPayFeeCount;
         return this;
     }
+
 
     /**
      * set 业绩金额
@@ -502,6 +528,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 付费代金卷金额
      *
@@ -511,6 +538,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.payCouponFeeCount = payCouponFeeCount;
         return this;
     }
+
 
     /**
      * set 免费代金卷金额
@@ -522,6 +550,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 订单编号
      *
@@ -531,6 +560,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.orderId = orderId;
         return this;
     }
+
 
     /**
      * set 类型
@@ -542,6 +572,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 类型名称
      *
@@ -551,6 +582,7 @@ public class PrePaymentAchievement  implements java.io.Serializable {
         this.opTypeName = opTypeName;
         return this;
     }
+
 
     /**
      * set 创建时间

@@ -42,18 +42,18 @@ public class OrderItemDetail  implements java.io.Serializable {
     /**
      * 变更前资源配置
      */
+    
     private List<ExtraInfo> extraInfoBefore;
-
     /**
      * 变更后资源配置
      */
+    
     private List<ExtraInfo> extraInfoAfter;
-
     /**
      * 商品规格参数
      */
+    
     private List<ExtraInfo> extraInfo;
-
     /**
      * 应付金额（元）
      */
@@ -180,6 +180,7 @@ public class OrderItemDetail  implements java.io.Serializable {
     private Integer resizeFormulaType;
 
 
+
     /**
      * get 价格快照Json
      *
@@ -198,59 +199,63 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.priceSnapshot = priceSnapshot;
     }
 
+
     /**
-     * get 变更前资源配置
-     *
-     * @return
-     */
+    * get 变更前资源配置
+    *
+    * @return
+    */
     public List<ExtraInfo> getExtraInfoBefore() {
         return extraInfoBefore;
     }
 
     /**
-     * set 变更前资源配置
-     *
-     * @param extraInfoBefore
-     */
+    * set 变更前资源配置
+    *
+    * @param extraInfoBefore
+    */
     public void setExtraInfoBefore(List<ExtraInfo> extraInfoBefore) {
         this.extraInfoBefore = extraInfoBefore;
     }
 
+
     /**
-     * get 变更后资源配置
-     *
-     * @return
-     */
+    * get 变更后资源配置
+    *
+    * @return
+    */
     public List<ExtraInfo> getExtraInfoAfter() {
         return extraInfoAfter;
     }
 
     /**
-     * set 变更后资源配置
-     *
-     * @param extraInfoAfter
-     */
+    * set 变更后资源配置
+    *
+    * @param extraInfoAfter
+    */
     public void setExtraInfoAfter(List<ExtraInfo> extraInfoAfter) {
         this.extraInfoAfter = extraInfoAfter;
     }
 
+
     /**
-     * get 商品规格参数
-     *
-     * @return
-     */
+    * get 商品规格参数
+    *
+    * @return
+    */
     public List<ExtraInfo> getExtraInfo() {
         return extraInfo;
     }
 
     /**
-     * set 商品规格参数
-     *
-     * @param extraInfo
-     */
+    * set 商品规格参数
+    *
+    * @param extraInfo
+    */
     public void setExtraInfo(List<ExtraInfo> extraInfo) {
         this.extraInfo = extraInfo;
     }
+
 
     /**
      * get 应付金额（元）
@@ -270,6 +275,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.actualFee = actualFee;
     }
 
+
     /**
      * get 数量
      *
@@ -287,6 +293,7 @@ public class OrderItemDetail  implements java.io.Serializable {
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
+
 
     /**
      * get 续费前资源到期时间
@@ -306,6 +313,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.expireDateBefore = expireDateBefore;
     }
 
+
     /**
      * get 续费后资源到期时间
      *
@@ -323,6 +331,7 @@ public class OrderItemDetail  implements java.io.Serializable {
     public void setExpireDateAfter(String expireDateAfter) {
         this.expireDateAfter = expireDateAfter;
     }
+
 
     /**
      * get 计费时长单位
@@ -342,6 +351,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.unit = unit;
     }
 
+
     /**
      * get 计费时长（购买时长）
      *
@@ -359,6 +369,7 @@ public class OrderItemDetail  implements java.io.Serializable {
     public void setChargeDuration(Integer chargeDuration) {
         this.chargeDuration = chargeDuration;
     }
+
 
     /**
      * get 计费类型
@@ -378,6 +389,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.chargeMode = chargeMode;
     }
 
+
     /**
      * get 订单总额（元）
      *
@@ -395,6 +407,7 @@ public class OrderItemDetail  implements java.io.Serializable {
     public void setTotalFee(Number totalFee) {
         this.totalFee = totalFee;
     }
+
 
     /**
      * get 资源类型
@@ -414,6 +427,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.serviceName = serviceName;
     }
 
+
     /**
      * get 站点类型 0：主站,1：国际站,2：云市场
      *
@@ -431,6 +445,7 @@ public class OrderItemDetail  implements java.io.Serializable {
     public void setSiteType(String siteType) {
         this.siteType = siteType;
     }
+
 
     /**
      * get 下单时间
@@ -450,6 +465,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 订单商品状态：创建中、成功、失败
      *
@@ -467,6 +483,7 @@ public class OrderItemDetail  implements java.io.Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 资源id
@@ -486,6 +503,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.itemId = itemId;
     }
 
+
     /**
      * get 资源名称
      *
@@ -503,6 +521,7 @@ public class OrderItemDetail  implements java.io.Serializable {
     public void setItemName(String itemName) {
         this.itemName = itemName;
     }
+
 
     /**
      * get 计算公式（配置细项）
@@ -522,6 +541,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.formula = formula;
     }
 
+
     /**
      * get 订单编号
      *
@@ -539,6 +559,7 @@ public class OrderItemDetail  implements java.io.Serializable {
     public void setOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
     }
+
 
     /**
      * get 实际支付总金额
@@ -558,6 +579,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.allActualFee = allActualFee;
     }
 
+
     /**
      * get 备注
      *
@@ -575,6 +597,7 @@ public class OrderItemDetail  implements java.io.Serializable {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
 
     /**
      * get 现金支付
@@ -594,6 +617,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.moneyPay = moneyPay;
     }
 
+
     /**
      * get 余额支付
      *
@@ -611,6 +635,7 @@ public class OrderItemDetail  implements java.io.Serializable {
     public void setBalancePay(Number balancePay) {
         this.balancePay = balancePay;
     }
+
 
     /**
      * get 已退款金额
@@ -630,6 +655,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.refundFee = refundFee;
     }
 
+
     /**
      * get 订单计费类型：按配置、包年包月、按用量actualFee
      *
@@ -647,6 +673,7 @@ public class OrderItemDetail  implements java.io.Serializable {
     public void setChargeModeInfo(Integer chargeModeInfo) {
         this.chargeModeInfo = chargeModeInfo;
     }
+
 
     /**
      * get 退款状态 RefundStatusEnum 0,申请退款 1,退款审核中 2,已退款 3,已取消 4,退款失败 5,财务审批驳回 6,财务审批通过
@@ -666,6 +693,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.deleteStatus = deleteStatus;
     }
 
+
     /**
      * get 代金券金额
      *
@@ -683,6 +711,7 @@ public class OrderItemDetail  implements java.io.Serializable {
     public void setFavorableFee(Number favorableFee) {
         this.favorableFee = favorableFee;
     }
+
 
     /**
      * get 变配明细
@@ -703,6 +732,7 @@ public class OrderItemDetail  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 价格快照Json
      *
@@ -713,35 +743,39 @@ public class OrderItemDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 变更前资源配置
-     *
-     * @param extraInfoBefore
-     */
+    * set 变更前资源配置
+    *
+    * @param extraInfoBefore
+    */
     public OrderItemDetail extraInfoBefore(List<ExtraInfo> extraInfoBefore) {
         this.extraInfoBefore = extraInfoBefore;
         return this;
     }
 
+
     /**
-     * set 变更后资源配置
-     *
-     * @param extraInfoAfter
-     */
+    * set 变更后资源配置
+    *
+    * @param extraInfoAfter
+    */
     public OrderItemDetail extraInfoAfter(List<ExtraInfo> extraInfoAfter) {
         this.extraInfoAfter = extraInfoAfter;
         return this;
     }
 
+
     /**
-     * set 商品规格参数
-     *
-     * @param extraInfo
-     */
+    * set 商品规格参数
+    *
+    * @param extraInfo
+    */
     public OrderItemDetail extraInfo(List<ExtraInfo> extraInfo) {
         this.extraInfo = extraInfo;
         return this;
     }
+
 
     /**
      * set 应付金额（元）
@@ -753,6 +787,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数量
      *
@@ -762,6 +797,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.quantity = quantity;
         return this;
     }
+
 
     /**
      * set 续费前资源到期时间
@@ -773,6 +809,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 续费后资源到期时间
      *
@@ -782,6 +819,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.expireDateAfter = expireDateAfter;
         return this;
     }
+
 
     /**
      * set 计费时长单位
@@ -793,6 +831,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费时长（购买时长）
      *
@@ -802,6 +841,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.chargeDuration = chargeDuration;
         return this;
     }
+
 
     /**
      * set 计费类型
@@ -813,6 +853,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 订单总额（元）
      *
@@ -822,6 +863,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.totalFee = totalFee;
         return this;
     }
+
 
     /**
      * set 资源类型
@@ -833,6 +875,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 站点类型 0：主站,1：国际站,2：云市场
      *
@@ -842,6 +885,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.siteType = siteType;
         return this;
     }
+
 
     /**
      * set 下单时间
@@ -853,6 +897,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 订单商品状态：创建中、成功、失败
      *
@@ -862,6 +907,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 资源id
@@ -873,6 +919,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源名称
      *
@@ -882,6 +929,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.itemName = itemName;
         return this;
     }
+
 
     /**
      * set 计算公式（配置细项）
@@ -893,6 +941,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 订单编号
      *
@@ -902,6 +951,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.orderNumber = orderNumber;
         return this;
     }
+
 
     /**
      * set 实际支付总金额
@@ -913,6 +963,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 备注
      *
@@ -922,6 +973,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.remark = remark;
         return this;
     }
+
 
     /**
      * set 现金支付
@@ -933,6 +985,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 余额支付
      *
@@ -942,6 +995,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.balancePay = balancePay;
         return this;
     }
+
 
     /**
      * set 已退款金额
@@ -953,6 +1007,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 订单计费类型：按配置、包年包月、按用量actualFee
      *
@@ -962,6 +1017,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.chargeModeInfo = chargeModeInfo;
         return this;
     }
+
 
     /**
      * set 退款状态 RefundStatusEnum 0,申请退款 1,退款审核中 2,已退款 3,已取消 4,退款失败 5,财务审批驳回 6,财务审批通过
@@ -973,6 +1029,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 代金券金额
      *
@@ -983,6 +1040,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 变配明细
      *
@@ -992,6 +1050,7 @@ public class OrderItemDetail  implements java.io.Serializable {
         this.resizeFormulaType = resizeFormulaType;
         return this;
     }
+
 
 
     /**
@@ -1029,5 +1088,4 @@ public class OrderItemDetail  implements java.io.Serializable {
         }
         this.extraInfo.add(extraInfo);
     }
-
 }

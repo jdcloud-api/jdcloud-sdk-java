@@ -123,6 +123,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
     private String itemNameLike;
 
 
+
     /**
      * get id
      *
@@ -140,6 +141,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 项目编码
@@ -159,6 +161,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.itemId = itemId;
     }
 
+
     /**
      * get 项目名称
      *
@@ -176,6 +179,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
     public void setItemName(String itemName) {
         this.itemName = itemName;
     }
+
 
     /**
      * get 部门ID
@@ -195,6 +199,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.deptId = deptId;
     }
 
+
     /**
      * get 部门名称
      *
@@ -212,6 +217,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
     public void setDeptName(String deptName) {
         this.deptName = deptName;
     }
+
 
     /**
      * get 渠道商类型
@@ -231,6 +237,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.distributorType = distributorType;
     }
 
+
     /**
      * get 返还类型
      *
@@ -248,6 +255,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
     public void setReturnType(Integer returnType) {
         this.returnType = returnType;
     }
+
 
     /**
      * get 返还依据
@@ -267,6 +275,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.returnRuleType = returnRuleType;
     }
 
+
     /**
      * get 项目条件
      *
@@ -284,6 +293,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
     public void setConditionItem(String conditionItem) {
         this.conditionItem = conditionItem;
     }
+
 
     /**
      * get 周期类型
@@ -303,6 +313,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.circleType = circleType;
     }
 
+
     /**
      * get 周期名称
      *
@@ -320,6 +331,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
     public void setCircleName(String circleName) {
         this.circleName = circleName;
     }
+
 
     /**
      * get 说明
@@ -339,6 +351,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.remark = remark;
     }
 
+
     /**
      * get 创建时间
      *
@@ -356,6 +369,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 创建人
@@ -375,6 +389,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.createUser = createUser;
     }
 
+
     /**
      * get 修改时间
      *
@@ -392,6 +407,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 修改人
@@ -411,6 +427,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.updateUser = updateUser;
     }
 
+
     /**
      * get 是否删除0未删除,1已删除
      *
@@ -428,6 +445,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
     public void setYn(Integer yn) {
         this.yn = yn;
     }
+
 
     /**
      * get 项目名称
@@ -448,6 +466,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -457,6 +476,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 项目编码
@@ -468,6 +488,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 项目名称
      *
@@ -477,6 +498,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.itemName = itemName;
         return this;
     }
+
 
     /**
      * set 部门ID
@@ -488,6 +510,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 部门名称
      *
@@ -497,6 +520,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.deptName = deptName;
         return this;
     }
+
 
     /**
      * set 渠道商类型
@@ -508,6 +532,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 返还类型
      *
@@ -517,6 +542,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.returnType = returnType;
         return this;
     }
+
 
     /**
      * set 返还依据
@@ -528,6 +554,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 项目条件
      *
@@ -537,6 +564,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.conditionItem = conditionItem;
         return this;
     }
+
 
     /**
      * set 周期类型
@@ -548,6 +576,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 周期名称
      *
@@ -557,6 +586,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.circleName = circleName;
         return this;
     }
+
 
     /**
      * set 说明
@@ -568,6 +598,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -577,6 +608,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 创建人
@@ -588,6 +620,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -597,6 +630,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 修改人
@@ -608,6 +642,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否删除0未删除,1已删除
      *
@@ -617,6 +652,7 @@ public class ReturnItemDTO  implements java.io.Serializable {
         this.yn = yn;
         return this;
     }
+
 
     /**
      * set 项目名称

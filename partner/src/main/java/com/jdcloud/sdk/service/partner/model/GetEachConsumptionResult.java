@@ -45,6 +45,7 @@ public class GetEachConsumptionResult extends JdcloudResult implements java.io.S
     /**
      * result
      */
+    
     private List<SummaryBill> result;
 
 
@@ -66,23 +67,25 @@ public class GetEachConsumptionResult extends JdcloudResult implements java.io.S
         this.pagination = pagination;
     }
 
+
     /**
-     * get result
-     *
-     * @return
-     */
+    * get result
+    *
+    * @return
+    */
     public List<SummaryBill> getResult() {
         return result;
     }
 
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public void setResult(List<SummaryBill> result) {
         this.result = result;
     }
+
 
 
     /**
@@ -95,15 +98,17 @@ public class GetEachConsumptionResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public GetEachConsumptionResult result(List<SummaryBill> result) {
         this.result = result;
         return this;
     }
+
 
 
     /**
@@ -117,5 +122,4 @@ public class GetEachConsumptionResult extends JdcloudResult implements java.io.S
         }
         this.result.add(result);
     }
-
 }

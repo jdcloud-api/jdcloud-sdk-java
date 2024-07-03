@@ -61,6 +61,11 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     private Integer distributorType;
 
     /**
+     * pin
+     */
+    private String pin;
+
+    /**
      * month
      */
     private String month;
@@ -79,6 +84,16 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
      * 结束时间
      */
     private String billEnd;
+
+    /**
+     * 产品类型(0公有云1云市场2Elite)
+     */
+    private String productType;
+
+    /**
+     * 产品类型名称(公有云 云市场 Elite)
+     */
+    private String productTypeName;
 
     /**
      * 周期类型
@@ -178,12 +193,18 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     /**
      * 返还单明细
      */
+    
     private List<ReturnBillDetailResult> returnBillDetailList;
-
     /**
      * 返还单状态
      */
+    
     private List<ReturnBillStatusResult> returnBillStatusList;
+    /**
+     * 调账记录
+     */
+    
+    private List<DistributorBillReturnRecord> distributorBillReturnRecordList;
 
 
     /**
@@ -204,6 +225,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.id = id;
     }
 
+
     /**
      * get 返还单号
      *
@@ -221,6 +243,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     public void setRetrunBillId(String retrunBillId) {
         this.retrunBillId = retrunBillId;
     }
+
 
     /**
      * get 服务商ID
@@ -240,6 +263,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.distributorId = distributorId;
     }
 
+
     /**
      * get 服务商名称
      *
@@ -257,6 +281,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     public void setDistributorName(String distributorName) {
         this.distributorName = distributorName;
     }
+
 
     /**
      * get 渠道商类型
@@ -276,6 +301,26 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.distributorType = distributorType;
     }
 
+
+    /**
+     * get pin
+     *
+     * @return
+     */
+    public String getPin() {
+        return pin;
+    }
+
+    /**
+     * set pin
+     *
+     * @param pin
+     */
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
+
+
     /**
      * get month
      *
@@ -293,6 +338,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     public void setMonth(String month) {
         this.month = month;
     }
+
 
     /**
      * get 生成时间
@@ -312,6 +358,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.generateTime = generateTime;
     }
 
+
     /**
      * get 开始时间
      *
@@ -329,6 +376,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     public void setBillBegin(String billBegin) {
         this.billBegin = billBegin;
     }
+
 
     /**
      * get 结束时间
@@ -348,6 +396,45 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.billEnd = billEnd;
     }
 
+
+    /**
+     * get 产品类型(0公有云1云市场2Elite)
+     *
+     * @return
+     */
+    public String getProductType() {
+        return productType;
+    }
+
+    /**
+     * set 产品类型(0公有云1云市场2Elite)
+     *
+     * @param productType
+     */
+    public void setProductType(String productType) {
+        this.productType = productType;
+    }
+
+
+    /**
+     * get 产品类型名称(公有云 云市场 Elite)
+     *
+     * @return
+     */
+    public String getProductTypeName() {
+        return productTypeName;
+    }
+
+    /**
+     * set 产品类型名称(公有云 云市场 Elite)
+     *
+     * @param productTypeName
+     */
+    public void setProductTypeName(String productTypeName) {
+        this.productTypeName = productTypeName;
+    }
+
+
     /**
      * get 周期类型
      *
@@ -365,6 +452,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     public void setCircleType(Integer circleType) {
         this.circleType = circleType;
     }
+
 
     /**
      * get 返还类型
@@ -384,6 +472,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.returnType = returnType;
     }
 
+
     /**
      * get 返还类型名称
      *
@@ -401,6 +490,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     public void setReturnTypeName(String returnTypeName) {
         this.returnTypeName = returnTypeName;
     }
+
 
     /**
      * get 返还金额
@@ -420,6 +510,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.returnMount = returnMount;
     }
 
+
     /**
      * get 返还方式
      *
@@ -437,6 +528,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     public void setReturnMode(Integer returnMode) {
         this.returnMode = returnMode;
     }
+
 
     /**
      * get 返还方式
@@ -456,6 +548,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.returnModeName = returnModeName;
     }
 
+
     /**
      * get 合同主体
      *
@@ -473,6 +566,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     public void setContractSubject(String contractSubject) {
         this.contractSubject = contractSubject;
     }
+
 
     /**
      * get 次数
@@ -492,6 +586,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.redoQty = redoQty;
     }
 
+
     /**
      * get 状态
      *
@@ -509,6 +604,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 状态名称
@@ -528,6 +624,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.statusName = statusName;
     }
 
+
     /**
      * get 驳回原因
      *
@@ -545,6 +642,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     public void setReason(String reason) {
         this.reason = reason;
     }
+
 
     /**
      * get 部门ID
@@ -564,6 +662,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.deptId = deptId;
     }
 
+
     /**
      * get 部门名称
      *
@@ -581,6 +680,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     public void setDeptName(String deptName) {
         this.deptName = deptName;
     }
+
 
     /**
      * get 返还明细展示类型
@@ -600,6 +700,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.returnDetailRuleType = returnDetailRuleType;
     }
 
+
     /**
      * get 创建时间
      *
@@ -617,6 +718,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 创建人
@@ -636,6 +738,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.createUser = createUser;
     }
 
+
     /**
      * get 修改时间
      *
@@ -653,6 +756,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 修改人
@@ -672,6 +776,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.updateUser = updateUser;
     }
 
+
     /**
      * get 是否删除0未删除,1已删除
      *
@@ -690,41 +795,63 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.yn = yn;
     }
 
+
     /**
-     * get 返还单明细
-     *
-     * @return
-     */
+    * get 返还单明细
+    *
+    * @return
+    */
     public List<ReturnBillDetailResult> getReturnBillDetailList() {
         return returnBillDetailList;
     }
 
     /**
-     * set 返还单明细
-     *
-     * @param returnBillDetailList
-     */
+    * set 返还单明细
+    *
+    * @param returnBillDetailList
+    */
     public void setReturnBillDetailList(List<ReturnBillDetailResult> returnBillDetailList) {
         this.returnBillDetailList = returnBillDetailList;
     }
 
+
     /**
-     * get 返还单状态
-     *
-     * @return
-     */
+    * get 返还单状态
+    *
+    * @return
+    */
     public List<ReturnBillStatusResult> getReturnBillStatusList() {
         return returnBillStatusList;
     }
 
     /**
-     * set 返还单状态
-     *
-     * @param returnBillStatusList
-     */
+    * set 返还单状态
+    *
+    * @param returnBillStatusList
+    */
     public void setReturnBillStatusList(List<ReturnBillStatusResult> returnBillStatusList) {
         this.returnBillStatusList = returnBillStatusList;
     }
+
+
+    /**
+    * get 调账记录
+    *
+    * @return
+    */
+    public List<DistributorBillReturnRecord> getDistributorBillReturnRecordList() {
+        return distributorBillReturnRecordList;
+    }
+
+    /**
+    * set 调账记录
+    *
+    * @param distributorBillReturnRecordList
+    */
+    public void setDistributorBillReturnRecordList(List<DistributorBillReturnRecord> distributorBillReturnRecordList) {
+        this.distributorBillReturnRecordList = distributorBillReturnRecordList;
+    }
+
 
 
     /**
@@ -737,6 +864,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 返还单号
      *
@@ -746,6 +874,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.retrunBillId = retrunBillId;
         return this;
     }
+
 
     /**
      * set 服务商ID
@@ -757,6 +886,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 服务商名称
      *
@@ -766,6 +896,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.distributorName = distributorName;
         return this;
     }
+
 
     /**
      * set 渠道商类型
@@ -777,6 +908,18 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
+    /**
+     * set pin
+     *
+     * @param pin
+     */
+    public ReturnBillResult pin(String pin) {
+        this.pin = pin;
+        return this;
+    }
+
+
     /**
      * set month
      *
@@ -786,6 +929,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.month = month;
         return this;
     }
+
 
     /**
      * set 生成时间
@@ -797,6 +941,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 开始时间
      *
@@ -806,6 +951,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.billBegin = billBegin;
         return this;
     }
+
 
     /**
      * set 结束时间
@@ -817,6 +963,29 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
+    /**
+     * set 产品类型(0公有云1云市场2Elite)
+     *
+     * @param productType
+     */
+    public ReturnBillResult productType(String productType) {
+        this.productType = productType;
+        return this;
+    }
+
+
+    /**
+     * set 产品类型名称(公有云 云市场 Elite)
+     *
+     * @param productTypeName
+     */
+    public ReturnBillResult productTypeName(String productTypeName) {
+        this.productTypeName = productTypeName;
+        return this;
+    }
+
+
     /**
      * set 周期类型
      *
@@ -826,6 +995,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.circleType = circleType;
         return this;
     }
+
 
     /**
      * set 返还类型
@@ -837,6 +1007,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 返还类型名称
      *
@@ -846,6 +1017,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.returnTypeName = returnTypeName;
         return this;
     }
+
 
     /**
      * set 返还金额
@@ -857,6 +1029,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 返还方式
      *
@@ -866,6 +1039,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.returnMode = returnMode;
         return this;
     }
+
 
     /**
      * set 返还方式
@@ -877,6 +1051,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 合同主体
      *
@@ -886,6 +1061,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.contractSubject = contractSubject;
         return this;
     }
+
 
     /**
      * set 次数
@@ -897,6 +1073,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 状态
      *
@@ -906,6 +1083,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.status = status;
         return this;
     }
+
 
     /**
      * set 状态名称
@@ -917,6 +1095,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 驳回原因
      *
@@ -926,6 +1105,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.reason = reason;
         return this;
     }
+
 
     /**
      * set 部门ID
@@ -937,6 +1117,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 部门名称
      *
@@ -946,6 +1127,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.deptName = deptName;
         return this;
     }
+
 
     /**
      * set 返还明细展示类型
@@ -957,6 +1139,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -966,6 +1149,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 创建人
@@ -977,6 +1161,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -986,6 +1171,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 修改人
@@ -997,6 +1183,7 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 是否删除0未删除,1已删除
      *
@@ -1007,25 +1194,39 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
-     * set 返还单明细
-     *
-     * @param returnBillDetailList
-     */
+    * set 返还单明细
+    *
+    * @param returnBillDetailList
+    */
     public ReturnBillResult returnBillDetailList(List<ReturnBillDetailResult> returnBillDetailList) {
         this.returnBillDetailList = returnBillDetailList;
         return this;
     }
 
+
     /**
-     * set 返还单状态
-     *
-     * @param returnBillStatusList
-     */
+    * set 返还单状态
+    *
+    * @param returnBillStatusList
+    */
     public ReturnBillResult returnBillStatusList(List<ReturnBillStatusResult> returnBillStatusList) {
         this.returnBillStatusList = returnBillStatusList;
         return this;
     }
+
+
+    /**
+    * set 调账记录
+    *
+    * @param distributorBillReturnRecordList
+    */
+    public ReturnBillResult distributorBillReturnRecordList(List<DistributorBillReturnRecord> distributorBillReturnRecordList) {
+        this.distributorBillReturnRecordList = distributorBillReturnRecordList;
+        return this;
+    }
+
 
 
     /**
@@ -1052,4 +1253,15 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
         this.returnBillStatusList.add(returnBillStatusList);
     }
 
+    /**
+     * add item to 调账记录
+     *
+     * @param distributorBillReturnRecordList
+     */
+    public void addDistributorBillReturnRecordList(DistributorBillReturnRecord distributorBillReturnRecordList) {
+        if (this.distributorBillReturnRecordList == null) {
+            this.distributorBillReturnRecordList = new ArrayList<>();
+        }
+        this.distributorBillReturnRecordList.add(distributorBillReturnRecordList);
+    }
 }

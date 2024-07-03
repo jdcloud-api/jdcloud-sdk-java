@@ -93,6 +93,7 @@ public class ProductDTO  implements java.io.Serializable {
     private String message;
 
 
+
     /**
      * get ID
      *
@@ -110,6 +111,7 @@ public class ProductDTO  implements java.io.Serializable {
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 产品类型
@@ -129,6 +131,7 @@ public class ProductDTO  implements java.io.Serializable {
         this.productType = productType;
     }
 
+
     /**
      * get 产品ID
      *
@@ -146,6 +149,7 @@ public class ProductDTO  implements java.io.Serializable {
     public void setProductId(String productId) {
         this.productId = productId;
     }
+
 
     /**
      * get 产品名称
@@ -165,6 +169,7 @@ public class ProductDTO  implements java.io.Serializable {
         this.productName = productName;
     }
 
+
     /**
      * get 状态
      *
@@ -182,6 +187,7 @@ public class ProductDTO  implements java.io.Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 备注
@@ -201,6 +207,7 @@ public class ProductDTO  implements java.io.Serializable {
         this.remark = remark;
     }
 
+
     /**
      * get 创建时间
      *
@@ -218,6 +225,7 @@ public class ProductDTO  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 创建人
@@ -237,6 +245,7 @@ public class ProductDTO  implements java.io.Serializable {
         this.createUser = createUser;
     }
 
+
     /**
      * get 修改时间
      *
@@ -254,6 +263,7 @@ public class ProductDTO  implements java.io.Serializable {
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 修改人
@@ -273,6 +283,7 @@ public class ProductDTO  implements java.io.Serializable {
         this.updateUser = updateUser;
     }
 
+
     /**
      * get 返回编码0成功-1失败
      *
@@ -290,6 +301,7 @@ public class ProductDTO  implements java.io.Serializable {
     public void setCode(Integer code) {
         this.code = code;
     }
+
 
     /**
      * get 返回消息
@@ -310,6 +322,7 @@ public class ProductDTO  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ID
      *
@@ -319,6 +332,7 @@ public class ProductDTO  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 产品类型
@@ -330,6 +344,7 @@ public class ProductDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品ID
      *
@@ -339,6 +354,7 @@ public class ProductDTO  implements java.io.Serializable {
         this.productId = productId;
         return this;
     }
+
 
     /**
      * set 产品名称
@@ -350,6 +366,7 @@ public class ProductDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态
      *
@@ -359,6 +376,7 @@ public class ProductDTO  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 备注
@@ -370,6 +388,7 @@ public class ProductDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -379,6 +398,7 @@ public class ProductDTO  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 创建人
@@ -390,6 +410,7 @@ public class ProductDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -399,6 +420,7 @@ public class ProductDTO  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 修改人
@@ -410,6 +432,7 @@ public class ProductDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 返回编码0成功-1失败
      *
@@ -419,6 +442,7 @@ public class ProductDTO  implements java.io.Serializable {
         this.code = code;
         return this;
     }
+
 
     /**
      * set 返回消息

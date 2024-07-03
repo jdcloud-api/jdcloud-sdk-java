@@ -38,31 +38,33 @@ public class ProductDTORequest extends JdcloudRequest implements java.io.Seriali
     /**
      * 产品列表
      */
+    
     private List<ProductDTO> productDTOList;
-
     /**
      * 操作类型
      */
     private Integer cmd;
 
 
+
     /**
-     * get 产品列表
-     *
-     * @return
-     */
+    * get 产品列表
+    *
+    * @return
+    */
     public List<ProductDTO> getProductDTOList() {
         return productDTOList;
     }
 
     /**
-     * set 产品列表
-     *
-     * @param productDTOList
-     */
+    * set 产品列表
+    *
+    * @param productDTOList
+    */
     public void setProductDTOList(List<ProductDTO> productDTOList) {
         this.productDTOList = productDTOList;
     }
+
 
     /**
      * get 操作类型
@@ -83,15 +85,17 @@ public class ProductDTORequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
-     * set 产品列表
-     *
-     * @param productDTOList
-     */
+    * set 产品列表
+    *
+    * @param productDTOList
+    */
     public ProductDTORequest productDTOList(List<ProductDTO> productDTOList) {
         this.productDTOList = productDTOList;
         return this;
     }
+
 
     /**
      * set 操作类型
@@ -102,6 +106,7 @@ public class ProductDTORequest extends JdcloudRequest implements java.io.Seriali
         this.cmd = cmd;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class ProductDTORequest extends JdcloudRequest implements java.io.Seriali
         }
         this.productDTOList.add(productDTOList);
     }
-
 }

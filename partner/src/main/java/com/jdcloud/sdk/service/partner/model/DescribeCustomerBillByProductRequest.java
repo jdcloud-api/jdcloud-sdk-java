@@ -75,6 +75,7 @@ public class DescribeCustomerBillByProductRequest extends JdcloudRequest impleme
     private String regionId;
 
 
+
     /**
      * get pin
      *
@@ -92,6 +93,7 @@ public class DescribeCustomerBillByProductRequest extends JdcloudRequest impleme
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 按月查询开始时间（yyyy-MM-dd）,不可跨月
@@ -111,6 +113,7 @@ public class DescribeCustomerBillByProductRequest extends JdcloudRequest impleme
         this.startTime = startTime;
     }
 
+
     /**
      * get 按月查询结束时间（yyyy-MM-dd）,不可跨月
      *
@@ -128,6 +131,7 @@ public class DescribeCustomerBillByProductRequest extends JdcloudRequest impleme
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get 每页条数,不超过100
@@ -147,6 +151,7 @@ public class DescribeCustomerBillByProductRequest extends JdcloudRequest impleme
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 第几页
      *
@@ -164,6 +169,7 @@ public class DescribeCustomerBillByProductRequest extends JdcloudRequest impleme
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
     }
+
 
     /**
      * get regionId
@@ -184,6 +190,7 @@ public class DescribeCustomerBillByProductRequest extends JdcloudRequest impleme
     }
 
 
+
     /**
      * set pin
      *
@@ -193,6 +200,7 @@ public class DescribeCustomerBillByProductRequest extends JdcloudRequest impleme
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 按月查询开始时间（yyyy-MM-dd）,不可跨月
@@ -204,6 +212,7 @@ public class DescribeCustomerBillByProductRequest extends JdcloudRequest impleme
         return this;
     }
 
+
     /**
      * set 按月查询结束时间（yyyy-MM-dd）,不可跨月
      *
@@ -213,6 +222,7 @@ public class DescribeCustomerBillByProductRequest extends JdcloudRequest impleme
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set 每页条数,不超过100
@@ -224,6 +234,7 @@ public class DescribeCustomerBillByProductRequest extends JdcloudRequest impleme
         return this;
     }
 
+
     /**
      * set 第几页
      *
@@ -233,6 +244,7 @@ public class DescribeCustomerBillByProductRequest extends JdcloudRequest impleme
         this.pageIndex = pageIndex;
         return this;
     }
+
 
     /**
      * set regionId

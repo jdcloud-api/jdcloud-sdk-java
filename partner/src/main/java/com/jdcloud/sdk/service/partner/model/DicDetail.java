@@ -108,6 +108,7 @@ public class DicDetail  implements java.io.Serializable {
     private Integer yn;
 
 
+
     /**
      * get ID
      *
@@ -125,6 +126,7 @@ public class DicDetail  implements java.io.Serializable {
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 字典类型
@@ -144,6 +146,7 @@ public class DicDetail  implements java.io.Serializable {
         this.codeType = codeType;
     }
 
+
     /**
      * get 字典编码
      *
@@ -161,6 +164,7 @@ public class DicDetail  implements java.io.Serializable {
     public void setCode(String code) {
         this.code = code;
     }
+
 
     /**
      * get 字典编码名称
@@ -180,6 +184,7 @@ public class DicDetail  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 字典编码值
      *
@@ -197,6 +202,7 @@ public class DicDetail  implements java.io.Serializable {
     public void setValue(String value) {
         this.value = value;
     }
+
 
     /**
      * get null
@@ -216,6 +222,7 @@ public class DicDetail  implements java.io.Serializable {
         this.useFlag = useFlag;
     }
 
+
     /**
      * get 系统类型
      *
@@ -233,6 +240,7 @@ public class DicDetail  implements java.io.Serializable {
     public void setSystemType(String systemType) {
         this.systemType = systemType;
     }
+
 
     /**
      * get 引用值
@@ -252,6 +260,7 @@ public class DicDetail  implements java.io.Serializable {
         this.refValue = refValue;
     }
 
+
     /**
      * get 顺序
      *
@@ -269,6 +278,7 @@ public class DicDetail  implements java.io.Serializable {
     public void setSeq(Integer seq) {
         this.seq = seq;
     }
+
 
     /**
      * get 字典说明
@@ -288,6 +298,7 @@ public class DicDetail  implements java.io.Serializable {
         this.remark = remark;
     }
 
+
     /**
      * get 创建时间
      *
@@ -305,6 +316,7 @@ public class DicDetail  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 创建人
@@ -324,6 +336,7 @@ public class DicDetail  implements java.io.Serializable {
         this.createUser = createUser;
     }
 
+
     /**
      * get 修改时间
      *
@@ -342,6 +355,7 @@ public class DicDetail  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 修改人
      *
@@ -359,6 +373,7 @@ public class DicDetail  implements java.io.Serializable {
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
+
 
     /**
      * get 是否删除0未删除,1已删除
@@ -379,6 +394,7 @@ public class DicDetail  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ID
      *
@@ -388,6 +404,7 @@ public class DicDetail  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 字典类型
@@ -399,6 +416,7 @@ public class DicDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 字典编码
      *
@@ -408,6 +426,7 @@ public class DicDetail  implements java.io.Serializable {
         this.code = code;
         return this;
     }
+
 
     /**
      * set 字典编码名称
@@ -419,6 +438,7 @@ public class DicDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 字典编码值
      *
@@ -428,6 +448,7 @@ public class DicDetail  implements java.io.Serializable {
         this.value = value;
         return this;
     }
+
 
     /**
      * set null
@@ -439,6 +460,7 @@ public class DicDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 系统类型
      *
@@ -448,6 +470,7 @@ public class DicDetail  implements java.io.Serializable {
         this.systemType = systemType;
         return this;
     }
+
 
     /**
      * set 引用值
@@ -459,6 +482,7 @@ public class DicDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 顺序
      *
@@ -468,6 +492,7 @@ public class DicDetail  implements java.io.Serializable {
         this.seq = seq;
         return this;
     }
+
 
     /**
      * set 字典说明
@@ -479,6 +504,7 @@ public class DicDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -488,6 +514,7 @@ public class DicDetail  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 创建人
@@ -499,6 +526,7 @@ public class DicDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -509,6 +537,7 @@ public class DicDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改人
      *
@@ -518,6 +547,7 @@ public class DicDetail  implements java.io.Serializable {
         this.updateUser = updateUser;
         return this;
     }
+
 
     /**
      * set 是否删除0未删除,1已删除

@@ -75,6 +75,7 @@ public class GetEachConsumptionRequest extends JdcloudRequest implements java.io
     private String regionId;
 
 
+
     /**
      * get 按月查询开始时间（yyyy/MM/dd）
      *
@@ -92,6 +93,7 @@ public class GetEachConsumptionRequest extends JdcloudRequest implements java.io
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 按月查询结束时间（yyyy/MM/dd）
@@ -111,6 +113,7 @@ public class GetEachConsumptionRequest extends JdcloudRequest implements java.io
         this.endTime = endTime;
     }
 
+
     /**
      * get pin
      *
@@ -128,6 +131,7 @@ public class GetEachConsumptionRequest extends JdcloudRequest implements java.io
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 每页条数
@@ -147,6 +151,7 @@ public class GetEachConsumptionRequest extends JdcloudRequest implements java.io
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 第几页
      *
@@ -164,6 +169,7 @@ public class GetEachConsumptionRequest extends JdcloudRequest implements java.io
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
     }
+
 
     /**
      * get regionId
@@ -184,6 +190,7 @@ public class GetEachConsumptionRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 按月查询开始时间（yyyy/MM/dd）
      *
@@ -193,6 +200,7 @@ public class GetEachConsumptionRequest extends JdcloudRequest implements java.io
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 按月查询结束时间（yyyy/MM/dd）
@@ -204,6 +212,7 @@ public class GetEachConsumptionRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set pin
      *
@@ -213,6 +222,7 @@ public class GetEachConsumptionRequest extends JdcloudRequest implements java.io
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 每页条数
@@ -224,6 +234,7 @@ public class GetEachConsumptionRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 第几页
      *
@@ -233,6 +244,7 @@ public class GetEachConsumptionRequest extends JdcloudRequest implements java.io
         this.pageIndex = pageIndex;
         return this;
     }
+
 
     /**
      * set regionId

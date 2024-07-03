@@ -150,6 +150,21 @@ public class DistributorDTO  implements java.io.Serializable {
     private String bankBranchNo;
 
     /**
+     * 税务识别号
+     */
+    private String taxNumber;
+
+    /**
+     * 发票抬头
+     */
+    private String invoiceTitle;
+
+    /**
+     * 1 全强代付,2 全自付, 3 自选
+     */
+    private Integer payType;
+
+    /**
      * 合同主体
      */
     private String contractSubject;
@@ -170,10 +185,20 @@ public class DistributorDTO  implements java.io.Serializable {
     private String returnPolicyId;
 
     /**
+     * distributorPolicyList
+     */
+    
+    private List<DistributorPolicyDTO> distributorPolicyList;
+    /**
+     * subDistributorPolicyList
+     */
+    
+    private List<DistributorPolicyDTO> subDistributorPolicyList;
+    /**
      * distributorProductList
      */
+    
     private List<DistributorProductDTO> distributorProductList;
-
     /**
      * 结算周期类型（1月、2季度、3年、4天、5周）
      */
@@ -214,6 +239,47 @@ public class DistributorDTO  implements java.io.Serializable {
      */
     private String erp;
 
+    /**
+     * 京东云负责人姓名
+     */
+    private String erpName;
+
+    /**
+     * 京东云负责人部门
+     */
+    private String erpDept;
+
+    /**
+     * 服务商级别
+     */
+    private Integer grade;
+
+    /**
+     * 服务期限（开始时间）
+     */
+    private String effectiveDate;
+
+    /**
+     * 服务期限（结束时间）
+     */
+    private String expirationDate;
+
+    /**
+     * 电子合同编号
+     */
+    private String eContractNo;
+
+    /**
+     * EBS合同编号
+     */
+    private String ebsContractNo;
+
+    /**
+     * 是否享受折扣(1享受2不享受)
+     */
+    private Integer discountFlag;
+
+
 
     /**
      * get 渠道商ID
@@ -233,6 +299,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.distributorId = distributorId;
     }
 
+
     /**
      * get 渠道商名称
      *
@@ -250,6 +317,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setDistributorName(String distributorName) {
         this.distributorName = distributorName;
     }
+
 
     /**
      * get pin
@@ -269,6 +337,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 合同编号
      *
@@ -286,6 +355,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setContractNo(String contractNo) {
         this.contractNo = contractNo;
     }
+
 
     /**
      * get 营业执照号
@@ -305,6 +375,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.businessLicense = businessLicense;
     }
 
+
     /**
      * get 法定代表人
      *
@@ -322,6 +393,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setLegalRepresentative(String legalRepresentative) {
         this.legalRepresentative = legalRepresentative;
     }
+
 
     /**
      * get 营业执照图片
@@ -341,6 +413,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.businessLicensePic = businessLicensePic;
     }
 
+
     /**
      * get 主营业务描述
      *
@@ -358,6 +431,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setBusinessDesc(String businessDesc) {
         this.businessDesc = businessDesc;
     }
+
 
     /**
      * get 办公地址
@@ -377,6 +451,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.workAddress = workAddress;
     }
 
+
     /**
      * get 联系人姓名
      *
@@ -394,6 +469,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setContracter(String contracter) {
         this.contracter = contracter;
     }
+
 
     /**
      * get 联系人电话
@@ -413,6 +489,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.tel = tel;
     }
 
+
     /**
      * get 邮箱
      *
@@ -430,6 +507,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     /**
      * get 所属地域
@@ -449,6 +527,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 入驻日期(一级渠道商手工录入、二级渠道商审批通过日期)
      *
@@ -466,6 +545,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setSettleTime(String settleTime) {
         this.settleTime = settleTime;
     }
+
 
     /**
      * get 状态(0 审批中、2驳回、1 已入驻、3已停止合作)
@@ -485,6 +565,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 驳回原因
      *
@@ -502,6 +583,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setReason(String reason) {
         this.reason = reason;
     }
+
 
     /**
      * get 级次(0一级、1 二级)
@@ -521,6 +603,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.distributorLevel = distributorLevel;
     }
 
+
     /**
      * get 渠道商类型(0合作伙伴、1 渠道代理)
      *
@@ -538,6 +621,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setDistributorType(Integer distributorType) {
         this.distributorType = distributorType;
     }
+
 
     /**
      * get 上级渠道商ID
@@ -557,6 +641,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.parentDistributorId = parentDistributorId;
     }
 
+
     /**
      * get 银行开户名
      *
@@ -574,6 +659,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setBankCompanyName(String bankCompanyName) {
         this.bankCompanyName = bankCompanyName;
     }
+
 
     /**
      * get 银行账户
@@ -593,6 +679,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.bankCardNo = bankCardNo;
     }
 
+
     /**
      * get 开户行支行名称
      *
@@ -610,6 +697,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setBankBranchName(String bankBranchName) {
         this.bankBranchName = bankBranchName;
     }
+
 
     /**
      * get 开户行支行联行号
@@ -629,6 +717,64 @@ public class DistributorDTO  implements java.io.Serializable {
         this.bankBranchNo = bankBranchNo;
     }
 
+
+    /**
+     * get 税务识别号
+     *
+     * @return
+     */
+    public String getTaxNumber() {
+        return taxNumber;
+    }
+
+    /**
+     * set 税务识别号
+     *
+     * @param taxNumber
+     */
+    public void setTaxNumber(String taxNumber) {
+        this.taxNumber = taxNumber;
+    }
+
+
+    /**
+     * get 发票抬头
+     *
+     * @return
+     */
+    public String getInvoiceTitle() {
+        return invoiceTitle;
+    }
+
+    /**
+     * set 发票抬头
+     *
+     * @param invoiceTitle
+     */
+    public void setInvoiceTitle(String invoiceTitle) {
+        this.invoiceTitle = invoiceTitle;
+    }
+
+
+    /**
+     * get 1 全强代付,2 全自付, 3 自选
+     *
+     * @return
+     */
+    public Integer getPayType() {
+        return payType;
+    }
+
+    /**
+     * set 1 全强代付,2 全自付, 3 自选
+     *
+     * @param payType
+     */
+    public void setPayType(Integer payType) {
+        this.payType = payType;
+    }
+
+
     /**
      * get 合同主体
      *
@@ -646,6 +792,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setContractSubject(String contractSubject) {
         this.contractSubject = contractSubject;
     }
+
 
     /**
      * get 所属部门(0企业线、1政府线)
@@ -665,6 +812,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.dept = dept;
     }
 
+
     /**
      * get 是否需要返还（0需要1不需要）
      *
@@ -682,6 +830,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setReturnFlag(Integer returnFlag) {
         this.returnFlag = returnFlag;
     }
+
 
     /**
      * get 返还政策ID
@@ -701,23 +850,63 @@ public class DistributorDTO  implements java.io.Serializable {
         this.returnPolicyId = returnPolicyId;
     }
 
+
     /**
-     * get distributorProductList
-     *
-     * @return
-     */
+    * get distributorPolicyList
+    *
+    * @return
+    */
+    public List<DistributorPolicyDTO> getDistributorPolicyList() {
+        return distributorPolicyList;
+    }
+
+    /**
+    * set distributorPolicyList
+    *
+    * @param distributorPolicyList
+    */
+    public void setDistributorPolicyList(List<DistributorPolicyDTO> distributorPolicyList) {
+        this.distributorPolicyList = distributorPolicyList;
+    }
+
+
+    /**
+    * get subDistributorPolicyList
+    *
+    * @return
+    */
+    public List<DistributorPolicyDTO> getSubDistributorPolicyList() {
+        return subDistributorPolicyList;
+    }
+
+    /**
+    * set subDistributorPolicyList
+    *
+    * @param subDistributorPolicyList
+    */
+    public void setSubDistributorPolicyList(List<DistributorPolicyDTO> subDistributorPolicyList) {
+        this.subDistributorPolicyList = subDistributorPolicyList;
+    }
+
+
+    /**
+    * get distributorProductList
+    *
+    * @return
+    */
     public List<DistributorProductDTO> getDistributorProductList() {
         return distributorProductList;
     }
 
     /**
-     * set distributorProductList
-     *
-     * @param distributorProductList
-     */
+    * set distributorProductList
+    *
+    * @param distributorProductList
+    */
     public void setDistributorProductList(List<DistributorProductDTO> distributorProductList) {
         this.distributorProductList = distributorProductList;
     }
+
 
     /**
      * get 结算周期类型（1月、2季度、3年、4天、5周）
@@ -737,6 +926,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.circleType = circleType;
     }
 
+
     /**
      * get 服务商返还方式（1现金2代金券）
      *
@@ -754,6 +944,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setReturnMode(Integer returnMode) {
         this.returnMode = returnMode;
     }
+
 
     /**
      * get 是否有下级服务商（0有1不没有）
@@ -773,6 +964,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.subFlag = subFlag;
     }
 
+
     /**
      * get 下级服务商是否需要返还（0需要1不需要）
      *
@@ -790,6 +982,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setSubReturnFlag(Integer subReturnFlag) {
         this.subReturnFlag = subReturnFlag;
     }
+
 
     /**
      * get 下级服务商返还政策ID
@@ -809,6 +1002,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.subReturnPolicyId = subReturnPolicyId;
     }
 
+
     /**
      * get 结算周期类型（1月、2季度、3年、4天、5周）
      *
@@ -827,6 +1021,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.subCircleType = subCircleType;
     }
 
+
     /**
      * get 下级服务商返还方式（1现金2代金券）
      *
@@ -844,6 +1039,7 @@ public class DistributorDTO  implements java.io.Serializable {
     public void setSubReturnMode(Integer subReturnMode) {
         this.subReturnMode = subReturnMode;
     }
+
 
     /**
      * get 京东云负责人(京东云人员erp或名称)
@@ -865,6 +1061,159 @@ public class DistributorDTO  implements java.io.Serializable {
 
 
     /**
+     * get 京东云负责人姓名
+     *
+     * @return
+     */
+    public String getErpName() {
+        return erpName;
+    }
+
+    /**
+     * set 京东云负责人姓名
+     *
+     * @param erpName
+     */
+    public void setErpName(String erpName) {
+        this.erpName = erpName;
+    }
+
+
+    /**
+     * get 京东云负责人部门
+     *
+     * @return
+     */
+    public String getErpDept() {
+        return erpDept;
+    }
+
+    /**
+     * set 京东云负责人部门
+     *
+     * @param erpDept
+     */
+    public void setErpDept(String erpDept) {
+        this.erpDept = erpDept;
+    }
+
+
+    /**
+     * get 服务商级别
+     *
+     * @return
+     */
+    public Integer getGrade() {
+        return grade;
+    }
+
+    /**
+     * set 服务商级别
+     *
+     * @param grade
+     */
+    public void setGrade(Integer grade) {
+        this.grade = grade;
+    }
+
+
+    /**
+     * get 服务期限（开始时间）
+     *
+     * @return
+     */
+    public String getEffectiveDate() {
+        return effectiveDate;
+    }
+
+    /**
+     * set 服务期限（开始时间）
+     *
+     * @param effectiveDate
+     */
+    public void setEffectiveDate(String effectiveDate) {
+        this.effectiveDate = effectiveDate;
+    }
+
+
+    /**
+     * get 服务期限（结束时间）
+     *
+     * @return
+     */
+    public String getExpirationDate() {
+        return expirationDate;
+    }
+
+    /**
+     * set 服务期限（结束时间）
+     *
+     * @param expirationDate
+     */
+    public void setExpirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+    }
+
+
+    /**
+     * get 电子合同编号
+     *
+     * @return
+     */
+    public String getEContractNo() {
+        return eContractNo;
+    }
+
+    /**
+     * set 电子合同编号
+     *
+     * @param eContractNo
+     */
+    public void setEContractNo(String eContractNo) {
+        this.eContractNo = eContractNo;
+    }
+
+
+    /**
+     * get EBS合同编号
+     *
+     * @return
+     */
+    public String getEbsContractNo() {
+        return ebsContractNo;
+    }
+
+    /**
+     * set EBS合同编号
+     *
+     * @param ebsContractNo
+     */
+    public void setEbsContractNo(String ebsContractNo) {
+        this.ebsContractNo = ebsContractNo;
+    }
+
+
+    /**
+     * get 是否享受折扣(1享受2不享受)
+     *
+     * @return
+     */
+    public Integer getDiscountFlag() {
+        return discountFlag;
+    }
+
+    /**
+     * set 是否享受折扣(1享受2不享受)
+     *
+     * @param discountFlag
+     */
+    public void setDiscountFlag(Integer discountFlag) {
+        this.discountFlag = discountFlag;
+    }
+
+
+
+    /**
      * set 渠道商ID
      *
      * @param distributorId
@@ -873,6 +1222,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.distributorId = distributorId;
         return this;
     }
+
 
     /**
      * set 渠道商名称
@@ -884,6 +1234,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pin
      *
@@ -893,6 +1244,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 合同编号
@@ -904,6 +1256,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 营业执照号
      *
@@ -913,6 +1266,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.businessLicense = businessLicense;
         return this;
     }
+
 
     /**
      * set 法定代表人
@@ -924,6 +1278,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 营业执照图片
      *
@@ -933,6 +1288,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.businessLicensePic = businessLicensePic;
         return this;
     }
+
 
     /**
      * set 主营业务描述
@@ -944,6 +1300,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 办公地址
      *
@@ -953,6 +1310,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.workAddress = workAddress;
         return this;
     }
+
 
     /**
      * set 联系人姓名
@@ -964,6 +1322,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 联系人电话
      *
@@ -973,6 +1332,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.tel = tel;
         return this;
     }
+
 
     /**
      * set 邮箱
@@ -984,6 +1344,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 所属地域
      *
@@ -993,6 +1354,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 入驻日期(一级渠道商手工录入、二级渠道商审批通过日期)
@@ -1004,6 +1366,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态(0 审批中、2驳回、1 已入驻、3已停止合作)
      *
@@ -1013,6 +1376,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 驳回原因
@@ -1024,6 +1388,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 级次(0一级、1 二级)
      *
@@ -1033,6 +1398,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.distributorLevel = distributorLevel;
         return this;
     }
+
 
     /**
      * set 渠道商类型(0合作伙伴、1 渠道代理)
@@ -1044,6 +1410,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 上级渠道商ID
      *
@@ -1053,6 +1420,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.parentDistributorId = parentDistributorId;
         return this;
     }
+
 
     /**
      * set 银行开户名
@@ -1064,6 +1432,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 银行账户
      *
@@ -1073,6 +1442,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.bankCardNo = bankCardNo;
         return this;
     }
+
 
     /**
      * set 开户行支行名称
@@ -1084,6 +1454,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 开户行支行联行号
      *
@@ -1093,6 +1464,40 @@ public class DistributorDTO  implements java.io.Serializable {
         this.bankBranchNo = bankBranchNo;
         return this;
     }
+
+
+    /**
+     * set 税务识别号
+     *
+     * @param taxNumber
+     */
+    public DistributorDTO taxNumber(String taxNumber) {
+        this.taxNumber = taxNumber;
+        return this;
+    }
+
+
+    /**
+     * set 发票抬头
+     *
+     * @param invoiceTitle
+     */
+    public DistributorDTO invoiceTitle(String invoiceTitle) {
+        this.invoiceTitle = invoiceTitle;
+        return this;
+    }
+
+
+    /**
+     * set 1 全强代付,2 全自付, 3 自选
+     *
+     * @param payType
+     */
+    public DistributorDTO payType(Integer payType) {
+        this.payType = payType;
+        return this;
+    }
+
 
     /**
      * set 合同主体
@@ -1104,6 +1509,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 所属部门(0企业线、1政府线)
      *
@@ -1113,6 +1519,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.dept = dept;
         return this;
     }
+
 
     /**
      * set 是否需要返还（0需要1不需要）
@@ -1124,6 +1531,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 返还政策ID
      *
@@ -1134,15 +1542,39 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set distributorProductList
-     *
-     * @param distributorProductList
-     */
+    * set distributorPolicyList
+    *
+    * @param distributorPolicyList
+    */
+    public DistributorDTO distributorPolicyList(List<DistributorPolicyDTO> distributorPolicyList) {
+        this.distributorPolicyList = distributorPolicyList;
+        return this;
+    }
+
+
+    /**
+    * set subDistributorPolicyList
+    *
+    * @param subDistributorPolicyList
+    */
+    public DistributorDTO subDistributorPolicyList(List<DistributorPolicyDTO> subDistributorPolicyList) {
+        this.subDistributorPolicyList = subDistributorPolicyList;
+        return this;
+    }
+
+
+    /**
+    * set distributorProductList
+    *
+    * @param distributorProductList
+    */
     public DistributorDTO distributorProductList(List<DistributorProductDTO> distributorProductList) {
         this.distributorProductList = distributorProductList;
         return this;
     }
+
 
     /**
      * set 结算周期类型（1月、2季度、3年、4天、5周）
@@ -1154,6 +1586,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 服务商返还方式（1现金2代金券）
      *
@@ -1163,6 +1596,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.returnMode = returnMode;
         return this;
     }
+
 
     /**
      * set 是否有下级服务商（0有1不没有）
@@ -1174,6 +1608,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 下级服务商是否需要返还（0需要1不需要）
      *
@@ -1183,6 +1618,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.subReturnFlag = subReturnFlag;
         return this;
     }
+
 
     /**
      * set 下级服务商返还政策ID
@@ -1194,6 +1630,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 结算周期类型（1月、2季度、3年、4天、5周）
      *
@@ -1204,6 +1641,7 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 下级服务商返还方式（1现金2代金券）
      *
@@ -1213,6 +1651,7 @@ public class DistributorDTO  implements java.io.Serializable {
         this.subReturnMode = subReturnMode;
         return this;
     }
+
 
     /**
      * set 京东云负责人(京东云人员erp或名称)
@@ -1226,6 +1665,119 @@ public class DistributorDTO  implements java.io.Serializable {
 
 
     /**
+     * set 京东云负责人姓名
+     *
+     * @param erpName
+     */
+    public DistributorDTO erpName(String erpName) {
+        this.erpName = erpName;
+        return this;
+    }
+
+
+    /**
+     * set 京东云负责人部门
+     *
+     * @param erpDept
+     */
+    public DistributorDTO erpDept(String erpDept) {
+        this.erpDept = erpDept;
+        return this;
+    }
+
+
+    /**
+     * set 服务商级别
+     *
+     * @param grade
+     */
+    public DistributorDTO grade(Integer grade) {
+        this.grade = grade;
+        return this;
+    }
+
+
+    /**
+     * set 服务期限（开始时间）
+     *
+     * @param effectiveDate
+     */
+    public DistributorDTO effectiveDate(String effectiveDate) {
+        this.effectiveDate = effectiveDate;
+        return this;
+    }
+
+
+    /**
+     * set 服务期限（结束时间）
+     *
+     * @param expirationDate
+     */
+    public DistributorDTO expirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+        return this;
+    }
+
+
+    /**
+     * set 电子合同编号
+     *
+     * @param eContractNo
+     */
+    public DistributorDTO eContractNo(String eContractNo) {
+        this.eContractNo = eContractNo;
+        return this;
+    }
+
+
+    /**
+     * set EBS合同编号
+     *
+     * @param ebsContractNo
+     */
+    public DistributorDTO ebsContractNo(String ebsContractNo) {
+        this.ebsContractNo = ebsContractNo;
+        return this;
+    }
+
+
+    /**
+     * set 是否享受折扣(1享受2不享受)
+     *
+     * @param discountFlag
+     */
+    public DistributorDTO discountFlag(Integer discountFlag) {
+        this.discountFlag = discountFlag;
+        return this;
+    }
+
+
+
+    /**
+     * add item to distributorPolicyList
+     *
+     * @param distributorPolicyList
+     */
+    public void addDistributorPolicyList(DistributorPolicyDTO distributorPolicyList) {
+        if (this.distributorPolicyList == null) {
+            this.distributorPolicyList = new ArrayList<>();
+        }
+        this.distributorPolicyList.add(distributorPolicyList);
+    }
+
+    /**
+     * add item to subDistributorPolicyList
+     *
+     * @param subDistributorPolicyList
+     */
+    public void addSubDistributorPolicyList(DistributorPolicyDTO subDistributorPolicyList) {
+        if (this.subDistributorPolicyList == null) {
+            this.subDistributorPolicyList = new ArrayList<>();
+        }
+        this.subDistributorPolicyList.add(subDistributorPolicyList);
+    }
+
+    /**
      * add item to distributorProductList
      *
      * @param distributorProductList
@@ -1236,5 +1788,4 @@ public class DistributorDTO  implements java.io.Serializable {
         }
         this.distributorProductList.add(distributorProductList);
     }
-
 }

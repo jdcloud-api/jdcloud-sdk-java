@@ -53,6 +53,7 @@ public class Department  implements java.io.Serializable {
     private Integer isDeleted;
 
 
+
     /**
      * get ID
      *
@@ -70,6 +71,7 @@ public class Department  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 部门编号
@@ -89,6 +91,7 @@ public class Department  implements java.io.Serializable {
         this.depId = depId;
     }
 
+
     /**
      * get 部门名称
      *
@@ -106,6 +109,7 @@ public class Department  implements java.io.Serializable {
     public void setDepName(String depName) {
         this.depName = depName;
     }
+
 
     /**
      * get 是否删除0未删除,1已删除
@@ -126,6 +130,7 @@ public class Department  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ID
      *
@@ -135,6 +140,7 @@ public class Department  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 部门编号
@@ -146,6 +152,7 @@ public class Department  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 部门名称
      *
@@ -155,6 +162,7 @@ public class Department  implements java.io.Serializable {
         this.depName = depName;
         return this;
     }
+
 
     /**
      * set 是否删除0未删除,1已删除

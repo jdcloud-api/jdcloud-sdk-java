@@ -78,6 +78,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
     private Integer yn;
 
 
+
     /**
      * get ID
      *
@@ -95,6 +96,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get erp
@@ -114,6 +116,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
         this.erp = erp;
     }
 
+
     /**
      * get 备注
      *
@@ -131,6 +134,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
 
     /**
      * get 操作人
@@ -150,6 +154,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
         this.operator = operator;
     }
 
+
     /**
      * get 创建时间
      *
@@ -167,6 +172,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 创建人
@@ -186,6 +192,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
         this.createUser = createUser;
     }
 
+
     /**
      * get 修改时间
      *
@@ -204,6 +211,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 修改人
      *
@@ -221,6 +229,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
+
 
     /**
      * get 是否删除0未删除,1已删除
@@ -241,6 +250,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ID
      *
@@ -250,6 +260,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set erp
@@ -261,6 +272,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 备注
      *
@@ -270,6 +282,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
         this.remark = remark;
         return this;
     }
+
 
     /**
      * set 操作人
@@ -281,6 +294,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -290,6 +304,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 创建人
@@ -301,6 +316,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -311,6 +327,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改人
      *
@@ -320,6 +337,7 @@ public class OperateReturnAuthorityDTO  implements java.io.Serializable {
         this.updateUser = updateUser;
         return this;
     }
+
 
     /**
      * set 是否删除0未删除,1已删除

@@ -31,18 +31,51 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.partner.model.QueryMyCustomerListRequest;
-import com.jdcloud.sdk.service.partner.model.QueryMyCustomerListResponse;
-import com.jdcloud.sdk.service.partner.client.QueryMyCustomerListExecutor;
-import com.jdcloud.sdk.service.partner.model.GetEachConsumptionRequest;
-import com.jdcloud.sdk.service.partner.model.GetEachConsumptionResponse;
-import com.jdcloud.sdk.service.partner.client.GetEachConsumptionExecutor;
+import com.jdcloud.sdk.service.partner.model.DeleteFileRequest;
+import com.jdcloud.sdk.service.partner.model.DeleteFileResponse;
+import com.jdcloud.sdk.service.partner.client.DeleteFileExecutor;
+import com.jdcloud.sdk.service.partner.model.ModifyDicDetailRequest;
+import com.jdcloud.sdk.service.partner.model.ModifyDicDetailResponse;
+import com.jdcloud.sdk.service.partner.client.ModifyDicDetailExecutor;
+import com.jdcloud.sdk.service.partner.model.AddCoProductRequest;
+import com.jdcloud.sdk.service.partner.model.AddCoProductResponse;
+import com.jdcloud.sdk.service.partner.client.AddCoProductExecutor;
+import com.jdcloud.sdk.service.partner.model.DescribeCoProductRequest;
+import com.jdcloud.sdk.service.partner.model.DescribeCoProductResponse;
+import com.jdcloud.sdk.service.partner.client.DescribeCoProductExecutor;
 import com.jdcloud.sdk.service.partner.model.DescribeCustomerBillByProductRequest;
 import com.jdcloud.sdk.service.partner.model.DescribeCustomerBillByProductResponse;
 import com.jdcloud.sdk.service.partner.client.DescribeCustomerBillByProductExecutor;
+import com.jdcloud.sdk.service.partner.model.DescribePartnerBillsRequest;
+import com.jdcloud.sdk.service.partner.model.DescribePartnerBillsResponse;
+import com.jdcloud.sdk.service.partner.client.DescribePartnerBillsExecutor;
+import com.jdcloud.sdk.service.partner.model.ExportCoProductsRequest;
+import com.jdcloud.sdk.service.partner.model.ExportCoProductsResponse;
+import com.jdcloud.sdk.service.partner.client.ExportCoProductsExecutor;
+import com.jdcloud.sdk.service.partner.model.AddContractRequest;
+import com.jdcloud.sdk.service.partner.model.AddContractResponse;
+import com.jdcloud.sdk.service.partner.client.AddContractExecutor;
+import com.jdcloud.sdk.service.partner.model.GetEachConsumptionRequest;
+import com.jdcloud.sdk.service.partner.model.GetEachConsumptionResponse;
+import com.jdcloud.sdk.service.partner.client.GetEachConsumptionExecutor;
+import com.jdcloud.sdk.service.partner.model.DescribeCoProductsRequest;
+import com.jdcloud.sdk.service.partner.model.DescribeCoProductsResponse;
+import com.jdcloud.sdk.service.partner.client.DescribeCoProductsExecutor;
 import com.jdcloud.sdk.service.partner.model.GetTotalConsumptionRequest;
 import com.jdcloud.sdk.service.partner.model.GetTotalConsumptionResponse;
 import com.jdcloud.sdk.service.partner.client.GetTotalConsumptionExecutor;
+import com.jdcloud.sdk.service.partner.model.GetPartnerUserListRequest;
+import com.jdcloud.sdk.service.partner.model.GetPartnerUserListResponse;
+import com.jdcloud.sdk.service.partner.client.GetPartnerUserListExecutor;
+import com.jdcloud.sdk.service.partner.model.ModifyCoProductRequest;
+import com.jdcloud.sdk.service.partner.model.ModifyCoProductResponse;
+import com.jdcloud.sdk.service.partner.client.ModifyCoProductExecutor;
+import com.jdcloud.sdk.service.partner.model.QueryMyCustomerListRequest;
+import com.jdcloud.sdk.service.partner.model.QueryMyCustomerListResponse;
+import com.jdcloud.sdk.service.partner.client.QueryMyCustomerListExecutor;
+import com.jdcloud.sdk.service.partner.model.ModifyContractRequest;
+import com.jdcloud.sdk.service.partner.model.ModifyContractResponse;
+import com.jdcloud.sdk.service.partner.client.ModifyContractExecutor;
 
 /**
  * partnerClient
@@ -51,7 +84,7 @@ public class PartnerClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "partner.jdcloud-api.com";
     public final static String ServiceName = "partner";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -94,25 +127,47 @@ public class PartnerClient extends JdcloudClient {
 
 
     /**
-     * 查询客户信息
+     * 删除合同附件
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public QueryMyCustomerListResponse queryMyCustomerList(QueryMyCustomerListRequest request) throws JdcloudSdkException {
-        return new QueryMyCustomerListExecutor().client(this).execute(request);
+    public DeleteFileResponse deleteFile(DeleteFileRequest request) throws JdcloudSdkException {
+        return new DeleteFileExecutor().client(this).execute(request);
     }
 
     /**
-     * 查询服务商下每个客户总消费数据
+     * 编辑字典
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetEachConsumptionResponse getEachConsumption(GetEachConsumptionRequest request) throws JdcloudSdkException {
-        return new GetEachConsumptionExecutor().client(this).execute(request);
+    public ModifyDicDetailResponse modifyDicDetail(ModifyDicDetailRequest request) throws JdcloudSdkException {
+        return new ModifyDicDetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加合作产品
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddCoProductResponse addCoProduct(AddCoProductRequest request) throws JdcloudSdkException {
+        return new AddCoProductExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 合作产品详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCoProductResponse describeCoProduct(DescribeCoProductRequest request) throws JdcloudSdkException {
+        return new DescribeCoProductExecutor().client(this).execute(request);
     }
 
     /**
@@ -127,6 +182,61 @@ public class PartnerClient extends JdcloudClient {
     }
 
     /**
+     * 获取伙伴账单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribePartnerBillsResponse describePartnerBills(DescribePartnerBillsRequest request) throws JdcloudSdkException {
+        return new DescribePartnerBillsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 合作产品列表导出
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ExportCoProductsResponse exportCoProducts(ExportCoProductsRequest request) throws JdcloudSdkException {
+        return new ExportCoProductsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加合同信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddContractResponse addContract(AddContractRequest request) throws JdcloudSdkException {
+        return new AddContractExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询服务商下每个客户总消费数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetEachConsumptionResponse getEachConsumption(GetEachConsumptionRequest request) throws JdcloudSdkException {
+        return new GetEachConsumptionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询合作产品列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCoProductsResponse describeCoProducts(DescribeCoProductsRequest request) throws JdcloudSdkException {
+        return new DescribeCoProductsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询服务商相关的总消费数据
      *
      * @param request
@@ -135,6 +245,50 @@ public class PartnerClient extends JdcloudClient {
      */
     public GetTotalConsumptionResponse getTotalConsumption(GetTotalConsumptionRequest request) throws JdcloudSdkException {
         return new GetTotalConsumptionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询渠道用户信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetPartnerUserListResponse getPartnerUserList(GetPartnerUserListRequest request) throws JdcloudSdkException {
+        return new GetPartnerUserListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 编辑合作产品
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyCoProductResponse modifyCoProduct(ModifyCoProductRequest request) throws JdcloudSdkException {
+        return new ModifyCoProductExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询客户信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryMyCustomerListResponse queryMyCustomerList(QueryMyCustomerListRequest request) throws JdcloudSdkException {
+        return new QueryMyCustomerListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 编辑合同信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyContractResponse modifyContract(ModifyContractRequest request) throws JdcloudSdkException {
+        return new ModifyContractExecutor().client(this).execute(request);
     }
 
 

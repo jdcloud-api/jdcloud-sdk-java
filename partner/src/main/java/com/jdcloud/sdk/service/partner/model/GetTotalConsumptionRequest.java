@@ -56,6 +56,7 @@ public class GetTotalConsumptionRequest extends JdcloudRequest implements java.i
     private String regionId;
 
 
+
     /**
      * get 按月查询开始时间（yyyy/MM/dd）
      *
@@ -74,6 +75,7 @@ public class GetTotalConsumptionRequest extends JdcloudRequest implements java.i
         this.startTime = startTime;
     }
 
+
     /**
      * get 按月查询结束时间（yyyy/MM/dd）
      *
@@ -91,6 +93,7 @@ public class GetTotalConsumptionRequest extends JdcloudRequest implements java.i
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get regionId
@@ -111,6 +114,7 @@ public class GetTotalConsumptionRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 按月查询开始时间（yyyy/MM/dd）
      *
@@ -121,6 +125,7 @@ public class GetTotalConsumptionRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 按月查询结束时间（yyyy/MM/dd）
      *
@@ -130,6 +135,7 @@ public class GetTotalConsumptionRequest extends JdcloudRequest implements java.i
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set regionId

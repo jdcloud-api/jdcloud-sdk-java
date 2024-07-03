@@ -37,13 +37,13 @@ public class OrderDetail  implements java.io.Serializable {
     /**
      * 订单详情列表
      */
+    
     private List<OrderItemDetail> orderItemDetails;
-
     /**
      * 子订单列表
      */
+    
     private List<OrderDetail> childOrderDetailList;
-
     /**
      * 订单编号
      */
@@ -220,41 +220,44 @@ public class OrderDetail  implements java.io.Serializable {
     private String appCode;
 
 
+
     /**
-     * get 订单详情列表
-     *
-     * @return
-     */
+    * get 订单详情列表
+    *
+    * @return
+    */
     public List<OrderItemDetail> getOrderItemDetails() {
         return orderItemDetails;
     }
 
     /**
-     * set 订单详情列表
-     *
-     * @param orderItemDetails
-     */
+    * set 订单详情列表
+    *
+    * @param orderItemDetails
+    */
     public void setOrderItemDetails(List<OrderItemDetail> orderItemDetails) {
         this.orderItemDetails = orderItemDetails;
     }
 
+
     /**
-     * get 子订单列表
-     *
-     * @return
-     */
+    * get 子订单列表
+    *
+    * @return
+    */
     public List<OrderDetail> getChildOrderDetailList() {
         return childOrderDetailList;
     }
 
     /**
-     * set 子订单列表
-     *
-     * @param childOrderDetailList
-     */
+    * set 子订单列表
+    *
+    * @param childOrderDetailList
+    */
     public void setChildOrderDetailList(List<OrderDetail> childOrderDetailList) {
         this.childOrderDetailList = childOrderDetailList;
     }
+
 
     /**
      * get 订单编号
@@ -274,6 +277,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.orderNumber = orderNumber;
     }
 
+
     /**
      * get 订单状态:已支付
      *
@@ -291,6 +295,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 订单类型
@@ -310,6 +315,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.orderType = orderType;
     }
 
+
     /**
      * get 订单计费类型：按配置、包年包月、按用量
      *
@@ -327,6 +333,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setChargeMode(String chargeMode) {
         this.chargeMode = chargeMode;
     }
+
 
     /**
      * get 产品线
@@ -346,6 +353,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.appName = appName;
     }
 
+
     /**
      * get 产品名称(产品类型)
      *
@@ -363,6 +371,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setServiceName(String serviceName) {
         this.serviceName = serviceName;
     }
+
 
     /**
      * get 付费方式
@@ -382,6 +391,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.payType = payType;
     }
 
+
     /**
      * get 自营类型：1-自营，2-非自营，3-二者并存
      *
@@ -399,6 +409,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setSelfSupportType(String selfSupportType) {
         this.selfSupportType = selfSupportType;
     }
+
 
     /**
      * get 站点类型 0：主站,1：国际站,2：云市场
@@ -418,6 +429,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.siteType = siteType;
     }
 
+
     /**
      * get 下单时间
      *
@@ -435,6 +447,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 支付时间
@@ -454,6 +467,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.payTime = payTime;
     }
 
+
     /**
      * get 应付价格是否被修改过：0-未修改，1-已修改
      *
@@ -471,6 +485,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setIsActualFeeModified(String isActualFeeModified) {
         this.isActualFeeModified = isActualFeeModified;
     }
+
 
     /**
      * get 订单总额（元）
@@ -490,6 +505,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.totalFee = totalFee;
     }
 
+
     /**
      * get 应付总额（元）
      *
@@ -507,6 +523,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setActualFee(Number actualFee) {
         this.actualFee = actualFee;
     }
+
 
     /**
      * get 优惠总额（元）
@@ -526,6 +543,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.discountFee = discountFee;
     }
 
+
     /**
      * get 已支付总额（元）
      *
@@ -543,6 +561,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setPaidFee(Number paidFee) {
         this.paidFee = paidFee;
     }
+
 
     /**
      * get 代金券金额（元）
@@ -562,6 +581,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.favorableFee = favorableFee;
     }
 
+
     /**
      * get 代金券Json
      *
@@ -579,6 +599,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setFavorableFeeJson(String favorableFeeJson) {
         this.favorableFeeJson = favorableFeeJson;
     }
+
 
     /**
      * get 现金支付
@@ -598,6 +619,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.moneyPay = moneyPay;
     }
 
+
     /**
      * get 余额支付
      *
@@ -615,6 +637,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setBalancePay(Number balancePay) {
         this.balancePay = balancePay;
     }
+
 
     /**
      * get 支付确认页地址
@@ -634,6 +657,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.payUrl = payUrl;
     }
 
+
     /**
      * get 用户pin
      *
@@ -651,6 +675,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 备注
@@ -670,6 +695,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.remark = remark;
     }
 
+
     /**
      * get 自动取消时间
      *
@@ -687,6 +713,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setExpirationTime(String expirationTime) {
         this.expirationTime = expirationTime;
     }
+
 
     /**
      * get 已退款金额
@@ -706,6 +733,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.refundFee = refundFee;
     }
 
+
     /**
      * get 订单类型：新购、续费、升降配
      *
@@ -723,6 +751,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setOrderTypeInfo(Number orderTypeInfo) {
         this.orderTypeInfo = orderTypeInfo;
     }
+
 
     /**
      * get 订单计费类型：按配置、包年包月、按用量actualFee
@@ -742,6 +771,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.chargeModeInfo = chargeModeInfo;
     }
 
+
     /**
      * get 订单状态：未支付、已支付、处理中、已取消
      *
@@ -759,6 +789,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setStatusInfo(Number statusInfo) {
         this.statusInfo = statusInfo;
     }
+
 
     /**
      * get 自营类型：1-自营，2-非自营，3-二者并存
@@ -778,6 +809,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.selfSupportTypeInfo = selfSupportTypeInfo;
     }
 
+
     /**
      * get 现金支付方式（企业、个人网银、京东支付、微信、线下汇款）
      *
@@ -795,6 +827,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setPaymentChannel(Integer paymentChannel) {
         this.paymentChannel = paymentChannel;
     }
+
 
     /**
      * get 修改时间
@@ -814,6 +847,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.updatedTime = updatedTime;
     }
 
+
     /**
      * get 支付单号
      *
@@ -831,6 +865,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setPaymentNumber(String paymentNumber) {
         this.paymentNumber = paymentNumber;
     }
+
 
     /**
      * get 付款人
@@ -850,6 +885,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.payer = payer;
     }
 
+
     /**
      * get 申请人
      *
@@ -867,6 +903,7 @@ public class OrderDetail  implements java.io.Serializable {
     public void setProposer(String proposer) {
         this.proposer = proposer;
     }
+
 
     /**
      * get 应用code
@@ -887,25 +924,28 @@ public class OrderDetail  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 订单详情列表
-     *
-     * @param orderItemDetails
-     */
+    * set 订单详情列表
+    *
+    * @param orderItemDetails
+    */
     public OrderDetail orderItemDetails(List<OrderItemDetail> orderItemDetails) {
         this.orderItemDetails = orderItemDetails;
         return this;
     }
 
+
     /**
-     * set 子订单列表
-     *
-     * @param childOrderDetailList
-     */
+    * set 子订单列表
+    *
+    * @param childOrderDetailList
+    */
     public OrderDetail childOrderDetailList(List<OrderDetail> childOrderDetailList) {
         this.childOrderDetailList = childOrderDetailList;
         return this;
     }
+
 
     /**
      * set 订单编号
@@ -917,6 +957,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 订单状态:已支付
      *
@@ -926,6 +967,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 订单类型
@@ -937,6 +979,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 订单计费类型：按配置、包年包月、按用量
      *
@@ -946,6 +989,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.chargeMode = chargeMode;
         return this;
     }
+
 
     /**
      * set 产品线
@@ -957,6 +1001,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品名称(产品类型)
      *
@@ -966,6 +1011,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.serviceName = serviceName;
         return this;
     }
+
 
     /**
      * set 付费方式
@@ -977,6 +1023,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自营类型：1-自营，2-非自营，3-二者并存
      *
@@ -986,6 +1033,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.selfSupportType = selfSupportType;
         return this;
     }
+
 
     /**
      * set 站点类型 0：主站,1：国际站,2：云市场
@@ -997,6 +1045,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 下单时间
      *
@@ -1006,6 +1055,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 支付时间
@@ -1017,6 +1067,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应付价格是否被修改过：0-未修改，1-已修改
      *
@@ -1026,6 +1077,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.isActualFeeModified = isActualFeeModified;
         return this;
     }
+
 
     /**
      * set 订单总额（元）
@@ -1037,6 +1089,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应付总额（元）
      *
@@ -1046,6 +1099,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.actualFee = actualFee;
         return this;
     }
+
 
     /**
      * set 优惠总额（元）
@@ -1057,6 +1111,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 已支付总额（元）
      *
@@ -1066,6 +1121,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.paidFee = paidFee;
         return this;
     }
+
 
     /**
      * set 代金券金额（元）
@@ -1077,6 +1133,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 代金券Json
      *
@@ -1086,6 +1143,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.favorableFeeJson = favorableFeeJson;
         return this;
     }
+
 
     /**
      * set 现金支付
@@ -1097,6 +1155,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 余额支付
      *
@@ -1106,6 +1165,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.balancePay = balancePay;
         return this;
     }
+
 
     /**
      * set 支付确认页地址
@@ -1117,6 +1177,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户pin
      *
@@ -1126,6 +1187,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 备注
@@ -1137,6 +1199,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自动取消时间
      *
@@ -1146,6 +1209,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.expirationTime = expirationTime;
         return this;
     }
+
 
     /**
      * set 已退款金额
@@ -1157,6 +1221,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 订单类型：新购、续费、升降配
      *
@@ -1166,6 +1231,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.orderTypeInfo = orderTypeInfo;
         return this;
     }
+
 
     /**
      * set 订单计费类型：按配置、包年包月、按用量actualFee
@@ -1177,6 +1243,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 订单状态：未支付、已支付、处理中、已取消
      *
@@ -1186,6 +1253,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.statusInfo = statusInfo;
         return this;
     }
+
 
     /**
      * set 自营类型：1-自营，2-非自营，3-二者并存
@@ -1197,6 +1265,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 现金支付方式（企业、个人网银、京东支付、微信、线下汇款）
      *
@@ -1206,6 +1275,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.paymentChannel = paymentChannel;
         return this;
     }
+
 
     /**
      * set 修改时间
@@ -1217,6 +1287,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 支付单号
      *
@@ -1226,6 +1297,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.paymentNumber = paymentNumber;
         return this;
     }
+
 
     /**
      * set 付款人
@@ -1237,6 +1309,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 申请人
      *
@@ -1247,6 +1320,7 @@ public class OrderDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应用code
      *
@@ -1256,6 +1330,7 @@ public class OrderDetail  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
 
     /**
@@ -1281,5 +1356,4 @@ public class OrderDetail  implements java.io.Serializable {
         }
         this.childOrderDetailList.add(childOrderDetailList);
     }
-
 }

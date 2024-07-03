@@ -108,6 +108,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
     private Integer offset;
 
 
+
     /**
      * get ID
      *
@@ -125,6 +126,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 部门ID
@@ -144,6 +146,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         this.deptId = deptId;
     }
 
+
     /**
      * get 部门名称
      *
@@ -161,6 +164,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
     public void setDeptName(String deptName) {
         this.deptName = deptName;
     }
+
 
     /**
      * get 渠道商类型
@@ -180,6 +184,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         this.distributorType = distributorType;
     }
 
+
     /**
      * get 是否返还标志
      *
@@ -197,6 +202,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
     public void setIsReturn(Integer isReturn) {
         this.isReturn = isReturn;
     }
+
 
     /**
      * get 周期类型
@@ -216,6 +222,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         this.circleType = circleType;
     }
 
+
     /**
      * get 周期名称
      *
@@ -233,6 +240,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
     public void setCircleName(String circleName) {
         this.circleName = circleName;
     }
+
 
     /**
      * get 创建时间
@@ -252,6 +260,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 创建人
      *
@@ -269,6 +278,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
     public void setCreateUser(String createUser) {
         this.createUser = createUser;
     }
+
 
     /**
      * get 修改时间
@@ -288,6 +298,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 修改人
      *
@@ -305,6 +316,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
+
 
     /**
      * get 是否删除0未删除,1已删除
@@ -324,6 +336,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         this.yn = yn;
     }
 
+
     /**
      * get 当前页序号
      *
@@ -342,6 +355,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         this.pageIndex = pageIndex;
     }
 
+
     /**
      * get 每页结果数量
      *
@@ -359,6 +373,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get offset
@@ -379,6 +394,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ID
      *
@@ -388,6 +404,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 部门ID
@@ -399,6 +416,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 部门名称
      *
@@ -408,6 +426,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         this.deptName = deptName;
         return this;
     }
+
 
     /**
      * set 渠道商类型
@@ -419,6 +438,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否返还标志
      *
@@ -428,6 +448,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         this.isReturn = isReturn;
         return this;
     }
+
 
     /**
      * set 周期类型
@@ -439,6 +460,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 周期名称
      *
@@ -448,6 +470,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         this.circleName = circleName;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -459,6 +482,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建人
      *
@@ -468,6 +492,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         this.createUser = createUser;
         return this;
     }
+
 
     /**
      * set 修改时间
@@ -479,6 +504,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改人
      *
@@ -488,6 +514,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         this.updateUser = updateUser;
         return this;
     }
+
 
     /**
      * set 是否删除0未删除,1已删除
@@ -499,6 +526,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 当前页序号
      *
@@ -509,6 +537,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 每页结果数量
      *
@@ -518,6 +547,7 @@ public class ReturnRuleQuery  implements java.io.Serializable {
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set offset

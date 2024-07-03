@@ -139,6 +139,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
     private Integer yn;
 
 
+
     /**
      * get ID
      *
@@ -156,6 +157,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 项目编码
@@ -175,6 +177,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.itemId = itemId;
     }
 
+
     /**
      * get 项目名称
      *
@@ -192,6 +195,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
     public void setItemName(String itemName) {
         this.itemName = itemName;
     }
+
 
     /**
      * get 部门ID
@@ -211,6 +215,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.deptId = deptId;
     }
 
+
     /**
      * get 部门名称
      *
@@ -228,6 +233,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
     public void setDeptName(String deptName) {
         this.deptName = deptName;
     }
+
 
     /**
      * get 渠道商类型
@@ -247,6 +253,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.distributorType = distributorType;
     }
 
+
     /**
      * get 渠道商类型名称
      *
@@ -264,6 +271,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
     public void setDistributorTypeName(String distributorTypeName) {
         this.distributorTypeName = distributorTypeName;
     }
+
 
     /**
      * get 返还类型
@@ -283,6 +291,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.returnType = returnType;
     }
 
+
     /**
      * get 返还依据
      *
@@ -300,6 +309,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
     public void setReturnRuleType(Integer returnRuleType) {
         this.returnRuleType = returnRuleType;
     }
+
 
     /**
      * get 返还依据名称
@@ -319,6 +329,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.returnRuleTypeName = returnRuleTypeName;
     }
 
+
     /**
      * get 项目条件
      *
@@ -336,6 +347,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
     public void setConditionItem(String conditionItem) {
         this.conditionItem = conditionItem;
     }
+
 
     /**
      * get 项目条件名称
@@ -355,6 +367,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.conditionItemName = conditionItemName;
     }
 
+
     /**
      * get 周期类型
      *
@@ -372,6 +385,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
     public void setCircleType(Integer circleType) {
         this.circleType = circleType;
     }
+
 
     /**
      * get 周期名称
@@ -391,6 +405,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.circleName = circleName;
     }
 
+
     /**
      * get 说明
      *
@@ -408,6 +423,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
 
     /**
      * get 使用标识（1在用，0未使用）
@@ -427,6 +443,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.useFlag = useFlag;
     }
 
+
     /**
      * get 创建时间
      *
@@ -444,6 +461,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 创建人
@@ -463,6 +481,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.createUser = createUser;
     }
 
+
     /**
      * get 修改时间
      *
@@ -481,6 +500,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 修改人
      *
@@ -498,6 +518,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
+
 
     /**
      * get 是否删除0未删除,1已删除
@@ -518,6 +539,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
     }
 
 
+
     /**
      * set ID
      *
@@ -527,6 +549,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.id = id;
         return this;
     }
+
 
     /**
      * set 项目编码
@@ -538,6 +561,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 项目名称
      *
@@ -547,6 +571,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.itemName = itemName;
         return this;
     }
+
 
     /**
      * set 部门ID
@@ -558,6 +583,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 部门名称
      *
@@ -567,6 +593,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.deptName = deptName;
         return this;
     }
+
 
     /**
      * set 渠道商类型
@@ -578,6 +605,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 渠道商类型名称
      *
@@ -587,6 +615,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.distributorTypeName = distributorTypeName;
         return this;
     }
+
 
     /**
      * set 返还类型
@@ -598,6 +627,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 返还依据
      *
@@ -607,6 +637,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.returnRuleType = returnRuleType;
         return this;
     }
+
 
     /**
      * set 返还依据名称
@@ -618,6 +649,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 项目条件
      *
@@ -627,6 +659,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.conditionItem = conditionItem;
         return this;
     }
+
 
     /**
      * set 项目条件名称
@@ -638,6 +671,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 周期类型
      *
@@ -647,6 +681,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.circleType = circleType;
         return this;
     }
+
 
     /**
      * set 周期名称
@@ -658,6 +693,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 说明
      *
@@ -667,6 +703,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.remark = remark;
         return this;
     }
+
 
     /**
      * set 使用标识（1在用，0未使用）
@@ -678,6 +715,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -687,6 +725,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 创建人
@@ -698,6 +737,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -708,6 +748,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 修改人
      *
@@ -717,6 +758,7 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
         this.updateUser = updateUser;
         return this;
     }
+
 
     /**
      * set 是否删除0未删除,1已删除

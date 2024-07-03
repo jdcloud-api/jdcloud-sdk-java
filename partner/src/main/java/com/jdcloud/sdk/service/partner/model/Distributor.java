@@ -137,6 +137,12 @@ public class Distributor  implements java.io.Serializable {
      */
     private String erp;
 
+    /**
+     * 是否享受折扣(1享受2不享受)
+     */
+    private Integer discountFlag;
+
+
 
     /**
      * get 渠道商ID
@@ -156,6 +162,7 @@ public class Distributor  implements java.io.Serializable {
         this.distributorId = distributorId;
     }
 
+
     /**
      * get 渠道商名称
      *
@@ -173,6 +180,7 @@ public class Distributor  implements java.io.Serializable {
     public void setDistributorName(String distributorName) {
         this.distributorName = distributorName;
     }
+
 
     /**
      * get 京东云账户
@@ -192,6 +200,7 @@ public class Distributor  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 合同编号
      *
@@ -209,6 +218,7 @@ public class Distributor  implements java.io.Serializable {
     public void setContractNo(String contractNo) {
         this.contractNo = contractNo;
     }
+
 
     /**
      * get 营业执照号
@@ -228,6 +238,7 @@ public class Distributor  implements java.io.Serializable {
         this.businessLicense = businessLicense;
     }
 
+
     /**
      * get 法定代表人
      *
@@ -245,6 +256,7 @@ public class Distributor  implements java.io.Serializable {
     public void setLegalRepresentative(String legalRepresentative) {
         this.legalRepresentative = legalRepresentative;
     }
+
 
     /**
      * get 营业执照图片
@@ -264,6 +276,7 @@ public class Distributor  implements java.io.Serializable {
         this.businessLicensePic = businessLicensePic;
     }
 
+
     /**
      * get 主营业务描述
      *
@@ -281,6 +294,7 @@ public class Distributor  implements java.io.Serializable {
     public void setBusinessDesc(String businessDesc) {
         this.businessDesc = businessDesc;
     }
+
 
     /**
      * get 办公地址
@@ -300,6 +314,7 @@ public class Distributor  implements java.io.Serializable {
         this.workAddress = workAddress;
     }
 
+
     /**
      * get 联系人姓名
      *
@@ -317,6 +332,7 @@ public class Distributor  implements java.io.Serializable {
     public void setContracter(String contracter) {
         this.contracter = contracter;
     }
+
 
     /**
      * get 联系人电话
@@ -336,6 +352,7 @@ public class Distributor  implements java.io.Serializable {
         this.tel = tel;
     }
 
+
     /**
      * get 邮箱
      *
@@ -353,6 +370,7 @@ public class Distributor  implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     /**
      * get 所属地域
@@ -372,6 +390,7 @@ public class Distributor  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 入驻日期(一级渠道商手工录入、二级渠道商审批通过日期)
      *
@@ -389,6 +408,7 @@ public class Distributor  implements java.io.Serializable {
     public void setSettleTime(String settleTime) {
         this.settleTime = settleTime;
     }
+
 
     /**
      * get 状态(0 审批中、2驳回、1 已入驻、3已停止合作)
@@ -408,6 +428,7 @@ public class Distributor  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 驳回原因
      *
@@ -425,6 +446,7 @@ public class Distributor  implements java.io.Serializable {
     public void setReason(String reason) {
         this.reason = reason;
     }
+
 
     /**
      * get 级次(0一级、1 二级)
@@ -444,6 +466,7 @@ public class Distributor  implements java.io.Serializable {
         this.distributorLevel = distributorLevel;
     }
 
+
     /**
      * get 渠道商类型(0合作伙伴、1 渠道代理)
      *
@@ -461,6 +484,7 @@ public class Distributor  implements java.io.Serializable {
     public void setDistributorType(Integer distributorType) {
         this.distributorType = distributorType;
     }
+
 
     /**
      * get 上级渠道商ID
@@ -480,6 +504,7 @@ public class Distributor  implements java.io.Serializable {
         this.parentDistributorId = parentDistributorId;
     }
 
+
     /**
      * get 所属部门(0企业线、1政府线)
      *
@@ -497,6 +522,7 @@ public class Distributor  implements java.io.Serializable {
     public void setDept(Integer dept) {
         this.dept = dept;
     }
+
 
     /**
      * get 京东云负责人(京东云人员erp或名称)
@@ -518,6 +544,26 @@ public class Distributor  implements java.io.Serializable {
 
 
     /**
+     * get 是否享受折扣(1享受2不享受)
+     *
+     * @return
+     */
+    public Integer getDiscountFlag() {
+        return discountFlag;
+    }
+
+    /**
+     * set 是否享受折扣(1享受2不享受)
+     *
+     * @param discountFlag
+     */
+    public void setDiscountFlag(Integer discountFlag) {
+        this.discountFlag = discountFlag;
+    }
+
+
+
+    /**
      * set 渠道商ID
      *
      * @param distributorId
@@ -526,6 +572,7 @@ public class Distributor  implements java.io.Serializable {
         this.distributorId = distributorId;
         return this;
     }
+
 
     /**
      * set 渠道商名称
@@ -537,6 +584,7 @@ public class Distributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 京东云账户
      *
@@ -546,6 +594,7 @@ public class Distributor  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 合同编号
@@ -557,6 +606,7 @@ public class Distributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 营业执照号
      *
@@ -566,6 +616,7 @@ public class Distributor  implements java.io.Serializable {
         this.businessLicense = businessLicense;
         return this;
     }
+
 
     /**
      * set 法定代表人
@@ -577,6 +628,7 @@ public class Distributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 营业执照图片
      *
@@ -586,6 +638,7 @@ public class Distributor  implements java.io.Serializable {
         this.businessLicensePic = businessLicensePic;
         return this;
     }
+
 
     /**
      * set 主营业务描述
@@ -597,6 +650,7 @@ public class Distributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 办公地址
      *
@@ -606,6 +660,7 @@ public class Distributor  implements java.io.Serializable {
         this.workAddress = workAddress;
         return this;
     }
+
 
     /**
      * set 联系人姓名
@@ -617,6 +672,7 @@ public class Distributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 联系人电话
      *
@@ -626,6 +682,7 @@ public class Distributor  implements java.io.Serializable {
         this.tel = tel;
         return this;
     }
+
 
     /**
      * set 邮箱
@@ -637,6 +694,7 @@ public class Distributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 所属地域
      *
@@ -646,6 +704,7 @@ public class Distributor  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 入驻日期(一级渠道商手工录入、二级渠道商审批通过日期)
@@ -657,6 +716,7 @@ public class Distributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态(0 审批中、2驳回、1 已入驻、3已停止合作)
      *
@@ -666,6 +726,7 @@ public class Distributor  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 驳回原因
@@ -677,6 +738,7 @@ public class Distributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 级次(0一级、1 二级)
      *
@@ -686,6 +748,7 @@ public class Distributor  implements java.io.Serializable {
         this.distributorLevel = distributorLevel;
         return this;
     }
+
 
     /**
      * set 渠道商类型(0合作伙伴、1 渠道代理)
@@ -697,6 +760,7 @@ public class Distributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 上级渠道商ID
      *
@@ -706,6 +770,7 @@ public class Distributor  implements java.io.Serializable {
         this.parentDistributorId = parentDistributorId;
         return this;
     }
+
 
     /**
      * set 所属部门(0企业线、1政府线)
@@ -717,6 +782,7 @@ public class Distributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 京东云负责人(京东云人员erp或名称)
      *
@@ -724,6 +790,17 @@ public class Distributor  implements java.io.Serializable {
      */
     public Distributor erp(String erp) {
         this.erp = erp;
+        return this;
+    }
+
+
+    /**
+     * set 是否享受折扣(1享受2不享受)
+     *
+     * @param discountFlag
+     */
+    public Distributor discountFlag(Integer discountFlag) {
+        this.discountFlag = discountFlag;
         return this;
     }
 

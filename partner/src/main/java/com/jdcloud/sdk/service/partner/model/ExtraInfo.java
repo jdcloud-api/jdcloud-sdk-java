@@ -43,6 +43,7 @@ public class ExtraInfo  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get 名称
      *
@@ -60,6 +61,7 @@ public class ExtraInfo  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 值
@@ -80,6 +82,7 @@ public class ExtraInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 名称
      *
@@ -89,6 +92,7 @@ public class ExtraInfo  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 值

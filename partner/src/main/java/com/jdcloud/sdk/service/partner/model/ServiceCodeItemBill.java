@@ -78,6 +78,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
     private String serviceCodeName;
 
 
+
     /**
      * get 余额支付金额
      *
@@ -95,6 +96,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
     public void setBalancePayFee(Number balancePayFee) {
         this.balancePayFee = balancePayFee;
     }
+
 
     /**
      * get 优惠金额
@@ -114,6 +116,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
         this.discountFee = discountFee;
     }
 
+
     /**
      * get 优惠后金额
      *
@@ -131,6 +134,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
     public void setRealTotalFee(Number realTotalFee) {
         this.realTotalFee = realTotalFee;
     }
+
 
     /**
      * get 欠费金额
@@ -150,6 +154,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
         this.arrearFee = arrearFee;
     }
 
+
     /**
      * get 优惠前金额
      *
@@ -167,6 +172,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
     public void setTotalFee(Number totalFee) {
         this.totalFee = totalFee;
     }
+
 
     /**
      * get 现金支付金额
@@ -186,6 +192,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
         this.cashPayFee = cashPayFee;
     }
 
+
     /**
      * get 代金券支付金额
      *
@@ -204,6 +211,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
         this.cashCouponFee = cashCouponFee;
     }
 
+
     /**
      * get serviceCode
      *
@@ -221,6 +229,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get serviceCodeName
@@ -241,6 +250,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 余额支付金额
      *
@@ -250,6 +260,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
         this.balancePayFee = balancePayFee;
         return this;
     }
+
 
     /**
      * set 优惠金额
@@ -261,6 +272,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 优惠后金额
      *
@@ -270,6 +282,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
         this.realTotalFee = realTotalFee;
         return this;
     }
+
 
     /**
      * set 欠费金额
@@ -281,6 +294,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 优惠前金额
      *
@@ -290,6 +304,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
         this.totalFee = totalFee;
         return this;
     }
+
 
     /**
      * set 现金支付金额
@@ -301,6 +316,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 代金券支付金额
      *
@@ -311,6 +327,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set serviceCode
      *
@@ -320,6 +337,7 @@ public class ServiceCodeItemBill  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set serviceCodeName

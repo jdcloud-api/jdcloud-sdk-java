@@ -181,6 +181,21 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     private String contractSubjectName;
 
     /**
+     * 税务识别号
+     */
+    private String taxNumber;
+
+    /**
+     * 发票抬头
+     */
+    private String invoiceTitle;
+
+    /**
+     * 1 全强代付,2 全自付, 3 自选
+     */
+    private Integer payType;
+
+    /**
      * 是否有下级服务商（0有1不没有）
      */
     private Integer subFlag;
@@ -221,20 +236,60 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     private String erp;
 
     /**
+     * 京东云负责人姓名
+     */
+    private String erpName;
+
+    /**
+     * 京东云负责人部门
+     */
+    private String erpDept;
+
+    /**
+     * 服务商级别
+     */
+    private Integer grade;
+
+    /**
+     * 服务商级别名称
+     */
+    private String gradeName;
+
+    /**
+     * 服务期限（开始时间）
+     */
+    private String effectiveDate;
+
+    /**
+     * 服务期限（结束时间）
+     */
+    private String expirationDate;
+
+    /**
+     * 电子合同编号
+     */
+    private String eContractNo;
+
+    /**
+     * EBS合同编号
+     */
+    private String ebsContractNo;
+
+    /**
      * distributorProductList
      */
+    
     private List<DistributorProduct> distributorProductList;
-
     /**
      * distributorPolicyList
      */
+    
     private List<DistributorPolicy> distributorPolicyList;
-
     /**
      * subDistributorPolicyList
      */
+    
     private List<DistributorPolicy> subDistributorPolicyList;
-
     /**
      * customerCount
      */
@@ -260,6 +315,12 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
      */
     private Integer level;
 
+    /**
+     * 是否享受折扣(1享受2不享受)
+     */
+    private Integer discountFlag;
+
+
 
     /**
      * get 渠道商ID
@@ -279,6 +340,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.distributorId = distributorId;
     }
 
+
     /**
      * get 渠道商名称
      *
@@ -296,6 +358,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setDistributorName(String distributorName) {
         this.distributorName = distributorName;
     }
+
 
     /**
      * get pin
@@ -315,6 +378,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.pin = pin;
     }
 
+
     /**
      * get 合同编号
      *
@@ -332,6 +396,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setContractNo(String contractNo) {
         this.contractNo = contractNo;
     }
+
 
     /**
      * get 营业执照号
@@ -351,6 +416,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.businessLicense = businessLicense;
     }
 
+
     /**
      * get 法定代表人
      *
@@ -368,6 +434,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setLegalRepresentative(String legalRepresentative) {
         this.legalRepresentative = legalRepresentative;
     }
+
 
     /**
      * get 营业执照图片
@@ -387,6 +454,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.businessLicensePic = businessLicensePic;
     }
 
+
     /**
      * get 主营业务描述
      *
@@ -404,6 +472,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setBusinessDesc(String businessDesc) {
         this.businessDesc = businessDesc;
     }
+
 
     /**
      * get 办公地址
@@ -423,6 +492,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.workAddress = workAddress;
     }
 
+
     /**
      * get 联系人姓名
      *
@@ -440,6 +510,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setContracter(String contracter) {
         this.contracter = contracter;
     }
+
 
     /**
      * get 联系人电话
@@ -459,6 +530,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.tel = tel;
     }
 
+
     /**
      * get 邮箱
      *
@@ -476,6 +548,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     /**
      * get 所属地域
@@ -495,6 +568,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.region = region;
     }
 
+
     /**
      * get 入驻日期(一级渠道商手工录入、二级渠道商审批通过日期)
      *
@@ -512,6 +586,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setSettleTime(String settleTime) {
         this.settleTime = settleTime;
     }
+
 
     /**
      * get 状态(0 审批中、2驳回、1 已入驻、3已停止合作)
@@ -531,6 +606,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.status = status;
     }
 
+
     /**
      * get 驳回原因
      *
@@ -548,6 +624,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setReason(String reason) {
         this.reason = reason;
     }
+
 
     /**
      * get 级次(0一级、1 二级)
@@ -567,6 +644,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.distributorLevel = distributorLevel;
     }
 
+
     /**
      * get 渠道商类型(0合作伙伴、1 渠道代理)
      *
@@ -584,6 +662,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setDistributorType(Integer distributorType) {
         this.distributorType = distributorType;
     }
+
 
     /**
      * get 上级渠道商ID
@@ -603,6 +682,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.parentDistributorId = parentDistributorId;
     }
 
+
     /**
      * get 所属部门(0企业线、1政府线)
      *
@@ -620,6 +700,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setDept(Integer dept) {
         this.dept = dept;
     }
+
 
     /**
      * get 部门名称
@@ -639,6 +720,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.deptName = deptName;
     }
 
+
     /**
      * get 是否需要返还（0需要1不需要）
      *
@@ -656,6 +738,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setReturnFlag(Integer returnFlag) {
         this.returnFlag = returnFlag;
     }
+
 
     /**
      * get 返还政策ID
@@ -675,6 +758,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.returnPolicyId = returnPolicyId;
     }
 
+
     /**
      * get 结算周期类型（1月、2季度、3年、4天、5周）
      *
@@ -692,6 +776,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setCircleType(Integer circleType) {
         this.circleType = circleType;
     }
+
 
     /**
      * get 结算周期类型名称
@@ -711,6 +796,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.circleTypeName = circleTypeName;
     }
 
+
     /**
      * get 服务商返还方式
      *
@@ -728,6 +814,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setReturnMode(Integer returnMode) {
         this.returnMode = returnMode;
     }
+
 
     /**
      * get 服务商返还方式名称（1现金2代金券）
@@ -747,6 +834,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.returnModeName = returnModeName;
     }
 
+
     /**
      * get 合同主体
      *
@@ -764,6 +852,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setContractSubject(String contractSubject) {
         this.contractSubject = contractSubject;
     }
+
 
     /**
      * get 合同主体名称
@@ -783,6 +872,64 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.contractSubjectName = contractSubjectName;
     }
 
+
+    /**
+     * get 税务识别号
+     *
+     * @return
+     */
+    public String getTaxNumber() {
+        return taxNumber;
+    }
+
+    /**
+     * set 税务识别号
+     *
+     * @param taxNumber
+     */
+    public void setTaxNumber(String taxNumber) {
+        this.taxNumber = taxNumber;
+    }
+
+
+    /**
+     * get 发票抬头
+     *
+     * @return
+     */
+    public String getInvoiceTitle() {
+        return invoiceTitle;
+    }
+
+    /**
+     * set 发票抬头
+     *
+     * @param invoiceTitle
+     */
+    public void setInvoiceTitle(String invoiceTitle) {
+        this.invoiceTitle = invoiceTitle;
+    }
+
+
+    /**
+     * get 1 全强代付,2 全自付, 3 自选
+     *
+     * @return
+     */
+    public Integer getPayType() {
+        return payType;
+    }
+
+    /**
+     * set 1 全强代付,2 全自付, 3 自选
+     *
+     * @param payType
+     */
+    public void setPayType(Integer payType) {
+        this.payType = payType;
+    }
+
+
     /**
      * get 是否有下级服务商（0有1不没有）
      *
@@ -800,6 +947,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setSubFlag(Integer subFlag) {
         this.subFlag = subFlag;
     }
+
 
     /**
      * get 下级服务商是否需要返还（0需要1不需要）
@@ -819,6 +967,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.subReturnFlag = subReturnFlag;
     }
 
+
     /**
      * get 下级服务商返还政策ID
      *
@@ -836,6 +985,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setSubReturnPolicyId(String subReturnPolicyId) {
         this.subReturnPolicyId = subReturnPolicyId;
     }
+
 
     /**
      * get 结算周期类型（1月、2季度、3年、4天、5周）
@@ -855,6 +1005,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.subCircleType = subCircleType;
     }
 
+
     /**
      * get 结算周期类型名称
      *
@@ -872,6 +1023,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setSubCircleTypeName(String subCircleTypeName) {
         this.subCircleTypeName = subCircleTypeName;
     }
+
 
     /**
      * get 下级服务商返还方式
@@ -891,6 +1043,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.subReturnMode = subReturnMode;
     }
 
+
     /**
      * get 下级服务商返还方式名称（1现金2代金券）
      *
@@ -908,6 +1061,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setSubReturnModeName(String subReturnModeName) {
         this.subReturnModeName = subReturnModeName;
     }
+
 
     /**
      * get 京东云负责人(京东云人员erp或名称)
@@ -927,59 +1081,215 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.erp = erp;
     }
 
+
     /**
-     * get distributorProductList
+     * get 京东云负责人姓名
      *
      * @return
      */
+    public String getErpName() {
+        return erpName;
+    }
+
+    /**
+     * set 京东云负责人姓名
+     *
+     * @param erpName
+     */
+    public void setErpName(String erpName) {
+        this.erpName = erpName;
+    }
+
+
+    /**
+     * get 京东云负责人部门
+     *
+     * @return
+     */
+    public String getErpDept() {
+        return erpDept;
+    }
+
+    /**
+     * set 京东云负责人部门
+     *
+     * @param erpDept
+     */
+    public void setErpDept(String erpDept) {
+        this.erpDept = erpDept;
+    }
+
+
+    /**
+     * get 服务商级别
+     *
+     * @return
+     */
+    public Integer getGrade() {
+        return grade;
+    }
+
+    /**
+     * set 服务商级别
+     *
+     * @param grade
+     */
+    public void setGrade(Integer grade) {
+        this.grade = grade;
+    }
+
+
+    /**
+     * get 服务商级别名称
+     *
+     * @return
+     */
+    public String getGradeName() {
+        return gradeName;
+    }
+
+    /**
+     * set 服务商级别名称
+     *
+     * @param gradeName
+     */
+    public void setGradeName(String gradeName) {
+        this.gradeName = gradeName;
+    }
+
+
+    /**
+     * get 服务期限（开始时间）
+     *
+     * @return
+     */
+    public String getEffectiveDate() {
+        return effectiveDate;
+    }
+
+    /**
+     * set 服务期限（开始时间）
+     *
+     * @param effectiveDate
+     */
+    public void setEffectiveDate(String effectiveDate) {
+        this.effectiveDate = effectiveDate;
+    }
+
+
+    /**
+     * get 服务期限（结束时间）
+     *
+     * @return
+     */
+    public String getExpirationDate() {
+        return expirationDate;
+    }
+
+    /**
+     * set 服务期限（结束时间）
+     *
+     * @param expirationDate
+     */
+    public void setExpirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+    }
+
+
+    /**
+     * get 电子合同编号
+     *
+     * @return
+     */
+    public String getEContractNo() {
+        return eContractNo;
+    }
+
+    /**
+     * set 电子合同编号
+     *
+     * @param eContractNo
+     */
+    public void setEContractNo(String eContractNo) {
+        this.eContractNo = eContractNo;
+    }
+
+
+    /**
+     * get EBS合同编号
+     *
+     * @return
+     */
+    public String getEbsContractNo() {
+        return ebsContractNo;
+    }
+
+    /**
+     * set EBS合同编号
+     *
+     * @param ebsContractNo
+     */
+    public void setEbsContractNo(String ebsContractNo) {
+        this.ebsContractNo = ebsContractNo;
+    }
+
+
+    /**
+    * get distributorProductList
+    *
+    * @return
+    */
     public List<DistributorProduct> getDistributorProductList() {
         return distributorProductList;
     }
 
     /**
-     * set distributorProductList
-     *
-     * @param distributorProductList
-     */
+    * set distributorProductList
+    *
+    * @param distributorProductList
+    */
     public void setDistributorProductList(List<DistributorProduct> distributorProductList) {
         this.distributorProductList = distributorProductList;
     }
 
+
     /**
-     * get distributorPolicyList
-     *
-     * @return
-     */
+    * get distributorPolicyList
+    *
+    * @return
+    */
     public List<DistributorPolicy> getDistributorPolicyList() {
         return distributorPolicyList;
     }
 
     /**
-     * set distributorPolicyList
-     *
-     * @param distributorPolicyList
-     */
+    * set distributorPolicyList
+    *
+    * @param distributorPolicyList
+    */
     public void setDistributorPolicyList(List<DistributorPolicy> distributorPolicyList) {
         this.distributorPolicyList = distributorPolicyList;
     }
 
+
     /**
-     * get subDistributorPolicyList
-     *
-     * @return
-     */
+    * get subDistributorPolicyList
+    *
+    * @return
+    */
     public List<DistributorPolicy> getSubDistributorPolicyList() {
         return subDistributorPolicyList;
     }
 
     /**
-     * set subDistributorPolicyList
-     *
-     * @param subDistributorPolicyList
-     */
+    * set subDistributorPolicyList
+    *
+    * @param subDistributorPolicyList
+    */
     public void setSubDistributorPolicyList(List<DistributorPolicy> subDistributorPolicyList) {
         this.subDistributorPolicyList = subDistributorPolicyList;
     }
+
 
     /**
      * get customerCount
@@ -999,6 +1309,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.customerCount = customerCount;
     }
 
+
     /**
      * get 一级渠道商名称
      *
@@ -1016,6 +1327,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setParentDistributorName(String parentDistributorName) {
         this.parentDistributorName = parentDistributorName;
     }
+
 
     /**
      * get 入驻时间
@@ -1035,6 +1347,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.settleTimeStr = settleTimeStr;
     }
 
+
     /**
      * get 帐户名
      *
@@ -1052,6 +1365,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     public void setLoginName(String loginName) {
         this.loginName = loginName;
     }
+
 
     /**
      * get 服务商最大层级
@@ -1073,6 +1387,26 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
 
 
     /**
+     * get 是否享受折扣(1享受2不享受)
+     *
+     * @return
+     */
+    public Integer getDiscountFlag() {
+        return discountFlag;
+    }
+
+    /**
+     * set 是否享受折扣(1享受2不享受)
+     *
+     * @param discountFlag
+     */
+    public void setDiscountFlag(Integer discountFlag) {
+        this.discountFlag = discountFlag;
+    }
+
+
+
+    /**
      * set 渠道商ID
      *
      * @param distributorId
@@ -1081,6 +1415,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.distributorId = distributorId;
         return this;
     }
+
 
     /**
      * set 渠道商名称
@@ -1092,6 +1427,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set pin
      *
@@ -1101,6 +1437,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 合同编号
@@ -1112,6 +1449,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 营业执照号
      *
@@ -1121,6 +1459,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.businessLicense = businessLicense;
         return this;
     }
+
 
     /**
      * set 法定代表人
@@ -1132,6 +1471,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 营业执照图片
      *
@@ -1141,6 +1481,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.businessLicensePic = businessLicensePic;
         return this;
     }
+
 
     /**
      * set 主营业务描述
@@ -1152,6 +1493,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 办公地址
      *
@@ -1161,6 +1503,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.workAddress = workAddress;
         return this;
     }
+
 
     /**
      * set 联系人姓名
@@ -1172,6 +1515,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 联系人电话
      *
@@ -1181,6 +1525,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.tel = tel;
         return this;
     }
+
 
     /**
      * set 邮箱
@@ -1192,6 +1537,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 所属地域
      *
@@ -1201,6 +1547,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.region = region;
         return this;
     }
+
 
     /**
      * set 入驻日期(一级渠道商手工录入、二级渠道商审批通过日期)
@@ -1212,6 +1559,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 状态(0 审批中、2驳回、1 已入驻、3已停止合作)
      *
@@ -1221,6 +1569,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.status = status;
         return this;
     }
+
 
     /**
      * set 驳回原因
@@ -1232,6 +1581,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 级次(0一级、1 二级)
      *
@@ -1241,6 +1591,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.distributorLevel = distributorLevel;
         return this;
     }
+
 
     /**
      * set 渠道商类型(0合作伙伴、1 渠道代理)
@@ -1252,6 +1603,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 上级渠道商ID
      *
@@ -1261,6 +1613,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.parentDistributorId = parentDistributorId;
         return this;
     }
+
 
     /**
      * set 所属部门(0企业线、1政府线)
@@ -1272,6 +1625,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 部门名称
      *
@@ -1281,6 +1635,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.deptName = deptName;
         return this;
     }
+
 
     /**
      * set 是否需要返还（0需要1不需要）
@@ -1292,6 +1647,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 返还政策ID
      *
@@ -1301,6 +1657,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.returnPolicyId = returnPolicyId;
         return this;
     }
+
 
     /**
      * set 结算周期类型（1月、2季度、3年、4天、5周）
@@ -1312,6 +1669,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 结算周期类型名称
      *
@@ -1321,6 +1679,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.circleTypeName = circleTypeName;
         return this;
     }
+
 
     /**
      * set 服务商返还方式
@@ -1332,6 +1691,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 服务商返还方式名称（1现金2代金券）
      *
@@ -1341,6 +1701,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.returnModeName = returnModeName;
         return this;
     }
+
 
     /**
      * set 合同主体
@@ -1352,6 +1713,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 合同主体名称
      *
@@ -1361,6 +1723,40 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.contractSubjectName = contractSubjectName;
         return this;
     }
+
+
+    /**
+     * set 税务识别号
+     *
+     * @param taxNumber
+     */
+    public DistributorResult taxNumber(String taxNumber) {
+        this.taxNumber = taxNumber;
+        return this;
+    }
+
+
+    /**
+     * set 发票抬头
+     *
+     * @param invoiceTitle
+     */
+    public DistributorResult invoiceTitle(String invoiceTitle) {
+        this.invoiceTitle = invoiceTitle;
+        return this;
+    }
+
+
+    /**
+     * set 1 全强代付,2 全自付, 3 自选
+     *
+     * @param payType
+     */
+    public DistributorResult payType(Integer payType) {
+        this.payType = payType;
+        return this;
+    }
+
 
     /**
      * set 是否有下级服务商（0有1不没有）
@@ -1372,6 +1768,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 下级服务商是否需要返还（0需要1不需要）
      *
@@ -1381,6 +1778,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.subReturnFlag = subReturnFlag;
         return this;
     }
+
 
     /**
      * set 下级服务商返还政策ID
@@ -1392,6 +1790,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 结算周期类型（1月、2季度、3年、4天、5周）
      *
@@ -1401,6 +1800,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.subCircleType = subCircleType;
         return this;
     }
+
 
     /**
      * set 结算周期类型名称
@@ -1412,6 +1812,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 下级服务商返还方式
      *
@@ -1421,6 +1822,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.subReturnMode = subReturnMode;
         return this;
     }
+
 
     /**
      * set 下级服务商返还方式名称（1现金2代金券）
@@ -1432,6 +1834,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 京东云负责人(京东云人员erp或名称)
      *
@@ -1442,35 +1845,127 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
-     * set distributorProductList
+     * set 京东云负责人姓名
      *
-     * @param distributorProductList
+     * @param erpName
      */
+    public DistributorResult erpName(String erpName) {
+        this.erpName = erpName;
+        return this;
+    }
+
+
+    /**
+     * set 京东云负责人部门
+     *
+     * @param erpDept
+     */
+    public DistributorResult erpDept(String erpDept) {
+        this.erpDept = erpDept;
+        return this;
+    }
+
+
+    /**
+     * set 服务商级别
+     *
+     * @param grade
+     */
+    public DistributorResult grade(Integer grade) {
+        this.grade = grade;
+        return this;
+    }
+
+
+    /**
+     * set 服务商级别名称
+     *
+     * @param gradeName
+     */
+    public DistributorResult gradeName(String gradeName) {
+        this.gradeName = gradeName;
+        return this;
+    }
+
+
+    /**
+     * set 服务期限（开始时间）
+     *
+     * @param effectiveDate
+     */
+    public DistributorResult effectiveDate(String effectiveDate) {
+        this.effectiveDate = effectiveDate;
+        return this;
+    }
+
+
+    /**
+     * set 服务期限（结束时间）
+     *
+     * @param expirationDate
+     */
+    public DistributorResult expirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+        return this;
+    }
+
+
+    /**
+     * set 电子合同编号
+     *
+     * @param eContractNo
+     */
+    public DistributorResult eContractNo(String eContractNo) {
+        this.eContractNo = eContractNo;
+        return this;
+    }
+
+
+    /**
+     * set EBS合同编号
+     *
+     * @param ebsContractNo
+     */
+    public DistributorResult ebsContractNo(String ebsContractNo) {
+        this.ebsContractNo = ebsContractNo;
+        return this;
+    }
+
+
+    /**
+    * set distributorProductList
+    *
+    * @param distributorProductList
+    */
     public DistributorResult distributorProductList(List<DistributorProduct> distributorProductList) {
         this.distributorProductList = distributorProductList;
         return this;
     }
 
+
     /**
-     * set distributorPolicyList
-     *
-     * @param distributorPolicyList
-     */
+    * set distributorPolicyList
+    *
+    * @param distributorPolicyList
+    */
     public DistributorResult distributorPolicyList(List<DistributorPolicy> distributorPolicyList) {
         this.distributorPolicyList = distributorPolicyList;
         return this;
     }
 
+
     /**
-     * set subDistributorPolicyList
-     *
-     * @param subDistributorPolicyList
-     */
+    * set subDistributorPolicyList
+    *
+    * @param subDistributorPolicyList
+    */
     public DistributorResult subDistributorPolicyList(List<DistributorPolicy> subDistributorPolicyList) {
         this.subDistributorPolicyList = subDistributorPolicyList;
         return this;
     }
+
 
     /**
      * set customerCount
@@ -1482,6 +1977,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 一级渠道商名称
      *
@@ -1491,6 +1987,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.parentDistributorName = parentDistributorName;
         return this;
     }
+
 
     /**
      * set 入驻时间
@@ -1502,6 +1999,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 帐户名
      *
@@ -1512,6 +2010,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 服务商最大层级
      *
@@ -1521,6 +2020,18 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         this.level = level;
         return this;
     }
+
+
+    /**
+     * set 是否享受折扣(1享受2不享受)
+     *
+     * @param discountFlag
+     */
+    public DistributorResult discountFlag(Integer discountFlag) {
+        this.discountFlag = discountFlag;
+        return this;
+    }
+
 
 
     /**
@@ -1558,5 +2069,4 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         }
         this.subDistributorPolicyList.add(subDistributorPolicyList);
     }
-
 }

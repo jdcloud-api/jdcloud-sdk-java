@@ -42,6 +42,7 @@ public class ServiceCodeBill  implements java.io.Serializable {
     /**
      * 按serviceCode汇总的账单列表
      */
+    
     private List<ServiceCodeItemBill> billSummaryServiceCodeItemVoList;
 
 
@@ -63,23 +64,25 @@ public class ServiceCodeBill  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
-     * get 按serviceCode汇总的账单列表
-     *
-     * @return
-     */
+    * get 按serviceCode汇总的账单列表
+    *
+    * @return
+    */
     public List<ServiceCodeItemBill> getBillSummaryServiceCodeItemVoList() {
         return billSummaryServiceCodeItemVoList;
     }
 
     /**
-     * set 按serviceCode汇总的账单列表
-     *
-     * @param billSummaryServiceCodeItemVoList
-     */
+    * set 按serviceCode汇总的账单列表
+    *
+    * @param billSummaryServiceCodeItemVoList
+    */
     public void setBillSummaryServiceCodeItemVoList(List<ServiceCodeItemBill> billSummaryServiceCodeItemVoList) {
         this.billSummaryServiceCodeItemVoList = billSummaryServiceCodeItemVoList;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class ServiceCodeBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 按serviceCode汇总的账单列表
-     *
-     * @param billSummaryServiceCodeItemVoList
-     */
+    * set 按serviceCode汇总的账单列表
+    *
+    * @param billSummaryServiceCodeItemVoList
+    */
     public ServiceCodeBill billSummaryServiceCodeItemVoList(List<ServiceCodeItemBill> billSummaryServiceCodeItemVoList) {
         this.billSummaryServiceCodeItemVoList = billSummaryServiceCodeItemVoList;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class ServiceCodeBill  implements java.io.Serializable {
         }
         this.billSummaryServiceCodeItemVoList.add(billSummaryServiceCodeItemVoList);
     }
-
 }

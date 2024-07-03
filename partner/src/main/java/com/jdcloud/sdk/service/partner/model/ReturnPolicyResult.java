@@ -98,8 +98,8 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     /**
      * returnPolicyProductList
      */
+    
     private List<ReturnPolicyProduct> returnPolicyProductList;
-
     /**
      * 产品ID
      */
@@ -113,7 +113,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     /**
      * 产品类型
      */
-    private Integer productType;
+    private String productType;
 
     /**
      * 产品类型名称
@@ -186,6 +186,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     private Integer yn;
 
 
+
     /**
      * get ID
      *
@@ -203,6 +204,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 部门ID
@@ -222,6 +224,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.deptId = deptId;
     }
 
+
     /**
      * get 部门名称
      *
@@ -239,6 +242,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     public void setDeptName(String deptName) {
         this.deptName = deptName;
     }
+
 
     /**
      * get 渠道商类型
@@ -258,6 +262,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.distributorType = distributorType;
     }
 
+
     /**
      * get 渠道商类型名称
      *
@@ -275,6 +280,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     public void setDistributorTypeName(String distributorTypeName) {
         this.distributorTypeName = distributorTypeName;
     }
+
 
     /**
      * get 返还类型
@@ -294,6 +300,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.returnType = returnType;
     }
 
+
     /**
      * get 返还政策主ID
      *
@@ -311,6 +318,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     public void setReturnPolicyId(Number returnPolicyId) {
         this.returnPolicyId = returnPolicyId;
     }
+
 
     /**
      * get 返还政策主名称
@@ -330,6 +338,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.returnPolicyName = returnPolicyName;
     }
 
+
     /**
      * get 项目编码
      *
@@ -347,6 +356,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     public void setItemId(Number itemId) {
         this.itemId = itemId;
     }
+
 
     /**
      * get 项目名称
@@ -366,6 +376,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.itemName = itemName;
     }
 
+
     /**
      * get 返还依据类型
      *
@@ -383,6 +394,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     public void setReturnRuleType(Integer returnRuleType) {
         this.returnRuleType = returnRuleType;
     }
+
 
     /**
      * get 返还依据类型名称
@@ -402,23 +414,25 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.returnRuleTypeName = returnRuleTypeName;
     }
 
+
     /**
-     * get returnPolicyProductList
-     *
-     * @return
-     */
+    * get returnPolicyProductList
+    *
+    * @return
+    */
     public List<ReturnPolicyProduct> getReturnPolicyProductList() {
         return returnPolicyProductList;
     }
 
     /**
-     * set returnPolicyProductList
-     *
-     * @param returnPolicyProductList
-     */
+    * set returnPolicyProductList
+    *
+    * @param returnPolicyProductList
+    */
     public void setReturnPolicyProductList(List<ReturnPolicyProduct> returnPolicyProductList) {
         this.returnPolicyProductList = returnPolicyProductList;
     }
+
 
     /**
      * get 产品ID
@@ -438,6 +452,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.productId = productId;
     }
 
+
     /**
      * get 产品名称
      *
@@ -456,12 +471,13 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.productName = productName;
     }
 
+
     /**
      * get 产品类型
      *
      * @return
      */
-    public Integer getProductType() {
+    public String getProductType() {
         return productType;
     }
 
@@ -470,9 +486,10 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
      *
      * @param productType
      */
-    public void setProductType(Integer productType) {
+    public void setProductType(String productType) {
         this.productType = productType;
     }
+
 
     /**
      * get 产品类型名称
@@ -492,6 +509,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.productTypeName = productTypeName;
     }
 
+
     /**
      * get 周期类型
      *
@@ -509,6 +527,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     public void setCircleType(Integer circleType) {
         this.circleType = circleType;
     }
+
 
     /**
      * get 周期名称
@@ -528,6 +547,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.circleName = circleName;
     }
 
+
     /**
      * get 指定周期标识
      *
@@ -545,6 +565,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     public void setCircleFlag(Integer circleFlag) {
         this.circleFlag = circleFlag;
     }
+
 
     /**
      * get 周期值
@@ -564,6 +585,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.circleValue = circleValue;
     }
 
+
     /**
      * get 返还项目条件
      *
@@ -581,6 +603,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     public void setCondition(String condition) {
         this.condition = condition;
     }
+
 
     /**
      * get 说明
@@ -600,6 +623,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.conditionRemark = conditionRemark;
     }
 
+
     /**
      * get 返还比例
      *
@@ -617,6 +641,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     public void setReturnRatio(Number returnRatio) {
         this.returnRatio = returnRatio;
     }
+
 
     /**
      * get 状态
@@ -636,6 +661,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.status = status;
     }
 
+
     /**
      * get 创建时间
      *
@@ -653,6 +679,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 创建人
@@ -672,6 +699,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.createUser = createUser;
     }
 
+
     /**
      * get 修改时间
      *
@@ -690,6 +718,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 修改人
      *
@@ -707,6 +736,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
+
 
     /**
      * get 是否删除0未删除,1已删除
@@ -727,6 +757,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     }
 
 
+
     /**
      * set ID
      *
@@ -736,6 +767,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.id = id;
         return this;
     }
+
 
     /**
      * set 部门ID
@@ -747,6 +779,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 部门名称
      *
@@ -756,6 +789,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.deptName = deptName;
         return this;
     }
+
 
     /**
      * set 渠道商类型
@@ -767,6 +801,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 渠道商类型名称
      *
@@ -776,6 +811,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.distributorTypeName = distributorTypeName;
         return this;
     }
+
 
     /**
      * set 返还类型
@@ -787,6 +823,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 返还政策主ID
      *
@@ -796,6 +833,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.returnPolicyId = returnPolicyId;
         return this;
     }
+
 
     /**
      * set 返还政策主名称
@@ -807,6 +845,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 项目编码
      *
@@ -816,6 +855,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.itemId = itemId;
         return this;
     }
+
 
     /**
      * set 项目名称
@@ -827,6 +867,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 返还依据类型
      *
@@ -836,6 +877,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.returnRuleType = returnRuleType;
         return this;
     }
+
 
     /**
      * set 返还依据类型名称
@@ -847,15 +889,17 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
-     * set returnPolicyProductList
-     *
-     * @param returnPolicyProductList
-     */
+    * set returnPolicyProductList
+    *
+    * @param returnPolicyProductList
+    */
     public ReturnPolicyResult returnPolicyProductList(List<ReturnPolicyProduct> returnPolicyProductList) {
         this.returnPolicyProductList = returnPolicyProductList;
         return this;
     }
+
 
     /**
      * set 产品ID
@@ -867,6 +911,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 产品名称
      *
@@ -877,15 +922,17 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 产品类型
      *
      * @param productType
      */
-    public ReturnPolicyResult productType(Integer productType) {
+    public ReturnPolicyResult productType(String productType) {
         this.productType = productType;
         return this;
     }
+
 
     /**
      * set 产品类型名称
@@ -897,6 +944,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 周期类型
      *
@@ -906,6 +954,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.circleType = circleType;
         return this;
     }
+
 
     /**
      * set 周期名称
@@ -917,6 +966,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 指定周期标识
      *
@@ -926,6 +976,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.circleFlag = circleFlag;
         return this;
     }
+
 
     /**
      * set 周期值
@@ -937,6 +988,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 返还项目条件
      *
@@ -946,6 +998,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.condition = condition;
         return this;
     }
+
 
     /**
      * set 说明
@@ -957,6 +1010,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 返还比例
      *
@@ -966,6 +1020,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.returnRatio = returnRatio;
         return this;
     }
+
 
     /**
      * set 状态
@@ -977,6 +1032,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -986,6 +1042,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 创建人
@@ -997,6 +1054,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -1006,6 +1064,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 修改人
@@ -1017,6 +1076,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 是否删除0未删除,1已删除
      *
@@ -1026,6 +1086,7 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         this.yn = yn;
         return this;
     }
+
 
 
     /**
@@ -1039,5 +1100,4 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         }
         this.returnPolicyProductList.add(returnPolicyProductList);
     }
-
 }

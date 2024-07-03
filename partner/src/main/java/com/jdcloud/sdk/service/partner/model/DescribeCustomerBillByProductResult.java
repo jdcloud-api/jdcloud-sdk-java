@@ -45,6 +45,7 @@ public class DescribeCustomerBillByProductResult extends JdcloudResult implement
     /**
      * result
      */
+    
     private List<ServiceCodeBill> result;
 
 
@@ -66,23 +67,25 @@ public class DescribeCustomerBillByProductResult extends JdcloudResult implement
         this.pagination = pagination;
     }
 
+
     /**
-     * get result
-     *
-     * @return
-     */
+    * get result
+    *
+    * @return
+    */
     public List<ServiceCodeBill> getResult() {
         return result;
     }
 
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public void setResult(List<ServiceCodeBill> result) {
         this.result = result;
     }
+
 
 
     /**
@@ -95,15 +98,17 @@ public class DescribeCustomerBillByProductResult extends JdcloudResult implement
         return this;
     }
 
+
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public DescribeCustomerBillByProductResult result(List<ServiceCodeBill> result) {
         this.result = result;
         return this;
     }
+
 
 
     /**
@@ -117,5 +122,4 @@ public class DescribeCustomerBillByProductResult extends JdcloudResult implement
         }
         this.result.add(result);
     }
-
 }

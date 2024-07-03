@@ -43,7 +43,7 @@ public class Pagination  implements java.io.Serializable {
     private Integer numberPages;
 
     /**
-     * 每页记录数
+     * 总记录数
      */
     private Integer numberRecords;
 
@@ -56,6 +56,7 @@ public class Pagination  implements java.io.Serializable {
      * 起始页
      */
     private Integer startIndex;
+
 
 
     /**
@@ -76,6 +77,7 @@ public class Pagination  implements java.io.Serializable {
         this.currPageNo = currPageNo;
     }
 
+
     /**
      * get 页数
      *
@@ -94,8 +96,9 @@ public class Pagination  implements java.io.Serializable {
         this.numberPages = numberPages;
     }
 
+
     /**
-     * get 每页记录数
+     * get 总记录数
      *
      * @return
      */
@@ -104,13 +107,14 @@ public class Pagination  implements java.io.Serializable {
     }
 
     /**
-     * set 每页记录数
+     * set 总记录数
      *
      * @param numberRecords
      */
     public void setNumberRecords(Integer numberRecords) {
         this.numberRecords = numberRecords;
     }
+
 
     /**
      * get 页面大小
@@ -129,6 +133,7 @@ public class Pagination  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 起始页
@@ -149,6 +154,7 @@ public class Pagination  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 当前页
      *
@@ -158,6 +164,7 @@ public class Pagination  implements java.io.Serializable {
         this.currPageNo = currPageNo;
         return this;
     }
+
 
     /**
      * set 页数
@@ -169,8 +176,9 @@ public class Pagination  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 每页记录数
+     * set 总记录数
      *
      * @param numberRecords
      */
@@ -178,6 +186,7 @@ public class Pagination  implements java.io.Serializable {
         this.numberRecords = numberRecords;
         return this;
     }
+
 
     /**
      * set 页面大小
@@ -188,6 +197,7 @@ public class Pagination  implements java.io.Serializable {
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 起始页

@@ -108,6 +108,21 @@ public class ReturnBillQuery  implements java.io.Serializable {
     private Integer returnMode;
 
     /**
+     * 产品分类(0公有云1云市场2Elite，多个逗号分开)
+     */
+    private String productType;
+
+    /**
+     * 查询月(格式：2023-10)
+     */
+    private String queryMonth;
+
+    /**
+     * 产品编码
+     */
+    private String serviceCode;
+
+    /**
      * 状态
      */
     private Integer status;
@@ -168,6 +183,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
     private Integer offset;
 
 
+
     /**
      * get ID
      *
@@ -185,6 +201,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 返还单号
@@ -204,6 +221,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.retrunBillId = retrunBillId;
     }
 
+
     /**
      * get 服务商ID
      *
@@ -221,6 +239,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
     public void setDistributorId(String distributorId) {
         this.distributorId = distributorId;
     }
+
 
     /**
      * get pin
@@ -240,6 +259,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 部门ID
      *
@@ -257,6 +277,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
     public void setDeptId(Integer deptId) {
         this.deptId = deptId;
     }
+
 
     /**
      * get 渠道商类型
@@ -276,6 +297,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.distributorType = distributorType;
     }
 
+
     /**
      * get 服务商名称
      *
@@ -293,6 +315,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
     public void setDistributorName(String distributorName) {
         this.distributorName = distributorName;
     }
+
 
     /**
      * get month
@@ -312,6 +335,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.month = month;
     }
 
+
     /**
      * get 生成时间
      *
@@ -329,6 +353,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
     public void setGenerateTime(String generateTime) {
         this.generateTime = generateTime;
     }
+
 
     /**
      * get 开始时间
@@ -348,6 +373,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.billBegin = billBegin;
     }
 
+
     /**
      * get 结束时间
      *
@@ -365,6 +391,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
     public void setBillEnd(String billEnd) {
         this.billEnd = billEnd;
     }
+
 
     /**
      * get 周期类型
@@ -384,6 +411,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.circleType = circleType;
     }
 
+
     /**
      * get 返还类型
      *
@@ -401,6 +429,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
     public void setReturnType(Integer returnType) {
         this.returnType = returnType;
     }
+
 
     /**
      * get 返还金额
@@ -420,6 +449,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.returnMount = returnMount;
     }
 
+
     /**
      * get 返还方式
      *
@@ -437,6 +467,64 @@ public class ReturnBillQuery  implements java.io.Serializable {
     public void setReturnMode(Integer returnMode) {
         this.returnMode = returnMode;
     }
+
+
+    /**
+     * get 产品分类(0公有云1云市场2Elite，多个逗号分开)
+     *
+     * @return
+     */
+    public String getProductType() {
+        return productType;
+    }
+
+    /**
+     * set 产品分类(0公有云1云市场2Elite，多个逗号分开)
+     *
+     * @param productType
+     */
+    public void setProductType(String productType) {
+        this.productType = productType;
+    }
+
+
+    /**
+     * get 查询月(格式：2023-10)
+     *
+     * @return
+     */
+    public String getQueryMonth() {
+        return queryMonth;
+    }
+
+    /**
+     * set 查询月(格式：2023-10)
+     *
+     * @param queryMonth
+     */
+    public void setQueryMonth(String queryMonth) {
+        this.queryMonth = queryMonth;
+    }
+
+
+    /**
+     * get 产品编码
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set 产品编码
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
 
     /**
      * get 状态
@@ -456,6 +544,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 创建时间
      *
@@ -473,6 +562,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 创建人
@@ -492,6 +582,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.createUser = createUser;
     }
 
+
     /**
      * get 修改时间
      *
@@ -509,6 +600,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 修改人
@@ -528,6 +620,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.updateUser = updateUser;
     }
 
+
     /**
      * get 是否删除0未删除,1已删除
      *
@@ -545,6 +638,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
     public void setYn(Integer yn) {
         this.yn = yn;
     }
+
 
     /**
      * get 驳回原因
@@ -564,6 +658,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.reason = reason;
     }
 
+
     /**
      * get 开始时间
      *
@@ -581,6 +676,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
     public void setBeginTime(String beginTime) {
         this.beginTime = beginTime;
     }
+
 
     /**
      * get 结束时间
@@ -600,6 +696,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
      * get 当前页序号
      *
@@ -618,6 +715,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.pageIndex = pageIndex;
     }
 
+
     /**
      * get 每页结果数量
      *
@@ -635,6 +733,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get offset
@@ -655,6 +754,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ID
      *
@@ -664,6 +764,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 返还单号
@@ -675,6 +776,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 服务商ID
      *
@@ -684,6 +786,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.distributorId = distributorId;
         return this;
     }
+
 
     /**
      * set pin
@@ -695,6 +798,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 部门ID
      *
@@ -704,6 +808,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.deptId = deptId;
         return this;
     }
+
 
     /**
      * set 渠道商类型
@@ -715,6 +820,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 服务商名称
      *
@@ -724,6 +830,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.distributorName = distributorName;
         return this;
     }
+
 
     /**
      * set month
@@ -735,6 +842,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 生成时间
      *
@@ -744,6 +852,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.generateTime = generateTime;
         return this;
     }
+
 
     /**
      * set 开始时间
@@ -755,6 +864,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 结束时间
      *
@@ -764,6 +874,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.billEnd = billEnd;
         return this;
     }
+
 
     /**
      * set 周期类型
@@ -775,6 +886,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 返还类型
      *
@@ -784,6 +896,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.returnType = returnType;
         return this;
     }
+
 
     /**
      * set 返还金额
@@ -795,6 +908,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 返还方式
      *
@@ -804,6 +918,40 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.returnMode = returnMode;
         return this;
     }
+
+
+    /**
+     * set 产品分类(0公有云1云市场2Elite，多个逗号分开)
+     *
+     * @param productType
+     */
+    public ReturnBillQuery productType(String productType) {
+        this.productType = productType;
+        return this;
+    }
+
+
+    /**
+     * set 查询月(格式：2023-10)
+     *
+     * @param queryMonth
+     */
+    public ReturnBillQuery queryMonth(String queryMonth) {
+        this.queryMonth = queryMonth;
+        return this;
+    }
+
+
+    /**
+     * set 产品编码
+     *
+     * @param serviceCode
+     */
+    public ReturnBillQuery serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+
 
     /**
      * set 状态
@@ -815,6 +963,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -824,6 +973,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 创建人
@@ -835,6 +985,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -844,6 +995,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 修改人
@@ -855,6 +1007,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否删除0未删除,1已删除
      *
@@ -864,6 +1017,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.yn = yn;
         return this;
     }
+
 
     /**
      * set 驳回原因
@@ -875,6 +1029,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 开始时间
      *
@@ -884,6 +1039,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.beginTime = beginTime;
         return this;
     }
+
 
     /**
      * set 结束时间
@@ -895,6 +1051,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 当前页序号
      *
@@ -905,6 +1062,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 每页结果数量
      *
@@ -914,6 +1072,7 @@ public class ReturnBillQuery  implements java.io.Serializable {
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set offset

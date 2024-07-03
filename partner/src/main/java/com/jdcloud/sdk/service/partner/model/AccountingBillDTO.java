@@ -87,8 +87,8 @@ public class AccountingBillDTO  implements java.io.Serializable {
     /**
      * 配置列表
      */
+    
     private List<FormulaDTO> formulaList;
-
     /**
      * 费用
      */
@@ -200,6 +200,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     private String message;
 
 
+
     /**
      * get 产品类型
      *
@@ -217,6 +218,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setSource(Integer source) {
         this.source = source;
     }
+
 
     /**
      * get 记录ID
@@ -236,6 +238,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.recordId = recordId;
     }
 
+
     /**
      * get 用户pin
      *
@@ -253,6 +256,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 业务线
@@ -272,6 +276,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
      * get 产品线
      *
@@ -289,6 +294,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 产品ID
@@ -308,6 +314,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.productId = productId;
     }
 
+
     /**
      * get 站点  0:主站  其他:专有云
      *
@@ -325,6 +332,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setSite(Integer site) {
         this.site = site;
     }
+
 
     /**
      * get 资源id
@@ -344,6 +352,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 区域
      *
@@ -361,6 +370,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 计费类型
@@ -380,23 +390,25 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.billingType = billingType;
     }
 
+
     /**
-     * get 配置列表
-     *
-     * @return
-     */
+    * get 配置列表
+    *
+    * @return
+    */
     public List<FormulaDTO> getFormulaList() {
         return formulaList;
     }
 
     /**
-     * set 配置列表
-     *
-     * @param formulaList
-     */
+    * set 配置列表
+    *
+    * @param formulaList
+    */
     public void setFormulaList(List<FormulaDTO> formulaList) {
         this.formulaList = formulaList;
     }
+
 
     /**
      * get 费用
@@ -416,6 +428,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.billFee2 = billFee2;
     }
 
+
     /**
      * get 折扣金额
      *
@@ -433,6 +446,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setDiscountFee(Number discountFee) {
         this.discountFee = discountFee;
     }
+
 
     /**
      * get 优惠后金额
@@ -452,6 +466,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.actualFee = actualFee;
     }
 
+
     /**
      * get 代金券唯一标识
      *
@@ -469,6 +484,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setCashCouponId(String cashCouponId) {
         this.cashCouponId = cashCouponId;
     }
+
 
     /**
      * get 代金券金额
@@ -488,6 +504,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.cashCouponFee = cashCouponFee;
     }
 
+
     /**
      * get 付费代金券金额
      *
@@ -505,6 +522,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setPayCouponFee(Number payCouponFee) {
         this.payCouponFee = payCouponFee;
     }
+
 
     /**
      * get 免费代金券金额
@@ -524,6 +542,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.freeCouponFee = freeCouponFee;
     }
 
+
     /**
      * get 余额支付金额
      *
@@ -541,6 +560,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setBalancePayFee(Number balancePayFee) {
         this.balancePayFee = balancePayFee;
     }
+
 
     /**
      * get 在线支付金额
@@ -560,6 +580,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.cashPayFee = cashPayFee;
     }
 
+
     /**
      * get 业绩金额
      *
@@ -577,6 +598,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setPerformanceFee(Number performanceFee) {
         this.performanceFee = performanceFee;
     }
+
 
     /**
      * get 账单时间
@@ -596,6 +618,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.billTime = billTime;
     }
 
+
     /**
      * get 账单支付时间
      *
@@ -613,6 +636,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setBillPayTime(String billPayTime) {
         this.billPayTime = billPayTime;
     }
+
 
     /**
      * get 账单开始时间
@@ -632,6 +656,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.billBeginTime = billBeginTime;
     }
 
+
     /**
      * get 账单结束时间
      *
@@ -649,6 +674,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setBillEndTime(String billEndTime) {
         this.billEndTime = billEndTime;
     }
+
 
     /**
      * get 服务商pin
@@ -668,6 +694,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.distributorPin = distributorPin;
     }
 
+
     /**
      * get 服务商类型
      *
@@ -685,6 +712,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setDistributorType(Integer distributorType) {
         this.distributorType = distributorType;
     }
+
 
     /**
      * get 子订单号
@@ -704,6 +732,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.transactionNo = transactionNo;
     }
 
+
     /**
      * get 订单号
      *
@@ -721,6 +750,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setMainTransactionNo(String mainTransactionNo) {
         this.mainTransactionNo = mainTransactionNo;
     }
+
 
     /**
      * get 退款单号
@@ -740,6 +770,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.refundNo = refundNo;
     }
 
+
     /**
      * get 操作类型
      *
@@ -758,6 +789,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.opType = opType;
     }
 
+
     /**
      * get 返回编码0成功-1失败
      *
@@ -775,6 +807,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     public void setCode(Integer code) {
         this.code = code;
     }
+
 
     /**
      * get 返回消息
@@ -795,6 +828,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 产品类型
      *
@@ -804,6 +838,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.source = source;
         return this;
     }
+
 
     /**
      * set 记录ID
@@ -815,6 +850,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户pin
      *
@@ -824,6 +860,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 业务线
@@ -835,6 +872,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品线
      *
@@ -844,6 +882,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set 产品ID
@@ -855,6 +894,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 站点  0:主站  其他:专有云
      *
@@ -864,6 +904,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.site = site;
         return this;
     }
+
 
     /**
      * set 资源id
@@ -875,6 +916,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 区域
      *
@@ -884,6 +926,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 计费类型
@@ -895,15 +938,17 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 配置列表
-     *
-     * @param formulaList
-     */
+    * set 配置列表
+    *
+    * @param formulaList
+    */
     public AccountingBillDTO formulaList(List<FormulaDTO> formulaList) {
         this.formulaList = formulaList;
         return this;
     }
+
 
     /**
      * set 费用
@@ -915,6 +960,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 折扣金额
      *
@@ -924,6 +970,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.discountFee = discountFee;
         return this;
     }
+
 
     /**
      * set 优惠后金额
@@ -935,6 +982,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 代金券唯一标识
      *
@@ -944,6 +992,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.cashCouponId = cashCouponId;
         return this;
     }
+
 
     /**
      * set 代金券金额
@@ -955,6 +1004,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 付费代金券金额
      *
@@ -964,6 +1014,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.payCouponFee = payCouponFee;
         return this;
     }
+
 
     /**
      * set 免费代金券金额
@@ -975,6 +1026,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 余额支付金额
      *
@@ -984,6 +1036,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.balancePayFee = balancePayFee;
         return this;
     }
+
 
     /**
      * set 在线支付金额
@@ -995,6 +1048,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业绩金额
      *
@@ -1004,6 +1058,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.performanceFee = performanceFee;
         return this;
     }
+
 
     /**
      * set 账单时间
@@ -1015,6 +1070,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账单支付时间
      *
@@ -1024,6 +1080,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.billPayTime = billPayTime;
         return this;
     }
+
 
     /**
      * set 账单开始时间
@@ -1035,6 +1092,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账单结束时间
      *
@@ -1044,6 +1102,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.billEndTime = billEndTime;
         return this;
     }
+
 
     /**
      * set 服务商pin
@@ -1055,6 +1114,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 服务商类型
      *
@@ -1064,6 +1124,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.distributorType = distributorType;
         return this;
     }
+
 
     /**
      * set 子订单号
@@ -1075,6 +1136,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 订单号
      *
@@ -1084,6 +1146,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.mainTransactionNo = mainTransactionNo;
         return this;
     }
+
 
     /**
      * set 退款单号
@@ -1095,6 +1158,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 操作类型
      *
@@ -1104,6 +1168,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.opType = opType;
         return this;
     }
+
 
     /**
      * set 返回编码0成功-1失败
@@ -1115,6 +1180,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 返回消息
      *
@@ -1124,6 +1190,7 @@ public class AccountingBillDTO  implements java.io.Serializable {
         this.message = message;
         return this;
     }
+
 
 
     /**
@@ -1137,5 +1204,4 @@ public class AccountingBillDTO  implements java.io.Serializable {
         }
         this.formulaList.add(formulaList);
     }
-
 }

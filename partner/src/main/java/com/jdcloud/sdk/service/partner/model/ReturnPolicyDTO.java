@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.partner.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * returnPolicyDTO
@@ -41,7 +42,9 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
 
     /**
      * 部门ID
+     * Required:true
      */
+    @Required
     private Integer deptId;
 
     /**
@@ -51,7 +54,9 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
 
     /**
      * 渠道商类型
+     * Required:true
      */
+    @Required
     private Integer distributorType;
 
     /**
@@ -61,7 +66,9 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
 
     /**
      * 返还政策主ID
+     * Required:true
      */
+    @Required
     private Number returnPolicyId;
 
     /**
@@ -71,7 +78,9 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
 
     /**
      * 项目编码
+     * Required:true
      */
+    @Required
     private Number itemId;
 
     /**
@@ -81,27 +90,35 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
 
     /**
      * 返还依据类型
+     * Required:true
      */
+    @Required
     private Integer returnRuleType;
 
     /**
-     * 产品ID
+     * 审批邮件附件id，取上传邮件附件接口返回的approveFileId值
+     * Required:true
      */
-    private String productId;
-
-    /**
-     * 产品类型
-     */
-    private Integer productType;
+    @Required
+    private String approveFileId;
 
     /**
      * returnPolicyProductDTOList
      */
+    
     private List<ReturnPolicyProductDTO> returnPolicyProductDTOList;
+    /**
+     * 选择的产品列表
+例：&quot;returnPolicyProductMap&quot;: {&quot;1&quot;: [&quot;500138&quot;,&quot;500139&quot;],&quot;2&quot;: [&quot;719&quot;,&quot;720&quot;]}
+
+     */
+    private Object returnPolicyProductMap;
 
     /**
      * 周期类型
+     * Required:true
      */
+    @Required
     private Integer circleType;
 
     /**
@@ -120,20 +137,10 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
     private Integer circleValue;
 
     /**
-     * condition
+     * conditions
      */
-    private List<ReturnConditionOperatorDTO> condition;
-
-    /**
-     * 说明
-     */
-    private String conditionRemark;
-
-    /**
-     * 返还比例
-     */
-    private Number returnRatio;
-
+    
+    private List<ReturnConditionDTO> conditions;
     /**
      * 状态
      */
@@ -165,6 +172,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
     private Integer yn;
 
 
+
     /**
      * get ID
      *
@@ -182,6 +190,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 部门ID
@@ -201,6 +210,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.deptId = deptId;
     }
 
+
     /**
      * get 部门名称
      *
@@ -218,6 +228,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
     public void setDeptName(String deptName) {
         this.deptName = deptName;
     }
+
 
     /**
      * get 渠道商类型
@@ -237,6 +248,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.distributorType = distributorType;
     }
 
+
     /**
      * get 返还类型
      *
@@ -254,6 +266,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
     public void setReturnType(Integer returnType) {
         this.returnType = returnType;
     }
+
 
     /**
      * get 返还政策主ID
@@ -273,6 +286,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.returnPolicyId = returnPolicyId;
     }
 
+
     /**
      * get 返还政策主名称
      *
@@ -290,6 +304,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
     public void setReturnPolicyName(String returnPolicyName) {
         this.returnPolicyName = returnPolicyName;
     }
+
 
     /**
      * get 项目编码
@@ -309,6 +324,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.itemId = itemId;
     }
 
+
     /**
      * get 项目名称
      *
@@ -326,6 +342,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
     public void setItemName(String itemName) {
         this.itemName = itemName;
     }
+
 
     /**
      * get 返还依据类型
@@ -345,59 +362,67 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.returnRuleType = returnRuleType;
     }
 
+
     /**
-     * get 产品ID
+     * get 审批邮件附件id，取上传邮件附件接口返回的approveFileId值
      *
      * @return
      */
-    public String getProductId() {
-        return productId;
+    public String getApproveFileId() {
+        return approveFileId;
     }
 
     /**
-     * set 产品ID
+     * set 审批邮件附件id，取上传邮件附件接口返回的approveFileId值
      *
-     * @param productId
+     * @param approveFileId
      */
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setApproveFileId(String approveFileId) {
+        this.approveFileId = approveFileId;
     }
 
-    /**
-     * get 产品类型
-     *
-     * @return
-     */
-    public Integer getProductType() {
-        return productType;
-    }
 
     /**
-     * set 产品类型
-     *
-     * @param productType
-     */
-    public void setProductType(Integer productType) {
-        this.productType = productType;
-    }
-
-    /**
-     * get returnPolicyProductDTOList
-     *
-     * @return
-     */
+    * get returnPolicyProductDTOList
+    *
+    * @return
+    */
     public List<ReturnPolicyProductDTO> getReturnPolicyProductDTOList() {
         return returnPolicyProductDTOList;
     }
 
     /**
-     * set returnPolicyProductDTOList
-     *
-     * @param returnPolicyProductDTOList
-     */
+    * set returnPolicyProductDTOList
+    *
+    * @param returnPolicyProductDTOList
+    */
     public void setReturnPolicyProductDTOList(List<ReturnPolicyProductDTO> returnPolicyProductDTOList) {
         this.returnPolicyProductDTOList = returnPolicyProductDTOList;
     }
+
+
+    /**
+     * get 选择的产品列表
+例：&quot;returnPolicyProductMap&quot;: {&quot;1&quot;: [&quot;500138&quot;,&quot;500139&quot;],&quot;2&quot;: [&quot;719&quot;,&quot;720&quot;]}
+
+     *
+     * @return
+     */
+    public Object getReturnPolicyProductMap() {
+        return returnPolicyProductMap;
+    }
+
+    /**
+     * set 选择的产品列表
+例：&quot;returnPolicyProductMap&quot;: {&quot;1&quot;: [&quot;500138&quot;,&quot;500139&quot;],&quot;2&quot;: [&quot;719&quot;,&quot;720&quot;]}
+
+     *
+     * @param returnPolicyProductMap
+     */
+    public void setReturnPolicyProductMap(Object returnPolicyProductMap) {
+        this.returnPolicyProductMap = returnPolicyProductMap;
+    }
+
 
     /**
      * get 周期类型
@@ -417,6 +442,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.circleType = circleType;
     }
 
+
     /**
      * get 周期名称
      *
@@ -434,6 +460,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
     public void setCircleName(String circleName) {
         this.circleName = circleName;
     }
+
 
     /**
      * get 指定周期标识
@@ -453,6 +480,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.circleFlag = circleFlag;
     }
 
+
     /**
      * get 周期值
      *
@@ -471,59 +499,25 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.circleValue = circleValue;
     }
 
+
     /**
-     * get condition
-     *
-     * @return
-     */
-    public List<ReturnConditionOperatorDTO> getCondition() {
-        return condition;
+    * get conditions
+    *
+    * @return
+    */
+    public List<ReturnConditionDTO> getConditions() {
+        return conditions;
     }
 
     /**
-     * set condition
-     *
-     * @param condition
-     */
-    public void setCondition(List<ReturnConditionOperatorDTO> condition) {
-        this.condition = condition;
+    * set conditions
+    *
+    * @param conditions
+    */
+    public void setConditions(List<ReturnConditionDTO> conditions) {
+        this.conditions = conditions;
     }
 
-    /**
-     * get 说明
-     *
-     * @return
-     */
-    public String getConditionRemark() {
-        return conditionRemark;
-    }
-
-    /**
-     * set 说明
-     *
-     * @param conditionRemark
-     */
-    public void setConditionRemark(String conditionRemark) {
-        this.conditionRemark = conditionRemark;
-    }
-
-    /**
-     * get 返还比例
-     *
-     * @return
-     */
-    public Number getReturnRatio() {
-        return returnRatio;
-    }
-
-    /**
-     * set 返还比例
-     *
-     * @param returnRatio
-     */
-    public void setReturnRatio(Number returnRatio) {
-        this.returnRatio = returnRatio;
-    }
 
     /**
      * get 状态
@@ -543,6 +537,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 创建时间
      *
@@ -560,6 +555,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 创建人
@@ -579,6 +575,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.createUser = createUser;
     }
 
+
     /**
      * get 修改时间
      *
@@ -597,6 +594,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 修改人
      *
@@ -614,6 +612,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
+
 
     /**
      * get 是否删除0未删除,1已删除
@@ -634,6 +633,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ID
      *
@@ -643,6 +643,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 部门ID
@@ -654,6 +655,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 部门名称
      *
@@ -663,6 +665,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.deptName = deptName;
         return this;
     }
+
 
     /**
      * set 渠道商类型
@@ -674,6 +677,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 返还类型
      *
@@ -683,6 +687,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.returnType = returnType;
         return this;
     }
+
 
     /**
      * set 返还政策主ID
@@ -694,6 +699,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 返还政策主名称
      *
@@ -703,6 +709,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.returnPolicyName = returnPolicyName;
         return this;
     }
+
 
     /**
      * set 项目编码
@@ -714,6 +721,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 项目名称
      *
@@ -723,6 +731,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.itemName = itemName;
         return this;
     }
+
 
     /**
      * set 返还依据类型
@@ -734,35 +743,41 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 产品ID
+     * set 审批邮件附件id，取上传邮件附件接口返回的approveFileId值
      *
-     * @param productId
+     * @param approveFileId
      */
-    public ReturnPolicyDTO productId(String productId) {
-        this.productId = productId;
+    public ReturnPolicyDTO approveFileId(String approveFileId) {
+        this.approveFileId = approveFileId;
         return this;
     }
 
-    /**
-     * set 产品类型
-     *
-     * @param productType
-     */
-    public ReturnPolicyDTO productType(Integer productType) {
-        this.productType = productType;
-        return this;
-    }
 
     /**
-     * set returnPolicyProductDTOList
-     *
-     * @param returnPolicyProductDTOList
-     */
+    * set returnPolicyProductDTOList
+    *
+    * @param returnPolicyProductDTOList
+    */
     public ReturnPolicyDTO returnPolicyProductDTOList(List<ReturnPolicyProductDTO> returnPolicyProductDTOList) {
         this.returnPolicyProductDTOList = returnPolicyProductDTOList;
         return this;
     }
+
+
+    /**
+     * set 选择的产品列表
+例：&quot;returnPolicyProductMap&quot;: {&quot;1&quot;: [&quot;500138&quot;,&quot;500139&quot;],&quot;2&quot;: [&quot;719&quot;,&quot;720&quot;]}
+
+     *
+     * @param returnPolicyProductMap
+     */
+    public ReturnPolicyDTO returnPolicyProductMap(Object returnPolicyProductMap) {
+        this.returnPolicyProductMap = returnPolicyProductMap;
+        return this;
+    }
+
 
     /**
      * set 周期类型
@@ -774,6 +789,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 周期名称
      *
@@ -783,6 +799,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.circleName = circleName;
         return this;
     }
+
 
     /**
      * set 指定周期标识
@@ -794,6 +811,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 周期值
      *
@@ -804,35 +822,17 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set condition
-     *
-     * @param condition
-     */
-    public ReturnPolicyDTO condition(List<ReturnConditionOperatorDTO> condition) {
-        this.condition = condition;
+    * set conditions
+    *
+    * @param conditions
+    */
+    public ReturnPolicyDTO conditions(List<ReturnConditionDTO> conditions) {
+        this.conditions = conditions;
         return this;
     }
 
-    /**
-     * set 说明
-     *
-     * @param conditionRemark
-     */
-    public ReturnPolicyDTO conditionRemark(String conditionRemark) {
-        this.conditionRemark = conditionRemark;
-        return this;
-    }
-
-    /**
-     * set 返还比例
-     *
-     * @param returnRatio
-     */
-    public ReturnPolicyDTO returnRatio(Number returnRatio) {
-        this.returnRatio = returnRatio;
-        return this;
-    }
 
     /**
      * set 状态
@@ -844,6 +844,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -853,6 +854,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 创建人
@@ -864,6 +866,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -873,6 +876,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 修改人
@@ -884,6 +888,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否删除0未删除,1已删除
      *
@@ -893,6 +898,7 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
         this.yn = yn;
         return this;
     }
+
 
 
     /**
@@ -908,15 +914,14 @@ public class ReturnPolicyDTO  implements java.io.Serializable {
     }
 
     /**
-     * add item to condition
+     * add item to conditions
      *
      * @param condition
      */
-    public void addCondition(ReturnConditionOperatorDTO condition) {
-        if (this.condition == null) {
-            this.condition = new ArrayList<>();
+    public void addCondition(ReturnConditionDTO condition) {
+        if (this.conditions == null) {
+            this.conditions = new ArrayList<>();
         }
-        this.condition.add(condition);
+        this.conditions.add(condition);
     }
-
 }

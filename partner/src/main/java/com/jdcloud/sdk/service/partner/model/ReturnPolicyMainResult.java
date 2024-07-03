@@ -104,6 +104,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
     private Integer yn;
 
 
+
     /**
      * get ID
      *
@@ -121,6 +122,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 部门ID
@@ -140,6 +142,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         this.deptId = deptId;
     }
 
+
     /**
      * get 部门名称
      *
@@ -157,6 +160,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
     public void setDeptName(String deptName) {
         this.deptName = deptName;
     }
+
 
     /**
      * get 渠道商类型
@@ -176,6 +180,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         this.distributorType = distributorType;
     }
 
+
     /**
      * get 渠道商类型名称
      *
@@ -193,6 +198,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
     public void setDistributorTypeName(String distributorTypeName) {
         this.distributorTypeName = distributorTypeName;
     }
+
 
     /**
      * get 返还类型
@@ -212,6 +218,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         this.returnType = returnType;
     }
 
+
     /**
      * get 返还政策主名称
      *
@@ -229,6 +236,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
     public void setReturnPolicyName(String returnPolicyName) {
         this.returnPolicyName = returnPolicyName;
     }
+
 
     /**
      * get 备注
@@ -248,6 +256,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         this.remark = remark;
     }
 
+
     /**
      * get 状态
      *
@@ -265,6 +274,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 创建时间
@@ -284,6 +294,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         this.createTime = createTime;
     }
 
+
     /**
      * get 创建人
      *
@@ -301,6 +312,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
     public void setCreateUser(String createUser) {
         this.createUser = createUser;
     }
+
 
     /**
      * get 修改时间
@@ -320,6 +332,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 修改人
      *
@@ -337,6 +350,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
+
 
     /**
      * get 是否删除0未删除,1已删除
@@ -357,6 +371,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set ID
      *
@@ -366,6 +381,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         this.id = id;
         return this;
     }
+
 
     /**
      * set 部门ID
@@ -377,6 +393,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 部门名称
      *
@@ -386,6 +403,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         this.deptName = deptName;
         return this;
     }
+
 
     /**
      * set 渠道商类型
@@ -397,6 +415,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 渠道商类型名称
      *
@@ -406,6 +425,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         this.distributorTypeName = distributorTypeName;
         return this;
     }
+
 
     /**
      * set 返还类型
@@ -417,6 +437,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 返还政策主名称
      *
@@ -426,6 +447,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         this.returnPolicyName = returnPolicyName;
         return this;
     }
+
 
     /**
      * set 备注
@@ -437,6 +459,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 状态
      *
@@ -446,6 +469,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         this.status = status;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -457,6 +481,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 创建人
      *
@@ -466,6 +491,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         this.createUser = createUser;
         return this;
     }
+
 
     /**
      * set 修改时间
@@ -477,6 +503,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 修改人
      *
@@ -486,6 +513,7 @@ public class ReturnPolicyMainResult extends JdcloudResult implements java.io.Ser
         this.updateUser = updateUser;
         return this;
     }
+
 
     /**
      * set 是否删除0未删除,1已删除

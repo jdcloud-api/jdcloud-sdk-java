@@ -48,6 +48,11 @@ public class Customer  implements java.io.Serializable {
     private String loginName;
 
     /**
+     * 账户ID
+     */
+    private Long accountingId;
+
+    /**
      * 渠道商ID
      */
     private String distributorId;
@@ -123,14 +128,24 @@ public class Customer  implements java.io.Serializable {
     private String updateUser;
 
     /**
-     * 账户类型
+     * 账户类型名称（1个人2企业）
      */
     private String accountTypeName;
+
+    /**
+     * 账户类型（1个人2企业）
+     */
+    private Integer accountType;
 
     /**
      * 实名标识名称
      */
     private String realName;
+
+    /**
+     * 实名标识
+     */
+    private Integer realNameFlag;
 
     /**
      * 名称
@@ -141,6 +156,7 @@ public class Customer  implements java.io.Serializable {
      * 是否删除0未删除,1已删除
      */
     private Integer yn;
+
 
 
     /**
@@ -161,6 +177,7 @@ public class Customer  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 客户pin
      *
@@ -178,6 +195,7 @@ public class Customer  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 账户名
@@ -197,6 +215,26 @@ public class Customer  implements java.io.Serializable {
         this.loginName = loginName;
     }
 
+
+    /**
+     * get 账户ID
+     *
+     * @return
+     */
+    public Long getAccountingId() {
+        return accountingId;
+    }
+
+    /**
+     * set 账户ID
+     *
+     * @param accountingId
+     */
+    public void setAccountingId(Long accountingId) {
+        this.accountingId = accountingId;
+    }
+
+
     /**
      * get 渠道商ID
      *
@@ -214,6 +252,7 @@ public class Customer  implements java.io.Serializable {
     public void setDistributorId(String distributorId) {
         this.distributorId = distributorId;
     }
+
 
     /**
      * get 渠道商PIN
@@ -233,6 +272,7 @@ public class Customer  implements java.io.Serializable {
         this.distributorPin = distributorPin;
     }
 
+
     /**
      * get 渠道商名称
      *
@@ -250,6 +290,7 @@ public class Customer  implements java.io.Serializable {
     public void setDistributorName(String distributorName) {
         this.distributorName = distributorName;
     }
+
 
     /**
      * get 渠道商级次
@@ -269,6 +310,7 @@ public class Customer  implements java.io.Serializable {
         this.distributorLevel = distributorLevel;
     }
 
+
     /**
      * get 关联时间
      *
@@ -286,6 +328,7 @@ public class Customer  implements java.io.Serializable {
     public void setRelTime(String relTime) {
         this.relTime = relTime;
     }
+
 
     /**
      * get 来源(0渠道商自身,1京东云客户)
@@ -305,6 +348,7 @@ public class Customer  implements java.io.Serializable {
         this.source = source;
     }
 
+
     /**
      * get 客户昵称
      *
@@ -322,6 +366,7 @@ public class Customer  implements java.io.Serializable {
     public void setAliasName(String aliasName) {
         this.aliasName = aliasName;
     }
+
 
     /**
      * get 客户联系人
@@ -341,6 +386,7 @@ public class Customer  implements java.io.Serializable {
         this.contracter = contracter;
     }
 
+
     /**
      * get 客户电话
      *
@@ -358,6 +404,7 @@ public class Customer  implements java.io.Serializable {
     public void setTel(String tel) {
         this.tel = tel;
     }
+
 
     /**
      * get 客户邮箱
@@ -377,6 +424,7 @@ public class Customer  implements java.io.Serializable {
         this.email = email;
     }
 
+
     /**
      * get 客户备注
      *
@@ -394,6 +442,7 @@ public class Customer  implements java.io.Serializable {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
 
     /**
      * get 创建时间
@@ -413,6 +462,7 @@ public class Customer  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 创建人
      *
@@ -430,6 +480,7 @@ public class Customer  implements java.io.Serializable {
     public void setCreateUser(String createUser) {
         this.createUser = createUser;
     }
+
 
     /**
      * get 修改时间
@@ -449,6 +500,7 @@ public class Customer  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 修改人
      *
@@ -467,8 +519,9 @@ public class Customer  implements java.io.Serializable {
         this.updateUser = updateUser;
     }
 
+
     /**
-     * get 账户类型
+     * get 账户类型名称（1个人2企业）
      *
      * @return
      */
@@ -477,13 +530,33 @@ public class Customer  implements java.io.Serializable {
     }
 
     /**
-     * set 账户类型
+     * set 账户类型名称（1个人2企业）
      *
      * @param accountTypeName
      */
     public void setAccountTypeName(String accountTypeName) {
         this.accountTypeName = accountTypeName;
     }
+
+
+    /**
+     * get 账户类型（1个人2企业）
+     *
+     * @return
+     */
+    public Integer getAccountType() {
+        return accountType;
+    }
+
+    /**
+     * set 账户类型（1个人2企业）
+     *
+     * @param accountType
+     */
+    public void setAccountType(Integer accountType) {
+        this.accountType = accountType;
+    }
+
 
     /**
      * get 实名标识名称
@@ -503,6 +576,26 @@ public class Customer  implements java.io.Serializable {
         this.realName = realName;
     }
 
+
+    /**
+     * get 实名标识
+     *
+     * @return
+     */
+    public Integer getRealNameFlag() {
+        return realNameFlag;
+    }
+
+    /**
+     * set 实名标识
+     *
+     * @param realNameFlag
+     */
+    public void setRealNameFlag(Integer realNameFlag) {
+        this.realNameFlag = realNameFlag;
+    }
+
+
     /**
      * get 名称
      *
@@ -520,6 +613,7 @@ public class Customer  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 是否删除0未删除,1已删除
@@ -540,6 +634,7 @@ public class Customer  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ID
      *
@@ -549,6 +644,7 @@ public class Customer  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 客户pin
@@ -560,6 +656,7 @@ public class Customer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账户名
      *
@@ -569,6 +666,18 @@ public class Customer  implements java.io.Serializable {
         this.loginName = loginName;
         return this;
     }
+
+
+    /**
+     * set 账户ID
+     *
+     * @param accountingId
+     */
+    public Customer accountingId(Long accountingId) {
+        this.accountingId = accountingId;
+        return this;
+    }
+
 
     /**
      * set 渠道商ID
@@ -580,6 +689,7 @@ public class Customer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 渠道商PIN
      *
@@ -589,6 +699,7 @@ public class Customer  implements java.io.Serializable {
         this.distributorPin = distributorPin;
         return this;
     }
+
 
     /**
      * set 渠道商名称
@@ -600,6 +711,7 @@ public class Customer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 渠道商级次
      *
@@ -609,6 +721,7 @@ public class Customer  implements java.io.Serializable {
         this.distributorLevel = distributorLevel;
         return this;
     }
+
 
     /**
      * set 关联时间
@@ -620,6 +733,7 @@ public class Customer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 来源(0渠道商自身,1京东云客户)
      *
@@ -629,6 +743,7 @@ public class Customer  implements java.io.Serializable {
         this.source = source;
         return this;
     }
+
 
     /**
      * set 客户昵称
@@ -640,6 +755,7 @@ public class Customer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 客户联系人
      *
@@ -649,6 +765,7 @@ public class Customer  implements java.io.Serializable {
         this.contracter = contracter;
         return this;
     }
+
 
     /**
      * set 客户电话
@@ -660,6 +777,7 @@ public class Customer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 客户邮箱
      *
@@ -669,6 +787,7 @@ public class Customer  implements java.io.Serializable {
         this.email = email;
         return this;
     }
+
 
     /**
      * set 客户备注
@@ -680,6 +799,7 @@ public class Customer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -689,6 +809,7 @@ public class Customer  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 创建人
@@ -700,6 +821,7 @@ public class Customer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -709,6 +831,7 @@ public class Customer  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 修改人
@@ -720,8 +843,9 @@ public class Customer  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 账户类型
+     * set 账户类型名称（1个人2企业）
      *
      * @param accountTypeName
      */
@@ -729,6 +853,18 @@ public class Customer  implements java.io.Serializable {
         this.accountTypeName = accountTypeName;
         return this;
     }
+
+
+    /**
+     * set 账户类型（1个人2企业）
+     *
+     * @param accountType
+     */
+    public Customer accountType(Integer accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+
 
     /**
      * set 实名标识名称
@@ -740,6 +876,18 @@ public class Customer  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set 实名标识
+     *
+     * @param realNameFlag
+     */
+    public Customer realNameFlag(Integer realNameFlag) {
+        this.realNameFlag = realNameFlag;
+        return this;
+    }
+
+
     /**
      * set 名称
      *
@@ -749,6 +897,7 @@ public class Customer  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 是否删除0未删除,1已删除
