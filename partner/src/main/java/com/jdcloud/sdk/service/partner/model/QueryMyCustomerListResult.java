@@ -45,6 +45,7 @@ public class QueryMyCustomerListResult extends JdcloudResult implements java.io.
     /**
      * result
      */
+    
     private List<Customer> result;
 
 
@@ -66,23 +67,25 @@ public class QueryMyCustomerListResult extends JdcloudResult implements java.io.
         this.pagination = pagination;
     }
 
+
     /**
-     * get result
-     *
-     * @return
-     */
+    * get result
+    *
+    * @return
+    */
     public List<Customer> getResult() {
         return result;
     }
 
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public void setResult(List<Customer> result) {
         this.result = result;
     }
+
 
 
     /**
@@ -95,15 +98,17 @@ public class QueryMyCustomerListResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public QueryMyCustomerListResult result(List<Customer> result) {
         this.result = result;
         return this;
     }
+
 
 
     /**
@@ -117,5 +122,4 @@ public class QueryMyCustomerListResult extends JdcloudResult implements java.io.
         }
         this.result.add(result);
     }
-
 }

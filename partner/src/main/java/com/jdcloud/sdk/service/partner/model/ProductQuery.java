@@ -62,8 +62,8 @@ public class ProductQuery  implements java.io.Serializable {
     /**
      * 产品ID列表
      */
+    
     private List<String> productIdList;
-
     /**
      * 状态
      */
@@ -100,6 +100,7 @@ public class ProductQuery  implements java.io.Serializable {
     private Integer offset;
 
 
+
     /**
      * get ID
      *
@@ -117,6 +118,7 @@ public class ProductQuery  implements java.io.Serializable {
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 产品类型
@@ -136,6 +138,7 @@ public class ProductQuery  implements java.io.Serializable {
         this.productType = productType;
     }
 
+
     /**
      * get 产品ID
      *
@@ -153,6 +156,7 @@ public class ProductQuery  implements java.io.Serializable {
     public void setProductId(String productId) {
         this.productId = productId;
     }
+
 
     /**
      * get 产品名称
@@ -172,6 +176,7 @@ public class ProductQuery  implements java.io.Serializable {
         this.productName = productName;
     }
 
+
     /**
      * get 产品名称(模糊查询)
      *
@@ -190,23 +195,25 @@ public class ProductQuery  implements java.io.Serializable {
         this.productNameLike = productNameLike;
     }
 
+
     /**
-     * get 产品ID列表
-     *
-     * @return
-     */
+    * get 产品ID列表
+    *
+    * @return
+    */
     public List<String> getProductIdList() {
         return productIdList;
     }
 
     /**
-     * set 产品ID列表
-     *
-     * @param productIdList
-     */
+    * set 产品ID列表
+    *
+    * @param productIdList
+    */
     public void setProductIdList(List<String> productIdList) {
         this.productIdList = productIdList;
     }
+
 
     /**
      * get 状态
@@ -226,6 +233,7 @@ public class ProductQuery  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 备注
      *
@@ -243,6 +251,7 @@ public class ProductQuery  implements java.io.Serializable {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
 
     /**
      * get 创建人
@@ -262,6 +271,7 @@ public class ProductQuery  implements java.io.Serializable {
         this.createUser = createUser;
     }
 
+
     /**
      * get 修改人
      *
@@ -279,6 +289,7 @@ public class ProductQuery  implements java.io.Serializable {
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
+
 
     /**
      * get 当前页序号
@@ -298,6 +309,7 @@ public class ProductQuery  implements java.io.Serializable {
         this.pageIndex = pageIndex;
     }
 
+
     /**
      * get 每页结果数量
      *
@@ -315,6 +327,7 @@ public class ProductQuery  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get offset
@@ -335,6 +348,7 @@ public class ProductQuery  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ID
      *
@@ -344,6 +358,7 @@ public class ProductQuery  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 产品类型
@@ -355,6 +370,7 @@ public class ProductQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品ID
      *
@@ -364,6 +380,7 @@ public class ProductQuery  implements java.io.Serializable {
         this.productId = productId;
         return this;
     }
+
 
     /**
      * set 产品名称
@@ -375,6 +392,7 @@ public class ProductQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品名称(模糊查询)
      *
@@ -385,15 +403,17 @@ public class ProductQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 产品ID列表
-     *
-     * @param productIdList
-     */
+    * set 产品ID列表
+    *
+    * @param productIdList
+    */
     public ProductQuery productIdList(List<String> productIdList) {
         this.productIdList = productIdList;
         return this;
     }
+
 
     /**
      * set 状态
@@ -405,6 +425,7 @@ public class ProductQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 备注
      *
@@ -414,6 +435,7 @@ public class ProductQuery  implements java.io.Serializable {
         this.remark = remark;
         return this;
     }
+
 
     /**
      * set 创建人
@@ -425,6 +447,7 @@ public class ProductQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改人
      *
@@ -434,6 +457,7 @@ public class ProductQuery  implements java.io.Serializable {
         this.updateUser = updateUser;
         return this;
     }
+
 
     /**
      * set 当前页序号
@@ -445,6 +469,7 @@ public class ProductQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 每页结果数量
      *
@@ -455,6 +480,7 @@ public class ProductQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set offset
      *
@@ -464,6 +490,7 @@ public class ProductQuery  implements java.io.Serializable {
         this.offset = offset;
         return this;
     }
+
 
 
     /**
@@ -477,5 +504,4 @@ public class ProductQuery  implements java.io.Serializable {
         }
         this.productIdList.add(productIdList);
     }
-
 }

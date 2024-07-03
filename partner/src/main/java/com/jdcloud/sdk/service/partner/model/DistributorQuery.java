@@ -213,6 +213,7 @@ public class DistributorQuery  implements java.io.Serializable {
     private Integer offset;
 
 
+
     /**
      * get 渠道商ID
      *
@@ -230,6 +231,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setDistributorId(String distributorId) {
         this.distributorId = distributorId;
     }
+
 
     /**
      * get 渠道商名称
@@ -249,6 +251,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.distributorName = distributorName;
     }
 
+
     /**
      * get pin
      *
@@ -266,6 +269,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 帐户名
@@ -285,6 +289,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.loginName = loginName;
     }
 
+
     /**
      * get 合同编号
      *
@@ -302,6 +307,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setContractNo(String contractNo) {
         this.contractNo = contractNo;
     }
+
 
     /**
      * get 营业执照号
@@ -321,6 +327,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.businessLicense = businessLicense;
     }
 
+
     /**
      * get 法定代表人
      *
@@ -338,6 +345,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setLegalRepresentative(String legalRepresentative) {
         this.legalRepresentative = legalRepresentative;
     }
+
 
     /**
      * get 营业执照图片
@@ -357,6 +365,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.businessLicensePic = businessLicensePic;
     }
 
+
     /**
      * get 主营业务描述
      *
@@ -374,6 +383,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setBusinessDesc(String businessDesc) {
         this.businessDesc = businessDesc;
     }
+
 
     /**
      * get 办公地址
@@ -393,6 +403,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.workAddress = workAddress;
     }
 
+
     /**
      * get 联系人姓名
      *
@@ -410,6 +421,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setContracter(String contracter) {
         this.contracter = contracter;
     }
+
 
     /**
      * get 联系人电话
@@ -429,6 +441,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.tel = tel;
     }
 
+
     /**
      * get 邮箱
      *
@@ -446,6 +459,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     /**
      * get 所属地域
@@ -465,6 +479,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 入驻日期(一级渠道商手工录入、二级渠道商审批通过日期)
      *
@@ -482,6 +497,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setSettleTime(String settleTime) {
         this.settleTime = settleTime;
     }
+
 
     /**
      * get 状态(0 审批中、2驳回、1 已入驻、3已停止合作)
@@ -501,6 +517,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 驳回原因
      *
@@ -518,6 +535,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setReason(String reason) {
         this.reason = reason;
     }
+
 
     /**
      * get 级次(0一级、1 二级)
@@ -537,6 +555,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.distributorLevel = distributorLevel;
     }
 
+
     /**
      * get 渠道商类型(0合作伙伴、1 渠道代理)
      *
@@ -554,6 +573,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setDistributorType(Integer distributorType) {
         this.distributorType = distributorType;
     }
+
 
     /**
      * get 上级渠道商pin
@@ -573,6 +593,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.parentPin = parentPin;
     }
 
+
     /**
      * get 上级渠道商ID
      *
@@ -590,6 +611,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setParentDistributorId(String parentDistributorId) {
         this.parentDistributorId = parentDistributorId;
     }
+
 
     /**
      * get 上级渠道商名称
@@ -609,6 +631,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.parentDistributorName = parentDistributorName;
     }
 
+
     /**
      * get 所属部门(0企业线、1政府线)
      *
@@ -626,6 +649,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setDept(Integer dept) {
         this.dept = dept;
     }
+
 
     /**
      * get 是否需要返还（0需要1不需要）
@@ -645,6 +669,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.returnFlag = returnFlag;
     }
 
+
     /**
      * get 返还政策ID
      *
@@ -662,6 +687,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setReturnPolicyId(String returnPolicyId) {
         this.returnPolicyId = returnPolicyId;
     }
+
 
     /**
      * get 结算周期类型（1月、2季度、3年、4天、5周）
@@ -681,6 +707,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.circleType = circleType;
     }
 
+
     /**
      * get 是否有下级服务商（0有1不没有）
      *
@@ -698,6 +725,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setSubFlag(Integer subFlag) {
         this.subFlag = subFlag;
     }
+
 
     /**
      * get 下级服务商是否需要返还（0需要1不需要）
@@ -717,6 +745,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.subReturnFlag = subReturnFlag;
     }
 
+
     /**
      * get 下级服务商返还政策ID
      *
@@ -734,6 +763,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setSubReturnPolicyId(String subReturnPolicyId) {
         this.subReturnPolicyId = subReturnPolicyId;
     }
+
 
     /**
      * get 结算周期类型（1月、2季度、3年、4天、5周）
@@ -753,6 +783,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.subCircleType = subCircleType;
     }
 
+
     /**
      * get 京东云负责人(京东云人员erp或名称)
      *
@@ -770,6 +801,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setErp(String erp) {
         this.erp = erp;
     }
+
 
     /**
      * get 入驻条件开始日期
@@ -789,6 +821,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.settleTimeBegin = settleTimeBegin;
     }
 
+
     /**
      * get 入驻条件结束日期
      *
@@ -806,6 +839,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setSettleTimeEnd(String settleTimeEnd) {
         this.settleTimeEnd = settleTimeEnd;
     }
+
 
     /**
      * get 当前页序号
@@ -825,6 +859,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.pageIndex = pageIndex;
     }
 
+
     /**
      * get 每页结果数量
      *
@@ -842,6 +877,7 @@ public class DistributorQuery  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get offset
@@ -862,6 +898,7 @@ public class DistributorQuery  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 渠道商ID
      *
@@ -871,6 +908,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.distributorId = distributorId;
         return this;
     }
+
 
     /**
      * set 渠道商名称
@@ -882,6 +920,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pin
      *
@@ -891,6 +930,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 帐户名
@@ -902,6 +942,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 合同编号
      *
@@ -911,6 +952,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.contractNo = contractNo;
         return this;
     }
+
 
     /**
      * set 营业执照号
@@ -922,6 +964,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 法定代表人
      *
@@ -931,6 +974,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.legalRepresentative = legalRepresentative;
         return this;
     }
+
 
     /**
      * set 营业执照图片
@@ -942,6 +986,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主营业务描述
      *
@@ -951,6 +996,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.businessDesc = businessDesc;
         return this;
     }
+
 
     /**
      * set 办公地址
@@ -962,6 +1008,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 联系人姓名
      *
@@ -971,6 +1018,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.contracter = contracter;
         return this;
     }
+
 
     /**
      * set 联系人电话
@@ -982,6 +1030,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 邮箱
      *
@@ -991,6 +1040,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.email = email;
         return this;
     }
+
 
     /**
      * set 所属地域
@@ -1002,6 +1052,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 入驻日期(一级渠道商手工录入、二级渠道商审批通过日期)
      *
@@ -1011,6 +1062,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.settleTime = settleTime;
         return this;
     }
+
 
     /**
      * set 状态(0 审批中、2驳回、1 已入驻、3已停止合作)
@@ -1022,6 +1074,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 驳回原因
      *
@@ -1031,6 +1084,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.reason = reason;
         return this;
     }
+
 
     /**
      * set 级次(0一级、1 二级)
@@ -1042,6 +1096,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 渠道商类型(0合作伙伴、1 渠道代理)
      *
@@ -1051,6 +1106,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.distributorType = distributorType;
         return this;
     }
+
 
     /**
      * set 上级渠道商pin
@@ -1062,6 +1118,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 上级渠道商ID
      *
@@ -1071,6 +1128,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.parentDistributorId = parentDistributorId;
         return this;
     }
+
 
     /**
      * set 上级渠道商名称
@@ -1082,6 +1140,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 所属部门(0企业线、1政府线)
      *
@@ -1091,6 +1150,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.dept = dept;
         return this;
     }
+
 
     /**
      * set 是否需要返还（0需要1不需要）
@@ -1102,6 +1162,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 返还政策ID
      *
@@ -1111,6 +1172,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.returnPolicyId = returnPolicyId;
         return this;
     }
+
 
     /**
      * set 结算周期类型（1月、2季度、3年、4天、5周）
@@ -1122,6 +1184,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否有下级服务商（0有1不没有）
      *
@@ -1131,6 +1194,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.subFlag = subFlag;
         return this;
     }
+
 
     /**
      * set 下级服务商是否需要返还（0需要1不需要）
@@ -1142,6 +1206,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 下级服务商返还政策ID
      *
@@ -1151,6 +1216,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.subReturnPolicyId = subReturnPolicyId;
         return this;
     }
+
 
     /**
      * set 结算周期类型（1月、2季度、3年、4天、5周）
@@ -1162,6 +1228,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 京东云负责人(京东云人员erp或名称)
      *
@@ -1171,6 +1238,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.erp = erp;
         return this;
     }
+
 
     /**
      * set 入驻条件开始日期
@@ -1182,6 +1250,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 入驻条件结束日期
      *
@@ -1191,6 +1260,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.settleTimeEnd = settleTimeEnd;
         return this;
     }
+
 
     /**
      * set 当前页序号
@@ -1202,6 +1272,7 @@ public class DistributorQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 每页结果数量
      *
@@ -1211,6 +1282,7 @@ public class DistributorQuery  implements java.io.Serializable {
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set offset

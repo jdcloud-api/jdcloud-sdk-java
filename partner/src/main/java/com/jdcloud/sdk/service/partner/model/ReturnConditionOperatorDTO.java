@@ -48,6 +48,7 @@ public class ReturnConditionOperatorDTO  implements java.io.Serializable {
     private Number value;
 
 
+
     /**
      * get 条件编码
      *
@@ -66,6 +67,7 @@ public class ReturnConditionOperatorDTO  implements java.io.Serializable {
         this.code = code;
     }
 
+
     /**
      * get 操作符
      *
@@ -83,6 +85,7 @@ public class ReturnConditionOperatorDTO  implements java.io.Serializable {
     public void setOperator(String operator) {
         this.operator = operator;
     }
+
 
     /**
      * get 条件值
@@ -103,6 +106,7 @@ public class ReturnConditionOperatorDTO  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 条件编码
      *
@@ -113,6 +117,7 @@ public class ReturnConditionOperatorDTO  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 操作符
      *
@@ -122,6 +127,7 @@ public class ReturnConditionOperatorDTO  implements java.io.Serializable {
         this.operator = operator;
         return this;
     }
+
 
     /**
      * set 条件值

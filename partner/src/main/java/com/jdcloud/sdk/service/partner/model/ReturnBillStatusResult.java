@@ -89,6 +89,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
     private Integer yn;
 
 
+
     /**
      * get ID
      *
@@ -106,6 +107,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 返还单号
@@ -125,6 +127,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         this.retrunBillId = retrunBillId;
     }
 
+
     /**
      * get 状态
      *
@@ -142,6 +145,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 状态名称
@@ -161,6 +165,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         this.statusName = statusName;
     }
 
+
     /**
      * get 驳回原因
      *
@@ -178,6 +183,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
     public void setOperator(String operator) {
         this.operator = operator;
     }
+
 
     /**
      * get 说明
@@ -197,6 +203,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         this.remark = remark;
     }
 
+
     /**
      * get 创建时间
      *
@@ -214,6 +221,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 创建人
@@ -233,6 +241,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         this.createUser = createUser;
     }
 
+
     /**
      * get 修改时间
      *
@@ -251,6 +260,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 修改人
      *
@@ -268,6 +278,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
+
 
     /**
      * get 是否删除0未删除,1已删除
@@ -288,6 +299,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set ID
      *
@@ -297,6 +309,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         this.id = id;
         return this;
     }
+
 
     /**
      * set 返还单号
@@ -308,6 +321,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 状态
      *
@@ -317,6 +331,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         this.status = status;
         return this;
     }
+
 
     /**
      * set 状态名称
@@ -328,6 +343,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 驳回原因
      *
@@ -337,6 +353,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         this.operator = operator;
         return this;
     }
+
 
     /**
      * set 说明
@@ -348,6 +365,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -357,6 +375,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 创建人
@@ -368,6 +387,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -378,6 +398,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 修改人
      *
@@ -387,6 +408,7 @@ public class ReturnBillStatusResult extends JdcloudResult implements java.io.Ser
         this.updateUser = updateUser;
         return this;
     }
+
 
     /**
      * set 是否删除0未删除,1已删除

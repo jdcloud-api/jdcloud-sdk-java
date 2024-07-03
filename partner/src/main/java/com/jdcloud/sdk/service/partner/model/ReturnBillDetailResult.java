@@ -78,7 +78,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     /**
      * 产品类型
      */
-    private Integer productType;
+    private String productType;
 
     /**
      * 产品ID
@@ -93,8 +93,8 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     /**
      * returnBillDetailProductList
      */
+    
     private List<ReturnBillDetailProduct> returnBillDetailProductList;
-
     /**
      * 账单ID
      */
@@ -216,6 +216,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     private Integer yn;
 
 
+
     /**
      * get ID
      *
@@ -233,6 +234,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 服务商ID
@@ -252,6 +254,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.distributorId = distributorId;
     }
 
+
     /**
      * get 渠道商类型
      *
@@ -269,6 +272,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setDistributorType(Integer distributorType) {
         this.distributorType = distributorType;
     }
+
 
     /**
      * get 生成时间
@@ -288,6 +292,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.generateTime = generateTime;
     }
 
+
     /**
      * get 返还类型
      *
@@ -305,6 +310,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setReturnType(Integer returnType) {
         this.returnType = returnType;
     }
+
 
     /**
      * get 返还项目ID
@@ -324,6 +330,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.itemId = itemId;
     }
 
+
     /**
      * get 返还项目名称
      *
@@ -341,6 +348,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setItemName(String itemName) {
         this.itemName = itemName;
     }
+
 
     /**
      * get 返还依据类型
@@ -360,12 +368,13 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.returnRuleType = returnRuleType;
     }
 
+
     /**
      * get 产品类型
      *
      * @return
      */
-    public Integer getProductType() {
+    public String getProductType() {
         return productType;
     }
 
@@ -374,9 +383,10 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
      *
      * @param productType
      */
-    public void setProductType(Integer productType) {
+    public void setProductType(String productType) {
         this.productType = productType;
     }
+
 
     /**
      * get 产品ID
@@ -396,6 +406,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.productId = productId;
     }
 
+
     /**
      * get 产品名称
      *
@@ -414,23 +425,25 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.productName = productName;
     }
 
+
     /**
-     * get returnBillDetailProductList
-     *
-     * @return
-     */
+    * get returnBillDetailProductList
+    *
+    * @return
+    */
     public List<ReturnBillDetailProduct> getReturnBillDetailProductList() {
         return returnBillDetailProductList;
     }
 
     /**
-     * set returnBillDetailProductList
-     *
-     * @param returnBillDetailProductList
-     */
+    * set returnBillDetailProductList
+    *
+    * @param returnBillDetailProductList
+    */
     public void setReturnBillDetailProductList(List<ReturnBillDetailProduct> returnBillDetailProductList) {
         this.returnBillDetailProductList = returnBillDetailProductList;
     }
+
 
     /**
      * get 账单ID
@@ -450,6 +463,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.accountingBillId = accountingBillId;
     }
 
+
     /**
      * get 订单号
      *
@@ -467,6 +481,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setMainTransactionNo(String mainTransactionNo) {
         this.mainTransactionNo = mainTransactionNo;
     }
+
 
     /**
      * get 周期类型
@@ -486,6 +501,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.circleType = circleType;
     }
 
+
     /**
      * get 周期名称
      *
@@ -503,6 +519,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setCircleName(Integer circleName) {
         this.circleName = circleName;
     }
+
 
     /**
      * get 周期值
@@ -522,6 +539,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.circleValue = circleValue;
     }
 
+
     /**
      * get 周期值名称
      *
@@ -539,6 +557,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setCircleValueName(String circleValueName) {
         this.circleValueName = circleValueName;
     }
+
 
     /**
      * get 开始时间
@@ -558,6 +577,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.circleBegin = circleBegin;
     }
 
+
     /**
      * get 结束时间
      *
@@ -575,6 +595,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setCircleEnd(String circleEnd) {
         this.circleEnd = circleEnd;
     }
+
 
     /**
      * get 返还金额
@@ -594,6 +615,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.returnMount = returnMount;
     }
 
+
     /**
      * get 业绩金额
      *
@@ -611,6 +633,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setAmount(Number amount) {
         this.amount = amount;
     }
+
 
     /**
      * get 条件值
@@ -630,6 +653,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.conditionValue = conditionValue;
     }
 
+
     /**
      * get 条件值名称
      *
@@ -647,6 +671,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setConditionValueName(String conditionValueName) {
         this.conditionValueName = conditionValueName;
     }
+
 
     /**
      * get 是否返还标识
@@ -666,6 +691,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.returnFlag = returnFlag;
     }
 
+
     /**
      * get 返还比例
      *
@@ -683,6 +709,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setReturnRatio(Number returnRatio) {
         this.returnRatio = returnRatio;
     }
+
 
     /**
      * get 返还比例名称
@@ -702,6 +729,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.returnRatioName = returnRatioName;
     }
 
+
     /**
      * get 返还单号
      *
@@ -719,6 +747,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setReturnOrderId(String returnOrderId) {
         this.returnOrderId = returnOrderId;
     }
+
 
     /**
      * get 部门ID
@@ -738,6 +767,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.deptId = deptId;
     }
 
+
     /**
      * get 部门名称
      *
@@ -755,6 +785,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setDeptName(String deptName) {
         this.deptName = deptName;
     }
+
 
     /**
      * get 状态
@@ -774,6 +805,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.status = status;
     }
 
+
     /**
      * get 创建时间
      *
@@ -791,6 +823,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 创建人
@@ -810,6 +843,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.createUser = createUser;
     }
 
+
     /**
      * get 修改时间
      *
@@ -828,6 +862,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 修改人
      *
@@ -845,6 +880,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
+
 
     /**
      * get 是否删除0未删除,1已删除
@@ -865,6 +901,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set ID
      *
@@ -874,6 +911,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.id = id;
         return this;
     }
+
 
     /**
      * set 服务商ID
@@ -885,6 +923,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 渠道商类型
      *
@@ -894,6 +933,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.distributorType = distributorType;
         return this;
     }
+
 
     /**
      * set 生成时间
@@ -905,6 +945,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 返还类型
      *
@@ -914,6 +955,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.returnType = returnType;
         return this;
     }
+
 
     /**
      * set 返还项目ID
@@ -925,6 +967,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 返还项目名称
      *
@@ -934,6 +977,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.itemName = itemName;
         return this;
     }
+
 
     /**
      * set 返还依据类型
@@ -945,15 +989,17 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 产品类型
      *
      * @param productType
      */
-    public ReturnBillDetailResult productType(Integer productType) {
+    public ReturnBillDetailResult productType(String productType) {
         this.productType = productType;
         return this;
     }
+
 
     /**
      * set 产品ID
@@ -965,6 +1011,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 产品名称
      *
@@ -975,15 +1022,17 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
-     * set returnBillDetailProductList
-     *
-     * @param returnBillDetailProductList
-     */
+    * set returnBillDetailProductList
+    *
+    * @param returnBillDetailProductList
+    */
     public ReturnBillDetailResult returnBillDetailProductList(List<ReturnBillDetailProduct> returnBillDetailProductList) {
         this.returnBillDetailProductList = returnBillDetailProductList;
         return this;
     }
+
 
     /**
      * set 账单ID
@@ -995,6 +1044,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 订单号
      *
@@ -1004,6 +1054,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.mainTransactionNo = mainTransactionNo;
         return this;
     }
+
 
     /**
      * set 周期类型
@@ -1015,6 +1066,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 周期名称
      *
@@ -1024,6 +1076,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.circleName = circleName;
         return this;
     }
+
 
     /**
      * set 周期值
@@ -1035,6 +1088,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 周期值名称
      *
@@ -1044,6 +1098,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.circleValueName = circleValueName;
         return this;
     }
+
 
     /**
      * set 开始时间
@@ -1055,6 +1110,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 结束时间
      *
@@ -1064,6 +1120,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.circleEnd = circleEnd;
         return this;
     }
+
 
     /**
      * set 返还金额
@@ -1075,6 +1132,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 业绩金额
      *
@@ -1084,6 +1142,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.amount = amount;
         return this;
     }
+
 
     /**
      * set 条件值
@@ -1095,6 +1154,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 条件值名称
      *
@@ -1104,6 +1164,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.conditionValueName = conditionValueName;
         return this;
     }
+
 
     /**
      * set 是否返还标识
@@ -1115,6 +1176,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 返还比例
      *
@@ -1124,6 +1186,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.returnRatio = returnRatio;
         return this;
     }
+
 
     /**
      * set 返还比例名称
@@ -1135,6 +1198,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 返还单号
      *
@@ -1144,6 +1208,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.returnOrderId = returnOrderId;
         return this;
     }
+
 
     /**
      * set 部门ID
@@ -1155,6 +1220,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 部门名称
      *
@@ -1164,6 +1230,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.deptName = deptName;
         return this;
     }
+
 
     /**
      * set 状态
@@ -1175,6 +1242,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -1184,6 +1252,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 创建人
@@ -1195,6 +1264,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -1204,6 +1274,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 修改人
@@ -1215,6 +1286,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 是否删除0未删除,1已删除
      *
@@ -1224,6 +1296,7 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         this.yn = yn;
         return this;
     }
+
 
 
     /**
@@ -1237,5 +1310,4 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         }
         this.returnBillDetailProductList.add(returnBillDetailProductList);
     }
-
 }

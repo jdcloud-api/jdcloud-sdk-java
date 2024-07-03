@@ -40,9 +40,19 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
     private String customerPin;
 
     /**
-     * 客户昵称
+     * aliasName
      */
     private String aliasName;
+
+    /**
+     * 客户名称
+     */
+    private String nameLike;
+
+    /**
+     * 账户类型（1个人2企业）
+     */
+    private Integer accountType;
 
     /**
      * 帐户名
@@ -77,6 +87,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
     private String regionId;
 
 
+
     /**
      * get 客户pin
      *
@@ -95,8 +106,9 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
         this.customerPin = customerPin;
     }
 
+
     /**
-     * get 客户昵称
+     * get aliasName
      *
      * @return
      */
@@ -105,13 +117,52 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 客户昵称
+     * set aliasName
      *
      * @param aliasName
      */
     public void setAliasName(String aliasName) {
         this.aliasName = aliasName;
     }
+
+
+    /**
+     * get 客户名称
+     *
+     * @return
+     */
+    public String getNameLike() {
+        return nameLike;
+    }
+
+    /**
+     * set 客户名称
+     *
+     * @param nameLike
+     */
+    public void setNameLike(String nameLike) {
+        this.nameLike = nameLike;
+    }
+
+
+    /**
+     * get 账户类型（1个人2企业）
+     *
+     * @return
+     */
+    public Integer getAccountType() {
+        return accountType;
+    }
+
+    /**
+     * set 账户类型（1个人2企业）
+     *
+     * @param accountType
+     */
+    public void setAccountType(Integer accountType) {
+        this.accountType = accountType;
+    }
+
 
     /**
      * get 帐户名
@@ -131,6 +182,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
         this.loginName = loginName;
     }
 
+
     /**
      * get 关联开始时间（格式：yyyy-MM-dd HH:mm:ss）
      *
@@ -148,6 +200,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
     public void setStartRelTime(String startRelTime) {
         this.startRelTime = startRelTime;
     }
+
 
     /**
      * get 关联结束时间（格式：yyyy-MM-dd HH:mm:ss）
@@ -167,6 +220,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
         this.endRelTime = endRelTime;
     }
 
+
     /**
      * get 当前页序号
      *
@@ -185,6 +239,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
         this.pageIndex = pageIndex;
     }
 
+
     /**
      * get 当前条数
      *
@@ -202,6 +257,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get regionId
@@ -222,6 +278,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 客户pin
      *
@@ -232,8 +289,9 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
-     * set 客户昵称
+     * set aliasName
      *
      * @param aliasName
      */
@@ -241,6 +299,29 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
         this.aliasName = aliasName;
         return this;
     }
+
+
+    /**
+     * set 客户名称
+     *
+     * @param nameLike
+     */
+    public QueryMyCustomerListRequest nameLike(String nameLike) {
+        this.nameLike = nameLike;
+        return this;
+    }
+
+
+    /**
+     * set 账户类型（1个人2企业）
+     *
+     * @param accountType
+     */
+    public QueryMyCustomerListRequest accountType(Integer accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+
 
     /**
      * set 帐户名
@@ -252,6 +333,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 关联开始时间（格式：yyyy-MM-dd HH:mm:ss）
      *
@@ -261,6 +343,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
         this.startRelTime = startRelTime;
         return this;
     }
+
 
     /**
      * set 关联结束时间（格式：yyyy-MM-dd HH:mm:ss）
@@ -272,6 +355,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 当前页序号
      *
@@ -282,6 +366,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 当前条数
      *
@@ -291,6 +376,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set regionId

@@ -99,6 +99,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
     private Integer yn;
 
 
+
     /**
      * get ID
      *
@@ -116,6 +117,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 部门ID
@@ -135,6 +137,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         this.deptId = deptId;
     }
 
+
     /**
      * get 部门名称
      *
@@ -152,6 +155,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
     public void setDeptName(String deptName) {
         this.deptName = deptName;
     }
+
 
     /**
      * get 渠道商类型
@@ -171,6 +175,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         this.distributorType = distributorType;
     }
 
+
     /**
      * get 渠道商类型名称
      *
@@ -188,6 +193,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
     public void setDistributorTypeName(String distributorTypeName) {
         this.distributorTypeName = distributorTypeName;
     }
+
 
     /**
      * get 是否返还标志
@@ -207,6 +213,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         this.isReturn = isReturn;
     }
 
+
     /**
      * get 周期类型
      *
@@ -224,6 +231,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
     public void setCircleType(Integer circleType) {
         this.circleType = circleType;
     }
+
 
     /**
      * get 周期名称
@@ -243,6 +251,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         this.circleName = circleName;
     }
 
+
     /**
      * get 创建时间
      *
@@ -260,6 +269,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 创建人
@@ -279,6 +289,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         this.createUser = createUser;
     }
 
+
     /**
      * get 修改时间
      *
@@ -297,6 +308,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 修改人
      *
@@ -314,6 +326,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
+
 
     /**
      * get 是否删除0未删除,1已删除
@@ -334,6 +347,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
     }
 
 
+
     /**
      * set ID
      *
@@ -343,6 +357,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         this.id = id;
         return this;
     }
+
 
     /**
      * set 部门ID
@@ -354,6 +369,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 部门名称
      *
@@ -363,6 +379,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         this.deptName = deptName;
         return this;
     }
+
 
     /**
      * set 渠道商类型
@@ -374,6 +391,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 渠道商类型名称
      *
@@ -383,6 +401,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         this.distributorTypeName = distributorTypeName;
         return this;
     }
+
 
     /**
      * set 是否返还标志
@@ -394,6 +413,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 周期类型
      *
@@ -403,6 +423,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         this.circleType = circleType;
         return this;
     }
+
 
     /**
      * set 周期名称
@@ -414,6 +435,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -423,6 +445,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 创建人
@@ -434,6 +457,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -444,6 +468,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 修改人
      *
@@ -453,6 +478,7 @@ public class ReturnRuleResult extends JdcloudResult implements java.io.Serializa
         this.updateUser = updateUser;
         return this;
     }
+
 
     /**
      * set 是否删除0未删除,1已删除

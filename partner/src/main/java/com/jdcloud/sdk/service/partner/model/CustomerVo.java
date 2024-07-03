@@ -118,9 +118,19 @@ public class CustomerVo  implements java.io.Serializable {
     private String accountTypeName;
 
     /**
+     * 账户类型（1个人2企业）
+     */
+    private Integer accountType;
+
+    /**
      * 实名标识名称
      */
     private String realName;
+
+    /**
+     * 实名标识
+     */
+    private Integer realNameFlag;
 
     /**
      * 名称
@@ -131,6 +141,7 @@ public class CustomerVo  implements java.io.Serializable {
      * 修改人
      */
     private String updateUser;
+
 
 
     /**
@@ -151,6 +162,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 一级渠道商名称
      *
@@ -168,6 +180,7 @@ public class CustomerVo  implements java.io.Serializable {
     public void setDistributorLevel1Name(String distributorLevel1Name) {
         this.distributorLevel1Name = distributorLevel1Name;
     }
+
 
     /**
      * get 二级渠道商名称
@@ -187,6 +200,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.distributorLevel2Name = distributorLevel2Name;
     }
 
+
     /**
      * get 关联时间
      *
@@ -204,6 +218,7 @@ public class CustomerVo  implements java.io.Serializable {
     public void setRelTime(String relTime) {
         this.relTime = relTime;
     }
+
 
     /**
      * get 账户名
@@ -223,6 +238,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.loginName = loginName;
     }
 
+
     /**
      * get 来源(0渠道商自身,1京东云客户)
      *
@@ -240,6 +256,7 @@ public class CustomerVo  implements java.io.Serializable {
     public void setSource(Integer source) {
         this.source = source;
     }
+
 
     /**
      * get 客户昵称
@@ -259,6 +276,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.aliasName = aliasName;
     }
 
+
     /**
      * get 客户联系人
      *
@@ -276,6 +294,7 @@ public class CustomerVo  implements java.io.Serializable {
     public void setContracter(String contracter) {
         this.contracter = contracter;
     }
+
 
     /**
      * get 客户电话
@@ -295,6 +314,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.tel = tel;
     }
 
+
     /**
      * get 客户邮箱
      *
@@ -312,6 +332,7 @@ public class CustomerVo  implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     /**
      * get 客户备注
@@ -331,6 +352,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.remark = remark;
     }
 
+
     /**
      * get 所属部门(0企业线、1政府线)
      *
@@ -348,6 +370,7 @@ public class CustomerVo  implements java.io.Serializable {
     public void setDept(Integer dept) {
         this.dept = dept;
     }
+
 
     /**
      * get 部门名称
@@ -367,6 +390,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.deptName = deptName;
     }
 
+
     /**
      * get 创建时间
      *
@@ -384,6 +408,7 @@ public class CustomerVo  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 创建人
@@ -403,6 +428,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.createUser = createUser;
     }
 
+
     /**
      * get 修改时间
      *
@@ -420,6 +446,7 @@ public class CustomerVo  implements java.io.Serializable {
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 账户类型
@@ -439,6 +466,26 @@ public class CustomerVo  implements java.io.Serializable {
         this.accountTypeName = accountTypeName;
     }
 
+
+    /**
+     * get 账户类型（1个人2企业）
+     *
+     * @return
+     */
+    public Integer getAccountType() {
+        return accountType;
+    }
+
+    /**
+     * set 账户类型（1个人2企业）
+     *
+     * @param accountType
+     */
+    public void setAccountType(Integer accountType) {
+        this.accountType = accountType;
+    }
+
+
     /**
      * get 实名标识名称
      *
@@ -457,6 +504,26 @@ public class CustomerVo  implements java.io.Serializable {
         this.realName = realName;
     }
 
+
+    /**
+     * get 实名标识
+     *
+     * @return
+     */
+    public Integer getRealNameFlag() {
+        return realNameFlag;
+    }
+
+    /**
+     * set 实名标识
+     *
+     * @param realNameFlag
+     */
+    public void setRealNameFlag(Integer realNameFlag) {
+        this.realNameFlag = realNameFlag;
+    }
+
+
     /**
      * get 名称
      *
@@ -474,6 +541,7 @@ public class CustomerVo  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 修改人
@@ -494,6 +562,7 @@ public class CustomerVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 客户pin
      *
@@ -503,6 +572,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 一级渠道商名称
@@ -514,6 +584,7 @@ public class CustomerVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 二级渠道商名称
      *
@@ -523,6 +594,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.distributorLevel2Name = distributorLevel2Name;
         return this;
     }
+
 
     /**
      * set 关联时间
@@ -534,6 +606,7 @@ public class CustomerVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账户名
      *
@@ -543,6 +616,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.loginName = loginName;
         return this;
     }
+
 
     /**
      * set 来源(0渠道商自身,1京东云客户)
@@ -554,6 +628,7 @@ public class CustomerVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 客户昵称
      *
@@ -563,6 +638,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.aliasName = aliasName;
         return this;
     }
+
 
     /**
      * set 客户联系人
@@ -574,6 +650,7 @@ public class CustomerVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 客户电话
      *
@@ -583,6 +660,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.tel = tel;
         return this;
     }
+
 
     /**
      * set 客户邮箱
@@ -594,6 +672,7 @@ public class CustomerVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 客户备注
      *
@@ -603,6 +682,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.remark = remark;
         return this;
     }
+
 
     /**
      * set 所属部门(0企业线、1政府线)
@@ -614,6 +694,7 @@ public class CustomerVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 部门名称
      *
@@ -623,6 +704,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.deptName = deptName;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -634,6 +716,7 @@ public class CustomerVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建人
      *
@@ -643,6 +726,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.createUser = createUser;
         return this;
     }
+
 
     /**
      * set 修改时间
@@ -654,6 +738,7 @@ public class CustomerVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账户类型
      *
@@ -663,6 +748,18 @@ public class CustomerVo  implements java.io.Serializable {
         this.accountTypeName = accountTypeName;
         return this;
     }
+
+
+    /**
+     * set 账户类型（1个人2企业）
+     *
+     * @param accountType
+     */
+    public CustomerVo accountType(Integer accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+
 
     /**
      * set 实名标识名称
@@ -674,6 +771,18 @@ public class CustomerVo  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set 实名标识
+     *
+     * @param realNameFlag
+     */
+    public CustomerVo realNameFlag(Integer realNameFlag) {
+        this.realNameFlag = realNameFlag;
+        return this;
+    }
+
+
     /**
      * set 名称
      *
@@ -683,6 +792,7 @@ public class CustomerVo  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 修改人

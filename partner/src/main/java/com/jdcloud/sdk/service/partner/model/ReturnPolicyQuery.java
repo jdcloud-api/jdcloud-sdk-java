@@ -83,9 +83,9 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     private String productId;
 
     /**
-     * 产品类型
+     * 产品类型（多个产品类型，分开）
      */
-    private Integer productType;
+    private String productType;
 
     /**
      * 周期类型
@@ -173,6 +173,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     private Integer offset;
 
 
+
     /**
      * get ID
      *
@@ -190,6 +191,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 部门ID
@@ -209,6 +211,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.deptId = deptId;
     }
 
+
     /**
      * get 渠道商类型
      *
@@ -226,6 +229,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     public void setDistributorType(Integer distributorType) {
         this.distributorType = distributorType;
     }
+
 
     /**
      * get 返还类型
@@ -245,6 +249,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.returnType = returnType;
     }
 
+
     /**
      * get 返还政策主ID
      *
@@ -262,6 +267,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     public void setReturnPolicyId(Number returnPolicyId) {
         this.returnPolicyId = returnPolicyId;
     }
+
 
     /**
      * get 返还政策主名称
@@ -281,6 +287,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.returnPolicyName = returnPolicyName;
     }
 
+
     /**
      * get 项目编码
      *
@@ -298,6 +305,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     public void setItemId(Number itemId) {
         this.itemId = itemId;
     }
+
 
     /**
      * get 项目名称
@@ -317,6 +325,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.itemName = itemName;
     }
 
+
     /**
      * get 返还依据类型
      *
@@ -334,6 +343,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     public void setReturnRuleType(Integer returnRuleType) {
         this.returnRuleType = returnRuleType;
     }
+
 
     /**
      * get 产品ID
@@ -353,23 +363,25 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.productId = productId;
     }
 
+
     /**
-     * get 产品类型
+     * get 产品类型（多个产品类型，分开）
      *
      * @return
      */
-    public Integer getProductType() {
+    public String getProductType() {
         return productType;
     }
 
     /**
-     * set 产品类型
+     * set 产品类型（多个产品类型，分开）
      *
      * @param productType
      */
-    public void setProductType(Integer productType) {
+    public void setProductType(String productType) {
         this.productType = productType;
     }
+
 
     /**
      * get 周期类型
@@ -389,6 +401,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.circleType = circleType;
     }
 
+
     /**
      * get 周期名称
      *
@@ -406,6 +419,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     public void setCircleName(String circleName) {
         this.circleName = circleName;
     }
+
 
     /**
      * get 指定周期标识
@@ -425,6 +439,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.circleFlag = circleFlag;
     }
 
+
     /**
      * get 周期值
      *
@@ -442,6 +457,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     public void setCircleValue(Integer circleValue) {
         this.circleValue = circleValue;
     }
+
 
     /**
      * get 条件
@@ -461,6 +477,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.condition = condition;
     }
 
+
     /**
      * get 说明
      *
@@ -478,6 +495,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     public void setConditionRemark(String conditionRemark) {
         this.conditionRemark = conditionRemark;
     }
+
 
     /**
      * get 返还比例
@@ -497,6 +515,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.returnRatio = returnRatio;
     }
 
+
     /**
      * get 状态
      *
@@ -514,6 +533,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 创建时间
@@ -533,6 +553,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 创建人
      *
@@ -550,6 +571,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     public void setCreateUser(String createUser) {
         this.createUser = createUser;
     }
+
 
     /**
      * get 修改时间
@@ -569,6 +591,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 修改人
      *
@@ -586,6 +609,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
+
 
     /**
      * get 是否删除0未删除,1已删除
@@ -605,6 +629,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.yn = yn;
     }
 
+
     /**
      * get 项目名称
      *
@@ -622,6 +647,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     public void setItemNameLike(String itemNameLike) {
         this.itemNameLike = itemNameLike;
     }
+
 
     /**
      * get 当前页序号
@@ -641,6 +667,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.pageIndex = pageIndex;
     }
 
+
     /**
      * get 每页结果数量
      *
@@ -658,6 +685,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get offset
@@ -678,6 +706,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ID
      *
@@ -687,6 +716,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 部门ID
@@ -698,6 +728,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 渠道商类型
      *
@@ -707,6 +738,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.distributorType = distributorType;
         return this;
     }
+
 
     /**
      * set 返还类型
@@ -718,6 +750,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 返还政策主ID
      *
@@ -727,6 +760,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.returnPolicyId = returnPolicyId;
         return this;
     }
+
 
     /**
      * set 返还政策主名称
@@ -738,6 +772,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 项目编码
      *
@@ -747,6 +782,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.itemId = itemId;
         return this;
     }
+
 
     /**
      * set 项目名称
@@ -758,6 +794,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 返还依据类型
      *
@@ -767,6 +804,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.returnRuleType = returnRuleType;
         return this;
     }
+
 
     /**
      * set 产品ID
@@ -778,15 +816,17 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 产品类型
+     * set 产品类型（多个产品类型，分开）
      *
      * @param productType
      */
-    public ReturnPolicyQuery productType(Integer productType) {
+    public ReturnPolicyQuery productType(String productType) {
         this.productType = productType;
         return this;
     }
+
 
     /**
      * set 周期类型
@@ -798,6 +838,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 周期名称
      *
@@ -807,6 +848,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.circleName = circleName;
         return this;
     }
+
 
     /**
      * set 指定周期标识
@@ -818,6 +860,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 周期值
      *
@@ -827,6 +870,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.circleValue = circleValue;
         return this;
     }
+
 
     /**
      * set 条件
@@ -838,6 +882,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 说明
      *
@@ -847,6 +892,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.conditionRemark = conditionRemark;
         return this;
     }
+
 
     /**
      * set 返还比例
@@ -858,6 +904,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态
      *
@@ -867,6 +914,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -878,6 +926,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建人
      *
@@ -887,6 +936,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.createUser = createUser;
         return this;
     }
+
 
     /**
      * set 修改时间
@@ -898,6 +948,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改人
      *
@@ -907,6 +958,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.updateUser = updateUser;
         return this;
     }
+
 
     /**
      * set 是否删除0未删除,1已删除
@@ -918,6 +970,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 项目名称
      *
@@ -927,6 +980,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.itemNameLike = itemNameLike;
         return this;
     }
+
 
     /**
      * set 当前页序号
@@ -938,6 +992,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 每页结果数量
      *
@@ -947,6 +1002,7 @@ public class ReturnPolicyQuery  implements java.io.Serializable {
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set offset

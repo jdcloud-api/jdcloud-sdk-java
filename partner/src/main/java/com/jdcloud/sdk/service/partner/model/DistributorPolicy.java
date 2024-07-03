@@ -93,6 +93,7 @@ public class DistributorPolicy  implements java.io.Serializable {
     private Integer yn;
 
 
+
     /**
      * get ID
      *
@@ -110,6 +111,7 @@ public class DistributorPolicy  implements java.io.Serializable {
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 服务商ID
@@ -129,6 +131,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         this.distributorId = distributorId;
     }
 
+
     /**
      * get 服务商名称
      *
@@ -146,6 +149,7 @@ public class DistributorPolicy  implements java.io.Serializable {
     public void setDistributorName(String distributorName) {
         this.distributorName = distributorName;
     }
+
 
     /**
      * get 返还政策ID
@@ -165,6 +169,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         this.returnPolicyId = returnPolicyId;
     }
 
+
     /**
      * get 返还政策名称
      *
@@ -182,6 +187,7 @@ public class DistributorPolicy  implements java.io.Serializable {
     public void setReturnPolicyName(String returnPolicyName) {
         this.returnPolicyName = returnPolicyName;
     }
+
 
     /**
      * get 状态
@@ -201,6 +207,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 说明
      *
@@ -218,6 +225,7 @@ public class DistributorPolicy  implements java.io.Serializable {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
 
     /**
      * get 创建时间
@@ -237,6 +245,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 创建人
      *
@@ -254,6 +263,7 @@ public class DistributorPolicy  implements java.io.Serializable {
     public void setCreateUser(String createUser) {
         this.createUser = createUser;
     }
+
 
     /**
      * get 修改时间
@@ -273,6 +283,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 修改人
      *
@@ -290,6 +301,7 @@ public class DistributorPolicy  implements java.io.Serializable {
     public void setUpdateUser(String updateUser) {
         this.updateUser = updateUser;
     }
+
 
     /**
      * get 是否删除0未删除,1已删除
@@ -310,6 +322,7 @@ public class DistributorPolicy  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ID
      *
@@ -319,6 +332,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 服务商ID
@@ -330,6 +344,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 服务商名称
      *
@@ -339,6 +354,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         this.distributorName = distributorName;
         return this;
     }
+
 
     /**
      * set 返还政策ID
@@ -350,6 +366,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 返还政策名称
      *
@@ -359,6 +376,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         this.returnPolicyName = returnPolicyName;
         return this;
     }
+
 
     /**
      * set 状态
@@ -370,6 +388,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 说明
      *
@@ -379,6 +398,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         this.remark = remark;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -390,6 +410,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建人
      *
@@ -399,6 +420,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         this.createUser = createUser;
         return this;
     }
+
 
     /**
      * set 修改时间
@@ -410,6 +432,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改人
      *
@@ -419,6 +442,7 @@ public class DistributorPolicy  implements java.io.Serializable {
         this.updateUser = updateUser;
         return this;
     }
+
 
     /**
      * set 是否删除0未删除,1已删除

@@ -38,37 +38,40 @@ public class AccountingBillDTORequest extends JdcloudRequest implements java.io.
     /**
      * 账单列表
      */
+    
     private List<AccountingBillDTO> accountingBillDTOList;
 
 
     /**
-     * get 账单列表
-     *
-     * @return
-     */
+    * get 账单列表
+    *
+    * @return
+    */
     public List<AccountingBillDTO> getAccountingBillDTOList() {
         return accountingBillDTOList;
     }
 
     /**
-     * set 账单列表
-     *
-     * @param accountingBillDTOList
-     */
+    * set 账单列表
+    *
+    * @param accountingBillDTOList
+    */
     public void setAccountingBillDTOList(List<AccountingBillDTO> accountingBillDTOList) {
         this.accountingBillDTOList = accountingBillDTOList;
     }
 
 
+
     /**
-     * set 账单列表
-     *
-     * @param accountingBillDTOList
-     */
+    * set 账单列表
+    *
+    * @param accountingBillDTOList
+    */
     public AccountingBillDTORequest accountingBillDTOList(List<AccountingBillDTO> accountingBillDTOList) {
         this.accountingBillDTOList = accountingBillDTOList;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class AccountingBillDTORequest extends JdcloudRequest implements java.io.
         }
         this.accountingBillDTOList.add(accountingBillDTOList);
     }
-
 }

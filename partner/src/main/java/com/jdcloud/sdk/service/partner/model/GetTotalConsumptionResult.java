@@ -39,37 +39,40 @@ public class GetTotalConsumptionResult extends JdcloudResult implements java.io.
     /**
      * result
      */
+    
     private List<SummaryBill> result;
 
 
     /**
-     * get result
-     *
-     * @return
-     */
+    * get result
+    *
+    * @return
+    */
     public List<SummaryBill> getResult() {
         return result;
     }
 
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public void setResult(List<SummaryBill> result) {
         this.result = result;
     }
 
 
+
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public GetTotalConsumptionResult result(List<SummaryBill> result) {
         this.result = result;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class GetTotalConsumptionResult extends JdcloudResult implements java.io.
         }
         this.result.add(result);
     }
-
 }

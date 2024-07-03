@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.partner.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * applyDistributor
@@ -63,6 +65,16 @@ public class ApplyDistributor  implements java.io.Serializable {
     private String email;
 
     /**
+     * 职位
+     */
+    private String position;
+
+    /**
+     * 联系人微信号
+     */
+    private String wechatNo;
+
+    /**
      * 合作类型
      */
     private String cooperateType;
@@ -71,6 +83,36 @@ public class ApplyDistributor  implements java.io.Serializable {
      * 合作类型名称
      */
     private String cooperateTypeName;
+
+    /**
+     * 与京东智联云合作的诉求
+     */
+    private String cooperateRequest;
+
+    /**
+     * UUID
+     */
+    private String uuid;
+
+    /**
+     * 活动ID
+     */
+    private Integer activityId;
+
+    /**
+     * 活动名称
+     */
+    private String activityName;
+
+    /**
+     * 合作领域
+     */
+    private String cooperateArea;
+
+    /**
+     * 合作内容
+     */
+    private String cooperateContent;
 
     /**
      * 公司名称
@@ -83,7 +125,7 @@ public class ApplyDistributor  implements java.io.Serializable {
     private String companyScale;
 
     /**
-     * 公司规模
+     * 公司规模名称
      */
     private String companyScaleName;
 
@@ -93,9 +135,9 @@ public class ApplyDistributor  implements java.io.Serializable {
     private String region;
 
     /**
-     * 业务区域
+     * 城市
      */
-    private String regionName;
+    private String city;
 
     /**
      * 公司网址
@@ -111,6 +153,42 @@ public class ApplyDistributor  implements java.io.Serializable {
      * 状态
      */
     private String statusName;
+
+    /**
+     * 跟进人
+     */
+    private String followPerson;
+
+    /**
+     * 跟进说明
+     */
+    private String followRemark;
+
+    /**
+     * 跟进记录列表
+     */
+    
+    private List<FollowRecordDTO> followRecordList;
+    /**
+     * 状态变更列表
+     */
+    
+    private List<PartnerStatus> partnerStatusList;
+    /**
+     * 附件信息
+     */
+    
+    private List<FileVo> files;
+    /**
+     * 合作伙伴申请来源 1-官网招募 2-SaaS加速器
+     */
+    private Integer applySource;
+
+    /**
+     * 合作伙伴申请来源
+     */
+    private String applySourceName;
+
 
 
     /**
@@ -131,6 +209,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 用户pin
      *
@@ -148,6 +227,7 @@ public class ApplyDistributor  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 申请时间
@@ -167,6 +247,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.applyTime = applyTime;
     }
 
+
     /**
      * get 联系人姓名
      *
@@ -184,6 +265,7 @@ public class ApplyDistributor  implements java.io.Serializable {
     public void setContactor(String contactor) {
         this.contactor = contactor;
     }
+
 
     /**
      * get 联系人电话
@@ -203,6 +285,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.tel = tel;
     }
 
+
     /**
      * get 联系邮箱
      *
@@ -220,6 +303,45 @@ public class ApplyDistributor  implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
+    /**
+     * get 职位
+     *
+     * @return
+     */
+    public String getPosition() {
+        return position;
+    }
+
+    /**
+     * set 职位
+     *
+     * @param position
+     */
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+
+    /**
+     * get 联系人微信号
+     *
+     * @return
+     */
+    public String getWechatNo() {
+        return wechatNo;
+    }
+
+    /**
+     * set 联系人微信号
+     *
+     * @param wechatNo
+     */
+    public void setWechatNo(String wechatNo) {
+        this.wechatNo = wechatNo;
+    }
+
 
     /**
      * get 合作类型
@@ -239,6 +361,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.cooperateType = cooperateType;
     }
 
+
     /**
      * get 合作类型名称
      *
@@ -256,6 +379,121 @@ public class ApplyDistributor  implements java.io.Serializable {
     public void setCooperateTypeName(String cooperateTypeName) {
         this.cooperateTypeName = cooperateTypeName;
     }
+
+
+    /**
+     * get 与京东智联云合作的诉求
+     *
+     * @return
+     */
+    public String getCooperateRequest() {
+        return cooperateRequest;
+    }
+
+    /**
+     * set 与京东智联云合作的诉求
+     *
+     * @param cooperateRequest
+     */
+    public void setCooperateRequest(String cooperateRequest) {
+        this.cooperateRequest = cooperateRequest;
+    }
+
+
+    /**
+     * get UUID
+     *
+     * @return
+     */
+    public String getUuid() {
+        return uuid;
+    }
+
+    /**
+     * set UUID
+     *
+     * @param uuid
+     */
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
+
+
+    /**
+     * get 活动ID
+     *
+     * @return
+     */
+    public Integer getActivityId() {
+        return activityId;
+    }
+
+    /**
+     * set 活动ID
+     *
+     * @param activityId
+     */
+    public void setActivityId(Integer activityId) {
+        this.activityId = activityId;
+    }
+
+
+    /**
+     * get 活动名称
+     *
+     * @return
+     */
+    public String getActivityName() {
+        return activityName;
+    }
+
+    /**
+     * set 活动名称
+     *
+     * @param activityName
+     */
+    public void setActivityName(String activityName) {
+        this.activityName = activityName;
+    }
+
+
+    /**
+     * get 合作领域
+     *
+     * @return
+     */
+    public String getCooperateArea() {
+        return cooperateArea;
+    }
+
+    /**
+     * set 合作领域
+     *
+     * @param cooperateArea
+     */
+    public void setCooperateArea(String cooperateArea) {
+        this.cooperateArea = cooperateArea;
+    }
+
+
+    /**
+     * get 合作内容
+     *
+     * @return
+     */
+    public String getCooperateContent() {
+        return cooperateContent;
+    }
+
+    /**
+     * set 合作内容
+     *
+     * @param cooperateContent
+     */
+    public void setCooperateContent(String cooperateContent) {
+        this.cooperateContent = cooperateContent;
+    }
+
 
     /**
      * get 公司名称
@@ -275,6 +513,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.companyName = companyName;
     }
 
+
     /**
      * get 公司规模
      *
@@ -293,8 +532,9 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.companyScale = companyScale;
     }
 
+
     /**
-     * get 公司规模
+     * get 公司规模名称
      *
      * @return
      */
@@ -303,13 +543,14 @@ public class ApplyDistributor  implements java.io.Serializable {
     }
 
     /**
-     * set 公司规模
+     * set 公司规模名称
      *
      * @param companyScaleName
      */
     public void setCompanyScaleName(String companyScaleName) {
         this.companyScaleName = companyScaleName;
     }
+
 
     /**
      * get 业务区域
@@ -329,23 +570,25 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
-     * get 业务区域
+     * get 城市
      *
      * @return
      */
-    public String getRegionName() {
-        return regionName;
+    public String getCity() {
+        return city;
     }
 
     /**
-     * set 业务区域
+     * set 城市
      *
-     * @param regionName
+     * @param city
      */
-    public void setRegionName(String regionName) {
-        this.regionName = regionName;
+    public void setCity(String city) {
+        this.city = city;
     }
+
 
     /**
      * get 公司网址
@@ -365,6 +608,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.webSite = webSite;
     }
 
+
     /**
      * get 状态
      *
@@ -382,6 +626,7 @@ public class ApplyDistributor  implements java.io.Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 状态
@@ -403,6 +648,140 @@ public class ApplyDistributor  implements java.io.Serializable {
 
 
     /**
+     * get 跟进人
+     *
+     * @return
+     */
+    public String getFollowPerson() {
+        return followPerson;
+    }
+
+    /**
+     * set 跟进人
+     *
+     * @param followPerson
+     */
+    public void setFollowPerson(String followPerson) {
+        this.followPerson = followPerson;
+    }
+
+
+    /**
+     * get 跟进说明
+     *
+     * @return
+     */
+    public String getFollowRemark() {
+        return followRemark;
+    }
+
+    /**
+     * set 跟进说明
+     *
+     * @param followRemark
+     */
+    public void setFollowRemark(String followRemark) {
+        this.followRemark = followRemark;
+    }
+
+
+    /**
+    * get 跟进记录列表
+    *
+    * @return
+    */
+    public List<FollowRecordDTO> getFollowRecordList() {
+        return followRecordList;
+    }
+
+    /**
+    * set 跟进记录列表
+    *
+    * @param followRecordList
+    */
+    public void setFollowRecordList(List<FollowRecordDTO> followRecordList) {
+        this.followRecordList = followRecordList;
+    }
+
+
+    /**
+    * get 状态变更列表
+    *
+    * @return
+    */
+    public List<PartnerStatus> getPartnerStatusList() {
+        return partnerStatusList;
+    }
+
+    /**
+    * set 状态变更列表
+    *
+    * @param partnerStatusList
+    */
+    public void setPartnerStatusList(List<PartnerStatus> partnerStatusList) {
+        this.partnerStatusList = partnerStatusList;
+    }
+
+
+    /**
+    * get 附件信息
+    *
+    * @return
+    */
+    public List<FileVo> getFiles() {
+        return files;
+    }
+
+    /**
+    * set 附件信息
+    *
+    * @param files
+    */
+    public void setFiles(List<FileVo> files) {
+        this.files = files;
+    }
+
+
+    /**
+     * get 合作伙伴申请来源 1-官网招募 2-SaaS加速器
+     *
+     * @return
+     */
+    public Integer getApplySource() {
+        return applySource;
+    }
+
+    /**
+     * set 合作伙伴申请来源 1-官网招募 2-SaaS加速器
+     *
+     * @param applySource
+     */
+    public void setApplySource(Integer applySource) {
+        this.applySource = applySource;
+    }
+
+
+    /**
+     * get 合作伙伴申请来源
+     *
+     * @return
+     */
+    public String getApplySourceName() {
+        return applySourceName;
+    }
+
+    /**
+     * set 合作伙伴申请来源
+     *
+     * @param applySourceName
+     */
+    public void setApplySourceName(String applySourceName) {
+        this.applySourceName = applySourceName;
+    }
+
+
+
+    /**
      * set id
      *
      * @param id
@@ -411,6 +790,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 用户pin
@@ -422,6 +802,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 申请时间
      *
@@ -431,6 +812,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.applyTime = applyTime;
         return this;
     }
+
 
     /**
      * set 联系人姓名
@@ -442,6 +824,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 联系人电话
      *
@@ -451,6 +834,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.tel = tel;
         return this;
     }
+
 
     /**
      * set 联系邮箱
@@ -462,6 +846,29 @@ public class ApplyDistributor  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set 职位
+     *
+     * @param position
+     */
+    public ApplyDistributor position(String position) {
+        this.position = position;
+        return this;
+    }
+
+
+    /**
+     * set 联系人微信号
+     *
+     * @param wechatNo
+     */
+    public ApplyDistributor wechatNo(String wechatNo) {
+        this.wechatNo = wechatNo;
+        return this;
+    }
+
+
     /**
      * set 合作类型
      *
@@ -471,6 +878,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.cooperateType = cooperateType;
         return this;
     }
+
 
     /**
      * set 合作类型名称
@@ -482,6 +890,73 @@ public class ApplyDistributor  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set 与京东智联云合作的诉求
+     *
+     * @param cooperateRequest
+     */
+    public ApplyDistributor cooperateRequest(String cooperateRequest) {
+        this.cooperateRequest = cooperateRequest;
+        return this;
+    }
+
+
+    /**
+     * set UUID
+     *
+     * @param uuid
+     */
+    public ApplyDistributor uuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+
+
+    /**
+     * set 活动ID
+     *
+     * @param activityId
+     */
+    public ApplyDistributor activityId(Integer activityId) {
+        this.activityId = activityId;
+        return this;
+    }
+
+
+    /**
+     * set 活动名称
+     *
+     * @param activityName
+     */
+    public ApplyDistributor activityName(String activityName) {
+        this.activityName = activityName;
+        return this;
+    }
+
+
+    /**
+     * set 合作领域
+     *
+     * @param cooperateArea
+     */
+    public ApplyDistributor cooperateArea(String cooperateArea) {
+        this.cooperateArea = cooperateArea;
+        return this;
+    }
+
+
+    /**
+     * set 合作内容
+     *
+     * @param cooperateContent
+     */
+    public ApplyDistributor cooperateContent(String cooperateContent) {
+        this.cooperateContent = cooperateContent;
+        return this;
+    }
+
+
     /**
      * set 公司名称
      *
@@ -491,6 +966,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.companyName = companyName;
         return this;
     }
+
 
     /**
      * set 公司规模
@@ -502,8 +978,9 @@ public class ApplyDistributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 公司规模
+     * set 公司规模名称
      *
      * @param companyScaleName
      */
@@ -511,6 +988,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.companyScaleName = companyScaleName;
         return this;
     }
+
 
     /**
      * set 业务区域
@@ -522,15 +1000,17 @@ public class ApplyDistributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 业务区域
+     * set 城市
      *
-     * @param regionName
+     * @param city
      */
-    public ApplyDistributor regionName(String regionName) {
-        this.regionName = regionName;
+    public ApplyDistributor city(String city) {
+        this.city = city;
         return this;
     }
+
 
     /**
      * set 公司网址
@@ -542,6 +1022,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态
      *
@@ -551,6 +1032,7 @@ public class ApplyDistributor  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 状态
@@ -563,4 +1045,117 @@ public class ApplyDistributor  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 跟进人
+     *
+     * @param followPerson
+     */
+    public ApplyDistributor followPerson(String followPerson) {
+        this.followPerson = followPerson;
+        return this;
+    }
+
+
+    /**
+     * set 跟进说明
+     *
+     * @param followRemark
+     */
+    public ApplyDistributor followRemark(String followRemark) {
+        this.followRemark = followRemark;
+        return this;
+    }
+
+
+    /**
+    * set 跟进记录列表
+    *
+    * @param followRecordList
+    */
+    public ApplyDistributor followRecordList(List<FollowRecordDTO> followRecordList) {
+        this.followRecordList = followRecordList;
+        return this;
+    }
+
+
+    /**
+    * set 状态变更列表
+    *
+    * @param partnerStatusList
+    */
+    public ApplyDistributor partnerStatusList(List<PartnerStatus> partnerStatusList) {
+        this.partnerStatusList = partnerStatusList;
+        return this;
+    }
+
+
+    /**
+    * set 附件信息
+    *
+    * @param files
+    */
+    public ApplyDistributor files(List<FileVo> files) {
+        this.files = files;
+        return this;
+    }
+
+
+    /**
+     * set 合作伙伴申请来源 1-官网招募 2-SaaS加速器
+     *
+     * @param applySource
+     */
+    public ApplyDistributor applySource(Integer applySource) {
+        this.applySource = applySource;
+        return this;
+    }
+
+
+    /**
+     * set 合作伙伴申请来源
+     *
+     * @param applySourceName
+     */
+    public ApplyDistributor applySourceName(String applySourceName) {
+        this.applySourceName = applySourceName;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 跟进记录列表
+     *
+     * @param followRecordList
+     */
+    public void addFollowRecordList(FollowRecordDTO followRecordList) {
+        if (this.followRecordList == null) {
+            this.followRecordList = new ArrayList<>();
+        }
+        this.followRecordList.add(followRecordList);
+    }
+
+    /**
+     * add item to 状态变更列表
+     *
+     * @param partnerStatusList
+     */
+    public void addPartnerStatusList(PartnerStatus partnerStatusList) {
+        if (this.partnerStatusList == null) {
+            this.partnerStatusList = new ArrayList<>();
+        }
+        this.partnerStatusList.add(partnerStatusList);
+    }
+
+    /**
+     * add item to 附件信息
+     *
+     * @param file
+     */
+    public void addFile(FileVo file) {
+        if (this.files == null) {
+            this.files = new ArrayList<>();
+        }
+        this.files.add(file);
+    }
 }
