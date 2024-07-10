@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 合同模板管理接口
+ * 司马签合同模板管理接口
  * 电子签章-合同模板管理接口
  *
  * OpenAPI spec version: v1
@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cloudsign.model.DownloadTemplatesResponse;
 
 /**
- * 1. 下载合同模板
+ * 此接口仅供前端使用
+1. 下载合同模板
 2. 多个合同id用逗号分隔
  [MFA enabled]
  */
@@ -42,7 +43,7 @@ class DownloadTemplatesExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/template/{templateId}";
+        return "/smqTemplate/{templateId}:downloadTemplates";
     }
 
     @Override

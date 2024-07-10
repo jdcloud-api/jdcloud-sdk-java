@@ -153,9 +153,29 @@ public class ComStamp  implements java.io.Serializable {
     private String identifyValue;
 
     /**
+     * 自定义签章类型time(带时间印章)、crossPage（骑缝章）（如需增加时间戳，此字段传time，会覆盖contractSpec中的定义）
+     */
+    private String stampStyle;
+
+    /**
+     * 0：普通证书 1：事件证书（默认为0，普通证书。会覆盖contractSpec中的定义）
+     */
+    private Integer certExpire;
+
+    /**
+     * 页范围，仅在坐标签章生效 1. all，表示所有页码;2. 数字以逗号分隔，形如：&quot;1,2,3&quot;&quot;1,2,3&quot;;3. 以短横线：以短横线&#39;-&#39;分隔的两个数字，会被扩展为⼀段范围，形如：&quot;2-4&quot;;4：规则2和3可以混用，形如：&quot;2-4,7&quot;
+     */
+    private String pageRange;
+
+    /**
      * 关键字盖章坐标位置（right盖章在关键字右边，left盖章在关键字左边，center盖章在关键字中间。不传默认center）
      */
     private String positionPoint;
+
+    /**
+     * 关键字盖章,关键字中心点是否和印章中心点重合，默认false，positionPoint为center时生效
+     */
+    private Boolean keywordCenter;
 
 
 
@@ -616,6 +636,63 @@ public class ComStamp  implements java.io.Serializable {
 
 
     /**
+     * get 自定义签章类型time(带时间印章)、crossPage（骑缝章）（如需增加时间戳，此字段传time，会覆盖contractSpec中的定义）
+     *
+     * @return
+     */
+    public String getStampStyle() {
+        return stampStyle;
+    }
+
+    /**
+     * set 自定义签章类型time(带时间印章)、crossPage（骑缝章）（如需增加时间戳，此字段传time，会覆盖contractSpec中的定义）
+     *
+     * @param stampStyle
+     */
+    public void setStampStyle(String stampStyle) {
+        this.stampStyle = stampStyle;
+    }
+
+
+    /**
+     * get 0：普通证书 1：事件证书（默认为0，普通证书。会覆盖contractSpec中的定义）
+     *
+     * @return
+     */
+    public Integer getCertExpire() {
+        return certExpire;
+    }
+
+    /**
+     * set 0：普通证书 1：事件证书（默认为0，普通证书。会覆盖contractSpec中的定义）
+     *
+     * @param certExpire
+     */
+    public void setCertExpire(Integer certExpire) {
+        this.certExpire = certExpire;
+    }
+
+
+    /**
+     * get 页范围，仅在坐标签章生效 1. all，表示所有页码;2. 数字以逗号分隔，形如：&quot;1,2,3&quot;&quot;1,2,3&quot;;3. 以短横线：以短横线&#39;-&#39;分隔的两个数字，会被扩展为⼀段范围，形如：&quot;2-4&quot;;4：规则2和3可以混用，形如：&quot;2-4,7&quot;
+     *
+     * @return
+     */
+    public String getPageRange() {
+        return pageRange;
+    }
+
+    /**
+     * set 页范围，仅在坐标签章生效 1. all，表示所有页码;2. 数字以逗号分隔，形如：&quot;1,2,3&quot;&quot;1,2,3&quot;;3. 以短横线：以短横线&#39;-&#39;分隔的两个数字，会被扩展为⼀段范围，形如：&quot;2-4&quot;;4：规则2和3可以混用，形如：&quot;2-4,7&quot;
+     *
+     * @param pageRange
+     */
+    public void setPageRange(String pageRange) {
+        this.pageRange = pageRange;
+    }
+
+
+    /**
      * get 关键字盖章坐标位置（right盖章在关键字右边，left盖章在关键字左边，center盖章在关键字中间。不传默认center）
      *
      * @return
@@ -631,6 +708,25 @@ public class ComStamp  implements java.io.Serializable {
      */
     public void setPositionPoint(String positionPoint) {
         this.positionPoint = positionPoint;
+    }
+
+
+    /**
+     * get 关键字盖章,关键字中心点是否和印章中心点重合，默认false，positionPoint为center时生效
+     *
+     * @return
+     */
+    public Boolean getKeywordCenter() {
+        return keywordCenter;
+    }
+
+    /**
+     * set 关键字盖章,关键字中心点是否和印章中心点重合，默认false，positionPoint为center时生效
+     *
+     * @param keywordCenter
+     */
+    public void setKeywordCenter(Boolean keywordCenter) {
+        this.keywordCenter = keywordCenter;
     }
 
 
@@ -900,12 +996,56 @@ public class ComStamp  implements java.io.Serializable {
 
 
     /**
+     * set 自定义签章类型time(带时间印章)、crossPage（骑缝章）（如需增加时间戳，此字段传time，会覆盖contractSpec中的定义）
+     *
+     * @param stampStyle
+     */
+    public ComStamp stampStyle(String stampStyle) {
+        this.stampStyle = stampStyle;
+        return this;
+    }
+
+
+    /**
+     * set 0：普通证书 1：事件证书（默认为0，普通证书。会覆盖contractSpec中的定义）
+     *
+     * @param certExpire
+     */
+    public ComStamp certExpire(Integer certExpire) {
+        this.certExpire = certExpire;
+        return this;
+    }
+
+
+    /**
+     * set 页范围，仅在坐标签章生效 1. all，表示所有页码;2. 数字以逗号分隔，形如：&quot;1,2,3&quot;&quot;1,2,3&quot;;3. 以短横线：以短横线&#39;-&#39;分隔的两个数字，会被扩展为⼀段范围，形如：&quot;2-4&quot;;4：规则2和3可以混用，形如：&quot;2-4,7&quot;
+     *
+     * @param pageRange
+     */
+    public ComStamp pageRange(String pageRange) {
+        this.pageRange = pageRange;
+        return this;
+    }
+
+
+    /**
      * set 关键字盖章坐标位置（right盖章在关键字右边，left盖章在关键字左边，center盖章在关键字中间。不传默认center）
      *
      * @param positionPoint
      */
     public ComStamp positionPoint(String positionPoint) {
         this.positionPoint = positionPoint;
+        return this;
+    }
+
+
+    /**
+     * set 关键字盖章,关键字中心点是否和印章中心点重合，默认false，positionPoint为center时生效
+     *
+     * @param keywordCenter
+     */
+    public ComStamp keywordCenter(Boolean keywordCenter) {
+        this.keywordCenter = keywordCenter;
         return this;
     }
 

@@ -38,12 +38,12 @@ public class ContractSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 个人用户盖章信息
+     * 个人用户盖章信息(个人用户盖章信息、企业用户盖章信息 至少存在一项)
      */
     
     private List<PerStamp> personStamps;
     /**
-     * 企业用户盖章信息
+     * 企业用户盖章信息(个人用户盖章信息、企业用户盖章信息 至少存在一项)
      */
     
     private List<ComStamp> companyStamps;
@@ -78,19 +78,39 @@ public class ContractSpec  implements java.io.Serializable {
     private String stampStyle;
 
     /**
+     * 0：普通证书 1：事件证书（默认为0，普通证书）
+     */
+    private Integer certExpire;
+
+    /**
+     * 证书类型
+     */
+    private String businessId;
+
+    /**
+     * 签署完的合同是否在京东云存储（默认为false，不存储）
+     */
+    private Boolean needStorage;
+
+    /**
+     * 是否需要返回已签署的合同（默认为true）
+     */
+    private Boolean needContract;
+
+    /**
      * 部门信息
      */
     private String dept;
 
     /**
-     * 盖章范围
+     * 页范围，仅在坐标签章生效(personStamps,companyStamps中的该属性优先生效) 1. all，表示所有页码;2. 数字以逗号分隔，形如：&quot;1,2,3&quot;&quot;1,2,3&quot;;3. 以短横线：以短横线&#39;-&#39;分隔的两个数字，会被扩展为⼀段范围，形如：&quot;2-4&quot;;4：规则2和3可以混用，形如：&quot;2-4,7&quot;
      */
     private String pageRange;
 
 
 
     /**
-    * get 个人用户盖章信息
+    * get 个人用户盖章信息(个人用户盖章信息、企业用户盖章信息 至少存在一项)
     *
     * @return
     */
@@ -99,7 +119,7 @@ public class ContractSpec  implements java.io.Serializable {
     }
 
     /**
-    * set 个人用户盖章信息
+    * set 个人用户盖章信息(个人用户盖章信息、企业用户盖章信息 至少存在一项)
     *
     * @param personStamps
     */
@@ -109,7 +129,7 @@ public class ContractSpec  implements java.io.Serializable {
 
 
     /**
-    * get 企业用户盖章信息
+    * get 企业用户盖章信息(个人用户盖章信息、企业用户盖章信息 至少存在一项)
     *
     * @return
     */
@@ -118,7 +138,7 @@ public class ContractSpec  implements java.io.Serializable {
     }
 
     /**
-    * set 企业用户盖章信息
+    * set 企业用户盖章信息(个人用户盖章信息、企业用户盖章信息 至少存在一项)
     *
     * @param companyStamps
     */
@@ -242,6 +262,82 @@ public class ContractSpec  implements java.io.Serializable {
 
 
     /**
+     * get 0：普通证书 1：事件证书（默认为0，普通证书）
+     *
+     * @return
+     */
+    public Integer getCertExpire() {
+        return certExpire;
+    }
+
+    /**
+     * set 0：普通证书 1：事件证书（默认为0，普通证书）
+     *
+     * @param certExpire
+     */
+    public void setCertExpire(Integer certExpire) {
+        this.certExpire = certExpire;
+    }
+
+
+    /**
+     * get 证书类型
+     *
+     * @return
+     */
+    public String getBusinessId() {
+        return businessId;
+    }
+
+    /**
+     * set 证书类型
+     *
+     * @param businessId
+     */
+    public void setBusinessId(String businessId) {
+        this.businessId = businessId;
+    }
+
+
+    /**
+     * get 签署完的合同是否在京东云存储（默认为false，不存储）
+     *
+     * @return
+     */
+    public Boolean getNeedStorage() {
+        return needStorage;
+    }
+
+    /**
+     * set 签署完的合同是否在京东云存储（默认为false，不存储）
+     *
+     * @param needStorage
+     */
+    public void setNeedStorage(Boolean needStorage) {
+        this.needStorage = needStorage;
+    }
+
+
+    /**
+     * get 是否需要返回已签署的合同（默认为true）
+     *
+     * @return
+     */
+    public Boolean getNeedContract() {
+        return needContract;
+    }
+
+    /**
+     * set 是否需要返回已签署的合同（默认为true）
+     *
+     * @param needContract
+     */
+    public void setNeedContract(Boolean needContract) {
+        this.needContract = needContract;
+    }
+
+
+    /**
      * get 部门信息
      *
      * @return
@@ -261,7 +357,7 @@ public class ContractSpec  implements java.io.Serializable {
 
 
     /**
-     * get 盖章范围
+     * get 页范围，仅在坐标签章生效(personStamps,companyStamps中的该属性优先生效) 1. all，表示所有页码;2. 数字以逗号分隔，形如：&quot;1,2,3&quot;&quot;1,2,3&quot;;3. 以短横线：以短横线&#39;-&#39;分隔的两个数字，会被扩展为⼀段范围，形如：&quot;2-4&quot;;4：规则2和3可以混用，形如：&quot;2-4,7&quot;
      *
      * @return
      */
@@ -270,7 +366,7 @@ public class ContractSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 盖章范围
+     * set 页范围，仅在坐标签章生效(personStamps,companyStamps中的该属性优先生效) 1. all，表示所有页码;2. 数字以逗号分隔，形如：&quot;1,2,3&quot;&quot;1,2,3&quot;;3. 以短横线：以短横线&#39;-&#39;分隔的两个数字，会被扩展为⼀段范围，形如：&quot;2-4&quot;;4：规则2和3可以混用，形如：&quot;2-4,7&quot;
      *
      * @param pageRange
      */
@@ -281,7 +377,7 @@ public class ContractSpec  implements java.io.Serializable {
 
 
     /**
-    * set 个人用户盖章信息
+    * set 个人用户盖章信息(个人用户盖章信息、企业用户盖章信息 至少存在一项)
     *
     * @param personStamps
     */
@@ -292,7 +388,7 @@ public class ContractSpec  implements java.io.Serializable {
 
 
     /**
-    * set 企业用户盖章信息
+    * set 企业用户盖章信息(个人用户盖章信息、企业用户盖章信息 至少存在一项)
     *
     * @param companyStamps
     */
@@ -369,6 +465,50 @@ public class ContractSpec  implements java.io.Serializable {
 
 
     /**
+     * set 0：普通证书 1：事件证书（默认为0，普通证书）
+     *
+     * @param certExpire
+     */
+    public ContractSpec certExpire(Integer certExpire) {
+        this.certExpire = certExpire;
+        return this;
+    }
+
+
+    /**
+     * set 证书类型
+     *
+     * @param businessId
+     */
+    public ContractSpec businessId(String businessId) {
+        this.businessId = businessId;
+        return this;
+    }
+
+
+    /**
+     * set 签署完的合同是否在京东云存储（默认为false，不存储）
+     *
+     * @param needStorage
+     */
+    public ContractSpec needStorage(Boolean needStorage) {
+        this.needStorage = needStorage;
+        return this;
+    }
+
+
+    /**
+     * set 是否需要返回已签署的合同（默认为true）
+     *
+     * @param needContract
+     */
+    public ContractSpec needContract(Boolean needContract) {
+        this.needContract = needContract;
+        return this;
+    }
+
+
+    /**
      * set 部门信息
      *
      * @param dept
@@ -380,7 +520,7 @@ public class ContractSpec  implements java.io.Serializable {
 
 
     /**
-     * set 盖章范围
+     * set 页范围，仅在坐标签章生效(personStamps,companyStamps中的该属性优先生效) 1. all，表示所有页码;2. 数字以逗号分隔，形如：&quot;1,2,3&quot;&quot;1,2,3&quot;;3. 以短横线：以短横线&#39;-&#39;分隔的两个数字，会被扩展为⼀段范围，形如：&quot;2-4&quot;;4：规则2和3可以混用，形如：&quot;2-4,7&quot;
      *
      * @param pageRange
      */
@@ -392,7 +532,7 @@ public class ContractSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to 个人用户盖章信息
+     * add item to 个人用户盖章信息(个人用户盖章信息、企业用户盖章信息 至少存在一项)
      *
      * @param personStamp
      */
@@ -404,7 +544,7 @@ public class ContractSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 企业用户盖章信息
+     * add item to 企业用户盖章信息(个人用户盖章信息、企业用户盖章信息 至少存在一项)
      *
      * @param companyStamp
      */

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 印章管理接口
+ * 司马签印章管理接口
  * 电子签章-印章管理接口
  *
  * OpenAPI spec version: v1
@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.cloudsign.model;
 
-import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.cloudsign.model.StampSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -37,9 +36,7 @@ public class UploadStampRequest extends JdcloudRequest implements java.io.Serial
 
     /**
      * stampSpec
-     * Required:true
      */
-    @Required
     private StampSpec stampSpec;
 
 

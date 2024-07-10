@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 印章管理接口
+ * 司马签印章管理接口
  * 电子签章-印章管理接口
  *
  * OpenAPI spec version: v1
@@ -28,7 +28,8 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 1. 下载印章
+ * 此接口仅供前端使用
+1. 下载印章
 2. 多个印章id用逗号分隔
  [MFA enabled]
  */

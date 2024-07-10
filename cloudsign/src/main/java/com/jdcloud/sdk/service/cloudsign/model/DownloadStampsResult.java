@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 印章管理接口
+ * 司马签印章管理接口
  * 电子签章-印章管理接口
  *
  * OpenAPI spec version: v1
@@ -24,11 +24,11 @@
 
 package com.jdcloud.sdk.service.cloudsign.model;
 
-import com.jdcloud.sdk.service.cloudsign.model.StampInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 1. 下载印章
+ * 此接口仅供前端使用
+1. 下载印章
 2. 多个印章id用逗号分隔
  [MFA enabled]
  */
@@ -36,42 +36,7 @@ public class DownloadStampsResult extends JdcloudResult implements java.io.Seria
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * stampInfo
-     */
-    private StampInfo stampInfo;
 
-
-
-    /**
-     * get stampInfo
-     *
-     * @return
-     */
-    public StampInfo getStampInfo() {
-        return stampInfo;
-    }
-
-    /**
-     * set stampInfo
-     *
-     * @param stampInfo
-     */
-    public void setStampInfo(StampInfo stampInfo) {
-        this.stampInfo = stampInfo;
-    }
-
-
-
-    /**
-     * set stampInfo
-     *
-     * @param stampInfo
-     */
-    public DownloadStampsResult stampInfo(StampInfo stampInfo) {
-        this.stampInfo = stampInfo;
-        return this;
-    }
 
 
 }

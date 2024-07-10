@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>cloudsign</artifactId>
-  <version>2.0.6</version>
+  <version>2.0.9</version>
   <packaging>jar</packaging>
   <name>cloudsign</name>
   <url>http://www.jdcloud.com</url>
