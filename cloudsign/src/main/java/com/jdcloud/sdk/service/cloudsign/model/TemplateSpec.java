@@ -55,6 +55,11 @@ public class TemplateSpec  implements java.io.Serializable {
     private String templateType;
 
     /**
+     * 备注
+     */
+    private String note;
+
+    /**
      * 占位符关键字,templateType为word时必传
 在word文档中为双大括号里的内容, 比如{{单位名称}}
 
@@ -140,6 +145,25 @@ public class TemplateSpec  implements java.io.Serializable {
 
 
     /**
+     * get 备注
+     *
+     * @return
+     */
+    public String getNote() {
+        return note;
+    }
+
+    /**
+     * set 备注
+     *
+     * @param note
+     */
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+
+    /**
     * get 占位符关键字,templateType为word时必传
 在word文档中为双大括号里的内容, 比如{{单位名称}}
 
@@ -203,6 +227,17 @@ public class TemplateSpec  implements java.io.Serializable {
      */
     public TemplateSpec templateType(String templateType) {
         this.templateType = templateType;
+        return this;
+    }
+
+
+    /**
+     * set 备注
+     *
+     * @param note
+     */
+    public TemplateSpec note(String note) {
+        this.note = note;
         return this;
     }
 

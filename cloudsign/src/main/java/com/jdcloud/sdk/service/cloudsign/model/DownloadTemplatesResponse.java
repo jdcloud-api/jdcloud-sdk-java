@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 合同模板管理接口
+ * 司马签合同模板管理接口
  * 电子签章-合同模板管理接口
  *
  * OpenAPI spec version: v1
@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.cloudsign.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 1. 下载合同模板
+ * 此接口仅供前端使用
+1. 下载合同模板
 2. 多个合同id用逗号分隔
  [MFA enabled]
  */
