@@ -568,6 +568,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryStatisticsDataExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDefaultHttpHeaderKeyRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDefaultHttpHeaderKeyResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDefaultHttpHeaderKeyExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryBackSourceIpVersionRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryBackSourceIpVersionResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryBackSourceIpVersionExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetSourceAuthConfigRequest;
 import com.jdcloud.sdk.service.cdn.model.SetSourceAuthConfigResponse;
 import com.jdcloud.sdk.service.cdn.client.SetSourceAuthConfigExecutor;
@@ -592,6 +595,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryDomainGroupListExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainsNotInGroupRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainsNotInGroupResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDomainsNotInGroupExecutor;
+import com.jdcloud.sdk.service.cdn.model.ConfigBackSourceIpVersionRequest;
+import com.jdcloud.sdk.service.cdn.model.ConfigBackSourceIpVersionResponse;
+import com.jdcloud.sdk.service.cdn.client.ConfigBackSourceIpVersionExecutor;
 import com.jdcloud.sdk.service.cdn.model.GetSslCertDetailRequest;
 import com.jdcloud.sdk.service.cdn.model.GetSslCertDetailResponse;
 import com.jdcloud.sdk.service.cdn.client.GetSslCertDetailExecutor;
@@ -645,7 +651,7 @@ public class CdnClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.9";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "cdn.jdcloud-api.com";
     public final static String ServiceName = "cdn";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -2657,6 +2663,17 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
+     * 查询回源IP类型
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryBackSourceIpVersionResponse queryBackSourceIpVersion(QueryBackSourceIpVersionRequest request) throws JdcloudSdkException {
+        return new QueryBackSourceIpVersionExecutor().client(this).execute(request);
+    }
+
+    /**
      * 回源鉴权设置
      *
      * @param request
@@ -2742,6 +2759,17 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryDomainsNotInGroupResponse queryDomainsNotInGroup(QueryDomainsNotInGroupRequest request) throws JdcloudSdkException {
         return new QueryDomainsNotInGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置回源IP类型
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ConfigBackSourceIpVersionResponse configBackSourceIpVersion(ConfigBackSourceIpVersionRequest request) throws JdcloudSdkException {
+        return new ConfigBackSourceIpVersionExecutor().client(this).execute(request);
     }
 
     /**
