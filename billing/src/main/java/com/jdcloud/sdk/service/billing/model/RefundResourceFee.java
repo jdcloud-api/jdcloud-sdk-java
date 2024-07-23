@@ -40,6 +40,16 @@ public class RefundResourceFee  implements java.io.Serializable {
     private String resourceId;
 
     /**
+     * 状态: 1-成功 2-失败
+     */
+    private Integer status;
+
+    /**
+     * 失败信息
+     */
+    private String message;
+
+    /**
      * 资源退款金额
      */
     private Double fee;
@@ -82,6 +92,44 @@ public class RefundResourceFee  implements java.io.Serializable {
      */
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
+    }
+
+
+    /**
+     * get 状态: 1-成功 2-失败
+     *
+     * @return
+     */
+    public Integer getStatus() {
+        return status;
+    }
+
+    /**
+     * set 状态: 1-成功 2-失败
+     *
+     * @param status
+     */
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+
+    /**
+     * get 失败信息
+     *
+     * @return
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * set 失败信息
+     *
+     * @param message
+     */
+    public void setMessage(String message) {
+        this.message = message;
     }
 
 
@@ -188,6 +236,28 @@ public class RefundResourceFee  implements java.io.Serializable {
      */
     public RefundResourceFee resourceId(String resourceId) {
         this.resourceId = resourceId;
+        return this;
+    }
+
+
+    /**
+     * set 状态: 1-成功 2-失败
+     *
+     * @param status
+     */
+    public RefundResourceFee status(Integer status) {
+        this.status = status;
+        return this;
+    }
+
+
+    /**
+     * set 失败信息
+     *
+     * @param message
+     */
+    public RefundResourceFee message(String message) {
+        this.message = message;
         return this;
     }
 

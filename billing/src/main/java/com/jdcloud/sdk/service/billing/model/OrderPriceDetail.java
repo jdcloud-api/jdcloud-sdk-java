@@ -37,22 +37,22 @@ public class OrderPriceDetail  implements java.io.Serializable {
     /**
      * 原价(6位，原价为每个计费项原价之和)
      */
-    private Number price;
+    private Double price;
 
     /**
      * 原价(6位，与price一致，兼容之前4位原价保留字段)
      */
-    private Number priceScale4;
+    private Double priceScale4;
 
     /**
      * 折扣金额（6位，折扣金额为每个计费项折扣金额之和）
      */
-    private Number discount;
+    private Double discount;
 
     /**
      * 应付金额（2位，应付金额&#x3D;折扣后金额舍位保留2位小数)
      */
-    private Number discountedPrice;
+    private Double discountedPrice;
 
     /**
      * 折扣后金额（6位，折扣后金额为每个计费项折扣后金额之和)
@@ -67,7 +67,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     /**
      * 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格
      */
-    private Number originalPrice;
+    private Double originalPrice;
 
     /**
      * 资源id
@@ -95,7 +95,12 @@ public class OrderPriceDetail  implements java.io.Serializable {
     private String region;
 
     /**
-     * 计费类型1:按配置2:按用量3:包年包月
+     * 可用区
+     */
+    private String az;
+
+    /**
+     * 计费类型1:按配置2:按用量3:包年包月4:一次性5:抢占式
      */
     private Integer billingType;
 
@@ -105,7 +110,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     private Integer timeSpan;
 
     /**
-     * 时长类型 1:小时2:天3:月4:年
+     * 时长类型 1:小时2:天3:月4:年 5:周
      */
     private Integer timeUnit;
 
@@ -196,7 +201,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getPrice() {
+    public Double getPrice() {
         return price;
     }
 
@@ -205,7 +210,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @param price
      */
-    public void setPrice(Number price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
@@ -215,7 +220,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getPriceScale4() {
+    public Double getPriceScale4() {
         return priceScale4;
     }
 
@@ -224,7 +229,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @param priceScale4
      */
-    public void setPriceScale4(Number priceScale4) {
+    public void setPriceScale4(Double priceScale4) {
         this.priceScale4 = priceScale4;
     }
 
@@ -234,7 +239,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getDiscount() {
+    public Double getDiscount() {
         return discount;
     }
 
@@ -243,7 +248,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @param discount
      */
-    public void setDiscount(Number discount) {
+    public void setDiscount(Double discount) {
         this.discount = discount;
     }
 
@@ -253,7 +258,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getDiscountedPrice() {
+    public Double getDiscountedPrice() {
         return discountedPrice;
     }
 
@@ -262,7 +267,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @param discountedPrice
      */
-    public void setDiscountedPrice(Number discountedPrice) {
+    public void setDiscountedPrice(Double discountedPrice) {
         this.discountedPrice = discountedPrice;
     }
 
@@ -310,7 +315,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getOriginalPrice() {
+    public Double getOriginalPrice() {
         return originalPrice;
     }
 
@@ -319,7 +324,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @param originalPrice
      */
-    public void setOriginalPrice(Number originalPrice) {
+    public void setOriginalPrice(Double originalPrice) {
         this.originalPrice = originalPrice;
     }
 
@@ -420,7 +425,26 @@ public class OrderPriceDetail  implements java.io.Serializable {
 
 
     /**
-     * get 计费类型1:按配置2:按用量3:包年包月
+     * get 可用区
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set 可用区
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
+    }
+
+
+    /**
+     * get 计费类型1:按配置2:按用量3:包年包月4:一次性5:抢占式
      *
      * @return
      */
@@ -429,7 +453,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 计费类型1:按配置2:按用量3:包年包月
+     * set 计费类型1:按配置2:按用量3:包年包月4:一次性5:抢占式
      *
      * @param billingType
      */
@@ -458,7 +482,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
 
 
     /**
-     * get 时长类型 1:小时2:天3:月4:年
+     * get 时长类型 1:小时2:天3:月4:年 5:周
      *
      * @return
      */
@@ -467,7 +491,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 时长类型 1:小时2:天3:月4:年
+     * set 时长类型 1:小时2:天3:月4:年 5:周
      *
      * @param timeUnit
      */
@@ -786,7 +810,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @param price
      */
-    public OrderPriceDetail price(Number price) {
+    public OrderPriceDetail price(Double price) {
         this.price = price;
         return this;
     }
@@ -797,7 +821,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @param priceScale4
      */
-    public OrderPriceDetail priceScale4(Number priceScale4) {
+    public OrderPriceDetail priceScale4(Double priceScale4) {
         this.priceScale4 = priceScale4;
         return this;
     }
@@ -808,7 +832,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @param discount
      */
-    public OrderPriceDetail discount(Number discount) {
+    public OrderPriceDetail discount(Double discount) {
         this.discount = discount;
         return this;
     }
@@ -819,7 +843,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @param discountedPrice
      */
-    public OrderPriceDetail discountedPrice(Number discountedPrice) {
+    public OrderPriceDetail discountedPrice(Double discountedPrice) {
         this.discountedPrice = discountedPrice;
         return this;
     }
@@ -852,7 +876,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
      *
      * @param originalPrice
      */
-    public OrderPriceDetail originalPrice(Number originalPrice) {
+    public OrderPriceDetail originalPrice(Double originalPrice) {
         this.originalPrice = originalPrice;
         return this;
     }
@@ -914,7 +938,18 @@ public class OrderPriceDetail  implements java.io.Serializable {
 
 
     /**
-     * set 计费类型1:按配置2:按用量3:包年包月
+     * set 可用区
+     *
+     * @param az
+     */
+    public OrderPriceDetail az(String az) {
+        this.az = az;
+        return this;
+    }
+
+
+    /**
+     * set 计费类型1:按配置2:按用量3:包年包月4:一次性5:抢占式
      *
      * @param billingType
      */
@@ -936,7 +971,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
 
 
     /**
-     * set 时长类型 1:小时2:天3:月4:年
+     * set 时长类型 1:小时2:天3:月4:年 5:周
      *
      * @param timeUnit
      */

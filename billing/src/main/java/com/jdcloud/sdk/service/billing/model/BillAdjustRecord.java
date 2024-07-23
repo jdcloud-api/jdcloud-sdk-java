@@ -48,6 +48,16 @@ public class BillAdjustRecord  implements java.io.Serializable {
     private String resourceId;
 
     /**
+     * 原价
+     */
+    private Double billFee;
+
+    /**
+     * 优惠金额
+     */
+    private Double discountFee;
+
+    /**
      * 应付金额
      */
     private Double actualFee;
@@ -56,6 +66,26 @@ public class BillAdjustRecord  implements java.io.Serializable {
      * 调整金额
      */
     private Double adjustFee;
+
+    /**
+     * 调整现金金额
+     */
+    private Double cashPayFee;
+
+    /**
+     * 调整余额金额
+     */
+    private Double balancePayFee;
+
+    /**
+     * 调整代金券金额
+     */
+    private Double cashCouponFee;
+
+    /**
+     * 代金券券码
+     */
+    private String couponNumber;
 
     /**
      * 计费项
@@ -202,6 +232,44 @@ public class BillAdjustRecord  implements java.io.Serializable {
 
 
     /**
+     * get 原价
+     *
+     * @return
+     */
+    public Double getBillFee() {
+        return billFee;
+    }
+
+    /**
+     * set 原价
+     *
+     * @param billFee
+     */
+    public void setBillFee(Double billFee) {
+        this.billFee = billFee;
+    }
+
+
+    /**
+     * get 优惠金额
+     *
+     * @return
+     */
+    public Double getDiscountFee() {
+        return discountFee;
+    }
+
+    /**
+     * set 优惠金额
+     *
+     * @param discountFee
+     */
+    public void setDiscountFee(Double discountFee) {
+        this.discountFee = discountFee;
+    }
+
+
+    /**
      * get 应付金额
      *
      * @return
@@ -236,6 +304,82 @@ public class BillAdjustRecord  implements java.io.Serializable {
      */
     public void setAdjustFee(Double adjustFee) {
         this.adjustFee = adjustFee;
+    }
+
+
+    /**
+     * get 调整现金金额
+     *
+     * @return
+     */
+    public Double getCashPayFee() {
+        return cashPayFee;
+    }
+
+    /**
+     * set 调整现金金额
+     *
+     * @param cashPayFee
+     */
+    public void setCashPayFee(Double cashPayFee) {
+        this.cashPayFee = cashPayFee;
+    }
+
+
+    /**
+     * get 调整余额金额
+     *
+     * @return
+     */
+    public Double getBalancePayFee() {
+        return balancePayFee;
+    }
+
+    /**
+     * set 调整余额金额
+     *
+     * @param balancePayFee
+     */
+    public void setBalancePayFee(Double balancePayFee) {
+        this.balancePayFee = balancePayFee;
+    }
+
+
+    /**
+     * get 调整代金券金额
+     *
+     * @return
+     */
+    public Double getCashCouponFee() {
+        return cashCouponFee;
+    }
+
+    /**
+     * set 调整代金券金额
+     *
+     * @param cashCouponFee
+     */
+    public void setCashCouponFee(Double cashCouponFee) {
+        this.cashCouponFee = cashCouponFee;
+    }
+
+
+    /**
+     * get 代金券券码
+     *
+     * @return
+     */
+    public String getCouponNumber() {
+        return couponNumber;
+    }
+
+    /**
+     * set 代金券券码
+     *
+     * @param couponNumber
+     */
+    public void setCouponNumber(String couponNumber) {
+        this.couponNumber = couponNumber;
     }
 
 
@@ -597,6 +741,28 @@ public class BillAdjustRecord  implements java.io.Serializable {
 
 
     /**
+     * set 原价
+     *
+     * @param billFee
+     */
+    public BillAdjustRecord billFee(Double billFee) {
+        this.billFee = billFee;
+        return this;
+    }
+
+
+    /**
+     * set 优惠金额
+     *
+     * @param discountFee
+     */
+    public BillAdjustRecord discountFee(Double discountFee) {
+        this.discountFee = discountFee;
+        return this;
+    }
+
+
+    /**
      * set 应付金额
      *
      * @param actualFee
@@ -614,6 +780,50 @@ public class BillAdjustRecord  implements java.io.Serializable {
      */
     public BillAdjustRecord adjustFee(Double adjustFee) {
         this.adjustFee = adjustFee;
+        return this;
+    }
+
+
+    /**
+     * set 调整现金金额
+     *
+     * @param cashPayFee
+     */
+    public BillAdjustRecord cashPayFee(Double cashPayFee) {
+        this.cashPayFee = cashPayFee;
+        return this;
+    }
+
+
+    /**
+     * set 调整余额金额
+     *
+     * @param balancePayFee
+     */
+    public BillAdjustRecord balancePayFee(Double balancePayFee) {
+        this.balancePayFee = balancePayFee;
+        return this;
+    }
+
+
+    /**
+     * set 调整代金券金额
+     *
+     * @param cashCouponFee
+     */
+    public BillAdjustRecord cashCouponFee(Double cashCouponFee) {
+        this.cashCouponFee = cashCouponFee;
+        return this;
+    }
+
+
+    /**
+     * set 代金券券码
+     *
+     * @param couponNumber
+     */
+    public BillAdjustRecord couponNumber(String couponNumber) {
+        this.couponNumber = couponNumber;
         return this;
     }
 

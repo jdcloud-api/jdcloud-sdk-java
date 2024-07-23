@@ -118,7 +118,7 @@ public class ResourceAeVo  implements java.io.Serializable {
     private String toDeleteTime;
 
     /**
-     * capState
+     * 用于中间层判断的状态标识 1:正常(重启) 3:欠费停服 4:欠费删除 13：到期停服 14：到期删除、退款删除 24：运营删除 34:用户删除
      */
     private Integer capState;
 
@@ -448,7 +448,7 @@ public class ResourceAeVo  implements java.io.Serializable {
 
 
     /**
-     * get capState
+     * get 用于中间层判断的状态标识 1:正常(重启) 3:欠费停服 4:欠费删除 13：到期停服 14：到期删除、退款删除 24：运营删除 34:用户删除
      *
      * @return
      */
@@ -457,7 +457,7 @@ public class ResourceAeVo  implements java.io.Serializable {
     }
 
     /**
-     * set capState
+     * set 用于中间层判断的状态标识 1:正常(重启) 3:欠费停服 4:欠费删除 13：到期停服 14：到期删除、退款删除 24：运营删除 34:用户删除
      *
      * @param capState
      */
@@ -655,7 +655,7 @@ public class ResourceAeVo  implements java.io.Serializable {
 
 
     /**
-     * set capState
+     * set 用于中间层判断的状态标识 1:正常(重启) 3:欠费停服 4:欠费删除 13：到期停服 14：到期删除、退款删除 24：运营删除 34:用户删除
      *
      * @param capState
      */

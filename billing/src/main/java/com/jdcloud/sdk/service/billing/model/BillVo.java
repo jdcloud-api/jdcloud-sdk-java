@@ -165,6 +165,11 @@ public class BillVo  implements java.io.Serializable {
     private Number payCashCouponFee;
 
     /**
+     * 电汇金额，2位精度
+     */
+    private Number wire;
+
+    /**
      * 消费时间
      */
     private String consumeTime;
@@ -188,6 +193,16 @@ public class BillVo  implements java.io.Serializable {
      * 组织机构代码
      */
     private String org;
+
+    /**
+     * 组织机构名称
+     */
+    private String orgName;
+
+    /**
+     * 合同编码
+     */
+    private String contractNumber;
 
     /**
      * 交易类型 1、使用 2、 新购 3、续费 4、配置变更 5、退款，不可修改
@@ -631,6 +646,25 @@ public class BillVo  implements java.io.Serializable {
 
 
     /**
+     * get 电汇金额，2位精度
+     *
+     * @return
+     */
+    public Number getWire() {
+        return wire;
+    }
+
+    /**
+     * set 电汇金额，2位精度
+     *
+     * @param wire
+     */
+    public void setWire(Number wire) {
+        this.wire = wire;
+    }
+
+
+    /**
      * get 消费时间
      *
      * @return
@@ -722,6 +756,44 @@ public class BillVo  implements java.io.Serializable {
      */
     public void setOrg(String org) {
         this.org = org;
+    }
+
+
+    /**
+     * get 组织机构名称
+     *
+     * @return
+     */
+    public String getOrgName() {
+        return orgName;
+    }
+
+    /**
+     * set 组织机构名称
+     *
+     * @param orgName
+     */
+    public void setOrgName(String orgName) {
+        this.orgName = orgName;
+    }
+
+
+    /**
+     * get 合同编码
+     *
+     * @return
+     */
+    public String getContractNumber() {
+        return contractNumber;
+    }
+
+    /**
+     * set 合同编码
+     *
+     * @param contractNumber
+     */
+    public void setContractNumber(String contractNumber) {
+        this.contractNumber = contractNumber;
     }
 
 
@@ -1110,6 +1182,17 @@ public class BillVo  implements java.io.Serializable {
 
 
     /**
+     * set 电汇金额，2位精度
+     *
+     * @param wire
+     */
+    public BillVo wire(Number wire) {
+        this.wire = wire;
+        return this;
+    }
+
+
+    /**
      * set 消费时间
      *
      * @param consumeTime
@@ -1160,6 +1243,28 @@ public class BillVo  implements java.io.Serializable {
      */
     public BillVo org(String org) {
         this.org = org;
+        return this;
+    }
+
+
+    /**
+     * set 组织机构名称
+     *
+     * @param orgName
+     */
+    public BillVo orgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
+
+
+    /**
+     * set 合同编码
+     *
+     * @param contractNumber
+     */
+    public BillVo contractNumber(String contractNumber) {
+        this.contractNumber = contractNumber;
         return this;
     }
 

@@ -55,7 +55,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     private Integer billingType;
 
     /**
-     * 时长类型 1:小时 2:天 3:月 4:年
+     * 时长类型 1:小时 2:天 3:月 4:年 5:周
      */
     private Integer timeUnit;
 
@@ -338,7 +338,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
 
 
     /**
-     * get 时长类型 1:小时 2:天 3:月 4:年
+     * get 时长类型 1:小时 2:天 3:月 4:年 5:周
      *
      * @return
      */
@@ -347,7 +347,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     }
 
     /**
-     * set 时长类型 1:小时 2:天 3:月 4:年
+     * set 时长类型 1:小时 2:天 3:月 4:年 5:周
      *
      * @param timeUnit
      */
@@ -1162,7 +1162,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
 
 
     /**
-     * set 时长类型 1:小时 2:天 3:月 4:年
+     * set 时长类型 1:小时 2:天 3:月 4:年 5:周
      *
      * @param timeUnit
      */

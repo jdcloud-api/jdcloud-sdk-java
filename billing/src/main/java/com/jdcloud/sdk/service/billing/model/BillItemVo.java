@@ -121,6 +121,11 @@ public class BillItemVo  implements java.io.Serializable {
     private Double cashPayFee;
 
     /**
+     * 电汇金额，2位精度
+     */
+    private Number wire;
+
+    /**
      * 单价
      */
     private Double unitPrice;
@@ -461,6 +466,25 @@ public class BillItemVo  implements java.io.Serializable {
      */
     public void setCashPayFee(Double cashPayFee) {
         this.cashPayFee = cashPayFee;
+    }
+
+
+    /**
+     * get 电汇金额，2位精度
+     *
+     * @return
+     */
+    public Number getWire() {
+        return wire;
+    }
+
+    /**
+     * set 电汇金额，2位精度
+     *
+     * @param wire
+     */
+    public void setWire(Number wire) {
+        this.wire = wire;
     }
 
 
@@ -835,6 +859,17 @@ public class BillItemVo  implements java.io.Serializable {
      */
     public BillItemVo cashPayFee(Double cashPayFee) {
         this.cashPayFee = cashPayFee;
+        return this;
+    }
+
+
+    /**
+     * set 电汇金额，2位精度
+     *
+     * @param wire
+     */
+    public BillItemVo wire(Number wire) {
+        this.wire = wire;
         return this;
     }
 
