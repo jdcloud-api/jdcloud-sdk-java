@@ -70,7 +70,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     private Integer timeSpan;
 
     /**
-     * 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年(包年包月新购、续费必传)
+     * 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年 5:周(包年包月新购、续费必传)
      */
     private Integer timeUnit;
 
@@ -118,6 +118,16 @@ public class OrderPriceProtocol  implements java.io.Serializable {
      * 交易单模块sourceId
      */
     private String sourceId;
+
+    /**
+     * 可用区
+     */
+    private String az;
+
+    /**
+     * 抢占式计费类型设置保护期，默认：0（未设置保护期）
+     */
+    private Integer protectionPeriod;
 
 
 
@@ -255,7 +265,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
 
 
     /**
-     * get 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年(包年包月新购、续费必传)
+     * get 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年 5:周(包年包月新购、续费必传)
      *
      * @return
      */
@@ -264,7 +274,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * set 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年(包年包月新购、续费必传)
+     * set 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年 5:周(包年包月新购、续费必传)
      *
      * @param timeUnit
      */
@@ -444,6 +454,44 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 可用区
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set 可用区
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
+    }
+
+
+    /**
+     * get 抢占式计费类型设置保护期，默认：0（未设置保护期）
+     *
+     * @return
+     */
+    public Integer getProtectionPeriod() {
+        return protectionPeriod;
+    }
+
+    /**
+     * set 抢占式计费类型设置保护期，默认：0（未设置保护期）
+     *
+     * @param protectionPeriod
+     */
+    public void setProtectionPeriod(Integer protectionPeriod) {
+        this.protectionPeriod = protectionPeriod;
+    }
+
+
 
     /**
      * set 资源id(新购时不传，升降配、续费必须传)
@@ -523,7 +571,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
 
 
     /**
-     * set 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年(包年包月新购、续费必传)
+     * set 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年 5:周(包年包月新购、续费必传)
      *
      * @param timeUnit
      */
@@ -628,6 +676,28 @@ public class OrderPriceProtocol  implements java.io.Serializable {
      */
     public OrderPriceProtocol sourceId(String sourceId) {
         this.sourceId = sourceId;
+        return this;
+    }
+
+
+    /**
+     * set 可用区
+     *
+     * @param az
+     */
+    public OrderPriceProtocol az(String az) {
+        this.az = az;
+        return this;
+    }
+
+
+    /**
+     * set 抢占式计费类型设置保护期，默认：0（未设置保护期）
+     *
+     * @param protectionPeriod
+     */
+    public OrderPriceProtocol protectionPeriod(Integer protectionPeriod) {
+        this.protectionPeriod = protectionPeriod;
         return this;
     }
 

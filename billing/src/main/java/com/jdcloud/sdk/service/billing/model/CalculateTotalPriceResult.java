@@ -39,22 +39,22 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
     /**
      * 原价（6位）
      */
-    private Number totalPrice;
+    private Double totalPrice;
 
     /**
      * 原价(6位，兼容之前4位保留字段)
      */
-    private Number totalPriceScale4;
+    private Double totalPriceScale4;
 
     /**
      * 应付金额（2位）
      */
-    private Number discountedTotalPrice;
+    private Double discountedTotalPrice;
 
     /**
      * 折扣金额（6位）
      */
-    private Number totalDiscount;
+    private Double totalDiscount;
 
     /**
      * 折扣后金额(6位)
@@ -74,7 +74,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
     /**
      * 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格（6位）
      */
-    private Number totalOriginalPrice;
+    private Double totalOriginalPrice;
 
     /**
      * 参与优惠的明细
@@ -89,7 +89,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
     /**
      * 各订单单价总和（6位）
      */
-    private Number totalUnitPrice;
+    private Double totalUnitPrice;
 
     /**
      * 退款总金额
@@ -118,7 +118,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @return
      */
-    public Number getTotalPrice() {
+    public Double getTotalPrice() {
         return totalPrice;
     }
 
@@ -127,7 +127,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @param totalPrice
      */
-    public void setTotalPrice(Number totalPrice) {
+    public void setTotalPrice(Double totalPrice) {
         this.totalPrice = totalPrice;
     }
 
@@ -137,7 +137,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @return
      */
-    public Number getTotalPriceScale4() {
+    public Double getTotalPriceScale4() {
         return totalPriceScale4;
     }
 
@@ -146,7 +146,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @param totalPriceScale4
      */
-    public void setTotalPriceScale4(Number totalPriceScale4) {
+    public void setTotalPriceScale4(Double totalPriceScale4) {
         this.totalPriceScale4 = totalPriceScale4;
     }
 
@@ -156,7 +156,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @return
      */
-    public Number getDiscountedTotalPrice() {
+    public Double getDiscountedTotalPrice() {
         return discountedTotalPrice;
     }
 
@@ -165,7 +165,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @param discountedTotalPrice
      */
-    public void setDiscountedTotalPrice(Number discountedTotalPrice) {
+    public void setDiscountedTotalPrice(Double discountedTotalPrice) {
         this.discountedTotalPrice = discountedTotalPrice;
     }
 
@@ -175,7 +175,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @return
      */
-    public Number getTotalDiscount() {
+    public Double getTotalDiscount() {
         return totalDiscount;
     }
 
@@ -184,7 +184,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @param totalDiscount
      */
-    public void setTotalDiscount(Number totalDiscount) {
+    public void setTotalDiscount(Double totalDiscount) {
         this.totalDiscount = totalDiscount;
     }
 
@@ -251,7 +251,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @return
      */
-    public Number getTotalOriginalPrice() {
+    public Double getTotalOriginalPrice() {
         return totalOriginalPrice;
     }
 
@@ -260,7 +260,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @param totalOriginalPrice
      */
-    public void setTotalOriginalPrice(Number totalOriginalPrice) {
+    public void setTotalOriginalPrice(Double totalOriginalPrice) {
         this.totalOriginalPrice = totalOriginalPrice;
     }
 
@@ -308,7 +308,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @return
      */
-    public Number getTotalUnitPrice() {
+    public Double getTotalUnitPrice() {
         return totalUnitPrice;
     }
 
@@ -317,7 +317,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @param totalUnitPrice
      */
-    public void setTotalUnitPrice(Number totalUnitPrice) {
+    public void setTotalUnitPrice(Double totalUnitPrice) {
         this.totalUnitPrice = totalUnitPrice;
     }
 
@@ -404,7 +404,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @param totalPrice
      */
-    public CalculateTotalPriceResult totalPrice(Number totalPrice) {
+    public CalculateTotalPriceResult totalPrice(Double totalPrice) {
         this.totalPrice = totalPrice;
         return this;
     }
@@ -415,7 +415,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @param totalPriceScale4
      */
-    public CalculateTotalPriceResult totalPriceScale4(Number totalPriceScale4) {
+    public CalculateTotalPriceResult totalPriceScale4(Double totalPriceScale4) {
         this.totalPriceScale4 = totalPriceScale4;
         return this;
     }
@@ -426,7 +426,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @param discountedTotalPrice
      */
-    public CalculateTotalPriceResult discountedTotalPrice(Number discountedTotalPrice) {
+    public CalculateTotalPriceResult discountedTotalPrice(Double discountedTotalPrice) {
         this.discountedTotalPrice = discountedTotalPrice;
         return this;
     }
@@ -437,7 +437,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @param totalDiscount
      */
-    public CalculateTotalPriceResult totalDiscount(Number totalDiscount) {
+    public CalculateTotalPriceResult totalDiscount(Double totalDiscount) {
         this.totalDiscount = totalDiscount;
         return this;
     }
@@ -481,7 +481,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @param totalOriginalPrice
      */
-    public CalculateTotalPriceResult totalOriginalPrice(Number totalOriginalPrice) {
+    public CalculateTotalPriceResult totalOriginalPrice(Double totalOriginalPrice) {
         this.totalOriginalPrice = totalOriginalPrice;
         return this;
     }
@@ -514,7 +514,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
      *
      * @param totalUnitPrice
      */
-    public CalculateTotalPriceResult totalUnitPrice(Number totalUnitPrice) {
+    public CalculateTotalPriceResult totalUnitPrice(Double totalUnitPrice) {
         this.totalUnitPrice = totalUnitPrice;
         return this;
     }

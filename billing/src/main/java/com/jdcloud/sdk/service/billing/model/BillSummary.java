@@ -117,37 +117,37 @@ public class BillSummary  implements java.io.Serializable {
     /**
      * 账单总额
      */
-    private Number totalFee;
+    private Double totalFee;
 
     /**
      * 优惠金额
      */
-    private Number discountFee;
+    private Double discountFee;
 
     /**
      * 优惠后总价金额
      */
-    private Number realTotalFee;
+    private Double realTotalFee;
 
     /**
      * 代金券支付金额
      */
-    private Number cashCouponPayFee;
+    private Double cashCouponPayFee;
 
     /**
      * 余额支付金额
      */
-    private Number balancePayFee;
+    private Double balancePayFee;
 
     /**
      * 现金支付金额
      */
-    private Number cashPayFee;
+    private Double cashPayFee;
 
     /**
      * 欠费金额
      */
-    private Number arrearFee;
+    private Double arrearFee;
 
     /**
      * 标签明细
@@ -465,7 +465,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getTotalFee() {
+    public Double getTotalFee() {
         return totalFee;
     }
 
@@ -474,7 +474,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @param totalFee
      */
-    public void setTotalFee(Number totalFee) {
+    public void setTotalFee(Double totalFee) {
         this.totalFee = totalFee;
     }
 
@@ -484,7 +484,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getDiscountFee() {
+    public Double getDiscountFee() {
         return discountFee;
     }
 
@@ -493,7 +493,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @param discountFee
      */
-    public void setDiscountFee(Number discountFee) {
+    public void setDiscountFee(Double discountFee) {
         this.discountFee = discountFee;
     }
 
@@ -503,7 +503,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getRealTotalFee() {
+    public Double getRealTotalFee() {
         return realTotalFee;
     }
 
@@ -512,7 +512,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @param realTotalFee
      */
-    public void setRealTotalFee(Number realTotalFee) {
+    public void setRealTotalFee(Double realTotalFee) {
         this.realTotalFee = realTotalFee;
     }
 
@@ -522,7 +522,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getCashCouponPayFee() {
+    public Double getCashCouponPayFee() {
         return cashCouponPayFee;
     }
 
@@ -531,7 +531,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @param cashCouponPayFee
      */
-    public void setCashCouponPayFee(Number cashCouponPayFee) {
+    public void setCashCouponPayFee(Double cashCouponPayFee) {
         this.cashCouponPayFee = cashCouponPayFee;
     }
 
@@ -541,7 +541,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getBalancePayFee() {
+    public Double getBalancePayFee() {
         return balancePayFee;
     }
 
@@ -550,7 +550,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @param balancePayFee
      */
-    public void setBalancePayFee(Number balancePayFee) {
+    public void setBalancePayFee(Double balancePayFee) {
         this.balancePayFee = balancePayFee;
     }
 
@@ -560,7 +560,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getCashPayFee() {
+    public Double getCashPayFee() {
         return cashPayFee;
     }
 
@@ -569,7 +569,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @param cashPayFee
      */
-    public void setCashPayFee(Number cashPayFee) {
+    public void setCashPayFee(Double cashPayFee) {
         this.cashPayFee = cashPayFee;
     }
 
@@ -579,7 +579,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getArrearFee() {
+    public Double getArrearFee() {
         return arrearFee;
     }
 
@@ -588,7 +588,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @param arrearFee
      */
-    public void setArrearFee(Number arrearFee) {
+    public void setArrearFee(Double arrearFee) {
         this.arrearFee = arrearFee;
     }
 
@@ -794,7 +794,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @param totalFee
      */
-    public BillSummary totalFee(Number totalFee) {
+    public BillSummary totalFee(Double totalFee) {
         this.totalFee = totalFee;
         return this;
     }
@@ -805,7 +805,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @param discountFee
      */
-    public BillSummary discountFee(Number discountFee) {
+    public BillSummary discountFee(Double discountFee) {
         this.discountFee = discountFee;
         return this;
     }
@@ -816,7 +816,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @param realTotalFee
      */
-    public BillSummary realTotalFee(Number realTotalFee) {
+    public BillSummary realTotalFee(Double realTotalFee) {
         this.realTotalFee = realTotalFee;
         return this;
     }
@@ -827,7 +827,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @param cashCouponPayFee
      */
-    public BillSummary cashCouponPayFee(Number cashCouponPayFee) {
+    public BillSummary cashCouponPayFee(Double cashCouponPayFee) {
         this.cashCouponPayFee = cashCouponPayFee;
         return this;
     }
@@ -838,7 +838,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @param balancePayFee
      */
-    public BillSummary balancePayFee(Number balancePayFee) {
+    public BillSummary balancePayFee(Double balancePayFee) {
         this.balancePayFee = balancePayFee;
         return this;
     }
@@ -849,7 +849,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @param cashPayFee
      */
-    public BillSummary cashPayFee(Number cashPayFee) {
+    public BillSummary cashPayFee(Double cashPayFee) {
         this.cashPayFee = cashPayFee;
         return this;
     }
@@ -860,7 +860,7 @@ public class BillSummary  implements java.io.Serializable {
      *
      * @param arrearFee
      */
-    public BillSummary arrearFee(Number arrearFee) {
+    public BillSummary arrearFee(Double arrearFee) {
         this.arrearFee = arrearFee;
         return this;
     }

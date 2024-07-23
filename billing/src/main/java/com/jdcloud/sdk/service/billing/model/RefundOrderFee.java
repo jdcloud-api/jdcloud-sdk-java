@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.billing.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * refundOrderFee
@@ -57,6 +59,11 @@ public class RefundOrderFee  implements java.io.Serializable {
      */
     private Double couponFee;
 
+    /**
+     * 退款代金券列表
+     */
+    
+    private List<RefundCoupon> couponList;
 
 
     /**
@@ -154,6 +161,25 @@ public class RefundOrderFee  implements java.io.Serializable {
     }
 
 
+    /**
+    * get 退款代金券列表
+    *
+    * @return
+    */
+    public List<RefundCoupon> getCouponList() {
+        return couponList;
+    }
+
+    /**
+    * set 退款代金券列表
+    *
+    * @param couponList
+    */
+    public void setCouponList(List<RefundCoupon> couponList) {
+        this.couponList = couponList;
+    }
+
+
 
     /**
      * set 订单编号
@@ -210,4 +236,27 @@ public class RefundOrderFee  implements java.io.Serializable {
     }
 
 
+    /**
+    * set 退款代金券列表
+    *
+    * @param couponList
+    */
+    public RefundOrderFee couponList(List<RefundCoupon> couponList) {
+        this.couponList = couponList;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 退款代金券列表
+     *
+     * @param couponList
+     */
+    public void addCouponList(RefundCoupon couponList) {
+        if (this.couponList == null) {
+            this.couponList = new ArrayList<>();
+        }
+        this.couponList.add(couponList);
+    }
 }

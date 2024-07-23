@@ -153,6 +153,11 @@ public class Bill  implements java.io.Serializable {
     private Number payCashCouponFee;
 
     /**
+     * 电汇金额，2位精度
+     */
+    private Number wire;
+
+    /**
      * 消费时间
      */
     private String consumeTime;
@@ -666,6 +671,25 @@ public class Bill  implements java.io.Serializable {
 
 
     /**
+     * get 电汇金额，2位精度
+     *
+     * @return
+     */
+    public Number getWire() {
+        return wire;
+    }
+
+    /**
+     * set 电汇金额，2位精度
+     *
+     * @param wire
+     */
+    public void setWire(Number wire) {
+        this.wire = wire;
+    }
+
+
+    /**
      * get 消费时间
      *
      * @return
@@ -1135,6 +1159,17 @@ public class Bill  implements java.io.Serializable {
      */
     public Bill payCashCouponFee(Number payCashCouponFee) {
         this.payCashCouponFee = payCashCouponFee;
+        return this;
+    }
+
+
+    /**
+     * set 电汇金额，2位精度
+     *
+     * @param wire
+     */
+    public Bill wire(Number wire) {
+        this.wire = wire;
         return this;
     }
 
