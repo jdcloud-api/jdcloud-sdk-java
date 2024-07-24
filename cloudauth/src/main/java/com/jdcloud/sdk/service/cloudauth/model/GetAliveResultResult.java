@@ -44,6 +44,11 @@ public class GetAliveResultResult extends JdcloudResult implements java.io.Seria
     private String sceneImage;
 
     /**
+     * 现场视频base64
+     */
+    private String video;
+
+    /**
      * H5活体检测结果
      */
     private String h5Result;
@@ -105,6 +110,25 @@ public class GetAliveResultResult extends JdcloudResult implements java.io.Seria
      */
     public void setSceneImage(String sceneImage) {
         this.sceneImage = sceneImage;
+    }
+
+
+    /**
+     * get 现场视频base64
+     *
+     * @return
+     */
+    public String getVideo() {
+        return video;
+    }
+
+    /**
+     * set 现场视频base64
+     *
+     * @param video
+     */
+    public void setVideo(String video) {
+        this.video = video;
     }
 
 
@@ -222,6 +246,17 @@ public class GetAliveResultResult extends JdcloudResult implements java.io.Seria
      */
     public GetAliveResultResult sceneImage(String sceneImage) {
         this.sceneImage = sceneImage;
+        return this;
+    }
+
+
+    /**
+     * set 现场视频base64
+     *
+     * @param video
+     */
+    public GetAliveResultResult video(String video) {
+        this.video = video;
         return this;
     }
 

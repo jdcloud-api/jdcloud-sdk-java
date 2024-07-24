@@ -51,6 +51,11 @@ public class GetAliveUrlNewRequest extends JdcloudRequest implements java.io.Ser
     @Required
     private String returnUrl;
 
+    /**
+     * 指定动作，逗号隔开。（LookLeft 向左，LookRight 向右，OpenMouth 张嘴，BlinkEye 眨眼，ShakeHead 摇头，NodHead 点头）
+     */
+    private String actions;
+
 
 
     /**
@@ -110,6 +115,25 @@ public class GetAliveUrlNewRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+    /**
+     * get 指定动作，逗号隔开。（LookLeft 向左，LookRight 向右，OpenMouth 张嘴，BlinkEye 眨眼，ShakeHead 摇头，NodHead 点头）
+     *
+     * @return
+     */
+    public String getActions() {
+        return actions;
+    }
+
+    /**
+     * set 指定动作，逗号隔开。（LookLeft 向左，LookRight 向右，OpenMouth 张嘴，BlinkEye 眨眼，ShakeHead 摇头，NodHead 点头）
+     *
+     * @param actions
+     */
+    public void setActions(String actions) {
+        this.actions = actions;
+    }
+
+
 
     /**
      * set 姓名（需要进行身份核验时传递此参数）
@@ -140,6 +164,17 @@ public class GetAliveUrlNewRequest extends JdcloudRequest implements java.io.Ser
      */
     public GetAliveUrlNewRequest returnUrl(String returnUrl) {
         this.returnUrl = returnUrl;
+        return this;
+    }
+
+
+    /**
+     * set 指定动作，逗号隔开。（LookLeft 向左，LookRight 向右，OpenMouth 张嘴，BlinkEye 眨眼，ShakeHead 摇头，NodHead 点头）
+     *
+     * @param actions
+     */
+    public GetAliveUrlNewRequest actions(String actions) {
+        this.actions = actions;
         return this;
     }
 
