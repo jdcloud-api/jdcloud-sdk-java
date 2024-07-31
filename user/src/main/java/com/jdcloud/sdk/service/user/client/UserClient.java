@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.user.model.CreateTicketRequest;
+import com.jdcloud.sdk.service.user.model.CreateTicketResponse;
+import com.jdcloud.sdk.service.user.client.CreateTicketExecutor;
 import com.jdcloud.sdk.service.user.model.DescribeUserRequest;
 import com.jdcloud.sdk.service.user.model.DescribeUserResponse;
 import com.jdcloud.sdk.service.user.client.DescribeUserExecutor;
@@ -42,7 +45,7 @@ public class UserClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.1";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "user.jdcloud-api.com";
     public final static String ServiceName = "user";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -83,6 +86,17 @@ public class UserClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * 创建免登录ticket
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateTicketResponse createTicket(CreateTicketRequest request) throws JdcloudSdkException {
+        return new CreateTicketExecutor().client(this).execute(request);
+    }
 
     /**
      * 查询用户信息

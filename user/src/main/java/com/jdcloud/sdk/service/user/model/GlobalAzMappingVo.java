@@ -47,6 +47,7 @@ public class GlobalAzMappingVo  implements java.io.Serializable {
     /**
      * Az Mapping
      */
+    
     private List<AzMappingVo> mapping;
 
 
@@ -68,6 +69,7 @@ public class GlobalAzMappingVo  implements java.io.Serializable {
         this.alias = alias;
     }
 
+
     /**
      * get 地域
      *
@@ -86,23 +88,25 @@ public class GlobalAzMappingVo  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
-     * get Az Mapping
-     *
-     * @return
-     */
+    * get Az Mapping
+    *
+    * @return
+    */
     public List<AzMappingVo> getMapping() {
         return mapping;
     }
 
     /**
-     * set Az Mapping
-     *
-     * @param mapping
-     */
+    * set Az Mapping
+    *
+    * @param mapping
+    */
     public void setMapping(List<AzMappingVo> mapping) {
         this.mapping = mapping;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class GlobalAzMappingVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 地域
      *
@@ -125,15 +130,17 @@ public class GlobalAzMappingVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set Az Mapping
-     *
-     * @param mapping
-     */
+    * set Az Mapping
+    *
+    * @param mapping
+    */
     public GlobalAzMappingVo mapping(List<AzMappingVo> mapping) {
         this.mapping = mapping;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class GlobalAzMappingVo  implements java.io.Serializable {
         }
         this.mapping.add(mapping);
     }
-
 }

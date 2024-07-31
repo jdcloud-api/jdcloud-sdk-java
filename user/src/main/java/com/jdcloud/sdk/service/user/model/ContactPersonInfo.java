@@ -78,6 +78,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
     private String modifiedTime;
 
 
+
     /**
      * get 联系人ID(联系人为所有者时，该字段为0)
      *
@@ -95,6 +96,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
 
     /**
      * get 联系人姓名
@@ -114,6 +116,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 邮箱
      *
@@ -131,6 +134,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     /**
      * get 手机号
@@ -150,6 +154,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
         this.mobile = mobile;
     }
 
+
     /**
      * get 用户邮箱验证状态
      *
@@ -167,6 +172,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
     public void setEmailVerified(Boolean emailVerified) {
         this.emailVerified = emailVerified;
     }
+
 
     /**
      * get 是否为主联系人
@@ -186,6 +192,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
         this.isPrimary = isPrimary;
     }
 
+
     /**
      * get 是否为账号所有者
      *
@@ -204,6 +211,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
         this.isOwner = isOwner;
     }
 
+
     /**
      * get 创建时间
      *
@@ -221,6 +229,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
+
 
     /**
      * get 修改时间
@@ -241,6 +250,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 联系人ID(联系人为所有者时，该字段为0)
      *
@@ -250,6 +260,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 联系人姓名
@@ -261,6 +272,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 邮箱
      *
@@ -270,6 +282,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
         this.email = email;
         return this;
     }
+
 
     /**
      * set 手机号
@@ -281,6 +294,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户邮箱验证状态
      *
@@ -290,6 +304,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
         this.emailVerified = emailVerified;
         return this;
     }
+
 
     /**
      * set 是否为主联系人
@@ -301,6 +316,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否为账号所有者
      *
@@ -311,6 +327,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -320,6 +337,7 @@ public class ContactPersonInfo  implements java.io.Serializable {
         this.createdTime = createdTime;
         return this;
     }
+
 
     /**
      * set 修改时间

@@ -63,6 +63,7 @@ public class ContactGroup  implements java.io.Serializable {
     private Integer yn;
 
 
+
     /**
      * get id
      *
@@ -80,6 +81,7 @@ public class ContactGroup  implements java.io.Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
 
     /**
      * get 用户pin(创建人)
@@ -99,6 +101,7 @@ public class ContactGroup  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 组名
      *
@@ -116,6 +119,7 @@ public class ContactGroup  implements java.io.Serializable {
     public void setGroupName(String groupName) {
         this.groupName = groupName;
     }
+
 
     /**
      * get 创建时间
@@ -135,6 +139,7 @@ public class ContactGroup  implements java.io.Serializable {
         this.created = created;
     }
 
+
     /**
      * get 修改时间
      *
@@ -152,6 +157,7 @@ public class ContactGroup  implements java.io.Serializable {
     public void setModified(String modified) {
         this.modified = modified;
     }
+
 
     /**
      * get 是否正常：0表示删除，1表示正常
@@ -172,6 +178,7 @@ public class ContactGroup  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -181,6 +188,7 @@ public class ContactGroup  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 用户pin(创建人)
@@ -192,6 +200,7 @@ public class ContactGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 组名
      *
@@ -201,6 +210,7 @@ public class ContactGroup  implements java.io.Serializable {
         this.groupName = groupName;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -212,6 +222,7 @@ public class ContactGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -221,6 +232,7 @@ public class ContactGroup  implements java.io.Serializable {
         this.modified = modified;
         return this;
     }
+
 
     /**
      * set 是否正常：0表示删除，1表示正常

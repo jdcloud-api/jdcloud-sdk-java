@@ -58,6 +58,7 @@ public class CredentialInfo  implements java.io.Serializable {
     private String rolePin;
 
 
+
     /**
      * get 临时身份凭证AK
      *
@@ -75,6 +76,7 @@ public class CredentialInfo  implements java.io.Serializable {
     public void setAccessKey(String accessKey) {
         this.accessKey = accessKey;
     }
+
 
     /**
      * get 临时身份凭证SK
@@ -94,6 +96,7 @@ public class CredentialInfo  implements java.io.Serializable {
         this.secretKey = secretKey;
     }
 
+
     /**
      * get 临时身份凭证令牌
      *
@@ -112,6 +115,7 @@ public class CredentialInfo  implements java.io.Serializable {
         this.sessionToken = sessionToken;
     }
 
+
     /**
      * get token失效时点（sdk内对token有效期做了校验，接入方不需要关注该字段）
      *
@@ -129,6 +133,7 @@ public class CredentialInfo  implements java.io.Serializable {
     public void setExpiration(String expiration) {
         this.expiration = expiration;
     }
+
 
     /**
      * get 角色所属主账号，产品线判断灰度使用（非内测公测产品线不用关注该字段）
@@ -149,6 +154,7 @@ public class CredentialInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 临时身份凭证AK
      *
@@ -158,6 +164,7 @@ public class CredentialInfo  implements java.io.Serializable {
         this.accessKey = accessKey;
         return this;
     }
+
 
     /**
      * set 临时身份凭证SK
@@ -169,6 +176,7 @@ public class CredentialInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 临时身份凭证令牌
      *
@@ -179,6 +187,7 @@ public class CredentialInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set token失效时点（sdk内对token有效期做了校验，接入方不需要关注该字段）
      *
@@ -188,6 +197,7 @@ public class CredentialInfo  implements java.io.Serializable {
         this.expiration = expiration;
         return this;
     }
+
 
     /**
      * set 角色所属主账号，产品线判断灰度使用（非内测公测产品线不用关注该字段）

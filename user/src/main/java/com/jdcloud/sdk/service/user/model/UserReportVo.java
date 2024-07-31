@@ -40,13 +40,19 @@ public class UserReportVo  implements java.io.Serializable {
     private String pin;
 
     /**
-     * 用户归属（集团-1、外部-2、云内部-3)
+     * 报备名称
+     */
+    private String reportName;
+
+    /**
+     * 用户归属（集团-1、外部-2、京东科技内部-3)
      */
     private String affiliation;
 
     /**
      * 报备为集团时，业务联系人erp
      */
+    
     private List<String> contacts;
 
 
@@ -68,8 +74,28 @@ public class UserReportVo  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
-     * get 用户归属（集团-1、外部-2、云内部-3)
+     * get 报备名称
+     *
+     * @return
+     */
+    public String getReportName() {
+        return reportName;
+    }
+
+    /**
+     * set 报备名称
+     *
+     * @param reportName
+     */
+    public void setReportName(String reportName) {
+        this.reportName = reportName;
+    }
+
+
+    /**
+     * get 用户归属（集团-1、外部-2、京东科技内部-3)
      *
      * @return
      */
@@ -78,7 +104,7 @@ public class UserReportVo  implements java.io.Serializable {
     }
 
     /**
-     * set 用户归属（集团-1、外部-2、云内部-3)
+     * set 用户归属（集团-1、外部-2、京东科技内部-3)
      *
      * @param affiliation
      */
@@ -86,23 +112,25 @@ public class UserReportVo  implements java.io.Serializable {
         this.affiliation = affiliation;
     }
 
+
     /**
-     * get 报备为集团时，业务联系人erp
-     *
-     * @return
-     */
+    * get 报备为集团时，业务联系人erp
+    *
+    * @return
+    */
     public List<String> getContacts() {
         return contacts;
     }
 
     /**
-     * set 报备为集团时，业务联系人erp
-     *
-     * @param contacts
-     */
+    * set 报备为集团时，业务联系人erp
+    *
+    * @param contacts
+    */
     public void setContacts(List<String> contacts) {
         this.contacts = contacts;
     }
+
 
 
     /**
@@ -115,8 +143,20 @@ public class UserReportVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 用户归属（集团-1、外部-2、云内部-3)
+     * set 报备名称
+     *
+     * @param reportName
+     */
+    public UserReportVo reportName(String reportName) {
+        this.reportName = reportName;
+        return this;
+    }
+
+
+    /**
+     * set 用户归属（集团-1、外部-2、京东科技内部-3)
      *
      * @param affiliation
      */
@@ -125,15 +165,17 @@ public class UserReportVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 报备为集团时，业务联系人erp
-     *
-     * @param contacts
-     */
+    * set 报备为集团时，业务联系人erp
+    *
+    * @param contacts
+    */
     public UserReportVo contacts(List<String> contacts) {
         this.contacts = contacts;
         return this;
     }
+
 
 
     /**
@@ -147,5 +189,4 @@ public class UserReportVo  implements java.io.Serializable {
         }
         this.contacts.add(contact);
     }
-
 }

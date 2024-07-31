@@ -53,6 +53,7 @@ public class UserSellerVo  implements java.io.Serializable {
     private String mobile;
 
 
+
     /**
      * get 销售员erp
      *
@@ -70,6 +71,7 @@ public class UserSellerVo  implements java.io.Serializable {
     public void setErp(String erp) {
         this.erp = erp;
     }
+
 
     /**
      * get 部门信息
@@ -89,6 +91,7 @@ public class UserSellerVo  implements java.io.Serializable {
         this.dept = dept;
     }
 
+
     /**
      * get 公司邮箱
      *
@@ -106,6 +109,7 @@ public class UserSellerVo  implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     /**
      * get 手机号
@@ -126,6 +130,7 @@ public class UserSellerVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 销售员erp
      *
@@ -135,6 +140,7 @@ public class UserSellerVo  implements java.io.Serializable {
         this.erp = erp;
         return this;
     }
+
 
     /**
      * set 部门信息
@@ -146,6 +152,7 @@ public class UserSellerVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 公司邮箱
      *
@@ -155,6 +162,7 @@ public class UserSellerVo  implements java.io.Serializable {
         this.email = email;
         return this;
     }
+
 
     /**
      * set 手机号

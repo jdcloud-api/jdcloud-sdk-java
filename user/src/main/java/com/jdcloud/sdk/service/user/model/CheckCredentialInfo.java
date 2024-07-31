@@ -40,37 +40,40 @@ public class CheckCredentialInfo  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<CookieInfo> cookies;
 
 
     /**
-     * get Cookie列表
-     *
-     * @return
-     */
+    * get Cookie列表
+    *
+    * @return
+    */
     public List<CookieInfo> getCookies() {
         return cookies;
     }
 
     /**
-     * set Cookie列表
-     *
-     * @param cookies
-     */
+    * set Cookie列表
+    *
+    * @param cookies
+    */
     public void setCookies(List<CookieInfo> cookies) {
         this.cookies = cookies;
     }
 
 
+
     /**
-     * set Cookie列表
-     *
-     * @param cookies
-     */
+    * set Cookie列表
+    *
+    * @param cookies
+    */
     public CheckCredentialInfo cookies(List<CookieInfo> cookies) {
         this.cookies = cookies;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class CheckCredentialInfo  implements java.io.Serializable {
         }
         this.cookies.add(cookie);
     }
-
 }

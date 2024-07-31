@@ -58,6 +58,7 @@ public class OrganizationInfo  implements java.io.Serializable {
     private String organizationLevel;
 
 
+
     /**
      * get 组织机构编码
      *
@@ -75,6 +76,7 @@ public class OrganizationInfo  implements java.io.Serializable {
     public void setOrganizationCode(String organizationCode) {
         this.organizationCode = organizationCode;
     }
+
 
     /**
      * get 组织机构名称
@@ -94,6 +96,7 @@ public class OrganizationInfo  implements java.io.Serializable {
         this.organizationName = organizationName;
     }
 
+
     /**
      * get 组织机构全路径
      *
@@ -112,6 +115,7 @@ public class OrganizationInfo  implements java.io.Serializable {
         this.organizationFullPath = organizationFullPath;
     }
 
+
     /**
      * get 组织机构全名
      *
@@ -129,6 +133,7 @@ public class OrganizationInfo  implements java.io.Serializable {
     public void setOrganizationFullname(String organizationFullname) {
         this.organizationFullname = organizationFullname;
     }
+
 
     /**
      * get 组织机构级别
@@ -149,6 +154,7 @@ public class OrganizationInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 组织机构编码
      *
@@ -158,6 +164,7 @@ public class OrganizationInfo  implements java.io.Serializable {
         this.organizationCode = organizationCode;
         return this;
     }
+
 
     /**
      * set 组织机构名称
@@ -169,6 +176,7 @@ public class OrganizationInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 组织机构全路径
      *
@@ -179,6 +187,7 @@ public class OrganizationInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 组织机构全名
      *
@@ -188,6 +197,7 @@ public class OrganizationInfo  implements java.io.Serializable {
         this.organizationFullname = organizationFullname;
         return this;
     }
+
 
     /**
      * set 组织机构级别
