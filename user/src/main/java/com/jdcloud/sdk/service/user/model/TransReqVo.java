@@ -63,6 +63,7 @@ public class TransReqVo  implements java.io.Serializable {
     private String signature;
 
 
+
     /**
      * get 离职人erp
      *
@@ -80,6 +81,7 @@ public class TransReqVo  implements java.io.Serializable {
     public void setSourceErp(String sourceErp) {
         this.sourceErp = sourceErp;
     }
+
 
     /**
      * get 接收人erp
@@ -99,6 +101,7 @@ public class TransReqVo  implements java.io.Serializable {
         this.targetErp = targetErp;
     }
 
+
     /**
      * get 交接项id
      *
@@ -116,6 +119,7 @@ public class TransReqVo  implements java.io.Serializable {
     public void setItemId(String itemId) {
         this.itemId = itemId;
     }
+
 
     /**
      * get 交接项名称，如果交接项ID为空则交接项名称必须确保唯⼀
@@ -135,6 +139,7 @@ public class TransReqVo  implements java.io.Serializable {
         this.itemName = itemName;
     }
 
+
     /**
      * get 时间戳，请求时间与系统时间不得超过10分钟，否则返回403
      *
@@ -152,6 +157,7 @@ public class TransReqVo  implements java.io.Serializable {
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
+
 
     /**
      * get 鉴权签名，md5加密（32位小写）
@@ -172,6 +178,7 @@ public class TransReqVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 离职人erp
      *
@@ -181,6 +188,7 @@ public class TransReqVo  implements java.io.Serializable {
         this.sourceErp = sourceErp;
         return this;
     }
+
 
     /**
      * set 接收人erp
@@ -192,6 +200,7 @@ public class TransReqVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 交接项id
      *
@@ -201,6 +210,7 @@ public class TransReqVo  implements java.io.Serializable {
         this.itemId = itemId;
         return this;
     }
+
 
     /**
      * set 交接项名称，如果交接项ID为空则交接项名称必须确保唯⼀
@@ -212,6 +222,7 @@ public class TransReqVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 时间戳，请求时间与系统时间不得超过10分钟，否则返回403
      *
@@ -221,6 +232,7 @@ public class TransReqVo  implements java.io.Serializable {
         this.timestamp = timestamp;
         return this;
     }
+
 
     /**
      * set 鉴权签名，md5加密（32位小写）

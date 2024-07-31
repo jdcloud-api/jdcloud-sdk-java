@@ -63,6 +63,7 @@ public class LoginInfo  implements java.io.Serializable {
     private String loginName;
 
 
+
     /**
      * get 身份类型： 1-主账号；2-子账号；3-角色；0-无(用户未登陆)
      *
@@ -80,6 +81,7 @@ public class LoginInfo  implements java.io.Serializable {
     public void setLoginType(Integer loginType) {
         this.loginType = loginType;
     }
+
 
     /**
      * get 当前登录用户（type&#x3D;1 或2时，此字段生效）
@@ -99,6 +101,7 @@ public class LoginInfo  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 当前登录用户的主账号（type&#x3D;2时，此字段生效）
      *
@@ -116,6 +119,7 @@ public class LoginInfo  implements java.io.Serializable {
     public void setAdminPin(String adminPin) {
         this.adminPin = adminPin;
     }
+
 
     /**
      * get 角色身份信息(type&#x3D;3时，此字段生效)
@@ -135,6 +139,7 @@ public class LoginInfo  implements java.io.Serializable {
         this.credentialInfo = credentialInfo;
     }
 
+
     /**
      * get 产品线跳转的url（type&#x3D;0时，此字段生效）
      *
@@ -152,6 +157,7 @@ public class LoginInfo  implements java.io.Serializable {
     public void setLoginUrl(String loginUrl) {
         this.loginUrl = loginUrl;
     }
+
 
     /**
      * get 主账号登录名（type&#x3D;1，此字段不为空）
@@ -172,6 +178,7 @@ public class LoginInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 身份类型： 1-主账号；2-子账号；3-角色；0-无(用户未登陆)
      *
@@ -181,6 +188,7 @@ public class LoginInfo  implements java.io.Serializable {
         this.loginType = loginType;
         return this;
     }
+
 
     /**
      * set 当前登录用户（type&#x3D;1 或2时，此字段生效）
@@ -192,6 +200,7 @@ public class LoginInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 当前登录用户的主账号（type&#x3D;2时，此字段生效）
      *
@@ -201,6 +210,7 @@ public class LoginInfo  implements java.io.Serializable {
         this.adminPin = adminPin;
         return this;
     }
+
 
     /**
      * set 角色身份信息(type&#x3D;3时，此字段生效)
@@ -212,6 +222,7 @@ public class LoginInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品线跳转的url（type&#x3D;0时，此字段生效）
      *
@@ -221,6 +232,7 @@ public class LoginInfo  implements java.io.Serializable {
         this.loginUrl = loginUrl;
         return this;
     }
+
 
     /**
      * set 主账号登录名（type&#x3D;1，此字段不为空）

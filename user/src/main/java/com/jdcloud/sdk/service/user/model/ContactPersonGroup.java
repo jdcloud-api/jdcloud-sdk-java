@@ -73,6 +73,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
     private Integer isSelf;
 
 
+
     /**
      * get id
      *
@@ -90,6 +91,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
 
     /**
      * get 用户pin(创建人)
@@ -109,6 +111,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 用户id
      *
@@ -126,6 +129,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
     public void setPersonId(Long personId) {
         this.personId = personId;
     }
+
 
     /**
      * get 联系人组id
@@ -145,6 +149,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
         this.groupId = groupId;
     }
 
+
     /**
      * get 创建时间
      *
@@ -162,6 +167,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
     public void setCreated(String created) {
         this.created = created;
     }
+
 
     /**
      * get 修改时间
@@ -181,6 +187,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
         this.modified = modified;
     }
 
+
     /**
      * get 是否正常：0表示删除，1表示正常
      *
@@ -198,6 +205,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
     public void setYn(Integer yn) {
         this.yn = yn;
     }
+
 
     /**
      * get 1:账号联系人;2:非账号联系人
@@ -218,6 +226,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -227,6 +236,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 用户pin(创建人)
@@ -238,6 +248,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户id
      *
@@ -247,6 +258,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
         this.personId = personId;
         return this;
     }
+
 
     /**
      * set 联系人组id
@@ -258,6 +270,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -267,6 +280,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
         this.created = created;
         return this;
     }
+
 
     /**
      * set 修改时间
@@ -278,6 +292,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否正常：0表示删除，1表示正常
      *
@@ -287,6 +302,7 @@ public class ContactPersonGroup  implements java.io.Serializable {
         this.yn = yn;
         return this;
     }
+
 
     /**
      * set 1:账号联系人;2:非账号联系人

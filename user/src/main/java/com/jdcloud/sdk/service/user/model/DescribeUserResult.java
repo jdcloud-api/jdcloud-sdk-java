@@ -54,6 +54,7 @@ public class DescribeUserResult extends JdcloudResult implements java.io.Seriali
     private Integer userAuth;
 
 
+
     /**
      * get 用户Pin
      *
@@ -71,6 +72,7 @@ public class DescribeUserResult extends JdcloudResult implements java.io.Seriali
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 登录名
@@ -90,6 +92,7 @@ public class DescribeUserResult extends JdcloudResult implements java.io.Seriali
         this.loginName = loginName;
     }
 
+
     /**
      * get 用户唯一id
      *
@@ -107,6 +110,7 @@ public class DescribeUserResult extends JdcloudResult implements java.io.Seriali
     public void setAccountId(String accountId) {
         this.accountId = accountId;
     }
+
 
     /**
      * get 实名认证状态:0-未认证 1-已认证（个人） 2-已认证（企业） 3-已认证（个人和企业）
@@ -127,6 +131,7 @@ public class DescribeUserResult extends JdcloudResult implements java.io.Seriali
     }
 
 
+
     /**
      * set 用户Pin
      *
@@ -136,6 +141,7 @@ public class DescribeUserResult extends JdcloudResult implements java.io.Seriali
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 登录名
@@ -147,6 +153,7 @@ public class DescribeUserResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 用户唯一id
      *
@@ -156,6 +163,7 @@ public class DescribeUserResult extends JdcloudResult implements java.io.Seriali
         this.accountId = accountId;
         return this;
     }
+
 
     /**
      * set 实名认证状态:0-未认证 1-已认证（个人） 2-已认证（企业） 3-已认证（个人和企业）

@@ -33,7 +33,7 @@ public class UserReportProperty  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用户归属（集团-1、外部-2、云内部-3)
+     * 用户归属（集团-1、外部-2、京东科技内部-3)
      */
     private String affiliation;
 
@@ -63,7 +63,12 @@ public class UserReportProperty  implements java.io.Serializable {
     private Integer businessLineIndex;
 
     /**
-     * 用户分组(自然流量-1、内部测试-2、内部重点-3、渠道用户-4、合作伙伴-5、直接用户-6、ISV-7、内部高级-8、代理用户-9、服务商-10、集采大客户-11、京东云Lab-12、汇桔网-21)
+     * 业务线三级部门
+     */
+    private String subBusinessLine;
+
+    /**
+     * 用户分组(自然流量-1、内部测试-2、内部重点-3、渠道分销-4、合作伙伴-5、直接用户-6、ISV-7、内部高级-8、渠道代理-9、服务商-10、集采大客户-11、京东云Lab-12、汇桔网-21)
      */
     private String userGroup;
 
@@ -87,9 +92,75 @@ public class UserReportProperty  implements java.io.Serializable {
      */
     private String deptName;
 
+    /**
+     * 客户级别
+     */
+    private String clientType;
 
     /**
-     * get 用户归属（集团-1、外部-2、云内部-3)
+     * 客户级别索引
+     */
+    private Integer clientIndex;
+
+    /**
+     * 是否白名单
+     */
+    private Boolean whiteList;
+
+    /**
+     * 报备名称
+     */
+    private String reportName;
+
+    /**
+     * 是否允许IAM用户自定义创建子用户：1-允许 0-不允许
+     */
+    private Integer selfDefinitionForIAMUser;
+
+    /**
+     * 集团费用部门编码
+     */
+    private String costDepartmentCode;
+
+    /**
+     * 集团费用部门名称
+     */
+    private String costDepartmentName;
+
+    /**
+     * 财务计收归属：（集团-1、外部-2、云内部-3）
+     */
+    private Integer accountAffiliation;
+
+    /**
+     * 财务计收归属子属性
+     */
+    private String accountAffiliationCode;
+
+    /**
+     * pin
+     */
+    private String pin;
+
+    /**
+     * 账号名
+     */
+    private String loginName;
+
+    /**
+     * 报备状态0未报备，1已报备
+     */
+    private Integer status;
+
+    /**
+     * 销售erp
+     */
+    private String sellerErp;
+
+
+
+    /**
+     * get 用户归属（集团-1、外部-2、京东科技内部-3)
      *
      * @return
      */
@@ -98,13 +169,14 @@ public class UserReportProperty  implements java.io.Serializable {
     }
 
     /**
-     * set 用户归属（集团-1、外部-2、云内部-3)
+     * set 用户归属（集团-1、外部-2、京东科技内部-3)
      *
      * @param affiliation
      */
     public void setAffiliation(String affiliation) {
         this.affiliation = affiliation;
     }
+
 
     /**
      * get 用户归属索引
@@ -124,6 +196,7 @@ public class UserReportProperty  implements java.io.Serializable {
         this.affiliationIndex = affiliationIndex;
     }
 
+
     /**
      * get 集团归属（自用上云-1、赋能上云-2、回家上云-3、其他-4)
      *
@@ -141,6 +214,7 @@ public class UserReportProperty  implements java.io.Serializable {
     public void setEnterpriseAffiliation(String enterpriseAffiliation) {
         this.enterpriseAffiliation = enterpriseAffiliation;
     }
+
 
     /**
      * get 集团归属索引
@@ -160,6 +234,7 @@ public class UserReportProperty  implements java.io.Serializable {
         this.enterpriseAffiliationIndex = enterpriseAffiliationIndex;
     }
 
+
     /**
      * get 业务线（企业云业务部-1、公共业务部-2、生态业务部-3、产品研发部-4、大市场部-5、基础研发部-6、客户成功部-7、投资与运营部-8、应用研发部-9、空值-0）
      *
@@ -177,6 +252,7 @@ public class UserReportProperty  implements java.io.Serializable {
     public void setBusinessLine(String businessLine) {
         this.businessLine = businessLine;
     }
+
 
     /**
      * get 业务线索引
@@ -196,8 +272,28 @@ public class UserReportProperty  implements java.io.Serializable {
         this.businessLineIndex = businessLineIndex;
     }
 
+
     /**
-     * get 用户分组(自然流量-1、内部测试-2、内部重点-3、渠道用户-4、合作伙伴-5、直接用户-6、ISV-7、内部高级-8、代理用户-9、服务商-10、集采大客户-11、京东云Lab-12、汇桔网-21)
+     * get 业务线三级部门
+     *
+     * @return
+     */
+    public String getSubBusinessLine() {
+        return subBusinessLine;
+    }
+
+    /**
+     * set 业务线三级部门
+     *
+     * @param subBusinessLine
+     */
+    public void setSubBusinessLine(String subBusinessLine) {
+        this.subBusinessLine = subBusinessLine;
+    }
+
+
+    /**
+     * get 用户分组(自然流量-1、内部测试-2、内部重点-3、渠道分销-4、合作伙伴-5、直接用户-6、ISV-7、内部高级-8、渠道代理-9、服务商-10、集采大客户-11、京东云Lab-12、汇桔网-21)
      *
      * @return
      */
@@ -206,13 +302,14 @@ public class UserReportProperty  implements java.io.Serializable {
     }
 
     /**
-     * set 用户分组(自然流量-1、内部测试-2、内部重点-3、渠道用户-4、合作伙伴-5、直接用户-6、ISV-7、内部高级-8、代理用户-9、服务商-10、集采大客户-11、京东云Lab-12、汇桔网-21)
+     * set 用户分组(自然流量-1、内部测试-2、内部重点-3、渠道分销-4、合作伙伴-5、直接用户-6、ISV-7、内部高级-8、渠道代理-9、服务商-10、集采大客户-11、京东云Lab-12、汇桔网-21)
      *
      * @param userGroup
      */
     public void setUserGroup(String userGroup) {
         this.userGroup = userGroup;
     }
+
 
     /**
      * get 用户分组索引
@@ -232,6 +329,7 @@ public class UserReportProperty  implements java.io.Serializable {
         this.userGroupIndex = userGroupIndex;
     }
 
+
     /**
      * get 当用户分组为服务商时，增加用户分组备注
      *
@@ -250,6 +348,7 @@ public class UserReportProperty  implements java.io.Serializable {
         this.serviceType = serviceType;
     }
 
+
     /**
      * get 归属为集团，事业部编码
      *
@@ -267,6 +366,7 @@ public class UserReportProperty  implements java.io.Serializable {
     public void setDeptCode(String deptCode) {
         this.deptCode = deptCode;
     }
+
 
     /**
      * get 归属为集团，事业部名称
@@ -288,7 +388,255 @@ public class UserReportProperty  implements java.io.Serializable {
 
 
     /**
-     * set 用户归属（集团-1、外部-2、云内部-3)
+     * get 客户级别
+     *
+     * @return
+     */
+    public String getClientType() {
+        return clientType;
+    }
+
+    /**
+     * set 客户级别
+     *
+     * @param clientType
+     */
+    public void setClientType(String clientType) {
+        this.clientType = clientType;
+    }
+
+
+    /**
+     * get 客户级别索引
+     *
+     * @return
+     */
+    public Integer getClientIndex() {
+        return clientIndex;
+    }
+
+    /**
+     * set 客户级别索引
+     *
+     * @param clientIndex
+     */
+    public void setClientIndex(Integer clientIndex) {
+        this.clientIndex = clientIndex;
+    }
+
+
+    /**
+     * get 是否白名单
+     *
+     * @return
+     */
+    public Boolean getWhiteList() {
+        return whiteList;
+    }
+
+    /**
+     * set 是否白名单
+     *
+     * @param whiteList
+     */
+    public void setWhiteList(Boolean whiteList) {
+        this.whiteList = whiteList;
+    }
+
+
+    /**
+     * get 报备名称
+     *
+     * @return
+     */
+    public String getReportName() {
+        return reportName;
+    }
+
+    /**
+     * set 报备名称
+     *
+     * @param reportName
+     */
+    public void setReportName(String reportName) {
+        this.reportName = reportName;
+    }
+
+
+    /**
+     * get 是否允许IAM用户自定义创建子用户：1-允许 0-不允许
+     *
+     * @return
+     */
+    public Integer getSelfDefinitionForIAMUser() {
+        return selfDefinitionForIAMUser;
+    }
+
+    /**
+     * set 是否允许IAM用户自定义创建子用户：1-允许 0-不允许
+     *
+     * @param selfDefinitionForIAMUser
+     */
+    public void setSelfDefinitionForIAMUser(Integer selfDefinitionForIAMUser) {
+        this.selfDefinitionForIAMUser = selfDefinitionForIAMUser;
+    }
+
+
+    /**
+     * get 集团费用部门编码
+     *
+     * @return
+     */
+    public String getCostDepartmentCode() {
+        return costDepartmentCode;
+    }
+
+    /**
+     * set 集团费用部门编码
+     *
+     * @param costDepartmentCode
+     */
+    public void setCostDepartmentCode(String costDepartmentCode) {
+        this.costDepartmentCode = costDepartmentCode;
+    }
+
+
+    /**
+     * get 集团费用部门名称
+     *
+     * @return
+     */
+    public String getCostDepartmentName() {
+        return costDepartmentName;
+    }
+
+    /**
+     * set 集团费用部门名称
+     *
+     * @param costDepartmentName
+     */
+    public void setCostDepartmentName(String costDepartmentName) {
+        this.costDepartmentName = costDepartmentName;
+    }
+
+
+    /**
+     * get 财务计收归属：（集团-1、外部-2、云内部-3）
+     *
+     * @return
+     */
+    public Integer getAccountAffiliation() {
+        return accountAffiliation;
+    }
+
+    /**
+     * set 财务计收归属：（集团-1、外部-2、云内部-3）
+     *
+     * @param accountAffiliation
+     */
+    public void setAccountAffiliation(Integer accountAffiliation) {
+        this.accountAffiliation = accountAffiliation;
+    }
+
+
+    /**
+     * get 财务计收归属子属性
+     *
+     * @return
+     */
+    public String getAccountAffiliationCode() {
+        return accountAffiliationCode;
+    }
+
+    /**
+     * set 财务计收归属子属性
+     *
+     * @param accountAffiliationCode
+     */
+    public void setAccountAffiliationCode(String accountAffiliationCode) {
+        this.accountAffiliationCode = accountAffiliationCode;
+    }
+
+
+    /**
+     * get pin
+     *
+     * @return
+     */
+    public String getPin() {
+        return pin;
+    }
+
+    /**
+     * set pin
+     *
+     * @param pin
+     */
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
+
+
+    /**
+     * get 账号名
+     *
+     * @return
+     */
+    public String getLoginName() {
+        return loginName;
+    }
+
+    /**
+     * set 账号名
+     *
+     * @param loginName
+     */
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
+    }
+
+
+    /**
+     * get 报备状态0未报备，1已报备
+     *
+     * @return
+     */
+    public Integer getStatus() {
+        return status;
+    }
+
+    /**
+     * set 报备状态0未报备，1已报备
+     *
+     * @param status
+     */
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+
+    /**
+     * get 销售erp
+     *
+     * @return
+     */
+    public String getSellerErp() {
+        return sellerErp;
+    }
+
+    /**
+     * set 销售erp
+     *
+     * @param sellerErp
+     */
+    public void setSellerErp(String sellerErp) {
+        this.sellerErp = sellerErp;
+    }
+
+
+
+    /**
+     * set 用户归属（集团-1、外部-2、京东科技内部-3)
      *
      * @param affiliation
      */
@@ -296,6 +644,7 @@ public class UserReportProperty  implements java.io.Serializable {
         this.affiliation = affiliation;
         return this;
     }
+
 
     /**
      * set 用户归属索引
@@ -307,6 +656,7 @@ public class UserReportProperty  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 集团归属（自用上云-1、赋能上云-2、回家上云-3、其他-4)
      *
@@ -316,6 +666,7 @@ public class UserReportProperty  implements java.io.Serializable {
         this.enterpriseAffiliation = enterpriseAffiliation;
         return this;
     }
+
 
     /**
      * set 集团归属索引
@@ -327,6 +678,7 @@ public class UserReportProperty  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务线（企业云业务部-1、公共业务部-2、生态业务部-3、产品研发部-4、大市场部-5、基础研发部-6、客户成功部-7、投资与运营部-8、应用研发部-9、空值-0）
      *
@@ -336,6 +688,7 @@ public class UserReportProperty  implements java.io.Serializable {
         this.businessLine = businessLine;
         return this;
     }
+
 
     /**
      * set 业务线索引
@@ -347,8 +700,20 @@ public class UserReportProperty  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 用户分组(自然流量-1、内部测试-2、内部重点-3、渠道用户-4、合作伙伴-5、直接用户-6、ISV-7、内部高级-8、代理用户-9、服务商-10、集采大客户-11、京东云Lab-12、汇桔网-21)
+     * set 业务线三级部门
+     *
+     * @param subBusinessLine
+     */
+    public UserReportProperty subBusinessLine(String subBusinessLine) {
+        this.subBusinessLine = subBusinessLine;
+        return this;
+    }
+
+
+    /**
+     * set 用户分组(自然流量-1、内部测试-2、内部重点-3、渠道分销-4、合作伙伴-5、直接用户-6、ISV-7、内部高级-8、渠道代理-9、服务商-10、集采大客户-11、京东云Lab-12、汇桔网-21)
      *
      * @param userGroup
      */
@@ -356,6 +721,7 @@ public class UserReportProperty  implements java.io.Serializable {
         this.userGroup = userGroup;
         return this;
     }
+
 
     /**
      * set 用户分组索引
@@ -367,6 +733,7 @@ public class UserReportProperty  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 当用户分组为服务商时，增加用户分组备注
      *
@@ -376,6 +743,7 @@ public class UserReportProperty  implements java.io.Serializable {
         this.serviceType = serviceType;
         return this;
     }
+
 
     /**
      * set 归属为集团，事业部编码
@@ -387,6 +755,7 @@ public class UserReportProperty  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 归属为集团，事业部名称
      *
@@ -394,6 +763,149 @@ public class UserReportProperty  implements java.io.Serializable {
      */
     public UserReportProperty deptName(String deptName) {
         this.deptName = deptName;
+        return this;
+    }
+
+
+    /**
+     * set 客户级别
+     *
+     * @param clientType
+     */
+    public UserReportProperty clientType(String clientType) {
+        this.clientType = clientType;
+        return this;
+    }
+
+
+    /**
+     * set 客户级别索引
+     *
+     * @param clientIndex
+     */
+    public UserReportProperty clientIndex(Integer clientIndex) {
+        this.clientIndex = clientIndex;
+        return this;
+    }
+
+
+    /**
+     * set 是否白名单
+     *
+     * @param whiteList
+     */
+    public UserReportProperty whiteList(Boolean whiteList) {
+        this.whiteList = whiteList;
+        return this;
+    }
+
+
+    /**
+     * set 报备名称
+     *
+     * @param reportName
+     */
+    public UserReportProperty reportName(String reportName) {
+        this.reportName = reportName;
+        return this;
+    }
+
+
+    /**
+     * set 是否允许IAM用户自定义创建子用户：1-允许 0-不允许
+     *
+     * @param selfDefinitionForIAMUser
+     */
+    public UserReportProperty selfDefinitionForIAMUser(Integer selfDefinitionForIAMUser) {
+        this.selfDefinitionForIAMUser = selfDefinitionForIAMUser;
+        return this;
+    }
+
+
+    /**
+     * set 集团费用部门编码
+     *
+     * @param costDepartmentCode
+     */
+    public UserReportProperty costDepartmentCode(String costDepartmentCode) {
+        this.costDepartmentCode = costDepartmentCode;
+        return this;
+    }
+
+
+    /**
+     * set 集团费用部门名称
+     *
+     * @param costDepartmentName
+     */
+    public UserReportProperty costDepartmentName(String costDepartmentName) {
+        this.costDepartmentName = costDepartmentName;
+        return this;
+    }
+
+
+    /**
+     * set 财务计收归属：（集团-1、外部-2、云内部-3）
+     *
+     * @param accountAffiliation
+     */
+    public UserReportProperty accountAffiliation(Integer accountAffiliation) {
+        this.accountAffiliation = accountAffiliation;
+        return this;
+    }
+
+
+    /**
+     * set 财务计收归属子属性
+     *
+     * @param accountAffiliationCode
+     */
+    public UserReportProperty accountAffiliationCode(String accountAffiliationCode) {
+        this.accountAffiliationCode = accountAffiliationCode;
+        return this;
+    }
+
+
+    /**
+     * set pin
+     *
+     * @param pin
+     */
+    public UserReportProperty pin(String pin) {
+        this.pin = pin;
+        return this;
+    }
+
+
+    /**
+     * set 账号名
+     *
+     * @param loginName
+     */
+    public UserReportProperty loginName(String loginName) {
+        this.loginName = loginName;
+        return this;
+    }
+
+
+    /**
+     * set 报备状态0未报备，1已报备
+     *
+     * @param status
+     */
+    public UserReportProperty status(Integer status) {
+        this.status = status;
+        return this;
+    }
+
+
+    /**
+     * set 销售erp
+     *
+     * @param sellerErp
+     */
+    public UserReportProperty sellerErp(String sellerErp) {
+        this.sellerErp = sellerErp;
         return this;
     }
 

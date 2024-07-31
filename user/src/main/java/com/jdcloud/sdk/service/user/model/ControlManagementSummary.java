@@ -68,6 +68,7 @@ public class ControlManagementSummary  implements java.io.Serializable {
     private String subUserLoginUrl;
 
 
+
     /**
      * get 子用户个数
      *
@@ -85,6 +86,7 @@ public class ControlManagementSummary  implements java.io.Serializable {
     public void setSubUserCount(Integer subUserCount) {
         this.subUserCount = subUserCount;
     }
+
 
     /**
      * get 组个数
@@ -104,6 +106,7 @@ public class ControlManagementSummary  implements java.io.Serializable {
         this.groupCount = groupCount;
     }
 
+
     /**
      * get 自定义权限个数
      *
@@ -121,6 +124,7 @@ public class ControlManagementSummary  implements java.io.Serializable {
     public void setPolicyCount(Integer policyCount) {
         this.policyCount = policyCount;
     }
+
 
     /**
      * get 角色个数
@@ -140,6 +144,7 @@ public class ControlManagementSummary  implements java.io.Serializable {
         this.roleCount = roleCount;
     }
 
+
     /**
      * get 身份提供商个数
      *
@@ -158,6 +163,7 @@ public class ControlManagementSummary  implements java.io.Serializable {
         this.idPCount = idPCount;
     }
 
+
     /**
      * get 角色个数
      *
@@ -175,6 +181,7 @@ public class ControlManagementSummary  implements java.io.Serializable {
     public void setOrgLoginUrl(String orgLoginUrl) {
         this.orgLoginUrl = orgLoginUrl;
     }
+
 
     /**
      * get 子账号登录链接
@@ -195,6 +202,7 @@ public class ControlManagementSummary  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 子用户个数
      *
@@ -204,6 +212,7 @@ public class ControlManagementSummary  implements java.io.Serializable {
         this.subUserCount = subUserCount;
         return this;
     }
+
 
     /**
      * set 组个数
@@ -215,6 +224,7 @@ public class ControlManagementSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自定义权限个数
      *
@@ -224,6 +234,7 @@ public class ControlManagementSummary  implements java.io.Serializable {
         this.policyCount = policyCount;
         return this;
     }
+
 
     /**
      * set 角色个数
@@ -235,6 +246,7 @@ public class ControlManagementSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 身份提供商个数
      *
@@ -245,6 +257,7 @@ public class ControlManagementSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 角色个数
      *
@@ -254,6 +267,7 @@ public class ControlManagementSummary  implements java.io.Serializable {
         this.orgLoginUrl = orgLoginUrl;
         return this;
     }
+
 
     /**
      * set 子账号登录链接

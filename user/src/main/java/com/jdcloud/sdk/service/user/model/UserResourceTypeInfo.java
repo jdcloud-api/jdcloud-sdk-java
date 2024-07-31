@@ -42,6 +42,17 @@ public class UserResourceTypeInfo  implements java.io.Serializable {
      */
     private String name;
 
+    /**
+     * 用户网络专区属性code
+     */
+    private String networkZoneCode;
+
+    /**
+     * 用户网络专区属性name
+     */
+    private String networkZoneName;
+
+
 
     /**
      * get 用户资源池类型code
@@ -60,6 +71,7 @@ public class UserResourceTypeInfo  implements java.io.Serializable {
     public void setCode(String code) {
         this.code = code;
     }
+
 
     /**
      * get 用户资源池类型name
@@ -81,6 +93,45 @@ public class UserResourceTypeInfo  implements java.io.Serializable {
 
 
     /**
+     * get 用户网络专区属性code
+     *
+     * @return
+     */
+    public String getNetworkZoneCode() {
+        return networkZoneCode;
+    }
+
+    /**
+     * set 用户网络专区属性code
+     *
+     * @param networkZoneCode
+     */
+    public void setNetworkZoneCode(String networkZoneCode) {
+        this.networkZoneCode = networkZoneCode;
+    }
+
+
+    /**
+     * get 用户网络专区属性name
+     *
+     * @return
+     */
+    public String getNetworkZoneName() {
+        return networkZoneName;
+    }
+
+    /**
+     * set 用户网络专区属性name
+     *
+     * @param networkZoneName
+     */
+    public void setNetworkZoneName(String networkZoneName) {
+        this.networkZoneName = networkZoneName;
+    }
+
+
+
+    /**
      * set 用户资源池类型code
      *
      * @param code
@@ -90,6 +141,7 @@ public class UserResourceTypeInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户资源池类型name
      *
@@ -97,6 +149,28 @@ public class UserResourceTypeInfo  implements java.io.Serializable {
      */
     public UserResourceTypeInfo name(String name) {
         this.name = name;
+        return this;
+    }
+
+
+    /**
+     * set 用户网络专区属性code
+     *
+     * @param networkZoneCode
+     */
+    public UserResourceTypeInfo networkZoneCode(String networkZoneCode) {
+        this.networkZoneCode = networkZoneCode;
+        return this;
+    }
+
+
+    /**
+     * set 用户网络专区属性name
+     *
+     * @param networkZoneName
+     */
+    public UserResourceTypeInfo networkZoneName(String networkZoneName) {
+        this.networkZoneName = networkZoneName;
         return this;
     }
 

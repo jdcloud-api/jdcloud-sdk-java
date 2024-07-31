@@ -48,6 +48,7 @@ public class SensitiveInfo  implements java.io.Serializable {
     private String email;
 
 
+
     /**
      * get 用户pin
      *
@@ -66,6 +67,7 @@ public class SensitiveInfo  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 手机号
      *
@@ -83,6 +85,7 @@ public class SensitiveInfo  implements java.io.Serializable {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
 
     /**
      * get 邮箱
@@ -103,6 +106,7 @@ public class SensitiveInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户pin
      *
@@ -113,6 +117,7 @@ public class SensitiveInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 手机号
      *
@@ -122,6 +127,7 @@ public class SensitiveInfo  implements java.io.Serializable {
         this.phone = phone;
         return this;
     }
+
 
     /**
      * set 邮箱

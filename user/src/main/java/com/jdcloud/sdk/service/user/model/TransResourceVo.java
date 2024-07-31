@@ -58,6 +58,7 @@ public class TransResourceVo  implements java.io.Serializable {
     private String addition;
 
 
+
     /**
      * get 接入系统名称标识
      *
@@ -75,6 +76,7 @@ public class TransResourceVo  implements java.io.Serializable {
     public void setSystemName(String systemName) {
         this.systemName = systemName;
     }
+
 
     /**
      * get 交接项id
@@ -94,6 +96,7 @@ public class TransResourceVo  implements java.io.Serializable {
         this.itemId = itemId;
     }
 
+
     /**
      * get 交接项名称，如果交接项ID为空则交接项名称必须确保唯⼀
      *
@@ -112,6 +115,7 @@ public class TransResourceVo  implements java.io.Serializable {
         this.itemName = itemName;
     }
 
+
     /**
      * get 冗余字段、接⼊系统自定义⽤用途
      *
@@ -129,6 +133,7 @@ public class TransResourceVo  implements java.io.Serializable {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
 
     /**
      * get 交接项附加说明信息、支持html
@@ -149,6 +154,7 @@ public class TransResourceVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 接入系统名称标识
      *
@@ -158,6 +164,7 @@ public class TransResourceVo  implements java.io.Serializable {
         this.systemName = systemName;
         return this;
     }
+
 
     /**
      * set 交接项id
@@ -169,6 +176,7 @@ public class TransResourceVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 交接项名称，如果交接项ID为空则交接项名称必须确保唯⼀
      *
@@ -179,6 +187,7 @@ public class TransResourceVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 冗余字段、接⼊系统自定义⽤用途
      *
@@ -188,6 +197,7 @@ public class TransResourceVo  implements java.io.Serializable {
         this.remark = remark;
         return this;
     }
+
 
     /**
      * set 交接项附加说明信息、支持html

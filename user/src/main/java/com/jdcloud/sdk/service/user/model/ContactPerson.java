@@ -43,6 +43,11 @@ public class ContactPerson  implements java.io.Serializable {
     private String pin;
 
     /**
+     * 子用户名
+     */
+    private String subName;
+
+    /**
      * 用户名
      */
     private String userName;
@@ -87,6 +92,12 @@ public class ContactPerson  implements java.io.Serializable {
      */
     private Integer isSelf;
 
+    /**
+     * 0:旧数据;1:新数据(子账号数据)
+     */
+    private Integer isSubUser;
+
+
 
     /**
      * get 用户id
@@ -106,6 +117,7 @@ public class ContactPerson  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 用户pin(创建人)
      *
@@ -123,6 +135,26 @@ public class ContactPerson  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
+
+    /**
+     * get 子用户名
+     *
+     * @return
+     */
+    public String getSubName() {
+        return subName;
+    }
+
+    /**
+     * set 子用户名
+     *
+     * @param subName
+     */
+    public void setSubName(String subName) {
+        this.subName = subName;
+    }
+
 
     /**
      * get 用户名
@@ -142,6 +174,7 @@ public class ContactPerson  implements java.io.Serializable {
         this.userName = userName;
     }
 
+
     /**
      * get 邮箱
      *
@@ -159,6 +192,7 @@ public class ContactPerson  implements java.io.Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     /**
      * get 手机号
@@ -178,6 +212,7 @@ public class ContactPerson  implements java.io.Serializable {
         this.mobile = mobile;
     }
 
+
     /**
      * get 用户邮箱有效
      *
@@ -195,6 +230,7 @@ public class ContactPerson  implements java.io.Serializable {
     public void setEmailValid(Integer emailValid) {
         this.emailValid = emailValid;
     }
+
 
     /**
      * get 是否为主联系人
@@ -214,6 +250,7 @@ public class ContactPerson  implements java.io.Serializable {
         this.isMain = isMain;
     }
 
+
     /**
      * get 创建时间
      *
@@ -231,6 +268,7 @@ public class ContactPerson  implements java.io.Serializable {
     public void setCreated(String created) {
         this.created = created;
     }
+
 
     /**
      * get 修改时间
@@ -250,6 +288,7 @@ public class ContactPerson  implements java.io.Serializable {
         this.modified = modified;
     }
 
+
     /**
      * get 是否正常：0表示删除，1表示正常
      *
@@ -267,6 +306,7 @@ public class ContactPerson  implements java.io.Serializable {
     public void setYn(Integer yn) {
         this.yn = yn;
     }
+
 
     /**
      * get 1:账号联系人;2:非账号联系人
@@ -288,6 +328,26 @@ public class ContactPerson  implements java.io.Serializable {
 
 
     /**
+     * get 0:旧数据;1:新数据(子账号数据)
+     *
+     * @return
+     */
+    public Integer getIsSubUser() {
+        return isSubUser;
+    }
+
+    /**
+     * set 0:旧数据;1:新数据(子账号数据)
+     *
+     * @param isSubUser
+     */
+    public void setIsSubUser(Integer isSubUser) {
+        this.isSubUser = isSubUser;
+    }
+
+
+
+    /**
      * set 用户id
      *
      * @param id
@@ -296,6 +356,7 @@ public class ContactPerson  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 用户pin(创建人)
@@ -307,6 +368,18 @@ public class ContactPerson  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set 子用户名
+     *
+     * @param subName
+     */
+    public ContactPerson subName(String subName) {
+        this.subName = subName;
+        return this;
+    }
+
+
     /**
      * set 用户名
      *
@@ -316,6 +389,7 @@ public class ContactPerson  implements java.io.Serializable {
         this.userName = userName;
         return this;
     }
+
 
     /**
      * set 邮箱
@@ -327,6 +401,7 @@ public class ContactPerson  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 手机号
      *
@@ -336,6 +411,7 @@ public class ContactPerson  implements java.io.Serializable {
         this.mobile = mobile;
         return this;
     }
+
 
     /**
      * set 用户邮箱有效
@@ -347,6 +423,7 @@ public class ContactPerson  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否为主联系人
      *
@@ -356,6 +433,7 @@ public class ContactPerson  implements java.io.Serializable {
         this.isMain = isMain;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -367,6 +445,7 @@ public class ContactPerson  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改时间
      *
@@ -376,6 +455,7 @@ public class ContactPerson  implements java.io.Serializable {
         this.modified = modified;
         return this;
     }
+
 
     /**
      * set 是否正常：0表示删除，1表示正常
@@ -387,6 +467,7 @@ public class ContactPerson  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 1:账号联系人;2:非账号联系人
      *
@@ -394,6 +475,17 @@ public class ContactPerson  implements java.io.Serializable {
      */
     public ContactPerson isSelf(Integer isSelf) {
         this.isSelf = isSelf;
+        return this;
+    }
+
+
+    /**
+     * set 0:旧数据;1:新数据(子账号数据)
+     *
+     * @param isSubUser
+     */
+    public ContactPerson isSubUser(Integer isSubUser) {
+        this.isSubUser = isSubUser;
         return this;
     }
 

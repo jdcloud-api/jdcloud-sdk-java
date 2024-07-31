@@ -55,6 +55,7 @@ public class EdgeZoneMappingInfo  implements java.io.Serializable {
     private String pAz;
 
 
+
     /**
      * get 可用区
      *
@@ -73,6 +74,7 @@ public class EdgeZoneMappingInfo  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 逻辑 AZ
      *
@@ -90,6 +92,7 @@ public class EdgeZoneMappingInfo  implements java.io.Serializable {
     public void setLAz(String lAz) {
         this.lAz = lAz;
     }
+
 
     /**
      * get 物理 AZ
@@ -110,6 +113,7 @@ public class EdgeZoneMappingInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 可用区
      *
@@ -120,6 +124,7 @@ public class EdgeZoneMappingInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 逻辑 AZ
      *
@@ -129,6 +134,7 @@ public class EdgeZoneMappingInfo  implements java.io.Serializable {
         this.lAz = lAz;
         return this;
     }
+
 
     /**
      * set 物理 AZ

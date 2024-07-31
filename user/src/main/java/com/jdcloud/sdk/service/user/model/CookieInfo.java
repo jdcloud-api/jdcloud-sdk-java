@@ -43,6 +43,7 @@ public class CookieInfo  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get cookie name
      *
@@ -60,6 +61,7 @@ public class CookieInfo  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get cookie value
@@ -80,6 +82,7 @@ public class CookieInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set cookie name
      *
@@ -89,6 +92,7 @@ public class CookieInfo  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set cookie value
