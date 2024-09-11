@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.starshield.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * rule
@@ -55,6 +57,7 @@ public class Rule  implements java.io.Serializable {
     /**
      * 表达式。
 UI字段&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;API字段&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;UI运算符&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+SSL/HTTPS------------ssl------------------------------等于
 ASN----------------ip.geoip.asnum----------------------等于/不等于/大于/小于/大于或等于/小于或等于/包含以下各项/不包含以下各项
 Cookie-------------http.cookie-------------------------等于/不等于/包含/不包含/与正则表达式匹配/与正则表达式不匹配
 国家/地区-----------ip.geoip.country--------------------等于/不等于/包含以下各项/不包含以下各项
@@ -98,7 +101,7 @@ UI运算符&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x
     private String expression;
 
     /**
-     * 当表达式匹配时，采取的措施。有效值block/challenge/js_challenge/managed_challenge/log。
+     * 当表达式匹配时，采取的措施。有效值block/challenge/js_challenge/managed_challenge/log/rewrite。
      */
     private String action;
 
@@ -111,6 +114,31 @@ UI运算符&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x
      * 规则中的速率限制规则。
      */
     private Ratelimit ratelimit;
+
+    /**
+     * 规则匹配时的日志行为。
+     */
+    private Logging logging;
+
+    /**
+     * 规则最近修改时间。
+     */
+    private String last_updated;
+
+    /**
+     * 规则引用（默认是规则标识）。
+     */
+    private String ref;
+
+    /**
+     * categories
+     */
+    
+    private List<String> categories;
+    /**
+     * OWASP 异常情况分数阈值。
+     */
+    private Number score_threshold;
 
 
 
@@ -193,6 +221,7 @@ UI运算符&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x
     /**
      * get 表达式。
 UI字段&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;API字段&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;UI运算符&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+SSL/HTTPS------------ssl------------------------------等于
 ASN----------------ip.geoip.asnum----------------------等于/不等于/大于/小于/大于或等于/小于或等于/包含以下各项/不包含以下各项
 Cookie-------------http.cookie-------------------------等于/不等于/包含/不包含/与正则表达式匹配/与正则表达式不匹配
 国家/地区-----------ip.geoip.country--------------------等于/不等于/包含以下各项/不包含以下各项
@@ -242,6 +271,7 @@ UI运算符&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x
     /**
      * set 表达式。
 UI字段&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;API字段&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;UI运算符&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+SSL/HTTPS------------ssl------------------------------等于
 ASN----------------ip.geoip.asnum----------------------等于/不等于/大于/小于/大于或等于/小于或等于/包含以下各项/不包含以下各项
 Cookie-------------http.cookie-------------------------等于/不等于/包含/不包含/与正则表达式匹配/与正则表达式不匹配
 国家/地区-----------ip.geoip.country--------------------等于/不等于/包含以下各项/不包含以下各项
@@ -290,7 +320,7 @@ UI运算符&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x
 
 
     /**
-     * get 当表达式匹配时，采取的措施。有效值block/challenge/js_challenge/managed_challenge/log。
+     * get 当表达式匹配时，采取的措施。有效值block/challenge/js_challenge/managed_challenge/log/rewrite。
      *
      * @return
      */
@@ -299,7 +329,7 @@ UI运算符&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x
     }
 
     /**
-     * set 当表达式匹配时，采取的措施。有效值block/challenge/js_challenge/managed_challenge/log。
+     * set 当表达式匹配时，采取的措施。有效值block/challenge/js_challenge/managed_challenge/log/rewrite。
      *
      * @param action
      */
@@ -343,6 +373,101 @@ UI运算符&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x
      */
     public void setRatelimit(Ratelimit ratelimit) {
         this.ratelimit = ratelimit;
+    }
+
+
+    /**
+     * get 规则匹配时的日志行为。
+     *
+     * @return
+     */
+    public Logging getLogging() {
+        return logging;
+    }
+
+    /**
+     * set 规则匹配时的日志行为。
+     *
+     * @param logging
+     */
+    public void setLogging(Logging logging) {
+        this.logging = logging;
+    }
+
+
+    /**
+     * get 规则最近修改时间。
+     *
+     * @return
+     */
+    public String getLast_updated() {
+        return last_updated;
+    }
+
+    /**
+     * set 规则最近修改时间。
+     *
+     * @param last_updated
+     */
+    public void setLast_updated(String last_updated) {
+        this.last_updated = last_updated;
+    }
+
+
+    /**
+     * get 规则引用（默认是规则标识）。
+     *
+     * @return
+     */
+    public String getRef() {
+        return ref;
+    }
+
+    /**
+     * set 规则引用（默认是规则标识）。
+     *
+     * @param ref
+     */
+    public void setRef(String ref) {
+        this.ref = ref;
+    }
+
+
+    /**
+    * get categories
+    *
+    * @return
+    */
+    public List<String> getCategories() {
+        return categories;
+    }
+
+    /**
+    * set categories
+    *
+    * @param categories
+    */
+    public void setCategories(List<String> categories) {
+        this.categories = categories;
+    }
+
+
+    /**
+     * get OWASP 异常情况分数阈值。
+     *
+     * @return
+     */
+    public Number getScore_threshold() {
+        return score_threshold;
+    }
+
+    /**
+     * set OWASP 异常情况分数阈值。
+     *
+     * @param score_threshold
+     */
+    public void setScore_threshold(Number score_threshold) {
+        this.score_threshold = score_threshold;
     }
 
 
@@ -394,6 +519,7 @@ UI运算符&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x
     /**
      * set 表达式。
 UI字段&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;API字段&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;UI运算符&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;
+SSL/HTTPS------------ssl------------------------------等于
 ASN----------------ip.geoip.asnum----------------------等于/不等于/大于/小于/大于或等于/小于或等于/包含以下各项/不包含以下各项
 Cookie-------------http.cookie-------------------------等于/不等于/包含/不包含/与正则表达式匹配/与正则表达式不匹配
 国家/地区-----------ip.geoip.country--------------------等于/不等于/包含以下各项/不包含以下各项
@@ -443,7 +569,7 @@ UI运算符&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x
 
 
     /**
-     * set 当表达式匹配时，采取的措施。有效值block/challenge/js_challenge/managed_challenge/log。
+     * set 当表达式匹配时，采取的措施。有效值block/challenge/js_challenge/managed_challenge/log/rewrite。
      *
      * @param action
      */
@@ -475,4 +601,71 @@ UI运算符&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x
     }
 
 
+    /**
+     * set 规则匹配时的日志行为。
+     *
+     * @param logging
+     */
+    public Rule logging(Logging logging) {
+        this.logging = logging;
+        return this;
+    }
+
+
+    /**
+     * set 规则最近修改时间。
+     *
+     * @param last_updated
+     */
+    public Rule last_updated(String last_updated) {
+        this.last_updated = last_updated;
+        return this;
+    }
+
+
+    /**
+     * set 规则引用（默认是规则标识）。
+     *
+     * @param ref
+     */
+    public Rule ref(String ref) {
+        this.ref = ref;
+        return this;
+    }
+
+
+    /**
+    * set categories
+    *
+    * @param categories
+    */
+    public Rule categories(List<String> categories) {
+        this.categories = categories;
+        return this;
+    }
+
+
+    /**
+     * set OWASP 异常情况分数阈值。
+     *
+     * @param score_threshold
+     */
+    public Rule score_threshold(Number score_threshold) {
+        this.score_threshold = score_threshold;
+        return this;
+    }
+
+
+
+    /**
+     * add item to categories
+     *
+     * @param categorie
+     */
+    public void addCategorie(String categorie) {
+        if (this.categories == null) {
+            this.categories = new ArrayList<>();
+        }
+        this.categories.add(categorie);
+    }
 }
