@@ -40,7 +40,7 @@ public class RuleSet  implements java.io.Serializable {
     private String id;
 
     /**
-     * 规则集的名称。
+     * 规则集的名称，例如default。
      */
     private String name;
 
@@ -55,7 +55,7 @@ public class RuleSet  implements java.io.Serializable {
     private String kind;
 
     /**
-     * 执行规则集的阶段，有效值http_ratelimit。
+     * 执行规则集的阶段，有效值http_ratelimit/http_request_late_transform/http_request_firewall_custom/http_request_firewall_managed。
      */
     private String phase;
 
@@ -101,7 +101,7 @@ public class RuleSet  implements java.io.Serializable {
 
 
     /**
-     * get 规则集的名称。
+     * get 规则集的名称，例如default。
      *
      * @return
      */
@@ -110,7 +110,7 @@ public class RuleSet  implements java.io.Serializable {
     }
 
     /**
-     * set 规则集的名称。
+     * set 规则集的名称，例如default。
      *
      * @param name
      */
@@ -158,7 +158,7 @@ public class RuleSet  implements java.io.Serializable {
 
 
     /**
-     * get 执行规则集的阶段，有效值http_ratelimit。
+     * get 执行规则集的阶段，有效值http_ratelimit/http_request_late_transform/http_request_firewall_custom/http_request_firewall_managed。
      *
      * @return
      */
@@ -167,7 +167,7 @@ public class RuleSet  implements java.io.Serializable {
     }
 
     /**
-     * set 执行规则集的阶段，有效值http_ratelimit。
+     * set 执行规则集的阶段，有效值http_ratelimit/http_request_late_transform/http_request_firewall_custom/http_request_firewall_managed。
      *
      * @param phase
      */
@@ -265,7 +265,7 @@ public class RuleSet  implements java.io.Serializable {
 
 
     /**
-     * set 规则集的名称。
+     * set 规则集的名称，例如default。
      *
      * @param name
      */
@@ -298,7 +298,7 @@ public class RuleSet  implements java.io.Serializable {
 
 
     /**
-     * set 执行规则集的阶段，有效值http_ratelimit。
+     * set 执行规则集的阶段，有效值http_ratelimit/http_request_late_transform/http_request_firewall_custom/http_request_firewall_managed。
      *
      * @param phase
      */

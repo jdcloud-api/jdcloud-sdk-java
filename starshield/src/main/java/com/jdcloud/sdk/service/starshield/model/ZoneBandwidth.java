@@ -68,6 +68,16 @@ public class ZoneBandwidth  implements java.io.Serializable {
     private Number bps;
 
     /**
+     * 查询时间段内的业务峰值带宽，单位bit per second
+     */
+    private Number normalBps;
+
+    /**
+     * 查询时间段内的攻击峰值带宽，单位bit per second
+     */
+    private Number mitigationBps;
+
+    /**
      * 套餐总流量
      */
     private String totalFlowStr;
@@ -224,6 +234,44 @@ public class ZoneBandwidth  implements java.io.Serializable {
      */
     public void setBps(Number bps) {
         this.bps = bps;
+    }
+
+
+    /**
+     * get 查询时间段内的业务峰值带宽，单位bit per second
+     *
+     * @return
+     */
+    public Number getNormalBps() {
+        return normalBps;
+    }
+
+    /**
+     * set 查询时间段内的业务峰值带宽，单位bit per second
+     *
+     * @param normalBps
+     */
+    public void setNormalBps(Number normalBps) {
+        this.normalBps = normalBps;
+    }
+
+
+    /**
+     * get 查询时间段内的攻击峰值带宽，单位bit per second
+     *
+     * @return
+     */
+    public Number getMitigationBps() {
+        return mitigationBps;
+    }
+
+    /**
+     * set 查询时间段内的攻击峰值带宽，单位bit per second
+     *
+     * @param mitigationBps
+     */
+    public void setMitigationBps(Number mitigationBps) {
+        this.mitigationBps = mitigationBps;
     }
 
 
@@ -396,6 +444,28 @@ public class ZoneBandwidth  implements java.io.Serializable {
      */
     public ZoneBandwidth bps(Number bps) {
         this.bps = bps;
+        return this;
+    }
+
+
+    /**
+     * set 查询时间段内的业务峰值带宽，单位bit per second
+     *
+     * @param normalBps
+     */
+    public ZoneBandwidth normalBps(Number normalBps) {
+        this.normalBps = normalBps;
+        return this;
+    }
+
+
+    /**
+     * set 查询时间段内的攻击峰值带宽，单位bit per second
+     *
+     * @param mitigationBps
+     */
+    public ZoneBandwidth mitigationBps(Number mitigationBps) {
+        this.mitigationBps = mitigationBps;
         return this;
     }
 

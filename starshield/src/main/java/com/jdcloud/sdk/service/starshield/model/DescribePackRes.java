@@ -253,6 +253,11 @@ public class DescribePackRes  implements java.io.Serializable {
     private String zoneAccessType;
 
     /**
+     * spectrum IP数量
+     */
+    private Integer spectrumIpNum;
+
+    /**
      * 速率限制Ratelimit数量 0-&gt;不支持 大于0-&gt;N条
      */
     private Integer rateLimit;
@@ -296,6 +301,16 @@ public class DescribePackRes  implements java.io.Serializable {
      * Websocket False-&gt;不支持 True-&gt;支持
      */
     private Boolean websocket;
+
+    /**
+     * 转换规则数量 0-&gt;不支持 大于0-&gt;N条
+     */
+    private Integer transformRuleNum;
+
+    /**
+     * 实例是否支持创建域名 False-&gt;不支持 True-&gt;支持
+     */
+    private Boolean isCreateZone;
 
 
 
@@ -1136,6 +1151,25 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
+     * get spectrum IP数量
+     *
+     * @return
+     */
+    public Integer getSpectrumIpNum() {
+        return spectrumIpNum;
+    }
+
+    /**
+     * set spectrum IP数量
+     *
+     * @param spectrumIpNum
+     */
+    public void setSpectrumIpNum(Integer spectrumIpNum) {
+        this.spectrumIpNum = spectrumIpNum;
+    }
+
+
+    /**
      * get 速率限制Ratelimit数量 0-&gt;不支持 大于0-&gt;N条
      *
      * @return
@@ -1303,6 +1337,44 @@ public class DescribePackRes  implements java.io.Serializable {
      */
     public void setWebsocket(Boolean websocket) {
         this.websocket = websocket;
+    }
+
+
+    /**
+     * get 转换规则数量 0-&gt;不支持 大于0-&gt;N条
+     *
+     * @return
+     */
+    public Integer getTransformRuleNum() {
+        return transformRuleNum;
+    }
+
+    /**
+     * set 转换规则数量 0-&gt;不支持 大于0-&gt;N条
+     *
+     * @param transformRuleNum
+     */
+    public void setTransformRuleNum(Integer transformRuleNum) {
+        this.transformRuleNum = transformRuleNum;
+    }
+
+
+    /**
+     * get 实例是否支持创建域名 False-&gt;不支持 True-&gt;支持
+     *
+     * @return
+     */
+    public Boolean getIsCreateZone() {
+        return isCreateZone;
+    }
+
+    /**
+     * set 实例是否支持创建域名 False-&gt;不支持 True-&gt;支持
+     *
+     * @param isCreateZone
+     */
+    public void setIsCreateZone(Boolean isCreateZone) {
+        this.isCreateZone = isCreateZone;
     }
 
 
@@ -1792,6 +1864,17 @@ public class DescribePackRes  implements java.io.Serializable {
 
 
     /**
+     * set spectrum IP数量
+     *
+     * @param spectrumIpNum
+     */
+    public DescribePackRes spectrumIpNum(Integer spectrumIpNum) {
+        this.spectrumIpNum = spectrumIpNum;
+        return this;
+    }
+
+
+    /**
      * set 速率限制Ratelimit数量 0-&gt;不支持 大于0-&gt;N条
      *
      * @param rateLimit
@@ -1886,6 +1969,28 @@ public class DescribePackRes  implements java.io.Serializable {
      */
     public DescribePackRes websocket(Boolean websocket) {
         this.websocket = websocket;
+        return this;
+    }
+
+
+    /**
+     * set 转换规则数量 0-&gt;不支持 大于0-&gt;N条
+     *
+     * @param transformRuleNum
+     */
+    public DescribePackRes transformRuleNum(Integer transformRuleNum) {
+        this.transformRuleNum = transformRuleNum;
+        return this;
+    }
+
+
+    /**
+     * set 实例是否支持创建域名 False-&gt;不支持 True-&gt;支持
+     *
+     * @param isCreateZone
+     */
+    public DescribePackRes isCreateZone(Boolean isCreateZone) {
+        this.isCreateZone = isCreateZone;
         return this;
     }
 

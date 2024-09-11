@@ -40,6 +40,22 @@ public class Response  implements java.io.Serializable {
      */
     private String content;
 
+    /**
+     * 仅当规则action为block时可用。
+允许您定义阻止请求时,响应的内容类型。
+有效值application/json, text/html, text/xml, text/plain
+
+     */
+    private String content_type;
+
+    /**
+     * 仅当规则action为block时可用。
+允许您定义阻止请求时,返回给访问者的HTTP状态代码。
+您必须输入一个介于400和499之间的值。
+
+     */
+    private Number status_code;
+
 
 
     /**
@@ -67,6 +83,56 @@ public class Response  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 仅当规则action为block时可用。
+允许您定义阻止请求时,响应的内容类型。
+有效值application/json, text/html, text/xml, text/plain
+
+     *
+     * @return
+     */
+    public String getContent_type() {
+        return content_type;
+    }
+
+    /**
+     * set 仅当规则action为block时可用。
+允许您定义阻止请求时,响应的内容类型。
+有效值application/json, text/html, text/xml, text/plain
+
+     *
+     * @param content_type
+     */
+    public void setContent_type(String content_type) {
+        this.content_type = content_type;
+    }
+
+
+    /**
+     * get 仅当规则action为block时可用。
+允许您定义阻止请求时,返回给访问者的HTTP状态代码。
+您必须输入一个介于400和499之间的值。
+
+     *
+     * @return
+     */
+    public Number getStatus_code() {
+        return status_code;
+    }
+
+    /**
+     * set 仅当规则action为block时可用。
+允许您定义阻止请求时,返回给访问者的HTTP状态代码。
+您必须输入一个介于400和499之间的值。
+
+     *
+     * @param status_code
+     */
+    public void setStatus_code(Number status_code) {
+        this.status_code = status_code;
+    }
+
+
 
     /**
      * set 仅当规则action为block时可用。
@@ -78,6 +144,34 @@ public class Response  implements java.io.Serializable {
      */
     public Response content(String content) {
         this.content = content;
+        return this;
+    }
+
+
+    /**
+     * set 仅当规则action为block时可用。
+允许您定义阻止请求时,响应的内容类型。
+有效值application/json, text/html, text/xml, text/plain
+
+     *
+     * @param content_type
+     */
+    public Response content_type(String content_type) {
+        this.content_type = content_type;
+        return this;
+    }
+
+
+    /**
+     * set 仅当规则action为block时可用。
+允许您定义阻止请求时,返回给访问者的HTTP状态代码。
+您必须输入一个介于400和499之间的值。
+
+     *
+     * @param status_code
+     */
+    public Response status_code(Number status_code) {
+        this.status_code = status_code;
         return this;
     }
 
