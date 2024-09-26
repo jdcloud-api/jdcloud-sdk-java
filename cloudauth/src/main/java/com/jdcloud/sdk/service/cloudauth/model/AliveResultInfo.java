@@ -72,6 +72,16 @@ public class AliveResultInfo  implements java.io.Serializable {
      */
     private String desc;
 
+    /**
+     * 活体检测是否收费：0不收费，1收费
+     */
+    private Integer h5ChargeFlag;
+
+    /**
+     * 活体检测是否收费：0不收费，1收费
+     */
+    private Integer rxChargeFlag;
+
 
 
     /**
@@ -226,6 +236,44 @@ public class AliveResultInfo  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 活体检测是否收费：0不收费，1收费
+     *
+     * @return
+     */
+    public Integer getH5ChargeFlag() {
+        return h5ChargeFlag;
+    }
+
+    /**
+     * set 活体检测是否收费：0不收费，1收费
+     *
+     * @param h5ChargeFlag
+     */
+    public void setH5ChargeFlag(Integer h5ChargeFlag) {
+        this.h5ChargeFlag = h5ChargeFlag;
+    }
+
+
+    /**
+     * get 活体检测是否收费：0不收费，1收费
+     *
+     * @return
+     */
+    public Integer getRxChargeFlag() {
+        return rxChargeFlag;
+    }
+
+    /**
+     * set 活体检测是否收费：0不收费，1收费
+     *
+     * @param rxChargeFlag
+     */
+    public void setRxChargeFlag(Integer rxChargeFlag) {
+        this.rxChargeFlag = rxChargeFlag;
+    }
+
+
 
     /**
      * set 人脸照片base64
@@ -311,6 +359,28 @@ public class AliveResultInfo  implements java.io.Serializable {
      */
     public AliveResultInfo desc(String desc) {
         this.desc = desc;
+        return this;
+    }
+
+
+    /**
+     * set 活体检测是否收费：0不收费，1收费
+     *
+     * @param h5ChargeFlag
+     */
+    public AliveResultInfo h5ChargeFlag(Integer h5ChargeFlag) {
+        this.h5ChargeFlag = h5ChargeFlag;
+        return this;
+    }
+
+
+    /**
+     * set 活体检测是否收费：0不收费，1收费
+     *
+     * @param rxChargeFlag
+     */
+    public AliveResultInfo rxChargeFlag(Integer rxChargeFlag) {
+        this.rxChargeFlag = rxChargeFlag;
         return this;
     }
 

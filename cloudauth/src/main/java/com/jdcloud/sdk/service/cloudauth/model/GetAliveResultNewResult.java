@@ -73,6 +73,16 @@ public class GetAliveResultNewResult extends JdcloudResult implements java.io.Se
      */
     private String desc;
 
+    /**
+     * 活体检测是否收费：0不收费，1收费
+     */
+    private Integer h5ChargeFlag;
+
+    /**
+     * 活体检测是否收费：0不收费，1收费
+     */
+    private Integer rxChargeFlag;
+
 
 
     /**
@@ -227,6 +237,44 @@ public class GetAliveResultNewResult extends JdcloudResult implements java.io.Se
     }
 
 
+    /**
+     * get 活体检测是否收费：0不收费，1收费
+     *
+     * @return
+     */
+    public Integer getH5ChargeFlag() {
+        return h5ChargeFlag;
+    }
+
+    /**
+     * set 活体检测是否收费：0不收费，1收费
+     *
+     * @param h5ChargeFlag
+     */
+    public void setH5ChargeFlag(Integer h5ChargeFlag) {
+        this.h5ChargeFlag = h5ChargeFlag;
+    }
+
+
+    /**
+     * get 活体检测是否收费：0不收费，1收费
+     *
+     * @return
+     */
+    public Integer getRxChargeFlag() {
+        return rxChargeFlag;
+    }
+
+    /**
+     * set 活体检测是否收费：0不收费，1收费
+     *
+     * @param rxChargeFlag
+     */
+    public void setRxChargeFlag(Integer rxChargeFlag) {
+        this.rxChargeFlag = rxChargeFlag;
+    }
+
+
 
     /**
      * set 人脸照片base64
@@ -312,6 +360,28 @@ public class GetAliveResultNewResult extends JdcloudResult implements java.io.Se
      */
     public GetAliveResultNewResult desc(String desc) {
         this.desc = desc;
+        return this;
+    }
+
+
+    /**
+     * set 活体检测是否收费：0不收费，1收费
+     *
+     * @param h5ChargeFlag
+     */
+    public GetAliveResultNewResult h5ChargeFlag(Integer h5ChargeFlag) {
+        this.h5ChargeFlag = h5ChargeFlag;
+        return this;
+    }
+
+
+    /**
+     * set 活体检测是否收费：0不收费，1收费
+     *
+     * @param rxChargeFlag
+     */
+    public GetAliveResultNewResult rxChargeFlag(Integer rxChargeFlag) {
+        this.rxChargeFlag = rxChargeFlag;
         return this;
     }
 
