@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.cloudauth.model.DescribeApplyStatusRequest;
 import com.jdcloud.sdk.service.cloudauth.model.DescribeApplyStatusResponse;
 import com.jdcloud.sdk.service.cloudauth.client.DescribeApplyStatusExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.MobileStatusRequest;
+import com.jdcloud.sdk.service.cloudauth.model.MobileStatusResponse;
+import com.jdcloud.sdk.service.cloudauth.client.MobileStatusExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.PersonalMobileRequest;
 import com.jdcloud.sdk.service.cloudauth.model.PersonalMobileResponse;
 import com.jdcloud.sdk.service.cloudauth.client.PersonalMobileExecutor;
@@ -171,6 +174,17 @@ public class CloudauthClient extends JdcloudClient {
      */
     public DescribeApplyStatusResponse describeApplyStatus(DescribeApplyStatusRequest request) throws JdcloudSdkException {
         return new DescribeApplyStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 手机号码状态查询
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public MobileStatusResponse mobileStatus(MobileStatusRequest request) throws JdcloudSdkException {
+        return new MobileStatusExecutor().client(this).execute(request);
     }
 
     /**
