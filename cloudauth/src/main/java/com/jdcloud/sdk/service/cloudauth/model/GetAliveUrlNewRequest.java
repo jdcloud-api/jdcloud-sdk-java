@@ -56,6 +56,21 @@ public class GetAliveUrlNewRequest extends JdcloudRequest implements java.io.Ser
      */
     private String actions;
 
+    /**
+     * 是否展示失败结果页面
+     */
+    private Boolean showFail;
+
+    /**
+     * 自有源照片（不超过2M）
+     */
+    private String photo;
+
+    /**
+     * 自有源照片对比通过阈值（0-1000）
+     */
+    private Integer photoThresh;
+
 
 
     /**
@@ -134,6 +149,63 @@ public class GetAliveUrlNewRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+    /**
+     * get 是否展示失败结果页面
+     *
+     * @return
+     */
+    public Boolean getShowFail() {
+        return showFail;
+    }
+
+    /**
+     * set 是否展示失败结果页面
+     *
+     * @param showFail
+     */
+    public void setShowFail(Boolean showFail) {
+        this.showFail = showFail;
+    }
+
+
+    /**
+     * get 自有源照片（不超过2M）
+     *
+     * @return
+     */
+    public String getPhoto() {
+        return photo;
+    }
+
+    /**
+     * set 自有源照片（不超过2M）
+     *
+     * @param photo
+     */
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+
+    /**
+     * get 自有源照片对比通过阈值（0-1000）
+     *
+     * @return
+     */
+    public Integer getPhotoThresh() {
+        return photoThresh;
+    }
+
+    /**
+     * set 自有源照片对比通过阈值（0-1000）
+     *
+     * @param photoThresh
+     */
+    public void setPhotoThresh(Integer photoThresh) {
+        this.photoThresh = photoThresh;
+    }
+
+
 
     /**
      * set 姓名（需要进行身份核验时传递此参数）
@@ -175,6 +247,39 @@ public class GetAliveUrlNewRequest extends JdcloudRequest implements java.io.Ser
      */
     public GetAliveUrlNewRequest actions(String actions) {
         this.actions = actions;
+        return this;
+    }
+
+
+    /**
+     * set 是否展示失败结果页面
+     *
+     * @param showFail
+     */
+    public GetAliveUrlNewRequest showFail(Boolean showFail) {
+        this.showFail = showFail;
+        return this;
+    }
+
+
+    /**
+     * set 自有源照片（不超过2M）
+     *
+     * @param photo
+     */
+    public GetAliveUrlNewRequest photo(String photo) {
+        this.photo = photo;
+        return this;
+    }
+
+
+    /**
+     * set 自有源照片对比通过阈值（0-1000）
+     *
+     * @param photoThresh
+     */
+    public GetAliveUrlNewRequest photoThresh(Integer photoThresh) {
+        this.photoThresh = photoThresh;
         return this;
     }
 

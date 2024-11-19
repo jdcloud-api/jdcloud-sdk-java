@@ -73,12 +73,18 @@ import com.jdcloud.sdk.service.cloudauth.client.AddressInfoExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyInfo3Request;
 import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyInfo3Response;
 import com.jdcloud.sdk.service.cloudauth.client.CheckCompanyInfo3Executor;
+import com.jdcloud.sdk.service.cloudauth.model.BusinessOCRRequest;
+import com.jdcloud.sdk.service.cloudauth.model.BusinessOCRResponse;
+import com.jdcloud.sdk.service.cloudauth.client.BusinessOCRExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.PersonalBankcard4OtherRequest;
 import com.jdcloud.sdk.service.cloudauth.model.PersonalBankcard4OtherResponse;
 import com.jdcloud.sdk.service.cloudauth.client.PersonalBankcard4OtherExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.GetAliveResultRequest;
 import com.jdcloud.sdk.service.cloudauth.model.GetAliveResultResponse;
 import com.jdcloud.sdk.service.cloudauth.client.GetAliveResultExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.BankCardOCRRequest;
+import com.jdcloud.sdk.service.cloudauth.model.BankCardOCRResponse;
+import com.jdcloud.sdk.service.cloudauth.client.BankCardOCRExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.GetAliveUrlRequest;
 import com.jdcloud.sdk.service.cloudauth.model.GetAliveUrlResponse;
 import com.jdcloud.sdk.service.cloudauth.client.GetAliveUrlExecutor;
@@ -320,6 +326,17 @@ public class CloudauthClient extends JdcloudClient {
     }
 
     /**
+     * 营业执照OCR
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public BusinessOCRResponse businessOCR(BusinessOCRRequest request) throws JdcloudSdkException {
+        return new BusinessOCRExecutor().client(this).execute(request);
+    }
+
+    /**
      * 个人银行卡四要素非身份证版
      *
      * @param request
@@ -339,6 +356,17 @@ public class CloudauthClient extends JdcloudClient {
      */
     public GetAliveResultResponse getAliveResult(GetAliveResultRequest request) throws JdcloudSdkException {
         return new GetAliveResultExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 银行卡OCR
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public BankCardOCRResponse bankCardOCR(BankCardOCRRequest request) throws JdcloudSdkException {
+        return new BankCardOCRExecutor().client(this).execute(request);
     }
 
     /**
