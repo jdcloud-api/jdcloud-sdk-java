@@ -36,7 +36,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 - 调该接口之前实例必须处于停止 &#x60;stopped&#x60; 状态。
 - 修改VPC及子网
   - 内网IPv4：可指定或由系统分配。
-  - IPv6：如新子网支持IPv6，可选是否分配，如分配仅支持系统分配。
+  - IPv6：如新子网支持IPv6，可选是否分配，如果选择分配但不指定Ipv6地址，系统会自动分配。
   - 安全组：须指定新VPC下的安全组。
 - 不修改VPC，仅修改子网
   - 内网IPv4：可指定或由系统分配。

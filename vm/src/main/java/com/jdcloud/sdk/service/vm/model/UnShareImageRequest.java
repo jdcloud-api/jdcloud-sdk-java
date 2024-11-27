@@ -45,12 +45,15 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 需要取消的京东云帐户列表。
-     * Required:true
+     * 需要取消的用户pin列表。
      */
-    @Required
     
     private List<String> pins;
+    /**
+     * 需要取消的京东云帐户列表。
+     */
+    
+    private List<String> loginNames;
     /**
      * 地域ID。
      * Required:true
@@ -68,7 +71,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-    * get 需要取消的京东云帐户列表。
+    * get 需要取消的用户pin列表。
     *
     * @return
     */
@@ -77,12 +80,31 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-    * set 需要取消的京东云帐户列表。
+    * set 需要取消的用户pin列表。
     *
     * @param pins
     */
     public void setPins(List<String> pins) {
         this.pins = pins;
+    }
+
+
+    /**
+    * get 需要取消的京东云帐户列表。
+    *
+    * @return
+    */
+    public List<String> getLoginNames() {
+        return loginNames;
+    }
+
+    /**
+    * set 需要取消的京东云帐户列表。
+    *
+    * @param loginNames
+    */
+    public void setLoginNames(List<String> loginNames) {
+        this.loginNames = loginNames;
     }
 
 
@@ -126,12 +148,23 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-    * set 需要取消的京东云帐户列表。
+    * set 需要取消的用户pin列表。
     *
     * @param pins
     */
     public UnShareImageRequest pins(List<String> pins) {
         this.pins = pins;
+        return this;
+    }
+
+
+    /**
+    * set 需要取消的京东云帐户列表。
+    *
+    * @param loginNames
+    */
+    public UnShareImageRequest loginNames(List<String> loginNames) {
+        this.loginNames = loginNames;
         return this;
     }
 
@@ -160,7 +193,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * add item to 需要取消的京东云帐户列表。
+     * add item to 需要取消的用户pin列表。
      *
      * @param pin
      */
@@ -169,5 +202,17 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
             this.pins = new ArrayList<>();
         }
         this.pins.add(pin);
+    }
+
+    /**
+     * add item to 需要取消的京东云帐户列表。
+     *
+     * @param loginName
+     */
+    public void addLoginName(String loginName) {
+        if (this.loginNames == null) {
+            this.loginNames = new ArrayList<>();
+        }
+        this.loginNames.add(loginName);
     }
 }

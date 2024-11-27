@@ -39,7 +39,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 - 调该接口之前实例必须处于停止 &#x60;stopped&#x60; 状态。
 - 修改VPC及子网
   - 内网IPv4：可指定或由系统分配。
-  - IPv6：如新子网支持IPv6，可选是否分配，如分配仅支持系统分配。
+  - IPv6：如新子网支持IPv6，可选是否分配，如果选择分配但不指定Ipv6地址，系统会自动分配。
   - 安全组：须指定新VPC下的安全组。
 - 不修改VPC，仅修改子网
   - 内网IPv4：可指定或由系统分配。
@@ -75,6 +75,12 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
 
      */
     private Boolean assignIpv6;
+
+    /**
+     * 切换子网后的IPV6地址，不可与assignIpv6同时指定。
+
+     */
+    private String ipv6Address;
 
     /**
      * Ipv4地址。
@@ -146,6 +152,27 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
      */
     public void setAssignIpv6(Boolean assignIpv6) {
         this.assignIpv6 = assignIpv6;
+    }
+
+
+    /**
+     * get 切换子网后的IPV6地址，不可与assignIpv6同时指定。
+
+     *
+     * @return
+     */
+    public String getIpv6Address() {
+        return ipv6Address;
+    }
+
+    /**
+     * set 切换子网后的IPV6地址，不可与assignIpv6同时指定。
+
+     *
+     * @param ipv6Address
+     */
+    public void setIpv6Address(String ipv6Address) {
+        this.ipv6Address = ipv6Address;
     }
 
 
@@ -256,6 +283,18 @@ public class ModifyInstanceVpcAttributeRequest extends JdcloudRequest implements
      */
     public ModifyInstanceVpcAttributeRequest assignIpv6(Boolean assignIpv6) {
         this.assignIpv6 = assignIpv6;
+        return this;
+    }
+
+
+    /**
+     * set 切换子网后的IPV6地址，不可与assignIpv6同时指定。
+
+     *
+     * @param ipv6Address
+     */
+    public ModifyInstanceVpcAttributeRequest ipv6Address(String ipv6Address) {
+        this.ipv6Address = ipv6Address;
         return this;
     }
 

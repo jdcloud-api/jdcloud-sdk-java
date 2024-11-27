@@ -30,12 +30,15 @@ import com.jdcloud.sdk.service.vm.model.CopyImagesResponse;
 
 /**
  * 
-镜像跨地域复制。
+镜像复制。
 
 详细操作说明请参考帮助文档：[镜像复制](https://docs.jdcloud.com/cn/virtual-machines/copy-image)
 
 ## 接口说明
-- 调用该接口将私有镜像复制到其它地域下。
+- 调用该接口可以复制私有或共享镜像。
+- 复制私有镜像时，只允许镜像拥有者进行复制。
+- 复制共享镜像时，允许共享的用户将镜像复制为私有镜像。
+- 支持同地域复制镜像。
 - 只支持云盘系统盘的镜像。
 - 不支持带有加密快照的镜像。
 

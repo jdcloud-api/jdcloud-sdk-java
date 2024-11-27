@@ -125,6 +125,16 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     private Integer pageSize;
 
     /**
+     * 虚机ID， 精确匹配
+     */
+    
+    private List<String> instanceIds;
+    /**
+     * 镜像启动模式，默认bios，支持范围：&#x60;bios&#x60;、&#x60;uefi&#x60;。
+     */
+    private String bootMode;
+
+    /**
      * 地域ID。
      * Required:true
      */
@@ -394,6 +404,44 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
+    * get 虚机ID， 精确匹配
+    *
+    * @return
+    */
+    public List<String> getInstanceIds() {
+        return instanceIds;
+    }
+
+    /**
+    * set 虚机ID， 精确匹配
+    *
+    * @param instanceIds
+    */
+    public void setInstanceIds(List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+    }
+
+
+    /**
+     * get 镜像启动模式，默认bios，支持范围：&#x60;bios&#x60;、&#x60;uefi&#x60;。
+     *
+     * @return
+     */
+    public String getBootMode() {
+        return bootMode;
+    }
+
+    /**
+     * set 镜像启动模式，默认bios，支持范围：&#x60;bios&#x60;、&#x60;uefi&#x60;。
+     *
+     * @param bootMode
+     */
+    public void setBootMode(String bootMode) {
+        this.bootMode = bootMode;
+    }
+
+
+    /**
      * get 地域ID。
      *
      * @return
@@ -562,6 +610,28 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
+    * set 虚机ID， 精确匹配
+    *
+    * @param instanceIds
+    */
+    public DescribeImagesRequest instanceIds(List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+
+
+    /**
+     * set 镜像启动模式，默认bios，支持范围：&#x60;bios&#x60;、&#x60;uefi&#x60;。
+     *
+     * @param bootMode
+     */
+    public DescribeImagesRequest bootMode(String bootMode) {
+        this.bootMode = bootMode;
+        return this;
+    }
+
+
+    /**
      * set 地域ID。
      *
      * @param regionId
@@ -584,5 +654,17 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
             this.ids = new ArrayList<>();
         }
         this.ids.add(id);
+    }
+
+    /**
+     * add item to 虚机ID， 精确匹配
+     *
+     * @param instanceId
+     */
+    public void addInstanceId(String instanceId) {
+        if (this.instanceIds == null) {
+            this.instanceIds = new ArrayList<>();
+        }
+        this.instanceIds.add(instanceId);
     }
 }

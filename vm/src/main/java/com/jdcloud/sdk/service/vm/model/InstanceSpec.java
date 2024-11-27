@@ -27,7 +27,6 @@ package com.jdcloud.sdk.service.vm.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.vpc.model.ElasticIpSpec;
 import com.jdcloud.sdk.service.charge.model.ChargeSpec;
 
 /**
@@ -52,6 +51,12 @@ public class InstanceSpec  implements java.io.Serializable {
 
      */
     private String agId;
+
+    /**
+     * 是否托管实例的生命周期，默认为false；若为包年包月实例，可加入但不支持托管；该字段仅AG开启AS时生效。托管实例将在缩容或健康检查失败时被删除，非托管实例仅移出伸缩组
+
+     */
+    private Boolean isManaged;
 
     /**
      * 实例模板ID。指定此参数后，如实例模板中参数不另行指定将默认以模板配置创建实例，如指定则以指定值为准创建。
@@ -314,6 +319,27 @@ autoChangeChargeMode和autoChangeChargeModeDate字段只有在按配置计费按
      */
     public void setAgId(String agId) {
         this.agId = agId;
+    }
+
+
+    /**
+     * get 是否托管实例的生命周期，默认为false；若为包年包月实例，可加入但不支持托管；该字段仅AG开启AS时生效。托管实例将在缩容或健康检查失败时被删除，非托管实例仅移出伸缩组
+
+     *
+     * @return
+     */
+    public Boolean getIsManaged() {
+        return isManaged;
+    }
+
+    /**
+     * set 是否托管实例的生命周期，默认为false；若为包年包月实例，可加入但不支持托管；该字段仅AG开启AS时生效。托管实例将在缩容或健康检查失败时被删除，非托管实例仅移出伸缩组
+
+     *
+     * @param isManaged
+     */
+    public void setIsManaged(Boolean isManaged) {
+        this.isManaged = isManaged;
     }
 
 
@@ -1002,6 +1028,18 @@ autoChangeChargeMode和autoChangeChargeModeDate字段只有在按配置计费按
      */
     public InstanceSpec agId(String agId) {
         this.agId = agId;
+        return this;
+    }
+
+
+    /**
+     * set 是否托管实例的生命周期，默认为false；若为包年包月实例，可加入但不支持托管；该字段仅AG开启AS时生效。托管实例将在缩容或健康检查失败时被删除，非托管实例仅移出伸缩组
+
+     *
+     * @param isManaged
+     */
+    public InstanceSpec isManaged(Boolean isManaged) {
+        this.isManaged = isManaged;
         return this;
     }
 
