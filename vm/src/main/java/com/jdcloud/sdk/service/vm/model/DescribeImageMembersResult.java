@@ -47,6 +47,11 @@ public class DescribeImageMembersResult extends JdcloudResult implements java.io
      */
     
     private List<String> pins;
+    /**
+     * loginNames
+     */
+    
+    private List<String> loginNames;
 
 
     /**
@@ -68,6 +73,25 @@ public class DescribeImageMembersResult extends JdcloudResult implements java.io
     }
 
 
+    /**
+    * get loginNames
+    *
+    * @return
+    */
+    public List<String> getLoginNames() {
+        return loginNames;
+    }
+
+    /**
+    * set loginNames
+    *
+    * @param loginNames
+    */
+    public void setLoginNames(List<String> loginNames) {
+        this.loginNames = loginNames;
+    }
+
+
 
     /**
     * set pins
@@ -76,6 +100,17 @@ public class DescribeImageMembersResult extends JdcloudResult implements java.io
     */
     public DescribeImageMembersResult pins(List<String> pins) {
         this.pins = pins;
+        return this;
+    }
+
+
+    /**
+    * set loginNames
+    *
+    * @param loginNames
+    */
+    public DescribeImageMembersResult loginNames(List<String> loginNames) {
+        this.loginNames = loginNames;
         return this;
     }
 
@@ -91,5 +126,17 @@ public class DescribeImageMembersResult extends JdcloudResult implements java.io
             this.pins = new ArrayList<>();
         }
         this.pins.add(pin);
+    }
+
+    /**
+     * add item to loginNames
+     *
+     * @param loginName
+     */
+    public void addLoginName(String loginName) {
+        if (this.loginNames == null) {
+            this.loginNames = new ArrayList<>();
+        }
+        this.loginNames.add(loginName);
     }
 }

@@ -40,6 +40,9 @@ import com.jdcloud.sdk.service.vm.client.DescribeInstancesCustomDataExecutor;
 import com.jdcloud.sdk.service.vm.model.CreateInstancesRequest;
 import com.jdcloud.sdk.service.vm.model.CreateInstancesResponse;
 import com.jdcloud.sdk.service.vm.client.CreateInstancesExecutor;
+import com.jdcloud.sdk.service.vm.model.SuspendInstanceRequest;
+import com.jdcloud.sdk.service.vm.model.SuspendInstanceResponse;
+import com.jdcloud.sdk.service.vm.client.SuspendInstanceExecutor;
 import com.jdcloud.sdk.service.vm.model.ShareImageRequest;
 import com.jdcloud.sdk.service.vm.model.ShareImageResponse;
 import com.jdcloud.sdk.service.vm.client.ShareImageExecutor;
@@ -85,6 +88,9 @@ import com.jdcloud.sdk.service.vm.client.DeleteKeypairExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeImageRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeImageResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeImageExecutor;
+import com.jdcloud.sdk.service.vm.model.ResumeInstanceRequest;
+import com.jdcloud.sdk.service.vm.model.ResumeInstanceResponse;
+import com.jdcloud.sdk.service.vm.client.ResumeInstanceExecutor;
 import com.jdcloud.sdk.service.vm.model.ImportKeypairRequest;
 import com.jdcloud.sdk.service.vm.model.ImportKeypairResponse;
 import com.jdcloud.sdk.service.vm.client.ImportKeypairExecutor;
@@ -160,6 +166,9 @@ import com.jdcloud.sdk.service.vm.client.ModifyInstanceAttributeExecutor;
 import com.jdcloud.sdk.service.vm.model.ResizeInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.ResizeInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.ResizeInstanceExecutor;
+import com.jdcloud.sdk.service.vm.model.ModifyInstanceReleaseTimeRequest;
+import com.jdcloud.sdk.service.vm.model.ModifyInstanceReleaseTimeResponse;
+import com.jdcloud.sdk.service.vm.client.ModifyInstanceReleaseTimeExecutor;
 import com.jdcloud.sdk.service.vm.model.DeleteImageRequest;
 import com.jdcloud.sdk.service.vm.model.DeleteImageResponse;
 import com.jdcloud.sdk.service.vm.client.DeleteImageExecutor;
@@ -324,6 +333,19 @@ public class VmClient extends JdcloudClient {
      */
     public CreateInstancesResponse createInstances(CreateInstancesRequest request) throws JdcloudSdkException {
         return new CreateInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+暂停云主机实例。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SuspendInstanceResponse suspendInstance(SuspendInstanceRequest request) throws JdcloudSdkException {
+        return new SuspendInstanceExecutor().client(this).execute(request);
     }
 
     /**
@@ -635,6 +657,19 @@ public class VmClient extends JdcloudClient {
 
     /**
      * 
+恢复云主机实例。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ResumeInstanceResponse resumeInstance(ResumeInstanceRequest request) throws JdcloudSdkException {
+        return new ResumeInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
 导入密钥。
 
 与创建密钥不同的是，导入的密钥是由用户生成的。生成之后将公钥部分导入到京东云。
@@ -655,12 +690,15 @@ public class VmClient extends JdcloudClient {
 
     /**
      * 
-镜像跨地域复制。
+镜像复制。
 
 详细操作说明请参考帮助文档：[镜像复制](https://docs.jdcloud.com/cn/virtual-machines/copy-image)
 
 ## 接口说明
-- 调用该接口将私有镜像复制到其它地域下。
+- 调用该接口可以复制私有或共享镜像。
+- 复制私有镜像时，只允许镜像拥有者进行复制。
+- 复制共享镜像时，允许共享的用户将镜像复制为私有镜像。
+- 支持同地域复制镜像。
 - 只支持云盘系统盘的镜像。
 - 不支持带有加密快照的镜像。
 
@@ -809,8 +847,7 @@ public class VmClient extends JdcloudClient {
 详细操作说明请参考帮助文档：[导入私有镜像](https://docs.jdcloud.com/cn/virtual-machines/import-private-image)
 
 ## 接口说明
-- 当前仅支持导入系统盘镜像。
-- 导入后的镜像将以 &#x60;云硬盘系统盘镜像&#x60; 格式作为私有镜像使用，同时会自动生成一个与导入镜像关联的快照。
+- 导入后的镜像将以 &#x60;云硬盘系统盘镜像&#x60; 格式作为私有镜像使用，同时会自动生成与导入镜像关联的快照。
 
      *
      * @param request
@@ -1149,6 +1186,18 @@ public class VmClient extends JdcloudClient {
     }
 
     /**
+     * 更改云主机定时删除信息。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyInstanceReleaseTimeResponse modifyInstanceReleaseTime(ModifyInstanceReleaseTimeRequest request) throws JdcloudSdkException {
+        return new ModifyInstanceReleaseTimeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 
 删除一个私有镜像。
 
@@ -1381,7 +1430,7 @@ public class VmClient extends JdcloudClient {
 - 调该接口之前实例必须处于停止 &#x60;stopped&#x60; 状态。
 - 修改VPC及子网
   - 内网IPv4：可指定或由系统分配。
-  - IPv6：如新子网支持IPv6，可选是否分配，如分配仅支持系统分配。
+  - IPv6：如新子网支持IPv6，可选是否分配，如果选择分配但不指定Ipv6地址，系统会自动分配。
   - 安全组：须指定新VPC下的安全组。
 - 不修改VPC，仅修改子网
   - 内网IPv4：可指定或由系统分配。

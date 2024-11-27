@@ -36,7 +36,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
 
     /**
      * 对实例规格的限制类型。取值范围：
-&#x60;excludes&#x60;：不支持的实例规格，当前只支持 excludes 一种数据。
+&#x60;excludes&#x60;：不支持的实例规格。
 &#x60;includes&#x60;：支持的实例规格。
 
      */
@@ -51,7 +51,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
 
     /**
      * get 对实例规格的限制类型。取值范围：
-&#x60;excludes&#x60;：不支持的实例规格，当前只支持 excludes 一种数据。
+&#x60;excludes&#x60;：不支持的实例规格。
 &#x60;includes&#x60;：支持的实例规格。
 
      *
@@ -63,7 +63,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
 
     /**
      * set 对实例规格的限制类型。取值范围：
-&#x60;excludes&#x60;：不支持的实例规格，当前只支持 excludes 一种数据。
+&#x60;excludes&#x60;：不支持的实例规格。
 &#x60;includes&#x60;：支持的实例规格。
 
      *
@@ -96,7 +96,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
 
     /**
      * set 对实例规格的限制类型。取值范围：
-&#x60;excludes&#x60;：不支持的实例规格，当前只支持 excludes 一种数据。
+&#x60;excludes&#x60;：不支持的实例规格。
 &#x60;includes&#x60;：支持的实例规格。
 
      *

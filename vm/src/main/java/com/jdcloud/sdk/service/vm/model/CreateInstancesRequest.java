@@ -66,7 +66,6 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     /**
      * 创建实例的数量，不能超过用户配额。
 取值范围：[1,100]；默认值：1。
-如果在弹性网卡中指定了内网IP地址，那么单次创建 &#x60;maxCount&#x60; 只能是 1。
 
      */
     private Integer maxCount;
@@ -76,12 +75,6 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
 
      */
     private String clientToken;
-
-    /**
-     * 是否托管实例的生命周期，默认为false；若为包年包月实例，可加入但不支持托管；该字段仅AG开启AS时生效。托管实例将在缩容或健康检查失败时被删除，非托管实例仅移出伸缩组
-
-     */
-    private Boolean isManaged;
 
     /**
      * 地域ID。
@@ -116,7 +109,6 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     /**
      * get 创建实例的数量，不能超过用户配额。
 取值范围：[1,100]；默认值：1。
-如果在弹性网卡中指定了内网IP地址，那么单次创建 &#x60;maxCount&#x60; 只能是 1。
 
      *
      * @return
@@ -128,7 +120,6 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 创建实例的数量，不能超过用户配额。
 取值范围：[1,100]；默认值：1。
-如果在弹性网卡中指定了内网IP地址，那么单次创建 &#x60;maxCount&#x60; 只能是 1。
 
      *
      * @param maxCount
@@ -156,27 +147,6 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
      */
     public void setClientToken(String clientToken) {
         this.clientToken = clientToken;
-    }
-
-
-    /**
-     * get 是否托管实例的生命周期，默认为false；若为包年包月实例，可加入但不支持托管；该字段仅AG开启AS时生效。托管实例将在缩容或健康检查失败时被删除，非托管实例仅移出伸缩组
-
-     *
-     * @return
-     */
-    public Boolean getIsManaged() {
-        return isManaged;
-    }
-
-    /**
-     * set 是否托管实例的生命周期，默认为false；若为包年包月实例，可加入但不支持托管；该字段仅AG开启AS时生效。托管实例将在缩容或健康检查失败时被删除，非托管实例仅移出伸缩组
-
-     *
-     * @param isManaged
-     */
-    public void setIsManaged(Boolean isManaged) {
-        this.isManaged = isManaged;
     }
 
 
@@ -215,7 +185,6 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 创建实例的数量，不能超过用户配额。
 取值范围：[1,100]；默认值：1。
-如果在弹性网卡中指定了内网IP地址，那么单次创建 &#x60;maxCount&#x60; 只能是 1。
 
      *
      * @param maxCount
@@ -234,18 +203,6 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
      */
     public CreateInstancesRequest clientToken(String clientToken) {
         this.clientToken = clientToken;
-        return this;
-    }
-
-
-    /**
-     * set 是否托管实例的生命周期，默认为false；若为包年包月实例，可加入但不支持托管；该字段仅AG开启AS时生效。托管实例将在缩容或健康检查失败时被删除，非托管实例仅移出伸缩组
-
-     *
-     * @param isManaged
-     */
-    public CreateInstancesRequest isManaged(Boolean isManaged) {
-        this.isManaged = isManaged;
         return this;
     }
 

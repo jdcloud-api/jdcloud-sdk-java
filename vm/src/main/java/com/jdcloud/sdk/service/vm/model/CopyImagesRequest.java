@@ -31,12 +31,15 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 
-镜像跨地域复制。
+镜像复制。
 
 详细操作说明请参考帮助文档：[镜像复制](https://docs.jdcloud.com/cn/virtual-machines/copy-image)
 
 ## 接口说明
-- 调用该接口将私有镜像复制到其它地域下。
+- 调用该接口可以复制私有或共享镜像。
+- 复制私有镜像时，只允许镜像拥有者进行复制。
+- 复制共享镜像时，允许共享的用户将镜像复制为私有镜像。
+- 支持同地域复制镜像。
 - 只支持云盘系统盘的镜像。
 - 不支持带有加密快照的镜像。
 
@@ -58,6 +61,22 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
      */
     @Required
     private String destinationRegion;
+
+    /**
+     * 复制出新镜像的名称，长度为1\~32个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
+指定该参数时，所有复制出的镜像都设置相同的名称。
+不指定该参数时，复制的镜像使用源镜像名称。
+
+     */
+    private String name;
+
+    /**
+     * 复制出新镜像的描述，不超过256个字符。
+指定该参数时，所有复制出的镜像都设置相同的描述。
+不指定该参数时，复制的镜像使用系统生成的描述信息。
+
+     */
+    private String description;
 
     /**
      * 地域ID。
@@ -107,6 +126,56 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
+     * get 复制出新镜像的名称，长度为1\~32个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
+指定该参数时，所有复制出的镜像都设置相同的名称。
+不指定该参数时，复制的镜像使用源镜像名称。
+
+     *
+     * @return
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * set 复制出新镜像的名称，长度为1\~32个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
+指定该参数时，所有复制出的镜像都设置相同的名称。
+不指定该参数时，复制的镜像使用源镜像名称。
+
+     *
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    /**
+     * get 复制出新镜像的描述，不超过256个字符。
+指定该参数时，所有复制出的镜像都设置相同的描述。
+不指定该参数时，复制的镜像使用系统生成的描述信息。
+
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 复制出新镜像的描述，不超过256个字符。
+指定该参数时，所有复制出的镜像都设置相同的描述。
+不指定该参数时，复制的镜像使用系统生成的描述信息。
+
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
+    /**
      * get 地域ID。
      *
      * @return
@@ -144,6 +213,34 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
      */
     public CopyImagesRequest destinationRegion(String destinationRegion) {
         this.destinationRegion = destinationRegion;
+        return this;
+    }
+
+
+    /**
+     * set 复制出新镜像的名称，长度为1\~32个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
+指定该参数时，所有复制出的镜像都设置相同的名称。
+不指定该参数时，复制的镜像使用源镜像名称。
+
+     *
+     * @param name
+     */
+    public CopyImagesRequest name(String name) {
+        this.name = name;
+        return this;
+    }
+
+
+    /**
+     * set 复制出新镜像的描述，不超过256个字符。
+指定该参数时，所有复制出的镜像都设置相同的描述。
+不指定该参数时，复制的镜像使用系统生成的描述信息。
+
+     *
+     * @param description
+     */
+    public CopyImagesRequest description(String description) {
+        this.description = description;
         return this;
     }
 

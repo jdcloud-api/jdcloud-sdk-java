@@ -33,7 +33,7 @@ public class CopyImage  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 跨区复制产生的目标镜像ID。
+     * 复制的新镜像ID。
      */
     private String destinationImageId;
 
@@ -45,7 +45,7 @@ public class CopyImage  implements java.io.Serializable {
 
 
     /**
-     * get 跨区复制产生的目标镜像ID。
+     * get 复制的新镜像ID。
      *
      * @return
      */
@@ -54,7 +54,7 @@ public class CopyImage  implements java.io.Serializable {
     }
 
     /**
-     * set 跨区复制产生的目标镜像ID。
+     * set 复制的新镜像ID。
      *
      * @param destinationImageId
      */
@@ -84,7 +84,7 @@ public class CopyImage  implements java.io.Serializable {
 
 
     /**
-     * set 跨区复制产生的目标镜像ID。
+     * set 复制的新镜像ID。
      *
      * @param destinationImageId
      */

@@ -80,9 +80,9 @@ public class InstanceType  implements java.io.Serializable {
     
     private List<InstanceTypeState> state;
     /**
-     * GPU配置，针对GPU类型的实例规格有效。
+     * RDMA配置，针对HPC类型的实例规格有效。
      */
-    private Gpu gpu;
+    private Rdma rdma;
 
     /**
      * 本地数据盘配置（缓存盘），针对GPU类型、或本地存储型的实例规格有效。
@@ -278,21 +278,21 @@ public class InstanceType  implements java.io.Serializable {
 
 
     /**
-     * get GPU配置，针对GPU类型的实例规格有效。
+     * get RDMA配置，针对HPC类型的实例规格有效。
      *
      * @return
      */
-    public Gpu getGpu() {
-        return gpu;
+    public Rdma getRdma() {
+        return rdma;
     }
 
     /**
-     * set GPU配置，针对GPU类型的实例规格有效。
+     * set RDMA配置，针对HPC类型的实例规格有效。
      *
-     * @param gpu
+     * @param rdma
      */
-    public void setGpu(Gpu gpu) {
-        this.gpu = gpu;
+    public void setRdma(Rdma rdma) {
+        this.rdma = rdma;
     }
 
 
@@ -473,12 +473,12 @@ public class InstanceType  implements java.io.Serializable {
 
 
     /**
-     * set GPU配置，针对GPU类型的实例规格有效。
+     * set RDMA配置，针对HPC类型的实例规格有效。
      *
-     * @param gpu
+     * @param rdma
      */
-    public InstanceType gpu(Gpu gpu) {
-        this.gpu = gpu;
+    public InstanceType rdma(Rdma rdma) {
+        this.rdma = rdma;
         return this;
     }
 

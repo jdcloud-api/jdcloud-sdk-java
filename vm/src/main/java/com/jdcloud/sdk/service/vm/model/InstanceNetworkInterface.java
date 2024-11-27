@@ -26,7 +26,6 @@ package com.jdcloud.sdk.service.vm.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.vpc.model.NetworkInterfacePrivateIp;
 
 /**
  * 云主机弹性网卡设备详细配置。
@@ -75,6 +74,11 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
      */
     
     private List<NetworkInterfacePrivateIp> secondaryIps;
+    /**
+     * 弹性网卡的ipv6地址对象列表。
+     */
+    
+    private List<NetworkInterfaceIpv6Address> ipv6Addresses;
 
 
     /**
@@ -229,6 +233,25 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
 
+    /**
+    * get 弹性网卡的ipv6地址对象列表。
+    *
+    * @return
+    */
+    public List<NetworkInterfaceIpv6Address> getIpv6Addresses() {
+        return ipv6Addresses;
+    }
+
+    /**
+    * set 弹性网卡的ipv6地址对象列表。
+    *
+    * @param ipv6Addresses
+    */
+    public void setIpv6Addresses(List<NetworkInterfaceIpv6Address> ipv6Addresses) {
+        this.ipv6Addresses = ipv6Addresses;
+    }
+
+
 
     /**
      * set 弹性网卡ID。
@@ -318,6 +341,17 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
 
+    /**
+    * set 弹性网卡的ipv6地址对象列表。
+    *
+    * @param ipv6Addresses
+    */
+    public InstanceNetworkInterface ipv6Addresses(List<NetworkInterfaceIpv6Address> ipv6Addresses) {
+        this.ipv6Addresses = ipv6Addresses;
+        return this;
+    }
+
+
 
     /**
      * add item to securityGroups
@@ -341,5 +375,17 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
             this.secondaryIps = new ArrayList<>();
         }
         this.secondaryIps.add(secondaryIp);
+    }
+
+    /**
+     * add item to 弹性网卡的ipv6地址对象列表。
+     *
+     * @param ipv6Addresse
+     */
+    public void addIpv6Addresse(NetworkInterfaceIpv6Address ipv6Addresse) {
+        if (this.ipv6Addresses == null) {
+            this.ipv6Addresses = new ArrayList<>();
+        }
+        this.ipv6Addresses.add(ipv6Addresse);
     }
 }

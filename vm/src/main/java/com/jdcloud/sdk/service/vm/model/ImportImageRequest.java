@@ -24,7 +24,10 @@
 
 package com.jdcloud.sdk.service.vm.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.vm.model.DataDiskSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -34,8 +37,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 详细操作说明请参考帮助文档：[导入私有镜像](https://docs.jdcloud.com/cn/virtual-machines/import-private-image)
 
 ## 接口说明
-- 当前仅支持导入系统盘镜像。
-- 导入后的镜像将以 &#x60;云硬盘系统盘镜像&#x60; 格式作为私有镜像使用，同时会自动生成一个与导入镜像关联的快照。
+- 导入后的镜像将以 &#x60;云硬盘系统盘镜像&#x60; 格式作为私有镜像使用，同时会自动生成与导入镜像关联的快照。
 
  */
 public class ImportImageRequest extends JdcloudRequest implements java.io.Serializable {
@@ -109,9 +111,20 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
     private Boolean forceImport;
 
     /**
+     * 云盘快照信息。
+
+     */
+    
+    private List<DataDiskSpec> dataDisks;
+    /**
      * 用户导出镜像的幂等性保证。每次导出请传入不同的值，如果传值与某次的clientToken相同，则返还同一个请求结果，不能超过64个字符。
      */
     private String clientToken;
+
+    /**
+     * 镜像启动模式，默认bios，支持范围：&#x60;bios&#x60;、&#x60;uefi&#x60;。
+     */
+    private String bootMode;
 
     /**
      * 地域ID。
@@ -317,6 +330,27 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
+    * get 云盘快照信息。
+
+    *
+    * @return
+    */
+    public List<DataDiskSpec> getDataDisks() {
+        return dataDisks;
+    }
+
+    /**
+    * set 云盘快照信息。
+
+    *
+    * @param dataDisks
+    */
+    public void setDataDisks(List<DataDiskSpec> dataDisks) {
+        this.dataDisks = dataDisks;
+    }
+
+
+    /**
      * get 用户导出镜像的幂等性保证。每次导出请传入不同的值，如果传值与某次的clientToken相同，则返还同一个请求结果，不能超过64个字符。
      *
      * @return
@@ -332,6 +366,25 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
      */
     public void setClientToken(String clientToken) {
         this.clientToken = clientToken;
+    }
+
+
+    /**
+     * get 镜像启动模式，默认bios，支持范围：&#x60;bios&#x60;、&#x60;uefi&#x60;。
+     *
+     * @return
+     */
+    public String getBootMode() {
+        return bootMode;
+    }
+
+    /**
+     * set 镜像启动模式，默认bios，支持范围：&#x60;bios&#x60;、&#x60;uefi&#x60;。
+     *
+     * @param bootMode
+     */
+    public void setBootMode(String bootMode) {
+        this.bootMode = bootMode;
     }
 
 
@@ -468,12 +521,35 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
+    * set 云盘快照信息。
+
+    *
+    * @param dataDisks
+    */
+    public ImportImageRequest dataDisks(List<DataDiskSpec> dataDisks) {
+        this.dataDisks = dataDisks;
+        return this;
+    }
+
+
+    /**
      * set 用户导出镜像的幂等性保证。每次导出请传入不同的值，如果传值与某次的clientToken相同，则返还同一个请求结果，不能超过64个字符。
      *
      * @param clientToken
      */
     public ImportImageRequest clientToken(String clientToken) {
         this.clientToken = clientToken;
+        return this;
+    }
+
+
+    /**
+     * set 镜像启动模式，默认bios，支持范围：&#x60;bios&#x60;、&#x60;uefi&#x60;。
+     *
+     * @param bootMode
+     */
+    public ImportImageRequest bootMode(String bootMode) {
+        this.bootMode = bootMode;
         return this;
     }
 
@@ -489,4 +565,17 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
+    /**
+     * add item to 云盘快照信息。
+
+     *
+     * @param dataDisk
+     */
+    public void addDataDisk(DataDiskSpec dataDisk) {
+        if (this.dataDisks == null) {
+            this.dataDisks = new ArrayList<>();
+        }
+        this.dataDisks.add(dataDisk);
+    }
 }

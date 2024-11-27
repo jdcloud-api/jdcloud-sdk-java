@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.vm.model;
 
-import com.jdcloud.sdk.service.vpc.model.NetworkInterfaceSpec;
 
 /**
  * 云主机实例弹性网卡挂载点配置信息。

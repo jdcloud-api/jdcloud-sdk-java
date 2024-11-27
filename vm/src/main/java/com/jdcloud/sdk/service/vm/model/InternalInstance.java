@@ -100,6 +100,11 @@ public class InternalInstance  implements java.io.Serializable {
     
     private List<BriefInstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces;
     /**
+     * RDMA网卡配置列表。
+     */
+    
+    private List<RdmaNetworkInterface> rdmaNetworkInterfaces;
+    /**
      * 云主机实例的创建时间。
      */
     private String launchTime;
@@ -143,6 +148,11 @@ public class InternalInstance  implements java.io.Serializable {
     private CpuTopology cpuTopology;
 
     /**
+     * 云主机所属的主机组信息
+     */
+    private HostGroup hostGroup;
+
+    /**
      * 实例所在的物理机IP地址。
      */
     private String hostIp;
@@ -156,6 +166,16 @@ public class InternalInstance  implements java.io.Serializable {
      * 实例所在的逻辑机架信息
      */
     private String tor;
+
+    /**
+     * 启动模式，支持 bios uefi
+     */
+    private String bootMode;
+
+    /**
+     * 定时删除时间，例如:&quot;2025-01-01 00:00:00&quot;。
+     */
+    private String autoReleaseTime;
 
 
 
@@ -407,6 +427,25 @@ public class InternalInstance  implements java.io.Serializable {
 
 
     /**
+    * get RDMA网卡配置列表。
+    *
+    * @return
+    */
+    public List<RdmaNetworkInterface> getRdmaNetworkInterfaces() {
+        return rdmaNetworkInterfaces;
+    }
+
+    /**
+    * set RDMA网卡配置列表。
+    *
+    * @param rdmaNetworkInterfaces
+    */
+    public void setRdmaNetworkInterfaces(List<RdmaNetworkInterface> rdmaNetworkInterfaces) {
+        this.rdmaNetworkInterfaces = rdmaNetworkInterfaces;
+    }
+
+
+    /**
      * get 云主机实例的创建时间。
      *
      * @return
@@ -565,6 +604,25 @@ public class InternalInstance  implements java.io.Serializable {
 
 
     /**
+     * get 云主机所属的主机组信息
+     *
+     * @return
+     */
+    public HostGroup getHostGroup() {
+        return hostGroup;
+    }
+
+    /**
+     * set 云主机所属的主机组信息
+     *
+     * @param hostGroup
+     */
+    public void setHostGroup(HostGroup hostGroup) {
+        this.hostGroup = hostGroup;
+    }
+
+
+    /**
      * get 实例所在的物理机IP地址。
      *
      * @return
@@ -618,6 +676,44 @@ public class InternalInstance  implements java.io.Serializable {
      */
     public void setTor(String tor) {
         this.tor = tor;
+    }
+
+
+    /**
+     * get 启动模式，支持 bios uefi
+     *
+     * @return
+     */
+    public String getBootMode() {
+        return bootMode;
+    }
+
+    /**
+     * set 启动模式，支持 bios uefi
+     *
+     * @param bootMode
+     */
+    public void setBootMode(String bootMode) {
+        this.bootMode = bootMode;
+    }
+
+
+    /**
+     * get 定时删除时间，例如:&quot;2025-01-01 00:00:00&quot;。
+     *
+     * @return
+     */
+    public String getAutoReleaseTime() {
+        return autoReleaseTime;
+    }
+
+    /**
+     * set 定时删除时间，例如:&quot;2025-01-01 00:00:00&quot;。
+     *
+     * @param autoReleaseTime
+     */
+    public void setAutoReleaseTime(String autoReleaseTime) {
+        this.autoReleaseTime = autoReleaseTime;
     }
 
 
@@ -766,6 +862,17 @@ public class InternalInstance  implements java.io.Serializable {
 
 
     /**
+    * set RDMA网卡配置列表。
+    *
+    * @param rdmaNetworkInterfaces
+    */
+    public InternalInstance rdmaNetworkInterfaces(List<RdmaNetworkInterface> rdmaNetworkInterfaces) {
+        this.rdmaNetworkInterfaces = rdmaNetworkInterfaces;
+        return this;
+    }
+
+
+    /**
      * set 云主机实例的创建时间。
      *
      * @param launchTime
@@ -857,6 +964,17 @@ public class InternalInstance  implements java.io.Serializable {
 
 
     /**
+     * set 云主机所属的主机组信息
+     *
+     * @param hostGroup
+     */
+    public InternalInstance hostGroup(HostGroup hostGroup) {
+        this.hostGroup = hostGroup;
+        return this;
+    }
+
+
+    /**
      * set 实例所在的物理机IP地址。
      *
      * @param hostIp
@@ -889,6 +1007,28 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 启动模式，支持 bios uefi
+     *
+     * @param bootMode
+     */
+    public InternalInstance bootMode(String bootMode) {
+        this.bootMode = bootMode;
+        return this;
+    }
+
+
+    /**
+     * set 定时删除时间，例如:&quot;2025-01-01 00:00:00&quot;。
+     *
+     * @param autoReleaseTime
+     */
+    public InternalInstance autoReleaseTime(String autoReleaseTime) {
+        this.autoReleaseTime = autoReleaseTime;
+        return this;
+    }
+
+
 
     /**
      * add item to 数据盘配置列表。
@@ -912,6 +1052,18 @@ public class InternalInstance  implements java.io.Serializable {
             this.secondaryNetworkInterfaces = new ArrayList<>();
         }
         this.secondaryNetworkInterfaces.add(secondaryNetworkInterface);
+    }
+
+    /**
+     * add item to RDMA网卡配置列表。
+     *
+     * @param rdmaNetworkInterface
+     */
+    public void addRdmaNetworkInterface(RdmaNetworkInterface rdmaNetworkInterface) {
+        if (this.rdmaNetworkInterfaces == null) {
+            this.rdmaNetworkInterfaces = new ArrayList<>();
+        }
+        this.rdmaNetworkInterfaces.add(rdmaNetworkInterface);
     }
 
     /**

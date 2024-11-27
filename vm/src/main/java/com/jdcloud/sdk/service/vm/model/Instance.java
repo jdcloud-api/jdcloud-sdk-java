@@ -116,6 +116,11 @@ public class Instance  implements java.io.Serializable {
     
     private List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces;
     /**
+     * RDMA网卡配置列表。
+     */
+    
+    private List<RdmaNetworkInterface> rdmaNetworkInterfaces;
+    /**
      * 云主机实例的创建时间。
      */
     private String launchTime;
@@ -134,6 +139,11 @@ public class Instance  implements java.io.Serializable {
      * 云主机的计费信息。
      */
     private Charge charge;
+
+    /**
+     * 云主机使用镜像的计费配置与信息。
+     */
+    private ImageCharge imageCharge;
 
     /**
      * 抢占实例状态机
@@ -212,6 +222,21 @@ public class Instance  implements java.io.Serializable {
      * 架构信息，如x86_64
      */
     private String architecture;
+
+    /**
+     * 主机组详情
+     */
+    private HostGroup hostGroup;
+
+    /**
+     * 定时删除时间，例如:&quot;2025-01-01 00:00:00&quot;
+     */
+    private String autoReleaseTime;
+
+    /**
+     * 启动模式，支持 bios uefi
+     */
+    private String bootMode;
 
 
 
@@ -520,6 +545,25 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
+    * get RDMA网卡配置列表。
+    *
+    * @return
+    */
+    public List<RdmaNetworkInterface> getRdmaNetworkInterfaces() {
+        return rdmaNetworkInterfaces;
+    }
+
+    /**
+    * set RDMA网卡配置列表。
+    *
+    * @param rdmaNetworkInterfaces
+    */
+    public void setRdmaNetworkInterfaces(List<RdmaNetworkInterface> rdmaNetworkInterfaces) {
+        this.rdmaNetworkInterfaces = rdmaNetworkInterfaces;
+    }
+
+
+    /**
      * get 云主机实例的创建时间。
      *
      * @return
@@ -592,6 +636,25 @@ public class Instance  implements java.io.Serializable {
      */
     public void setCharge(Charge charge) {
         this.charge = charge;
+    }
+
+
+    /**
+     * get 云主机使用镜像的计费配置与信息。
+     *
+     * @return
+     */
+    public ImageCharge getImageCharge() {
+        return imageCharge;
+    }
+
+    /**
+     * set 云主机使用镜像的计费配置与信息。
+     *
+     * @param imageCharge
+     */
+    public void setImageCharge(ImageCharge imageCharge) {
+        this.imageCharge = imageCharge;
     }
 
 
@@ -886,6 +949,63 @@ public class Instance  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 主机组详情
+     *
+     * @return
+     */
+    public HostGroup getHostGroup() {
+        return hostGroup;
+    }
+
+    /**
+     * set 主机组详情
+     *
+     * @param hostGroup
+     */
+    public void setHostGroup(HostGroup hostGroup) {
+        this.hostGroup = hostGroup;
+    }
+
+
+    /**
+     * get 定时删除时间，例如:&quot;2025-01-01 00:00:00&quot;
+     *
+     * @return
+     */
+    public String getAutoReleaseTime() {
+        return autoReleaseTime;
+    }
+
+    /**
+     * set 定时删除时间，例如:&quot;2025-01-01 00:00:00&quot;
+     *
+     * @param autoReleaseTime
+     */
+    public void setAutoReleaseTime(String autoReleaseTime) {
+        this.autoReleaseTime = autoReleaseTime;
+    }
+
+
+    /**
+     * get 启动模式，支持 bios uefi
+     *
+     * @return
+     */
+    public String getBootMode() {
+        return bootMode;
+    }
+
+    /**
+     * set 启动模式，支持 bios uefi
+     *
+     * @param bootMode
+     */
+    public void setBootMode(String bootMode) {
+        this.bootMode = bootMode;
+    }
+
+
 
     /**
      * set 云主机ID。
@@ -1064,6 +1184,17 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
+    * set RDMA网卡配置列表。
+    *
+    * @param rdmaNetworkInterfaces
+    */
+    public Instance rdmaNetworkInterfaces(List<RdmaNetworkInterface> rdmaNetworkInterfaces) {
+        this.rdmaNetworkInterfaces = rdmaNetworkInterfaces;
+        return this;
+    }
+
+
+    /**
      * set 云主机实例的创建时间。
      *
      * @param launchTime
@@ -1103,6 +1234,17 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance charge(Charge charge) {
         this.charge = charge;
+        return this;
+    }
+
+
+    /**
+     * set 云主机使用镜像的计费配置与信息。
+     *
+     * @param imageCharge
+     */
+    public Instance imageCharge(ImageCharge imageCharge) {
+        this.imageCharge = imageCharge;
         return this;
     }
 
@@ -1275,6 +1417,39 @@ public class Instance  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 主机组详情
+     *
+     * @param hostGroup
+     */
+    public Instance hostGroup(HostGroup hostGroup) {
+        this.hostGroup = hostGroup;
+        return this;
+    }
+
+
+    /**
+     * set 定时删除时间，例如:&quot;2025-01-01 00:00:00&quot;
+     *
+     * @param autoReleaseTime
+     */
+    public Instance autoReleaseTime(String autoReleaseTime) {
+        this.autoReleaseTime = autoReleaseTime;
+        return this;
+    }
+
+
+    /**
+     * set 启动模式，支持 bios uefi
+     *
+     * @param bootMode
+     */
+    public Instance bootMode(String bootMode) {
+        this.bootMode = bootMode;
+        return this;
+    }
+
+
 
     /**
      * add item to 数据盘配置列表。
@@ -1298,6 +1473,18 @@ public class Instance  implements java.io.Serializable {
             this.secondaryNetworkInterfaces = new ArrayList<>();
         }
         this.secondaryNetworkInterfaces.add(secondaryNetworkInterface);
+    }
+
+    /**
+     * add item to RDMA网卡配置列表。
+     *
+     * @param rdmaNetworkInterface
+     */
+    public void addRdmaNetworkInterface(RdmaNetworkInterface rdmaNetworkInterface) {
+        if (this.rdmaNetworkInterfaces == null) {
+            this.rdmaNetworkInterfaces = new ArrayList<>();
+        }
+        this.rdmaNetworkInterfaces.add(rdmaNetworkInterface);
     }
 
     /**

@@ -46,12 +46,15 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * 共享的目标京东云帐户列表。
-     * Required:true
+     * 共享的目标用户pin列表。
      */
-    @Required
     
     private List<String> pins;
+    /**
+     * 共享的目标京东云帐户列表。
+     */
+    
+    private List<String> loginNames;
     /**
      * 地域ID。
      * Required:true
@@ -69,7 +72,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-    * get 共享的目标京东云帐户列表。
+    * get 共享的目标用户pin列表。
     *
     * @return
     */
@@ -78,12 +81,31 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-    * set 共享的目标京东云帐户列表。
+    * set 共享的目标用户pin列表。
     *
     * @param pins
     */
     public void setPins(List<String> pins) {
         this.pins = pins;
+    }
+
+
+    /**
+    * get 共享的目标京东云帐户列表。
+    *
+    * @return
+    */
+    public List<String> getLoginNames() {
+        return loginNames;
+    }
+
+    /**
+    * set 共享的目标京东云帐户列表。
+    *
+    * @param loginNames
+    */
+    public void setLoginNames(List<String> loginNames) {
+        this.loginNames = loginNames;
     }
 
 
@@ -127,12 +149,23 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-    * set 共享的目标京东云帐户列表。
+    * set 共享的目标用户pin列表。
     *
     * @param pins
     */
     public ShareImageRequest pins(List<String> pins) {
         this.pins = pins;
+        return this;
+    }
+
+
+    /**
+    * set 共享的目标京东云帐户列表。
+    *
+    * @param loginNames
+    */
+    public ShareImageRequest loginNames(List<String> loginNames) {
+        this.loginNames = loginNames;
         return this;
     }
 
@@ -161,7 +194,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * add item to 共享的目标京东云帐户列表。
+     * add item to 共享的目标用户pin列表。
      *
      * @param pin
      */
@@ -170,5 +203,17 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
             this.pins = new ArrayList<>();
         }
         this.pins.add(pin);
+    }
+
+    /**
+     * add item to 共享的目标京东云帐户列表。
+     *
+     * @param loginName
+     */
+    public void addLoginName(String loginName) {
+        if (this.loginNames == null) {
+            this.loginNames = new ArrayList<>();
+        }
+        this.loginNames.add(loginName);
     }
 }

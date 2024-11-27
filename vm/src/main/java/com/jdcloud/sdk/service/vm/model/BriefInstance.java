@@ -110,6 +110,11 @@ public class BriefInstance  implements java.io.Serializable {
     private String az;
 
     /**
+     * 云主机所在逻辑可用区。
+     */
+    private String pAz;
+
+    /**
      * 云主机使用的密钥对名称。
      */
     
@@ -141,6 +146,16 @@ public class BriefInstance  implements java.io.Serializable {
      * 虚机CPU拓扑
      */
     private CpuTopology cpuTopology;
+
+    /**
+     * 启动模式支持，取值范围[bios uefi]。
+     */
+    private String bootMode;
+
+    /**
+     * 定时删除时间，例如:&quot;2025-01-01 00:00:00&quot;。
+     */
+    private String autoReleaseTime;
 
 
 
@@ -430,6 +445,25 @@ public class BriefInstance  implements java.io.Serializable {
 
 
     /**
+     * get 云主机所在逻辑可用区。
+     *
+     * @return
+     */
+    public String getPAz() {
+        return pAz;
+    }
+
+    /**
+     * set 云主机所在逻辑可用区。
+     *
+     * @param pAz
+     */
+    public void setPAz(String pAz) {
+        this.pAz = pAz;
+    }
+
+
+    /**
     * get 云主机使用的密钥对名称。
     *
     * @return
@@ -546,6 +580,44 @@ public class BriefInstance  implements java.io.Serializable {
      */
     public void setCpuTopology(CpuTopology cpuTopology) {
         this.cpuTopology = cpuTopology;
+    }
+
+
+    /**
+     * get 启动模式支持，取值范围[bios uefi]。
+     *
+     * @return
+     */
+    public String getBootMode() {
+        return bootMode;
+    }
+
+    /**
+     * set 启动模式支持，取值范围[bios uefi]。
+     *
+     * @param bootMode
+     */
+    public void setBootMode(String bootMode) {
+        this.bootMode = bootMode;
+    }
+
+
+    /**
+     * get 定时删除时间，例如:&quot;2025-01-01 00:00:00&quot;。
+     *
+     * @return
+     */
+    public String getAutoReleaseTime() {
+        return autoReleaseTime;
+    }
+
+    /**
+     * set 定时删除时间，例如:&quot;2025-01-01 00:00:00&quot;。
+     *
+     * @param autoReleaseTime
+     */
+    public void setAutoReleaseTime(String autoReleaseTime) {
+        this.autoReleaseTime = autoReleaseTime;
     }
 
 
@@ -716,6 +788,17 @@ public class BriefInstance  implements java.io.Serializable {
 
 
     /**
+     * set 云主机所在逻辑可用区。
+     *
+     * @param pAz
+     */
+    public BriefInstance pAz(String pAz) {
+        this.pAz = pAz;
+        return this;
+    }
+
+
+    /**
     * set 云主机使用的密钥对名称。
     *
     * @param keyNames
@@ -780,6 +863,28 @@ public class BriefInstance  implements java.io.Serializable {
      */
     public BriefInstance cpuTopology(CpuTopology cpuTopology) {
         this.cpuTopology = cpuTopology;
+        return this;
+    }
+
+
+    /**
+     * set 启动模式支持，取值范围[bios uefi]。
+     *
+     * @param bootMode
+     */
+    public BriefInstance bootMode(String bootMode) {
+        this.bootMode = bootMode;
+        return this;
+    }
+
+
+    /**
+     * set 定时删除时间，例如:&quot;2025-01-01 00:00:00&quot;。
+     *
+     * @param autoReleaseTime
+     */
+    public BriefInstance autoReleaseTime(String autoReleaseTime) {
+        this.autoReleaseTime = autoReleaseTime;
         return this;
     }
 

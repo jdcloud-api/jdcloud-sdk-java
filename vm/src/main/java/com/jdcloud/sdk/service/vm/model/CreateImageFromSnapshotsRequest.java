@@ -94,6 +94,14 @@ public class CreateImageFromSnapshotsRequest extends JdcloudRequest implements j
     private String clientToken;
 
     /**
+     * 启动模式，支持uefi、bios。   
+
+     * Required:true
+     */
+    @Required
+    private String bootMode;
+
+    /**
      * 地域ID。
      * Required:true
      */
@@ -250,6 +258,27 @@ public class CreateImageFromSnapshotsRequest extends JdcloudRequest implements j
 
 
     /**
+     * get 启动模式，支持uefi、bios。   
+
+     *
+     * @return
+     */
+    public String getBootMode() {
+        return bootMode;
+    }
+
+    /**
+     * set 启动模式，支持uefi、bios。   
+
+     *
+     * @param bootMode
+     */
+    public void setBootMode(String bootMode) {
+        this.bootMode = bootMode;
+    }
+
+
+    /**
      * get 地域ID。
      *
      * @return
@@ -349,6 +378,18 @@ public class CreateImageFromSnapshotsRequest extends JdcloudRequest implements j
      */
     public CreateImageFromSnapshotsRequest clientToken(String clientToken) {
         this.clientToken = clientToken;
+        return this;
+    }
+
+
+    /**
+     * set 启动模式，支持uefi、bios。   
+
+     *
+     * @param bootMode
+     */
+    public CreateImageFromSnapshotsRequest bootMode(String bootMode) {
+        this.bootMode = bootMode;
         return this;
     }
 

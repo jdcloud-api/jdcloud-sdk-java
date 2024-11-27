@@ -108,6 +108,11 @@ public class Image  implements java.io.Serializable {
     private String ownerPin;
 
     /**
+     * 该镜像拥有者的用户云账号。
+     */
+    private String loginName;
+
+    /**
      * 镜像的使用权限。取值范围：
 &#x60;all&#x60;：没有限制，所有人均可以使用。
 &#x60;specifiedUsers&#x60;：只有共享用户可以使用。
@@ -163,6 +168,21 @@ public class Image  implements java.io.Serializable {
      * 镜像过期时间，空表示永久有效。
      */
     private String expiredTime;
+
+    /**
+     * 实例Id
+     */
+    private String instanceId;
+
+    /**
+     * 启动模式，默认bios
+     */
+    private String bootMode;
+
+    /**
+     * 镜像计费配置。
+     */
+    private ImageChargeInfo chargeInfo;
 
 
 
@@ -430,6 +450,25 @@ public class Image  implements java.io.Serializable {
 
 
     /**
+     * get 该镜像拥有者的用户云账号。
+     *
+     * @return
+     */
+    public String getLoginName() {
+        return loginName;
+    }
+
+    /**
+     * set 该镜像拥有者的用户云账号。
+     *
+     * @param loginName
+     */
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
+    }
+
+
+    /**
      * get 镜像的使用权限。取值范围：
 &#x60;all&#x60;：没有限制，所有人均可以使用。
 &#x60;specifiedUsers&#x60;：只有共享用户可以使用。
@@ -633,6 +672,63 @@ public class Image  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 实例Id
+     *
+     * @return
+     */
+    public String getInstanceId() {
+        return instanceId;
+    }
+
+    /**
+     * set 实例Id
+     *
+     * @param instanceId
+     */
+    public void setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+    }
+
+
+    /**
+     * get 启动模式，默认bios
+     *
+     * @return
+     */
+    public String getBootMode() {
+        return bootMode;
+    }
+
+    /**
+     * set 启动模式，默认bios
+     *
+     * @param bootMode
+     */
+    public void setBootMode(String bootMode) {
+        this.bootMode = bootMode;
+    }
+
+
+    /**
+     * get 镜像计费配置。
+     *
+     * @return
+     */
+    public ImageChargeInfo getChargeInfo() {
+        return chargeInfo;
+    }
+
+    /**
+     * set 镜像计费配置。
+     *
+     * @param chargeInfo
+     */
+    public void setChargeInfo(ImageChargeInfo chargeInfo) {
+        this.chargeInfo = chargeInfo;
+    }
+
+
 
     /**
      * set 镜像ID。
@@ -786,6 +882,17 @@ public class Image  implements java.io.Serializable {
 
 
     /**
+     * set 该镜像拥有者的用户云账号。
+     *
+     * @param loginName
+     */
+    public Image loginName(String loginName) {
+        this.loginName = loginName;
+        return this;
+    }
+
+
+    /**
      * set 镜像的使用权限。取值范围：
 &#x60;all&#x60;：没有限制，所有人均可以使用。
 &#x60;specifiedUsers&#x60;：只有共享用户可以使用。
@@ -898,6 +1005,39 @@ public class Image  implements java.io.Serializable {
      */
     public Image expiredTime(String expiredTime) {
         this.expiredTime = expiredTime;
+        return this;
+    }
+
+
+    /**
+     * set 实例Id
+     *
+     * @param instanceId
+     */
+    public Image instanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+
+
+    /**
+     * set 启动模式，默认bios
+     *
+     * @param bootMode
+     */
+    public Image bootMode(String bootMode) {
+        this.bootMode = bootMode;
+        return this;
+    }
+
+
+    /**
+     * set 镜像计费配置。
+     *
+     * @param chargeInfo
+     */
+    public Image chargeInfo(ImageChargeInfo chargeInfo) {
+        this.chargeInfo = chargeInfo;
         return this;
     }
 
