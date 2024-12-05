@@ -58,6 +58,7 @@ public class BackSourceAddress  implements java.io.Serializable {
     private String replaceKeySuffixWith;
 
 
+
     /**
      * get 地址协议, 如http
      *
@@ -75,6 +76,7 @@ public class BackSourceAddress  implements java.io.Serializable {
     public void setProtocol(String protocol) {
         this.protocol = protocol;
     }
+
 
     /**
      * get 域名
@@ -94,6 +96,7 @@ public class BackSourceAddress  implements java.io.Serializable {
         this.hostName = hostName;
     }
 
+
     /**
      * get 将前缀替换为指定的内容
      *
@@ -112,6 +115,7 @@ public class BackSourceAddress  implements java.io.Serializable {
         this.replaceKeyPrefixWith = replaceKeyPrefixWith;
     }
 
+
     /**
      * get 将key替换为指定内容
      *
@@ -129,6 +133,7 @@ public class BackSourceAddress  implements java.io.Serializable {
     public void setReplaceKeyWith(String replaceKeyWith) {
         this.replaceKeyWith = replaceKeyWith;
     }
+
 
     /**
      * get 将后缀替换为指定的内容
@@ -149,6 +154,7 @@ public class BackSourceAddress  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 地址协议, 如http
      *
@@ -158,6 +164,7 @@ public class BackSourceAddress  implements java.io.Serializable {
         this.protocol = protocol;
         return this;
     }
+
 
     /**
      * set 域名
@@ -169,6 +176,7 @@ public class BackSourceAddress  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 将前缀替换为指定的内容
      *
@@ -179,6 +187,7 @@ public class BackSourceAddress  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 将key替换为指定内容
      *
@@ -188,6 +197,7 @@ public class BackSourceAddress  implements java.io.Serializable {
         this.replaceKeyWith = replaceKeyWith;
         return this;
     }
+
 
     /**
      * set 将后缀替换为指定的内容

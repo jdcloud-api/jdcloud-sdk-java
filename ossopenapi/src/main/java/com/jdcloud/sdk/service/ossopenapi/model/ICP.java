@@ -38,6 +38,7 @@ public class ICP  implements java.io.Serializable {
     private Boolean icp;
 
 
+
     /**
      * get true为备案，false为未备案
      *
@@ -55,6 +56,7 @@ public class ICP  implements java.io.Serializable {
     public void setIcp(Boolean icp) {
         this.icp = icp;
     }
+
 
 
     /**

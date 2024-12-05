@@ -39,31 +39,33 @@ public class ListHistoricalReplicatTasksResult extends JdcloudResult implements 
     /**
      * historyReplicationTaskInfoList
      */
+    
     private List<HistoryReplicationTaskInfo> historyReplicationTaskInfoList;
-
     /**
      * 下次查询开始的object
      */
     private String nextMarker;
 
 
+
     /**
-     * get historyReplicationTaskInfoList
-     *
-     * @return
-     */
+    * get historyReplicationTaskInfoList
+    *
+    * @return
+    */
     public List<HistoryReplicationTaskInfo> getHistoryReplicationTaskInfoList() {
         return historyReplicationTaskInfoList;
     }
 
     /**
-     * set historyReplicationTaskInfoList
-     *
-     * @param historyReplicationTaskInfoList
-     */
+    * set historyReplicationTaskInfoList
+    *
+    * @param historyReplicationTaskInfoList
+    */
     public void setHistoryReplicationTaskInfoList(List<HistoryReplicationTaskInfo> historyReplicationTaskInfoList) {
         this.historyReplicationTaskInfoList = historyReplicationTaskInfoList;
     }
+
 
     /**
      * get 下次查询开始的object
@@ -84,15 +86,17 @@ public class ListHistoricalReplicatTasksResult extends JdcloudResult implements 
     }
 
 
+
     /**
-     * set historyReplicationTaskInfoList
-     *
-     * @param historyReplicationTaskInfoList
-     */
+    * set historyReplicationTaskInfoList
+    *
+    * @param historyReplicationTaskInfoList
+    */
     public ListHistoricalReplicatTasksResult historyReplicationTaskInfoList(List<HistoryReplicationTaskInfo> historyReplicationTaskInfoList) {
         this.historyReplicationTaskInfoList = historyReplicationTaskInfoList;
         return this;
     }
+
 
     /**
      * set 下次查询开始的object
@@ -103,6 +107,7 @@ public class ListHistoricalReplicatTasksResult extends JdcloudResult implements 
         this.nextMarker = nextMarker;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class ListHistoricalReplicatTasksResult extends JdcloudResult implements 
         }
         this.historyReplicationTaskInfoList.add(historyReplicationTaskInfoList);
     }
-
 }

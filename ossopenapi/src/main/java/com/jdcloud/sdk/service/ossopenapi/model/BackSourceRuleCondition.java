@@ -43,6 +43,7 @@ public class BackSourceRuleCondition  implements java.io.Serializable {
     private Integer httpErrorCodeReturnedEquals;
 
 
+
     /**
      * get 当前缀为指定的前缀时开启回源
      *
@@ -60,6 +61,7 @@ public class BackSourceRuleCondition  implements java.io.Serializable {
     public void setKeyPrefixEquals(String keyPrefixEquals) {
         this.keyPrefixEquals = keyPrefixEquals;
     }
+
 
     /**
      * get 当http错误码为指定错误码时开启回源
@@ -80,6 +82,7 @@ public class BackSourceRuleCondition  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 当前缀为指定的前缀时开启回源
      *
@@ -89,6 +92,7 @@ public class BackSourceRuleCondition  implements java.io.Serializable {
         this.keyPrefixEquals = keyPrefixEquals;
         return this;
     }
+
 
     /**
      * set 当http错误码为指定错误码时开启回源

@@ -56,6 +56,7 @@ public class AbortHistoricalReplicatTaskRequest extends JdcloudRequest implement
     private String taskId;
 
 
+
     /**
      * get 区域ID
      *
@@ -74,6 +75,7 @@ public class AbortHistoricalReplicatTaskRequest extends JdcloudRequest implement
         this.regionId = regionId;
     }
 
+
     /**
      * get Bucket名称
      *
@@ -91,6 +93,7 @@ public class AbortHistoricalReplicatTaskRequest extends JdcloudRequest implement
     public void setBucketName(String bucketName) {
         this.bucketName = bucketName;
     }
+
 
     /**
      * get 任务ID
@@ -111,6 +114,7 @@ public class AbortHistoricalReplicatTaskRequest extends JdcloudRequest implement
     }
 
 
+
     /**
      * set 区域ID
      *
@@ -121,6 +125,7 @@ public class AbortHistoricalReplicatTaskRequest extends JdcloudRequest implement
         return this;
     }
 
+
     /**
      * set Bucket名称
      *
@@ -130,6 +135,7 @@ public class AbortHistoricalReplicatTaskRequest extends JdcloudRequest implement
         this.bucketName = bucketName;
         return this;
     }
+
 
     /**
      * set 任务ID

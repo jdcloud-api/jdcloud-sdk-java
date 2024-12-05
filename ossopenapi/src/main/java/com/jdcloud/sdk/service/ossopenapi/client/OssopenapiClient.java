@@ -40,6 +40,9 @@ import com.jdcloud.sdk.service.ossopenapi.client.ListHistoricalReplicatTasksExec
 import com.jdcloud.sdk.service.ossopenapi.model.GetHistoricalReplicatTaskRequest;
 import com.jdcloud.sdk.service.ossopenapi.model.GetHistoricalReplicatTaskResponse;
 import com.jdcloud.sdk.service.ossopenapi.client.GetHistoricalReplicatTaskExecutor;
+import com.jdcloud.sdk.service.ossopenapi.model.OpenServiceRequest;
+import com.jdcloud.sdk.service.ossopenapi.model.OpenServiceResponse;
+import com.jdcloud.sdk.service.ossopenapi.client.OpenServiceExecutor;
 import com.jdcloud.sdk.service.ossopenapi.model.DeleteBackSourceConfigurationRequest;
 import com.jdcloud.sdk.service.ossopenapi.model.DeleteBackSourceConfigurationResponse;
 import com.jdcloud.sdk.service.ossopenapi.client.DeleteBackSourceConfigurationExecutor;
@@ -49,6 +52,9 @@ import com.jdcloud.sdk.service.ossopenapi.client.AbortHistoricalReplicatTaskExec
 import com.jdcloud.sdk.service.ossopenapi.model.CreateHistoricalReplicatTaskRequest;
 import com.jdcloud.sdk.service.ossopenapi.model.CreateHistoricalReplicatTaskResponse;
 import com.jdcloud.sdk.service.ossopenapi.client.CreateHistoricalReplicatTaskExecutor;
+import com.jdcloud.sdk.service.ossopenapi.model.GetBucketCapacityRequest;
+import com.jdcloud.sdk.service.ossopenapi.model.GetBucketCapacityResponse;
+import com.jdcloud.sdk.service.ossopenapi.client.GetBucketCapacityExecutor;
 import com.jdcloud.sdk.service.ossopenapi.model.GetBackSourceConfigurationRequest;
 import com.jdcloud.sdk.service.ossopenapi.model.GetBackSourceConfigurationResponse;
 import com.jdcloud.sdk.service.ossopenapi.client.GetBackSourceConfigurationExecutor;
@@ -63,7 +69,7 @@ public class OssopenapiClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "ossopenapi.jdcloud-api.com";
     public final static String ServiceName = "ossopenapi";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -139,6 +145,17 @@ public class OssopenapiClient extends JdcloudClient {
     }
 
     /**
+     * 开通对象存储服务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OpenServiceResponse openService(OpenServiceRequest request) throws JdcloudSdkException {
+        return new OpenServiceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除回源配置
      *
      * @param request
@@ -169,6 +186,17 @@ public class OssopenapiClient extends JdcloudClient {
      */
     public CreateHistoricalReplicatTaskResponse createHistoricalReplicatTask(CreateHistoricalReplicatTaskRequest request) throws JdcloudSdkException {
         return new CreateHistoricalReplicatTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据type获取bucket用量数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetBucketCapacityResponse getBucketCapacity(GetBucketCapacityRequest request) throws JdcloudSdkException {
+        return new GetBucketCapacityExecutor().client(this).execute(request);
     }
 
     /**

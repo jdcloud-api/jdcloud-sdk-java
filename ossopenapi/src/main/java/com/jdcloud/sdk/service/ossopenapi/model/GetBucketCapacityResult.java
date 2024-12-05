@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * custom domain name openapi
- * custom domain name openapi
+ * dosage bucket capacity openapi
+ * dosage bucket capacity openapi
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,83 +26,49 @@ package com.jdcloud.sdk.service.ossopenapi.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.ossopenapi.model.BucketCapacityStatistic;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * cNameQueryResult
+ * 根据type获取bucket用量数据
  */
-public class CNameQueryResult extends JdcloudResult implements java.io.Serializable {
+public class GetBucketCapacityResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 查询结果总数
-     */
-    private Integer totalCount;
-
-    /**
-     * resultList
+     * bucket 用量统计列表
      */
     
-    private List<CName> resultList;
+    private List<BucketCapacityStatistic> resultList;
 
 
     /**
-     * get 查询结果总数
-     *
-     * @return
-     */
-    public Integer getTotalCount() {
-        return totalCount;
-    }
-
-    /**
-     * set 查询结果总数
-     *
-     * @param totalCount
-     */
-    public void setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-    }
-
-
-    /**
-    * get resultList
+    * get bucket 用量统计列表
     *
     * @return
     */
-    public List<CName> getResultList() {
+    public List<BucketCapacityStatistic> getResultList() {
         return resultList;
     }
 
     /**
-    * set resultList
+    * set bucket 用量统计列表
     *
     * @param resultList
     */
-    public void setResultList(List<CName> resultList) {
+    public void setResultList(List<BucketCapacityStatistic> resultList) {
         this.resultList = resultList;
     }
 
 
 
     /**
-     * set 查询结果总数
-     *
-     * @param totalCount
-     */
-    public CNameQueryResult totalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-
-
-    /**
-    * set resultList
+    * set bucket 用量统计列表
     *
     * @param resultList
     */
-    public CNameQueryResult resultList(List<CName> resultList) {
+    public GetBucketCapacityResult resultList(List<BucketCapacityStatistic> resultList) {
         this.resultList = resultList;
         return this;
     }
@@ -110,11 +76,11 @@ public class CNameQueryResult extends JdcloudResult implements java.io.Serializa
 
 
     /**
-     * add item to resultList
+     * add item to bucket 用量统计列表
      *
      * @param resultList
      */
-    public void addResultList(CName resultList) {
+    public void addResultList(BucketCapacityStatistic resultList) {
         if (this.resultList == null) {
             this.resultList = new ArrayList<>();
         }

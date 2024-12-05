@@ -81,14 +81,15 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
     /**
      * prefixSet
      */
+    
     private List<String> prefixSet;
-
     /**
      * 区域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -109,6 +110,7 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
         this.action = action;
     }
 
+
     /**
      * get bucket名称
      *
@@ -126,6 +128,7 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
     public void setBucketName(String bucketName) {
         this.bucketName = bucketName;
     }
+
 
     /**
      * get bucket所属区域
@@ -145,6 +148,7 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
         this.bucketRegion = bucketRegion;
     }
 
+
     /**
      * get 目标bucket名称
      *
@@ -162,6 +166,7 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
     public void setTargetBucketName(String targetBucketName) {
         this.targetBucketName = targetBucketName;
     }
+
 
     /**
      * get 目标bucket所属区域
@@ -181,6 +186,7 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
         this.targetBucketRegion = targetBucketRegion;
     }
 
+
     /**
      * get 存储类型
      *
@@ -199,23 +205,25 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
         this.storageClass = storageClass;
     }
 
+
     /**
-     * get prefixSet
-     *
-     * @return
-     */
+    * get prefixSet
+    *
+    * @return
+    */
     public List<String> getPrefixSet() {
         return prefixSet;
     }
 
     /**
-     * set prefixSet
-     *
-     * @param prefixSet
-     */
+    * set prefixSet
+    *
+    * @param prefixSet
+    */
     public void setPrefixSet(List<String> prefixSet) {
         this.prefixSet = prefixSet;
     }
+
 
     /**
      * get 区域ID
@@ -236,6 +244,7 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
     }
 
 
+
     /**
      * set 是否覆盖
      *
@@ -245,6 +254,7 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
         this.action = action;
         return this;
     }
+
 
     /**
      * set bucket名称
@@ -256,6 +266,7 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
         return this;
     }
 
+
     /**
      * set bucket所属区域
      *
@@ -265,6 +276,7 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
         this.bucketRegion = bucketRegion;
         return this;
     }
+
 
     /**
      * set 目标bucket名称
@@ -276,6 +288,7 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
         return this;
     }
 
+
     /**
      * set 目标bucket所属区域
      *
@@ -285,6 +298,7 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
         this.targetBucketRegion = targetBucketRegion;
         return this;
     }
+
 
     /**
      * set 存储类型
@@ -296,15 +310,17 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
         return this;
     }
 
+
     /**
-     * set prefixSet
-     *
-     * @param prefixSet
-     */
+    * set prefixSet
+    *
+    * @param prefixSet
+    */
     public CreateHistoricalReplicatTaskRequest prefixSet(List<String> prefixSet) {
         this.prefixSet = prefixSet;
         return this;
     }
+
 
     /**
      * set 区域ID
@@ -315,6 +331,7 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -328,5 +345,4 @@ public class CreateHistoricalReplicatTaskRequest extends JdcloudRequest implemen
         }
         this.prefixSet.add(prefixSet);
     }
-
 }

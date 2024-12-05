@@ -43,6 +43,7 @@ public class BucketMonitorStatisticQueryResult extends JdcloudResult implements 
     /**
      * bucket 统计列表
      */
+    
     private List<BucketMonitorStatistic> queryList;
 
 
@@ -64,23 +65,25 @@ public class BucketMonitorStatisticQueryResult extends JdcloudResult implements 
         this.totalCount = totalCount;
     }
 
+
     /**
-     * get bucket 统计列表
-     *
-     * @return
-     */
+    * get bucket 统计列表
+    *
+    * @return
+    */
     public List<BucketMonitorStatistic> getQueryList() {
         return queryList;
     }
 
     /**
-     * set bucket 统计列表
-     *
-     * @param queryList
-     */
+    * set bucket 统计列表
+    *
+    * @param queryList
+    */
     public void setQueryList(List<BucketMonitorStatistic> queryList) {
         this.queryList = queryList;
     }
+
 
 
     /**
@@ -93,15 +96,17 @@ public class BucketMonitorStatisticQueryResult extends JdcloudResult implements 
         return this;
     }
 
+
     /**
-     * set bucket 统计列表
-     *
-     * @param queryList
-     */
+    * set bucket 统计列表
+    *
+    * @param queryList
+    */
     public BucketMonitorStatisticQueryResult queryList(List<BucketMonitorStatistic> queryList) {
         this.queryList = queryList;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class BucketMonitorStatisticQueryResult extends JdcloudResult implements 
         }
         this.queryList.add(queryList);
     }
-
 }

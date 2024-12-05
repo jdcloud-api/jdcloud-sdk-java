@@ -80,6 +80,7 @@ public class CreateReplicationTaskCondition  implements java.io.Serializable {
     /**
      * prefixSet
      */
+    
     private List<String> prefixSet;
 
 
@@ -101,6 +102,7 @@ public class CreateReplicationTaskCondition  implements java.io.Serializable {
         this.action = action;
     }
 
+
     /**
      * get bucket名称
      *
@@ -118,6 +120,7 @@ public class CreateReplicationTaskCondition  implements java.io.Serializable {
     public void setBucketName(String bucketName) {
         this.bucketName = bucketName;
     }
+
 
     /**
      * get bucket所属区域
@@ -137,6 +140,7 @@ public class CreateReplicationTaskCondition  implements java.io.Serializable {
         this.bucketRegion = bucketRegion;
     }
 
+
     /**
      * get 目标bucket名称
      *
@@ -154,6 +158,7 @@ public class CreateReplicationTaskCondition  implements java.io.Serializable {
     public void setTargetBucketName(String targetBucketName) {
         this.targetBucketName = targetBucketName;
     }
+
 
     /**
      * get 目标bucket所属区域
@@ -173,6 +178,7 @@ public class CreateReplicationTaskCondition  implements java.io.Serializable {
         this.targetBucketRegion = targetBucketRegion;
     }
 
+
     /**
      * get 存储类型
      *
@@ -191,23 +197,25 @@ public class CreateReplicationTaskCondition  implements java.io.Serializable {
         this.storageClass = storageClass;
     }
 
+
     /**
-     * get prefixSet
-     *
-     * @return
-     */
+    * get prefixSet
+    *
+    * @return
+    */
     public List<String> getPrefixSet() {
         return prefixSet;
     }
 
     /**
-     * set prefixSet
-     *
-     * @param prefixSet
-     */
+    * set prefixSet
+    *
+    * @param prefixSet
+    */
     public void setPrefixSet(List<String> prefixSet) {
         this.prefixSet = prefixSet;
     }
+
 
 
     /**
@@ -220,6 +228,7 @@ public class CreateReplicationTaskCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set bucket名称
      *
@@ -229,6 +238,7 @@ public class CreateReplicationTaskCondition  implements java.io.Serializable {
         this.bucketName = bucketName;
         return this;
     }
+
 
     /**
      * set bucket所属区域
@@ -240,6 +250,7 @@ public class CreateReplicationTaskCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 目标bucket名称
      *
@@ -249,6 +260,7 @@ public class CreateReplicationTaskCondition  implements java.io.Serializable {
         this.targetBucketName = targetBucketName;
         return this;
     }
+
 
     /**
      * set 目标bucket所属区域
@@ -260,6 +272,7 @@ public class CreateReplicationTaskCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 存储类型
      *
@@ -270,15 +283,17 @@ public class CreateReplicationTaskCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set prefixSet
-     *
-     * @param prefixSet
-     */
+    * set prefixSet
+    *
+    * @param prefixSet
+    */
     public CreateReplicationTaskCondition prefixSet(List<String> prefixSet) {
         this.prefixSet = prefixSet;
         return this;
     }
+
 
 
     /**
@@ -292,5 +307,4 @@ public class CreateReplicationTaskCondition  implements java.io.Serializable {
         }
         this.prefixSet.add(prefixSet);
     }
-
 }

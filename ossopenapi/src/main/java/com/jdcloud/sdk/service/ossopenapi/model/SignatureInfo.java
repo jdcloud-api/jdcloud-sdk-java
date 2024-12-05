@@ -73,6 +73,7 @@ public class SignatureInfo  implements java.io.Serializable {
     private Map<String, String> signatureParameters;
 
 
+
     /**
      * get 签名的endpoint, 例如 http://s3.cn-east-1.jcloudcs.com
      *
@@ -90,6 +91,7 @@ public class SignatureInfo  implements java.io.Serializable {
     public void setEndpoint(String endpoint) {
         this.endpoint = endpoint;
     }
+
 
     /**
      * get http method
@@ -109,6 +111,7 @@ public class SignatureInfo  implements java.io.Serializable {
         this.httpMethod = httpMethod;
     }
 
+
     /**
      * get 资源路径,不包含query string
      *
@@ -126,6 +129,7 @@ public class SignatureInfo  implements java.io.Serializable {
     public void setResourcePath(String resourcePath) {
         this.resourcePath = resourcePath;
     }
+
 
     /**
      * get 上传文件的sha256
@@ -145,6 +149,7 @@ public class SignatureInfo  implements java.io.Serializable {
         this.xAmzContentSha256 = xAmzContentSha256;
     }
 
+
     /**
      * get 附加的签名header
      *
@@ -162,6 +167,7 @@ public class SignatureInfo  implements java.io.Serializable {
     public void setAdditionalSignatureHeaders(Map<String, String> additionalSignatureHeaders) {
         this.additionalSignatureHeaders = additionalSignatureHeaders;
     }
+
 
     /**
      * get 签名的参数，query string
@@ -182,6 +188,7 @@ public class SignatureInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 签名的endpoint, 例如 http://s3.cn-east-1.jcloudcs.com
      *
@@ -191,6 +198,7 @@ public class SignatureInfo  implements java.io.Serializable {
         this.endpoint = endpoint;
         return this;
     }
+
 
     /**
      * set http method
@@ -202,6 +210,7 @@ public class SignatureInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源路径,不包含query string
      *
@@ -211,6 +220,7 @@ public class SignatureInfo  implements java.io.Serializable {
         this.resourcePath = resourcePath;
         return this;
     }
+
 
     /**
      * set 上传文件的sha256
@@ -222,6 +232,7 @@ public class SignatureInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 附加的签名header
      *
@@ -231,6 +242,7 @@ public class SignatureInfo  implements java.io.Serializable {
         this.additionalSignatureHeaders = additionalSignatureHeaders;
         return this;
     }
+
 
     /**
      * set 签名的参数，query string

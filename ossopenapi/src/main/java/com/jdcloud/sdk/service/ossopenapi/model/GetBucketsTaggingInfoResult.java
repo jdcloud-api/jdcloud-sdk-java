@@ -38,37 +38,40 @@ public class GetBucketsTaggingInfoResult extends JdcloudResult implements java.i
     /**
      * bucketTaggingInfoList
      */
+    
     private List<BucketTaggingInfo> bucketTaggingInfoList;
 
 
     /**
-     * get bucketTaggingInfoList
-     *
-     * @return
-     */
+    * get bucketTaggingInfoList
+    *
+    * @return
+    */
     public List<BucketTaggingInfo> getBucketTaggingInfoList() {
         return bucketTaggingInfoList;
     }
 
     /**
-     * set bucketTaggingInfoList
-     *
-     * @param bucketTaggingInfoList
-     */
+    * set bucketTaggingInfoList
+    *
+    * @param bucketTaggingInfoList
+    */
     public void setBucketTaggingInfoList(List<BucketTaggingInfo> bucketTaggingInfoList) {
         this.bucketTaggingInfoList = bucketTaggingInfoList;
     }
 
 
+
     /**
-     * set bucketTaggingInfoList
-     *
-     * @param bucketTaggingInfoList
-     */
+    * set bucketTaggingInfoList
+    *
+    * @param bucketTaggingInfoList
+    */
     public GetBucketsTaggingInfoResult bucketTaggingInfoList(List<BucketTaggingInfo> bucketTaggingInfoList) {
         this.bucketTaggingInfoList = bucketTaggingInfoList;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class GetBucketsTaggingInfoResult extends JdcloudResult implements java.i
         }
         this.bucketTaggingInfoList.add(bucketTaggingInfoList);
     }
-
 }

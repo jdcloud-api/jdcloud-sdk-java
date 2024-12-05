@@ -78,6 +78,7 @@ public class CName  implements java.io.Serializable {
     private Integer protoType;
 
 
+
     /**
      * get 自定义域名id
      *
@@ -95,6 +96,7 @@ public class CName  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 用户pin
@@ -114,6 +116,7 @@ public class CName  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 源站域名
      *
@@ -131,6 +134,7 @@ public class CName  implements java.io.Serializable {
     public void setOriginDomain(String originDomain) {
         this.originDomain = originDomain;
     }
+
 
     /**
      * get 自定义域名
@@ -150,6 +154,7 @@ public class CName  implements java.io.Serializable {
         this.cname = cname;
     }
 
+
     /**
      * get 自定义域名状态
      *
@@ -167,6 +172,7 @@ public class CName  implements java.io.Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get bucket name
@@ -186,6 +192,7 @@ public class CName  implements java.io.Serializable {
         this.bucketName = bucketName;
     }
 
+
     /**
      * get cname是否成功，1：已解析；0:未解析
      *
@@ -204,6 +211,7 @@ public class CName  implements java.io.Serializable {
         this.isCName = isCName;
     }
 
+
     /**
      * get 创建时间
      *
@@ -221,6 +229,7 @@ public class CName  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get http版本，0：http，1：https
@@ -241,6 +250,7 @@ public class CName  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 自定义域名id
      *
@@ -250,6 +260,7 @@ public class CName  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 用户pin
@@ -261,6 +272,7 @@ public class CName  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 源站域名
      *
@@ -270,6 +282,7 @@ public class CName  implements java.io.Serializable {
         this.originDomain = originDomain;
         return this;
     }
+
 
     /**
      * set 自定义域名
@@ -281,6 +294,7 @@ public class CName  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自定义域名状态
      *
@@ -290,6 +304,7 @@ public class CName  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set bucket name
@@ -301,6 +316,7 @@ public class CName  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cname是否成功，1：已解析；0:未解析
      *
@@ -311,6 +327,7 @@ public class CName  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -320,6 +337,7 @@ public class CName  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set http版本，0：http，1：https

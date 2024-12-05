@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * history replicator task
- * 同步历史数据API
+ * user service
+ * user service
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,51 +24,16 @@
 
 package com.jdcloud.sdk.service.ossopenapi.model;
 
-import com.jdcloud.sdk.service.JdcloudResult;
+import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建历史同步任务
+ * 开通对象存储服务
  */
-public class CreateHistoricalReplicatTaskResult extends JdcloudResult implements java.io.Serializable {
+public class OpenServiceResponse extends JdcloudResponse<OpenServiceResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * taskId
-     */
-    private Long taskId;
 
-
-
-    /**
-     * get taskId
-     *
-     * @return
-     */
-    public Long getTaskId() {
-        return taskId;
-    }
-
-    /**
-     * set taskId
-     *
-     * @param taskId
-     */
-    public void setTaskId(Long taskId) {
-        this.taskId = taskId;
-    }
-
-
-
-    /**
-     * set taskId
-     *
-     * @param taskId
-     */
-    public CreateHistoricalReplicatTaskResult taskId(Long taskId) {
-        this.taskId = taskId;
-        return this;
-    }
 
 
 }

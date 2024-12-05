@@ -41,6 +41,7 @@ public class ImageExtensions  implements java.io.Serializable {
     private String imageExtensions;
 
 
+
     /**
      * get 原图保护图像格式列表，符合固定XML格式，例如\&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;\&lt;Condition&gt;\&lt;Extension&gt;jpg\&lt;/Extension&gt;\&lt;/Condition&gt;
      *
@@ -58,6 +59,7 @@ public class ImageExtensions  implements java.io.Serializable {
     public void setImageExtensions(String imageExtensions) {
         this.imageExtensions = imageExtensions;
     }
+
 
 
     /**

@@ -58,6 +58,7 @@ public class CNameInfo  implements java.io.Serializable {
     private String internal;
 
 
+
     /**
      * get 自定义域名
      *
@@ -75,6 +76,7 @@ public class CNameInfo  implements java.io.Serializable {
     public void setCname(String cname) {
         this.cname = cname;
     }
+
 
     /**
      * get http版本，0：http，1：https
@@ -94,6 +96,7 @@ public class CNameInfo  implements java.io.Serializable {
         this.protoType = protoType;
     }
 
+
     /**
      * get 域名
      *
@@ -111,6 +114,7 @@ public class CNameInfo  implements java.io.Serializable {
     public void setEndPoint(String endPoint) {
         this.endPoint = endPoint;
     }
+
 
     /**
      * get 是否拦截内部域名添，任意值跳过拦截
@@ -131,6 +135,7 @@ public class CNameInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 自定义域名
      *
@@ -140,6 +145,7 @@ public class CNameInfo  implements java.io.Serializable {
         this.cname = cname;
         return this;
     }
+
 
     /**
      * set http版本，0：http，1：https
@@ -151,6 +157,7 @@ public class CNameInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名
      *
@@ -160,6 +167,7 @@ public class CNameInfo  implements java.io.Serializable {
         this.endPoint = endPoint;
         return this;
     }
+
 
     /**
      * set 是否拦截内部域名添，任意值跳过拦截

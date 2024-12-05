@@ -48,6 +48,7 @@ public class BucketTaggingInfo  implements java.io.Serializable {
     private Boolean allowTagging;
 
 
+
     /**
      * get bucketId
      *
@@ -66,6 +67,7 @@ public class BucketTaggingInfo  implements java.io.Serializable {
         this.bucketId = bucketId;
     }
 
+
     /**
      * get bucket名称
      *
@@ -83,6 +85,7 @@ public class BucketTaggingInfo  implements java.io.Serializable {
     public void setBucketName(String bucketName) {
         this.bucketName = bucketName;
     }
+
 
     /**
      * get 是否可以对此bucket打标签
@@ -103,6 +106,7 @@ public class BucketTaggingInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set bucketId
      *
@@ -113,6 +117,7 @@ public class BucketTaggingInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set bucket名称
      *
@@ -122,6 +127,7 @@ public class BucketTaggingInfo  implements java.io.Serializable {
         this.bucketName = bucketName;
         return this;
     }
+
 
     /**
      * set 是否可以对此bucket打标签

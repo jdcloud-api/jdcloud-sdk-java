@@ -43,6 +43,7 @@ public class BucketSpaceStatisticQueryResult extends JdcloudResult implements ja
     /**
      * bucket 统计列表
      */
+    
     private List<BucketSpaceStatistic> queryList;
 
 
@@ -64,23 +65,25 @@ public class BucketSpaceStatisticQueryResult extends JdcloudResult implements ja
         this.totalCount = totalCount;
     }
 
+
     /**
-     * get bucket 统计列表
-     *
-     * @return
-     */
+    * get bucket 统计列表
+    *
+    * @return
+    */
     public List<BucketSpaceStatistic> getQueryList() {
         return queryList;
     }
 
     /**
-     * set bucket 统计列表
-     *
-     * @param queryList
-     */
+    * set bucket 统计列表
+    *
+    * @param queryList
+    */
     public void setQueryList(List<BucketSpaceStatistic> queryList) {
         this.queryList = queryList;
     }
+
 
 
     /**
@@ -93,15 +96,17 @@ public class BucketSpaceStatisticQueryResult extends JdcloudResult implements ja
         return this;
     }
 
+
     /**
-     * set bucket 统计列表
-     *
-     * @param queryList
-     */
+    * set bucket 统计列表
+    *
+    * @param queryList
+    */
     public BucketSpaceStatisticQueryResult queryList(List<BucketSpaceStatistic> queryList) {
         this.queryList = queryList;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class BucketSpaceStatisticQueryResult extends JdcloudResult implements ja
         }
         this.queryList.add(queryList);
     }
-
 }

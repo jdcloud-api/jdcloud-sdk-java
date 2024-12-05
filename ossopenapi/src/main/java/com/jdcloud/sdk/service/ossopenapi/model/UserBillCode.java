@@ -53,6 +53,7 @@ public class UserBillCode  implements java.io.Serializable {
     private String processResourceType;
 
 
+
     /**
      * get 用户的AppCode
      *
@@ -70,6 +71,7 @@ public class UserBillCode  implements java.io.Serializable {
     public void setAppCode(String appCode) {
         this.appCode = appCode;
     }
+
 
     /**
      * get 用户的ServiceCode
@@ -89,6 +91,7 @@ public class UserBillCode  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get 用户的StorageResourceType
      *
@@ -106,6 +109,7 @@ public class UserBillCode  implements java.io.Serializable {
     public void setStorageResourceType(String storageResourceType) {
         this.storageResourceType = storageResourceType;
     }
+
 
     /**
      * get 用户的ProcessResourceType
@@ -126,6 +130,7 @@ public class UserBillCode  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户的AppCode
      *
@@ -135,6 +140,7 @@ public class UserBillCode  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set 用户的ServiceCode
@@ -146,6 +152,7 @@ public class UserBillCode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户的StorageResourceType
      *
@@ -155,6 +162,7 @@ public class UserBillCode  implements java.io.Serializable {
         this.storageResourceType = storageResourceType;
         return this;
     }
+
 
     /**
      * set 用户的ProcessResourceType
