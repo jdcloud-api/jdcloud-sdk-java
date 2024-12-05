@@ -27,11 +27,12 @@ package com.jdcloud.sdk.service.ossopenapi.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * bucketCapacityCondition
+ * 根据type获取bucket用量数据
  */
-public class BucketCapacityCondition  implements java.io.Serializable {
+public class GetBucketCapacityRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -70,6 +71,13 @@ public class BucketCapacityCondition  implements java.io.Serializable {
      */
     
     private List<String> bucketNames;
+    /**
+     * 区域ID
+     * Required:true
+     */
+    @Required
+    private String regionId;
+
 
 
     /**
@@ -188,6 +196,25 @@ public class BucketCapacityCondition  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 区域ID
+     *
+     * @return
+     */
+    public String getRegionId() {
+        return regionId;
+    }
+
+    /**
+     * set 区域ID
+     *
+     * @param regionId
+     */
+    public void setRegionId(String regionId) {
+        this.regionId = regionId;
+    }
+
+
 
     /**
     * set &lt;p&gt;查询用量数据类型：&lt;/p&gt;&lt;br&gt;&lt;code&gt;1000040&lt;/code&gt;:标准存储&lt;br&gt;&lt;code&gt;1000041&lt;/code&gt;:低冗余存储&lt;br&gt;&lt;code&gt;1000042&lt;/code&gt;:归档存储&lt;br&gt;&lt;code&gt;1000043&lt;/code&gt;归档overHead存储:&lt;br&gt;&lt;code&gt;1000044&lt;/code&gt;低频存储:&lt;br&gt;&lt;code&gt;1000045&lt;/code&gt;低频overHead存储:&lt;br&gt;&lt;code&gt;1&lt;/code&gt;:内网GET流量&lt;br&gt;&lt;code&gt;2&lt;/code&gt;:内网HEAD流量&lt;br&gt;&lt;code&gt;3&lt;/code&gt;:内网PUT流量&lt;br&gt;&lt;code&gt;4&lt;/code&gt;:内网POST流量&lt;br&gt;&lt;code&gt;5&lt;/code&gt;:内网DELETE流量&lt;br&gt;&lt;code&gt;6&lt;/code&gt;:内网OPTIONS流量&lt;br&gt;&lt;code&gt;7&lt;/code&gt;:内网TRACE流量&lt;br&gt;&lt;code&gt;11&lt;/code&gt;:外网GET流量&lt;br&gt;&lt;code&gt;12&lt;/code&gt;:外网HEAD流量&lt;br&gt;&lt;code&gt;13&lt;/code&gt;:外网PUT流量&lt;br&gt;&lt;code&gt;14&lt;/code&gt;:外网POST流量&lt;br&gt;&lt;code&gt;15&lt;/code&gt;:外网DELETE流量&lt;br&gt;&lt;code&gt;16&lt;/code&gt;:外网OPTIONS流量&lt;br&gt;&lt;code&gt;17&lt;/code&gt;:外网TRACE流量&lt;br&gt;&lt;code&gt;21&lt;/code&gt;:CDN GET流量&lt;br&gt;&lt;code&gt;22&lt;/code&gt;:CDN HEAD流量&lt;br&gt;&lt;code&gt;23&lt;/code&gt;:CDN PUT流量&lt;br&gt;&lt;code&gt;24&lt;/code&gt;:CDN POST流量&lt;br&gt;&lt;code&gt;25&lt;/code&gt;:CDN DELETE流量&lt;br&gt;&lt;code&gt;26&lt;/code&gt;:CDN OPTIONS流量&lt;br&gt;&lt;code&gt;27&lt;/code&gt;:CDN TRACE流量&lt;br&gt;&lt;code&gt;31&lt;/code&gt;:内网GET数&lt;br&gt;&lt;code&gt;32&lt;/code&gt;:内网HEAD数&lt;br&gt;&lt;code&gt;33&lt;/code&gt;:内网PUT数&lt;br&gt;&lt;code&gt;34&lt;/code&gt;:内网POST数&lt;br&gt;&lt;code&gt;35&lt;/code&gt;:内网DELETE数&lt;br&gt;&lt;code&gt;36&lt;/code&gt;:内网OPTIONS数&lt;br&gt;&lt;code&gt;37&lt;/code&gt;:内网TRACE数&lt;br&gt;&lt;code&gt;51&lt;/code&gt;:外网GET数&lt;br&gt;&lt;code&gt;52&lt;/code&gt;:外网HEAD数&lt;br&gt;&lt;code&gt;53&lt;/code&gt;:外网PUT数&lt;br&gt;&lt;code&gt;54&lt;/code&gt;:外网POST数&lt;br&gt;&lt;code&gt;55&lt;/code&gt;:外网DELETE数&lt;br&gt;&lt;code&gt;56&lt;/code&gt;:外网OPTIONS数&lt;br&gt;&lt;code&gt;57&lt;/code&gt;:外网TRACE数&lt;br&gt;&lt;code&gt;61&lt;/code&gt;:CDN GET数&lt;br&gt;&lt;code&gt;62&lt;/code&gt;:CDN HEAD数&lt;br&gt;&lt;code&gt;63&lt;/code&gt;:CDN PUT数&lt;br&gt;&lt;code&gt;64&lt;/code&gt;:CDN POST数&lt;br&gt;&lt;code&gt;65&lt;/code&gt;:CDN DELETE数&lt;br&gt;&lt;code&gt;66&lt;/code&gt;:CDN OPTIONS数&lt;br&gt;&lt;code&gt;67&lt;/code&gt;:CDN TRACE数&lt;br&gt;&lt;code&gt;71&lt;/code&gt;:归档提前删除&lt;br&gt;&lt;code&gt;72&lt;/code&gt;:低频提前删除&lt;br&gt;&lt;code&gt;81&lt;/code&gt;:归档取回Bulk&lt;br&gt;&lt;code&gt;82&lt;/code&gt;:归档取回Std&lt;br&gt;&lt;code&gt;83&lt;/code&gt;:归档取回Exp&lt;br&gt;&lt;code&gt;84&lt;/code&gt;:低频数据取回
@@ -195,7 +222,7 @@ public class BucketCapacityCondition  implements java.io.Serializable {
     *
     * @param capacityTypes
     */
-    public BucketCapacityCondition capacityTypes(List<Integer> capacityTypes) {
+    public GetBucketCapacityRequest capacityTypes(List<Integer> capacityTypes) {
         this.capacityTypes = capacityTypes;
         return this;
     }
@@ -206,7 +233,7 @@ public class BucketCapacityCondition  implements java.io.Serializable {
      *
      * @param beginTime
      */
-    public BucketCapacityCondition beginTime(String beginTime) {
+    public GetBucketCapacityRequest beginTime(String beginTime) {
         this.beginTime = beginTime;
         return this;
     }
@@ -217,7 +244,7 @@ public class BucketCapacityCondition  implements java.io.Serializable {
      *
      * @param endTime
      */
-    public BucketCapacityCondition endTime(String endTime) {
+    public GetBucketCapacityRequest endTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -228,7 +255,7 @@ public class BucketCapacityCondition  implements java.io.Serializable {
      *
      * @param periodType
      */
-    public BucketCapacityCondition periodType(Integer periodType) {
+    public GetBucketCapacityRequest periodType(Integer periodType) {
         this.periodType = periodType;
         return this;
     }
@@ -239,7 +266,7 @@ public class BucketCapacityCondition  implements java.io.Serializable {
      *
      * @param method
      */
-    public BucketCapacityCondition method(Integer method) {
+    public GetBucketCapacityRequest method(Integer method) {
         this.method = method;
         return this;
     }
@@ -250,8 +277,19 @@ public class BucketCapacityCondition  implements java.io.Serializable {
     *
     * @param bucketNames
     */
-    public BucketCapacityCondition bucketNames(List<String> bucketNames) {
+    public GetBucketCapacityRequest bucketNames(List<String> bucketNames) {
         this.bucketNames = bucketNames;
+        return this;
+    }
+
+
+    /**
+     * set 区域ID
+     *
+     * @param regionId
+     */
+    public GetBucketCapacityRequest regionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
 

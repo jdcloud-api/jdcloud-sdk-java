@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * history replicator task
- * 同步历史数据API
+ * user service
+ * user service
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,9 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 根据bucket名称获取该bucket下的同步任务
+ * 开通对象存储服务
  */
-public class GetHistoricalReplicatTaskRequest extends JdcloudRequest implements java.io.Serializable {
+public class OpenServiceRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -42,18 +42,25 @@ public class GetHistoricalReplicatTaskRequest extends JdcloudRequest implements 
     private String regionId;
 
     /**
-     * Bucket名称
+     * 用户Id
      * Required:true
      */
     @Required
-    private String bucketName;
+    private String userId;
 
     /**
-     * 任务ID
+     * app code
      * Required:true
      */
     @Required
-    private String taskId;
+    private String appCode;
+
+    /**
+     * service code
+     * Required:true
+     */
+    @Required
+    private String serviceCode;
 
 
 
@@ -77,40 +84,59 @@ public class GetHistoricalReplicatTaskRequest extends JdcloudRequest implements 
 
 
     /**
-     * get Bucket名称
+     * get 用户Id
      *
      * @return
      */
-    public String getBucketName() {
-        return bucketName;
+    public String getUserId() {
+        return userId;
     }
 
     /**
-     * set Bucket名称
+     * set 用户Id
      *
-     * @param bucketName
+     * @param userId
      */
-    public void setBucketName(String bucketName) {
-        this.bucketName = bucketName;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
 
     /**
-     * get 任务ID
+     * get app code
      *
      * @return
      */
-    public String getTaskId() {
-        return taskId;
+    public String getAppCode() {
+        return appCode;
     }
 
     /**
-     * set 任务ID
+     * set app code
      *
-     * @param taskId
+     * @param appCode
      */
-    public void setTaskId(String taskId) {
-        this.taskId = taskId;
+    public void setAppCode(String appCode) {
+        this.appCode = appCode;
+    }
+
+
+    /**
+     * get service code
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set service code
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
     }
 
 
@@ -120,30 +146,41 @@ public class GetHistoricalReplicatTaskRequest extends JdcloudRequest implements 
      *
      * @param regionId
      */
-    public GetHistoricalReplicatTaskRequest regionId(String regionId) {
+    public OpenServiceRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
 
     /**
-     * set Bucket名称
+     * set 用户Id
      *
-     * @param bucketName
+     * @param userId
      */
-    public GetHistoricalReplicatTaskRequest bucketName(String bucketName) {
-        this.bucketName = bucketName;
+    public OpenServiceRequest userId(String userId) {
+        this.userId = userId;
         return this;
     }
 
 
     /**
-     * set 任务ID
+     * set app code
      *
-     * @param taskId
+     * @param appCode
      */
-    public GetHistoricalReplicatTaskRequest taskId(String taskId) {
-        this.taskId = taskId;
+    public OpenServiceRequest appCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+
+
+    /**
+     * set service code
+     *
+     * @param serviceCode
+     */
+    public OpenServiceRequest serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
         return this;
     }
 

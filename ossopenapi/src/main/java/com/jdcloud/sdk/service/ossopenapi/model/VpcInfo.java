@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * history replicator task
- * 同步历史数据API
+ * vpc policy openapi v1
+ * vpc policy openapi v1
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,49 +24,48 @@
 
 package com.jdcloud.sdk.service.ossopenapi.model;
 
-import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建历史同步任务
+ * vpcInfo
  */
-public class CreateHistoricalReplicatTaskResult extends JdcloudResult implements java.io.Serializable {
+public class VpcInfo  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * taskId
+     * vpc操作类型
      */
-    private Long taskId;
+    private Integer updateType;
 
 
 
     /**
-     * get taskId
+     * get vpc操作类型
      *
      * @return
      */
-    public Long getTaskId() {
-        return taskId;
+    public Integer getUpdateType() {
+        return updateType;
     }
 
     /**
-     * set taskId
+     * set vpc操作类型
      *
-     * @param taskId
+     * @param updateType
      */
-    public void setTaskId(Long taskId) {
-        this.taskId = taskId;
+    public void setUpdateType(Integer updateType) {
+        this.updateType = updateType;
     }
 
 
 
     /**
-     * set taskId
+     * set vpc操作类型
      *
-     * @param taskId
+     * @param updateType
      */
-    public CreateHistoricalReplicatTaskResult taskId(Long taskId) {
-        this.taskId = taskId;
+    public VpcInfo updateType(Integer updateType) {
+        this.updateType = updateType;
         return this;
     }
 

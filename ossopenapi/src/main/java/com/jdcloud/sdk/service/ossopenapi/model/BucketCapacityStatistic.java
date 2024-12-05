@@ -62,6 +62,7 @@ public class BucketCapacityStatistic  implements java.io.Serializable {
     private Integer capacityType;
 
 
+
     /**
      * get Bucket Name
      *
@@ -79,6 +80,7 @@ public class BucketCapacityStatistic  implements java.io.Serializable {
     public void setBucketName(String bucketName) {
         this.bucketName = bucketName;
     }
+
 
     /**
      * get 用量数值，单位Byte
@@ -98,6 +100,7 @@ public class BucketCapacityStatistic  implements java.io.Serializable {
         this.value = value;
     }
 
+
     /**
      * get 时间
      *
@@ -115,6 +118,7 @@ public class BucketCapacityStatistic  implements java.io.Serializable {
     public void setTime(String time) {
         this.time = time;
     }
+
 
     /**
      * get 用量类型
@@ -135,6 +139,7 @@ public class BucketCapacityStatistic  implements java.io.Serializable {
     }
 
 
+
     /**
      * set Bucket Name
      *
@@ -144,6 +149,7 @@ public class BucketCapacityStatistic  implements java.io.Serializable {
         this.bucketName = bucketName;
         return this;
     }
+
 
     /**
      * set 用量数值，单位Byte
@@ -155,6 +161,7 @@ public class BucketCapacityStatistic  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 时间
      *
@@ -164,6 +171,7 @@ public class BucketCapacityStatistic  implements java.io.Serializable {
         this.time = time;
         return this;
     }
+
 
     /**
      * set 用量类型

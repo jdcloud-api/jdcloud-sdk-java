@@ -38,37 +38,40 @@ public class BucketCapacityQueryResult extends JdcloudResult implements java.io.
     /**
      * bucket 用量统计列表
      */
+    
     private List<BucketCapacityStatistic> resultList;
 
 
     /**
-     * get bucket 用量统计列表
-     *
-     * @return
-     */
+    * get bucket 用量统计列表
+    *
+    * @return
+    */
     public List<BucketCapacityStatistic> getResultList() {
         return resultList;
     }
 
     /**
-     * set bucket 用量统计列表
-     *
-     * @param resultList
-     */
+    * set bucket 用量统计列表
+    *
+    * @param resultList
+    */
     public void setResultList(List<BucketCapacityStatistic> resultList) {
         this.resultList = resultList;
     }
 
 
+
     /**
-     * set bucket 用量统计列表
-     *
-     * @param resultList
-     */
+    * set bucket 用量统计列表
+    *
+    * @param resultList
+    */
     public BucketCapacityQueryResult resultList(List<BucketCapacityStatistic> resultList) {
         this.resultList = resultList;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class BucketCapacityQueryResult extends JdcloudResult implements java.io.
         }
         this.resultList.add(resultList);
     }
-
 }

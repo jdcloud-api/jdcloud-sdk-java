@@ -39,37 +39,40 @@ public class GetBackSourceConfigurationResult extends JdcloudResult implements j
     /**
      * 回源配置规则
      */
+    
     private List<BackSourceRule> backSourceRules;
 
 
     /**
-     * get 回源配置规则
-     *
-     * @return
-     */
+    * get 回源配置规则
+    *
+    * @return
+    */
     public List<BackSourceRule> getBackSourceRules() {
         return backSourceRules;
     }
 
     /**
-     * set 回源配置规则
-     *
-     * @param backSourceRules
-     */
+    * set 回源配置规则
+    *
+    * @param backSourceRules
+    */
     public void setBackSourceRules(List<BackSourceRule> backSourceRules) {
         this.backSourceRules = backSourceRules;
     }
 
 
+
     /**
-     * set 回源配置规则
-     *
-     * @param backSourceRules
-     */
+    * set 回源配置规则
+    *
+    * @param backSourceRules
+    */
     public GetBackSourceConfigurationResult backSourceRules(List<BackSourceRule> backSourceRules) {
         this.backSourceRules = backSourceRules;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class GetBackSourceConfigurationResult extends JdcloudResult implements j
         }
         this.backSourceRules.add(backSourceRule);
     }
-
 }

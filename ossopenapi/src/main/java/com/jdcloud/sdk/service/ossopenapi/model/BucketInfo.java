@@ -53,6 +53,7 @@ public class BucketInfo  implements java.io.Serializable {
     private String pin;
 
 
+
     /**
      * get bucketId
      *
@@ -70,6 +71,7 @@ public class BucketInfo  implements java.io.Serializable {
     public void setBucketId(Long bucketId) {
         this.bucketId = bucketId;
     }
+
 
     /**
      * get bucket名称
@@ -89,6 +91,7 @@ public class BucketInfo  implements java.io.Serializable {
         this.bucketName = bucketName;
     }
 
+
     /**
      * get bucket所属区域
      *
@@ -106,6 +109,7 @@ public class BucketInfo  implements java.io.Serializable {
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get bucket所属的用户
@@ -126,6 +130,7 @@ public class BucketInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set bucketId
      *
@@ -135,6 +140,7 @@ public class BucketInfo  implements java.io.Serializable {
         this.bucketId = bucketId;
         return this;
     }
+
 
     /**
      * set bucket名称
@@ -146,6 +152,7 @@ public class BucketInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set bucket所属区域
      *
@@ -155,6 +162,7 @@ public class BucketInfo  implements java.io.Serializable {
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set bucket所属的用户

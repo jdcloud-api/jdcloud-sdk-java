@@ -73,8 +73,8 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
     /**
      * prefixSet
      */
+    
     private List<String> prefixSet;
-
     /**
      * 任务创建时间
      */
@@ -89,6 +89,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
      * 任务状态
      */
     private String status;
+
 
 
     /**
@@ -109,6 +110,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         this.taskId = taskId;
     }
 
+
     /**
      * get 是否覆盖
      *
@@ -126,6 +128,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
     public void setAction(String action) {
         this.action = action;
     }
+
 
     /**
      * get bucket名称
@@ -145,6 +148,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         this.bucketName = bucketName;
     }
 
+
     /**
      * get bucket所属区域
      *
@@ -162,6 +166,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
     public void setBucketRegion(String bucketRegion) {
         this.bucketRegion = bucketRegion;
     }
+
 
     /**
      * get 目标bucket名称
@@ -181,6 +186,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         this.targetBucketName = targetBucketName;
     }
 
+
     /**
      * get 目标bucket所属区域
      *
@@ -198,6 +204,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
     public void setTargetBucketRegion(String targetBucketRegion) {
         this.targetBucketRegion = targetBucketRegion;
     }
+
 
     /**
      * get 存储类型
@@ -217,23 +224,25 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         this.storageClass = storageClass;
     }
 
+
     /**
-     * get prefixSet
-     *
-     * @return
-     */
+    * get prefixSet
+    *
+    * @return
+    */
     public List<String> getPrefixSet() {
         return prefixSet;
     }
 
     /**
-     * set prefixSet
-     *
-     * @param prefixSet
-     */
+    * set prefixSet
+    *
+    * @param prefixSet
+    */
     public void setPrefixSet(List<String> prefixSet) {
         this.prefixSet = prefixSet;
     }
+
 
     /**
      * get 任务创建时间
@@ -253,6 +262,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         this.createdTime = createdTime;
     }
 
+
     /**
      * get 任务进度
      *
@@ -270,6 +280,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
     public void setProgress(Double progress) {
         this.progress = progress;
     }
+
 
     /**
      * get 任务状态
@@ -290,6 +301,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
     }
 
 
+
     /**
      * set taskId
      *
@@ -299,6 +311,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         this.taskId = taskId;
         return this;
     }
+
 
     /**
      * set 是否覆盖
@@ -310,6 +323,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         return this;
     }
 
+
     /**
      * set bucket名称
      *
@@ -319,6 +333,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         this.bucketName = bucketName;
         return this;
     }
+
 
     /**
      * set bucket所属区域
@@ -330,6 +345,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         return this;
     }
 
+
     /**
      * set 目标bucket名称
      *
@@ -339,6 +355,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         this.targetBucketName = targetBucketName;
         return this;
     }
+
 
     /**
      * set 目标bucket所属区域
@@ -350,6 +367,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         return this;
     }
 
+
     /**
      * set 存储类型
      *
@@ -360,15 +378,17 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         return this;
     }
 
+
     /**
-     * set prefixSet
-     *
-     * @param prefixSet
-     */
+    * set prefixSet
+    *
+    * @param prefixSet
+    */
     public GetHistoricalReplicatTaskResult prefixSet(List<String> prefixSet) {
         this.prefixSet = prefixSet;
         return this;
     }
+
 
     /**
      * set 任务创建时间
@@ -380,6 +400,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         return this;
     }
 
+
     /**
      * set 任务进度
      *
@@ -390,6 +411,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         return this;
     }
 
+
     /**
      * set 任务状态
      *
@@ -399,6 +421,7 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         this.status = status;
         return this;
     }
+
 
 
     /**
@@ -412,5 +435,4 @@ public class GetHistoricalReplicatTaskResult extends JdcloudResult implements ja
         }
         this.prefixSet.add(prefixSet);
     }
-
 }

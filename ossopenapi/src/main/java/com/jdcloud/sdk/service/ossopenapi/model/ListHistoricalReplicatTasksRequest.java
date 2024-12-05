@@ -59,6 +59,7 @@ public class ListHistoricalReplicatTasksRequest extends JdcloudRequest implement
     private String bucketName;
 
 
+
     /**
      * get 同步任务列表开始的key
      *
@@ -76,6 +77,7 @@ public class ListHistoricalReplicatTasksRequest extends JdcloudRequest implement
     public void setMarker(String marker) {
         this.marker = marker;
     }
+
 
     /**
      * get 每次查询返回的结果数，默认为1000
@@ -95,6 +97,7 @@ public class ListHistoricalReplicatTasksRequest extends JdcloudRequest implement
         this.limit = limit;
     }
 
+
     /**
      * get 区域ID
      *
@@ -112,6 +115,7 @@ public class ListHistoricalReplicatTasksRequest extends JdcloudRequest implement
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Bucket名称
@@ -132,6 +136,7 @@ public class ListHistoricalReplicatTasksRequest extends JdcloudRequest implement
     }
 
 
+
     /**
      * set 同步任务列表开始的key
      *
@@ -141,6 +146,7 @@ public class ListHistoricalReplicatTasksRequest extends JdcloudRequest implement
         this.marker = marker;
         return this;
     }
+
 
     /**
      * set 每次查询返回的结果数，默认为1000
@@ -152,6 +158,7 @@ public class ListHistoricalReplicatTasksRequest extends JdcloudRequest implement
         return this;
     }
 
+
     /**
      * set 区域ID
      *
@@ -161,6 +168,7 @@ public class ListHistoricalReplicatTasksRequest extends JdcloudRequest implement
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Bucket名称

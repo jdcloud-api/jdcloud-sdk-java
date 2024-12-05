@@ -55,6 +55,7 @@ public class BucketMonitorStatistic  implements java.io.Serializable {
     private String time;
 
 
+
     /**
      * get bucket name
      *
@@ -73,6 +74,7 @@ public class BucketMonitorStatistic  implements java.io.Serializable {
         this.bucketName = bucketName;
     }
 
+
     /**
      * get 统计数值
      *
@@ -90,6 +92,7 @@ public class BucketMonitorStatistic  implements java.io.Serializable {
     public void setCount(Long count) {
         this.count = count;
     }
+
 
     /**
      * get 时间
@@ -110,6 +113,7 @@ public class BucketMonitorStatistic  implements java.io.Serializable {
     }
 
 
+
     /**
      * set bucket name
      *
@@ -120,6 +124,7 @@ public class BucketMonitorStatistic  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 统计数值
      *
@@ -129,6 +134,7 @@ public class BucketMonitorStatistic  implements java.io.Serializable {
         this.count = count;
         return this;
     }
+
 
     /**
      * set 时间

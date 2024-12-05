@@ -49,6 +49,7 @@ public class GetBackSourceConfigurationRequest extends JdcloudRequest implements
     private String bucketName;
 
 
+
     /**
      * get 区域ID
      *
@@ -66,6 +67,7 @@ public class GetBackSourceConfigurationRequest extends JdcloudRequest implements
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Bucket名称
@@ -86,6 +88,7 @@ public class GetBackSourceConfigurationRequest extends JdcloudRequest implements
     }
 
 
+
     /**
      * set 区域ID
      *
@@ -95,6 +98,7 @@ public class GetBackSourceConfigurationRequest extends JdcloudRequest implements
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Bucket名称

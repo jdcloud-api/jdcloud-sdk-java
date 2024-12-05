@@ -43,17 +43,18 @@ public class BackSourceHeaderRule  implements java.io.Serializable {
     /**
      * 允许的http header列表
      */
+    
     private List<String> allowHeaders;
-
     /**
      * 禁止的http header列表
      */
+    
     private List<String> notAllowHeaders;
-
     /**
      * 设置指定http header参数，类型为Map\&lt;String, String&gt;
      */
     private Map<String, String> setHeaders;
+
 
 
     /**
@@ -74,41 +75,44 @@ public class BackSourceHeaderRule  implements java.io.Serializable {
         this.allowAllHeaders = allowAllHeaders;
     }
 
+
     /**
-     * get 允许的http header列表
-     *
-     * @return
-     */
+    * get 允许的http header列表
+    *
+    * @return
+    */
     public List<String> getAllowHeaders() {
         return allowHeaders;
     }
 
     /**
-     * set 允许的http header列表
-     *
-     * @param allowHeaders
-     */
+    * set 允许的http header列表
+    *
+    * @param allowHeaders
+    */
     public void setAllowHeaders(List<String> allowHeaders) {
         this.allowHeaders = allowHeaders;
     }
 
+
     /**
-     * get 禁止的http header列表
-     *
-     * @return
-     */
+    * get 禁止的http header列表
+    *
+    * @return
+    */
     public List<String> getNotAllowHeaders() {
         return notAllowHeaders;
     }
 
     /**
-     * set 禁止的http header列表
-     *
-     * @param notAllowHeaders
-     */
+    * set 禁止的http header列表
+    *
+    * @param notAllowHeaders
+    */
     public void setNotAllowHeaders(List<String> notAllowHeaders) {
         this.notAllowHeaders = notAllowHeaders;
     }
+
 
     /**
      * get 设置指定http header参数，类型为Map\&lt;String, String&gt;
@@ -129,6 +133,7 @@ public class BackSourceHeaderRule  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否允许所有的Http header
      *
@@ -139,25 +144,28 @@ public class BackSourceHeaderRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 允许的http header列表
-     *
-     * @param allowHeaders
-     */
+    * set 允许的http header列表
+    *
+    * @param allowHeaders
+    */
     public BackSourceHeaderRule allowHeaders(List<String> allowHeaders) {
         this.allowHeaders = allowHeaders;
         return this;
     }
 
+
     /**
-     * set 禁止的http header列表
-     *
-     * @param notAllowHeaders
-     */
+    * set 禁止的http header列表
+    *
+    * @param notAllowHeaders
+    */
     public BackSourceHeaderRule notAllowHeaders(List<String> notAllowHeaders) {
         this.notAllowHeaders = notAllowHeaders;
         return this;
     }
+
 
     /**
      * set 设置指定http header参数，类型为Map\&lt;String, String&gt;
@@ -168,6 +176,7 @@ public class BackSourceHeaderRule  implements java.io.Serializable {
         this.setHeaders = setHeaders;
         return this;
     }
+
 
 
     /**
@@ -193,5 +202,4 @@ public class BackSourceHeaderRule  implements java.io.Serializable {
         }
         this.notAllowHeaders.add(notAllowHeader);
     }
-
 }

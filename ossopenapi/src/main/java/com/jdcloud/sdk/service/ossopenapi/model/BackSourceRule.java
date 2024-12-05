@@ -63,6 +63,7 @@ public class BackSourceRule  implements java.io.Serializable {
     private BackSourceHeaderRule headerRule;
 
 
+
     /**
      * get 回源类型
      *
@@ -80,6 +81,7 @@ public class BackSourceRule  implements java.io.Serializable {
     public void setBackSourceType(String backSourceType) {
         this.backSourceType = backSourceType;
     }
+
 
     /**
      * get condition
@@ -99,6 +101,7 @@ public class BackSourceRule  implements java.io.Serializable {
         this.condition = condition;
     }
 
+
     /**
      * get address
      *
@@ -116,6 +119,7 @@ public class BackSourceRule  implements java.io.Serializable {
     public void setAddress(BackSourceAddress address) {
         this.address = address;
     }
+
 
     /**
      * get 是否允许query String
@@ -135,6 +139,7 @@ public class BackSourceRule  implements java.io.Serializable {
         this.allowQueryString = allowQueryString;
     }
 
+
     /**
      * get 是否跟随重定向
      *
@@ -152,6 +157,7 @@ public class BackSourceRule  implements java.io.Serializable {
     public void setFollowRedirects(Boolean followRedirects) {
         this.followRedirects = followRedirects;
     }
+
 
     /**
      * get headerRule
@@ -172,6 +178,7 @@ public class BackSourceRule  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 回源类型
      *
@@ -181,6 +188,7 @@ public class BackSourceRule  implements java.io.Serializable {
         this.backSourceType = backSourceType;
         return this;
     }
+
 
     /**
      * set condition
@@ -192,6 +200,7 @@ public class BackSourceRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set address
      *
@@ -201,6 +210,7 @@ public class BackSourceRule  implements java.io.Serializable {
         this.address = address;
         return this;
     }
+
 
     /**
      * set 是否允许query String
@@ -212,6 +222,7 @@ public class BackSourceRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否跟随重定向
      *
@@ -221,6 +232,7 @@ public class BackSourceRule  implements java.io.Serializable {
         this.followRedirects = followRedirects;
         return this;
     }
+
 
     /**
      * set headerRule

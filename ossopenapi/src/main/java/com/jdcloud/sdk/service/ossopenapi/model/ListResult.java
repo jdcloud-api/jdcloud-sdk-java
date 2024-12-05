@@ -38,31 +38,33 @@ public class ListResult extends JdcloudResult implements java.io.Serializable {
     /**
      * historyReplicationTaskInfoList
      */
+    
     private List<HistoryReplicationTaskInfo> historyReplicationTaskInfoList;
-
     /**
      * 下次查询开始的object
      */
     private String nextMarker;
 
 
+
     /**
-     * get historyReplicationTaskInfoList
-     *
-     * @return
-     */
+    * get historyReplicationTaskInfoList
+    *
+    * @return
+    */
     public List<HistoryReplicationTaskInfo> getHistoryReplicationTaskInfoList() {
         return historyReplicationTaskInfoList;
     }
 
     /**
-     * set historyReplicationTaskInfoList
-     *
-     * @param historyReplicationTaskInfoList
-     */
+    * set historyReplicationTaskInfoList
+    *
+    * @param historyReplicationTaskInfoList
+    */
     public void setHistoryReplicationTaskInfoList(List<HistoryReplicationTaskInfo> historyReplicationTaskInfoList) {
         this.historyReplicationTaskInfoList = historyReplicationTaskInfoList;
     }
+
 
     /**
      * get 下次查询开始的object
@@ -83,15 +85,17 @@ public class ListResult extends JdcloudResult implements java.io.Serializable {
     }
 
 
+
     /**
-     * set historyReplicationTaskInfoList
-     *
-     * @param historyReplicationTaskInfoList
-     */
+    * set historyReplicationTaskInfoList
+    *
+    * @param historyReplicationTaskInfoList
+    */
     public ListResult historyReplicationTaskInfoList(List<HistoryReplicationTaskInfo> historyReplicationTaskInfoList) {
         this.historyReplicationTaskInfoList = historyReplicationTaskInfoList;
         return this;
     }
+
 
     /**
      * set 下次查询开始的object
@@ -102,6 +106,7 @@ public class ListResult extends JdcloudResult implements java.io.Serializable {
         this.nextMarker = nextMarker;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class ListResult extends JdcloudResult implements java.io.Serializable {
         }
         this.historyReplicationTaskInfoList.add(historyReplicationTaskInfoList);
     }
-
 }

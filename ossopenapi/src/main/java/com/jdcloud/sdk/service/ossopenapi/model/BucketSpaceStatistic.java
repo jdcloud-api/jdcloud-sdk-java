@@ -48,6 +48,7 @@ public class BucketSpaceStatistic  implements java.io.Serializable {
     private Long space;
 
 
+
     /**
      * get bucket name
      *
@@ -65,6 +66,7 @@ public class BucketSpaceStatistic  implements java.io.Serializable {
     public void setBucketName(String bucketName) {
         this.bucketName = bucketName;
     }
+
 
     /**
      * get bucket 存储空间
@@ -85,6 +87,7 @@ public class BucketSpaceStatistic  implements java.io.Serializable {
     }
 
 
+
     /**
      * set bucket name
      *
@@ -94,6 +97,7 @@ public class BucketSpaceStatistic  implements java.io.Serializable {
         this.bucketName = bucketName;
         return this;
     }
+
 
     /**
      * set bucket 存储空间

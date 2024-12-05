@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * back source configuration openapi
- * back source configuration openapi
+ * bucket service with auth
+ * bucket service with auth
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,60 +28,60 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * bucket回源配置
+ * getAuthorizedBuckets
  */
-public class BucketBackSourceConfiguration  implements java.io.Serializable {
+public class GetAuthorizedBuckets  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 回源配置规则
+     * bucketInfoList
      */
     
-    private List<BackSourceRule> backSourceRules;
+    private List<BucketInfo> bucketInfoList;
 
 
     /**
-    * get 回源配置规则
+    * get bucketInfoList
     *
     * @return
     */
-    public List<BackSourceRule> getBackSourceRules() {
-        return backSourceRules;
+    public List<BucketInfo> getBucketInfoList() {
+        return bucketInfoList;
     }
 
     /**
-    * set 回源配置规则
+    * set bucketInfoList
     *
-    * @param backSourceRules
+    * @param bucketInfoList
     */
-    public void setBackSourceRules(List<BackSourceRule> backSourceRules) {
-        this.backSourceRules = backSourceRules;
+    public void setBucketInfoList(List<BucketInfo> bucketInfoList) {
+        this.bucketInfoList = bucketInfoList;
     }
 
 
 
     /**
-    * set 回源配置规则
+    * set bucketInfoList
     *
-    * @param backSourceRules
+    * @param bucketInfoList
     */
-    public BucketBackSourceConfiguration backSourceRules(List<BackSourceRule> backSourceRules) {
-        this.backSourceRules = backSourceRules;
+    public GetAuthorizedBuckets bucketInfoList(List<BucketInfo> bucketInfoList) {
+        this.bucketInfoList = bucketInfoList;
         return this;
     }
 
 
 
     /**
-     * add item to 回源配置规则
+     * add item to bucketInfoList
      *
-     * @param backSourceRule
+     * @param bucketInfoList
      */
-    public void addBackSourceRule(BackSourceRule backSourceRule) {
-        if (this.backSourceRules == null) {
-            this.backSourceRules = new ArrayList<>();
+    public void addBucketInfoList(BucketInfo bucketInfoList) {
+        if (this.bucketInfoList == null) {
+            this.bucketInfoList = new ArrayList<>();
         }
-        this.backSourceRules.add(backSourceRule);
+        this.bucketInfoList.add(bucketInfoList);
     }
 }

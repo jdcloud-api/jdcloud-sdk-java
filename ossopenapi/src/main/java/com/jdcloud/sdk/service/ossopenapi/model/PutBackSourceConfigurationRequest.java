@@ -40,8 +40,8 @@ public class PutBackSourceConfigurationRequest extends JdcloudRequest implements
     /**
      * 回源配置规则
      */
+    
     private List<BackSourceRule> backSourceRules;
-
     /**
      * 区域ID
      * Required:true
@@ -57,23 +57,25 @@ public class PutBackSourceConfigurationRequest extends JdcloudRequest implements
     private String bucketName;
 
 
+
     /**
-     * get 回源配置规则
-     *
-     * @return
-     */
+    * get 回源配置规则
+    *
+    * @return
+    */
     public List<BackSourceRule> getBackSourceRules() {
         return backSourceRules;
     }
 
     /**
-     * set 回源配置规则
-     *
-     * @param backSourceRules
-     */
+    * set 回源配置规则
+    *
+    * @param backSourceRules
+    */
     public void setBackSourceRules(List<BackSourceRule> backSourceRules) {
         this.backSourceRules = backSourceRules;
     }
+
 
     /**
      * get 区域ID
@@ -92,6 +94,7 @@ public class PutBackSourceConfigurationRequest extends JdcloudRequest implements
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Bucket名称
@@ -112,15 +115,17 @@ public class PutBackSourceConfigurationRequest extends JdcloudRequest implements
     }
 
 
+
     /**
-     * set 回源配置规则
-     *
-     * @param backSourceRules
-     */
+    * set 回源配置规则
+    *
+    * @param backSourceRules
+    */
     public PutBackSourceConfigurationRequest backSourceRules(List<BackSourceRule> backSourceRules) {
         this.backSourceRules = backSourceRules;
         return this;
     }
+
 
     /**
      * set 区域ID
@@ -132,6 +137,7 @@ public class PutBackSourceConfigurationRequest extends JdcloudRequest implements
         return this;
     }
 
+
     /**
      * set Bucket名称
      *
@@ -141,6 +147,7 @@ public class PutBackSourceConfigurationRequest extends JdcloudRequest implements
         this.bucketName = bucketName;
         return this;
     }
+
 
 
     /**
@@ -154,5 +161,4 @@ public class PutBackSourceConfigurationRequest extends JdcloudRequest implements
         }
         this.backSourceRules.add(backSourceRule);
     }
-
 }

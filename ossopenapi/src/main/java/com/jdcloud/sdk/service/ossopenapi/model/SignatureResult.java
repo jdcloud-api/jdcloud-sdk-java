@@ -85,6 +85,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
     private String authorization;
 
 
+
     /**
      * get 签名的endpoint, 例如 http://s3.cn-east-1.jcloudcs.com
      *
@@ -102,6 +103,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
     public void setEndpoint(String endpoint) {
         this.endpoint = endpoint;
     }
+
 
     /**
      * get http method
@@ -121,6 +123,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
         this.httpMethod = httpMethod;
     }
 
+
     /**
      * get 资源路径
      *
@@ -138,6 +141,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
     public void setResourcePath(String resourcePath) {
         this.resourcePath = resourcePath;
     }
+
 
     /**
      * get 时间, 由openapi返回
@@ -157,6 +161,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
         this.xAmzDate = xAmzDate;
     }
 
+
     /**
      * get content hash
      *
@@ -174,6 +179,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
     public void setXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
     }
+
 
     /**
      * get 用户pin
@@ -193,6 +199,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
         this.xAmzMetaRequesterPin = xAmzMetaRequesterPin;
     }
 
+
     /**
      * get 用户userId
      *
@@ -210,6 +217,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
     public void setXAmzMetaRequesterId(String xAmzMetaRequesterId) {
         this.xAmzMetaRequesterId = xAmzMetaRequesterId;
     }
+
 
     /**
      * get 附加的签名header
@@ -229,6 +237,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
         this.additionalSignatureHeaders = additionalSignatureHeaders;
     }
 
+
     /**
      * get 签名的参数，query string
      *
@@ -246,6 +255,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
     public void setSignatureParameters(Map<String, String> signatureParameters) {
         this.signatureParameters = signatureParameters;
     }
+
 
     /**
      * get authorization信息, 由openapi计算返回
@@ -266,6 +276,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
     }
 
 
+
     /**
      * set 签名的endpoint, 例如 http://s3.cn-east-1.jcloudcs.com
      *
@@ -275,6 +286,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
         this.endpoint = endpoint;
         return this;
     }
+
 
     /**
      * set http method
@@ -286,6 +298,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set 资源路径
      *
@@ -295,6 +308,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
         this.resourcePath = resourcePath;
         return this;
     }
+
 
     /**
      * set 时间, 由openapi返回
@@ -306,6 +320,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set content hash
      *
@@ -315,6 +330,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
+
 
     /**
      * set 用户pin
@@ -326,6 +342,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set 用户userId
      *
@@ -335,6 +352,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
         this.xAmzMetaRequesterId = xAmzMetaRequesterId;
         return this;
     }
+
 
     /**
      * set 附加的签名header
@@ -346,6 +364,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set 签名的参数，query string
      *
@@ -355,6 +374,7 @@ public class SignatureResult extends JdcloudResult implements java.io.Serializab
         this.signatureParameters = signatureParameters;
         return this;
     }
+
 
     /**
      * set authorization信息, 由openapi计算返回
