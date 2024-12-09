@@ -39,6 +39,7 @@ public class CreateLogsetResult extends JdcloudResult implements java.io.Seriali
     private String uID;
 
 
+
     /**
      * get UID
      *
@@ -56,6 +57,7 @@ public class CreateLogsetResult extends JdcloudResult implements java.io.Seriali
     public void setUID(String uID) {
         this.uID = uID;
     }
+
 
 
     /**

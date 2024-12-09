@@ -42,8 +42,8 @@ public class CustomLogSearchOut  implements java.io.Serializable {
     /**
      * data
      */
+    
     private List<Object> data;
-
     /**
      * message
      */
@@ -58,6 +58,7 @@ public class CustomLogSearchOut  implements java.io.Serializable {
      * total
      */
     private Long total;
+
 
 
     /**
@@ -78,23 +79,25 @@ public class CustomLogSearchOut  implements java.io.Serializable {
         this.code = code;
     }
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<Object> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<Object> data) {
         this.data = data;
     }
+
 
     /**
      * get message
@@ -114,6 +117,7 @@ public class CustomLogSearchOut  implements java.io.Serializable {
         this.message = message;
     }
 
+
     /**
      * get size
      *
@@ -131,6 +135,7 @@ public class CustomLogSearchOut  implements java.io.Serializable {
     public void setSize(Long size) {
         this.size = size;
     }
+
 
     /**
      * get total
@@ -151,6 +156,7 @@ public class CustomLogSearchOut  implements java.io.Serializable {
     }
 
 
+
     /**
      * set code
      *
@@ -161,15 +167,17 @@ public class CustomLogSearchOut  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public CustomLogSearchOut data(List<Object> data) {
         this.data = data;
         return this;
     }
+
 
     /**
      * set message
@@ -181,6 +189,7 @@ public class CustomLogSearchOut  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set size
      *
@@ -191,6 +200,7 @@ public class CustomLogSearchOut  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set total
      *
@@ -200,6 +210,7 @@ public class CustomLogSearchOut  implements java.io.Serializable {
         this.total = total;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class CustomLogSearchOut  implements java.io.Serializable {
         }
         this.data.add(data);
     }
-
 }

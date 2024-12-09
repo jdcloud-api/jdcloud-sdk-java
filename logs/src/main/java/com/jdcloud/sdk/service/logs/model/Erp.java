@@ -42,6 +42,7 @@ public class Erp  implements java.io.Serializable {
     /**
      * 产品线代码
      */
+    
     private List<String> serviceCode;
 
 
@@ -63,23 +64,25 @@ public class Erp  implements java.io.Serializable {
         this.erp = erp;
     }
 
+
     /**
-     * get 产品线代码
-     *
-     * @return
-     */
+    * get 产品线代码
+    *
+    * @return
+    */
     public List<String> getServiceCode() {
         return serviceCode;
     }
 
     /**
-     * set 产品线代码
-     *
-     * @param serviceCode
-     */
+    * set 产品线代码
+    *
+    * @param serviceCode
+    */
     public void setServiceCode(List<String> serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class Erp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 产品线代码
-     *
-     * @param serviceCode
-     */
+    * set 产品线代码
+    *
+    * @param serviceCode
+    */
     public Erp serviceCode(List<String> serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class Erp  implements java.io.Serializable {
         }
         this.serviceCode.add(serviceCode);
     }
-
 }

@@ -48,6 +48,7 @@ public class DescribeInstanceMetaEnd  implements java.io.Serializable {
     private String timestamp;
 
 
+
     /**
      * get pin 机器所属pin
      *
@@ -66,6 +67,7 @@ public class DescribeInstanceMetaEnd  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get tags map[string]string 冗余字段，后续随时添加
      *
@@ -83,6 +85,7 @@ public class DescribeInstanceMetaEnd  implements java.io.Serializable {
     public void setTags(Object tags) {
         this.tags = tags;
     }
+
 
     /**
      * get timestamp 服务器时间
@@ -103,6 +106,7 @@ public class DescribeInstanceMetaEnd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set pin 机器所属pin
      *
@@ -113,6 +117,7 @@ public class DescribeInstanceMetaEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set tags map[string]string 冗余字段，后续随时添加
      *
@@ -122,6 +127,7 @@ public class DescribeInstanceMetaEnd  implements java.io.Serializable {
         this.tags = tags;
         return this;
     }
+
 
     /**
      * set timestamp 服务器时间

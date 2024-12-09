@@ -68,6 +68,7 @@ in: query
     private String logtopicUID;
 
 
+
     /**
      * get 当前所在页，默认为1
 in: query
@@ -87,6 +88,7 @@ in: query
     public void setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 页面大小，默认为20；取值范围[1, 100]
@@ -108,6 +110,7 @@ in: query
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 地域 Id
      *
@@ -126,6 +129,7 @@ in: query
         this.regionId = regionId;
     }
 
+
     /**
      * get 日志集 UID
      *
@@ -143,6 +147,7 @@ in: query
     public void setLogsetUID(String logsetUID) {
         this.logsetUID = logsetUID;
     }
+
 
     /**
      * get 日志主题 UID
@@ -163,6 +168,7 @@ in: query
     }
 
 
+
     /**
      * set 当前所在页，默认为1
 in: query
@@ -173,6 +179,7 @@ in: query
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 页面大小，默认为20；取值范围[1, 100]
@@ -185,6 +192,7 @@ in: query
         return this;
     }
 
+
     /**
      * set 地域 Id
      *
@@ -195,6 +203,7 @@ in: query
         return this;
     }
 
+
     /**
      * set 日志集 UID
      *
@@ -204,6 +213,7 @@ in: query
         this.logsetUID = logsetUID;
         return this;
     }
+
 
     /**
      * set 日志主题 UID

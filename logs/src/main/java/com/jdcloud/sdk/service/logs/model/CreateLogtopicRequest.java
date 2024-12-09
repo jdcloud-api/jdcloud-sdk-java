@@ -24,7 +24,10 @@
 
 package com.jdcloud.sdk.service.logs.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.logs.model.Tag;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -47,6 +50,21 @@ public class CreateLogtopicRequest extends JdcloudRequest implements java.io.Ser
     private String description;
 
     /**
+     * 保序
+     */
+    private Boolean inOrder;
+
+    /**
+     * 保存周期，只能是 7， 15， 30
+     */
+    private Long lifeCycle;
+
+    /**
+     * 标签列表
+     */
+    
+    private List<Tag> tags;
+    /**
      * 地域 Id
      * Required:true
      */
@@ -59,6 +77,7 @@ public class CreateLogtopicRequest extends JdcloudRequest implements java.io.Ser
      */
     @Required
     private String logsetUID;
+
 
 
     /**
@@ -79,6 +98,7 @@ public class CreateLogtopicRequest extends JdcloudRequest implements java.io.Ser
         this.name = name;
     }
 
+
     /**
      * get 日志集描述
      *
@@ -97,6 +117,64 @@ public class CreateLogtopicRequest extends JdcloudRequest implements java.io.Ser
         this.description = description;
     }
 
+
+    /**
+     * get 保序
+     *
+     * @return
+     */
+    public Boolean getInOrder() {
+        return inOrder;
+    }
+
+    /**
+     * set 保序
+     *
+     * @param inOrder
+     */
+    public void setInOrder(Boolean inOrder) {
+        this.inOrder = inOrder;
+    }
+
+
+    /**
+     * get 保存周期，只能是 7， 15， 30
+     *
+     * @return
+     */
+    public Long getLifeCycle() {
+        return lifeCycle;
+    }
+
+    /**
+     * set 保存周期，只能是 7， 15， 30
+     *
+     * @param lifeCycle
+     */
+    public void setLifeCycle(Long lifeCycle) {
+        this.lifeCycle = lifeCycle;
+    }
+
+
+    /**
+    * get 标签列表
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 标签列表
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
     /**
      * get 地域 Id
      *
@@ -114,6 +192,7 @@ public class CreateLogtopicRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 日志集 UID
@@ -134,6 +213,7 @@ public class CreateLogtopicRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 日志主题名称
      *
@@ -143,6 +223,7 @@ public class CreateLogtopicRequest extends JdcloudRequest implements java.io.Ser
         this.name = name;
         return this;
     }
+
 
     /**
      * set 日志集描述
@@ -154,6 +235,40 @@ public class CreateLogtopicRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
+    /**
+     * set 保序
+     *
+     * @param inOrder
+     */
+    public CreateLogtopicRequest inOrder(Boolean inOrder) {
+        this.inOrder = inOrder;
+        return this;
+    }
+
+
+    /**
+     * set 保存周期，只能是 7， 15， 30
+     *
+     * @param lifeCycle
+     */
+    public CreateLogtopicRequest lifeCycle(Long lifeCycle) {
+        this.lifeCycle = lifeCycle;
+        return this;
+    }
+
+
+    /**
+    * set 标签列表
+    *
+    * @param tags
+    */
+    public CreateLogtopicRequest tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
     /**
      * set 地域 Id
      *
@@ -163,6 +278,7 @@ public class CreateLogtopicRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 日志集 UID
@@ -175,4 +291,16 @@ public class CreateLogtopicRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
+    /**
+     * add item to 标签列表
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 }

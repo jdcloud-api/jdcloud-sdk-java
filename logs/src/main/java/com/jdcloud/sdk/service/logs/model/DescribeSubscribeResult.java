@@ -79,6 +79,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
     private String updatedTime;
 
 
+
     /**
      * get createdTime
      *
@@ -96,6 +97,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
+
 
     /**
      * get kafka接入点
@@ -115,6 +117,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
         this.kafkaBroker = kafkaBroker;
     }
 
+
     /**
      * get kafka 用户密码
      *
@@ -132,6 +135,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
     public void setKafkaPassword(String kafkaPassword) {
         this.kafkaPassword = kafkaPassword;
     }
+
 
     /**
      * get kafka Topic
@@ -151,6 +155,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
         this.kafkaTopic = kafkaTopic;
     }
 
+
     /**
      * get kafka 用户名
      *
@@ -168,6 +173,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
     public void setKafkaUsername(String kafkaUsername) {
         this.kafkaUsername = kafkaUsername;
     }
+
 
     /**
      * get 日志主体
@@ -187,6 +193,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
         this.logtopicId = logtopicId;
     }
 
+
     /**
      * get 用户pin
      *
@@ -205,6 +212,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
         this.pin = pin;
     }
 
+
     /**
      * get 日志订阅状态，0表示未创建，1表示已创建，2表示开启，3表示关闭
      *
@@ -222,6 +230,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
     public void setStatus(Long status) {
         this.status = status;
     }
+
 
     /**
      * get updatedTime
@@ -242,6 +251,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
      * set createdTime
      *
@@ -251,6 +261,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
         this.createdTime = createdTime;
         return this;
     }
+
 
     /**
      * set kafka接入点
@@ -262,6 +273,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set kafka 用户密码
      *
@@ -271,6 +283,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
         this.kafkaPassword = kafkaPassword;
         return this;
     }
+
 
     /**
      * set kafka Topic
@@ -282,6 +295,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set kafka 用户名
      *
@@ -291,6 +305,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
         this.kafkaUsername = kafkaUsername;
         return this;
     }
+
 
     /**
      * set 日志主体
@@ -302,6 +317,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 用户pin
      *
@@ -312,6 +328,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 日志订阅状态，0表示未创建，1表示已创建，2表示开启，3表示关闭
      *
@@ -321,6 +338,7 @@ public class DescribeSubscribeResult extends JdcloudResult implements java.io.Se
         this.status = status;
         return this;
     }
+
 
     /**
      * set updatedTime

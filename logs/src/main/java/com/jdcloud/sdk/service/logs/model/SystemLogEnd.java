@@ -37,8 +37,8 @@ public class SystemLogEnd  implements java.io.Serializable {
     /**
      * data
      */
+    
     private List<SystemLogResultData> data;
-
     /**
      * hits
      */
@@ -50,23 +50,25 @@ public class SystemLogEnd  implements java.io.Serializable {
     private Long size;
 
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<SystemLogResultData> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<SystemLogResultData> data) {
         this.data = data;
     }
+
 
     /**
      * get hits
@@ -85,6 +87,7 @@ public class SystemLogEnd  implements java.io.Serializable {
     public void setHits(Long hits) {
         this.hits = hits;
     }
+
 
     /**
      * get size
@@ -105,15 +108,17 @@ public class SystemLogEnd  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public SystemLogEnd data(List<SystemLogResultData> data) {
         this.data = data;
         return this;
     }
+
 
     /**
      * set hits
@@ -125,6 +130,7 @@ public class SystemLogEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set size
      *
@@ -134,6 +140,7 @@ public class SystemLogEnd  implements java.io.Serializable {
         this.size = size;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class SystemLogEnd  implements java.io.Serializable {
         }
         this.data.add(data);
     }
-
 }

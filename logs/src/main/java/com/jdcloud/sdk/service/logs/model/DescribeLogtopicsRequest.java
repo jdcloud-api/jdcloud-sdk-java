@@ -24,6 +24,10 @@
 
 package com.jdcloud.sdk.service.logs.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.logs.model.Filter;
+import com.jdcloud.sdk.service.logs.model.TagFilter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -40,7 +44,7 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
     private Long pageNumber;
 
     /**
-     * 页面大小，默认为20；取值范围[1, 100]
+     * 页面大小，默认为20；取值范围[1, 200]
      */
     private Long pageSize;
 
@@ -55,6 +59,16 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
     private String appName;
 
     /**
+     * 过滤条件，key，Values
+     */
+    
+    private List<Filter> filters;
+    /**
+     * 过滤条件，key，Values
+     */
+    
+    private List<TagFilter> tags;
+    /**
      * 地域 Id
      * Required:true
      */
@@ -67,6 +81,7 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
      */
     @Required
     private String logsetUID;
+
 
 
     /**
@@ -87,8 +102,9 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
         this.pageNumber = pageNumber;
     }
 
+
     /**
-     * get 页面大小，默认为20；取值范围[1, 100]
+     * get 页面大小，默认为20；取值范围[1, 200]
      *
      * @return
      */
@@ -97,13 +113,14 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 页面大小，默认为20；取值范围[1, 100]
+     * set 页面大小，默认为20；取值范围[1, 200]
      *
      * @param pageSize
      */
     public void setPageSize(Long pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 日志主题名称
@@ -123,6 +140,7 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
         this.name = name;
     }
 
+
     /**
      * get 日志主题采集的日志类型
      *
@@ -141,6 +159,45 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
         this.appName = appName;
     }
 
+
+    /**
+    * get 过滤条件，key，Values
+    *
+    * @return
+    */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+    * set 过滤条件，key，Values
+    *
+    * @param filters
+    */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
+
+
+    /**
+    * get 过滤条件，key，Values
+    *
+    * @return
+    */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 过滤条件，key，Values
+    *
+    * @param tags
+    */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
+    }
+
+
     /**
      * get 地域 Id
      *
@@ -158,6 +215,7 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 日志集 UID
@@ -178,6 +236,7 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 当前所在页，默认为1
      *
@@ -188,8 +247,9 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
-     * set 页面大小，默认为20；取值范围[1, 100]
+     * set 页面大小，默认为20；取值范围[1, 200]
      *
      * @param pageSize
      */
@@ -197,6 +257,7 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 日志主题名称
@@ -208,6 +269,7 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 日志主题采集的日志类型
      *
@@ -218,6 +280,29 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
+    /**
+    * set 过滤条件，key，Values
+    *
+    * @param filters
+    */
+    public DescribeLogtopicsRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+
+    /**
+    * set 过滤条件，key，Values
+    *
+    * @param tags
+    */
+    public DescribeLogtopicsRequest tags(List<TagFilter> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
     /**
      * set 地域 Id
      *
@@ -227,6 +312,7 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 日志集 UID
@@ -239,4 +325,28 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
     }
 
 
+
+    /**
+     * add item to 过滤条件，key，Values
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
+
+    /**
+     * add item to 过滤条件，key，Values
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 }

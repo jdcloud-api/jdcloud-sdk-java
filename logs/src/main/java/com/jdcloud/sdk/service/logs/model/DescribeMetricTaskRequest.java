@@ -63,6 +63,7 @@ public class DescribeMetricTaskRequest extends JdcloudRequest implements java.io
     private String logmetrictaskUID;
 
 
+
     /**
      * get 地域 Id
      *
@@ -80,6 +81,7 @@ public class DescribeMetricTaskRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 日志集 UID
@@ -99,6 +101,7 @@ public class DescribeMetricTaskRequest extends JdcloudRequest implements java.io
         this.logsetUID = logsetUID;
     }
 
+
     /**
      * get 日志主题 UID
      *
@@ -116,6 +119,7 @@ public class DescribeMetricTaskRequest extends JdcloudRequest implements java.io
     public void setLogtopicUID(String logtopicUID) {
         this.logtopicUID = logtopicUID;
     }
+
 
     /**
      * get logmetrictaskUID
@@ -136,6 +140,7 @@ public class DescribeMetricTaskRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 地域 Id
      *
@@ -145,6 +150,7 @@ public class DescribeMetricTaskRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 日志集 UID
@@ -156,6 +162,7 @@ public class DescribeMetricTaskRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 日志主题 UID
      *
@@ -165,6 +172,7 @@ public class DescribeMetricTaskRequest extends JdcloudRequest implements java.io
         this.logtopicUID = logtopicUID;
         return this;
     }
+
 
     /**
      * set logmetrictaskUID

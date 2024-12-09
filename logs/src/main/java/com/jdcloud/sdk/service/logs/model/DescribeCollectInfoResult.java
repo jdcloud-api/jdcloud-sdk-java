@@ -46,12 +46,17 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
     /**
      * agResource
      */
+    
     private List<AgResourceEnd> agResource;
-
     /**
      * 日志来源
      */
     private String appCode;
+
+    /**
+     * binlog规格
+     */
+    private Object binlogSpec;
 
     /**
      * detail
@@ -69,14 +74,9 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
     private Boolean hasResource;
 
     /**
-     * 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;
+     * k8s规格
      */
-    private String logCustomTarget;
-
-    /**
-     * 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
-     */
-    private Object logCustomTargetConf;
+    private Object k8sSpec;
 
     /**
      * 日志集 UID
@@ -84,14 +84,14 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
     private String logsetUID;
 
     /**
-     * 目的地是否是日志服务logtopic，只支持业务应用日志。默认是
-     */
-    private Boolean logtopicEnabled;
-
-    /**
      * 日志主题 UID
      */
     private String logtopicUID;
+
+    /**
+     * 采集配置名称
+     */
+    private String name;
 
     /**
      * 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
@@ -124,6 +124,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
     private String templateUID;
 
 
+
     /**
      * get UID
      *
@@ -142,23 +143,25 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         this.uID = uID;
     }
 
+
     /**
-     * get agResource
-     *
-     * @return
-     */
+    * get agResource
+    *
+    * @return
+    */
     public List<AgResourceEnd> getAgResource() {
         return agResource;
     }
 
     /**
-     * set agResource
-     *
-     * @param agResource
-     */
+    * set agResource
+    *
+    * @param agResource
+    */
     public void setAgResource(List<AgResourceEnd> agResource) {
         this.agResource = agResource;
     }
+
 
     /**
      * get 日志来源
@@ -178,6 +181,26 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         this.appCode = appCode;
     }
 
+
+    /**
+     * get binlog规格
+     *
+     * @return
+     */
+    public Object getBinlogSpec() {
+        return binlogSpec;
+    }
+
+    /**
+     * set binlog规格
+     *
+     * @param binlogSpec
+     */
+    public void setBinlogSpec(Object binlogSpec) {
+        this.binlogSpec = binlogSpec;
+    }
+
+
     /**
      * get detail
      *
@@ -195,6 +218,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
     public void setDetail(CollectTempalteEnd detail) {
         this.detail = detail;
     }
+
 
     /**
      * get enabled
@@ -214,6 +238,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         this.enabled = enabled;
     }
 
+
     /**
      * get 是否存在资源
      *
@@ -232,41 +257,25 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         this.hasResource = hasResource;
     }
 
+
     /**
-     * get 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;
+     * get k8s规格
      *
      * @return
      */
-    public String getLogCustomTarget() {
-        return logCustomTarget;
+    public Object getK8sSpec() {
+        return k8sSpec;
     }
 
     /**
-     * set 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;
+     * set k8s规格
      *
-     * @param logCustomTarget
+     * @param k8sSpec
      */
-    public void setLogCustomTarget(String logCustomTarget) {
-        this.logCustomTarget = logCustomTarget;
+    public void setK8sSpec(Object k8sSpec) {
+        this.k8sSpec = k8sSpec;
     }
 
-    /**
-     * get 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
-     *
-     * @return
-     */
-    public Object getLogCustomTargetConf() {
-        return logCustomTargetConf;
-    }
-
-    /**
-     * set 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
-     *
-     * @param logCustomTargetConf
-     */
-    public void setLogCustomTargetConf(Object logCustomTargetConf) {
-        this.logCustomTargetConf = logCustomTargetConf;
-    }
 
     /**
      * get 日志集 UID
@@ -286,23 +295,6 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         this.logsetUID = logsetUID;
     }
 
-    /**
-     * get 目的地是否是日志服务logtopic，只支持业务应用日志。默认是
-     *
-     * @return
-     */
-    public Boolean getLogtopicEnabled() {
-        return logtopicEnabled;
-    }
-
-    /**
-     * set 目的地是否是日志服务logtopic，只支持业务应用日志。默认是
-     *
-     * @param logtopicEnabled
-     */
-    public void setLogtopicEnabled(Boolean logtopicEnabled) {
-        this.logtopicEnabled = logtopicEnabled;
-    }
 
     /**
      * get 日志主题 UID
@@ -322,6 +314,26 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         this.logtopicUID = logtopicUID;
     }
 
+
+    /**
+     * get 采集配置名称
+     *
+     * @return
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * set 采集配置名称
+     *
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
     /**
      * get 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
      *
@@ -339,6 +351,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
     public void setResourceMode(Long resourceMode) {
         this.resourceMode = resourceMode;
     }
+
 
     /**
      * get 采集实例类型, 只能是 all/part
@@ -358,6 +371,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         this.resourceType = resourceType;
     }
 
+
     /**
      * get 产品线
      *
@@ -375,6 +389,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get tagResource
@@ -394,6 +409,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         this.tagResource = tagResource;
     }
 
+
     /**
      * get 日志类型名称
      *
@@ -411,6 +427,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
     public void setTemplateName(String templateName) {
         this.templateName = templateName;
     }
+
 
     /**
      * get 日志类型
@@ -431,6 +448,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
      * set UID
      *
@@ -441,15 +459,17 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
-     * set agResource
-     *
-     * @param agResource
-     */
+    * set agResource
+    *
+    * @param agResource
+    */
     public DescribeCollectInfoResult agResource(List<AgResourceEnd> agResource) {
         this.agResource = agResource;
         return this;
     }
+
 
     /**
      * set 日志来源
@@ -461,6 +481,18 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
+    /**
+     * set binlog规格
+     *
+     * @param binlogSpec
+     */
+    public DescribeCollectInfoResult binlogSpec(Object binlogSpec) {
+        this.binlogSpec = binlogSpec;
+        return this;
+    }
+
+
     /**
      * set detail
      *
@@ -470,6 +502,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         this.detail = detail;
         return this;
     }
+
 
     /**
      * set enabled
@@ -481,6 +514,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 是否存在资源
      *
@@ -491,25 +525,17 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
-     * set 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;
+     * set k8s规格
      *
-     * @param logCustomTarget
+     * @param k8sSpec
      */
-    public DescribeCollectInfoResult logCustomTarget(String logCustomTarget) {
-        this.logCustomTarget = logCustomTarget;
+    public DescribeCollectInfoResult k8sSpec(Object k8sSpec) {
+        this.k8sSpec = k8sSpec;
         return this;
     }
 
-    /**
-     * set 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
-     *
-     * @param logCustomTargetConf
-     */
-    public DescribeCollectInfoResult logCustomTargetConf(Object logCustomTargetConf) {
-        this.logCustomTargetConf = logCustomTargetConf;
-        return this;
-    }
 
     /**
      * set 日志集 UID
@@ -521,15 +547,6 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         return this;
     }
 
-    /**
-     * set 目的地是否是日志服务logtopic，只支持业务应用日志。默认是
-     *
-     * @param logtopicEnabled
-     */
-    public DescribeCollectInfoResult logtopicEnabled(Boolean logtopicEnabled) {
-        this.logtopicEnabled = logtopicEnabled;
-        return this;
-    }
 
     /**
      * set 日志主题 UID
@@ -541,6 +558,18 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
+    /**
+     * set 采集配置名称
+     *
+     * @param name
+     */
+    public DescribeCollectInfoResult name(String name) {
+        this.name = name;
+        return this;
+    }
+
+
     /**
      * set 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
      *
@@ -550,6 +579,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         this.resourceMode = resourceMode;
         return this;
     }
+
 
     /**
      * set 采集实例类型, 只能是 all/part
@@ -561,6 +591,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 产品线
      *
@@ -570,6 +601,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set tagResource
@@ -581,6 +613,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 日志类型名称
      *
@@ -591,6 +624,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 日志类型
      *
@@ -600,6 +634,7 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         this.templateUID = templateUID;
         return this;
     }
+
 
 
     /**
@@ -613,5 +648,4 @@ public class DescribeCollectInfoResult extends JdcloudResult implements java.io.
         }
         this.agResource.add(agResource);
     }
-
 }

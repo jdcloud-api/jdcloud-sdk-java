@@ -24,7 +24,10 @@
 
 package com.jdcloud.sdk.service.logs.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.logs.model.Tag;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -33,6 +36,13 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 public class UpdateLogsetRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 日志集名称
+     * Required:true
+     */
+    @Required
+    private String name;
 
     /**
      * 日志集描述
@@ -44,6 +54,11 @@ public class UpdateLogsetRequest extends JdcloudRequest implements java.io.Seria
      */
     private Long lifeCycle;
 
+    /**
+     * 标签列表
+     */
+    
+    private List<Tag> tags;
     /**
      * 地域 Id
      * Required:true
@@ -57,6 +72,26 @@ public class UpdateLogsetRequest extends JdcloudRequest implements java.io.Seria
      */
     @Required
     private String logsetUID;
+
+
+
+    /**
+     * get 日志集名称
+     *
+     * @return
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * set 日志集名称
+     *
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
 
     /**
@@ -77,6 +112,7 @@ public class UpdateLogsetRequest extends JdcloudRequest implements java.io.Seria
         this.description = description;
     }
 
+
     /**
      * get 保存周期，只能是 7， 15， 30
      *
@@ -95,6 +131,26 @@ public class UpdateLogsetRequest extends JdcloudRequest implements java.io.Seria
         this.lifeCycle = lifeCycle;
     }
 
+
+    /**
+    * get 标签列表
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 标签列表
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
     /**
      * get 地域 Id
      *
@@ -112,6 +168,7 @@ public class UpdateLogsetRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 日志集 UID
@@ -132,6 +189,18 @@ public class UpdateLogsetRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
+    /**
+     * set 日志集名称
+     *
+     * @param name
+     */
+    public UpdateLogsetRequest name(String name) {
+        this.name = name;
+        return this;
+    }
+
+
     /**
      * set 日志集描述
      *
@@ -141,6 +210,7 @@ public class UpdateLogsetRequest extends JdcloudRequest implements java.io.Seria
         this.description = description;
         return this;
     }
+
 
     /**
      * set 保存周期，只能是 7， 15， 30
@@ -152,6 +222,18 @@ public class UpdateLogsetRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
+    /**
+    * set 标签列表
+    *
+    * @param tags
+    */
+    public UpdateLogsetRequest tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
     /**
      * set 地域 Id
      *
@@ -161,6 +243,7 @@ public class UpdateLogsetRequest extends JdcloudRequest implements java.io.Seria
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 日志集 UID
@@ -173,4 +256,16 @@ public class UpdateLogsetRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
+    /**
+     * add item to 标签列表
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 }

@@ -39,6 +39,7 @@ public class DeleteMetricTaskResult extends JdcloudResult implements java.io.Ser
     private String suc;
 
 
+
     /**
      * get suc
      *
@@ -56,6 +57,7 @@ public class DeleteMetricTaskResult extends JdcloudResult implements java.io.Ser
     public void setSuc(String suc) {
         this.suc = suc;
     }
+
 
 
     /**

@@ -48,9 +48,15 @@ public class TemplateEnd  implements java.io.Serializable {
     private String name;
 
     /**
+     * serviceCode
+     */
+    private String serviceCode;
+
+    /**
      * 是否是特殊模式的系统日志
      */
     private Long specialMode;
+
 
 
     /**
@@ -71,6 +77,7 @@ public class TemplateEnd  implements java.io.Serializable {
         this.uID = uID;
     }
 
+
     /**
      * get 是否展示实列列表
      *
@@ -89,6 +96,7 @@ public class TemplateEnd  implements java.io.Serializable {
         this.disableTable = disableTable;
     }
 
+
     /**
      * get 模板名称
      *
@@ -106,6 +114,26 @@ public class TemplateEnd  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+
+    /**
+     * get serviceCode
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set serviceCode
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
 
     /**
      * get 是否是特殊模式的系统日志
@@ -126,6 +154,7 @@ public class TemplateEnd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set UID
      *
@@ -135,6 +164,7 @@ public class TemplateEnd  implements java.io.Serializable {
         this.uID = uID;
         return this;
     }
+
 
     /**
      * set 是否展示实列列表
@@ -146,6 +176,7 @@ public class TemplateEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 模板名称
      *
@@ -155,6 +186,18 @@ public class TemplateEnd  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
+
+    /**
+     * set serviceCode
+     *
+     * @param serviceCode
+     */
+    public TemplateEnd serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+
 
     /**
      * set 是否是特殊模式的系统日志

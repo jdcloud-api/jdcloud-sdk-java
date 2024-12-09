@@ -56,6 +56,7 @@ public class DeleteLogtopicRequest extends JdcloudRequest implements java.io.Ser
     private String logtopicUIDs;
 
 
+
     /**
      * get 地域 Id
      *
@@ -74,6 +75,7 @@ public class DeleteLogtopicRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
     }
 
+
     /**
      * get 日志集 UID
      *
@@ -91,6 +93,7 @@ public class DeleteLogtopicRequest extends JdcloudRequest implements java.io.Ser
     public void setLogsetUID(String logsetUID) {
         this.logsetUID = logsetUID;
     }
+
 
     /**
      * get 日志主题ID，多个日志主题ID以逗号分割
@@ -111,6 +114,7 @@ public class DeleteLogtopicRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 地域 Id
      *
@@ -121,6 +125,7 @@ public class DeleteLogtopicRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 日志集 UID
      *
@@ -130,6 +135,7 @@ public class DeleteLogtopicRequest extends JdcloudRequest implements java.io.Ser
         this.logsetUID = logsetUID;
         return this;
     }
+
 
     /**
      * set 日志主题ID，多个日志主题ID以逗号分割

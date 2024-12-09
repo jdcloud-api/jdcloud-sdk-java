@@ -98,6 +98,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
     private String updateTime;
 
 
+
     /**
      * get UID
      *
@@ -115,6 +116,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
     public void setUID(String uID) {
         this.uID = uID;
     }
+
 
     /**
      * get 是否允许重试， true，false
@@ -134,6 +136,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         this.allowRetry = allowRetry;
     }
 
+
     /**
      * get 创建时间
      *
@@ -151,6 +154,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 结束时间
@@ -170,6 +174,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
      * get 日志集uuid
      *
@@ -187,6 +192,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
     public void setLogsetUID(String logsetUID) {
         this.logsetUID = logsetUID;
     }
+
 
     /**
      * get 日志主题uuid
@@ -206,6 +212,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         this.logtopicUID = logtopicUID;
     }
 
+
     /**
      * get 地域信息
      *
@@ -223,6 +230,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 日志批次任务截止时间
@@ -242,6 +250,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         this.shipperEndTime = shipperEndTime;
     }
 
+
     /**
      * get 日志批次任务起始时间
      *
@@ -259,6 +268,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
     public void setShipperStartTime(Long shipperStartTime) {
         this.shipperStartTime = shipperStartTime;
     }
+
 
     /**
      * get shipperUID
@@ -278,6 +288,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         this.shipperUID = shipperUID;
     }
 
+
     /**
      * get 开始时间
      *
@@ -296,6 +307,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get 该批次转储任务状态： 1 发送中 2 成功，3 失败
      *
@@ -313,6 +325,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
     public void setStatus(Long status) {
         this.status = status;
     }
+
 
     /**
      * get 更新时间
@@ -333,6 +346,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set UID
      *
@@ -342,6 +356,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         this.uID = uID;
         return this;
     }
+
 
     /**
      * set 是否允许重试， true，false
@@ -353,6 +368,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -362,6 +378,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 结束时间
@@ -373,6 +390,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志集uuid
      *
@@ -382,6 +400,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         this.logsetUID = logsetUID;
         return this;
     }
+
 
     /**
      * set 日志主题uuid
@@ -393,6 +412,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 地域信息
      *
@@ -402,6 +422,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 日志批次任务截止时间
@@ -413,6 +434,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志批次任务起始时间
      *
@@ -422,6 +444,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         this.shipperStartTime = shipperStartTime;
         return this;
     }
+
 
     /**
      * set shipperUID
@@ -433,6 +456,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 开始时间
      *
@@ -443,6 +467,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 该批次转储任务状态： 1 发送中 2 成功，3 失败
      *
@@ -452,6 +477,7 @@ public class ShipperTaskEnd  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 更新时间

@@ -48,6 +48,7 @@ public class Resource  implements java.io.Serializable {
     private String resourceId;
 
 
+
     /**
      * get 资源所属地域
      *
@@ -65,6 +66,7 @@ public class Resource  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 资源ID
@@ -85,6 +87,7 @@ public class Resource  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 资源所属地域
      *
@@ -94,6 +97,7 @@ public class Resource  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 资源ID

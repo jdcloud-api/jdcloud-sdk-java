@@ -125,6 +125,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
     private String logmetrictaskUID;
 
 
+
     /**
      * get 聚合函数,支持 count sum max min avg; 配置方式(SettingType) 为 空或visual 时，必填；
      *
@@ -142,6 +143,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
     public void setAggregate(String aggregate) {
         this.aggregate = aggregate;
     }
+
 
     /**
      * get 自定义单位
@@ -161,6 +163,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         this.customUnit = customUnit;
     }
 
+
     /**
      * get 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）; 配置方式(SettingType) 为 空或visual 时，必填；
      *
@@ -178,6 +181,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
     public void setDataField(String dataField) {
         this.dataField = dataField;
     }
+
 
     /**
      * get 过滤语法，可以为空
@@ -197,6 +201,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         this.filterContent = filterContent;
     }
 
+
     /**
      * get 是否打开过滤; 配置方式(SettingType) 为 空或visual 时，必填；
      *
@@ -214,6 +219,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
     public void setFilterOpen(String filterOpen) {
         this.filterOpen = filterOpen;
     }
+
 
     /**
      * get 过滤类型，只能是fulltext和 advance; 配置方式(SettingType) 为 空或visual 时，必填；
@@ -233,6 +239,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         this.filterType = filterType;
     }
 
+
     /**
      * get 监控项 , 支持大小写英文字母 下划线 数字 点，且不超过255byte（不支持中划线）; 配置方式(SettingType) 为 空或visual 时，必填；
      *
@@ -250,6 +257,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
     public void setMetric(String metric) {
         this.metric = metric;
     }
+
 
     /**
      * get 监控任务名称,同一日志主题下唯一，支持中文 大小写英文字母 下划线 中划线 数字，且不超过32
@@ -269,6 +277,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         this.name = name;
     }
 
+
     /**
      * get 配置方式: 可选参数；枚举值 visual，sql；分别代表可视化配置及sql配置方式，传空表示可视化配置；
      *
@@ -286,6 +295,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
     public void setSettingType(String settingType) {
         this.settingType = settingType;
     }
+
 
     /**
      * get sqlSpec
@@ -305,6 +315,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         this.sqlSpec = sqlSpec;
     }
 
+
     /**
      * get 单位
      *
@@ -322,6 +333,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
     public void setUnit(String unit) {
         this.unit = unit;
     }
+
 
     /**
      * get 地域 Id
@@ -341,6 +353,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
     }
 
+
     /**
      * get 日志集 UID
      *
@@ -359,6 +372,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         this.logsetUID = logsetUID;
     }
 
+
     /**
      * get 日志主题 UID
      *
@@ -376,6 +390,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
     public void setLogtopicUID(String logtopicUID) {
         this.logtopicUID = logtopicUID;
     }
+
 
     /**
      * get logmetrictaskUID
@@ -396,6 +411,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 聚合函数,支持 count sum max min avg; 配置方式(SettingType) 为 空或visual 时，必填；
      *
@@ -405,6 +421,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         this.aggregate = aggregate;
         return this;
     }
+
 
     /**
      * set 自定义单位
@@ -416,6 +433,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）; 配置方式(SettingType) 为 空或visual 时，必填；
      *
@@ -425,6 +443,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         this.dataField = dataField;
         return this;
     }
+
 
     /**
      * set 过滤语法，可以为空
@@ -436,6 +455,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 是否打开过滤; 配置方式(SettingType) 为 空或visual 时，必填；
      *
@@ -445,6 +465,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         this.filterOpen = filterOpen;
         return this;
     }
+
 
     /**
      * set 过滤类型，只能是fulltext和 advance; 配置方式(SettingType) 为 空或visual 时，必填；
@@ -456,6 +477,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 监控项 , 支持大小写英文字母 下划线 数字 点，且不超过255byte（不支持中划线）; 配置方式(SettingType) 为 空或visual 时，必填；
      *
@@ -465,6 +487,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         this.metric = metric;
         return this;
     }
+
 
     /**
      * set 监控任务名称,同一日志主题下唯一，支持中文 大小写英文字母 下划线 中划线 数字，且不超过32
@@ -476,6 +499,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 配置方式: 可选参数；枚举值 visual，sql；分别代表可视化配置及sql配置方式，传空表示可视化配置；
      *
@@ -485,6 +509,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         this.settingType = settingType;
         return this;
     }
+
 
     /**
      * set sqlSpec
@@ -496,6 +521,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 单位
      *
@@ -505,6 +531,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         this.unit = unit;
         return this;
     }
+
 
     /**
      * set 地域 Id
@@ -516,6 +543,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 日志集 UID
      *
@@ -526,6 +554,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 日志主题 UID
      *
@@ -535,6 +564,7 @@ public class UpdateMetricTaskRequest extends JdcloudRequest implements java.io.S
         this.logtopicUID = logtopicUID;
         return this;
     }
+
 
     /**
      * set logmetrictaskUID

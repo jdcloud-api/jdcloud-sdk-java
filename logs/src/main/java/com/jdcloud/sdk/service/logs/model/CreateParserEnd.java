@@ -38,6 +38,7 @@ public class CreateParserEnd  implements java.io.Serializable {
     private String status;
 
 
+
     /**
      * get status
      *
@@ -55,6 +56,7 @@ public class CreateParserEnd  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
 
     /**

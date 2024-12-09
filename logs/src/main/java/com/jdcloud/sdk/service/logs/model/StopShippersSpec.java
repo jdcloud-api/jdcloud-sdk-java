@@ -40,37 +40,40 @@ public class StopShippersSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> shipperList;
 
 
     /**
-     * get 转储任务uuid列表
-     *
-     * @return
-     */
+    * get 转储任务uuid列表
+    *
+    * @return
+    */
     public List<String> getShipperList() {
         return shipperList;
     }
 
     /**
-     * set 转储任务uuid列表
-     *
-     * @param shipperList
-     */
+    * set 转储任务uuid列表
+    *
+    * @param shipperList
+    */
     public void setShipperList(List<String> shipperList) {
         this.shipperList = shipperList;
     }
 
 
+
     /**
-     * set 转储任务uuid列表
-     *
-     * @param shipperList
-     */
+    * set 转储任务uuid列表
+    *
+    * @param shipperList
+    */
     public StopShippersSpec shipperList(List<String> shipperList) {
         this.shipperList = shipperList;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class StopShippersSpec  implements java.io.Serializable {
         }
         this.shipperList.add(shipperList);
     }
-
 }

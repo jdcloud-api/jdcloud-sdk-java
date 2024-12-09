@@ -46,6 +46,7 @@ public class JdcloudSpec  implements java.io.Serializable {
     private String templateUID;
 
 
+
     /**
      * get 产品线,当日志来源为jdcloud时，必填
      *
@@ -63,6 +64,7 @@ public class JdcloudSpec  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 日志类型。当appcode为jdcloud时为必填
@@ -83,6 +85,7 @@ public class JdcloudSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 产品线,当日志来源为jdcloud时，必填
      *
@@ -92,6 +95,7 @@ public class JdcloudSpec  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set 日志类型。当appcode为jdcloud时为必填

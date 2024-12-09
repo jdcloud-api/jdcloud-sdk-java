@@ -53,6 +53,7 @@ public class SystemLogResultTrace  implements java.io.Serializable {
     private Long timestamp;
 
 
+
     /**
      * get destIp
      *
@@ -70,6 +71,7 @@ public class SystemLogResultTrace  implements java.io.Serializable {
     public void setDestIp(String destIp) {
         this.destIp = destIp;
     }
+
 
     /**
      * get id
@@ -89,6 +91,7 @@ public class SystemLogResultTrace  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get srcIp
      *
@@ -106,6 +109,7 @@ public class SystemLogResultTrace  implements java.io.Serializable {
     public void setSrcIp(String srcIp) {
         this.srcIp = srcIp;
     }
+
 
     /**
      * get timestamp
@@ -126,6 +130,7 @@ public class SystemLogResultTrace  implements java.io.Serializable {
     }
 
 
+
     /**
      * set destIp
      *
@@ -135,6 +140,7 @@ public class SystemLogResultTrace  implements java.io.Serializable {
         this.destIp = destIp;
         return this;
     }
+
 
     /**
      * set id
@@ -146,6 +152,7 @@ public class SystemLogResultTrace  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set srcIp
      *
@@ -155,6 +162,7 @@ public class SystemLogResultTrace  implements java.io.Serializable {
         this.srcIp = srcIp;
         return this;
     }
+
 
     /**
      * set timestamp

@@ -43,6 +43,7 @@ public class DateTimeRange  implements java.io.Serializable {
     private String start;
 
 
+
     /**
      * get end
      *
@@ -60,6 +61,7 @@ public class DateTimeRange  implements java.io.Serializable {
     public void setEnd(String end) {
         this.end = end;
     }
+
 
     /**
      * get start
@@ -80,6 +82,7 @@ public class DateTimeRange  implements java.io.Serializable {
     }
 
 
+
     /**
      * set end
      *
@@ -89,6 +92,7 @@ public class DateTimeRange  implements java.io.Serializable {
         this.end = end;
         return this;
     }
+
 
     /**
      * set start

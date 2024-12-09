@@ -53,6 +53,7 @@ public class Err  implements java.io.Serializable {
     private String status;
 
 
+
     /**
      * get code
      *
@@ -70,6 +71,7 @@ public class Err  implements java.io.Serializable {
     public void setCode(Long code) {
         this.code = code;
     }
+
 
     /**
      * get details
@@ -89,6 +91,7 @@ public class Err  implements java.io.Serializable {
         this.details = details;
     }
 
+
     /**
      * get message
      *
@@ -106,6 +109,7 @@ public class Err  implements java.io.Serializable {
     public void setMessage(String message) {
         this.message = message;
     }
+
 
     /**
      * get status
@@ -126,6 +130,7 @@ public class Err  implements java.io.Serializable {
     }
 
 
+
     /**
      * set code
      *
@@ -135,6 +140,7 @@ public class Err  implements java.io.Serializable {
         this.code = code;
         return this;
     }
+
 
     /**
      * set details
@@ -146,6 +152,7 @@ public class Err  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set message
      *
@@ -155,6 +162,7 @@ public class Err  implements java.io.Serializable {
         this.message = message;
         return this;
     }
+
 
     /**
      * set status

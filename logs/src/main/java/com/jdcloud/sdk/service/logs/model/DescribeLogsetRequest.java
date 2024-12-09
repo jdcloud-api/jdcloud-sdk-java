@@ -49,6 +49,7 @@ public class DescribeLogsetRequest extends JdcloudRequest implements java.io.Ser
     private String logsetUID;
 
 
+
     /**
      * get 地域 Id
      *
@@ -66,6 +67,7 @@ public class DescribeLogsetRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 日志集 UID
@@ -86,6 +88,7 @@ public class DescribeLogsetRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 地域 Id
      *
@@ -95,6 +98,7 @@ public class DescribeLogsetRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 日志集 UID

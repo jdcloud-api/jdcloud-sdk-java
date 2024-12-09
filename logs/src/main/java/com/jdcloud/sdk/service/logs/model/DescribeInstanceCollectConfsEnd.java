@@ -37,37 +37,40 @@ public class DescribeInstanceCollectConfsEnd  implements java.io.Serializable {
     /**
      * result
      */
+    
     private List<CollectConf> result;
 
 
     /**
-     * get result
-     *
-     * @return
-     */
+    * get result
+    *
+    * @return
+    */
     public List<CollectConf> getResult() {
         return result;
     }
 
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public void setResult(List<CollectConf> result) {
         this.result = result;
     }
 
 
+
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public DescribeInstanceCollectConfsEnd result(List<CollectConf> result) {
         this.result = result;
         return this;
     }
+
 
 
     /**
@@ -81,5 +84,4 @@ public class DescribeInstanceCollectConfsEnd  implements java.io.Serializable {
         }
         this.result.add(result);
     }
-
 }

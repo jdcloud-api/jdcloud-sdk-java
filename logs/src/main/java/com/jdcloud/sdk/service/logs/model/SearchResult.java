@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * LogSearch APIs
- * 日志扫描接口
+ * JCLOUD LOGS API
+ * logs API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.logs.model.SearchFields;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 搜索日志
+ * searchResult
  */
 public class SearchResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,8 +39,8 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
     /**
      * data
      */
+    
     private List<Object> data;
-
     /**
      * searchFields
      */
@@ -52,23 +52,25 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
     private Long total;
 
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<Object> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<Object> data) {
         this.data = data;
     }
+
 
     /**
      * get searchFields
@@ -87,6 +89,7 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
     public void setSearchFields(SearchFields searchFields) {
         this.searchFields = searchFields;
     }
+
 
     /**
      * get 总数
@@ -107,15 +110,17 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
     }
 
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public SearchResult data(List<Object> data) {
         this.data = data;
         return this;
     }
+
 
     /**
      * set searchFields
@@ -127,6 +132,7 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
         return this;
     }
 
+
     /**
      * set 总数
      *
@@ -136,6 +142,7 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
         this.total = total;
         return this;
     }
+
 
 
     /**
@@ -149,5 +156,4 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
         }
         this.data.add(data);
     }
-
 }

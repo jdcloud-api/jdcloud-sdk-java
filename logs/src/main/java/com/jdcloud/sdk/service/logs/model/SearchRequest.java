@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * LogSearch APIs
- * 日志扫描接口
+ * JCLOUD LOGS API
+ * logs API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -31,7 +31,7 @@ import com.jdcloud.sdk.service.logs.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 搜索日志
+ * searchRequest
  */
 public class SearchRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -82,8 +82,8 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     /**
      * 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域 Id
      * Required:true
@@ -106,6 +106,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     private String logtopicUID;
 
 
+
     /**
      * get &quot;preview&quot;表示预览, &quot;fulltext&quot;表示全文检索, &quot;advance&quot;表示按照搜索语句检索
      *
@@ -123,6 +124,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     public void setAction(String action) {
         this.action = action;
     }
+
 
     /**
      * get Base64编码的搜索表达式,
@@ -142,6 +144,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         this.expr = expr;
     }
 
+
     /**
      * get 搜索关键字大小写敏感， 默认false
      *
@@ -159,6 +162,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     public void setCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
     }
+
 
     /**
      * get 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
@@ -178,6 +182,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         this.startTime = startTime;
     }
 
+
     /**
      * get 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
      *
@@ -195,6 +200,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get 页数。 最小为1，最大为99
@@ -214,6 +220,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页个数。默认为10，最大100
      *
@@ -231,6 +238,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     public void setPageSize(Long pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 返回排序,不填或者为空，默认为desc，&quot;asc&quot;:按照时间正序返回结果，&quot;desc&quot;:按照时间倒序返回结果
@@ -250,23 +258,25 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         this.sort = sort;
     }
 
+
     /**
-     * get 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
-     *
-     * @return
-     */
+    * get 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
-     *
-     * @param filters
-     */
+    * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域 Id
@@ -286,6 +296,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         this.regionId = regionId;
     }
 
+
     /**
      * get 日志集ID
      *
@@ -303,6 +314,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     public void setLogsetUID(String logsetUID) {
         this.logsetUID = logsetUID;
     }
+
 
     /**
      * get 日志主题ID
@@ -323,6 +335,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
 
+
     /**
      * set &quot;preview&quot;表示预览, &quot;fulltext&quot;表示全文检索, &quot;advance&quot;表示按照搜索语句检索
      *
@@ -332,6 +345,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         this.action = action;
         return this;
     }
+
 
     /**
      * set Base64编码的搜索表达式,
@@ -343,6 +357,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         return this;
     }
 
+
     /**
      * set 搜索关键字大小写敏感， 默认false
      *
@@ -352,6 +367,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         this.caseSensitive = caseSensitive;
         return this;
     }
+
 
     /**
      * set 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
@@ -363,6 +379,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         return this;
     }
 
+
     /**
      * set 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
      *
@@ -372,6 +389,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set 页数。 最小为1，最大为99
@@ -383,6 +401,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         return this;
     }
 
+
     /**
      * set 每页个数。默认为10，最大100
      *
@@ -392,6 +411,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 返回排序,不填或者为空，默认为desc，&quot;asc&quot;:按照时间正序返回结果，&quot;desc&quot;:按照时间倒序返回结果
@@ -403,15 +423,17 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         return this;
     }
 
+
     /**
-     * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
-     *
-     * @param filters
-     */
+    * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+    *
+    * @param filters
+    */
     public SearchRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域 Id
@@ -423,6 +445,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         return this;
     }
 
+
     /**
      * set 日志集ID
      *
@@ -433,6 +456,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         return this;
     }
 
+
     /**
      * set 日志主题ID
      *
@@ -442,6 +466,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         this.logtopicUID = logtopicUID;
         return this;
     }
+
 
 
     /**
@@ -455,5 +480,4 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         }
         this.filters.add(filter);
     }
-
 }

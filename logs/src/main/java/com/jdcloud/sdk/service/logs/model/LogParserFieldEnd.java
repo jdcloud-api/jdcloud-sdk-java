@@ -33,6 +33,11 @@ public class LogParserFieldEnd  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * enableStatistics
+     */
+    private Boolean enableStatistics;
+
+    /**
      * fieldFormat
      */
     private String fieldFormat;
@@ -53,6 +58,26 @@ public class LogParserFieldEnd  implements java.io.Serializable {
     private Long index;
 
 
+
+    /**
+     * get enableStatistics
+     *
+     * @return
+     */
+    public Boolean getEnableStatistics() {
+        return enableStatistics;
+    }
+
+    /**
+     * set enableStatistics
+     *
+     * @param enableStatistics
+     */
+    public void setEnableStatistics(Boolean enableStatistics) {
+        this.enableStatistics = enableStatistics;
+    }
+
+
     /**
      * get fieldFormat
      *
@@ -70,6 +95,7 @@ public class LogParserFieldEnd  implements java.io.Serializable {
     public void setFieldFormat(String fieldFormat) {
         this.fieldFormat = fieldFormat;
     }
+
 
     /**
      * get fieldName
@@ -89,6 +115,7 @@ public class LogParserFieldEnd  implements java.io.Serializable {
         this.fieldName = fieldName;
     }
 
+
     /**
      * get fieldType
      *
@@ -106,6 +133,7 @@ public class LogParserFieldEnd  implements java.io.Serializable {
     public void setFieldType(String fieldType) {
         this.fieldType = fieldType;
     }
+
 
     /**
      * get index
@@ -126,6 +154,18 @@ public class LogParserFieldEnd  implements java.io.Serializable {
     }
 
 
+
+    /**
+     * set enableStatistics
+     *
+     * @param enableStatistics
+     */
+    public LogParserFieldEnd enableStatistics(Boolean enableStatistics) {
+        this.enableStatistics = enableStatistics;
+        return this;
+    }
+
+
     /**
      * set fieldFormat
      *
@@ -135,6 +175,7 @@ public class LogParserFieldEnd  implements java.io.Serializable {
         this.fieldFormat = fieldFormat;
         return this;
     }
+
 
     /**
      * set fieldName
@@ -146,6 +187,7 @@ public class LogParserFieldEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set fieldType
      *
@@ -155,6 +197,7 @@ public class LogParserFieldEnd  implements java.io.Serializable {
         this.fieldType = fieldType;
         return this;
     }
+
 
     /**
      * set index

@@ -41,6 +41,7 @@ public class MetricTaskSqlSpec  implements java.io.Serializable {
     private String expr;
 
 
+
     /**
      * get SQL表达式,必填；
      *
@@ -58,6 +59,7 @@ public class MetricTaskSqlSpec  implements java.io.Serializable {
     public void setExpr(String expr) {
         this.expr = expr;
     }
+
 
 
     /**

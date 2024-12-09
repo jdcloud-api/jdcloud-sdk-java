@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.logs.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * logsetEnd
@@ -67,6 +69,17 @@ public class LogsetEnd  implements java.io.Serializable {
      */
     private String region;
 
+    /**
+     * 资源组
+     */
+    private String resourceGroupUID;
+
+    /**
+     * 标签列表
+     */
+    
+    private List<Tag> tags;
+
 
     /**
      * get UID
@@ -86,6 +99,7 @@ public class LogsetEnd  implements java.io.Serializable {
         this.uID = uID;
     }
 
+
     /**
      * get 创建时间
      *
@@ -103,6 +117,7 @@ public class LogsetEnd  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 描述信息
@@ -122,6 +137,7 @@ public class LogsetEnd  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 是否存在日志主题
      *
@@ -139,6 +155,7 @@ public class LogsetEnd  implements java.io.Serializable {
     public void setHasTopic(Boolean hasTopic) {
         this.hasTopic = hasTopic;
     }
+
 
     /**
      * get 保存周期
@@ -158,6 +175,7 @@ public class LogsetEnd  implements java.io.Serializable {
         this.lifeCycle = lifeCycle;
     }
 
+
     /**
      * get 日志集名称
      *
@@ -175,6 +193,7 @@ public class LogsetEnd  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 地域信息
@@ -196,6 +215,45 @@ public class LogsetEnd  implements java.io.Serializable {
 
 
     /**
+     * get 资源组
+     *
+     * @return
+     */
+    public String getResourceGroupUID() {
+        return resourceGroupUID;
+    }
+
+    /**
+     * set 资源组
+     *
+     * @param resourceGroupUID
+     */
+    public void setResourceGroupUID(String resourceGroupUID) {
+        this.resourceGroupUID = resourceGroupUID;
+    }
+
+
+    /**
+    * get 标签列表
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 标签列表
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+
+    /**
      * set UID
      *
      * @param uID
@@ -204,6 +262,7 @@ public class LogsetEnd  implements java.io.Serializable {
         this.uID = uID;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -215,6 +274,7 @@ public class LogsetEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述信息
      *
@@ -224,6 +284,7 @@ public class LogsetEnd  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 是否存在日志主题
@@ -235,6 +296,7 @@ public class LogsetEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 保存周期
      *
@@ -245,6 +307,7 @@ public class LogsetEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志集名称
      *
@@ -254,6 +317,7 @@ public class LogsetEnd  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 地域信息
@@ -266,4 +330,38 @@ public class LogsetEnd  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 资源组
+     *
+     * @param resourceGroupUID
+     */
+    public LogsetEnd resourceGroupUID(String resourceGroupUID) {
+        this.resourceGroupUID = resourceGroupUID;
+        return this;
+    }
+
+
+    /**
+    * set 标签列表
+    *
+    * @param tags
+    */
+    public LogsetEnd tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 标签列表
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 }

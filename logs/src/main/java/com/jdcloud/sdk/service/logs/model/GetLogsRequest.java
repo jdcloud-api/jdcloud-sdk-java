@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * LogSearch APIs
- * 日志扫描接口
+ * 日志搜索接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -65,8 +65,8 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     /**
      * 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域 Id
      * Required:true
@@ -89,6 +89,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     private String logtopicUID;
 
 
+
     /**
      * get 扫描任务ID。 第一次调用传入空值即可。后续调用需传入该任务ID，以连续读取剩余日志。
      *
@@ -106,6 +107,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     public void setTaskID(String taskID) {
         this.taskID = taskID;
     }
+
 
     /**
      * get Base64编码的搜索表达式,
@@ -125,6 +127,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         this.expr = expr;
     }
 
+
     /**
      * get 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.必填
      *
@@ -142,6 +145,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.必填
@@ -161,6 +165,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         this.endTime = endTime;
     }
 
+
     /**
      * get 返回排序,不填或者为空，默认为desc，&quot;asc&quot;:按照时间正序返回结果，&quot;desc&quot;:按照时间倒序返回结果
      *
@@ -179,23 +184,25 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         this.sort = sort;
     }
 
+
     /**
-     * get 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
-     *
-     * @return
-     */
+    * get 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
-     *
-     * @param filters
-     */
+    * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域 Id
@@ -215,6 +222,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         this.regionId = regionId;
     }
 
+
     /**
      * get 日志集ID
      *
@@ -232,6 +240,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     public void setLogsetUID(String logsetUID) {
         this.logsetUID = logsetUID;
     }
+
 
     /**
      * get 日志主题ID
@@ -252,6 +261,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     }
 
 
+
     /**
      * set 扫描任务ID。 第一次调用传入空值即可。后续调用需传入该任务ID，以连续读取剩余日志。
      *
@@ -261,6 +271,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         this.taskID = taskID;
         return this;
     }
+
 
     /**
      * set Base64编码的搜索表达式,
@@ -272,6 +283,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.必填
      *
@@ -281,6 +293,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.必填
@@ -292,6 +305,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set 返回排序,不填或者为空，默认为desc，&quot;asc&quot;:按照时间正序返回结果，&quot;desc&quot;:按照时间倒序返回结果
      *
@@ -302,15 +316,17 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         return this;
     }
 
+
     /**
-     * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
-     *
-     * @param filters
-     */
+    * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+    *
+    * @param filters
+    */
     public GetLogsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域 Id
@@ -322,6 +338,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set 日志集ID
      *
@@ -332,6 +349,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set 日志主题ID
      *
@@ -341,6 +359,7 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         this.logtopicUID = logtopicUID;
         return this;
     }
+
 
 
     /**
@@ -354,5 +373,4 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
         }
         this.filters.add(filter);
     }
-
 }

@@ -43,6 +43,7 @@ public class DescribeLogdCAEnd  implements java.io.Serializable {
     private String expiryDate;
 
 
+
     /**
      * get cer 证书，hex string
      *
@@ -60,6 +61,7 @@ public class DescribeLogdCAEnd  implements java.io.Serializable {
     public void setCer(String cer) {
         this.cer = cer;
     }
+
 
     /**
      * get expiryDate 证书到期日
@@ -80,6 +82,7 @@ public class DescribeLogdCAEnd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set cer 证书，hex string
      *
@@ -89,6 +92,7 @@ public class DescribeLogdCAEnd  implements java.io.Serializable {
         this.cer = cer;
         return this;
     }
+
 
     /**
      * set expiryDate 证书到期日

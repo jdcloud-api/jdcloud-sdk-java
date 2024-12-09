@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * LogSearch APIs
- * 日志扫描接口
+ * 日志搜索接口
  *
  * OpenAPI spec version: v1
  * Contact: 

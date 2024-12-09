@@ -37,31 +37,33 @@ public class DestConf  implements java.io.Serializable {
     /**
      * 自定义目的地
      */
+    
     private List<CustomConf> custom;
-
     /**
      * 是否设置日志主题作为目的地
      */
     private Boolean jcloud;
 
 
+
     /**
-     * get 自定义目的地
-     *
-     * @return
-     */
+    * get 自定义目的地
+    *
+    * @return
+    */
     public List<CustomConf> getCustom() {
         return custom;
     }
 
     /**
-     * set 自定义目的地
-     *
-     * @param custom
-     */
+    * set 自定义目的地
+    *
+    * @param custom
+    */
     public void setCustom(List<CustomConf> custom) {
         this.custom = custom;
     }
+
 
     /**
      * get 是否设置日志主题作为目的地
@@ -82,15 +84,17 @@ public class DestConf  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 自定义目的地
-     *
-     * @param custom
-     */
+    * set 自定义目的地
+    *
+    * @param custom
+    */
     public DestConf custom(List<CustomConf> custom) {
         this.custom = custom;
         return this;
     }
+
 
     /**
      * set 是否设置日志主题作为目的地
@@ -101,6 +105,7 @@ public class DestConf  implements java.io.Serializable {
         this.jcloud = jcloud;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class DestConf  implements java.io.Serializable {
         }
         this.custom.add(custom);
     }
-
 }

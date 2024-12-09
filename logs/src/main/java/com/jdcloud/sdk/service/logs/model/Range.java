@@ -53,6 +53,7 @@ public class Range  implements java.io.Serializable {
     private Object lte;
 
 
+
     /**
      * get gt
      *
@@ -70,6 +71,7 @@ public class Range  implements java.io.Serializable {
     public void setGt(Object gt) {
         this.gt = gt;
     }
+
 
     /**
      * get gte
@@ -89,6 +91,7 @@ public class Range  implements java.io.Serializable {
         this.gte = gte;
     }
 
+
     /**
      * get lt
      *
@@ -106,6 +109,7 @@ public class Range  implements java.io.Serializable {
     public void setLt(Object lt) {
         this.lt = lt;
     }
+
 
     /**
      * get lte
@@ -126,6 +130,7 @@ public class Range  implements java.io.Serializable {
     }
 
 
+
     /**
      * set gt
      *
@@ -135,6 +140,7 @@ public class Range  implements java.io.Serializable {
         this.gt = gt;
         return this;
     }
+
 
     /**
      * set gte
@@ -146,6 +152,7 @@ public class Range  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set lt
      *
@@ -155,6 +162,7 @@ public class Range  implements java.io.Serializable {
         this.lt = lt;
         return this;
     }
+
 
     /**
      * set lte

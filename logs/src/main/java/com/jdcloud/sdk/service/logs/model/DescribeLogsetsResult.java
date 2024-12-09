@@ -39,8 +39,8 @@ public class DescribeLogsetsResult extends JdcloudResult implements java.io.Seri
     /**
      * data
      */
+    
     private List<LogsetEnd> data;
-
     /**
      * 总页数
      */
@@ -62,23 +62,25 @@ public class DescribeLogsetsResult extends JdcloudResult implements java.io.Seri
     private Long pageSize;
 
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<LogsetEnd> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<LogsetEnd> data) {
         this.data = data;
     }
+
 
     /**
      * get 总页数
@@ -98,6 +100,7 @@ public class DescribeLogsetsResult extends JdcloudResult implements java.io.Seri
         this.numberPages = numberPages;
     }
 
+
     /**
      * get 总记录数
      *
@@ -116,6 +119,7 @@ public class DescribeLogsetsResult extends JdcloudResult implements java.io.Seri
         this.numberRecords = numberRecords;
     }
 
+
     /**
      * get 当前页码
      *
@@ -133,6 +137,7 @@ public class DescribeLogsetsResult extends JdcloudResult implements java.io.Seri
     public void setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小
@@ -153,15 +158,17 @@ public class DescribeLogsetsResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public DescribeLogsetsResult data(List<LogsetEnd> data) {
         this.data = data;
         return this;
     }
+
 
     /**
      * set 总页数
@@ -173,6 +180,7 @@ public class DescribeLogsetsResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 总记录数
      *
@@ -182,6 +190,7 @@ public class DescribeLogsetsResult extends JdcloudResult implements java.io.Seri
         this.numberRecords = numberRecords;
         return this;
     }
+
 
     /**
      * set 当前页码
@@ -193,6 +202,7 @@ public class DescribeLogsetsResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 分页大小
      *
@@ -202,6 +212,7 @@ public class DescribeLogsetsResult extends JdcloudResult implements java.io.Seri
         this.pageSize = pageSize;
         return this;
     }
+
 
 
     /**
@@ -215,5 +226,4 @@ public class DescribeLogsetsResult extends JdcloudResult implements java.io.Seri
         }
         this.data.add(data);
     }
-
 }

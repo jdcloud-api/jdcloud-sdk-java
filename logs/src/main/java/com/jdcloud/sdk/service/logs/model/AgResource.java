@@ -48,6 +48,7 @@ public class AgResource  implements java.io.Serializable {
     private String region;
 
 
+
     /**
      * get 高可用组 id
      *
@@ -66,6 +67,7 @@ public class AgResource  implements java.io.Serializable {
         this.agId = agId;
     }
 
+
     /**
      * get 高可用组 name
      *
@@ -83,6 +85,7 @@ public class AgResource  implements java.io.Serializable {
     public void setAgName(String agName) {
         this.agName = agName;
     }
+
 
     /**
      * get 区域
@@ -103,6 +106,7 @@ public class AgResource  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 高可用组 id
      *
@@ -113,6 +117,7 @@ public class AgResource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 高可用组 name
      *
@@ -122,6 +127,7 @@ public class AgResource  implements java.io.Serializable {
         this.agName = agName;
         return this;
     }
+
 
     /**
      * set 区域

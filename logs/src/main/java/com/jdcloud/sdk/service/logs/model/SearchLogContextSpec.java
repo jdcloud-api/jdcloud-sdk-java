@@ -40,8 +40,8 @@ public class SearchLogContextSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<Object> anchor;
-
     /**
      * 搜索方向,默认both,可取值:up,down,both
      */
@@ -50,8 +50,8 @@ public class SearchLogContextSpec  implements java.io.Serializable {
     /**
      * 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
      */
+    
     private List<Filter> filters;
-
     /**
      * 日志记录ID
      * Required:true
@@ -74,23 +74,25 @@ public class SearchLogContextSpec  implements java.io.Serializable {
     private Long time;
 
 
+
     /**
-     * get 查询anchor,基于该值偏移进行上下文检索
-     *
-     * @return
-     */
+    * get 查询anchor,基于该值偏移进行上下文检索
+    *
+    * @return
+    */
     public List<Object> getAnchor() {
         return anchor;
     }
 
     /**
-     * set 查询anchor,基于该值偏移进行上下文检索
-     *
-     * @param anchor
-     */
+    * set 查询anchor,基于该值偏移进行上下文检索
+    *
+    * @param anchor
+    */
     public void setAnchor(List<Object> anchor) {
         this.anchor = anchor;
     }
+
 
     /**
      * get 搜索方向,默认both,可取值:up,down,both
@@ -110,23 +112,25 @@ public class SearchLogContextSpec  implements java.io.Serializable {
         this.direction = direction;
     }
 
+
     /**
-     * get 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
-     *
-     * @return
-     */
+    * get 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
-     *
-     * @param filters
-     */
+    * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 日志记录ID
@@ -146,6 +150,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 查看上下文行数大小，最大支持200
      *
@@ -163,6 +168,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
     public void setLineSize(Long lineSize) {
         this.lineSize = lineSize;
     }
+
 
     /**
      * get 查询日志时返回的时间戳
@@ -183,15 +189,17 @@ public class SearchLogContextSpec  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 查询anchor,基于该值偏移进行上下文检索
-     *
-     * @param anchor
-     */
+    * set 查询anchor,基于该值偏移进行上下文检索
+    *
+    * @param anchor
+    */
     public SearchLogContextSpec anchor(List<Object> anchor) {
         this.anchor = anchor;
         return this;
     }
+
 
     /**
      * set 搜索方向,默认both,可取值:up,down,both
@@ -203,15 +211,17 @@ public class SearchLogContextSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
-     *
-     * @param filters
-     */
+    * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+    *
+    * @param filters
+    */
     public SearchLogContextSpec filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 日志记录ID
@@ -223,6 +233,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 查看上下文行数大小，最大支持200
      *
@@ -233,6 +244,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 查询日志时返回的时间戳
      *
@@ -242,6 +254,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
         this.time = time;
         return this;
     }
+
 
 
     /**
@@ -267,5 +280,4 @@ public class SearchLogContextSpec  implements java.io.Serializable {
         }
         this.filters.add(filter);
     }
-
 }

@@ -43,6 +43,7 @@ public class TimestampRange  implements java.io.Serializable {
     private Long start;
 
 
+
     /**
      * get 结束时间，单位毫秒
      *
@@ -60,6 +61,7 @@ public class TimestampRange  implements java.io.Serializable {
     public void setEnd(Long end) {
         this.end = end;
     }
+
 
     /**
      * get 开始时间，单位毫秒
@@ -80,6 +82,7 @@ public class TimestampRange  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 结束时间，单位毫秒
      *
@@ -89,6 +92,7 @@ public class TimestampRange  implements java.io.Serializable {
         this.end = end;
         return this;
     }
+
 
     /**
      * set 开始时间，单位毫秒

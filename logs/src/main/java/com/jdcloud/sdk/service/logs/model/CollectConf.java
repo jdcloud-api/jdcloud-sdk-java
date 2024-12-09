@@ -47,8 +47,8 @@ public class CollectConf  implements java.io.Serializable {
     /**
      * filters 过滤器V1：多个词之间为or的关系
      */
+    
     private List<String> filters;
-
     /**
      * logsetUID 日志集UID
      */
@@ -63,6 +63,7 @@ public class CollectConf  implements java.io.Serializable {
      * 采集文件路径，支持通配
      */
     private String path;
+
 
 
     /**
@@ -83,6 +84,7 @@ public class CollectConf  implements java.io.Serializable {
         this.collectTemplateUID = collectTemplateUID;
     }
 
+
     /**
      * get 采集文件名称，支持通配
      *
@@ -101,23 +103,25 @@ public class CollectConf  implements java.io.Serializable {
         this.file = file;
     }
 
+
     /**
-     * get filters 过滤器V1：多个词之间为or的关系
-     *
-     * @return
-     */
+    * get filters 过滤器V1：多个词之间为or的关系
+    *
+    * @return
+    */
     public List<String> getFilters() {
         return filters;
     }
 
     /**
-     * set filters 过滤器V1：多个词之间为or的关系
-     *
-     * @param filters
-     */
+    * set filters 过滤器V1：多个词之间为or的关系
+    *
+    * @param filters
+    */
     public void setFilters(List<String> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get logsetUID 日志集UID
@@ -137,6 +141,7 @@ public class CollectConf  implements java.io.Serializable {
         this.logsetUID = logsetUID;
     }
 
+
     /**
      * get logtopicUID 日志主题UID
      *
@@ -154,6 +159,7 @@ public class CollectConf  implements java.io.Serializable {
     public void setLogtopicUID(String logtopicUID) {
         this.logtopicUID = logtopicUID;
     }
+
 
     /**
      * get 采集文件路径，支持通配
@@ -174,6 +180,7 @@ public class CollectConf  implements java.io.Serializable {
     }
 
 
+
     /**
      * set collectTemplateUID
      *
@@ -183,6 +190,7 @@ public class CollectConf  implements java.io.Serializable {
         this.collectTemplateUID = collectTemplateUID;
         return this;
     }
+
 
     /**
      * set 采集文件名称，支持通配
@@ -194,15 +202,17 @@ public class CollectConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set filters 过滤器V1：多个词之间为or的关系
-     *
-     * @param filters
-     */
+    * set filters 过滤器V1：多个词之间为or的关系
+    *
+    * @param filters
+    */
     public CollectConf filters(List<String> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set logsetUID 日志集UID
@@ -214,6 +224,7 @@ public class CollectConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set logtopicUID 日志主题UID
      *
@@ -224,6 +235,7 @@ public class CollectConf  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 采集文件路径，支持通配
      *
@@ -233,6 +245,7 @@ public class CollectConf  implements java.io.Serializable {
         this.path = path;
         return this;
     }
+
 
 
     /**
@@ -246,5 +259,4 @@ public class CollectConf  implements java.io.Serializable {
         }
         this.filters.add(filter);
     }
-
 }

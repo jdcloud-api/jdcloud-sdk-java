@@ -57,8 +57,8 @@ public class CustomSpec  implements java.io.Serializable {
     /**
      * 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
      */
+    
     private List<String> logFilters;
-
     /**
      * logPath
      */
@@ -68,6 +68,7 @@ public class CustomSpec  implements java.io.Serializable {
      * 目的地是否是日志服务logtopic，只支持业务应用日志
      */
     private Boolean logtopicEnabled;
+
 
 
     /**
@@ -88,6 +89,7 @@ public class CustomSpec  implements java.io.Serializable {
         this.filterEnabled = filterEnabled;
     }
 
+
     /**
      * get 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;，默认为空:不进行自定义目的上报
      *
@@ -105,6 +107,7 @@ public class CustomSpec  implements java.io.Serializable {
     public void setLogCustomTarget(String logCustomTarget) {
         this.logCustomTarget = logCustomTarget;
     }
+
 
     /**
      * get 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
@@ -124,6 +127,7 @@ public class CustomSpec  implements java.io.Serializable {
         this.logCustomTargetConf = logCustomTargetConf;
     }
 
+
     /**
      * get 日志文件名。当appcode为custom时为必填。日志文件名支持正则表达式。
      *
@@ -142,23 +146,25 @@ public class CustomSpec  implements java.io.Serializable {
         this.logFile = logFile;
     }
 
+
     /**
-     * get 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
-     *
-     * @return
-     */
+    * get 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
+    *
+    * @return
+    */
     public List<String> getLogFilters() {
         return logFilters;
     }
 
     /**
-     * set 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
-     *
-     * @param logFilters
-     */
+    * set 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
+    *
+    * @param logFilters
+    */
     public void setLogFilters(List<String> logFilters) {
         this.logFilters = logFilters;
     }
+
 
     /**
      * get logPath
@@ -177,6 +183,7 @@ public class CustomSpec  implements java.io.Serializable {
     public void setLogPath(String logPath) {
         this.logPath = logPath;
     }
+
 
     /**
      * get 目的地是否是日志服务logtopic，只支持业务应用日志
@@ -197,6 +204,7 @@ public class CustomSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 过滤器是否启用。当appcode为custom时必填
      *
@@ -206,6 +214,7 @@ public class CustomSpec  implements java.io.Serializable {
         this.filterEnabled = filterEnabled;
         return this;
     }
+
 
     /**
      * set 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;，默认为空:不进行自定义目的上报
@@ -217,6 +226,7 @@ public class CustomSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
      *
@@ -226,6 +236,7 @@ public class CustomSpec  implements java.io.Serializable {
         this.logCustomTargetConf = logCustomTargetConf;
         return this;
     }
+
 
     /**
      * set 日志文件名。当appcode为custom时为必填。日志文件名支持正则表达式。
@@ -237,15 +248,17 @@ public class CustomSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
-     *
-     * @param logFilters
-     */
+    * set 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
+    *
+    * @param logFilters
+    */
     public CustomSpec logFilters(List<String> logFilters) {
         this.logFilters = logFilters;
         return this;
     }
+
 
     /**
      * set logPath
@@ -257,6 +270,7 @@ public class CustomSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 目的地是否是日志服务logtopic，只支持业务应用日志
      *
@@ -266,6 +280,7 @@ public class CustomSpec  implements java.io.Serializable {
         this.logtopicEnabled = logtopicEnabled;
         return this;
     }
+
 
 
     /**
@@ -279,5 +294,4 @@ public class CustomSpec  implements java.io.Serializable {
         }
         this.logFilters.add(logFilter);
     }
-
 }

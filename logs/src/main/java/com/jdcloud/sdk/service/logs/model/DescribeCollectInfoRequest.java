@@ -49,6 +49,7 @@ public class DescribeCollectInfoRequest extends JdcloudRequest implements java.i
     private String collectInfoUID;
 
 
+
     /**
      * get 地域 Id
      *
@@ -66,6 +67,7 @@ public class DescribeCollectInfoRequest extends JdcloudRequest implements java.i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 采集配置 UID
@@ -86,6 +88,7 @@ public class DescribeCollectInfoRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 地域 Id
      *
@@ -95,6 +98,7 @@ public class DescribeCollectInfoRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 采集配置 UID

@@ -48,6 +48,7 @@ public class TagResourceEnd  implements java.io.Serializable {
     private String tagValue;
 
 
+
     /**
      * get 区域
      *
@@ -66,6 +67,7 @@ public class TagResourceEnd  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 标签 key
      *
@@ -83,6 +85,7 @@ public class TagResourceEnd  implements java.io.Serializable {
     public void setTagKey(String tagKey) {
         this.tagKey = tagKey;
     }
+
 
     /**
      * get 标签 value
@@ -103,6 +106,7 @@ public class TagResourceEnd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 区域
      *
@@ -113,6 +117,7 @@ public class TagResourceEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 标签 key
      *
@@ -122,6 +127,7 @@ public class TagResourceEnd  implements java.io.Serializable {
         this.tagKey = tagKey;
         return this;
     }
+
 
     /**
      * set 标签 value

@@ -43,6 +43,7 @@ public class SimpleQueryItem  implements java.io.Serializable {
     private String keyword;
 
 
+
     /**
      * get exclude
      *
@@ -60,6 +61,7 @@ public class SimpleQueryItem  implements java.io.Serializable {
     public void setExclude(Boolean exclude) {
         this.exclude = exclude;
     }
+
 
     /**
      * get keyword
@@ -80,6 +82,7 @@ public class SimpleQueryItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set exclude
      *
@@ -89,6 +92,7 @@ public class SimpleQueryItem  implements java.io.Serializable {
         this.exclude = exclude;
         return this;
     }
+
 
     /**
      * set keyword

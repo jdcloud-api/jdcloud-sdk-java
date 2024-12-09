@@ -38,14 +38,19 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
     /**
      * 高可用组资源
      */
+    
     private List<AgResource> agResource;
-
     /**
      * 日志来源，只能是 custom/jdcloud
      * Required:true
      */
     @Required
     private String appCode;
+
+    /**
+     * binlogSpec
+     */
+    private BinlogSpec binlogSpec;
 
     /**
      * 采集状态，0-禁用，1-启用
@@ -60,14 +65,9 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
     private Boolean filterEnabled;
 
     /**
-     * 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;，默认为空:不进行自定义目的上报
+     * k8sSpec
      */
-    private String logCustomTarget;
-
-    /**
-     * 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
-     */
-    private Object logCustomTargetConf;
+    private K8sSpec k8sSpec;
 
     /**
      * 日志文件名。当appcode为custom时为必填。日志文件名支持正则表达式。
@@ -77,8 +77,8 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
     /**
      * 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
      */
+    
     private List<String> logFilters;
-
     /**
      * 日志路径。当appcode为custom时为必填。目前仅支持对 Linux 云主机上的日志进行采集，路径支持通配符“*”和“？”，文件路径应符合 Linux 的文件路径规则
      */
@@ -88,6 +88,11 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
      * 目的地是否是日志服务logtopic，只支持业务应用日志
      */
     private Boolean logtopicEnabled;
+
+    /**
+     * 采集配置名称
+     */
+    private String name;
 
     /**
      * 首行正则
@@ -109,10 +114,10 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
     /**
      * 采集实例列表：jdcloud类型最多添加20个资源；custom类型支持的资源数量不限；
      */
+    
     private List<Resource> resources;
-
     /**
-     * 产品线,当日志来源为jdcloud时，必填
+     * 产品线,当日志来源为jdcloud时,填写云产品serviceCode。否则填写自定义日志类型：vm,k8s,binlog,etc
      * Required:true
      */
     @Required
@@ -129,23 +134,25 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
     private String templateUID;
 
 
+
     /**
-     * get 高可用组资源
-     *
-     * @return
-     */
+    * get 高可用组资源
+    *
+    * @return
+    */
     public List<AgResource> getAgResource() {
         return agResource;
     }
 
     /**
-     * set 高可用组资源
-     *
-     * @param agResource
-     */
+    * set 高可用组资源
+    *
+    * @param agResource
+    */
     public void setAgResource(List<AgResource> agResource) {
         this.agResource = agResource;
     }
+
 
     /**
      * get 日志来源，只能是 custom/jdcloud
@@ -165,6 +172,26 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
+    /**
+     * get binlogSpec
+     *
+     * @return
+     */
+    public BinlogSpec getBinlogSpec() {
+        return binlogSpec;
+    }
+
+    /**
+     * set binlogSpec
+     *
+     * @param binlogSpec
+     */
+    public void setBinlogSpec(BinlogSpec binlogSpec) {
+        this.binlogSpec = binlogSpec;
+    }
+
+
     /**
      * get 采集状态，0-禁用，1-启用
      *
@@ -182,6 +209,7 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
     }
+
 
     /**
      * get 过滤器是否启用。当appcode为custom时必填
@@ -201,41 +229,25 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         this.filterEnabled = filterEnabled;
     }
 
+
     /**
-     * get 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;，默认为空:不进行自定义目的上报
+     * get k8sSpec
      *
      * @return
      */
-    public String getLogCustomTarget() {
-        return logCustomTarget;
+    public K8sSpec getK8sSpec() {
+        return k8sSpec;
     }
 
     /**
-     * set 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;，默认为空:不进行自定义目的上报
+     * set k8sSpec
      *
-     * @param logCustomTarget
+     * @param k8sSpec
      */
-    public void setLogCustomTarget(String logCustomTarget) {
-        this.logCustomTarget = logCustomTarget;
+    public void setK8sSpec(K8sSpec k8sSpec) {
+        this.k8sSpec = k8sSpec;
     }
 
-    /**
-     * get 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
-     *
-     * @return
-     */
-    public Object getLogCustomTargetConf() {
-        return logCustomTargetConf;
-    }
-
-    /**
-     * set 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
-     *
-     * @param logCustomTargetConf
-     */
-    public void setLogCustomTargetConf(Object logCustomTargetConf) {
-        this.logCustomTargetConf = logCustomTargetConf;
-    }
 
     /**
      * get 日志文件名。当appcode为custom时为必填。日志文件名支持正则表达式。
@@ -255,23 +267,25 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         this.logFile = logFile;
     }
 
+
     /**
-     * get 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
-     *
-     * @return
-     */
+    * get 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
+    *
+    * @return
+    */
     public List<String> getLogFilters() {
         return logFilters;
     }
 
     /**
-     * set 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
-     *
-     * @param logFilters
-     */
+    * set 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
+    *
+    * @param logFilters
+    */
     public void setLogFilters(List<String> logFilters) {
         this.logFilters = logFilters;
     }
+
 
     /**
      * get 日志路径。当appcode为custom时为必填。目前仅支持对 Linux 云主机上的日志进行采集，路径支持通配符“*”和“？”，文件路径应符合 Linux 的文件路径规则
@@ -291,6 +305,7 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         this.logPath = logPath;
     }
 
+
     /**
      * get 目的地是否是日志服务logtopic，只支持业务应用日志
      *
@@ -308,6 +323,26 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
     public void setLogtopicEnabled(Boolean logtopicEnabled) {
         this.logtopicEnabled = logtopicEnabled;
     }
+
+
+    /**
+     * get 采集配置名称
+     *
+     * @return
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * set 采集配置名称
+     *
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
     /**
      * get 首行正则
@@ -327,6 +362,7 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         this.regexpStr = regexpStr;
     }
 
+
     /**
      * get 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
      *
@@ -344,6 +380,7 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
     public void setResourceMode(Long resourceMode) {
         this.resourceMode = resourceMode;
     }
+
 
     /**
      * get 采集实例类型, 只能是 all/part  当选择all时，传入的实例列表无效；custom类型的采集配置目前仅支持part方式，即用户指定实例列表；
@@ -363,26 +400,28 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         this.resourceType = resourceType;
     }
 
+
     /**
-     * get 采集实例列表：jdcloud类型最多添加20个资源；custom类型支持的资源数量不限；
-     *
-     * @return
-     */
+    * get 采集实例列表：jdcloud类型最多添加20个资源；custom类型支持的资源数量不限；
+    *
+    * @return
+    */
     public List<Resource> getResources() {
         return resources;
     }
 
     /**
-     * set 采集实例列表：jdcloud类型最多添加20个资源；custom类型支持的资源数量不限；
-     *
-     * @param resources
-     */
+    * set 采集实例列表：jdcloud类型最多添加20个资源；custom类型支持的资源数量不限；
+    *
+    * @param resources
+    */
     public void setResources(List<Resource> resources) {
         this.resources = resources;
     }
 
+
     /**
-     * get 产品线,当日志来源为jdcloud时，必填
+     * get 产品线,当日志来源为jdcloud时,填写云产品serviceCode。否则填写自定义日志类型：vm,k8s,binlog,etc
      *
      * @return
      */
@@ -391,13 +430,14 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 产品线,当日志来源为jdcloud时，必填
+     * set 产品线,当日志来源为jdcloud时,填写云产品serviceCode。否则填写自定义日志类型：vm,k8s,binlog,etc
      *
      * @param serviceCode
      */
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get tagResource
@@ -416,6 +456,7 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
     public void setTagResource(TagResource tagResource) {
         this.tagResource = tagResource;
     }
+
 
     /**
      * get 日志类型。当appcode为jdcloud时为必填
@@ -436,15 +477,17 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 高可用组资源
-     *
-     * @param agResource
-     */
+    * set 高可用组资源
+    *
+    * @param agResource
+    */
     public CreateCollectInfoSpec agResource(List<AgResource> agResource) {
         this.agResource = agResource;
         return this;
     }
+
 
     /**
      * set 日志来源，只能是 custom/jdcloud
@@ -456,6 +499,18 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set binlogSpec
+     *
+     * @param binlogSpec
+     */
+    public CreateCollectInfoSpec binlogSpec(BinlogSpec binlogSpec) {
+        this.binlogSpec = binlogSpec;
+        return this;
+    }
+
+
     /**
      * set 采集状态，0-禁用，1-启用
      *
@@ -465,6 +520,7 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         this.enabled = enabled;
         return this;
     }
+
 
     /**
      * set 过滤器是否启用。当appcode为custom时必填
@@ -476,25 +532,17 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;，默认为空:不进行自定义目的上报
+     * set k8sSpec
      *
-     * @param logCustomTarget
+     * @param k8sSpec
      */
-    public CreateCollectInfoSpec logCustomTarget(String logCustomTarget) {
-        this.logCustomTarget = logCustomTarget;
+    public CreateCollectInfoSpec k8sSpec(K8sSpec k8sSpec) {
+        this.k8sSpec = k8sSpec;
         return this;
     }
 
-    /**
-     * set 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
-     *
-     * @param logCustomTargetConf
-     */
-    public CreateCollectInfoSpec logCustomTargetConf(Object logCustomTargetConf) {
-        this.logCustomTargetConf = logCustomTargetConf;
-        return this;
-    }
 
     /**
      * set 日志文件名。当appcode为custom时为必填。日志文件名支持正则表达式。
@@ -506,15 +554,17 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
-     *
-     * @param logFilters
-     */
+    * set 过滤器。设置过滤器后可根据用户设定的关键词采集部分日志，如仅采集 Error 的日志。目前最大允许5个。
+    *
+    * @param logFilters
+    */
     public CreateCollectInfoSpec logFilters(List<String> logFilters) {
         this.logFilters = logFilters;
         return this;
     }
+
 
     /**
      * set 日志路径。当appcode为custom时为必填。目前仅支持对 Linux 云主机上的日志进行采集，路径支持通配符“*”和“？”，文件路径应符合 Linux 的文件路径规则
@@ -526,6 +576,7 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 目的地是否是日志服务logtopic，只支持业务应用日志
      *
@@ -535,6 +586,18 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         this.logtopicEnabled = logtopicEnabled;
         return this;
     }
+
+
+    /**
+     * set 采集配置名称
+     *
+     * @param name
+     */
+    public CreateCollectInfoSpec name(String name) {
+        this.name = name;
+        return this;
+    }
+
 
     /**
      * set 首行正则
@@ -546,6 +609,7 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
      *
@@ -555,6 +619,7 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         this.resourceMode = resourceMode;
         return this;
     }
+
 
     /**
      * set 采集实例类型, 只能是 all/part  当选择all时，传入的实例列表无效；custom类型的采集配置目前仅支持part方式，即用户指定实例列表；
@@ -566,18 +631,20 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 采集实例列表：jdcloud类型最多添加20个资源；custom类型支持的资源数量不限；
-     *
-     * @param resources
-     */
+    * set 采集实例列表：jdcloud类型最多添加20个资源；custom类型支持的资源数量不限；
+    *
+    * @param resources
+    */
     public CreateCollectInfoSpec resources(List<Resource> resources) {
         this.resources = resources;
         return this;
     }
 
+
     /**
-     * set 产品线,当日志来源为jdcloud时，必填
+     * set 产品线,当日志来源为jdcloud时,填写云产品serviceCode。否则填写自定义日志类型：vm,k8s,binlog,etc
      *
      * @param serviceCode
      */
@@ -585,6 +652,7 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set tagResource
@@ -596,6 +664,7 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志类型。当appcode为jdcloud时为必填
      *
@@ -605,6 +674,7 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         this.templateUID = templateUID;
         return this;
     }
+
 
 
     /**
@@ -642,5 +712,4 @@ public class CreateCollectInfoSpec  implements java.io.Serializable {
         }
         this.resources.add(resource);
     }
-
 }

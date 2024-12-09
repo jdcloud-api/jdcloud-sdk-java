@@ -68,6 +68,7 @@ public class Match  implements java.io.Serializable {
     private Object substring;
 
 
+
     /**
      * get eq
      *
@@ -85,6 +86,7 @@ public class Match  implements java.io.Serializable {
     public void setEq(Object eq) {
         this.eq = eq;
     }
+
 
     /**
      * get not
@@ -104,6 +106,7 @@ public class Match  implements java.io.Serializable {
         this.not = not;
     }
 
+
     /**
      * get range
      *
@@ -121,6 +124,7 @@ public class Match  implements java.io.Serializable {
     public void setRange(Object range) {
         this.range = range;
     }
+
 
     /**
      * get regexp
@@ -140,6 +144,7 @@ public class Match  implements java.io.Serializable {
         this.regexp = regexp;
     }
 
+
     /**
      * get simple_query_string
      *
@@ -158,6 +163,7 @@ public class Match  implements java.io.Serializable {
         this.simple_query_string = simple_query_string;
     }
 
+
     /**
      * get simpleQuery
      *
@@ -175,6 +181,7 @@ public class Match  implements java.io.Serializable {
     public void setSimpleQuery(Object simpleQuery) {
         this.simpleQuery = simpleQuery;
     }
+
 
     /**
      * get substring
@@ -195,6 +202,7 @@ public class Match  implements java.io.Serializable {
     }
 
 
+
     /**
      * set eq
      *
@@ -204,6 +212,7 @@ public class Match  implements java.io.Serializable {
         this.eq = eq;
         return this;
     }
+
 
     /**
      * set not
@@ -215,6 +224,7 @@ public class Match  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set range
      *
@@ -224,6 +234,7 @@ public class Match  implements java.io.Serializable {
         this.range = range;
         return this;
     }
+
 
     /**
      * set regexp
@@ -235,6 +246,7 @@ public class Match  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set simple_query_string
      *
@@ -245,6 +257,7 @@ public class Match  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set simpleQuery
      *
@@ -254,6 +267,7 @@ public class Match  implements java.io.Serializable {
         this.simpleQuery = simpleQuery;
         return this;
     }
+
 
     /**
      * set substring
