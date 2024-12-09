@@ -49,6 +49,7 @@ public class DeleteLogsetRequest extends JdcloudRequest implements java.io.Seria
     private String logsetUIDs;
 
 
+
     /**
      * get 地域 Id
      *
@@ -66,6 +67,7 @@ public class DeleteLogsetRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 日志集ID，多个日志集ID以逗号分割
@@ -86,6 +88,7 @@ public class DeleteLogsetRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 地域 Id
      *
@@ -95,6 +98,7 @@ public class DeleteLogsetRequest extends JdcloudRequest implements java.io.Seria
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 日志集ID，多个日志集ID以逗号分割

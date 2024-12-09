@@ -36,12 +36,17 @@ public class CreateParserSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 行级索引分词符。 Rune 数组
+     */
+    
+    private List<String> indexToken;
+    /**
      * parserFields
      * Required:true
      */
     @Required
+    
     private List<ParserField> parserFields;
-
     /**
      * 解析类型。oneline - 单行，split - 分割， json - json， regexp - regexp
      * Required:true
@@ -62,26 +67,52 @@ public class CreateParserSpec  implements java.io.Serializable {
     /**
      * 预处理任务列表。按照数组的顺序执行。
      */
+    
     private List<PipelineSpec> pipelines;
+    /**
+     * 是否保留原始内容字段
+     */
+    private Boolean reserveOriginContent;
+
 
 
     /**
-     * get parserFields
-     *
-     * @return
-     */
+    * get 行级索引分词符。 Rune 数组
+    *
+    * @return
+    */
+    public List<String> getIndexToken() {
+        return indexToken;
+    }
+
+    /**
+    * set 行级索引分词符。 Rune 数组
+    *
+    * @param indexToken
+    */
+    public void setIndexToken(List<String> indexToken) {
+        this.indexToken = indexToken;
+    }
+
+
+    /**
+    * get parserFields
+    *
+    * @return
+    */
     public List<ParserField> getParserFields() {
         return parserFields;
     }
 
     /**
-     * set parserFields
-     *
-     * @param parserFields
-     */
+    * set parserFields
+    *
+    * @param parserFields
+    */
     public void setParserFields(List<ParserField> parserFields) {
         this.parserFields = parserFields;
     }
+
 
     /**
      * get 解析类型。oneline - 单行，split - 分割， json - json， regexp - regexp
@@ -101,6 +132,7 @@ public class CreateParserSpec  implements java.io.Serializable {
         this.parserMode = parserMode;
     }
 
+
     /**
      * get 解析语法
      *
@@ -118,6 +150,7 @@ public class CreateParserSpec  implements java.io.Serializable {
     public void setParserPattern(String parserPattern) {
         this.parserPattern = parserPattern;
     }
+
 
     /**
      * get 日志样例
@@ -137,34 +170,67 @@ public class CreateParserSpec  implements java.io.Serializable {
         this.parserSample = parserSample;
     }
 
+
     /**
-     * get 预处理任务列表。按照数组的顺序执行。
-     *
-     * @return
-     */
+    * get 预处理任务列表。按照数组的顺序执行。
+    *
+    * @return
+    */
     public List<PipelineSpec> getPipelines() {
         return pipelines;
     }
 
     /**
-     * set 预处理任务列表。按照数组的顺序执行。
-     *
-     * @param pipelines
-     */
+    * set 预处理任务列表。按照数组的顺序执行。
+    *
+    * @param pipelines
+    */
     public void setPipelines(List<PipelineSpec> pipelines) {
         this.pipelines = pipelines;
     }
 
 
     /**
-     * set parserFields
+     * get 是否保留原始内容字段
      *
-     * @param parserFields
+     * @return
      */
+    public Boolean getReserveOriginContent() {
+        return reserveOriginContent;
+    }
+
+    /**
+     * set 是否保留原始内容字段
+     *
+     * @param reserveOriginContent
+     */
+    public void setReserveOriginContent(Boolean reserveOriginContent) {
+        this.reserveOriginContent = reserveOriginContent;
+    }
+
+
+
+    /**
+    * set 行级索引分词符。 Rune 数组
+    *
+    * @param indexToken
+    */
+    public CreateParserSpec indexToken(List<String> indexToken) {
+        this.indexToken = indexToken;
+        return this;
+    }
+
+
+    /**
+    * set parserFields
+    *
+    * @param parserFields
+    */
     public CreateParserSpec parserFields(List<ParserField> parserFields) {
         this.parserFields = parserFields;
         return this;
     }
+
 
     /**
      * set 解析类型。oneline - 单行，split - 分割， json - json， regexp - regexp
@@ -176,6 +242,7 @@ public class CreateParserSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 解析语法
      *
@@ -185,6 +252,7 @@ public class CreateParserSpec  implements java.io.Serializable {
         this.parserPattern = parserPattern;
         return this;
     }
+
 
     /**
      * set 日志样例
@@ -196,16 +264,41 @@ public class CreateParserSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 预处理任务列表。按照数组的顺序执行。
-     *
-     * @param pipelines
-     */
+    * set 预处理任务列表。按照数组的顺序执行。
+    *
+    * @param pipelines
+    */
     public CreateParserSpec pipelines(List<PipelineSpec> pipelines) {
         this.pipelines = pipelines;
         return this;
     }
 
+
+    /**
+     * set 是否保留原始内容字段
+     *
+     * @param reserveOriginContent
+     */
+    public CreateParserSpec reserveOriginContent(Boolean reserveOriginContent) {
+        this.reserveOriginContent = reserveOriginContent;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 行级索引分词符。 Rune 数组
+     *
+     * @param indexToken
+     */
+    public void addIndexToken(String indexToken) {
+        if (this.indexToken == null) {
+            this.indexToken = new ArrayList<>();
+        }
+        this.indexToken.add(indexToken);
+    }
 
     /**
      * add item to parserFields
@@ -230,5 +323,4 @@ public class CreateParserSpec  implements java.io.Serializable {
         }
         this.pipelines.add(pipeline);
     }
-
 }

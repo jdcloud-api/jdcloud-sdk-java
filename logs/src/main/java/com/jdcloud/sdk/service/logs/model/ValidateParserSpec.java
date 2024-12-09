@@ -55,7 +55,13 @@ public class ValidateParserSpec  implements java.io.Serializable {
     /**
      * 预处理任务列表。按照数组的顺序执行。
      */
+    
     private List<PipelineSpec> pipelines;
+    /**
+     * 是否保留原始内容字段
+     */
+    private Boolean reserveOriginContent;
+
 
 
     /**
@@ -76,6 +82,7 @@ public class ValidateParserSpec  implements java.io.Serializable {
         this.parserMode = parserMode;
     }
 
+
     /**
      * get 解析语法
      *
@@ -93,6 +100,7 @@ public class ValidateParserSpec  implements java.io.Serializable {
     public void setParserPattern(String parserPattern) {
         this.parserPattern = parserPattern;
     }
+
 
     /**
      * get 日志样例
@@ -112,23 +120,44 @@ public class ValidateParserSpec  implements java.io.Serializable {
         this.parserSample = parserSample;
     }
 
+
     /**
-     * get 预处理任务列表。按照数组的顺序执行。
-     *
-     * @return
-     */
+    * get 预处理任务列表。按照数组的顺序执行。
+    *
+    * @return
+    */
     public List<PipelineSpec> getPipelines() {
         return pipelines;
     }
 
     /**
-     * set 预处理任务列表。按照数组的顺序执行。
-     *
-     * @param pipelines
-     */
+    * set 预处理任务列表。按照数组的顺序执行。
+    *
+    * @param pipelines
+    */
     public void setPipelines(List<PipelineSpec> pipelines) {
         this.pipelines = pipelines;
     }
+
+
+    /**
+     * get 是否保留原始内容字段
+     *
+     * @return
+     */
+    public Boolean getReserveOriginContent() {
+        return reserveOriginContent;
+    }
+
+    /**
+     * set 是否保留原始内容字段
+     *
+     * @param reserveOriginContent
+     */
+    public void setReserveOriginContent(Boolean reserveOriginContent) {
+        this.reserveOriginContent = reserveOriginContent;
+    }
+
 
 
     /**
@@ -141,6 +170,7 @@ public class ValidateParserSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 解析语法
      *
@@ -150,6 +180,7 @@ public class ValidateParserSpec  implements java.io.Serializable {
         this.parserPattern = parserPattern;
         return this;
     }
+
 
     /**
      * set 日志样例
@@ -161,15 +192,28 @@ public class ValidateParserSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 预处理任务列表。按照数组的顺序执行。
-     *
-     * @param pipelines
-     */
+    * set 预处理任务列表。按照数组的顺序执行。
+    *
+    * @param pipelines
+    */
     public ValidateParserSpec pipelines(List<PipelineSpec> pipelines) {
         this.pipelines = pipelines;
         return this;
     }
+
+
+    /**
+     * set 是否保留原始内容字段
+     *
+     * @param reserveOriginContent
+     */
+    public ValidateParserSpec reserveOriginContent(Boolean reserveOriginContent) {
+        this.reserveOriginContent = reserveOriginContent;
+        return this;
+    }
+
 
 
     /**
@@ -183,5 +227,4 @@ public class ValidateParserSpec  implements java.io.Serializable {
         }
         this.pipelines.add(pipeline);
     }
-
 }

@@ -37,37 +37,40 @@ public class ValidateParserEnd  implements java.io.Serializable {
     /**
      * fields
      */
+    
     private List<ValidateParserFieldEnd> fields;
 
 
     /**
-     * get fields
-     *
-     * @return
-     */
+    * get fields
+    *
+    * @return
+    */
     public List<ValidateParserFieldEnd> getFields() {
         return fields;
     }
 
     /**
-     * set fields
-     *
-     * @param fields
-     */
+    * set fields
+    *
+    * @param fields
+    */
     public void setFields(List<ValidateParserFieldEnd> fields) {
         this.fields = fields;
     }
 
 
+
     /**
-     * set fields
-     *
-     * @param fields
-     */
+    * set fields
+    *
+    * @param fields
+    */
     public ValidateParserEnd fields(List<ValidateParserFieldEnd> fields) {
         this.fields = fields;
         return this;
     }
+
 
 
     /**
@@ -81,5 +84,4 @@ public class ValidateParserEnd  implements java.io.Serializable {
         }
         this.fields.add(field);
     }
-
 }

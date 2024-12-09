@@ -45,8 +45,8 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> content;
-
     /**
      * 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）; 配置方式(SettingType) 为 空或visual 时，必填；
      */
@@ -83,6 +83,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     private MetricTaskSqlSpec sqlSpec;
 
 
+
     /**
      * get 聚合函数,支持 count sum max min avg; 配置方式(SettingType) 为 空或visual 时，必填；
      *
@@ -101,23 +102,25 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
         this.aggregate = aggregate;
     }
 
+
     /**
-     * get 测试内容
-     *
-     * @return
-     */
+    * get 测试内容
+    *
+    * @return
+    */
     public List<String> getContent() {
         return content;
     }
 
     /**
-     * set 测试内容
-     *
-     * @param content
-     */
+    * set 测试内容
+    *
+    * @param content
+    */
     public void setContent(List<String> content) {
         this.content = content;
     }
+
 
     /**
      * get 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）; 配置方式(SettingType) 为 空或visual 时，必填；
@@ -137,6 +140,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
         this.dataField = dataField;
     }
 
+
     /**
      * get 过滤语法，可以为空
      *
@@ -154,6 +158,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     public void setFilterContent(String filterContent) {
         this.filterContent = filterContent;
     }
+
 
     /**
      * get 是否打开过滤; 配置方式(SettingType) 为 空或visual 时，必填；
@@ -173,6 +178,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
         this.filterOpen = filterOpen;
     }
 
+
     /**
      * get 过滤类型，只能是fulltext和 advance; 配置方式(SettingType) 为 空或visual 时，必填；
      *
@@ -190,6 +196,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     public void setFilterType(String filterType) {
         this.filterType = filterType;
     }
+
 
     /**
      * get 监控项 , 支持大小写英文字母 下划线 数字 点，且不超过255byte（不支持中划线）; 配置方式(SettingType) 为 空或visual 时，必填；
@@ -209,6 +216,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
         this.metric = metric;
     }
 
+
     /**
      * get 配置方式: 可选参数；枚举值 visual，sql；分别代表可视化配置及sql配置方式，传空表示可视化配置；
      *
@@ -226,6 +234,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     public void setSettingType(String settingType) {
         this.settingType = settingType;
     }
+
 
     /**
      * get sqlSpec
@@ -246,6 +255,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 聚合函数,支持 count sum max min avg; 配置方式(SettingType) 为 空或visual 时，必填；
      *
@@ -256,15 +266,17 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 测试内容
-     *
-     * @param content
-     */
+    * set 测试内容
+    *
+    * @param content
+    */
     public TestMetricTaskSpec content(List<String> content) {
         this.content = content;
         return this;
     }
+
 
     /**
      * set 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）; 配置方式(SettingType) 为 空或visual 时，必填；
@@ -276,6 +288,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 过滤语法，可以为空
      *
@@ -285,6 +298,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
         this.filterContent = filterContent;
         return this;
     }
+
 
     /**
      * set 是否打开过滤; 配置方式(SettingType) 为 空或visual 时，必填；
@@ -296,6 +310,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 过滤类型，只能是fulltext和 advance; 配置方式(SettingType) 为 空或visual 时，必填；
      *
@@ -305,6 +320,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
         this.filterType = filterType;
         return this;
     }
+
 
     /**
      * set 监控项 , 支持大小写英文字母 下划线 数字 点，且不超过255byte（不支持中划线）; 配置方式(SettingType) 为 空或visual 时，必填；
@@ -316,6 +332,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 配置方式: 可选参数；枚举值 visual，sql；分别代表可视化配置及sql配置方式，传空表示可视化配置；
      *
@@ -326,6 +343,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set sqlSpec
      *
@@ -335,6 +353,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
         this.sqlSpec = sqlSpec;
         return this;
     }
+
 
 
     /**
@@ -348,5 +367,4 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
         }
         this.content.add(content);
     }
-
 }

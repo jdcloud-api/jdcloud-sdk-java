@@ -43,6 +43,7 @@ public class CustomConf  implements java.io.Serializable {
     private String destType;
 
 
+
     /**
      * get 自定义目的地配置
      *
@@ -60,6 +61,7 @@ public class CustomConf  implements java.io.Serializable {
     public void setConf(String conf) {
         this.conf = conf;
     }
+
 
     /**
      * get 自定义目的地类型，支持kafka，es
@@ -80,6 +82,7 @@ public class CustomConf  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 自定义目的地配置
      *
@@ -89,6 +92,7 @@ public class CustomConf  implements java.io.Serializable {
         this.conf = conf;
         return this;
     }
+
 
     /**
      * set 自定义目的地类型，支持kafka，es

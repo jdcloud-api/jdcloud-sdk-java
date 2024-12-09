@@ -43,6 +43,7 @@ public class TestMultiLinesSpec  implements java.io.Serializable {
     private String regexpStr;
 
 
+
     /**
      * get 需要验证的多行日志
      *
@@ -60,6 +61,7 @@ public class TestMultiLinesSpec  implements java.io.Serializable {
     public void setContent(String content) {
         this.content = content;
     }
+
 
     /**
      * get 首行正则表达式
@@ -80,6 +82,7 @@ public class TestMultiLinesSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 需要验证的多行日志
      *
@@ -89,6 +92,7 @@ public class TestMultiLinesSpec  implements java.io.Serializable {
         this.content = content;
         return this;
     }
+
 
     /**
      * set 首行正则表达式

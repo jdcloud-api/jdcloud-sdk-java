@@ -77,6 +77,7 @@ public class CreateShipperSpec  implements java.io.Serializable {
     private Long timeInterval;
 
 
+
     /**
      * get 压缩格式，为空不压缩
      *
@@ -94,6 +95,7 @@ public class CreateShipperSpec  implements java.io.Serializable {
     public void setCompress(String compress) {
         this.compress = compress;
     }
+
 
     /**
      * get 投递格式 json,  origin(原始日志格式), 默认origin
@@ -113,6 +115,7 @@ public class CreateShipperSpec  implements java.io.Serializable {
         this.fileFormat = fileFormat;
     }
 
+
     /**
      * get 投递文件大小，单位MB，支持200,300,400,500,1000
      *
@@ -130,6 +133,7 @@ public class CreateShipperSpec  implements java.io.Serializable {
     public void setFileSize(Long fileSize) {
         this.fileSize = fileSize;
     }
+
 
     /**
      * get 转储任务名称
@@ -149,6 +153,7 @@ public class CreateShipperSpec  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 目的地 配置
      *
@@ -167,6 +172,7 @@ public class CreateShipperSpec  implements java.io.Serializable {
         this.targetConf = targetConf;
     }
 
+
     /**
      * get 转储目的地类型 0: oss, 目前只支持oss
      *
@@ -184,6 +190,7 @@ public class CreateShipperSpec  implements java.io.Serializable {
     public void setTargetType(Long targetType) {
         this.targetType = targetType;
     }
+
 
     /**
      * get 投递时间间隔单位分钟，5分钟整数倍，支持5,10,15,20,30,60
@@ -204,6 +211,7 @@ public class CreateShipperSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 压缩格式，为空不压缩
      *
@@ -213,6 +221,7 @@ public class CreateShipperSpec  implements java.io.Serializable {
         this.compress = compress;
         return this;
     }
+
 
     /**
      * set 投递格式 json,  origin(原始日志格式), 默认origin
@@ -224,6 +233,7 @@ public class CreateShipperSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 投递文件大小，单位MB，支持200,300,400,500,1000
      *
@@ -233,6 +243,7 @@ public class CreateShipperSpec  implements java.io.Serializable {
         this.fileSize = fileSize;
         return this;
     }
+
 
     /**
      * set 转储任务名称
@@ -244,6 +255,7 @@ public class CreateShipperSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 目的地 配置
      *
@@ -254,6 +266,7 @@ public class CreateShipperSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 转储目的地类型 0: oss, 目前只支持oss
      *
@@ -263,6 +276,7 @@ public class CreateShipperSpec  implements java.io.Serializable {
         this.targetType = targetType;
         return this;
     }
+
 
     /**
      * set 投递时间间隔单位分钟，5分钟整数倍，支持5,10,15,20,30,60

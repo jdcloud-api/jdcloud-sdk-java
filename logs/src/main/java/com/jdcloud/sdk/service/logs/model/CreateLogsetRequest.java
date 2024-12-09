@@ -24,7 +24,10 @@
 
 package com.jdcloud.sdk.service.logs.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.logs.model.Tag;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -48,10 +51,23 @@ public class CreateLogsetRequest extends JdcloudRequest implements java.io.Seria
 
     /**
      * 保存周期，只能是 7， 15， 30
-     * Required:true
      */
-    @Required
     private Long lifeCycle;
+
+    /**
+     * 标签列表
+     */
+    
+    private List<Tag> tags;
+    /**
+     * 资源组信息
+     */
+    private String resourceGroupUID;
+
+    /**
+     * 是否是内部资源。 设置为 true，则外部租户不可见。
+     */
+    private Boolean inner;
 
     /**
      * 地域 Id
@@ -59,6 +75,7 @@ public class CreateLogsetRequest extends JdcloudRequest implements java.io.Seria
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -79,6 +96,7 @@ public class CreateLogsetRequest extends JdcloudRequest implements java.io.Seria
         this.name = name;
     }
 
+
     /**
      * get 日志集描述
      *
@@ -97,6 +115,7 @@ public class CreateLogsetRequest extends JdcloudRequest implements java.io.Seria
         this.description = description;
     }
 
+
     /**
      * get 保存周期，只能是 7， 15， 30
      *
@@ -114,6 +133,64 @@ public class CreateLogsetRequest extends JdcloudRequest implements java.io.Seria
     public void setLifeCycle(Long lifeCycle) {
         this.lifeCycle = lifeCycle;
     }
+
+
+    /**
+    * get 标签列表
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 标签列表
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get 资源组信息
+     *
+     * @return
+     */
+    public String getResourceGroupUID() {
+        return resourceGroupUID;
+    }
+
+    /**
+     * set 资源组信息
+     *
+     * @param resourceGroupUID
+     */
+    public void setResourceGroupUID(String resourceGroupUID) {
+        this.resourceGroupUID = resourceGroupUID;
+    }
+
+
+    /**
+     * get 是否是内部资源。 设置为 true，则外部租户不可见。
+     *
+     * @return
+     */
+    public Boolean getInner() {
+        return inner;
+    }
+
+    /**
+     * set 是否是内部资源。 设置为 true，则外部租户不可见。
+     *
+     * @param inner
+     */
+    public void setInner(Boolean inner) {
+        this.inner = inner;
+    }
+
 
     /**
      * get 地域 Id
@@ -134,6 +211,7 @@ public class CreateLogsetRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 日志集名称
      *
@@ -143,6 +221,7 @@ public class CreateLogsetRequest extends JdcloudRequest implements java.io.Seria
         this.name = name;
         return this;
     }
+
 
     /**
      * set 日志集描述
@@ -154,6 +233,7 @@ public class CreateLogsetRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 保存周期，只能是 7， 15， 30
      *
@@ -163,6 +243,40 @@ public class CreateLogsetRequest extends JdcloudRequest implements java.io.Seria
         this.lifeCycle = lifeCycle;
         return this;
     }
+
+
+    /**
+    * set 标签列表
+    *
+    * @param tags
+    */
+    public CreateLogsetRequest tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set 资源组信息
+     *
+     * @param resourceGroupUID
+     */
+    public CreateLogsetRequest resourceGroupUID(String resourceGroupUID) {
+        this.resourceGroupUID = resourceGroupUID;
+        return this;
+    }
+
+
+    /**
+     * set 是否是内部资源。 设置为 true，则外部租户不可见。
+     *
+     * @param inner
+     */
+    public CreateLogsetRequest inner(Boolean inner) {
+        this.inner = inner;
+        return this;
+    }
+
 
     /**
      * set 地域 Id
@@ -175,4 +289,16 @@ public class CreateLogsetRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
+    /**
+     * add item to 标签列表
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 }

@@ -45,6 +45,7 @@ in: query
     private Long pageSize;
 
 
+
     /**
      * get 当前所在页，默认为1
 in: query
@@ -64,6 +65,7 @@ in: query
     public void setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 页面大小，默认为20；取值范围[1, 100]
@@ -86,6 +88,7 @@ in: query
     }
 
 
+
     /**
      * set 当前所在页，默认为1
 in: query
@@ -96,6 +99,7 @@ in: query
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 页面大小，默认为20；取值范围[1, 100]

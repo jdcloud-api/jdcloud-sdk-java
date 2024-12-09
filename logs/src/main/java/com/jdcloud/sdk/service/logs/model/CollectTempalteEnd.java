@@ -40,6 +40,11 @@ public class CollectTempalteEnd  implements java.io.Serializable {
     private Boolean filterEnabled;
 
     /**
+     * 采集配置规格
+     */
+    private String formula;
+
+    /**
      * 日志文件
      */
     private String logFile;
@@ -47,8 +52,8 @@ public class CollectTempalteEnd  implements java.io.Serializable {
     /**
      * 过滤器
      */
+    
     private List<String> logFilters;
-
     /**
      * 日志路径
      */
@@ -58,6 +63,7 @@ public class CollectTempalteEnd  implements java.io.Serializable {
      * 首行正则
      */
     private String regexpStr;
+
 
 
     /**
@@ -78,6 +84,26 @@ public class CollectTempalteEnd  implements java.io.Serializable {
         this.filterEnabled = filterEnabled;
     }
 
+
+    /**
+     * get 采集配置规格
+     *
+     * @return
+     */
+    public String getFormula() {
+        return formula;
+    }
+
+    /**
+     * set 采集配置规格
+     *
+     * @param formula
+     */
+    public void setFormula(String formula) {
+        this.formula = formula;
+    }
+
+
     /**
      * get 日志文件
      *
@@ -96,23 +122,25 @@ public class CollectTempalteEnd  implements java.io.Serializable {
         this.logFile = logFile;
     }
 
+
     /**
-     * get 过滤器
-     *
-     * @return
-     */
+    * get 过滤器
+    *
+    * @return
+    */
     public List<String> getLogFilters() {
         return logFilters;
     }
 
     /**
-     * set 过滤器
-     *
-     * @param logFilters
-     */
+    * set 过滤器
+    *
+    * @param logFilters
+    */
     public void setLogFilters(List<String> logFilters) {
         this.logFilters = logFilters;
     }
+
 
     /**
      * get 日志路径
@@ -131,6 +159,7 @@ public class CollectTempalteEnd  implements java.io.Serializable {
     public void setLogPath(String logPath) {
         this.logPath = logPath;
     }
+
 
     /**
      * get 首行正则
@@ -151,6 +180,7 @@ public class CollectTempalteEnd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 过滤器是否启用
      *
@@ -160,6 +190,18 @@ public class CollectTempalteEnd  implements java.io.Serializable {
         this.filterEnabled = filterEnabled;
         return this;
     }
+
+
+    /**
+     * set 采集配置规格
+     *
+     * @param formula
+     */
+    public CollectTempalteEnd formula(String formula) {
+        this.formula = formula;
+        return this;
+    }
+
 
     /**
      * set 日志文件
@@ -171,15 +213,17 @@ public class CollectTempalteEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 过滤器
-     *
-     * @param logFilters
-     */
+    * set 过滤器
+    *
+    * @param logFilters
+    */
     public CollectTempalteEnd logFilters(List<String> logFilters) {
         this.logFilters = logFilters;
         return this;
     }
+
 
     /**
      * set 日志路径
@@ -191,6 +235,7 @@ public class CollectTempalteEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 首行正则
      *
@@ -200,6 +245,7 @@ public class CollectTempalteEnd  implements java.io.Serializable {
         this.regexpStr = regexpStr;
         return this;
     }
+
 
 
     /**
@@ -213,5 +259,4 @@ public class CollectTempalteEnd  implements java.io.Serializable {
         }
         this.logFilters.add(logFilter);
     }
-
 }

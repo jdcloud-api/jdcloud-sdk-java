@@ -61,6 +61,7 @@ public class UpdateSubscribeRequest extends JdcloudRequest implements java.io.Se
     private String logtopicUID;
 
 
+
     /**
      * get 日志订阅状态，0表示未创建，1表示刚创建，2表示开启，3表示关闭
      *
@@ -78,6 +79,7 @@ public class UpdateSubscribeRequest extends JdcloudRequest implements java.io.Se
     public void setStatus(Long status) {
         this.status = status;
     }
+
 
     /**
      * get 地域 Id
@@ -97,6 +99,7 @@ public class UpdateSubscribeRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
     }
 
+
     /**
      * get 日志集 UID
      *
@@ -114,6 +117,7 @@ public class UpdateSubscribeRequest extends JdcloudRequest implements java.io.Se
     public void setLogsetUID(String logsetUID) {
         this.logsetUID = logsetUID;
     }
+
 
     /**
      * get 日志主题 UID
@@ -134,6 +138,7 @@ public class UpdateSubscribeRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 日志订阅状态，0表示未创建，1表示刚创建，2表示开启，3表示关闭
      *
@@ -143,6 +148,7 @@ public class UpdateSubscribeRequest extends JdcloudRequest implements java.io.Se
         this.status = status;
         return this;
     }
+
 
     /**
      * set 地域 Id
@@ -154,6 +160,7 @@ public class UpdateSubscribeRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 日志集 UID
      *
@@ -163,6 +170,7 @@ public class UpdateSubscribeRequest extends JdcloudRequest implements java.io.Se
         this.logsetUID = logsetUID;
         return this;
     }
+
 
     /**
      * set 日志主题 UID

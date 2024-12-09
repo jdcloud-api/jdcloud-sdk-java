@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * LogSearch APIs
- * 日志扫描接口
+ * 日志搜索接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -39,8 +39,8 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
     /**
      * data
      */
+    
     private List<Object> data;
-
     /**
      * searchFields
      */
@@ -62,23 +62,25 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
     private Long total;
 
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<Object> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<Object> data) {
         this.data = data;
     }
+
 
     /**
      * get searchFields
@@ -98,6 +100,7 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
         this.searchFields = searchFields;
     }
 
+
     /**
      * get 任务ID
      *
@@ -116,6 +119,7 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
         this.taskID = taskID;
     }
 
+
     /**
      * get 任务状态, 为Complete 时，表示结束
      *
@@ -133,6 +137,7 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
     public void setTaskStatus(String taskStatus) {
         this.taskStatus = taskStatus;
     }
+
 
     /**
      * get 总数
@@ -153,15 +158,17 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
     }
 
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public GetLogsResult data(List<Object> data) {
         this.data = data;
         return this;
     }
+
 
     /**
      * set searchFields
@@ -173,6 +180,7 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
         return this;
     }
 
+
     /**
      * set 任务ID
      *
@@ -182,6 +190,7 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
         this.taskID = taskID;
         return this;
     }
+
 
     /**
      * set 任务状态, 为Complete 时，表示结束
@@ -193,6 +202,7 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
         return this;
     }
 
+
     /**
      * set 总数
      *
@@ -202,6 +212,7 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
         this.total = total;
         return this;
     }
+
 
 
     /**
@@ -215,5 +226,4 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
         }
         this.data.add(data);
     }
-
 }

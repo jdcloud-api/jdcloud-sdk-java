@@ -102,8 +102,8 @@ public class ShipperEnd  implements java.io.Serializable {
     /**
      * 日志采集列表
      */
+    
     private List<String> resourceUIDs;
-
     /**
      * serviceCode
      */
@@ -139,6 +139,7 @@ public class ShipperEnd  implements java.io.Serializable {
     private String updateTime;
 
 
+
     /**
      * get UID
      *
@@ -156,6 +157,7 @@ public class ShipperEnd  implements java.io.Serializable {
     public void setUID(String uID) {
         this.uID = uID;
     }
+
 
     /**
      * get 日志类型
@@ -175,6 +177,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.appName = appName;
     }
 
+
     /**
      * get 压缩格式，为空不压缩
      *
@@ -192,6 +195,7 @@ public class ShipperEnd  implements java.io.Serializable {
     public void setCompress(String compress) {
         this.compress = compress;
     }
+
 
     /**
      * get 创建时间
@@ -211,6 +215,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 投递格式 json,  origin(原始日志格式), 默认origin
      *
@@ -228,6 +233,7 @@ public class ShipperEnd  implements java.io.Serializable {
     public void setFileFormat(String fileFormat) {
         this.fileFormat = fileFormat;
     }
+
 
     /**
      * get 投递文件大小，单位MB，支持200,300,400,500,1000
@@ -247,6 +253,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.fileSize = fileSize;
     }
 
+
     /**
      * get 日志集uuid
      *
@@ -264,6 +271,7 @@ public class ShipperEnd  implements java.io.Serializable {
     public void setLogsetUID(String logsetUID) {
         this.logsetUID = logsetUID;
     }
+
 
     /**
      * get 日志主题uuid
@@ -283,6 +291,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.logtopicUID = logtopicUID;
     }
 
+
     /**
      * get 转储任务名称
      *
@@ -300,6 +309,7 @@ public class ShipperEnd  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get pin
@@ -319,6 +329,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 地域信息
      *
@@ -336,6 +347,7 @@ public class ShipperEnd  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 日志采集资源类型
@@ -355,23 +367,25 @@ public class ShipperEnd  implements java.io.Serializable {
         this.resourceType = resourceType;
     }
 
+
     /**
-     * get 日志采集列表
-     *
-     * @return
-     */
+    * get 日志采集列表
+    *
+    * @return
+    */
     public List<String> getResourceUIDs() {
         return resourceUIDs;
     }
 
     /**
-     * set 日志采集列表
-     *
-     * @param resourceUIDs
-     */
+    * set 日志采集列表
+    *
+    * @param resourceUIDs
+    */
     public void setResourceUIDs(List<String> resourceUIDs) {
         this.resourceUIDs = resourceUIDs;
     }
+
 
     /**
      * get serviceCode
@@ -391,6 +405,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get 日志转储任务状态，开启，停止
      *
@@ -408,6 +423,7 @@ public class ShipperEnd  implements java.io.Serializable {
     public void setStatus(Long status) {
         this.status = status;
     }
+
 
     /**
      * get 目的地 配置
@@ -427,6 +443,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.targetConf = targetConf;
     }
 
+
     /**
      * get 转储目的地类型 0: oss, 目前只支持oss
      *
@@ -445,6 +462,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.targetType = targetType;
     }
 
+
     /**
      * get 投递时间间隔单位分钟，5分钟整数倍，支持5,10,15,20,30,60
      *
@@ -462,6 +480,7 @@ public class ShipperEnd  implements java.io.Serializable {
     public void setTimeInterval(Long timeInterval) {
         this.timeInterval = timeInterval;
     }
+
 
     /**
      * get 更新时间
@@ -482,6 +501,7 @@ public class ShipperEnd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set UID
      *
@@ -491,6 +511,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.uID = uID;
         return this;
     }
+
 
     /**
      * set 日志类型
@@ -502,6 +523,7 @@ public class ShipperEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 压缩格式，为空不压缩
      *
@@ -511,6 +533,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.compress = compress;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -522,6 +545,7 @@ public class ShipperEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 投递格式 json,  origin(原始日志格式), 默认origin
      *
@@ -531,6 +555,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.fileFormat = fileFormat;
         return this;
     }
+
 
     /**
      * set 投递文件大小，单位MB，支持200,300,400,500,1000
@@ -542,6 +567,7 @@ public class ShipperEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志集uuid
      *
@@ -551,6 +577,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.logsetUID = logsetUID;
         return this;
     }
+
 
     /**
      * set 日志主题uuid
@@ -562,6 +589,7 @@ public class ShipperEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 转储任务名称
      *
@@ -571,6 +599,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set pin
@@ -582,6 +611,7 @@ public class ShipperEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 地域信息
      *
@@ -591,6 +621,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 日志采集资源类型
@@ -602,15 +633,17 @@ public class ShipperEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 日志采集列表
-     *
-     * @param resourceUIDs
-     */
+    * set 日志采集列表
+    *
+    * @param resourceUIDs
+    */
     public ShipperEnd resourceUIDs(List<String> resourceUIDs) {
         this.resourceUIDs = resourceUIDs;
         return this;
     }
+
 
     /**
      * set serviceCode
@@ -622,6 +655,7 @@ public class ShipperEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志转储任务状态，开启，停止
      *
@@ -631,6 +665,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 目的地 配置
@@ -642,6 +677,7 @@ public class ShipperEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 转储目的地类型 0: oss, 目前只支持oss
      *
@@ -651,6 +687,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.targetType = targetType;
         return this;
     }
+
 
     /**
      * set 投递时间间隔单位分钟，5分钟整数倍，支持5,10,15,20,30,60
@@ -662,6 +699,7 @@ public class ShipperEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 更新时间
      *
@@ -671,6 +709,7 @@ public class ShipperEnd  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
 
     /**
@@ -684,5 +723,4 @@ public class ShipperEnd  implements java.io.Serializable {
         }
         this.resourceUIDs.add(resourceUID);
     }
-
 }

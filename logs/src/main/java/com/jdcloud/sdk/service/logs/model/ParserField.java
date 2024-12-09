@@ -34,6 +34,11 @@ public class ParserField  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 是否开启统计。开启则改字段支持键值检索，统计分析。如果字段的值的长度可能大于1KB，则必须禁用统计功能，否则会导致数据写入失败。
+     */
+    private Boolean enableStatistics;
+
+    /**
      * fieldFormat
      */
     private String fieldFormat;
@@ -65,6 +70,26 @@ public class ParserField  implements java.io.Serializable {
     private String name;
 
 
+
+    /**
+     * get 是否开启统计。开启则改字段支持键值检索，统计分析。如果字段的值的长度可能大于1KB，则必须禁用统计功能，否则会导致数据写入失败。
+     *
+     * @return
+     */
+    public Boolean getEnableStatistics() {
+        return enableStatistics;
+    }
+
+    /**
+     * set 是否开启统计。开启则改字段支持键值检索，统计分析。如果字段的值的长度可能大于1KB，则必须禁用统计功能，否则会导致数据写入失败。
+     *
+     * @param enableStatistics
+     */
+    public void setEnableStatistics(Boolean enableStatistics) {
+        this.enableStatistics = enableStatistics;
+    }
+
+
     /**
      * get fieldFormat
      *
@@ -82,6 +107,7 @@ public class ParserField  implements java.io.Serializable {
     public void setFieldFormat(String fieldFormat) {
         this.fieldFormat = fieldFormat;
     }
+
 
     /**
      * get fieldType
@@ -101,6 +127,7 @@ public class ParserField  implements java.io.Serializable {
         this.fieldType = fieldType;
     }
 
+
     /**
      * get fieldValue
      *
@@ -119,6 +146,7 @@ public class ParserField  implements java.io.Serializable {
         this.fieldValue = fieldValue;
     }
 
+
     /**
      * get index
      *
@@ -136,6 +164,7 @@ public class ParserField  implements java.io.Serializable {
     public void setIndex(Long index) {
         this.index = index;
     }
+
 
     /**
      * get name
@@ -156,6 +185,18 @@ public class ParserField  implements java.io.Serializable {
     }
 
 
+
+    /**
+     * set 是否开启统计。开启则改字段支持键值检索，统计分析。如果字段的值的长度可能大于1KB，则必须禁用统计功能，否则会导致数据写入失败。
+     *
+     * @param enableStatistics
+     */
+    public ParserField enableStatistics(Boolean enableStatistics) {
+        this.enableStatistics = enableStatistics;
+        return this;
+    }
+
+
     /**
      * set fieldFormat
      *
@@ -165,6 +206,7 @@ public class ParserField  implements java.io.Serializable {
         this.fieldFormat = fieldFormat;
         return this;
     }
+
 
     /**
      * set fieldType
@@ -176,6 +218,7 @@ public class ParserField  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set fieldValue
      *
@@ -186,6 +229,7 @@ public class ParserField  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set index
      *
@@ -195,6 +239,7 @@ public class ParserField  implements java.io.Serializable {
         this.index = index;
         return this;
     }
+
 
     /**
      * set name

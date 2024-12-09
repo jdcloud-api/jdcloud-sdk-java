@@ -42,8 +42,8 @@ public class LogParserEnd  implements java.io.Serializable {
     /**
      * parserFields
      */
+    
     private List<LogParserFieldEnd> parserFields;
-
     /**
      * parserMode
      */
@@ -58,6 +58,7 @@ public class LogParserEnd  implements java.io.Serializable {
      * parserSample
      */
     private String parserSample;
+
 
 
     /**
@@ -78,23 +79,25 @@ public class LogParserEnd  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
-     * get parserFields
-     *
-     * @return
-     */
+    * get parserFields
+    *
+    * @return
+    */
     public List<LogParserFieldEnd> getParserFields() {
         return parserFields;
     }
 
     /**
-     * set parserFields
-     *
-     * @param parserFields
-     */
+    * set parserFields
+    *
+    * @param parserFields
+    */
     public void setParserFields(List<LogParserFieldEnd> parserFields) {
         this.parserFields = parserFields;
     }
+
 
     /**
      * get parserMode
@@ -114,6 +117,7 @@ public class LogParserEnd  implements java.io.Serializable {
         this.parserMode = parserMode;
     }
 
+
     /**
      * get parserPattern
      *
@@ -131,6 +135,7 @@ public class LogParserEnd  implements java.io.Serializable {
     public void setParserPattern(String parserPattern) {
         this.parserPattern = parserPattern;
     }
+
 
     /**
      * get parserSample
@@ -151,6 +156,7 @@ public class LogParserEnd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -161,15 +167,17 @@ public class LogParserEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set parserFields
-     *
-     * @param parserFields
-     */
+    * set parserFields
+    *
+    * @param parserFields
+    */
     public LogParserEnd parserFields(List<LogParserFieldEnd> parserFields) {
         this.parserFields = parserFields;
         return this;
     }
+
 
     /**
      * set parserMode
@@ -181,6 +189,7 @@ public class LogParserEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set parserPattern
      *
@@ -191,6 +200,7 @@ public class LogParserEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set parserSample
      *
@@ -200,6 +210,7 @@ public class LogParserEnd  implements java.io.Serializable {
         this.parserSample = parserSample;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class LogParserEnd  implements java.io.Serializable {
         }
         this.parserFields.add(parserField);
     }
-
 }

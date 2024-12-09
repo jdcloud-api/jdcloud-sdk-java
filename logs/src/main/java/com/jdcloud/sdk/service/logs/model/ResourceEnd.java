@@ -53,6 +53,7 @@ public class ResourceEnd  implements java.io.Serializable {
     private String resourceId;
 
 
+
     /**
      * get agent 状态: 0-异常，1-正常
      *
@@ -70,6 +71,7 @@ public class ResourceEnd  implements java.io.Serializable {
     public void setAgentStatus(Long agentStatus) {
         this.agentStatus = agentStatus;
     }
+
 
     /**
      * get 资源名称
@@ -89,6 +91,7 @@ public class ResourceEnd  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 资源所属地域
      *
@@ -106,6 +109,7 @@ public class ResourceEnd  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 资源ID
@@ -126,6 +130,7 @@ public class ResourceEnd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set agent 状态: 0-异常，1-正常
      *
@@ -135,6 +140,7 @@ public class ResourceEnd  implements java.io.Serializable {
         this.agentStatus = agentStatus;
         return this;
     }
+
 
     /**
      * set 资源名称
@@ -146,6 +152,7 @@ public class ResourceEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源所属地域
      *
@@ -155,6 +162,7 @@ public class ResourceEnd  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 资源ID

@@ -47,6 +47,7 @@ public class Filter  implements java.io.Serializable {
     /**
      * 过滤条件的值
      */
+    
     private List<String> values;
 
 
@@ -68,6 +69,7 @@ public class Filter  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 过滤条件的操作符，默认eq (Optional)
      *
@@ -86,23 +88,25 @@ public class Filter  implements java.io.Serializable {
         this.operator = operator;
     }
 
+
     /**
-     * get 过滤条件的值
-     *
-     * @return
-     */
+    * get 过滤条件的值
+    *
+    * @return
+    */
     public List<String> getValues() {
         return values;
     }
 
     /**
-     * set 过滤条件的值
-     *
-     * @param values
-     */
+    * set 过滤条件的值
+    *
+    * @param values
+    */
     public void setValues(List<String> values) {
         this.values = values;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class Filter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 过滤条件的操作符，默认eq (Optional)
      *
@@ -125,15 +130,17 @@ public class Filter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 过滤条件的值
-     *
-     * @param values
-     */
+    * set 过滤条件的值
+    *
+    * @param values
+    */
     public Filter values(List<String> values) {
         this.values = values;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class Filter  implements java.io.Serializable {
         }
         this.values.add(value);
     }
-
 }

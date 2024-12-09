@@ -40,8 +40,8 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> appName;
-
     /**
      * from
      */
@@ -55,8 +55,8 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
     /**
      * match
      */
+    
     private List<Match> match;
-
     /**
      * recordId
      */
@@ -65,8 +65,8 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
     /**
      * resp
      */
+    
     private List<String> resp;
-
     /**
      * size
      */
@@ -90,23 +90,25 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
     private String uuid;
 
 
+
     /**
-     * get appName
-     *
-     * @return
-     */
+    * get appName
+    *
+    * @return
+    */
     public List<String> getAppName() {
         return appName;
     }
 
     /**
-     * set appName
-     *
-     * @param appName
-     */
+    * set appName
+    *
+    * @param appName
+    */
     public void setAppName(List<String> appName) {
         this.appName = appName;
     }
+
 
     /**
      * get from
@@ -126,6 +128,7 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
         this.from = from;
     }
 
+
     /**
      * get logTopicId
      *
@@ -144,23 +147,25 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
         this.logTopicId = logTopicId;
     }
 
+
     /**
-     * get match
-     *
-     * @return
-     */
+    * get match
+    *
+    * @return
+    */
     public List<Match> getMatch() {
         return match;
     }
 
     /**
-     * set match
-     *
-     * @param match
-     */
+    * set match
+    *
+    * @param match
+    */
     public void setMatch(List<Match> match) {
         this.match = match;
     }
+
 
     /**
      * get recordId
@@ -180,23 +185,25 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
         this.recordId = recordId;
     }
 
+
     /**
-     * get resp
-     *
-     * @return
-     */
+    * get resp
+    *
+    * @return
+    */
     public List<String> getResp() {
         return resp;
     }
 
     /**
-     * set resp
-     *
-     * @param resp
-     */
+    * set resp
+    *
+    * @param resp
+    */
     public void setResp(List<String> resp) {
         this.resp = resp;
     }
+
 
     /**
      * get size
@@ -216,6 +223,7 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
         this.size = size;
     }
 
+
     /**
      * get sort
      *
@@ -234,6 +242,7 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
         this.sort = sort;
     }
 
+
     /**
      * get timeRange
      *
@@ -251,6 +260,7 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
     public void setTimeRange(DateTimeRange timeRange) {
         this.timeRange = timeRange;
     }
+
 
     /**
      * get uuid
@@ -271,15 +281,17 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set appName
-     *
-     * @param appName
-     */
+    * set appName
+    *
+    * @param appName
+    */
     public CustomLogSearchSpec appName(List<String> appName) {
         this.appName = appName;
         return this;
     }
+
 
     /**
      * set from
@@ -291,6 +303,7 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set logTopicId
      *
@@ -301,15 +314,17 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set match
-     *
-     * @param match
-     */
+    * set match
+    *
+    * @param match
+    */
     public CustomLogSearchSpec match(List<Match> match) {
         this.match = match;
         return this;
     }
+
 
     /**
      * set recordId
@@ -321,15 +336,17 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set resp
-     *
-     * @param resp
-     */
+    * set resp
+    *
+    * @param resp
+    */
     public CustomLogSearchSpec resp(List<String> resp) {
         this.resp = resp;
         return this;
     }
+
 
     /**
      * set size
@@ -341,6 +358,7 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set sort
      *
@@ -350,6 +368,7 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
         this.sort = sort;
         return this;
     }
+
 
     /**
      * set timeRange
@@ -361,6 +380,7 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set uuid
      *
@@ -370,6 +390,7 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
         this.uuid = uuid;
         return this;
     }
+
 
 
     /**
@@ -407,5 +428,4 @@ public class CustomLogSearchSpec  implements java.io.Serializable {
         }
         this.resp.add(resp);
     }
-
 }

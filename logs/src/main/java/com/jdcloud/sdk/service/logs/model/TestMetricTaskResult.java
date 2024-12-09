@@ -38,31 +38,33 @@ public class TestMetricTaskResult extends JdcloudResult implements java.io.Seria
     /**
      * lines
      */
+    
     private List<String> lines;
-
     /**
      * 监控值
      */
     private Double value;
 
 
+
     /**
-     * get lines
-     *
-     * @return
-     */
+    * get lines
+    *
+    * @return
+    */
     public List<String> getLines() {
         return lines;
     }
 
     /**
-     * set lines
-     *
-     * @param lines
-     */
+    * set lines
+    *
+    * @param lines
+    */
     public void setLines(List<String> lines) {
         this.lines = lines;
     }
+
 
     /**
      * get 监控值
@@ -83,15 +85,17 @@ public class TestMetricTaskResult extends JdcloudResult implements java.io.Seria
     }
 
 
+
     /**
-     * set lines
-     *
-     * @param lines
-     */
+    * set lines
+    *
+    * @param lines
+    */
     public TestMetricTaskResult lines(List<String> lines) {
         this.lines = lines;
         return this;
     }
+
 
     /**
      * set 监控值
@@ -102,6 +106,7 @@ public class TestMetricTaskResult extends JdcloudResult implements java.io.Seria
         this.value = value;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class TestMetricTaskResult extends JdcloudResult implements java.io.Seria
         }
         this.lines.add(line);
     }
-
 }

@@ -34,36 +34,39 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.logs.model.DescribeLogtopicRequest;
 import com.jdcloud.sdk.service.logs.model.DescribeLogtopicResponse;
 import com.jdcloud.sdk.service.logs.client.DescribeLogtopicExecutor;
-import com.jdcloud.sdk.service.logs.model.DescribeCollectResourcesRequest;
-import com.jdcloud.sdk.service.logs.model.DescribeCollectResourcesResponse;
-import com.jdcloud.sdk.service.logs.client.DescribeCollectResourcesExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeLogtopicsGlobalRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeLogtopicsGlobalResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeLogtopicsGlobalExecutor;
 import com.jdcloud.sdk.service.logs.model.UpdateLogtopicRequest;
 import com.jdcloud.sdk.service.logs.model.UpdateLogtopicResponse;
 import com.jdcloud.sdk.service.logs.client.UpdateLogtopicExecutor;
-import com.jdcloud.sdk.service.logs.model.DescribeLogsetsRequest;
-import com.jdcloud.sdk.service.logs.model.DescribeLogsetsResponse;
-import com.jdcloud.sdk.service.logs.client.DescribeLogsetsExecutor;
 import com.jdcloud.sdk.service.logs.model.DescribeMetricTasksRequest;
 import com.jdcloud.sdk.service.logs.model.DescribeMetricTasksResponse;
 import com.jdcloud.sdk.service.logs.client.DescribeMetricTasksExecutor;
+import com.jdcloud.sdk.service.logs.model.LogDetailRequest;
+import com.jdcloud.sdk.service.logs.model.LogDetailResponse;
+import com.jdcloud.sdk.service.logs.client.LogDetailExecutor;
 import com.jdcloud.sdk.service.logs.model.UpdateParserRequest;
 import com.jdcloud.sdk.service.logs.model.UpdateParserResponse;
 import com.jdcloud.sdk.service.logs.client.UpdateParserExecutor;
-import com.jdcloud.sdk.service.logs.model.DescribeMetricTaskRequest;
-import com.jdcloud.sdk.service.logs.model.DescribeMetricTaskResponse;
-import com.jdcloud.sdk.service.logs.client.DescribeMetricTaskExecutor;
-import com.jdcloud.sdk.service.logs.model.CreateSubscribeRequest;
-import com.jdcloud.sdk.service.logs.model.CreateSubscribeResponse;
-import com.jdcloud.sdk.service.logs.client.CreateSubscribeExecutor;
-import com.jdcloud.sdk.service.logs.model.DeleteLogsetRequest;
-import com.jdcloud.sdk.service.logs.model.DeleteLogsetResponse;
-import com.jdcloud.sdk.service.logs.client.DeleteLogsetExecutor;
+import com.jdcloud.sdk.service.logs.model.CreateIndexOptionRequest;
+import com.jdcloud.sdk.service.logs.model.CreateIndexOptionResponse;
+import com.jdcloud.sdk.service.logs.client.CreateIndexOptionExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeCollectInfosRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeCollectInfosResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeCollectInfosExecutor;
 import com.jdcloud.sdk.service.logs.model.SearchRequest;
 import com.jdcloud.sdk.service.logs.model.SearchResponse;
 import com.jdcloud.sdk.service.logs.client.SearchExecutor;
-import com.jdcloud.sdk.service.logs.model.TestMetricTaskRequest;
-import com.jdcloud.sdk.service.logs.model.TestMetricTaskResponse;
-import com.jdcloud.sdk.service.logs.client.TestMetricTaskExecutor;
+import com.jdcloud.sdk.service.logs.model.CancelLogDownloadTaskRequest;
+import com.jdcloud.sdk.service.logs.model.CancelLogDownloadTaskResponse;
+import com.jdcloud.sdk.service.logs.client.CancelLogDownloadTaskExecutor;
+import com.jdcloud.sdk.service.logs.model.LogCountRequest;
+import com.jdcloud.sdk.service.logs.model.LogCountResponse;
+import com.jdcloud.sdk.service.logs.client.LogCountExecutor;
+import com.jdcloud.sdk.service.logs.model.InstanceCollectConfigListRequest;
+import com.jdcloud.sdk.service.logs.model.InstanceCollectConfigListResponse;
+import com.jdcloud.sdk.service.logs.client.InstanceCollectConfigListExecutor;
 import com.jdcloud.sdk.service.logs.model.DescribeLogsetRequest;
 import com.jdcloud.sdk.service.logs.model.DescribeLogsetResponse;
 import com.jdcloud.sdk.service.logs.client.DescribeLogsetExecutor;
@@ -73,21 +76,18 @@ import com.jdcloud.sdk.service.logs.client.UpdateSubscribeExecutor;
 import com.jdcloud.sdk.service.logs.model.CreateParserRequest;
 import com.jdcloud.sdk.service.logs.model.CreateParserResponse;
 import com.jdcloud.sdk.service.logs.client.CreateParserExecutor;
-import com.jdcloud.sdk.service.logs.model.DeleteLogtopicRequest;
-import com.jdcloud.sdk.service.logs.model.DeleteLogtopicResponse;
-import com.jdcloud.sdk.service.logs.client.DeleteLogtopicExecutor;
-import com.jdcloud.sdk.service.logs.model.CreateMetricTaskRequest;
-import com.jdcloud.sdk.service.logs.model.CreateMetricTaskResponse;
-import com.jdcloud.sdk.service.logs.client.CreateMetricTaskExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeIndexOptionRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeIndexOptionResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeIndexOptionExecutor;
+import com.jdcloud.sdk.service.logs.model.DeleteCollectInfoRequest;
+import com.jdcloud.sdk.service.logs.model.DeleteCollectInfoResponse;
+import com.jdcloud.sdk.service.logs.client.DeleteCollectInfoExecutor;
 import com.jdcloud.sdk.service.logs.model.HistogramsRequest;
 import com.jdcloud.sdk.service.logs.model.HistogramsResponse;
 import com.jdcloud.sdk.service.logs.client.HistogramsExecutor;
-import com.jdcloud.sdk.service.logs.model.UpdateCollectInfoRequest;
-import com.jdcloud.sdk.service.logs.model.UpdateCollectInfoResponse;
-import com.jdcloud.sdk.service.logs.client.UpdateCollectInfoExecutor;
-import com.jdcloud.sdk.service.logs.model.ValidateParserRequest;
-import com.jdcloud.sdk.service.logs.model.ValidateParserResponse;
-import com.jdcloud.sdk.service.logs.client.ValidateParserExecutor;
+import com.jdcloud.sdk.service.logs.model.LogDetailPublicRequest;
+import com.jdcloud.sdk.service.logs.model.LogDetailPublicResponse;
+import com.jdcloud.sdk.service.logs.client.LogDetailPublicExecutor;
 import com.jdcloud.sdk.service.logs.model.DescribeCollectInfoRequest;
 import com.jdcloud.sdk.service.logs.model.DescribeCollectInfoResponse;
 import com.jdcloud.sdk.service.logs.client.DescribeCollectInfoExecutor;
@@ -100,30 +100,114 @@ import com.jdcloud.sdk.service.logs.client.UpdateLogsetExecutor;
 import com.jdcloud.sdk.service.logs.model.DescribeLogtopicsRequest;
 import com.jdcloud.sdk.service.logs.model.DescribeLogtopicsResponse;
 import com.jdcloud.sdk.service.logs.client.DescribeLogtopicsExecutor;
-import com.jdcloud.sdk.service.logs.model.DescribeSubscribeRequest;
-import com.jdcloud.sdk.service.logs.model.DescribeSubscribeResponse;
-import com.jdcloud.sdk.service.logs.client.DescribeSubscribeExecutor;
-import com.jdcloud.sdk.service.logs.model.CreateCollectInfoRequest;
-import com.jdcloud.sdk.service.logs.model.CreateCollectInfoResponse;
-import com.jdcloud.sdk.service.logs.client.CreateCollectInfoExecutor;
+import com.jdcloud.sdk.service.logs.model.UpdateCollectInfoStatusRequest;
+import com.jdcloud.sdk.service.logs.model.UpdateCollectInfoStatusResponse;
+import com.jdcloud.sdk.service.logs.client.UpdateCollectInfoStatusExecutor;
 import com.jdcloud.sdk.service.logs.model.DescribeParserRequest;
 import com.jdcloud.sdk.service.logs.model.DescribeParserResponse;
 import com.jdcloud.sdk.service.logs.client.DescribeParserExecutor;
 import com.jdcloud.sdk.service.logs.model.UpdateMetricTaskRequest;
 import com.jdcloud.sdk.service.logs.model.UpdateMetricTaskResponse;
 import com.jdcloud.sdk.service.logs.client.UpdateMetricTaskExecutor;
-import com.jdcloud.sdk.service.logs.model.DeleteMetricTaskRequest;
-import com.jdcloud.sdk.service.logs.model.DeleteMetricTaskResponse;
-import com.jdcloud.sdk.service.logs.client.DeleteMetricTaskExecutor;
+import com.jdcloud.sdk.service.logs.model.InstanceCollectConfigModifyRequest;
+import com.jdcloud.sdk.service.logs.model.InstanceCollectConfigModifyResponse;
+import com.jdcloud.sdk.service.logs.client.InstanceCollectConfigModifyExecutor;
 import com.jdcloud.sdk.service.logs.model.GetLogsRequest;
 import com.jdcloud.sdk.service.logs.model.GetLogsResponse;
 import com.jdcloud.sdk.service.logs.client.GetLogsExecutor;
 import com.jdcloud.sdk.service.logs.model.UpdateCollectResourcesRequest;
 import com.jdcloud.sdk.service.logs.model.UpdateCollectResourcesResponse;
 import com.jdcloud.sdk.service.logs.client.UpdateCollectResourcesExecutor;
+import com.jdcloud.sdk.service.logs.model.K8sWatchHeartbeatRequest;
+import com.jdcloud.sdk.service.logs.model.K8sWatchHeartbeatResponse;
+import com.jdcloud.sdk.service.logs.client.K8sWatchHeartbeatExecutor;
 import com.jdcloud.sdk.service.logs.model.CreateLogtopicRequest;
 import com.jdcloud.sdk.service.logs.model.CreateLogtopicResponse;
 import com.jdcloud.sdk.service.logs.client.CreateLogtopicExecutor;
+import com.jdcloud.sdk.service.logs.model.K8sconfigNewV2Request;
+import com.jdcloud.sdk.service.logs.model.K8sconfigNewV2Response;
+import com.jdcloud.sdk.service.logs.client.K8sconfigNewV2Executor;
+import com.jdcloud.sdk.service.logs.model.ProductPodChangeRequest;
+import com.jdcloud.sdk.service.logs.model.ProductPodChangeResponse;
+import com.jdcloud.sdk.service.logs.client.ProductPodChangeExecutor;
+import com.jdcloud.sdk.service.logs.model.DeleteIndexOptionRequest;
+import com.jdcloud.sdk.service.logs.model.DeleteIndexOptionResponse;
+import com.jdcloud.sdk.service.logs.client.DeleteIndexOptionExecutor;
+import com.jdcloud.sdk.service.logs.model.LogSearchRequest;
+import com.jdcloud.sdk.service.logs.model.LogSearchResponse;
+import com.jdcloud.sdk.service.logs.client.LogSearchExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeCollectInfoBatchRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeCollectInfoBatchResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeCollectInfoBatchExecutor;
+import com.jdcloud.sdk.service.logs.model.K8sDispatchConfRequest;
+import com.jdcloud.sdk.service.logs.model.K8sDispatchConfResponse;
+import com.jdcloud.sdk.service.logs.client.K8sDispatchConfExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeCollectResourcesRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeCollectResourcesResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeCollectResourcesExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeLogsetsRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeLogsetsResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeLogsetsExecutor;
+import com.jdcloud.sdk.service.logs.model.CreateLogDownloadTaskRequest;
+import com.jdcloud.sdk.service.logs.model.CreateLogDownloadTaskResponse;
+import com.jdcloud.sdk.service.logs.client.CreateLogDownloadTaskExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeMetricTaskRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeMetricTaskResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeMetricTaskExecutor;
+import com.jdcloud.sdk.service.logs.model.K8sDispatchConfNewRequest;
+import com.jdcloud.sdk.service.logs.model.K8sDispatchConfNewResponse;
+import com.jdcloud.sdk.service.logs.client.K8sDispatchConfNewExecutor;
+import com.jdcloud.sdk.service.logs.model.LogAggregateRequest;
+import com.jdcloud.sdk.service.logs.model.LogAggregateResponse;
+import com.jdcloud.sdk.service.logs.client.LogAggregateExecutor;
+import com.jdcloud.sdk.service.logs.model.LogSearchIdRequest;
+import com.jdcloud.sdk.service.logs.model.LogSearchIdResponse;
+import com.jdcloud.sdk.service.logs.client.LogSearchIdExecutor;
+import com.jdcloud.sdk.service.logs.model.CreateSubscribeRequest;
+import com.jdcloud.sdk.service.logs.model.CreateSubscribeResponse;
+import com.jdcloud.sdk.service.logs.client.CreateSubscribeExecutor;
+import com.jdcloud.sdk.service.logs.model.K8sAgentHeartbeatRequest;
+import com.jdcloud.sdk.service.logs.model.K8sAgentHeartbeatResponse;
+import com.jdcloud.sdk.service.logs.client.K8sAgentHeartbeatExecutor;
+import com.jdcloud.sdk.service.logs.model.DeleteLogsetRequest;
+import com.jdcloud.sdk.service.logs.model.DeleteLogsetResponse;
+import com.jdcloud.sdk.service.logs.client.DeleteLogsetExecutor;
+import com.jdcloud.sdk.service.logs.model.GetLogDownloadTasksRequest;
+import com.jdcloud.sdk.service.logs.model.GetLogDownloadTasksResponse;
+import com.jdcloud.sdk.service.logs.client.GetLogDownloadTasksExecutor;
+import com.jdcloud.sdk.service.logs.model.TestMetricTaskRequest;
+import com.jdcloud.sdk.service.logs.model.TestMetricTaskResponse;
+import com.jdcloud.sdk.service.logs.client.TestMetricTaskExecutor;
+import com.jdcloud.sdk.service.logs.model.PushRequest;
+import com.jdcloud.sdk.service.logs.model.PushResponse;
+import com.jdcloud.sdk.service.logs.client.PushExecutor;
+import com.jdcloud.sdk.service.logs.model.DeleteLogtopicRequest;
+import com.jdcloud.sdk.service.logs.model.DeleteLogtopicResponse;
+import com.jdcloud.sdk.service.logs.client.DeleteLogtopicExecutor;
+import com.jdcloud.sdk.service.logs.model.UpdateIndexOptionRequest;
+import com.jdcloud.sdk.service.logs.model.UpdateIndexOptionResponse;
+import com.jdcloud.sdk.service.logs.client.UpdateIndexOptionExecutor;
+import com.jdcloud.sdk.service.logs.model.CreateMetricTaskRequest;
+import com.jdcloud.sdk.service.logs.model.CreateMetricTaskResponse;
+import com.jdcloud.sdk.service.logs.client.CreateMetricTaskExecutor;
+import com.jdcloud.sdk.service.logs.model.UpdateCollectInfoRequest;
+import com.jdcloud.sdk.service.logs.model.UpdateCollectInfoResponse;
+import com.jdcloud.sdk.service.logs.client.UpdateCollectInfoExecutor;
+import com.jdcloud.sdk.service.logs.model.ValidateParserRequest;
+import com.jdcloud.sdk.service.logs.model.ValidateParserResponse;
+import com.jdcloud.sdk.service.logs.client.ValidateParserExecutor;
+import com.jdcloud.sdk.service.logs.model.ProductPodLabelSelectRequest;
+import com.jdcloud.sdk.service.logs.model.ProductPodLabelSelectResponse;
+import com.jdcloud.sdk.service.logs.client.ProductPodLabelSelectExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeSubscribeRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeSubscribeResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeSubscribeExecutor;
+import com.jdcloud.sdk.service.logs.model.CreateCollectInfoRequest;
+import com.jdcloud.sdk.service.logs.model.CreateCollectInfoResponse;
+import com.jdcloud.sdk.service.logs.client.CreateCollectInfoExecutor;
+import com.jdcloud.sdk.service.logs.model.DeleteMetricTaskRequest;
+import com.jdcloud.sdk.service.logs.model.DeleteMetricTaskResponse;
+import com.jdcloud.sdk.service.logs.client.DeleteMetricTaskExecutor;
 
 /**
  * logsClient
@@ -132,7 +216,7 @@ public class LogsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.8";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "logs.jdcloud-api.com";
     public final static String ServiceName = "logs";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -186,14 +270,14 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
-     * 查询采集配置的实例列表
+     * 查询日志主题列表，支持按照名称模糊查询。
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeCollectResourcesResponse describeCollectResources(DescribeCollectResourcesRequest request) throws JdcloudSdkException {
-        return new DescribeCollectResourcesExecutor().client(this).execute(request);
+    public DescribeLogtopicsGlobalResponse describeLogtopicsGlobal(DescribeLogtopicsGlobalRequest request) throws JdcloudSdkException {
+        return new DescribeLogtopicsGlobalExecutor().client(this).execute(request);
     }
 
     /**
@@ -208,17 +292,6 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
-     * 查询日志集列表。支持按照名称进行模糊查询。结果中包含了该日志集是否存在日志主题的信息。存在日志主题的日志集不允许删除。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeLogsetsResponse describeLogsets(DescribeLogsetsRequest request) throws JdcloudSdkException {
-        return new DescribeLogsetsExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询监控任务列表，返回该主题下的所有监控任务信息。
      *
      * @param request
@@ -227,6 +300,17 @@ public class LogsClient extends JdcloudClient {
      */
     public DescribeMetricTasksResponse describeMetricTasks(DescribeMetricTasksRequest request) throws JdcloudSdkException {
         return new DescribeMetricTasksExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取满足条件的日志详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public LogDetailResponse logDetail(LogDetailRequest request) throws JdcloudSdkException {
+        return new LogDetailExecutor().client(this).execute(request);
     }
 
     /**
@@ -241,36 +325,25 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
-     * 查询指定监控任务的详情信息
+     * 创建索引配置：业务日志指定索引相关的配置，包含全局及字段级别的配置
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeMetricTaskResponse describeMetricTask(DescribeMetricTaskRequest request) throws JdcloudSdkException {
-        return new DescribeMetricTaskExecutor().client(this).execute(request);
+    public CreateIndexOptionResponse createIndexOption(CreateIndexOptionRequest request) throws JdcloudSdkException {
+        return new CreateIndexOptionExecutor().client(this).execute(request);
     }
 
     /**
-     * 创建日志消费
+     * 采集配置列表信息。
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CreateSubscribeResponse createSubscribe(CreateSubscribeRequest request) throws JdcloudSdkException {
-        return new CreateSubscribeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除日志集,删除多个日志集时，任意的日志集包含了日志主题的，将导致全部删除失败。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteLogsetResponse deleteLogset(DeleteLogsetRequest request) throws JdcloudSdkException {
-        return new DeleteLogsetExecutor().client(this).execute(request);
+    public DescribeCollectInfosResponse describeCollectInfos(DescribeCollectInfosRequest request) throws JdcloudSdkException {
+        return new DescribeCollectInfosExecutor().client(this).execute(request);
     }
 
     /**
@@ -285,14 +358,36 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
-     * 日志测试，根据用户输入的日志筛选条件以及监控指标设置进行模拟监控统计
+     * 取消日志下载任务
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public TestMetricTaskResponse testMetricTask(TestMetricTaskRequest request) throws JdcloudSdkException {
-        return new TestMetricTaskExecutor().client(this).execute(request);
+    public CancelLogDownloadTaskResponse cancelLogDownloadTask(CancelLogDownloadTaskRequest request) throws JdcloudSdkException {
+        return new CancelLogDownloadTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取满足条件的日志统计数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public LogCountResponse logCount(LogCountRequest request) throws JdcloudSdkException {
+        return new LogCountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取实例采集配置列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public InstanceCollectConfigListResponse instanceCollectConfigList(InstanceCollectConfigListRequest request) throws JdcloudSdkException {
+        return new InstanceCollectConfigListExecutor().client(this).execute(request);
     }
 
     /**
@@ -329,25 +424,25 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
-     * 删除日志主题。其采集配置与采集实例配置将一并删除。
+     * 查询索引配置：业务日志指定索引相关的配置，包含全局及字段级别的配置
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteLogtopicResponse deleteLogtopic(DeleteLogtopicRequest request) throws JdcloudSdkException {
-        return new DeleteLogtopicExecutor().client(this).execute(request);
+    public DescribeIndexOptionResponse describeIndexOption(DescribeIndexOptionRequest request) throws JdcloudSdkException {
+        return new DescribeIndexOptionExecutor().client(this).execute(request);
     }
 
     /**
-     * 创建监控任务，不可与当前日志主题下现有日志监控任务重名。
+     * 删除采集配置
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CreateMetricTaskResponse createMetricTask(CreateMetricTaskRequest request) throws JdcloudSdkException {
-        return new CreateMetricTaskExecutor().client(this).execute(request);
+    public DeleteCollectInfoResponse deleteCollectInfo(DeleteCollectInfoRequest request) throws JdcloudSdkException {
+        return new DeleteCollectInfoExecutor().client(this).execute(request);
     }
 
     /**
@@ -362,25 +457,14 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
-     * 更新采集配置。若传入的实例列表不为空，将覆盖之前的所有实例，而非新增。
+     * 获取满足条件的日志详情
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UpdateCollectInfoResponse updateCollectInfo(UpdateCollectInfoRequest request) throws JdcloudSdkException {
-        return new UpdateCollectInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 验证日志解析语法
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ValidateParserResponse validateParser(ValidateParserRequest request) throws JdcloudSdkException {
-        return new ValidateParserExecutor().client(this).execute(request);
+    public LogDetailPublicResponse logDetailPublic(LogDetailPublicRequest request) throws JdcloudSdkException {
+        return new LogDetailPublicExecutor().client(this).execute(request);
     }
 
     /**
@@ -428,25 +512,14 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
-     * 日志消费信息
+     * 更新采集配置状态：启用与停用
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeSubscribeResponse describeSubscribe(DescribeSubscribeRequest request) throws JdcloudSdkException {
-        return new DescribeSubscribeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建采集配置，支持基于云产品模板生成采集模板；支持用于自定义采集配置。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateCollectInfoResponse createCollectInfo(CreateCollectInfoRequest request) throws JdcloudSdkException {
-        return new CreateCollectInfoExecutor().client(this).execute(request);
+    public UpdateCollectInfoStatusResponse updateCollectInfoStatus(UpdateCollectInfoStatusRequest request) throws JdcloudSdkException {
+        return new UpdateCollectInfoStatusExecutor().client(this).execute(request);
     }
 
     /**
@@ -472,14 +545,14 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
-     * 删除指定监控任务。
+     * 修改产品实例采集配置信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteMetricTaskResponse deleteMetricTask(DeleteMetricTaskRequest request) throws JdcloudSdkException {
-        return new DeleteMetricTaskExecutor().client(this).execute(request);
+    public InstanceCollectConfigModifyResponse instanceCollectConfigModify(InstanceCollectConfigModifyRequest request) throws JdcloudSdkException {
+        return new InstanceCollectConfigModifyExecutor().client(this).execute(request);
     }
 
     /**
@@ -505,6 +578,17 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
+     * k8s watch heartbeat
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public K8sWatchHeartbeatResponse k8sWatchHeartbeat(K8sWatchHeartbeatRequest request) throws JdcloudSdkException {
+        return new K8sWatchHeartbeatExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建日志主题，不可与当前日志集下现有日志主题重名。
      *
      * @param request
@@ -513,6 +597,314 @@ public class LogsClient extends JdcloudClient {
      */
     public CreateLogtopicResponse createLogtopic(CreateLogtopicRequest request) throws JdcloudSdkException {
         return new CreateLogtopicExecutor().client(this).execute(request);
+    }
+
+    /**
+     * k8s日志采集配置下发
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public K8sconfigNewV2Response k8sconfigNewV2(K8sconfigNewV2Request request) throws JdcloudSdkException {
+        return new K8sconfigNewV2Executor().client(this).execute(request);
+    }
+
+    /**
+     * 产品pod同步
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ProductPodChangeResponse productPodChange(ProductPodChangeRequest request) throws JdcloudSdkException {
+        return new ProductPodChangeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除索引配置：业务日志指定索引相关的配置，包含全局及字段级别的配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteIndexOptionResponse deleteIndexOption(DeleteIndexOptionRequest request) throws JdcloudSdkException {
+        return new DeleteIndexOptionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取满足条件的日志数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public LogSearchResponse logSearch(LogSearchRequest request) throws JdcloudSdkException {
+        return new LogSearchExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量查询采集配置的基本信息。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCollectInfoBatchResponse describeCollectInfoBatch(DescribeCollectInfoBatchRequest request) throws JdcloudSdkException {
+        return new DescribeCollectInfoBatchExecutor().client(this).execute(request);
+    }
+
+    /**
+     * k8s日志采集配置下发
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public K8sDispatchConfResponse k8sDispatchConf(K8sDispatchConfRequest request) throws JdcloudSdkException {
+        return new K8sDispatchConfExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询采集配置的实例列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCollectResourcesResponse describeCollectResources(DescribeCollectResourcesRequest request) throws JdcloudSdkException {
+        return new DescribeCollectResourcesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询日志集列表。支持按照名称进行模糊查询。结果中包含了该日志集是否存在日志主题的信息。存在日志主题的日志集不允许删除。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLogsetsResponse describeLogsets(DescribeLogsetsRequest request) throws JdcloudSdkException {
+        return new DescribeLogsetsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建日志下载任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateLogDownloadTaskResponse createLogDownloadTask(CreateLogDownloadTaskRequest request) throws JdcloudSdkException {
+        return new CreateLogDownloadTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询指定监控任务的详情信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeMetricTaskResponse describeMetricTask(DescribeMetricTaskRequest request) throws JdcloudSdkException {
+        return new DescribeMetricTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * k8s日志采集配置下发
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public K8sDispatchConfNewResponse k8sDispatchConfNew(K8sDispatchConfNewRequest request) throws JdcloudSdkException {
+        return new K8sDispatchConfNewExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取满足条件的日志聚合数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public LogAggregateResponse logAggregate(LogAggregateRequest request) throws JdcloudSdkException {
+        return new LogAggregateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取满足条件的查询id
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public LogSearchIdResponse logSearchId(LogSearchIdRequest request) throws JdcloudSdkException {
+        return new LogSearchIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建日志消费
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateSubscribeResponse createSubscribe(CreateSubscribeRequest request) throws JdcloudSdkException {
+        return new CreateSubscribeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * k8s agent heartbeat
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public K8sAgentHeartbeatResponse k8sAgentHeartbeat(K8sAgentHeartbeatRequest request) throws JdcloudSdkException {
+        return new K8sAgentHeartbeatExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除日志集,删除多个日志集时，任意的日志集包含了日志主题的，将导致全部删除失败。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLogsetResponse deleteLogset(DeleteLogsetRequest request) throws JdcloudSdkException {
+        return new DeleteLogsetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取日志下载任务列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetLogDownloadTasksResponse getLogDownloadTasks(GetLogDownloadTasksRequest request) throws JdcloudSdkException {
+        return new GetLogDownloadTasksExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 日志测试，根据用户输入的日志筛选条件以及监控指标设置进行模拟监控统计
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public TestMetricTaskResponse testMetricTask(TestMetricTaskRequest request) throws JdcloudSdkException {
+        return new TestMetricTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 自定义日志上报，该接口为PB格式，文档见 https://joyspace.jd.com/page/7CEjD5xK9Tvp6YvXvk5e
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PushResponse push(PushRequest request) throws JdcloudSdkException {
+        return new PushExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除日志主题。其采集配置与采集实例配置将一并删除。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLogtopicResponse deleteLogtopic(DeleteLogtopicRequest request) throws JdcloudSdkException {
+        return new DeleteLogtopicExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新索引配置：业务日志指定索引相关的配置，包含全局及字段级别的配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateIndexOptionResponse updateIndexOption(UpdateIndexOptionRequest request) throws JdcloudSdkException {
+        return new UpdateIndexOptionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建监控任务，不可与当前日志主题下现有日志监控任务重名。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateMetricTaskResponse createMetricTask(CreateMetricTaskRequest request) throws JdcloudSdkException {
+        return new CreateMetricTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新采集配置。若传入的实例列表不为空，将覆盖之前的所有实例，而非新增。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateCollectInfoResponse updateCollectInfo(UpdateCollectInfoRequest request) throws JdcloudSdkException {
+        return new UpdateCollectInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 验证日志解析语法
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ValidateParserResponse validateParser(ValidateParserRequest request) throws JdcloudSdkException {
+        return new ValidateParserExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 产品pod匹配同步
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ProductPodLabelSelectResponse productPodLabelSelect(ProductPodLabelSelectRequest request) throws JdcloudSdkException {
+        return new ProductPodLabelSelectExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 日志消费信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSubscribeResponse describeSubscribe(DescribeSubscribeRequest request) throws JdcloudSdkException {
+        return new DescribeSubscribeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建采集配置，支持基于云产品模板生成采集模板；支持用于自定义采集配置。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateCollectInfoResponse createCollectInfo(CreateCollectInfoRequest request) throws JdcloudSdkException {
+        return new CreateCollectInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除指定监控任务。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteMetricTaskResponse deleteMetricTask(DeleteMetricTaskRequest request) throws JdcloudSdkException {
+        return new DeleteMetricTaskExecutor().client(this).execute(request);
     }
 
 

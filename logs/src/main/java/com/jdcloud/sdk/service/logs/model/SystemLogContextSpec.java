@@ -38,8 +38,8 @@ public class SystemLogContextSpec  implements java.io.Serializable {
     /**
      * anchor
      */
+    
     private List<Object> anchor;
-
     /**
      * appName
      * Required:true
@@ -75,23 +75,25 @@ public class SystemLogContextSpec  implements java.io.Serializable {
     private Long time;
 
 
+
     /**
-     * get anchor
-     *
-     * @return
-     */
+    * get anchor
+    *
+    * @return
+    */
     public List<Object> getAnchor() {
         return anchor;
     }
 
     /**
-     * set anchor
-     *
-     * @param anchor
-     */
+    * set anchor
+    *
+    * @param anchor
+    */
     public void setAnchor(List<Object> anchor) {
         this.anchor = anchor;
     }
+
 
     /**
      * get appName
@@ -111,6 +113,7 @@ public class SystemLogContextSpec  implements java.io.Serializable {
         this.appName = appName;
     }
 
+
     /**
      * get direction
      *
@@ -128,6 +131,7 @@ public class SystemLogContextSpec  implements java.io.Serializable {
     public void setDirection(String direction) {
         this.direction = direction;
     }
+
 
     /**
      * get id
@@ -147,6 +151,7 @@ public class SystemLogContextSpec  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get lineSize
      *
@@ -165,6 +170,7 @@ public class SystemLogContextSpec  implements java.io.Serializable {
         this.lineSize = lineSize;
     }
 
+
     /**
      * get logType
      *
@@ -182,6 +188,7 @@ public class SystemLogContextSpec  implements java.io.Serializable {
     public void setLogType(String logType) {
         this.logType = logType;
     }
+
 
     /**
      * get time
@@ -202,15 +209,17 @@ public class SystemLogContextSpec  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set anchor
-     *
-     * @param anchor
-     */
+    * set anchor
+    *
+    * @param anchor
+    */
     public SystemLogContextSpec anchor(List<Object> anchor) {
         this.anchor = anchor;
         return this;
     }
+
 
     /**
      * set appName
@@ -222,6 +231,7 @@ public class SystemLogContextSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set direction
      *
@@ -231,6 +241,7 @@ public class SystemLogContextSpec  implements java.io.Serializable {
         this.direction = direction;
         return this;
     }
+
 
     /**
      * set id
@@ -242,6 +253,7 @@ public class SystemLogContextSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set lineSize
      *
@@ -251,6 +263,7 @@ public class SystemLogContextSpec  implements java.io.Serializable {
         this.lineSize = lineSize;
         return this;
     }
+
 
     /**
      * set logType
@@ -262,6 +275,7 @@ public class SystemLogContextSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set time
      *
@@ -271,6 +285,7 @@ public class SystemLogContextSpec  implements java.io.Serializable {
         this.time = time;
         return this;
     }
+
 
 
     /**
@@ -284,5 +299,4 @@ public class SystemLogContextSpec  implements java.io.Serializable {
         }
         this.anchor.add(anchor);
     }
-
 }

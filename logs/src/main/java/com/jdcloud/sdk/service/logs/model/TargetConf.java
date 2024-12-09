@@ -46,6 +46,7 @@ public class TargetConf  implements java.io.Serializable {
     private Long targetType;
 
 
+
     /**
      * get 目的地 配置
      *
@@ -63,6 +64,7 @@ public class TargetConf  implements java.io.Serializable {
     public void setTargetConf(Object targetConf) {
         this.targetConf = targetConf;
     }
+
 
     /**
      * get 转储目的地类型 0: oss, 目前只支持oss
@@ -83,6 +85,7 @@ public class TargetConf  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 目的地 配置
      *
@@ -92,6 +95,7 @@ public class TargetConf  implements java.io.Serializable {
         this.targetConf = targetConf;
         return this;
     }
+
 
     /**
      * set 转储目的地类型 0: oss, 目前只支持oss

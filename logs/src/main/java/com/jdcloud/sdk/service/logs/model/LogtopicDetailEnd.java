@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.logs.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * logtopicDetailEnd
@@ -68,9 +70,19 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
     private String description;
 
     /**
+     * 保序标识
+     */
+    private Boolean inOrder;
+
+    /**
      * 最新日志上报时间
      */
     private String lastRecordTime;
+
+    /**
+     * 生命周期
+     */
+    private Long lifeCycle;
 
     /**
      * 所属日志集名称
@@ -97,6 +109,17 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
      */
     private String region;
 
+    /**
+     * 产品线serviceCode
+     */
+    private String serviceCode;
+
+    /**
+     * 标签列表
+     */
+    
+    private List<Tag> tags;
+
 
     /**
      * get collectInfo
@@ -116,6 +139,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         this.collectInfo = collectInfo;
     }
 
+
     /**
      * get UID
      *
@@ -133,6 +157,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
     public void setUID(String uID) {
         this.uID = uID;
     }
+
 
     /**
      * get 日志来源,只在查询单个日志主题并且创建了采集配置时返回值
@@ -152,6 +177,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
      * get 日志主题采集的日志类型
      *
@@ -169,6 +195,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
     public void setAppName(String appName) {
         this.appName = appName;
     }
+
 
     /**
      * get 采集配置UID
@@ -188,6 +215,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         this.collectInfoUID = collectInfoUID;
     }
 
+
     /**
      * get 创建时间
      *
@@ -205,6 +233,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 描述信息
@@ -224,6 +253,26 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         this.description = description;
     }
 
+
+    /**
+     * get 保序标识
+     *
+     * @return
+     */
+    public Boolean getInOrder() {
+        return inOrder;
+    }
+
+    /**
+     * set 保序标识
+     *
+     * @param inOrder
+     */
+    public void setInOrder(Boolean inOrder) {
+        this.inOrder = inOrder;
+    }
+
+
     /**
      * get 最新日志上报时间
      *
@@ -241,6 +290,26 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
     public void setLastRecordTime(String lastRecordTime) {
         this.lastRecordTime = lastRecordTime;
     }
+
+
+    /**
+     * get 生命周期
+     *
+     * @return
+     */
+    public Long getLifeCycle() {
+        return lifeCycle;
+    }
+
+    /**
+     * set 生命周期
+     *
+     * @param lifeCycle
+     */
+    public void setLifeCycle(Long lifeCycle) {
+        this.lifeCycle = lifeCycle;
+    }
+
 
     /**
      * get 所属日志集名称
@@ -260,6 +329,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         this.logsetName = logsetName;
     }
 
+
     /**
      * get 所属日志集
      *
@@ -277,6 +347,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
     public void setLogsetUID(String logsetUID) {
         this.logsetUID = logsetUID;
     }
+
 
     /**
      * get 日志主题名称
@@ -296,6 +367,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 预处理模式
      *
@@ -313,6 +385,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
     public void setPrePattern(String prePattern) {
         this.prePattern = prePattern;
     }
+
 
     /**
      * get 地域信息
@@ -334,6 +407,45 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
 
 
     /**
+     * get 产品线serviceCode
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set 产品线serviceCode
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
+
+    /**
+    * get 标签列表
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 标签列表
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+
+    /**
      * set collectInfo
      *
      * @param collectInfo
@@ -342,6 +454,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         this.collectInfo = collectInfo;
         return this;
     }
+
 
     /**
      * set UID
@@ -353,6 +466,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志来源,只在查询单个日志主题并且创建了采集配置时返回值
      *
@@ -362,6 +476,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set 日志主题采集的日志类型
@@ -373,6 +488,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 采集配置UID
      *
@@ -382,6 +498,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         this.collectInfoUID = collectInfoUID;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -393,6 +510,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述信息
      *
@@ -402,6 +520,18 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
+
+    /**
+     * set 保序标识
+     *
+     * @param inOrder
+     */
+    public LogtopicDetailEnd inOrder(Boolean inOrder) {
+        this.inOrder = inOrder;
+        return this;
+    }
+
 
     /**
      * set 最新日志上报时间
@@ -413,6 +543,18 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set 生命周期
+     *
+     * @param lifeCycle
+     */
+    public LogtopicDetailEnd lifeCycle(Long lifeCycle) {
+        this.lifeCycle = lifeCycle;
+        return this;
+    }
+
+
     /**
      * set 所属日志集名称
      *
@@ -422,6 +564,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         this.logsetName = logsetName;
         return this;
     }
+
 
     /**
      * set 所属日志集
@@ -433,6 +576,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志主题名称
      *
@@ -443,6 +587,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 预处理模式
      *
@@ -452,6 +597,7 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
         this.prePattern = prePattern;
         return this;
     }
+
 
     /**
      * set 地域信息
@@ -464,4 +610,38 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 产品线serviceCode
+     *
+     * @param serviceCode
+     */
+    public LogtopicDetailEnd serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+
+
+    /**
+    * set 标签列表
+    *
+    * @param tags
+    */
+    public LogtopicDetailEnd tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 标签列表
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 }

@@ -37,31 +37,33 @@ public class SystemLogResultData  implements java.io.Serializable {
     /**
      * 上下文日志搜索锚点
      */
+    
     private List<Object> anchor;
-
     /**
      * 包含id, originalMsg, time字段
      */
     private Object source;
 
 
+
     /**
-     * get 上下文日志搜索锚点
-     *
-     * @return
-     */
+    * get 上下文日志搜索锚点
+    *
+    * @return
+    */
     public List<Object> getAnchor() {
         return anchor;
     }
 
     /**
-     * set 上下文日志搜索锚点
-     *
-     * @param anchor
-     */
+    * set 上下文日志搜索锚点
+    *
+    * @param anchor
+    */
     public void setAnchor(List<Object> anchor) {
         this.anchor = anchor;
     }
+
 
     /**
      * get 包含id, originalMsg, time字段
@@ -82,15 +84,17 @@ public class SystemLogResultData  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 上下文日志搜索锚点
-     *
-     * @param anchor
-     */
+    * set 上下文日志搜索锚点
+    *
+    * @param anchor
+    */
     public SystemLogResultData anchor(List<Object> anchor) {
         this.anchor = anchor;
         return this;
     }
+
 
     /**
      * set 包含id, originalMsg, time字段
@@ -101,6 +105,7 @@ public class SystemLogResultData  implements java.io.Serializable {
         this.source = source;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class SystemLogResultData  implements java.io.Serializable {
         }
         this.anchor.add(anchor);
     }
-
 }

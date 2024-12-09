@@ -39,8 +39,8 @@ public class DescribeLogtopicsResult extends JdcloudResult implements java.io.Se
     /**
      * data
      */
+    
     private List<LogtopicDetailEnd> data;
-
     /**
      * 总页数
      */
@@ -62,23 +62,25 @@ public class DescribeLogtopicsResult extends JdcloudResult implements java.io.Se
     private Long pageSize;
 
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<LogtopicDetailEnd> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<LogtopicDetailEnd> data) {
         this.data = data;
     }
+
 
     /**
      * get 总页数
@@ -98,6 +100,7 @@ public class DescribeLogtopicsResult extends JdcloudResult implements java.io.Se
         this.numberPages = numberPages;
     }
 
+
     /**
      * get 总记录数
      *
@@ -116,6 +119,7 @@ public class DescribeLogtopicsResult extends JdcloudResult implements java.io.Se
         this.numberRecords = numberRecords;
     }
 
+
     /**
      * get 当前页码
      *
@@ -133,6 +137,7 @@ public class DescribeLogtopicsResult extends JdcloudResult implements java.io.Se
     public void setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小
@@ -153,15 +158,17 @@ public class DescribeLogtopicsResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public DescribeLogtopicsResult data(List<LogtopicDetailEnd> data) {
         this.data = data;
         return this;
     }
+
 
     /**
      * set 总页数
@@ -173,6 +180,7 @@ public class DescribeLogtopicsResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 总记录数
      *
@@ -182,6 +190,7 @@ public class DescribeLogtopicsResult extends JdcloudResult implements java.io.Se
         this.numberRecords = numberRecords;
         return this;
     }
+
 
     /**
      * set 当前页码
@@ -193,6 +202,7 @@ public class DescribeLogtopicsResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 分页大小
      *
@@ -202,6 +212,7 @@ public class DescribeLogtopicsResult extends JdcloudResult implements java.io.Se
         this.pageSize = pageSize;
         return this;
     }
+
 
 
     /**
@@ -215,5 +226,4 @@ public class DescribeLogtopicsResult extends JdcloudResult implements java.io.Se
         }
         this.data.add(data);
     }
-
 }

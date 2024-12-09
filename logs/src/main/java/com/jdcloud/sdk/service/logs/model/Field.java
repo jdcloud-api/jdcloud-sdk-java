@@ -48,6 +48,7 @@ public class Field  implements java.io.Serializable {
     private String type;
 
 
+
     /**
      * get key
      *
@@ -65,6 +66,7 @@ public class Field  implements java.io.Serializable {
     public void setKey(String key) {
         this.key = key;
     }
+
 
     /**
      * get 字段类型
@@ -85,6 +87,7 @@ public class Field  implements java.io.Serializable {
     }
 
 
+
     /**
      * set key
      *
@@ -94,6 +97,7 @@ public class Field  implements java.io.Serializable {
         this.key = key;
         return this;
     }
+
 
     /**
      * set 字段类型

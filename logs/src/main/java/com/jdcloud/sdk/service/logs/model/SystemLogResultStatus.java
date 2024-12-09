@@ -38,6 +38,7 @@ public class SystemLogResultStatus  implements java.io.Serializable {
     private String code;
 
 
+
     /**
      * get code
      *
@@ -55,6 +56,7 @@ public class SystemLogResultStatus  implements java.io.Serializable {
     public void setCode(String code) {
         this.code = code;
     }
+
 
 
     /**

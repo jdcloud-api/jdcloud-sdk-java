@@ -40,6 +40,7 @@ public class DescribeMetricTaskResult extends JdcloudResult implements java.io.S
     private MetrictaskDetailEnd data;
 
 
+
     /**
      * get data
      *
@@ -57,6 +58,7 @@ public class DescribeMetricTaskResult extends JdcloudResult implements java.io.S
     public void setData(MetrictaskDetailEnd data) {
         this.data = data;
     }
+
 
 
     /**

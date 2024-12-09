@@ -44,6 +44,7 @@ public class CreateMetricTaskResult extends JdcloudResult implements java.io.Ser
     private String suc;
 
 
+
     /**
      * get UID
      *
@@ -61,6 +62,7 @@ public class CreateMetricTaskResult extends JdcloudResult implements java.io.Ser
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get suc
@@ -81,6 +83,7 @@ public class CreateMetricTaskResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set UID
      *
@@ -90,6 +93,7 @@ public class CreateMetricTaskResult extends JdcloudResult implements java.io.Ser
         this.id = id;
         return this;
     }
+
 
     /**
      * set suc

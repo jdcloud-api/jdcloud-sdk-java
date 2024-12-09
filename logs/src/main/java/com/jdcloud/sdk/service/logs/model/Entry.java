@@ -56,6 +56,7 @@ public class Entry  implements java.io.Serializable {
     private String timestamp;
 
 
+
     /**
      * get 日志原文
      *
@@ -73,6 +74,7 @@ public class Entry  implements java.io.Serializable {
     public void setContent(String content) {
         this.content = content;
     }
+
 
     /**
      * get 日志流标识符,不传则使用全局日志流标识符
@@ -92,6 +94,7 @@ public class Entry  implements java.io.Serializable {
         this.stream = stream;
     }
 
+
     /**
      * get 标签，不传则取全局标签 map[string]string
      *
@@ -109,6 +112,7 @@ public class Entry  implements java.io.Serializable {
     public void setTags(Object tags) {
         this.tags = tags;
     }
+
 
     /**
      * get 时间戳，UTC格式，最多支持到纳秒级别，不传入则取全局时间戳。如 2019-04-08T03:08:04.437670934Z、2019-04-08T03:08:04Z、2019-04-08T03:08:04.123Z
@@ -129,6 +133,7 @@ public class Entry  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 日志原文
      *
@@ -138,6 +143,7 @@ public class Entry  implements java.io.Serializable {
         this.content = content;
         return this;
     }
+
 
     /**
      * set 日志流标识符,不传则使用全局日志流标识符
@@ -149,6 +155,7 @@ public class Entry  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 标签，不传则取全局标签 map[string]string
      *
@@ -158,6 +165,7 @@ public class Entry  implements java.io.Serializable {
         this.tags = tags;
         return this;
     }
+
 
     /**
      * set 时间戳，UTC格式，最多支持到纳秒级别，不传入则取全局时间戳。如 2019-04-08T03:08:04.437670934Z、2019-04-08T03:08:04Z、2019-04-08T03:08:04.123Z

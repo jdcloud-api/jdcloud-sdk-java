@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * LogSearch APIs
- * 日志扫描接口
+ * JCLOUD LOGS API
+ * logs API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.logs.model.SearchResponse;
 
 /**
- * 搜索日志
+ * search
  */
 class SearchExecutor extends JdcloudExecutor {
 

@@ -39,6 +39,7 @@ public class CreateLogtopicResult extends JdcloudResult implements java.io.Seria
     private String uID;
 
 
+
     /**
      * get UID
      *
@@ -56,6 +57,7 @@ public class CreateLogtopicResult extends JdcloudResult implements java.io.Seria
     public void setUID(String uID) {
         this.uID = uID;
     }
+
 
 
     /**

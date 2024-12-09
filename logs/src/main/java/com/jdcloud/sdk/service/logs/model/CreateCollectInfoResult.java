@@ -39,6 +39,7 @@ public class CreateCollectInfoResult extends JdcloudResult implements java.io.Se
     private String uID;
 
 
+
     /**
      * get UID
      *
@@ -56,6 +57,7 @@ public class CreateCollectInfoResult extends JdcloudResult implements java.io.Se
     public void setUID(String uID) {
         this.uID = uID;
     }
+
 
 
     /**

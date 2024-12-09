@@ -37,103 +37,110 @@ public class AnalysisMetaData  implements java.io.Serializable {
     /**
      * 统计字段
      */
+    
     private List<String> agg;
-
     /**
      * 分组字段
      */
+    
     private List<String> group;
-
     /**
      * 时间字段
      */
+    
     private List<String> time;
 
 
     /**
-     * get 统计字段
-     *
-     * @return
-     */
+    * get 统计字段
+    *
+    * @return
+    */
     public List<String> getAgg() {
         return agg;
     }
 
     /**
-     * set 统计字段
-     *
-     * @param agg
-     */
+    * set 统计字段
+    *
+    * @param agg
+    */
     public void setAgg(List<String> agg) {
         this.agg = agg;
     }
 
+
     /**
-     * get 分组字段
-     *
-     * @return
-     */
+    * get 分组字段
+    *
+    * @return
+    */
     public List<String> getGroup() {
         return group;
     }
 
     /**
-     * set 分组字段
-     *
-     * @param group
-     */
+    * set 分组字段
+    *
+    * @param group
+    */
     public void setGroup(List<String> group) {
         this.group = group;
     }
 
+
     /**
-     * get 时间字段
-     *
-     * @return
-     */
+    * get 时间字段
+    *
+    * @return
+    */
     public List<String> getTime() {
         return time;
     }
 
     /**
-     * set 时间字段
-     *
-     * @param time
-     */
+    * set 时间字段
+    *
+    * @param time
+    */
     public void setTime(List<String> time) {
         this.time = time;
     }
 
 
+
     /**
-     * set 统计字段
-     *
-     * @param agg
-     */
+    * set 统计字段
+    *
+    * @param agg
+    */
     public AnalysisMetaData agg(List<String> agg) {
         this.agg = agg;
         return this;
     }
 
+
     /**
-     * set 分组字段
-     *
-     * @param group
-     */
+    * set 分组字段
+    *
+    * @param group
+    */
     public AnalysisMetaData group(List<String> group) {
         this.group = group;
         return this;
     }
 
+
     /**
-     * set 时间字段
-     *
-     * @param time
-     */
+    * set 时间字段
+    *
+    * @param time
+    */
     public AnalysisMetaData time(List<String> time) {
         this.time = time;
         return this;
     }
+
 
 
     /**
@@ -171,5 +178,4 @@ public class AnalysisMetaData  implements java.io.Serializable {
         }
         this.time.add(time);
     }
-
 }

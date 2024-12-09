@@ -43,6 +43,7 @@ public class TagFields  implements java.io.Serializable {
     private Object tagv;
 
 
+
     /**
      * get tagk
      *
@@ -60,6 +61,7 @@ public class TagFields  implements java.io.Serializable {
     public void setTagk(String tagk) {
         this.tagk = tagk;
     }
+
 
     /**
      * get tagv
@@ -80,6 +82,7 @@ public class TagFields  implements java.io.Serializable {
     }
 
 
+
     /**
      * set tagk
      *
@@ -89,6 +92,7 @@ public class TagFields  implements java.io.Serializable {
         this.tagk = tagk;
         return this;
     }
+
 
     /**
      * set tagv

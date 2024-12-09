@@ -87,6 +87,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
     private TimestampRange time;
 
 
+
     /**
      * get appName
      *
@@ -104,6 +105,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
     public void setAppName(String appName) {
         this.appName = appName;
     }
+
 
     /**
      * get 精确匹配，true 或者 false
@@ -123,6 +125,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
         this.exactMatch = exactMatch;
     }
 
+
     /**
      * get instance
      *
@@ -140,6 +143,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
     public void setInstance(String instance) {
         this.instance = instance;
     }
+
 
     /**
      * get 查询关键字
@@ -159,6 +163,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
         this.keyword = keyword;
     }
 
+
     /**
      * get logType
      *
@@ -176,6 +181,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
     public void setLogType(String logType) {
         this.logType = logType;
     }
+
 
     /**
      * get 排序，取值&quot;ASC&quot;或&quot;DESC&quot;，默认&quot;ASC&quot;
@@ -195,6 +201,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
         this.order = order;
     }
 
+
     /**
      * get 页数，从1开始
      *
@@ -213,6 +220,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
         this.page = page;
     }
 
+
     /**
      * get 每页日志条数
      *
@@ -230,6 +238,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
     public void setSize(Long size) {
         this.size = size;
     }
+
 
     /**
      * get time
@@ -250,6 +259,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set appName
      *
@@ -259,6 +269,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
         this.appName = appName;
         return this;
     }
+
 
     /**
      * set 精确匹配，true 或者 false
@@ -270,6 +281,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set instance
      *
@@ -279,6 +291,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
         this.instance = instance;
         return this;
     }
+
 
     /**
      * set 查询关键字
@@ -290,6 +303,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set logType
      *
@@ -299,6 +313,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
         this.logType = logType;
         return this;
     }
+
 
     /**
      * set 排序，取值&quot;ASC&quot;或&quot;DESC&quot;，默认&quot;ASC&quot;
@@ -310,6 +325,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 页数，从1开始
      *
@@ -320,6 +336,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 每页日志条数
      *
@@ -329,6 +346,7 @@ public class SystemLogHistorySpec  implements java.io.Serializable {
         this.size = size;
         return this;
     }
+
 
     /**
      * set time

@@ -37,70 +37,75 @@ public class SearchFields  implements java.io.Serializable {
     /**
      * contentFields
      */
+    
     private List<String> contentFields;
-
     /**
      * tagFields
      */
+    
     private List<TagFields> tagFields;
 
 
     /**
-     * get contentFields
-     *
-     * @return
-     */
+    * get contentFields
+    *
+    * @return
+    */
     public List<String> getContentFields() {
         return contentFields;
     }
 
     /**
-     * set contentFields
-     *
-     * @param contentFields
-     */
+    * set contentFields
+    *
+    * @param contentFields
+    */
     public void setContentFields(List<String> contentFields) {
         this.contentFields = contentFields;
     }
 
+
     /**
-     * get tagFields
-     *
-     * @return
-     */
+    * get tagFields
+    *
+    * @return
+    */
     public List<TagFields> getTagFields() {
         return tagFields;
     }
 
     /**
-     * set tagFields
-     *
-     * @param tagFields
-     */
+    * set tagFields
+    *
+    * @param tagFields
+    */
     public void setTagFields(List<TagFields> tagFields) {
         this.tagFields = tagFields;
     }
 
 
+
     /**
-     * set contentFields
-     *
-     * @param contentFields
-     */
+    * set contentFields
+    *
+    * @param contentFields
+    */
     public SearchFields contentFields(List<String> contentFields) {
         this.contentFields = contentFields;
         return this;
     }
 
+
     /**
-     * set tagFields
-     *
-     * @param tagFields
-     */
+    * set tagFields
+    *
+    * @param tagFields
+    */
     public SearchFields tagFields(List<TagFields> tagFields) {
         this.tagFields = tagFields;
         return this;
     }
+
 
 
     /**
@@ -126,5 +131,4 @@ public class SearchFields  implements java.io.Serializable {
         }
         this.tagFields.add(tagField);
     }
-
 }

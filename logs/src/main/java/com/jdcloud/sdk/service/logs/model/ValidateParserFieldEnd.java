@@ -53,6 +53,7 @@ public class ValidateParserFieldEnd  implements java.io.Serializable {
     private String name;
 
 
+
     /**
      * get fieldType
      *
@@ -70,6 +71,7 @@ public class ValidateParserFieldEnd  implements java.io.Serializable {
     public void setFieldType(String fieldType) {
         this.fieldType = fieldType;
     }
+
 
     /**
      * get fieldValue
@@ -89,6 +91,7 @@ public class ValidateParserFieldEnd  implements java.io.Serializable {
         this.fieldValue = fieldValue;
     }
 
+
     /**
      * get index
      *
@@ -106,6 +109,7 @@ public class ValidateParserFieldEnd  implements java.io.Serializable {
     public void setIndex(Long index) {
         this.index = index;
     }
+
 
     /**
      * get name
@@ -126,6 +130,7 @@ public class ValidateParserFieldEnd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set fieldType
      *
@@ -135,6 +140,7 @@ public class ValidateParserFieldEnd  implements java.io.Serializable {
         this.fieldType = fieldType;
         return this;
     }
+
 
     /**
      * set fieldValue
@@ -146,6 +152,7 @@ public class ValidateParserFieldEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set index
      *
@@ -155,6 +162,7 @@ public class ValidateParserFieldEnd  implements java.io.Serializable {
         this.index = index;
         return this;
     }
+
 
     /**
      * set name

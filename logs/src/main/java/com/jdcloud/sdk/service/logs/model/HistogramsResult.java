@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * LogSearch APIs
- * 日志扫描接口
+ * 日志搜索接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -44,8 +44,8 @@ public class HistogramsResult extends JdcloudResult implements java.io.Serializa
     /**
      * data
      */
+    
     private List<Object> data;
-
     /**
      * 任务进度
      */
@@ -60,6 +60,7 @@ public class HistogramsResult extends JdcloudResult implements java.io.Serializa
      * 总数
      */
     private Long total;
+
 
 
     /**
@@ -80,23 +81,25 @@ public class HistogramsResult extends JdcloudResult implements java.io.Serializa
         this.count = count;
     }
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<Object> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<Object> data) {
         this.data = data;
     }
+
 
     /**
      * get 任务进度
@@ -116,6 +119,7 @@ public class HistogramsResult extends JdcloudResult implements java.io.Serializa
         this.progress = progress;
     }
 
+
     /**
      * get searchFields
      *
@@ -133,6 +137,7 @@ public class HistogramsResult extends JdcloudResult implements java.io.Serializa
     public void setSearchFields(SearchFields searchFields) {
         this.searchFields = searchFields;
     }
+
 
     /**
      * get 总数
@@ -153,6 +158,7 @@ public class HistogramsResult extends JdcloudResult implements java.io.Serializa
     }
 
 
+
     /**
      * set 结果条数
      *
@@ -163,15 +169,17 @@ public class HistogramsResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public HistogramsResult data(List<Object> data) {
         this.data = data;
         return this;
     }
+
 
     /**
      * set 任务进度
@@ -183,6 +191,7 @@ public class HistogramsResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set searchFields
      *
@@ -193,6 +202,7 @@ public class HistogramsResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 总数
      *
@@ -202,6 +212,7 @@ public class HistogramsResult extends JdcloudResult implements java.io.Serializa
         this.total = total;
         return this;
     }
+
 
 
     /**
@@ -215,5 +226,4 @@ public class HistogramsResult extends JdcloudResult implements java.io.Serializa
         }
         this.data.add(data);
     }
-
 }

@@ -108,6 +108,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
     private String updateTime;
 
 
+
     /**
      * get 聚合函数
      *
@@ -125,6 +126,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
     public void setAggregate(String aggregate) {
         this.aggregate = aggregate;
     }
+
 
     /**
      * get createdTime
@@ -144,6 +146,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+
     /**
      * get 开启自定义单位
      *
@@ -161,6 +164,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
     public void setCustomUnit(String customUnit) {
         this.customUnit = customUnit;
     }
+
 
     /**
      * get 查询字段
@@ -180,6 +184,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         this.dataField = dataField;
     }
 
+
     /**
      * get 过滤语法
      *
@@ -197,6 +202,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
     public void setFilterContent(String filterContent) {
         this.filterContent = filterContent;
     }
+
 
     /**
      * get filterOpen
@@ -216,6 +222,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         this.filterOpen = filterOpen;
     }
 
+
     /**
      * get 过滤类型
      *
@@ -233,6 +240,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
     public void setFilterType(String filterType) {
         this.filterType = filterType;
     }
+
 
     /**
      * get id
@@ -252,6 +260,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 周期
      *
@@ -269,6 +278,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
     public void setInterval(Long interval) {
         this.interval = interval;
     }
+
 
     /**
      * get 监控项名称
@@ -288,6 +298,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         this.metric = metric;
     }
 
+
     /**
      * get 监控任务名称
      *
@@ -305,6 +316,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 配置方式:枚举值 visual，sql；分别代表可视化配置及sql配置方式
@@ -324,6 +336,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         this.settingType = settingType;
     }
 
+
     /**
      * get sqlSpec
      *
@@ -342,6 +355,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         this.sqlSpec = sqlSpec;
     }
 
+
     /**
      * get 单位
      *
@@ -359,6 +373,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
     public void setUnit(String unit) {
         this.unit = unit;
     }
+
 
     /**
      * get updateTime
@@ -379,6 +394,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 聚合函数
      *
@@ -388,6 +404,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         this.aggregate = aggregate;
         return this;
     }
+
 
     /**
      * set createdTime
@@ -399,6 +416,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 开启自定义单位
      *
@@ -408,6 +426,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         this.customUnit = customUnit;
         return this;
     }
+
 
     /**
      * set 查询字段
@@ -419,6 +438,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 过滤语法
      *
@@ -428,6 +448,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         this.filterContent = filterContent;
         return this;
     }
+
 
     /**
      * set filterOpen
@@ -439,6 +460,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 过滤类型
      *
@@ -448,6 +470,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         this.filterType = filterType;
         return this;
     }
+
 
     /**
      * set id
@@ -459,6 +482,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 周期
      *
@@ -468,6 +492,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         this.interval = interval;
         return this;
     }
+
 
     /**
      * set 监控项名称
@@ -479,6 +504,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 监控任务名称
      *
@@ -488,6 +514,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 配置方式:枚举值 visual，sql；分别代表可视化配置及sql配置方式
@@ -499,6 +526,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set sqlSpec
      *
@@ -509,6 +537,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 单位
      *
@@ -518,6 +547,7 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
         this.unit = unit;
         return this;
     }
+
 
     /**
      * set updateTime

@@ -24,6 +24,10 @@
 
 package com.jdcloud.sdk.service.logs.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.logs.model.Filter;
+import com.jdcloud.sdk.service.logs.model.TagFilter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -40,21 +44,37 @@ public class DescribeLogsetsRequest extends JdcloudRequest implements java.io.Se
     private Long pageNumber;
 
     /**
-     * 页面大小，默认为20；取值范围[1, 100]
+     * 页面大小，默认为20；取值范围[1, 200]
      */
     private Long pageSize;
 
     /**
-     * 日志集名称
+     * 日志集名称. 已废弃，需要通过filter传递
      */
     private String name;
 
+    /**
+     * 过滤条件，key，Values。 支持的key:  name
+     */
+    
+    private List<Filter> filters;
+    /**
+     * 标签过滤条件，key，Values
+     */
+    
+    private List<TagFilter> tags;
+    /**
+     * 资源组过滤条件
+     */
+    
+    private List<String> resourceGroupIds;
     /**
      * 地域 Id
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -75,8 +95,9 @@ public class DescribeLogsetsRequest extends JdcloudRequest implements java.io.Se
         this.pageNumber = pageNumber;
     }
 
+
     /**
-     * get 页面大小，默认为20；取值范围[1, 100]
+     * get 页面大小，默认为20；取值范围[1, 200]
      *
      * @return
      */
@@ -85,7 +106,7 @@ public class DescribeLogsetsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 页面大小，默认为20；取值范围[1, 100]
+     * set 页面大小，默认为20；取值范围[1, 200]
      *
      * @param pageSize
      */
@@ -93,8 +114,9 @@ public class DescribeLogsetsRequest extends JdcloudRequest implements java.io.Se
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get 日志集名称
+     * get 日志集名称. 已废弃，需要通过filter传递
      *
      * @return
      */
@@ -103,13 +125,71 @@ public class DescribeLogsetsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 日志集名称
+     * set 日志集名称. 已废弃，需要通过filter传递
      *
      * @param name
      */
     public void setName(String name) {
         this.name = name;
     }
+
+
+    /**
+    * get 过滤条件，key，Values。 支持的key:  name
+    *
+    * @return
+    */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+    * set 过滤条件，key，Values。 支持的key:  name
+    *
+    * @param filters
+    */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
+
+
+    /**
+    * get 标签过滤条件，key，Values
+    *
+    * @return
+    */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 标签过滤条件，key，Values
+    *
+    * @param tags
+    */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+    * get 资源组过滤条件
+    *
+    * @return
+    */
+    public List<String> getResourceGroupIds() {
+        return resourceGroupIds;
+    }
+
+    /**
+    * set 资源组过滤条件
+    *
+    * @param resourceGroupIds
+    */
+    public void setResourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+    }
+
 
     /**
      * get 地域 Id
@@ -130,6 +210,7 @@ public class DescribeLogsetsRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 当前所在页，默认为1
      *
@@ -140,8 +221,9 @@ public class DescribeLogsetsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
-     * set 页面大小，默认为20；取值范围[1, 100]
+     * set 页面大小，默认为20；取值范围[1, 200]
      *
      * @param pageSize
      */
@@ -150,8 +232,9 @@ public class DescribeLogsetsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
-     * set 日志集名称
+     * set 日志集名称. 已废弃，需要通过filter传递
      *
      * @param name
      */
@@ -159,6 +242,40 @@ public class DescribeLogsetsRequest extends JdcloudRequest implements java.io.Se
         this.name = name;
         return this;
     }
+
+
+    /**
+    * set 过滤条件，key，Values。 支持的key:  name
+    *
+    * @param filters
+    */
+    public DescribeLogsetsRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+
+    /**
+    * set 标签过滤条件，key，Values
+    *
+    * @param tags
+    */
+    public DescribeLogsetsRequest tags(List<TagFilter> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+    * set 资源组过滤条件
+    *
+    * @param resourceGroupIds
+    */
+    public DescribeLogsetsRequest resourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+        return this;
+    }
+
 
     /**
      * set 地域 Id
@@ -171,4 +288,40 @@ public class DescribeLogsetsRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
+    /**
+     * add item to 过滤条件，key，Values。 支持的key:  name
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
+
+    /**
+     * add item to 标签过滤条件，key，Values
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
+
+    /**
+     * add item to 资源组过滤条件
+     *
+     * @param resourceGroupId
+     */
+    public void addResourceGroupId(String resourceGroupId) {
+        if (this.resourceGroupIds == null) {
+            this.resourceGroupIds = new ArrayList<>();
+        }
+        this.resourceGroupIds.add(resourceGroupId);
+    }
 }

@@ -64,6 +64,16 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
     private String description;
 
     /**
+     * 保序标识
+     */
+    private Boolean inOrder;
+
+    /**
+     * 生命周期
+     */
+    private Long lifeCycle;
+
+    /**
      * 所属日志集名称
      */
     private String logsetName;
@@ -88,6 +98,12 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
      */
     private String region;
 
+    /**
+     * 产品线serviceCode
+     */
+    private String serviceCode;
+
+
 
     /**
      * get UID
@@ -107,6 +123,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         this.uID = uID;
     }
 
+
     /**
      * get 日志来源,只在查询单个日志主题并且创建了采集配置时返回值
      *
@@ -124,6 +141,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
     public void setAppCode(String appCode) {
         this.appCode = appCode;
     }
+
 
     /**
      * get 日志主题采集的日志类型
@@ -143,6 +161,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         this.appName = appName;
     }
 
+
     /**
      * get 采集配置UID
      *
@@ -160,6 +179,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
     public void setCollectInfoUID(String collectInfoUID) {
         this.collectInfoUID = collectInfoUID;
     }
+
 
     /**
      * get 创建时间
@@ -179,6 +199,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         this.createTime = createTime;
     }
 
+
     /**
      * get 描述信息
      *
@@ -196,6 +217,45 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
     public void setDescription(String description) {
         this.description = description;
     }
+
+
+    /**
+     * get 保序标识
+     *
+     * @return
+     */
+    public Boolean getInOrder() {
+        return inOrder;
+    }
+
+    /**
+     * set 保序标识
+     *
+     * @param inOrder
+     */
+    public void setInOrder(Boolean inOrder) {
+        this.inOrder = inOrder;
+    }
+
+
+    /**
+     * get 生命周期
+     *
+     * @return
+     */
+    public Long getLifeCycle() {
+        return lifeCycle;
+    }
+
+    /**
+     * set 生命周期
+     *
+     * @param lifeCycle
+     */
+    public void setLifeCycle(Long lifeCycle) {
+        this.lifeCycle = lifeCycle;
+    }
+
 
     /**
      * get 所属日志集名称
@@ -215,6 +275,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         this.logsetName = logsetName;
     }
 
+
     /**
      * get 所属日志集
      *
@@ -232,6 +293,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
     public void setLogsetUID(String logsetUID) {
         this.logsetUID = logsetUID;
     }
+
 
     /**
      * get 日志主题名称
@@ -251,6 +313,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         this.name = name;
     }
 
+
     /**
      * get 预处理模式
      *
@@ -268,6 +331,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
     public void setPrePattern(String prePattern) {
         this.prePattern = prePattern;
     }
+
 
     /**
      * get 地域信息
@@ -289,6 +353,26 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
 
 
     /**
+     * get 产品线serviceCode
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set 产品线serviceCode
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
+
+
+    /**
      * set UID
      *
      * @param uID
@@ -297,6 +381,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         this.uID = uID;
         return this;
     }
+
 
     /**
      * set 日志来源,只在查询单个日志主题并且创建了采集配置时返回值
@@ -308,6 +393,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 日志主题采集的日志类型
      *
@@ -317,6 +403,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         this.appName = appName;
         return this;
     }
+
 
     /**
      * set 采集配置UID
@@ -328,6 +415,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -337,6 +425,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 描述信息
@@ -348,6 +437,29 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
+    /**
+     * set 保序标识
+     *
+     * @param inOrder
+     */
+    public DescribeLogtopicResult inOrder(Boolean inOrder) {
+        this.inOrder = inOrder;
+        return this;
+    }
+
+
+    /**
+     * set 生命周期
+     *
+     * @param lifeCycle
+     */
+    public DescribeLogtopicResult lifeCycle(Long lifeCycle) {
+        this.lifeCycle = lifeCycle;
+        return this;
+    }
+
+
     /**
      * set 所属日志集名称
      *
@@ -357,6 +469,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         this.logsetName = logsetName;
         return this;
     }
+
 
     /**
      * set 所属日志集
@@ -368,6 +481,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 日志主题名称
      *
@@ -377,6 +491,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         this.name = name;
         return this;
     }
+
 
     /**
      * set 预处理模式
@@ -388,6 +503,7 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 地域信息
      *
@@ -395,6 +511,17 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
      */
     public DescribeLogtopicResult region(String region) {
         this.region = region;
+        return this;
+    }
+
+
+    /**
+     * set 产品线serviceCode
+     *
+     * @param serviceCode
+     */
+    public DescribeLogtopicResult serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
         return this;
     }
 

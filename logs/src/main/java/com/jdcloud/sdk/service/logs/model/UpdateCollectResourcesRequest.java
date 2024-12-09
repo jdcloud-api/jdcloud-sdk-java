@@ -47,8 +47,8 @@ public class UpdateCollectResourcesRequest extends JdcloudRequest implements jav
     /**
      * 采集实例列表（系统日志存在上限限制）
      */
+    
     private List<Resource> resources;
-
     /**
      * 地域 Id
      * Required:true
@@ -62,6 +62,7 @@ public class UpdateCollectResourcesRequest extends JdcloudRequest implements jav
      */
     @Required
     private String collectInfoUID;
+
 
 
     /**
@@ -82,23 +83,25 @@ public class UpdateCollectResourcesRequest extends JdcloudRequest implements jav
         this.action = action;
     }
 
+
     /**
-     * get 采集实例列表（系统日志存在上限限制）
-     *
-     * @return
-     */
+    * get 采集实例列表（系统日志存在上限限制）
+    *
+    * @return
+    */
     public List<Resource> getResources() {
         return resources;
     }
 
     /**
-     * set 采集实例列表（系统日志存在上限限制）
-     *
-     * @param resources
-     */
+    * set 采集实例列表（系统日志存在上限限制）
+    *
+    * @param resources
+    */
     public void setResources(List<Resource> resources) {
         this.resources = resources;
     }
+
 
     /**
      * get 地域 Id
@@ -117,6 +120,7 @@ public class UpdateCollectResourcesRequest extends JdcloudRequest implements jav
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 采集配置 UID
@@ -137,6 +141,7 @@ public class UpdateCollectResourcesRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set action
      *
@@ -147,15 +152,17 @@ public class UpdateCollectResourcesRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
-     * set 采集实例列表（系统日志存在上限限制）
-     *
-     * @param resources
-     */
+    * set 采集实例列表（系统日志存在上限限制）
+    *
+    * @param resources
+    */
     public UpdateCollectResourcesRequest resources(List<Resource> resources) {
         this.resources = resources;
         return this;
     }
+
 
     /**
      * set 地域 Id
@@ -167,6 +174,7 @@ public class UpdateCollectResourcesRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set 采集配置 UID
      *
@@ -176,6 +184,7 @@ public class UpdateCollectResourcesRequest extends JdcloudRequest implements jav
         this.collectInfoUID = collectInfoUID;
         return this;
     }
+
 
 
     /**
@@ -189,5 +198,4 @@ public class UpdateCollectResourcesRequest extends JdcloudRequest implements jav
         }
         this.resources.add(resource);
     }
-
 }

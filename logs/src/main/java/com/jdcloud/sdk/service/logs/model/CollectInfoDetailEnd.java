@@ -42,12 +42,17 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
     /**
      * 高可用组资源multi
      */
+    
     private List<AgResourceEnd> agResource;
-
     /**
      * 日志来源
      */
     private String appCode;
+
+    /**
+     * binlog规格
+     */
+    private Object binlogSpec;
 
     /**
      * detail
@@ -60,19 +65,14 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
     private Long enabled;
 
     /**
-     * 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;
+     * k8s规格
      */
-    private String logCustomTarget;
+    private Object k8sSpec;
 
     /**
-     * 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
+     * 采集配置名称
      */
-    private Object logCustomTargetConf;
-
-    /**
-     * 目的地是否是日志服务logtopic，只支持业务应用日志。默认是
-     */
-    private Boolean logtopicEnabled;
+    private String name;
 
     /**
      * 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
@@ -110,6 +110,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
     private String templateUID;
 
 
+
     /**
      * get UID
      *
@@ -128,23 +129,25 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         this.uID = uID;
     }
 
+
     /**
-     * get 高可用组资源multi
-     *
-     * @return
-     */
+    * get 高可用组资源multi
+    *
+    * @return
+    */
     public List<AgResourceEnd> getAgResource() {
         return agResource;
     }
 
     /**
-     * set 高可用组资源multi
-     *
-     * @param agResource
-     */
+    * set 高可用组资源multi
+    *
+    * @param agResource
+    */
     public void setAgResource(List<AgResourceEnd> agResource) {
         this.agResource = agResource;
     }
+
 
     /**
      * get 日志来源
@@ -164,6 +167,26 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
+    /**
+     * get binlog规格
+     *
+     * @return
+     */
+    public Object getBinlogSpec() {
+        return binlogSpec;
+    }
+
+    /**
+     * set binlog规格
+     *
+     * @param binlogSpec
+     */
+    public void setBinlogSpec(Object binlogSpec) {
+        this.binlogSpec = binlogSpec;
+    }
+
+
     /**
      * get detail
      *
@@ -181,6 +204,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
     public void setDetail(CollectTempalteEnd detail) {
         this.detail = detail;
     }
+
 
     /**
      * get enabled
@@ -200,59 +224,44 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         this.enabled = enabled;
     }
 
+
     /**
-     * get 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;
+     * get k8s规格
      *
      * @return
      */
-    public String getLogCustomTarget() {
-        return logCustomTarget;
+    public Object getK8sSpec() {
+        return k8sSpec;
     }
 
     /**
-     * set 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;
+     * set k8s规格
      *
-     * @param logCustomTarget
+     * @param k8sSpec
      */
-    public void setLogCustomTarget(String logCustomTarget) {
-        this.logCustomTarget = logCustomTarget;
+    public void setK8sSpec(Object k8sSpec) {
+        this.k8sSpec = k8sSpec;
     }
 
-    /**
-     * get 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
-     *
-     * @return
-     */
-    public Object getLogCustomTargetConf() {
-        return logCustomTargetConf;
-    }
 
     /**
-     * set 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
-     *
-     * @param logCustomTargetConf
-     */
-    public void setLogCustomTargetConf(Object logCustomTargetConf) {
-        this.logCustomTargetConf = logCustomTargetConf;
-    }
-
-    /**
-     * get 目的地是否是日志服务logtopic，只支持业务应用日志。默认是
+     * get 采集配置名称
      *
      * @return
      */
-    public Boolean getLogtopicEnabled() {
-        return logtopicEnabled;
+    public String getName() {
+        return name;
     }
 
     /**
-     * set 目的地是否是日志服务logtopic，只支持业务应用日志。默认是
+     * set 采集配置名称
      *
-     * @param logtopicEnabled
+     * @param name
      */
-    public void setLogtopicEnabled(Boolean logtopicEnabled) {
-        this.logtopicEnabled = logtopicEnabled;
+    public void setName(String name) {
+        this.name = name;
     }
+
 
     /**
      * get 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
@@ -272,6 +281,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         this.resourceMode = resourceMode;
     }
 
+
     /**
      * get 采集实例类型, 只能是 all/part
      *
@@ -289,6 +299,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
     public void setResourceType(String resourceType) {
         this.resourceType = resourceType;
     }
+
 
     /**
      * get 采集实例数量
@@ -308,6 +319,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         this.resourcesCount = resourcesCount;
     }
 
+
     /**
      * get 产品线
      *
@@ -325,6 +337,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get tagResource
@@ -344,6 +357,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         this.tagResource = tagResource;
     }
 
+
     /**
      * get 日志类型名称
      *
@@ -361,6 +375,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
     public void setTemplateName(String templateName) {
         this.templateName = templateName;
     }
+
 
     /**
      * get 日志类型
@@ -381,6 +396,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set UID
      *
@@ -391,15 +407,17 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 高可用组资源multi
-     *
-     * @param agResource
-     */
+    * set 高可用组资源multi
+    *
+    * @param agResource
+    */
     public CollectInfoDetailEnd agResource(List<AgResourceEnd> agResource) {
         this.agResource = agResource;
         return this;
     }
+
 
     /**
      * set 日志来源
@@ -411,6 +429,18 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set binlog规格
+     *
+     * @param binlogSpec
+     */
+    public CollectInfoDetailEnd binlogSpec(Object binlogSpec) {
+        this.binlogSpec = binlogSpec;
+        return this;
+    }
+
+
     /**
      * set detail
      *
@@ -420,6 +450,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         this.detail = detail;
         return this;
     }
+
 
     /**
      * set enabled
@@ -431,35 +462,28 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;
+     * set k8s规格
      *
-     * @param logCustomTarget
+     * @param k8sSpec
      */
-    public CollectInfoDetailEnd logCustomTarget(String logCustomTarget) {
-        this.logCustomTarget = logCustomTarget;
+    public CollectInfoDetailEnd k8sSpec(Object k8sSpec) {
+        this.k8sSpec = k8sSpec;
         return this;
     }
 
+
     /**
-     * set 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
+     * set 采集配置名称
      *
-     * @param logCustomTargetConf
+     * @param name
      */
-    public CollectInfoDetailEnd logCustomTargetConf(Object logCustomTargetConf) {
-        this.logCustomTargetConf = logCustomTargetConf;
+    public CollectInfoDetailEnd name(String name) {
+        this.name = name;
         return this;
     }
 
-    /**
-     * set 目的地是否是日志服务logtopic，只支持业务应用日志。默认是
-     *
-     * @param logtopicEnabled
-     */
-    public CollectInfoDetailEnd logtopicEnabled(Boolean logtopicEnabled) {
-        this.logtopicEnabled = logtopicEnabled;
-        return this;
-    }
 
     /**
      * set 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
@@ -471,6 +495,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 采集实例类型, 只能是 all/part
      *
@@ -480,6 +505,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         this.resourceType = resourceType;
         return this;
     }
+
 
     /**
      * set 采集实例数量
@@ -491,6 +517,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品线
      *
@@ -500,6 +527,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set tagResource
@@ -511,6 +539,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志类型名称
      *
@@ -521,6 +550,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志类型
      *
@@ -530,6 +560,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         this.templateUID = templateUID;
         return this;
     }
+
 
 
     /**
@@ -543,5 +574,4 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         }
         this.agResource.add(agResource);
     }
-
 }

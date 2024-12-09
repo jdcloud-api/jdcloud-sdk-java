@@ -59,6 +59,7 @@ public class DescribeCollectResourcesRequest extends JdcloudRequest implements j
     private String collectInfoUID;
 
 
+
     /**
      * get 当前所在页，默认为1
      *
@@ -76,6 +77,7 @@ public class DescribeCollectResourcesRequest extends JdcloudRequest implements j
     public void setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 页面大小，默认为20；取值范围[1, 100]
@@ -95,6 +97,7 @@ public class DescribeCollectResourcesRequest extends JdcloudRequest implements j
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 地域 Id
      *
@@ -112,6 +115,7 @@ public class DescribeCollectResourcesRequest extends JdcloudRequest implements j
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 采集配置 UID
@@ -132,6 +136,7 @@ public class DescribeCollectResourcesRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set 当前所在页，默认为1
      *
@@ -141,6 +146,7 @@ public class DescribeCollectResourcesRequest extends JdcloudRequest implements j
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 页面大小，默认为20；取值范围[1, 100]
@@ -152,6 +158,7 @@ public class DescribeCollectResourcesRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 地域 Id
      *
@@ -161,6 +168,7 @@ public class DescribeCollectResourcesRequest extends JdcloudRequest implements j
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 采集配置 UID

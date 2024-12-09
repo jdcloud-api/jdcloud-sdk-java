@@ -73,6 +73,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
     private String updateTime;
 
 
+
     /**
      * get UID
      *
@@ -90,6 +91,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
     public void setUID(String uID) {
         this.uID = uID;
     }
+
 
     /**
      * get create user
@@ -109,6 +111,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
         this.createErp = createErp;
     }
 
+
     /**
      * get create date
      *
@@ -126,6 +129,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 是否启用
@@ -145,6 +149,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
         this.enabled = enabled;
     }
 
+
     /**
      * get 模板名称
      *
@@ -162,6 +167,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get serviceCode
@@ -181,6 +187,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get update user
      *
@@ -198,6 +205,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
     public void setUpdateErp(String updateErp) {
         this.updateErp = updateErp;
     }
+
 
     /**
      * get update date
@@ -218,6 +226,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set UID
      *
@@ -227,6 +236,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
         this.uID = uID;
         return this;
     }
+
 
     /**
      * set create user
@@ -238,6 +248,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set create date
      *
@@ -247,6 +258,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 是否启用
@@ -258,6 +270,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 模板名称
      *
@@ -267,6 +280,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set serviceCode
@@ -278,6 +292,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set update user
      *
@@ -287,6 +302,7 @@ public class SysTemplateEnd  implements java.io.Serializable {
         this.updateErp = updateErp;
         return this;
     }
+
 
     /**
      * set update date

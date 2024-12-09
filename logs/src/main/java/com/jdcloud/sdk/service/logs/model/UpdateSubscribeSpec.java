@@ -38,6 +38,7 @@ public class UpdateSubscribeSpec  implements java.io.Serializable {
     private Long status;
 
 
+
     /**
      * get 日志订阅状态，0表示未创建，1表示刚创建，2表示开启，3表示关闭
      *
@@ -55,6 +56,7 @@ public class UpdateSubscribeSpec  implements java.io.Serializable {
     public void setStatus(Long status) {
         this.status = status;
     }
+
 
 
     /**

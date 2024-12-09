@@ -35,11 +35,26 @@ public class UpdateLogtopicRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
+     * 日志主题名称
+     */
+    private String name;
+
+    /**
      * 日志主题描述
      * Required:true
      */
     @Required
     private String description;
+
+    /**
+     * 保存周期，只能是 7， 15， 30
+     */
+    private Long lifeCycle;
+
+    /**
+     * 保序
+     */
+    private Boolean inOrder;
 
     /**
      * 地域 Id
@@ -54,6 +69,26 @@ public class UpdateLogtopicRequest extends JdcloudRequest implements java.io.Ser
      */
     @Required
     private String logtopicUID;
+
+
+
+    /**
+     * get 日志主题名称
+     *
+     * @return
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * set 日志主题名称
+     *
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
 
     /**
@@ -74,6 +109,45 @@ public class UpdateLogtopicRequest extends JdcloudRequest implements java.io.Ser
         this.description = description;
     }
 
+
+    /**
+     * get 保存周期，只能是 7， 15， 30
+     *
+     * @return
+     */
+    public Long getLifeCycle() {
+        return lifeCycle;
+    }
+
+    /**
+     * set 保存周期，只能是 7， 15， 30
+     *
+     * @param lifeCycle
+     */
+    public void setLifeCycle(Long lifeCycle) {
+        this.lifeCycle = lifeCycle;
+    }
+
+
+    /**
+     * get 保序
+     *
+     * @return
+     */
+    public Boolean getInOrder() {
+        return inOrder;
+    }
+
+    /**
+     * set 保序
+     *
+     * @param inOrder
+     */
+    public void setInOrder(Boolean inOrder) {
+        this.inOrder = inOrder;
+    }
+
+
     /**
      * get 地域 Id
      *
@@ -91,6 +165,7 @@ public class UpdateLogtopicRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 日志主题 UID
@@ -111,6 +186,18 @@ public class UpdateLogtopicRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
+    /**
+     * set 日志主题名称
+     *
+     * @param name
+     */
+    public UpdateLogtopicRequest name(String name) {
+        this.name = name;
+        return this;
+    }
+
+
     /**
      * set 日志主题描述
      *
@@ -121,6 +208,29 @@ public class UpdateLogtopicRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
+    /**
+     * set 保存周期，只能是 7， 15， 30
+     *
+     * @param lifeCycle
+     */
+    public UpdateLogtopicRequest lifeCycle(Long lifeCycle) {
+        this.lifeCycle = lifeCycle;
+        return this;
+    }
+
+
+    /**
+     * set 保序
+     *
+     * @param inOrder
+     */
+    public UpdateLogtopicRequest inOrder(Boolean inOrder) {
+        this.inOrder = inOrder;
+        return this;
+    }
+
+
     /**
      * set 地域 Id
      *
@@ -130,6 +240,7 @@ public class UpdateLogtopicRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 日志主题 UID

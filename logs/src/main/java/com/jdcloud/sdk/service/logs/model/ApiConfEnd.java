@@ -57,13 +57,13 @@ public class ApiConfEnd  implements java.io.Serializable {
     /**
      * params
      */
+    
     private List<Pair> params;
-
     /**
      * reps
      */
+    
     private List<Pair> resp;
-
     /**
      * serviceCode
      */
@@ -78,6 +78,7 @@ public class ApiConfEnd  implements java.io.Serializable {
      * version: v1
      */
     private String version;
+
 
 
     /**
@@ -98,6 +99,7 @@ public class ApiConfEnd  implements java.io.Serializable {
         this.apiName = apiName;
     }
 
+
     /**
      * get apiType: 1-openapi,2-http
      *
@@ -115,6 +117,7 @@ public class ApiConfEnd  implements java.io.Serializable {
     public void setApiType(Long apiType) {
         this.apiType = apiType;
     }
+
 
     /**
      * get 记录id
@@ -134,6 +137,7 @@ public class ApiConfEnd  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get method: GET/POST ...
      *
@@ -152,41 +156,44 @@ public class ApiConfEnd  implements java.io.Serializable {
         this.method = method;
     }
 
+
     /**
-     * get params
-     *
-     * @return
-     */
+    * get params
+    *
+    * @return
+    */
     public List<Pair> getParams() {
         return params;
     }
 
     /**
-     * set params
-     *
-     * @param params
-     */
+    * set params
+    *
+    * @param params
+    */
     public void setParams(List<Pair> params) {
         this.params = params;
     }
 
+
     /**
-     * get reps
-     *
-     * @return
-     */
+    * get reps
+    *
+    * @return
+    */
     public List<Pair> getResp() {
         return resp;
     }
 
     /**
-     * set reps
-     *
-     * @param resp
-     */
+    * set reps
+    *
+    * @param resp
+    */
     public void setResp(List<Pair> resp) {
         this.resp = resp;
     }
+
 
     /**
      * get serviceCode
@@ -206,6 +213,7 @@ public class ApiConfEnd  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get url
      *
@@ -223,6 +231,7 @@ public class ApiConfEnd  implements java.io.Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get version: v1
@@ -243,6 +252,7 @@ public class ApiConfEnd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set api name
      *
@@ -252,6 +262,7 @@ public class ApiConfEnd  implements java.io.Serializable {
         this.apiName = apiName;
         return this;
     }
+
 
     /**
      * set apiType: 1-openapi,2-http
@@ -263,6 +274,7 @@ public class ApiConfEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 记录id
      *
@@ -272,6 +284,7 @@ public class ApiConfEnd  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set method: GET/POST ...
@@ -283,25 +296,28 @@ public class ApiConfEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set params
-     *
-     * @param params
-     */
+    * set params
+    *
+    * @param params
+    */
     public ApiConfEnd params(List<Pair> params) {
         this.params = params;
         return this;
     }
 
+
     /**
-     * set reps
-     *
-     * @param resp
-     */
+    * set reps
+    *
+    * @param resp
+    */
     public ApiConfEnd resp(List<Pair> resp) {
         this.resp = resp;
         return this;
     }
+
 
     /**
      * set serviceCode
@@ -313,6 +329,7 @@ public class ApiConfEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set url
      *
@@ -323,6 +340,7 @@ public class ApiConfEnd  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set version: v1
      *
@@ -332,6 +350,7 @@ public class ApiConfEnd  implements java.io.Serializable {
         this.version = version;
         return this;
     }
+
 
 
     /**
@@ -357,5 +376,4 @@ public class ApiConfEnd  implements java.io.Serializable {
         }
         this.resp.add(resp);
     }
-
 }

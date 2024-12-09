@@ -37,31 +37,33 @@ public class SimpleQuery  implements java.io.Serializable {
     /**
      * items
      */
+    
     private List<SimpleQueryItem> items;
-
     /**
      * opt
      */
     private String opt;
 
 
+
     /**
-     * get items
-     *
-     * @return
-     */
+    * get items
+    *
+    * @return
+    */
     public List<SimpleQueryItem> getItems() {
         return items;
     }
 
     /**
-     * set items
-     *
-     * @param items
-     */
+    * set items
+    *
+    * @param items
+    */
     public void setItems(List<SimpleQueryItem> items) {
         this.items = items;
     }
+
 
     /**
      * get opt
@@ -82,15 +84,17 @@ public class SimpleQuery  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set items
-     *
-     * @param items
-     */
+    * set items
+    *
+    * @param items
+    */
     public SimpleQuery items(List<SimpleQueryItem> items) {
         this.items = items;
         return this;
     }
+
 
     /**
      * set opt
@@ -101,6 +105,7 @@ public class SimpleQuery  implements java.io.Serializable {
         this.opt = opt;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class SimpleQuery  implements java.io.Serializable {
         }
         this.items.add(item);
     }
-
 }

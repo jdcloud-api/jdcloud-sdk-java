@@ -49,6 +49,7 @@ public class DescribeLogtopicRequest extends JdcloudRequest implements java.io.S
     private String logtopicUID;
 
 
+
     /**
      * get 地域 Id
      *
@@ -66,6 +67,7 @@ public class DescribeLogtopicRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 日志主题 UID
@@ -86,6 +88,7 @@ public class DescribeLogtopicRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 地域 Id
      *
@@ -95,6 +98,7 @@ public class DescribeLogtopicRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 日志主题 UID

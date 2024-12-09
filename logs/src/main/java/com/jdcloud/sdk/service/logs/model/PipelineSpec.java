@@ -63,6 +63,7 @@ public class PipelineSpec  implements java.io.Serializable {
     private String parserSample;
 
 
+
     /**
      * get 字段名称
      *
@@ -80,6 +81,7 @@ public class PipelineSpec  implements java.io.Serializable {
     public void setField(String field) {
         this.field = field;
     }
+
 
     /**
      * get 字段类型。 system, custom。 不填写默认为custom
@@ -99,6 +101,7 @@ public class PipelineSpec  implements java.io.Serializable {
         this.fieldType = fieldType;
     }
 
+
     /**
      * get 解析类型。目前仅支持 regexp。
      *
@@ -117,6 +120,7 @@ public class PipelineSpec  implements java.io.Serializable {
         this.parserMode = parserMode;
     }
 
+
     /**
      * get 解析语法
      *
@@ -134,6 +138,7 @@ public class PipelineSpec  implements java.io.Serializable {
     public void setParserPattern(String parserPattern) {
         this.parserPattern = parserPattern;
     }
+
 
     /**
      * get 日志样例
@@ -154,6 +159,7 @@ public class PipelineSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 字段名称
      *
@@ -163,6 +169,7 @@ public class PipelineSpec  implements java.io.Serializable {
         this.field = field;
         return this;
     }
+
 
     /**
      * set 字段类型。 system, custom。 不填写默认为custom
@@ -174,6 +181,7 @@ public class PipelineSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 解析类型。目前仅支持 regexp。
      *
@@ -184,6 +192,7 @@ public class PipelineSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 解析语法
      *
@@ -193,6 +202,7 @@ public class PipelineSpec  implements java.io.Serializable {
         this.parserPattern = parserPattern;
         return this;
     }
+
 
     /**
      * set 日志样例

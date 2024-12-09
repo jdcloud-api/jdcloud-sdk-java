@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * LogSearch APIs
- * 日志扫描接口
+ * 日志搜索接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -83,6 +83,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
     private String logtopicUID;
 
 
+
     /**
      * get &quot;preview&quot;表示预览, &quot;fulltext&quot;表示全文检索, &quot;advance&quot;表示按照搜索语句检索
      *
@@ -100,6 +101,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
     public void setAction(String action) {
         this.action = action;
     }
+
 
     /**
      * get Base64编码的搜索表达式,
@@ -119,6 +121,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
         this.expr = expr;
     }
 
+
     /**
      * get 搜索关键字大小写敏感， 默认false
      *
@@ -136,6 +139,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
     public void setCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
     }
+
 
     /**
      * get 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
@@ -155,6 +159,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
         this.startTime = startTime;
     }
 
+
     /**
      * get 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
      *
@@ -172,6 +177,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get 地域 Id
@@ -191,6 +197,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
         this.regionId = regionId;
     }
 
+
     /**
      * get 日志集ID
      *
@@ -208,6 +215,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
     public void setLogsetUID(String logsetUID) {
         this.logsetUID = logsetUID;
     }
+
 
     /**
      * get 日志主题ID
@@ -228,6 +236,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set &quot;preview&quot;表示预览, &quot;fulltext&quot;表示全文检索, &quot;advance&quot;表示按照搜索语句检索
      *
@@ -237,6 +246,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
         this.action = action;
         return this;
     }
+
 
     /**
      * set Base64编码的搜索表达式,
@@ -248,6 +258,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 搜索关键字大小写敏感， 默认false
      *
@@ -257,6 +268,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
         this.caseSensitive = caseSensitive;
         return this;
     }
+
 
     /**
      * set 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
@@ -268,6 +280,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
      *
@@ -277,6 +290,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set 地域 Id
@@ -288,6 +302,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 日志集ID
      *
@@ -297,6 +312,7 @@ public class HistogramsRequest extends JdcloudRequest implements java.io.Seriali
         this.logsetUID = logsetUID;
         return this;
     }
+
 
     /**
      * set 日志主题ID

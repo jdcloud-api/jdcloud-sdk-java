@@ -56,6 +56,7 @@ public class CreateSubscribeRequest extends JdcloudRequest implements java.io.Se
     private String logtopicUID;
 
 
+
     /**
      * get 地域 Id
      *
@@ -74,6 +75,7 @@ public class CreateSubscribeRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
     }
 
+
     /**
      * get 日志集 UID
      *
@@ -91,6 +93,7 @@ public class CreateSubscribeRequest extends JdcloudRequest implements java.io.Se
     public void setLogsetUID(String logsetUID) {
         this.logsetUID = logsetUID;
     }
+
 
     /**
      * get 日志主题 UID
@@ -111,6 +114,7 @@ public class CreateSubscribeRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 地域 Id
      *
@@ -121,6 +125,7 @@ public class CreateSubscribeRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 日志集 UID
      *
@@ -130,6 +135,7 @@ public class CreateSubscribeRequest extends JdcloudRequest implements java.io.Se
         this.logsetUID = logsetUID;
         return this;
     }
+
 
     /**
      * set 日志主题 UID
