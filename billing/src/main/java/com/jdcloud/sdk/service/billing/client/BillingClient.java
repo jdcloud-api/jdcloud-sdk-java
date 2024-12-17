@@ -37,18 +37,27 @@ import com.jdcloud.sdk.service.billing.client.DescribeFormulaSummaryListExecutor
 import com.jdcloud.sdk.service.billing.model.CalculateTotalPriceRequest;
 import com.jdcloud.sdk.service.billing.model.CalculateTotalPriceResponse;
 import com.jdcloud.sdk.service.billing.client.CalculateTotalPriceExecutor;
-import com.jdcloud.sdk.service.billing.model.DescribeBillDetailsRequest;
-import com.jdcloud.sdk.service.billing.model.DescribeBillDetailsResponse;
-import com.jdcloud.sdk.service.billing.client.DescribeBillDetailsExecutor;
 import com.jdcloud.sdk.service.billing.model.QueryBillSummaryRequest;
 import com.jdcloud.sdk.service.billing.model.QueryBillSummaryResponse;
 import com.jdcloud.sdk.service.billing.client.QueryBillSummaryExecutor;
-import com.jdcloud.sdk.service.billing.model.QueryBillDetailRequest;
-import com.jdcloud.sdk.service.billing.model.QueryBillDetailResponse;
-import com.jdcloud.sdk.service.billing.client.QueryBillDetailExecutor;
 import com.jdcloud.sdk.service.billing.model.DescribeBillSummarysRequest;
 import com.jdcloud.sdk.service.billing.model.DescribeBillSummarysResponse;
 import com.jdcloud.sdk.service.billing.client.DescribeBillSummarysExecutor;
+import com.jdcloud.sdk.service.billing.model.QuerySplitItemDaySummaryRequest;
+import com.jdcloud.sdk.service.billing.model.QuerySplitItemDaySummaryResponse;
+import com.jdcloud.sdk.service.billing.client.QuerySplitItemDaySummaryExecutor;
+import com.jdcloud.sdk.service.billing.model.QuerySplitItemMonthSummaryRequest;
+import com.jdcloud.sdk.service.billing.model.QuerySplitItemMonthSummaryResponse;
+import com.jdcloud.sdk.service.billing.client.QuerySplitItemMonthSummaryExecutor;
+import com.jdcloud.sdk.service.billing.model.DescribeBillDetailsRequest;
+import com.jdcloud.sdk.service.billing.model.DescribeBillDetailsResponse;
+import com.jdcloud.sdk.service.billing.client.DescribeBillDetailsExecutor;
+import com.jdcloud.sdk.service.billing.model.QueryBillDetailRequest;
+import com.jdcloud.sdk.service.billing.model.QueryBillDetailResponse;
+import com.jdcloud.sdk.service.billing.client.QueryBillDetailExecutor;
+import com.jdcloud.sdk.service.billing.model.QueryBillDaySummaryRequest;
+import com.jdcloud.sdk.service.billing.model.QueryBillDaySummaryResponse;
+import com.jdcloud.sdk.service.billing.client.QueryBillDaySummaryExecutor;
 
 /**
  * billingClient
@@ -122,17 +131,6 @@ public class BillingClient extends JdcloudClient {
     }
 
     /**
-     * 查询账单明细数据V2版本
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeBillDetailsResponse describeBillDetails(DescribeBillDetailsRequest request) throws JdcloudSdkException {
-        return new DescribeBillDetailsExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询账单资源汇总数据
      *
      * @param request
@@ -141,6 +139,50 @@ public class BillingClient extends JdcloudClient {
      */
     public QueryBillSummaryResponse queryBillSummary(QueryBillSummaryRequest request) throws JdcloudSdkException {
         return new QueryBillSummaryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询账单资源汇总数据V2版本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBillSummarysResponse describeBillSummarys(DescribeBillSummarysRequest request) throws JdcloudSdkException {
+        return new DescribeBillSummarysExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询分账账单天汇总数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QuerySplitItemDaySummaryResponse querySplitItemDaySummary(QuerySplitItemDaySummaryRequest request) throws JdcloudSdkException {
+        return new QuerySplitItemDaySummaryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询分账账单月汇总数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QuerySplitItemMonthSummaryResponse querySplitItemMonthSummary(QuerySplitItemMonthSummaryRequest request) throws JdcloudSdkException {
+        return new QuerySplitItemMonthSummaryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询账单明细数据V2版本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBillDetailsResponse describeBillDetails(DescribeBillDetailsRequest request) throws JdcloudSdkException {
+        return new DescribeBillDetailsExecutor().client(this).execute(request);
     }
 
     /**
@@ -155,14 +197,14 @@ public class BillingClient extends JdcloudClient {
     }
 
     /**
-     * 查询账单资源汇总数据V2版本
+     * 查询账单资源天汇总数据
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeBillSummarysResponse describeBillSummarys(DescribeBillSummarysRequest request) throws JdcloudSdkException {
-        return new DescribeBillSummarysExecutor().client(this).execute(request);
+    public QueryBillDaySummaryResponse queryBillDaySummary(QueryBillDaySummaryRequest request) throws JdcloudSdkException {
+        return new QueryBillDaySummaryExecutor().client(this).execute(request);
     }
 
 

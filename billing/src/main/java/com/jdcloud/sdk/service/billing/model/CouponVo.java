@@ -34,21 +34,21 @@ public class CouponVo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 代金券编号
+     * 券编号
      * Required:true
      */
     @Required
     private String couponNumber;
 
     /**
-     * 代金券支付金额
+     * 支付金额
      * Required:true
      */
     @Required
     private Number fee;
 
     /**
-     * 代金券支付方式 0、免费代金券 1、付费代金券
+     * 支付方式 0、免费代金券 1、付费代金券
      * Required:true
      */
     @Required
@@ -57,7 +57,7 @@ public class CouponVo  implements java.io.Serializable {
 
 
     /**
-     * get 代金券编号
+     * get 券编号
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class CouponVo  implements java.io.Serializable {
     }
 
     /**
-     * set 代金券编号
+     * set 券编号
      *
      * @param couponNumber
      */
@@ -76,7 +76,7 @@ public class CouponVo  implements java.io.Serializable {
 
 
     /**
-     * get 代金券支付金额
+     * get 支付金额
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class CouponVo  implements java.io.Serializable {
     }
 
     /**
-     * set 代金券支付金额
+     * set 支付金额
      *
      * @param fee
      */
@@ -95,7 +95,7 @@ public class CouponVo  implements java.io.Serializable {
 
 
     /**
-     * get 代金券支付方式 0、免费代金券 1、付费代金券
+     * get 支付方式 0、免费代金券 1、付费代金券
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class CouponVo  implements java.io.Serializable {
     }
 
     /**
-     * set 代金券支付方式 0、免费代金券 1、付费代金券
+     * set 支付方式 0、免费代金券 1、付费代金券
      *
      * @param payType
      */
@@ -115,7 +115,7 @@ public class CouponVo  implements java.io.Serializable {
 
 
     /**
-     * set 代金券编号
+     * set 券编号
      *
      * @param couponNumber
      */
@@ -126,7 +126,7 @@ public class CouponVo  implements java.io.Serializable {
 
 
     /**
-     * set 代金券支付金额
+     * set 支付金额
      *
      * @param fee
      */
@@ -137,7 +137,7 @@ public class CouponVo  implements java.io.Serializable {
 
 
     /**
-     * set 代金券支付方式 0、免费代金券 1、付费代金券
+     * set 支付方式 0、免费代金券 1、付费代金券
      *
      * @param payType
      */
