@@ -78,6 +78,11 @@ public class PodSpec  implements java.io.Serializable {
     private String az;
 
     /**
+     * 高可用组ID, 指定该参数后，将使用高可用组关联的实例模板创建实例。
+     */
+    private String agId;
+
+    /**
      * pod内容器的/etc/resolv.conf配置
      */
     private DnsConfigSpec dnsConfig;
@@ -278,6 +283,25 @@ public class PodSpec  implements java.io.Serializable {
      */
     public void setAz(String az) {
         this.az = az;
+    }
+
+
+    /**
+     * get 高可用组ID, 指定该参数后，将使用高可用组关联的实例模板创建实例。
+     *
+     * @return
+     */
+    public String getAgId() {
+        return agId;
+    }
+
+    /**
+     * set 高可用组ID, 指定该参数后，将使用高可用组关联的实例模板创建实例。
+     *
+     * @param agId
+     */
+    public void setAgId(String agId) {
+        this.agId = agId;
     }
 
 
@@ -602,6 +626,17 @@ public class PodSpec  implements java.io.Serializable {
      */
     public PodSpec az(String az) {
         this.az = az;
+        return this;
+    }
+
+
+    /**
+     * set 高可用组ID, 指定该参数后，将使用高可用组关联的实例模板创建实例。
+     *
+     * @param agId
+     */
+    public PodSpec agId(String agId) {
+        this.agId = agId;
         return this;
     }
 

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * ContainerSpec
- * 容器规格
+ * PodTemplate
+ * Pod模板相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,31 +24,28 @@
 
 package com.jdcloud.sdk.service.pod.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 容器环境变量。
+ * Pod模板存储详情
  */
-public class EnvSpec  implements java.io.Serializable {
+public class PodTemplateVolume  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
-     * Required:true
+     * volume名称
      */
-    @Required
     private String name;
 
     /**
-     * 环境变量取值。范围：[0-1024]
+     * 云盘配置。
      */
-    private String value;
+    private PodTemplateCloudDisk jdcloudDisk;
 
 
 
     /**
-     * get 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
+     * get volume名称
      *
      * @return
      */
@@ -57,7 +54,7 @@ public class EnvSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
+     * set volume名称
      *
      * @param name
      */
@@ -67,43 +64,43 @@ public class EnvSpec  implements java.io.Serializable {
 
 
     /**
-     * get 环境变量取值。范围：[0-1024]
+     * get 云盘配置。
      *
      * @return
      */
-    public String getValue() {
-        return value;
+    public PodTemplateCloudDisk getJdcloudDisk() {
+        return jdcloudDisk;
     }
 
     /**
-     * set 环境变量取值。范围：[0-1024]
+     * set 云盘配置。
      *
-     * @param value
+     * @param jdcloudDisk
      */
-    public void setValue(String value) {
-        this.value = value;
+    public void setJdcloudDisk(PodTemplateCloudDisk jdcloudDisk) {
+        this.jdcloudDisk = jdcloudDisk;
     }
 
 
 
     /**
-     * set 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
+     * set volume名称
      *
      * @param name
      */
-    public EnvSpec name(String name) {
+    public PodTemplateVolume name(String name) {
         this.name = name;
         return this;
     }
 
 
     /**
-     * set 环境变量取值。范围：[0-1024]
+     * set 云盘配置。
      *
-     * @param value
+     * @param jdcloudDisk
      */
-    public EnvSpec value(String value) {
-        this.value = value;
+    public PodTemplateVolume jdcloudDisk(PodTemplateCloudDisk jdcloudDisk) {
+        this.jdcloudDisk = jdcloudDisk;
         return this;
     }
 

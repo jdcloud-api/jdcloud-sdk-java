@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 配额
- * 可用组配额相关接口
+ * Pod
+ * Pod 相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,13 +26,14 @@ package com.jdcloud.sdk.service.pod.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.pod.model.DescribeQuotaResponse;
+import com.jdcloud.sdk.service.pod.model.DescribePodsStatusResponse;
 
 /**
- * 查询资源的配额，支持：原生容器,pod,secret,镜像缓存,Pod模板
+ * 批量查询 pod 的状态信息&lt;br&gt;
+此接口支持分页查询，默认每页20条。
 
  */
-class DescribeQuotaExecutor extends JdcloudExecutor {
+class DescribePodsStatusExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -41,11 +42,11 @@ class DescribeQuotaExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/quotas";
+        return "/regions/{regionId}/podsStatus";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return DescribeQuotaResponse.class;
+        return DescribePodsStatusResponse.class;
     }
 }

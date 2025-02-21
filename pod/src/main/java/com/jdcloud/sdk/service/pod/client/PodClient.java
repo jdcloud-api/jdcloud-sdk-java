@@ -52,6 +52,12 @@ import com.jdcloud.sdk.service.pod.client.DescribeSecretExecutor;
 import com.jdcloud.sdk.service.pod.model.DisassociateElasticIpRequest;
 import com.jdcloud.sdk.service.pod.model.DisassociateElasticIpResponse;
 import com.jdcloud.sdk.service.pod.client.DisassociateElasticIpExecutor;
+import com.jdcloud.sdk.service.pod.model.DescribePodTemplateRequest;
+import com.jdcloud.sdk.service.pod.model.DescribePodTemplateResponse;
+import com.jdcloud.sdk.service.pod.client.DescribePodTemplateExecutor;
+import com.jdcloud.sdk.service.pod.model.UpdatePodTemplateRequest;
+import com.jdcloud.sdk.service.pod.model.UpdatePodTemplateResponse;
+import com.jdcloud.sdk.service.pod.client.UpdatePodTemplateExecutor;
 import com.jdcloud.sdk.service.pod.model.CreateConfigFileRequest;
 import com.jdcloud.sdk.service.pod.model.CreateConfigFileResponse;
 import com.jdcloud.sdk.service.pod.client.CreateConfigFileExecutor;
@@ -73,6 +79,9 @@ import com.jdcloud.sdk.service.pod.client.AttachExecutor;
 import com.jdcloud.sdk.service.pod.model.ExecStartRequest;
 import com.jdcloud.sdk.service.pod.model.ExecStartResponse;
 import com.jdcloud.sdk.service.pod.client.ExecStartExecutor;
+import com.jdcloud.sdk.service.pod.model.VerifyPodTemplateRequest;
+import com.jdcloud.sdk.service.pod.model.VerifyPodTemplateResponse;
+import com.jdcloud.sdk.service.pod.client.VerifyPodTemplateExecutor;
 import com.jdcloud.sdk.service.pod.model.StartPodRequest;
 import com.jdcloud.sdk.service.pod.model.StartPodResponse;
 import com.jdcloud.sdk.service.pod.client.StartPodExecutor;
@@ -97,18 +106,30 @@ import com.jdcloud.sdk.service.pod.client.DeleteConfigFileExecutor;
 import com.jdcloud.sdk.service.pod.model.CreateImageCacheRequest;
 import com.jdcloud.sdk.service.pod.model.CreateImageCacheResponse;
 import com.jdcloud.sdk.service.pod.client.CreateImageCacheExecutor;
+import com.jdcloud.sdk.service.pod.model.DeletePodTemplateRequest;
+import com.jdcloud.sdk.service.pod.model.DeletePodTemplateResponse;
+import com.jdcloud.sdk.service.pod.client.DeletePodTemplateExecutor;
 import com.jdcloud.sdk.service.pod.model.CreateImageCachesRequest;
 import com.jdcloud.sdk.service.pod.model.CreateImageCachesResponse;
 import com.jdcloud.sdk.service.pod.client.CreateImageCachesExecutor;
+import com.jdcloud.sdk.service.pod.model.DescribePodTemplatesRequest;
+import com.jdcloud.sdk.service.pod.model.DescribePodTemplatesResponse;
+import com.jdcloud.sdk.service.pod.client.DescribePodTemplatesExecutor;
 import com.jdcloud.sdk.service.pod.model.UpdateConfigFileRequest;
 import com.jdcloud.sdk.service.pod.model.UpdateConfigFileResponse;
 import com.jdcloud.sdk.service.pod.client.UpdateConfigFileExecutor;
+import com.jdcloud.sdk.service.pod.model.DescribePodsStatusRequest;
+import com.jdcloud.sdk.service.pod.model.DescribePodsStatusResponse;
+import com.jdcloud.sdk.service.pod.client.DescribePodsStatusExecutor;
 import com.jdcloud.sdk.service.pod.model.GetContainerLogsRequest;
 import com.jdcloud.sdk.service.pod.model.GetContainerLogsResponse;
 import com.jdcloud.sdk.service.pod.client.GetContainerLogsExecutor;
 import com.jdcloud.sdk.service.pod.model.DescribeInstanceTypesRequest;
 import com.jdcloud.sdk.service.pod.model.DescribeInstanceTypesResponse;
 import com.jdcloud.sdk.service.pod.client.DescribeInstanceTypesExecutor;
+import com.jdcloud.sdk.service.pod.model.CreatePodTemplateRequest;
+import com.jdcloud.sdk.service.pod.model.CreatePodTemplateResponse;
+import com.jdcloud.sdk.service.pod.client.CreatePodTemplateExecutor;
 import com.jdcloud.sdk.service.pod.model.ModifyPodAttributeRequest;
 import com.jdcloud.sdk.service.pod.model.ModifyPodAttributeResponse;
 import com.jdcloud.sdk.service.pod.client.ModifyPodAttributeExecutor;
@@ -190,7 +211,7 @@ public class PodClient extends JdcloudClient {
 
 
     /**
-     * 查询资源的配额，支持：原生容器,pod,secret,镜像缓存
+     * 查询资源的配额，支持：原生容器,pod,secret,镜像缓存,Pod模板
 
      *
      * @param request
@@ -274,6 +295,28 @@ public class PodClient extends JdcloudClient {
     }
 
     /**
+     * 查询Pod模板的详细信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribePodTemplateResponse describePodTemplate(DescribePodTemplateRequest request) throws JdcloudSdkException {
+        return new DescribePodTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改Pod模板的配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdatePodTemplateResponse updatePodTemplate(UpdatePodTemplateRequest request) throws JdcloudSdkException {
+        return new UpdatePodTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建一个 configFile，存放文件内容（键值对）。
 
      *
@@ -352,6 +395,21 @@ public class PodClient extends JdcloudClient {
      */
     public ExecStartResponse execStart(ExecStartRequest request) throws JdcloudSdkException {
         return new ExecStartExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 校验pod模板的有效性。
+
+## 接口说明
+- 调用该接口可以校验Pod模板是否有效，例如某些关联资源（如子网、镜像等）已经被删除了。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public VerifyPodTemplateResponse verifyPodTemplate(VerifyPodTemplateRequest request) throws JdcloudSdkException {
+        return new VerifyPodTemplateExecutor().client(this).execute(request);
     }
 
     /**
@@ -514,6 +572,17 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
     }
 
     /**
+     * 删除单个pod模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeletePodTemplateResponse deletePodTemplate(DeletePodTemplateRequest request) throws JdcloudSdkException {
+        return new DeletePodTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 批量创建镜像缓存。
 
      *
@@ -526,6 +595,17 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
     }
 
     /**
+     * 批量查询Pod模板。支持分页查询，默认每页20条。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribePodTemplatesResponse describePodTemplates(DescribePodTemplatesRequest request) throws JdcloudSdkException {
+        return new DescribePodTemplatesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 更新configFile信息
 
      *
@@ -535,6 +615,19 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
      */
     public UpdateConfigFileResponse updateConfigFile(UpdateConfigFileRequest request) throws JdcloudSdkException {
         return new UpdateConfigFileExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量查询 pod 的状态信息&lt;br&gt;
+此接口支持分页查询，默认每页20条。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribePodsStatusResponse describePodsStatus(DescribePodsStatusRequest request) throws JdcloudSdkException {
+        return new DescribePodsStatusExecutor().client(this).execute(request);
     }
 
     /**
@@ -559,6 +652,17 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
      */
     public DescribeInstanceTypesResponse describeInstanceTypes(DescribeInstanceTypesRequest request) throws JdcloudSdkException {
         return new DescribeInstanceTypesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建Pod模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreatePodTemplateResponse createPodTemplate(CreatePodTemplateRequest request) throws JdcloudSdkException {
+        return new CreatePodTemplateExecutor().client(this).execute(request);
     }
 
     /**

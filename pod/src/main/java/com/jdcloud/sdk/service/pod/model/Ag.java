@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * ContainerSpec
- * 容器规格
+ * Ag
+ * Pod模板Ag相关数据
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,31 +24,28 @@
 
 package com.jdcloud.sdk.service.pod.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 容器环境变量。
+ * ag
  */
-public class EnvSpec  implements java.io.Serializable {
+public class Ag  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
-     * Required:true
+     * 高可用组名称。
      */
-    @Required
     private String name;
 
     /**
-     * 环境变量取值。范围：[0-1024]
+     * 高可用组 ID
      */
-    private String value;
+    private String id;
 
 
 
     /**
-     * get 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
+     * get 高可用组名称。
      *
      * @return
      */
@@ -57,7 +54,7 @@ public class EnvSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
+     * set 高可用组名称。
      *
      * @param name
      */
@@ -67,43 +64,43 @@ public class EnvSpec  implements java.io.Serializable {
 
 
     /**
-     * get 环境变量取值。范围：[0-1024]
+     * get 高可用组 ID
      *
      * @return
      */
-    public String getValue() {
-        return value;
+    public String getId() {
+        return id;
     }
 
     /**
-     * set 环境变量取值。范围：[0-1024]
+     * set 高可用组 ID
      *
-     * @param value
+     * @param id
      */
-    public void setValue(String value) {
-        this.value = value;
+    public void setId(String id) {
+        this.id = id;
     }
 
 
 
     /**
-     * set 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
+     * set 高可用组名称。
      *
      * @param name
      */
-    public EnvSpec name(String name) {
+    public Ag name(String name) {
         this.name = name;
         return this;
     }
 
 
     /**
-     * set 环境变量取值。范围：[0-1024]
+     * set 高可用组 ID
      *
-     * @param value
+     * @param id
      */
-    public EnvSpec value(String value) {
-        this.value = value;
+    public Ag id(String id) {
+        this.id = id;
         return this;
     }
 

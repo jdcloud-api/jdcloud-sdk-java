@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * ContainerSpec
- * 容器规格
+ * PodTemplate
+ * Pod模板相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,51 +24,49 @@
 
 package com.jdcloud.sdk.service.pod.model;
 
-import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * tcpSocketSpec
+ * 创建Pod模板
  */
-public class TcpSocketSpec  implements java.io.Serializable {
+public class CreatePodTemplateResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 端口号，范围：[1-65535]
-     * Required:true
+     * Pod模板ID。
      */
-    @Required
-    private Integer port;
+    private String podTemplateId;
 
 
 
     /**
-     * get 端口号，范围：[1-65535]
+     * get Pod模板ID。
      *
      * @return
      */
-    public Integer getPort() {
-        return port;
+    public String getPodTemplateId() {
+        return podTemplateId;
     }
 
     /**
-     * set 端口号，范围：[1-65535]
+     * set Pod模板ID。
      *
-     * @param port
+     * @param podTemplateId
      */
-    public void setPort(Integer port) {
-        this.port = port;
+    public void setPodTemplateId(String podTemplateId) {
+        this.podTemplateId = podTemplateId;
     }
 
 
 
     /**
-     * set 端口号，范围：[1-65535]
+     * set Pod模板ID。
      *
-     * @param port
+     * @param podTemplateId
      */
-    public TcpSocketSpec port(Integer port) {
-        this.port = port;
+    public CreatePodTemplateResult podTemplateId(String podTemplateId) {
+        this.podTemplateId = podTemplateId;
         return this;
     }
 
