@@ -34,7 +34,7 @@ public class PodDnsConfigOptionSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 长度范围：[1-63]，需满足linux resolver限制
+     * 长度范围：[1-63]，需满足linux resolver限制。可选值：&#x60;debug&#x60;,&#x60;rotate&#x60;,&#x60;no-check-names&#x60;,&#x60;inet6&#x60;,&#x60;ip6-bytestring&#x60;,&#x60;ip6-dotint&#x60;,&#x60;no-ip6-dotint&#x60;,&#x60;edns0&#x60;,&#x60;single-request&#x60;,&#x60;single-request-reopen&#x60;,&#x60;no-tld-query&#x60;,&#x60;use-vc&#x60;,&#x60;ndots&#x60;,&#x60;timeout&#x60;,&#x60;attempts&#x60;
      * Required:true
      */
     @Required
@@ -48,7 +48,7 @@ public class PodDnsConfigOptionSpec  implements java.io.Serializable {
 
 
     /**
-     * get 长度范围：[1-63]，需满足linux resolver限制
+     * get 长度范围：[1-63]，需满足linux resolver限制。可选值：&#x60;debug&#x60;,&#x60;rotate&#x60;,&#x60;no-check-names&#x60;,&#x60;inet6&#x60;,&#x60;ip6-bytestring&#x60;,&#x60;ip6-dotint&#x60;,&#x60;no-ip6-dotint&#x60;,&#x60;edns0&#x60;,&#x60;single-request&#x60;,&#x60;single-request-reopen&#x60;,&#x60;no-tld-query&#x60;,&#x60;use-vc&#x60;,&#x60;ndots&#x60;,&#x60;timeout&#x60;,&#x60;attempts&#x60;
      *
      * @return
      */
@@ -57,7 +57,7 @@ public class PodDnsConfigOptionSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 长度范围：[1-63]，需满足linux resolver限制
+     * set 长度范围：[1-63]，需满足linux resolver限制。可选值：&#x60;debug&#x60;,&#x60;rotate&#x60;,&#x60;no-check-names&#x60;,&#x60;inet6&#x60;,&#x60;ip6-bytestring&#x60;,&#x60;ip6-dotint&#x60;,&#x60;no-ip6-dotint&#x60;,&#x60;edns0&#x60;,&#x60;single-request&#x60;,&#x60;single-request-reopen&#x60;,&#x60;no-tld-query&#x60;,&#x60;use-vc&#x60;,&#x60;ndots&#x60;,&#x60;timeout&#x60;,&#x60;attempts&#x60;
      *
      * @param name
      */
@@ -87,7 +87,7 @@ public class PodDnsConfigOptionSpec  implements java.io.Serializable {
 
 
     /**
-     * set 长度范围：[1-63]，需满足linux resolver限制
+     * set 长度范围：[1-63]，需满足linux resolver限制。可选值：&#x60;debug&#x60;,&#x60;rotate&#x60;,&#x60;no-check-names&#x60;,&#x60;inet6&#x60;,&#x60;ip6-bytestring&#x60;,&#x60;ip6-dotint&#x60;,&#x60;no-ip6-dotint&#x60;,&#x60;edns0&#x60;,&#x60;single-request&#x60;,&#x60;single-request-reopen&#x60;,&#x60;no-tld-query&#x60;,&#x60;use-vc&#x60;,&#x60;ndots&#x60;,&#x60;timeout&#x60;,&#x60;attempts&#x60;
      *
      * @param name
      */

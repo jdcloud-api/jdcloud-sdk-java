@@ -27,16 +27,15 @@ package com.jdcloud.sdk.service.pod.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.common.model.Filter;
-import com.jdcloud.sdk.service.pod.model.TagFilter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 批量查询 pod 的详细信息&lt;br&gt;
+ * 批量查询 pod 的状态信息&lt;br&gt;
 此接口支持分页查询，默认每页20条。
 
  */
-public class DescribePodsRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribePodsStatusRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -46,7 +45,7 @@ public class DescribePodsRequest extends JdcloudRequest implements java.io.Seria
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认为20；取值范围[10, 100]
+     * 分页大小；默认为20；取值范围[10, 500]
      */
     private Integer pageSize;
 
@@ -63,11 +62,6 @@ agId - 高可用组ID，精确匹配，支持多个
      */
     
     private List<Filter> filters;
-    /**
-     * Tag筛选条件
-     */
-    
-    private List<TagFilter> tags;
     /**
      * Region ID
      * Required:true
@@ -97,7 +91,7 @@ agId - 高可用组ID，精确匹配，支持多个
 
 
     /**
-     * get 分页大小；默认为20；取值范围[10, 100]
+     * get 分页大小；默认为20；取值范围[10, 500]
      *
      * @return
      */
@@ -106,7 +100,7 @@ agId - 高可用组ID，精确匹配，支持多个
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小；默认为20；取值范围[10, 500]
      *
      * @param pageSize
      */
@@ -151,25 +145,6 @@ agId - 高可用组ID，精确匹配，支持多个
 
 
     /**
-    * get Tag筛选条件
-    *
-    * @return
-    */
-    public List<TagFilter> getTags() {
-        return tags;
-    }
-
-    /**
-    * set Tag筛选条件
-    *
-    * @param tags
-    */
-    public void setTags(List<TagFilter> tags) {
-        this.tags = tags;
-    }
-
-
-    /**
      * get Region ID
      *
      * @return
@@ -194,18 +169,18 @@ agId - 高可用组ID，精确匹配，支持多个
      *
      * @param pageNumber
      */
-    public DescribePodsRequest pageNumber(Integer pageNumber) {
+    public DescribePodsStatusRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小；默认为20；取值范围[10, 500]
      *
      * @param pageSize
      */
-    public DescribePodsRequest pageSize(Integer pageSize) {
+    public DescribePodsStatusRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -224,19 +199,8 @@ agId - 高可用组ID，精确匹配，支持多个
     *
     * @param filters
     */
-    public DescribePodsRequest filters(List<Filter> filters) {
+    public DescribePodsStatusRequest filters(List<Filter> filters) {
         this.filters = filters;
-        return this;
-    }
-
-
-    /**
-    * set Tag筛选条件
-    *
-    * @param tags
-    */
-    public DescribePodsRequest tags(List<TagFilter> tags) {
-        this.tags = tags;
         return this;
     }
 
@@ -246,7 +210,7 @@ agId - 高可用组ID，精确匹配，支持多个
      *
      * @param regionId
      */
-    public DescribePodsRequest regionId(String regionId) {
+    public DescribePodsStatusRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -271,17 +235,5 @@ agId - 高可用组ID，精确匹配，支持多个
             this.filters = new ArrayList<>();
         }
         this.filters.add(filter);
-    }
-
-    /**
-     * add item to Tag筛选条件
-     *
-     * @param tag
-     */
-    public void addTag(TagFilter tag) {
-        if (this.tags == null) {
-            this.tags = new ArrayList<>();
-        }
-        this.tags.add(tag);
     }
 }

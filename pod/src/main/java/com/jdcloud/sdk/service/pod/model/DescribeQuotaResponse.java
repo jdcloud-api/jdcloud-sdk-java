@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.pod.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询资源的配额，支持：原生容器,pod,secret,镜像缓存
+ * 查询资源的配额，支持：原生容器,pod,secret,镜像缓存,Pod模板
 
  */
 public class DescribeQuotaResponse extends JdcloudResponse<DescribeQuotaResult> implements java.io.Serializable {

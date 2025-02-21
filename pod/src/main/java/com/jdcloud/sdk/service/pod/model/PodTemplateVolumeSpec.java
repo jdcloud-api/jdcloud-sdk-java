@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * ContainerSpec
- * 容器规格
+ * PodTemplateSpec
+ * pod模板创建参数
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,28 +27,28 @@ package com.jdcloud.sdk.service.pod.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 容器环境变量。
+ * Pod模板存储规格
  */
-public class EnvSpec  implements java.io.Serializable {
+public class PodTemplateVolumeSpec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
+     * volume名字，符合DNS-1123 label规范，在一个Pod内唯一。
      * Required:true
      */
     @Required
     private String name;
 
     /**
-     * 环境变量取值。范围：[0-1024]
+     * 云盘配置。
      */
-    private String value;
+    private PodTemplateCloudDiskSpec jdcloudDisk;
 
 
 
     /**
-     * get 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
+     * get volume名字，符合DNS-1123 label规范，在一个Pod内唯一。
      *
      * @return
      */
@@ -57,7 +57,7 @@ public class EnvSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
+     * set volume名字，符合DNS-1123 label规范，在一个Pod内唯一。
      *
      * @param name
      */
@@ -67,43 +67,43 @@ public class EnvSpec  implements java.io.Serializable {
 
 
     /**
-     * get 环境变量取值。范围：[0-1024]
+     * get 云盘配置。
      *
      * @return
      */
-    public String getValue() {
-        return value;
+    public PodTemplateCloudDiskSpec getJdcloudDisk() {
+        return jdcloudDisk;
     }
 
     /**
-     * set 环境变量取值。范围：[0-1024]
+     * set 云盘配置。
      *
-     * @param value
+     * @param jdcloudDisk
      */
-    public void setValue(String value) {
-        this.value = value;
+    public void setJdcloudDisk(PodTemplateCloudDiskSpec jdcloudDisk) {
+        this.jdcloudDisk = jdcloudDisk;
     }
 
 
 
     /**
-     * set 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
+     * set volume名字，符合DNS-1123 label规范，在一个Pod内唯一。
      *
      * @param name
      */
-    public EnvSpec name(String name) {
+    public PodTemplateVolumeSpec name(String name) {
         this.name = name;
         return this;
     }
 
 
     /**
-     * set 环境变量取值。范围：[0-1024]
+     * set 云盘配置。
      *
-     * @param value
+     * @param jdcloudDisk
      */
-    public EnvSpec value(String value) {
-        this.value = value;
+    public PodTemplateVolumeSpec jdcloudDisk(PodTemplateCloudDiskSpec jdcloudDisk) {
+        this.jdcloudDisk = jdcloudDisk;
         return this;
     }
 

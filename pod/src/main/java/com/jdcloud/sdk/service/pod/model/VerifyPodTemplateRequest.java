@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * ContainerSpec
- * 容器规格
+ * PodTemplate
+ * Pod模板相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -25,87 +25,92 @@
 package com.jdcloud.sdk.service.pod.model;
 
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * httpHeaderSpec
+ * 校验pod模板的有效性。
+
+## 接口说明
+- 调用该接口可以校验Pod模板是否有效，例如某些关联资源（如子网、镜像等）已经被删除了。
+
  */
-public class HhSpec  implements java.io.Serializable {
+public class VerifyPodTemplateRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * http header 键，需满足http的规则。长度范围:[1-64]
+     * Region ID
      * Required:true
      */
     @Required
-    private String name;
+    private String regionId;
 
     /**
-     * http header 值
+     * Pod模板ID
      * Required:true
      */
     @Required
-    private String value;
+    private String podTemplateId;
 
 
 
     /**
-     * get http header 键，需满足http的规则。长度范围:[1-64]
+     * get Region ID
      *
      * @return
      */
-    public String getName() {
-        return name;
+    public String getRegionId() {
+        return regionId;
     }
 
     /**
-     * set http header 键，需满足http的规则。长度范围:[1-64]
+     * set Region ID
      *
-     * @param name
+     * @param regionId
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setRegionId(String regionId) {
+        this.regionId = regionId;
     }
 
 
     /**
-     * get http header 值
+     * get Pod模板ID
      *
      * @return
      */
-    public String getValue() {
-        return value;
+    public String getPodTemplateId() {
+        return podTemplateId;
     }
 
     /**
-     * set http header 值
+     * set Pod模板ID
      *
-     * @param value
+     * @param podTemplateId
      */
-    public void setValue(String value) {
-        this.value = value;
+    public void setPodTemplateId(String podTemplateId) {
+        this.podTemplateId = podTemplateId;
     }
 
 
 
     /**
-     * set http header 键，需满足http的规则。长度范围:[1-64]
+     * set Region ID
      *
-     * @param name
+     * @param regionId
      */
-    public HhSpec name(String name) {
-        this.name = name;
+    public VerifyPodTemplateRequest regionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
 
 
     /**
-     * set http header 值
+     * set Pod模板ID
      *
-     * @param value
+     * @param podTemplateId
      */
-    public HhSpec value(String value) {
-        this.value = value;
+    public VerifyPodTemplateRequest podTemplateId(String podTemplateId) {
+        this.podTemplateId = podTemplateId;
         return this;
     }
 

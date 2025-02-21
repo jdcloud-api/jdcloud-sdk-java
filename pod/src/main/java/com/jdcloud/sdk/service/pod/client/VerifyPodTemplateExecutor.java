@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 配额
- * 可用组配额相关接口
+ * PodTemplate
+ * Pod模板相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,13 +26,16 @@ package com.jdcloud.sdk.service.pod.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.pod.model.DescribeQuotaResponse;
+import com.jdcloud.sdk.service.pod.model.VerifyPodTemplateResponse;
 
 /**
- * 查询资源的配额，支持：原生容器,pod,secret,镜像缓存,Pod模板
+ * 校验pod模板的有效性。
+
+## 接口说明
+- 调用该接口可以校验Pod模板是否有效，例如某些关联资源（如子网、镜像等）已经被删除了。
 
  */
-class DescribeQuotaExecutor extends JdcloudExecutor {
+class VerifyPodTemplateExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -41,11 +44,11 @@ class DescribeQuotaExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/quotas";
+        return "/regions/{regionId}/podTemplates/{podTemplateId}:verify";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return DescribeQuotaResponse.class;
+        return VerifyPodTemplateResponse.class;
     }
 }

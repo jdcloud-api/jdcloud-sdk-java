@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * ContainerSpec
- * 容器规格
+ * PodTemplateContainerSpec
+ * Pod模板容器配置
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -31,7 +31,7 @@ import com.jdcloud.sdk.annotation.Required;
 /**
  * 容器规格
  */
-public class ContainerSpec  implements java.io.Serializable {
+public class PodTemplateContainerSpec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -61,7 +61,7 @@ public class ContainerSpec  implements java.io.Serializable {
      * 镜像名称 &lt;/br&gt;
 容器镜像名字。 nginx:latest。长度范围：[1-639]
 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 
-2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 
+2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt;
 
      */
     private String image;
@@ -106,7 +106,7 @@ public class ContainerSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
-    private CloudDiskSpec systemDisk;
+    private PodTemplateCloudDiskSpec systemDisk;
 
     /**
      * 云盘挂载信息
@@ -195,7 +195,7 @@ public class ContainerSpec  implements java.io.Serializable {
      * get 镜像名称 &lt;/br&gt;
 容器镜像名字。 nginx:latest。长度范围：[1-639]
 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 
-2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 
+2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt;
 
      *
      * @return
@@ -208,7 +208,7 @@ public class ContainerSpec  implements java.io.Serializable {
      * set 镜像名称 &lt;/br&gt;
 容器镜像名字。 nginx:latest。长度范围：[1-639]
 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 
-2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 
+2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt;
 
      *
      * @param image
@@ -356,7 +356,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public CloudDiskSpec getSystemDisk() {
+    public PodTemplateCloudDiskSpec getSystemDisk() {
         return systemDisk;
     }
 
@@ -365,7 +365,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @param systemDisk
      */
-    public void setSystemDisk(CloudDiskSpec systemDisk) {
+    public void setSystemDisk(PodTemplateCloudDiskSpec systemDisk) {
         this.systemDisk = systemDisk;
     }
 
@@ -395,7 +395,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @param name
      */
-    public ContainerSpec name(String name) {
+    public PodTemplateContainerSpec name(String name) {
         this.name = name;
         return this;
     }
@@ -406,7 +406,7 @@ public class ContainerSpec  implements java.io.Serializable {
     *
     * @param command
     */
-    public ContainerSpec command(List<String> command) {
+    public PodTemplateContainerSpec command(List<String> command) {
         this.command = command;
         return this;
     }
@@ -417,7 +417,7 @@ public class ContainerSpec  implements java.io.Serializable {
     *
     * @param args
     */
-    public ContainerSpec args(List<String> args) {
+    public PodTemplateContainerSpec args(List<String> args) {
         this.args = args;
         return this;
     }
@@ -428,7 +428,7 @@ public class ContainerSpec  implements java.io.Serializable {
     *
     * @param env
     */
-    public ContainerSpec env(List<EnvSpec> env) {
+    public PodTemplateContainerSpec env(List<EnvSpec> env) {
         this.env = env;
         return this;
     }
@@ -438,12 +438,12 @@ public class ContainerSpec  implements java.io.Serializable {
      * set 镜像名称 &lt;/br&gt;
 容器镜像名字。 nginx:latest。长度范围：[1-639]
 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 
-2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 
+2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt;
 
      *
      * @param image
      */
-    public ContainerSpec image(String image) {
+    public PodTemplateContainerSpec image(String image) {
         this.image = image;
         return this;
     }
@@ -454,7 +454,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @param secret
      */
-    public ContainerSpec secret(String secret) {
+    public PodTemplateContainerSpec secret(String secret) {
         this.secret = secret;
         return this;
     }
@@ -465,7 +465,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @param imageCacheId
      */
-    public ContainerSpec imageCacheId(String imageCacheId) {
+    public PodTemplateContainerSpec imageCacheId(String imageCacheId) {
         this.imageCacheId = imageCacheId;
         return this;
     }
@@ -476,7 +476,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @param tty
      */
-    public ContainerSpec tty(Boolean tty) {
+    public PodTemplateContainerSpec tty(Boolean tty) {
         this.tty = tty;
         return this;
     }
@@ -487,7 +487,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @param workingDir
      */
-    public ContainerSpec workingDir(String workingDir) {
+    public PodTemplateContainerSpec workingDir(String workingDir) {
         this.workingDir = workingDir;
         return this;
     }
@@ -498,7 +498,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @param livenessProbe
      */
-    public ContainerSpec livenessProbe(ProbeSpec livenessProbe) {
+    public PodTemplateContainerSpec livenessProbe(ProbeSpec livenessProbe) {
         this.livenessProbe = livenessProbe;
         return this;
     }
@@ -509,7 +509,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @param readinessProbe
      */
-    public ContainerSpec readinessProbe(ProbeSpec readinessProbe) {
+    public PodTemplateContainerSpec readinessProbe(ProbeSpec readinessProbe) {
         this.readinessProbe = readinessProbe;
         return this;
     }
@@ -520,7 +520,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @param resources
      */
-    public ContainerSpec resources(ResourceRequestsSpec resources) {
+    public PodTemplateContainerSpec resources(ResourceRequestsSpec resources) {
         this.resources = resources;
         return this;
     }
@@ -531,7 +531,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @param systemDisk
      */
-    public ContainerSpec systemDisk(CloudDiskSpec systemDisk) {
+    public PodTemplateContainerSpec systemDisk(PodTemplateCloudDiskSpec systemDisk) {
         this.systemDisk = systemDisk;
         return this;
     }
@@ -542,7 +542,7 @@ public class ContainerSpec  implements java.io.Serializable {
     *
     * @param volumeMounts
     */
-    public ContainerSpec volumeMounts(List<VolumeMountSpec> volumeMounts) {
+    public PodTemplateContainerSpec volumeMounts(List<VolumeMountSpec> volumeMounts) {
         this.volumeMounts = volumeMounts;
         return this;
     }
