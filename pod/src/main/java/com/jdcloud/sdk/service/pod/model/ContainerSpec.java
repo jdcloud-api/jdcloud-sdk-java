@@ -113,6 +113,11 @@ public class ContainerSpec  implements java.io.Serializable {
      */
     
     private List<VolumeMountSpec> volumeMounts;
+    /**
+     * 容器类型，取值 init 表示 InitContainer
+     */
+    private String type;
+
 
 
     /**
@@ -389,6 +394,25 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 容器类型，取值 init 表示 InitContainer
+     *
+     * @return
+     */
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * set 容器类型，取值 init 表示 InitContainer
+     *
+     * @param type
+     */
+    public void setType(String type) {
+        this.type = type;
+    }
+
+
 
     /**
      * set 容器名称，符合DNS-1123 label规范，在一个Pod内不可重复、不支持修改
@@ -544,6 +568,17 @@ public class ContainerSpec  implements java.io.Serializable {
     */
     public ContainerSpec volumeMounts(List<VolumeMountSpec> volumeMounts) {
         this.volumeMounts = volumeMounts;
+        return this;
+    }
+
+
+    /**
+     * set 容器类型，取值 init 表示 InitContainer
+     *
+     * @param type
+     */
+    public ContainerSpec type(String type) {
+        this.type = type;
         return this;
     }
 
