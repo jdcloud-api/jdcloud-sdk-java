@@ -52,6 +52,11 @@ public class Volume  implements java.io.Serializable {
      */
     private ConfigFileVolumeSource configFile;
 
+    /**
+     * EmptyDir卷源
+     */
+    private EmptyDirVolumeSource emptyDir;
+
 
 
     /**
@@ -130,6 +135,25 @@ public class Volume  implements java.io.Serializable {
     }
 
 
+    /**
+     * get EmptyDir卷源
+     *
+     * @return
+     */
+    public EmptyDirVolumeSource getEmptyDir() {
+        return emptyDir;
+    }
+
+    /**
+     * set EmptyDir卷源
+     *
+     * @param emptyDir
+     */
+    public void setEmptyDir(EmptyDirVolumeSource emptyDir) {
+        this.emptyDir = emptyDir;
+    }
+
+
 
     /**
      * set volume名字，在一个Pod唯一。
@@ -171,6 +195,17 @@ public class Volume  implements java.io.Serializable {
      */
     public Volume configFile(ConfigFileVolumeSource configFile) {
         this.configFile = configFile;
+        return this;
+    }
+
+
+    /**
+     * set EmptyDir卷源
+     *
+     * @param emptyDir
+     */
+    public Volume emptyDir(EmptyDirVolumeSource emptyDir) {
+        this.emptyDir = emptyDir;
         return this;
     }
 

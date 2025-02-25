@@ -40,6 +40,11 @@ public class Container  implements java.io.Serializable {
     private String name;
 
     /**
+     * 容器类型，如果是init则为initContainer
+     */
+    private String type;
+
+    /**
      * 容器执行的命令。
      */
     
@@ -122,6 +127,25 @@ public class Container  implements java.io.Serializable {
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+
+    /**
+     * get 容器类型，如果是init则为initContainer
+     *
+     * @return
+     */
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * set 容器类型，如果是init则为initContainer
+     *
+     * @param type
+     */
+    public void setType(String type) {
+        this.type = type;
     }
 
 
@@ -380,6 +404,17 @@ public class Container  implements java.io.Serializable {
      */
     public Container name(String name) {
         this.name = name;
+        return this;
+    }
+
+
+    /**
+     * set 容器类型，如果是init则为initContainer
+     *
+     * @param type
+     */
+    public Container type(String type) {
+        this.type = type;
         return this;
     }
 

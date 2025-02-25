@@ -57,6 +57,11 @@ public class VolumeSpec  implements java.io.Serializable {
      */
     private ConfigFileVolumeSourceSpec configFile;
 
+    /**
+     * 提供给Pod的EmptyDir.
+     */
+    private EmptyDirVolumeSourceSpec emptyDir;
+
 
 
     /**
@@ -135,6 +140,25 @@ public class VolumeSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 提供给Pod的EmptyDir.
+     *
+     * @return
+     */
+    public EmptyDirVolumeSourceSpec getEmptyDir() {
+        return emptyDir;
+    }
+
+    /**
+     * set 提供给Pod的EmptyDir.
+     *
+     * @param emptyDir
+     */
+    public void setEmptyDir(EmptyDirVolumeSourceSpec emptyDir) {
+        this.emptyDir = emptyDir;
+    }
+
+
 
     /**
      * set volume名字，符合DNS-1123 label规范，在一个Pod内唯一。
@@ -176,6 +200,17 @@ public class VolumeSpec  implements java.io.Serializable {
      */
     public VolumeSpec configFile(ConfigFileVolumeSourceSpec configFile) {
         this.configFile = configFile;
+        return this;
+    }
+
+
+    /**
+     * set 提供给Pod的EmptyDir.
+     *
+     * @param emptyDir
+     */
+    public VolumeSpec emptyDir(EmptyDirVolumeSourceSpec emptyDir) {
+        this.emptyDir = emptyDir;
         return this;
     }
 
