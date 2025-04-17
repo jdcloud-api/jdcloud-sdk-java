@@ -43,6 +43,7 @@ public class MessageToRoom  implements java.io.Serializable {
     private String message;
 
 
+
     /**
      * get 事件名称
      *
@@ -60,6 +61,7 @@ public class MessageToRoom  implements java.io.Serializable {
     public void setEventName(String eventName) {
         this.eventName = eventName;
     }
+
 
     /**
      * get 自定义信令消息
@@ -80,6 +82,7 @@ public class MessageToRoom  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 事件名称
      *
@@ -89,6 +92,7 @@ public class MessageToRoom  implements java.io.Serializable {
         this.eventName = eventName;
         return this;
     }
+
 
     /**
      * set 自定义信令消息

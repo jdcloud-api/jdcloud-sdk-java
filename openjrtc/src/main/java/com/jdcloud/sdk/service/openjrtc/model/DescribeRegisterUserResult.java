@@ -65,6 +65,7 @@ public class DescribeRegisterUserResult extends JdcloudResult implements java.io
     private String createTime;
 
 
+
     /**
      * get 应用ID
      *
@@ -82,6 +83,7 @@ public class DescribeRegisterUserResult extends JdcloudResult implements java.io
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get jrtc系统用户id
@@ -101,6 +103,7 @@ public class DescribeRegisterUserResult extends JdcloudResult implements java.io
         this.peerId = peerId;
     }
 
+
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -118,6 +121,7 @@ public class DescribeRegisterUserResult extends JdcloudResult implements java.io
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get 用户名称
@@ -137,6 +141,7 @@ public class DescribeRegisterUserResult extends JdcloudResult implements java.io
         this.userName = userName;
     }
 
+
     /**
      * get 是否临时用户
      *
@@ -154,6 +159,7 @@ public class DescribeRegisterUserResult extends JdcloudResult implements java.io
     public void setTemporary(Boolean temporary) {
         this.temporary = temporary;
     }
+
 
     /**
      * get 创建时间
@@ -174,6 +180,7 @@ public class DescribeRegisterUserResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -183,6 +190,7 @@ public class DescribeRegisterUserResult extends JdcloudResult implements java.io
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set jrtc系统用户id
@@ -194,6 +202,7 @@ public class DescribeRegisterUserResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -203,6 +212,7 @@ public class DescribeRegisterUserResult extends JdcloudResult implements java.io
         this.userId = userId;
         return this;
     }
+
 
     /**
      * set 用户名称
@@ -214,6 +224,7 @@ public class DescribeRegisterUserResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 是否临时用户
      *
@@ -223,6 +234,7 @@ public class DescribeRegisterUserResult extends JdcloudResult implements java.io
         this.temporary = temporary;
         return this;
     }
+
 
     /**
      * set 创建时间

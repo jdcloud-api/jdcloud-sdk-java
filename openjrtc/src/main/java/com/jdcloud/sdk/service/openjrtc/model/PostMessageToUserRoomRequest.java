@@ -54,6 +54,7 @@ public class PostMessageToUserRoomRequest extends JdcloudRequest implements java
     private String message;
 
 
+
     /**
      * get 应用ID
      *
@@ -71,6 +72,7 @@ public class PostMessageToUserRoomRequest extends JdcloudRequest implements java
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -90,6 +92,7 @@ public class PostMessageToUserRoomRequest extends JdcloudRequest implements java
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 事件名称
      *
@@ -107,6 +110,7 @@ public class PostMessageToUserRoomRequest extends JdcloudRequest implements java
     public void setEventName(String eventName) {
         this.eventName = eventName;
     }
+
 
     /**
      * get 自定义信令消息
@@ -127,6 +131,7 @@ public class PostMessageToUserRoomRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -136,6 +141,7 @@ public class PostMessageToUserRoomRequest extends JdcloudRequest implements java
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -147,6 +153,7 @@ public class PostMessageToUserRoomRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 事件名称
      *
@@ -156,6 +163,7 @@ public class PostMessageToUserRoomRequest extends JdcloudRequest implements java
         this.eventName = eventName;
         return this;
     }
+
 
     /**
      * set 自定义信令消息

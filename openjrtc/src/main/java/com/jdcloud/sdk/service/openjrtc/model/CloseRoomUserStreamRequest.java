@@ -58,6 +58,7 @@ public class CloseRoomUserStreamRequest extends JdcloudRequest implements java.i
     private String appId;
 
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -75,6 +76,7 @@ public class CloseRoomUserStreamRequest extends JdcloudRequest implements java.i
     public void setUserRoomId(String userRoomId) {
         this.userRoomId = userRoomId;
     }
+
 
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId
@@ -94,6 +96,7 @@ public class CloseRoomUserStreamRequest extends JdcloudRequest implements java.i
         this.userId = userId;
     }
 
+
     /**
      * get 要关闭的流ID
      *
@@ -111,6 +114,7 @@ public class CloseRoomUserStreamRequest extends JdcloudRequest implements java.i
     public void setStreamId(String streamId) {
         this.streamId = streamId;
     }
+
 
     /**
      * get 应用ID
@@ -131,6 +135,7 @@ public class CloseRoomUserStreamRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -140,6 +145,7 @@ public class CloseRoomUserStreamRequest extends JdcloudRequest implements java.i
         this.userRoomId = userRoomId;
         return this;
     }
+
 
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId
@@ -151,6 +157,7 @@ public class CloseRoomUserStreamRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 要关闭的流ID
      *
@@ -160,6 +167,7 @@ public class CloseRoomUserStreamRequest extends JdcloudRequest implements java.i
         this.streamId = streamId;
         return this;
     }
+
 
     /**
      * set 应用ID

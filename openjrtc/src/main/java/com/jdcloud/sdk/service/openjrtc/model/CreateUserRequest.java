@@ -50,9 +50,15 @@ public class CreateUserRequest extends JdcloudRequest implements java.io.Seriali
     private String userId;
 
     /**
+     * 用户头像url
+     */
+    private String portraitUrl;
+
+    /**
      * 是否临时用户
      */
     private Boolean temporary;
+
 
 
     /**
@@ -73,6 +79,7 @@ public class CreateUserRequest extends JdcloudRequest implements java.io.Seriali
         this.appId = appId;
     }
 
+
     /**
      * get 用户名称
      *
@@ -91,6 +98,7 @@ public class CreateUserRequest extends JdcloudRequest implements java.io.Seriali
         this.userName = userName;
     }
 
+
     /**
      * get 业务接入方的用户ID
      *
@@ -108,6 +116,26 @@ public class CreateUserRequest extends JdcloudRequest implements java.io.Seriali
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
+
+    /**
+     * get 用户头像url
+     *
+     * @return
+     */
+    public String getPortraitUrl() {
+        return portraitUrl;
+    }
+
+    /**
+     * set 用户头像url
+     *
+     * @param portraitUrl
+     */
+    public void setPortraitUrl(String portraitUrl) {
+        this.portraitUrl = portraitUrl;
+    }
+
 
     /**
      * get 是否临时用户
@@ -128,6 +156,7 @@ public class CreateUserRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -137,6 +166,7 @@ public class CreateUserRequest extends JdcloudRequest implements java.io.Seriali
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 用户名称
@@ -148,6 +178,7 @@ public class CreateUserRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 业务接入方的用户ID
      *
@@ -157,6 +188,18 @@ public class CreateUserRequest extends JdcloudRequest implements java.io.Seriali
         this.userId = userId;
         return this;
     }
+
+
+    /**
+     * set 用户头像url
+     *
+     * @param portraitUrl
+     */
+    public CreateUserRequest portraitUrl(String portraitUrl) {
+        this.portraitUrl = portraitUrl;
+        return this;
+    }
+
 
     /**
      * set 是否临时用户

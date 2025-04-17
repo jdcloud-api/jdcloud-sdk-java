@@ -43,6 +43,7 @@ public class UpdateRoomRequestObj  implements java.io.Serializable {
     private String roomName;
 
 
+
     /**
      * get 房间ID
      *
@@ -60,6 +61,7 @@ public class UpdateRoomRequestObj  implements java.io.Serializable {
     public void setRoomId(Long roomId) {
         this.roomId = roomId;
     }
+
 
     /**
      * get 房间名称
@@ -80,6 +82,7 @@ public class UpdateRoomRequestObj  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 房间ID
      *
@@ -89,6 +92,7 @@ public class UpdateRoomRequestObj  implements java.io.Serializable {
         this.roomId = roomId;
         return this;
     }
+
 
     /**
      * set 房间名称

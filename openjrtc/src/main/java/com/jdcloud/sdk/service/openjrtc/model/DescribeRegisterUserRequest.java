@@ -50,6 +50,7 @@ public class DescribeRegisterUserRequest extends JdcloudRequest implements java.
     private String appId;
 
 
+
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -67,6 +68,7 @@ public class DescribeRegisterUserRequest extends JdcloudRequest implements java.
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get 应用ID
@@ -87,6 +89,7 @@ public class DescribeRegisterUserRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -96,6 +99,7 @@ public class DescribeRegisterUserRequest extends JdcloudRequest implements java.
         this.userId = userId;
         return this;
     }
+
 
     /**
      * set 应用ID

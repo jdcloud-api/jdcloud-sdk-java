@@ -38,6 +38,7 @@ public class RemoveAllRoomUsersObj  implements java.io.Serializable {
     private String userRoomId;
 
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -55,6 +56,7 @@ public class RemoveAllRoomUsersObj  implements java.io.Serializable {
     public void setUserRoomId(String userRoomId) {
         this.userRoomId = userRoomId;
     }
+
 
 
     /**

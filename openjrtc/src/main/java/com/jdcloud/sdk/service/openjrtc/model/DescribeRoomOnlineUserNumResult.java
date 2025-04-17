@@ -55,6 +55,7 @@ public class DescribeRoomOnlineUserNumResult extends JdcloudResult implements ja
     private String createTime;
 
 
+
     /**
      * get 应用ID
      *
@@ -72,6 +73,7 @@ public class DescribeRoomOnlineUserNumResult extends JdcloudResult implements ja
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 房间ID
@@ -91,6 +93,7 @@ public class DescribeRoomOnlineUserNumResult extends JdcloudResult implements ja
         this.roomId = roomId;
     }
 
+
     /**
      * get 房间在线人数
      *
@@ -108,6 +111,7 @@ public class DescribeRoomOnlineUserNumResult extends JdcloudResult implements ja
     public void setNumber(Integer number) {
         this.number = number;
     }
+
 
     /**
      * get 创建时间UTC
@@ -128,6 +132,7 @@ public class DescribeRoomOnlineUserNumResult extends JdcloudResult implements ja
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -137,6 +142,7 @@ public class DescribeRoomOnlineUserNumResult extends JdcloudResult implements ja
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 房间ID
@@ -148,6 +154,7 @@ public class DescribeRoomOnlineUserNumResult extends JdcloudResult implements ja
         return this;
     }
 
+
     /**
      * set 房间在线人数
      *
@@ -157,6 +164,7 @@ public class DescribeRoomOnlineUserNumResult extends JdcloudResult implements ja
         this.number = number;
         return this;
     }
+
 
     /**
      * set 创建时间UTC

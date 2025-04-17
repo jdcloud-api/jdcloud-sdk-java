@@ -62,6 +62,7 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
     /**
      * 分页内容
      */
+    
     private List<RoomInfoObj> content;
 
 
@@ -83,6 +84,7 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页数量
      *
@@ -100,6 +102,7 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 查询总数
@@ -119,6 +122,7 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
         this.totalElements = totalElements;
     }
 
+
     /**
      * get 总页数
      *
@@ -137,23 +141,25 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
         this.totalPages = totalPages;
     }
 
+
     /**
-     * get 分页内容
-     *
-     * @return
-     */
+    * get 分页内容
+    *
+    * @return
+    */
     public List<RoomInfoObj> getContent() {
         return content;
     }
 
     /**
-     * set 分页内容
-     *
-     * @param content
-     */
+    * set 分页内容
+    *
+    * @param content
+    */
     public void setContent(List<RoomInfoObj> content) {
         this.content = content;
     }
+
 
 
     /**
@@ -166,6 +172,7 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 每页数量
      *
@@ -175,6 +182,7 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 查询总数
@@ -186,6 +194,7 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 总页数
      *
@@ -196,15 +205,17 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
         return this;
     }
 
+
     /**
-     * set 分页内容
-     *
-     * @param content
-     */
+    * set 分页内容
+    *
+    * @param content
+    */
     public DescribeRoomsResult content(List<RoomInfoObj> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -218,5 +229,4 @@ public class DescribeRoomsResult extends JdcloudResult implements java.io.Serial
         }
         this.content.add(content);
     }
-
 }

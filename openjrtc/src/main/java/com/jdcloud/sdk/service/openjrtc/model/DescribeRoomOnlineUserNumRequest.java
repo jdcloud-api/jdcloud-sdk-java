@@ -43,6 +43,7 @@ public class DescribeRoomOnlineUserNumRequest extends JdcloudRequest implements 
     private Long roomId;
 
 
+
     /**
      * get 房间ID
      *
@@ -60,6 +61,7 @@ public class DescribeRoomOnlineUserNumRequest extends JdcloudRequest implements 
     public void setRoomId(Long roomId) {
         this.roomId = roomId;
     }
+
 
 
     /**

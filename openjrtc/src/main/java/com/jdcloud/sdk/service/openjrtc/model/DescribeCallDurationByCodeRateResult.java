@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JrtcStatistic
- * 房间人员管理
+ * 数据统计
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.openjrtc.model.CallDurationByCodeRate;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取历史音频、区分视频码率通讯时长
+ * 获取历史音频、区分视频码率通讯时长(分钟)
 
  */
 public class DescribeCallDurationByCodeRateResult extends JdcloudResult implements java.io.Serializable {
@@ -40,37 +40,40 @@ public class DescribeCallDurationByCodeRateResult extends JdcloudResult implemen
     /**
      * content
      */
+    
     private List<CallDurationByCodeRate> content;
 
 
     /**
-     * get content
-     *
-     * @return
-     */
+    * get content
+    *
+    * @return
+    */
     public List<CallDurationByCodeRate> getContent() {
         return content;
     }
 
     /**
-     * set content
-     *
-     * @param content
-     */
+    * set content
+    *
+    * @param content
+    */
     public void setContent(List<CallDurationByCodeRate> content) {
         this.content = content;
     }
 
 
+
     /**
-     * set content
-     *
-     * @param content
-     */
+    * set content
+    *
+    * @param content
+    */
     public DescribeCallDurationByCodeRateResult content(List<CallDurationByCodeRate> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class DescribeCallDurationByCodeRateResult extends JdcloudResult implemen
         }
         this.content.add(content);
     }
-
 }

@@ -48,6 +48,7 @@ public class CloseRoomUserStreamObj  implements java.io.Serializable {
     private String streamId;
 
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -66,6 +67,7 @@ public class CloseRoomUserStreamObj  implements java.io.Serializable {
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -83,6 +85,7 @@ public class CloseRoomUserStreamObj  implements java.io.Serializable {
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get 要关闭的流ID
@@ -103,6 +106,7 @@ public class CloseRoomUserStreamObj  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -113,6 +117,7 @@ public class CloseRoomUserStreamObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -122,6 +127,7 @@ public class CloseRoomUserStreamObj  implements java.io.Serializable {
         this.userId = userId;
         return this;
     }
+
 
     /**
      * set 要关闭的流ID

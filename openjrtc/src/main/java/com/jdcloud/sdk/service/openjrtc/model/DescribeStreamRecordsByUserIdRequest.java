@@ -73,14 +73,15 @@ public class DescribeStreamRecordsByUserIdRequest extends JdcloudRequest impleme
 - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 应用ID
      * Required:true
      */
     @Required
     private String appId;
+
 
 
     /**
@@ -101,6 +102,7 @@ public class DescribeStreamRecordsByUserIdRequest extends JdcloudRequest impleme
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认值为 10；取值范围 [10, 100]
      *
@@ -118,6 +120,7 @@ public class DescribeStreamRecordsByUserIdRequest extends JdcloudRequest impleme
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -137,6 +140,7 @@ public class DescribeStreamRecordsByUserIdRequest extends JdcloudRequest impleme
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -155,31 +159,33 @@ public class DescribeStreamRecordsByUserIdRequest extends JdcloudRequest impleme
         this.userId = userId;
     }
 
+
     /**
-     * get 传参字段描述:
+    * get 传参字段描述:
 - kind[eq] 在线状态 1-音频流 2-视频流 100-数据流
 - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
 - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 传参字段描述:
+    * set 传参字段描述:
 - kind[eq] 在线状态 1-音频流 2-视频流 100-数据流
 - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
 - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 应用ID
@@ -200,6 +206,7 @@ public class DescribeStreamRecordsByUserIdRequest extends JdcloudRequest impleme
     }
 
 
+
     /**
      * set 页码；默认值为 1
      *
@@ -209,6 +216,7 @@ public class DescribeStreamRecordsByUserIdRequest extends JdcloudRequest impleme
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；默认值为 10；取值范围 [10, 100]
@@ -220,6 +228,7 @@ public class DescribeStreamRecordsByUserIdRequest extends JdcloudRequest impleme
         return this;
     }
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -229,6 +238,7 @@ public class DescribeStreamRecordsByUserIdRequest extends JdcloudRequest impleme
         this.userRoomId = userRoomId;
         return this;
     }
+
 
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId
@@ -240,19 +250,21 @@ public class DescribeStreamRecordsByUserIdRequest extends JdcloudRequest impleme
         return this;
     }
 
+
     /**
-     * set 传参字段描述:
+    * set 传参字段描述:
 - kind[eq] 在线状态 1-音频流 2-视频流 100-数据流
 - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
 - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeStreamRecordsByUserIdRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 应用ID
@@ -263,6 +275,7 @@ public class DescribeStreamRecordsByUserIdRequest extends JdcloudRequest impleme
         this.appId = appId;
         return this;
     }
+
 
 
     /**
@@ -280,5 +293,4 @@ public class DescribeStreamRecordsByUserIdRequest extends JdcloudRequest impleme
         }
         this.filters.add(filter);
     }
-
 }

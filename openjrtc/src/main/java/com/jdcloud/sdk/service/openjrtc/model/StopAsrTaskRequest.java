@@ -45,9 +45,10 @@ public class StopAsrTaskRequest extends JdcloudRequest implements java.io.Serial
     private String userRoomId;
 
     /**
-     * 语音识别场景 0-全部识别转文字
+     * 语音任务类型 0-转写 1-翻译
      */
     private Integer asrTaskType;
+
 
 
     /**
@@ -68,6 +69,7 @@ public class StopAsrTaskRequest extends JdcloudRequest implements java.io.Serial
         this.appId = appId;
     }
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -86,8 +88,9 @@ public class StopAsrTaskRequest extends JdcloudRequest implements java.io.Serial
         this.userRoomId = userRoomId;
     }
 
+
     /**
-     * get 语音识别场景 0-全部识别转文字
+     * get 语音任务类型 0-转写 1-翻译
      *
      * @return
      */
@@ -96,13 +99,14 @@ public class StopAsrTaskRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 语音识别场景 0-全部识别转文字
+     * set 语音任务类型 0-转写 1-翻译
      *
      * @param asrTaskType
      */
     public void setAsrTaskType(Integer asrTaskType) {
         this.asrTaskType = asrTaskType;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class StopAsrTaskRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -125,8 +130,9 @@ public class StopAsrTaskRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
-     * set 语音识别场景 0-全部识别转文字
+     * set 语音任务类型 0-转写 1-翻译
      *
      * @param asrTaskType
      */

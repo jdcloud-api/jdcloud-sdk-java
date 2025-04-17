@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JrtcStatistic
- * 房间人员管理
+ * 数据统计
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -93,6 +93,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
     private String period;
 
 
+
     /**
      * get 应用ID
      *
@@ -110,6 +111,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的用户房间号
@@ -129,6 +131,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的用户id
      *
@@ -146,6 +149,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get audio/video
@@ -165,6 +169,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
         this.kind = kind;
     }
 
+
     /**
      * get producer 发布流 consumer 订阅流
      *
@@ -182,6 +187,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
     public void setType(String type) {
         this.type = type;
     }
+
 
     /**
      * get 加入时间 UTC格式
@@ -201,6 +207,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
         this.joinTime = joinTime;
     }
 
+
     /**
      * get 离开时间 UTC格式
      *
@@ -219,6 +226,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
         this.leaveTime = leaveTime;
     }
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的用户id type&#x3D;consumer时选择发送端用户id切换码率
      *
@@ -236,6 +244,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
     public void setFromUserId(String fromUserId) {
         this.fromUserId = fromUserId;
     }
+
 
     /**
      * get 粒度 支持 1m 1h 1d
@@ -256,6 +265,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -265,6 +275,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的用户房间号
@@ -276,6 +287,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的用户id
      *
@@ -285,6 +297,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
         this.userId = userId;
         return this;
     }
+
 
     /**
      * set audio/video
@@ -296,6 +309,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set producer 发布流 consumer 订阅流
      *
@@ -305,6 +319,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
         this.type = type;
         return this;
     }
+
 
     /**
      * set 加入时间 UTC格式
@@ -316,6 +331,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 离开时间 UTC格式
      *
@@ -326,6 +342,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的用户id type&#x3D;consumer时选择发送端用户id切换码率
      *
@@ -335,6 +352,7 @@ public class DescribeP2pStreamBitRateRequest extends JdcloudRequest implements j
         this.fromUserId = fromUserId;
         return this;
     }
+
 
     /**
      * set 粒度 支持 1m 1h 1d

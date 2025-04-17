@@ -45,6 +45,7 @@ public class DescribeAppsRequest extends JdcloudRequest implements java.io.Seria
     private Integer pageSize;
 
 
+
     /**
      * get 页码；默认值为 1
      *
@@ -62,6 +63,7 @@ public class DescribeAppsRequest extends JdcloudRequest implements java.io.Seria
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小；默认值为 10；取值范围 [10, 100]
@@ -82,6 +84,7 @@ public class DescribeAppsRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 页码；默认值为 1
      *
@@ -91,6 +94,7 @@ public class DescribeAppsRequest extends JdcloudRequest implements java.io.Seria
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；默认值为 10；取值范围 [10, 100]

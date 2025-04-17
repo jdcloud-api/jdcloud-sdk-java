@@ -44,6 +44,12 @@ public class StopMcuTranscodeRequest extends JdcloudRequest implements java.io.S
      */
     private String userRoomId;
 
+    /**
+     * 混流任务ID
+     */
+    private String taskId;
+
+
 
     /**
      * get 应用ID
@@ -62,6 +68,7 @@ public class StopMcuTranscodeRequest extends JdcloudRequest implements java.io.S
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -83,6 +90,26 @@ public class StopMcuTranscodeRequest extends JdcloudRequest implements java.io.S
 
 
     /**
+     * get 混流任务ID
+     *
+     * @return
+     */
+    public String getTaskId() {
+        return taskId;
+    }
+
+    /**
+     * set 混流任务ID
+     *
+     * @param taskId
+     */
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
+    }
+
+
+
+    /**
      * set 应用ID
      *
      * @param appId
@@ -92,6 +119,7 @@ public class StopMcuTranscodeRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -99,6 +127,17 @@ public class StopMcuTranscodeRequest extends JdcloudRequest implements java.io.S
      */
     public StopMcuTranscodeRequest userRoomId(String userRoomId) {
         this.userRoomId = userRoomId;
+        return this;
+    }
+
+
+    /**
+     * set 混流任务ID
+     *
+     * @param taskId
+     */
+    public StopMcuTranscodeRequest taskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
 

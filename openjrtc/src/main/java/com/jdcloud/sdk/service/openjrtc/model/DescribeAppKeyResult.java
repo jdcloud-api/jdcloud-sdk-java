@@ -45,6 +45,7 @@ public class DescribeAppKeyResult extends JdcloudResult implements java.io.Seria
     private String appKey;
 
 
+
     /**
      * get 应用ID
      *
@@ -62,6 +63,7 @@ public class DescribeAppKeyResult extends JdcloudResult implements java.io.Seria
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get appKey
@@ -82,6 +84,7 @@ public class DescribeAppKeyResult extends JdcloudResult implements java.io.Seria
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -91,6 +94,7 @@ public class DescribeAppKeyResult extends JdcloudResult implements java.io.Seria
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set appKey

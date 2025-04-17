@@ -57,6 +57,7 @@ public class RoomStreamContent  implements java.io.Serializable {
     /**
      * 推流信息列表
      */
+    
     private List<StreamInfo> content;
 
 
@@ -78,6 +79,7 @@ public class RoomStreamContent  implements java.io.Serializable {
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页数量
      *
@@ -95,6 +97,7 @@ public class RoomStreamContent  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 查询总数
@@ -114,6 +117,7 @@ public class RoomStreamContent  implements java.io.Serializable {
         this.totalElements = totalElements;
     }
 
+
     /**
      * get 总页数
      *
@@ -132,23 +136,25 @@ public class RoomStreamContent  implements java.io.Serializable {
         this.totalPages = totalPages;
     }
 
+
     /**
-     * get 推流信息列表
-     *
-     * @return
-     */
+    * get 推流信息列表
+    *
+    * @return
+    */
     public List<StreamInfo> getContent() {
         return content;
     }
 
     /**
-     * set 推流信息列表
-     *
-     * @param content
-     */
+    * set 推流信息列表
+    *
+    * @param content
+    */
     public void setContent(List<StreamInfo> content) {
         this.content = content;
     }
+
 
 
     /**
@@ -161,6 +167,7 @@ public class RoomStreamContent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 每页数量
      *
@@ -170,6 +177,7 @@ public class RoomStreamContent  implements java.io.Serializable {
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 查询总数
@@ -181,6 +189,7 @@ public class RoomStreamContent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 总页数
      *
@@ -191,15 +200,17 @@ public class RoomStreamContent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 推流信息列表
-     *
-     * @param content
-     */
+    * set 推流信息列表
+    *
+    * @param content
+    */
     public RoomStreamContent content(List<StreamInfo> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class RoomStreamContent  implements java.io.Serializable {
         }
         this.content.add(content);
     }
-
 }

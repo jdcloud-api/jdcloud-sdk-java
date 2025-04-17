@@ -42,6 +42,7 @@ public class RemoveRoomUsersObj  implements java.io.Serializable {
     /**
      * 接入方定义的userId列表,最多支持20个userId
      */
+    
     private List<String> userIds;
 
 
@@ -63,23 +64,25 @@ public class RemoveRoomUsersObj  implements java.io.Serializable {
         this.userRoomId = userRoomId;
     }
 
+
     /**
-     * get 接入方定义的userId列表,最多支持20个userId
-     *
-     * @return
-     */
+    * get 接入方定义的userId列表,最多支持20个userId
+    *
+    * @return
+    */
     public List<String> getUserIds() {
         return userIds;
     }
 
     /**
-     * set 接入方定义的userId列表,最多支持20个userId
-     *
-     * @param userIds
-     */
+    * set 接入方定义的userId列表,最多支持20个userId
+    *
+    * @param userIds
+    */
     public void setUserIds(List<String> userIds) {
         this.userIds = userIds;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class RemoveRoomUsersObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 接入方定义的userId列表,最多支持20个userId
-     *
-     * @param userIds
-     */
+    * set 接入方定义的userId列表,最多支持20个userId
+    *
+    * @param userIds
+    */
     public RemoveRoomUsersObj userIds(List<String> userIds) {
         this.userIds = userIds;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class RemoveRoomUsersObj  implements java.io.Serializable {
         }
         this.userIds.add(userId);
     }
-
 }

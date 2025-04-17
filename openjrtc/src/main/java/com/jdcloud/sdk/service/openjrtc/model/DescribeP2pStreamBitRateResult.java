@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JrtcStatistic
- * 房间人员管理
+ * 数据统计
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -40,37 +40,40 @@ public class DescribeP2pStreamBitRateResult extends JdcloudResult implements jav
     /**
      * content
      */
+    
     private List<StreamBitRate> content;
 
 
     /**
-     * get content
-     *
-     * @return
-     */
+    * get content
+    *
+    * @return
+    */
     public List<StreamBitRate> getContent() {
         return content;
     }
 
     /**
-     * set content
-     *
-     * @param content
-     */
+    * set content
+    *
+    * @param content
+    */
     public void setContent(List<StreamBitRate> content) {
         this.content = content;
     }
 
 
+
     /**
-     * set content
-     *
-     * @param content
-     */
+    * set content
+    *
+    * @param content
+    */
     public DescribeP2pStreamBitRateResult content(List<StreamBitRate> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class DescribeP2pStreamBitRateResult extends JdcloudResult implements jav
         }
         this.content.add(content);
     }
-
 }

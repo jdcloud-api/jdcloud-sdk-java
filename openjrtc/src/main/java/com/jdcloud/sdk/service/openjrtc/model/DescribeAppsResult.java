@@ -60,6 +60,7 @@ public class DescribeAppsResult extends JdcloudResult implements java.io.Seriali
     /**
      * 分页内容
      */
+    
     private List<AppInfoObject> content;
 
 
@@ -81,6 +82,7 @@ public class DescribeAppsResult extends JdcloudResult implements java.io.Seriali
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页数量
      *
@@ -98,6 +100,7 @@ public class DescribeAppsResult extends JdcloudResult implements java.io.Seriali
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 查询总数
@@ -117,6 +120,7 @@ public class DescribeAppsResult extends JdcloudResult implements java.io.Seriali
         this.totalElements = totalElements;
     }
 
+
     /**
      * get 总页数
      *
@@ -135,23 +139,25 @@ public class DescribeAppsResult extends JdcloudResult implements java.io.Seriali
         this.totalPages = totalPages;
     }
 
+
     /**
-     * get 分页内容
-     *
-     * @return
-     */
+    * get 分页内容
+    *
+    * @return
+    */
     public List<AppInfoObject> getContent() {
         return content;
     }
 
     /**
-     * set 分页内容
-     *
-     * @param content
-     */
+    * set 分页内容
+    *
+    * @param content
+    */
     public void setContent(List<AppInfoObject> content) {
         this.content = content;
     }
+
 
 
     /**
@@ -164,6 +170,7 @@ public class DescribeAppsResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 每页数量
      *
@@ -173,6 +180,7 @@ public class DescribeAppsResult extends JdcloudResult implements java.io.Seriali
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 查询总数
@@ -184,6 +192,7 @@ public class DescribeAppsResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 总页数
      *
@@ -194,15 +203,17 @@ public class DescribeAppsResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
-     * set 分页内容
-     *
-     * @param content
-     */
+    * set 分页内容
+    *
+    * @param content
+    */
     public DescribeAppsResult content(List<AppInfoObject> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -216,5 +227,4 @@ public class DescribeAppsResult extends JdcloudResult implements java.io.Seriali
         }
         this.content.add(content);
     }
-
 }

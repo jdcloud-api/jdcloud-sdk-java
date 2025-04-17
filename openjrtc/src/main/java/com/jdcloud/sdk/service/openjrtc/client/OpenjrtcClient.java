@@ -180,7 +180,7 @@ public class OpenjrtcClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.8";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "openjrtc.jdcloud-api.com";
     public final static String ServiceName = "openjrtc";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -453,7 +453,7 @@ public class OpenjrtcClient extends JdcloudClient {
     }
 
     /**
-     * 获取历史音频、区分视频码率通讯时长
+     * 获取历史音频、区分视频码率通讯时长(分钟)
 
      *
      * @param request
@@ -575,6 +575,8 @@ public class OpenjrtcClient extends JdcloudClient {
 允许通过条件过滤查询，支持的过滤字段如下：
            - status[eq] 在线状态 1-在线 2-离线
            - kind[eq] 在线状态 1-音频流 2-视频流 100-数据流
+           - deviceType[eq]  推流设备类型 kind&#x3D;1时,取值: 1-默认音频 2-蓝牙 3-手机音频 4-文件音频; kind&#x3D;2时,取值: 1-前置摄像头 2-后置摄像头 3-屏幕共享 4-文件视频;
+           - userIds[eq] 业务接入方用户体系定义的且在JRTC系统内注册过的userId,userId个数上限为50
            - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
            - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 

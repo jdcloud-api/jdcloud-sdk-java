@@ -48,6 +48,7 @@ public class NotifyConfigObj  implements java.io.Serializable {
     private String url;
 
 
+
     /**
      * get 主键-新增时不传，更新时要传
      *
@@ -66,6 +67,7 @@ public class NotifyConfigObj  implements java.io.Serializable {
         this.configId = configId;
     }
 
+
     /**
      * get 回调类型 1-房间回调 2-媒体回调
      *
@@ -83,6 +85,7 @@ public class NotifyConfigObj  implements java.io.Serializable {
     public void setNotifyType(Integer notifyType) {
         this.notifyType = notifyType;
     }
+
 
     /**
      * get 回调地址
@@ -103,6 +106,7 @@ public class NotifyConfigObj  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 主键-新增时不传，更新时要传
      *
@@ -113,6 +117,7 @@ public class NotifyConfigObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 回调类型 1-房间回调 2-媒体回调
      *
@@ -122,6 +127,7 @@ public class NotifyConfigObj  implements java.io.Serializable {
         this.notifyType = notifyType;
         return this;
     }
+
 
     /**
      * set 回调地址

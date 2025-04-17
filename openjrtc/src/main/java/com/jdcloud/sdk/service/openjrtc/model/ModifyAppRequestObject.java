@@ -48,6 +48,7 @@ public class ModifyAppRequestObject  implements java.io.Serializable {
     private Integer roomType;
 
 
+
     /**
      * get 应用ID
      *
@@ -66,6 +67,7 @@ public class ModifyAppRequestObject  implements java.io.Serializable {
         this.appId = appId;
     }
 
+
     /**
      * get 应用名称
      *
@@ -83,6 +85,7 @@ public class ModifyAppRequestObject  implements java.io.Serializable {
     public void setAppName(String appName) {
         this.appName = appName;
     }
+
 
     /**
      * get 应用创建的默认房间类型
@@ -103,6 +106,7 @@ public class ModifyAppRequestObject  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -113,6 +117,7 @@ public class ModifyAppRequestObject  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应用名称
      *
@@ -122,6 +127,7 @@ public class ModifyAppRequestObject  implements java.io.Serializable {
         this.appName = appName;
         return this;
     }
+
 
     /**
      * set 应用创建的默认房间类型

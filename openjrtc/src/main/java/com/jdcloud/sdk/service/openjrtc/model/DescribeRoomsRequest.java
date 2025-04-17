@@ -54,6 +54,7 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
   appId:   应用ID
 
      */
+    
     private List<Filter> filters;
 
 
@@ -75,6 +76,7 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认值为 10；取值范围 [10, 100]
      *
@@ -93,27 +95,29 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get 传参字段描述:
+    * get 传参字段描述:
   appId:   应用ID
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 传参字段描述:
+    * set 传参字段描述:
   appId:   应用ID
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
 
     /**
@@ -126,6 +130,7 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 分页大小；默认值为 10；取值范围 [10, 100]
      *
@@ -136,17 +141,19 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
-     * set 传参字段描述:
+    * set 传参字段描述:
   appId:   应用ID
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeRoomsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
 
     /**
@@ -162,5 +169,4 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
         }
         this.filters.add(filter);
     }
-
 }

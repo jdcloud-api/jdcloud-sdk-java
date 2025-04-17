@@ -45,14 +45,15 @@ public class RemoveUserByUserRoomIdRequest extends JdcloudRequest implements jav
     /**
      * 接入方定义的userId列表,最多支持20个userId
      */
+    
     private List<String> userIds;
-
     /**
      * 应用ID
      * Required:true
      */
     @Required
     private String appId;
+
 
 
     /**
@@ -73,23 +74,25 @@ public class RemoveUserByUserRoomIdRequest extends JdcloudRequest implements jav
         this.userRoomId = userRoomId;
     }
 
+
     /**
-     * get 接入方定义的userId列表,最多支持20个userId
-     *
-     * @return
-     */
+    * get 接入方定义的userId列表,最多支持20个userId
+    *
+    * @return
+    */
     public List<String> getUserIds() {
         return userIds;
     }
 
     /**
-     * set 接入方定义的userId列表,最多支持20个userId
-     *
-     * @param userIds
-     */
+    * set 接入方定义的userId列表,最多支持20个userId
+    *
+    * @param userIds
+    */
     public void setUserIds(List<String> userIds) {
         this.userIds = userIds;
     }
+
 
     /**
      * get 应用ID
@@ -110,6 +113,7 @@ public class RemoveUserByUserRoomIdRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -120,15 +124,17 @@ public class RemoveUserByUserRoomIdRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
-     * set 接入方定义的userId列表,最多支持20个userId
-     *
-     * @param userIds
-     */
+    * set 接入方定义的userId列表,最多支持20个userId
+    *
+    * @param userIds
+    */
     public RemoveUserByUserRoomIdRequest userIds(List<String> userIds) {
         this.userIds = userIds;
         return this;
     }
+
 
     /**
      * set 应用ID
@@ -139,6 +145,7 @@ public class RemoveUserByUserRoomIdRequest extends JdcloudRequest implements jav
         this.appId = appId;
         return this;
     }
+
 
 
     /**
@@ -152,5 +159,4 @@ public class RemoveUserByUserRoomIdRequest extends JdcloudRequest implements jav
         }
         this.userIds.add(userId);
     }
-
 }

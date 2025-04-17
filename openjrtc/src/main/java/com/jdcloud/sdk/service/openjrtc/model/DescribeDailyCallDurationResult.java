@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JrtcStatistic
- * 房间人员管理
+ * 数据统计
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -40,37 +40,40 @@ public class DescribeDailyCallDurationResult extends JdcloudResult implements ja
     /**
      * content
      */
+    
     private List<CallDuration> content;
 
 
     /**
-     * get content
-     *
-     * @return
-     */
+    * get content
+    *
+    * @return
+    */
     public List<CallDuration> getContent() {
         return content;
     }
 
     /**
-     * set content
-     *
-     * @param content
-     */
+    * set content
+    *
+    * @param content
+    */
     public void setContent(List<CallDuration> content) {
         this.content = content;
     }
 
 
+
     /**
-     * set content
-     *
-     * @param content
-     */
+    * set content
+    *
+    * @param content
+    */
     public DescribeDailyCallDurationResult content(List<CallDuration> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class DescribeDailyCallDurationResult extends JdcloudResult implements ja
         }
         this.content.add(content);
     }
-
 }

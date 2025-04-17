@@ -50,6 +50,7 @@ public class RemoveAllRoomUsersRequest extends JdcloudRequest implements java.io
     private Long roomId;
 
 
+
     /**
      * get 应用ID
      *
@@ -67,6 +68,7 @@ public class RemoveAllRoomUsersRequest extends JdcloudRequest implements java.io
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 房间ID
@@ -87,6 +89,7 @@ public class RemoveAllRoomUsersRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -96,6 +99,7 @@ public class RemoveAllRoomUsersRequest extends JdcloudRequest implements java.io
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 房间ID

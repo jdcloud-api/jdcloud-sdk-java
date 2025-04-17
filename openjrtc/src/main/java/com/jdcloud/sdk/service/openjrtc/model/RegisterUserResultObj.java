@@ -38,7 +38,7 @@ public class RegisterUserResultObj  implements java.io.Serializable {
     private String appId;
 
     /**
-     * 业务接入方的用户ID
+     * 业务接入方用户体系定义的userId
      */
     private String userId;
 
@@ -46,6 +46,7 @@ public class RegisterUserResultObj  implements java.io.Serializable {
      * jrtc系统用户ID
      */
     private Long peerId;
+
 
 
     /**
@@ -66,8 +67,9 @@ public class RegisterUserResultObj  implements java.io.Serializable {
         this.appId = appId;
     }
 
+
     /**
-     * get 业务接入方的用户ID
+     * get 业务接入方用户体系定义的userId
      *
      * @return
      */
@@ -76,13 +78,14 @@ public class RegisterUserResultObj  implements java.io.Serializable {
     }
 
     /**
-     * set 业务接入方的用户ID
+     * set 业务接入方用户体系定义的userId
      *
      * @param userId
      */
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get jrtc系统用户ID
@@ -103,6 +106,7 @@ public class RegisterUserResultObj  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -113,8 +117,9 @@ public class RegisterUserResultObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 业务接入方的用户ID
+     * set 业务接入方用户体系定义的userId
      *
      * @param userId
      */
@@ -122,6 +127,7 @@ public class RegisterUserResultObj  implements java.io.Serializable {
         this.userId = userId;
         return this;
     }
+
 
     /**
      * set jrtc系统用户ID

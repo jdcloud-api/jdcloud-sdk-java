@@ -40,7 +40,7 @@ public class RegisterUserResult extends JdcloudResult implements java.io.Seriali
     private String appId;
 
     /**
-     * 业务接入方的用户ID
+     * 业务接入方用户体系定义的userId
      */
     private String userId;
 
@@ -48,6 +48,7 @@ public class RegisterUserResult extends JdcloudResult implements java.io.Seriali
      * jrtc系统用户ID
      */
     private Long peerId;
+
 
 
     /**
@@ -68,8 +69,9 @@ public class RegisterUserResult extends JdcloudResult implements java.io.Seriali
         this.appId = appId;
     }
 
+
     /**
-     * get 业务接入方的用户ID
+     * get 业务接入方用户体系定义的userId
      *
      * @return
      */
@@ -78,13 +80,14 @@ public class RegisterUserResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 业务接入方的用户ID
+     * set 业务接入方用户体系定义的userId
      *
      * @param userId
      */
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get jrtc系统用户ID
@@ -105,6 +108,7 @@ public class RegisterUserResult extends JdcloudResult implements java.io.Seriali
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -115,8 +119,9 @@ public class RegisterUserResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
-     * set 业务接入方的用户ID
+     * set 业务接入方用户体系定义的userId
      *
      * @param userId
      */
@@ -124,6 +129,7 @@ public class RegisterUserResult extends JdcloudResult implements java.io.Seriali
         this.userId = userId;
         return this;
     }
+
 
     /**
      * set jrtc系统用户ID

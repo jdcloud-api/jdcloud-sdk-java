@@ -48,6 +48,7 @@ public class RecordRule  implements java.io.Serializable {
     private String filePrefix;
 
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -66,6 +67,7 @@ public class RecordRule  implements java.io.Serializable {
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId,当前不支持混流，且只支持一个userId,不指定时，默认录制本房间内所有userId的单路音视频流
      *
@@ -83,6 +85,7 @@ public class RecordRule  implements java.io.Serializable {
     public void setMcuUsers(String mcuUsers) {
         this.mcuUsers = mcuUsers;
     }
+
 
     /**
      * get 录制文件前缀
@@ -103,6 +106,7 @@ public class RecordRule  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -113,6 +117,7 @@ public class RecordRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId,当前不支持混流，且只支持一个userId,不指定时，默认录制本房间内所有userId的单路音视频流
      *
@@ -122,6 +127,7 @@ public class RecordRule  implements java.io.Serializable {
         this.mcuUsers = mcuUsers;
         return this;
     }
+
 
     /**
      * set 录制文件前缀

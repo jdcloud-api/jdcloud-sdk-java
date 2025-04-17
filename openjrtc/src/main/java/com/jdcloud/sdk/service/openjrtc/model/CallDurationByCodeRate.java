@@ -33,53 +33,31 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 应用ID
-     */
-    private String appId;
-
-    /**
      * 时间戳毫秒
      */
     private Long date;
 
     /**
-     * 音频通讯时长-second
+     * 音频通讯时长-分钟
      */
     private Long audio;
 
     /**
-     * (0,480p]通讯时长-second
+     * (0,480p]通讯时长-分钟
      */
     private Long lte_480;
 
     /**
-     * (480p,720p]通讯时长-second
+     * (480p,720p]通讯时长-分钟
      */
     private Long gt_480_lte_720;
 
     /**
-     * (720p,1080p]通讯时长-second
+     * (720p,1080p]通讯时长-分钟
      */
     private Long gte_720;
 
 
-    /**
-     * get 应用ID
-     *
-     * @return
-     */
-    public String getAppId() {
-        return appId;
-    }
-
-    /**
-     * set 应用ID
-     *
-     * @param appId
-     */
-    public void setAppId(String appId) {
-        this.appId = appId;
-    }
 
     /**
      * get 时间戳毫秒
@@ -99,8 +77,9 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
         this.date = date;
     }
 
+
     /**
-     * get 音频通讯时长-second
+     * get 音频通讯时长-分钟
      *
      * @return
      */
@@ -109,7 +88,7 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
     }
 
     /**
-     * set 音频通讯时长-second
+     * set 音频通讯时长-分钟
      *
      * @param audio
      */
@@ -117,8 +96,9 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
         this.audio = audio;
     }
 
+
     /**
-     * get (0,480p]通讯时长-second
+     * get (0,480p]通讯时长-分钟
      *
      * @return
      */
@@ -127,7 +107,7 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
     }
 
     /**
-     * set (0,480p]通讯时长-second
+     * set (0,480p]通讯时长-分钟
      *
      * @param lte_480
      */
@@ -135,8 +115,9 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
         this.lte_480 = lte_480;
     }
 
+
     /**
-     * get (480p,720p]通讯时长-second
+     * get (480p,720p]通讯时长-分钟
      *
      * @return
      */
@@ -145,7 +126,7 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
     }
 
     /**
-     * set (480p,720p]通讯时长-second
+     * set (480p,720p]通讯时长-分钟
      *
      * @param gt_480_lte_720
      */
@@ -153,8 +134,9 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
         this.gt_480_lte_720 = gt_480_lte_720;
     }
 
+
     /**
-     * get (720p,1080p]通讯时长-second
+     * get (720p,1080p]通讯时长-分钟
      *
      * @return
      */
@@ -163,7 +145,7 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
     }
 
     /**
-     * set (720p,1080p]通讯时长-second
+     * set (720p,1080p]通讯时长-分钟
      *
      * @param gte_720
      */
@@ -172,15 +154,6 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
     }
 
 
-    /**
-     * set 应用ID
-     *
-     * @param appId
-     */
-    public CallDurationByCodeRate appId(String appId) {
-        this.appId = appId;
-        return this;
-    }
 
     /**
      * set 时间戳毫秒
@@ -192,8 +165,9 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 音频通讯时长-second
+     * set 音频通讯时长-分钟
      *
      * @param audio
      */
@@ -202,8 +176,9 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set (0,480p]通讯时长-second
+     * set (0,480p]通讯时长-分钟
      *
      * @param lte_480
      */
@@ -212,8 +187,9 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set (480p,720p]通讯时长-second
+     * set (480p,720p]通讯时长-分钟
      *
      * @param gt_480_lte_720
      */
@@ -222,8 +198,9 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set (720p,1080p]通讯时长-second
+     * set (720p,1080p]通讯时长-分钟
      *
      * @param gte_720
      */

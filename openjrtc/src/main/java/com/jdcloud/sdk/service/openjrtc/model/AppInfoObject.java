@@ -65,6 +65,7 @@ public class AppInfoObject  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get 应用ID
      *
@@ -83,6 +84,7 @@ public class AppInfoObject  implements java.io.Serializable {
         this.appId = appId;
     }
 
+
     /**
      * get 应用名称
      *
@@ -100,6 +102,7 @@ public class AppInfoObject  implements java.io.Serializable {
     public void setAppName(String appName) {
         this.appName = appName;
     }
+
 
     /**
      * get 应用状态: OPEN-启用, CLOSE-停用
@@ -121,6 +124,7 @@ public class AppInfoObject  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 应用默认创建的房间类型 1-小房间；2-大房间
      *
@@ -138,6 +142,7 @@ public class AppInfoObject  implements java.io.Serializable {
     public void setRoomType(Integer roomType) {
         this.roomType = roomType;
     }
+
 
     /**
      * get 计费类型: Duration-按时长
@@ -159,6 +164,7 @@ public class AppInfoObject  implements java.io.Serializable {
         this.billType = billType;
     }
 
+
     /**
      * get 创建时间(UTC)
      *
@@ -178,6 +184,7 @@ public class AppInfoObject  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -188,6 +195,7 @@ public class AppInfoObject  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应用名称
      *
@@ -197,6 +205,7 @@ public class AppInfoObject  implements java.io.Serializable {
         this.appName = appName;
         return this;
     }
+
 
     /**
      * set 应用状态: OPEN-启用, CLOSE-停用
@@ -209,6 +218,7 @@ public class AppInfoObject  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应用默认创建的房间类型 1-小房间；2-大房间
      *
@@ -218,6 +228,7 @@ public class AppInfoObject  implements java.io.Serializable {
         this.roomType = roomType;
         return this;
     }
+
 
     /**
      * set 计费类型: Duration-按时长
@@ -229,6 +240,7 @@ public class AppInfoObject  implements java.io.Serializable {
         this.billType = billType;
         return this;
     }
+
 
     /**
      * set 创建时间(UTC)

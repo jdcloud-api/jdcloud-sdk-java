@@ -45,6 +45,7 @@ public class AddPushStreamRuleRequest extends JdcloudRequest implements java.io.
     /**
      * 推流规则
      */
+    
     private List<PushStreamRule> rules;
 
 
@@ -66,23 +67,25 @@ public class AddPushStreamRuleRequest extends JdcloudRequest implements java.io.
         this.appId = appId;
     }
 
+
     /**
-     * get 推流规则
-     *
-     * @return
-     */
+    * get 推流规则
+    *
+    * @return
+    */
     public List<PushStreamRule> getRules() {
         return rules;
     }
 
     /**
-     * set 推流规则
-     *
-     * @param rules
-     */
+    * set 推流规则
+    *
+    * @param rules
+    */
     public void setRules(List<PushStreamRule> rules) {
         this.rules = rules;
     }
+
 
 
     /**
@@ -95,15 +98,17 @@ public class AddPushStreamRuleRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
-     * set 推流规则
-     *
-     * @param rules
-     */
+    * set 推流规则
+    *
+    * @param rules
+    */
     public AddPushStreamRuleRequest rules(List<PushStreamRule> rules) {
         this.rules = rules;
         return this;
     }
+
 
 
     /**
@@ -117,5 +122,4 @@ public class AddPushStreamRuleRequest extends JdcloudRequest implements java.io.
         }
         this.rules.add(rule);
     }
-
 }

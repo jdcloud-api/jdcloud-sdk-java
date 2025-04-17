@@ -35,6 +35,8 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 允许通过条件过滤查询，支持的过滤字段如下：
            - status[eq] 在线状态 1-在线 2-离线
            - kind[eq] 在线状态 1-音频流 2-视频流 100-数据流
+           - deviceType[eq]  推流设备类型 kind&#x3D;1时,取值: 1-默认音频 2-蓝牙 3-手机音频 4-文件音频; kind&#x3D;2时,取值: 1-前置摄像头 2-后置摄像头 3-屏幕共享 4-文件视频;
+           - userIds[eq] 业务接入方用户体系定义的且在JRTC系统内注册过的userId,userId个数上限为50
            - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
            - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 
@@ -64,18 +66,21 @@ public class DescribeStreamInfosByUserRoomIdRequest extends JdcloudRequest imple
      * 传参字段描述:
 - status[eq] 在线状态 1-在线 2-离线
 - kind[eq] 在线状态 1-音频流 2-视频流 100-数据流
+- deviceType[eq] 推流设备类型 kind&#x3D;1时,取值: 1-默认音频 2-蓝牙 3-手机音频 4-文件音频; kind&#x3D;2时,取值: 1-前置摄像头 2-后置摄像头 3-屏幕共享 4-文件视频; 
+- userIds[eq] 业务接入方用户体系定义的且在JRTC系统内注册过的userId,userId个数上限为50
 - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
 - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 应用ID
      * Required:true
      */
     @Required
     private String appId;
+
 
 
     /**
@@ -96,6 +101,7 @@ public class DescribeStreamInfosByUserRoomIdRequest extends JdcloudRequest imple
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认值为 10；取值范围 [10, 100]
      *
@@ -113,6 +119,7 @@ public class DescribeStreamInfosByUserRoomIdRequest extends JdcloudRequest imple
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -132,33 +139,39 @@ public class DescribeStreamInfosByUserRoomIdRequest extends JdcloudRequest imple
         this.userRoomId = userRoomId;
     }
 
+
     /**
-     * get 传参字段描述:
+    * get 传参字段描述:
 - status[eq] 在线状态 1-在线 2-离线
 - kind[eq] 在线状态 1-音频流 2-视频流 100-数据流
+- deviceType[eq] 推流设备类型 kind&#x3D;1时,取值: 1-默认音频 2-蓝牙 3-手机音频 4-文件音频; kind&#x3D;2时,取值: 1-前置摄像头 2-后置摄像头 3-屏幕共享 4-文件视频; 
+- userIds[eq] 业务接入方用户体系定义的且在JRTC系统内注册过的userId,userId个数上限为50
 - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
 - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 传参字段描述:
+    * set 传参字段描述:
 - status[eq] 在线状态 1-在线 2-离线
 - kind[eq] 在线状态 1-音频流 2-视频流 100-数据流
+- deviceType[eq] 推流设备类型 kind&#x3D;1时,取值: 1-默认音频 2-蓝牙 3-手机音频 4-文件音频; kind&#x3D;2时,取值: 1-前置摄像头 2-后置摄像头 3-屏幕共享 4-文件视频; 
+- userIds[eq] 业务接入方用户体系定义的且在JRTC系统内注册过的userId,userId个数上限为50
 - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
 - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 应用ID
@@ -179,6 +192,7 @@ public class DescribeStreamInfosByUserRoomIdRequest extends JdcloudRequest imple
     }
 
 
+
     /**
      * set 页码；默认值为 1
      *
@@ -188,6 +202,7 @@ public class DescribeStreamInfosByUserRoomIdRequest extends JdcloudRequest imple
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；默认值为 10；取值范围 [10, 100]
@@ -199,6 +214,7 @@ public class DescribeStreamInfosByUserRoomIdRequest extends JdcloudRequest imple
         return this;
     }
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -209,20 +225,24 @@ public class DescribeStreamInfosByUserRoomIdRequest extends JdcloudRequest imple
         return this;
     }
 
+
     /**
-     * set 传参字段描述:
+    * set 传参字段描述:
 - status[eq] 在线状态 1-在线 2-离线
 - kind[eq] 在线状态 1-音频流 2-视频流 100-数据流
+- deviceType[eq] 推流设备类型 kind&#x3D;1时,取值: 1-默认音频 2-蓝牙 3-手机音频 4-文件音频; kind&#x3D;2时,取值: 1-前置摄像头 2-后置摄像头 3-屏幕共享 4-文件视频; 
+- userIds[eq] 业务接入方用户体系定义的且在JRTC系统内注册过的userId,userId个数上限为50
 - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
 - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeStreamInfosByUserRoomIdRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 应用ID
@@ -235,10 +255,13 @@ public class DescribeStreamInfosByUserRoomIdRequest extends JdcloudRequest imple
     }
 
 
+
     /**
      * add item to 传参字段描述:
 - status[eq] 在线状态 1-在线 2-离线
 - kind[eq] 在线状态 1-音频流 2-视频流 100-数据流
+- deviceType[eq] 推流设备类型 kind&#x3D;1时,取值: 1-默认音频 2-蓝牙 3-手机音频 4-文件音频; kind&#x3D;2时,取值: 1-前置摄像头 2-后置摄像头 3-屏幕共享 4-文件视频; 
+- userIds[eq] 业务接入方用户体系定义的且在JRTC系统内注册过的userId,userId个数上限为50
 - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
 - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 
@@ -251,5 +274,4 @@ public class DescribeStreamInfosByUserRoomIdRequest extends JdcloudRequest imple
         }
         this.filters.add(filter);
     }
-
 }

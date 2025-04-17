@@ -37,6 +37,27 @@ public class McuUser  implements java.io.Serializable {
      */
     private String userId;
 
+    /**
+     * 昵称
+     */
+    private String nickName;
+
+    /**
+     * 占位图URL
+     */
+    private String placeImageUrl;
+
+    /**
+     * 角色名称
+     */
+    private String roleName;
+
+    /**
+     * 是否严格保持数组顺序  0：不保持  1：保持
+     */
+    private Integer keepOrder;
+
+
 
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId
@@ -58,12 +79,133 @@ public class McuUser  implements java.io.Serializable {
 
 
     /**
+     * get 昵称
+     *
+     * @return
+     */
+    public String getNickName() {
+        return nickName;
+    }
+
+    /**
+     * set 昵称
+     *
+     * @param nickName
+     */
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+
+    /**
+     * get 占位图URL
+     *
+     * @return
+     */
+    public String getPlaceImageUrl() {
+        return placeImageUrl;
+    }
+
+    /**
+     * set 占位图URL
+     *
+     * @param placeImageUrl
+     */
+    public void setPlaceImageUrl(String placeImageUrl) {
+        this.placeImageUrl = placeImageUrl;
+    }
+
+
+    /**
+     * get 角色名称
+     *
+     * @return
+     */
+    public String getRoleName() {
+        return roleName;
+    }
+
+    /**
+     * set 角色名称
+     *
+     * @param roleName
+     */
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
+
+
+    /**
+     * get 是否严格保持数组顺序  0：不保持  1：保持
+     *
+     * @return
+     */
+    public Integer getKeepOrder() {
+        return keepOrder;
+    }
+
+    /**
+     * set 是否严格保持数组顺序  0：不保持  1：保持
+     *
+     * @param keepOrder
+     */
+    public void setKeepOrder(Integer keepOrder) {
+        this.keepOrder = keepOrder;
+    }
+
+
+
+    /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
      * @param userId
      */
     public McuUser userId(String userId) {
         this.userId = userId;
+        return this;
+    }
+
+
+    /**
+     * set 昵称
+     *
+     * @param nickName
+     */
+    public McuUser nickName(String nickName) {
+        this.nickName = nickName;
+        return this;
+    }
+
+
+    /**
+     * set 占位图URL
+     *
+     * @param placeImageUrl
+     */
+    public McuUser placeImageUrl(String placeImageUrl) {
+        this.placeImageUrl = placeImageUrl;
+        return this;
+    }
+
+
+    /**
+     * set 角色名称
+     *
+     * @param roleName
+     */
+    public McuUser roleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+
+
+    /**
+     * set 是否严格保持数组顺序  0：不保持  1：保持
+     *
+     * @param keepOrder
+     */
+    public McuUser keepOrder(Integer keepOrder) {
+        this.keepOrder = keepOrder;
         return this;
     }
 

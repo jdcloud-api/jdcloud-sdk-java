@@ -57,6 +57,7 @@ public class DescribeRoomUserRequest extends JdcloudRequest implements java.io.S
     private String appId;
 
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -75,6 +76,7 @@ public class DescribeRoomUserRequest extends JdcloudRequest implements java.io.S
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -92,6 +94,7 @@ public class DescribeRoomUserRequest extends JdcloudRequest implements java.io.S
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get 应用ID
@@ -112,6 +115,7 @@ public class DescribeRoomUserRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -122,6 +126,7 @@ public class DescribeRoomUserRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -131,6 +136,7 @@ public class DescribeRoomUserRequest extends JdcloudRequest implements java.io.S
         this.userId = userId;
         return this;
     }
+
 
     /**
      * set 应用ID

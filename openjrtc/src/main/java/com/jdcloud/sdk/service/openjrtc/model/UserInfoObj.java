@@ -58,6 +58,7 @@ public class UserInfoObj  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get 用户ID
      *
@@ -75,6 +76,7 @@ public class UserInfoObj  implements java.io.Serializable {
     public void setPeerId(Long peerId) {
         this.peerId = peerId;
     }
+
 
     /**
      * get 应用ID
@@ -94,6 +96,7 @@ public class UserInfoObj  implements java.io.Serializable {
         this.appId = appId;
     }
 
+
     /**
      * get 业务接入方的用户ID
      *
@@ -112,6 +115,7 @@ public class UserInfoObj  implements java.io.Serializable {
         this.userId = userId;
     }
 
+
     /**
      * get 是否临时用户
      *
@@ -129,6 +133,7 @@ public class UserInfoObj  implements java.io.Serializable {
     public void setTemporary(Boolean temporary) {
         this.temporary = temporary;
     }
+
 
     /**
      * get 创建时间
@@ -149,6 +154,7 @@ public class UserInfoObj  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户ID
      *
@@ -158,6 +164,7 @@ public class UserInfoObj  implements java.io.Serializable {
         this.peerId = peerId;
         return this;
     }
+
 
     /**
      * set 应用ID
@@ -169,6 +176,7 @@ public class UserInfoObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务接入方的用户ID
      *
@@ -179,6 +187,7 @@ public class UserInfoObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否临时用户
      *
@@ -188,6 +197,7 @@ public class UserInfoObj  implements java.io.Serializable {
         this.temporary = temporary;
         return this;
     }
+
 
     /**
      * set 创建时间

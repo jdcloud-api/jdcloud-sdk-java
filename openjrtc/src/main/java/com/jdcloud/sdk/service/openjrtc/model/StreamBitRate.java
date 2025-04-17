@@ -43,6 +43,7 @@ public class StreamBitRate  implements java.io.Serializable {
     private Long bitrate;
 
 
+
     /**
      * get 时间戳-毫秒
      *
@@ -60,6 +61,7 @@ public class StreamBitRate  implements java.io.Serializable {
     public void setDate(Long date) {
         this.date = date;
     }
+
 
     /**
      * get 码率
@@ -80,6 +82,7 @@ public class StreamBitRate  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 时间戳-毫秒
      *
@@ -89,6 +92,7 @@ public class StreamBitRate  implements java.io.Serializable {
         this.date = date;
         return this;
     }
+
 
     /**
      * set 码率

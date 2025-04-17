@@ -58,6 +58,7 @@ public class UpdateUserRoomRequest extends JdcloudRequest implements java.io.Ser
     private String appId;
 
 
+
     /**
      * get 用户房间号
      *
@@ -75,6 +76,7 @@ public class UpdateUserRoomRequest extends JdcloudRequest implements java.io.Ser
     public void setUserRoomId(String userRoomId) {
         this.userRoomId = userRoomId;
     }
+
 
     /**
      * get 房间名称
@@ -94,6 +96,7 @@ public class UpdateUserRoomRequest extends JdcloudRequest implements java.io.Ser
         this.roomName = roomName;
     }
 
+
     /**
      * get 房间类型 1-小房间；2-大房间
      *
@@ -111,6 +114,7 @@ public class UpdateUserRoomRequest extends JdcloudRequest implements java.io.Ser
     public void setRoomType(Integer roomType) {
         this.roomType = roomType;
     }
+
 
     /**
      * get 应用ID
@@ -131,6 +135,7 @@ public class UpdateUserRoomRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 用户房间号
      *
@@ -140,6 +145,7 @@ public class UpdateUserRoomRequest extends JdcloudRequest implements java.io.Ser
         this.userRoomId = userRoomId;
         return this;
     }
+
 
     /**
      * set 房间名称
@@ -151,6 +157,7 @@ public class UpdateUserRoomRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 房间类型 1-小房间；2-大房间
      *
@@ -160,6 +167,7 @@ public class UpdateUserRoomRequest extends JdcloudRequest implements java.io.Ser
         this.roomType = roomType;
         return this;
     }
+
 
     /**
      * set 应用ID

@@ -43,6 +43,7 @@ public class LiveDomainObj  implements java.io.Serializable {
     private String cname;
 
 
+
     /**
      * get domain
      *
@@ -60,6 +61,7 @@ public class LiveDomainObj  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get cname
@@ -80,6 +82,7 @@ public class LiveDomainObj  implements java.io.Serializable {
     }
 
 
+
     /**
      * set domain
      *
@@ -89,6 +92,7 @@ public class LiveDomainObj  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set cname

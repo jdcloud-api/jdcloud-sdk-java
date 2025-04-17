@@ -48,6 +48,7 @@ public class UpdateUserRoomRequestObj  implements java.io.Serializable {
     private Integer roomType;
 
 
+
     /**
      * get 用户房间号
      *
@@ -66,6 +67,7 @@ public class UpdateUserRoomRequestObj  implements java.io.Serializable {
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 房间名称
      *
@@ -83,6 +85,7 @@ public class UpdateUserRoomRequestObj  implements java.io.Serializable {
     public void setRoomName(String roomName) {
         this.roomName = roomName;
     }
+
 
     /**
      * get 房间类型 1-小房间；2-大房间
@@ -103,6 +106,7 @@ public class UpdateUserRoomRequestObj  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户房间号
      *
@@ -113,6 +117,7 @@ public class UpdateUserRoomRequestObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 房间名称
      *
@@ -122,6 +127,7 @@ public class UpdateUserRoomRequestObj  implements java.io.Serializable {
         this.roomName = roomName;
         return this;
     }
+
 
     /**
      * set 房间类型 1-小房间；2-大房间

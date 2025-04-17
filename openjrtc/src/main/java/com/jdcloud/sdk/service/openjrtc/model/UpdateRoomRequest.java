@@ -53,6 +53,7 @@ public class UpdateRoomRequest extends JdcloudRequest implements java.io.Seriali
     private String appId;
 
 
+
     /**
      * get 房间ID
      *
@@ -71,6 +72,7 @@ public class UpdateRoomRequest extends JdcloudRequest implements java.io.Seriali
         this.roomId = roomId;
     }
 
+
     /**
      * get 房间名称
      *
@@ -88,6 +90,7 @@ public class UpdateRoomRequest extends JdcloudRequest implements java.io.Seriali
     public void setRoomName(String roomName) {
         this.roomName = roomName;
     }
+
 
     /**
      * get 应用ID
@@ -108,6 +111,7 @@ public class UpdateRoomRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 房间ID
      *
@@ -118,6 +122,7 @@ public class UpdateRoomRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 房间名称
      *
@@ -127,6 +132,7 @@ public class UpdateRoomRequest extends JdcloudRequest implements java.io.Seriali
         this.roomName = roomName;
         return this;
     }
+
 
     /**
      * set 应用ID

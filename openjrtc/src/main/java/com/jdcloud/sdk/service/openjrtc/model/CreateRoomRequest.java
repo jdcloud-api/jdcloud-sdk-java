@@ -60,6 +60,7 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
     private Long peerId;
 
 
+
     /**
      * get 房间名称
      *
@@ -77,6 +78,7 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
     public void setRoomName(String roomName) {
         this.roomName = roomName;
     }
+
 
     /**
      * get 应用ID
@@ -96,6 +98,7 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
         this.appId = appId;
     }
 
+
     /**
      * get 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
      *
@@ -114,6 +117,7 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
         this.roomType = roomType;
     }
 
+
     /**
      * get 会议类型 0-即时会议 1-预约会议
      *
@@ -131,6 +135,7 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
     public void setMeetingType(Integer meetingType) {
         this.meetingType = meetingType;
     }
+
 
     /**
      * get 用户ID(创建者ID)
@@ -151,6 +156,7 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 房间名称
      *
@@ -160,6 +166,7 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
         this.roomName = roomName;
         return this;
     }
+
 
     /**
      * set 应用ID
@@ -171,6 +178,7 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
      *
@@ -181,6 +189,7 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 会议类型 0-即时会议 1-预约会议
      *
@@ -190,6 +199,7 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
         this.meetingType = meetingType;
         return this;
     }
+
 
     /**
      * set 用户ID(创建者ID)

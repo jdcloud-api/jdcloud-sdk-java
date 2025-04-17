@@ -60,6 +60,7 @@ public class DescribeUserByPeerResult extends JdcloudResult implements java.io.S
     private String createTime;
 
 
+
     /**
      * get 用户ID
      *
@@ -77,6 +78,7 @@ public class DescribeUserByPeerResult extends JdcloudResult implements java.io.S
     public void setPeerId(Long peerId) {
         this.peerId = peerId;
     }
+
 
     /**
      * get 应用ID
@@ -96,6 +98,7 @@ public class DescribeUserByPeerResult extends JdcloudResult implements java.io.S
         this.appId = appId;
     }
 
+
     /**
      * get 业务接入方的用户ID
      *
@@ -114,6 +117,7 @@ public class DescribeUserByPeerResult extends JdcloudResult implements java.io.S
         this.userId = userId;
     }
 
+
     /**
      * get 是否临时用户
      *
@@ -131,6 +135,7 @@ public class DescribeUserByPeerResult extends JdcloudResult implements java.io.S
     public void setTemporary(Boolean temporary) {
         this.temporary = temporary;
     }
+
 
     /**
      * get 创建时间
@@ -151,6 +156,7 @@ public class DescribeUserByPeerResult extends JdcloudResult implements java.io.S
     }
 
 
+
     /**
      * set 用户ID
      *
@@ -160,6 +166,7 @@ public class DescribeUserByPeerResult extends JdcloudResult implements java.io.S
         this.peerId = peerId;
         return this;
     }
+
 
     /**
      * set 应用ID
@@ -171,6 +178,7 @@ public class DescribeUserByPeerResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
      * set 业务接入方的用户ID
      *
@@ -181,6 +189,7 @@ public class DescribeUserByPeerResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
      * set 是否临时用户
      *
@@ -190,6 +199,7 @@ public class DescribeUserByPeerResult extends JdcloudResult implements java.io.S
         this.temporary = temporary;
         return this;
     }
+
 
     /**
      * set 创建时间

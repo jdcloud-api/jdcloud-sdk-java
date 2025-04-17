@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.openjrtc.model.McuUser;
 import com.jdcloud.sdk.service.openjrtc.model.OutputEncode;
+import com.jdcloud.sdk.service.openjrtc.model.WaterMarkInfo;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -49,7 +50,7 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
     private String userRoomId;
 
     /**
-     * 布局模板-支持参数1
+     * 布局模板 1-九宫格 2-左右屏幕分享 3-上下屏幕分享 4-画中画
      */
     private Integer layoutTemplate;
 
@@ -59,24 +60,55 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
     private String mainUserId;
 
     /**
+     * 1:摄像头  2：屏幕分享
+     */
+    private Integer mainVideoStreamType;
+
+    /**
+     * 是否显示音频图标 0：不显示  1:显示
+     */
+    private Integer showAudioIcon;
+
+    /**
+     * 是否显示昵称  0：不显示  1:显示
+     */
+    private Integer showNickName;
+
+    /**
      * 输出类型 1：录制 2：旁路转推
      */
     private Integer outputType;
 
     /**
-     * 输出名称
+     * 输出录制文件的名称
      */
     private String outputName;
 
     /**
-     * 参与混流人员参数
+     * 输出录制文件的格式：mp4、flv、m3u8；为空时默认m3u8。
      */
-    private List<McuUser> mcuUserInfos;
+    private String outputRecordFormat;
 
+    /**
+     * 转推直播地址（outputType&#x3D;2生效）
+     */
+    private String pushLiveUrl;
+
+    /**
+     * 参与混流人员参数；为空时，默认使用房间参会人进行混流
+     */
+    
+    private List<McuUser> mcuUserInfos;
     /**
      * 输出格式
      */
     private OutputEncode outputEncode;
+
+    /**
+     * 水印信息
+     */
+    private WaterMarkInfo waterMarkInfo;
+
 
 
     /**
@@ -97,6 +129,7 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
         this.appId = appId;
     }
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -115,8 +148,9 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
         this.userRoomId = userRoomId;
     }
 
+
     /**
-     * get 布局模板-支持参数1
+     * get 布局模板 1-九宫格 2-左右屏幕分享 3-上下屏幕分享 4-画中画
      *
      * @return
      */
@@ -125,13 +159,14 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 布局模板-支持参数1
+     * set 布局模板 1-九宫格 2-左右屏幕分享 3-上下屏幕分享 4-画中画
      *
      * @param layoutTemplate
      */
     public void setLayoutTemplate(Integer layoutTemplate) {
         this.layoutTemplate = layoutTemplate;
     }
+
 
     /**
      * get 主人员userId
@@ -151,6 +186,64 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
         this.mainUserId = mainUserId;
     }
 
+
+    /**
+     * get 1:摄像头  2：屏幕分享
+     *
+     * @return
+     */
+    public Integer getMainVideoStreamType() {
+        return mainVideoStreamType;
+    }
+
+    /**
+     * set 1:摄像头  2：屏幕分享
+     *
+     * @param mainVideoStreamType
+     */
+    public void setMainVideoStreamType(Integer mainVideoStreamType) {
+        this.mainVideoStreamType = mainVideoStreamType;
+    }
+
+
+    /**
+     * get 是否显示音频图标 0：不显示  1:显示
+     *
+     * @return
+     */
+    public Integer getShowAudioIcon() {
+        return showAudioIcon;
+    }
+
+    /**
+     * set 是否显示音频图标 0：不显示  1:显示
+     *
+     * @param showAudioIcon
+     */
+    public void setShowAudioIcon(Integer showAudioIcon) {
+        this.showAudioIcon = showAudioIcon;
+    }
+
+
+    /**
+     * get 是否显示昵称  0：不显示  1:显示
+     *
+     * @return
+     */
+    public Integer getShowNickName() {
+        return showNickName;
+    }
+
+    /**
+     * set 是否显示昵称  0：不显示  1:显示
+     *
+     * @param showNickName
+     */
+    public void setShowNickName(Integer showNickName) {
+        this.showNickName = showNickName;
+    }
+
+
     /**
      * get 输出类型 1：录制 2：旁路转推
      *
@@ -169,8 +262,9 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
         this.outputType = outputType;
     }
 
+
     /**
-     * get 输出名称
+     * get 输出录制文件的名称
      *
      * @return
      */
@@ -179,7 +273,7 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 输出名称
+     * set 输出录制文件的名称
      *
      * @param outputName
      */
@@ -187,23 +281,63 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
         this.outputName = outputName;
     }
 
+
     /**
-     * get 参与混流人员参数
+     * get 输出录制文件的格式：mp4、flv、m3u8；为空时默认m3u8。
      *
      * @return
      */
+    public String getOutputRecordFormat() {
+        return outputRecordFormat;
+    }
+
+    /**
+     * set 输出录制文件的格式：mp4、flv、m3u8；为空时默认m3u8。
+     *
+     * @param outputRecordFormat
+     */
+    public void setOutputRecordFormat(String outputRecordFormat) {
+        this.outputRecordFormat = outputRecordFormat;
+    }
+
+
+    /**
+     * get 转推直播地址（outputType&#x3D;2生效）
+     *
+     * @return
+     */
+    public String getPushLiveUrl() {
+        return pushLiveUrl;
+    }
+
+    /**
+     * set 转推直播地址（outputType&#x3D;2生效）
+     *
+     * @param pushLiveUrl
+     */
+    public void setPushLiveUrl(String pushLiveUrl) {
+        this.pushLiveUrl = pushLiveUrl;
+    }
+
+
+    /**
+    * get 参与混流人员参数；为空时，默认使用房间参会人进行混流
+    *
+    * @return
+    */
     public List<McuUser> getMcuUserInfos() {
         return mcuUserInfos;
     }
 
     /**
-     * set 参与混流人员参数
-     *
-     * @param mcuUserInfos
-     */
+    * set 参与混流人员参数；为空时，默认使用房间参会人进行混流
+    *
+    * @param mcuUserInfos
+    */
     public void setMcuUserInfos(List<McuUser> mcuUserInfos) {
         this.mcuUserInfos = mcuUserInfos;
     }
+
 
     /**
      * get 输出格式
@@ -225,6 +359,26 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
 
 
     /**
+     * get 水印信息
+     *
+     * @return
+     */
+    public WaterMarkInfo getWaterMarkInfo() {
+        return waterMarkInfo;
+    }
+
+    /**
+     * set 水印信息
+     *
+     * @param waterMarkInfo
+     */
+    public void setWaterMarkInfo(WaterMarkInfo waterMarkInfo) {
+        this.waterMarkInfo = waterMarkInfo;
+    }
+
+
+
+    /**
      * set 应用ID
      *
      * @param appId
@@ -233,6 +387,7 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -244,8 +399,9 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
-     * set 布局模板-支持参数1
+     * set 布局模板 1-九宫格 2-左右屏幕分享 3-上下屏幕分享 4-画中画
      *
      * @param layoutTemplate
      */
@@ -253,6 +409,7 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
         this.layoutTemplate = layoutTemplate;
         return this;
     }
+
 
     /**
      * set 主人员userId
@@ -264,6 +421,40 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
+    /**
+     * set 1:摄像头  2：屏幕分享
+     *
+     * @param mainVideoStreamType
+     */
+    public StartMcuTranscodeRequest mainVideoStreamType(Integer mainVideoStreamType) {
+        this.mainVideoStreamType = mainVideoStreamType;
+        return this;
+    }
+
+
+    /**
+     * set 是否显示音频图标 0：不显示  1:显示
+     *
+     * @param showAudioIcon
+     */
+    public StartMcuTranscodeRequest showAudioIcon(Integer showAudioIcon) {
+        this.showAudioIcon = showAudioIcon;
+        return this;
+    }
+
+
+    /**
+     * set 是否显示昵称  0：不显示  1:显示
+     *
+     * @param showNickName
+     */
+    public StartMcuTranscodeRequest showNickName(Integer showNickName) {
+        this.showNickName = showNickName;
+        return this;
+    }
+
+
     /**
      * set 输出类型 1：录制 2：旁路转推
      *
@@ -274,8 +465,9 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
-     * set 输出名称
+     * set 输出录制文件的名称
      *
      * @param outputName
      */
@@ -284,15 +476,39 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
-     * set 参与混流人员参数
+     * set 输出录制文件的格式：mp4、flv、m3u8；为空时默认m3u8。
      *
-     * @param mcuUserInfos
+     * @param outputRecordFormat
      */
+    public StartMcuTranscodeRequest outputRecordFormat(String outputRecordFormat) {
+        this.outputRecordFormat = outputRecordFormat;
+        return this;
+    }
+
+
+    /**
+     * set 转推直播地址（outputType&#x3D;2生效）
+     *
+     * @param pushLiveUrl
+     */
+    public StartMcuTranscodeRequest pushLiveUrl(String pushLiveUrl) {
+        this.pushLiveUrl = pushLiveUrl;
+        return this;
+    }
+
+
+    /**
+    * set 参与混流人员参数；为空时，默认使用房间参会人进行混流
+    *
+    * @param mcuUserInfos
+    */
     public StartMcuTranscodeRequest mcuUserInfos(List<McuUser> mcuUserInfos) {
         this.mcuUserInfos = mcuUserInfos;
         return this;
     }
+
 
     /**
      * set 输出格式
@@ -306,7 +522,19 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * add item to 参与混流人员参数
+     * set 水印信息
+     *
+     * @param waterMarkInfo
+     */
+    public StartMcuTranscodeRequest waterMarkInfo(WaterMarkInfo waterMarkInfo) {
+        this.waterMarkInfo = waterMarkInfo;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 参与混流人员参数；为空时，默认使用房间参会人进行混流
      *
      * @param mcuUserInfo
      */
@@ -316,5 +544,4 @@ public class StartMcuTranscodeRequest extends JdcloudRequest implements java.io.
         }
         this.mcuUserInfos.add(mcuUserInfo);
     }
-
 }

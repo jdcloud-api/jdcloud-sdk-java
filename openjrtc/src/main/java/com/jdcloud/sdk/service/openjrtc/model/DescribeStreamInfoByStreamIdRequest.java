@@ -50,6 +50,7 @@ public class DescribeStreamInfoByStreamIdRequest extends JdcloudRequest implemen
     private String appId;
 
 
+
     /**
      * get 流ID
      *
@@ -67,6 +68,7 @@ public class DescribeStreamInfoByStreamIdRequest extends JdcloudRequest implemen
     public void setStreamId(String streamId) {
         this.streamId = streamId;
     }
+
 
     /**
      * get 应用ID
@@ -87,6 +89,7 @@ public class DescribeStreamInfoByStreamIdRequest extends JdcloudRequest implemen
     }
 
 
+
     /**
      * set 流ID
      *
@@ -96,6 +99,7 @@ public class DescribeStreamInfoByStreamIdRequest extends JdcloudRequest implemen
         this.streamId = streamId;
         return this;
     }
+
 
     /**
      * set 应用ID

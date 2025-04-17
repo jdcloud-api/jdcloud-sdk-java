@@ -55,6 +55,7 @@ public class RegisterUserRoomRequest extends JdcloudRequest implements java.io.S
     private Integer roomType;
 
 
+
     /**
      * get 业务接入方定义的房间号
      *
@@ -72,6 +73,7 @@ public class RegisterUserRoomRequest extends JdcloudRequest implements java.io.S
     public void setUserRoomId(String userRoomId) {
         this.userRoomId = userRoomId;
     }
+
 
     /**
      * get 房间名称
@@ -91,6 +93,7 @@ public class RegisterUserRoomRequest extends JdcloudRequest implements java.io.S
         this.roomName = roomName;
     }
 
+
     /**
      * get 应用ID
      *
@@ -108,6 +111,7 @@ public class RegisterUserRoomRequest extends JdcloudRequest implements java.io.S
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅),默认取控制台APP对应的房间类型
@@ -128,6 +132,7 @@ public class RegisterUserRoomRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 业务接入方定义的房间号
      *
@@ -137,6 +142,7 @@ public class RegisterUserRoomRequest extends JdcloudRequest implements java.io.S
         this.userRoomId = userRoomId;
         return this;
     }
+
 
     /**
      * set 房间名称
@@ -148,6 +154,7 @@ public class RegisterUserRoomRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 应用ID
      *
@@ -157,6 +164,7 @@ public class RegisterUserRoomRequest extends JdcloudRequest implements java.io.S
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅),默认取控制台APP对应的房间类型

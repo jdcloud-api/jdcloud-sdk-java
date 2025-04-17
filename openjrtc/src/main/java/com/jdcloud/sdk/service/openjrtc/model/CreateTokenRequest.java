@@ -60,6 +60,7 @@ public class CreateTokenRequest extends JdcloudRequest implements java.io.Serial
     private Long timestamp;
 
 
+
     /**
      * get appId
      *
@@ -77,6 +78,7 @@ public class CreateTokenRequest extends JdcloudRequest implements java.io.Serial
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get appKey
@@ -96,6 +98,7 @@ public class CreateTokenRequest extends JdcloudRequest implements java.io.Serial
         this.appKey = appKey;
     }
 
+
     /**
      * get 用户id
      *
@@ -114,6 +117,7 @@ public class CreateTokenRequest extends JdcloudRequest implements java.io.Serial
         this.userId = userId;
     }
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -131,6 +135,7 @@ public class CreateTokenRequest extends JdcloudRequest implements java.io.Serial
     public void setUserRoomId(String userRoomId) {
         this.userRoomId = userRoomId;
     }
+
 
     /**
      * get 时间戳-毫秒
@@ -151,6 +156,7 @@ public class CreateTokenRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set appId
      *
@@ -160,6 +166,7 @@ public class CreateTokenRequest extends JdcloudRequest implements java.io.Serial
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set appKey
@@ -171,6 +178,7 @@ public class CreateTokenRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 用户id
      *
@@ -181,6 +189,7 @@ public class CreateTokenRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -190,6 +199,7 @@ public class CreateTokenRequest extends JdcloudRequest implements java.io.Serial
         this.userRoomId = userRoomId;
         return this;
     }
+
 
     /**
      * set 时间戳-毫秒

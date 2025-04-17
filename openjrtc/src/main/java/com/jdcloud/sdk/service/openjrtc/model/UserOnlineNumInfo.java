@@ -53,6 +53,7 @@ public class UserOnlineNumInfo  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get 应用ID
      *
@@ -70,6 +71,7 @@ public class UserOnlineNumInfo  implements java.io.Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 房间ID
@@ -89,6 +91,7 @@ public class UserOnlineNumInfo  implements java.io.Serializable {
         this.roomId = roomId;
     }
 
+
     /**
      * get 房间在线人数
      *
@@ -106,6 +109,7 @@ public class UserOnlineNumInfo  implements java.io.Serializable {
     public void setNumber(Integer number) {
         this.number = number;
     }
+
 
     /**
      * get 创建时间UTC
@@ -126,6 +130,7 @@ public class UserOnlineNumInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -135,6 +140,7 @@ public class UserOnlineNumInfo  implements java.io.Serializable {
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 房间ID
@@ -146,6 +152,7 @@ public class UserOnlineNumInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 房间在线人数
      *
@@ -155,6 +162,7 @@ public class UserOnlineNumInfo  implements java.io.Serializable {
         this.number = number;
         return this;
     }
+
 
     /**
      * set 创建时间UTC
