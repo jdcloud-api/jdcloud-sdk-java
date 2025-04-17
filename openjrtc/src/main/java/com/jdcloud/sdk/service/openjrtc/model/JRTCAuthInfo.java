@@ -73,6 +73,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
     private Boolean available;
 
 
+
     /**
      * get appId
      *
@@ -90,6 +91,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get appKey
@@ -109,6 +111,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
         this.appKey = appKey;
     }
 
+
     /**
      * get 用户id
      *
@@ -126,6 +129,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get 会议号
@@ -145,6 +149,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
         this.roomId = roomId;
     }
 
+
     /**
      * get 随机令牌
      *
@@ -162,6 +167,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
     public void setNonce(String nonce) {
         this.nonce = nonce;
     }
+
 
     /**
      * get 时间戳-毫秒
@@ -181,6 +187,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
         this.timestamp = timestamp;
     }
 
+
     /**
      * get token
      *
@@ -198,6 +205,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
     public void setToken(String token) {
         this.token = token;
     }
+
 
     /**
      * get 是否可用（true-可用,false-不可用）
@@ -218,6 +226,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set appId
      *
@@ -227,6 +236,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set appKey
@@ -238,6 +248,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户id
      *
@@ -247,6 +258,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
         this.userId = userId;
         return this;
     }
+
 
     /**
      * set 会议号
@@ -258,6 +270,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 随机令牌
      *
@@ -267,6 +280,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
         this.nonce = nonce;
         return this;
     }
+
 
     /**
      * set 时间戳-毫秒
@@ -278,6 +292,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set token
      *
@@ -287,6 +302,7 @@ public class JRTCAuthInfo  implements java.io.Serializable {
         this.token = token;
         return this;
     }
+
 
     /**
      * set 是否可用（true-可用,false-不可用）

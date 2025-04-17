@@ -58,6 +58,7 @@ public class RoomUsersNumInfoObj  implements java.io.Serializable {
     private Integer total;
 
 
+
     /**
      * get appId
      *
@@ -75,6 +76,7 @@ public class RoomUsersNumInfoObj  implements java.io.Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 用户定义的房间号
@@ -94,6 +96,7 @@ public class RoomUsersNumInfoObj  implements java.io.Serializable {
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 在线人数
      *
@@ -112,6 +115,7 @@ public class RoomUsersNumInfoObj  implements java.io.Serializable {
         this.onlineNumber = onlineNumber;
     }
 
+
     /**
      * get 离线人数
      *
@@ -129,6 +133,7 @@ public class RoomUsersNumInfoObj  implements java.io.Serializable {
     public void setOfflineNumber(Integer offlineNumber) {
         this.offlineNumber = offlineNumber;
     }
+
 
     /**
      * get 合计人数
@@ -149,6 +154,7 @@ public class RoomUsersNumInfoObj  implements java.io.Serializable {
     }
 
 
+
     /**
      * set appId
      *
@@ -158,6 +164,7 @@ public class RoomUsersNumInfoObj  implements java.io.Serializable {
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 用户定义的房间号
@@ -169,6 +176,7 @@ public class RoomUsersNumInfoObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 在线人数
      *
@@ -179,6 +187,7 @@ public class RoomUsersNumInfoObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 离线人数
      *
@@ -188,6 +197,7 @@ public class RoomUsersNumInfoObj  implements java.io.Serializable {
         this.offlineNumber = offlineNumber;
         return this;
     }
+
 
     /**
      * set 合计人数

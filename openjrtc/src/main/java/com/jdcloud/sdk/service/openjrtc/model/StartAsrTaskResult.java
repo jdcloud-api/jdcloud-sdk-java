@@ -34,7 +34,163 @@ public class StartAsrTaskResult extends JdcloudResult implements java.io.Seriali
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 应用ID
+     */
+    private String appId;
 
+    /**
+     * 业务接入方定义的且在JRTC系统内注册过的房间号
+     */
+    private String userRoomId;
+
+    /**
+     * 语音识别场景 0-全部识别转文字
+     */
+    private Integer asrTaskType;
+
+    /**
+     * 房间类型
+1-小房间(音频单流订阅)
+2-大房间(音频固定订阅)
+创建时未指定,默认为控制台APP对应的房间类型
+
+     */
+    private Integer roomType;
+
+
+
+    /**
+     * get 应用ID
+     *
+     * @return
+     */
+    public String getAppId() {
+        return appId;
+    }
+
+    /**
+     * set 应用ID
+     *
+     * @param appId
+     */
+    public void setAppId(String appId) {
+        this.appId = appId;
+    }
+
+
+    /**
+     * get 业务接入方定义的且在JRTC系统内注册过的房间号
+     *
+     * @return
+     */
+    public String getUserRoomId() {
+        return userRoomId;
+    }
+
+    /**
+     * set 业务接入方定义的且在JRTC系统内注册过的房间号
+     *
+     * @param userRoomId
+     */
+    public void setUserRoomId(String userRoomId) {
+        this.userRoomId = userRoomId;
+    }
+
+
+    /**
+     * get 语音识别场景 0-全部识别转文字
+     *
+     * @return
+     */
+    public Integer getAsrTaskType() {
+        return asrTaskType;
+    }
+
+    /**
+     * set 语音识别场景 0-全部识别转文字
+     *
+     * @param asrTaskType
+     */
+    public void setAsrTaskType(Integer asrTaskType) {
+        this.asrTaskType = asrTaskType;
+    }
+
+
+    /**
+     * get 房间类型
+1-小房间(音频单流订阅)
+2-大房间(音频固定订阅)
+创建时未指定,默认为控制台APP对应的房间类型
+
+     *
+     * @return
+     */
+    public Integer getRoomType() {
+        return roomType;
+    }
+
+    /**
+     * set 房间类型
+1-小房间(音频单流订阅)
+2-大房间(音频固定订阅)
+创建时未指定,默认为控制台APP对应的房间类型
+
+     *
+     * @param roomType
+     */
+    public void setRoomType(Integer roomType) {
+        this.roomType = roomType;
+    }
+
+
+
+    /**
+     * set 应用ID
+     *
+     * @param appId
+     */
+    public StartAsrTaskResult appId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+
+
+    /**
+     * set 业务接入方定义的且在JRTC系统内注册过的房间号
+     *
+     * @param userRoomId
+     */
+    public StartAsrTaskResult userRoomId(String userRoomId) {
+        this.userRoomId = userRoomId;
+        return this;
+    }
+
+
+    /**
+     * set 语音识别场景 0-全部识别转文字
+     *
+     * @param asrTaskType
+     */
+    public StartAsrTaskResult asrTaskType(Integer asrTaskType) {
+        this.asrTaskType = asrTaskType;
+        return this;
+    }
+
+
+    /**
+     * set 房间类型
+1-小房间(音频单流订阅)
+2-大房间(音频固定订阅)
+创建时未指定,默认为控制台APP对应的房间类型
+
+     *
+     * @param roomType
+     */
+    public StartAsrTaskResult roomType(Integer roomType) {
+        this.roomType = roomType;
+        return this;
+    }
 
 
 }

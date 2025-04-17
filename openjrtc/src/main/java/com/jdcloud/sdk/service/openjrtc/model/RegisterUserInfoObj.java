@@ -63,6 +63,7 @@ public class RegisterUserInfoObj  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get 应用ID
      *
@@ -80,6 +81,7 @@ public class RegisterUserInfoObj  implements java.io.Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get jrtc系统用户id
@@ -99,6 +101,7 @@ public class RegisterUserInfoObj  implements java.io.Serializable {
         this.peerId = peerId;
     }
 
+
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -116,6 +119,7 @@ public class RegisterUserInfoObj  implements java.io.Serializable {
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get 用户名称
@@ -135,6 +139,7 @@ public class RegisterUserInfoObj  implements java.io.Serializable {
         this.userName = userName;
     }
 
+
     /**
      * get 是否临时用户
      *
@@ -152,6 +157,7 @@ public class RegisterUserInfoObj  implements java.io.Serializable {
     public void setTemporary(Boolean temporary) {
         this.temporary = temporary;
     }
+
 
     /**
      * get 创建时间
@@ -172,6 +178,7 @@ public class RegisterUserInfoObj  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -181,6 +188,7 @@ public class RegisterUserInfoObj  implements java.io.Serializable {
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set jrtc系统用户id
@@ -192,6 +200,7 @@ public class RegisterUserInfoObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -201,6 +210,7 @@ public class RegisterUserInfoObj  implements java.io.Serializable {
         this.userId = userId;
         return this;
     }
+
 
     /**
      * set 用户名称
@@ -212,6 +222,7 @@ public class RegisterUserInfoObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否临时用户
      *
@@ -221,6 +232,7 @@ public class RegisterUserInfoObj  implements java.io.Serializable {
         this.temporary = temporary;
         return this;
     }
+
 
     /**
      * set 创建时间

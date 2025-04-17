@@ -68,6 +68,7 @@ public class ValidateTokenInfo  implements java.io.Serializable {
     private String token;
 
 
+
     /**
      * get appId
      *
@@ -85,6 +86,7 @@ public class ValidateTokenInfo  implements java.io.Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get appKey
@@ -104,6 +106,7 @@ public class ValidateTokenInfo  implements java.io.Serializable {
         this.appKey = appKey;
     }
 
+
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -121,6 +124,7 @@ public class ValidateTokenInfo  implements java.io.Serializable {
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -140,6 +144,7 @@ public class ValidateTokenInfo  implements java.io.Serializable {
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 随机令牌
      *
@@ -158,6 +163,7 @@ public class ValidateTokenInfo  implements java.io.Serializable {
         this.nonce = nonce;
     }
 
+
     /**
      * get 时间戳-毫秒
      *
@@ -175,6 +181,7 @@ public class ValidateTokenInfo  implements java.io.Serializable {
     public void setTimestamp(Long timestamp) {
         this.timestamp = timestamp;
     }
+
 
     /**
      * get token
@@ -195,6 +202,7 @@ public class ValidateTokenInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set appId
      *
@@ -204,6 +212,7 @@ public class ValidateTokenInfo  implements java.io.Serializable {
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set appKey
@@ -215,6 +224,7 @@ public class ValidateTokenInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -224,6 +234,7 @@ public class ValidateTokenInfo  implements java.io.Serializable {
         this.userId = userId;
         return this;
     }
+
 
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -235,6 +246,7 @@ public class ValidateTokenInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 随机令牌
      *
@@ -245,6 +257,7 @@ public class ValidateTokenInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 时间戳-毫秒
      *
@@ -254,6 +267,7 @@ public class ValidateTokenInfo  implements java.io.Serializable {
         this.timestamp = timestamp;
         return this;
     }
+
 
     /**
      * set token

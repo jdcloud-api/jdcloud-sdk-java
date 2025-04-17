@@ -43,6 +43,7 @@ public class PushStreamRule  implements java.io.Serializable {
     private String mcuUsers;
 
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -60,6 +61,7 @@ public class PushStreamRule  implements java.io.Serializable {
     public void setUserRoomId(String userRoomId) {
         this.userRoomId = userRoomId;
     }
+
 
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId,当前不支持混流，且只支持一个userId,不指定时，默认录转推房间内所有userId的单路音视频流
@@ -80,6 +82,7 @@ public class PushStreamRule  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -89,6 +92,7 @@ public class PushStreamRule  implements java.io.Serializable {
         this.userRoomId = userRoomId;
         return this;
     }
+
 
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId,当前不支持混流，且只支持一个userId,不指定时，默认录转推房间内所有userId的单路音视频流

@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JrtcStatistic
- * 房间人员管理
+ * 数据统计
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -66,6 +66,7 @@ public class DescribeUserRecordByRoomResult extends JdcloudResult implements jav
     /**
      * 分页内容
      */
+    
     private List<RoomUserRecord> content;
 
 
@@ -87,6 +88,7 @@ public class DescribeUserRecordByRoomResult extends JdcloudResult implements jav
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页数量
      *
@@ -104,6 +106,7 @@ public class DescribeUserRecordByRoomResult extends JdcloudResult implements jav
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 查询总数
@@ -123,6 +126,7 @@ public class DescribeUserRecordByRoomResult extends JdcloudResult implements jav
         this.totalElements = totalElements;
     }
 
+
     /**
      * get 总页数
      *
@@ -141,23 +145,25 @@ public class DescribeUserRecordByRoomResult extends JdcloudResult implements jav
         this.totalPages = totalPages;
     }
 
+
     /**
-     * get 分页内容
-     *
-     * @return
-     */
+    * get 分页内容
+    *
+    * @return
+    */
     public List<RoomUserRecord> getContent() {
         return content;
     }
 
     /**
-     * set 分页内容
-     *
-     * @param content
-     */
+    * set 分页内容
+    *
+    * @param content
+    */
     public void setContent(List<RoomUserRecord> content) {
         this.content = content;
     }
+
 
 
     /**
@@ -170,6 +176,7 @@ public class DescribeUserRecordByRoomResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
      * set 每页数量
      *
@@ -179,6 +186,7 @@ public class DescribeUserRecordByRoomResult extends JdcloudResult implements jav
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 查询总数
@@ -190,6 +198,7 @@ public class DescribeUserRecordByRoomResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
      * set 总页数
      *
@@ -200,15 +209,17 @@ public class DescribeUserRecordByRoomResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
-     * set 分页内容
-     *
-     * @param content
-     */
+    * set 分页内容
+    *
+    * @param content
+    */
     public DescribeUserRecordByRoomResult content(List<RoomUserRecord> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -222,5 +233,4 @@ public class DescribeUserRecordByRoomResult extends JdcloudResult implements jav
         }
         this.content.add(content);
     }
-
 }

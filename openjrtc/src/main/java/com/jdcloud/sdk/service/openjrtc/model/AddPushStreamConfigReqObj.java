@@ -48,6 +48,7 @@ public class AddPushStreamConfigReqObj  implements java.io.Serializable {
     private String pushDomain;
 
 
+
     /**
      * get 应用ID
      *
@@ -66,6 +67,7 @@ public class AddPushStreamConfigReqObj  implements java.io.Serializable {
         this.appId = appId;
     }
 
+
     /**
      * get 转推类型  1-全局自动 2-指定流转推
      *
@@ -83,6 +85,7 @@ public class AddPushStreamConfigReqObj  implements java.io.Serializable {
     public void setPushType(Integer pushType) {
         this.pushType = pushType;
     }
+
 
     /**
      * get 推流域名
@@ -103,6 +106,7 @@ public class AddPushStreamConfigReqObj  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -113,6 +117,7 @@ public class AddPushStreamConfigReqObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 转推类型  1-全局自动 2-指定流转推
      *
@@ -122,6 +127,7 @@ public class AddPushStreamConfigReqObj  implements java.io.Serializable {
         this.pushType = pushType;
         return this;
     }
+
 
     /**
      * set 推流域名

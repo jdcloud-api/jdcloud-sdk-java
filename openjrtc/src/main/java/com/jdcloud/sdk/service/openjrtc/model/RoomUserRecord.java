@@ -83,6 +83,7 @@ public class RoomUserRecord  implements java.io.Serializable {
     private String leaveTime;
 
 
+
     /**
      * get 应用ID
      *
@@ -100,6 +101,7 @@ public class RoomUserRecord  implements java.io.Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的用户id
@@ -119,6 +121,7 @@ public class RoomUserRecord  implements java.io.Serializable {
         this.userId = userId;
     }
 
+
     /**
      * get 昵称
      *
@@ -136,6 +139,7 @@ public class RoomUserRecord  implements java.io.Serializable {
     public void setNickName(String nickName) {
         this.nickName = nickName;
     }
+
 
     /**
      * get 设备名称
@@ -155,6 +159,7 @@ public class RoomUserRecord  implements java.io.Serializable {
         this.deviceName = deviceName;
     }
 
+
     /**
      * get 设备类型
      *
@@ -172,6 +177,7 @@ public class RoomUserRecord  implements java.io.Serializable {
     public void setDeviceType(String deviceType) {
         this.deviceType = deviceType;
     }
+
 
     /**
      * get 设备型号
@@ -191,6 +197,7 @@ public class RoomUserRecord  implements java.io.Serializable {
         this.deviceMode = deviceMode;
     }
 
+
     /**
      * get 系统版本
      *
@@ -208,6 +215,7 @@ public class RoomUserRecord  implements java.io.Serializable {
     public void setOsVersion(String osVersion) {
         this.osVersion = osVersion;
     }
+
 
     /**
      * get 持续时长
@@ -227,6 +235,7 @@ public class RoomUserRecord  implements java.io.Serializable {
         this.duration = duration;
     }
 
+
     /**
      * get 加入时间
      *
@@ -244,6 +253,7 @@ public class RoomUserRecord  implements java.io.Serializable {
     public void setJoinTime(String joinTime) {
         this.joinTime = joinTime;
     }
+
 
     /**
      * get 离开时间
@@ -264,6 +274,7 @@ public class RoomUserRecord  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -273,6 +284,7 @@ public class RoomUserRecord  implements java.io.Serializable {
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的用户id
@@ -284,6 +296,7 @@ public class RoomUserRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 昵称
      *
@@ -293,6 +306,7 @@ public class RoomUserRecord  implements java.io.Serializable {
         this.nickName = nickName;
         return this;
     }
+
 
     /**
      * set 设备名称
@@ -304,6 +318,7 @@ public class RoomUserRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 设备类型
      *
@@ -313,6 +328,7 @@ public class RoomUserRecord  implements java.io.Serializable {
         this.deviceType = deviceType;
         return this;
     }
+
 
     /**
      * set 设备型号
@@ -324,6 +340,7 @@ public class RoomUserRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 系统版本
      *
@@ -333,6 +350,7 @@ public class RoomUserRecord  implements java.io.Serializable {
         this.osVersion = osVersion;
         return this;
     }
+
 
     /**
      * set 持续时长
@@ -344,6 +362,7 @@ public class RoomUserRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 加入时间
      *
@@ -353,6 +372,7 @@ public class RoomUserRecord  implements java.io.Serializable {
         this.joinTime = joinTime;
         return this;
     }
+
 
     /**
      * set 离开时间

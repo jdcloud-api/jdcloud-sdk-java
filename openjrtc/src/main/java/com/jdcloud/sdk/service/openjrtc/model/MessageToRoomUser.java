@@ -58,6 +58,7 @@ public class MessageToRoomUser  implements java.io.Serializable {
     private String message;
 
 
+
     /**
      * get 应用ID
      *
@@ -75,6 +76,7 @@ public class MessageToRoomUser  implements java.io.Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -94,6 +96,7 @@ public class MessageToRoomUser  implements java.io.Serializable {
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -112,6 +115,7 @@ public class MessageToRoomUser  implements java.io.Serializable {
         this.userId = userId;
     }
 
+
     /**
      * get 事件名称
      *
@@ -129,6 +133,7 @@ public class MessageToRoomUser  implements java.io.Serializable {
     public void setEventName(String eventName) {
         this.eventName = eventName;
     }
+
 
     /**
      * get 自定义信令消息
@@ -149,6 +154,7 @@ public class MessageToRoomUser  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -158,6 +164,7 @@ public class MessageToRoomUser  implements java.io.Serializable {
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -169,6 +176,7 @@ public class MessageToRoomUser  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -179,6 +187,7 @@ public class MessageToRoomUser  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 事件名称
      *
@@ -188,6 +197,7 @@ public class MessageToRoomUser  implements java.io.Serializable {
         this.eventName = eventName;
         return this;
     }
+
 
     /**
      * set 自定义信令消息

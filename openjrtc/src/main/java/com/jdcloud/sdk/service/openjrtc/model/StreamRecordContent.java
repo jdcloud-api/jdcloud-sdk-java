@@ -57,6 +57,7 @@ public class StreamRecordContent  implements java.io.Serializable {
     /**
      * 推流历史记录列表
      */
+    
     private List<StreamRecordInfo> content;
 
 
@@ -78,6 +79,7 @@ public class StreamRecordContent  implements java.io.Serializable {
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页数量
      *
@@ -95,6 +97,7 @@ public class StreamRecordContent  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 查询总数
@@ -114,6 +117,7 @@ public class StreamRecordContent  implements java.io.Serializable {
         this.totalElements = totalElements;
     }
 
+
     /**
      * get 总页数
      *
@@ -132,23 +136,25 @@ public class StreamRecordContent  implements java.io.Serializable {
         this.totalPages = totalPages;
     }
 
+
     /**
-     * get 推流历史记录列表
-     *
-     * @return
-     */
+    * get 推流历史记录列表
+    *
+    * @return
+    */
     public List<StreamRecordInfo> getContent() {
         return content;
     }
 
     /**
-     * set 推流历史记录列表
-     *
-     * @param content
-     */
+    * set 推流历史记录列表
+    *
+    * @param content
+    */
     public void setContent(List<StreamRecordInfo> content) {
         this.content = content;
     }
+
 
 
     /**
@@ -161,6 +167,7 @@ public class StreamRecordContent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 每页数量
      *
@@ -170,6 +177,7 @@ public class StreamRecordContent  implements java.io.Serializable {
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 查询总数
@@ -181,6 +189,7 @@ public class StreamRecordContent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 总页数
      *
@@ -191,15 +200,17 @@ public class StreamRecordContent  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 推流历史记录列表
-     *
-     * @param content
-     */
+    * set 推流历史记录列表
+    *
+    * @param content
+    */
     public StreamRecordContent content(List<StreamRecordInfo> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class StreamRecordContent  implements java.io.Serializable {
         }
         this.content.add(content);
     }
-
 }

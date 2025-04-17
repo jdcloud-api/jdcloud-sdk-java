@@ -34,7 +34,42 @@ public class StartMcuTranscodeResult extends JdcloudResult implements java.io.Se
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 混流任务ID
+     */
+    private String taskId;
 
+
+
+    /**
+     * get 混流任务ID
+     *
+     * @return
+     */
+    public String getTaskId() {
+        return taskId;
+    }
+
+    /**
+     * set 混流任务ID
+     *
+     * @param taskId
+     */
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
+    }
+
+
+
+    /**
+     * set 混流任务ID
+     *
+     * @param taskId
+     */
+    public StartMcuTranscodeResult taskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
 
 
 }

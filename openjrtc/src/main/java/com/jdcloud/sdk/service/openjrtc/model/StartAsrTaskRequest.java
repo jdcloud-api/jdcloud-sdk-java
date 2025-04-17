@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.openjrtc.model;
 
+import com.jdcloud.sdk.service.openjrtc.model.Subtitle;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -45,9 +46,25 @@ public class StartAsrTaskRequest extends JdcloudRequest implements java.io.Seria
     private String userRoomId;
 
     /**
-     * 语音识别场景 0-全部识别转文字
+     * 语音任务类型 0-转写 1-翻译； asrTaskType &#x3D;0 Subtitle不生效；asrTaskType &#x3D;1 Subtitle.enableTranslate&#x3D;true(转写+翻译)Subtitle.enableTranslate&#x3D;false(只转写)
      */
     private Integer asrTaskType;
+
+    /**
+     * ai模型
+     */
+    private String aiModel;
+
+    /**
+     * 附加参数
+     */
+    private String extInfo;
+
+    /**
+     * 字幕配置
+     */
+    private Subtitle subtitle;
+
 
 
     /**
@@ -68,6 +85,7 @@ public class StartAsrTaskRequest extends JdcloudRequest implements java.io.Seria
         this.appId = appId;
     }
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -86,8 +104,9 @@ public class StartAsrTaskRequest extends JdcloudRequest implements java.io.Seria
         this.userRoomId = userRoomId;
     }
 
+
     /**
-     * get 语音识别场景 0-全部识别转文字
+     * get 语音任务类型 0-转写 1-翻译； asrTaskType &#x3D;0 Subtitle不生效；asrTaskType &#x3D;1 Subtitle.enableTranslate&#x3D;true(转写+翻译)Subtitle.enableTranslate&#x3D;false(只转写)
      *
      * @return
      */
@@ -96,13 +115,71 @@ public class StartAsrTaskRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 语音识别场景 0-全部识别转文字
+     * set 语音任务类型 0-转写 1-翻译； asrTaskType &#x3D;0 Subtitle不生效；asrTaskType &#x3D;1 Subtitle.enableTranslate&#x3D;true(转写+翻译)Subtitle.enableTranslate&#x3D;false(只转写)
      *
      * @param asrTaskType
      */
     public void setAsrTaskType(Integer asrTaskType) {
         this.asrTaskType = asrTaskType;
     }
+
+
+    /**
+     * get ai模型
+     *
+     * @return
+     */
+    public String getAiModel() {
+        return aiModel;
+    }
+
+    /**
+     * set ai模型
+     *
+     * @param aiModel
+     */
+    public void setAiModel(String aiModel) {
+        this.aiModel = aiModel;
+    }
+
+
+    /**
+     * get 附加参数
+     *
+     * @return
+     */
+    public String getExtInfo() {
+        return extInfo;
+    }
+
+    /**
+     * set 附加参数
+     *
+     * @param extInfo
+     */
+    public void setExtInfo(String extInfo) {
+        this.extInfo = extInfo;
+    }
+
+
+    /**
+     * get 字幕配置
+     *
+     * @return
+     */
+    public Subtitle getSubtitle() {
+        return subtitle;
+    }
+
+    /**
+     * set 字幕配置
+     *
+     * @param subtitle
+     */
+    public void setSubtitle(Subtitle subtitle) {
+        this.subtitle = subtitle;
+    }
+
 
 
     /**
@@ -115,6 +192,7 @@ public class StartAsrTaskRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -125,13 +203,47 @@ public class StartAsrTaskRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
-     * set 语音识别场景 0-全部识别转文字
+     * set 语音任务类型 0-转写 1-翻译； asrTaskType &#x3D;0 Subtitle不生效；asrTaskType &#x3D;1 Subtitle.enableTranslate&#x3D;true(转写+翻译)Subtitle.enableTranslate&#x3D;false(只转写)
      *
      * @param asrTaskType
      */
     public StartAsrTaskRequest asrTaskType(Integer asrTaskType) {
         this.asrTaskType = asrTaskType;
+        return this;
+    }
+
+
+    /**
+     * set ai模型
+     *
+     * @param aiModel
+     */
+    public StartAsrTaskRequest aiModel(String aiModel) {
+        this.aiModel = aiModel;
+        return this;
+    }
+
+
+    /**
+     * set 附加参数
+     *
+     * @param extInfo
+     */
+    public StartAsrTaskRequest extInfo(String extInfo) {
+        this.extInfo = extInfo;
+        return this;
+    }
+
+
+    /**
+     * set 字幕配置
+     *
+     * @param subtitle
+     */
+    public StartAsrTaskRequest subtitle(Subtitle subtitle) {
+        this.subtitle = subtitle;
         return this;
     }
 

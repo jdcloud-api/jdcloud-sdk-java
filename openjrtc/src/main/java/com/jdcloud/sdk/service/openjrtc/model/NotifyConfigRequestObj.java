@@ -37,37 +37,40 @@ public class NotifyConfigRequestObj  implements java.io.Serializable {
     /**
      * 回调配置
      */
+    
     private List<NotifyConfigObj> content;
 
 
     /**
-     * get 回调配置
-     *
-     * @return
-     */
+    * get 回调配置
+    *
+    * @return
+    */
     public List<NotifyConfigObj> getContent() {
         return content;
     }
 
     /**
-     * set 回调配置
-     *
-     * @param content
-     */
+    * set 回调配置
+    *
+    * @param content
+    */
     public void setContent(List<NotifyConfigObj> content) {
         this.content = content;
     }
 
 
+
     /**
-     * set 回调配置
-     *
-     * @param content
-     */
+    * set 回调配置
+    *
+    * @param content
+    */
     public NotifyConfigRequestObj content(List<NotifyConfigObj> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -81,5 +84,4 @@ public class NotifyConfigRequestObj  implements java.io.Serializable {
         }
         this.content.add(content);
     }
-
 }

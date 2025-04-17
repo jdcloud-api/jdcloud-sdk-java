@@ -55,6 +55,7 @@ enum:
      * Required:true
      */
     @Required
+    
     private List<String> values;
 
 
@@ -75,6 +76,7 @@ enum:
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 过滤器操作符,默认值为 eq
@@ -100,23 +102,25 @@ enum:
         this.operator = operator;
     }
 
+
     /**
-     * get 过滤器属性值
-     *
-     * @return
-     */
+    * get 过滤器属性值
+    *
+    * @return
+    */
     public List<String> getValues() {
         return values;
     }
 
     /**
-     * set 过滤器属性值
-     *
-     * @param values
-     */
+    * set 过滤器属性值
+    *
+    * @param values
+    */
     public void setValues(List<String> values) {
         this.values = values;
     }
+
 
 
     /**
@@ -128,6 +132,7 @@ enum:
         this.name = name;
         return this;
     }
+
 
     /**
      * set 过滤器操作符,默认值为 eq
@@ -142,15 +147,17 @@ enum:
         return this;
     }
 
+
     /**
-     * set 过滤器属性值
-     *
-     * @param values
-     */
+    * set 过滤器属性值
+    *
+    * @param values
+    */
     public Filter values(List<String> values) {
         this.values = values;
         return this;
     }
+
 
 
     /**
@@ -164,5 +171,4 @@ enum:
         }
         this.values.add(value);
     }
-
 }

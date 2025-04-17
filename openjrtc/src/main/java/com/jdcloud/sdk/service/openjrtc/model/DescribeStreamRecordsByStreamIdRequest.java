@@ -64,14 +64,15 @@ public class DescribeStreamRecordsByStreamIdRequest extends JdcloudRequest imple
 - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 应用ID
      * Required:true
      */
     @Required
     private String appId;
+
 
 
     /**
@@ -92,6 +93,7 @@ public class DescribeStreamRecordsByStreamIdRequest extends JdcloudRequest imple
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认值为 10；取值范围 [10, 100]
      *
@@ -109,6 +111,7 @@ public class DescribeStreamRecordsByStreamIdRequest extends JdcloudRequest imple
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 流ID
@@ -128,29 +131,31 @@ public class DescribeStreamRecordsByStreamIdRequest extends JdcloudRequest imple
         this.streamId = streamId;
     }
 
+
     /**
-     * get 传参字段描述:
+    * get 传参字段描述:
 - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
 - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 传参字段描述:
+    * set 传参字段描述:
 - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
 - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 应用ID
@@ -171,6 +176,7 @@ public class DescribeStreamRecordsByStreamIdRequest extends JdcloudRequest imple
     }
 
 
+
     /**
      * set 页码；默认值为 1
      *
@@ -180,6 +186,7 @@ public class DescribeStreamRecordsByStreamIdRequest extends JdcloudRequest imple
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；默认值为 10；取值范围 [10, 100]
@@ -191,6 +198,7 @@ public class DescribeStreamRecordsByStreamIdRequest extends JdcloudRequest imple
         return this;
     }
 
+
     /**
      * set 流ID
      *
@@ -201,18 +209,20 @@ public class DescribeStreamRecordsByStreamIdRequest extends JdcloudRequest imple
         return this;
     }
 
+
     /**
-     * set 传参字段描述:
+    * set 传参字段描述:
 - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
 - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeStreamRecordsByStreamIdRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 应用ID
@@ -223,6 +233,7 @@ public class DescribeStreamRecordsByStreamIdRequest extends JdcloudRequest imple
         this.appId = appId;
         return this;
     }
+
 
 
     /**
@@ -239,5 +250,4 @@ public class DescribeStreamRecordsByStreamIdRequest extends JdcloudRequest imple
         }
         this.filters.add(filter);
     }
-
 }

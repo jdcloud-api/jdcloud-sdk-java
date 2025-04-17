@@ -43,9 +43,10 @@ public class StopAsrTask  implements java.io.Serializable {
     private String userRoomId;
 
     /**
-     * 语音识别场景 0-全部识别转文字
+     * 语音任务类型 0-转写 1-翻译
      */
     private Integer asrTaskType;
+
 
 
     /**
@@ -66,6 +67,7 @@ public class StopAsrTask  implements java.io.Serializable {
         this.appId = appId;
     }
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -84,8 +86,9 @@ public class StopAsrTask  implements java.io.Serializable {
         this.userRoomId = userRoomId;
     }
 
+
     /**
-     * get 语音识别场景 0-全部识别转文字
+     * get 语音任务类型 0-转写 1-翻译
      *
      * @return
      */
@@ -94,13 +97,14 @@ public class StopAsrTask  implements java.io.Serializable {
     }
 
     /**
-     * set 语音识别场景 0-全部识别转文字
+     * set 语音任务类型 0-转写 1-翻译
      *
      * @param asrTaskType
      */
     public void setAsrTaskType(Integer asrTaskType) {
         this.asrTaskType = asrTaskType;
     }
+
 
 
     /**
@@ -113,6 +117,7 @@ public class StopAsrTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -123,8 +128,9 @@ public class StopAsrTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 语音识别场景 0-全部识别转文字
+     * set 语音任务类型 0-转写 1-翻译
      *
      * @param asrTaskType
      */

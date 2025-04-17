@@ -105,6 +105,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
     private String createTime;
 
 
+
     /**
      * get appId
      *
@@ -122,6 +123,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -141,6 +143,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 用户注册时使用的房间名称
      *
@@ -158,6 +161,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
     public void setRoomName(String roomName) {
         this.roomName = roomName;
     }
+
 
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId
@@ -177,6 +181,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         this.userId = userId;
     }
 
+
     /**
      * get 用户注册时使用的用户名称
      *
@@ -194,6 +199,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
 
     /**
      * get 用户加入房间时使用的昵称
@@ -213,6 +219,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         this.nickName = nickName;
     }
 
+
     /**
      * get 流ID
      *
@@ -230,6 +237,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
     public void setStreamId(String streamId) {
         this.streamId = streamId;
     }
+
 
     /**
      * get 流名称
@@ -249,6 +257,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         this.streamName = streamName;
     }
 
+
     /**
      * get 流类型 1-音频流; 2-视频流; 100-数据流
      *
@@ -266,6 +275,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
     public void setKind(Integer kind) {
         this.kind = kind;
     }
+
 
     /**
      * get 流状态 1-在线; 2-离线
@@ -285,6 +295,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         this.status = status;
     }
 
+
     /**
      * get 标识推流设备类型 1-FrontCamera; 2-BackCamera; 3-ScreenCapturer; 4-FileVideo
      *
@@ -302,6 +313,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
     public void setDeviceType(Integer deviceType) {
         this.deviceType = deviceType;
     }
+
 
     /**
      * get 推流次数
@@ -321,6 +333,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         this.publishCount = publishCount;
     }
 
+
     /**
      * get 推流时间
      *
@@ -338,6 +351,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
     public void setPublishTime(String publishTime) {
         this.publishTime = publishTime;
     }
+
 
     /**
      * get 流创建时间(第一次推流时间)
@@ -358,6 +372,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
     }
 
 
+
     /**
      * set appId
      *
@@ -367,6 +382,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -378,6 +394,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         return this;
     }
 
+
     /**
      * set 用户注册时使用的房间名称
      *
@@ -387,6 +404,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         this.roomName = roomName;
         return this;
     }
+
 
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId
@@ -398,6 +416,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         return this;
     }
 
+
     /**
      * set 用户注册时使用的用户名称
      *
@@ -407,6 +426,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         this.userName = userName;
         return this;
     }
+
 
     /**
      * set 用户加入房间时使用的昵称
@@ -418,6 +438,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         return this;
     }
 
+
     /**
      * set 流ID
      *
@@ -427,6 +448,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         this.streamId = streamId;
         return this;
     }
+
 
     /**
      * set 流名称
@@ -438,6 +460,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         return this;
     }
 
+
     /**
      * set 流类型 1-音频流; 2-视频流; 100-数据流
      *
@@ -447,6 +470,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         this.kind = kind;
         return this;
     }
+
 
     /**
      * set 流状态 1-在线; 2-离线
@@ -458,6 +482,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         return this;
     }
 
+
     /**
      * set 标识推流设备类型 1-FrontCamera; 2-BackCamera; 3-ScreenCapturer; 4-FileVideo
      *
@@ -467,6 +492,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         this.deviceType = deviceType;
         return this;
     }
+
 
     /**
      * set 推流次数
@@ -478,6 +504,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         return this;
     }
 
+
     /**
      * set 推流时间
      *
@@ -487,6 +514,7 @@ public class DescribeStreamInfoByStreamIdResult extends JdcloudResult implements
         this.publishTime = publishTime;
         return this;
     }
+
 
     /**
      * set 流创建时间(第一次推流时间)

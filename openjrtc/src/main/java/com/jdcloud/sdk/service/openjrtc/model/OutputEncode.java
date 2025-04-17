@@ -38,7 +38,7 @@ public class OutputEncode  implements java.io.Serializable {
     private Integer outputKind;
 
     /**
-     * 音频采样率
+     * 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位Hz。
      */
     private Integer audioSampleRate;
 
@@ -78,6 +78,7 @@ public class OutputEncode  implements java.io.Serializable {
     private Integer videoGop;
 
 
+
     /**
      * get 混流类型：1：音频 2：视频  3：音视频
      *
@@ -96,8 +97,9 @@ public class OutputEncode  implements java.io.Serializable {
         this.outputKind = outputKind;
     }
 
+
     /**
-     * get 音频采样率
+     * get 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位Hz。
      *
      * @return
      */
@@ -106,13 +108,14 @@ public class OutputEncode  implements java.io.Serializable {
     }
 
     /**
-     * set 音频采样率
+     * set 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位Hz。
      *
      * @param audioSampleRate
      */
     public void setAudioSampleRate(Integer audioSampleRate) {
         this.audioSampleRate = audioSampleRate;
     }
+
 
     /**
      * get 音频比特率：取值范围[8,500]
@@ -132,6 +135,7 @@ public class OutputEncode  implements java.io.Serializable {
         this.audioBitrate = audioBitrate;
     }
 
+
     /**
      * get 通道：取值范围[1,2]
      *
@@ -149,6 +153,7 @@ public class OutputEncode  implements java.io.Serializable {
     public void setAudioChannels(Integer audioChannels) {
         this.audioChannels = audioChannels;
     }
+
 
     /**
      * get 视频比特率：取值范围[1,10000]
@@ -168,6 +173,7 @@ public class OutputEncode  implements java.io.Serializable {
         this.videoBitrate = videoBitrate;
     }
 
+
     /**
      * get 视频帧率：取值范围[1,60]
      *
@@ -185,6 +191,7 @@ public class OutputEncode  implements java.io.Serializable {
     public void setVideoFrame(Integer videoFrame) {
         this.videoFrame = videoFrame;
     }
+
 
     /**
      * get 视频宽：取值范围[1,1920]
@@ -204,6 +211,7 @@ public class OutputEncode  implements java.io.Serializable {
         this.videoWidth = videoWidth;
     }
 
+
     /**
      * get 视频高：取值范围[1,1080]
      *
@@ -221,6 +229,7 @@ public class OutputEncode  implements java.io.Serializable {
     public void setVideoHeight(Integer videoHeight) {
         this.videoHeight = videoHeight;
     }
+
 
     /**
      * get 取值范围[1,5]
@@ -241,6 +250,7 @@ public class OutputEncode  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 混流类型：1：音频 2：视频  3：音视频
      *
@@ -251,8 +261,9 @@ public class OutputEncode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 音频采样率
+     * set 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位Hz。
      *
      * @param audioSampleRate
      */
@@ -260,6 +271,7 @@ public class OutputEncode  implements java.io.Serializable {
         this.audioSampleRate = audioSampleRate;
         return this;
     }
+
 
     /**
      * set 音频比特率：取值范围[8,500]
@@ -271,6 +283,7 @@ public class OutputEncode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 通道：取值范围[1,2]
      *
@@ -280,6 +293,7 @@ public class OutputEncode  implements java.io.Serializable {
         this.audioChannels = audioChannels;
         return this;
     }
+
 
     /**
      * set 视频比特率：取值范围[1,10000]
@@ -291,6 +305,7 @@ public class OutputEncode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 视频帧率：取值范围[1,60]
      *
@@ -300,6 +315,7 @@ public class OutputEncode  implements java.io.Serializable {
         this.videoFrame = videoFrame;
         return this;
     }
+
 
     /**
      * set 视频宽：取值范围[1,1920]
@@ -311,6 +327,7 @@ public class OutputEncode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 视频高：取值范围[1,1080]
      *
@@ -320,6 +337,7 @@ public class OutputEncode  implements java.io.Serializable {
         this.videoHeight = videoHeight;
         return this;
     }
+
 
     /**
      * set 取值范围[1,5]

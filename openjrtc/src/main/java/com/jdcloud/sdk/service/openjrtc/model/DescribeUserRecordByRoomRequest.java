@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JrtcStatistic
- * 房间人员管理
+ * 数据统计
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -65,6 +65,7 @@ public class DescribeUserRecordByRoomRequest extends JdcloudRequest implements j
      * Required:true
      */
     @Required
+    
     private List<Filter> filters;
 
 
@@ -86,6 +87,7 @@ public class DescribeUserRecordByRoomRequest extends JdcloudRequest implements j
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认值为 10；取值范围 [10, 100]
      *
@@ -104,35 +106,37 @@ public class DescribeUserRecordByRoomRequest extends JdcloudRequest implements j
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get 传参字段描述:
+    * get 传参字段描述:
   appId:   应用ID (必填)
   startTime: 房间使用起始时间 UTC格式 (必填)
   endTime：房间使用截止时间 UTC格式 (必填)
   userRoomId：业务接入方定义的且在JRTC系统内注册过的房间号(必填)
   userId：业务接入方定义的且在JRTC系统内注册过的用户id
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 传参字段描述:
+    * set 传参字段描述:
   appId:   应用ID (必填)
   startTime: 房间使用起始时间 UTC格式 (必填)
   endTime：房间使用截止时间 UTC格式 (必填)
   userRoomId：业务接入方定义的且在JRTC系统内注册过的房间号(必填)
   userId：业务接入方定义的且在JRTC系统内注册过的用户id
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
 
     /**
@@ -145,6 +149,7 @@ public class DescribeUserRecordByRoomRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 分页大小；默认值为 10；取值范围 [10, 100]
      *
@@ -155,21 +160,23 @@ public class DescribeUserRecordByRoomRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
-     * set 传参字段描述:
+    * set 传参字段描述:
   appId:   应用ID (必填)
   startTime: 房间使用起始时间 UTC格式 (必填)
   endTime：房间使用截止时间 UTC格式 (必填)
   userRoomId：业务接入方定义的且在JRTC系统内注册过的房间号(必填)
   userId：业务接入方定义的且在JRTC系统内注册过的用户id
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeUserRecordByRoomRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
 
     /**
@@ -189,5 +196,4 @@ public class DescribeUserRecordByRoomRequest extends JdcloudRequest implements j
         }
         this.filters.add(filter);
     }
-
 }

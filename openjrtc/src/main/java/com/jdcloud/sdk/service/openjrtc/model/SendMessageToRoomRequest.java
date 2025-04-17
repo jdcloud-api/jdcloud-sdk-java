@@ -59,6 +59,7 @@ public class SendMessageToRoomRequest extends JdcloudRequest implements java.io.
     private Long roomId;
 
 
+
     /**
      * get 事件名称
      *
@@ -76,6 +77,7 @@ public class SendMessageToRoomRequest extends JdcloudRequest implements java.io.
     public void setEventName(String eventName) {
         this.eventName = eventName;
     }
+
 
     /**
      * get 自定义信令消息
@@ -95,6 +97,7 @@ public class SendMessageToRoomRequest extends JdcloudRequest implements java.io.
         this.message = message;
     }
 
+
     /**
      * get 应用ID
      *
@@ -112,6 +115,7 @@ public class SendMessageToRoomRequest extends JdcloudRequest implements java.io.
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 房间ID
@@ -132,6 +136,7 @@ public class SendMessageToRoomRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 事件名称
      *
@@ -141,6 +146,7 @@ public class SendMessageToRoomRequest extends JdcloudRequest implements java.io.
         this.eventName = eventName;
         return this;
     }
+
 
     /**
      * set 自定义信令消息
@@ -152,6 +158,7 @@ public class SendMessageToRoomRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 应用ID
      *
@@ -161,6 +168,7 @@ public class SendMessageToRoomRequest extends JdcloudRequest implements java.io.
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 房间ID

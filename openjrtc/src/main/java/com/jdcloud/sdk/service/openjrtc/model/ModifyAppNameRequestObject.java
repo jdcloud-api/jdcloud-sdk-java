@@ -43,6 +43,7 @@ public class ModifyAppNameRequestObject  implements java.io.Serializable {
     private String appName;
 
 
+
     /**
      * get 应用ID
      *
@@ -60,6 +61,7 @@ public class ModifyAppNameRequestObject  implements java.io.Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 应用名称
@@ -80,6 +82,7 @@ public class ModifyAppNameRequestObject  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -89,6 +92,7 @@ public class ModifyAppNameRequestObject  implements java.io.Serializable {
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 应用名称

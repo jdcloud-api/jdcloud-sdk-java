@@ -59,6 +59,7 @@ public class PostMessageToUserRequest extends JdcloudRequest implements java.io.
     private String message;
 
 
+
     /**
      * get 应用ID
      *
@@ -76,6 +77,7 @@ public class PostMessageToUserRequest extends JdcloudRequest implements java.io.
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -95,6 +97,7 @@ public class PostMessageToUserRequest extends JdcloudRequest implements java.io.
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -113,6 +116,7 @@ public class PostMessageToUserRequest extends JdcloudRequest implements java.io.
         this.userId = userId;
     }
 
+
     /**
      * get 事件名称
      *
@@ -130,6 +134,7 @@ public class PostMessageToUserRequest extends JdcloudRequest implements java.io.
     public void setEventName(String eventName) {
         this.eventName = eventName;
     }
+
 
     /**
      * get 自定义信令消息
@@ -150,6 +155,7 @@ public class PostMessageToUserRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -159,6 +165,7 @@ public class PostMessageToUserRequest extends JdcloudRequest implements java.io.
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -170,6 +177,7 @@ public class PostMessageToUserRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -180,6 +188,7 @@ public class PostMessageToUserRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 事件名称
      *
@@ -189,6 +198,7 @@ public class PostMessageToUserRequest extends JdcloudRequest implements java.io.
         this.eventName = eventName;
         return this;
     }
+
 
     /**
      * set 自定义信令消息

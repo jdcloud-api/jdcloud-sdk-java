@@ -42,6 +42,12 @@ public class StopMcuTranscode  implements java.io.Serializable {
      */
     private String userRoomId;
 
+    /**
+     * 混流任务ID
+     */
+    private String taskId;
+
+
 
     /**
      * get 应用ID
@@ -60,6 +66,7 @@ public class StopMcuTranscode  implements java.io.Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -81,6 +88,26 @@ public class StopMcuTranscode  implements java.io.Serializable {
 
 
     /**
+     * get 混流任务ID
+     *
+     * @return
+     */
+    public String getTaskId() {
+        return taskId;
+    }
+
+    /**
+     * set 混流任务ID
+     *
+     * @param taskId
+     */
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
+    }
+
+
+
+    /**
      * set 应用ID
      *
      * @param appId
@@ -90,6 +117,7 @@ public class StopMcuTranscode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -97,6 +125,17 @@ public class StopMcuTranscode  implements java.io.Serializable {
      */
     public StopMcuTranscode userRoomId(String userRoomId) {
         this.userRoomId = userRoomId;
+        return this;
+    }
+
+
+    /**
+     * set 混流任务ID
+     *
+     * @param taskId
+     */
+    public StopMcuTranscode taskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
 

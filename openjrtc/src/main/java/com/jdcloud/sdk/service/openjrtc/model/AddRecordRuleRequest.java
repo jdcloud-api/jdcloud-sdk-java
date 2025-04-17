@@ -45,6 +45,7 @@ public class AddRecordRuleRequest extends JdcloudRequest implements java.io.Seri
     /**
      * 录制规则
      */
+    
     private List<RecordRule> rules;
 
 
@@ -66,23 +67,25 @@ public class AddRecordRuleRequest extends JdcloudRequest implements java.io.Seri
         this.appId = appId;
     }
 
+
     /**
-     * get 录制规则
-     *
-     * @return
-     */
+    * get 录制规则
+    *
+    * @return
+    */
     public List<RecordRule> getRules() {
         return rules;
     }
 
     /**
-     * set 录制规则
-     *
-     * @param rules
-     */
+    * set 录制规则
+    *
+    * @param rules
+    */
     public void setRules(List<RecordRule> rules) {
         this.rules = rules;
     }
+
 
 
     /**
@@ -95,15 +98,17 @@ public class AddRecordRuleRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
-     * set 录制规则
-     *
-     * @param rules
-     */
+    * set 录制规则
+    *
+    * @param rules
+    */
     public AddRecordRuleRequest rules(List<RecordRule> rules) {
         this.rules = rules;
         return this;
     }
+
 
 
     /**
@@ -117,5 +122,4 @@ public class AddRecordRuleRequest extends JdcloudRequest implements java.io.Seri
         }
         this.rules.add(rule);
     }
-
 }

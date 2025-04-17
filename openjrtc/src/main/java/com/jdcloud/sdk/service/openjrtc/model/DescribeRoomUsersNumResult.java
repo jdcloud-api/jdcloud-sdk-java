@@ -60,6 +60,7 @@ public class DescribeRoomUsersNumResult extends JdcloudResult implements java.io
     private Integer total;
 
 
+
     /**
      * get appId
      *
@@ -77,6 +78,7 @@ public class DescribeRoomUsersNumResult extends JdcloudResult implements java.io
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 用户定义的房间号
@@ -96,6 +98,7 @@ public class DescribeRoomUsersNumResult extends JdcloudResult implements java.io
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 在线人数
      *
@@ -114,6 +117,7 @@ public class DescribeRoomUsersNumResult extends JdcloudResult implements java.io
         this.onlineNumber = onlineNumber;
     }
 
+
     /**
      * get 离线人数
      *
@@ -131,6 +135,7 @@ public class DescribeRoomUsersNumResult extends JdcloudResult implements java.io
     public void setOfflineNumber(Integer offlineNumber) {
         this.offlineNumber = offlineNumber;
     }
+
 
     /**
      * get 合计人数
@@ -151,6 +156,7 @@ public class DescribeRoomUsersNumResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
      * set appId
      *
@@ -160,6 +166,7 @@ public class DescribeRoomUsersNumResult extends JdcloudResult implements java.io
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 用户定义的房间号
@@ -171,6 +178,7 @@ public class DescribeRoomUsersNumResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 在线人数
      *
@@ -181,6 +189,7 @@ public class DescribeRoomUsersNumResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 离线人数
      *
@@ -190,6 +199,7 @@ public class DescribeRoomUsersNumResult extends JdcloudResult implements java.io
         this.offlineNumber = offlineNumber;
         return this;
     }
+
 
     /**
      * set 合计人数

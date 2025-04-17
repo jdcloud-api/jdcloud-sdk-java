@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JrtcStatistic
- * 房间人员管理
+ * 数据统计
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取历史音频、区分视频码率通讯时长
+ * 获取历史音频、区分视频码率通讯时长(分钟)
 
  */
 public class DescribeCallDurationByCodeRateRequest extends JdcloudRequest implements java.io.Serializable {
@@ -49,8 +49,11 @@ public class DescribeCallDurationByCodeRateRequest extends JdcloudRequest implem
 
     /**
      * 结束时间 UTC格式
+     * Required:true
      */
+    @Required
     private String endTime;
+
 
 
     /**
@@ -71,6 +74,7 @@ public class DescribeCallDurationByCodeRateRequest extends JdcloudRequest implem
         this.appId = appId;
     }
 
+
     /**
      * get 开始时间 UTC格式
      *
@@ -88,6 +92,7 @@ public class DescribeCallDurationByCodeRateRequest extends JdcloudRequest implem
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 结束时间 UTC格式
@@ -108,6 +113,7 @@ public class DescribeCallDurationByCodeRateRequest extends JdcloudRequest implem
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -118,6 +124,7 @@ public class DescribeCallDurationByCodeRateRequest extends JdcloudRequest implem
         return this;
     }
 
+
     /**
      * set 开始时间 UTC格式
      *
@@ -127,6 +134,7 @@ public class DescribeCallDurationByCodeRateRequest extends JdcloudRequest implem
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 结束时间 UTC格式

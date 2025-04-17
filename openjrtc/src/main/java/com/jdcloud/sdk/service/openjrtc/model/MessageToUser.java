@@ -48,6 +48,7 @@ public class MessageToUser  implements java.io.Serializable {
     private Long peerId;
 
 
+
     /**
      * get 事件名称
      *
@@ -66,6 +67,7 @@ public class MessageToUser  implements java.io.Serializable {
         this.eventName = eventName;
     }
 
+
     /**
      * get 自定义信令消息
      *
@@ -83,6 +85,7 @@ public class MessageToUser  implements java.io.Serializable {
     public void setMessage(String message) {
         this.message = message;
     }
+
 
     /**
      * get peerId
@@ -103,6 +106,7 @@ public class MessageToUser  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 事件名称
      *
@@ -113,6 +117,7 @@ public class MessageToUser  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自定义信令消息
      *
@@ -122,6 +127,7 @@ public class MessageToUser  implements java.io.Serializable {
         this.message = message;
         return this;
     }
+
 
     /**
      * set peerId

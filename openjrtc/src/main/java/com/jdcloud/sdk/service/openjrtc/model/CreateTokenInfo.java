@@ -58,6 +58,7 @@ public class CreateTokenInfo  implements java.io.Serializable {
     private Long timestamp;
 
 
+
     /**
      * get appId
      *
@@ -75,6 +76,7 @@ public class CreateTokenInfo  implements java.io.Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get appKey
@@ -94,6 +96,7 @@ public class CreateTokenInfo  implements java.io.Serializable {
         this.appKey = appKey;
     }
 
+
     /**
      * get 用户id
      *
@@ -112,6 +115,7 @@ public class CreateTokenInfo  implements java.io.Serializable {
         this.userId = userId;
     }
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -129,6 +133,7 @@ public class CreateTokenInfo  implements java.io.Serializable {
     public void setUserRoomId(String userRoomId) {
         this.userRoomId = userRoomId;
     }
+
 
     /**
      * get 时间戳-毫秒
@@ -149,6 +154,7 @@ public class CreateTokenInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set appId
      *
@@ -158,6 +164,7 @@ public class CreateTokenInfo  implements java.io.Serializable {
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set appKey
@@ -169,6 +176,7 @@ public class CreateTokenInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户id
      *
@@ -179,6 +187,7 @@ public class CreateTokenInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -188,6 +197,7 @@ public class CreateTokenInfo  implements java.io.Serializable {
         this.userRoomId = userRoomId;
         return this;
     }
+
 
     /**
      * set 时间戳-毫秒

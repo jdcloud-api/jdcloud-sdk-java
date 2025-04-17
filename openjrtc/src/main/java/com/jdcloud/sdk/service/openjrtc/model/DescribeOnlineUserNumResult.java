@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JrtcStatistic
- * 房间人员管理
+ * 数据统计
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -65,6 +65,7 @@ public class DescribeOnlineUserNumResult extends JdcloudResult implements java.i
     /**
      * 分页内容
      */
+    
     private List<UserNumInfo> content;
 
 
@@ -86,6 +87,7 @@ public class DescribeOnlineUserNumResult extends JdcloudResult implements java.i
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页数量
      *
@@ -103,6 +105,7 @@ public class DescribeOnlineUserNumResult extends JdcloudResult implements java.i
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 查询总数
@@ -122,6 +125,7 @@ public class DescribeOnlineUserNumResult extends JdcloudResult implements java.i
         this.totalElements = totalElements;
     }
 
+
     /**
      * get 总页数
      *
@@ -140,23 +144,25 @@ public class DescribeOnlineUserNumResult extends JdcloudResult implements java.i
         this.totalPages = totalPages;
     }
 
+
     /**
-     * get 分页内容
-     *
-     * @return
-     */
+    * get 分页内容
+    *
+    * @return
+    */
     public List<UserNumInfo> getContent() {
         return content;
     }
 
     /**
-     * set 分页内容
-     *
-     * @param content
-     */
+    * set 分页内容
+    *
+    * @param content
+    */
     public void setContent(List<UserNumInfo> content) {
         this.content = content;
     }
+
 
 
     /**
@@ -169,6 +175,7 @@ public class DescribeOnlineUserNumResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 每页数量
      *
@@ -178,6 +185,7 @@ public class DescribeOnlineUserNumResult extends JdcloudResult implements java.i
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 查询总数
@@ -189,6 +197,7 @@ public class DescribeOnlineUserNumResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 总页数
      *
@@ -199,15 +208,17 @@ public class DescribeOnlineUserNumResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
-     * set 分页内容
-     *
-     * @param content
-     */
+    * set 分页内容
+    *
+    * @param content
+    */
     public DescribeOnlineUserNumResult content(List<UserNumInfo> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -221,5 +232,4 @@ public class DescribeOnlineUserNumResult extends JdcloudResult implements java.i
         }
         this.content.add(content);
     }
-
 }

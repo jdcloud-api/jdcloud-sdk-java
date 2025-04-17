@@ -63,6 +63,7 @@ public class DescribeStreamRecordsByStreamIdResult extends JdcloudResult impleme
     /**
      * 推流历史记录列表
      */
+    
     private List<StreamRecordInfo> content;
 
 
@@ -84,6 +85,7 @@ public class DescribeStreamRecordsByStreamIdResult extends JdcloudResult impleme
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页数量
      *
@@ -101,6 +103,7 @@ public class DescribeStreamRecordsByStreamIdResult extends JdcloudResult impleme
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 查询总数
@@ -120,6 +123,7 @@ public class DescribeStreamRecordsByStreamIdResult extends JdcloudResult impleme
         this.totalElements = totalElements;
     }
 
+
     /**
      * get 总页数
      *
@@ -138,23 +142,25 @@ public class DescribeStreamRecordsByStreamIdResult extends JdcloudResult impleme
         this.totalPages = totalPages;
     }
 
+
     /**
-     * get 推流历史记录列表
-     *
-     * @return
-     */
+    * get 推流历史记录列表
+    *
+    * @return
+    */
     public List<StreamRecordInfo> getContent() {
         return content;
     }
 
     /**
-     * set 推流历史记录列表
-     *
-     * @param content
-     */
+    * set 推流历史记录列表
+    *
+    * @param content
+    */
     public void setContent(List<StreamRecordInfo> content) {
         this.content = content;
     }
+
 
 
     /**
@@ -167,6 +173,7 @@ public class DescribeStreamRecordsByStreamIdResult extends JdcloudResult impleme
         return this;
     }
 
+
     /**
      * set 每页数量
      *
@@ -176,6 +183,7 @@ public class DescribeStreamRecordsByStreamIdResult extends JdcloudResult impleme
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 查询总数
@@ -187,6 +195,7 @@ public class DescribeStreamRecordsByStreamIdResult extends JdcloudResult impleme
         return this;
     }
 
+
     /**
      * set 总页数
      *
@@ -197,15 +206,17 @@ public class DescribeStreamRecordsByStreamIdResult extends JdcloudResult impleme
         return this;
     }
 
+
     /**
-     * set 推流历史记录列表
-     *
-     * @param content
-     */
+    * set 推流历史记录列表
+    *
+    * @param content
+    */
     public DescribeStreamRecordsByStreamIdResult content(List<StreamRecordInfo> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -219,5 +230,4 @@ public class DescribeStreamRecordsByStreamIdResult extends JdcloudResult impleme
         }
         this.content.add(content);
     }
-
 }

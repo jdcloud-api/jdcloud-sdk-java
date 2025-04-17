@@ -43,6 +43,7 @@ public class DescribeAppKeyRequest extends JdcloudRequest implements java.io.Ser
     private String appId;
 
 
+
     /**
      * get 应用ID
      *
@@ -60,6 +61,7 @@ public class DescribeAppKeyRequest extends JdcloudRequest implements java.io.Ser
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
 
     /**

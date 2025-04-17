@@ -50,6 +50,7 @@ public class CreateUserResult extends JdcloudResult implements java.io.Serializa
     private String userId;
 
 
+
     /**
      * get 用户ID
      *
@@ -68,6 +69,7 @@ public class CreateUserResult extends JdcloudResult implements java.io.Serializa
         this.peerId = peerId;
     }
 
+
     /**
      * get 应用ID
      *
@@ -85,6 +87,7 @@ public class CreateUserResult extends JdcloudResult implements java.io.Serializa
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 业务接入方的用户ID
@@ -105,6 +108,7 @@ public class CreateUserResult extends JdcloudResult implements java.io.Serializa
     }
 
 
+
     /**
      * set 用户ID
      *
@@ -115,6 +119,7 @@ public class CreateUserResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 应用ID
      *
@@ -124,6 +129,7 @@ public class CreateUserResult extends JdcloudResult implements java.io.Serializa
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 业务接入方的用户ID

@@ -50,6 +50,7 @@ public class DeleteRoomRequest extends JdcloudRequest implements java.io.Seriali
     private String appId;
 
 
+
     /**
      * get 房间ID
      *
@@ -67,6 +68,7 @@ public class DeleteRoomRequest extends JdcloudRequest implements java.io.Seriali
     public void setRoomId(Long roomId) {
         this.roomId = roomId;
     }
+
 
     /**
      * get 应用ID
@@ -87,6 +89,7 @@ public class DeleteRoomRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 房间ID
      *
@@ -96,6 +99,7 @@ public class DeleteRoomRequest extends JdcloudRequest implements java.io.Seriali
         this.roomId = roomId;
         return this;
     }
+
 
     /**
      * set 应用ID

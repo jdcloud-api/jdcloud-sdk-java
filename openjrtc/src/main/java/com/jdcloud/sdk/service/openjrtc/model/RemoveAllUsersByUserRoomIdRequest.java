@@ -48,6 +48,7 @@ public class RemoveAllUsersByUserRoomIdRequest extends JdcloudRequest implements
     private String appId;
 
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -65,6 +66,7 @@ public class RemoveAllUsersByUserRoomIdRequest extends JdcloudRequest implements
     public void setUserRoomId(String userRoomId) {
         this.userRoomId = userRoomId;
     }
+
 
     /**
      * get 应用ID
@@ -85,6 +87,7 @@ public class RemoveAllUsersByUserRoomIdRequest extends JdcloudRequest implements
     }
 
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -94,6 +97,7 @@ public class RemoveAllUsersByUserRoomIdRequest extends JdcloudRequest implements
         this.userRoomId = userRoomId;
         return this;
     }
+
 
     /**
      * set 应用ID

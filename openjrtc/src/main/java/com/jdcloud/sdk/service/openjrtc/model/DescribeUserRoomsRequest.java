@@ -57,14 +57,15 @@ public class DescribeUserRoomsRequest extends JdcloudRequest implements java.io.
   - endTime[eq] 按房间注册时间段查询-UTC时间   startTime,endTime同时有值时生效
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 应用ID
      * Required:true
      */
     @Required
     private String appId;
+
 
 
     /**
@@ -85,6 +86,7 @@ public class DescribeUserRoomsRequest extends JdcloudRequest implements java.io.
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认值为 10；取值范围 [10, 100]
      *
@@ -103,29 +105,31 @@ public class DescribeUserRoomsRequest extends JdcloudRequest implements java.io.
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get 传参字段描述:
+    * get 传参字段描述:
   - startTime[eq] 按房间注册时间段查询-UTC时间 startTime,endTime同时有值时生效
   - endTime[eq] 按房间注册时间段查询-UTC时间   startTime,endTime同时有值时生效
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 传参字段描述:
+    * set 传参字段描述:
   - startTime[eq] 按房间注册时间段查询-UTC时间 startTime,endTime同时有值时生效
   - endTime[eq] 按房间注册时间段查询-UTC时间   startTime,endTime同时有值时生效
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 应用ID
@@ -146,6 +150,7 @@ public class DescribeUserRoomsRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 页码；默认值为 1
      *
@@ -155,6 +160,7 @@ public class DescribeUserRoomsRequest extends JdcloudRequest implements java.io.
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；默认值为 10；取值范围 [10, 100]
@@ -166,18 +172,20 @@ public class DescribeUserRoomsRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
-     * set 传参字段描述:
+    * set 传参字段描述:
   - startTime[eq] 按房间注册时间段查询-UTC时间 startTime,endTime同时有值时生效
   - endTime[eq] 按房间注册时间段查询-UTC时间   startTime,endTime同时有值时生效
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeUserRoomsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 应用ID
@@ -188,6 +196,7 @@ public class DescribeUserRoomsRequest extends JdcloudRequest implements java.io.
         this.appId = appId;
         return this;
     }
+
 
 
     /**
@@ -204,5 +213,4 @@ public class DescribeUserRoomsRequest extends JdcloudRequest implements java.io.
         }
         this.filters.add(filter);
     }
-
 }

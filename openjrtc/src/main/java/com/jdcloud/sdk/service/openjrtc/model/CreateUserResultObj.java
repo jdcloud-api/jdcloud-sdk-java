@@ -48,6 +48,7 @@ public class CreateUserResultObj  implements java.io.Serializable {
     private String userId;
 
 
+
     /**
      * get 用户ID
      *
@@ -66,6 +67,7 @@ public class CreateUserResultObj  implements java.io.Serializable {
         this.peerId = peerId;
     }
 
+
     /**
      * get 应用ID
      *
@@ -83,6 +85,7 @@ public class CreateUserResultObj  implements java.io.Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 业务接入方的用户ID
@@ -103,6 +106,7 @@ public class CreateUserResultObj  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户ID
      *
@@ -113,6 +117,7 @@ public class CreateUserResultObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应用ID
      *
@@ -122,6 +127,7 @@ public class CreateUserResultObj  implements java.io.Serializable {
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 业务接入方的用户ID

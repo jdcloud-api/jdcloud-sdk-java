@@ -70,6 +70,7 @@ public class UpdateRoomResult extends JdcloudResult implements java.io.Serializa
     private String updateTime;
 
 
+
     /**
      * get 房间ID
      *
@@ -87,6 +88,7 @@ public class UpdateRoomResult extends JdcloudResult implements java.io.Serializa
     public void setRoomId(Long roomId) {
         this.roomId = roomId;
     }
+
 
     /**
      * get 房间名称
@@ -106,6 +108,7 @@ public class UpdateRoomResult extends JdcloudResult implements java.io.Serializa
         this.roomName = roomName;
     }
 
+
     /**
      * get 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
      *
@@ -123,6 +126,7 @@ public class UpdateRoomResult extends JdcloudResult implements java.io.Serializa
     public void setRoomType(Integer roomType) {
         this.roomType = roomType;
     }
+
 
     /**
      * get appId
@@ -142,6 +146,7 @@ public class UpdateRoomResult extends JdcloudResult implements java.io.Serializa
         this.appId = appId;
     }
 
+
     /**
      * get 用户ID(创建者ID)
      *
@@ -160,6 +165,7 @@ public class UpdateRoomResult extends JdcloudResult implements java.io.Serializa
         this.peerId = peerId;
     }
 
+
     /**
      * get 创建时间
      *
@@ -177,6 +183,7 @@ public class UpdateRoomResult extends JdcloudResult implements java.io.Serializa
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 更新时间
@@ -197,6 +204,7 @@ public class UpdateRoomResult extends JdcloudResult implements java.io.Serializa
     }
 
 
+
     /**
      * set 房间ID
      *
@@ -206,6 +214,7 @@ public class UpdateRoomResult extends JdcloudResult implements java.io.Serializa
         this.roomId = roomId;
         return this;
     }
+
 
     /**
      * set 房间名称
@@ -217,6 +226,7 @@ public class UpdateRoomResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
      *
@@ -226,6 +236,7 @@ public class UpdateRoomResult extends JdcloudResult implements java.io.Serializa
         this.roomType = roomType;
         return this;
     }
+
 
     /**
      * set appId
@@ -237,6 +248,7 @@ public class UpdateRoomResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 用户ID(创建者ID)
      *
@@ -247,6 +259,7 @@ public class UpdateRoomResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -256,6 +269,7 @@ public class UpdateRoomResult extends JdcloudResult implements java.io.Serializa
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 更新时间

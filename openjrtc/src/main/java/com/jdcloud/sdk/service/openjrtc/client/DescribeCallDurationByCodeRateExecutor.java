@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JrtcStatistic
- * 房间人员管理
+ * 数据统计
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeCallDurationByCodeRateResponse;
 
 /**
- * 获取历史音频、区分视频码率通讯时长
+ * 获取历史音频、区分视频码率通讯时长(分钟)
 
  */
 class DescribeCallDurationByCodeRateExecutor extends JdcloudExecutor {

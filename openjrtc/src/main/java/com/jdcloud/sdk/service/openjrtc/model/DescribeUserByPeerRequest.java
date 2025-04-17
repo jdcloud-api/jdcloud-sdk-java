@@ -43,6 +43,7 @@ public class DescribeUserByPeerRequest extends JdcloudRequest implements java.io
     private Long peerId;
 
 
+
     /**
      * get peerId
      *
@@ -60,6 +61,7 @@ public class DescribeUserByPeerRequest extends JdcloudRequest implements java.io
     public void setPeerId(Long peerId) {
         this.peerId = peerId;
     }
+
 
 
     /**

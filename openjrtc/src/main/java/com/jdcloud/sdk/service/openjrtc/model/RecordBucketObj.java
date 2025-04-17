@@ -38,6 +38,7 @@ public class RecordBucketObj  implements java.io.Serializable {
     private String bucket;
 
 
+
     /**
      * get bucket
      *
@@ -55,6 +56,7 @@ public class RecordBucketObj  implements java.io.Serializable {
     public void setBucket(String bucket) {
         this.bucket = bucket;
     }
+
 
 
     /**

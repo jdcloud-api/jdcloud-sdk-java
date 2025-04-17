@@ -40,37 +40,40 @@ public class DescribeStreamInfosByUserIdResult extends JdcloudResult implements 
     /**
      * content
      */
+    
     private List<StreamInfo> content;
 
 
     /**
-     * get content
-     *
-     * @return
-     */
+    * get content
+    *
+    * @return
+    */
     public List<StreamInfo> getContent() {
         return content;
     }
 
     /**
-     * set content
-     *
-     * @param content
-     */
+    * set content
+    *
+    * @param content
+    */
     public void setContent(List<StreamInfo> content) {
         this.content = content;
     }
 
 
+
     /**
-     * set content
-     *
-     * @param content
-     */
+    * set content
+    *
+    * @param content
+    */
     public DescribeStreamInfosByUserIdResult content(List<StreamInfo> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -84,5 +87,4 @@ public class DescribeStreamInfosByUserIdResult extends JdcloudResult implements 
         }
         this.content.add(content);
     }
-
 }

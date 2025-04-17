@@ -63,6 +63,7 @@ public class UpdateRecordConfigReqObj  implements java.io.Serializable {
     private String callbackToken;
 
 
+
     /**
      * get 应用ID
      *
@@ -80,6 +81,7 @@ public class UpdateRecordConfigReqObj  implements java.io.Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 录制类型 1-全局录制 2-指定录制
@@ -99,6 +101,7 @@ public class UpdateRecordConfigReqObj  implements java.io.Serializable {
         this.recordType = recordType;
     }
 
+
     /**
      * get 存储位置
      *
@@ -116,6 +119,7 @@ public class UpdateRecordConfigReqObj  implements java.io.Serializable {
     public void setBucket(String bucket) {
         this.bucket = bucket;
     }
+
 
     /**
      * get 录制文件类型
@@ -135,6 +139,7 @@ public class UpdateRecordConfigReqObj  implements java.io.Serializable {
         this.fileType = fileType;
     }
 
+
     /**
      * get 回调地址
      *
@@ -152,6 +157,7 @@ public class UpdateRecordConfigReqObj  implements java.io.Serializable {
     public void setCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
     }
+
 
     /**
      * get 回调token
@@ -172,6 +178,7 @@ public class UpdateRecordConfigReqObj  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -181,6 +188,7 @@ public class UpdateRecordConfigReqObj  implements java.io.Serializable {
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 录制类型 1-全局录制 2-指定录制
@@ -192,6 +200,7 @@ public class UpdateRecordConfigReqObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 存储位置
      *
@@ -201,6 +210,7 @@ public class UpdateRecordConfigReqObj  implements java.io.Serializable {
         this.bucket = bucket;
         return this;
     }
+
 
     /**
      * set 录制文件类型
@@ -212,6 +222,7 @@ public class UpdateRecordConfigReqObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 回调地址
      *
@@ -221,6 +232,7 @@ public class UpdateRecordConfigReqObj  implements java.io.Serializable {
         this.callbackUrl = callbackUrl;
         return this;
     }
+
 
     /**
      * set 回调token

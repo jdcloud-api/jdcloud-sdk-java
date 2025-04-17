@@ -48,6 +48,7 @@ public class CallDuration  implements java.io.Serializable {
     private Long duration;
 
 
+
     /**
      * get 应用ID
      *
@@ -66,6 +67,7 @@ public class CallDuration  implements java.io.Serializable {
         this.appId = appId;
     }
 
+
     /**
      * get 时间戳-毫秒
      *
@@ -83,6 +85,7 @@ public class CallDuration  implements java.io.Serializable {
     public void setDate(Long date) {
         this.date = date;
     }
+
 
     /**
      * get 时长-second
@@ -103,6 +106,7 @@ public class CallDuration  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -113,6 +117,7 @@ public class CallDuration  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 时间戳-毫秒
      *
@@ -122,6 +127,7 @@ public class CallDuration  implements java.io.Serializable {
         this.date = date;
         return this;
     }
+
 
     /**
      * set 时长-second

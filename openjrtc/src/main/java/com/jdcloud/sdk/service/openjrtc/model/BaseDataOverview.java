@@ -43,6 +43,7 @@ public class BaseDataOverview  implements java.io.Serializable {
     private Long duration;
 
 
+
     /**
      * get 活跃用户
      *
@@ -60,6 +61,7 @@ public class BaseDataOverview  implements java.io.Serializable {
     public void setActiveUserNumber(Long activeUserNumber) {
         this.activeUserNumber = activeUserNumber;
     }
+
 
     /**
      * get 时长-second
@@ -80,6 +82,7 @@ public class BaseDataOverview  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 活跃用户
      *
@@ -89,6 +92,7 @@ public class BaseDataOverview  implements java.io.Serializable {
         this.activeUserNumber = activeUserNumber;
         return this;
     }
+
 
     /**
      * set 时长-second

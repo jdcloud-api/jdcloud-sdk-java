@@ -42,6 +42,7 @@ public class AddPushStreamRuleObj  implements java.io.Serializable {
     /**
      * 推流规则
      */
+    
     private List<PushStreamRule> rules;
 
 
@@ -63,23 +64,25 @@ public class AddPushStreamRuleObj  implements java.io.Serializable {
         this.appId = appId;
     }
 
+
     /**
-     * get 推流规则
-     *
-     * @return
-     */
+    * get 推流规则
+    *
+    * @return
+    */
     public List<PushStreamRule> getRules() {
         return rules;
     }
 
     /**
-     * set 推流规则
-     *
-     * @param rules
-     */
+    * set 推流规则
+    *
+    * @param rules
+    */
     public void setRules(List<PushStreamRule> rules) {
         this.rules = rules;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class AddPushStreamRuleObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 推流规则
-     *
-     * @param rules
-     */
+    * set 推流规则
+    *
+    * @param rules
+    */
     public AddPushStreamRuleObj rules(List<PushStreamRule> rules) {
         this.rules = rules;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class AddPushStreamRuleObj  implements java.io.Serializable {
         }
         this.rules.add(rule);
     }
-
 }

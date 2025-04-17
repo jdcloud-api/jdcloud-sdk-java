@@ -42,6 +42,7 @@ public class AddRecordRuleObj  implements java.io.Serializable {
     /**
      * 录制规则
      */
+    
     private List<RecordRule> rules;
 
 
@@ -63,23 +64,25 @@ public class AddRecordRuleObj  implements java.io.Serializable {
         this.appId = appId;
     }
 
+
     /**
-     * get 录制规则
-     *
-     * @return
-     */
+    * get 录制规则
+    *
+    * @return
+    */
     public List<RecordRule> getRules() {
         return rules;
     }
 
     /**
-     * set 录制规则
-     *
-     * @param rules
-     */
+    * set 录制规则
+    *
+    * @param rules
+    */
     public void setRules(List<RecordRule> rules) {
         this.rules = rules;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class AddRecordRuleObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 录制规则
-     *
-     * @param rules
-     */
+    * set 录制规则
+    *
+    * @param rules
+    */
     public AddRecordRuleObj rules(List<RecordRule> rules) {
         this.rules = rules;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class AddRecordRuleObj  implements java.io.Serializable {
         }
         this.rules.add(rule);
     }
-
 }

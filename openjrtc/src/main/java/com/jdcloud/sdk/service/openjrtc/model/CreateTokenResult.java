@@ -75,6 +75,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
     private Boolean available;
 
 
+
     /**
      * get appId
      *
@@ -92,6 +93,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get appKey
@@ -111,6 +113,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
         this.appKey = appKey;
     }
 
+
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -128,6 +131,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -147,6 +151,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 随机令牌
      *
@@ -164,6 +169,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
     public void setNonce(String nonce) {
         this.nonce = nonce;
     }
+
 
     /**
      * get 时间戳-毫秒
@@ -183,6 +189,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
         this.timestamp = timestamp;
     }
 
+
     /**
      * get token
      *
@@ -200,6 +207,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
     public void setToken(String token) {
         this.token = token;
     }
+
 
     /**
      * get 是否可用（true-可用,false-不可用）
@@ -220,6 +228,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
     }
 
 
+
     /**
      * set appId
      *
@@ -229,6 +238,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set appKey
@@ -240,6 +250,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -249,6 +260,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
         this.userId = userId;
         return this;
     }
+
 
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -260,6 +272,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 随机令牌
      *
@@ -269,6 +282,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
         this.nonce = nonce;
         return this;
     }
+
 
     /**
      * set 时间戳-毫秒
@@ -280,6 +294,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set token
      *
@@ -289,6 +304,7 @@ public class CreateTokenResult extends JdcloudResult implements java.io.Serializ
         this.token = token;
         return this;
     }
+
 
     /**
      * set 是否可用（true-可用,false-不可用）

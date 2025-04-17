@@ -50,6 +50,7 @@ public class DescribeRoomInfoRequest extends JdcloudRequest implements java.io.S
     private String appId;
 
 
+
     /**
      * get 房间ID
      *
@@ -67,6 +68,7 @@ public class DescribeRoomInfoRequest extends JdcloudRequest implements java.io.S
     public void setRoomId(Long roomId) {
         this.roomId = roomId;
     }
+
 
     /**
      * get 应用ID
@@ -87,6 +89,7 @@ public class DescribeRoomInfoRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 房间ID
      *
@@ -96,6 +99,7 @@ public class DescribeRoomInfoRequest extends JdcloudRequest implements java.io.S
         this.roomId = roomId;
         return this;
     }
+
 
     /**
      * set 应用ID

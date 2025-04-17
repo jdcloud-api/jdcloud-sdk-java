@@ -63,6 +63,7 @@ public class UserNumInfo  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get 应用ID
      *
@@ -80,6 +81,7 @@ public class UserNumInfo  implements java.io.Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 应用名称
@@ -99,6 +101,7 @@ public class UserNumInfo  implements java.io.Serializable {
         this.appName = appName;
     }
 
+
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -116,6 +119,7 @@ public class UserNumInfo  implements java.io.Serializable {
     public void setUserRoomId(String userRoomId) {
         this.userRoomId = userRoomId;
     }
+
 
     /**
      * get 房间在线人数
@@ -135,6 +139,7 @@ public class UserNumInfo  implements java.io.Serializable {
         this.number = number;
     }
 
+
     /**
      * get 持续时长-minute
      *
@@ -152,6 +157,7 @@ public class UserNumInfo  implements java.io.Serializable {
     public void setDuration(Long duration) {
         this.duration = duration;
     }
+
 
     /**
      * get 创建时间UTC
@@ -172,6 +178,7 @@ public class UserNumInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 应用ID
      *
@@ -181,6 +188,7 @@ public class UserNumInfo  implements java.io.Serializable {
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 应用名称
@@ -192,6 +200,7 @@ public class UserNumInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
      *
@@ -201,6 +210,7 @@ public class UserNumInfo  implements java.io.Serializable {
         this.userRoomId = userRoomId;
         return this;
     }
+
 
     /**
      * set 房间在线人数
@@ -212,6 +222,7 @@ public class UserNumInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 持续时长-minute
      *
@@ -221,6 +232,7 @@ public class UserNumInfo  implements java.io.Serializable {
         this.duration = duration;
         return this;
     }
+
 
     /**
      * set 创建时间UTC

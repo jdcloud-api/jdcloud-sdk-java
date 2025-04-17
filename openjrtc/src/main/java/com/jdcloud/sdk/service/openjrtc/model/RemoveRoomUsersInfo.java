@@ -37,37 +37,40 @@ public class RemoveRoomUsersInfo  implements java.io.Serializable {
     /**
      * peerId列表,最多支持20个peerId
      */
+    
     private List<Long> peerIds;
 
 
     /**
-     * get peerId列表,最多支持20个peerId
-     *
-     * @return
-     */
+    * get peerId列表,最多支持20个peerId
+    *
+    * @return
+    */
     public List<Long> getPeerIds() {
         return peerIds;
     }
 
     /**
-     * set peerId列表,最多支持20个peerId
-     *
-     * @param peerIds
-     */
+    * set peerId列表,最多支持20个peerId
+    *
+    * @param peerIds
+    */
     public void setPeerIds(List<Long> peerIds) {
         this.peerIds = peerIds;
     }
 
 
+
     /**
-     * set peerId列表,最多支持20个peerId
-     *
-     * @param peerIds
-     */
+    * set peerId列表,最多支持20个peerId
+    *
+    * @param peerIds
+    */
     public RemoveRoomUsersInfo peerIds(List<Long> peerIds) {
         this.peerIds = peerIds;
         return this;
     }
+
 
 
     /**
@@ -81,5 +84,4 @@ public class RemoveRoomUsersInfo  implements java.io.Serializable {
         }
         this.peerIds.add(peerId);
     }
-
 }

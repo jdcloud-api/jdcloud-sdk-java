@@ -70,6 +70,7 @@ public class DescribeUserRoomResult extends JdcloudResult implements java.io.Ser
     private String updateTime;
 
 
+
     /**
      * get jrtc系统房间号
      *
@@ -87,6 +88,7 @@ public class DescribeUserRoomResult extends JdcloudResult implements java.io.Ser
     public void setRoomId(Long roomId) {
         this.roomId = roomId;
     }
+
 
     /**
      * get 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -106,6 +108,7 @@ public class DescribeUserRoomResult extends JdcloudResult implements java.io.Ser
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 房间名称
      *
@@ -123,6 +126,7 @@ public class DescribeUserRoomResult extends JdcloudResult implements java.io.Ser
     public void setRoomName(String roomName) {
         this.roomName = roomName;
     }
+
 
     /**
      * get 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
@@ -142,6 +146,7 @@ public class DescribeUserRoomResult extends JdcloudResult implements java.io.Ser
         this.roomType = roomType;
     }
 
+
     /**
      * get appId
      *
@@ -160,6 +165,7 @@ public class DescribeUserRoomResult extends JdcloudResult implements java.io.Ser
         this.appId = appId;
     }
 
+
     /**
      * get 创建时间
      *
@@ -177,6 +183,7 @@ public class DescribeUserRoomResult extends JdcloudResult implements java.io.Ser
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 更新时间
@@ -197,6 +204,7 @@ public class DescribeUserRoomResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set jrtc系统房间号
      *
@@ -206,6 +214,7 @@ public class DescribeUserRoomResult extends JdcloudResult implements java.io.Ser
         this.roomId = roomId;
         return this;
     }
+
 
     /**
      * set 业务接入方定义的且在JRTC系统内注册过的房间号
@@ -217,6 +226,7 @@ public class DescribeUserRoomResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 房间名称
      *
@@ -226,6 +236,7 @@ public class DescribeUserRoomResult extends JdcloudResult implements java.io.Ser
         this.roomName = roomName;
         return this;
     }
+
 
     /**
      * set 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
@@ -237,6 +248,7 @@ public class DescribeUserRoomResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set appId
      *
@@ -247,6 +259,7 @@ public class DescribeUserRoomResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -256,6 +269,7 @@ public class DescribeUserRoomResult extends JdcloudResult implements java.io.Ser
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 更新时间

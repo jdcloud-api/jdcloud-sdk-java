@@ -73,6 +73,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
     private String updateTime;
 
 
+
     /**
      * get appId
      *
@@ -90,6 +91,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
     public void setAppId(String appId) {
         this.appId = appId;
     }
+
 
     /**
      * get 用户定义的房间号
@@ -109,6 +111,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
         this.userRoomId = userRoomId;
     }
 
+
     /**
      * get 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -126,6 +129,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get 用户房间内昵称
@@ -145,6 +149,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
         this.nickName = nickName;
     }
 
+
     /**
      * get 用户socketIo长连接id
      *
@@ -162,6 +167,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
     public void setConnectId(String connectId) {
         this.connectId = connectId;
     }
+
 
     /**
      * get 状态 1-在线 2-离线
@@ -181,6 +187,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 创建时间
      *
@@ -198,6 +205,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
     public void setJoinTime(String joinTime) {
         this.joinTime = joinTime;
     }
+
 
     /**
      * get 更新时间
@@ -218,6 +226,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
     }
 
 
+
     /**
      * set appId
      *
@@ -227,6 +236,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
         this.appId = appId;
         return this;
     }
+
 
     /**
      * set 用户定义的房间号
@@ -238,6 +248,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务接入方用户体系定义的且在JRTC系统内注册过的userId
      *
@@ -247,6 +258,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
         this.userId = userId;
         return this;
     }
+
 
     /**
      * set 用户房间内昵称
@@ -258,6 +270,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户socketIo长连接id
      *
@@ -267,6 +280,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
         this.connectId = connectId;
         return this;
     }
+
 
     /**
      * set 状态 1-在线 2-离线
@@ -278,6 +292,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -287,6 +302,7 @@ public class RoomUserInfoObj  implements java.io.Serializable {
         this.joinTime = joinTime;
         return this;
     }
+
 
     /**
      * set 更新时间
