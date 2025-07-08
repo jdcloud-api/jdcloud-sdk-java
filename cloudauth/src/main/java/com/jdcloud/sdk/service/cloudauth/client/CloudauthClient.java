@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.cloudauth.model.VerifyInvoiceRequest;
+import com.jdcloud.sdk.service.cloudauth.model.VerifyInvoiceResponse;
+import com.jdcloud.sdk.service.cloudauth.client.VerifyInvoiceExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.DescribeApplyStatusRequest;
 import com.jdcloud.sdk.service.cloudauth.model.DescribeApplyStatusResponse;
 import com.jdcloud.sdk.service.cloudauth.client.DescribeApplyStatusExecutor;
@@ -52,6 +55,9 @@ import com.jdcloud.sdk.service.cloudauth.client.OneClickExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.PersonalAuthRequest;
 import com.jdcloud.sdk.service.cloudauth.model.PersonalAuthResponse;
 import com.jdcloud.sdk.service.cloudauth.client.PersonalAuthExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.GeneralYinShuaTiRequest;
+import com.jdcloud.sdk.service.cloudauth.model.GeneralYinShuaTiResponse;
+import com.jdcloud.sdk.service.cloudauth.client.GeneralYinShuaTiExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.QueryBankListRequest;
 import com.jdcloud.sdk.service.cloudauth.model.QueryBankListResponse;
 import com.jdcloud.sdk.service.cloudauth.client.QueryBankListExecutor;
@@ -85,6 +91,9 @@ import com.jdcloud.sdk.service.cloudauth.client.GetAliveResultExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.BankCardOCRRequest;
 import com.jdcloud.sdk.service.cloudauth.model.BankCardOCRResponse;
 import com.jdcloud.sdk.service.cloudauth.client.BankCardOCRExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.GeneralPiaoJuRequest;
+import com.jdcloud.sdk.service.cloudauth.model.GeneralPiaoJuResponse;
+import com.jdcloud.sdk.service.cloudauth.client.GeneralPiaoJuExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.GetAliveUrlRequest;
 import com.jdcloud.sdk.service.cloudauth.model.GetAliveUrlResponse;
 import com.jdcloud.sdk.service.cloudauth.client.GetAliveUrlExecutor;
@@ -172,6 +181,17 @@ public class CloudauthClient extends JdcloudClient {
 
 
     /**
+     * 手动发票查验
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public VerifyInvoiceResponse verifyInvoice(VerifyInvoiceRequest request) throws JdcloudSdkException {
+        return new VerifyInvoiceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询服务开通状态
      *
      * @param request
@@ -246,6 +266,17 @@ public class CloudauthClient extends JdcloudClient {
      */
     public PersonalAuthResponse personalAuth(PersonalAuthRequest request) throws JdcloudSdkException {
         return new PersonalAuthExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 通用印刷体OCR识别
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GeneralYinShuaTiResponse generalYinShuaTi(GeneralYinShuaTiRequest request) throws JdcloudSdkException {
+        return new GeneralYinShuaTiExecutor().client(this).execute(request);
     }
 
     /**
@@ -367,6 +398,17 @@ public class CloudauthClient extends JdcloudClient {
      */
     public BankCardOCRResponse bankCardOCR(BankCardOCRRequest request) throws JdcloudSdkException {
         return new BankCardOCRExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 通用票据OCR识别及查验
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GeneralPiaoJuResponse generalPiaoJu(GeneralPiaoJuRequest request) throws JdcloudSdkException {
+        return new GeneralPiaoJuExecutor().client(this).execute(request);
     }
 
     /**
