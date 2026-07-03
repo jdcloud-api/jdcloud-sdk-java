@@ -64,6 +64,11 @@ public class ResourceUsageReq  implements java.io.Serializable {
     private String region;
 
     /**
+     * az
+     */
+    private String az;
+
+    /**
      * 资源ID
      * Required:true
      */
@@ -98,6 +103,11 @@ public class ResourceUsageReq  implements java.io.Serializable {
     @Required
     
     private List<Formula> formula;
+    /**
+     * 子类用量数据统计，用于云存储分账账单
+     */
+    
+    private List<SubFormula> subList;
 
 
     /**
@@ -173,6 +183,25 @@ public class ResourceUsageReq  implements java.io.Serializable {
      */
     public void setRegion(String region) {
         this.region = region;
+    }
+
+
+    /**
+     * get az
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set az
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
     }
 
 
@@ -271,6 +300,25 @@ public class ResourceUsageReq  implements java.io.Serializable {
     }
 
 
+    /**
+    * get 子类用量数据统计，用于云存储分账账单
+    *
+    * @return
+    */
+    public List<SubFormula> getSubList() {
+        return subList;
+    }
+
+    /**
+    * set 子类用量数据统计，用于云存储分账账单
+    *
+    * @param subList
+    */
+    public void setSubList(List<SubFormula> subList) {
+        this.subList = subList;
+    }
+
+
 
     /**
      * set 用户pin
@@ -312,6 +360,17 @@ public class ResourceUsageReq  implements java.io.Serializable {
      */
     public ResourceUsageReq region(String region) {
         this.region = region;
+        return this;
+    }
+
+
+    /**
+     * set az
+     *
+     * @param az
+     */
+    public ResourceUsageReq az(String az) {
+        this.az = az;
         return this;
     }
 
@@ -371,6 +430,17 @@ public class ResourceUsageReq  implements java.io.Serializable {
     }
 
 
+    /**
+    * set 子类用量数据统计，用于云存储分账账单
+    *
+    * @param subList
+    */
+    public ResourceUsageReq subList(List<SubFormula> subList) {
+        this.subList = subList;
+        return this;
+    }
+
+
 
     /**
      * add item to 计费项
@@ -382,5 +452,17 @@ public class ResourceUsageReq  implements java.io.Serializable {
             this.formula = new ArrayList<>();
         }
         this.formula.add(formula);
+    }
+
+    /**
+     * add item to 子类用量数据统计，用于云存储分账账单
+     *
+     * @param subList
+     */
+    public void addSubList(SubFormula subList) {
+        if (this.subList == null) {
+            this.subList = new ArrayList<>();
+        }
+        this.subList.add(subList);
     }
 }

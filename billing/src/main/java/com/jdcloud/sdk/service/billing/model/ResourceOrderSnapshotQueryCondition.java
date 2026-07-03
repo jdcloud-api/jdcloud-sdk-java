@@ -44,6 +44,26 @@ public class ResourceOrderSnapshotQueryCondition  implements java.io.Serializabl
      */
     
     private List<Integer> processTypes;
+    /**
+     * 操作者类型：0-用户；1-管理员（运营）；-1 系统
+     */
+    private Integer operatorType;
+
+    /**
+     * 操作类型 1:创建 2:续费 3:升配 4:删除 5:启服 6:停服 7:无理由退款
+     */
+    private Integer opType;
+
+    /**
+     * 起始时间
+     */
+    private String startTime;
+
+    /**
+     * 结束时间
+     */
+    private String endTime;
+
 
 
     /**
@@ -84,6 +104,82 @@ public class ResourceOrderSnapshotQueryCondition  implements java.io.Serializabl
     }
 
 
+    /**
+     * get 操作者类型：0-用户；1-管理员（运营）；-1 系统
+     *
+     * @return
+     */
+    public Integer getOperatorType() {
+        return operatorType;
+    }
+
+    /**
+     * set 操作者类型：0-用户；1-管理员（运营）；-1 系统
+     *
+     * @param operatorType
+     */
+    public void setOperatorType(Integer operatorType) {
+        this.operatorType = operatorType;
+    }
+
+
+    /**
+     * get 操作类型 1:创建 2:续费 3:升配 4:删除 5:启服 6:停服 7:无理由退款
+     *
+     * @return
+     */
+    public Integer getOpType() {
+        return opType;
+    }
+
+    /**
+     * set 操作类型 1:创建 2:续费 3:升配 4:删除 5:启服 6:停服 7:无理由退款
+     *
+     * @param opType
+     */
+    public void setOpType(Integer opType) {
+        this.opType = opType;
+    }
+
+
+    /**
+     * get 起始时间
+     *
+     * @return
+     */
+    public String getStartTime() {
+        return startTime;
+    }
+
+    /**
+     * set 起始时间
+     *
+     * @param startTime
+     */
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+
+    /**
+     * get 结束时间
+     *
+     * @return
+     */
+    public String getEndTime() {
+        return endTime;
+    }
+
+    /**
+     * set 结束时间
+     *
+     * @param endTime
+     */
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+
 
     /**
     * set resourceIdList必传
@@ -103,6 +199,50 @@ public class ResourceOrderSnapshotQueryCondition  implements java.io.Serializabl
     */
     public ResourceOrderSnapshotQueryCondition processTypes(List<Integer> processTypes) {
         this.processTypes = processTypes;
+        return this;
+    }
+
+
+    /**
+     * set 操作者类型：0-用户；1-管理员（运营）；-1 系统
+     *
+     * @param operatorType
+     */
+    public ResourceOrderSnapshotQueryCondition operatorType(Integer operatorType) {
+        this.operatorType = operatorType;
+        return this;
+    }
+
+
+    /**
+     * set 操作类型 1:创建 2:续费 3:升配 4:删除 5:启服 6:停服 7:无理由退款
+     *
+     * @param opType
+     */
+    public ResourceOrderSnapshotQueryCondition opType(Integer opType) {
+        this.opType = opType;
+        return this;
+    }
+
+
+    /**
+     * set 起始时间
+     *
+     * @param startTime
+     */
+    public ResourceOrderSnapshotQueryCondition startTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+
+
+    /**
+     * set 结束时间
+     *
+     * @param endTime
+     */
+    public ResourceOrderSnapshotQueryCondition endTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
 

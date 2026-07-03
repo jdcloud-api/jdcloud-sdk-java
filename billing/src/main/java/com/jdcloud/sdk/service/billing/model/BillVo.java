@@ -191,7 +191,9 @@ public class BillVo  implements java.io.Serializable {
 
     /**
      * 组织机构代码
+     * Required:true
      */
+    @Required
     private String org;
 
     /**
@@ -201,7 +203,9 @@ public class BillVo  implements java.io.Serializable {
 
     /**
      * 合同编码
+     * Required:true
      */
+    @Required
     private String contractNumber;
 
     /**

@@ -57,6 +57,21 @@ public class AccountingRuleUpdate  implements java.io.Serializable {
      */
     private String timeCron;
 
+    /**
+     * 产品线
+     */
+    private String appCode;
+
+    /**
+     * 出账对象类型 1：通用 2：用户
+     */
+    private Integer targetType;
+
+    /**
+     * 产品
+     */
+    private String serviceCode;
+
 
 
     /**
@@ -154,6 +169,63 @@ public class AccountingRuleUpdate  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 产品线
+     *
+     * @return
+     */
+    public String getAppCode() {
+        return appCode;
+    }
+
+    /**
+     * set 产品线
+     *
+     * @param appCode
+     */
+    public void setAppCode(String appCode) {
+        this.appCode = appCode;
+    }
+
+
+    /**
+     * get 出账对象类型 1：通用 2：用户
+     *
+     * @return
+     */
+    public Integer getTargetType() {
+        return targetType;
+    }
+
+    /**
+     * set 出账对象类型 1：通用 2：用户
+     *
+     * @param targetType
+     */
+    public void setTargetType(Integer targetType) {
+        this.targetType = targetType;
+    }
+
+
+    /**
+     * get 产品
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set 产品
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
+
 
     /**
      * set 站点
@@ -206,6 +278,39 @@ public class AccountingRuleUpdate  implements java.io.Serializable {
      */
     public AccountingRuleUpdate timeCron(String timeCron) {
         this.timeCron = timeCron;
+        return this;
+    }
+
+
+    /**
+     * set 产品线
+     *
+     * @param appCode
+     */
+    public AccountingRuleUpdate appCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+
+
+    /**
+     * set 出账对象类型 1：通用 2：用户
+     *
+     * @param targetType
+     */
+    public AccountingRuleUpdate targetType(Integer targetType) {
+        this.targetType = targetType;
+        return this;
+    }
+
+
+    /**
+     * set 产品
+     *
+     * @param serviceCode
+     */
+    public AccountingRuleUpdate serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
         return this;
     }
 

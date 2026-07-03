@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.billing.client.DescribeFormulaSummaryListExecutor
 import com.jdcloud.sdk.service.billing.model.CalculateTotalPriceRequest;
 import com.jdcloud.sdk.service.billing.model.CalculateTotalPriceResponse;
 import com.jdcloud.sdk.service.billing.client.CalculateTotalPriceExecutor;
+import com.jdcloud.sdk.service.billing.model.DescribeSplitBillItemsRequest;
+import com.jdcloud.sdk.service.billing.model.DescribeSplitBillItemsResponse;
+import com.jdcloud.sdk.service.billing.client.DescribeSplitBillItemsExecutor;
 import com.jdcloud.sdk.service.billing.model.QueryBillSummaryRequest;
 import com.jdcloud.sdk.service.billing.model.QueryBillSummaryResponse;
 import com.jdcloud.sdk.service.billing.client.QueryBillSummaryExecutor;
@@ -128,6 +131,17 @@ public class BillingClient extends JdcloudClient {
      */
     public CalculateTotalPriceResponse calculateTotalPrice(CalculateTotalPriceRequest request) throws JdcloudSdkException {
         return new CalculateTotalPriceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 分账账单计费项明细分页查询
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSplitBillItemsResponse describeSplitBillItems(DescribeSplitBillItemsRequest request) throws JdcloudSdkException {
+        return new DescribeSplitBillItemsExecutor().client(this).execute(request);
     }
 
     /**
