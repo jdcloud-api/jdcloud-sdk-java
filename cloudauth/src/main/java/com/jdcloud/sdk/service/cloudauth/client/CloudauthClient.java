@@ -40,6 +40,12 @@ import com.jdcloud.sdk.service.cloudauth.client.DescribeApplyStatusExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.MobileStatusRequest;
 import com.jdcloud.sdk.service.cloudauth.model.MobileStatusResponse;
 import com.jdcloud.sdk.service.cloudauth.client.MobileStatusExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyTransferNewRequest;
+import com.jdcloud.sdk.service.cloudauth.model.CheckCompanyTransferNewResponse;
+import com.jdcloud.sdk.service.cloudauth.client.CheckCompanyTransferNewExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.CompanyTransferNewRequest;
+import com.jdcloud.sdk.service.cloudauth.model.CompanyTransferNewResponse;
+import com.jdcloud.sdk.service.cloudauth.client.CompanyTransferNewExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.PersonalMobileRequest;
 import com.jdcloud.sdk.service.cloudauth.model.PersonalMobileResponse;
 import com.jdcloud.sdk.service.cloudauth.client.PersonalMobileExecutor;
@@ -49,6 +55,9 @@ import com.jdcloud.sdk.service.cloudauth.client.PersonalBankcard4DetailExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.QueryBankBranchListRequest;
 import com.jdcloud.sdk.service.cloudauth.model.QueryBankBranchListResponse;
 import com.jdcloud.sdk.service.cloudauth.client.QueryBankBranchListExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.MobileZwscRequest;
+import com.jdcloud.sdk.service.cloudauth.model.MobileZwscResponse;
+import com.jdcloud.sdk.service.cloudauth.client.MobileZwscExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.OneClickRequest;
 import com.jdcloud.sdk.service.cloudauth.model.OneClickResponse;
 import com.jdcloud.sdk.service.cloudauth.client.OneClickExecutor;
@@ -67,6 +76,9 @@ import com.jdcloud.sdk.service.cloudauth.client.IDCardExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.GetAliveResultNewRequest;
 import com.jdcloud.sdk.service.cloudauth.model.GetAliveResultNewResponse;
 import com.jdcloud.sdk.service.cloudauth.client.GetAliveResultNewExecutor;
+import com.jdcloud.sdk.service.cloudauth.model.QueryCompanyTransferNewRequest;
+import com.jdcloud.sdk.service.cloudauth.model.QueryCompanyTransferNewResponse;
+import com.jdcloud.sdk.service.cloudauth.client.QueryCompanyTransferNewExecutor;
 import com.jdcloud.sdk.service.cloudauth.model.QueryCityListRequest;
 import com.jdcloud.sdk.service.cloudauth.model.QueryCityListResponse;
 import com.jdcloud.sdk.service.cloudauth.client.QueryCityListExecutor;
@@ -214,6 +226,28 @@ public class CloudauthClient extends JdcloudClient {
     }
 
     /**
+     * 对公打款验证(新版idb0041)
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CheckCompanyTransferNewResponse checkCompanyTransferNew(CheckCompanyTransferNewRequest request) throws JdcloudSdkException {
+        return new CheckCompanyTransferNewExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 对公银行账户打款(新版idb0041)
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CompanyTransferNewResponse companyTransferNew(CompanyTransferNewRequest request) throws JdcloudSdkException {
+        return new CompanyTransferNewExecutor().client(this).execute(request);
+    }
+
+    /**
      * 个人手机号三要素详版
      *
      * @param request
@@ -244,6 +278,17 @@ public class CloudauthClient extends JdcloudClient {
      */
     public QueryBankBranchListResponse queryBankBranchList(QueryBankBranchListRequest request) throws JdcloudSdkException {
         return new QueryBankBranchListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 手机号码在网时长
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public MobileZwscResponse mobileZwsc(MobileZwscRequest request) throws JdcloudSdkException {
+        return new MobileZwscExecutor().client(this).execute(request);
     }
 
     /**
@@ -310,6 +355,17 @@ public class CloudauthClient extends JdcloudClient {
      */
     public GetAliveResultNewResponse getAliveResultNew(GetAliveResultNewRequest request) throws JdcloudSdkException {
         return new GetAliveResultNewExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 对公打款状态查询(新版idb0041)
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryCompanyTransferNewResponse queryCompanyTransferNew(QueryCompanyTransferNewRequest request) throws JdcloudSdkException {
+        return new QueryCompanyTransferNewExecutor().client(this).execute(request);
     }
 
     /**
