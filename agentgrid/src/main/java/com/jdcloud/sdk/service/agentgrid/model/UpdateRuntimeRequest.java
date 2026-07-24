@@ -98,7 +98,7 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     
     private List<EnvConfiguration> envs;
     /**
-     * Runtime 文件系统配置。不传该参数时，保留当前生效版本中的文件系统配置；传入该参数时，将用本次配置替换新版本中的文件系统配置。
+     * Runtime 文件系统配置。不传该参数时，保留当前生效版本中的文件系统配置；传入该参数时，将用本次配置替换新版本中的文件系统配置，最多支持配置 5 个文件系统。
      */
     private FilesystemConfiguration filesystemConfiguration;
 
@@ -297,7 +297,7 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get Runtime 文件系统配置。不传该参数时，保留当前生效版本中的文件系统配置；传入该参数时，将用本次配置替换新版本中的文件系统配置。
+     * get Runtime 文件系统配置。不传该参数时，保留当前生效版本中的文件系统配置；传入该参数时，将用本次配置替换新版本中的文件系统配置，最多支持配置 5 个文件系统。
      *
      * @return
      */
@@ -306,7 +306,7 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Runtime 文件系统配置。不传该参数时，保留当前生效版本中的文件系统配置；传入该参数时，将用本次配置替换新版本中的文件系统配置。
+     * set Runtime 文件系统配置。不传该参数时，保留当前生效版本中的文件系统配置；传入该参数时，将用本次配置替换新版本中的文件系统配置，最多支持配置 5 个文件系统。
      *
      * @param filesystemConfiguration
      */
@@ -489,7 +489,7 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set Runtime 文件系统配置。不传该参数时，保留当前生效版本中的文件系统配置；传入该参数时，将用本次配置替换新版本中的文件系统配置。
+     * set Runtime 文件系统配置。不传该参数时，保留当前生效版本中的文件系统配置；传入该参数时，将用本次配置替换新版本中的文件系统配置，最多支持配置 5 个文件系统。
      *
      * @param filesystemConfiguration
      */

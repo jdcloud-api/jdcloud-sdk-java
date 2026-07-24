@@ -54,12 +54,12 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
     private String description;
 
     /**
-     * Browser Tool 鉴权方式，当前仅支持 &#x60;APIKey&#x60;
+     * Browser Tool 鉴权方式，当前仅支持 &#x60;API_KEY&#x60;
      */
     private String authenticationType;
 
     /**
-     * Code Interpreter 网络配置。支持 public｜sandbox 两种。默认为sandbox。
+     * Code Interpreter 网络配置。支持 public｜sandbox 两种。
      * Required:true
      */
     @Required
@@ -118,7 +118,7 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get Browser Tool 鉴权方式，当前仅支持 &#x60;APIKey&#x60;
+     * get Browser Tool 鉴权方式，当前仅支持 &#x60;API_KEY&#x60;
      *
      * @return
      */
@@ -127,7 +127,7 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set Browser Tool 鉴权方式，当前仅支持 &#x60;APIKey&#x60;
+     * set Browser Tool 鉴权方式，当前仅支持 &#x60;API_KEY&#x60;
      *
      * @param authenticationType
      */
@@ -137,7 +137,7 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get Code Interpreter 网络配置。支持 public｜sandbox 两种。默认为sandbox。
+     * get Code Interpreter 网络配置。支持 public｜sandbox 两种。
      *
      * @return
      */
@@ -146,7 +146,7 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set Code Interpreter 网络配置。支持 public｜sandbox 两种。默认为sandbox。
+     * set Code Interpreter 网络配置。支持 public｜sandbox 两种。
      *
      * @param networkConfiguration
      */
@@ -217,7 +217,7 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set Browser Tool 鉴权方式，当前仅支持 &#x60;APIKey&#x60;
+     * set Browser Tool 鉴权方式，当前仅支持 &#x60;API_KEY&#x60;
      *
      * @param authenticationType
      */
@@ -228,7 +228,7 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set Code Interpreter 网络配置。支持 public｜sandbox 两种。默认为sandbox。
+     * set Code Interpreter 网络配置。支持 public｜sandbox 两种。
      *
      * @param networkConfiguration
      */

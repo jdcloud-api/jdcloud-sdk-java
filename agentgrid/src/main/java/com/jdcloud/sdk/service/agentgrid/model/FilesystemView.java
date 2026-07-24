@@ -39,6 +39,11 @@ public class FilesystemView  implements java.io.Serializable {
      */
     
     private List<OssAccessPointView> ossAccessPoints;
+    /**
+     * CFS 访问点配置列表
+     */
+    
+    private List<CfsAccessPointView> cfsAccessPoints;
 
 
     /**
@@ -60,6 +65,25 @@ public class FilesystemView  implements java.io.Serializable {
     }
 
 
+    /**
+    * get CFS 访问点配置列表
+    *
+    * @return
+    */
+    public List<CfsAccessPointView> getCfsAccessPoints() {
+        return cfsAccessPoints;
+    }
+
+    /**
+    * set CFS 访问点配置列表
+    *
+    * @param cfsAccessPoints
+    */
+    public void setCfsAccessPoints(List<CfsAccessPointView> cfsAccessPoints) {
+        this.cfsAccessPoints = cfsAccessPoints;
+    }
+
+
 
     /**
     * set OSS 访问点配置列表
@@ -68,6 +92,17 @@ public class FilesystemView  implements java.io.Serializable {
     */
     public FilesystemView ossAccessPoints(List<OssAccessPointView> ossAccessPoints) {
         this.ossAccessPoints = ossAccessPoints;
+        return this;
+    }
+
+
+    /**
+    * set CFS 访问点配置列表
+    *
+    * @param cfsAccessPoints
+    */
+    public FilesystemView cfsAccessPoints(List<CfsAccessPointView> cfsAccessPoints) {
+        this.cfsAccessPoints = cfsAccessPoints;
         return this;
     }
 
@@ -83,5 +118,17 @@ public class FilesystemView  implements java.io.Serializable {
             this.ossAccessPoints = new ArrayList<>();
         }
         this.ossAccessPoints.add(ossAccessPoint);
+    }
+
+    /**
+     * add item to CFS 访问点配置列表
+     *
+     * @param cfsAccessPoint
+     */
+    public void addCfsAccessPoint(CfsAccessPointView cfsAccessPoint) {
+        if (this.cfsAccessPoints == null) {
+            this.cfsAccessPoints = new ArrayList<>();
+        }
+        this.cfsAccessPoints.add(cfsAccessPoint);
     }
 }

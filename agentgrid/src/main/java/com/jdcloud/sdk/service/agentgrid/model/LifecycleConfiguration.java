@@ -33,14 +33,14 @@ public class LifecycleConfiguration  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * Session 会话从创建到自动终止的最长时间（秒），取值范围 60～28800，默认 28800
+     * Session 会话从创建到自动终止的最长时间（秒），取值范围 0～28800，默认 28800。当值为 0 时，生成的Session不会自动终止。
      */
     private Integer maxLifeTime;
 
 
 
     /**
-     * get Session 会话从创建到自动终止的最长时间（秒），取值范围 60～28800，默认 28800
+     * get Session 会话从创建到自动终止的最长时间（秒），取值范围 0～28800，默认 28800。当值为 0 时，生成的Session不会自动终止。
      *
      * @return
      */
@@ -49,7 +49,7 @@ public class LifecycleConfiguration  implements java.io.Serializable {
     }
 
     /**
-     * set Session 会话从创建到自动终止的最长时间（秒），取值范围 60～28800，默认 28800
+     * set Session 会话从创建到自动终止的最长时间（秒），取值范围 0～28800，默认 28800。当值为 0 时，生成的Session不会自动终止。
      *
      * @param maxLifeTime
      */
@@ -60,7 +60,7 @@ public class LifecycleConfiguration  implements java.io.Serializable {
 
 
     /**
-     * set Session 会话从创建到自动终止的最长时间（秒），取值范围 60～28800，默认 28800
+     * set Session 会话从创建到自动终止的最长时间（秒），取值范围 0～28800，默认 28800。当值为 0 时，生成的Session不会自动终止。
      *
      * @param maxLifeTime
      */

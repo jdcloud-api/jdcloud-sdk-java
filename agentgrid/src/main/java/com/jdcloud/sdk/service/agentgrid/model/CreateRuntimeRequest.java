@@ -100,10 +100,8 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     private NetworkConfiguration networkConfiguration;
 
     /**
-     * 绑定 IAM 角色名。
-     * Required:true
+     * 绑定 IAM 服务角色名。
      */
-    @Required
     private String roleName;
 
     /**
@@ -112,12 +110,12 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     
     private List<EnvConfiguration> envs;
     /**
-     * Runtime 文件系统配置。
+     * Runtime 文件系统配置，最多支持配置 5 个文件系统。
      */
     private FilesystemConfiguration filesystemConfiguration;
 
     /**
-     * Runtime 支持的协议类型。当前支持http、mcp、a2a 。
+     * Runtime 支持的协议类型。当前支持http、mcp、a2a。
      */
     private String protocol;
 
@@ -288,7 +286,7 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 绑定 IAM 角色名。
+     * get 绑定 IAM 服务角色名。
      *
      * @return
      */
@@ -297,7 +295,7 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 绑定 IAM 角色名。
+     * set 绑定 IAM 服务角色名。
      *
      * @param roleName
      */
@@ -326,7 +324,7 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get Runtime 文件系统配置。
+     * get Runtime 文件系统配置，最多支持配置 5 个文件系统。
      *
      * @return
      */
@@ -335,7 +333,7 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Runtime 文件系统配置。
+     * set Runtime 文件系统配置，最多支持配置 5 个文件系统。
      *
      * @param filesystemConfiguration
      */
@@ -345,7 +343,7 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get Runtime 支持的协议类型。当前支持http、mcp、a2a 。
+     * get Runtime 支持的协议类型。当前支持http、mcp、a2a。
      *
      * @return
      */
@@ -354,7 +352,7 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Runtime 支持的协议类型。当前支持http、mcp、a2a 。
+     * set Runtime 支持的协议类型。当前支持http、mcp、a2a。
      *
      * @param protocol
      */
@@ -491,7 +489,7 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 绑定 IAM 角色名。
+     * set 绑定 IAM 服务角色名。
      *
      * @param roleName
      */
@@ -513,7 +511,7 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set Runtime 文件系统配置。
+     * set Runtime 文件系统配置，最多支持配置 5 个文件系统。
      *
      * @param filesystemConfiguration
      */
@@ -524,7 +522,7 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set Runtime 支持的协议类型。当前支持http、mcp、a2a 。
+     * set Runtime 支持的协议类型。当前支持http、mcp、a2a。
      *
      * @param protocol
      */

@@ -42,7 +42,7 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
     private static final long serialVersionUID = 1L;
 
     /**
-     * Code Interpreter 名称，全局唯一。
+     * Code Interpreter 名称。长度为 1~32 个字符，可包含中文、数字、大小写字母、下划线、中划线或点。
      * Required:true
      */
     @Required
@@ -54,7 +54,7 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
     private String description;
 
     /**
-     * Code Interpreter 鉴权方式，当前仅支持 &#x60;APIKey&#x60;
+     * Code Interpreter 鉴权方式，当前仅支持 &#x60;API_KEY&#x60;
      */
     private String authenticationType;
 
@@ -64,7 +64,7 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
     private String clientToken;
 
     /**
-     * Code Interpreter 网络配置类型。当前支持 &#x60;Public&#x60; 和 &#x60;SandBox&#x60;，建议显式传值。
+     * Code Interpreter 网络配置类型。当前支持 &#x60;public&#x60; 和 &#x60;sandbox&#x60;。
      * Required:true
      */
     @Required
@@ -80,7 +80,7 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
 
 
     /**
-     * get Code Interpreter 名称，全局唯一。
+     * get Code Interpreter 名称。长度为 1~32 个字符，可包含中文、数字、大小写字母、下划线、中划线或点。
      *
      * @return
      */
@@ -89,7 +89,7 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set Code Interpreter 名称，全局唯一。
+     * set Code Interpreter 名称。长度为 1~32 个字符，可包含中文、数字、大小写字母、下划线、中划线或点。
      *
      * @param name
      */
@@ -118,7 +118,7 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
 
 
     /**
-     * get Code Interpreter 鉴权方式，当前仅支持 &#x60;APIKey&#x60;
+     * get Code Interpreter 鉴权方式，当前仅支持 &#x60;API_KEY&#x60;
      *
      * @return
      */
@@ -127,7 +127,7 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set Code Interpreter 鉴权方式，当前仅支持 &#x60;APIKey&#x60;
+     * set Code Interpreter 鉴权方式，当前仅支持 &#x60;API_KEY&#x60;
      *
      * @param authenticationType
      */
@@ -156,7 +156,7 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
 
 
     /**
-     * get Code Interpreter 网络配置类型。当前支持 &#x60;Public&#x60; 和 &#x60;SandBox&#x60;，建议显式传值。
+     * get Code Interpreter 网络配置类型。当前支持 &#x60;public&#x60; 和 &#x60;sandbox&#x60;。
      *
      * @return
      */
@@ -165,7 +165,7 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set Code Interpreter 网络配置类型。当前支持 &#x60;Public&#x60; 和 &#x60;SandBox&#x60;，建议显式传值。
+     * set Code Interpreter 网络配置类型。当前支持 &#x60;public&#x60; 和 &#x60;sandbox&#x60;。
      *
      * @param networkConfiguration
      */
@@ -195,7 +195,7 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
 
 
     /**
-     * set Code Interpreter 名称，全局唯一。
+     * set Code Interpreter 名称。长度为 1~32 个字符，可包含中文、数字、大小写字母、下划线、中划线或点。
      *
      * @param name
      */
@@ -217,7 +217,7 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
 
 
     /**
-     * set Code Interpreter 鉴权方式，当前仅支持 &#x60;APIKey&#x60;
+     * set Code Interpreter 鉴权方式，当前仅支持 &#x60;API_KEY&#x60;
      *
      * @param authenticationType
      */
@@ -239,7 +239,7 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
 
 
     /**
-     * set Code Interpreter 网络配置类型。当前支持 &#x60;Public&#x60; 和 &#x60;SandBox&#x60;，建议显式传值。
+     * set Code Interpreter 网络配置类型。当前支持 &#x60;public&#x60; 和 &#x60;sandbox&#x60;。
      *
      * @param networkConfiguration
      */
