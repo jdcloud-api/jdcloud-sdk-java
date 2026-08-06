@@ -112,7 +112,8 @@ public class Az  implements java.io.Serializable {
     /**
      * set az名称
      *
-     * @param azId
+     * @param azId az名称
+     * @return Az
      */
     public Az azId(String azId) {
         this.azId = azId;
@@ -123,7 +124,8 @@ public class Az  implements java.io.Serializable {
     /**
      * set 1正常0售罄
      *
-     * @param azStatus
+     * @param azStatus 1正常0售罄
+     * @return Az
      */
     public Az azStatus(Integer azStatus) {
         this.azStatus = azStatus;
@@ -134,7 +136,8 @@ public class Az  implements java.io.Serializable {
     /**
     * set orderableStorageTypes
     *
-    * @param orderableStorageTypes
+    * @param orderableStorageTypes 
+    * @return Az
     */
     public Az orderableStorageTypes(List<Disk> orderableStorageTypes) {
         this.orderableStorageTypes = orderableStorageTypes;

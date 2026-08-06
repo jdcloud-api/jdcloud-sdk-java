@@ -119,7 +119,8 @@ public class CreateInstanceFromBackupRequest extends JdcloudRequest implements j
     /**
      * set 要恢复的备份的ID
      *
-     * @param backupId
+     * @param backupId 要恢复的备份的ID
+     * @return CreateInstanceFromBackupRequest
      */
     public CreateInstanceFromBackupRequest backupId(String backupId) {
         this.backupId = backupId;
@@ -130,7 +131,8 @@ public class CreateInstanceFromBackupRequest extends JdcloudRequest implements j
     /**
      * set 新建实例规格
      *
-     * @param instanceSpec
+     * @param instanceSpec 新建实例规格
+     * @return CreateInstanceFromBackupRequest
      */
     public CreateInstanceFromBackupRequest instanceSpec(TidbInstanceSpec instanceSpec) {
         this.instanceSpec = instanceSpec;
@@ -141,7 +143,8 @@ public class CreateInstanceFromBackupRequest extends JdcloudRequest implements j
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return CreateInstanceFromBackupRequest
      */
     public CreateInstanceFromBackupRequest regionId(String regionId) {
         this.regionId = regionId;

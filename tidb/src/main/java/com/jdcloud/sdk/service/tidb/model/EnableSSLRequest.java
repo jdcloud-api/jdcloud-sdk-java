@@ -92,7 +92,8 @@ public class EnableSSLRequest extends JdcloudRequest implements java.io.Serializ
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return EnableSSLRequest
      */
     public EnableSSLRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class EnableSSLRequest extends JdcloudRequest implements java.io.Serializ
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return EnableSSLRequest
      */
     public EnableSSLRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

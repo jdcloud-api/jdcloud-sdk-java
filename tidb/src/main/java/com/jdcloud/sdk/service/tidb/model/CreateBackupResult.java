@@ -63,7 +63,8 @@ public class CreateBackupResult extends JdcloudResult implements java.io.Seriali
     /**
      * set 备份ID
      *
-     * @param backupId
+     * @param backupId 备份ID
+     * @return CreateBackupResult
      */
     public CreateBackupResult backupId(String backupId) {
         this.backupId = backupId;

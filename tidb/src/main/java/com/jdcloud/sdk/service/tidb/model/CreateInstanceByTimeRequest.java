@@ -145,7 +145,8 @@ public class CreateInstanceByTimeRequest extends JdcloudRequest implements java.
     /**
      * set 根据源实例的哪个时间点创建新实例, 北京时间，格式为&quot;YYYY-MM-DD HH:mm:ss&quot;
      *
-     * @param restoreTime
+     * @param restoreTime 根据源实例的哪个时间点创建新实例, 北京时间，格式为&quot;YYYY-MM-DD HH:mm:ss&quot;
+     * @return CreateInstanceByTimeRequest
      */
     public CreateInstanceByTimeRequest restoreTime(String restoreTime) {
         this.restoreTime = restoreTime;
@@ -156,7 +157,8 @@ public class CreateInstanceByTimeRequest extends JdcloudRequest implements java.
     /**
      * set 新建实例规格
      *
-     * @param instanceSpec
+     * @param instanceSpec 新建实例规格
+     * @return CreateInstanceByTimeRequest
      */
     public CreateInstanceByTimeRequest instanceSpec(TidbInstanceSpec instanceSpec) {
         this.instanceSpec = instanceSpec;
@@ -167,7 +169,8 @@ public class CreateInstanceByTimeRequest extends JdcloudRequest implements java.
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return CreateInstanceByTimeRequest
      */
     public CreateInstanceByTimeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -178,7 +181,8 @@ public class CreateInstanceByTimeRequest extends JdcloudRequest implements java.
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return CreateInstanceByTimeRequest
      */
     public CreateInstanceByTimeRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

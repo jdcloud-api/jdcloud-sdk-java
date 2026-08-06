@@ -66,7 +66,8 @@ public class DescribeDataMigrationResult extends JdcloudResult implements java.i
     /**
     * set migrationTasks
     *
-    * @param migrationTasks
+    * @param migrationTasks 
+    * @return DescribeDataMigrationResult
     */
     public DescribeDataMigrationResult migrationTasks(List<MigrationTask> migrationTasks) {
         this.migrationTasks = migrationTasks;

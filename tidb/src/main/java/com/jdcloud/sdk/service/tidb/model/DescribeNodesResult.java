@@ -90,7 +90,8 @@ public class DescribeNodesResult extends JdcloudResult implements java.io.Serial
     /**
     * set nodes
     *
-    * @param nodes
+    * @param nodes 
+    * @return DescribeNodesResult
     */
     public DescribeNodesResult nodes(List<TiDBNode> nodes) {
         this.nodes = nodes;
@@ -101,7 +102,8 @@ public class DescribeNodesResult extends JdcloudResult implements java.io.Serial
     /**
      * set 总记录数
      *
-     * @param totalCount
+     * @param totalCount 总记录数
+     * @return DescribeNodesResult
      */
     public DescribeNodesResult totalCount(Number totalCount) {
         this.totalCount = totalCount;

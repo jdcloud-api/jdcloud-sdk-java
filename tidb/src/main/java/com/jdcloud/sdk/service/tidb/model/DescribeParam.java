@@ -43,7 +43,7 @@ public class DescribeParam  implements java.io.Serializable {
     private String description;
 
     /**
-     * 参数的节点类型，包括TiKV,TiDB,PD,TiFlash
+     * 参数的类型，包括 tidb,tikv,pd,ticdc,tiflash,sysvar
      */
     private String nodeType;
 
@@ -58,9 +58,24 @@ public class DescribeParam  implements java.io.Serializable {
     private String currentValue;
 
     /**
+     * 参数值类型，目前有 bool/int/float/string
+     */
+    private String dataType;
+
+    /**
+     * 参数最小值
+     */
+    private String minValue;
+
+    /**
+     * 参数最大值
+     */
+    private String maxValue;
+
+    /**
      * 参数修改是否需要重启生效，大小写敏感 -true:参数需要重启才能生效 -false:参数无需重启生效
      */
-    private Boolean needRestart;
+    private String needRestart;
 
 
 
@@ -103,7 +118,7 @@ public class DescribeParam  implements java.io.Serializable {
 
 
     /**
-     * get 参数的节点类型，包括TiKV,TiDB,PD,TiFlash
+     * get 参数的类型，包括 tidb,tikv,pd,ticdc,tiflash,sysvar
      *
      * @return
      */
@@ -112,7 +127,7 @@ public class DescribeParam  implements java.io.Serializable {
     }
 
     /**
-     * set 参数的节点类型，包括TiKV,TiDB,PD,TiFlash
+     * set 参数的类型，包括 tidb,tikv,pd,ticdc,tiflash,sysvar
      *
      * @param nodeType
      */
@@ -160,11 +175,68 @@ public class DescribeParam  implements java.io.Serializable {
 
 
     /**
+     * get 参数值类型，目前有 bool/int/float/string
+     *
+     * @return
+     */
+    public String getDataType() {
+        return dataType;
+    }
+
+    /**
+     * set 参数值类型，目前有 bool/int/float/string
+     *
+     * @param dataType
+     */
+    public void setDataType(String dataType) {
+        this.dataType = dataType;
+    }
+
+
+    /**
+     * get 参数最小值
+     *
+     * @return
+     */
+    public String getMinValue() {
+        return minValue;
+    }
+
+    /**
+     * set 参数最小值
+     *
+     * @param minValue
+     */
+    public void setMinValue(String minValue) {
+        this.minValue = minValue;
+    }
+
+
+    /**
+     * get 参数最大值
+     *
+     * @return
+     */
+    public String getMaxValue() {
+        return maxValue;
+    }
+
+    /**
+     * set 参数最大值
+     *
+     * @param maxValue
+     */
+    public void setMaxValue(String maxValue) {
+        this.maxValue = maxValue;
+    }
+
+
+    /**
      * get 参数修改是否需要重启生效，大小写敏感 -true:参数需要重启才能生效 -false:参数无需重启生效
      *
      * @return
      */
-    public Boolean getNeedRestart() {
+    public String getNeedRestart() {
         return needRestart;
     }
 
@@ -173,7 +245,7 @@ public class DescribeParam  implements java.io.Serializable {
      *
      * @param needRestart
      */
-    public void setNeedRestart(Boolean needRestart) {
+    public void setNeedRestart(String needRestart) {
         this.needRestart = needRestart;
     }
 
@@ -182,7 +254,8 @@ public class DescribeParam  implements java.io.Serializable {
     /**
      * set 参数名称
      *
-     * @param name
+     * @param name 参数名称
+     * @return DescribeParam
      */
     public DescribeParam name(String name) {
         this.name = name;
@@ -193,7 +266,8 @@ public class DescribeParam  implements java.io.Serializable {
     /**
      * set 参数的描述
      *
-     * @param description
+     * @param description 参数的描述
+     * @return DescribeParam
      */
     public DescribeParam description(String description) {
         this.description = description;
@@ -202,9 +276,10 @@ public class DescribeParam  implements java.io.Serializable {
 
 
     /**
-     * set 参数的节点类型，包括TiKV,TiDB,PD,TiFlash
+     * set 参数的类型，包括 tidb,tikv,pd,ticdc,tiflash,sysvar
      *
-     * @param nodeType
+     * @param nodeType 参数的类型，包括 tidb,tikv,pd,ticdc,tiflash,sysvar
+     * @return DescribeParam
      */
     public DescribeParam nodeType(String nodeType) {
         this.nodeType = nodeType;
@@ -215,7 +290,8 @@ public class DescribeParam  implements java.io.Serializable {
     /**
      * set 参数的默认数值
      *
-     * @param defaultValue
+     * @param defaultValue 参数的默认数值
+     * @return DescribeParam
      */
     public DescribeParam defaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
@@ -226,7 +302,8 @@ public class DescribeParam  implements java.io.Serializable {
     /**
      * set 参数的当前值
      *
-     * @param currentValue
+     * @param currentValue 参数的当前值
+     * @return DescribeParam
      */
     public DescribeParam currentValue(String currentValue) {
         this.currentValue = currentValue;
@@ -235,11 +312,48 @@ public class DescribeParam  implements java.io.Serializable {
 
 
     /**
+     * set 参数值类型，目前有 bool/int/float/string
+     *
+     * @param dataType 参数值类型，目前有 bool/int/float/string
+     * @return DescribeParam
+     */
+    public DescribeParam dataType(String dataType) {
+        this.dataType = dataType;
+        return this;
+    }
+
+
+    /**
+     * set 参数最小值
+     *
+     * @param minValue 参数最小值
+     * @return DescribeParam
+     */
+    public DescribeParam minValue(String minValue) {
+        this.minValue = minValue;
+        return this;
+    }
+
+
+    /**
+     * set 参数最大值
+     *
+     * @param maxValue 参数最大值
+     * @return DescribeParam
+     */
+    public DescribeParam maxValue(String maxValue) {
+        this.maxValue = maxValue;
+        return this;
+    }
+
+
+    /**
      * set 参数修改是否需要重启生效，大小写敏感 -true:参数需要重启才能生效 -false:参数无需重启生效
      *
-     * @param needRestart
+     * @param needRestart 参数修改是否需要重启生效，大小写敏感 -true:参数需要重启才能生效 -false:参数无需重启生效
+     * @return DescribeParam
      */
-    public DescribeParam needRestart(Boolean needRestart) {
+    public DescribeParam needRestart(String needRestart) {
         this.needRestart = needRestart;
         return this;
     }

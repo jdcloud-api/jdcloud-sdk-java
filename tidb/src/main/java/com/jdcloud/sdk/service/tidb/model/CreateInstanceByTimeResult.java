@@ -87,7 +87,8 @@ public class CreateInstanceByTimeResult extends JdcloudResult implements java.io
     /**
      * set instanceId
      *
-     * @param instanceId
+     * @param instanceId 
+     * @return CreateInstanceByTimeResult
      */
     public CreateInstanceByTimeResult instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -98,7 +99,8 @@ public class CreateInstanceByTimeResult extends JdcloudResult implements java.io
     /**
      * set orderId
      *
-     * @param orderId
+     * @param orderId 
+     * @return CreateInstanceByTimeResult
      */
     public CreateInstanceByTimeResult orderId(String orderId) {
         this.orderId = orderId;

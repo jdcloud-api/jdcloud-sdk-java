@@ -24,6 +24,9 @@
 
 package com.jdcloud.sdk.service.tidb.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.tidb.model.OpsTag;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -34,6 +37,11 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * opsTagSpecs
+     */
+    
+    private List<OpsTag> opsTagSpecs;
     /**
      * 地域代码
      * Required:true
@@ -48,6 +56,25 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
     @Required
     private String instanceId;
 
+
+
+    /**
+    * get opsTagSpecs
+    *
+    * @return
+    */
+    public List<OpsTag> getOpsTagSpecs() {
+        return opsTagSpecs;
+    }
+
+    /**
+    * set opsTagSpecs
+    *
+    * @param opsTagSpecs
+    */
+    public void setOpsTagSpecs(List<OpsTag> opsTagSpecs) {
+        this.opsTagSpecs = opsTagSpecs;
+    }
 
 
     /**
@@ -90,9 +117,22 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
+    * set opsTagSpecs
+    *
+    * @param opsTagSpecs 
+    * @return DeleteInstanceRequest
+    */
+    public DeleteInstanceRequest opsTagSpecs(List<OpsTag> opsTagSpecs) {
+        this.opsTagSpecs = opsTagSpecs;
+        return this;
+    }
+
+
+    /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DeleteInstanceRequest
      */
     public DeleteInstanceRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +143,8 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DeleteInstanceRequest
      */
     public DeleteInstanceRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -111,4 +152,16 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
+    /**
+     * add item to opsTagSpecs
+     *
+     * @param opsTagSpec
+     */
+    public void addOpsTagSpec(OpsTag opsTagSpec) {
+        if (this.opsTagSpecs == null) {
+            this.opsTagSpecs = new ArrayList<>();
+        }
+        this.opsTagSpecs.add(opsTagSpec);
+    }
 }

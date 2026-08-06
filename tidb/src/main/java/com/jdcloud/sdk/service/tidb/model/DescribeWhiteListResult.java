@@ -66,7 +66,8 @@ public class DescribeWhiteListResult extends JdcloudResult implements java.io.Se
     /**
     * set whiteLists
     *
-    * @param whiteLists
+    * @param whiteLists 
+    * @return DescribeWhiteListResult
     */
     public DescribeWhiteListResult whiteLists(List<WhiteList> whiteLists) {
         this.whiteLists = whiteLists;

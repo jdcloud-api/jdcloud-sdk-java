@@ -24,9 +24,8 @@
 
 package com.jdcloud.sdk.service.tidb.model;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.tidb.model.ReplicationModifySpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -37,42 +36,12 @@ public class ModifyReplicationRequest extends JdcloudRequest implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 复制任务ID
+     * 数据复制任务的修改信息
      * Required:true
      */
     @Required
-    private String taskId;
+    private ReplicationModifySpec replicationModify;
 
-    /**
-     * 目标实例备注说明
-     */
-    private String targetComment;
-
-    /**
-     * 目标类型为TiDB或MySQL时，连接目标实例的用户名
-     */
-    private String targetUser;
-
-    /**
-     * 目标类型为TiDB或MySQL时，连接目标实例的密码
-     */
-    private String targetPassword;
-
-    /**
-     * Kafka的Topic
-     */
-    private String kafkaTopic;
-
-    /**
-     * Kafka的版本
-     */
-    private String kafkaVersion;
-
-    /**
-     * 过滤规则列表
-     */
-    
-    private List<String> replicationObjects;
     /**
      * 地域代码
      * Required:true
@@ -87,138 +56,31 @@ public class ModifyReplicationRequest extends JdcloudRequest implements java.io.
     @Required
     private String instanceId;
 
+    /**
+     * 复制任务ID
+     * Required:true
+     */
+    @Required
+    private String taskId;
+
 
 
     /**
-     * get 复制任务ID
+     * get 数据复制任务的修改信息
      *
      * @return
      */
-    public String getTaskId() {
-        return taskId;
+    public ReplicationModifySpec getReplicationModify() {
+        return replicationModify;
     }
 
     /**
-     * set 复制任务ID
+     * set 数据复制任务的修改信息
      *
-     * @param taskId
+     * @param replicationModify
      */
-    public void setTaskId(String taskId) {
-        this.taskId = taskId;
-    }
-
-
-    /**
-     * get 目标实例备注说明
-     *
-     * @return
-     */
-    public String getTargetComment() {
-        return targetComment;
-    }
-
-    /**
-     * set 目标实例备注说明
-     *
-     * @param targetComment
-     */
-    public void setTargetComment(String targetComment) {
-        this.targetComment = targetComment;
-    }
-
-
-    /**
-     * get 目标类型为TiDB或MySQL时，连接目标实例的用户名
-     *
-     * @return
-     */
-    public String getTargetUser() {
-        return targetUser;
-    }
-
-    /**
-     * set 目标类型为TiDB或MySQL时，连接目标实例的用户名
-     *
-     * @param targetUser
-     */
-    public void setTargetUser(String targetUser) {
-        this.targetUser = targetUser;
-    }
-
-
-    /**
-     * get 目标类型为TiDB或MySQL时，连接目标实例的密码
-     *
-     * @return
-     */
-    public String getTargetPassword() {
-        return targetPassword;
-    }
-
-    /**
-     * set 目标类型为TiDB或MySQL时，连接目标实例的密码
-     *
-     * @param targetPassword
-     */
-    public void setTargetPassword(String targetPassword) {
-        this.targetPassword = targetPassword;
-    }
-
-
-    /**
-     * get Kafka的Topic
-     *
-     * @return
-     */
-    public String getKafkaTopic() {
-        return kafkaTopic;
-    }
-
-    /**
-     * set Kafka的Topic
-     *
-     * @param kafkaTopic
-     */
-    public void setKafkaTopic(String kafkaTopic) {
-        this.kafkaTopic = kafkaTopic;
-    }
-
-
-    /**
-     * get Kafka的版本
-     *
-     * @return
-     */
-    public String getKafkaVersion() {
-        return kafkaVersion;
-    }
-
-    /**
-     * set Kafka的版本
-     *
-     * @param kafkaVersion
-     */
-    public void setKafkaVersion(String kafkaVersion) {
-        this.kafkaVersion = kafkaVersion;
-    }
-
-
-    /**
-    * get 过滤规则列表
-    *
-    * @return
-    */
-    public List<String> getReplicationObjects() {
-        return replicationObjects;
-    }
-
-    /**
-    * set 过滤规则列表
-    *
-    * @param replicationObjects
-    */
-    public void setReplicationObjects(List<String> replicationObjects) {
-        this.replicationObjects = replicationObjects;
+    public void setReplicationModify(ReplicationModifySpec replicationModify) {
+        this.replicationModify = replicationModify;
     }
 
 
@@ -260,80 +122,34 @@ public class ModifyReplicationRequest extends JdcloudRequest implements java.io.
     }
 
 
+    /**
+     * get 复制任务ID
+     *
+     * @return
+     */
+    public String getTaskId() {
+        return taskId;
+    }
 
     /**
      * set 复制任务ID
      *
      * @param taskId
      */
-    public ModifyReplicationRequest taskId(String taskId) {
+    public void setTaskId(String taskId) {
         this.taskId = taskId;
-        return this;
     }
 
 
+
     /**
-     * set 目标实例备注说明
+     * set 数据复制任务的修改信息
      *
-     * @param targetComment
+     * @param replicationModify 数据复制任务的修改信息
+     * @return ModifyReplicationRequest
      */
-    public ModifyReplicationRequest targetComment(String targetComment) {
-        this.targetComment = targetComment;
-        return this;
-    }
-
-
-    /**
-     * set 目标类型为TiDB或MySQL时，连接目标实例的用户名
-     *
-     * @param targetUser
-     */
-    public ModifyReplicationRequest targetUser(String targetUser) {
-        this.targetUser = targetUser;
-        return this;
-    }
-
-
-    /**
-     * set 目标类型为TiDB或MySQL时，连接目标实例的密码
-     *
-     * @param targetPassword
-     */
-    public ModifyReplicationRequest targetPassword(String targetPassword) {
-        this.targetPassword = targetPassword;
-        return this;
-    }
-
-
-    /**
-     * set Kafka的Topic
-     *
-     * @param kafkaTopic
-     */
-    public ModifyReplicationRequest kafkaTopic(String kafkaTopic) {
-        this.kafkaTopic = kafkaTopic;
-        return this;
-    }
-
-
-    /**
-     * set Kafka的版本
-     *
-     * @param kafkaVersion
-     */
-    public ModifyReplicationRequest kafkaVersion(String kafkaVersion) {
-        this.kafkaVersion = kafkaVersion;
-        return this;
-    }
-
-
-    /**
-    * set 过滤规则列表
-    *
-    * @param replicationObjects
-    */
-    public ModifyReplicationRequest replicationObjects(List<String> replicationObjects) {
-        this.replicationObjects = replicationObjects;
+    public ModifyReplicationRequest replicationModify(ReplicationModifySpec replicationModify) {
+        this.replicationModify = replicationModify;
         return this;
     }
 
@@ -341,7 +157,8 @@ public class ModifyReplicationRequest extends JdcloudRequest implements java.io.
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return ModifyReplicationRequest
      */
     public ModifyReplicationRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -352,7 +169,8 @@ public class ModifyReplicationRequest extends JdcloudRequest implements java.io.
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return ModifyReplicationRequest
      */
     public ModifyReplicationRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -360,16 +178,16 @@ public class ModifyReplicationRequest extends JdcloudRequest implements java.io.
     }
 
 
-
     /**
-     * add item to 过滤规则列表
+     * set 复制任务ID
      *
-     * @param replicationObject
+     * @param taskId 复制任务ID
+     * @return ModifyReplicationRequest
      */
-    public void addReplicationObject(String replicationObject) {
-        if (this.replicationObjects == null) {
-            this.replicationObjects = new ArrayList<>();
-        }
-        this.replicationObjects.add(replicationObject);
+    public ModifyReplicationRequest taskId(String taskId) {
+        this.taskId = taskId;
+        return this;
     }
+
+
 }

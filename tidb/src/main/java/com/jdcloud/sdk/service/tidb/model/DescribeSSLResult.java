@@ -63,7 +63,8 @@ public class DescribeSSLResult extends JdcloudResult implements java.io.Serializ
     /**
      * set SSL开启状态，已开启为true，关闭为false
      *
-     * @param available
+     * @param available SSL开启状态，已开启为true，关闭为false
+     * @return DescribeSSLResult
      */
     public DescribeSSLResult available(Boolean available) {
         this.available = available;

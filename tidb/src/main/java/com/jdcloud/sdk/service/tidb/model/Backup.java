@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.tidb.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * backup
@@ -53,6 +55,11 @@ public class Backup  implements java.io.Serializable {
     private String backupStatus;
 
     /**
+     * 备份创建时间
+     */
+    private String backupCreateTime;
+
+    /**
      * 备份开始时间
      */
     private String backupStartTime;
@@ -77,6 +84,21 @@ public class Backup  implements java.io.Serializable {
      */
     private Long backupSizeByte;
 
+    /**
+     * 备份的数据库版本，格式:x.y(major.minor)
+     */
+    private String backupDbVersion;
+
+    /**
+     * 备份策略（instance或database）
+     */
+    private String backupPolicy;
+
+    /**
+     * 库备份策略下备份的库信息
+     */
+    
+    private List<String> backupDbs;
 
 
     /**
@@ -152,6 +174,25 @@ public class Backup  implements java.io.Serializable {
      */
     public void setBackupStatus(String backupStatus) {
         this.backupStatus = backupStatus;
+    }
+
+
+    /**
+     * get 备份创建时间
+     *
+     * @return
+     */
+    public String getBackupCreateTime() {
+        return backupCreateTime;
+    }
+
+    /**
+     * set 备份创建时间
+     *
+     * @param backupCreateTime
+     */
+    public void setBackupCreateTime(String backupCreateTime) {
+        this.backupCreateTime = backupCreateTime;
     }
 
 
@@ -250,11 +291,69 @@ public class Backup  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 备份的数据库版本，格式:x.y(major.minor)
+     *
+     * @return
+     */
+    public String getBackupDbVersion() {
+        return backupDbVersion;
+    }
+
+    /**
+     * set 备份的数据库版本，格式:x.y(major.minor)
+     *
+     * @param backupDbVersion
+     */
+    public void setBackupDbVersion(String backupDbVersion) {
+        this.backupDbVersion = backupDbVersion;
+    }
+
+
+    /**
+     * get 备份策略（instance或database）
+     *
+     * @return
+     */
+    public String getBackupPolicy() {
+        return backupPolicy;
+    }
+
+    /**
+     * set 备份策略（instance或database）
+     *
+     * @param backupPolicy
+     */
+    public void setBackupPolicy(String backupPolicy) {
+        this.backupPolicy = backupPolicy;
+    }
+
+
+    /**
+    * get 库备份策略下备份的库信息
+    *
+    * @return
+    */
+    public List<String> getBackupDbs() {
+        return backupDbs;
+    }
+
+    /**
+    * set 库备份策略下备份的库信息
+    *
+    * @param backupDbs
+    */
+    public void setBackupDbs(List<String> backupDbs) {
+        this.backupDbs = backupDbs;
+    }
+
+
 
     /**
      * set 备份ID
      *
-     * @param backupId
+     * @param backupId 备份ID
+     * @return Backup
      */
     public Backup backupId(String backupId) {
         this.backupId = backupId;
@@ -265,7 +364,8 @@ public class Backup  implements java.io.Serializable {
     /**
      * set 备份名称，最长支持64个英文字符或等长的中文字符
      *
-     * @param backupName
+     * @param backupName 备份名称，最长支持64个英文字符或等长的中文字符
+     * @return Backup
      */
     public Backup backupName(String backupName) {
         this.backupName = backupName;
@@ -276,7 +376,8 @@ public class Backup  implements java.io.Serializable {
     /**
      * set 备份所属实例ID
      *
-     * @param instanceId
+     * @param instanceId 备份所属实例ID
+     * @return Backup
      */
     public Backup instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -287,7 +388,8 @@ public class Backup  implements java.io.Serializable {
     /**
      * set 备份状态
      *
-     * @param backupStatus
+     * @param backupStatus 备份状态
+     * @return Backup
      */
     public Backup backupStatus(String backupStatus) {
         this.backupStatus = backupStatus;
@@ -296,9 +398,22 @@ public class Backup  implements java.io.Serializable {
 
 
     /**
+     * set 备份创建时间
+     *
+     * @param backupCreateTime 备份创建时间
+     * @return Backup
+     */
+    public Backup backupCreateTime(String backupCreateTime) {
+        this.backupCreateTime = backupCreateTime;
+        return this;
+    }
+
+
+    /**
      * set 备份开始时间
      *
-     * @param backupStartTime
+     * @param backupStartTime 备份开始时间
+     * @return Backup
      */
     public Backup backupStartTime(String backupStartTime) {
         this.backupStartTime = backupStartTime;
@@ -309,7 +424,8 @@ public class Backup  implements java.io.Serializable {
     /**
      * set 备份结束时间
      *
-     * @param backupEndTime
+     * @param backupEndTime 备份结束时间
+     * @return Backup
      */
     public Backup backupEndTime(String backupEndTime) {
         this.backupEndTime = backupEndTime;
@@ -320,7 +436,8 @@ public class Backup  implements java.io.Serializable {
     /**
      * set 备份类型
      *
-     * @param backupType
+     * @param backupType 备份类型
+     * @return Backup
      */
     public Backup backupType(String backupType) {
         this.backupType = backupType;
@@ -331,7 +448,8 @@ public class Backup  implements java.io.Serializable {
     /**
      * set 备份模式
      *
-     * @param backupMode
+     * @param backupMode 备份模式
+     * @return Backup
      */
     public Backup backupMode(String backupMode) {
         this.backupMode = backupMode;
@@ -342,7 +460,8 @@ public class Backup  implements java.io.Serializable {
     /**
      * set 整个备份集大小，单位：Byte
      *
-     * @param backupSizeByte
+     * @param backupSizeByte 整个备份集大小，单位：Byte
+     * @return Backup
      */
     public Backup backupSizeByte(Long backupSizeByte) {
         this.backupSizeByte = backupSizeByte;
@@ -350,4 +469,52 @@ public class Backup  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 备份的数据库版本，格式:x.y(major.minor)
+     *
+     * @param backupDbVersion 备份的数据库版本，格式:x.y(major.minor)
+     * @return Backup
+     */
+    public Backup backupDbVersion(String backupDbVersion) {
+        this.backupDbVersion = backupDbVersion;
+        return this;
+    }
+
+
+    /**
+     * set 备份策略（instance或database）
+     *
+     * @param backupPolicy 备份策略（instance或database）
+     * @return Backup
+     */
+    public Backup backupPolicy(String backupPolicy) {
+        this.backupPolicy = backupPolicy;
+        return this;
+    }
+
+
+    /**
+    * set 库备份策略下备份的库信息
+    *
+    * @param backupDbs 库备份策略下备份的库信息
+    * @return Backup
+    */
+    public Backup backupDbs(List<String> backupDbs) {
+        this.backupDbs = backupDbs;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 库备份策略下备份的库信息
+     *
+     * @param backupDb
+     */
+    public void addBackupDb(String backupDb) {
+        if (this.backupDbs == null) {
+            this.backupDbs = new ArrayList<>();
+        }
+        this.backupDbs.add(backupDb);
+    }
 }

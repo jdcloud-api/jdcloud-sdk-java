@@ -206,7 +206,8 @@ public class MigrationTask  implements java.io.Serializable {
     /**
      * set 迁移任务ID
      *
-     * @param taskId
+     * @param taskId 迁移任务ID
+     * @return MigrationTask
      */
     public MigrationTask taskId(String taskId) {
         this.taskId = taskId;
@@ -217,7 +218,8 @@ public class MigrationTask  implements java.io.Serializable {
     /**
      * set 迁移任务类型，大小写不敏感，FULL_IMPORT:全量数据导入
      *
-     * @param migrationType
+     * @param migrationType 迁移任务类型，大小写不敏感，FULL_IMPORT:全量数据导入
+     * @return MigrationTask
      */
     public MigrationTask migrationType(String migrationType) {
         this.migrationType = migrationType;
@@ -228,7 +230,8 @@ public class MigrationTask  implements java.io.Serializable {
     /**
      * set 任务状态
      *
-     * @param status
+     * @param status 任务状态
+     * @return MigrationTask
      */
     public MigrationTask status(String status) {
         this.status = status;
@@ -239,7 +242,8 @@ public class MigrationTask  implements java.io.Serializable {
     /**
      * set 任务开始时间
      *
-     * @param startTime
+     * @param startTime 任务开始时间
+     * @return MigrationTask
      */
     public MigrationTask startTime(String startTime) {
         this.startTime = startTime;
@@ -250,7 +254,8 @@ public class MigrationTask  implements java.io.Serializable {
     /**
      * set 任务结束时间
      *
-     * @param endTime
+     * @param endTime 任务结束时间
+     * @return MigrationTask
      */
     public MigrationTask endTime(String endTime) {
         this.endTime = endTime;
@@ -261,7 +266,8 @@ public class MigrationTask  implements java.io.Serializable {
     /**
      * set 任务持续时间，单位分钟
      *
-     * @param duration
+     * @param duration 任务持续时间，单位分钟
+     * @return MigrationTask
      */
     public MigrationTask duration(Integer duration) {
         this.duration = duration;
@@ -272,7 +278,8 @@ public class MigrationTask  implements java.io.Serializable {
     /**
      * set 迁移的数据文件名，包含bucket的全路径，例如dbbak/my_erp/erp.tar.gz
      *
-     * @param fileName
+     * @param fileName 迁移的数据文件名，包含bucket的全路径，例如dbbak/my_erp/erp.tar.gz
+     * @return MigrationTask
      */
     public MigrationTask fileName(String fileName) {
         this.fileName = fileName;

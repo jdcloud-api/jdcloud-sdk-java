@@ -34,18 +34,99 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.tidb.model.DisableInternetAccessRequest;
 import com.jdcloud.sdk.service.tidb.model.DisableInternetAccessResponse;
 import com.jdcloud.sdk.service.tidb.client.DisableInternetAccessExecutor;
-import com.jdcloud.sdk.service.tidb.model.CreateAccountRequest;
-import com.jdcloud.sdk.service.tidb.model.CreateAccountResponse;
-import com.jdcloud.sdk.service.tidb.client.CreateAccountExecutor;
-import com.jdcloud.sdk.service.tidb.model.DeleteWhiteListGroupRequest;
-import com.jdcloud.sdk.service.tidb.model.DeleteWhiteListGroupResponse;
-import com.jdcloud.sdk.service.tidb.client.DeleteWhiteListGroupExecutor;
 import com.jdcloud.sdk.service.tidb.model.DescribeReplicationsRequest;
 import com.jdcloud.sdk.service.tidb.model.DescribeReplicationsResponse;
 import com.jdcloud.sdk.service.tidb.client.DescribeReplicationsExecutor;
 import com.jdcloud.sdk.service.tidb.model.DescribeRestoreTimeIntervalRequest;
 import com.jdcloud.sdk.service.tidb.model.DescribeRestoreTimeIntervalResponse;
 import com.jdcloud.sdk.service.tidb.client.DescribeRestoreTimeIntervalExecutor;
+import com.jdcloud.sdk.service.tidb.model.GetInstanceParameterLogRequest;
+import com.jdcloud.sdk.service.tidb.model.GetInstanceParameterLogResponse;
+import com.jdcloud.sdk.service.tidb.client.GetInstanceParameterLogExecutor;
+import com.jdcloud.sdk.service.tidb.model.ShowGrantablePrivilegesRequest;
+import com.jdcloud.sdk.service.tidb.model.ShowGrantablePrivilegesResponse;
+import com.jdcloud.sdk.service.tidb.client.ShowGrantablePrivilegesExecutor;
+import com.jdcloud.sdk.service.tidb.model.DeleteDatabaseRequest;
+import com.jdcloud.sdk.service.tidb.model.DeleteDatabaseResponse;
+import com.jdcloud.sdk.service.tidb.client.DeleteDatabaseExecutor;
+import com.jdcloud.sdk.service.tidb.model.ModifyBackupPolicyRequest;
+import com.jdcloud.sdk.service.tidb.model.ModifyBackupPolicyResponse;
+import com.jdcloud.sdk.service.tidb.client.ModifyBackupPolicyExecutor;
+import com.jdcloud.sdk.service.tidb.model.DescribeDataMigrationRequest;
+import com.jdcloud.sdk.service.tidb.model.DescribeDataMigrationResponse;
+import com.jdcloud.sdk.service.tidb.client.DescribeDataMigrationExecutor;
+import com.jdcloud.sdk.service.tidb.model.ApplyTemplateBatchRequest;
+import com.jdcloud.sdk.service.tidb.model.ApplyTemplateBatchResponse;
+import com.jdcloud.sdk.service.tidb.client.ApplyTemplateBatchExecutor;
+import com.jdcloud.sdk.service.tidb.model.DeleteInstanceRequest;
+import com.jdcloud.sdk.service.tidb.model.DeleteInstanceResponse;
+import com.jdcloud.sdk.service.tidb.client.DeleteInstanceExecutor;
+import com.jdcloud.sdk.service.tidb.model.GrantAccountPrivilegeRequest;
+import com.jdcloud.sdk.service.tidb.model.GrantAccountPrivilegeResponse;
+import com.jdcloud.sdk.service.tidb.client.GrantAccountPrivilegeExecutor;
+import com.jdcloud.sdk.service.tidb.model.AddWhiteListGroupRequest;
+import com.jdcloud.sdk.service.tidb.model.AddWhiteListGroupResponse;
+import com.jdcloud.sdk.service.tidb.client.AddWhiteListGroupExecutor;
+import com.jdcloud.sdk.service.tidb.model.CreateInstanceByTimeRequest;
+import com.jdcloud.sdk.service.tidb.model.CreateInstanceByTimeResponse;
+import com.jdcloud.sdk.service.tidb.client.CreateInstanceByTimeExecutor;
+import com.jdcloud.sdk.service.tidb.model.CreateAccountWithoutPrivilegeRequest;
+import com.jdcloud.sdk.service.tidb.model.CreateAccountWithoutPrivilegeResponse;
+import com.jdcloud.sdk.service.tidb.client.CreateAccountWithoutPrivilegeExecutor;
+import com.jdcloud.sdk.service.tidb.model.ShowAccountPrivilegeRequest;
+import com.jdcloud.sdk.service.tidb.model.ShowAccountPrivilegeResponse;
+import com.jdcloud.sdk.service.tidb.client.ShowAccountPrivilegeExecutor;
+import com.jdcloud.sdk.service.tidb.model.DescribeWhiteListRequest;
+import com.jdcloud.sdk.service.tidb.model.DescribeWhiteListResponse;
+import com.jdcloud.sdk.service.tidb.client.DescribeWhiteListExecutor;
+import com.jdcloud.sdk.service.tidb.model.ModifyTemplateRequest;
+import com.jdcloud.sdk.service.tidb.model.ModifyTemplateResponse;
+import com.jdcloud.sdk.service.tidb.client.ModifyTemplateExecutor;
+import com.jdcloud.sdk.service.tidb.model.ModifyWhiteListRequest;
+import com.jdcloud.sdk.service.tidb.model.ModifyWhiteListResponse;
+import com.jdcloud.sdk.service.tidb.client.ModifyWhiteListExecutor;
+import com.jdcloud.sdk.service.tidb.model.DeleteReplicationRequest;
+import com.jdcloud.sdk.service.tidb.model.DeleteReplicationResponse;
+import com.jdcloud.sdk.service.tidb.client.DeleteReplicationExecutor;
+import com.jdcloud.sdk.service.tidb.model.ShowTablesRequest;
+import com.jdcloud.sdk.service.tidb.model.ShowTablesResponse;
+import com.jdcloud.sdk.service.tidb.client.ShowTablesExecutor;
+import com.jdcloud.sdk.service.tidb.model.ResetPasswordRequest;
+import com.jdcloud.sdk.service.tidb.model.ResetPasswordResponse;
+import com.jdcloud.sdk.service.tidb.client.ResetPasswordExecutor;
+import com.jdcloud.sdk.service.tidb.model.DescribeSSLRequest;
+import com.jdcloud.sdk.service.tidb.model.DescribeSSLResponse;
+import com.jdcloud.sdk.service.tidb.client.DescribeSSLExecutor;
+import com.jdcloud.sdk.service.tidb.model.StopReplicationRequest;
+import com.jdcloud.sdk.service.tidb.model.StopReplicationResponse;
+import com.jdcloud.sdk.service.tidb.client.StopReplicationExecutor;
+import com.jdcloud.sdk.service.tidb.model.DisableSSLRequest;
+import com.jdcloud.sdk.service.tidb.model.DisableSSLResponse;
+import com.jdcloud.sdk.service.tidb.client.DisableSSLExecutor;
+import com.jdcloud.sdk.service.tidb.model.DescribeDatabasesRequest;
+import com.jdcloud.sdk.service.tidb.model.DescribeDatabasesResponse;
+import com.jdcloud.sdk.service.tidb.client.DescribeDatabasesExecutor;
+import com.jdcloud.sdk.service.tidb.model.EnableSSLRequest;
+import com.jdcloud.sdk.service.tidb.model.EnableSSLResponse;
+import com.jdcloud.sdk.service.tidb.client.EnableSSLExecutor;
+import com.jdcloud.sdk.service.tidb.model.DeleteBackupRequest;
+import com.jdcloud.sdk.service.tidb.model.DeleteBackupResponse;
+import com.jdcloud.sdk.service.tidb.client.DeleteBackupExecutor;
+import com.jdcloud.sdk.service.tidb.model.DescribeInstanceAttributesRequest;
+import com.jdcloud.sdk.service.tidb.model.DescribeInstanceAttributesResponse;
+import com.jdcloud.sdk.service.tidb.client.DescribeInstanceAttributesExecutor;
+import com.jdcloud.sdk.service.tidb.model.DeleteAccountRequest;
+import com.jdcloud.sdk.service.tidb.model.DeleteAccountResponse;
+import com.jdcloud.sdk.service.tidb.client.DeleteAccountExecutor;
+import com.jdcloud.sdk.service.tidb.model.DescribeUpgradeVersionsRequest;
+import com.jdcloud.sdk.service.tidb.model.DescribeUpgradeVersionsResponse;
+import com.jdcloud.sdk.service.tidb.client.DescribeUpgradeVersionsExecutor;
+import com.jdcloud.sdk.service.tidb.model.CreateAccountRequest;
+import com.jdcloud.sdk.service.tidb.model.CreateAccountResponse;
+import com.jdcloud.sdk.service.tidb.client.CreateAccountExecutor;
+import com.jdcloud.sdk.service.tidb.model.DeleteWhiteListGroupRequest;
+import com.jdcloud.sdk.service.tidb.model.DeleteWhiteListGroupResponse;
+import com.jdcloud.sdk.service.tidb.client.DeleteWhiteListGroupExecutor;
 import com.jdcloud.sdk.service.tidb.model.UpgradeEngineVersionRequest;
 import com.jdcloud.sdk.service.tidb.model.UpgradeEngineVersionResponse;
 import com.jdcloud.sdk.service.tidb.client.UpgradeEngineVersionExecutor;
@@ -61,18 +142,18 @@ import com.jdcloud.sdk.service.tidb.client.VerifyFilefromOSSExecutor;
 import com.jdcloud.sdk.service.tidb.model.CreateBackupRequest;
 import com.jdcloud.sdk.service.tidb.model.CreateBackupResponse;
 import com.jdcloud.sdk.service.tidb.client.CreateBackupExecutor;
-import com.jdcloud.sdk.service.tidb.model.ModifyBackupPolicyRequest;
-import com.jdcloud.sdk.service.tidb.model.ModifyBackupPolicyResponse;
-import com.jdcloud.sdk.service.tidb.client.ModifyBackupPolicyExecutor;
+import com.jdcloud.sdk.service.tidb.model.CreateTemplateRequest;
+import com.jdcloud.sdk.service.tidb.model.CreateTemplateResponse;
+import com.jdcloud.sdk.service.tidb.client.CreateTemplateExecutor;
+import com.jdcloud.sdk.service.tidb.model.GetTemplateRequest;
+import com.jdcloud.sdk.service.tidb.model.GetTemplateResponse;
+import com.jdcloud.sdk.service.tidb.client.GetTemplateExecutor;
+import com.jdcloud.sdk.service.tidb.model.DescribeAccountListRequest;
+import com.jdcloud.sdk.service.tidb.model.DescribeAccountListResponse;
+import com.jdcloud.sdk.service.tidb.client.DescribeAccountListExecutor;
 import com.jdcloud.sdk.service.tidb.model.DescribeBackupsRequest;
 import com.jdcloud.sdk.service.tidb.model.DescribeBackupsResponse;
 import com.jdcloud.sdk.service.tidb.client.DescribeBackupsExecutor;
-import com.jdcloud.sdk.service.tidb.model.DescribeDataMigrationRequest;
-import com.jdcloud.sdk.service.tidb.model.DescribeDataMigrationResponse;
-import com.jdcloud.sdk.service.tidb.client.DescribeDataMigrationExecutor;
-import com.jdcloud.sdk.service.tidb.model.DeleteInstanceRequest;
-import com.jdcloud.sdk.service.tidb.model.DeleteInstanceResponse;
-import com.jdcloud.sdk.service.tidb.client.DeleteInstanceExecutor;
 import com.jdcloud.sdk.service.tidb.model.ModifyParametersRequest;
 import com.jdcloud.sdk.service.tidb.model.ModifyParametersResponse;
 import com.jdcloud.sdk.service.tidb.client.ModifyParametersExecutor;
@@ -82,18 +163,15 @@ import com.jdcloud.sdk.service.tidb.client.CreateDataMigrationExecutor;
 import com.jdcloud.sdk.service.tidb.model.DescribeInstancesRequest;
 import com.jdcloud.sdk.service.tidb.model.DescribeInstancesResponse;
 import com.jdcloud.sdk.service.tidb.client.DescribeInstancesExecutor;
-import com.jdcloud.sdk.service.tidb.model.AddWhiteListGroupRequest;
-import com.jdcloud.sdk.service.tidb.model.AddWhiteListGroupResponse;
-import com.jdcloud.sdk.service.tidb.client.AddWhiteListGroupExecutor;
-import com.jdcloud.sdk.service.tidb.model.CreateInstanceByTimeRequest;
-import com.jdcloud.sdk.service.tidb.model.CreateInstanceByTimeResponse;
-import com.jdcloud.sdk.service.tidb.client.CreateInstanceByTimeExecutor;
 import com.jdcloud.sdk.service.tidb.model.ModifyNodeNumRequest;
 import com.jdcloud.sdk.service.tidb.model.ModifyNodeNumResponse;
 import com.jdcloud.sdk.service.tidb.client.ModifyNodeNumExecutor;
 import com.jdcloud.sdk.service.tidb.model.DescribeParametersRequest;
 import com.jdcloud.sdk.service.tidb.model.DescribeParametersResponse;
 import com.jdcloud.sdk.service.tidb.client.DescribeParametersExecutor;
+import com.jdcloud.sdk.service.tidb.model.GetTemplatesRequest;
+import com.jdcloud.sdk.service.tidb.model.GetTemplatesResponse;
+import com.jdcloud.sdk.service.tidb.client.GetTemplatesExecutor;
 import com.jdcloud.sdk.service.tidb.model.DescribeAccountsRequest;
 import com.jdcloud.sdk.service.tidb.model.DescribeAccountsResponse;
 import com.jdcloud.sdk.service.tidb.client.DescribeAccountsExecutor;
@@ -103,27 +181,27 @@ import com.jdcloud.sdk.service.tidb.client.EnableInternetAccessExecutor;
 import com.jdcloud.sdk.service.tidb.model.CreateInstanceFromBackupRequest;
 import com.jdcloud.sdk.service.tidb.model.CreateInstanceFromBackupResponse;
 import com.jdcloud.sdk.service.tidb.client.CreateInstanceFromBackupExecutor;
+import com.jdcloud.sdk.service.tidb.model.ApplyTemplateRequest;
+import com.jdcloud.sdk.service.tidb.model.ApplyTemplateResponse;
+import com.jdcloud.sdk.service.tidb.client.ApplyTemplateExecutor;
+import com.jdcloud.sdk.service.tidb.model.CompareParameterRequest;
+import com.jdcloud.sdk.service.tidb.model.CompareParameterResponse;
+import com.jdcloud.sdk.service.tidb.client.CompareParameterExecutor;
 import com.jdcloud.sdk.service.tidb.model.ModifyInstanceSpecRequest;
 import com.jdcloud.sdk.service.tidb.model.ModifyInstanceSpecResponse;
 import com.jdcloud.sdk.service.tidb.client.ModifyInstanceSpecExecutor;
-import com.jdcloud.sdk.service.tidb.model.DescribeWhiteListRequest;
-import com.jdcloud.sdk.service.tidb.model.DescribeWhiteListResponse;
-import com.jdcloud.sdk.service.tidb.client.DescribeWhiteListExecutor;
 import com.jdcloud.sdk.service.tidb.model.DescribeVersionsRequest;
 import com.jdcloud.sdk.service.tidb.model.DescribeVersionsResponse;
 import com.jdcloud.sdk.service.tidb.client.DescribeVersionsExecutor;
 import com.jdcloud.sdk.service.tidb.model.DescribeInstanceClassesRequest;
 import com.jdcloud.sdk.service.tidb.model.DescribeInstanceClassesResponse;
 import com.jdcloud.sdk.service.tidb.client.DescribeInstanceClassesExecutor;
-import com.jdcloud.sdk.service.tidb.model.ModifyWhiteListRequest;
-import com.jdcloud.sdk.service.tidb.model.ModifyWhiteListResponse;
-import com.jdcloud.sdk.service.tidb.client.ModifyWhiteListExecutor;
-import com.jdcloud.sdk.service.tidb.model.DeleteReplicationRequest;
-import com.jdcloud.sdk.service.tidb.model.DeleteReplicationResponse;
-import com.jdcloud.sdk.service.tidb.client.DeleteReplicationExecutor;
-import com.jdcloud.sdk.service.tidb.model.ResetPasswordRequest;
-import com.jdcloud.sdk.service.tidb.model.ResetPasswordResponse;
-import com.jdcloud.sdk.service.tidb.client.ResetPasswordExecutor;
+import com.jdcloud.sdk.service.tidb.model.DeleteTemplateRequest;
+import com.jdcloud.sdk.service.tidb.model.DeleteTemplateResponse;
+import com.jdcloud.sdk.service.tidb.client.DeleteTemplateExecutor;
+import com.jdcloud.sdk.service.tidb.model.GetConfigurableParametersRequest;
+import com.jdcloud.sdk.service.tidb.model.GetConfigurableParametersResponse;
+import com.jdcloud.sdk.service.tidb.client.GetConfigurableParametersExecutor;
 import com.jdcloud.sdk.service.tidb.model.RebootPodRequest;
 import com.jdcloud.sdk.service.tidb.model.RebootPodResponse;
 import com.jdcloud.sdk.service.tidb.client.RebootPodExecutor;
@@ -133,45 +211,30 @@ import com.jdcloud.sdk.service.tidb.client.DescribeBackupPolicyExecutor;
 import com.jdcloud.sdk.service.tidb.model.CreateInstanceRequest;
 import com.jdcloud.sdk.service.tidb.model.CreateInstanceResponse;
 import com.jdcloud.sdk.service.tidb.client.CreateInstanceExecutor;
-import com.jdcloud.sdk.service.tidb.model.DescribeSSLRequest;
-import com.jdcloud.sdk.service.tidb.model.DescribeSSLResponse;
-import com.jdcloud.sdk.service.tidb.client.DescribeSSLExecutor;
-import com.jdcloud.sdk.service.tidb.model.StopReplicationRequest;
-import com.jdcloud.sdk.service.tidb.model.StopReplicationResponse;
-import com.jdcloud.sdk.service.tidb.client.StopReplicationExecutor;
-import com.jdcloud.sdk.service.tidb.model.DisableSSLRequest;
-import com.jdcloud.sdk.service.tidb.model.DisableSSLResponse;
-import com.jdcloud.sdk.service.tidb.client.DisableSSLExecutor;
 import com.jdcloud.sdk.service.tidb.model.CreateReplicationRequest;
 import com.jdcloud.sdk.service.tidb.model.CreateReplicationResponse;
 import com.jdcloud.sdk.service.tidb.client.CreateReplicationExecutor;
 import com.jdcloud.sdk.service.tidb.model.DescribeOrderableInstanceTypeRequest;
 import com.jdcloud.sdk.service.tidb.model.DescribeOrderableInstanceTypeResponse;
 import com.jdcloud.sdk.service.tidb.client.DescribeOrderableInstanceTypeExecutor;
+import com.jdcloud.sdk.service.tidb.model.DescribeRebootPlanRequest;
+import com.jdcloud.sdk.service.tidb.model.DescribeRebootPlanResponse;
+import com.jdcloud.sdk.service.tidb.client.DescribeRebootPlanExecutor;
 import com.jdcloud.sdk.service.tidb.model.ResumeReplicationRequest;
 import com.jdcloud.sdk.service.tidb.model.ResumeReplicationResponse;
 import com.jdcloud.sdk.service.tidb.client.ResumeReplicationExecutor;
-import com.jdcloud.sdk.service.tidb.model.EnableSSLRequest;
-import com.jdcloud.sdk.service.tidb.model.EnableSSLResponse;
-import com.jdcloud.sdk.service.tidb.client.EnableSSLExecutor;
+import com.jdcloud.sdk.service.tidb.model.CloneTemplateRequest;
+import com.jdcloud.sdk.service.tidb.model.CloneTemplateResponse;
+import com.jdcloud.sdk.service.tidb.client.CloneTemplateExecutor;
 import com.jdcloud.sdk.service.tidb.model.DescribeNodesRequest;
 import com.jdcloud.sdk.service.tidb.model.DescribeNodesResponse;
 import com.jdcloud.sdk.service.tidb.client.DescribeNodesExecutor;
-import com.jdcloud.sdk.service.tidb.model.DeleteBackupRequest;
-import com.jdcloud.sdk.service.tidb.model.DeleteBackupResponse;
-import com.jdcloud.sdk.service.tidb.client.DeleteBackupExecutor;
-import com.jdcloud.sdk.service.tidb.model.DescribeInstanceAttributesRequest;
-import com.jdcloud.sdk.service.tidb.model.DescribeInstanceAttributesResponse;
-import com.jdcloud.sdk.service.tidb.client.DescribeInstanceAttributesExecutor;
+import com.jdcloud.sdk.service.tidb.model.CreateDatabaseRequest;
+import com.jdcloud.sdk.service.tidb.model.CreateDatabaseResponse;
+import com.jdcloud.sdk.service.tidb.client.CreateDatabaseExecutor;
 import com.jdcloud.sdk.service.tidb.model.DescribeUpgradePlanRequest;
 import com.jdcloud.sdk.service.tidb.model.DescribeUpgradePlanResponse;
 import com.jdcloud.sdk.service.tidb.client.DescribeUpgradePlanExecutor;
-import com.jdcloud.sdk.service.tidb.model.DescribeUpgradeVersionsRequest;
-import com.jdcloud.sdk.service.tidb.model.DescribeUpgradeVersionsResponse;
-import com.jdcloud.sdk.service.tidb.client.DescribeUpgradeVersionsExecutor;
-import com.jdcloud.sdk.service.tidb.model.DescribeAvailableDBInfoInternelRequest;
-import com.jdcloud.sdk.service.tidb.model.DescribeAvailableDBInfoInternelResponse;
-import com.jdcloud.sdk.service.tidb.client.DescribeAvailableDBInfoInternelExecutor;
 
 /**
  * tidbClient
@@ -180,7 +243,7 @@ public class TidbClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.9";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "tidb.jdcloud-api.com";
     public final static String ServiceName = "tidb";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -234,28 +297,6 @@ public class TidbClient extends JdcloudClient {
     }
 
     /**
-     * 创建数据库的高权限管理账号，用户可以使用客户端、应用程序等通过该账号和密码登录 TiDB 实例，然后通过SQL创建数据库和其他用户。一个数据库实例只能创建一个高权限账号。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateAccountResponse createAccount(CreateAccountRequest request) throws JdcloudSdkException {
-        return new CreateAccountExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除指定的白名单分组。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteWhiteListGroupResponse deleteWhiteListGroup(DeleteWhiteListGroupRequest request) throws JdcloudSdkException {
-        return new DeleteWhiteListGroupExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询当前实例下所有的复制任务。
      *
      * @param request
@@ -275,6 +316,325 @@ public class TidbClient extends JdcloudClient {
      */
     public DescribeRestoreTimeIntervalResponse describeRestoreTimeInterval(DescribeRestoreTimeIntervalRequest request) throws JdcloudSdkException {
         return new DescribeRestoreTimeIntervalExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取实例参数修改记录（分页）
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetInstanceParameterLogResponse getInstanceParameterLog(GetInstanceParameterLogRequest request) throws JdcloudSdkException {
+        return new GetInstanceParameterLogExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取该实例所有的可调整权限
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ShowGrantablePrivilegesResponse showGrantablePrivileges(ShowGrantablePrivilegesRequest request) throws JdcloudSdkException {
+        return new ShowGrantablePrivilegesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除数据库
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteDatabaseResponse deleteDatabase(DeleteDatabaseRequest request) throws JdcloudSdkException {
+        return new DeleteDatabaseExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改 TiDB 实例备份策略，例如全量备份的日期，时间等。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyBackupPolicyResponse modifyBackupPolicy(ModifyBackupPolicyRequest request) throws JdcloudSdkException {
+        return new ModifyBackupPolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询 TiDB 数据迁移任务的详细信息，例如任务的开始、完成时间，任务状态等等。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeDataMigrationResponse describeDataMigration(DescribeDataMigrationRequest request) throws JdcloudSdkException {
+        return new DescribeDataMigrationExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量应用模板到实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ApplyTemplateBatchResponse applyTemplateBatch(ApplyTemplateBatchRequest request) throws JdcloudSdkException {
+        return new ApplyTemplateBatchExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除指定的 TiDB 实例。实例删除后，数据不可恢复，请谨慎使用。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteInstanceResponse deleteInstance(DeleteInstanceRequest request) throws JdcloudSdkException {
+        return new DeleteInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 授予账号的数据库细粒度的访问权限
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GrantAccountPrivilegeResponse grantAccountPrivilege(GrantAccountPrivilegeRequest request) throws JdcloudSdkException {
+        return new GrantAccountPrivilegeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 增加白名单分组，用于用户管理不同类型或者来源的 IP 白名单。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddWhiteListGroupResponse addWhiteListGroup(AddWhiteListGroupRequest request) throws JdcloudSdkException {
+        return new AddWhiteListGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据日志备份创建一个新的 TiDB 实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateInstanceByTimeResponse createInstanceByTime(CreateInstanceByTimeRequest request) throws JdcloudSdkException {
+        return new CreateInstanceByTimeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建数据库的未授权的账号
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateAccountWithoutPrivilegeResponse createAccountWithoutPrivilege(CreateAccountWithoutPrivilegeRequest request) throws JdcloudSdkException {
+        return new CreateAccountWithoutPrivilegeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取数据库内用户的权限，包括全局、库级别、表级别权限
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ShowAccountPrivilegeResponse showAccountPrivilege(ShowAccountPrivilegeRequest request) throws JdcloudSdkException {
+        return new ShowAccountPrivilegeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看实例当前白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeWhiteListResponse describeWhiteList(DescribeWhiteListRequest request) throws JdcloudSdkException {
+        return new DescribeWhiteListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改参数模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyTemplateResponse modifyTemplate(ModifyTemplateRequest request) throws JdcloudSdkException {
+        return new ModifyTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyWhiteListResponse modifyWhiteList(ModifyWhiteListRequest request) throws JdcloudSdkException {
+        return new ModifyWhiteListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除指定的复制任务。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteReplicationResponse deleteReplication(DeleteReplicationRequest request) throws JdcloudSdkException {
+        return new DeleteReplicationExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取数据库的tables
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ShowTablesResponse showTables(ShowTablesRequest request) throws JdcloudSdkException {
+        return new ShowTablesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重置 TiDB 实例的高权限账号的密码。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ResetPasswordResponse resetPassword(ResetPasswordRequest request) throws JdcloudSdkException {
+        return new ResetPasswordExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询 TiDB 实例的 SSL 的开启状态。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSSLResponse describeSSL(DescribeSSLRequest request) throws JdcloudSdkException {
+        return new DescribeSSLExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 暂停指定的复制任务。注意：如果暂停的时间过长，会导致 TiCDC 节点的磁盘空间写满，导致复制任务错误或失败。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopReplicationResponse stopReplication(StopReplicationRequest request) throws JdcloudSdkException {
+        return new StopReplicationExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭 TiDB 和 MySQL 客户端之间的 SSL 连接功能。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableSSLResponse disableSSL(DisableSSLRequest request) throws JdcloudSdkException {
+        return new DisableSSLExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取当前实例的所有数据库详细信息的列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeDatabasesResponse describeDatabases(DescribeDatabasesRequest request) throws JdcloudSdkException {
+        return new DescribeDatabasesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 开启 TiDB 和 MySQL 客户端之间的 SSL 连接功能。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableSSLResponse enableSSL(EnableSSLRequest request) throws JdcloudSdkException {
+        return new EnableSSLExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除TiDB的备份，仅允许删除用户创建的备份，系统的自动备份不允许删除。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteBackupResponse deleteBackup(DeleteBackupRequest request) throws JdcloudSdkException {
+        return new DeleteBackupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询 TiDB 实例的详细信息，例如TiDB的具体版本号，各个节点的规格、存储空间以及连接信息等等。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceAttributesResponse describeInstanceAttributes(DescribeInstanceAttributesRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceAttributesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除数据库账号，账号删除后不可恢复，用户无法再使用该账号登录TiDB实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteAccountResponse deleteAccount(DeleteAccountRequest request) throws JdcloudSdkException {
+        return new DeleteAccountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取当前 TiDB 实例可升级到的目标版本。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeUpgradeVersionsResponse describeUpgradeVersions(DescribeUpgradeVersionsRequest request) throws JdcloudSdkException {
+        return new DescribeUpgradeVersionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建数据库的高权限管理账号，用户可以使用客户端、应用程序等通过该账号和密码登录 TiDB 实例，然后通过SQL创建数据库和其他用户。一个数据库实例只能创建一个高权限账号。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateAccountResponse createAccount(CreateAccountRequest request) throws JdcloudSdkException {
+        return new CreateAccountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除指定的白名单分组。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteWhiteListGroupResponse deleteWhiteListGroup(DeleteWhiteListGroupRequest request) throws JdcloudSdkException {
+        return new DeleteWhiteListGroupExecutor().client(this).execute(request);
     }
 
     /**
@@ -333,14 +693,36 @@ public class TidbClient extends JdcloudClient {
     }
 
     /**
-     * 修改 TiDB 实例备份策略，例如全量备份的日期，时间等。
+     * 创建参数模板
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ModifyBackupPolicyResponse modifyBackupPolicy(ModifyBackupPolicyRequest request) throws JdcloudSdkException {
-        return new ModifyBackupPolicyExecutor().client(this).execute(request);
+    public CreateTemplateResponse createTemplate(CreateTemplateRequest request) throws JdcloudSdkException {
+        return new CreateTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据 ID 获取参数模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTemplateResponse getTemplate(GetTemplateRequest request) throws JdcloudSdkException {
+        return new GetTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看某个TiDB实例下所有账号信息，包括账号名称、对各个数据库的访问权限信息等
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAccountListResponse describeAccountList(DescribeAccountListRequest request) throws JdcloudSdkException {
+        return new DescribeAccountListExecutor().client(this).execute(request);
     }
 
     /**
@@ -352,28 +734,6 @@ public class TidbClient extends JdcloudClient {
      */
     public DescribeBackupsResponse describeBackups(DescribeBackupsRequest request) throws JdcloudSdkException {
         return new DescribeBackupsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询 TiDB 数据迁移任务的详细信息，例如任务的开始、完成时间，任务状态等等。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeDataMigrationResponse describeDataMigration(DescribeDataMigrationRequest request) throws JdcloudSdkException {
-        return new DescribeDataMigrationExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除指定的 TiDB 实例。实例删除后，数据不可恢复，请谨慎使用。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteInstanceResponse deleteInstance(DeleteInstanceRequest request) throws JdcloudSdkException {
-        return new DeleteInstanceExecutor().client(this).execute(request);
     }
 
     /**
@@ -410,28 +770,6 @@ public class TidbClient extends JdcloudClient {
     }
 
     /**
-     * 增加白名单分组，用于用户管理不同类型或者来源的 IP 白名单。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AddWhiteListGroupResponse addWhiteListGroup(AddWhiteListGroupRequest request) throws JdcloudSdkException {
-        return new AddWhiteListGroupExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据日志备份创建一个新的 TiDB 实例
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateInstanceByTimeResponse createInstanceByTime(CreateInstanceByTimeRequest request) throws JdcloudSdkException {
-        return new CreateInstanceByTimeExecutor().client(this).execute(request);
-    }
-
-    /**
      * 修改 TiDB 实例中各类节点的数量。如果当前实例无TiFlash和TiCDC节点，那么在增加TiFlash和TiCDC节点数目时，可同时指定其规格。
      *
      * @param request
@@ -454,7 +792,18 @@ public class TidbClient extends JdcloudClient {
     }
 
     /**
-     * 查看当前实例下的账号信息。
+     * 获取所有的模板（分页&amp;筛选）
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTemplatesResponse getTemplates(GetTemplatesRequest request) throws JdcloudSdkException {
+        return new GetTemplatesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看当前实例下的账号信息，老接口。
      *
      * @param request
      * @return
@@ -487,6 +836,28 @@ public class TidbClient extends JdcloudClient {
     }
 
     /**
+     * 应用模板到实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ApplyTemplateResponse applyTemplate(ApplyTemplateRequest request) throws JdcloudSdkException {
+        return new ApplyTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 比较实例和参数模板的参数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CompareParameterResponse compareParameter(CompareParameterRequest request) throws JdcloudSdkException {
+        return new CompareParameterExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改 TiDB 实例中各类节点中的数目与规格。支持 TiDB 节点和 Monitor 节点数目和规格的同时调整。 如果当前实例无 TiFlash 和 TiCDC 节点，那么在增加 TiFlash 和 TiCDC 节点数目时，可同时指定其规格。
      *
      * @param request
@@ -495,17 +866,6 @@ public class TidbClient extends JdcloudClient {
      */
     public ModifyInstanceSpecResponse modifyInstanceSpec(ModifyInstanceSpecRequest request) throws JdcloudSdkException {
         return new ModifyInstanceSpecExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查看实例当前白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeWhiteListResponse describeWhiteList(DescribeWhiteListRequest request) throws JdcloudSdkException {
-        return new DescribeWhiteListExecutor().client(this).execute(request);
     }
 
     /**
@@ -531,36 +891,25 @@ public class TidbClient extends JdcloudClient {
     }
 
     /**
-     * 修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+     * 删除参数模板
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ModifyWhiteListResponse modifyWhiteList(ModifyWhiteListRequest request) throws JdcloudSdkException {
-        return new ModifyWhiteListExecutor().client(this).execute(request);
+    public DeleteTemplateResponse deleteTemplate(DeleteTemplateRequest request) throws JdcloudSdkException {
+        return new DeleteTemplateExecutor().client(this).execute(request);
     }
 
     /**
-     * 删除指定的复制任务。
+     * 获取所有可配置参数（筛选）
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteReplicationResponse deleteReplication(DeleteReplicationRequest request) throws JdcloudSdkException {
-        return new DeleteReplicationExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 重置 TiDB 实例的高权限账号的密码。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ResetPasswordResponse resetPassword(ResetPasswordRequest request) throws JdcloudSdkException {
-        return new ResetPasswordExecutor().client(this).execute(request);
+    public GetConfigurableParametersResponse getConfigurableParameters(GetConfigurableParametersRequest request) throws JdcloudSdkException {
+        return new GetConfigurableParametersExecutor().client(this).execute(request);
     }
 
     /**
@@ -597,39 +946,6 @@ public class TidbClient extends JdcloudClient {
     }
 
     /**
-     * 查询 TiDB 实例的 SSL 的开启状态。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeSSLResponse describeSSL(DescribeSSLRequest request) throws JdcloudSdkException {
-        return new DescribeSSLExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 暂停指定的复制任务。注意：如果暂停的时间过长，会导致 TiCDC 节点的磁盘空间写满，导致复制任务错误或失败。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public StopReplicationResponse stopReplication(StopReplicationRequest request) throws JdcloudSdkException {
-        return new StopReplicationExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 关闭 TiDB 和 MySQL 客户端之间的 SSL 连接功能。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DisableSSLResponse disableSSL(DisableSSLRequest request) throws JdcloudSdkException {
-        return new DisableSSLExecutor().client(this).execute(request);
-    }
-
-    /**
      * 创建一个数据复制任务，可以将 TiDB 的增量数据同步到下游的 MySQL， TiDB 或者 Kafka 中。
      *
      * @param request
@@ -652,6 +968,17 @@ public class TidbClient extends JdcloudClient {
     }
 
     /**
+     * 查询当前 TiDB 实例的节点重启计划。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRebootPlanResponse describeRebootPlan(DescribeRebootPlanRequest request) throws JdcloudSdkException {
+        return new DescribeRebootPlanExecutor().client(this).execute(request);
+    }
+
+    /**
      * 继续处于“暂停”状态的复制任务。
      *
      * @param request
@@ -663,14 +990,14 @@ public class TidbClient extends JdcloudClient {
     }
 
     /**
-     * 开启 TiDB 和 MySQL 客户端之间的 SSL 连接功能。
+     * 克隆参数模板
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public EnableSSLResponse enableSSL(EnableSSLRequest request) throws JdcloudSdkException {
-        return new EnableSSLExecutor().client(this).execute(request);
+    public CloneTemplateResponse cloneTemplate(CloneTemplateRequest request) throws JdcloudSdkException {
+        return new CloneTemplateExecutor().client(this).execute(request);
     }
 
     /**
@@ -685,25 +1012,14 @@ public class TidbClient extends JdcloudClient {
     }
 
     /**
-     * 删除TiDB的备份，仅允许删除用户创建的备份，系统的自动备份不允许删除。
+     * 创建数据库
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteBackupResponse deleteBackup(DeleteBackupRequest request) throws JdcloudSdkException {
-        return new DeleteBackupExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询 TiDB 实例的详细信息，例如TiDB的具体版本号，各个节点的规格、存储空间以及连接信息等等。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeInstanceAttributesResponse describeInstanceAttributes(DescribeInstanceAttributesRequest request) throws JdcloudSdkException {
-        return new DescribeInstanceAttributesExecutor().client(this).execute(request);
+    public CreateDatabaseResponse createDatabase(CreateDatabaseRequest request) throws JdcloudSdkException {
+        return new CreateDatabaseExecutor().client(this).execute(request);
     }
 
     /**
@@ -715,28 +1031,6 @@ public class TidbClient extends JdcloudClient {
      */
     public DescribeUpgradePlanResponse describeUpgradePlan(DescribeUpgradePlanRequest request) throws JdcloudSdkException {
         return new DescribeUpgradePlanExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取当前 TiDB 实例可升级到的目标版本。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeUpgradeVersionsResponse describeUpgradeVersions(DescribeUpgradeVersionsRequest request) throws JdcloudSdkException {
-        return new DescribeUpgradeVersionsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询 TiDB支持的基本信息。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeAvailableDBInfoInternelResponse describeAvailableDBInfoInternel(DescribeAvailableDBInfoInternelRequest request) throws JdcloudSdkException {
-        return new DescribeAvailableDBInfoInternelExecutor().client(this).execute(request);
     }
 
 

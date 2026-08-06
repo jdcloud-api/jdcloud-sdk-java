@@ -92,7 +92,8 @@ public class DescribeRestoreTimeIntervalRequest extends JdcloudRequest implement
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DescribeRestoreTimeIntervalRequest
      */
     public DescribeRestoreTimeIntervalRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class DescribeRestoreTimeIntervalRequest extends JdcloudRequest implement
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DescribeRestoreTimeIntervalRequest
      */
     public DescribeRestoreTimeIntervalRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

@@ -63,7 +63,8 @@ public class CreateReplicationResult extends JdcloudResult implements java.io.Se
     /**
      * set 复制任务ID
      *
-     * @param replicationId
+     * @param replicationId 复制任务ID
+     * @return CreateReplicationResult
      */
     public CreateReplicationResult replicationId(String replicationId) {
         this.replicationId = replicationId;

@@ -40,6 +40,11 @@ public class Flavor  implements java.io.Serializable {
     private String instanceClass;
 
     /**
+     * 规格类型，general(通用型)、exclusive(独享型)
+     */
+    private String classGroup;
+
+    /**
      * cpu核数
      */
     private Integer cpu;
@@ -77,6 +82,25 @@ public class Flavor  implements java.io.Serializable {
      */
     public void setInstanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
+    }
+
+
+    /**
+     * get 规格类型，general(通用型)、exclusive(独享型)
+     *
+     * @return
+     */
+    public String getClassGroup() {
+        return classGroup;
+    }
+
+    /**
+     * set 规格类型，general(通用型)、exclusive(独享型)
+     *
+     * @param classGroup
+     */
+    public void setClassGroup(String classGroup) {
+        this.classGroup = classGroup;
     }
 
 
@@ -160,7 +184,8 @@ public class Flavor  implements java.io.Serializable {
     /**
      * set 规格代码,如tidb.s1.xlarge
      *
-     * @param instanceClass
+     * @param instanceClass 规格代码,如tidb.s1.xlarge
+     * @return Flavor
      */
     public Flavor instanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
@@ -169,9 +194,22 @@ public class Flavor  implements java.io.Serializable {
 
 
     /**
+     * set 规格类型，general(通用型)、exclusive(独享型)
+     *
+     * @param classGroup 规格类型，general(通用型)、exclusive(独享型)
+     * @return Flavor
+     */
+    public Flavor classGroup(String classGroup) {
+        this.classGroup = classGroup;
+        return this;
+    }
+
+
+    /**
      * set cpu核数
      *
-     * @param cpu
+     * @param cpu cpu核数
+     * @return Flavor
      */
     public Flavor cpu(Integer cpu) {
         this.cpu = cpu;
@@ -182,7 +220,8 @@ public class Flavor  implements java.io.Serializable {
     /**
      * set 内存大小，单位GB
      *
-     * @param memoryGB
+     * @param memoryGB 内存大小，单位GB
+     * @return Flavor
      */
     public Flavor memoryGB(Integer memoryGB) {
         this.memoryGB = memoryGB;
@@ -193,7 +232,8 @@ public class Flavor  implements java.io.Serializable {
     /**
      * set 默认存储规格，单位GB
      *
-     * @param defaultStorageGB
+     * @param defaultStorageGB 默认存储规格，单位GB
+     * @return Flavor
      */
     public Flavor defaultStorageGB(Integer defaultStorageGB) {
         this.defaultStorageGB = defaultStorageGB;
@@ -204,7 +244,8 @@ public class Flavor  implements java.io.Serializable {
     /**
     * set 该规格支持的存储空间，单位GB
     *
-    * @param storageGB
+    * @param storageGB 该规格支持的存储空间，单位GB
+    * @return Flavor
     */
     public Flavor storageGB(List<Integer> storageGB) {
         this.storageGB = storageGB;

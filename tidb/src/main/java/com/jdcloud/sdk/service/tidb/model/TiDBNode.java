@@ -38,7 +38,7 @@ public class TiDBNode  implements java.io.Serializable {
     private String nodeId;
 
     /**
-     * 节点类型，支持,tidb,tikv,pd,tiflash,monitor
+     * 节点类型，支持,tidb,tikv,pd,tiflash,monitor,ticdc
      */
     private String nodeType;
 
@@ -84,7 +84,7 @@ public class TiDBNode  implements java.io.Serializable {
 
 
     /**
-     * get 节点类型，支持,tidb,tikv,pd,tiflash,monitor
+     * get 节点类型，支持,tidb,tikv,pd,tiflash,monitor,ticdc
      *
      * @return
      */
@@ -93,7 +93,7 @@ public class TiDBNode  implements java.io.Serializable {
     }
 
     /**
-     * set 节点类型，支持,tidb,tikv,pd,tiflash,monitor
+     * set 节点类型，支持,tidb,tikv,pd,tiflash,monitor,ticdc
      *
      * @param nodeType
      */
@@ -182,7 +182,8 @@ public class TiDBNode  implements java.io.Serializable {
     /**
      * set 节点ID
      *
-     * @param nodeId
+     * @param nodeId 节点ID
+     * @return TiDBNode
      */
     public TiDBNode nodeId(String nodeId) {
         this.nodeId = nodeId;
@@ -191,9 +192,10 @@ public class TiDBNode  implements java.io.Serializable {
 
 
     /**
-     * set 节点类型，支持,tidb,tikv,pd,tiflash,monitor
+     * set 节点类型，支持,tidb,tikv,pd,tiflash,monitor,ticdc
      *
-     * @param nodeType
+     * @param nodeType 节点类型，支持,tidb,tikv,pd,tiflash,monitor,ticdc
+     * @return TiDBNode
      */
     public TiDBNode nodeType(String nodeType) {
         this.nodeType = nodeType;
@@ -204,7 +206,8 @@ public class TiDBNode  implements java.io.Serializable {
     /**
      * set 节点状态
      *
-     * @param nodeStatus
+     * @param nodeStatus 节点状态
+     * @return TiDBNode
      */
     public TiDBNode nodeStatus(String nodeStatus) {
         this.nodeStatus = nodeStatus;
@@ -215,7 +218,8 @@ public class TiDBNode  implements java.io.Serializable {
     /**
      * set CPU 使用百分比，例如0.832表示CPU使用率为83.2%
      *
-     * @param cpuUtil
+     * @param cpuUtil CPU 使用百分比，例如0.832表示CPU使用率为83.2%
+     * @return TiDBNode
      */
     public TiDBNode cpuUtil(Float cpuUtil) {
         this.cpuUtil = cpuUtil;
@@ -226,7 +230,8 @@ public class TiDBNode  implements java.io.Serializable {
     /**
      * set 内存使用百分比，例如0.832表示内存使用率为83.2%
      *
-     * @param memeryUtil
+     * @param memeryUtil 内存使用百分比，例如0.832表示内存使用率为83.2%
+     * @return TiDBNode
      */
     public TiDBNode memeryUtil(Float memeryUtil) {
         this.memeryUtil = memeryUtil;
@@ -237,7 +242,8 @@ public class TiDBNode  implements java.io.Serializable {
     /**
      * set 存储使用百分比，例如0.832表示存储使用率为83.2%
      *
-     * @param diskUsage
+     * @param diskUsage 存储使用百分比，例如0.832表示存储使用率为83.2%
+     * @return TiDBNode
      */
     public TiDBNode diskUsage(Float diskUsage) {
         this.diskUsage = diskUsage;

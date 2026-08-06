@@ -87,7 +87,8 @@ public class VerifyFilefromOSSResult extends JdcloudResult implements java.io.Se
     /**
      * set true：成功false:失败,文件不存在，类型不对或需要的权限不正确
      *
-     * @param success
+     * @param success true：成功false:失败,文件不存在，类型不对或需要的权限不正确
+     * @return VerifyFilefromOSSResult
      */
     public VerifyFilefromOSSResult success(String success) {
         this.success = success;
@@ -98,7 +99,8 @@ public class VerifyFilefromOSSResult extends JdcloudResult implements java.io.Se
     /**
      * set 具体的错误信息
      *
-     * @param errMsg
+     * @param errMsg 具体的错误信息
+     * @return VerifyFilefromOSSResult
      */
     public VerifyFilefromOSSResult errMsg(String errMsg) {
         this.errMsg = errMsg;

@@ -46,6 +46,11 @@ public class Instance  implements java.io.Serializable {
     private String instanceName;
 
     /**
+     * 实例的命名空间
+     */
+    private String instanceNamespace;
+
+    /**
      * 实例引擎版本
      */
     private String engineVersion;
@@ -79,6 +84,36 @@ public class Instance  implements java.io.Serializable {
      * 整个集群总的存储空间大小，单位GB
      */
     private Integer totalStorageGB;
+
+    /**
+     * TiDB节点规格和数目
+     */
+    private NodeSpec tidbNodeSpec;
+
+    /**
+     * TiKV节点规格和数目
+     */
+    private NodeSpec tikvNodeSpec;
+
+    /**
+     * PD节点规格和数目
+     */
+    private NodeSpec pdNodeSpec;
+
+    /**
+     * Monitor节点规格，只能有1个Monitor节点
+     */
+    private NodeSpec monitorNodeSpec;
+
+    /**
+     * TiFlash节点规格和数目
+     */
+    private NodeSpec tiflashNodeSpec;
+
+    /**
+     * Ticdc节点规格和数目
+     */
+    private NodeSpec ticdcNodeSpec;
 
     /**
      * 地域ID
@@ -120,6 +155,11 @@ public class Instance  implements java.io.Serializable {
      */
     
     private List<Tag> tags;
+    /**
+     * TiDB内网域名
+     */
+    private String internalDomainName;
+
 
 
     /**
@@ -157,6 +197,25 @@ public class Instance  implements java.io.Serializable {
      */
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
+    }
+
+
+    /**
+     * get 实例的命名空间
+     *
+     * @return
+     */
+    public String getInstanceNamespace() {
+        return instanceNamespace;
+    }
+
+    /**
+     * set 实例的命名空间
+     *
+     * @param instanceNamespace
+     */
+    public void setInstanceNamespace(String instanceNamespace) {
+        this.instanceNamespace = instanceNamespace;
     }
 
 
@@ -290,6 +349,120 @@ public class Instance  implements java.io.Serializable {
      */
     public void setTotalStorageGB(Integer totalStorageGB) {
         this.totalStorageGB = totalStorageGB;
+    }
+
+
+    /**
+     * get TiDB节点规格和数目
+     *
+     * @return
+     */
+    public NodeSpec getTidbNodeSpec() {
+        return tidbNodeSpec;
+    }
+
+    /**
+     * set TiDB节点规格和数目
+     *
+     * @param tidbNodeSpec
+     */
+    public void setTidbNodeSpec(NodeSpec tidbNodeSpec) {
+        this.tidbNodeSpec = tidbNodeSpec;
+    }
+
+
+    /**
+     * get TiKV节点规格和数目
+     *
+     * @return
+     */
+    public NodeSpec getTikvNodeSpec() {
+        return tikvNodeSpec;
+    }
+
+    /**
+     * set TiKV节点规格和数目
+     *
+     * @param tikvNodeSpec
+     */
+    public void setTikvNodeSpec(NodeSpec tikvNodeSpec) {
+        this.tikvNodeSpec = tikvNodeSpec;
+    }
+
+
+    /**
+     * get PD节点规格和数目
+     *
+     * @return
+     */
+    public NodeSpec getPdNodeSpec() {
+        return pdNodeSpec;
+    }
+
+    /**
+     * set PD节点规格和数目
+     *
+     * @param pdNodeSpec
+     */
+    public void setPdNodeSpec(NodeSpec pdNodeSpec) {
+        this.pdNodeSpec = pdNodeSpec;
+    }
+
+
+    /**
+     * get Monitor节点规格，只能有1个Monitor节点
+     *
+     * @return
+     */
+    public NodeSpec getMonitorNodeSpec() {
+        return monitorNodeSpec;
+    }
+
+    /**
+     * set Monitor节点规格，只能有1个Monitor节点
+     *
+     * @param monitorNodeSpec
+     */
+    public void setMonitorNodeSpec(NodeSpec monitorNodeSpec) {
+        this.monitorNodeSpec = monitorNodeSpec;
+    }
+
+
+    /**
+     * get TiFlash节点规格和数目
+     *
+     * @return
+     */
+    public NodeSpec getTiflashNodeSpec() {
+        return tiflashNodeSpec;
+    }
+
+    /**
+     * set TiFlash节点规格和数目
+     *
+     * @param tiflashNodeSpec
+     */
+    public void setTiflashNodeSpec(NodeSpec tiflashNodeSpec) {
+        this.tiflashNodeSpec = tiflashNodeSpec;
+    }
+
+
+    /**
+     * get Ticdc节点规格和数目
+     *
+     * @return
+     */
+    public NodeSpec getTicdcNodeSpec() {
+        return ticdcNodeSpec;
+    }
+
+    /**
+     * set Ticdc节点规格和数目
+     *
+     * @param ticdcNodeSpec
+     */
+    public void setTicdcNodeSpec(NodeSpec ticdcNodeSpec) {
+        this.ticdcNodeSpec = ticdcNodeSpec;
     }
 
 
@@ -445,11 +618,31 @@ public class Instance  implements java.io.Serializable {
     }
 
 
+    /**
+     * get TiDB内网域名
+     *
+     * @return
+     */
+    public String getInternalDomainName() {
+        return internalDomainName;
+    }
+
+    /**
+     * set TiDB内网域名
+     *
+     * @param internalDomainName
+     */
+    public void setInternalDomainName(String internalDomainName) {
+        this.internalDomainName = internalDomainName;
+    }
+
+
 
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return Instance
      */
     public Instance instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -460,7 +653,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 实例名称
      *
-     * @param instanceName
+     * @param instanceName 实例名称
+     * @return Instance
      */
     public Instance instanceName(String instanceName) {
         this.instanceName = instanceName;
@@ -469,9 +663,22 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
+     * set 实例的命名空间
+     *
+     * @param instanceNamespace 实例的命名空间
+     * @return Instance
+     */
+    public Instance instanceNamespace(String instanceNamespace) {
+        this.instanceNamespace = instanceNamespace;
+        return this;
+    }
+
+
+    /**
      * set 实例引擎版本
      *
-     * @param engineVersion
+     * @param engineVersion 实例引擎版本
+     * @return Instance
      */
     public Instance engineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
@@ -482,7 +689,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set CPU架构
      *
-     * @param architecture
+     * @param architecture CPU架构
+     * @return Instance
      */
     public Instance architecture(String architecture) {
         this.architecture = architecture;
@@ -493,7 +701,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 实例引擎版本的详细版本号
      *
-     * @param minorVersion
+     * @param minorVersion 实例引擎版本的详细版本号
+     * @return Instance
      */
     public Instance minorVersion(String minorVersion) {
         this.minorVersion = minorVersion;
@@ -504,7 +713,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 集群中节点的总数
      *
-     * @param totalNodeNum
+     * @param totalNodeNum 集群中节点的总数
+     * @return Instance
      */
     public Instance totalNodeNum(Integer totalNodeNum) {
         this.totalNodeNum = totalNodeNum;
@@ -515,7 +725,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 整个集群总的CPU核数
      *
-     * @param totalCPU
+     * @param totalCPU 整个集群总的CPU核数
+     * @return Instance
      */
     public Instance totalCPU(Integer totalCPU) {
         this.totalCPU = totalCPU;
@@ -526,7 +737,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 整个集群总的内存大小，单位GB
      *
-     * @param totalMemoryGB
+     * @param totalMemoryGB 整个集群总的内存大小，单位GB
+     * @return Instance
      */
     public Instance totalMemoryGB(Integer totalMemoryGB) {
         this.totalMemoryGB = totalMemoryGB;
@@ -537,7 +749,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 整个集群总的存储空间大小，单位GB
      *
-     * @param totalStorageGB
+     * @param totalStorageGB 整个集群总的存储空间大小，单位GB
+     * @return Instance
      */
     public Instance totalStorageGB(Integer totalStorageGB) {
         this.totalStorageGB = totalStorageGB;
@@ -546,9 +759,82 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
+     * set TiDB节点规格和数目
+     *
+     * @param tidbNodeSpec TiDB节点规格和数目
+     * @return Instance
+     */
+    public Instance tidbNodeSpec(NodeSpec tidbNodeSpec) {
+        this.tidbNodeSpec = tidbNodeSpec;
+        return this;
+    }
+
+
+    /**
+     * set TiKV节点规格和数目
+     *
+     * @param tikvNodeSpec TiKV节点规格和数目
+     * @return Instance
+     */
+    public Instance tikvNodeSpec(NodeSpec tikvNodeSpec) {
+        this.tikvNodeSpec = tikvNodeSpec;
+        return this;
+    }
+
+
+    /**
+     * set PD节点规格和数目
+     *
+     * @param pdNodeSpec PD节点规格和数目
+     * @return Instance
+     */
+    public Instance pdNodeSpec(NodeSpec pdNodeSpec) {
+        this.pdNodeSpec = pdNodeSpec;
+        return this;
+    }
+
+
+    /**
+     * set Monitor节点规格，只能有1个Monitor节点
+     *
+     * @param monitorNodeSpec Monitor节点规格，只能有1个Monitor节点
+     * @return Instance
+     */
+    public Instance monitorNodeSpec(NodeSpec monitorNodeSpec) {
+        this.monitorNodeSpec = monitorNodeSpec;
+        return this;
+    }
+
+
+    /**
+     * set TiFlash节点规格和数目
+     *
+     * @param tiflashNodeSpec TiFlash节点规格和数目
+     * @return Instance
+     */
+    public Instance tiflashNodeSpec(NodeSpec tiflashNodeSpec) {
+        this.tiflashNodeSpec = tiflashNodeSpec;
+        return this;
+    }
+
+
+    /**
+     * set Ticdc节点规格和数目
+     *
+     * @param ticdcNodeSpec Ticdc节点规格和数目
+     * @return Instance
+     */
+    public Instance ticdcNodeSpec(NodeSpec ticdcNodeSpec) {
+        this.ticdcNodeSpec = ticdcNodeSpec;
+        return this;
+    }
+
+
+    /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return Instance
      */
     public Instance regionId(String regionId) {
         this.regionId = regionId;
@@ -559,7 +845,8 @@ public class Instance  implements java.io.Serializable {
     /**
     * set 可用区ID，目前仅支持单可用区
     *
-    * @param azId
+    * @param azId 可用区ID，目前仅支持单可用区
+    * @return Instance
     */
     public Instance azId(List<String> azId) {
         this.azId = azId;
@@ -570,7 +857,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set VPC的ID
      *
-     * @param vpcId
+     * @param vpcId VPC的ID
+     * @return Instance
      */
     public Instance vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -581,7 +869,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 子网的ID
      *
-     * @param subnetId
+     * @param subnetId 子网的ID
+     * @return Instance
      */
     public Instance subnetId(String subnetId) {
         this.subnetId = subnetId;
@@ -592,7 +881,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
-     * @param instanceStatus
+     * @param instanceStatus 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+     * @return Instance
      */
     public Instance instanceStatus(String instanceStatus) {
         this.instanceStatus = instanceStatus;
@@ -603,7 +893,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 实例创建时间, UTC 时间格式
      *
-     * @param createTime
+     * @param createTime 实例创建时间, UTC 时间格式
+     * @return Instance
      */
     public Instance createTime(String createTime) {
         this.createTime = createTime;
@@ -614,7 +905,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 计费配置
      *
-     * @param charge
+     * @param charge 计费配置
+     * @return Instance
      */
     public Instance charge(Charge charge) {
         this.charge = charge;
@@ -625,10 +917,23 @@ public class Instance  implements java.io.Serializable {
     /**
     * set 标签信息
     *
-    * @param tags
+    * @param tags 标签信息
+    * @return Instance
     */
     public Instance tags(List<Tag> tags) {
         this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set TiDB内网域名
+     *
+     * @param internalDomainName TiDB内网域名
+     * @return Instance
+     */
+    public Instance internalDomainName(String internalDomainName) {
+        this.internalDomainName = internalDomainName;
         return this;
     }
 

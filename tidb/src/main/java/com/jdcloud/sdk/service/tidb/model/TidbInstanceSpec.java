@@ -44,6 +44,11 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     private String instanceName;
 
     /**
+     * 命名空间(必须由小写字母数字字符或“-”组成，并且必须以字母数字字符开头和结尾,最大长度为30)
+     */
+    private String instanceNamespace;
+
+    /**
      * TiDB引擎版本
      */
     private String engineVersion;
@@ -115,6 +120,11 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     private String subnetId;
 
     /**
+     * 是否开启IPV6（true：是、false：否），默认：false
+     */
+    private Boolean ipv6Enable;
+
+    /**
      * 计费规格，包括计费类型，计费周期等
      * Required:true
      */
@@ -126,6 +136,11 @@ public class TidbInstanceSpec  implements java.io.Serializable {
      */
     
     private List<Tag> tagSpec;
+    /**
+     * 资源组id
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -144,6 +159,25 @@ public class TidbInstanceSpec  implements java.io.Serializable {
      */
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
+    }
+
+
+    /**
+     * get 命名空间(必须由小写字母数字字符或“-”组成，并且必须以字母数字字符开头和结尾,最大长度为30)
+     *
+     * @return
+     */
+    public String getInstanceNamespace() {
+        return instanceNamespace;
+    }
+
+    /**
+     * set 命名空间(必须由小写字母数字字符或“-”组成，并且必须以字母数字字符开头和结尾,最大长度为30)
+     *
+     * @param instanceNamespace
+     */
+    public void setInstanceNamespace(String instanceNamespace) {
+        this.instanceNamespace = instanceNamespace;
     }
 
 
@@ -357,6 +391,25 @@ public class TidbInstanceSpec  implements java.io.Serializable {
 
 
     /**
+     * get 是否开启IPV6（true：是、false：否），默认：false
+     *
+     * @return
+     */
+    public Boolean getIpv6Enable() {
+        return ipv6Enable;
+    }
+
+    /**
+     * set 是否开启IPV6（true：是、false：否），默认：false
+     *
+     * @param ipv6Enable
+     */
+    public void setIpv6Enable(Boolean ipv6Enable) {
+        this.ipv6Enable = ipv6Enable;
+    }
+
+
+    /**
      * get 计费规格，包括计费类型，计费周期等
      *
      * @return
@@ -394,11 +447,31 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 资源组id
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组id
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
 
     /**
      * set 实例名
      *
-     * @param instanceName
+     * @param instanceName 实例名
+     * @return TidbInstanceSpec
      */
     public TidbInstanceSpec instanceName(String instanceName) {
         this.instanceName = instanceName;
@@ -407,9 +480,22 @@ public class TidbInstanceSpec  implements java.io.Serializable {
 
 
     /**
+     * set 命名空间(必须由小写字母数字字符或“-”组成，并且必须以字母数字字符开头和结尾,最大长度为30)
+     *
+     * @param instanceNamespace 命名空间(必须由小写字母数字字符或“-”组成，并且必须以字母数字字符开头和结尾,最大长度为30)
+     * @return TidbInstanceSpec
+     */
+    public TidbInstanceSpec instanceNamespace(String instanceNamespace) {
+        this.instanceNamespace = instanceNamespace;
+        return this;
+    }
+
+
+    /**
      * set TiDB引擎版本
      *
-     * @param engineVersion
+     * @param engineVersion TiDB引擎版本
+     * @return TidbInstanceSpec
      */
     public TidbInstanceSpec engineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
@@ -420,7 +506,8 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     /**
      * set CPU架构
      *
-     * @param architecture
+     * @param architecture CPU架构
+     * @return TidbInstanceSpec
      */
     public TidbInstanceSpec architecture(String architecture) {
         this.architecture = architecture;
@@ -431,7 +518,8 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     /**
      * set TiDB节点规格和数目
      *
-     * @param tidbNodeSpec
+     * @param tidbNodeSpec TiDB节点规格和数目
+     * @return TidbInstanceSpec
      */
     public TidbInstanceSpec tidbNodeSpec(NodeSpec tidbNodeSpec) {
         this.tidbNodeSpec = tidbNodeSpec;
@@ -442,7 +530,8 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     /**
      * set TiKV节点规格和数目
      *
-     * @param tikvNodeSpec
+     * @param tikvNodeSpec TiKV节点规格和数目
+     * @return TidbInstanceSpec
      */
     public TidbInstanceSpec tikvNodeSpec(NodeSpec tikvNodeSpec) {
         this.tikvNodeSpec = tikvNodeSpec;
@@ -453,7 +542,8 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     /**
      * set PD节点规格和数目
      *
-     * @param pdNodeSpec
+     * @param pdNodeSpec PD节点规格和数目
+     * @return TidbInstanceSpec
      */
     public TidbInstanceSpec pdNodeSpec(NodeSpec pdNodeSpec) {
         this.pdNodeSpec = pdNodeSpec;
@@ -464,7 +554,8 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     /**
      * set Monitor节点规格，只能有1个Monitor节点
      *
-     * @param monitorNodeSpec
+     * @param monitorNodeSpec Monitor节点规格，只能有1个Monitor节点
+     * @return TidbInstanceSpec
      */
     public TidbInstanceSpec monitorNodeSpec(NodeSpec monitorNodeSpec) {
         this.monitorNodeSpec = monitorNodeSpec;
@@ -475,7 +566,8 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     /**
      * set TiFlash节点规格和数目
      *
-     * @param tiflashNodeSpec
+     * @param tiflashNodeSpec TiFlash节点规格和数目
+     * @return TidbInstanceSpec
      */
     public TidbInstanceSpec tiflashNodeSpec(NodeSpec tiflashNodeSpec) {
         this.tiflashNodeSpec = tiflashNodeSpec;
@@ -486,7 +578,8 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     /**
      * set Ticdc节点规格和数目
      *
-     * @param ticdcNodeSpec
+     * @param ticdcNodeSpec Ticdc节点规格和数目
+     * @return TidbInstanceSpec
      */
     public TidbInstanceSpec ticdcNodeSpec(NodeSpec ticdcNodeSpec) {
         this.ticdcNodeSpec = ticdcNodeSpec;
@@ -497,7 +590,8 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     /**
     * set 可用区ID，目前仅支持单可用区部署
     *
-    * @param azId
+    * @param azId 可用区ID，目前仅支持单可用区部署
+    * @return TidbInstanceSpec
     */
     public TidbInstanceSpec azId(List<String> azId) {
         this.azId = azId;
@@ -508,7 +602,8 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     /**
      * set VPC的ID
      *
-     * @param vpcId
+     * @param vpcId VPC的ID
+     * @return TidbInstanceSpec
      */
     public TidbInstanceSpec vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -519,7 +614,8 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     /**
      * set 子网ID
      *
-     * @param subnetId
+     * @param subnetId 子网ID
+     * @return TidbInstanceSpec
      */
     public TidbInstanceSpec subnetId(String subnetId) {
         this.subnetId = subnetId;
@@ -528,9 +624,22 @@ public class TidbInstanceSpec  implements java.io.Serializable {
 
 
     /**
+     * set 是否开启IPV6（true：是、false：否），默认：false
+     *
+     * @param ipv6Enable 是否开启IPV6（true：是、false：否），默认：false
+     * @return TidbInstanceSpec
+     */
+    public TidbInstanceSpec ipv6Enable(Boolean ipv6Enable) {
+        this.ipv6Enable = ipv6Enable;
+        return this;
+    }
+
+
+    /**
      * set 计费规格，包括计费类型，计费周期等
      *
-     * @param chargeSpec
+     * @param chargeSpec 计费规格，包括计费类型，计费周期等
+     * @return TidbInstanceSpec
      */
     public TidbInstanceSpec chargeSpec(ChargeSpec chargeSpec) {
         this.chargeSpec = chargeSpec;
@@ -541,10 +650,23 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     /**
     * set 标签信息
     *
-    * @param tagSpec
+    * @param tagSpec 标签信息
+    * @return TidbInstanceSpec
     */
     public TidbInstanceSpec tagSpec(List<Tag> tagSpec) {
         this.tagSpec = tagSpec;
+        return this;
+    }
+
+
+    /**
+     * set 资源组id
+     *
+     * @param resourceGroupId 资源组id
+     * @return TidbInstanceSpec
+     */
+    public TidbInstanceSpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 

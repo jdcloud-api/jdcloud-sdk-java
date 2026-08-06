@@ -92,7 +92,8 @@ public class DescribeReplicationsRequest extends JdcloudRequest implements java.
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DescribeReplicationsRequest
      */
     public DescribeReplicationsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class DescribeReplicationsRequest extends JdcloudRequest implements java.
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DescribeReplicationsRequest
      */
     public DescribeReplicationsRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

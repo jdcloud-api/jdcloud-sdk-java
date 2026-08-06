@@ -63,7 +63,8 @@ public class ModifyInstanceSpecResult extends JdcloudResult implements java.io.S
     /**
      * set orderId
      *
-     * @param orderId
+     * @param orderId 
+     * @return ModifyInstanceSpecResult
      */
     public ModifyInstanceSpecResult orderId(String orderId) {
         this.orderId = orderId;

@@ -91,7 +91,8 @@ public class FullImportTask  implements java.io.Serializable {
     /**
      * set 用户上传到对象存储OSS上的备份文件的路径。
      *
-     * @param ossLink
+     * @param ossLink 用户上传到对象存储OSS上的备份文件的路径。
+     * @return FullImportTask
      */
     public FullImportTask ossLink(String ossLink) {
         this.ossLink = ossLink;
@@ -102,7 +103,8 @@ public class FullImportTask  implements java.io.Serializable {
     /**
      * set 未压缩的整个数据文件或数据目录的大小,单位GB
      *
-     * @param dataSizeGB
+     * @param dataSizeGB 未压缩的整个数据文件或数据目录的大小,单位GB
+     * @return FullImportTask
      */
     public FullImportTask dataSizeGB(Integer dataSizeGB) {
         this.dataSizeGB = dataSizeGB;

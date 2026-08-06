@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看当前实例下的账号信息。
+ * 查看当前实例下的账号信息，老接口。
  */
 public class DescribeAccountsRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -92,7 +92,8 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DescribeAccountsRequest
      */
     public DescribeAccountsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DescribeAccountsRequest
      */
     public DescribeAccountsRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

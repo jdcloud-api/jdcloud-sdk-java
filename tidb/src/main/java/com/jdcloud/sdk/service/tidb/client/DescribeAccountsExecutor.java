@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.DescribeAccountsResponse;
 
 /**
- * 查看当前实例下的账号信息。
+ * 查看当前实例下的账号信息，老接口。
  */
 class DescribeAccountsExecutor extends JdcloudExecutor {
 

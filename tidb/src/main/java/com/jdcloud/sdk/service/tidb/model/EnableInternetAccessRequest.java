@@ -118,7 +118,8 @@ public class EnableInternetAccessRequest extends JdcloudRequest implements java.
     /**
      * set 按照service type (database pd monitor)开启公网域名
      *
-     * @param serviceType
+     * @param serviceType 按照service type (database pd monitor)开启公网域名
+     * @return EnableInternetAccessRequest
      */
     public EnableInternetAccessRequest serviceType(String serviceType) {
         this.serviceType = serviceType;
@@ -129,7 +130,8 @@ public class EnableInternetAccessRequest extends JdcloudRequest implements java.
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return EnableInternetAccessRequest
      */
     public EnableInternetAccessRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class EnableInternetAccessRequest extends JdcloudRequest implements java.
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return EnableInternetAccessRequest
      */
     public EnableInternetAccessRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

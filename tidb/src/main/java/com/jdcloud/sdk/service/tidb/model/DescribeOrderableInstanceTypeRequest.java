@@ -66,7 +66,8 @@ public class DescribeOrderableInstanceTypeRequest extends JdcloudRequest impleme
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DescribeOrderableInstanceTypeRequest
      */
     public DescribeOrderableInstanceTypeRequest regionId(String regionId) {
         this.regionId = regionId;

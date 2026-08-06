@@ -112,7 +112,8 @@ public class ArchitectureVersion  implements java.io.Serializable {
     /**
     * set 版本号
     *
-    * @param engineVersion
+    * @param engineVersion 版本号
+    * @return ArchitectureVersion
     */
     public ArchitectureVersion engineVersion(List<String> engineVersion) {
         this.engineVersion = engineVersion;
@@ -123,7 +124,8 @@ public class ArchitectureVersion  implements java.io.Serializable {
     /**
      * set 操作系统内核架构
      *
-     * @param arch
+     * @param arch 操作系统内核架构
+     * @return ArchitectureVersion
      */
     public ArchitectureVersion arch(String arch) {
         this.arch = arch;
@@ -134,7 +136,8 @@ public class ArchitectureVersion  implements java.io.Serializable {
     /**
      * set 操作系统类型
      *
-     * @param version
+     * @param version 操作系统类型
+     * @return ArchitectureVersion
      */
     public ArchitectureVersion version(String version) {
         this.version = version;

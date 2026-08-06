@@ -90,7 +90,8 @@ public class DescribeOrderableInstanceTypeResult extends JdcloudResult implement
     /**
      * set engineStatus
      *
-     * @param engineStatus
+     * @param engineStatus 
+     * @return DescribeOrderableInstanceTypeResult
      */
     public DescribeOrderableInstanceTypeResult engineStatus(Integer engineStatus) {
         this.engineStatus = engineStatus;
@@ -101,7 +102,8 @@ public class DescribeOrderableInstanceTypeResult extends JdcloudResult implement
     /**
     * set orderableAZs
     *
-    * @param orderableAZs
+    * @param orderableAZs 
+    * @return DescribeOrderableInstanceTypeResult
     */
     public DescribeOrderableInstanceTypeResult orderableAZs(List<Az> orderableAZs) {
         this.orderableAZs = orderableAZs;

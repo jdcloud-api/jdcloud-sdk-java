@@ -54,6 +54,9 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
 instanceId, 支持operator选项：eq,ne
 instanceName, 支持operator选项：eq,ne,like
 instanceStatus, 支持operator选项：eq,ne
+engineVersion, 支持operator选项：eq
+subnetId, 支持operator选项：eq, ne, in
+vpcId, 支持operator选项：eq, ne, in
 
      */
     
@@ -121,6 +124,9 @@ instanceStatus, 支持operator选项：eq,ne
 instanceId, 支持operator选项：eq,ne
 instanceName, 支持operator选项：eq,ne,like
 instanceStatus, 支持operator选项：eq,ne
+engineVersion, 支持operator选项：eq
+subnetId, 支持operator选项：eq, ne, in
+vpcId, 支持operator选项：eq, ne, in
 
     *
     * @return
@@ -135,6 +141,9 @@ instanceStatus, 支持operator选项：eq,ne
 instanceId, 支持operator选项：eq,ne
 instanceName, 支持operator选项：eq,ne,like
 instanceStatus, 支持operator选项：eq,ne
+engineVersion, 支持operator选项：eq
+subnetId, 支持operator选项：eq, ne, in
+vpcId, 支持operator选项：eq, ne, in
 
     *
     * @param filters
@@ -205,7 +214,8 @@ instanceStatus, 支持operator选项：eq,ne
     /**
      * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
      *
-     * @param pageNumber
+     * @param pageNumber 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * @return DescribeInstancesRequest
      */
     public DescribeInstancesRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -216,7 +226,8 @@ instanceStatus, 支持operator选项：eq,ne
     /**
      * set 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
      *
-     * @param pageSize
+     * @param pageSize 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+     * @return DescribeInstancesRequest
      */
     public DescribeInstancesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -230,9 +241,21 @@ instanceStatus, 支持operator选项：eq,ne
 instanceId, 支持operator选项：eq,ne
 instanceName, 支持operator选项：eq,ne,like
 instanceStatus, 支持operator选项：eq,ne
+engineVersion, 支持operator选项：eq
+subnetId, 支持operator选项：eq, ne, in
+vpcId, 支持operator选项：eq, ne, in
 
     *
-    * @param filters
+    * @param filters 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+instanceId, 支持operator选项：eq,ne
+instanceName, 支持operator选项：eq,ne,like
+instanceStatus, 支持operator选项：eq,ne
+engineVersion, 支持operator选项：eq
+subnetId, 支持operator选项：eq, ne, in
+vpcId, 支持operator选项：eq, ne, in
+
+    * @return DescribeInstancesRequest
     */
     public DescribeInstancesRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -243,7 +266,8 @@ instanceStatus, 支持operator选项：eq,ne
     /**
     * set 资源标签
     *
-    * @param tagFilters
+    * @param tagFilters 资源标签
+    * @return DescribeInstancesRequest
     */
     public DescribeInstancesRequest tagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
@@ -254,7 +278,8 @@ instanceStatus, 支持operator选项：eq,ne
     /**
     * set 资源组id
     *
-    * @param resourceGroupIds
+    * @param resourceGroupIds 资源组id
+    * @return DescribeInstancesRequest
     */
     public DescribeInstancesRequest resourceGroupIds(List<String> resourceGroupIds) {
         this.resourceGroupIds = resourceGroupIds;
@@ -265,7 +290,8 @@ instanceStatus, 支持operator选项：eq,ne
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DescribeInstancesRequest
      */
     public DescribeInstancesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -280,6 +306,9 @@ instanceStatus, 支持operator选项：eq,ne
 instanceId, 支持operator选项：eq,ne
 instanceName, 支持operator选项：eq,ne,like
 instanceStatus, 支持operator选项：eq,ne
+engineVersion, 支持operator选项：eq
+subnetId, 支持operator选项：eq, ne, in
+vpcId, 支持operator选项：eq, ne, in
 
      *
      * @param filter

@@ -111,7 +111,8 @@ public class DescribeUpgradePlanResult extends JdcloudResult implements java.io.
     /**
      * set 升级后的新版本
      *
-     * @param newVersion
+     * @param newVersion 升级后的新版本
+     * @return DescribeUpgradePlanResult
      */
     public DescribeUpgradePlanResult newVersion(String newVersion) {
         this.newVersion = newVersion;
@@ -122,7 +123,8 @@ public class DescribeUpgradePlanResult extends JdcloudResult implements java.io.
     /**
      * set 计划开始升级的时间
      *
-     * @param upgradeTime
+     * @param upgradeTime 计划开始升级的时间
+     * @return DescribeUpgradePlanResult
      */
     public DescribeUpgradePlanResult upgradeTime(String upgradeTime) {
         this.upgradeTime = upgradeTime;
@@ -133,7 +135,8 @@ public class DescribeUpgradePlanResult extends JdcloudResult implements java.io.
     /**
      * set 任务状态 - 未开始 - 进行中 - 失败
      *
-     * @param status
+     * @param status 任务状态 - 未开始 - 进行中 - 失败
+     * @return DescribeUpgradePlanResult
      */
     public DescribeUpgradePlanResult status(String status) {
         this.status = status;

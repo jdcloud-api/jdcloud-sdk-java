@@ -42,6 +42,13 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     private String instanceId;
 
     /**
+     * 排序方式（asc:正序, desc:倒序）
+     * Required:true
+     */
+    @Required
+    private String sortType;
+
+    /**
      * 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
      */
     private Integer pageNumber;
@@ -76,6 +83,25 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
      */
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
+    }
+
+
+    /**
+     * get 排序方式（asc:正序, desc:倒序）
+     *
+     * @return
+     */
+    public String getSortType() {
+        return sortType;
+    }
+
+    /**
+     * set 排序方式（asc:正序, desc:倒序）
+     *
+     * @param sortType
+     */
+    public void setSortType(String sortType) {
+        this.sortType = sortType;
     }
 
 
@@ -140,7 +166,8 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 实例ID，唯一标识一个实例
      *
-     * @param instanceId
+     * @param instanceId 实例ID，唯一标识一个实例
+     * @return DescribeBackupsRequest
      */
     public DescribeBackupsRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -149,9 +176,22 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
+     * set 排序方式（asc:正序, desc:倒序）
+     *
+     * @param sortType 排序方式（asc:正序, desc:倒序）
+     * @return DescribeBackupsRequest
+     */
+    public DescribeBackupsRequest sortType(String sortType) {
+        this.sortType = sortType;
+        return this;
+    }
+
+
+    /**
      * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
      *
-     * @param pageNumber
+     * @param pageNumber 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
+     * @return DescribeBackupsRequest
      */
     public DescribeBackupsRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -162,7 +202,8 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍。
      *
-     * @param pageSize
+     * @param pageSize 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍。
+     * @return DescribeBackupsRequest
      */
     public DescribeBackupsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -173,7 +214,8 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DescribeBackupsRequest
      */
     public DescribeBackupsRequest regionId(String regionId) {
         this.regionId = regionId;

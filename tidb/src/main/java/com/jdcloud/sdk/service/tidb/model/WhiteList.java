@@ -86,7 +86,8 @@ public class WhiteList  implements java.io.Serializable {
     /**
      * set 白名单名称
      *
-     * @param name
+     * @param name 白名单名称
+     * @return WhiteList
      */
     public WhiteList name(String name) {
         this.name = name;
@@ -97,7 +98,8 @@ public class WhiteList  implements java.io.Serializable {
     /**
      * set IP或IP段，不同的IP/IP段之间用英文逗号分隔，例如0.0.0.0/0,192.168.0.10
      *
-     * @param ips
+     * @param ips IP或IP段，不同的IP/IP段之间用英文逗号分隔，例如0.0.0.0/0,192.168.0.10
+     * @return WhiteList
      */
     public WhiteList ips(String ips) {
         this.ips = ips;

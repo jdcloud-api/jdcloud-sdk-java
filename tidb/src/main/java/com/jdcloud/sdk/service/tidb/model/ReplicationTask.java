@@ -93,9 +93,29 @@ public class ReplicationTask  implements java.io.Serializable {
     private String checkpointTime;
 
     /**
+     * Checkpoint延迟
+     */
+    private String checkpointLag;
+
+    /**
      * 任务创建时间
      */
     private String createTime;
+
+    /**
+     * Kafka分片数
+     */
+    private Integer partitionNum;
+
+    /**
+     * Kafka event分发器
+     */
+    private String dispatchers;
+
+    /**
+     * 每次向 Kafka broker 发送消息的最大数据量
+     */
+    private Integer maxMessageBytes;
 
 
 
@@ -328,6 +348,25 @@ public class ReplicationTask  implements java.io.Serializable {
 
 
     /**
+     * get Checkpoint延迟
+     *
+     * @return
+     */
+    public String getCheckpointLag() {
+        return checkpointLag;
+    }
+
+    /**
+     * set Checkpoint延迟
+     *
+     * @param checkpointLag
+     */
+    public void setCheckpointLag(String checkpointLag) {
+        this.checkpointLag = checkpointLag;
+    }
+
+
+    /**
      * get 任务创建时间
      *
      * @return
@@ -346,11 +385,69 @@ public class ReplicationTask  implements java.io.Serializable {
     }
 
 
+    /**
+     * get Kafka分片数
+     *
+     * @return
+     */
+    public Integer getPartitionNum() {
+        return partitionNum;
+    }
+
+    /**
+     * set Kafka分片数
+     *
+     * @param partitionNum
+     */
+    public void setPartitionNum(Integer partitionNum) {
+        this.partitionNum = partitionNum;
+    }
+
+
+    /**
+     * get Kafka event分发器
+     *
+     * @return
+     */
+    public String getDispatchers() {
+        return dispatchers;
+    }
+
+    /**
+     * set Kafka event分发器
+     *
+     * @param dispatchers
+     */
+    public void setDispatchers(String dispatchers) {
+        this.dispatchers = dispatchers;
+    }
+
+
+    /**
+     * get 每次向 Kafka broker 发送消息的最大数据量
+     *
+     * @return
+     */
+    public Integer getMaxMessageBytes() {
+        return maxMessageBytes;
+    }
+
+    /**
+     * set 每次向 Kafka broker 发送消息的最大数据量
+     *
+     * @param maxMessageBytes
+     */
+    public void setMaxMessageBytes(Integer maxMessageBytes) {
+        this.maxMessageBytes = maxMessageBytes;
+    }
+
+
 
     /**
      * set 复制任务ID
      *
-     * @param taskId
+     * @param taskId 复制任务ID
+     * @return ReplicationTask
      */
     public ReplicationTask taskId(String taskId) {
         this.taskId = taskId;
@@ -361,7 +458,8 @@ public class ReplicationTask  implements java.io.Serializable {
     /**
      * set 目标实例类型
      *
-     * @param targetType
+     * @param targetType 目标实例类型
+     * @return ReplicationTask
      */
     public ReplicationTask targetType(String targetType) {
         this.targetType = targetType;
@@ -372,7 +470,8 @@ public class ReplicationTask  implements java.io.Serializable {
     /**
      * set 复制的对象，格式为&quot;库名.表名”，支持?* 通配符，例如 db1.* 、 db2.tab? ，*.* 表示复制整个实例
      *
-     * @param replicationObjects
+     * @param replicationObjects 复制的对象，格式为&quot;库名.表名”，支持?* 通配符，例如 db1.* 、 db2.tab? ，*.* 表示复制整个实例
+     * @return ReplicationTask
      */
     public ReplicationTask replicationObjects(String replicationObjects) {
         this.replicationObjects = replicationObjects;
@@ -383,7 +482,8 @@ public class ReplicationTask  implements java.io.Serializable {
     /**
      * set 目标实例IP
      *
-     * @param targetIP
+     * @param targetIP 目标实例IP
+     * @return ReplicationTask
      */
     public ReplicationTask targetIP(String targetIP) {
         this.targetIP = targetIP;
@@ -394,7 +494,8 @@ public class ReplicationTask  implements java.io.Serializable {
     /**
      * set 目标实例端口
      *
-     * @param targetPort
+     * @param targetPort 目标实例端口
+     * @return ReplicationTask
      */
     public ReplicationTask targetPort(String targetPort) {
         this.targetPort = targetPort;
@@ -405,7 +506,8 @@ public class ReplicationTask  implements java.io.Serializable {
     /**
      * set 目标类型为TiDB或MySQL时，连接目标实例的用户名
      *
-     * @param targetUser
+     * @param targetUser 目标类型为TiDB或MySQL时，连接目标实例的用户名
+     * @return ReplicationTask
      */
     public ReplicationTask targetUser(String targetUser) {
         this.targetUser = targetUser;
@@ -416,7 +518,8 @@ public class ReplicationTask  implements java.io.Serializable {
     /**
      * set Kafka的Topic
      *
-     * @param kafkaTopic
+     * @param kafkaTopic Kafka的Topic
+     * @return ReplicationTask
      */
     public ReplicationTask kafkaTopic(String kafkaTopic) {
         this.kafkaTopic = kafkaTopic;
@@ -427,7 +530,8 @@ public class ReplicationTask  implements java.io.Serializable {
     /**
      * set Kafka的版本
      *
-     * @param kafkaVersion
+     * @param kafkaVersion Kafka的版本
+     * @return ReplicationTask
      */
     public ReplicationTask kafkaVersion(String kafkaVersion) {
         this.kafkaVersion = kafkaVersion;
@@ -438,7 +542,8 @@ public class ReplicationTask  implements java.io.Serializable {
     /**
      * set 目标实例备注说明
      *
-     * @param targetComment
+     * @param targetComment 目标实例备注说明
+     * @return ReplicationTask
      */
     public ReplicationTask targetComment(String targetComment) {
         this.targetComment = targetComment;
@@ -449,7 +554,8 @@ public class ReplicationTask  implements java.io.Serializable {
     /**
      * set 任务状态
      *
-     * @param taskStatus
+     * @param taskStatus 任务状态
+     * @return ReplicationTask
      */
     public ReplicationTask taskStatus(String taskStatus) {
         this.taskStatus = taskStatus;
@@ -460,7 +566,8 @@ public class ReplicationTask  implements java.io.Serializable {
     /**
      * set 复制的起始时间
      *
-     * @param startTime
+     * @param startTime 复制的起始时间
+     * @return ReplicationTask
      */
     public ReplicationTask startTime(String startTime) {
         this.startTime = startTime;
@@ -471,7 +578,8 @@ public class ReplicationTask  implements java.io.Serializable {
     /**
      * set Checkpoint时间
      *
-     * @param checkpointTime
+     * @param checkpointTime Checkpoint时间
+     * @return ReplicationTask
      */
     public ReplicationTask checkpointTime(String checkpointTime) {
         this.checkpointTime = checkpointTime;
@@ -480,12 +588,61 @@ public class ReplicationTask  implements java.io.Serializable {
 
 
     /**
+     * set Checkpoint延迟
+     *
+     * @param checkpointLag Checkpoint延迟
+     * @return ReplicationTask
+     */
+    public ReplicationTask checkpointLag(String checkpointLag) {
+        this.checkpointLag = checkpointLag;
+        return this;
+    }
+
+
+    /**
      * set 任务创建时间
      *
-     * @param createTime
+     * @param createTime 任务创建时间
+     * @return ReplicationTask
      */
     public ReplicationTask createTime(String createTime) {
         this.createTime = createTime;
+        return this;
+    }
+
+
+    /**
+     * set Kafka分片数
+     *
+     * @param partitionNum Kafka分片数
+     * @return ReplicationTask
+     */
+    public ReplicationTask partitionNum(Integer partitionNum) {
+        this.partitionNum = partitionNum;
+        return this;
+    }
+
+
+    /**
+     * set Kafka event分发器
+     *
+     * @param dispatchers Kafka event分发器
+     * @return ReplicationTask
+     */
+    public ReplicationTask dispatchers(String dispatchers) {
+        this.dispatchers = dispatchers;
+        return this;
+    }
+
+
+    /**
+     * set 每次向 Kafka broker 发送消息的最大数据量
+     *
+     * @param maxMessageBytes 每次向 Kafka broker 发送消息的最大数据量
+     * @return ReplicationTask
+     */
+    public ReplicationTask maxMessageBytes(Integer maxMessageBytes) {
+        this.maxMessageBytes = maxMessageBytes;
         return this;
     }
 

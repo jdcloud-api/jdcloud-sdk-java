@@ -118,7 +118,8 @@ public class DeleteWhiteListGroupRequest extends JdcloudRequest implements java.
     /**
      * set 白名单分组名
      *
-     * @param name
+     * @param name 白名单分组名
+     * @return DeleteWhiteListGroupRequest
      */
     public DeleteWhiteListGroupRequest name(String name) {
         this.name = name;
@@ -129,7 +130,8 @@ public class DeleteWhiteListGroupRequest extends JdcloudRequest implements java.
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DeleteWhiteListGroupRequest
      */
     public DeleteWhiteListGroupRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class DeleteWhiteListGroupRequest extends JdcloudRequest implements java.
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DeleteWhiteListGroupRequest
      */
     public DeleteWhiteListGroupRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

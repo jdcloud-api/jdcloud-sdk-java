@@ -92,7 +92,8 @@ public class DeleteBackupRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DeleteBackupRequest
      */
     public DeleteBackupRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class DeleteBackupRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 备份ID
      *
-     * @param backupId
+     * @param backupId 备份ID
+     * @return DeleteBackupRequest
      */
     public DeleteBackupRequest backupId(String backupId) {
         this.backupId = backupId;

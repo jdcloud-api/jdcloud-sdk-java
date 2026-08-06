@@ -65,7 +65,8 @@ public class DescribeUpgradeVersionsResult extends JdcloudResult implements java
     /**
     * set versions
     *
-    * @param versions
+    * @param versions 
+    * @return DescribeUpgradeVersionsResult
     */
     public DescribeUpgradeVersionsResult versions(List<String> versions) {
         this.versions = versions;

@@ -134,7 +134,8 @@ public class K8sServiceAddr  implements java.io.Serializable {
     /**
      * set 连接信息的类型
      *
-     * @param addrType
+     * @param addrType 连接信息的类型
+     * @return K8sServiceAddr
      */
     public K8sServiceAddr addrType(String addrType) {
         this.addrType = addrType;
@@ -145,7 +146,8 @@ public class K8sServiceAddr  implements java.io.Serializable {
     /**
      * set K8S集群外部访问实例的方式
      *
-     * @param accessType
+     * @param accessType K8S集群外部访问实例的方式
+     * @return K8sServiceAddr
      */
     public K8sServiceAddr accessType(String accessType) {
         this.accessType = accessType;
@@ -156,7 +158,8 @@ public class K8sServiceAddr  implements java.io.Serializable {
     /**
      * set 从K8S集群外部访问实例的地址,如域名或IP
      *
-     * @param addr
+     * @param addr 从K8S集群外部访问实例的地址,如域名或IP
+     * @return K8sServiceAddr
      */
     public K8sServiceAddr addr(String addr) {
         this.addr = addr;
@@ -167,7 +170,8 @@ public class K8sServiceAddr  implements java.io.Serializable {
     /**
      * set 端口
      *
-     * @param port
+     * @param port 端口
+     * @return K8sServiceAddr
      */
     public K8sServiceAddr port(String port) {
         this.port = port;

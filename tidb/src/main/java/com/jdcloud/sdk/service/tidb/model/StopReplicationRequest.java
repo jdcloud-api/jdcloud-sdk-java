@@ -118,7 +118,8 @@ public class StopReplicationRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return StopReplicationRequest
      */
     public StopReplicationRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -129,7 +130,8 @@ public class StopReplicationRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return StopReplicationRequest
      */
     public StopReplicationRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -140,7 +142,8 @@ public class StopReplicationRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 复制任务ID
      *
-     * @param taskId
+     * @param taskId 复制任务ID
+     * @return StopReplicationRequest
      */
     public StopReplicationRequest taskId(String taskId) {
         this.taskId = taskId;

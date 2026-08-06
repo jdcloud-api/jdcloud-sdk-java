@@ -118,7 +118,8 @@ public class DisableInternetAccessRequest extends JdcloudRequest implements java
     /**
      * set 按照service type (database pd monitor)关闭公网域名
      *
-     * @param serviceType
+     * @param serviceType 按照service type (database pd monitor)关闭公网域名
+     * @return DisableInternetAccessRequest
      */
     public DisableInternetAccessRequest serviceType(String serviceType) {
         this.serviceType = serviceType;
@@ -129,7 +130,8 @@ public class DisableInternetAccessRequest extends JdcloudRequest implements java
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DisableInternetAccessRequest
      */
     public DisableInternetAccessRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class DisableInternetAccessRequest extends JdcloudRequest implements java
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DisableInternetAccessRequest
      */
     public DisableInternetAccessRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

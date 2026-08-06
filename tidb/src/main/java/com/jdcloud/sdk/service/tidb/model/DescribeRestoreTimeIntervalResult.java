@@ -94,7 +94,9 @@ public class DescribeRestoreTimeIntervalResult extends JdcloudResult implements 
      * set 实例按时间点创建时,可恢复到的最早时间点, 北京时间, 格式为&quot;YYYY-MM-DD HH:mm:ss&quot;； 字段值为空字符串表示没有最早时间点
 
      *
-     * @param startTime
+     * @param startTime 实例按时间点创建时,可恢复到的最早时间点, 北京时间, 格式为&quot;YYYY-MM-DD HH:mm:ss&quot;； 字段值为空字符串表示没有最早时间点
+
+     * @return DescribeRestoreTimeIntervalResult
      */
     public DescribeRestoreTimeIntervalResult startTime(String startTime) {
         this.startTime = startTime;
@@ -106,7 +108,9 @@ public class DescribeRestoreTimeIntervalResult extends JdcloudResult implements 
      * set 实例按时间点创建时,可恢复到的最新时间点, 北京时间, 格式为&quot;YYYY-MM-DD HH:mm:ss&quot;；字段值为空字符串表示没有最新时间点
 
      *
-     * @param endTime
+     * @param endTime 实例按时间点创建时,可恢复到的最新时间点, 北京时间, 格式为&quot;YYYY-MM-DD HH:mm:ss&quot;；字段值为空字符串表示没有最新时间点
+
+     * @return DescribeRestoreTimeIntervalResult
      */
     public DescribeRestoreTimeIntervalResult endTime(String endTime) {
         this.endTime = endTime;

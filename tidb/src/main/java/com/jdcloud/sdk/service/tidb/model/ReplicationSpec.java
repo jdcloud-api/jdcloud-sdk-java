@@ -35,9 +35,19 @@ public class ReplicationSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 复制的起始时间戳
+     * 复制任务的起始时间戳,格式为&quot;2006-01-02 15:04:05&quot;,UTC时间, 优先级低于startTsInt
      */
     private String startTS;
+
+    /**
+     * 复制任务的起始时间戳,TSO格式,优先级较高,样例: 442501956723539969 (2023-06-29 11:56:44.347 +0800 CST)
+     */
+    private Integer startTsInt;
+
+    /**
+     * 复制任务的id,正则表达式：&#x60;^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$&#x60;，长度为 [2,32], 留空自动生成
+     */
+    private String id;
 
     /**
      * 要复制的对象列表
@@ -89,10 +99,25 @@ public class ReplicationSpec  implements java.io.Serializable {
      */
     private String kafkaProtocol;
 
+    /**
+     * kafka event分发器的类型
+     */
+    private String dispatchers;
+
+    /**
+     * kafka分片数
+     */
+    private Integer partitionNum;
+
+    /**
+     * 每次向 Kafka broker 发送消息的最大数据量
+     */
+    private Integer maxMessageBytes;
+
 
 
     /**
-     * get 复制的起始时间戳
+     * get 复制任务的起始时间戳,格式为&quot;2006-01-02 15:04:05&quot;,UTC时间, 优先级低于startTsInt
      *
      * @return
      */
@@ -101,12 +126,50 @@ public class ReplicationSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 复制的起始时间戳
+     * set 复制任务的起始时间戳,格式为&quot;2006-01-02 15:04:05&quot;,UTC时间, 优先级低于startTsInt
      *
      * @param startTS
      */
     public void setStartTS(String startTS) {
         this.startTS = startTS;
+    }
+
+
+    /**
+     * get 复制任务的起始时间戳,TSO格式,优先级较高,样例: 442501956723539969 (2023-06-29 11:56:44.347 +0800 CST)
+     *
+     * @return
+     */
+    public Integer getStartTsInt() {
+        return startTsInt;
+    }
+
+    /**
+     * set 复制任务的起始时间戳,TSO格式,优先级较高,样例: 442501956723539969 (2023-06-29 11:56:44.347 +0800 CST)
+     *
+     * @param startTsInt
+     */
+    public void setStartTsInt(Integer startTsInt) {
+        this.startTsInt = startTsInt;
+    }
+
+
+    /**
+     * get 复制任务的id,正则表达式：&#x60;^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$&#x60;，长度为 [2,32], 留空自动生成
+     *
+     * @return
+     */
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * set 复制任务的id,正则表达式：&#x60;^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$&#x60;，长度为 [2,32], 留空自动生成
+     *
+     * @param id
+     */
+    public void setId(String id) {
+        this.id = id;
     }
 
 
@@ -300,11 +363,69 @@ public class ReplicationSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get kafka event分发器的类型
+     *
+     * @return
+     */
+    public String getDispatchers() {
+        return dispatchers;
+    }
 
     /**
-     * set 复制的起始时间戳
+     * set kafka event分发器的类型
      *
-     * @param startTS
+     * @param dispatchers
+     */
+    public void setDispatchers(String dispatchers) {
+        this.dispatchers = dispatchers;
+    }
+
+
+    /**
+     * get kafka分片数
+     *
+     * @return
+     */
+    public Integer getPartitionNum() {
+        return partitionNum;
+    }
+
+    /**
+     * set kafka分片数
+     *
+     * @param partitionNum
+     */
+    public void setPartitionNum(Integer partitionNum) {
+        this.partitionNum = partitionNum;
+    }
+
+
+    /**
+     * get 每次向 Kafka broker 发送消息的最大数据量
+     *
+     * @return
+     */
+    public Integer getMaxMessageBytes() {
+        return maxMessageBytes;
+    }
+
+    /**
+     * set 每次向 Kafka broker 发送消息的最大数据量
+     *
+     * @param maxMessageBytes
+     */
+    public void setMaxMessageBytes(Integer maxMessageBytes) {
+        this.maxMessageBytes = maxMessageBytes;
+    }
+
+
+
+    /**
+     * set 复制任务的起始时间戳,格式为&quot;2006-01-02 15:04:05&quot;,UTC时间, 优先级低于startTsInt
+     *
+     * @param startTS 复制任务的起始时间戳,格式为&quot;2006-01-02 15:04:05&quot;,UTC时间, 优先级低于startTsInt
+     * @return ReplicationSpec
      */
     public ReplicationSpec startTS(String startTS) {
         this.startTS = startTS;
@@ -313,9 +434,34 @@ public class ReplicationSpec  implements java.io.Serializable {
 
 
     /**
+     * set 复制任务的起始时间戳,TSO格式,优先级较高,样例: 442501956723539969 (2023-06-29 11:56:44.347 +0800 CST)
+     *
+     * @param startTsInt 复制任务的起始时间戳,TSO格式,优先级较高,样例: 442501956723539969 (2023-06-29 11:56:44.347 +0800 CST)
+     * @return ReplicationSpec
+     */
+    public ReplicationSpec startTsInt(Integer startTsInt) {
+        this.startTsInt = startTsInt;
+        return this;
+    }
+
+
+    /**
+     * set 复制任务的id,正则表达式：&#x60;^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$&#x60;，长度为 [2,32], 留空自动生成
+     *
+     * @param id 复制任务的id,正则表达式：&#x60;^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$&#x60;，长度为 [2,32], 留空自动生成
+     * @return ReplicationSpec
+     */
+    public ReplicationSpec id(String id) {
+        this.id = id;
+        return this;
+    }
+
+
+    /**
     * set 要复制的对象列表
     *
-    * @param replicationObjects
+    * @param replicationObjects 要复制的对象列表
+    * @return ReplicationSpec
     */
     public ReplicationSpec replicationObjects(List<String> replicationObjects) {
         this.replicationObjects = replicationObjects;
@@ -326,7 +472,8 @@ public class ReplicationSpec  implements java.io.Serializable {
     /**
      * set 目标实例类型
      *
-     * @param targetType
+     * @param targetType 目标实例类型
+     * @return ReplicationSpec
      */
     public ReplicationSpec targetType(String targetType) {
         this.targetType = targetType;
@@ -337,7 +484,8 @@ public class ReplicationSpec  implements java.io.Serializable {
     /**
      * set 目标实例IP
      *
-     * @param targetIP
+     * @param targetIP 目标实例IP
+     * @return ReplicationSpec
      */
     public ReplicationSpec targetIP(String targetIP) {
         this.targetIP = targetIP;
@@ -348,7 +496,8 @@ public class ReplicationSpec  implements java.io.Serializable {
     /**
      * set 目标实例端口
      *
-     * @param targetPort
+     * @param targetPort 目标实例端口
+     * @return ReplicationSpec
      */
     public ReplicationSpec targetPort(String targetPort) {
         this.targetPort = targetPort;
@@ -359,7 +508,8 @@ public class ReplicationSpec  implements java.io.Serializable {
     /**
      * set 目标实例备注说明
      *
-     * @param targetComment
+     * @param targetComment 目标实例备注说明
+     * @return ReplicationSpec
      */
     public ReplicationSpec targetComment(String targetComment) {
         this.targetComment = targetComment;
@@ -370,7 +520,8 @@ public class ReplicationSpec  implements java.io.Serializable {
     /**
      * set 目标类型为TiDB或MySQL时，连接目标实例的用户名
      *
-     * @param targetUser
+     * @param targetUser 目标类型为TiDB或MySQL时，连接目标实例的用户名
+     * @return ReplicationSpec
      */
     public ReplicationSpec targetUser(String targetUser) {
         this.targetUser = targetUser;
@@ -381,7 +532,8 @@ public class ReplicationSpec  implements java.io.Serializable {
     /**
      * set 目标类型为TiDB或MySQL时，连接目标实例的密码
      *
-     * @param targetPassword
+     * @param targetPassword 目标类型为TiDB或MySQL时，连接目标实例的密码
+     * @return ReplicationSpec
      */
     public ReplicationSpec targetPassword(String targetPassword) {
         this.targetPassword = targetPassword;
@@ -392,7 +544,8 @@ public class ReplicationSpec  implements java.io.Serializable {
     /**
      * set Kafka的Topic
      *
-     * @param kafkaTopic
+     * @param kafkaTopic Kafka的Topic
+     * @return ReplicationSpec
      */
     public ReplicationSpec kafkaTopic(String kafkaTopic) {
         this.kafkaTopic = kafkaTopic;
@@ -403,7 +556,8 @@ public class ReplicationSpec  implements java.io.Serializable {
     /**
      * set Kafka的版本
      *
-     * @param kafkaVersion
+     * @param kafkaVersion Kafka的版本
+     * @return ReplicationSpec
      */
     public ReplicationSpec kafkaVersion(String kafkaVersion) {
         this.kafkaVersion = kafkaVersion;
@@ -414,10 +568,47 @@ public class ReplicationSpec  implements java.io.Serializable {
     /**
      * set 消息的格式
      *
-     * @param kafkaProtocol
+     * @param kafkaProtocol 消息的格式
+     * @return ReplicationSpec
      */
     public ReplicationSpec kafkaProtocol(String kafkaProtocol) {
         this.kafkaProtocol = kafkaProtocol;
+        return this;
+    }
+
+
+    /**
+     * set kafka event分发器的类型
+     *
+     * @param dispatchers kafka event分发器的类型
+     * @return ReplicationSpec
+     */
+    public ReplicationSpec dispatchers(String dispatchers) {
+        this.dispatchers = dispatchers;
+        return this;
+    }
+
+
+    /**
+     * set kafka分片数
+     *
+     * @param partitionNum kafka分片数
+     * @return ReplicationSpec
+     */
+    public ReplicationSpec partitionNum(Integer partitionNum) {
+        this.partitionNum = partitionNum;
+        return this;
+    }
+
+
+    /**
+     * set 每次向 Kafka broker 发送消息的最大数据量
+     *
+     * @param maxMessageBytes 每次向 Kafka broker 发送消息的最大数据量
+     * @return ReplicationSpec
+     */
+    public ReplicationSpec maxMessageBytes(Integer maxMessageBytes) {
+        this.maxMessageBytes = maxMessageBytes;
         return this;
     }
 

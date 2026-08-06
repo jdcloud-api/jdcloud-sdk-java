@@ -145,7 +145,8 @@ public class CreateDataMigrationRequest extends JdcloudRequest implements java.i
     /**
      * set 迁移任务类型，支持以下类型（大小写不敏感）：&lt;br&gt;-FULL_IMPORT:全量数据导入
      *
-     * @param migrationType
+     * @param migrationType 迁移任务类型，支持以下类型（大小写不敏感）：&lt;br&gt;-FULL_IMPORT:全量数据导入
+     * @return CreateDataMigrationRequest
      */
     public CreateDataMigrationRequest migrationType(String migrationType) {
         this.migrationType = migrationType;
@@ -156,7 +157,8 @@ public class CreateDataMigrationRequest extends JdcloudRequest implements java.i
     /**
      * set 使用 TiDB Lightning 进行的数据迁移任务
      *
-     * @param importTask
+     * @param importTask 使用 TiDB Lightning 进行的数据迁移任务
+     * @return CreateDataMigrationRequest
      */
     public CreateDataMigrationRequest importTask(FullImportTask importTask) {
         this.importTask = importTask;
@@ -167,7 +169,8 @@ public class CreateDataMigrationRequest extends JdcloudRequest implements java.i
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return CreateDataMigrationRequest
      */
     public CreateDataMigrationRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -178,7 +181,8 @@ public class CreateDataMigrationRequest extends JdcloudRequest implements java.i
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return CreateDataMigrationRequest
      */
     public CreateDataMigrationRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

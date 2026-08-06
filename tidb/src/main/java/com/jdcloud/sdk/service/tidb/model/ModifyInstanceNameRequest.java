@@ -118,7 +118,8 @@ public class ModifyInstanceNameRequest extends JdcloudRequest implements java.io
     /**
      * set 实例名称，名称支持中文，实例名的具体规则可参见帮助中心文档
      *
-     * @param instanceName
+     * @param instanceName 实例名称，名称支持中文，实例名的具体规则可参见帮助中心文档
+     * @return ModifyInstanceNameRequest
      */
     public ModifyInstanceNameRequest instanceName(String instanceName) {
         this.instanceName = instanceName;
@@ -129,7 +130,8 @@ public class ModifyInstanceNameRequest extends JdcloudRequest implements java.io
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return ModifyInstanceNameRequest
      */
     public ModifyInstanceNameRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class ModifyInstanceNameRequest extends JdcloudRequest implements java.io
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return ModifyInstanceNameRequest
      */
     public ModifyInstanceNameRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
