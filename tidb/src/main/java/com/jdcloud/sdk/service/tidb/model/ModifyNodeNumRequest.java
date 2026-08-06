@@ -213,7 +213,8 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 调整后的tidb节点数
      *
-     * @param tidbNodeNum
+     * @param tidbNodeNum 调整后的tidb节点数
+     * @return ModifyNodeNumRequest
      */
     public ModifyNodeNumRequest tidbNodeNum(Integer tidbNodeNum) {
         this.tidbNodeNum = tidbNodeNum;
@@ -224,7 +225,8 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 调整后的tikv节点数
      *
-     * @param tikvNodeNum
+     * @param tikvNodeNum 调整后的tikv节点数
+     * @return ModifyNodeNumRequest
      */
     public ModifyNodeNumRequest tikvNodeNum(Integer tikvNodeNum) {
         this.tikvNodeNum = tikvNodeNum;
@@ -235,7 +237,8 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 调整后的pd节点数
      *
-     * @param pdNodeNum
+     * @param pdNodeNum 调整后的pd节点数
+     * @return ModifyNodeNumRequest
      */
     public ModifyNodeNumRequest pdNodeNum(Integer pdNodeNum) {
         this.pdNodeNum = pdNodeNum;
@@ -246,7 +249,8 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set TiFlash节点规格和数目
      *
-     * @param tiflashNodeSpec
+     * @param tiflashNodeSpec TiFlash节点规格和数目
+     * @return ModifyNodeNumRequest
      */
     public ModifyNodeNumRequest tiflashNodeSpec(NodeSpec tiflashNodeSpec) {
         this.tiflashNodeSpec = tiflashNodeSpec;
@@ -257,7 +261,8 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Ticdc节点规格和数目
      *
-     * @param ticdcNodeSpec
+     * @param ticdcNodeSpec Ticdc节点规格和数目
+     * @return ModifyNodeNumRequest
      */
     public ModifyNodeNumRequest ticdcNodeSpec(NodeSpec ticdcNodeSpec) {
         this.ticdcNodeSpec = ticdcNodeSpec;
@@ -268,7 +273,8 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return ModifyNodeNumRequest
      */
     public ModifyNodeNumRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -279,7 +285,8 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return ModifyNodeNumRequest
      */
     public ModifyNodeNumRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

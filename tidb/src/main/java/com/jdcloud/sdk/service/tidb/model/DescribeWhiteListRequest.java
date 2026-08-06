@@ -92,7 +92,8 @@ public class DescribeWhiteListRequest extends JdcloudRequest implements java.io.
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DescribeWhiteListRequest
      */
     public DescribeWhiteListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class DescribeWhiteListRequest extends JdcloudRequest implements java.io.
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DescribeWhiteListRequest
      */
     public DescribeWhiteListRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

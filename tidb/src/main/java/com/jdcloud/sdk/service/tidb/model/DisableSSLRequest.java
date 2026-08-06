@@ -92,7 +92,8 @@ public class DisableSSLRequest extends JdcloudRequest implements java.io.Seriali
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DisableSSLRequest
      */
     public DisableSSLRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class DisableSSLRequest extends JdcloudRequest implements java.io.Seriali
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DisableSSLRequest
      */
     public DisableSSLRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

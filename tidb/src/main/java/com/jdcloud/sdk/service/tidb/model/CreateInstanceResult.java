@@ -87,7 +87,8 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
     /**
      * set instanceId
      *
-     * @param instanceId
+     * @param instanceId 
+     * @return CreateInstanceResult
      */
     public CreateInstanceResult instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -98,7 +99,8 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
     /**
      * set orderId
      *
-     * @param orderId
+     * @param orderId 
+     * @return CreateInstanceResult
      */
     public CreateInstanceResult orderId(String orderId) {
         this.orderId = orderId;

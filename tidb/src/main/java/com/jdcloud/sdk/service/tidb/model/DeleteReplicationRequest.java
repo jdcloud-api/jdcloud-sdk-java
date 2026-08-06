@@ -118,7 +118,8 @@ public class DeleteReplicationRequest extends JdcloudRequest implements java.io.
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DeleteReplicationRequest
      */
     public DeleteReplicationRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -129,7 +130,8 @@ public class DeleteReplicationRequest extends JdcloudRequest implements java.io.
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DeleteReplicationRequest
      */
     public DeleteReplicationRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -140,7 +142,8 @@ public class DeleteReplicationRequest extends JdcloudRequest implements java.io.
     /**
      * set 复制任务ID
      *
-     * @param taskId
+     * @param taskId 复制任务ID
+     * @return DeleteReplicationRequest
      */
     public DeleteReplicationRequest taskId(String taskId) {
         this.taskId = taskId;

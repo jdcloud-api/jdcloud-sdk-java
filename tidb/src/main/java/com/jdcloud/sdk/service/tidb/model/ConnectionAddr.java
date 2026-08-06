@@ -53,6 +53,11 @@ public class ConnectionAddr  implements java.io.Serializable {
     private String intranetAddr;
 
     /**
+     * 管理地址，域名或IP
+     */
+    private String manageAddr;
+
+    /**
      * 端口
      */
     private String port;
@@ -127,6 +132,25 @@ public class ConnectionAddr  implements java.io.Serializable {
 
 
     /**
+     * get 管理地址，域名或IP
+     *
+     * @return
+     */
+    public String getManageAddr() {
+        return manageAddr;
+    }
+
+    /**
+     * set 管理地址，域名或IP
+     *
+     * @param manageAddr
+     */
+    public void setManageAddr(String manageAddr) {
+        this.manageAddr = manageAddr;
+    }
+
+
+    /**
      * get 端口
      *
      * @return
@@ -154,7 +178,13 @@ public class ConnectionAddr  implements java.io.Serializable {
 - dms: 使用DMS客户端，访问数据库
 
      *
-     * @param addrType
+     * @param addrType 连接信息的类型，目前支持以下类型：
+- database: 通常数据访问，读写等
+- pd: 数据迁移时连接PD节点
+- monitor: 查看监控数据
+- dms: 使用DMS客户端，访问数据库
+
+     * @return ConnectionAddr
      */
     public ConnectionAddr addrType(String addrType) {
         this.addrType = addrType;
@@ -165,7 +195,8 @@ public class ConnectionAddr  implements java.io.Serializable {
     /**
      * set 公网地址，域名或IP
      *
-     * @param internetAddr
+     * @param internetAddr 公网地址，域名或IP
+     * @return ConnectionAddr
      */
     public ConnectionAddr internetAddr(String internetAddr) {
         this.internetAddr = internetAddr;
@@ -176,7 +207,8 @@ public class ConnectionAddr  implements java.io.Serializable {
     /**
      * set VPC内网地址，域名或IP
      *
-     * @param intranetAddr
+     * @param intranetAddr VPC内网地址，域名或IP
+     * @return ConnectionAddr
      */
     public ConnectionAddr intranetAddr(String intranetAddr) {
         this.intranetAddr = intranetAddr;
@@ -185,9 +217,22 @@ public class ConnectionAddr  implements java.io.Serializable {
 
 
     /**
+     * set 管理地址，域名或IP
+     *
+     * @param manageAddr 管理地址，域名或IP
+     * @return ConnectionAddr
+     */
+    public ConnectionAddr manageAddr(String manageAddr) {
+        this.manageAddr = manageAddr;
+        return this;
+    }
+
+
+    /**
      * set 端口
      *
-     * @param port
+     * @param port 端口
+     * @return ConnectionAddr
      */
     public ConnectionAddr port(String port) {
         this.port = port;

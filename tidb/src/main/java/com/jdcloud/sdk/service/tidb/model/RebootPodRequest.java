@@ -44,6 +44,16 @@ public class RebootPodRequest extends JdcloudRequest implements java.io.Serializ
     
     private List<String> nodeType;
     /**
+     * 版本升级的时间点,时间格式yyyy-mm-dd hh:mm:ss。不传或者传入空表示当前时间
+     */
+    private String timing;
+
+    /**
+     * 是否取消重启任务, 为 true 则取消该实例的重启任务
+     */
+    private Boolean cancel;
+
+    /**
      * 地域代码
      * Required:true
      */
@@ -75,6 +85,44 @@ public class RebootPodRequest extends JdcloudRequest implements java.io.Serializ
     */
     public void setNodeType(List<String> nodeType) {
         this.nodeType = nodeType;
+    }
+
+
+    /**
+     * get 版本升级的时间点,时间格式yyyy-mm-dd hh:mm:ss。不传或者传入空表示当前时间
+     *
+     * @return
+     */
+    public String getTiming() {
+        return timing;
+    }
+
+    /**
+     * set 版本升级的时间点,时间格式yyyy-mm-dd hh:mm:ss。不传或者传入空表示当前时间
+     *
+     * @param timing
+     */
+    public void setTiming(String timing) {
+        this.timing = timing;
+    }
+
+
+    /**
+     * get 是否取消重启任务, 为 true 则取消该实例的重启任务
+     *
+     * @return
+     */
+    public Boolean getCancel() {
+        return cancel;
+    }
+
+    /**
+     * set 是否取消重启任务, 为 true 则取消该实例的重启任务
+     *
+     * @param cancel
+     */
+    public void setCancel(Boolean cancel) {
+        this.cancel = cancel;
     }
 
 
@@ -120,7 +168,8 @@ public class RebootPodRequest extends JdcloudRequest implements java.io.Serializ
     /**
     * set 重启指定类型的pod,支持Tikv,TiDB,PD,TiFlash
     *
-    * @param nodeType
+    * @param nodeType 重启指定类型的pod,支持Tikv,TiDB,PD,TiFlash
+    * @return RebootPodRequest
     */
     public RebootPodRequest nodeType(List<String> nodeType) {
         this.nodeType = nodeType;
@@ -129,9 +178,34 @@ public class RebootPodRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
+     * set 版本升级的时间点,时间格式yyyy-mm-dd hh:mm:ss。不传或者传入空表示当前时间
+     *
+     * @param timing 版本升级的时间点,时间格式yyyy-mm-dd hh:mm:ss。不传或者传入空表示当前时间
+     * @return RebootPodRequest
+     */
+    public RebootPodRequest timing(String timing) {
+        this.timing = timing;
+        return this;
+    }
+
+
+    /**
+     * set 是否取消重启任务, 为 true 则取消该实例的重启任务
+     *
+     * @param cancel 是否取消重启任务, 为 true 则取消该实例的重启任务
+     * @return RebootPodRequest
+     */
+    public RebootPodRequest cancel(Boolean cancel) {
+        this.cancel = cancel;
+        return this;
+    }
+
+
+    /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return RebootPodRequest
      */
     public RebootPodRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -142,7 +216,8 @@ public class RebootPodRequest extends JdcloudRequest implements java.io.Serializ
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return RebootPodRequest
      */
     public RebootPodRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

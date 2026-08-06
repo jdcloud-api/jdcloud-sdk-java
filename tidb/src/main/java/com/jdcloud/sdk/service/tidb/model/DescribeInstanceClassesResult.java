@@ -184,7 +184,8 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
     /**
      * set tidbFlavors
      *
-     * @param tidbFlavors
+     * @param tidbFlavors 
+     * @return DescribeInstanceClassesResult
      */
     public DescribeInstanceClassesResult tidbFlavors(NodeFlavor tidbFlavors) {
         this.tidbFlavors = tidbFlavors;
@@ -195,7 +196,8 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
     /**
      * set tikvFlavors
      *
-     * @param tikvFlavors
+     * @param tikvFlavors 
+     * @return DescribeInstanceClassesResult
      */
     public DescribeInstanceClassesResult tikvFlavors(NodeFlavor tikvFlavors) {
         this.tikvFlavors = tikvFlavors;
@@ -206,7 +208,8 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
     /**
      * set pdFlavors
      *
-     * @param pdFlavors
+     * @param pdFlavors 
+     * @return DescribeInstanceClassesResult
      */
     public DescribeInstanceClassesResult pdFlavors(NodeFlavor pdFlavors) {
         this.pdFlavors = pdFlavors;
@@ -217,7 +220,8 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
     /**
      * set monitorFlavors
      *
-     * @param monitorFlavors
+     * @param monitorFlavors 
+     * @return DescribeInstanceClassesResult
      */
     public DescribeInstanceClassesResult monitorFlavors(NodeFlavor monitorFlavors) {
         this.monitorFlavors = monitorFlavors;
@@ -228,7 +232,8 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
     /**
      * set tiflashFlavors
      *
-     * @param tiflashFlavors
+     * @param tiflashFlavors 
+     * @return DescribeInstanceClassesResult
      */
     public DescribeInstanceClassesResult tiflashFlavors(NodeFlavor tiflashFlavors) {
         this.tiflashFlavors = tiflashFlavors;
@@ -239,7 +244,8 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
     /**
      * set ticdcFlavors
      *
-     * @param ticdcFlavors
+     * @param ticdcFlavors 
+     * @return DescribeInstanceClassesResult
      */
     public DescribeInstanceClassesResult ticdcFlavors(NodeFlavor ticdcFlavors) {
         this.ticdcFlavors = ticdcFlavors;

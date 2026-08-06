@@ -207,7 +207,8 @@ nodeStatus, 支持operator选项：eq ne
     /**
      * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
      *
-     * @param pageNumber
+     * @param pageNumber 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     * @return DescribeNodesRequest
      */
     public DescribeNodesRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -218,7 +219,8 @@ nodeStatus, 支持operator选项：eq ne
     /**
      * set 每页显示的数据条数，默认为50，取值范围：[50,100]，用于查询列表的接口
      *
-     * @param pageSize
+     * @param pageSize 每页显示的数据条数，默认为50，取值范围：[50,100]，用于查询列表的接口
+     * @return DescribeNodesRequest
      */
     public DescribeNodesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -232,7 +234,11 @@ memeryUtil - 内存使用率
 diskUsage - 磁盘使用率
 
     *
-    * @param sorts
+    * @param sorts cpuUtil - CPU使用率
+memeryUtil - 内存使用率
+diskUsage - 磁盘使用率
+
+    * @return DescribeNodesRequest
     */
     public DescribeNodesRequest sorts(List<Sort> sorts) {
         this.sorts = sorts;
@@ -245,7 +251,10 @@ diskUsage - 磁盘使用率
 nodeStatus, 支持operator选项：eq ne
 
     *
-    * @param filters
+    * @param filters nodeType, 支持operator选项：eq,ne
+nodeStatus, 支持operator选项：eq ne
+
+    * @return DescribeNodesRequest
     */
     public DescribeNodesRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -256,7 +265,8 @@ nodeStatus, 支持operator选项：eq ne
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DescribeNodesRequest
      */
     public DescribeNodesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -267,7 +277,8 @@ nodeStatus, 支持operator选项：eq ne
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DescribeNodesRequest
      */
     public DescribeNodesRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

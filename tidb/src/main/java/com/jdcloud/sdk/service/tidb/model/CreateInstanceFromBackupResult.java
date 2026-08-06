@@ -87,7 +87,8 @@ public class CreateInstanceFromBackupResult extends JdcloudResult implements jav
     /**
      * set instanceId
      *
-     * @param instanceId
+     * @param instanceId 
+     * @return CreateInstanceFromBackupResult
      */
     public CreateInstanceFromBackupResult instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -98,7 +99,8 @@ public class CreateInstanceFromBackupResult extends JdcloudResult implements jav
     /**
      * set orderId
      *
-     * @param orderId
+     * @param orderId 
+     * @return CreateInstanceFromBackupResult
      */
     public CreateInstanceFromBackupResult orderId(String orderId) {
         this.orderId = orderId;

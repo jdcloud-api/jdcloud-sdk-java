@@ -42,6 +42,11 @@ public class AddWhiteListGroupRequest extends JdcloudRequest implements java.io.
     private String name;
 
     /**
+     * IP或IP段,不同的IP/IP段之间用英文逗号分隔,例如0.0.0.0/0,192.168.0.10
+     */
+    private String ips;
+
+    /**
      * 地域代码
      * Required:true
      */
@@ -73,6 +78,25 @@ public class AddWhiteListGroupRequest extends JdcloudRequest implements java.io.
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+
+    /**
+     * get IP或IP段,不同的IP/IP段之间用英文逗号分隔,例如0.0.0.0/0,192.168.0.10
+     *
+     * @return
+     */
+    public String getIps() {
+        return ips;
+    }
+
+    /**
+     * set IP或IP段,不同的IP/IP段之间用英文逗号分隔,例如0.0.0.0/0,192.168.0.10
+     *
+     * @param ips
+     */
+    public void setIps(String ips) {
+        this.ips = ips;
     }
 
 
@@ -118,7 +142,8 @@ public class AddWhiteListGroupRequest extends JdcloudRequest implements java.io.
     /**
      * set 白名单分组名
      *
-     * @param name
+     * @param name 白名单分组名
+     * @return AddWhiteListGroupRequest
      */
     public AddWhiteListGroupRequest name(String name) {
         this.name = name;
@@ -127,9 +152,22 @@ public class AddWhiteListGroupRequest extends JdcloudRequest implements java.io.
 
 
     /**
+     * set IP或IP段,不同的IP/IP段之间用英文逗号分隔,例如0.0.0.0/0,192.168.0.10
+     *
+     * @param ips IP或IP段,不同的IP/IP段之间用英文逗号分隔,例如0.0.0.0/0,192.168.0.10
+     * @return AddWhiteListGroupRequest
+     */
+    public AddWhiteListGroupRequest ips(String ips) {
+        this.ips = ips;
+        return this;
+    }
+
+
+    /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return AddWhiteListGroupRequest
      */
     public AddWhiteListGroupRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +178,8 @@ public class AddWhiteListGroupRequest extends JdcloudRequest implements java.io.
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return AddWhiteListGroupRequest
      */
     public AddWhiteListGroupRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

@@ -92,7 +92,8 @@ public class DescribeBackupPolicyRequest extends JdcloudRequest implements java.
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DescribeBackupPolicyRequest
      */
     public DescribeBackupPolicyRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class DescribeBackupPolicyRequest extends JdcloudRequest implements java.
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DescribeBackupPolicyRequest
      */
     public DescribeBackupPolicyRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

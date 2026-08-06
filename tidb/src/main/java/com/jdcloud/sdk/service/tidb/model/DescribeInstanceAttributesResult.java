@@ -64,7 +64,8 @@ public class DescribeInstanceAttributesResult extends JdcloudResult implements j
     /**
      * set tidbInstanceAttributes
      *
-     * @param tidbInstanceAttributes
+     * @param tidbInstanceAttributes 
+     * @return DescribeInstanceAttributesResult
      */
     public DescribeInstanceAttributesResult tidbInstanceAttributes(TidbInstanceAttribute tidbInstanceAttributes) {
         this.tidbInstanceAttributes = tidbInstanceAttributes;

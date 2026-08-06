@@ -217,7 +217,8 @@ public class NodeSpec  implements java.io.Serializable {
     /**
      * set 节点类型：tidb、tikv、pd、monitor
      *
-     * @param nodeType
+     * @param nodeType 节点类型：tidb、tikv、pd、monitor
+     * @return NodeSpec
      */
     public NodeSpec nodeType(String nodeType) {
         this.nodeType = nodeType;
@@ -228,7 +229,8 @@ public class NodeSpec  implements java.io.Serializable {
     /**
      * set 节点数
      *
-     * @param nodeNum
+     * @param nodeNum 节点数
+     * @return NodeSpec
      */
     public NodeSpec nodeNum(Integer nodeNum) {
         this.nodeNum = nodeNum;
@@ -239,7 +241,8 @@ public class NodeSpec  implements java.io.Serializable {
     /**
      * set 节点的规格代码
      *
-     * @param nodeClass
+     * @param nodeClass 节点的规格代码
+     * @return NodeSpec
      */
     public NodeSpec nodeClass(String nodeClass) {
         this.nodeClass = nodeClass;
@@ -250,7 +253,8 @@ public class NodeSpec  implements java.io.Serializable {
     /**
      * set cpu核数
      *
-     * @param cpu
+     * @param cpu cpu核数
+     * @return NodeSpec
      */
     public NodeSpec cpu(Integer cpu) {
         this.cpu = cpu;
@@ -261,7 +265,8 @@ public class NodeSpec  implements java.io.Serializable {
     /**
      * set 内存大小，单位GB
      *
-     * @param memoryGB
+     * @param memoryGB 内存大小，单位GB
+     * @return NodeSpec
      */
     public NodeSpec memoryGB(Integer memoryGB) {
         this.memoryGB = memoryGB;
@@ -272,7 +277,8 @@ public class NodeSpec  implements java.io.Serializable {
     /**
      * set 存储类型
      *
-     * @param storageType
+     * @param storageType 存储类型
+     * @return NodeSpec
      */
     public NodeSpec storageType(String storageType) {
         this.storageType = storageType;
@@ -283,7 +289,8 @@ public class NodeSpec  implements java.io.Serializable {
     /**
      * set 存储空间，单位GB
      *
-     * @param storageGB
+     * @param storageGB 存储空间，单位GB
+     * @return NodeSpec
      */
     public NodeSpec storageGB(Integer storageGB) {
         this.storageGB = storageGB;

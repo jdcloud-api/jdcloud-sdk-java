@@ -119,7 +119,8 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 实例ID，唯一标识一个实例
      *
-     * @param instanceId
+     * @param instanceId 实例ID，唯一标识一个实例
+     * @return CreateBackupRequest
      */
     public CreateBackupRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -130,7 +131,8 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 备份创建信息
      *
-     * @param backupSpec
+     * @param backupSpec 备份创建信息
+     * @return CreateBackupRequest
      */
     public CreateBackupRequest backupSpec(BackupSpec backupSpec) {
         this.backupSpec = backupSpec;
@@ -141,7 +143,8 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return CreateBackupRequest
      */
     public CreateBackupRequest regionId(String regionId) {
         this.regionId = regionId;

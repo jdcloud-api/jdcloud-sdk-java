@@ -63,7 +63,8 @@ public class ModifyNodeNumResult extends JdcloudResult implements java.io.Serial
     /**
      * set orderId
      *
-     * @param orderId
+     * @param orderId 
+     * @return ModifyNodeNumResult
      */
     public ModifyNodeNumResult orderId(String orderId) {
         this.orderId = orderId;

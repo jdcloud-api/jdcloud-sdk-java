@@ -42,6 +42,11 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
     private String accountPassword;
 
     /**
+     * 账号Host, 默认为%
+     */
+    private String accountHost;
+
+    /**
      * 地域代码
      * Required:true
      */
@@ -80,6 +85,25 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
      */
     public void setAccountPassword(String accountPassword) {
         this.accountPassword = accountPassword;
+    }
+
+
+    /**
+     * get 账号Host, 默认为%
+     *
+     * @return
+     */
+    public String getAccountHost() {
+        return accountHost;
+    }
+
+    /**
+     * set 账号Host, 默认为%
+     *
+     * @param accountHost
+     */
+    public void setAccountHost(String accountHost) {
+        this.accountHost = accountHost;
     }
 
 
@@ -144,7 +168,8 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 新密码
      *
-     * @param accountPassword
+     * @param accountPassword 新密码
+     * @return ResetPasswordRequest
      */
     public ResetPasswordRequest accountPassword(String accountPassword) {
         this.accountPassword = accountPassword;
@@ -153,9 +178,22 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * set 账号Host, 默认为%
+     *
+     * @param accountHost 账号Host, 默认为%
+     * @return ResetPasswordRequest
+     */
+    public ResetPasswordRequest accountHost(String accountHost) {
+        this.accountHost = accountHost;
+        return this;
+    }
+
+
+    /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return ResetPasswordRequest
      */
     public ResetPasswordRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -166,7 +204,8 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return ResetPasswordRequest
      */
     public ResetPasswordRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -177,7 +216,8 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 账号名
      *
-     * @param accountName
+     * @param accountName 账号名
+     * @return ResetPasswordRequest
      */
     public ResetPasswordRequest accountName(String accountName) {
         this.accountName = accountName;

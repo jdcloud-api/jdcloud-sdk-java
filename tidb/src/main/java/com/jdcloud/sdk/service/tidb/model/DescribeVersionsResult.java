@@ -65,7 +65,8 @@ public class DescribeVersionsResult extends JdcloudResult implements java.io.Ser
     /**
     * set versions
     *
-    * @param versions
+    * @param versions 
+    * @return DescribeVersionsResult
     */
     public DescribeVersionsResult versions(List<String> versions) {
         this.versions = versions;

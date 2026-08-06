@@ -66,7 +66,8 @@ public class DescribeVersionsRequest extends JdcloudRequest implements java.io.S
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DescribeVersionsRequest
      */
     public DescribeVersionsRequest regionId(String regionId) {
         this.regionId = regionId;

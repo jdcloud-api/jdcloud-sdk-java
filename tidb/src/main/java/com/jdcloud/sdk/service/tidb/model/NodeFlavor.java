@@ -45,6 +45,11 @@ public class NodeFlavor  implements java.io.Serializable {
     private Integer minNum;
 
     /**
+     * 该节点的默认组(前端显示时默认显示)
+     */
+    private DefaultGroup defaultGroup;
+
+    /**
      * flavors
      */
     
@@ -90,6 +95,25 @@ public class NodeFlavor  implements java.io.Serializable {
 
 
     /**
+     * get 该节点的默认组(前端显示时默认显示)
+     *
+     * @return
+     */
+    public DefaultGroup getDefaultGroup() {
+        return defaultGroup;
+    }
+
+    /**
+     * set 该节点的默认组(前端显示时默认显示)
+     *
+     * @param defaultGroup
+     */
+    public void setDefaultGroup(DefaultGroup defaultGroup) {
+        this.defaultGroup = defaultGroup;
+    }
+
+
+    /**
     * get flavors
     *
     * @return
@@ -112,7 +136,8 @@ public class NodeFlavor  implements java.io.Serializable {
     /**
      * set 允许的最大节点数
      *
-     * @param maxNum
+     * @param maxNum 允许的最大节点数
+     * @return NodeFlavor
      */
     public NodeFlavor maxNum(Integer maxNum) {
         this.maxNum = maxNum;
@@ -123,7 +148,8 @@ public class NodeFlavor  implements java.io.Serializable {
     /**
      * set 允许的最小节点数
      *
-     * @param minNum
+     * @param minNum 允许的最小节点数
+     * @return NodeFlavor
      */
     public NodeFlavor minNum(Integer minNum) {
         this.minNum = minNum;
@@ -132,9 +158,22 @@ public class NodeFlavor  implements java.io.Serializable {
 
 
     /**
+     * set 该节点的默认组(前端显示时默认显示)
+     *
+     * @param defaultGroup 该节点的默认组(前端显示时默认显示)
+     * @return NodeFlavor
+     */
+    public NodeFlavor defaultGroup(DefaultGroup defaultGroup) {
+        this.defaultGroup = defaultGroup;
+        return this;
+    }
+
+
+    /**
     * set flavors
     *
-    * @param flavors
+    * @param flavors 
+    * @return NodeFlavor
     */
     public NodeFlavor flavors(List<Flavor> flavors) {
         this.flavors = flavors;

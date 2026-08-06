@@ -42,11 +42,21 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     private String accountName;
 
     /**
+     * 账号Host, 默认为%
+     */
+    private String accountHost;
+
+    /**
      * 密码
      * Required:true
      */
     @Required
     private String accountPassword;
+
+    /**
+     * 为账号绑定资源组 (该字段仅支持v7及其以上实例)
+     */
+    private String bindResourceGroup;
 
     /**
      * 地域代码
@@ -84,6 +94,25 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * get 账号Host, 默认为%
+     *
+     * @return
+     */
+    public String getAccountHost() {
+        return accountHost;
+    }
+
+    /**
+     * set 账号Host, 默认为%
+     *
+     * @param accountHost
+     */
+    public void setAccountHost(String accountHost) {
+        this.accountHost = accountHost;
+    }
+
+
+    /**
      * get 密码
      *
      * @return
@@ -99,6 +128,25 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
      */
     public void setAccountPassword(String accountPassword) {
         this.accountPassword = accountPassword;
+    }
+
+
+    /**
+     * get 为账号绑定资源组 (该字段仅支持v7及其以上实例)
+     *
+     * @return
+     */
+    public String getBindResourceGroup() {
+        return bindResourceGroup;
+    }
+
+    /**
+     * set 为账号绑定资源组 (该字段仅支持v7及其以上实例)
+     *
+     * @param bindResourceGroup
+     */
+    public void setBindResourceGroup(String bindResourceGroup) {
+        this.bindResourceGroup = bindResourceGroup;
     }
 
 
@@ -144,7 +192,8 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 账号名
      *
-     * @param accountName
+     * @param accountName 账号名
+     * @return CreateAccountRequest
      */
     public CreateAccountRequest accountName(String accountName) {
         this.accountName = accountName;
@@ -153,9 +202,22 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * set 账号Host, 默认为%
+     *
+     * @param accountHost 账号Host, 默认为%
+     * @return CreateAccountRequest
+     */
+    public CreateAccountRequest accountHost(String accountHost) {
+        this.accountHost = accountHost;
+        return this;
+    }
+
+
+    /**
      * set 密码
      *
-     * @param accountPassword
+     * @param accountPassword 密码
+     * @return CreateAccountRequest
      */
     public CreateAccountRequest accountPassword(String accountPassword) {
         this.accountPassword = accountPassword;
@@ -164,9 +226,22 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * set 为账号绑定资源组 (该字段仅支持v7及其以上实例)
+     *
+     * @param bindResourceGroup 为账号绑定资源组 (该字段仅支持v7及其以上实例)
+     * @return CreateAccountRequest
+     */
+    public CreateAccountRequest bindResourceGroup(String bindResourceGroup) {
+        this.bindResourceGroup = bindResourceGroup;
+        return this;
+    }
+
+
+    /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return CreateAccountRequest
      */
     public CreateAccountRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -177,7 +252,8 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return CreateAccountRequest
      */
     public CreateAccountRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

@@ -65,7 +65,8 @@ public class FilterGroup  implements java.io.Serializable {
     /**
     * set filters
     *
-    * @param filters
+    * @param filters 
+    * @return FilterGroup
     */
     public FilterGroup filters(List<Filter> filters) {
         this.filters = filters;

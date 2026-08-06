@@ -66,7 +66,8 @@ public class DescribeParametersResult extends JdcloudResult implements java.io.S
     /**
     * set parameters
     *
-    * @param parameters
+    * @param parameters 
+    * @return DescribeParametersResult
     */
     public DescribeParametersResult parameters(List<DescribeParam> parameters) {
         this.parameters = parameters;

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看当前实例下的账号信息。
+ * 查看当前实例下的账号信息，老接口。
  */
 public class DescribeAccountsResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,7 +39,12 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
     private String accountName;
 
     /**
-     * 账号状态(&quot;BUILDING&quot;,&quot;RUNNING&quot;,&quot;RESETING&quot;)
+     * 账号Host
+     */
+    private String accountHost;
+
+    /**
+     * 账号状态(&quot;BUILDING&quot;,&quot;RUNNING&quot;,&quot;RESETING&quot;,&quot;DELETING&quot;,&quot;GRANTING&quot;)
      */
     private String accountStatus;
 
@@ -70,7 +75,26 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * get 账号状态(&quot;BUILDING&quot;,&quot;RUNNING&quot;,&quot;RESETING&quot;)
+     * get 账号Host
+     *
+     * @return
+     */
+    public String getAccountHost() {
+        return accountHost;
+    }
+
+    /**
+     * set 账号Host
+     *
+     * @param accountHost
+     */
+    public void setAccountHost(String accountHost) {
+        this.accountHost = accountHost;
+    }
+
+
+    /**
+     * get 账号状态(&quot;BUILDING&quot;,&quot;RUNNING&quot;,&quot;RESETING&quot;,&quot;DELETING&quot;,&quot;GRANTING&quot;)
      *
      * @return
      */
@@ -79,7 +103,7 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 账号状态(&quot;BUILDING&quot;,&quot;RUNNING&quot;,&quot;RESETING&quot;)
+     * set 账号状态(&quot;BUILDING&quot;,&quot;RUNNING&quot;,&quot;RESETING&quot;,&quot;DELETING&quot;,&quot;GRANTING&quot;)
      *
      * @param accountStatus
      */
@@ -111,7 +135,8 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
     /**
      * set 账号名称
      *
-     * @param accountName
+     * @param accountName 账号名称
+     * @return DescribeAccountsResult
      */
     public DescribeAccountsResult accountName(String accountName) {
         this.accountName = accountName;
@@ -120,9 +145,22 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * set 账号状态(&quot;BUILDING&quot;,&quot;RUNNING&quot;,&quot;RESETING&quot;)
+     * set 账号Host
      *
-     * @param accountStatus
+     * @param accountHost 账号Host
+     * @return DescribeAccountsResult
+     */
+    public DescribeAccountsResult accountHost(String accountHost) {
+        this.accountHost = accountHost;
+        return this;
+    }
+
+
+    /**
+     * set 账号状态(&quot;BUILDING&quot;,&quot;RUNNING&quot;,&quot;RESETING&quot;,&quot;DELETING&quot;,&quot;GRANTING&quot;)
+     *
+     * @param accountStatus 账号状态(&quot;BUILDING&quot;,&quot;RUNNING&quot;,&quot;RESETING&quot;,&quot;DELETING&quot;,&quot;GRANTING&quot;)
+     * @return DescribeAccountsResult
      */
     public DescribeAccountsResult accountStatus(String accountStatus) {
         this.accountStatus = accountStatus;
@@ -133,7 +171,8 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
     /**
      * set 创建时间，格式为：YYYY-MM-DD HH:mm:ss
      *
-     * @param createTime
+     * @param createTime 创建时间，格式为：YYYY-MM-DD HH:mm:ss
+     * @return DescribeAccountsResult
      */
     public DescribeAccountsResult createTime(String createTime) {
         this.createTime = createTime;

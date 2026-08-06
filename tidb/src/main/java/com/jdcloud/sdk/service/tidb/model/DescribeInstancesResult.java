@@ -90,7 +90,8 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     /**
     * set instances
     *
-    * @param instances
+    * @param instances 
+    * @return DescribeInstancesResult
     */
     public DescribeInstancesResult instances(List<Instance> instances) {
         this.instances = instances;
@@ -101,7 +102,8 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     /**
      * set totalCount
      *
-     * @param totalCount
+     * @param totalCount 
+     * @return DescribeInstancesResult
      */
     public DescribeInstancesResult totalCount(Number totalCount) {
         this.totalCount = totalCount;

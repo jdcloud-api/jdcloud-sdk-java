@@ -92,7 +92,8 @@ public class DescribeSSLRequest extends JdcloudRequest implements java.io.Serial
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DescribeSSLRequest
      */
     public DescribeSSLRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class DescribeSSLRequest extends JdcloudRequest implements java.io.Serial
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DescribeSSLRequest
      */
     public DescribeSSLRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

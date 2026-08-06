@@ -90,7 +90,8 @@ public class DescribeReplicationsResult extends JdcloudResult implements java.io
     /**
      * set 总记录数
      *
-     * @param totalCount
+     * @param totalCount 总记录数
+     * @return DescribeReplicationsResult
      */
     public DescribeReplicationsResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
@@ -101,7 +102,8 @@ public class DescribeReplicationsResult extends JdcloudResult implements java.io
     /**
     * set 要复制的对象
     *
-    * @param replications
+    * @param replications 要复制的对象
+    * @return DescribeReplicationsResult
     */
     public DescribeReplicationsResult replications(List<ReplicationTask> replications) {
         this.replications = replications;

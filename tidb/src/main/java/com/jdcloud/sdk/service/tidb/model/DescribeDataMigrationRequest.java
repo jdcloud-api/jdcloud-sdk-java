@@ -116,7 +116,8 @@ public class DescribeDataMigrationRequest extends JdcloudRequest implements java
     /**
      * set 查询迁移任务的起始时间，结束时间为当前时间。按任务开始时间查询，默认查询7天（包含当天）
      *
-     * @param queryStartTime
+     * @param queryStartTime 查询迁移任务的起始时间，结束时间为当前时间。按任务开始时间查询，默认查询7天（包含当天）
+     * @return DescribeDataMigrationRequest
      */
     public DescribeDataMigrationRequest queryStartTime(String queryStartTime) {
         this.queryStartTime = queryStartTime;
@@ -127,7 +128,8 @@ public class DescribeDataMigrationRequest extends JdcloudRequest implements java
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DescribeDataMigrationRequest
      */
     public DescribeDataMigrationRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class DescribeDataMigrationRequest extends JdcloudRequest implements java
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DescribeDataMigrationRequest
      */
     public DescribeDataMigrationRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

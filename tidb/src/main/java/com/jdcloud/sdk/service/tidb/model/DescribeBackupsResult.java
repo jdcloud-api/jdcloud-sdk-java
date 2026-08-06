@@ -46,6 +46,16 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
      */
     private Integer totalCount;
 
+    /**
+     * 是否可以创建手动备份
+     */
+    private Boolean canCreateBackup;
+
+    /**
+     * 该实例最多可拥有的手动备份数量
+     */
+    private Integer backupMaxCount;
+
 
 
     /**
@@ -86,11 +96,50 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
     }
 
 
+    /**
+     * get 是否可以创建手动备份
+     *
+     * @return
+     */
+    public Boolean getCanCreateBackup() {
+        return canCreateBackup;
+    }
+
+    /**
+     * set 是否可以创建手动备份
+     *
+     * @param canCreateBackup
+     */
+    public void setCanCreateBackup(Boolean canCreateBackup) {
+        this.canCreateBackup = canCreateBackup;
+    }
+
+
+    /**
+     * get 该实例最多可拥有的手动备份数量
+     *
+     * @return
+     */
+    public Integer getBackupMaxCount() {
+        return backupMaxCount;
+    }
+
+    /**
+     * set 该实例最多可拥有的手动备份数量
+     *
+     * @param backupMaxCount
+     */
+    public void setBackupMaxCount(Integer backupMaxCount) {
+        this.backupMaxCount = backupMaxCount;
+    }
+
+
 
     /**
     * set backups
     *
-    * @param backups
+    * @param backups 
+    * @return DescribeBackupsResult
     */
     public DescribeBackupsResult backups(List<Backup> backups) {
         this.backups = backups;
@@ -101,10 +150,35 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
     /**
      * set 总记录数
      *
-     * @param totalCount
+     * @param totalCount 总记录数
+     * @return DescribeBackupsResult
      */
     public DescribeBackupsResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
+        return this;
+    }
+
+
+    /**
+     * set 是否可以创建手动备份
+     *
+     * @param canCreateBackup 是否可以创建手动备份
+     * @return DescribeBackupsResult
+     */
+    public DescribeBackupsResult canCreateBackup(Boolean canCreateBackup) {
+        this.canCreateBackup = canCreateBackup;
+        return this;
+    }
+
+
+    /**
+     * set 该实例最多可拥有的手动备份数量
+     *
+     * @param backupMaxCount 该实例最多可拥有的手动备份数量
+     * @return DescribeBackupsResult
+     */
+    public DescribeBackupsResult backupMaxCount(Integer backupMaxCount) {
+        this.backupMaxCount = backupMaxCount;
         return this;
     }
 

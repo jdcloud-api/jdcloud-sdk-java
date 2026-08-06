@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.tidb.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -40,6 +42,11 @@ public class BackupSpec  implements java.io.Serializable {
     @Required
     private String backupName;
 
+    /**
+     * 需要备份的库列表
+     */
+    
+    private List<String> dbName;
 
 
     /**
@@ -61,11 +68,31 @@ public class BackupSpec  implements java.io.Serializable {
     }
 
 
+    /**
+    * get 需要备份的库列表
+    *
+    * @return
+    */
+    public List<String> getDbName() {
+        return dbName;
+    }
+
+    /**
+    * set 需要备份的库列表
+    *
+    * @param dbName
+    */
+    public void setDbName(List<String> dbName) {
+        this.dbName = dbName;
+    }
+
+
 
     /**
      * set 备份名称，最长支持64个英文字符或等长的中文字符
      *
-     * @param backupName
+     * @param backupName 备份名称，最长支持64个英文字符或等长的中文字符
+     * @return BackupSpec
      */
     public BackupSpec backupName(String backupName) {
         this.backupName = backupName;
@@ -73,4 +100,28 @@ public class BackupSpec  implements java.io.Serializable {
     }
 
 
+    /**
+    * set 需要备份的库列表
+    *
+    * @param dbName 需要备份的库列表
+    * @return BackupSpec
+    */
+    public BackupSpec dbName(List<String> dbName) {
+        this.dbName = dbName;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 需要备份的库列表
+     *
+     * @param dbName
+     */
+    public void addDbName(String dbName) {
+        if (this.dbName == null) {
+            this.dbName = new ArrayList<>();
+        }
+        this.dbName.add(dbName);
+    }
 }

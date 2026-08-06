@@ -110,7 +110,8 @@ public class ModifyParam  implements java.io.Serializable {
     /**
      * set 参数名称
      *
-     * @param name
+     * @param name 参数名称
+     * @return ModifyParam
      */
     public ModifyParam name(String name) {
         this.name = name;
@@ -121,7 +122,8 @@ public class ModifyParam  implements java.io.Serializable {
     /**
      * set 参数修改值
      *
-     * @param value
+     * @param value 参数修改值
+     * @return ModifyParam
      */
     public ModifyParam value(String value) {
         this.value = value;
@@ -132,7 +134,8 @@ public class ModifyParam  implements java.io.Serializable {
     /**
      * set 参数的节点类型，包括TiKV,TiDB,PD,TiFlash
      *
-     * @param nodeType
+     * @param nodeType 参数的节点类型，包括TiKV,TiDB,PD,TiFlash
+     * @return ModifyParam
      */
     public ModifyParam nodeType(String nodeType) {
         this.nodeType = nodeType;

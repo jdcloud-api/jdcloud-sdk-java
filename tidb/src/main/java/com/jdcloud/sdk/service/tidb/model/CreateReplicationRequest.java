@@ -119,7 +119,8 @@ public class CreateReplicationRequest extends JdcloudRequest implements java.io.
     /**
      * set 数据复制任务的详细信息
      *
-     * @param replication
+     * @param replication 数据复制任务的详细信息
+     * @return CreateReplicationRequest
      */
     public CreateReplicationRequest replication(ReplicationSpec replication) {
         this.replication = replication;
@@ -130,7 +131,8 @@ public class CreateReplicationRequest extends JdcloudRequest implements java.io.
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return CreateReplicationRequest
      */
     public CreateReplicationRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -141,7 +143,8 @@ public class CreateReplicationRequest extends JdcloudRequest implements java.io.
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return CreateReplicationRequest
      */
     public CreateReplicationRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

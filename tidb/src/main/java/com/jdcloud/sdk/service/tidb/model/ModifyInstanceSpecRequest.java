@@ -237,7 +237,8 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     /**
      * set 调整后的tikv节点数
      *
-     * @param tikvNodeNum
+     * @param tikvNodeNum 调整后的tikv节点数
+     * @return ModifyInstanceSpecRequest
      */
     public ModifyInstanceSpecRequest tikvNodeNum(Integer tikvNodeNum) {
         this.tikvNodeNum = tikvNodeNum;
@@ -248,7 +249,8 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     /**
      * set 调整后的pd节点数
      *
-     * @param pdNodeNum
+     * @param pdNodeNum 调整后的pd节点数
+     * @return ModifyInstanceSpecRequest
      */
     public ModifyInstanceSpecRequest pdNodeNum(Integer pdNodeNum) {
         this.pdNodeNum = pdNodeNum;
@@ -259,7 +261,8 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     /**
      * set TiDB节点规格和数目
      *
-     * @param tidbNodeSpec
+     * @param tidbNodeSpec TiDB节点规格和数目
+     * @return ModifyInstanceSpecRequest
      */
     public ModifyInstanceSpecRequest tidbNodeSpec(NodeSpec tidbNodeSpec) {
         this.tidbNodeSpec = tidbNodeSpec;
@@ -270,7 +273,8 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     /**
      * set TiFlash节点规格和数目
      *
-     * @param tiflashNodeSpec
+     * @param tiflashNodeSpec TiFlash节点规格和数目
+     * @return ModifyInstanceSpecRequest
      */
     public ModifyInstanceSpecRequest tiflashNodeSpec(NodeSpec tiflashNodeSpec) {
         this.tiflashNodeSpec = tiflashNodeSpec;
@@ -281,7 +285,8 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     /**
      * set Ticdc节点规格和数目
      *
-     * @param ticdcNodeSpec
+     * @param ticdcNodeSpec Ticdc节点规格和数目
+     * @return ModifyInstanceSpecRequest
      */
     public ModifyInstanceSpecRequest ticdcNodeSpec(NodeSpec ticdcNodeSpec) {
         this.ticdcNodeSpec = ticdcNodeSpec;
@@ -292,7 +297,8 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     /**
      * set Monitor节点规格和数目
      *
-     * @param monitorNodeSpec
+     * @param monitorNodeSpec Monitor节点规格和数目
+     * @return ModifyInstanceSpecRequest
      */
     public ModifyInstanceSpecRequest monitorNodeSpec(NodeSpec monitorNodeSpec) {
         this.monitorNodeSpec = monitorNodeSpec;
@@ -303,7 +309,8 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return ModifyInstanceSpecRequest
      */
     public ModifyInstanceSpecRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -314,7 +321,8 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return ModifyInstanceSpecRequest
      */
     public ModifyInstanceSpecRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

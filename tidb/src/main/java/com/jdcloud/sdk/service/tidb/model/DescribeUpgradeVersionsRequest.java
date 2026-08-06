@@ -92,7 +92,8 @@ public class DescribeUpgradeVersionsRequest extends JdcloudRequest implements ja
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DescribeUpgradeVersionsRequest
      */
     public DescribeUpgradeVersionsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class DescribeUpgradeVersionsRequest extends JdcloudRequest implements ja
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DescribeUpgradeVersionsRequest
      */
     public DescribeUpgradeVersionsRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

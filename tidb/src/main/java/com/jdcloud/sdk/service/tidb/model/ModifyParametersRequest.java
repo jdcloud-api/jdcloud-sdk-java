@@ -120,7 +120,8 @@ public class ModifyParametersRequest extends JdcloudRequest implements java.io.S
     /**
     * set parameters
     *
-    * @param parameters
+    * @param parameters 
+    * @return ModifyParametersRequest
     */
     public ModifyParametersRequest parameters(List<ModifyParam> parameters) {
         this.parameters = parameters;
@@ -131,7 +132,8 @@ public class ModifyParametersRequest extends JdcloudRequest implements java.io.S
     /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return ModifyParametersRequest
      */
     public ModifyParametersRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -142,7 +144,8 @@ public class ModifyParametersRequest extends JdcloudRequest implements java.io.S
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return ModifyParametersRequest
      */
     public ModifyParametersRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

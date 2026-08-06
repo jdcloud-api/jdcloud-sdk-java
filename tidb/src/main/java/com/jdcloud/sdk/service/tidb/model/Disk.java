@@ -112,7 +112,8 @@ public class Disk  implements java.io.Serializable {
     /**
      * set disk名称
      *
-     * @param storageType
+     * @param storageType disk名称
+     * @return Disk
      */
     public Disk storageType(String storageType) {
         this.storageType = storageType;
@@ -123,7 +124,8 @@ public class Disk  implements java.io.Serializable {
     /**
      * set 1正常0售罄
      *
-     * @param storageTypeStatus
+     * @param storageTypeStatus 1正常0售罄
+     * @return Disk
      */
     public Disk storageTypeStatus(Integer storageTypeStatus) {
         this.storageTypeStatus = storageTypeStatus;
@@ -134,7 +136,8 @@ public class Disk  implements java.io.Serializable {
     /**
     * set orderableinstanceClasses
     *
-    * @param orderableinstanceClasses
+    * @param orderableinstanceClasses 
+    * @return Disk
     */
     public Disk orderableinstanceClasses(List<Flavor> orderableinstanceClasses) {
         this.orderableinstanceClasses = orderableinstanceClasses;

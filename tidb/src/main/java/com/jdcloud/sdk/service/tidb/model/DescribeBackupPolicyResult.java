@@ -170,7 +170,10 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
 例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不保证在这个时间范围中完成
 
      *
-     * @param startWindow
+     * @param startWindow 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。
+例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不保证在这个时间范围中完成
+
+     * @return DescribeBackupPolicyResult
      */
     public DescribeBackupPolicyResult startWindow(String startWindow) {
         this.startWindow = startWindow;
@@ -181,7 +184,8 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     /**
      * set 自动备份保留周期，单位天,缺省为7天，范围7-730
      *
-     * @param retentionPeriod
+     * @param retentionPeriod 自动备份保留周期，单位天,缺省为7天，范围7-730
+     * @return DescribeBackupPolicyResult
      */
     public DescribeBackupPolicyResult retentionPeriod(Integer retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
@@ -201,7 +205,17 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
 例如定义周一和周三备份，则输入为Monday,Wednesday
 
      *
-     * @param backupPeriod
+     * @param backupPeriod 自动备份的周期，多个取值用英文逗号分隔，支持以下参数，不区分大小写：
+- Monday：周一
+- Tuesday：周二
+- Wednesday：周三
+- Thursday：周四
+- Friday：周五
+- Saturday：周六
+- Sunday：周日
+例如定义周一和周三备份，则输入为Monday,Wednesday
+
+     * @return DescribeBackupPolicyResult
      */
     public DescribeBackupPolicyResult backupPeriod(String backupPeriod) {
         this.backupPeriod = backupPeriod;
@@ -212,7 +226,8 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     /**
      * set 是否开启自动增量备份
      *
-     * @param autoIncBackup
+     * @param autoIncBackup 是否开启自动增量备份
+     * @return DescribeBackupPolicyResult
      */
     public DescribeBackupPolicyResult autoIncBackup(Boolean autoIncBackup) {
         this.autoIncBackup = autoIncBackup;

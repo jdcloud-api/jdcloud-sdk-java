@@ -42,6 +42,11 @@ public class DescribeInstanceClassesRequest extends JdcloudRequest implements ja
     private String storageType;
 
     /**
+     * 规格类型：general(通用型)、exclusive(独享型);
+     */
+    private String classGroup;
+
+    /**
      * 地域代码
      * Required:true
      */
@@ -70,6 +75,25 @@ public class DescribeInstanceClassesRequest extends JdcloudRequest implements ja
 
 
     /**
+     * get 规格类型：general(通用型)、exclusive(独享型);
+     *
+     * @return
+     */
+    public String getClassGroup() {
+        return classGroup;
+    }
+
+    /**
+     * set 规格类型：general(通用型)、exclusive(独享型);
+     *
+     * @param classGroup
+     */
+    public void setClassGroup(String classGroup) {
+        this.classGroup = classGroup;
+    }
+
+
+    /**
      * get 地域代码
      *
      * @return
@@ -92,7 +116,8 @@ public class DescribeInstanceClassesRequest extends JdcloudRequest implements ja
     /**
      * set 存储类型,目前只支持本地SSD;
      *
-     * @param storageType
+     * @param storageType 存储类型,目前只支持本地SSD;
+     * @return DescribeInstanceClassesRequest
      */
     public DescribeInstanceClassesRequest storageType(String storageType) {
         this.storageType = storageType;
@@ -101,9 +126,22 @@ public class DescribeInstanceClassesRequest extends JdcloudRequest implements ja
 
 
     /**
+     * set 规格类型：general(通用型)、exclusive(独享型);
+     *
+     * @param classGroup 规格类型：general(通用型)、exclusive(独享型);
+     * @return DescribeInstanceClassesRequest
+     */
+    public DescribeInstanceClassesRequest classGroup(String classGroup) {
+        this.classGroup = classGroup;
+        return this;
+    }
+
+
+    /**
      * set 地域代码
      *
-     * @param regionId
+     * @param regionId 地域代码
+     * @return DescribeInstanceClassesRequest
      */
     public DescribeInstanceClassesRequest regionId(String regionId) {
         this.regionId = regionId;
