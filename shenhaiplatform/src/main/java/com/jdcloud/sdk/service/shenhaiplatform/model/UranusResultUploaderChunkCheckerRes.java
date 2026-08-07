@@ -182,7 +182,8 @@ public class UranusResultUploaderChunkCheckerRes  implements java.io.Serializabl
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusResultUploaderChunkCheckerRes
      */
     public UranusResultUploaderChunkCheckerRes code(String code) {
         this.code = code;
@@ -193,7 +194,8 @@ public class UranusResultUploaderChunkCheckerRes  implements java.io.Serializabl
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusResultUploaderChunkCheckerRes
      */
     public UranusResultUploaderChunkCheckerRes errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -204,7 +206,8 @@ public class UranusResultUploaderChunkCheckerRes  implements java.io.Serializabl
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusResultUploaderChunkCheckerRes
      */
     public UranusResultUploaderChunkCheckerRes errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -215,7 +218,8 @@ public class UranusResultUploaderChunkCheckerRes  implements java.io.Serializabl
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return UranusResultUploaderChunkCheckerRes
      */
     public UranusResultUploaderChunkCheckerRes result(UranusUploaderChunkCheckerRes result) {
         this.result = result;
@@ -226,7 +230,8 @@ public class UranusResultUploaderChunkCheckerRes  implements java.io.Serializabl
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusResultUploaderChunkCheckerRes
      */
     public UranusResultUploaderChunkCheckerRes subCode(String subCode) {
         this.subCode = subCode;
@@ -237,7 +242,8 @@ public class UranusResultUploaderChunkCheckerRes  implements java.io.Serializabl
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusResultUploaderChunkCheckerRes
      */
     public UranusResultUploaderChunkCheckerRes successed(Boolean successed) {
         this.successed = successed;

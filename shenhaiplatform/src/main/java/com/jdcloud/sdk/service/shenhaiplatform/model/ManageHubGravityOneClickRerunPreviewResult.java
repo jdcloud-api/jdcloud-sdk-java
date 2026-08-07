@@ -112,7 +112,8 @@ public class ManageHubGravityOneClickRerunPreviewResult extends JdcloudResult im
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return ManageHubGravityOneClickRerunPreviewResult
      */
     public ManageHubGravityOneClickRerunPreviewResult code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class ManageHubGravityOneClickRerunPreviewResult extends JdcloudResult im
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return ManageHubGravityOneClickRerunPreviewResult
      */
     public ManageHubGravityOneClickRerunPreviewResult message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class ManageHubGravityOneClickRerunPreviewResult extends JdcloudResult im
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return ManageHubGravityOneClickRerunPreviewResult
      */
     public ManageHubGravityOneClickRerunPreviewResult result(OneClickRerunPreviewVo result) {
         this.result = result;

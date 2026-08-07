@@ -111,7 +111,8 @@ public class JtlasGetTableDDLScriptResult extends JdcloudResult implements java.
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasGetTableDDLScriptResult
      */
     public JtlasGetTableDDLScriptResult code(String code) {
         this.code = code;
@@ -122,7 +123,8 @@ public class JtlasGetTableDDLScriptResult extends JdcloudResult implements java.
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasGetTableDDLScriptResult
      */
     public JtlasGetTableDDLScriptResult message(String message) {
         this.message = message;
@@ -133,7 +135,8 @@ public class JtlasGetTableDDLScriptResult extends JdcloudResult implements java.
     /**
      * set select脚本
      *
-     * @param result
+     * @param result select脚本
+     * @return JtlasGetTableDDLScriptResult
      */
     public JtlasGetTableDDLScriptResult result(String result) {
         this.result = result;

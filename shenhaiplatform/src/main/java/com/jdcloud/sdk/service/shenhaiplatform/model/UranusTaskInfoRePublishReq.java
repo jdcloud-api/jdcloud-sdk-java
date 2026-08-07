@@ -62,7 +62,8 @@ public class UranusTaskInfoRePublishReq  implements java.io.Serializable {
     /**
      * set 发布历史id
      *
-     * @param historyId
+     * @param historyId 发布历史id
+     * @return UranusTaskInfoRePublishReq
      */
     public UranusTaskInfoRePublishReq historyId(Integer historyId) {
         this.historyId = historyId;

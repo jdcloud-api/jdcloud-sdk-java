@@ -86,7 +86,8 @@ public class GpmnWorkTableJobStatusReq  implements java.io.Serializable {
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return GpmnWorkTableJobStatusReq
      */
     public GpmnWorkTableJobStatusReq processType(String processType) {
         this.processType = processType;
@@ -97,7 +98,8 @@ public class GpmnWorkTableJobStatusReq  implements java.io.Serializable {
     /**
      * set 查询数据
      *
-     * @param date
+     * @param date 查询数据
+     * @return GpmnWorkTableJobStatusReq
      */
     public GpmnWorkTableJobStatusReq date(String date) {
         this.date = date;

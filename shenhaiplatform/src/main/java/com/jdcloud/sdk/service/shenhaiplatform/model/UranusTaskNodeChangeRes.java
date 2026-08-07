@@ -86,7 +86,8 @@ public class UranusTaskNodeChangeRes  implements java.io.Serializable {
     /**
      * set 作业变更状态
      *
-     * @param taskChangeStatus
+     * @param taskChangeStatus 作业变更状态
+     * @return UranusTaskNodeChangeRes
      */
     public UranusTaskNodeChangeRes taskChangeStatus(Integer taskChangeStatus) {
         this.taskChangeStatus = taskChangeStatus;
@@ -97,7 +98,8 @@ public class UranusTaskNodeChangeRes  implements java.io.Serializable {
     /**
      * set 作业变更状态描述
      *
-     * @param taskChangeStatusDesc
+     * @param taskChangeStatusDesc 作业变更状态描述
+     * @return UranusTaskNodeChangeRes
      */
     public UranusTaskNodeChangeRes taskChangeStatusDesc(String taskChangeStatusDesc) {
         this.taskChangeStatusDesc = taskChangeStatusDesc;

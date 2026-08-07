@@ -112,7 +112,8 @@ public class RosterDO  implements java.io.Serializable {
     /**
      * set 值班日期，取值1-7，对应星期一至星期日
      *
-     * @param day
+     * @param day 值班日期，取值1-7，对应星期一至星期日
+     * @return RosterDO
      */
     public RosterDO day(Integer day) {
         this.day = day;
@@ -123,7 +124,8 @@ public class RosterDO  implements java.io.Serializable {
     /**
     * set 主值班人id列表
     *
-    * @param primaryWatchmanIdList
+    * @param primaryWatchmanIdList 主值班人id列表
+    * @return RosterDO
     */
     public RosterDO primaryWatchmanIdList(List<Integer> primaryWatchmanIdList) {
         this.primaryWatchmanIdList = primaryWatchmanIdList;
@@ -134,7 +136,8 @@ public class RosterDO  implements java.io.Serializable {
     /**
     * set 备值班人id列表
     *
-    * @param backupWatchmanIdList
+    * @param backupWatchmanIdList 备值班人id列表
+    * @return RosterDO
     */
     public RosterDO backupWatchmanIdList(List<Integer> backupWatchmanIdList) {
         this.backupWatchmanIdList = backupWatchmanIdList;

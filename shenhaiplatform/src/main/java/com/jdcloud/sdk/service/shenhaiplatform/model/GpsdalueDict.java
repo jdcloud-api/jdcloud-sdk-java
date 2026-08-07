@@ -182,7 +182,8 @@ public class GpsdalueDict  implements java.io.Serializable {
     /**
      * set 数据字典类型
      *
-     * @param dictType
+     * @param dictType 数据字典类型
+     * @return GpsdalueDict
      */
     public GpsdalueDict dictType(String dictType) {
         this.dictType = dictType;
@@ -193,7 +194,8 @@ public class GpsdalueDict  implements java.io.Serializable {
     /**
      * set 数据字典描述
      *
-     * @param dictDesc
+     * @param dictDesc 数据字典描述
+     * @return GpsdalueDict
      */
     public GpsdalueDict dictDesc(String dictDesc) {
         this.dictDesc = dictDesc;
@@ -204,7 +206,8 @@ public class GpsdalueDict  implements java.io.Serializable {
     /**
      * set 数据字典排序
      *
-     * @param dictSort
+     * @param dictSort 数据字典排序
+     * @return GpsdalueDict
      */
     public GpsdalueDict dictSort(Integer dictSort) {
         this.dictSort = dictSort;
@@ -215,7 +218,8 @@ public class GpsdalueDict  implements java.io.Serializable {
     /**
      * set 数据字典值
      *
-     * @param value
+     * @param value 数据字典值
+     * @return GpsdalueDict
      */
     public GpsdalueDict value(String value) {
         this.value = value;
@@ -226,7 +230,8 @@ public class GpsdalueDict  implements java.io.Serializable {
     /**
      * set valid
      *
-     * @param valid
+     * @param valid 
+     * @return GpsdalueDict
      */
     public GpsdalueDict valid(Boolean valid) {
         this.valid = valid;
@@ -237,7 +242,8 @@ public class GpsdalueDict  implements java.io.Serializable {
     /**
      * set delete
      *
-     * @param delete
+     * @param delete 
+     * @return GpsdalueDict
      */
     public GpsdalueDict delete(Boolean delete) {
         this.delete = delete;

@@ -136,7 +136,8 @@ public class PageVoJcwSpacePartUsedVo  implements java.io.Serializable {
     /**
      * set 总数量
      *
-     * @param total
+     * @param total 总数量
+     * @return PageVoJcwSpacePartUsedVo
      */
     public PageVoJcwSpacePartUsedVo total(Integer total) {
         this.total = total;
@@ -147,7 +148,8 @@ public class PageVoJcwSpacePartUsedVo  implements java.io.Serializable {
     /**
      * set 页号
      *
-     * @param pageNum
+     * @param pageNum 页号
+     * @return PageVoJcwSpacePartUsedVo
      */
     public PageVoJcwSpacePartUsedVo pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -158,7 +160,8 @@ public class PageVoJcwSpacePartUsedVo  implements java.io.Serializable {
     /**
      * set 页面容量
      *
-     * @param pageSize
+     * @param pageSize 页面容量
+     * @return PageVoJcwSpacePartUsedVo
      */
     public PageVoJcwSpacePartUsedVo pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -169,7 +172,8 @@ public class PageVoJcwSpacePartUsedVo  implements java.io.Serializable {
     /**
     * set 数据列表
     *
-    * @param list
+    * @param list 数据列表
+    * @return PageVoJcwSpacePartUsedVo
     */
     public PageVoJcwSpacePartUsedVo list(List<JcwSpacePartUsedVo> list) {
         this.list = list;

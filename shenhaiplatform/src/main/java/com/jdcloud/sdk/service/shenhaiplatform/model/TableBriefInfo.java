@@ -185,7 +185,8 @@ public class TableBriefInfo  implements java.io.Serializable {
     /**
      * set 表名
      *
-     * @param tableName
+     * @param tableName 表名
+     * @return TableBriefInfo
      */
     public TableBriefInfo tableName(String tableName) {
         this.tableName = tableName;
@@ -196,7 +197,8 @@ public class TableBriefInfo  implements java.io.Serializable {
     /**
      * set 表操作类型 CREATE:新建 ALTER:修改 GRANT_PRIV:赋权
      *
-     * @param operationType
+     * @param operationType 表操作类型 CREATE:新建 ALTER:修改 GRANT_PRIV:赋权
+     * @return TableBriefInfo
      */
     public TableBriefInfo operationType(String operationType) {
         this.operationType = operationType;
@@ -207,7 +209,8 @@ public class TableBriefInfo  implements java.io.Serializable {
     /**
      * set 发布阶段 UNPUBLISH:未发布、PUBLISHING:待发布、PUBLISHED:已发布
      *
-     * @param publishStage
+     * @param publishStage 发布阶段 UNPUBLISH:未发布、PUBLISHING:待发布、PUBLISHED:已发布
+     * @return TableBriefInfo
      */
     public TableBriefInfo publishStage(String publishStage) {
         this.publishStage = publishStage;
@@ -218,7 +221,8 @@ public class TableBriefInfo  implements java.io.Serializable {
     /**
      * set 环境信息 dev:开发 prod:生产
      *
-     * @param env
+     * @param env 环境信息 dev:开发 prod:生产
+     * @return TableBriefInfo
      */
     public TableBriefInfo env(String env) {
         this.env = env;
@@ -229,7 +233,8 @@ public class TableBriefInfo  implements java.io.Serializable {
     /**
      * set 表负责人
      *
-     * @param owner
+     * @param owner 表负责人
+     * @return TableBriefInfo
      */
     public TableBriefInfo owner(String owner) {
         this.owner = owner;
@@ -240,7 +245,8 @@ public class TableBriefInfo  implements java.io.Serializable {
     /**
      * set 表协作人，多个以逗号分隔
      *
-     * @param managers
+     * @param managers 表协作人，多个以逗号分隔
+     * @return TableBriefInfo
      */
     public TableBriefInfo managers(String managers) {
         this.managers = managers;

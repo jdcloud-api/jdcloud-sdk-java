@@ -62,6 +62,16 @@ public class WorkspaceInfoResp  implements java.io.Serializable {
      */
     private String accountId;
 
+    /**
+     * workspaceLabel
+     */
+    private String workspaceLabel;
+
+    /**
+     * regionId
+     */
+    private String regionId;
+
 
 
     /**
@@ -178,11 +188,50 @@ public class WorkspaceInfoResp  implements java.io.Serializable {
     }
 
 
+    /**
+     * get workspaceLabel
+     *
+     * @return
+     */
+    public String getWorkspaceLabel() {
+        return workspaceLabel;
+    }
+
+    /**
+     * set workspaceLabel
+     *
+     * @param workspaceLabel
+     */
+    public void setWorkspaceLabel(String workspaceLabel) {
+        this.workspaceLabel = workspaceLabel;
+    }
+
+
+    /**
+     * get regionId
+     *
+     * @return
+     */
+    public String getRegionId() {
+        return regionId;
+    }
+
+    /**
+     * set regionId
+     *
+     * @param regionId
+     */
+    public void setRegionId(String regionId) {
+        this.regionId = regionId;
+    }
+
+
 
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceInfoResp
      */
     public WorkspaceInfoResp id(Integer id) {
         this.id = id;
@@ -193,7 +242,8 @@ public class WorkspaceInfoResp  implements java.io.Serializable {
     /**
      * set workspaceName
      *
-     * @param workspaceName
+     * @param workspaceName 
+     * @return WorkspaceInfoResp
      */
     public WorkspaceInfoResp workspaceName(String workspaceName) {
         this.workspaceName = workspaceName;
@@ -204,7 +254,8 @@ public class WorkspaceInfoResp  implements java.io.Serializable {
     /**
      * set workspaceDescription
      *
-     * @param workspaceDescription
+     * @param workspaceDescription 
+     * @return WorkspaceInfoResp
      */
     public WorkspaceInfoResp workspaceDescription(String workspaceDescription) {
         this.workspaceDescription = workspaceDescription;
@@ -215,7 +266,8 @@ public class WorkspaceInfoResp  implements java.io.Serializable {
     /**
      * set workspaceModel
      *
-     * @param workspaceModel
+     * @param workspaceModel 
+     * @return WorkspaceInfoResp
      */
     public WorkspaceInfoResp workspaceModel(String workspaceModel) {
         this.workspaceModel = workspaceModel;
@@ -226,7 +278,8 @@ public class WorkspaceInfoResp  implements java.io.Serializable {
     /**
      * set workspaceId
      *
-     * @param workspaceId
+     * @param workspaceId 
+     * @return WorkspaceInfoResp
      */
     public WorkspaceInfoResp workspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
@@ -237,10 +290,35 @@ public class WorkspaceInfoResp  implements java.io.Serializable {
     /**
      * set accountId
      *
-     * @param accountId
+     * @param accountId 
+     * @return WorkspaceInfoResp
      */
     public WorkspaceInfoResp accountId(String accountId) {
         this.accountId = accountId;
+        return this;
+    }
+
+
+    /**
+     * set workspaceLabel
+     *
+     * @param workspaceLabel 
+     * @return WorkspaceInfoResp
+     */
+    public WorkspaceInfoResp workspaceLabel(String workspaceLabel) {
+        this.workspaceLabel = workspaceLabel;
+        return this;
+    }
+
+
+    /**
+     * set regionId
+     *
+     * @param regionId 
+     * @return WorkspaceInfoResp
+     */
+    public WorkspaceInfoResp regionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
 

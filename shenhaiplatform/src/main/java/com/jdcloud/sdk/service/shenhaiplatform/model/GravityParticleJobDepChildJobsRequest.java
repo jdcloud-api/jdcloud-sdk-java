@@ -192,7 +192,8 @@ public class GravityParticleJobDepChildJobsRequest extends JdcloudRequest implem
     /**
      * set 页面大小
      *
-     * @param pageSize
+     * @param pageSize 页面大小
+     * @return GravityParticleJobDepChildJobsRequest
      */
     public GravityParticleJobDepChildJobsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -203,7 +204,8 @@ public class GravityParticleJobDepChildJobsRequest extends JdcloudRequest implem
     /**
      * set 页码
      *
-     * @param pageNum
+     * @param pageNum 页码
+     * @return GravityParticleJobDepChildJobsRequest
      */
     public GravityParticleJobDepChildJobsRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -214,7 +216,8 @@ public class GravityParticleJobDepChildJobsRequest extends JdcloudRequest implem
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleJobDepChildJobsRequest
      */
     public GravityParticleJobDepChildJobsRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -225,7 +228,8 @@ public class GravityParticleJobDepChildJobsRequest extends JdcloudRequest implem
     /**
      * set 作业是否有效
      *
-     * @param jobEnable
+     * @param jobEnable 作业是否有效
+     * @return GravityParticleJobDepChildJobsRequest
      */
     public GravityParticleJobDepChildJobsRequest jobEnable(String jobEnable) {
         this.jobEnable = jobEnable;
@@ -236,7 +240,8 @@ public class GravityParticleJobDepChildJobsRequest extends JdcloudRequest implem
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobDepChildJobsRequest
      */
     public GravityParticleJobDepChildJobsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -247,7 +252,8 @@ public class GravityParticleJobDepChildJobsRequest extends JdcloudRequest implem
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobDepChildJobsRequest
      */
     public GravityParticleJobDepChildJobsRequest appName(String appName) {
         this.appName = appName;

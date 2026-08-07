@@ -254,7 +254,8 @@ public class PublishObjDetailVo  implements java.io.Serializable {
     /**
      * set ID
      *
-     * @param objId
+     * @param objId ID
+     * @return PublishObjDetailVo
      */
     public PublishObjDetailVo objId(Long objId) {
         this.objId = objId;
@@ -265,7 +266,8 @@ public class PublishObjDetailVo  implements java.io.Serializable {
     /**
      * set 发布对象类型
      *
-     * @param objType
+     * @param objType 发布对象类型
+     * @return PublishObjDetailVo
      */
     public PublishObjDetailVo objType(String objType) {
         this.objType = objType;
@@ -276,7 +278,8 @@ public class PublishObjDetailVo  implements java.io.Serializable {
     /**
      * set 对象名称
      *
-     * @param objName
+     * @param objName 对象名称
+     * @return PublishObjDetailVo
      */
     public PublishObjDetailVo objName(String objName) {
         this.objName = objName;
@@ -287,7 +290,8 @@ public class PublishObjDetailVo  implements java.io.Serializable {
     /**
      * set 对象ID
      *
-     * @param objUk
+     * @param objUk 对象ID
+     * @return PublishObjDetailVo
      */
     public PublishObjDetailVo objUk(String objUk) {
         this.objUk = objUk;
@@ -298,7 +302,8 @@ public class PublishObjDetailVo  implements java.io.Serializable {
     /**
      * set 提交人
      *
-     * @param submitter
+     * @param submitter 提交人
+     * @return PublishObjDetailVo
      */
     public PublishObjDetailVo submitter(String submitter) {
         this.submitter = submitter;
@@ -309,7 +314,8 @@ public class PublishObjDetailVo  implements java.io.Serializable {
     /**
      * set 版本号
      *
-     * @param versionPretty
+     * @param versionPretty 版本号
+     * @return PublishObjDetailVo
      */
     public PublishObjDetailVo versionPretty(String versionPretty) {
         this.versionPretty = versionPretty;
@@ -320,7 +326,8 @@ public class PublishObjDetailVo  implements java.io.Serializable {
     /**
      * set 提交时间
      *
-     * @param submitTimestamp
+     * @param submitTimestamp 提交时间
+     * @return PublishObjDetailVo
      */
     public PublishObjDetailVo submitTimestamp(Long submitTimestamp) {
         this.submitTimestamp = submitTimestamp;
@@ -331,7 +338,8 @@ public class PublishObjDetailVo  implements java.io.Serializable {
     /**
      * set 脚本内容，[数据开发]和[数据表]类型有该值
      *
-     * @param scriptContent
+     * @param scriptContent 脚本内容，[数据开发]和[数据表]类型有该值
+     * @return PublishObjDetailVo
      */
     public PublishObjDetailVo scriptContent(String scriptContent) {
         this.scriptContent = scriptContent;
@@ -342,7 +350,8 @@ public class PublishObjDetailVo  implements java.io.Serializable {
     /**
      * set 配置内容，[数据开发]和[数据集成]类型有该值
      *
-     * @param configContent
+     * @param configContent 配置内容，[数据开发]和[数据集成]类型有该值
+     * @return PublishObjDetailVo
      */
     public PublishObjDetailVo configContent(String configContent) {
         this.configContent = configContent;

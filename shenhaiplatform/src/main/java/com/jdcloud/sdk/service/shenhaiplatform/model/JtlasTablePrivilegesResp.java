@@ -112,7 +112,8 @@ public class JtlasTablePrivilegesResp  implements java.io.Serializable {
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasTablePrivilegesResp
      */
     public JtlasTablePrivilegesResp code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class JtlasTablePrivilegesResp  implements java.io.Serializable {
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasTablePrivilegesResp
      */
     public JtlasTablePrivilegesResp message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class JtlasTablePrivilegesResp  implements java.io.Serializable {
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return JtlasTablePrivilegesResp
     */
     public JtlasTablePrivilegesResp result(List<JtlasWarehouseTablePrivilege> result) {
         this.result = result;

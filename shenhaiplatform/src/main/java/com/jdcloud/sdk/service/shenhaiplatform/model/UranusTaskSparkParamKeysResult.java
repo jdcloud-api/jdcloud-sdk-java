@@ -185,7 +185,8 @@ public class UranusTaskSparkParamKeysResult extends JdcloudResult implements jav
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusTaskSparkParamKeysResult
      */
     public UranusTaskSparkParamKeysResult code(String code) {
         this.code = code;
@@ -196,7 +197,8 @@ public class UranusTaskSparkParamKeysResult extends JdcloudResult implements jav
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusTaskSparkParamKeysResult
      */
     public UranusTaskSparkParamKeysResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -207,7 +209,8 @@ public class UranusTaskSparkParamKeysResult extends JdcloudResult implements jav
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusTaskSparkParamKeysResult
      */
     public UranusTaskSparkParamKeysResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -218,7 +221,8 @@ public class UranusTaskSparkParamKeysResult extends JdcloudResult implements jav
     /**
     * set Object
     *
-    * @param result
+    * @param result Object
+    * @return UranusTaskSparkParamKeysResult
     */
     public UranusTaskSparkParamKeysResult result(List<Object> result) {
         this.result = result;
@@ -229,7 +233,8 @@ public class UranusTaskSparkParamKeysResult extends JdcloudResult implements jav
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusTaskSparkParamKeysResult
      */
     public UranusTaskSparkParamKeysResult subCode(String subCode) {
         this.subCode = subCode;
@@ -240,7 +245,8 @@ public class UranusTaskSparkParamKeysResult extends JdcloudResult implements jav
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusTaskSparkParamKeysResult
      */
     public UranusTaskSparkParamKeysResult successed(Boolean successed) {
         this.successed = successed;

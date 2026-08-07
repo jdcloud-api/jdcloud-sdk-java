@@ -183,7 +183,8 @@ public class UranusExtraRunnerStartResult extends JdcloudResult implements java.
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusExtraRunnerStartResult
      */
     public UranusExtraRunnerStartResult code(String code) {
         this.code = code;
@@ -194,7 +195,8 @@ public class UranusExtraRunnerStartResult extends JdcloudResult implements java.
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusExtraRunnerStartResult
      */
     public UranusExtraRunnerStartResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -205,7 +207,8 @@ public class UranusExtraRunnerStartResult extends JdcloudResult implements java.
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusExtraRunnerStartResult
      */
     public UranusExtraRunnerStartResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -216,7 +219,8 @@ public class UranusExtraRunnerStartResult extends JdcloudResult implements java.
     /**
      * set Object
      *
-     * @param result
+     * @param result Object
+     * @return UranusExtraRunnerStartResult
      */
     public UranusExtraRunnerStartResult result(Integer result) {
         this.result = result;
@@ -227,7 +231,8 @@ public class UranusExtraRunnerStartResult extends JdcloudResult implements java.
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusExtraRunnerStartResult
      */
     public UranusExtraRunnerStartResult subCode(String subCode) {
         this.subCode = subCode;
@@ -238,7 +243,8 @@ public class UranusExtraRunnerStartResult extends JdcloudResult implements java.
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusExtraRunnerStartResult
      */
     public UranusExtraRunnerStartResult successed(Boolean successed) {
         this.successed = successed;

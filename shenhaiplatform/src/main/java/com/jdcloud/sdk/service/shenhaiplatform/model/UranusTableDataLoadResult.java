@@ -111,7 +111,8 @@ public class UranusTableDataLoadResult extends JdcloudResult implements java.io.
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return UranusTableDataLoadResult
      */
     public UranusTableDataLoadResult code(String code) {
         this.code = code;
@@ -122,7 +123,8 @@ public class UranusTableDataLoadResult extends JdcloudResult implements java.io.
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return UranusTableDataLoadResult
      */
     public UranusTableDataLoadResult message(String message) {
         this.message = message;
@@ -133,7 +135,8 @@ public class UranusTableDataLoadResult extends JdcloudResult implements java.io.
     /**
      * set 任务id
      *
-     * @param result
+     * @param result 任务id
+     * @return UranusTableDataLoadResult
      */
     public UranusTableDataLoadResult result(String result) {
         this.result = result;

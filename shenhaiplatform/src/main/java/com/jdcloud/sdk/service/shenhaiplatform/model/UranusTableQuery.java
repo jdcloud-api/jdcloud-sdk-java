@@ -352,7 +352,8 @@ public class UranusTableQuery  implements java.io.Serializable {
     /**
      * set 图谱ID
      *
-     * @param id
+     * @param id 图谱ID
+     * @return UranusTableQuery
      */
     public UranusTableQuery id(String id) {
         this.id = id;
@@ -363,7 +364,8 @@ public class UranusTableQuery  implements java.io.Serializable {
     /**
      * set 表英文名称
      *
-     * @param tableEnName
+     * @param tableEnName 表英文名称
+     * @return UranusTableQuery
      */
     public UranusTableQuery tableEnName(String tableEnName) {
         this.tableEnName = tableEnName;
@@ -374,7 +376,8 @@ public class UranusTableQuery  implements java.io.Serializable {
     /**
      * set 表中文名
      *
-     * @param tableCnName
+     * @param tableCnName 表中文名
+     * @return UranusTableQuery
      */
     public UranusTableQuery tableCnName(String tableCnName) {
         this.tableCnName = tableCnName;
@@ -385,7 +388,8 @@ public class UranusTableQuery  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param owner
+     * @param owner 负责人
+     * @return UranusTableQuery
      */
     public UranusTableQuery owner(String owner) {
         this.owner = owner;
@@ -396,7 +400,8 @@ public class UranusTableQuery  implements java.io.Serializable {
     /**
      * set 协助人
      *
-     * @param manager
+     * @param manager 协助人
+     * @return UranusTableQuery
      */
     public UranusTableQuery manager(String manager) {
         this.manager = manager;
@@ -407,7 +412,8 @@ public class UranusTableQuery  implements java.io.Serializable {
     /**
     * set 表的普通字段信息
     *
-    * @param columns
+    * @param columns 表的普通字段信息
+    * @return UranusTableQuery
     */
     public UranusTableQuery columns(List<UranusColumnSaveOrUpdate> columns) {
         this.columns = columns;
@@ -418,7 +424,8 @@ public class UranusTableQuery  implements java.io.Serializable {
     /**
     * set 表的分区字段信息
     *
-    * @param partitions
+    * @param partitions 表的分区字段信息
+    * @return UranusTableQuery
     */
     public UranusTableQuery partitions(List<UranusColumnSaveOrUpdate> partitions) {
         this.partitions = partitions;
@@ -429,7 +436,8 @@ public class UranusTableQuery  implements java.io.Serializable {
     /**
      * set 0 非分区表 1 分区表
      *
-     * @param isPartition
+     * @param isPartition 0 非分区表 1 分区表
+     * @return UranusTableQuery
      */
     public UranusTableQuery isPartition(Integer isPartition) {
         this.isPartition = isPartition;
@@ -440,7 +448,8 @@ public class UranusTableQuery  implements java.io.Serializable {
     /**
      * set 表存储格式
      *
-     * @param storageType
+     * @param storageType 表存储格式
+     * @return UranusTableQuery
      */
     public UranusTableQuery storageType(String storageType) {
         this.storageType = storageType;
@@ -451,7 +460,8 @@ public class UranusTableQuery  implements java.io.Serializable {
     /**
      * set 表字段分隔符（只有TEXTFILE类型表需要该字段）
      *
-     * @param fieldDelim
+     * @param fieldDelim 表字段分隔符（只有TEXTFILE类型表需要该字段）
+     * @return UranusTableQuery
      */
     public UranusTableQuery fieldDelim(String fieldDelim) {
         this.fieldDelim = fieldDelim;
@@ -462,7 +472,8 @@ public class UranusTableQuery  implements java.io.Serializable {
     /**
      * set 表行分隔符（只有TEXTFILE类型表需要该字段）
      *
-     * @param lineDelim
+     * @param lineDelim 表行分隔符（只有TEXTFILE类型表需要该字段）
+     * @return UranusTableQuery
      */
     public UranusTableQuery lineDelim(String lineDelim) {
         this.lineDelim = lineDelim;
@@ -473,7 +484,8 @@ public class UranusTableQuery  implements java.io.Serializable {
     /**
     * set 分桶字段
     *
-    * @param bucketCols
+    * @param bucketCols 分桶字段
+    * @return UranusTableQuery
     */
     public UranusTableQuery bucketCols(List<String> bucketCols) {
         this.bucketCols = bucketCols;
@@ -484,7 +496,8 @@ public class UranusTableQuery  implements java.io.Serializable {
     /**
      * set 分桶个数
      *
-     * @param bucketNum
+     * @param bucketNum 分桶个数
+     * @return UranusTableQuery
      */
     public UranusTableQuery bucketNum(Integer bucketNum) {
         this.bucketNum = bucketNum;

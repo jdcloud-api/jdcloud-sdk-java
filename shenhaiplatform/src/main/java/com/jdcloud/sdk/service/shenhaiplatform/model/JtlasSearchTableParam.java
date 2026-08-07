@@ -86,7 +86,8 @@ public class JtlasSearchTableParam  implements java.io.Serializable {
     /**
      * set 参数key
      *
-     * @param paramKey
+     * @param paramKey 参数key
+     * @return JtlasSearchTableParam
      */
     public JtlasSearchTableParam paramKey(String paramKey) {
         this.paramKey = paramKey;
@@ -97,7 +98,8 @@ public class JtlasSearchTableParam  implements java.io.Serializable {
     /**
      * set 参数value
      *
-     * @param paramValue
+     * @param paramValue 参数value
+     * @return JtlasSearchTableParam
      */
     public JtlasSearchTableParam paramValue(String paramValue) {
         this.paramValue = paramValue;

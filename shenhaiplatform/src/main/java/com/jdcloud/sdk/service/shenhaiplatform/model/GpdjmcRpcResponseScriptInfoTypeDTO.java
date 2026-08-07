@@ -134,7 +134,8 @@ public class GpdjmcRpcResponseScriptInfoTypeDTO  implements java.io.Serializable
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GpdjmcRpcResponseScriptInfoTypeDTO
      */
     public GpdjmcRpcResponseScriptInfoTypeDTO success(Integer success) {
         this.success = success;
@@ -145,7 +146,8 @@ public class GpdjmcRpcResponseScriptInfoTypeDTO  implements java.io.Serializable
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GpdjmcRpcResponseScriptInfoTypeDTO
      */
     public GpdjmcRpcResponseScriptInfoTypeDTO code(String code) {
         this.code = code;
@@ -156,7 +158,8 @@ public class GpdjmcRpcResponseScriptInfoTypeDTO  implements java.io.Serializable
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GpdjmcRpcResponseScriptInfoTypeDTO
      */
     public GpdjmcRpcResponseScriptInfoTypeDTO msg(String msg) {
         this.msg = msg;
@@ -167,7 +170,8 @@ public class GpdjmcRpcResponseScriptInfoTypeDTO  implements java.io.Serializable
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return GpdjmcRpcResponseScriptInfoTypeDTO
      */
     public GpdjmcRpcResponseScriptInfoTypeDTO result(GpdjmcScriptInfoTypeDTO result) {
         this.result = result;

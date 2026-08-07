@@ -87,7 +87,8 @@ public class CopilotChatDeleteResult extends JdcloudResult implements java.io.Se
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return CopilotChatDeleteResult
      */
     public CopilotChatDeleteResult code(String code) {
         this.code = code;
@@ -98,7 +99,8 @@ public class CopilotChatDeleteResult extends JdcloudResult implements java.io.Se
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return CopilotChatDeleteResult
      */
     public CopilotChatDeleteResult message(String message) {
         this.message = message;

@@ -136,7 +136,8 @@ public class RosterVo  implements java.io.Serializable {
     /**
      * set 值班日期，取值1-7，对应星期一至星期日
      *
-     * @param day
+     * @param day 值班日期，取值1-7，对应星期一至星期日
+     * @return RosterVo
      */
     public RosterVo day(Integer day) {
         this.day = day;
@@ -147,7 +148,8 @@ public class RosterVo  implements java.io.Serializable {
     /**
      * set 值班日期展示，取值星期一至星期日
      *
-     * @param dayLabel
+     * @param dayLabel 值班日期展示，取值星期一至星期日
+     * @return RosterVo
      */
     public RosterVo dayLabel(String dayLabel) {
         this.dayLabel = dayLabel;
@@ -158,7 +160,8 @@ public class RosterVo  implements java.io.Serializable {
     /**
     * set 主值班人列表
     *
-    * @param primaryWatchmanIdList
+    * @param primaryWatchmanIdList 主值班人列表
+    * @return RosterVo
     */
     public RosterVo primaryWatchmanIdList(List<WatchmanVo> primaryWatchmanIdList) {
         this.primaryWatchmanIdList = primaryWatchmanIdList;
@@ -169,7 +172,8 @@ public class RosterVo  implements java.io.Serializable {
     /**
     * set 备值班人列表
     *
-    * @param backupWatchmanIdList
+    * @param backupWatchmanIdList 备值班人列表
+    * @return RosterVo
     */
     public RosterVo backupWatchmanIdList(List<WatchmanVo> backupWatchmanIdList) {
         this.backupWatchmanIdList = backupWatchmanIdList;

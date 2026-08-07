@@ -116,7 +116,8 @@ public class GravityParticleParticleJobGetBasicInfoRequest extends JdcloudReques
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GravityParticleParticleJobGetBasicInfoRequest
      */
     public GravityParticleParticleJobGetBasicInfoRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -127,7 +128,8 @@ public class GravityParticleParticleJobGetBasicInfoRequest extends JdcloudReques
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleParticleJobGetBasicInfoRequest
      */
     public GravityParticleParticleJobGetBasicInfoRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class GravityParticleParticleJobGetBasicInfoRequest extends JdcloudReques
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleParticleJobGetBasicInfoRequest
      */
     public GravityParticleParticleJobGetBasicInfoRequest appName(String appName) {
         this.appName = appName;

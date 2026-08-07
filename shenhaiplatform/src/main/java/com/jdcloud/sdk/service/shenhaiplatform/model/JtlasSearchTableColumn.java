@@ -206,7 +206,8 @@ public class JtlasSearchTableColumn  implements java.io.Serializable {
     /**
      * set 字段id
      *
-     * @param id
+     * @param id 字段id
+     * @return JtlasSearchTableColumn
      */
     public JtlasSearchTableColumn id(String id) {
         this.id = id;
@@ -217,7 +218,8 @@ public class JtlasSearchTableColumn  implements java.io.Serializable {
     /**
      * set 字段名称
      *
-     * @param name
+     * @param name 字段名称
+     * @return JtlasSearchTableColumn
      */
     public JtlasSearchTableColumn name(String name) {
         this.name = name;
@@ -228,7 +230,8 @@ public class JtlasSearchTableColumn  implements java.io.Serializable {
     /**
      * set 字段描述
      *
-     * @param comment
+     * @param comment 字段描述
+     * @return JtlasSearchTableColumn
      */
     public JtlasSearchTableColumn comment(String comment) {
         this.comment = comment;
@@ -239,7 +242,8 @@ public class JtlasSearchTableColumn  implements java.io.Serializable {
     /**
      * set 字段类型
      *
-     * @param type
+     * @param type 字段类型
+     * @return JtlasSearchTableColumn
      */
     public JtlasSearchTableColumn type(String type) {
         this.type = type;
@@ -250,7 +254,8 @@ public class JtlasSearchTableColumn  implements java.io.Serializable {
     /**
      * set 是否是分区字段
      *
-     * @param isPartition
+     * @param isPartition 是否是分区字段
+     * @return JtlasSearchTableColumn
      */
     public JtlasSearchTableColumn isPartition(Boolean isPartition) {
         this.isPartition = isPartition;
@@ -261,7 +266,8 @@ public class JtlasSearchTableColumn  implements java.io.Serializable {
     /**
      * set 字段长度
      *
-     * @param length
+     * @param length 字段长度
+     * @return JtlasSearchTableColumn
      */
     public JtlasSearchTableColumn length(Integer length) {
         this.length = length;
@@ -272,7 +278,8 @@ public class JtlasSearchTableColumn  implements java.io.Serializable {
     /**
      * set 字段位置
      *
-     * @param position
+     * @param position 字段位置
+     * @return JtlasSearchTableColumn
      */
     public JtlasSearchTableColumn position(Integer position) {
         this.position = position;

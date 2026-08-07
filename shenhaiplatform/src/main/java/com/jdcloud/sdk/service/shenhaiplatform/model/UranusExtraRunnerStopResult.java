@@ -183,7 +183,8 @@ public class UranusExtraRunnerStopResult extends JdcloudResult implements java.i
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusExtraRunnerStopResult
      */
     public UranusExtraRunnerStopResult code(String code) {
         this.code = code;
@@ -194,7 +195,8 @@ public class UranusExtraRunnerStopResult extends JdcloudResult implements java.i
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusExtraRunnerStopResult
      */
     public UranusExtraRunnerStopResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -205,7 +207,8 @@ public class UranusExtraRunnerStopResult extends JdcloudResult implements java.i
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusExtraRunnerStopResult
      */
     public UranusExtraRunnerStopResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -216,7 +219,8 @@ public class UranusExtraRunnerStopResult extends JdcloudResult implements java.i
     /**
      * set Object
      *
-     * @param result
+     * @param result Object
+     * @return UranusExtraRunnerStopResult
      */
     public UranusExtraRunnerStopResult result(Boolean result) {
         this.result = result;
@@ -227,7 +231,8 @@ public class UranusExtraRunnerStopResult extends JdcloudResult implements java.i
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusExtraRunnerStopResult
      */
     public UranusExtraRunnerStopResult subCode(String subCode) {
         this.subCode = subCode;
@@ -238,7 +243,8 @@ public class UranusExtraRunnerStopResult extends JdcloudResult implements java.i
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusExtraRunnerStopResult
      */
     public UranusExtraRunnerStopResult successed(Boolean successed) {
         this.successed = successed;

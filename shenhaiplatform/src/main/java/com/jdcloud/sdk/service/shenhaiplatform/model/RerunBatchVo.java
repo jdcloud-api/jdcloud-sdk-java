@@ -302,7 +302,8 @@ public class RerunBatchVo  implements java.io.Serializable {
     /**
      * set 批次id
      *
-     * @param id
+     * @param id 批次id
+     * @return RerunBatchVo
      */
     public RerunBatchVo id(Integer id) {
         this.id = id;
@@ -313,7 +314,8 @@ public class RerunBatchVo  implements java.io.Serializable {
     /**
      * set 重跑原因
      *
-     * @param remark
+     * @param remark 重跑原因
+     * @return RerunBatchVo
      */
     public RerunBatchVo remark(String remark) {
         this.remark = remark;
@@ -324,7 +326,8 @@ public class RerunBatchVo  implements java.io.Serializable {
     /**
      * set 操作人员
      *
-     * @param operator
+     * @param operator 操作人员
+     * @return RerunBatchVo
      */
     public RerunBatchVo operator(String operator) {
         this.operator = operator;
@@ -335,7 +338,8 @@ public class RerunBatchVo  implements java.io.Serializable {
     /**
      * set 状态
      *
-     * @param status
+     * @param status 状态
+     * @return RerunBatchVo
      */
     public RerunBatchVo status(String status) {
         this.status = status;
@@ -346,7 +350,8 @@ public class RerunBatchVo  implements java.io.Serializable {
     /**
      * set 状态-展示
      *
-     * @param statusLabel
+     * @param statusLabel 状态-展示
+     * @return RerunBatchVo
      */
     public RerunBatchVo statusLabel(String statusLabel) {
         this.statusLabel = statusLabel;
@@ -357,7 +362,8 @@ public class RerunBatchVo  implements java.io.Serializable {
     /**
      * set 提交成功数量
      *
-     * @param submitSuccessCount
+     * @param submitSuccessCount 提交成功数量
+     * @return RerunBatchVo
      */
     public RerunBatchVo submitSuccessCount(Integer submitSuccessCount) {
         this.submitSuccessCount = submitSuccessCount;
@@ -368,7 +374,8 @@ public class RerunBatchVo  implements java.io.Serializable {
     /**
      * set 提交失败数量
      *
-     * @param submitFailCount
+     * @param submitFailCount 提交失败数量
+     * @return RerunBatchVo
      */
     public RerunBatchVo submitFailCount(Integer submitFailCount) {
         this.submitFailCount = submitFailCount;
@@ -379,7 +386,8 @@ public class RerunBatchVo  implements java.io.Serializable {
     /**
      * set 提交待处理数量
      *
-     * @param submitPendingCount
+     * @param submitPendingCount 提交待处理数量
+     * @return RerunBatchVo
      */
     public RerunBatchVo submitPendingCount(Integer submitPendingCount) {
         this.submitPendingCount = submitPendingCount;
@@ -390,7 +398,8 @@ public class RerunBatchVo  implements java.io.Serializable {
     /**
      * set 提交中数量
      *
-     * @param submitSubmittingCount
+     * @param submitSubmittingCount 提交中数量
+     * @return RerunBatchVo
      */
     public RerunBatchVo submitSubmittingCount(Integer submitSubmittingCount) {
         this.submitSubmittingCount = submitSubmittingCount;
@@ -401,7 +410,8 @@ public class RerunBatchVo  implements java.io.Serializable {
     /**
      * set 提交总数
      *
-     * @param submitTotalCount
+     * @param submitTotalCount 提交总数
+     * @return RerunBatchVo
      */
     public RerunBatchVo submitTotalCount(Integer submitTotalCount) {
         this.submitTotalCount = submitTotalCount;
@@ -412,7 +422,8 @@ public class RerunBatchVo  implements java.io.Serializable {
     /**
      * set 操作时间
      *
-     * @param createTime
+     * @param createTime 操作时间
+     * @return RerunBatchVo
      */
     public RerunBatchVo createTime(Long createTime) {
         this.createTime = createTime;

@@ -110,7 +110,8 @@ public class ChatVo  implements java.io.Serializable {
     /**
      * set 对话id
      *
-     * @param chatId
+     * @param chatId 对话id
+     * @return ChatVo
      */
     public ChatVo chatId(String chatId) {
         this.chatId = chatId;
@@ -121,7 +122,8 @@ public class ChatVo  implements java.io.Serializable {
     /**
      * set 对话主题
      *
-     * @param name
+     * @param name 对话主题
+     * @return ChatVo
      */
     public ChatVo name(String name) {
         this.name = name;
@@ -132,7 +134,8 @@ public class ChatVo  implements java.io.Serializable {
     /**
      * set 对话创建时间
      *
-     * @param createTime
+     * @param createTime 对话创建时间
+     * @return ChatVo
      */
     public ChatVo createTime(Long createTime) {
         this.createTime = createTime;

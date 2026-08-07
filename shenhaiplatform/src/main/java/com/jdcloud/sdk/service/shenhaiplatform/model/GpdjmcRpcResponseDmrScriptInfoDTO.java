@@ -134,7 +134,8 @@ public class GpdjmcRpcResponseDmrScriptInfoDTO  implements java.io.Serializable 
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GpdjmcRpcResponseDmrScriptInfoDTO
      */
     public GpdjmcRpcResponseDmrScriptInfoDTO success(Integer success) {
         this.success = success;
@@ -145,7 +146,8 @@ public class GpdjmcRpcResponseDmrScriptInfoDTO  implements java.io.Serializable 
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GpdjmcRpcResponseDmrScriptInfoDTO
      */
     public GpdjmcRpcResponseDmrScriptInfoDTO code(String code) {
         this.code = code;
@@ -156,7 +158,8 @@ public class GpdjmcRpcResponseDmrScriptInfoDTO  implements java.io.Serializable 
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GpdjmcRpcResponseDmrScriptInfoDTO
      */
     public GpdjmcRpcResponseDmrScriptInfoDTO msg(String msg) {
         this.msg = msg;
@@ -167,7 +170,8 @@ public class GpdjmcRpcResponseDmrScriptInfoDTO  implements java.io.Serializable 
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return GpdjmcRpcResponseDmrScriptInfoDTO
      */
     public GpdjmcRpcResponseDmrScriptInfoDTO result(GpdjmcDmrScriptInfoDTO result) {
         this.result = result;

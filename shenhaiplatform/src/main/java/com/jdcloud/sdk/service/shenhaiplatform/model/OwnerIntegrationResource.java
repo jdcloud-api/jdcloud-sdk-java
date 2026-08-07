@@ -278,7 +278,8 @@ public class OwnerIntegrationResource  implements java.io.Serializable {
     /**
      * set region
      *
-     * @param region
+     * @param region 
+     * @return OwnerIntegrationResource
      */
     public OwnerIntegrationResource region(String region) {
         this.region = region;
@@ -289,7 +290,8 @@ public class OwnerIntegrationResource  implements java.io.Serializable {
     /**
      * set resourceType
      *
-     * @param resourceType
+     * @param resourceType 
+     * @return OwnerIntegrationResource
      */
     public OwnerIntegrationResource resourceType(String resourceType) {
         this.resourceType = resourceType;
@@ -300,7 +302,8 @@ public class OwnerIntegrationResource  implements java.io.Serializable {
     /**
      * set az
      *
-     * @param az
+     * @param az 
+     * @return OwnerIntegrationResource
      */
     public OwnerIntegrationResource az(String az) {
         this.az = az;
@@ -311,7 +314,8 @@ public class OwnerIntegrationResource  implements java.io.Serializable {
     /**
      * set resourceName
      *
-     * @param resourceName
+     * @param resourceName 
+     * @return OwnerIntegrationResource
      */
     public OwnerIntegrationResource resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -322,7 +326,8 @@ public class OwnerIntegrationResource  implements java.io.Serializable {
     /**
      * set resourceDescription
      *
-     * @param resourceDescription
+     * @param resourceDescription 
+     * @return OwnerIntegrationResource
      */
     public OwnerIntegrationResource resourceDescription(String resourceDescription) {
         this.resourceDescription = resourceDescription;
@@ -333,7 +338,8 @@ public class OwnerIntegrationResource  implements java.io.Serializable {
     /**
      * set purchaseDuration
      *
-     * @param purchaseDuration
+     * @param purchaseDuration 
+     * @return OwnerIntegrationResource
      */
     public OwnerIntegrationResource purchaseDuration(Integer purchaseDuration) {
         this.purchaseDuration = purchaseDuration;
@@ -344,7 +350,8 @@ public class OwnerIntegrationResource  implements java.io.Serializable {
     /**
      * set autoRenewal
      *
-     * @param autoRenewal
+     * @param autoRenewal 
+     * @return OwnerIntegrationResource
      */
     public OwnerIntegrationResource autoRenewal(Boolean autoRenewal) {
         this.autoRenewal = autoRenewal;
@@ -355,7 +362,8 @@ public class OwnerIntegrationResource  implements java.io.Serializable {
     /**
      * set resourceSpec
      *
-     * @param resourceSpec
+     * @param resourceSpec 
+     * @return OwnerIntegrationResource
      */
     public OwnerIntegrationResource resourceSpec(String resourceSpec) {
         this.resourceSpec = resourceSpec;
@@ -366,7 +374,8 @@ public class OwnerIntegrationResource  implements java.io.Serializable {
     /**
      * set purchaseMode
      *
-     * @param purchaseMode
+     * @param purchaseMode 
+     * @return OwnerIntegrationResource
      */
     public OwnerIntegrationResource purchaseMode(String purchaseMode) {
         this.purchaseMode = purchaseMode;
@@ -377,7 +386,8 @@ public class OwnerIntegrationResource  implements java.io.Serializable {
     /**
      * set payResourceNum
      *
-     * @param payResourceNum
+     * @param payResourceNum 
+     * @return OwnerIntegrationResource
      */
     public OwnerIntegrationResource payResourceNum(Integer payResourceNum) {
         this.payResourceNum = payResourceNum;

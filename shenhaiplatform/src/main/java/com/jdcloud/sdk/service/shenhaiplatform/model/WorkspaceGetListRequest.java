@@ -260,7 +260,8 @@ public class WorkspaceGetListRequest extends JdcloudRequest implements java.io.S
     /**
      * set pageNum
      *
-     * @param pageNum
+     * @param pageNum 
+     * @return WorkspaceGetListRequest
      */
     public WorkspaceGetListRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -271,7 +272,8 @@ public class WorkspaceGetListRequest extends JdcloudRequest implements java.io.S
     /**
      * set pageSize
      *
-     * @param pageSize
+     * @param pageSize 
+     * @return WorkspaceGetListRequest
      */
     public WorkspaceGetListRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -282,7 +284,8 @@ public class WorkspaceGetListRequest extends JdcloudRequest implements java.io.S
     /**
      * set workspaceName
      *
-     * @param workspaceName
+     * @param workspaceName 
+     * @return WorkspaceGetListRequest
      */
     public WorkspaceGetListRequest workspaceName(String workspaceName) {
         this.workspaceName = workspaceName;
@@ -293,7 +296,8 @@ public class WorkspaceGetListRequest extends JdcloudRequest implements java.io.S
     /**
      * set workspaceId
      *
-     * @param workspaceId
+     * @param workspaceId 
+     * @return WorkspaceGetListRequest
      */
     public WorkspaceGetListRequest workspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
@@ -304,7 +308,8 @@ public class WorkspaceGetListRequest extends JdcloudRequest implements java.io.S
     /**
      * set manager
      *
-     * @param manager
+     * @param manager 
+     * @return WorkspaceGetListRequest
      */
     public WorkspaceGetListRequest manager(String manager) {
         this.manager = manager;
@@ -315,7 +320,8 @@ public class WorkspaceGetListRequest extends JdcloudRequest implements java.io.S
     /**
      * set imProjectManager
      *
-     * @param imProjectManager
+     * @param imProjectManager 
+     * @return WorkspaceGetListRequest
      */
     public WorkspaceGetListRequest imProjectManager(Boolean imProjectManager) {
         this.imProjectManager = imProjectManager;
@@ -326,7 +332,8 @@ public class WorkspaceGetListRequest extends JdcloudRequest implements java.io.S
     /**
      * set imInProject
      *
-     * @param imInProject
+     * @param imInProject 
+     * @return WorkspaceGetListRequest
      */
     public WorkspaceGetListRequest imInProject(Boolean imInProject) {
         this.imInProject = imInProject;
@@ -337,7 +344,8 @@ public class WorkspaceGetListRequest extends JdcloudRequest implements java.io.S
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceGetListRequest
      */
     public WorkspaceGetListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -348,7 +356,8 @@ public class WorkspaceGetListRequest extends JdcloudRequest implements java.io.S
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceGetListRequest
      */
     public WorkspaceGetListRequest appName(String appName) {
         this.appName = appName;

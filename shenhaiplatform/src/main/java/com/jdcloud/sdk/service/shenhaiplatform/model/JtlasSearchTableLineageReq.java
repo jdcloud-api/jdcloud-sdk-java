@@ -141,7 +141,8 @@ public class JtlasSearchTableLineageReq  implements java.io.Serializable {
     /**
      * set 方向
      *
-     * @param direction
+     * @param direction 方向
+     * @return JtlasSearchTableLineageReq
      */
     public JtlasSearchTableLineageReq direction(String direction) {
         this.direction = direction;
@@ -152,7 +153,8 @@ public class JtlasSearchTableLineageReq  implements java.io.Serializable {
     /**
      * set 边类型
      *
-     * @param edgeType
+     * @param edgeType 边类型
+     * @return JtlasSearchTableLineageReq
      */
     public JtlasSearchTableLineageReq edgeType(String edgeType) {
         this.edgeType = edgeType;
@@ -163,7 +165,8 @@ public class JtlasSearchTableLineageReq  implements java.io.Serializable {
     /**
      * set nodeId
      *
-     * @param nodeId
+     * @param nodeId 
+     * @return JtlasSearchTableLineageReq
      */
     public JtlasSearchTableLineageReq nodeId(String nodeId) {
         this.nodeId = nodeId;
@@ -174,7 +177,8 @@ public class JtlasSearchTableLineageReq  implements java.io.Serializable {
     /**
      * set 检索深度
      *
-     * @param depth
+     * @param depth 检索深度
+     * @return JtlasSearchTableLineageReq
      */
     public JtlasSearchTableLineageReq depth(Integer depth) {
         this.depth = depth;

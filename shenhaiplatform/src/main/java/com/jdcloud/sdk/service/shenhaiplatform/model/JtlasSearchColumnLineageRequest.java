@@ -194,7 +194,8 @@ public class JtlasSearchColumnLineageRequest extends JdcloudRequest implements j
     /**
      * set 方向
      *
-     * @param direction
+     * @param direction 方向
+     * @return JtlasSearchColumnLineageRequest
      */
     public JtlasSearchColumnLineageRequest direction(String direction) {
         this.direction = direction;
@@ -205,7 +206,8 @@ public class JtlasSearchColumnLineageRequest extends JdcloudRequest implements j
     /**
      * set 边类型
      *
-     * @param edgeType
+     * @param edgeType 边类型
+     * @return JtlasSearchColumnLineageRequest
      */
     public JtlasSearchColumnLineageRequest edgeType(String edgeType) {
         this.edgeType = edgeType;
@@ -216,7 +218,8 @@ public class JtlasSearchColumnLineageRequest extends JdcloudRequest implements j
     /**
      * set nodeId
      *
-     * @param nodeId
+     * @param nodeId 
+     * @return JtlasSearchColumnLineageRequest
      */
     public JtlasSearchColumnLineageRequest nodeId(String nodeId) {
         this.nodeId = nodeId;
@@ -227,7 +230,8 @@ public class JtlasSearchColumnLineageRequest extends JdcloudRequest implements j
     /**
      * set 检索深度
      *
-     * @param depth
+     * @param depth 检索深度
+     * @return JtlasSearchColumnLineageRequest
      */
     public JtlasSearchColumnLineageRequest depth(Integer depth) {
         this.depth = depth;
@@ -238,7 +242,8 @@ public class JtlasSearchColumnLineageRequest extends JdcloudRequest implements j
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasSearchColumnLineageRequest
      */
     public JtlasSearchColumnLineageRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -249,7 +254,8 @@ public class JtlasSearchColumnLineageRequest extends JdcloudRequest implements j
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasSearchColumnLineageRequest
      */
     public JtlasSearchColumnLineageRequest appName(String appName) {
         this.appName = appName;

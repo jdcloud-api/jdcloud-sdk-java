@@ -116,7 +116,8 @@ public class WorkspaceDeleteRequest extends JdcloudRequest implements java.io.Se
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceDeleteRequest
      */
     public WorkspaceDeleteRequest id(Long id) {
         this.id = id;
@@ -127,7 +128,8 @@ public class WorkspaceDeleteRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceDeleteRequest
      */
     public WorkspaceDeleteRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class WorkspaceDeleteRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceDeleteRequest
      */
     public WorkspaceDeleteRequest appName(String appName) {
         this.appName = appName;

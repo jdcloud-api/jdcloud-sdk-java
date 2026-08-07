@@ -260,7 +260,8 @@ public class GravityParticleJobscheForceRunJobInstRequest extends JdcloudRequest
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleJobscheForceRunJobInstRequest
      */
     public GravityParticleJobscheForceRunJobInstRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -271,7 +272,8 @@ public class GravityParticleJobscheForceRunJobInstRequest extends JdcloudRequest
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GravityParticleJobscheForceRunJobInstRequest
      */
     public GravityParticleJobscheForceRunJobInstRequest txDate(String txDate) {
         this.txDate = txDate;
@@ -282,7 +284,8 @@ public class GravityParticleJobscheForceRunJobInstRequest extends JdcloudRequest
     /**
      * set sessionId
      *
-     * @param sessionId
+     * @param sessionId sessionId
+     * @return GravityParticleJobscheForceRunJobInstRequest
      */
     public GravityParticleJobscheForceRunJobInstRequest sessionId(Integer sessionId) {
         this.sessionId = sessionId;
@@ -293,7 +296,8 @@ public class GravityParticleJobscheForceRunJobInstRequest extends JdcloudRequest
     /**
      * set 是否清理之前的实例
      *
-     * @param isCleanBeforeInst
+     * @param isCleanBeforeInst 是否清理之前的实例
+     * @return GravityParticleJobscheForceRunJobInstRequest
      */
     public GravityParticleJobscheForceRunJobInstRequest isCleanBeforeInst(String isCleanBeforeInst) {
         this.isCleanBeforeInst = isCleanBeforeInst;
@@ -304,7 +308,8 @@ public class GravityParticleJobscheForceRunJobInstRequest extends JdcloudRequest
     /**
      * set 调用系统
      *
-     * @param system
+     * @param system 调用系统
+     * @return GravityParticleJobscheForceRunJobInstRequest
      */
     public GravityParticleJobscheForceRunJobInstRequest system(String system) {
         this.system = system;
@@ -315,7 +320,8 @@ public class GravityParticleJobscheForceRunJobInstRequest extends JdcloudRequest
     /**
      * set 是否完成
      *
-     * @param isComplement
+     * @param isComplement 是否完成
+     * @return GravityParticleJobscheForceRunJobInstRequest
      */
     public GravityParticleJobscheForceRunJobInstRequest isComplement(String isComplement) {
         this.isComplement = isComplement;
@@ -326,7 +332,8 @@ public class GravityParticleJobscheForceRunJobInstRequest extends JdcloudRequest
     /**
      * set 请求序列号
      *
-     * @param _REQ_SEQ_NO_
+     * @param _REQ_SEQ_NO_ 请求序列号
+     * @return GravityParticleJobscheForceRunJobInstRequest
      */
     public GravityParticleJobscheForceRunJobInstRequest _REQ_SEQ_NO_(String _REQ_SEQ_NO_) {
         this._REQ_SEQ_NO_ = _REQ_SEQ_NO_;
@@ -337,7 +344,8 @@ public class GravityParticleJobscheForceRunJobInstRequest extends JdcloudRequest
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobscheForceRunJobInstRequest
      */
     public GravityParticleJobscheForceRunJobInstRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -348,7 +356,8 @@ public class GravityParticleJobscheForceRunJobInstRequest extends JdcloudRequest
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobscheForceRunJobInstRequest
      */
     public GravityParticleJobscheForceRunJobInstRequest appName(String appName) {
         this.appName = appName;

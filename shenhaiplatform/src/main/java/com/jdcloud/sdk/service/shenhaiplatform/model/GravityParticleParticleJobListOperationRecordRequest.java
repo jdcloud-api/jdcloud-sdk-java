@@ -168,7 +168,8 @@ public class GravityParticleParticleJobListOperationRecordRequest extends Jdclou
     /**
      * set 页面大小
      *
-     * @param pageSize
+     * @param pageSize 页面大小
+     * @return GravityParticleParticleJobListOperationRecordRequest
      */
     public GravityParticleParticleJobListOperationRecordRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -179,7 +180,8 @@ public class GravityParticleParticleJobListOperationRecordRequest extends Jdclou
     /**
      * set 页码
      *
-     * @param pageNum
+     * @param pageNum 页码
+     * @return GravityParticleParticleJobListOperationRecordRequest
      */
     public GravityParticleParticleJobListOperationRecordRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -190,7 +192,8 @@ public class GravityParticleParticleJobListOperationRecordRequest extends Jdclou
     /**
      * set 作业id
      *
-     * @param jobId
+     * @param jobId 作业id
+     * @return GravityParticleParticleJobListOperationRecordRequest
      */
     public GravityParticleParticleJobListOperationRecordRequest jobId(Integer jobId) {
         this.jobId = jobId;
@@ -201,7 +204,8 @@ public class GravityParticleParticleJobListOperationRecordRequest extends Jdclou
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleParticleJobListOperationRecordRequest
      */
     public GravityParticleParticleJobListOperationRecordRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -212,7 +216,8 @@ public class GravityParticleParticleJobListOperationRecordRequest extends Jdclou
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleParticleJobListOperationRecordRequest
      */
     public GravityParticleParticleJobListOperationRecordRequest appName(String appName) {
         this.appName = appName;

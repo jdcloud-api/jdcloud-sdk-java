@@ -186,7 +186,8 @@ public class UranusScriptQueriesResult extends JdcloudResult implements java.io.
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusScriptQueriesResult
      */
     public UranusScriptQueriesResult code(String code) {
         this.code = code;
@@ -197,7 +198,8 @@ public class UranusScriptQueriesResult extends JdcloudResult implements java.io.
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusScriptQueriesResult
      */
     public UranusScriptQueriesResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -208,7 +210,8 @@ public class UranusScriptQueriesResult extends JdcloudResult implements java.io.
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusScriptQueriesResult
      */
     public UranusScriptQueriesResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -219,7 +222,8 @@ public class UranusScriptQueriesResult extends JdcloudResult implements java.io.
     /**
     * set Object
     *
-    * @param result
+    * @param result Object
+    * @return UranusScriptQueriesResult
     */
     public UranusScriptQueriesResult result(List<UranusTaskParamReq> result) {
         this.result = result;
@@ -230,7 +234,8 @@ public class UranusScriptQueriesResult extends JdcloudResult implements java.io.
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusScriptQueriesResult
      */
     public UranusScriptQueriesResult subCode(String subCode) {
         this.subCode = subCode;
@@ -241,7 +246,8 @@ public class UranusScriptQueriesResult extends JdcloudResult implements java.io.
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusScriptQueriesResult
      */
     public UranusScriptQueriesResult successed(Boolean successed) {
         this.successed = successed;

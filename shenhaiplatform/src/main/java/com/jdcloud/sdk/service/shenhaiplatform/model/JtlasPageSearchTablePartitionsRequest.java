@@ -220,7 +220,8 @@ public class JtlasPageSearchTablePartitionsRequest extends JdcloudRequest implem
     /**
      * set 数据库名称（项目编码）
      *
-     * @param database
+     * @param database 数据库名称（项目编码）
+     * @return JtlasPageSearchTablePartitionsRequest
      */
     public JtlasPageSearchTablePartitionsRequest database(String database) {
         this.database = database;
@@ -231,7 +232,8 @@ public class JtlasPageSearchTablePartitionsRequest extends JdcloudRequest implem
     /**
      * set 模糊关键字
      *
-     * @param fuzzyText
+     * @param fuzzyText 模糊关键字
+     * @return JtlasPageSearchTablePartitionsRequest
      */
     public JtlasPageSearchTablePartitionsRequest fuzzyText(String fuzzyText) {
         this.fuzzyText = fuzzyText;
@@ -242,7 +244,8 @@ public class JtlasPageSearchTablePartitionsRequest extends JdcloudRequest implem
     /**
      * set 分页参数-页码
      *
-     * @param pageNum
+     * @param pageNum 分页参数-页码
+     * @return JtlasPageSearchTablePartitionsRequest
      */
     public JtlasPageSearchTablePartitionsRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -253,7 +256,8 @@ public class JtlasPageSearchTablePartitionsRequest extends JdcloudRequest implem
     /**
      * set 分页参数-页数
      *
-     * @param pageSize
+     * @param pageSize 分页参数-页数
+     * @return JtlasPageSearchTablePartitionsRequest
      */
     public JtlasPageSearchTablePartitionsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -264,7 +268,8 @@ public class JtlasPageSearchTablePartitionsRequest extends JdcloudRequest implem
     /**
      * set 表名信息
      *
-     * @param tableName
+     * @param tableName 表名信息
+     * @return JtlasPageSearchTablePartitionsRequest
      */
     public JtlasPageSearchTablePartitionsRequest tableName(String tableName) {
         this.tableName = tableName;
@@ -275,7 +280,8 @@ public class JtlasPageSearchTablePartitionsRequest extends JdcloudRequest implem
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasPageSearchTablePartitionsRequest
      */
     public JtlasPageSearchTablePartitionsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -286,7 +292,8 @@ public class JtlasPageSearchTablePartitionsRequest extends JdcloudRequest implem
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasPageSearchTablePartitionsRequest
      */
     public JtlasPageSearchTablePartitionsRequest appName(String appName) {
         this.appName = appName;

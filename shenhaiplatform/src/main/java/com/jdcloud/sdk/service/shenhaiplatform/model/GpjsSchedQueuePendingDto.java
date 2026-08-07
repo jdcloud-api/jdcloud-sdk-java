@@ -326,7 +326,8 @@ public class GpjsSchedQueuePendingDto  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpjsSchedQueuePendingDto
      */
     public GpjsSchedQueuePendingDto jobName(String jobName) {
         this.jobName = jobName;
@@ -337,7 +338,8 @@ public class GpjsSchedQueuePendingDto  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GpjsSchedQueuePendingDto
      */
     public GpjsSchedQueuePendingDto txDate(String txDate) {
         this.txDate = txDate;
@@ -348,7 +350,8 @@ public class GpjsSchedQueuePendingDto  implements java.io.Serializable {
     /**
      * set sessionid
      *
-     * @param sessionid
+     * @param sessionid sessionid
+     * @return GpjsSchedQueuePendingDto
      */
     public GpjsSchedQueuePendingDto sessionid(Integer sessionid) {
         this.sessionid = sessionid;
@@ -359,7 +362,8 @@ public class GpjsSchedQueuePendingDto  implements java.io.Serializable {
     /**
      * set 作业优先级
      *
-     * @param priority
+     * @param priority 作业优先级
+     * @return GpjsSchedQueuePendingDto
      */
     public GpjsSchedQueuePendingDto priority(Integer priority) {
         this.priority = priority;
@@ -370,7 +374,8 @@ public class GpjsSchedQueuePendingDto  implements java.io.Serializable {
     /**
      * set 超时时间
      *
-     * @param timeout
+     * @param timeout 超时时间
+     * @return GpjsSchedQueuePendingDto
      */
     public GpjsSchedQueuePendingDto timeout(Integer timeout) {
         this.timeout = timeout;
@@ -381,7 +386,8 @@ public class GpjsSchedQueuePendingDto  implements java.io.Serializable {
     /**
      * set 进入队列的类型
      *
-     * @param eqType
+     * @param eqType 进入队列的类型
+     * @return GpjsSchedQueuePendingDto
      */
     public GpjsSchedQueuePendingDto eqType(String eqType) {
         this.eqType = eqType;
@@ -392,7 +398,8 @@ public class GpjsSchedQueuePendingDto  implements java.io.Serializable {
     /**
      * set 命名空间，已经废弃
      *
-     * @param nsName
+     * @param nsName 命名空间，已经废弃
+     * @return GpjsSchedQueuePendingDto
      */
     public GpjsSchedQueuePendingDto nsName(String nsName) {
         this.nsName = nsName;
@@ -403,7 +410,8 @@ public class GpjsSchedQueuePendingDto  implements java.io.Serializable {
     /**
      * set 服务器资源消耗，已经废弃
      *
-     * @param serverResourVal
+     * @param serverResourVal 服务器资源消耗，已经废弃
+     * @return GpjsSchedQueuePendingDto
      */
     public GpjsSchedQueuePendingDto serverResourVal(Integer serverResourVal) {
         this.serverResourVal = serverResourVal;
@@ -414,7 +422,8 @@ public class GpjsSchedQueuePendingDto  implements java.io.Serializable {
     /**
      * set 运行参数
      *
-     * @param runParams
+     * @param runParams 运行参数
+     * @return GpjsSchedQueuePendingDto
      */
     public GpjsSchedQueuePendingDto runParams(String runParams) {
         this.runParams = runParams;
@@ -425,7 +434,8 @@ public class GpjsSchedQueuePendingDto  implements java.io.Serializable {
     /**
      * set 调度时间
      *
-     * @param schedTime
+     * @param schedTime 调度时间
+     * @return GpjsSchedQueuePendingDto
      */
     public GpjsSchedQueuePendingDto schedTime(String schedTime) {
         this.schedTime = schedTime;
@@ -436,7 +446,8 @@ public class GpjsSchedQueuePendingDto  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return GpjsSchedQueuePendingDto
      */
     public GpjsSchedQueuePendingDto createTime(String createTime) {
         this.createTime = createTime;
@@ -447,7 +458,8 @@ public class GpjsSchedQueuePendingDto  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return GpjsSchedQueuePendingDto
      */
     public GpjsSchedQueuePendingDto updateTime(String updateTime) {
         this.updateTime = updateTime;

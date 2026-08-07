@@ -110,7 +110,8 @@ public class UserRoleInfo  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return UserRoleInfo
      */
     public UserRoleInfo id(Long id) {
         this.id = id;
@@ -121,7 +122,8 @@ public class UserRoleInfo  implements java.io.Serializable {
     /**
      * set userPin
      *
-     * @param userPin
+     * @param userPin 
+     * @return UserRoleInfo
      */
     public UserRoleInfo userPin(String userPin) {
         this.userPin = userPin;
@@ -132,7 +134,8 @@ public class UserRoleInfo  implements java.io.Serializable {
     /**
      * set userRole
      *
-     * @param userRole
+     * @param userRole 
+     * @return UserRoleInfo
      */
     public UserRoleInfo userRole(String userRole) {
         this.userRole = userRole;

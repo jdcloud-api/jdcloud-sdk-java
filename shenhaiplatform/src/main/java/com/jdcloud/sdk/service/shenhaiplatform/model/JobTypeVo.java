@@ -136,7 +136,8 @@ public class JobTypeVo  implements java.io.Serializable {
     /**
      * set 字典类型
      *
-     * @param dictType
+     * @param dictType 字典类型
+     * @return JobTypeVo
      */
     public JobTypeVo dictType(String dictType) {
         this.dictType = dictType;
@@ -147,7 +148,8 @@ public class JobTypeVo  implements java.io.Serializable {
     /**
      * set 作业类型-值
      *
-     * @param dictCode
+     * @param dictCode 作业类型-值
+     * @return JobTypeVo
      */
     public JobTypeVo dictCode(String dictCode) {
         this.dictCode = dictCode;
@@ -158,7 +160,8 @@ public class JobTypeVo  implements java.io.Serializable {
     /**
      * set 作业类型-展示
      *
-     * @param dictName
+     * @param dictName 作业类型-展示
+     * @return JobTypeVo
      */
     public JobTypeVo dictName(String dictName) {
         this.dictName = dictName;
@@ -169,7 +172,8 @@ public class JobTypeVo  implements java.io.Serializable {
     /**
     * set 子类型
     *
-    * @param childDictList
+    * @param childDictList 子类型
+    * @return JobTypeVo
     */
     public JobTypeVo childDictList(List<JobTypeVo> childDictList) {
         this.childDictList = childDictList;

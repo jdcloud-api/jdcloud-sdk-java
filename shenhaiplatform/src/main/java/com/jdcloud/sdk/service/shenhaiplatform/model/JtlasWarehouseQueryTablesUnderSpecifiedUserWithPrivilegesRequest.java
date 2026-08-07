@@ -172,7 +172,8 @@ public class JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest ex
     /**
      * set 数据库（工作空间编码）
      *
-     * @param database
+     * @param database 数据库（工作空间编码）
+     * @return JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest
      */
     public JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest database(String database) {
         this.database = database;
@@ -183,7 +184,8 @@ public class JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest ex
     /**
      * set 账户信息
      *
-     * @param principalName
+     * @param principalName 账户信息
+     * @return JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest
      */
     public JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest principalName(String principalName) {
         this.principalName = principalName;
@@ -194,7 +196,8 @@ public class JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest ex
     /**
     * set 权限信息
     *
-    * @param privilegeTypes
+    * @param privilegeTypes 权限信息
+    * @return JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest
     */
     public JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest privilegeTypes(List<String> privilegeTypes) {
         this.privilegeTypes = privilegeTypes;
@@ -205,7 +208,8 @@ public class JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest ex
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest
      */
     public JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -216,7 +220,8 @@ public class JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest ex
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest
      */
     public JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest appName(String appName) {
         this.appName = appName;

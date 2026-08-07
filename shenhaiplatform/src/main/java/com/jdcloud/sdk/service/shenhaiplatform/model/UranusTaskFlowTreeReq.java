@@ -134,7 +134,8 @@ public class UranusTaskFlowTreeReq  implements java.io.Serializable {
     /**
      * set 关键字查询
      *
-     * @param keyWord
+     * @param keyWord 关键字查询
+     * @return UranusTaskFlowTreeReq
      */
     public UranusTaskFlowTreeReq keyWord(String keyWord) {
         this.keyWord = keyWord;
@@ -145,7 +146,8 @@ public class UranusTaskFlowTreeReq  implements java.io.Serializable {
     /**
      * set 目录code
      *
-     * @param catalogCode
+     * @param catalogCode 目录code
+     * @return UranusTaskFlowTreeReq
      */
     public UranusTaskFlowTreeReq catalogCode(String catalogCode) {
         this.catalogCode = catalogCode;
@@ -156,7 +158,8 @@ public class UranusTaskFlowTreeReq  implements java.io.Serializable {
     /**
      * set 工作流code
      *
-     * @param flowCode
+     * @param flowCode 工作流code
+     * @return UranusTaskFlowTreeReq
      */
     public UranusTaskFlowTreeReq flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -167,7 +170,8 @@ public class UranusTaskFlowTreeReq  implements java.io.Serializable {
     /**
      * set 查询过滤条件  all 全部、recent 最近使用、join 参数、collection 收藏
      *
-     * @param searchType
+     * @param searchType 查询过滤条件  all 全部、recent 最近使用、join 参数、collection 收藏
+     * @return UranusTaskFlowTreeReq
      */
     public UranusTaskFlowTreeReq searchType(String searchType) {
         this.searchType = searchType;

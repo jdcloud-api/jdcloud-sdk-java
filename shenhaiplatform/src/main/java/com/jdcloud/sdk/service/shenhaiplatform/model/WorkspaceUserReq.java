@@ -230,7 +230,8 @@ public class WorkspaceUserReq  implements java.io.Serializable {
     /**
      * set pageNum
      *
-     * @param pageNum
+     * @param pageNum 
+     * @return WorkspaceUserReq
      */
     public WorkspaceUserReq pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -241,7 +242,8 @@ public class WorkspaceUserReq  implements java.io.Serializable {
     /**
      * set pageSize
      *
-     * @param pageSize
+     * @param pageSize 
+     * @return WorkspaceUserReq
      */
     public WorkspaceUserReq pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -252,7 +254,8 @@ public class WorkspaceUserReq  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceUserReq
      */
     public WorkspaceUserReq id(Long id) {
         this.id = id;
@@ -263,7 +266,8 @@ public class WorkspaceUserReq  implements java.io.Serializable {
     /**
      * set userName
      *
-     * @param userName
+     * @param userName 
+     * @return WorkspaceUserReq
      */
     public WorkspaceUserReq userName(String userName) {
         this.userName = userName;
@@ -274,7 +278,8 @@ public class WorkspaceUserReq  implements java.io.Serializable {
     /**
      * set nickName
      *
-     * @param nickName
+     * @param nickName 
+     * @return WorkspaceUserReq
      */
     public WorkspaceUserReq nickName(String nickName) {
         this.nickName = nickName;
@@ -285,7 +290,8 @@ public class WorkspaceUserReq  implements java.io.Serializable {
     /**
      * set userPin
      *
-     * @param userPin
+     * @param userPin 
+     * @return WorkspaceUserReq
      */
     public WorkspaceUserReq userPin(String userPin) {
         this.userPin = userPin;
@@ -296,7 +302,8 @@ public class WorkspaceUserReq  implements java.io.Serializable {
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return WorkspaceUserReq
      */
     public WorkspaceUserReq workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -307,7 +314,8 @@ public class WorkspaceUserReq  implements java.io.Serializable {
     /**
      * set companyCode
      *
-     * @param companyCode
+     * @param companyCode 
+     * @return WorkspaceUserReq
      */
     public WorkspaceUserReq companyCode(String companyCode) {
         this.companyCode = companyCode;

@@ -158,7 +158,8 @@ public class JcwSpaceSummaryVo  implements java.io.Serializable {
     /**
      * set 集群每日存储空间增量
      *
-     * @param incrementalUsedByDay
+     * @param incrementalUsedByDay 集群每日存储空间增量
+     * @return JcwSpaceSummaryVo
      */
     public JcwSpaceSummaryVo incrementalUsedByDay(String incrementalUsedByDay) {
         this.incrementalUsedByDay = incrementalUsedByDay;
@@ -169,7 +170,8 @@ public class JcwSpaceSummaryVo  implements java.io.Serializable {
     /**
      * set 总使用量
      *
-     * @param totalUsed
+     * @param totalUsed 总使用量
+     * @return JcwSpaceSummaryVo
      */
     public JcwSpaceSummaryVo totalUsed(String totalUsed) {
         this.totalUsed = totalUsed;
@@ -180,7 +182,8 @@ public class JcwSpaceSummaryVo  implements java.io.Serializable {
     /**
      * set 总剩余空间
      *
-     * @param totalFree
+     * @param totalFree 总剩余空间
+     * @return JcwSpaceSummaryVo
      */
     public JcwSpaceSummaryVo totalFree(String totalFree) {
         this.totalFree = totalFree;
@@ -191,7 +194,8 @@ public class JcwSpaceSummaryVo  implements java.io.Serializable {
     /**
      * set 使用率
      *
-     * @param usedPercent
+     * @param usedPercent 使用率
+     * @return JcwSpaceSummaryVo
      */
     public JcwSpaceSummaryVo usedPercent(String usedPercent) {
         this.usedPercent = usedPercent;
@@ -202,7 +206,8 @@ public class JcwSpaceSummaryVo  implements java.io.Serializable {
     /**
      * set 采集时间
      *
-     * @param collectTime
+     * @param collectTime 采集时间
+     * @return JcwSpaceSummaryVo
      */
     public JcwSpaceSummaryVo collectTime(String collectTime) {
         this.collectTime = collectTime;

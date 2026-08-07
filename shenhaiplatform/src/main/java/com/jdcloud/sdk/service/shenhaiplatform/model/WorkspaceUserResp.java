@@ -184,7 +184,8 @@ public class WorkspaceUserResp  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceUserResp
      */
     public WorkspaceUserResp id(Long id) {
         this.id = id;
@@ -195,7 +196,8 @@ public class WorkspaceUserResp  implements java.io.Serializable {
     /**
      * set userPin
      *
-     * @param userPin
+     * @param userPin 
+     * @return WorkspaceUserResp
      */
     public WorkspaceUserResp userPin(String userPin) {
         this.userPin = userPin;
@@ -206,7 +208,8 @@ public class WorkspaceUserResp  implements java.io.Serializable {
     /**
      * set userName
      *
-     * @param userName
+     * @param userName 
+     * @return WorkspaceUserResp
      */
     public WorkspaceUserResp userName(String userName) {
         this.userName = userName;
@@ -217,7 +220,8 @@ public class WorkspaceUserResp  implements java.io.Serializable {
     /**
      * set nickName
      *
-     * @param nickName
+     * @param nickName 
+     * @return WorkspaceUserResp
      */
     public WorkspaceUserResp nickName(String nickName) {
         this.nickName = nickName;
@@ -228,7 +232,8 @@ public class WorkspaceUserResp  implements java.io.Serializable {
     /**
     * set userRoleList
     *
-    * @param userRoleList
+    * @param userRoleList 
+    * @return WorkspaceUserResp
     */
     public WorkspaceUserResp userRoleList(List<String> userRoleList) {
         this.userRoleList = userRoleList;
@@ -239,7 +244,8 @@ public class WorkspaceUserResp  implements java.io.Serializable {
     /**
      * set updateDate
      *
-     * @param updateDate
+     * @param updateDate 
+     * @return WorkspaceUserResp
      */
     public WorkspaceUserResp updateDate(String updateDate) {
         this.updateDate = updateDate;

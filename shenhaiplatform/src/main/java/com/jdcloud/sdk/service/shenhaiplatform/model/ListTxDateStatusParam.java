@@ -374,7 +374,8 @@ public class ListTxDateStatusParam  implements java.io.Serializable {
     /**
      * set 页码
      *
-     * @param pageNum
+     * @param pageNum 页码
+     * @return ListTxDateStatusParam
      */
     public ListTxDateStatusParam pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -385,7 +386,8 @@ public class ListTxDateStatusParam  implements java.io.Serializable {
     /**
      * set 页大小
      *
-     * @param pageSize
+     * @param pageSize 页大小
+     * @return ListTxDateStatusParam
      */
     public ListTxDateStatusParam pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -396,7 +398,8 @@ public class ListTxDateStatusParam  implements java.io.Serializable {
     /**
      * set 任务编码
      *
-     * @param companyCode
+     * @param companyCode 任务编码
+     * @return ListTxDateStatusParam
      */
     public ListTxDateStatusParam companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -407,7 +410,8 @@ public class ListTxDateStatusParam  implements java.io.Serializable {
     /**
      * set 负责人pin
      *
-     * @param managerPin
+     * @param managerPin 负责人pin
+     * @return ListTxDateStatusParam
      */
     public ListTxDateStatusParam managerPin(String managerPin) {
         this.managerPin = managerPin;
@@ -418,7 +422,8 @@ public class ListTxDateStatusParam  implements java.io.Serializable {
     /**
      * set 工作空间编码
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间编码
+     * @return ListTxDateStatusParam
      */
     public ListTxDateStatusParam workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -429,7 +434,8 @@ public class ListTxDateStatusParam  implements java.io.Serializable {
     /**
      * set 任务名称
      *
-     * @param cstJobName
+     * @param cstJobName 任务名称
+     * @return ListTxDateStatusParam
      */
     public ListTxDateStatusParam cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -440,7 +446,8 @@ public class ListTxDateStatusParam  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return ListTxDateStatusParam
      */
     public ListTxDateStatusParam txDate(String txDate) {
         this.txDate = txDate;
@@ -451,7 +458,8 @@ public class ListTxDateStatusParam  implements java.io.Serializable {
     /**
      * set 任务运行开始-开始时间: yyyy-MM-dd HH:mm
      *
-     * @param jobStartAfterTime
+     * @param jobStartAfterTime 任务运行开始-开始时间: yyyy-MM-dd HH:mm
+     * @return ListTxDateStatusParam
      */
     public ListTxDateStatusParam jobStartAfterTime(String jobStartAfterTime) {
         this.jobStartAfterTime = jobStartAfterTime;
@@ -462,7 +470,8 @@ public class ListTxDateStatusParam  implements java.io.Serializable {
     /**
      * set 任务运行开始-结束时间: yyyy-MM-dd HH:mm
      *
-     * @param jobStartBeforeTime
+     * @param jobStartBeforeTime 任务运行开始-结束时间: yyyy-MM-dd HH:mm
+     * @return ListTxDateStatusParam
      */
     public ListTxDateStatusParam jobStartBeforeTime(String jobStartBeforeTime) {
         this.jobStartBeforeTime = jobStartBeforeTime;
@@ -473,7 +482,8 @@ public class ListTxDateStatusParam  implements java.io.Serializable {
     /**
      * set 任务运行结束-开始时间: yyyy-MM-dd HH:mm
      *
-     * @param jobEndAfterTime
+     * @param jobEndAfterTime 任务运行结束-开始时间: yyyy-MM-dd HH:mm
+     * @return ListTxDateStatusParam
      */
     public ListTxDateStatusParam jobEndAfterTime(String jobEndAfterTime) {
         this.jobEndAfterTime = jobEndAfterTime;
@@ -484,7 +494,8 @@ public class ListTxDateStatusParam  implements java.io.Serializable {
     /**
      * set 任务运行结束-结束时间: yyyy-MM-dd HH:mm
      *
-     * @param jobEndBeforeTime
+     * @param jobEndBeforeTime 任务运行结束-结束时间: yyyy-MM-dd HH:mm
+     * @return ListTxDateStatusParam
      */
     public ListTxDateStatusParam jobEndBeforeTime(String jobEndBeforeTime) {
         this.jobEndBeforeTime = jobEndBeforeTime;
@@ -495,7 +506,8 @@ public class ListTxDateStatusParam  implements java.io.Serializable {
     /**
      * set 任务类型
      *
-     * @param jobType
+     * @param jobType 任务类型
+     * @return ListTxDateStatusParam
      */
     public ListTxDateStatusParam jobType(String jobType) {
         this.jobType = jobType;
@@ -506,7 +518,8 @@ public class ListTxDateStatusParam  implements java.io.Serializable {
     /**
      * set 运行频率
      *
-     * @param cycle
+     * @param cycle 运行频率
+     * @return ListTxDateStatusParam
      */
     public ListTxDateStatusParam cycle(String cycle) {
         this.cycle = cycle;
@@ -517,7 +530,8 @@ public class ListTxDateStatusParam  implements java.io.Serializable {
     /**
      * set 运行状态
      *
-     * @param status
+     * @param status 运行状态
+     * @return ListTxDateStatusParam
      */
     public ListTxDateStatusParam status(String status) {
         this.status = status;

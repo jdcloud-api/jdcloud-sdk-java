@@ -184,7 +184,8 @@ public class UranusTaskInfoOnLineConfigResult extends JdcloudResult implements j
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusTaskInfoOnLineConfigResult
      */
     public UranusTaskInfoOnLineConfigResult code(String code) {
         this.code = code;
@@ -195,7 +196,8 @@ public class UranusTaskInfoOnLineConfigResult extends JdcloudResult implements j
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusTaskInfoOnLineConfigResult
      */
     public UranusTaskInfoOnLineConfigResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -206,7 +208,8 @@ public class UranusTaskInfoOnLineConfigResult extends JdcloudResult implements j
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusTaskInfoOnLineConfigResult
      */
     public UranusTaskInfoOnLineConfigResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -217,7 +220,8 @@ public class UranusTaskInfoOnLineConfigResult extends JdcloudResult implements j
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return UranusTaskInfoOnLineConfigResult
      */
     public UranusTaskInfoOnLineConfigResult result(UranusTaskInfo result) {
         this.result = result;
@@ -228,7 +232,8 @@ public class UranusTaskInfoOnLineConfigResult extends JdcloudResult implements j
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusTaskInfoOnLineConfigResult
      */
     public UranusTaskInfoOnLineConfigResult subCode(String subCode) {
         this.subCode = subCode;
@@ -239,7 +244,8 @@ public class UranusTaskInfoOnLineConfigResult extends JdcloudResult implements j
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusTaskInfoOnLineConfigResult
      */
     public UranusTaskInfoOnLineConfigResult successed(Boolean successed) {
         this.successed = successed;

@@ -168,7 +168,8 @@ public class GravityParticleJobMonitorJobDispatchTrendRequest extends JdcloudReq
     /**
      * set 是否统计本人作业
      *
-     * @param isMine
+     * @param isMine 是否统计本人作业
+     * @return GravityParticleJobMonitorJobDispatchTrendRequest
      */
     public GravityParticleJobMonitorJobDispatchTrendRequest isMine(Boolean isMine) {
         this.isMine = isMine;
@@ -179,7 +180,8 @@ public class GravityParticleJobMonitorJobDispatchTrendRequest extends JdcloudReq
     /**
      * set 统计维度：job作业，inst实例
      *
-     * @param dimType
+     * @param dimType 统计维度：job作业，inst实例
+     * @return GravityParticleJobMonitorJobDispatchTrendRequest
      */
     public GravityParticleJobMonitorJobDispatchTrendRequest dimType(String dimType) {
         this.dimType = dimType;
@@ -190,7 +192,8 @@ public class GravityParticleJobMonitorJobDispatchTrendRequest extends JdcloudReq
     /**
      * set 统计范围天数
      *
-     * @param slot
+     * @param slot 统计范围天数
+     * @return GravityParticleJobMonitorJobDispatchTrendRequest
      */
     public GravityParticleJobMonitorJobDispatchTrendRequest slot(Integer slot) {
         this.slot = slot;
@@ -201,7 +204,8 @@ public class GravityParticleJobMonitorJobDispatchTrendRequest extends JdcloudReq
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobMonitorJobDispatchTrendRequest
      */
     public GravityParticleJobMonitorJobDispatchTrendRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -212,7 +216,8 @@ public class GravityParticleJobMonitorJobDispatchTrendRequest extends JdcloudReq
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobMonitorJobDispatchTrendRequest
      */
     public GravityParticleJobMonitorJobDispatchTrendRequest appName(String appName) {
         this.appName = appName;

@@ -185,7 +185,8 @@ public class UranusCatalogInfoCode  implements java.io.Serializable {
     /**
      * set 前端排序唯一ID
      *
-     * @param unrealId
+     * @param unrealId 前端排序唯一ID
+     * @return UranusCatalogInfoCode
      */
     public UranusCatalogInfoCode unrealId(String unrealId) {
         this.unrealId = unrealId;
@@ -196,7 +197,8 @@ public class UranusCatalogInfoCode  implements java.io.Serializable {
     /**
      * set 目录code
      *
-     * @param catalogCode
+     * @param catalogCode 目录code
+     * @return UranusCatalogInfoCode
      */
     public UranusCatalogInfoCode catalogCode(String catalogCode) {
         this.catalogCode = catalogCode;
@@ -207,7 +209,8 @@ public class UranusCatalogInfoCode  implements java.io.Serializable {
     /**
      * set 目录名称
      *
-     * @param catalogName
+     * @param catalogName 目录名称
+     * @return UranusCatalogInfoCode
      */
     public UranusCatalogInfoCode catalogName(String catalogName) {
         this.catalogName = catalogName;
@@ -218,7 +221,8 @@ public class UranusCatalogInfoCode  implements java.io.Serializable {
     /**
      * set 0：非叶子目录， 1：叶子目录
      *
-     * @param catalogType
+     * @param catalogType 0：非叶子目录， 1：叶子目录
+     * @return UranusCatalogInfoCode
      */
     public UranusCatalogInfoCode catalogType(Integer catalogType) {
         this.catalogType = catalogType;
@@ -229,7 +233,8 @@ public class UranusCatalogInfoCode  implements java.io.Serializable {
     /**
      * set 父目录code
      *
-     * @param parentCode
+     * @param parentCode 父目录code
+     * @return UranusCatalogInfoCode
      */
     public UranusCatalogInfoCode parentCode(String parentCode) {
         this.parentCode = parentCode;
@@ -240,7 +245,8 @@ public class UranusCatalogInfoCode  implements java.io.Serializable {
     /**
      * set 子节点数量
      *
-     * @param childrenNum
+     * @param childrenNum 子节点数量
+     * @return UranusCatalogInfoCode
      */
     public UranusCatalogInfoCode childrenNum(Integer childrenNum) {
         this.childrenNum = childrenNum;

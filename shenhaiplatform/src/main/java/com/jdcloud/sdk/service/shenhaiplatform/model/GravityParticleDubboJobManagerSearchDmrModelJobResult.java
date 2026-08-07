@@ -138,7 +138,8 @@ public class GravityParticleDubboJobManagerSearchDmrModelJobResult extends Jdclo
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GravityParticleDubboJobManagerSearchDmrModelJobResult
      */
     public GravityParticleDubboJobManagerSearchDmrModelJobResult success(Integer success) {
         this.success = success;
@@ -149,7 +150,8 @@ public class GravityParticleDubboJobManagerSearchDmrModelJobResult extends Jdclo
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GravityParticleDubboJobManagerSearchDmrModelJobResult
      */
     public GravityParticleDubboJobManagerSearchDmrModelJobResult code(String code) {
         this.code = code;
@@ -160,7 +162,8 @@ public class GravityParticleDubboJobManagerSearchDmrModelJobResult extends Jdclo
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GravityParticleDubboJobManagerSearchDmrModelJobResult
      */
     public GravityParticleDubboJobManagerSearchDmrModelJobResult msg(String msg) {
         this.msg = msg;
@@ -171,7 +174,8 @@ public class GravityParticleDubboJobManagerSearchDmrModelJobResult extends Jdclo
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return GravityParticleDubboJobManagerSearchDmrModelJobResult
     */
     public GravityParticleDubboJobManagerSearchDmrModelJobResult result(List<GpdjmcDmrModelJobRDTO> result) {
         this.result = result;

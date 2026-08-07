@@ -284,7 +284,8 @@ public class WorkspaceGetCurrentUserInfoRequest extends JdcloudRequest implement
     /**
      * set pageNum
      *
-     * @param pageNum
+     * @param pageNum 
+     * @return WorkspaceGetCurrentUserInfoRequest
      */
     public WorkspaceGetCurrentUserInfoRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -295,7 +296,8 @@ public class WorkspaceGetCurrentUserInfoRequest extends JdcloudRequest implement
     /**
      * set pageSize
      *
-     * @param pageSize
+     * @param pageSize 
+     * @return WorkspaceGetCurrentUserInfoRequest
      */
     public WorkspaceGetCurrentUserInfoRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -306,7 +308,8 @@ public class WorkspaceGetCurrentUserInfoRequest extends JdcloudRequest implement
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceGetCurrentUserInfoRequest
      */
     public WorkspaceGetCurrentUserInfoRequest id(Long id) {
         this.id = id;
@@ -317,7 +320,8 @@ public class WorkspaceGetCurrentUserInfoRequest extends JdcloudRequest implement
     /**
      * set userName
      *
-     * @param userName
+     * @param userName 
+     * @return WorkspaceGetCurrentUserInfoRequest
      */
     public WorkspaceGetCurrentUserInfoRequest userName(String userName) {
         this.userName = userName;
@@ -328,7 +332,8 @@ public class WorkspaceGetCurrentUserInfoRequest extends JdcloudRequest implement
     /**
      * set nickName
      *
-     * @param nickName
+     * @param nickName 
+     * @return WorkspaceGetCurrentUserInfoRequest
      */
     public WorkspaceGetCurrentUserInfoRequest nickName(String nickName) {
         this.nickName = nickName;
@@ -339,7 +344,8 @@ public class WorkspaceGetCurrentUserInfoRequest extends JdcloudRequest implement
     /**
      * set userPin
      *
-     * @param userPin
+     * @param userPin 
+     * @return WorkspaceGetCurrentUserInfoRequest
      */
     public WorkspaceGetCurrentUserInfoRequest userPin(String userPin) {
         this.userPin = userPin;
@@ -350,7 +356,8 @@ public class WorkspaceGetCurrentUserInfoRequest extends JdcloudRequest implement
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return WorkspaceGetCurrentUserInfoRequest
      */
     public WorkspaceGetCurrentUserInfoRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -361,7 +368,8 @@ public class WorkspaceGetCurrentUserInfoRequest extends JdcloudRequest implement
     /**
      * set companyCode
      *
-     * @param companyCode
+     * @param companyCode 
+     * @return WorkspaceGetCurrentUserInfoRequest
      */
     public WorkspaceGetCurrentUserInfoRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -372,7 +380,8 @@ public class WorkspaceGetCurrentUserInfoRequest extends JdcloudRequest implement
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceGetCurrentUserInfoRequest
      */
     public WorkspaceGetCurrentUserInfoRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -383,7 +392,8 @@ public class WorkspaceGetCurrentUserInfoRequest extends JdcloudRequest implement
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceGetCurrentUserInfoRequest
      */
     public WorkspaceGetCurrentUserInfoRequest appName(String appName) {
         this.appName = appName;

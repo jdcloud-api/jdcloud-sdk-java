@@ -188,7 +188,8 @@ public class UranusTaskFlowListTreeRequest extends JdcloudRequest implements jav
     /**
      * set 关键字查询
      *
-     * @param keyWord
+     * @param keyWord 关键字查询
+     * @return UranusTaskFlowListTreeRequest
      */
     public UranusTaskFlowListTreeRequest keyWord(String keyWord) {
         this.keyWord = keyWord;
@@ -199,7 +200,8 @@ public class UranusTaskFlowListTreeRequest extends JdcloudRequest implements jav
     /**
      * set 目录code
      *
-     * @param catalogCode
+     * @param catalogCode 目录code
+     * @return UranusTaskFlowListTreeRequest
      */
     public UranusTaskFlowListTreeRequest catalogCode(String catalogCode) {
         this.catalogCode = catalogCode;
@@ -210,7 +212,8 @@ public class UranusTaskFlowListTreeRequest extends JdcloudRequest implements jav
     /**
      * set 工作流code
      *
-     * @param flowCode
+     * @param flowCode 工作流code
+     * @return UranusTaskFlowListTreeRequest
      */
     public UranusTaskFlowListTreeRequest flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -221,7 +224,8 @@ public class UranusTaskFlowListTreeRequest extends JdcloudRequest implements jav
     /**
      * set 查询过滤条件  all 全部、recent 最近使用、join 参数、collection 收藏
      *
-     * @param searchType
+     * @param searchType 查询过滤条件  all 全部、recent 最近使用、join 参数、collection 收藏
+     * @return UranusTaskFlowListTreeRequest
      */
     public UranusTaskFlowListTreeRequest searchType(String searchType) {
         this.searchType = searchType;
@@ -232,7 +236,8 @@ public class UranusTaskFlowListTreeRequest extends JdcloudRequest implements jav
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskFlowListTreeRequest
      */
     public UranusTaskFlowListTreeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -243,7 +248,8 @@ public class UranusTaskFlowListTreeRequest extends JdcloudRequest implements jav
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskFlowListTreeRequest
      */
     public UranusTaskFlowListTreeRequest appName(String appName) {
         this.appName = appName;

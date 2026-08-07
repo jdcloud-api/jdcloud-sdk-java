@@ -191,7 +191,8 @@ public class UranusTaskFlowUpdateReq  implements java.io.Serializable {
     /**
      * set 工作流名称
      *
-     * @param flowName
+     * @param flowName 工作流名称
+     * @return UranusTaskFlowUpdateReq
      */
     public UranusTaskFlowUpdateReq flowName(String flowName) {
         this.flowName = flowName;
@@ -202,7 +203,8 @@ public class UranusTaskFlowUpdateReq  implements java.io.Serializable {
     /**
      * set 工作流描述
      *
-     * @param flowDesc
+     * @param flowDesc 工作流描述
+     * @return UranusTaskFlowUpdateReq
      */
     public UranusTaskFlowUpdateReq flowDesc(String flowDesc) {
         this.flowDesc = flowDesc;
@@ -213,7 +215,8 @@ public class UranusTaskFlowUpdateReq  implements java.io.Serializable {
     /**
      * set 工作流所属目录
      *
-     * @param catalogCode
+     * @param catalogCode 工作流所属目录
+     * @return UranusTaskFlowUpdateReq
      */
     public UranusTaskFlowUpdateReq catalogCode(String catalogCode) {
         this.catalogCode = catalogCode;
@@ -224,7 +227,8 @@ public class UranusTaskFlowUpdateReq  implements java.io.Serializable {
     /**
     * set 工作流协同人
     *
-    * @param workers
+    * @param workers 工作流协同人
+    * @return UranusTaskFlowUpdateReq
     */
     public UranusTaskFlowUpdateReq workers(List<String> workers) {
         this.workers = workers;
@@ -235,7 +239,8 @@ public class UranusTaskFlowUpdateReq  implements java.io.Serializable {
     /**
      * set 工作流code
      *
-     * @param flowCode
+     * @param flowCode 工作流code
+     * @return UranusTaskFlowUpdateReq
      */
     public UranusTaskFlowUpdateReq flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -246,7 +251,8 @@ public class UranusTaskFlowUpdateReq  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return UranusTaskFlowUpdateReq
      */
     public UranusTaskFlowUpdateReq manager(String manager) {
         this.manager = manager;

@@ -598,7 +598,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 分页-页码
      *
-     * @param pageNum
+     * @param pageNum 分页-页码
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -609,7 +610,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 分页-每页数量
      *
-     * @param pageSize
+     * @param pageSize 分页-每页数量
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -620,7 +622,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 任务名称
      *
-     * @param cstJobName
+     * @param cstJobName 任务名称
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -631,7 +634,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 任务编码
      *
-     * @param jobName
+     * @param jobName 任务编码
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -642,7 +646,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 租户编码
      *
-     * @param companyCode
+     * @param companyCode 租户编码
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -653,7 +658,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 负责人pin
      *
-     * @param managerPin
+     * @param managerPin 负责人pin
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest managerPin(String managerPin) {
         this.managerPin = managerPin;
@@ -664,7 +670,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 工作空间编码
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间编码
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -675,7 +682,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 任务创建-开始日期: yyyy-MM-dd
      *
-     * @param createTimeAfter
+     * @param createTimeAfter 任务创建-开始日期: yyyy-MM-dd
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest createTimeAfter(String createTimeAfter) {
         this.createTimeAfter = createTimeAfter;
@@ -686,7 +694,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 任务创建-结束日期: yyyy-MM-dd
      *
-     * @param createTimeBefore
+     * @param createTimeBefore 任务创建-结束日期: yyyy-MM-dd
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest createTimeBefore(String createTimeBefore) {
         this.createTimeBefore = createTimeBefore;
@@ -697,7 +706,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 任务更新-开始日期: yyyy-MM-dd
      *
-     * @param updateTimeAfter
+     * @param updateTimeAfter 任务更新-开始日期: yyyy-MM-dd
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest updateTimeAfter(String updateTimeAfter) {
         this.updateTimeAfter = updateTimeAfter;
@@ -708,7 +718,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 任务更新-结束日期: yyyy-MM-dd
      *
-     * @param updateTimeBefore
+     * @param updateTimeBefore 任务更新-结束日期: yyyy-MM-dd
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest updateTimeBefore(String updateTimeBefore) {
         this.updateTimeBefore = updateTimeBefore;
@@ -719,7 +730,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 任务运行-开始时间: yyyy-MM-dd HH:mm
      *
-     * @param jobStartRunTime
+     * @param jobStartRunTime 任务运行-开始时间: yyyy-MM-dd HH:mm
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest jobStartRunTime(String jobStartRunTime) {
         this.jobStartRunTime = jobStartRunTime;
@@ -730,7 +742,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 任务运行-结束时间: yyyy-MM-dd HH:mm
      *
-     * @param jobEndRunTime
+     * @param jobEndRunTime 任务运行-结束时间: yyyy-MM-dd HH:mm
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest jobEndRunTime(String jobEndRunTime) {
         this.jobEndRunTime = jobEndRunTime;
@@ -741,7 +754,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 任务上下线状态: 1-上线 2-下线
      *
-     * @param enable
+     * @param enable 任务上下线状态: 1-上线 2-下线
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest enable(Integer enable) {
         this.enable = enable;
@@ -752,7 +766,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 任务周期
      *
-     * @param cycle
+     * @param cycle 任务周期
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest cycle(String cycle) {
         this.cycle = cycle;
@@ -763,7 +778,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 任务父类型
      *
-     * @param jobType
+     * @param jobType 任务父类型
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest jobType(String jobType) {
         this.jobType = jobType;
@@ -774,7 +790,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 任务子类型
      *
-     * @param jobChildType
+     * @param jobChildType 任务子类型
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest jobChildType(String jobChildType) {
         this.jobChildType = jobChildType;
@@ -785,7 +802,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
     * set 任务最后状态: not,Done,Pending,Running,Failed,Timeout,Clean,Ready
     *
-    * @param lastJobStatus
+    * @param lastJobStatus 任务最后状态: not,Done,Pending,Running,Failed,Timeout,Clean,Ready
+    * @return ManageHubGravityListJobRequest
     */
     public ManageHubGravityListJobRequest lastJobStatus(List<String> lastJobStatus) {
         this.lastJobStatus = lastJobStatus;
@@ -796,7 +814,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 任务最后数据日期
      *
-     * @param lastTxdate
+     * @param lastTxdate 任务最后数据日期
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest lastTxdate(String lastTxdate) {
         this.lastTxdate = lastTxdate;
@@ -807,7 +826,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 任务负责人
      *
-     * @param manager
+     * @param manager 任务负责人
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest manager(String manager) {
         this.manager = manager;
@@ -818,7 +838,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 过滤模式: exact-精确过滤，否则为模糊过滤
      *
-     * @param queryMode
+     * @param queryMode 过滤模式: exact-精确过滤，否则为模糊过滤
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest queryMode(String queryMode) {
         this.queryMode = queryMode;
@@ -829,7 +850,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -840,7 +862,8 @@ public class ManageHubGravityListJobRequest extends JdcloudRequest implements ja
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubGravityListJobRequest
      */
     public ManageHubGravityListJobRequest appName(String appName) {
         this.appName = appName;

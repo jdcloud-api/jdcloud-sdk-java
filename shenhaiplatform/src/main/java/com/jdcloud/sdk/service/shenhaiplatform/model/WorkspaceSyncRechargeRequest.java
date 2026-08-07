@@ -333,7 +333,8 @@ public class WorkspaceSyncRechargeRequest extends JdcloudRequest implements java
     /**
      * set region
      *
-     * @param region
+     * @param region 
+     * @return WorkspaceSyncRechargeRequest
      */
     public WorkspaceSyncRechargeRequest region(String region) {
         this.region = region;
@@ -344,7 +345,8 @@ public class WorkspaceSyncRechargeRequest extends JdcloudRequest implements java
     /**
      * set billingVersion
      *
-     * @param billingVersion
+     * @param billingVersion 
+     * @return WorkspaceSyncRechargeRequest
      */
     public WorkspaceSyncRechargeRequest billingVersion(String billingVersion) {
         this.billingVersion = billingVersion;
@@ -355,7 +357,8 @@ public class WorkspaceSyncRechargeRequest extends JdcloudRequest implements java
     /**
      * set billingModel
      *
-     * @param billingModel
+     * @param billingModel 
+     * @return WorkspaceSyncRechargeRequest
      */
     public WorkspaceSyncRechargeRequest billingModel(String billingModel) {
         this.billingModel = billingModel;
@@ -366,7 +369,8 @@ public class WorkspaceSyncRechargeRequest extends JdcloudRequest implements java
     /**
      * set az
      *
-     * @param az
+     * @param az 
+     * @return WorkspaceSyncRechargeRequest
      */
     public WorkspaceSyncRechargeRequest az(String az) {
         this.az = az;
@@ -377,7 +381,8 @@ public class WorkspaceSyncRechargeRequest extends JdcloudRequest implements java
     /**
      * set account
      *
-     * @param account
+     * @param account 
+     * @return WorkspaceSyncRechargeRequest
      */
     public WorkspaceSyncRechargeRequest account(String account) {
         this.account = account;
@@ -388,7 +393,8 @@ public class WorkspaceSyncRechargeRequest extends JdcloudRequest implements java
     /**
      * set companyId
      *
-     * @param companyId
+     * @param companyId 
+     * @return WorkspaceSyncRechargeRequest
      */
     public WorkspaceSyncRechargeRequest companyId(String companyId) {
         this.companyId = companyId;
@@ -399,7 +405,8 @@ public class WorkspaceSyncRechargeRequest extends JdcloudRequest implements java
     /**
      * set payPlan
      *
-     * @param payPlan
+     * @param payPlan 
+     * @return WorkspaceSyncRechargeRequest
      */
     public WorkspaceSyncRechargeRequest payPlan(String payPlan) {
         this.payPlan = payPlan;
@@ -410,7 +417,8 @@ public class WorkspaceSyncRechargeRequest extends JdcloudRequest implements java
     /**
      * set autoRenewal
      *
-     * @param autoRenewal
+     * @param autoRenewal 
+     * @return WorkspaceSyncRechargeRequest
      */
     public WorkspaceSyncRechargeRequest autoRenewal(Boolean autoRenewal) {
         this.autoRenewal = autoRenewal;
@@ -421,7 +429,8 @@ public class WorkspaceSyncRechargeRequest extends JdcloudRequest implements java
     /**
      * set purchaseDuration
      *
-     * @param purchaseDuration
+     * @param purchaseDuration 
+     * @return WorkspaceSyncRechargeRequest
      */
     public WorkspaceSyncRechargeRequest purchaseDuration(Integer purchaseDuration) {
         this.purchaseDuration = purchaseDuration;
@@ -432,7 +441,8 @@ public class WorkspaceSyncRechargeRequest extends JdcloudRequest implements java
     /**
      * set orderUniqueKey
      *
-     * @param orderUniqueKey
+     * @param orderUniqueKey 
+     * @return WorkspaceSyncRechargeRequest
      */
     public WorkspaceSyncRechargeRequest orderUniqueKey(OrderUniqueKey orderUniqueKey) {
         this.orderUniqueKey = orderUniqueKey;
@@ -443,7 +453,8 @@ public class WorkspaceSyncRechargeRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceSyncRechargeRequest
      */
     public WorkspaceSyncRechargeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -454,7 +465,8 @@ public class WorkspaceSyncRechargeRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceSyncRechargeRequest
      */
     public WorkspaceSyncRechargeRequest appName(String appName) {
         this.appName = appName;

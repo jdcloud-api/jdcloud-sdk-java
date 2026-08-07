@@ -160,7 +160,8 @@ public class GravityParticleJobMonitorJobCountInfoResult extends JdcloudResult i
     /**
      * set 成功标识，1成功，0失败
      *
-     * @param success
+     * @param success 成功标识，1成功，0失败
+     * @return GravityParticleJobMonitorJobCountInfoResult
      */
     public GravityParticleJobMonitorJobCountInfoResult success(Integer success) {
         this.success = success;
@@ -171,7 +172,8 @@ public class GravityParticleJobMonitorJobCountInfoResult extends JdcloudResult i
     /**
      * set 返回结果对象
      *
-     * @param result
+     * @param result 返回结果对象
+     * @return GravityParticleJobMonitorJobCountInfoResult
      */
     public GravityParticleJobMonitorJobCountInfoResult result(GpmnJobCountDto result) {
         this.result = result;
@@ -182,7 +184,8 @@ public class GravityParticleJobMonitorJobCountInfoResult extends JdcloudResult i
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return GravityParticleJobMonitorJobCountInfoResult
      */
     public GravityParticleJobMonitorJobCountInfoResult code(String code) {
         this.code = code;
@@ -193,7 +196,8 @@ public class GravityParticleJobMonitorJobCountInfoResult extends JdcloudResult i
     /**
      * set 返回状态信息
      *
-     * @param msg
+     * @param msg 返回状态信息
+     * @return GravityParticleJobMonitorJobCountInfoResult
      */
     public GravityParticleJobMonitorJobCountInfoResult msg(String msg) {
         this.msg = msg;
@@ -204,7 +208,8 @@ public class GravityParticleJobMonitorJobCountInfoResult extends JdcloudResult i
     /**
      * set 返回请求流水号
      *
-     * @param _REQ_SEQ_NO_
+     * @param _REQ_SEQ_NO_ 返回请求流水号
+     * @return GravityParticleJobMonitorJobCountInfoResult
      */
     public GravityParticleJobMonitorJobCountInfoResult _REQ_SEQ_NO_(String _REQ_SEQ_NO_) {
         this._REQ_SEQ_NO_ = _REQ_SEQ_NO_;

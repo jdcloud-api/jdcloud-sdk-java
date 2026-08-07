@@ -143,7 +143,8 @@ public class ManageHubGravityRerunRequest extends JdcloudRequest implements java
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return ManageHubGravityRerunRequest
      */
     public ManageHubGravityRerunRequest txDate(String txDate) {
         this.txDate = txDate;
@@ -154,7 +155,8 @@ public class ManageHubGravityRerunRequest extends JdcloudRequest implements java
     /**
     * set 任务名称列表
     *
-    * @param jobNames
+    * @param jobNames 任务名称列表
+    * @return ManageHubGravityRerunRequest
     */
     public ManageHubGravityRerunRequest jobNames(List<JobNameDO> jobNames) {
         this.jobNames = jobNames;
@@ -165,7 +167,8 @@ public class ManageHubGravityRerunRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubGravityRerunRequest
      */
     public ManageHubGravityRerunRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -176,7 +179,8 @@ public class ManageHubGravityRerunRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubGravityRerunRequest
      */
     public ManageHubGravityRerunRequest appName(String appName) {
         this.appName = appName;

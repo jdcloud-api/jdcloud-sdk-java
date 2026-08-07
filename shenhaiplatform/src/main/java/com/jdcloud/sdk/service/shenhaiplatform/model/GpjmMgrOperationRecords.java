@@ -206,7 +206,8 @@ public class GpjmMgrOperationRecords  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id id
+     * @return GpjmMgrOperationRecords
      */
     public GpjmMgrOperationRecords id(Integer id) {
         this.id = id;
@@ -217,7 +218,8 @@ public class GpjmMgrOperationRecords  implements java.io.Serializable {
     /**
      * set 作业id
      *
-     * @param jobId
+     * @param jobId 作业id
+     * @return GpjmMgrOperationRecords
      */
     public GpjmMgrOperationRecords jobId(Integer jobId) {
         this.jobId = jobId;
@@ -228,7 +230,8 @@ public class GpjmMgrOperationRecords  implements java.io.Serializable {
     /**
      * set 操作类型
      *
-     * @param operateType
+     * @param operateType 操作类型
+     * @return GpjmMgrOperationRecords
      */
     public GpjmMgrOperationRecords operateType(String operateType) {
         this.operateType = operateType;
@@ -239,7 +242,8 @@ public class GpjmMgrOperationRecords  implements java.io.Serializable {
     /**
      * set 操作人
      *
-     * @param operator
+     * @param operator 操作人
+     * @return GpjmMgrOperationRecords
      */
     public GpjmMgrOperationRecords operator(String operator) {
         this.operator = operator;
@@ -250,7 +254,8 @@ public class GpjmMgrOperationRecords  implements java.io.Serializable {
     /**
      * set 操作时间
      *
-     * @param operateTime
+     * @param operateTime 操作时间
+     * @return GpjmMgrOperationRecords
      */
     public GpjmMgrOperationRecords operateTime(String operateTime) {
         this.operateTime = operateTime;
@@ -261,7 +266,8 @@ public class GpjmMgrOperationRecords  implements java.io.Serializable {
     /**
      * set 表id
      *
-     * @param tableId
+     * @param tableId 表id
+     * @return GpjmMgrOperationRecords
      */
     public GpjmMgrOperationRecords tableId(Integer tableId) {
         this.tableId = tableId;
@@ -272,7 +278,8 @@ public class GpjmMgrOperationRecords  implements java.io.Serializable {
     /**
      * set 备注
      *
-     * @param memo
+     * @param memo 备注
+     * @return GpjmMgrOperationRecords
      */
     public GpjmMgrOperationRecords memo(String memo) {
         this.memo = memo;

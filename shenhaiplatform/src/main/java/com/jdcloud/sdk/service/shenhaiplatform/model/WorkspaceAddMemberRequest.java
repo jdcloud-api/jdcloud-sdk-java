@@ -166,7 +166,8 @@ public class WorkspaceAddMemberRequest extends JdcloudRequest implements java.io
     /**
      * set workspaceId
      *
-     * @param workspaceId
+     * @param workspaceId 
+     * @return WorkspaceAddMemberRequest
      */
     public WorkspaceAddMemberRequest workspaceId(Long workspaceId) {
         this.workspaceId = workspaceId;
@@ -177,7 +178,8 @@ public class WorkspaceAddMemberRequest extends JdcloudRequest implements java.io
     /**
     * set userPinList
     *
-    * @param userPinList
+    * @param userPinList 
+    * @return WorkspaceAddMemberRequest
     */
     public WorkspaceAddMemberRequest userPinList(List<String> userPinList) {
         this.userPinList = userPinList;
@@ -188,7 +190,8 @@ public class WorkspaceAddMemberRequest extends JdcloudRequest implements java.io
     /**
     * set roleCodeList
     *
-    * @param roleCodeList
+    * @param roleCodeList 
+    * @return WorkspaceAddMemberRequest
     */
     public WorkspaceAddMemberRequest roleCodeList(List<String> roleCodeList) {
         this.roleCodeList = roleCodeList;
@@ -199,7 +202,8 @@ public class WorkspaceAddMemberRequest extends JdcloudRequest implements java.io
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceAddMemberRequest
      */
     public WorkspaceAddMemberRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -210,7 +214,8 @@ public class WorkspaceAddMemberRequest extends JdcloudRequest implements java.io
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceAddMemberRequest
      */
     public WorkspaceAddMemberRequest appName(String appName) {
         this.appName = appName;

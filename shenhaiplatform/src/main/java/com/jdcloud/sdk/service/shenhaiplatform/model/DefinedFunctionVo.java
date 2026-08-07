@@ -328,7 +328,8 @@ public class DefinedFunctionVo  implements java.io.Serializable {
     /**
      * set 函数id
      *
-     * @param id
+     * @param id 函数id
+     * @return DefinedFunctionVo
      */
     public DefinedFunctionVo id(Integer id) {
         this.id = id;
@@ -339,7 +340,8 @@ public class DefinedFunctionVo  implements java.io.Serializable {
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return DefinedFunctionVo
      */
     public DefinedFunctionVo companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -350,7 +352,8 @@ public class DefinedFunctionVo  implements java.io.Serializable {
     /**
      * set 命名空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 命名空间code
+     * @return DefinedFunctionVo
      */
     public DefinedFunctionVo workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -361,7 +364,8 @@ public class DefinedFunctionVo  implements java.io.Serializable {
     /**
      * set 函数名称（支持字母、数字、下划线，不超过50个字符）
      *
-     * @param functionName
+     * @param functionName 函数名称（支持字母、数字、下划线，不超过50个字符）
+     * @return DefinedFunctionVo
      */
     public DefinedFunctionVo functionName(String functionName) {
         this.functionName = functionName;
@@ -372,7 +376,8 @@ public class DefinedFunctionVo  implements java.io.Serializable {
     /**
      * set 分类目录id
      *
-     * @param functionCatalogId
+     * @param functionCatalogId 分类目录id
+     * @return DefinedFunctionVo
      */
     public DefinedFunctionVo functionCatalogId(Integer functionCatalogId) {
         this.functionCatalogId = functionCatalogId;
@@ -383,7 +388,8 @@ public class DefinedFunctionVo  implements java.io.Serializable {
     /**
      * set 函数主类全路径
      *
-     * @param className
+     * @param className 函数主类全路径
+     * @return DefinedFunctionVo
      */
     public DefinedFunctionVo className(String className) {
         this.className = className;
@@ -394,7 +400,8 @@ public class DefinedFunctionVo  implements java.io.Serializable {
     /**
     * set 负责人
     *
-    * @param managers
+    * @param managers 负责人
+    * @return DefinedFunctionVo
     */
     public DefinedFunctionVo managers(List<String> managers) {
         this.managers = managers;
@@ -405,7 +412,8 @@ public class DefinedFunctionVo  implements java.io.Serializable {
     /**
     * set 依赖的资源code（包括资源文件/资源目录）
     *
-    * @param resourceCodes
+    * @param resourceCodes 依赖的资源code（包括资源文件/资源目录）
+    * @return DefinedFunctionVo
     */
     public DefinedFunctionVo resourceCodes(List<String> resourceCodes) {
         this.resourceCodes = resourceCodes;
@@ -416,7 +424,8 @@ public class DefinedFunctionVo  implements java.io.Serializable {
     /**
      * set 函数格式
      *
-     * @param functionFormat
+     * @param functionFormat 函数格式
+     * @return DefinedFunctionVo
      */
     public DefinedFunctionVo functionFormat(String functionFormat) {
         this.functionFormat = functionFormat;
@@ -427,7 +436,8 @@ public class DefinedFunctionVo  implements java.io.Serializable {
     /**
      * set 函数使用说明
      *
-     * @param functionUsage
+     * @param functionUsage 函数使用说明
+     * @return DefinedFunctionVo
      */
     public DefinedFunctionVo functionUsage(String functionUsage) {
         this.functionUsage = functionUsage;
@@ -438,7 +448,8 @@ public class DefinedFunctionVo  implements java.io.Serializable {
     /**
      * set 关联引擎
      *
-     * @param relativeEngine
+     * @param relativeEngine 关联引擎
+     * @return DefinedFunctionVo
      */
     public DefinedFunctionVo relativeEngine(String relativeEngine) {
         this.relativeEngine = relativeEngine;
@@ -449,7 +460,8 @@ public class DefinedFunctionVo  implements java.io.Serializable {
     /**
      * set 环境信息，dev、prod
      *
-     * @param env
+     * @param env 环境信息，dev、prod
+     * @return DefinedFunctionVo
      */
     public DefinedFunctionVo env(String env) {
         this.env = env;

@@ -326,7 +326,8 @@ public class GpdjmcDmrScriptInfoDTO  implements java.io.Serializable {
     /**
      * set 主键Id,为空时保存，不为空时更新
      *
-     * @param id
+     * @param id 主键Id,为空时保存，不为空时更新
+     * @return GpdjmcDmrScriptInfoDTO
      */
     public GpdjmcDmrScriptInfoDTO id(Integer id) {
         this.id = id;
@@ -337,7 +338,8 @@ public class GpdjmcDmrScriptInfoDTO  implements java.io.Serializable {
     /**
      * set 脚本名称
      *
-     * @param scriptName
+     * @param scriptName 脚本名称
+     * @return GpdjmcDmrScriptInfoDTO
      */
     public GpdjmcDmrScriptInfoDTO scriptName(String scriptName) {
         this.scriptName = scriptName;
@@ -348,7 +350,8 @@ public class GpdjmcDmrScriptInfoDTO  implements java.io.Serializable {
     /**
      * set 脚本类型
      *
-     * @param scriptType
+     * @param scriptType 脚本类型
+     * @return GpdjmcDmrScriptInfoDTO
      */
     public GpdjmcDmrScriptInfoDTO scriptType(String scriptType) {
         this.scriptType = scriptType;
@@ -359,7 +362,8 @@ public class GpdjmcDmrScriptInfoDTO  implements java.io.Serializable {
     /**
      * set 脚本描述
      *
-     * @param scriptDesc
+     * @param scriptDesc 脚本描述
+     * @return GpdjmcDmrScriptInfoDTO
      */
     public GpdjmcDmrScriptInfoDTO scriptDesc(String scriptDesc) {
         this.scriptDesc = scriptDesc;
@@ -370,7 +374,8 @@ public class GpdjmcDmrScriptInfoDTO  implements java.io.Serializable {
     /**
      * set 脚本来源， LOCAL(本地) GIT(git) SKYDRIVE(网盘)
      *
-     * @param scriptSourceType
+     * @param scriptSourceType 脚本来源， LOCAL(本地) GIT(git) SKYDRIVE(网盘)
+     * @return GpdjmcDmrScriptInfoDTO
      */
     public GpdjmcDmrScriptInfoDTO scriptSourceType(String scriptSourceType) {
         this.scriptSourceType = scriptSourceType;
@@ -381,7 +386,8 @@ public class GpdjmcDmrScriptInfoDTO  implements java.io.Serializable {
     /**
      * set 任务id
      *
-     * @param jobId
+     * @param jobId 任务id
+     * @return GpdjmcDmrScriptInfoDTO
      */
     public GpdjmcDmrScriptInfoDTO jobId(Integer jobId) {
         this.jobId = jobId;
@@ -392,7 +398,8 @@ public class GpdjmcDmrScriptInfoDTO  implements java.io.Serializable {
     /**
      * set 删除标识
      *
-     * @param deleteFlag
+     * @param deleteFlag 删除标识
+     * @return GpdjmcDmrScriptInfoDTO
      */
     public GpdjmcDmrScriptInfoDTO deleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;
@@ -403,7 +410,8 @@ public class GpdjmcDmrScriptInfoDTO  implements java.io.Serializable {
     /**
      * set 创建人
      *
-     * @param creator
+     * @param creator 创建人
+     * @return GpdjmcDmrScriptInfoDTO
      */
     public GpdjmcDmrScriptInfoDTO creator(String creator) {
         this.creator = creator;
@@ -414,7 +422,8 @@ public class GpdjmcDmrScriptInfoDTO  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return GpdjmcDmrScriptInfoDTO
      */
     public GpdjmcDmrScriptInfoDTO createTime(String createTime) {
         this.createTime = createTime;
@@ -425,7 +434,8 @@ public class GpdjmcDmrScriptInfoDTO  implements java.io.Serializable {
     /**
      * set 修改人
      *
-     * @param updateUser
+     * @param updateUser 修改人
+     * @return GpdjmcDmrScriptInfoDTO
      */
     public GpdjmcDmrScriptInfoDTO updateUser(String updateUser) {
         this.updateUser = updateUser;
@@ -436,7 +446,8 @@ public class GpdjmcDmrScriptInfoDTO  implements java.io.Serializable {
     /**
      * set 修改时间
      *
-     * @param updateTime
+     * @param updateTime 修改时间
+     * @return GpdjmcDmrScriptInfoDTO
      */
     public GpdjmcDmrScriptInfoDTO updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -447,7 +458,8 @@ public class GpdjmcDmrScriptInfoDTO  implements java.io.Serializable {
     /**
      * set 脚本内容
      *
-     * @param content
+     * @param content 脚本内容
+     * @return GpdjmcDmrScriptInfoDTO
      */
     public GpdjmcDmrScriptInfoDTO content(String content) {
         this.content = content;

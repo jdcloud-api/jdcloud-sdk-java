@@ -287,7 +287,8 @@ public class UranusScriptFileVerifyReq  implements java.io.Serializable {
     /**
      * set 脚本内容
      *
-     * @param content
+     * @param content 脚本内容
+     * @return UranusScriptFileVerifyReq
      */
     public UranusScriptFileVerifyReq content(String content) {
         this.content = content;
@@ -298,7 +299,8 @@ public class UranusScriptFileVerifyReq  implements java.io.Serializable {
     /**
      * set 文件Code
      *
-     * @param fileCode
+     * @param fileCode 文件Code
+     * @return UranusScriptFileVerifyReq
      */
     public UranusScriptFileVerifyReq fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -309,7 +311,8 @@ public class UranusScriptFileVerifyReq  implements java.io.Serializable {
     /**
      * set 文件类型
      *
-     * @param fileType
+     * @param fileType 文件类型
+     * @return UranusScriptFileVerifyReq
      */
     public UranusScriptFileVerifyReq fileType(Integer fileType) {
         this.fileType = fileType;
@@ -320,7 +323,8 @@ public class UranusScriptFileVerifyReq  implements java.io.Serializable {
     /**
      * set 脚本名称
      *
-     * @param scriptName
+     * @param scriptName 脚本名称
+     * @return UranusScriptFileVerifyReq
      */
     public UranusScriptFileVerifyReq scriptName(String scriptName) {
         this.scriptName = scriptName;
@@ -331,7 +335,8 @@ public class UranusScriptFileVerifyReq  implements java.io.Serializable {
     /**
     * set 脚本字节
     *
-    * @param scriptByte
+    * @param scriptByte 脚本字节
+    * @return UranusScriptFileVerifyReq
     */
     public UranusScriptFileVerifyReq scriptByte(List<String> scriptByte) {
         this.scriptByte = scriptByte;
@@ -342,7 +347,8 @@ public class UranusScriptFileVerifyReq  implements java.io.Serializable {
     /**
      * set 任务名称
      *
-     * @param jobName
+     * @param jobName 任务名称
+     * @return UranusScriptFileVerifyReq
      */
     public UranusScriptFileVerifyReq jobName(String jobName) {
         this.jobName = jobName;
@@ -353,7 +359,8 @@ public class UranusScriptFileVerifyReq  implements java.io.Serializable {
     /**
      * set 依赖任务名称
      *
-     * @param dependencies
+     * @param dependencies 依赖任务名称
+     * @return UranusScriptFileVerifyReq
      */
     public UranusScriptFileVerifyReq dependencies(String dependencies) {
         this.dependencies = dependencies;
@@ -364,7 +371,8 @@ public class UranusScriptFileVerifyReq  implements java.io.Serializable {
     /**
      * set 脚本类型
      *
-     * @param scriptType
+     * @param scriptType 脚本类型
+     * @return UranusScriptFileVerifyReq
      */
     public UranusScriptFileVerifyReq scriptType(String scriptType) {
         this.scriptType = scriptType;
@@ -375,7 +383,8 @@ public class UranusScriptFileVerifyReq  implements java.io.Serializable {
     /**
      * set 目标表
      *
-     * @param targetTables
+     * @param targetTables 目标表
+     * @return UranusScriptFileVerifyReq
      */
     public UranusScriptFileVerifyReq targetTables(String targetTables) {
         this.targetTables = targetTables;
@@ -386,7 +395,8 @@ public class UranusScriptFileVerifyReq  implements java.io.Serializable {
     /**
      * set 是否保存脚本中解析出来的表相关信息
      *
-     * @param saveRelFlag
+     * @param saveRelFlag 是否保存脚本中解析出来的表相关信息
+     * @return UranusScriptFileVerifyReq
      */
     public UranusScriptFileVerifyReq saveRelFlag(String saveRelFlag) {
         this.saveRelFlag = saveRelFlag;

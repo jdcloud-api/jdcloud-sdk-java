@@ -118,7 +118,8 @@ public class UranusTaskInfoOnLineConfigRequest extends JdcloudRequest implements
     /**
      * set 任务code
      *
-     * @param taskCode
+     * @param taskCode 任务code
+     * @return UranusTaskInfoOnLineConfigRequest
      */
     public UranusTaskInfoOnLineConfigRequest taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -129,7 +130,8 @@ public class UranusTaskInfoOnLineConfigRequest extends JdcloudRequest implements
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskInfoOnLineConfigRequest
      */
     public UranusTaskInfoOnLineConfigRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusTaskInfoOnLineConfigRequest extends JdcloudRequest implements
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskInfoOnLineConfigRequest
      */
     public UranusTaskInfoOnLineConfigRequest appName(String appName) {
         this.appName = appName;

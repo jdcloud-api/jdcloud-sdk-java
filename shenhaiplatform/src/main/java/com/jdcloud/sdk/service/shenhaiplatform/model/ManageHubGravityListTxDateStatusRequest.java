@@ -428,7 +428,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 页码
      *
-     * @param pageNum
+     * @param pageNum 页码
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -439,7 +440,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 页大小
      *
-     * @param pageSize
+     * @param pageSize 页大小
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -450,7 +452,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 任务编码
      *
-     * @param companyCode
+     * @param companyCode 任务编码
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -461,7 +464,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 负责人pin
      *
-     * @param managerPin
+     * @param managerPin 负责人pin
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest managerPin(String managerPin) {
         this.managerPin = managerPin;
@@ -472,7 +476,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 工作空间编码
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间编码
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -483,7 +488,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 任务名称
      *
-     * @param cstJobName
+     * @param cstJobName 任务名称
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -494,7 +500,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest txDate(String txDate) {
         this.txDate = txDate;
@@ -505,7 +512,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 任务运行开始-开始时间: yyyy-MM-dd HH:mm
      *
-     * @param jobStartAfterTime
+     * @param jobStartAfterTime 任务运行开始-开始时间: yyyy-MM-dd HH:mm
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest jobStartAfterTime(String jobStartAfterTime) {
         this.jobStartAfterTime = jobStartAfterTime;
@@ -516,7 +524,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 任务运行开始-结束时间: yyyy-MM-dd HH:mm
      *
-     * @param jobStartBeforeTime
+     * @param jobStartBeforeTime 任务运行开始-结束时间: yyyy-MM-dd HH:mm
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest jobStartBeforeTime(String jobStartBeforeTime) {
         this.jobStartBeforeTime = jobStartBeforeTime;
@@ -527,7 +536,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 任务运行结束-开始时间: yyyy-MM-dd HH:mm
      *
-     * @param jobEndAfterTime
+     * @param jobEndAfterTime 任务运行结束-开始时间: yyyy-MM-dd HH:mm
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest jobEndAfterTime(String jobEndAfterTime) {
         this.jobEndAfterTime = jobEndAfterTime;
@@ -538,7 +548,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 任务运行结束-结束时间: yyyy-MM-dd HH:mm
      *
-     * @param jobEndBeforeTime
+     * @param jobEndBeforeTime 任务运行结束-结束时间: yyyy-MM-dd HH:mm
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest jobEndBeforeTime(String jobEndBeforeTime) {
         this.jobEndBeforeTime = jobEndBeforeTime;
@@ -549,7 +560,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 任务类型
      *
-     * @param jobType
+     * @param jobType 任务类型
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest jobType(String jobType) {
         this.jobType = jobType;
@@ -560,7 +572,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 运行频率
      *
-     * @param cycle
+     * @param cycle 运行频率
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest cycle(String cycle) {
         this.cycle = cycle;
@@ -571,7 +584,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 运行状态
      *
-     * @param status
+     * @param status 运行状态
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest status(String status) {
         this.status = status;
@@ -582,7 +596,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -593,7 +608,8 @@ public class ManageHubGravityListTxDateStatusRequest extends JdcloudRequest impl
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubGravityListTxDateStatusRequest
      */
     public ManageHubGravityListTxDateStatusRequest appName(String appName) {
         this.appName = appName;

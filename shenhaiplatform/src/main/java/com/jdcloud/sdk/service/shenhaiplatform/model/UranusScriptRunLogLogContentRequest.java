@@ -118,7 +118,8 @@ public class UranusScriptRunLogLogContentRequest extends JdcloudRequest implemen
     /**
      * set 运行历史ID
      *
-     * @param historyId
+     * @param historyId 运行历史ID
+     * @return UranusScriptRunLogLogContentRequest
      */
     public UranusScriptRunLogLogContentRequest historyId(Integer historyId) {
         this.historyId = historyId;
@@ -129,7 +130,8 @@ public class UranusScriptRunLogLogContentRequest extends JdcloudRequest implemen
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusScriptRunLogLogContentRequest
      */
     public UranusScriptRunLogLogContentRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusScriptRunLogLogContentRequest extends JdcloudRequest implemen
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusScriptRunLogLogContentRequest
      */
     public UranusScriptRunLogLogContentRequest appName(String appName) {
         this.appName = appName;

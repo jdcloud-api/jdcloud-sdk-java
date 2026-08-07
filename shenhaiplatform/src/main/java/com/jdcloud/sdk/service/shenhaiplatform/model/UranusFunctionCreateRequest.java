@@ -334,7 +334,8 @@ public class UranusFunctionCreateRequest extends JdcloudRequest implements java.
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return UranusFunctionCreateRequest
      */
     public UranusFunctionCreateRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -345,7 +346,8 @@ public class UranusFunctionCreateRequest extends JdcloudRequest implements java.
     /**
      * set 命名空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 命名空间code
+     * @return UranusFunctionCreateRequest
      */
     public UranusFunctionCreateRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -356,7 +358,8 @@ public class UranusFunctionCreateRequest extends JdcloudRequest implements java.
     /**
      * set 函数名称（支持字母、数字、下划线，不超过50个字符）
      *
-     * @param functionName
+     * @param functionName 函数名称（支持字母、数字、下划线，不超过50个字符）
+     * @return UranusFunctionCreateRequest
      */
     public UranusFunctionCreateRequest functionName(String functionName) {
         this.functionName = functionName;
@@ -367,7 +370,8 @@ public class UranusFunctionCreateRequest extends JdcloudRequest implements java.
     /**
      * set 分类目录id
      *
-     * @param functionCatalogId
+     * @param functionCatalogId 分类目录id
+     * @return UranusFunctionCreateRequest
      */
     public UranusFunctionCreateRequest functionCatalogId(Integer functionCatalogId) {
         this.functionCatalogId = functionCatalogId;
@@ -378,7 +382,8 @@ public class UranusFunctionCreateRequest extends JdcloudRequest implements java.
     /**
      * set 函数主类全路径
      *
-     * @param className
+     * @param className 函数主类全路径
+     * @return UranusFunctionCreateRequest
      */
     public UranusFunctionCreateRequest className(String className) {
         this.className = className;
@@ -389,7 +394,8 @@ public class UranusFunctionCreateRequest extends JdcloudRequest implements java.
     /**
     * set 负责人
     *
-    * @param managers
+    * @param managers 负责人
+    * @return UranusFunctionCreateRequest
     */
     public UranusFunctionCreateRequest managers(List<String> managers) {
         this.managers = managers;
@@ -400,7 +406,8 @@ public class UranusFunctionCreateRequest extends JdcloudRequest implements java.
     /**
     * set 依赖的资源code（包括资源文件/资源目录）
     *
-    * @param resourceCodes
+    * @param resourceCodes 依赖的资源code（包括资源文件/资源目录）
+    * @return UranusFunctionCreateRequest
     */
     public UranusFunctionCreateRequest resourceCodes(List<String> resourceCodes) {
         this.resourceCodes = resourceCodes;
@@ -411,7 +418,8 @@ public class UranusFunctionCreateRequest extends JdcloudRequest implements java.
     /**
      * set 函数格式
      *
-     * @param functionFormat
+     * @param functionFormat 函数格式
+     * @return UranusFunctionCreateRequest
      */
     public UranusFunctionCreateRequest functionFormat(String functionFormat) {
         this.functionFormat = functionFormat;
@@ -422,7 +430,8 @@ public class UranusFunctionCreateRequest extends JdcloudRequest implements java.
     /**
      * set 函数使用说明
      *
-     * @param functionUsage
+     * @param functionUsage 函数使用说明
+     * @return UranusFunctionCreateRequest
      */
     public UranusFunctionCreateRequest functionUsage(String functionUsage) {
         this.functionUsage = functionUsage;
@@ -433,7 +442,8 @@ public class UranusFunctionCreateRequest extends JdcloudRequest implements java.
     /**
      * set 关联引擎
      *
-     * @param relativeEngine
+     * @param relativeEngine 关联引擎
+     * @return UranusFunctionCreateRequest
      */
     public UranusFunctionCreateRequest relativeEngine(String relativeEngine) {
         this.relativeEngine = relativeEngine;
@@ -444,7 +454,8 @@ public class UranusFunctionCreateRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusFunctionCreateRequest
      */
     public UranusFunctionCreateRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -455,7 +466,8 @@ public class UranusFunctionCreateRequest extends JdcloudRequest implements java.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusFunctionCreateRequest
      */
     public UranusFunctionCreateRequest appName(String appName) {
         this.appName = appName;

@@ -182,7 +182,8 @@ public class JtlasWarehouseTableColumn  implements java.io.Serializable {
     /**
      * set 字段名称
      *
-     * @param name
+     * @param name 字段名称
+     * @return JtlasWarehouseTableColumn
      */
     public JtlasWarehouseTableColumn name(String name) {
         this.name = name;
@@ -193,7 +194,8 @@ public class JtlasWarehouseTableColumn  implements java.io.Serializable {
     /**
      * set 字段描述
      *
-     * @param comment
+     * @param comment 字段描述
+     * @return JtlasWarehouseTableColumn
      */
     public JtlasWarehouseTableColumn comment(String comment) {
         this.comment = comment;
@@ -204,7 +206,8 @@ public class JtlasWarehouseTableColumn  implements java.io.Serializable {
     /**
      * set 字段类型
      *
-     * @param type
+     * @param type 字段类型
+     * @return JtlasWarehouseTableColumn
      */
     public JtlasWarehouseTableColumn type(String type) {
         this.type = type;
@@ -215,7 +218,8 @@ public class JtlasWarehouseTableColumn  implements java.io.Serializable {
     /**
      * set 是否是分区字段
      *
-     * @param isPartition
+     * @param isPartition 是否是分区字段
+     * @return JtlasWarehouseTableColumn
      */
     public JtlasWarehouseTableColumn isPartition(Boolean isPartition) {
         this.isPartition = isPartition;
@@ -226,7 +230,8 @@ public class JtlasWarehouseTableColumn  implements java.io.Serializable {
     /**
      * set 字段长度
      *
-     * @param length
+     * @param length 字段长度
+     * @return JtlasWarehouseTableColumn
      */
     public JtlasWarehouseTableColumn length(Integer length) {
         this.length = length;
@@ -237,7 +242,8 @@ public class JtlasWarehouseTableColumn  implements java.io.Serializable {
     /**
      * set 字段位置
      *
-     * @param position
+     * @param position 字段位置
+     * @return JtlasWarehouseTableColumn
      */
     public JtlasWarehouseTableColumn position(Integer position) {
         this.position = position;

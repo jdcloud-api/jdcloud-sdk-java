@@ -212,7 +212,8 @@ public class UranusScriptGetScriptRunResultRequest extends JdcloudRequest implem
     /**
      * set 文件名称 taskId_${结果集数字}  第一个结果就是：1_1,第二个结果集就是：1_2
      *
-     * @param fileName
+     * @param fileName 文件名称 taskId_${结果集数字}  第一个结果就是：1_1,第二个结果集就是：1_2
+     * @return UranusScriptGetScriptRunResultRequest
      */
     public UranusScriptGetScriptRunResultRequest fileName(String fileName) {
         this.fileName = fileName;
@@ -223,7 +224,8 @@ public class UranusScriptGetScriptRunResultRequest extends JdcloudRequest implem
     /**
      * set 文件业务code
      *
-     * @param fileCode
+     * @param fileCode 文件业务code
+     * @return UranusScriptGetScriptRunResultRequest
      */
     public UranusScriptGetScriptRunResultRequest fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -234,7 +236,8 @@ public class UranusScriptGetScriptRunResultRequest extends JdcloudRequest implem
     /**
      * set 文件偏移量
      *
-     * @param pos
+     * @param pos 文件偏移量
+     * @return UranusScriptGetScriptRunResultRequest
      */
     public UranusScriptGetScriptRunResultRequest pos(Long pos) {
         this.pos = pos;
@@ -245,7 +248,8 @@ public class UranusScriptGetScriptRunResultRequest extends JdcloudRequest implem
     /**
      * set 读取结果条数
      *
-     * @param lines
+     * @param lines 读取结果条数
+     * @return UranusScriptGetScriptRunResultRequest
      */
     public UranusScriptGetScriptRunResultRequest lines(Long lines) {
         this.lines = lines;
@@ -256,7 +260,8 @@ public class UranusScriptGetScriptRunResultRequest extends JdcloudRequest implem
     /**
      * set 运行ID
      *
-     * @param historyId
+     * @param historyId 运行ID
+     * @return UranusScriptGetScriptRunResultRequest
      */
     public UranusScriptGetScriptRunResultRequest historyId(Integer historyId) {
         this.historyId = historyId;
@@ -267,7 +272,8 @@ public class UranusScriptGetScriptRunResultRequest extends JdcloudRequest implem
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusScriptGetScriptRunResultRequest
      */
     public UranusScriptGetScriptRunResultRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -278,7 +284,8 @@ public class UranusScriptGetScriptRunResultRequest extends JdcloudRequest implem
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusScriptGetScriptRunResultRequest
      */
     public UranusScriptGetScriptRunResultRequest appName(String appName) {
         this.appName = appName;

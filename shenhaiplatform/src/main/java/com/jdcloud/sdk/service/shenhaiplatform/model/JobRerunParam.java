@@ -119,7 +119,8 @@ public class JobRerunParam  implements java.io.Serializable {
     /**
      * set 数据日期, 对于非小时/分钟周期任务，格式为 yyyy-MM-dd；对于小时/分钟周期任务，格式为 yyyy-MM-dd-HH-mm
      *
-     * @param txDate
+     * @param txDate 数据日期, 对于非小时/分钟周期任务，格式为 yyyy-MM-dd；对于小时/分钟周期任务，格式为 yyyy-MM-dd-HH-mm
+     * @return JobRerunParam
      */
     public JobRerunParam txDate(String txDate) {
         this.txDate = txDate;
@@ -130,7 +131,8 @@ public class JobRerunParam  implements java.io.Serializable {
     /**
      * set 作业所属工作空间编码，形如: ws_123456789012345678
      *
-     * @param workspaceCode
+     * @param workspaceCode 作业所属工作空间编码，形如: ws_123456789012345678
+     * @return JobRerunParam
      */
     public JobRerunParam workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -141,7 +143,8 @@ public class JobRerunParam  implements java.io.Serializable {
     /**
     * set 作业ID列表，最多允许传递20个作业
     *
-    * @param jobIdList
+    * @param jobIdList 作业ID列表，最多允许传递20个作业
+    * @return JobRerunParam
     */
     public JobRerunParam jobIdList(List<String> jobIdList) {
         this.jobIdList = jobIdList;

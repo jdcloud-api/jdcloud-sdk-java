@@ -112,7 +112,8 @@ public class GpjmConditionInfo  implements java.io.Serializable {
     /**
     * set 具体的类型的类型列表
     *
-    * @param conditionType
+    * @param conditionType 具体的类型的类型列表
+    * @return GpjmConditionInfo
     */
     public GpjmConditionInfo conditionType(List<GpjmConditionType> conditionType) {
         this.conditionType = conditionType;
@@ -123,7 +124,8 @@ public class GpjmConditionInfo  implements java.io.Serializable {
     /**
      * set 触发类型: condition, 后续可能包括时间触发等原来的类型
      *
-     * @param triggerType
+     * @param triggerType 触发类型: condition, 后续可能包括时间触发等原来的类型
+     * @return GpjmConditionInfo
      */
     public GpjmConditionInfo triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -134,7 +136,8 @@ public class GpjmConditionInfo  implements java.io.Serializable {
     /**
      * set 类型的中文名: 条件触发、时间触发等
      *
-     * @param triggerTypeCh
+     * @param triggerTypeCh 类型的中文名: 条件触发、时间触发等
+     * @return GpjmConditionInfo
      */
     public GpjmConditionInfo triggerTypeCh(String triggerTypeCh) {
         this.triggerTypeCh = triggerTypeCh;

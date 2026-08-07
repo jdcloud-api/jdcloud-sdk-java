@@ -182,7 +182,8 @@ public class ProjectResp  implements java.io.Serializable {
     /**
      * set projectCode
      *
-     * @param projectCode
+     * @param projectCode 
+     * @return ProjectResp
      */
     public ProjectResp projectCode(String projectCode) {
         this.projectCode = projectCode;
@@ -193,7 +194,8 @@ public class ProjectResp  implements java.io.Serializable {
     /**
      * set projectName
      *
-     * @param projectName
+     * @param projectName 
+     * @return ProjectResp
      */
     public ProjectResp projectName(String projectName) {
         this.projectName = projectName;
@@ -204,7 +206,8 @@ public class ProjectResp  implements java.io.Serializable {
     /**
      * set projectStatus
      *
-     * @param projectStatus
+     * @param projectStatus 
+     * @return ProjectResp
      */
     public ProjectResp projectStatus(String projectStatus) {
         this.projectStatus = projectStatus;
@@ -215,7 +218,8 @@ public class ProjectResp  implements java.io.Serializable {
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return ProjectResp
      */
     public ProjectResp msg(String msg) {
         this.msg = msg;
@@ -226,7 +230,8 @@ public class ProjectResp  implements java.io.Serializable {
     /**
      * set 绑定时间
      *
-     * @param bundleTime
+     * @param bundleTime 绑定时间
+     * @return ProjectResp
      */
     public ProjectResp bundleTime(String bundleTime) {
         this.bundleTime = bundleTime;
@@ -237,7 +242,8 @@ public class ProjectResp  implements java.io.Serializable {
     /**
      * set 环境类型
      *
-     * @param env
+     * @param env 环境类型
+     * @return ProjectResp
      */
     public ProjectResp env(String env) {
         this.env = env;

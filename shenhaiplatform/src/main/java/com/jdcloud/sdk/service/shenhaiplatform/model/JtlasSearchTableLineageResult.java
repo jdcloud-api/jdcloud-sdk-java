@@ -111,7 +111,8 @@ public class JtlasSearchTableLineageResult extends JdcloudResult implements java
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasSearchTableLineageResult
      */
     public JtlasSearchTableLineageResult code(String code) {
         this.code = code;
@@ -122,7 +123,8 @@ public class JtlasSearchTableLineageResult extends JdcloudResult implements java
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasSearchTableLineageResult
      */
     public JtlasSearchTableLineageResult message(String message) {
         this.message = message;
@@ -133,7 +135,8 @@ public class JtlasSearchTableLineageResult extends JdcloudResult implements java
     /**
      * set 节点数据
      *
-     * @param result
+     * @param result 节点数据
+     * @return JtlasSearchTableLineageResult
      */
     public JtlasSearchTableLineageResult result(Object result) {
         this.result = result;

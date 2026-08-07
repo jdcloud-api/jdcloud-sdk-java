@@ -92,7 +92,8 @@ public class ManageHubDutyListRosterRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubDutyListRosterRequest
      */
     public ManageHubDutyListRosterRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class ManageHubDutyListRosterRequest extends JdcloudRequest implements ja
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubDutyListRosterRequest
      */
     public ManageHubDutyListRosterRequest appName(String appName) {
         this.appName = appName;

@@ -160,7 +160,8 @@ public class UranusTaskInfoPrePublishRes  implements java.io.Serializable {
     /**
      * set 检测结果
      *
-     * @param validResult
+     * @param validResult 检测结果
+     * @return UranusTaskInfoPrePublishRes
      */
     public UranusTaskInfoPrePublishRes validResult(Integer validResult) {
         this.validResult = validResult;
@@ -171,7 +172,8 @@ public class UranusTaskInfoPrePublishRes  implements java.io.Serializable {
     /**
      * set 检测结果描述
      *
-     * @param validResultDesc
+     * @param validResultDesc 检测结果描述
+     * @return UranusTaskInfoPrePublishRes
      */
     public UranusTaskInfoPrePublishRes validResultDesc(String validResultDesc) {
         this.validResultDesc = validResultDesc;
@@ -182,7 +184,8 @@ public class UranusTaskInfoPrePublishRes  implements java.io.Serializable {
     /**
      * set 发布变更类型
      *
-     * @param publicChangeType
+     * @param publicChangeType 发布变更类型
+     * @return UranusTaskInfoPrePublishRes
      */
     public UranusTaskInfoPrePublishRes publicChangeType(Integer publicChangeType) {
         this.publicChangeType = publicChangeType;
@@ -193,7 +196,8 @@ public class UranusTaskInfoPrePublishRes  implements java.io.Serializable {
     /**
      * set 发布变更类型描述
      *
-     * @param publicChangeTypeDesc
+     * @param publicChangeTypeDesc 发布变更类型描述
+     * @return UranusTaskInfoPrePublishRes
      */
     public UranusTaskInfoPrePublishRes publicChangeTypeDesc(String publicChangeTypeDesc) {
         this.publicChangeTypeDesc = publicChangeTypeDesc;
@@ -204,7 +208,8 @@ public class UranusTaskInfoPrePublishRes  implements java.io.Serializable {
     /**
     * set 发布变更类型集合
     *
-    * @param changeTypeResList
+    * @param changeTypeResList 发布变更类型集合
+    * @return UranusTaskInfoPrePublishRes
     */
     public UranusTaskInfoPrePublishRes changeTypeResList(List<UranusPublishChangeTypeRes> changeTypeResList) {
         this.changeTypeResList = changeTypeResList;

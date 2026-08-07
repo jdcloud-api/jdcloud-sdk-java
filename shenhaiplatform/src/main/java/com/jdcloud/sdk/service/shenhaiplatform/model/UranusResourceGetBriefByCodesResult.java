@@ -184,7 +184,8 @@ public class UranusResourceGetBriefByCodesResult extends JdcloudResult implement
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusResourceGetBriefByCodesResult
      */
     public UranusResourceGetBriefByCodesResult code(String code) {
         this.code = code;
@@ -195,7 +196,8 @@ public class UranusResourceGetBriefByCodesResult extends JdcloudResult implement
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusResourceGetBriefByCodesResult
      */
     public UranusResourceGetBriefByCodesResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -206,7 +208,8 @@ public class UranusResourceGetBriefByCodesResult extends JdcloudResult implement
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusResourceGetBriefByCodesResult
      */
     public UranusResourceGetBriefByCodesResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -217,7 +220,8 @@ public class UranusResourceGetBriefByCodesResult extends JdcloudResult implement
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return UranusResourceGetBriefByCodesResult
      */
     public UranusResourceGetBriefByCodesResult result(ResourceBriefInfoVo result) {
         this.result = result;
@@ -228,7 +232,8 @@ public class UranusResourceGetBriefByCodesResult extends JdcloudResult implement
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusResourceGetBriefByCodesResult
      */
     public UranusResourceGetBriefByCodesResult subCode(String subCode) {
         this.subCode = subCode;
@@ -239,7 +244,8 @@ public class UranusResourceGetBriefByCodesResult extends JdcloudResult implement
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusResourceGetBriefByCodesResult
      */
     public UranusResourceGetBriefByCodesResult successed(Boolean successed) {
         this.successed = successed;

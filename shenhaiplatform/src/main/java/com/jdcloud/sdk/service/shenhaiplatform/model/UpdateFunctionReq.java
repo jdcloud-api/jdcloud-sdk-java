@@ -256,7 +256,8 @@ public class UpdateFunctionReq  implements java.io.Serializable {
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return UpdateFunctionReq
      */
     public UpdateFunctionReq companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -267,7 +268,8 @@ public class UpdateFunctionReq  implements java.io.Serializable {
     /**
      * set 命名空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 命名空间code
+     * @return UpdateFunctionReq
      */
     public UpdateFunctionReq workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -278,7 +280,8 @@ public class UpdateFunctionReq  implements java.io.Serializable {
     /**
      * set 函数id
      *
-     * @param functionId
+     * @param functionId 函数id
+     * @return UpdateFunctionReq
      */
     public UpdateFunctionReq functionId(Integer functionId) {
         this.functionId = functionId;
@@ -289,7 +292,8 @@ public class UpdateFunctionReq  implements java.io.Serializable {
     /**
      * set 函数主类全路径
      *
-     * @param className
+     * @param className 函数主类全路径
+     * @return UpdateFunctionReq
      */
     public UpdateFunctionReq className(String className) {
         this.className = className;
@@ -300,7 +304,8 @@ public class UpdateFunctionReq  implements java.io.Serializable {
     /**
     * set 负责人
     *
-    * @param managers
+    * @param managers 负责人
+    * @return UpdateFunctionReq
     */
     public UpdateFunctionReq managers(List<String> managers) {
         this.managers = managers;
@@ -311,7 +316,8 @@ public class UpdateFunctionReq  implements java.io.Serializable {
     /**
      * set 分类目录id
      *
-     * @param functionCatalogId
+     * @param functionCatalogId 分类目录id
+     * @return UpdateFunctionReq
      */
     public UpdateFunctionReq functionCatalogId(Integer functionCatalogId) {
         this.functionCatalogId = functionCatalogId;
@@ -322,7 +328,8 @@ public class UpdateFunctionReq  implements java.io.Serializable {
     /**
     * set 依赖的资源code（包括资源文件/资源目录）
     *
-    * @param resourceCodes
+    * @param resourceCodes 依赖的资源code（包括资源文件/资源目录）
+    * @return UpdateFunctionReq
     */
     public UpdateFunctionReq resourceCodes(List<String> resourceCodes) {
         this.resourceCodes = resourceCodes;
@@ -333,7 +340,8 @@ public class UpdateFunctionReq  implements java.io.Serializable {
     /**
      * set 函数格式
      *
-     * @param functionFormat
+     * @param functionFormat 函数格式
+     * @return UpdateFunctionReq
      */
     public UpdateFunctionReq functionFormat(String functionFormat) {
         this.functionFormat = functionFormat;
@@ -344,7 +352,8 @@ public class UpdateFunctionReq  implements java.io.Serializable {
     /**
      * set 函数使用说明
      *
-     * @param functionUsage
+     * @param functionUsage 函数使用说明
+     * @return UpdateFunctionReq
      */
     public UpdateFunctionReq functionUsage(String functionUsage) {
         this.functionUsage = functionUsage;

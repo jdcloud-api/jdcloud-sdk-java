@@ -134,7 +134,8 @@ public class GpdjmcInputParam  implements java.io.Serializable {
     /**
      * set 参数名称
      *
-     * @param paramName
+     * @param paramName 参数名称
+     * @return GpdjmcInputParam
      */
     public GpdjmcInputParam paramName(String paramName) {
         this.paramName = paramName;
@@ -145,7 +146,8 @@ public class GpdjmcInputParam  implements java.io.Serializable {
     /**
      * set 参数值（支持表达式）；如果是从上游继承的参数，则此处应为上游参数名
      *
-     * @param paramValue
+     * @param paramValue 参数值（支持表达式）；如果是从上游继承的参数，则此处应为上游参数名
+     * @return GpdjmcInputParam
      */
     public GpdjmcInputParam paramValue(String paramValue) {
         this.paramValue = paramValue;
@@ -156,7 +158,8 @@ public class GpdjmcInputParam  implements java.io.Serializable {
     /**
      * set 是否为从上游任务继承的参数
      *
-     * @param inherited
+     * @param inherited 是否为从上游任务继承的参数
+     * @return GpdjmcInputParam
      */
     public GpdjmcInputParam inherited(Boolean inherited) {
         this.inherited = inherited;
@@ -167,7 +170,8 @@ public class GpdjmcInputParam  implements java.io.Serializable {
     /**
      * set 继承的作业名
      *
-     * @param inheritedJobName
+     * @param inheritedJobName 继承的作业名
+     * @return GpdjmcInputParam
      */
     public GpdjmcInputParam inheritedJobName(String inheritedJobName) {
         this.inheritedJobName = inheritedJobName;

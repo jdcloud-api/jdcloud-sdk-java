@@ -472,7 +472,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 节点Code
      *
-     * @param taskCode
+     * @param taskCode 节点Code
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -483,7 +484,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 节点名称
      *
-     * @param taskName
+     * @param taskName 节点名称
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes taskName(String taskName) {
         this.taskName = taskName;
@@ -494,7 +496,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 作业类型
      *
-     * @param jobType
+     * @param jobType 作业类型
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes jobType(Integer jobType) {
         this.jobType = jobType;
@@ -505,7 +508,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 作业类型描述
      *
-     * @param jobTypeDesc
+     * @param jobTypeDesc 作业类型描述
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes jobTypeDesc(String jobTypeDesc) {
         this.jobTypeDesc = jobTypeDesc;
@@ -516,7 +520,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 子节点类型
      *
-     * @param jobChildType
+     * @param jobChildType 子节点类型
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes jobChildType(Integer jobChildType) {
         this.jobChildType = jobChildType;
@@ -527,7 +532,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 子节点类型描述
      *
-     * @param jobChildTypeDesc
+     * @param jobChildTypeDesc 子节点类型描述
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes jobChildTypeDesc(String jobChildTypeDesc) {
         this.jobChildTypeDesc = jobChildTypeDesc;
@@ -538,7 +544,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 流程唯一code
      *
-     * @param flowCode
+     * @param flowCode 流程唯一code
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -549,7 +556,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 流程名称
      *
-     * @param flowName
+     * @param flowName 流程名称
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes flowName(String flowName) {
         this.flowName = flowName;
@@ -560,7 +568,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes manager(String manager) {
         this.manager = manager;
@@ -571,7 +580,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 节点名称
      *
-     * @param nodeName
+     * @param nodeName 节点名称
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes nodeName(String nodeName) {
         this.nodeName = nodeName;
@@ -582,7 +592,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 节点图标
      *
-     * @param nodeIcon
+     * @param nodeIcon 节点图标
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes nodeIcon(String nodeIcon) {
         this.nodeIcon = nodeIcon;
@@ -593,7 +604,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 文件code
      *
-     * @param fileCode
+     * @param fileCode 文件code
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -604,7 +616,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 节点类型名称
      *
-     * @param nodeTypeName
+     * @param nodeTypeName 节点类型名称
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes nodeTypeName(String nodeTypeName) {
         this.nodeTypeName = nodeTypeName;
@@ -615,7 +628,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
     * set 发布变更状态
     *
-    * @param taskNodeChangeResList
+    * @param taskNodeChangeResList 发布变更状态
+    * @return UranusTaskNodePageRes
     */
     public UranusTaskNodePageRes taskNodeChangeResList(List<UranusTaskNodeChangeRes> taskNodeChangeResList) {
         this.taskNodeChangeResList = taskNodeChangeResList;
@@ -626,7 +640,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 作业状态
      *
-     * @param gravityStatus
+     * @param gravityStatus 作业状态
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes gravityStatus(Integer gravityStatus) {
         this.gravityStatus = gravityStatus;
@@ -637,7 +652,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 作业状态描述
      *
-     * @param gravityStatusDesc
+     * @param gravityStatusDesc 作业状态描述
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes gravityStatusDesc(String gravityStatusDesc) {
         this.gravityStatusDesc = gravityStatusDesc;
@@ -648,7 +664,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createdTime
+     * @param createdTime 创建时间
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -659,7 +676,8 @@ public class UranusTaskNodePageRes  implements java.io.Serializable {
     /**
      * set 修改时间
      *
-     * @param modifiedTime
+     * @param modifiedTime 修改时间
+     * @return UranusTaskNodePageRes
      */
     public UranusTaskNodePageRes modifiedTime(String modifiedTime) {
         this.modifiedTime = modifiedTime;

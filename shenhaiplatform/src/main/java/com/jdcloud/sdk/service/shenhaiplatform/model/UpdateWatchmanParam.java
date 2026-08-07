@@ -182,7 +182,8 @@ public class UpdateWatchmanParam  implements java.io.Serializable {
     /**
      * set 值班人id
      *
-     * @param id
+     * @param id 值班人id
+     * @return UpdateWatchmanParam
      */
     public UpdateWatchmanParam id(Long id) {
         this.id = id;
@@ -193,7 +194,8 @@ public class UpdateWatchmanParam  implements java.io.Serializable {
     /**
      * set 值班人名称
      *
-     * @param name
+     * @param name 值班人名称
+     * @return UpdateWatchmanParam
      */
     public UpdateWatchmanParam name(String name) {
         this.name = name;
@@ -204,7 +206,8 @@ public class UpdateWatchmanParam  implements java.io.Serializable {
     /**
      * set 值班人Pin
      *
-     * @param pin
+     * @param pin 值班人Pin
+     * @return UpdateWatchmanParam
      */
     public UpdateWatchmanParam pin(String pin) {
         this.pin = pin;
@@ -215,7 +218,8 @@ public class UpdateWatchmanParam  implements java.io.Serializable {
     /**
      * set 值班人Erp
      *
-     * @param erp
+     * @param erp 值班人Erp
+     * @return UpdateWatchmanParam
      */
     public UpdateWatchmanParam erp(String erp) {
         this.erp = erp;
@@ -226,7 +230,8 @@ public class UpdateWatchmanParam  implements java.io.Serializable {
     /**
      * set 值班人手机号
      *
-     * @param phoneNumber
+     * @param phoneNumber 值班人手机号
+     * @return UpdateWatchmanParam
      */
     public UpdateWatchmanParam phoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
@@ -237,7 +242,8 @@ public class UpdateWatchmanParam  implements java.io.Serializable {
     /**
      * set 值班人邮箱地址
      *
-     * @param email
+     * @param email 值班人邮箱地址
+     * @return UpdateWatchmanParam
      */
     public UpdateWatchmanParam email(String email) {
         this.email = email;

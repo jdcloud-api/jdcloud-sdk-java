@@ -332,7 +332,8 @@ public class GravityParticleDubboJobManagerSaveDmrModelJobRequest extends Jdclou
     /**
      * set 主键Id,为空时保存，不为空时更新
      *
-     * @param id
+     * @param id 主键Id,为空时保存，不为空时更新
+     * @return GravityParticleDubboJobManagerSaveDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSaveDmrModelJobRequest id(Integer id) {
         this.id = id;
@@ -343,7 +344,8 @@ public class GravityParticleDubboJobManagerSaveDmrModelJobRequest extends Jdclou
     /**
      * set 作业Id
      *
-     * @param jobId
+     * @param jobId 作业Id
+     * @return GravityParticleDubboJobManagerSaveDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSaveDmrModelJobRequest jobId(Integer jobId) {
         this.jobId = jobId;
@@ -354,7 +356,8 @@ public class GravityParticleDubboJobManagerSaveDmrModelJobRequest extends Jdclou
     /**
      * set 模型Id
      *
-     * @param modelTableId
+     * @param modelTableId 模型Id
+     * @return GravityParticleDubboJobManagerSaveDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSaveDmrModelJobRequest modelTableId(Integer modelTableId) {
         this.modelTableId = modelTableId;
@@ -365,7 +368,8 @@ public class GravityParticleDubboJobManagerSaveDmrModelJobRequest extends Jdclou
     /**
      * set 删除标识
      *
-     * @param deleteFlag
+     * @param deleteFlag 删除标识
+     * @return GravityParticleDubboJobManagerSaveDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSaveDmrModelJobRequest deleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;
@@ -376,7 +380,8 @@ public class GravityParticleDubboJobManagerSaveDmrModelJobRequest extends Jdclou
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return GravityParticleDubboJobManagerSaveDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSaveDmrModelJobRequest updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -387,7 +392,8 @@ public class GravityParticleDubboJobManagerSaveDmrModelJobRequest extends Jdclou
     /**
      * set 表名
      *
-     * @param tableName
+     * @param tableName 表名
+     * @return GravityParticleDubboJobManagerSaveDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSaveDmrModelJobRequest tableName(String tableName) {
         this.tableName = tableName;
@@ -398,7 +404,8 @@ public class GravityParticleDubboJobManagerSaveDmrModelJobRequest extends Jdclou
     /**
      * set 表中文名称
      *
-     * @param tableNameCh
+     * @param tableNameCh 表中文名称
+     * @return GravityParticleDubboJobManagerSaveDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSaveDmrModelJobRequest tableNameCh(String tableNameCh) {
         this.tableNameCh = tableNameCh;
@@ -409,7 +416,8 @@ public class GravityParticleDubboJobManagerSaveDmrModelJobRequest extends Jdclou
     /**
      * set 数据库名称
      *
-     * @param databaseName
+     * @param databaseName 数据库名称
+     * @return GravityParticleDubboJobManagerSaveDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSaveDmrModelJobRequest databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -420,7 +428,8 @@ public class GravityParticleDubboJobManagerSaveDmrModelJobRequest extends Jdclou
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return GravityParticleDubboJobManagerSaveDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSaveDmrModelJobRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -431,7 +440,8 @@ public class GravityParticleDubboJobManagerSaveDmrModelJobRequest extends Jdclou
     /**
      * set 数据来源渠道
      *
-     * @param channel
+     * @param channel 数据来源渠道
+     * @return GravityParticleDubboJobManagerSaveDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSaveDmrModelJobRequest channel(String channel) {
         this.channel = channel;
@@ -442,7 +452,8 @@ public class GravityParticleDubboJobManagerSaveDmrModelJobRequest extends Jdclou
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerSaveDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSaveDmrModelJobRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -453,7 +464,8 @@ public class GravityParticleDubboJobManagerSaveDmrModelJobRequest extends Jdclou
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerSaveDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSaveDmrModelJobRequest appName(String appName) {
         this.appName = appName;

@@ -87,7 +87,8 @@ public class PackagePublishObjResult extends JdcloudResult implements java.io.Se
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return PackagePublishObjResult
      */
     public PackagePublishObjResult code(String code) {
         this.code = code;
@@ -98,7 +99,8 @@ public class PackagePublishObjResult extends JdcloudResult implements java.io.Se
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return PackagePublishObjResult
      */
     public PackagePublishObjResult message(String message) {
         this.message = message;

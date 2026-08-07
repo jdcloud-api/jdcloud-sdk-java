@@ -206,7 +206,8 @@ public class UranusDictRes  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id id
+     * @return UranusDictRes
      */
     public UranusDictRes id(Integer id) {
         this.id = id;
@@ -217,7 +218,8 @@ public class UranusDictRes  implements java.io.Serializable {
     /**
      * set 字典编码
      *
-     * @param dictCode
+     * @param dictCode 字典编码
+     * @return UranusDictRes
      */
     public UranusDictRes dictCode(String dictCode) {
         this.dictCode = dictCode;
@@ -228,7 +230,8 @@ public class UranusDictRes  implements java.io.Serializable {
     /**
      * set 父编码
      *
-     * @param pDictCode
+     * @param pDictCode 父编码
+     * @return UranusDictRes
      */
     public UranusDictRes pDictCode(String pDictCode) {
         this.pDictCode = pDictCode;
@@ -239,7 +242,8 @@ public class UranusDictRes  implements java.io.Serializable {
     /**
      * set 字典名称
      *
-     * @param dictName
+     * @param dictName 字典名称
+     * @return UranusDictRes
      */
     public UranusDictRes dictName(String dictName) {
         this.dictName = dictName;
@@ -250,7 +254,8 @@ public class UranusDictRes  implements java.io.Serializable {
     /**
      * set 备份信息
      *
-     * @param bak
+     * @param bak 备份信息
+     * @return UranusDictRes
      */
     public UranusDictRes bak(String bak) {
         this.bak = bak;
@@ -261,7 +266,8 @@ public class UranusDictRes  implements java.io.Serializable {
     /**
      * set 序号
      *
-     * @param dictSort
+     * @param dictSort 序号
+     * @return UranusDictRes
      */
     public UranusDictRes dictSort(Integer dictSort) {
         this.dictSort = dictSort;
@@ -272,7 +278,8 @@ public class UranusDictRes  implements java.io.Serializable {
     /**
      * set 描述
      *
-     * @param dictDesc
+     * @param dictDesc 描述
+     * @return UranusDictRes
      */
     public UranusDictRes dictDesc(String dictDesc) {
         this.dictDesc = dictDesc;

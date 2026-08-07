@@ -112,7 +112,8 @@ public class DescribePublishPkgResult extends JdcloudResult implements java.io.S
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return DescribePublishPkgResult
      */
     public DescribePublishPkgResult code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class DescribePublishPkgResult extends JdcloudResult implements java.io.S
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return DescribePublishPkgResult
      */
     public DescribePublishPkgResult message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class DescribePublishPkgResult extends JdcloudResult implements java.io.S
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return DescribePublishPkgResult
      */
     public DescribePublishPkgResult result(PublishPkgDetailVo result) {
         this.result = result;

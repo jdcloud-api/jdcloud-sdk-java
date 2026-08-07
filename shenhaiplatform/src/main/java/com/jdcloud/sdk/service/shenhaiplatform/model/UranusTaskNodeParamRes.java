@@ -302,7 +302,8 @@ public class UranusTaskNodeParamRes  implements java.io.Serializable {
     /**
      * set 展示用的序号
      *
-     * @param sort
+     * @param sort 展示用的序号
+     * @return UranusTaskNodeParamRes
      */
     public UranusTaskNodeParamRes sort(Integer sort) {
         this.sort = sort;
@@ -313,7 +314,8 @@ public class UranusTaskNodeParamRes  implements java.io.Serializable {
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return UranusTaskNodeParamRes
      */
     public UranusTaskNodeParamRes companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -324,7 +326,8 @@ public class UranusTaskNodeParamRes  implements java.io.Serializable {
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return UranusTaskNodeParamRes
      */
     public UranusTaskNodeParamRes workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -335,7 +338,8 @@ public class UranusTaskNodeParamRes  implements java.io.Serializable {
     /**
      * set 工作流code
      *
-     * @param flowCode
+     * @param flowCode 工作流code
+     * @return UranusTaskNodeParamRes
      */
     public UranusTaskNodeParamRes flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -346,7 +350,8 @@ public class UranusTaskNodeParamRes  implements java.io.Serializable {
     /**
      * set 任务code
      *
-     * @param taskCode
+     * @param taskCode 任务code
+     * @return UranusTaskNodeParamRes
      */
     public UranusTaskNodeParamRes taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -357,7 +362,8 @@ public class UranusTaskNodeParamRes  implements java.io.Serializable {
     /**
      * set 任务名称
      *
-     * @param taskName
+     * @param taskName 任务名称
+     * @return UranusTaskNodeParamRes
      */
     public UranusTaskNodeParamRes taskName(String taskName) {
         this.taskName = taskName;
@@ -368,7 +374,8 @@ public class UranusTaskNodeParamRes  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return UranusTaskNodeParamRes
      */
     public UranusTaskNodeParamRes manager(String manager) {
         this.manager = manager;
@@ -379,7 +386,8 @@ public class UranusTaskNodeParamRes  implements java.io.Serializable {
     /**
      * set key
      *
-     * @param paramKey
+     * @param paramKey key
+     * @return UranusTaskNodeParamRes
      */
     public UranusTaskNodeParamRes paramKey(String paramKey) {
         this.paramKey = paramKey;
@@ -390,7 +398,8 @@ public class UranusTaskNodeParamRes  implements java.io.Serializable {
     /**
      * set value
      *
-     * @param paramValue
+     * @param paramValue value
+     * @return UranusTaskNodeParamRes
      */
     public UranusTaskNodeParamRes paramValue(String paramValue) {
         this.paramValue = paramValue;
@@ -401,7 +410,8 @@ public class UranusTaskNodeParamRes  implements java.io.Serializable {
     /**
      * set 描述
      *
-     * @param paramDesc
+     * @param paramDesc 描述
+     * @return UranusTaskNodeParamRes
      */
     public UranusTaskNodeParamRes paramDesc(String paramDesc) {
         this.paramDesc = paramDesc;
@@ -412,7 +422,8 @@ public class UranusTaskNodeParamRes  implements java.io.Serializable {
     /**
      * set 参数类型 ORDINARY：普通参数，VARIABLE_IMPORT：变量输入参数，VARIABLE_EXPORT：变量输出参数
      *
-     * @param paramType
+     * @param paramType 参数类型 ORDINARY：普通参数，VARIABLE_IMPORT：变量输入参数，VARIABLE_EXPORT：变量输出参数
+     * @return UranusTaskNodeParamRes
      */
     public UranusTaskNodeParamRes paramType(String paramType) {
         this.paramType = paramType;

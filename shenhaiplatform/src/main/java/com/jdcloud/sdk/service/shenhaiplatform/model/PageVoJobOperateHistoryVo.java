@@ -136,7 +136,8 @@ public class PageVoJobOperateHistoryVo  implements java.io.Serializable {
     /**
      * set 总条数
      *
-     * @param total
+     * @param total 总条数
+     * @return PageVoJobOperateHistoryVo
      */
     public PageVoJobOperateHistoryVo total(Long total) {
         this.total = total;
@@ -147,7 +148,8 @@ public class PageVoJobOperateHistoryVo  implements java.io.Serializable {
     /**
      * set 每页条数
      *
-     * @param pageSize
+     * @param pageSize 每页条数
+     * @return PageVoJobOperateHistoryVo
      */
     public PageVoJobOperateHistoryVo pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -158,7 +160,8 @@ public class PageVoJobOperateHistoryVo  implements java.io.Serializable {
     /**
      * set 当前页
      *
-     * @param pageNum
+     * @param pageNum 当前页
+     * @return PageVoJobOperateHistoryVo
      */
     public PageVoJobOperateHistoryVo pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -169,7 +172,8 @@ public class PageVoJobOperateHistoryVo  implements java.io.Serializable {
     /**
     * set 数据列表
     *
-    * @param list
+    * @param list 数据列表
+    * @return PageVoJobOperateHistoryVo
     */
     public PageVoJobOperateHistoryVo list(List<JobOperateHistoryVo> list) {
         this.list = list;

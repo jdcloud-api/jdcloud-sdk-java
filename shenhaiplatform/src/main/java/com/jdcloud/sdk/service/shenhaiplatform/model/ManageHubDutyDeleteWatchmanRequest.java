@@ -116,7 +116,8 @@ public class ManageHubDutyDeleteWatchmanRequest extends JdcloudRequest implement
     /**
      * set 值班人id
      *
-     * @param id
+     * @param id 值班人id
+     * @return ManageHubDutyDeleteWatchmanRequest
      */
     public ManageHubDutyDeleteWatchmanRequest id(Integer id) {
         this.id = id;
@@ -127,7 +128,8 @@ public class ManageHubDutyDeleteWatchmanRequest extends JdcloudRequest implement
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubDutyDeleteWatchmanRequest
      */
     public ManageHubDutyDeleteWatchmanRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class ManageHubDutyDeleteWatchmanRequest extends JdcloudRequest implement
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubDutyDeleteWatchmanRequest
      */
     public ManageHubDutyDeleteWatchmanRequest appName(String appName) {
         this.appName = appName;

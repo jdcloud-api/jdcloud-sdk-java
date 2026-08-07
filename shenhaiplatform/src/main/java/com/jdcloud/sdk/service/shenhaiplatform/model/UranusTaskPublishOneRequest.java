@@ -147,7 +147,8 @@ public class UranusTaskPublishOneRequest extends JdcloudRequest implements java.
     /**
     * set 节点列表
     *
-    * @param ids
+    * @param ids 节点列表
+    * @return UranusTaskPublishOneRequest
     */
     public UranusTaskPublishOneRequest ids(List<UranusNodePublishChildReq> ids) {
         this.ids = ids;
@@ -158,7 +159,8 @@ public class UranusTaskPublishOneRequest extends JdcloudRequest implements java.
     /**
      * set 发布原因
      *
-     * @param reason
+     * @param reason 发布原因
+     * @return UranusTaskPublishOneRequest
      */
     public UranusTaskPublishOneRequest reason(String reason) {
         this.reason = reason;
@@ -169,7 +171,8 @@ public class UranusTaskPublishOneRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskPublishOneRequest
      */
     public UranusTaskPublishOneRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -180,7 +183,8 @@ public class UranusTaskPublishOneRequest extends JdcloudRequest implements java.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskPublishOneRequest
      */
     public UranusTaskPublishOneRequest appName(String appName) {
         this.appName = appName;

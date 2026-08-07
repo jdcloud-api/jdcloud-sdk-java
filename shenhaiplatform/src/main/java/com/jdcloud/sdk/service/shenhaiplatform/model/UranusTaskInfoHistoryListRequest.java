@@ -188,7 +188,8 @@ public class UranusTaskInfoHistoryListRequest extends JdcloudRequest implements 
     /**
      * set 节点Code
      *
-     * @param taskCode
+     * @param taskCode 节点Code
+     * @return UranusTaskInfoHistoryListRequest
      */
     public UranusTaskInfoHistoryListRequest taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -199,7 +200,8 @@ public class UranusTaskInfoHistoryListRequest extends JdcloudRequest implements 
     /**
      * set 节点描述
      *
-     * @param taskDesc
+     * @param taskDesc 节点描述
+     * @return UranusTaskInfoHistoryListRequest
      */
     public UranusTaskInfoHistoryListRequest taskDesc(String taskDesc) {
         this.taskDesc = taskDesc;
@@ -210,7 +212,8 @@ public class UranusTaskInfoHistoryListRequest extends JdcloudRequest implements 
     /**
      * set 页数
      *
-     * @param page
+     * @param page 页数
+     * @return UranusTaskInfoHistoryListRequest
      */
     public UranusTaskInfoHistoryListRequest page(Integer page) {
         this.page = page;
@@ -221,7 +224,8 @@ public class UranusTaskInfoHistoryListRequest extends JdcloudRequest implements 
     /**
      * set 每页大小
      *
-     * @param pageSize
+     * @param pageSize 每页大小
+     * @return UranusTaskInfoHistoryListRequest
      */
     public UranusTaskInfoHistoryListRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -232,7 +236,8 @@ public class UranusTaskInfoHistoryListRequest extends JdcloudRequest implements 
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskInfoHistoryListRequest
      */
     public UranusTaskInfoHistoryListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -243,7 +248,8 @@ public class UranusTaskInfoHistoryListRequest extends JdcloudRequest implements 
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskInfoHistoryListRequest
      */
     public UranusTaskInfoHistoryListRequest appName(String appName) {
         this.appName = appName;

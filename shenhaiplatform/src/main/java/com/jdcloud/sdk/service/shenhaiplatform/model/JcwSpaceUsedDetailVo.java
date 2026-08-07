@@ -302,7 +302,8 @@ public class JcwSpaceUsedDetailVo  implements java.io.Serializable {
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return JcwSpaceUsedDetailVo
      */
     public JcwSpaceUsedDetailVo companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -313,7 +314,8 @@ public class JcwSpaceUsedDetailVo  implements java.io.Serializable {
     /**
      * set 租户主PIN
      *
-     * @param account
+     * @param account 租户主PIN
+     * @return JcwSpaceUsedDetailVo
      */
     public JcwSpaceUsedDetailVo account(String account) {
         this.account = account;
@@ -324,7 +326,8 @@ public class JcwSpaceUsedDetailVo  implements java.io.Serializable {
     /**
      * set 租户存储空间使用量（GB）浮点数
      *
-     * @param companyUsed
+     * @param companyUsed 租户存储空间使用量（GB）浮点数
+     * @return JcwSpaceUsedDetailVo
      */
     public JcwSpaceUsedDetailVo companyUsed(String companyUsed) {
         this.companyUsed = companyUsed;
@@ -335,7 +338,8 @@ public class JcwSpaceUsedDetailVo  implements java.io.Serializable {
     /**
      * set 租户存储空间使用每日增量（GB）浮点数
      *
-     * @param companyIncreUsed
+     * @param companyIncreUsed 租户存储空间使用每日增量（GB）浮点数
+     * @return JcwSpaceUsedDetailVo
      */
     public JcwSpaceUsedDetailVo companyIncreUsed(String companyIncreUsed) {
         this.companyIncreUsed = companyIncreUsed;
@@ -346,7 +350,8 @@ public class JcwSpaceUsedDetailVo  implements java.io.Serializable {
     /**
      * set 数据库空间使用量（GB）浮点数
      *
-     * @param databaseUsed
+     * @param databaseUsed 数据库空间使用量（GB）浮点数
+     * @return JcwSpaceUsedDetailVo
      */
     public JcwSpaceUsedDetailVo databaseUsed(String databaseUsed) {
         this.databaseUsed = databaseUsed;
@@ -357,7 +362,8 @@ public class JcwSpaceUsedDetailVo  implements java.io.Serializable {
     /**
      * set 数据库名称
      *
-     * @param databaseName
+     * @param databaseName 数据库名称
+     * @return JcwSpaceUsedDetailVo
      */
     public JcwSpaceUsedDetailVo databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -368,7 +374,8 @@ public class JcwSpaceUsedDetailVo  implements java.io.Serializable {
     /**
      * set 表空间使用量（GB）浮点数
      *
-     * @param tableUsed
+     * @param tableUsed 表空间使用量（GB）浮点数
+     * @return JcwSpaceUsedDetailVo
      */
     public JcwSpaceUsedDetailVo tableUsed(String tableUsed) {
         this.tableUsed = tableUsed;
@@ -379,7 +386,8 @@ public class JcwSpaceUsedDetailVo  implements java.io.Serializable {
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return JcwSpaceUsedDetailVo
      */
     public JcwSpaceUsedDetailVo tableName(String tableName) {
         this.tableName = tableName;
@@ -390,7 +398,8 @@ public class JcwSpaceUsedDetailVo  implements java.io.Serializable {
     /**
      * set 租户下数据库数量
      *
-     * @param databaseCount
+     * @param databaseCount 租户下数据库数量
+     * @return JcwSpaceUsedDetailVo
      */
     public JcwSpaceUsedDetailVo databaseCount(Integer databaseCount) {
         this.databaseCount = databaseCount;
@@ -401,7 +410,8 @@ public class JcwSpaceUsedDetailVo  implements java.io.Serializable {
     /**
      * set 租户/数据库下表数量
      *
-     * @param tableCount
+     * @param tableCount 租户/数据库下表数量
+     * @return JcwSpaceUsedDetailVo
      */
     public JcwSpaceUsedDetailVo tableCount(Integer tableCount) {
         this.tableCount = tableCount;
@@ -412,7 +422,8 @@ public class JcwSpaceUsedDetailVo  implements java.io.Serializable {
     /**
      * set 分区表下分区数量
      *
-     * @param partitionCount
+     * @param partitionCount 分区表下分区数量
+     * @return JcwSpaceUsedDetailVo
      */
     public JcwSpaceUsedDetailVo partitionCount(Integer partitionCount) {
         this.partitionCount = partitionCount;

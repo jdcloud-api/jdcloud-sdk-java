@@ -302,7 +302,8 @@ public class ListPublishPkgByPageParam  implements java.io.Serializable {
     /**
      * set 页面容量
      *
-     * @param pageSize
+     * @param pageSize 页面容量
+     * @return ListPublishPkgByPageParam
      */
     public ListPublishPkgByPageParam pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -313,7 +314,8 @@ public class ListPublishPkgByPageParam  implements java.io.Serializable {
     /**
      * set 页号
      *
-     * @param pageNum
+     * @param pageNum 页号
+     * @return ListPublishPkgByPageParam
      */
     public ListPublishPkgByPageParam pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -324,7 +326,8 @@ public class ListPublishPkgByPageParam  implements java.io.Serializable {
     /**
      * set 发布包名称
      *
-     * @param pkgName
+     * @param pkgName 发布包名称
+     * @return ListPublishPkgByPageParam
      */
     public ListPublishPkgByPageParam pkgName(String pkgName) {
         this.pkgName = pkgName;
@@ -335,7 +338,8 @@ public class ListPublishPkgByPageParam  implements java.io.Serializable {
     /**
      * set 发布包ID
      *
-     * @param pkgId
+     * @param pkgId 发布包ID
+     * @return ListPublishPkgByPageParam
      */
     public ListPublishPkgByPageParam pkgId(Long pkgId) {
         this.pkgId = pkgId;
@@ -346,7 +350,8 @@ public class ListPublishPkgByPageParam  implements java.io.Serializable {
     /**
      * set 发布人
      *
-     * @param publisher
+     * @param publisher 发布人
+     * @return ListPublishPkgByPageParam
      */
     public ListPublishPkgByPageParam publisher(String publisher) {
         this.publisher = publisher;
@@ -357,7 +362,8 @@ public class ListPublishPkgByPageParam  implements java.io.Serializable {
     /**
      * set 发布包状态
      *
-     * @param pkgStatus
+     * @param pkgStatus 发布包状态
+     * @return ListPublishPkgByPageParam
      */
     public ListPublishPkgByPageParam pkgStatus(String pkgStatus) {
         this.pkgStatus = pkgStatus;
@@ -368,7 +374,8 @@ public class ListPublishPkgByPageParam  implements java.io.Serializable {
     /**
      * set 发布时间开始
      *
-     * @param pkgPublishTimeStart
+     * @param pkgPublishTimeStart 发布时间开始
+     * @return ListPublishPkgByPageParam
      */
     public ListPublishPkgByPageParam pkgPublishTimeStart(Long pkgPublishTimeStart) {
         this.pkgPublishTimeStart = pkgPublishTimeStart;
@@ -379,7 +386,8 @@ public class ListPublishPkgByPageParam  implements java.io.Serializable {
     /**
      * set 发布时间结束
      *
-     * @param pkgPublishTimeEnd
+     * @param pkgPublishTimeEnd 发布时间结束
+     * @return ListPublishPkgByPageParam
      */
     public ListPublishPkgByPageParam pkgPublishTimeEnd(Long pkgPublishTimeEnd) {
         this.pkgPublishTimeEnd = pkgPublishTimeEnd;
@@ -390,7 +398,8 @@ public class ListPublishPkgByPageParam  implements java.io.Serializable {
     /**
      * set 打包人
      *
-     * @param pkgCreator
+     * @param pkgCreator 打包人
+     * @return ListPublishPkgByPageParam
      */
     public ListPublishPkgByPageParam pkgCreator(String pkgCreator) {
         this.pkgCreator = pkgCreator;
@@ -401,7 +410,8 @@ public class ListPublishPkgByPageParam  implements java.io.Serializable {
     /**
      * set 打包时间开始
      *
-     * @param pkgCreateTimeStart
+     * @param pkgCreateTimeStart 打包时间开始
+     * @return ListPublishPkgByPageParam
      */
     public ListPublishPkgByPageParam pkgCreateTimeStart(Long pkgCreateTimeStart) {
         this.pkgCreateTimeStart = pkgCreateTimeStart;
@@ -412,7 +422,8 @@ public class ListPublishPkgByPageParam  implements java.io.Serializable {
     /**
      * set 打包时间结束
      *
-     * @param pkgCreateTimeEnd
+     * @param pkgCreateTimeEnd 打包时间结束
+     * @return ListPublishPkgByPageParam
      */
     public ListPublishPkgByPageParam pkgCreateTimeEnd(Long pkgCreateTimeEnd) {
         this.pkgCreateTimeEnd = pkgCreateTimeEnd;

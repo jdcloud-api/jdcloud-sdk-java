@@ -398,7 +398,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set conditionType
      *
-     * @param conditionType
+     * @param conditionType 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO conditionType(String conditionType) {
         this.conditionType = conditionType;
@@ -409,7 +410,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set secondaryType
      *
-     * @param secondaryType
+     * @param secondaryType 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO secondaryType(String secondaryType) {
         this.secondaryType = secondaryType;
@@ -420,7 +422,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set serverDomain
      *
-     * @param serverDomain
+     * @param serverDomain 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO serverDomain(String serverDomain) {
         this.serverDomain = serverDomain;
@@ -431,7 +434,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set serverPort
      *
-     * @param serverPort
+     * @param serverPort 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO serverPort(String serverPort) {
         this.serverPort = serverPort;
@@ -442,7 +446,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set username
      *
-     * @param username
+     * @param username 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO username(String username) {
         this.username = username;
@@ -453,7 +458,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set usernamePwd
      *
-     * @param usernamePwd
+     * @param usernamePwd 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO usernamePwd(String usernamePwd) {
         this.usernamePwd = usernamePwd;
@@ -464,7 +470,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set protocol
      *
-     * @param protocol
+     * @param protocol 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO protocol(String protocol) {
         this.protocol = protocol;
@@ -475,7 +482,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set databaseName
      *
-     * @param databaseName
+     * @param databaseName 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -486,7 +494,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set dataSource
      *
-     * @param dataSource
+     * @param dataSource 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO dataSource(String dataSource) {
         this.dataSource = dataSource;
@@ -497,7 +506,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set object
      *
-     * @param object
+     * @param object 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO object(String object) {
         this.object = object;
@@ -508,7 +518,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set conditionConfig
      *
-     * @param conditionConfig
+     * @param conditionConfig 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO conditionConfig(String conditionConfig) {
         this.conditionConfig = conditionConfig;
@@ -519,7 +530,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set triggerTime
      *
-     * @param triggerTime
+     * @param triggerTime 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO triggerTime(String triggerTime) {
         this.triggerTime = triggerTime;
@@ -530,7 +542,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set triggerInterval
      *
-     * @param triggerInterval
+     * @param triggerInterval 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO triggerInterval(Integer triggerInterval) {
         this.triggerInterval = triggerInterval;
@@ -541,7 +554,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set beginTime
      *
-     * @param beginTime
+     * @param beginTime 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO beginTime(String beginTime) {
         this.beginTime = beginTime;
@@ -552,7 +566,8 @@ public class UranusTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set endTime
      *
-     * @param endTime
+     * @param endTime 
+     * @return UranusTriggerConfigDTO
      */
     public UranusTriggerConfigDTO endTime(String endTime) {
         this.endTime = endTime;

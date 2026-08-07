@@ -217,7 +217,8 @@ public class UranusTaskInfoSaveRequest extends JdcloudRequest implements java.io
     /**
      * set taskInfo
      *
-     * @param taskInfo
+     * @param taskInfo 
+     * @return UranusTaskInfoSaveRequest
      */
     public UranusTaskInfoSaveRequest taskInfo(UranusTaskInfoRes taskInfo) {
         this.taskInfo = taskInfo;
@@ -228,7 +229,8 @@ public class UranusTaskInfoSaveRequest extends JdcloudRequest implements java.io
     /**
      * set taskNodeInfo
      *
-     * @param taskNodeInfo
+     * @param taskNodeInfo 
+     * @return UranusTaskInfoSaveRequest
      */
     public UranusTaskInfoSaveRequest taskNodeInfo(UranusTaskInfoNodeReq taskNodeInfo) {
         this.taskNodeInfo = taskNodeInfo;
@@ -239,7 +241,8 @@ public class UranusTaskInfoSaveRequest extends JdcloudRequest implements java.io
     /**
      * set fileInfo
      *
-     * @param fileInfo
+     * @param fileInfo 
+     * @return UranusTaskInfoSaveRequest
      */
     public UranusTaskInfoSaveRequest fileInfo(UranusTaskInfoFileReq fileInfo) {
         this.fileInfo = fileInfo;
@@ -250,7 +253,8 @@ public class UranusTaskInfoSaveRequest extends JdcloudRequest implements java.io
     /**
      * set sparkJarInfo
      *
-     * @param sparkJarInfo
+     * @param sparkJarInfo 
+     * @return UranusTaskInfoSaveRequest
      */
     public UranusTaskInfoSaveRequest sparkJarInfo(TaskInfoSparkJarReq sparkJarInfo) {
         this.sparkJarInfo = sparkJarInfo;
@@ -261,7 +265,8 @@ public class UranusTaskInfoSaveRequest extends JdcloudRequest implements java.io
     /**
      * set loopInfo
      *
-     * @param loopInfo
+     * @param loopInfo 
+     * @return UranusTaskInfoSaveRequest
      */
     public UranusTaskInfoSaveRequest loopInfo(TaskInfoLoopReq loopInfo) {
         this.loopInfo = loopInfo;
@@ -272,7 +277,8 @@ public class UranusTaskInfoSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskInfoSaveRequest
      */
     public UranusTaskInfoSaveRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -283,7 +289,8 @@ public class UranusTaskInfoSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskInfoSaveRequest
      */
     public UranusTaskInfoSaveRequest appName(String appName) {
         this.appName = appName;

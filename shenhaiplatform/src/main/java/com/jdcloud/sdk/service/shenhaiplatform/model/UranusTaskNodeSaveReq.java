@@ -496,7 +496,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 节点名称
      *
-     * @param taskName
+     * @param taskName 节点名称
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq taskName(String taskName) {
         this.taskName = taskName;
@@ -507,7 +508,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
     * set 子节点code List
     *
-    * @param childrenCode
+    * @param childrenCode 子节点code List
+    * @return UranusTaskNodeSaveReq
     */
     public UranusTaskNodeSaveReq childrenCode(List<String> childrenCode) {
         this.childrenCode = childrenCode;
@@ -518,7 +520,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
     * set 父节点code List
     *
-    * @param parentCode
+    * @param parentCode 父节点code List
+    * @return UranusTaskNodeSaveReq
     */
     public UranusTaskNodeSaveReq parentCode(List<String> parentCode) {
         this.parentCode = parentCode;
@@ -529,7 +532,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 节点描述
      *
-     * @param taskDesc
+     * @param taskDesc 节点描述
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq taskDesc(String taskDesc) {
         this.taskDesc = taskDesc;
@@ -540,7 +544,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 任务类型
      *
-     * @param taskNodeId
+     * @param taskNodeId 任务类型
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq taskNodeId(Integer taskNodeId) {
         this.taskNodeId = taskNodeId;
@@ -551,7 +556,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 节点CODE
      *
-     * @param taskCode
+     * @param taskCode 节点CODE
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -562,7 +568,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq manager(String manager) {
         this.manager = manager;
@@ -573,7 +580,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 节点数据 以下前端需要用到的数据
      *
-     * @param taskData
+     * @param taskData 节点数据 以下前端需要用到的数据
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq taskData(String taskData) {
         this.taskData = taskData;
@@ -584,7 +592,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 节点名称 以下前端需要用到的数据
      *
-     * @param nodeName
+     * @param nodeName 节点名称 以下前端需要用到的数据
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq nodeName(String nodeName) {
         this.nodeName = nodeName;
@@ -595,7 +604,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 节点类型
      *
-     * @param nodeTypeName
+     * @param nodeTypeName 节点类型
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq nodeTypeName(String nodeTypeName) {
         this.nodeTypeName = nodeTypeName;
@@ -606,7 +616,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 节点图标 以下前端需要用到的数据
      *
-     * @param nodeIcon
+     * @param nodeIcon 节点图标 以下前端需要用到的数据
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq nodeIcon(String nodeIcon) {
         this.nodeIcon = nodeIcon;
@@ -617,7 +628,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 工作流Code
      *
-     * @param flowCode
+     * @param flowCode 工作流Code
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -628,7 +640,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 脚本文件的业务Code
      *
-     * @param fileCode
+     * @param fileCode 脚本文件的业务Code
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -639,7 +652,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq jobName(String jobName) {
         this.jobName = jobName;
@@ -650,7 +664,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 是否工作流任务
      *
-     * @param isUranus
+     * @param isUranus 是否工作流任务
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq isUranus(Integer isUranus) {
         this.isUranus = isUranus;
@@ -661,7 +676,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 是否当前工作流任务
      *
-     * @param isCurrentFlow
+     * @param isCurrentFlow 是否当前工作流任务
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq isCurrentFlow(Integer isCurrentFlow) {
         this.isCurrentFlow = isCurrentFlow;
@@ -672,7 +688,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
     * set 给前端用到的
     *
-    * @param parent
+    * @param parent 给前端用到的
+    * @return UranusTaskNodeSaveReq
     */
     public UranusTaskNodeSaveReq parent(List<UranusTaskNodeSaveReq> parent) {
         this.parent = parent;
@@ -683,7 +700,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 是否有子任务依赖前端用到
      *
-     * @param haveChildren
+     * @param haveChildren 是否有子任务依赖前端用到
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq haveChildren(Integer haveChildren) {
         this.haveChildren = haveChildren;
@@ -694,7 +712,8 @@ public class UranusTaskNodeSaveReq  implements java.io.Serializable {
     /**
      * set 协作人
      *
-     * @param cooperator
+     * @param cooperator 协作人
+     * @return UranusTaskNodeSaveReq
      */
     public UranusTaskNodeSaveReq cooperator(String cooperator) {
         this.cooperator = cooperator;

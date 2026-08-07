@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.shenhaiplatform.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * createWorkspaceProductParam
@@ -82,6 +84,16 @@ public class CreateWorkspaceProductParam  implements java.io.Serializable {
      */
     private String returnUrl;
 
+    /**
+     * bizResourceKey
+     */
+    private String bizResourceKey;
+
+    /**
+     * bizTagInfos
+     */
+    
+    private List<BizTagInfo> bizTagInfos;
 
 
     /**
@@ -274,11 +286,50 @@ public class CreateWorkspaceProductParam  implements java.io.Serializable {
     }
 
 
+    /**
+     * get bizResourceKey
+     *
+     * @return
+     */
+    public String getBizResourceKey() {
+        return bizResourceKey;
+    }
+
+    /**
+     * set bizResourceKey
+     *
+     * @param bizResourceKey
+     */
+    public void setBizResourceKey(String bizResourceKey) {
+        this.bizResourceKey = bizResourceKey;
+    }
+
+
+    /**
+    * get bizTagInfos
+    *
+    * @return
+    */
+    public List<BizTagInfo> getBizTagInfos() {
+        return bizTagInfos;
+    }
+
+    /**
+    * set bizTagInfos
+    *
+    * @param bizTagInfos
+    */
+    public void setBizTagInfos(List<BizTagInfo> bizTagInfos) {
+        this.bizTagInfos = bizTagInfos;
+    }
+
+
 
     /**
      * set region
      *
-     * @param region
+     * @param region 
+     * @return CreateWorkspaceProductParam
      */
     public CreateWorkspaceProductParam region(String region) {
         this.region = region;
@@ -289,7 +340,8 @@ public class CreateWorkspaceProductParam  implements java.io.Serializable {
     /**
      * set az
      *
-     * @param az
+     * @param az 
+     * @return CreateWorkspaceProductParam
      */
     public CreateWorkspaceProductParam az(String az) {
         this.az = az;
@@ -300,7 +352,8 @@ public class CreateWorkspaceProductParam  implements java.io.Serializable {
     /**
      * set ownerIntegrationResource
      *
-     * @param ownerIntegrationResource
+     * @param ownerIntegrationResource 
+     * @return CreateWorkspaceProductParam
      */
     public CreateWorkspaceProductParam ownerIntegrationResource(OwnerIntegrationResource ownerIntegrationResource) {
         this.ownerIntegrationResource = ownerIntegrationResource;
@@ -311,7 +364,8 @@ public class CreateWorkspaceProductParam  implements java.io.Serializable {
     /**
      * set payPlan
      *
-     * @param payPlan
+     * @param payPlan 
+     * @return CreateWorkspaceProductParam
      */
     public CreateWorkspaceProductParam payPlan(String payPlan) {
         this.payPlan = payPlan;
@@ -322,7 +376,8 @@ public class CreateWorkspaceProductParam  implements java.io.Serializable {
     /**
      * set billingVersion
      *
-     * @param billingVersion
+     * @param billingVersion 
+     * @return CreateWorkspaceProductParam
      */
     public CreateWorkspaceProductParam billingVersion(String billingVersion) {
         this.billingVersion = billingVersion;
@@ -333,7 +388,8 @@ public class CreateWorkspaceProductParam  implements java.io.Serializable {
     /**
      * set billingModel
      *
-     * @param billingModel
+     * @param billingModel 
+     * @return CreateWorkspaceProductParam
      */
     public CreateWorkspaceProductParam billingModel(String billingModel) {
         this.billingModel = billingModel;
@@ -344,7 +400,8 @@ public class CreateWorkspaceProductParam  implements java.io.Serializable {
     /**
      * set autoRenewal
      *
-     * @param autoRenewal
+     * @param autoRenewal 
+     * @return CreateWorkspaceProductParam
      */
     public CreateWorkspaceProductParam autoRenewal(Boolean autoRenewal) {
         this.autoRenewal = autoRenewal;
@@ -355,7 +412,8 @@ public class CreateWorkspaceProductParam  implements java.io.Serializable {
     /**
      * set purchaseDuration
      *
-     * @param purchaseDuration
+     * @param purchaseDuration 
+     * @return CreateWorkspaceProductParam
      */
     public CreateWorkspaceProductParam purchaseDuration(Integer purchaseDuration) {
         this.purchaseDuration = purchaseDuration;
@@ -366,7 +424,8 @@ public class CreateWorkspaceProductParam  implements java.io.Serializable {
     /**
      * set projectResourceReq
      *
-     * @param projectResourceReq
+     * @param projectResourceReq 
+     * @return CreateWorkspaceProductParam
      */
     public CreateWorkspaceProductParam projectResourceReq(CreateProjectResourceParam projectResourceReq) {
         this.projectResourceReq = projectResourceReq;
@@ -377,7 +436,8 @@ public class CreateWorkspaceProductParam  implements java.io.Serializable {
     /**
      * set returnUrl
      *
-     * @param returnUrl
+     * @param returnUrl 
+     * @return CreateWorkspaceProductParam
      */
     public CreateWorkspaceProductParam returnUrl(String returnUrl) {
         this.returnUrl = returnUrl;
@@ -385,4 +445,40 @@ public class CreateWorkspaceProductParam  implements java.io.Serializable {
     }
 
 
+    /**
+     * set bizResourceKey
+     *
+     * @param bizResourceKey 
+     * @return CreateWorkspaceProductParam
+     */
+    public CreateWorkspaceProductParam bizResourceKey(String bizResourceKey) {
+        this.bizResourceKey = bizResourceKey;
+        return this;
+    }
+
+
+    /**
+    * set bizTagInfos
+    *
+    * @param bizTagInfos 
+    * @return CreateWorkspaceProductParam
+    */
+    public CreateWorkspaceProductParam bizTagInfos(List<BizTagInfo> bizTagInfos) {
+        this.bizTagInfos = bizTagInfos;
+        return this;
+    }
+
+
+
+    /**
+     * add item to bizTagInfos
+     *
+     * @param bizTagInfo
+     */
+    public void addBizTagInfo(BizTagInfo bizTagInfo) {
+        if (this.bizTagInfos == null) {
+            this.bizTagInfos = new ArrayList<>();
+        }
+        this.bizTagInfos.add(bizTagInfo);
+    }
 }

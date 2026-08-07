@@ -112,7 +112,8 @@ public class UranusDataLoadHistoryResult extends JdcloudResult implements java.i
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return UranusDataLoadHistoryResult
      */
     public UranusDataLoadHistoryResult code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class UranusDataLoadHistoryResult extends JdcloudResult implements java.i
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return UranusDataLoadHistoryResult
      */
     public UranusDataLoadHistoryResult message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class UranusDataLoadHistoryResult extends JdcloudResult implements java.i
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return UranusDataLoadHistoryResult
      */
     public UranusDataLoadHistoryResult result(DataLoadHistoryResult result) {
         this.result = result;

@@ -110,7 +110,8 @@ public class ListJobOperateHistoryParam  implements java.io.Serializable {
     /**
      * set 分页-页码
      *
-     * @param pageNum
+     * @param pageNum 分页-页码
+     * @return ListJobOperateHistoryParam
      */
     public ListJobOperateHistoryParam pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -121,7 +122,8 @@ public class ListJobOperateHistoryParam  implements java.io.Serializable {
     /**
      * set 分页-每页数量
      *
-     * @param pageSize
+     * @param pageSize 分页-每页数量
+     * @return ListJobOperateHistoryParam
      */
     public ListJobOperateHistoryParam pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -132,7 +134,8 @@ public class ListJobOperateHistoryParam  implements java.io.Serializable {
     /**
      * set 作业id
      *
-     * @param jobId
+     * @param jobId 作业id
+     * @return ListJobOperateHistoryParam
      */
     public ListJobOperateHistoryParam jobId(Integer jobId) {
         this.jobId = jobId;

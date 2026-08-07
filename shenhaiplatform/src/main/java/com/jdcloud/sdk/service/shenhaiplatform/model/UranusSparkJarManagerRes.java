@@ -160,7 +160,8 @@ public class UranusSparkJarManagerRes  implements java.io.Serializable {
     /**
      * set 相对路径
      *
-     * @param relativePath
+     * @param relativePath 相对路径
+     * @return UranusSparkJarManagerRes
      */
     public UranusSparkJarManagerRes relativePath(String relativePath) {
         this.relativePath = relativePath;
@@ -171,7 +172,8 @@ public class UranusSparkJarManagerRes  implements java.io.Serializable {
     /**
      * set 实际路径
      *
-     * @param realPath
+     * @param realPath 实际路径
+     * @return UranusSparkJarManagerRes
      */
     public UranusSparkJarManagerRes realPath(String realPath) {
         this.realPath = realPath;
@@ -182,7 +184,8 @@ public class UranusSparkJarManagerRes  implements java.io.Serializable {
     /**
      * set 名称
      *
-     * @param name
+     * @param name 名称
+     * @return UranusSparkJarManagerRes
      */
     public UranusSparkJarManagerRes name(String name) {
         this.name = name;
@@ -193,7 +196,8 @@ public class UranusSparkJarManagerRes  implements java.io.Serializable {
     /**
      * set 是否是目录
      *
-     * @param dir
+     * @param dir 是否是目录
+     * @return UranusSparkJarManagerRes
      */
     public UranusSparkJarManagerRes dir(Boolean dir) {
         this.dir = dir;
@@ -204,7 +208,8 @@ public class UranusSparkJarManagerRes  implements java.io.Serializable {
     /**
     * set 子节点 sparkJarManagerRes
     *
-    * @param children
+    * @param children 子节点 sparkJarManagerRes
+    * @return UranusSparkJarManagerRes
     */
     public UranusSparkJarManagerRes children(List<UranusSparkJarManagerRes> children) {
         this.children = children;

@@ -211,7 +211,8 @@ public class UranusCatalogInfoList  implements java.io.Serializable {
     /**
      * set 前端排序唯一ID
      *
-     * @param unrealId
+     * @param unrealId 前端排序唯一ID
+     * @return UranusCatalogInfoList
      */
     public UranusCatalogInfoList unrealId(String unrealId) {
         this.unrealId = unrealId;
@@ -222,7 +223,8 @@ public class UranusCatalogInfoList  implements java.io.Serializable {
     /**
      * set 目录code
      *
-     * @param catalogCode
+     * @param catalogCode 目录code
+     * @return UranusCatalogInfoList
      */
     public UranusCatalogInfoList catalogCode(String catalogCode) {
         this.catalogCode = catalogCode;
@@ -233,7 +235,8 @@ public class UranusCatalogInfoList  implements java.io.Serializable {
     /**
      * set 目录名称
      *
-     * @param catalogName
+     * @param catalogName 目录名称
+     * @return UranusCatalogInfoList
      */
     public UranusCatalogInfoList catalogName(String catalogName) {
         this.catalogName = catalogName;
@@ -244,7 +247,8 @@ public class UranusCatalogInfoList  implements java.io.Serializable {
     /**
      * set 0：非叶子目录， 1：叶子目录
      *
-     * @param catalogType
+     * @param catalogType 0：非叶子目录， 1：叶子目录
+     * @return UranusCatalogInfoList
      */
     public UranusCatalogInfoList catalogType(Integer catalogType) {
         this.catalogType = catalogType;
@@ -255,7 +259,8 @@ public class UranusCatalogInfoList  implements java.io.Serializable {
     /**
      * set 父目录code
      *
-     * @param parentCode
+     * @param parentCode 父目录code
+     * @return UranusCatalogInfoList
      */
     public UranusCatalogInfoList parentCode(String parentCode) {
         this.parentCode = parentCode;
@@ -266,7 +271,8 @@ public class UranusCatalogInfoList  implements java.io.Serializable {
     /**
      * set 子节点数量
      *
-     * @param childrenNum
+     * @param childrenNum 子节点数量
+     * @return UranusCatalogInfoList
      */
     public UranusCatalogInfoList childrenNum(Integer childrenNum) {
         this.childrenNum = childrenNum;
@@ -277,7 +283,8 @@ public class UranusCatalogInfoList  implements java.io.Serializable {
     /**
     * set 流程列表
     *
-    * @param taskFlowList
+    * @param taskFlowList 流程列表
+    * @return UranusCatalogInfoList
     */
     public UranusCatalogInfoList taskFlowList(List<UranusTaskFlowListRes> taskFlowList) {
         this.taskFlowList = taskFlowList;

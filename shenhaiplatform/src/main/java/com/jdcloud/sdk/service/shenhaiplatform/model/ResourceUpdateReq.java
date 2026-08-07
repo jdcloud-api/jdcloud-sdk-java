@@ -184,7 +184,8 @@ public class ResourceUpdateReq  implements java.io.Serializable {
     /**
      * set 资源code
      *
-     * @param resourceCode
+     * @param resourceCode 资源code
+     * @return ResourceUpdateReq
      */
     public ResourceUpdateReq resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -195,7 +196,8 @@ public class ResourceUpdateReq  implements java.io.Serializable {
     /**
      * set 原始资源名称（上传的原始文件在本地客户端的文件名称）
      *
-     * @param originalName
+     * @param originalName 原始资源名称（上传的原始文件在本地客户端的文件名称）
+     * @return ResourceUpdateReq
      */
     public ResourceUpdateReq originalName(String originalName) {
         this.originalName = originalName;
@@ -206,7 +208,8 @@ public class ResourceUpdateReq  implements java.io.Serializable {
     /**
      * set 文件上传方式（默认为本地上传）
      *
-     * @param uploadMode
+     * @param uploadMode 文件上传方式（默认为本地上传）
+     * @return ResourceUpdateReq
      */
     public ResourceUpdateReq uploadMode(String uploadMode) {
         this.uploadMode = uploadMode;
@@ -217,7 +220,8 @@ public class ResourceUpdateReq  implements java.io.Serializable {
     /**
     * set 负责人
     *
-    * @param managers
+    * @param managers 负责人
+    * @return ResourceUpdateReq
     */
     public ResourceUpdateReq managers(List<String> managers) {
         this.managers = managers;
@@ -228,7 +232,8 @@ public class ResourceUpdateReq  implements java.io.Serializable {
     /**
      * set 资源状态
      *
-     * @param status
+     * @param status 资源状态
+     * @return ResourceUpdateReq
      */
     public ResourceUpdateReq status(String status) {
         this.status = status;
@@ -239,7 +244,8 @@ public class ResourceUpdateReq  implements java.io.Serializable {
     /**
      * set 环境信息（prod：生产环境；dev：开发环境），简单模式默认为prod
      *
-     * @param env
+     * @param env 环境信息（prod：生产环境；dev：开发环境），简单模式默认为prod
+     * @return ResourceUpdateReq
      */
     public ResourceUpdateReq env(String env) {
         this.env = env;

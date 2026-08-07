@@ -214,7 +214,8 @@ public class WorkspaceBundleOrUnBundleResourceRequest extends JdcloudRequest imp
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return WorkspaceBundleOrUnBundleResourceRequest
      */
     public WorkspaceBundleOrUnBundleResourceRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -225,7 +226,8 @@ public class WorkspaceBundleOrUnBundleResourceRequest extends JdcloudRequest imp
     /**
      * set userPin
      *
-     * @param userPin
+     * @param userPin 
+     * @return WorkspaceBundleOrUnBundleResourceRequest
      */
     public WorkspaceBundleOrUnBundleResourceRequest userPin(String userPin) {
         this.userPin = userPin;
@@ -236,7 +238,8 @@ public class WorkspaceBundleOrUnBundleResourceRequest extends JdcloudRequest imp
     /**
     * set calculateResourceCode
     *
-    * @param calculateResourceCode
+    * @param calculateResourceCode 
+    * @return WorkspaceBundleOrUnBundleResourceRequest
     */
     public WorkspaceBundleOrUnBundleResourceRequest calculateResourceCode(List<String> calculateResourceCode) {
         this.calculateResourceCode = calculateResourceCode;
@@ -247,7 +250,8 @@ public class WorkspaceBundleOrUnBundleResourceRequest extends JdcloudRequest imp
     /**
     * set integrationResourceCode
     *
-    * @param integrationResourceCode
+    * @param integrationResourceCode 
+    * @return WorkspaceBundleOrUnBundleResourceRequest
     */
     public WorkspaceBundleOrUnBundleResourceRequest integrationResourceCode(List<String> integrationResourceCode) {
         this.integrationResourceCode = integrationResourceCode;
@@ -258,7 +262,8 @@ public class WorkspaceBundleOrUnBundleResourceRequest extends JdcloudRequest imp
     /**
      * set bundleResource
      *
-     * @param bundleResource
+     * @param bundleResource 
+     * @return WorkspaceBundleOrUnBundleResourceRequest
      */
     public WorkspaceBundleOrUnBundleResourceRequest bundleResource(Boolean bundleResource) {
         this.bundleResource = bundleResource;
@@ -269,7 +274,8 @@ public class WorkspaceBundleOrUnBundleResourceRequest extends JdcloudRequest imp
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceBundleOrUnBundleResourceRequest
      */
     public WorkspaceBundleOrUnBundleResourceRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -280,7 +286,8 @@ public class WorkspaceBundleOrUnBundleResourceRequest extends JdcloudRequest imp
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceBundleOrUnBundleResourceRequest
      */
     public WorkspaceBundleOrUnBundleResourceRequest appName(String appName) {
         this.appName = appName;

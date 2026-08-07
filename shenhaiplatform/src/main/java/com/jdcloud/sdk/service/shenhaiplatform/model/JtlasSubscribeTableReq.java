@@ -89,7 +89,8 @@ public class JtlasSubscribeTableReq  implements java.io.Serializable {
     /**
      * set 表模型ID
      *
-     * @param id
+     * @param id 表模型ID
+     * @return JtlasSubscribeTableReq
      */
     public JtlasSubscribeTableReq id(String id) {
         this.id = id;
@@ -100,7 +101,8 @@ public class JtlasSubscribeTableReq  implements java.io.Serializable {
     /**
      * set 订阅类型
      *
-     * @param subscribeType
+     * @param subscribeType 订阅类型
+     * @return JtlasSubscribeTableReq
      */
     public JtlasSubscribeTableReq subscribeType(String subscribeType) {
         this.subscribeType = subscribeType;

@@ -158,7 +158,8 @@ public class GpuserMatchUserResDto  implements java.io.Serializable {
     /**
      * set 用户名称
      *
-     * @param userName
+     * @param userName 用户名称
+     * @return GpuserMatchUserResDto
      */
     public GpuserMatchUserResDto userName(String userName) {
         this.userName = userName;
@@ -169,7 +170,8 @@ public class GpuserMatchUserResDto  implements java.io.Serializable {
     /**
      * set 用户代码
      *
-     * @param userCode
+     * @param userCode 用户代码
+     * @return GpuserMatchUserResDto
      */
     public GpuserMatchUserResDto userCode(String userCode) {
         this.userCode = userCode;
@@ -180,7 +182,8 @@ public class GpuserMatchUserResDto  implements java.io.Serializable {
     /**
      * set 用户名称
      *
-     * @param realName
+     * @param realName 用户名称
+     * @return GpuserMatchUserResDto
      */
     public GpuserMatchUserResDto realName(String realName) {
         this.realName = realName;
@@ -191,7 +194,8 @@ public class GpuserMatchUserResDto  implements java.io.Serializable {
     /**
      * set 用户别名
      *
-     * @param nikeName
+     * @param nikeName 用户别名
+     * @return GpuserMatchUserResDto
      */
     public GpuserMatchUserResDto nikeName(String nikeName) {
         this.nikeName = nikeName;
@@ -202,7 +206,8 @@ public class GpuserMatchUserResDto  implements java.io.Serializable {
     /**
      * set 组织名称
      *
-     * @param organizationName
+     * @param organizationName 组织名称
+     * @return GpuserMatchUserResDto
      */
     public GpuserMatchUserResDto organizationName(String organizationName) {
         this.organizationName = organizationName;

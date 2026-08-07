@@ -168,7 +168,8 @@ public class GravityParticleJobHisRunListTaskLogRequest extends JdcloudRequest i
     /**
      * set 页面大小
      *
-     * @param pageSize
+     * @param pageSize 页面大小
+     * @return GravityParticleJobHisRunListTaskLogRequest
      */
     public GravityParticleJobHisRunListTaskLogRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -179,7 +180,8 @@ public class GravityParticleJobHisRunListTaskLogRequest extends JdcloudRequest i
     /**
      * set 页码
      *
-     * @param pageNum
+     * @param pageNum 页码
+     * @return GravityParticleJobHisRunListTaskLogRequest
      */
     public GravityParticleJobHisRunListTaskLogRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -190,7 +192,8 @@ public class GravityParticleJobHisRunListTaskLogRequest extends JdcloudRequest i
     /**
      * set 补数任务id
      *
-     * @param afreshAddId
+     * @param afreshAddId 补数任务id
+     * @return GravityParticleJobHisRunListTaskLogRequest
      */
     public GravityParticleJobHisRunListTaskLogRequest afreshAddId(Integer afreshAddId) {
         this.afreshAddId = afreshAddId;
@@ -201,7 +204,8 @@ public class GravityParticleJobHisRunListTaskLogRequest extends JdcloudRequest i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobHisRunListTaskLogRequest
      */
     public GravityParticleJobHisRunListTaskLogRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -212,7 +216,8 @@ public class GravityParticleJobHisRunListTaskLogRequest extends JdcloudRequest i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobHisRunListTaskLogRequest
      */
     public GravityParticleJobHisRunListTaskLogRequest appName(String appName) {
         this.appName = appName;

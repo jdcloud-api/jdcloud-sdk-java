@@ -134,7 +134,8 @@ public class UranusTaskInfoHistoryReq  implements java.io.Serializable {
     /**
      * set 节点Code
      *
-     * @param taskCode
+     * @param taskCode 节点Code
+     * @return UranusTaskInfoHistoryReq
      */
     public UranusTaskInfoHistoryReq taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -145,7 +146,8 @@ public class UranusTaskInfoHistoryReq  implements java.io.Serializable {
     /**
      * set 节点描述
      *
-     * @param taskDesc
+     * @param taskDesc 节点描述
+     * @return UranusTaskInfoHistoryReq
      */
     public UranusTaskInfoHistoryReq taskDesc(String taskDesc) {
         this.taskDesc = taskDesc;
@@ -156,7 +158,8 @@ public class UranusTaskInfoHistoryReq  implements java.io.Serializable {
     /**
      * set 页数
      *
-     * @param page
+     * @param page 页数
+     * @return UranusTaskInfoHistoryReq
      */
     public UranusTaskInfoHistoryReq page(Integer page) {
         this.page = page;
@@ -167,7 +170,8 @@ public class UranusTaskInfoHistoryReq  implements java.io.Serializable {
     /**
      * set 每页大小
      *
-     * @param pageSize
+     * @param pageSize 每页大小
+     * @return UranusTaskInfoHistoryReq
      */
     public UranusTaskInfoHistoryReq pageSize(Integer pageSize) {
         this.pageSize = pageSize;

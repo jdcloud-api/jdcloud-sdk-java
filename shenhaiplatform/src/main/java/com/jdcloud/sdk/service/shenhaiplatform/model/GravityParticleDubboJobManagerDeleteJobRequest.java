@@ -116,7 +116,8 @@ public class GravityParticleDubboJobManagerDeleteJobRequest extends JdcloudReque
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GravityParticleDubboJobManagerDeleteJobRequest
      */
     public GravityParticleDubboJobManagerDeleteJobRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -127,7 +128,8 @@ public class GravityParticleDubboJobManagerDeleteJobRequest extends JdcloudReque
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerDeleteJobRequest
      */
     public GravityParticleDubboJobManagerDeleteJobRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class GravityParticleDubboJobManagerDeleteJobRequest extends JdcloudReque
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerDeleteJobRequest
      */
     public GravityParticleDubboJobManagerDeleteJobRequest appName(String appName) {
         this.appName = appName;

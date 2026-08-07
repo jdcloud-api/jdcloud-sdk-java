@@ -135,7 +135,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesResult extends Jdclou
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GravityParticleDubboJobManagerValidateJobRulesResult
      */
     public GravityParticleDubboJobManagerValidateJobRulesResult success(Integer success) {
         this.success = success;
@@ -146,7 +147,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesResult extends Jdclou
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GravityParticleDubboJobManagerValidateJobRulesResult
      */
     public GravityParticleDubboJobManagerValidateJobRulesResult code(String code) {
         this.code = code;
@@ -157,7 +159,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesResult extends Jdclou
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GravityParticleDubboJobManagerValidateJobRulesResult
      */
     public GravityParticleDubboJobManagerValidateJobRulesResult msg(String msg) {
         this.msg = msg;
@@ -168,7 +171,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesResult extends Jdclou
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return GravityParticleDubboJobManagerValidateJobRulesResult
      */
     public GravityParticleDubboJobManagerValidateJobRulesResult result(Boolean result) {
         this.result = result;

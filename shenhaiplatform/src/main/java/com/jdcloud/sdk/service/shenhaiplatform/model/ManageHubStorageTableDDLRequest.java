@@ -170,7 +170,8 @@ public class ManageHubStorageTableDDLRequest extends JdcloudRequest implements j
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return ManageHubStorageTableDDLRequest
      */
     public ManageHubStorageTableDDLRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -181,7 +182,8 @@ public class ManageHubStorageTableDDLRequest extends JdcloudRequest implements j
     /**
      * set 数据库名称
      *
-     * @param database
+     * @param database 数据库名称
+     * @return ManageHubStorageTableDDLRequest
      */
     public ManageHubStorageTableDDLRequest database(String database) {
         this.database = database;
@@ -192,7 +194,8 @@ public class ManageHubStorageTableDDLRequest extends JdcloudRequest implements j
     /**
      * set 表名称
      *
-     * @param table
+     * @param table 表名称
+     * @return ManageHubStorageTableDDLRequest
      */
     public ManageHubStorageTableDDLRequest table(String table) {
         this.table = table;
@@ -203,7 +206,8 @@ public class ManageHubStorageTableDDLRequest extends JdcloudRequest implements j
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubStorageTableDDLRequest
      */
     public ManageHubStorageTableDDLRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -214,7 +218,8 @@ public class ManageHubStorageTableDDLRequest extends JdcloudRequest implements j
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubStorageTableDDLRequest
      */
     public ManageHubStorageTableDDLRequest appName(String appName) {
         this.appName = appName;

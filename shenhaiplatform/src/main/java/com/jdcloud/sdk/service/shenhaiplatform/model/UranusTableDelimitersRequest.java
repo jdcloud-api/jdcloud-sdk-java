@@ -92,7 +92,8 @@ public class UranusTableDelimitersRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTableDelimitersRequest
      */
     public UranusTableDelimitersRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class UranusTableDelimitersRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTableDelimitersRequest
      */
     public UranusTableDelimitersRequest appName(String appName) {
         this.appName = appName;

@@ -158,7 +158,8 @@ public class GpjsJobDelInfoReq  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpjsJobDelInfoReq
      */
     public GpjsJobDelInfoReq jobName(String jobName) {
         this.jobName = jobName;
@@ -169,7 +170,8 @@ public class GpjsJobDelInfoReq  implements java.io.Serializable {
     /**
      * set 是否删除子作业 1删除   0不删
      *
-     * @param isDelSonJob
+     * @param isDelSonJob 是否删除子作业 1删除   0不删
+     * @return GpjsJobDelInfoReq
      */
     public GpjsJobDelInfoReq isDelSonJob(String isDelSonJob) {
         this.isDelSonJob = isDelSonJob;
@@ -180,7 +182,8 @@ public class GpjsJobDelInfoReq  implements java.io.Serializable {
     /**
      * set 是否删除质量作业  1删除   0不删
      *
-     * @param isDelQualityJob
+     * @param isDelQualityJob 是否删除质量作业  1删除   0不删
+     * @return GpjsJobDelInfoReq
      */
     public GpjsJobDelInfoReq isDelQualityJob(String isDelQualityJob) {
         this.isDelQualityJob = isDelQualityJob;
@@ -191,7 +194,8 @@ public class GpjsJobDelInfoReq  implements java.io.Serializable {
     /**
      * set 用户角色列表
      *
-     * @param user_roles
+     * @param user_roles 用户角色列表
+     * @return GpjsJobDelInfoReq
      */
     public GpjsJobDelInfoReq user_roles(String user_roles) {
         this.user_roles = user_roles;
@@ -202,7 +206,8 @@ public class GpjsJobDelInfoReq  implements java.io.Serializable {
     /**
      * set 作业负责人
      *
-     * @param username
+     * @param username 作业负责人
+     * @return GpjsJobDelInfoReq
      */
     public GpjsJobDelInfoReq username(String username) {
         this.username = username;

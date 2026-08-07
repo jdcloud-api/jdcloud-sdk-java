@@ -92,7 +92,8 @@ public class CopilotModelListRequest extends JdcloudRequest implements java.io.S
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CopilotModelListRequest
      */
     public CopilotModelListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class CopilotModelListRequest extends JdcloudRequest implements java.io.S
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return CopilotModelListRequest
      */
     public CopilotModelListRequest appName(String appName) {
         this.appName = appName;

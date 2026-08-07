@@ -136,7 +136,8 @@ public class GpdjmcRpcResponseListSchedJobResDTO  implements java.io.Serializabl
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GpdjmcRpcResponseListSchedJobResDTO
      */
     public GpdjmcRpcResponseListSchedJobResDTO success(Integer success) {
         this.success = success;
@@ -147,7 +148,8 @@ public class GpdjmcRpcResponseListSchedJobResDTO  implements java.io.Serializabl
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GpdjmcRpcResponseListSchedJobResDTO
      */
     public GpdjmcRpcResponseListSchedJobResDTO code(String code) {
         this.code = code;
@@ -158,7 +160,8 @@ public class GpdjmcRpcResponseListSchedJobResDTO  implements java.io.Serializabl
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GpdjmcRpcResponseListSchedJobResDTO
      */
     public GpdjmcRpcResponseListSchedJobResDTO msg(String msg) {
         this.msg = msg;
@@ -169,7 +172,8 @@ public class GpdjmcRpcResponseListSchedJobResDTO  implements java.io.Serializabl
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return GpdjmcRpcResponseListSchedJobResDTO
     */
     public GpdjmcRpcResponseListSchedJobResDTO result(List<GpdjmcSchedJobResDTO> result) {
         this.result = result;

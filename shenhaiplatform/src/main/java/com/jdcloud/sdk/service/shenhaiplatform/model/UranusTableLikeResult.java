@@ -186,7 +186,8 @@ public class UranusTableLikeResult extends JdcloudResult implements java.io.Seri
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusTableLikeResult
      */
     public UranusTableLikeResult code(String code) {
         this.code = code;
@@ -197,7 +198,8 @@ public class UranusTableLikeResult extends JdcloudResult implements java.io.Seri
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusTableLikeResult
      */
     public UranusTableLikeResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -208,7 +210,8 @@ public class UranusTableLikeResult extends JdcloudResult implements java.io.Seri
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusTableLikeResult
      */
     public UranusTableLikeResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -219,7 +222,8 @@ public class UranusTableLikeResult extends JdcloudResult implements java.io.Seri
     /**
     * set Object
     *
-    * @param result
+    * @param result Object
+    * @return UranusTableLikeResult
     */
     public UranusTableLikeResult result(List<TableBriefInfo> result) {
         this.result = result;
@@ -230,7 +234,8 @@ public class UranusTableLikeResult extends JdcloudResult implements java.io.Seri
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusTableLikeResult
      */
     public UranusTableLikeResult subCode(String subCode) {
         this.subCode = subCode;
@@ -241,7 +246,8 @@ public class UranusTableLikeResult extends JdcloudResult implements java.io.Seri
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusTableLikeResult
      */
     public UranusTableLikeResult successed(Boolean successed) {
         this.successed = successed;

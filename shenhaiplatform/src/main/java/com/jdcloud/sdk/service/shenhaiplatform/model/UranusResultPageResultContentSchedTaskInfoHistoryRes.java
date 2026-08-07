@@ -182,7 +182,8 @@ public class UranusResultPageResultContentSchedTaskInfoHistoryRes  implements ja
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusResultPageResultContentSchedTaskInfoHistoryRes
      */
     public UranusResultPageResultContentSchedTaskInfoHistoryRes code(String code) {
         this.code = code;
@@ -193,7 +194,8 @@ public class UranusResultPageResultContentSchedTaskInfoHistoryRes  implements ja
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusResultPageResultContentSchedTaskInfoHistoryRes
      */
     public UranusResultPageResultContentSchedTaskInfoHistoryRes errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -204,7 +206,8 @@ public class UranusResultPageResultContentSchedTaskInfoHistoryRes  implements ja
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusResultPageResultContentSchedTaskInfoHistoryRes
      */
     public UranusResultPageResultContentSchedTaskInfoHistoryRes errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -215,7 +218,8 @@ public class UranusResultPageResultContentSchedTaskInfoHistoryRes  implements ja
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return UranusResultPageResultContentSchedTaskInfoHistoryRes
      */
     public UranusResultPageResultContentSchedTaskInfoHistoryRes result(UranusPageResultContentSchedTaskInfoHistoryRes result) {
         this.result = result;
@@ -226,7 +230,8 @@ public class UranusResultPageResultContentSchedTaskInfoHistoryRes  implements ja
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusResultPageResultContentSchedTaskInfoHistoryRes
      */
     public UranusResultPageResultContentSchedTaskInfoHistoryRes subCode(String subCode) {
         this.subCode = subCode;
@@ -237,7 +242,8 @@ public class UranusResultPageResultContentSchedTaskInfoHistoryRes  implements ja
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusResultPageResultContentSchedTaskInfoHistoryRes
      */
     public UranusResultPageResultContentSchedTaskInfoHistoryRes successed(Boolean successed) {
         this.successed = successed;

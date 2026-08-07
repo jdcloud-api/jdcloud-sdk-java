@@ -159,7 +159,8 @@ public class GravityParticleJobscheIsUpstreamSameFrequencyResult extends Jdcloud
     /**
      * set 成功标识，1成功，0失败
      *
-     * @param success
+     * @param success 成功标识，1成功，0失败
+     * @return GravityParticleJobscheIsUpstreamSameFrequencyResult
      */
     public GravityParticleJobscheIsUpstreamSameFrequencyResult success(Integer success) {
         this.success = success;
@@ -170,7 +171,8 @@ public class GravityParticleJobscheIsUpstreamSameFrequencyResult extends Jdcloud
     /**
      * set 返回结果对象
      *
-     * @param result
+     * @param result 返回结果对象
+     * @return GravityParticleJobscheIsUpstreamSameFrequencyResult
      */
     public GravityParticleJobscheIsUpstreamSameFrequencyResult result(Boolean result) {
         this.result = result;
@@ -181,7 +183,8 @@ public class GravityParticleJobscheIsUpstreamSameFrequencyResult extends Jdcloud
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return GravityParticleJobscheIsUpstreamSameFrequencyResult
      */
     public GravityParticleJobscheIsUpstreamSameFrequencyResult code(String code) {
         this.code = code;
@@ -192,7 +195,8 @@ public class GravityParticleJobscheIsUpstreamSameFrequencyResult extends Jdcloud
     /**
      * set 返回状态信息
      *
-     * @param msg
+     * @param msg 返回状态信息
+     * @return GravityParticleJobscheIsUpstreamSameFrequencyResult
      */
     public GravityParticleJobscheIsUpstreamSameFrequencyResult msg(String msg) {
         this.msg = msg;
@@ -203,7 +207,8 @@ public class GravityParticleJobscheIsUpstreamSameFrequencyResult extends Jdcloud
     /**
      * set 返回请求流水号
      *
-     * @param _REQ_SEQ_NO_
+     * @param _REQ_SEQ_NO_ 返回请求流水号
+     * @return GravityParticleJobscheIsUpstreamSameFrequencyResult
      */
     public GravityParticleJobscheIsUpstreamSameFrequencyResult _REQ_SEQ_NO_(String _REQ_SEQ_NO_) {
         this._REQ_SEQ_NO_ = _REQ_SEQ_NO_;

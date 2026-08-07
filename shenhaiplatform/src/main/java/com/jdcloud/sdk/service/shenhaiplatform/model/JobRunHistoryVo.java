@@ -350,7 +350,8 @@ public class JobRunHistoryVo  implements java.io.Serializable {
     /**
      * set 作业名
      *
-     * @param etlJob
+     * @param etlJob 作业名
+     * @return JobRunHistoryVo
      */
     public JobRunHistoryVo etlJob(String etlJob) {
         this.etlJob = etlJob;
@@ -361,7 +362,8 @@ public class JobRunHistoryVo  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return JobRunHistoryVo
      */
     public JobRunHistoryVo txDate(String txDate) {
         this.txDate = txDate;
@@ -372,7 +374,8 @@ public class JobRunHistoryVo  implements java.io.Serializable {
     /**
      * set 运行开始时间
      *
-     * @param startTime
+     * @param startTime 运行开始时间
+     * @return JobRunHistoryVo
      */
     public JobRunHistoryVo startTime(String startTime) {
         this.startTime = startTime;
@@ -383,7 +386,8 @@ public class JobRunHistoryVo  implements java.io.Serializable {
     /**
      * set 运行结束时间
      *
-     * @param endTime
+     * @param endTime 运行结束时间
+     * @return JobRunHistoryVo
      */
     public JobRunHistoryVo endTime(String endTime) {
         this.endTime = endTime;
@@ -394,7 +398,8 @@ public class JobRunHistoryVo  implements java.io.Serializable {
     /**
      * set 运行状态
      *
-     * @param jobStatus
+     * @param jobStatus 运行状态
+     * @return JobRunHistoryVo
      */
     public JobRunHistoryVo jobStatus(String jobStatus) {
         this.jobStatus = jobStatus;
@@ -405,7 +410,8 @@ public class JobRunHistoryVo  implements java.io.Serializable {
     /**
      * set Session ID
      *
-     * @param jobSessionId
+     * @param jobSessionId Session ID
+     * @return JobRunHistoryVo
      */
     public JobRunHistoryVo jobSessionId(String jobSessionId) {
         this.jobSessionId = jobSessionId;
@@ -416,7 +422,8 @@ public class JobRunHistoryVo  implements java.io.Serializable {
     /**
      * set 运行时间
      *
-     * @param runTime
+     * @param runTime 运行时间
+     * @return JobRunHistoryVo
      */
     public JobRunHistoryVo runTime(String runTime) {
         this.runTime = runTime;
@@ -427,7 +434,8 @@ public class JobRunHistoryVo  implements java.io.Serializable {
     /**
      * set 返回编码
      *
-     * @param returnCode
+     * @param returnCode 返回编码
+     * @return JobRunHistoryVo
      */
     public JobRunHistoryVo returnCode(String returnCode) {
         this.returnCode = returnCode;
@@ -438,7 +446,8 @@ public class JobRunHistoryVo  implements java.io.Serializable {
     /**
      * set 返回信息
      *
-     * @param returnMsg
+     * @param returnMsg 返回信息
+     * @return JobRunHistoryVo
      */
     public JobRunHistoryVo returnMsg(String returnMsg) {
         this.returnMsg = returnMsg;
@@ -449,7 +458,8 @@ public class JobRunHistoryVo  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return JobRunHistoryVo
      */
     public JobRunHistoryVo createTime(String createTime) {
         this.createTime = createTime;
@@ -460,7 +470,8 @@ public class JobRunHistoryVo  implements java.io.Serializable {
     /**
      * set 是否补数任务
      *
-     * @param isComplement
+     * @param isComplement 是否补数任务
+     * @return JobRunHistoryVo
      */
     public JobRunHistoryVo isComplement(String isComplement) {
         this.isComplement = isComplement;
@@ -471,7 +482,8 @@ public class JobRunHistoryVo  implements java.io.Serializable {
     /**
      * set 计划执行时间
      *
-     * @param planExecTime
+     * @param planExecTime 计划执行时间
+     * @return JobRunHistoryVo
      */
     public JobRunHistoryVo planExecTime(String planExecTime) {
         this.planExecTime = planExecTime;
@@ -482,7 +494,8 @@ public class JobRunHistoryVo  implements java.io.Serializable {
     /**
      * set 云仓调度作业id
      *
-     * @param applicationId
+     * @param applicationId 云仓调度作业id
+     * @return JobRunHistoryVo
      */
     public JobRunHistoryVo applicationId(String applicationId) {
         this.applicationId = applicationId;

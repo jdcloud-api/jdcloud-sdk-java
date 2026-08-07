@@ -136,7 +136,8 @@ public class PageInfoUcUsersResp  implements java.io.Serializable {
     /**
      * set 总数量
      *
-     * @param total
+     * @param total 总数量
+     * @return PageInfoUcUsersResp
      */
     public PageInfoUcUsersResp total(Number total) {
         this.total = total;
@@ -147,7 +148,8 @@ public class PageInfoUcUsersResp  implements java.io.Serializable {
     /**
      * set 分页页数
      *
-     * @param pageNum
+     * @param pageNum 分页页数
+     * @return PageInfoUcUsersResp
      */
     public PageInfoUcUsersResp pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -158,7 +160,8 @@ public class PageInfoUcUsersResp  implements java.io.Serializable {
     /**
      * set 页面容量
      *
-     * @param pageSize
+     * @param pageSize 页面容量
+     * @return PageInfoUcUsersResp
      */
     public PageInfoUcUsersResp pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -169,7 +172,8 @@ public class PageInfoUcUsersResp  implements java.io.Serializable {
     /**
     * set 项目成员列表
     *
-    * @param list
+    * @param list 项目成员列表
+    * @return PageInfoUcUsersResp
     */
     public PageInfoUcUsersResp list(List<UcUsersResp> list) {
         this.list = list;

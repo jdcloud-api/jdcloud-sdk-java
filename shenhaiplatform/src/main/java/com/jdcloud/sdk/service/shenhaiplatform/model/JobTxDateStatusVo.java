@@ -374,7 +374,8 @@ public class JobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return JobTxDateStatusVo
      */
     public JobTxDateStatusVo txDate(String txDate) {
         this.txDate = txDate;
@@ -385,7 +386,8 @@ public class JobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 作业名称
+     * @return JobTxDateStatusVo
      */
     public JobTxDateStatusVo cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -396,7 +398,8 @@ public class JobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 作业编码
      *
-     * @param jobName
+     * @param jobName 作业编码
+     * @return JobTxDateStatusVo
      */
     public JobTxDateStatusVo jobName(String jobName) {
         this.jobName = jobName;
@@ -407,7 +410,8 @@ public class JobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 作业类型
      *
-     * @param jobType
+     * @param jobType 作业类型
+     * @return JobTxDateStatusVo
      */
     public JobTxDateStatusVo jobType(String jobType) {
         this.jobType = jobType;
@@ -418,7 +422,8 @@ public class JobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 作业类型-展示
      *
-     * @param jobTypeLabel
+     * @param jobTypeLabel 作业类型-展示
+     * @return JobTxDateStatusVo
      */
     public JobTxDateStatusVo jobTypeLabel(String jobTypeLabel) {
         this.jobTypeLabel = jobTypeLabel;
@@ -429,7 +434,8 @@ public class JobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return JobTxDateStatusVo
      */
     public JobTxDateStatusVo manager(String manager) {
         this.manager = manager;
@@ -440,7 +446,8 @@ public class JobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 状态
      *
-     * @param status
+     * @param status 状态
+     * @return JobTxDateStatusVo
      */
     public JobTxDateStatusVo status(String status) {
         this.status = status;
@@ -451,7 +458,8 @@ public class JobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 状态-展示
      *
-     * @param statusLabel
+     * @param statusLabel 状态-展示
+     * @return JobTxDateStatusVo
      */
     public JobTxDateStatusVo statusLabel(String statusLabel) {
         this.statusLabel = statusLabel;
@@ -462,7 +470,8 @@ public class JobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 运行开始时间
      *
-     * @param startTime
+     * @param startTime 运行开始时间
+     * @return JobTxDateStatusVo
      */
     public JobTxDateStatusVo startTime(String startTime) {
         this.startTime = startTime;
@@ -473,7 +482,8 @@ public class JobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 运行结束时间
      *
-     * @param endTime
+     * @param endTime 运行结束时间
+     * @return JobTxDateStatusVo
      */
     public JobTxDateStatusVo endTime(String endTime) {
         this.endTime = endTime;
@@ -484,7 +494,8 @@ public class JobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 运行频率
      *
-     * @param cycle
+     * @param cycle 运行频率
+     * @return JobTxDateStatusVo
      */
     public JobTxDateStatusVo cycle(String cycle) {
         this.cycle = cycle;
@@ -495,7 +506,8 @@ public class JobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 运行频率-展示
      *
-     * @param cycleLabel
+     * @param cycleLabel 运行频率-展示
+     * @return JobTxDateStatusVo
      */
     public JobTxDateStatusVo cycleLabel(String cycleLabel) {
         this.cycleLabel = cycleLabel;
@@ -506,7 +518,8 @@ public class JobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 工作空间编码
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间编码
+     * @return JobTxDateStatusVo
      */
     public JobTxDateStatusVo workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -517,7 +530,8 @@ public class JobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 租户编码
      *
-     * @param companyCode
+     * @param companyCode 租户编码
+     * @return JobTxDateStatusVo
      */
     public JobTxDateStatusVo companyCode(String companyCode) {
         this.companyCode = companyCode;

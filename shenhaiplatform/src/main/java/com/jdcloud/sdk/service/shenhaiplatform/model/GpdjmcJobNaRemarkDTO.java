@@ -232,7 +232,8 @@ public class GpdjmcJobNaRemarkDTO  implements java.io.Serializable {
     /**
      * set userName
      *
-     * @param userName
+     * @param userName 
+     * @return GpdjmcJobNaRemarkDTO
      */
     public GpdjmcJobNaRemarkDTO userName(String userName) {
         this.userName = userName;
@@ -243,7 +244,8 @@ public class GpdjmcJobNaRemarkDTO  implements java.io.Serializable {
     /**
      * set remark
      *
-     * @param remark
+     * @param remark 
+     * @return GpdjmcJobNaRemarkDTO
      */
     public GpdjmcJobNaRemarkDTO remark(String remark) {
         this.remark = remark;
@@ -254,7 +256,8 @@ public class GpdjmcJobNaRemarkDTO  implements java.io.Serializable {
     /**
     * set jobNames
     *
-    * @param jobNames
+    * @param jobNames 
+    * @return GpdjmcJobNaRemarkDTO
     */
     public GpdjmcJobNaRemarkDTO jobNames(List<String> jobNames) {
         this.jobNames = jobNames;
@@ -265,7 +268,8 @@ public class GpdjmcJobNaRemarkDTO  implements java.io.Serializable {
     /**
      * set fileId
      *
-     * @param fileId
+     * @param fileId 
+     * @return GpdjmcJobNaRemarkDTO
      */
     public GpdjmcJobNaRemarkDTO fileId(Integer fileId) {
         this.fileId = fileId;
@@ -276,7 +280,8 @@ public class GpdjmcJobNaRemarkDTO  implements java.io.Serializable {
     /**
      * set version
      *
-     * @param version
+     * @param version 
+     * @return GpdjmcJobNaRemarkDTO
      */
     public GpdjmcJobNaRemarkDTO version(Integer version) {
         this.version = version;
@@ -287,7 +292,8 @@ public class GpdjmcJobNaRemarkDTO  implements java.io.Serializable {
     /**
      * set publishDesc
      *
-     * @param publishDesc
+     * @param publishDesc 
+     * @return GpdjmcJobNaRemarkDTO
      */
     public GpdjmcJobNaRemarkDTO publishDesc(String publishDesc) {
         this.publishDesc = publishDesc;
@@ -298,7 +304,8 @@ public class GpdjmcJobNaRemarkDTO  implements java.io.Serializable {
     /**
      * set manager
      *
-     * @param manager
+     * @param manager 
+     * @return GpdjmcJobNaRemarkDTO
      */
     public GpdjmcJobNaRemarkDTO manager(Boolean manager) {
         this.manager = manager;
@@ -309,7 +316,8 @@ public class GpdjmcJobNaRemarkDTO  implements java.io.Serializable {
     /**
      * set jobManager
      *
-     * @param jobManager
+     * @param jobManager 
+     * @return GpdjmcJobNaRemarkDTO
      */
     public GpdjmcJobNaRemarkDTO jobManager(Boolean jobManager) {
         this.jobManager = jobManager;

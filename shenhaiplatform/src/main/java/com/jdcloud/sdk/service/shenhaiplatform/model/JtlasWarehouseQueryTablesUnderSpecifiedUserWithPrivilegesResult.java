@@ -114,7 +114,8 @@ public class JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesResult ext
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesResult
      */
     public JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesResult code(String code) {
         this.code = code;
@@ -125,7 +126,8 @@ public class JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesResult ext
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesResult
      */
     public JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesResult message(String message) {
         this.message = message;
@@ -136,7 +138,8 @@ public class JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesResult ext
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesResult
     */
     public JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesResult result(List<JtlasWarehouseTable> result) {
         this.result = result;

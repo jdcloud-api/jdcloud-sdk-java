@@ -113,7 +113,8 @@ public class JtlasTableOwnedByUserReq  implements java.io.Serializable {
     /**
      * set 数据库（工作空间编码）
      *
-     * @param database
+     * @param database 数据库（工作空间编码）
+     * @return JtlasTableOwnedByUserReq
      */
     public JtlasTableOwnedByUserReq database(String database) {
         this.database = database;
@@ -124,7 +125,8 @@ public class JtlasTableOwnedByUserReq  implements java.io.Serializable {
     /**
      * set 账户信息
      *
-     * @param creator
+     * @param creator 账户信息
+     * @return JtlasTableOwnedByUserReq
      */
     public JtlasTableOwnedByUserReq creator(String creator) {
         this.creator = creator;
@@ -135,7 +137,8 @@ public class JtlasTableOwnedByUserReq  implements java.io.Serializable {
     /**
      * set 表名称
      *
-     * @param fuzzyName
+     * @param fuzzyName 表名称
+     * @return JtlasTableOwnedByUserReq
      */
     public JtlasTableOwnedByUserReq fuzzyName(String fuzzyName) {
         this.fuzzyName = fuzzyName;

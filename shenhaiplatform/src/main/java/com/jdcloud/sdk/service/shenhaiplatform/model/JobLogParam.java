@@ -158,7 +158,8 @@ public class JobLogParam  implements java.io.Serializable {
     /**
      * set 分页-页码
      *
-     * @param pageNum
+     * @param pageNum 分页-页码
+     * @return JobLogParam
      */
     public JobLogParam pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -169,7 +170,8 @@ public class JobLogParam  implements java.io.Serializable {
     /**
      * set 分页-每页数量
      *
-     * @param pageSize
+     * @param pageSize 分页-每页数量
+     * @return JobLogParam
      */
     public JobLogParam pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -180,7 +182,8 @@ public class JobLogParam  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return JobLogParam
      */
     public JobLogParam jobName(String jobName) {
         this.jobName = jobName;
@@ -191,7 +194,8 @@ public class JobLogParam  implements java.io.Serializable {
     /**
      * set session id
      *
-     * @param jobSessionId
+     * @param jobSessionId session id
+     * @return JobLogParam
      */
     public JobLogParam jobSessionId(String jobSessionId) {
         this.jobSessionId = jobSessionId;
@@ -202,7 +206,8 @@ public class JobLogParam  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return JobLogParam
      */
     public JobLogParam txDate(String txDate) {
         this.txDate = txDate;

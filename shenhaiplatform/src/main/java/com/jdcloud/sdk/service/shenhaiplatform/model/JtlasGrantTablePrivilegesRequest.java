@@ -144,7 +144,8 @@ public class JtlasGrantTablePrivilegesRequest extends JdcloudRequest implements 
     /**
      * set 数据库名称
      *
-     * @param database
+     * @param database 数据库名称
+     * @return JtlasGrantTablePrivilegesRequest
      */
     public JtlasGrantTablePrivilegesRequest database(String database) {
         this.database = database;
@@ -155,7 +156,8 @@ public class JtlasGrantTablePrivilegesRequest extends JdcloudRequest implements 
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return JtlasGrantTablePrivilegesRequest
      */
     public JtlasGrantTablePrivilegesRequest tableName(String tableName) {
         this.tableName = tableName;
@@ -166,7 +168,8 @@ public class JtlasGrantTablePrivilegesRequest extends JdcloudRequest implements 
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasGrantTablePrivilegesRequest
      */
     public JtlasGrantTablePrivilegesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -177,7 +180,8 @@ public class JtlasGrantTablePrivilegesRequest extends JdcloudRequest implements 
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasGrantTablePrivilegesRequest
      */
     public JtlasGrantTablePrivilegesRequest appName(String appName) {
         this.appName = appName;

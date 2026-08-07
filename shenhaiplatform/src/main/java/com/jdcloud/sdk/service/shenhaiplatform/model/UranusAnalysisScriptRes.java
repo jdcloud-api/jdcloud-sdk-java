@@ -302,7 +302,8 @@ public class UranusAnalysisScriptRes  implements java.io.Serializable {
     /**
      * set 输出表名称
      *
-     * @param tableName
+     * @param tableName 输出表名称
+     * @return UranusAnalysisScriptRes
      */
     public UranusAnalysisScriptRes tableName(String tableName) {
         this.tableName = tableName;
@@ -313,7 +314,8 @@ public class UranusAnalysisScriptRes  implements java.io.Serializable {
     /**
      * set 依赖任务名称
      *
-     * @param dependJobName
+     * @param dependJobName 依赖任务名称
+     * @return UranusAnalysisScriptRes
      */
     public UranusAnalysisScriptRes dependJobName(String dependJobName) {
         this.dependJobName = dependJobName;
@@ -324,7 +326,8 @@ public class UranusAnalysisScriptRes  implements java.io.Serializable {
     /**
      * set 依赖任务Code
      *
-     * @param dependTaskCode
+     * @param dependTaskCode 依赖任务Code
+     * @return UranusAnalysisScriptRes
      */
     public UranusAnalysisScriptRes dependTaskCode(String dependTaskCode) {
         this.dependTaskCode = dependTaskCode;
@@ -335,7 +338,8 @@ public class UranusAnalysisScriptRes  implements java.io.Serializable {
     /**
      * set 表描述
      *
-     * @param tableDesc
+     * @param tableDesc 表描述
+     * @return UranusAnalysisScriptRes
      */
     public UranusAnalysisScriptRes tableDesc(String tableDesc) {
         this.tableDesc = tableDesc;
@@ -346,7 +350,8 @@ public class UranusAnalysisScriptRes  implements java.io.Serializable {
     /**
      * set 作业运行规则
      *
-     * @param cycle
+     * @param cycle 作业运行规则
+     * @return UranusAnalysisScriptRes
      */
     public UranusAnalysisScriptRes cycle(String cycle) {
         this.cycle = cycle;
@@ -357,7 +362,8 @@ public class UranusAnalysisScriptRes  implements java.io.Serializable {
     /**
      * set 资产id
      *
-     * @param assetsId
+     * @param assetsId 资产id
+     * @return UranusAnalysisScriptRes
      */
     public UranusAnalysisScriptRes assetsId(Integer assetsId) {
         this.assetsId = assetsId;
@@ -368,7 +374,8 @@ public class UranusAnalysisScriptRes  implements java.io.Serializable {
     /**
      * set 表中文名
      *
-     * @param tableCnName
+     * @param tableCnName 表中文名
+     * @return UranusAnalysisScriptRes
      */
     public UranusAnalysisScriptRes tableCnName(String tableCnName) {
         this.tableCnName = tableCnName;
@@ -379,7 +386,8 @@ public class UranusAnalysisScriptRes  implements java.io.Serializable {
     /**
      * set 表英文名
      *
-     * @param tableEnName
+     * @param tableEnName 表英文名
+     * @return UranusAnalysisScriptRes
      */
     public UranusAnalysisScriptRes tableEnName(String tableEnName) {
         this.tableEnName = tableEnName;
@@ -390,7 +398,8 @@ public class UranusAnalysisScriptRes  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return UranusAnalysisScriptRes
      */
     public UranusAnalysisScriptRes manager(String manager) {
         this.manager = manager;
@@ -401,7 +410,8 @@ public class UranusAnalysisScriptRes  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param managerName
+     * @param managerName 负责人
+     * @return UranusAnalysisScriptRes
      */
     public UranusAnalysisScriptRes managerName(String managerName) {
         this.managerName = managerName;
@@ -412,7 +422,8 @@ public class UranusAnalysisScriptRes  implements java.io.Serializable {
     /**
      * set 创建人
      *
-     * @param creator
+     * @param creator 创建人
+     * @return UranusAnalysisScriptRes
      */
     public UranusAnalysisScriptRes creator(String creator) {
         this.creator = creator;

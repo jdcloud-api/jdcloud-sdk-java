@@ -2190,7 +2190,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set projectId
      *
-     * @param projectId
+     * @param projectId 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest projectId(Integer projectId) {
         this.projectId = projectId;
@@ -2201,7 +2202,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set projectName
      *
-     * @param projectName
+     * @param projectName 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest projectName(String projectName) {
         this.projectName = projectName;
@@ -2212,7 +2214,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set projectNameMatch
      *
-     * @param projectNameMatch
+     * @param projectNameMatch 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest projectNameMatch(Boolean projectNameMatch) {
         this.projectNameMatch = projectNameMatch;
@@ -2223,7 +2226,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set nameKeyWord
      *
-     * @param nameKeyWord
+     * @param nameKeyWord 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest nameKeyWord(String nameKeyWord) {
         this.nameKeyWord = nameKeyWord;
@@ -2234,7 +2238,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set relationType
      *
-     * @param relationType
+     * @param relationType 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest relationType(String relationType) {
         this.relationType = relationType;
@@ -2245,7 +2250,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set modelId
      *
-     * @param modelId
+     * @param modelId 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest modelId(Integer modelId) {
         this.modelId = modelId;
@@ -2256,7 +2262,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set modelName
      *
-     * @param modelName
+     * @param modelName 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest modelName(String modelName) {
         this.modelName = modelName;
@@ -2267,7 +2274,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set modelNameMatch
      *
-     * @param modelNameMatch
+     * @param modelNameMatch 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest modelNameMatch(Boolean modelNameMatch) {
         this.modelNameMatch = modelNameMatch;
@@ -2278,7 +2286,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set gitUrl
      *
-     * @param gitUrl
+     * @param gitUrl 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest gitUrl(String gitUrl) {
         this.gitUrl = gitUrl;
@@ -2289,7 +2298,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set tableId
      *
-     * @param tableId
+     * @param tableId 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest tableId(Integer tableId) {
         this.tableId = tableId;
@@ -2300,7 +2310,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set databaseName
      *
-     * @param databaseName
+     * @param databaseName 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -2311,7 +2322,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set marketId
      *
-     * @param marketId
+     * @param marketId 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest marketId(Integer marketId) {
         this.marketId = marketId;
@@ -2322,7 +2334,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set marketCode
      *
-     * @param marketCode
+     * @param marketCode 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest marketCode(String marketCode) {
         this.marketCode = marketCode;
@@ -2333,7 +2346,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set marketName
      *
-     * @param marketName
+     * @param marketName 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest marketName(String marketName) {
         this.marketName = marketName;
@@ -2344,7 +2358,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set redirectType
      *
-     * @param redirectType
+     * @param redirectType 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest redirectType(String redirectType) {
         this.redirectType = redirectType;
@@ -2355,7 +2370,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set tableName
      *
-     * @param tableName
+     * @param tableName 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest tableName(String tableName) {
         this.tableName = tableName;
@@ -2366,7 +2382,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set tableNameMatch
      *
-     * @param tableNameMatch
+     * @param tableNameMatch 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest tableNameMatch(Boolean tableNameMatch) {
         this.tableNameMatch = tableNameMatch;
@@ -2377,7 +2394,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set jobName
      *
-     * @param jobName
+     * @param jobName 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -2388,7 +2406,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set jobSystem
      *
-     * @param jobSystem
+     * @param jobSystem 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest jobSystem(String jobSystem) {
         this.jobSystem = jobSystem;
@@ -2399,7 +2418,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set triggerType
      *
-     * @param triggerType
+     * @param triggerType 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -2410,7 +2430,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set triggerConfig
      *
-     * @param triggerConfig
+     * @param triggerConfig 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest triggerConfig(GpdjmcTriggerConfigDTO triggerConfig) {
         this.triggerConfig = triggerConfig;
@@ -2421,7 +2442,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set zipCommand
      *
-     * @param zipCommand
+     * @param zipCommand 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest zipCommand(String zipCommand) {
         this.zipCommand = zipCommand;
@@ -2432,7 +2454,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set zipFileName
      *
-     * @param zipFileName
+     * @param zipFileName 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest zipFileName(String zipFileName) {
         this.zipFileName = zipFileName;
@@ -2443,7 +2466,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set zipParams
      *
-     * @param zipParams
+     * @param zipParams 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest zipParams(String zipParams) {
         this.zipParams = zipParams;
@@ -2454,7 +2478,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set dependencies
      *
-     * @param dependencies
+     * @param dependencies 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest dependencies(String dependencies) {
         this.dependencies = dependencies;
@@ -2465,7 +2490,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set manager
      *
-     * @param manager
+     * @param manager 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest manager(String manager) {
         this.manager = manager;
@@ -2476,7 +2502,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set cooperator
      *
-     * @param cooperator
+     * @param cooperator 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest cooperator(String cooperator) {
         this.cooperator = cooperator;
@@ -2487,7 +2514,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set 优先级，l1 - l4
      *
-     * @param priority
+     * @param priority 优先级，l1 - l4
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest priority(String priority) {
         this.priority = priority;
@@ -2498,7 +2526,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set jobDesc
      *
-     * @param jobDesc
+     * @param jobDesc 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -2509,7 +2538,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set scriptType
      *
-     * @param scriptType
+     * @param scriptType 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest scriptType(String scriptType) {
         this.scriptType = scriptType;
@@ -2520,7 +2550,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set runScript
      *
-     * @param runScript
+     * @param runScript 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest runScript(String runScript) {
         this.runScript = runScript;
@@ -2531,7 +2562,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
     * set scriptContent
     *
-    * @param scriptContent
+    * @param scriptContent 
+    * @return GravityParticleDubboJobManagerDeployJobRequest
     */
     public GravityParticleDubboJobManagerDeployJobRequest scriptContent(List<String> scriptContent) {
         this.scriptContent = scriptContent;
@@ -2542,7 +2574,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set cycle
      *
-     * @param cycle
+     * @param cycle 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest cycle(String cycle) {
         this.cycle = cycle;
@@ -2553,7 +2586,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set sequence
      *
-     * @param sequence
+     * @param sequence 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest sequence(String sequence) {
         this.sequence = sequence;
@@ -2564,7 +2598,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set lifeCycle
      *
-     * @param lifeCycle
+     * @param lifeCycle 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest lifeCycle(String lifeCycle) {
         this.lifeCycle = lifeCycle;
@@ -2575,7 +2610,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set retry
      *
-     * @param retry
+     * @param retry 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest retry(Boolean retry) {
         this.retry = retry;
@@ -2586,7 +2622,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set retryCount
      *
-     * @param retryCount
+     * @param retryCount 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest retryCount(Integer retryCount) {
         this.retryCount = retryCount;
@@ -2597,7 +2634,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set retryInterval
      *
-     * @param retryInterval
+     * @param retryInterval 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest retryInterval(Integer retryInterval) {
         this.retryInterval = retryInterval;
@@ -2608,7 +2646,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set notifyOccasion
      *
-     * @param notifyOccasion
+     * @param notifyOccasion 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest notifyOccasion(String notifyOccasion) {
         this.notifyOccasion = notifyOccasion;
@@ -2619,7 +2658,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set notifyTime
      *
-     * @param notifyTime
+     * @param notifyTime 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest notifyTime(String notifyTime) {
         this.notifyTime = notifyTime;
@@ -2630,7 +2670,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set notifyPattern
      *
-     * @param notifyPattern
+     * @param notifyPattern 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest notifyPattern(String notifyPattern) {
         this.notifyPattern = notifyPattern;
@@ -2641,7 +2682,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set notifier
      *
-     * @param notifier
+     * @param notifier 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest notifier(String notifier) {
         this.notifier = notifier;
@@ -2652,7 +2694,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set startRunTime
      *
-     * @param startRunTime
+     * @param startRunTime 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest startRunTime(String startRunTime) {
         this.startRunTime = startRunTime;
@@ -2663,7 +2706,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set endRunTime
      *
-     * @param endRunTime
+     * @param endRunTime 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest endRunTime(String endRunTime) {
         this.endRunTime = endRunTime;
@@ -2674,7 +2718,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set runTime
      *
-     * @param runTime
+     * @param runTime 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest runTime(String runTime) {
         this.runTime = runTime;
@@ -2685,7 +2730,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set runDate
      *
-     * @param runDate
+     * @param runDate 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest runDate(String runDate) {
         this.runDate = runDate;
@@ -2696,7 +2742,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set flowId
      *
-     * @param flowId
+     * @param flowId 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest flowId(String flowId) {
         this.flowId = flowId;
@@ -2707,7 +2754,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set taskId
      *
-     * @param taskId
+     * @param taskId 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest taskId(String taskId) {
         this.taskId = taskId;
@@ -2718,7 +2766,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set userAccount
      *
-     * @param userAccount
+     * @param userAccount 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest userAccount(String userAccount) {
         this.userAccount = userAccount;
@@ -2729,7 +2778,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set userPwd
      *
-     * @param userPwd
+     * @param userPwd 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest userPwd(String userPwd) {
         this.userPwd = userPwd;
@@ -2740,7 +2790,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set markIds
      *
-     * @param markIds
+     * @param markIds 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest markIds(String markIds) {
         this.markIds = markIds;
@@ -2751,7 +2802,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set runTimeOut
      *
-     * @param runTimeOut
+     * @param runTimeOut 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest runTimeOut(Integer runTimeOut) {
         this.runTimeOut = runTimeOut;
@@ -2762,7 +2814,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set scriptSourceType
      *
-     * @param scriptSourceType
+     * @param scriptSourceType 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest scriptSourceType(String scriptSourceType) {
         this.scriptSourceType = scriptSourceType;
@@ -2773,7 +2826,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set scriptTemplate
      *
-     * @param scriptTemplate
+     * @param scriptTemplate 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest scriptTemplate(String scriptTemplate) {
         this.scriptTemplate = scriptTemplate;
@@ -2784,7 +2838,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
     * set dmrTableIds
     *
-    * @param dmrTableIds
+    * @param dmrTableIds 
+    * @return GravityParticleDubboJobManagerDeployJobRequest
     */
     public GravityParticleDubboJobManagerDeployJobRequest dmrTableIds(List<Integer> dmrTableIds) {
         this.dmrTableIds = dmrTableIds;
@@ -2795,7 +2850,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
     * set dmrTables
     *
-    * @param dmrTables
+    * @param dmrTables 
+    * @return GravityParticleDubboJobManagerDeployJobRequest
     */
     public GravityParticleDubboJobManagerDeployJobRequest dmrTables(List<GpdjmcDmrModelDTO> dmrTables) {
         this.dmrTables = dmrTables;
@@ -2806,7 +2862,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
     * set gitFilesList
     *
-    * @param gitFilesList
+    * @param gitFilesList 
+    * @return GravityParticleDubboJobManagerDeployJobRequest
     */
     public GravityParticleDubboJobManagerDeployJobRequest gitFilesList(List<GpdjmcGitFileDTO> gitFilesList) {
         this.gitFilesList = gitFilesList;
@@ -2817,7 +2874,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set isDeploy
      *
-     * @param isDeploy
+     * @param isDeploy 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest isDeploy(Boolean isDeploy) {
         this.isDeploy = isDeploy;
@@ -2828,7 +2886,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set scriptPath
      *
-     * @param scriptPath
+     * @param scriptPath 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest scriptPath(String scriptPath) {
         this.scriptPath = scriptPath;
@@ -2839,7 +2898,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
     * set scriptByte
     *
-    * @param scriptByte
+    * @param scriptByte 
+    * @return GravityParticleDubboJobManagerDeployJobRequest
     */
     public GravityParticleDubboJobManagerDeployJobRequest scriptByte(List<String> scriptByte) {
         this.scriptByte = scriptByte;
@@ -2850,7 +2910,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set fileId
      *
-     * @param fileId
+     * @param fileId 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest fileId(Integer fileId) {
         this.fileId = fileId;
@@ -2861,7 +2922,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set publishDesc
      *
-     * @param publishDesc
+     * @param publishDesc 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest publishDesc(String publishDesc) {
         this.publishDesc = publishDesc;
@@ -2872,7 +2934,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set scriptInfo
      *
-     * @param scriptInfo
+     * @param scriptInfo 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest scriptInfo(String scriptInfo) {
         this.scriptInfo = scriptInfo;
@@ -2883,7 +2946,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set version
      *
-     * @param version
+     * @param version 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest version(Integer version) {
         this.version = version;
@@ -2894,7 +2958,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set channel
      *
-     * @param channel
+     * @param channel 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest channel(String channel) {
         this.channel = channel;
@@ -2905,7 +2970,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set sequenceStartTime
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -2916,7 +2982,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set sequenceEndTime
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -2927,7 +2994,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set sequenceInterval
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest sequenceInterval(Integer sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -2938,7 +3006,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set runParams
      *
-     * @param runParams
+     * @param runParams 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest runParams(String runParams) {
         this.runParams = runParams;
@@ -2949,7 +3018,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set runQueue
      *
-     * @param runQueue
+     * @param runQueue 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest runQueue(String runQueue) {
         this.runQueue = runQueue;
@@ -2960,7 +3030,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set sparkJarRunParams
      *
-     * @param sparkJarRunParams
+     * @param sparkJarRunParams 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest sparkJarRunParams(SparkJarRunParams sparkJarRunParams) {
         this.sparkJarRunParams = sparkJarRunParams;
@@ -2971,7 +3042,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
     * set submitConf
     *
-    * @param submitConf
+    * @param submitConf 
+    * @return GravityParticleDubboJobManagerDeployJobRequest
     */
     public GravityParticleDubboJobManagerDeployJobRequest submitConf(List<GpdjmcConfPairStringString> submitConf) {
         this.submitConf = submitConf;
@@ -2982,7 +3054,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set jobStatus
      *
-     * @param jobStatus
+     * @param jobStatus 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest jobStatus(Integer jobStatus) {
         this.jobStatus = jobStatus;
@@ -2993,7 +3066,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set 计算资源组code
      *
-     * @param resourceCode
+     * @param resourceCode 计算资源组code
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -3004,7 +3078,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -3015,7 +3090,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set 客户作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名称
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -3026,7 +3102,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set fromGravity
      *
-     * @param fromGravity
+     * @param fromGravity 
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest fromGravity(Boolean fromGravity) {
         this.fromGravity = fromGravity;
@@ -3037,7 +3114,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest processType(String processType) {
         this.processType = processType;
@@ -3048,7 +3126,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -3059,7 +3138,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set 窗口期开始时间
      *
-     * @param windowStartTime
+     * @param windowStartTime 窗口期开始时间
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest windowStartTime(String windowStartTime) {
         this.windowStartTime = windowStartTime;
@@ -3070,7 +3150,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set 窗口期结束时间
      *
-     * @param windowEndTime
+     * @param windowEndTime 窗口期结束时间
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest windowEndTime(String windowEndTime) {
         this.windowEndTime = windowEndTime;
@@ -3081,7 +3162,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set 脚本存储路径
      *
-     * @param scriptUrl
+     * @param scriptUrl 脚本存储路径
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest scriptUrl(String scriptUrl) {
         this.scriptUrl = scriptUrl;
@@ -3092,7 +3174,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set 计算资源组名称
      *
-     * @param resourceName
+     * @param resourceName 计算资源组名称
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -3103,7 +3186,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set 数据源ID，在一些要访问外部源的任务中，需要指定该数据源ID
      *
-     * @param datasourceId
+     * @param datasourceId 数据源ID，在一些要访问外部源的任务中，需要指定该数据源ID
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest datasourceId(String datasourceId) {
         this.datasourceId = datasourceId;
@@ -3114,7 +3198,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
     * set 输入参数列表
     *
-    * @param inputParams
+    * @param inputParams 输入参数列表
+    * @return GravityParticleDubboJobManagerDeployJobRequest
     */
     public GravityParticleDubboJobManagerDeployJobRequest inputParams(List<GpdjmcInputParam> inputParams) {
         this.inputParams = inputParams;
@@ -3125,7 +3210,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
     * set 输出参数列表
     *
-    * @param outputParams
+    * @param outputParams 输出参数列表
+    * @return GravityParticleDubboJobManagerDeployJobRequest
     */
     public GravityParticleDubboJobManagerDeployJobRequest outputParams(List<GpdjmcOutputParam> outputParams) {
         this.outputParams = outputParams;
@@ -3136,7 +3222,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set 循环任务参数
      *
-     * @param loopParam
+     * @param loopParam 循环任务参数
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest loopParam(GpdjmcLoopParam loopParam) {
         this.loopParam = loopParam;
@@ -3147,7 +3234,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -3158,7 +3246,8 @@ public class GravityParticleDubboJobManagerDeployJobRequest extends JdcloudReque
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerDeployJobRequest
      */
     public GravityParticleDubboJobManagerDeployJobRequest appName(String appName) {
         this.appName = appName;

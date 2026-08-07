@@ -236,7 +236,8 @@ public class WorkspaceStopExpireOrDeleteRequest extends JdcloudRequest implement
     /**
      * set companyCode
      *
-     * @param companyCode
+     * @param companyCode 
+     * @return WorkspaceStopExpireOrDeleteRequest
      */
     public WorkspaceStopExpireOrDeleteRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -247,7 +248,8 @@ public class WorkspaceStopExpireOrDeleteRequest extends JdcloudRequest implement
     /**
      * set 主账户pin
      *
-     * @param account
+     * @param account 主账户pin
+     * @return WorkspaceStopExpireOrDeleteRequest
      */
     public WorkspaceStopExpireOrDeleteRequest account(String account) {
         this.account = account;
@@ -258,7 +260,8 @@ public class WorkspaceStopExpireOrDeleteRequest extends JdcloudRequest implement
     /**
      * set 类型:过期停服 或 过期删除
      *
-     * @param handleStatus
+     * @param handleStatus 类型:过期停服 或 过期删除
+     * @return WorkspaceStopExpireOrDeleteRequest
      */
     public WorkspaceStopExpireOrDeleteRequest handleStatus(String handleStatus) {
         this.handleStatus = handleStatus;
@@ -269,7 +272,8 @@ public class WorkspaceStopExpireOrDeleteRequest extends JdcloudRequest implement
     /**
      * set 地区
      *
-     * @param region
+     * @param region 地区
+     * @return WorkspaceStopExpireOrDeleteRequest
      */
     public WorkspaceStopExpireOrDeleteRequest region(String region) {
         this.region = region;
@@ -280,7 +284,8 @@ public class WorkspaceStopExpireOrDeleteRequest extends JdcloudRequest implement
     /**
      * set sourceId
      *
-     * @param sourceId
+     * @param sourceId 
+     * @return WorkspaceStopExpireOrDeleteRequest
      */
     public WorkspaceStopExpireOrDeleteRequest sourceId(String sourceId) {
         this.sourceId = sourceId;
@@ -291,7 +296,8 @@ public class WorkspaceStopExpireOrDeleteRequest extends JdcloudRequest implement
     /**
      * set resourceId
      *
-     * @param resourceId
+     * @param resourceId 
+     * @return WorkspaceStopExpireOrDeleteRequest
      */
     public WorkspaceStopExpireOrDeleteRequest resourceId(String resourceId) {
         this.resourceId = resourceId;
@@ -302,7 +308,8 @@ public class WorkspaceStopExpireOrDeleteRequest extends JdcloudRequest implement
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceStopExpireOrDeleteRequest
      */
     public WorkspaceStopExpireOrDeleteRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -313,7 +320,8 @@ public class WorkspaceStopExpireOrDeleteRequest extends JdcloudRequest implement
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceStopExpireOrDeleteRequest
      */
     public WorkspaceStopExpireOrDeleteRequest appName(String appName) {
         this.appName = appName;

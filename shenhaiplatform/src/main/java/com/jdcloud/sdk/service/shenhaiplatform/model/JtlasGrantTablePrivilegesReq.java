@@ -91,7 +91,8 @@ public class JtlasGrantTablePrivilegesReq  implements java.io.Serializable {
     /**
      * set 数据库名称
      *
-     * @param database
+     * @param database 数据库名称
+     * @return JtlasGrantTablePrivilegesReq
      */
     public JtlasGrantTablePrivilegesReq database(String database) {
         this.database = database;
@@ -102,7 +103,8 @@ public class JtlasGrantTablePrivilegesReq  implements java.io.Serializable {
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return JtlasGrantTablePrivilegesReq
      */
     public JtlasGrantTablePrivilegesReq tableName(String tableName) {
         this.tableName = tableName;

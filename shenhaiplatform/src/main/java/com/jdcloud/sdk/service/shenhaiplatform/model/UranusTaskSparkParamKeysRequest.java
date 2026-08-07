@@ -92,7 +92,8 @@ public class UranusTaskSparkParamKeysRequest extends JdcloudRequest implements j
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskSparkParamKeysRequest
      */
     public UranusTaskSparkParamKeysRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class UranusTaskSparkParamKeysRequest extends JdcloudRequest implements j
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskSparkParamKeysRequest
      */
     public UranusTaskSparkParamKeysRequest appName(String appName) {
         this.appName = appName;

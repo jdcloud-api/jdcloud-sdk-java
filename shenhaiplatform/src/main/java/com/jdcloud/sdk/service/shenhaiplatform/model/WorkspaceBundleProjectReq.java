@@ -134,7 +134,8 @@ public class WorkspaceBundleProjectReq  implements java.io.Serializable {
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return WorkspaceBundleProjectReq
      */
     public WorkspaceBundleProjectReq workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -145,7 +146,8 @@ public class WorkspaceBundleProjectReq  implements java.io.Serializable {
     /**
      * set 引擎类型
      *
-     * @param engineType
+     * @param engineType 引擎类型
+     * @return WorkspaceBundleProjectReq
      */
     public WorkspaceBundleProjectReq engineType(String engineType) {
         this.engineType = engineType;
@@ -156,7 +158,8 @@ public class WorkspaceBundleProjectReq  implements java.io.Serializable {
     /**
      * set bundleDevProjectReq
      *
-     * @param bundleDevProjectReq
+     * @param bundleDevProjectReq 
+     * @return WorkspaceBundleProjectReq
      */
     public WorkspaceBundleProjectReq bundleDevProjectReq(BundleProjectReq bundleDevProjectReq) {
         this.bundleDevProjectReq = bundleDevProjectReq;
@@ -167,7 +170,8 @@ public class WorkspaceBundleProjectReq  implements java.io.Serializable {
     /**
      * set bundleProdProjectReq
      *
-     * @param bundleProdProjectReq
+     * @param bundleProdProjectReq 
+     * @return WorkspaceBundleProjectReq
      */
     public WorkspaceBundleProjectReq bundleProdProjectReq(BundleProjectReq bundleProdProjectReq) {
         this.bundleProdProjectReq = bundleProdProjectReq;

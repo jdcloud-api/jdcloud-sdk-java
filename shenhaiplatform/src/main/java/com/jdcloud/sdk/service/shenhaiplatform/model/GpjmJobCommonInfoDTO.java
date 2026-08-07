@@ -422,7 +422,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -433,7 +434,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 作业描述
      *
-     * @param jobDesc
+     * @param jobDesc 作业描述
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -444,7 +446,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO manager(String manager) {
         this.manager = manager;
@@ -455,7 +458,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 协作人
      *
-     * @param shareUser
+     * @param shareUser 协作人
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO shareUser(String shareUser) {
         this.shareUser = shareUser;
@@ -466,7 +470,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param lastTxdate
+     * @param lastTxdate 数据日期
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO lastTxdate(String lastTxdate) {
         this.lastTxdate = lastTxdate;
@@ -477,7 +482,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 最后一次运行状态，Pending、Ready、Running、Done、Failed、Clean
      *
-     * @param lastStatus
+     * @param lastStatus 最后一次运行状态，Pending、Ready、Running、Done、Failed、Clean
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO lastStatus(String lastStatus) {
         this.lastStatus = lastStatus;
@@ -488,7 +494,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 当前作业状态信息
      *
-     * @param currentStatusMsg
+     * @param currentStatusMsg 当前作业状态信息
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO currentStatusMsg(String currentStatusMsg) {
         this.currentStatusMsg = currentStatusMsg;
@@ -499,7 +506,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 周期结束时间(适用小时分钟)
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 周期结束时间(适用小时分钟)
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -510,7 +518,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 周期间隔(适用小时分钟，当周期为小时，含义为间隔小时数，当周期为分钟，含义为间隔分钟数)
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 周期间隔(适用小时分钟，当周期为小时，含义为间隔小时数，当周期为分钟，含义为间隔分钟数)
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO sequenceInterval(Integer sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -521,7 +530,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 周期开始时间(适用小时分钟)
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 周期开始时间(适用小时分钟)
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -532,7 +542,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
      *
-     * @param triggerType
+     * @param triggerType 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -543,7 +554,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 作业id
      *
-     * @param jobId
+     * @param jobId 作业id
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO jobId(Integer jobId) {
         this.jobId = jobId;
@@ -554,7 +566,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO processType(String processType) {
         this.processType = processType;
@@ -565,7 +578,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 作业执行类型
      *
-     * @param exeType
+     * @param exeType 作业执行类型
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO exeType(String exeType) {
         this.exeType = exeType;
@@ -576,7 +590,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 关联类型：1:一对一 2：一对多 3：多对一
      *
-     * @param relationType
+     * @param relationType 关联类型：1:一对一 2：一对多 3：多对一
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO relationType(String relationType) {
         this.relationType = relationType;
@@ -587,7 +602,8 @@ public class GpjmJobCommonInfoDTO  implements java.io.Serializable {
     /**
      * set 作业管理员或者空间管理员
      *
-     * @param managerFlag
+     * @param managerFlag 作业管理员或者空间管理员
+     * @return GpjmJobCommonInfoDTO
      */
     public GpjmJobCommonInfoDTO managerFlag(Boolean managerFlag) {
         this.managerFlag = managerFlag;

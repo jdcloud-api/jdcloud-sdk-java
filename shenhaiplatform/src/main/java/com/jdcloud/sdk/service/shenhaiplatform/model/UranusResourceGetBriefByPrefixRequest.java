@@ -144,7 +144,8 @@ public class UranusResourceGetBriefByPrefixRequest extends JdcloudRequest implem
     /**
      * set 资源名称前缀
      *
-     * @param prefix
+     * @param prefix 资源名称前缀
+     * @return UranusResourceGetBriefByPrefixRequest
      */
     public UranusResourceGetBriefByPrefixRequest prefix(String prefix) {
         this.prefix = prefix;
@@ -155,7 +156,8 @@ public class UranusResourceGetBriefByPrefixRequest extends JdcloudRequest implem
     /**
      * set 环境信息
      *
-     * @param env
+     * @param env 环境信息
+     * @return UranusResourceGetBriefByPrefixRequest
      */
     public UranusResourceGetBriefByPrefixRequest env(String env) {
         this.env = env;
@@ -166,7 +168,8 @@ public class UranusResourceGetBriefByPrefixRequest extends JdcloudRequest implem
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusResourceGetBriefByPrefixRequest
      */
     public UranusResourceGetBriefByPrefixRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -177,7 +180,8 @@ public class UranusResourceGetBriefByPrefixRequest extends JdcloudRequest implem
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusResourceGetBriefByPrefixRequest
      */
     public UranusResourceGetBriefByPrefixRequest appName(String appName) {
         this.appName = appName;

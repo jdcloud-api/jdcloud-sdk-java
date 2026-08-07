@@ -92,7 +92,8 @@ public class UranusDictQuerySysParamRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusDictQuerySysParamRequest
      */
     public UranusDictQuerySysParamRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class UranusDictQuerySysParamRequest extends JdcloudRequest implements ja
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusDictQuerySysParamRequest
      */
     public UranusDictQuerySysParamRequest appName(String appName) {
         this.appName = appName;

@@ -158,7 +158,8 @@ public class GpjmJobBasicInfoResultDTO  implements java.io.Serializable {
     /**
      * set jobCommonInfo
      *
-     * @param jobCommonInfo
+     * @param jobCommonInfo 
+     * @return GpjmJobBasicInfoResultDTO
      */
     public GpjmJobBasicInfoResultDTO jobCommonInfo(GpjmJobCommonInfoDTO jobCommonInfo) {
         this.jobCommonInfo = jobCommonInfo;
@@ -169,7 +170,8 @@ public class GpjmJobBasicInfoResultDTO  implements java.io.Serializable {
     /**
      * set jobBasicInfo
      *
-     * @param jobBasicInfo
+     * @param jobBasicInfo 
+     * @return GpjmJobBasicInfoResultDTO
      */
     public GpjmJobBasicInfoResultDTO jobBasicInfo(GpjmJobBasicInfoDTO jobBasicInfo) {
         this.jobBasicInfo = jobBasicInfo;
@@ -180,7 +182,8 @@ public class GpjmJobBasicInfoResultDTO  implements java.io.Serializable {
     /**
      * set runRoleInfo
      *
-     * @param runRoleInfo
+     * @param runRoleInfo 
+     * @return GpjmJobBasicInfoResultDTO
      */
     public GpjmJobBasicInfoResultDTO runRoleInfo(GpjmRunRoleInfoDTO runRoleInfo) {
         this.runRoleInfo = runRoleInfo;
@@ -191,7 +194,8 @@ public class GpjmJobBasicInfoResultDTO  implements java.io.Serializable {
     /**
      * set jobMonitorInfo
      *
-     * @param jobMonitorInfo
+     * @param jobMonitorInfo 
+     * @return GpjmJobBasicInfoResultDTO
      */
     public GpjmJobBasicInfoResultDTO jobMonitorInfo(GpjmJobMonitorInfoDTO jobMonitorInfo) {
         this.jobMonitorInfo = jobMonitorInfo;
@@ -202,7 +206,8 @@ public class GpjmJobBasicInfoResultDTO  implements java.io.Serializable {
     /**
      * set flowStatus
      *
-     * @param flowStatus
+     * @param flowStatus flowStatus
+     * @return GpjmJobBasicInfoResultDTO
      */
     public GpjmJobBasicInfoResultDTO flowStatus(String flowStatus) {
         this.flowStatus = flowStatus;

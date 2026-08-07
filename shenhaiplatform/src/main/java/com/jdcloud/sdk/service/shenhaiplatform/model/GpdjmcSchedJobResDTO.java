@@ -110,7 +110,8 @@ public class GpdjmcSchedJobResDTO  implements java.io.Serializable {
     /**
      * set jobName
      *
-     * @param jobName
+     * @param jobName 
+     * @return GpdjmcSchedJobResDTO
      */
     public GpdjmcSchedJobResDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -121,7 +122,8 @@ public class GpdjmcSchedJobResDTO  implements java.io.Serializable {
     /**
      * set manager
      *
-     * @param manager
+     * @param manager 
+     * @return GpdjmcSchedJobResDTO
      */
     public GpdjmcSchedJobResDTO manager(String manager) {
         this.manager = manager;
@@ -132,7 +134,8 @@ public class GpdjmcSchedJobResDTO  implements java.io.Serializable {
     /**
      * set cycle
      *
-     * @param cycle
+     * @param cycle 
+     * @return GpdjmcSchedJobResDTO
      */
     public GpdjmcSchedJobResDTO cycle(String cycle) {
         this.cycle = cycle;

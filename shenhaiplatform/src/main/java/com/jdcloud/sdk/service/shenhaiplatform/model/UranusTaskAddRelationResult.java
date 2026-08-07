@@ -183,7 +183,8 @@ public class UranusTaskAddRelationResult extends JdcloudResult implements java.i
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusTaskAddRelationResult
      */
     public UranusTaskAddRelationResult code(String code) {
         this.code = code;
@@ -194,7 +195,8 @@ public class UranusTaskAddRelationResult extends JdcloudResult implements java.i
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusTaskAddRelationResult
      */
     public UranusTaskAddRelationResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -205,7 +207,8 @@ public class UranusTaskAddRelationResult extends JdcloudResult implements java.i
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusTaskAddRelationResult
      */
     public UranusTaskAddRelationResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -216,7 +219,8 @@ public class UranusTaskAddRelationResult extends JdcloudResult implements java.i
     /**
      * set Object
      *
-     * @param result
+     * @param result Object
+     * @return UranusTaskAddRelationResult
      */
     public UranusTaskAddRelationResult result(Object result) {
         this.result = result;
@@ -227,7 +231,8 @@ public class UranusTaskAddRelationResult extends JdcloudResult implements java.i
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusTaskAddRelationResult
      */
     public UranusTaskAddRelationResult subCode(String subCode) {
         this.subCode = subCode;
@@ -238,7 +243,8 @@ public class UranusTaskAddRelationResult extends JdcloudResult implements java.i
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusTaskAddRelationResult
      */
     public UranusTaskAddRelationResult successed(Boolean successed) {
         this.successed = successed;

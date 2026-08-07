@@ -472,7 +472,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set total
      *
-     * @param total
+     * @param total 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO total(Long total) {
         this.total = total;
@@ -483,7 +484,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
     * set list
     *
-    * @param list
+    * @param list 
+    * @return GpjmPageInfoListJobResultDTO
     */
     public GpjmPageInfoListJobResultDTO list(List<GpjmListJobResultDTO> list) {
         this.list = list;
@@ -494,7 +496,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set pageNum
      *
-     * @param pageNum
+     * @param pageNum 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -505,7 +508,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set pageSize
      *
-     * @param pageSize
+     * @param pageSize 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -516,7 +520,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set size
      *
-     * @param size
+     * @param size 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO size(Integer size) {
         this.size = size;
@@ -527,7 +532,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set startRow
      *
-     * @param startRow
+     * @param startRow 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO startRow(Integer startRow) {
         this.startRow = startRow;
@@ -538,7 +544,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set endRow
      *
-     * @param endRow
+     * @param endRow 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO endRow(Integer endRow) {
         this.endRow = endRow;
@@ -549,7 +556,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set pages
      *
-     * @param pages
+     * @param pages 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO pages(Integer pages) {
         this.pages = pages;
@@ -560,7 +568,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set prePage
      *
-     * @param prePage
+     * @param prePage 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO prePage(Integer prePage) {
         this.prePage = prePage;
@@ -571,7 +580,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set nextPage
      *
-     * @param nextPage
+     * @param nextPage 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO nextPage(Integer nextPage) {
         this.nextPage = nextPage;
@@ -582,7 +592,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set isFirstPage
      *
-     * @param isFirstPage
+     * @param isFirstPage 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO isFirstPage(Boolean isFirstPage) {
         this.isFirstPage = isFirstPage;
@@ -593,7 +604,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set isLastPage
      *
-     * @param isLastPage
+     * @param isLastPage 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO isLastPage(Boolean isLastPage) {
         this.isLastPage = isLastPage;
@@ -604,7 +616,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set hasPreviousPage
      *
-     * @param hasPreviousPage
+     * @param hasPreviousPage 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO hasPreviousPage(Boolean hasPreviousPage) {
         this.hasPreviousPage = hasPreviousPage;
@@ -615,7 +628,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set hasNextPage
      *
-     * @param hasNextPage
+     * @param hasNextPage 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO hasNextPage(Boolean hasNextPage) {
         this.hasNextPage = hasNextPage;
@@ -626,7 +640,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set navigatePages
      *
-     * @param navigatePages
+     * @param navigatePages 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO navigatePages(Integer navigatePages) {
         this.navigatePages = navigatePages;
@@ -637,7 +652,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
     * set navigatepageNums
     *
-    * @param navigatepageNums
+    * @param navigatepageNums 
+    * @return GpjmPageInfoListJobResultDTO
     */
     public GpjmPageInfoListJobResultDTO navigatepageNums(List<Integer> navigatepageNums) {
         this.navigatepageNums = navigatepageNums;
@@ -648,7 +664,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set navigateFirstPage
      *
-     * @param navigateFirstPage
+     * @param navigateFirstPage 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO navigateFirstPage(Integer navigateFirstPage) {
         this.navigateFirstPage = navigateFirstPage;
@@ -659,7 +676,8 @@ public class GpjmPageInfoListJobResultDTO  implements java.io.Serializable {
     /**
      * set navigateLastPage
      *
-     * @param navigateLastPage
+     * @param navigateLastPage 
+     * @return GpjmPageInfoListJobResultDTO
      */
     public GpjmPageInfoListJobResultDTO navigateLastPage(Integer navigateLastPage) {
         this.navigateLastPage = navigateLastPage;

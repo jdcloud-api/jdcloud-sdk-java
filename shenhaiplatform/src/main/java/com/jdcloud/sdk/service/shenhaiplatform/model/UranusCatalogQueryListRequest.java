@@ -118,7 +118,8 @@ public class UranusCatalogQueryListRequest extends JdcloudRequest implements jav
     /**
      * set 父目录code
      *
-     * @param parentCode
+     * @param parentCode 父目录code
+     * @return UranusCatalogQueryListRequest
      */
     public UranusCatalogQueryListRequest parentCode(String parentCode) {
         this.parentCode = parentCode;
@@ -129,7 +130,8 @@ public class UranusCatalogQueryListRequest extends JdcloudRequest implements jav
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusCatalogQueryListRequest
      */
     public UranusCatalogQueryListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusCatalogQueryListRequest extends JdcloudRequest implements jav
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusCatalogQueryListRequest
      */
     public UranusCatalogQueryListRequest appName(String appName) {
         this.appName = appName;

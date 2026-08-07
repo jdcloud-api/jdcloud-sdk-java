@@ -2128,7 +2128,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set projectId
      *
-     * @param projectId
+     * @param projectId 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO projectId(Integer projectId) {
         this.projectId = projectId;
@@ -2139,7 +2140,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set projectName
      *
-     * @param projectName
+     * @param projectName 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO projectName(String projectName) {
         this.projectName = projectName;
@@ -2150,7 +2152,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set projectNameMatch
      *
-     * @param projectNameMatch
+     * @param projectNameMatch 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO projectNameMatch(Boolean projectNameMatch) {
         this.projectNameMatch = projectNameMatch;
@@ -2161,7 +2164,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set nameKeyWord
      *
-     * @param nameKeyWord
+     * @param nameKeyWord 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO nameKeyWord(String nameKeyWord) {
         this.nameKeyWord = nameKeyWord;
@@ -2172,7 +2176,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set relationType
      *
-     * @param relationType
+     * @param relationType 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO relationType(String relationType) {
         this.relationType = relationType;
@@ -2183,7 +2188,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set modelId
      *
-     * @param modelId
+     * @param modelId 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO modelId(Integer modelId) {
         this.modelId = modelId;
@@ -2194,7 +2200,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set modelName
      *
-     * @param modelName
+     * @param modelName 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO modelName(String modelName) {
         this.modelName = modelName;
@@ -2205,7 +2212,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set modelNameMatch
      *
-     * @param modelNameMatch
+     * @param modelNameMatch 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO modelNameMatch(Boolean modelNameMatch) {
         this.modelNameMatch = modelNameMatch;
@@ -2216,7 +2224,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set gitUrl
      *
-     * @param gitUrl
+     * @param gitUrl 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO gitUrl(String gitUrl) {
         this.gitUrl = gitUrl;
@@ -2227,7 +2236,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set tableId
      *
-     * @param tableId
+     * @param tableId 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO tableId(Integer tableId) {
         this.tableId = tableId;
@@ -2238,7 +2248,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set databaseName
      *
-     * @param databaseName
+     * @param databaseName 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -2249,7 +2260,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set marketId
      *
-     * @param marketId
+     * @param marketId 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO marketId(Integer marketId) {
         this.marketId = marketId;
@@ -2260,7 +2272,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set marketCode
      *
-     * @param marketCode
+     * @param marketCode 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO marketCode(String marketCode) {
         this.marketCode = marketCode;
@@ -2271,7 +2284,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set marketName
      *
-     * @param marketName
+     * @param marketName 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO marketName(String marketName) {
         this.marketName = marketName;
@@ -2282,7 +2296,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set redirectType
      *
-     * @param redirectType
+     * @param redirectType 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO redirectType(String redirectType) {
         this.redirectType = redirectType;
@@ -2293,7 +2308,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set tableName
      *
-     * @param tableName
+     * @param tableName 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO tableName(String tableName) {
         this.tableName = tableName;
@@ -2304,7 +2320,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set tableNameMatch
      *
-     * @param tableNameMatch
+     * @param tableNameMatch 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO tableNameMatch(Boolean tableNameMatch) {
         this.tableNameMatch = tableNameMatch;
@@ -2315,7 +2332,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set jobName
      *
-     * @param jobName
+     * @param jobName 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -2326,7 +2344,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set jobSystem
      *
-     * @param jobSystem
+     * @param jobSystem 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO jobSystem(String jobSystem) {
         this.jobSystem = jobSystem;
@@ -2337,7 +2356,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set triggerType
      *
-     * @param triggerType
+     * @param triggerType 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -2348,7 +2368,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set triggerConfig
      *
-     * @param triggerConfig
+     * @param triggerConfig 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO triggerConfig(GpdjmcTriggerConfigDTO triggerConfig) {
         this.triggerConfig = triggerConfig;
@@ -2359,7 +2380,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set zipCommand
      *
-     * @param zipCommand
+     * @param zipCommand 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO zipCommand(String zipCommand) {
         this.zipCommand = zipCommand;
@@ -2370,7 +2392,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set zipFileName
      *
-     * @param zipFileName
+     * @param zipFileName 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO zipFileName(String zipFileName) {
         this.zipFileName = zipFileName;
@@ -2381,7 +2404,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set zipParams
      *
-     * @param zipParams
+     * @param zipParams 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO zipParams(String zipParams) {
         this.zipParams = zipParams;
@@ -2392,7 +2416,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set dependencies
      *
-     * @param dependencies
+     * @param dependencies 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO dependencies(String dependencies) {
         this.dependencies = dependencies;
@@ -2403,7 +2428,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set manager
      *
-     * @param manager
+     * @param manager 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO manager(String manager) {
         this.manager = manager;
@@ -2414,7 +2440,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set cooperator
      *
-     * @param cooperator
+     * @param cooperator 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO cooperator(String cooperator) {
         this.cooperator = cooperator;
@@ -2425,7 +2452,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set 优先级，l1 - l4
      *
-     * @param priority
+     * @param priority 优先级，l1 - l4
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO priority(String priority) {
         this.priority = priority;
@@ -2436,7 +2464,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set jobDesc
      *
-     * @param jobDesc
+     * @param jobDesc 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -2447,7 +2476,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set scriptType
      *
-     * @param scriptType
+     * @param scriptType 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO scriptType(String scriptType) {
         this.scriptType = scriptType;
@@ -2458,7 +2488,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set runScript
      *
-     * @param runScript
+     * @param runScript 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO runScript(String runScript) {
         this.runScript = runScript;
@@ -2469,7 +2500,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
     * set scriptContent
     *
-    * @param scriptContent
+    * @param scriptContent 
+    * @return GpdjmcCalcJobDTO
     */
     public GpdjmcCalcJobDTO scriptContent(List<String> scriptContent) {
         this.scriptContent = scriptContent;
@@ -2480,7 +2512,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set cycle
      *
-     * @param cycle
+     * @param cycle 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO cycle(String cycle) {
         this.cycle = cycle;
@@ -2491,7 +2524,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set sequence
      *
-     * @param sequence
+     * @param sequence 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO sequence(String sequence) {
         this.sequence = sequence;
@@ -2502,7 +2536,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set lifeCycle
      *
-     * @param lifeCycle
+     * @param lifeCycle 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO lifeCycle(String lifeCycle) {
         this.lifeCycle = lifeCycle;
@@ -2513,7 +2548,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set retry
      *
-     * @param retry
+     * @param retry 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO retry(Boolean retry) {
         this.retry = retry;
@@ -2524,7 +2560,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set retryCount
      *
-     * @param retryCount
+     * @param retryCount 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO retryCount(Integer retryCount) {
         this.retryCount = retryCount;
@@ -2535,7 +2572,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set retryInterval
      *
-     * @param retryInterval
+     * @param retryInterval 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO retryInterval(Integer retryInterval) {
         this.retryInterval = retryInterval;
@@ -2546,7 +2584,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set notifyOccasion
      *
-     * @param notifyOccasion
+     * @param notifyOccasion 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO notifyOccasion(String notifyOccasion) {
         this.notifyOccasion = notifyOccasion;
@@ -2557,7 +2596,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set notifyTime
      *
-     * @param notifyTime
+     * @param notifyTime 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO notifyTime(String notifyTime) {
         this.notifyTime = notifyTime;
@@ -2568,7 +2608,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set notifyPattern
      *
-     * @param notifyPattern
+     * @param notifyPattern 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO notifyPattern(String notifyPattern) {
         this.notifyPattern = notifyPattern;
@@ -2579,7 +2620,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set notifier
      *
-     * @param notifier
+     * @param notifier 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO notifier(String notifier) {
         this.notifier = notifier;
@@ -2590,7 +2632,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set startRunTime
      *
-     * @param startRunTime
+     * @param startRunTime 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO startRunTime(String startRunTime) {
         this.startRunTime = startRunTime;
@@ -2601,7 +2644,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set endRunTime
      *
-     * @param endRunTime
+     * @param endRunTime 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO endRunTime(String endRunTime) {
         this.endRunTime = endRunTime;
@@ -2612,7 +2656,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set runTime
      *
-     * @param runTime
+     * @param runTime 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO runTime(String runTime) {
         this.runTime = runTime;
@@ -2623,7 +2668,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set runDate
      *
-     * @param runDate
+     * @param runDate 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO runDate(String runDate) {
         this.runDate = runDate;
@@ -2634,7 +2680,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set flowId
      *
-     * @param flowId
+     * @param flowId 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO flowId(String flowId) {
         this.flowId = flowId;
@@ -2645,7 +2692,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set taskId
      *
-     * @param taskId
+     * @param taskId 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO taskId(String taskId) {
         this.taskId = taskId;
@@ -2656,7 +2704,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set userAccount
      *
-     * @param userAccount
+     * @param userAccount 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO userAccount(String userAccount) {
         this.userAccount = userAccount;
@@ -2667,7 +2716,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set userPwd
      *
-     * @param userPwd
+     * @param userPwd 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO userPwd(String userPwd) {
         this.userPwd = userPwd;
@@ -2678,7 +2728,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set markIds
      *
-     * @param markIds
+     * @param markIds 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO markIds(String markIds) {
         this.markIds = markIds;
@@ -2689,7 +2740,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set runTimeOut
      *
-     * @param runTimeOut
+     * @param runTimeOut 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO runTimeOut(Integer runTimeOut) {
         this.runTimeOut = runTimeOut;
@@ -2700,7 +2752,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set scriptSourceType
      *
-     * @param scriptSourceType
+     * @param scriptSourceType 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO scriptSourceType(String scriptSourceType) {
         this.scriptSourceType = scriptSourceType;
@@ -2711,7 +2764,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set scriptTemplate
      *
-     * @param scriptTemplate
+     * @param scriptTemplate 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO scriptTemplate(String scriptTemplate) {
         this.scriptTemplate = scriptTemplate;
@@ -2722,7 +2776,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
     * set dmrTableIds
     *
-    * @param dmrTableIds
+    * @param dmrTableIds 
+    * @return GpdjmcCalcJobDTO
     */
     public GpdjmcCalcJobDTO dmrTableIds(List<Integer> dmrTableIds) {
         this.dmrTableIds = dmrTableIds;
@@ -2733,7 +2788,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
     * set dmrTables
     *
-    * @param dmrTables
+    * @param dmrTables 
+    * @return GpdjmcCalcJobDTO
     */
     public GpdjmcCalcJobDTO dmrTables(List<GpdjmcDmrModelDTO> dmrTables) {
         this.dmrTables = dmrTables;
@@ -2744,7 +2800,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
     * set gitFilesList
     *
-    * @param gitFilesList
+    * @param gitFilesList 
+    * @return GpdjmcCalcJobDTO
     */
     public GpdjmcCalcJobDTO gitFilesList(List<GpdjmcGitFileDTO> gitFilesList) {
         this.gitFilesList = gitFilesList;
@@ -2755,7 +2812,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set isDeploy
      *
-     * @param isDeploy
+     * @param isDeploy 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO isDeploy(Boolean isDeploy) {
         this.isDeploy = isDeploy;
@@ -2766,7 +2824,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set scriptPath
      *
-     * @param scriptPath
+     * @param scriptPath 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO scriptPath(String scriptPath) {
         this.scriptPath = scriptPath;
@@ -2777,7 +2836,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
     * set scriptByte
     *
-    * @param scriptByte
+    * @param scriptByte 
+    * @return GpdjmcCalcJobDTO
     */
     public GpdjmcCalcJobDTO scriptByte(List<String> scriptByte) {
         this.scriptByte = scriptByte;
@@ -2788,7 +2848,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set fileId
      *
-     * @param fileId
+     * @param fileId 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO fileId(Integer fileId) {
         this.fileId = fileId;
@@ -2799,7 +2860,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set publishDesc
      *
-     * @param publishDesc
+     * @param publishDesc 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO publishDesc(String publishDesc) {
         this.publishDesc = publishDesc;
@@ -2810,7 +2872,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set scriptInfo
      *
-     * @param scriptInfo
+     * @param scriptInfo 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO scriptInfo(String scriptInfo) {
         this.scriptInfo = scriptInfo;
@@ -2821,7 +2884,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set version
      *
-     * @param version
+     * @param version 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO version(Integer version) {
         this.version = version;
@@ -2832,7 +2896,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set channel
      *
-     * @param channel
+     * @param channel 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO channel(String channel) {
         this.channel = channel;
@@ -2843,7 +2908,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set sequenceStartTime
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -2854,7 +2920,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set sequenceEndTime
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -2865,7 +2932,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set sequenceInterval
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO sequenceInterval(Integer sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -2876,7 +2944,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set runParams
      *
-     * @param runParams
+     * @param runParams 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO runParams(String runParams) {
         this.runParams = runParams;
@@ -2887,7 +2956,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set runQueue
      *
-     * @param runQueue
+     * @param runQueue 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO runQueue(String runQueue) {
         this.runQueue = runQueue;
@@ -2898,7 +2968,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set sparkJarRunParams
      *
-     * @param sparkJarRunParams
+     * @param sparkJarRunParams 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO sparkJarRunParams(SparkJarRunParams sparkJarRunParams) {
         this.sparkJarRunParams = sparkJarRunParams;
@@ -2909,7 +2980,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
     * set submitConf
     *
-    * @param submitConf
+    * @param submitConf 
+    * @return GpdjmcCalcJobDTO
     */
     public GpdjmcCalcJobDTO submitConf(List<GpdjmcConfPairStringString> submitConf) {
         this.submitConf = submitConf;
@@ -2920,7 +2992,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set jobStatus
      *
-     * @param jobStatus
+     * @param jobStatus 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO jobStatus(Integer jobStatus) {
         this.jobStatus = jobStatus;
@@ -2931,7 +3004,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set 计算资源组code
      *
-     * @param resourceCode
+     * @param resourceCode 计算资源组code
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -2942,7 +3016,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -2953,7 +3028,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set 客户作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名称
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -2964,7 +3040,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set fromGravity
      *
-     * @param fromGravity
+     * @param fromGravity 
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO fromGravity(Boolean fromGravity) {
         this.fromGravity = fromGravity;
@@ -2975,7 +3052,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO processType(String processType) {
         this.processType = processType;
@@ -2986,7 +3064,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -2997,7 +3076,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set 窗口期开始时间
      *
-     * @param windowStartTime
+     * @param windowStartTime 窗口期开始时间
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO windowStartTime(String windowStartTime) {
         this.windowStartTime = windowStartTime;
@@ -3008,7 +3088,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set 窗口期结束时间
      *
-     * @param windowEndTime
+     * @param windowEndTime 窗口期结束时间
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO windowEndTime(String windowEndTime) {
         this.windowEndTime = windowEndTime;
@@ -3019,7 +3100,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set 脚本存储路径
      *
-     * @param scriptUrl
+     * @param scriptUrl 脚本存储路径
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO scriptUrl(String scriptUrl) {
         this.scriptUrl = scriptUrl;
@@ -3030,7 +3112,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set 计算资源组名称
      *
-     * @param resourceName
+     * @param resourceName 计算资源组名称
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -3041,7 +3124,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set 数据源ID，在一些要访问外部源的任务中，需要指定该数据源ID
      *
-     * @param datasourceId
+     * @param datasourceId 数据源ID，在一些要访问外部源的任务中，需要指定该数据源ID
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO datasourceId(String datasourceId) {
         this.datasourceId = datasourceId;
@@ -3052,7 +3136,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
     * set 输入参数列表
     *
-    * @param inputParams
+    * @param inputParams 输入参数列表
+    * @return GpdjmcCalcJobDTO
     */
     public GpdjmcCalcJobDTO inputParams(List<GpdjmcInputParam> inputParams) {
         this.inputParams = inputParams;
@@ -3063,7 +3148,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
     * set 输出参数列表
     *
-    * @param outputParams
+    * @param outputParams 输出参数列表
+    * @return GpdjmcCalcJobDTO
     */
     public GpdjmcCalcJobDTO outputParams(List<GpdjmcOutputParam> outputParams) {
         this.outputParams = outputParams;
@@ -3074,7 +3160,8 @@ public class GpdjmcCalcJobDTO  implements java.io.Serializable {
     /**
      * set 循环任务参数
      *
-     * @param loopParam
+     * @param loopParam 循环任务参数
+     * @return GpdjmcCalcJobDTO
      */
     public GpdjmcCalcJobDTO loopParam(GpdjmcLoopParam loopParam) {
         this.loopParam = loopParam;

@@ -110,7 +110,8 @@ public class JtlasPageSearchTableResp  implements java.io.Serializable {
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasPageSearchTableResp
      */
     public JtlasPageSearchTableResp code(String code) {
         this.code = code;
@@ -121,7 +122,8 @@ public class JtlasPageSearchTableResp  implements java.io.Serializable {
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasPageSearchTableResp
      */
     public JtlasPageSearchTableResp message(String message) {
         this.message = message;
@@ -132,7 +134,8 @@ public class JtlasPageSearchTableResp  implements java.io.Serializable {
     /**
      * set 节点数据
      *
-     * @param result
+     * @param result 节点数据
+     * @return JtlasPageSearchTableResp
      */
     public JtlasPageSearchTableResp result(Object result) {
         this.result = result;

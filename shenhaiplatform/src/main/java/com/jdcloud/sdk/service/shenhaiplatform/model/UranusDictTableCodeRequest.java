@@ -92,7 +92,8 @@ public class UranusDictTableCodeRequest extends JdcloudRequest implements java.i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusDictTableCodeRequest
      */
     public UranusDictTableCodeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class UranusDictTableCodeRequest extends JdcloudRequest implements java.i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusDictTableCodeRequest
      */
     public UranusDictTableCodeRequest appName(String appName) {
         this.appName = appName;

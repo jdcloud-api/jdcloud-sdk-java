@@ -183,7 +183,8 @@ public class UranusResourceAppendFileResult extends JdcloudResult implements jav
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusResourceAppendFileResult
      */
     public UranusResourceAppendFileResult code(String code) {
         this.code = code;
@@ -194,7 +195,8 @@ public class UranusResourceAppendFileResult extends JdcloudResult implements jav
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusResourceAppendFileResult
      */
     public UranusResourceAppendFileResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -205,7 +207,8 @@ public class UranusResourceAppendFileResult extends JdcloudResult implements jav
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusResourceAppendFileResult
      */
     public UranusResourceAppendFileResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -216,7 +219,8 @@ public class UranusResourceAppendFileResult extends JdcloudResult implements jav
     /**
      * set Object
      *
-     * @param result
+     * @param result Object
+     * @return UranusResourceAppendFileResult
      */
     public UranusResourceAppendFileResult result(Boolean result) {
         this.result = result;
@@ -227,7 +231,8 @@ public class UranusResourceAppendFileResult extends JdcloudResult implements jav
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusResourceAppendFileResult
      */
     public UranusResourceAppendFileResult subCode(String subCode) {
         this.subCode = subCode;
@@ -238,7 +243,8 @@ public class UranusResourceAppendFileResult extends JdcloudResult implements jav
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusResourceAppendFileResult
      */
     public UranusResourceAppendFileResult successed(Boolean successed) {
         this.successed = successed;

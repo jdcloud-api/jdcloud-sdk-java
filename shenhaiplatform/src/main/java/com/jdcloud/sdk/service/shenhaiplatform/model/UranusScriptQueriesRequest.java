@@ -118,7 +118,8 @@ public class UranusScriptQueriesRequest extends JdcloudRequest implements java.i
     /**
      * set 文件code
      *
-     * @param fileCode
+     * @param fileCode 文件code
+     * @return UranusScriptQueriesRequest
      */
     public UranusScriptQueriesRequest fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -129,7 +130,8 @@ public class UranusScriptQueriesRequest extends JdcloudRequest implements java.i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusScriptQueriesRequest
      */
     public UranusScriptQueriesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusScriptQueriesRequest extends JdcloudRequest implements java.i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusScriptQueriesRequest
      */
     public UranusScriptQueriesRequest appName(String appName) {
         this.appName = appName;

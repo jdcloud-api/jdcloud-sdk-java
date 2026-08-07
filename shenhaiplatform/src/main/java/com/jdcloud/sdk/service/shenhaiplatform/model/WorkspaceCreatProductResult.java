@@ -63,7 +63,8 @@ public class WorkspaceCreatProductResult extends JdcloudResult implements java.i
     /**
      * set 购买ID
      *
-     * @param buyId
+     * @param buyId 购买ID
+     * @return WorkspaceCreatProductResult
      */
     public WorkspaceCreatProductResult buyId(Integer buyId) {
         this.buyId = buyId;

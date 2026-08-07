@@ -134,7 +134,8 @@ public class GpdjmcRpcResponseBoolean  implements java.io.Serializable {
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GpdjmcRpcResponseBoolean
      */
     public GpdjmcRpcResponseBoolean success(Integer success) {
         this.success = success;
@@ -145,7 +146,8 @@ public class GpdjmcRpcResponseBoolean  implements java.io.Serializable {
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GpdjmcRpcResponseBoolean
      */
     public GpdjmcRpcResponseBoolean code(String code) {
         this.code = code;
@@ -156,7 +158,8 @@ public class GpdjmcRpcResponseBoolean  implements java.io.Serializable {
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GpdjmcRpcResponseBoolean
      */
     public GpdjmcRpcResponseBoolean msg(String msg) {
         this.msg = msg;
@@ -167,7 +170,8 @@ public class GpdjmcRpcResponseBoolean  implements java.io.Serializable {
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return GpdjmcRpcResponseBoolean
      */
     public GpdjmcRpcResponseBoolean result(Boolean result) {
         this.result = result;

@@ -65,7 +65,8 @@ public class UranusTaskFlowCheckReq  implements java.io.Serializable {
     /**
      * set 工作流名称
      *
-     * @param flowName
+     * @param flowName 工作流名称
+     * @return UranusTaskFlowCheckReq
      */
     public UranusTaskFlowCheckReq flowName(String flowName) {
         this.flowName = flowName;

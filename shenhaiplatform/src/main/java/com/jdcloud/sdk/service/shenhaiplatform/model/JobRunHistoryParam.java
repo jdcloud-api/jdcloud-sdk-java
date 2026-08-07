@@ -110,7 +110,8 @@ public class JobRunHistoryParam  implements java.io.Serializable {
     /**
      * set 分页-页码
      *
-     * @param pageNum
+     * @param pageNum 分页-页码
+     * @return JobRunHistoryParam
      */
     public JobRunHistoryParam pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -121,7 +122,8 @@ public class JobRunHistoryParam  implements java.io.Serializable {
     /**
      * set 分页-每页数量
      *
-     * @param pageSize
+     * @param pageSize 分页-每页数量
+     * @return JobRunHistoryParam
      */
     public JobRunHistoryParam pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -132,7 +134,8 @@ public class JobRunHistoryParam  implements java.io.Serializable {
     /**
      * set 任务编码
      *
-     * @param jobName
+     * @param jobName 任务编码
+     * @return JobRunHistoryParam
      */
     public JobRunHistoryParam jobName(String jobName) {
         this.jobName = jobName;

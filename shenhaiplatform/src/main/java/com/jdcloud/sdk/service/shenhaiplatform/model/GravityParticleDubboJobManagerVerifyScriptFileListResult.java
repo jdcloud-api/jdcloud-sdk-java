@@ -138,7 +138,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileListResult extends Jd
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GravityParticleDubboJobManagerVerifyScriptFileListResult
      */
     public GravityParticleDubboJobManagerVerifyScriptFileListResult success(Integer success) {
         this.success = success;
@@ -149,7 +150,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileListResult extends Jd
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GravityParticleDubboJobManagerVerifyScriptFileListResult
      */
     public GravityParticleDubboJobManagerVerifyScriptFileListResult code(String code) {
         this.code = code;
@@ -160,7 +162,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileListResult extends Jd
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GravityParticleDubboJobManagerVerifyScriptFileListResult
      */
     public GravityParticleDubboJobManagerVerifyScriptFileListResult msg(String msg) {
         this.msg = msg;
@@ -171,7 +174,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileListResult extends Jd
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return GravityParticleDubboJobManagerVerifyScriptFileListResult
     */
     public GravityParticleDubboJobManagerVerifyScriptFileListResult result(List<GpdjmcSchedJobDTO> result) {
         this.result = result;

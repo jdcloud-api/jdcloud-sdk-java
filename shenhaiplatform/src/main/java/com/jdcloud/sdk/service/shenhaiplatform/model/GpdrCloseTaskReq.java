@@ -62,7 +62,8 @@ public class GpdrCloseTaskReq  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpdrCloseTaskReq
      */
     public GpdrCloseTaskReq jobName(String jobName) {
         this.jobName = jobName;

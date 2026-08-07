@@ -119,7 +119,8 @@ public class ManageHubDutyUpdateRosterRequest extends JdcloudRequest implements 
     /**
     * set 全部值班表信息
     *
-    * @param rosterList
+    * @param rosterList 全部值班表信息
+    * @return ManageHubDutyUpdateRosterRequest
     */
     public ManageHubDutyUpdateRosterRequest rosterList(List<RosterDO> rosterList) {
         this.rosterList = rosterList;
@@ -130,7 +131,8 @@ public class ManageHubDutyUpdateRosterRequest extends JdcloudRequest implements 
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubDutyUpdateRosterRequest
      */
     public ManageHubDutyUpdateRosterRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -141,7 +143,8 @@ public class ManageHubDutyUpdateRosterRequest extends JdcloudRequest implements 
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubDutyUpdateRosterRequest
      */
     public ManageHubDutyUpdateRosterRequest appName(String appName) {
         this.appName = appName;

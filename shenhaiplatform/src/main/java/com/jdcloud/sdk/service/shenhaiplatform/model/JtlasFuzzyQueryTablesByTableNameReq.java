@@ -89,7 +89,8 @@ public class JtlasFuzzyQueryTablesByTableNameReq  implements java.io.Serializabl
     /**
      * set 项目空间
      *
-     * @param database
+     * @param database 项目空间
+     * @return JtlasFuzzyQueryTablesByTableNameReq
      */
     public JtlasFuzzyQueryTablesByTableNameReq database(String database) {
         this.database = database;
@@ -100,7 +101,8 @@ public class JtlasFuzzyQueryTablesByTableNameReq  implements java.io.Serializabl
     /**
      * set 表名称
      *
-     * @param fuzzyTableName
+     * @param fuzzyTableName 表名称
+     * @return JtlasFuzzyQueryTablesByTableNameReq
      */
     public JtlasFuzzyQueryTablesByTableNameReq fuzzyTableName(String fuzzyTableName) {
         this.fuzzyTableName = fuzzyTableName;

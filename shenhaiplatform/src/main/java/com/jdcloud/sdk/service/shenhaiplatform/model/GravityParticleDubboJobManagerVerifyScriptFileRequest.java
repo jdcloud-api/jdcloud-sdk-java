@@ -190,7 +190,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileRequest extends Jdclo
     /**
     * set 脚本文件字节数组
     *
-    * @param scriptByte
+    * @param scriptByte 脚本文件字节数组
+    * @return GravityParticleDubboJobManagerVerifyScriptFileRequest
     */
     public GravityParticleDubboJobManagerVerifyScriptFileRequest scriptByte(List<String> scriptByte) {
         this.scriptByte = scriptByte;
@@ -201,7 +202,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileRequest extends Jdclo
     /**
      * set 脚本名称
      *
-     * @param scriptName
+     * @param scriptName 脚本名称
+     * @return GravityParticleDubboJobManagerVerifyScriptFileRequest
      */
     public GravityParticleDubboJobManagerVerifyScriptFileRequest scriptName(String scriptName) {
         this.scriptName = scriptName;
@@ -212,7 +214,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileRequest extends Jdclo
     /**
      * set 任务名称
      *
-     * @param jobName
+     * @param jobName 任务名称
+     * @return GravityParticleDubboJobManagerVerifyScriptFileRequest
      */
     public GravityParticleDubboJobManagerVerifyScriptFileRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -223,7 +226,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileRequest extends Jdclo
     /**
      * set 脚本类型
      *
-     * @param scriptType
+     * @param scriptType 脚本类型
+     * @return GravityParticleDubboJobManagerVerifyScriptFileRequest
      */
     public GravityParticleDubboJobManagerVerifyScriptFileRequest scriptType(String scriptType) {
         this.scriptType = scriptType;
@@ -234,7 +238,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileRequest extends Jdclo
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerVerifyScriptFileRequest
      */
     public GravityParticleDubboJobManagerVerifyScriptFileRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -245,7 +250,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileRequest extends Jdclo
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerVerifyScriptFileRequest
      */
     public GravityParticleDubboJobManagerVerifyScriptFileRequest appName(String appName) {
         this.appName = appName;

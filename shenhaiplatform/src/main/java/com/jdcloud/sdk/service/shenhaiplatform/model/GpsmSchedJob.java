@@ -1238,7 +1238,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob jobName(String jobName) {
         this.jobName = jobName;
@@ -1249,7 +1250,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 唯一id
      *
-     * @param id
+     * @param id 唯一id
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob id(Integer id) {
         this.id = id;
@@ -1260,7 +1262,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 客户作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名称
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -1271,7 +1274,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -1282,7 +1286,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -1293,7 +1298,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 计算资源组code
      *
-     * @param resourceCode
+     * @param resourceCode 计算资源组code
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -1304,7 +1310,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 作业描述
      *
-     * @param jobDesc
+     * @param jobDesc 作业描述
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -1315,7 +1322,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 最后一次运行状态，Pending、Ready、Running、Done、Failed、Clean
      *
-     * @param lastStatus
+     * @param lastStatus 最后一次运行状态，Pending、Ready、Running、Done、Failed、Clean
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob lastStatus(String lastStatus) {
         this.lastStatus = lastStatus;
@@ -1326,7 +1334,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 最后一次执行日期
      *
-     * @param lastTxDate
+     * @param lastTxDate 最后一次执行日期
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob lastTxDate(String lastTxDate) {
         this.lastTxDate = lastTxDate;
@@ -1337,7 +1346,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 最后一次运行开始时间
      *
-     * @param lastStartTime
+     * @param lastStartTime 最后一次运行开始时间
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob lastStartTime(String lastStartTime) {
         this.lastStartTime = lastStartTime;
@@ -1348,7 +1358,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 最后一次运行结束时间
      *
-     * @param lastEndTime
+     * @param lastEndTime 最后一次运行结束时间
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob lastEndTime(String lastEndTime) {
         this.lastEndTime = lastEndTime;
@@ -1359,7 +1370,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 最后一次运行服务器
      *
-     * @param lastServer
+     * @param lastServer 最后一次运行服务器
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob lastServer(String lastServer) {
         this.lastServer = lastServer;
@@ -1370,7 +1382,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set Session ID
      *
-     * @param lastSessionid
+     * @param lastSessionid Session ID
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob lastSessionid(Integer lastSessionid) {
         this.lastSessionid = lastSessionid;
@@ -1381,7 +1394,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 最后返回编码
      *
-     * @param lastReturnCode
+     * @param lastReturnCode 最后返回编码
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob lastReturnCode(Integer lastReturnCode) {
         this.lastReturnCode = lastReturnCode;
@@ -1392,7 +1406,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 当前作业状态信息
      *
-     * @param currentStatusMsg
+     * @param currentStatusMsg 当前作业状态信息
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob currentStatusMsg(String currentStatusMsg) {
         this.currentStatusMsg = currentStatusMsg;
@@ -1403,7 +1418,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
      *
-     * @param triggerType
+     * @param triggerType 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -1414,7 +1430,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
      *
-     * @param cycle
+     * @param cycle 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob cycle(String cycle) {
         this.cycle = cycle;
@@ -1425,7 +1442,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 周期具体日期
      *
-     * @param sequence
+     * @param sequence 周期具体日期
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob sequence(String sequence) {
         this.sequence = sequence;
@@ -1436,7 +1454,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set T+N，偏移量
      *
-     * @param txDateOffset
+     * @param txDateOffset T+N，偏移量
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob txDateOffset(Integer txDateOffset) {
         this.txDateOffset = txDateOffset;
@@ -1447,7 +1466,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 作业优先级，数字越小优先级越高
      *
-     * @param priority
+     * @param priority 作业优先级，数字越小优先级越高
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob priority(Integer priority) {
         this.priority = priority;
@@ -1458,7 +1478,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 作业超时时间，单位分钟
      *
-     * @param timeout
+     * @param timeout 作业超时时间，单位分钟
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob timeout(Integer timeout) {
         this.timeout = timeout;
@@ -1469,7 +1490,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 窗口期开始时间
      *
-     * @param windowStartTime
+     * @param windowStartTime 窗口期开始时间
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob windowStartTime(String windowStartTime) {
         this.windowStartTime = windowStartTime;
@@ -1480,7 +1502,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 窗口期结束时间
      *
-     * @param windowEndTime
+     * @param windowEndTime 窗口期结束时间
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob windowEndTime(String windowEndTime) {
         this.windowEndTime = windowEndTime;
@@ -1491,7 +1514,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 失败后次日是否自动运行，1是、0否
      *
-     * @param morrowAutoExec
+     * @param morrowAutoExec 失败后次日是否自动运行，1是、0否
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob morrowAutoExec(String morrowAutoExec) {
         this.morrowAutoExec = morrowAutoExec;
@@ -1502,7 +1526,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 抽空之后的处理 0 无操作 1 作业失败 2发出警告
      *
-     * @param dataZeroKillEnable
+     * @param dataZeroKillEnable 抽空之后的处理 0 无操作 1 作业失败 2发出警告
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob dataZeroKillEnable(Integer dataZeroKillEnable) {
         this.dataZeroKillEnable = dataZeroKillEnable;
@@ -1513,7 +1538,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 重试次数
      *
-     * @param retryCount
+     * @param retryCount 重试次数
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob retryCount(Integer retryCount) {
         this.retryCount = retryCount;
@@ -1524,7 +1550,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 间隔/秒
      *
-     * @param retryInterval
+     * @param retryInterval 间隔/秒
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob retryInterval(Integer retryInterval) {
         this.retryInterval = retryInterval;
@@ -1535,7 +1562,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 当期已经跑成功过，是否可以再跑，1启用、0关闭
      *
-     * @param flagAgain
+     * @param flagAgain 当期已经跑成功过，是否可以再跑，1启用、0关闭
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob flagAgain(String flagAgain) {
         this.flagAgain = flagAgain;
@@ -1546,7 +1574,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 是否可以跨周期跑，1启用、0关闭
      *
-     * @param flagAcross
+     * @param flagAcross 是否可以跨周期跑，1启用、0关闭
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob flagAcross(String flagAcross) {
         this.flagAcross = flagAcross;
@@ -1557,7 +1586,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 是否可以自身并行，1启用、0关闭
      *
-     * @param flagParallel
+     * @param flagParallel 是否可以自身并行，1启用、0关闭
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob flagParallel(String flagParallel) {
         this.flagParallel = flagParallel;
@@ -1568,7 +1598,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 是否级联触发，父任务重跑后是否被强制触发重跑，1是、0否
      *
-     * @param flagCascadedTrigger
+     * @param flagCascadedTrigger 是否级联触发，父任务重跑后是否被强制触发重跑，1是、0否
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob flagCascadedTrigger(String flagCascadedTrigger) {
         this.flagCascadedTrigger = flagCascadedTrigger;
@@ -1579,7 +1610,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 需要的运行环境
      *
-     * @param requiredRunEnv
+     * @param requiredRunEnv 需要的运行环境
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob requiredRunEnv(String requiredRunEnv) {
         this.requiredRunEnv = requiredRunEnv;
@@ -1590,7 +1622,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 运行脚本
      *
-     * @param runScript
+     * @param runScript 运行脚本
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob runScript(String runScript) {
         this.runScript = runScript;
@@ -1601,7 +1634,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 是否启用，0未上线、1已上线、2已下线
      *
-     * @param enable
+     * @param enable 是否启用，0未上线、1已上线、2已下线
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob enable(String enable) {
         this.enable = enable;
@@ -1612,7 +1646,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 负责人，不超过10个
      *
-     * @param manager
+     * @param manager 负责人，不超过10个
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob manager(String manager) {
         this.manager = manager;
@@ -1623,7 +1658,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 共享人，不超过10个
      *
-     * @param shareUser
+     * @param shareUser 共享人，不超过10个
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob shareUser(String shareUser) {
         this.shareUser = shareUser;
@@ -1634,7 +1670,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 失效时间
      *
-     * @param expireTime
+     * @param expireTime 失效时间
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob expireTime(String expireTime) {
         this.expireTime = expireTime;
@@ -1645,7 +1682,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set zip命令行
      *
-     * @param commands
+     * @param commands zip命令行
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob commands(String commands) {
         this.commands = commands;
@@ -1656,7 +1694,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 创建人
      *
-     * @param createUser
+     * @param createUser 创建人
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob createUser(String createUser) {
         this.createUser = createUser;
@@ -1667,7 +1706,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob createTime(String createTime) {
         this.createTime = createTime;
@@ -1678,7 +1718,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -1689,7 +1730,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 实时结点名称
      *
-     * @param nodeName
+     * @param nodeName 实时结点名称
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob nodeName(String nodeName) {
         this.nodeName = nodeName;
@@ -1700,7 +1742,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 实时主题
      *
-     * @param topic
+     * @param topic 实时主题
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob topic(String topic) {
         this.topic = topic;
@@ -1711,7 +1754,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 作业执行方式  0离线 1双写 2实时
      *
-     * @param jobRunWay
+     * @param jobRunWay 作业执行方式  0离线 1双写 2实时
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob jobRunWay(String jobRunWay) {
         this.jobRunWay = jobRunWay;
@@ -1722,7 +1766,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 所属系统
      *
-     * @param belongSys
+     * @param belongSys 所属系统
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob belongSys(String belongSys) {
         this.belongSys = belongSys;
@@ -1733,7 +1778,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 主从同步延迟处理方式。0:警告无处理，1:作业延迟启动
      *
-     * @param msDelayDealWay
+     * @param msDelayDealWay 主从同步延迟处理方式。0:警告无处理，1:作业延迟启动
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob msDelayDealWay(String msDelayDealWay) {
         this.msDelayDealWay = msDelayDealWay;
@@ -1744,7 +1790,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 周期开始时间(适用小时分钟)
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 周期开始时间(适用小时分钟)
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -1755,7 +1802,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 周期结束时间(适用小时分钟)
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 周期结束时间(适用小时分钟)
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -1766,7 +1814,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 周期间隔(适用小时分钟，当周期为小时，含义为间隔小时数，当周期为分钟，含义为间隔分钟数)
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 周期间隔(适用小时分钟，当周期为小时，含义为间隔小时数，当周期为分钟，含义为间隔分钟数)
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob sequenceInterval(Integer sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -1777,7 +1826,8 @@ public class GpsmSchedJob  implements java.io.Serializable {
     /**
      * set 作业运行参数
      *
-     * @param runParams
+     * @param runParams 作业运行参数
+     * @return GpsmSchedJob
      */
     public GpsmSchedJob runParams(String runParams) {
         this.runParams = runParams;

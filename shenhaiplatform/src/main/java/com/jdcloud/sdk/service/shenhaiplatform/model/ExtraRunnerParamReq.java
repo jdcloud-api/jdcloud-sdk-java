@@ -86,7 +86,8 @@ public class ExtraRunnerParamReq  implements java.io.Serializable {
     /**
      * set 脚本内容
      *
-     * @param content
+     * @param content 脚本内容
+     * @return ExtraRunnerParamReq
      */
     public ExtraRunnerParamReq content(String content) {
         this.content = content;
@@ -97,7 +98,8 @@ public class ExtraRunnerParamReq  implements java.io.Serializable {
     /**
      * set 调试模拟时间 默认今天 2015-10-02 00:00
      *
-     * @param simDate
+     * @param simDate 调试模拟时间 默认今天 2015-10-02 00:00
+     * @return ExtraRunnerParamReq
      */
     public ExtraRunnerParamReq simDate(String simDate) {
         this.simDate = simDate;

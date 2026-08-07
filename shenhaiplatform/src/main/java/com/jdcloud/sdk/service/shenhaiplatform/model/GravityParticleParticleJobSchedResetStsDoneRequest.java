@@ -119,7 +119,8 @@ public class GravityParticleParticleJobSchedResetStsDoneRequest extends JdcloudR
     /**
     * set arrayObjectParam
     *
-    * @param arrayObjectParam
+    * @param arrayObjectParam 
+    * @return GravityParticleParticleJobSchedResetStsDoneRequest
     */
     public GravityParticleParticleJobSchedResetStsDoneRequest arrayObjectParam(List<GpsmResetJobInstReq> arrayObjectParam) {
         this.arrayObjectParam = arrayObjectParam;
@@ -130,7 +131,8 @@ public class GravityParticleParticleJobSchedResetStsDoneRequest extends JdcloudR
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleParticleJobSchedResetStsDoneRequest
      */
     public GravityParticleParticleJobSchedResetStsDoneRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -141,7 +143,8 @@ public class GravityParticleParticleJobSchedResetStsDoneRequest extends JdcloudR
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleParticleJobSchedResetStsDoneRequest
      */
     public GravityParticleParticleJobSchedResetStsDoneRequest appName(String appName) {
         this.appName = appName;

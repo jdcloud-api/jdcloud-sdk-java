@@ -160,7 +160,8 @@ public class UranusTaskInfoNodeReq  implements java.io.Serializable {
     /**
      * set 节点code
      *
-     * @param taskCode
+     * @param taskCode 节点code
+     * @return UranusTaskInfoNodeReq
      */
     public UranusTaskInfoNodeReq taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -171,7 +172,8 @@ public class UranusTaskInfoNodeReq  implements java.io.Serializable {
     /**
     * set 状态 集合
     *
-    * @param taskChangeStatus
+    * @param taskChangeStatus 状态 集合
+    * @return UranusTaskInfoNodeReq
     */
     public UranusTaskInfoNodeReq taskChangeStatus(List<Integer> taskChangeStatus) {
         this.taskChangeStatus = taskChangeStatus;
@@ -182,7 +184,8 @@ public class UranusTaskInfoNodeReq  implements java.io.Serializable {
     /**
     * set 发布变更状态描述
     *
-    * @param taskChangeStatusDesc
+    * @param taskChangeStatusDesc 发布变更状态描述
+    * @return UranusTaskInfoNodeReq
     */
     public UranusTaskInfoNodeReq taskChangeStatusDesc(List<String> taskChangeStatusDesc) {
         this.taskChangeStatusDesc = taskChangeStatusDesc;
@@ -193,7 +196,8 @@ public class UranusTaskInfoNodeReq  implements java.io.Serializable {
     /**
      * set 作业状态
      *
-     * @param gravityStatus
+     * @param gravityStatus 作业状态
+     * @return UranusTaskInfoNodeReq
      */
     public UranusTaskInfoNodeReq gravityStatus(Integer gravityStatus) {
         this.gravityStatus = gravityStatus;
@@ -204,7 +208,8 @@ public class UranusTaskInfoNodeReq  implements java.io.Serializable {
     /**
      * set 作业状态描述
      *
-     * @param gravityStatusDesc
+     * @param gravityStatusDesc 作业状态描述
+     * @return UranusTaskInfoNodeReq
      */
     public UranusTaskInfoNodeReq gravityStatusDesc(String gravityStatusDesc) {
         this.gravityStatusDesc = gravityStatusDesc;

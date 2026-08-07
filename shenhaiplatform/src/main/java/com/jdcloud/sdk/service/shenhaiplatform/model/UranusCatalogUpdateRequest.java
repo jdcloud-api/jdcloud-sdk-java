@@ -238,7 +238,8 @@ public class UranusCatalogUpdateRequest extends JdcloudRequest implements java.i
     /**
      * set 前端排序唯一ID
      *
-     * @param unrealId
+     * @param unrealId 前端排序唯一ID
+     * @return UranusCatalogUpdateRequest
      */
     public UranusCatalogUpdateRequest unrealId(String unrealId) {
         this.unrealId = unrealId;
@@ -249,7 +250,8 @@ public class UranusCatalogUpdateRequest extends JdcloudRequest implements java.i
     /**
      * set 目录code
      *
-     * @param catalogCode
+     * @param catalogCode 目录code
+     * @return UranusCatalogUpdateRequest
      */
     public UranusCatalogUpdateRequest catalogCode(String catalogCode) {
         this.catalogCode = catalogCode;
@@ -260,7 +262,8 @@ public class UranusCatalogUpdateRequest extends JdcloudRequest implements java.i
     /**
      * set 目录名称
      *
-     * @param catalogName
+     * @param catalogName 目录名称
+     * @return UranusCatalogUpdateRequest
      */
     public UranusCatalogUpdateRequest catalogName(String catalogName) {
         this.catalogName = catalogName;
@@ -271,7 +274,8 @@ public class UranusCatalogUpdateRequest extends JdcloudRequest implements java.i
     /**
      * set 0：非叶子目录， 1：叶子目录
      *
-     * @param catalogType
+     * @param catalogType 0：非叶子目录， 1：叶子目录
+     * @return UranusCatalogUpdateRequest
      */
     public UranusCatalogUpdateRequest catalogType(Integer catalogType) {
         this.catalogType = catalogType;
@@ -282,7 +286,8 @@ public class UranusCatalogUpdateRequest extends JdcloudRequest implements java.i
     /**
      * set 父目录code
      *
-     * @param parentCode
+     * @param parentCode 父目录code
+     * @return UranusCatalogUpdateRequest
      */
     public UranusCatalogUpdateRequest parentCode(String parentCode) {
         this.parentCode = parentCode;
@@ -293,7 +298,8 @@ public class UranusCatalogUpdateRequest extends JdcloudRequest implements java.i
     /**
      * set 子节点数量
      *
-     * @param childrenNum
+     * @param childrenNum 子节点数量
+     * @return UranusCatalogUpdateRequest
      */
     public UranusCatalogUpdateRequest childrenNum(Integer childrenNum) {
         this.childrenNum = childrenNum;
@@ -304,7 +310,8 @@ public class UranusCatalogUpdateRequest extends JdcloudRequest implements java.i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusCatalogUpdateRequest
      */
     public UranusCatalogUpdateRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -315,7 +322,8 @@ public class UranusCatalogUpdateRequest extends JdcloudRequest implements java.i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusCatalogUpdateRequest
      */
     public UranusCatalogUpdateRequest appName(String appName) {
         this.appName = appName;

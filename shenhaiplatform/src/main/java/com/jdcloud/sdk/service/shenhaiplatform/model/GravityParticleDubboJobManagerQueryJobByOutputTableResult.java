@@ -137,7 +137,8 @@ public class GravityParticleDubboJobManagerQueryJobByOutputTableResult extends J
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GravityParticleDubboJobManagerQueryJobByOutputTableResult
      */
     public GravityParticleDubboJobManagerQueryJobByOutputTableResult success(Integer success) {
         this.success = success;
@@ -148,7 +149,8 @@ public class GravityParticleDubboJobManagerQueryJobByOutputTableResult extends J
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GravityParticleDubboJobManagerQueryJobByOutputTableResult
      */
     public GravityParticleDubboJobManagerQueryJobByOutputTableResult code(String code) {
         this.code = code;
@@ -159,7 +161,8 @@ public class GravityParticleDubboJobManagerQueryJobByOutputTableResult extends J
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GravityParticleDubboJobManagerQueryJobByOutputTableResult
      */
     public GravityParticleDubboJobManagerQueryJobByOutputTableResult msg(String msg) {
         this.msg = msg;
@@ -170,7 +173,8 @@ public class GravityParticleDubboJobManagerQueryJobByOutputTableResult extends J
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return GravityParticleDubboJobManagerQueryJobByOutputTableResult
     */
     public GravityParticleDubboJobManagerQueryJobByOutputTableResult result(List<String> result) {
         this.result = result;

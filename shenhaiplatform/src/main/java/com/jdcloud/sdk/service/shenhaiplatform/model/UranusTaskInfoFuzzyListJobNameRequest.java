@@ -190,7 +190,8 @@ public class UranusTaskInfoFuzzyListJobNameRequest extends JdcloudRequest implem
     /**
      * set 模糊作业名称
      *
-     * @param jobName
+     * @param jobName 模糊作业名称
+     * @return UranusTaskInfoFuzzyListJobNameRequest
      */
     public UranusTaskInfoFuzzyListJobNameRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -201,7 +202,8 @@ public class UranusTaskInfoFuzzyListJobNameRequest extends JdcloudRequest implem
     /**
      * set 当前作业Code
      *
-     * @param currentTaskCode
+     * @param currentTaskCode 当前作业Code
+     * @return UranusTaskInfoFuzzyListJobNameRequest
      */
     public UranusTaskInfoFuzzyListJobNameRequest currentTaskCode(String currentTaskCode) {
         this.currentTaskCode = currentTaskCode;
@@ -212,7 +214,8 @@ public class UranusTaskInfoFuzzyListJobNameRequest extends JdcloudRequest implem
     /**
     * set 已选作业名称
     *
-    * @param dependJobNameList
+    * @param dependJobNameList 已选作业名称
+    * @return UranusTaskInfoFuzzyListJobNameRequest
     */
     public UranusTaskInfoFuzzyListJobNameRequest dependJobNameList(List<String> dependJobNameList) {
         this.dependJobNameList = dependJobNameList;
@@ -223,7 +226,8 @@ public class UranusTaskInfoFuzzyListJobNameRequest extends JdcloudRequest implem
     /**
     * set 解析出父依赖任务
     *
-    * @param analysisDependJobNameList
+    * @param analysisDependJobNameList 解析出父依赖任务
+    * @return UranusTaskInfoFuzzyListJobNameRequest
     */
     public UranusTaskInfoFuzzyListJobNameRequest analysisDependJobNameList(List<String> analysisDependJobNameList) {
         this.analysisDependJobNameList = analysisDependJobNameList;
@@ -234,7 +238,8 @@ public class UranusTaskInfoFuzzyListJobNameRequest extends JdcloudRequest implem
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskInfoFuzzyListJobNameRequest
      */
     public UranusTaskInfoFuzzyListJobNameRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -245,7 +250,8 @@ public class UranusTaskInfoFuzzyListJobNameRequest extends JdcloudRequest implem
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskInfoFuzzyListJobNameRequest
      */
     public UranusTaskInfoFuzzyListJobNameRequest appName(String appName) {
         this.appName = appName;

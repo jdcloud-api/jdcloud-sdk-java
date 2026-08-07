@@ -118,7 +118,8 @@ public class UranusTaskFlowCheckRequest extends JdcloudRequest implements java.i
     /**
      * set 工作流名称
      *
-     * @param flowName
+     * @param flowName 工作流名称
+     * @return UranusTaskFlowCheckRequest
      */
     public UranusTaskFlowCheckRequest flowName(String flowName) {
         this.flowName = flowName;
@@ -129,7 +130,8 @@ public class UranusTaskFlowCheckRequest extends JdcloudRequest implements java.i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskFlowCheckRequest
      */
     public UranusTaskFlowCheckRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusTaskFlowCheckRequest extends JdcloudRequest implements java.i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskFlowCheckRequest
      */
     public UranusTaskFlowCheckRequest appName(String appName) {
         this.appName = appName;

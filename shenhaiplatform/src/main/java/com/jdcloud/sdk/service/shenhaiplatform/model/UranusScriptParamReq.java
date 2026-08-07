@@ -93,7 +93,8 @@ public class UranusScriptParamReq  implements java.io.Serializable {
     /**
      * set 文件Code
      *
-     * @param fileCode
+     * @param fileCode 文件Code
+     * @return UranusScriptParamReq
      */
     public UranusScriptParamReq fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -104,7 +105,8 @@ public class UranusScriptParamReq  implements java.io.Serializable {
     /**
     * set 脚本参数 list
     *
-    * @param params
+    * @param params 脚本参数 list
+    * @return UranusScriptParamReq
     */
     public UranusScriptParamReq params(List<UranusTaskParamReq> params) {
         this.params = params;

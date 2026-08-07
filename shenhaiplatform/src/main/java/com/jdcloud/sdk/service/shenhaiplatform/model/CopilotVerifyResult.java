@@ -111,7 +111,8 @@ public class CopilotVerifyResult extends JdcloudResult implements java.io.Serial
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return CopilotVerifyResult
      */
     public CopilotVerifyResult code(String code) {
         this.code = code;
@@ -122,7 +123,8 @@ public class CopilotVerifyResult extends JdcloudResult implements java.io.Serial
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return CopilotVerifyResult
      */
     public CopilotVerifyResult message(String message) {
         this.message = message;
@@ -133,7 +135,8 @@ public class CopilotVerifyResult extends JdcloudResult implements java.io.Serial
     /**
      * set 是否有权限访问
      *
-     * @param result
+     * @param result 是否有权限访问
+     * @return CopilotVerifyResult
      */
     public CopilotVerifyResult result(Boolean result) {
         this.result = result;

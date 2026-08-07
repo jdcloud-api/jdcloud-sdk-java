@@ -135,7 +135,8 @@ public class GravityParticleDubboJobManagerGetMgrJobByJobNameResult extends Jdcl
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GravityParticleDubboJobManagerGetMgrJobByJobNameResult
      */
     public GravityParticleDubboJobManagerGetMgrJobByJobNameResult success(Integer success) {
         this.success = success;
@@ -146,7 +147,8 @@ public class GravityParticleDubboJobManagerGetMgrJobByJobNameResult extends Jdcl
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GravityParticleDubboJobManagerGetMgrJobByJobNameResult
      */
     public GravityParticleDubboJobManagerGetMgrJobByJobNameResult code(String code) {
         this.code = code;
@@ -157,7 +159,8 @@ public class GravityParticleDubboJobManagerGetMgrJobByJobNameResult extends Jdcl
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GravityParticleDubboJobManagerGetMgrJobByJobNameResult
      */
     public GravityParticleDubboJobManagerGetMgrJobByJobNameResult msg(String msg) {
         this.msg = msg;
@@ -168,7 +171,8 @@ public class GravityParticleDubboJobManagerGetMgrJobByJobNameResult extends Jdcl
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return GravityParticleDubboJobManagerGetMgrJobByJobNameResult
      */
     public GravityParticleDubboJobManagerGetMgrJobByJobNameResult result(Boolean result) {
         this.result = result;

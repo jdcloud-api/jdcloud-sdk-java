@@ -146,7 +146,8 @@ public class UranusTaskUpdateStatusListRequest extends JdcloudRequest implements
     /**
     * set 任务节点集合
     *
-    * @param taskCodes
+    * @param taskCodes 任务节点集合
+    * @return UranusTaskUpdateStatusListRequest
     */
     public UranusTaskUpdateStatusListRequest taskCodes(List<String> taskCodes) {
         this.taskCodes = taskCodes;
@@ -157,7 +158,8 @@ public class UranusTaskUpdateStatusListRequest extends JdcloudRequest implements
     /**
      * set 任务节点状态
      *
-     * @param status
+     * @param status 任务节点状态
+     * @return UranusTaskUpdateStatusListRequest
      */
     public UranusTaskUpdateStatusListRequest status(Integer status) {
         this.status = status;
@@ -168,7 +170,8 @@ public class UranusTaskUpdateStatusListRequest extends JdcloudRequest implements
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskUpdateStatusListRequest
      */
     public UranusTaskUpdateStatusListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -179,7 +182,8 @@ public class UranusTaskUpdateStatusListRequest extends JdcloudRequest implements
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskUpdateStatusListRequest
      */
     public UranusTaskUpdateStatusListRequest appName(String appName) {
         this.appName = appName;

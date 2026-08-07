@@ -1384,7 +1384,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set flowUuid
      *
-     * @param flowUuid
+     * @param flowUuid 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO flowUuid(String flowUuid) {
         this.flowUuid = flowUuid;
@@ -1395,7 +1396,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set nameKeyWord
      *
-     * @param nameKeyWord
+     * @param nameKeyWord 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO nameKeyWord(String nameKeyWord) {
         this.nameKeyWord = nameKeyWord;
@@ -1406,7 +1408,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set relationType
      *
-     * @param relationType
+     * @param relationType 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO relationType(String relationType) {
         this.relationType = relationType;
@@ -1417,7 +1420,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set tableId
      *
-     * @param tableId
+     * @param tableId 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO tableId(Integer tableId) {
         this.tableId = tableId;
@@ -1428,7 +1432,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set redirectType
      *
-     * @param redirectType
+     * @param redirectType 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO redirectType(String redirectType) {
         this.redirectType = redirectType;
@@ -1439,7 +1444,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set tableName
      *
-     * @param tableName
+     * @param tableName 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO tableName(String tableName) {
         this.tableName = tableName;
@@ -1450,7 +1456,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set tableNameMatch
      *
-     * @param tableNameMatch
+     * @param tableNameMatch 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO tableNameMatch(Boolean tableNameMatch) {
         this.tableNameMatch = tableNameMatch;
@@ -1461,7 +1468,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set jobName
      *
-     * @param jobName
+     * @param jobName 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -1472,7 +1480,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set jobSystem
      *
-     * @param jobSystem
+     * @param jobSystem 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO jobSystem(String jobSystem) {
         this.jobSystem = jobSystem;
@@ -1483,7 +1492,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set triggerType
      *
-     * @param triggerType
+     * @param triggerType 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -1494,7 +1504,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set triggerConfig
      *
-     * @param triggerConfig
+     * @param triggerConfig 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO triggerConfig(UranusTriggerConfigDTO triggerConfig) {
         this.triggerConfig = triggerConfig;
@@ -1505,7 +1516,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set zipCommand
      *
-     * @param zipCommand
+     * @param zipCommand 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO zipCommand(String zipCommand) {
         this.zipCommand = zipCommand;
@@ -1516,7 +1528,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set zipFileName
      *
-     * @param zipFileName
+     * @param zipFileName 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO zipFileName(String zipFileName) {
         this.zipFileName = zipFileName;
@@ -1527,7 +1540,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set zipParams
      *
-     * @param zipParams
+     * @param zipParams 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO zipParams(String zipParams) {
         this.zipParams = zipParams;
@@ -1538,7 +1552,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set dependencies
      *
-     * @param dependencies
+     * @param dependencies 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO dependencies(String dependencies) {
         this.dependencies = dependencies;
@@ -1549,7 +1564,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set manager
      *
-     * @param manager
+     * @param manager 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO manager(String manager) {
         this.manager = manager;
@@ -1560,7 +1576,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set priority
      *
-     * @param priority
+     * @param priority 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO priority(String priority) {
         this.priority = priority;
@@ -1571,7 +1588,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set jobDesc
      *
-     * @param jobDesc
+     * @param jobDesc 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -1582,7 +1600,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set scriptType
      *
-     * @param scriptType
+     * @param scriptType 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO scriptType(String scriptType) {
         this.scriptType = scriptType;
@@ -1593,7 +1612,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set runScript
      *
-     * @param runScript
+     * @param runScript 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO runScript(String runScript) {
         this.runScript = runScript;
@@ -1604,7 +1624,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
     * set scriptContent
     *
-    * @param scriptContent
+    * @param scriptContent 
+    * @return UranusTaskInfoDTO
     */
     public UranusTaskInfoDTO scriptContent(List<String> scriptContent) {
         this.scriptContent = scriptContent;
@@ -1615,7 +1636,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set cycle
      *
-     * @param cycle
+     * @param cycle 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO cycle(String cycle) {
         this.cycle = cycle;
@@ -1626,7 +1648,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set sequence
      *
-     * @param sequence
+     * @param sequence 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO sequence(String sequence) {
         this.sequence = sequence;
@@ -1637,7 +1660,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set lifeCycle
      *
-     * @param lifeCycle
+     * @param lifeCycle 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO lifeCycle(String lifeCycle) {
         this.lifeCycle = lifeCycle;
@@ -1648,7 +1672,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set retry
      *
-     * @param retry
+     * @param retry 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO retry(Boolean retry) {
         this.retry = retry;
@@ -1659,7 +1684,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set notifyOccasion
      *
-     * @param notifyOccasion
+     * @param notifyOccasion 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO notifyOccasion(String notifyOccasion) {
         this.notifyOccasion = notifyOccasion;
@@ -1670,7 +1696,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set notifyTime
      *
-     * @param notifyTime
+     * @param notifyTime 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO notifyTime(String notifyTime) {
         this.notifyTime = notifyTime;
@@ -1681,7 +1708,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set notifyPattern
      *
-     * @param notifyPattern
+     * @param notifyPattern 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO notifyPattern(String notifyPattern) {
         this.notifyPattern = notifyPattern;
@@ -1692,7 +1720,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set notifier
      *
-     * @param notifier
+     * @param notifier 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO notifier(String notifier) {
         this.notifier = notifier;
@@ -1703,7 +1732,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set startRunTime
      *
-     * @param startRunTime
+     * @param startRunTime 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO startRunTime(String startRunTime) {
         this.startRunTime = startRunTime;
@@ -1714,7 +1744,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set endRunTime
      *
-     * @param endRunTime
+     * @param endRunTime 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO endRunTime(String endRunTime) {
         this.endRunTime = endRunTime;
@@ -1725,7 +1756,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set runTime
      *
-     * @param runTime
+     * @param runTime 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO runTime(String runTime) {
         this.runTime = runTime;
@@ -1736,7 +1768,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set runDate
      *
-     * @param runDate
+     * @param runDate 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO runDate(String runDate) {
         this.runDate = runDate;
@@ -1747,7 +1780,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set flowId
      *
-     * @param flowId
+     * @param flowId 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO flowId(String flowId) {
         this.flowId = flowId;
@@ -1758,7 +1792,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set taskId
      *
-     * @param taskId
+     * @param taskId 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO taskId(String taskId) {
         this.taskId = taskId;
@@ -1769,7 +1804,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set userAccount
      *
-     * @param userAccount
+     * @param userAccount 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO userAccount(String userAccount) {
         this.userAccount = userAccount;
@@ -1780,7 +1816,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set userPwd
      *
-     * @param userPwd
+     * @param userPwd 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO userPwd(String userPwd) {
         this.userPwd = userPwd;
@@ -1791,7 +1828,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set markIds
      *
-     * @param markIds
+     * @param markIds 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO markIds(String markIds) {
         this.markIds = markIds;
@@ -1802,7 +1840,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set runTimeOut
      *
-     * @param runTimeOut
+     * @param runTimeOut 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO runTimeOut(Integer runTimeOut) {
         this.runTimeOut = runTimeOut;
@@ -1813,7 +1852,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set scriptSourceType
      *
-     * @param scriptSourceType
+     * @param scriptSourceType 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO scriptSourceType(String scriptSourceType) {
         this.scriptSourceType = scriptSourceType;
@@ -1824,7 +1864,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set scriptTemplate
      *
-     * @param scriptTemplate
+     * @param scriptTemplate 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO scriptTemplate(String scriptTemplate) {
         this.scriptTemplate = scriptTemplate;
@@ -1835,7 +1876,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set isDeploy
      *
-     * @param isDeploy
+     * @param isDeploy 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO isDeploy(Boolean isDeploy) {
         this.isDeploy = isDeploy;
@@ -1846,7 +1888,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set scriptPath
      *
-     * @param scriptPath
+     * @param scriptPath 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO scriptPath(String scriptPath) {
         this.scriptPath = scriptPath;
@@ -1857,7 +1900,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
     * set scriptByte
     *
-    * @param scriptByte
+    * @param scriptByte 
+    * @return UranusTaskInfoDTO
     */
     public UranusTaskInfoDTO scriptByte(List<String> scriptByte) {
         this.scriptByte = scriptByte;
@@ -1868,7 +1912,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set fileId
      *
-     * @param fileId
+     * @param fileId 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO fileId(Integer fileId) {
         this.fileId = fileId;
@@ -1879,7 +1924,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set publishDesc
      *
-     * @param publishDesc
+     * @param publishDesc 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO publishDesc(String publishDesc) {
         this.publishDesc = publishDesc;
@@ -1890,7 +1936,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set scriptInfo
      *
-     * @param scriptInfo
+     * @param scriptInfo 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO scriptInfo(String scriptInfo) {
         this.scriptInfo = scriptInfo;
@@ -1901,7 +1948,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set version
      *
-     * @param version
+     * @param version 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO version(Integer version) {
         this.version = version;
@@ -1912,7 +1960,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set channel
      *
-     * @param channel
+     * @param channel 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO channel(String channel) {
         this.channel = channel;
@@ -1923,7 +1972,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set sequenceStartTime
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -1934,7 +1984,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set sequenceEndTime
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -1945,7 +1996,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set sequenceInterval
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO sequenceInterval(Integer sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -1956,7 +2008,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set runParams
      *
-     * @param runParams
+     * @param runParams 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO runParams(String runParams) {
         this.runParams = runParams;
@@ -1967,7 +2020,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set runQueue
      *
-     * @param runQueue
+     * @param runQueue 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO runQueue(String runQueue) {
         this.runQueue = runQueue;
@@ -1978,7 +2032,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set cooperator
      *
-     * @param cooperator
+     * @param cooperator 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO cooperator(String cooperator) {
         this.cooperator = cooperator;
@@ -1989,7 +2044,8 @@ public class UranusTaskInfoDTO  implements java.io.Serializable {
     /**
      * set fromGravity
      *
-     * @param fromGravity
+     * @param fromGravity 
+     * @return UranusTaskInfoDTO
      */
     public UranusTaskInfoDTO fromGravity(Boolean fromGravity) {
         this.fromGravity = fromGravity;

@@ -87,7 +87,8 @@ public class PublishPkgResult extends JdcloudResult implements java.io.Serializa
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return PublishPkgResult
      */
     public PublishPkgResult code(String code) {
         this.code = code;
@@ -98,7 +99,8 @@ public class PublishPkgResult extends JdcloudResult implements java.io.Serializa
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return PublishPkgResult
      */
     public PublishPkgResult message(String message) {
         this.message = message;

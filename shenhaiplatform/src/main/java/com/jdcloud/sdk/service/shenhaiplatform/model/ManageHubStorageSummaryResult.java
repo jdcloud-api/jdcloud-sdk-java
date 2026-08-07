@@ -112,7 +112,8 @@ public class ManageHubStorageSummaryResult extends JdcloudResult implements java
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return ManageHubStorageSummaryResult
      */
     public ManageHubStorageSummaryResult code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class ManageHubStorageSummaryResult extends JdcloudResult implements java
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return ManageHubStorageSummaryResult
      */
     public ManageHubStorageSummaryResult message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class ManageHubStorageSummaryResult extends JdcloudResult implements java
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return ManageHubStorageSummaryResult
      */
     public ManageHubStorageSummaryResult result(JcwSpaceSummaryVo result) {
         this.result = result;

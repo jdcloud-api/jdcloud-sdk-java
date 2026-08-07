@@ -398,7 +398,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 条件类型
      *
-     * @param conditionType
+     * @param conditionType 条件类型
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO conditionType(String conditionType) {
         this.conditionType = conditionType;
@@ -409,7 +410,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 次要类型
      *
-     * @param secondaryType
+     * @param secondaryType 次要类型
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO secondaryType(String secondaryType) {
         this.secondaryType = secondaryType;
@@ -420,7 +422,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 服务器域名
      *
-     * @param serverDomain
+     * @param serverDomain 服务器域名
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO serverDomain(String serverDomain) {
         this.serverDomain = serverDomain;
@@ -431,7 +434,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 服务器端口
      *
-     * @param serverPort
+     * @param serverPort 服务器端口
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO serverPort(String serverPort) {
         this.serverPort = serverPort;
@@ -442,7 +446,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 用户名
      *
-     * @param username
+     * @param username 用户名
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO username(String username) {
         this.username = username;
@@ -453,7 +458,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 用户密码
      *
-     * @param usernamePwd
+     * @param usernamePwd 用户密码
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO usernamePwd(String usernamePwd) {
         this.usernamePwd = usernamePwd;
@@ -464,7 +470,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 协议
      *
-     * @param protocol
+     * @param protocol 协议
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO protocol(String protocol) {
         this.protocol = protocol;
@@ -475,7 +482,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 数据库名称
      *
-     * @param databaseName
+     * @param databaseName 数据库名称
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -486,7 +494,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 数据源
      *
-     * @param dataSource
+     * @param dataSource 数据源
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO dataSource(String dataSource) {
         this.dataSource = dataSource;
@@ -497,7 +506,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 对象信息
      *
-     * @param object
+     * @param object 对象信息
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO object(String object) {
         this.object = object;
@@ -508,7 +518,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 条件配置
      *
-     * @param conditionConfig
+     * @param conditionConfig 条件配置
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO conditionConfig(String conditionConfig) {
         this.conditionConfig = conditionConfig;
@@ -519,7 +530,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 触发时间
      *
-     * @param triggerTime
+     * @param triggerTime 触发时间
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO triggerTime(String triggerTime) {
         this.triggerTime = triggerTime;
@@ -530,7 +542,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 触发间隔
      *
-     * @param triggerInterval
+     * @param triggerInterval 触发间隔
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO triggerInterval(Integer triggerInterval) {
         this.triggerInterval = triggerInterval;
@@ -541,7 +554,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 开始时间
      *
-     * @param beginTime
+     * @param beginTime 开始时间
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO beginTime(String beginTime) {
         this.beginTime = beginTime;
@@ -552,7 +566,8 @@ public class GpdjmcTriggerConfigDTO  implements java.io.Serializable {
     /**
      * set 结束时间
      *
-     * @param endTime
+     * @param endTime 结束时间
+     * @return GpdjmcTriggerConfigDTO
      */
     public GpdjmcTriggerConfigDTO endTime(String endTime) {
         this.endTime = endTime;

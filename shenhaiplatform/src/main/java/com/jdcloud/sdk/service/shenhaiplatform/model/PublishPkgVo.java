@@ -254,7 +254,8 @@ public class PublishPkgVo  implements java.io.Serializable {
     /**
      * set ID
      *
-     * @param pkgId
+     * @param pkgId ID
+     * @return PublishPkgVo
      */
     public PublishPkgVo pkgId(Long pkgId) {
         this.pkgId = pkgId;
@@ -265,7 +266,8 @@ public class PublishPkgVo  implements java.io.Serializable {
     /**
      * set 发布包名称
      *
-     * @param pkgName
+     * @param pkgName 发布包名称
+     * @return PublishPkgVo
      */
     public PublishPkgVo pkgName(String pkgName) {
         this.pkgName = pkgName;
@@ -276,7 +278,8 @@ public class PublishPkgVo  implements java.io.Serializable {
     /**
      * set 发布包状态
      *
-     * @param pkgStatusDesc
+     * @param pkgStatusDesc 发布包状态
+     * @return PublishPkgVo
      */
     public PublishPkgVo pkgStatusDesc(String pkgStatusDesc) {
         this.pkgStatusDesc = pkgStatusDesc;
@@ -287,7 +290,8 @@ public class PublishPkgVo  implements java.io.Serializable {
     /**
      * set 打包人
      *
-     * @param pkgCreator
+     * @param pkgCreator 打包人
+     * @return PublishPkgVo
      */
     public PublishPkgVo pkgCreator(String pkgCreator) {
         this.pkgCreator = pkgCreator;
@@ -298,7 +302,8 @@ public class PublishPkgVo  implements java.io.Serializable {
     /**
      * set 打包人Pin
      *
-     * @param pkgCreatorPin
+     * @param pkgCreatorPin 打包人Pin
+     * @return PublishPkgVo
      */
     public PublishPkgVo pkgCreatorPin(String pkgCreatorPin) {
         this.pkgCreatorPin = pkgCreatorPin;
@@ -309,7 +314,8 @@ public class PublishPkgVo  implements java.io.Serializable {
     /**
      * set 发布人
      *
-     * @param pkgPublisher
+     * @param pkgPublisher 发布人
+     * @return PublishPkgVo
      */
     public PublishPkgVo pkgPublisher(String pkgPublisher) {
         this.pkgPublisher = pkgPublisher;
@@ -320,7 +326,8 @@ public class PublishPkgVo  implements java.io.Serializable {
     /**
      * set 发布人Pin
      *
-     * @param pkgPublisherPin
+     * @param pkgPublisherPin 发布人Pin
+     * @return PublishPkgVo
      */
     public PublishPkgVo pkgPublisherPin(String pkgPublisherPin) {
         this.pkgPublisherPin = pkgPublisherPin;
@@ -331,7 +338,8 @@ public class PublishPkgVo  implements java.io.Serializable {
     /**
      * set 打包时间
      *
-     * @param pkgCreateTimestamp
+     * @param pkgCreateTimestamp 打包时间
+     * @return PublishPkgVo
      */
     public PublishPkgVo pkgCreateTimestamp(Long pkgCreateTimestamp) {
         this.pkgCreateTimestamp = pkgCreateTimestamp;
@@ -342,7 +350,8 @@ public class PublishPkgVo  implements java.io.Serializable {
     /**
      * set 发布时间
      *
-     * @param pkgPublishTimestamp
+     * @param pkgPublishTimestamp 发布时间
+     * @return PublishPkgVo
      */
     public PublishPkgVo pkgPublishTimestamp(Long pkgPublishTimestamp) {
         this.pkgPublishTimestamp = pkgPublishTimestamp;

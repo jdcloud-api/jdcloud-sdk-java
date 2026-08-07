@@ -206,7 +206,8 @@ public class GpjsSchedJobRunVo  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpjsSchedJobRunVo
      */
     public GpjsSchedJobRunVo jobName(String jobName) {
         this.jobName = jobName;
@@ -217,7 +218,8 @@ public class GpjsSchedJobRunVo  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GpjsSchedJobRunVo
      */
     public GpjsSchedJobRunVo txDate(String txDate) {
         this.txDate = txDate;
@@ -228,7 +230,8 @@ public class GpjsSchedJobRunVo  implements java.io.Serializable {
     /**
      * set sessionId
      *
-     * @param sessionId
+     * @param sessionId sessionId
+     * @return GpjsSchedJobRunVo
      */
     public GpjsSchedJobRunVo sessionId(Integer sessionId) {
         this.sessionId = sessionId;
@@ -239,7 +242,8 @@ public class GpjsSchedJobRunVo  implements java.io.Serializable {
     /**
      * set 是否清理之前的实例
      *
-     * @param isCleanBeforeInst
+     * @param isCleanBeforeInst 是否清理之前的实例
+     * @return GpjsSchedJobRunVo
      */
     public GpjsSchedJobRunVo isCleanBeforeInst(String isCleanBeforeInst) {
         this.isCleanBeforeInst = isCleanBeforeInst;
@@ -250,7 +254,8 @@ public class GpjsSchedJobRunVo  implements java.io.Serializable {
     /**
      * set 调用系统
      *
-     * @param system
+     * @param system 调用系统
+     * @return GpjsSchedJobRunVo
      */
     public GpjsSchedJobRunVo system(String system) {
         this.system = system;
@@ -261,7 +266,8 @@ public class GpjsSchedJobRunVo  implements java.io.Serializable {
     /**
      * set 是否完成
      *
-     * @param isComplement
+     * @param isComplement 是否完成
+     * @return GpjsSchedJobRunVo
      */
     public GpjsSchedJobRunVo isComplement(String isComplement) {
         this.isComplement = isComplement;
@@ -272,7 +278,8 @@ public class GpjsSchedJobRunVo  implements java.io.Serializable {
     /**
      * set 请求序列号
      *
-     * @param _REQ_SEQ_NO_
+     * @param _REQ_SEQ_NO_ 请求序列号
+     * @return GpjsSchedJobRunVo
      */
     public GpjsSchedJobRunVo _REQ_SEQ_NO_(String _REQ_SEQ_NO_) {
         this._REQ_SEQ_NO_ = _REQ_SEQ_NO_;

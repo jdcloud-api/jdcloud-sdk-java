@@ -138,7 +138,8 @@ public class GravityParticleDubboJobManagerGetEngineTemplateResult extends Jdclo
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GravityParticleDubboJobManagerGetEngineTemplateResult
      */
     public GravityParticleDubboJobManagerGetEngineTemplateResult success(Integer success) {
         this.success = success;
@@ -149,7 +150,8 @@ public class GravityParticleDubboJobManagerGetEngineTemplateResult extends Jdclo
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GravityParticleDubboJobManagerGetEngineTemplateResult
      */
     public GravityParticleDubboJobManagerGetEngineTemplateResult code(String code) {
         this.code = code;
@@ -160,7 +162,8 @@ public class GravityParticleDubboJobManagerGetEngineTemplateResult extends Jdclo
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GravityParticleDubboJobManagerGetEngineTemplateResult
      */
     public GravityParticleDubboJobManagerGetEngineTemplateResult msg(String msg) {
         this.msg = msg;
@@ -171,7 +174,8 @@ public class GravityParticleDubboJobManagerGetEngineTemplateResult extends Jdclo
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return GravityParticleDubboJobManagerGetEngineTemplateResult
     */
     public GravityParticleDubboJobManagerGetEngineTemplateResult result(List<GpdjmcEngineTemplateDTO> result) {
         this.result = result;

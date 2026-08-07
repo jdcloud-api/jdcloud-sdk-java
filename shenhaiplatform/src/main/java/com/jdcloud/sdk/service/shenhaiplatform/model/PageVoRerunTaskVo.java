@@ -136,7 +136,8 @@ public class PageVoRerunTaskVo  implements java.io.Serializable {
     /**
      * set 总条数
      *
-     * @param total
+     * @param total 总条数
+     * @return PageVoRerunTaskVo
      */
     public PageVoRerunTaskVo total(Long total) {
         this.total = total;
@@ -147,7 +148,8 @@ public class PageVoRerunTaskVo  implements java.io.Serializable {
     /**
      * set 每页条数
      *
-     * @param pageSize
+     * @param pageSize 每页条数
+     * @return PageVoRerunTaskVo
      */
     public PageVoRerunTaskVo pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -158,7 +160,8 @@ public class PageVoRerunTaskVo  implements java.io.Serializable {
     /**
      * set 当前页
      *
-     * @param pageNum
+     * @param pageNum 当前页
+     * @return PageVoRerunTaskVo
      */
     public PageVoRerunTaskVo pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -169,7 +172,8 @@ public class PageVoRerunTaskVo  implements java.io.Serializable {
     /**
     * set 数据列表
     *
-    * @param list
+    * @param list 数据列表
+    * @return PageVoRerunTaskVo
     */
     public PageVoRerunTaskVo list(List<RerunTaskVo> list) {
         this.list = list;

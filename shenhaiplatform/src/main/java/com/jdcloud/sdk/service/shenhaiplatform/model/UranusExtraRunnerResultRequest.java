@@ -144,7 +144,8 @@ public class UranusExtraRunnerResultRequest extends JdcloudRequest implements ja
     /**
      * set 执行id
      *
-     * @param runId
+     * @param runId 执行id
+     * @return UranusExtraRunnerResultRequest
      */
     public UranusExtraRunnerResultRequest runId(Integer runId) {
         this.runId = runId;
@@ -155,7 +156,8 @@ public class UranusExtraRunnerResultRequest extends JdcloudRequest implements ja
     /**
      * set 结果文件名称
      *
-     * @param fileName
+     * @param fileName 结果文件名称
+     * @return UranusExtraRunnerResultRequest
      */
     public UranusExtraRunnerResultRequest fileName(String fileName) {
         this.fileName = fileName;
@@ -166,7 +168,8 @@ public class UranusExtraRunnerResultRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusExtraRunnerResultRequest
      */
     public UranusExtraRunnerResultRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -177,7 +180,8 @@ public class UranusExtraRunnerResultRequest extends JdcloudRequest implements ja
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusExtraRunnerResultRequest
      */
     public UranusExtraRunnerResultRequest appName(String appName) {
         this.appName = appName;

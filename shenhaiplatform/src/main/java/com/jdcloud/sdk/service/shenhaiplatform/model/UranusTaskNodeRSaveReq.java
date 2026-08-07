@@ -119,7 +119,8 @@ public class UranusTaskNodeRSaveReq  implements java.io.Serializable {
     /**
      * set workFlowInfo
      *
-     * @param workFlowInfo
+     * @param workFlowInfo 
+     * @return UranusTaskNodeRSaveReq
      */
     public UranusTaskNodeRSaveReq workFlowInfo(UranusTaskFlowUpdateReq workFlowInfo) {
         this.workFlowInfo = workFlowInfo;
@@ -130,7 +131,8 @@ public class UranusTaskNodeRSaveReq  implements java.io.Serializable {
     /**
     * set 节点信息
     *
-    * @param nodes
+    * @param nodes 节点信息
+    * @return UranusTaskNodeRSaveReq
     */
     public UranusTaskNodeRSaveReq nodes(List<UranusTaskNodeDetailRes> nodes) {
         this.nodes = nodes;
@@ -141,7 +143,8 @@ public class UranusTaskNodeRSaveReq  implements java.io.Serializable {
     /**
      * set 节点之间关系
      *
-     * @param graphStr
+     * @param graphStr 节点之间关系
+     * @return UranusTaskNodeRSaveReq
      */
     public UranusTaskNodeRSaveReq graphStr(String graphStr) {
         this.graphStr = graphStr;

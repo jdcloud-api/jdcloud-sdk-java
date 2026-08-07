@@ -143,7 +143,8 @@ public class WorkspaceUpdateUserRoleRequest extends JdcloudRequest implements ja
     /**
      * set workspaceId
      *
-     * @param workspaceId
+     * @param workspaceId 
+     * @return WorkspaceUpdateUserRoleRequest
      */
     public WorkspaceUpdateUserRoleRequest workspaceId(Long workspaceId) {
         this.workspaceId = workspaceId;
@@ -154,7 +155,8 @@ public class WorkspaceUpdateUserRoleRequest extends JdcloudRequest implements ja
     /**
     * set updateRoleReq
     *
-    * @param updateRoleReq
+    * @param updateRoleReq 
+    * @return WorkspaceUpdateUserRoleRequest
     */
     public WorkspaceUpdateUserRoleRequest updateRoleReq(List<UserRoleInfo> updateRoleReq) {
         this.updateRoleReq = updateRoleReq;
@@ -165,7 +167,8 @@ public class WorkspaceUpdateUserRoleRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceUpdateUserRoleRequest
      */
     public WorkspaceUpdateUserRoleRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -176,7 +179,8 @@ public class WorkspaceUpdateUserRoleRequest extends JdcloudRequest implements ja
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceUpdateUserRoleRequest
      */
     public WorkspaceUpdateUserRoleRequest appName(String appName) {
         this.appName = appName;

@@ -142,7 +142,8 @@ public class PreviewPackageRequest extends JdcloudRequest implements java.io.Ser
     /**
     * set ID列表
     *
-    * @param objIds
+    * @param objIds ID列表
+    * @return PreviewPackageRequest
     */
     public PreviewPackageRequest objIds(List<Long> objIds) {
         this.objIds = objIds;
@@ -153,7 +154,8 @@ public class PreviewPackageRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 当前工作空间编码
      *
-     * @param workspaceCode
+     * @param workspaceCode 当前工作空间编码
+     * @return PreviewPackageRequest
      */
     public PreviewPackageRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -164,7 +166,8 @@ public class PreviewPackageRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return PreviewPackageRequest
      */
     public PreviewPackageRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -175,7 +178,8 @@ public class PreviewPackageRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return PreviewPackageRequest
      */
     public PreviewPackageRequest appName(String appName) {
         this.appName = appName;

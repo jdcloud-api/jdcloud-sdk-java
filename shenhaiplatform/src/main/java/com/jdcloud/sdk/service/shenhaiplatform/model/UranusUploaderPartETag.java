@@ -86,7 +86,8 @@ public class UranusUploaderPartETag  implements java.io.Serializable {
     /**
      * set partNumber
      *
-     * @param partNumber
+     * @param partNumber partNumber
+     * @return UranusUploaderPartETag
      */
     public UranusUploaderPartETag partNumber(Integer partNumber) {
         this.partNumber = partNumber;
@@ -97,7 +98,8 @@ public class UranusUploaderPartETag  implements java.io.Serializable {
     /**
      * set eTag
      *
-     * @param eTag
+     * @param eTag eTag
+     * @return UranusUploaderPartETag
      */
     public UranusUploaderPartETag eTag(String eTag) {
         this.eTag = eTag;

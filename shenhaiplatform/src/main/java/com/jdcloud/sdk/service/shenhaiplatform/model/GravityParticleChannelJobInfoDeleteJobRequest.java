@@ -212,7 +212,8 @@ public class GravityParticleChannelJobInfoDeleteJobRequest extends JdcloudReques
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleChannelJobInfoDeleteJobRequest
      */
     public GravityParticleChannelJobInfoDeleteJobRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -223,7 +224,8 @@ public class GravityParticleChannelJobInfoDeleteJobRequest extends JdcloudReques
     /**
      * set 是否删除子作业 1删除   0不删
      *
-     * @param isDelSonJob
+     * @param isDelSonJob 是否删除子作业 1删除   0不删
+     * @return GravityParticleChannelJobInfoDeleteJobRequest
      */
     public GravityParticleChannelJobInfoDeleteJobRequest isDelSonJob(String isDelSonJob) {
         this.isDelSonJob = isDelSonJob;
@@ -234,7 +236,8 @@ public class GravityParticleChannelJobInfoDeleteJobRequest extends JdcloudReques
     /**
      * set 是否删除质量作业  1删除   0不删
      *
-     * @param isDelQualityJob
+     * @param isDelQualityJob 是否删除质量作业  1删除   0不删
+     * @return GravityParticleChannelJobInfoDeleteJobRequest
      */
     public GravityParticleChannelJobInfoDeleteJobRequest isDelQualityJob(String isDelQualityJob) {
         this.isDelQualityJob = isDelQualityJob;
@@ -245,7 +248,8 @@ public class GravityParticleChannelJobInfoDeleteJobRequest extends JdcloudReques
     /**
      * set 用户角色列表
      *
-     * @param user_roles
+     * @param user_roles 用户角色列表
+     * @return GravityParticleChannelJobInfoDeleteJobRequest
      */
     public GravityParticleChannelJobInfoDeleteJobRequest user_roles(String user_roles) {
         this.user_roles = user_roles;
@@ -256,7 +260,8 @@ public class GravityParticleChannelJobInfoDeleteJobRequest extends JdcloudReques
     /**
      * set 作业负责人
      *
-     * @param username
+     * @param username 作业负责人
+     * @return GravityParticleChannelJobInfoDeleteJobRequest
      */
     public GravityParticleChannelJobInfoDeleteJobRequest username(String username) {
         this.username = username;
@@ -267,7 +272,8 @@ public class GravityParticleChannelJobInfoDeleteJobRequest extends JdcloudReques
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleChannelJobInfoDeleteJobRequest
      */
     public GravityParticleChannelJobInfoDeleteJobRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -278,7 +284,8 @@ public class GravityParticleChannelJobInfoDeleteJobRequest extends JdcloudReques
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleChannelJobInfoDeleteJobRequest
      */
     public GravityParticleChannelJobInfoDeleteJobRequest appName(String appName) {
         this.appName = appName;

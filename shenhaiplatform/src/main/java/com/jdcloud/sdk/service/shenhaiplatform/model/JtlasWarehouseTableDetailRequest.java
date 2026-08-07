@@ -144,7 +144,8 @@ public class JtlasWarehouseTableDetailRequest extends JdcloudRequest implements 
     /**
      * set 项目空间
      *
-     * @param database
+     * @param database 项目空间
+     * @return JtlasWarehouseTableDetailRequest
      */
     public JtlasWarehouseTableDetailRequest database(String database) {
         this.database = database;
@@ -155,7 +156,8 @@ public class JtlasWarehouseTableDetailRequest extends JdcloudRequest implements 
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return JtlasWarehouseTableDetailRequest
      */
     public JtlasWarehouseTableDetailRequest tableName(String tableName) {
         this.tableName = tableName;
@@ -166,7 +168,8 @@ public class JtlasWarehouseTableDetailRequest extends JdcloudRequest implements 
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasWarehouseTableDetailRequest
      */
     public JtlasWarehouseTableDetailRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -177,7 +180,8 @@ public class JtlasWarehouseTableDetailRequest extends JdcloudRequest implements 
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasWarehouseTableDetailRequest
      */
     public JtlasWarehouseTableDetailRequest appName(String appName) {
         this.appName = appName;

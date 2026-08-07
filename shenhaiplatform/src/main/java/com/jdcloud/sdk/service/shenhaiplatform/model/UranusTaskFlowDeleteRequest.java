@@ -120,7 +120,8 @@ public class UranusTaskFlowDeleteRequest extends JdcloudRequest implements java.
     /**
     * set 工作流code list
     *
-    * @param flowCodes
+    * @param flowCodes 工作流code list
+    * @return UranusTaskFlowDeleteRequest
     */
     public UranusTaskFlowDeleteRequest flowCodes(List<String> flowCodes) {
         this.flowCodes = flowCodes;
@@ -131,7 +132,8 @@ public class UranusTaskFlowDeleteRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskFlowDeleteRequest
      */
     public UranusTaskFlowDeleteRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -142,7 +144,8 @@ public class UranusTaskFlowDeleteRequest extends JdcloudRequest implements java.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskFlowDeleteRequest
      */
     public UranusTaskFlowDeleteRequest appName(String appName) {
         this.appName = appName;

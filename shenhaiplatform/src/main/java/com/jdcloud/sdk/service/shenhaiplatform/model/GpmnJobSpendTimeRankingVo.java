@@ -206,7 +206,8 @@ public class GpmnJobSpendTimeRankingVo  implements java.io.Serializable {
     /**
      * set 排名
      *
-     * @param order
+     * @param order 排名
+     * @return GpmnJobSpendTimeRankingVo
      */
     public GpmnJobSpendTimeRankingVo order(Integer order) {
         this.order = order;
@@ -217,7 +218,8 @@ public class GpmnJobSpendTimeRankingVo  implements java.io.Serializable {
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GpmnJobSpendTimeRankingVo
      */
     public GpmnJobSpendTimeRankingVo jobName(String jobName) {
         this.jobName = jobName;
@@ -228,7 +230,8 @@ public class GpmnJobSpendTimeRankingVo  implements java.io.Serializable {
     /**
      * set 作业类型描述
      *
-     * @param jobType
+     * @param jobType 作业类型描述
+     * @return GpmnJobSpendTimeRankingVo
      */
     public GpmnJobSpendTimeRankingVo jobType(String jobType) {
         this.jobType = jobType;
@@ -239,7 +242,8 @@ public class GpmnJobSpendTimeRankingVo  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return GpmnJobSpendTimeRankingVo
      */
     public GpmnJobSpendTimeRankingVo manager(String manager) {
         this.manager = manager;
@@ -250,7 +254,8 @@ public class GpmnJobSpendTimeRankingVo  implements java.io.Serializable {
     /**
      * set 平均运行时长，形如hh:mm:ss
      *
-     * @param spendTimeAvg
+     * @param spendTimeAvg 平均运行时长，形如hh:mm:ss
+     * @return GpmnJobSpendTimeRankingVo
      */
     public GpmnJobSpendTimeRankingVo spendTimeAvg(String spendTimeAvg) {
         this.spendTimeAvg = spendTimeAvg;
@@ -261,7 +266,8 @@ public class GpmnJobSpendTimeRankingVo  implements java.io.Serializable {
     /**
      * set 运行最大时长，形如 hh:mm:ss
      *
-     * @param spendTimeLongest
+     * @param spendTimeLongest 运行最大时长，形如 hh:mm:ss
+     * @return GpmnJobSpendTimeRankingVo
      */
     public GpmnJobSpendTimeRankingVo spendTimeLongest(String spendTimeLongest) {
         this.spendTimeLongest = spendTimeLongest;
@@ -272,7 +278,8 @@ public class GpmnJobSpendTimeRankingVo  implements java.io.Serializable {
     /**
      * set 客户作业名
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名
+     * @return GpmnJobSpendTimeRankingVo
      */
     public GpmnJobSpendTimeRankingVo cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;

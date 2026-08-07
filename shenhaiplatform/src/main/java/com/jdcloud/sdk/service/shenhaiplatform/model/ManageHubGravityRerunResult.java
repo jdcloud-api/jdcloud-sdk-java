@@ -87,7 +87,8 @@ public class ManageHubGravityRerunResult extends JdcloudResult implements java.i
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return ManageHubGravityRerunResult
      */
     public ManageHubGravityRerunResult code(String code) {
         this.code = code;
@@ -98,7 +99,8 @@ public class ManageHubGravityRerunResult extends JdcloudResult implements java.i
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return ManageHubGravityRerunResult
      */
     public ManageHubGravityRerunResult message(String message) {
         this.message = message;

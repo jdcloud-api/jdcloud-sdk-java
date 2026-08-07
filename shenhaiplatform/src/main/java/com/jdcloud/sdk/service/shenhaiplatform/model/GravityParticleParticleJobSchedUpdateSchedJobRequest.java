@@ -1268,7 +1268,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -1279,7 +1280,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 客户作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名称
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -1290,7 +1292,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -1301,7 +1304,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -1312,7 +1316,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 计算资源组code
      *
-     * @param resourceCode
+     * @param resourceCode 计算资源组code
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -1323,7 +1328,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 作业描述
      *
-     * @param jobDesc
+     * @param jobDesc 作业描述
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -1334,7 +1340,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 最后一次运行状态，Pending、Ready、Running、Done、Failed、Clean
      *
-     * @param lastStatus
+     * @param lastStatus 最后一次运行状态，Pending、Ready、Running、Done、Failed、Clean
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest lastStatus(String lastStatus) {
         this.lastStatus = lastStatus;
@@ -1345,7 +1352,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 最后一次执行日期
      *
-     * @param lastTxDate
+     * @param lastTxDate 最后一次执行日期
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest lastTxDate(String lastTxDate) {
         this.lastTxDate = lastTxDate;
@@ -1356,7 +1364,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 最后一次运行开始时间
      *
-     * @param lastStartTime
+     * @param lastStartTime 最后一次运行开始时间
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest lastStartTime(String lastStartTime) {
         this.lastStartTime = lastStartTime;
@@ -1367,7 +1376,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 最后一次运行结束时间
      *
-     * @param lastEndTime
+     * @param lastEndTime 最后一次运行结束时间
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest lastEndTime(String lastEndTime) {
         this.lastEndTime = lastEndTime;
@@ -1378,7 +1388,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 最后一次运行服务器
      *
-     * @param lastServer
+     * @param lastServer 最后一次运行服务器
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest lastServer(String lastServer) {
         this.lastServer = lastServer;
@@ -1389,7 +1400,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set Session ID
      *
-     * @param lastSessionid
+     * @param lastSessionid Session ID
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest lastSessionid(Integer lastSessionid) {
         this.lastSessionid = lastSessionid;
@@ -1400,7 +1412,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 最后返回编码
      *
-     * @param lastReturnCode
+     * @param lastReturnCode 最后返回编码
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest lastReturnCode(Integer lastReturnCode) {
         this.lastReturnCode = lastReturnCode;
@@ -1411,7 +1424,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 当前作业状态信息
      *
-     * @param currentStatusMsg
+     * @param currentStatusMsg 当前作业状态信息
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest currentStatusMsg(String currentStatusMsg) {
         this.currentStatusMsg = currentStatusMsg;
@@ -1422,7 +1436,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
      *
-     * @param triggerType
+     * @param triggerType 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -1433,7 +1448,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
      *
-     * @param cycle
+     * @param cycle 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest cycle(String cycle) {
         this.cycle = cycle;
@@ -1444,7 +1460,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 周期具体日期
      *
-     * @param sequence
+     * @param sequence 周期具体日期
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest sequence(String sequence) {
         this.sequence = sequence;
@@ -1455,7 +1472,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set T+N，偏移量
      *
-     * @param txDateOffset
+     * @param txDateOffset T+N，偏移量
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest txDateOffset(Integer txDateOffset) {
         this.txDateOffset = txDateOffset;
@@ -1466,7 +1484,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 作业优先级，数字越小优先级越高
      *
-     * @param priority
+     * @param priority 作业优先级，数字越小优先级越高
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest priority(Integer priority) {
         this.priority = priority;
@@ -1477,7 +1496,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 作业超时时间，单位分钟
      *
-     * @param timeout
+     * @param timeout 作业超时时间，单位分钟
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest timeout(Integer timeout) {
         this.timeout = timeout;
@@ -1488,7 +1508,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 窗口期开始时间
      *
-     * @param windowStartTime
+     * @param windowStartTime 窗口期开始时间
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest windowStartTime(String windowStartTime) {
         this.windowStartTime = windowStartTime;
@@ -1499,7 +1520,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 窗口期结束时间
      *
-     * @param windowEndTime
+     * @param windowEndTime 窗口期结束时间
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest windowEndTime(String windowEndTime) {
         this.windowEndTime = windowEndTime;
@@ -1510,7 +1532,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 失败后次日是否自动运行，1是、0否
      *
-     * @param morrowAutoExec
+     * @param morrowAutoExec 失败后次日是否自动运行，1是、0否
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest morrowAutoExec(String morrowAutoExec) {
         this.morrowAutoExec = morrowAutoExec;
@@ -1521,7 +1544,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 抽空之后的处理 0 无操作 1 作业失败 2发出警告
      *
-     * @param dataZeroKillEnable
+     * @param dataZeroKillEnable 抽空之后的处理 0 无操作 1 作业失败 2发出警告
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest dataZeroKillEnable(Integer dataZeroKillEnable) {
         this.dataZeroKillEnable = dataZeroKillEnable;
@@ -1532,7 +1556,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 重试次数
      *
-     * @param retryCount
+     * @param retryCount 重试次数
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest retryCount(Integer retryCount) {
         this.retryCount = retryCount;
@@ -1543,7 +1568,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 间隔/秒
      *
-     * @param retryInterval
+     * @param retryInterval 间隔/秒
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest retryInterval(Integer retryInterval) {
         this.retryInterval = retryInterval;
@@ -1554,7 +1580,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 当期已经跑成功过，是否可以再跑，1启用、0关闭
      *
-     * @param flagAgain
+     * @param flagAgain 当期已经跑成功过，是否可以再跑，1启用、0关闭
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest flagAgain(String flagAgain) {
         this.flagAgain = flagAgain;
@@ -1565,7 +1592,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 是否可以跨周期跑，1启用、0关闭
      *
-     * @param flagAcross
+     * @param flagAcross 是否可以跨周期跑，1启用、0关闭
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest flagAcross(String flagAcross) {
         this.flagAcross = flagAcross;
@@ -1576,7 +1604,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 是否可以自身并行，1启用、0关闭
      *
-     * @param flagParallel
+     * @param flagParallel 是否可以自身并行，1启用、0关闭
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest flagParallel(String flagParallel) {
         this.flagParallel = flagParallel;
@@ -1587,7 +1616,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 是否级联触发，父任务重跑后是否被强制触发重跑，1是、0否
      *
-     * @param flagCascadedTrigger
+     * @param flagCascadedTrigger 是否级联触发，父任务重跑后是否被强制触发重跑，1是、0否
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest flagCascadedTrigger(String flagCascadedTrigger) {
         this.flagCascadedTrigger = flagCascadedTrigger;
@@ -1598,7 +1628,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 需要的运行环境
      *
-     * @param requiredRunEnv
+     * @param requiredRunEnv 需要的运行环境
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest requiredRunEnv(String requiredRunEnv) {
         this.requiredRunEnv = requiredRunEnv;
@@ -1609,7 +1640,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 运行脚本
      *
-     * @param runScript
+     * @param runScript 运行脚本
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest runScript(String runScript) {
         this.runScript = runScript;
@@ -1620,7 +1652,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 是否启用，0未上线、1已上线、2已下线
      *
-     * @param enable
+     * @param enable 是否启用，0未上线、1已上线、2已下线
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest enable(String enable) {
         this.enable = enable;
@@ -1631,7 +1664,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 负责人，不超过10个
      *
-     * @param manager
+     * @param manager 负责人，不超过10个
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest manager(String manager) {
         this.manager = manager;
@@ -1642,7 +1676,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 共享人，不超过10个
      *
-     * @param shareUser
+     * @param shareUser 共享人，不超过10个
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest shareUser(String shareUser) {
         this.shareUser = shareUser;
@@ -1653,7 +1688,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 失效时间
      *
-     * @param expireTime
+     * @param expireTime 失效时间
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest expireTime(String expireTime) {
         this.expireTime = expireTime;
@@ -1664,7 +1700,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set zip命令行
      *
-     * @param commands
+     * @param commands zip命令行
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest commands(String commands) {
         this.commands = commands;
@@ -1675,7 +1712,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 创建人
      *
-     * @param createUser
+     * @param createUser 创建人
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest createUser(String createUser) {
         this.createUser = createUser;
@@ -1686,7 +1724,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest createTime(String createTime) {
         this.createTime = createTime;
@@ -1697,7 +1736,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -1708,7 +1748,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 实时结点名称
      *
-     * @param nodeName
+     * @param nodeName 实时结点名称
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest nodeName(String nodeName) {
         this.nodeName = nodeName;
@@ -1719,7 +1760,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 实时主题
      *
-     * @param topic
+     * @param topic 实时主题
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest topic(String topic) {
         this.topic = topic;
@@ -1730,7 +1772,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 作业执行方式  0离线 1双写 2实时
      *
-     * @param jobRunWay
+     * @param jobRunWay 作业执行方式  0离线 1双写 2实时
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest jobRunWay(String jobRunWay) {
         this.jobRunWay = jobRunWay;
@@ -1741,7 +1784,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 所属系统
      *
-     * @param belongSys
+     * @param belongSys 所属系统
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest belongSys(String belongSys) {
         this.belongSys = belongSys;
@@ -1752,7 +1796,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 主从同步延迟处理方式。0:警告无处理，1:作业延迟启动
      *
-     * @param msDelayDealWay
+     * @param msDelayDealWay 主从同步延迟处理方式。0:警告无处理，1:作业延迟启动
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest msDelayDealWay(String msDelayDealWay) {
         this.msDelayDealWay = msDelayDealWay;
@@ -1763,7 +1808,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 周期开始时间(适用小时分钟)
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 周期开始时间(适用小时分钟)
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -1774,7 +1820,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 周期结束时间(适用小时分钟)
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 周期结束时间(适用小时分钟)
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -1785,7 +1832,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 周期间隔(适用小时分钟，当周期为小时，含义为间隔小时数，当周期为分钟，含义为间隔分钟数)
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 周期间隔(适用小时分钟，当周期为小时，含义为间隔小时数，当周期为分钟，含义为间隔分钟数)
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest sequenceInterval(Integer sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -1796,7 +1844,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 作业运行参数
      *
-     * @param runParams
+     * @param runParams 作业运行参数
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest runParams(String runParams) {
         this.runParams = runParams;
@@ -1807,7 +1856,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -1818,7 +1868,8 @@ public class GravityParticleParticleJobSchedUpdateSchedJobRequest extends Jdclou
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleParticleJobSchedUpdateSchedJobRequest
      */
     public GravityParticleParticleJobSchedUpdateSchedJobRequest appName(String appName) {
         this.appName = appName;

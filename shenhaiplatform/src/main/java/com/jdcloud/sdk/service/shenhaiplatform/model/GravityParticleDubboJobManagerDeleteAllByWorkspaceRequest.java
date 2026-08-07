@@ -140,7 +140,8 @@ public class GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest extends J
     /**
      * set 表名称
      *
-     * @param companyCode
+     * @param companyCode 表名称
+     * @return GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest
      */
     public GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -151,7 +152,8 @@ public class GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest extends J
     /**
      * set 工作空间名称
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间名称
+     * @return GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest
      */
     public GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -162,7 +164,8 @@ public class GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest extends J
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest
      */
     public GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -173,7 +176,8 @@ public class GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest extends J
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest
      */
     public GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest appName(String appName) {
         this.appName = appName;

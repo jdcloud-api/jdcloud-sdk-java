@@ -112,7 +112,8 @@ public class WorkspaceGetResourcesResult extends JdcloudResult implements java.i
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return WorkspaceGetResourcesResult
      */
     public WorkspaceGetResourcesResult code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class WorkspaceGetResourcesResult extends JdcloudResult implements java.i
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return WorkspaceGetResourcesResult
      */
     public WorkspaceGetResourcesResult message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class WorkspaceGetResourcesResult extends JdcloudResult implements java.i
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return WorkspaceGetResourcesResult
      */
     public WorkspaceGetResourcesResult result(PageInfoResourceResp result) {
         this.result = result;

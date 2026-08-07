@@ -118,7 +118,8 @@ public class CopilotChatDeleteRequest extends JdcloudRequest implements java.io.
     /**
      * set 对话id
      *
-     * @param chatId
+     * @param chatId 对话id
+     * @return CopilotChatDeleteRequest
      */
     public CopilotChatDeleteRequest chatId(String chatId) {
         this.chatId = chatId;
@@ -129,7 +130,8 @@ public class CopilotChatDeleteRequest extends JdcloudRequest implements java.io.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CopilotChatDeleteRequest
      */
     public CopilotChatDeleteRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class CopilotChatDeleteRequest extends JdcloudRequest implements java.io.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return CopilotChatDeleteRequest
      */
     public CopilotChatDeleteRequest appName(String appName) {
         this.appName = appName;

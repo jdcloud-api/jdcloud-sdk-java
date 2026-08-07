@@ -380,7 +380,8 @@ public class GravityParticleDubboJobManagerSaveJobScriptRequest extends JdcloudR
     /**
      * set 主键Id,为空时保存，不为空时更新
      *
-     * @param id
+     * @param id 主键Id,为空时保存，不为空时更新
+     * @return GravityParticleDubboJobManagerSaveJobScriptRequest
      */
     public GravityParticleDubboJobManagerSaveJobScriptRequest id(Integer id) {
         this.id = id;
@@ -391,7 +392,8 @@ public class GravityParticleDubboJobManagerSaveJobScriptRequest extends JdcloudR
     /**
      * set 脚本名称
      *
-     * @param scriptName
+     * @param scriptName 脚本名称
+     * @return GravityParticleDubboJobManagerSaveJobScriptRequest
      */
     public GravityParticleDubboJobManagerSaveJobScriptRequest scriptName(String scriptName) {
         this.scriptName = scriptName;
@@ -402,7 +404,8 @@ public class GravityParticleDubboJobManagerSaveJobScriptRequest extends JdcloudR
     /**
      * set 脚本类型
      *
-     * @param scriptType
+     * @param scriptType 脚本类型
+     * @return GravityParticleDubboJobManagerSaveJobScriptRequest
      */
     public GravityParticleDubboJobManagerSaveJobScriptRequest scriptType(String scriptType) {
         this.scriptType = scriptType;
@@ -413,7 +416,8 @@ public class GravityParticleDubboJobManagerSaveJobScriptRequest extends JdcloudR
     /**
      * set 脚本描述
      *
-     * @param scriptDesc
+     * @param scriptDesc 脚本描述
+     * @return GravityParticleDubboJobManagerSaveJobScriptRequest
      */
     public GravityParticleDubboJobManagerSaveJobScriptRequest scriptDesc(String scriptDesc) {
         this.scriptDesc = scriptDesc;
@@ -424,7 +428,8 @@ public class GravityParticleDubboJobManagerSaveJobScriptRequest extends JdcloudR
     /**
      * set 脚本来源， LOCAL(本地) GIT(git) SKYDRIVE(网盘)
      *
-     * @param scriptSourceType
+     * @param scriptSourceType 脚本来源， LOCAL(本地) GIT(git) SKYDRIVE(网盘)
+     * @return GravityParticleDubboJobManagerSaveJobScriptRequest
      */
     public GravityParticleDubboJobManagerSaveJobScriptRequest scriptSourceType(String scriptSourceType) {
         this.scriptSourceType = scriptSourceType;
@@ -435,7 +440,8 @@ public class GravityParticleDubboJobManagerSaveJobScriptRequest extends JdcloudR
     /**
      * set 任务id
      *
-     * @param jobId
+     * @param jobId 任务id
+     * @return GravityParticleDubboJobManagerSaveJobScriptRequest
      */
     public GravityParticleDubboJobManagerSaveJobScriptRequest jobId(Integer jobId) {
         this.jobId = jobId;
@@ -446,7 +452,8 @@ public class GravityParticleDubboJobManagerSaveJobScriptRequest extends JdcloudR
     /**
      * set 删除标识
      *
-     * @param deleteFlag
+     * @param deleteFlag 删除标识
+     * @return GravityParticleDubboJobManagerSaveJobScriptRequest
      */
     public GravityParticleDubboJobManagerSaveJobScriptRequest deleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;
@@ -457,7 +464,8 @@ public class GravityParticleDubboJobManagerSaveJobScriptRequest extends JdcloudR
     /**
      * set 创建人
      *
-     * @param creator
+     * @param creator 创建人
+     * @return GravityParticleDubboJobManagerSaveJobScriptRequest
      */
     public GravityParticleDubboJobManagerSaveJobScriptRequest creator(String creator) {
         this.creator = creator;
@@ -468,7 +476,8 @@ public class GravityParticleDubboJobManagerSaveJobScriptRequest extends JdcloudR
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return GravityParticleDubboJobManagerSaveJobScriptRequest
      */
     public GravityParticleDubboJobManagerSaveJobScriptRequest createTime(String createTime) {
         this.createTime = createTime;
@@ -479,7 +488,8 @@ public class GravityParticleDubboJobManagerSaveJobScriptRequest extends JdcloudR
     /**
      * set 修改人
      *
-     * @param updateUser
+     * @param updateUser 修改人
+     * @return GravityParticleDubboJobManagerSaveJobScriptRequest
      */
     public GravityParticleDubboJobManagerSaveJobScriptRequest updateUser(String updateUser) {
         this.updateUser = updateUser;
@@ -490,7 +500,8 @@ public class GravityParticleDubboJobManagerSaveJobScriptRequest extends JdcloudR
     /**
      * set 修改时间
      *
-     * @param updateTime
+     * @param updateTime 修改时间
+     * @return GravityParticleDubboJobManagerSaveJobScriptRequest
      */
     public GravityParticleDubboJobManagerSaveJobScriptRequest updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -501,7 +512,8 @@ public class GravityParticleDubboJobManagerSaveJobScriptRequest extends JdcloudR
     /**
      * set 脚本内容
      *
-     * @param content
+     * @param content 脚本内容
+     * @return GravityParticleDubboJobManagerSaveJobScriptRequest
      */
     public GravityParticleDubboJobManagerSaveJobScriptRequest content(String content) {
         this.content = content;
@@ -512,7 +524,8 @@ public class GravityParticleDubboJobManagerSaveJobScriptRequest extends JdcloudR
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerSaveJobScriptRequest
      */
     public GravityParticleDubboJobManagerSaveJobScriptRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -523,7 +536,8 @@ public class GravityParticleDubboJobManagerSaveJobScriptRequest extends JdcloudR
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerSaveJobScriptRequest
      */
     public GravityParticleDubboJobManagerSaveJobScriptRequest appName(String appName) {
         this.appName = appName;

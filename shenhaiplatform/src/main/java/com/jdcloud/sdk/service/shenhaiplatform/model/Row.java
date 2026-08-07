@@ -67,7 +67,8 @@ public class Row  implements java.io.Serializable {
     /**
     * set 一行数据的值
     *
-    * @param values
+    * @param values 一行数据的值
+    * @return Row
     */
     public Row values(List<String> values) {
         this.values = values;

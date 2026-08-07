@@ -111,7 +111,8 @@ public class JtlasSubscribeTableResult extends JdcloudResult implements java.io.
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasSubscribeTableResult
      */
     public JtlasSubscribeTableResult code(String code) {
         this.code = code;
@@ -122,7 +123,8 @@ public class JtlasSubscribeTableResult extends JdcloudResult implements java.io.
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasSubscribeTableResult
      */
     public JtlasSubscribeTableResult message(String message) {
         this.message = message;
@@ -133,7 +135,8 @@ public class JtlasSubscribeTableResult extends JdcloudResult implements java.io.
     /**
      * set 无返回
      *
-     * @param result
+     * @param result 无返回
+     * @return JtlasSubscribeTableResult
      */
     public JtlasSubscribeTableResult result(String result) {
         this.result = result;

@@ -196,7 +196,8 @@ public class JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesReque
     /**
      * set 数据库（工作空间编码）
      *
-     * @param database
+     * @param database 数据库（工作空间编码）
+     * @return JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesRequest
      */
     public JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesRequest database(String database) {
         this.database = database;
@@ -207,7 +208,8 @@ public class JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesReque
     /**
      * set 账户信息
      *
-     * @param principalName
+     * @param principalName 账户信息
+     * @return JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesRequest
      */
     public JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesRequest principalName(String principalName) {
         this.principalName = principalName;
@@ -218,7 +220,8 @@ public class JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesReque
     /**
      * set 模糊表名称
      *
-     * @param fuzzyTableName
+     * @param fuzzyTableName 模糊表名称
+     * @return JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesRequest
      */
     public JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesRequest fuzzyTableName(String fuzzyTableName) {
         this.fuzzyTableName = fuzzyTableName;
@@ -229,7 +232,8 @@ public class JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesReque
     /**
     * set 权限信息
     *
-    * @param privilegeTypes
+    * @param privilegeTypes 权限信息
+    * @return JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesRequest
     */
     public JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesRequest privilegeTypes(List<String> privilegeTypes) {
         this.privilegeTypes = privilegeTypes;
@@ -240,7 +244,8 @@ public class JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesReque
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesRequest
      */
     public JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -251,7 +256,8 @@ public class JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesReque
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesRequest
      */
     public JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesRequest appName(String appName) {
         this.appName = appName;

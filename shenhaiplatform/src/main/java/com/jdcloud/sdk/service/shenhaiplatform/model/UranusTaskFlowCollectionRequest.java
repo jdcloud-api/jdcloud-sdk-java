@@ -142,7 +142,8 @@ public class UranusTaskFlowCollectionRequest extends JdcloudRequest implements j
     /**
      * set 工作流Code
      *
-     * @param flowCode
+     * @param flowCode 工作流Code
+     * @return UranusTaskFlowCollectionRequest
      */
     public UranusTaskFlowCollectionRequest flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -153,7 +154,8 @@ public class UranusTaskFlowCollectionRequest extends JdcloudRequest implements j
     /**
      * set 收藏类型不能为空 0 取消收藏 1 收藏
      *
-     * @param collectionType
+     * @param collectionType 收藏类型不能为空 0 取消收藏 1 收藏
+     * @return UranusTaskFlowCollectionRequest
      */
     public UranusTaskFlowCollectionRequest collectionType(Integer collectionType) {
         this.collectionType = collectionType;
@@ -164,7 +166,8 @@ public class UranusTaskFlowCollectionRequest extends JdcloudRequest implements j
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskFlowCollectionRequest
      */
     public UranusTaskFlowCollectionRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -175,7 +178,8 @@ public class UranusTaskFlowCollectionRequest extends JdcloudRequest implements j
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskFlowCollectionRequest
      */
     public UranusTaskFlowCollectionRequest appName(String appName) {
         this.appName = appName;

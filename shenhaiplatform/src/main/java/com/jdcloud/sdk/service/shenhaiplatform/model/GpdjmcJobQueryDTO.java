@@ -134,7 +134,8 @@ public class GpdjmcJobQueryDTO  implements java.io.Serializable {
     /**
      * set 数据库名
      *
-     * @param databaseName
+     * @param databaseName 数据库名
+     * @return GpdjmcJobQueryDTO
      */
     public GpdjmcJobQueryDTO databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -145,7 +146,8 @@ public class GpdjmcJobQueryDTO  implements java.io.Serializable {
     /**
      * set 表名
      *
-     * @param tableName
+     * @param tableName 表名
+     * @return GpdjmcJobQueryDTO
      */
     public GpdjmcJobQueryDTO tableName(String tableName) {
         this.tableName = tableName;
@@ -156,7 +158,8 @@ public class GpdjmcJobQueryDTO  implements java.io.Serializable {
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return GpdjmcJobQueryDTO
      */
     public GpdjmcJobQueryDTO workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -167,7 +170,8 @@ public class GpdjmcJobQueryDTO  implements java.io.Serializable {
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GpdjmcJobQueryDTO
      */
     public GpdjmcJobQueryDTO jobName(String jobName) {
         this.jobName = jobName;

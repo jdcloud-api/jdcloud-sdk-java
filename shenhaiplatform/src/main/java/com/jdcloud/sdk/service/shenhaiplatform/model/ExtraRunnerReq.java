@@ -62,6 +62,11 @@ public class ExtraRunnerReq  implements java.io.Serializable {
      */
     private String resourceCode;
 
+    /**
+     * 任务资源配置
+     */
+    private JcwSQLRunParams jcwSQLRunParams;
+
 
 
     /**
@@ -178,11 +183,31 @@ public class ExtraRunnerReq  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 任务资源配置
+     *
+     * @return
+     */
+    public JcwSQLRunParams getJcwSQLRunParams() {
+        return jcwSQLRunParams;
+    }
+
+    /**
+     * set 任务资源配置
+     *
+     * @param jcwSQLRunParams
+     */
+    public void setJcwSQLRunParams(JcwSQLRunParams jcwSQLRunParams) {
+        this.jcwSQLRunParams = jcwSQLRunParams;
+    }
+
+
 
     /**
      * set 流程code
      *
-     * @param flowCode
+     * @param flowCode 流程code
+     * @return ExtraRunnerReq
      */
     public ExtraRunnerReq flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -193,7 +218,8 @@ public class ExtraRunnerReq  implements java.io.Serializable {
     /**
      * set 脚本内容
      *
-     * @param content
+     * @param content 脚本内容
+     * @return ExtraRunnerReq
      */
     public ExtraRunnerReq content(String content) {
         this.content = content;
@@ -204,7 +230,8 @@ public class ExtraRunnerReq  implements java.io.Serializable {
     /**
      * set 执行引擎MapReduce,Spark,Tez,presto,Python2,Python3,auto,默认spark
      *
-     * @param execEngine
+     * @param execEngine 执行引擎MapReduce,Spark,Tez,presto,Python2,Python3,auto,默认spark
+     * @return ExtraRunnerReq
      */
     public ExtraRunnerReq execEngine(String execEngine) {
         this.execEngine = execEngine;
@@ -215,7 +242,8 @@ public class ExtraRunnerReq  implements java.io.Serializable {
     /**
      * set 脚本内容的变量参数配置
      *
-     * @param args
+     * @param args 脚本内容的变量参数配置
+     * @return ExtraRunnerReq
      */
     public ExtraRunnerReq args(UranusTaskParamReq args) {
         this.args = args;
@@ -226,7 +254,8 @@ public class ExtraRunnerReq  implements java.io.Serializable {
     /**
      * set 资源组名称
      *
-     * @param resourceName
+     * @param resourceName 资源组名称
+     * @return ExtraRunnerReq
      */
     public ExtraRunnerReq resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -237,10 +266,23 @@ public class ExtraRunnerReq  implements java.io.Serializable {
     /**
      * set 资源组code
      *
-     * @param resourceCode
+     * @param resourceCode 资源组code
+     * @return ExtraRunnerReq
      */
     public ExtraRunnerReq resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
+        return this;
+    }
+
+
+    /**
+     * set 任务资源配置
+     *
+     * @param jcwSQLRunParams 任务资源配置
+     * @return ExtraRunnerReq
+     */
+    public ExtraRunnerReq jcwSQLRunParams(JcwSQLRunParams jcwSQLRunParams) {
+        this.jcwSQLRunParams = jcwSQLRunParams;
         return this;
     }
 

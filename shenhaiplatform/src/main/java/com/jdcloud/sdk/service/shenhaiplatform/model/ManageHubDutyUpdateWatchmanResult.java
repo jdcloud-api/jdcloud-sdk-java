@@ -87,7 +87,8 @@ public class ManageHubDutyUpdateWatchmanResult extends JdcloudResult implements 
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return ManageHubDutyUpdateWatchmanResult
      */
     public ManageHubDutyUpdateWatchmanResult code(String code) {
         this.code = code;
@@ -98,7 +99,8 @@ public class ManageHubDutyUpdateWatchmanResult extends JdcloudResult implements 
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return ManageHubDutyUpdateWatchmanResult
      */
     public ManageHubDutyUpdateWatchmanResult message(String message) {
         this.message = message;

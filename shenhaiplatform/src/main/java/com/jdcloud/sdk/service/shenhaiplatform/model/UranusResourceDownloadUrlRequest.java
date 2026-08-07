@@ -118,7 +118,8 @@ public class UranusResourceDownloadUrlRequest extends JdcloudRequest implements 
     /**
      * set 资源的Code
      *
-     * @param resourceCode
+     * @param resourceCode 资源的Code
+     * @return UranusResourceDownloadUrlRequest
      */
     public UranusResourceDownloadUrlRequest resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -129,7 +130,8 @@ public class UranusResourceDownloadUrlRequest extends JdcloudRequest implements 
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusResourceDownloadUrlRequest
      */
     public UranusResourceDownloadUrlRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusResourceDownloadUrlRequest extends JdcloudRequest implements 
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusResourceDownloadUrlRequest
      */
     public UranusResourceDownloadUrlRequest appName(String appName) {
         this.appName = appName;

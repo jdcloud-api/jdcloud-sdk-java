@@ -182,7 +182,8 @@ public class UploaderInitRes  implements java.io.Serializable {
     /**
      * set bucket名称
      *
-     * @param bucket
+     * @param bucket bucket名称
+     * @return UploaderInitRes
      */
     public UploaderInitRes bucket(String bucket) {
         this.bucket = bucket;
@@ -193,7 +194,8 @@ public class UploaderInitRes  implements java.io.Serializable {
     /**
      * set 文件Code
      *
-     * @param fileCode
+     * @param fileCode 文件Code
+     * @return UploaderInitRes
      */
     public UploaderInitRes fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -204,7 +206,8 @@ public class UploaderInitRes  implements java.io.Serializable {
     /**
      * set 文件名称
      *
-     * @param fileName
+     * @param fileName 文件名称
+     * @return UploaderInitRes
      */
     public UploaderInitRes fileName(String fileName) {
         this.fileName = fileName;
@@ -215,7 +218,8 @@ public class UploaderInitRes  implements java.io.Serializable {
     /**
      * set 任务流Code
      *
-     * @param flowCode
+     * @param flowCode 任务流Code
+     * @return UploaderInitRes
      */
     public UploaderInitRes flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -226,7 +230,8 @@ public class UploaderInitRes  implements java.io.Serializable {
     /**
      * set 文件夹上传的时候文件的路径
      *
-     * @param prefix
+     * @param prefix 文件夹上传的时候文件的路径
+     * @return UploaderInitRes
      */
     public UploaderInitRes prefix(String prefix) {
         this.prefix = prefix;
@@ -237,7 +242,8 @@ public class UploaderInitRes  implements java.io.Serializable {
     /**
      * set 区域
      *
-     * @param region
+     * @param region 区域
+     * @return UploaderInitRes
      */
     public UploaderInitRes region(String region) {
         this.region = region;

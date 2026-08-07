@@ -494,7 +494,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 运行id
      *
-     * @param id
+     * @param id 运行id
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes id(Integer id) {
         this.id = id;
@@ -505,7 +506,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set code
      *
-     * @param code
+     * @param code code
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes code(String code) {
         this.code = code;
@@ -516,7 +518,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 数据源主ID
      *
-     * @param datasourcePrimaryId
+     * @param datasourcePrimaryId 数据源主ID
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes datasourcePrimaryId(String datasourcePrimaryId) {
         this.datasourcePrimaryId = datasourcePrimaryId;
@@ -527,7 +530,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 数据源名称
      *
-     * @param datasourceName
+     * @param datasourceName 数据源名称
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes datasourceName(String datasourceName) {
         this.datasourceName = datasourceName;
@@ -538,7 +542,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 数据源使用环境类型，dev：开发环境，prod：生产环境
      *
-     * @param datasourceUseEnvType
+     * @param datasourceUseEnvType 数据源使用环境类型，dev：开发环境，prod：生产环境
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes datasourceUseEnvType(String datasourceUseEnvType) {
         this.datasourceUseEnvType = datasourceUseEnvType;
@@ -549,7 +554,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 文件业务线code
      *
-     * @param fileCode
+     * @param fileCode 文件业务线code
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -560,7 +566,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 开始时间
      *
-     * @param startTime
+     * @param startTime 开始时间
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes startTime(String startTime) {
         this.startTime = startTime;
@@ -571,7 +578,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 结束时间
      *
-     * @param endTime
+     * @param endTime 结束时间
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes endTime(String endTime) {
         this.endTime = endTime;
@@ -582,7 +590,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 状态，0：等待执行，1：执行中，2：成功，3：失败， 4：中止
      *
-     * @param status
+     * @param status 状态，0：等待执行，1：执行中，2：成功，3：失败， 4：中止
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes status(String status) {
         this.status = status;
@@ -593,7 +602,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 文件类型
      *
-     * @param fileType
+     * @param fileType 文件类型
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes fileType(String fileType) {
         this.fileType = fileType;
@@ -604,7 +614,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 文件路径，相对路径
      *
-     * @param filePath
+     * @param filePath 文件路径，相对路径
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes filePath(String filePath) {
         this.filePath = filePath;
@@ -615,7 +626,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 0：全文执行， 1：选中执行
      *
-     * @param execMode
+     * @param execMode 0：全文执行， 1：选中执行
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes execMode(String execMode) {
         this.execMode = execMode;
@@ -626,7 +638,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set  运行脚本的快照文件
      *
-     * @param snapshotMd5
+     * @param snapshotMd5  运行脚本的快照文件
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes snapshotMd5(String snapshotMd5) {
         this.snapshotMd5 = snapshotMd5;
@@ -637,7 +650,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 运行参数
      *
-     * @param args
+     * @param args 运行参数
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes args(String args) {
         this.args = args;
@@ -648,7 +662,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 执行引擎
      *
-     * @param execEngine
+     * @param execEngine 执行引擎
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes execEngine(String execEngine) {
         this.execEngine = execEngine;
@@ -659,7 +674,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 操作人
      *
-     * @param operator
+     * @param operator 操作人
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes operator(String operator) {
         this.operator = operator;
@@ -670,7 +686,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 日志路径
      *
-     * @param logPath
+     * @param logPath 日志路径
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes logPath(String logPath) {
         this.logPath = logPath;
@@ -681,7 +698,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set 结果索引
      *
-     * @param resultIndex
+     * @param resultIndex 结果索引
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes resultIndex(Integer resultIndex) {
         this.resultIndex = resultIndex;
@@ -692,7 +710,8 @@ public class UranusScriptRunLogRes  implements java.io.Serializable {
     /**
      * set loopInfo
      *
-     * @param loopInfo
+     * @param loopInfo 
+     * @return UranusScriptRunLogRes
      */
     public UranusScriptRunLogRes loopInfo(TaskInfoLoopReq loopInfo) {
         this.loopInfo = loopInfo;

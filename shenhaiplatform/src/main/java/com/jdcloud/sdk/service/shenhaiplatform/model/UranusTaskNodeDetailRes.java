@@ -651,7 +651,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 节点名称
      *
-     * @param taskName
+     * @param taskName 节点名称
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes taskName(String taskName) {
         this.taskName = taskName;
@@ -662,7 +663,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
     * set 子节点code List
     *
-    * @param childrenCode
+    * @param childrenCode 子节点code List
+    * @return UranusTaskNodeDetailRes
     */
     public UranusTaskNodeDetailRes childrenCode(List<String> childrenCode) {
         this.childrenCode = childrenCode;
@@ -673,7 +675,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
     * set 父节点code List
     *
-    * @param parentCode
+    * @param parentCode 父节点code List
+    * @return UranusTaskNodeDetailRes
     */
     public UranusTaskNodeDetailRes parentCode(List<String> parentCode) {
         this.parentCode = parentCode;
@@ -684,7 +687,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 节点描述
      *
-     * @param taskDesc
+     * @param taskDesc 节点描述
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes taskDesc(String taskDesc) {
         this.taskDesc = taskDesc;
@@ -695,7 +699,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 任务类型
      *
-     * @param taskNodeId
+     * @param taskNodeId 任务类型
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes taskNodeId(Integer taskNodeId) {
         this.taskNodeId = taskNodeId;
@@ -706,7 +711,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 节点CODE
      *
-     * @param taskCode
+     * @param taskCode 节点CODE
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -717,7 +723,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes manager(String manager) {
         this.manager = manager;
@@ -728,7 +735,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 节点数据 以下前端需要用到的数据
      *
-     * @param taskData
+     * @param taskData 节点数据 以下前端需要用到的数据
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes taskData(String taskData) {
         this.taskData = taskData;
@@ -739,7 +747,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 节点名称 以下前端需要用到的数据
      *
-     * @param nodeName
+     * @param nodeName 节点名称 以下前端需要用到的数据
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes nodeName(String nodeName) {
         this.nodeName = nodeName;
@@ -750,7 +759,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 节点类型
      *
-     * @param nodeTypeName
+     * @param nodeTypeName 节点类型
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes nodeTypeName(String nodeTypeName) {
         this.nodeTypeName = nodeTypeName;
@@ -761,7 +771,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 节点图标 以下前端需要用到的数据
      *
-     * @param nodeIcon
+     * @param nodeIcon 节点图标 以下前端需要用到的数据
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes nodeIcon(String nodeIcon) {
         this.nodeIcon = nodeIcon;
@@ -772,7 +783,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 工作流Code
      *
-     * @param flowCode
+     * @param flowCode 工作流Code
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -783,7 +795,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 脚本文件的业务Code
      *
-     * @param fileCode
+     * @param fileCode 脚本文件的业务Code
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -794,7 +807,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes jobName(String jobName) {
         this.jobName = jobName;
@@ -805,7 +819,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 是否工作流任务
      *
-     * @param isUranus
+     * @param isUranus 是否工作流任务
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes isUranus(Integer isUranus) {
         this.isUranus = isUranus;
@@ -816,7 +831,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 是否当前工作流任务
      *
-     * @param isCurrentFlow
+     * @param isCurrentFlow 是否当前工作流任务
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes isCurrentFlow(Integer isCurrentFlow) {
         this.isCurrentFlow = isCurrentFlow;
@@ -827,7 +843,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
     * set 给前端用到的
     *
-    * @param parent
+    * @param parent 给前端用到的
+    * @return UranusTaskNodeDetailRes
     */
     public UranusTaskNodeDetailRes parent(List<UranusTaskNodeSaveReq> parent) {
         this.parent = parent;
@@ -838,7 +855,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 是否有子任务依赖前端用到
      *
-     * @param haveChildren
+     * @param haveChildren 是否有子任务依赖前端用到
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes haveChildren(Integer haveChildren) {
         this.haveChildren = haveChildren;
@@ -849,7 +867,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 协作人
      *
-     * @param worker
+     * @param worker 协作人
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes worker(String worker) {
         this.worker = worker;
@@ -860,7 +879,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
     * set 发布变更状态
     *
-    * @param taskChangeStatus
+    * @param taskChangeStatus 发布变更状态
+    * @return UranusTaskNodeDetailRes
     */
     public UranusTaskNodeDetailRes taskChangeStatus(List<Integer> taskChangeStatus) {
         this.taskChangeStatus = taskChangeStatus;
@@ -871,7 +891,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
     * set 发布变更状态描述
     *
-    * @param taskChangeStatusDesc
+    * @param taskChangeStatusDesc 发布变更状态描述
+    * @return UranusTaskNodeDetailRes
     */
     public UranusTaskNodeDetailRes taskChangeStatusDesc(List<String> taskChangeStatusDesc) {
         this.taskChangeStatusDesc = taskChangeStatusDesc;
@@ -882,7 +903,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 作业状态
      *
-     * @param gravityStatus
+     * @param gravityStatus 作业状态
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes gravityStatus(Integer gravityStatus) {
         this.gravityStatus = gravityStatus;
@@ -893,7 +915,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 作业状态描述
      *
-     * @param gravityStatusDesc
+     * @param gravityStatusDesc 作业状态描述
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes gravityStatusDesc(String gravityStatusDesc) {
         this.gravityStatusDesc = gravityStatusDesc;
@@ -904,7 +927,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 锁定状态 0 无锁 1 锁定 默认 为 1
      *
-     * @param lockStatus
+     * @param lockStatus 锁定状态 0 无锁 1 锁定 默认 为 1
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes lockStatus(Integer lockStatus) {
         this.lockStatus = lockStatus;
@@ -915,7 +939,8 @@ public class UranusTaskNodeDetailRes  implements java.io.Serializable {
     /**
      * set 解锁人员
      *
-     * @param lockUser
+     * @param lockUser 解锁人员
+     * @return UranusTaskNodeDetailRes
      */
     public UranusTaskNodeDetailRes lockUser(String lockUser) {
         this.lockUser = lockUser;

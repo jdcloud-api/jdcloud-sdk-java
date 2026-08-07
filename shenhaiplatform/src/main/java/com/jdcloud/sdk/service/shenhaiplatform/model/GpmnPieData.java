@@ -110,7 +110,8 @@ public class GpmnPieData  implements java.io.Serializable {
     /**
      * set 英文名称
      *
-     * @param name
+     * @param name 英文名称
+     * @return GpmnPieData
      */
     public GpmnPieData name(String name) {
         this.name = name;
@@ -121,7 +122,8 @@ public class GpmnPieData  implements java.io.Serializable {
     /**
      * set 中文名称
      *
-     * @param nameEn
+     * @param nameEn 中文名称
+     * @return GpmnPieData
      */
     public GpmnPieData nameEn(String nameEn) {
         this.nameEn = nameEn;
@@ -132,7 +134,8 @@ public class GpmnPieData  implements java.io.Serializable {
     /**
      * set 取值
      *
-     * @param value
+     * @param value 取值
+     * @return GpmnPieData
      */
     public GpmnPieData value(String value) {
         this.value = value;

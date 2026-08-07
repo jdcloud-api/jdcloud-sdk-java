@@ -373,7 +373,8 @@ public class UranusTableDataLoadRequest extends JdcloudRequest implements java.i
     /**
      * set 文件路径（key）
      *
-     * @param fileKey
+     * @param fileKey 文件路径（key）
+     * @return UranusTableDataLoadRequest
      */
     public UranusTableDataLoadRequest fileKey(String fileKey) {
         this.fileKey = fileKey;
@@ -384,7 +385,8 @@ public class UranusTableDataLoadRequest extends JdcloudRequest implements java.i
     /**
      * set 文件类型：csv、text、xls、xlsx
      *
-     * @param fileType
+     * @param fileType 文件类型：csv、text、xls、xlsx
+     * @return UranusTableDataLoadRequest
      */
     public UranusTableDataLoadRequest fileType(String fileType) {
         this.fileType = fileType;
@@ -395,7 +397,8 @@ public class UranusTableDataLoadRequest extends JdcloudRequest implements java.i
     /**
      * set 分隔符: en-comma 英文逗号，en-semicolon 英文分号，space 空格，pipe 竖线，hash 井号，and 与号，line-feed-lf 换行符（UNIX），line-feed-crlf 换行符（Windows）
      *
-     * @param delimiter
+     * @param delimiter 分隔符: en-comma 英文逗号，en-semicolon 英文分号，space 空格，pipe 竖线，hash 井号，and 与号，line-feed-lf 换行符（UNIX），line-feed-crlf 换行符（Windows）
+     * @return UranusTableDataLoadRequest
      */
     public UranusTableDataLoadRequest delimiter(String delimiter) {
         this.delimiter = delimiter;
@@ -406,7 +409,8 @@ public class UranusTableDataLoadRequest extends JdcloudRequest implements java.i
     /**
      * set 字符集: GBK、UTF-8、ISO-8859-1
      *
-     * @param characterSet
+     * @param characterSet 字符集: GBK、UTF-8、ISO-8859-1
+     * @return UranusTableDataLoadRequest
      */
     public UranusTableDataLoadRequest characterSet(String characterSet) {
         this.characterSet = characterSet;
@@ -417,7 +421,8 @@ public class UranusTableDataLoadRequest extends JdcloudRequest implements java.i
     /**
      * set 导入起始行
      *
-     * @param startRow
+     * @param startRow 导入起始行
+     * @return UranusTableDataLoadRequest
      */
     public UranusTableDataLoadRequest startRow(Integer startRow) {
         this.startRow = startRow;
@@ -428,7 +433,8 @@ public class UranusTableDataLoadRequest extends JdcloudRequest implements java.i
     /**
      * set 项目环境: prod 生产环境、dev开发环境
      *
-     * @param projectEnv
+     * @param projectEnv 项目环境: prod 生产环境、dev开发环境
+     * @return UranusTableDataLoadRequest
      */
     public UranusTableDataLoadRequest projectEnv(String projectEnv) {
         this.projectEnv = projectEnv;
@@ -439,7 +445,8 @@ public class UranusTableDataLoadRequest extends JdcloudRequest implements java.i
     /**
      * set 项目编码
      *
-     * @param projectCode
+     * @param projectCode 项目编码
+     * @return UranusTableDataLoadRequest
      */
     public UranusTableDataLoadRequest projectCode(String projectCode) {
         this.projectCode = projectCode;
@@ -450,7 +457,8 @@ public class UranusTableDataLoadRequest extends JdcloudRequest implements java.i
     /**
      * set 目标表名
      *
-     * @param tableName
+     * @param tableName 目标表名
+     * @return UranusTableDataLoadRequest
      */
     public UranusTableDataLoadRequest tableName(String tableName) {
         this.tableName = tableName;
@@ -461,7 +469,8 @@ public class UranusTableDataLoadRequest extends JdcloudRequest implements java.i
     /**
     * set 导入分区，如果是分区表则必传
     *
-    * @param partitionInfos
+    * @param partitionInfos 导入分区，如果是分区表则必传
+    * @return UranusTableDataLoadRequest
     */
     public UranusTableDataLoadRequest partitionInfos(List<PartitionInfo> partitionInfos) {
         this.partitionInfos = partitionInfos;
@@ -472,7 +481,8 @@ public class UranusTableDataLoadRequest extends JdcloudRequest implements java.i
     /**
      * set 导入策略：append 追加、overwrite 覆盖
      *
-     * @param importStrategy
+     * @param importStrategy 导入策略：append 追加、overwrite 覆盖
+     * @return UranusTableDataLoadRequest
      */
     public UranusTableDataLoadRequest importStrategy(String importStrategy) {
         this.importStrategy = importStrategy;
@@ -483,7 +493,8 @@ public class UranusTableDataLoadRequest extends JdcloudRequest implements java.i
     /**
      * set 资源组编码
      *
-     * @param resourceCode
+     * @param resourceCode 资源组编码
+     * @return UranusTableDataLoadRequest
      */
     public UranusTableDataLoadRequest resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -494,7 +505,8 @@ public class UranusTableDataLoadRequest extends JdcloudRequest implements java.i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTableDataLoadRequest
      */
     public UranusTableDataLoadRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -505,7 +517,8 @@ public class UranusTableDataLoadRequest extends JdcloudRequest implements java.i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTableDataLoadRequest
      */
     public UranusTableDataLoadRequest appName(String appName) {
         this.appName = appName;

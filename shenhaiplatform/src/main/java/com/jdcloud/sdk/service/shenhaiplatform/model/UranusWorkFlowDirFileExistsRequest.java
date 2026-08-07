@@ -286,7 +286,8 @@ public class UranusWorkFlowDirFileExistsRequest extends JdcloudRequest implement
     /**
      * set 文件类型
      *
-     * @param fileType
+     * @param fileType 文件类型
+     * @return UranusWorkFlowDirFileExistsRequest
      */
     public UranusWorkFlowDirFileExistsRequest fileType(Integer fileType) {
         this.fileType = fileType;
@@ -297,7 +298,8 @@ public class UranusWorkFlowDirFileExistsRequest extends JdcloudRequest implement
     /**
      * set 是否spark-jar的管理模块,spark-jar操作hdfs通过字段区分
      *
-     * @param isJarManagement
+     * @param isJarManagement 是否spark-jar的管理模块,spark-jar操作hdfs通过字段区分
+     * @return UranusWorkFlowDirFileExistsRequest
      */
     public UranusWorkFlowDirFileExistsRequest isJarManagement(Boolean isJarManagement) {
         this.isJarManagement = isJarManagement;
@@ -308,7 +310,8 @@ public class UranusWorkFlowDirFileExistsRequest extends JdcloudRequest implement
     /**
      * set 文件Code
      *
-     * @param fileCode
+     * @param fileCode 文件Code
+     * @return UranusWorkFlowDirFileExistsRequest
      */
     public UranusWorkFlowDirFileExistsRequest fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -319,7 +322,8 @@ public class UranusWorkFlowDirFileExistsRequest extends JdcloudRequest implement
     /**
      * set 父节点 Code
      *
-     * @param parentCode
+     * @param parentCode 父节点 Code
+     * @return UranusWorkFlowDirFileExistsRequest
      */
     public UranusWorkFlowDirFileExistsRequest parentCode(String parentCode) {
         this.parentCode = parentCode;
@@ -330,7 +334,8 @@ public class UranusWorkFlowDirFileExistsRequest extends JdcloudRequest implement
     /**
      * set 文件名称
      *
-     * @param fileName
+     * @param fileName 文件名称
+     * @return UranusWorkFlowDirFileExistsRequest
      */
     public UranusWorkFlowDirFileExistsRequest fileName(String fileName) {
         this.fileName = fileName;
@@ -341,7 +346,8 @@ public class UranusWorkFlowDirFileExistsRequest extends JdcloudRequest implement
     /**
      * set 任务流Code
      *
-     * @param flowCode
+     * @param flowCode 任务流Code
+     * @return UranusWorkFlowDirFileExistsRequest
      */
     public UranusWorkFlowDirFileExistsRequest flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -352,7 +358,8 @@ public class UranusWorkFlowDirFileExistsRequest extends JdcloudRequest implement
     /**
      * set 文件夹上传的时候文件的相对路径属性
      *
-     * @param relativePath
+     * @param relativePath 文件夹上传的时候文件的相对路径属性
+     * @return UranusWorkFlowDirFileExistsRequest
      */
     public UranusWorkFlowDirFileExistsRequest relativePath(String relativePath) {
         this.relativePath = relativePath;
@@ -363,7 +370,8 @@ public class UranusWorkFlowDirFileExistsRequest extends JdcloudRequest implement
     /**
      * set 是否上传完成 0 上传取消 1 上传完成
      *
-     * @param isUpload
+     * @param isUpload 是否上传完成 0 上传取消 1 上传完成
+     * @return UranusWorkFlowDirFileExistsRequest
      */
     public UranusWorkFlowDirFileExistsRequest isUpload(Integer isUpload) {
         this.isUpload = isUpload;
@@ -374,7 +382,8 @@ public class UranusWorkFlowDirFileExistsRequest extends JdcloudRequest implement
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusWorkFlowDirFileExistsRequest
      */
     public UranusWorkFlowDirFileExistsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -385,7 +394,8 @@ public class UranusWorkFlowDirFileExistsRequest extends JdcloudRequest implement
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusWorkFlowDirFileExistsRequest
      */
     public UranusWorkFlowDirFileExistsRequest appName(String appName) {
         this.appName = appName;

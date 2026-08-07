@@ -118,7 +118,8 @@ public class UranusExtraRunnerStopRequest extends JdcloudRequest implements java
     /**
      * set 执行id
      *
-     * @param runId
+     * @param runId 执行id
+     * @return UranusExtraRunnerStopRequest
      */
     public UranusExtraRunnerStopRequest runId(Integer runId) {
         this.runId = runId;
@@ -129,7 +130,8 @@ public class UranusExtraRunnerStopRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusExtraRunnerStopRequest
      */
     public UranusExtraRunnerStopRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusExtraRunnerStopRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusExtraRunnerStopRequest
      */
     public UranusExtraRunnerStopRequest appName(String appName) {
         this.appName = appName;

@@ -544,7 +544,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 表id
      *
-     * @param id
+     * @param id 表id
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc id(String id) {
         this.id = id;
@@ -555,7 +556,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 项目id
      *
-     * @param projectCode
+     * @param projectCode 项目id
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc projectCode(String projectCode) {
         this.projectCode = projectCode;
@@ -566,7 +568,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 数据库名称
      *
-     * @param database
+     * @param database 数据库名称
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc database(String database) {
         this.database = database;
@@ -577,7 +580,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc tableName(String tableName) {
         this.tableName = tableName;
@@ -588,7 +592,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 表别名
      *
-     * @param tableAlias
+     * @param tableAlias 表别名
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc tableAlias(String tableAlias) {
         this.tableAlias = tableAlias;
@@ -599,7 +604,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 表类型：MANAGED_TABLE，EXTERNAL_TABLE
      *
-     * @param tableType
+     * @param tableType 表类型：MANAGED_TABLE，EXTERNAL_TABLE
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc tableType(String tableType) {
         this.tableType = tableType;
@@ -610,7 +616,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 创建人
      *
-     * @param creator
+     * @param creator 创建人
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc creator(String creator) {
         this.creator = creator;
@@ -621,7 +628,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 元数据类型：HIVE，MYSQL
      *
-     * @param metaType
+     * @param metaType 元数据类型：HIVE，MYSQL
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc metaType(String metaType) {
         this.metaType = metaType;
@@ -632,7 +640,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc createTime(String createTime) {
         this.createTime = createTime;
@@ -643,7 +652,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 最后修改时间
      *
-     * @param lastModifyTime
+     * @param lastModifyTime 最后修改时间
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc lastModifyTime(String lastModifyTime) {
         this.lastModifyTime = lastModifyTime;
@@ -654,7 +664,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 表存储路径
      *
-     * @param location
+     * @param location 表存储路径
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc location(String location) {
         this.location = location;
@@ -665,7 +676,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 输入格式
      *
-     * @param inputFormat
+     * @param inputFormat 输入格式
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc inputFormat(String inputFormat) {
         this.inputFormat = inputFormat;
@@ -676,7 +688,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 输出格式
      *
-     * @param outputFormat
+     * @param outputFormat 输出格式
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc outputFormat(String outputFormat) {
         this.outputFormat = outputFormat;
@@ -687,7 +700,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
     * set 用户打标
     *
-    * @param userDefineTags
+    * @param userDefineTags 用户打标
+    * @return JtlasSearchTableDoc
     */
     public JtlasSearchTableDoc userDefineTags(List<String> userDefineTags) {
         this.userDefineTags = userDefineTags;
@@ -698,7 +712,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
     * set 负责人
     *
-    * @param collectPersons
+    * @param collectPersons 负责人
+    * @return JtlasSearchTableDoc
     */
     public JtlasSearchTableDoc collectPersons(List<String> collectPersons) {
         this.collectPersons = collectPersons;
@@ -709,7 +724,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 是否收藏
      *
-     * @param hasCollected
+     * @param hasCollected 是否收藏
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc hasCollected(Boolean hasCollected) {
         this.hasCollected = hasCollected;
@@ -720,7 +736,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 点击数
      *
-     * @param clickCount
+     * @param clickCount 点击数
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc clickCount(Integer clickCount) {
         this.clickCount = clickCount;
@@ -731,7 +748,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 是否热门文章
      *
-     * @param fireFlag
+     * @param fireFlag 是否热门文章
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc fireFlag(Boolean fireFlag) {
         this.fireFlag = fireFlag;
@@ -742,7 +760,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 环境信息dev或prod
      *
-     * @param env
+     * @param env 环境信息dev或prod
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc env(String env) {
         this.env = env;
@@ -753,7 +772,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
     * set 分桶字段名称
     *
-    * @param bucketCols
+    * @param bucketCols 分桶字段名称
+    * @return JtlasSearchTableDoc
     */
     public JtlasSearchTableDoc bucketCols(List<String> bucketCols) {
         this.bucketCols = bucketCols;
@@ -764,7 +784,8 @@ public class JtlasSearchTableDoc  implements java.io.Serializable {
     /**
      * set 分桶个数
      *
-     * @param bucketNum
+     * @param bucketNum 分桶个数
+     * @return JtlasSearchTableDoc
      */
     public JtlasSearchTableDoc bucketNum(String bucketNum) {
         this.bucketNum = bucketNum;

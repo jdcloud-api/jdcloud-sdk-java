@@ -110,7 +110,8 @@ public class UranusColumnReq  implements java.io.Serializable {
     /**
      * set 列名称
      *
-     * @param columnName
+     * @param columnName 列名称
+     * @return UranusColumnReq
      */
     public UranusColumnReq columnName(String columnName) {
         this.columnName = columnName;
@@ -121,7 +122,8 @@ public class UranusColumnReq  implements java.io.Serializable {
     /**
      * set 类型名称
      *
-     * @param typeName
+     * @param typeName 类型名称
+     * @return UranusColumnReq
      */
     public UranusColumnReq typeName(String typeName) {
         this.typeName = typeName;
@@ -132,7 +134,8 @@ public class UranusColumnReq  implements java.io.Serializable {
     /**
      * set 字段备注
      *
-     * @param commentV
+     * @param commentV 字段备注
+     * @return UranusColumnReq
      */
     public UranusColumnReq commentV(String commentV) {
         this.commentV = commentV;

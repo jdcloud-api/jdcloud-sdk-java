@@ -184,7 +184,8 @@ public class GpjsIsUpstreamSameFrequencyDTO  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpjsIsUpstreamSameFrequencyDTO
      */
     public GpjsIsUpstreamSameFrequencyDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -195,7 +196,8 @@ public class GpjsIsUpstreamSameFrequencyDTO  implements java.io.Serializable {
     /**
     * set 依赖作业名称清单
     *
-    * @param dependJobName
+    * @param dependJobName 依赖作业名称清单
+    * @return GpjsIsUpstreamSameFrequencyDTO
     */
     public GpjsIsUpstreamSameFrequencyDTO dependJobName(List<String> dependJobName) {
         this.dependJobName = dependJobName;
@@ -206,7 +208,8 @@ public class GpjsIsUpstreamSameFrequencyDTO  implements java.io.Serializable {
     /**
      * set 作业开始时间
      *
-     * @param startTime
+     * @param startTime 作业开始时间
+     * @return GpjsIsUpstreamSameFrequencyDTO
      */
     public GpjsIsUpstreamSameFrequencyDTO startTime(String startTime) {
         this.startTime = startTime;
@@ -217,7 +220,8 @@ public class GpjsIsUpstreamSameFrequencyDTO  implements java.io.Serializable {
     /**
      * set 作业结束时间
      *
-     * @param endTime
+     * @param endTime 作业结束时间
+     * @return GpjsIsUpstreamSameFrequencyDTO
      */
     public GpjsIsUpstreamSameFrequencyDTO endTime(String endTime) {
         this.endTime = endTime;
@@ -228,7 +232,8 @@ public class GpjsIsUpstreamSameFrequencyDTO  implements java.io.Serializable {
     /**
      * set 作业时间间隔
      *
-     * @param interval
+     * @param interval 作业时间间隔
+     * @return GpjsIsUpstreamSameFrequencyDTO
      */
     public GpjsIsUpstreamSameFrequencyDTO interval(Integer interval) {
         this.interval = interval;
@@ -239,7 +244,8 @@ public class GpjsIsUpstreamSameFrequencyDTO  implements java.io.Serializable {
     /**
      * set 作业运行周期
      *
-     * @param cycle
+     * @param cycle 作业运行周期
+     * @return GpjsIsUpstreamSameFrequencyDTO
      */
     public GpjsIsUpstreamSameFrequencyDTO cycle(String cycle) {
         this.cycle = cycle;

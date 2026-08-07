@@ -62,7 +62,8 @@ public class GpdjmcWorkspaceInfoDTO  implements java.io.Serializable {
     /**
      * set 工作空间名称
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间名称
+     * @return GpdjmcWorkspaceInfoDTO
      */
     public GpdjmcWorkspaceInfoDTO workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;

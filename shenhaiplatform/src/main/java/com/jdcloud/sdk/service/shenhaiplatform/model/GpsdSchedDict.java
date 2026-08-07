@@ -302,7 +302,8 @@ public class GpsdSchedDict  implements java.io.Serializable {
     /**
      * set 数据字典id
      *
-     * @param id
+     * @param id 数据字典id
+     * @return GpsdSchedDict
      */
     public GpsdSchedDict id(Long id) {
         this.id = id;
@@ -313,7 +314,8 @@ public class GpsdSchedDict  implements java.io.Serializable {
     /**
      * set 数据字典code
      *
-     * @param dictCode
+     * @param dictCode 数据字典code
+     * @return GpsdSchedDict
      */
     public GpsdSchedDict dictCode(String dictCode) {
         this.dictCode = dictCode;
@@ -324,7 +326,8 @@ public class GpsdSchedDict  implements java.io.Serializable {
     /**
      * set 数据字典父级code
      *
-     * @param pDictCode
+     * @param pDictCode 数据字典父级code
+     * @return GpsdSchedDict
      */
     public GpsdSchedDict pDictCode(String pDictCode) {
         this.pDictCode = pDictCode;
@@ -335,7 +338,8 @@ public class GpsdSchedDict  implements java.io.Serializable {
     /**
      * set 数据字典名称
      *
-     * @param dictName
+     * @param dictName 数据字典名称
+     * @return GpsdSchedDict
      */
     public GpsdSchedDict dictName(String dictName) {
         this.dictName = dictName;
@@ -346,7 +350,8 @@ public class GpsdSchedDict  implements java.io.Serializable {
     /**
      * set 数据字典排序
      *
-     * @param dictSort
+     * @param dictSort 数据字典排序
+     * @return GpsdSchedDict
      */
     public GpsdSchedDict dictSort(Integer dictSort) {
         this.dictSort = dictSort;
@@ -357,7 +362,8 @@ public class GpsdSchedDict  implements java.io.Serializable {
     /**
      * set 数据字典备份
      *
-     * @param dictBak
+     * @param dictBak 数据字典备份
+     * @return GpsdSchedDict
      */
     public GpsdSchedDict dictBak(String dictBak) {
         this.dictBak = dictBak;
@@ -368,7 +374,8 @@ public class GpsdSchedDict  implements java.io.Serializable {
     /**
      * set 数据字典描述
      *
-     * @param dictDesc
+     * @param dictDesc 数据字典描述
+     * @return GpsdSchedDict
      */
     public GpsdSchedDict dictDesc(String dictDesc) {
         this.dictDesc = dictDesc;
@@ -379,7 +386,8 @@ public class GpsdSchedDict  implements java.io.Serializable {
     /**
      * set 是否有效 1: 有效, 0: 无效
      *
-     * @param isValid
+     * @param isValid 是否有效 1: 有效, 0: 无效
+     * @return GpsdSchedDict
      */
     public GpsdSchedDict isValid(String isValid) {
         this.isValid = isValid;
@@ -390,7 +398,8 @@ public class GpsdSchedDict  implements java.io.Serializable {
     /**
      * set 是否删除 1: 删除, 0: 未删除
      *
-     * @param isDel
+     * @param isDel 是否删除 1: 删除, 0: 未删除
+     * @return GpsdSchedDict
      */
     public GpsdSchedDict isDel(String isDel) {
         this.isDel = isDel;
@@ -401,7 +410,8 @@ public class GpsdSchedDict  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createdTime
+     * @param createdTime 创建时间
+     * @return GpsdSchedDict
      */
     public GpsdSchedDict createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -412,7 +422,8 @@ public class GpsdSchedDict  implements java.io.Serializable {
     /**
      * set 修改时间
      *
-     * @param modifiedTime
+     * @param modifiedTime 修改时间
+     * @return GpsdSchedDict
      */
     public GpsdSchedDict modifiedTime(String modifiedTime) {
         this.modifiedTime = modifiedTime;

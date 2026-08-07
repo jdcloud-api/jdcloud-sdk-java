@@ -158,7 +158,8 @@ public class UtteranceVo  implements java.io.Serializable {
     /**
      * set 发言id
      *
-     * @param utteranceId
+     * @param utteranceId 发言id
+     * @return UtteranceVo
      */
     public UtteranceVo utteranceId(String utteranceId) {
         this.utteranceId = utteranceId;
@@ -169,7 +170,8 @@ public class UtteranceVo  implements java.io.Serializable {
     /**
      * set 对话id
      *
-     * @param chatId
+     * @param chatId 对话id
+     * @return UtteranceVo
      */
     public UtteranceVo chatId(String chatId) {
         this.chatId = chatId;
@@ -180,7 +182,8 @@ public class UtteranceVo  implements java.io.Serializable {
     /**
      * set 发言角色
      *
-     * @param utteranceRole
+     * @param utteranceRole 发言角色
+     * @return UtteranceVo
      */
     public UtteranceVo utteranceRole(String utteranceRole) {
         this.utteranceRole = utteranceRole;
@@ -191,7 +194,8 @@ public class UtteranceVo  implements java.io.Serializable {
     /**
      * set 发言内容
      *
-     * @param content
+     * @param content 发言内容
+     * @return UtteranceVo
      */
     public UtteranceVo content(String content) {
         this.content = content;
@@ -202,7 +206,8 @@ public class UtteranceVo  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return UtteranceVo
      */
     public UtteranceVo createTime(Long createTime) {
         this.createTime = createTime;

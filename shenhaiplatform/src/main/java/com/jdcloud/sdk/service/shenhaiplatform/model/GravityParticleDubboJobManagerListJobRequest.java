@@ -212,7 +212,8 @@ public class GravityParticleDubboJobManagerListJobRequest extends JdcloudRequest
     /**
      * set 登录用户名
      *
-     * @param userName
+     * @param userName 登录用户名
+     * @return GravityParticleDubboJobManagerListJobRequest
      */
     public GravityParticleDubboJobManagerListJobRequest userName(String userName) {
         this.userName = userName;
@@ -223,7 +224,8 @@ public class GravityParticleDubboJobManagerListJobRequest extends JdcloudRequest
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GravityParticleDubboJobManagerListJobRequest
      */
     public GravityParticleDubboJobManagerListJobRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -234,7 +236,8 @@ public class GravityParticleDubboJobManagerListJobRequest extends JdcloudRequest
     /**
      * set 客户作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名称
+     * @return GravityParticleDubboJobManagerListJobRequest
      */
     public GravityParticleDubboJobManagerListJobRequest cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -245,7 +248,8 @@ public class GravityParticleDubboJobManagerListJobRequest extends JdcloudRequest
     /**
      * set 是否启用
      *
-     * @param enable
+     * @param enable 是否启用
+     * @return GravityParticleDubboJobManagerListJobRequest
      */
     public GravityParticleDubboJobManagerListJobRequest enable(String enable) {
         this.enable = enable;
@@ -256,7 +260,8 @@ public class GravityParticleDubboJobManagerListJobRequest extends JdcloudRequest
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return GravityParticleDubboJobManagerListJobRequest
      */
     public GravityParticleDubboJobManagerListJobRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -267,7 +272,8 @@ public class GravityParticleDubboJobManagerListJobRequest extends JdcloudRequest
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerListJobRequest
      */
     public GravityParticleDubboJobManagerListJobRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -278,7 +284,8 @@ public class GravityParticleDubboJobManagerListJobRequest extends JdcloudRequest
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerListJobRequest
      */
     public GravityParticleDubboJobManagerListJobRequest appName(String appName) {
         this.appName = appName;

@@ -65,7 +65,8 @@ public class DataLoadLogParam  implements java.io.Serializable {
     /**
      * set 任务id
      *
-     * @param applicationId
+     * @param applicationId 任务id
+     * @return DataLoadLogParam
      */
     public DataLoadLogParam applicationId(String applicationId) {
         this.applicationId = applicationId;

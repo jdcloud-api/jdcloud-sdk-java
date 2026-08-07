@@ -183,7 +183,8 @@ public class UranusTableDeleteResult extends JdcloudResult implements java.io.Se
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusTableDeleteResult
      */
     public UranusTableDeleteResult code(String code) {
         this.code = code;
@@ -194,7 +195,8 @@ public class UranusTableDeleteResult extends JdcloudResult implements java.io.Se
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusTableDeleteResult
      */
     public UranusTableDeleteResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -205,7 +207,8 @@ public class UranusTableDeleteResult extends JdcloudResult implements java.io.Se
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusTableDeleteResult
      */
     public UranusTableDeleteResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -216,7 +219,8 @@ public class UranusTableDeleteResult extends JdcloudResult implements java.io.Se
     /**
      * set Object
      *
-     * @param result
+     * @param result Object
+     * @return UranusTableDeleteResult
      */
     public UranusTableDeleteResult result(Boolean result) {
         this.result = result;
@@ -227,7 +231,8 @@ public class UranusTableDeleteResult extends JdcloudResult implements java.io.Se
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusTableDeleteResult
      */
     public UranusTableDeleteResult subCode(String subCode) {
         this.subCode = subCode;
@@ -238,7 +243,8 @@ public class UranusTableDeleteResult extends JdcloudResult implements java.io.Se
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusTableDeleteResult
      */
     public UranusTableDeleteResult successed(Boolean successed) {
         this.successed = successed;

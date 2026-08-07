@@ -212,7 +212,8 @@ public class ManageHubGravityOneClickRerunBatchesRequest extends JdcloudRequest 
     /**
      * set 页号
      *
-     * @param pageNum
+     * @param pageNum 页号
+     * @return ManageHubGravityOneClickRerunBatchesRequest
      */
     public ManageHubGravityOneClickRerunBatchesRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -223,7 +224,8 @@ public class ManageHubGravityOneClickRerunBatchesRequest extends JdcloudRequest 
     /**
      * set 页大小
      *
-     * @param pageSize
+     * @param pageSize 页大小
+     * @return ManageHubGravityOneClickRerunBatchesRequest
      */
     public ManageHubGravityOneClickRerunBatchesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -234,7 +236,8 @@ public class ManageHubGravityOneClickRerunBatchesRequest extends JdcloudRequest 
     /**
      * set 操作人
      *
-     * @param operator
+     * @param operator 操作人
+     * @return ManageHubGravityOneClickRerunBatchesRequest
      */
     public ManageHubGravityOneClickRerunBatchesRequest operator(String operator) {
         this.operator = operator;
@@ -245,7 +248,8 @@ public class ManageHubGravityOneClickRerunBatchesRequest extends JdcloudRequest 
     /**
      * set 操作时间-开始
      *
-     * @param operateTimeAfter
+     * @param operateTimeAfter 操作时间-开始
+     * @return ManageHubGravityOneClickRerunBatchesRequest
      */
     public ManageHubGravityOneClickRerunBatchesRequest operateTimeAfter(Long operateTimeAfter) {
         this.operateTimeAfter = operateTimeAfter;
@@ -256,7 +260,8 @@ public class ManageHubGravityOneClickRerunBatchesRequest extends JdcloudRequest 
     /**
      * set 操作时间-结束
      *
-     * @param operateTimeBefore
+     * @param operateTimeBefore 操作时间-结束
+     * @return ManageHubGravityOneClickRerunBatchesRequest
      */
     public ManageHubGravityOneClickRerunBatchesRequest operateTimeBefore(Long operateTimeBefore) {
         this.operateTimeBefore = operateTimeBefore;
@@ -267,7 +272,8 @@ public class ManageHubGravityOneClickRerunBatchesRequest extends JdcloudRequest 
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubGravityOneClickRerunBatchesRequest
      */
     public ManageHubGravityOneClickRerunBatchesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -278,7 +284,8 @@ public class ManageHubGravityOneClickRerunBatchesRequest extends JdcloudRequest 
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubGravityOneClickRerunBatchesRequest
      */
     public ManageHubGravityOneClickRerunBatchesRequest appName(String appName) {
         this.appName = appName;

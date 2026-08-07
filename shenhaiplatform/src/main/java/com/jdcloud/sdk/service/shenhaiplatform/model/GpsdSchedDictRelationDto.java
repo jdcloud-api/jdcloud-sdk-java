@@ -136,7 +136,8 @@ public class GpsdSchedDictRelationDto  implements java.io.Serializable {
     /**
      * set 字典类型
      *
-     * @param dictType
+     * @param dictType 字典类型
+     * @return GpsdSchedDictRelationDto
      */
     public GpsdSchedDictRelationDto dictType(String dictType) {
         this.dictType = dictType;
@@ -147,7 +148,8 @@ public class GpsdSchedDictRelationDto  implements java.io.Serializable {
     /**
      * set 字典值
      *
-     * @param dictCode
+     * @param dictCode 字典值
+     * @return GpsdSchedDictRelationDto
      */
     public GpsdSchedDictRelationDto dictCode(String dictCode) {
         this.dictCode = dictCode;
@@ -158,7 +160,8 @@ public class GpsdSchedDictRelationDto  implements java.io.Serializable {
     /**
      * set 字典描述
      *
-     * @param dictName
+     * @param dictName 字典描述
+     * @return GpsdSchedDictRelationDto
      */
     public GpsdSchedDictRelationDto dictName(String dictName) {
         this.dictName = dictName;
@@ -169,7 +172,8 @@ public class GpsdSchedDictRelationDto  implements java.io.Serializable {
     /**
     * set 字典子节点信息
     *
-    * @param childDictList
+    * @param childDictList 字典子节点信息
+    * @return GpsdSchedDictRelationDto
     */
     public GpsdSchedDictRelationDto childDictList(List<GpsdSchedDictRelationDto> childDictList) {
         this.childDictList = childDictList;

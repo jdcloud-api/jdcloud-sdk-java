@@ -111,7 +111,8 @@ public class WorkspaceVerifyUserIsManagerResult extends JdcloudResult implements
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return WorkspaceVerifyUserIsManagerResult
      */
     public WorkspaceVerifyUserIsManagerResult code(String code) {
         this.code = code;
@@ -122,7 +123,8 @@ public class WorkspaceVerifyUserIsManagerResult extends JdcloudResult implements
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return WorkspaceVerifyUserIsManagerResult
      */
     public WorkspaceVerifyUserIsManagerResult message(String message) {
         this.message = message;
@@ -133,7 +135,8 @@ public class WorkspaceVerifyUserIsManagerResult extends JdcloudResult implements
     /**
      * set 是否有权限
      *
-     * @param result
+     * @param result 是否有权限
+     * @return WorkspaceVerifyUserIsManagerResult
      */
     public WorkspaceVerifyUserIsManagerResult result(Boolean result) {
         this.result = result;

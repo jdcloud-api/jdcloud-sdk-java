@@ -453,7 +453,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set 页面大小
      *
-     * @param pageSize
+     * @param pageSize 页面大小
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -464,7 +465,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set 页码
      *
-     * @param pageNum
+     * @param pageNum 页码
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -475,7 +477,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set 补数任务是否关闭
      *
-     * @param enable
+     * @param enable 补数任务是否关闭
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq enable(String enable) {
         this.enable = enable;
@@ -486,7 +489,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set 任务名称
      *
-     * @param jobName
+     * @param jobName 任务名称
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq jobName(String jobName) {
         this.jobName = jobName;
@@ -497,7 +501,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set 客户作业名
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -508,7 +513,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set 任务类型
      *
-     * @param jobType
+     * @param jobType 任务类型
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq jobType(String jobType) {
         this.jobType = jobType;
@@ -519,7 +525,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq processType(String processType) {
         this.processType = processType;
@@ -530,7 +537,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
     * set 处理类型列表
     *
-    * @param processTypeList
+    * @param processTypeList 处理类型列表
+    * @return GpdrListTaskReq
     */
     public GpdrListTaskReq processTypeList(List<String> processTypeList) {
         this.processTypeList = processTypeList;
@@ -541,7 +549,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
     * set 执行类型列表
     *
-    * @param exeTypeList
+    * @param exeTypeList 执行类型列表
+    * @return GpdrListTaskReq
     */
     public GpdrListTaskReq exeTypeList(List<String> exeTypeList) {
         this.exeTypeList = exeTypeList;
@@ -552,7 +561,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set 周期具体日期
      *
-     * @param cycle
+     * @param cycle 周期具体日期
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq cycle(String cycle) {
         this.cycle = cycle;
@@ -563,7 +573,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set 作业负责人
      *
-     * @param manager
+     * @param manager 作业负责人
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq manager(String manager) {
         this.manager = manager;
@@ -574,7 +585,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set 任务状态
      *
-     * @param statu
+     * @param statu 任务状态
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq statu(String statu) {
         this.statu = statu;
@@ -585,7 +597,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set 补数开始日期
      *
-     * @param jobStartDate
+     * @param jobStartDate 补数开始日期
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq jobStartDate(String jobStartDate) {
         this.jobStartDate = jobStartDate;
@@ -596,7 +609,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set 补数结束日期
      *
-     * @param jobEndDate
+     * @param jobEndDate 补数结束日期
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq jobEndDate(String jobEndDate) {
         this.jobEndDate = jobEndDate;
@@ -607,7 +621,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set 创建时间结束区间
      *
-     * @param createDateBefore
+     * @param createDateBefore 创建时间结束区间
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq createDateBefore(String createDateBefore) {
         this.createDateBefore = createDateBefore;
@@ -618,7 +633,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -629,7 +645,8 @@ public class GpdrListTaskReq  implements java.io.Serializable {
     /**
      * set jobChildType
      *
-     * @param jobChildType
+     * @param jobChildType 
+     * @return GpdrListTaskReq
      */
     public GpdrListTaskReq jobChildType(String jobChildType) {
         this.jobChildType = jobChildType;

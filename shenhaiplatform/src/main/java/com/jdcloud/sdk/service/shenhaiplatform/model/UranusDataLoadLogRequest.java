@@ -118,7 +118,8 @@ public class UranusDataLoadLogRequest extends JdcloudRequest implements java.io.
     /**
      * set 任务id
      *
-     * @param applicationId
+     * @param applicationId 任务id
+     * @return UranusDataLoadLogRequest
      */
     public UranusDataLoadLogRequest applicationId(String applicationId) {
         this.applicationId = applicationId;
@@ -129,7 +130,8 @@ public class UranusDataLoadLogRequest extends JdcloudRequest implements java.io.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusDataLoadLogRequest
      */
     public UranusDataLoadLogRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusDataLoadLogRequest extends JdcloudRequest implements java.io.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusDataLoadLogRequest
      */
     public UranusDataLoadLogRequest appName(String appName) {
         this.appName = appName;

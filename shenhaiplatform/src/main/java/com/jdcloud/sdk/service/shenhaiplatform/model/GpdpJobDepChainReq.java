@@ -86,7 +86,8 @@ public class GpdpJobDepChainReq  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpdpJobDepChainReq
      */
     public GpdpJobDepChainReq jobName(String jobName) {
         this.jobName = jobName;
@@ -97,7 +98,8 @@ public class GpdpJobDepChainReq  implements java.io.Serializable {
     /**
      * set 链路层级
      *
-     * @param level
+     * @param level 链路层级
+     * @return GpdpJobDepChainReq
      */
     public GpdpJobDepChainReq level(Integer level) {
         this.level = level;

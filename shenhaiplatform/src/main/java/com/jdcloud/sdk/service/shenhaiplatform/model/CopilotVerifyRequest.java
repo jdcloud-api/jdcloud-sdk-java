@@ -92,7 +92,8 @@ public class CopilotVerifyRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CopilotVerifyRequest
      */
     public CopilotVerifyRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class CopilotVerifyRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return CopilotVerifyRequest
      */
     public CopilotVerifyRequest appName(String appName) {
         this.appName = appName;

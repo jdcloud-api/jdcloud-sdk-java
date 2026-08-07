@@ -186,7 +186,8 @@ public class UranusScriptVerifyScriptFileDependResult extends JdcloudResult impl
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusScriptVerifyScriptFileDependResult
      */
     public UranusScriptVerifyScriptFileDependResult code(String code) {
         this.code = code;
@@ -197,7 +198,8 @@ public class UranusScriptVerifyScriptFileDependResult extends JdcloudResult impl
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusScriptVerifyScriptFileDependResult
      */
     public UranusScriptVerifyScriptFileDependResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -208,7 +210,8 @@ public class UranusScriptVerifyScriptFileDependResult extends JdcloudResult impl
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusScriptVerifyScriptFileDependResult
      */
     public UranusScriptVerifyScriptFileDependResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -219,7 +222,8 @@ public class UranusScriptVerifyScriptFileDependResult extends JdcloudResult impl
     /**
     * set Object
     *
-    * @param result
+    * @param result Object
+    * @return UranusScriptVerifyScriptFileDependResult
     */
     public UranusScriptVerifyScriptFileDependResult result(List<UranusSchedJobDTO> result) {
         this.result = result;
@@ -230,7 +234,8 @@ public class UranusScriptVerifyScriptFileDependResult extends JdcloudResult impl
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusScriptVerifyScriptFileDependResult
      */
     public UranusScriptVerifyScriptFileDependResult subCode(String subCode) {
         this.subCode = subCode;
@@ -241,7 +246,8 @@ public class UranusScriptVerifyScriptFileDependResult extends JdcloudResult impl
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusScriptVerifyScriptFileDependResult
      */
     public UranusScriptVerifyScriptFileDependResult successed(Boolean successed) {
         this.successed = successed;

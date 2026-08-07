@@ -158,7 +158,8 @@ public class UranusTaskParamReq  implements java.io.Serializable {
     /**
      * set 排序
      *
-     * @param paramSort
+     * @param paramSort 排序
+     * @return UranusTaskParamReq
      */
     public UranusTaskParamReq paramSort(Integer paramSort) {
         this.paramSort = paramSort;
@@ -169,7 +170,8 @@ public class UranusTaskParamReq  implements java.io.Serializable {
     /**
      * set key
      *
-     * @param paramKey
+     * @param paramKey key
+     * @return UranusTaskParamReq
      */
     public UranusTaskParamReq paramKey(String paramKey) {
         this.paramKey = paramKey;
@@ -180,7 +182,8 @@ public class UranusTaskParamReq  implements java.io.Serializable {
     /**
      * set value
      *
-     * @param paramValue
+     * @param paramValue value
+     * @return UranusTaskParamReq
      */
     public UranusTaskParamReq paramValue(String paramValue) {
         this.paramValue = paramValue;
@@ -191,7 +194,8 @@ public class UranusTaskParamReq  implements java.io.Serializable {
     /**
      * set 描述
      *
-     * @param paramDesc
+     * @param paramDesc 描述
+     * @return UranusTaskParamReq
      */
     public UranusTaskParamReq paramDesc(String paramDesc) {
         this.paramDesc = paramDesc;
@@ -202,7 +206,8 @@ public class UranusTaskParamReq  implements java.io.Serializable {
     /**
      * set 参数类型 ORDINARY：普通参数，VARIABLE_IMPORT：变量输入参数，VARIABLE_EXPORT：变量输出参数
      *
-     * @param paramType
+     * @param paramType 参数类型 ORDINARY：普通参数，VARIABLE_IMPORT：变量输入参数，VARIABLE_EXPORT：变量输出参数
+     * @return UranusTaskParamReq
      */
     public UranusTaskParamReq paramType(String paramType) {
         this.paramType = paramType;

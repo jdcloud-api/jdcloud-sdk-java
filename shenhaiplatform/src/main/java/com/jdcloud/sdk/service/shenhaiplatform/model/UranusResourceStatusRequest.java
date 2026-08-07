@@ -144,7 +144,8 @@ public class UranusResourceStatusRequest extends JdcloudRequest implements java.
     /**
      * set 资源名称（支持中文、字母、数字、下划线，不超过50个字符）
      *
-     * @param resourceName
+     * @param resourceName 资源名称（支持中文、字母、数字、下划线，不超过50个字符）
+     * @return UranusResourceStatusRequest
      */
     public UranusResourceStatusRequest resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -155,7 +156,8 @@ public class UranusResourceStatusRequest extends JdcloudRequest implements java.
     /**
      * set 父资源code（如果没有父资源则填ROOT）
      *
-     * @param parentCode
+     * @param parentCode 父资源code（如果没有父资源则填ROOT）
+     * @return UranusResourceStatusRequest
      */
     public UranusResourceStatusRequest parentCode(String parentCode) {
         this.parentCode = parentCode;
@@ -166,7 +168,8 @@ public class UranusResourceStatusRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusResourceStatusRequest
      */
     public UranusResourceStatusRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -177,7 +180,8 @@ public class UranusResourceStatusRequest extends JdcloudRequest implements java.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusResourceStatusRequest
      */
     public UranusResourceStatusRequest appName(String appName) {
         this.appName = appName;

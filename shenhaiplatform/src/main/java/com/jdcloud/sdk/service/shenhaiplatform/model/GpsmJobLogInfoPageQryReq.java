@@ -163,7 +163,8 @@ public class GpsmJobLogInfoPageQryReq  implements java.io.Serializable {
     /**
      * set 页面大小
      *
-     * @param pageSize
+     * @param pageSize 页面大小
+     * @return GpsmJobLogInfoPageQryReq
      */
     public GpsmJobLogInfoPageQryReq pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -174,7 +175,8 @@ public class GpsmJobLogInfoPageQryReq  implements java.io.Serializable {
     /**
      * set 页码
      *
-     * @param pageNum
+     * @param pageNum 页码
+     * @return GpsmJobLogInfoPageQryReq
      */
     public GpsmJobLogInfoPageQryReq pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -185,7 +187,8 @@ public class GpsmJobLogInfoPageQryReq  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpsmJobLogInfoPageQryReq
      */
     public GpsmJobLogInfoPageQryReq jobName(String jobName) {
         this.jobName = jobName;
@@ -196,7 +199,8 @@ public class GpsmJobLogInfoPageQryReq  implements java.io.Serializable {
     /**
      * set job 运行session id
      *
-     * @param jobSessionId
+     * @param jobSessionId job 运行session id
+     * @return GpsmJobLogInfoPageQryReq
      */
     public GpsmJobLogInfoPageQryReq jobSessionId(String jobSessionId) {
         this.jobSessionId = jobSessionId;
@@ -207,7 +211,8 @@ public class GpsmJobLogInfoPageQryReq  implements java.io.Serializable {
     /**
      * set job运行日期
      *
-     * @param txDate
+     * @param txDate job运行日期
+     * @return GpsmJobLogInfoPageQryReq
      */
     public GpsmJobLogInfoPageQryReq txDate(String txDate) {
         this.txDate = txDate;

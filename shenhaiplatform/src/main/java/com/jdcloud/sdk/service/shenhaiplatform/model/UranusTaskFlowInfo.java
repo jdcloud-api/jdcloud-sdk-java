@@ -141,7 +141,8 @@ public class UranusTaskFlowInfo  implements java.io.Serializable {
     /**
      * set 工作流名称
      *
-     * @param flowName
+     * @param flowName 工作流名称
+     * @return UranusTaskFlowInfo
      */
     public UranusTaskFlowInfo flowName(String flowName) {
         this.flowName = flowName;
@@ -152,7 +153,8 @@ public class UranusTaskFlowInfo  implements java.io.Serializable {
     /**
      * set 工作流描述
      *
-     * @param flowDesc
+     * @param flowDesc 工作流描述
+     * @return UranusTaskFlowInfo
      */
     public UranusTaskFlowInfo flowDesc(String flowDesc) {
         this.flowDesc = flowDesc;
@@ -163,7 +165,8 @@ public class UranusTaskFlowInfo  implements java.io.Serializable {
     /**
      * set 工作流所属目录
      *
-     * @param catalogCode
+     * @param catalogCode 工作流所属目录
+     * @return UranusTaskFlowInfo
      */
     public UranusTaskFlowInfo catalogCode(String catalogCode) {
         this.catalogCode = catalogCode;
@@ -174,7 +177,8 @@ public class UranusTaskFlowInfo  implements java.io.Serializable {
     /**
     * set 工作流协同人
     *
-    * @param workers
+    * @param workers 工作流协同人
+    * @return UranusTaskFlowInfo
     */
     public UranusTaskFlowInfo workers(List<String> workers) {
         this.workers = workers;

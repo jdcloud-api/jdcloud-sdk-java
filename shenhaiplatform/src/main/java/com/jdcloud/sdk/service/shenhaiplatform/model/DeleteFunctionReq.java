@@ -62,7 +62,8 @@ public class DeleteFunctionReq  implements java.io.Serializable {
     /**
      * set 函数id
      *
-     * @param functionId
+     * @param functionId 函数id
+     * @return DeleteFunctionReq
      */
     public DeleteFunctionReq functionId(Integer functionId) {
         this.functionId = functionId;

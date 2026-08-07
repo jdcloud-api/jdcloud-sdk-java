@@ -592,7 +592,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 表id
      *
-     * @param id
+     * @param id 表id
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable id(String id) {
         this.id = id;
@@ -603,7 +604,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 项目id
      *
-     * @param projectCode
+     * @param projectCode 项目id
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable projectCode(String projectCode) {
         this.projectCode = projectCode;
@@ -614,7 +616,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 数据库名称
      *
-     * @param database
+     * @param database 数据库名称
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable database(String database) {
         this.database = database;
@@ -625,7 +628,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable tableName(String tableName) {
         this.tableName = tableName;
@@ -636,7 +640,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 表别名
      *
-     * @param tableAlias
+     * @param tableAlias 表别名
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable tableAlias(String tableAlias) {
         this.tableAlias = tableAlias;
@@ -647,7 +652,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 表类型：MANAGED_TABLE，EXTERNAL_TABLE
      *
-     * @param tableType
+     * @param tableType 表类型：MANAGED_TABLE，EXTERNAL_TABLE
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable tableType(String tableType) {
         this.tableType = tableType;
@@ -658,7 +664,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 创建人
      *
-     * @param creator
+     * @param creator 创建人
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable creator(String creator) {
         this.creator = creator;
@@ -669,7 +676,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 元数据类型：HIVE，MYSQL
      *
-     * @param metaType
+     * @param metaType 元数据类型：HIVE，MYSQL
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable metaType(String metaType) {
         this.metaType = metaType;
@@ -680,7 +688,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable createTime(String createTime) {
         this.createTime = createTime;
@@ -691,7 +700,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 最后修改时间
      *
-     * @param lastModifyTime
+     * @param lastModifyTime 最后修改时间
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable lastModifyTime(String lastModifyTime) {
         this.lastModifyTime = lastModifyTime;
@@ -702,7 +712,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 表存储路径
      *
-     * @param location
+     * @param location 表存储路径
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable location(String location) {
         this.location = location;
@@ -713,7 +724,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 输入格式
      *
-     * @param inputFormat
+     * @param inputFormat 输入格式
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable inputFormat(String inputFormat) {
         this.inputFormat = inputFormat;
@@ -724,7 +736,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 输出格式
      *
-     * @param outputFormat
+     * @param outputFormat 输出格式
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable outputFormat(String outputFormat) {
         this.outputFormat = outputFormat;
@@ -735,7 +748,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
     * set 用户打标
     *
-    * @param userDefineTags
+    * @param userDefineTags 用户打标
+    * @return JtlasSearchTable
     */
     public JtlasSearchTable userDefineTags(List<String> userDefineTags) {
         this.userDefineTags = userDefineTags;
@@ -746,7 +760,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
     * set 负责人
     *
-    * @param collectPersons
+    * @param collectPersons 负责人
+    * @return JtlasSearchTable
     */
     public JtlasSearchTable collectPersons(List<String> collectPersons) {
         this.collectPersons = collectPersons;
@@ -757,7 +772,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 是否收藏
      *
-     * @param hasCollected
+     * @param hasCollected 是否收藏
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable hasCollected(Boolean hasCollected) {
         this.hasCollected = hasCollected;
@@ -768,7 +784,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 点击数
      *
-     * @param clickCount
+     * @param clickCount 点击数
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable clickCount(Integer clickCount) {
         this.clickCount = clickCount;
@@ -779,7 +796,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 最近一次分区
      *
-     * @param latestPartition
+     * @param latestPartition 最近一次分区
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable latestPartition(JtlasSearchTablePartition latestPartition) {
         this.latestPartition = latestPartition;
@@ -790,7 +808,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
     * set columns
     *
-    * @param columns
+    * @param columns 
+    * @return JtlasSearchTable
     */
     public JtlasSearchTable columns(List<JtlasSearchTableColumn> columns) {
         this.columns = columns;
@@ -801,7 +820,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
     * set privileges
     *
-    * @param privileges
+    * @param privileges 
+    * @return JtlasSearchTable
     */
     public JtlasSearchTable privileges(List<JtlasSearchTablePrivilege> privileges) {
         this.privileges = privileges;
@@ -812,7 +832,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
     * set params
     *
-    * @param params
+    * @param params 
+    * @return JtlasSearchTable
     */
     public JtlasSearchTable params(List<JtlasSearchTableParam> params) {
         this.params = params;
@@ -823,7 +844,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
     * set 分桶字段名称
     *
-    * @param bucketCols
+    * @param bucketCols 分桶字段名称
+    * @return JtlasSearchTable
     */
     public JtlasSearchTable bucketCols(List<String> bucketCols) {
         this.bucketCols = bucketCols;
@@ -834,7 +856,8 @@ public class JtlasSearchTable  implements java.io.Serializable {
     /**
      * set 分桶个数
      *
-     * @param bucketNum
+     * @param bucketNum 分桶个数
+     * @return JtlasSearchTable
      */
     public JtlasSearchTable bucketNum(String bucketNum) {
         this.bucketNum = bucketNum;

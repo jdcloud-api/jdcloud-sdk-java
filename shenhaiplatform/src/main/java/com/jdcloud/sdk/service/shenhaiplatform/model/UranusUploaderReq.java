@@ -233,7 +233,8 @@ public class UranusUploaderReq  implements java.io.Serializable {
     /**
      * set 文件类型
      *
-     * @param fileType
+     * @param fileType 文件类型
+     * @return UranusUploaderReq
      */
     public UranusUploaderReq fileType(Integer fileType) {
         this.fileType = fileType;
@@ -244,7 +245,8 @@ public class UranusUploaderReq  implements java.io.Serializable {
     /**
      * set 是否spark-jar的管理模块,spark-jar操作hdfs通过字段区分
      *
-     * @param isJarManagement
+     * @param isJarManagement 是否spark-jar的管理模块,spark-jar操作hdfs通过字段区分
+     * @return UranusUploaderReq
      */
     public UranusUploaderReq isJarManagement(Boolean isJarManagement) {
         this.isJarManagement = isJarManagement;
@@ -255,7 +257,8 @@ public class UranusUploaderReq  implements java.io.Serializable {
     /**
      * set 文件Code
      *
-     * @param fileCode
+     * @param fileCode 文件Code
+     * @return UranusUploaderReq
      */
     public UranusUploaderReq fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -266,7 +269,8 @@ public class UranusUploaderReq  implements java.io.Serializable {
     /**
      * set 父节点 Code
      *
-     * @param parentCode
+     * @param parentCode 父节点 Code
+     * @return UranusUploaderReq
      */
     public UranusUploaderReq parentCode(String parentCode) {
         this.parentCode = parentCode;
@@ -277,7 +281,8 @@ public class UranusUploaderReq  implements java.io.Serializable {
     /**
      * set 文件名称
      *
-     * @param fileName
+     * @param fileName 文件名称
+     * @return UranusUploaderReq
      */
     public UranusUploaderReq fileName(String fileName) {
         this.fileName = fileName;
@@ -288,7 +293,8 @@ public class UranusUploaderReq  implements java.io.Serializable {
     /**
      * set 任务流Code
      *
-     * @param flowCode
+     * @param flowCode 任务流Code
+     * @return UranusUploaderReq
      */
     public UranusUploaderReq flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -299,7 +305,8 @@ public class UranusUploaderReq  implements java.io.Serializable {
     /**
      * set 文件夹上传的时候文件的相对路径属性
      *
-     * @param relativePath
+     * @param relativePath 文件夹上传的时候文件的相对路径属性
+     * @return UranusUploaderReq
      */
     public UranusUploaderReq relativePath(String relativePath) {
         this.relativePath = relativePath;
@@ -310,7 +317,8 @@ public class UranusUploaderReq  implements java.io.Serializable {
     /**
      * set 是否上传完成 0 上传取消 1 上传完成
      *
-     * @param isUpload
+     * @param isUpload 是否上传完成 0 上传取消 1 上传完成
+     * @return UranusUploaderReq
      */
     public UranusUploaderReq isUpload(Integer isUpload) {
         this.isUpload = isUpload;

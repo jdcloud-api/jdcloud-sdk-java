@@ -304,7 +304,8 @@ public class GpjsJobExeResultReq  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpjsJobExeResultReq
      */
     public GpjsJobExeResultReq jobName(String jobName) {
         this.jobName = jobName;
@@ -315,7 +316,8 @@ public class GpjsJobExeResultReq  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GpjsJobExeResultReq
      */
     public GpjsJobExeResultReq txDate(String txDate) {
         this.txDate = txDate;
@@ -326,7 +328,8 @@ public class GpjsJobExeResultReq  implements java.io.Serializable {
     /**
      * set 作业执行会话ID
      *
-     * @param sessionId
+     * @param sessionId 作业执行会话ID
+     * @return GpjsJobExeResultReq
      */
     public GpjsJobExeResultReq sessionId(Integer sessionId) {
         this.sessionId = sessionId;
@@ -337,7 +340,8 @@ public class GpjsJobExeResultReq  implements java.io.Serializable {
     /**
      * set 运行服务器名称
      *
-     * @param serverName
+     * @param serverName 运行服务器名称
+     * @return GpjsJobExeResultReq
      */
     public GpjsJobExeResultReq serverName(String serverName) {
         this.serverName = serverName;
@@ -348,7 +352,8 @@ public class GpjsJobExeResultReq  implements java.io.Serializable {
     /**
      * set 作业运行开始时间
      *
-     * @param startTime
+     * @param startTime 作业运行开始时间
+     * @return GpjsJobExeResultReq
      */
     public GpjsJobExeResultReq startTime(String startTime) {
         this.startTime = startTime;
@@ -359,7 +364,8 @@ public class GpjsJobExeResultReq  implements java.io.Serializable {
     /**
      * set 作业运行结束时间
      *
-     * @param endTime
+     * @param endTime 作业运行结束时间
+     * @return GpjsJobExeResultReq
      */
     public GpjsJobExeResultReq endTime(String endTime) {
         this.endTime = endTime;
@@ -370,7 +376,8 @@ public class GpjsJobExeResultReq  implements java.io.Serializable {
     /**
      * set 作业执行状态
      *
-     * @param jobStatus
+     * @param jobStatus 作业执行状态
+     * @return GpjsJobExeResultReq
      */
     public GpjsJobExeResultReq jobStatus(String jobStatus) {
         this.jobStatus = jobStatus;
@@ -381,7 +388,8 @@ public class GpjsJobExeResultReq  implements java.io.Serializable {
     /**
      * set 作业返回码
      *
-     * @param returnCode
+     * @param returnCode 作业返回码
+     * @return GpjsJobExeResultReq
      */
     public GpjsJobExeResultReq returnCode(Integer returnCode) {
         this.returnCode = returnCode;
@@ -392,7 +400,8 @@ public class GpjsJobExeResultReq  implements java.io.Serializable {
     /**
      * set 作业执行影响记录条数
      *
-     * @param affectRows
+     * @param affectRows 作业执行影响记录条数
+     * @return GpjsJobExeResultReq
      */
     public GpjsJobExeResultReq affectRows(Long affectRows) {
         this.affectRows = affectRows;
@@ -403,7 +412,8 @@ public class GpjsJobExeResultReq  implements java.io.Serializable {
     /**
      * set 作业执行警告代码
      *
-     * @param warningCode
+     * @param warningCode 作业执行警告代码
+     * @return GpjsJobExeResultReq
      */
     public GpjsJobExeResultReq warningCode(Integer warningCode) {
         this.warningCode = warningCode;
@@ -414,7 +424,8 @@ public class GpjsJobExeResultReq  implements java.io.Serializable {
     /**
     * set 作业执行集群job app id
     *
-    * @param pids
+    * @param pids 作业执行集群job app id
+    * @return GpjsJobExeResultReq
     */
     public GpjsJobExeResultReq pids(List<String> pids) {
         this.pids = pids;

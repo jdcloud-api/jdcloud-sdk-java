@@ -86,7 +86,8 @@ public class JobKillParam  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return JobKillParam
      */
     public JobKillParam jobName(String jobName) {
         this.jobName = jobName;
@@ -97,7 +98,8 @@ public class JobKillParam  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return JobKillParam
      */
     public JobKillParam txDate(String txDate) {
         this.txDate = txDate;

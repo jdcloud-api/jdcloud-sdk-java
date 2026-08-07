@@ -182,7 +182,8 @@ public class UranusResultTaskInfoPrePublishRes  implements java.io.Serializable 
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusResultTaskInfoPrePublishRes
      */
     public UranusResultTaskInfoPrePublishRes code(String code) {
         this.code = code;
@@ -193,7 +194,8 @@ public class UranusResultTaskInfoPrePublishRes  implements java.io.Serializable 
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusResultTaskInfoPrePublishRes
      */
     public UranusResultTaskInfoPrePublishRes errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -204,7 +206,8 @@ public class UranusResultTaskInfoPrePublishRes  implements java.io.Serializable 
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusResultTaskInfoPrePublishRes
      */
     public UranusResultTaskInfoPrePublishRes errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -215,7 +218,8 @@ public class UranusResultTaskInfoPrePublishRes  implements java.io.Serializable 
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return UranusResultTaskInfoPrePublishRes
      */
     public UranusResultTaskInfoPrePublishRes result(UranusTaskInfoPrePublishRes result) {
         this.result = result;
@@ -226,7 +230,8 @@ public class UranusResultTaskInfoPrePublishRes  implements java.io.Serializable 
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusResultTaskInfoPrePublishRes
      */
     public UranusResultTaskInfoPrePublishRes subCode(String subCode) {
         this.subCode = subCode;
@@ -237,7 +242,8 @@ public class UranusResultTaskInfoPrePublishRes  implements java.io.Serializable 
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusResultTaskInfoPrePublishRes
      */
     public UranusResultTaskInfoPrePublishRes successed(Boolean successed) {
         this.successed = successed;

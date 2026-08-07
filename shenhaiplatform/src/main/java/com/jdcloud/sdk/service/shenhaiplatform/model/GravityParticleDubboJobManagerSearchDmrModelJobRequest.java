@@ -166,7 +166,8 @@ public class GravityParticleDubboJobManagerSearchDmrModelJobRequest extends Jdcl
     /**
      * set 作业Id
      *
-     * @param jobId
+     * @param jobId 作业Id
+     * @return GravityParticleDubboJobManagerSearchDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSearchDmrModelJobRequest jobId(Integer jobId) {
         this.jobId = jobId;
@@ -177,7 +178,8 @@ public class GravityParticleDubboJobManagerSearchDmrModelJobRequest extends Jdcl
     /**
     * set 作业Id列表
     *
-    * @param jobIdList
+    * @param jobIdList 作业Id列表
+    * @return GravityParticleDubboJobManagerSearchDmrModelJobRequest
     */
     public GravityParticleDubboJobManagerSearchDmrModelJobRequest jobIdList(List<Integer> jobIdList) {
         this.jobIdList = jobIdList;
@@ -188,7 +190,8 @@ public class GravityParticleDubboJobManagerSearchDmrModelJobRequest extends Jdcl
     /**
      * set 删除标识
      *
-     * @param deleteFlag
+     * @param deleteFlag 删除标识
+     * @return GravityParticleDubboJobManagerSearchDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSearchDmrModelJobRequest deleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;
@@ -199,7 +202,8 @@ public class GravityParticleDubboJobManagerSearchDmrModelJobRequest extends Jdcl
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerSearchDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSearchDmrModelJobRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -210,7 +214,8 @@ public class GravityParticleDubboJobManagerSearchDmrModelJobRequest extends Jdcl
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerSearchDmrModelJobRequest
      */
     public GravityParticleDubboJobManagerSearchDmrModelJobRequest appName(String appName) {
         this.appName = appName;

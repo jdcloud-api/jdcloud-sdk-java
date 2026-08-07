@@ -111,7 +111,8 @@ public class JtlasPageSearchTablePrivilegesResult extends JdcloudResult implemen
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasPageSearchTablePrivilegesResult
      */
     public JtlasPageSearchTablePrivilegesResult code(String code) {
         this.code = code;
@@ -122,7 +123,8 @@ public class JtlasPageSearchTablePrivilegesResult extends JdcloudResult implemen
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasPageSearchTablePrivilegesResult
      */
     public JtlasPageSearchTablePrivilegesResult message(String message) {
         this.message = message;
@@ -133,7 +135,8 @@ public class JtlasPageSearchTablePrivilegesResult extends JdcloudResult implemen
     /**
      * set 节点数据
      *
-     * @param result
+     * @param result 节点数据
+     * @return JtlasPageSearchTablePrivilegesResult
      */
     public JtlasPageSearchTablePrivilegesResult result(Object result) {
         this.result = result;

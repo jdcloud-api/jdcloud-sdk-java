@@ -118,7 +118,8 @@ public class UranusResourceListRootRequest extends JdcloudRequest implements jav
     /**
      * set 环境信息
      *
-     * @param env
+     * @param env 环境信息
+     * @return UranusResourceListRootRequest
      */
     public UranusResourceListRootRequest env(String env) {
         this.env = env;
@@ -129,7 +130,8 @@ public class UranusResourceListRootRequest extends JdcloudRequest implements jav
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusResourceListRootRequest
      */
     public UranusResourceListRootRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusResourceListRootRequest extends JdcloudRequest implements jav
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusResourceListRootRequest
      */
     public UranusResourceListRootRequest appName(String appName) {
         this.appName = appName;

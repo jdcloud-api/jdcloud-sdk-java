@@ -147,7 +147,8 @@ public class UranusScriptParamsRequest extends JdcloudRequest implements java.io
     /**
      * set 文件Code
      *
-     * @param fileCode
+     * @param fileCode 文件Code
+     * @return UranusScriptParamsRequest
      */
     public UranusScriptParamsRequest fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -158,7 +159,8 @@ public class UranusScriptParamsRequest extends JdcloudRequest implements java.io
     /**
     * set 脚本参数 list
     *
-    * @param params
+    * @param params 脚本参数 list
+    * @return UranusScriptParamsRequest
     */
     public UranusScriptParamsRequest params(List<UranusTaskParamReq> params) {
         this.params = params;
@@ -169,7 +171,8 @@ public class UranusScriptParamsRequest extends JdcloudRequest implements java.io
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusScriptParamsRequest
      */
     public UranusScriptParamsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -180,7 +183,8 @@ public class UranusScriptParamsRequest extends JdcloudRequest implements java.io
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusScriptParamsRequest
      */
     public UranusScriptParamsRequest appName(String appName) {
         this.appName = appName;

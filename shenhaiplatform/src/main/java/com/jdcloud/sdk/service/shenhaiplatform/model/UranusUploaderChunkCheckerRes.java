@@ -88,7 +88,8 @@ public class UranusUploaderChunkCheckerRes  implements java.io.Serializable {
     /**
      * set 是否已经完成上传
      *
-     * @param uploadedAll
+     * @param uploadedAll 是否已经完成上传
+     * @return UranusUploaderChunkCheckerRes
      */
     public UranusUploaderChunkCheckerRes uploadedAll(Boolean uploadedAll) {
         this.uploadedAll = uploadedAll;
@@ -99,7 +100,8 @@ public class UranusUploaderChunkCheckerRes  implements java.io.Serializable {
     /**
     * set 已上传的chunkNumber列表
     *
-    * @param uploadedChunkNumbers
+    * @param uploadedChunkNumbers 已上传的chunkNumber列表
+    * @return UranusUploaderChunkCheckerRes
     */
     public UranusUploaderChunkCheckerRes uploadedChunkNumbers(List<Integer> uploadedChunkNumbers) {
         this.uploadedChunkNumbers = uploadedChunkNumbers;

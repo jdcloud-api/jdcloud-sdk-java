@@ -114,7 +114,8 @@ public class CopilotUtteranceListResult extends JdcloudResult implements java.io
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return CopilotUtteranceListResult
      */
     public CopilotUtteranceListResult code(String code) {
         this.code = code;
@@ -125,7 +126,8 @@ public class CopilotUtteranceListResult extends JdcloudResult implements java.io
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return CopilotUtteranceListResult
      */
     public CopilotUtteranceListResult message(String message) {
         this.message = message;
@@ -136,7 +138,8 @@ public class CopilotUtteranceListResult extends JdcloudResult implements java.io
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return CopilotUtteranceListResult
     */
     public CopilotUtteranceListResult result(List<UtteranceVo> result) {
         this.result = result;

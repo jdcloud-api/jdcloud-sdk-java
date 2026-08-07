@@ -144,7 +144,8 @@ public class UranusTableDeleteRequest extends JdcloudRequest implements java.io.
     /**
      * set 根据表名删除表
      *
-     * @param table
+     * @param table 根据表名删除表
+     * @return UranusTableDeleteRequest
      */
     public UranusTableDeleteRequest table(String table) {
         this.table = table;
@@ -155,7 +156,8 @@ public class UranusTableDeleteRequest extends JdcloudRequest implements java.io.
     /**
      * set 环境信息，dev 开发、prod 生产
      *
-     * @param env
+     * @param env 环境信息，dev 开发、prod 生产
+     * @return UranusTableDeleteRequest
      */
     public UranusTableDeleteRequest env(String env) {
         this.env = env;
@@ -166,7 +168,8 @@ public class UranusTableDeleteRequest extends JdcloudRequest implements java.io.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTableDeleteRequest
      */
     public UranusTableDeleteRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -177,7 +180,8 @@ public class UranusTableDeleteRequest extends JdcloudRequest implements java.io.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTableDeleteRequest
      */
     public UranusTableDeleteRequest appName(String appName) {
         this.appName = appName;

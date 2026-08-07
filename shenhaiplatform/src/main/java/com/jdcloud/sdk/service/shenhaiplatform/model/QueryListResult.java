@@ -186,7 +186,8 @@ public class QueryListResult extends JdcloudResult implements java.io.Serializab
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return QueryListResult
      */
     public QueryListResult code(String code) {
         this.code = code;
@@ -197,7 +198,8 @@ public class QueryListResult extends JdcloudResult implements java.io.Serializab
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return QueryListResult
      */
     public QueryListResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -208,7 +210,8 @@ public class QueryListResult extends JdcloudResult implements java.io.Serializab
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return QueryListResult
      */
     public QueryListResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -219,7 +222,8 @@ public class QueryListResult extends JdcloudResult implements java.io.Serializab
     /**
     * set Object
     *
-    * @param result
+    * @param result Object
+    * @return QueryListResult
     */
     public QueryListResult result(List<UranusDictRes> result) {
         this.result = result;
@@ -230,7 +234,8 @@ public class QueryListResult extends JdcloudResult implements java.io.Serializab
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return QueryListResult
      */
     public QueryListResult subCode(String subCode) {
         this.subCode = subCode;
@@ -241,7 +246,8 @@ public class QueryListResult extends JdcloudResult implements java.io.Serializab
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return QueryListResult
      */
     public QueryListResult successed(Boolean successed) {
         this.successed = successed;

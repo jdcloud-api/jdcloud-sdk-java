@@ -31,24 +31,657 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.shenhaiplatform.model.PackagePublishObjRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.PackagePublishObjResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.PackagePublishObjExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusExtraRunnerStopRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusExtraRunnerStopResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusExtraRunnerStopExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeSaveRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeSaveResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeSaveExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskHistoryListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskHistoryListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskHistoryListExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseQueryTablesByDatabaseNameRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseQueryTablesByDatabaseNameResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasWarehouseQueryTablesByDatabaseNameExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDeployAndEnableRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDeployAndEnableResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDeployAndEnableExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityRerunRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityRerunResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityRerunExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.DescribePublishPkgsRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.DescribePublishPkgsResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.DescribePublishPkgsExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceListRootRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceListRootResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceListRootExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListDependableRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListDependableResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicListDependableExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskGetTaskStatusRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskGetTaskStatusResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskGetTaskStatusExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerValidateJobRulesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerValidateJobRulesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerValidateJobRulesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobGetScriptExtensionsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobGetScriptExtensionsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobGetScriptExtensionsExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusSparkTaskSparkVersionRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusSparkTaskSparkVersionResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusSparkTaskSparkVersionExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorSupplementPlanCreateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorSupplementPlanCreateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorSupplementPlanCreateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceGetBriefByCodesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceGetBriefByCodesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceGetBriefByCodesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheForceRunJobInstRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheForceRunJobInstResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobscheForceRunJobInstExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorTasksRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorTasksResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorTasksExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptStartersRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptStartersResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptStartersExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogListAllBizRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogListAllBizResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskCatalogListAllBizExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskImageParamInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskImageParamInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskImageParamInfoUpdateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDependInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDependInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDependInfoUpdateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorRunManualTaskInstanceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorRunManualTaskInstanceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorRunManualTaskInstanceExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.SuccessInstancePerHourRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.SuccessInstancePerHourResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.SuccessInstancePerHourExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceDeleteRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceDeleteResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceDeleteExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotUtteranceRecommendRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotUtteranceRecommendResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotUtteranceRecommendExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasSubscribeTableRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasSubscribeTableResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasSubscribeTableExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetTaskTypeStatisticsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetTaskTypeStatisticsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GetTaskTypeStatisticsExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeSnatchLockRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeSnatchLockResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeSnatchLockExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskObjectMoveRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskObjectMoveResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskObjectMoveExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobFailCountRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobFailCountResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobMonitorJobFailCountExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskRedeployAndEnableRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskRedeployAndEnableResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskRedeployAndEnableExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicUpdateOutputParamRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicUpdateOutputParamResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicUpdateOutputParamExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ParamBatchSaveRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ParamBatchSaveResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ParamBatchSaveExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheProcessJobExeRstRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheProcessJobExeRstResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobscheProcessJobExeRstExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetEngineTemplateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetEngineTemplateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerGetEngineTemplateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstancesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstancesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorInstancesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JobPendingInstanceRankingRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JobPendingInstanceRankingResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.JobPendingInstanceRankingExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDebugExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorRerunInstanceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorRerunInstanceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorRerunInstanceExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicCreateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicCreateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicCreateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetUserRolesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetUserRolesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetUserRolesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasDestroyRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasDestroyResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasDestroyExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceVerifyUserIsManagerRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceVerifyUserIsManagerResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceVerifyUserIsManagerExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobCountInfoRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobCountInfoResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobMonitorJobCountInfoExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDataLoadRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDataLoadResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableDataLoadExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepDetailRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepDetailResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobDepDetailExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobUnsuccessRankingRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobUnsuccessRankingResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobMonitorJobUnsuccessRankingExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableLikeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableLikeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableLikeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotUtteranceStopRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotUtteranceStopResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotUtteranceStopExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionDeleteRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionDeleteResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFunctionDeleteExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoAnalysisDependJobRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoAnalysisDependJobResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoAnalysisDependJobExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeUpdateJobNameRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeUpdateJobNameResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeUpdateJobNameExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeUpdateNodeDataRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeUpdateNodeDataResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeUpdateNodeDataExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictSupplementResourceGroupStrategyRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictSupplementResourceGroupStrategyResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorDictSupplementResourceGroupStrategyExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceStatusRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceStatusResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceStatusExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetFailedInstancesReasonRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetFailedInstancesReasonResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GetFailedInstancesReasonExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptParamsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptParamsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptParamsExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSaveJobScriptRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSaveJobScriptResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerSaveJobScriptExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasSearchColumnLineageRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasSearchColumnLineageResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasSearchColumnLineageExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskOrFlowNodeDeleteRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskOrFlowNodeDeleteResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskOrFlowNodeDeleteExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasForeignTableListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasForeignTableListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasForeignTableListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusUdfListFunctionRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusUdfListFunctionResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusUdfListFunctionExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheResetJobInstStatusRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheResetJobInstStatusResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobscheResetJobInstStatusExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskKillRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskKillResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskKillExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityListJobRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityListJobResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityListJobExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleModelCalcCalcJobDetailRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleModelCalcCalcJobDetailResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleModelCalcCalcJobDetailExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetEngineByWorkspaceCodeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetEngineByWorkspaceCodeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GetEngineByWorkspaceCodeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.DescribePublishObjRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.DescribePublishObjResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.DescribePublishObjExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetEngineDetailsByWorkspaceCodeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetEngineDetailsByWorkspaceCodeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GetEngineDetailsByWorkspaceCodeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobGetConditionInfoRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobGetConditionInfoResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobGetConditionInfoExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusCatalogUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusCatalogUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusCatalogUpdateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetMgrJobByJobeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetMgrJobByJobeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerGetMgrJobByJobeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasPageSearchTablePrivilegesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasPageSearchTablePrivilegesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasPageSearchTablePrivilegesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceSaveInfoRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceSaveInfoResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceSaveInfoExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugLogRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugLogResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDebugLogExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoOnLineConfigRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoOnLineConfigResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoOnLineConfigExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.DeletePublishObjRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.DeletePublishObjResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.DeletePublishObjExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFullTextQueryRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFullTextQueryResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskFullTextQueryExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchByJobNameRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchByJobNameResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerSearchByJobNameExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityListTxDateStatusRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityListTxDateStatusResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityListTxDateStatusExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskFlowUpdateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobMonitorJobStatusCountRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobMonitorJobStatusCountResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobMonitorJobStatusCountExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerDeleteJobScriptRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerDeleteJobScriptResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerDeleteJobScriptExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionCheckRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionCheckResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFunctionCheckExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublishOneRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublishOneResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublishOneExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptQueriesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptQueriesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptQueriesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowPrepublishNodesSortRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowPrepublishNodesSortResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFlowPrepublishNodesSortExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictTaskScheduleCyclesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictTaskScheduleCyclesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorDictTaskScheduleCyclesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskTypeListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskTypeListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskTypeListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterGetRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterGetResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubClusterGetExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchSchedJobRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchSchedJobResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerSearchSchedJobExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceDeleteMemberRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceDeleteMemberResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceDeleteMemberExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceDownloadUrlRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceDownloadUrlResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceDownloadUrlExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceGetDetailByPrefixRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceGetDetailByPrefixResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceGetDetailByPrefixExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDDLRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDDLResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableDDLExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoHistoryListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoHistoryListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoHistoryListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobSuccessCountRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobSuccessCountResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobMonitorJobSuccessCountExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotChatClearRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotChatClearResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotChatClearExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseFuzzyQueryTablesByTableNameRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseFuzzyQueryTablesByTableNameResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasWarehouseFuzzyQueryTablesByTableNameExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceUpdateUserRoleRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceUpdateUserRoleResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceUpdateUserRoleExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetParentChainJobsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetParentChainJobsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobDepGetParentChainJobsExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionCreateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionCreateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFunctionCreateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusDataLoadPreviewRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusDataLoadPreviewResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusDataLoadPreviewExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptStopRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptStopResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptStopExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskUpdateStatusListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskUpdateStatusListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskUpdateStatusListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterMetaListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterMetaListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubClusterMetaListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleSchedDictGetJobTypeRRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleSchedDictGetJobTypeRResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleSchedDictGetJobTypeRExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerDeleteAllByWorkspaceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerDeleteAllByWorkspaceExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.FailedHistoriesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.FailedHistoriesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.FailedHistoriesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTablePublishToPublishCenterRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTablePublishToPublishCenterResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTablePublishToPublishCenterExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStorageTableDDLRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStorageTableDDLResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubStorageTableDDLExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoSaveRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoSaveResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoSaveExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoGetTaskCodeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoGetTaskCodeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoGetTaskCodeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicDebugRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicDebugResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicDebugExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusCatalogQueryListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusCatalogQueryListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusCatalogQueryListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListDatasourcesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListDatasourcesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicListDatasourcesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskAllInfoRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskAllInfoResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskAllInfoExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDependableListFuzzRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDependableListFuzzResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDependableListFuzzExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowListTreeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowListTreeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskFlowListTreeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotUtteranceListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotUtteranceListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotUtteranceListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusWorkFlowDirDeleteRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusWorkFlowDirDeleteResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusWorkFlowDirDeleteExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusLoopTaskElementDelimitersRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusLoopTaskElementDelimitersResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusLoopTaskElementDelimitersExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceAppendFileRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceAppendFileResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceAppendFileExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPipeShowCreateTableRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPipeShowCreateTableResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPipeShowCreateTableExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotChatHistoryRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotChatHistoryResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotChatHistoryExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowSearchNodeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowSearchNodeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFlowSearchNodeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoLockDetailRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoLockDetailResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoLockDetailExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobLogRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobLogResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityJobLogExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasPageSearchTablePartitionsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasPageSearchTablePartitionsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasPageSearchTablePartitionsExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobHisRunAddBathTaskRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobHisRunAddBathTaskResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobHisRunAddBathTaskExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterCreateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterCreateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubClusterCreateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPipeCreateTableRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPipeCreateTableResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPipeCreateTableExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetScriptInfoTypeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetScriptInfoTypeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerGetScriptInfoTypeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPrePublishRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPrePublishResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPrePublishExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptQueryParamsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptQueryParamsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptQueryParamsExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceSyncWsProductOrderRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceSyncWsProductOrderResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceSyncWsProductOrderExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobPropertyRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobPropertyResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityJobPropertyExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDataDownloadRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDataDownloadResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableDataDownloadExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowSaveRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowSaveResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskFlowSaveExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceSyncRechargeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceSyncRechargeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceSyncRechargeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstanceOperationLogsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstanceOperationLogsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorInstanceOperationLogsExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugResultListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugResultListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDebugResultListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoRePublishRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoRePublishResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoRePublishExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicUpdateInputParamRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicUpdateInputParamResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicUpdateInputParamExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobJobCompletionInfoRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobJobCompletionInfoResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobJobCompletionInfoExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionListCatalogRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionListCatalogResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFunctionListCatalogExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasPageSearchTablesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasPageSearchTablesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasPageSearchTablesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstanceScheduleLogsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstanceScheduleLogsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorInstanceScheduleLogsExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchDmrModelJobRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchDmrModelJobResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerSearchDmrModelJobExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.DescribePublishPkgRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.DescribePublishPkgResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.DescribePublishPkgExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicUpdateScriptRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicUpdateScriptResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicUpdateScriptExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogQueryRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogQueryResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskCatalogQueryExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetProjectRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetProjectResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetProjectExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskAlarmInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskAlarmInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskAlarmInfoUpdateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetScheduledInstancesCountPerHourRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetScheduledInstancesCountPerHourResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GetScheduledInstancesCountPerHourExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTablePublishRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTablePublishResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTablePublishExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictInstanceDisplayStatesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictInstanceDisplayStatesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorDictInstanceDisplayStatesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ParamDeleteRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ParamDeleteResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ParamDeleteExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ParamTypesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ParamTypesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ParamTypesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ParamListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ParamListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ParamListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDelimitersRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDelimitersResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableDelimitersExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicPageListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicPageListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicPageListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleConfigUserMatchUserRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleConfigUserMatchUserResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleConfigUserMatchUserExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStorageSummaryRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStorageSummaryResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubStorageSummaryExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeDeleteRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeDeleteResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeDeleteExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugParamInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugParamInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDebugParamInfoUpdateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetChildTreedRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetChildTreedResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobDepGetChildTreedExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptRunLogLogContentRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptRunLogLogContentResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptRunLogLogContentExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusDictTableCodeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusDictTableCodeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusDictTableCodeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskExtraRunnerDetailRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskExtraRunnerDetailResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskExtraRunnerDetailExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchJobIdRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchJobIdResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerSearchJobIdExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictSupplementMethodRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictSupplementMethodResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorDictSupplementMethodExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityOneClickRerunPreviewRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityOneClickRerunPreviewResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityOneClickRerunPreviewExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorSupplementPlanDeleteRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorSupplementPlanDeleteResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorSupplementPlanDeleteExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetInstancesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetInstancesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GetInstancesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicConfigDependRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicConfigDependResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicConfigDependExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.QueryStatisticsInSelectTimeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.QueryStatisticsInSelectTimeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.QueryStatisticsInSelectTimeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepChildJobsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepChildJobsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobDepChildJobsExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowNodeCreateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowNodeCreateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFlowNodeCreateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeBatchImportRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeBatchImportResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeBatchImportExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceListDirectoryRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceListDirectoryResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceListDirectoryExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerJobQueryRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerJobQueryResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerJobQueryExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.EngineCreateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.EngineCreateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.EngineCreateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedResetStsDoneRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedResetStsDoneResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobSchedResetStsDoneExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowUpdateAllCanvasRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowUpdateAllCanvasResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFlowUpdateAllCanvasExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListImagesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListImagesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicListImagesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptSyntaxCheckRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptSyntaxCheckResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptSyntaxCheckExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotModelListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotModelListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotModelListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptGetScriptRunResultRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptGetScriptRunResultResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptGetScriptRunResultExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPagePublishRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPagePublishResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPagePublishExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetChildDependenciesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetChildDependenciesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobDepGetChildDependenciesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictSupplementPlanStatesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictSupplementPlanStatesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorDictSupplementPlanStatesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableSourcesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableSourcesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableSourcesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasGrantTablePrivilegesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasGrantTablePrivilegesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasGrantTablePrivilegesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetProjectBundleRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetProjectBundleResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetProjectBundleExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicConfigAlarmRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicConfigAlarmResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicConfigAlarmExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceBundleProjectRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceBundleProjectResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceBundleProjectExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskHistoryDetailRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskHistoryDetailResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskHistoryDetailExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetResourcesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetResourcesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetResourcesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogCreateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogCreateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskCatalogCreateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubDutyAddWatchmanRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubDutyAddWatchmanResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubDutyAddWatchmanExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceDeleteRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceDeleteResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceDeleteExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobHisRunCloseTaskRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobHisRunCloseTaskResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobHisRunCloseTaskExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSaveDmrModelJobRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSaveDmrModelJobResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerSaveDmrModelJobExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.FailedInstancePerHourRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.FailedInstancePerHourResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.FailedInstancePerHourExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerCalcJobDetailRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerCalcJobDetailResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerCalcJobDetailExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleModelCalcListJobRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleModelCalcListJobResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleModelCalcListJobExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorSupplementInstancesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorSupplementInstancesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorSupplementInstancesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JobFailedInstanceRankingRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JobFailedInstanceRankingResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.JobFailedInstanceRankingExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceUnbundleProjectRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceUnbundleProjectResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceUnbundleProjectExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityOneClickRerunResubmitRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityOneClickRerunResubmitResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityOneClickRerunResubmitExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobListJobInstanceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobListJobInstanceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobListJobInstanceExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptRunLogContentRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptRunLogContentResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptRunLogContentExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.PackagePublishObjRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.PackagePublishObjResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.PackagePublishObjExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusExtraRunnerStopRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusExtraRunnerStopResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusExtraRunnerStopExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskRunParamInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskRunParamInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskRunParamInfoUpdateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityOneClickRerunTasksRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityOneClickRerunTasksResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityOneClickRerunTasksExecutor;
@@ -58,66 +691,54 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspacegetUcUserByUserNa
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobChildRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobChildResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityJobChildExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceListRootRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceListRootResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceListRootExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotChatNewRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotChatNewResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotChatNewExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionDeleteCatalogRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionDeleteCatalogResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFunctionDeleteCatalogExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.HistorySuccessInstanceAvgPerHourRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.HistorySuccessInstanceAvgPerHourResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.HistorySuccessInstanceAvgPerHourExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptSaveContentRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptSaveContentResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptSaveContentExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerValidateJobRulesRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerValidateJobRulesResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerValidateJobRulesExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobGetScriptExtensionsRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobGetScriptExtensionsResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobGetScriptExtensionsExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceGetBriefByCodesRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceGetBriefByCodesResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceGetBriefByCodesExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheForceRunJobInstRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheForceRunJobInstResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobscheForceRunJobInstExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptStartersRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptStartersResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptStartersExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskBaseInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskBaseInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskBaseInfoUpdateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobListJobRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobListJobResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobListJobExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobSpendTimeRankingRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobSpendTimeRankingResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobMonitorJobSpendTimeRankingExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowInternalTaskHistoryTopoRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowInternalTaskHistoryTopoResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFlowInternalTaskHistoryTopoExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicConfigStartParamsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicConfigStartParamsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicConfigStartParamsExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptRunLogDetailRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptRunLogDetailResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptRunLogDetailExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RunningInstanceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RunningInstanceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RunningInstanceExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusExtraRunnerResultListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusExtraRunnerResultListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusExtraRunnerResultListExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceDeleteRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceDeleteResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceDeleteExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobTypeListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobTypeListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobMonitorJobTypeListExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStoragePartitionListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStoragePartitionListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubStoragePartitionListExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotUtteranceRecommendRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotUtteranceRecommendResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotUtteranceRecommendExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceExpiredInfoRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceExpiredInfoResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceExpiredInfoExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasSubscribeTableRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasSubscribeTableResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasSubscribeTableExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskCatalogListExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotVerifyRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotVerifyResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotVerifyExecutor;
@@ -136,69 +757,63 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasSearchTableLineageExe
 import com.jdcloud.sdk.service.shenhaiplatform.model.PublishPkgRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.PublishPkgResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.PublishPkgExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobFailCountRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobFailCountResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobMonitorJobFailCountExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskSparkJarParamInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskSparkJarParamInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskSparkJarParamInfoUpdateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterMetaAddRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterMetaAddResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubClusterMetaAddExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictTaskTypesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictTaskTypesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorDictTaskTypesExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoPrePublishRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoPrePublishResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoPrePublishExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheProcessJobExeRstRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheProcessJobExeRstResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobscheProcessJobExeRstExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetEngineTemplateRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetEngineTemplateResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerGetEngineTemplateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetProductRegionInfoRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetProductRegionInfoResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetProductRegionInfoExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskLoopParamInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskLoopParamInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskLoopParamInfoUpdateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorRerunDownstreamRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorRerunDownstreamResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorRerunDownstreamExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourcePublishRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourcePublishResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourcePublishExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobStatusCountRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobStatusCountResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobMonitorJobStatusCountExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetUserRolesRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetUserRolesResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetUserRolesExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasDestroyRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasDestroyResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasDestroyExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceListRootResourcesRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceListRootResourcesResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceListRootResourcesExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableAlterSqlViewRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableAlterSqlViewResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableAlterSqlViewExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceVerifyUserIsManagerRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceVerifyUserIsManagerResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceVerifyUserIsManagerExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobCountInfoRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobCountInfoResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobMonitorJobCountInfoExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDataLoadRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDataLoadResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableDataLoadExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugHistoryListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugHistoryListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDebugHistoryListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstanceDetailRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstanceDetailResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorInstanceDetailExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasForeignTableDetailRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasForeignTableDetailResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasForeignTableDetailExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusDataLoadKillRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusDataLoadKillResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusDataLoadKillExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.QueryListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.QueryListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.QueryListExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepDetailRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepDetailResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobDepDetailExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobUnsuccessRankingRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobUnsuccessRankingResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobMonitorJobUnsuccessRankingExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableLikeRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableLikeResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableLikeExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotUtteranceStopRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotUtteranceStopResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotUtteranceStopExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowListNodeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowListNodeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFlowListNodeExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDdlAnalyzeRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDdlAnalyzeResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableDdlAnalyzeExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionDeleteRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionDeleteResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFunctionDeleteExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetByResourceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetByResourceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetByResourceExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityOneClickRerunRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityOneClickRerunResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityOneClickRerunExecutor;
@@ -214,42 +829,36 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskUpdateStatusExec
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoFuzzyListJobNameRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoFuzzyListJobNameResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoFuzzyListJobNameExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoAnalysisDependJobRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoAnalysisDependJobResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoAnalysisDependJobExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeUpdateJobNameRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeUpdateJobNameResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeUpdateJobNameExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubClusterListExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowQueryListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowQueryListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskFlowQueryListExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeUpdateNodeDataRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeUpdateNodeDataResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeUpdateNodeDataExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskScriptContentUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskScriptContentUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskScriptContentUpdateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStorageIncrementRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStorageIncrementResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubStorageIncrementExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerDeployJobEditRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerDeployJobEditResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerDeployJobEditExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorRunManualTaskInstanceExternalRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorRunManualTaskInstanceExternalResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorRunManualTaskInstanceExternalExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetInfoRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetInfoResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetInfoExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceStatusRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceStatusResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceStatusExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.AwaitingInstanceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.AwaitingInstanceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.AwaitingInstanceExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusWorkFlowDirFileExistsRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusWorkFlowDirFileExistsResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusWorkFlowDirFileExistsExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptParamsRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptParamsResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptParamsExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusExtraRunnerStartRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusExtraRunnerStartResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusExtraRunnerStartExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSaveJobScriptRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSaveJobScriptResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerSaveJobScriptExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceUpdateRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceUpdateResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceUpdateExecutor;
@@ -268,54 +877,45 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoDetailExecut
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetMembersRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetMembersResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetMembersExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasSearchColumnLineageRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasSearchColumnLineageResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasSearchColumnLineageExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDatasourceParamInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDatasourceParamInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDatasourceParamInfoUpdateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicConfigBaseInfoRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicConfigBaseInfoResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicConfigBaseInfoExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusSparkTaskParameterKeysRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusSparkTaskParameterKeysResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusSparkTaskParameterKeysExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskAddRelationRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskAddRelationResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskAddRelationExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusUdfListFunctionRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusUdfListFunctionResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusUdfListFunctionExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheResetJobInstStatusRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheResetJobInstStatusResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobscheResetJobInstStatusExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedForceJobBatchRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedForceJobBatchResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobSchedForceJobBatchExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptRunLogListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptRunLogListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptRunLogListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNameExistedRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNameExistedResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNameExistedExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedReuseJobRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedReuseJobResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobSchedReuseJobExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityListJobRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityListJobResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityListJobExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleModelCalcCalcJobDetailRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleModelCalcCalcJobDetailResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleModelCalcCalcJobDetailExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.DescribePublishObjRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.DescribePublishObjResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.DescribePublishObjExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInputParamInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInputParamInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInputParamInfoUpdateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobTypeCountRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobTypeCountResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobMonitorJobTypeCountExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerVerifyScriptFileListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerVerifyScriptFileListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerVerifyScriptFileListExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobGetConditionInfoRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobGetConditionInfoResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobGetConditionInfoExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusCatalogUpdateRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusCatalogUpdateResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusCatalogUpdateExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetMgrJobByJobeRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetMgrJobByJobeResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerGetMgrJobByJobeExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobGetJobTypeInfoRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobGetJobTypeInfoResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobGetJobTypeInfoExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetTaskStateStatisticsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetTaskStateStatisticsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GetTaskStateStatisticsExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobGetBasicInfoRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobGetBasicInfoResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobGetBasicInfoExecutor;
@@ -325,15 +925,18 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobscheSetJ
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheReRunJobInstRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheReRunJobInstResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobscheReRunJobInstExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasPageSearchTablePrivilegesRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasPageSearchTablePrivilegesResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasPageSearchTablePrivilegesExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceSaveInfoRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceSaveInfoResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceSaveInfoExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.HistoryFailedInstanceAvgPerHourRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.HistoryFailedInstanceAvgPerHourResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.HistoryFailedInstanceAvgPerHourExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskImageListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskImageListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskImageListExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusQueryJarManagementTreeRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusQueryJarManagementTreeResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusQueryJarManagementTreeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorSupplementPlanCancelRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorSupplementPlanCancelResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorSupplementPlanCancelExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceCreatProductRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceCreatProductResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceCreatProductExecutor;
@@ -343,186 +946,144 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskElementDelimiter
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedGetRunLogRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedGetRunLogResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobSchedGetRunLogExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoOnLineConfigRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoOnLineConfigResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoOnLineConfigExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedUpdateSchedJobRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedUpdateSchedJobResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobSchedUpdateSchedJobExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowCollectionRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowCollectionResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskFlowCollectionExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.DeletePublishObjRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.DeletePublishObjResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.DeletePublishObjExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetJobScriptRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetJobScriptResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerGetJobScriptExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchByJobNameRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchByJobNameResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerSearchByJobNameExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityListTxDateStatusRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityListTxDateStatusResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityListTxDateStatusExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobDispatchTrendRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobDispatchTrendResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobMonitorJobDispatchTrendExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowUpdateRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowUpdateResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskFlowUpdateExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobMonitorJobStatusCountRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobMonitorJobStatusCountResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobMonitorJobStatusCountExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerDeleteJobScriptRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerDeleteJobScriptResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerDeleteJobScriptExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugDetailRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugDetailResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDebugDetailExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowDetailRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowDetailResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskFlowDetailExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionCheckRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionCheckResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFunctionCheckExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskSpecialParamUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskSpecialParamUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskSpecialParamUpdateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceHadCreatWsProductRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceHadCreatWsProductResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceHadCreatWsProductExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublishOneRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublishOneResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublishOneExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptQueriesRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptQueriesResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptQueriesExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusWorkFlowDirFileDeleteRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusWorkFlowDirFileDeleteResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusWorkFlowDirFileDeleteExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchSchedJobRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchSchedJobResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerSearchSchedJobExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseTableDetailRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseTableDetailResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasWarehouseTableDetailExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceDeleteMemberRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceDeleteMemberResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceDeleteMemberExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceDownloadUrlRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceDownloadUrlResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceDownloadUrlExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskOutputParamInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskOutputParamInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskOutputParamInfoUpdateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskParseScriptContentSystemParamRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskParseScriptContentSystemParamResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskParseScriptContentSystemParamExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorResetInstanceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorResetInstanceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorResetInstanceExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusDataLoadLogRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusDataLoadLogResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusDataLoadLogExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceGetDetailByPrefixRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceGetDetailByPrefixResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceGetDetailByPrefixExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDDLRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDDLResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableDDLExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoHistoryListRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoHistoryListResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoHistoryListExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobSuccessCountRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobSuccessCountResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobMonitorJobSuccessCountExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotChatClearRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotChatClearResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotChatClearExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstanceHistoriesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstanceHistoriesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorInstanceHistoriesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.StatusPercentageTodayRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.StatusPercentageTodayResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.StatusPercentageTodayExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListFlatCatalogRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListFlatCatalogResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicListFlatCatalogExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityOneClickRerunBatchesRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityOneClickRerunBatchesResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityOneClickRerunBatchesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDependOutputParamListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDependOutputParamListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDependOutputParamListExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoPublishRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoPublishResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoPublishExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseFuzzyQueryTablesByTableNameRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseFuzzyQueryTablesByTableNameResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasWarehouseFuzzyQueryTablesByTableNameExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceUpdateUserRoleRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceUpdateUserRoleResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceUpdateUserRoleExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicDetailRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicDetailResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicDetailExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.BindWorkspaceEngineRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.BindWorkspaceEngineResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.BindWorkspaceEngineExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedKillJobRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedKillJobResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobSchedKillJobExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetParentChainJobsRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetParentChainJobsResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobDepGetParentChainJobsExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerDeleteJobRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerDeleteJobResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerDeleteJobExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusExtraRunnerResultRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusExtraRunnerResultResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusExtraRunnerResultExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionCreateRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionCreateResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFunctionCreateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityResetRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityResetResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityResetExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusDataLoadPreviewRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusDataLoadPreviewResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusDataLoadPreviewExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptStopRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptStopResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptStopExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.PreviewPackageRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.PreviewPackageResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.PreviewPackageExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskUpdateStatusListRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskUpdateStatusListResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskUpdateStatusListExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseQueryTablesUnderSpecifiedUserRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseQueryTablesUnderSpecifiedUserResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasWarehouseQueryTablesUnderSpecifiedUserExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobListOperationRecordRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobListOperationRecordResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobListOperationRecordExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleSchedDictGetJobTypeRRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleSchedDictGetJobTypeRResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleSchedDictGetJobTypeRExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptGetScriptRunResultListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptGetScriptRunResultListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptGetScriptRunResultListExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerDeleteAllByWorkspaceResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerDeleteAllByWorkspaceExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTablePublishToPublishCenterRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTablePublishToPublishCenterResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTablePublishToPublishCenterExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStorageTableDDLRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStorageTableDDLResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubStorageTableDDLExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicCreateFlowRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicCreateFlowResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicCreateFlowExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubClusterUpdateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetLongTimeRunningInstancesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetLongTimeRunningInstancesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GetLongTimeRunningInstancesExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoSparkVersionRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoSparkVersionResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoSparkVersionExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoSaveRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoSaveResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoSaveExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceGetBriefByPrefixRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceGetBriefByPrefixResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceGetBriefByPrefixExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorUpdateTaskScheduleStateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorUpdateTaskScheduleStateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorUpdateTaskScheduleStateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerListJobRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerListJobResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerListJobExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityKillRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityKillResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityKillExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoGetTaskCodeRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoGetTaskCodeResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoGetTaskCodeExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubDutyListRosterRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubDutyListRosterResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubDutyListRosterExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicSnatchLockRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicSnatchLockResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicSnatchLockExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobGetRunInfosRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobGetRunInfosResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobGetRunInfosExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDefaultSourceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDefaultSourceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableDefaultSourceExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionGetByIdRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionGetByIdResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFunctionGetByIdExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusWorkSpaceDownRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusWorkSpaceDownResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusWorkSpaceDownExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusCatalogQueryListRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusCatalogQueryListResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusCatalogQueryListExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptVerifyScriptFileDependRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptVerifyScriptFileDependResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptVerifyScriptFileDependExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeLockStatusRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeLockStatusResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeLockStatusExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerVerifyScriptFileRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerVerifyScriptFileResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerVerifyScriptFileExecutor;
@@ -535,6 +1096,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleOpenRerunEx
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskExportParamListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskExportParamListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskExportParamListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogExistedRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogExistedResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskCatalogExistedExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusCatalogDeleteRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusCatalogDeleteResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusCatalogDeleteExecutor;
@@ -544,33 +1108,18 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPageListExecutor
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceStopExpireOrDeleteRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceStopExpireOrDeleteResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceStopExpireOrDeleteExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowListTreeRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowListTreeResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskFlowListTreeExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusWorkFlowInitUploadRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusWorkFlowInitUploadResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusWorkFlowInitUploadExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeListRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeListResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeListExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotUtteranceListRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotUtteranceListResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotUtteranceListExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceCloseFileRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceCloseFileResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceCloseFileExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusWorkFlowDirIfChildrenPathRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusWorkFlowDirIfChildrenPathResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusWorkFlowDirIfChildrenPathExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusWorkFlowDirDeleteRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusWorkFlowDirDeleteResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusWorkFlowDirDeleteExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoAnalysisOutputTableRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoAnalysisOutputTableResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoAnalysisOutputTableExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceAppendFileRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceAppendFileResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceAppendFileExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceBundleOrUnBundleResourceRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceBundleOrUnBundleResourceResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceBundleOrUnBundleResourceExecutor;
@@ -580,36 +1129,42 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UranusQueryFileTreeExecuto
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoJobPublishTypeRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoJobPublishTypeResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoJobPublishTypeExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotChatHistoryRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotChatHistoryResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotChatHistoryExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoLockDetailRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoLockDetailResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoLockDetailExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobLogRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobLogResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityJobLogExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPipeParamInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPipeParamInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPipeParamInfoUpdateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicDebugLogRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicDebugLogResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicDebugLogExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterMetaDeleteRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterMetaDeleteResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubClusterMetaDeleteExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogDeleteRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogDeleteResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskCatalogDeleteExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugResultContentRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugResultContentResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDebugResultContentExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskScheduleInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskScheduleInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskScheduleInfoUpdateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetParentDependenciesRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetParentDependenciesResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobDepGetParentDependenciesExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasPageSearchTablePartitionsRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasPageSearchTablePartitionsResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasPageSearchTablePartitionsExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobHisRunAddBathTaskRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobHisRunAddBathTaskResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobHisRunAddBathTaskExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetScriptInfoTypeRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetScriptInfoTypeResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerGetScriptInfoTypeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetByProjectCodeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetByProjectCodeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GetByProjectCodeExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableUnpublishedInfoRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableUnpublishedInfoResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableUnpublishedInfoExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedGetSchedJobInfoRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedGetSchedJobInfoResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobSchedGetSchedJobInfoExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPrePublishRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPrePublishResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPrePublishExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeCreateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeCreateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeCreateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListResourcesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListResourcesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicListResourcesExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionUpdateRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionUpdateResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFunctionUpdateExecutor;
@@ -619,87 +1174,84 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceCreateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobGetMgrJobInfoRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobGetMgrJobInfoResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobGetMgrJobInfoExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptQueryParamsRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptQueryParamsResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptQueryParamsExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleChannelJobInfoDeleteJobRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleChannelJobInfoDeleteJobResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleChannelJobInfoDeleteJobExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicCatalogExistedByPathRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicCatalogExistedByPathResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicCatalogExistedByPathExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceForceUnBundleResourceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceForceUnBundleResourceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceForceUnBundleResourceExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceVerifyAuthRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceVerifyAuthResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceVerifyAuthExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotChatDeleteRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotChatDeleteResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotChatDeleteExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceSyncWsProductOrderRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceSyncWsProductOrderResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceSyncWsProductOrderExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobPropertyRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobPropertyResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityJobPropertyExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDataDownloadRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDataDownloadResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableDataDownloadExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowSaveRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowSaveResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskFlowSaveExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceSyncRechargeRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceSyncRechargeResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceSyncRechargeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicUpdateDatasourceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicUpdateDatasourceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicUpdateDatasourceExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubDutyListWatchmanRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubDutyListWatchmanResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubDutyListWatchmanExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowCheckRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowCheckResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskFlowCheckExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskCatalogUpdateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDetailRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDetailResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDetailExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicDebugResultRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicDebugResultResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicDebugResultExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceAddMemberRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceAddMemberResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceAddMemberExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoRePublishRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoRePublishResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoRePublishExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheIsUpstreamSameFrequencyRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheIsUpstreamSameFrequencyResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobscheIsUpstreamSameFrequencyExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobJobCompletionInfoRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobJobCompletionInfoResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobJobCompletionInfoExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionListCatalogRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionListCatalogResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFunctionListCatalogExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasPageSearchTablesRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasPageSearchTablesResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasPageSearchTablesExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchDmrModelJobRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchDmrModelJobResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerSearchDmrModelJobExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.DescribePublishPkgRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.DescribePublishPkgResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.DescribePublishPkgExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskOfflineRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskOfflineResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskOfflineExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UnbindInstanceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UnbindInstanceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UnbindInstanceExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetMostFailedTimesInstancesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetMostFailedTimesInstancesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GetMostFailedTimesInstancesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicConfigScheduleRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicConfigScheduleResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicConfigScheduleExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictTaskScheduleStatesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictTaskScheduleStatesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorDictTaskScheduleStatesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorSupplementPlanListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorSupplementPlanListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorSupplementPlanListExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableColumnRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableColumnResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableColumnExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobRunHistoryRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobRunHistoryResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityJobRunHistoryExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetProjectRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetProjectResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetProjectExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubDutyUpdateWatchmanRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubDutyUpdateWatchmanResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubDutyUpdateWatchmanExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTablePublishRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTablePublishResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTablePublishExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorSupplementPlanInfoRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorSupplementPlanInfoResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorSupplementPlanInfoExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetUcUserByPinRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetUcUserByPinResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetUcUserByPinExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobTypeRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobTypeResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityJobTypeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorTaskDetailRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorTaskDetailResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorTaskDetailExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusQueryListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusQueryListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusQueryListExecutor;
@@ -709,63 +1261,54 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasWarehouseQueryTablesO
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusDictQuerySysParamRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusDictQuerySysParamResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusDictQuerySysParamExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDelimitersRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDelimitersResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableDelimitersExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleSchedDictGetByTypeRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleSchedDictGetByTypeResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleSchedDictGetByTypeExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleConfigUserMatchUserRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleConfigUserMatchUserResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleConfigUserMatchUserExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStorageSummaryRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStorageSummaryResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubStorageSummaryExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeDeleteRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeDeleteResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeDeleteExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstanceDependencyRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstanceDependencyResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorInstanceDependencyExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.DeletePublishPkgRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.DeletePublishPkgResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.DeletePublishPkgExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetChildTreedRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetChildTreedResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobDepGetChildTreedExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptRunLogLogContentRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptRunLogLogContentResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptRunLogLogContentExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusDictTableCodeRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusDictTableCodeResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusDictTableCodeExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchJobIdRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSearchJobIdResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerSearchJobIdExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskExtraRunnerLogRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskExtraRunnerLogResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskExtraRunnerLogExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorTaskDependencyRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorTaskDependencyResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorTaskDependencyExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubDutyDeleteWatchmanRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubDutyDeleteWatchmanResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubDutyDeleteWatchmanExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionCreateCatalogRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionCreateCatalogResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFunctionCreateCatalogExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.BindInstanceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.BindInstanceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.BindInstanceExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepParentJobsRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepParentJobsResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobDepParentJobsExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityOneClickRerunPreviewRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityOneClickRerunPreviewResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityOneClickRerunPreviewExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugParamSyncRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugParamSyncResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDebugParamSyncExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterDeleteRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterDeleteResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubClusterDeleteExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusExtraRunnerParamParseRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusExtraRunnerParamParseResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusExtraRunnerParamParseExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobHisRunAddTaskRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobHisRunAddTaskResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobHisRunAddTaskExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepChildJobsRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepChildJobsResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobDepChildJobsExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterMetaReplaceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubClusterMetaReplaceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubClusterMetaReplaceExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictSupplementOrderRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictSupplementOrderResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorDictSupplementOrderExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceListDirectoryRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceListDirectoryResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceListDirectoryExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDependExportParamListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDependExportParamListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDependExportParamListExecutor;
@@ -784,114 +1327,69 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UranusWorkFlowDirCreateExe
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasGetTableDDLScriptRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasGetTableDDLScriptResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasGetTableDDLScriptExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerJobQueryRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerJobQueryResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerJobQueryExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeCheckJobNameRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeCheckJobNameResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeCheckJobNameExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobHisRunListTaskRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobHisRunListTaskResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobHisRunListTaskExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedResetStsDoneRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedResetStsDoneResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobSchedResetStsDoneExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedReuseJobWithDependRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobSchedReuseJobWithDependResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobSchedReuseJobWithDependExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptSyntaxCheckRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptSyntaxCheckResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptSyntaxCheckExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskGetRelationRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskGetRelationResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskGetRelationExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotModelListRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.CopilotModelListResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.CopilotModelListExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptGetScriptRunResultRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptGetScriptRunResultResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptGetScriptRunResultExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetChildChainJobsRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetChildChainJobsResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobDepGetChildChainJobsExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPagePublishRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPagePublishResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPagePublishExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubDutyUpdateRosterRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubDutyUpdateRosterResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubDutyUpdateRosterExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetChildDependenciesRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobDepGetChildDependenciesResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobDepGetChildDependenciesExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasGrantTablePrivilegesRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasGrantTablePrivilegesResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasGrantTablePrivilegesExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceCreateRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusResourceCreateResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusResourceCreateExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetProjectBundleRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetProjectBundleResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetProjectBundleExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowListHistoryNodeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowListHistoryNodeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFlowListHistoryNodeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorKillInstanceRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorKillInstanceResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorKillInstanceExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseQueryTablePrivilegesRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasWarehouseQueryTablePrivilegesResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasWarehouseQueryTablePrivilegesExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDeleteRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDeleteResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableDeleteExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicStopDebugRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicStopDebugResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicStopDebugExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicPublishRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicPublishResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicPublishExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionPublishRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFunctionPublishResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFunctionPublishExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableCheckTableNameRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableCheckTableNameResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableCheckTableNameExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceBundleProjectRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceBundleProjectResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceBundleProjectExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetResourcesRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetResourcesResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetResourcesExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubDutyAddWatchmanRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubDutyAddWatchmanResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubDutyAddWatchmanExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceDeleteRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceDeleteResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceDeleteExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobHisRunCloseTaskRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobHisRunCloseTaskResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobHisRunCloseTaskExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowDeleteRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowDeleteResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskFlowDeleteExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSaveDmrModelJobRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerSaveDmrModelJobResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerSaveDmrModelJobExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerCalcJobDetailRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerCalcJobDetailResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerCalcJobDetailExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleModelCalcListJobRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleModelCalcListJobResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleModelCalcListJobExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStorageDetailsRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStorageDetailsResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubStorageDetailsExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasGetTableQueryScriptRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasGetTableQueryScriptResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasGetTableQueryScriptExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceUnbundleProjectRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceUnbundleProjectResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceUnbundleProjectExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityOneClickRerunResubmitRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityOneClickRerunResubmitResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityOneClickRerunResubmitExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstanceRunLogsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstanceRunLogsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RotorInstanceRunLogsExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugSyntaxCheckRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugSyntaxCheckResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDebugSyntaxCheckExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasSearchDetailRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasSearchDetailResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasSearchDetailExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobListJobInstanceRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleParticleJobListJobInstanceResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJobListJobInstanceExecutor;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptRunLogContentRequest;
-import com.jdcloud.sdk.service.shenhaiplatform.model.UranusScriptRunLogContentResponse;
-import com.jdcloud.sdk.service.shenhaiplatform.client.UranusScriptRunLogContentExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetUcUsersRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetUcUsersResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetUcUsersExecutor;
@@ -952,28 +1450,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
 
 
     /**
-     * 将发布物打包
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public PackagePublishObjResponse packagePublishObj(PackagePublishObjRequest request) throws JdcloudSdkException {
-        return new PackagePublishObjExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 停止查询
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusExtraRunnerStopResponse uranusExtraRunnerStop(UranusExtraRunnerStopRequest request) throws JdcloudSdkException {
-        return new UranusExtraRunnerStopExecutor().client(this).execute(request);
-    }
-
-    /**
      * 任务单节点-新建
      *
      * @param request
@@ -985,6 +1461,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 从运维中心下线任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskHistoryListResponse uranusTaskHistoryList(UranusTaskHistoryListRequest request) throws JdcloudSdkException {
+        return new UranusTaskHistoryListExecutor().client(this).execute(request);
+    }
+
+    /**
      * 根据租户/项目空间/数据库名称模糊查询表列表，最多返回1000条
      *
      * @param request
@@ -993,6 +1480,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public JtlasWarehouseQueryTablesByDatabaseNameResponse jtlasWarehouseQueryTablesByDatabaseName(JtlasWarehouseQueryTablesByDatabaseNameRequest request) throws JdcloudSdkException {
         return new JtlasWarehouseQueryTablesByDatabaseNameExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 发布任务到运维中心
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskDeployAndEnableResponse uranusTaskDeployAndEnable(UranusTaskDeployAndEnableRequest request) throws JdcloudSdkException {
+        return new UranusTaskDeployAndEnableExecutor().client(this).execute(request);
     }
 
     /**
@@ -1015,6 +1513,2327 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public DescribePublishPkgsResponse describePublishPkgs(DescribePublishPkgsRequest request) throws JdcloudSdkException {
         return new DescribePublishPkgsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列出所有根目录(只包含根目录)
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusResourceListRootResponse uranusResourceListRoot(UranusResourceListRootRequest request) throws JdcloudSdkException {
+        return new UranusResourceListRootExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列出当前任务可以依赖的其他任务列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicListDependableResponse uranusTaskPublicListDependable(UranusTaskPublicListDependableRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicListDependableExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取任务的发布状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskGetTaskStatusResponse uranusTaskGetTaskStatus(UranusTaskGetTaskStatusRequest request) throws JdcloudSdkException {
+        return new UranusTaskGetTaskStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 校验作业规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleDubboJobManagerValidateJobRulesResponse gravityParticleDubboJobManagerValidateJobRules(GravityParticleDubboJobManagerValidateJobRulesRequest request) throws JdcloudSdkException {
+        return new GravityParticleDubboJobManagerValidateJobRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取作业脚本扩展名信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobGetScriptExtensionsResponse gravityParticleJobGetScriptExtensions(GravityParticleJobGetScriptExtensionsRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobGetScriptExtensionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取spark版本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusSparkTaskSparkVersionResponse uranusSparkTaskSparkVersion(UranusSparkTaskSparkVersionRequest request) throws JdcloudSdkException {
+        return new UranusSparkTaskSparkVersionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建补数方案
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorSupplementPlanCreateResponse rotorSupplementPlanCreate(RotorSupplementPlanCreateRequest request) throws JdcloudSdkException {
+        return new RotorSupplementPlanCreateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取资源简要信息（根据资源codes）
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusResourceGetBriefByCodesResponse uranusResourceGetBriefByCodes(UranusResourceGetBriefByCodesRequest request) throws JdcloudSdkException {
+        return new UranusResourceGetBriefByCodesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 强制运行作业实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobscheForceRunJobInstResponse gravityParticleJobscheForceRunJobInst(GravityParticleJobscheForceRunJobInstRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobscheForceRunJobInstExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务检索
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorTasksResponse rotorTasks(RotorTasksRequest request) throws JdcloudSdkException {
+        return new RotorTasksExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 执行脚本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusScriptStartersResponse uranusScriptStarters(UranusScriptStartersRequest request) throws JdcloudSdkException {
+        return new UranusScriptStartersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据用户名查询用户权限表列表，最多返回1000条
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesResponse jtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivileges(JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest request) throws JdcloudSdkException {
+        return new JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列出所有目录的简要信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskCatalogListAllBizResponse uranusTaskCatalogListAllBiz(UranusTaskCatalogListAllBizRequest request) throws JdcloudSdkException {
+        return new UranusTaskCatalogListAllBizExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新任务的Image参数信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskImageParamInfoUpdateResponse uranusTaskImageParamInfoUpdate(UranusTaskImageParamInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskImageParamInfoUpdateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新任务的依赖信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskDependInfoUpdateResponse uranusTaskDependInfoUpdate(UranusTaskDependInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskDependInfoUpdateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 运行手动任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorRunManualTaskInstanceResponse rotorRunManualTaskInstance(RotorRunManualTaskInstanceRequest request) throws JdcloudSdkException {
+        return new RotorRunManualTaskInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取 offset 天前 每个小时实例运行成功次数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SuccessInstancePerHourResponse successInstancePerHour(SuccessInstancePerHourRequest request) throws JdcloudSdkException {
+        return new SuccessInstancePerHourExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除资源
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusResourceDeleteResponse uranusResourceDelete(UranusResourceDeleteRequest request) throws JdcloudSdkException {
+        return new UranusResourceDeleteExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据对话中的一条发言，推荐可能的prompt
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CopilotUtteranceRecommendResponse copilotUtteranceRecommend(CopilotUtteranceRecommendRequest request) throws JdcloudSdkException {
+        return new CopilotUtteranceRecommendExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 订阅/收藏表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JtlasSubscribeTableResponse jtlasSubscribeTable(JtlasSubscribeTableRequest request) throws JdcloudSdkException {
+        return new JtlasSubscribeTableExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTaskTypeStatisticsResponse getTaskTypeStatistics(GetTaskTypeStatisticsRequest request) throws JdcloudSdkException {
+        return new GetTaskTypeStatisticsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 抢任务节点锁
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskNodeSnatchLockResponse uranusTaskNodeSnatchLock(UranusTaskNodeSnatchLockRequest request) throws JdcloudSdkException {
+        return new UranusTaskNodeSnatchLockExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 移动外部任务、工作流、业务目录等所在的业务目录
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskObjectMoveResponse uranusTaskObjectMove(UranusTaskObjectMoveRequest request) throws JdcloudSdkException {
+        return new UranusTaskObjectMoveExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 统计失败作业状态数量
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobMonitorJobFailCountResponse gravityParticleJobMonitorJobFailCount(GravityParticleJobMonitorJobFailCountRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobMonitorJobFailCountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重新发布历史版本任务到运维中心
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskRedeployAndEnableResponse uranusTaskRedeployAndEnable(UranusTaskRedeployAndEnableRequest request) throws JdcloudSdkException {
+        return new UranusTaskRedeployAndEnableExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 全量更新任务的输出参数列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicUpdateOutputParamResponse uranusTaskPublicUpdateOutputParam(UranusTaskPublicUpdateOutputParamRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicUpdateOutputParamExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量配置/保存空间参数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ParamBatchSaveResponse paramBatchSave(ParamBatchSaveRequest request) throws JdcloudSdkException {
+        return new ParamBatchSaveExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 解析作业完成信息进行作业实例运行状态更新
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobscheProcessJobExeRstResponse gravityParticleJobscheProcessJobExeRst(GravityParticleJobscheProcessJobExeRstRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobscheProcessJobExeRstExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据脚本类型获取模板引擎下载地址
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleDubboJobManagerGetEngineTemplateResponse gravityParticleDubboJobManagerGetEngineTemplate(GravityParticleDubboJobManagerGetEngineTemplateRequest request) throws JdcloudSdkException {
+        return new GravityParticleDubboJobManagerGetEngineTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 实例检索
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorInstancesResponse rotorInstances(RotorInstancesRequest request) throws JdcloudSdkException {
+        return new RotorInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 未就绪实例排名
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JobPendingInstanceRankingResponse jobPendingInstanceRanking(JobPendingInstanceRankingRequest request) throws JdcloudSdkException {
+        return new JobPendingInstanceRankingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 调试任务, 返回debugId
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskDebugResponse uranusTaskDebug(UranusTaskDebugRequest request) throws JdcloudSdkException {
+        return new UranusTaskDebugExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重跑任务实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorRerunInstanceResponse rotorRerunInstance(RotorRerunInstanceRequest request) throws JdcloudSdkException {
+        return new RotorRerunInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建一个新的外部任务，支持多种任务类型
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicCreateResponse uranusTaskPublicCreate(UranusTaskPublicCreateRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicCreateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取当前登录用户的所有角色
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WorkspaceGetUserRolesResponse workspaceGetUserRoles(WorkspaceGetUserRolesRequest request) throws JdcloudSdkException {
+        return new WorkspaceGetUserRolesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 表授权接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JtlasDestroyResponse jtlasDestroy(JtlasDestroyRequest request) throws JdcloudSdkException {
+        return new JtlasDestroyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 校验当前用户是否是该工作空间的管理员
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WorkspaceVerifyUserIsManagerResponse workspaceVerifyUserIsManager(WorkspaceVerifyUserIsManagerRequest request) throws JdcloudSdkException {
+        return new WorkspaceVerifyUserIsManagerExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 统计作业数量
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobMonitorJobCountInfoResponse gravityParticleJobMonitorJobCountInfo(GravityParticleJobMonitorJobCountInfoRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobMonitorJobCountInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 数据上传
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTableDataLoadResponse uranusTableDataLoad(UranusTableDataLoadRequest request) throws JdcloudSdkException {
+        return new UranusTableDataLoadExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务关系页面，作业详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobDepDetailResponse gravityParticleJobDepDetail(GravityParticleJobDepDetailRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobDepDetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 统计不成功作业的数量
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobMonitorJobUnsuccessRankingResponse gravityParticleJobMonitorJobUnsuccessRanking(GravityParticleJobMonitorJobUnsuccessRankingRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobMonitorJobUnsuccessRankingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询授权表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTableLikeResponse uranusTableLike(UranusTableLikeRequest request) throws JdcloudSdkException {
+        return new UranusTableLikeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止发言，用于终止模型回复生成
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CopilotUtteranceStopResponse copilotUtteranceStop(CopilotUtteranceStopRequest request) throws JdcloudSdkException {
+        return new CopilotUtteranceStopExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除函数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusFunctionDeleteResponse uranusFunctionDelete(UranusFunctionDeleteRequest request) throws JdcloudSdkException {
+        return new UranusFunctionDeleteExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据脚本内容解析父任务依赖
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskInfoAnalysisDependJobResponse uranusTaskInfoAnalysisDependJob(UranusTaskInfoAnalysisDependJobRequest request) throws JdcloudSdkException {
+        return new UranusTaskInfoAnalysisDependJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务单节点-更新作业名称
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskNodeUpdateJobNameResponse uranusTaskNodeUpdateJobName(UranusTaskNodeUpdateJobNameRequest request) throws JdcloudSdkException {
+        return new UranusTaskNodeUpdateJobNameExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务单节点-更新节点位置信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskNodeUpdateNodeDataResponse uranusTaskNodeUpdateNodeData(UranusTaskNodeUpdateNodeDataRequest request) throws JdcloudSdkException {
+        return new UranusTaskNodeUpdateNodeDataExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 补数资源组策略字典
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorDictSupplementResourceGroupStrategyResponse rotorDictSupplementResourceGroupStrategy(RotorDictSupplementResourceGroupStrategyRequest request) throws JdcloudSdkException {
+        return new RotorDictSupplementResourceGroupStrategyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取资源状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusResourceStatusResponse uranusResourceStatus(UranusResourceStatusRequest request) throws JdcloudSdkException {
+        return new UranusResourceStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetFailedInstancesReasonResponse getFailedInstancesReason(GetFailedInstancesReasonRequest request) throws JdcloudSdkException {
+        return new GetFailedInstancesReasonExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 脚本参数保存/更新
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusScriptParamsResponse uranusScriptParams(UranusScriptParamsRequest request) throws JdcloudSdkException {
+        return new UranusScriptParamsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 保存作业脚本信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleDubboJobManagerSaveJobScriptResponse gravityParticleDubboJobManagerSaveJobScript(GravityParticleDubboJobManagerSaveJobScriptRequest request) throws JdcloudSdkException {
+        return new GravityParticleDubboJobManagerSaveJobScriptExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询字段血缘
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JtlasSearchColumnLineageResponse jtlasSearchColumnLineage(JtlasSearchColumnLineageRequest request) throws JdcloudSdkException {
+        return new JtlasSearchColumnLineageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除任务节点
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskOrFlowNodeDeleteResponse uranusTaskOrFlowNodeDelete(UranusTaskOrFlowNodeDeleteRequest request) throws JdcloudSdkException {
+        return new UranusTaskOrFlowNodeDeleteExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列出所有表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JtlasForeignTableListResponse jtlasForeignTableList(JtlasForeignTableListRequest request) throws JdcloudSdkException {
+        return new JtlasForeignTableListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询函数接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusUdfListFunctionResponse uranusUdfListFunction(UranusUdfListFunctionRequest request) throws JdcloudSdkException {
+        return new UranusUdfListFunctionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重置作业实例的状态为制定状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobscheResetJobInstStatusResponse gravityParticleJobscheResetJobInstStatus(GravityParticleJobscheResetJobInstStatusRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobscheResetJobInstStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 终止任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskKillResponse uranusTaskKill(UranusTaskKillRequest request) throws JdcloudSdkException {
+        return new UranusTaskKillExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 分页查询作业列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ManageHubGravityListJobResponse manageHubGravityListJob(ManageHubGravityListJobRequest request) throws JdcloudSdkException {
+        return new ManageHubGravityListJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 计算作业详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleParticleModelCalcCalcJobDetailResponse gravityParticleParticleModelCalcCalcJobDetail(GravityParticleParticleModelCalcCalcJobDetailRequest request) throws JdcloudSdkException {
+        return new GravityParticleParticleModelCalcCalcJobDetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 通过工作空间Code查询绑定的计算引擎列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetEngineByWorkspaceCodeResponse getEngineByWorkspaceCode(GetEngineByWorkspaceCodeRequest request) throws JdcloudSdkException {
+        return new GetEngineByWorkspaceCodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 发布对象信息细节查看
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribePublishObjResponse describePublishObj(DescribePublishObjRequest request) throws JdcloudSdkException {
+        return new DescribePublishObjExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 通过空间code查询绑定的计算引擎信息及对应类型和JCW/JMR实例信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetEngineDetailsByWorkspaceCodeResponse getEngineDetailsByWorkspaceCode(GetEngineDetailsByWorkspaceCodeRequest request) throws JdcloudSdkException {
+        return new GetEngineDetailsByWorkspaceCodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取作业触发条件信息信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleParticleJobGetConditionInfoResponse gravityParticleParticleJobGetConditionInfo(GravityParticleParticleJobGetConditionInfoRequest request) throws JdcloudSdkException {
+        return new GravityParticleParticleJobGetConditionInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改目录属性
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusCatalogUpdateResponse uranusCatalogUpdate(UranusCatalogUpdateRequest request) throws JdcloudSdkException {
+        return new UranusCatalogUpdateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重新上线接口 根据文件id和版本号
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleDubboJobManagerGetMgrJobByJobeResponse gravityParticleDubboJobManagerGetMgrJobByJobe(GravityParticleDubboJobManagerGetMgrJobByJobeRequest request) throws JdcloudSdkException {
+        return new GravityParticleDubboJobManagerGetMgrJobByJobeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 检索表权限
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JtlasPageSearchTablePrivilegesResponse jtlasPageSearchTablePrivileges(JtlasPageSearchTablePrivilegesRequest request) throws JdcloudSdkException {
+        return new JtlasPageSearchTablePrivilegesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 编辑工作空间
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WorkspaceSaveInfoResponse workspaceSaveInfo(WorkspaceSaveInfoRequest request) throws JdcloudSdkException {
+        return new WorkspaceSaveInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取调试运行日志
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskDebugLogResponse uranusTaskDebugLog(UranusTaskDebugLogRequest request) throws JdcloudSdkException {
+        return new UranusTaskDebugLogExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 使用线上配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskInfoOnLineConfigResponse uranusTaskInfoOnLineConfig(UranusTaskInfoOnLineConfigRequest request) throws JdcloudSdkException {
+        return new UranusTaskInfoOnLineConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 撤销发布对象
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeletePublishObjResponse deletePublishObj(DeletePublishObjRequest request) throws JdcloudSdkException {
+        return new DeletePublishObjExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务脚本内容全文检索
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskFullTextQueryResponse uranusTaskFullTextQuery(UranusTaskFullTextQueryRequest request) throws JdcloudSdkException {
+        return new UranusTaskFullTextQueryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据任务名字模糊查询
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleDubboJobManagerSearchByJobNameResponse gravityParticleDubboJobManagerSearchByJobName(GravityParticleDubboJobManagerSearchByJobNameRequest request) throws JdcloudSdkException {
+        return new GravityParticleDubboJobManagerSearchByJobNameExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 分页查询作业数据日期状态列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ManageHubGravityListTxDateStatusResponse manageHubGravityListTxDateStatus(ManageHubGravityListTxDateStatusRequest request) throws JdcloudSdkException {
+        return new ManageHubGravityListTxDateStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 工作流更新
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskFlowUpdateResponse uranusTaskFlowUpdate(UranusTaskFlowUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskFlowUpdateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 工作台作业统计接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleParticleJobMonitorJobStatusCountResponse gravityParticleParticleJobMonitorJobStatusCount(GravityParticleParticleJobMonitorJobStatusCountRequest request) throws JdcloudSdkException {
+        return new GravityParticleParticleJobMonitorJobStatusCountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据作业id删除作业脚本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleDubboJobManagerDeleteJobScriptResponse gravityParticleDubboJobManagerDeleteJobScript(GravityParticleDubboJobManagerDeleteJobScriptRequest request) throws JdcloudSdkException {
+        return new GravityParticleDubboJobManagerDeleteJobScriptExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 判断目录/函数是否存在
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusFunctionCheckResponse uranusFunctionCheck(UranusFunctionCheckRequest request) throws JdcloudSdkException {
+        return new UranusFunctionCheckExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 工作流-发布一
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublishOneResponse uranusTaskPublishOne(UranusTaskPublishOneRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublishOneExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获得脚本详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusScriptQueriesResponse uranusScriptQueries(UranusScriptQueriesRequest request) throws JdcloudSdkException {
+        return new UranusScriptQueriesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量预发布节点请求正确的发布顺序
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusFlowPrepublishNodesSortResponse uranusFlowPrepublishNodesSort(UranusFlowPrepublishNodesSortRequest request) throws JdcloudSdkException {
+        return new UranusFlowPrepublishNodesSortExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务调度周期字典
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorDictTaskScheduleCyclesResponse rotorDictTaskScheduleCycles(RotorDictTaskScheduleCyclesRequest request) throws JdcloudSdkException {
+        return new RotorDictTaskScheduleCyclesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询可以创建的任务类型
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskTypeListResponse uranusTaskTypeList(UranusTaskTypeListRequest request) throws JdcloudSdkException {
+        return new UranusTaskTypeListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取集群信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ManageHubClusterGetResponse manageHubClusterGet(ManageHubClusterGetRequest request) throws JdcloudSdkException {
+        return new ManageHubClusterGetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据作业名模糊查询或JobQueryDTO查询
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleDubboJobManagerSearchSchedJobResponse gravityParticleDubboJobManagerSearchSchedJob(GravityParticleDubboJobManagerSearchSchedJobRequest request) throws JdcloudSdkException {
+        return new GravityParticleDubboJobManagerSearchSchedJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除工作空间成员
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WorkspaceDeleteMemberResponse workspaceDeleteMember(WorkspaceDeleteMemberRequest request) throws JdcloudSdkException {
+        return new WorkspaceDeleteMemberExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取资源下载链接
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusResourceDownloadUrlResponse uranusResourceDownloadUrl(UranusResourceDownloadUrlRequest request) throws JdcloudSdkException {
+        return new UranusResourceDownloadUrlExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取资源简要信息(前缀匹配资源名称)
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusResourceGetDetailByPrefixResponse uranusResourceGetDetailByPrefix(UranusResourceGetDetailByPrefixRequest request) throws JdcloudSdkException {
+        return new UranusResourceGetDetailByPrefixExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取具体表的建表语句
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTableDDLResponse uranusTableDDL(UranusTableDDLRequest request) throws JdcloudSdkException {
+        return new UranusTableDDLExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务节点版本查看
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskInfoHistoryListResponse uranusTaskInfoHistoryList(UranusTaskInfoHistoryListRequest request) throws JdcloudSdkException {
+        return new UranusTaskInfoHistoryListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 统计成功作业状态数量
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobMonitorJobSuccessCountResponse gravityParticleJobMonitorJobSuccessCount(GravityParticleJobMonitorJobSuccessCountRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobMonitorJobSuccessCountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 清除对话上下文
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CopilotChatClearResponse copilotChatClear(CopilotChatClearRequest request) throws JdcloudSdkException {
+        return new CopilotChatClearExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据租户/项目空间/表名称模糊查询表列表，最多返回1000条
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JtlasWarehouseFuzzyQueryTablesByTableNameResponse jtlasWarehouseFuzzyQueryTablesByTableName(JtlasWarehouseFuzzyQueryTablesByTableNameRequest request) throws JdcloudSdkException {
+        return new JtlasWarehouseFuzzyQueryTablesByTableNameExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更改用户角色
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WorkspaceUpdateUserRoleResponse workspaceUpdateUserRole(WorkspaceUpdateUserRoleRequest request) throws JdcloudSdkException {
+        return new WorkspaceUpdateUserRoleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据当前作业和目标层级查询父作业链路层级树
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobDepGetParentChainJobsResponse gravityParticleJobDepGetParentChainJobs(GravityParticleJobDepGetParentChainJobsRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobDepGetParentChainJobsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 新建函数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusFunctionCreateResponse uranusFunctionCreate(UranusFunctionCreateRequest request) throws JdcloudSdkException {
+        return new UranusFunctionCreateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 数据预览
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusDataLoadPreviewResponse uranusDataLoadPreview(UranusDataLoadPreviewRequest request) throws JdcloudSdkException {
+        return new UranusDataLoadPreviewExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止脚本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusScriptStopResponse uranusScriptStop(UranusScriptStopRequest request) throws JdcloudSdkException {
+        return new UranusScriptStopExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量任务单节点-上下线更新
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskUpdateStatusListResponse uranusTaskUpdateStatusList(UranusTaskUpdateStatusListRequest request) throws JdcloudSdkException {
+        return new UranusTaskUpdateStatusListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取集群下的元数据列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ManageHubClusterMetaListResponse manageHubClusterMetaList(ManageHubClusterMetaListRequest request) throws JdcloudSdkException {
+        return new ManageHubClusterMetaListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取作业类型关系
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleSchedDictGetJobTypeRResponse gravityParticleSchedDictGetJobTypeR(GravityParticleSchedDictGetJobTypeRRequest request) throws JdcloudSdkException {
+        return new GravityParticleSchedDictGetJobTypeRExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 工作空间到期后删除该工作空间下的所有作业和日志
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleDubboJobManagerDeleteAllByWorkspaceResponse gravityParticleDubboJobManagerDeleteAllByWorkspace(GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest request) throws JdcloudSdkException {
+        return new GravityParticleDubboJobManagerDeleteAllByWorkspaceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 运行失败记录
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public FailedHistoriesResponse failedHistories(FailedHistoriesRequest request) throws JdcloudSdkException {
+        return new FailedHistoriesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 发布表变更信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTablePublishToPublishCenterResponse uranusTablePublishToPublishCenter(UranusTablePublishToPublishCenterRequest request) throws JdcloudSdkException {
+        return new UranusTablePublishToPublishCenterExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询表DDL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ManageHubStorageTableDDLResponse manageHubStorageTableDDL(ManageHubStorageTableDDLRequest request) throws JdcloudSdkException {
+        return new ManageHubStorageTableDDLExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务保存
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskInfoSaveResponse uranusTaskInfoSave(UranusTaskInfoSaveRequest request) throws JdcloudSdkException {
+        return new UranusTaskInfoSaveExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取taskCode
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskInfoGetTaskCodeResponse uranusTaskInfoGetTaskCode(UranusTaskInfoGetTaskCodeRequest request) throws JdcloudSdkException {
+        return new UranusTaskInfoGetTaskCodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 启动任务调试，返回调试ID
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicDebugResponse uranusTaskPublicDebug(UranusTaskPublicDebugRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicDebugExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 目录根据companyCode查询目录
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusCatalogQueryListResponse uranusCatalogQueryList(UranusCatalogQueryListRequest request) throws JdcloudSdkException {
+        return new UranusCatalogQueryListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列出当前工作区下的所有数据源信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicListDatasourcesResponse uranusTaskPublicListDatasources(UranusTaskPublicListDatasourcesRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicListDatasourcesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询任务所有信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskAllInfoResponse uranusTaskAllInfo(UranusTaskAllInfoRequest request) throws JdcloudSdkException {
+        return new UranusTaskAllInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 模糊列出可以依赖的任务信息，工作流和工作流内部任务不能够自依赖
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskDependableListFuzzResponse uranusTaskDependableListFuzz(UranusTaskDependableListFuzzRequest request) throws JdcloudSdkException {
+        return new UranusTaskDependableListFuzzExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 工作流目录树
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskFlowListTreeResponse uranusTaskFlowListTree(UranusTaskFlowListTreeRequest request) throws JdcloudSdkException {
+        return new UranusTaskFlowListTreeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 流程画布-节点管理列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskNodeListResponse uranusTaskNodeList(UranusTaskNodeListRequest request) throws JdcloudSdkException {
+        return new UranusTaskNodeListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取指定对话中的发言记录
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CopilotUtteranceListResponse copilotUtteranceList(CopilotUtteranceListRequest request) throws JdcloudSdkException {
+        return new CopilotUtteranceListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除文件夹
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusWorkFlowDirDeleteResponse uranusWorkFlowDirDelete(UranusWorkFlowDirDeleteRequest request) throws JdcloudSdkException {
+        return new UranusWorkFlowDirDeleteExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列出LOOP任务常用元素分隔符
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusLoopTaskElementDelimitersResponse uranusLoopTaskElementDelimiters(UranusLoopTaskElementDelimitersRequest request) throws JdcloudSdkException {
+        return new UranusLoopTaskElementDelimitersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 上传资源
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusResourceAppendFileResponse uranusResourceAppendFile(UranusResourceAppendFileRequest request) throws JdcloudSdkException {
+        return new UranusResourceAppendFileExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 数据集成任务获取建表语句
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPipeShowCreateTableResponse uranusTaskPipeShowCreateTable(UranusTaskPipeShowCreateTableRequest request) throws JdcloudSdkException {
+        return new UranusTaskPipeShowCreateTableExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取历史对话列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CopilotChatHistoryResponse copilotChatHistory(CopilotChatHistoryRequest request) throws JdcloudSdkException {
+        return new CopilotChatHistoryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询工作流下的任务节点
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusFlowSearchNodeResponse uranusFlowSearchNode(UranusFlowSearchNodeRequest request) throws JdcloudSdkException {
+        return new UranusFlowSearchNodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 抢锁时获取任务信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskInfoLockDetailResponse uranusTaskInfoLockDetail(UranusTaskInfoLockDetailRequest request) throws JdcloudSdkException {
+        return new UranusTaskInfoLockDetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询计算任务日志
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ManageHubGravityJobLogResponse manageHubGravityJobLog(ManageHubGravityJobLogRequest request) throws JdcloudSdkException {
+        return new ManageHubGravityJobLogExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询表分区
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JtlasPageSearchTablePartitionsResponse jtlasPageSearchTablePartitions(JtlasPageSearchTablePartitionsRequest request) throws JdcloudSdkException {
+        return new JtlasPageSearchTablePartitionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务批量补数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobHisRunAddBathTaskResponse gravityParticleJobHisRunAddBathTask(GravityParticleJobHisRunAddBathTaskRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobHisRunAddBathTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建集群
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ManageHubClusterCreateResponse manageHubClusterCreate(ManageHubClusterCreateRequest request) throws JdcloudSdkException {
+        return new ManageHubClusterCreateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 数据集成任务一键建表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPipeCreateTableResponse uranusTaskPipeCreateTable(UranusTaskPipeCreateTableRequest request) throws JdcloudSdkException {
+        return new UranusTaskPipeCreateTableExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取脚本类型和模板下载地址
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleDubboJobManagerGetScriptInfoTypeResponse gravityParticleDubboJobManagerGetScriptInfoType(GravityParticleDubboJobManagerGetScriptInfoTypeRequest request) throws JdcloudSdkException {
+        return new GravityParticleDubboJobManagerGetScriptInfoTypeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 工作流-预发布
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPrePublishResponse uranusTaskPrePublish(UranusTaskPrePublishRequest request) throws JdcloudSdkException {
+        return new UranusTaskPrePublishExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询脚本参数或任务参数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusScriptQueryParamsResponse uranusScriptQueryParams(UranusScriptQueryParamsRequest request) throws JdcloudSdkException {
+        return new UranusScriptQueryParamsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 同步工作空间开通信息接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WorkspaceSyncWsProductOrderResponse workspaceSyncWsProductOrder(WorkspaceSyncWsProductOrderRequest request) throws JdcloudSdkException {
+        return new WorkspaceSyncWsProductOrderExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务属性
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ManageHubGravityJobPropertyResponse manageHubGravityJobProperty(ManageHubGravityJobPropertyRequest request) throws JdcloudSdkException {
+        return new ManageHubGravityJobPropertyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 数据下载
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTableDataDownloadResponse uranusTableDataDownload(UranusTableDataDownloadRequest request) throws JdcloudSdkException {
+        return new UranusTableDataDownloadExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 工作流新建
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskFlowSaveResponse uranusTaskFlowSave(UranusTaskFlowSaveRequest request) throws JdcloudSdkException {
+        return new UranusTaskFlowSaveExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 同步工作空间续费消息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WorkspaceSyncRechargeResponse workspaceSyncRecharge(WorkspaceSyncRechargeRequest request) throws JdcloudSdkException {
+        return new WorkspaceSyncRechargeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 实例操作日志
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorInstanceOperationLogsResponse rotorInstanceOperationLogs(RotorInstanceOperationLogsRequest request) throws JdcloudSdkException {
+        return new RotorInstanceOperationLogsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取调试结果列表，返回结果文件列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskDebugResultListResponse uranusTaskDebugResultList(UranusTaskDebugResultListRequest request) throws JdcloudSdkException {
+        return new UranusTaskDebugResultListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务重新发布
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskInfoRePublishResponse uranusTaskInfoRePublish(UranusTaskInfoRePublishRequest request) throws JdcloudSdkException {
+        return new UranusTaskInfoRePublishExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 全量更新任务的输入参数列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicUpdateInputParamResponse uranusTaskPublicUpdateInputParam(UranusTaskPublicUpdateInputParamRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicUpdateInputParamExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询作业完成信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleParticleJobJobCompletionInfoResponse gravityParticleParticleJobJobCompletionInfo(GravityParticleParticleJobJobCompletionInfoRequest request) throws JdcloudSdkException {
+        return new GravityParticleParticleJobJobCompletionInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取所有分类目录
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusFunctionListCatalogResponse uranusFunctionListCatalog(UranusFunctionListCatalogRequest request) throws JdcloudSdkException {
+        return new UranusFunctionListCatalogExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 检索表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JtlasPageSearchTablesResponse jtlasPageSearchTables(JtlasPageSearchTablesRequest request) throws JdcloudSdkException {
+        return new JtlasPageSearchTablesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 实例调度日志
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorInstanceScheduleLogsResponse rotorInstanceScheduleLogs(RotorInstanceScheduleLogsRequest request) throws JdcloudSdkException {
+        return new RotorInstanceScheduleLogsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据查询条件返回作业关联的模型信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleDubboJobManagerSearchDmrModelJobResponse gravityParticleDubboJobManagerSearchDmrModelJob(GravityParticleDubboJobManagerSearchDmrModelJobRequest request) throws JdcloudSdkException {
+        return new GravityParticleDubboJobManagerSearchDmrModelJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 发布包详情查询
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribePublishPkgResponse describePublishPkg(DescribePublishPkgRequest request) throws JdcloudSdkException {
+        return new DescribePublishPkgExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新任务的脚本文件内容
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicUpdateScriptResponse uranusTaskPublicUpdateScript(UranusTaskPublicUpdateScriptRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicUpdateScriptExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务/工作流按照名称模糊查询
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskCatalogQueryResponse uranusTaskCatalogQuery(UranusTaskCatalogQueryRequest request) throws JdcloudSdkException {
+        return new UranusTaskCatalogQueryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取工作空间绑定的云仓项目
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WorkspaceGetProjectResponse workspaceGetProject(WorkspaceGetProjectRequest request) throws JdcloudSdkException {
+        return new WorkspaceGetProjectExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新任务的预警信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskAlarmInfoUpdateResponse uranusTaskAlarmInfoUpdate(UranusTaskAlarmInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskAlarmInfoUpdateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetScheduledInstancesCountPerHourResponse getScheduledInstancesCountPerHour(GetScheduledInstancesCountPerHourRequest request) throws JdcloudSdkException {
+        return new GetScheduledInstancesCountPerHourExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 发布，保存发布，更新发布等等
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTablePublishResponse uranusTablePublish(UranusTablePublishRequest request) throws JdcloudSdkException {
+        return new UranusTablePublishExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 实例状态字典
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorDictInstanceDisplayStatesResponse rotorDictInstanceDisplayStates(RotorDictInstanceDisplayStatesRequest request) throws JdcloudSdkException {
+        return new RotorDictInstanceDisplayStatesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除空间参数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ParamDeleteResponse paramDelete(ParamDeleteRequest request) throws JdcloudSdkException {
+        return new ParamDeleteExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取支持的参数类型枚举列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ParamTypesResponse paramTypes(ParamTypesRequest request) throws JdcloudSdkException {
+        return new ParamTypesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询指定工作空间下的参数列表及参数值
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ParamListResponse paramList(ParamListRequest request) throws JdcloudSdkException {
+        return new ParamListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 表分隔符信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTableDelimitersResponse uranusTableDelimiters(UranusTableDelimitersRequest request) throws JdcloudSdkException {
+        return new UranusTableDelimitersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 分页列出当前工作空间下的所有任务（含工作流内外部任务）与工作流的简要信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicPageListResponse uranusTaskPublicPageList(UranusTaskPublicPageListRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicPageListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据类型获取数据字典
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleConfigUserMatchUserResponse gravityParticleConfigUserMatchUser(GravityParticleConfigUserMatchUserRequest request) throws JdcloudSdkException {
+        return new GravityParticleConfigUserMatchUserExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 存储概览
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ManageHubStorageSummaryResponse manageHubStorageSummary(ManageHubStorageSummaryRequest request) throws JdcloudSdkException {
+        return new ManageHubStorageSummaryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务单节点-删除
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskNodeDeleteResponse uranusTaskNodeDelete(UranusTaskNodeDeleteRequest request) throws JdcloudSdkException {
+        return new UranusTaskNodeDeleteExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新任务的调试参数信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskDebugParamInfoUpdateResponse uranusTaskDebugParamInfoUpdate(UranusTaskDebugParamInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskDebugParamInfoUpdateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取作业树
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobDepGetChildTreedResponse gravityParticleJobDepGetChildTreed(GravityParticleJobDepGetChildTreedRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobDepGetChildTreedExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获得脚本运行日志
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusScriptRunLogLogContentResponse uranusScriptRunLogLogContent(UranusScriptRunLogLogContentRequest request) throws JdcloudSdkException {
+        return new UranusScriptRunLogLogContentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 建表的列类型查询
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusDictTableCodeResponse uranusDictTableCode(UranusDictTableCodeRequest request) throws JdcloudSdkException {
+        return new UranusDictTableCodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取临时查询运行详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskExtraRunnerDetailResponse uranusTaskExtraRunnerDetail(UranusTaskExtraRunnerDetailRequest request) throws JdcloudSdkException {
+        return new UranusTaskExtraRunnerDetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据查询条件返回作业Id
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleDubboJobManagerSearchJobIdResponse gravityParticleDubboJobManagerSearchJobId(GravityParticleDubboJobManagerSearchJobIdRequest request) throws JdcloudSdkException {
+        return new GravityParticleDubboJobManagerSearchJobIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 补数方式字典
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorDictSupplementMethodResponse rotorDictSupplementMethod(RotorDictSupplementMethodRequest request) throws JdcloudSdkException {
+        return new RotorDictSupplementMethodExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 一键重跑预览
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ManageHubGravityOneClickRerunPreviewResponse manageHubGravityOneClickRerunPreview(ManageHubGravityOneClickRerunPreviewRequest request) throws JdcloudSdkException {
+        return new ManageHubGravityOneClickRerunPreviewExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除补数方案
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorSupplementPlanDeleteResponse rotorSupplementPlanDelete(RotorSupplementPlanDeleteRequest request) throws JdcloudSdkException {
+        return new RotorSupplementPlanDeleteExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 通过计算引擎Code查询绑定的云仓和JMR实例列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetInstancesResponse getInstances(GetInstancesRequest request) throws JdcloudSdkException {
+        return new GetInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 全量更新任务的依赖信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicConfigDependResponse uranusTaskPublicConfigDepend(UranusTaskPublicConfigDependRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicConfigDependExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 实例指标卡
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryStatisticsInSelectTimeResponse queryStatisticsInSelectTime(QueryStatisticsInSelectTimeRequest request) throws JdcloudSdkException {
+        return new QueryStatisticsInSelectTimeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取子作业
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobDepChildJobsResponse gravityParticleJobDepChildJobs(GravityParticleJobDepChildJobsRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobDepChildJobsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建工作流节点
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusFlowNodeCreateResponse uranusFlowNodeCreate(UranusFlowNodeCreateRequest request) throws JdcloudSdkException {
+        return new UranusFlowNodeCreateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 从外部aifactory批量导入ALC_GENERAL任务，Uranus仅持久化alcTaskId / alcTaskType / originalName / alcWorkspaceCode，完整配置由aifactory持有
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskNodeBatchImportResponse uranusTaskNodeBatchImport(UranusTaskNodeBatchImportRequest request) throws JdcloudSdkException {
+        return new UranusTaskNodeBatchImportExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列出所有目录(只包含目录)
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusResourceListDirectoryResponse uranusResourceListDirectory(UranusResourceListDirectoryRequest request) throws JdcloudSdkException {
+        return new UranusResourceListDirectoryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据查询条件返回作业关联的模型信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleDubboJobManagerJobQueryResponse gravityParticleDubboJobManagerJobQuery(GravityParticleDubboJobManagerJobQueryRequest request) throws JdcloudSdkException {
+        return new GravityParticleDubboJobManagerJobQueryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建计算引擎实体
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EngineCreateResponse engineCreate(EngineCreateRequest request) throws JdcloudSdkException {
+        return new EngineCreateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重置作业为done
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleParticleJobSchedResetStsDoneResponse gravityParticleParticleJobSchedResetStsDone(GravityParticleParticleJobSchedResetStsDoneRequest request) throws JdcloudSdkException {
+        return new GravityParticleParticleJobSchedResetStsDoneExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新所有节点的画布信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusFlowUpdateAllCanvasResponse uranusFlowUpdateAllCanvas(UranusFlowUpdateAllCanvasRequest request) throws JdcloudSdkException {
+        return new UranusFlowUpdateAllCanvasExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列出所有镜像信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicListImagesResponse uranusTaskPublicListImages(UranusTaskPublicListImagesRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicListImagesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * sql语法检测
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusScriptSyntaxCheckResponse uranusScriptSyntaxCheck(UranusScriptSyntaxCheckRequest request) throws JdcloudSdkException {
+        return new UranusScriptSyntaxCheckExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取可用模型列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CopilotModelListResponse copilotModelList(CopilotModelListRequest request) throws JdcloudSdkException {
+        return new CopilotModelListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取运行脚本结果
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusScriptGetScriptRunResultResponse uranusScriptGetScriptRunResult(UranusScriptGetScriptRunResultRequest request) throws JdcloudSdkException {
+        return new UranusScriptGetScriptRunResultExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 工作流画布-作业预发布
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPagePublishResponse uranusTaskPagePublish(UranusTaskPagePublishRequest request) throws JdcloudSdkException {
+        return new UranusTaskPagePublishExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取子作业
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobDepGetChildDependenciesResponse gravityParticleJobDepGetChildDependencies(GravityParticleJobDepGetChildDependenciesRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobDepGetChildDependenciesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 补数方案状态字典
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorDictSupplementPlanStatesResponse rotorDictSupplementPlanStates(RotorDictSupplementPlanStatesRequest request) throws JdcloudSdkException {
+        return new RotorDictSupplementPlanStatesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询表来源列表并标识默认项
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTableSourcesResponse uranusTableSources(UranusTableSourcesRequest request) throws JdcloudSdkException {
+        return new UranusTableSourcesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 表授权接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JtlasGrantTablePrivilegesResponse jtlasGrantTablePrivileges(JtlasGrantTablePrivilegesRequest request) throws JdcloudSdkException {
+        return new JtlasGrantTablePrivilegesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取云仓项目被绑定的工作空间
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WorkspaceGetProjectBundleResponse workspaceGetProjectBundle(WorkspaceGetProjectBundleRequest request) throws JdcloudSdkException {
+        return new WorkspaceGetProjectBundleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 配置任务的预警策略，包括预警方式、预警时机、接收人等
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicConfigAlarmResponse uranusTaskPublicConfigAlarm(UranusTaskPublicConfigAlarmRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicConfigAlarmExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 工作空间绑定云仓项目
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WorkspaceBundleProjectResponse workspaceBundleProject(WorkspaceBundleProjectRequest request) throws JdcloudSdkException {
+        return new WorkspaceBundleProjectExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取任务发布历史版本的具体详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskHistoryDetailResponse uranusTaskHistoryDetail(UranusTaskHistoryDetailRequest request) throws JdcloudSdkException {
+        return new UranusTaskHistoryDetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取工作空间的资源组列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WorkspaceGetResourcesResponse workspaceGetResources(WorkspaceGetResourcesRequest request) throws JdcloudSdkException {
+        return new WorkspaceGetResourcesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建任务业务目录
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskCatalogCreateResponse uranusTaskCatalogCreate(UranusTaskCatalogCreateRequest request) throws JdcloudSdkException {
+        return new UranusTaskCatalogCreateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 增加值班人
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ManageHubDutyAddWatchmanResponse manageHubDutyAddWatchman(ManageHubDutyAddWatchmanRequest request) throws JdcloudSdkException {
+        return new ManageHubDutyAddWatchmanExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除工作空间
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WorkspaceDeleteResponse workspaceDelete(WorkspaceDeleteRequest request) throws JdcloudSdkException {
+        return new WorkspaceDeleteExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止补数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleJobHisRunCloseTaskResponse gravityParticleJobHisRunCloseTask(GravityParticleJobHisRunCloseTaskRequest request) throws JdcloudSdkException {
+        return new GravityParticleJobHisRunCloseTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 保存作业模型相关信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleDubboJobManagerSaveDmrModelJobResponse gravityParticleDubboJobManagerSaveDmrModelJob(GravityParticleDubboJobManagerSaveDmrModelJobRequest request) throws JdcloudSdkException {
+        return new GravityParticleDubboJobManagerSaveDmrModelJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取 offset 天前 每个小时实例运行失败次数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public FailedInstancePerHourResponse failedInstancePerHour(FailedInstancePerHourRequest request) throws JdcloudSdkException {
+        return new FailedInstancePerHourExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取作业详细信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleDubboJobManagerCalcJobDetailResponse gravityParticleDubboJobManagerCalcJobDetail(GravityParticleDubboJobManagerCalcJobDetailRequest request) throws JdcloudSdkException {
+        return new GravityParticleDubboJobManagerCalcJobDetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询作业清单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleParticleModelCalcListJobResponse gravityParticleParticleModelCalcListJob(GravityParticleParticleModelCalcListJobRequest request) throws JdcloudSdkException {
+        return new GravityParticleParticleModelCalcListJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询补数实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorSupplementInstancesResponse rotorSupplementInstances(RotorSupplementInstancesRequest request) throws JdcloudSdkException {
+        return new RotorSupplementInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 实例失败次数排名
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JobFailedInstanceRankingResponse jobFailedInstanceRanking(JobFailedInstanceRankingRequest request) throws JdcloudSdkException {
+        return new JobFailedInstanceRankingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 工作空间解绑云仓项目
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WorkspaceUnbundleProjectResponse workspaceUnbundleProject(WorkspaceUnbundleProjectRequest request) throws JdcloudSdkException {
+        return new WorkspaceUnbundleProjectExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 一键重跑任务重新提交
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ManageHubGravityOneClickRerunResubmitResponse manageHubGravityOneClickRerunResubmit(ManageHubGravityOneClickRerunResubmitRequest request) throws JdcloudSdkException {
+        return new ManageHubGravityOneClickRerunResubmitExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 条件查询-作业运行实例列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GravityParticleParticleJobListJobInstanceResponse gravityParticleParticleJobListJobInstance(GravityParticleParticleJobListJobInstanceRequest request) throws JdcloudSdkException {
+        return new GravityParticleParticleJobListJobInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获得脚本运行的内容
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusScriptRunLogContentResponse uranusScriptRunLogContent(UranusScriptRunLogContentRequest request) throws JdcloudSdkException {
+        return new UranusScriptRunLogContentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 将发布物打包
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PackagePublishObjResponse packagePublishObj(PackagePublishObjRequest request) throws JdcloudSdkException {
+        return new PackagePublishObjExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止查询
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusExtraRunnerStopResponse uranusExtraRunnerStop(UranusExtraRunnerStopRequest request) throws JdcloudSdkException {
+        return new UranusExtraRunnerStopExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新任务的运行参数信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskRunParamInfoUpdateResponse uranusTaskRunParamInfoUpdate(UranusTaskRunParamInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskRunParamInfoUpdateExecutor().client(this).execute(request);
     }
 
     /**
@@ -1051,17 +3870,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 列出所有根目录(只包含根目录)
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusResourceListRootResponse uranusResourceListRoot(UranusResourceListRootRequest request) throws JdcloudSdkException {
-        return new UranusResourceListRootExecutor().client(this).execute(request);
-    }
-
-    /**
      * 获取一个新的对话id
      *
      * @param request
@@ -1084,6 +3892,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 获取历史平均每小时实例运行成功次数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public HistorySuccessInstanceAvgPerHourResponse historySuccessInstanceAvgPerHour(HistorySuccessInstanceAvgPerHourRequest request) throws JdcloudSdkException {
+        return new HistorySuccessInstanceAvgPerHourExecutor().client(this).execute(request);
+    }
+
+    /**
      * 脚本内容更新
      *
      * @param request
@@ -1095,58 +3914,14 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 校验作业规则
+     * 更新任务的基本信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GravityParticleDubboJobManagerValidateJobRulesResponse gravityParticleDubboJobManagerValidateJobRules(GravityParticleDubboJobManagerValidateJobRulesRequest request) throws JdcloudSdkException {
-        return new GravityParticleDubboJobManagerValidateJobRulesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取作业脚本扩展名信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleJobGetScriptExtensionsResponse gravityParticleJobGetScriptExtensions(GravityParticleJobGetScriptExtensionsRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobGetScriptExtensionsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取资源简要信息（根据资源codes）
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusResourceGetBriefByCodesResponse uranusResourceGetBriefByCodes(UranusResourceGetBriefByCodesRequest request) throws JdcloudSdkException {
-        return new UranusResourceGetBriefByCodesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 强制运行作业实例
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleJobscheForceRunJobInstResponse gravityParticleJobscheForceRunJobInst(GravityParticleJobscheForceRunJobInstRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobscheForceRunJobInstExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 执行脚本
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusScriptStartersResponse uranusScriptStarters(UranusScriptStartersRequest request) throws JdcloudSdkException {
-        return new UranusScriptStartersExecutor().client(this).execute(request);
+    public UranusTaskBaseInfoUpdateResponse uranusTaskBaseInfoUpdate(UranusTaskBaseInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskBaseInfoUpdateExecutor().client(this).execute(request);
     }
 
     /**
@@ -1172,14 +3947,25 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 根据用户名查询用户权限表列表，最多返回1000条
+     * 获取工作流的历史版本内部任务拓扑顺序
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesResponse jtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivileges(JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesRequest request) throws JdcloudSdkException {
-        return new JtlasWarehouseQueryTablesUnderSpecifiedUserWithPrivilegesExecutor().client(this).execute(request);
+    public UranusFlowInternalTaskHistoryTopoResponse uranusFlowInternalTaskHistoryTopo(UranusFlowInternalTaskHistoryTopoRequest request) throws JdcloudSdkException {
+        return new UranusFlowInternalTaskHistoryTopoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 配置任务启动相关参数，现在只支持Python任务配置该参数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicConfigStartParamsResponse uranusTaskPublicConfigStartParams(UranusTaskPublicConfigStartParamsRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicConfigStartParamsExecutor().client(this).execute(request);
     }
 
     /**
@@ -1194,6 +3980,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 运行中实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RunningInstanceResponse runningInstance(RunningInstanceRequest request) throws JdcloudSdkException {
+        return new RunningInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取查询结果文件列表
      *
      * @param request
@@ -1202,17 +3999,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusExtraRunnerResultListResponse uranusExtraRunnerResultList(UranusExtraRunnerResultListRequest request) throws JdcloudSdkException {
         return new UranusExtraRunnerResultListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除资源
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusResourceDeleteResponse uranusResourceDelete(UranusResourceDeleteRequest request) throws JdcloudSdkException {
-        return new UranusResourceDeleteExecutor().client(this).execute(request);
     }
 
     /**
@@ -1238,17 +4024,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 根据对话中的一条发言，推荐可能的prompt
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CopilotUtteranceRecommendResponse copilotUtteranceRecommend(CopilotUtteranceRecommendRequest request) throws JdcloudSdkException {
-        return new CopilotUtteranceRecommendExecutor().client(this).execute(request);
-    }
-
-    /**
      * 判断当前租户的产品是否已过期
      *
      * @param request
@@ -1260,14 +4035,14 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 订阅/收藏表
+     * 列出业务目录
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public JtlasSubscribeTableResponse jtlasSubscribeTable(JtlasSubscribeTableRequest request) throws JdcloudSdkException {
-        return new JtlasSubscribeTableExecutor().client(this).execute(request);
+    public UranusTaskCatalogListResponse uranusTaskCatalogList(UranusTaskCatalogListRequest request) throws JdcloudSdkException {
+        return new UranusTaskCatalogListExecutor().client(this).execute(request);
     }
 
     /**
@@ -1337,14 +4112,36 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 统计失败作业状态数量
+     * 更新任务的SparkJar参数信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GravityParticleJobMonitorJobFailCountResponse gravityParticleJobMonitorJobFailCount(GravityParticleJobMonitorJobFailCountRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobMonitorJobFailCountExecutor().client(this).execute(request);
+    public UranusTaskSparkJarParamInfoUpdateResponse uranusTaskSparkJarParamInfoUpdate(UranusTaskSparkJarParamInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskSparkJarParamInfoUpdateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 为集群增加元数据：如果元数据的key已经存在，则进行更新，否则插入
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ManageHubClusterMetaAddResponse manageHubClusterMetaAdd(ManageHubClusterMetaAddRequest request) throws JdcloudSdkException {
+        return new ManageHubClusterMetaAddExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务类型字典
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorDictTaskTypesResponse rotorDictTaskTypes(RotorDictTaskTypesRequest request) throws JdcloudSdkException {
+        return new RotorDictTaskTypesExecutor().client(this).execute(request);
     }
 
     /**
@@ -1359,25 +4156,36 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 解析作业完成信息进行作业实例运行状态更新
+     * 产品开通的地域信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GravityParticleJobscheProcessJobExeRstResponse gravityParticleJobscheProcessJobExeRst(GravityParticleJobscheProcessJobExeRstRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobscheProcessJobExeRstExecutor().client(this).execute(request);
+    public WorkspaceGetProductRegionInfoResponse workspaceGetProductRegionInfo(WorkspaceGetProductRegionInfoRequest request) throws JdcloudSdkException {
+        return new WorkspaceGetProductRegionInfoExecutor().client(this).execute(request);
     }
 
     /**
-     * 根据脚本类型获取模板引擎下载地址
+     * 更新任务的Loop参数信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GravityParticleDubboJobManagerGetEngineTemplateResponse gravityParticleDubboJobManagerGetEngineTemplate(GravityParticleDubboJobManagerGetEngineTemplateRequest request) throws JdcloudSdkException {
-        return new GravityParticleDubboJobManagerGetEngineTemplateExecutor().client(this).execute(request);
+    public UranusTaskLoopParamInfoUpdateResponse uranusTaskLoopParamInfoUpdate(UranusTaskLoopParamInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskLoopParamInfoUpdateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重跑下游
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorRerunDownstreamResponse rotorRerunDownstream(RotorRerunDownstreamRequest request) throws JdcloudSdkException {
+        return new RotorRerunDownstreamExecutor().client(this).execute(request);
     }
 
     /**
@@ -1403,28 +4211,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 获取当前登录用户的所有角色
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public WorkspaceGetUserRolesResponse workspaceGetUserRoles(WorkspaceGetUserRolesRequest request) throws JdcloudSdkException {
-        return new WorkspaceGetUserRolesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 表授权接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public JtlasDestroyResponse jtlasDestroy(JtlasDestroyRequest request) throws JdcloudSdkException {
-        return new JtlasDestroyExecutor().client(this).execute(request);
-    }
-
-    /**
      * 列出根目录下所有资源
      *
      * @param request
@@ -1447,36 +4233,36 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 校验当前用户是否是该工作空间的管理员
+     * 获取调试历史信息列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public WorkspaceVerifyUserIsManagerResponse workspaceVerifyUserIsManager(WorkspaceVerifyUserIsManagerRequest request) throws JdcloudSdkException {
-        return new WorkspaceVerifyUserIsManagerExecutor().client(this).execute(request);
+    public UranusTaskDebugHistoryListResponse uranusTaskDebugHistoryList(UranusTaskDebugHistoryListRequest request) throws JdcloudSdkException {
+        return new UranusTaskDebugHistoryListExecutor().client(this).execute(request);
     }
 
     /**
-     * 统计作业数量
+     * 实例详细信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GravityParticleJobMonitorJobCountInfoResponse gravityParticleJobMonitorJobCountInfo(GravityParticleJobMonitorJobCountInfoRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobMonitorJobCountInfoExecutor().client(this).execute(request);
+    public RotorInstanceDetailResponse rotorInstanceDetail(RotorInstanceDetailRequest request) throws JdcloudSdkException {
+        return new RotorInstanceDetailExecutor().client(this).execute(request);
     }
 
     /**
-     * 数据上传
+     * 查询表详情信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusTableDataLoadResponse uranusTableDataLoad(UranusTableDataLoadRequest request) throws JdcloudSdkException {
-        return new UranusTableDataLoadExecutor().client(this).execute(request);
+    public JtlasForeignTableDetailResponse jtlasForeignTableDetail(JtlasForeignTableDetailRequest request) throws JdcloudSdkException {
+        return new JtlasForeignTableDetailExecutor().client(this).execute(request);
     }
 
     /**
@@ -1502,47 +4288,14 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 任务关系页面，作业详情
+     * 列出工作流下的所有任务节点
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GravityParticleJobDepDetailResponse gravityParticleJobDepDetail(GravityParticleJobDepDetailRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobDepDetailExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 统计不成功作业的数量
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleJobMonitorJobUnsuccessRankingResponse gravityParticleJobMonitorJobUnsuccessRanking(GravityParticleJobMonitorJobUnsuccessRankingRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobMonitorJobUnsuccessRankingExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询授权表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTableLikeResponse uranusTableLike(UranusTableLikeRequest request) throws JdcloudSdkException {
-        return new UranusTableLikeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 停止发言，用于终止模型回复生成
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CopilotUtteranceStopResponse copilotUtteranceStop(CopilotUtteranceStopRequest request) throws JdcloudSdkException {
-        return new CopilotUtteranceStopExecutor().client(this).execute(request);
+    public UranusFlowListNodeResponse uranusFlowListNode(UranusFlowListNodeRequest request) throws JdcloudSdkException {
+        return new UranusFlowListNodeExecutor().client(this).execute(request);
     }
 
     /**
@@ -1557,14 +4310,14 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 删除函数
+     * 获取资源组code被绑定的工作空间
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusFunctionDeleteResponse uranusFunctionDelete(UranusFunctionDeleteRequest request) throws JdcloudSdkException {
-        return new UranusFunctionDeleteExecutor().client(this).execute(request);
+    public WorkspaceGetByResourceResponse workspaceGetByResource(WorkspaceGetByResourceRequest request) throws JdcloudSdkException {
+        return new WorkspaceGetByResourceExecutor().client(this).execute(request);
     }
 
     /**
@@ -1623,25 +4376,14 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 根据脚本内容解析父任务依赖
+     * 检索集群列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusTaskInfoAnalysisDependJobResponse uranusTaskInfoAnalysisDependJob(UranusTaskInfoAnalysisDependJobRequest request) throws JdcloudSdkException {
-        return new UranusTaskInfoAnalysisDependJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 任务单节点-更新作业名称
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTaskNodeUpdateJobNameResponse uranusTaskNodeUpdateJobName(UranusTaskNodeUpdateJobNameRequest request) throws JdcloudSdkException {
-        return new UranusTaskNodeUpdateJobNameExecutor().client(this).execute(request);
+    public ManageHubClusterListResponse manageHubClusterList(ManageHubClusterListRequest request) throws JdcloudSdkException {
+        return new ManageHubClusterListExecutor().client(this).execute(request);
     }
 
     /**
@@ -1656,14 +4398,14 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 任务单节点-更新节点位置信息
+     * 更新任务的脚本内容
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusTaskNodeUpdateNodeDataResponse uranusTaskNodeUpdateNodeData(UranusTaskNodeUpdateNodeDataRequest request) throws JdcloudSdkException {
-        return new UranusTaskNodeUpdateNodeDataExecutor().client(this).execute(request);
+    public UranusTaskScriptContentUpdateResponse uranusTaskScriptContentUpdate(UranusTaskScriptContentUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskScriptContentUpdateExecutor().client(this).execute(request);
     }
 
     /**
@@ -1689,6 +4431,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 运行手动任务-外部调用
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorRunManualTaskInstanceExternalResponse rotorRunManualTaskInstanceExternal(RotorRunManualTaskInstanceExternalRequest request) throws JdcloudSdkException {
+        return new RotorRunManualTaskInstanceExternalExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取工作空间基本信息
      *
      * @param request
@@ -1700,14 +4453,14 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 获取资源状态
+     * 等待中实例
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusResourceStatusResponse uranusResourceStatus(UranusResourceStatusRequest request) throws JdcloudSdkException {
-        return new UranusResourceStatusExecutor().client(this).execute(request);
+    public AwaitingInstanceResponse awaitingInstance(AwaitingInstanceRequest request) throws JdcloudSdkException {
+        return new AwaitingInstanceExecutor().client(this).execute(request);
     }
 
     /**
@@ -1722,17 +4475,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 脚本参数保存/更新
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusScriptParamsResponse uranusScriptParams(UranusScriptParamsRequest request) throws JdcloudSdkException {
-        return new UranusScriptParamsExecutor().client(this).execute(request);
-    }
-
-    /**
      * 执行查询
      *
      * @param request
@@ -1741,17 +4483,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusExtraRunnerStartResponse uranusExtraRunnerStart(UranusExtraRunnerStartRequest request) throws JdcloudSdkException {
         return new UranusExtraRunnerStartExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 保存作业脚本信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleDubboJobManagerSaveJobScriptResponse gravityParticleDubboJobManagerSaveJobScript(GravityParticleDubboJobManagerSaveJobScriptRequest request) throws JdcloudSdkException {
-        return new GravityParticleDubboJobManagerSaveJobScriptExecutor().client(this).execute(request);
     }
 
     /**
@@ -1821,14 +4552,36 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 查询字段血缘
+     * 更新任务的数据源参数信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public JtlasSearchColumnLineageResponse jtlasSearchColumnLineage(JtlasSearchColumnLineageRequest request) throws JdcloudSdkException {
-        return new JtlasSearchColumnLineageExecutor().client(this).execute(request);
+    public UranusTaskDatasourceParamInfoUpdateResponse uranusTaskDatasourceParamInfoUpdate(UranusTaskDatasourceParamInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskDatasourceParamInfoUpdateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 配置任务的基本信息，包括名称、描述、负责人等
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicConfigBaseInfoResponse uranusTaskPublicConfigBaseInfo(UranusTaskPublicConfigBaseInfoRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicConfigBaseInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * spark参数keys
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusSparkTaskParameterKeysResponse uranusSparkTaskParameterKeys(UranusSparkTaskParameterKeysRequest request) throws JdcloudSdkException {
+        return new UranusSparkTaskParameterKeysExecutor().client(this).execute(request);
     }
 
     /**
@@ -1840,28 +4593,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusTaskAddRelationResponse uranusTaskAddRelation(UranusTaskAddRelationRequest request) throws JdcloudSdkException {
         return new UranusTaskAddRelationExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询函数接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusUdfListFunctionResponse uranusUdfListFunction(UranusUdfListFunctionRequest request) throws JdcloudSdkException {
-        return new UranusUdfListFunctionExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 重置作业实例的状态为制定状态
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleJobscheResetJobInstStatusResponse gravityParticleJobscheResetJobInstStatus(GravityParticleJobscheResetJobInstStatusRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobscheResetJobInstStatusExecutor().client(this).execute(request);
     }
 
     /**
@@ -1887,6 +4618,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 任务名称是否已经存在
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskNameExistedResponse uranusTaskNameExisted(UranusTaskNameExistedRequest request) throws JdcloudSdkException {
+        return new UranusTaskNameExistedExecutor().client(this).execute(request);
+    }
+
+    /**
      * 批量接口上线
      *
      * @param request
@@ -1898,36 +4640,14 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 分页查询作业列表
+     * 更新任务的输入参数信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ManageHubGravityListJobResponse manageHubGravityListJob(ManageHubGravityListJobRequest request) throws JdcloudSdkException {
-        return new ManageHubGravityListJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 计算作业详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleParticleModelCalcCalcJobDetailResponse gravityParticleParticleModelCalcCalcJobDetail(GravityParticleParticleModelCalcCalcJobDetailRequest request) throws JdcloudSdkException {
-        return new GravityParticleParticleModelCalcCalcJobDetailExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 发布对象信息细节查看
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribePublishObjResponse describePublishObj(DescribePublishObjRequest request) throws JdcloudSdkException {
-        return new DescribePublishObjExecutor().client(this).execute(request);
+    public UranusTaskInputParamInfoUpdateResponse uranusTaskInputParamInfoUpdate(UranusTaskInputParamInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskInputParamInfoUpdateExecutor().client(this).execute(request);
     }
 
     /**
@@ -1953,39 +4673,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 获取作业触发条件信息信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleParticleJobGetConditionInfoResponse gravityParticleParticleJobGetConditionInfo(GravityParticleParticleJobGetConditionInfoRequest request) throws JdcloudSdkException {
-        return new GravityParticleParticleJobGetConditionInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改目录属性
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusCatalogUpdateResponse uranusCatalogUpdate(UranusCatalogUpdateRequest request) throws JdcloudSdkException {
-        return new UranusCatalogUpdateExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 重新上线接口 根据文件id和版本号
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleDubboJobManagerGetMgrJobByJobeResponse gravityParticleDubboJobManagerGetMgrJobByJobe(GravityParticleDubboJobManagerGetMgrJobByJobeRequest request) throws JdcloudSdkException {
-        return new GravityParticleDubboJobManagerGetMgrJobByJobeExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询作业类型信息
      *
      * @param request
@@ -1994,6 +4681,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public GravityParticleParticleJobGetJobTypeInfoResponse gravityParticleParticleJobGetJobTypeInfo(GravityParticleParticleJobGetJobTypeInfoRequest request) throws JdcloudSdkException {
         return new GravityParticleParticleJobGetJobTypeInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTaskStateStatisticsResponse getTaskStateStatistics(GetTaskStateStatisticsRequest request) throws JdcloudSdkException {
+        return new GetTaskStateStatisticsExecutor().client(this).execute(request);
     }
 
     /**
@@ -2030,25 +4728,25 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 检索表权限
+     * 获取历史平均每小时实例运行失败次数
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public JtlasPageSearchTablePrivilegesResponse jtlasPageSearchTablePrivileges(JtlasPageSearchTablePrivilegesRequest request) throws JdcloudSdkException {
-        return new JtlasPageSearchTablePrivilegesExecutor().client(this).execute(request);
+    public HistoryFailedInstanceAvgPerHourResponse historyFailedInstanceAvgPerHour(HistoryFailedInstanceAvgPerHourRequest request) throws JdcloudSdkException {
+        return new HistoryFailedInstanceAvgPerHourExecutor().client(this).execute(request);
     }
 
     /**
-     * 编辑工作空间
+     * 查询任务镜像
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public WorkspaceSaveInfoResponse workspaceSaveInfo(WorkspaceSaveInfoRequest request) throws JdcloudSdkException {
-        return new WorkspaceSaveInfoExecutor().client(this).execute(request);
+    public UranusTaskImageListResponse uranusTaskImageList(UranusTaskImageListRequest request) throws JdcloudSdkException {
+        return new UranusTaskImageListExecutor().client(this).execute(request);
     }
 
     /**
@@ -2060,6 +4758,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusQueryJarManagementTreeResponse uranusQueryJarManagementTree(UranusQueryJarManagementTreeRequest request) throws JdcloudSdkException {
         return new UranusQueryJarManagementTreeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止补数方案
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorSupplementPlanCancelResponse rotorSupplementPlanCancel(RotorSupplementPlanCancelRequest request) throws JdcloudSdkException {
+        return new RotorSupplementPlanCancelExecutor().client(this).execute(request);
     }
 
     /**
@@ -2096,17 +4805,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 使用线上配置
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTaskInfoOnLineConfigResponse uranusTaskInfoOnLineConfig(UranusTaskInfoOnLineConfigRequest request) throws JdcloudSdkException {
-        return new UranusTaskInfoOnLineConfigExecutor().client(this).execute(request);
-    }
-
-    /**
      * 作业信息更新
      *
      * @param request
@@ -2129,17 +4827,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 撤销发布对象
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeletePublishObjResponse deletePublishObj(DeletePublishObjRequest request) throws JdcloudSdkException {
-        return new DeletePublishObjExecutor().client(this).execute(request);
-    }
-
-    /**
      * 根据作业id获取脚本信息
      *
      * @param request
@@ -2148,28 +4835,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public GravityParticleDubboJobManagerGetJobScriptResponse gravityParticleDubboJobManagerGetJobScript(GravityParticleDubboJobManagerGetJobScriptRequest request) throws JdcloudSdkException {
         return new GravityParticleDubboJobManagerGetJobScriptExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据任务名字模糊查询
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleDubboJobManagerSearchByJobNameResponse gravityParticleDubboJobManagerSearchByJobName(GravityParticleDubboJobManagerSearchByJobNameRequest request) throws JdcloudSdkException {
-        return new GravityParticleDubboJobManagerSearchByJobNameExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 分页查询作业数据日期状态列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ManageHubGravityListTxDateStatusResponse manageHubGravityListTxDateStatus(ManageHubGravityListTxDateStatusRequest request) throws JdcloudSdkException {
-        return new ManageHubGravityListTxDateStatusExecutor().client(this).execute(request);
     }
 
     /**
@@ -2184,36 +4849,14 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 工作流更新
+     * 获取调试运行详情
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusTaskFlowUpdateResponse uranusTaskFlowUpdate(UranusTaskFlowUpdateRequest request) throws JdcloudSdkException {
-        return new UranusTaskFlowUpdateExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 工作台作业统计接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleParticleJobMonitorJobStatusCountResponse gravityParticleParticleJobMonitorJobStatusCount(GravityParticleParticleJobMonitorJobStatusCountRequest request) throws JdcloudSdkException {
-        return new GravityParticleParticleJobMonitorJobStatusCountExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据作业id删除作业脚本
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleDubboJobManagerDeleteJobScriptResponse gravityParticleDubboJobManagerDeleteJobScript(GravityParticleDubboJobManagerDeleteJobScriptRequest request) throws JdcloudSdkException {
-        return new GravityParticleDubboJobManagerDeleteJobScriptExecutor().client(this).execute(request);
+    public UranusTaskDebugDetailResponse uranusTaskDebugDetail(UranusTaskDebugDetailRequest request) throws JdcloudSdkException {
+        return new UranusTaskDebugDetailExecutor().client(this).execute(request);
     }
 
     /**
@@ -2228,14 +4871,14 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 判断目录/函数是否存在
+     * 更新任务的特有参数信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusFunctionCheckResponse uranusFunctionCheck(UranusFunctionCheckRequest request) throws JdcloudSdkException {
-        return new UranusFunctionCheckExecutor().client(this).execute(request);
+    public UranusTaskSpecialParamUpdateResponse uranusTaskSpecialParamUpdate(UranusTaskSpecialParamUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskSpecialParamUpdateExecutor().client(this).execute(request);
     }
 
     /**
@@ -2250,28 +4893,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 工作流-发布一
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTaskPublishOneResponse uranusTaskPublishOne(UranusTaskPublishOneRequest request) throws JdcloudSdkException {
-        return new UranusTaskPublishOneExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获得脚本详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusScriptQueriesResponse uranusScriptQueries(UranusScriptQueriesRequest request) throws JdcloudSdkException {
-        return new UranusScriptQueriesExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除文件
      *
      * @param request
@@ -2280,17 +4901,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusWorkFlowDirFileDeleteResponse uranusWorkFlowDirFileDelete(UranusWorkFlowDirFileDeleteRequest request) throws JdcloudSdkException {
         return new UranusWorkFlowDirFileDeleteExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据作业名模糊查询或JobQueryDTO查询
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleDubboJobManagerSearchSchedJobResponse gravityParticleDubboJobManagerSearchSchedJob(GravityParticleDubboJobManagerSearchSchedJobRequest request) throws JdcloudSdkException {
-        return new GravityParticleDubboJobManagerSearchSchedJobExecutor().client(this).execute(request);
     }
 
     /**
@@ -2305,25 +4915,36 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 删除工作空间成员
+     * 更新任务的输入参数信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public WorkspaceDeleteMemberResponse workspaceDeleteMember(WorkspaceDeleteMemberRequest request) throws JdcloudSdkException {
-        return new WorkspaceDeleteMemberExecutor().client(this).execute(request);
+    public UranusTaskOutputParamInfoUpdateResponse uranusTaskOutputParamInfoUpdate(UranusTaskOutputParamInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskOutputParamInfoUpdateExecutor().client(this).execute(request);
     }
 
     /**
-     * 获取资源下载链接
+     * 解析脚本内容中的系统参数
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusResourceDownloadUrlResponse uranusResourceDownloadUrl(UranusResourceDownloadUrlRequest request) throws JdcloudSdkException {
-        return new UranusResourceDownloadUrlExecutor().client(this).execute(request);
+    public UranusTaskParseScriptContentSystemParamResponse uranusTaskParseScriptContentSystemParam(UranusTaskParseScriptContentSystemParamRequest request) throws JdcloudSdkException {
+        return new UranusTaskParseScriptContentSystemParamExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重置任务实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorResetInstanceResponse rotorResetInstance(RotorResetInstanceRequest request) throws JdcloudSdkException {
+        return new RotorResetInstanceExecutor().client(this).execute(request);
     }
 
     /**
@@ -2338,58 +4959,36 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 获取资源简要信息(前缀匹配资源名称)
+     * 实例历史信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusResourceGetDetailByPrefixResponse uranusResourceGetDetailByPrefix(UranusResourceGetDetailByPrefixRequest request) throws JdcloudSdkException {
-        return new UranusResourceGetDetailByPrefixExecutor().client(this).execute(request);
+    public RotorInstanceHistoriesResponse rotorInstanceHistories(RotorInstanceHistoriesRequest request) throws JdcloudSdkException {
+        return new RotorInstanceHistoriesExecutor().client(this).execute(request);
     }
 
     /**
-     * 获取具体表的建表语句
+     * 查询今日实例每次运行各状态百分比
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusTableDDLResponse uranusTableDDL(UranusTableDDLRequest request) throws JdcloudSdkException {
-        return new UranusTableDDLExecutor().client(this).execute(request);
+    public StatusPercentageTodayResponse statusPercentageToday(StatusPercentageTodayRequest request) throws JdcloudSdkException {
+        return new StatusPercentageTodayExecutor().client(this).execute(request);
     }
 
     /**
-     * 任务节点版本查看
+     * 以KV的方式将目录与ID列出来
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusTaskInfoHistoryListResponse uranusTaskInfoHistoryList(UranusTaskInfoHistoryListRequest request) throws JdcloudSdkException {
-        return new UranusTaskInfoHistoryListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 统计成功作业状态数量
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleJobMonitorJobSuccessCountResponse gravityParticleJobMonitorJobSuccessCount(GravityParticleJobMonitorJobSuccessCountRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobMonitorJobSuccessCountExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 清除对话上下文
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CopilotChatClearResponse copilotChatClear(CopilotChatClearRequest request) throws JdcloudSdkException {
-        return new CopilotChatClearExecutor().client(this).execute(request);
+    public UranusTaskPublicListFlatCatalogResponse uranusTaskPublicListFlatCatalog(UranusTaskPublicListFlatCatalogRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicListFlatCatalogExecutor().client(this).execute(request);
     }
 
     /**
@@ -2404,6 +5003,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 任务依赖节点的输出参数查询
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskDependOutputParamListResponse uranusTaskDependOutputParamList(UranusTaskDependOutputParamListRequest request) throws JdcloudSdkException {
+        return new UranusTaskDependOutputParamListExecutor().client(this).execute(request);
+    }
+
+    /**
      * 任务发布
      *
      * @param request
@@ -2415,25 +5025,25 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 根据租户/项目空间/表名称模糊查询表列表，最多返回1000条
+     * 获取任务详情信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public JtlasWarehouseFuzzyQueryTablesByTableNameResponse jtlasWarehouseFuzzyQueryTablesByTableName(JtlasWarehouseFuzzyQueryTablesByTableNameRequest request) throws JdcloudSdkException {
-        return new JtlasWarehouseFuzzyQueryTablesByTableNameExecutor().client(this).execute(request);
+    public UranusTaskPublicDetailResponse uranusTaskPublicDetail(UranusTaskPublicDetailRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicDetailExecutor().client(this).execute(request);
     }
 
     /**
-     * 更改用户角色
+     * 前端绑定计算引擎弹窗一键完成绑定
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public WorkspaceUpdateUserRoleResponse workspaceUpdateUserRole(WorkspaceUpdateUserRoleRequest request) throws JdcloudSdkException {
-        return new WorkspaceUpdateUserRoleExecutor().client(this).execute(request);
+    public BindWorkspaceEngineResponse bindWorkspaceEngine(BindWorkspaceEngineRequest request) throws JdcloudSdkException {
+        return new BindWorkspaceEngineExecutor().client(this).execute(request);
     }
 
     /**
@@ -2445,17 +5055,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public GravityParticleParticleJobSchedKillJobResponse gravityParticleParticleJobSchedKillJob(GravityParticleParticleJobSchedKillJobRequest request) throws JdcloudSdkException {
         return new GravityParticleParticleJobSchedKillJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据当前作业和目标层级查询父作业链路层级树
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleJobDepGetParentChainJobsResponse gravityParticleJobDepGetParentChainJobs(GravityParticleJobDepGetParentChainJobsRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobDepGetParentChainJobsExecutor().client(this).execute(request);
     }
 
     /**
@@ -2481,17 +5080,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 新建函数
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusFunctionCreateResponse uranusFunctionCreate(UranusFunctionCreateRequest request) throws JdcloudSdkException {
-        return new UranusFunctionCreateExecutor().client(this).execute(request);
-    }
-
-    /**
      * 重置作业
      *
      * @param request
@@ -2503,28 +5091,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 数据预览
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusDataLoadPreviewResponse uranusDataLoadPreview(UranusDataLoadPreviewRequest request) throws JdcloudSdkException {
-        return new UranusDataLoadPreviewExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 停止脚本
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusScriptStopResponse uranusScriptStop(UranusScriptStopRequest request) throws JdcloudSdkException {
-        return new UranusScriptStopExecutor().client(this).execute(request);
-    }
-
-    /**
      * 发布包信息预览
      *
      * @param request
@@ -2533,17 +5099,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public PreviewPackageResponse previewPackage(PreviewPackageRequest request) throws JdcloudSdkException {
         return new PreviewPackageExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 批量任务单节点-上下线更新
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTaskUpdateStatusListResponse uranusTaskUpdateStatusList(UranusTaskUpdateStatusListRequest request) throws JdcloudSdkException {
-        return new UranusTaskUpdateStatusListExecutor().client(this).execute(request);
     }
 
     /**
@@ -2569,17 +5124,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 获取作业类型关系
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleSchedDictGetJobTypeRResponse gravityParticleSchedDictGetJobTypeR(GravityParticleSchedDictGetJobTypeRRequest request) throws JdcloudSdkException {
-        return new GravityParticleSchedDictGetJobTypeRExecutor().client(this).execute(request);
-    }
-
-    /**
      * 获取运行脚本结果列表
      *
      * @param request
@@ -2591,36 +5135,36 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 工作空间到期后删除该工作空间下的所有作业和日志
+     * 创建一个新的工作流节点
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GravityParticleDubboJobManagerDeleteAllByWorkspaceResponse gravityParticleDubboJobManagerDeleteAllByWorkspace(GravityParticleDubboJobManagerDeleteAllByWorkspaceRequest request) throws JdcloudSdkException {
-        return new GravityParticleDubboJobManagerDeleteAllByWorkspaceExecutor().client(this).execute(request);
+    public UranusTaskPublicCreateFlowResponse uranusTaskPublicCreateFlow(UranusTaskPublicCreateFlowRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicCreateFlowExecutor().client(this).execute(request);
     }
 
     /**
-     * 发布表变更信息
+     * 更新集群
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusTablePublishToPublishCenterResponse uranusTablePublishToPublishCenter(UranusTablePublishToPublishCenterRequest request) throws JdcloudSdkException {
-        return new UranusTablePublishToPublishCenterExecutor().client(this).execute(request);
+    public ManageHubClusterUpdateResponse manageHubClusterUpdate(ManageHubClusterUpdateRequest request) throws JdcloudSdkException {
+        return new ManageHubClusterUpdateExecutor().client(this).execute(request);
     }
 
     /**
-     * 查询表DDL
+     * 
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ManageHubStorageTableDDLResponse manageHubStorageTableDDL(ManageHubStorageTableDDLRequest request) throws JdcloudSdkException {
-        return new ManageHubStorageTableDDLExecutor().client(this).execute(request);
+    public GetLongTimeRunningInstancesResponse getLongTimeRunningInstances(GetLongTimeRunningInstancesRequest request) throws JdcloudSdkException {
+        return new GetLongTimeRunningInstancesExecutor().client(this).execute(request);
     }
 
     /**
@@ -2635,17 +5179,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 任务保存
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTaskInfoSaveResponse uranusTaskInfoSave(UranusTaskInfoSaveRequest request) throws JdcloudSdkException {
-        return new UranusTaskInfoSaveExecutor().client(this).execute(request);
-    }
-
-    /**
      * 获取资源简要信息(前缀匹配资源名称)
      *
      * @param request
@@ -2654,6 +5187,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusResourceGetBriefByPrefixResponse uranusResourceGetBriefByPrefix(UranusResourceGetBriefByPrefixRequest request) throws JdcloudSdkException {
         return new UranusResourceGetBriefByPrefixExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新任务调度状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorUpdateTaskScheduleStateResponse rotorUpdateTaskScheduleState(RotorUpdateTaskScheduleStateRequest request) throws JdcloudSdkException {
+        return new RotorUpdateTaskScheduleStateExecutor().client(this).execute(request);
     }
 
     /**
@@ -2679,17 +5223,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 获取taskCode
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTaskInfoGetTaskCodeResponse uranusTaskInfoGetTaskCode(UranusTaskInfoGetTaskCodeRequest request) throws JdcloudSdkException {
-        return new UranusTaskInfoGetTaskCodeExecutor().client(this).execute(request);
-    }
-
-    /**
      * 列出值班表
      *
      * @param request
@@ -2701,6 +5234,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 抢任务节点锁，同一用户重复抢锁为幂等成功
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicSnatchLockResponse uranusTaskPublicSnatchLock(UranusTaskPublicSnatchLockRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicSnatchLockExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询作业运行信息
      *
      * @param request
@@ -2709,6 +5253,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public GravityParticleParticleJobGetRunInfosResponse gravityParticleParticleJobGetRunInfos(GravityParticleParticleJobGetRunInfosRequest request) throws JdcloudSdkException {
         return new GravityParticleParticleJobGetRunInfosExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新用户默认表来源
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTableDefaultSourceResponse uranusTableDefaultSource(UranusTableDefaultSourceRequest request) throws JdcloudSdkException {
+        return new UranusTableDefaultSourceExecutor().client(this).execute(request);
     }
 
     /**
@@ -2734,17 +5289,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 目录根据companyCode查询目录
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusCatalogQueryListResponse uranusCatalogQueryList(UranusCatalogQueryListRequest request) throws JdcloudSdkException {
-        return new UranusCatalogQueryListExecutor().client(this).execute(request);
-    }
-
-    /**
      * 脚本检测依赖
      *
      * @param request
@@ -2753,6 +5297,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusScriptVerifyScriptFileDependResponse uranusScriptVerifyScriptFileDepend(UranusScriptVerifyScriptFileDependRequest request) throws JdcloudSdkException {
         return new UranusScriptVerifyScriptFileDependExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取任务节点锁的状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskNodeLockStatusResponse uranusTaskNodeLockStatus(UranusTaskNodeLockStatusRequest request) throws JdcloudSdkException {
+        return new UranusTaskNodeLockStatusExecutor().client(this).execute(request);
     }
 
     /**
@@ -2800,6 +5355,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 任务业务目录是否存在
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskCatalogExistedResponse uranusTaskCatalogExisted(UranusTaskCatalogExistedRequest request) throws JdcloudSdkException {
+        return new UranusTaskCatalogExistedExecutor().client(this).execute(request);
+    }
+
+    /**
      * 根据父目录CODE删除目录
      *
      * @param request
@@ -2833,17 +5399,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 工作流目录树
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTaskFlowListTreeResponse uranusTaskFlowListTree(UranusTaskFlowListTreeRequest request) throws JdcloudSdkException {
-        return new UranusTaskFlowListTreeExecutor().client(this).execute(request);
-    }
-
-    /**
      * 分片上传初始化
      *
      * @param request
@@ -2852,28 +5407,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusWorkFlowInitUploadResponse uranusWorkFlowInitUpload(UranusWorkFlowInitUploadRequest request) throws JdcloudSdkException {
         return new UranusWorkFlowInitUploadExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 流程画布-节点管理列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTaskNodeListResponse uranusTaskNodeList(UranusTaskNodeListRequest request) throws JdcloudSdkException {
-        return new UranusTaskNodeListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取指定对话中的发言记录
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CopilotUtteranceListResponse copilotUtteranceList(CopilotUtteranceListRequest request) throws JdcloudSdkException {
-        return new CopilotUtteranceListExecutor().client(this).execute(request);
     }
 
     /**
@@ -2899,17 +5432,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 删除文件夹
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusWorkFlowDirDeleteResponse uranusWorkFlowDirDelete(UranusWorkFlowDirDeleteRequest request) throws JdcloudSdkException {
-        return new UranusWorkFlowDirDeleteExecutor().client(this).execute(request);
-    }
-
-    /**
      * 根据脚本内容解析输出表
      *
      * @param request
@@ -2918,17 +5440,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusTaskInfoAnalysisOutputTableResponse uranusTaskInfoAnalysisOutputTable(UranusTaskInfoAnalysisOutputTableRequest request) throws JdcloudSdkException {
         return new UranusTaskInfoAnalysisOutputTableExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 上传资源
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusResourceAppendFileResponse uranusResourceAppendFile(UranusResourceAppendFileRequest request) throws JdcloudSdkException {
-        return new UranusResourceAppendFileExecutor().client(this).execute(request);
     }
 
     /**
@@ -2965,36 +5476,69 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 获取历史对话列表
+     * 更新任务的集成任务参数信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CopilotChatHistoryResponse copilotChatHistory(CopilotChatHistoryRequest request) throws JdcloudSdkException {
-        return new CopilotChatHistoryExecutor().client(this).execute(request);
+    public UranusTaskPipeParamInfoUpdateResponse uranusTaskPipeParamInfoUpdate(UranusTaskPipeParamInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskPipeParamInfoUpdateExecutor().client(this).execute(request);
     }
 
     /**
-     * 抢锁时获取任务信息
+     * 根据调试ID查询任务的执行日志
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusTaskInfoLockDetailResponse uranusTaskInfoLockDetail(UranusTaskInfoLockDetailRequest request) throws JdcloudSdkException {
-        return new UranusTaskInfoLockDetailExecutor().client(this).execute(request);
+    public UranusTaskPublicDebugLogResponse uranusTaskPublicDebugLog(UranusTaskPublicDebugLogRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicDebugLogExecutor().client(this).execute(request);
     }
 
     /**
-     * 查询计算任务日志
+     * 删除集群的元数据
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ManageHubGravityJobLogResponse manageHubGravityJobLog(ManageHubGravityJobLogRequest request) throws JdcloudSdkException {
-        return new ManageHubGravityJobLogExecutor().client(this).execute(request);
+    public ManageHubClusterMetaDeleteResponse manageHubClusterMetaDelete(ManageHubClusterMetaDeleteRequest request) throws JdcloudSdkException {
+        return new ManageHubClusterMetaDeleteExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除业务目录
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskCatalogDeleteResponse uranusTaskCatalogDelete(UranusTaskCatalogDeleteRequest request) throws JdcloudSdkException {
+        return new UranusTaskCatalogDeleteExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取调试结果内容
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskDebugResultContentResponse uranusTaskDebugResultContent(UranusTaskDebugResultContentRequest request) throws JdcloudSdkException {
+        return new UranusTaskDebugResultContentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新任务的调度信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskScheduleInfoUpdateResponse uranusTaskScheduleInfoUpdate(UranusTaskScheduleInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskScheduleInfoUpdateExecutor().client(this).execute(request);
     }
 
     /**
@@ -3009,36 +5553,14 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 查询表分区
+     * 按照projectCode查询绑定的计算引擎信息以及计算引擎绑定的空间信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public JtlasPageSearchTablePartitionsResponse jtlasPageSearchTablePartitions(JtlasPageSearchTablePartitionsRequest request) throws JdcloudSdkException {
-        return new JtlasPageSearchTablePartitionsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 任务批量补数
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleJobHisRunAddBathTaskResponse gravityParticleJobHisRunAddBathTask(GravityParticleJobHisRunAddBathTaskRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobHisRunAddBathTaskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取脚本类型和模板下载地址
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleDubboJobManagerGetScriptInfoTypeResponse gravityParticleDubboJobManagerGetScriptInfoType(GravityParticleDubboJobManagerGetScriptInfoTypeRequest request) throws JdcloudSdkException {
-        return new GravityParticleDubboJobManagerGetScriptInfoTypeExecutor().client(this).execute(request);
+    public GetByProjectCodeResponse getByProjectCode(GetByProjectCodeRequest request) throws JdcloudSdkException {
+        return new GetByProjectCodeExecutor().client(this).execute(request);
     }
 
     /**
@@ -3064,14 +5586,25 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 工作流-预发布
+     * 创建任务节点
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusTaskPrePublishResponse uranusTaskPrePublish(UranusTaskPrePublishRequest request) throws JdcloudSdkException {
-        return new UranusTaskPrePublishExecutor().client(this).execute(request);
+    public UranusTaskNodeCreateResponse uranusTaskNodeCreate(UranusTaskNodeCreateRequest request) throws JdcloudSdkException {
+        return new UranusTaskNodeCreateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列出当前工作区下的所有资源组信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicListResourcesResponse uranusTaskPublicListResources(UranusTaskPublicListResourcesRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicListResourcesExecutor().client(this).execute(request);
     }
 
     /**
@@ -3108,17 +5641,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 查询脚本参数或任务参数
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusScriptQueryParamsResponse uranusScriptQueryParams(UranusScriptQueryParamsRequest request) throws JdcloudSdkException {
-        return new UranusScriptQueryParamsExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除作业以及子作业和质量作业
      *
      * @param request
@@ -3127,6 +5649,28 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public GravityParticleChannelJobInfoDeleteJobResponse gravityParticleChannelJobInfoDeleteJob(GravityParticleChannelJobInfoDeleteJobRequest request) throws JdcloudSdkException {
         return new GravityParticleChannelJobInfoDeleteJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 按全路径判断业务目录是否存在，例如 /dir1/dir2/dir3
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicCatalogExistedByPathResponse uranusTaskPublicCatalogExistedByPath(UranusTaskPublicCatalogExistedByPathRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicCatalogExistedByPathExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 强制解绑资源组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WorkspaceForceUnBundleResourceResponse workspaceForceUnBundleResource(WorkspaceForceUnBundleResourceRequest request) throws JdcloudSdkException {
+        return new WorkspaceForceUnBundleResourceExecutor().client(this).execute(request);
     }
 
     /**
@@ -3152,58 +5696,14 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 同步工作空间开通信息接口
+     * 更新任务的数据源配置信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public WorkspaceSyncWsProductOrderResponse workspaceSyncWsProductOrder(WorkspaceSyncWsProductOrderRequest request) throws JdcloudSdkException {
-        return new WorkspaceSyncWsProductOrderExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 任务属性
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ManageHubGravityJobPropertyResponse manageHubGravityJobProperty(ManageHubGravityJobPropertyRequest request) throws JdcloudSdkException {
-        return new ManageHubGravityJobPropertyExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 数据下载
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTableDataDownloadResponse uranusTableDataDownload(UranusTableDataDownloadRequest request) throws JdcloudSdkException {
-        return new UranusTableDataDownloadExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 工作流新建
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTaskFlowSaveResponse uranusTaskFlowSave(UranusTaskFlowSaveRequest request) throws JdcloudSdkException {
-        return new UranusTaskFlowSaveExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 同步工作空间续费消息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public WorkspaceSyncRechargeResponse workspaceSyncRecharge(WorkspaceSyncRechargeRequest request) throws JdcloudSdkException {
-        return new WorkspaceSyncRechargeExecutor().client(this).execute(request);
+    public UranusTaskPublicUpdateDatasourceResponse uranusTaskPublicUpdateDatasource(UranusTaskPublicUpdateDatasourceRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicUpdateDatasourceExecutor().client(this).execute(request);
     }
 
     /**
@@ -3229,6 +5729,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 更新业务目录信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskCatalogUpdateResponse uranusTaskCatalogUpdate(UranusTaskCatalogUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskCatalogUpdateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 任务单节点-详情
      *
      * @param request
@@ -3237,6 +5748,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusTaskDetailResponse uranusTaskDetail(UranusTaskDetailRequest request) throws JdcloudSdkException {
         return new UranusTaskDetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据调试ID查询任务的执行结果
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicDebugResultResponse uranusTaskPublicDebugResult(UranusTaskPublicDebugResultRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicDebugResultExecutor().client(this).execute(request);
     }
 
     /**
@@ -3251,17 +5773,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 任务重新发布
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTaskInfoRePublishResponse uranusTaskInfoRePublish(UranusTaskInfoRePublishRequest request) throws JdcloudSdkException {
-        return new UranusTaskInfoRePublishExecutor().client(this).execute(request);
-    }
-
-    /**
      * 判断作业和上游是否完全同频
      *
      * @param request
@@ -3273,58 +5784,69 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 查询作业完成信息
+     * 从运维中心下线任务
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GravityParticleParticleJobJobCompletionInfoResponse gravityParticleParticleJobJobCompletionInfo(GravityParticleParticleJobJobCompletionInfoRequest request) throws JdcloudSdkException {
-        return new GravityParticleParticleJobJobCompletionInfoExecutor().client(this).execute(request);
+    public UranusTaskOfflineResponse uranusTaskOffline(UranusTaskOfflineRequest request) throws JdcloudSdkException {
+        return new UranusTaskOfflineExecutor().client(this).execute(request);
     }
 
     /**
-     * 获取所有分类目录
+     * 计算引擎解绑实例
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusFunctionListCatalogResponse uranusFunctionListCatalog(UranusFunctionListCatalogRequest request) throws JdcloudSdkException {
-        return new UranusFunctionListCatalogExecutor().client(this).execute(request);
+    public UnbindInstanceResponse unbindInstance(UnbindInstanceRequest request) throws JdcloudSdkException {
+        return new UnbindInstanceExecutor().client(this).execute(request);
     }
 
     /**
-     * 检索表
+     * 
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public JtlasPageSearchTablesResponse jtlasPageSearchTables(JtlasPageSearchTablesRequest request) throws JdcloudSdkException {
-        return new JtlasPageSearchTablesExecutor().client(this).execute(request);
+    public GetMostFailedTimesInstancesResponse getMostFailedTimesInstances(GetMostFailedTimesInstancesRequest request) throws JdcloudSdkException {
+        return new GetMostFailedTimesInstancesExecutor().client(this).execute(request);
     }
 
     /**
-     * 根据查询条件返回作业关联的模型信息
+     * 配置任务的调度策略，包括调度周期、优先级、重试次数等
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GravityParticleDubboJobManagerSearchDmrModelJobResponse gravityParticleDubboJobManagerSearchDmrModelJob(GravityParticleDubboJobManagerSearchDmrModelJobRequest request) throws JdcloudSdkException {
-        return new GravityParticleDubboJobManagerSearchDmrModelJobExecutor().client(this).execute(request);
+    public UranusTaskPublicConfigScheduleResponse uranusTaskPublicConfigSchedule(UranusTaskPublicConfigScheduleRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicConfigScheduleExecutor().client(this).execute(request);
     }
 
     /**
-     * 发布包详情查询
+     * 任务调度状态字典
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribePublishPkgResponse describePublishPkg(DescribePublishPkgRequest request) throws JdcloudSdkException {
-        return new DescribePublishPkgExecutor().client(this).execute(request);
+    public RotorDictTaskScheduleStatesResponse rotorDictTaskScheduleStates(RotorDictTaskScheduleStatesRequest request) throws JdcloudSdkException {
+        return new RotorDictTaskScheduleStatesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询补数方案列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorSupplementPlanListResponse rotorSupplementPlanList(RotorSupplementPlanListRequest request) throws JdcloudSdkException {
+        return new RotorSupplementPlanListExecutor().client(this).execute(request);
     }
 
     /**
@@ -3350,17 +5872,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 获取工作空间绑定的云仓项目
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public WorkspaceGetProjectResponse workspaceGetProject(WorkspaceGetProjectRequest request) throws JdcloudSdkException {
-        return new WorkspaceGetProjectExecutor().client(this).execute(request);
-    }
-
-    /**
      * 更新值班人
      *
      * @param request
@@ -3372,14 +5883,14 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 发布，保存发布，更新发布等等
+     * 获取补数方案配置
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusTablePublishResponse uranusTablePublish(UranusTablePublishRequest request) throws JdcloudSdkException {
-        return new UranusTablePublishExecutor().client(this).execute(request);
+    public RotorSupplementPlanInfoResponse rotorSupplementPlanInfo(RotorSupplementPlanInfoRequest request) throws JdcloudSdkException {
+        return new RotorSupplementPlanInfoExecutor().client(this).execute(request);
     }
 
     /**
@@ -3402,6 +5913,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public ManageHubGravityJobTypeResponse manageHubGravityJobType(ManageHubGravityJobTypeRequest request) throws JdcloudSdkException {
         return new ManageHubGravityJobTypeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 任务详细信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorTaskDetailResponse rotorTaskDetail(RotorTaskDetailRequest request) throws JdcloudSdkException {
+        return new RotorTaskDetailExecutor().client(this).execute(request);
     }
 
     /**
@@ -3438,17 +5960,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 表分隔符信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTableDelimitersResponse uranusTableDelimiters(UranusTableDelimitersRequest request) throws JdcloudSdkException {
-        return new UranusTableDelimitersExecutor().client(this).execute(request);
-    }
-
-    /**
      * 根据类型获取数据字典
      *
      * @param request
@@ -3460,36 +5971,14 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 根据类型获取数据字典
+     * 实例依赖关系
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GravityParticleConfigUserMatchUserResponse gravityParticleConfigUserMatchUser(GravityParticleConfigUserMatchUserRequest request) throws JdcloudSdkException {
-        return new GravityParticleConfigUserMatchUserExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 存储概览
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ManageHubStorageSummaryResponse manageHubStorageSummary(ManageHubStorageSummaryRequest request) throws JdcloudSdkException {
-        return new ManageHubStorageSummaryExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 任务单节点-删除
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTaskNodeDeleteResponse uranusTaskNodeDelete(UranusTaskNodeDeleteRequest request) throws JdcloudSdkException {
-        return new UranusTaskNodeDeleteExecutor().client(this).execute(request);
+    public RotorInstanceDependencyResponse rotorInstanceDependency(RotorInstanceDependencyRequest request) throws JdcloudSdkException {
+        return new RotorInstanceDependencyExecutor().client(this).execute(request);
     }
 
     /**
@@ -3504,47 +5993,25 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 获取作业树
+     * 获取临时查询运行日志
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GravityParticleJobDepGetChildTreedResponse gravityParticleJobDepGetChildTreed(GravityParticleJobDepGetChildTreedRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobDepGetChildTreedExecutor().client(this).execute(request);
+    public UranusTaskExtraRunnerLogResponse uranusTaskExtraRunnerLog(UranusTaskExtraRunnerLogRequest request) throws JdcloudSdkException {
+        return new UranusTaskExtraRunnerLogExecutor().client(this).execute(request);
     }
 
     /**
-     * 获得脚本运行日志
+     * 任务依赖关系
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UranusScriptRunLogLogContentResponse uranusScriptRunLogLogContent(UranusScriptRunLogLogContentRequest request) throws JdcloudSdkException {
-        return new UranusScriptRunLogLogContentExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 建表的列类型查询
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusDictTableCodeResponse uranusDictTableCode(UranusDictTableCodeRequest request) throws JdcloudSdkException {
-        return new UranusDictTableCodeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据查询条件返回作业Id
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleDubboJobManagerSearchJobIdResponse gravityParticleDubboJobManagerSearchJobId(GravityParticleDubboJobManagerSearchJobIdRequest request) throws JdcloudSdkException {
-        return new GravityParticleDubboJobManagerSearchJobIdExecutor().client(this).execute(request);
+    public RotorTaskDependencyResponse rotorTaskDependency(RotorTaskDependencyRequest request) throws JdcloudSdkException {
+        return new RotorTaskDependencyExecutor().client(this).execute(request);
     }
 
     /**
@@ -3570,6 +6037,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 计算引擎绑定云仓或JMR实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public BindInstanceResponse bindInstance(BindInstanceRequest request) throws JdcloudSdkException {
+        return new BindInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取父作业
      *
      * @param request
@@ -3581,14 +6059,25 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 一键重跑预览
+     * 同步任务的调试参数到输入参数
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ManageHubGravityOneClickRerunPreviewResponse manageHubGravityOneClickRerunPreview(ManageHubGravityOneClickRerunPreviewRequest request) throws JdcloudSdkException {
-        return new ManageHubGravityOneClickRerunPreviewExecutor().client(this).execute(request);
+    public UranusTaskDebugParamSyncResponse uranusTaskDebugParamSync(UranusTaskDebugParamSyncRequest request) throws JdcloudSdkException {
+        return new UranusTaskDebugParamSyncExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除集群
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ManageHubClusterDeleteResponse manageHubClusterDelete(ManageHubClusterDeleteRequest request) throws JdcloudSdkException {
+        return new ManageHubClusterDeleteExecutor().client(this).execute(request);
     }
 
     /**
@@ -3614,14 +6103,25 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 获取子作业
+     * 替换集群元数据：清空集群现有元数据，完全以参数中的内容重建
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GravityParticleJobDepChildJobsResponse gravityParticleJobDepChildJobs(GravityParticleJobDepChildJobsRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobDepChildJobsExecutor().client(this).execute(request);
+    public ManageHubClusterMetaReplaceResponse manageHubClusterMetaReplace(ManageHubClusterMetaReplaceRequest request) throws JdcloudSdkException {
+        return new ManageHubClusterMetaReplaceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 补数执行顺序字典
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorDictSupplementOrderResponse rotorDictSupplementOrder(RotorDictSupplementOrderRequest request) throws JdcloudSdkException {
+        return new RotorDictSupplementOrderExecutor().client(this).execute(request);
     }
 
     /**
@@ -3633,17 +6133,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesResponse jtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivileges(JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesRequest request) throws JdcloudSdkException {
         return new JtlasWarehouseFuzzyQueryTablesUnderSpecifiedUserWithPrivilegesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 列出所有目录(只包含目录)
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusResourceListDirectoryResponse uranusResourceListDirectory(UranusResourceListDirectoryRequest request) throws JdcloudSdkException {
-        return new UranusResourceListDirectoryExecutor().client(this).execute(request);
     }
 
     /**
@@ -3713,17 +6202,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 根据查询条件返回作业关联的模型信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleDubboJobManagerJobQueryResponse gravityParticleDubboJobManagerJobQuery(GravityParticleDubboJobManagerJobQueryRequest request) throws JdcloudSdkException {
-        return new GravityParticleDubboJobManagerJobQueryExecutor().client(this).execute(request);
-    }
-
-    /**
      * 任务单节点-校验作业名称
      *
      * @param request
@@ -3746,17 +6224,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 重置作业为done
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleParticleJobSchedResetStsDoneResponse gravityParticleParticleJobSchedResetStsDone(GravityParticleParticleJobSchedResetStsDoneRequest request) throws JdcloudSdkException {
-        return new GravityParticleParticleJobSchedResetStsDoneExecutor().client(this).execute(request);
-    }
-
-    /**
      * 批量接口上线
      *
      * @param request
@@ -3765,17 +6232,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public GravityParticleParticleJobSchedReuseJobWithDependResponse gravityParticleParticleJobSchedReuseJobWithDepend(GravityParticleParticleJobSchedReuseJobWithDependRequest request) throws JdcloudSdkException {
         return new GravityParticleParticleJobSchedReuseJobWithDependExecutor().client(this).execute(request);
-    }
-
-    /**
-     * sql语法检测
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusScriptSyntaxCheckResponse uranusScriptSyntaxCheck(UranusScriptSyntaxCheckRequest request) throws JdcloudSdkException {
-        return new UranusScriptSyntaxCheckExecutor().client(this).execute(request);
     }
 
     /**
@@ -3790,28 +6246,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 获取可用模型列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CopilotModelListResponse copilotModelList(CopilotModelListRequest request) throws JdcloudSdkException {
-        return new CopilotModelListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取运行脚本结果
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusScriptGetScriptRunResultResponse uranusScriptGetScriptRunResult(UranusScriptGetScriptRunResultRequest request) throws JdcloudSdkException {
-        return new UranusScriptGetScriptRunResultExecutor().client(this).execute(request);
-    }
-
-    /**
      * 根据当前作业和目标层级查询子作业链路层级树
      *
      * @param request
@@ -3820,17 +6254,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public GravityParticleJobDepGetChildChainJobsResponse gravityParticleJobDepGetChildChainJobs(GravityParticleJobDepGetChildChainJobsRequest request) throws JdcloudSdkException {
         return new GravityParticleJobDepGetChildChainJobsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 工作流画布-作业预发布
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusTaskPagePublishResponse uranusTaskPagePublish(UranusTaskPagePublishRequest request) throws JdcloudSdkException {
-        return new UranusTaskPagePublishExecutor().client(this).execute(request);
     }
 
     /**
@@ -3845,28 +6268,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 获取子作业
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleJobDepGetChildDependenciesResponse gravityParticleJobDepGetChildDependencies(GravityParticleJobDepGetChildDependenciesRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobDepGetChildDependenciesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 表授权接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public JtlasGrantTablePrivilegesResponse jtlasGrantTablePrivileges(JtlasGrantTablePrivilegesRequest request) throws JdcloudSdkException {
-        return new JtlasGrantTablePrivilegesExecutor().client(this).execute(request);
-    }
-
-    /**
      * 新建资源（包含资源目录和资源文件）
      *
      * @param request
@@ -3878,14 +6279,25 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 获取云仓项目被绑定的工作空间
+     * 列出工作流下某版本的所有历史任务节点
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public WorkspaceGetProjectBundleResponse workspaceGetProjectBundle(WorkspaceGetProjectBundleRequest request) throws JdcloudSdkException {
-        return new WorkspaceGetProjectBundleExecutor().client(this).execute(request);
+    public UranusFlowListHistoryNodeResponse uranusFlowListHistoryNode(UranusFlowListHistoryNodeRequest request) throws JdcloudSdkException {
+        return new UranusFlowListHistoryNodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 终止任务实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RotorKillInstanceResponse rotorKillInstance(RotorKillInstanceRequest request) throws JdcloudSdkException {
+        return new RotorKillInstanceExecutor().client(this).execute(request);
     }
 
     /**
@@ -3911,6 +6323,28 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 根据调试ID停止正在运行的调试任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicStopDebugResponse uranusTaskPublicStopDebug(UranusTaskPublicStopDebugRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicStopDebugExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 将任务提交到运维中心进行发布
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicPublishResponse uranusTaskPublicPublish(UranusTaskPublicPublishRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicPublishExecutor().client(this).execute(request);
+    }
+
+    /**
      * 发布函数到发布中心
      *
      * @param request
@@ -3933,61 +6367,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 工作空间绑定云仓项目
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public WorkspaceBundleProjectResponse workspaceBundleProject(WorkspaceBundleProjectRequest request) throws JdcloudSdkException {
-        return new WorkspaceBundleProjectExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取工作空间的资源组列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public WorkspaceGetResourcesResponse workspaceGetResources(WorkspaceGetResourcesRequest request) throws JdcloudSdkException {
-        return new WorkspaceGetResourcesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 增加值班人
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ManageHubDutyAddWatchmanResponse manageHubDutyAddWatchman(ManageHubDutyAddWatchmanRequest request) throws JdcloudSdkException {
-        return new ManageHubDutyAddWatchmanExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除工作空间
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public WorkspaceDeleteResponse workspaceDelete(WorkspaceDeleteRequest request) throws JdcloudSdkException {
-        return new WorkspaceDeleteExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 停止补数
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleJobHisRunCloseTaskResponse gravityParticleJobHisRunCloseTask(GravityParticleJobHisRunCloseTaskRequest request) throws JdcloudSdkException {
-        return new GravityParticleJobHisRunCloseTaskExecutor().client(this).execute(request);
-    }
-
-    /**
      * 工作流删除
      *
      * @param request
@@ -3996,39 +6375,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusTaskFlowDeleteResponse uranusTaskFlowDelete(UranusTaskFlowDeleteRequest request) throws JdcloudSdkException {
         return new UranusTaskFlowDeleteExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 保存作业模型相关信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleDubboJobManagerSaveDmrModelJobResponse gravityParticleDubboJobManagerSaveDmrModelJob(GravityParticleDubboJobManagerSaveDmrModelJobRequest request) throws JdcloudSdkException {
-        return new GravityParticleDubboJobManagerSaveDmrModelJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取作业详细信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleDubboJobManagerCalcJobDetailResponse gravityParticleDubboJobManagerCalcJobDetail(GravityParticleDubboJobManagerCalcJobDetailRequest request) throws JdcloudSdkException {
-        return new GravityParticleDubboJobManagerCalcJobDetailExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询作业清单
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleParticleModelCalcListJobResponse gravityParticleParticleModelCalcListJob(GravityParticleParticleModelCalcListJobRequest request) throws JdcloudSdkException {
-        return new GravityParticleParticleModelCalcListJobExecutor().client(this).execute(request);
     }
 
     /**
@@ -4054,25 +6400,25 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 工作空间解绑云仓项目
+     * 实例运行日志
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public WorkspaceUnbundleProjectResponse workspaceUnbundleProject(WorkspaceUnbundleProjectRequest request) throws JdcloudSdkException {
-        return new WorkspaceUnbundleProjectExecutor().client(this).execute(request);
+    public RotorInstanceRunLogsResponse rotorInstanceRunLogs(RotorInstanceRunLogsRequest request) throws JdcloudSdkException {
+        return new RotorInstanceRunLogsExecutor().client(this).execute(request);
     }
 
     /**
-     * 一键重跑任务重新提交
+     * JCW SQL语法检测
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ManageHubGravityOneClickRerunResubmitResponse manageHubGravityOneClickRerunResubmit(ManageHubGravityOneClickRerunResubmitRequest request) throws JdcloudSdkException {
-        return new ManageHubGravityOneClickRerunResubmitExecutor().client(this).execute(request);
+    public UranusTaskDebugSyntaxCheckResponse uranusTaskDebugSyntaxCheck(UranusTaskDebugSyntaxCheckRequest request) throws JdcloudSdkException {
+        return new UranusTaskDebugSyntaxCheckExecutor().client(this).execute(request);
     }
 
     /**
@@ -4084,28 +6430,6 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public JtlasSearchDetailResponse jtlasSearchDetail(JtlasSearchDetailRequest request) throws JdcloudSdkException {
         return new JtlasSearchDetailExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 条件查询-作业运行实例列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GravityParticleParticleJobListJobInstanceResponse gravityParticleParticleJobListJobInstance(GravityParticleParticleJobListJobInstanceRequest request) throws JdcloudSdkException {
-        return new GravityParticleParticleJobListJobInstanceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获得脚本运行的内容
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UranusScriptRunLogContentResponse uranusScriptRunLogContent(UranusScriptRunLogContentRequest request) throws JdcloudSdkException {
-        return new UranusScriptRunLogContentExecutor().client(this).execute(request);
     }
 
     /**

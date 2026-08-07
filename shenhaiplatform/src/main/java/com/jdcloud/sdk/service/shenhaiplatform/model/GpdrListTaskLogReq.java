@@ -115,7 +115,8 @@ public class GpdrListTaskLogReq  implements java.io.Serializable {
     /**
      * set 页面大小
      *
-     * @param pageSize
+     * @param pageSize 页面大小
+     * @return GpdrListTaskLogReq
      */
     public GpdrListTaskLogReq pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -126,7 +127,8 @@ public class GpdrListTaskLogReq  implements java.io.Serializable {
     /**
      * set 页码
      *
-     * @param pageNum
+     * @param pageNum 页码
+     * @return GpdrListTaskLogReq
      */
     public GpdrListTaskLogReq pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -137,7 +139,8 @@ public class GpdrListTaskLogReq  implements java.io.Serializable {
     /**
      * set 补数任务id
      *
-     * @param afreshAddId
+     * @param afreshAddId 补数任务id
+     * @return GpdrListTaskLogReq
      */
     public GpdrListTaskLogReq afreshAddId(Integer afreshAddId) {
         this.afreshAddId = afreshAddId;

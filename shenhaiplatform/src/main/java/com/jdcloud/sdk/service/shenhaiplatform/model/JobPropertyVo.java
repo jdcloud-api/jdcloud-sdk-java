@@ -134,7 +134,8 @@ public class JobPropertyVo  implements java.io.Serializable {
     /**
      * set 作业基础信息
      *
-     * @param jobBasicInfo
+     * @param jobBasicInfo 作业基础信息
+     * @return JobPropertyVo
      */
     public JobPropertyVo jobBasicInfo(JobBasicInfoVo jobBasicInfo) {
         this.jobBasicInfo = jobBasicInfo;
@@ -145,7 +146,8 @@ public class JobPropertyVo  implements java.io.Serializable {
     /**
      * set 作业公共信息
      *
-     * @param jobCommonInfo
+     * @param jobCommonInfo 作业公共信息
+     * @return JobPropertyVo
      */
     public JobPropertyVo jobCommonInfo(JobCommonInfoVo jobCommonInfo) {
         this.jobCommonInfo = jobCommonInfo;
@@ -156,7 +158,8 @@ public class JobPropertyVo  implements java.io.Serializable {
     /**
      * set 作业监控信息
      *
-     * @param jobMonitorInfo
+     * @param jobMonitorInfo 作业监控信息
+     * @return JobPropertyVo
      */
     public JobPropertyVo jobMonitorInfo(JobMonitorInfoVo jobMonitorInfo) {
         this.jobMonitorInfo = jobMonitorInfo;
@@ -167,7 +170,8 @@ public class JobPropertyVo  implements java.io.Serializable {
     /**
      * set 作业运行配置信息
      *
-     * @param runRoleInfo
+     * @param runRoleInfo 作业运行配置信息
+     * @return JobPropertyVo
      */
     public JobPropertyVo runRoleInfo(JobRunInfoVo runRoleInfo) {
         this.runRoleInfo = runRoleInfo;

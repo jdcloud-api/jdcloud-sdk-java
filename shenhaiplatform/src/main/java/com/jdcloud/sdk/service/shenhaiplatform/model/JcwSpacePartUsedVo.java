@@ -86,7 +86,8 @@ public class JcwSpacePartUsedVo  implements java.io.Serializable {
     /**
      * set 分区名称
      *
-     * @param partitionName
+     * @param partitionName 分区名称
+     * @return JcwSpacePartUsedVo
      */
     public JcwSpacePartUsedVo partitionName(String partitionName) {
         this.partitionName = partitionName;
@@ -97,7 +98,8 @@ public class JcwSpacePartUsedVo  implements java.io.Serializable {
     /**
      * set 分区存储量（带单位的字符串）
      *
-     * @param usedSpace
+     * @param usedSpace 分区存储量（带单位的字符串）
+     * @return JcwSpacePartUsedVo
      */
     public JcwSpacePartUsedVo usedSpace(String usedSpace) {
         this.usedSpace = usedSpace;

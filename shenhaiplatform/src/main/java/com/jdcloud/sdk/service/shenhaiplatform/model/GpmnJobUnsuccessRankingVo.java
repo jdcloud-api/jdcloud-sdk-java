@@ -182,7 +182,8 @@ public class GpmnJobUnsuccessRankingVo  implements java.io.Serializable {
     /**
      * set 排名
      *
-     * @param order
+     * @param order 排名
+     * @return GpmnJobUnsuccessRankingVo
      */
     public GpmnJobUnsuccessRankingVo order(Integer order) {
         this.order = order;
@@ -193,7 +194,8 @@ public class GpmnJobUnsuccessRankingVo  implements java.io.Serializable {
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GpmnJobUnsuccessRankingVo
      */
     public GpmnJobUnsuccessRankingVo jobName(String jobName) {
         this.jobName = jobName;
@@ -204,7 +206,8 @@ public class GpmnJobUnsuccessRankingVo  implements java.io.Serializable {
     /**
      * set 作业类型描述
      *
-     * @param jobType
+     * @param jobType 作业类型描述
+     * @return GpmnJobUnsuccessRankingVo
      */
     public GpmnJobUnsuccessRankingVo jobType(String jobType) {
         this.jobType = jobType;
@@ -215,7 +218,8 @@ public class GpmnJobUnsuccessRankingVo  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return GpmnJobUnsuccessRankingVo
      */
     public GpmnJobUnsuccessRankingVo manager(String manager) {
         this.manager = manager;
@@ -226,7 +230,8 @@ public class GpmnJobUnsuccessRankingVo  implements java.io.Serializable {
     /**
      * set 失败次数
      *
-     * @param failedTime
+     * @param failedTime 失败次数
+     * @return GpmnJobUnsuccessRankingVo
      */
     public GpmnJobUnsuccessRankingVo failedTime(Integer failedTime) {
         this.failedTime = failedTime;
@@ -237,7 +242,8 @@ public class GpmnJobUnsuccessRankingVo  implements java.io.Serializable {
     /**
      * set 客户作业名
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名
+     * @return GpmnJobUnsuccessRankingVo
      */
     public GpmnJobUnsuccessRankingVo cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;

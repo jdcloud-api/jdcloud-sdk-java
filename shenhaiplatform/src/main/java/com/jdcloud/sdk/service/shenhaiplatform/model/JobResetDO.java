@@ -110,7 +110,8 @@ public class JobResetDO  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return JobResetDO
      */
     public JobResetDO jobName(String jobName) {
         this.jobName = jobName;
@@ -121,7 +122,8 @@ public class JobResetDO  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return JobResetDO
      */
     public JobResetDO txDate(String txDate) {
         this.txDate = txDate;
@@ -132,7 +134,8 @@ public class JobResetDO  implements java.io.Serializable {
     /**
      * set 作业重置的状态
      *
-     * @param jobStatus
+     * @param jobStatus 作业重置的状态
+     * @return JobResetDO
      */
     public JobResetDO jobStatus(String jobStatus) {
         this.jobStatus = jobStatus;

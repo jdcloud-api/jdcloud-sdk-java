@@ -120,7 +120,8 @@ public class UranusResourceGetBriefByCodesRequest extends JdcloudRequest impleme
     /**
     * set 资源codes
     *
-    * @param resourceCodes
+    * @param resourceCodes 资源codes
+    * @return UranusResourceGetBriefByCodesRequest
     */
     public UranusResourceGetBriefByCodesRequest resourceCodes(List<String> resourceCodes) {
         this.resourceCodes = resourceCodes;
@@ -131,7 +132,8 @@ public class UranusResourceGetBriefByCodesRequest extends JdcloudRequest impleme
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusResourceGetBriefByCodesRequest
      */
     public UranusResourceGetBriefByCodesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -142,7 +144,8 @@ public class UranusResourceGetBriefByCodesRequest extends JdcloudRequest impleme
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusResourceGetBriefByCodesRequest
      */
     public UranusResourceGetBriefByCodesRequest appName(String appName) {
         this.appName = appName;

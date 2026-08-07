@@ -164,7 +164,8 @@ public class ManageHubGravityOneClickRerunTasksRequest extends JdcloudRequest im
     /**
      * set 页号
      *
-     * @param pageNum
+     * @param pageNum 页号
+     * @return ManageHubGravityOneClickRerunTasksRequest
      */
     public ManageHubGravityOneClickRerunTasksRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -175,7 +176,8 @@ public class ManageHubGravityOneClickRerunTasksRequest extends JdcloudRequest im
     /**
      * set 页大小
      *
-     * @param pageSize
+     * @param pageSize 页大小
+     * @return ManageHubGravityOneClickRerunTasksRequest
      */
     public ManageHubGravityOneClickRerunTasksRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -186,7 +188,8 @@ public class ManageHubGravityOneClickRerunTasksRequest extends JdcloudRequest im
     /**
      * set 批次id
      *
-     * @param batchId
+     * @param batchId 批次id
+     * @return ManageHubGravityOneClickRerunTasksRequest
      */
     public ManageHubGravityOneClickRerunTasksRequest batchId(Integer batchId) {
         this.batchId = batchId;
@@ -197,7 +200,8 @@ public class ManageHubGravityOneClickRerunTasksRequest extends JdcloudRequest im
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubGravityOneClickRerunTasksRequest
      */
     public ManageHubGravityOneClickRerunTasksRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -208,7 +212,8 @@ public class ManageHubGravityOneClickRerunTasksRequest extends JdcloudRequest im
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubGravityOneClickRerunTasksRequest
      */
     public ManageHubGravityOneClickRerunTasksRequest appName(String appName) {
         this.appName = appName;

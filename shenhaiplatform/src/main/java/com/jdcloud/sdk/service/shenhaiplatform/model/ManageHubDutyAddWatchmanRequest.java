@@ -212,7 +212,8 @@ public class ManageHubDutyAddWatchmanRequest extends JdcloudRequest implements j
     /**
      * set 值班人名称
      *
-     * @param name
+     * @param name 值班人名称
+     * @return ManageHubDutyAddWatchmanRequest
      */
     public ManageHubDutyAddWatchmanRequest name(String name) {
         this.name = name;
@@ -223,7 +224,8 @@ public class ManageHubDutyAddWatchmanRequest extends JdcloudRequest implements j
     /**
      * set 值班人Pin
      *
-     * @param pin
+     * @param pin 值班人Pin
+     * @return ManageHubDutyAddWatchmanRequest
      */
     public ManageHubDutyAddWatchmanRequest pin(String pin) {
         this.pin = pin;
@@ -234,7 +236,8 @@ public class ManageHubDutyAddWatchmanRequest extends JdcloudRequest implements j
     /**
      * set 值班人Erp
      *
-     * @param erp
+     * @param erp 值班人Erp
+     * @return ManageHubDutyAddWatchmanRequest
      */
     public ManageHubDutyAddWatchmanRequest erp(String erp) {
         this.erp = erp;
@@ -245,7 +248,8 @@ public class ManageHubDutyAddWatchmanRequest extends JdcloudRequest implements j
     /**
      * set 值班人手机号
      *
-     * @param phoneNumber
+     * @param phoneNumber 值班人手机号
+     * @return ManageHubDutyAddWatchmanRequest
      */
     public ManageHubDutyAddWatchmanRequest phoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
@@ -256,7 +260,8 @@ public class ManageHubDutyAddWatchmanRequest extends JdcloudRequest implements j
     /**
      * set 值班人邮箱地址
      *
-     * @param email
+     * @param email 值班人邮箱地址
+     * @return ManageHubDutyAddWatchmanRequest
      */
     public ManageHubDutyAddWatchmanRequest email(String email) {
         this.email = email;
@@ -267,7 +272,8 @@ public class ManageHubDutyAddWatchmanRequest extends JdcloudRequest implements j
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubDutyAddWatchmanRequest
      */
     public ManageHubDutyAddWatchmanRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -278,7 +284,8 @@ public class ManageHubDutyAddWatchmanRequest extends JdcloudRequest implements j
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubDutyAddWatchmanRequest
      */
     public ManageHubDutyAddWatchmanRequest appName(String appName) {
         this.appName = appName;

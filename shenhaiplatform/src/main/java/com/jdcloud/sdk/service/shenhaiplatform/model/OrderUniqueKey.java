@@ -134,7 +134,8 @@ public class OrderUniqueKey  implements java.io.Serializable {
     /**
      * set buyId
      *
-     * @param buyId
+     * @param buyId 
+     * @return OrderUniqueKey
      */
     public OrderUniqueKey buyId(String buyId) {
         this.buyId = buyId;
@@ -145,7 +146,8 @@ public class OrderUniqueKey  implements java.io.Serializable {
     /**
      * set sourceId
      *
-     * @param sourceId
+     * @param sourceId 
+     * @return OrderUniqueKey
      */
     public OrderUniqueKey sourceId(String sourceId) {
         this.sourceId = sourceId;
@@ -156,7 +158,8 @@ public class OrderUniqueKey  implements java.io.Serializable {
     /**
      * set resourceId
      *
-     * @param resourceId
+     * @param resourceId 
+     * @return OrderUniqueKey
      */
     public OrderUniqueKey resourceId(String resourceId) {
         this.resourceId = resourceId;
@@ -167,7 +170,8 @@ public class OrderUniqueKey  implements java.io.Serializable {
     /**
      * set orderId
      *
-     * @param orderId
+     * @param orderId 
+     * @return OrderUniqueKey
      */
     public OrderUniqueKey orderId(String orderId) {
         this.orderId = orderId;

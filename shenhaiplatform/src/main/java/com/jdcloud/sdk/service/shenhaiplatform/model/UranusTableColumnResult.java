@@ -184,7 +184,8 @@ public class UranusTableColumnResult extends JdcloudResult implements java.io.Se
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusTableColumnResult
      */
     public UranusTableColumnResult code(String code) {
         this.code = code;
@@ -195,7 +196,8 @@ public class UranusTableColumnResult extends JdcloudResult implements java.io.Se
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusTableColumnResult
      */
     public UranusTableColumnResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -206,7 +208,8 @@ public class UranusTableColumnResult extends JdcloudResult implements java.io.Se
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusTableColumnResult
      */
     public UranusTableColumnResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -217,7 +220,8 @@ public class UranusTableColumnResult extends JdcloudResult implements java.io.Se
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return UranusTableColumnResult
      */
     public UranusTableColumnResult result(UranusTableQuery result) {
         this.result = result;
@@ -228,7 +232,8 @@ public class UranusTableColumnResult extends JdcloudResult implements java.io.Se
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusTableColumnResult
      */
     public UranusTableColumnResult subCode(String subCode) {
         this.subCode = subCode;
@@ -239,7 +244,8 @@ public class UranusTableColumnResult extends JdcloudResult implements java.io.Se
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusTableColumnResult
      */
     public UranusTableColumnResult successed(Boolean successed) {
         this.successed = successed;

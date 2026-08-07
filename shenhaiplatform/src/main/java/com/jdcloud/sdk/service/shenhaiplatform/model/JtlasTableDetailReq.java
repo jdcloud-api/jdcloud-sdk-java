@@ -91,7 +91,8 @@ public class JtlasTableDetailReq  implements java.io.Serializable {
     /**
      * set 项目空间
      *
-     * @param database
+     * @param database 项目空间
+     * @return JtlasTableDetailReq
      */
     public JtlasTableDetailReq database(String database) {
         this.database = database;
@@ -102,7 +103,8 @@ public class JtlasTableDetailReq  implements java.io.Serializable {
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return JtlasTableDetailReq
      */
     public JtlasTableDetailReq tableName(String tableName) {
         this.tableName = tableName;

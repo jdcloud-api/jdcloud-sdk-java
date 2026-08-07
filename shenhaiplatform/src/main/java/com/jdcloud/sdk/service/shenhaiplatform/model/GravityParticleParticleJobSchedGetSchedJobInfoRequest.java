@@ -140,7 +140,8 @@ public class GravityParticleParticleJobSchedGetSchedJobInfoRequest extends Jdclo
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleParticleJobSchedGetSchedJobInfoRequest
      */
     public GravityParticleParticleJobSchedGetSchedJobInfoRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -151,7 +152,8 @@ public class GravityParticleParticleJobSchedGetSchedJobInfoRequest extends Jdclo
     /**
      * set 是否可用，1 已上线，2已下线
      *
-     * @param enable
+     * @param enable 是否可用，1 已上线，2已下线
+     * @return GravityParticleParticleJobSchedGetSchedJobInfoRequest
      */
     public GravityParticleParticleJobSchedGetSchedJobInfoRequest enable(String enable) {
         this.enable = enable;
@@ -162,7 +164,8 @@ public class GravityParticleParticleJobSchedGetSchedJobInfoRequest extends Jdclo
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleParticleJobSchedGetSchedJobInfoRequest
      */
     public GravityParticleParticleJobSchedGetSchedJobInfoRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -173,7 +176,8 @@ public class GravityParticleParticleJobSchedGetSchedJobInfoRequest extends Jdclo
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleParticleJobSchedGetSchedJobInfoRequest
      */
     public GravityParticleParticleJobSchedGetSchedJobInfoRequest appName(String appName) {
         this.appName = appName;

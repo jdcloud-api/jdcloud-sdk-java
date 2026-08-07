@@ -284,7 +284,8 @@ public class WorkspaceGetUcUserByPinRequest extends JdcloudRequest implements ja
     /**
      * set pageNum
      *
-     * @param pageNum
+     * @param pageNum 
+     * @return WorkspaceGetUcUserByPinRequest
      */
     public WorkspaceGetUcUserByPinRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -295,7 +296,8 @@ public class WorkspaceGetUcUserByPinRequest extends JdcloudRequest implements ja
     /**
      * set pageSize
      *
-     * @param pageSize
+     * @param pageSize 
+     * @return WorkspaceGetUcUserByPinRequest
      */
     public WorkspaceGetUcUserByPinRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -306,7 +308,8 @@ public class WorkspaceGetUcUserByPinRequest extends JdcloudRequest implements ja
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceGetUcUserByPinRequest
      */
     public WorkspaceGetUcUserByPinRequest id(Long id) {
         this.id = id;
@@ -317,7 +320,8 @@ public class WorkspaceGetUcUserByPinRequest extends JdcloudRequest implements ja
     /**
      * set userName
      *
-     * @param userName
+     * @param userName 
+     * @return WorkspaceGetUcUserByPinRequest
      */
     public WorkspaceGetUcUserByPinRequest userName(String userName) {
         this.userName = userName;
@@ -328,7 +332,8 @@ public class WorkspaceGetUcUserByPinRequest extends JdcloudRequest implements ja
     /**
      * set nickName
      *
-     * @param nickName
+     * @param nickName 
+     * @return WorkspaceGetUcUserByPinRequest
      */
     public WorkspaceGetUcUserByPinRequest nickName(String nickName) {
         this.nickName = nickName;
@@ -339,7 +344,8 @@ public class WorkspaceGetUcUserByPinRequest extends JdcloudRequest implements ja
     /**
      * set userPin
      *
-     * @param userPin
+     * @param userPin 
+     * @return WorkspaceGetUcUserByPinRequest
      */
     public WorkspaceGetUcUserByPinRequest userPin(String userPin) {
         this.userPin = userPin;
@@ -350,7 +356,8 @@ public class WorkspaceGetUcUserByPinRequest extends JdcloudRequest implements ja
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return WorkspaceGetUcUserByPinRequest
      */
     public WorkspaceGetUcUserByPinRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -361,7 +368,8 @@ public class WorkspaceGetUcUserByPinRequest extends JdcloudRequest implements ja
     /**
      * set companyCode
      *
-     * @param companyCode
+     * @param companyCode 
+     * @return WorkspaceGetUcUserByPinRequest
      */
     public WorkspaceGetUcUserByPinRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -372,7 +380,8 @@ public class WorkspaceGetUcUserByPinRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceGetUcUserByPinRequest
      */
     public WorkspaceGetUcUserByPinRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -383,7 +392,8 @@ public class WorkspaceGetUcUserByPinRequest extends JdcloudRequest implements ja
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceGetUcUserByPinRequest
      */
     public WorkspaceGetUcUserByPinRequest appName(String appName) {
         this.appName = appName;

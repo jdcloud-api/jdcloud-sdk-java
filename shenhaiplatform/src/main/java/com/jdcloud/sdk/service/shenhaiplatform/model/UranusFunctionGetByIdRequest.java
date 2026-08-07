@@ -144,7 +144,8 @@ public class UranusFunctionGetByIdRequest extends JdcloudRequest implements java
     /**
      * set 函数id
      *
-     * @param functionId
+     * @param functionId 函数id
+     * @return UranusFunctionGetByIdRequest
      */
     public UranusFunctionGetByIdRequest functionId(Integer functionId) {
         this.functionId = functionId;
@@ -155,7 +156,8 @@ public class UranusFunctionGetByIdRequest extends JdcloudRequest implements java
     /**
      * set 环境信息（dev：开发；prod：生产），系统函数不分开发和生产，简单模式只有生产
      *
-     * @param env
+     * @param env 环境信息（dev：开发；prod：生产），系统函数不分开发和生产，简单模式只有生产
+     * @return UranusFunctionGetByIdRequest
      */
     public UranusFunctionGetByIdRequest env(String env) {
         this.env = env;
@@ -166,7 +168,8 @@ public class UranusFunctionGetByIdRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusFunctionGetByIdRequest
      */
     public UranusFunctionGetByIdRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -177,7 +180,8 @@ public class UranusFunctionGetByIdRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusFunctionGetByIdRequest
      */
     public UranusFunctionGetByIdRequest appName(String appName) {
         this.appName = appName;

@@ -220,7 +220,8 @@ public class GravityParticleJobHisRunAddBathTaskRequest extends JdcloudRequest i
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleJobHisRunAddBathTaskRequest
      */
     public GravityParticleJobHisRunAddBathTaskRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -231,7 +232,8 @@ public class GravityParticleJobHisRunAddBathTaskRequest extends JdcloudRequest i
     /**
      * set 补数开始时间
      *
-     * @param startDate
+     * @param startDate 补数开始时间
+     * @return GravityParticleJobHisRunAddBathTaskRequest
      */
     public GravityParticleJobHisRunAddBathTaskRequest startDate(String startDate) {
         this.startDate = startDate;
@@ -242,7 +244,8 @@ public class GravityParticleJobHisRunAddBathTaskRequest extends JdcloudRequest i
     /**
      * set 补数结束时间
      *
-     * @param endDate
+     * @param endDate 补数结束时间
+     * @return GravityParticleJobHisRunAddBathTaskRequest
      */
     public GravityParticleJobHisRunAddBathTaskRequest endDate(String endDate) {
         this.endDate = endDate;
@@ -253,7 +256,8 @@ public class GravityParticleJobHisRunAddBathTaskRequest extends JdcloudRequest i
     /**
      * set 并行数
      *
-     * @param parallelNum
+     * @param parallelNum 并行数
+     * @return GravityParticleJobHisRunAddBathTaskRequest
      */
     public GravityParticleJobHisRunAddBathTaskRequest parallelNum(Integer parallelNum) {
         this.parallelNum = parallelNum;
@@ -264,7 +268,8 @@ public class GravityParticleJobHisRunAddBathTaskRequest extends JdcloudRequest i
     /**
     * set 子作业名称
     *
-    * @param childJobNames
+    * @param childJobNames 子作业名称
+    * @return GravityParticleJobHisRunAddBathTaskRequest
     */
     public GravityParticleJobHisRunAddBathTaskRequest childJobNames(List<String> childJobNames) {
         this.childJobNames = childJobNames;
@@ -275,7 +280,8 @@ public class GravityParticleJobHisRunAddBathTaskRequest extends JdcloudRequest i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobHisRunAddBathTaskRequest
      */
     public GravityParticleJobHisRunAddBathTaskRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -286,7 +292,8 @@ public class GravityParticleJobHisRunAddBathTaskRequest extends JdcloudRequest i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobHisRunAddBathTaskRequest
      */
     public GravityParticleJobHisRunAddBathTaskRequest appName(String appName) {
         this.appName = appName;

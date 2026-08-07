@@ -116,7 +116,8 @@ public class GravityParticleJobGetScriptExtensionsRequest extends JdcloudRequest
     /**
      * set 集群代码
      *
-     * @param clusterCode
+     * @param clusterCode 集群代码
+     * @return GravityParticleJobGetScriptExtensionsRequest
      */
     public GravityParticleJobGetScriptExtensionsRequest clusterCode(String clusterCode) {
         this.clusterCode = clusterCode;
@@ -127,7 +128,8 @@ public class GravityParticleJobGetScriptExtensionsRequest extends JdcloudRequest
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobGetScriptExtensionsRequest
      */
     public GravityParticleJobGetScriptExtensionsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class GravityParticleJobGetScriptExtensionsRequest extends JdcloudRequest
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobGetScriptExtensionsRequest
      */
     public GravityParticleJobGetScriptExtensionsRequest appName(String appName) {
         this.appName = appName;

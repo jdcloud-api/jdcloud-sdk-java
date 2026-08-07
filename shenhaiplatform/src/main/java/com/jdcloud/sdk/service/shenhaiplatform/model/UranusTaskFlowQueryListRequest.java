@@ -118,7 +118,8 @@ public class UranusTaskFlowQueryListRequest extends JdcloudRequest implements ja
     /**
      * set 目录code
      *
-     * @param catalogCode
+     * @param catalogCode 目录code
+     * @return UranusTaskFlowQueryListRequest
      */
     public UranusTaskFlowQueryListRequest catalogCode(String catalogCode) {
         this.catalogCode = catalogCode;
@@ -129,7 +130,8 @@ public class UranusTaskFlowQueryListRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskFlowQueryListRequest
      */
     public UranusTaskFlowQueryListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusTaskFlowQueryListRequest extends JdcloudRequest implements ja
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskFlowQueryListRequest
      */
     public UranusTaskFlowQueryListRequest appName(String appName) {
         this.appName = appName;

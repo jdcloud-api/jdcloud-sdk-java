@@ -136,7 +136,8 @@ public class PageInfoWorkspaceListResp  implements java.io.Serializable {
     /**
      * set 总数量
      *
-     * @param total
+     * @param total 总数量
+     * @return PageInfoWorkspaceListResp
      */
     public PageInfoWorkspaceListResp total(Number total) {
         this.total = total;
@@ -147,7 +148,8 @@ public class PageInfoWorkspaceListResp  implements java.io.Serializable {
     /**
      * set 分页页数
      *
-     * @param pageNum
+     * @param pageNum 分页页数
+     * @return PageInfoWorkspaceListResp
      */
     public PageInfoWorkspaceListResp pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -158,7 +160,8 @@ public class PageInfoWorkspaceListResp  implements java.io.Serializable {
     /**
      * set 页面容量
      *
-     * @param pageSize
+     * @param pageSize 页面容量
+     * @return PageInfoWorkspaceListResp
      */
     public PageInfoWorkspaceListResp pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -169,7 +172,8 @@ public class PageInfoWorkspaceListResp  implements java.io.Serializable {
     /**
     * set 工作空间的资源组列表
     *
-    * @param list
+    * @param list 工作空间的资源组列表
+    * @return PageInfoWorkspaceListResp
     */
     public PageInfoWorkspaceListResp list(List<WorkspaceListResp> list) {
         this.list = list;

@@ -688,7 +688,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 发布版本 ID
      *
-     * @param id
+     * @param id 发布版本 ID
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes id(Integer id) {
         this.id = id;
@@ -699,7 +700,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 节点的CODE
      *
-     * @param taskCode
+     * @param taskCode 节点的CODE
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -710,7 +712,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 工作流CODE
      *
-     * @param flowCode
+     * @param flowCode 工作流CODE
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -721,7 +724,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 发布类型 1上线、2下线 3删除
      *
-     * @param schedType
+     * @param schedType 发布类型 1上线、2下线 3删除
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes schedType(Integer schedType) {
         this.schedType = schedType;
@@ -732,7 +736,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 作业状态 0未发布 1已发布
      *
-     * @param schedStatus
+     * @param schedStatus 作业状态 0未发布 1已发布
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes schedStatus(Integer schedStatus) {
         this.schedStatus = schedStatus;
@@ -743,7 +748,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param taskName
+     * @param taskName 作业名称
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes taskName(String taskName) {
         this.taskName = taskName;
@@ -754,7 +760,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 作业描述
      *
-     * @param taskDesc
+     * @param taskDesc 作业描述
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes taskDesc(String taskDesc) {
         this.taskDesc = taskDesc;
@@ -765,7 +772,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 运维中心当前版本
      *
-     * @param taskRelease
+     * @param taskRelease 运维中心当前版本
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes taskRelease(Integer taskRelease) {
         this.taskRelease = taskRelease;
@@ -776,7 +784,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes manager(String manager) {
         this.manager = manager;
@@ -787,7 +796,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 共享人，不超过10个
      *
-     * @param workUser
+     * @param workUser 共享人，不超过10个
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes workUser(String workUser) {
         this.workUser = workUser;
@@ -798,7 +808,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 作业信息
      *
-     * @param jobInfo
+     * @param jobInfo 作业信息
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes jobInfo(String jobInfo) {
         this.jobInfo = jobInfo;
@@ -809,7 +820,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 脚本信息
      *
-     * @param scriptInfo
+     * @param scriptInfo 脚本信息
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes scriptInfo(String scriptInfo) {
         this.scriptInfo = scriptInfo;
@@ -820,7 +832,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 队列code
      *
-     * @param resourceCode
+     * @param resourceCode 队列code
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -831,7 +844,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 队列名称
      *
-     * @param resourceName
+     * @param resourceName 队列名称
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -842,7 +856,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 原因
      *
-     * @param reason
+     * @param reason 原因
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes reason(String reason) {
         this.reason = reason;
@@ -853,7 +868,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 创建人
      *
-     * @param createUser
+     * @param createUser 创建人
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes createUser(String createUser) {
         this.createUser = createUser;
@@ -864,7 +880,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createdTime
+     * @param createdTime 创建时间
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -875,7 +892,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -886,7 +904,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 1：有效，0：无效
      *
-     * @param valid
+     * @param valid 1：有效，0：无效
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes valid(Integer valid) {
         this.valid = valid;
@@ -897,7 +916,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 作业状态
      *
-     * @param jobStatus
+     * @param jobStatus 作业状态
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes jobStatus(Integer jobStatus) {
         this.jobStatus = jobStatus;
@@ -908,7 +928,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
     * set 输入参数
     *
-    * @param taskParamList
+    * @param taskParamList 输入参数
+    * @return UranusSchedTaskInfoHistoryRes
     */
     public UranusSchedTaskInfoHistoryRes taskParamList(List<UranusTaskParamReq> taskParamList) {
         this.taskParamList = taskParamList;
@@ -919,7 +940,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
     * set 输出参数
     *
-    * @param exportParamList
+    * @param exportParamList 输出参数
+    * @return UranusSchedTaskInfoHistoryRes
     */
     public UranusSchedTaskInfoHistoryRes exportParamList(List<UranusTaskParamReq> exportParamList) {
         this.exportParamList = exportParamList;
@@ -930,7 +952,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set fromGravity
      *
-     * @param fromGravity
+     * @param fromGravity 
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes fromGravity(Boolean fromGravity) {
         this.fromGravity = fromGravity;
@@ -941,7 +964,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 作业读写数据源主id，数据源的主ID
      *
-     * @param datasourcePrimaryId
+     * @param datasourcePrimaryId 作业读写数据源主id，数据源的主ID
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes datasourcePrimaryId(String datasourcePrimaryId) {
         this.datasourcePrimaryId = datasourcePrimaryId;
@@ -952,7 +976,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 数据源名称
      *
-     * @param datasourceName
+     * @param datasourceName 数据源名称
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes datasourceName(String datasourceName) {
         this.datasourceName = datasourceName;
@@ -963,7 +988,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set 作业读写数据源使用环境类型,dev：开发环境，prod：生产环境
      *
-     * @param datasourceUseEnvType
+     * @param datasourceUseEnvType 作业读写数据源使用环境类型,dev：开发环境，prod：生产环境
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes datasourceUseEnvType(String datasourceUseEnvType) {
         this.datasourceUseEnvType = datasourceUseEnvType;
@@ -974,7 +1000,8 @@ public class UranusSchedTaskInfoHistoryRes  implements java.io.Serializable {
     /**
      * set loopInfo
      *
-     * @param loopInfo
+     * @param loopInfo 
+     * @return UranusSchedTaskInfoHistoryRes
      */
     public UranusSchedTaskInfoHistoryRes loopInfo(TaskInfoLoopReq loopInfo) {
         this.loopInfo = loopInfo;

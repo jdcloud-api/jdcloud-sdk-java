@@ -470,7 +470,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 运行超时时间（秒）
      *
-     * @param runTimeOut
+     * @param runTimeOut 运行超时时间（秒）
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo runTimeOut(Integer runTimeOut) {
         this.runTimeOut = runTimeOut;
@@ -481,7 +482,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 触发类型
      *
-     * @param triggerType
+     * @param triggerType 触发类型
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -492,7 +494,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 触发时间
      *
-     * @param triggerTime
+     * @param triggerTime 触发时间
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo triggerTime(String triggerTime) {
         this.triggerTime = triggerTime;
@@ -503,7 +506,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 是否重试-展示
      *
-     * @param flagRetry
+     * @param flagRetry 是否重试-展示
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo flagRetry(String flagRetry) {
         this.flagRetry = flagRetry;
@@ -514,7 +518,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 重试次数
      *
-     * @param retryCount
+     * @param retryCount 重试次数
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo retryCount(String retryCount) {
         this.retryCount = retryCount;
@@ -525,7 +530,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 重试间隔
      *
-     * @param retryInterval
+     * @param retryInterval 重试间隔
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo retryInterval(String retryInterval) {
         this.retryInterval = retryInterval;
@@ -536,7 +542,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 周期
      *
-     * @param cycle
+     * @param cycle 周期
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo cycle(String cycle) {
         this.cycle = cycle;
@@ -547,7 +554,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 周期序列
      *
-     * @param sequence
+     * @param sequence 周期序列
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo sequence(String sequence) {
         this.sequence = sequence;
@@ -558,7 +566,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 小时分钟-结束时间
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 小时分钟-结束时间
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -569,7 +578,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 小时分钟-间隔
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 小时分钟-间隔
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo sequenceInterval(String sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -580,7 +590,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 小时分钟-开始时间
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 小时分钟-开始时间
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -591,7 +602,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 优先级
      *
-     * @param priority
+     * @param priority 优先级
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo priority(Integer priority) {
         this.priority = priority;
@@ -602,7 +614,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 超时时间
      *
-     * @param timeout
+     * @param timeout 超时时间
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo timeout(String timeout) {
         this.timeout = timeout;
@@ -613,7 +626,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 是否并行-展示
      *
-     * @param flagParallel
+     * @param flagParallel 是否并行-展示
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo flagParallel(String flagParallel) {
         this.flagParallel = flagParallel;
@@ -624,7 +638,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 是否跨周期-展示
      *
-     * @param flagAcross
+     * @param flagAcross 是否跨周期-展示
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo flagAcross(String flagAcross) {
         this.flagAcross = flagAcross;
@@ -635,7 +650,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 是否级联触发-展示
      *
-     * @param flagCascadedTrigger
+     * @param flagCascadedTrigger 是否级联触发-展示
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo flagCascadedTrigger(String flagCascadedTrigger) {
         this.flagCascadedTrigger = flagCascadedTrigger;
@@ -646,7 +662,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 周期-展示
      *
-     * @param cycleLabel
+     * @param cycleLabel 周期-展示
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo cycleLabel(String cycleLabel) {
         this.cycleLabel = cycleLabel;
@@ -657,7 +674,8 @@ public class JobRunInfoVo  implements java.io.Serializable {
     /**
      * set 触发类型-展示
      *
-     * @param triggerTypeLabel
+     * @param triggerTypeLabel 触发类型-展示
+     * @return JobRunInfoVo
      */
     public JobRunInfoVo triggerTypeLabel(String triggerTypeLabel) {
         this.triggerTypeLabel = triggerTypeLabel;

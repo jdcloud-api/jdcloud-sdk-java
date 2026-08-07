@@ -519,7 +519,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 作业补数信息主键id
      *
-     * @param id
+     * @param id 作业补数信息主键id
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult id(Integer id) {
         this.id = id;
@@ -530,7 +531,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 当前补数日期
      *
-     * @param txdate
+     * @param txdate 当前补数日期
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult txdate(String txdate) {
         this.txdate = txdate;
@@ -541,7 +543,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 任务状态
      *
-     * @param statu
+     * @param statu 任务状态
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult statu(String statu) {
         this.statu = statu;
@@ -552,7 +555,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 补数任务是否关闭
      *
-     * @param enable
+     * @param enable 补数任务是否关闭
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult enable(String enable) {
         this.enable = enable;
@@ -563,7 +567,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 补数当前状态信息
      *
-     * @param currentMsg
+     * @param currentMsg 补数当前状态信息
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult currentMsg(String currentMsg) {
         this.currentMsg = currentMsg;
@@ -574,7 +579,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 任务名称
      *
-     * @param jobName
+     * @param jobName 任务名称
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult jobName(String jobName) {
         this.jobName = jobName;
@@ -585,7 +591,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 补数开始日期
      *
-     * @param jobStartDate
+     * @param jobStartDate 补数开始日期
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult jobStartDate(String jobStartDate) {
         this.jobStartDate = jobStartDate;
@@ -596,7 +603,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 补数结束日期
      *
-     * @param jobEndDate
+     * @param jobEndDate 补数结束日期
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult jobEndDate(String jobEndDate) {
         this.jobEndDate = jobEndDate;
@@ -607,7 +615,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 作业描述
      *
-     * @param description
+     * @param description 作业描述
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult description(String description) {
         this.description = description;
@@ -618,7 +627,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 周期具体日期
      *
-     * @param cycle
+     * @param cycle 周期具体日期
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult cycle(String cycle) {
         this.cycle = cycle;
@@ -629,7 +639,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult processType(String processType) {
         this.processType = processType;
@@ -640,7 +651,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 执行类型
      *
-     * @param exeType
+     * @param exeType 执行类型
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult exeType(String exeType) {
         this.exeType = exeType;
@@ -651,7 +663,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 创建时间
      *
-     * @param createDate
+     * @param createDate 创建时间
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult createDate(String createDate) {
         this.createDate = createDate;
@@ -662,7 +675,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set calc：数据计算，extract：数据抽取，ods：ODS加工，load：数据推送，hdfs：数据同步,dqim:质量作业
      *
-     * @param processTypeLabel
+     * @param processTypeLabel calc：数据计算，extract：数据抽取，ods：ODS加工，load：数据推送，hdfs：数据同步,dqim:质量作业
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult processTypeLabel(String processTypeLabel) {
         this.processTypeLabel = processTypeLabel;
@@ -673,7 +687,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 作业负责人
      *
-     * @param manager
+     * @param manager 作业负责人
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult manager(String manager) {
         this.manager = manager;
@@ -684,7 +699,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 状态
      *
-     * @param statusLabel
+     * @param statusLabel 状态
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult statusLabel(String statusLabel) {
         this.statusLabel = statusLabel;
@@ -695,7 +711,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 作业类型
      *
-     * @param jobType
+     * @param jobType 作业类型
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult jobType(String jobType) {
         this.jobType = jobType;
@@ -706,7 +723,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 作业子类型
      *
-     * @param jobChildType
+     * @param jobChildType 作业子类型
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult jobChildType(String jobChildType) {
         this.jobChildType = jobChildType;
@@ -717,7 +735,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 当前用户是否为当前作业的管理员
      *
-     * @param managerFlag
+     * @param managerFlag 当前用户是否为当前作业的管理员
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult managerFlag(Boolean managerFlag) {
         this.managerFlag = managerFlag;
@@ -728,7 +747,8 @@ public class GravityParticleJobHisRunListTaskResult extends JdcloudResult implem
     /**
      * set 客户作业名
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名
+     * @return GravityParticleJobHisRunListTaskResult
      */
     public GravityParticleJobHisRunListTaskResult cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;

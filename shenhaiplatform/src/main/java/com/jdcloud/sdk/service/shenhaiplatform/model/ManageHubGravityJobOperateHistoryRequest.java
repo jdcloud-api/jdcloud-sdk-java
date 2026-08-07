@@ -164,7 +164,8 @@ public class ManageHubGravityJobOperateHistoryRequest extends JdcloudRequest imp
     /**
      * set 分页-页码
      *
-     * @param pageNum
+     * @param pageNum 分页-页码
+     * @return ManageHubGravityJobOperateHistoryRequest
      */
     public ManageHubGravityJobOperateHistoryRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -175,7 +176,8 @@ public class ManageHubGravityJobOperateHistoryRequest extends JdcloudRequest imp
     /**
      * set 分页-每页数量
      *
-     * @param pageSize
+     * @param pageSize 分页-每页数量
+     * @return ManageHubGravityJobOperateHistoryRequest
      */
     public ManageHubGravityJobOperateHistoryRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -186,7 +188,8 @@ public class ManageHubGravityJobOperateHistoryRequest extends JdcloudRequest imp
     /**
      * set 作业id
      *
-     * @param jobId
+     * @param jobId 作业id
+     * @return ManageHubGravityJobOperateHistoryRequest
      */
     public ManageHubGravityJobOperateHistoryRequest jobId(Integer jobId) {
         this.jobId = jobId;
@@ -197,7 +200,8 @@ public class ManageHubGravityJobOperateHistoryRequest extends JdcloudRequest imp
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubGravityJobOperateHistoryRequest
      */
     public ManageHubGravityJobOperateHistoryRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -208,7 +212,8 @@ public class ManageHubGravityJobOperateHistoryRequest extends JdcloudRequest imp
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubGravityJobOperateHistoryRequest
      */
     public ManageHubGravityJobOperateHistoryRequest appName(String appName) {
         this.appName = appName;

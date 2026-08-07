@@ -169,7 +169,8 @@ public class JtlasPageSearchTablePrivilegeReq  implements java.io.Serializable {
     /**
      * set 数据库（工作空间编码）
      *
-     * @param database
+     * @param database 数据库（工作空间编码）
+     * @return JtlasPageSearchTablePrivilegeReq
      */
     public JtlasPageSearchTablePrivilegeReq database(String database) {
         this.database = database;
@@ -180,7 +181,8 @@ public class JtlasPageSearchTablePrivilegeReq  implements java.io.Serializable {
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return JtlasPageSearchTablePrivilegeReq
      */
     public JtlasPageSearchTablePrivilegeReq tableName(String tableName) {
         this.tableName = tableName;
@@ -191,7 +193,8 @@ public class JtlasPageSearchTablePrivilegeReq  implements java.io.Serializable {
     /**
     * set privilegeTypes
     *
-    * @param privilegeTypes
+    * @param privilegeTypes 
+    * @return JtlasPageSearchTablePrivilegeReq
     */
     public JtlasPageSearchTablePrivilegeReq privilegeTypes(List<String> privilegeTypes) {
         this.privilegeTypes = privilegeTypes;
@@ -202,7 +205,8 @@ public class JtlasPageSearchTablePrivilegeReq  implements java.io.Serializable {
     /**
      * set 分页参数-页码
      *
-     * @param pageNum
+     * @param pageNum 分页参数-页码
+     * @return JtlasPageSearchTablePrivilegeReq
      */
     public JtlasPageSearchTablePrivilegeReq pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -213,7 +217,8 @@ public class JtlasPageSearchTablePrivilegeReq  implements java.io.Serializable {
     /**
      * set 分页参数-页数
      *
-     * @param pageSize
+     * @param pageSize 分页参数-页数
+     * @return JtlasPageSearchTablePrivilegeReq
      */
     public JtlasPageSearchTablePrivilegeReq pageSize(Integer pageSize) {
         this.pageSize = pageSize;

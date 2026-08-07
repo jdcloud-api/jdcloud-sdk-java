@@ -194,7 +194,8 @@ public class UranusTaskFlowSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 工作流名称
      *
-     * @param flowName
+     * @param flowName 工作流名称
+     * @return UranusTaskFlowSaveRequest
      */
     public UranusTaskFlowSaveRequest flowName(String flowName) {
         this.flowName = flowName;
@@ -205,7 +206,8 @@ public class UranusTaskFlowSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 工作流描述
      *
-     * @param flowDesc
+     * @param flowDesc 工作流描述
+     * @return UranusTaskFlowSaveRequest
      */
     public UranusTaskFlowSaveRequest flowDesc(String flowDesc) {
         this.flowDesc = flowDesc;
@@ -216,7 +218,8 @@ public class UranusTaskFlowSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 工作流所属目录
      *
-     * @param catalogCode
+     * @param catalogCode 工作流所属目录
+     * @return UranusTaskFlowSaveRequest
      */
     public UranusTaskFlowSaveRequest catalogCode(String catalogCode) {
         this.catalogCode = catalogCode;
@@ -227,7 +230,8 @@ public class UranusTaskFlowSaveRequest extends JdcloudRequest implements java.io
     /**
     * set 工作流协同人
     *
-    * @param workers
+    * @param workers 工作流协同人
+    * @return UranusTaskFlowSaveRequest
     */
     public UranusTaskFlowSaveRequest workers(List<String> workers) {
         this.workers = workers;
@@ -238,7 +242,8 @@ public class UranusTaskFlowSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskFlowSaveRequest
      */
     public UranusTaskFlowSaveRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -249,7 +254,8 @@ public class UranusTaskFlowSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskFlowSaveRequest
      */
     public UranusTaskFlowSaveRequest appName(String appName) {
         this.appName = appName;

@@ -158,7 +158,8 @@ public class RerunBatchParam  implements java.io.Serializable {
     /**
      * set 页号
      *
-     * @param pageNum
+     * @param pageNum 页号
+     * @return RerunBatchParam
      */
     public RerunBatchParam pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -169,7 +170,8 @@ public class RerunBatchParam  implements java.io.Serializable {
     /**
      * set 页大小
      *
-     * @param pageSize
+     * @param pageSize 页大小
+     * @return RerunBatchParam
      */
     public RerunBatchParam pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -180,7 +182,8 @@ public class RerunBatchParam  implements java.io.Serializable {
     /**
      * set 操作人
      *
-     * @param operator
+     * @param operator 操作人
+     * @return RerunBatchParam
      */
     public RerunBatchParam operator(String operator) {
         this.operator = operator;
@@ -191,7 +194,8 @@ public class RerunBatchParam  implements java.io.Serializable {
     /**
      * set 操作时间-开始
      *
-     * @param operateTimeAfter
+     * @param operateTimeAfter 操作时间-开始
+     * @return RerunBatchParam
      */
     public RerunBatchParam operateTimeAfter(Long operateTimeAfter) {
         this.operateTimeAfter = operateTimeAfter;
@@ -202,7 +206,8 @@ public class RerunBatchParam  implements java.io.Serializable {
     /**
      * set 操作时间-结束
      *
-     * @param operateTimeBefore
+     * @param operateTimeBefore 操作时间-结束
+     * @return RerunBatchParam
      */
     public RerunBatchParam operateTimeBefore(Long operateTimeBefore) {
         this.operateTimeBefore = operateTimeBefore;

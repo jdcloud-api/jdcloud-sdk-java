@@ -216,7 +216,8 @@ public class UranusDataLoadPreviewRequest extends JdcloudRequest implements java
     /**
      * set 文件类型：csv、text、xls、xlsx
      *
-     * @param fileType
+     * @param fileType 文件类型：csv、text、xls、xlsx
+     * @return UranusDataLoadPreviewRequest
      */
     public UranusDataLoadPreviewRequest fileType(String fileType) {
         this.fileType = fileType;
@@ -227,7 +228,8 @@ public class UranusDataLoadPreviewRequest extends JdcloudRequest implements java
     /**
      * set 文件路径（key）
      *
-     * @param fileKey
+     * @param fileKey 文件路径（key）
+     * @return UranusDataLoadPreviewRequest
      */
     public UranusDataLoadPreviewRequest fileKey(String fileKey) {
         this.fileKey = fileKey;
@@ -238,7 +240,8 @@ public class UranusDataLoadPreviewRequest extends JdcloudRequest implements java
     /**
      * set 分隔符: en-comma 英文逗号，en-semicolon 英文分号，space 空格，pipe 竖线，hash 井号，and 与号，line-feed-lf 换行符（UNIX），line-feed-crlf 换行符（Windows）
      *
-     * @param delimiter
+     * @param delimiter 分隔符: en-comma 英文逗号，en-semicolon 英文分号，space 空格，pipe 竖线，hash 井号，and 与号，line-feed-lf 换行符（UNIX），line-feed-crlf 换行符（Windows）
+     * @return UranusDataLoadPreviewRequest
      */
     public UranusDataLoadPreviewRequest delimiter(String delimiter) {
         this.delimiter = delimiter;
@@ -249,7 +252,8 @@ public class UranusDataLoadPreviewRequest extends JdcloudRequest implements java
     /**
      * set 导入起始行
      *
-     * @param startRow
+     * @param startRow 导入起始行
+     * @return UranusDataLoadPreviewRequest
      */
     public UranusDataLoadPreviewRequest startRow(Integer startRow) {
         this.startRow = startRow;
@@ -260,7 +264,8 @@ public class UranusDataLoadPreviewRequest extends JdcloudRequest implements java
     /**
      * set 字符集: GBK、UTF-8、ISO-8859-1，默认为
      *
-     * @param characterSet
+     * @param characterSet 字符集: GBK、UTF-8、ISO-8859-1，默认为
+     * @return UranusDataLoadPreviewRequest
      */
     public UranusDataLoadPreviewRequest characterSet(String characterSet) {
         this.characterSet = characterSet;
@@ -271,7 +276,8 @@ public class UranusDataLoadPreviewRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusDataLoadPreviewRequest
      */
     public UranusDataLoadPreviewRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -282,7 +288,8 @@ public class UranusDataLoadPreviewRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusDataLoadPreviewRequest
      */
     public UranusDataLoadPreviewRequest appName(String appName) {
         this.appName = appName;

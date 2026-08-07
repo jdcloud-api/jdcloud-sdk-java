@@ -712,7 +712,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 节点类型id
      *
-     * @param nodeCode
+     * @param nodeCode 节点类型id
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes nodeCode(Integer nodeCode) {
         this.nodeCode = nodeCode;
@@ -723,7 +724,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 节点名称
      *
-     * @param nodeName
+     * @param nodeName 节点名称
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes nodeName(String nodeName) {
         this.nodeName = nodeName;
@@ -734,7 +736,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 0 未发布 1 已发布
      *
-     * @param flowStatus
+     * @param flowStatus 0 未发布 1 已发布
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes flowStatus(Integer flowStatus) {
         this.flowStatus = flowStatus;
@@ -745,7 +748,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set Script节点的时候用到
      *
-     * @param flowCode
+     * @param flowCode Script节点的时候用到
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -756,7 +760,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 0 未发布 1 已发布
      *
-     * @param flowStatusDesc
+     * @param flowStatusDesc 0 未发布 1 已发布
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes flowStatusDesc(String flowStatusDesc) {
         this.flowStatusDesc = flowStatusDesc;
@@ -767,7 +772,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set &#39;1：有效，0：无效
      *
-     * @param flowValid
+     * @param flowValid &#39;1：有效，0：无效
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes flowValid(Integer flowValid) {
         this.flowValid = flowValid;
@@ -778,7 +784,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 是否收藏 0 否 1 是
      *
-     * @param collection
+     * @param collection 是否收藏 0 否 1 是
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes collection(Integer collection) {
         this.collection = collection;
@@ -789,7 +796,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 是否协同人 0 否 1 是
      *
-     * @param isWorker
+     * @param isWorker 是否协同人 0 否 1 是
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes isWorker(Integer isWorker) {
         this.isWorker = isWorker;
@@ -800,7 +808,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 是否是 owner 0 否 1 是
      *
-     * @param isOwner
+     * @param isOwner 是否是 owner 0 否 1 是
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes isOwner(Integer isOwner) {
         this.isOwner = isOwner;
@@ -811,7 +820,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 前端排序唯一ID
      *
-     * @param unrealId
+     * @param unrealId 前端排序唯一ID
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes unrealId(String unrealId) {
         this.unrealId = unrealId;
@@ -822,7 +832,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 图标
      *
-     * @param nodeIcon
+     * @param nodeIcon 图标
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes nodeIcon(String nodeIcon) {
         this.nodeIcon = nodeIcon;
@@ -833,7 +844,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
     * set 集合 因为存在 更新（未发布） 和 上下线未发布 组合的情况
     *
-    * @param taskChangeStatus
+    * @param taskChangeStatus 集合 因为存在 更新（未发布） 和 上下线未发布 组合的情况
+    * @return UranusTaskFlowListRes
     */
     public UranusTaskFlowListRes taskChangeStatus(List<Integer> taskChangeStatus) {
         this.taskChangeStatus = taskChangeStatus;
@@ -844,7 +856,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
     * set 发布变更状态描述
     *
-    * @param taskChangeStatusDesc
+    * @param taskChangeStatusDesc 发布变更状态描述
+    * @return UranusTaskFlowListRes
     */
     public UranusTaskFlowListRes taskChangeStatusDesc(List<String> taskChangeStatusDesc) {
         this.taskChangeStatusDesc = taskChangeStatusDesc;
@@ -855,7 +868,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 作业状态
      *
-     * @param gravityStatus
+     * @param gravityStatus 作业状态
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes gravityStatus(Integer gravityStatus) {
         this.gravityStatus = gravityStatus;
@@ -866,7 +880,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 作业状态描述
      *
-     * @param gravityStatusDesc
+     * @param gravityStatusDesc 作业状态描述
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes gravityStatusDesc(String gravityStatusDesc) {
         this.gravityStatusDesc = gravityStatusDesc;
@@ -877,7 +892,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 节点类型 FLOW 工作流 SCRIPT脚本
      *
-     * @param nodeType
+     * @param nodeType 节点类型 FLOW 工作流 SCRIPT脚本
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes nodeType(String nodeType) {
         this.nodeType = nodeType;
@@ -888,7 +904,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 任务负责人
      *
-     * @param isManager
+     * @param isManager 任务负责人
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes isManager(Integer isManager) {
         this.isManager = isManager;
@@ -899,7 +916,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
     * set 子节点 级 节点管理和文件管理
     *
-    * @param children
+    * @param children 子节点 级 节点管理和文件管理
+    * @return UranusTaskFlowListRes
     */
     public UranusTaskFlowListRes children(List<UranusTaskFlowListRes> children) {
         this.children = children;
@@ -910,7 +928,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 任务节点的taskCode
      *
-     * @param taskCode
+     * @param taskCode 任务节点的taskCode
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -921,7 +940,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 文件信息
      *
-     * @param relativePath
+     * @param relativePath 文件信息
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes relativePath(String relativePath) {
         this.relativePath = relativePath;
@@ -932,7 +952,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 名称
      *
-     * @param name
+     * @param name 名称
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes name(String name) {
         this.name = name;
@@ -943,7 +964,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 是否是目录
      *
-     * @param dir
+     * @param dir 是否是目录
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes dir(Boolean dir) {
         this.dir = dir;
@@ -954,7 +976,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 父节点code
      *
-     * @param parentCode
+     * @param parentCode 父节点code
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes parentCode(String parentCode) {
         this.parentCode = parentCode;
@@ -965,7 +988,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 脚本文件的业务cdoe
      *
-     * @param fileCode
+     * @param fileCode 脚本文件的业务cdoe
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -976,7 +1000,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes jobName(String jobName) {
         this.jobName = jobName;
@@ -987,7 +1012,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 文件真实路径
      *
-     * @param realPath
+     * @param realPath 文件真实路径
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes realPath(String realPath) {
         this.realPath = realPath;
@@ -998,7 +1024,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 锁状态
      *
-     * @param lockStatus
+     * @param lockStatus 锁状态
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes lockStatus(Integer lockStatus) {
         this.lockStatus = lockStatus;
@@ -1009,7 +1036,8 @@ public class UranusTaskFlowListRes  implements java.io.Serializable {
     /**
      * set 活得锁的用户
      *
-     * @param lockUser
+     * @param lockUser 活得锁的用户
+     * @return UranusTaskFlowListRes
      */
     public UranusTaskFlowListRes lockUser(String lockUser) {
         this.lockUser = lockUser;

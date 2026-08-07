@@ -518,7 +518,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 作业id
      *
-     * @param jobId
+     * @param jobId 作业id
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo jobId(Integer jobId) {
         this.jobId = jobId;
@@ -529,7 +530,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 作业编码
      *
-     * @param etlJob
+     * @param etlJob 作业编码
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo etlJob(String etlJob) {
         this.etlJob = etlJob;
@@ -540,7 +542,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 处理类型-展示
      *
-     * @param processType
+     * @param processType 处理类型-展示
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo processType(String processType) {
         this.processType = processType;
@@ -551,7 +554,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 创建时间: yyyy-MM-dd HH:mm:ss
      *
-     * @param createTime
+     * @param createTime 创建时间: yyyy-MM-dd HH:mm:ss
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo createTime(String createTime) {
         this.createTime = createTime;
@@ -562,7 +566,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 更新时间: yyyy-MM-dd HH:mm:ss
      *
-     * @param updateTime
+     * @param updateTime 更新时间: yyyy-MM-dd HH:mm:ss
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -573,7 +578,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 执行类型
      *
-     * @param exeType
+     * @param exeType 执行类型
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo exeType(String exeType) {
         this.exeType = exeType;
@@ -584,7 +590,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 工作空间代码
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间代码
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -595,7 +602,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 作业类型
      *
-     * @param jobType
+     * @param jobType 作业类型
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo jobType(String jobType) {
         this.jobType = jobType;
@@ -606,7 +614,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 周期细节
      *
-     * @param frequency
+     * @param frequency 周期细节
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo frequency(String frequency) {
         this.frequency = frequency;
@@ -617,7 +626,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 用户名
      *
-     * @param userName
+     * @param userName 用户名
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo userName(String userName) {
         this.userName = userName;
@@ -628,7 +638,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 协作人
      *
-     * @param shareUser
+     * @param shareUser 协作人
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo shareUser(String shareUser) {
         this.shareUser = shareUser;
@@ -639,7 +650,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 作业描述
      *
-     * @param jobDesc
+     * @param jobDesc 作业描述
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -650,7 +662,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 过期时间
      *
-     * @param expireTime
+     * @param expireTime 过期时间
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo expireTime(String expireTime) {
         this.expireTime = expireTime;
@@ -661,7 +674,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 上线状态
      *
-     * @param enable
+     * @param enable 上线状态
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo enable(String enable) {
         this.enable = enable;
@@ -672,7 +686,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 优先级
      *
-     * @param priority
+     * @param priority 优先级
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo priority(Integer priority) {
         this.priority = priority;
@@ -683,7 +698,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 优先级等级
      *
-     * @param priorityLevel
+     * @param priorityLevel 优先级等级
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo priorityLevel(String priorityLevel) {
         this.priorityLevel = priorityLevel;
@@ -694,7 +710,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 渠道
      *
-     * @param channel
+     * @param channel 渠道
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo channel(String channel) {
         this.channel = channel;
@@ -705,7 +722,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 处理类型代码
      *
-     * @param processTypeCode
+     * @param processTypeCode 处理类型代码
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo processTypeCode(String processTypeCode) {
         this.processTypeCode = processTypeCode;
@@ -716,7 +734,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 操作人
      *
-     * @param operator
+     * @param operator 操作人
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo operator(String operator) {
         this.operator = operator;
@@ -727,7 +746,8 @@ public class JobBasicInfoVo  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 作业名称
+     * @return JobBasicInfoVo
      */
     public JobBasicInfoVo cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;

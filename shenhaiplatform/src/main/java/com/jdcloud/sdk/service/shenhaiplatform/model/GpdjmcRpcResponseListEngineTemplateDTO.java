@@ -136,7 +136,8 @@ public class GpdjmcRpcResponseListEngineTemplateDTO  implements java.io.Serializ
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GpdjmcRpcResponseListEngineTemplateDTO
      */
     public GpdjmcRpcResponseListEngineTemplateDTO success(Integer success) {
         this.success = success;
@@ -147,7 +148,8 @@ public class GpdjmcRpcResponseListEngineTemplateDTO  implements java.io.Serializ
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GpdjmcRpcResponseListEngineTemplateDTO
      */
     public GpdjmcRpcResponseListEngineTemplateDTO code(String code) {
         this.code = code;
@@ -158,7 +160,8 @@ public class GpdjmcRpcResponseListEngineTemplateDTO  implements java.io.Serializ
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GpdjmcRpcResponseListEngineTemplateDTO
      */
     public GpdjmcRpcResponseListEngineTemplateDTO msg(String msg) {
         this.msg = msg;
@@ -169,7 +172,8 @@ public class GpdjmcRpcResponseListEngineTemplateDTO  implements java.io.Serializ
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return GpdjmcRpcResponseListEngineTemplateDTO
     */
     public GpdjmcRpcResponseListEngineTemplateDTO result(List<GpdjmcEngineTemplateDTO> result) {
         this.result = result;

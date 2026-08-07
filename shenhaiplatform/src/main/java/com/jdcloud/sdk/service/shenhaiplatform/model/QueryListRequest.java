@@ -118,7 +118,8 @@ public class QueryListRequest extends JdcloudRequest implements java.io.Serializ
     /**
      * set pDictCode
      *
-     * @param pDictCode
+     * @param pDictCode pDictCode
+     * @return QueryListRequest
      */
     public QueryListRequest pDictCode(String pDictCode) {
         this.pDictCode = pDictCode;
@@ -129,7 +130,8 @@ public class QueryListRequest extends JdcloudRequest implements java.io.Serializ
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QueryListRequest
      */
     public QueryListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class QueryListRequest extends JdcloudRequest implements java.io.Serializ
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return QueryListRequest
      */
     public QueryListRequest appName(String appName) {
         this.appName = appName;

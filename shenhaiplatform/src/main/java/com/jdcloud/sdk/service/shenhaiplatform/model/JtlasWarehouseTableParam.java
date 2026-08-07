@@ -86,7 +86,8 @@ public class JtlasWarehouseTableParam  implements java.io.Serializable {
     /**
      * set paramKey
      *
-     * @param paramKey
+     * @param paramKey 
+     * @return JtlasWarehouseTableParam
      */
     public JtlasWarehouseTableParam paramKey(String paramKey) {
         this.paramKey = paramKey;
@@ -97,7 +98,8 @@ public class JtlasWarehouseTableParam  implements java.io.Serializable {
     /**
      * set paramValue
      *
-     * @param paramValue
+     * @param paramValue 
+     * @return JtlasWarehouseTableParam
      */
     public JtlasWarehouseTableParam paramValue(String paramValue) {
         this.paramValue = paramValue;

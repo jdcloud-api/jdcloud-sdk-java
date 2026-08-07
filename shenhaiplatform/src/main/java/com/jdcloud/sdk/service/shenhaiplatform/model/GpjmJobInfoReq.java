@@ -115,7 +115,8 @@ public class GpjmJobInfoReq  implements java.io.Serializable {
     /**
      * set 页面大小
      *
-     * @param pageSize
+     * @param pageSize 页面大小
+     * @return GpjmJobInfoReq
      */
     public GpjmJobInfoReq pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -126,7 +127,8 @@ public class GpjmJobInfoReq  implements java.io.Serializable {
     /**
      * set 页码
      *
-     * @param pageNum
+     * @param pageNum 页码
+     * @return GpjmJobInfoReq
      */
     public GpjmJobInfoReq pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -137,7 +139,8 @@ public class GpjmJobInfoReq  implements java.io.Serializable {
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GpjmJobInfoReq
      */
     public GpjmJobInfoReq jobName(String jobName) {
         this.jobName = jobName;

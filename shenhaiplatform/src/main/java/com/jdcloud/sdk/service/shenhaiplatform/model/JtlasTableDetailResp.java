@@ -110,7 +110,8 @@ public class JtlasTableDetailResp  implements java.io.Serializable {
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasTableDetailResp
      */
     public JtlasTableDetailResp code(String code) {
         this.code = code;
@@ -121,7 +122,8 @@ public class JtlasTableDetailResp  implements java.io.Serializable {
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasTableDetailResp
      */
     public JtlasTableDetailResp message(String message) {
         this.message = message;
@@ -132,7 +134,8 @@ public class JtlasTableDetailResp  implements java.io.Serializable {
     /**
      * set 数据或者是分页
      *
-     * @param result
+     * @param result 数据或者是分页
+     * @return JtlasTableDetailResp
      */
     public JtlasTableDetailResp result(JtlasWarehouseTable result) {
         this.result = result;

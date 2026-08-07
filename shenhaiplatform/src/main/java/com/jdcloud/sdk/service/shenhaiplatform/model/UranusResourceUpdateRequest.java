@@ -238,7 +238,8 @@ public class UranusResourceUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 资源code
      *
-     * @param resourceCode
+     * @param resourceCode 资源code
+     * @return UranusResourceUpdateRequest
      */
     public UranusResourceUpdateRequest resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -249,7 +250,8 @@ public class UranusResourceUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 原始资源名称（上传的原始文件在本地客户端的文件名称）
      *
-     * @param originalName
+     * @param originalName 原始资源名称（上传的原始文件在本地客户端的文件名称）
+     * @return UranusResourceUpdateRequest
      */
     public UranusResourceUpdateRequest originalName(String originalName) {
         this.originalName = originalName;
@@ -260,7 +262,8 @@ public class UranusResourceUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 文件上传方式（默认为本地上传）
      *
-     * @param uploadMode
+     * @param uploadMode 文件上传方式（默认为本地上传）
+     * @return UranusResourceUpdateRequest
      */
     public UranusResourceUpdateRequest uploadMode(String uploadMode) {
         this.uploadMode = uploadMode;
@@ -271,7 +274,8 @@ public class UranusResourceUpdateRequest extends JdcloudRequest implements java.
     /**
     * set 负责人
     *
-    * @param managers
+    * @param managers 负责人
+    * @return UranusResourceUpdateRequest
     */
     public UranusResourceUpdateRequest managers(List<String> managers) {
         this.managers = managers;
@@ -282,7 +286,8 @@ public class UranusResourceUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 资源状态
      *
-     * @param status
+     * @param status 资源状态
+     * @return UranusResourceUpdateRequest
      */
     public UranusResourceUpdateRequest status(String status) {
         this.status = status;
@@ -293,7 +298,8 @@ public class UranusResourceUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 环境信息（prod：生产环境；dev：开发环境），简单模式默认为prod
      *
-     * @param env
+     * @param env 环境信息（prod：生产环境；dev：开发环境），简单模式默认为prod
+     * @return UranusResourceUpdateRequest
      */
     public UranusResourceUpdateRequest env(String env) {
         this.env = env;
@@ -304,7 +310,8 @@ public class UranusResourceUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusResourceUpdateRequest
      */
     public UranusResourceUpdateRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -315,7 +322,8 @@ public class UranusResourceUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusResourceUpdateRequest
      */
     public UranusResourceUpdateRequest appName(String appName) {
         this.appName = appName;

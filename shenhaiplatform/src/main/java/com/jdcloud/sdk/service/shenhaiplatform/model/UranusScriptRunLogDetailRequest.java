@@ -118,7 +118,8 @@ public class UranusScriptRunLogDetailRequest extends JdcloudRequest implements j
     /**
      * set 运行历史ID
      *
-     * @param historyId
+     * @param historyId 运行历史ID
+     * @return UranusScriptRunLogDetailRequest
      */
     public UranusScriptRunLogDetailRequest historyId(Integer historyId) {
         this.historyId = historyId;
@@ -129,7 +130,8 @@ public class UranusScriptRunLogDetailRequest extends JdcloudRequest implements j
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusScriptRunLogDetailRequest
      */
     public UranusScriptRunLogDetailRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusScriptRunLogDetailRequest extends JdcloudRequest implements j
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusScriptRunLogDetailRequest
      */
     public UranusScriptRunLogDetailRequest appName(String appName) {
         this.appName = appName;

@@ -118,7 +118,8 @@ public class UranusTaskPrePublishRequest extends JdcloudRequest implements java.
     /**
      * set flowCode
      *
-     * @param flowCode
+     * @param flowCode flowCode
+     * @return UranusTaskPrePublishRequest
      */
     public UranusTaskPrePublishRequest flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -129,7 +130,8 @@ public class UranusTaskPrePublishRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskPrePublishRequest
      */
     public UranusTaskPrePublishRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusTaskPrePublishRequest extends JdcloudRequest implements java.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskPrePublishRequest
      */
     public UranusTaskPrePublishRequest appName(String appName) {
         this.appName = appName;

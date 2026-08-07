@@ -111,7 +111,8 @@ public class JtlasGrantTablePrivilegesResult extends JdcloudResult implements ja
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasGrantTablePrivilegesResult
      */
     public JtlasGrantTablePrivilegesResult code(String code) {
         this.code = code;
@@ -122,7 +123,8 @@ public class JtlasGrantTablePrivilegesResult extends JdcloudResult implements ja
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasGrantTablePrivilegesResult
      */
     public JtlasGrantTablePrivilegesResult message(String message) {
         this.message = message;
@@ -133,7 +135,8 @@ public class JtlasGrantTablePrivilegesResult extends JdcloudResult implements ja
     /**
      * set 无返回
      *
-     * @param result
+     * @param result 无返回
+     * @return JtlasGrantTablePrivilegesResult
      */
     public JtlasGrantTablePrivilegesResult result(String result) {
         this.result = result;

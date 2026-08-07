@@ -134,7 +134,8 @@ public class TaskDependPageListReq  implements java.io.Serializable {
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return TaskDependPageListReq
      */
     public TaskDependPageListReq companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -145,7 +146,8 @@ public class TaskDependPageListReq  implements java.io.Serializable {
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return TaskDependPageListReq
      */
     public TaskDependPageListReq workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -156,7 +158,8 @@ public class TaskDependPageListReq  implements java.io.Serializable {
     /**
      * set 工作流code
      *
-     * @param flowCode
+     * @param flowCode 工作流code
+     * @return TaskDependPageListReq
      */
     public TaskDependPageListReq flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -167,7 +170,8 @@ public class TaskDependPageListReq  implements java.io.Serializable {
     /**
      * set 任务code
      *
-     * @param taskCode
+     * @param taskCode 任务code
+     * @return TaskDependPageListReq
      */
     public TaskDependPageListReq taskCode(String taskCode) {
         this.taskCode = taskCode;

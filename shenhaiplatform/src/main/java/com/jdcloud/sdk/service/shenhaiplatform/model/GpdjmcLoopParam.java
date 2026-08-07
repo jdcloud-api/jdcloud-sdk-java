@@ -160,7 +160,8 @@ public class GpdjmcLoopParam  implements java.io.Serializable {
     /**
      * set 循环类型
      *
-     * @param loopType
+     * @param loopType 循环类型
+     * @return GpdjmcLoopParam
      */
     public GpdjmcLoopParam loopType(String loopType) {
         this.loopType = loopType;
@@ -171,7 +172,8 @@ public class GpdjmcLoopParam  implements java.io.Serializable {
     /**
      * set 循环间隔
      *
-     * @param loopInterval
+     * @param loopInterval 循环间隔
+     * @return GpdjmcLoopParam
      */
     public GpdjmcLoopParam loopInterval(Integer loopInterval) {
         this.loopInterval = loopInterval;
@@ -182,7 +184,8 @@ public class GpdjmcLoopParam  implements java.io.Serializable {
     /**
      * set 循环次数（仅迭代类型需要）
      *
-     * @param loopTimes
+     * @param loopTimes 循环次数（仅迭代类型需要）
+     * @return GpdjmcLoopParam
      */
     public GpdjmcLoopParam loopTimes(Integer loopTimes) {
         this.loopTimes = loopTimes;
@@ -193,7 +196,8 @@ public class GpdjmcLoopParam  implements java.io.Serializable {
     /**
      * set 批次大小
      *
-     * @param batchSize
+     * @param batchSize 批次大小
+     * @return GpdjmcLoopParam
      */
     public GpdjmcLoopParam batchSize(Integer batchSize) {
         this.batchSize = batchSize;
@@ -204,7 +208,8 @@ public class GpdjmcLoopParam  implements java.io.Serializable {
     /**
     * set 循环列表参数（仅列表类型需要）
     *
-    * @param loopListParams
+    * @param loopListParams 循环列表参数（仅列表类型需要）
+    * @return GpdjmcLoopParam
     */
     public GpdjmcLoopParam loopListParams(List<GpdjmcLoopListParam> loopListParams) {
         this.loopListParams = loopListParams;

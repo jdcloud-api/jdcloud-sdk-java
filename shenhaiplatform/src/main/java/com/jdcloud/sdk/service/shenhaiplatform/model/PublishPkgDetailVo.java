@@ -64,7 +64,8 @@ public class PublishPkgDetailVo  implements java.io.Serializable {
     /**
     * set 发布对象列表
     *
-    * @param publishObjVoList
+    * @param publishObjVoList 发布对象列表
+    * @return PublishPkgDetailVo
     */
     public PublishPkgDetailVo publishObjVoList(List<PublishObjVo> publishObjVoList) {
         this.publishObjVoList = publishObjVoList;

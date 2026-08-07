@@ -116,7 +116,8 @@ public class CopilotChatHistoryRequest extends JdcloudRequest implements java.io
     /**
      * set 话题搜索词
      *
-     * @param topicLike
+     * @param topicLike 话题搜索词
+     * @return CopilotChatHistoryRequest
      */
     public CopilotChatHistoryRequest topicLike(String topicLike) {
         this.topicLike = topicLike;
@@ -127,7 +128,8 @@ public class CopilotChatHistoryRequest extends JdcloudRequest implements java.io
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CopilotChatHistoryRequest
      */
     public CopilotChatHistoryRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class CopilotChatHistoryRequest extends JdcloudRequest implements java.io
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return CopilotChatHistoryRequest
      */
     public CopilotChatHistoryRequest appName(String appName) {
         this.appName = appName;

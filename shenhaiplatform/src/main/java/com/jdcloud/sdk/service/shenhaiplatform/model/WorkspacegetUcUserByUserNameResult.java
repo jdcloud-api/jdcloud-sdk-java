@@ -114,7 +114,8 @@ public class WorkspacegetUcUserByUserNameResult extends JdcloudResult implements
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return WorkspacegetUcUserByUserNameResult
      */
     public WorkspacegetUcUserByUserNameResult code(String code) {
         this.code = code;
@@ -125,7 +126,8 @@ public class WorkspacegetUcUserByUserNameResult extends JdcloudResult implements
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return WorkspacegetUcUserByUserNameResult
      */
     public WorkspacegetUcUserByUserNameResult message(String message) {
         this.message = message;
@@ -136,7 +138,8 @@ public class WorkspacegetUcUserByUserNameResult extends JdcloudResult implements
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return WorkspacegetUcUserByUserNameResult
     */
     public WorkspacegetUcUserByUserNameResult result(List<UcUsersResp> result) {
         this.result = result;

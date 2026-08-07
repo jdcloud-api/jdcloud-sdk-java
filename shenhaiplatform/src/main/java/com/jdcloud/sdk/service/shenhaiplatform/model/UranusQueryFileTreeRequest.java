@@ -144,7 +144,8 @@ public class UranusQueryFileTreeRequest extends JdcloudRequest implements java.i
     /**
      * set 工作流code
      *
-     * @param flowCode
+     * @param flowCode 工作流code
+     * @return UranusQueryFileTreeRequest
      */
     public UranusQueryFileTreeRequest flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -155,7 +156,8 @@ public class UranusQueryFileTreeRequest extends JdcloudRequest implements java.i
     /**
      * set 是否是目录 0 返回全部 1 只返回目录
      *
-     * @param isDir
+     * @param isDir 是否是目录 0 返回全部 1 只返回目录
+     * @return UranusQueryFileTreeRequest
      */
     public UranusQueryFileTreeRequest isDir(Integer isDir) {
         this.isDir = isDir;
@@ -166,7 +168,8 @@ public class UranusQueryFileTreeRequest extends JdcloudRequest implements java.i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusQueryFileTreeRequest
      */
     public UranusQueryFileTreeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -177,7 +180,8 @@ public class UranusQueryFileTreeRequest extends JdcloudRequest implements java.i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusQueryFileTreeRequest
      */
     public UranusQueryFileTreeRequest appName(String appName) {
         this.appName = appName;

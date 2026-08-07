@@ -278,7 +278,8 @@ public class PublishObjVo  implements java.io.Serializable {
     /**
      * set ID
      *
-     * @param objId
+     * @param objId ID
+     * @return PublishObjVo
      */
     public PublishObjVo objId(Long objId) {
         this.objId = objId;
@@ -289,7 +290,8 @@ public class PublishObjVo  implements java.io.Serializable {
     /**
      * set 对象名称
      *
-     * @param objName
+     * @param objName 对象名称
+     * @return PublishObjVo
      */
     public PublishObjVo objName(String objName) {
         this.objName = objName;
@@ -300,7 +302,8 @@ public class PublishObjVo  implements java.io.Serializable {
     /**
      * set 对象ID
      *
-     * @param objUk
+     * @param objUk 对象ID
+     * @return PublishObjVo
      */
     public PublishObjVo objUk(String objUk) {
         this.objUk = objUk;
@@ -311,7 +314,8 @@ public class PublishObjVo  implements java.io.Serializable {
     /**
      * set 对象发布失败信息
      *
-     * @param objMsg
+     * @param objMsg 对象发布失败信息
+     * @return PublishObjVo
      */
     public PublishObjVo objMsg(String objMsg) {
         this.objMsg = objMsg;
@@ -322,7 +326,8 @@ public class PublishObjVo  implements java.io.Serializable {
     /**
      * set 版本号
      *
-     * @param versionPretty
+     * @param versionPretty 版本号
+     * @return PublishObjVo
      */
     public PublishObjVo versionPretty(String versionPretty) {
         this.versionPretty = versionPretty;
@@ -333,7 +338,8 @@ public class PublishObjVo  implements java.io.Serializable {
     /**
      * set 提交人
      *
-     * @param submitter
+     * @param submitter 提交人
+     * @return PublishObjVo
      */
     public PublishObjVo submitter(String submitter) {
         this.submitter = submitter;
@@ -344,7 +350,8 @@ public class PublishObjVo  implements java.io.Serializable {
     /**
      * set 提交人Pin
      *
-     * @param submitterPin
+     * @param submitterPin 提交人Pin
+     * @return PublishObjVo
      */
     public PublishObjVo submitterPin(String submitterPin) {
         this.submitterPin = submitterPin;
@@ -355,7 +362,8 @@ public class PublishObjVo  implements java.io.Serializable {
     /**
      * set 对象类型
      *
-     * @param objTypeDesc
+     * @param objTypeDesc 对象类型
+     * @return PublishObjVo
      */
     public PublishObjVo objTypeDesc(String objTypeDesc) {
         this.objTypeDesc = objTypeDesc;
@@ -366,7 +374,8 @@ public class PublishObjVo  implements java.io.Serializable {
     /**
      * set 变更类型
      *
-     * @param changeTypeDesc
+     * @param changeTypeDesc 变更类型
+     * @return PublishObjVo
      */
     public PublishObjVo changeTypeDesc(String changeTypeDesc) {
         this.changeTypeDesc = changeTypeDesc;
@@ -377,7 +386,8 @@ public class PublishObjVo  implements java.io.Serializable {
     /**
      * set 提交时间
      *
-     * @param submitTimestamp
+     * @param submitTimestamp 提交时间
+     * @return PublishObjVo
      */
     public PublishObjVo submitTimestamp(Long submitTimestamp) {
         this.submitTimestamp = submitTimestamp;

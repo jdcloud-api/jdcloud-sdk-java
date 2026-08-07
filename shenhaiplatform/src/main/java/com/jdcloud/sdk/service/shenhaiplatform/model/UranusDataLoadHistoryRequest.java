@@ -190,7 +190,8 @@ public class UranusDataLoadHistoryRequest extends JdcloudRequest implements java
     /**
      * set 页号
      *
-     * @param pageNum
+     * @param pageNum 页号
+     * @return UranusDataLoadHistoryRequest
      */
     public UranusDataLoadHistoryRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -201,7 +202,8 @@ public class UranusDataLoadHistoryRequest extends JdcloudRequest implements java
     /**
      * set 页面容量
      *
-     * @param pageSize
+     * @param pageSize 页面容量
+     * @return UranusDataLoadHistoryRequest
      */
     public UranusDataLoadHistoryRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -212,7 +214,8 @@ public class UranusDataLoadHistoryRequest extends JdcloudRequest implements java
     /**
      * set 表名
      *
-     * @param tableName
+     * @param tableName 表名
+     * @return UranusDataLoadHistoryRequest
      */
     public UranusDataLoadHistoryRequest tableName(String tableName) {
         this.tableName = tableName;
@@ -223,7 +226,8 @@ public class UranusDataLoadHistoryRequest extends JdcloudRequest implements java
     /**
     * set 状态过滤: SUBMITTED 已提交、ACCEPTED 等待执行、RUNNING 上传中、FINISHED 成功、FAILED 上传失败、KILLED 终止、UNKNOWN 未知
     *
-    * @param states
+    * @param states 状态过滤: SUBMITTED 已提交、ACCEPTED 等待执行、RUNNING 上传中、FINISHED 成功、FAILED 上传失败、KILLED 终止、UNKNOWN 未知
+    * @return UranusDataLoadHistoryRequest
     */
     public UranusDataLoadHistoryRequest states(List<String> states) {
         this.states = states;
@@ -234,7 +238,8 @@ public class UranusDataLoadHistoryRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusDataLoadHistoryRequest
      */
     public UranusDataLoadHistoryRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -245,7 +250,8 @@ public class UranusDataLoadHistoryRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusDataLoadHistoryRequest
      */
     public UranusDataLoadHistoryRequest appName(String appName) {
         this.appName = appName;

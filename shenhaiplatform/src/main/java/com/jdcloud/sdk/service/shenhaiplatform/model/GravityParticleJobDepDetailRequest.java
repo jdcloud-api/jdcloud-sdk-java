@@ -140,7 +140,8 @@ public class GravityParticleJobDepDetailRequest extends JdcloudRequest implement
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleJobDepDetailRequest
      */
     public GravityParticleJobDepDetailRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -151,7 +152,8 @@ public class GravityParticleJobDepDetailRequest extends JdcloudRequest implement
     /**
      * set 链路层级
      *
-     * @param level
+     * @param level 链路层级
+     * @return GravityParticleJobDepDetailRequest
      */
     public GravityParticleJobDepDetailRequest level(Integer level) {
         this.level = level;
@@ -162,7 +164,8 @@ public class GravityParticleJobDepDetailRequest extends JdcloudRequest implement
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobDepDetailRequest
      */
     public GravityParticleJobDepDetailRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -173,7 +176,8 @@ public class GravityParticleJobDepDetailRequest extends JdcloudRequest implement
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobDepDetailRequest
      */
     public GravityParticleJobDepDetailRequest appName(String appName) {
         this.appName = appName;

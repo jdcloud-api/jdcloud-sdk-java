@@ -184,7 +184,8 @@ public class UranusFunctionManagerRes  implements java.io.Serializable {
     /**
      * set 类型id
      *
-     * @param id
+     * @param id 类型id
+     * @return UranusFunctionManagerRes
      */
     public UranusFunctionManagerRes id(Long id) {
         this.id = id;
@@ -195,7 +196,8 @@ public class UranusFunctionManagerRes  implements java.io.Serializable {
     /**
      * set 类型名称
      *
-     * @param typeName
+     * @param typeName 类型名称
+     * @return UranusFunctionManagerRes
      */
     public UranusFunctionManagerRes typeName(String typeName) {
         this.typeName = typeName;
@@ -206,7 +208,8 @@ public class UranusFunctionManagerRes  implements java.io.Serializable {
     /**
      * set 是否是目录
      *
-     * @param dir
+     * @param dir 是否是目录
+     * @return UranusFunctionManagerRes
      */
     public UranusFunctionManagerRes dir(Boolean dir) {
         this.dir = dir;
@@ -217,7 +220,8 @@ public class UranusFunctionManagerRes  implements java.io.Serializable {
     /**
      * set 环境信息（prod：生产；dev：开发）
      *
-     * @param env
+     * @param env 环境信息（prod：生产；dev：开发）
+     * @return UranusFunctionManagerRes
      */
     public UranusFunctionManagerRes env(String env) {
         this.env = env;
@@ -228,7 +232,8 @@ public class UranusFunctionManagerRes  implements java.io.Serializable {
     /**
     * set 子集
     *
-    * @param children
+    * @param children 子集
+    * @return UranusFunctionManagerRes
     */
     public UranusFunctionManagerRes children(List<Object> children) {
         this.children = children;
@@ -239,7 +244,8 @@ public class UranusFunctionManagerRes  implements java.io.Serializable {
     /**
      * set pid
      *
-     * @param pid
+     * @param pid 
+     * @return UranusFunctionManagerRes
      */
     public UranusFunctionManagerRes pid(Long pid) {
         this.pid = pid;

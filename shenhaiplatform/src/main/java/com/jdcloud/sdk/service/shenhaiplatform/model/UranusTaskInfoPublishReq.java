@@ -115,7 +115,8 @@ public class UranusTaskInfoPublishReq  implements java.io.Serializable {
     /**
      * set 节点的uuid
      *
-     * @param taskCode
+     * @param taskCode 节点的uuid
+     * @return UranusTaskInfoPublishReq
      */
     public UranusTaskInfoPublishReq taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -126,7 +127,8 @@ public class UranusTaskInfoPublishReq  implements java.io.Serializable {
     /**
      * set 发布原因
      *
-     * @param reason
+     * @param reason 发布原因
+     * @return UranusTaskInfoPublishReq
      */
     public UranusTaskInfoPublishReq reason(String reason) {
         this.reason = reason;
@@ -137,7 +139,8 @@ public class UranusTaskInfoPublishReq  implements java.io.Serializable {
     /**
      * set 发布类型
      *
-     * @param publishStatus
+     * @param publishStatus 发布类型
+     * @return UranusTaskInfoPublishReq
      */
     public UranusTaskInfoPublishReq publishStatus(Integer publishStatus) {
         this.publishStatus = publishStatus;

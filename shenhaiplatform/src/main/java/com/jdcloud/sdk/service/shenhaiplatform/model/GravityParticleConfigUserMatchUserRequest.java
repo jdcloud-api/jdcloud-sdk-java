@@ -116,7 +116,8 @@ public class GravityParticleConfigUserMatchUserRequest extends JdcloudRequest im
     /**
      * set 用户code
      *
-     * @param userCode
+     * @param userCode 用户code
+     * @return GravityParticleConfigUserMatchUserRequest
      */
     public GravityParticleConfigUserMatchUserRequest userCode(String userCode) {
         this.userCode = userCode;
@@ -127,7 +128,8 @@ public class GravityParticleConfigUserMatchUserRequest extends JdcloudRequest im
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleConfigUserMatchUserRequest
      */
     public GravityParticleConfigUserMatchUserRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class GravityParticleConfigUserMatchUserRequest extends JdcloudRequest im
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleConfigUserMatchUserRequest
      */
     public GravityParticleConfigUserMatchUserRequest appName(String appName) {
         this.appName = appName;

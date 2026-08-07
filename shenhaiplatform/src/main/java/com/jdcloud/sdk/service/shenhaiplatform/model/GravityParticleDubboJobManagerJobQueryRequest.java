@@ -188,7 +188,8 @@ public class GravityParticleDubboJobManagerJobQueryRequest extends JdcloudReques
     /**
      * set 数据库名
      *
-     * @param databaseName
+     * @param databaseName 数据库名
+     * @return GravityParticleDubboJobManagerJobQueryRequest
      */
     public GravityParticleDubboJobManagerJobQueryRequest databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -199,7 +200,8 @@ public class GravityParticleDubboJobManagerJobQueryRequest extends JdcloudReques
     /**
      * set 表名
      *
-     * @param tableName
+     * @param tableName 表名
+     * @return GravityParticleDubboJobManagerJobQueryRequest
      */
     public GravityParticleDubboJobManagerJobQueryRequest tableName(String tableName) {
         this.tableName = tableName;
@@ -210,7 +212,8 @@ public class GravityParticleDubboJobManagerJobQueryRequest extends JdcloudReques
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return GravityParticleDubboJobManagerJobQueryRequest
      */
     public GravityParticleDubboJobManagerJobQueryRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -221,7 +224,8 @@ public class GravityParticleDubboJobManagerJobQueryRequest extends JdcloudReques
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GravityParticleDubboJobManagerJobQueryRequest
      */
     public GravityParticleDubboJobManagerJobQueryRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -232,7 +236,8 @@ public class GravityParticleDubboJobManagerJobQueryRequest extends JdcloudReques
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerJobQueryRequest
      */
     public GravityParticleDubboJobManagerJobQueryRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -243,7 +248,8 @@ public class GravityParticleDubboJobManagerJobQueryRequest extends JdcloudReques
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerJobQueryRequest
      */
     public GravityParticleDubboJobManagerJobQueryRequest appName(String appName) {
         this.appName = appName;

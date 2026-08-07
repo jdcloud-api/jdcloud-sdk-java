@@ -162,7 +162,8 @@ public class GravityParticleParticleModelCalcListJobResult extends JdcloudResult
     /**
      * set 成功标识，1成功，0失败
      *
-     * @param success
+     * @param success 成功标识，1成功，0失败
+     * @return GravityParticleParticleModelCalcListJobResult
      */
     public GravityParticleParticleModelCalcListJobResult success(Integer success) {
         this.success = success;
@@ -173,7 +174,8 @@ public class GravityParticleParticleModelCalcListJobResult extends JdcloudResult
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return GravityParticleParticleModelCalcListJobResult
     */
     public GravityParticleParticleModelCalcListJobResult result(List<GpmdSchedJobDTO> result) {
         this.result = result;
@@ -184,7 +186,8 @@ public class GravityParticleParticleModelCalcListJobResult extends JdcloudResult
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return GravityParticleParticleModelCalcListJobResult
      */
     public GravityParticleParticleModelCalcListJobResult code(String code) {
         this.code = code;
@@ -195,7 +198,8 @@ public class GravityParticleParticleModelCalcListJobResult extends JdcloudResult
     /**
      * set 返回状态信息
      *
-     * @param msg
+     * @param msg 返回状态信息
+     * @return GravityParticleParticleModelCalcListJobResult
      */
     public GravityParticleParticleModelCalcListJobResult msg(String msg) {
         this.msg = msg;
@@ -206,7 +210,8 @@ public class GravityParticleParticleModelCalcListJobResult extends JdcloudResult
     /**
      * set 返回请求流水号
      *
-     * @param _REQ_SEQ_NO_
+     * @param _REQ_SEQ_NO_ 返回请求流水号
+     * @return GravityParticleParticleModelCalcListJobResult
      */
     public GravityParticleParticleModelCalcListJobResult _REQ_SEQ_NO_(String _REQ_SEQ_NO_) {
         this._REQ_SEQ_NO_ = _REQ_SEQ_NO_;

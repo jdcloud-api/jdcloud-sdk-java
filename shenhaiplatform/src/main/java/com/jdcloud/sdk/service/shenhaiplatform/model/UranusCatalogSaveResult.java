@@ -183,7 +183,8 @@ public class UranusCatalogSaveResult extends JdcloudResult implements java.io.Se
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusCatalogSaveResult
      */
     public UranusCatalogSaveResult code(String code) {
         this.code = code;
@@ -194,7 +195,8 @@ public class UranusCatalogSaveResult extends JdcloudResult implements java.io.Se
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusCatalogSaveResult
      */
     public UranusCatalogSaveResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -205,7 +207,8 @@ public class UranusCatalogSaveResult extends JdcloudResult implements java.io.Se
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusCatalogSaveResult
      */
     public UranusCatalogSaveResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -216,7 +219,8 @@ public class UranusCatalogSaveResult extends JdcloudResult implements java.io.Se
     /**
      * set Object
      *
-     * @param result
+     * @param result Object
+     * @return UranusCatalogSaveResult
      */
     public UranusCatalogSaveResult result(Object result) {
         this.result = result;
@@ -227,7 +231,8 @@ public class UranusCatalogSaveResult extends JdcloudResult implements java.io.Se
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusCatalogSaveResult
      */
     public UranusCatalogSaveResult subCode(String subCode) {
         this.subCode = subCode;
@@ -238,7 +243,8 @@ public class UranusCatalogSaveResult extends JdcloudResult implements java.io.Se
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusCatalogSaveResult
      */
     public UranusCatalogSaveResult successed(Boolean successed) {
         this.successed = successed;

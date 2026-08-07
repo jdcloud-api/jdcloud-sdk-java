@@ -92,7 +92,8 @@ public class CopilotChatNewRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CopilotChatNewRequest
      */
     public CopilotChatNewRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class CopilotChatNewRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return CopilotChatNewRequest
      */
     public CopilotChatNewRequest appName(String appName) {
         this.appName = appName;

@@ -112,7 +112,8 @@ public class JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesResp  implements jav
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesResp
      */
     public JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesResp code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesResp  implements jav
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesResp
      */
     public JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesResp message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesResp  implements jav
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesResp
     */
     public JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesResp result(List<JtlasWarehouseTable> result) {
         this.result = result;

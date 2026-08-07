@@ -114,7 +114,8 @@ public class CopilotModelListResult extends JdcloudResult implements java.io.Ser
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return CopilotModelListResult
      */
     public CopilotModelListResult code(String code) {
         this.code = code;
@@ -125,7 +126,8 @@ public class CopilotModelListResult extends JdcloudResult implements java.io.Ser
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return CopilotModelListResult
      */
     public CopilotModelListResult message(String message) {
         this.message = message;
@@ -136,7 +138,8 @@ public class CopilotModelListResult extends JdcloudResult implements java.io.Ser
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return CopilotModelListResult
     */
     public CopilotModelListResult result(List<ModelVo> result) {
         this.result = result;

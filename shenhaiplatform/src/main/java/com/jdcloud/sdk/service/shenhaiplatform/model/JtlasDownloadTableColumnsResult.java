@@ -111,7 +111,8 @@ public class JtlasDownloadTableColumnsResult extends JdcloudResult implements ja
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasDownloadTableColumnsResult
      */
     public JtlasDownloadTableColumnsResult code(String code) {
         this.code = code;
@@ -122,7 +123,8 @@ public class JtlasDownloadTableColumnsResult extends JdcloudResult implements ja
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasDownloadTableColumnsResult
      */
     public JtlasDownloadTableColumnsResult message(String message) {
         this.message = message;
@@ -133,7 +135,8 @@ public class JtlasDownloadTableColumnsResult extends JdcloudResult implements ja
     /**
      * set 下载DownloadUrl地址
      *
-     * @param result
+     * @param result 下载DownloadUrl地址
+     * @return JtlasDownloadTableColumnsResult
      */
     public JtlasDownloadTableColumnsResult result(String result) {
         this.result = result;

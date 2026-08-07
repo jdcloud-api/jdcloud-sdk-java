@@ -164,7 +164,8 @@ public class WorkspaceUnbundleProjectRequest extends JdcloudRequest implements j
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceUnbundleProjectRequest
      */
     public WorkspaceUnbundleProjectRequest id(Integer id) {
         this.id = id;
@@ -175,7 +176,8 @@ public class WorkspaceUnbundleProjectRequest extends JdcloudRequest implements j
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return WorkspaceUnbundleProjectRequest
      */
     public WorkspaceUnbundleProjectRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -186,7 +188,8 @@ public class WorkspaceUnbundleProjectRequest extends JdcloudRequest implements j
     /**
      * set projectCode
      *
-     * @param projectCode
+     * @param projectCode 
+     * @return WorkspaceUnbundleProjectRequest
      */
     public WorkspaceUnbundleProjectRequest projectCode(String projectCode) {
         this.projectCode = projectCode;
@@ -197,7 +200,8 @@ public class WorkspaceUnbundleProjectRequest extends JdcloudRequest implements j
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceUnbundleProjectRequest
      */
     public WorkspaceUnbundleProjectRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -208,7 +212,8 @@ public class WorkspaceUnbundleProjectRequest extends JdcloudRequest implements j
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceUnbundleProjectRequest
      */
     public WorkspaceUnbundleProjectRequest appName(String appName) {
         this.appName = appName;

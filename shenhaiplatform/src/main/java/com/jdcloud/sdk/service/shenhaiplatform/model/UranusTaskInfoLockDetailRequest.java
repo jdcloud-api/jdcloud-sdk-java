@@ -144,7 +144,8 @@ public class UranusTaskInfoLockDetailRequest extends JdcloudRequest implements j
     /**
      * set 任务code
      *
-     * @param taskCode
+     * @param taskCode 任务code
+     * @return UranusTaskInfoLockDetailRequest
      */
     public UranusTaskInfoLockDetailRequest taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -155,7 +156,8 @@ public class UranusTaskInfoLockDetailRequest extends JdcloudRequest implements j
     /**
      * set 状态
      *
-     * @param type
+     * @param type 状态
+     * @return UranusTaskInfoLockDetailRequest
      */
     public UranusTaskInfoLockDetailRequest type(Integer type) {
         this.type = type;
@@ -166,7 +168,8 @@ public class UranusTaskInfoLockDetailRequest extends JdcloudRequest implements j
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskInfoLockDetailRequest
      */
     public UranusTaskInfoLockDetailRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -177,7 +180,8 @@ public class UranusTaskInfoLockDetailRequest extends JdcloudRequest implements j
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskInfoLockDetailRequest
      */
     public UranusTaskInfoLockDetailRequest appName(String appName) {
         this.appName = appName;

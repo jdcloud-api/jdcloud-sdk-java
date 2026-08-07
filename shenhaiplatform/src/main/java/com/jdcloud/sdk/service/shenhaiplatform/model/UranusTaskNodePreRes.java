@@ -230,7 +230,8 @@ public class UranusTaskNodePreRes  implements java.io.Serializable {
     /**
      * set 总排序
      *
-     * @param sort
+     * @param sort 总排序
+     * @return UranusTaskNodePreRes
      */
     public UranusTaskNodePreRes sort(Integer sort) {
         this.sort = sort;
@@ -241,7 +242,8 @@ public class UranusTaskNodePreRes  implements java.io.Serializable {
     /**
      * set 分组里面的顺序
      *
-     * @param taskSort
+     * @param taskSort 分组里面的顺序
+     * @return UranusTaskNodePreRes
      */
     public UranusTaskNodePreRes taskSort(Integer taskSort) {
         this.taskSort = taskSort;
@@ -252,7 +254,8 @@ public class UranusTaskNodePreRes  implements java.io.Serializable {
     /**
      * set 分组
      *
-     * @param taskGroup
+     * @param taskGroup 分组
+     * @return UranusTaskNodePreRes
      */
     public UranusTaskNodePreRes taskGroup(Integer taskGroup) {
         this.taskGroup = taskGroup;
@@ -263,7 +266,8 @@ public class UranusTaskNodePreRes  implements java.io.Serializable {
     /**
      * set 是否存在同级
      *
-     * @param hasLevel
+     * @param hasLevel 是否存在同级
+     * @return UranusTaskNodePreRes
      */
     public UranusTaskNodePreRes hasLevel(Integer hasLevel) {
         this.hasLevel = hasLevel;
@@ -274,7 +278,8 @@ public class UranusTaskNodePreRes  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param taskName
+     * @param taskName 作业名称
+     * @return UranusTaskNodePreRes
      */
     public UranusTaskNodePreRes taskName(String taskName) {
         this.taskName = taskName;
@@ -285,7 +290,8 @@ public class UranusTaskNodePreRes  implements java.io.Serializable {
     /**
      * set 作业描述
      *
-     * @param taskDesc
+     * @param taskDesc 作业描述
+     * @return UranusTaskNodePreRes
      */
     public UranusTaskNodePreRes taskDesc(String taskDesc) {
         this.taskDesc = taskDesc;
@@ -296,7 +302,8 @@ public class UranusTaskNodePreRes  implements java.io.Serializable {
     /**
      * set 作业Code
      *
-     * @param taskCode
+     * @param taskCode 作业Code
+     * @return UranusTaskNodePreRes
      */
     public UranusTaskNodePreRes taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -307,7 +314,8 @@ public class UranusTaskNodePreRes  implements java.io.Serializable {
     /**
      * set 发布变更类型描述
      *
-     * @param publicChangeType
+     * @param publicChangeType 发布变更类型描述
+     * @return UranusTaskNodePreRes
      */
     public UranusTaskNodePreRes publicChangeType(String publicChangeType) {
         this.publicChangeType = publicChangeType;

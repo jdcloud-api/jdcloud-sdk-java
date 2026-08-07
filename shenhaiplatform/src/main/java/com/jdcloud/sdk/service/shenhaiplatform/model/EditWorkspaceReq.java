@@ -110,7 +110,8 @@ public class EditWorkspaceReq  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return EditWorkspaceReq
      */
     public EditWorkspaceReq id(Integer id) {
         this.id = id;
@@ -121,7 +122,8 @@ public class EditWorkspaceReq  implements java.io.Serializable {
     /**
      * set workspaceName
      *
-     * @param workspaceName
+     * @param workspaceName 
+     * @return EditWorkspaceReq
      */
     public EditWorkspaceReq workspaceName(String workspaceName) {
         this.workspaceName = workspaceName;
@@ -132,7 +134,8 @@ public class EditWorkspaceReq  implements java.io.Serializable {
     /**
      * set workspaceDescription
      *
-     * @param workspaceDescription
+     * @param workspaceDescription 
+     * @return EditWorkspaceReq
      */
     public EditWorkspaceReq workspaceDescription(String workspaceDescription) {
         this.workspaceDescription = workspaceDescription;

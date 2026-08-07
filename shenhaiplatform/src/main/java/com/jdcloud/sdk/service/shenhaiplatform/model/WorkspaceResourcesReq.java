@@ -158,7 +158,8 @@ public class WorkspaceResourcesReq  implements java.io.Serializable {
     /**
      * set pageNum
      *
-     * @param pageNum
+     * @param pageNum 
+     * @return WorkspaceResourcesReq
      */
     public WorkspaceResourcesReq pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -169,7 +170,8 @@ public class WorkspaceResourcesReq  implements java.io.Serializable {
     /**
      * set pageSize
      *
-     * @param pageSize
+     * @param pageSize 
+     * @return WorkspaceResourcesReq
      */
     public WorkspaceResourcesReq pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -180,7 +182,8 @@ public class WorkspaceResourcesReq  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceResourcesReq
      */
     public WorkspaceResourcesReq id(Integer id) {
         this.id = id;
@@ -191,7 +194,8 @@ public class WorkspaceResourcesReq  implements java.io.Serializable {
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return WorkspaceResourcesReq
      */
     public WorkspaceResourcesReq workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -202,7 +206,8 @@ public class WorkspaceResourcesReq  implements java.io.Serializable {
     /**
      * set resourceName
      *
-     * @param resourceName
+     * @param resourceName 
+     * @return WorkspaceResourcesReq
      */
     public WorkspaceResourcesReq resourceName(String resourceName) {
         this.resourceName = resourceName;

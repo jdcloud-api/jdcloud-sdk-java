@@ -110,7 +110,8 @@ public class RerunTaskParam  implements java.io.Serializable {
     /**
      * set 页号
      *
-     * @param pageNum
+     * @param pageNum 页号
+     * @return RerunTaskParam
      */
     public RerunTaskParam pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -121,7 +122,8 @@ public class RerunTaskParam  implements java.io.Serializable {
     /**
      * set 页大小
      *
-     * @param pageSize
+     * @param pageSize 页大小
+     * @return RerunTaskParam
      */
     public RerunTaskParam pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -132,7 +134,8 @@ public class RerunTaskParam  implements java.io.Serializable {
     /**
      * set 批次id
      *
-     * @param batchId
+     * @param batchId 批次id
+     * @return RerunTaskParam
      */
     public RerunTaskParam batchId(Integer batchId) {
         this.batchId = batchId;

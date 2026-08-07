@@ -168,7 +168,8 @@ public class UranusTaskInfoPublishRequest extends JdcloudRequest implements java
     /**
      * set 节点的uuid
      *
-     * @param taskCode
+     * @param taskCode 节点的uuid
+     * @return UranusTaskInfoPublishRequest
      */
     public UranusTaskInfoPublishRequest taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -179,7 +180,8 @@ public class UranusTaskInfoPublishRequest extends JdcloudRequest implements java
     /**
      * set 发布原因
      *
-     * @param reason
+     * @param reason 发布原因
+     * @return UranusTaskInfoPublishRequest
      */
     public UranusTaskInfoPublishRequest reason(String reason) {
         this.reason = reason;
@@ -190,7 +192,8 @@ public class UranusTaskInfoPublishRequest extends JdcloudRequest implements java
     /**
      * set 发布类型
      *
-     * @param publishStatus
+     * @param publishStatus 发布类型
+     * @return UranusTaskInfoPublishRequest
      */
     public UranusTaskInfoPublishRequest publishStatus(Integer publishStatus) {
         this.publishStatus = publishStatus;
@@ -201,7 +204,8 @@ public class UranusTaskInfoPublishRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskInfoPublishRequest
      */
     public UranusTaskInfoPublishRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -212,7 +216,8 @@ public class UranusTaskInfoPublishRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskInfoPublishRequest
      */
     public UranusTaskInfoPublishRequest appName(String appName) {
         this.appName = appName;

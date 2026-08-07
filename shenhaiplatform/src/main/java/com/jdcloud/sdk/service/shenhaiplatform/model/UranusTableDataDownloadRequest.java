@@ -168,7 +168,8 @@ public class UranusTableDataDownloadRequest extends JdcloudRequest implements ja
     /**
      * set 执行历史ID
      *
-     * @param historyId
+     * @param historyId 执行历史ID
+     * @return UranusTableDataDownloadRequest
      */
     public UranusTableDataDownloadRequest historyId(Integer historyId) {
         this.historyId = historyId;
@@ -179,7 +180,8 @@ public class UranusTableDataDownloadRequest extends JdcloudRequest implements ja
     /**
      * set 文件名称
      *
-     * @param fileName
+     * @param fileName 文件名称
+     * @return UranusTableDataDownloadRequest
      */
     public UranusTableDataDownloadRequest fileName(String fileName) {
         this.fileName = fileName;
@@ -190,7 +192,8 @@ public class UranusTableDataDownloadRequest extends JdcloudRequest implements ja
     /**
      * set 字符集: GBK、UTF-8
      *
-     * @param characterSet
+     * @param characterSet 字符集: GBK、UTF-8
+     * @return UranusTableDataDownloadRequest
      */
     public UranusTableDataDownloadRequest characterSet(String characterSet) {
         this.characterSet = characterSet;
@@ -201,7 +204,8 @@ public class UranusTableDataDownloadRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTableDataDownloadRequest
      */
     public UranusTableDataDownloadRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -212,7 +216,8 @@ public class UranusTableDataDownloadRequest extends JdcloudRequest implements ja
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTableDataDownloadRequest
      */
     public UranusTableDataDownloadRequest appName(String appName) {
         this.appName = appName;

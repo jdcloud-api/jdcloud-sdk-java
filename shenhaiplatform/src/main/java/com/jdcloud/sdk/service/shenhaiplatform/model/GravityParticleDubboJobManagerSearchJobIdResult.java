@@ -137,7 +137,8 @@ public class GravityParticleDubboJobManagerSearchJobIdResult extends JdcloudResu
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GravityParticleDubboJobManagerSearchJobIdResult
      */
     public GravityParticleDubboJobManagerSearchJobIdResult success(Integer success) {
         this.success = success;
@@ -148,7 +149,8 @@ public class GravityParticleDubboJobManagerSearchJobIdResult extends JdcloudResu
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GravityParticleDubboJobManagerSearchJobIdResult
      */
     public GravityParticleDubboJobManagerSearchJobIdResult code(String code) {
         this.code = code;
@@ -159,7 +161,8 @@ public class GravityParticleDubboJobManagerSearchJobIdResult extends JdcloudResu
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GravityParticleDubboJobManagerSearchJobIdResult
      */
     public GravityParticleDubboJobManagerSearchJobIdResult msg(String msg) {
         this.msg = msg;
@@ -170,7 +173,8 @@ public class GravityParticleDubboJobManagerSearchJobIdResult extends JdcloudResu
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return GravityParticleDubboJobManagerSearchJobIdResult
     */
     public GravityParticleDubboJobManagerSearchJobIdResult result(List<Integer> result) {
         this.result = result;

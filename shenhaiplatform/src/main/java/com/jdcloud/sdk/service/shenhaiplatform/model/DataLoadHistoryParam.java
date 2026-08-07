@@ -136,7 +136,8 @@ public class DataLoadHistoryParam  implements java.io.Serializable {
     /**
      * set 页号
      *
-     * @param pageNum
+     * @param pageNum 页号
+     * @return DataLoadHistoryParam
      */
     public DataLoadHistoryParam pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -147,7 +148,8 @@ public class DataLoadHistoryParam  implements java.io.Serializable {
     /**
      * set 页面容量
      *
-     * @param pageSize
+     * @param pageSize 页面容量
+     * @return DataLoadHistoryParam
      */
     public DataLoadHistoryParam pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -158,7 +160,8 @@ public class DataLoadHistoryParam  implements java.io.Serializable {
     /**
      * set 表名
      *
-     * @param tableName
+     * @param tableName 表名
+     * @return DataLoadHistoryParam
      */
     public DataLoadHistoryParam tableName(String tableName) {
         this.tableName = tableName;
@@ -169,7 +172,8 @@ public class DataLoadHistoryParam  implements java.io.Serializable {
     /**
     * set 状态过滤: SUBMITTED 已提交、ACCEPTED 等待执行、RUNNING 上传中、FINISHED 成功、FAILED 上传失败、KILLED 终止、UNKNOWN 未知
     *
-    * @param states
+    * @param states 状态过滤: SUBMITTED 已提交、ACCEPTED 等待执行、RUNNING 上传中、FINISHED 成功、FAILED 上传失败、KILLED 终止、UNKNOWN 未知
+    * @return DataLoadHistoryParam
     */
     public DataLoadHistoryParam states(List<String> states) {
         this.states = states;

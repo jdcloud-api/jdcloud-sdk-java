@@ -616,7 +616,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree id(Integer id) {
         this.id = id;
@@ -627,7 +628,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set jobName
      *
-     * @param jobName
+     * @param jobName 
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree jobName(String jobName) {
         this.jobName = jobName;
@@ -638,7 +640,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set dependName
      *
-     * @param dependName
+     * @param dependName 
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree dependName(String dependName) {
         this.dependName = dependName;
@@ -649,7 +652,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 作业所属系统，G gravity版本、A automation版本,废弃字段
      *
-     * @param jobBelong
+     * @param jobBelong 作业所属系统，G gravity版本、A automation版本,废弃字段
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree jobBelong(String jobBelong) {
         this.jobBelong = jobBelong;
@@ -660,7 +664,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 是否可以上下游并行，1启用、0关闭
      *
-     * @param flagParallel
+     * @param flagParallel 是否可以上下游并行，1启用、0关闭
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree flagParallel(String flagParallel) {
         this.flagParallel = flagParallel;
@@ -671,7 +676,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 是否强依赖，1启用、0关闭
      *
-     * @param necessary
+     * @param necessary 是否强依赖，1启用、0关闭
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree necessary(String necessary) {
         this.necessary = necessary;
@@ -682,7 +688,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 依赖偏移量，0当天，-1昨天
      *
-     * @param dayOffset
+     * @param dayOffset 依赖偏移量，0当天，-1昨天
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree dayOffset(String dayOffset) {
         this.dayOffset = dayOffset;
@@ -693,7 +700,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 依赖作业所属系统，G gravity版本、A automation版本,废弃字段
      *
-     * @param dependJobBelong
+     * @param dependJobBelong 依赖作业所属系统，G gravity版本、A automation版本,废弃字段
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree dependJobBelong(String dependJobBelong) {
         this.dependJobBelong = dependJobBelong;
@@ -704,7 +712,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 是否启用，1启用、0关闭
      *
-     * @param enable
+     * @param enable 是否启用，1启用、0关闭
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree enable(String enable) {
         this.enable = enable;
@@ -715,7 +724,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree createTime(String createTime) {
         this.createTime = createTime;
@@ -726,7 +736,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -737,7 +748,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 客户作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名称
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -748,7 +760,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 最后状态
      *
-     * @param lastStatus
+     * @param lastStatus 最后状态
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree lastStatus(String lastStatus) {
         this.lastStatus = lastStatus;
@@ -759,7 +772,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 最后数据日期
      *
-     * @param lastTxDate
+     * @param lastTxDate 最后数据日期
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree lastTxDate(String lastTxDate) {
         this.lastTxDate = lastTxDate;
@@ -770,7 +784,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 计划执行时间
      *
-     * @param planExeTime
+     * @param planExeTime 计划执行时间
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree planExeTime(String planExeTime) {
         this.planExeTime = planExeTime;
@@ -781,7 +796,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 作业表名
      *
-     * @param tableName
+     * @param tableName 作业表名
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree tableName(String tableName) {
         this.tableName = tableName;
@@ -792,7 +808,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set manager作业负责人
      *
-     * @param manager
+     * @param manager manager作业负责人
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree manager(String manager) {
         this.manager = manager;
@@ -803,7 +820,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 作业描述
      *
-     * @param jobDesc
+     * @param jobDesc 作业描述
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -814,7 +832,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 显示信息
      *
-     * @param display
+     * @param display 显示信息
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree display(String display) {
         this.display = display;
@@ -825,7 +844,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 最后开始时间
      *
-     * @param lastStartTime
+     * @param lastStartTime 最后开始时间
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree lastStartTime(String lastStartTime) {
         this.lastStartTime = lastStartTime;
@@ -836,7 +856,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 最后结束时间
      *
-     * @param lastEndTime
+     * @param lastEndTime 最后结束时间
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree lastEndTime(String lastEndTime) {
         this.lastEndTime = lastEndTime;
@@ -847,7 +868,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 是否含有父类
      *
-     * @param parent
+     * @param parent 是否含有父类
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree parent(Boolean parent) {
         this.parent = parent;
@@ -858,7 +880,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
      * set 是否有子类
      *
-     * @param child
+     * @param child 是否有子类
+     * @return GpdpSchedTriggerDependTree
      */
     public GpdpSchedTriggerDependTree child(Boolean child) {
         this.child = child;
@@ -869,7 +892,8 @@ public class GpdpSchedTriggerDependTree  implements java.io.Serializable {
     /**
     * set 依赖父作业清单
     *
-    * @param dependList
+    * @param dependList 依赖父作业清单
+    * @return GpdpSchedTriggerDependTree
     */
     public GpdpSchedTriggerDependTree dependList(List<GpdpSchedTriggerDependTree> dependList) {
         this.dependList = dependList;

@@ -110,7 +110,8 @@ public class TableDelimiterVo  implements java.io.Serializable {
     /**
      * set 分隔符描述（用于前端展示）
      *
-     * @param desc
+     * @param desc 分隔符描述（用于前端展示）
+     * @return TableDelimiterVo
      */
     public TableDelimiterVo desc(String desc) {
         this.desc = desc;
@@ -121,7 +122,8 @@ public class TableDelimiterVo  implements java.io.Serializable {
     /**
      * set 具体的分隔符
      *
-     * @param value
+     * @param value 具体的分隔符
+     * @return TableDelimiterVo
      */
     public TableDelimiterVo value(String value) {
         this.value = value;
@@ -132,7 +134,8 @@ public class TableDelimiterVo  implements java.io.Serializable {
     /**
      * set 具体的分隔符名称（建表时需要给后端传输的值，除自定义分隔符外）
      *
-     * @param type
+     * @param type 具体的分隔符名称（建表时需要给后端传输的值，除自定义分隔符外）
+     * @return TableDelimiterVo
      */
     public TableDelimiterVo type(String type) {
         this.type = type;

@@ -160,7 +160,8 @@ public class SparkJarRunParams  implements java.io.Serializable {
     /**
      * set 主函数路径
      *
-     * @param mainClassPath
+     * @param mainClassPath 主函数路径
+     * @return SparkJarRunParams
      */
     public SparkJarRunParams mainClassPath(String mainClassPath) {
         this.mainClassPath = mainClassPath;
@@ -171,7 +172,8 @@ public class SparkJarRunParams  implements java.io.Serializable {
     /**
      * set 主函数名称
      *
-     * @param mainClassName
+     * @param mainClassName 主函数名称
+     * @return SparkJarRunParams
      */
     public SparkJarRunParams mainClassName(String mainClassName) {
         this.mainClassName = mainClassName;
@@ -182,7 +184,8 @@ public class SparkJarRunParams  implements java.io.Serializable {
     /**
      * set spark版本
      *
-     * @param sparkVersion
+     * @param sparkVersion spark版本
+     * @return SparkJarRunParams
      */
     public SparkJarRunParams sparkVersion(String sparkVersion) {
         this.sparkVersion = sparkVersion;
@@ -193,7 +196,8 @@ public class SparkJarRunParams  implements java.io.Serializable {
     /**
     * set 依赖jar包路径
     *
-    * @param dependJarPathList
+    * @param dependJarPathList 依赖jar包路径
+    * @return SparkJarRunParams
     */
     public SparkJarRunParams dependJarPathList(List<String> dependJarPathList) {
         this.dependJarPathList = dependJarPathList;
@@ -204,7 +208,8 @@ public class SparkJarRunParams  implements java.io.Serializable {
     /**
     * set spark提交参数
     *
-    * @param sparkSubmitConf
+    * @param sparkSubmitConf spark提交参数
+    * @return SparkJarRunParams
     */
     public SparkJarRunParams sparkSubmitConf(List<GpdjmcConfPairStringString> sparkSubmitConf) {
         this.sparkSubmitConf = sparkSubmitConf;

@@ -160,7 +160,8 @@ public class GravityParticleParticleJobJobCompletionInfoResult extends JdcloudRe
     /**
      * set 成功标识，1成功，0失败
      *
-     * @param success
+     * @param success 成功标识，1成功，0失败
+     * @return GravityParticleParticleJobJobCompletionInfoResult
      */
     public GravityParticleParticleJobJobCompletionInfoResult success(Integer success) {
         this.success = success;
@@ -171,7 +172,8 @@ public class GravityParticleParticleJobJobCompletionInfoResult extends JdcloudRe
     /**
      * set 返回结果对象
      *
-     * @param result
+     * @param result 返回结果对象
+     * @return GravityParticleParticleJobJobCompletionInfoResult
      */
     public GravityParticleParticleJobJobCompletionInfoResult result(GpjmJobCompletionResultDTO result) {
         this.result = result;
@@ -182,7 +184,8 @@ public class GravityParticleParticleJobJobCompletionInfoResult extends JdcloudRe
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return GravityParticleParticleJobJobCompletionInfoResult
      */
     public GravityParticleParticleJobJobCompletionInfoResult code(String code) {
         this.code = code;
@@ -193,7 +196,8 @@ public class GravityParticleParticleJobJobCompletionInfoResult extends JdcloudRe
     /**
      * set 返回状态信息
      *
-     * @param msg
+     * @param msg 返回状态信息
+     * @return GravityParticleParticleJobJobCompletionInfoResult
      */
     public GravityParticleParticleJobJobCompletionInfoResult msg(String msg) {
         this.msg = msg;
@@ -204,7 +208,8 @@ public class GravityParticleParticleJobJobCompletionInfoResult extends JdcloudRe
     /**
      * set 返回请求流水号
      *
-     * @param _REQ_SEQ_NO_
+     * @param _REQ_SEQ_NO_ 返回请求流水号
+     * @return GravityParticleParticleJobJobCompletionInfoResult
      */
     public GravityParticleParticleJobJobCompletionInfoResult _REQ_SEQ_NO_(String _REQ_SEQ_NO_) {
         this._REQ_SEQ_NO_ = _REQ_SEQ_NO_;

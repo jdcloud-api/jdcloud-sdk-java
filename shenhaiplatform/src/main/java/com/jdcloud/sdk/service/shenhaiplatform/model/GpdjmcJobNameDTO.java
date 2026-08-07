@@ -158,7 +158,8 @@ public class GpdjmcJobNameDTO  implements java.io.Serializable {
     /**
      * set 登录用户名
      *
-     * @param userName
+     * @param userName 登录用户名
+     * @return GpdjmcJobNameDTO
      */
     public GpdjmcJobNameDTO userName(String userName) {
         this.userName = userName;
@@ -169,7 +170,8 @@ public class GpdjmcJobNameDTO  implements java.io.Serializable {
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GpdjmcJobNameDTO
      */
     public GpdjmcJobNameDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -180,7 +182,8 @@ public class GpdjmcJobNameDTO  implements java.io.Serializable {
     /**
      * set 客户作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名称
+     * @return GpdjmcJobNameDTO
      */
     public GpdjmcJobNameDTO cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -191,7 +194,8 @@ public class GpdjmcJobNameDTO  implements java.io.Serializable {
     /**
      * set 是否启用
      *
-     * @param enable
+     * @param enable 是否启用
+     * @return GpdjmcJobNameDTO
      */
     public GpdjmcJobNameDTO enable(String enable) {
         this.enable = enable;
@@ -202,7 +206,8 @@ public class GpdjmcJobNameDTO  implements java.io.Serializable {
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return GpdjmcJobNameDTO
      */
     public GpdjmcJobNameDTO workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;

@@ -110,7 +110,8 @@ public class UranusAnalysisScriptReq  implements java.io.Serializable {
     /**
      * set 当前作业名称
      *
-     * @param currentJobName
+     * @param currentJobName 当前作业名称
+     * @return UranusAnalysisScriptReq
      */
     public UranusAnalysisScriptReq currentJobName(String currentJobName) {
         this.currentJobName = currentJobName;
@@ -121,7 +122,8 @@ public class UranusAnalysisScriptReq  implements java.io.Serializable {
     /**
      * set 文件业务CODE
      *
-     * @param fileCode
+     * @param fileCode 文件业务CODE
+     * @return UranusAnalysisScriptReq
      */
     public UranusAnalysisScriptReq fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -132,7 +134,8 @@ public class UranusAnalysisScriptReq  implements java.io.Serializable {
     /**
      * set sql内容
      *
-     * @param sqlContent
+     * @param sqlContent sql内容
+     * @return UranusAnalysisScriptReq
      */
     public UranusAnalysisScriptReq sqlContent(String sqlContent) {
         this.sqlContent = sqlContent;

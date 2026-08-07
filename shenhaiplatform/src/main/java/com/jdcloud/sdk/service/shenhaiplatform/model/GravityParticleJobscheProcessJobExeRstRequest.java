@@ -358,7 +358,8 @@ public class GravityParticleJobscheProcessJobExeRstRequest extends JdcloudReques
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleJobscheProcessJobExeRstRequest
      */
     public GravityParticleJobscheProcessJobExeRstRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -369,7 +370,8 @@ public class GravityParticleJobscheProcessJobExeRstRequest extends JdcloudReques
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GravityParticleJobscheProcessJobExeRstRequest
      */
     public GravityParticleJobscheProcessJobExeRstRequest txDate(String txDate) {
         this.txDate = txDate;
@@ -380,7 +382,8 @@ public class GravityParticleJobscheProcessJobExeRstRequest extends JdcloudReques
     /**
      * set 作业执行会话ID
      *
-     * @param sessionId
+     * @param sessionId 作业执行会话ID
+     * @return GravityParticleJobscheProcessJobExeRstRequest
      */
     public GravityParticleJobscheProcessJobExeRstRequest sessionId(Integer sessionId) {
         this.sessionId = sessionId;
@@ -391,7 +394,8 @@ public class GravityParticleJobscheProcessJobExeRstRequest extends JdcloudReques
     /**
      * set 运行服务器名称
      *
-     * @param serverName
+     * @param serverName 运行服务器名称
+     * @return GravityParticleJobscheProcessJobExeRstRequest
      */
     public GravityParticleJobscheProcessJobExeRstRequest serverName(String serverName) {
         this.serverName = serverName;
@@ -402,7 +406,8 @@ public class GravityParticleJobscheProcessJobExeRstRequest extends JdcloudReques
     /**
      * set 作业运行开始时间
      *
-     * @param startTime
+     * @param startTime 作业运行开始时间
+     * @return GravityParticleJobscheProcessJobExeRstRequest
      */
     public GravityParticleJobscheProcessJobExeRstRequest startTime(String startTime) {
         this.startTime = startTime;
@@ -413,7 +418,8 @@ public class GravityParticleJobscheProcessJobExeRstRequest extends JdcloudReques
     /**
      * set 作业运行结束时间
      *
-     * @param endTime
+     * @param endTime 作业运行结束时间
+     * @return GravityParticleJobscheProcessJobExeRstRequest
      */
     public GravityParticleJobscheProcessJobExeRstRequest endTime(String endTime) {
         this.endTime = endTime;
@@ -424,7 +430,8 @@ public class GravityParticleJobscheProcessJobExeRstRequest extends JdcloudReques
     /**
      * set 作业执行状态
      *
-     * @param jobStatus
+     * @param jobStatus 作业执行状态
+     * @return GravityParticleJobscheProcessJobExeRstRequest
      */
     public GravityParticleJobscheProcessJobExeRstRequest jobStatus(String jobStatus) {
         this.jobStatus = jobStatus;
@@ -435,7 +442,8 @@ public class GravityParticleJobscheProcessJobExeRstRequest extends JdcloudReques
     /**
      * set 作业返回码
      *
-     * @param returnCode
+     * @param returnCode 作业返回码
+     * @return GravityParticleJobscheProcessJobExeRstRequest
      */
     public GravityParticleJobscheProcessJobExeRstRequest returnCode(Integer returnCode) {
         this.returnCode = returnCode;
@@ -446,7 +454,8 @@ public class GravityParticleJobscheProcessJobExeRstRequest extends JdcloudReques
     /**
      * set 作业执行影响记录条数
      *
-     * @param affectRows
+     * @param affectRows 作业执行影响记录条数
+     * @return GravityParticleJobscheProcessJobExeRstRequest
      */
     public GravityParticleJobscheProcessJobExeRstRequest affectRows(Long affectRows) {
         this.affectRows = affectRows;
@@ -457,7 +466,8 @@ public class GravityParticleJobscheProcessJobExeRstRequest extends JdcloudReques
     /**
      * set 作业执行警告代码
      *
-     * @param warningCode
+     * @param warningCode 作业执行警告代码
+     * @return GravityParticleJobscheProcessJobExeRstRequest
      */
     public GravityParticleJobscheProcessJobExeRstRequest warningCode(Integer warningCode) {
         this.warningCode = warningCode;
@@ -468,7 +478,8 @@ public class GravityParticleJobscheProcessJobExeRstRequest extends JdcloudReques
     /**
     * set 作业执行集群job app id
     *
-    * @param pids
+    * @param pids 作业执行集群job app id
+    * @return GravityParticleJobscheProcessJobExeRstRequest
     */
     public GravityParticleJobscheProcessJobExeRstRequest pids(List<String> pids) {
         this.pids = pids;
@@ -479,7 +490,8 @@ public class GravityParticleJobscheProcessJobExeRstRequest extends JdcloudReques
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobscheProcessJobExeRstRequest
      */
     public GravityParticleJobscheProcessJobExeRstRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -490,7 +502,8 @@ public class GravityParticleJobscheProcessJobExeRstRequest extends JdcloudReques
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobscheProcessJobExeRstRequest
      */
     public GravityParticleJobscheProcessJobExeRstRequest appName(String appName) {
         this.appName = appName;

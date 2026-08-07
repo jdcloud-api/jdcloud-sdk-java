@@ -139,7 +139,8 @@ public class GpdpJobDependenceReq  implements java.io.Serializable {
     /**
      * set 页面大小
      *
-     * @param pageSize
+     * @param pageSize 页面大小
+     * @return GpdpJobDependenceReq
      */
     public GpdpJobDependenceReq pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -150,7 +151,8 @@ public class GpdpJobDependenceReq  implements java.io.Serializable {
     /**
      * set 页码
      *
-     * @param pageNum
+     * @param pageNum 页码
+     * @return GpdpJobDependenceReq
      */
     public GpdpJobDependenceReq pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -161,7 +163,8 @@ public class GpdpJobDependenceReq  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpdpJobDependenceReq
      */
     public GpdpJobDependenceReq jobName(String jobName) {
         this.jobName = jobName;
@@ -172,7 +175,8 @@ public class GpdpJobDependenceReq  implements java.io.Serializable {
     /**
      * set 作业是否有效
      *
-     * @param jobEnable
+     * @param jobEnable 作业是否有效
+     * @return GpdpJobDependenceReq
      */
     public GpdpJobDependenceReq jobEnable(String jobEnable) {
         this.jobEnable = jobEnable;

@@ -304,7 +304,8 @@ public class WorkspaceListResp  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceListResp
      */
     public WorkspaceListResp id(Integer id) {
         this.id = id;
@@ -315,7 +316,8 @@ public class WorkspaceListResp  implements java.io.Serializable {
     /**
      * set workspaceName
      *
-     * @param workspaceName
+     * @param workspaceName 
+     * @return WorkspaceListResp
      */
     public WorkspaceListResp workspaceName(String workspaceName) {
         this.workspaceName = workspaceName;
@@ -326,7 +328,8 @@ public class WorkspaceListResp  implements java.io.Serializable {
     /**
      * set workspaceDescription
      *
-     * @param workspaceDescription
+     * @param workspaceDescription 
+     * @return WorkspaceListResp
      */
     public WorkspaceListResp workspaceDescription(String workspaceDescription) {
         this.workspaceDescription = workspaceDescription;
@@ -337,7 +340,8 @@ public class WorkspaceListResp  implements java.io.Serializable {
     /**
      * set workspaceModel
      *
-     * @param workspaceModel
+     * @param workspaceModel 
+     * @return WorkspaceListResp
      */
     public WorkspaceListResp workspaceModel(String workspaceModel) {
         this.workspaceModel = workspaceModel;
@@ -348,7 +352,8 @@ public class WorkspaceListResp  implements java.io.Serializable {
     /**
      * set workspaceId
      *
-     * @param workspaceId
+     * @param workspaceId 
+     * @return WorkspaceListResp
      */
     public WorkspaceListResp workspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
@@ -359,7 +364,8 @@ public class WorkspaceListResp  implements java.io.Serializable {
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return WorkspaceListResp
      */
     public WorkspaceListResp workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -370,7 +376,8 @@ public class WorkspaceListResp  implements java.io.Serializable {
     /**
     * set managers
     *
-    * @param managers
+    * @param managers 
+    * @return WorkspaceListResp
     */
     public WorkspaceListResp managers(List<String> managers) {
         this.managers = managers;
@@ -381,7 +388,8 @@ public class WorkspaceListResp  implements java.io.Serializable {
     /**
     * set managerPins
     *
-    * @param managerPins
+    * @param managerPins 
+    * @return WorkspaceListResp
     */
     public WorkspaceListResp managerPins(List<String> managerPins) {
         this.managerPins = managerPins;
@@ -392,7 +400,8 @@ public class WorkspaceListResp  implements java.io.Serializable {
     /**
      * set memberNum
      *
-     * @param memberNum
+     * @param memberNum 
+     * @return WorkspaceListResp
      */
     public WorkspaceListResp memberNum(Integer memberNum) {
         this.memberNum = memberNum;
@@ -403,7 +412,8 @@ public class WorkspaceListResp  implements java.io.Serializable {
     /**
      * set createdDate
      *
-     * @param createdDate
+     * @param createdDate 
+     * @return WorkspaceListResp
      */
     public WorkspaceListResp createdDate(String createdDate) {
         this.createdDate = createdDate;
@@ -414,7 +424,8 @@ public class WorkspaceListResp  implements java.io.Serializable {
     /**
      * set modifiedDate
      *
-     * @param modifiedDate
+     * @param modifiedDate 
+     * @return WorkspaceListResp
      */
     public WorkspaceListResp modifiedDate(String modifiedDate) {
         this.modifiedDate = modifiedDate;

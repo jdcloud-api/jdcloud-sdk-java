@@ -184,7 +184,8 @@ public class UranusWorkFlowInitUploadResult extends JdcloudResult implements jav
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusWorkFlowInitUploadResult
      */
     public UranusWorkFlowInitUploadResult code(String code) {
         this.code = code;
@@ -195,7 +196,8 @@ public class UranusWorkFlowInitUploadResult extends JdcloudResult implements jav
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusWorkFlowInitUploadResult
      */
     public UranusWorkFlowInitUploadResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -206,7 +208,8 @@ public class UranusWorkFlowInitUploadResult extends JdcloudResult implements jav
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusWorkFlowInitUploadResult
      */
     public UranusWorkFlowInitUploadResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -217,7 +220,8 @@ public class UranusWorkFlowInitUploadResult extends JdcloudResult implements jav
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return UranusWorkFlowInitUploadResult
      */
     public UranusWorkFlowInitUploadResult result(UploaderInitRes result) {
         this.result = result;
@@ -228,7 +232,8 @@ public class UranusWorkFlowInitUploadResult extends JdcloudResult implements jav
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusWorkFlowInitUploadResult
      */
     public UranusWorkFlowInitUploadResult subCode(String subCode) {
         this.subCode = subCode;
@@ -239,7 +244,8 @@ public class UranusWorkFlowInitUploadResult extends JdcloudResult implements jav
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusWorkFlowInitUploadResult
      */
     public UranusWorkFlowInitUploadResult successed(Boolean successed) {
         this.successed = successed;

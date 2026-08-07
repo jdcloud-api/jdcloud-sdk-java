@@ -118,7 +118,8 @@ public class UranusTaskInfoPrePublishRequest extends JdcloudRequest implements j
     /**
      * set 任务code
      *
-     * @param taskCode
+     * @param taskCode 任务code
+     * @return UranusTaskInfoPrePublishRequest
      */
     public UranusTaskInfoPrePublishRequest taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -129,7 +130,8 @@ public class UranusTaskInfoPrePublishRequest extends JdcloudRequest implements j
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskInfoPrePublishRequest
      */
     public UranusTaskInfoPrePublishRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusTaskInfoPrePublishRequest extends JdcloudRequest implements j
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskInfoPrePublishRequest
      */
     public UranusTaskInfoPrePublishRequest appName(String appName) {
         this.appName = appName;
