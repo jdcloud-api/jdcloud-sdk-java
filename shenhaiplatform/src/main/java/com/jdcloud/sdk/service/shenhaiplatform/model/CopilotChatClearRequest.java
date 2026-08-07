@@ -118,7 +118,8 @@ public class CopilotChatClearRequest extends JdcloudRequest implements java.io.S
     /**
      * set 对话id
      *
-     * @param chatId
+     * @param chatId 对话id
+     * @return CopilotChatClearRequest
      */
     public CopilotChatClearRequest chatId(String chatId) {
         this.chatId = chatId;
@@ -129,7 +130,8 @@ public class CopilotChatClearRequest extends JdcloudRequest implements java.io.S
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CopilotChatClearRequest
      */
     public CopilotChatClearRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class CopilotChatClearRequest extends JdcloudRequest implements java.io.S
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return CopilotChatClearRequest
      */
     public CopilotChatClearRequest appName(String appName) {
         this.appName = appName;

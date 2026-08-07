@@ -115,7 +115,8 @@ public class DataDownloadParam  implements java.io.Serializable {
     /**
      * set 执行历史ID
      *
-     * @param historyId
+     * @param historyId 执行历史ID
+     * @return DataDownloadParam
      */
     public DataDownloadParam historyId(Integer historyId) {
         this.historyId = historyId;
@@ -126,7 +127,8 @@ public class DataDownloadParam  implements java.io.Serializable {
     /**
      * set 文件名称
      *
-     * @param fileName
+     * @param fileName 文件名称
+     * @return DataDownloadParam
      */
     public DataDownloadParam fileName(String fileName) {
         this.fileName = fileName;
@@ -137,7 +139,8 @@ public class DataDownloadParam  implements java.io.Serializable {
     /**
      * set 字符集: GBK、UTF-8
      *
-     * @param characterSet
+     * @param characterSet 字符集: GBK、UTF-8
+     * @return DataDownloadParam
      */
     public DataDownloadParam characterSet(String characterSet) {
         this.characterSet = characterSet;

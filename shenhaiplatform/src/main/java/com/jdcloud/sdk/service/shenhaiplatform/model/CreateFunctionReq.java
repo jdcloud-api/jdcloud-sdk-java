@@ -280,7 +280,8 @@ public class CreateFunctionReq  implements java.io.Serializable {
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return CreateFunctionReq
      */
     public CreateFunctionReq companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -291,7 +292,8 @@ public class CreateFunctionReq  implements java.io.Serializable {
     /**
      * set 命名空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 命名空间code
+     * @return CreateFunctionReq
      */
     public CreateFunctionReq workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -302,7 +304,8 @@ public class CreateFunctionReq  implements java.io.Serializable {
     /**
      * set 函数名称（支持字母、数字、下划线，不超过50个字符）
      *
-     * @param functionName
+     * @param functionName 函数名称（支持字母、数字、下划线，不超过50个字符）
+     * @return CreateFunctionReq
      */
     public CreateFunctionReq functionName(String functionName) {
         this.functionName = functionName;
@@ -313,7 +316,8 @@ public class CreateFunctionReq  implements java.io.Serializable {
     /**
      * set 分类目录id
      *
-     * @param functionCatalogId
+     * @param functionCatalogId 分类目录id
+     * @return CreateFunctionReq
      */
     public CreateFunctionReq functionCatalogId(Integer functionCatalogId) {
         this.functionCatalogId = functionCatalogId;
@@ -324,7 +328,8 @@ public class CreateFunctionReq  implements java.io.Serializable {
     /**
      * set 函数主类全路径
      *
-     * @param className
+     * @param className 函数主类全路径
+     * @return CreateFunctionReq
      */
     public CreateFunctionReq className(String className) {
         this.className = className;
@@ -335,7 +340,8 @@ public class CreateFunctionReq  implements java.io.Serializable {
     /**
     * set 负责人
     *
-    * @param managers
+    * @param managers 负责人
+    * @return CreateFunctionReq
     */
     public CreateFunctionReq managers(List<String> managers) {
         this.managers = managers;
@@ -346,7 +352,8 @@ public class CreateFunctionReq  implements java.io.Serializable {
     /**
     * set 依赖的资源code（包括资源文件/资源目录）
     *
-    * @param resourceCodes
+    * @param resourceCodes 依赖的资源code（包括资源文件/资源目录）
+    * @return CreateFunctionReq
     */
     public CreateFunctionReq resourceCodes(List<String> resourceCodes) {
         this.resourceCodes = resourceCodes;
@@ -357,7 +364,8 @@ public class CreateFunctionReq  implements java.io.Serializable {
     /**
      * set 函数格式
      *
-     * @param functionFormat
+     * @param functionFormat 函数格式
+     * @return CreateFunctionReq
      */
     public CreateFunctionReq functionFormat(String functionFormat) {
         this.functionFormat = functionFormat;
@@ -368,7 +376,8 @@ public class CreateFunctionReq  implements java.io.Serializable {
     /**
      * set 函数使用说明
      *
-     * @param functionUsage
+     * @param functionUsage 函数使用说明
+     * @return CreateFunctionReq
      */
     public CreateFunctionReq functionUsage(String functionUsage) {
         this.functionUsage = functionUsage;
@@ -379,7 +388,8 @@ public class CreateFunctionReq  implements java.io.Serializable {
     /**
      * set 关联引擎
      *
-     * @param relativeEngine
+     * @param relativeEngine 关联引擎
+     * @return CreateFunctionReq
      */
     public CreateFunctionReq relativeEngine(String relativeEngine) {
         this.relativeEngine = relativeEngine;

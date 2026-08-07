@@ -91,7 +91,8 @@ public class PartitionInfo  implements java.io.Serializable {
     /**
      * set 分区字段
      *
-     * @param partitionKey
+     * @param partitionKey 分区字段
+     * @return PartitionInfo
      */
     public PartitionInfo partitionKey(String partitionKey) {
         this.partitionKey = partitionKey;
@@ -102,7 +103,8 @@ public class PartitionInfo  implements java.io.Serializable {
     /**
      * set 分区值
      *
-     * @param partitionValue
+     * @param partitionValue 分区值
+     * @return PartitionInfo
      */
     public PartitionInfo partitionValue(String partitionValue) {
         this.partitionValue = partitionValue;

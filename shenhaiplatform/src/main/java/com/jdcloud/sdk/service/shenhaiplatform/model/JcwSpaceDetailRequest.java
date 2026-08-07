@@ -231,7 +231,8 @@ public class JcwSpaceDetailRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 分页-页码
      *
-     * @param pageNum
+     * @param pageNum 分页-页码
+     * @return JcwSpaceDetailRequest
      */
     public JcwSpaceDetailRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -242,7 +243,8 @@ public class JcwSpaceDetailRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 分页-每页数量
      *
-     * @param pageSize
+     * @param pageSize 分页-每页数量
+     * @return JcwSpaceDetailRequest
      */
     public JcwSpaceDetailRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -253,7 +255,8 @@ public class JcwSpaceDetailRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 租户编码
      *
-     * @param companyCode
+     * @param companyCode 租户编码
+     * @return JcwSpaceDetailRequest
      */
     public JcwSpaceDetailRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -264,7 +267,8 @@ public class JcwSpaceDetailRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 租户主账号
      *
-     * @param account
+     * @param account 租户主账号
+     * @return JcwSpaceDetailRequest
      */
     public JcwSpaceDetailRequest account(String account) {
         this.account = account;
@@ -275,7 +279,8 @@ public class JcwSpaceDetailRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 数据库名称
      *
-     * @param databaseName
+     * @param databaseName 数据库名称
+     * @return JcwSpaceDetailRequest
      */
     public JcwSpaceDetailRequest databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -286,7 +291,8 @@ public class JcwSpaceDetailRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 查询类型，租户、数据库、表
      *
-     * @param objectType
+     * @param objectType 查询类型，租户、数据库、表
+     * @return JcwSpaceDetailRequest
      */
     public JcwSpaceDetailRequest objectType(String objectType) {
         this.objectType = objectType;
@@ -297,7 +303,8 @@ public class JcwSpaceDetailRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 排序字段，租户/库/表存储空间总使用量、数据库数量、表数量、每日增量、创建时间
      *
-     * @param orderFieldType
+     * @param orderFieldType 排序字段，租户/库/表存储空间总使用量、数据库数量、表数量、每日增量、创建时间
+     * @return JcwSpaceDetailRequest
      */
     public JcwSpaceDetailRequest orderFieldType(String orderFieldType) {
         this.orderFieldType = orderFieldType;
@@ -308,7 +315,8 @@ public class JcwSpaceDetailRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 排序方式，升序、降序
      *
-     * @param orderType
+     * @param orderType 排序方式，升序、降序
+     * @return JcwSpaceDetailRequest
      */
     public JcwSpaceDetailRequest orderType(String orderType) {
         this.orderType = orderType;

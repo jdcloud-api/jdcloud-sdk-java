@@ -110,7 +110,8 @@ public class JtlasDownloadTableColumnsResp  implements java.io.Serializable {
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasDownloadTableColumnsResp
      */
     public JtlasDownloadTableColumnsResp code(String code) {
         this.code = code;
@@ -121,7 +122,8 @@ public class JtlasDownloadTableColumnsResp  implements java.io.Serializable {
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasDownloadTableColumnsResp
      */
     public JtlasDownloadTableColumnsResp message(String message) {
         this.message = message;
@@ -132,7 +134,8 @@ public class JtlasDownloadTableColumnsResp  implements java.io.Serializable {
     /**
      * set 下载DownloadUrl地址
      *
-     * @param result
+     * @param result 下载DownloadUrl地址
+     * @return JtlasDownloadTableColumnsResp
      */
     public JtlasDownloadTableColumnsResp result(String result) {
         this.result = result;

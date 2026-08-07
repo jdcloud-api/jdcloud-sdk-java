@@ -86,7 +86,8 @@ public class GpdjmcConfPairStringString  implements java.io.Serializable {
     /**
      * set key值
      *
-     * @param key
+     * @param key key值
+     * @return GpdjmcConfPairStringString
      */
     public GpdjmcConfPairStringString key(String key) {
         this.key = key;
@@ -97,7 +98,8 @@ public class GpdjmcConfPairStringString  implements java.io.Serializable {
     /**
      * set value值
      *
-     * @param value
+     * @param value value值
+     * @return GpdjmcConfPairStringString
      */
     public GpdjmcConfPairStringString value(String value) {
         this.value = value;

@@ -140,7 +140,8 @@ public class ManageHubGravityKillRequest extends JdcloudRequest implements java.
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return ManageHubGravityKillRequest
      */
     public ManageHubGravityKillRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -151,7 +152,8 @@ public class ManageHubGravityKillRequest extends JdcloudRequest implements java.
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return ManageHubGravityKillRequest
      */
     public ManageHubGravityKillRequest txDate(String txDate) {
         this.txDate = txDate;
@@ -162,7 +164,8 @@ public class ManageHubGravityKillRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubGravityKillRequest
      */
     public ManageHubGravityKillRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -173,7 +176,8 @@ public class ManageHubGravityKillRequest extends JdcloudRequest implements java.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubGravityKillRequest
      */
     public ManageHubGravityKillRequest appName(String appName) {
         this.appName = appName;

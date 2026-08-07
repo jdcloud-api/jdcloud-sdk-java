@@ -140,7 +140,8 @@ public class GravityParticleParticleJobGetMgrJobInfoRequest extends JdcloudReque
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleParticleJobGetMgrJobInfoRequest
      */
     public GravityParticleParticleJobGetMgrJobInfoRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -151,7 +152,8 @@ public class GravityParticleParticleJobGetMgrJobInfoRequest extends JdcloudReque
     /**
      * set 是否可用，1 已上线，2已下线
      *
-     * @param enable
+     * @param enable 是否可用，1 已上线，2已下线
+     * @return GravityParticleParticleJobGetMgrJobInfoRequest
      */
     public GravityParticleParticleJobGetMgrJobInfoRequest enable(String enable) {
         this.enable = enable;
@@ -162,7 +164,8 @@ public class GravityParticleParticleJobGetMgrJobInfoRequest extends JdcloudReque
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleParticleJobGetMgrJobInfoRequest
      */
     public GravityParticleParticleJobGetMgrJobInfoRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -173,7 +176,8 @@ public class GravityParticleParticleJobGetMgrJobInfoRequest extends JdcloudReque
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleParticleJobGetMgrJobInfoRequest
      */
     public GravityParticleParticleJobGetMgrJobInfoRequest appName(String appName) {
         this.appName = appName;

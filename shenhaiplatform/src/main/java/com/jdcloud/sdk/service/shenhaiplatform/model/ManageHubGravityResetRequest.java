@@ -119,7 +119,8 @@ public class ManageHubGravityResetRequest extends JdcloudRequest implements java
     /**
     * set 重置作业参数列表
     *
-    * @param arrayObjectParam
+    * @param arrayObjectParam 重置作业参数列表
+    * @return ManageHubGravityResetRequest
     */
     public ManageHubGravityResetRequest arrayObjectParam(List<JobResetDO> arrayObjectParam) {
         this.arrayObjectParam = arrayObjectParam;
@@ -130,7 +131,8 @@ public class ManageHubGravityResetRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubGravityResetRequest
      */
     public ManageHubGravityResetRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -141,7 +143,8 @@ public class ManageHubGravityResetRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubGravityResetRequest
      */
     public ManageHubGravityResetRequest appName(String appName) {
         this.appName = appName;

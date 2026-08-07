@@ -134,7 +134,8 @@ public class JtlasWarehouseTablePrivilege  implements java.io.Serializable {
     /**
      * set principalName
      *
-     * @param principalName
+     * @param principalName 
+     * @return JtlasWarehouseTablePrivilege
      */
     public JtlasWarehouseTablePrivilege principalName(String principalName) {
         this.principalName = principalName;
@@ -145,7 +146,8 @@ public class JtlasWarehouseTablePrivilege  implements java.io.Serializable {
     /**
      * set privilegeType
      *
-     * @param privilegeType
+     * @param privilegeType 
+     * @return JtlasWarehouseTablePrivilege
      */
     public JtlasWarehouseTablePrivilege privilegeType(String privilegeType) {
         this.privilegeType = privilegeType;
@@ -156,7 +158,8 @@ public class JtlasWarehouseTablePrivilege  implements java.io.Serializable {
     /**
      * set grantor
      *
-     * @param grantor
+     * @param grantor 
+     * @return JtlasWarehouseTablePrivilege
      */
     public JtlasWarehouseTablePrivilege grantor(String grantor) {
         this.grantor = grantor;
@@ -167,7 +170,8 @@ public class JtlasWarehouseTablePrivilege  implements java.io.Serializable {
     /**
      * set createTime
      *
-     * @param createTime
+     * @param createTime 
+     * @return JtlasWarehouseTablePrivilege
      */
     public JtlasWarehouseTablePrivilege createTime(String createTime) {
         this.createTime = createTime;

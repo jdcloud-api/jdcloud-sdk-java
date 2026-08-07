@@ -118,7 +118,8 @@ public class JtlasDownloadTableColumnsRequest extends JdcloudRequest implements 
     /**
      * set 文档ID
      *
-     * @param id
+     * @param id 文档ID
+     * @return JtlasDownloadTableColumnsRequest
      */
     public JtlasDownloadTableColumnsRequest id(String id) {
         this.id = id;
@@ -129,7 +130,8 @@ public class JtlasDownloadTableColumnsRequest extends JdcloudRequest implements 
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasDownloadTableColumnsRequest
      */
     public JtlasDownloadTableColumnsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class JtlasDownloadTableColumnsRequest extends JdcloudRequest implements 
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasDownloadTableColumnsRequest
      */
     public JtlasDownloadTableColumnsRequest appName(String appName) {
         this.appName = appName;

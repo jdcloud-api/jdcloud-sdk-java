@@ -232,7 +232,8 @@ public class UranusTaskNodeRes  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return UranusTaskNodeRes
      */
     public UranusTaskNodeRes id(Integer id) {
         this.id = id;
@@ -243,7 +244,8 @@ public class UranusTaskNodeRes  implements java.io.Serializable {
     /**
      * set 父节点id 根节点为 uranus
      *
-     * @param parentId
+     * @param parentId 父节点id 根节点为 uranus
+     * @return UranusTaskNodeRes
      */
     public UranusTaskNodeRes parentId(Integer parentId) {
         this.parentId = parentId;
@@ -254,7 +256,8 @@ public class UranusTaskNodeRes  implements java.io.Serializable {
     /**
      * set 节点类型 0 不可拖拽，1，可以拖拽
      *
-     * @param nodeType
+     * @param nodeType 节点类型 0 不可拖拽，1，可以拖拽
+     * @return UranusTaskNodeRes
      */
     public UranusTaskNodeRes nodeType(Integer nodeType) {
         this.nodeType = nodeType;
@@ -265,7 +268,8 @@ public class UranusTaskNodeRes  implements java.io.Serializable {
     /**
      * set 节点描述
      *
-     * @param nodeDesc
+     * @param nodeDesc 节点描述
+     * @return UranusTaskNodeRes
      */
     public UranusTaskNodeRes nodeDesc(String nodeDesc) {
         this.nodeDesc = nodeDesc;
@@ -276,7 +280,8 @@ public class UranusTaskNodeRes  implements java.io.Serializable {
     /**
      * set 节点名称
      *
-     * @param nodeName
+     * @param nodeName 节点名称
+     * @return UranusTaskNodeRes
      */
     public UranusTaskNodeRes nodeName(String nodeName) {
         this.nodeName = nodeName;
@@ -287,7 +292,8 @@ public class UranusTaskNodeRes  implements java.io.Serializable {
     /**
      * set 节点名称图标
      *
-     * @param nodeIcon
+     * @param nodeIcon 节点名称图标
+     * @return UranusTaskNodeRes
      */
     public UranusTaskNodeRes nodeIcon(String nodeIcon) {
         this.nodeIcon = nodeIcon;
@@ -298,7 +304,8 @@ public class UranusTaskNodeRes  implements java.io.Serializable {
     /**
      * set 排序字段
      *
-     * @param nodeSort
+     * @param nodeSort 排序字段
+     * @return UranusTaskNodeRes
      */
     public UranusTaskNodeRes nodeSort(Integer nodeSort) {
         this.nodeSort = nodeSort;
@@ -309,7 +316,8 @@ public class UranusTaskNodeRes  implements java.io.Serializable {
     /**
     * set 子节点集合
     *
-    * @param children
+    * @param children 子节点集合
+    * @return UranusTaskNodeRes
     */
     public UranusTaskNodeRes children(List<UranusTaskNodeRes> children) {
         this.children = children;

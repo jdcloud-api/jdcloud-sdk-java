@@ -92,7 +92,8 @@ public class UranusTaskInfoGetTaskCodeRequest extends JdcloudRequest implements 
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskInfoGetTaskCodeRequest
      */
     public UranusTaskInfoGetTaskCodeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class UranusTaskInfoGetTaskCodeRequest extends JdcloudRequest implements 
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskInfoGetTaskCodeRequest
      */
     public UranusTaskInfoGetTaskCodeRequest appName(String appName) {
         this.appName = appName;

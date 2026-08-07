@@ -112,7 +112,8 @@ public class JtlasSearchDetailResult extends JdcloudResult implements java.io.Se
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasSearchDetailResult
      */
     public JtlasSearchDetailResult code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class JtlasSearchDetailResult extends JdcloudResult implements java.io.Se
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasSearchDetailResult
      */
     public JtlasSearchDetailResult message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class JtlasSearchDetailResult extends JdcloudResult implements java.io.Se
     /**
      * set 节点数据
      *
-     * @param result
+     * @param result 节点数据
+     * @return JtlasSearchDetailResult
      */
     public JtlasSearchDetailResult result(JtlasSearchTable result) {
         this.result = result;

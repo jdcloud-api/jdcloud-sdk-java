@@ -86,7 +86,8 @@ public class GpdjmcDelAllReqDTO  implements java.io.Serializable {
     /**
      * set 表名称
      *
-     * @param companyCode
+     * @param companyCode 表名称
+     * @return GpdjmcDelAllReqDTO
      */
     public GpdjmcDelAllReqDTO companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -97,7 +98,8 @@ public class GpdjmcDelAllReqDTO  implements java.io.Serializable {
     /**
      * set 工作空间名称
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间名称
+     * @return GpdjmcDelAllReqDTO
      */
     public GpdjmcDelAllReqDTO workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;

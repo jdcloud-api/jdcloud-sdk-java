@@ -134,7 +134,8 @@ public class UranusParamReq  implements java.io.Serializable {
     /**
      * set 文件Code
      *
-     * @param fileCode
+     * @param fileCode 文件Code
+     * @return UranusParamReq
      */
     public UranusParamReq fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -145,7 +146,8 @@ public class UranusParamReq  implements java.io.Serializable {
     /**
      * set 任务Code
      *
-     * @param taskCode
+     * @param taskCode 任务Code
+     * @return UranusParamReq
      */
     public UranusParamReq taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -156,7 +158,8 @@ public class UranusParamReq  implements java.io.Serializable {
     /**
      * set 文件内容
      *
-     * @param content
+     * @param content 文件内容
+     * @return UranusParamReq
      */
     public UranusParamReq content(String content) {
         this.content = content;
@@ -167,7 +170,8 @@ public class UranusParamReq  implements java.io.Serializable {
     /**
      * set 前端传的系统参数
      *
-     * @param sysType
+     * @param sysType 前端传的系统参数
+     * @return UranusParamReq
      */
     public UranusParamReq sysType(String sysType) {
         this.sysType = sysType;

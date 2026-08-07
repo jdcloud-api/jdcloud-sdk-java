@@ -111,7 +111,8 @@ public class CopilotChatNewResult extends JdcloudResult implements java.io.Seria
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return CopilotChatNewResult
      */
     public CopilotChatNewResult code(String code) {
         this.code = code;
@@ -122,7 +123,8 @@ public class CopilotChatNewResult extends JdcloudResult implements java.io.Seria
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return CopilotChatNewResult
      */
     public CopilotChatNewResult message(String message) {
         this.message = message;
@@ -133,7 +135,8 @@ public class CopilotChatNewResult extends JdcloudResult implements java.io.Seria
     /**
      * set 对话id
      *
-     * @param result
+     * @param result 对话id
+     * @return CopilotChatNewResult
      */
     public CopilotChatNewResult result(String result) {
         this.result = result;

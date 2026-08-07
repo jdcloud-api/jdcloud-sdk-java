@@ -112,7 +112,8 @@ public class UranusPageResultContentSchedTaskInfoHistoryRes  implements java.io.
     /**
      * set totalPage
      *
-     * @param totalPage
+     * @param totalPage 
+     * @return UranusPageResultContentSchedTaskInfoHistoryRes
      */
     public UranusPageResultContentSchedTaskInfoHistoryRes totalPage(Integer totalPage) {
         this.totalPage = totalPage;
@@ -123,7 +124,8 @@ public class UranusPageResultContentSchedTaskInfoHistoryRes  implements java.io.
     /**
      * set totalRecords
      *
-     * @param totalRecords
+     * @param totalRecords 
+     * @return UranusPageResultContentSchedTaskInfoHistoryRes
      */
     public UranusPageResultContentSchedTaskInfoHistoryRes totalRecords(Integer totalRecords) {
         this.totalRecords = totalRecords;
@@ -134,7 +136,8 @@ public class UranusPageResultContentSchedTaskInfoHistoryRes  implements java.io.
     /**
     * set list
     *
-    * @param list
+    * @param list 
+    * @return UranusPageResultContentSchedTaskInfoHistoryRes
     */
     public UranusPageResultContentSchedTaskInfoHistoryRes list(List<UranusSchedTaskInfoHistoryRes> list) {
         this.list = list;

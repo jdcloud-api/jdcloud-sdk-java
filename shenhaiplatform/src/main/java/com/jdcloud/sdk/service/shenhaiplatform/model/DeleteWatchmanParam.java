@@ -62,7 +62,8 @@ public class DeleteWatchmanParam  implements java.io.Serializable {
     /**
      * set 值班人id
      *
-     * @param id
+     * @param id 值班人id
+     * @return DeleteWatchmanParam
      */
     public DeleteWatchmanParam id(Integer id) {
         this.id = id;

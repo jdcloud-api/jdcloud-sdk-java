@@ -113,7 +113,8 @@ public class UranusCatalogInfo  implements java.io.Serializable {
     /**
      * set 目录名称
      *
-     * @param catalogName
+     * @param catalogName 目录名称
+     * @return UranusCatalogInfo
      */
     public UranusCatalogInfo catalogName(String catalogName) {
         this.catalogName = catalogName;
@@ -124,7 +125,8 @@ public class UranusCatalogInfo  implements java.io.Serializable {
     /**
      * set 0：非叶子目录， 1：叶子目录
      *
-     * @param catalogType
+     * @param catalogType 0：非叶子目录， 1：叶子目录
+     * @return UranusCatalogInfo
      */
     public UranusCatalogInfo catalogType(Integer catalogType) {
         this.catalogType = catalogType;
@@ -135,7 +137,8 @@ public class UranusCatalogInfo  implements java.io.Serializable {
     /**
      * set 父目录code
      *
-     * @param parentCode
+     * @param parentCode 父目录code
+     * @return UranusCatalogInfo
      */
     public UranusCatalogInfo parentCode(String parentCode) {
         this.parentCode = parentCode;

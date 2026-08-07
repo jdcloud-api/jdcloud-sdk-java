@@ -118,7 +118,8 @@ public class GravityParticleDubboJobManagerDeleteJobScriptRequest extends Jdclou
     /**
     * set 作业id列表
     *
-    * @param jobIds
+    * @param jobIds 作业id列表
+    * @return GravityParticleDubboJobManagerDeleteJobScriptRequest
     */
     public GravityParticleDubboJobManagerDeleteJobScriptRequest jobIds(List<Integer> jobIds) {
         this.jobIds = jobIds;
@@ -129,7 +130,8 @@ public class GravityParticleDubboJobManagerDeleteJobScriptRequest extends Jdclou
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerDeleteJobScriptRequest
      */
     public GravityParticleDubboJobManagerDeleteJobScriptRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class GravityParticleDubboJobManagerDeleteJobScriptRequest extends Jdclou
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerDeleteJobScriptRequest
      */
     public GravityParticleDubboJobManagerDeleteJobScriptRequest appName(String appName) {
         this.appName = appName;

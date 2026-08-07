@@ -118,7 +118,8 @@ public class UranusResourcePublishRequest extends JdcloudRequest implements java
     /**
      * set 资源的Code
      *
-     * @param resourceCode
+     * @param resourceCode 资源的Code
+     * @return UranusResourcePublishRequest
      */
     public UranusResourcePublishRequest resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -129,7 +130,8 @@ public class UranusResourcePublishRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusResourcePublishRequest
      */
     public UranusResourcePublishRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusResourcePublishRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusResourcePublishRequest
      */
     public UranusResourcePublishRequest appName(String appName) {
         this.appName = appName;

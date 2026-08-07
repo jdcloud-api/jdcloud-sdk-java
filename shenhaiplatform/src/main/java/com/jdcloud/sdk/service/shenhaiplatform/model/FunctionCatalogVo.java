@@ -136,7 +136,8 @@ public class FunctionCatalogVo  implements java.io.Serializable {
     /**
      * set 分类目录名称
      *
-     * @param functionCatalogName
+     * @param functionCatalogName 分类目录名称
+     * @return FunctionCatalogVo
      */
     public FunctionCatalogVo functionCatalogName(String functionCatalogName) {
         this.functionCatalogName = functionCatalogName;
@@ -147,7 +148,8 @@ public class FunctionCatalogVo  implements java.io.Serializable {
     /**
      * set 分类目录id
      *
-     * @param functionCatalogId
+     * @param functionCatalogId 分类目录id
+     * @return FunctionCatalogVo
      */
     public FunctionCatalogVo functionCatalogId(Integer functionCatalogId) {
         this.functionCatalogId = functionCatalogId;
@@ -158,7 +160,8 @@ public class FunctionCatalogVo  implements java.io.Serializable {
     /**
      * set 是否有子目录
      *
-     * @param hasChildren
+     * @param hasChildren 是否有子目录
+     * @return FunctionCatalogVo
      */
     public FunctionCatalogVo hasChildren(Boolean hasChildren) {
         this.hasChildren = hasChildren;
@@ -169,7 +172,8 @@ public class FunctionCatalogVo  implements java.io.Serializable {
     /**
     * set 子目录
     *
-    * @param children
+    * @param children 子目录
+    * @return FunctionCatalogVo
     */
     public FunctionCatalogVo children(List<FunctionCatalogVo> children) {
         this.children = children;

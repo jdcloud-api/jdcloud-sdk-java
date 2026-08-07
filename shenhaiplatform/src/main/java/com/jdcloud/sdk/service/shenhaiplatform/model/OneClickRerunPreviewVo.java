@@ -110,7 +110,8 @@ public class OneClickRerunPreviewVo  implements java.io.Serializable {
     /**
      * set 总实例数量
      *
-     * @param total
+     * @param total 总实例数量
+     * @return OneClickRerunPreviewVo
      */
     public OneClickRerunPreviewVo total(Integer total) {
         this.total = total;
@@ -121,7 +122,8 @@ public class OneClickRerunPreviewVo  implements java.io.Serializable {
     /**
      * set 集成任务实例数量
      *
-     * @param integrationInstanceCount
+     * @param integrationInstanceCount 集成任务实例数量
+     * @return OneClickRerunPreviewVo
      */
     public OneClickRerunPreviewVo integrationInstanceCount(Integer integrationInstanceCount) {
         this.integrationInstanceCount = integrationInstanceCount;
@@ -132,7 +134,8 @@ public class OneClickRerunPreviewVo  implements java.io.Serializable {
     /**
      * set 计算任务实例数量
      *
-     * @param calculateInstanceCount
+     * @param calculateInstanceCount 计算任务实例数量
+     * @return OneClickRerunPreviewVo
      */
     public OneClickRerunPreviewVo calculateInstanceCount(Integer calculateInstanceCount) {
         this.calculateInstanceCount = calculateInstanceCount;

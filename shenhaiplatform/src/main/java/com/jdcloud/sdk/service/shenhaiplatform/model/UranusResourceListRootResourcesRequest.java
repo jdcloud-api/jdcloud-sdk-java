@@ -118,7 +118,8 @@ public class UranusResourceListRootResourcesRequest extends JdcloudRequest imple
     /**
      * set 根目录的resourceCode
      *
-     * @param resourceCode
+     * @param resourceCode 根目录的resourceCode
+     * @return UranusResourceListRootResourcesRequest
      */
     public UranusResourceListRootResourcesRequest resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -129,7 +130,8 @@ public class UranusResourceListRootResourcesRequest extends JdcloudRequest imple
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusResourceListRootResourcesRequest
      */
     public UranusResourceListRootResourcesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusResourceListRootResourcesRequest extends JdcloudRequest imple
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusResourceListRootResourcesRequest
      */
     public UranusResourceListRootResourcesRequest appName(String appName) {
         this.appName = appName;

@@ -470,7 +470,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 作业超时时间，单位分钟
      *
-     * @param runTimeOut
+     * @param runTimeOut 作业超时时间，单位分钟
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO runTimeOut(Integer runTimeOut) {
         this.runTimeOut = runTimeOut;
@@ -481,7 +482,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
      *
-     * @param triggerType
+     * @param triggerType 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -492,7 +494,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 触发时间
      *
-     * @param triggerTime
+     * @param triggerTime 触发时间
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO triggerTime(String triggerTime) {
         this.triggerTime = triggerTime;
@@ -503,7 +506,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 是否重试过
      *
-     * @param flagRetry
+     * @param flagRetry 是否重试过
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO flagRetry(String flagRetry) {
         this.flagRetry = flagRetry;
@@ -514,7 +518,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 重试次数
      *
-     * @param retryCount
+     * @param retryCount 重试次数
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO retryCount(String retryCount) {
         this.retryCount = retryCount;
@@ -525,7 +530,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 间隔/秒
      *
-     * @param retryInterval
+     * @param retryInterval 间隔/秒
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO retryInterval(String retryInterval) {
         this.retryInterval = retryInterval;
@@ -536,7 +542,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
      *
-     * @param cycle
+     * @param cycle 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO cycle(String cycle) {
         this.cycle = cycle;
@@ -547,7 +554,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 周期具体日期
      *
-     * @param sequence
+     * @param sequence 周期具体日期
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO sequence(String sequence) {
         this.sequence = sequence;
@@ -558,7 +566,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 周期间隔
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 周期间隔
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO sequenceInterval(String sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -569,7 +578,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 周期开始时间
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 周期开始时间
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -580,7 +590,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 周期结束时间
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 周期结束时间
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -591,7 +602,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 作业优先级
      *
-     * @param priority
+     * @param priority 作业优先级
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO priority(Integer priority) {
         this.priority = priority;
@@ -602,7 +614,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 作业超时时间，单位分钟
      *
-     * @param timeout
+     * @param timeout 作业超时时间，单位分钟
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO timeout(String timeout) {
         this.timeout = timeout;
@@ -613,7 +626,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 是否可以并行运行
      *
-     * @param flagParallel
+     * @param flagParallel 是否可以并行运行
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO flagParallel(String flagParallel) {
         this.flagParallel = flagParallel;
@@ -624,7 +638,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 是否可以跨周期运行
      *
-     * @param flagAcross
+     * @param flagAcross 是否可以跨周期运行
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO flagAcross(String flagAcross) {
         this.flagAcross = flagAcross;
@@ -635,7 +650,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 是否级联触发，父任务重跑后是否被强制触发重跑
      *
-     * @param flagCascadedTrigger
+     * @param flagCascadedTrigger 是否级联触发，父任务重跑后是否被强制触发重跑
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO flagCascadedTrigger(String flagCascadedTrigger) {
         this.flagCascadedTrigger = flagCascadedTrigger;
@@ -646,7 +662,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 运行周期
      *
-     * @param cycleLabel
+     * @param cycleLabel 运行周期
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO cycleLabel(String cycleLabel) {
         this.cycleLabel = cycleLabel;
@@ -657,7 +674,8 @@ public class GpjmRunRoleInfoDTO  implements java.io.Serializable {
     /**
      * set 触发类型
      *
-     * @param triggerTypeLabel
+     * @param triggerTypeLabel 触发类型
+     * @return GpjmRunRoleInfoDTO
      */
     public GpjmRunRoleInfoDTO triggerTypeLabel(String triggerTypeLabel) {
         this.triggerTypeLabel = triggerTypeLabel;

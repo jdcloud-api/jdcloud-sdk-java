@@ -2190,7 +2190,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set projectId
      *
-     * @param projectId
+     * @param projectId 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest projectId(Integer projectId) {
         this.projectId = projectId;
@@ -2201,7 +2202,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set projectName
      *
-     * @param projectName
+     * @param projectName 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest projectName(String projectName) {
         this.projectName = projectName;
@@ -2212,7 +2214,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set projectNameMatch
      *
-     * @param projectNameMatch
+     * @param projectNameMatch 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest projectNameMatch(Boolean projectNameMatch) {
         this.projectNameMatch = projectNameMatch;
@@ -2223,7 +2226,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set nameKeyWord
      *
-     * @param nameKeyWord
+     * @param nameKeyWord 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest nameKeyWord(String nameKeyWord) {
         this.nameKeyWord = nameKeyWord;
@@ -2234,7 +2238,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set relationType
      *
-     * @param relationType
+     * @param relationType 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest relationType(String relationType) {
         this.relationType = relationType;
@@ -2245,7 +2250,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set modelId
      *
-     * @param modelId
+     * @param modelId 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest modelId(Integer modelId) {
         this.modelId = modelId;
@@ -2256,7 +2262,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set modelName
      *
-     * @param modelName
+     * @param modelName 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest modelName(String modelName) {
         this.modelName = modelName;
@@ -2267,7 +2274,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set modelNameMatch
      *
-     * @param modelNameMatch
+     * @param modelNameMatch 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest modelNameMatch(Boolean modelNameMatch) {
         this.modelNameMatch = modelNameMatch;
@@ -2278,7 +2286,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set gitUrl
      *
-     * @param gitUrl
+     * @param gitUrl 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest gitUrl(String gitUrl) {
         this.gitUrl = gitUrl;
@@ -2289,7 +2298,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set tableId
      *
-     * @param tableId
+     * @param tableId 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest tableId(Integer tableId) {
         this.tableId = tableId;
@@ -2300,7 +2310,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set databaseName
      *
-     * @param databaseName
+     * @param databaseName 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -2311,7 +2322,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set marketId
      *
-     * @param marketId
+     * @param marketId 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest marketId(Integer marketId) {
         this.marketId = marketId;
@@ -2322,7 +2334,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set marketCode
      *
-     * @param marketCode
+     * @param marketCode 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest marketCode(String marketCode) {
         this.marketCode = marketCode;
@@ -2333,7 +2346,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set marketName
      *
-     * @param marketName
+     * @param marketName 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest marketName(String marketName) {
         this.marketName = marketName;
@@ -2344,7 +2358,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set redirectType
      *
-     * @param redirectType
+     * @param redirectType 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest redirectType(String redirectType) {
         this.redirectType = redirectType;
@@ -2355,7 +2370,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set tableName
      *
-     * @param tableName
+     * @param tableName 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest tableName(String tableName) {
         this.tableName = tableName;
@@ -2366,7 +2382,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set tableNameMatch
      *
-     * @param tableNameMatch
+     * @param tableNameMatch 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest tableNameMatch(Boolean tableNameMatch) {
         this.tableNameMatch = tableNameMatch;
@@ -2377,7 +2394,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set jobName
      *
-     * @param jobName
+     * @param jobName 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -2388,7 +2406,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set jobSystem
      *
-     * @param jobSystem
+     * @param jobSystem 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest jobSystem(String jobSystem) {
         this.jobSystem = jobSystem;
@@ -2399,7 +2418,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set triggerType
      *
-     * @param triggerType
+     * @param triggerType 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -2410,7 +2430,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set triggerConfig
      *
-     * @param triggerConfig
+     * @param triggerConfig 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest triggerConfig(GpdjmcTriggerConfigDTO triggerConfig) {
         this.triggerConfig = triggerConfig;
@@ -2421,7 +2442,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set zipCommand
      *
-     * @param zipCommand
+     * @param zipCommand 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest zipCommand(String zipCommand) {
         this.zipCommand = zipCommand;
@@ -2432,7 +2454,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set zipFileName
      *
-     * @param zipFileName
+     * @param zipFileName 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest zipFileName(String zipFileName) {
         this.zipFileName = zipFileName;
@@ -2443,7 +2466,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set zipParams
      *
-     * @param zipParams
+     * @param zipParams 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest zipParams(String zipParams) {
         this.zipParams = zipParams;
@@ -2454,7 +2478,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set dependencies
      *
-     * @param dependencies
+     * @param dependencies 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest dependencies(String dependencies) {
         this.dependencies = dependencies;
@@ -2465,7 +2490,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set manager
      *
-     * @param manager
+     * @param manager 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest manager(String manager) {
         this.manager = manager;
@@ -2476,7 +2502,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set cooperator
      *
-     * @param cooperator
+     * @param cooperator 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest cooperator(String cooperator) {
         this.cooperator = cooperator;
@@ -2487,7 +2514,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set 优先级，l1 - l4
      *
-     * @param priority
+     * @param priority 优先级，l1 - l4
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest priority(String priority) {
         this.priority = priority;
@@ -2498,7 +2526,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set jobDesc
      *
-     * @param jobDesc
+     * @param jobDesc 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -2509,7 +2538,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set scriptType
      *
-     * @param scriptType
+     * @param scriptType 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest scriptType(String scriptType) {
         this.scriptType = scriptType;
@@ -2520,7 +2550,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set runScript
      *
-     * @param runScript
+     * @param runScript 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest runScript(String runScript) {
         this.runScript = runScript;
@@ -2531,7 +2562,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
     * set scriptContent
     *
-    * @param scriptContent
+    * @param scriptContent 
+    * @return GravityParticleDubboJobManagerValidateJobRulesRequest
     */
     public GravityParticleDubboJobManagerValidateJobRulesRequest scriptContent(List<String> scriptContent) {
         this.scriptContent = scriptContent;
@@ -2542,7 +2574,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set cycle
      *
-     * @param cycle
+     * @param cycle 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest cycle(String cycle) {
         this.cycle = cycle;
@@ -2553,7 +2586,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set sequence
      *
-     * @param sequence
+     * @param sequence 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest sequence(String sequence) {
         this.sequence = sequence;
@@ -2564,7 +2598,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set lifeCycle
      *
-     * @param lifeCycle
+     * @param lifeCycle 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest lifeCycle(String lifeCycle) {
         this.lifeCycle = lifeCycle;
@@ -2575,7 +2610,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set retry
      *
-     * @param retry
+     * @param retry 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest retry(Boolean retry) {
         this.retry = retry;
@@ -2586,7 +2622,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set retryCount
      *
-     * @param retryCount
+     * @param retryCount 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest retryCount(Integer retryCount) {
         this.retryCount = retryCount;
@@ -2597,7 +2634,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set retryInterval
      *
-     * @param retryInterval
+     * @param retryInterval 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest retryInterval(Integer retryInterval) {
         this.retryInterval = retryInterval;
@@ -2608,7 +2646,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set notifyOccasion
      *
-     * @param notifyOccasion
+     * @param notifyOccasion 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest notifyOccasion(String notifyOccasion) {
         this.notifyOccasion = notifyOccasion;
@@ -2619,7 +2658,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set notifyTime
      *
-     * @param notifyTime
+     * @param notifyTime 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest notifyTime(String notifyTime) {
         this.notifyTime = notifyTime;
@@ -2630,7 +2670,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set notifyPattern
      *
-     * @param notifyPattern
+     * @param notifyPattern 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest notifyPattern(String notifyPattern) {
         this.notifyPattern = notifyPattern;
@@ -2641,7 +2682,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set notifier
      *
-     * @param notifier
+     * @param notifier 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest notifier(String notifier) {
         this.notifier = notifier;
@@ -2652,7 +2694,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set startRunTime
      *
-     * @param startRunTime
+     * @param startRunTime 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest startRunTime(String startRunTime) {
         this.startRunTime = startRunTime;
@@ -2663,7 +2706,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set endRunTime
      *
-     * @param endRunTime
+     * @param endRunTime 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest endRunTime(String endRunTime) {
         this.endRunTime = endRunTime;
@@ -2674,7 +2718,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set runTime
      *
-     * @param runTime
+     * @param runTime 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest runTime(String runTime) {
         this.runTime = runTime;
@@ -2685,7 +2730,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set runDate
      *
-     * @param runDate
+     * @param runDate 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest runDate(String runDate) {
         this.runDate = runDate;
@@ -2696,7 +2742,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set flowId
      *
-     * @param flowId
+     * @param flowId 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest flowId(String flowId) {
         this.flowId = flowId;
@@ -2707,7 +2754,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set taskId
      *
-     * @param taskId
+     * @param taskId 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest taskId(String taskId) {
         this.taskId = taskId;
@@ -2718,7 +2766,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set userAccount
      *
-     * @param userAccount
+     * @param userAccount 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest userAccount(String userAccount) {
         this.userAccount = userAccount;
@@ -2729,7 +2778,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set userPwd
      *
-     * @param userPwd
+     * @param userPwd 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest userPwd(String userPwd) {
         this.userPwd = userPwd;
@@ -2740,7 +2790,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set markIds
      *
-     * @param markIds
+     * @param markIds 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest markIds(String markIds) {
         this.markIds = markIds;
@@ -2751,7 +2802,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set runTimeOut
      *
-     * @param runTimeOut
+     * @param runTimeOut 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest runTimeOut(Integer runTimeOut) {
         this.runTimeOut = runTimeOut;
@@ -2762,7 +2814,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set scriptSourceType
      *
-     * @param scriptSourceType
+     * @param scriptSourceType 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest scriptSourceType(String scriptSourceType) {
         this.scriptSourceType = scriptSourceType;
@@ -2773,7 +2826,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set scriptTemplate
      *
-     * @param scriptTemplate
+     * @param scriptTemplate 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest scriptTemplate(String scriptTemplate) {
         this.scriptTemplate = scriptTemplate;
@@ -2784,7 +2838,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
     * set dmrTableIds
     *
-    * @param dmrTableIds
+    * @param dmrTableIds 
+    * @return GravityParticleDubboJobManagerValidateJobRulesRequest
     */
     public GravityParticleDubboJobManagerValidateJobRulesRequest dmrTableIds(List<Integer> dmrTableIds) {
         this.dmrTableIds = dmrTableIds;
@@ -2795,7 +2850,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
     * set dmrTables
     *
-    * @param dmrTables
+    * @param dmrTables 
+    * @return GravityParticleDubboJobManagerValidateJobRulesRequest
     */
     public GravityParticleDubboJobManagerValidateJobRulesRequest dmrTables(List<GpdjmcDmrModelDTO> dmrTables) {
         this.dmrTables = dmrTables;
@@ -2806,7 +2862,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
     * set gitFilesList
     *
-    * @param gitFilesList
+    * @param gitFilesList 
+    * @return GravityParticleDubboJobManagerValidateJobRulesRequest
     */
     public GravityParticleDubboJobManagerValidateJobRulesRequest gitFilesList(List<GpdjmcGitFileDTO> gitFilesList) {
         this.gitFilesList = gitFilesList;
@@ -2817,7 +2874,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set isDeploy
      *
-     * @param isDeploy
+     * @param isDeploy 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest isDeploy(Boolean isDeploy) {
         this.isDeploy = isDeploy;
@@ -2828,7 +2886,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set scriptPath
      *
-     * @param scriptPath
+     * @param scriptPath 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest scriptPath(String scriptPath) {
         this.scriptPath = scriptPath;
@@ -2839,7 +2898,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
     * set scriptByte
     *
-    * @param scriptByte
+    * @param scriptByte 
+    * @return GravityParticleDubboJobManagerValidateJobRulesRequest
     */
     public GravityParticleDubboJobManagerValidateJobRulesRequest scriptByte(List<String> scriptByte) {
         this.scriptByte = scriptByte;
@@ -2850,7 +2910,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set fileId
      *
-     * @param fileId
+     * @param fileId 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest fileId(Integer fileId) {
         this.fileId = fileId;
@@ -2861,7 +2922,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set publishDesc
      *
-     * @param publishDesc
+     * @param publishDesc 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest publishDesc(String publishDesc) {
         this.publishDesc = publishDesc;
@@ -2872,7 +2934,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set scriptInfo
      *
-     * @param scriptInfo
+     * @param scriptInfo 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest scriptInfo(String scriptInfo) {
         this.scriptInfo = scriptInfo;
@@ -2883,7 +2946,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set version
      *
-     * @param version
+     * @param version 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest version(Integer version) {
         this.version = version;
@@ -2894,7 +2958,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set channel
      *
-     * @param channel
+     * @param channel 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest channel(String channel) {
         this.channel = channel;
@@ -2905,7 +2970,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set sequenceStartTime
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -2916,7 +2982,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set sequenceEndTime
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -2927,7 +2994,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set sequenceInterval
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest sequenceInterval(Integer sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -2938,7 +3006,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set runParams
      *
-     * @param runParams
+     * @param runParams 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest runParams(String runParams) {
         this.runParams = runParams;
@@ -2949,7 +3018,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set runQueue
      *
-     * @param runQueue
+     * @param runQueue 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest runQueue(String runQueue) {
         this.runQueue = runQueue;
@@ -2960,7 +3030,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set sparkJarRunParams
      *
-     * @param sparkJarRunParams
+     * @param sparkJarRunParams 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest sparkJarRunParams(SparkJarRunParams sparkJarRunParams) {
         this.sparkJarRunParams = sparkJarRunParams;
@@ -2971,7 +3042,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
     * set submitConf
     *
-    * @param submitConf
+    * @param submitConf 
+    * @return GravityParticleDubboJobManagerValidateJobRulesRequest
     */
     public GravityParticleDubboJobManagerValidateJobRulesRequest submitConf(List<GpdjmcConfPairStringString> submitConf) {
         this.submitConf = submitConf;
@@ -2982,7 +3054,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set jobStatus
      *
-     * @param jobStatus
+     * @param jobStatus 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest jobStatus(Integer jobStatus) {
         this.jobStatus = jobStatus;
@@ -2993,7 +3066,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set 计算资源组code
      *
-     * @param resourceCode
+     * @param resourceCode 计算资源组code
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -3004,7 +3078,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -3015,7 +3090,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set 客户作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名称
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -3026,7 +3102,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set fromGravity
      *
-     * @param fromGravity
+     * @param fromGravity 
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest fromGravity(Boolean fromGravity) {
         this.fromGravity = fromGravity;
@@ -3037,7 +3114,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest processType(String processType) {
         this.processType = processType;
@@ -3048,7 +3126,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -3059,7 +3138,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set 窗口期开始时间
      *
-     * @param windowStartTime
+     * @param windowStartTime 窗口期开始时间
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest windowStartTime(String windowStartTime) {
         this.windowStartTime = windowStartTime;
@@ -3070,7 +3150,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set 窗口期结束时间
      *
-     * @param windowEndTime
+     * @param windowEndTime 窗口期结束时间
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest windowEndTime(String windowEndTime) {
         this.windowEndTime = windowEndTime;
@@ -3081,7 +3162,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set 脚本存储路径
      *
-     * @param scriptUrl
+     * @param scriptUrl 脚本存储路径
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest scriptUrl(String scriptUrl) {
         this.scriptUrl = scriptUrl;
@@ -3092,7 +3174,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set 计算资源组名称
      *
-     * @param resourceName
+     * @param resourceName 计算资源组名称
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -3103,7 +3186,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set 数据源ID，在一些要访问外部源的任务中，需要指定该数据源ID
      *
-     * @param datasourceId
+     * @param datasourceId 数据源ID，在一些要访问外部源的任务中，需要指定该数据源ID
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest datasourceId(String datasourceId) {
         this.datasourceId = datasourceId;
@@ -3114,7 +3198,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
     * set 输入参数列表
     *
-    * @param inputParams
+    * @param inputParams 输入参数列表
+    * @return GravityParticleDubboJobManagerValidateJobRulesRequest
     */
     public GravityParticleDubboJobManagerValidateJobRulesRequest inputParams(List<GpdjmcInputParam> inputParams) {
         this.inputParams = inputParams;
@@ -3125,7 +3210,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
     * set 输出参数列表
     *
-    * @param outputParams
+    * @param outputParams 输出参数列表
+    * @return GravityParticleDubboJobManagerValidateJobRulesRequest
     */
     public GravityParticleDubboJobManagerValidateJobRulesRequest outputParams(List<GpdjmcOutputParam> outputParams) {
         this.outputParams = outputParams;
@@ -3136,7 +3222,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set 循环任务参数
      *
-     * @param loopParam
+     * @param loopParam 循环任务参数
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest loopParam(GpdjmcLoopParam loopParam) {
         this.loopParam = loopParam;
@@ -3147,7 +3234,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -3158,7 +3246,8 @@ public class GravityParticleDubboJobManagerValidateJobRulesRequest extends Jdclo
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerValidateJobRulesRequest
      */
     public GravityParticleDubboJobManagerValidateJobRulesRequest appName(String appName) {
         this.appName = appName;

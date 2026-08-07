@@ -118,7 +118,8 @@ public class JtlasWarehouseQueryTablesByDatabaseNameRequest extends JdcloudReque
     /**
      * set projectName
      *
-     * @param database
+     * @param database projectName
+     * @return JtlasWarehouseQueryTablesByDatabaseNameRequest
      */
     public JtlasWarehouseQueryTablesByDatabaseNameRequest database(String database) {
         this.database = database;
@@ -129,7 +130,8 @@ public class JtlasWarehouseQueryTablesByDatabaseNameRequest extends JdcloudReque
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasWarehouseQueryTablesByDatabaseNameRequest
      */
     public JtlasWarehouseQueryTablesByDatabaseNameRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class JtlasWarehouseQueryTablesByDatabaseNameRequest extends JdcloudReque
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasWarehouseQueryTablesByDatabaseNameRequest
      */
     public JtlasWarehouseQueryTablesByDatabaseNameRequest appName(String appName) {
         this.appName = appName;

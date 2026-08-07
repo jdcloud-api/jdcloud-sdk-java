@@ -186,7 +186,8 @@ public class UranusQueryJarManagementTreeResult extends JdcloudResult implements
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusQueryJarManagementTreeResult
      */
     public UranusQueryJarManagementTreeResult code(String code) {
         this.code = code;
@@ -197,7 +198,8 @@ public class UranusQueryJarManagementTreeResult extends JdcloudResult implements
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusQueryJarManagementTreeResult
      */
     public UranusQueryJarManagementTreeResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -208,7 +210,8 @@ public class UranusQueryJarManagementTreeResult extends JdcloudResult implements
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusQueryJarManagementTreeResult
      */
     public UranusQueryJarManagementTreeResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -219,7 +222,8 @@ public class UranusQueryJarManagementTreeResult extends JdcloudResult implements
     /**
     * set Object
     *
-    * @param result
+    * @param result Object
+    * @return UranusQueryJarManagementTreeResult
     */
     public UranusQueryJarManagementTreeResult result(List<UranusSparkJarManagerRes> result) {
         this.result = result;
@@ -230,7 +234,8 @@ public class UranusQueryJarManagementTreeResult extends JdcloudResult implements
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusQueryJarManagementTreeResult
      */
     public UranusQueryJarManagementTreeResult subCode(String subCode) {
         this.subCode = subCode;
@@ -241,7 +246,8 @@ public class UranusQueryJarManagementTreeResult extends JdcloudResult implements
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusQueryJarManagementTreeResult
      */
     public UranusQueryJarManagementTreeResult successed(Boolean successed) {
         this.successed = successed;

@@ -110,7 +110,8 @@ public class LoopParam  implements java.io.Serializable {
     /**
      * set 元素名称
      *
-     * @param elementName
+     * @param elementName 元素名称
+     * @return LoopParam
      */
     public LoopParam elementName(String elementName) {
         this.elementName = elementName;
@@ -121,7 +122,8 @@ public class LoopParam  implements java.io.Serializable {
     /**
      * set 元素取值列表
      *
-     * @param elementValues
+     * @param elementValues 元素取值列表
+     * @return LoopParam
      */
     public LoopParam elementValues(String elementValues) {
         this.elementValues = elementValues;
@@ -132,7 +134,8 @@ public class LoopParam  implements java.io.Serializable {
     /**
      * set 元素取值列表分隔符
      *
-     * @param delimiter
+     * @param delimiter 元素取值列表分隔符
+     * @return LoopParam
      */
     public LoopParam delimiter(TaskLoopElementDelimiterVo delimiter) {
         this.delimiter = delimiter;

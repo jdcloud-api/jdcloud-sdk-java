@@ -140,7 +140,8 @@ public class GravityParticleJobscheSetJobEnableFlagRequest extends JdcloudReques
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleJobscheSetJobEnableFlagRequest
      */
     public GravityParticleJobscheSetJobEnableFlagRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -151,7 +152,8 @@ public class GravityParticleJobscheSetJobEnableFlagRequest extends JdcloudReques
     /**
      * set 是否可用，1 已上线，2已下线
      *
-     * @param enableFlag
+     * @param enableFlag 是否可用，1 已上线，2已下线
+     * @return GravityParticleJobscheSetJobEnableFlagRequest
      */
     public GravityParticleJobscheSetJobEnableFlagRequest enableFlag(String enableFlag) {
         this.enableFlag = enableFlag;
@@ -162,7 +164,8 @@ public class GravityParticleJobscheSetJobEnableFlagRequest extends JdcloudReques
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobscheSetJobEnableFlagRequest
      */
     public GravityParticleJobscheSetJobEnableFlagRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -173,7 +176,8 @@ public class GravityParticleJobscheSetJobEnableFlagRequest extends JdcloudReques
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobscheSetJobEnableFlagRequest
      */
     public GravityParticleJobscheSetJobEnableFlagRequest appName(String appName) {
         this.appName = appName;

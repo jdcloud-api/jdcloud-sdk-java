@@ -496,7 +496,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 显示id
      *
-     * @param viewId
+     * @param viewId 显示id
+     * @return UranusResourceVo
      */
     public UranusResourceVo viewId(String viewId) {
         this.viewId = viewId;
@@ -507,7 +508,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return UranusResourceVo
      */
     public UranusResourceVo companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -518,7 +520,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 命名空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 命名空间code
+     * @return UranusResourceVo
      */
     public UranusResourceVo workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -529,7 +532,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 资源code，资源唯一标识
      *
-     * @param resourceCode
+     * @param resourceCode 资源code，资源唯一标识
+     * @return UranusResourceVo
      */
     public UranusResourceVo resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -540,7 +544,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 资源名称
      *
-     * @param resourceName
+     * @param resourceName 资源名称
+     * @return UranusResourceVo
      */
     public UranusResourceVo resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -551,7 +556,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 原始资源名称（上传的原始文件在本地客户端的文件名称）
      *
-     * @param originalName
+     * @param originalName 原始资源名称（上传的原始文件在本地客户端的文件名称）
+     * @return UranusResourceVo
      */
     public UranusResourceVo originalName(String originalName) {
         this.originalName = originalName;
@@ -562,7 +568,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 资源类型
      *
-     * @param resourceType
+     * @param resourceType 资源类型
+     * @return UranusResourceVo
      */
     public UranusResourceVo resourceType(String resourceType) {
         this.resourceType = resourceType;
@@ -573,7 +580,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 是否有子资源
      *
-     * @param hasChildren
+     * @param hasChildren 是否有子资源
+     * @return UranusResourceVo
      */
     public UranusResourceVo hasChildren(Boolean hasChildren) {
         this.hasChildren = hasChildren;
@@ -584,7 +592,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 显示图标(bigdataos-folder：资源根目录；bigdataos-folder：普通目录；bigdataos-file-jar：jar文件；bigdataos-file：普通文件；bigdataos-file-zip：归档文件)
      *
-     * @param icon
+     * @param icon 显示图标(bigdataos-folder：资源根目录；bigdataos-folder：普通目录；bigdataos-file-jar：jar文件；bigdataos-file：普通文件；bigdataos-file-zip：归档文件)
+     * @return UranusResourceVo
      */
     public UranusResourceVo icon(String icon) {
         this.icon = icon;
@@ -595,7 +604,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 父资源code
      *
-     * @param parentCode
+     * @param parentCode 父资源code
+     * @return UranusResourceVo
      */
     public UranusResourceVo parentCode(String parentCode) {
         this.parentCode = parentCode;
@@ -606,7 +616,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 挂载目录（供shell、python、spark jar访问使用），复制路径时使用该路径
      *
-     * @param mountPath
+     * @param mountPath 挂载目录（供shell、python、spark jar访问使用），复制路径时使用该路径
+     * @return UranusResourceVo
      */
     public UranusResourceVo mountPath(String mountPath) {
         this.mountPath = mountPath;
@@ -617,7 +628,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 该项目空间下的相对路径
      *
-     * @param relativePath
+     * @param relativePath 该项目空间下的相对路径
+     * @return UranusResourceVo
      */
     public UranusResourceVo relativePath(String relativePath) {
         this.relativePath = relativePath;
@@ -628,7 +640,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
     * set 子资源
     *
-    * @param children
+    * @param children 子资源
+    * @return UranusResourceVo
     */
     public UranusResourceVo children(List<UranusResourceVo> children) {
         this.children = children;
@@ -639,7 +652,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
     * set 负责人
     *
-    * @param managers
+    * @param managers 负责人
+    * @return UranusResourceVo
     */
     public UranusResourceVo managers(List<String> managers) {
         this.managers = managers;
@@ -650,7 +664,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 关联引擎
      *
-     * @param relativeEngine
+     * @param relativeEngine 关联引擎
+     * @return UranusResourceVo
      */
     public UranusResourceVo relativeEngine(String relativeEngine) {
         this.relativeEngine = relativeEngine;
@@ -661,7 +676,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 上传文件方式
      *
-     * @param uploadMode
+     * @param uploadMode 上传文件方式
+     * @return UranusResourceVo
      */
     public UranusResourceVo uploadMode(String uploadMode) {
         this.uploadMode = uploadMode;
@@ -672,7 +688,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 环境
      *
-     * @param env
+     * @param env 环境
+     * @return UranusResourceVo
      */
     public UranusResourceVo env(String env) {
         this.env = env;
@@ -683,7 +700,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 发布状态（只有dev环境需要该字段）
      *
-     * @param publishStage
+     * @param publishStage 发布状态（只有dev环境需要该字段）
+     * @return UranusResourceVo
      */
     public UranusResourceVo publishStage(String publishStage) {
         this.publishStage = publishStage;
@@ -694,7 +712,8 @@ public class UranusResourceVo  implements java.io.Serializable {
     /**
      * set 待发布的操作类型
      *
-     * @param operationType
+     * @param operationType 待发布的操作类型
+     * @return UranusResourceVo
      */
     public UranusResourceVo operationType(String operationType) {
         this.operationType = operationType;

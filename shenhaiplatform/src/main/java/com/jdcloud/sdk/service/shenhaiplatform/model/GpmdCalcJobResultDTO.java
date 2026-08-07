@@ -1144,7 +1144,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -1155,7 +1156,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 表id
      *
-     * @param tableId
+     * @param tableId 表id
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO tableId(Integer tableId) {
         this.tableId = tableId;
@@ -1166,7 +1168,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 数据库名称
      *
-     * @param databaseName
+     * @param databaseName 数据库名称
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -1177,7 +1180,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 集市编码
      *
-     * @param marketCode
+     * @param marketCode 集市编码
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO marketCode(String marketCode) {
         this.marketCode = marketCode;
@@ -1188,7 +1192,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 集市名称
      *
-     * @param marketName
+     * @param marketName 集市名称
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO marketName(String marketName) {
         this.marketName = marketName;
@@ -1199,7 +1204,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 模型表名
      *
-     * @param tableName
+     * @param tableName 模型表名
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO tableName(String tableName) {
         this.tableName = tableName;
@@ -1210,7 +1216,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 作业系统
      *
-     * @param jobSystem
+     * @param jobSystem 作业系统
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO jobSystem(String jobSystem) {
         this.jobSystem = jobSystem;
@@ -1221,7 +1228,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 任务类型(触发类型)
      *
-     * @param triggerType
+     * @param triggerType 任务类型(触发类型)
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -1232,7 +1240,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set triggerConfig
      *
-     * @param triggerConfig
+     * @param triggerConfig 
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO triggerConfig(GpmdTriggerConfigDTO triggerConfig) {
         this.triggerConfig = triggerConfig;
@@ -1243,7 +1252,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set zip命令行
      *
-     * @param zipCommand
+     * @param zipCommand zip命令行
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO zipCommand(String zipCommand) {
         this.zipCommand = zipCommand;
@@ -1254,7 +1264,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set zip名称
      *
-     * @param zipFileName
+     * @param zipFileName zip名称
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO zipFileName(String zipFileName) {
         this.zipFileName = zipFileName;
@@ -1265,7 +1276,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set zip参数
      *
-     * @param zipParams
+     * @param zipParams zip参数
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO zipParams(String zipParams) {
         this.zipParams = zipParams;
@@ -1276,7 +1288,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 依赖任务列表
      *
-     * @param dependencies
+     * @param dependencies 依赖任务列表
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO dependencies(String dependencies) {
         this.dependencies = dependencies;
@@ -1287,7 +1300,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO manager(String manager) {
         this.manager = manager;
@@ -1298,7 +1312,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 协作人
      *
-     * @param cooperator
+     * @param cooperator 协作人
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO cooperator(String cooperator) {
         this.cooperator = cooperator;
@@ -1309,7 +1324,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 优先级
      *
-     * @param priority
+     * @param priority 优先级
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO priority(Integer priority) {
         this.priority = priority;
@@ -1320,7 +1336,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 任务描述
      *
-     * @param jobDesc
+     * @param jobDesc 任务描述
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -1331,7 +1348,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 脚本类型
      *
-     * @param scriptType
+     * @param scriptType 脚本类型
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO scriptType(String scriptType) {
         this.scriptType = scriptType;
@@ -1342,7 +1360,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 脚本模板
      *
-     * @param scriptTemplate
+     * @param scriptTemplate 脚本模板
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO scriptTemplate(String scriptTemplate) {
         this.scriptTemplate = scriptTemplate;
@@ -1353,7 +1372,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 运行频率(运行周期)
      *
-     * @param cycle
+     * @param cycle 运行频率(运行周期)
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO cycle(String cycle) {
         this.cycle = cycle;
@@ -1364,7 +1384,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 运行频率(运行周期内序列)
      *
-     * @param sequence
+     * @param sequence 运行频率(运行周期内序列)
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO sequence(String sequence) {
         this.sequence = sequence;
@@ -1375,7 +1396,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 生命周期
      *
-     * @param lifeCycle
+     * @param lifeCycle 生命周期
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO lifeCycle(String lifeCycle) {
         this.lifeCycle = lifeCycle;
@@ -1386,7 +1408,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 失败后是否重试
      *
-     * @param retry
+     * @param retry 失败后是否重试
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO retry(Boolean retry) {
         this.retry = retry;
@@ -1397,7 +1420,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 定时、一次任务（开始运行时间）
      *
-     * @param runTime
+     * @param runTime 定时、一次任务（开始运行时间）
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO runTime(String runTime) {
         this.runTime = runTime;
@@ -1408,7 +1432,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 定时、一次任务（开始运行时间）
      *
-     * @param runDate
+     * @param runDate 定时、一次任务（开始运行时间）
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO runDate(String runDate) {
         this.runDate = runDate;
@@ -1419,7 +1444,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 超时时间
      *
-     * @param runTimeOut
+     * @param runTimeOut 超时时间
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO runTimeOut(Integer runTimeOut) {
         this.runTimeOut = runTimeOut;
@@ -1430,7 +1456,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 脚本来源类型（本地或者git）
      *
-     * @param scriptSourceType
+     * @param scriptSourceType 脚本来源类型（本地或者git）
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO scriptSourceType(String scriptSourceType) {
         this.scriptSourceType = scriptSourceType;
@@ -1441,7 +1468,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 开始运行时间
      *
-     * @param startRunTime
+     * @param startRunTime 开始运行时间
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO startRunTime(String startRunTime) {
         this.startRunTime = startRunTime;
@@ -1452,7 +1480,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 结束运行时间
      *
-     * @param endRunTime
+     * @param endRunTime 结束运行时间
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO endRunTime(String endRunTime) {
         this.endRunTime = endRunTime;
@@ -1463,7 +1492,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 运行脚本
      *
-     * @param runScript
+     * @param runScript 运行脚本
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO runScript(String runScript) {
         this.runScript = runScript;
@@ -1474,7 +1504,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 通知事件
      *
-     * @param notifyOccasion
+     * @param notifyOccasion 通知事件
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO notifyOccasion(String notifyOccasion) {
         this.notifyOccasion = notifyOccasion;
@@ -1485,7 +1516,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 通知时间
      *
-     * @param notifyTime
+     * @param notifyTime 通知时间
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO notifyTime(String notifyTime) {
         this.notifyTime = notifyTime;
@@ -1496,7 +1528,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 通知模式
      *
-     * @param notifyPattern
+     * @param notifyPattern 通知模式
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO notifyPattern(String notifyPattern) {
         this.notifyPattern = notifyPattern;
@@ -1507,7 +1540,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 通知者
      *
-     * @param notifier
+     * @param notifier 通知者
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO notifier(String notifier) {
         this.notifier = notifier;
@@ -1518,7 +1552,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 是否拥有模型
      *
-     * @param hasModel
+     * @param hasModel 是否拥有模型
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO hasModel(Boolean hasModel) {
         this.hasModel = hasModel;
@@ -1529,7 +1564,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
     * set 脚本文件字节数组,是将脚本文件内容转换为byte数组
     *
-    * @param scriptByte
+    * @param scriptByte 脚本文件字节数组,是将脚本文件内容转换为byte数组
+    * @return GpmdCalcJobResultDTO
     */
     public GpmdCalcJobResultDTO scriptByte(List<String> scriptByte) {
         this.scriptByte = scriptByte;
@@ -1540,7 +1576,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 根据版本号，判断是重新发布还是新建，如果新建添加版本号，不是新建，更新历史表作业状态状态
      *
-     * @param version
+     * @param version 根据版本号，判断是重新发布还是新建，如果新建添加版本号，不是新建，更新历史表作业状态状态
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO version(Integer version) {
         this.version = version;
@@ -1551,7 +1588,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 判断是否是运维中心调用编辑接口1，运维中心
      *
-     * @param core
+     * @param core 判断是否是运维中心调用编辑接口1，运维中心
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO core(Integer core) {
         this.core = core;
@@ -1562,7 +1600,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 数据渠道来源：新模型（MODEL），老模型（OLD_MODEL）、集成开发（IDE）、数据管道（PIPE）、数据质量（DQ）、AI(KUAI)
      *
-     * @param channel
+     * @param channel 数据渠道来源：新模型（MODEL），老模型（OLD_MODEL）、集成开发（IDE）、数据管道（PIPE）、数据质量（DQ）、AI(KUAI)
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO channel(String channel) {
         this.channel = channel;
@@ -1573,7 +1612,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 周期开始时间
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 周期开始时间
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -1584,7 +1624,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 周期结束时间
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 周期结束时间
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -1595,7 +1636,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 时间间隔
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 时间间隔
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO sequenceInterval(Integer sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -1606,7 +1648,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 启用状态
      *
-     * @param enable
+     * @param enable 启用状态
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO enable(String enable) {
         this.enable = enable;
@@ -1617,7 +1660,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 脚本运行引擎  枚举值 &quot;TEZ、MR、SPARK&quot;
      *
-     * @param runParams
+     * @param runParams 脚本运行引擎  枚举值 &quot;TEZ、MR、SPARK&quot;
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO runParams(String runParams) {
         this.runParams = runParams;
@@ -1628,7 +1672,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
     * set 提交配置（仅HiveSQL在Spark引擎下支持指定）
     *
-    * @param submitConf
+    * @param submitConf 提交配置（仅HiveSQL在Spark引擎下支持指定）
+    * @return GpmdCalcJobResultDTO
     */
     public GpmdCalcJobResultDTO submitConf(List<GpmdConfPairStringString> submitConf) {
         this.submitConf = submitConf;
@@ -1639,7 +1684,8 @@ public class GpmdCalcJobResultDTO  implements java.io.Serializable {
     /**
      * set 审计日志信息
      *
-     * @param updateInfo
+     * @param updateInfo 审计日志信息
+     * @return GpmdCalcJobResultDTO
      */
     public GpmdCalcJobResultDTO updateInfo(Object updateInfo) {
         this.updateInfo = updateInfo;

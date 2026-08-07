@@ -135,7 +135,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileResult extends Jdclou
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GravityParticleDubboJobManagerVerifyScriptFileResult
      */
     public GravityParticleDubboJobManagerVerifyScriptFileResult success(Integer success) {
         this.success = success;
@@ -146,7 +147,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileResult extends Jdclou
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GravityParticleDubboJobManagerVerifyScriptFileResult
      */
     public GravityParticleDubboJobManagerVerifyScriptFileResult code(String code) {
         this.code = code;
@@ -157,7 +159,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileResult extends Jdclou
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GravityParticleDubboJobManagerVerifyScriptFileResult
      */
     public GravityParticleDubboJobManagerVerifyScriptFileResult msg(String msg) {
         this.msg = msg;
@@ -168,7 +171,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileResult extends Jdclou
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return GravityParticleDubboJobManagerVerifyScriptFileResult
      */
     public GravityParticleDubboJobManagerVerifyScriptFileResult result(Boolean result) {
         this.result = result;

@@ -244,7 +244,8 @@ public class UranusTaskFlowUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 工作流名称
      *
-     * @param flowName
+     * @param flowName 工作流名称
+     * @return UranusTaskFlowUpdateRequest
      */
     public UranusTaskFlowUpdateRequest flowName(String flowName) {
         this.flowName = flowName;
@@ -255,7 +256,8 @@ public class UranusTaskFlowUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 工作流描述
      *
-     * @param flowDesc
+     * @param flowDesc 工作流描述
+     * @return UranusTaskFlowUpdateRequest
      */
     public UranusTaskFlowUpdateRequest flowDesc(String flowDesc) {
         this.flowDesc = flowDesc;
@@ -266,7 +268,8 @@ public class UranusTaskFlowUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 工作流所属目录
      *
-     * @param catalogCode
+     * @param catalogCode 工作流所属目录
+     * @return UranusTaskFlowUpdateRequest
      */
     public UranusTaskFlowUpdateRequest catalogCode(String catalogCode) {
         this.catalogCode = catalogCode;
@@ -277,7 +280,8 @@ public class UranusTaskFlowUpdateRequest extends JdcloudRequest implements java.
     /**
     * set 工作流协同人
     *
-    * @param workers
+    * @param workers 工作流协同人
+    * @return UranusTaskFlowUpdateRequest
     */
     public UranusTaskFlowUpdateRequest workers(List<String> workers) {
         this.workers = workers;
@@ -288,7 +292,8 @@ public class UranusTaskFlowUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 工作流code
      *
-     * @param flowCode
+     * @param flowCode 工作流code
+     * @return UranusTaskFlowUpdateRequest
      */
     public UranusTaskFlowUpdateRequest flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -299,7 +304,8 @@ public class UranusTaskFlowUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return UranusTaskFlowUpdateRequest
      */
     public UranusTaskFlowUpdateRequest manager(String manager) {
         this.manager = manager;
@@ -310,7 +316,8 @@ public class UranusTaskFlowUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskFlowUpdateRequest
      */
     public UranusTaskFlowUpdateRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -321,7 +328,8 @@ public class UranusTaskFlowUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskFlowUpdateRequest
      */
     public UranusTaskFlowUpdateRequest appName(String appName) {
         this.appName = appName;

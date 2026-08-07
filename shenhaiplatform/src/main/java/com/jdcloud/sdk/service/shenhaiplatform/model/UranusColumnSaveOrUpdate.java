@@ -206,7 +206,8 @@ public class UranusColumnSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 序号
      *
-     * @param fieldSort
+     * @param fieldSort 序号
+     * @return UranusColumnSaveOrUpdate
      */
     public UranusColumnSaveOrUpdate fieldSort(Integer fieldSort) {
         this.fieldSort = fieldSort;
@@ -217,7 +218,8 @@ public class UranusColumnSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 字段英文名称
      *
-     * @param fieldEnName
+     * @param fieldEnName 字段英文名称
+     * @return UranusColumnSaveOrUpdate
      */
     public UranusColumnSaveOrUpdate fieldEnName(String fieldEnName) {
         this.fieldEnName = fieldEnName;
@@ -228,7 +230,8 @@ public class UranusColumnSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 字段中文名称
      *
-     * @param fieldCnName
+     * @param fieldCnName 字段中文名称
+     * @return UranusColumnSaveOrUpdate
      */
     public UranusColumnSaveOrUpdate fieldCnName(String fieldCnName) {
         this.fieldCnName = fieldCnName;
@@ -239,7 +242,8 @@ public class UranusColumnSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 字段类型
      *
-     * @param fieldType
+     * @param fieldType 字段类型
+     * @return UranusColumnSaveOrUpdate
      */
     public UranusColumnSaveOrUpdate fieldType(String fieldType) {
         this.fieldType = fieldType;
@@ -250,7 +254,8 @@ public class UranusColumnSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 字段长度 当字段类型为 bigdecimal 类型时配合字段精度一起使用
      *
-     * @param fieldLen
+     * @param fieldLen 字段长度 当字段类型为 bigdecimal 类型时配合字段精度一起使用
+     * @return UranusColumnSaveOrUpdate
      */
     public UranusColumnSaveOrUpdate fieldLen(Integer fieldLen) {
         this.fieldLen = fieldLen;
@@ -261,7 +266,8 @@ public class UranusColumnSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 字段精度
      *
-     * @param filedAccuracy
+     * @param filedAccuracy 字段精度
+     * @return UranusColumnSaveOrUpdate
      */
     public UranusColumnSaveOrUpdate filedAccuracy(Integer filedAccuracy) {
         this.filedAccuracy = filedAccuracy;
@@ -272,7 +278,8 @@ public class UranusColumnSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 是否是分区字段(y/n)
      *
-     * @param isPartition
+     * @param isPartition 是否是分区字段(y/n)
+     * @return UranusColumnSaveOrUpdate
      */
     public UranusColumnSaveOrUpdate isPartition(String isPartition) {
         this.isPartition = isPartition;

@@ -254,7 +254,8 @@ public class ListPublishObjByPageParam  implements java.io.Serializable {
     /**
      * set 页面容量
      *
-     * @param pageSize
+     * @param pageSize 页面容量
+     * @return ListPublishObjByPageParam
      */
     public ListPublishObjByPageParam pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -265,7 +266,8 @@ public class ListPublishObjByPageParam  implements java.io.Serializable {
     /**
      * set 页号
      *
-     * @param pageNum
+     * @param pageNum 页号
+     * @return ListPublishObjByPageParam
      */
     public ListPublishObjByPageParam pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -276,7 +278,8 @@ public class ListPublishObjByPageParam  implements java.io.Serializable {
     /**
      * set 对象ID
      *
-     * @param objUk
+     * @param objUk 对象ID
+     * @return ListPublishObjByPageParam
      */
     public ListPublishObjByPageParam objUk(String objUk) {
         this.objUk = objUk;
@@ -287,7 +290,8 @@ public class ListPublishObjByPageParam  implements java.io.Serializable {
     /**
      * set 对象名称
      *
-     * @param objName
+     * @param objName 对象名称
+     * @return ListPublishObjByPageParam
      */
     public ListPublishObjByPageParam objName(String objName) {
         this.objName = objName;
@@ -298,7 +302,8 @@ public class ListPublishObjByPageParam  implements java.io.Serializable {
     /**
      * set 对象类型编码
      *
-     * @param objTypeCode
+     * @param objTypeCode 对象类型编码
+     * @return ListPublishObjByPageParam
      */
     public ListPublishObjByPageParam objTypeCode(String objTypeCode) {
         this.objTypeCode = objTypeCode;
@@ -309,7 +314,8 @@ public class ListPublishObjByPageParam  implements java.io.Serializable {
     /**
      * set 变更类型编码
      *
-     * @param objChangeTypeCode
+     * @param objChangeTypeCode 变更类型编码
+     * @return ListPublishObjByPageParam
      */
     public ListPublishObjByPageParam objChangeTypeCode(String objChangeTypeCode) {
         this.objChangeTypeCode = objChangeTypeCode;
@@ -320,7 +326,8 @@ public class ListPublishObjByPageParam  implements java.io.Serializable {
     /**
      * set 提交人
      *
-     * @param submitterPin
+     * @param submitterPin 提交人
+     * @return ListPublishObjByPageParam
      */
     public ListPublishObjByPageParam submitterPin(String submitterPin) {
         this.submitterPin = submitterPin;
@@ -331,7 +338,8 @@ public class ListPublishObjByPageParam  implements java.io.Serializable {
     /**
      * set 提交开始时间
      *
-     * @param submitTimeStart
+     * @param submitTimeStart 提交开始时间
+     * @return ListPublishObjByPageParam
      */
     public ListPublishObjByPageParam submitTimeStart(Long submitTimeStart) {
         this.submitTimeStart = submitTimeStart;
@@ -342,7 +350,8 @@ public class ListPublishObjByPageParam  implements java.io.Serializable {
     /**
      * set 提交结束时间
      *
-     * @param submitTimeEnd
+     * @param submitTimeEnd 提交结束时间
+     * @return ListPublishObjByPageParam
      */
     public ListPublishObjByPageParam submitTimeEnd(Long submitTimeEnd) {
         this.submitTimeEnd = submitTimeEnd;

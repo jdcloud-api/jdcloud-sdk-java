@@ -188,7 +188,8 @@ public class UranusQueryListRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 关键字查询
      *
-     * @param keyWord
+     * @param keyWord 关键字查询
+     * @return UranusQueryListRequest
      */
     public UranusQueryListRequest keyWord(String keyWord) {
         this.keyWord = keyWord;
@@ -199,7 +200,8 @@ public class UranusQueryListRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 目录code
      *
-     * @param catalogCode
+     * @param catalogCode 目录code
+     * @return UranusQueryListRequest
      */
     public UranusQueryListRequest catalogCode(String catalogCode) {
         this.catalogCode = catalogCode;
@@ -210,7 +212,8 @@ public class UranusQueryListRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 工作流code
      *
-     * @param flowCode
+     * @param flowCode 工作流code
+     * @return UranusQueryListRequest
      */
     public UranusQueryListRequest flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -221,7 +224,8 @@ public class UranusQueryListRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 查询过滤条件  all 全部、recent 最近使用、join 参数、collection 收藏
      *
-     * @param searchType
+     * @param searchType 查询过滤条件  all 全部、recent 最近使用、join 参数、collection 收藏
+     * @return UranusQueryListRequest
      */
     public UranusQueryListRequest searchType(String searchType) {
         this.searchType = searchType;
@@ -232,7 +236,8 @@ public class UranusQueryListRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusQueryListRequest
      */
     public UranusQueryListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -243,7 +248,8 @@ public class UranusQueryListRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusQueryListRequest
      */
     public UranusQueryListRequest appName(String appName) {
         this.appName = appName;

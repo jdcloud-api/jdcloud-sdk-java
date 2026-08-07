@@ -134,7 +134,8 @@ public class BundleProjectReq  implements java.io.Serializable {
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return BundleProjectReq
      */
     public BundleProjectReq workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -145,7 +146,8 @@ public class BundleProjectReq  implements java.io.Serializable {
     /**
      * set projectCode
      *
-     * @param projectCode
+     * @param projectCode 
+     * @return BundleProjectReq
      */
     public BundleProjectReq projectCode(String projectCode) {
         this.projectCode = projectCode;
@@ -156,7 +158,8 @@ public class BundleProjectReq  implements java.io.Serializable {
     /**
      * set projectName
      *
-     * @param projectName
+     * @param projectName 
+     * @return BundleProjectReq
      */
     public BundleProjectReq projectName(String projectName) {
         this.projectName = projectName;
@@ -167,7 +170,8 @@ public class BundleProjectReq  implements java.io.Serializable {
     /**
      * set env
      *
-     * @param env
+     * @param env 
+     * @return BundleProjectReq
      */
     public BundleProjectReq env(String env) {
         this.env = env;

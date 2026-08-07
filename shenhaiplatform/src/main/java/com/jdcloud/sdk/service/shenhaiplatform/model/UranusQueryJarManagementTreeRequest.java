@@ -118,7 +118,8 @@ public class UranusQueryJarManagementTreeRequest extends JdcloudRequest implemen
     /**
      * set 是否是目录 0 返回全部 1 只返回目录
      *
-     * @param isDir
+     * @param isDir 是否是目录 0 返回全部 1 只返回目录
+     * @return UranusQueryJarManagementTreeRequest
      */
     public UranusQueryJarManagementTreeRequest isDir(Integer isDir) {
         this.isDir = isDir;
@@ -129,7 +130,8 @@ public class UranusQueryJarManagementTreeRequest extends JdcloudRequest implemen
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusQueryJarManagementTreeRequest
      */
     public UranusQueryJarManagementTreeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusQueryJarManagementTreeRequest extends JdcloudRequest implemen
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusQueryJarManagementTreeRequest
      */
     public UranusQueryJarManagementTreeRequest appName(String appName) {
         this.appName = appName;

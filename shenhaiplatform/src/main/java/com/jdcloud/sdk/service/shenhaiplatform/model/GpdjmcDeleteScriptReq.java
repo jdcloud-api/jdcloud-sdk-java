@@ -64,7 +64,8 @@ public class GpdjmcDeleteScriptReq  implements java.io.Serializable {
     /**
     * set 作业id列表
     *
-    * @param jobIds
+    * @param jobIds 作业id列表
+    * @return GpdjmcDeleteScriptReq
     */
     public GpdjmcDeleteScriptReq jobIds(List<Integer> jobIds) {
         this.jobIds = jobIds;

@@ -340,7 +340,8 @@ public class UranusScriptVerifyScriptFileDependRequest extends JdcloudRequest im
     /**
      * set 脚本内容
      *
-     * @param content
+     * @param content 脚本内容
+     * @return UranusScriptVerifyScriptFileDependRequest
      */
     public UranusScriptVerifyScriptFileDependRequest content(String content) {
         this.content = content;
@@ -351,7 +352,8 @@ public class UranusScriptVerifyScriptFileDependRequest extends JdcloudRequest im
     /**
      * set 文件Code
      *
-     * @param fileCode
+     * @param fileCode 文件Code
+     * @return UranusScriptVerifyScriptFileDependRequest
      */
     public UranusScriptVerifyScriptFileDependRequest fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -362,7 +364,8 @@ public class UranusScriptVerifyScriptFileDependRequest extends JdcloudRequest im
     /**
      * set 文件类型
      *
-     * @param fileType
+     * @param fileType 文件类型
+     * @return UranusScriptVerifyScriptFileDependRequest
      */
     public UranusScriptVerifyScriptFileDependRequest fileType(Integer fileType) {
         this.fileType = fileType;
@@ -373,7 +376,8 @@ public class UranusScriptVerifyScriptFileDependRequest extends JdcloudRequest im
     /**
      * set 脚本名称
      *
-     * @param scriptName
+     * @param scriptName 脚本名称
+     * @return UranusScriptVerifyScriptFileDependRequest
      */
     public UranusScriptVerifyScriptFileDependRequest scriptName(String scriptName) {
         this.scriptName = scriptName;
@@ -384,7 +388,8 @@ public class UranusScriptVerifyScriptFileDependRequest extends JdcloudRequest im
     /**
     * set 脚本字节
     *
-    * @param scriptByte
+    * @param scriptByte 脚本字节
+    * @return UranusScriptVerifyScriptFileDependRequest
     */
     public UranusScriptVerifyScriptFileDependRequest scriptByte(List<String> scriptByte) {
         this.scriptByte = scriptByte;
@@ -395,7 +400,8 @@ public class UranusScriptVerifyScriptFileDependRequest extends JdcloudRequest im
     /**
      * set 任务名称
      *
-     * @param jobName
+     * @param jobName 任务名称
+     * @return UranusScriptVerifyScriptFileDependRequest
      */
     public UranusScriptVerifyScriptFileDependRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -406,7 +412,8 @@ public class UranusScriptVerifyScriptFileDependRequest extends JdcloudRequest im
     /**
      * set 依赖任务名称
      *
-     * @param dependencies
+     * @param dependencies 依赖任务名称
+     * @return UranusScriptVerifyScriptFileDependRequest
      */
     public UranusScriptVerifyScriptFileDependRequest dependencies(String dependencies) {
         this.dependencies = dependencies;
@@ -417,7 +424,8 @@ public class UranusScriptVerifyScriptFileDependRequest extends JdcloudRequest im
     /**
      * set 脚本类型
      *
-     * @param scriptType
+     * @param scriptType 脚本类型
+     * @return UranusScriptVerifyScriptFileDependRequest
      */
     public UranusScriptVerifyScriptFileDependRequest scriptType(String scriptType) {
         this.scriptType = scriptType;
@@ -428,7 +436,8 @@ public class UranusScriptVerifyScriptFileDependRequest extends JdcloudRequest im
     /**
      * set 目标表
      *
-     * @param targetTables
+     * @param targetTables 目标表
+     * @return UranusScriptVerifyScriptFileDependRequest
      */
     public UranusScriptVerifyScriptFileDependRequest targetTables(String targetTables) {
         this.targetTables = targetTables;
@@ -439,7 +448,8 @@ public class UranusScriptVerifyScriptFileDependRequest extends JdcloudRequest im
     /**
      * set 是否保存脚本中解析出来的表相关信息
      *
-     * @param saveRelFlag
+     * @param saveRelFlag 是否保存脚本中解析出来的表相关信息
+     * @return UranusScriptVerifyScriptFileDependRequest
      */
     public UranusScriptVerifyScriptFileDependRequest saveRelFlag(String saveRelFlag) {
         this.saveRelFlag = saveRelFlag;
@@ -450,7 +460,8 @@ public class UranusScriptVerifyScriptFileDependRequest extends JdcloudRequest im
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusScriptVerifyScriptFileDependRequest
      */
     public UranusScriptVerifyScriptFileDependRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -461,7 +472,8 @@ public class UranusScriptVerifyScriptFileDependRequest extends JdcloudRequest im
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusScriptVerifyScriptFileDependRequest
      */
     public UranusScriptVerifyScriptFileDependRequest appName(String appName) {
         this.appName = appName;

@@ -88,7 +88,8 @@ public class GpjsScriptExtensionDto  implements java.io.Serializable {
     /**
      * set 脚本类型
      *
-     * @param criptType
+     * @param criptType 脚本类型
+     * @return GpjsScriptExtensionDto
      */
     public GpjsScriptExtensionDto criptType(String criptType) {
         this.criptType = criptType;
@@ -99,7 +100,8 @@ public class GpjsScriptExtensionDto  implements java.io.Serializable {
     /**
     * set 扩展名列表
     *
-    * @param extensions
+    * @param extensions 扩展名列表
+    * @return GpjsScriptExtensionDto
     */
     public GpjsScriptExtensionDto extensions(List<String> extensions) {
         this.extensions = extensions;

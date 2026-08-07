@@ -114,7 +114,8 @@ public class JtlasWarehouseFuzzyQueryTablesByTableNameResult extends JdcloudResu
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasWarehouseFuzzyQueryTablesByTableNameResult
      */
     public JtlasWarehouseFuzzyQueryTablesByTableNameResult code(String code) {
         this.code = code;
@@ -125,7 +126,8 @@ public class JtlasWarehouseFuzzyQueryTablesByTableNameResult extends JdcloudResu
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasWarehouseFuzzyQueryTablesByTableNameResult
      */
     public JtlasWarehouseFuzzyQueryTablesByTableNameResult message(String message) {
         this.message = message;
@@ -136,7 +138,8 @@ public class JtlasWarehouseFuzzyQueryTablesByTableNameResult extends JdcloudResu
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return JtlasWarehouseFuzzyQueryTablesByTableNameResult
     */
     public JtlasWarehouseFuzzyQueryTablesByTableNameResult result(List<JtlasWarehouseTable> result) {
         this.result = result;

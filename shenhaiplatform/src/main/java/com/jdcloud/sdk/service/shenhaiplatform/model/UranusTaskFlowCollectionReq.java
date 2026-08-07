@@ -89,7 +89,8 @@ public class UranusTaskFlowCollectionReq  implements java.io.Serializable {
     /**
      * set 工作流Code
      *
-     * @param flowCode
+     * @param flowCode 工作流Code
+     * @return UranusTaskFlowCollectionReq
      */
     public UranusTaskFlowCollectionReq flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -100,7 +101,8 @@ public class UranusTaskFlowCollectionReq  implements java.io.Serializable {
     /**
      * set 收藏类型不能为空 0 取消收藏 1 收藏
      *
-     * @param collectionType
+     * @param collectionType 收藏类型不能为空 0 取消收藏 1 收藏
+     * @return UranusTaskFlowCollectionReq
      */
     public UranusTaskFlowCollectionReq collectionType(Integer collectionType) {
         this.collectionType = collectionType;

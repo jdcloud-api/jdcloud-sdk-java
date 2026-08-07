@@ -62,7 +62,8 @@ public class GpdjmcJobDeleteDTO  implements java.io.Serializable {
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GpdjmcJobDeleteDTO
      */
     public GpdjmcJobDeleteDTO jobName(String jobName) {
         this.jobName = jobName;

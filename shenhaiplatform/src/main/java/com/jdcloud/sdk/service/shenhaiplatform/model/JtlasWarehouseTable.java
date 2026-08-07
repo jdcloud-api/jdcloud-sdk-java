@@ -568,7 +568,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 表id
      *
-     * @param id
+     * @param id 表id
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable id(String id) {
         this.id = id;
@@ -579,7 +580,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 项目id
      *
-     * @param projectCode
+     * @param projectCode 项目id
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable projectCode(String projectCode) {
         this.projectCode = projectCode;
@@ -590,7 +592,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 数据库名称
      *
-     * @param database
+     * @param database 数据库名称
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable database(String database) {
         this.database = database;
@@ -601,7 +604,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable tableName(String tableName) {
         this.tableName = tableName;
@@ -612,7 +616,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 表别名
      *
-     * @param tableAlias
+     * @param tableAlias 表别名
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable tableAlias(String tableAlias) {
         this.tableAlias = tableAlias;
@@ -623,7 +628,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 表类型：MANAGED_TABLE，EXTERNAL_TABLE
      *
-     * @param tableType
+     * @param tableType 表类型：MANAGED_TABLE，EXTERNAL_TABLE
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable tableType(String tableType) {
         this.tableType = tableType;
@@ -634,7 +640,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 创建人
      *
-     * @param creator
+     * @param creator 创建人
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable creator(String creator) {
         this.creator = creator;
@@ -645,7 +652,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 元数据类型：HIVE，MYSQL
      *
-     * @param metaType
+     * @param metaType 元数据类型：HIVE，MYSQL
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable metaType(String metaType) {
         this.metaType = metaType;
@@ -656,7 +664,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable createTime(String createTime) {
         this.createTime = createTime;
@@ -667,7 +676,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 最后修改时间
      *
-     * @param lastModifyTime
+     * @param lastModifyTime 最后修改时间
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable lastModifyTime(String lastModifyTime) {
         this.lastModifyTime = lastModifyTime;
@@ -678,7 +688,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 表存储路径
      *
-     * @param location
+     * @param location 表存储路径
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable location(String location) {
         this.location = location;
@@ -689,7 +700,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 输入格式
      *
-     * @param inputFormat
+     * @param inputFormat 输入格式
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable inputFormat(String inputFormat) {
         this.inputFormat = inputFormat;
@@ -700,7 +712,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 输出格式
      *
-     * @param outputFormat
+     * @param outputFormat 输出格式
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable outputFormat(String outputFormat) {
         this.outputFormat = outputFormat;
@@ -711,7 +724,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
     * set 用户打标
     *
-    * @param userDefineTags
+    * @param userDefineTags 用户打标
+    * @return JtlasWarehouseTable
     */
     public JtlasWarehouseTable userDefineTags(List<String> userDefineTags) {
         this.userDefineTags = userDefineTags;
@@ -722,7 +736,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
     * set 负责人
     *
-    * @param collectPersons
+    * @param collectPersons 负责人
+    * @return JtlasWarehouseTable
     */
     public JtlasWarehouseTable collectPersons(List<String> collectPersons) {
         this.collectPersons = collectPersons;
@@ -733,7 +748,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 点击数
      *
-     * @param clickCount
+     * @param clickCount 点击数
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable clickCount(Integer clickCount) {
         this.clickCount = clickCount;
@@ -744,7 +760,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 最近一次分区
      *
-     * @param latestPartition
+     * @param latestPartition 最近一次分区
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable latestPartition(JtlasWarehouseTablePartition latestPartition) {
         this.latestPartition = latestPartition;
@@ -755,7 +772,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
     * set columns
     *
-    * @param columns
+    * @param columns 
+    * @return JtlasWarehouseTable
     */
     public JtlasWarehouseTable columns(List<JtlasWarehouseTableColumn> columns) {
         this.columns = columns;
@@ -766,7 +784,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
     * set privileges
     *
-    * @param privileges
+    * @param privileges 
+    * @return JtlasWarehouseTable
     */
     public JtlasWarehouseTable privileges(List<JtlasWarehouseTablePrivilege> privileges) {
         this.privileges = privileges;
@@ -777,7 +796,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
     * set 表信息额外参数
     *
-    * @param params
+    * @param params 表信息额外参数
+    * @return JtlasWarehouseTable
     */
     public JtlasWarehouseTable params(List<JtlasWarehouseTableParam> params) {
         this.params = params;
@@ -788,7 +808,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
     * set 分桶字段
     *
-    * @param bucketCols
+    * @param bucketCols 分桶字段
+    * @return JtlasWarehouseTable
     */
     public JtlasWarehouseTable bucketCols(List<String> bucketCols) {
         this.bucketCols = bucketCols;
@@ -799,7 +820,8 @@ public class JtlasWarehouseTable  implements java.io.Serializable {
     /**
      * set 分桶个数
      *
-     * @param bucketNum
+     * @param bucketNum 分桶个数
+     * @return JtlasWarehouseTable
      */
     public JtlasWarehouseTable bucketNum(Integer bucketNum) {
         this.bucketNum = bucketNum;

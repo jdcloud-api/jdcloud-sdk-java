@@ -184,7 +184,8 @@ public class UranusResultListTaskInfoRes  implements java.io.Serializable {
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusResultListTaskInfoRes
      */
     public UranusResultListTaskInfoRes code(String code) {
         this.code = code;
@@ -195,7 +196,8 @@ public class UranusResultListTaskInfoRes  implements java.io.Serializable {
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusResultListTaskInfoRes
      */
     public UranusResultListTaskInfoRes errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -206,7 +208,8 @@ public class UranusResultListTaskInfoRes  implements java.io.Serializable {
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusResultListTaskInfoRes
      */
     public UranusResultListTaskInfoRes errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -217,7 +220,8 @@ public class UranusResultListTaskInfoRes  implements java.io.Serializable {
     /**
     * set Object
     *
-    * @param result
+    * @param result Object
+    * @return UranusResultListTaskInfoRes
     */
     public UranusResultListTaskInfoRes result(List<UranusTaskInfoRes> result) {
         this.result = result;
@@ -228,7 +232,8 @@ public class UranusResultListTaskInfoRes  implements java.io.Serializable {
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusResultListTaskInfoRes
      */
     public UranusResultListTaskInfoRes subCode(String subCode) {
         this.subCode = subCode;
@@ -239,7 +244,8 @@ public class UranusResultListTaskInfoRes  implements java.io.Serializable {
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusResultListTaskInfoRes
      */
     public UranusResultListTaskInfoRes successed(Boolean successed) {
         this.successed = successed;

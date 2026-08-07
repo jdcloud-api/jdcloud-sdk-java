@@ -93,7 +93,8 @@ public class UranusTaskNodeUpdateStatusListReq  implements java.io.Serializable 
     /**
     * set 任务节点集合
     *
-    * @param taskCodes
+    * @param taskCodes 任务节点集合
+    * @return UranusTaskNodeUpdateStatusListReq
     */
     public UranusTaskNodeUpdateStatusListReq taskCodes(List<String> taskCodes) {
         this.taskCodes = taskCodes;
@@ -104,7 +105,8 @@ public class UranusTaskNodeUpdateStatusListReq  implements java.io.Serializable 
     /**
      * set 任务节点状态
      *
-     * @param status
+     * @param status 任务节点状态
+     * @return UranusTaskNodeUpdateStatusListReq
      */
     public UranusTaskNodeUpdateStatusListReq status(Integer status) {
         this.status = status;

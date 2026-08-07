@@ -62,7 +62,8 @@ public class ChangeWorkspaceStatusReq  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return ChangeWorkspaceStatusReq
      */
     public ChangeWorkspaceStatusReq id(Long id) {
         this.id = id;

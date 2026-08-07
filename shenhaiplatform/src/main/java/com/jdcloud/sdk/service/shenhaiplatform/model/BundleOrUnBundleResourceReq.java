@@ -160,7 +160,8 @@ public class BundleOrUnBundleResourceReq  implements java.io.Serializable {
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return BundleOrUnBundleResourceReq
      */
     public BundleOrUnBundleResourceReq workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -171,7 +172,8 @@ public class BundleOrUnBundleResourceReq  implements java.io.Serializable {
     /**
      * set userPin
      *
-     * @param userPin
+     * @param userPin 
+     * @return BundleOrUnBundleResourceReq
      */
     public BundleOrUnBundleResourceReq userPin(String userPin) {
         this.userPin = userPin;
@@ -182,7 +184,8 @@ public class BundleOrUnBundleResourceReq  implements java.io.Serializable {
     /**
     * set calculateResourceCode
     *
-    * @param calculateResourceCode
+    * @param calculateResourceCode 
+    * @return BundleOrUnBundleResourceReq
     */
     public BundleOrUnBundleResourceReq calculateResourceCode(List<String> calculateResourceCode) {
         this.calculateResourceCode = calculateResourceCode;
@@ -193,7 +196,8 @@ public class BundleOrUnBundleResourceReq  implements java.io.Serializable {
     /**
     * set integrationResourceCode
     *
-    * @param integrationResourceCode
+    * @param integrationResourceCode 
+    * @return BundleOrUnBundleResourceReq
     */
     public BundleOrUnBundleResourceReq integrationResourceCode(List<String> integrationResourceCode) {
         this.integrationResourceCode = integrationResourceCode;
@@ -204,7 +208,8 @@ public class BundleOrUnBundleResourceReq  implements java.io.Serializable {
     /**
      * set bundleResource
      *
-     * @param bundleResource
+     * @param bundleResource 
+     * @return BundleOrUnBundleResourceReq
      */
     public BundleOrUnBundleResourceReq bundleResource(Boolean bundleResource) {
         this.bundleResource = bundleResource;

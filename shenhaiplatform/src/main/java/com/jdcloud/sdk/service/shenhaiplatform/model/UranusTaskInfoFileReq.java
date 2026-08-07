@@ -193,7 +193,8 @@ public class UranusTaskInfoFileReq  implements java.io.Serializable {
     /**
      * set 文件Code
      *
-     * @param fileCode
+     * @param fileCode 文件Code
+     * @return UranusTaskInfoFileReq
      */
     public UranusTaskInfoFileReq fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -204,7 +205,8 @@ public class UranusTaskInfoFileReq  implements java.io.Serializable {
     /**
      * set 文件内容
      *
-     * @param content
+     * @param content 文件内容
+     * @return UranusTaskInfoFileReq
      */
     public UranusTaskInfoFileReq content(String content) {
         this.content = content;
@@ -215,7 +217,8 @@ public class UranusTaskInfoFileReq  implements java.io.Serializable {
     /**
      * set 文件类型 后缀名
      *
-     * @param fileType
+     * @param fileType 文件类型 后缀名
+     * @return UranusTaskInfoFileReq
      */
     public UranusTaskInfoFileReq fileType(String fileType) {
         this.fileType = fileType;
@@ -226,7 +229,8 @@ public class UranusTaskInfoFileReq  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createdTime
+     * @param createdTime 创建时间
+     * @return UranusTaskInfoFileReq
      */
     public UranusTaskInfoFileReq createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -237,7 +241,8 @@ public class UranusTaskInfoFileReq  implements java.io.Serializable {
     /**
      * set 锁状态
      *
-     * @param lockStatus
+     * @param lockStatus 锁状态
+     * @return UranusTaskInfoFileReq
      */
     public UranusTaskInfoFileReq lockStatus(Integer lockStatus) {
         this.lockStatus = lockStatus;
@@ -248,7 +253,8 @@ public class UranusTaskInfoFileReq  implements java.io.Serializable {
     /**
      * set 获得锁的用户
      *
-     * @param lockUser
+     * @param lockUser 获得锁的用户
+     * @return UranusTaskInfoFileReq
      */
     public UranusTaskInfoFileReq lockUser(String lockUser) {
         this.lockUser = lockUser;

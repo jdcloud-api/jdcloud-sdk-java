@@ -134,7 +134,8 @@ public class GpdjmcSchedJobDepDTO  implements java.io.Serializable {
     /**
      * set jobName
      *
-     * @param jobName
+     * @param jobName 
+     * @return GpdjmcSchedJobDepDTO
      */
     public GpdjmcSchedJobDepDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -145,7 +146,8 @@ public class GpdjmcSchedJobDepDTO  implements java.io.Serializable {
     /**
      * set flagParallel
      *
-     * @param flagParallel
+     * @param flagParallel 
+     * @return GpdjmcSchedJobDepDTO
      */
     public GpdjmcSchedJobDepDTO flagParallel(String flagParallel) {
         this.flagParallel = flagParallel;
@@ -156,7 +158,8 @@ public class GpdjmcSchedJobDepDTO  implements java.io.Serializable {
     /**
      * set necessary
      *
-     * @param necessary
+     * @param necessary 
+     * @return GpdjmcSchedJobDepDTO
      */
     public GpdjmcSchedJobDepDTO necessary(String necessary) {
         this.necessary = necessary;
@@ -167,7 +170,8 @@ public class GpdjmcSchedJobDepDTO  implements java.io.Serializable {
     /**
      * set cycle
      *
-     * @param cycle
+     * @param cycle 
+     * @return GpdjmcSchedJobDepDTO
      */
     public GpdjmcSchedJobDepDTO cycle(String cycle) {
         this.cycle = cycle;

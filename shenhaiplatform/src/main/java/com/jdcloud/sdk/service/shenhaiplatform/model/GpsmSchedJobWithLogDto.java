@@ -1214,7 +1214,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto jobName(String jobName) {
         this.jobName = jobName;
@@ -1225,7 +1226,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 客户作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名称
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -1236,7 +1238,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -1247,7 +1250,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -1258,7 +1262,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 计算资源组code
      *
-     * @param resourceCode
+     * @param resourceCode 计算资源组code
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -1269,7 +1274,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 作业描述
      *
-     * @param jobDesc
+     * @param jobDesc 作业描述
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -1280,7 +1286,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 最后一次运行状态，Pending、Ready、Running、Done、Failed、Clean
      *
-     * @param lastStatus
+     * @param lastStatus 最后一次运行状态，Pending、Ready、Running、Done、Failed、Clean
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto lastStatus(String lastStatus) {
         this.lastStatus = lastStatus;
@@ -1291,7 +1298,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 最后一次执行日期
      *
-     * @param lastTxDate
+     * @param lastTxDate 最后一次执行日期
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto lastTxDate(String lastTxDate) {
         this.lastTxDate = lastTxDate;
@@ -1302,7 +1310,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 最后一次运行开始时间
      *
-     * @param lastStartTime
+     * @param lastStartTime 最后一次运行开始时间
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto lastStartTime(String lastStartTime) {
         this.lastStartTime = lastStartTime;
@@ -1313,7 +1322,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 最后一次运行结束时间
      *
-     * @param lastEndTime
+     * @param lastEndTime 最后一次运行结束时间
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto lastEndTime(String lastEndTime) {
         this.lastEndTime = lastEndTime;
@@ -1324,7 +1334,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 最后一次运行服务器
      *
-     * @param lastServer
+     * @param lastServer 最后一次运行服务器
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto lastServer(String lastServer) {
         this.lastServer = lastServer;
@@ -1335,7 +1346,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set Session ID
      *
-     * @param lastSessionid
+     * @param lastSessionid Session ID
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto lastSessionid(Integer lastSessionid) {
         this.lastSessionid = lastSessionid;
@@ -1346,7 +1358,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 最后返回编码
      *
-     * @param lastReturnCode
+     * @param lastReturnCode 最后返回编码
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto lastReturnCode(Integer lastReturnCode) {
         this.lastReturnCode = lastReturnCode;
@@ -1357,7 +1370,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 当前作业状态信息
      *
-     * @param currentStatusMsg
+     * @param currentStatusMsg 当前作业状态信息
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto currentStatusMsg(String currentStatusMsg) {
         this.currentStatusMsg = currentStatusMsg;
@@ -1368,7 +1382,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
      *
-     * @param triggerType
+     * @param triggerType 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -1379,7 +1394,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
      *
-     * @param cycle
+     * @param cycle 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto cycle(String cycle) {
         this.cycle = cycle;
@@ -1390,7 +1406,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 周期具体日期
      *
-     * @param sequence
+     * @param sequence 周期具体日期
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto sequence(String sequence) {
         this.sequence = sequence;
@@ -1401,7 +1418,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set T+N，偏移量
      *
-     * @param txDateOffset
+     * @param txDateOffset T+N，偏移量
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto txDateOffset(Integer txDateOffset) {
         this.txDateOffset = txDateOffset;
@@ -1412,7 +1430,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 作业优先级，数字越小优先级越高
      *
-     * @param priority
+     * @param priority 作业优先级，数字越小优先级越高
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto priority(Integer priority) {
         this.priority = priority;
@@ -1423,7 +1442,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 作业超时时间，单位分钟
      *
-     * @param timeout
+     * @param timeout 作业超时时间，单位分钟
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto timeout(Integer timeout) {
         this.timeout = timeout;
@@ -1434,7 +1454,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 窗口期开始时间
      *
-     * @param windowStartTime
+     * @param windowStartTime 窗口期开始时间
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto windowStartTime(String windowStartTime) {
         this.windowStartTime = windowStartTime;
@@ -1445,7 +1466,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 窗口期结束时间
      *
-     * @param windowEndTime
+     * @param windowEndTime 窗口期结束时间
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto windowEndTime(String windowEndTime) {
         this.windowEndTime = windowEndTime;
@@ -1456,7 +1478,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 失败后次日是否自动运行，1是、0否
      *
-     * @param morrowAutoExec
+     * @param morrowAutoExec 失败后次日是否自动运行，1是、0否
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto morrowAutoExec(String morrowAutoExec) {
         this.morrowAutoExec = morrowAutoExec;
@@ -1467,7 +1490,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 抽空之后的处理 0 无操作 1 作业失败 2发出警告
      *
-     * @param dataZeroKillEnable
+     * @param dataZeroKillEnable 抽空之后的处理 0 无操作 1 作业失败 2发出警告
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto dataZeroKillEnable(Integer dataZeroKillEnable) {
         this.dataZeroKillEnable = dataZeroKillEnable;
@@ -1478,7 +1502,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 重试次数
      *
-     * @param retryCount
+     * @param retryCount 重试次数
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto retryCount(Integer retryCount) {
         this.retryCount = retryCount;
@@ -1489,7 +1514,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 间隔/秒
      *
-     * @param retryInterval
+     * @param retryInterval 间隔/秒
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto retryInterval(Integer retryInterval) {
         this.retryInterval = retryInterval;
@@ -1500,7 +1526,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 当期已经跑成功过，是否可以再跑，1启用、0关闭
      *
-     * @param flagAgain
+     * @param flagAgain 当期已经跑成功过，是否可以再跑，1启用、0关闭
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto flagAgain(String flagAgain) {
         this.flagAgain = flagAgain;
@@ -1511,7 +1538,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 是否可以跨周期跑，1启用、0关闭
      *
-     * @param flagAcross
+     * @param flagAcross 是否可以跨周期跑，1启用、0关闭
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto flagAcross(String flagAcross) {
         this.flagAcross = flagAcross;
@@ -1522,7 +1550,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 是否可以自身并行，1启用、0关闭
      *
-     * @param flagParallel
+     * @param flagParallel 是否可以自身并行，1启用、0关闭
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto flagParallel(String flagParallel) {
         this.flagParallel = flagParallel;
@@ -1533,7 +1562,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 是否级联触发，父任务重跑后是否被强制触发重跑，1是、0否
      *
-     * @param flagCascadedTrigger
+     * @param flagCascadedTrigger 是否级联触发，父任务重跑后是否被强制触发重跑，1是、0否
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto flagCascadedTrigger(String flagCascadedTrigger) {
         this.flagCascadedTrigger = flagCascadedTrigger;
@@ -1544,7 +1574,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 需要的运行环境
      *
-     * @param requiredRunEnv
+     * @param requiredRunEnv 需要的运行环境
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto requiredRunEnv(String requiredRunEnv) {
         this.requiredRunEnv = requiredRunEnv;
@@ -1555,7 +1586,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 运行脚本
      *
-     * @param runScript
+     * @param runScript 运行脚本
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto runScript(String runScript) {
         this.runScript = runScript;
@@ -1566,7 +1598,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 是否启用，0未上线、1已上线、2已下线
      *
-     * @param enable
+     * @param enable 是否启用，0未上线、1已上线、2已下线
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto enable(String enable) {
         this.enable = enable;
@@ -1577,7 +1610,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 负责人，不超过10个
      *
-     * @param manager
+     * @param manager 负责人，不超过10个
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto manager(String manager) {
         this.manager = manager;
@@ -1588,7 +1622,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 共享人，不超过10个
      *
-     * @param shareUser
+     * @param shareUser 共享人，不超过10个
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto shareUser(String shareUser) {
         this.shareUser = shareUser;
@@ -1599,7 +1634,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 失效时间
      *
-     * @param expireTime
+     * @param expireTime 失效时间
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto expireTime(String expireTime) {
         this.expireTime = expireTime;
@@ -1610,7 +1646,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set zip命令行
      *
-     * @param commands
+     * @param commands zip命令行
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto commands(String commands) {
         this.commands = commands;
@@ -1621,7 +1658,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 创建人
      *
-     * @param createUser
+     * @param createUser 创建人
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto createUser(String createUser) {
         this.createUser = createUser;
@@ -1632,7 +1670,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto createTime(String createTime) {
         this.createTime = createTime;
@@ -1643,7 +1682,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -1654,7 +1694,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 实时结点名称
      *
-     * @param nodeName
+     * @param nodeName 实时结点名称
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto nodeName(String nodeName) {
         this.nodeName = nodeName;
@@ -1665,7 +1706,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 实时主题
      *
-     * @param topic
+     * @param topic 实时主题
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto topic(String topic) {
         this.topic = topic;
@@ -1676,7 +1718,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 作业执行方式  0离线 1双写 2实时
      *
-     * @param jobRunWay
+     * @param jobRunWay 作业执行方式  0离线 1双写 2实时
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto jobRunWay(String jobRunWay) {
         this.jobRunWay = jobRunWay;
@@ -1687,7 +1730,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 所属系统
      *
-     * @param belongSys
+     * @param belongSys 所属系统
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto belongSys(String belongSys) {
         this.belongSys = belongSys;
@@ -1698,7 +1742,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 主从同步延迟处理方式。0:警告无处理，1:作业延迟启动
      *
-     * @param msDelayDealWay
+     * @param msDelayDealWay 主从同步延迟处理方式。0:警告无处理，1:作业延迟启动
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto msDelayDealWay(String msDelayDealWay) {
         this.msDelayDealWay = msDelayDealWay;
@@ -1709,7 +1754,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 周期开始时间(适用小时分钟)
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 周期开始时间(适用小时分钟)
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -1720,7 +1766,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 周期结束时间(适用小时分钟)
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 周期结束时间(适用小时分钟)
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -1731,7 +1778,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 周期间隔(适用小时分钟，当周期为小时，含义为间隔小时数，当周期为分钟，含义为间隔分钟数)
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 周期间隔(适用小时分钟，当周期为小时，含义为间隔小时数，当周期为分钟，含义为间隔分钟数)
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto sequenceInterval(Integer sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -1742,7 +1790,8 @@ public class GpsmSchedJobWithLogDto  implements java.io.Serializable {
     /**
      * set 作业运行参数
      *
-     * @param runParams
+     * @param runParams 作业运行参数
+     * @return GpsmSchedJobWithLogDto
      */
     public GpsmSchedJobWithLogDto runParams(String runParams) {
         this.runParams = runParams;

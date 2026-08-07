@@ -112,7 +112,8 @@ public class ManageHubGravityJobPropertyResult extends JdcloudResult implements 
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return ManageHubGravityJobPropertyResult
      */
     public ManageHubGravityJobPropertyResult code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class ManageHubGravityJobPropertyResult extends JdcloudResult implements 
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return ManageHubGravityJobPropertyResult
      */
     public ManageHubGravityJobPropertyResult message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class ManageHubGravityJobPropertyResult extends JdcloudResult implements 
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return ManageHubGravityJobPropertyResult
      */
     public ManageHubGravityJobPropertyResult result(JobPropertyVo result) {
         this.result = result;

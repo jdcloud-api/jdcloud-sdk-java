@@ -118,7 +118,8 @@ public class GravityParticleDubboJobManagerGetJobScriptRequest extends JdcloudRe
     /**
      * set jobId
      *
-     * @param jobId
+     * @param jobId 
+     * @return GravityParticleDubboJobManagerGetJobScriptRequest
      */
     public GravityParticleDubboJobManagerGetJobScriptRequest jobId(Integer jobId) {
         this.jobId = jobId;
@@ -129,7 +130,8 @@ public class GravityParticleDubboJobManagerGetJobScriptRequest extends JdcloudRe
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerGetJobScriptRequest
      */
     public GravityParticleDubboJobManagerGetJobScriptRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class GravityParticleDubboJobManagerGetJobScriptRequest extends JdcloudRe
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerGetJobScriptRequest
      */
     public GravityParticleDubboJobManagerGetJobScriptRequest appName(String appName) {
         this.appName = appName;

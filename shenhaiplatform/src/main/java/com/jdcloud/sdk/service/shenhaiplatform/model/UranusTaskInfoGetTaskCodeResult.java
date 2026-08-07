@@ -183,7 +183,8 @@ public class UranusTaskInfoGetTaskCodeResult extends JdcloudResult implements ja
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusTaskInfoGetTaskCodeResult
      */
     public UranusTaskInfoGetTaskCodeResult code(String code) {
         this.code = code;
@@ -194,7 +195,8 @@ public class UranusTaskInfoGetTaskCodeResult extends JdcloudResult implements ja
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusTaskInfoGetTaskCodeResult
      */
     public UranusTaskInfoGetTaskCodeResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -205,7 +207,8 @@ public class UranusTaskInfoGetTaskCodeResult extends JdcloudResult implements ja
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusTaskInfoGetTaskCodeResult
      */
     public UranusTaskInfoGetTaskCodeResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -216,7 +219,8 @@ public class UranusTaskInfoGetTaskCodeResult extends JdcloudResult implements ja
     /**
      * set Object
      *
-     * @param result
+     * @param result Object
+     * @return UranusTaskInfoGetTaskCodeResult
      */
     public UranusTaskInfoGetTaskCodeResult result(String result) {
         this.result = result;
@@ -227,7 +231,8 @@ public class UranusTaskInfoGetTaskCodeResult extends JdcloudResult implements ja
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusTaskInfoGetTaskCodeResult
      */
     public UranusTaskInfoGetTaskCodeResult subCode(String subCode) {
         this.subCode = subCode;
@@ -238,7 +243,8 @@ public class UranusTaskInfoGetTaskCodeResult extends JdcloudResult implements ja
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusTaskInfoGetTaskCodeResult
      */
     public UranusTaskInfoGetTaskCodeResult successed(Boolean successed) {
         this.successed = successed;

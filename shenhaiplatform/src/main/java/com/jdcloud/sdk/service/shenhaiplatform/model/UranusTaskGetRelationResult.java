@@ -184,7 +184,8 @@ public class UranusTaskGetRelationResult extends JdcloudResult implements java.i
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusTaskGetRelationResult
      */
     public UranusTaskGetRelationResult code(String code) {
         this.code = code;
@@ -195,7 +196,8 @@ public class UranusTaskGetRelationResult extends JdcloudResult implements java.i
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusTaskGetRelationResult
      */
     public UranusTaskGetRelationResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -206,7 +208,8 @@ public class UranusTaskGetRelationResult extends JdcloudResult implements java.i
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusTaskGetRelationResult
      */
     public UranusTaskGetRelationResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -217,7 +220,8 @@ public class UranusTaskGetRelationResult extends JdcloudResult implements java.i
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return UranusTaskGetRelationResult
      */
     public UranusTaskGetRelationResult result(UranusTaskNodeRSaveReq result) {
         this.result = result;
@@ -228,7 +232,8 @@ public class UranusTaskGetRelationResult extends JdcloudResult implements java.i
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusTaskGetRelationResult
      */
     public UranusTaskGetRelationResult subCode(String subCode) {
         this.subCode = subCode;
@@ -239,7 +244,8 @@ public class UranusTaskGetRelationResult extends JdcloudResult implements java.i
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusTaskGetRelationResult
      */
     public UranusTaskGetRelationResult successed(Boolean successed) {
         this.successed = successed;

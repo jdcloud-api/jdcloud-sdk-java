@@ -143,7 +143,8 @@ public class GravityParticleParticleJobSchedForceJobBatchRequest extends Jdcloud
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GravityParticleParticleJobSchedForceJobBatchRequest
      */
     public GravityParticleParticleJobSchedForceJobBatchRequest txDate(String txDate) {
         this.txDate = txDate;
@@ -154,7 +155,8 @@ public class GravityParticleParticleJobSchedForceJobBatchRequest extends Jdcloud
     /**
     * set 作业名称列表
     *
-    * @param jobNames
+    * @param jobNames 作业名称列表
+    * @return GravityParticleParticleJobSchedForceJobBatchRequest
     */
     public GravityParticleParticleJobSchedForceJobBatchRequest jobNames(List<GpsmJobNameDTO> jobNames) {
         this.jobNames = jobNames;
@@ -165,7 +167,8 @@ public class GravityParticleParticleJobSchedForceJobBatchRequest extends Jdcloud
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleParticleJobSchedForceJobBatchRequest
      */
     public GravityParticleParticleJobSchedForceJobBatchRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -176,7 +179,8 @@ public class GravityParticleParticleJobSchedForceJobBatchRequest extends Jdcloud
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleParticleJobSchedForceJobBatchRequest
      */
     public GravityParticleParticleJobSchedForceJobBatchRequest appName(String appName) {
         this.appName = appName;

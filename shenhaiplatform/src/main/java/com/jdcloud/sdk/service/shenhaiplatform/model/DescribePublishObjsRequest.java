@@ -308,7 +308,8 @@ public class DescribePublishObjsRequest extends JdcloudRequest implements java.i
     /**
      * set 页面容量
      *
-     * @param pageSize
+     * @param pageSize 页面容量
+     * @return DescribePublishObjsRequest
      */
     public DescribePublishObjsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -319,7 +320,8 @@ public class DescribePublishObjsRequest extends JdcloudRequest implements java.i
     /**
      * set 页号
      *
-     * @param pageNum
+     * @param pageNum 页号
+     * @return DescribePublishObjsRequest
      */
     public DescribePublishObjsRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -330,7 +332,8 @@ public class DescribePublishObjsRequest extends JdcloudRequest implements java.i
     /**
      * set 对象ID
      *
-     * @param objUk
+     * @param objUk 对象ID
+     * @return DescribePublishObjsRequest
      */
     public DescribePublishObjsRequest objUk(String objUk) {
         this.objUk = objUk;
@@ -341,7 +344,8 @@ public class DescribePublishObjsRequest extends JdcloudRequest implements java.i
     /**
      * set 对象名称
      *
-     * @param objName
+     * @param objName 对象名称
+     * @return DescribePublishObjsRequest
      */
     public DescribePublishObjsRequest objName(String objName) {
         this.objName = objName;
@@ -352,7 +356,8 @@ public class DescribePublishObjsRequest extends JdcloudRequest implements java.i
     /**
      * set 对象类型编码
      *
-     * @param objTypeCode
+     * @param objTypeCode 对象类型编码
+     * @return DescribePublishObjsRequest
      */
     public DescribePublishObjsRequest objTypeCode(String objTypeCode) {
         this.objTypeCode = objTypeCode;
@@ -363,7 +368,8 @@ public class DescribePublishObjsRequest extends JdcloudRequest implements java.i
     /**
      * set 变更类型编码
      *
-     * @param objChangeTypeCode
+     * @param objChangeTypeCode 变更类型编码
+     * @return DescribePublishObjsRequest
      */
     public DescribePublishObjsRequest objChangeTypeCode(String objChangeTypeCode) {
         this.objChangeTypeCode = objChangeTypeCode;
@@ -374,7 +380,8 @@ public class DescribePublishObjsRequest extends JdcloudRequest implements java.i
     /**
      * set 提交人
      *
-     * @param submitterPin
+     * @param submitterPin 提交人
+     * @return DescribePublishObjsRequest
      */
     public DescribePublishObjsRequest submitterPin(String submitterPin) {
         this.submitterPin = submitterPin;
@@ -385,7 +392,8 @@ public class DescribePublishObjsRequest extends JdcloudRequest implements java.i
     /**
      * set 提交开始时间
      *
-     * @param submitTimeStart
+     * @param submitTimeStart 提交开始时间
+     * @return DescribePublishObjsRequest
      */
     public DescribePublishObjsRequest submitTimeStart(Long submitTimeStart) {
         this.submitTimeStart = submitTimeStart;
@@ -396,7 +404,8 @@ public class DescribePublishObjsRequest extends JdcloudRequest implements java.i
     /**
      * set 提交结束时间
      *
-     * @param submitTimeEnd
+     * @param submitTimeEnd 提交结束时间
+     * @return DescribePublishObjsRequest
      */
     public DescribePublishObjsRequest submitTimeEnd(Long submitTimeEnd) {
         this.submitTimeEnd = submitTimeEnd;
@@ -407,7 +416,8 @@ public class DescribePublishObjsRequest extends JdcloudRequest implements java.i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DescribePublishObjsRequest
      */
     public DescribePublishObjsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -418,7 +428,8 @@ public class DescribePublishObjsRequest extends JdcloudRequest implements java.i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return DescribePublishObjsRequest
      */
     public DescribePublishObjsRequest appName(String appName) {
         this.appName = appName;

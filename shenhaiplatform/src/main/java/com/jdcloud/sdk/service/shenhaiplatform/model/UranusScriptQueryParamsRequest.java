@@ -188,7 +188,8 @@ public class UranusScriptQueryParamsRequest extends JdcloudRequest implements ja
     /**
      * set 文件Code
      *
-     * @param fileCode
+     * @param fileCode 文件Code
+     * @return UranusScriptQueryParamsRequest
      */
     public UranusScriptQueryParamsRequest fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -199,7 +200,8 @@ public class UranusScriptQueryParamsRequest extends JdcloudRequest implements ja
     /**
      * set 任务Code
      *
-     * @param taskCode
+     * @param taskCode 任务Code
+     * @return UranusScriptQueryParamsRequest
      */
     public UranusScriptQueryParamsRequest taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -210,7 +212,8 @@ public class UranusScriptQueryParamsRequest extends JdcloudRequest implements ja
     /**
      * set 文件内容
      *
-     * @param content
+     * @param content 文件内容
+     * @return UranusScriptQueryParamsRequest
      */
     public UranusScriptQueryParamsRequest content(String content) {
         this.content = content;
@@ -221,7 +224,8 @@ public class UranusScriptQueryParamsRequest extends JdcloudRequest implements ja
     /**
      * set 前端传的系统参数
      *
-     * @param sysType
+     * @param sysType 前端传的系统参数
+     * @return UranusScriptQueryParamsRequest
      */
     public UranusScriptQueryParamsRequest sysType(String sysType) {
         this.sysType = sysType;
@@ -232,7 +236,8 @@ public class UranusScriptQueryParamsRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusScriptQueryParamsRequest
      */
     public UranusScriptQueryParamsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -243,7 +248,8 @@ public class UranusScriptQueryParamsRequest extends JdcloudRequest implements ja
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusScriptQueryParamsRequest
      */
     public UranusScriptQueryParamsRequest appName(String appName) {
         this.appName = appName;

@@ -184,7 +184,8 @@ public class UranusTaskInfoHistoryListResult extends JdcloudResult implements ja
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusTaskInfoHistoryListResult
      */
     public UranusTaskInfoHistoryListResult code(String code) {
         this.code = code;
@@ -195,7 +196,8 @@ public class UranusTaskInfoHistoryListResult extends JdcloudResult implements ja
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusTaskInfoHistoryListResult
      */
     public UranusTaskInfoHistoryListResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -206,7 +208,8 @@ public class UranusTaskInfoHistoryListResult extends JdcloudResult implements ja
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusTaskInfoHistoryListResult
      */
     public UranusTaskInfoHistoryListResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -217,7 +220,8 @@ public class UranusTaskInfoHistoryListResult extends JdcloudResult implements ja
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return UranusTaskInfoHistoryListResult
      */
     public UranusTaskInfoHistoryListResult result(UranusPageResultContentSchedTaskInfoHistoryRes result) {
         this.result = result;
@@ -228,7 +232,8 @@ public class UranusTaskInfoHistoryListResult extends JdcloudResult implements ja
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusTaskInfoHistoryListResult
      */
     public UranusTaskInfoHistoryListResult subCode(String subCode) {
         this.subCode = subCode;
@@ -239,7 +244,8 @@ public class UranusTaskInfoHistoryListResult extends JdcloudResult implements ja
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusTaskInfoHistoryListResult
      */
     public UranusTaskInfoHistoryListResult successed(Boolean successed) {
         this.successed = successed;

@@ -182,7 +182,8 @@ public class JobMonitorInfoVo  implements java.io.Serializable {
     /**
      * set 告警类型
      *
-     * @param warningType
+     * @param warningType 告警类型
+     * @return JobMonitorInfoVo
      */
     public JobMonitorInfoVo warningType(String warningType) {
         this.warningType = warningType;
@@ -193,7 +194,8 @@ public class JobMonitorInfoVo  implements java.io.Serializable {
     /**
      * set 告警通知人
      *
-     * @param notifiers
+     * @param notifiers 告警通知人
+     * @return JobMonitorInfoVo
      */
     public JobMonitorInfoVo notifiers(String notifiers) {
         this.notifiers = notifiers;
@@ -204,7 +206,8 @@ public class JobMonitorInfoVo  implements java.io.Serializable {
     /**
      * set 启动延迟告警-截止时间
      *
-     * @param startDeadlineTime
+     * @param startDeadlineTime 启动延迟告警-截止时间
+     * @return JobMonitorInfoVo
      */
     public JobMonitorInfoVo startDeadlineTime(String startDeadlineTime) {
         this.startDeadlineTime = startDeadlineTime;
@@ -215,7 +218,8 @@ public class JobMonitorInfoVo  implements java.io.Serializable {
     /**
      * set 结束延迟告警-截止时间
      *
-     * @param endDeadlineTime
+     * @param endDeadlineTime 结束延迟告警-截止时间
+     * @return JobMonitorInfoVo
      */
     public JobMonitorInfoVo endDeadlineTime(String endDeadlineTime) {
         this.endDeadlineTime = endDeadlineTime;
@@ -226,7 +230,8 @@ public class JobMonitorInfoVo  implements java.io.Serializable {
     /**
      * set 告警时机编码
      *
-     * @param eventType
+     * @param eventType 告警时机编码
+     * @return JobMonitorInfoVo
      */
     public JobMonitorInfoVo eventType(String eventType) {
         this.eventType = eventType;
@@ -237,7 +242,8 @@ public class JobMonitorInfoVo  implements java.io.Serializable {
     /**
      * set 告警时机-展示
      *
-     * @param eventTypeDesc
+     * @param eventTypeDesc 告警时机-展示
+     * @return JobMonitorInfoVo
      */
     public JobMonitorInfoVo eventTypeDesc(String eventTypeDesc) {
         this.eventTypeDesc = eventTypeDesc;

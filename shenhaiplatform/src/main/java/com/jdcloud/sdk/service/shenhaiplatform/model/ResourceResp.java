@@ -398,7 +398,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set resourceType
      *
-     * @param resourceType
+     * @param resourceType 
+     * @return ResourceResp
      */
     public ResourceResp resourceType(String resourceType) {
         this.resourceType = resourceType;
@@ -409,7 +410,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set resourceName
      *
-     * @param resourceName
+     * @param resourceName 
+     * @return ResourceResp
      */
     public ResourceResp resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -420,7 +422,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set resourceCode
      *
-     * @param resourceCode
+     * @param resourceCode 
+     * @return ResourceResp
      */
     public ResourceResp resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -431,7 +434,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set resourceStatus
      *
-     * @param resourceStatus
+     * @param resourceStatus 
+     * @return ResourceResp
      */
     public ResourceResp resourceStatus(String resourceStatus) {
         this.resourceStatus = resourceStatus;
@@ -442,7 +446,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set resourceFlag
      *
-     * @param resourceFlag
+     * @param resourceFlag 
+     * @return ResourceResp
      */
     public ResourceResp resourceFlag(String resourceFlag) {
         this.resourceFlag = resourceFlag;
@@ -453,7 +458,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set az
      *
-     * @param az
+     * @param az 
+     * @return ResourceResp
      */
     public ResourceResp az(String az) {
         this.az = az;
@@ -464,7 +470,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set privateId
      *
-     * @param privateId
+     * @param privateId 
+     * @return ResourceResp
      */
     public ResourceResp privateId(String privateId) {
         this.privateId = privateId;
@@ -475,7 +482,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set ipv4Cidr
      *
-     * @param ipv4Cidr
+     * @param ipv4Cidr 
+     * @return ResourceResp
      */
     public ResourceResp ipv4Cidr(String ipv4Cidr) {
         this.ipv4Cidr = ipv4Cidr;
@@ -486,7 +494,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set subnetId
      *
-     * @param subnetId
+     * @param subnetId 
+     * @return ResourceResp
      */
     public ResourceResp subnetId(String subnetId) {
         this.subnetId = subnetId;
@@ -497,7 +506,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set subnetCidr
      *
-     * @param subnetCidr
+     * @param subnetCidr 
+     * @return ResourceResp
      */
     public ResourceResp subnetCidr(String subnetCidr) {
         this.subnetCidr = subnetCidr;
@@ -508,7 +518,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set natSubnetId
      *
-     * @param natSubnetId
+     * @param natSubnetId 
+     * @return ResourceResp
      */
     public ResourceResp natSubnetId(String natSubnetId) {
         this.natSubnetId = natSubnetId;
@@ -519,7 +530,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set securityGroup
      *
-     * @param securityGroup
+     * @param securityGroup 
+     * @return ResourceResp
      */
     public ResourceResp securityGroup(String securityGroup) {
         this.securityGroup = securityGroup;
@@ -530,7 +542,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set payMethod
      *
-     * @param payMethod
+     * @param payMethod 
+     * @return ResourceResp
      */
     public ResourceResp payMethod(String payMethod) {
         this.payMethod = payMethod;
@@ -541,7 +554,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return ResourceResp
      */
     public ResourceResp id(Long id) {
         this.id = id;
@@ -552,7 +566,8 @@ public class ResourceResp  implements java.io.Serializable {
     /**
      * set effectiveStartTime
      *
-     * @param effectiveStartTime
+     * @param effectiveStartTime 
+     * @return ResourceResp
      */
     public ResourceResp effectiveStartTime(String effectiveStartTime) {
         this.effectiveStartTime = effectiveStartTime;

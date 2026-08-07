@@ -64,7 +64,8 @@ public class UpdateRosterParam  implements java.io.Serializable {
     /**
     * set 全部值班表信息
     *
-    * @param rosterList
+    * @param rosterList 全部值班表信息
+    * @return UpdateRosterParam
     */
     public UpdateRosterParam rosterList(List<RosterDO> rosterList) {
         this.rosterList = rosterList;

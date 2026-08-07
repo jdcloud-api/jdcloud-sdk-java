@@ -112,7 +112,8 @@ public class JcwSpaceIncreUsedByDayVo  implements java.io.Serializable {
     /**
     * set 每日增量
     *
-    * @param increments
+    * @param increments 每日增量
+    * @return JcwSpaceIncreUsedByDayVo
     */
     public JcwSpaceIncreUsedByDayVo increments(List<Number> increments) {
         this.increments = increments;
@@ -123,7 +124,8 @@ public class JcwSpaceIncreUsedByDayVo  implements java.io.Serializable {
     /**
     * set 每日增量(用作显示)
     *
-    * @param views
+    * @param views 每日增量(用作显示)
+    * @return JcwSpaceIncreUsedByDayVo
     */
     public JcwSpaceIncreUsedByDayVo views(List<String> views) {
         this.views = views;
@@ -134,7 +136,8 @@ public class JcwSpaceIncreUsedByDayVo  implements java.io.Serializable {
     /**
     * set 日期
     *
-    * @param dates
+    * @param dates 日期
+    * @return JcwSpaceIncreUsedByDayVo
     */
     public JcwSpaceIncreUsedByDayVo dates(List<String> dates) {
         this.dates = dates;

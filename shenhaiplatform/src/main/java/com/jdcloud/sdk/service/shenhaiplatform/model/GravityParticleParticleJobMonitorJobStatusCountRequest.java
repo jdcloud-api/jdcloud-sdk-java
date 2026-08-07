@@ -140,7 +140,8 @@ public class GravityParticleParticleJobMonitorJobStatusCountRequest extends Jdcl
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return GravityParticleParticleJobMonitorJobStatusCountRequest
      */
     public GravityParticleParticleJobMonitorJobStatusCountRequest processType(String processType) {
         this.processType = processType;
@@ -151,7 +152,8 @@ public class GravityParticleParticleJobMonitorJobStatusCountRequest extends Jdcl
     /**
      * set 查询数据
      *
-     * @param date
+     * @param date 查询数据
+     * @return GravityParticleParticleJobMonitorJobStatusCountRequest
      */
     public GravityParticleParticleJobMonitorJobStatusCountRequest date(String date) {
         this.date = date;
@@ -162,7 +164,8 @@ public class GravityParticleParticleJobMonitorJobStatusCountRequest extends Jdcl
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleParticleJobMonitorJobStatusCountRequest
      */
     public GravityParticleParticleJobMonitorJobStatusCountRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -173,7 +176,8 @@ public class GravityParticleParticleJobMonitorJobStatusCountRequest extends Jdcl
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleParticleJobMonitorJobStatusCountRequest
      */
     public GravityParticleParticleJobMonitorJobStatusCountRequest appName(String appName) {
         this.appName = appName;

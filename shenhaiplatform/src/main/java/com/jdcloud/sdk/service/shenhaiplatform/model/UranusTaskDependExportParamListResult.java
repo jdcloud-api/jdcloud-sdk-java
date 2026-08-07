@@ -186,7 +186,8 @@ public class UranusTaskDependExportParamListResult extends JdcloudResult impleme
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusTaskDependExportParamListResult
      */
     public UranusTaskDependExportParamListResult code(String code) {
         this.code = code;
@@ -197,7 +198,8 @@ public class UranusTaskDependExportParamListResult extends JdcloudResult impleme
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusTaskDependExportParamListResult
      */
     public UranusTaskDependExportParamListResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -208,7 +210,8 @@ public class UranusTaskDependExportParamListResult extends JdcloudResult impleme
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusTaskDependExportParamListResult
      */
     public UranusTaskDependExportParamListResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -219,7 +222,8 @@ public class UranusTaskDependExportParamListResult extends JdcloudResult impleme
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return UranusTaskDependExportParamListResult
     */
     public UranusTaskDependExportParamListResult result(List<UranusTaskNodeParamRes> result) {
         this.result = result;
@@ -230,7 +234,8 @@ public class UranusTaskDependExportParamListResult extends JdcloudResult impleme
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusTaskDependExportParamListResult
      */
     public UranusTaskDependExportParamListResult subCode(String subCode) {
         this.subCode = subCode;
@@ -241,7 +246,8 @@ public class UranusTaskDependExportParamListResult extends JdcloudResult impleme
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusTaskDependExportParamListResult
      */
     public UranusTaskDependExportParamListResult successed(Boolean successed) {
         this.successed = successed;

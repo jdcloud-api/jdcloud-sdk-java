@@ -86,7 +86,8 @@ public class CreateFunctionCatalogReq  implements java.io.Serializable {
     /**
      * set 分类目录名称（支持中文、字母、数字、下划线，不超过50个字符）
      *
-     * @param functionCatalogName
+     * @param functionCatalogName 分类目录名称（支持中文、字母、数字、下划线，不超过50个字符）
+     * @return CreateFunctionCatalogReq
      */
     public CreateFunctionCatalogReq functionCatalogName(String functionCatalogName) {
         this.functionCatalogName = functionCatalogName;
@@ -97,7 +98,8 @@ public class CreateFunctionCatalogReq  implements java.io.Serializable {
     /**
      * set 分类目录的父code（函数名称是命名空间里唯一的；函数分类目录在不同目录下可以相同）
      *
-     * @param parentCatalogId
+     * @param parentCatalogId 分类目录的父code（函数名称是命名空间里唯一的；函数分类目录在不同目录下可以相同）
+     * @return CreateFunctionCatalogReq
      */
     public CreateFunctionCatalogReq parentCatalogId(Integer parentCatalogId) {
         this.parentCatalogId = parentCatalogId;

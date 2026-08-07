@@ -119,7 +119,8 @@ public class JtlasTableUnderSpecifiedUserWithPrivilegesReq  implements java.io.S
     /**
      * set 数据库（工作空间编码）
      *
-     * @param database
+     * @param database 数据库（工作空间编码）
+     * @return JtlasTableUnderSpecifiedUserWithPrivilegesReq
      */
     public JtlasTableUnderSpecifiedUserWithPrivilegesReq database(String database) {
         this.database = database;
@@ -130,7 +131,8 @@ public class JtlasTableUnderSpecifiedUserWithPrivilegesReq  implements java.io.S
     /**
      * set 账户信息
      *
-     * @param principalName
+     * @param principalName 账户信息
+     * @return JtlasTableUnderSpecifiedUserWithPrivilegesReq
      */
     public JtlasTableUnderSpecifiedUserWithPrivilegesReq principalName(String principalName) {
         this.principalName = principalName;
@@ -141,7 +143,8 @@ public class JtlasTableUnderSpecifiedUserWithPrivilegesReq  implements java.io.S
     /**
     * set 权限信息
     *
-    * @param privilegeTypes
+    * @param privilegeTypes 权限信息
+    * @return JtlasTableUnderSpecifiedUserWithPrivilegesReq
     */
     public JtlasTableUnderSpecifiedUserWithPrivilegesReq privilegeTypes(List<String> privilegeTypes) {
         this.privilegeTypes = privilegeTypes;

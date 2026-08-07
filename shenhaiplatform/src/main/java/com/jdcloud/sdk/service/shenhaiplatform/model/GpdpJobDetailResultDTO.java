@@ -230,7 +230,8 @@ public class GpdpJobDetailResultDTO  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GpdpJobDetailResultDTO
      */
     public GpdpJobDetailResultDTO txDate(String txDate) {
         this.txDate = txDate;
@@ -241,7 +242,8 @@ public class GpdpJobDetailResultDTO  implements java.io.Serializable {
     /**
      * set 计划执行时间
      *
-     * @param planExecTime
+     * @param planExecTime 计划执行时间
+     * @return GpdpJobDetailResultDTO
      */
     public GpdpJobDetailResultDTO planExecTime(String planExecTime) {
         this.planExecTime = planExecTime;
@@ -252,7 +254,8 @@ public class GpdpJobDetailResultDTO  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return GpdpJobDetailResultDTO
      */
     public GpdpJobDetailResultDTO manager(String manager) {
         this.manager = manager;
@@ -263,7 +266,8 @@ public class GpdpJobDetailResultDTO  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpdpJobDetailResultDTO
      */
     public GpdpJobDetailResultDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -274,7 +278,8 @@ public class GpdpJobDetailResultDTO  implements java.io.Serializable {
     /**
      * set 最后一次运行结束时间
      *
-     * @param lastEndTime
+     * @param lastEndTime 最后一次运行结束时间
+     * @return GpdpJobDetailResultDTO
      */
     public GpdpJobDetailResultDTO lastEndTime(String lastEndTime) {
         this.lastEndTime = lastEndTime;
@@ -285,7 +290,8 @@ public class GpdpJobDetailResultDTO  implements java.io.Serializable {
     /**
      * set 最后一次运行开始时间
      *
-     * @param lastStartTime
+     * @param lastStartTime 最后一次运行开始时间
+     * @return GpdpJobDetailResultDTO
      */
     public GpdpJobDetailResultDTO lastStartTime(String lastStartTime) {
         this.lastStartTime = lastStartTime;
@@ -296,7 +302,8 @@ public class GpdpJobDetailResultDTO  implements java.io.Serializable {
     /**
      * set 作业运行耗时/秒
      *
-     * @param costTime
+     * @param costTime 作业运行耗时/秒
+     * @return GpdpJobDetailResultDTO
      */
     public GpdpJobDetailResultDTO costTime(Integer costTime) {
         this.costTime = costTime;
@@ -307,7 +314,8 @@ public class GpdpJobDetailResultDTO  implements java.io.Serializable {
     /**
      * set 表名
      *
-     * @param targetTable
+     * @param targetTable 表名
+     * @return GpdpJobDetailResultDTO
      */
     public GpdpJobDetailResultDTO targetTable(Integer targetTable) {
         this.targetTable = targetTable;

@@ -86,7 +86,8 @@ public class GpsmKillJobInstReq  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpsmKillJobInstReq
      */
     public GpsmKillJobInstReq jobName(String jobName) {
         this.jobName = jobName;
@@ -97,7 +98,8 @@ public class GpsmKillJobInstReq  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GpsmKillJobInstReq
      */
     public GpsmKillJobInstReq txDate(String txDate) {
         this.txDate = txDate;

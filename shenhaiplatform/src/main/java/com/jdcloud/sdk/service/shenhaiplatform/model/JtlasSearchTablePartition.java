@@ -182,7 +182,8 @@ public class JtlasSearchTablePartition  implements java.io.Serializable {
     /**
      * set 分区名称
      *
-     * @param partName
+     * @param partName 分区名称
+     * @return JtlasSearchTablePartition
      */
     public JtlasSearchTablePartition partName(String partName) {
         this.partName = partName;
@@ -193,7 +194,8 @@ public class JtlasSearchTablePartition  implements java.io.Serializable {
     /**
      * set 分区存储路径
      *
-     * @param location
+     * @param location 分区存储路径
+     * @return JtlasSearchTablePartition
      */
     public JtlasSearchTablePartition location(String location) {
         this.location = location;
@@ -204,7 +206,8 @@ public class JtlasSearchTablePartition  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return JtlasSearchTablePartition
      */
     public JtlasSearchTablePartition createTime(String createTime) {
         this.createTime = createTime;
@@ -215,7 +218,8 @@ public class JtlasSearchTablePartition  implements java.io.Serializable {
     /**
      * set 分区大小
      *
-     * @param totalSize
+     * @param totalSize 分区大小
+     * @return JtlasSearchTablePartition
      */
     public JtlasSearchTablePartition totalSize(Long totalSize) {
         this.totalSize = totalSize;
@@ -226,7 +230,8 @@ public class JtlasSearchTablePartition  implements java.io.Serializable {
     /**
      * set 分区行数
      *
-     * @param numRow
+     * @param numRow 分区行数
+     * @return JtlasSearchTablePartition
      */
     public JtlasSearchTablePartition numRow(Long numRow) {
         this.numRow = numRow;
@@ -237,7 +242,8 @@ public class JtlasSearchTablePartition  implements java.io.Serializable {
     /**
      * set 原始数据大小
      *
-     * @param rawDataSize
+     * @param rawDataSize 原始数据大小
+     * @return JtlasSearchTablePartition
      */
     public JtlasSearchTablePartition rawDataSize(Long rawDataSize) {
         this.rawDataSize = rawDataSize;

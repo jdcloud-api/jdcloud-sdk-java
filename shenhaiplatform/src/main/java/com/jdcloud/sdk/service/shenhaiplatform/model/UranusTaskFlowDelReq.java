@@ -67,7 +67,8 @@ public class UranusTaskFlowDelReq  implements java.io.Serializable {
     /**
     * set 工作流code list
     *
-    * @param flowCodes
+    * @param flowCodes 工作流code list
+    * @return UranusTaskFlowDelReq
     */
     public UranusTaskFlowDelReq flowCodes(List<String> flowCodes) {
         this.flowCodes = flowCodes;

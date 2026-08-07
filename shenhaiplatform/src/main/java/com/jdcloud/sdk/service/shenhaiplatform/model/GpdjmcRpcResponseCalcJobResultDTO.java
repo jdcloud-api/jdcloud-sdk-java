@@ -134,7 +134,8 @@ public class GpdjmcRpcResponseCalcJobResultDTO  implements java.io.Serializable 
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GpdjmcRpcResponseCalcJobResultDTO
      */
     public GpdjmcRpcResponseCalcJobResultDTO success(Integer success) {
         this.success = success;
@@ -145,7 +146,8 @@ public class GpdjmcRpcResponseCalcJobResultDTO  implements java.io.Serializable 
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GpdjmcRpcResponseCalcJobResultDTO
      */
     public GpdjmcRpcResponseCalcJobResultDTO code(String code) {
         this.code = code;
@@ -156,7 +158,8 @@ public class GpdjmcRpcResponseCalcJobResultDTO  implements java.io.Serializable 
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GpdjmcRpcResponseCalcJobResultDTO
      */
     public GpdjmcRpcResponseCalcJobResultDTO msg(String msg) {
         this.msg = msg;
@@ -167,7 +170,8 @@ public class GpdjmcRpcResponseCalcJobResultDTO  implements java.io.Serializable 
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return GpdjmcRpcResponseCalcJobResultDTO
      */
     public GpdjmcRpcResponseCalcJobResultDTO result(GpdjmcCalcJobResultDTO result) {
         this.result = result;

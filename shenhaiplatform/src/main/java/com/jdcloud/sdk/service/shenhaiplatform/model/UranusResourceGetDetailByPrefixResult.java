@@ -184,7 +184,8 @@ public class UranusResourceGetDetailByPrefixResult extends JdcloudResult impleme
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusResourceGetDetailByPrefixResult
      */
     public UranusResourceGetDetailByPrefixResult code(String code) {
         this.code = code;
@@ -195,7 +196,8 @@ public class UranusResourceGetDetailByPrefixResult extends JdcloudResult impleme
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusResourceGetDetailByPrefixResult
      */
     public UranusResourceGetDetailByPrefixResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -206,7 +208,8 @@ public class UranusResourceGetDetailByPrefixResult extends JdcloudResult impleme
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusResourceGetDetailByPrefixResult
      */
     public UranusResourceGetDetailByPrefixResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -217,7 +220,8 @@ public class UranusResourceGetDetailByPrefixResult extends JdcloudResult impleme
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return UranusResourceGetDetailByPrefixResult
      */
     public UranusResourceGetDetailByPrefixResult result(UranusResourceVo result) {
         this.result = result;
@@ -228,7 +232,8 @@ public class UranusResourceGetDetailByPrefixResult extends JdcloudResult impleme
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusResourceGetDetailByPrefixResult
      */
     public UranusResourceGetDetailByPrefixResult subCode(String subCode) {
         this.subCode = subCode;
@@ -239,7 +244,8 @@ public class UranusResourceGetDetailByPrefixResult extends JdcloudResult impleme
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusResourceGetDetailByPrefixResult
      */
     public UranusResourceGetDetailByPrefixResult successed(Boolean successed) {
         this.successed = successed;

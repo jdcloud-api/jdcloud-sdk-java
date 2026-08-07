@@ -477,7 +477,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 页面大小
      *
-     * @param pageSize
+     * @param pageSize 页面大小
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -488,7 +489,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 页码
      *
-     * @param pageNum
+     * @param pageNum 页码
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -499,7 +501,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
     * set 运行状态
     *
-    * @param statusList
+    * @param statusList 运行状态
+    * @return GpjmListJobInstanceReq
     */
     public GpjmListJobInstanceReq statusList(List<String> statusList) {
         this.statusList = statusList;
@@ -510,7 +513,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 作业上上线下线状态
      *
-     * @param enable
+     * @param enable 作业上上线下线状态
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq enable(String enable) {
         this.enable = enable;
@@ -521,7 +525,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 运行周期
      *
-     * @param cycle
+     * @param cycle 运行周期
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq cycle(String cycle) {
         this.cycle = cycle;
@@ -532,7 +537,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq processType(String processType) {
         this.processType = processType;
@@ -543,7 +549,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq manager(String manager) {
         this.manager = manager;
@@ -554,7 +561,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq jobName(String jobName) {
         this.jobName = jobName;
@@ -565,7 +573,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 任务类型
      *
-     * @param jobType
+     * @param jobType 任务类型
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq jobType(String jobType) {
         this.jobType = jobType;
@@ -576,7 +585,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 任务创建日期-结束
      *
-     * @param createTimeBefore
+     * @param createTimeBefore 任务创建日期-结束
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq createTimeBefore(String createTimeBefore) {
         this.createTimeBefore = createTimeBefore;
@@ -587,7 +597,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 任务创建日期-开始
      *
-     * @param createTimeAfter
+     * @param createTimeAfter 任务创建日期-开始
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq createTimeAfter(String createTimeAfter) {
         this.createTimeAfter = createTimeAfter;
@@ -598,7 +609,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 运行开始时间范围
      *
-     * @param startTimeBefore
+     * @param startTimeBefore 运行开始时间范围
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq startTimeBefore(String startTimeBefore) {
         this.startTimeBefore = startTimeBefore;
@@ -609,7 +621,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 运行开始时间范围
      *
-     * @param startTimeAfter
+     * @param startTimeAfter 运行开始时间范围
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq startTimeAfter(String startTimeAfter) {
         this.startTimeAfter = startTimeAfter;
@@ -620,7 +633,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 运行结束时间范围
      *
-     * @param endTimeAfter
+     * @param endTimeAfter 运行结束时间范围
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq endTimeAfter(String endTimeAfter) {
         this.endTimeAfter = endTimeAfter;
@@ -631,7 +645,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 运行结束时间范围
      *
-     * @param endTimeBefore
+     * @param endTimeBefore 运行结束时间范围
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq endTimeBefore(String endTimeBefore) {
         this.endTimeBefore = endTimeBefore;
@@ -642,7 +657,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq txDate(String txDate) {
         this.txDate = txDate;
@@ -653,7 +669,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set jobChildType
      *
-     * @param jobChildType
+     * @param jobChildType 
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq jobChildType(String jobChildType) {
         this.jobChildType = jobChildType;
@@ -664,7 +681,8 @@ public class GpjmListJobInstanceReq  implements java.io.Serializable {
     /**
      * set 客户作业名
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名
+     * @return GpjmListJobInstanceReq
      */
     public GpjmListJobInstanceReq cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;

@@ -94,7 +94,8 @@ public class DataLoadHistoryResult extends JdcloudResult implements java.io.Seri
     /**
      * set 总条数
      *
-     * @param total
+     * @param total 总条数
+     * @return DataLoadHistoryResult
      */
     public DataLoadHistoryResult total(Integer total) {
         this.total = total;
@@ -105,7 +106,8 @@ public class DataLoadHistoryResult extends JdcloudResult implements java.io.Seri
     /**
     * set 历史上传记录
     *
-    * @param list
+    * @param list 历史上传记录
+    * @return DataLoadHistoryResult
     */
     public DataLoadHistoryResult list(List<DataLoadHistory> list) {
         this.list = list;

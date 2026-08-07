@@ -286,7 +286,8 @@ public class GravityParticleDubboJobManagerGetMgrJobByJobeRequest extends Jdclou
     /**
      * set userName
      *
-     * @param userName
+     * @param userName 
+     * @return GravityParticleDubboJobManagerGetMgrJobByJobeRequest
      */
     public GravityParticleDubboJobManagerGetMgrJobByJobeRequest userName(String userName) {
         this.userName = userName;
@@ -297,7 +298,8 @@ public class GravityParticleDubboJobManagerGetMgrJobByJobeRequest extends Jdclou
     /**
      * set remark
      *
-     * @param remark
+     * @param remark 
+     * @return GravityParticleDubboJobManagerGetMgrJobByJobeRequest
      */
     public GravityParticleDubboJobManagerGetMgrJobByJobeRequest remark(String remark) {
         this.remark = remark;
@@ -308,7 +310,8 @@ public class GravityParticleDubboJobManagerGetMgrJobByJobeRequest extends Jdclou
     /**
     * set jobNames
     *
-    * @param jobNames
+    * @param jobNames 
+    * @return GravityParticleDubboJobManagerGetMgrJobByJobeRequest
     */
     public GravityParticleDubboJobManagerGetMgrJobByJobeRequest jobNames(List<String> jobNames) {
         this.jobNames = jobNames;
@@ -319,7 +322,8 @@ public class GravityParticleDubboJobManagerGetMgrJobByJobeRequest extends Jdclou
     /**
      * set fileId
      *
-     * @param fileId
+     * @param fileId 
+     * @return GravityParticleDubboJobManagerGetMgrJobByJobeRequest
      */
     public GravityParticleDubboJobManagerGetMgrJobByJobeRequest fileId(Integer fileId) {
         this.fileId = fileId;
@@ -330,7 +334,8 @@ public class GravityParticleDubboJobManagerGetMgrJobByJobeRequest extends Jdclou
     /**
      * set version
      *
-     * @param version
+     * @param version 
+     * @return GravityParticleDubboJobManagerGetMgrJobByJobeRequest
      */
     public GravityParticleDubboJobManagerGetMgrJobByJobeRequest version(Integer version) {
         this.version = version;
@@ -341,7 +346,8 @@ public class GravityParticleDubboJobManagerGetMgrJobByJobeRequest extends Jdclou
     /**
      * set publishDesc
      *
-     * @param publishDesc
+     * @param publishDesc 
+     * @return GravityParticleDubboJobManagerGetMgrJobByJobeRequest
      */
     public GravityParticleDubboJobManagerGetMgrJobByJobeRequest publishDesc(String publishDesc) {
         this.publishDesc = publishDesc;
@@ -352,7 +358,8 @@ public class GravityParticleDubboJobManagerGetMgrJobByJobeRequest extends Jdclou
     /**
      * set manager
      *
-     * @param manager
+     * @param manager 
+     * @return GravityParticleDubboJobManagerGetMgrJobByJobeRequest
      */
     public GravityParticleDubboJobManagerGetMgrJobByJobeRequest manager(Boolean manager) {
         this.manager = manager;
@@ -363,7 +370,8 @@ public class GravityParticleDubboJobManagerGetMgrJobByJobeRequest extends Jdclou
     /**
      * set jobManager
      *
-     * @param jobManager
+     * @param jobManager 
+     * @return GravityParticleDubboJobManagerGetMgrJobByJobeRequest
      */
     public GravityParticleDubboJobManagerGetMgrJobByJobeRequest jobManager(Boolean jobManager) {
         this.jobManager = jobManager;
@@ -374,7 +382,8 @@ public class GravityParticleDubboJobManagerGetMgrJobByJobeRequest extends Jdclou
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerGetMgrJobByJobeRequest
      */
     public GravityParticleDubboJobManagerGetMgrJobByJobeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -385,7 +394,8 @@ public class GravityParticleDubboJobManagerGetMgrJobByJobeRequest extends Jdclou
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerGetMgrJobByJobeRequest
      */
     public GravityParticleDubboJobManagerGetMgrJobByJobeRequest appName(String appName) {
         this.appName = appName;

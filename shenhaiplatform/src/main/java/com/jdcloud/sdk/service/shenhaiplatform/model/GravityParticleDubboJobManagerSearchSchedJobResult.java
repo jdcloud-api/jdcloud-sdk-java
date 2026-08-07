@@ -138,7 +138,8 @@ public class GravityParticleDubboJobManagerSearchSchedJobResult extends JdcloudR
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GravityParticleDubboJobManagerSearchSchedJobResult
      */
     public GravityParticleDubboJobManagerSearchSchedJobResult success(Integer success) {
         this.success = success;
@@ -149,7 +150,8 @@ public class GravityParticleDubboJobManagerSearchSchedJobResult extends JdcloudR
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GravityParticleDubboJobManagerSearchSchedJobResult
      */
     public GravityParticleDubboJobManagerSearchSchedJobResult code(String code) {
         this.code = code;
@@ -160,7 +162,8 @@ public class GravityParticleDubboJobManagerSearchSchedJobResult extends JdcloudR
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GravityParticleDubboJobManagerSearchSchedJobResult
      */
     public GravityParticleDubboJobManagerSearchSchedJobResult msg(String msg) {
         this.msg = msg;
@@ -171,7 +174,8 @@ public class GravityParticleDubboJobManagerSearchSchedJobResult extends JdcloudR
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return GravityParticleDubboJobManagerSearchSchedJobResult
     */
     public GravityParticleDubboJobManagerSearchSchedJobResult result(List<GpdjmcSchedJobResDTO> result) {
         this.result = result;

@@ -134,7 +134,8 @@ public class JtlasSearchEdge  implements java.io.Serializable {
     /**
      * set 源ID
      *
-     * @param source
+     * @param source 源ID
+     * @return JtlasSearchEdge
      */
     public JtlasSearchEdge source(String source) {
         this.source = source;
@@ -145,7 +146,8 @@ public class JtlasSearchEdge  implements java.io.Serializable {
     /**
      * set 目标ID
      *
-     * @param target
+     * @param target 目标ID
+     * @return JtlasSearchEdge
      */
     public JtlasSearchEdge target(String target) {
         this.target = target;
@@ -156,7 +158,8 @@ public class JtlasSearchEdge  implements java.io.Serializable {
     /**
      * set 血缘表达式
      *
-     * @param expression
+     * @param expression 血缘表达式
+     * @return JtlasSearchEdge
      */
     public JtlasSearchEdge expression(String expression) {
         this.expression = expression;
@@ -167,7 +170,8 @@ public class JtlasSearchEdge  implements java.io.Serializable {
     /**
      * set 边类型
      *
-     * @param edgeType
+     * @param edgeType 边类型
+     * @return JtlasSearchEdge
      */
     public JtlasSearchEdge edgeType(String edgeType) {
         this.edgeType = edgeType;

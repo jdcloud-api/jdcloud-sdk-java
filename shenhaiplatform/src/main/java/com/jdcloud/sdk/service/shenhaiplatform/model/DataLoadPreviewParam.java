@@ -163,7 +163,8 @@ public class DataLoadPreviewParam  implements java.io.Serializable {
     /**
      * set 文件类型：csv、text、xls、xlsx
      *
-     * @param fileType
+     * @param fileType 文件类型：csv、text、xls、xlsx
+     * @return DataLoadPreviewParam
      */
     public DataLoadPreviewParam fileType(String fileType) {
         this.fileType = fileType;
@@ -174,7 +175,8 @@ public class DataLoadPreviewParam  implements java.io.Serializable {
     /**
      * set 文件路径（key）
      *
-     * @param fileKey
+     * @param fileKey 文件路径（key）
+     * @return DataLoadPreviewParam
      */
     public DataLoadPreviewParam fileKey(String fileKey) {
         this.fileKey = fileKey;
@@ -185,7 +187,8 @@ public class DataLoadPreviewParam  implements java.io.Serializable {
     /**
      * set 分隔符: en-comma 英文逗号，en-semicolon 英文分号，space 空格，pipe 竖线，hash 井号，and 与号，line-feed-lf 换行符（UNIX），line-feed-crlf 换行符（Windows）
      *
-     * @param delimiter
+     * @param delimiter 分隔符: en-comma 英文逗号，en-semicolon 英文分号，space 空格，pipe 竖线，hash 井号，and 与号，line-feed-lf 换行符（UNIX），line-feed-crlf 换行符（Windows）
+     * @return DataLoadPreviewParam
      */
     public DataLoadPreviewParam delimiter(String delimiter) {
         this.delimiter = delimiter;
@@ -196,7 +199,8 @@ public class DataLoadPreviewParam  implements java.io.Serializable {
     /**
      * set 导入起始行
      *
-     * @param startRow
+     * @param startRow 导入起始行
+     * @return DataLoadPreviewParam
      */
     public DataLoadPreviewParam startRow(Integer startRow) {
         this.startRow = startRow;
@@ -207,7 +211,8 @@ public class DataLoadPreviewParam  implements java.io.Serializable {
     /**
      * set 字符集: GBK、UTF-8、ISO-8859-1，默认为
      *
-     * @param characterSet
+     * @param characterSet 字符集: GBK、UTF-8、ISO-8859-1，默认为
+     * @return DataLoadPreviewParam
      */
     public DataLoadPreviewParam characterSet(String characterSet) {
         this.characterSet = characterSet;

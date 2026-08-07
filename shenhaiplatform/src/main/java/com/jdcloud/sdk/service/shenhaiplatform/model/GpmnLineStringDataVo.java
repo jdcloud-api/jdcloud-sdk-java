@@ -88,7 +88,8 @@ public class GpmnLineStringDataVo  implements java.io.Serializable {
     /**
     * set 统计信息清单
     *
-    * @param countInfoList
+    * @param countInfoList 统计信息清单
+    * @return GpmnLineStringDataVo
     */
     public GpmnLineStringDataVo countInfoList(List<GpmnLineData> countInfoList) {
         this.countInfoList = countInfoList;
@@ -99,7 +100,8 @@ public class GpmnLineStringDataVo  implements java.io.Serializable {
     /**
     * set xdata
     *
-    * @param xdata
+    * @param xdata 
+    * @return GpmnLineStringDataVo
     */
     public GpmnLineStringDataVo xdata(List<String> xdata) {
         this.xdata = xdata;

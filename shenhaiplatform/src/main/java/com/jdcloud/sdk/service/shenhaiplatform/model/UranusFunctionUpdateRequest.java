@@ -310,7 +310,8 @@ public class UranusFunctionUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return UranusFunctionUpdateRequest
      */
     public UranusFunctionUpdateRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -321,7 +322,8 @@ public class UranusFunctionUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 命名空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 命名空间code
+     * @return UranusFunctionUpdateRequest
      */
     public UranusFunctionUpdateRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -332,7 +334,8 @@ public class UranusFunctionUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 函数id
      *
-     * @param functionId
+     * @param functionId 函数id
+     * @return UranusFunctionUpdateRequest
      */
     public UranusFunctionUpdateRequest functionId(Integer functionId) {
         this.functionId = functionId;
@@ -343,7 +346,8 @@ public class UranusFunctionUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 函数主类全路径
      *
-     * @param className
+     * @param className 函数主类全路径
+     * @return UranusFunctionUpdateRequest
      */
     public UranusFunctionUpdateRequest className(String className) {
         this.className = className;
@@ -354,7 +358,8 @@ public class UranusFunctionUpdateRequest extends JdcloudRequest implements java.
     /**
     * set 负责人
     *
-    * @param managers
+    * @param managers 负责人
+    * @return UranusFunctionUpdateRequest
     */
     public UranusFunctionUpdateRequest managers(List<String> managers) {
         this.managers = managers;
@@ -365,7 +370,8 @@ public class UranusFunctionUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 分类目录id
      *
-     * @param functionCatalogId
+     * @param functionCatalogId 分类目录id
+     * @return UranusFunctionUpdateRequest
      */
     public UranusFunctionUpdateRequest functionCatalogId(Integer functionCatalogId) {
         this.functionCatalogId = functionCatalogId;
@@ -376,7 +382,8 @@ public class UranusFunctionUpdateRequest extends JdcloudRequest implements java.
     /**
     * set 依赖的资源code（包括资源文件/资源目录）
     *
-    * @param resourceCodes
+    * @param resourceCodes 依赖的资源code（包括资源文件/资源目录）
+    * @return UranusFunctionUpdateRequest
     */
     public UranusFunctionUpdateRequest resourceCodes(List<String> resourceCodes) {
         this.resourceCodes = resourceCodes;
@@ -387,7 +394,8 @@ public class UranusFunctionUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 函数格式
      *
-     * @param functionFormat
+     * @param functionFormat 函数格式
+     * @return UranusFunctionUpdateRequest
      */
     public UranusFunctionUpdateRequest functionFormat(String functionFormat) {
         this.functionFormat = functionFormat;
@@ -398,7 +406,8 @@ public class UranusFunctionUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 函数使用说明
      *
-     * @param functionUsage
+     * @param functionUsage 函数使用说明
+     * @return UranusFunctionUpdateRequest
      */
     public UranusFunctionUpdateRequest functionUsage(String functionUsage) {
         this.functionUsage = functionUsage;
@@ -409,7 +418,8 @@ public class UranusFunctionUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusFunctionUpdateRequest
      */
     public UranusFunctionUpdateRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -420,7 +430,8 @@ public class UranusFunctionUpdateRequest extends JdcloudRequest implements java.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusFunctionUpdateRequest
      */
     public UranusFunctionUpdateRequest appName(String appName) {
         this.appName = appName;

@@ -114,7 +114,8 @@ public class PreviewPackageResult extends JdcloudResult implements java.io.Seria
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return PreviewPackageResult
      */
     public PreviewPackageResult code(String code) {
         this.code = code;
@@ -125,7 +126,8 @@ public class PreviewPackageResult extends JdcloudResult implements java.io.Seria
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return PreviewPackageResult
      */
     public PreviewPackageResult message(String message) {
         this.message = message;
@@ -136,7 +138,8 @@ public class PreviewPackageResult extends JdcloudResult implements java.io.Seria
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return PreviewPackageResult
     */
     public PreviewPackageResult result(List<PreviewPackageVo> result) {
         this.result = result;

@@ -87,7 +87,8 @@ public class DeletePublishObjResult extends JdcloudResult implements java.io.Ser
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return DeletePublishObjResult
      */
     public DeletePublishObjResult code(String code) {
         this.code = code;
@@ -98,7 +99,8 @@ public class DeletePublishObjResult extends JdcloudResult implements java.io.Ser
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return DeletePublishObjResult
      */
     public DeletePublishObjResult message(String message) {
         this.message = message;

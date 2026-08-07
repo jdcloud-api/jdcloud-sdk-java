@@ -62,7 +62,8 @@ public class DeleteFunctionCatalogReq  implements java.io.Serializable {
     /**
      * set 分类目录code
      *
-     * @param functionCatalogId
+     * @param functionCatalogId 分类目录code
+     * @return DeleteFunctionCatalogReq
      */
     public DeleteFunctionCatalogReq functionCatalogId(Integer functionCatalogId) {
         this.functionCatalogId = functionCatalogId;

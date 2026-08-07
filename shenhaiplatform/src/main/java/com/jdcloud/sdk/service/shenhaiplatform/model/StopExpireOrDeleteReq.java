@@ -182,7 +182,8 @@ public class StopExpireOrDeleteReq  implements java.io.Serializable {
     /**
      * set companyCode
      *
-     * @param companyCode
+     * @param companyCode 
+     * @return StopExpireOrDeleteReq
      */
     public StopExpireOrDeleteReq companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -193,7 +194,8 @@ public class StopExpireOrDeleteReq  implements java.io.Serializable {
     /**
      * set 主账户pin
      *
-     * @param account
+     * @param account 主账户pin
+     * @return StopExpireOrDeleteReq
      */
     public StopExpireOrDeleteReq account(String account) {
         this.account = account;
@@ -204,7 +206,8 @@ public class StopExpireOrDeleteReq  implements java.io.Serializable {
     /**
      * set 类型:过期停服 或 过期删除
      *
-     * @param handleStatus
+     * @param handleStatus 类型:过期停服 或 过期删除
+     * @return StopExpireOrDeleteReq
      */
     public StopExpireOrDeleteReq handleStatus(String handleStatus) {
         this.handleStatus = handleStatus;
@@ -215,7 +218,8 @@ public class StopExpireOrDeleteReq  implements java.io.Serializable {
     /**
      * set 地区
      *
-     * @param region
+     * @param region 地区
+     * @return StopExpireOrDeleteReq
      */
     public StopExpireOrDeleteReq region(String region) {
         this.region = region;
@@ -226,7 +230,8 @@ public class StopExpireOrDeleteReq  implements java.io.Serializable {
     /**
      * set sourceId
      *
-     * @param sourceId
+     * @param sourceId 
+     * @return StopExpireOrDeleteReq
      */
     public StopExpireOrDeleteReq sourceId(String sourceId) {
         this.sourceId = sourceId;
@@ -237,7 +242,8 @@ public class StopExpireOrDeleteReq  implements java.io.Serializable {
     /**
      * set resourceId
      *
-     * @param resourceId
+     * @param resourceId 
+     * @return StopExpireOrDeleteReq
      */
     public StopExpireOrDeleteReq resourceId(String resourceId) {
         this.resourceId = resourceId;

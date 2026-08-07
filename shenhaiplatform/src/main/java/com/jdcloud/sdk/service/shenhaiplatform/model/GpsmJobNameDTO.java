@@ -86,7 +86,8 @@ public class GpsmJobNameDTO  implements java.io.Serializable {
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GpsmJobNameDTO
      */
     public GpsmJobNameDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -97,7 +98,8 @@ public class GpsmJobNameDTO  implements java.io.Serializable {
     /**
      * set 客户作业名
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名
+     * @return GpsmJobNameDTO
      */
     public GpsmJobNameDTO cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;

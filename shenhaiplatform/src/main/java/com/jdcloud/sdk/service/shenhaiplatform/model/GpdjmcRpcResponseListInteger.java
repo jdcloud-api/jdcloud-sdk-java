@@ -136,7 +136,8 @@ public class GpdjmcRpcResponseListInteger  implements java.io.Serializable {
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GpdjmcRpcResponseListInteger
      */
     public GpdjmcRpcResponseListInteger success(Integer success) {
         this.success = success;
@@ -147,7 +148,8 @@ public class GpdjmcRpcResponseListInteger  implements java.io.Serializable {
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GpdjmcRpcResponseListInteger
      */
     public GpdjmcRpcResponseListInteger code(String code) {
         this.code = code;
@@ -158,7 +160,8 @@ public class GpdjmcRpcResponseListInteger  implements java.io.Serializable {
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GpdjmcRpcResponseListInteger
      */
     public GpdjmcRpcResponseListInteger msg(String msg) {
         this.msg = msg;
@@ -169,7 +172,8 @@ public class GpdjmcRpcResponseListInteger  implements java.io.Serializable {
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return GpdjmcRpcResponseListInteger
     */
     public GpdjmcRpcResponseListInteger result(List<Integer> result) {
         this.result = result;

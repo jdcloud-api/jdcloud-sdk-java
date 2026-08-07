@@ -246,7 +246,8 @@ public class UranusScriptSaveContentRequest extends JdcloudRequest implements ja
     /**
      * set 文件Code
      *
-     * @param fileCode
+     * @param fileCode 文件Code
+     * @return UranusScriptSaveContentRequest
      */
     public UranusScriptSaveContentRequest fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -257,7 +258,8 @@ public class UranusScriptSaveContentRequest extends JdcloudRequest implements ja
     /**
      * set 文件内容
      *
-     * @param content
+     * @param content 文件内容
+     * @return UranusScriptSaveContentRequest
      */
     public UranusScriptSaveContentRequest content(String content) {
         this.content = content;
@@ -268,7 +270,8 @@ public class UranusScriptSaveContentRequest extends JdcloudRequest implements ja
     /**
      * set 文件类型 后缀名
      *
-     * @param fileType
+     * @param fileType 文件类型 后缀名
+     * @return UranusScriptSaveContentRequest
      */
     public UranusScriptSaveContentRequest fileType(String fileType) {
         this.fileType = fileType;
@@ -279,7 +282,8 @@ public class UranusScriptSaveContentRequest extends JdcloudRequest implements ja
     /**
      * set 创建时间
      *
-     * @param createdTime
+     * @param createdTime 创建时间
+     * @return UranusScriptSaveContentRequest
      */
     public UranusScriptSaveContentRequest createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -290,7 +294,8 @@ public class UranusScriptSaveContentRequest extends JdcloudRequest implements ja
     /**
      * set 锁状态
      *
-     * @param lockStatus
+     * @param lockStatus 锁状态
+     * @return UranusScriptSaveContentRequest
      */
     public UranusScriptSaveContentRequest lockStatus(Integer lockStatus) {
         this.lockStatus = lockStatus;
@@ -301,7 +306,8 @@ public class UranusScriptSaveContentRequest extends JdcloudRequest implements ja
     /**
      * set 获得锁的用户
      *
-     * @param lockUser
+     * @param lockUser 获得锁的用户
+     * @return UranusScriptSaveContentRequest
      */
     public UranusScriptSaveContentRequest lockUser(String lockUser) {
         this.lockUser = lockUser;
@@ -312,7 +318,8 @@ public class UranusScriptSaveContentRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusScriptSaveContentRequest
      */
     public UranusScriptSaveContentRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -323,7 +330,8 @@ public class UranusScriptSaveContentRequest extends JdcloudRequest implements ja
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusScriptSaveContentRequest
      */
     public UranusScriptSaveContentRequest appName(String appName) {
         this.appName = appName;

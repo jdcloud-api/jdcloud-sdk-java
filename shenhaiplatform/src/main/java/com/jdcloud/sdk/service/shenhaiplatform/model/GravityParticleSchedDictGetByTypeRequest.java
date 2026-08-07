@@ -356,7 +356,8 @@ public class GravityParticleSchedDictGetByTypeRequest extends JdcloudRequest imp
     /**
      * set 数据字典id
      *
-     * @param id
+     * @param id 数据字典id
+     * @return GravityParticleSchedDictGetByTypeRequest
      */
     public GravityParticleSchedDictGetByTypeRequest id(Long id) {
         this.id = id;
@@ -367,7 +368,8 @@ public class GravityParticleSchedDictGetByTypeRequest extends JdcloudRequest imp
     /**
      * set 数据字典code
      *
-     * @param dictCode
+     * @param dictCode 数据字典code
+     * @return GravityParticleSchedDictGetByTypeRequest
      */
     public GravityParticleSchedDictGetByTypeRequest dictCode(String dictCode) {
         this.dictCode = dictCode;
@@ -378,7 +380,8 @@ public class GravityParticleSchedDictGetByTypeRequest extends JdcloudRequest imp
     /**
      * set 数据字典父级code
      *
-     * @param pDictCode
+     * @param pDictCode 数据字典父级code
+     * @return GravityParticleSchedDictGetByTypeRequest
      */
     public GravityParticleSchedDictGetByTypeRequest pDictCode(String pDictCode) {
         this.pDictCode = pDictCode;
@@ -389,7 +392,8 @@ public class GravityParticleSchedDictGetByTypeRequest extends JdcloudRequest imp
     /**
      * set 数据字典名称
      *
-     * @param dictName
+     * @param dictName 数据字典名称
+     * @return GravityParticleSchedDictGetByTypeRequest
      */
     public GravityParticleSchedDictGetByTypeRequest dictName(String dictName) {
         this.dictName = dictName;
@@ -400,7 +404,8 @@ public class GravityParticleSchedDictGetByTypeRequest extends JdcloudRequest imp
     /**
      * set 数据字典排序
      *
-     * @param dictSort
+     * @param dictSort 数据字典排序
+     * @return GravityParticleSchedDictGetByTypeRequest
      */
     public GravityParticleSchedDictGetByTypeRequest dictSort(Integer dictSort) {
         this.dictSort = dictSort;
@@ -411,7 +416,8 @@ public class GravityParticleSchedDictGetByTypeRequest extends JdcloudRequest imp
     /**
      * set 数据字典备份
      *
-     * @param dictBak
+     * @param dictBak 数据字典备份
+     * @return GravityParticleSchedDictGetByTypeRequest
      */
     public GravityParticleSchedDictGetByTypeRequest dictBak(String dictBak) {
         this.dictBak = dictBak;
@@ -422,7 +428,8 @@ public class GravityParticleSchedDictGetByTypeRequest extends JdcloudRequest imp
     /**
      * set 数据字典描述
      *
-     * @param dictDesc
+     * @param dictDesc 数据字典描述
+     * @return GravityParticleSchedDictGetByTypeRequest
      */
     public GravityParticleSchedDictGetByTypeRequest dictDesc(String dictDesc) {
         this.dictDesc = dictDesc;
@@ -433,7 +440,8 @@ public class GravityParticleSchedDictGetByTypeRequest extends JdcloudRequest imp
     /**
      * set 是否有效 1: 有效, 0: 无效
      *
-     * @param isValid
+     * @param isValid 是否有效 1: 有效, 0: 无效
+     * @return GravityParticleSchedDictGetByTypeRequest
      */
     public GravityParticleSchedDictGetByTypeRequest isValid(String isValid) {
         this.isValid = isValid;
@@ -444,7 +452,8 @@ public class GravityParticleSchedDictGetByTypeRequest extends JdcloudRequest imp
     /**
      * set 是否删除 1: 删除, 0: 未删除
      *
-     * @param isDel
+     * @param isDel 是否删除 1: 删除, 0: 未删除
+     * @return GravityParticleSchedDictGetByTypeRequest
      */
     public GravityParticleSchedDictGetByTypeRequest isDel(String isDel) {
         this.isDel = isDel;
@@ -455,7 +464,8 @@ public class GravityParticleSchedDictGetByTypeRequest extends JdcloudRequest imp
     /**
      * set 创建时间
      *
-     * @param createdTime
+     * @param createdTime 创建时间
+     * @return GravityParticleSchedDictGetByTypeRequest
      */
     public GravityParticleSchedDictGetByTypeRequest createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -466,7 +476,8 @@ public class GravityParticleSchedDictGetByTypeRequest extends JdcloudRequest imp
     /**
      * set 修改时间
      *
-     * @param modifiedTime
+     * @param modifiedTime 修改时间
+     * @return GravityParticleSchedDictGetByTypeRequest
      */
     public GravityParticleSchedDictGetByTypeRequest modifiedTime(String modifiedTime) {
         this.modifiedTime = modifiedTime;
@@ -477,7 +488,8 @@ public class GravityParticleSchedDictGetByTypeRequest extends JdcloudRequest imp
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleSchedDictGetByTypeRequest
      */
     public GravityParticleSchedDictGetByTypeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -488,7 +500,8 @@ public class GravityParticleSchedDictGetByTypeRequest extends JdcloudRequest imp
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleSchedDictGetByTypeRequest
      */
     public GravityParticleSchedDictGetByTypeRequest appName(String appName) {
         this.appName = appName;

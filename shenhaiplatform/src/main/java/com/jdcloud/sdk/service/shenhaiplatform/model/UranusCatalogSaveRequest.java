@@ -166,7 +166,8 @@ public class UranusCatalogSaveRequest extends JdcloudRequest implements java.io.
     /**
      * set 目录名称
      *
-     * @param catalogName
+     * @param catalogName 目录名称
+     * @return UranusCatalogSaveRequest
      */
     public UranusCatalogSaveRequest catalogName(String catalogName) {
         this.catalogName = catalogName;
@@ -177,7 +178,8 @@ public class UranusCatalogSaveRequest extends JdcloudRequest implements java.io.
     /**
      * set 0：非叶子目录， 1：叶子目录
      *
-     * @param catalogType
+     * @param catalogType 0：非叶子目录， 1：叶子目录
+     * @return UranusCatalogSaveRequest
      */
     public UranusCatalogSaveRequest catalogType(Integer catalogType) {
         this.catalogType = catalogType;
@@ -188,7 +190,8 @@ public class UranusCatalogSaveRequest extends JdcloudRequest implements java.io.
     /**
      * set 父目录code
      *
-     * @param parentCode
+     * @param parentCode 父目录code
+     * @return UranusCatalogSaveRequest
      */
     public UranusCatalogSaveRequest parentCode(String parentCode) {
         this.parentCode = parentCode;
@@ -199,7 +202,8 @@ public class UranusCatalogSaveRequest extends JdcloudRequest implements java.io.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusCatalogSaveRequest
      */
     public UranusCatalogSaveRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -210,7 +214,8 @@ public class UranusCatalogSaveRequest extends JdcloudRequest implements java.io.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusCatalogSaveRequest
      */
     public UranusCatalogSaveRequest appName(String appName) {
         this.appName = appName;

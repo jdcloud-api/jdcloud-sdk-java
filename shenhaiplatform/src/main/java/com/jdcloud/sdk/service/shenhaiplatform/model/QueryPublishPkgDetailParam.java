@@ -62,7 +62,8 @@ public class QueryPublishPkgDetailParam  implements java.io.Serializable {
     /**
      * set ID
      *
-     * @param pkgId
+     * @param pkgId ID
+     * @return QueryPublishPkgDetailParam
      */
     public QueryPublishPkgDetailParam pkgId(Long pkgId) {
         this.pkgId = pkgId;

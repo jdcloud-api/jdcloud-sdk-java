@@ -192,7 +192,8 @@ public class UranusTableLikeRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 模糊搜索字段
      *
-     * @param tableLike
+     * @param tableLike 模糊搜索字段
+     * @return UranusTableLikeRequest
      */
     public UranusTableLikeRequest tableLike(String tableLike) {
         this.tableLike = tableLike;
@@ -203,7 +204,8 @@ public class UranusTableLikeRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 是否负责，1 负责、0不负责
      *
-     * @param auth
+     * @param auth 是否负责，1 负责、0不负责
+     * @return UranusTableLikeRequest
      */
     public UranusTableLikeRequest auth(Integer auth) {
         this.auth = auth;
@@ -214,7 +216,8 @@ public class UranusTableLikeRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 环境信息，dev 开发、prod 生产
      *
-     * @param env
+     * @param env 环境信息，dev 开发、prod 生产
+     * @return UranusTableLikeRequest
      */
     public UranusTableLikeRequest env(String env) {
         this.env = env;
@@ -225,7 +228,8 @@ public class UranusTableLikeRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 0 不强对比，1 开发、生产表强对比
      *
-     * @param diff
+     * @param diff 0 不强对比，1 开发、生产表强对比
+     * @return UranusTableLikeRequest
      */
     public UranusTableLikeRequest diff(Integer diff) {
         this.diff = diff;
@@ -236,7 +240,8 @@ public class UranusTableLikeRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTableLikeRequest
      */
     public UranusTableLikeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -247,7 +252,8 @@ public class UranusTableLikeRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTableLikeRequest
      */
     public UranusTableLikeRequest appName(String appName) {
         this.appName = appName;

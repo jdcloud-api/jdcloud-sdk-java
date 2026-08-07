@@ -166,7 +166,8 @@ public class JtlasWarehouseQueryTablesOwnedByUserRequest extends JdcloudRequest 
     /**
      * set 数据库（工作空间编码）
      *
-     * @param database
+     * @param database 数据库（工作空间编码）
+     * @return JtlasWarehouseQueryTablesOwnedByUserRequest
      */
     public JtlasWarehouseQueryTablesOwnedByUserRequest database(String database) {
         this.database = database;
@@ -177,7 +178,8 @@ public class JtlasWarehouseQueryTablesOwnedByUserRequest extends JdcloudRequest 
     /**
      * set 账户信息
      *
-     * @param creator
+     * @param creator 账户信息
+     * @return JtlasWarehouseQueryTablesOwnedByUserRequest
      */
     public JtlasWarehouseQueryTablesOwnedByUserRequest creator(String creator) {
         this.creator = creator;
@@ -188,7 +190,8 @@ public class JtlasWarehouseQueryTablesOwnedByUserRequest extends JdcloudRequest 
     /**
      * set 表名称
      *
-     * @param fuzzyName
+     * @param fuzzyName 表名称
+     * @return JtlasWarehouseQueryTablesOwnedByUserRequest
      */
     public JtlasWarehouseQueryTablesOwnedByUserRequest fuzzyName(String fuzzyName) {
         this.fuzzyName = fuzzyName;
@@ -199,7 +202,8 @@ public class JtlasWarehouseQueryTablesOwnedByUserRequest extends JdcloudRequest 
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasWarehouseQueryTablesOwnedByUserRequest
      */
     public JtlasWarehouseQueryTablesOwnedByUserRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -210,7 +214,8 @@ public class JtlasWarehouseQueryTablesOwnedByUserRequest extends JdcloudRequest 
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasWarehouseQueryTablesOwnedByUserRequest
      */
     public JtlasWarehouseQueryTablesOwnedByUserRequest appName(String appName) {
         this.appName = appName;

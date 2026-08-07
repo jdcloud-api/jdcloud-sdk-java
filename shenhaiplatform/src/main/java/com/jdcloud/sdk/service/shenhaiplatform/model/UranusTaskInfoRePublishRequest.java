@@ -116,7 +116,8 @@ public class UranusTaskInfoRePublishRequest extends JdcloudRequest implements ja
     /**
      * set 发布历史id
      *
-     * @param historyId
+     * @param historyId 发布历史id
+     * @return UranusTaskInfoRePublishRequest
      */
     public UranusTaskInfoRePublishRequest historyId(Integer historyId) {
         this.historyId = historyId;
@@ -127,7 +128,8 @@ public class UranusTaskInfoRePublishRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskInfoRePublishRequest
      */
     public UranusTaskInfoRePublishRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class UranusTaskInfoRePublishRequest extends JdcloudRequest implements ja
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskInfoRePublishRequest
      */
     public UranusTaskInfoRePublishRequest appName(String appName) {
         this.appName = appName;

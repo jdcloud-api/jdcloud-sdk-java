@@ -182,7 +182,8 @@ public class GpjmJobMonitorInfoDTO  implements java.io.Serializable {
     /**
      * set 告警类型
      *
-     * @param warningType
+     * @param warningType 告警类型
+     * @return GpjmJobMonitorInfoDTO
      */
     public GpjmJobMonitorInfoDTO warningType(String warningType) {
         this.warningType = warningType;
@@ -193,7 +194,8 @@ public class GpjmJobMonitorInfoDTO  implements java.io.Serializable {
     /**
      * set 通知接收人
      *
-     * @param notifiers
+     * @param notifiers 通知接收人
+     * @return GpjmJobMonitorInfoDTO
      */
     public GpjmJobMonitorInfoDTO notifiers(String notifiers) {
         this.notifiers = notifiers;
@@ -204,7 +206,8 @@ public class GpjmJobMonitorInfoDTO  implements java.io.Serializable {
     /**
      * set 启动延迟时间
      *
-     * @param startDeadlineTime
+     * @param startDeadlineTime 启动延迟时间
+     * @return GpjmJobMonitorInfoDTO
      */
     public GpjmJobMonitorInfoDTO startDeadlineTime(String startDeadlineTime) {
         this.startDeadlineTime = startDeadlineTime;
@@ -215,7 +218,8 @@ public class GpjmJobMonitorInfoDTO  implements java.io.Serializable {
     /**
      * set 结束延迟时间
      *
-     * @param endDeadlineTime
+     * @param endDeadlineTime 结束延迟时间
+     * @return GpjmJobMonitorInfoDTO
      */
     public GpjmJobMonitorInfoDTO endDeadlineTime(String endDeadlineTime) {
         this.endDeadlineTime = endDeadlineTime;
@@ -226,7 +230,8 @@ public class GpjmJobMonitorInfoDTO  implements java.io.Serializable {
     /**
      * set 通知事件类型
      *
-     * @param eventType
+     * @param eventType 通知事件类型
+     * @return GpjmJobMonitorInfoDTO
      */
     public GpjmJobMonitorInfoDTO eventType(String eventType) {
         this.eventType = eventType;
@@ -237,7 +242,8 @@ public class GpjmJobMonitorInfoDTO  implements java.io.Serializable {
     /**
      * set 通知事件类型描述
      *
-     * @param eventTypeDesc
+     * @param eventTypeDesc 通知事件类型描述
+     * @return GpjmJobMonitorInfoDTO
      */
     public GpjmJobMonitorInfoDTO eventTypeDesc(String eventTypeDesc) {
         this.eventTypeDesc = eventTypeDesc;

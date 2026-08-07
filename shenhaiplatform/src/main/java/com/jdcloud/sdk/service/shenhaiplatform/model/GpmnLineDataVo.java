@@ -112,7 +112,8 @@ public class GpmnLineDataVo  implements java.io.Serializable {
     /**
     * set 数据日期
     *
-    * @param txDate
+    * @param txDate 数据日期
+    * @return GpmnLineDataVo
     */
     public GpmnLineDataVo txDate(List<Integer> txDate) {
         this.txDate = txDate;
@@ -123,7 +124,8 @@ public class GpmnLineDataVo  implements java.io.Serializable {
     /**
     * set 成功作业统计列表
     *
-    * @param jobSuccessList
+    * @param jobSuccessList 成功作业统计列表
+    * @return GpmnLineDataVo
     */
     public GpmnLineDataVo jobSuccessList(List<GpmnLineData> jobSuccessList) {
         this.jobSuccessList = jobSuccessList;
@@ -134,7 +136,8 @@ public class GpmnLineDataVo  implements java.io.Serializable {
     /**
     * set xdata
     *
-    * @param xdata
+    * @param xdata 
+    * @return GpmnLineDataVo
     */
     public GpmnLineDataVo xdata(List<Integer> xdata) {
         this.xdata = xdata;

@@ -136,7 +136,8 @@ public class GpdjmcScriptFileDTO  implements java.io.Serializable {
     /**
     * set 脚本文件字节数组
     *
-    * @param scriptByte
+    * @param scriptByte 脚本文件字节数组
+    * @return GpdjmcScriptFileDTO
     */
     public GpdjmcScriptFileDTO scriptByte(List<String> scriptByte) {
         this.scriptByte = scriptByte;
@@ -147,7 +148,8 @@ public class GpdjmcScriptFileDTO  implements java.io.Serializable {
     /**
      * set 脚本名称
      *
-     * @param scriptName
+     * @param scriptName 脚本名称
+     * @return GpdjmcScriptFileDTO
      */
     public GpdjmcScriptFileDTO scriptName(String scriptName) {
         this.scriptName = scriptName;
@@ -158,7 +160,8 @@ public class GpdjmcScriptFileDTO  implements java.io.Serializable {
     /**
      * set 任务名称
      *
-     * @param jobName
+     * @param jobName 任务名称
+     * @return GpdjmcScriptFileDTO
      */
     public GpdjmcScriptFileDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -169,7 +172,8 @@ public class GpdjmcScriptFileDTO  implements java.io.Serializable {
     /**
      * set 脚本类型
      *
-     * @param scriptType
+     * @param scriptType 脚本类型
+     * @return GpdjmcScriptFileDTO
      */
     public GpdjmcScriptFileDTO scriptType(String scriptType) {
         this.scriptType = scriptType;

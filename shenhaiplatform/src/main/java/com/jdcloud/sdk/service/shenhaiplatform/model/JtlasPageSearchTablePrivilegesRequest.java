@@ -222,7 +222,8 @@ public class JtlasPageSearchTablePrivilegesRequest extends JdcloudRequest implem
     /**
      * set 数据库（工作空间编码）
      *
-     * @param database
+     * @param database 数据库（工作空间编码）
+     * @return JtlasPageSearchTablePrivilegesRequest
      */
     public JtlasPageSearchTablePrivilegesRequest database(String database) {
         this.database = database;
@@ -233,7 +234,8 @@ public class JtlasPageSearchTablePrivilegesRequest extends JdcloudRequest implem
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return JtlasPageSearchTablePrivilegesRequest
      */
     public JtlasPageSearchTablePrivilegesRequest tableName(String tableName) {
         this.tableName = tableName;
@@ -244,7 +246,8 @@ public class JtlasPageSearchTablePrivilegesRequest extends JdcloudRequest implem
     /**
     * set 权限类型
     *
-    * @param privilegeTypes
+    * @param privilegeTypes 权限类型
+    * @return JtlasPageSearchTablePrivilegesRequest
     */
     public JtlasPageSearchTablePrivilegesRequest privilegeTypes(List<String> privilegeTypes) {
         this.privilegeTypes = privilegeTypes;
@@ -255,7 +258,8 @@ public class JtlasPageSearchTablePrivilegesRequest extends JdcloudRequest implem
     /**
      * set 分页参数-页码
      *
-     * @param pageNum
+     * @param pageNum 分页参数-页码
+     * @return JtlasPageSearchTablePrivilegesRequest
      */
     public JtlasPageSearchTablePrivilegesRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -266,7 +270,8 @@ public class JtlasPageSearchTablePrivilegesRequest extends JdcloudRequest implem
     /**
      * set 分页参数-页数
      *
-     * @param pageSize
+     * @param pageSize 分页参数-页数
+     * @return JtlasPageSearchTablePrivilegesRequest
      */
     public JtlasPageSearchTablePrivilegesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -277,7 +282,8 @@ public class JtlasPageSearchTablePrivilegesRequest extends JdcloudRequest implem
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasPageSearchTablePrivilegesRequest
      */
     public JtlasPageSearchTablePrivilegesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -288,7 +294,8 @@ public class JtlasPageSearchTablePrivilegesRequest extends JdcloudRequest implem
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasPageSearchTablePrivilegesRequest
      */
     public JtlasPageSearchTablePrivilegesRequest appName(String appName) {
         this.appName = appName;

@@ -144,7 +144,8 @@ public class UranusTaskNodeCheckJobNameRequest extends JdcloudRequest implements
     /**
      * set 任务名称
      *
-     * @param jobName
+     * @param jobName 任务名称
+     * @return UranusTaskNodeCheckJobNameRequest
      */
     public UranusTaskNodeCheckJobNameRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -155,7 +156,8 @@ public class UranusTaskNodeCheckJobNameRequest extends JdcloudRequest implements
     /**
      * set 任务流Code
      *
-     * @param flowCode
+     * @param flowCode 任务流Code
+     * @return UranusTaskNodeCheckJobNameRequest
      */
     public UranusTaskNodeCheckJobNameRequest flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -166,7 +168,8 @@ public class UranusTaskNodeCheckJobNameRequest extends JdcloudRequest implements
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskNodeCheckJobNameRequest
      */
     public UranusTaskNodeCheckJobNameRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -177,7 +180,8 @@ public class UranusTaskNodeCheckJobNameRequest extends JdcloudRequest implements
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskNodeCheckJobNameRequest
      */
     public UranusTaskNodeCheckJobNameRequest appName(String appName) {
         this.appName = appName;

@@ -206,7 +206,8 @@ public class QueryWorkspaceListReq  implements java.io.Serializable {
     /**
      * set pageNum
      *
-     * @param pageNum
+     * @param pageNum 
+     * @return QueryWorkspaceListReq
      */
     public QueryWorkspaceListReq pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -217,7 +218,8 @@ public class QueryWorkspaceListReq  implements java.io.Serializable {
     /**
      * set pageSize
      *
-     * @param pageSize
+     * @param pageSize 
+     * @return QueryWorkspaceListReq
      */
     public QueryWorkspaceListReq pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -228,7 +230,8 @@ public class QueryWorkspaceListReq  implements java.io.Serializable {
     /**
      * set workspaceName
      *
-     * @param workspaceName
+     * @param workspaceName 
+     * @return QueryWorkspaceListReq
      */
     public QueryWorkspaceListReq workspaceName(String workspaceName) {
         this.workspaceName = workspaceName;
@@ -239,7 +242,8 @@ public class QueryWorkspaceListReq  implements java.io.Serializable {
     /**
      * set workspaceId
      *
-     * @param workspaceId
+     * @param workspaceId 
+     * @return QueryWorkspaceListReq
      */
     public QueryWorkspaceListReq workspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
@@ -250,7 +254,8 @@ public class QueryWorkspaceListReq  implements java.io.Serializable {
     /**
      * set manager
      *
-     * @param manager
+     * @param manager 
+     * @return QueryWorkspaceListReq
      */
     public QueryWorkspaceListReq manager(String manager) {
         this.manager = manager;
@@ -261,7 +266,8 @@ public class QueryWorkspaceListReq  implements java.io.Serializable {
     /**
      * set imProjectManager
      *
-     * @param imProjectManager
+     * @param imProjectManager 
+     * @return QueryWorkspaceListReq
      */
     public QueryWorkspaceListReq imProjectManager(Boolean imProjectManager) {
         this.imProjectManager = imProjectManager;
@@ -272,7 +278,8 @@ public class QueryWorkspaceListReq  implements java.io.Serializable {
     /**
      * set imInProject
      *
-     * @param imInProject
+     * @param imInProject 
+     * @return QueryWorkspaceListReq
      */
     public QueryWorkspaceListReq imInProject(Boolean imInProject) {
         this.imInProject = imInProject;

@@ -135,7 +135,8 @@ public class GravityParticleDubboJobManagerDeployJobEditResult extends JdcloudRe
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GravityParticleDubboJobManagerDeployJobEditResult
      */
     public GravityParticleDubboJobManagerDeployJobEditResult success(Integer success) {
         this.success = success;
@@ -146,7 +147,8 @@ public class GravityParticleDubboJobManagerDeployJobEditResult extends JdcloudRe
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GravityParticleDubboJobManagerDeployJobEditResult
      */
     public GravityParticleDubboJobManagerDeployJobEditResult code(String code) {
         this.code = code;
@@ -157,7 +159,8 @@ public class GravityParticleDubboJobManagerDeployJobEditResult extends JdcloudRe
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GravityParticleDubboJobManagerDeployJobEditResult
      */
     public GravityParticleDubboJobManagerDeployJobEditResult msg(String msg) {
         this.msg = msg;
@@ -168,7 +171,8 @@ public class GravityParticleDubboJobManagerDeployJobEditResult extends JdcloudRe
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return GravityParticleDubboJobManagerDeployJobEditResult
      */
     public GravityParticleDubboJobManagerDeployJobEditResult result(Boolean result) {
         this.result = result;

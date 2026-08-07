@@ -112,7 +112,8 @@ public class WorkspaceGetCurrentUserInfoResult extends JdcloudResult implements 
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return WorkspaceGetCurrentUserInfoResult
      */
     public WorkspaceGetCurrentUserInfoResult code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class WorkspaceGetCurrentUserInfoResult extends JdcloudResult implements 
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return WorkspaceGetCurrentUserInfoResult
      */
     public WorkspaceGetCurrentUserInfoResult message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class WorkspaceGetCurrentUserInfoResult extends JdcloudResult implements 
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return WorkspaceGetCurrentUserInfoResult
      */
     public WorkspaceGetCurrentUserInfoResult result(UcUsersResp result) {
         this.result = result;

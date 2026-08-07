@@ -285,7 +285,8 @@ public class UranusTaskFlowDetailRes  implements java.io.Serializable {
     /**
      * set 工作流名称
      *
-     * @param flowName
+     * @param flowName 工作流名称
+     * @return UranusTaskFlowDetailRes
      */
     public UranusTaskFlowDetailRes flowName(String flowName) {
         this.flowName = flowName;
@@ -296,7 +297,8 @@ public class UranusTaskFlowDetailRes  implements java.io.Serializable {
     /**
      * set 工作流描述
      *
-     * @param flowDesc
+     * @param flowDesc 工作流描述
+     * @return UranusTaskFlowDetailRes
      */
     public UranusTaskFlowDetailRes flowDesc(String flowDesc) {
         this.flowDesc = flowDesc;
@@ -307,7 +309,8 @@ public class UranusTaskFlowDetailRes  implements java.io.Serializable {
     /**
      * set 工作流所属目录
      *
-     * @param catalogCode
+     * @param catalogCode 工作流所属目录
+     * @return UranusTaskFlowDetailRes
      */
     public UranusTaskFlowDetailRes catalogCode(String catalogCode) {
         this.catalogCode = catalogCode;
@@ -318,7 +321,8 @@ public class UranusTaskFlowDetailRes  implements java.io.Serializable {
     /**
     * set 工作流协同人
     *
-    * @param workers
+    * @param workers 工作流协同人
+    * @return UranusTaskFlowDetailRes
     */
     public UranusTaskFlowDetailRes workers(List<String> workers) {
         this.workers = workers;
@@ -329,7 +333,8 @@ public class UranusTaskFlowDetailRes  implements java.io.Serializable {
     /**
      * set 工作流code
      *
-     * @param flowCode
+     * @param flowCode 工作流code
+     * @return UranusTaskFlowDetailRes
      */
     public UranusTaskFlowDetailRes flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -340,7 +345,8 @@ public class UranusTaskFlowDetailRes  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return UranusTaskFlowDetailRes
      */
     public UranusTaskFlowDetailRes manager(String manager) {
         this.manager = manager;
@@ -351,7 +357,8 @@ public class UranusTaskFlowDetailRes  implements java.io.Serializable {
     /**
      * set 0 未发布 1 已发布
      *
-     * @param flowStatus
+     * @param flowStatus 0 未发布 1 已发布
+     * @return UranusTaskFlowDetailRes
      */
     public UranusTaskFlowDetailRes flowStatus(Integer flowStatus) {
         this.flowStatus = flowStatus;
@@ -362,7 +369,8 @@ public class UranusTaskFlowDetailRes  implements java.io.Serializable {
     /**
      * set 工作流状态描述
      *
-     * @param flowStatusDesc
+     * @param flowStatusDesc 工作流状态描述
+     * @return UranusTaskFlowDetailRes
      */
     public UranusTaskFlowDetailRes flowStatusDesc(String flowStatusDesc) {
         this.flowStatusDesc = flowStatusDesc;
@@ -373,7 +381,8 @@ public class UranusTaskFlowDetailRes  implements java.io.Serializable {
     /**
      * set 0 未收藏 1 已收藏
      *
-     * @param collection
+     * @param collection 0 未收藏 1 已收藏
+     * @return UranusTaskFlowDetailRes
      */
     public UranusTaskFlowDetailRes collection(Integer collection) {
         this.collection = collection;
@@ -384,7 +393,8 @@ public class UranusTaskFlowDetailRes  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createdTime
+     * @param createdTime 创建时间
+     * @return UranusTaskFlowDetailRes
      */
     public UranusTaskFlowDetailRes createdTime(String createdTime) {
         this.createdTime = createdTime;

@@ -86,7 +86,8 @@ public class GpdjmcScriptInfoTemplateDTO  implements java.io.Serializable {
     /**
      * set label
      *
-     * @param label
+     * @param label 
+     * @return GpdjmcScriptInfoTemplateDTO
      */
     public GpdjmcScriptInfoTemplateDTO label(String label) {
         this.label = label;
@@ -97,7 +98,8 @@ public class GpdjmcScriptInfoTemplateDTO  implements java.io.Serializable {
     /**
      * set url
      *
-     * @param url
+     * @param url 
+     * @return GpdjmcScriptInfoTemplateDTO
      */
     public GpdjmcScriptInfoTemplateDTO url(String url) {
         this.url = url;

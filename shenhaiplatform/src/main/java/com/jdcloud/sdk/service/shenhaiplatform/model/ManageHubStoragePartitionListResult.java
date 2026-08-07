@@ -112,7 +112,8 @@ public class ManageHubStoragePartitionListResult extends JdcloudResult implement
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return ManageHubStoragePartitionListResult
      */
     public ManageHubStoragePartitionListResult code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class ManageHubStoragePartitionListResult extends JdcloudResult implement
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return ManageHubStoragePartitionListResult
      */
     public ManageHubStoragePartitionListResult message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class ManageHubStoragePartitionListResult extends JdcloudResult implement
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return ManageHubStoragePartitionListResult
      */
     public ManageHubStoragePartitionListResult result(PageVoJcwSpacePartUsedVo result) {
         this.result = result;

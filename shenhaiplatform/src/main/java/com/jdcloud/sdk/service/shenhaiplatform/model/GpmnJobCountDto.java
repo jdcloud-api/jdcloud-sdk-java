@@ -182,7 +182,8 @@ public class GpmnJobCountDto  implements java.io.Serializable {
     /**
      * set 实例总数
      *
-     * @param jobTotal
+     * @param jobTotal 实例总数
+     * @return GpmnJobCountDto
      */
     public GpmnJobCountDto jobTotal(Integer jobTotal) {
         this.jobTotal = jobTotal;
@@ -193,7 +194,8 @@ public class GpmnJobCountDto  implements java.io.Serializable {
     /**
      * set 运行结束实例数量
      *
-     * @param jobEnd
+     * @param jobEnd 运行结束实例数量
+     * @return GpmnJobCountDto
      */
     public GpmnJobCountDto jobEnd(Integer jobEnd) {
         this.jobEnd = jobEnd;
@@ -204,7 +206,8 @@ public class GpmnJobCountDto  implements java.io.Serializable {
     /**
      * set 等待中实例数量
      *
-     * @param jobPending
+     * @param jobPending 等待中实例数量
+     * @return GpmnJobCountDto
      */
     public GpmnJobCountDto jobPending(Integer jobPending) {
         this.jobPending = jobPending;
@@ -215,7 +218,8 @@ public class GpmnJobCountDto  implements java.io.Serializable {
     /**
      * set 运行成功实例数量
      *
-     * @param jobSuccess
+     * @param jobSuccess 运行成功实例数量
+     * @return GpmnJobCountDto
      */
     public GpmnJobCountDto jobSuccess(Integer jobSuccess) {
         this.jobSuccess = jobSuccess;
@@ -226,7 +230,8 @@ public class GpmnJobCountDto  implements java.io.Serializable {
     /**
      * set 运行超时实例数量
      *
-     * @param jobTimeout
+     * @param jobTimeout 运行超时实例数量
+     * @return GpmnJobCountDto
      */
     public GpmnJobCountDto jobTimeout(Integer jobTimeout) {
         this.jobTimeout = jobTimeout;
@@ -237,7 +242,8 @@ public class GpmnJobCountDto  implements java.io.Serializable {
     /**
      * set 运行不成功实例数量
      *
-     * @param jobUnsuccess
+     * @param jobUnsuccess 运行不成功实例数量
+     * @return GpmnJobCountDto
      */
     public GpmnJobCountDto jobUnsuccess(Integer jobUnsuccess) {
         this.jobUnsuccess = jobUnsuccess;

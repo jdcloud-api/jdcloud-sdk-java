@@ -116,7 +116,8 @@ public class ManageHubGravityOneClickRerunResubmitRequest extends JdcloudRequest
     /**
      * set 任务id
      *
-     * @param taskId
+     * @param taskId 任务id
+     * @return ManageHubGravityOneClickRerunResubmitRequest
      */
     public ManageHubGravityOneClickRerunResubmitRequest taskId(Integer taskId) {
         this.taskId = taskId;
@@ -127,7 +128,8 @@ public class ManageHubGravityOneClickRerunResubmitRequest extends JdcloudRequest
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubGravityOneClickRerunResubmitRequest
      */
     public ManageHubGravityOneClickRerunResubmitRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class ManageHubGravityOneClickRerunResubmitRequest extends JdcloudRequest
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubGravityOneClickRerunResubmitRequest
      */
     public ManageHubGravityOneClickRerunResubmitRequest appName(String appName) {
         this.appName = appName;

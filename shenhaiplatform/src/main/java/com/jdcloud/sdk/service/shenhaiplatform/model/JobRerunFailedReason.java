@@ -86,7 +86,8 @@ public class JobRerunFailedReason  implements java.io.Serializable {
     /**
      * set 作业ID, 形如: ws_123456789012345678_21_1743676930734_123
      *
-     * @param jobId
+     * @param jobId 作业ID, 形如: ws_123456789012345678_21_1743676930734_123
+     * @return JobRerunFailedReason
      */
     public JobRerunFailedReason jobId(String jobId) {
         this.jobId = jobId;
@@ -97,7 +98,8 @@ public class JobRerunFailedReason  implements java.io.Serializable {
     /**
      * set 重跑失败原因
      *
-     * @param reason
+     * @param reason 重跑失败原因
+     * @return JobRerunFailedReason
      */
     public JobRerunFailedReason reason(String reason) {
         this.reason = reason;

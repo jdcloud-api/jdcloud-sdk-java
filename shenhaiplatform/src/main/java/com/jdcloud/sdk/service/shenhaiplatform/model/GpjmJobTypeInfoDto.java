@@ -134,7 +134,8 @@ public class GpjmJobTypeInfoDto  implements java.io.Serializable {
     /**
      * set 作业基础类型编码
      *
-     * @param jobBaseType
+     * @param jobBaseType 作业基础类型编码
+     * @return GpjmJobTypeInfoDto
      */
     public GpjmJobTypeInfoDto jobBaseType(String jobBaseType) {
         this.jobBaseType = jobBaseType;
@@ -145,7 +146,8 @@ public class GpjmJobTypeInfoDto  implements java.io.Serializable {
     /**
      * set 作业基础类型描述
      *
-     * @param jobBaseTypeDesc
+     * @param jobBaseTypeDesc 作业基础类型描述
+     * @return GpjmJobTypeInfoDto
      */
     public GpjmJobTypeInfoDto jobBaseTypeDesc(String jobBaseTypeDesc) {
         this.jobBaseTypeDesc = jobBaseTypeDesc;
@@ -156,7 +158,8 @@ public class GpjmJobTypeInfoDto  implements java.io.Serializable {
     /**
      * set 作业子类型编码
      *
-     * @param jobChildType
+     * @param jobChildType 作业子类型编码
+     * @return GpjmJobTypeInfoDto
      */
     public GpjmJobTypeInfoDto jobChildType(String jobChildType) {
         this.jobChildType = jobChildType;
@@ -167,7 +170,8 @@ public class GpjmJobTypeInfoDto  implements java.io.Serializable {
     /**
      * set 作业子类型描述
      *
-     * @param jobChildTypeDesc
+     * @param jobChildTypeDesc 作业子类型描述
+     * @return GpjmJobTypeInfoDto
      */
     public GpjmJobTypeInfoDto jobChildTypeDesc(String jobChildTypeDesc) {
         this.jobChildTypeDesc = jobChildTypeDesc;

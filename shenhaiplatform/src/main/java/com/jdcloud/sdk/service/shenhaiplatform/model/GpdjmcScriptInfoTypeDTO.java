@@ -88,7 +88,8 @@ public class GpdjmcScriptInfoTypeDTO  implements java.io.Serializable {
     /**
     * set otherInfoList
     *
-    * @param otherInfoList
+    * @param otherInfoList 
+    * @return GpdjmcScriptInfoTypeDTO
     */
     public GpdjmcScriptInfoTypeDTO otherInfoList(List<GpdjmcScriptInfoTemplateDTO> otherInfoList) {
         this.otherInfoList = otherInfoList;
@@ -99,7 +100,8 @@ public class GpdjmcScriptInfoTypeDTO  implements java.io.Serializable {
     /**
     * set mgrDictListScript
     *
-    * @param mgrDictListScript
+    * @param mgrDictListScript 
+    * @return GpdjmcScriptInfoTypeDTO
     */
     public GpdjmcScriptInfoTypeDTO mgrDictListScript(List<GpdjmcMgrDictDTO> mgrDictListScript) {
         this.mgrDictListScript = mgrDictListScript;

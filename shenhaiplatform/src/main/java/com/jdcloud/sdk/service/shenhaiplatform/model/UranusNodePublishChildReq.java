@@ -86,7 +86,8 @@ public class UranusNodePublishChildReq  implements java.io.Serializable {
     /**
      * set 节点Code
      *
-     * @param taskCode
+     * @param taskCode 节点Code
+     * @return UranusNodePublishChildReq
      */
     public UranusNodePublishChildReq taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -97,7 +98,8 @@ public class UranusNodePublishChildReq  implements java.io.Serializable {
     /**
      * set 发布变更类型
      *
-     * @param publishStatus
+     * @param publishStatus 发布变更类型
+     * @return UranusNodePublishChildReq
      */
     public UranusNodePublishChildReq publishStatus(Integer publishStatus) {
         this.publishStatus = publishStatus;

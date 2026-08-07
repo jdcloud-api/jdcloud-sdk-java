@@ -86,7 +86,8 @@ public class JtlasSearchAggregation  implements java.io.Serializable {
     /**
      * set 聚合key
      *
-     * @param key
+     * @param key 聚合key
+     * @return JtlasSearchAggregation
      */
     public JtlasSearchAggregation key(String key) {
         this.key = key;
@@ -97,7 +98,8 @@ public class JtlasSearchAggregation  implements java.io.Serializable {
     /**
      * set 聚合数量
      *
-     * @param docCount
+     * @param docCount 聚合数量
+     * @return JtlasSearchAggregation
      */
     public JtlasSearchAggregation docCount(Integer docCount) {
         this.docCount = docCount;

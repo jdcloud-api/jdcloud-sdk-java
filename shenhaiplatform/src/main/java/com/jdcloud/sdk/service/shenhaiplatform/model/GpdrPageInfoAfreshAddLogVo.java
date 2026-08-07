@@ -472,7 +472,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set total
      *
-     * @param total
+     * @param total 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo total(Long total) {
         this.total = total;
@@ -483,7 +484,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
     * set list
     *
-    * @param list
+    * @param list 
+    * @return GpdrPageInfoAfreshAddLogVo
     */
     public GpdrPageInfoAfreshAddLogVo list(List<GpdrAfreshAddLogVo> list) {
         this.list = list;
@@ -494,7 +496,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set pageNum
      *
-     * @param pageNum
+     * @param pageNum 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -505,7 +508,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set pageSize
      *
-     * @param pageSize
+     * @param pageSize 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -516,7 +520,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set size
      *
-     * @param size
+     * @param size 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo size(Integer size) {
         this.size = size;
@@ -527,7 +532,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set startRow
      *
-     * @param startRow
+     * @param startRow 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo startRow(Integer startRow) {
         this.startRow = startRow;
@@ -538,7 +544,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set endRow
      *
-     * @param endRow
+     * @param endRow 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo endRow(Integer endRow) {
         this.endRow = endRow;
@@ -549,7 +556,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set pages
      *
-     * @param pages
+     * @param pages 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo pages(Integer pages) {
         this.pages = pages;
@@ -560,7 +568,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set prePage
      *
-     * @param prePage
+     * @param prePage 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo prePage(Integer prePage) {
         this.prePage = prePage;
@@ -571,7 +580,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set nextPage
      *
-     * @param nextPage
+     * @param nextPage 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo nextPage(Integer nextPage) {
         this.nextPage = nextPage;
@@ -582,7 +592,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set isFirstPage
      *
-     * @param isFirstPage
+     * @param isFirstPage 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo isFirstPage(Boolean isFirstPage) {
         this.isFirstPage = isFirstPage;
@@ -593,7 +604,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set isLastPage
      *
-     * @param isLastPage
+     * @param isLastPage 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo isLastPage(Boolean isLastPage) {
         this.isLastPage = isLastPage;
@@ -604,7 +616,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set hasPreviousPage
      *
-     * @param hasPreviousPage
+     * @param hasPreviousPage 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo hasPreviousPage(Boolean hasPreviousPage) {
         this.hasPreviousPage = hasPreviousPage;
@@ -615,7 +628,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set hasNextPage
      *
-     * @param hasNextPage
+     * @param hasNextPage 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo hasNextPage(Boolean hasNextPage) {
         this.hasNextPage = hasNextPage;
@@ -626,7 +640,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set navigatePages
      *
-     * @param navigatePages
+     * @param navigatePages 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo navigatePages(Integer navigatePages) {
         this.navigatePages = navigatePages;
@@ -637,7 +652,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
     * set navigatepageNums
     *
-    * @param navigatepageNums
+    * @param navigatepageNums 
+    * @return GpdrPageInfoAfreshAddLogVo
     */
     public GpdrPageInfoAfreshAddLogVo navigatepageNums(List<Integer> navigatepageNums) {
         this.navigatepageNums = navigatepageNums;
@@ -648,7 +664,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set navigateFirstPage
      *
-     * @param navigateFirstPage
+     * @param navigateFirstPage 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo navigateFirstPage(Integer navigateFirstPage) {
         this.navigateFirstPage = navigateFirstPage;
@@ -659,7 +676,8 @@ public class GpdrPageInfoAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set navigateLastPage
      *
-     * @param navigateLastPage
+     * @param navigateLastPage 
+     * @return GpdrPageInfoAfreshAddLogVo
      */
     public GpdrPageInfoAfreshAddLogVo navigateLastPage(Integer navigateLastPage) {
         this.navigateLastPage = navigateLastPage;

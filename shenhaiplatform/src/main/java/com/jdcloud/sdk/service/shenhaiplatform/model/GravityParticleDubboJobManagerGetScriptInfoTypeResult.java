@@ -136,7 +136,8 @@ public class GravityParticleDubboJobManagerGetScriptInfoTypeResult extends Jdclo
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GravityParticleDubboJobManagerGetScriptInfoTypeResult
      */
     public GravityParticleDubboJobManagerGetScriptInfoTypeResult success(Integer success) {
         this.success = success;
@@ -147,7 +148,8 @@ public class GravityParticleDubboJobManagerGetScriptInfoTypeResult extends Jdclo
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GravityParticleDubboJobManagerGetScriptInfoTypeResult
      */
     public GravityParticleDubboJobManagerGetScriptInfoTypeResult code(String code) {
         this.code = code;
@@ -158,7 +160,8 @@ public class GravityParticleDubboJobManagerGetScriptInfoTypeResult extends Jdclo
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GravityParticleDubboJobManagerGetScriptInfoTypeResult
      */
     public GravityParticleDubboJobManagerGetScriptInfoTypeResult msg(String msg) {
         this.msg = msg;
@@ -169,7 +172,8 @@ public class GravityParticleDubboJobManagerGetScriptInfoTypeResult extends Jdclo
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return GravityParticleDubboJobManagerGetScriptInfoTypeResult
      */
     public GravityParticleDubboJobManagerGetScriptInfoTypeResult result(GpdjmcScriptInfoTypeDTO result) {
         this.result = result;

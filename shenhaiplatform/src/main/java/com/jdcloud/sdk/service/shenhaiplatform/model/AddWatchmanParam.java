@@ -158,7 +158,8 @@ public class AddWatchmanParam  implements java.io.Serializable {
     /**
      * set 值班人名称
      *
-     * @param name
+     * @param name 值班人名称
+     * @return AddWatchmanParam
      */
     public AddWatchmanParam name(String name) {
         this.name = name;
@@ -169,7 +170,8 @@ public class AddWatchmanParam  implements java.io.Serializable {
     /**
      * set 值班人Pin
      *
-     * @param pin
+     * @param pin 值班人Pin
+     * @return AddWatchmanParam
      */
     public AddWatchmanParam pin(String pin) {
         this.pin = pin;
@@ -180,7 +182,8 @@ public class AddWatchmanParam  implements java.io.Serializable {
     /**
      * set 值班人Erp
      *
-     * @param erp
+     * @param erp 值班人Erp
+     * @return AddWatchmanParam
      */
     public AddWatchmanParam erp(String erp) {
         this.erp = erp;
@@ -191,7 +194,8 @@ public class AddWatchmanParam  implements java.io.Serializable {
     /**
      * set 值班人手机号
      *
-     * @param phoneNumber
+     * @param phoneNumber 值班人手机号
+     * @return AddWatchmanParam
      */
     public AddWatchmanParam phoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
@@ -202,7 +206,8 @@ public class AddWatchmanParam  implements java.io.Serializable {
     /**
      * set 值班人邮箱地址
      *
-     * @param email
+     * @param email 值班人邮箱地址
+     * @return AddWatchmanParam
      */
     public AddWatchmanParam email(String email) {
         this.email = email;

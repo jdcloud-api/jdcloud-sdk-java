@@ -118,7 +118,8 @@ public class GravityParticleDubboJobManagerGetEngineTemplateRequest extends Jdcl
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerGetEngineTemplateRequest
      */
     public GravityParticleDubboJobManagerGetEngineTemplateRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -129,7 +130,8 @@ public class GravityParticleDubboJobManagerGetEngineTemplateRequest extends Jdcl
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerGetEngineTemplateRequest
      */
     public GravityParticleDubboJobManagerGetEngineTemplateRequest appName(String appName) {
         this.appName = appName;
@@ -140,7 +142,8 @@ public class GravityParticleDubboJobManagerGetEngineTemplateRequest extends Jdcl
     /**
      * set scriptType
      *
-     * @param scriptType
+     * @param scriptType 
+     * @return GravityParticleDubboJobManagerGetEngineTemplateRequest
      */
     public GravityParticleDubboJobManagerGetEngineTemplateRequest scriptType(String scriptType) {
         this.scriptType = scriptType;

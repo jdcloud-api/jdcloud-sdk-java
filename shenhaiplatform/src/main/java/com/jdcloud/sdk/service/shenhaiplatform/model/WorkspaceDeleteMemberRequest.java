@@ -142,7 +142,8 @@ public class WorkspaceDeleteMemberRequest extends JdcloudRequest implements java
     /**
     * set 用户pin列表
     *
-    * @param userPinList
+    * @param userPinList 用户pin列表
+    * @return WorkspaceDeleteMemberRequest
     */
     public WorkspaceDeleteMemberRequest userPinList(List<String> userPinList) {
         this.userPinList = userPinList;
@@ -153,7 +154,8 @@ public class WorkspaceDeleteMemberRequest extends JdcloudRequest implements java
     /**
      * set workspaceId
      *
-     * @param workspaceId
+     * @param workspaceId 
+     * @return WorkspaceDeleteMemberRequest
      */
     public WorkspaceDeleteMemberRequest workspaceId(Long workspaceId) {
         this.workspaceId = workspaceId;
@@ -164,7 +166,8 @@ public class WorkspaceDeleteMemberRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceDeleteMemberRequest
      */
     public WorkspaceDeleteMemberRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -175,7 +178,8 @@ public class WorkspaceDeleteMemberRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceDeleteMemberRequest
      */
     public WorkspaceDeleteMemberRequest appName(String appName) {
         this.appName = appName;

@@ -112,7 +112,8 @@ public class GpdjmcDmrModelJobQueryDTO  implements java.io.Serializable {
     /**
      * set 作业Id
      *
-     * @param jobId
+     * @param jobId 作业Id
+     * @return GpdjmcDmrModelJobQueryDTO
      */
     public GpdjmcDmrModelJobQueryDTO jobId(Integer jobId) {
         this.jobId = jobId;
@@ -123,7 +124,8 @@ public class GpdjmcDmrModelJobQueryDTO  implements java.io.Serializable {
     /**
     * set 作业Id列表
     *
-    * @param jobIdList
+    * @param jobIdList 作业Id列表
+    * @return GpdjmcDmrModelJobQueryDTO
     */
     public GpdjmcDmrModelJobQueryDTO jobIdList(List<Integer> jobIdList) {
         this.jobIdList = jobIdList;
@@ -134,7 +136,8 @@ public class GpdjmcDmrModelJobQueryDTO  implements java.io.Serializable {
     /**
      * set 删除标识
      *
-     * @param deleteFlag
+     * @param deleteFlag 删除标识
+     * @return GpdjmcDmrModelJobQueryDTO
      */
     public GpdjmcDmrModelJobQueryDTO deleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;

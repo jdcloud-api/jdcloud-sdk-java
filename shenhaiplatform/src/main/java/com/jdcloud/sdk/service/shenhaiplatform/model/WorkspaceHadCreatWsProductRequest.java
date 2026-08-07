@@ -92,7 +92,8 @@ public class WorkspaceHadCreatWsProductRequest extends JdcloudRequest implements
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceHadCreatWsProductRequest
      */
     public WorkspaceHadCreatWsProductRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class WorkspaceHadCreatWsProductRequest extends JdcloudRequest implements
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceHadCreatWsProductRequest
      */
     public WorkspaceHadCreatWsProductRequest appName(String appName) {
         this.appName = appName;

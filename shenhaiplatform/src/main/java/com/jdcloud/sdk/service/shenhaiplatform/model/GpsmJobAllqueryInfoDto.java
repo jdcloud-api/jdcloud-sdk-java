@@ -86,7 +86,8 @@ public class GpsmJobAllqueryInfoDto  implements java.io.Serializable {
     /**
      * set schedJob
      *
-     * @param schedJob
+     * @param schedJob 
+     * @return GpsmJobAllqueryInfoDto
      */
     public GpsmJobAllqueryInfoDto schedJob(GpsmSchedJob schedJob) {
         this.schedJob = schedJob;
@@ -97,7 +98,8 @@ public class GpsmJobAllqueryInfoDto  implements java.io.Serializable {
     /**
      * set mgrJob
      *
-     * @param mgrJob
+     * @param mgrJob 
+     * @return GpsmJobAllqueryInfoDto
      */
     public GpsmJobAllqueryInfoDto mgrJob(GpsmMgrJob mgrJob) {
         this.mgrJob = mgrJob;

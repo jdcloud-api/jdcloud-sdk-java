@@ -344,7 +344,8 @@ public class JtlasPageSearchTablesRequest extends JdcloudRequest implements java
     /**
      * set 是否是过滤请求(必填)，如果是则返回aggregate结果
      *
-     * @param filterQuery
+     * @param filterQuery 是否是过滤请求(必填)，如果是则返回aggregate结果
+     * @return JtlasPageSearchTablesRequest
      */
     public JtlasPageSearchTablesRequest filterQuery(Boolean filterQuery) {
         this.filterQuery = filterQuery;
@@ -355,7 +356,8 @@ public class JtlasPageSearchTablesRequest extends JdcloudRequest implements java
     /**
      * set 搜索模式(必填)，准确和模糊检索
      *
-     * @param searchMode
+     * @param searchMode 搜索模式(必填)，准确和模糊检索
+     * @return JtlasPageSearchTablesRequest
      */
     public JtlasPageSearchTablesRequest searchMode(String searchMode) {
         this.searchMode = searchMode;
@@ -366,7 +368,8 @@ public class JtlasPageSearchTablesRequest extends JdcloudRequest implements java
     /**
      * set searchKeyword
      *
-     * @param searchKeyword
+     * @param searchKeyword 
+     * @return JtlasPageSearchTablesRequest
      */
     public JtlasPageSearchTablesRequest searchKeyword(String searchKeyword) {
         this.searchKeyword = searchKeyword;
@@ -377,7 +380,8 @@ public class JtlasPageSearchTablesRequest extends JdcloudRequest implements java
     /**
      * set 工作空间(必填)
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间(必填)
+     * @return JtlasPageSearchTablesRequest
      */
     public JtlasPageSearchTablesRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -388,7 +392,8 @@ public class JtlasPageSearchTablesRequest extends JdcloudRequest implements java
     /**
      * set dev或prod空字符串代表所有环境
      *
-     * @param env
+     * @param env dev或prod空字符串代表所有环境
+     * @return JtlasPageSearchTablesRequest
      */
     public JtlasPageSearchTablesRequest env(String env) {
         this.env = env;
@@ -399,7 +404,8 @@ public class JtlasPageSearchTablesRequest extends JdcloudRequest implements java
     /**
      * set 检索范围(必填)
      *
-     * @param searchRange
+     * @param searchRange 检索范围(必填)
+     * @return JtlasPageSearchTablesRequest
      */
     public JtlasPageSearchTablesRequest searchRange(String searchRange) {
         this.searchRange = searchRange;
@@ -410,7 +416,8 @@ public class JtlasPageSearchTablesRequest extends JdcloudRequest implements java
     /**
      * set 检索指定用户下的表的时候，需要传递(可选)
      *
-     * @param personInCharge
+     * @param personInCharge 检索指定用户下的表的时候，需要传递(可选)
+     * @return JtlasPageSearchTablesRequest
      */
     public JtlasPageSearchTablesRequest personInCharge(String personInCharge) {
         this.personInCharge = personInCharge;
@@ -421,7 +428,8 @@ public class JtlasPageSearchTablesRequest extends JdcloudRequest implements java
     /**
      * set 返回结果的排列方式(必填)，按照点击/创建时间升降/相关度
      *
-     * @param sort
+     * @param sort 返回结果的排列方式(必填)，按照点击/创建时间升降/相关度
+     * @return JtlasPageSearchTablesRequest
      */
     public JtlasPageSearchTablesRequest sort(String sort) {
         this.sort = sort;
@@ -432,7 +440,8 @@ public class JtlasPageSearchTablesRequest extends JdcloudRequest implements java
     /**
      * set 分页页码(必填)
      *
-     * @param pageNum
+     * @param pageNum 分页页码(必填)
+     * @return JtlasPageSearchTablesRequest
      */
     public JtlasPageSearchTablesRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -443,7 +452,8 @@ public class JtlasPageSearchTablesRequest extends JdcloudRequest implements java
     /**
      * set 分页大小(必填)
      *
-     * @param pageSize
+     * @param pageSize 分页大小(必填)
+     * @return JtlasPageSearchTablesRequest
      */
     public JtlasPageSearchTablesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -454,7 +464,8 @@ public class JtlasPageSearchTablesRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasPageSearchTablesRequest
      */
     public JtlasPageSearchTablesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -465,7 +476,8 @@ public class JtlasPageSearchTablesRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasPageSearchTablesRequest
      */
     public JtlasPageSearchTablesRequest appName(String appName) {
         this.appName = appName;

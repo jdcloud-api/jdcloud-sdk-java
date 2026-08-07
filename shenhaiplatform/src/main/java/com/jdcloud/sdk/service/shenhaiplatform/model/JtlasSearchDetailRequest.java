@@ -118,7 +118,8 @@ public class JtlasSearchDetailRequest extends JdcloudRequest implements java.io.
     /**
      * set 文档ID
      *
-     * @param id
+     * @param id 文档ID
+     * @return JtlasSearchDetailRequest
      */
     public JtlasSearchDetailRequest id(String id) {
         this.id = id;
@@ -129,7 +130,8 @@ public class JtlasSearchDetailRequest extends JdcloudRequest implements java.io.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasSearchDetailRequest
      */
     public JtlasSearchDetailRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class JtlasSearchDetailRequest extends JdcloudRequest implements java.io.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasSearchDetailRequest
      */
     public JtlasSearchDetailRequest appName(String appName) {
         this.appName = appName;

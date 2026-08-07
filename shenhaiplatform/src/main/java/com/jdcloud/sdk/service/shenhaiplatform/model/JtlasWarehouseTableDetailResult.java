@@ -112,7 +112,8 @@ public class JtlasWarehouseTableDetailResult extends JdcloudResult implements ja
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasWarehouseTableDetailResult
      */
     public JtlasWarehouseTableDetailResult code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class JtlasWarehouseTableDetailResult extends JdcloudResult implements ja
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasWarehouseTableDetailResult
      */
     public JtlasWarehouseTableDetailResult message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class JtlasWarehouseTableDetailResult extends JdcloudResult implements ja
     /**
      * set 数据或者是分页
      *
-     * @param result
+     * @param result 数据或者是分页
+     * @return JtlasWarehouseTableDetailResult
      */
     public JtlasWarehouseTableDetailResult result(JtlasWarehouseTable result) {
         this.result = result;

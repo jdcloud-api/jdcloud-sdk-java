@@ -278,7 +278,8 @@ public class SyncWsProductOrderReq  implements java.io.Serializable {
     /**
      * set region
      *
-     * @param region
+     * @param region 
+     * @return SyncWsProductOrderReq
      */
     public SyncWsProductOrderReq region(String region) {
         this.region = region;
@@ -289,7 +290,8 @@ public class SyncWsProductOrderReq  implements java.io.Serializable {
     /**
      * set billingVersion
      *
-     * @param billingVersion
+     * @param billingVersion 
+     * @return SyncWsProductOrderReq
      */
     public SyncWsProductOrderReq billingVersion(String billingVersion) {
         this.billingVersion = billingVersion;
@@ -300,7 +302,8 @@ public class SyncWsProductOrderReq  implements java.io.Serializable {
     /**
      * set billingModel
      *
-     * @param billingModel
+     * @param billingModel 
+     * @return SyncWsProductOrderReq
      */
     public SyncWsProductOrderReq billingModel(String billingModel) {
         this.billingModel = billingModel;
@@ -311,7 +314,8 @@ public class SyncWsProductOrderReq  implements java.io.Serializable {
     /**
      * set az
      *
-     * @param az
+     * @param az 
+     * @return SyncWsProductOrderReq
      */
     public SyncWsProductOrderReq az(String az) {
         this.az = az;
@@ -322,7 +326,8 @@ public class SyncWsProductOrderReq  implements java.io.Serializable {
     /**
      * set account
      *
-     * @param account
+     * @param account 
+     * @return SyncWsProductOrderReq
      */
     public SyncWsProductOrderReq account(String account) {
         this.account = account;
@@ -333,7 +338,8 @@ public class SyncWsProductOrderReq  implements java.io.Serializable {
     /**
      * set companyId
      *
-     * @param companyId
+     * @param companyId 
+     * @return SyncWsProductOrderReq
      */
     public SyncWsProductOrderReq companyId(String companyId) {
         this.companyId = companyId;
@@ -344,7 +350,8 @@ public class SyncWsProductOrderReq  implements java.io.Serializable {
     /**
      * set payPlan
      *
-     * @param payPlan
+     * @param payPlan 
+     * @return SyncWsProductOrderReq
      */
     public SyncWsProductOrderReq payPlan(String payPlan) {
         this.payPlan = payPlan;
@@ -355,7 +362,8 @@ public class SyncWsProductOrderReq  implements java.io.Serializable {
     /**
      * set autoRenewal
      *
-     * @param autoRenewal
+     * @param autoRenewal 
+     * @return SyncWsProductOrderReq
      */
     public SyncWsProductOrderReq autoRenewal(Boolean autoRenewal) {
         this.autoRenewal = autoRenewal;
@@ -366,7 +374,8 @@ public class SyncWsProductOrderReq  implements java.io.Serializable {
     /**
      * set purchaseDuration
      *
-     * @param purchaseDuration
+     * @param purchaseDuration 
+     * @return SyncWsProductOrderReq
      */
     public SyncWsProductOrderReq purchaseDuration(Integer purchaseDuration) {
         this.purchaseDuration = purchaseDuration;
@@ -377,7 +386,8 @@ public class SyncWsProductOrderReq  implements java.io.Serializable {
     /**
      * set orderUniqueKey
      *
-     * @param orderUniqueKey
+     * @param orderUniqueKey 
+     * @return SyncWsProductOrderReq
      */
     public SyncWsProductOrderReq orderUniqueKey(OrderUniqueKey orderUniqueKey) {
         this.orderUniqueKey = orderUniqueKey;

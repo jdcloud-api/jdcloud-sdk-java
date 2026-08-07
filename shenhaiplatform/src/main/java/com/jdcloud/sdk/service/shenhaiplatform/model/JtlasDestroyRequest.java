@@ -118,7 +118,8 @@ public class JtlasDestroyRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 租户编码
      *
-     * @param companyCode
+     * @param companyCode 租户编码
+     * @return JtlasDestroyRequest
      */
     public JtlasDestroyRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -129,7 +130,8 @@ public class JtlasDestroyRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasDestroyRequest
      */
     public JtlasDestroyRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class JtlasDestroyRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasDestroyRequest
      */
     public JtlasDestroyRequest appName(String appName) {
         this.appName = appName;

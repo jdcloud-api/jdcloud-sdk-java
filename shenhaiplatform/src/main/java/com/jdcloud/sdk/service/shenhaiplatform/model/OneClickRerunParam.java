@@ -86,7 +86,8 @@ public class OneClickRerunParam  implements java.io.Serializable {
     /**
      * set filterParam
      *
-     * @param filterParam
+     * @param filterParam 
+     * @return OneClickRerunParam
      */
     public OneClickRerunParam filterParam(ListTxDateStatusParam filterParam) {
         this.filterParam = filterParam;
@@ -97,7 +98,8 @@ public class OneClickRerunParam  implements java.io.Serializable {
     /**
      * set 备注
      *
-     * @param remark
+     * @param remark 备注
+     * @return OneClickRerunParam
      */
     public OneClickRerunParam remark(String remark) {
         this.remark = remark;

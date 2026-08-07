@@ -167,7 +167,8 @@ public class GpdrAfreshAddParam  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpdrAfreshAddParam
      */
     public GpdrAfreshAddParam jobName(String jobName) {
         this.jobName = jobName;
@@ -178,7 +179,8 @@ public class GpdrAfreshAddParam  implements java.io.Serializable {
     /**
      * set 补数开始时间
      *
-     * @param startDate
+     * @param startDate 补数开始时间
+     * @return GpdrAfreshAddParam
      */
     public GpdrAfreshAddParam startDate(String startDate) {
         this.startDate = startDate;
@@ -189,7 +191,8 @@ public class GpdrAfreshAddParam  implements java.io.Serializable {
     /**
      * set 补数结束时间
      *
-     * @param endDate
+     * @param endDate 补数结束时间
+     * @return GpdrAfreshAddParam
      */
     public GpdrAfreshAddParam endDate(String endDate) {
         this.endDate = endDate;
@@ -200,7 +203,8 @@ public class GpdrAfreshAddParam  implements java.io.Serializable {
     /**
      * set 并行数
      *
-     * @param parallelNum
+     * @param parallelNum 并行数
+     * @return GpdrAfreshAddParam
      */
     public GpdrAfreshAddParam parallelNum(Integer parallelNum) {
         this.parallelNum = parallelNum;
@@ -211,7 +215,8 @@ public class GpdrAfreshAddParam  implements java.io.Serializable {
     /**
     * set 子作业名称
     *
-    * @param childJobNames
+    * @param childJobNames 子作业名称
+    * @return GpdrAfreshAddParam
     */
     public GpdrAfreshAddParam childJobNames(List<String> childJobNames) {
         this.childJobNames = childJobNames;

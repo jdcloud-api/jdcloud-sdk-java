@@ -86,7 +86,8 @@ public class UranusPublishChangeTypeRes  implements java.io.Serializable {
     /**
      * set 发布变更类型
      *
-     * @param publicChangeType
+     * @param publicChangeType 发布变更类型
+     * @return UranusPublishChangeTypeRes
      */
     public UranusPublishChangeTypeRes publicChangeType(Integer publicChangeType) {
         this.publicChangeType = publicChangeType;
@@ -97,7 +98,8 @@ public class UranusPublishChangeTypeRes  implements java.io.Serializable {
     /**
      * set 发布变更类型描述
      *
-     * @param publicChangeTypeDesc
+     * @param publicChangeTypeDesc 发布变更类型描述
+     * @return UranusPublishChangeTypeRes
      */
     public UranusPublishChangeTypeRes publicChangeTypeDesc(String publicChangeTypeDesc) {
         this.publicChangeTypeDesc = publicChangeTypeDesc;

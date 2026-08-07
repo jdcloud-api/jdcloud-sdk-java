@@ -64,7 +64,8 @@ public class GpsmArrayObjectRequestResetJobInstReq  implements java.io.Serializa
     /**
     * set arrayObjectParam
     *
-    * @param arrayObjectParam
+    * @param arrayObjectParam 
+    * @return GpsmArrayObjectRequestResetJobInstReq
     */
     public GpsmArrayObjectRequestResetJobInstReq arrayObjectParam(List<GpsmResetJobInstReq> arrayObjectParam) {
         this.arrayObjectParam = arrayObjectParam;

@@ -136,7 +136,8 @@ public class UranusTaskFuzzyReq  implements java.io.Serializable {
     /**
      * set 模糊作业名称
      *
-     * @param jobName
+     * @param jobName 模糊作业名称
+     * @return UranusTaskFuzzyReq
      */
     public UranusTaskFuzzyReq jobName(String jobName) {
         this.jobName = jobName;
@@ -147,7 +148,8 @@ public class UranusTaskFuzzyReq  implements java.io.Serializable {
     /**
      * set 当前作业Code
      *
-     * @param currentTaskCode
+     * @param currentTaskCode 当前作业Code
+     * @return UranusTaskFuzzyReq
      */
     public UranusTaskFuzzyReq currentTaskCode(String currentTaskCode) {
         this.currentTaskCode = currentTaskCode;
@@ -158,7 +160,8 @@ public class UranusTaskFuzzyReq  implements java.io.Serializable {
     /**
     * set 已选作业名称
     *
-    * @param dependJobNameList
+    * @param dependJobNameList 已选作业名称
+    * @return UranusTaskFuzzyReq
     */
     public UranusTaskFuzzyReq dependJobNameList(List<String> dependJobNameList) {
         this.dependJobNameList = dependJobNameList;
@@ -169,7 +172,8 @@ public class UranusTaskFuzzyReq  implements java.io.Serializable {
     /**
     * set 解析出父依赖任务
     *
-    * @param analysisDependJobNameList
+    * @param analysisDependJobNameList 解析出父依赖任务
+    * @return UranusTaskFuzzyReq
     */
     public UranusTaskFuzzyReq analysisDependJobNameList(List<String> analysisDependJobNameList) {
         this.analysisDependJobNameList = analysisDependJobNameList;

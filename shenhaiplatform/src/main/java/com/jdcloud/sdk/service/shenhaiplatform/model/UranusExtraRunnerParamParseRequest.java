@@ -140,7 +140,8 @@ public class UranusExtraRunnerParamParseRequest extends JdcloudRequest implement
     /**
      * set 脚本内容
      *
-     * @param content
+     * @param content 脚本内容
+     * @return UranusExtraRunnerParamParseRequest
      */
     public UranusExtraRunnerParamParseRequest content(String content) {
         this.content = content;
@@ -151,7 +152,8 @@ public class UranusExtraRunnerParamParseRequest extends JdcloudRequest implement
     /**
      * set 调试模拟时间 默认今天 2015-10-02 00:00
      *
-     * @param simDate
+     * @param simDate 调试模拟时间 默认今天 2015-10-02 00:00
+     * @return UranusExtraRunnerParamParseRequest
      */
     public UranusExtraRunnerParamParseRequest simDate(String simDate) {
         this.simDate = simDate;
@@ -162,7 +164,8 @@ public class UranusExtraRunnerParamParseRequest extends JdcloudRequest implement
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusExtraRunnerParamParseRequest
      */
     public UranusExtraRunnerParamParseRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -173,7 +176,8 @@ public class UranusExtraRunnerParamParseRequest extends JdcloudRequest implement
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusExtraRunnerParamParseRequest
      */
     public UranusExtraRunnerParamParseRequest appName(String appName) {
         this.appName = appName;

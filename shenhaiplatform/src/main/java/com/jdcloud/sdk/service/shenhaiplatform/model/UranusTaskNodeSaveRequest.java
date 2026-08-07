@@ -551,7 +551,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 节点名称
      *
-     * @param taskName
+     * @param taskName 节点名称
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest taskName(String taskName) {
         this.taskName = taskName;
@@ -562,7 +563,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
     * set 子节点code List
     *
-    * @param childrenCode
+    * @param childrenCode 子节点code List
+    * @return UranusTaskNodeSaveRequest
     */
     public UranusTaskNodeSaveRequest childrenCode(List<String> childrenCode) {
         this.childrenCode = childrenCode;
@@ -573,7 +575,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
     * set 父节点code List
     *
-    * @param parentCode
+    * @param parentCode 父节点code List
+    * @return UranusTaskNodeSaveRequest
     */
     public UranusTaskNodeSaveRequest parentCode(List<String> parentCode) {
         this.parentCode = parentCode;
@@ -584,7 +587,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 节点描述
      *
-     * @param taskDesc
+     * @param taskDesc 节点描述
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest taskDesc(String taskDesc) {
         this.taskDesc = taskDesc;
@@ -595,7 +599,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 任务类型
      *
-     * @param taskNodeId
+     * @param taskNodeId 任务类型
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest taskNodeId(Integer taskNodeId) {
         this.taskNodeId = taskNodeId;
@@ -606,7 +611,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 节点CODE
      *
-     * @param taskCode
+     * @param taskCode 节点CODE
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -617,7 +623,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest manager(String manager) {
         this.manager = manager;
@@ -628,7 +635,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 节点数据 以下前端需要用到的数据
      *
-     * @param taskData
+     * @param taskData 节点数据 以下前端需要用到的数据
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest taskData(String taskData) {
         this.taskData = taskData;
@@ -639,7 +647,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 节点名称 以下前端需要用到的数据
      *
-     * @param nodeName
+     * @param nodeName 节点名称 以下前端需要用到的数据
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest nodeName(String nodeName) {
         this.nodeName = nodeName;
@@ -650,7 +659,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 节点类型
      *
-     * @param nodeTypeName
+     * @param nodeTypeName 节点类型
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest nodeTypeName(String nodeTypeName) {
         this.nodeTypeName = nodeTypeName;
@@ -661,7 +671,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 节点图标 以下前端需要用到的数据
      *
-     * @param nodeIcon
+     * @param nodeIcon 节点图标 以下前端需要用到的数据
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest nodeIcon(String nodeIcon) {
         this.nodeIcon = nodeIcon;
@@ -672,7 +683,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 工作流Code
      *
-     * @param flowCode
+     * @param flowCode 工作流Code
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -683,7 +695,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 脚本文件的业务Code
      *
-     * @param fileCode
+     * @param fileCode 脚本文件的业务Code
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -694,7 +707,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -705,7 +719,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 是否工作流任务
      *
-     * @param isUranus
+     * @param isUranus 是否工作流任务
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest isUranus(Integer isUranus) {
         this.isUranus = isUranus;
@@ -716,7 +731,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 是否当前工作流任务
      *
-     * @param isCurrentFlow
+     * @param isCurrentFlow 是否当前工作流任务
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest isCurrentFlow(Integer isCurrentFlow) {
         this.isCurrentFlow = isCurrentFlow;
@@ -727,7 +743,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
     * set 给前端用到的
     *
-    * @param parent
+    * @param parent 给前端用到的
+    * @return UranusTaskNodeSaveRequest
     */
     public UranusTaskNodeSaveRequest parent(List<UranusTaskNodeSaveReq> parent) {
         this.parent = parent;
@@ -738,7 +755,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 是否有子任务依赖前端用到
      *
-     * @param haveChildren
+     * @param haveChildren 是否有子任务依赖前端用到
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest haveChildren(Integer haveChildren) {
         this.haveChildren = haveChildren;
@@ -749,7 +767,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 协作人
      *
-     * @param cooperator
+     * @param cooperator 协作人
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest cooperator(String cooperator) {
         this.cooperator = cooperator;
@@ -760,7 +779,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -771,7 +791,8 @@ public class UranusTaskNodeSaveRequest extends JdcloudRequest implements java.io
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskNodeSaveRequest
      */
     public UranusTaskNodeSaveRequest appName(String appName) {
         this.appName = appName;

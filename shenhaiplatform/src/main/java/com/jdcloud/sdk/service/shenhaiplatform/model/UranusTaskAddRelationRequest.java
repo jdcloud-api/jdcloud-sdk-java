@@ -174,7 +174,8 @@ public class UranusTaskAddRelationRequest extends JdcloudRequest implements java
     /**
      * set workFlowInfo
      *
-     * @param workFlowInfo
+     * @param workFlowInfo 
+     * @return UranusTaskAddRelationRequest
      */
     public UranusTaskAddRelationRequest workFlowInfo(UranusTaskFlowUpdateReq workFlowInfo) {
         this.workFlowInfo = workFlowInfo;
@@ -185,7 +186,8 @@ public class UranusTaskAddRelationRequest extends JdcloudRequest implements java
     /**
     * set 节点信息
     *
-    * @param nodes
+    * @param nodes 节点信息
+    * @return UranusTaskAddRelationRequest
     */
     public UranusTaskAddRelationRequest nodes(List<UranusTaskNodeDetailRes> nodes) {
         this.nodes = nodes;
@@ -196,7 +198,8 @@ public class UranusTaskAddRelationRequest extends JdcloudRequest implements java
     /**
      * set 节点之间关系
      *
-     * @param graphStr
+     * @param graphStr 节点之间关系
+     * @return UranusTaskAddRelationRequest
      */
     public UranusTaskAddRelationRequest graphStr(String graphStr) {
         this.graphStr = graphStr;
@@ -207,7 +210,8 @@ public class UranusTaskAddRelationRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskAddRelationRequest
      */
     public UranusTaskAddRelationRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -218,7 +222,8 @@ public class UranusTaskAddRelationRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskAddRelationRequest
      */
     public UranusTaskAddRelationRequest appName(String appName) {
         this.appName = appName;

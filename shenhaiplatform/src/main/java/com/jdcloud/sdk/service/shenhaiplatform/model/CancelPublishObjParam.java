@@ -88,7 +88,8 @@ public class CancelPublishObjParam  implements java.io.Serializable {
     /**
     * set ID列表
     *
-    * @param objIds
+    * @param objIds ID列表
+    * @return CancelPublishObjParam
     */
     public CancelPublishObjParam objIds(List<Long> objIds) {
         this.objIds = objIds;
@@ -99,7 +100,8 @@ public class CancelPublishObjParam  implements java.io.Serializable {
     /**
      * set 当前工作空间编码
      *
-     * @param workspaceCode
+     * @param workspaceCode 当前工作空间编码
+     * @return CancelPublishObjParam
      */
     public CancelPublishObjParam workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;

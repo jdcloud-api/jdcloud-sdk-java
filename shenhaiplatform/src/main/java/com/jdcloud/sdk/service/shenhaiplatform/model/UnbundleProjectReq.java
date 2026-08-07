@@ -110,7 +110,8 @@ public class UnbundleProjectReq  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return UnbundleProjectReq
      */
     public UnbundleProjectReq id(Integer id) {
         this.id = id;
@@ -121,7 +122,8 @@ public class UnbundleProjectReq  implements java.io.Serializable {
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return UnbundleProjectReq
      */
     public UnbundleProjectReq workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -132,7 +134,8 @@ public class UnbundleProjectReq  implements java.io.Serializable {
     /**
      * set projectCode
      *
-     * @param projectCode
+     * @param projectCode 
+     * @return UnbundleProjectReq
      */
     public UnbundleProjectReq projectCode(String projectCode) {
         this.projectCode = projectCode;

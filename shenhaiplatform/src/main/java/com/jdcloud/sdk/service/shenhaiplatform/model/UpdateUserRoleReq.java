@@ -88,7 +88,8 @@ public class UpdateUserRoleReq  implements java.io.Serializable {
     /**
      * set workspaceId
      *
-     * @param workspaceId
+     * @param workspaceId 
+     * @return UpdateUserRoleReq
      */
     public UpdateUserRoleReq workspaceId(Long workspaceId) {
         this.workspaceId = workspaceId;
@@ -99,7 +100,8 @@ public class UpdateUserRoleReq  implements java.io.Serializable {
     /**
     * set updateRoleReq
     *
-    * @param updateRoleReq
+    * @param updateRoleReq 
+    * @return UpdateUserRoleReq
     */
     public UpdateUserRoleReq updateRoleReq(List<UserRoleInfo> updateRoleReq) {
         this.updateRoleReq = updateRoleReq;

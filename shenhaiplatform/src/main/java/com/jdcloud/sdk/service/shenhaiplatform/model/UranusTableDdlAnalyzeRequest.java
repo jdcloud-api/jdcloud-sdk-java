@@ -118,7 +118,8 @@ public class UranusTableDdlAnalyzeRequest extends JdcloudRequest implements java
     /**
      * set sql 文本
      *
-     * @param sqlContent
+     * @param sqlContent sql 文本
+     * @return UranusTableDdlAnalyzeRequest
      */
     public UranusTableDdlAnalyzeRequest sqlContent(String sqlContent) {
         this.sqlContent = sqlContent;
@@ -129,7 +130,8 @@ public class UranusTableDdlAnalyzeRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTableDdlAnalyzeRequest
      */
     public UranusTableDdlAnalyzeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusTableDdlAnalyzeRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTableDdlAnalyzeRequest
      */
     public UranusTableDdlAnalyzeRequest appName(String appName) {
         this.appName = appName;

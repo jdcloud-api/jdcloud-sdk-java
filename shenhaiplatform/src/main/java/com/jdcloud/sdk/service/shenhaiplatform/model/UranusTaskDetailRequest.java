@@ -118,7 +118,8 @@ public class UranusTaskDetailRequest extends JdcloudRequest implements java.io.S
     /**
      * set 节点Code
      *
-     * @param taskCode
+     * @param taskCode 节点Code
+     * @return UranusTaskDetailRequest
      */
     public UranusTaskDetailRequest taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -129,7 +130,8 @@ public class UranusTaskDetailRequest extends JdcloudRequest implements java.io.S
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskDetailRequest
      */
     public UranusTaskDetailRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusTaskDetailRequest extends JdcloudRequest implements java.io.S
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskDetailRequest
      */
     public UranusTaskDetailRequest appName(String appName) {
         this.appName = appName;

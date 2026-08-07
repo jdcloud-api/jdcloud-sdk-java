@@ -299,6 +299,11 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
      */
     private String datasourceUseEnvType;
 
+    /**
+     * 任务使用资源配置
+     */
+    private JcwSQLRunParams runParams;
+
 
 
     /**
@@ -1289,11 +1294,31 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 任务使用资源配置
+     *
+     * @return
+     */
+    public JcwSQLRunParams getRunParams() {
+        return runParams;
+    }
+
+    /**
+     * set 任务使用资源配置
+     *
+     * @param runParams
+     */
+    public void setRunParams(JcwSQLRunParams runParams) {
+        this.runParams = runParams;
+    }
+
+
 
     /**
      * set 新模型（MODEL），老模型（OLD_MODEL）、数据开发（IDE）、数据集成（PIPE）、数据质量（DQ)
      *
-     * @param flowCode
+     * @param flowCode 新模型（MODEL），老模型（OLD_MODEL）、数据开发（IDE）、数据集成（PIPE）、数据质量（DQ)
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -1304,7 +1329,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set projectNameMatch
      *
-     * @param projectNameMatch
+     * @param projectNameMatch projectNameMatch
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes projectNameMatch(Boolean projectNameMatch) {
         this.projectNameMatch = projectNameMatch;
@@ -1315,7 +1341,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set nameKeyWord
      *
-     * @param nameKeyWord
+     * @param nameKeyWord nameKeyWord
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes nameKeyWord(String nameKeyWord) {
         this.nameKeyWord = nameKeyWord;
@@ -1326,7 +1353,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 关联类型 JobRelationEnum
      *
-     * @param relationType
+     * @param relationType 关联类型 JobRelationEnum
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes relationType(String relationType) {
         this.relationType = relationType;
@@ -1337,7 +1365,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 操作类型
      *
-     * @param redirectType
+     * @param redirectType 操作类型
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes redirectType(String redirectType) {
         this.redirectType = redirectType;
@@ -1348,7 +1377,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 表名
      *
-     * @param tableName
+     * @param tableName 表名
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes tableName(String tableName) {
         this.tableName = tableName;
@@ -1359,7 +1389,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set tableNameMatch
      *
-     * @param tableNameMatch
+     * @param tableNameMatch tableNameMatch
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes tableNameMatch(Boolean tableNameMatch) {
         this.tableNameMatch = tableNameMatch;
@@ -1370,7 +1401,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 任务名称
      *
-     * @param jobName
+     * @param jobName 任务名称
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes jobName(String jobName) {
         this.jobName = jobName;
@@ -1381,7 +1413,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 所属系统
      *
-     * @param jobSystem
+     * @param jobSystem 所属系统
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes jobSystem(String jobSystem) {
         this.jobSystem = jobSystem;
@@ -1392,7 +1425,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 触发类型
      *
-     * @param triggerType
+     * @param triggerType 触发类型
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -1403,7 +1437,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 依赖任务
      *
-     * @param dependencies
+     * @param dependencies 依赖任务
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes dependencies(String dependencies) {
         this.dependencies = dependencies;
@@ -1414,7 +1449,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes manager(String manager) {
         this.manager = manager;
@@ -1425,7 +1461,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 优先级
      *
-     * @param priority
+     * @param priority 优先级
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes priority(String priority) {
         this.priority = priority;
@@ -1436,7 +1473,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 任务描述
      *
-     * @param jobDesc
+     * @param jobDesc 任务描述
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -1447,7 +1485,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 脚本类型，JCW为purl_sql，注意所有都是小写
      *
-     * @param scriptType
+     * @param scriptType 脚本类型，JCW为purl_sql，注意所有都是小写
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes scriptType(String scriptType) {
         this.scriptType = scriptType;
@@ -1458,7 +1497,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 脚本名称
      *
-     * @param runScript
+     * @param runScript 脚本名称
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes runScript(String runScript) {
         this.runScript = runScript;
@@ -1469,7 +1509,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
     * set 脚本内容
     *
-    * @param scriptContent
+    * @param scriptContent 脚本内容
+    * @return UranusTaskInfoRes
     */
     public UranusTaskInfoRes scriptContent(List<String> scriptContent) {
         this.scriptContent = scriptContent;
@@ -1480,7 +1521,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 运行频率
      *
-     * @param cycle
+     * @param cycle 运行频率
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes cycle(String cycle) {
         this.cycle = cycle;
@@ -1491,7 +1533,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 运行频率
      *
-     * @param sequence
+     * @param sequence 运行频率
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes sequence(String sequence) {
         this.sequence = sequence;
@@ -1502,7 +1545,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 生命周期
      *
-     * @param lifeCycle
+     * @param lifeCycle 生命周期
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes lifeCycle(String lifeCycle) {
         this.lifeCycle = lifeCycle;
@@ -1513,7 +1557,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 失败后是否重试
      *
-     * @param retry
+     * @param retry 失败后是否重试
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes retry(Boolean retry) {
         this.retry = retry;
@@ -1524,7 +1569,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 预警时机
      *
-     * @param notifyOccasion
+     * @param notifyOccasion 预警时机
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes notifyOccasion(String notifyOccasion) {
         this.notifyOccasion = notifyOccasion;
@@ -1535,7 +1581,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 预警时间
      *
-     * @param notifyTime
+     * @param notifyTime 预警时间
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes notifyTime(String notifyTime) {
         this.notifyTime = notifyTime;
@@ -1546,7 +1593,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 预警方式
      *
-     * @param notifyPattern
+     * @param notifyPattern 预警方式
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes notifyPattern(String notifyPattern) {
         this.notifyPattern = notifyPattern;
@@ -1557,7 +1605,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 预警通知人
      *
-     * @param notifier
+     * @param notifier 预警通知人
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes notifier(String notifier) {
         this.notifier = notifier;
@@ -1568,7 +1617,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 开始运行时间（HH：mm）
      *
-     * @param startRunTime
+     * @param startRunTime 开始运行时间（HH：mm）
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes startRunTime(String startRunTime) {
         this.startRunTime = startRunTime;
@@ -1579,7 +1629,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 结束运行时间（HH：mm）
      *
-     * @param endRunTime
+     * @param endRunTime 结束运行时间（HH：mm）
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes endRunTime(String endRunTime) {
         this.endRunTime = endRunTime;
@@ -1590,7 +1641,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 定时、一次任务（开始运行时间）
      *
-     * @param runTime
+     * @param runTime 定时、一次任务（开始运行时间）
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes runTime(String runTime) {
         this.runTime = runTime;
@@ -1601,7 +1653,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 定时、一次任务（开始运行时间）
      *
-     * @param runDate
+     * @param runDate 定时、一次任务（开始运行时间）
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes runDate(String runDate) {
         this.runDate = runDate;
@@ -1612,7 +1665,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 节点Code
      *
-     * @param taskCode
+     * @param taskCode 节点Code
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -1623,7 +1677,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set markIds
      *
-     * @param markIds
+     * @param markIds markIds
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes markIds(String markIds) {
         this.markIds = markIds;
@@ -1634,7 +1689,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 超时时间
      *
-     * @param runTimeOut
+     * @param runTimeOut 超时时间
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes runTimeOut(Integer runTimeOut) {
         this.runTimeOut = runTimeOut;
@@ -1645,7 +1701,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 脚本来源类型
      *
-     * @param scriptSourceType
+     * @param scriptSourceType 脚本来源类型
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes scriptSourceType(String scriptSourceType) {
         this.scriptSourceType = scriptSourceType;
@@ -1656,7 +1713,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set isDeploy
      *
-     * @param isDeploy
+     * @param isDeploy isDeploy
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes isDeploy(Boolean isDeploy) {
         this.isDeploy = isDeploy;
@@ -1667,7 +1725,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 脚本路径
      *
-     * @param scriptPath
+     * @param scriptPath 脚本路径
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes scriptPath(String scriptPath) {
         this.scriptPath = scriptPath;
@@ -1678,7 +1737,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
     * set 脚本文件字节数组,是将脚本文件内容转换为byte数组
     *
-    * @param scriptByte
+    * @param scriptByte 脚本文件字节数组,是将脚本文件内容转换为byte数组
+    * @return UranusTaskInfoRes
     */
     public UranusTaskInfoRes scriptByte(List<String> scriptByte) {
         this.scriptByte = scriptByte;
@@ -1689,7 +1749,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 脚本文件Code
      *
-     * @param fileCode
+     * @param fileCode 脚本文件Code
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -1700,7 +1761,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 作业发布描述
      *
-     * @param publishDesc
+     * @param publishDesc 作业发布描述
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes publishDesc(String publishDesc) {
         this.publishDesc = publishDesc;
@@ -1711,7 +1773,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 脚本内容
      *
-     * @param scriptInfo
+     * @param scriptInfo 脚本内容
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes scriptInfo(String scriptInfo) {
         this.scriptInfo = scriptInfo;
@@ -1722,7 +1785,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 根据版本号，判断是重新发布还是新建，如果新建添加版本号，不是新建，更新历史表作业状态状态
      *
-     * @param version
+     * @param version 根据版本号，判断是重新发布还是新建，如果新建添加版本号，不是新建，更新历史表作业状态状态
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes version(Integer version) {
         this.version = version;
@@ -1733,7 +1797,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 周期开始时间（小时分钟任务用）
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 周期开始时间（小时分钟任务用）
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -1744,7 +1809,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 周期结束时间（小时分钟任务用）
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 周期结束时间（小时分钟任务用）
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -1755,7 +1821,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 时间间隔（小时分钟任务用）
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 时间间隔（小时分钟任务用）
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes sequenceInterval(Integer sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -1766,7 +1833,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 脚本运行引擎
      *
-     * @param runEngine
+     * @param runEngine 脚本运行引擎
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes runEngine(String runEngine) {
         this.runEngine = runEngine;
@@ -1777,7 +1845,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 队列code
      *
-     * @param resourceCode
+     * @param resourceCode 队列code
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -1788,7 +1857,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 队列Name
      *
-     * @param resourceName
+     * @param resourceName 队列Name
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -1799,7 +1869,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 协作人
      *
-     * @param cooperator
+     * @param cooperator 协作人
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes cooperator(String cooperator) {
         this.cooperator = cooperator;
@@ -1810,7 +1881,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
     * set 输入参数
     *
-    * @param taskParamList
+    * @param taskParamList 输入参数
+    * @return UranusTaskInfoRes
     */
     public UranusTaskInfoRes taskParamList(List<UranusTaskParamReq> taskParamList) {
         this.taskParamList = taskParamList;
@@ -1821,7 +1893,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
     * set 输出参数
     *
-    * @param exportParamList
+    * @param exportParamList 输出参数
+    * @return UranusTaskInfoRes
     */
     public UranusTaskInfoRes exportParamList(List<UranusTaskParamReq> exportParamList) {
         this.exportParamList = exportParamList;
@@ -1832,7 +1905,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set fromGravity
      *
-     * @param fromGravity
+     * @param fromGravity 
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes fromGravity(Boolean fromGravity) {
         this.fromGravity = fromGravity;
@@ -1843,7 +1917,8 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 作业读写数据源主id，数据源的主ID
      *
-     * @param datasourcePrimaryId
+     * @param datasourcePrimaryId 作业读写数据源主id，数据源的主ID
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes datasourcePrimaryId(String datasourcePrimaryId) {
         this.datasourcePrimaryId = datasourcePrimaryId;
@@ -1854,10 +1929,23 @@ public class UranusTaskInfoRes  implements java.io.Serializable {
     /**
      * set 作业读写数据源使用环境类型,dev：开发环境，prod：生产环境
      *
-     * @param datasourceUseEnvType
+     * @param datasourceUseEnvType 作业读写数据源使用环境类型,dev：开发环境，prod：生产环境
+     * @return UranusTaskInfoRes
      */
     public UranusTaskInfoRes datasourceUseEnvType(String datasourceUseEnvType) {
         this.datasourceUseEnvType = datasourceUseEnvType;
+        return this;
+    }
+
+
+    /**
+     * set 任务使用资源配置
+     *
+     * @param runParams 任务使用资源配置
+     * @return UranusTaskInfoRes
+     */
+    public UranusTaskInfoRes runParams(JcwSQLRunParams runParams) {
+        this.runParams = runParams;
         return this;
     }
 

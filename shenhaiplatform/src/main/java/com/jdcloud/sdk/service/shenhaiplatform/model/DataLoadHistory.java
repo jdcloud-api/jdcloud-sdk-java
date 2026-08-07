@@ -247,7 +247,8 @@ public class DataLoadHistory  implements java.io.Serializable {
     /**
      * set 主键ID
      *
-     * @param id
+     * @param id 主键ID
+     * @return DataLoadHistory
      */
     public DataLoadHistory id(Integer id) {
         this.id = id;
@@ -258,7 +259,8 @@ public class DataLoadHistory  implements java.io.Serializable {
     /**
      * set 文件名称
      *
-     * @param fileName
+     * @param fileName 文件名称
+     * @return DataLoadHistory
      */
     public DataLoadHistory fileName(String fileName) {
         this.fileName = fileName;
@@ -269,7 +271,8 @@ public class DataLoadHistory  implements java.io.Serializable {
     /**
      * set 项目编码
      *
-     * @param projectCode
+     * @param projectCode 项目编码
+     * @return DataLoadHistory
      */
     public DataLoadHistory projectCode(String projectCode) {
         this.projectCode = projectCode;
@@ -280,7 +283,8 @@ public class DataLoadHistory  implements java.io.Serializable {
     /**
      * set 目标表名
      *
-     * @param tableName
+     * @param tableName 目标表名
+     * @return DataLoadHistory
      */
     public DataLoadHistory tableName(String tableName) {
         this.tableName = tableName;
@@ -291,7 +295,8 @@ public class DataLoadHistory  implements java.io.Serializable {
     /**
      * set 任务id
      *
-     * @param applicationId
+     * @param applicationId 任务id
+     * @return DataLoadHistory
      */
     public DataLoadHistory applicationId(String applicationId) {
         this.applicationId = applicationId;
@@ -302,7 +307,8 @@ public class DataLoadHistory  implements java.io.Serializable {
     /**
      * set 任务状态
      *
-     * @param state
+     * @param state 任务状态
+     * @return DataLoadHistory
      */
     public DataLoadHistory state(String state) {
         this.state = state;
@@ -313,7 +319,8 @@ public class DataLoadHistory  implements java.io.Serializable {
     /**
      * set 任务状态描述
      *
-     * @param stateDesc
+     * @param stateDesc 任务状态描述
+     * @return DataLoadHistory
      */
     public DataLoadHistory stateDesc(String stateDesc) {
         this.stateDesc = stateDesc;
@@ -324,7 +331,8 @@ public class DataLoadHistory  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createdDate
+     * @param createdDate 创建时间
+     * @return DataLoadHistory
      */
     public DataLoadHistory createdDate(Integer createdDate) {
         this.createdDate = createdDate;

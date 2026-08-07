@@ -134,7 +134,8 @@ public class UranusTaskParamDTO  implements java.io.Serializable {
     /**
      * set paramSort
      *
-     * @param paramSort
+     * @param paramSort 
+     * @return UranusTaskParamDTO
      */
     public UranusTaskParamDTO paramSort(Integer paramSort) {
         this.paramSort = paramSort;
@@ -145,7 +146,8 @@ public class UranusTaskParamDTO  implements java.io.Serializable {
     /**
      * set paramKey
      *
-     * @param paramKey
+     * @param paramKey 
+     * @return UranusTaskParamDTO
      */
     public UranusTaskParamDTO paramKey(String paramKey) {
         this.paramKey = paramKey;
@@ -156,7 +158,8 @@ public class UranusTaskParamDTO  implements java.io.Serializable {
     /**
      * set paramValue
      *
-     * @param paramValue
+     * @param paramValue 
+     * @return UranusTaskParamDTO
      */
     public UranusTaskParamDTO paramValue(String paramValue) {
         this.paramValue = paramValue;
@@ -167,7 +170,8 @@ public class UranusTaskParamDTO  implements java.io.Serializable {
     /**
      * set paramDeSC
      *
-     * @param paramDeSC
+     * @param paramDeSC 
+     * @return UranusTaskParamDTO
      */
     public UranusTaskParamDTO paramDeSC(String paramDeSC) {
         this.paramDeSC = paramDeSC;

@@ -118,7 +118,8 @@ public class JtlasGetTableDDLScriptRequest extends JdcloudRequest implements jav
     /**
      * set 文档ID
      *
-     * @param id
+     * @param id 文档ID
+     * @return JtlasGetTableDDLScriptRequest
      */
     public JtlasGetTableDDLScriptRequest id(String id) {
         this.id = id;
@@ -129,7 +130,8 @@ public class JtlasGetTableDDLScriptRequest extends JdcloudRequest implements jav
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasGetTableDDLScriptRequest
      */
     public JtlasGetTableDDLScriptRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class JtlasGetTableDDLScriptRequest extends JdcloudRequest implements jav
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasGetTableDDLScriptRequest
      */
     public JtlasGetTableDDLScriptRequest appName(String appName) {
         this.appName = appName;

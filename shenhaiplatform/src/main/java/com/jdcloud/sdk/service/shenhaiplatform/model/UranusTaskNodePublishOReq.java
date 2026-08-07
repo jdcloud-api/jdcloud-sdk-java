@@ -93,7 +93,8 @@ public class UranusTaskNodePublishOReq  implements java.io.Serializable {
     /**
     * set 节点列表
     *
-    * @param ids
+    * @param ids 节点列表
+    * @return UranusTaskNodePublishOReq
     */
     public UranusTaskNodePublishOReq ids(List<UranusNodePublishChildReq> ids) {
         this.ids = ids;
@@ -104,7 +105,8 @@ public class UranusTaskNodePublishOReq  implements java.io.Serializable {
     /**
      * set 发布原因
      *
-     * @param reason
+     * @param reason 发布原因
+     * @return UranusTaskNodePublishOReq
      */
     public UranusTaskNodePublishOReq reason(String reason) {
         this.reason = reason;

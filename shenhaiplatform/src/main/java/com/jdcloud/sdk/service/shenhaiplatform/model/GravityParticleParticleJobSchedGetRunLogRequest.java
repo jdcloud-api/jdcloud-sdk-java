@@ -216,7 +216,8 @@ public class GravityParticleParticleJobSchedGetRunLogRequest extends JdcloudRequ
     /**
      * set 页面大小
      *
-     * @param pageSize
+     * @param pageSize 页面大小
+     * @return GravityParticleParticleJobSchedGetRunLogRequest
      */
     public GravityParticleParticleJobSchedGetRunLogRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -227,7 +228,8 @@ public class GravityParticleParticleJobSchedGetRunLogRequest extends JdcloudRequ
     /**
      * set 页码
      *
-     * @param pageNum
+     * @param pageNum 页码
+     * @return GravityParticleParticleJobSchedGetRunLogRequest
      */
     public GravityParticleParticleJobSchedGetRunLogRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -238,7 +240,8 @@ public class GravityParticleParticleJobSchedGetRunLogRequest extends JdcloudRequ
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleParticleJobSchedGetRunLogRequest
      */
     public GravityParticleParticleJobSchedGetRunLogRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -249,7 +252,8 @@ public class GravityParticleParticleJobSchedGetRunLogRequest extends JdcloudRequ
     /**
      * set job 运行session id
      *
-     * @param jobSessionId
+     * @param jobSessionId job 运行session id
+     * @return GravityParticleParticleJobSchedGetRunLogRequest
      */
     public GravityParticleParticleJobSchedGetRunLogRequest jobSessionId(String jobSessionId) {
         this.jobSessionId = jobSessionId;
@@ -260,7 +264,8 @@ public class GravityParticleParticleJobSchedGetRunLogRequest extends JdcloudRequ
     /**
      * set job运行日期
      *
-     * @param txDate
+     * @param txDate job运行日期
+     * @return GravityParticleParticleJobSchedGetRunLogRequest
      */
     public GravityParticleParticleJobSchedGetRunLogRequest txDate(String txDate) {
         this.txDate = txDate;
@@ -271,7 +276,8 @@ public class GravityParticleParticleJobSchedGetRunLogRequest extends JdcloudRequ
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleParticleJobSchedGetRunLogRequest
      */
     public GravityParticleParticleJobSchedGetRunLogRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -282,7 +288,8 @@ public class GravityParticleParticleJobSchedGetRunLogRequest extends JdcloudRequ
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleParticleJobSchedGetRunLogRequest
      */
     public GravityParticleParticleJobSchedGetRunLogRequest appName(String appName) {
         this.appName = appName;

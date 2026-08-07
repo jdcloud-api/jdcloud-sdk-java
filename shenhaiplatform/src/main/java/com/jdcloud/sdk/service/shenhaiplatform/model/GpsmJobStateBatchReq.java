@@ -88,7 +88,8 @@ public class GpsmJobStateBatchReq  implements java.io.Serializable {
     /**
     * set 作业名称列表
     *
-    * @param jobNames
+    * @param jobNames 作业名称列表
+    * @return GpsmJobStateBatchReq
     */
     public GpsmJobStateBatchReq jobNames(List<String> jobNames) {
         this.jobNames = jobNames;
@@ -99,7 +100,8 @@ public class GpsmJobStateBatchReq  implements java.io.Serializable {
     /**
      * set 操作备注
      *
-     * @param remark
+     * @param remark 操作备注
+     * @return GpsmJobStateBatchReq
      */
     public GpsmJobStateBatchReq remark(String remark) {
         this.remark = remark;

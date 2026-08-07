@@ -118,7 +118,8 @@ public class UranusTaskGetRelationRequest extends JdcloudRequest implements java
     /**
      * set flowCode
      *
-     * @param flowCode
+     * @param flowCode flowCode
+     * @return UranusTaskGetRelationRequest
      */
     public UranusTaskGetRelationRequest flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -129,7 +130,8 @@ public class UranusTaskGetRelationRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskGetRelationRequest
      */
     public UranusTaskGetRelationRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusTaskGetRelationRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskGetRelationRequest
      */
     public UranusTaskGetRelationRequest appName(String appName) {
         this.appName = appName;

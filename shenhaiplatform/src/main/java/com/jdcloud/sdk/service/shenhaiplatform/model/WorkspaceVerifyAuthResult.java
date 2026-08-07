@@ -111,7 +111,8 @@ public class WorkspaceVerifyAuthResult extends JdcloudResult implements java.io.
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return WorkspaceVerifyAuthResult
      */
     public WorkspaceVerifyAuthResult code(String code) {
         this.code = code;
@@ -122,7 +123,8 @@ public class WorkspaceVerifyAuthResult extends JdcloudResult implements java.io.
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return WorkspaceVerifyAuthResult
      */
     public WorkspaceVerifyAuthResult message(String message) {
         this.message = message;
@@ -133,7 +135,8 @@ public class WorkspaceVerifyAuthResult extends JdcloudResult implements java.io.
     /**
      * set 是否有权限
      *
-     * @param result
+     * @param result 是否有权限
+     * @return WorkspaceVerifyAuthResult
      */
     public WorkspaceVerifyAuthResult result(Boolean result) {
         this.result = result;

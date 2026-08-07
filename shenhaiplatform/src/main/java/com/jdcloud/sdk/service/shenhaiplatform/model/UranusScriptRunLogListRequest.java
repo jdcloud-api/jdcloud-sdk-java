@@ -310,7 +310,8 @@ public class UranusScriptRunLogListRequest extends JdcloudRequest implements jav
     /**
      * set 业务线Code
      *
-     * @param fileCode
+     * @param fileCode 业务线Code
+     * @return UranusScriptRunLogListRequest
      */
     public UranusScriptRunLogListRequest fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -321,7 +322,8 @@ public class UranusScriptRunLogListRequest extends JdcloudRequest implements jav
     /**
     * set 运行状态列表
     *
-    * @param statusList
+    * @param statusList 运行状态列表
+    * @return UranusScriptRunLogListRequest
     */
     public UranusScriptRunLogListRequest statusList(List<String> statusList) {
         this.statusList = statusList;
@@ -332,7 +334,8 @@ public class UranusScriptRunLogListRequest extends JdcloudRequest implements jav
     /**
      * set 启动时间起点
      *
-     * @param startTimeFrom
+     * @param startTimeFrom 启动时间起点
+     * @return UranusScriptRunLogListRequest
      */
     public UranusScriptRunLogListRequest startTimeFrom(String startTimeFrom) {
         this.startTimeFrom = startTimeFrom;
@@ -343,7 +346,8 @@ public class UranusScriptRunLogListRequest extends JdcloudRequest implements jav
     /**
      * set 启动时间截至
      *
-     * @param startTimeTo
+     * @param startTimeTo 启动时间截至
+     * @return UranusScriptRunLogListRequest
      */
     public UranusScriptRunLogListRequest startTimeTo(String startTimeTo) {
         this.startTimeTo = startTimeTo;
@@ -354,7 +358,8 @@ public class UranusScriptRunLogListRequest extends JdcloudRequest implements jav
     /**
      * set 结束时间起点
      *
-     * @param endTimeFrom
+     * @param endTimeFrom 结束时间起点
+     * @return UranusScriptRunLogListRequest
      */
     public UranusScriptRunLogListRequest endTimeFrom(String endTimeFrom) {
         this.endTimeFrom = endTimeFrom;
@@ -365,7 +370,8 @@ public class UranusScriptRunLogListRequest extends JdcloudRequest implements jav
     /**
      * set 结束时间截至
      *
-     * @param endTimeTo
+     * @param endTimeTo 结束时间截至
+     * @return UranusScriptRunLogListRequest
      */
     public UranusScriptRunLogListRequest endTimeTo(String endTimeTo) {
         this.endTimeTo = endTimeTo;
@@ -376,7 +382,8 @@ public class UranusScriptRunLogListRequest extends JdcloudRequest implements jav
     /**
      * set 文件路径
      *
-     * @param filePath
+     * @param filePath 文件路径
+     * @return UranusScriptRunLogListRequest
      */
     public UranusScriptRunLogListRequest filePath(String filePath) {
         this.filePath = filePath;
@@ -387,7 +394,8 @@ public class UranusScriptRunLogListRequest extends JdcloudRequest implements jav
     /**
      * set 第几页
      *
-     * @param page
+     * @param page 第几页
+     * @return UranusScriptRunLogListRequest
      */
     public UranusScriptRunLogListRequest page(Integer page) {
         this.page = page;
@@ -398,7 +406,8 @@ public class UranusScriptRunLogListRequest extends JdcloudRequest implements jav
     /**
      * set 分页大小
      *
-     * @param pageSize
+     * @param pageSize 分页大小
+     * @return UranusScriptRunLogListRequest
      */
     public UranusScriptRunLogListRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -409,7 +418,8 @@ public class UranusScriptRunLogListRequest extends JdcloudRequest implements jav
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusScriptRunLogListRequest
      */
     public UranusScriptRunLogListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -420,7 +430,8 @@ public class UranusScriptRunLogListRequest extends JdcloudRequest implements jav
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusScriptRunLogListRequest
      */
     public UranusScriptRunLogListRequest appName(String appName) {
         this.appName = appName;

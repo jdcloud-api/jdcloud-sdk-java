@@ -518,7 +518,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 作业补数信息主键id
      *
-     * @param id
+     * @param id 作业补数信息主键id
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO id(Integer id) {
         this.id = id;
@@ -529,7 +530,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 当前补数日期
      *
-     * @param txdate
+     * @param txdate 当前补数日期
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO txdate(String txdate) {
         this.txdate = txdate;
@@ -540,7 +542,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 任务状态
      *
-     * @param statu
+     * @param statu 任务状态
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO statu(String statu) {
         this.statu = statu;
@@ -551,7 +554,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 补数任务是否关闭
      *
-     * @param enable
+     * @param enable 补数任务是否关闭
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO enable(String enable) {
         this.enable = enable;
@@ -562,7 +566,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 补数当前状态信息
      *
-     * @param currentMsg
+     * @param currentMsg 补数当前状态信息
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO currentMsg(String currentMsg) {
         this.currentMsg = currentMsg;
@@ -573,7 +578,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 任务名称
      *
-     * @param jobName
+     * @param jobName 任务名称
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -584,7 +590,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 补数开始日期
      *
-     * @param jobStartDate
+     * @param jobStartDate 补数开始日期
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO jobStartDate(String jobStartDate) {
         this.jobStartDate = jobStartDate;
@@ -595,7 +602,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 补数结束日期
      *
-     * @param jobEndDate
+     * @param jobEndDate 补数结束日期
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO jobEndDate(String jobEndDate) {
         this.jobEndDate = jobEndDate;
@@ -606,7 +614,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 作业描述
      *
-     * @param description
+     * @param description 作业描述
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO description(String description) {
         this.description = description;
@@ -617,7 +626,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 周期具体日期
      *
-     * @param cycle
+     * @param cycle 周期具体日期
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO cycle(String cycle) {
         this.cycle = cycle;
@@ -628,7 +638,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO processType(String processType) {
         this.processType = processType;
@@ -639,7 +650,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 执行类型
      *
-     * @param exeType
+     * @param exeType 执行类型
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO exeType(String exeType) {
         this.exeType = exeType;
@@ -650,7 +662,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createDate
+     * @param createDate 创建时间
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO createDate(String createDate) {
         this.createDate = createDate;
@@ -661,7 +674,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set calc：数据计算，extract：数据抽取，ods：ODS加工，load：数据推送，hdfs：数据同步,dqim:质量作业
      *
-     * @param processTypeLabel
+     * @param processTypeLabel calc：数据计算，extract：数据抽取，ods：ODS加工，load：数据推送，hdfs：数据同步,dqim:质量作业
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO processTypeLabel(String processTypeLabel) {
         this.processTypeLabel = processTypeLabel;
@@ -672,7 +686,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 作业负责人
      *
-     * @param manager
+     * @param manager 作业负责人
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO manager(String manager) {
         this.manager = manager;
@@ -683,7 +698,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 状态
      *
-     * @param statusLabel
+     * @param statusLabel 状态
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO statusLabel(String statusLabel) {
         this.statusLabel = statusLabel;
@@ -694,7 +710,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 作业类型
      *
-     * @param jobType
+     * @param jobType 作业类型
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO jobType(String jobType) {
         this.jobType = jobType;
@@ -705,7 +722,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 作业子类型
      *
-     * @param jobChildType
+     * @param jobChildType 作业子类型
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO jobChildType(String jobChildType) {
         this.jobChildType = jobChildType;
@@ -716,7 +734,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 当前用户是否为当前作业的管理员
      *
-     * @param managerFlag
+     * @param managerFlag 当前用户是否为当前作业的管理员
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO managerFlag(Boolean managerFlag) {
         this.managerFlag = managerFlag;
@@ -727,7 +746,8 @@ public class GpdrListHisRunTaskResDTO  implements java.io.Serializable {
     /**
      * set 客户作业名
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名
+     * @return GpdrListHisRunTaskResDTO
      */
     public GpdrListHisRunTaskResDTO cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;

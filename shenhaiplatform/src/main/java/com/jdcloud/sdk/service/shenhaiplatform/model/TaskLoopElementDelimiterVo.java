@@ -110,7 +110,8 @@ public class TaskLoopElementDelimiterVo  implements java.io.Serializable {
     /**
      * set 分隔符的英文描述名称，需要传给后端的值
      *
-     * @param delimName
+     * @param delimName 分隔符的英文描述名称，需要传给后端的值
+     * @return TaskLoopElementDelimiterVo
      */
     public TaskLoopElementDelimiterVo delimName(String delimName) {
         this.delimName = delimName;
@@ -121,7 +122,8 @@ public class TaskLoopElementDelimiterVo  implements java.io.Serializable {
     /**
      * set 分隔符的中文描述，需要前端展示的
      *
-     * @param delimDesc
+     * @param delimDesc 分隔符的中文描述，需要前端展示的
+     * @return TaskLoopElementDelimiterVo
      */
     public TaskLoopElementDelimiterVo delimDesc(String delimDesc) {
         this.delimDesc = delimDesc;
@@ -132,7 +134,8 @@ public class TaskLoopElementDelimiterVo  implements java.io.Serializable {
     /**
      * set 分隔符的值
      *
-     * @param delimValue
+     * @param delimValue 分隔符的值
+     * @return TaskLoopElementDelimiterVo
      */
     public TaskLoopElementDelimiterVo delimValue(String delimValue) {
         this.delimValue = delimValue;

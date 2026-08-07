@@ -112,7 +112,8 @@ public class AddMemberReq  implements java.io.Serializable {
     /**
      * set workspaceId
      *
-     * @param workspaceId
+     * @param workspaceId 
+     * @return AddMemberReq
      */
     public AddMemberReq workspaceId(Long workspaceId) {
         this.workspaceId = workspaceId;
@@ -123,7 +124,8 @@ public class AddMemberReq  implements java.io.Serializable {
     /**
     * set userPinList
     *
-    * @param userPinList
+    * @param userPinList 
+    * @return AddMemberReq
     */
     public AddMemberReq userPinList(List<String> userPinList) {
         this.userPinList = userPinList;
@@ -134,7 +136,8 @@ public class AddMemberReq  implements java.io.Serializable {
     /**
     * set roleCodeList
     *
-    * @param roleCodeList
+    * @param roleCodeList 
+    * @return AddMemberReq
     */
     public AddMemberReq roleCodeList(List<String> roleCodeList) {
         this.roleCodeList = roleCodeList;

@@ -319,7 +319,8 @@ public class DataLoadParam  implements java.io.Serializable {
     /**
      * set 文件路径（key）
      *
-     * @param fileKey
+     * @param fileKey 文件路径（key）
+     * @return DataLoadParam
      */
     public DataLoadParam fileKey(String fileKey) {
         this.fileKey = fileKey;
@@ -330,7 +331,8 @@ public class DataLoadParam  implements java.io.Serializable {
     /**
      * set 文件类型：csv、text、xls、xlsx
      *
-     * @param fileType
+     * @param fileType 文件类型：csv、text、xls、xlsx
+     * @return DataLoadParam
      */
     public DataLoadParam fileType(String fileType) {
         this.fileType = fileType;
@@ -341,7 +343,8 @@ public class DataLoadParam  implements java.io.Serializable {
     /**
      * set 分隔符: en-comma 英文逗号，en-semicolon 英文分号，space 空格，pipe 竖线，hash 井号，and 与号，line-feed-lf 换行符（UNIX），line-feed-crlf 换行符（Windows）
      *
-     * @param delimiter
+     * @param delimiter 分隔符: en-comma 英文逗号，en-semicolon 英文分号，space 空格，pipe 竖线，hash 井号，and 与号，line-feed-lf 换行符（UNIX），line-feed-crlf 换行符（Windows）
+     * @return DataLoadParam
      */
     public DataLoadParam delimiter(String delimiter) {
         this.delimiter = delimiter;
@@ -352,7 +355,8 @@ public class DataLoadParam  implements java.io.Serializable {
     /**
      * set 字符集: GBK、UTF-8、ISO-8859-1
      *
-     * @param characterSet
+     * @param characterSet 字符集: GBK、UTF-8、ISO-8859-1
+     * @return DataLoadParam
      */
     public DataLoadParam characterSet(String characterSet) {
         this.characterSet = characterSet;
@@ -363,7 +367,8 @@ public class DataLoadParam  implements java.io.Serializable {
     /**
      * set 导入起始行
      *
-     * @param startRow
+     * @param startRow 导入起始行
+     * @return DataLoadParam
      */
     public DataLoadParam startRow(Integer startRow) {
         this.startRow = startRow;
@@ -374,7 +379,8 @@ public class DataLoadParam  implements java.io.Serializable {
     /**
      * set 项目环境: prod 生产环境、dev开发环境
      *
-     * @param projectEnv
+     * @param projectEnv 项目环境: prod 生产环境、dev开发环境
+     * @return DataLoadParam
      */
     public DataLoadParam projectEnv(String projectEnv) {
         this.projectEnv = projectEnv;
@@ -385,7 +391,8 @@ public class DataLoadParam  implements java.io.Serializable {
     /**
      * set 项目编码
      *
-     * @param projectCode
+     * @param projectCode 项目编码
+     * @return DataLoadParam
      */
     public DataLoadParam projectCode(String projectCode) {
         this.projectCode = projectCode;
@@ -396,7 +403,8 @@ public class DataLoadParam  implements java.io.Serializable {
     /**
      * set 目标表名
      *
-     * @param tableName
+     * @param tableName 目标表名
+     * @return DataLoadParam
      */
     public DataLoadParam tableName(String tableName) {
         this.tableName = tableName;
@@ -407,7 +415,8 @@ public class DataLoadParam  implements java.io.Serializable {
     /**
     * set 导入分区，如果是分区表则必传
     *
-    * @param partitionInfos
+    * @param partitionInfos 导入分区，如果是分区表则必传
+    * @return DataLoadParam
     */
     public DataLoadParam partitionInfos(List<PartitionInfo> partitionInfos) {
         this.partitionInfos = partitionInfos;
@@ -418,7 +427,8 @@ public class DataLoadParam  implements java.io.Serializable {
     /**
      * set 导入策略：append 追加、overwrite 覆盖
      *
-     * @param importStrategy
+     * @param importStrategy 导入策略：append 追加、overwrite 覆盖
+     * @return DataLoadParam
      */
     public DataLoadParam importStrategy(String importStrategy) {
         this.importStrategy = importStrategy;
@@ -429,7 +439,8 @@ public class DataLoadParam  implements java.io.Serializable {
     /**
      * set 资源组编码
      *
-     * @param resourceCode
+     * @param resourceCode 资源组编码
+     * @return DataLoadParam
      */
     public DataLoadParam resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;

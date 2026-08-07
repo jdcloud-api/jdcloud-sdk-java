@@ -142,7 +142,8 @@ public class PublishPkgRequest extends JdcloudRequest implements java.io.Seriali
     /**
     * set 发布包ID列表
     *
-    * @param pkgIds
+    * @param pkgIds 发布包ID列表
+    * @return PublishPkgRequest
     */
     public PublishPkgRequest pkgIds(List<Long> pkgIds) {
         this.pkgIds = pkgIds;
@@ -153,7 +154,8 @@ public class PublishPkgRequest extends JdcloudRequest implements java.io.Seriali
     /**
      * set 当前工作空间编码
      *
-     * @param workspaceCode
+     * @param workspaceCode 当前工作空间编码
+     * @return PublishPkgRequest
      */
     public PublishPkgRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -164,7 +166,8 @@ public class PublishPkgRequest extends JdcloudRequest implements java.io.Seriali
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return PublishPkgRequest
      */
     public PublishPkgRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -175,7 +178,8 @@ public class PublishPkgRequest extends JdcloudRequest implements java.io.Seriali
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return PublishPkgRequest
      */
     public PublishPkgRequest appName(String appName) {
         this.appName = appName;

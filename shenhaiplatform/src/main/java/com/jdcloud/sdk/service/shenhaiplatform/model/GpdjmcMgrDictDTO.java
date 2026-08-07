@@ -230,7 +230,8 @@ public class GpdjmcMgrDictDTO  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return GpdjmcMgrDictDTO
      */
     public GpdjmcMgrDictDTO id(Integer id) {
         this.id = id;
@@ -241,7 +242,8 @@ public class GpdjmcMgrDictDTO  implements java.io.Serializable {
     /**
      * set dictCode
      *
-     * @param dictCode
+     * @param dictCode 
+     * @return GpdjmcMgrDictDTO
      */
     public GpdjmcMgrDictDTO dictCode(String dictCode) {
         this.dictCode = dictCode;
@@ -252,7 +254,8 @@ public class GpdjmcMgrDictDTO  implements java.io.Serializable {
     /**
      * set getpDictCode
      *
-     * @param getpDictCode
+     * @param getpDictCode 
+     * @return GpdjmcMgrDictDTO
      */
     public GpdjmcMgrDictDTO getpDictCode(String getpDictCode) {
         this.getpDictCode = getpDictCode;
@@ -263,7 +266,8 @@ public class GpdjmcMgrDictDTO  implements java.io.Serializable {
     /**
      * set dictName
      *
-     * @param dictName
+     * @param dictName 
+     * @return GpdjmcMgrDictDTO
      */
     public GpdjmcMgrDictDTO dictName(String dictName) {
         this.dictName = dictName;
@@ -274,7 +278,8 @@ public class GpdjmcMgrDictDTO  implements java.io.Serializable {
     /**
      * set sort
      *
-     * @param sort
+     * @param sort 
+     * @return GpdjmcMgrDictDTO
      */
     public GpdjmcMgrDictDTO sort(Integer sort) {
         this.sort = sort;
@@ -285,7 +290,8 @@ public class GpdjmcMgrDictDTO  implements java.io.Serializable {
     /**
      * set bak
      *
-     * @param bak
+     * @param bak 
+     * @return GpdjmcMgrDictDTO
      */
     public GpdjmcMgrDictDTO bak(String bak) {
         this.bak = bak;
@@ -296,7 +302,8 @@ public class GpdjmcMgrDictDTO  implements java.io.Serializable {
     /**
      * set enabled
      *
-     * @param enabled
+     * @param enabled 
+     * @return GpdjmcMgrDictDTO
      */
     public GpdjmcMgrDictDTO enabled(String enabled) {
         this.enabled = enabled;
@@ -307,7 +314,8 @@ public class GpdjmcMgrDictDTO  implements java.io.Serializable {
     /**
      * set dictDesc
      *
-     * @param dictDesc
+     * @param dictDesc 
+     * @return GpdjmcMgrDictDTO
      */
     public GpdjmcMgrDictDTO dictDesc(String dictDesc) {
         this.dictDesc = dictDesc;

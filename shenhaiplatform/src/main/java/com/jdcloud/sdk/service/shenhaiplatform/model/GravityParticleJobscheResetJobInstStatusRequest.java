@@ -188,7 +188,8 @@ public class GravityParticleJobscheResetJobInstStatusRequest extends JdcloudRequ
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleJobscheResetJobInstStatusRequest
      */
     public GravityParticleJobscheResetJobInstStatusRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -199,7 +200,8 @@ public class GravityParticleJobscheResetJobInstStatusRequest extends JdcloudRequ
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GravityParticleJobscheResetJobInstStatusRequest
      */
     public GravityParticleJobscheResetJobInstStatusRequest txDate(String txDate) {
         this.txDate = txDate;
@@ -210,7 +212,8 @@ public class GravityParticleJobscheResetJobInstStatusRequest extends JdcloudRequ
     /**
      * set 作业重置的状态
      *
-     * @param jobStatus
+     * @param jobStatus 作业重置的状态
+     * @return GravityParticleJobscheResetJobInstStatusRequest
      */
     public GravityParticleJobscheResetJobInstStatusRequest jobStatus(String jobStatus) {
         this.jobStatus = jobStatus;
@@ -221,7 +224,8 @@ public class GravityParticleJobscheResetJobInstStatusRequest extends JdcloudRequ
     /**
      * set 作业重置的状态，向后兼容字段和jobStatus一个含义，新接口用jobStatus
      *
-     * @param status
+     * @param status 作业重置的状态，向后兼容字段和jobStatus一个含义，新接口用jobStatus
+     * @return GravityParticleJobscheResetJobInstStatusRequest
      */
     public GravityParticleJobscheResetJobInstStatusRequest status(String status) {
         this.status = status;
@@ -232,7 +236,8 @@ public class GravityParticleJobscheResetJobInstStatusRequest extends JdcloudRequ
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobscheResetJobInstStatusRequest
      */
     public GravityParticleJobscheResetJobInstStatusRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -243,7 +248,8 @@ public class GravityParticleJobscheResetJobInstStatusRequest extends JdcloudRequ
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobscheResetJobInstStatusRequest
      */
     public GravityParticleJobscheResetJobInstStatusRequest appName(String appName) {
         this.appName = appName;

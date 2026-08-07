@@ -136,7 +136,8 @@ public class PageVoJobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 总条数
      *
-     * @param total
+     * @param total 总条数
+     * @return PageVoJobTxDateStatusVo
      */
     public PageVoJobTxDateStatusVo total(Long total) {
         this.total = total;
@@ -147,7 +148,8 @@ public class PageVoJobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 每页条数
      *
-     * @param pageSize
+     * @param pageSize 每页条数
+     * @return PageVoJobTxDateStatusVo
      */
     public PageVoJobTxDateStatusVo pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -158,7 +160,8 @@ public class PageVoJobTxDateStatusVo  implements java.io.Serializable {
     /**
      * set 当前页
      *
-     * @param pageNum
+     * @param pageNum 当前页
+     * @return PageVoJobTxDateStatusVo
      */
     public PageVoJobTxDateStatusVo pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -169,7 +172,8 @@ public class PageVoJobTxDateStatusVo  implements java.io.Serializable {
     /**
     * set 数据列表
     *
-    * @param list
+    * @param list 数据列表
+    * @return PageVoJobTxDateStatusVo
     */
     public PageVoJobTxDateStatusVo list(List<JobTxDateStatusVo> list) {
         this.list = list;

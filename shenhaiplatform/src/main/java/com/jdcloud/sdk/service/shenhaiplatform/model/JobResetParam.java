@@ -64,7 +64,8 @@ public class JobResetParam  implements java.io.Serializable {
     /**
     * set 重置作业参数列表
     *
-    * @param arrayObjectParam
+    * @param arrayObjectParam 重置作业参数列表
+    * @return JobResetParam
     */
     public JobResetParam arrayObjectParam(List<JobResetDO> arrayObjectParam) {
         this.arrayObjectParam = arrayObjectParam;

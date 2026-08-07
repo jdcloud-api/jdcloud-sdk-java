@@ -143,7 +143,8 @@ public class JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesReq  implements java
     /**
      * set 数据库（工作空间编码）
      *
-     * @param database
+     * @param database 数据库（工作空间编码）
+     * @return JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesReq
      */
     public JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesReq database(String database) {
         this.database = database;
@@ -154,7 +155,8 @@ public class JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesReq  implements java
     /**
      * set 账户信息
      *
-     * @param principalName
+     * @param principalName 账户信息
+     * @return JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesReq
      */
     public JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesReq principalName(String principalName) {
         this.principalName = principalName;
@@ -165,7 +167,8 @@ public class JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesReq  implements java
     /**
      * set 模糊表名称
      *
-     * @param fuzzyTableName
+     * @param fuzzyTableName 模糊表名称
+     * @return JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesReq
      */
     public JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesReq fuzzyTableName(String fuzzyTableName) {
         this.fuzzyTableName = fuzzyTableName;
@@ -176,7 +179,8 @@ public class JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesReq  implements java
     /**
     * set 权限信息
     *
-    * @param privilegeTypes
+    * @param privilegeTypes 权限信息
+    * @return JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesReq
     */
     public JtlasTableFuuzyUnderSpecifiedUserWithPrivilegesReq privilegeTypes(List<String> privilegeTypes) {
         this.privilegeTypes = privilegeTypes;

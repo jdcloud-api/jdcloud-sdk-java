@@ -188,7 +188,8 @@ public class UranusTaskDependExportParamListRequest extends JdcloudRequest imple
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return UranusTaskDependExportParamListRequest
      */
     public UranusTaskDependExportParamListRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -199,7 +200,8 @@ public class UranusTaskDependExportParamListRequest extends JdcloudRequest imple
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return UranusTaskDependExportParamListRequest
      */
     public UranusTaskDependExportParamListRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -210,7 +212,8 @@ public class UranusTaskDependExportParamListRequest extends JdcloudRequest imple
     /**
      * set 工作流code
      *
-     * @param flowCode
+     * @param flowCode 工作流code
+     * @return UranusTaskDependExportParamListRequest
      */
     public UranusTaskDependExportParamListRequest flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -221,7 +224,8 @@ public class UranusTaskDependExportParamListRequest extends JdcloudRequest imple
     /**
      * set 任务code
      *
-     * @param taskCode
+     * @param taskCode 任务code
+     * @return UranusTaskDependExportParamListRequest
      */
     public UranusTaskDependExportParamListRequest taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -232,7 +236,8 @@ public class UranusTaskDependExportParamListRequest extends JdcloudRequest imple
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskDependExportParamListRequest
      */
     public UranusTaskDependExportParamListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -243,7 +248,8 @@ public class UranusTaskDependExportParamListRequest extends JdcloudRequest imple
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskDependExportParamListRequest
      */
     public UranusTaskDependExportParamListRequest appName(String appName) {
         this.appName = appName;

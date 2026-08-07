@@ -326,7 +326,8 @@ public class GpdjmcDmrModelDTO  implements java.io.Serializable {
     /**
      * set tableId
      *
-     * @param tableId
+     * @param tableId 
+     * @return GpdjmcDmrModelDTO
      */
     public GpdjmcDmrModelDTO tableId(Integer tableId) {
         this.tableId = tableId;
@@ -337,7 +338,8 @@ public class GpdjmcDmrModelDTO  implements java.io.Serializable {
     /**
      * set tableName
      *
-     * @param tableName
+     * @param tableName 
+     * @return GpdjmcDmrModelDTO
      */
     public GpdjmcDmrModelDTO tableName(String tableName) {
         this.tableName = tableName;
@@ -348,7 +350,8 @@ public class GpdjmcDmrModelDTO  implements java.io.Serializable {
     /**
      * set tableNameCh
      *
-     * @param tableNameCh
+     * @param tableNameCh 
+     * @return GpdjmcDmrModelDTO
      */
     public GpdjmcDmrModelDTO tableNameCh(String tableNameCh) {
         this.tableNameCh = tableNameCh;
@@ -359,7 +362,8 @@ public class GpdjmcDmrModelDTO  implements java.io.Serializable {
     /**
      * set databaseName
      *
-     * @param databaseName
+     * @param databaseName 
+     * @return GpdjmcDmrModelDTO
      */
     public GpdjmcDmrModelDTO databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -370,7 +374,8 @@ public class GpdjmcDmrModelDTO  implements java.io.Serializable {
     /**
      * set modelId
      *
-     * @param modelId
+     * @param modelId 
+     * @return GpdjmcDmrModelDTO
      */
     public GpdjmcDmrModelDTO modelId(Integer modelId) {
         this.modelId = modelId;
@@ -381,7 +386,8 @@ public class GpdjmcDmrModelDTO  implements java.io.Serializable {
     /**
      * set modelName
      *
-     * @param modelName
+     * @param modelName 
+     * @return GpdjmcDmrModelDTO
      */
     public GpdjmcDmrModelDTO modelName(String modelName) {
         this.modelName = modelName;
@@ -392,7 +398,8 @@ public class GpdjmcDmrModelDTO  implements java.io.Serializable {
     /**
      * set modelCode
      *
-     * @param modelCode
+     * @param modelCode 
+     * @return GpdjmcDmrModelDTO
      */
     public GpdjmcDmrModelDTO modelCode(String modelCode) {
         this.modelCode = modelCode;
@@ -403,7 +410,8 @@ public class GpdjmcDmrModelDTO  implements java.io.Serializable {
     /**
      * set projectCode
      *
-     * @param projectCode
+     * @param projectCode 
+     * @return GpdjmcDmrModelDTO
      */
     public GpdjmcDmrModelDTO projectCode(String projectCode) {
         this.projectCode = projectCode;
@@ -414,7 +422,8 @@ public class GpdjmcDmrModelDTO  implements java.io.Serializable {
     /**
      * set marketName
      *
-     * @param marketName
+     * @param marketName 
+     * @return GpdjmcDmrModelDTO
      */
     public GpdjmcDmrModelDTO marketName(String marketName) {
         this.marketName = marketName;
@@ -425,7 +434,8 @@ public class GpdjmcDmrModelDTO  implements java.io.Serializable {
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return GpdjmcDmrModelDTO
      */
     public GpdjmcDmrModelDTO workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -436,7 +446,8 @@ public class GpdjmcDmrModelDTO  implements java.io.Serializable {
     /**
      * set marketPre
      *
-     * @param marketPre
+     * @param marketPre 
+     * @return GpdjmcDmrModelDTO
      */
     public GpdjmcDmrModelDTO marketPre(String marketPre) {
         this.marketPre = marketPre;
@@ -447,7 +458,8 @@ public class GpdjmcDmrModelDTO  implements java.io.Serializable {
     /**
      * set pmarketName
      *
-     * @param pmarketName
+     * @param pmarketName 
+     * @return GpdjmcDmrModelDTO
      */
     public GpdjmcDmrModelDTO pmarketName(String pmarketName) {
         this.pmarketName = pmarketName;

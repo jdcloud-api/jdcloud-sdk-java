@@ -114,7 +114,8 @@ public class JtlasWarehouseQueryTablesOwnedByUserResult extends JdcloudResult im
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasWarehouseQueryTablesOwnedByUserResult
      */
     public JtlasWarehouseQueryTablesOwnedByUserResult code(String code) {
         this.code = code;
@@ -125,7 +126,8 @@ public class JtlasWarehouseQueryTablesOwnedByUserResult extends JdcloudResult im
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasWarehouseQueryTablesOwnedByUserResult
      */
     public JtlasWarehouseQueryTablesOwnedByUserResult message(String message) {
         this.message = message;
@@ -136,7 +138,8 @@ public class JtlasWarehouseQueryTablesOwnedByUserResult extends JdcloudResult im
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return JtlasWarehouseQueryTablesOwnedByUserResult
     */
     public JtlasWarehouseQueryTablesOwnedByUserResult result(List<JtlasWarehouseTable> result) {
         this.result = result;

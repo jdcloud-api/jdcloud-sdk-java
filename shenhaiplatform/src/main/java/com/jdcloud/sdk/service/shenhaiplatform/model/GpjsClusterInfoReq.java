@@ -62,7 +62,8 @@ public class GpjsClusterInfoReq  implements java.io.Serializable {
     /**
      * set 集群代码
      *
-     * @param clusterCode
+     * @param clusterCode 集群代码
+     * @return GpjsClusterInfoReq
      */
     public GpjsClusterInfoReq clusterCode(String clusterCode) {
         this.clusterCode = clusterCode;

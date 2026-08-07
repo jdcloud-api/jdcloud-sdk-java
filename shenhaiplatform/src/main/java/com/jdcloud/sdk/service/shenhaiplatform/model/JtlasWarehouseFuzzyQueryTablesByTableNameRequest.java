@@ -142,7 +142,8 @@ public class JtlasWarehouseFuzzyQueryTablesByTableNameRequest extends JdcloudReq
     /**
      * set 项目空间
      *
-     * @param database
+     * @param database 项目空间
+     * @return JtlasWarehouseFuzzyQueryTablesByTableNameRequest
      */
     public JtlasWarehouseFuzzyQueryTablesByTableNameRequest database(String database) {
         this.database = database;
@@ -153,7 +154,8 @@ public class JtlasWarehouseFuzzyQueryTablesByTableNameRequest extends JdcloudReq
     /**
      * set 表名称
      *
-     * @param fuzzyTableName
+     * @param fuzzyTableName 表名称
+     * @return JtlasWarehouseFuzzyQueryTablesByTableNameRequest
      */
     public JtlasWarehouseFuzzyQueryTablesByTableNameRequest fuzzyTableName(String fuzzyTableName) {
         this.fuzzyTableName = fuzzyTableName;
@@ -164,7 +166,8 @@ public class JtlasWarehouseFuzzyQueryTablesByTableNameRequest extends JdcloudReq
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasWarehouseFuzzyQueryTablesByTableNameRequest
      */
     public JtlasWarehouseFuzzyQueryTablesByTableNameRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -175,7 +178,8 @@ public class JtlasWarehouseFuzzyQueryTablesByTableNameRequest extends JdcloudReq
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasWarehouseFuzzyQueryTablesByTableNameRequest
      */
     public JtlasWarehouseFuzzyQueryTablesByTableNameRequest appName(String appName) {
         this.appName = appName;

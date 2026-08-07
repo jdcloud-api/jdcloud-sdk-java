@@ -183,7 +183,8 @@ public class UranusWorkFlowDirFileDeleteResult extends JdcloudResult implements 
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusWorkFlowDirFileDeleteResult
      */
     public UranusWorkFlowDirFileDeleteResult code(String code) {
         this.code = code;
@@ -194,7 +195,8 @@ public class UranusWorkFlowDirFileDeleteResult extends JdcloudResult implements 
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusWorkFlowDirFileDeleteResult
      */
     public UranusWorkFlowDirFileDeleteResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -205,7 +207,8 @@ public class UranusWorkFlowDirFileDeleteResult extends JdcloudResult implements 
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusWorkFlowDirFileDeleteResult
      */
     public UranusWorkFlowDirFileDeleteResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -216,7 +219,8 @@ public class UranusWorkFlowDirFileDeleteResult extends JdcloudResult implements 
     /**
      * set Object
      *
-     * @param result
+     * @param result Object
+     * @return UranusWorkFlowDirFileDeleteResult
      */
     public UranusWorkFlowDirFileDeleteResult result(Object result) {
         this.result = result;
@@ -227,7 +231,8 @@ public class UranusWorkFlowDirFileDeleteResult extends JdcloudResult implements 
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusWorkFlowDirFileDeleteResult
      */
     public UranusWorkFlowDirFileDeleteResult subCode(String subCode) {
         this.subCode = subCode;
@@ -238,7 +243,8 @@ public class UranusWorkFlowDirFileDeleteResult extends JdcloudResult implements 
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusWorkFlowDirFileDeleteResult
      */
     public UranusWorkFlowDirFileDeleteResult successed(Boolean successed) {
         this.successed = successed;

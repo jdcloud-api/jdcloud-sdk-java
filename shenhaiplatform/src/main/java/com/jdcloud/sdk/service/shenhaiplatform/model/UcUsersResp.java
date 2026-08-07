@@ -182,7 +182,8 @@ public class UcUsersResp  implements java.io.Serializable {
     /**
      * set userName
      *
-     * @param userName
+     * @param userName 
+     * @return UcUsersResp
      */
     public UcUsersResp userName(String userName) {
         this.userName = userName;
@@ -193,7 +194,8 @@ public class UcUsersResp  implements java.io.Serializable {
     /**
      * set nickName
      *
-     * @param nickName
+     * @param nickName 
+     * @return UcUsersResp
      */
     public UcUsersResp nickName(String nickName) {
         this.nickName = nickName;
@@ -204,7 +206,8 @@ public class UcUsersResp  implements java.io.Serializable {
     /**
      * set userPin
      *
-     * @param userPin
+     * @param userPin 
+     * @return UcUsersResp
      */
     public UcUsersResp userPin(String userPin) {
         this.userPin = userPin;
@@ -215,7 +218,8 @@ public class UcUsersResp  implements java.io.Serializable {
     /**
      * set account
      *
-     * @param account
+     * @param account 
+     * @return UcUsersResp
      */
     public UcUsersResp account(String account) {
         this.account = account;
@@ -226,7 +230,8 @@ public class UcUsersResp  implements java.io.Serializable {
     /**
      * set email
      *
-     * @param email
+     * @param email 
+     * @return UcUsersResp
      */
     public UcUsersResp email(String email) {
         this.email = email;
@@ -237,7 +242,8 @@ public class UcUsersResp  implements java.io.Serializable {
     /**
      * set isAccount
      *
-     * @param isAccount
+     * @param isAccount 
+     * @return UcUsersResp
      */
     public UcUsersResp isAccount(Boolean isAccount) {
         this.isAccount = isAccount;

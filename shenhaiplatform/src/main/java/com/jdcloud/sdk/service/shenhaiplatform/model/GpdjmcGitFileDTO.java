@@ -350,7 +350,8 @@ public class GpdjmcGitFileDTO  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return GpdjmcGitFileDTO
      */
     public GpdjmcGitFileDTO id(Integer id) {
         this.id = id;
@@ -361,7 +362,8 @@ public class GpdjmcGitFileDTO  implements java.io.Serializable {
     /**
      * set fileName
      *
-     * @param fileName
+     * @param fileName 
+     * @return GpdjmcGitFileDTO
      */
     public GpdjmcGitFileDTO fileName(String fileName) {
         this.fileName = fileName;
@@ -372,7 +374,8 @@ public class GpdjmcGitFileDTO  implements java.io.Serializable {
     /**
      * set fileType
      *
-     * @param fileType
+     * @param fileType 
+     * @return GpdjmcGitFileDTO
      */
     public GpdjmcGitFileDTO fileType(String fileType) {
         this.fileType = fileType;
@@ -383,7 +386,8 @@ public class GpdjmcGitFileDTO  implements java.io.Serializable {
     /**
      * set filePath
      *
-     * @param filePath
+     * @param filePath 
+     * @return GpdjmcGitFileDTO
      */
     public GpdjmcGitFileDTO filePath(String filePath) {
         this.filePath = filePath;
@@ -394,7 +398,8 @@ public class GpdjmcGitFileDTO  implements java.io.Serializable {
     /**
      * set fileVers
      *
-     * @param fileVers
+     * @param fileVers 
+     * @return GpdjmcGitFileDTO
      */
     public GpdjmcGitFileDTO fileVers(String fileVers) {
         this.fileVers = fileVers;
@@ -405,7 +410,8 @@ public class GpdjmcGitFileDTO  implements java.io.Serializable {
     /**
      * set gitUrl
      *
-     * @param gitUrl
+     * @param gitUrl 
+     * @return GpdjmcGitFileDTO
      */
     public GpdjmcGitFileDTO gitUrl(String gitUrl) {
         this.gitUrl = gitUrl;
@@ -416,7 +422,8 @@ public class GpdjmcGitFileDTO  implements java.io.Serializable {
     /**
      * set deleteFlag
      *
-     * @param deleteFlag
+     * @param deleteFlag 
+     * @return GpdjmcGitFileDTO
      */
     public GpdjmcGitFileDTO deleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;
@@ -427,7 +434,8 @@ public class GpdjmcGitFileDTO  implements java.io.Serializable {
     /**
      * set creator
      *
-     * @param creator
+     * @param creator 
+     * @return GpdjmcGitFileDTO
      */
     public GpdjmcGitFileDTO creator(String creator) {
         this.creator = creator;
@@ -438,7 +446,8 @@ public class GpdjmcGitFileDTO  implements java.io.Serializable {
     /**
      * set createTime
      *
-     * @param createTime
+     * @param createTime 
+     * @return GpdjmcGitFileDTO
      */
     public GpdjmcGitFileDTO createTime(String createTime) {
         this.createTime = createTime;
@@ -449,7 +458,8 @@ public class GpdjmcGitFileDTO  implements java.io.Serializable {
     /**
      * set updateUser
      *
-     * @param updateUser
+     * @param updateUser 
+     * @return GpdjmcGitFileDTO
      */
     public GpdjmcGitFileDTO updateUser(String updateUser) {
         this.updateUser = updateUser;
@@ -460,7 +470,8 @@ public class GpdjmcGitFileDTO  implements java.io.Serializable {
     /**
      * set updateTime
      *
-     * @param updateTime
+     * @param updateTime 
+     * @return GpdjmcGitFileDTO
      */
     public GpdjmcGitFileDTO updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -471,7 +482,8 @@ public class GpdjmcGitFileDTO  implements java.io.Serializable {
     /**
      * set startupFlag
      *
-     * @param startupFlag
+     * @param startupFlag 
+     * @return GpdjmcGitFileDTO
      */
     public GpdjmcGitFileDTO startupFlag(Integer startupFlag) {
         this.startupFlag = startupFlag;
@@ -482,7 +494,8 @@ public class GpdjmcGitFileDTO  implements java.io.Serializable {
     /**
      * set level
      *
-     * @param level
+     * @param level 
+     * @return GpdjmcGitFileDTO
      */
     public GpdjmcGitFileDTO level(Integer level) {
         this.level = level;

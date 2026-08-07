@@ -164,7 +164,8 @@ public class WorkspaceSaveInfoRequest extends JdcloudRequest implements java.io.
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceSaveInfoRequest
      */
     public WorkspaceSaveInfoRequest id(Integer id) {
         this.id = id;
@@ -175,7 +176,8 @@ public class WorkspaceSaveInfoRequest extends JdcloudRequest implements java.io.
     /**
      * set workspaceName
      *
-     * @param workspaceName
+     * @param workspaceName 
+     * @return WorkspaceSaveInfoRequest
      */
     public WorkspaceSaveInfoRequest workspaceName(String workspaceName) {
         this.workspaceName = workspaceName;
@@ -186,7 +188,8 @@ public class WorkspaceSaveInfoRequest extends JdcloudRequest implements java.io.
     /**
      * set workspaceDescription
      *
-     * @param workspaceDescription
+     * @param workspaceDescription 
+     * @return WorkspaceSaveInfoRequest
      */
     public WorkspaceSaveInfoRequest workspaceDescription(String workspaceDescription) {
         this.workspaceDescription = workspaceDescription;
@@ -197,7 +200,8 @@ public class WorkspaceSaveInfoRequest extends JdcloudRequest implements java.io.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceSaveInfoRequest
      */
     public WorkspaceSaveInfoRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -208,7 +212,8 @@ public class WorkspaceSaveInfoRequest extends JdcloudRequest implements java.io.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceSaveInfoRequest
      */
     public WorkspaceSaveInfoRequest appName(String appName) {
         this.appName = appName;

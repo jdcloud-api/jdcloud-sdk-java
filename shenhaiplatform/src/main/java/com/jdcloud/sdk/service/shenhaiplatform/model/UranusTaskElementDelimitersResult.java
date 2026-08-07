@@ -186,7 +186,8 @@ public class UranusTaskElementDelimitersResult extends JdcloudResult implements 
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusTaskElementDelimitersResult
      */
     public UranusTaskElementDelimitersResult code(String code) {
         this.code = code;
@@ -197,7 +198,8 @@ public class UranusTaskElementDelimitersResult extends JdcloudResult implements 
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusTaskElementDelimitersResult
      */
     public UranusTaskElementDelimitersResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -208,7 +210,8 @@ public class UranusTaskElementDelimitersResult extends JdcloudResult implements 
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusTaskElementDelimitersResult
      */
     public UranusTaskElementDelimitersResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -219,7 +222,8 @@ public class UranusTaskElementDelimitersResult extends JdcloudResult implements 
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return UranusTaskElementDelimitersResult
     */
     public UranusTaskElementDelimitersResult result(List<TaskLoopElementDelimiterVo> result) {
         this.result = result;
@@ -230,7 +234,8 @@ public class UranusTaskElementDelimitersResult extends JdcloudResult implements 
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusTaskElementDelimitersResult
      */
     public UranusTaskElementDelimitersResult subCode(String subCode) {
         this.subCode = subCode;
@@ -241,7 +246,8 @@ public class UranusTaskElementDelimitersResult extends JdcloudResult implements 
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusTaskElementDelimitersResult
      */
     public UranusTaskElementDelimitersResult successed(Boolean successed) {
         this.successed = successed;

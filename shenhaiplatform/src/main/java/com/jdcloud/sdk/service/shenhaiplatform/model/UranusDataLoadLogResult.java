@@ -113,7 +113,8 @@ public class UranusDataLoadLogResult extends JdcloudResult implements java.io.Se
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return UranusDataLoadLogResult
      */
     public UranusDataLoadLogResult code(String code) {
         this.code = code;
@@ -124,7 +125,8 @@ public class UranusDataLoadLogResult extends JdcloudResult implements java.io.Se
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return UranusDataLoadLogResult
      */
     public UranusDataLoadLogResult message(String message) {
         this.message = message;
@@ -135,7 +137,8 @@ public class UranusDataLoadLogResult extends JdcloudResult implements java.io.Se
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return UranusDataLoadLogResult
     */
     public UranusDataLoadLogResult result(List<String> result) {
         this.result = result;

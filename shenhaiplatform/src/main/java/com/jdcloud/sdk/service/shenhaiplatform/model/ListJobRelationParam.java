@@ -110,7 +110,8 @@ public class ListJobRelationParam  implements java.io.Serializable {
     /**
      * set 分页-页码
      *
-     * @param pageNum
+     * @param pageNum 分页-页码
+     * @return ListJobRelationParam
      */
     public ListJobRelationParam pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -121,7 +122,8 @@ public class ListJobRelationParam  implements java.io.Serializable {
     /**
      * set 分页-每页数量
      *
-     * @param pageSize
+     * @param pageSize 分页-每页数量
+     * @return ListJobRelationParam
      */
     public ListJobRelationParam pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -132,7 +134,8 @@ public class ListJobRelationParam  implements java.io.Serializable {
     /**
      * set 作业编码
      *
-     * @param jobName
+     * @param jobName 作业编码
+     * @return ListJobRelationParam
      */
     public ListJobRelationParam jobName(String jobName) {
         this.jobName = jobName;

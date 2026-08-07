@@ -381,7 +381,8 @@ public class UranusUploaderChunkReq  implements java.io.Serializable {
     /**
      * set 文件类型
      *
-     * @param fileTypeCode
+     * @param fileTypeCode 文件类型
+     * @return UranusUploaderChunkReq
      */
     public UranusUploaderChunkReq fileTypeCode(Integer fileTypeCode) {
         this.fileTypeCode = fileTypeCode;
@@ -392,7 +393,8 @@ public class UranusUploaderChunkReq  implements java.io.Serializable {
     /**
      * set 是否spark-jar的管理模块,spark-jar操作hdfs通过字段区分
      *
-     * @param isJarManagement
+     * @param isJarManagement 是否spark-jar的管理模块,spark-jar操作hdfs通过字段区分
+     * @return UranusUploaderChunkReq
      */
     public UranusUploaderChunkReq isJarManagement(Boolean isJarManagement) {
         this.isJarManagement = isJarManagement;
@@ -403,7 +405,8 @@ public class UranusUploaderChunkReq  implements java.io.Serializable {
     /**
      * set 任务流Code
      *
-     * @param flowCode
+     * @param flowCode 任务流Code
+     * @return UranusUploaderChunkReq
      */
     public UranusUploaderChunkReq flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -414,7 +417,8 @@ public class UranusUploaderChunkReq  implements java.io.Serializable {
     /**
      * set 文件夹上传的时候文件的相对路径属性
      *
-     * @param relativePath
+     * @param relativePath 文件夹上传的时候文件的相对路径属性
+     * @return UranusUploaderChunkReq
      */
     public UranusUploaderChunkReq relativePath(String relativePath) {
         this.relativePath = relativePath;
@@ -425,7 +429,8 @@ public class UranusUploaderChunkReq  implements java.io.Serializable {
     /**
      * set 文件唯一标识
      *
-     * @param uploadId
+     * @param uploadId 文件唯一标识
+     * @return UranusUploaderChunkReq
      */
     public UranusUploaderChunkReq uploadId(String uploadId) {
         this.uploadId = uploadId;
@@ -436,7 +441,8 @@ public class UranusUploaderChunkReq  implements java.io.Serializable {
     /**
      * set 当前块的次序，第一个块是 1，注意不是从 0 开始的
      *
-     * @param chunkNumber
+     * @param chunkNumber 当前块的次序，第一个块是 1，注意不是从 0 开始的
+     * @return UranusUploaderChunkReq
      */
     public UranusUploaderChunkReq chunkNumber(Integer chunkNumber) {
         this.chunkNumber = chunkNumber;
@@ -447,7 +453,8 @@ public class UranusUploaderChunkReq  implements java.io.Serializable {
     /**
      * set 文件被分成块的总数
      *
-     * @param totalChunks
+     * @param totalChunks 文件被分成块的总数
+     * @return UranusUploaderChunkReq
      */
     public UranusUploaderChunkReq totalChunks(Integer totalChunks) {
         this.totalChunks = totalChunks;
@@ -458,7 +465,8 @@ public class UranusUploaderChunkReq  implements java.io.Serializable {
     /**
      * set 分块大小，根据 totalSize 和这个值你就可以计算出总共的块数。注意最后一块的大小可能会比这个要大
      *
-     * @param chunkSize
+     * @param chunkSize 分块大小，根据 totalSize 和这个值你就可以计算出总共的块数。注意最后一块的大小可能会比这个要大
+     * @return UranusUploaderChunkReq
      */
     public UranusUploaderChunkReq chunkSize(Long chunkSize) {
         this.chunkSize = chunkSize;
@@ -469,7 +477,8 @@ public class UranusUploaderChunkReq  implements java.io.Serializable {
     /**
      * set 当前块的大小，实际大小
      *
-     * @param currentChunkSize
+     * @param currentChunkSize 当前块的大小，实际大小
+     * @return UranusUploaderChunkReq
      */
     public UranusUploaderChunkReq currentChunkSize(Long currentChunkSize) {
         this.currentChunkSize = currentChunkSize;
@@ -480,7 +489,8 @@ public class UranusUploaderChunkReq  implements java.io.Serializable {
     /**
      * set 文件总大小
      *
-     * @param totalSize
+     * @param totalSize 文件总大小
+     * @return UranusUploaderChunkReq
      */
     public UranusUploaderChunkReq totalSize(Long totalSize) {
         this.totalSize = totalSize;
@@ -491,7 +501,8 @@ public class UranusUploaderChunkReq  implements java.io.Serializable {
     /**
      * set 文件名
      *
-     * @param filename
+     * @param filename 文件名
+     * @return UranusUploaderChunkReq
      */
     public UranusUploaderChunkReq filename(String filename) {
         this.filename = filename;
@@ -502,7 +513,8 @@ public class UranusUploaderChunkReq  implements java.io.Serializable {
     /**
      * set file
      *
-     * @param file
+     * @param file 
+     * @return UranusUploaderChunkReq
      */
     public UranusUploaderChunkReq file(String file) {
         this.file = file;
@@ -513,7 +525,8 @@ public class UranusUploaderChunkReq  implements java.io.Serializable {
     /**
     * set 文件字节数组
     *
-    * @param fileBytes
+    * @param fileBytes 文件字节数组
+    * @return UranusUploaderChunkReq
     */
     public UranusUploaderChunkReq fileBytes(List<String> fileBytes) {
         this.fileBytes = fileBytes;
@@ -524,7 +537,8 @@ public class UranusUploaderChunkReq  implements java.io.Serializable {
     /**
     * set partETagList
     *
-    * @param partETagList
+    * @param partETagList partETagList
+    * @return UranusUploaderChunkReq
     */
     public UranusUploaderChunkReq partETagList(List<UranusUploaderPartETag> partETagList) {
         this.partETagList = partETagList;

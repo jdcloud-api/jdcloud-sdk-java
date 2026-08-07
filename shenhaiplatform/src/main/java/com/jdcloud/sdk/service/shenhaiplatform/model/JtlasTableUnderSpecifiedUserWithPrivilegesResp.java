@@ -112,7 +112,8 @@ public class JtlasTableUnderSpecifiedUserWithPrivilegesResp  implements java.io.
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasTableUnderSpecifiedUserWithPrivilegesResp
      */
     public JtlasTableUnderSpecifiedUserWithPrivilegesResp code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class JtlasTableUnderSpecifiedUserWithPrivilegesResp  implements java.io.
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasTableUnderSpecifiedUserWithPrivilegesResp
      */
     public JtlasTableUnderSpecifiedUserWithPrivilegesResp message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class JtlasTableUnderSpecifiedUserWithPrivilegesResp  implements java.io.
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return JtlasTableUnderSpecifiedUserWithPrivilegesResp
     */
     public JtlasTableUnderSpecifiedUserWithPrivilegesResp result(List<JtlasWarehouseTable> result) {
         this.result = result;

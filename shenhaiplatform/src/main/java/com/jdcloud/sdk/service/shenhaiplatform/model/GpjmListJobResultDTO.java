@@ -974,7 +974,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 作业id
      *
-     * @param id
+     * @param id 作业id
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO id(Integer id) {
         this.id = id;
@@ -985,7 +986,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param etlJob
+     * @param etlJob 作业名称
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO etlJob(String etlJob) {
         this.etlJob = etlJob;
@@ -996,7 +998,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 处理类型（calc：数据计算，extract：数据抽取，ods：ODS加工，load：数据推送，hdfs：数据同步,dqim:质量作业）
      *
-     * @param processType
+     * @param processType 处理类型（calc：数据计算，extract：数据抽取，ods：ODS加工，load：数据推送，hdfs：数据同步,dqim:质量作业）
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO processType(String processType) {
         this.processType = processType;
@@ -1007,7 +1010,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 作业执行类型
      *
-     * @param exeType
+     * @param exeType 作业执行类型
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO exeType(String exeType) {
         this.exeType = exeType;
@@ -1018,7 +1022,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 最后一次运行服务器
      *
-     * @param etlServer
+     * @param etlServer 最后一次运行服务器
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO etlServer(String etlServer) {
         this.etlServer = etlServer;
@@ -1029,7 +1034,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 作业描述
      *
-     * @param description
+     * @param description 作业描述
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO description(String description) {
         this.description = description;
@@ -1040,7 +1046,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 周期具体日期
      *
-     * @param frequency
+     * @param frequency 周期具体日期
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO frequency(String frequency) {
         this.frequency = frequency;
@@ -1051,7 +1058,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 最后一次运行开始时间
      *
-     * @param lastStartTime
+     * @param lastStartTime 最后一次运行开始时间
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO lastStartTime(String lastStartTime) {
         this.lastStartTime = lastStartTime;
@@ -1062,7 +1070,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 最后一次运行结束时间
      *
-     * @param lastEndTime
+     * @param lastEndTime 最后一次运行结束时间
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO lastEndTime(String lastEndTime) {
         this.lastEndTime = lastEndTime;
@@ -1073,7 +1082,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 运行时间
      *
-     * @param runTime
+     * @param runTime 运行时间
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO runTime(String runTime) {
         this.runTime = runTime;
@@ -1084,7 +1094,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 最后一次运行状态
      *
-     * @param lastJobStatus
+     * @param lastJobStatus 最后一次运行状态
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO lastJobStatus(String lastJobStatus) {
         this.lastJobStatus = lastJobStatus;
@@ -1095,7 +1106,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 最后一次执行日期
      *
-     * @param lastTxDate
+     * @param lastTxDate 最后一次执行日期
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO lastTxDate(String lastTxDate) {
         this.lastTxDate = lastTxDate;
@@ -1106,7 +1118,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 最后返回编码
      *
-     * @param lastReturnCode
+     * @param lastReturnCode 最后返回编码
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO lastReturnCode(Integer lastReturnCode) {
         this.lastReturnCode = lastReturnCode;
@@ -1117,7 +1130,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 当前作业状态信息
      *
-     * @param currentStatusMsg
+     * @param currentStatusMsg 当前作业状态信息
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO currentStatusMsg(String currentStatusMsg) {
         this.currentStatusMsg = currentStatusMsg;
@@ -1128,7 +1142,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 是否启用，0未上线、1已上线、2已下线
      *
-     * @param enable
+     * @param enable 是否启用，0未上线、1已上线、2已下线
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO enable(String enable) {
         this.enable = enable;
@@ -1139,7 +1154,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set Session ID
      *
-     * @param jobSessionID
+     * @param jobSessionID Session ID
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO jobSessionID(Integer jobSessionID) {
         this.jobSessionID = jobSessionID;
@@ -1150,7 +1166,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 失效时间
      *
-     * @param expireTime
+     * @param expireTime 失效时间
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO expireTime(String expireTime) {
         this.expireTime = expireTime;
@@ -1161,7 +1178,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
      *
-     * @param triggerType
+     * @param triggerType 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -1172,7 +1190,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 触发时间
      *
-     * @param triggerTime
+     * @param triggerTime 触发时间
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO triggerTime(String triggerTime) {
         this.triggerTime = triggerTime;
@@ -1183,7 +1202,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
      *
-     * @param cycle
+     * @param cycle 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO cycle(String cycle) {
         this.cycle = cycle;
@@ -1194,7 +1214,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 周期具体日期
      *
-     * @param sequence
+     * @param sequence 周期具体日期
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO sequence(String sequence) {
         this.sequence = sequence;
@@ -1205,7 +1226,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 作业优先级，数字越小优先级越高
      *
-     * @param priority
+     * @param priority 作业优先级，数字越小优先级越高
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO priority(Integer priority) {
         this.priority = priority;
@@ -1216,7 +1238,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 创建人
      *
-     * @param createUser
+     * @param createUser 创建人
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO createUser(String createUser) {
         this.createUser = createUser;
@@ -1227,7 +1250,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 负责人，不超过10个
      *
-     * @param userName
+     * @param userName 负责人，不超过10个
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO userName(String userName) {
         this.userName = userName;
@@ -1238,7 +1262,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 重试次数
      *
-     * @param retryCount
+     * @param retryCount 重试次数
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO retryCount(Integer retryCount) {
         this.retryCount = retryCount;
@@ -1249,7 +1274,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 周期开始时间(适用小时分钟)
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 周期开始时间(适用小时分钟)
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -1260,7 +1286,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 周期结束时间(适用小时分钟)
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 周期结束时间(适用小时分钟)
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -1271,7 +1298,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 周期间隔(适用小时分钟，当周期为小时，含义为间隔小时数，当周期为分钟，含义为间隔分钟数)
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 周期间隔(适用小时分钟，当周期为小时，含义为间隔小时数，当周期为分钟，含义为间隔分钟数)
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO sequenceInterval(Integer sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -1282,7 +1310,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 是否重试过
      *
-     * @param flagRetry
+     * @param flagRetry 是否重试过
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO flagRetry(String flagRetry) {
         this.flagRetry = flagRetry;
@@ -1293,7 +1322,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO createTime(String createTime) {
         this.createTime = createTime;
@@ -1304,7 +1334,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -1315,7 +1346,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 周期中文名 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
      *
-     * @param cycleLabel
+     * @param cycleLabel 周期中文名 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO cycleLabel(String cycleLabel) {
         this.cycleLabel = cycleLabel;
@@ -1326,7 +1358,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 触发方式中文名:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
      *
-     * @param triggerTypeLabel
+     * @param triggerTypeLabel 触发方式中文名:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO triggerTypeLabel(String triggerTypeLabel) {
         this.triggerTypeLabel = triggerTypeLabel;
@@ -1337,7 +1370,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 处理类型中文名（数据计算，数据抽取，ODS加工，数据推送，数据同步, 质量作业）
      *
-     * @param processTypeCn
+     * @param processTypeCn 处理类型中文名（数据计算，数据抽取，ODS加工，数据推送，数据同步, 质量作业）
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO processTypeCn(String processTypeCn) {
         this.processTypeCn = processTypeCn;
@@ -1348,7 +1382,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 数据来源渠道，集成开发（IDE）、数据管道（PIPE）
      *
-     * @param channel
+     * @param channel 数据来源渠道，集成开发（IDE）、数据管道（PIPE）
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO channel(String channel) {
         this.channel = channel;
@@ -1359,7 +1394,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 任务类型
      *
-     * @param jobType
+     * @param jobType 任务类型
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO jobType(String jobType) {
         this.jobType = jobType;
@@ -1370,7 +1406,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 是否为作业管理员或者工作空间管理员
      *
-     * @param managerFlag
+     * @param managerFlag 是否为作业管理员或者工作空间管理员
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO managerFlag(Boolean managerFlag) {
         this.managerFlag = managerFlag;
@@ -1381,7 +1418,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set jobChildType
      *
-     * @param jobChildType
+     * @param jobChildType 
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO jobChildType(String jobChildType) {
         this.jobChildType = jobChildType;
@@ -1392,7 +1430,8 @@ public class GpjmListJobResultDTO  implements java.io.Serializable {
     /**
      * set 客户作业名
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名
+     * @return GpjmListJobResultDTO
      */
     public GpjmListJobResultDTO cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;

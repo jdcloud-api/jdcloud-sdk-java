@@ -142,7 +142,8 @@ public class UranusTableCheckTableNameRequest extends JdcloudRequest implements 
     /**
      * set 校验表名称
      *
-     * @param tableName
+     * @param tableName 校验表名称
+     * @return UranusTableCheckTableNameRequest
      */
     public UranusTableCheckTableNameRequest tableName(String tableName) {
         this.tableName = tableName;
@@ -153,7 +154,8 @@ public class UranusTableCheckTableNameRequest extends JdcloudRequest implements 
     /**
      * set 环境信息，dev 开发、prod 生产
      *
-     * @param env
+     * @param env 环境信息，dev 开发、prod 生产
+     * @return UranusTableCheckTableNameRequest
      */
     public UranusTableCheckTableNameRequest env(String env) {
         this.env = env;
@@ -164,7 +166,8 @@ public class UranusTableCheckTableNameRequest extends JdcloudRequest implements 
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTableCheckTableNameRequest
      */
     public UranusTableCheckTableNameRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -175,7 +178,8 @@ public class UranusTableCheckTableNameRequest extends JdcloudRequest implements 
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTableCheckTableNameRequest
      */
     public UranusTableCheckTableNameRequest appName(String appName) {
         this.appName = appName;

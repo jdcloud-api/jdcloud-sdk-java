@@ -352,7 +352,8 @@ public class UranusTaskNodePageReq  implements java.io.Serializable {
     /**
      * set 分页
      *
-     * @param page
+     * @param page 分页
+     * @return UranusTaskNodePageReq
      */
     public UranusTaskNodePageReq page(Integer page) {
         this.page = page;
@@ -363,7 +364,8 @@ public class UranusTaskNodePageReq  implements java.io.Serializable {
     /**
      * set 分页
      *
-     * @param pageSize
+     * @param pageSize 分页
+     * @return UranusTaskNodePageReq
      */
     public UranusTaskNodePageReq pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -374,7 +376,8 @@ public class UranusTaskNodePageReq  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param taskName
+     * @param taskName 作业名称
+     * @return UranusTaskNodePageReq
      */
     public UranusTaskNodePageReq taskName(String taskName) {
         this.taskName = taskName;
@@ -385,7 +388,8 @@ public class UranusTaskNodePageReq  implements java.io.Serializable {
     /**
     * set 任务类型
     *
-    * @param jobType
+    * @param jobType 任务类型
+    * @return UranusTaskNodePageReq
     */
     public UranusTaskNodePageReq jobType(List<Integer> jobType) {
         this.jobType = jobType;
@@ -396,7 +400,8 @@ public class UranusTaskNodePageReq  implements java.io.Serializable {
     /**
     * set 子任务类型
     *
-    * @param jobChildType
+    * @param jobChildType 子任务类型
+    * @return UranusTaskNodePageReq
     */
     public UranusTaskNodePageReq jobChildType(List<Integer> jobChildType) {
         this.jobChildType = jobChildType;
@@ -407,7 +412,8 @@ public class UranusTaskNodePageReq  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return UranusTaskNodePageReq
      */
     public UranusTaskNodePageReq manager(String manager) {
         this.manager = manager;
@@ -418,7 +424,8 @@ public class UranusTaskNodePageReq  implements java.io.Serializable {
     /**
     * set 作业状态
     *
-    * @param jobStatus
+    * @param jobStatus 作业状态
+    * @return UranusTaskNodePageReq
     */
     public UranusTaskNodePageReq jobStatus(List<Integer> jobStatus) {
         this.jobStatus = jobStatus;
@@ -429,7 +436,8 @@ public class UranusTaskNodePageReq  implements java.io.Serializable {
     /**
     * set 修改状态
     *
-    * @param updateStatus
+    * @param updateStatus 修改状态
+    * @return UranusTaskNodePageReq
     */
     public UranusTaskNodePageReq updateStatus(List<Integer> updateStatus) {
         this.updateStatus = updateStatus;
@@ -440,7 +448,8 @@ public class UranusTaskNodePageReq  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTimeBefore
+     * @param createTimeBefore 创建时间
+     * @return UranusTaskNodePageReq
      */
     public UranusTaskNodePageReq createTimeBefore(String createTimeBefore) {
         this.createTimeBefore = createTimeBefore;
@@ -451,7 +460,8 @@ public class UranusTaskNodePageReq  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTimeAfter
+     * @param createTimeAfter 创建时间
+     * @return UranusTaskNodePageReq
      */
     public UranusTaskNodePageReq createTimeAfter(String createTimeAfter) {
         this.createTimeAfter = createTimeAfter;
@@ -462,7 +472,8 @@ public class UranusTaskNodePageReq  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTimeBefore
+     * @param updateTimeBefore 更新时间
+     * @return UranusTaskNodePageReq
      */
     public UranusTaskNodePageReq updateTimeBefore(String updateTimeBefore) {
         this.updateTimeBefore = updateTimeBefore;
@@ -473,7 +484,8 @@ public class UranusTaskNodePageReq  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTimeAfter
+     * @param updateTimeAfter 更新时间
+     * @return UranusTaskNodePageReq
      */
     public UranusTaskNodePageReq updateTimeAfter(String updateTimeAfter) {
         this.updateTimeAfter = updateTimeAfter;
@@ -484,7 +496,8 @@ public class UranusTaskNodePageReq  implements java.io.Serializable {
     /**
      * set 流程Code
      *
-     * @param flowCode
+     * @param flowCode 流程Code
+     * @return UranusTaskNodePageReq
      */
     public UranusTaskNodePageReq flowCode(String flowCode) {
         this.flowCode = flowCode;

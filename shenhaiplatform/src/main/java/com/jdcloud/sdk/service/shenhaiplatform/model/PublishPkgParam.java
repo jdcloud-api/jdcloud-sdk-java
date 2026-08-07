@@ -88,7 +88,8 @@ public class PublishPkgParam  implements java.io.Serializable {
     /**
     * set 发布包ID列表
     *
-    * @param pkgIds
+    * @param pkgIds 发布包ID列表
+    * @return PublishPkgParam
     */
     public PublishPkgParam pkgIds(List<Long> pkgIds) {
         this.pkgIds = pkgIds;
@@ -99,7 +100,8 @@ public class PublishPkgParam  implements java.io.Serializable {
     /**
      * set 当前工作空间编码
      *
-     * @param workspaceCode
+     * @param workspaceCode 当前工作空间编码
+     * @return PublishPkgParam
      */
     public PublishPkgParam workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;

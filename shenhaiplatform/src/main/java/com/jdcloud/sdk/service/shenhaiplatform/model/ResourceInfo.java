@@ -136,7 +136,8 @@ public class ResourceInfo  implements java.io.Serializable {
     /**
      * set 资源ID
      *
-     * @param resourceId
+     * @param resourceId 资源ID
+     * @return ResourceInfo
      */
     public ResourceInfo resourceId(String resourceId) {
         this.resourceId = resourceId;
@@ -147,7 +148,8 @@ public class ResourceInfo  implements java.io.Serializable {
     /**
      * set 资源名称
      *
-     * @param resourceName
+     * @param resourceName 资源名称
+     * @return ResourceInfo
      */
     public ResourceInfo resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -158,7 +160,8 @@ public class ResourceInfo  implements java.io.Serializable {
     /**
      * set 备注信息
      *
-     * @param remark
+     * @param remark 备注信息
+     * @return ResourceInfo
      */
     public ResourceInfo remark(String remark) {
         this.remark = remark;
@@ -169,7 +172,8 @@ public class ResourceInfo  implements java.io.Serializable {
     /**
     * set 绑定资源
     *
-    * @param bind
+    * @param bind 绑定资源
+    * @return ResourceInfo
     */
     public ResourceInfo bind(List<BindInfo> bind) {
         this.bind = bind;

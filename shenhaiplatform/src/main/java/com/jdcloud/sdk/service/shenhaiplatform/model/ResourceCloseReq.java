@@ -110,7 +110,8 @@ public class ResourceCloseReq  implements java.io.Serializable {
     /**
      * set 资源code
      *
-     * @param resourceCode
+     * @param resourceCode 资源code
+     * @return ResourceCloseReq
      */
     public ResourceCloseReq resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -121,7 +122,8 @@ public class ResourceCloseReq  implements java.io.Serializable {
     /**
      * set 总片数（建议5MB一片；不分片的文件为1片）
      *
-     * @param sliceTotal
+     * @param sliceTotal 总片数（建议5MB一片；不分片的文件为1片）
+     * @return ResourceCloseReq
      */
     public ResourceCloseReq sliceTotal(Integer sliceTotal) {
         this.sliceTotal = sliceTotal;
@@ -132,7 +134,8 @@ public class ResourceCloseReq  implements java.io.Serializable {
     /**
      * set 文件md5值
      *
-     * @param md5code
+     * @param md5code 文件md5值
+     * @return ResourceCloseReq
      */
     public ResourceCloseReq md5code(String md5code) {
         this.md5code = md5code;

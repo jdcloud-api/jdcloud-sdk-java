@@ -184,7 +184,8 @@ public class TaskInfoSparkJarReq  implements java.io.Serializable {
     /**
      * set 支持跑SparkJar的spark版本
      *
-     * @param sparkVersion
+     * @param sparkVersion 支持跑SparkJar的spark版本
+     * @return TaskInfoSparkJarReq
      */
     public TaskInfoSparkJarReq sparkVersion(String sparkVersion) {
         this.sparkVersion = sparkVersion;
@@ -195,7 +196,8 @@ public class TaskInfoSparkJarReq  implements java.io.Serializable {
     /**
      * set sparkJar的开发语言
      *
-     * @param language
+     * @param language sparkJar的开发语言
+     * @return TaskInfoSparkJarReq
      */
     public TaskInfoSparkJarReq language(String language) {
         this.language = language;
@@ -206,7 +208,8 @@ public class TaskInfoSparkJarReq  implements java.io.Serializable {
     /**
      * set spark程序主类所在的jar包文件
      *
-     * @param mainJar
+     * @param mainJar spark程序主类所在的jar包文件
+     * @return TaskInfoSparkJarReq
      */
     public TaskInfoSparkJarReq mainJar(ResourceBriefInfoVo mainJar) {
         this.mainJar = mainJar;
@@ -217,7 +220,8 @@ public class TaskInfoSparkJarReq  implements java.io.Serializable {
     /**
      * set spark程序主类
      *
-     * @param mainClass
+     * @param mainClass spark程序主类
+     * @return TaskInfoSparkJarReq
      */
     public TaskInfoSparkJarReq mainClass(String mainClass) {
         this.mainClass = mainClass;
@@ -228,7 +232,8 @@ public class TaskInfoSparkJarReq  implements java.io.Serializable {
     /**
     * set 依赖其他jar包（除主程序jar）
     *
-    * @param dependentResources
+    * @param dependentResources 依赖其他jar包（除主程序jar）
+    * @return TaskInfoSparkJarReq
     */
     public TaskInfoSparkJarReq dependentResources(List<ResourceBriefInfoVo> dependentResources) {
         this.dependentResources = dependentResources;
@@ -239,7 +244,8 @@ public class TaskInfoSparkJarReq  implements java.io.Serializable {
     /**
      * set sparkJar运行的其他参数(Map&lt;String,String&gt;)
      *
-     * @param params
+     * @param params sparkJar运行的其他参数(Map&lt;String,String&gt;)
+     * @return TaskInfoSparkJarReq
      */
     public TaskInfoSparkJarReq params(Object params) {
         this.params = params;

@@ -158,7 +158,8 @@ public class UranusTaskInfo  implements java.io.Serializable {
     /**
      * set taskInfo
      *
-     * @param taskInfo
+     * @param taskInfo 
+     * @return UranusTaskInfo
      */
     public UranusTaskInfo taskInfo(UranusTaskInfoRes taskInfo) {
         this.taskInfo = taskInfo;
@@ -169,7 +170,8 @@ public class UranusTaskInfo  implements java.io.Serializable {
     /**
      * set taskNodeInfo
      *
-     * @param taskNodeInfo
+     * @param taskNodeInfo 
+     * @return UranusTaskInfo
      */
     public UranusTaskInfo taskNodeInfo(UranusTaskInfoNodeReq taskNodeInfo) {
         this.taskNodeInfo = taskNodeInfo;
@@ -180,7 +182,8 @@ public class UranusTaskInfo  implements java.io.Serializable {
     /**
      * set fileInfo
      *
-     * @param fileInfo
+     * @param fileInfo 
+     * @return UranusTaskInfo
      */
     public UranusTaskInfo fileInfo(UranusTaskInfoFileReq fileInfo) {
         this.fileInfo = fileInfo;
@@ -191,7 +194,8 @@ public class UranusTaskInfo  implements java.io.Serializable {
     /**
      * set sparkJarInfo
      *
-     * @param sparkJarInfo
+     * @param sparkJarInfo 
+     * @return UranusTaskInfo
      */
     public UranusTaskInfo sparkJarInfo(TaskInfoSparkJarReq sparkJarInfo) {
         this.sparkJarInfo = sparkJarInfo;
@@ -202,7 +206,8 @@ public class UranusTaskInfo  implements java.io.Serializable {
     /**
      * set loopInfo
      *
-     * @param loopInfo
+     * @param loopInfo 
+     * @return UranusTaskInfo
      */
     public UranusTaskInfo loopInfo(TaskInfoLoopReq loopInfo) {
         this.loopInfo = loopInfo;

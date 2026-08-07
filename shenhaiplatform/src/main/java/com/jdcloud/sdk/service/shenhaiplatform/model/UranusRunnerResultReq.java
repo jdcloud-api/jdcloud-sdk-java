@@ -158,7 +158,8 @@ public class UranusRunnerResultReq  implements java.io.Serializable {
     /**
      * set 文件名称 taskId_${结果集数字}  第一个结果就是：1_1,第二个结果集就是：1_2
      *
-     * @param fileName
+     * @param fileName 文件名称 taskId_${结果集数字}  第一个结果就是：1_1,第二个结果集就是：1_2
+     * @return UranusRunnerResultReq
      */
     public UranusRunnerResultReq fileName(String fileName) {
         this.fileName = fileName;
@@ -169,7 +170,8 @@ public class UranusRunnerResultReq  implements java.io.Serializable {
     /**
      * set 文件业务code
      *
-     * @param fileCode
+     * @param fileCode 文件业务code
+     * @return UranusRunnerResultReq
      */
     public UranusRunnerResultReq fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -180,7 +182,8 @@ public class UranusRunnerResultReq  implements java.io.Serializable {
     /**
      * set 文件偏移量
      *
-     * @param pos
+     * @param pos 文件偏移量
+     * @return UranusRunnerResultReq
      */
     public UranusRunnerResultReq pos(Long pos) {
         this.pos = pos;
@@ -191,7 +194,8 @@ public class UranusRunnerResultReq  implements java.io.Serializable {
     /**
      * set 读取结果条数
      *
-     * @param lines
+     * @param lines 读取结果条数
+     * @return UranusRunnerResultReq
      */
     public UranusRunnerResultReq lines(Long lines) {
         this.lines = lines;
@@ -202,7 +206,8 @@ public class UranusRunnerResultReq  implements java.io.Serializable {
     /**
      * set 运行ID
      *
-     * @param historyId
+     * @param historyId 运行ID
+     * @return UranusRunnerResultReq
      */
     public UranusRunnerResultReq historyId(Integer historyId) {
         this.historyId = historyId;

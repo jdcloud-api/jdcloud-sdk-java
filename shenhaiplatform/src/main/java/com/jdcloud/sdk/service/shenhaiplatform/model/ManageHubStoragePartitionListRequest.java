@@ -222,7 +222,8 @@ public class ManageHubStoragePartitionListRequest extends JdcloudRequest impleme
     /**
      * set 租户code
      *
-     * @param companyCode
+     * @param companyCode 租户code
+     * @return ManageHubStoragePartitionListRequest
      */
     public ManageHubStoragePartitionListRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -233,7 +234,8 @@ public class ManageHubStoragePartitionListRequest extends JdcloudRequest impleme
     /**
      * set 数据库名称
      *
-     * @param database
+     * @param database 数据库名称
+     * @return ManageHubStoragePartitionListRequest
      */
     public ManageHubStoragePartitionListRequest database(String database) {
         this.database = database;
@@ -244,7 +246,8 @@ public class ManageHubStoragePartitionListRequest extends JdcloudRequest impleme
     /**
      * set 表名称
      *
-     * @param table
+     * @param table 表名称
+     * @return ManageHubStoragePartitionListRequest
      */
     public ManageHubStoragePartitionListRequest table(String table) {
         this.table = table;
@@ -255,7 +258,8 @@ public class ManageHubStoragePartitionListRequest extends JdcloudRequest impleme
     /**
      * set 分页大小
      *
-     * @param pageSize
+     * @param pageSize 分页大小
+     * @return ManageHubStoragePartitionListRequest
      */
     public ManageHubStoragePartitionListRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -266,7 +270,8 @@ public class ManageHubStoragePartitionListRequest extends JdcloudRequest impleme
     /**
      * set 页码
      *
-     * @param pageNum
+     * @param pageNum 页码
+     * @return ManageHubStoragePartitionListRequest
      */
     public ManageHubStoragePartitionListRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -277,7 +282,8 @@ public class ManageHubStoragePartitionListRequest extends JdcloudRequest impleme
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubStoragePartitionListRequest
      */
     public ManageHubStoragePartitionListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -288,7 +294,8 @@ public class ManageHubStoragePartitionListRequest extends JdcloudRequest impleme
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubStoragePartitionListRequest
      */
     public ManageHubStoragePartitionListRequest appName(String appName) {
         this.appName = appName;

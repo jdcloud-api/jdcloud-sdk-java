@@ -86,7 +86,8 @@ public class ModelVo  implements java.io.Serializable {
     /**
      * set 模型展示名
      *
-     * @param desc
+     * @param desc 模型展示名
+     * @return ModelVo
      */
     public ModelVo desc(String desc) {
         this.desc = desc;
@@ -97,7 +98,8 @@ public class ModelVo  implements java.io.Serializable {
     /**
      * set 模型编码
      *
-     * @param code
+     * @param code 模型编码
+     * @return ModelVo
      */
     public ModelVo code(String code) {
         this.code = code;

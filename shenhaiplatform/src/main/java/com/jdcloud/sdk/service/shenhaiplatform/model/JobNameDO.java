@@ -86,7 +86,8 @@ public class JobNameDO  implements java.io.Serializable {
     /**
      * set 作业编码
      *
-     * @param jobName
+     * @param jobName 作业编码
+     * @return JobNameDO
      */
     public JobNameDO jobName(String jobName) {
         this.jobName = jobName;
@@ -97,7 +98,8 @@ public class JobNameDO  implements java.io.Serializable {
     /**
      * set 作业展示名
      *
-     * @param cstJobName
+     * @param cstJobName 作业展示名
+     * @return JobNameDO
      */
     public JobNameDO cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;

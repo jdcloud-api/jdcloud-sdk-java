@@ -184,7 +184,8 @@ public class UranusResultListDictVO  implements java.io.Serializable {
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusResultListDictVO
      */
     public UranusResultListDictVO code(String code) {
         this.code = code;
@@ -195,7 +196,8 @@ public class UranusResultListDictVO  implements java.io.Serializable {
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusResultListDictVO
      */
     public UranusResultListDictVO errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -206,7 +208,8 @@ public class UranusResultListDictVO  implements java.io.Serializable {
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusResultListDictVO
      */
     public UranusResultListDictVO errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -217,7 +220,8 @@ public class UranusResultListDictVO  implements java.io.Serializable {
     /**
     * set Object
     *
-    * @param result
+    * @param result Object
+    * @return UranusResultListDictVO
     */
     public UranusResultListDictVO result(List<UranusDictVO> result) {
         this.result = result;
@@ -228,7 +232,8 @@ public class UranusResultListDictVO  implements java.io.Serializable {
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusResultListDictVO
      */
     public UranusResultListDictVO subCode(String subCode) {
         this.subCode = subCode;
@@ -239,7 +244,8 @@ public class UranusResultListDictVO  implements java.io.Serializable {
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusResultListDictVO
      */
     public UranusResultListDictVO successed(Boolean successed) {
         this.successed = successed;

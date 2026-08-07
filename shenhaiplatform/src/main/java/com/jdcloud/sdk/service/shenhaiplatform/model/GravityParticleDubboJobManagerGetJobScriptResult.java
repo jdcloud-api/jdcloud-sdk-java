@@ -136,7 +136,8 @@ public class GravityParticleDubboJobManagerGetJobScriptResult extends JdcloudRes
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GravityParticleDubboJobManagerGetJobScriptResult
      */
     public GravityParticleDubboJobManagerGetJobScriptResult success(Integer success) {
         this.success = success;
@@ -147,7 +148,8 @@ public class GravityParticleDubboJobManagerGetJobScriptResult extends JdcloudRes
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GravityParticleDubboJobManagerGetJobScriptResult
      */
     public GravityParticleDubboJobManagerGetJobScriptResult code(String code) {
         this.code = code;
@@ -158,7 +160,8 @@ public class GravityParticleDubboJobManagerGetJobScriptResult extends JdcloudRes
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GravityParticleDubboJobManagerGetJobScriptResult
      */
     public GravityParticleDubboJobManagerGetJobScriptResult msg(String msg) {
         this.msg = msg;
@@ -169,7 +172,8 @@ public class GravityParticleDubboJobManagerGetJobScriptResult extends JdcloudRes
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return GravityParticleDubboJobManagerGetJobScriptResult
      */
     public GravityParticleDubboJobManagerGetJobScriptResult result(GpdjmcDmrScriptInfoDTO result) {
         this.result = result;

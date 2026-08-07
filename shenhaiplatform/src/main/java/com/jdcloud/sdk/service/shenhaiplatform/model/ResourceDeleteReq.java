@@ -62,7 +62,8 @@ public class ResourceDeleteReq  implements java.io.Serializable {
     /**
      * set 资源code
      *
-     * @param resourceCode
+     * @param resourceCode 资源code
+     * @return ResourceDeleteReq
      */
     public ResourceDeleteReq resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;

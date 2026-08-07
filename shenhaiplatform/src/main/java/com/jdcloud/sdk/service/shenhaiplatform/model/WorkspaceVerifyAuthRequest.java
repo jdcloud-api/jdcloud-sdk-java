@@ -284,7 +284,8 @@ public class WorkspaceVerifyAuthRequest extends JdcloudRequest implements java.i
     /**
      * set pageNum
      *
-     * @param pageNum
+     * @param pageNum 
+     * @return WorkspaceVerifyAuthRequest
      */
     public WorkspaceVerifyAuthRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -295,7 +296,8 @@ public class WorkspaceVerifyAuthRequest extends JdcloudRequest implements java.i
     /**
      * set pageSize
      *
-     * @param pageSize
+     * @param pageSize 
+     * @return WorkspaceVerifyAuthRequest
      */
     public WorkspaceVerifyAuthRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -306,7 +308,8 @@ public class WorkspaceVerifyAuthRequest extends JdcloudRequest implements java.i
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceVerifyAuthRequest
      */
     public WorkspaceVerifyAuthRequest id(Long id) {
         this.id = id;
@@ -317,7 +320,8 @@ public class WorkspaceVerifyAuthRequest extends JdcloudRequest implements java.i
     /**
      * set userName
      *
-     * @param userName
+     * @param userName 
+     * @return WorkspaceVerifyAuthRequest
      */
     public WorkspaceVerifyAuthRequest userName(String userName) {
         this.userName = userName;
@@ -328,7 +332,8 @@ public class WorkspaceVerifyAuthRequest extends JdcloudRequest implements java.i
     /**
      * set nickName
      *
-     * @param nickName
+     * @param nickName 
+     * @return WorkspaceVerifyAuthRequest
      */
     public WorkspaceVerifyAuthRequest nickName(String nickName) {
         this.nickName = nickName;
@@ -339,7 +344,8 @@ public class WorkspaceVerifyAuthRequest extends JdcloudRequest implements java.i
     /**
      * set userPin
      *
-     * @param userPin
+     * @param userPin 
+     * @return WorkspaceVerifyAuthRequest
      */
     public WorkspaceVerifyAuthRequest userPin(String userPin) {
         this.userPin = userPin;
@@ -350,7 +356,8 @@ public class WorkspaceVerifyAuthRequest extends JdcloudRequest implements java.i
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return WorkspaceVerifyAuthRequest
      */
     public WorkspaceVerifyAuthRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -361,7 +368,8 @@ public class WorkspaceVerifyAuthRequest extends JdcloudRequest implements java.i
     /**
      * set companyCode
      *
-     * @param companyCode
+     * @param companyCode 
+     * @return WorkspaceVerifyAuthRequest
      */
     public WorkspaceVerifyAuthRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -372,7 +380,8 @@ public class WorkspaceVerifyAuthRequest extends JdcloudRequest implements java.i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceVerifyAuthRequest
      */
     public WorkspaceVerifyAuthRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -383,7 +392,8 @@ public class WorkspaceVerifyAuthRequest extends JdcloudRequest implements java.i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceVerifyAuthRequest
      */
     public WorkspaceVerifyAuthRequest appName(String appName) {
         this.appName = appName;

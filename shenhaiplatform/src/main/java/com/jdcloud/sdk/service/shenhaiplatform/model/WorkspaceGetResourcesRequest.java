@@ -212,7 +212,8 @@ public class WorkspaceGetResourcesRequest extends JdcloudRequest implements java
     /**
      * set pageNum
      *
-     * @param pageNum
+     * @param pageNum 
+     * @return WorkspaceGetResourcesRequest
      */
     public WorkspaceGetResourcesRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -223,7 +224,8 @@ public class WorkspaceGetResourcesRequest extends JdcloudRequest implements java
     /**
      * set pageSize
      *
-     * @param pageSize
+     * @param pageSize 
+     * @return WorkspaceGetResourcesRequest
      */
     public WorkspaceGetResourcesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -234,7 +236,8 @@ public class WorkspaceGetResourcesRequest extends JdcloudRequest implements java
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceGetResourcesRequest
      */
     public WorkspaceGetResourcesRequest id(Integer id) {
         this.id = id;
@@ -245,7 +248,8 @@ public class WorkspaceGetResourcesRequest extends JdcloudRequest implements java
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return WorkspaceGetResourcesRequest
      */
     public WorkspaceGetResourcesRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -256,7 +260,8 @@ public class WorkspaceGetResourcesRequest extends JdcloudRequest implements java
     /**
      * set resourceName
      *
-     * @param resourceName
+     * @param resourceName 
+     * @return WorkspaceGetResourcesRequest
      */
     public WorkspaceGetResourcesRequest resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -267,7 +272,8 @@ public class WorkspaceGetResourcesRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceGetResourcesRequest
      */
     public WorkspaceGetResourcesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -278,7 +284,8 @@ public class WorkspaceGetResourcesRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceGetResourcesRequest
      */
     public WorkspaceGetResourcesRequest appName(String appName) {
         this.appName = appName;

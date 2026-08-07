@@ -112,7 +112,8 @@ public class WorkspaceGetUcUsersResult extends JdcloudResult implements java.io.
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return WorkspaceGetUcUsersResult
      */
     public WorkspaceGetUcUsersResult code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class WorkspaceGetUcUsersResult extends JdcloudResult implements java.io.
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return WorkspaceGetUcUsersResult
      */
     public WorkspaceGetUcUsersResult message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class WorkspaceGetUcUsersResult extends JdcloudResult implements java.io.
     /**
      * set 用户名称列表
      *
-     * @param result
+     * @param result 用户名称列表
+     * @return WorkspaceGetUcUsersResult
      */
     public WorkspaceGetUcUsersResult result(PageInfoUcUsersResp result) {
         this.result = result;

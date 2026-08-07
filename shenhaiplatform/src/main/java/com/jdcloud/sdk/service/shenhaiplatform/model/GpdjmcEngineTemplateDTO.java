@@ -232,7 +232,8 @@ public class GpdjmcEngineTemplateDTO  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return GpdjmcEngineTemplateDTO
      */
     public GpdjmcEngineTemplateDTO id(Integer id) {
         this.id = id;
@@ -243,7 +244,8 @@ public class GpdjmcEngineTemplateDTO  implements java.io.Serializable {
     /**
      * set dictCode
      *
-     * @param dictCode
+     * @param dictCode 
+     * @return GpdjmcEngineTemplateDTO
      */
     public GpdjmcEngineTemplateDTO dictCode(String dictCode) {
         this.dictCode = dictCode;
@@ -254,7 +256,8 @@ public class GpdjmcEngineTemplateDTO  implements java.io.Serializable {
     /**
      * set dictName
      *
-     * @param dictName
+     * @param dictName 
+     * @return GpdjmcEngineTemplateDTO
      */
     public GpdjmcEngineTemplateDTO dictName(String dictName) {
         this.dictName = dictName;
@@ -265,7 +268,8 @@ public class GpdjmcEngineTemplateDTO  implements java.io.Serializable {
     /**
      * set bak
      *
-     * @param bak
+     * @param bak 
+     * @return GpdjmcEngineTemplateDTO
      */
     public GpdjmcEngineTemplateDTO bak(String bak) {
         this.bak = bak;
@@ -276,7 +280,8 @@ public class GpdjmcEngineTemplateDTO  implements java.io.Serializable {
     /**
      * set enabled
      *
-     * @param enabled
+     * @param enabled 
+     * @return GpdjmcEngineTemplateDTO
      */
     public GpdjmcEngineTemplateDTO enabled(String enabled) {
         this.enabled = enabled;
@@ -287,7 +292,8 @@ public class GpdjmcEngineTemplateDTO  implements java.io.Serializable {
     /**
      * set dictDesc
      *
-     * @param dictDesc
+     * @param dictDesc 
+     * @return GpdjmcEngineTemplateDTO
      */
     public GpdjmcEngineTemplateDTO dictDesc(String dictDesc) {
         this.dictDesc = dictDesc;
@@ -298,7 +304,8 @@ public class GpdjmcEngineTemplateDTO  implements java.io.Serializable {
     /**
     * set template
     *
-    * @param template
+    * @param template 
+    * @return GpdjmcEngineTemplateDTO
     */
     public GpdjmcEngineTemplateDTO template(List<GpdjmcMgrDictDTO> template) {
         this.template = template;
@@ -309,7 +316,8 @@ public class GpdjmcEngineTemplateDTO  implements java.io.Serializable {
     /**
      * set pdictCode
      *
-     * @param pdictCode
+     * @param pdictCode 
+     * @return GpdjmcEngineTemplateDTO
      */
     public GpdjmcEngineTemplateDTO pdictCode(String pdictCode) {
         this.pdictCode = pdictCode;

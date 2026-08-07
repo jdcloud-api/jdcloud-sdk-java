@@ -950,7 +950,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 任务id
      *
-     * @param etlId
+     * @param etlId 任务id
+     * @return JobInfoVo
      */
     public JobInfoVo etlId(Integer etlId) {
         this.etlId = etlId;
@@ -961,7 +962,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 任务名称
      *
-     * @param cstJobName
+     * @param cstJobName 任务名称
+     * @return JobInfoVo
      */
     public JobInfoVo cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -972,7 +974,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 任务编码
      *
-     * @param etlJob
+     * @param etlJob 任务编码
+     * @return JobInfoVo
      */
     public JobInfoVo etlJob(String etlJob) {
         this.etlJob = etlJob;
@@ -983,7 +986,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return JobInfoVo
      */
     public JobInfoVo processType(String processType) {
         this.processType = processType;
@@ -994,7 +998,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 任务执行类型
      *
-     * @param exeType
+     * @param exeType 任务执行类型
+     * @return JobInfoVo
      */
     public JobInfoVo exeType(String exeType) {
         this.exeType = exeType;
@@ -1005,7 +1010,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 任务描述
      *
-     * @param description
+     * @param description 任务描述
+     * @return JobInfoVo
      */
     public JobInfoVo description(String description) {
         this.description = description;
@@ -1016,7 +1022,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 周期具体日期
      *
-     * @param frequency
+     * @param frequency 周期具体日期
+     * @return JobInfoVo
      */
     public JobInfoVo frequency(String frequency) {
         this.frequency = frequency;
@@ -1027,7 +1034,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 最后一次运行开始时间
      *
-     * @param lastStartTime
+     * @param lastStartTime 最后一次运行开始时间
+     * @return JobInfoVo
      */
     public JobInfoVo lastStartTime(String lastStartTime) {
         this.lastStartTime = lastStartTime;
@@ -1038,7 +1046,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 最后一次运行结束时间
      *
-     * @param lastEndTime
+     * @param lastEndTime 最后一次运行结束时间
+     * @return JobInfoVo
      */
     public JobInfoVo lastEndTime(String lastEndTime) {
         this.lastEndTime = lastEndTime;
@@ -1049,7 +1058,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 运行时间
      *
-     * @param runTime
+     * @param runTime 运行时间
+     * @return JobInfoVo
      */
     public JobInfoVo runTime(String runTime) {
         this.runTime = runTime;
@@ -1060,7 +1070,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 最后一次运行状态
      *
-     * @param lastJobStatus
+     * @param lastJobStatus 最后一次运行状态
+     * @return JobInfoVo
      */
     public JobInfoVo lastJobStatus(String lastJobStatus) {
         this.lastJobStatus = lastJobStatus;
@@ -1071,7 +1082,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 最后一次执行日期
      *
-     * @param lastTxDate
+     * @param lastTxDate 最后一次执行日期
+     * @return JobInfoVo
      */
     public JobInfoVo lastTxDate(String lastTxDate) {
         this.lastTxDate = lastTxDate;
@@ -1082,7 +1094,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 最后返回编码
      *
-     * @param lastReturnCode
+     * @param lastReturnCode 最后返回编码
+     * @return JobInfoVo
      */
     public JobInfoVo lastReturnCode(Integer lastReturnCode) {
         this.lastReturnCode = lastReturnCode;
@@ -1093,7 +1106,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 当前任务状态信息
      *
-     * @param currentStatusMsg
+     * @param currentStatusMsg 当前任务状态信息
+     * @return JobInfoVo
      */
     public JobInfoVo currentStatusMsg(String currentStatusMsg) {
         this.currentStatusMsg = currentStatusMsg;
@@ -1104,7 +1118,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 是否上线，1-上线、2-下线
      *
-     * @param enable
+     * @param enable 是否上线，1-上线、2-下线
+     * @return JobInfoVo
      */
     public JobInfoVo enable(String enable) {
         this.enable = enable;
@@ -1115,7 +1130,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
      *
-     * @param triggerType
+     * @param triggerType 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
+     * @return JobInfoVo
      */
     public JobInfoVo triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -1126,7 +1142,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 触发时间
      *
-     * @param triggerTime
+     * @param triggerTime 触发时间
+     * @return JobInfoVo
      */
     public JobInfoVo triggerTime(String triggerTime) {
         this.triggerTime = triggerTime;
@@ -1137,7 +1154,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
      *
-     * @param cycle
+     * @param cycle 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
+     * @return JobInfoVo
      */
     public JobInfoVo cycle(String cycle) {
         this.cycle = cycle;
@@ -1148,7 +1166,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 周期具体日期
      *
-     * @param sequence
+     * @param sequence 周期具体日期
+     * @return JobInfoVo
      */
     public JobInfoVo sequence(String sequence) {
         this.sequence = sequence;
@@ -1159,7 +1178,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 创建人
      *
-     * @param createUser
+     * @param createUser 创建人
+     * @return JobInfoVo
      */
     public JobInfoVo createUser(String createUser) {
         this.createUser = createUser;
@@ -1170,7 +1190,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param userName
+     * @param userName 负责人
+     * @return JobInfoVo
      */
     public JobInfoVo userName(String userName) {
         this.userName = userName;
@@ -1181,7 +1202,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 重试次数
      *
-     * @param retryCount
+     * @param retryCount 重试次数
+     * @return JobInfoVo
      */
     public JobInfoVo retryCount(Integer retryCount) {
         this.retryCount = retryCount;
@@ -1192,7 +1214,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 周期开始时间(适用小时分钟)
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 周期开始时间(适用小时分钟)
+     * @return JobInfoVo
      */
     public JobInfoVo sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -1203,7 +1226,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 周期结束时间(适用小时分钟)
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 周期结束时间(适用小时分钟)
+     * @return JobInfoVo
      */
     public JobInfoVo sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -1214,7 +1238,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 周期间隔(适用小时分钟，当周期为小时，含义为间隔小时数，当周期为分钟，含义为间隔分钟数)
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 周期间隔(适用小时分钟，当周期为小时，含义为间隔小时数，当周期为分钟，含义为间隔分钟数)
+     * @return JobInfoVo
      */
     public JobInfoVo sequenceInterval(Integer sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -1225,7 +1250,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 是否重试过
      *
-     * @param flagRetry
+     * @param flagRetry 是否重试过
+     * @return JobInfoVo
      */
     public JobInfoVo flagRetry(String flagRetry) {
         this.flagRetry = flagRetry;
@@ -1236,7 +1262,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return JobInfoVo
      */
     public JobInfoVo createTime(String createTime) {
         this.createTime = createTime;
@@ -1247,7 +1274,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return JobInfoVo
      */
     public JobInfoVo updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -1258,7 +1286,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 周期中文名 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
      *
-     * @param cycleLabel
+     * @param cycleLabel 周期中文名 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
+     * @return JobInfoVo
      */
     public JobInfoVo cycleLabel(String cycleLabel) {
         this.cycleLabel = cycleLabel;
@@ -1269,7 +1298,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 触发方式中文名:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
      *
-     * @param triggerTypeLabel
+     * @param triggerTypeLabel 触发方式中文名:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
+     * @return JobInfoVo
      */
     public JobInfoVo triggerTypeLabel(String triggerTypeLabel) {
         this.triggerTypeLabel = triggerTypeLabel;
@@ -1280,7 +1310,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 处理类型中文名（数据计算，数据抽取，ODS加工，数据推送，数据同步, 质量任务）
      *
-     * @param processTypeCn
+     * @param processTypeCn 处理类型中文名（数据计算，数据抽取，ODS加工，数据推送，数据同步, 质量任务）
+     * @return JobInfoVo
      */
     public JobInfoVo processTypeCn(String processTypeCn) {
         this.processTypeCn = processTypeCn;
@@ -1291,7 +1322,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 数据来源渠道，集成开发（IDE）、数据管道（PIPE）
      *
-     * @param channel
+     * @param channel 数据来源渠道，集成开发（IDE）、数据管道（PIPE）
+     * @return JobInfoVo
      */
     public JobInfoVo channel(String channel) {
         this.channel = channel;
@@ -1302,7 +1334,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 任务类型
      *
-     * @param jobType
+     * @param jobType 任务类型
+     * @return JobInfoVo
      */
     public JobInfoVo jobType(String jobType) {
         this.jobType = jobType;
@@ -1313,7 +1346,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 任务子类型
      *
-     * @param jobChildType
+     * @param jobChildType 任务子类型
+     * @return JobInfoVo
      */
     public JobInfoVo jobChildType(String jobChildType) {
         this.jobChildType = jobChildType;
@@ -1324,7 +1358,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 任务优先级，数字越小优先级越高
      *
-     * @param priority
+     * @param priority 任务优先级，数字越小优先级越高
+     * @return JobInfoVo
      */
     public JobInfoVo priority(Integer priority) {
         this.priority = priority;
@@ -1335,7 +1370,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 任务优先级按照等级分，L1-L4，数字越小优先级越高
      *
-     * @param priorityLevel
+     * @param priorityLevel 任务优先级按照等级分，L1-L4，数字越小优先级越高
+     * @return JobInfoVo
      */
     public JobInfoVo priorityLevel(String priorityLevel) {
         this.priorityLevel = priorityLevel;
@@ -1346,7 +1382,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 租户编码
      *
-     * @param companyCode
+     * @param companyCode 租户编码
+     * @return JobInfoVo
      */
     public JobInfoVo companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -1357,7 +1394,8 @@ public class JobInfoVo  implements java.io.Serializable {
     /**
      * set 工作空间编码
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间编码
+     * @return JobInfoVo
      */
     public JobInfoVo workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;

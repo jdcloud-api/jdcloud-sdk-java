@@ -88,7 +88,8 @@ public class TableDelimitersVo  implements java.io.Serializable {
     /**
     * set 字段分隔符
     *
-    * @param fieldDelimiters
+    * @param fieldDelimiters 字段分隔符
+    * @return TableDelimitersVo
     */
     public TableDelimitersVo fieldDelimiters(List<TableDelimiterVo> fieldDelimiters) {
         this.fieldDelimiters = fieldDelimiters;
@@ -99,7 +100,8 @@ public class TableDelimitersVo  implements java.io.Serializable {
     /**
     * set 行分隔符
     *
-    * @param lineDelimiters
+    * @param lineDelimiters 行分隔符
+    * @return TableDelimitersVo
     */
     public TableDelimitersVo lineDelimiters(List<TableDelimiterVo> lineDelimiters) {
         this.lineDelimiters = lineDelimiters;

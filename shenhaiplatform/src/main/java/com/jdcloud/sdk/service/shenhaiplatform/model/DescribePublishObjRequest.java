@@ -116,7 +116,8 @@ public class DescribePublishObjRequest extends JdcloudRequest implements java.io
     /**
      * set ID
      *
-     * @param objId
+     * @param objId ID
+     * @return DescribePublishObjRequest
      */
     public DescribePublishObjRequest objId(Long objId) {
         this.objId = objId;
@@ -127,7 +128,8 @@ public class DescribePublishObjRequest extends JdcloudRequest implements java.io
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DescribePublishObjRequest
      */
     public DescribePublishObjRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class DescribePublishObjRequest extends JdcloudRequest implements java.io
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return DescribePublishObjRequest
      */
     public DescribePublishObjRequest appName(String appName) {
         this.appName = appName;

@@ -183,7 +183,8 @@ public class UranusTaskNodeCheckJobNameResult extends JdcloudResult implements j
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusTaskNodeCheckJobNameResult
      */
     public UranusTaskNodeCheckJobNameResult code(String code) {
         this.code = code;
@@ -194,7 +195,8 @@ public class UranusTaskNodeCheckJobNameResult extends JdcloudResult implements j
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusTaskNodeCheckJobNameResult
      */
     public UranusTaskNodeCheckJobNameResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -205,7 +207,8 @@ public class UranusTaskNodeCheckJobNameResult extends JdcloudResult implements j
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusTaskNodeCheckJobNameResult
      */
     public UranusTaskNodeCheckJobNameResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -216,7 +219,8 @@ public class UranusTaskNodeCheckJobNameResult extends JdcloudResult implements j
     /**
      * set Object
      *
-     * @param result
+     * @param result Object
+     * @return UranusTaskNodeCheckJobNameResult
      */
     public UranusTaskNodeCheckJobNameResult result(Boolean result) {
         this.result = result;
@@ -227,7 +231,8 @@ public class UranusTaskNodeCheckJobNameResult extends JdcloudResult implements j
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusTaskNodeCheckJobNameResult
      */
     public UranusTaskNodeCheckJobNameResult subCode(String subCode) {
         this.subCode = subCode;
@@ -238,7 +243,8 @@ public class UranusTaskNodeCheckJobNameResult extends JdcloudResult implements j
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusTaskNodeCheckJobNameResult
      */
     public UranusTaskNodeCheckJobNameResult successed(Boolean successed) {
         this.successed = successed;

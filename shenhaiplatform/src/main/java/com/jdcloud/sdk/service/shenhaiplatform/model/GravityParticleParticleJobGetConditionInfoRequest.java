@@ -92,7 +92,8 @@ public class GravityParticleParticleJobGetConditionInfoRequest extends JdcloudRe
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleParticleJobGetConditionInfoRequest
      */
     public GravityParticleParticleJobGetConditionInfoRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class GravityParticleParticleJobGetConditionInfoRequest extends JdcloudRe
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleParticleJobGetConditionInfoRequest
      */
     public GravityParticleParticleJobGetConditionInfoRequest appName(String appName) {
         this.appName = appName;

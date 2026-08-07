@@ -411,7 +411,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
      * set 表英文名称
      *
-     * @param tableEnName
+     * @param tableEnName 表英文名称
+     * @return UranusTableAlterSqlViewRequest
      */
     public UranusTableAlterSqlViewRequest tableEnName(String tableEnName) {
         this.tableEnName = tableEnName;
@@ -422,7 +423,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
      * set 表中文名
      *
-     * @param tableCnName
+     * @param tableCnName 表中文名
+     * @return UranusTableAlterSqlViewRequest
      */
     public UranusTableAlterSqlViewRequest tableCnName(String tableCnName) {
         this.tableCnName = tableCnName;
@@ -433,7 +435,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
      * set 负责人
      *
-     * @param owner
+     * @param owner 负责人
+     * @return UranusTableAlterSqlViewRequest
      */
     public UranusTableAlterSqlViewRequest owner(String owner) {
         this.owner = owner;
@@ -444,7 +447,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
      * set 协助人
      *
-     * @param manager
+     * @param manager 协助人
+     * @return UranusTableAlterSqlViewRequest
      */
     public UranusTableAlterSqlViewRequest manager(String manager) {
         this.manager = manager;
@@ -455,7 +459,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
     * set 表的普通字段信息
     *
-    * @param columns
+    * @param columns 表的普通字段信息
+    * @return UranusTableAlterSqlViewRequest
     */
     public UranusTableAlterSqlViewRequest columns(List<UranusColumnSaveOrUpdate> columns) {
         this.columns = columns;
@@ -466,7 +471,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
     * set 表的分区字段信息
     *
-    * @param partitions
+    * @param partitions 表的分区字段信息
+    * @return UranusTableAlterSqlViewRequest
     */
     public UranusTableAlterSqlViewRequest partitions(List<UranusColumnSaveOrUpdate> partitions) {
         this.partitions = partitions;
@@ -477,7 +483,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
      * set 0 非分区表 1 分区表
      *
-     * @param isPartition
+     * @param isPartition 0 非分区表 1 分区表
+     * @return UranusTableAlterSqlViewRequest
      */
     public UranusTableAlterSqlViewRequest isPartition(Integer isPartition) {
         this.isPartition = isPartition;
@@ -488,7 +495,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
      * set 0 新建表 1 修改表
      *
-     * @param updateTable
+     * @param updateTable 0 新建表 1 修改表
+     * @return UranusTableAlterSqlViewRequest
      */
     public UranusTableAlterSqlViewRequest updateTable(Integer updateTable) {
         this.updateTable = updateTable;
@@ -499,7 +507,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
      * set 表存储格式
      *
-     * @param storageType
+     * @param storageType 表存储格式
+     * @return UranusTableAlterSqlViewRequest
      */
     public UranusTableAlterSqlViewRequest storageType(String storageType) {
         this.storageType = storageType;
@@ -510,7 +519,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
      * set 表字段分隔符（只有TEXTFILE类型表需要该字段）
      *
-     * @param fieldDelim
+     * @param fieldDelim 表字段分隔符（只有TEXTFILE类型表需要该字段）
+     * @return UranusTableAlterSqlViewRequest
      */
     public UranusTableAlterSqlViewRequest fieldDelim(String fieldDelim) {
         this.fieldDelim = fieldDelim;
@@ -521,7 +531,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
      * set 表行分隔符（只有TEXTFILE类型表需要该字段）
      *
-     * @param lineDelim
+     * @param lineDelim 表行分隔符（只有TEXTFILE类型表需要该字段）
+     * @return UranusTableAlterSqlViewRequest
      */
     public UranusTableAlterSqlViewRequest lineDelim(String lineDelim) {
         this.lineDelim = lineDelim;
@@ -532,7 +543,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
     * set 分桶字段
     *
-    * @param bucketCols
+    * @param bucketCols 分桶字段
+    * @return UranusTableAlterSqlViewRequest
     */
     public UranusTableAlterSqlViewRequest bucketCols(List<String> bucketCols) {
         this.bucketCols = bucketCols;
@@ -543,7 +555,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
      * set 分桶字段
      *
-     * @param bucketNum
+     * @param bucketNum 分桶字段
+     * @return UranusTableAlterSqlViewRequest
      */
     public UranusTableAlterSqlViewRequest bucketNum(Integer bucketNum) {
         this.bucketNum = bucketNum;
@@ -554,7 +567,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTableAlterSqlViewRequest
      */
     public UranusTableAlterSqlViewRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -565,7 +579,8 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTableAlterSqlViewRequest
      */
     public UranusTableAlterSqlViewRequest appName(String appName) {
         this.appName = appName;

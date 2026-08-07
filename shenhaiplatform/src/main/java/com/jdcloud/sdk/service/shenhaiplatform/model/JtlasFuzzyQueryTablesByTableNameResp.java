@@ -112,7 +112,8 @@ public class JtlasFuzzyQueryTablesByTableNameResp  implements java.io.Serializab
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasFuzzyQueryTablesByTableNameResp
      */
     public JtlasFuzzyQueryTablesByTableNameResp code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class JtlasFuzzyQueryTablesByTableNameResp  implements java.io.Serializab
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasFuzzyQueryTablesByTableNameResp
      */
     public JtlasFuzzyQueryTablesByTableNameResp message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class JtlasFuzzyQueryTablesByTableNameResp  implements java.io.Serializab
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return JtlasFuzzyQueryTablesByTableNameResp
     */
     public JtlasFuzzyQueryTablesByTableNameResp result(List<JtlasWarehouseTable> result) {
         this.result = result;

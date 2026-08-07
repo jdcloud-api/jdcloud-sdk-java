@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskParamReq;
 import com.jdcloud.sdk.service.shenhaiplatform.model.TaskInfoLoopReq;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JcwSQLRunParams;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -114,6 +115,11 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
      */
     
     private List<TaskInfoLoopReq> loopInfo;
+    /**
+     * 任务的资源控制
+     */
+    private JcwSQLRunParams jcwSQLRunParams;
+
     /**
      * 地域ID
      * Required:true
@@ -359,6 +365,25 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
 
 
     /**
+     * get 任务的资源控制
+     *
+     * @return
+     */
+    public JcwSQLRunParams getJcwSQLRunParams() {
+        return jcwSQLRunParams;
+    }
+
+    /**
+     * set 任务的资源控制
+     *
+     * @param jcwSQLRunParams
+     */
+    public void setJcwSQLRunParams(JcwSQLRunParams jcwSQLRunParams) {
+        this.jcwSQLRunParams = jcwSQLRunParams;
+    }
+
+
+    /**
      * get 地域ID
      *
      * @return
@@ -400,7 +425,8 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
     /**
      * set 流程code
      *
-     * @param flowCode
+     * @param flowCode 流程code
+     * @return UranusScriptStartersRequest
      */
     public UranusScriptStartersRequest flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -411,7 +437,8 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
     /**
      * set 数据源code
      *
-     * @param dataSourceCode
+     * @param dataSourceCode 数据源code
+     * @return UranusScriptStartersRequest
      */
     public UranusScriptStartersRequest dataSourceCode(String dataSourceCode) {
         this.dataSourceCode = dataSourceCode;
@@ -422,7 +449,8 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
     /**
      * set 文件code
      *
-     * @param fileCode
+     * @param fileCode 文件code
+     * @return UranusScriptStartersRequest
      */
     public UranusScriptStartersRequest fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -433,7 +461,8 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
     /**
      * set 文件名称
      *
-     * @param fileName
+     * @param fileName 文件名称
+     * @return UranusScriptStartersRequest
      */
     public UranusScriptStartersRequest fileName(String fileName) {
         this.fileName = fileName;
@@ -444,7 +473,8 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
     /**
      * set 文件类型 SQL,SHELL,PYTHON,PERL,R,SparkJar,StarRocks,MySQL
      *
-     * @param fileType
+     * @param fileType 文件类型 SQL,SHELL,PYTHON,PERL,R,SparkJar,StarRocks,MySQL
+     * @return UranusScriptStartersRequest
      */
     public UranusScriptStartersRequest fileType(String fileType) {
         this.fileType = fileType;
@@ -455,7 +485,8 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
     /**
      * set 脚本内容
      *
-     * @param content
+     * @param content 脚本内容
+     * @return UranusScriptStartersRequest
      */
     public UranusScriptStartersRequest content(String content) {
         this.content = content;
@@ -466,7 +497,8 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
     /**
      * set sql执行引擎 apReduce,Spark,Tez,presto,Python2,Python3,auto,StarRocks,MySQL
      *
-     * @param execEngine
+     * @param execEngine sql执行引擎 apReduce,Spark,Tez,presto,Python2,Python3,auto,StarRocks,MySQL
+     * @return UranusScriptStartersRequest
      */
     public UranusScriptStartersRequest execEngine(String execEngine) {
         this.execEngine = execEngine;
@@ -477,7 +509,8 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
     /**
     * set 脚本参数配置
     *
-    * @param args
+    * @param args 脚本参数配置
+    * @return UranusScriptStartersRequest
     */
     public UranusScriptStartersRequest args(List<UranusTaskParamReq> args) {
         this.args = args;
@@ -488,7 +521,8 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
     /**
      * set sql脚本是否全部执行 是false,否true
      *
-     * @param segment
+     * @param segment sql脚本是否全部执行 是false,否true
+     * @return UranusScriptStartersRequest
      */
     public UranusScriptStartersRequest segment(Boolean segment) {
         this.segment = segment;
@@ -499,7 +533,8 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
     /**
      * set 队列名称
      *
-     * @param resourceName
+     * @param resourceName 队列名称
+     * @return UranusScriptStartersRequest
      */
     public UranusScriptStartersRequest resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -510,7 +545,8 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
     /**
      * set 队列code
      *
-     * @param resourceCode
+     * @param resourceCode 队列code
+     * @return UranusScriptStartersRequest
      */
     public UranusScriptStartersRequest resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -521,7 +557,8 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
     /**
     * set 循环节点信息
     *
-    * @param loopInfo
+    * @param loopInfo 循环节点信息
+    * @return UranusScriptStartersRequest
     */
     public UranusScriptStartersRequest loopInfo(List<TaskInfoLoopReq> loopInfo) {
         this.loopInfo = loopInfo;
@@ -530,9 +567,22 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
 
 
     /**
+     * set 任务的资源控制
+     *
+     * @param jcwSQLRunParams 任务的资源控制
+     * @return UranusScriptStartersRequest
+     */
+    public UranusScriptStartersRequest jcwSQLRunParams(JcwSQLRunParams jcwSQLRunParams) {
+        this.jcwSQLRunParams = jcwSQLRunParams;
+        return this;
+    }
+
+
+    /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusScriptStartersRequest
      */
     public UranusScriptStartersRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -543,7 +593,8 @@ public class UranusScriptStartersRequest extends JdcloudRequest implements java.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusScriptStartersRequest
      */
     public UranusScriptStartersRequest appName(String appName) {
         this.appName = appName;

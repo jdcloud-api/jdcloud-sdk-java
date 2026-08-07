@@ -118,7 +118,8 @@ public class UranusDataLoadKillRequest extends JdcloudRequest implements java.io
     /**
      * set 任务id
      *
-     * @param applicationId
+     * @param applicationId 任务id
+     * @return UranusDataLoadKillRequest
      */
     public UranusDataLoadKillRequest applicationId(String applicationId) {
         this.applicationId = applicationId;
@@ -129,7 +130,8 @@ public class UranusDataLoadKillRequest extends JdcloudRequest implements java.io
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusDataLoadKillRequest
      */
     public UranusDataLoadKillRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusDataLoadKillRequest extends JdcloudRequest implements java.io
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusDataLoadKillRequest
      */
     public UranusDataLoadKillRequest appName(String appName) {
         this.appName = appName;

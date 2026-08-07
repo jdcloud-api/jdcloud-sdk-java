@@ -112,7 +112,8 @@ public class UranusPageResultContentTaskNodePageRes  implements java.io.Serializ
     /**
      * set totalPage
      *
-     * @param totalPage
+     * @param totalPage 
+     * @return UranusPageResultContentTaskNodePageRes
      */
     public UranusPageResultContentTaskNodePageRes totalPage(Integer totalPage) {
         this.totalPage = totalPage;
@@ -123,7 +124,8 @@ public class UranusPageResultContentTaskNodePageRes  implements java.io.Serializ
     /**
      * set totalRecords
      *
-     * @param totalRecords
+     * @param totalRecords 
+     * @return UranusPageResultContentTaskNodePageRes
      */
     public UranusPageResultContentTaskNodePageRes totalRecords(Integer totalRecords) {
         this.totalRecords = totalRecords;
@@ -134,7 +136,8 @@ public class UranusPageResultContentTaskNodePageRes  implements java.io.Serializ
     /**
     * set list
     *
-    * @param list
+    * @param list 
+    * @return UranusPageResultContentTaskNodePageRes
     */
     public UranusPageResultContentTaskNodePageRes list(List<UranusTaskNodePageRes> list) {
         this.list = list;

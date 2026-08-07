@@ -144,7 +144,8 @@ public class UranusWorkSpaceDownRequest extends JdcloudRequest implements java.i
     /**
      * set companyCode
      *
-     * @param companyCode
+     * @param companyCode companyCode
+     * @return UranusWorkSpaceDownRequest
      */
     public UranusWorkSpaceDownRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -155,7 +156,8 @@ public class UranusWorkSpaceDownRequest extends JdcloudRequest implements java.i
     /**
      * set workSpaceCode
      *
-     * @param workSpaceCode
+     * @param workSpaceCode workSpaceCode
+     * @return UranusWorkSpaceDownRequest
      */
     public UranusWorkSpaceDownRequest workSpaceCode(String workSpaceCode) {
         this.workSpaceCode = workSpaceCode;
@@ -166,7 +168,8 @@ public class UranusWorkSpaceDownRequest extends JdcloudRequest implements java.i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusWorkSpaceDownRequest
      */
     public UranusWorkSpaceDownRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -177,7 +180,8 @@ public class UranusWorkSpaceDownRequest extends JdcloudRequest implements java.i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusWorkSpaceDownRequest
      */
     public UranusWorkSpaceDownRequest appName(String appName) {
         this.appName = appName;

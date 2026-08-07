@@ -135,7 +135,8 @@ public class GravityParticleDubboJobManagerDeleteJobResult extends JdcloudResult
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GravityParticleDubboJobManagerDeleteJobResult
      */
     public GravityParticleDubboJobManagerDeleteJobResult success(Integer success) {
         this.success = success;
@@ -146,7 +147,8 @@ public class GravityParticleDubboJobManagerDeleteJobResult extends JdcloudResult
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GravityParticleDubboJobManagerDeleteJobResult
      */
     public GravityParticleDubboJobManagerDeleteJobResult code(String code) {
         this.code = code;
@@ -157,7 +159,8 @@ public class GravityParticleDubboJobManagerDeleteJobResult extends JdcloudResult
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GravityParticleDubboJobManagerDeleteJobResult
      */
     public GravityParticleDubboJobManagerDeleteJobResult msg(String msg) {
         this.msg = msg;
@@ -168,7 +171,8 @@ public class GravityParticleDubboJobManagerDeleteJobResult extends JdcloudResult
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return GravityParticleDubboJobManagerDeleteJobResult
      */
     public GravityParticleDubboJobManagerDeleteJobResult result(Boolean result) {
         this.result = result;

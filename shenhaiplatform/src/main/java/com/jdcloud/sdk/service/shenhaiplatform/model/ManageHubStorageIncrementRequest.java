@@ -168,7 +168,8 @@ public class ManageHubStorageIncrementRequest extends JdcloudRequest implements 
     /**
      * set 租户code, 当该参数不为空时，返回该租户的存储日增量；当该参数为空时返回集群的存储日增量
      *
-     * @param companyCode
+     * @param companyCode 租户code, 当该参数不为空时，返回该租户的存储日增量；当该参数为空时返回集群的存储日增量
+     * @return ManageHubStorageIncrementRequest
      */
     public ManageHubStorageIncrementRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -179,7 +180,8 @@ public class ManageHubStorageIncrementRequest extends JdcloudRequest implements 
     /**
      * set 开始日期 yyyy-MM-dd
      *
-     * @param startTime
+     * @param startTime 开始日期 yyyy-MM-dd
+     * @return ManageHubStorageIncrementRequest
      */
     public ManageHubStorageIncrementRequest startTime(String startTime) {
         this.startTime = startTime;
@@ -190,7 +192,8 @@ public class ManageHubStorageIncrementRequest extends JdcloudRequest implements 
     /**
      * set 结束日期 yyyy-MM-dd
      *
-     * @param endTime
+     * @param endTime 结束日期 yyyy-MM-dd
+     * @return ManageHubStorageIncrementRequest
      */
     public ManageHubStorageIncrementRequest endTime(String endTime) {
         this.endTime = endTime;
@@ -201,7 +204,8 @@ public class ManageHubStorageIncrementRequest extends JdcloudRequest implements 
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubStorageIncrementRequest
      */
     public ManageHubStorageIncrementRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -212,7 +216,8 @@ public class ManageHubStorageIncrementRequest extends JdcloudRequest implements 
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubStorageIncrementRequest
      */
     public ManageHubStorageIncrementRequest appName(String appName) {
         this.appName = appName;

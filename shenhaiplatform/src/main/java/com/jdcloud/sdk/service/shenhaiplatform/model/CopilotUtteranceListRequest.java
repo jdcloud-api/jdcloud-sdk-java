@@ -118,7 +118,8 @@ public class CopilotUtteranceListRequest extends JdcloudRequest implements java.
     /**
      * set 对话id
      *
-     * @param chatId
+     * @param chatId 对话id
+     * @return CopilotUtteranceListRequest
      */
     public CopilotUtteranceListRequest chatId(String chatId) {
         this.chatId = chatId;
@@ -129,7 +130,8 @@ public class CopilotUtteranceListRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CopilotUtteranceListRequest
      */
     public CopilotUtteranceListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class CopilotUtteranceListRequest extends JdcloudRequest implements java.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return CopilotUtteranceListRequest
      */
     public CopilotUtteranceListRequest appName(String appName) {
         this.appName = appName;

@@ -110,7 +110,8 @@ public class JtlasDestroyResp  implements java.io.Serializable {
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasDestroyResp
      */
     public JtlasDestroyResp code(String code) {
         this.code = code;
@@ -121,7 +122,8 @@ public class JtlasDestroyResp  implements java.io.Serializable {
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasDestroyResp
      */
     public JtlasDestroyResp message(String message) {
         this.message = message;
@@ -132,7 +134,8 @@ public class JtlasDestroyResp  implements java.io.Serializable {
     /**
      * set 无返回
      *
-     * @param result
+     * @param result 无返回
+     * @return JtlasDestroyResp
      */
     public JtlasDestroyResp result(String result) {
         this.result = result;

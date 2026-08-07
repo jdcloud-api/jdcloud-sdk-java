@@ -134,7 +134,8 @@ public class JtlasSearchTablePrivilege  implements java.io.Serializable {
     /**
      * set principalName
      *
-     * @param principalName
+     * @param principalName 
+     * @return JtlasSearchTablePrivilege
      */
     public JtlasSearchTablePrivilege principalName(String principalName) {
         this.principalName = principalName;
@@ -145,7 +146,8 @@ public class JtlasSearchTablePrivilege  implements java.io.Serializable {
     /**
      * set privilegeType
      *
-     * @param privilegeType
+     * @param privilegeType 
+     * @return JtlasSearchTablePrivilege
      */
     public JtlasSearchTablePrivilege privilegeType(String privilegeType) {
         this.privilegeType = privilegeType;
@@ -156,7 +158,8 @@ public class JtlasSearchTablePrivilege  implements java.io.Serializable {
     /**
      * set grantor
      *
-     * @param grantor
+     * @param grantor 
+     * @return JtlasSearchTablePrivilege
      */
     public JtlasSearchTablePrivilege grantor(String grantor) {
         this.grantor = grantor;
@@ -167,7 +170,8 @@ public class JtlasSearchTablePrivilege  implements java.io.Serializable {
     /**
      * set createTime
      *
-     * @param createTime
+     * @param createTime 
+     * @return JtlasSearchTablePrivilege
      */
     public JtlasSearchTablePrivilege createTime(String createTime) {
         this.createTime = createTime;

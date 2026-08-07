@@ -88,7 +88,8 @@ public class GpmnLineData  implements java.io.Serializable {
     /**
      * set 指标名称
      *
-     * @param name
+     * @param name 指标名称
+     * @return GpmnLineData
      */
     public GpmnLineData name(String name) {
         this.name = name;
@@ -99,7 +100,8 @@ public class GpmnLineData  implements java.io.Serializable {
     /**
     * set 指标值列表
     *
-    * @param values
+    * @param values 指标值列表
+    * @return GpmnLineData
     */
     public GpmnLineData values(List<Integer> values) {
         this.values = values;

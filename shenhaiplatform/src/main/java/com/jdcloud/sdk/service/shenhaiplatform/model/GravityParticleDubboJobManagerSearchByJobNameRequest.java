@@ -118,7 +118,8 @@ public class GravityParticleDubboJobManagerSearchByJobNameRequest extends Jdclou
     /**
      * set jobName
      *
-     * @param jobName
+     * @param jobName 
+     * @return GravityParticleDubboJobManagerSearchByJobNameRequest
      */
     public GravityParticleDubboJobManagerSearchByJobNameRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -129,7 +130,8 @@ public class GravityParticleDubboJobManagerSearchByJobNameRequest extends Jdclou
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerSearchByJobNameRequest
      */
     public GravityParticleDubboJobManagerSearchByJobNameRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class GravityParticleDubboJobManagerSearchByJobNameRequest extends Jdclou
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerSearchByJobNameRequest
      */
     public GravityParticleDubboJobManagerSearchByJobNameRequest appName(String appName) {
         this.appName = appName;

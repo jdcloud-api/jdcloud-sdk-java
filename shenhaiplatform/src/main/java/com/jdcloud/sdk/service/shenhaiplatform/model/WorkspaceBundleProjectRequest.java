@@ -189,7 +189,8 @@ public class WorkspaceBundleProjectRequest extends JdcloudRequest implements jav
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return WorkspaceBundleProjectRequest
      */
     public WorkspaceBundleProjectRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -200,7 +201,8 @@ public class WorkspaceBundleProjectRequest extends JdcloudRequest implements jav
     /**
      * set 引擎类型
      *
-     * @param engineType
+     * @param engineType 引擎类型
+     * @return WorkspaceBundleProjectRequest
      */
     public WorkspaceBundleProjectRequest engineType(String engineType) {
         this.engineType = engineType;
@@ -211,7 +213,8 @@ public class WorkspaceBundleProjectRequest extends JdcloudRequest implements jav
     /**
      * set bundleDevProjectReq
      *
-     * @param bundleDevProjectReq
+     * @param bundleDevProjectReq 
+     * @return WorkspaceBundleProjectRequest
      */
     public WorkspaceBundleProjectRequest bundleDevProjectReq(BundleProjectReq bundleDevProjectReq) {
         this.bundleDevProjectReq = bundleDevProjectReq;
@@ -222,7 +225,8 @@ public class WorkspaceBundleProjectRequest extends JdcloudRequest implements jav
     /**
      * set bundleProdProjectReq
      *
-     * @param bundleProdProjectReq
+     * @param bundleProdProjectReq 
+     * @return WorkspaceBundleProjectRequest
      */
     public WorkspaceBundleProjectRequest bundleProdProjectReq(BundleProjectReq bundleProdProjectReq) {
         this.bundleProdProjectReq = bundleProdProjectReq;
@@ -233,7 +237,8 @@ public class WorkspaceBundleProjectRequest extends JdcloudRequest implements jav
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceBundleProjectRequest
      */
     public WorkspaceBundleProjectRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -244,7 +249,8 @@ public class WorkspaceBundleProjectRequest extends JdcloudRequest implements jav
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceBundleProjectRequest
      */
     public WorkspaceBundleProjectRequest appName(String appName) {
         this.appName = appName;

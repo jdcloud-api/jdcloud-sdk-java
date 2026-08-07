@@ -230,7 +230,8 @@ public class GpmnWorkTableJobStatusDto  implements java.io.Serializable {
     /**
      * set 上线总数
      *
-     * @param total
+     * @param total 上线总数
+     * @return GpmnWorkTableJobStatusDto
      */
     public GpmnWorkTableJobStatusDto total(Integer total) {
         this.total = total;
@@ -241,7 +242,8 @@ public class GpmnWorkTableJobStatusDto  implements java.io.Serializable {
     /**
      * set ready
      *
-     * @param ready
+     * @param ready 
+     * @return GpmnWorkTableJobStatusDto
      */
     public GpmnWorkTableJobStatusDto ready(Integer ready) {
         this.ready = ready;
@@ -252,7 +254,8 @@ public class GpmnWorkTableJobStatusDto  implements java.io.Serializable {
     /**
      * set clean
      *
-     * @param clean
+     * @param clean 
+     * @return GpmnWorkTableJobStatusDto
      */
     public GpmnWorkTableJobStatusDto clean(Integer clean) {
         this.clean = clean;
@@ -263,7 +266,8 @@ public class GpmnWorkTableJobStatusDto  implements java.io.Serializable {
     /**
      * set done
      *
-     * @param done
+     * @param done 
+     * @return GpmnWorkTableJobStatusDto
      */
     public GpmnWorkTableJobStatusDto done(Integer done) {
         this.done = done;
@@ -274,7 +278,8 @@ public class GpmnWorkTableJobStatusDto  implements java.io.Serializable {
     /**
      * set timeout
      *
-     * @param timeout
+     * @param timeout 
+     * @return GpmnWorkTableJobStatusDto
      */
     public GpmnWorkTableJobStatusDto timeout(Integer timeout) {
         this.timeout = timeout;
@@ -285,7 +290,8 @@ public class GpmnWorkTableJobStatusDto  implements java.io.Serializable {
     /**
      * set pending
      *
-     * @param pending
+     * @param pending 
+     * @return GpmnWorkTableJobStatusDto
      */
     public GpmnWorkTableJobStatusDto pending(Integer pending) {
         this.pending = pending;
@@ -296,7 +302,8 @@ public class GpmnWorkTableJobStatusDto  implements java.io.Serializable {
     /**
      * set running
      *
-     * @param running
+     * @param running 
+     * @return GpmnWorkTableJobStatusDto
      */
     public GpmnWorkTableJobStatusDto running(Integer running) {
         this.running = running;
@@ -307,7 +314,8 @@ public class GpmnWorkTableJobStatusDto  implements java.io.Serializable {
     /**
      * set failed
      *
-     * @param failed
+     * @param failed 
+     * @return GpmnWorkTableJobStatusDto
      */
     public GpmnWorkTableJobStatusDto failed(Integer failed) {
         this.failed = failed;

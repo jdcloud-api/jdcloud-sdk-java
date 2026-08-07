@@ -68,6 +68,11 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
     private String workspaceModel;
 
     /**
+     * workspaceLabel
+     */
+    private String workspaceLabel;
+
+    /**
      * engineType
      */
     private String engineType;
@@ -228,6 +233,25 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
+     * get workspaceLabel
+     *
+     * @return
+     */
+    public String getWorkspaceLabel() {
+        return workspaceLabel;
+    }
+
+    /**
+     * set workspaceLabel
+     *
+     * @param workspaceLabel
+     */
+    public void setWorkspaceLabel(String workspaceLabel) {
+        this.workspaceLabel = workspaceLabel;
+    }
+
+
+    /**
      * get engineType
      *
      * @return
@@ -383,7 +407,8 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
     /**
      * set userPin
      *
-     * @param userPin
+     * @param userPin 
+     * @return WorkspaceCreateRequest
      */
     public WorkspaceCreateRequest userPin(String userPin) {
         this.userPin = userPin;
@@ -394,7 +419,8 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
     /**
      * set workspaceId
      *
-     * @param workspaceId
+     * @param workspaceId 
+     * @return WorkspaceCreateRequest
      */
     public WorkspaceCreateRequest workspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
@@ -405,7 +431,8 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
     /**
      * set workspaceName
      *
-     * @param workspaceName
+     * @param workspaceName 
+     * @return WorkspaceCreateRequest
      */
     public WorkspaceCreateRequest workspaceName(String workspaceName) {
         this.workspaceName = workspaceName;
@@ -416,7 +443,8 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
     /**
     * set manager
     *
-    * @param manager
+    * @param manager 
+    * @return WorkspaceCreateRequest
     */
     public WorkspaceCreateRequest manager(List<String> manager) {
         this.manager = manager;
@@ -427,7 +455,8 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
     /**
      * set workspaceDescription
      *
-     * @param workspaceDescription
+     * @param workspaceDescription 
+     * @return WorkspaceCreateRequest
      */
     public WorkspaceCreateRequest workspaceDescription(String workspaceDescription) {
         this.workspaceDescription = workspaceDescription;
@@ -438,7 +467,8 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
     /**
      * set workspaceModel
      *
-     * @param workspaceModel
+     * @param workspaceModel 
+     * @return WorkspaceCreateRequest
      */
     public WorkspaceCreateRequest workspaceModel(String workspaceModel) {
         this.workspaceModel = workspaceModel;
@@ -447,9 +477,22 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
+     * set workspaceLabel
+     *
+     * @param workspaceLabel 
+     * @return WorkspaceCreateRequest
+     */
+    public WorkspaceCreateRequest workspaceLabel(String workspaceLabel) {
+        this.workspaceLabel = workspaceLabel;
+        return this;
+    }
+
+
+    /**
      * set engineType
      *
-     * @param engineType
+     * @param engineType 
+     * @return WorkspaceCreateRequest
      */
     public WorkspaceCreateRequest engineType(String engineType) {
         this.engineType = engineType;
@@ -460,7 +503,8 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
     /**
     * set calculateResourceCode
     *
-    * @param calculateResourceCode
+    * @param calculateResourceCode 
+    * @return WorkspaceCreateRequest
     */
     public WorkspaceCreateRequest calculateResourceCode(List<String> calculateResourceCode) {
         this.calculateResourceCode = calculateResourceCode;
@@ -471,7 +515,8 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
     /**
     * set integrationResourceCode
     *
-    * @param integrationResourceCode
+    * @param integrationResourceCode 
+    * @return WorkspaceCreateRequest
     */
     public WorkspaceCreateRequest integrationResourceCode(List<String> integrationResourceCode) {
         this.integrationResourceCode = integrationResourceCode;
@@ -482,7 +527,8 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
     /**
      * set needBundleProject
      *
-     * @param needBundleProject
+     * @param needBundleProject 
+     * @return WorkspaceCreateRequest
      */
     public WorkspaceCreateRequest needBundleProject(Boolean needBundleProject) {
         this.needBundleProject = needBundleProject;
@@ -493,7 +539,8 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
     /**
      * set bundleDevProjectReq
      *
-     * @param bundleDevProjectReq
+     * @param bundleDevProjectReq 
+     * @return WorkspaceCreateRequest
      */
     public WorkspaceCreateRequest bundleDevProjectReq(BundleProjectReq bundleDevProjectReq) {
         this.bundleDevProjectReq = bundleDevProjectReq;
@@ -504,7 +551,8 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
     /**
      * set bundleProdProjectReq
      *
-     * @param bundleProdProjectReq
+     * @param bundleProdProjectReq 
+     * @return WorkspaceCreateRequest
      */
     public WorkspaceCreateRequest bundleProdProjectReq(BundleProjectReq bundleProdProjectReq) {
         this.bundleProdProjectReq = bundleProdProjectReq;
@@ -515,7 +563,8 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceCreateRequest
      */
     public WorkspaceCreateRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -526,7 +575,8 @@ public class WorkspaceCreateRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceCreateRequest
      */
     public WorkspaceCreateRequest appName(String appName) {
         this.appName = appName;

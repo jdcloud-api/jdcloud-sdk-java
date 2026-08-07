@@ -220,7 +220,8 @@ public class GravityParticleJobHisRunAddTaskRequest extends JdcloudRequest imple
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleJobHisRunAddTaskRequest
      */
     public GravityParticleJobHisRunAddTaskRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -231,7 +232,8 @@ public class GravityParticleJobHisRunAddTaskRequest extends JdcloudRequest imple
     /**
      * set 补数开始时间
      *
-     * @param startDate
+     * @param startDate 补数开始时间
+     * @return GravityParticleJobHisRunAddTaskRequest
      */
     public GravityParticleJobHisRunAddTaskRequest startDate(String startDate) {
         this.startDate = startDate;
@@ -242,7 +244,8 @@ public class GravityParticleJobHisRunAddTaskRequest extends JdcloudRequest imple
     /**
      * set 补数结束时间
      *
-     * @param endDate
+     * @param endDate 补数结束时间
+     * @return GravityParticleJobHisRunAddTaskRequest
      */
     public GravityParticleJobHisRunAddTaskRequest endDate(String endDate) {
         this.endDate = endDate;
@@ -253,7 +256,8 @@ public class GravityParticleJobHisRunAddTaskRequest extends JdcloudRequest imple
     /**
      * set 并行数
      *
-     * @param parallelNum
+     * @param parallelNum 并行数
+     * @return GravityParticleJobHisRunAddTaskRequest
      */
     public GravityParticleJobHisRunAddTaskRequest parallelNum(Integer parallelNum) {
         this.parallelNum = parallelNum;
@@ -264,7 +268,8 @@ public class GravityParticleJobHisRunAddTaskRequest extends JdcloudRequest imple
     /**
     * set 子作业名称
     *
-    * @param childJobNames
+    * @param childJobNames 子作业名称
+    * @return GravityParticleJobHisRunAddTaskRequest
     */
     public GravityParticleJobHisRunAddTaskRequest childJobNames(List<String> childJobNames) {
         this.childJobNames = childJobNames;
@@ -275,7 +280,8 @@ public class GravityParticleJobHisRunAddTaskRequest extends JdcloudRequest imple
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobHisRunAddTaskRequest
      */
     public GravityParticleJobHisRunAddTaskRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -286,7 +292,8 @@ public class GravityParticleJobHisRunAddTaskRequest extends JdcloudRequest imple
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobHisRunAddTaskRequest
      */
     public GravityParticleJobHisRunAddTaskRequest appName(String appName) {
         this.appName = appName;

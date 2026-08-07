@@ -110,7 +110,8 @@ public class JtlasSearchNode  implements java.io.Serializable {
     /**
      * set 节点id
      *
-     * @param id
+     * @param id 节点id
+     * @return JtlasSearchNode
      */
     public JtlasSearchNode id(String id) {
         this.id = id;
@@ -121,7 +122,8 @@ public class JtlasSearchNode  implements java.io.Serializable {
     /**
      * set 节点方向
      *
-     * @param direction
+     * @param direction 节点方向
+     * @return JtlasSearchNode
      */
     public JtlasSearchNode direction(String direction) {
         this.direction = direction;
@@ -132,7 +134,8 @@ public class JtlasSearchNode  implements java.io.Serializable {
     /**
      * set 节点数据
      *
-     * @param data
+     * @param data 节点数据
+     * @return JtlasSearchNode
      */
     public JtlasSearchNode data(Object data) {
         this.data = data;

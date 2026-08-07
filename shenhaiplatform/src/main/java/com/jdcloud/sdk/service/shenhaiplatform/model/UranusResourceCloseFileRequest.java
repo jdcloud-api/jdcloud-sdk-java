@@ -164,7 +164,8 @@ public class UranusResourceCloseFileRequest extends JdcloudRequest implements ja
     /**
      * set 资源code
      *
-     * @param resourceCode
+     * @param resourceCode 资源code
+     * @return UranusResourceCloseFileRequest
      */
     public UranusResourceCloseFileRequest resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -175,7 +176,8 @@ public class UranusResourceCloseFileRequest extends JdcloudRequest implements ja
     /**
      * set 总片数（建议5MB一片；不分片的文件为1片）
      *
-     * @param sliceTotal
+     * @param sliceTotal 总片数（建议5MB一片；不分片的文件为1片）
+     * @return UranusResourceCloseFileRequest
      */
     public UranusResourceCloseFileRequest sliceTotal(Integer sliceTotal) {
         this.sliceTotal = sliceTotal;
@@ -186,7 +188,8 @@ public class UranusResourceCloseFileRequest extends JdcloudRequest implements ja
     /**
      * set 文件md5值
      *
-     * @param md5code
+     * @param md5code 文件md5值
+     * @return UranusResourceCloseFileRequest
      */
     public UranusResourceCloseFileRequest md5code(String md5code) {
         this.md5code = md5code;
@@ -197,7 +200,8 @@ public class UranusResourceCloseFileRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusResourceCloseFileRequest
      */
     public UranusResourceCloseFileRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -208,7 +212,8 @@ public class UranusResourceCloseFileRequest extends JdcloudRequest implements ja
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusResourceCloseFileRequest
      */
     public UranusResourceCloseFileRequest appName(String appName) {
         this.appName = appName;

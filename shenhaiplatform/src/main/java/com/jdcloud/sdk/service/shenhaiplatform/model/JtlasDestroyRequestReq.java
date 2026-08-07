@@ -65,7 +65,8 @@ public class JtlasDestroyRequestReq  implements java.io.Serializable {
     /**
      * set 租户编码
      *
-     * @param companyCode
+     * @param companyCode 租户编码
+     * @return JtlasDestroyRequestReq
      */
     public JtlasDestroyRequestReq companyCode(String companyCode) {
         this.companyCode = companyCode;

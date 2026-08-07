@@ -494,7 +494,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -505,7 +506,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 客户作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名称
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -516,7 +518,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 最后以此执行日期
      *
-     * @param lastTxDate
+     * @param lastTxDate 最后以此执行日期
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO lastTxDate(String lastTxDate) {
         this.lastTxDate = lastTxDate;
@@ -527,7 +530,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 最后一次运行开始时间
      *
-     * @param lastStartTime
+     * @param lastStartTime 最后一次运行开始时间
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO lastStartTime(String lastStartTime) {
         this.lastStartTime = lastStartTime;
@@ -538,7 +542,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 最后一次结束时间
      *
-     * @param lastEndTime
+     * @param lastEndTime 最后一次结束时间
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO lastEndTime(String lastEndTime) {
         this.lastEndTime = lastEndTime;
@@ -549,7 +554,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 最后一次运行状态，Pending、Ready、Running、Done、Failed、Clean
      *
-     * @param lastStatus
+     * @param lastStatus 最后一次运行状态，Pending、Ready、Running、Done、Failed、Clean
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO lastStatus(String lastStatus) {
         this.lastStatus = lastStatus;
@@ -560,7 +566,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 是否可以自身并行，1启用、0关闭
      *
-     * @param flagParallel
+     * @param flagParallel 是否可以自身并行，1启用、0关闭
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO flagParallel(String flagParallel) {
         this.flagParallel = flagParallel;
@@ -571,7 +578,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 当前作业状态信息
      *
-     * @param currentStatusMsg
+     * @param currentStatusMsg 当前作业状态信息
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO currentStatusMsg(String currentStatusMsg) {
         this.currentStatusMsg = currentStatusMsg;
@@ -582,7 +590,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 周期开始时间(适用小时分钟)
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 周期开始时间(适用小时分钟)
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -593,7 +602,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 周期结束时间(适用小时分钟)
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 周期结束时间(适用小时分钟)
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -604,7 +614,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 周期间隔(适用小时分钟，当周期为小时，含义为间隔小时数，当周期为分钟，含义为间隔分钟数)
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 周期间隔(适用小时分钟，当周期为小时，含义为间隔小时数，当周期为分钟，含义为间隔分钟数)
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO sequenceInterval(String sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -615,7 +626,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 是否启用，1启用、0关闭
      *
-     * @param enable
+     * @param enable 是否启用，1启用、0关闭
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO enable(String enable) {
         this.enable = enable;
@@ -626,7 +638,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 负责人，不超过10个
      *
-     * @param manager
+     * @param manager 负责人，不超过10个
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO manager(String manager) {
         this.manager = manager;
@@ -637,7 +650,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 作业所属系统，G gravity版本、A automation版本,用于迁移字段
      *
-     * @param jobBelong
+     * @param jobBelong 作业所属系统，G gravity版本、A automation版本,用于迁移字段
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO jobBelong(String jobBelong) {
         this.jobBelong = jobBelong;
@@ -648,7 +662,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 是否强依赖，1启用、0关闭
      *
-     * @param necessary
+     * @param necessary 是否强依赖，1启用、0关闭
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO necessary(String necessary) {
         this.necessary = necessary;
@@ -659,7 +674,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 是否可以上下游并行，1启用、0关闭
      *
-     * @param depFlagParallel
+     * @param depFlagParallel 是否可以上下游并行，1启用、0关闭
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO depFlagParallel(String depFlagParallel) {
         this.depFlagParallel = depFlagParallel;
@@ -670,7 +686,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
      *
-     * @param triggerType
+     * @param triggerType 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -681,7 +698,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
      *
-     * @param cycle
+     * @param cycle 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO cycle(String cycle) {
         this.cycle = cycle;
@@ -692,7 +710,8 @@ public class GpdpJobDependencyResultDTO  implements java.io.Serializable {
     /**
      * set 周期具体日期
      *
-     * @param sequence
+     * @param sequence 周期具体日期
+     * @return GpdpJobDependencyResultDTO
      */
     public GpdpJobDependencyResultDTO sequence(String sequence) {
         this.sequence = sequence;

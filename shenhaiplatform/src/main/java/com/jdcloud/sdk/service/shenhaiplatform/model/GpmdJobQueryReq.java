@@ -110,7 +110,8 @@ public class GpmdJobQueryReq  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpmdJobQueryReq
      */
     public GpmdJobQueryReq jobName(String jobName) {
         this.jobName = jobName;
@@ -121,7 +122,8 @@ public class GpmdJobQueryReq  implements java.io.Serializable {
     /**
      * set 是否可用，1 已上线，2已下线
      *
-     * @param enable
+     * @param enable 是否可用，1 已上线，2已下线
+     * @return GpmdJobQueryReq
      */
     public GpmdJobQueryReq enable(String enable) {
         this.enable = enable;
@@ -132,7 +134,8 @@ public class GpmdJobQueryReq  implements java.io.Serializable {
     /**
      * set 客户作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名称
+     * @return GpmdJobQueryReq
      */
     public GpmdJobQueryReq cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;

@@ -238,7 +238,8 @@ public class GravityParticleJobscheIsUpstreamSameFrequencyRequest extends Jdclou
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleJobscheIsUpstreamSameFrequencyRequest
      */
     public GravityParticleJobscheIsUpstreamSameFrequencyRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -249,7 +250,8 @@ public class GravityParticleJobscheIsUpstreamSameFrequencyRequest extends Jdclou
     /**
     * set 依赖作业名称清单
     *
-    * @param dependJobName
+    * @param dependJobName 依赖作业名称清单
+    * @return GravityParticleJobscheIsUpstreamSameFrequencyRequest
     */
     public GravityParticleJobscheIsUpstreamSameFrequencyRequest dependJobName(List<String> dependJobName) {
         this.dependJobName = dependJobName;
@@ -260,7 +262,8 @@ public class GravityParticleJobscheIsUpstreamSameFrequencyRequest extends Jdclou
     /**
      * set 作业开始时间
      *
-     * @param startTime
+     * @param startTime 作业开始时间
+     * @return GravityParticleJobscheIsUpstreamSameFrequencyRequest
      */
     public GravityParticleJobscheIsUpstreamSameFrequencyRequest startTime(String startTime) {
         this.startTime = startTime;
@@ -271,7 +274,8 @@ public class GravityParticleJobscheIsUpstreamSameFrequencyRequest extends Jdclou
     /**
      * set 作业结束时间
      *
-     * @param endTime
+     * @param endTime 作业结束时间
+     * @return GravityParticleJobscheIsUpstreamSameFrequencyRequest
      */
     public GravityParticleJobscheIsUpstreamSameFrequencyRequest endTime(String endTime) {
         this.endTime = endTime;
@@ -282,7 +286,8 @@ public class GravityParticleJobscheIsUpstreamSameFrequencyRequest extends Jdclou
     /**
      * set 作业时间间隔
      *
-     * @param interval
+     * @param interval 作业时间间隔
+     * @return GravityParticleJobscheIsUpstreamSameFrequencyRequest
      */
     public GravityParticleJobscheIsUpstreamSameFrequencyRequest interval(Integer interval) {
         this.interval = interval;
@@ -293,7 +298,8 @@ public class GravityParticleJobscheIsUpstreamSameFrequencyRequest extends Jdclou
     /**
      * set 作业运行周期
      *
-     * @param cycle
+     * @param cycle 作业运行周期
+     * @return GravityParticleJobscheIsUpstreamSameFrequencyRequest
      */
     public GravityParticleJobscheIsUpstreamSameFrequencyRequest cycle(String cycle) {
         this.cycle = cycle;
@@ -304,7 +310,8 @@ public class GravityParticleJobscheIsUpstreamSameFrequencyRequest extends Jdclou
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobscheIsUpstreamSameFrequencyRequest
      */
     public GravityParticleJobscheIsUpstreamSameFrequencyRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -315,7 +322,8 @@ public class GravityParticleJobscheIsUpstreamSameFrequencyRequest extends Jdclou
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobscheIsUpstreamSameFrequencyRequest
      */
     public GravityParticleJobscheIsUpstreamSameFrequencyRequest appName(String appName) {
         this.appName = appName;

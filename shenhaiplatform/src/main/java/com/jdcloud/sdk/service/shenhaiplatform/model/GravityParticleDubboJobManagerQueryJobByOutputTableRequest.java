@@ -164,7 +164,8 @@ public class GravityParticleDubboJobManagerQueryJobByOutputTableRequest extends 
     /**
      * set 数据库名称
      *
-     * @param databaseName
+     * @param databaseName 数据库名称
+     * @return GravityParticleDubboJobManagerQueryJobByOutputTableRequest
      */
     public GravityParticleDubboJobManagerQueryJobByOutputTableRequest databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -175,7 +176,8 @@ public class GravityParticleDubboJobManagerQueryJobByOutputTableRequest extends 
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return GravityParticleDubboJobManagerQueryJobByOutputTableRequest
      */
     public GravityParticleDubboJobManagerQueryJobByOutputTableRequest tableName(String tableName) {
         this.tableName = tableName;
@@ -186,7 +188,8 @@ public class GravityParticleDubboJobManagerQueryJobByOutputTableRequest extends 
     /**
      * set 工作空间名称
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间名称
+     * @return GravityParticleDubboJobManagerQueryJobByOutputTableRequest
      */
     public GravityParticleDubboJobManagerQueryJobByOutputTableRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -197,7 +200,8 @@ public class GravityParticleDubboJobManagerQueryJobByOutputTableRequest extends 
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerQueryJobByOutputTableRequest
      */
     public GravityParticleDubboJobManagerQueryJobByOutputTableRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -208,7 +212,8 @@ public class GravityParticleDubboJobManagerQueryJobByOutputTableRequest extends 
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerQueryJobByOutputTableRequest
      */
     public GravityParticleDubboJobManagerQueryJobByOutputTableRequest appName(String appName) {
         this.appName = appName;

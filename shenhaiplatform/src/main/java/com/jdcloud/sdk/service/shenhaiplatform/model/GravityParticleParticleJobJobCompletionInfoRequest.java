@@ -118,7 +118,8 @@ public class GravityParticleParticleJobJobCompletionInfoRequest extends JdcloudR
     /**
      * set jobName
      *
-     * @param jobName
+     * @param jobName 
+     * @return GravityParticleParticleJobJobCompletionInfoRequest
      */
     public GravityParticleParticleJobJobCompletionInfoRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -129,7 +130,8 @@ public class GravityParticleParticleJobJobCompletionInfoRequest extends JdcloudR
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleParticleJobJobCompletionInfoRequest
      */
     public GravityParticleParticleJobJobCompletionInfoRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class GravityParticleParticleJobJobCompletionInfoRequest extends JdcloudR
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleParticleJobJobCompletionInfoRequest
      */
     public GravityParticleParticleJobJobCompletionInfoRequest appName(String appName) {
         this.appName = appName;

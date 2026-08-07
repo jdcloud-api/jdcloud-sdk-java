@@ -230,7 +230,8 @@ public class WatchmanVo  implements java.io.Serializable {
     /**
      * set 值班人id
      *
-     * @param id
+     * @param id 值班人id
+     * @return WatchmanVo
      */
     public WatchmanVo id(Long id) {
         this.id = id;
@@ -241,7 +242,8 @@ public class WatchmanVo  implements java.io.Serializable {
     /**
      * set 值班人名称
      *
-     * @param name
+     * @param name 值班人名称
+     * @return WatchmanVo
      */
     public WatchmanVo name(String name) {
         this.name = name;
@@ -252,7 +254,8 @@ public class WatchmanVo  implements java.io.Serializable {
     /**
      * set 值班人Pin
      *
-     * @param pin
+     * @param pin 值班人Pin
+     * @return WatchmanVo
      */
     public WatchmanVo pin(String pin) {
         this.pin = pin;
@@ -263,7 +266,8 @@ public class WatchmanVo  implements java.io.Serializable {
     /**
      * set 值班人Erp
      *
-     * @param erp
+     * @param erp 值班人Erp
+     * @return WatchmanVo
      */
     public WatchmanVo erp(String erp) {
         this.erp = erp;
@@ -274,7 +278,8 @@ public class WatchmanVo  implements java.io.Serializable {
     /**
      * set 值班人手机号
      *
-     * @param phoneNumber
+     * @param phoneNumber 值班人手机号
+     * @return WatchmanVo
      */
     public WatchmanVo phoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
@@ -285,7 +290,8 @@ public class WatchmanVo  implements java.io.Serializable {
     /**
      * set 值班人邮箱地址
      *
-     * @param email
+     * @param email 值班人邮箱地址
+     * @return WatchmanVo
      */
     public WatchmanVo email(String email) {
         this.email = email;
@@ -296,7 +302,8 @@ public class WatchmanVo  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return WatchmanVo
      */
     public WatchmanVo createTime(Long createTime) {
         this.createTime = createTime;
@@ -307,7 +314,8 @@ public class WatchmanVo  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return WatchmanVo
      */
     public WatchmanVo updateTime(Long updateTime) {
         this.updateTime = updateTime;

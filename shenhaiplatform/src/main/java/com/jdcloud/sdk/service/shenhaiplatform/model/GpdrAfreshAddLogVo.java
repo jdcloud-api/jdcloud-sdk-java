@@ -278,7 +278,8 @@ public class GpdrAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set 查询补数跟踪记录id
      *
-     * @param id
+     * @param id 查询补数跟踪记录id
+     * @return GpdrAfreshAddLogVo
      */
     public GpdrAfreshAddLogVo id(Integer id) {
         this.id = id;
@@ -289,7 +290,8 @@ public class GpdrAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set 作业名
      *
-     * @param etlJob
+     * @param etlJob 作业名
+     * @return GpdrAfreshAddLogVo
      */
     public GpdrAfreshAddLogVo etlJob(String etlJob) {
         this.etlJob = etlJob;
@@ -300,7 +302,8 @@ public class GpdrAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set 客户作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名称
+     * @return GpdrAfreshAddLogVo
      */
     public GpdrAfreshAddLogVo cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -311,7 +314,8 @@ public class GpdrAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set 补数任务ID
      *
-     * @param taskId
+     * @param taskId 补数任务ID
+     * @return GpdrAfreshAddLogVo
      */
     public GpdrAfreshAddLogVo taskId(Integer taskId) {
         this.taskId = taskId;
@@ -322,7 +326,8 @@ public class GpdrAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GpdrAfreshAddLogVo
      */
     public GpdrAfreshAddLogVo txDate(String txDate) {
         this.txDate = txDate;
@@ -333,7 +338,8 @@ public class GpdrAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set 计划执行时间
      *
-     * @param planExeTime
+     * @param planExeTime 计划执行时间
+     * @return GpdrAfreshAddLogVo
      */
     public GpdrAfreshAddLogVo planExeTime(String planExeTime) {
         this.planExeTime = planExeTime;
@@ -344,7 +350,8 @@ public class GpdrAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set 任务状态
      *
-     * @param jobStatus
+     * @param jobStatus 任务状态
+     * @return GpdrAfreshAddLogVo
      */
     public GpdrAfreshAddLogVo jobStatus(String jobStatus) {
         this.jobStatus = jobStatus;
@@ -355,7 +362,8 @@ public class GpdrAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set 任务开始运行时间
      *
-     * @param startTime
+     * @param startTime 任务开始运行时间
+     * @return GpdrAfreshAddLogVo
      */
     public GpdrAfreshAddLogVo startTime(String startTime) {
         this.startTime = startTime;
@@ -366,7 +374,8 @@ public class GpdrAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set 任务开始运行时间
      *
-     * @param endTime
+     * @param endTime 任务开始运行时间
+     * @return GpdrAfreshAddLogVo
      */
     public GpdrAfreshAddLogVo endTime(String endTime) {
         this.endTime = endTime;
@@ -377,7 +386,8 @@ public class GpdrAfreshAddLogVo  implements java.io.Serializable {
     /**
      * set 补数任务ID
      *
-     * @param afreshAddId
+     * @param afreshAddId 补数任务ID
+     * @return GpdrAfreshAddLogVo
      */
     public GpdrAfreshAddLogVo afreshAddId(Integer afreshAddId) {
         this.afreshAddId = afreshAddId;

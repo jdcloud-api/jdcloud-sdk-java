@@ -142,7 +142,8 @@ public class GravityParticleJobMonitorJobStatusCountRequest extends JdcloudReque
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return GravityParticleJobMonitorJobStatusCountRequest
      */
     public GravityParticleJobMonitorJobStatusCountRequest processType(String processType) {
         this.processType = processType;
@@ -153,7 +154,8 @@ public class GravityParticleJobMonitorJobStatusCountRequest extends JdcloudReque
     /**
      * set 是否统计本人作业
      *
-     * @param isMine
+     * @param isMine 是否统计本人作业
+     * @return GravityParticleJobMonitorJobStatusCountRequest
      */
     public GravityParticleJobMonitorJobStatusCountRequest isMine(Boolean isMine) {
         this.isMine = isMine;
@@ -164,7 +166,8 @@ public class GravityParticleJobMonitorJobStatusCountRequest extends JdcloudReque
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobMonitorJobStatusCountRequest
      */
     public GravityParticleJobMonitorJobStatusCountRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -175,7 +178,8 @@ public class GravityParticleJobMonitorJobStatusCountRequest extends JdcloudReque
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobMonitorJobStatusCountRequest
      */
     public GravityParticleJobMonitorJobStatusCountRequest appName(String appName) {
         this.appName = appName;

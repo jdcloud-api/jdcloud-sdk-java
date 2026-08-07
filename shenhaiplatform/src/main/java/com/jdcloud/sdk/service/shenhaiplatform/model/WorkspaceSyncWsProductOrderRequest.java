@@ -333,7 +333,8 @@ public class WorkspaceSyncWsProductOrderRequest extends JdcloudRequest implement
     /**
      * set region
      *
-     * @param region
+     * @param region 
+     * @return WorkspaceSyncWsProductOrderRequest
      */
     public WorkspaceSyncWsProductOrderRequest region(String region) {
         this.region = region;
@@ -344,7 +345,8 @@ public class WorkspaceSyncWsProductOrderRequest extends JdcloudRequest implement
     /**
      * set billingVersion
      *
-     * @param billingVersion
+     * @param billingVersion 
+     * @return WorkspaceSyncWsProductOrderRequest
      */
     public WorkspaceSyncWsProductOrderRequest billingVersion(String billingVersion) {
         this.billingVersion = billingVersion;
@@ -355,7 +357,8 @@ public class WorkspaceSyncWsProductOrderRequest extends JdcloudRequest implement
     /**
      * set billingModel
      *
-     * @param billingModel
+     * @param billingModel 
+     * @return WorkspaceSyncWsProductOrderRequest
      */
     public WorkspaceSyncWsProductOrderRequest billingModel(String billingModel) {
         this.billingModel = billingModel;
@@ -366,7 +369,8 @@ public class WorkspaceSyncWsProductOrderRequest extends JdcloudRequest implement
     /**
      * set az
      *
-     * @param az
+     * @param az 
+     * @return WorkspaceSyncWsProductOrderRequest
      */
     public WorkspaceSyncWsProductOrderRequest az(String az) {
         this.az = az;
@@ -377,7 +381,8 @@ public class WorkspaceSyncWsProductOrderRequest extends JdcloudRequest implement
     /**
      * set account
      *
-     * @param account
+     * @param account 
+     * @return WorkspaceSyncWsProductOrderRequest
      */
     public WorkspaceSyncWsProductOrderRequest account(String account) {
         this.account = account;
@@ -388,7 +393,8 @@ public class WorkspaceSyncWsProductOrderRequest extends JdcloudRequest implement
     /**
      * set companyId
      *
-     * @param companyId
+     * @param companyId 
+     * @return WorkspaceSyncWsProductOrderRequest
      */
     public WorkspaceSyncWsProductOrderRequest companyId(String companyId) {
         this.companyId = companyId;
@@ -399,7 +405,8 @@ public class WorkspaceSyncWsProductOrderRequest extends JdcloudRequest implement
     /**
      * set payPlan
      *
-     * @param payPlan
+     * @param payPlan 
+     * @return WorkspaceSyncWsProductOrderRequest
      */
     public WorkspaceSyncWsProductOrderRequest payPlan(String payPlan) {
         this.payPlan = payPlan;
@@ -410,7 +417,8 @@ public class WorkspaceSyncWsProductOrderRequest extends JdcloudRequest implement
     /**
      * set autoRenewal
      *
-     * @param autoRenewal
+     * @param autoRenewal 
+     * @return WorkspaceSyncWsProductOrderRequest
      */
     public WorkspaceSyncWsProductOrderRequest autoRenewal(Boolean autoRenewal) {
         this.autoRenewal = autoRenewal;
@@ -421,7 +429,8 @@ public class WorkspaceSyncWsProductOrderRequest extends JdcloudRequest implement
     /**
      * set purchaseDuration
      *
-     * @param purchaseDuration
+     * @param purchaseDuration 
+     * @return WorkspaceSyncWsProductOrderRequest
      */
     public WorkspaceSyncWsProductOrderRequest purchaseDuration(Integer purchaseDuration) {
         this.purchaseDuration = purchaseDuration;
@@ -432,7 +441,8 @@ public class WorkspaceSyncWsProductOrderRequest extends JdcloudRequest implement
     /**
      * set orderUniqueKey
      *
-     * @param orderUniqueKey
+     * @param orderUniqueKey 
+     * @return WorkspaceSyncWsProductOrderRequest
      */
     public WorkspaceSyncWsProductOrderRequest orderUniqueKey(OrderUniqueKey orderUniqueKey) {
         this.orderUniqueKey = orderUniqueKey;
@@ -443,7 +453,8 @@ public class WorkspaceSyncWsProductOrderRequest extends JdcloudRequest implement
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceSyncWsProductOrderRequest
      */
     public WorkspaceSyncWsProductOrderRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -454,7 +465,8 @@ public class WorkspaceSyncWsProductOrderRequest extends JdcloudRequest implement
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceSyncWsProductOrderRequest
      */
     public WorkspaceSyncWsProductOrderRequest appName(String appName) {
         this.appName = appName;

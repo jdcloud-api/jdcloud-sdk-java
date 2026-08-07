@@ -65,7 +65,8 @@ public class UranusDdlAnalyzeReq  implements java.io.Serializable {
     /**
      * set sql 文本
      *
-     * @param sqlContent
+     * @param sqlContent sql 文本
+     * @return UranusDdlAnalyzeReq
      */
     public UranusDdlAnalyzeReq sqlContent(String sqlContent) {
         this.sqlContent = sqlContent;

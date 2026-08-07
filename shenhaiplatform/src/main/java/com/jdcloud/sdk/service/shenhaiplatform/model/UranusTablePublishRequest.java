@@ -411,7 +411,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
      * set 表英文名称
      *
-     * @param tableEnName
+     * @param tableEnName 表英文名称
+     * @return UranusTablePublishRequest
      */
     public UranusTablePublishRequest tableEnName(String tableEnName) {
         this.tableEnName = tableEnName;
@@ -422,7 +423,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
      * set 表中文名
      *
-     * @param tableCnName
+     * @param tableCnName 表中文名
+     * @return UranusTablePublishRequest
      */
     public UranusTablePublishRequest tableCnName(String tableCnName) {
         this.tableCnName = tableCnName;
@@ -433,7 +435,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
      * set 负责人
      *
-     * @param owner
+     * @param owner 负责人
+     * @return UranusTablePublishRequest
      */
     public UranusTablePublishRequest owner(String owner) {
         this.owner = owner;
@@ -444,7 +447,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
      * set 协助人
      *
-     * @param manager
+     * @param manager 协助人
+     * @return UranusTablePublishRequest
      */
     public UranusTablePublishRequest manager(String manager) {
         this.manager = manager;
@@ -455,7 +459,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
     * set 表的普通字段信息
     *
-    * @param columns
+    * @param columns 表的普通字段信息
+    * @return UranusTablePublishRequest
     */
     public UranusTablePublishRequest columns(List<UranusColumnSaveOrUpdate> columns) {
         this.columns = columns;
@@ -466,7 +471,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
     * set 表的分区字段信息
     *
-    * @param partitions
+    * @param partitions 表的分区字段信息
+    * @return UranusTablePublishRequest
     */
     public UranusTablePublishRequest partitions(List<UranusColumnSaveOrUpdate> partitions) {
         this.partitions = partitions;
@@ -477,7 +483,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
      * set 0 非分区表 1 分区表
      *
-     * @param isPartition
+     * @param isPartition 0 非分区表 1 分区表
+     * @return UranusTablePublishRequest
      */
     public UranusTablePublishRequest isPartition(Integer isPartition) {
         this.isPartition = isPartition;
@@ -488,7 +495,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
      * set 0 新建表 1 修改表
      *
-     * @param updateTable
+     * @param updateTable 0 新建表 1 修改表
+     * @return UranusTablePublishRequest
      */
     public UranusTablePublishRequest updateTable(Integer updateTable) {
         this.updateTable = updateTable;
@@ -499,7 +507,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
      * set 表存储格式
      *
-     * @param storageType
+     * @param storageType 表存储格式
+     * @return UranusTablePublishRequest
      */
     public UranusTablePublishRequest storageType(String storageType) {
         this.storageType = storageType;
@@ -510,7 +519,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
      * set 表字段分隔符（只有TEXTFILE类型表需要该字段）
      *
-     * @param fieldDelim
+     * @param fieldDelim 表字段分隔符（只有TEXTFILE类型表需要该字段）
+     * @return UranusTablePublishRequest
      */
     public UranusTablePublishRequest fieldDelim(String fieldDelim) {
         this.fieldDelim = fieldDelim;
@@ -521,7 +531,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
      * set 表行分隔符（只有TEXTFILE类型表需要该字段）
      *
-     * @param lineDelim
+     * @param lineDelim 表行分隔符（只有TEXTFILE类型表需要该字段）
+     * @return UranusTablePublishRequest
      */
     public UranusTablePublishRequest lineDelim(String lineDelim) {
         this.lineDelim = lineDelim;
@@ -532,7 +543,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
     * set 分桶字段
     *
-    * @param bucketCols
+    * @param bucketCols 分桶字段
+    * @return UranusTablePublishRequest
     */
     public UranusTablePublishRequest bucketCols(List<String> bucketCols) {
         this.bucketCols = bucketCols;
@@ -543,7 +555,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
      * set 分桶字段
      *
-     * @param bucketNum
+     * @param bucketNum 分桶字段
+     * @return UranusTablePublishRequest
      */
     public UranusTablePublishRequest bucketNum(Integer bucketNum) {
         this.bucketNum = bucketNum;
@@ -554,7 +567,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTablePublishRequest
      */
     public UranusTablePublishRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -565,7 +579,8 @@ public class UranusTablePublishRequest extends JdcloudRequest implements java.io
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTablePublishRequest
      */
     public UranusTablePublishRequest appName(String appName) {
         this.appName = appName;

@@ -326,7 +326,8 @@ public class GpjmJobRunInfoResultDTO  implements java.io.Serializable {
     /**
      * set 作业名
      *
-     * @param etlJob
+     * @param etlJob 作业名
+     * @return GpjmJobRunInfoResultDTO
      */
     public GpjmJobRunInfoResultDTO etlJob(String etlJob) {
         this.etlJob = etlJob;
@@ -337,7 +338,8 @@ public class GpjmJobRunInfoResultDTO  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GpjmJobRunInfoResultDTO
      */
     public GpjmJobRunInfoResultDTO txDate(String txDate) {
         this.txDate = txDate;
@@ -348,7 +350,8 @@ public class GpjmJobRunInfoResultDTO  implements java.io.Serializable {
     /**
      * set 运行开始时间
      *
-     * @param startTime
+     * @param startTime 运行开始时间
+     * @return GpjmJobRunInfoResultDTO
      */
     public GpjmJobRunInfoResultDTO startTime(String startTime) {
         this.startTime = startTime;
@@ -359,7 +362,8 @@ public class GpjmJobRunInfoResultDTO  implements java.io.Serializable {
     /**
      * set 运行结束时间
      *
-     * @param endTime
+     * @param endTime 运行结束时间
+     * @return GpjmJobRunInfoResultDTO
      */
     public GpjmJobRunInfoResultDTO endTime(String endTime) {
         this.endTime = endTime;
@@ -370,7 +374,8 @@ public class GpjmJobRunInfoResultDTO  implements java.io.Serializable {
     /**
      * set 运行状态
      *
-     * @param jobStatus
+     * @param jobStatus 运行状态
+     * @return GpjmJobRunInfoResultDTO
      */
     public GpjmJobRunInfoResultDTO jobStatus(String jobStatus) {
         this.jobStatus = jobStatus;
@@ -381,7 +386,8 @@ public class GpjmJobRunInfoResultDTO  implements java.io.Serializable {
     /**
      * set Session ID
      *
-     * @param jobSessionId
+     * @param jobSessionId Session ID
+     * @return GpjmJobRunInfoResultDTO
      */
     public GpjmJobRunInfoResultDTO jobSessionId(String jobSessionId) {
         this.jobSessionId = jobSessionId;
@@ -392,7 +398,8 @@ public class GpjmJobRunInfoResultDTO  implements java.io.Serializable {
     /**
      * set 运行时间
      *
-     * @param runTime
+     * @param runTime 运行时间
+     * @return GpjmJobRunInfoResultDTO
      */
     public GpjmJobRunInfoResultDTO runTime(String runTime) {
         this.runTime = runTime;
@@ -403,7 +410,8 @@ public class GpjmJobRunInfoResultDTO  implements java.io.Serializable {
     /**
      * set 返回编码
      *
-     * @param returnCode
+     * @param returnCode 返回编码
+     * @return GpjmJobRunInfoResultDTO
      */
     public GpjmJobRunInfoResultDTO returnCode(String returnCode) {
         this.returnCode = returnCode;
@@ -414,7 +422,8 @@ public class GpjmJobRunInfoResultDTO  implements java.io.Serializable {
     /**
      * set 返回信息
      *
-     * @param returnMsg
+     * @param returnMsg 返回信息
+     * @return GpjmJobRunInfoResultDTO
      */
     public GpjmJobRunInfoResultDTO returnMsg(String returnMsg) {
         this.returnMsg = returnMsg;
@@ -425,7 +434,8 @@ public class GpjmJobRunInfoResultDTO  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return GpjmJobRunInfoResultDTO
      */
     public GpjmJobRunInfoResultDTO createTime(String createTime) {
         this.createTime = createTime;
@@ -436,7 +446,8 @@ public class GpjmJobRunInfoResultDTO  implements java.io.Serializable {
     /**
      * set 是否补数任务
      *
-     * @param isComplement
+     * @param isComplement 是否补数任务
+     * @return GpjmJobRunInfoResultDTO
      */
     public GpjmJobRunInfoResultDTO isComplement(String isComplement) {
         this.isComplement = isComplement;
@@ -447,7 +458,8 @@ public class GpjmJobRunInfoResultDTO  implements java.io.Serializable {
     /**
      * set 计划执行时间
      *
-     * @param planExecTime
+     * @param planExecTime 计划执行时间
+     * @return GpjmJobRunInfoResultDTO
      */
     public GpjmJobRunInfoResultDTO planExecTime(String planExecTime) {
         this.planExecTime = planExecTime;

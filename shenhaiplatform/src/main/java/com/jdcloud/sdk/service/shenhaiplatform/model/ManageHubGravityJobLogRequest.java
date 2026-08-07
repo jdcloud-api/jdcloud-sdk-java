@@ -212,7 +212,8 @@ public class ManageHubGravityJobLogRequest extends JdcloudRequest implements jav
     /**
      * set 分页-页码
      *
-     * @param pageNum
+     * @param pageNum 分页-页码
+     * @return ManageHubGravityJobLogRequest
      */
     public ManageHubGravityJobLogRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -223,7 +224,8 @@ public class ManageHubGravityJobLogRequest extends JdcloudRequest implements jav
     /**
      * set 分页-每页数量
      *
-     * @param pageSize
+     * @param pageSize 分页-每页数量
+     * @return ManageHubGravityJobLogRequest
      */
     public ManageHubGravityJobLogRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -234,7 +236,8 @@ public class ManageHubGravityJobLogRequest extends JdcloudRequest implements jav
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return ManageHubGravityJobLogRequest
      */
     public ManageHubGravityJobLogRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -245,7 +248,8 @@ public class ManageHubGravityJobLogRequest extends JdcloudRequest implements jav
     /**
      * set session id
      *
-     * @param jobSessionId
+     * @param jobSessionId session id
+     * @return ManageHubGravityJobLogRequest
      */
     public ManageHubGravityJobLogRequest jobSessionId(String jobSessionId) {
         this.jobSessionId = jobSessionId;
@@ -256,7 +260,8 @@ public class ManageHubGravityJobLogRequest extends JdcloudRequest implements jav
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return ManageHubGravityJobLogRequest
      */
     public ManageHubGravityJobLogRequest txDate(String txDate) {
         this.txDate = txDate;
@@ -267,7 +272,8 @@ public class ManageHubGravityJobLogRequest extends JdcloudRequest implements jav
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubGravityJobLogRequest
      */
     public ManageHubGravityJobLogRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -278,7 +284,8 @@ public class ManageHubGravityJobLogRequest extends JdcloudRequest implements jav
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubGravityJobLogRequest
      */
     public ManageHubGravityJobLogRequest appName(String appName) {
         this.appName = appName;

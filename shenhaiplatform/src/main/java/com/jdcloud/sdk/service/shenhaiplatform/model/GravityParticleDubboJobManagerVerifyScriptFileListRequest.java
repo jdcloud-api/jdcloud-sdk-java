@@ -190,7 +190,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileListRequest extends J
     /**
     * set 脚本文件字节数组
     *
-    * @param scriptByte
+    * @param scriptByte 脚本文件字节数组
+    * @return GravityParticleDubboJobManagerVerifyScriptFileListRequest
     */
     public GravityParticleDubboJobManagerVerifyScriptFileListRequest scriptByte(List<String> scriptByte) {
         this.scriptByte = scriptByte;
@@ -201,7 +202,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileListRequest extends J
     /**
      * set 脚本名称
      *
-     * @param scriptName
+     * @param scriptName 脚本名称
+     * @return GravityParticleDubboJobManagerVerifyScriptFileListRequest
      */
     public GravityParticleDubboJobManagerVerifyScriptFileListRequest scriptName(String scriptName) {
         this.scriptName = scriptName;
@@ -212,7 +214,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileListRequest extends J
     /**
      * set 任务名称
      *
-     * @param jobName
+     * @param jobName 任务名称
+     * @return GravityParticleDubboJobManagerVerifyScriptFileListRequest
      */
     public GravityParticleDubboJobManagerVerifyScriptFileListRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -223,7 +226,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileListRequest extends J
     /**
      * set 脚本类型
      *
-     * @param scriptType
+     * @param scriptType 脚本类型
+     * @return GravityParticleDubboJobManagerVerifyScriptFileListRequest
      */
     public GravityParticleDubboJobManagerVerifyScriptFileListRequest scriptType(String scriptType) {
         this.scriptType = scriptType;
@@ -234,7 +238,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileListRequest extends J
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleDubboJobManagerVerifyScriptFileListRequest
      */
     public GravityParticleDubboJobManagerVerifyScriptFileListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -245,7 +250,8 @@ public class GravityParticleDubboJobManagerVerifyScriptFileListRequest extends J
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleDubboJobManagerVerifyScriptFileListRequest
      */
     public GravityParticleDubboJobManagerVerifyScriptFileListRequest appName(String appName) {
         this.appName = appName;

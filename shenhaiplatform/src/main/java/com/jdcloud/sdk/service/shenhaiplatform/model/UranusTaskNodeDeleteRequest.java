@@ -118,7 +118,8 @@ public class UranusTaskNodeDeleteRequest extends JdcloudRequest implements java.
     /**
      * set 节点Code
      *
-     * @param taskCode
+     * @param taskCode 节点Code
+     * @return UranusTaskNodeDeleteRequest
      */
     public UranusTaskNodeDeleteRequest taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -129,7 +130,8 @@ public class UranusTaskNodeDeleteRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskNodeDeleteRequest
      */
     public UranusTaskNodeDeleteRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusTaskNodeDeleteRequest extends JdcloudRequest implements java.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskNodeDeleteRequest
      */
     public UranusTaskNodeDeleteRequest appName(String appName) {
         this.appName = appName;

@@ -62,7 +62,8 @@ public class GpuserMatchUserReq  implements java.io.Serializable {
     /**
      * set 用户code
      *
-     * @param userCode
+     * @param userCode 用户code
+     * @return GpuserMatchUserReq
      */
     public GpuserMatchUserReq userCode(String userCode) {
         this.userCode = userCode;

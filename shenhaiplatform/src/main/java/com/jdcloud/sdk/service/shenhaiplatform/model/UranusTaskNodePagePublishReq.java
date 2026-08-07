@@ -91,7 +91,8 @@ public class UranusTaskNodePagePublishReq  implements java.io.Serializable {
     /**
     * set 节点列表
     *
-    * @param ids
+    * @param ids 节点列表
+    * @return UranusTaskNodePagePublishReq
     */
     public UranusTaskNodePagePublishReq ids(List<UranusNodePublishChildReq> ids) {
         this.ids = ids;
@@ -102,7 +103,8 @@ public class UranusTaskNodePagePublishReq  implements java.io.Serializable {
     /**
      * set 流程Code
      *
-     * @param flowCode
+     * @param flowCode 流程Code
+     * @return UranusTaskNodePagePublishReq
      */
     public UranusTaskNodePagePublishReq flowCode(String flowCode) {
         this.flowCode = flowCode;

@@ -167,7 +167,8 @@ public class JtlasPageSearchTablePartitionsReq  implements java.io.Serializable 
     /**
      * set 数据库名称（项目编码）
      *
-     * @param database
+     * @param database 数据库名称（项目编码）
+     * @return JtlasPageSearchTablePartitionsReq
      */
     public JtlasPageSearchTablePartitionsReq database(String database) {
         this.database = database;
@@ -178,7 +179,8 @@ public class JtlasPageSearchTablePartitionsReq  implements java.io.Serializable 
     /**
      * set 模糊关键字
      *
-     * @param fuzzyText
+     * @param fuzzyText 模糊关键字
+     * @return JtlasPageSearchTablePartitionsReq
      */
     public JtlasPageSearchTablePartitionsReq fuzzyText(String fuzzyText) {
         this.fuzzyText = fuzzyText;
@@ -189,7 +191,8 @@ public class JtlasPageSearchTablePartitionsReq  implements java.io.Serializable 
     /**
      * set 分页参数-页码
      *
-     * @param pageNum
+     * @param pageNum 分页参数-页码
+     * @return JtlasPageSearchTablePartitionsReq
      */
     public JtlasPageSearchTablePartitionsReq pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -200,7 +203,8 @@ public class JtlasPageSearchTablePartitionsReq  implements java.io.Serializable 
     /**
      * set 分页参数-页数
      *
-     * @param pageSize
+     * @param pageSize 分页参数-页数
+     * @return JtlasPageSearchTablePartitionsReq
      */
     public JtlasPageSearchTablePartitionsReq pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -211,7 +215,8 @@ public class JtlasPageSearchTablePartitionsReq  implements java.io.Serializable 
     /**
      * set 表名信息
      *
-     * @param tableName
+     * @param tableName 表名信息
+     * @return JtlasPageSearchTablePartitionsReq
      */
     public JtlasPageSearchTablePartitionsReq tableName(String tableName) {
         this.tableName = tableName;

@@ -142,7 +142,8 @@ public class GravityParticleParticleJobSchedReuseJobWithDependRequest extends Jd
     /**
     * set 作业名称列表
     *
-    * @param jobNames
+    * @param jobNames 作业名称列表
+    * @return GravityParticleParticleJobSchedReuseJobWithDependRequest
     */
     public GravityParticleParticleJobSchedReuseJobWithDependRequest jobNames(List<String> jobNames) {
         this.jobNames = jobNames;
@@ -153,7 +154,8 @@ public class GravityParticleParticleJobSchedReuseJobWithDependRequest extends Jd
     /**
      * set 操作备注
      *
-     * @param remark
+     * @param remark 操作备注
+     * @return GravityParticleParticleJobSchedReuseJobWithDependRequest
      */
     public GravityParticleParticleJobSchedReuseJobWithDependRequest remark(String remark) {
         this.remark = remark;
@@ -164,7 +166,8 @@ public class GravityParticleParticleJobSchedReuseJobWithDependRequest extends Jd
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleParticleJobSchedReuseJobWithDependRequest
      */
     public GravityParticleParticleJobSchedReuseJobWithDependRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -175,7 +178,8 @@ public class GravityParticleParticleJobSchedReuseJobWithDependRequest extends Jd
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleParticleJobSchedReuseJobWithDependRequest
      */
     public GravityParticleParticleJobSchedReuseJobWithDependRequest appName(String appName) {
         this.appName = appName;

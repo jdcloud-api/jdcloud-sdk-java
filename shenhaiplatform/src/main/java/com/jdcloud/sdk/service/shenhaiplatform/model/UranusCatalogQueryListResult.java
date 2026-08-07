@@ -186,7 +186,8 @@ public class UranusCatalogQueryListResult extends JdcloudResult implements java.
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusCatalogQueryListResult
      */
     public UranusCatalogQueryListResult code(String code) {
         this.code = code;
@@ -197,7 +198,8 @@ public class UranusCatalogQueryListResult extends JdcloudResult implements java.
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusCatalogQueryListResult
      */
     public UranusCatalogQueryListResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -208,7 +210,8 @@ public class UranusCatalogQueryListResult extends JdcloudResult implements java.
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusCatalogQueryListResult
      */
     public UranusCatalogQueryListResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -219,7 +222,8 @@ public class UranusCatalogQueryListResult extends JdcloudResult implements java.
     /**
     * set Object
     *
-    * @param result
+    * @param result Object
+    * @return UranusCatalogQueryListResult
     */
     public UranusCatalogQueryListResult result(List<UranusCatalogInfoCode> result) {
         this.result = result;
@@ -230,7 +234,8 @@ public class UranusCatalogQueryListResult extends JdcloudResult implements java.
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusCatalogQueryListResult
      */
     public UranusCatalogQueryListResult subCode(String subCode) {
         this.subCode = subCode;
@@ -241,7 +246,8 @@ public class UranusCatalogQueryListResult extends JdcloudResult implements java.
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusCatalogQueryListResult
      */
     public UranusCatalogQueryListResult successed(Boolean successed) {
         this.successed = successed;

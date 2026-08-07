@@ -136,7 +136,8 @@ public class GravityParticleOpenRerunResult extends JdcloudResult implements jav
     /**
      * set 成功标识，1成功，0失败
      *
-     * @param success
+     * @param success 成功标识，1成功，0失败
+     * @return GravityParticleOpenRerunResult
      */
     public GravityParticleOpenRerunResult success(Integer success) {
         this.success = success;
@@ -147,7 +148,8 @@ public class GravityParticleOpenRerunResult extends JdcloudResult implements jav
     /**
      * set 返回结果对象
      *
-     * @param result
+     * @param result 返回结果对象
+     * @return GravityParticleOpenRerunResult
      */
     public GravityParticleOpenRerunResult result(JobRerunResult result) {
         this.result = result;
@@ -158,7 +160,8 @@ public class GravityParticleOpenRerunResult extends JdcloudResult implements jav
     /**
      * set 返回状态码: 成功-1000，参数验证异常-1001，无操作权限-1005，未知异常-1003
      *
-     * @param code
+     * @param code 返回状态码: 成功-1000，参数验证异常-1001，无操作权限-1005，未知异常-1003
+     * @return GravityParticleOpenRerunResult
      */
     public GravityParticleOpenRerunResult code(String code) {
         this.code = code;
@@ -169,7 +172,8 @@ public class GravityParticleOpenRerunResult extends JdcloudResult implements jav
     /**
      * set 返回状态信息
      *
-     * @param msg
+     * @param msg 返回状态信息
+     * @return GravityParticleOpenRerunResult
      */
     public GravityParticleOpenRerunResult msg(String msg) {
         this.msg = msg;

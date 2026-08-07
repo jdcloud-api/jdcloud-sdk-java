@@ -172,7 +172,8 @@ public class GravityParticleOpenRerunRequest extends JdcloudRequest implements j
     /**
      * set 数据日期, 对于非小时/分钟周期任务，格式为 yyyy-MM-dd；对于小时/分钟周期任务，格式为 yyyy-MM-dd-HH-mm
      *
-     * @param txDate
+     * @param txDate 数据日期, 对于非小时/分钟周期任务，格式为 yyyy-MM-dd；对于小时/分钟周期任务，格式为 yyyy-MM-dd-HH-mm
+     * @return GravityParticleOpenRerunRequest
      */
     public GravityParticleOpenRerunRequest txDate(String txDate) {
         this.txDate = txDate;
@@ -183,7 +184,8 @@ public class GravityParticleOpenRerunRequest extends JdcloudRequest implements j
     /**
      * set 作业所属工作空间编码，形如: ws_123456789012345678
      *
-     * @param workspaceCode
+     * @param workspaceCode 作业所属工作空间编码，形如: ws_123456789012345678
+     * @return GravityParticleOpenRerunRequest
      */
     public GravityParticleOpenRerunRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -194,7 +196,8 @@ public class GravityParticleOpenRerunRequest extends JdcloudRequest implements j
     /**
     * set 作业ID列表，最多允许传递20个作业
     *
-    * @param jobIdList
+    * @param jobIdList 作业ID列表，最多允许传递20个作业
+    * @return GravityParticleOpenRerunRequest
     */
     public GravityParticleOpenRerunRequest jobIdList(List<String> jobIdList) {
         this.jobIdList = jobIdList;
@@ -205,7 +208,8 @@ public class GravityParticleOpenRerunRequest extends JdcloudRequest implements j
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleOpenRerunRequest
      */
     public GravityParticleOpenRerunRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -216,7 +220,8 @@ public class GravityParticleOpenRerunRequest extends JdcloudRequest implements j
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleOpenRerunRequest
      */
     public GravityParticleOpenRerunRequest appName(String appName) {
         this.appName = appName;

@@ -110,7 +110,8 @@ public class CheckFunctionInfoReq  implements java.io.Serializable {
     /**
      * set 检查的类型（CATALOG：函数分类目录、FUNCTION：函数）
      *
-     * @param checkType
+     * @param checkType 检查的类型（CATALOG：函数分类目录、FUNCTION：函数）
+     * @return CheckFunctionInfoReq
      */
     public CheckFunctionInfoReq checkType(String checkType) {
         this.checkType = checkType;
@@ -121,7 +122,8 @@ public class CheckFunctionInfoReq  implements java.io.Serializable {
     /**
      * set 检查的名称
      *
-     * @param checkName
+     * @param checkName 检查的名称
+     * @return CheckFunctionInfoReq
      */
     public CheckFunctionInfoReq checkName(String checkName) {
         this.checkName = checkName;
@@ -132,7 +134,8 @@ public class CheckFunctionInfoReq  implements java.io.Serializable {
     /**
      * set 分类目录的父code（函数名称是命名空间里唯一的；函数分类目录在不同目录下可以相同）
      *
-     * @param parentCatalogId
+     * @param parentCatalogId 分类目录的父code（函数名称是命名空间里唯一的；函数分类目录在不同目录下可以相同）
+     * @return CheckFunctionInfoReq
      */
     public CheckFunctionInfoReq parentCatalogId(Integer parentCatalogId) {
         this.parentCatalogId = parentCatalogId;

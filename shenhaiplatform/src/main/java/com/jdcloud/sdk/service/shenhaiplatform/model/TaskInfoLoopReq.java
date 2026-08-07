@@ -160,7 +160,8 @@ public class TaskInfoLoopReq  implements java.io.Serializable {
     /**
      * set 循环节点类型 ITERATION：迭代, LIST：列表
      *
-     * @param loopType
+     * @param loopType 循环节点类型 ITERATION：迭代, LIST：列表
+     * @return TaskInfoLoopReq
      */
     public TaskInfoLoopReq loopType(String loopType) {
         this.loopType = loopType;
@@ -171,7 +172,8 @@ public class TaskInfoLoopReq  implements java.io.Serializable {
     /**
     * set 循环参数列表，只对应LIST类型
     *
-    * @param loopParamList
+    * @param loopParamList 循环参数列表，只对应LIST类型
+    * @return TaskInfoLoopReq
     */
     public TaskInfoLoopReq loopParamList(List<LoopParam> loopParamList) {
         this.loopParamList = loopParamList;
@@ -182,7 +184,8 @@ public class TaskInfoLoopReq  implements java.io.Serializable {
     /**
      * set 迭代次数，只对应ITERATION类型
      *
-     * @param loopTimes
+     * @param loopTimes 迭代次数，只对应ITERATION类型
+     * @return TaskInfoLoopReq
      */
     public TaskInfoLoopReq loopTimes(Integer loopTimes) {
         this.loopTimes = loopTimes;
@@ -193,7 +196,8 @@ public class TaskInfoLoopReq  implements java.io.Serializable {
     /**
      * set 每次循环批次
      *
-     * @param loopBatchSize
+     * @param loopBatchSize 每次循环批次
+     * @return TaskInfoLoopReq
      */
     public TaskInfoLoopReq loopBatchSize(Integer loopBatchSize) {
         this.loopBatchSize = loopBatchSize;
@@ -204,7 +208,8 @@ public class TaskInfoLoopReq  implements java.io.Serializable {
     /**
      * set 每批次执行的时间间隔，单位秒
      *
-     * @param loopBatchInterval
+     * @param loopBatchInterval 每批次执行的时间间隔，单位秒
+     * @return TaskInfoLoopReq
      */
     public TaskInfoLoopReq loopBatchInterval(Integer loopBatchInterval) {
         this.loopBatchInterval = loopBatchInterval;

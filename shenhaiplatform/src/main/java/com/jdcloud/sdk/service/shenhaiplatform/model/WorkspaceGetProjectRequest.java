@@ -50,6 +50,11 @@ public class WorkspaceGetProjectRequest extends JdcloudRequest implements java.i
     private String projectCode;
 
     /**
+     * resourceCode
+     */
+    private String resourceCode;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -123,6 +128,25 @@ public class WorkspaceGetProjectRequest extends JdcloudRequest implements java.i
 
 
     /**
+     * get resourceCode
+     *
+     * @return
+     */
+    public String getResourceCode() {
+        return resourceCode;
+    }
+
+    /**
+     * set resourceCode
+     *
+     * @param resourceCode
+     */
+    public void setResourceCode(String resourceCode) {
+        this.resourceCode = resourceCode;
+    }
+
+
+    /**
      * get 地域ID
      *
      * @return
@@ -164,7 +188,8 @@ public class WorkspaceGetProjectRequest extends JdcloudRequest implements java.i
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceGetProjectRequest
      */
     public WorkspaceGetProjectRequest id(Integer id) {
         this.id = id;
@@ -175,7 +200,8 @@ public class WorkspaceGetProjectRequest extends JdcloudRequest implements java.i
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return WorkspaceGetProjectRequest
      */
     public WorkspaceGetProjectRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -186,7 +212,8 @@ public class WorkspaceGetProjectRequest extends JdcloudRequest implements java.i
     /**
      * set projectCode
      *
-     * @param projectCode
+     * @param projectCode 
+     * @return WorkspaceGetProjectRequest
      */
     public WorkspaceGetProjectRequest projectCode(String projectCode) {
         this.projectCode = projectCode;
@@ -195,9 +222,22 @@ public class WorkspaceGetProjectRequest extends JdcloudRequest implements java.i
 
 
     /**
+     * set resourceCode
+     *
+     * @param resourceCode 
+     * @return WorkspaceGetProjectRequest
+     */
+    public WorkspaceGetProjectRequest resourceCode(String resourceCode) {
+        this.resourceCode = resourceCode;
+        return this;
+    }
+
+
+    /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceGetProjectRequest
      */
     public WorkspaceGetProjectRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -208,7 +248,8 @@ public class WorkspaceGetProjectRequest extends JdcloudRequest implements java.i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceGetProjectRequest
      */
     public WorkspaceGetProjectRequest appName(String appName) {
         this.appName = appName;

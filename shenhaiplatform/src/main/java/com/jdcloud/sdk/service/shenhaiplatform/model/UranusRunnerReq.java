@@ -111,6 +111,11 @@ public class UranusRunnerReq  implements java.io.Serializable {
      */
     
     private List<TaskInfoLoopReq> loopInfo;
+    /**
+     * 任务的资源控制
+     */
+    private JcwSQLRunParams jcwSQLRunParams;
+
 
 
     /**
@@ -341,11 +346,31 @@ public class UranusRunnerReq  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 任务的资源控制
+     *
+     * @return
+     */
+    public JcwSQLRunParams getJcwSQLRunParams() {
+        return jcwSQLRunParams;
+    }
+
+    /**
+     * set 任务的资源控制
+     *
+     * @param jcwSQLRunParams
+     */
+    public void setJcwSQLRunParams(JcwSQLRunParams jcwSQLRunParams) {
+        this.jcwSQLRunParams = jcwSQLRunParams;
+    }
+
+
 
     /**
      * set 流程code
      *
-     * @param flowCode
+     * @param flowCode 流程code
+     * @return UranusRunnerReq
      */
     public UranusRunnerReq flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -356,7 +381,8 @@ public class UranusRunnerReq  implements java.io.Serializable {
     /**
      * set 数据源code
      *
-     * @param dataSourceCode
+     * @param dataSourceCode 数据源code
+     * @return UranusRunnerReq
      */
     public UranusRunnerReq dataSourceCode(String dataSourceCode) {
         this.dataSourceCode = dataSourceCode;
@@ -367,7 +393,8 @@ public class UranusRunnerReq  implements java.io.Serializable {
     /**
      * set 文件code
      *
-     * @param fileCode
+     * @param fileCode 文件code
+     * @return UranusRunnerReq
      */
     public UranusRunnerReq fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -378,7 +405,8 @@ public class UranusRunnerReq  implements java.io.Serializable {
     /**
      * set 文件名称
      *
-     * @param fileName
+     * @param fileName 文件名称
+     * @return UranusRunnerReq
      */
     public UranusRunnerReq fileName(String fileName) {
         this.fileName = fileName;
@@ -389,7 +417,8 @@ public class UranusRunnerReq  implements java.io.Serializable {
     /**
      * set 文件类型 SQL,SHELL,PYTHON,PERL,R,SparkJar,StarRocks,MySQL
      *
-     * @param fileType
+     * @param fileType 文件类型 SQL,SHELL,PYTHON,PERL,R,SparkJar,StarRocks,MySQL
+     * @return UranusRunnerReq
      */
     public UranusRunnerReq fileType(String fileType) {
         this.fileType = fileType;
@@ -400,7 +429,8 @@ public class UranusRunnerReq  implements java.io.Serializable {
     /**
      * set 脚本内容
      *
-     * @param content
+     * @param content 脚本内容
+     * @return UranusRunnerReq
      */
     public UranusRunnerReq content(String content) {
         this.content = content;
@@ -411,7 +441,8 @@ public class UranusRunnerReq  implements java.io.Serializable {
     /**
      * set sql执行引擎 apReduce,Spark,Tez,presto,Python2,Python3,auto,StarRocks,MySQL
      *
-     * @param execEngine
+     * @param execEngine sql执行引擎 apReduce,Spark,Tez,presto,Python2,Python3,auto,StarRocks,MySQL
+     * @return UranusRunnerReq
      */
     public UranusRunnerReq execEngine(String execEngine) {
         this.execEngine = execEngine;
@@ -422,7 +453,8 @@ public class UranusRunnerReq  implements java.io.Serializable {
     /**
     * set 脚本参数配置
     *
-    * @param args
+    * @param args 脚本参数配置
+    * @return UranusRunnerReq
     */
     public UranusRunnerReq args(List<UranusTaskParamReq> args) {
         this.args = args;
@@ -433,7 +465,8 @@ public class UranusRunnerReq  implements java.io.Serializable {
     /**
      * set sql脚本是否全部执行 是false,否true
      *
-     * @param segment
+     * @param segment sql脚本是否全部执行 是false,否true
+     * @return UranusRunnerReq
      */
     public UranusRunnerReq segment(Boolean segment) {
         this.segment = segment;
@@ -444,7 +477,8 @@ public class UranusRunnerReq  implements java.io.Serializable {
     /**
      * set 队列名称
      *
-     * @param resourceName
+     * @param resourceName 队列名称
+     * @return UranusRunnerReq
      */
     public UranusRunnerReq resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -455,7 +489,8 @@ public class UranusRunnerReq  implements java.io.Serializable {
     /**
      * set 队列code
      *
-     * @param resourceCode
+     * @param resourceCode 队列code
+     * @return UranusRunnerReq
      */
     public UranusRunnerReq resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -466,10 +501,23 @@ public class UranusRunnerReq  implements java.io.Serializable {
     /**
     * set 循环节点信息
     *
-    * @param loopInfo
+    * @param loopInfo 循环节点信息
+    * @return UranusRunnerReq
     */
     public UranusRunnerReq loopInfo(List<TaskInfoLoopReq> loopInfo) {
         this.loopInfo = loopInfo;
+        return this;
+    }
+
+
+    /**
+     * set 任务的资源控制
+     *
+     * @param jcwSQLRunParams 任务的资源控制
+     * @return UranusRunnerReq
+     */
+    public UranusRunnerReq jcwSQLRunParams(JcwSQLRunParams jcwSQLRunParams) {
+        this.jcwSQLRunParams = jcwSQLRunParams;
         return this;
     }
 

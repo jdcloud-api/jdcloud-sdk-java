@@ -470,7 +470,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 作业编码
      *
-     * @param jobName
+     * @param jobName 作业编码
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo jobName(String jobName) {
         this.jobName = jobName;
@@ -481,7 +482,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 作业描述
      *
-     * @param jobDesc
+     * @param jobDesc 作业描述
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -492,7 +494,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo manager(String manager) {
         this.manager = manager;
@@ -503,7 +506,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 协作人
      *
-     * @param shareUser
+     * @param shareUser 协作人
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo shareUser(String shareUser) {
         this.shareUser = shareUser;
@@ -514,7 +518,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 最后运行数据日期
      *
-     * @param lastTxDate
+     * @param lastTxDate 最后运行数据日期
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo lastTxDate(String lastTxDate) {
         this.lastTxDate = lastTxDate;
@@ -525,7 +530,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 最后运行状态
      *
-     * @param lastStatus
+     * @param lastStatus 最后运行状态
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo lastStatus(String lastStatus) {
         this.lastStatus = lastStatus;
@@ -536,7 +542,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 当前状态信息
      *
-     * @param currentStatusMsg
+     * @param currentStatusMsg 当前状态信息
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo currentStatusMsg(String currentStatusMsg) {
         this.currentStatusMsg = currentStatusMsg;
@@ -547,7 +554,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 小时分钟-结束时间
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 小时分钟-结束时间
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -558,7 +566,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 小时分钟-间隔
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 小时分钟-间隔
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo sequenceInterval(String sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -569,7 +578,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 小时分钟-开始时间
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 小时分钟-开始时间
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -580,7 +590,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 触发类型
      *
-     * @param triggerType
+     * @param triggerType 触发类型
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -591,7 +602,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 作业ID
      *
-     * @param jobId
+     * @param jobId 作业ID
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo jobId(Integer jobId) {
         this.jobId = jobId;
@@ -602,7 +614,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo processType(String processType) {
         this.processType = processType;
@@ -613,7 +626,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 执行类型
      *
-     * @param exeType
+     * @param exeType 执行类型
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo exeType(String exeType) {
         this.exeType = exeType;
@@ -624,7 +638,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 关联类型
      *
-     * @param relationType
+     * @param relationType 关联类型
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo relationType(String relationType) {
         this.relationType = relationType;
@@ -635,7 +650,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 调度负责人标识
      *
-     * @param schedulerManagerFlag
+     * @param schedulerManagerFlag 调度负责人标识
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo schedulerManagerFlag(String schedulerManagerFlag) {
         this.schedulerManagerFlag = schedulerManagerFlag;
@@ -646,7 +662,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 负责人标识标志
      *
-     * @param managerFlag
+     * @param managerFlag 负责人标识标志
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo managerFlag(Boolean managerFlag) {
         this.managerFlag = managerFlag;
@@ -657,7 +674,8 @@ public class JobCommonInfoVo  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 作业名称
+     * @return JobCommonInfoVo
      */
     public JobCommonInfoVo cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;

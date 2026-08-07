@@ -62,7 +62,8 @@ public class RerunTaskReSubmitParam  implements java.io.Serializable {
     /**
      * set 任务id
      *
-     * @param taskId
+     * @param taskId 任务id
+     * @return RerunTaskReSubmitParam
      */
     public RerunTaskReSubmitParam taskId(Integer taskId) {
         this.taskId = taskId;

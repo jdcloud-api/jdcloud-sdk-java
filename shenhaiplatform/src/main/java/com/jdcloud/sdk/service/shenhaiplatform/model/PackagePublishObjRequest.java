@@ -142,7 +142,8 @@ public class PackagePublishObjRequest extends JdcloudRequest implements java.io.
     /**
     * set ID列表
     *
-    * @param objIds
+    * @param objIds ID列表
+    * @return PackagePublishObjRequest
     */
     public PackagePublishObjRequest objIds(List<Long> objIds) {
         this.objIds = objIds;
@@ -153,7 +154,8 @@ public class PackagePublishObjRequest extends JdcloudRequest implements java.io.
     /**
      * set 当前工作空间编码
      *
-     * @param workspaceCode
+     * @param workspaceCode 当前工作空间编码
+     * @return PackagePublishObjRequest
      */
     public PackagePublishObjRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -164,7 +166,8 @@ public class PackagePublishObjRequest extends JdcloudRequest implements java.io.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return PackagePublishObjRequest
      */
     public PackagePublishObjRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -175,7 +178,8 @@ public class PackagePublishObjRequest extends JdcloudRequest implements java.io.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return PackagePublishObjRequest
      */
     public PackagePublishObjRequest appName(String appName) {
         this.appName = appName;

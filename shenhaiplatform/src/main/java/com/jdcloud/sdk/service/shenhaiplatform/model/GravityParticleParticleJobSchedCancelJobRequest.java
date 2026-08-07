@@ -142,7 +142,8 @@ public class GravityParticleParticleJobSchedCancelJobRequest extends JdcloudRequ
     /**
     * set 作业名称列表
     *
-    * @param jobNames
+    * @param jobNames 作业名称列表
+    * @return GravityParticleParticleJobSchedCancelJobRequest
     */
     public GravityParticleParticleJobSchedCancelJobRequest jobNames(List<String> jobNames) {
         this.jobNames = jobNames;
@@ -153,7 +154,8 @@ public class GravityParticleParticleJobSchedCancelJobRequest extends JdcloudRequ
     /**
      * set 操作备注
      *
-     * @param remark
+     * @param remark 操作备注
+     * @return GravityParticleParticleJobSchedCancelJobRequest
      */
     public GravityParticleParticleJobSchedCancelJobRequest remark(String remark) {
         this.remark = remark;
@@ -164,7 +166,8 @@ public class GravityParticleParticleJobSchedCancelJobRequest extends JdcloudRequ
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleParticleJobSchedCancelJobRequest
      */
     public GravityParticleParticleJobSchedCancelJobRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -175,7 +178,8 @@ public class GravityParticleParticleJobSchedCancelJobRequest extends JdcloudRequ
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleParticleJobSchedCancelJobRequest
      */
     public GravityParticleParticleJobSchedCancelJobRequest appName(String appName) {
         this.appName = appName;

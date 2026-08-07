@@ -374,7 +374,8 @@ public class RerunTaskVo  implements java.io.Serializable {
     /**
      * set 任务id
      *
-     * @param id
+     * @param id 任务id
+     * @return RerunTaskVo
      */
     public RerunTaskVo id(Integer id) {
         this.id = id;
@@ -385,7 +386,8 @@ public class RerunTaskVo  implements java.io.Serializable {
     /**
      * set 作业编码
      *
-     * @param jobName
+     * @param jobName 作业编码
+     * @return RerunTaskVo
      */
     public RerunTaskVo jobName(String jobName) {
         this.jobName = jobName;
@@ -396,7 +398,8 @@ public class RerunTaskVo  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 作业名称
+     * @return RerunTaskVo
      */
     public RerunTaskVo cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -407,7 +410,8 @@ public class RerunTaskVo  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return RerunTaskVo
      */
     public RerunTaskVo txDate(String txDate) {
         this.txDate = txDate;
@@ -418,7 +422,8 @@ public class RerunTaskVo  implements java.io.Serializable {
     /**
      * set 作业类型
      *
-     * @param jobType
+     * @param jobType 作业类型
+     * @return RerunTaskVo
      */
     public RerunTaskVo jobType(String jobType) {
         this.jobType = jobType;
@@ -429,7 +434,8 @@ public class RerunTaskVo  implements java.io.Serializable {
     /**
      * set 作业类型-展示
      *
-     * @param jobTypeLabel
+     * @param jobTypeLabel 作业类型-展示
+     * @return RerunTaskVo
      */
     public RerunTaskVo jobTypeLabel(String jobTypeLabel) {
         this.jobTypeLabel = jobTypeLabel;
@@ -440,7 +446,8 @@ public class RerunTaskVo  implements java.io.Serializable {
     /**
      * set 提交状态
      *
-     * @param status
+     * @param status 提交状态
+     * @return RerunTaskVo
      */
     public RerunTaskVo status(String status) {
         this.status = status;
@@ -451,7 +458,8 @@ public class RerunTaskVo  implements java.io.Serializable {
     /**
      * set 提交状态-展示
      *
-     * @param statusLabel
+     * @param statusLabel 提交状态-展示
+     * @return RerunTaskVo
      */
     public RerunTaskVo statusLabel(String statusLabel) {
         this.statusLabel = statusLabel;
@@ -462,7 +470,8 @@ public class RerunTaskVo  implements java.io.Serializable {
     /**
      * set 原因
      *
-     * @param detail
+     * @param detail 原因
+     * @return RerunTaskVo
      */
     public RerunTaskVo detail(String detail) {
         this.detail = detail;
@@ -473,7 +482,8 @@ public class RerunTaskVo  implements java.io.Serializable {
     /**
      * set 提交时间
      *
-     * @param submitTime
+     * @param submitTime 提交时间
+     * @return RerunTaskVo
      */
     public RerunTaskVo submitTime(Long submitTime) {
         this.submitTime = submitTime;
@@ -484,7 +494,8 @@ public class RerunTaskVo  implements java.io.Serializable {
     /**
      * set 运行频率
      *
-     * @param cycle
+     * @param cycle 运行频率
+     * @return RerunTaskVo
      */
     public RerunTaskVo cycle(String cycle) {
         this.cycle = cycle;
@@ -495,7 +506,8 @@ public class RerunTaskVo  implements java.io.Serializable {
     /**
      * set 运行频率-展示
      *
-     * @param cycleLabel
+     * @param cycleLabel 运行频率-展示
+     * @return RerunTaskVo
      */
     public RerunTaskVo cycleLabel(String cycleLabel) {
         this.cycleLabel = cycleLabel;
@@ -506,7 +518,8 @@ public class RerunTaskVo  implements java.io.Serializable {
     /**
      * set 工作空间编码
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间编码
+     * @return RerunTaskVo
      */
     public RerunTaskVo workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -517,7 +530,8 @@ public class RerunTaskVo  implements java.io.Serializable {
     /**
      * set 租户编码
      *
-     * @param companyCode
+     * @param companyCode 租户编码
+     * @return RerunTaskVo
      */
     public RerunTaskVo companyCode(String companyCode) {
         this.companyCode = companyCode;

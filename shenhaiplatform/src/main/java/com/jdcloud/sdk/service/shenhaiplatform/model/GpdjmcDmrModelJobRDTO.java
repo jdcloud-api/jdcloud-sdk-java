@@ -278,7 +278,8 @@ public class GpdjmcDmrModelJobRDTO  implements java.io.Serializable {
     /**
      * set 主键Id,为空时保存，不为空时更新
      *
-     * @param id
+     * @param id 主键Id,为空时保存，不为空时更新
+     * @return GpdjmcDmrModelJobRDTO
      */
     public GpdjmcDmrModelJobRDTO id(Integer id) {
         this.id = id;
@@ -289,7 +290,8 @@ public class GpdjmcDmrModelJobRDTO  implements java.io.Serializable {
     /**
      * set 作业Id
      *
-     * @param jobId
+     * @param jobId 作业Id
+     * @return GpdjmcDmrModelJobRDTO
      */
     public GpdjmcDmrModelJobRDTO jobId(Integer jobId) {
         this.jobId = jobId;
@@ -300,7 +302,8 @@ public class GpdjmcDmrModelJobRDTO  implements java.io.Serializable {
     /**
      * set 模型Id
      *
-     * @param modelTableId
+     * @param modelTableId 模型Id
+     * @return GpdjmcDmrModelJobRDTO
      */
     public GpdjmcDmrModelJobRDTO modelTableId(Integer modelTableId) {
         this.modelTableId = modelTableId;
@@ -311,7 +314,8 @@ public class GpdjmcDmrModelJobRDTO  implements java.io.Serializable {
     /**
      * set 删除标识
      *
-     * @param deleteFlag
+     * @param deleteFlag 删除标识
+     * @return GpdjmcDmrModelJobRDTO
      */
     public GpdjmcDmrModelJobRDTO deleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;
@@ -322,7 +326,8 @@ public class GpdjmcDmrModelJobRDTO  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return GpdjmcDmrModelJobRDTO
      */
     public GpdjmcDmrModelJobRDTO updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -333,7 +338,8 @@ public class GpdjmcDmrModelJobRDTO  implements java.io.Serializable {
     /**
      * set 表名
      *
-     * @param tableName
+     * @param tableName 表名
+     * @return GpdjmcDmrModelJobRDTO
      */
     public GpdjmcDmrModelJobRDTO tableName(String tableName) {
         this.tableName = tableName;
@@ -344,7 +350,8 @@ public class GpdjmcDmrModelJobRDTO  implements java.io.Serializable {
     /**
      * set 表中文名称
      *
-     * @param tableNameCh
+     * @param tableNameCh 表中文名称
+     * @return GpdjmcDmrModelJobRDTO
      */
     public GpdjmcDmrModelJobRDTO tableNameCh(String tableNameCh) {
         this.tableNameCh = tableNameCh;
@@ -355,7 +362,8 @@ public class GpdjmcDmrModelJobRDTO  implements java.io.Serializable {
     /**
      * set 数据库名称
      *
-     * @param databaseName
+     * @param databaseName 数据库名称
+     * @return GpdjmcDmrModelJobRDTO
      */
     public GpdjmcDmrModelJobRDTO databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -366,7 +374,8 @@ public class GpdjmcDmrModelJobRDTO  implements java.io.Serializable {
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return GpdjmcDmrModelJobRDTO
      */
     public GpdjmcDmrModelJobRDTO workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -377,7 +386,8 @@ public class GpdjmcDmrModelJobRDTO  implements java.io.Serializable {
     /**
      * set 数据来源渠道
      *
-     * @param channel
+     * @param channel 数据来源渠道
+     * @return GpdjmcDmrModelJobRDTO
      */
     public GpdjmcDmrModelJobRDTO channel(String channel) {
         this.channel = channel;

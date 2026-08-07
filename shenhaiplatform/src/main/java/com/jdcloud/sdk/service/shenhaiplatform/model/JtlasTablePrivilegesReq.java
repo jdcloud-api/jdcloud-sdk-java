@@ -117,7 +117,8 @@ public class JtlasTablePrivilegesReq  implements java.io.Serializable {
     /**
      * set 数据库（工作空间编码）
      *
-     * @param database
+     * @param database 数据库（工作空间编码）
+     * @return JtlasTablePrivilegesReq
      */
     public JtlasTablePrivilegesReq database(String database) {
         this.database = database;
@@ -128,7 +129,8 @@ public class JtlasTablePrivilegesReq  implements java.io.Serializable {
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return JtlasTablePrivilegesReq
      */
     public JtlasTablePrivilegesReq tableName(String tableName) {
         this.tableName = tableName;
@@ -139,7 +141,8 @@ public class JtlasTablePrivilegesReq  implements java.io.Serializable {
     /**
     * set 权限类型
     *
-    * @param privilegeTypes
+    * @param privilegeTypes 权限类型
+    * @return JtlasTablePrivilegesReq
     */
     public JtlasTablePrivilegesReq privilegeTypes(List<String> privilegeTypes) {
         this.privilegeTypes = privilegeTypes;

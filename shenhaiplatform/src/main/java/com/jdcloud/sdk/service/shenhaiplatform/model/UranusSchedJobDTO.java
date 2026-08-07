@@ -544,7 +544,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set jobCode
      *
-     * @param jobCode
+     * @param jobCode 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO jobCode(String jobCode) {
         this.jobCode = jobCode;
@@ -555,7 +556,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set taskInfo
      *
-     * @param taskInfo
+     * @param taskInfo 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO taskInfo(UranusTaskInfoDTO taskInfo) {
         this.taskInfo = taskInfo;
@@ -566,7 +568,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set taskCode
      *
-     * @param taskCode
+     * @param taskCode 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO taskCode(String taskCode) {
         this.taskCode = taskCode;
@@ -577,7 +580,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set fileCode
      *
-     * @param fileCode
+     * @param fileCode 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -588,7 +592,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set content
      *
-     * @param content
+     * @param content 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO content(String content) {
         this.content = content;
@@ -599,7 +604,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set manager
      *
-     * @param manager
+     * @param manager 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO manager(String manager) {
         this.manager = manager;
@@ -610,7 +616,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set validResult
      *
-     * @param validResult
+     * @param validResult 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO validResult(Integer validResult) {
         this.validResult = validResult;
@@ -621,7 +628,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set validResultDesc
      *
-     * @param validResultDesc
+     * @param validResultDesc 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO validResultDesc(String validResultDesc) {
         this.validResultDesc = validResultDesc;
@@ -632,7 +640,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set publicChangeType
      *
-     * @param publicChangeType
+     * @param publicChangeType 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO publicChangeType(Integer publicChangeType) {
         this.publicChangeType = publicChangeType;
@@ -643,7 +652,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set publicChangeTypeDesc
      *
-     * @param publicChangeTypeDesc
+     * @param publicChangeTypeDesc 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO publicChangeTypeDesc(String publicChangeTypeDesc) {
         this.publicChangeTypeDesc = publicChangeTypeDesc;
@@ -654,7 +664,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set reason
      *
-     * @param reason
+     * @param reason 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO reason(String reason) {
         this.reason = reason;
@@ -665,7 +676,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set fileType
      *
-     * @param fileType
+     * @param fileType 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO fileType(String fileType) {
         this.fileType = fileType;
@@ -676,7 +688,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set jobName
      *
-     * @param jobName
+     * @param jobName 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -687,7 +700,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set triggerType
      *
-     * @param triggerType
+     * @param triggerType 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -698,7 +712,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set cycle
      *
-     * @param cycle
+     * @param cycle 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO cycle(String cycle) {
         this.cycle = cycle;
@@ -709,7 +724,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
     * set taskParamList
     *
-    * @param taskParamList
+    * @param taskParamList 
+    * @return UranusSchedJobDTO
     */
     public UranusSchedJobDTO taskParamList(List<UranusTaskParamDTO> taskParamList) {
         this.taskParamList = taskParamList;
@@ -720,7 +736,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set createdTime
      *
-     * @param createdTime
+     * @param createdTime 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO createdTime(Long createdTime) {
         this.createdTime = createdTime;
@@ -731,7 +748,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set flowCode
      *
-     * @param flowCode
+     * @param flowCode 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -742,7 +760,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set lockStatus
      *
-     * @param lockStatus
+     * @param lockStatus 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO lockStatus(Integer lockStatus) {
         this.lockStatus = lockStatus;
@@ -753,7 +772,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set lockUser
      *
-     * @param lockUser
+     * @param lockUser 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO lockUser(String lockUser) {
         this.lockUser = lockUser;
@@ -764,7 +784,8 @@ public class UranusSchedJobDTO  implements java.io.Serializable {
     /**
      * set taskRelease
      *
-     * @param taskRelease
+     * @param taskRelease 
+     * @return UranusSchedJobDTO
      */
     public UranusSchedJobDTO taskRelease(Integer taskRelease) {
         this.taskRelease = taskRelease;

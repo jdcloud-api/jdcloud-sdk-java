@@ -164,7 +164,8 @@ public class UranusFunctionCheckRequest extends JdcloudRequest implements java.i
     /**
      * set 检查的类型（CATALOG：函数分类目录、FUNCTION：函数）
      *
-     * @param checkType
+     * @param checkType 检查的类型（CATALOG：函数分类目录、FUNCTION：函数）
+     * @return UranusFunctionCheckRequest
      */
     public UranusFunctionCheckRequest checkType(String checkType) {
         this.checkType = checkType;
@@ -175,7 +176,8 @@ public class UranusFunctionCheckRequest extends JdcloudRequest implements java.i
     /**
      * set 检查的名称
      *
-     * @param checkName
+     * @param checkName 检查的名称
+     * @return UranusFunctionCheckRequest
      */
     public UranusFunctionCheckRequest checkName(String checkName) {
         this.checkName = checkName;
@@ -186,7 +188,8 @@ public class UranusFunctionCheckRequest extends JdcloudRequest implements java.i
     /**
      * set 分类目录的父code（函数名称是命名空间里唯一的；函数分类目录在不同目录下可以相同）
      *
-     * @param parentCatalogId
+     * @param parentCatalogId 分类目录的父code（函数名称是命名空间里唯一的；函数分类目录在不同目录下可以相同）
+     * @return UranusFunctionCheckRequest
      */
     public UranusFunctionCheckRequest parentCatalogId(Integer parentCatalogId) {
         this.parentCatalogId = parentCatalogId;
@@ -197,7 +200,8 @@ public class UranusFunctionCheckRequest extends JdcloudRequest implements java.i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusFunctionCheckRequest
      */
     public UranusFunctionCheckRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -208,7 +212,8 @@ public class UranusFunctionCheckRequest extends JdcloudRequest implements java.i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusFunctionCheckRequest
      */
     public UranusFunctionCheckRequest appName(String appName) {
         this.appName = appName;

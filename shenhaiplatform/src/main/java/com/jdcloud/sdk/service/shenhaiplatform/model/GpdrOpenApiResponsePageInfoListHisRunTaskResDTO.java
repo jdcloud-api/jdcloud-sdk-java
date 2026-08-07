@@ -158,7 +158,8 @@ public class GpdrOpenApiResponsePageInfoListHisRunTaskResDTO  implements java.io
     /**
      * set 成功标识，1成功，0失败
      *
-     * @param success
+     * @param success 成功标识，1成功，0失败
+     * @return GpdrOpenApiResponsePageInfoListHisRunTaskResDTO
      */
     public GpdrOpenApiResponsePageInfoListHisRunTaskResDTO success(Integer success) {
         this.success = success;
@@ -169,7 +170,8 @@ public class GpdrOpenApiResponsePageInfoListHisRunTaskResDTO  implements java.io
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return GpdrOpenApiResponsePageInfoListHisRunTaskResDTO
      */
     public GpdrOpenApiResponsePageInfoListHisRunTaskResDTO result(GpdrPageInfoListHisRunTaskResDTO result) {
         this.result = result;
@@ -180,7 +182,8 @@ public class GpdrOpenApiResponsePageInfoListHisRunTaskResDTO  implements java.io
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return GpdrOpenApiResponsePageInfoListHisRunTaskResDTO
      */
     public GpdrOpenApiResponsePageInfoListHisRunTaskResDTO code(String code) {
         this.code = code;
@@ -191,7 +194,8 @@ public class GpdrOpenApiResponsePageInfoListHisRunTaskResDTO  implements java.io
     /**
      * set 返回状态信息
      *
-     * @param msg
+     * @param msg 返回状态信息
+     * @return GpdrOpenApiResponsePageInfoListHisRunTaskResDTO
      */
     public GpdrOpenApiResponsePageInfoListHisRunTaskResDTO msg(String msg) {
         this.msg = msg;
@@ -202,7 +206,8 @@ public class GpdrOpenApiResponsePageInfoListHisRunTaskResDTO  implements java.io
     /**
      * set 返回请求流水号
      *
-     * @param _REQ_SEQ_NO_
+     * @param _REQ_SEQ_NO_ 返回请求流水号
+     * @return GpdrOpenApiResponsePageInfoListHisRunTaskResDTO
      */
     public GpdrOpenApiResponsePageInfoListHisRunTaskResDTO _REQ_SEQ_NO_(String _REQ_SEQ_NO_) {
         this._REQ_SEQ_NO_ = _REQ_SEQ_NO_;

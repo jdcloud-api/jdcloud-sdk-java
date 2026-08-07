@@ -25,6 +25,7 @@
 package com.jdcloud.sdk.service.shenhaiplatform.model;
 
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskParamReq;
+import com.jdcloud.sdk.service.shenhaiplatform.model.JcwSQLRunParams;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -64,6 +65,11 @@ public class UranusExtraRunnerStartRequest extends JdcloudRequest implements jav
      * 资源组code
      */
     private String resourceCode;
+
+    /**
+     * 任务资源配置
+     */
+    private JcwSQLRunParams jcwSQLRunParams;
 
     /**
      * 地域ID
@@ -196,6 +202,25 @@ public class UranusExtraRunnerStartRequest extends JdcloudRequest implements jav
 
 
     /**
+     * get 任务资源配置
+     *
+     * @return
+     */
+    public JcwSQLRunParams getJcwSQLRunParams() {
+        return jcwSQLRunParams;
+    }
+
+    /**
+     * set 任务资源配置
+     *
+     * @param jcwSQLRunParams
+     */
+    public void setJcwSQLRunParams(JcwSQLRunParams jcwSQLRunParams) {
+        this.jcwSQLRunParams = jcwSQLRunParams;
+    }
+
+
+    /**
      * get 地域ID
      *
      * @return
@@ -237,7 +262,8 @@ public class UranusExtraRunnerStartRequest extends JdcloudRequest implements jav
     /**
      * set 流程code
      *
-     * @param flowCode
+     * @param flowCode 流程code
+     * @return UranusExtraRunnerStartRequest
      */
     public UranusExtraRunnerStartRequest flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -248,7 +274,8 @@ public class UranusExtraRunnerStartRequest extends JdcloudRequest implements jav
     /**
      * set 脚本内容
      *
-     * @param content
+     * @param content 脚本内容
+     * @return UranusExtraRunnerStartRequest
      */
     public UranusExtraRunnerStartRequest content(String content) {
         this.content = content;
@@ -259,7 +286,8 @@ public class UranusExtraRunnerStartRequest extends JdcloudRequest implements jav
     /**
      * set 执行引擎MapReduce,Spark,Tez,presto,Python2,Python3,auto,默认spark
      *
-     * @param execEngine
+     * @param execEngine 执行引擎MapReduce,Spark,Tez,presto,Python2,Python3,auto,默认spark
+     * @return UranusExtraRunnerStartRequest
      */
     public UranusExtraRunnerStartRequest execEngine(String execEngine) {
         this.execEngine = execEngine;
@@ -270,7 +298,8 @@ public class UranusExtraRunnerStartRequest extends JdcloudRequest implements jav
     /**
      * set 脚本内容的变量参数配置
      *
-     * @param args
+     * @param args 脚本内容的变量参数配置
+     * @return UranusExtraRunnerStartRequest
      */
     public UranusExtraRunnerStartRequest args(UranusTaskParamReq args) {
         this.args = args;
@@ -281,7 +310,8 @@ public class UranusExtraRunnerStartRequest extends JdcloudRequest implements jav
     /**
      * set 资源组名称
      *
-     * @param resourceName
+     * @param resourceName 资源组名称
+     * @return UranusExtraRunnerStartRequest
      */
     public UranusExtraRunnerStartRequest resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -292,7 +322,8 @@ public class UranusExtraRunnerStartRequest extends JdcloudRequest implements jav
     /**
      * set 资源组code
      *
-     * @param resourceCode
+     * @param resourceCode 资源组code
+     * @return UranusExtraRunnerStartRequest
      */
     public UranusExtraRunnerStartRequest resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -301,9 +332,22 @@ public class UranusExtraRunnerStartRequest extends JdcloudRequest implements jav
 
 
     /**
+     * set 任务资源配置
+     *
+     * @param jcwSQLRunParams 任务资源配置
+     * @return UranusExtraRunnerStartRequest
+     */
+    public UranusExtraRunnerStartRequest jcwSQLRunParams(JcwSQLRunParams jcwSQLRunParams) {
+        this.jcwSQLRunParams = jcwSQLRunParams;
+        return this;
+    }
+
+
+    /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusExtraRunnerStartRequest
      */
     public UranusExtraRunnerStartRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -314,7 +358,8 @@ public class UranusExtraRunnerStartRequest extends JdcloudRequest implements jav
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusExtraRunnerStartRequest
      */
     public UranusExtraRunnerStartRequest appName(String appName) {
         this.appName = appName;

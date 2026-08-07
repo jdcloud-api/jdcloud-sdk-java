@@ -142,7 +142,8 @@ public class JtlasSubscribeTableRequest extends JdcloudRequest implements java.i
     /**
      * set 表模型ID
      *
-     * @param id
+     * @param id 表模型ID
+     * @return JtlasSubscribeTableRequest
      */
     public JtlasSubscribeTableRequest id(String id) {
         this.id = id;
@@ -153,7 +154,8 @@ public class JtlasSubscribeTableRequest extends JdcloudRequest implements java.i
     /**
      * set 订阅类型
      *
-     * @param subscribeType
+     * @param subscribeType 订阅类型
+     * @return JtlasSubscribeTableRequest
      */
     public JtlasSubscribeTableRequest subscribeType(String subscribeType) {
         this.subscribeType = subscribeType;
@@ -164,7 +166,8 @@ public class JtlasSubscribeTableRequest extends JdcloudRequest implements java.i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasSubscribeTableRequest
      */
     public JtlasSubscribeTableRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -175,7 +178,8 @@ public class JtlasSubscribeTableRequest extends JdcloudRequest implements java.i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasSubscribeTableRequest
      */
     public JtlasSubscribeTableRequest appName(String appName) {
         this.appName = appName;

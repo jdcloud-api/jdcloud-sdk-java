@@ -256,7 +256,8 @@ public class UranusFileManagerRes  implements java.io.Serializable {
     /**
      * set 文件code
      *
-     * @param code
+     * @param code 文件code
+     * @return UranusFileManagerRes
      */
     public UranusFileManagerRes code(String code) {
         this.code = code;
@@ -267,7 +268,8 @@ public class UranusFileManagerRes  implements java.io.Serializable {
     /**
      * set 工作流code
      *
-     * @param flowCode
+     * @param flowCode 工作流code
+     * @return UranusFileManagerRes
      */
     public UranusFileManagerRes flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -278,7 +280,8 @@ public class UranusFileManagerRes  implements java.io.Serializable {
     /**
      * set 相对路径
      *
-     * @param relativePath
+     * @param relativePath 相对路径
+     * @return UranusFileManagerRes
      */
     public UranusFileManagerRes relativePath(String relativePath) {
         this.relativePath = relativePath;
@@ -289,7 +292,8 @@ public class UranusFileManagerRes  implements java.io.Serializable {
     /**
      * set 实际路径
      *
-     * @param realPath
+     * @param realPath 实际路径
+     * @return UranusFileManagerRes
      */
     public UranusFileManagerRes realPath(String realPath) {
         this.realPath = realPath;
@@ -300,7 +304,8 @@ public class UranusFileManagerRes  implements java.io.Serializable {
     /**
      * set 名称
      *
-     * @param name
+     * @param name 名称
+     * @return UranusFileManagerRes
      */
     public UranusFileManagerRes name(String name) {
         this.name = name;
@@ -311,7 +316,8 @@ public class UranusFileManagerRes  implements java.io.Serializable {
     /**
      * set 是否是文件
      *
-     * @param dir
+     * @param dir 是否是文件
+     * @return UranusFileManagerRes
      */
     public UranusFileManagerRes dir(Boolean dir) {
         this.dir = dir;
@@ -322,7 +328,8 @@ public class UranusFileManagerRes  implements java.io.Serializable {
     /**
      * set 节点标识
      *
-     * @param nodeIcon
+     * @param nodeIcon 节点标识
+     * @return UranusFileManagerRes
      */
     public UranusFileManagerRes nodeIcon(String nodeIcon) {
         this.nodeIcon = nodeIcon;
@@ -333,7 +340,8 @@ public class UranusFileManagerRes  implements java.io.Serializable {
     /**
      * set 父目录code
      *
-     * @param parentCode
+     * @param parentCode 父目录code
+     * @return UranusFileManagerRes
      */
     public UranusFileManagerRes parentCode(String parentCode) {
         this.parentCode = parentCode;
@@ -344,7 +352,8 @@ public class UranusFileManagerRes  implements java.io.Serializable {
     /**
     * set 子文件信息
     *
-    * @param children
+    * @param children 子文件信息
+    * @return UranusFileManagerRes
     */
     public UranusFileManagerRes children(List<UranusFileManagerRes> children) {
         this.children = children;

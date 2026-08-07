@@ -114,7 +114,8 @@ public class CopilotChatHistoryResult extends JdcloudResult implements java.io.S
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return CopilotChatHistoryResult
      */
     public CopilotChatHistoryResult code(String code) {
         this.code = code;
@@ -125,7 +126,8 @@ public class CopilotChatHistoryResult extends JdcloudResult implements java.io.S
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return CopilotChatHistoryResult
      */
     public CopilotChatHistoryResult message(String message) {
         this.message = message;
@@ -136,7 +138,8 @@ public class CopilotChatHistoryResult extends JdcloudResult implements java.io.S
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return CopilotChatHistoryResult
     */
     public CopilotChatHistoryResult result(List<ChatVo> result) {
         this.result = result;

@@ -168,7 +168,8 @@ public class GravityParticleJobMonitorJobSpendTimeRankingRequest extends Jdcloud
     /**
      * set 是否统计本人作业
      *
-     * @param isMine
+     * @param isMine 是否统计本人作业
+     * @return GravityParticleJobMonitorJobSpendTimeRankingRequest
      */
     public GravityParticleJobMonitorJobSpendTimeRankingRequest isMine(Boolean isMine) {
         this.isMine = isMine;
@@ -179,7 +180,8 @@ public class GravityParticleJobMonitorJobSpendTimeRankingRequest extends Jdcloud
     /**
      * set 排名作业数量
      *
-     * @param num
+     * @param num 排名作业数量
+     * @return GravityParticleJobMonitorJobSpendTimeRankingRequest
      */
     public GravityParticleJobMonitorJobSpendTimeRankingRequest num(String num) {
         this.num = num;
@@ -190,7 +192,8 @@ public class GravityParticleJobMonitorJobSpendTimeRankingRequest extends Jdcloud
     /**
      * set 统计范围天数
      *
-     * @param slot
+     * @param slot 统计范围天数
+     * @return GravityParticleJobMonitorJobSpendTimeRankingRequest
      */
     public GravityParticleJobMonitorJobSpendTimeRankingRequest slot(Integer slot) {
         this.slot = slot;
@@ -201,7 +204,8 @@ public class GravityParticleJobMonitorJobSpendTimeRankingRequest extends Jdcloud
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobMonitorJobSpendTimeRankingRequest
      */
     public GravityParticleJobMonitorJobSpendTimeRankingRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -212,7 +216,8 @@ public class GravityParticleJobMonitorJobSpendTimeRankingRequest extends Jdcloud
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobMonitorJobSpendTimeRankingRequest
      */
     public GravityParticleJobMonitorJobSpendTimeRankingRequest appName(String appName) {
         this.appName = appName;

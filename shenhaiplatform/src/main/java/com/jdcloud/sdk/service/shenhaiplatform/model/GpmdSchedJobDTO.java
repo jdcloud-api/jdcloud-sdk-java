@@ -1262,7 +1262,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO jobName(String jobName) {
         this.jobName = jobName;
@@ -1273,7 +1274,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 老作业兼容字段
      *
-     * @param jobSystem
+     * @param jobSystem 老作业兼容字段
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO jobSystem(String jobSystem) {
         this.jobSystem = jobSystem;
@@ -1284,7 +1286,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 作业描述
      *
-     * @param jobDesc
+     * @param jobDesc 作业描述
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -1295,7 +1298,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 最后一次运行状态，Pending、Ready、Running、Done、Failed、Clean
      *
-     * @param lastStatus
+     * @param lastStatus 最后一次运行状态，Pending、Ready、Running、Done、Failed、Clean
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO lastStatus(String lastStatus) {
         this.lastStatus = lastStatus;
@@ -1306,7 +1310,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 最后依次执行日期
      *
-     * @param lastTxDate
+     * @param lastTxDate 最后依次执行日期
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO lastTxDate(String lastTxDate) {
         this.lastTxDate = lastTxDate;
@@ -1317,7 +1322,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 最后一次运行开始时间
      *
-     * @param lastStartTime
+     * @param lastStartTime 最后一次运行开始时间
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO lastStartTime(String lastStartTime) {
         this.lastStartTime = lastStartTime;
@@ -1328,7 +1334,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 最后一次运行结束时间
      *
-     * @param lastEndTime
+     * @param lastEndTime 最后一次运行结束时间
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO lastEndTime(String lastEndTime) {
         this.lastEndTime = lastEndTime;
@@ -1339,7 +1346,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 最后一次运行服务器
      *
-     * @param lastServer
+     * @param lastServer 最后一次运行服务器
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO lastServer(String lastServer) {
         this.lastServer = lastServer;
@@ -1350,7 +1358,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set Session ID
      *
-     * @param lastSessionid
+     * @param lastSessionid Session ID
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO lastSessionid(Integer lastSessionid) {
         this.lastSessionid = lastSessionid;
@@ -1361,7 +1370,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 最后返回编码
      *
-     * @param lastReturnCode
+     * @param lastReturnCode 最后返回编码
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO lastReturnCode(Integer lastReturnCode) {
         this.lastReturnCode = lastReturnCode;
@@ -1372,7 +1382,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 当前作业状态信息
      *
-     * @param currentStatusMsg
+     * @param currentStatusMsg 当前作业状态信息
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO currentStatusMsg(String currentStatusMsg) {
         this.currentStatusMsg = currentStatusMsg;
@@ -1383,7 +1394,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
      *
-     * @param triggerType
+     * @param triggerType 触发类型:dependency 依赖、time 时间、file 文件、manual 手工、once 一次性
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO triggerType(String triggerType) {
         this.triggerType = triggerType;
@@ -1394,7 +1406,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 运行周期 ,D 天、W 周、M 月、O 一次性运行、N 无周期
      *
-     * @param cycle
+     * @param cycle 运行周期 ,D 天、W 周、M 月、O 一次性运行、N 无周期
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO cycle(String cycle) {
         this.cycle = cycle;
@@ -1405,7 +1418,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 周期具体日期
      *
-     * @param sequence
+     * @param sequence 周期具体日期
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO sequence(String sequence) {
         this.sequence = sequence;
@@ -1416,7 +1430,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set T+N，偏移量
      *
-     * @param txDateOffset
+     * @param txDateOffset T+N，偏移量
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO txDateOffset(Integer txDateOffset) {
         this.txDateOffset = txDateOffset;
@@ -1427,7 +1442,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 作业优先级，数字越小优先级越高
      *
-     * @param priority
+     * @param priority 作业优先级，数字越小优先级越高
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO priority(Integer priority) {
         this.priority = priority;
@@ -1438,7 +1454,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 作业超时时间，单位分钟
      *
-     * @param timeout
+     * @param timeout 作业超时时间，单位分钟
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO timeout(Integer timeout) {
         this.timeout = timeout;
@@ -1449,7 +1466,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 窗口期开始时间
      *
-     * @param windowStartTime
+     * @param windowStartTime 窗口期开始时间
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO windowStartTime(String windowStartTime) {
         this.windowStartTime = windowStartTime;
@@ -1460,7 +1478,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 窗口期结束时间
      *
-     * @param windowEndTime
+     * @param windowEndTime 窗口期结束时间
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO windowEndTime(String windowEndTime) {
         this.windowEndTime = windowEndTime;
@@ -1471,7 +1490,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 失败后次日是否自动运行，1是、0否
      *
-     * @param morrowAutoExec
+     * @param morrowAutoExec 失败后次日是否自动运行，1是、0否
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO morrowAutoExec(String morrowAutoExec) {
         this.morrowAutoExec = morrowAutoExec;
@@ -1482,7 +1502,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 抽空之后的处理 0 无操作 1 作业失败 2发出警告
      *
-     * @param dataZeroKillEnable
+     * @param dataZeroKillEnable 抽空之后的处理 0 无操作 1 作业失败 2发出警告
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO dataZeroKillEnable(Integer dataZeroKillEnable) {
         this.dataZeroKillEnable = dataZeroKillEnable;
@@ -1493,7 +1514,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 重试次数
      *
-     * @param retryCount
+     * @param retryCount 重试次数
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO retryCount(Integer retryCount) {
         this.retryCount = retryCount;
@@ -1504,7 +1526,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 间隔/秒
      *
-     * @param retryInterval
+     * @param retryInterval 间隔/秒
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO retryInterval(Integer retryInterval) {
         this.retryInterval = retryInterval;
@@ -1515,7 +1538,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 当期已经跑成功过，是否可以再跑，1启用、0关闭
      *
-     * @param flagAgain
+     * @param flagAgain 当期已经跑成功过，是否可以再跑，1启用、0关闭
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO flagAgain(String flagAgain) {
         this.flagAgain = flagAgain;
@@ -1526,7 +1550,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 是否可以跨周期跑，1启用、0关闭
      *
-     * @param flagAcross
+     * @param flagAcross 是否可以跨周期跑，1启用、0关闭
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO flagAcross(String flagAcross) {
         this.flagAcross = flagAcross;
@@ -1537,7 +1562,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 是否可以自身并行，1启用、0关闭
      *
-     * @param flagParallel
+     * @param flagParallel 是否可以自身并行，1启用、0关闭
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO flagParallel(String flagParallel) {
         this.flagParallel = flagParallel;
@@ -1548,7 +1574,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 是否级联触发，父任务重跑后是否被强制触发重跑，1是、0否
      *
-     * @param flagCascadedTrigger
+     * @param flagCascadedTrigger 是否级联触发，父任务重跑后是否被强制触发重跑，1是、0否
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO flagCascadedTrigger(String flagCascadedTrigger) {
         this.flagCascadedTrigger = flagCascadedTrigger;
@@ -1559,7 +1586,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 命名空间名称
      *
-     * @param nsName
+     * @param nsName 命名空间名称
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO nsName(String nsName) {
         this.nsName = nsName;
@@ -1570,7 +1598,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 服务器资源消耗值
      *
-     * @param serverResourVal
+     * @param serverResourVal 服务器资源消耗值
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO serverResourVal(Integer serverResourVal) {
         this.serverResourVal = serverResourVal;
@@ -1581,7 +1610,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 指定运行服务器
      *
-     * @param runServers
+     * @param runServers 指定运行服务器
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO runServers(String runServers) {
         this.runServers = runServers;
@@ -1592,7 +1622,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 需要的运行环境
      *
-     * @param requiredRunEnv
+     * @param requiredRunEnv 需要的运行环境
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO requiredRunEnv(String requiredRunEnv) {
         this.requiredRunEnv = requiredRunEnv;
@@ -1603,7 +1634,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 运行脚本
      *
-     * @param runScript
+     * @param runScript 运行脚本
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO runScript(String runScript) {
         this.runScript = runScript;
@@ -1614,7 +1646,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 是否启用，0未上线、1已上线、2已下线
      *
-     * @param enable
+     * @param enable 是否启用，0未上线、1已上线、2已下线
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO enable(String enable) {
         this.enable = enable;
@@ -1625,7 +1658,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 负责人，不超过10个
      *
-     * @param manager
+     * @param manager 负责人，不超过10个
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO manager(String manager) {
         this.manager = manager;
@@ -1636,7 +1670,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 共享人，不超过10个
      *
-     * @param shareUser
+     * @param shareUser 共享人，不超过10个
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO shareUser(String shareUser) {
         this.shareUser = shareUser;
@@ -1647,7 +1682,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 失效时间
      *
-     * @param expireTime
+     * @param expireTime 失效时间
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO expireTime(String expireTime) {
         this.expireTime = expireTime;
@@ -1658,7 +1694,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set zip命令行
      *
-     * @param commands
+     * @param commands zip命令行
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO commands(String commands) {
         this.commands = commands;
@@ -1669,7 +1706,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 创建人
      *
-     * @param createUser
+     * @param createUser 创建人
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO createUser(String createUser) {
         this.createUser = createUser;
@@ -1680,7 +1718,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO createTime(String createTime) {
         this.createTime = createTime;
@@ -1691,7 +1730,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -1702,7 +1742,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 实时结点名称
      *
-     * @param nodeName
+     * @param nodeName 实时结点名称
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO nodeName(String nodeName) {
         this.nodeName = nodeName;
@@ -1713,7 +1754,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 实时主题
      *
-     * @param topic
+     * @param topic 实时主题
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO topic(String topic) {
         this.topic = topic;
@@ -1724,7 +1766,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 作业执行方式  0离线 1双写 2实时
      *
-     * @param jobRunWay
+     * @param jobRunWay 作业执行方式  0离线 1双写 2实时
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO jobRunWay(String jobRunWay) {
         this.jobRunWay = jobRunWay;
@@ -1735,7 +1778,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 作业运行参数
      *
-     * @param runParams
+     * @param runParams 作业运行参数
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO runParams(String runParams) {
         this.runParams = runParams;
@@ -1746,7 +1790,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 所属系统
      *
-     * @param belongSys
+     * @param belongSys 所属系统
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO belongSys(String belongSys) {
         this.belongSys = belongSys;
@@ -1757,7 +1802,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 周期开始时间
      *
-     * @param sequenceStartTime
+     * @param sequenceStartTime 周期开始时间
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO sequenceStartTime(String sequenceStartTime) {
         this.sequenceStartTime = sequenceStartTime;
@@ -1768,7 +1814,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 周期结束时间
      *
-     * @param sequenceEndTime
+     * @param sequenceEndTime 周期结束时间
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO sequenceEndTime(String sequenceEndTime) {
         this.sequenceEndTime = sequenceEndTime;
@@ -1779,7 +1826,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 周期间隔
      *
-     * @param sequenceInterval
+     * @param sequenceInterval 周期间隔
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO sequenceInterval(Integer sequenceInterval) {
         this.sequenceInterval = sequenceInterval;
@@ -1790,7 +1838,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 开始时间
      *
-     * @param startTime
+     * @param startTime 开始时间
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO startTime(String startTime) {
         this.startTime = startTime;
@@ -1801,7 +1850,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 计划执行时间
      *
-     * @param planExecTime
+     * @param planExecTime 计划执行时间
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO planExecTime(String planExecTime) {
         this.planExecTime = planExecTime;
@@ -1812,7 +1862,8 @@ public class GpmdSchedJobDTO  implements java.io.Serializable {
     /**
      * set 主从同步延迟处理方式。0:警告无处理，1:作业延迟启动
      *
-     * @param msDelayDealWay
+     * @param msDelayDealWay 主从同步延迟处理方式。0:警告无处理，1:作业延迟启动
+     * @return GpmdSchedJobDTO
      */
     public GpmdSchedJobDTO msDelayDealWay(String msDelayDealWay) {
         this.msDelayDealWay = msDelayDealWay;

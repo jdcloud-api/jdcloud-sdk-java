@@ -65,6 +65,11 @@ public class WorkspaceCreateReq  implements java.io.Serializable {
     private String workspaceModel;
 
     /**
+     * workspaceLabel
+     */
+    private String workspaceLabel;
+
+    /**
      * engineType
      */
     private String engineType;
@@ -211,6 +216,25 @@ public class WorkspaceCreateReq  implements java.io.Serializable {
 
 
     /**
+     * get workspaceLabel
+     *
+     * @return
+     */
+    public String getWorkspaceLabel() {
+        return workspaceLabel;
+    }
+
+    /**
+     * set workspaceLabel
+     *
+     * @param workspaceLabel
+     */
+    public void setWorkspaceLabel(String workspaceLabel) {
+        this.workspaceLabel = workspaceLabel;
+    }
+
+
+    /**
      * get engineType
      *
      * @return
@@ -328,7 +352,8 @@ public class WorkspaceCreateReq  implements java.io.Serializable {
     /**
      * set userPin
      *
-     * @param userPin
+     * @param userPin 
+     * @return WorkspaceCreateReq
      */
     public WorkspaceCreateReq userPin(String userPin) {
         this.userPin = userPin;
@@ -339,7 +364,8 @@ public class WorkspaceCreateReq  implements java.io.Serializable {
     /**
      * set workspaceId
      *
-     * @param workspaceId
+     * @param workspaceId 
+     * @return WorkspaceCreateReq
      */
     public WorkspaceCreateReq workspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
@@ -350,7 +376,8 @@ public class WorkspaceCreateReq  implements java.io.Serializable {
     /**
      * set workspaceName
      *
-     * @param workspaceName
+     * @param workspaceName 
+     * @return WorkspaceCreateReq
      */
     public WorkspaceCreateReq workspaceName(String workspaceName) {
         this.workspaceName = workspaceName;
@@ -361,7 +388,8 @@ public class WorkspaceCreateReq  implements java.io.Serializable {
     /**
     * set manager
     *
-    * @param manager
+    * @param manager 
+    * @return WorkspaceCreateReq
     */
     public WorkspaceCreateReq manager(List<String> manager) {
         this.manager = manager;
@@ -372,7 +400,8 @@ public class WorkspaceCreateReq  implements java.io.Serializable {
     /**
      * set workspaceDescription
      *
-     * @param workspaceDescription
+     * @param workspaceDescription 
+     * @return WorkspaceCreateReq
      */
     public WorkspaceCreateReq workspaceDescription(String workspaceDescription) {
         this.workspaceDescription = workspaceDescription;
@@ -383,7 +412,8 @@ public class WorkspaceCreateReq  implements java.io.Serializable {
     /**
      * set workspaceModel
      *
-     * @param workspaceModel
+     * @param workspaceModel 
+     * @return WorkspaceCreateReq
      */
     public WorkspaceCreateReq workspaceModel(String workspaceModel) {
         this.workspaceModel = workspaceModel;
@@ -392,9 +422,22 @@ public class WorkspaceCreateReq  implements java.io.Serializable {
 
 
     /**
+     * set workspaceLabel
+     *
+     * @param workspaceLabel 
+     * @return WorkspaceCreateReq
+     */
+    public WorkspaceCreateReq workspaceLabel(String workspaceLabel) {
+        this.workspaceLabel = workspaceLabel;
+        return this;
+    }
+
+
+    /**
      * set engineType
      *
-     * @param engineType
+     * @param engineType 
+     * @return WorkspaceCreateReq
      */
     public WorkspaceCreateReq engineType(String engineType) {
         this.engineType = engineType;
@@ -405,7 +448,8 @@ public class WorkspaceCreateReq  implements java.io.Serializable {
     /**
     * set calculateResourceCode
     *
-    * @param calculateResourceCode
+    * @param calculateResourceCode 
+    * @return WorkspaceCreateReq
     */
     public WorkspaceCreateReq calculateResourceCode(List<String> calculateResourceCode) {
         this.calculateResourceCode = calculateResourceCode;
@@ -416,7 +460,8 @@ public class WorkspaceCreateReq  implements java.io.Serializable {
     /**
     * set integrationResourceCode
     *
-    * @param integrationResourceCode
+    * @param integrationResourceCode 
+    * @return WorkspaceCreateReq
     */
     public WorkspaceCreateReq integrationResourceCode(List<String> integrationResourceCode) {
         this.integrationResourceCode = integrationResourceCode;
@@ -427,7 +472,8 @@ public class WorkspaceCreateReq  implements java.io.Serializable {
     /**
      * set needBundleProject
      *
-     * @param needBundleProject
+     * @param needBundleProject 
+     * @return WorkspaceCreateReq
      */
     public WorkspaceCreateReq needBundleProject(Boolean needBundleProject) {
         this.needBundleProject = needBundleProject;
@@ -438,7 +484,8 @@ public class WorkspaceCreateReq  implements java.io.Serializable {
     /**
      * set bundleDevProjectReq
      *
-     * @param bundleDevProjectReq
+     * @param bundleDevProjectReq 
+     * @return WorkspaceCreateReq
      */
     public WorkspaceCreateReq bundleDevProjectReq(BundleProjectReq bundleDevProjectReq) {
         this.bundleDevProjectReq = bundleDevProjectReq;
@@ -449,7 +496,8 @@ public class WorkspaceCreateReq  implements java.io.Serializable {
     /**
      * set bundleProdProjectReq
      *
-     * @param bundleProdProjectReq
+     * @param bundleProdProjectReq 
+     * @return WorkspaceCreateReq
      */
     public WorkspaceCreateReq bundleProdProjectReq(BundleProjectReq bundleProdProjectReq) {
         this.bundleProdProjectReq = bundleProdProjectReq;

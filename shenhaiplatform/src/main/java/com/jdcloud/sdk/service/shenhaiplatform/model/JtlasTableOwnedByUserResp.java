@@ -112,7 +112,8 @@ public class JtlasTableOwnedByUserResp  implements java.io.Serializable {
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasTableOwnedByUserResp
      */
     public JtlasTableOwnedByUserResp code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class JtlasTableOwnedByUserResp  implements java.io.Serializable {
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasTableOwnedByUserResp
      */
     public JtlasTableOwnedByUserResp message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class JtlasTableOwnedByUserResp  implements java.io.Serializable {
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return JtlasTableOwnedByUserResp
     */
     public JtlasTableOwnedByUserResp result(List<JtlasWarehouseTable> result) {
         this.result = result;

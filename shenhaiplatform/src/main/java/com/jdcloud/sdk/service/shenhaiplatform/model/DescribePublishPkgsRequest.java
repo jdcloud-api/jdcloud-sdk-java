@@ -356,7 +356,8 @@ public class DescribePublishPkgsRequest extends JdcloudRequest implements java.i
     /**
      * set 页面容量
      *
-     * @param pageSize
+     * @param pageSize 页面容量
+     * @return DescribePublishPkgsRequest
      */
     public DescribePublishPkgsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -367,7 +368,8 @@ public class DescribePublishPkgsRequest extends JdcloudRequest implements java.i
     /**
      * set 页号
      *
-     * @param pageNum
+     * @param pageNum 页号
+     * @return DescribePublishPkgsRequest
      */
     public DescribePublishPkgsRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -378,7 +380,8 @@ public class DescribePublishPkgsRequest extends JdcloudRequest implements java.i
     /**
      * set 发布包名称
      *
-     * @param pkgName
+     * @param pkgName 发布包名称
+     * @return DescribePublishPkgsRequest
      */
     public DescribePublishPkgsRequest pkgName(String pkgName) {
         this.pkgName = pkgName;
@@ -389,7 +392,8 @@ public class DescribePublishPkgsRequest extends JdcloudRequest implements java.i
     /**
      * set 发布包ID
      *
-     * @param pkgId
+     * @param pkgId 发布包ID
+     * @return DescribePublishPkgsRequest
      */
     public DescribePublishPkgsRequest pkgId(Long pkgId) {
         this.pkgId = pkgId;
@@ -400,7 +404,8 @@ public class DescribePublishPkgsRequest extends JdcloudRequest implements java.i
     /**
      * set 发布人
      *
-     * @param publisher
+     * @param publisher 发布人
+     * @return DescribePublishPkgsRequest
      */
     public DescribePublishPkgsRequest publisher(String publisher) {
         this.publisher = publisher;
@@ -411,7 +416,8 @@ public class DescribePublishPkgsRequest extends JdcloudRequest implements java.i
     /**
      * set 发布包状态
      *
-     * @param pkgStatus
+     * @param pkgStatus 发布包状态
+     * @return DescribePublishPkgsRequest
      */
     public DescribePublishPkgsRequest pkgStatus(String pkgStatus) {
         this.pkgStatus = pkgStatus;
@@ -422,7 +428,8 @@ public class DescribePublishPkgsRequest extends JdcloudRequest implements java.i
     /**
      * set 发布时间开始
      *
-     * @param pkgPublishTimeStart
+     * @param pkgPublishTimeStart 发布时间开始
+     * @return DescribePublishPkgsRequest
      */
     public DescribePublishPkgsRequest pkgPublishTimeStart(Long pkgPublishTimeStart) {
         this.pkgPublishTimeStart = pkgPublishTimeStart;
@@ -433,7 +440,8 @@ public class DescribePublishPkgsRequest extends JdcloudRequest implements java.i
     /**
      * set 发布时间结束
      *
-     * @param pkgPublishTimeEnd
+     * @param pkgPublishTimeEnd 发布时间结束
+     * @return DescribePublishPkgsRequest
      */
     public DescribePublishPkgsRequest pkgPublishTimeEnd(Long pkgPublishTimeEnd) {
         this.pkgPublishTimeEnd = pkgPublishTimeEnd;
@@ -444,7 +452,8 @@ public class DescribePublishPkgsRequest extends JdcloudRequest implements java.i
     /**
      * set 打包人
      *
-     * @param pkgCreator
+     * @param pkgCreator 打包人
+     * @return DescribePublishPkgsRequest
      */
     public DescribePublishPkgsRequest pkgCreator(String pkgCreator) {
         this.pkgCreator = pkgCreator;
@@ -455,7 +464,8 @@ public class DescribePublishPkgsRequest extends JdcloudRequest implements java.i
     /**
      * set 打包时间开始
      *
-     * @param pkgCreateTimeStart
+     * @param pkgCreateTimeStart 打包时间开始
+     * @return DescribePublishPkgsRequest
      */
     public DescribePublishPkgsRequest pkgCreateTimeStart(Long pkgCreateTimeStart) {
         this.pkgCreateTimeStart = pkgCreateTimeStart;
@@ -466,7 +476,8 @@ public class DescribePublishPkgsRequest extends JdcloudRequest implements java.i
     /**
      * set 打包时间结束
      *
-     * @param pkgCreateTimeEnd
+     * @param pkgCreateTimeEnd 打包时间结束
+     * @return DescribePublishPkgsRequest
      */
     public DescribePublishPkgsRequest pkgCreateTimeEnd(Long pkgCreateTimeEnd) {
         this.pkgCreateTimeEnd = pkgCreateTimeEnd;
@@ -477,7 +488,8 @@ public class DescribePublishPkgsRequest extends JdcloudRequest implements java.i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DescribePublishPkgsRequest
      */
     public DescribePublishPkgsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -488,7 +500,8 @@ public class DescribePublishPkgsRequest extends JdcloudRequest implements java.i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return DescribePublishPkgsRequest
      */
     public DescribePublishPkgsRequest appName(String appName) {
         this.appName = appName;

@@ -141,7 +141,8 @@ public class ManageHubGravityOneClickRerunRequest extends JdcloudRequest impleme
     /**
      * set filterParam
      *
-     * @param filterParam
+     * @param filterParam 
+     * @return ManageHubGravityOneClickRerunRequest
      */
     public ManageHubGravityOneClickRerunRequest filterParam(ListTxDateStatusParam filterParam) {
         this.filterParam = filterParam;
@@ -152,7 +153,8 @@ public class ManageHubGravityOneClickRerunRequest extends JdcloudRequest impleme
     /**
      * set 备注
      *
-     * @param remark
+     * @param remark 备注
+     * @return ManageHubGravityOneClickRerunRequest
      */
     public ManageHubGravityOneClickRerunRequest remark(String remark) {
         this.remark = remark;
@@ -163,7 +165,8 @@ public class ManageHubGravityOneClickRerunRequest extends JdcloudRequest impleme
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubGravityOneClickRerunRequest
      */
     public ManageHubGravityOneClickRerunRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -174,7 +177,8 @@ public class ManageHubGravityOneClickRerunRequest extends JdcloudRequest impleme
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubGravityOneClickRerunRequest
      */
     public ManageHubGravityOneClickRerunRequest appName(String appName) {
         this.appName = appName;

@@ -170,7 +170,8 @@ public class JtlasWarehouseQueryTablePrivilegesRequest extends JdcloudRequest im
     /**
      * set 数据库（工作空间编码）
      *
-     * @param database
+     * @param database 数据库（工作空间编码）
+     * @return JtlasWarehouseQueryTablePrivilegesRequest
      */
     public JtlasWarehouseQueryTablePrivilegesRequest database(String database) {
         this.database = database;
@@ -181,7 +182,8 @@ public class JtlasWarehouseQueryTablePrivilegesRequest extends JdcloudRequest im
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return JtlasWarehouseQueryTablePrivilegesRequest
      */
     public JtlasWarehouseQueryTablePrivilegesRequest tableName(String tableName) {
         this.tableName = tableName;
@@ -192,7 +194,8 @@ public class JtlasWarehouseQueryTablePrivilegesRequest extends JdcloudRequest im
     /**
     * set 权限类型
     *
-    * @param privilegeTypes
+    * @param privilegeTypes 权限类型
+    * @return JtlasWarehouseQueryTablePrivilegesRequest
     */
     public JtlasWarehouseQueryTablePrivilegesRequest privilegeTypes(List<String> privilegeTypes) {
         this.privilegeTypes = privilegeTypes;
@@ -203,7 +206,8 @@ public class JtlasWarehouseQueryTablePrivilegesRequest extends JdcloudRequest im
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return JtlasWarehouseQueryTablePrivilegesRequest
      */
     public JtlasWarehouseQueryTablePrivilegesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -214,7 +218,8 @@ public class JtlasWarehouseQueryTablePrivilegesRequest extends JdcloudRequest im
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return JtlasWarehouseQueryTablePrivilegesRequest
      */
     public JtlasWarehouseQueryTablePrivilegesRequest appName(String appName) {
         this.appName = appName;

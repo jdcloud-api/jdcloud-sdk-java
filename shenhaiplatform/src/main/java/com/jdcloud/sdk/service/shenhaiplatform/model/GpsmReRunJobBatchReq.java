@@ -88,7 +88,8 @@ public class GpsmReRunJobBatchReq  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GpsmReRunJobBatchReq
      */
     public GpsmReRunJobBatchReq txDate(String txDate) {
         this.txDate = txDate;
@@ -99,7 +100,8 @@ public class GpsmReRunJobBatchReq  implements java.io.Serializable {
     /**
     * set 作业名称列表
     *
-    * @param jobNames
+    * @param jobNames 作业名称列表
+    * @return GpsmReRunJobBatchReq
     */
     public GpsmReRunJobBatchReq jobNames(List<GpsmJobNameDTO> jobNames) {
         this.jobNames = jobNames;

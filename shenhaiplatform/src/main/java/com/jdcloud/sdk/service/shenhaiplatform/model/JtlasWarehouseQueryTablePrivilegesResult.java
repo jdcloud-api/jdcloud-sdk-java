@@ -114,7 +114,8 @@ public class JtlasWarehouseQueryTablePrivilegesResult extends JdcloudResult impl
     /**
      * set 业务响应码
      *
-     * @param code
+     * @param code 业务响应码
+     * @return JtlasWarehouseQueryTablePrivilegesResult
      */
     public JtlasWarehouseQueryTablePrivilegesResult code(String code) {
         this.code = code;
@@ -125,7 +126,8 @@ public class JtlasWarehouseQueryTablePrivilegesResult extends JdcloudResult impl
     /**
      * set 响应消息
      *
-     * @param message
+     * @param message 响应消息
+     * @return JtlasWarehouseQueryTablePrivilegesResult
      */
     public JtlasWarehouseQueryTablePrivilegesResult message(String message) {
         this.message = message;
@@ -136,7 +138,8 @@ public class JtlasWarehouseQueryTablePrivilegesResult extends JdcloudResult impl
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return JtlasWarehouseQueryTablePrivilegesResult
     */
     public JtlasWarehouseQueryTablePrivilegesResult result(List<JtlasWarehouseTablePrivilege> result) {
         this.result = result;

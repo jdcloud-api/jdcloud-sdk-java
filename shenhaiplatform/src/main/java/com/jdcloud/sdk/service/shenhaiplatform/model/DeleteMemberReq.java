@@ -88,7 +88,8 @@ public class DeleteMemberReq  implements java.io.Serializable {
     /**
     * set userPinList
     *
-    * @param userPinList
+    * @param userPinList 
+    * @return DeleteMemberReq
     */
     public DeleteMemberReq userPinList(List<String> userPinList) {
         this.userPinList = userPinList;
@@ -99,7 +100,8 @@ public class DeleteMemberReq  implements java.io.Serializable {
     /**
      * set workspaceId
      *
-     * @param workspaceId
+     * @param workspaceId 
+     * @return DeleteMemberReq
      */
     public DeleteMemberReq workspaceId(Long workspaceId) {
         this.workspaceId = workspaceId;

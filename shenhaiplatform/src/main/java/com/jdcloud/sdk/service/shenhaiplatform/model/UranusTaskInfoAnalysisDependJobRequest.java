@@ -164,7 +164,8 @@ public class UranusTaskInfoAnalysisDependJobRequest extends JdcloudRequest imple
     /**
      * set 当前作业名称
      *
-     * @param currentJobName
+     * @param currentJobName 当前作业名称
+     * @return UranusTaskInfoAnalysisDependJobRequest
      */
     public UranusTaskInfoAnalysisDependJobRequest currentJobName(String currentJobName) {
         this.currentJobName = currentJobName;
@@ -175,7 +176,8 @@ public class UranusTaskInfoAnalysisDependJobRequest extends JdcloudRequest imple
     /**
      * set 文件业务CODE
      *
-     * @param fileCode
+     * @param fileCode 文件业务CODE
+     * @return UranusTaskInfoAnalysisDependJobRequest
      */
     public UranusTaskInfoAnalysisDependJobRequest fileCode(String fileCode) {
         this.fileCode = fileCode;
@@ -186,7 +188,8 @@ public class UranusTaskInfoAnalysisDependJobRequest extends JdcloudRequest imple
     /**
      * set sql内容
      *
-     * @param sqlContent
+     * @param sqlContent sql内容
+     * @return UranusTaskInfoAnalysisDependJobRequest
      */
     public UranusTaskInfoAnalysisDependJobRequest sqlContent(String sqlContent) {
         this.sqlContent = sqlContent;
@@ -197,7 +200,8 @@ public class UranusTaskInfoAnalysisDependJobRequest extends JdcloudRequest imple
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskInfoAnalysisDependJobRequest
      */
     public UranusTaskInfoAnalysisDependJobRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -208,7 +212,8 @@ public class UranusTaskInfoAnalysisDependJobRequest extends JdcloudRequest imple
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskInfoAnalysisDependJobRequest
      */
     public UranusTaskInfoAnalysisDependJobRequest appName(String appName) {
         this.appName = appName;

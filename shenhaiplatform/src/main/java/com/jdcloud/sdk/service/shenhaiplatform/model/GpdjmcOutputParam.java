@@ -86,7 +86,8 @@ public class GpdjmcOutputParam  implements java.io.Serializable {
     /**
      * set 参数名
      *
-     * @param paramName
+     * @param paramName 参数名
+     * @return GpdjmcOutputParam
      */
     public GpdjmcOutputParam paramName(String paramName) {
         this.paramName = paramName;
@@ -97,7 +98,8 @@ public class GpdjmcOutputParam  implements java.io.Serializable {
     /**
      * set 参数值（支持表达式）
      *
-     * @param paramValue
+     * @param paramValue 参数值（支持表达式）
+     * @return GpdjmcOutputParam
      */
     public GpdjmcOutputParam paramValue(String paramValue) {
         this.paramValue = paramValue;

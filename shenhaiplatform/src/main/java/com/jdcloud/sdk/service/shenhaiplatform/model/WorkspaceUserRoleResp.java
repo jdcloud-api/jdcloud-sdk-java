@@ -50,6 +50,16 @@ public class WorkspaceUserRoleResp  implements java.io.Serializable {
     private String workspaceName;
 
     /**
+     * workspaceModel
+     */
+    private String workspaceModel;
+
+    /**
+     * workspaceLabel
+     */
+    private String workspaceLabel;
+
+    /**
      * roles
      */
     
@@ -114,6 +124,44 @@ public class WorkspaceUserRoleResp  implements java.io.Serializable {
 
 
     /**
+     * get workspaceModel
+     *
+     * @return
+     */
+    public String getWorkspaceModel() {
+        return workspaceModel;
+    }
+
+    /**
+     * set workspaceModel
+     *
+     * @param workspaceModel
+     */
+    public void setWorkspaceModel(String workspaceModel) {
+        this.workspaceModel = workspaceModel;
+    }
+
+
+    /**
+     * get workspaceLabel
+     *
+     * @return
+     */
+    public String getWorkspaceLabel() {
+        return workspaceLabel;
+    }
+
+    /**
+     * set workspaceLabel
+     *
+     * @param workspaceLabel
+     */
+    public void setWorkspaceLabel(String workspaceLabel) {
+        this.workspaceLabel = workspaceLabel;
+    }
+
+
+    /**
     * get roles
     *
     * @return
@@ -136,7 +184,8 @@ public class WorkspaceUserRoleResp  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceUserRoleResp
      */
     public WorkspaceUserRoleResp id(Long id) {
         this.id = id;
@@ -147,7 +196,8 @@ public class WorkspaceUserRoleResp  implements java.io.Serializable {
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return WorkspaceUserRoleResp
      */
     public WorkspaceUserRoleResp workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -158,7 +208,8 @@ public class WorkspaceUserRoleResp  implements java.io.Serializable {
     /**
      * set workspaceName
      *
-     * @param workspaceName
+     * @param workspaceName 
+     * @return WorkspaceUserRoleResp
      */
     public WorkspaceUserRoleResp workspaceName(String workspaceName) {
         this.workspaceName = workspaceName;
@@ -167,9 +218,34 @@ public class WorkspaceUserRoleResp  implements java.io.Serializable {
 
 
     /**
+     * set workspaceModel
+     *
+     * @param workspaceModel 
+     * @return WorkspaceUserRoleResp
+     */
+    public WorkspaceUserRoleResp workspaceModel(String workspaceModel) {
+        this.workspaceModel = workspaceModel;
+        return this;
+    }
+
+
+    /**
+     * set workspaceLabel
+     *
+     * @param workspaceLabel 
+     * @return WorkspaceUserRoleResp
+     */
+    public WorkspaceUserRoleResp workspaceLabel(String workspaceLabel) {
+        this.workspaceLabel = workspaceLabel;
+        return this;
+    }
+
+
+    /**
     * set roles
     *
-    * @param roles
+    * @param roles 
+    * @return WorkspaceUserRoleResp
     */
     public WorkspaceUserRoleResp roles(List<String> roles) {
         this.roles = roles;

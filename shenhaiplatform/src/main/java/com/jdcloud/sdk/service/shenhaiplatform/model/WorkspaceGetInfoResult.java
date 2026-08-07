@@ -112,7 +112,8 @@ public class WorkspaceGetInfoResult extends JdcloudResult implements java.io.Ser
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return WorkspaceGetInfoResult
      */
     public WorkspaceGetInfoResult code(String code) {
         this.code = code;
@@ -123,7 +124,8 @@ public class WorkspaceGetInfoResult extends JdcloudResult implements java.io.Ser
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return WorkspaceGetInfoResult
      */
     public WorkspaceGetInfoResult message(String message) {
         this.message = message;
@@ -134,7 +136,8 @@ public class WorkspaceGetInfoResult extends JdcloudResult implements java.io.Ser
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return WorkspaceGetInfoResult
      */
     public WorkspaceGetInfoResult result(WorkspaceInfoResp result) {
         this.result = result;

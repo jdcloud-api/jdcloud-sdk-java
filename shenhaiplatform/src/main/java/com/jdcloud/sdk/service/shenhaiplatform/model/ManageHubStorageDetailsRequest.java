@@ -284,7 +284,8 @@ public class ManageHubStorageDetailsRequest extends JdcloudRequest implements ja
     /**
      * set 分页-页码
      *
-     * @param pageNum
+     * @param pageNum 分页-页码
+     * @return ManageHubStorageDetailsRequest
      */
     public ManageHubStorageDetailsRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -295,7 +296,8 @@ public class ManageHubStorageDetailsRequest extends JdcloudRequest implements ja
     /**
      * set 分页-每页数量
      *
-     * @param pageSize
+     * @param pageSize 分页-每页数量
+     * @return ManageHubStorageDetailsRequest
      */
     public ManageHubStorageDetailsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -306,7 +308,8 @@ public class ManageHubStorageDetailsRequest extends JdcloudRequest implements ja
     /**
      * set 租户编码
      *
-     * @param companyCode
+     * @param companyCode 租户编码
+     * @return ManageHubStorageDetailsRequest
      */
     public ManageHubStorageDetailsRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -317,7 +320,8 @@ public class ManageHubStorageDetailsRequest extends JdcloudRequest implements ja
     /**
      * set 租户主账号
      *
-     * @param account
+     * @param account 租户主账号
+     * @return ManageHubStorageDetailsRequest
      */
     public ManageHubStorageDetailsRequest account(String account) {
         this.account = account;
@@ -328,7 +332,8 @@ public class ManageHubStorageDetailsRequest extends JdcloudRequest implements ja
     /**
      * set 数据库名称
      *
-     * @param databaseName
+     * @param databaseName 数据库名称
+     * @return ManageHubStorageDetailsRequest
      */
     public ManageHubStorageDetailsRequest databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -339,7 +344,8 @@ public class ManageHubStorageDetailsRequest extends JdcloudRequest implements ja
     /**
      * set 查询类型，租户、数据库、表
      *
-     * @param objectType
+     * @param objectType 查询类型，租户、数据库、表
+     * @return ManageHubStorageDetailsRequest
      */
     public ManageHubStorageDetailsRequest objectType(String objectType) {
         this.objectType = objectType;
@@ -350,7 +356,8 @@ public class ManageHubStorageDetailsRequest extends JdcloudRequest implements ja
     /**
      * set 排序字段，租户/库/表存储空间总使用量、数据库数量、表数量、每日增量、创建时间
      *
-     * @param orderFieldType
+     * @param orderFieldType 排序字段，租户/库/表存储空间总使用量、数据库数量、表数量、每日增量、创建时间
+     * @return ManageHubStorageDetailsRequest
      */
     public ManageHubStorageDetailsRequest orderFieldType(String orderFieldType) {
         this.orderFieldType = orderFieldType;
@@ -361,7 +368,8 @@ public class ManageHubStorageDetailsRequest extends JdcloudRequest implements ja
     /**
      * set 排序方式，升序、降序
      *
-     * @param orderType
+     * @param orderType 排序方式，升序、降序
+     * @return ManageHubStorageDetailsRequest
      */
     public ManageHubStorageDetailsRequest orderType(String orderType) {
         this.orderType = orderType;
@@ -372,7 +380,8 @@ public class ManageHubStorageDetailsRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubStorageDetailsRequest
      */
     public ManageHubStorageDetailsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -383,7 +392,8 @@ public class ManageHubStorageDetailsRequest extends JdcloudRequest implements ja
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubStorageDetailsRequest
      */
     public ManageHubStorageDetailsRequest appName(String appName) {
         this.appName = appName;

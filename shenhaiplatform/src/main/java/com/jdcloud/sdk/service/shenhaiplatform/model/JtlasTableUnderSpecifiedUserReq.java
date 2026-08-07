@@ -115,7 +115,8 @@ public class JtlasTableUnderSpecifiedUserReq  implements java.io.Serializable {
     /**
      * set 数据库（工作空间编码）
      *
-     * @param database
+     * @param database 数据库（工作空间编码）
+     * @return JtlasTableUnderSpecifiedUserReq
      */
     public JtlasTableUnderSpecifiedUserReq database(String database) {
         this.database = database;
@@ -126,7 +127,8 @@ public class JtlasTableUnderSpecifiedUserReq  implements java.io.Serializable {
     /**
      * set 账户信息
      *
-     * @param principalName
+     * @param principalName 账户信息
+     * @return JtlasTableUnderSpecifiedUserReq
      */
     public JtlasTableUnderSpecifiedUserReq principalName(String principalName) {
         this.principalName = principalName;
@@ -137,7 +139,8 @@ public class JtlasTableUnderSpecifiedUserReq  implements java.io.Serializable {
     /**
      * set 表名称
      *
-     * @param fuzzyName
+     * @param fuzzyName 表名称
+     * @return JtlasTableUnderSpecifiedUserReq
      */
     public JtlasTableUnderSpecifiedUserReq fuzzyName(String fuzzyName) {
         this.fuzzyName = fuzzyName;

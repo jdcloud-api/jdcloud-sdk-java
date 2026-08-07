@@ -118,7 +118,8 @@ public class ManageHubGravityJobPropertyRequest extends JdcloudRequest implement
     /**
      * set jobName
      *
-     * @param jobName
+     * @param jobName 
+     * @return ManageHubGravityJobPropertyRequest
      */
     public ManageHubGravityJobPropertyRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -129,7 +130,8 @@ public class ManageHubGravityJobPropertyRequest extends JdcloudRequest implement
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ManageHubGravityJobPropertyRequest
      */
     public ManageHubGravityJobPropertyRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class ManageHubGravityJobPropertyRequest extends JdcloudRequest implement
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return ManageHubGravityJobPropertyRequest
      */
     public ManageHubGravityJobPropertyRequest appName(String appName) {
         this.appName = appName;

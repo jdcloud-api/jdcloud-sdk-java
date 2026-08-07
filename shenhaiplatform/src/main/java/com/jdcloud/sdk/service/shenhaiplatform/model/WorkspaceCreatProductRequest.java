@@ -24,8 +24,11 @@
 
 package com.jdcloud.sdk.service.shenhaiplatform.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.shenhaiplatform.model.OwnerIntegrationResource;
 import com.jdcloud.sdk.service.shenhaiplatform.model.CreateProjectResourceParam;
+import com.jdcloud.sdk.service.shenhaiplatform.model.BizTagInfo;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -86,6 +89,16 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
      */
     private String returnUrl;
 
+    /**
+     * bizResourceKey
+     */
+    private String bizResourceKey;
+
+    /**
+     * bizTagInfos
+     */
+    
+    private List<BizTagInfo> bizTagInfos;
     /**
      * 地域ID
      * Required:true
@@ -293,6 +306,44 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
 
 
     /**
+     * get bizResourceKey
+     *
+     * @return
+     */
+    public String getBizResourceKey() {
+        return bizResourceKey;
+    }
+
+    /**
+     * set bizResourceKey
+     *
+     * @param bizResourceKey
+     */
+    public void setBizResourceKey(String bizResourceKey) {
+        this.bizResourceKey = bizResourceKey;
+    }
+
+
+    /**
+    * get bizTagInfos
+    *
+    * @return
+    */
+    public List<BizTagInfo> getBizTagInfos() {
+        return bizTagInfos;
+    }
+
+    /**
+    * set bizTagInfos
+    *
+    * @param bizTagInfos
+    */
+    public void setBizTagInfos(List<BizTagInfo> bizTagInfos) {
+        this.bizTagInfos = bizTagInfos;
+    }
+
+
+    /**
      * get 地域ID
      *
      * @return
@@ -334,7 +385,8 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
     /**
      * set region
      *
-     * @param region
+     * @param region 
+     * @return WorkspaceCreatProductRequest
      */
     public WorkspaceCreatProductRequest region(String region) {
         this.region = region;
@@ -345,7 +397,8 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
     /**
      * set az
      *
-     * @param az
+     * @param az 
+     * @return WorkspaceCreatProductRequest
      */
     public WorkspaceCreatProductRequest az(String az) {
         this.az = az;
@@ -356,7 +409,8 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
     /**
      * set ownerIntegrationResource
      *
-     * @param ownerIntegrationResource
+     * @param ownerIntegrationResource 
+     * @return WorkspaceCreatProductRequest
      */
     public WorkspaceCreatProductRequest ownerIntegrationResource(OwnerIntegrationResource ownerIntegrationResource) {
         this.ownerIntegrationResource = ownerIntegrationResource;
@@ -367,7 +421,8 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
     /**
      * set payPlan
      *
-     * @param payPlan
+     * @param payPlan 
+     * @return WorkspaceCreatProductRequest
      */
     public WorkspaceCreatProductRequest payPlan(String payPlan) {
         this.payPlan = payPlan;
@@ -378,7 +433,8 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
     /**
      * set billingVersion
      *
-     * @param billingVersion
+     * @param billingVersion 
+     * @return WorkspaceCreatProductRequest
      */
     public WorkspaceCreatProductRequest billingVersion(String billingVersion) {
         this.billingVersion = billingVersion;
@@ -389,7 +445,8 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
     /**
      * set billingModel
      *
-     * @param billingModel
+     * @param billingModel 
+     * @return WorkspaceCreatProductRequest
      */
     public WorkspaceCreatProductRequest billingModel(String billingModel) {
         this.billingModel = billingModel;
@@ -400,7 +457,8 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
     /**
      * set autoRenewal
      *
-     * @param autoRenewal
+     * @param autoRenewal 
+     * @return WorkspaceCreatProductRequest
      */
     public WorkspaceCreatProductRequest autoRenewal(Boolean autoRenewal) {
         this.autoRenewal = autoRenewal;
@@ -411,7 +469,8 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
     /**
      * set purchaseDuration
      *
-     * @param purchaseDuration
+     * @param purchaseDuration 
+     * @return WorkspaceCreatProductRequest
      */
     public WorkspaceCreatProductRequest purchaseDuration(Integer purchaseDuration) {
         this.purchaseDuration = purchaseDuration;
@@ -422,7 +481,8 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
     /**
      * set projectResourceReq
      *
-     * @param projectResourceReq
+     * @param projectResourceReq 
+     * @return WorkspaceCreatProductRequest
      */
     public WorkspaceCreatProductRequest projectResourceReq(CreateProjectResourceParam projectResourceReq) {
         this.projectResourceReq = projectResourceReq;
@@ -433,7 +493,8 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
     /**
      * set returnUrl
      *
-     * @param returnUrl
+     * @param returnUrl 
+     * @return WorkspaceCreatProductRequest
      */
     public WorkspaceCreatProductRequest returnUrl(String returnUrl) {
         this.returnUrl = returnUrl;
@@ -442,9 +503,34 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
 
 
     /**
+     * set bizResourceKey
+     *
+     * @param bizResourceKey 
+     * @return WorkspaceCreatProductRequest
+     */
+    public WorkspaceCreatProductRequest bizResourceKey(String bizResourceKey) {
+        this.bizResourceKey = bizResourceKey;
+        return this;
+    }
+
+
+    /**
+    * set bizTagInfos
+    *
+    * @param bizTagInfos 
+    * @return WorkspaceCreatProductRequest
+    */
+    public WorkspaceCreatProductRequest bizTagInfos(List<BizTagInfo> bizTagInfos) {
+        this.bizTagInfos = bizTagInfos;
+        return this;
+    }
+
+
+    /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceCreatProductRequest
      */
     public WorkspaceCreatProductRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -455,7 +541,8 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceCreatProductRequest
      */
     public WorkspaceCreatProductRequest appName(String appName) {
         this.appName = appName;
@@ -463,4 +550,16 @@ public class WorkspaceCreatProductRequest extends JdcloudRequest implements java
     }
 
 
+
+    /**
+     * add item to bizTagInfos
+     *
+     * @param bizTagInfo
+     */
+    public void addBizTagInfo(BizTagInfo bizTagInfo) {
+        if (this.bizTagInfos == null) {
+            this.bizTagInfos = new ArrayList<>();
+        }
+        this.bizTagInfos.add(bizTagInfo);
+    }
 }

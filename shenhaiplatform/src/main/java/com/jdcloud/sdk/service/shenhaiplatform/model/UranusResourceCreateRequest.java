@@ -286,7 +286,8 @@ public class UranusResourceCreateRequest extends JdcloudRequest implements java.
     /**
      * set 资源名称（支持中文、字母、数字、下划线，不超过50个字符）
      *
-     * @param resourceName
+     * @param resourceName 资源名称（支持中文、字母、数字、下划线，不超过50个字符）
+     * @return UranusResourceCreateRequest
      */
     public UranusResourceCreateRequest resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -297,7 +298,8 @@ public class UranusResourceCreateRequest extends JdcloudRequest implements java.
     /**
      * set 原始资源名称（上传的原始文件在本地客户端的文件名称）
      *
-     * @param originalName
+     * @param originalName 原始资源名称（上传的原始文件在本地客户端的文件名称）
+     * @return UranusResourceCreateRequest
      */
     public UranusResourceCreateRequest originalName(String originalName) {
         this.originalName = originalName;
@@ -308,7 +310,8 @@ public class UranusResourceCreateRequest extends JdcloudRequest implements java.
     /**
      * set 父资源code（目录的根目录的父资源code为ROOT）
      *
-     * @param parentCode
+     * @param parentCode 父资源code（目录的根目录的父资源code为ROOT）
+     * @return UranusResourceCreateRequest
      */
     public UranusResourceCreateRequest parentCode(String parentCode) {
         this.parentCode = parentCode;
@@ -319,7 +322,8 @@ public class UranusResourceCreateRequest extends JdcloudRequest implements java.
     /**
      * set 资源类型（DIRECTORY：目录；JAR：java的jar文件；FILE：其他普通文件；ARCHIVE：其他压缩文件/归档文件）
      *
-     * @param resourceType
+     * @param resourceType 资源类型（DIRECTORY：目录；JAR：java的jar文件；FILE：其他普通文件；ARCHIVE：其他压缩文件/归档文件）
+     * @return UranusResourceCreateRequest
      */
     public UranusResourceCreateRequest resourceType(String resourceType) {
         this.resourceType = resourceType;
@@ -330,7 +334,8 @@ public class UranusResourceCreateRequest extends JdcloudRequest implements java.
     /**
      * set 关联引擎（默认为JCW）
      *
-     * @param relativeEngine
+     * @param relativeEngine 关联引擎（默认为JCW）
+     * @return UranusResourceCreateRequest
      */
     public UranusResourceCreateRequest relativeEngine(String relativeEngine) {
         this.relativeEngine = relativeEngine;
@@ -341,7 +346,8 @@ public class UranusResourceCreateRequest extends JdcloudRequest implements java.
     /**
      * set 文件上传方式（默认为本地上传）
      *
-     * @param uploadMode
+     * @param uploadMode 文件上传方式（默认为本地上传）
+     * @return UranusResourceCreateRequest
      */
     public UranusResourceCreateRequest uploadMode(String uploadMode) {
         this.uploadMode = uploadMode;
@@ -352,7 +358,8 @@ public class UranusResourceCreateRequest extends JdcloudRequest implements java.
     /**
      * set 环境信息（prod：生产环境；dev：开发环境），简单模式默认为prod
      *
-     * @param env
+     * @param env 环境信息（prod：生产环境；dev：开发环境），简单模式默认为prod
+     * @return UranusResourceCreateRequest
      */
     public UranusResourceCreateRequest env(String env) {
         this.env = env;
@@ -363,7 +370,8 @@ public class UranusResourceCreateRequest extends JdcloudRequest implements java.
     /**
     * set 负责人
     *
-    * @param managers
+    * @param managers 负责人
+    * @return UranusResourceCreateRequest
     */
     public UranusResourceCreateRequest managers(List<String> managers) {
         this.managers = managers;
@@ -374,7 +382,8 @@ public class UranusResourceCreateRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusResourceCreateRequest
      */
     public UranusResourceCreateRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -385,7 +394,8 @@ public class UranusResourceCreateRequest extends JdcloudRequest implements java.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusResourceCreateRequest
      */
     public UranusResourceCreateRequest appName(String appName) {
         this.appName = appName;

@@ -134,7 +134,8 @@ public class PreviewPackageVo  implements java.io.Serializable {
     /**
      * set ID
      *
-     * @param objId
+     * @param objId ID
+     * @return PreviewPackageVo
      */
     public PreviewPackageVo objId(Long objId) {
         this.objId = objId;
@@ -145,7 +146,8 @@ public class PreviewPackageVo  implements java.io.Serializable {
     /**
      * set 对象名称
      *
-     * @param objName
+     * @param objName 对象名称
+     * @return PreviewPackageVo
      */
     public PreviewPackageVo objName(String objName) {
         this.objName = objName;
@@ -156,7 +158,8 @@ public class PreviewPackageVo  implements java.io.Serializable {
     /**
      * set 对象ID
      *
-     * @param objUk
+     * @param objUk 对象ID
+     * @return PreviewPackageVo
      */
     public PreviewPackageVo objUk(String objUk) {
         this.objUk = objUk;
@@ -167,7 +170,8 @@ public class PreviewPackageVo  implements java.io.Serializable {
     /**
      * set 发布包名称
      *
-     * @param packageName
+     * @param packageName 发布包名称
+     * @return PreviewPackageVo
      */
     public PreviewPackageVo packageName(String packageName) {
         this.packageName = packageName;

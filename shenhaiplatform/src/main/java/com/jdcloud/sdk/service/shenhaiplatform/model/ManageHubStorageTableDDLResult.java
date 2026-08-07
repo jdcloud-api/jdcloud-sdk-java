@@ -111,7 +111,8 @@ public class ManageHubStorageTableDDLResult extends JdcloudResult implements jav
     /**
      * set 返回编码
      *
-     * @param code
+     * @param code 返回编码
+     * @return ManageHubStorageTableDDLResult
      */
     public ManageHubStorageTableDDLResult code(String code) {
         this.code = code;
@@ -122,7 +123,8 @@ public class ManageHubStorageTableDDLResult extends JdcloudResult implements jav
     /**
      * set 返回信息
      *
-     * @param message
+     * @param message 返回信息
+     * @return ManageHubStorageTableDDLResult
      */
     public ManageHubStorageTableDDLResult message(String message) {
         this.message = message;
@@ -133,7 +135,8 @@ public class ManageHubStorageTableDDLResult extends JdcloudResult implements jav
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return ManageHubStorageTableDDLResult
      */
     public ManageHubStorageTableDDLResult result(String result) {
         this.result = result;

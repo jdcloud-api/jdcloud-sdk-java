@@ -142,7 +142,8 @@ public class UranusTableDDLRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return UranusTableDDLRequest
      */
     public UranusTableDDLRequest tableName(String tableName) {
         this.tableName = tableName;
@@ -153,7 +154,8 @@ public class UranusTableDDLRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 环境信息，dev 开发、prod 生产
      *
-     * @param env
+     * @param env 环境信息，dev 开发、prod 生产
+     * @return UranusTableDDLRequest
      */
     public UranusTableDDLRequest env(String env) {
         this.env = env;
@@ -164,7 +166,8 @@ public class UranusTableDDLRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTableDDLRequest
      */
     public UranusTableDDLRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -175,7 +178,8 @@ public class UranusTableDDLRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTableDDLRequest
      */
     public UranusTableDDLRequest appName(String appName) {
         this.appName = appName;

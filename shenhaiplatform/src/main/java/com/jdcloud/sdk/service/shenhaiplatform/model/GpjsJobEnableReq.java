@@ -86,7 +86,8 @@ public class GpjsJobEnableReq  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpjsJobEnableReq
      */
     public GpjsJobEnableReq jobName(String jobName) {
         this.jobName = jobName;
@@ -97,7 +98,8 @@ public class GpjsJobEnableReq  implements java.io.Serializable {
     /**
      * set 是否可用，1 已上线，2已下线
      *
-     * @param enableFlag
+     * @param enableFlag 是否可用，1 已上线，2已下线
+     * @return GpjsJobEnableReq
      */
     public GpjsJobEnableReq enableFlag(String enableFlag) {
         this.enableFlag = enableFlag;

@@ -357,7 +357,8 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 表英文名称
      *
-     * @param tableEnName
+     * @param tableEnName 表英文名称
+     * @return UranusTableSaveOrUpdate
      */
     public UranusTableSaveOrUpdate tableEnName(String tableEnName) {
         this.tableEnName = tableEnName;
@@ -368,7 +369,8 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 表中文名
      *
-     * @param tableCnName
+     * @param tableCnName 表中文名
+     * @return UranusTableSaveOrUpdate
      */
     public UranusTableSaveOrUpdate tableCnName(String tableCnName) {
         this.tableCnName = tableCnName;
@@ -379,7 +381,8 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param owner
+     * @param owner 负责人
+     * @return UranusTableSaveOrUpdate
      */
     public UranusTableSaveOrUpdate owner(String owner) {
         this.owner = owner;
@@ -390,7 +393,8 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 协助人
      *
-     * @param manager
+     * @param manager 协助人
+     * @return UranusTableSaveOrUpdate
      */
     public UranusTableSaveOrUpdate manager(String manager) {
         this.manager = manager;
@@ -401,7 +405,8 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
     /**
     * set 表的普通字段信息
     *
-    * @param columns
+    * @param columns 表的普通字段信息
+    * @return UranusTableSaveOrUpdate
     */
     public UranusTableSaveOrUpdate columns(List<UranusColumnSaveOrUpdate> columns) {
         this.columns = columns;
@@ -412,7 +417,8 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
     /**
     * set 表的分区字段信息
     *
-    * @param partitions
+    * @param partitions 表的分区字段信息
+    * @return UranusTableSaveOrUpdate
     */
     public UranusTableSaveOrUpdate partitions(List<UranusColumnSaveOrUpdate> partitions) {
         this.partitions = partitions;
@@ -423,7 +429,8 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 0 非分区表 1 分区表
      *
-     * @param isPartition
+     * @param isPartition 0 非分区表 1 分区表
+     * @return UranusTableSaveOrUpdate
      */
     public UranusTableSaveOrUpdate isPartition(Integer isPartition) {
         this.isPartition = isPartition;
@@ -434,7 +441,8 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 0 新建表 1 修改表
      *
-     * @param updateTable
+     * @param updateTable 0 新建表 1 修改表
+     * @return UranusTableSaveOrUpdate
      */
     public UranusTableSaveOrUpdate updateTable(Integer updateTable) {
         this.updateTable = updateTable;
@@ -445,7 +453,8 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 表存储格式
      *
-     * @param storageType
+     * @param storageType 表存储格式
+     * @return UranusTableSaveOrUpdate
      */
     public UranusTableSaveOrUpdate storageType(String storageType) {
         this.storageType = storageType;
@@ -456,7 +465,8 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 表字段分隔符（只有TEXTFILE类型表需要该字段）
      *
-     * @param fieldDelim
+     * @param fieldDelim 表字段分隔符（只有TEXTFILE类型表需要该字段）
+     * @return UranusTableSaveOrUpdate
      */
     public UranusTableSaveOrUpdate fieldDelim(String fieldDelim) {
         this.fieldDelim = fieldDelim;
@@ -467,7 +477,8 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 表行分隔符（只有TEXTFILE类型表需要该字段）
      *
-     * @param lineDelim
+     * @param lineDelim 表行分隔符（只有TEXTFILE类型表需要该字段）
+     * @return UranusTableSaveOrUpdate
      */
     public UranusTableSaveOrUpdate lineDelim(String lineDelim) {
         this.lineDelim = lineDelim;
@@ -478,7 +489,8 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
     /**
     * set 分桶字段
     *
-    * @param bucketCols
+    * @param bucketCols 分桶字段
+    * @return UranusTableSaveOrUpdate
     */
     public UranusTableSaveOrUpdate bucketCols(List<String> bucketCols) {
         this.bucketCols = bucketCols;
@@ -489,7 +501,8 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
     /**
      * set 分桶字段
      *
-     * @param bucketNum
+     * @param bucketNum 分桶字段
+     * @return UranusTableSaveOrUpdate
      */
     public UranusTableSaveOrUpdate bucketNum(Integer bucketNum) {
         this.bucketNum = bucketNum;

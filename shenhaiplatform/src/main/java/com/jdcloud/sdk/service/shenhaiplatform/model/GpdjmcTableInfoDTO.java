@@ -110,7 +110,8 @@ public class GpdjmcTableInfoDTO  implements java.io.Serializable {
     /**
      * set 数据库名称
      *
-     * @param databaseName
+     * @param databaseName 数据库名称
+     * @return GpdjmcTableInfoDTO
      */
     public GpdjmcTableInfoDTO databaseName(String databaseName) {
         this.databaseName = databaseName;
@@ -121,7 +122,8 @@ public class GpdjmcTableInfoDTO  implements java.io.Serializable {
     /**
      * set 表名称
      *
-     * @param tableName
+     * @param tableName 表名称
+     * @return GpdjmcTableInfoDTO
      */
     public GpdjmcTableInfoDTO tableName(String tableName) {
         this.tableName = tableName;
@@ -132,7 +134,8 @@ public class GpdjmcTableInfoDTO  implements java.io.Serializable {
     /**
      * set 工作空间名称
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间名称
+     * @return GpdjmcTableInfoDTO
      */
     public GpdjmcTableInfoDTO workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;

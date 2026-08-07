@@ -140,7 +140,8 @@ public class GravityParticleJobDepGetParentChainJobsRequest extends JdcloudReque
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GravityParticleJobDepGetParentChainJobsRequest
      */
     public GravityParticleJobDepGetParentChainJobsRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -151,7 +152,8 @@ public class GravityParticleJobDepGetParentChainJobsRequest extends JdcloudReque
     /**
      * set 链路层级
      *
-     * @param level
+     * @param level 链路层级
+     * @return GravityParticleJobDepGetParentChainJobsRequest
      */
     public GravityParticleJobDepGetParentChainJobsRequest level(Integer level) {
         this.level = level;
@@ -162,7 +164,8 @@ public class GravityParticleJobDepGetParentChainJobsRequest extends JdcloudReque
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleJobDepGetParentChainJobsRequest
      */
     public GravityParticleJobDepGetParentChainJobsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -173,7 +176,8 @@ public class GravityParticleJobDepGetParentChainJobsRequest extends JdcloudReque
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleJobDepGetParentChainJobsRequest
      */
     public GravityParticleJobDepGetParentChainJobsRequest appName(String appName) {
         this.appName = appName;

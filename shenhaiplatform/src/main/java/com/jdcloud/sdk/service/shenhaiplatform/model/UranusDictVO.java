@@ -206,7 +206,8 @@ public class UranusDictVO  implements java.io.Serializable {
     /**
      * set 类型id
      *
-     * @param id
+     * @param id 类型id
+     * @return UranusDictVO
      */
     public UranusDictVO id(Long id) {
         this.id = id;
@@ -217,7 +218,8 @@ public class UranusDictVO  implements java.io.Serializable {
     /**
      * set 字典编码
      *
-     * @param dictCode
+     * @param dictCode 字典编码
+     * @return UranusDictVO
      */
     public UranusDictVO dictCode(String dictCode) {
         this.dictCode = dictCode;
@@ -228,7 +230,8 @@ public class UranusDictVO  implements java.io.Serializable {
     /**
      * set 父编码
      *
-     * @param pDictCode
+     * @param pDictCode 父编码
+     * @return UranusDictVO
      */
     public UranusDictVO pDictCode(String pDictCode) {
         this.pDictCode = pDictCode;
@@ -239,7 +242,8 @@ public class UranusDictVO  implements java.io.Serializable {
     /**
      * set 字典名称
      *
-     * @param dictName
+     * @param dictName 字典名称
+     * @return UranusDictVO
      */
     public UranusDictVO dictName(String dictName) {
         this.dictName = dictName;
@@ -250,7 +254,8 @@ public class UranusDictVO  implements java.io.Serializable {
     /**
      * set 备份信息
      *
-     * @param bak
+     * @param bak 备份信息
+     * @return UranusDictVO
      */
     public UranusDictVO bak(String bak) {
         this.bak = bak;
@@ -261,7 +266,8 @@ public class UranusDictVO  implements java.io.Serializable {
     /**
      * set 序号
      *
-     * @param sort
+     * @param sort 序号
+     * @return UranusDictVO
      */
     public UranusDictVO sort(Long sort) {
         this.sort = sort;
@@ -272,7 +278,8 @@ public class UranusDictVO  implements java.io.Serializable {
     /**
      * set 描述
      *
-     * @param dictDesc
+     * @param dictDesc 描述
+     * @return UranusDictVO
      */
     public UranusDictVO dictDesc(String dictDesc) {
         this.dictDesc = dictDesc;

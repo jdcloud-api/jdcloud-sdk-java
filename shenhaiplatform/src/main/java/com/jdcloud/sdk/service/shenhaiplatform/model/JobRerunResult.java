@@ -89,7 +89,8 @@ public class JobRerunResult extends JdcloudResult implements java.io.Serializabl
     /**
     * set 重跑成功的作业ID列表
     *
-    * @param successJobIdList
+    * @param successJobIdList 重跑成功的作业ID列表
+    * @return JobRerunResult
     */
     public JobRerunResult successJobIdList(List<String> successJobIdList) {
         this.successJobIdList = successJobIdList;
@@ -100,7 +101,8 @@ public class JobRerunResult extends JdcloudResult implements java.io.Serializabl
     /**
     * set failedReasons
     *
-    * @param failedReasons
+    * @param failedReasons 
+    * @return JobRerunResult
     */
     public JobRerunResult failedReasons(List<JobRerunFailedReason> failedReasons) {
         this.failedReasons = failedReasons;

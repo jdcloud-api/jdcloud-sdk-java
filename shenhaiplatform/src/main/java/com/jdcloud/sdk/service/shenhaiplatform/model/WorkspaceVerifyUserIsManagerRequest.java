@@ -284,7 +284,8 @@ public class WorkspaceVerifyUserIsManagerRequest extends JdcloudRequest implemen
     /**
      * set pageNum
      *
-     * @param pageNum
+     * @param pageNum 
+     * @return WorkspaceVerifyUserIsManagerRequest
      */
     public WorkspaceVerifyUserIsManagerRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -295,7 +296,8 @@ public class WorkspaceVerifyUserIsManagerRequest extends JdcloudRequest implemen
     /**
      * set pageSize
      *
-     * @param pageSize
+     * @param pageSize 
+     * @return WorkspaceVerifyUserIsManagerRequest
      */
     public WorkspaceVerifyUserIsManagerRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -306,7 +308,8 @@ public class WorkspaceVerifyUserIsManagerRequest extends JdcloudRequest implemen
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return WorkspaceVerifyUserIsManagerRequest
      */
     public WorkspaceVerifyUserIsManagerRequest id(Long id) {
         this.id = id;
@@ -317,7 +320,8 @@ public class WorkspaceVerifyUserIsManagerRequest extends JdcloudRequest implemen
     /**
      * set userName
      *
-     * @param userName
+     * @param userName 
+     * @return WorkspaceVerifyUserIsManagerRequest
      */
     public WorkspaceVerifyUserIsManagerRequest userName(String userName) {
         this.userName = userName;
@@ -328,7 +332,8 @@ public class WorkspaceVerifyUserIsManagerRequest extends JdcloudRequest implemen
     /**
      * set nickName
      *
-     * @param nickName
+     * @param nickName 
+     * @return WorkspaceVerifyUserIsManagerRequest
      */
     public WorkspaceVerifyUserIsManagerRequest nickName(String nickName) {
         this.nickName = nickName;
@@ -339,7 +344,8 @@ public class WorkspaceVerifyUserIsManagerRequest extends JdcloudRequest implemen
     /**
      * set userPin
      *
-     * @param userPin
+     * @param userPin 
+     * @return WorkspaceVerifyUserIsManagerRequest
      */
     public WorkspaceVerifyUserIsManagerRequest userPin(String userPin) {
         this.userPin = userPin;
@@ -350,7 +356,8 @@ public class WorkspaceVerifyUserIsManagerRequest extends JdcloudRequest implemen
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return WorkspaceVerifyUserIsManagerRequest
      */
     public WorkspaceVerifyUserIsManagerRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -361,7 +368,8 @@ public class WorkspaceVerifyUserIsManagerRequest extends JdcloudRequest implemen
     /**
      * set companyCode
      *
-     * @param companyCode
+     * @param companyCode 
+     * @return WorkspaceVerifyUserIsManagerRequest
      */
     public WorkspaceVerifyUserIsManagerRequest companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -372,7 +380,8 @@ public class WorkspaceVerifyUserIsManagerRequest extends JdcloudRequest implemen
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return WorkspaceVerifyUserIsManagerRequest
      */
     public WorkspaceVerifyUserIsManagerRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -383,7 +392,8 @@ public class WorkspaceVerifyUserIsManagerRequest extends JdcloudRequest implemen
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return WorkspaceVerifyUserIsManagerRequest
      */
     public WorkspaceVerifyUserIsManagerRequest appName(String appName) {
         this.appName = appName;

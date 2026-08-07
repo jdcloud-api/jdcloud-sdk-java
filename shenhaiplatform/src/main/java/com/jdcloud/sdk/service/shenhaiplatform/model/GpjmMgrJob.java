@@ -326,7 +326,8 @@ public class GpjmMgrJob  implements java.io.Serializable {
     /**
      * set 作业id
      *
-     * @param id
+     * @param id 作业id
+     * @return GpjmMgrJob
      */
     public GpjmMgrJob id(Integer id) {
         this.id = id;
@@ -337,7 +338,8 @@ public class GpjmMgrJob  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param etlJob
+     * @param etlJob 作业名称
+     * @return GpjmMgrJob
      */
     public GpjmMgrJob etlJob(String etlJob) {
         this.etlJob = etlJob;
@@ -348,7 +350,8 @@ public class GpjmMgrJob  implements java.io.Serializable {
     /**
      * set 客户作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名称
+     * @return GpjmMgrJob
      */
     public GpjmMgrJob cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -359,7 +362,8 @@ public class GpjmMgrJob  implements java.io.Serializable {
     /**
      * set 租户编码
      *
-     * @param companyCode
+     * @param companyCode 租户编码
+     * @return GpjmMgrJob
      */
     public GpjmMgrJob companyCode(String companyCode) {
         this.companyCode = companyCode;
@@ -370,7 +374,8 @@ public class GpjmMgrJob  implements java.io.Serializable {
     /**
      * set 工作空间编码
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间编码
+     * @return GpjmMgrJob
      */
     public GpjmMgrJob workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -381,7 +386,8 @@ public class GpjmMgrJob  implements java.io.Serializable {
     /**
      * set 处理类型（calc：数据计算，extract：数据抽取，ods：ODS加工，load：数据推送，hdfs：数据同步,dqim:质量作业）
      *
-     * @param processType
+     * @param processType 处理类型（calc：数据计算，extract：数据抽取，ods：ODS加工，load：数据推送，hdfs：数据同步,dqim:质量作业）
+     * @return GpjmMgrJob
      */
     public GpjmMgrJob processType(String processType) {
         this.processType = processType;
@@ -392,7 +398,8 @@ public class GpjmMgrJob  implements java.io.Serializable {
     /**
      * set 作业执行类型
      *
-     * @param exeType
+     * @param exeType 作业执行类型
+     * @return GpjmMgrJob
      */
     public GpjmMgrJob exeType(String exeType) {
         this.exeType = exeType;
@@ -403,7 +410,8 @@ public class GpjmMgrJob  implements java.io.Serializable {
     /**
      * set 删除标识，1 删除，0 非删除
      *
-     * @param deleteFlag
+     * @param deleteFlag 删除标识，1 删除，0 非删除
+     * @return GpjmMgrJob
      */
     public GpjmMgrJob deleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;
@@ -414,7 +422,8 @@ public class GpjmMgrJob  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return GpjmMgrJob
      */
     public GpjmMgrJob createTime(String createTime) {
         this.createTime = createTime;
@@ -425,7 +434,8 @@ public class GpjmMgrJob  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return GpjmMgrJob
      */
     public GpjmMgrJob updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -436,7 +446,8 @@ public class GpjmMgrJob  implements java.io.Serializable {
     /**
      * set 作业名称关键词
      *
-     * @param nameKeyWord
+     * @param nameKeyWord 作业名称关键词
+     * @return GpjmMgrJob
      */
     public GpjmMgrJob nameKeyWord(String nameKeyWord) {
         this.nameKeyWord = nameKeyWord;
@@ -447,7 +458,8 @@ public class GpjmMgrJob  implements java.io.Serializable {
     /**
      * set 关联类型：1:一对一 2：一对多 3：多对一
      *
-     * @param relationType
+     * @param relationType 关联类型：1:一对一 2：一对多 3：多对一
+     * @return GpjmMgrJob
      */
     public GpjmMgrJob relationType(String relationType) {
         this.relationType = relationType;

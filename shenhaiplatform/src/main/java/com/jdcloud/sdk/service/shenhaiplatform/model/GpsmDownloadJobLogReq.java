@@ -110,7 +110,8 @@ public class GpsmDownloadJobLogReq  implements java.io.Serializable {
     /**
      * set 任务名称
      *
-     * @param jobName
+     * @param jobName 任务名称
+     * @return GpsmDownloadJobLogReq
      */
     public GpsmDownloadJobLogReq jobName(String jobName) {
         this.jobName = jobName;
@@ -121,7 +122,8 @@ public class GpsmDownloadJobLogReq  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GpsmDownloadJobLogReq
      */
     public GpsmDownloadJobLogReq txDate(String txDate) {
         this.txDate = txDate;
@@ -132,7 +134,8 @@ public class GpsmDownloadJobLogReq  implements java.io.Serializable {
     /**
      * set jobSessionId
      *
-     * @param jobSessionId
+     * @param jobSessionId jobSessionId
+     * @return GpsmDownloadJobLogReq
      */
     public GpsmDownloadJobLogReq jobSessionId(Integer jobSessionId) {
         this.jobSessionId = jobSessionId;

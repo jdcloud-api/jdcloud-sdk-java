@@ -92,7 +92,8 @@ public class GravityParticleSchedDictGetJobTypeRRequest extends JdcloudRequest i
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleSchedDictGetJobTypeRRequest
      */
     public GravityParticleSchedDictGetJobTypeRRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class GravityParticleSchedDictGetJobTypeRRequest extends JdcloudRequest i
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleSchedDictGetJobTypeRRequest
      */
     public GravityParticleSchedDictGetJobTypeRRequest appName(String appName) {
         this.appName = appName;

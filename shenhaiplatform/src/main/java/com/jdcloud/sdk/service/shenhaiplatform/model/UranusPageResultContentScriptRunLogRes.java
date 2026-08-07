@@ -112,7 +112,8 @@ public class UranusPageResultContentScriptRunLogRes  implements java.io.Serializ
     /**
      * set totalPage
      *
-     * @param totalPage
+     * @param totalPage 
+     * @return UranusPageResultContentScriptRunLogRes
      */
     public UranusPageResultContentScriptRunLogRes totalPage(Integer totalPage) {
         this.totalPage = totalPage;
@@ -123,7 +124,8 @@ public class UranusPageResultContentScriptRunLogRes  implements java.io.Serializ
     /**
      * set totalRecords
      *
-     * @param totalRecords
+     * @param totalRecords 
+     * @return UranusPageResultContentScriptRunLogRes
      */
     public UranusPageResultContentScriptRunLogRes totalRecords(Integer totalRecords) {
         this.totalRecords = totalRecords;
@@ -134,7 +136,8 @@ public class UranusPageResultContentScriptRunLogRes  implements java.io.Serializ
     /**
     * set list
     *
-    * @param list
+    * @param list 
+    * @return UranusPageResultContentScriptRunLogRes
     */
     public UranusPageResultContentScriptRunLogRes list(List<UranusScriptRunLogRes> list) {
         this.list = list;

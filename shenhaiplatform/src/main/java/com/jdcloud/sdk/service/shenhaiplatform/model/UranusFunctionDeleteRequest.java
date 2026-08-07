@@ -116,7 +116,8 @@ public class UranusFunctionDeleteRequest extends JdcloudRequest implements java.
     /**
      * set 函数id
      *
-     * @param functionId
+     * @param functionId 函数id
+     * @return UranusFunctionDeleteRequest
      */
     public UranusFunctionDeleteRequest functionId(Integer functionId) {
         this.functionId = functionId;
@@ -127,7 +128,8 @@ public class UranusFunctionDeleteRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusFunctionDeleteRequest
      */
     public UranusFunctionDeleteRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class UranusFunctionDeleteRequest extends JdcloudRequest implements java.
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusFunctionDeleteRequest
      */
     public UranusFunctionDeleteRequest appName(String appName) {
         this.appName = appName;

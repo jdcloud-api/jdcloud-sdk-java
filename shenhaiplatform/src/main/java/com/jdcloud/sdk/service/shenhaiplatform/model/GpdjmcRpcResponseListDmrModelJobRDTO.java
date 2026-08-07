@@ -136,7 +136,8 @@ public class GpdjmcRpcResponseListDmrModelJobRDTO  implements java.io.Serializab
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return GpdjmcRpcResponseListDmrModelJobRDTO
      */
     public GpdjmcRpcResponseListDmrModelJobRDTO success(Integer success) {
         this.success = success;
@@ -147,7 +148,8 @@ public class GpdjmcRpcResponseListDmrModelJobRDTO  implements java.io.Serializab
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return GpdjmcRpcResponseListDmrModelJobRDTO
      */
     public GpdjmcRpcResponseListDmrModelJobRDTO code(String code) {
         this.code = code;
@@ -158,7 +160,8 @@ public class GpdjmcRpcResponseListDmrModelJobRDTO  implements java.io.Serializab
     /**
      * set msg
      *
-     * @param msg
+     * @param msg 
+     * @return GpdjmcRpcResponseListDmrModelJobRDTO
      */
     public GpdjmcRpcResponseListDmrModelJobRDTO msg(String msg) {
         this.msg = msg;
@@ -169,7 +172,8 @@ public class GpdjmcRpcResponseListDmrModelJobRDTO  implements java.io.Serializab
     /**
     * set result
     *
-    * @param result
+    * @param result 
+    * @return GpdjmcRpcResponseListDmrModelJobRDTO
     */
     public GpdjmcRpcResponseListDmrModelJobRDTO result(List<GpdjmcDmrModelJobRDTO> result) {
         this.result = result;

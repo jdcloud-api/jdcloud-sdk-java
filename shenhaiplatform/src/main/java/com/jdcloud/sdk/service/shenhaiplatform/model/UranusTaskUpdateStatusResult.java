@@ -183,7 +183,8 @@ public class UranusTaskUpdateStatusResult extends JdcloudResult implements java.
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusTaskUpdateStatusResult
      */
     public UranusTaskUpdateStatusResult code(String code) {
         this.code = code;
@@ -194,7 +195,8 @@ public class UranusTaskUpdateStatusResult extends JdcloudResult implements java.
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusTaskUpdateStatusResult
      */
     public UranusTaskUpdateStatusResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -205,7 +207,8 @@ public class UranusTaskUpdateStatusResult extends JdcloudResult implements java.
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusTaskUpdateStatusResult
      */
     public UranusTaskUpdateStatusResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -216,7 +219,8 @@ public class UranusTaskUpdateStatusResult extends JdcloudResult implements java.
     /**
      * set Object
      *
-     * @param result
+     * @param result Object
+     * @return UranusTaskUpdateStatusResult
      */
     public UranusTaskUpdateStatusResult result(Object result) {
         this.result = result;
@@ -227,7 +231,8 @@ public class UranusTaskUpdateStatusResult extends JdcloudResult implements java.
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusTaskUpdateStatusResult
      */
     public UranusTaskUpdateStatusResult subCode(String subCode) {
         this.subCode = subCode;
@@ -238,7 +243,8 @@ public class UranusTaskUpdateStatusResult extends JdcloudResult implements java.
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusTaskUpdateStatusResult
      */
     public UranusTaskUpdateStatusResult successed(Boolean successed) {
         this.successed = successed;

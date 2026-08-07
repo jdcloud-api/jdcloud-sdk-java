@@ -116,7 +116,8 @@ public class DescribePublishPkgRequest extends JdcloudRequest implements java.io
     /**
      * set ID
      *
-     * @param pkgId
+     * @param pkgId ID
+     * @return DescribePublishPkgRequest
      */
     public DescribePublishPkgRequest pkgId(Long pkgId) {
         this.pkgId = pkgId;
@@ -127,7 +128,8 @@ public class DescribePublishPkgRequest extends JdcloudRequest implements java.io
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DescribePublishPkgRequest
      */
     public DescribePublishPkgRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class DescribePublishPkgRequest extends JdcloudRequest implements java.io
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return DescribePublishPkgRequest
      */
     public DescribePublishPkgRequest appName(String appName) {
         this.appName = appName;

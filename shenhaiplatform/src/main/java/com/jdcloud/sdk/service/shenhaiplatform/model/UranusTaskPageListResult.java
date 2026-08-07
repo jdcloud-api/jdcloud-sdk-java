@@ -184,7 +184,8 @@ public class UranusTaskPageListResult extends JdcloudResult implements java.io.S
     /**
      * set 返回状态码
      *
-     * @param code
+     * @param code 返回状态码
+     * @return UranusTaskPageListResult
      */
     public UranusTaskPageListResult code(String code) {
         this.code = code;
@@ -195,7 +196,8 @@ public class UranusTaskPageListResult extends JdcloudResult implements java.io.S
     /**
      * set 错误Title
      *
-     * @param errorTitle
+     * @param errorTitle 错误Title
+     * @return UranusTaskPageListResult
      */
     public UranusTaskPageListResult errorTitle(String errorTitle) {
         this.errorTitle = errorTitle;
@@ -206,7 +208,8 @@ public class UranusTaskPageListResult extends JdcloudResult implements java.io.S
     /**
      * set 返回状态信息
      *
-     * @param errorMsg
+     * @param errorMsg 返回状态信息
+     * @return UranusTaskPageListResult
      */
     public UranusTaskPageListResult errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -217,7 +220,8 @@ public class UranusTaskPageListResult extends JdcloudResult implements java.io.S
     /**
      * set result
      *
-     * @param result
+     * @param result 
+     * @return UranusTaskPageListResult
      */
     public UranusTaskPageListResult result(UranusPageResultContentTaskNodePageRes result) {
         this.result = result;
@@ -228,7 +232,8 @@ public class UranusTaskPageListResult extends JdcloudResult implements java.io.S
     /**
      * set 业务码
      *
-     * @param subCode
+     * @param subCode 业务码
+     * @return UranusTaskPageListResult
      */
     public UranusTaskPageListResult subCode(String subCode) {
         this.subCode = subCode;
@@ -239,7 +244,8 @@ public class UranusTaskPageListResult extends JdcloudResult implements java.io.S
     /**
      * set successed
      *
-     * @param successed
+     * @param successed 
+     * @return UranusTaskPageListResult
      */
     public UranusTaskPageListResult successed(Boolean successed) {
         this.successed = successed;

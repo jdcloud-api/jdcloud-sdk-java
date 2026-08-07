@@ -134,7 +134,8 @@ public class GpjsResetJobInstReq  implements java.io.Serializable {
     /**
      * set 作业名称
      *
-     * @param jobName
+     * @param jobName 作业名称
+     * @return GpjsResetJobInstReq
      */
     public GpjsResetJobInstReq jobName(String jobName) {
         this.jobName = jobName;
@@ -145,7 +146,8 @@ public class GpjsResetJobInstReq  implements java.io.Serializable {
     /**
      * set 数据日期
      *
-     * @param txDate
+     * @param txDate 数据日期
+     * @return GpjsResetJobInstReq
      */
     public GpjsResetJobInstReq txDate(String txDate) {
         this.txDate = txDate;
@@ -156,7 +158,8 @@ public class GpjsResetJobInstReq  implements java.io.Serializable {
     /**
      * set 作业重置的状态
      *
-     * @param jobStatus
+     * @param jobStatus 作业重置的状态
+     * @return GpjsResetJobInstReq
      */
     public GpjsResetJobInstReq jobStatus(String jobStatus) {
         this.jobStatus = jobStatus;
@@ -167,7 +170,8 @@ public class GpjsResetJobInstReq  implements java.io.Serializable {
     /**
      * set 作业重置的状态，向后兼容字段和jobStatus一个含义，新接口用jobStatus
      *
-     * @param status
+     * @param status 作业重置的状态，向后兼容字段和jobStatus一个含义，新接口用jobStatus
+     * @return GpjsResetJobInstReq
      */
     public GpjsResetJobInstReq status(String status) {
         this.status = status;

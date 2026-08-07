@@ -674,7 +674,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 页面大小
      *
-     * @param pageSize
+     * @param pageSize 页面大小
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -685,7 +686,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 页码
      *
-     * @param pageNum
+     * @param pageNum 页码
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
@@ -696,7 +698,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
     * set 最后一次运行状态
     *
-    * @param lastJobStatus
+    * @param lastJobStatus 最后一次运行状态
+    * @return GravityParticleParticleJobListJobRequest
     */
     public GravityParticleParticleJobListJobRequest lastJobStatus(List<String> lastJobStatus) {
         this.lastJobStatus = lastJobStatus;
@@ -707,7 +710,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
     * set 处理类型
     *
-    * @param excludeJobTypes
+    * @param excludeJobTypes 处理类型
+    * @return GravityParticleParticleJobListJobRequest
     */
     public GravityParticleParticleJobListJobRequest excludeJobTypes(List<String> excludeJobTypes) {
         this.excludeJobTypes = excludeJobTypes;
@@ -718,7 +722,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set marketJobsAll
      *
-     * @param marketJobsAll
+     * @param marketJobsAll 
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest marketJobsAll(String marketJobsAll) {
         this.marketJobsAll = marketJobsAll;
@@ -729,7 +734,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest manager(String manager) {
         this.manager = manager;
@@ -740,7 +746,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 任务类型
      *
-     * @param queryMode
+     * @param queryMode 任务类型
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest queryMode(String queryMode) {
         this.queryMode = queryMode;
@@ -751,7 +758,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 作业上上线下线状态
      *
-     * @param enable
+     * @param enable 作业上上线下线状态
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest enable(String enable) {
         this.enable = enable;
@@ -762,7 +770,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 作业名
      *
-     * @param jobName
+     * @param jobName 作业名
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest jobName(String jobName) {
         this.jobName = jobName;
@@ -773,7 +782,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set currentStatus
      *
-     * @param currentStatus
+     * @param currentStatus 
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest currentStatus(String currentStatus) {
         this.currentStatus = currentStatus;
@@ -784,7 +794,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest processType(String processType) {
         this.processType = processType;
@@ -795,7 +806,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 数据日期
      *
-     * @param lastTxdate
+     * @param lastTxdate 数据日期
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest lastTxdate(String lastTxdate) {
         this.lastTxdate = lastTxdate;
@@ -806,7 +818,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 运行周期
      *
-     * @param cycle
+     * @param cycle 运行周期
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest cycle(String cycle) {
         this.cycle = cycle;
@@ -817,7 +830,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 任务执行时间开始
      *
-     * @param jobStartRunTime
+     * @param jobStartRunTime 任务执行时间开始
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest jobStartRunTime(String jobStartRunTime) {
         this.jobStartRunTime = jobStartRunTime;
@@ -828,7 +842,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 任务执行时间- 结束
      *
-     * @param jobEndRunTime
+     * @param jobEndRunTime 任务执行时间- 结束
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest jobEndRunTime(String jobEndRunTime) {
         this.jobEndRunTime = jobEndRunTime;
@@ -839,7 +854,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 任务创建日期-结束
      *
-     * @param createTimeBefore
+     * @param createTimeBefore 任务创建日期-结束
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest createTimeBefore(String createTimeBefore) {
         this.createTimeBefore = createTimeBefore;
@@ -850,7 +866,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 任务创建日期-开始
      *
-     * @param createTimeAfter
+     * @param createTimeAfter 任务创建日期-开始
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest createTimeAfter(String createTimeAfter) {
         this.createTimeAfter = createTimeAfter;
@@ -861,7 +878,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 任务修改日期-结束
      *
-     * @param updateTimeBefore
+     * @param updateTimeBefore 任务修改日期-结束
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest updateTimeBefore(String updateTimeBefore) {
         this.updateTimeBefore = updateTimeBefore;
@@ -872,7 +890,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 任务修改日期-开始
      *
-     * @param updateTimeAfter
+     * @param updateTimeAfter 任务修改日期-开始
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest updateTimeAfter(String updateTimeAfter) {
         this.updateTimeAfter = updateTimeAfter;
@@ -883,7 +902,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 任务类型
      *
-     * @param jobType
+     * @param jobType 任务类型
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest jobType(String jobType) {
         this.jobType = jobType;
@@ -894,7 +914,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set markClassifyCode
      *
-     * @param markClassifyCode
+     * @param markClassifyCode 
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest markClassifyCode(String markClassifyCode) {
         this.markClassifyCode = markClassifyCode;
@@ -905,7 +926,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set markName
      *
-     * @param markName
+     * @param markName 
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest markName(String markName) {
         this.markName = markName;
@@ -916,7 +938,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set jobChildType
      *
-     * @param jobChildType
+     * @param jobChildType 
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest jobChildType(String jobChildType) {
         this.jobChildType = jobChildType;
@@ -927,7 +950,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 客户作业名
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;
@@ -938,7 +962,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -949,7 +974,8 @@ public class GravityParticleParticleJobListJobRequest extends JdcloudRequest imp
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return GravityParticleParticleJobListJobRequest
      */
     public GravityParticleParticleJobListJobRequest appName(String appName) {
         this.appName = appName;

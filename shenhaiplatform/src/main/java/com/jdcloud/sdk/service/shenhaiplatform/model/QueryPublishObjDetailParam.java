@@ -62,7 +62,8 @@ public class QueryPublishObjDetailParam  implements java.io.Serializable {
     /**
      * set ID
      *
-     * @param objId
+     * @param objId ID
+     * @return QueryPublishObjDetailParam
      */
     public QueryPublishObjDetailParam objId(Long objId) {
         this.objId = objId;

@@ -542,7 +542,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 作业id
      *
-     * @param jobId
+     * @param jobId 作业id
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO jobId(Integer jobId) {
         this.jobId = jobId;
@@ -553,7 +554,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 作业名
      *
-     * @param etlJob
+     * @param etlJob 作业名
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO etlJob(String etlJob) {
         this.etlJob = etlJob;
@@ -564,7 +566,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 处理类型
      *
-     * @param processType
+     * @param processType 处理类型
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO processType(String processType) {
         this.processType = processType;
@@ -575,7 +578,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO createTime(String createTime) {
         this.createTime = createTime;
@@ -586,7 +590,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -597,7 +602,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 作业执行类型
      *
-     * @param exeType
+     * @param exeType 作业执行类型
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO exeType(String exeType) {
         this.exeType = exeType;
@@ -608,7 +614,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 工作空间code
      *
-     * @param workspaceCode
+     * @param workspaceCode 工作空间code
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -619,7 +626,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
      *
-     * @param jobType
+     * @param jobType 运行周期 ,F 分钟、H 小时、D 天、W 周、M 月、O 一次性运行、N 无周期
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO jobType(String jobType) {
         this.jobType = jobType;
@@ -630,7 +638,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 周期具体日期
      *
-     * @param frequency
+     * @param frequency 周期具体日期
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO frequency(String frequency) {
         this.frequency = frequency;
@@ -641,7 +650,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 负责人
      *
-     * @param userName
+     * @param userName 负责人
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO userName(String userName) {
         this.userName = userName;
@@ -652,7 +662,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 协作人
      *
-     * @param shareUser
+     * @param shareUser 协作人
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO shareUser(String shareUser) {
         this.shareUser = shareUser;
@@ -663,7 +674,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 作业描述
      *
-     * @param jobDesc
+     * @param jobDesc 作业描述
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO jobDesc(String jobDesc) {
         this.jobDesc = jobDesc;
@@ -674,7 +686,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 失效时间
      *
-     * @param expireTime
+     * @param expireTime 失效时间
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO expireTime(String expireTime) {
         this.expireTime = expireTime;
@@ -685,7 +698,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 是否启用，0未上线、1已上线、2已下线
      *
-     * @param enable
+     * @param enable 是否启用，0未上线、1已上线、2已下线
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO enable(String enable) {
         this.enable = enable;
@@ -696,7 +710,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 作业优先级，数字越小优先级越高
      *
-     * @param priority
+     * @param priority 作业优先级，数字越小优先级越高
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO priority(Integer priority) {
         this.priority = priority;
@@ -707,7 +722,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 作业优先级按照等级分，L1-L4，数字越小优先级越高
      *
-     * @param priorityLevel
+     * @param priorityLevel 作业优先级按照等级分，L1-L4，数字越小优先级越高
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO priorityLevel(String priorityLevel) {
         this.priorityLevel = priorityLevel;
@@ -718,7 +734,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 模型表名
      *
-     * @param tableName
+     * @param tableName 模型表名
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO tableName(String tableName) {
         this.tableName = tableName;
@@ -729,7 +746,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 数据渠道来源：新模型（MODEL），老模型（OLD_MODEL）、集成开发（IDE）、数据管道（PIPE）、数据质量（DQ）、AI(KUAI)
      *
-     * @param channel
+     * @param channel 数据渠道来源：新模型（MODEL），老模型（OLD_MODEL）、集成开发（IDE）、数据管道（PIPE）、数据质量（DQ）、AI(KUAI)
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO channel(String channel) {
         this.channel = channel;
@@ -740,7 +758,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 处理类型
      *
-     * @param processTypeCode
+     * @param processTypeCode 处理类型
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO processTypeCode(String processTypeCode) {
         this.processTypeCode = processTypeCode;
@@ -751,7 +770,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 创建人
      *
-     * @param operator
+     * @param operator 创建人
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO operator(String operator) {
         this.operator = operator;
@@ -762,7 +782,8 @@ public class GpjmJobBasicInfoDTO  implements java.io.Serializable {
     /**
      * set 客户作业名称
      *
-     * @param cstJobName
+     * @param cstJobName 客户作业名称
+     * @return GpjmJobBasicInfoDTO
      */
     public GpjmJobBasicInfoDTO cstJobName(String cstJobName) {
         this.cstJobName = cstJobName;

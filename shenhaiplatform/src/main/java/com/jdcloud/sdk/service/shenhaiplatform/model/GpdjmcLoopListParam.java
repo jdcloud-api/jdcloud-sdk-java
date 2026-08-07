@@ -110,7 +110,8 @@ public class GpdjmcLoopListParam  implements java.io.Serializable {
     /**
      * set 参数key
      *
-     * @param paramKey
+     * @param paramKey 参数key
+     * @return GpdjmcLoopListParam
      */
     public GpdjmcLoopListParam paramKey(String paramKey) {
         this.paramKey = paramKey;
@@ -121,7 +122,8 @@ public class GpdjmcLoopListParam  implements java.io.Serializable {
     /**
      * set 参数值
      *
-     * @param paramValue
+     * @param paramValue 参数值
+     * @return GpdjmcLoopListParam
      */
     public GpdjmcLoopListParam paramValue(String paramValue) {
         this.paramValue = paramValue;
@@ -132,7 +134,8 @@ public class GpdjmcLoopListParam  implements java.io.Serializable {
     /**
      * set 值分隔符
      *
-     * @param valueDelimiter
+     * @param valueDelimiter 值分隔符
+     * @return GpdjmcLoopListParam
      */
     public GpdjmcLoopListParam valueDelimiter(String valueDelimiter) {
         this.valueDelimiter = valueDelimiter;

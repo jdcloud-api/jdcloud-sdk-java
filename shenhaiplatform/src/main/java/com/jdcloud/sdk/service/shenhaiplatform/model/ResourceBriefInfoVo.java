@@ -158,7 +158,8 @@ public class ResourceBriefInfoVo  implements java.io.Serializable {
     /**
      * set 资源code
      *
-     * @param resourceCode
+     * @param resourceCode 资源code
+     * @return ResourceBriefInfoVo
      */
     public ResourceBriefInfoVo resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
@@ -169,7 +170,8 @@ public class ResourceBriefInfoVo  implements java.io.Serializable {
     /**
      * set 资源名称
      *
-     * @param resourceName
+     * @param resourceName 资源名称
+     * @return ResourceBriefInfoVo
      */
     public ResourceBriefInfoVo resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -180,7 +182,8 @@ public class ResourceBriefInfoVo  implements java.io.Serializable {
     /**
      * set 资源类型
      *
-     * @param resourceType
+     * @param resourceType 资源类型
+     * @return ResourceBriefInfoVo
      */
     public ResourceBriefInfoVo resourceType(String resourceType) {
         this.resourceType = resourceType;
@@ -191,7 +194,8 @@ public class ResourceBriefInfoVo  implements java.io.Serializable {
     /**
      * set 资源文件相对路径
      *
-     * @param relativePath
+     * @param relativePath 资源文件相对路径
+     * @return ResourceBriefInfoVo
      */
     public ResourceBriefInfoVo relativePath(String relativePath) {
         this.relativePath = relativePath;
@@ -202,7 +206,8 @@ public class ResourceBriefInfoVo  implements java.io.Serializable {
     /**
      * set 资源文件挂载路径
      *
-     * @param mountPath
+     * @param mountPath 资源文件挂载路径
+     * @return ResourceBriefInfoVo
      */
     public ResourceBriefInfoVo mountPath(String mountPath) {
         this.mountPath = mountPath;

@@ -142,7 +142,8 @@ public class DeletePublishObjRequest extends JdcloudRequest implements java.io.S
     /**
     * set ID列表
     *
-    * @param objIds
+    * @param objIds ID列表
+    * @return DeletePublishObjRequest
     */
     public DeletePublishObjRequest objIds(List<Long> objIds) {
         this.objIds = objIds;
@@ -153,7 +154,8 @@ public class DeletePublishObjRequest extends JdcloudRequest implements java.io.S
     /**
      * set 当前工作空间编码
      *
-     * @param workspaceCode
+     * @param workspaceCode 当前工作空间编码
+     * @return DeletePublishObjRequest
      */
     public DeletePublishObjRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -164,7 +166,8 @@ public class DeletePublishObjRequest extends JdcloudRequest implements java.io.S
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DeletePublishObjRequest
      */
     public DeletePublishObjRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -175,7 +178,8 @@ public class DeletePublishObjRequest extends JdcloudRequest implements java.io.S
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return DeletePublishObjRequest
      */
     public DeletePublishObjRequest appName(String appName) {
         this.appName = appName;

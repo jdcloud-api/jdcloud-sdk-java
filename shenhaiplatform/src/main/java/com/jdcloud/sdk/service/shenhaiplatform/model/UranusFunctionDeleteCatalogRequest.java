@@ -116,7 +116,8 @@ public class UranusFunctionDeleteCatalogRequest extends JdcloudRequest implement
     /**
      * set 分类目录code
      *
-     * @param functionCatalogId
+     * @param functionCatalogId 分类目录code
+     * @return UranusFunctionDeleteCatalogRequest
      */
     public UranusFunctionDeleteCatalogRequest functionCatalogId(Integer functionCatalogId) {
         this.functionCatalogId = functionCatalogId;
@@ -127,7 +128,8 @@ public class UranusFunctionDeleteCatalogRequest extends JdcloudRequest implement
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusFunctionDeleteCatalogRequest
      */
     public UranusFunctionDeleteCatalogRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class UranusFunctionDeleteCatalogRequest extends JdcloudRequest implement
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusFunctionDeleteCatalogRequest
      */
     public UranusFunctionDeleteCatalogRequest appName(String appName) {
         this.appName = appName;

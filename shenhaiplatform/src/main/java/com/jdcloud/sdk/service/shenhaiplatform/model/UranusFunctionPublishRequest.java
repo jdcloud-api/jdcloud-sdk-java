@@ -118,7 +118,8 @@ public class UranusFunctionPublishRequest extends JdcloudRequest implements java
     /**
      * set 函数id
      *
-     * @param functionId
+     * @param functionId 函数id
+     * @return UranusFunctionPublishRequest
      */
     public UranusFunctionPublishRequest functionId(String functionId) {
         this.functionId = functionId;
@@ -129,7 +130,8 @@ public class UranusFunctionPublishRequest extends JdcloudRequest implements java
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusFunctionPublishRequest
      */
     public UranusFunctionPublishRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class UranusFunctionPublishRequest extends JdcloudRequest implements java
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusFunctionPublishRequest
      */
     public UranusFunctionPublishRequest appName(String appName) {
         this.appName = appName;

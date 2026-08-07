@@ -112,7 +112,8 @@ public class GpjmConditionType  implements java.io.Serializable {
     /**
      * set 类型名
      *
-     * @param typeName
+     * @param typeName 类型名
+     * @return GpjmConditionType
      */
     public GpjmConditionType typeName(String typeName) {
         this.typeName = typeName;
@@ -123,7 +124,8 @@ public class GpjmConditionType  implements java.io.Serializable {
     /**
      * set 类型中文名
      *
-     * @param typeNameCh
+     * @param typeNameCh 类型中文名
+     * @return GpjmConditionType
      */
     public GpjmConditionType typeNameCh(String typeNameCh) {
         this.typeNameCh = typeNameCh;
@@ -134,7 +136,8 @@ public class GpjmConditionType  implements java.io.Serializable {
     /**
     * set 类型清单
     *
-    * @param typeList
+    * @param typeList 类型清单
+    * @return GpjmConditionType
     */
     public GpjmConditionType typeList(List<String> typeList) {
         this.typeList = typeList;

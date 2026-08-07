@@ -47,6 +47,11 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
      */
     private String projectCode;
 
+    /**
+     * resourceCode
+     */
+    private String resourceCode;
+
 
 
     /**
@@ -106,11 +111,31 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
     }
 
 
+    /**
+     * get resourceCode
+     *
+     * @return
+     */
+    public String getResourceCode() {
+        return resourceCode;
+    }
+
+    /**
+     * set resourceCode
+     *
+     * @param resourceCode
+     */
+    public void setResourceCode(String resourceCode) {
+        this.resourceCode = resourceCode;
+    }
+
+
 
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return QueryWorkspaceInfoReq
      */
     public QueryWorkspaceInfoReq id(Integer id) {
         this.id = id;
@@ -121,7 +146,8 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
     /**
      * set workspaceCode
      *
-     * @param workspaceCode
+     * @param workspaceCode 
+     * @return QueryWorkspaceInfoReq
      */
     public QueryWorkspaceInfoReq workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
@@ -132,10 +158,23 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
     /**
      * set projectCode
      *
-     * @param projectCode
+     * @param projectCode 
+     * @return QueryWorkspaceInfoReq
      */
     public QueryWorkspaceInfoReq projectCode(String projectCode) {
         this.projectCode = projectCode;
+        return this;
+    }
+
+
+    /**
+     * set resourceCode
+     *
+     * @param resourceCode 
+     * @return QueryWorkspaceInfoReq
+     */
+    public QueryWorkspaceInfoReq resourceCode(String resourceCode) {
+        this.resourceCode = resourceCode;
         return this;
     }
 

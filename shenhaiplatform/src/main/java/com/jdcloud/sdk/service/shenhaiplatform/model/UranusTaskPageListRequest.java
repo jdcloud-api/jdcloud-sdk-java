@@ -406,7 +406,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
      * set 分页
      *
-     * @param page
+     * @param page 分页
+     * @return UranusTaskPageListRequest
      */
     public UranusTaskPageListRequest page(Integer page) {
         this.page = page;
@@ -417,7 +418,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
      * set 分页
      *
-     * @param pageSize
+     * @param pageSize 分页
+     * @return UranusTaskPageListRequest
      */
     public UranusTaskPageListRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -428,7 +430,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
      * set 作业名称
      *
-     * @param taskName
+     * @param taskName 作业名称
+     * @return UranusTaskPageListRequest
      */
     public UranusTaskPageListRequest taskName(String taskName) {
         this.taskName = taskName;
@@ -439,7 +442,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
     * set 任务类型
     *
-    * @param jobType
+    * @param jobType 任务类型
+    * @return UranusTaskPageListRequest
     */
     public UranusTaskPageListRequest jobType(List<Integer> jobType) {
         this.jobType = jobType;
@@ -450,7 +454,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
     * set 子任务类型
     *
-    * @param jobChildType
+    * @param jobChildType 子任务类型
+    * @return UranusTaskPageListRequest
     */
     public UranusTaskPageListRequest jobChildType(List<Integer> jobChildType) {
         this.jobChildType = jobChildType;
@@ -461,7 +466,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
      * set 负责人
      *
-     * @param manager
+     * @param manager 负责人
+     * @return UranusTaskPageListRequest
      */
     public UranusTaskPageListRequest manager(String manager) {
         this.manager = manager;
@@ -472,7 +478,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
     * set 作业状态
     *
-    * @param jobStatus
+    * @param jobStatus 作业状态
+    * @return UranusTaskPageListRequest
     */
     public UranusTaskPageListRequest jobStatus(List<Integer> jobStatus) {
         this.jobStatus = jobStatus;
@@ -483,7 +490,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
     * set 修改状态
     *
-    * @param updateStatus
+    * @param updateStatus 修改状态
+    * @return UranusTaskPageListRequest
     */
     public UranusTaskPageListRequest updateStatus(List<Integer> updateStatus) {
         this.updateStatus = updateStatus;
@@ -494,7 +502,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
      * set 创建时间
      *
-     * @param createTimeBefore
+     * @param createTimeBefore 创建时间
+     * @return UranusTaskPageListRequest
      */
     public UranusTaskPageListRequest createTimeBefore(String createTimeBefore) {
         this.createTimeBefore = createTimeBefore;
@@ -505,7 +514,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
      * set 创建时间
      *
-     * @param createTimeAfter
+     * @param createTimeAfter 创建时间
+     * @return UranusTaskPageListRequest
      */
     public UranusTaskPageListRequest createTimeAfter(String createTimeAfter) {
         this.createTimeAfter = createTimeAfter;
@@ -516,7 +526,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
      * set 更新时间
      *
-     * @param updateTimeBefore
+     * @param updateTimeBefore 更新时间
+     * @return UranusTaskPageListRequest
      */
     public UranusTaskPageListRequest updateTimeBefore(String updateTimeBefore) {
         this.updateTimeBefore = updateTimeBefore;
@@ -527,7 +538,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
      * set 更新时间
      *
-     * @param updateTimeAfter
+     * @param updateTimeAfter 更新时间
+     * @return UranusTaskPageListRequest
      */
     public UranusTaskPageListRequest updateTimeAfter(String updateTimeAfter) {
         this.updateTimeAfter = updateTimeAfter;
@@ -538,7 +550,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
      * set 流程Code
      *
-     * @param flowCode
+     * @param flowCode 流程Code
+     * @return UranusTaskPageListRequest
      */
     public UranusTaskPageListRequest flowCode(String flowCode) {
         this.flowCode = flowCode;
@@ -549,7 +562,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UranusTaskPageListRequest
      */
     public UranusTaskPageListRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -560,7 +574,8 @@ public class UranusTaskPageListRequest extends JdcloudRequest implements java.io
     /**
      * set 应用名称
      *
-     * @param appName
+     * @param appName 应用名称
+     * @return UranusTaskPageListRequest
      */
     public UranusTaskPageListRequest appName(String appName) {
         this.appName = appName;
