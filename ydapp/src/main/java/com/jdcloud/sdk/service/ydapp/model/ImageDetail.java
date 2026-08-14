@@ -238,7 +238,8 @@ docker image命令显示的是解压后的镜像大小，因此会比DescribeIma
     /**
      * set 镜像摘要，E.g.，sha256:e5785cb0c62436f0aaa95354a056f1e9db97a
      *
-     * @param imageDigest
+     * @param imageDigest 镜像摘要，E.g.，sha256:e5785cb0c62436f0aaa95354a056f1e9db97a
+     * @return ImageDetail
      */
     public ImageDetail imageDigest(String imageDigest) {
         this.imageDigest = imageDigest;
@@ -249,7 +250,8 @@ docker image命令显示的是解压后的镜像大小，因此会比DescribeIma
     /**
      * set 镜像推送时间，E.g.，&#39;2024-08-23 16:29:41&#39;
      *
-     * @param imagePushedAt
+     * @param imagePushedAt 镜像推送时间，E.g.，&#39;2024-08-23 16:29:41&#39;
+     * @return ImageDetail
      */
     public ImageDetail imagePushedAt(String imagePushedAt) {
         this.imagePushedAt = imagePushedAt;
@@ -262,7 +264,10 @@ docker image命令显示的是解压后的镜像大小，因此会比DescribeIma
 docker image命令显示的是解压后的镜像大小，因此会比DescribeImages接口返回的镜像大小会大很多，E.g.，156.7
 
      *
-     * @param imageSizeMB
+     * @param imageSizeMB image在repository中的大小。从Docker 1.9之后的版本, Docker client会压缩镜像层数据再push到V2版本的Docker registry。
+docker image命令显示的是解压后的镜像大小，因此会比DescribeImages接口返回的镜像大小会大很多，E.g.，156.7
+
+     * @return ImageDetail
      */
     public ImageDetail imageSizeMB(Double imageSizeMB) {
         this.imageSizeMB = imageSizeMB;
@@ -273,7 +278,8 @@ docker image命令显示的是解压后的镜像大小，因此会比DescribeIma
     /**
     * set 镜像标签列表，即镜像版本列表，E.g.，[&#39;latest&#39;, &#39;v1.0.0&#39;, &#39;stable&#39;]
     *
-    * @param imageTags
+    * @param imageTags 镜像标签列表，即镜像版本列表，E.g.，[&#39;latest&#39;, &#39;v1.0.0&#39;, &#39;stable&#39;]
+    * @return ImageDetail
     */
     public ImageDetail imageTags(List<String> imageTags) {
         this.imageTags = imageTags;
@@ -284,7 +290,8 @@ docker image命令显示的是解压后的镜像大小，因此会比DescribeIma
     /**
      * set 最后拉取时间，E.g.，&#39;2024-10-25 14:24:56&#39;
      *
-     * @param lastPullAt
+     * @param lastPullAt 最后拉取时间，E.g.，&#39;2024-10-25 14:24:56&#39;
+     * @return ImageDetail
      */
     public ImageDetail lastPullAt(String lastPullAt) {
         this.lastPullAt = lastPullAt;
@@ -295,7 +302,8 @@ docker image命令显示的是解压后的镜像大小，因此会比DescribeIma
     /**
      * set 镜像仓库名称，E.g.，e5785cb0c62436f05f17e1e
      *
-     * @param registryName
+     * @param registryName 镜像仓库名称，E.g.，e5785cb0c62436f05f17e1e
+     * @return ImageDetail
      */
     public ImageDetail registryName(String registryName) {
         this.registryName = registryName;
@@ -306,7 +314,8 @@ docker image命令显示的是解压后的镜像大小，因此会比DescribeIma
     /**
      * set 镜像仓库路径，E.g.，app-62436f05f17
      *
-     * @param repositoryName
+     * @param repositoryName 镜像仓库路径，E.g.，app-62436f05f17
+     * @return ImageDetail
      */
     public ImageDetail repositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
@@ -317,7 +326,8 @@ docker image命令显示的是解压后的镜像大小，因此会比DescribeIma
     /**
      * set 总拉取次数，E.g.，66
      *
-     * @param totalPullTimes
+     * @param totalPullTimes 总拉取次数，E.g.，66
+     * @return ImageDetail
      */
     public ImageDetail totalPullTimes(Integer totalPullTimes) {
         this.totalPullTimes = totalPullTimes;

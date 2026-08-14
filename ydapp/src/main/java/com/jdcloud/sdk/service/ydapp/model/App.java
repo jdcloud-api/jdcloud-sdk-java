@@ -158,7 +158,8 @@ public class App  implements java.io.Serializable {
     /**
      * set 应用ID，E.g.，app-123456789
      *
-     * @param appId
+     * @param appId 应用ID，E.g.，app-123456789
+     * @return App
      */
     public App appId(String appId) {
         this.appId = appId;
@@ -169,7 +170,8 @@ public class App  implements java.io.Serializable {
     /**
      * set 应用名称，E.g.，测试应用
      *
-     * @param appName
+     * @param appName 应用名称，E.g.，测试应用
+     * @return App
      */
     public App appName(String appName) {
         this.appName = appName;
@@ -180,7 +182,8 @@ public class App  implements java.io.Serializable {
     /**
      * set 应用归属的系统ID，E.g.，sys-987654321
      *
-     * @param systemId
+     * @param systemId 应用归属的系统ID，E.g.，sys-987654321
+     * @return App
      */
     public App systemId(String systemId) {
         this.systemId = systemId;
@@ -191,7 +194,8 @@ public class App  implements java.io.Serializable {
     /**
      * set 创建时间，E.g.，&#39;2024-08-22T05:48:37.000+00:00&#39;
      *
-     * @param createTime
+     * @param createTime 创建时间，E.g.，&#39;2024-08-22T05:48:37.000+00:00&#39;
+     * @return App
      */
     public App createTime(String createTime) {
         this.createTime = createTime;
@@ -202,7 +206,8 @@ public class App  implements java.io.Serializable {
     /**
      * set 更新时间，E.g.，&#39;2024-08-22T05:48:37.000+00:00&#39;
      *
-     * @param updateTime
+     * @param updateTime 更新时间，E.g.，&#39;2024-08-22T05:48:37.000+00:00&#39;
+     * @return App
      */
     public App updateTime(String updateTime) {
         this.updateTime = updateTime;

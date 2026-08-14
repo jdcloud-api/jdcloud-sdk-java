@@ -158,7 +158,8 @@ public class Deployment  implements java.io.Serializable {
     /**
      * set 最大停止服务容器, 按照设置比例停止旧版本容器，用于保证可用容器比例，比例越高升级的越快。范围：0-100，，E.g.，10
      *
-     * @param concurrency
+     * @param concurrency 最大停止服务容器, 按照设置比例停止旧版本容器，用于保证可用容器比例，比例越高升级的越快。范围：0-100，，E.g.，10
+     * @return Deployment
      */
     public Deployment concurrency(Integer concurrency) {
         this.concurrency = concurrency;
@@ -169,7 +170,8 @@ public class Deployment  implements java.io.Serializable {
     /**
      * set 镜像类型，可以为空，默认为custom，可选属性为：standard、custom，E.g.，custom
      *
-     * @param imageType
+     * @param imageType 镜像类型，可以为空，默认为custom，可选属性为：standard、custom，E.g.，custom
+     * @return Deployment
      */
     public Deployment imageType(String imageType) {
         this.imageType = imageType;
@@ -180,7 +182,8 @@ public class Deployment  implements java.io.Serializable {
     /**
      * set 镜像版本信息，不能为空，镜像列表接口返回参数 imageDetail 的属性 imageTags 的值，E.g.，v1.0.0
      *
-     * @param imageVersion
+     * @param imageVersion 镜像版本信息，不能为空，镜像列表接口返回参数 imageDetail 的属性 imageTags 的值，E.g.，v1.0.0
+     * @return Deployment
      */
     public Deployment imageVersion(String imageVersion) {
         this.imageVersion = imageVersion;
@@ -191,7 +194,8 @@ public class Deployment  implements java.io.Serializable {
     /**
      * set 可额外创建容器, 按照设置比例创建新版本容器用于旧版本容器，比例越高升级的越快，临时占用的集群资源越高。范围：0-100，E.g.，10
      *
-     * @param maxSurge
+     * @param maxSurge 可额外创建容器, 按照设置比例创建新版本容器用于旧版本容器，比例越高升级的越快，临时占用的集群资源越高。范围：0-100，E.g.，10
+     * @return Deployment
      */
     public Deployment maxSurge(Integer maxSurge) {
         this.maxSurge = maxSurge;
@@ -202,7 +206,8 @@ public class Deployment  implements java.io.Serializable {
     /**
      * set 部署的容器数量，E.g.，3
      *
-     * @param podCount
+     * @param podCount 部署的容器数量，E.g.，3
+     * @return Deployment
      */
     public Deployment podCount(Integer podCount) {
         this.podCount = podCount;

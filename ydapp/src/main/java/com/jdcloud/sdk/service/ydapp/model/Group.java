@@ -182,7 +182,8 @@ public class Group  implements java.io.Serializable {
     /**
      * set 分组ID，E.g.，group-123456789
      *
-     * @param groupId
+     * @param groupId 分组ID，E.g.，group-123456789
+     * @return Group
      */
     public Group groupId(String groupId) {
         this.groupId = groupId;
@@ -193,7 +194,8 @@ public class Group  implements java.io.Serializable {
     /**
      * set 应用ID，E.g.，app-987654321
      *
-     * @param appId
+     * @param appId 应用ID，E.g.，app-987654321
+     * @return Group
      */
     public Group appId(String appId) {
         this.appId = appId;
@@ -204,7 +206,8 @@ public class Group  implements java.io.Serializable {
     /**
      * set 分组英文名称，E.g.，test-group
      *
-     * @param groupName
+     * @param groupName 分组英文名称，E.g.，test-group
+     * @return Group
      */
     public Group groupName(String groupName) {
         this.groupName = groupName;
@@ -215,7 +218,8 @@ public class Group  implements java.io.Serializable {
     /**
      * set 应用英文名称，E.g.，test-app
      *
-     * @param appName
+     * @param appName 应用英文名称，E.g.，test-app
+     * @return Group
      */
     public Group appName(String appName) {
         this.appName = appName;
@@ -226,7 +230,8 @@ public class Group  implements java.io.Serializable {
     /**
      * set 创建时间，E.g.，&#39;2024-12-09T10:41:32.000+00:00&#39;
      *
-     * @param createTime
+     * @param createTime 创建时间，E.g.，&#39;2024-12-09T10:41:32.000+00:00&#39;
+     * @return Group
      */
     public Group createTime(String createTime) {
         this.createTime = createTime;
@@ -237,7 +242,8 @@ public class Group  implements java.io.Serializable {
     /**
      * set 更新时间，E.g.，&#39;2024-12-09T10:41:32.000+00:00&#39;
      *
-     * @param updateTime
+     * @param updateTime 更新时间，E.g.，&#39;2024-12-09T10:41:32.000+00:00&#39;
+     * @return Group
      */
     public Group updateTime(String updateTime) {
         this.updateTime = updateTime;
