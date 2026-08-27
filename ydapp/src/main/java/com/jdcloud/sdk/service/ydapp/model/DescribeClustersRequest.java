@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 用户应用
+ * 集群管理
  * 
  *
  * OpenAPI spec version: v1
@@ -27,14 +27,14 @@ package com.jdcloud.sdk.service.ydapp.model;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 分页获取应用信息列表
+ * 分页查询集群列表
  */
-public class DescribeAppsRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeClustersRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码，默认为1
+     * 页码，默认1
      */
     private Integer pageNum;
 
@@ -46,7 +46,7 @@ public class DescribeAppsRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 页码，默认为1
+     * get 页码，默认1
      *
      * @return
      */
@@ -55,7 +55,7 @@ public class DescribeAppsRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 页码，默认为1
+     * set 页码，默认1
      *
      * @param pageNum
      */
@@ -85,12 +85,12 @@ public class DescribeAppsRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 页码，默认为1
+     * set 页码，默认1
      *
-     * @param pageNum 页码，默认为1
-     * @return DescribeAppsRequest
+     * @param pageNum 页码，默认1
+     * @return DescribeClustersRequest
      */
-    public DescribeAppsRequest pageNum(Integer pageNum) {
+    public DescribeClustersRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
         return this;
     }
@@ -100,9 +100,9 @@ public class DescribeAppsRequest extends JdcloudRequest implements java.io.Seria
      * set 每页数量，默认10，最大100
      *
      * @param pageSize 每页数量，默认10，最大100
-     * @return DescribeAppsRequest
+     * @return DescribeClustersRequest
      */
-    public DescribeAppsRequest pageSize(Integer pageSize) {
+    public DescribeClustersRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }

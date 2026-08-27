@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Pod管理
+ * 用户应用分组
  * 
  *
  * OpenAPI spec version: v1
@@ -28,21 +28,11 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 支持分页查询的Pod列表获取
+ * 删除指定应用分组
  */
-public class DescribePodsRequest extends JdcloudRequest implements java.io.Serializable {
+public class DeleteAppGroupRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * 页码
-     */
-    private Integer pageNum;
-
-    /**
-     * 每页数量，默认10，最大100
-     */
-    private Integer pageSize;
 
     /**
      * 应用ID
@@ -58,44 +48,6 @@ public class DescribePodsRequest extends JdcloudRequest implements java.io.Seria
     @Required
     private String groupId;
 
-
-
-    /**
-     * get 页码
-     *
-     * @return
-     */
-    public Integer getPageNum() {
-        return pageNum;
-    }
-
-    /**
-     * set 页码
-     *
-     * @param pageNum
-     */
-    public void setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
-    }
-
-
-    /**
-     * get 每页数量，默认10，最大100
-     *
-     * @return
-     */
-    public Integer getPageSize() {
-        return pageSize;
-    }
-
-    /**
-     * set 每页数量，默认10，最大100
-     *
-     * @param pageSize
-     */
-    public void setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-    }
 
 
     /**
@@ -138,36 +90,12 @@ public class DescribePodsRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 页码
-     *
-     * @param pageNum 页码
-     * @return DescribePodsRequest
-     */
-    public DescribePodsRequest pageNum(Integer pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-
-
-    /**
-     * set 每页数量，默认10，最大100
-     *
-     * @param pageSize 每页数量，默认10，最大100
-     * @return DescribePodsRequest
-     */
-    public DescribePodsRequest pageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-
-
-    /**
      * set 应用ID
      *
      * @param appId 应用ID
-     * @return DescribePodsRequest
+     * @return DeleteAppGroupRequest
      */
-    public DescribePodsRequest appId(String appId) {
+    public DeleteAppGroupRequest appId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -177,9 +105,9 @@ public class DescribePodsRequest extends JdcloudRequest implements java.io.Seria
      * set 分组ID
      *
      * @param groupId 分组ID
-     * @return DescribePodsRequest
+     * @return DeleteAppGroupRequest
      */
-    public DescribePodsRequest groupId(String groupId) {
+    public DeleteAppGroupRequest groupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
