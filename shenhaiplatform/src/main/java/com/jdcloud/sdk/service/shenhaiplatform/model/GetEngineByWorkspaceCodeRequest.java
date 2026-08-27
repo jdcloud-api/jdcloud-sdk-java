@@ -55,6 +55,11 @@ public class GetEngineByWorkspaceCodeRequest extends JdcloudRequest implements j
     private String resourceCode;
 
     /**
+     * 存算引擎实例编码
+     */
+    private String engineCode;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -147,6 +152,25 @@ public class GetEngineByWorkspaceCodeRequest extends JdcloudRequest implements j
 
 
     /**
+     * get 存算引擎实例编码
+     *
+     * @return
+     */
+    public String getEngineCode() {
+        return engineCode;
+    }
+
+    /**
+     * set 存算引擎实例编码
+     *
+     * @param engineCode
+     */
+    public void setEngineCode(String engineCode) {
+        this.engineCode = engineCode;
+    }
+
+
+    /**
      * get 地域ID
      *
      * @return
@@ -229,6 +253,18 @@ public class GetEngineByWorkspaceCodeRequest extends JdcloudRequest implements j
      */
     public GetEngineByWorkspaceCodeRequest resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
+        return this;
+    }
+
+
+    /**
+     * set 存算引擎实例编码
+     *
+     * @param engineCode 存算引擎实例编码
+     * @return GetEngineByWorkspaceCodeRequest
+     */
+    public GetEngineByWorkspaceCodeRequest engineCode(String engineCode) {
+        this.engineCode = engineCode;
         return this;
     }
 

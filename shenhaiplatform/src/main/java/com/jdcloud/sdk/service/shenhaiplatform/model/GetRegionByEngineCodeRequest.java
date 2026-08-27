@@ -28,9 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 通过计算引擎Code查询绑定的云仓和JMR实例列表
+ * 根据存算引擎实例编码查询对应的regionId
  */
-public class GetInstancesRequest extends JdcloudRequest implements java.io.Serializable {
+public class GetRegionByEngineCodeRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -213,9 +213,9 @@ public class GetInstancesRequest extends JdcloudRequest implements java.io.Seria
      * set id
      *
      * @param id 
-     * @return GetInstancesRequest
+     * @return GetRegionByEngineCodeRequest
      */
-    public GetInstancesRequest id(Integer id) {
+    public GetRegionByEngineCodeRequest id(Integer id) {
         this.id = id;
         return this;
     }
@@ -225,9 +225,9 @@ public class GetInstancesRequest extends JdcloudRequest implements java.io.Seria
      * set workspaceCode
      *
      * @param workspaceCode 
-     * @return GetInstancesRequest
+     * @return GetRegionByEngineCodeRequest
      */
-    public GetInstancesRequest workspaceCode(String workspaceCode) {
+    public GetRegionByEngineCodeRequest workspaceCode(String workspaceCode) {
         this.workspaceCode = workspaceCode;
         return this;
     }
@@ -237,9 +237,9 @@ public class GetInstancesRequest extends JdcloudRequest implements java.io.Seria
      * set projectCode
      *
      * @param projectCode 
-     * @return GetInstancesRequest
+     * @return GetRegionByEngineCodeRequest
      */
-    public GetInstancesRequest projectCode(String projectCode) {
+    public GetRegionByEngineCodeRequest projectCode(String projectCode) {
         this.projectCode = projectCode;
         return this;
     }
@@ -249,9 +249,9 @@ public class GetInstancesRequest extends JdcloudRequest implements java.io.Seria
      * set resourceCode
      *
      * @param resourceCode 
-     * @return GetInstancesRequest
+     * @return GetRegionByEngineCodeRequest
      */
-    public GetInstancesRequest resourceCode(String resourceCode) {
+    public GetRegionByEngineCodeRequest resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
         return this;
     }
@@ -261,9 +261,9 @@ public class GetInstancesRequest extends JdcloudRequest implements java.io.Seria
      * set 存算引擎实例编码
      *
      * @param engineCode 存算引擎实例编码
-     * @return GetInstancesRequest
+     * @return GetRegionByEngineCodeRequest
      */
-    public GetInstancesRequest engineCode(String engineCode) {
+    public GetRegionByEngineCodeRequest engineCode(String engineCode) {
         this.engineCode = engineCode;
         return this;
     }
@@ -273,9 +273,9 @@ public class GetInstancesRequest extends JdcloudRequest implements java.io.Seria
      * set 地域ID
      *
      * @param regionId 地域ID
-     * @return GetInstancesRequest
+     * @return GetRegionByEngineCodeRequest
      */
-    public GetInstancesRequest regionId(String regionId) {
+    public GetRegionByEngineCodeRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -285,9 +285,9 @@ public class GetInstancesRequest extends JdcloudRequest implements java.io.Seria
      * set 应用名称
      *
      * @param appName 应用名称
-     * @return GetInstancesRequest
+     * @return GetRegionByEngineCodeRequest
      */
-    public GetInstancesRequest appName(String appName) {
+    public GetRegionByEngineCodeRequest appName(String appName) {
         this.appName = appName;
         return this;
     }
