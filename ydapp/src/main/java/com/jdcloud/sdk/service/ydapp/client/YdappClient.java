@@ -31,24 +31,18 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.ydapp.model.CreatePipelineTaskRequest;
-import com.jdcloud.sdk.service.ydapp.model.CreatePipelineTaskResponse;
-import com.jdcloud.sdk.service.ydapp.client.CreatePipelineTaskExecutor;
-import com.jdcloud.sdk.service.ydapp.model.DescribeAppsRequest;
-import com.jdcloud.sdk.service.ydapp.model.DescribeAppsResponse;
-import com.jdcloud.sdk.service.ydapp.client.DescribeAppsExecutor;
 import com.jdcloud.sdk.service.ydapp.model.DescribeAutoDeletePolicyRequest;
 import com.jdcloud.sdk.service.ydapp.model.DescribeAutoDeletePolicyResponse;
 import com.jdcloud.sdk.service.ydapp.client.DescribeAutoDeletePolicyExecutor;
-import com.jdcloud.sdk.service.ydapp.model.DeployRequest;
-import com.jdcloud.sdk.service.ydapp.model.DeployResponse;
-import com.jdcloud.sdk.service.ydapp.client.DeployExecutor;
 import com.jdcloud.sdk.service.ydapp.model.DescribeImageRecordsRequest;
 import com.jdcloud.sdk.service.ydapp.model.DescribeImageRecordsResponse;
 import com.jdcloud.sdk.service.ydapp.client.DescribeImageRecordsExecutor;
 import com.jdcloud.sdk.service.ydapp.model.UpdateGroupEnvironmentRequest;
 import com.jdcloud.sdk.service.ydapp.model.UpdateGroupEnvironmentResponse;
 import com.jdcloud.sdk.service.ydapp.client.UpdateGroupEnvironmentExecutor;
+import com.jdcloud.sdk.service.ydapp.model.DescribeAppRequest;
+import com.jdcloud.sdk.service.ydapp.model.DescribeAppResponse;
+import com.jdcloud.sdk.service.ydapp.client.DescribeAppExecutor;
 import com.jdcloud.sdk.service.ydapp.model.DescribeGroupConfigRequest;
 import com.jdcloud.sdk.service.ydapp.model.DescribeGroupConfigResponse;
 import com.jdcloud.sdk.service.ydapp.client.DescribeGroupConfigExecutor;
@@ -58,36 +52,93 @@ import com.jdcloud.sdk.service.ydapp.client.DescribeGroupConfigFilesExecutor;
 import com.jdcloud.sdk.service.ydapp.model.DeleteImageRecordRequest;
 import com.jdcloud.sdk.service.ydapp.model.DeleteImageRecordResponse;
 import com.jdcloud.sdk.service.ydapp.client.DeleteImageRecordExecutor;
+import com.jdcloud.sdk.service.ydapp.model.UpdateConfigFileRequest;
+import com.jdcloud.sdk.service.ydapp.model.UpdateConfigFileResponse;
+import com.jdcloud.sdk.service.ydapp.client.UpdateConfigFileExecutor;
+import com.jdcloud.sdk.service.ydapp.model.DescribeClustersRequest;
+import com.jdcloud.sdk.service.ydapp.model.DescribeClustersResponse;
+import com.jdcloud.sdk.service.ydapp.client.DescribeClustersExecutor;
+import com.jdcloud.sdk.service.ydapp.model.ContainerAntiAffinityRequest;
+import com.jdcloud.sdk.service.ydapp.model.ContainerAntiAffinityResponse;
+import com.jdcloud.sdk.service.ydapp.client.ContainerAntiAffinityExecutor;
+import com.jdcloud.sdk.service.ydapp.model.CreateAppGroupRequest;
+import com.jdcloud.sdk.service.ydapp.model.CreateAppGroupResponse;
+import com.jdcloud.sdk.service.ydapp.client.CreateAppGroupExecutor;
+import com.jdcloud.sdk.service.ydapp.model.GetPackageDownloadInfoRequest;
+import com.jdcloud.sdk.service.ydapp.model.GetPackageDownloadInfoResponse;
+import com.jdcloud.sdk.service.ydapp.client.GetPackageDownloadInfoExecutor;
+import com.jdcloud.sdk.service.ydapp.model.RebuildRequest;
+import com.jdcloud.sdk.service.ydapp.model.RebuildResponse;
+import com.jdcloud.sdk.service.ydapp.client.RebuildExecutor;
+import com.jdcloud.sdk.service.ydapp.model.UpdateStartCmdRequest;
+import com.jdcloud.sdk.service.ydapp.model.UpdateStartCmdResponse;
+import com.jdcloud.sdk.service.ydapp.client.UpdateStartCmdExecutor;
+import com.jdcloud.sdk.service.ydapp.model.UpdateAppRequest;
+import com.jdcloud.sdk.service.ydapp.model.UpdateAppResponse;
+import com.jdcloud.sdk.service.ydapp.client.UpdateAppExecutor;
+import com.jdcloud.sdk.service.ydapp.model.DeleteAppRequest;
+import com.jdcloud.sdk.service.ydapp.model.DeleteAppResponse;
+import com.jdcloud.sdk.service.ydapp.client.DeleteAppExecutor;
+import com.jdcloud.sdk.service.ydapp.model.DeleteAppGroupRequest;
+import com.jdcloud.sdk.service.ydapp.model.DeleteAppGroupResponse;
+import com.jdcloud.sdk.service.ydapp.client.DeleteAppGroupExecutor;
+import com.jdcloud.sdk.service.ydapp.model.DeleteConfigFileRequest;
+import com.jdcloud.sdk.service.ydapp.model.DeleteConfigFileResponse;
+import com.jdcloud.sdk.service.ydapp.client.DeleteConfigFileExecutor;
+import com.jdcloud.sdk.service.ydapp.model.DescribePodsRequest;
+import com.jdcloud.sdk.service.ydapp.model.DescribePodsResponse;
+import com.jdcloud.sdk.service.ydapp.client.DescribePodsExecutor;
+import com.jdcloud.sdk.service.ydapp.model.OpenAutoDeleteRepoRequest;
+import com.jdcloud.sdk.service.ydapp.model.OpenAutoDeleteRepoResponse;
+import com.jdcloud.sdk.service.ydapp.client.OpenAutoDeleteRepoExecutor;
+import com.jdcloud.sdk.service.ydapp.model.CopyAppGroupRequest;
+import com.jdcloud.sdk.service.ydapp.model.CopyAppGroupResponse;
+import com.jdcloud.sdk.service.ydapp.client.CopyAppGroupExecutor;
+import com.jdcloud.sdk.service.ydapp.model.DescribePackagesRequest;
+import com.jdcloud.sdk.service.ydapp.model.DescribePackagesResponse;
+import com.jdcloud.sdk.service.ydapp.client.DescribePackagesExecutor;
+import com.jdcloud.sdk.service.ydapp.model.UpdateLifeCycleRequest;
+import com.jdcloud.sdk.service.ydapp.model.UpdateLifeCycleResponse;
+import com.jdcloud.sdk.service.ydapp.client.UpdateLifeCycleExecutor;
+import com.jdcloud.sdk.service.ydapp.model.RestartRequest;
+import com.jdcloud.sdk.service.ydapp.model.RestartResponse;
+import com.jdcloud.sdk.service.ydapp.client.RestartExecutor;
+import com.jdcloud.sdk.service.ydapp.model.StopDeployTaskRequest;
+import com.jdcloud.sdk.service.ydapp.model.StopDeployTaskResponse;
+import com.jdcloud.sdk.service.ydapp.client.StopDeployTaskExecutor;
+import com.jdcloud.sdk.service.ydapp.model.CreatePipelineTaskRequest;
+import com.jdcloud.sdk.service.ydapp.model.CreatePipelineTaskResponse;
+import com.jdcloud.sdk.service.ydapp.client.CreatePipelineTaskExecutor;
+import com.jdcloud.sdk.service.ydapp.model.DescribeJosAppsRequest;
+import com.jdcloud.sdk.service.ydapp.model.DescribeJosAppsResponse;
+import com.jdcloud.sdk.service.ydapp.client.DescribeJosAppsExecutor;
+import com.jdcloud.sdk.service.ydapp.model.DescribeAppsRequest;
+import com.jdcloud.sdk.service.ydapp.model.DescribeAppsResponse;
+import com.jdcloud.sdk.service.ydapp.client.DescribeAppsExecutor;
+import com.jdcloud.sdk.service.ydapp.model.DeployRequest;
+import com.jdcloud.sdk.service.ydapp.model.DeployResponse;
+import com.jdcloud.sdk.service.ydapp.client.DeployExecutor;
 import com.jdcloud.sdk.service.ydapp.model.ScanPackageRequest;
 import com.jdcloud.sdk.service.ydapp.model.ScanPackageResponse;
 import com.jdcloud.sdk.service.ydapp.client.ScanPackageExecutor;
 import com.jdcloud.sdk.service.ydapp.model.RollbackRequest;
 import com.jdcloud.sdk.service.ydapp.model.RollbackResponse;
 import com.jdcloud.sdk.service.ydapp.client.RollbackExecutor;
-import com.jdcloud.sdk.service.ydapp.model.UpdateConfigFileRequest;
-import com.jdcloud.sdk.service.ydapp.model.UpdateConfigFileResponse;
-import com.jdcloud.sdk.service.ydapp.client.UpdateConfigFileExecutor;
 import com.jdcloud.sdk.service.ydapp.model.DescribeGroupsRequest;
 import com.jdcloud.sdk.service.ydapp.model.DescribeGroupsResponse;
 import com.jdcloud.sdk.service.ydapp.client.DescribeGroupsExecutor;
+import com.jdcloud.sdk.service.ydapp.model.DescribeSystemRequest;
+import com.jdcloud.sdk.service.ydapp.model.DescribeSystemResponse;
+import com.jdcloud.sdk.service.ydapp.client.DescribeSystemExecutor;
 import com.jdcloud.sdk.service.ydapp.model.LinkPackageRequest;
 import com.jdcloud.sdk.service.ydapp.model.LinkPackageResponse;
 import com.jdcloud.sdk.service.ydapp.client.LinkPackageExecutor;
-import com.jdcloud.sdk.service.ydapp.model.ContainerAntiAffinityRequest;
-import com.jdcloud.sdk.service.ydapp.model.ContainerAntiAffinityResponse;
-import com.jdcloud.sdk.service.ydapp.client.ContainerAntiAffinityExecutor;
 import com.jdcloud.sdk.service.ydapp.model.DeleteCustomImageRequest;
 import com.jdcloud.sdk.service.ydapp.model.DeleteCustomImageResponse;
 import com.jdcloud.sdk.service.ydapp.client.DeleteCustomImageExecutor;
-import com.jdcloud.sdk.service.ydapp.model.GetPackageDownloadInfoRequest;
-import com.jdcloud.sdk.service.ydapp.model.GetPackageDownloadInfoResponse;
-import com.jdcloud.sdk.service.ydapp.client.GetPackageDownloadInfoExecutor;
 import com.jdcloud.sdk.service.ydapp.model.DescribeBaseImagesRequest;
 import com.jdcloud.sdk.service.ydapp.model.DescribeBaseImagesResponse;
 import com.jdcloud.sdk.service.ydapp.client.DescribeBaseImagesExecutor;
-import com.jdcloud.sdk.service.ydapp.model.RebuildRequest;
-import com.jdcloud.sdk.service.ydapp.model.RebuildResponse;
-import com.jdcloud.sdk.service.ydapp.client.RebuildExecutor;
 import com.jdcloud.sdk.service.ydapp.model.DeletePackageRequest;
 import com.jdcloud.sdk.service.ydapp.model.DeletePackageResponse;
 import com.jdcloud.sdk.service.ydapp.client.DeletePackageExecutor;
@@ -100,51 +151,42 @@ import com.jdcloud.sdk.service.ydapp.client.DescribeCustomRegistryTokenExecutor;
 import com.jdcloud.sdk.service.ydapp.model.ScaleRequest;
 import com.jdcloud.sdk.service.ydapp.model.ScaleResponse;
 import com.jdcloud.sdk.service.ydapp.client.ScaleExecutor;
-import com.jdcloud.sdk.service.ydapp.model.UpdateStartCmdRequest;
-import com.jdcloud.sdk.service.ydapp.model.UpdateStartCmdResponse;
-import com.jdcloud.sdk.service.ydapp.client.UpdateStartCmdExecutor;
-import com.jdcloud.sdk.service.ydapp.model.DeleteConfigFileRequest;
-import com.jdcloud.sdk.service.ydapp.model.DeleteConfigFileResponse;
-import com.jdcloud.sdk.service.ydapp.client.DeleteConfigFileExecutor;
-import com.jdcloud.sdk.service.ydapp.model.DescribePodsRequest;
-import com.jdcloud.sdk.service.ydapp.model.DescribePodsResponse;
-import com.jdcloud.sdk.service.ydapp.client.DescribePodsExecutor;
+import com.jdcloud.sdk.service.ydapp.model.CreateAppRequest;
+import com.jdcloud.sdk.service.ydapp.model.CreateAppResponse;
+import com.jdcloud.sdk.service.ydapp.client.CreateAppExecutor;
 import com.jdcloud.sdk.service.ydapp.model.DescribeCustomImagesRequest;
 import com.jdcloud.sdk.service.ydapp.model.DescribeCustomImagesResponse;
 import com.jdcloud.sdk.service.ydapp.client.DescribeCustomImagesExecutor;
+import com.jdcloud.sdk.service.ydapp.model.DeleteSystemRequest;
+import com.jdcloud.sdk.service.ydapp.model.DeleteSystemResponse;
+import com.jdcloud.sdk.service.ydapp.client.DeleteSystemExecutor;
 import com.jdcloud.sdk.service.ydapp.model.GenerateUploadUrlRequest;
 import com.jdcloud.sdk.service.ydapp.model.GenerateUploadUrlResponse;
 import com.jdcloud.sdk.service.ydapp.client.GenerateUploadUrlExecutor;
 import com.jdcloud.sdk.service.ydapp.model.CloseAutoDeleteRepoRequest;
 import com.jdcloud.sdk.service.ydapp.model.CloseAutoDeleteRepoResponse;
 import com.jdcloud.sdk.service.ydapp.client.CloseAutoDeleteRepoExecutor;
-import com.jdcloud.sdk.service.ydapp.model.OpenAutoDeleteRepoRequest;
-import com.jdcloud.sdk.service.ydapp.model.OpenAutoDeleteRepoResponse;
-import com.jdcloud.sdk.service.ydapp.client.OpenAutoDeleteRepoExecutor;
 import com.jdcloud.sdk.service.ydapp.model.DescribeDeployTaskRequest;
 import com.jdcloud.sdk.service.ydapp.model.DescribeDeployTaskResponse;
 import com.jdcloud.sdk.service.ydapp.client.DescribeDeployTaskExecutor;
-import com.jdcloud.sdk.service.ydapp.model.DescribePackagesRequest;
-import com.jdcloud.sdk.service.ydapp.model.DescribePackagesResponse;
-import com.jdcloud.sdk.service.ydapp.client.DescribePackagesExecutor;
+import com.jdcloud.sdk.service.ydapp.model.UpdateSystemRequest;
+import com.jdcloud.sdk.service.ydapp.model.UpdateSystemResponse;
+import com.jdcloud.sdk.service.ydapp.client.UpdateSystemExecutor;
 import com.jdcloud.sdk.service.ydapp.model.UpdateHealthCheckRequest;
 import com.jdcloud.sdk.service.ydapp.model.UpdateHealthCheckResponse;
 import com.jdcloud.sdk.service.ydapp.client.UpdateHealthCheckExecutor;
-import com.jdcloud.sdk.service.ydapp.model.UpdateLifeCycleRequest;
-import com.jdcloud.sdk.service.ydapp.model.UpdateLifeCycleResponse;
-import com.jdcloud.sdk.service.ydapp.client.UpdateLifeCycleExecutor;
+import com.jdcloud.sdk.service.ydapp.model.CreateSystemRequest;
+import com.jdcloud.sdk.service.ydapp.model.CreateSystemResponse;
+import com.jdcloud.sdk.service.ydapp.client.CreateSystemExecutor;
 import com.jdcloud.sdk.service.ydapp.model.DescribeGroupEnvironmentsRequest;
 import com.jdcloud.sdk.service.ydapp.model.DescribeGroupEnvironmentsResponse;
 import com.jdcloud.sdk.service.ydapp.client.DescribeGroupEnvironmentsExecutor;
 import com.jdcloud.sdk.service.ydapp.model.DescribeDeploysRequest;
 import com.jdcloud.sdk.service.ydapp.model.DescribeDeploysResponse;
 import com.jdcloud.sdk.service.ydapp.client.DescribeDeploysExecutor;
-import com.jdcloud.sdk.service.ydapp.model.RestartRequest;
-import com.jdcloud.sdk.service.ydapp.model.RestartResponse;
-import com.jdcloud.sdk.service.ydapp.client.RestartExecutor;
-import com.jdcloud.sdk.service.ydapp.model.StopDeployTaskRequest;
-import com.jdcloud.sdk.service.ydapp.model.StopDeployTaskResponse;
-import com.jdcloud.sdk.service.ydapp.client.StopDeployTaskExecutor;
+import com.jdcloud.sdk.service.ydapp.model.DescribeSystemsRequest;
+import com.jdcloud.sdk.service.ydapp.model.DescribeSystemsResponse;
+import com.jdcloud.sdk.service.ydapp.client.DescribeSystemsExecutor;
 
 /**
  * ydappClient
@@ -196,28 +238,6 @@ public class YdappClient extends JdcloudClient {
 
 
     /**
-     * 创建镜像编译流水线任务，返回流水线任务ID
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreatePipelineTaskResponse createPipelineTask(CreatePipelineTaskRequest request) throws JdcloudSdkException {
-        return new CreatePipelineTaskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 分页获取应用信息列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeAppsResponse describeApps(DescribeAppsRequest request) throws JdcloudSdkException {
-        return new DescribeAppsExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询指定应用的镜像仓库自动删除策略配置
      *
      * @param request
@@ -226,17 +246,6 @@ public class YdappClient extends JdcloudClient {
      */
     public DescribeAutoDeletePolicyResponse describeAutoDeletePolicy(DescribeAutoDeletePolicyRequest request) throws JdcloudSdkException {
         return new DescribeAutoDeletePolicyExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建新的部署任务，支持自定义镜像和标准镜像的部署
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeployResponse deploy(DeployRequest request) throws JdcloudSdkException {
-        return new DeployExecutor().client(this).execute(request);
     }
 
     /**
@@ -259,6 +268,17 @@ public class YdappClient extends JdcloudClient {
      */
     public UpdateGroupEnvironmentResponse updateGroupEnvironment(UpdateGroupEnvironmentRequest request) throws JdcloudSdkException {
         return new UpdateGroupEnvironmentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据应用 ID 查询应用详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAppResponse describeApp(DescribeAppRequest request) throws JdcloudSdkException {
+        return new DescribeAppExecutor().client(this).execute(request);
     }
 
     /**
@@ -295,6 +315,248 @@ public class YdappClient extends JdcloudClient {
     }
 
     /**
+     * 更新分组的容器配置文件
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateConfigFileResponse updateConfigFile(UpdateConfigFileRequest request) throws JdcloudSdkException {
+        return new UpdateConfigFileExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 分页查询集群列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeClustersResponse describeClusters(DescribeClustersRequest request) throws JdcloudSdkException {
+        return new DescribeClustersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置分组的容器反亲和性配置，控制Pod调度策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ContainerAntiAffinityResponse containerAntiAffinity(ContainerAntiAffinityRequest request) throws JdcloudSdkException {
+        return new ContainerAntiAffinityExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 在指定应用下创建分组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateAppGroupResponse createAppGroup(CreateAppGroupRequest request) throws JdcloudSdkException {
+        return new CreateAppGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取指定应用下制品包的下载信息，包含名称、版本及预签名下载地址（preSignedUrl）。 调用方使用返回的 preSignedUrl 自行下载文件（该地址有鉴权、有效期有限）。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetPackageDownloadInfoResponse getPackageDownloadInfo(GetPackageDownloadInfoRequest request) throws JdcloudSdkException {
+        return new GetPackageDownloadInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重建分组中的指定Pod实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RebuildResponse rebuild(RebuildRequest request) throws JdcloudSdkException {
+        return new RebuildExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新分组的容器启动命令配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateStartCmdResponse updateStartCmd(UpdateStartCmdRequest request) throws JdcloudSdkException {
+        return new UpdateStartCmdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据应用 ID 编辑应用
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateAppResponse updateApp(UpdateAppRequest request) throws JdcloudSdkException {
+        return new UpdateAppExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据应用 ID 删除应用
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteAppResponse deleteApp(DeleteAppRequest request) throws JdcloudSdkException {
+        return new DeleteAppExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除指定应用分组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteAppGroupResponse deleteAppGroup(DeleteAppGroupRequest request) throws JdcloudSdkException {
+        return new DeleteAppGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除分组的容器配置文件
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteConfigFileResponse deleteConfigFile(DeleteConfigFileRequest request) throws JdcloudSdkException {
+        return new DeleteConfigFileExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 支持分页查询的Pod列表获取
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribePodsResponse describePods(DescribePodsRequest request) throws JdcloudSdkException {
+        return new DescribePodsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 为指定应用的镜像仓库开启自动删除策略，可配置保留数量上限
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OpenAutoDeleteRepoResponse openAutoDeleteRepo(OpenAutoDeleteRepoRequest request) throws JdcloudSdkException {
+        return new OpenAutoDeleteRepoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 复制指定分组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CopyAppGroupResponse copyAppGroup(CopyAppGroupRequest request) throws JdcloudSdkException {
+        return new CopyAppGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 分页查询指定应用下的制品包列表，支持按名称模糊搜索
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribePackagesResponse describePackages(DescribePackagesRequest request) throws JdcloudSdkException {
+        return new DescribePackagesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新分组的容器生命周期配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateLifeCycleResponse updateLifeCycle(UpdateLifeCycleRequest request) throws JdcloudSdkException {
+        return new UpdateLifeCycleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重启分组中的所有容器实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RestartResponse restart(RestartRequest request) throws JdcloudSdkException {
+        return new RestartExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止指定的部署任务执行
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopDeployTaskResponse stopDeployTask(StopDeployTaskRequest request) throws JdcloudSdkException {
+        return new StopDeployTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建镜像编译流水线任务，返回流水线任务ID
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreatePipelineTaskResponse createPipelineTask(CreatePipelineTaskRequest request) throws JdcloudSdkException {
+        return new CreatePipelineTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询当前用户可见的 JOS 应用列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeJosAppsResponse describeJosApps(DescribeJosAppsRequest request) throws JdcloudSdkException {
+        return new DescribeJosAppsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 分页获取应用信息列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAppsResponse describeApps(DescribeAppsRequest request) throws JdcloudSdkException {
+        return new DescribeAppsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建新的部署任务，支持自定义镜像和标准镜像的部署
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeployResponse deploy(DeployRequest request) throws JdcloudSdkException {
+        return new DeployExecutor().client(this).execute(request);
+    }
+
+    /**
      * 对指定制品包触发安全扫描
      *
      * @param request
@@ -317,17 +579,6 @@ public class YdappClient extends JdcloudClient {
     }
 
     /**
-     * 更新分组的容器配置文件
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdateConfigFileResponse updateConfigFile(UpdateConfigFileRequest request) throws JdcloudSdkException {
-        return new UpdateConfigFileExecutor().client(this).execute(request);
-    }
-
-    /**
      * 分页获取指定应用下的应用组列表
      *
      * @param request
@@ -336,6 +587,17 @@ public class YdappClient extends JdcloudClient {
      */
     public DescribeGroupsResponse describeGroups(DescribeGroupsRequest request) throws JdcloudSdkException {
         return new DescribeGroupsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据系统 ID 查询系统详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSystemResponse describeSystem(DescribeSystemRequest request) throws JdcloudSdkException {
+        return new DescribeSystemExecutor().client(this).execute(request);
     }
 
     /**
@@ -350,17 +612,6 @@ public class YdappClient extends JdcloudClient {
     }
 
     /**
-     * 设置分组的容器反亲和性配置，控制Pod调度策略
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ContainerAntiAffinityResponse containerAntiAffinity(ContainerAntiAffinityRequest request) throws JdcloudSdkException {
-        return new ContainerAntiAffinityExecutor().client(this).execute(request);
-    }
-
-    /**
      * 根据镜像摘要删除指定的镜像
      *
      * @param request
@@ -372,17 +623,6 @@ public class YdappClient extends JdcloudClient {
     }
 
     /**
-     * 获取指定应用下制品包的下载信息，包含名称、版本及预签名下载地址（preSignedUrl）。 调用方使用返回的 preSignedUrl 自行下载文件（该地址有鉴权、有效期有限）。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetPackageDownloadInfoResponse getPackageDownloadInfo(GetPackageDownloadInfoRequest request) throws JdcloudSdkException {
-        return new GetPackageDownloadInfoExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询已发布的基础镜像列表，可按镜像类型过滤（JAVA、PHP、Nginx）
      *
      * @param request
@@ -391,17 +631,6 @@ public class YdappClient extends JdcloudClient {
      */
     public DescribeBaseImagesResponse describeBaseImages(DescribeBaseImagesRequest request) throws JdcloudSdkException {
         return new DescribeBaseImagesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 重建分组中的指定Pod实例
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public RebuildResponse rebuild(RebuildRequest request) throws JdcloudSdkException {
-        return new RebuildExecutor().client(this).execute(request);
     }
 
     /**
@@ -452,36 +681,14 @@ public class YdappClient extends JdcloudClient {
     }
 
     /**
-     * 更新分组的容器启动命令配置
+     * 创建应用
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UpdateStartCmdResponse updateStartCmd(UpdateStartCmdRequest request) throws JdcloudSdkException {
-        return new UpdateStartCmdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除分组的容器配置文件
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteConfigFileResponse deleteConfigFile(DeleteConfigFileRequest request) throws JdcloudSdkException {
-        return new DeleteConfigFileExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 支持分页查询的Pod列表获取
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribePodsResponse describePods(DescribePodsRequest request) throws JdcloudSdkException {
-        return new DescribePodsExecutor().client(this).execute(request);
+    public CreateAppResponse createApp(CreateAppRequest request) throws JdcloudSdkException {
+        return new CreateAppExecutor().client(this).execute(request);
     }
 
     /**
@@ -493,6 +700,17 @@ public class YdappClient extends JdcloudClient {
      */
     public DescribeCustomImagesResponse describeCustomImages(DescribeCustomImagesRequest request) throws JdcloudSdkException {
         return new DescribeCustomImagesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据系统 ID 删除系统
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSystemResponse deleteSystem(DeleteSystemRequest request) throws JdcloudSdkException {
+        return new DeleteSystemExecutor().client(this).execute(request);
     }
 
     /**
@@ -518,17 +736,6 @@ public class YdappClient extends JdcloudClient {
     }
 
     /**
-     * 为指定应用的镜像仓库开启自动删除策略，可配置保留数量上限
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public OpenAutoDeleteRepoResponse openAutoDeleteRepo(OpenAutoDeleteRepoRequest request) throws JdcloudSdkException {
-        return new OpenAutoDeleteRepoExecutor().client(this).execute(request);
-    }
-
-    /**
      * 根据应用ID、分组ID和部署ID查询指定的部署任务详情
      *
      * @param request
@@ -540,14 +747,14 @@ public class YdappClient extends JdcloudClient {
     }
 
     /**
-     * 分页查询指定应用下的制品包列表，支持按名称模糊搜索
+     * 根据系统 ID 修改系统详情
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribePackagesResponse describePackages(DescribePackagesRequest request) throws JdcloudSdkException {
-        return new DescribePackagesExecutor().client(this).execute(request);
+    public UpdateSystemResponse updateSystem(UpdateSystemRequest request) throws JdcloudSdkException {
+        return new UpdateSystemExecutor().client(this).execute(request);
     }
 
     /**
@@ -562,14 +769,14 @@ public class YdappClient extends JdcloudClient {
     }
 
     /**
-     * 更新分组的容器生命周期配置
+     * 创建系统
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UpdateLifeCycleResponse updateLifeCycle(UpdateLifeCycleRequest request) throws JdcloudSdkException {
-        return new UpdateLifeCycleExecutor().client(this).execute(request);
+    public CreateSystemResponse createSystem(CreateSystemRequest request) throws JdcloudSdkException {
+        return new CreateSystemExecutor().client(this).execute(request);
     }
 
     /**
@@ -595,25 +802,14 @@ public class YdappClient extends JdcloudClient {
     }
 
     /**
-     * 重启分组中的所有容器实例
+     * 分页查询系统列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public RestartResponse restart(RestartRequest request) throws JdcloudSdkException {
-        return new RestartExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 停止指定的部署任务执行
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public StopDeployTaskResponse stopDeployTask(StopDeployTaskRequest request) throws JdcloudSdkException {
-        return new StopDeployTaskExecutor().client(this).execute(request);
+    public DescribeSystemsResponse describeSystems(DescribeSystemsRequest request) throws JdcloudSdkException {
+        return new DescribeSystemsExecutor().client(this).execute(request);
     }
 
 

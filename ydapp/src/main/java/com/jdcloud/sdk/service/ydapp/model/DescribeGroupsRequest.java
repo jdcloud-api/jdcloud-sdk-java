@@ -40,7 +40,7 @@ public class DescribeGroupsRequest extends JdcloudRequest implements java.io.Ser
     private Integer pageNum;
 
     /**
-     * 每页数量(10-100)
+     * 每页数量，默认10，最大100
      */
     private Integer pageSize;
 
@@ -73,7 +73,7 @@ public class DescribeGroupsRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 每页数量(10-100)
+     * get 每页数量，默认10，最大100
      *
      * @return
      */
@@ -82,7 +82,7 @@ public class DescribeGroupsRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 每页数量(10-100)
+     * set 每页数量，默认10，最大100
      *
      * @param pageSize
      */
@@ -124,9 +124,9 @@ public class DescribeGroupsRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 每页数量(10-100)
+     * set 每页数量，默认10，最大100
      *
-     * @param pageSize 每页数量(10-100)
+     * @param pageSize 每页数量，默认10，最大100
      * @return DescribeGroupsRequest
      */
     public DescribeGroupsRequest pageSize(Integer pageSize) {

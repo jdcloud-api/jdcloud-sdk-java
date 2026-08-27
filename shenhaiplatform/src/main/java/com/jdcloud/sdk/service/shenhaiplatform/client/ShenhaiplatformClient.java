@@ -460,6 +460,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.RotorInstanceOperationLogs
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugResultListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugResultListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDebugResultListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetJmrConfigsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetJmrConfigsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GetJmrConfigsExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoRePublishRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoRePublishResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoRePublishExecutor;
@@ -793,6 +796,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableAlterSqlViewExe
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugHistoryListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDebugHistoryListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDebugHistoryListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetRegionByEngineCodeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetRegionByEngineCodeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GetRegionByEngineCodeExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstanceDetailRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.RotorInstanceDetailResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.RotorInstanceDetailExecutor;
@@ -3023,6 +3029,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 通过计算引擎Code查询绑定的JMR引擎配置信息(支持按类型过滤)
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetJmrConfigsResponse getJmrConfigs(GetJmrConfigsRequest request) throws JdcloudSdkException {
+        return new GetJmrConfigsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 任务重新发布
      *
      * @param request
@@ -4241,6 +4258,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusTaskDebugHistoryListResponse uranusTaskDebugHistoryList(UranusTaskDebugHistoryListRequest request) throws JdcloudSdkException {
         return new UranusTaskDebugHistoryListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据存算引擎实例编码查询对应的regionId
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetRegionByEngineCodeResponse getRegionByEngineCode(GetRegionByEngineCodeRequest request) throws JdcloudSdkException {
+        return new GetRegionByEngineCodeExecutor().client(this).execute(request);
     }
 
     /**

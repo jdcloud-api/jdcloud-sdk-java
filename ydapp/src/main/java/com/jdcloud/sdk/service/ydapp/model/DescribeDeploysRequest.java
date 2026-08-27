@@ -40,7 +40,7 @@ public class DescribeDeploysRequest extends JdcloudRequest implements java.io.Se
     private Integer pageNum;
 
     /**
-     * 每页数量(10-100)
+     * 每页数量，默认10，最大100
      */
     private Integer pageSize;
 
@@ -80,7 +80,7 @@ public class DescribeDeploysRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 每页数量(10-100)
+     * get 每页数量，默认10，最大100
      *
      * @return
      */
@@ -89,7 +89,7 @@ public class DescribeDeploysRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 每页数量(10-100)
+     * set 每页数量，默认10，最大100
      *
      * @param pageSize
      */
@@ -150,9 +150,9 @@ public class DescribeDeploysRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 每页数量(10-100)
+     * set 每页数量，默认10，最大100
      *
-     * @param pageSize 每页数量(10-100)
+     * @param pageSize 每页数量，默认10，最大100
      * @return DescribeDeploysRequest
      */
     public DescribeDeploysRequest pageSize(Integer pageSize) {

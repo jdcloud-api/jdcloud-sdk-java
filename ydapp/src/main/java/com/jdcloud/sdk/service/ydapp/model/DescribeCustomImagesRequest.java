@@ -40,7 +40,7 @@ public class DescribeCustomImagesRequest extends JdcloudRequest implements java.
     private Integer pageNum;
 
     /**
-     * 每页数量(10-100)，E.g.，20
+     * 每页数量，默认10，最大100
      */
     private Integer pageSize;
 
@@ -78,7 +78,7 @@ public class DescribeCustomImagesRequest extends JdcloudRequest implements java.
 
 
     /**
-     * get 每页数量(10-100)，E.g.，20
+     * get 每页数量，默认10，最大100
      *
      * @return
      */
@@ -87,7 +87,7 @@ public class DescribeCustomImagesRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 每页数量(10-100)，E.g.，20
+     * set 每页数量，默认10，最大100
      *
      * @param pageSize
      */
@@ -148,9 +148,9 @@ public class DescribeCustomImagesRequest extends JdcloudRequest implements java.
 
 
     /**
-     * set 每页数量(10-100)，E.g.，20
+     * set 每页数量，默认10，最大100
      *
-     * @param pageSize 每页数量(10-100)，E.g.，20
+     * @param pageSize 每页数量，默认10，最大100
      * @return DescribeCustomImagesRequest
      */
     public DescribeCustomImagesRequest pageSize(Integer pageSize) {

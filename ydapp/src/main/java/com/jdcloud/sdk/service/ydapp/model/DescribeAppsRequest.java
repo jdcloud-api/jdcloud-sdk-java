@@ -36,12 +36,12 @@ public class DescribeAppsRequest extends JdcloudRequest implements java.io.Seria
     /**
      * 页码，默认为1
      */
-    private Number pageNum;
+    private Integer pageNum;
 
     /**
-     * 每页数量，参数范围：10-100，默认20
+     * 每页数量，默认10，最大100
      */
-    private Number pageSize;
+    private Integer pageSize;
 
 
 
@@ -50,7 +50,7 @@ public class DescribeAppsRequest extends JdcloudRequest implements java.io.Seria
      *
      * @return
      */
-    public Number getPageNum() {
+    public Integer getPageNum() {
         return pageNum;
     }
 
@@ -59,26 +59,26 @@ public class DescribeAppsRequest extends JdcloudRequest implements java.io.Seria
      *
      * @param pageNum
      */
-    public void setPageNum(Number pageNum) {
+    public void setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
     }
 
 
     /**
-     * get 每页数量，参数范围：10-100，默认20
+     * get 每页数量，默认10，最大100
      *
      * @return
      */
-    public Number getPageSize() {
+    public Integer getPageSize() {
         return pageSize;
     }
 
     /**
-     * set 每页数量，参数范围：10-100，默认20
+     * set 每页数量，默认10，最大100
      *
      * @param pageSize
      */
-    public void setPageSize(Number pageSize) {
+    public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
 
@@ -90,19 +90,19 @@ public class DescribeAppsRequest extends JdcloudRequest implements java.io.Seria
      * @param pageNum 页码，默认为1
      * @return DescribeAppsRequest
      */
-    public DescribeAppsRequest pageNum(Number pageNum) {
+    public DescribeAppsRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
         return this;
     }
 
 
     /**
-     * set 每页数量，参数范围：10-100，默认20
+     * set 每页数量，默认10，最大100
      *
-     * @param pageSize 每页数量，参数范围：10-100，默认20
+     * @param pageSize 每页数量，默认10，最大100
      * @return DescribeAppsRequest
      */
-    public DescribeAppsRequest pageSize(Number pageSize) {
+    public DescribeAppsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }

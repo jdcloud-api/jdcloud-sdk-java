@@ -58,9 +58,19 @@ public class WorkspaceParamResp  implements java.io.Serializable {
     private String paramTypeDesc;
 
     /**
-     * 参数值
+     * 参数值(简单模式/通用)
      */
     private String paramValue;
+
+    /**
+     * 开发环境参数值(标准模式)
+     */
+    private String devValue;
+
+    /**
+     * 生产环境参数值(标准模式)
+     */
+    private String prodValue;
 
     /**
      * 责任人
@@ -185,7 +195,7 @@ public class WorkspaceParamResp  implements java.io.Serializable {
 
 
     /**
-     * get 参数值
+     * get 参数值(简单模式/通用)
      *
      * @return
      */
@@ -194,12 +204,50 @@ public class WorkspaceParamResp  implements java.io.Serializable {
     }
 
     /**
-     * set 参数值
+     * set 参数值(简单模式/通用)
      *
      * @param paramValue
      */
     public void setParamValue(String paramValue) {
         this.paramValue = paramValue;
+    }
+
+
+    /**
+     * get 开发环境参数值(标准模式)
+     *
+     * @return
+     */
+    public String getDevValue() {
+        return devValue;
+    }
+
+    /**
+     * set 开发环境参数值(标准模式)
+     *
+     * @param devValue
+     */
+    public void setDevValue(String devValue) {
+        this.devValue = devValue;
+    }
+
+
+    /**
+     * get 生产环境参数值(标准模式)
+     *
+     * @return
+     */
+    public String getProdValue() {
+        return prodValue;
+    }
+
+    /**
+     * set 生产环境参数值(标准模式)
+     *
+     * @param prodValue
+     */
+    public void setProdValue(String prodValue) {
+        this.prodValue = prodValue;
     }
 
 
@@ -360,13 +408,37 @@ public class WorkspaceParamResp  implements java.io.Serializable {
 
 
     /**
-     * set 参数值
+     * set 参数值(简单模式/通用)
      *
-     * @param paramValue 参数值
+     * @param paramValue 参数值(简单模式/通用)
      * @return WorkspaceParamResp
      */
     public WorkspaceParamResp paramValue(String paramValue) {
         this.paramValue = paramValue;
+        return this;
+    }
+
+
+    /**
+     * set 开发环境参数值(标准模式)
+     *
+     * @param devValue 开发环境参数值(标准模式)
+     * @return WorkspaceParamResp
+     */
+    public WorkspaceParamResp devValue(String devValue) {
+        this.devValue = devValue;
+        return this;
+    }
+
+
+    /**
+     * set 生产环境参数值(标准模式)
+     *
+     * @param prodValue 生产环境参数值(标准模式)
+     * @return WorkspaceParamResp
+     */
+    public WorkspaceParamResp prodValue(String prodValue) {
+        this.prodValue = prodValue;
         return this;
     }
 

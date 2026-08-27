@@ -37,12 +37,12 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
     /**
      * 页码，默认为1，E.g.，1
      */
-    private Long pageNum;
+    private Integer pageNum;
 
     /**
-     * 每页数量，默认20，E.g.，20
+     * 每页数量，默认10，最大100
      */
-    private Long pageSize;
+    private Integer pageSize;
 
     /**
      * 制品包名称，模糊匹配，E.g.，my-app
@@ -63,7 +63,7 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
      *
      * @return
      */
-    public Long getPageNum() {
+    public Integer getPageNum() {
         return pageNum;
     }
 
@@ -72,26 +72,26 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
      *
      * @param pageNum
      */
-    public void setPageNum(Long pageNum) {
+    public void setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
     }
 
 
     /**
-     * get 每页数量，默认20，E.g.，20
+     * get 每页数量，默认10，最大100
      *
      * @return
      */
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return pageSize;
     }
 
     /**
-     * set 每页数量，默认20，E.g.，20
+     * set 每页数量，默认10，最大100
      *
      * @param pageSize
      */
-    public void setPageSize(Long pageSize) {
+    public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
 
@@ -141,19 +141,19 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
      * @param pageNum 页码，默认为1，E.g.，1
      * @return DescribePackagesRequest
      */
-    public DescribePackagesRequest pageNum(Long pageNum) {
+    public DescribePackagesRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
         return this;
     }
 
 
     /**
-     * set 每页数量，默认20，E.g.，20
+     * set 每页数量，默认10，最大100
      *
-     * @param pageSize 每页数量，默认20，E.g.，20
+     * @param pageSize 每页数量，默认10，最大100
      * @return DescribePackagesRequest
      */
-    public DescribePackagesRequest pageSize(Long pageSize) {
+    public DescribePackagesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }

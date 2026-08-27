@@ -64,9 +64,14 @@ public class ImageRecordPageRequest extends JdcloudRequest implements java.io.Se
     private String status;
 
     /**
-     * 分页参数
+     * 页码，默认1
      */
-    private Object page;
+    private Integer pageNum;
+
+    /**
+     * 每页数量，默认10，最大100
+     */
+    private Integer pageSize;
 
 
 
@@ -185,21 +190,40 @@ public class ImageRecordPageRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 分页参数
+     * get 页码，默认1
      *
      * @return
      */
-    public Object getPage() {
-        return page;
+    public Integer getPageNum() {
+        return pageNum;
     }
 
     /**
-     * set 分页参数
+     * set 页码，默认1
      *
-     * @param page
+     * @param pageNum
      */
-    public void setPage(Object page) {
-        this.page = page;
+    public void setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+    }
+
+
+    /**
+     * get 每页数量，默认10，最大100
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 每页数量，默认10，最大100
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 
 
@@ -277,13 +301,25 @@ public class ImageRecordPageRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 分页参数
+     * set 页码，默认1
      *
-     * @param page 分页参数
+     * @param pageNum 页码，默认1
      * @return ImageRecordPageRequest
      */
-    public ImageRecordPageRequest page(Object page) {
-        this.page = page;
+    public ImageRecordPageRequest pageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+
+
+    /**
+     * set 每页数量，默认10，最大100
+     *
+     * @param pageSize 每页数量，默认10，最大100
+     * @return ImageRecordPageRequest
+     */
+    public ImageRecordPageRequest pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
 

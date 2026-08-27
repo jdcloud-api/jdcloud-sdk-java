@@ -52,6 +52,11 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
      */
     private String resourceCode;
 
+    /**
+     * 存算引擎实例编码
+     */
+    private String engineCode;
+
 
 
     /**
@@ -130,6 +135,25 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 存算引擎实例编码
+     *
+     * @return
+     */
+    public String getEngineCode() {
+        return engineCode;
+    }
+
+    /**
+     * set 存算引擎实例编码
+     *
+     * @param engineCode
+     */
+    public void setEngineCode(String engineCode) {
+        this.engineCode = engineCode;
+    }
+
+
 
     /**
      * set id
@@ -175,6 +199,18 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
      */
     public QueryWorkspaceInfoReq resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
+        return this;
+    }
+
+
+    /**
+     * set 存算引擎实例编码
+     *
+     * @param engineCode 存算引擎实例编码
+     * @return QueryWorkspaceInfoReq
+     */
+    public QueryWorkspaceInfoReq engineCode(String engineCode) {
+        this.engineCode = engineCode;
         return this;
     }
 

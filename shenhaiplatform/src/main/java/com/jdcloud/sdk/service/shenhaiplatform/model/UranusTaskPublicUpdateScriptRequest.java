@@ -45,6 +45,11 @@ public class UranusTaskPublicUpdateScriptRequest extends JdcloudRequest implemen
     private String content;
 
     /**
+     * 内容编码方式。当值为 &quot;base64&quot; 时，content 字段为 base64 编码，需解码后使用；其他情况不处理
+     */
+    private String contentEncoding;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -95,6 +100,25 @@ public class UranusTaskPublicUpdateScriptRequest extends JdcloudRequest implemen
      */
     public void setContent(String content) {
         this.content = content;
+    }
+
+
+    /**
+     * get 内容编码方式。当值为 &quot;base64&quot; 时，content 字段为 base64 编码，需解码后使用；其他情况不处理
+     *
+     * @return
+     */
+    public String getContentEncoding() {
+        return contentEncoding;
+    }
+
+    /**
+     * set 内容编码方式。当值为 &quot;base64&quot; 时，content 字段为 base64 编码，需解码后使用；其他情况不处理
+     *
+     * @param contentEncoding
+     */
+    public void setContentEncoding(String contentEncoding) {
+        this.contentEncoding = contentEncoding;
     }
 
 
@@ -157,6 +181,18 @@ public class UranusTaskPublicUpdateScriptRequest extends JdcloudRequest implemen
      */
     public UranusTaskPublicUpdateScriptRequest content(String content) {
         this.content = content;
+        return this;
+    }
+
+
+    /**
+     * set 内容编码方式。当值为 &quot;base64&quot; 时，content 字段为 base64 编码，需解码后使用；其他情况不处理
+     *
+     * @param contentEncoding 内容编码方式。当值为 &quot;base64&quot; 时，content 字段为 base64 编码，需解码后使用；其他情况不处理
+     * @return UranusTaskPublicUpdateScriptRequest
+     */
+    public UranusTaskPublicUpdateScriptRequest contentEncoding(String contentEncoding) {
+        this.contentEncoding = contentEncoding;
         return this;
     }
 

@@ -35,11 +35,6 @@ public class GetInstancesRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 计算引擎Code
-     */
-    private String engineCode;
-
-    /**
      * id
      */
     private Integer id;
@@ -60,6 +55,11 @@ public class GetInstancesRequest extends JdcloudRequest implements java.io.Seria
     private String resourceCode;
 
     /**
+     * 存算引擎实例编码
+     */
+    private String engineCode;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -73,25 +73,6 @@ public class GetInstancesRequest extends JdcloudRequest implements java.io.Seria
     @Required
     private String appName;
 
-
-
-    /**
-     * get 计算引擎Code
-     *
-     * @return
-     */
-    public String getEngineCode() {
-        return engineCode;
-    }
-
-    /**
-     * set 计算引擎Code
-     *
-     * @param engineCode
-     */
-    public void setEngineCode(String engineCode) {
-        this.engineCode = engineCode;
-    }
 
 
     /**
@@ -171,6 +152,25 @@ public class GetInstancesRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
+     * get 存算引擎实例编码
+     *
+     * @return
+     */
+    public String getEngineCode() {
+        return engineCode;
+    }
+
+    /**
+     * set 存算引擎实例编码
+     *
+     * @param engineCode
+     */
+    public void setEngineCode(String engineCode) {
+        this.engineCode = engineCode;
+    }
+
+
+    /**
      * get 地域ID
      *
      * @return
@@ -207,18 +207,6 @@ public class GetInstancesRequest extends JdcloudRequest implements java.io.Seria
         this.appName = appName;
     }
 
-
-
-    /**
-     * set 计算引擎Code
-     *
-     * @param engineCode 计算引擎Code
-     * @return GetInstancesRequest
-     */
-    public GetInstancesRequest engineCode(String engineCode) {
-        this.engineCode = engineCode;
-        return this;
-    }
 
 
     /**
@@ -265,6 +253,18 @@ public class GetInstancesRequest extends JdcloudRequest implements java.io.Seria
      */
     public GetInstancesRequest resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
+        return this;
+    }
+
+
+    /**
+     * set 存算引擎实例编码
+     *
+     * @param engineCode 存算引擎实例编码
+     * @return GetInstancesRequest
+     */
+    public GetInstancesRequest engineCode(String engineCode) {
+        this.engineCode = engineCode;
         return this;
     }
 
