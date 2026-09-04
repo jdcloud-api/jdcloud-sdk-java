@@ -133,9 +133,14 @@ public class Runtime  implements java.io.Serializable {
     private Boolean enableEngineMetrics;
 
     /**
-     * 公网出口配置。不需要出公网时不指定该参数，服务端会按 NONE 落库。
+     * 公网出口配置；不传表示关闭公网出口。
      */
     private InternetEgress internetEgress;
+
+    /**
+     * 优雅退出配置，仅支持普通单机推理
+     */
+    private GracefulShutdown gracefulShutdown;
 
     /**
      * 自定义服务端口列表
@@ -506,7 +511,7 @@ public class Runtime  implements java.io.Serializable {
 
 
     /**
-     * get 公网出口配置。不需要出公网时不指定该参数，服务端会按 NONE 落库。
+     * get 公网出口配置；不传表示关闭公网出口。
      *
      * @return
      */
@@ -515,12 +520,31 @@ public class Runtime  implements java.io.Serializable {
     }
 
     /**
-     * set 公网出口配置。不需要出公网时不指定该参数，服务端会按 NONE 落库。
+     * set 公网出口配置；不传表示关闭公网出口。
      *
      * @param internetEgress
      */
     public void setInternetEgress(InternetEgress internetEgress) {
         this.internetEgress = internetEgress;
+    }
+
+
+    /**
+     * get 优雅退出配置，仅支持普通单机推理
+     *
+     * @return
+     */
+    public GracefulShutdown getGracefulShutdown() {
+        return gracefulShutdown;
+    }
+
+    /**
+     * set 优雅退出配置，仅支持普通单机推理
+     *
+     * @param gracefulShutdown
+     */
+    public void setGracefulShutdown(GracefulShutdown gracefulShutdown) {
+        this.gracefulShutdown = gracefulShutdown;
     }
 
 
@@ -773,13 +797,25 @@ public class Runtime  implements java.io.Serializable {
 
 
     /**
-     * set 公网出口配置。不需要出公网时不指定该参数，服务端会按 NONE 落库。
+     * set 公网出口配置；不传表示关闭公网出口。
      *
-     * @param internetEgress 公网出口配置。不需要出公网时不指定该参数，服务端会按 NONE 落库。
+     * @param internetEgress 公网出口配置；不传表示关闭公网出口。
      * @return Runtime
      */
     public Runtime internetEgress(InternetEgress internetEgress) {
         this.internetEgress = internetEgress;
+        return this;
+    }
+
+
+    /**
+     * set 优雅退出配置，仅支持普通单机推理
+     *
+     * @param gracefulShutdown 优雅退出配置，仅支持普通单机推理
+     * @return Runtime
+     */
+    public Runtime gracefulShutdown(GracefulShutdown gracefulShutdown) {
+        this.gracefulShutdown = gracefulShutdown;
         return this;
     }
 

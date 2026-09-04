@@ -46,12 +46,13 @@ public class RoleResourceForJob  implements java.io.Serializable {
     /**
      * 队列ID。示例：queue-2xxx**********2d*********8b8
 使用公共资源池时固定为：joybuilder-public-queue。
+使用共享资源池时固定为：joybuilder-exclusive-queue。
 
      */
     private String queueId;
 
     /**
-     * 公共资源池的规格ID。
+     * 公共资源池或共享资源池的规格ID。
      */
     private String flavorId;
 
@@ -127,6 +128,7 @@ public class RoleResourceForJob  implements java.io.Serializable {
     /**
      * get 队列ID。示例：queue-2xxx**********2d*********8b8
 使用公共资源池时固定为：joybuilder-public-queue。
+使用共享资源池时固定为：joybuilder-exclusive-queue。
 
      *
      * @return
@@ -138,6 +140,7 @@ public class RoleResourceForJob  implements java.io.Serializable {
     /**
      * set 队列ID。示例：queue-2xxx**********2d*********8b8
 使用公共资源池时固定为：joybuilder-public-queue。
+使用共享资源池时固定为：joybuilder-exclusive-queue。
 
      *
      * @param queueId
@@ -148,7 +151,7 @@ public class RoleResourceForJob  implements java.io.Serializable {
 
 
     /**
-     * get 公共资源池的规格ID。
+     * get 公共资源池或共享资源池的规格ID。
      *
      * @return
      */
@@ -157,7 +160,7 @@ public class RoleResourceForJob  implements java.io.Serializable {
     }
 
     /**
-     * set 公共资源池的规格ID。
+     * set 公共资源池或共享资源池的规格ID。
      *
      * @param flavorId
      */
@@ -295,10 +298,12 @@ public class RoleResourceForJob  implements java.io.Serializable {
     /**
      * set 队列ID。示例：queue-2xxx**********2d*********8b8
 使用公共资源池时固定为：joybuilder-public-queue。
+使用共享资源池时固定为：joybuilder-exclusive-queue。
 
      *
      * @param queueId 队列ID。示例：queue-2xxx**********2d*********8b8
 使用公共资源池时固定为：joybuilder-public-queue。
+使用共享资源池时固定为：joybuilder-exclusive-queue。
 
      * @return RoleResourceForJob
      */
@@ -309,9 +314,9 @@ public class RoleResourceForJob  implements java.io.Serializable {
 
 
     /**
-     * set 公共资源池的规格ID。
+     * set 公共资源池或共享资源池的规格ID。
      *
-     * @param flavorId 公共资源池的规格ID。
+     * @param flavorId 公共资源池或共享资源池的规格ID。
      * @return RoleResourceForJob
      */
     public RoleResourceForJob flavorId(String flavorId) {

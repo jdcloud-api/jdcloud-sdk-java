@@ -39,8 +39,8 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
      * 任务定义的名称。
 
 **命名规则：**
-- 长度：1~32个字符
-- 支持字符：中文、大小写字母、数字、英文中划线 &quot;-&quot; 和英文下划线 &quot;_&quot;
+- 长度：4~64字符
+- 支持字符：仅支持大小写字母、数字、英文中划线&quot;-&quot;、英文下划线&quot;_&quot;
 
      */
     private String name;
@@ -101,6 +101,12 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
     private ResourceForUpdateJobDefinition resource;
 
     /**
+     * 共享内存配置；不传表示不更新，传入后整体替换。
+
+     */
+    private SharedMemorySpec sharedMemory;
+
+    /**
      * 存储空间配置列表，用于挂载外部存储到容器中。
 
 **支持的存储类型：**
@@ -118,6 +124,12 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
     
     private List<ModelForUpdateJobDefinition> models;
     /**
+     * 代码仓配置列表，用于挂载代码仓到容器中。
+
+     */
+    
+    private List<CodeForUpdateJobDefinition> codes;
+    /**
      * 新所有者 pin。传入时更新任务定义的归属用户，nil 则不更新所有者。
 
      */
@@ -130,7 +142,12 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
     
     private List<NotifyRuleSpec> notifyConfig;
     /**
-     * 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * 排队超时时间（分钟）；不传表示不更新，&#x60;0&#x60; 表示恢复全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     */
+    private Integer queuingTimeoutMinutes;
+
+    /**
+     * 任务优先级；当队列开启优先级调度时生效。
 
      */
     private Integer taskPriority;
@@ -141,8 +158,8 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
      * get 任务定义的名称。
 
 **命名规则：**
-- 长度：1~32个字符
-- 支持字符：中文、大小写字母、数字、英文中划线 &quot;-&quot; 和英文下划线 &quot;_&quot;
+- 长度：4~64字符
+- 支持字符：仅支持大小写字母、数字、英文中划线&quot;-&quot;、英文下划线&quot;_&quot;
 
      *
      * @return
@@ -155,8 +172,8 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
      * set 任务定义的名称。
 
 **命名规则：**
-- 长度：1~32个字符
-- 支持字符：中文、大小写字母、数字、英文中划线 &quot;-&quot; 和英文下划线 &quot;_&quot;
+- 长度：4~64字符
+- 支持字符：仅支持大小写字母、数字、英文中划线&quot;-&quot;、英文下划线&quot;_&quot;
 
      *
      * @param name
@@ -331,6 +348,27 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
 
 
     /**
+     * get 共享内存配置；不传表示不更新，传入后整体替换。
+
+     *
+     * @return
+     */
+    public SharedMemorySpec getSharedMemory() {
+        return sharedMemory;
+    }
+
+    /**
+     * set 共享内存配置；不传表示不更新，传入后整体替换。
+
+     *
+     * @param sharedMemory
+     */
+    public void setSharedMemory(SharedMemorySpec sharedMemory) {
+        this.sharedMemory = sharedMemory;
+    }
+
+
+    /**
     * get 存储空间配置列表，用于挂载外部存储到容器中。
 
 **支持的存储类型：**
@@ -383,6 +421,27 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
 
 
     /**
+    * get 代码仓配置列表，用于挂载代码仓到容器中。
+
+    *
+    * @return
+    */
+    public List<CodeForUpdateJobDefinition> getCodes() {
+        return codes;
+    }
+
+    /**
+    * set 代码仓配置列表，用于挂载代码仓到容器中。
+
+    *
+    * @param codes
+    */
+    public void setCodes(List<CodeForUpdateJobDefinition> codes) {
+        this.codes = codes;
+    }
+
+
+    /**
      * get 新所有者 pin。传入时更新任务定义的归属用户，nil 则不更新所有者。
 
      *
@@ -425,7 +484,26 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
 
 
     /**
-     * get 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * get 排队超时时间（分钟）；不传表示不更新，&#x60;0&#x60; 表示恢复全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     *
+     * @return
+     */
+    public Integer getQueuingTimeoutMinutes() {
+        return queuingTimeoutMinutes;
+    }
+
+    /**
+     * set 排队超时时间（分钟）；不传表示不更新，&#x60;0&#x60; 表示恢复全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     *
+     * @param queuingTimeoutMinutes
+     */
+    public void setQueuingTimeoutMinutes(Integer queuingTimeoutMinutes) {
+        this.queuingTimeoutMinutes = queuingTimeoutMinutes;
+    }
+
+
+    /**
+     * get 任务优先级；当队列开启优先级调度时生效。
 
      *
      * @return
@@ -435,7 +513,7 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
     }
 
     /**
-     * set 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * set 任务优先级；当队列开启优先级调度时生效。
 
      *
      * @param taskPriority
@@ -450,15 +528,15 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
      * set 任务定义的名称。
 
 **命名规则：**
-- 长度：1~32个字符
-- 支持字符：中文、大小写字母、数字、英文中划线 &quot;-&quot; 和英文下划线 &quot;_&quot;
+- 长度：4~64字符
+- 支持字符：仅支持大小写字母、数字、英文中划线&quot;-&quot;、英文下划线&quot;_&quot;
 
      *
      * @param name 任务定义的名称。
 
 **命名规则：**
-- 长度：1~32个字符
-- 支持字符：中文、大小写字母、数字、英文中划线 &quot;-&quot; 和英文下划线 &quot;_&quot;
+- 长度：4~64字符
+- 支持字符：仅支持大小写字母、数字、英文中划线&quot;-&quot;、英文下划线&quot;_&quot;
 
      * @return JobDefinitionForUpdateJobDefinition
      */
@@ -591,6 +669,20 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
 
 
     /**
+     * set 共享内存配置；不传表示不更新，传入后整体替换。
+
+     *
+     * @param sharedMemory 共享内存配置；不传表示不更新，传入后整体替换。
+
+     * @return JobDefinitionForUpdateJobDefinition
+     */
+    public JobDefinitionForUpdateJobDefinition sharedMemory(SharedMemorySpec sharedMemory) {
+        this.sharedMemory = sharedMemory;
+        return this;
+    }
+
+
+    /**
     * set 存储空间配置列表，用于挂载外部存储到容器中。
 
 **支持的存储类型：**
@@ -629,6 +721,20 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
 
 
     /**
+    * set 代码仓配置列表，用于挂载代码仓到容器中。
+
+    *
+    * @param codes 代码仓配置列表，用于挂载代码仓到容器中。
+
+    * @return JobDefinitionForUpdateJobDefinition
+    */
+    public JobDefinitionForUpdateJobDefinition codes(List<CodeForUpdateJobDefinition> codes) {
+        this.codes = codes;
+        return this;
+    }
+
+
+    /**
      * set 新所有者 pin。传入时更新任务定义的归属用户，nil 则不更新所有者。
 
      *
@@ -657,10 +763,22 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
 
 
     /**
-     * set 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * set 排队超时时间（分钟）；不传表示不更新，&#x60;0&#x60; 表示恢复全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     *
+     * @param queuingTimeoutMinutes 排队超时时间（分钟）；不传表示不更新，&#x60;0&#x60; 表示恢复全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     * @return JobDefinitionForUpdateJobDefinition
+     */
+    public JobDefinitionForUpdateJobDefinition queuingTimeoutMinutes(Integer queuingTimeoutMinutes) {
+        this.queuingTimeoutMinutes = queuingTimeoutMinutes;
+        return this;
+    }
+
+
+    /**
+     * set 任务优先级；当队列开启优先级调度时生效。
 
      *
-     * @param taskPriority 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * @param taskPriority 任务优先级；当队列开启优先级调度时生效。
 
      * @return JobDefinitionForUpdateJobDefinition
      */
@@ -700,6 +818,19 @@ public class JobDefinitionForUpdateJobDefinition  implements java.io.Serializabl
             this.models = new ArrayList<>();
         }
         this.models.add(model);
+    }
+
+    /**
+     * add item to 代码仓配置列表，用于挂载代码仓到容器中。
+
+     *
+     * @param code
+     */
+    public void addCode(CodeForUpdateJobDefinition code) {
+        if (this.codes == null) {
+            this.codes = new ArrayList<>();
+        }
+        this.codes.add(code);
     }
 
     /**

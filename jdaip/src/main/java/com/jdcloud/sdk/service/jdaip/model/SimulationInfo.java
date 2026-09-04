@@ -98,6 +98,11 @@ public class SimulationInfo  implements java.io.Serializable {
     private String permission;
 
     /**
+     * 任务优先级。非必填，取值范围1~9，默认值为0。
+     */
+    private Integer taskPriority;
+
+    /**
      * 任务ID，不为空表示正在执行任务。
      */
     private String taskId;
@@ -397,6 +402,25 @@ public class SimulationInfo  implements java.io.Serializable {
      */
     public void setPermission(String permission) {
         this.permission = permission;
+    }
+
+
+    /**
+     * get 任务优先级。非必填，取值范围1~9，默认值为0。
+     *
+     * @return
+     */
+    public Integer getTaskPriority() {
+        return taskPriority;
+    }
+
+    /**
+     * set 任务优先级。非必填，取值范围1~9，默认值为0。
+     *
+     * @param taskPriority
+     */
+    public void setTaskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
     }
 
 
@@ -742,6 +766,18 @@ public class SimulationInfo  implements java.io.Serializable {
      */
     public SimulationInfo permission(String permission) {
         this.permission = permission;
+        return this;
+    }
+
+
+    /**
+     * set 任务优先级。非必填，取值范围1~9，默认值为0。
+     *
+     * @param taskPriority 任务优先级。非必填，取值范围1~9，默认值为0。
+     * @return SimulationInfo
+     */
+    public SimulationInfo taskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
         return this;
     }
 

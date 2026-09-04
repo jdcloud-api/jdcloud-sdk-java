@@ -43,6 +43,16 @@ public class ServiceInfo  implements java.io.Serializable {
     private String innerAddress;
 
     /**
+     * 专属网关公网调用地址
+     */
+    private String dgAddress;
+
+    /**
+     * 专属网关内网调用地址
+     */
+    private String dgInnerAddress;
+
+    /**
      * 访问服务时携带的Bearer Token
      */
     private String accessToken;
@@ -89,6 +99,44 @@ public class ServiceInfo  implements java.io.Serializable {
      */
     public void setInnerAddress(String innerAddress) {
         this.innerAddress = innerAddress;
+    }
+
+
+    /**
+     * get 专属网关公网调用地址
+     *
+     * @return
+     */
+    public String getDgAddress() {
+        return dgAddress;
+    }
+
+    /**
+     * set 专属网关公网调用地址
+     *
+     * @param dgAddress
+     */
+    public void setDgAddress(String dgAddress) {
+        this.dgAddress = dgAddress;
+    }
+
+
+    /**
+     * get 专属网关内网调用地址
+     *
+     * @return
+     */
+    public String getDgInnerAddress() {
+        return dgInnerAddress;
+    }
+
+    /**
+     * set 专属网关内网调用地址
+     *
+     * @param dgInnerAddress
+     */
+    public void setDgInnerAddress(String dgInnerAddress) {
+        this.dgInnerAddress = dgInnerAddress;
     }
 
 
@@ -151,6 +199,30 @@ public class ServiceInfo  implements java.io.Serializable {
      */
     public ServiceInfo innerAddress(String innerAddress) {
         this.innerAddress = innerAddress;
+        return this;
+    }
+
+
+    /**
+     * set 专属网关公网调用地址
+     *
+     * @param dgAddress 专属网关公网调用地址
+     * @return ServiceInfo
+     */
+    public ServiceInfo dgAddress(String dgAddress) {
+        this.dgAddress = dgAddress;
+        return this;
+    }
+
+
+    /**
+     * set 专属网关内网调用地址
+     *
+     * @param dgInnerAddress 专属网关内网调用地址
+     * @return ServiceInfo
+     */
+    public ServiceInfo dgInnerAddress(String dgInnerAddress) {
+        this.dgInnerAddress = dgInnerAddress;
         return this;
     }
 

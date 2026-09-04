@@ -68,6 +68,16 @@ public class InstanceListInfoForJob  implements java.io.Serializable {
     private String nodeIp;
 
     /**
+     * 物理节点名称。
+
+**说明：**
+- 仅专属队列返回
+- 公共资源池队列返回空值
+
+     */
+    private String nodeName;
+
+    /**
      * 实例的状态。
 
 **状态说明：**
@@ -215,6 +225,35 @@ public class InstanceListInfoForJob  implements java.io.Serializable {
      */
     public void setNodeIp(String nodeIp) {
         this.nodeIp = nodeIp;
+    }
+
+
+    /**
+     * get 物理节点名称。
+
+**说明：**
+- 仅专属队列返回
+- 公共资源池队列返回空值
+
+     *
+     * @return
+     */
+    public String getNodeName() {
+        return nodeName;
+    }
+
+    /**
+     * set 物理节点名称。
+
+**说明：**
+- 仅专属队列返回
+- 公共资源池队列返回空值
+
+     *
+     * @param nodeName
+     */
+    public void setNodeName(String nodeName) {
+        this.nodeName = nodeName;
     }
 
 
@@ -435,6 +474,28 @@ public class InstanceListInfoForJob  implements java.io.Serializable {
      */
     public InstanceListInfoForJob nodeIp(String nodeIp) {
         this.nodeIp = nodeIp;
+        return this;
+    }
+
+
+    /**
+     * set 物理节点名称。
+
+**说明：**
+- 仅专属队列返回
+- 公共资源池队列返回空值
+
+     *
+     * @param nodeName 物理节点名称。
+
+**说明：**
+- 仅专属队列返回
+- 公共资源池队列返回空值
+
+     * @return InstanceListInfoForJob
+     */
+    public InstanceListInfoForJob nodeName(String nodeName) {
+        this.nodeName = nodeName;
         return this;
     }
 

@@ -48,7 +48,7 @@ public class VisibleQueue  implements java.io.Serializable {
     private String description;
 
     /**
-     * 是否支持抢占。
+     * 是否支持抢占。默认由 Scale GetQueue 接口的 taskPreempt 获取；force&#x3D;true 时可作为兜底值。
      */
     private Boolean preemptible;
 
@@ -117,7 +117,7 @@ public class VisibleQueue  implements java.io.Serializable {
 
 
     /**
-     * get 是否支持抢占。
+     * get 是否支持抢占。默认由 Scale GetQueue 接口的 taskPreempt 获取；force&#x3D;true 时可作为兜底值。
      *
      * @return
      */
@@ -126,7 +126,7 @@ public class VisibleQueue  implements java.io.Serializable {
     }
 
     /**
-     * set 是否支持抢占。
+     * set 是否支持抢占。默认由 Scale GetQueue 接口的 taskPreempt 获取；force&#x3D;true 时可作为兜底值。
      *
      * @param preemptible
      */
@@ -192,9 +192,9 @@ public class VisibleQueue  implements java.io.Serializable {
 
 
     /**
-     * set 是否支持抢占。
+     * set 是否支持抢占。默认由 Scale GetQueue 接口的 taskPreempt 获取；force&#x3D;true 时可作为兜底值。
      *
-     * @param preemptible 是否支持抢占。
+     * @param preemptible 是否支持抢占。默认由 Scale GetQueue 接口的 taskPreempt 获取；force&#x3D;true 时可作为兜底值。
      * @return VisibleQueue
      */
     public VisibleQueue preemptible(Boolean preemptible) {

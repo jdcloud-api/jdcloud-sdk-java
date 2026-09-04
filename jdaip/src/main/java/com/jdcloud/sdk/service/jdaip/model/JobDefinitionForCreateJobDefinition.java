@@ -115,6 +115,12 @@ public class JobDefinitionForCreateJobDefinition  implements java.io.Serializabl
     private ResourceForCreateJobDefinition resource;
 
     /**
+     * 共享内存配置。
+
+     */
+    private SharedMemorySpec sharedMemory;
+
+    /**
      * 存储空间配置列表，用于挂载外部存储到容器中。
 
 **支持的存储类型：**
@@ -134,6 +140,12 @@ public class JobDefinitionForCreateJobDefinition  implements java.io.Serializabl
     
     private List<ModelForCreateJobDefinition> models;
     /**
+     * 代码仓配置列表，用于挂载代码仓到容器中。
+
+     */
+    
+    private List<CodeForCreateJobDefinition> codes;
+    /**
      * 调度任务配置。
      */
     private BuffaloForCreateJobDefinition buffalo;
@@ -145,7 +157,12 @@ public class JobDefinitionForCreateJobDefinition  implements java.io.Serializabl
     
     private List<NotifyRuleSpec> notifyConfig;
     /**
-     * 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * 排队超时时间（分钟）；不传或者传&#x60;0&#x60; 表示使用全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     */
+    private Integer queuingTimeoutMinutes;
+
+    /**
+     * 任务优先级；当队列开启优先级调度时生效。
 
      */
     private Integer taskPriority;
@@ -350,6 +367,27 @@ public class JobDefinitionForCreateJobDefinition  implements java.io.Serializabl
 
 
     /**
+     * get 共享内存配置。
+
+     *
+     * @return
+     */
+    public SharedMemorySpec getSharedMemory() {
+        return sharedMemory;
+    }
+
+    /**
+     * set 共享内存配置。
+
+     *
+     * @param sharedMemory
+     */
+    public void setSharedMemory(SharedMemorySpec sharedMemory) {
+        this.sharedMemory = sharedMemory;
+    }
+
+
+    /**
     * get 存储空间配置列表，用于挂载外部存储到容器中。
 
 **支持的存储类型：**
@@ -402,6 +440,27 @@ public class JobDefinitionForCreateJobDefinition  implements java.io.Serializabl
 
 
     /**
+    * get 代码仓配置列表，用于挂载代码仓到容器中。
+
+    *
+    * @return
+    */
+    public List<CodeForCreateJobDefinition> getCodes() {
+        return codes;
+    }
+
+    /**
+    * set 代码仓配置列表，用于挂载代码仓到容器中。
+
+    *
+    * @param codes
+    */
+    public void setCodes(List<CodeForCreateJobDefinition> codes) {
+        this.codes = codes;
+    }
+
+
+    /**
      * get 调度任务配置。
      *
      * @return
@@ -442,7 +501,26 @@ public class JobDefinitionForCreateJobDefinition  implements java.io.Serializabl
 
 
     /**
-     * get 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * get 排队超时时间（分钟）；不传或者传&#x60;0&#x60; 表示使用全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     *
+     * @return
+     */
+    public Integer getQueuingTimeoutMinutes() {
+        return queuingTimeoutMinutes;
+    }
+
+    /**
+     * set 排队超时时间（分钟）；不传或者传&#x60;0&#x60; 表示使用全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     *
+     * @param queuingTimeoutMinutes
+     */
+    public void setQueuingTimeoutMinutes(Integer queuingTimeoutMinutes) {
+        this.queuingTimeoutMinutes = queuingTimeoutMinutes;
+    }
+
+
+    /**
+     * get 任务优先级；当队列开启优先级调度时生效。
 
      *
      * @return
@@ -452,7 +530,7 @@ public class JobDefinitionForCreateJobDefinition  implements java.io.Serializabl
     }
 
     /**
-     * set 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * set 任务优先级；当队列开启优先级调度时生效。
 
      *
      * @param taskPriority
@@ -612,6 +690,20 @@ public class JobDefinitionForCreateJobDefinition  implements java.io.Serializabl
 
 
     /**
+     * set 共享内存配置。
+
+     *
+     * @param sharedMemory 共享内存配置。
+
+     * @return JobDefinitionForCreateJobDefinition
+     */
+    public JobDefinitionForCreateJobDefinition sharedMemory(SharedMemorySpec sharedMemory) {
+        this.sharedMemory = sharedMemory;
+        return this;
+    }
+
+
+    /**
     * set 存储空间配置列表，用于挂载外部存储到容器中。
 
 **支持的存储类型：**
@@ -650,6 +742,20 @@ public class JobDefinitionForCreateJobDefinition  implements java.io.Serializabl
 
 
     /**
+    * set 代码仓配置列表，用于挂载代码仓到容器中。
+
+    *
+    * @param codes 代码仓配置列表，用于挂载代码仓到容器中。
+
+    * @return JobDefinitionForCreateJobDefinition
+    */
+    public JobDefinitionForCreateJobDefinition codes(List<CodeForCreateJobDefinition> codes) {
+        this.codes = codes;
+        return this;
+    }
+
+
+    /**
      * set 调度任务配置。
      *
      * @param buffalo 调度任务配置。
@@ -676,10 +782,22 @@ public class JobDefinitionForCreateJobDefinition  implements java.io.Serializabl
 
 
     /**
-     * set 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * set 排队超时时间（分钟）；不传或者传&#x60;0&#x60; 表示使用全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     *
+     * @param queuingTimeoutMinutes 排队超时时间（分钟）；不传或者传&#x60;0&#x60; 表示使用全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     * @return JobDefinitionForCreateJobDefinition
+     */
+    public JobDefinitionForCreateJobDefinition queuingTimeoutMinutes(Integer queuingTimeoutMinutes) {
+        this.queuingTimeoutMinutes = queuingTimeoutMinutes;
+        return this;
+    }
+
+
+    /**
+     * set 任务优先级；当队列开启优先级调度时生效。
 
      *
-     * @param taskPriority 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * @param taskPriority 任务优先级；当队列开启优先级调度时生效。
 
      * @return JobDefinitionForCreateJobDefinition
      */
@@ -719,6 +837,19 @@ public class JobDefinitionForCreateJobDefinition  implements java.io.Serializabl
             this.models = new ArrayList<>();
         }
         this.models.add(model);
+    }
+
+    /**
+     * add item to 代码仓配置列表，用于挂载代码仓到容器中。
+
+     *
+     * @param code
+     */
+    public void addCode(CodeForCreateJobDefinition code) {
+        if (this.codes == null) {
+            this.codes = new ArrayList<>();
+        }
+        this.codes.add(code);
     }
 
     /**

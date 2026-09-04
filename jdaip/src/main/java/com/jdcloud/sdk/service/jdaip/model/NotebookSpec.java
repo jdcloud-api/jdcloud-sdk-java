@@ -38,7 +38,7 @@ import com.jdcloud.sdk.annotation.Required;
 - **存储配置**: 挂载的存储空间列表
 - **数据配置**: 挂载的数据集列表
 - **模型配置**: 挂载的模型列表
-- **网络配置**: 公网访问配置(LB)、公网出口配置、SSH配置
+- **网络配置**: RDMA网络、公网访问配置(LB)、公网出口配置、SSH配置
 - **权限配置**: 资源归属权限、资源组
 - **高级配置**: 环境变量、节点亲和性、自定义标签、调度优先级
 
@@ -147,7 +147,7 @@ public class NotebookSpec  implements java.io.Serializable {
      * 工作负载资源配置，定义Notebook的计算资源需求。
 
 ## 配置说明
-- **公共资源池**: 必须指定规格ID(flavorId)和逻辑可用区编码(logicAzCode)
+- **公共/专享资源池**: 必须指定规格ID(flavorId)和逻辑可用区编码(logicAzCode)
 - **私有资源池**: 必须指定CPU和内存，可选GPU配置
 
      * Required:true
@@ -216,11 +216,23 @@ public class NotebookSpec  implements java.io.Serializable {
 - 例如：调度到特定GPU型号的节点
 
 ## 限制
-- 公共资源池不支持设置节点亲和性，仅私有资源池有效
+- 公共/专享资源池不支持设置节点亲和性，仅私有资源池有效
 
      */
     
     private List<NotebookNodeAffinity> nodeAffinities;
+    /**
+     * 是否启用RDMA高速网络，默认值为&#x60;false&#x60;。
+
+## 生效规则
+- 仅私有资源池中的Notebook支持设置该参数
+- 计算资源必须包含GPU，且GPU卡数必须为正整数
+- 未配置GPU或配置非整卡GPU时，即使传&#x60;true&#x60;也会静默按&#x60;false&#x60;处理
+- 公共/专享资源池忽略该参数，是否启用由所选规格的RDMA属性决定
+
+     */
+    private Boolean rdma;
+
     /**
      * 代码库配置列表，定义Notebook挂载的代码仓库。
 
@@ -538,7 +550,7 @@ public class NotebookSpec  implements java.io.Serializable {
      * get 工作负载资源配置，定义Notebook的计算资源需求。
 
 ## 配置说明
-- **公共资源池**: 必须指定规格ID(flavorId)和逻辑可用区编码(logicAzCode)
+- **公共/专享资源池**: 必须指定规格ID(flavorId)和逻辑可用区编码(logicAzCode)
 - **私有资源池**: 必须指定CPU和内存，可选GPU配置
 
      *
@@ -552,7 +564,7 @@ public class NotebookSpec  implements java.io.Serializable {
      * set 工作负载资源配置，定义Notebook的计算资源需求。
 
 ## 配置说明
-- **公共资源池**: 必须指定规格ID(flavorId)和逻辑可用区编码(logicAzCode)
+- **公共/专享资源池**: 必须指定规格ID(flavorId)和逻辑可用区编码(logicAzCode)
 - **私有资源池**: 必须指定CPU和内存，可选GPU配置
 
      *
@@ -708,7 +720,7 @@ public class NotebookSpec  implements java.io.Serializable {
 - 例如：调度到特定GPU型号的节点
 
 ## 限制
-- 公共资源池不支持设置节点亲和性，仅私有资源池有效
+- 公共/专享资源池不支持设置节点亲和性，仅私有资源池有效
 
     *
     * @return
@@ -726,13 +738,46 @@ public class NotebookSpec  implements java.io.Serializable {
 - 例如：调度到特定GPU型号的节点
 
 ## 限制
-- 公共资源池不支持设置节点亲和性，仅私有资源池有效
+- 公共/专享资源池不支持设置节点亲和性，仅私有资源池有效
 
     *
     * @param nodeAffinities
     */
     public void setNodeAffinities(List<NotebookNodeAffinity> nodeAffinities) {
         this.nodeAffinities = nodeAffinities;
+    }
+
+
+    /**
+     * get 是否启用RDMA高速网络，默认值为&#x60;false&#x60;。
+
+## 生效规则
+- 仅私有资源池中的Notebook支持设置该参数
+- 计算资源必须包含GPU，且GPU卡数必须为正整数
+- 未配置GPU或配置非整卡GPU时，即使传&#x60;true&#x60;也会静默按&#x60;false&#x60;处理
+- 公共/专享资源池忽略该参数，是否启用由所选规格的RDMA属性决定
+
+     *
+     * @return
+     */
+    public Boolean getRdma() {
+        return rdma;
+    }
+
+    /**
+     * set 是否启用RDMA高速网络，默认值为&#x60;false&#x60;。
+
+## 生效规则
+- 仅私有资源池中的Notebook支持设置该参数
+- 计算资源必须包含GPU，且GPU卡数必须为正整数
+- 未配置GPU或配置非整卡GPU时，即使传&#x60;true&#x60;也会静默按&#x60;false&#x60;处理
+- 公共/专享资源池忽略该参数，是否启用由所选规格的RDMA属性决定
+
+     *
+     * @param rdma
+     */
+    public void setRdma(Boolean rdma) {
+        this.rdma = rdma;
     }
 
 
@@ -1092,14 +1137,14 @@ public class NotebookSpec  implements java.io.Serializable {
      * set 工作负载资源配置，定义Notebook的计算资源需求。
 
 ## 配置说明
-- **公共资源池**: 必须指定规格ID(flavorId)和逻辑可用区编码(logicAzCode)
+- **公共/专享资源池**: 必须指定规格ID(flavorId)和逻辑可用区编码(logicAzCode)
 - **私有资源池**: 必须指定CPU和内存，可选GPU配置
 
      *
      * @param workloadSpec 工作负载资源配置，定义Notebook的计算资源需求。
 
 ## 配置说明
-- **公共资源池**: 必须指定规格ID(flavorId)和逻辑可用区编码(logicAzCode)
+- **公共/专享资源池**: 必须指定规格ID(flavorId)和逻辑可用区编码(logicAzCode)
 - **私有资源池**: 必须指定CPU和内存，可选GPU配置
 
      * @return NotebookSpec
@@ -1227,7 +1272,7 @@ public class NotebookSpec  implements java.io.Serializable {
 - 例如：调度到特定GPU型号的节点
 
 ## 限制
-- 公共资源池不支持设置节点亲和性，仅私有资源池有效
+- 公共/专享资源池不支持设置节点亲和性，仅私有资源池有效
 
     *
     * @param nodeAffinities 节点亲和性配置，控制Pod调度到特定节点。
@@ -1238,12 +1283,38 @@ public class NotebookSpec  implements java.io.Serializable {
 - 例如：调度到特定GPU型号的节点
 
 ## 限制
-- 公共资源池不支持设置节点亲和性，仅私有资源池有效
+- 公共/专享资源池不支持设置节点亲和性，仅私有资源池有效
 
     * @return NotebookSpec
     */
     public NotebookSpec nodeAffinities(List<NotebookNodeAffinity> nodeAffinities) {
         this.nodeAffinities = nodeAffinities;
+        return this;
+    }
+
+
+    /**
+     * set 是否启用RDMA高速网络，默认值为&#x60;false&#x60;。
+
+## 生效规则
+- 仅私有资源池中的Notebook支持设置该参数
+- 计算资源必须包含GPU，且GPU卡数必须为正整数
+- 未配置GPU或配置非整卡GPU时，即使传&#x60;true&#x60;也会静默按&#x60;false&#x60;处理
+- 公共/专享资源池忽略该参数，是否启用由所选规格的RDMA属性决定
+
+     *
+     * @param rdma 是否启用RDMA高速网络，默认值为&#x60;false&#x60;。
+
+## 生效规则
+- 仅私有资源池中的Notebook支持设置该参数
+- 计算资源必须包含GPU，且GPU卡数必须为正整数
+- 未配置GPU或配置非整卡GPU时，即使传&#x60;true&#x60;也会静默按&#x60;false&#x60;处理
+- 公共/专享资源池忽略该参数，是否启用由所选规格的RDMA属性决定
+
+     * @return NotebookSpec
+     */
+    public NotebookSpec rdma(Boolean rdma) {
+        this.rdma = rdma;
         return this;
     }
 
@@ -1438,7 +1509,7 @@ public class NotebookSpec  implements java.io.Serializable {
 - 例如：调度到特定GPU型号的节点
 
 ## 限制
-- 公共资源池不支持设置节点亲和性，仅私有资源池有效
+- 公共/专享资源池不支持设置节点亲和性，仅私有资源池有效
 
      *
      * @param nodeAffinitie

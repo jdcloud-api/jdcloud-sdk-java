@@ -40,9 +40,11 @@ public class RoleResourceParamForJob  implements java.io.Serializable {
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
 **专属资源池：** 使用工作空间绑定的队列，需要用户及角色拥有该队列的使用权限
 
-**示例：** &#x60;queue-2xxx**********2d*********8b8&#x60;
+**示例：** &#x60;joybuilder-public-queue&#x60;、&#x60;joybuilder-exclusive-queue&#x60;、&#x60;queue-2xxx**********2d*********8b8&#x60;
 
      */
     private String queueId;
@@ -81,9 +83,11 @@ public class RoleResourceParamForJob  implements java.io.Serializable {
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
 **专属资源池：** 使用工作空间绑定的队列，需要用户及角色拥有该队列的使用权限
 
-**示例：** &#x60;queue-2xxx**********2d*********8b8&#x60;
+**示例：** &#x60;joybuilder-public-queue&#x60;、&#x60;joybuilder-exclusive-queue&#x60;、&#x60;queue-2xxx**********2d*********8b8&#x60;
 
      *
      * @return
@@ -97,9 +101,11 @@ public class RoleResourceParamForJob  implements java.io.Serializable {
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
 **专属资源池：** 使用工作空间绑定的队列，需要用户及角色拥有该队列的使用权限
 
-**示例：** &#x60;queue-2xxx**********2d*********8b8&#x60;
+**示例：** &#x60;joybuilder-public-queue&#x60;、&#x60;joybuilder-exclusive-queue&#x60;、&#x60;queue-2xxx**********2d*********8b8&#x60;
 
      *
      * @param queueId
@@ -187,18 +193,22 @@ public class RoleResourceParamForJob  implements java.io.Serializable {
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
 **专属资源池：** 使用工作空间绑定的队列，需要用户及角色拥有该队列的使用权限
 
-**示例：** &#x60;queue-2xxx**********2d*********8b8&#x60;
+**示例：** &#x60;joybuilder-public-queue&#x60;、&#x60;joybuilder-exclusive-queue&#x60;、&#x60;queue-2xxx**********2d*********8b8&#x60;
 
      *
      * @param queueId 队列ID，指定任务运行的资源队列。
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
 **专属资源池：** 使用工作空间绑定的队列，需要用户及角色拥有该队列的使用权限
 
-**示例：** &#x60;queue-2xxx**********2d*********8b8&#x60;
+**示例：** &#x60;joybuilder-public-queue&#x60;、&#x60;joybuilder-exclusive-queue&#x60;、&#x60;queue-2xxx**********2d*********8b8&#x60;
 
      * @return RoleResourceParamForJob
      */

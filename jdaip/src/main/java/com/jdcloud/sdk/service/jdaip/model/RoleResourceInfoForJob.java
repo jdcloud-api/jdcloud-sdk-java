@@ -69,9 +69,9 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
     private Integer count;
 
     /**
-     * 规格ID，指定公共资源池的计算规格。
+     * 规格ID，指定公共资源池或共享资源池的计算规格。
 
-**说明：** 专属资源池无需填写
+**说明：** 公共资源池和共享资源池必填；其他资源队列无需填写
 
      */
     private String flavorId;
@@ -93,7 +93,7 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
     /**
      * 虚拟 GPU 核数。
 
-**可选值：** &#x60;0.1&#x60;, &#x60;0.125&#x60;, &#x60;0.25&#x60;, &#x60;0.5&#x60;, &#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;, &#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;
+**可选值：** &#x60;0.1&#x60;, &#x60;0.125&#x60;, &#x60;0.25&#x60;, &#x60;0.5&#x60;, &#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;, &#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;, &#x60;16&#x60;
 
      */
     private Double vcudaCore;
@@ -118,7 +118,7 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
      * 逻辑可用区编码。
 
 **说明：**
-- 公共资源池必传
+- 公共资源池和共享资源池必传
 - CPU/GPU 规格可填具体边缘可用区，或填中心随机(center_random)
 - 异构(HPC)规格须填具体可用区
 
@@ -208,9 +208,9 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * get 规格ID，指定公共资源池的计算规格。
+     * get 规格ID，指定公共资源池或共享资源池的计算规格。
 
-**说明：** 专属资源池无需填写
+**说明：** 公共资源池和共享资源池必填；其他资源队列无需填写
 
      *
      * @return
@@ -220,9 +220,9 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
     }
 
     /**
-     * set 规格ID，指定公共资源池的计算规格。
+     * set 规格ID，指定公共资源池或共享资源池的计算规格。
 
-**说明：** 专属资源池无需填写
+**说明：** 公共资源池和共享资源池必填；其他资源队列无需填写
 
      *
      * @param flavorId
@@ -281,7 +281,7 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
     /**
      * get 虚拟 GPU 核数。
 
-**可选值：** &#x60;0.1&#x60;, &#x60;0.125&#x60;, &#x60;0.25&#x60;, &#x60;0.5&#x60;, &#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;, &#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;
+**可选值：** &#x60;0.1&#x60;, &#x60;0.125&#x60;, &#x60;0.25&#x60;, &#x60;0.5&#x60;, &#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;, &#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;, &#x60;16&#x60;
 
      *
      * @return
@@ -293,7 +293,7 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
     /**
      * set 虚拟 GPU 核数。
 
-**可选值：** &#x60;0.1&#x60;, &#x60;0.125&#x60;, &#x60;0.25&#x60;, &#x60;0.5&#x60;, &#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;, &#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;
+**可选值：** &#x60;0.1&#x60;, &#x60;0.125&#x60;, &#x60;0.25&#x60;, &#x60;0.5&#x60;, &#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;, &#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;, &#x60;16&#x60;
 
      *
      * @param vcudaCore
@@ -357,7 +357,7 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
      * get 逻辑可用区编码。
 
 **说明：**
-- 公共资源池必传
+- 公共资源池和共享资源池必传
 - CPU/GPU 规格可填具体边缘可用区，或填中心随机(center_random)
 - 异构(HPC)规格须填具体可用区
 
@@ -372,7 +372,7 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
      * set 逻辑可用区编码。
 
 **说明：**
-- 公共资源池必传
+- 公共资源池和共享资源池必传
 - CPU/GPU 规格可填具体边缘可用区，或填中心随机(center_random)
 - 异构(HPC)规格须填具体可用区
 
@@ -469,14 +469,14 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * set 规格ID，指定公共资源池的计算规格。
+     * set 规格ID，指定公共资源池或共享资源池的计算规格。
 
-**说明：** 专属资源池无需填写
+**说明：** 公共资源池和共享资源池必填；其他资源队列无需填写
 
      *
-     * @param flavorId 规格ID，指定公共资源池的计算规格。
+     * @param flavorId 规格ID，指定公共资源池或共享资源池的计算规格。
 
-**说明：** 专属资源池无需填写
+**说明：** 公共资源池和共享资源池必填；其他资源队列无需填写
 
      * @return RoleResourceInfoForJob
      */
@@ -521,12 +521,12 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
     /**
      * set 虚拟 GPU 核数。
 
-**可选值：** &#x60;0.1&#x60;, &#x60;0.125&#x60;, &#x60;0.25&#x60;, &#x60;0.5&#x60;, &#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;, &#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;
+**可选值：** &#x60;0.1&#x60;, &#x60;0.125&#x60;, &#x60;0.25&#x60;, &#x60;0.5&#x60;, &#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;, &#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;, &#x60;16&#x60;
 
      *
      * @param vcudaCore 虚拟 GPU 核数。
 
-**可选值：** &#x60;0.1&#x60;, &#x60;0.125&#x60;, &#x60;0.25&#x60;, &#x60;0.5&#x60;, &#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;, &#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;
+**可选值：** &#x60;0.1&#x60;, &#x60;0.125&#x60;, &#x60;0.25&#x60;, &#x60;0.5&#x60;, &#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;, &#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;, &#x60;16&#x60;
 
      * @return RoleResourceInfoForJob
      */
@@ -576,7 +576,7 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
      * set 逻辑可用区编码。
 
 **说明：**
-- 公共资源池必传
+- 公共资源池和共享资源池必传
 - CPU/GPU 规格可填具体边缘可用区，或填中心随机(center_random)
 - 异构(HPC)规格须填具体可用区
 
@@ -584,7 +584,7 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
      * @param logicAzCode 逻辑可用区编码。
 
 **说明：**
-- 公共资源池必传
+- 公共资源池和共享资源池必传
 - CPU/GPU 规格可填具体边缘可用区，或填中心随机(center_random)
 - 异构(HPC)规格须填具体可用区
 

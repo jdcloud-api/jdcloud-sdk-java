@@ -114,6 +114,11 @@ public class JobListInfoForJob  implements java.io.Serializable {
     private String jobType;
 
     /**
+     * 是否为用户训练主容器开启容器特权模式。
+     */
+    private Boolean privileged;
+
+    /**
      * 任务运行时长，单位：秒。
 
 **说明：** 从任务开始运行到当前或结束的时间
@@ -142,7 +147,12 @@ public class JobListInfoForJob  implements java.io.Serializable {
     private String queueId;
 
     /**
-     * 公共资源池的规格ID。
+     * 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     */
+    private String queueType;
+
+    /**
+     * 公共资源池或共享资源池的规格ID。
      */
     private String flavorId;
 
@@ -152,14 +162,9 @@ public class JobListInfoForJob  implements java.io.Serializable {
     private Object flavorInfo;
 
     /**
-     * 逻辑可用区编码（公共池）。
+     * 任务优先级。共享资源池取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
      */
-    private String logicAzCode;
-
-    /**
-     * 物理集群名称（异构规格）。
-     */
-    private String hpcClusterName;
+    private Integer taskPriority;
 
     /**
      * GPU 卡类型。
@@ -188,7 +193,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
     private RoleResourceInfoForJobList roleResource;
 
     /**
-     * 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      */
     private InternetEgressForJob internetEgress;
@@ -234,6 +239,11 @@ public class JobListInfoForJob  implements java.io.Serializable {
      */
     
     private List<JobTag> userTags;
+    /**
+     * 是否开启性能分析。
+     */
+    private Boolean profilingEnable;
+
     /**
      * 归属用户 pin。
      */
@@ -503,6 +513,25 @@ public class JobListInfoForJob  implements java.io.Serializable {
 
 
     /**
+     * get 是否为用户训练主容器开启容器特权模式。
+     *
+     * @return
+     */
+    public Boolean getPrivileged() {
+        return privileged;
+    }
+
+    /**
+     * set 是否为用户训练主容器开启容器特权模式。
+     *
+     * @param privileged
+     */
+    public void setPrivileged(Boolean privileged) {
+        this.privileged = privileged;
+    }
+
+
+    /**
      * get 任务运行时长，单位：秒。
 
 **说明：** 从任务开始运行到当前或结束的时间
@@ -595,7 +624,26 @@ public class JobListInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * get 公共资源池的规格ID。
+     * get 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     *
+     * @return
+     */
+    public String getQueueType() {
+        return queueType;
+    }
+
+    /**
+     * set 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     *
+     * @param queueType
+     */
+    public void setQueueType(String queueType) {
+        this.queueType = queueType;
+    }
+
+
+    /**
+     * get 公共资源池或共享资源池的规格ID。
      *
      * @return
      */
@@ -604,7 +652,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
     }
 
     /**
-     * set 公共资源池的规格ID。
+     * set 公共资源池或共享资源池的规格ID。
      *
      * @param flavorId
      */
@@ -633,40 +681,21 @@ public class JobListInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * get 逻辑可用区编码（公共池）。
+     * get 任务优先级。共享资源池取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
      *
      * @return
      */
-    public String getLogicAzCode() {
-        return logicAzCode;
+    public Integer getTaskPriority() {
+        return taskPriority;
     }
 
     /**
-     * set 逻辑可用区编码（公共池）。
+     * set 任务优先级。共享资源池取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
      *
-     * @param logicAzCode
+     * @param taskPriority
      */
-    public void setLogicAzCode(String logicAzCode) {
-        this.logicAzCode = logicAzCode;
-    }
-
-
-    /**
-     * get 物理集群名称（异构规格）。
-     *
-     * @return
-     */
-    public String getHpcClusterName() {
-        return hpcClusterName;
-    }
-
-    /**
-     * set 物理集群名称（异构规格）。
-     *
-     * @param hpcClusterName
-     */
-    public void setHpcClusterName(String hpcClusterName) {
-        this.hpcClusterName = hpcClusterName;
+    public void setTaskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
     }
 
 
@@ -768,7 +797,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * get 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * get 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      *
      * @return
@@ -778,7 +807,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
     }
 
     /**
-     * set 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * set 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      *
      * @param internetEgress
@@ -921,6 +950,25 @@ public class JobListInfoForJob  implements java.io.Serializable {
     */
     public void setUserTags(List<JobTag> userTags) {
         this.userTags = userTags;
+    }
+
+
+    /**
+     * get 是否开启性能分析。
+     *
+     * @return
+     */
+    public Boolean getProfilingEnable() {
+        return profilingEnable;
+    }
+
+    /**
+     * set 是否开启性能分析。
+     *
+     * @param profilingEnable
+     */
+    public void setProfilingEnable(Boolean profilingEnable) {
+        this.profilingEnable = profilingEnable;
     }
 
 
@@ -1227,6 +1275,18 @@ public class JobListInfoForJob  implements java.io.Serializable {
 
 
     /**
+     * set 是否为用户训练主容器开启容器特权模式。
+     *
+     * @param privileged 是否为用户训练主容器开启容器特权模式。
+     * @return JobListInfoForJob
+     */
+    public JobListInfoForJob privileged(Boolean privileged) {
+        this.privileged = privileged;
+        return this;
+    }
+
+
+    /**
      * set 任务运行时长，单位：秒。
 
 **说明：** 从任务开始运行到当前或结束的时间
@@ -1291,9 +1351,21 @@ public class JobListInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * set 公共资源池的规格ID。
+     * set 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
      *
-     * @param flavorId 公共资源池的规格ID。
+     * @param queueType 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     * @return JobListInfoForJob
+     */
+    public JobListInfoForJob queueType(String queueType) {
+        this.queueType = queueType;
+        return this;
+    }
+
+
+    /**
+     * set 公共资源池或共享资源池的规格ID。
+     *
+     * @param flavorId 公共资源池或共享资源池的规格ID。
      * @return JobListInfoForJob
      */
     public JobListInfoForJob flavorId(String flavorId) {
@@ -1315,25 +1387,13 @@ public class JobListInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * set 逻辑可用区编码（公共池）。
+     * set 任务优先级。共享资源池取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
      *
-     * @param logicAzCode 逻辑可用区编码（公共池）。
+     * @param taskPriority 任务优先级。共享资源池取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
      * @return JobListInfoForJob
      */
-    public JobListInfoForJob logicAzCode(String logicAzCode) {
-        this.logicAzCode = logicAzCode;
-        return this;
-    }
-
-
-    /**
-     * set 物理集群名称（异构规格）。
-     *
-     * @param hpcClusterName 物理集群名称（异构规格）。
-     * @return JobListInfoForJob
-     */
-    public JobListInfoForJob hpcClusterName(String hpcClusterName) {
-        this.hpcClusterName = hpcClusterName;
+    public JobListInfoForJob taskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
         return this;
     }
 
@@ -1401,10 +1461,10 @@ public class JobListInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * set 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * set 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      *
-     * @param internetEgress 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * @param internetEgress 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      * @return JobListInfoForJob
      */
@@ -1504,6 +1564,18 @@ public class JobListInfoForJob  implements java.io.Serializable {
     */
     public JobListInfoForJob userTags(List<JobTag> userTags) {
         this.userTags = userTags;
+        return this;
+    }
+
+
+    /**
+     * set 是否开启性能分析。
+     *
+     * @param profilingEnable 是否开启性能分析。
+     * @return JobListInfoForJob
+     */
+    public JobListInfoForJob profilingEnable(Boolean profilingEnable) {
+        this.profilingEnable = profilingEnable;
         return this;
     }
 

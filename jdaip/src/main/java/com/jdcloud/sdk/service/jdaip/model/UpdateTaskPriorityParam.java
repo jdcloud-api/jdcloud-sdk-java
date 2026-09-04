@@ -31,7 +31,9 @@ import com.jdcloud.sdk.annotation.Required;
 
 ## 使用说明
 - 仅支持处于 排队中(waiting) 或 停止(stopped) 状态的Notebook
-- 仅私有资源池且队列开启了调度优先级时可设置
+- 专享资源池：必须设置调度优先级(1~9)
+- 私有资源池：仅队列开启了调度优先级时可设置
+- 公共资源池：不支持设置调度优先级
 
  */
 public class UpdateTaskPriorityParam  implements java.io.Serializable {
@@ -39,12 +41,12 @@ public class UpdateTaskPriorityParam  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 调度优先级值，Pod调度顺序控制。
-
-## 使用说明
-- 取值范围为[1, 队列优先级上限]
-- 数值越大，优先级越高
-- 仅在调度器支持优先级时生效
+     * 任务调度优先级，数值越大，优先级越高。
+**取值范围：** 1 ~ 9
+**按资源池类型区分：**
+- 专享队列：必须设置(1~9)。
+- 空间私有队列：开启调度优先级时必填。
+- 公共队列：不支持设置。
 
      * Required:true
      */
@@ -54,12 +56,12 @@ public class UpdateTaskPriorityParam  implements java.io.Serializable {
 
 
     /**
-     * get 调度优先级值，Pod调度顺序控制。
-
-## 使用说明
-- 取值范围为[1, 队列优先级上限]
-- 数值越大，优先级越高
-- 仅在调度器支持优先级时生效
+     * get 任务调度优先级，数值越大，优先级越高。
+**取值范围：** 1 ~ 9
+**按资源池类型区分：**
+- 专享队列：必须设置(1~9)。
+- 空间私有队列：开启调度优先级时必填。
+- 公共队列：不支持设置。
 
      *
      * @return
@@ -69,12 +71,12 @@ public class UpdateTaskPriorityParam  implements java.io.Serializable {
     }
 
     /**
-     * set 调度优先级值，Pod调度顺序控制。
-
-## 使用说明
-- 取值范围为[1, 队列优先级上限]
-- 数值越大，优先级越高
-- 仅在调度器支持优先级时生效
+     * set 任务调度优先级，数值越大，优先级越高。
+**取值范围：** 1 ~ 9
+**按资源池类型区分：**
+- 专享队列：必须设置(1~9)。
+- 空间私有队列：开启调度优先级时必填。
+- 公共队列：不支持设置。
 
      *
      * @param taskPriority
@@ -86,20 +88,20 @@ public class UpdateTaskPriorityParam  implements java.io.Serializable {
 
 
     /**
-     * set 调度优先级值，Pod调度顺序控制。
-
-## 使用说明
-- 取值范围为[1, 队列优先级上限]
-- 数值越大，优先级越高
-- 仅在调度器支持优先级时生效
+     * set 任务调度优先级，数值越大，优先级越高。
+**取值范围：** 1 ~ 9
+**按资源池类型区分：**
+- 专享队列：必须设置(1~9)。
+- 空间私有队列：开启调度优先级时必填。
+- 公共队列：不支持设置。
 
      *
-     * @param taskPriority 调度优先级值，Pod调度顺序控制。
-
-## 使用说明
-- 取值范围为[1, 队列优先级上限]
-- 数值越大，优先级越高
-- 仅在调度器支持优先级时生效
+     * @param taskPriority 任务调度优先级，数值越大，优先级越高。
+**取值范围：** 1 ~ 9
+**按资源池类型区分：**
+- 专享队列：必须设置(1~9)。
+- 空间私有队列：开启调度优先级时必填。
+- 公共队列：不支持设置。
 
      * @return UpdateTaskPriorityParam
      */

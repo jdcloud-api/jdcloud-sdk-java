@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JOYSCALE-显卡设备对象
- * JDOS Chogori jdaip OpenAPI
+ * 交易购买相关对象
+ * JDOS Chogori交易购买相关对象
  *
  * OpenAPI spec version: v1
  * Contact: 

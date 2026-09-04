@@ -43,7 +43,7 @@ public class ElasticIp  implements java.io.Serializable {
     private String ip;
 
     /**
-     * 绑定的公网ip类型，none:不绑定,new:新建,exist:已存在的，默认none
+     * 绑定的公网 IP 类型；none：仅内网、不绑定公网 IP，new：新建，exist：使用已有公网 IP
      */
     private String bindType;
 
@@ -103,7 +103,7 @@ public class ElasticIp  implements java.io.Serializable {
 
 
     /**
-     * get 绑定的公网ip类型，none:不绑定,new:新建,exist:已存在的，默认none
+     * get 绑定的公网 IP 类型；none：仅内网、不绑定公网 IP，new：新建，exist：使用已有公网 IP
      *
      * @return
      */
@@ -112,7 +112,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 绑定的公网ip类型，none:不绑定,new:新建,exist:已存在的，默认none
+     * set 绑定的公网 IP 类型；none：仅内网、不绑定公网 IP，new：新建，exist：使用已有公网 IP
      *
      * @param bindType
      */
@@ -204,9 +204,9 @@ public class ElasticIp  implements java.io.Serializable {
 
 
     /**
-     * set 绑定的公网ip类型，none:不绑定,new:新建,exist:已存在的，默认none
+     * set 绑定的公网 IP 类型；none：仅内网、不绑定公网 IP，new：新建，exist：使用已有公网 IP
      *
-     * @param bindType 绑定的公网ip类型，none:不绑定,new:新建,exist:已存在的，默认none
+     * @param bindType 绑定的公网 IP 类型；none：仅内网、不绑定公网 IP，new：新建，exist：使用已有公网 IP
      * @return ElasticIp
      */
     public ElasticIp bindType(String bindType) {

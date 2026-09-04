@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.jdaip.model;
 
 
 /**
- * 存储空间配置，定义如何将外部共享存储（OSS/CFS/JPFS）挂载到训练容器中。
+ * 存储空间配置，定义如何将外部共享存储（OSS/CFS/JPFS/安全存储）挂载到训练容器中。
 
 **支持的存储类型：**
 
@@ -35,6 +35,7 @@ package com.jdcloud.sdk.service.jdaip.model;
 | &#x60;oss&#x60; | 对象存储服务 | 大规模数据存储、数据归档 | 成本低、容量无限 |
 | &#x60;cfs&#x60; | 云文件系统 | 高性能文件存储、多节点共享 | 低延迟、高吞吐 |
 | &#x60;jpfs&#x60; | 京东云并行文件系统 | 高并发场景、大文件读写 | 极高性能 |
+| &#x60;secure&#x60; | 安全存储（JPFS） | 安全队列训练、数据安全保护 | 仅安全队列可用 |
 
 **说明：** 训练节点本地临时盘请使用 &#x60;jobParam&#x60; 顶层字段 &#x60;localStorage&#x60;，不要作为本列表的一项。
 
@@ -56,9 +57,11 @@ public class StorageSpaceParamForJob  implements java.io.Serializable {
 - &#x60;oss&#x60;：对象存储服务
 - &#x60;cfs&#x60;：云文件系统
 - &#x60;jpfs&#x60;：京东云并行文件系统
+- &#x60;secure&#x60;：安全存储（JPFS），**仅安全队列可用**
 
 **注意：**
 - 大小写敏感
+- &#x60;secure&#x60; 仅在安全队列下可用，非安全队列使用将返回错误
 
      */
     private String storageType;
@@ -94,6 +97,11 @@ public class StorageSpaceParamForJob  implements java.io.Serializable {
      */
     private JpfsParamForJob jpfs;
 
+    /**
+     * secure
+     */
+    private SecureParamForJob secure;
+
 
 
     /**
@@ -103,9 +111,11 @@ public class StorageSpaceParamForJob  implements java.io.Serializable {
 - &#x60;oss&#x60;：对象存储服务
 - &#x60;cfs&#x60;：云文件系统
 - &#x60;jpfs&#x60;：京东云并行文件系统
+- &#x60;secure&#x60;：安全存储（JPFS），**仅安全队列可用**
 
 **注意：**
 - 大小写敏感
+- &#x60;secure&#x60; 仅在安全队列下可用，非安全队列使用将返回错误
 
      *
      * @return
@@ -121,9 +131,11 @@ public class StorageSpaceParamForJob  implements java.io.Serializable {
 - &#x60;oss&#x60;：对象存储服务
 - &#x60;cfs&#x60;：云文件系统
 - &#x60;jpfs&#x60;：京东云并行文件系统
+- &#x60;secure&#x60;：安全存储（JPFS），**仅安全队列可用**
 
 **注意：**
 - 大小写敏感
+- &#x60;secure&#x60; 仅在安全队列下可用，非安全队列使用将返回错误
 
      *
      * @param storageType
@@ -231,6 +243,25 @@ public class StorageSpaceParamForJob  implements java.io.Serializable {
     }
 
 
+    /**
+     * get secure
+     *
+     * @return
+     */
+    public SecureParamForJob getSecure() {
+        return secure;
+    }
+
+    /**
+     * set secure
+     *
+     * @param secure
+     */
+    public void setSecure(SecureParamForJob secure) {
+        this.secure = secure;
+    }
+
+
 
     /**
      * set 存储类型，决定外部共享存储的数据来源和存储方式。
@@ -239,9 +270,11 @@ public class StorageSpaceParamForJob  implements java.io.Serializable {
 - &#x60;oss&#x60;：对象存储服务
 - &#x60;cfs&#x60;：云文件系统
 - &#x60;jpfs&#x60;：京东云并行文件系统
+- &#x60;secure&#x60;：安全存储（JPFS），**仅安全队列可用**
 
 **注意：**
 - 大小写敏感
+- &#x60;secure&#x60; 仅在安全队列下可用，非安全队列使用将返回错误
 
      *
      * @param storageType 存储类型，决定外部共享存储的数据来源和存储方式。
@@ -250,9 +283,11 @@ public class StorageSpaceParamForJob  implements java.io.Serializable {
 - &#x60;oss&#x60;：对象存储服务
 - &#x60;cfs&#x60;：云文件系统
 - &#x60;jpfs&#x60;：京东云并行文件系统
+- &#x60;secure&#x60;：安全存储（JPFS），**仅安全队列可用**
 
 **注意：**
 - 大小写敏感
+- &#x60;secure&#x60; 仅在安全队列下可用，非安全队列使用将返回错误
 
      * @return StorageSpaceParamForJob
      */
@@ -328,6 +363,18 @@ public class StorageSpaceParamForJob  implements java.io.Serializable {
      */
     public StorageSpaceParamForJob jpfs(JpfsParamForJob jpfs) {
         this.jpfs = jpfs;
+        return this;
+    }
+
+
+    /**
+     * set secure
+     *
+     * @param secure 
+     * @return StorageSpaceParamForJob
+     */
+    public StorageSpaceParamForJob secure(SecureParamForJob secure) {
+        this.secure = secure;
         return this;
     }
 

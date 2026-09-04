@@ -38,7 +38,7 @@ public class CreateInferenceRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 创建推理服务的规格（与请求 JSON 字段 inferenceSpec 对应）
+     * 创建推理服务的规格
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class CreateInferenceRequest extends JdcloudRequest implements java.io.Se
     private LogCollectConfig logCollectConfig;
 
     /**
-     * 推理服务扩展信息（如用户标签、资源组等）
+     * 推理服务扩展信息（如用户标签、资源组、关联产品等）
      */
     private ExtendInferenceRequest extend;
 
@@ -71,7 +71,7 @@ public class CreateInferenceRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 创建推理服务的规格（与请求 JSON 字段 inferenceSpec 对应）
+     * get 创建推理服务的规格
      *
      * @return
      */
@@ -80,7 +80,7 @@ public class CreateInferenceRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 创建推理服务的规格（与请求 JSON 字段 inferenceSpec 对应）
+     * set 创建推理服务的规格
      *
      * @param inferenceSpec
      */
@@ -109,7 +109,7 @@ public class CreateInferenceRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 推理服务扩展信息（如用户标签、资源组等）
+     * get 推理服务扩展信息（如用户标签、资源组、关联产品等）
      *
      * @return
      */
@@ -118,7 +118,7 @@ public class CreateInferenceRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 推理服务扩展信息（如用户标签、资源组等）
+     * set 推理服务扩展信息（如用户标签、资源组、关联产品等）
      *
      * @param extend
      */
@@ -167,9 +167,9 @@ public class CreateInferenceRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 创建推理服务的规格（与请求 JSON 字段 inferenceSpec 对应）
+     * set 创建推理服务的规格
      *
-     * @param inferenceSpec 创建推理服务的规格（与请求 JSON 字段 inferenceSpec 对应）
+     * @param inferenceSpec 创建推理服务的规格
      * @return CreateInferenceRequest
      */
     public CreateInferenceRequest inferenceSpec(InferenceSpec inferenceSpec) {
@@ -191,9 +191,9 @@ public class CreateInferenceRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 推理服务扩展信息（如用户标签、资源组等）
+     * set 推理服务扩展信息（如用户标签、资源组、关联产品等）
      *
-     * @param extend 推理服务扩展信息（如用户标签、资源组等）
+     * @param extend 推理服务扩展信息（如用户标签、资源组、关联产品等）
      * @return CreateInferenceRequest
      */
     public CreateInferenceRequest extend(ExtendInferenceRequest extend) {

@@ -40,12 +40,13 @@ public class WorkspaceRelatedQueue  implements java.io.Serializable {
     private String queueId;
 
     /**
-     * true支持所有任务模块,默认true
+     * true支持所有任务模块,默认true。 注意：安全队列仅支持训练任务，不能设置为true
      */
     private Boolean allModuleSupported;
 
     /**
-     * 支持使用任务模块，allModuleSupported&#x3D;false生效：可选值：
+     * 支持使用任务模块，allModuleSupported&#x3D;false生效。 注意：安全队列仅支持训练任务
+可选值：
 - notebook:Notebook
 - training:训练任务
 - inference:在线服务，
@@ -88,7 +89,7 @@ public class WorkspaceRelatedQueue  implements java.io.Serializable {
 
 
     /**
-     * get true支持所有任务模块,默认true
+     * get true支持所有任务模块,默认true。 注意：安全队列仅支持训练任务，不能设置为true
      *
      * @return
      */
@@ -97,7 +98,7 @@ public class WorkspaceRelatedQueue  implements java.io.Serializable {
     }
 
     /**
-     * set true支持所有任务模块,默认true
+     * set true支持所有任务模块,默认true。 注意：安全队列仅支持训练任务，不能设置为true
      *
      * @param allModuleSupported
      */
@@ -107,7 +108,8 @@ public class WorkspaceRelatedQueue  implements java.io.Serializable {
 
 
     /**
-    * get 支持使用任务模块，allModuleSupported&#x3D;false生效：可选值：
+    * get 支持使用任务模块，allModuleSupported&#x3D;false生效。 注意：安全队列仅支持训练任务
+可选值：
 - notebook:Notebook
 - training:训练任务
 - inference:在线服务，
@@ -123,7 +125,8 @@ public class WorkspaceRelatedQueue  implements java.io.Serializable {
     }
 
     /**
-    * set 支持使用任务模块，allModuleSupported&#x3D;false生效：可选值：
+    * set 支持使用任务模块，allModuleSupported&#x3D;false生效。 注意：安全队列仅支持训练任务
+可选值：
 - notebook:Notebook
 - training:训练任务
 - inference:在线服务，
@@ -191,9 +194,9 @@ public class WorkspaceRelatedQueue  implements java.io.Serializable {
 
 
     /**
-     * set true支持所有任务模块,默认true
+     * set true支持所有任务模块,默认true。 注意：安全队列仅支持训练任务，不能设置为true
      *
-     * @param allModuleSupported true支持所有任务模块,默认true
+     * @param allModuleSupported true支持所有任务模块,默认true。 注意：安全队列仅支持训练任务，不能设置为true
      * @return WorkspaceRelatedQueue
      */
     public WorkspaceRelatedQueue allModuleSupported(Boolean allModuleSupported) {
@@ -203,7 +206,8 @@ public class WorkspaceRelatedQueue  implements java.io.Serializable {
 
 
     /**
-    * set 支持使用任务模块，allModuleSupported&#x3D;false生效：可选值：
+    * set 支持使用任务模块，allModuleSupported&#x3D;false生效。 注意：安全队列仅支持训练任务
+可选值：
 - notebook:Notebook
 - training:训练任务
 - inference:在线服务，
@@ -212,7 +216,8 @@ public class WorkspaceRelatedQueue  implements java.io.Serializable {
 - offlineTask:离线任务
 
     *
-    * @param queueModules 支持使用任务模块，allModuleSupported&#x3D;false生效：可选值：
+    * @param queueModules 支持使用任务模块，allModuleSupported&#x3D;false生效。 注意：安全队列仅支持训练任务
+可选值：
 - notebook:Notebook
 - training:训练任务
 - inference:在线服务，
@@ -254,7 +259,8 @@ public class WorkspaceRelatedQueue  implements java.io.Serializable {
 
 
     /**
-     * add item to 支持使用任务模块，allModuleSupported&#x3D;false生效：可选值：
+     * add item to 支持使用任务模块，allModuleSupported&#x3D;false生效。 注意：安全队列仅支持训练任务
+可选值：
 - notebook:Notebook
 - training:训练任务
 - inference:在线服务，

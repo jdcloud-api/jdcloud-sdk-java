@@ -67,17 +67,17 @@ public class CreateQueueSpec  implements java.io.Serializable {
     private Boolean enable;
 
     /**
-     * 是否支持抢占。
+     * 是否支持抢占。默认由 Scale GetQueue 接口的 taskPreempt 获取；force&#x3D;true 时可作为兜底值。
      */
     private Boolean preemptible;
 
     /**
-     * CPU/内存quota，每个队列必须配置。
+     * CPU/内存quota。默认由 Scale GetQueue 接口获取；内存由 GiB 转换为 MB，force&#x3D;true 时可作为兜底值。
      */
     private QueueBaseQuota baseQuota;
 
     /**
-     * GPU quota列表。GPU/HPC资源池必填。
+     * vGPU quota列表。默认由 Scale GetQueue 接口获取并统一使用 vGPU，force&#x3D;true 时可作为兜底值；GPU/HPC资源池必须存在至少一个 quota。
      */
     
     private List<QueueGpuQuota> gpuQuotas;
@@ -86,6 +86,11 @@ public class CreateQueueSpec  implements java.io.Serializable {
      */
     
     private List<String> queueUsers;
+    /**
+     * 是否跳过 Scale 队列校验。默认 false；为 true 时队列不存在不阻止注册。
+     */
+    private Boolean force;
+
 
 
     /**
@@ -184,7 +189,7 @@ public class CreateQueueSpec  implements java.io.Serializable {
 
 
     /**
-     * get 是否支持抢占。
+     * get 是否支持抢占。默认由 Scale GetQueue 接口的 taskPreempt 获取；force&#x3D;true 时可作为兜底值。
      *
      * @return
      */
@@ -193,7 +198,7 @@ public class CreateQueueSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否支持抢占。
+     * set 是否支持抢占。默认由 Scale GetQueue 接口的 taskPreempt 获取；force&#x3D;true 时可作为兜底值。
      *
      * @param preemptible
      */
@@ -203,7 +208,7 @@ public class CreateQueueSpec  implements java.io.Serializable {
 
 
     /**
-     * get CPU/内存quota，每个队列必须配置。
+     * get CPU/内存quota。默认由 Scale GetQueue 接口获取；内存由 GiB 转换为 MB，force&#x3D;true 时可作为兜底值。
      *
      * @return
      */
@@ -212,7 +217,7 @@ public class CreateQueueSpec  implements java.io.Serializable {
     }
 
     /**
-     * set CPU/内存quota，每个队列必须配置。
+     * set CPU/内存quota。默认由 Scale GetQueue 接口获取；内存由 GiB 转换为 MB，force&#x3D;true 时可作为兜底值。
      *
      * @param baseQuota
      */
@@ -222,7 +227,7 @@ public class CreateQueueSpec  implements java.io.Serializable {
 
 
     /**
-    * get GPU quota列表。GPU/HPC资源池必填。
+    * get vGPU quota列表。默认由 Scale GetQueue 接口获取并统一使用 vGPU，force&#x3D;true 时可作为兜底值；GPU/HPC资源池必须存在至少一个 quota。
     *
     * @return
     */
@@ -231,7 +236,7 @@ public class CreateQueueSpec  implements java.io.Serializable {
     }
 
     /**
-    * set GPU quota列表。GPU/HPC资源池必填。
+    * set vGPU quota列表。默认由 Scale GetQueue 接口获取并统一使用 vGPU，force&#x3D;true 时可作为兜底值；GPU/HPC资源池必须存在至少一个 quota。
     *
     * @param gpuQuotas
     */
@@ -256,6 +261,25 @@ public class CreateQueueSpec  implements java.io.Serializable {
     */
     public void setQueueUsers(List<String> queueUsers) {
         this.queueUsers = queueUsers;
+    }
+
+
+    /**
+     * get 是否跳过 Scale 队列校验。默认 false；为 true 时队列不存在不阻止注册。
+     *
+     * @return
+     */
+    public Boolean getForce() {
+        return force;
+    }
+
+    /**
+     * set 是否跳过 Scale 队列校验。默认 false；为 true 时队列不存在不阻止注册。
+     *
+     * @param force
+     */
+    public void setForce(Boolean force) {
+        this.force = force;
     }
 
 
@@ -321,9 +345,9 @@ public class CreateQueueSpec  implements java.io.Serializable {
 
 
     /**
-     * set 是否支持抢占。
+     * set 是否支持抢占。默认由 Scale GetQueue 接口的 taskPreempt 获取；force&#x3D;true 时可作为兜底值。
      *
-     * @param preemptible 是否支持抢占。
+     * @param preemptible 是否支持抢占。默认由 Scale GetQueue 接口的 taskPreempt 获取；force&#x3D;true 时可作为兜底值。
      * @return CreateQueueSpec
      */
     public CreateQueueSpec preemptible(Boolean preemptible) {
@@ -333,9 +357,9 @@ public class CreateQueueSpec  implements java.io.Serializable {
 
 
     /**
-     * set CPU/内存quota，每个队列必须配置。
+     * set CPU/内存quota。默认由 Scale GetQueue 接口获取；内存由 GiB 转换为 MB，force&#x3D;true 时可作为兜底值。
      *
-     * @param baseQuota CPU/内存quota，每个队列必须配置。
+     * @param baseQuota CPU/内存quota。默认由 Scale GetQueue 接口获取；内存由 GiB 转换为 MB，force&#x3D;true 时可作为兜底值。
      * @return CreateQueueSpec
      */
     public CreateQueueSpec baseQuota(QueueBaseQuota baseQuota) {
@@ -345,9 +369,9 @@ public class CreateQueueSpec  implements java.io.Serializable {
 
 
     /**
-    * set GPU quota列表。GPU/HPC资源池必填。
+    * set vGPU quota列表。默认由 Scale GetQueue 接口获取并统一使用 vGPU，force&#x3D;true 时可作为兜底值；GPU/HPC资源池必须存在至少一个 quota。
     *
-    * @param gpuQuotas GPU quota列表。GPU/HPC资源池必填。
+    * @param gpuQuotas vGPU quota列表。默认由 Scale GetQueue 接口获取并统一使用 vGPU，force&#x3D;true 时可作为兜底值；GPU/HPC资源池必须存在至少一个 quota。
     * @return CreateQueueSpec
     */
     public CreateQueueSpec gpuQuotas(List<QueueGpuQuota> gpuQuotas) {
@@ -368,9 +392,21 @@ public class CreateQueueSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 是否跳过 Scale 队列校验。默认 false；为 true 时队列不存在不阻止注册。
+     *
+     * @param force 是否跳过 Scale 队列校验。默认 false；为 true 时队列不存在不阻止注册。
+     * @return CreateQueueSpec
+     */
+    public CreateQueueSpec force(Boolean force) {
+        this.force = force;
+        return this;
+    }
+
+
 
     /**
-     * add item to GPU quota列表。GPU/HPC资源池必填。
+     * add item to vGPU quota列表。默认由 Scale GetQueue 接口获取并统一使用 vGPU，force&#x3D;true 时可作为兜底值；GPU/HPC资源池必须存在至少一个 quota。
      *
      * @param gpuQuota
      */

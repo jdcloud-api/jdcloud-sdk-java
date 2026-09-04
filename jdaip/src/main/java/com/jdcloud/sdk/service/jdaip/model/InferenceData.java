@@ -55,6 +55,16 @@ public class InferenceData  implements java.io.Serializable {
     private String deployType;
 
     /**
+     * 在线服务类型
+     */
+    private String serviceType;
+
+    /**
+     * 智能路由配置，仅智能路由服务返回
+     */
+    private SmartRouterConfig smartRouterConfig;
+
+    /**
      * 推理服务资源所在队列ID
      */
     private String queueId;
@@ -204,6 +214,44 @@ public class InferenceData  implements java.io.Serializable {
      */
     public void setDeployType(String deployType) {
         this.deployType = deployType;
+    }
+
+
+    /**
+     * get 在线服务类型
+     *
+     * @return
+     */
+    public String getServiceType() {
+        return serviceType;
+    }
+
+    /**
+     * set 在线服务类型
+     *
+     * @param serviceType
+     */
+    public void setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+    }
+
+
+    /**
+     * get 智能路由配置，仅智能路由服务返回
+     *
+     * @return
+     */
+    public SmartRouterConfig getSmartRouterConfig() {
+        return smartRouterConfig;
+    }
+
+    /**
+     * set 智能路由配置，仅智能路由服务返回
+     *
+     * @param smartRouterConfig
+     */
+    public void setSmartRouterConfig(SmartRouterConfig smartRouterConfig) {
+        this.smartRouterConfig = smartRouterConfig;
     }
 
 
@@ -537,6 +585,30 @@ public class InferenceData  implements java.io.Serializable {
      */
     public InferenceData deployType(String deployType) {
         this.deployType = deployType;
+        return this;
+    }
+
+
+    /**
+     * set 在线服务类型
+     *
+     * @param serviceType 在线服务类型
+     * @return InferenceData
+     */
+    public InferenceData serviceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+
+
+    /**
+     * set 智能路由配置，仅智能路由服务返回
+     *
+     * @param smartRouterConfig 智能路由配置，仅智能路由服务返回
+     * @return InferenceData
+     */
+    public InferenceData smartRouterConfig(SmartRouterConfig smartRouterConfig) {
+        this.smartRouterConfig = smartRouterConfig;
         return this;
     }
 

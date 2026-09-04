@@ -43,7 +43,7 @@ public class VisiblePool  implements java.io.Serializable {
     private String poolId;
 
     /**
-     * 资源池名称。
+     * 资源池名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 且 Scale 不可用时可作为兜底值。
      */
     private String poolName;
 
@@ -108,7 +108,7 @@ public class VisiblePool  implements java.io.Serializable {
 
 
     /**
-     * get 资源池名称。
+     * get 资源池名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 且 Scale 不可用时可作为兜底值。
      *
      * @return
      */
@@ -117,7 +117,7 @@ public class VisiblePool  implements java.io.Serializable {
     }
 
     /**
-     * set 资源池名称。
+     * set 资源池名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 且 Scale 不可用时可作为兜底值。
      *
      * @param poolName
      */
@@ -228,9 +228,9 @@ public class VisiblePool  implements java.io.Serializable {
 
 
     /**
-     * set 资源池名称。
+     * set 资源池名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 且 Scale 不可用时可作为兜底值。
      *
-     * @param poolName 资源池名称。
+     * @param poolName 资源池名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 且 Scale 不可用时可作为兜底值。
      * @return VisiblePool
      */
     public VisiblePool poolName(String poolName) {

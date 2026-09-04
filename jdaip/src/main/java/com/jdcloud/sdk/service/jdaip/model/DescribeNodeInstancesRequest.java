@@ -56,7 +56,7 @@ public class DescribeNodeInstancesRequest extends JdcloudRequest implements java
     
     private List<Filter> filters;
     /**
-     * Region ID，例如：cn-north-1；无region传固定值：all
+     * Region ID，例如：cn-north-1
      * Required:true
      */
     @Required
@@ -128,7 +128,7 @@ public class DescribeNodeInstancesRequest extends JdcloudRequest implements java
 
 
     /**
-     * get Region ID，例如：cn-north-1；无region传固定值：all
+     * get Region ID，例如：cn-north-1
      *
      * @return
      */
@@ -137,7 +137,7 @@ public class DescribeNodeInstancesRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set Region ID，例如：cn-north-1；无region传固定值：all
+     * set Region ID，例如：cn-north-1
      *
      * @param regionId
      */
@@ -190,9 +190,9 @@ public class DescribeNodeInstancesRequest extends JdcloudRequest implements java
 
 
     /**
-     * set Region ID，例如：cn-north-1；无region传固定值：all
+     * set Region ID，例如：cn-north-1
      *
-     * @param regionId Region ID，例如：cn-north-1；无region传固定值：all
+     * @param regionId Region ID，例如：cn-north-1
      * @return DescribeNodeInstancesRequest
      */
     public DescribeNodeInstancesRequest regionId(String regionId) {

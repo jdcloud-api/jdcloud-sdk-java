@@ -34,7 +34,7 @@ import java.util.ArrayList;
 - **基础信息**: ID、名称、描述、应用类型
 - **状态信息**: 实例状态、运行时间、异常原因
 - **访问信息**: 控制台地址、VSCode地址、访问令牌
-- **资源配置**: CPU、内存、GPU、队列
+- **资源配置**: CPU、内存、GPU、RDMA、队列
 - **镜像信息**: 镜像ID、名称、来源
 - **权限信息**: 创建人、归属用户、资源权限
 - **关机策略**: 自动关机配置
@@ -242,6 +242,17 @@ public class NotebookInfo  implements java.io.Serializable {
     private NbWorkloadDetail workload;
 
     /**
+     * RDMA高速网络的最终生效状态。
+
+## 返回值说明
+- &#x60;true&#x60;：启动Notebook时会申请RDMA资源
+- &#x60;false&#x60;：当前配置不会申请RDMA资源，历史Notebook未配置时也返回&#x60;false&#x60;
+- 公共/专享资源池返回所选规格的RDMA属性
+
+     */
+    private Boolean rdma;
+
+    /**
      * 公网访问配置，负载均衡配置信息。
 
 ## 使用说明
@@ -318,6 +329,12 @@ public class NotebookInfo  implements java.io.Serializable {
      */
     
     private List<NotebookNodeAffinity> nodeAffinities;
+    /**
+     * 任务调度优先级，数值越大，优先级越高。
+
+     */
+    private Integer taskPriority;
+
 
 
     /**
@@ -949,6 +966,37 @@ public class NotebookInfo  implements java.io.Serializable {
 
 
     /**
+     * get RDMA高速网络的最终生效状态。
+
+## 返回值说明
+- &#x60;true&#x60;：启动Notebook时会申请RDMA资源
+- &#x60;false&#x60;：当前配置不会申请RDMA资源，历史Notebook未配置时也返回&#x60;false&#x60;
+- 公共/专享资源池返回所选规格的RDMA属性
+
+     *
+     * @return
+     */
+    public Boolean getRdma() {
+        return rdma;
+    }
+
+    /**
+     * set RDMA高速网络的最终生效状态。
+
+## 返回值说明
+- &#x60;true&#x60;：启动Notebook时会申请RDMA资源
+- &#x60;false&#x60;：当前配置不会申请RDMA资源，历史Notebook未配置时也返回&#x60;false&#x60;
+- 公共/专享资源池返回所选规格的RDMA属性
+
+     *
+     * @param rdma
+     */
+    public void setRdma(Boolean rdma) {
+        this.rdma = rdma;
+    }
+
+
+    /**
      * get 公网访问配置，负载均衡配置信息。
 
 ## 使用说明
@@ -1189,6 +1237,27 @@ public class NotebookInfo  implements java.io.Serializable {
     */
     public void setNodeAffinities(List<NotebookNodeAffinity> nodeAffinities) {
         this.nodeAffinities = nodeAffinities;
+    }
+
+
+    /**
+     * get 任务调度优先级，数值越大，优先级越高。
+
+     *
+     * @return
+     */
+    public Integer getTaskPriority() {
+        return taskPriority;
+    }
+
+    /**
+     * set 任务调度优先级，数值越大，优先级越高。
+
+     *
+     * @param taskPriority
+     */
+    public void setTaskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
     }
 
 
@@ -1640,6 +1709,30 @@ public class NotebookInfo  implements java.io.Serializable {
 
 
     /**
+     * set RDMA高速网络的最终生效状态。
+
+## 返回值说明
+- &#x60;true&#x60;：启动Notebook时会申请RDMA资源
+- &#x60;false&#x60;：当前配置不会申请RDMA资源，历史Notebook未配置时也返回&#x60;false&#x60;
+- 公共/专享资源池返回所选规格的RDMA属性
+
+     *
+     * @param rdma RDMA高速网络的最终生效状态。
+
+## 返回值说明
+- &#x60;true&#x60;：启动Notebook时会申请RDMA资源
+- &#x60;false&#x60;：当前配置不会申请RDMA资源，历史Notebook未配置时也返回&#x60;false&#x60;
+- 公共/专享资源池返回所选规格的RDMA属性
+
+     * @return NotebookInfo
+     */
+    public NotebookInfo rdma(Boolean rdma) {
+        this.rdma = rdma;
+        return this;
+    }
+
+
+    /**
      * set 公网访问配置，负载均衡配置信息。
 
 ## 使用说明
@@ -1809,6 +1902,20 @@ public class NotebookInfo  implements java.io.Serializable {
     */
     public NotebookInfo nodeAffinities(List<NotebookNodeAffinity> nodeAffinities) {
         this.nodeAffinities = nodeAffinities;
+        return this;
+    }
+
+
+    /**
+     * set 任务调度优先级，数值越大，优先级越高。
+
+     *
+     * @param taskPriority 任务调度优先级，数值越大，优先级越高。
+
+     * @return NotebookInfo
+     */
+    public NotebookInfo taskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
         return this;
     }
 

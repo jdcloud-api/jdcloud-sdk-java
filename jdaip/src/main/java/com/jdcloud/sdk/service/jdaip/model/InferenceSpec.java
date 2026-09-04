@@ -53,6 +53,16 @@ public class InferenceSpec  implements java.io.Serializable {
     private String deployType;
 
     /**
+     * 在线服务类型；standard：普通服务，smartRouter：智能路由服务
+     */
+    private String serviceType;
+
+    /**
+     * 智能路由配置；serviceType&#x3D;smartRouter 时必填，serviceType&#x3D;standard 时不得传递
+     */
+    private SmartRouterConfig smartRouterConfig;
+
+    /**
      * 推理服务元数据（如：名字，ID等）
      * Required:true
      */
@@ -139,6 +149,44 @@ public class InferenceSpec  implements java.io.Serializable {
      */
     public void setDeployType(String deployType) {
         this.deployType = deployType;
+    }
+
+
+    /**
+     * get 在线服务类型；standard：普通服务，smartRouter：智能路由服务
+     *
+     * @return
+     */
+    public String getServiceType() {
+        return serviceType;
+    }
+
+    /**
+     * set 在线服务类型；standard：普通服务，smartRouter：智能路由服务
+     *
+     * @param serviceType
+     */
+    public void setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+    }
+
+
+    /**
+     * get 智能路由配置；serviceType&#x3D;smartRouter 时必填，serviceType&#x3D;standard 时不得传递
+     *
+     * @return
+     */
+    public SmartRouterConfig getSmartRouterConfig() {
+        return smartRouterConfig;
+    }
+
+    /**
+     * set 智能路由配置；serviceType&#x3D;smartRouter 时必填，serviceType&#x3D;standard 时不得传递
+     *
+     * @param smartRouterConfig
+     */
+    public void setSmartRouterConfig(SmartRouterConfig smartRouterConfig) {
+        this.smartRouterConfig = smartRouterConfig;
     }
 
 
@@ -270,6 +318,30 @@ public class InferenceSpec  implements java.io.Serializable {
      */
     public InferenceSpec deployType(String deployType) {
         this.deployType = deployType;
+        return this;
+    }
+
+
+    /**
+     * set 在线服务类型；standard：普通服务，smartRouter：智能路由服务
+     *
+     * @param serviceType 在线服务类型；standard：普通服务，smartRouter：智能路由服务
+     * @return InferenceSpec
+     */
+    public InferenceSpec serviceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+
+
+    /**
+     * set 智能路由配置；serviceType&#x3D;smartRouter 时必填，serviceType&#x3D;standard 时不得传递
+     *
+     * @param smartRouterConfig 智能路由配置；serviceType&#x3D;smartRouter 时必填，serviceType&#x3D;standard 时不得传递
+     * @return InferenceSpec
+     */
+    public InferenceSpec smartRouterConfig(SmartRouterConfig smartRouterConfig) {
+        this.smartRouterConfig = smartRouterConfig;
         return this;
     }
 

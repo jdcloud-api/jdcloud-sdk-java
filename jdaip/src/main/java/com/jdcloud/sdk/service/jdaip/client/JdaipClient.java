@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.jdaip.client.UpdateNotebookExecutor;
 import com.jdcloud.sdk.service.jdaip.model.UpdateJobRequest;
 import com.jdcloud.sdk.service.jdaip.model.UpdateJobResponse;
 import com.jdcloud.sdk.service.jdaip.client.UpdateJobExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeProfilingTasksRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeProfilingTasksResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeProfilingTasksExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeInferencePodsRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeInferencePodsResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeInferencePodsExecutor;
@@ -46,6 +49,9 @@ import com.jdcloud.sdk.service.jdaip.client.AdminDescribeAccountMembersExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeDatasetsRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeDatasetsResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeDatasetsExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeQueueRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeQueueResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeQueueExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeDatasetVersionRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeDatasetVersionResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeDatasetVersionExecutor;
@@ -58,6 +64,9 @@ import com.jdcloud.sdk.service.jdaip.client.UpdateResourcePropertiesExecutor;
 import com.jdcloud.sdk.service.jdaip.model.AdminDescribeJobsCountRequest;
 import com.jdcloud.sdk.service.jdaip.model.AdminDescribeJobsCountResponse;
 import com.jdcloud.sdk.service.jdaip.client.AdminDescribeJobsCountExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeModelExportsRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeModelExportsResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeModelExportsExecutor;
 import com.jdcloud.sdk.service.jdaip.model.ListMetricsRequest;
 import com.jdcloud.sdk.service.jdaip.model.ListMetricsResponse;
 import com.jdcloud.sdk.service.jdaip.client.ListMetricsExecutor;
@@ -67,9 +76,15 @@ import com.jdcloud.sdk.service.jdaip.client.DescribeImageTasksExecutor;
 import com.jdcloud.sdk.service.jdaip.model.CreateInferenceScaleRequest;
 import com.jdcloud.sdk.service.jdaip.model.CreateInferenceScaleResponse;
 import com.jdcloud.sdk.service.jdaip.client.CreateInferenceScaleExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DownloadProfilingTaskRequest;
+import com.jdcloud.sdk.service.jdaip.model.DownloadProfilingTaskResponse;
+import com.jdcloud.sdk.service.jdaip.client.DownloadProfilingTaskExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DeleteRunRequest;
 import com.jdcloud.sdk.service.jdaip.model.DeleteRunResponse;
 import com.jdcloud.sdk.service.jdaip.client.DeleteRunExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeNodePoolRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeNodePoolResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeNodePoolExecutor;
 import com.jdcloud.sdk.service.jdaip.model.StopInferenceRequest;
 import com.jdcloud.sdk.service.jdaip.model.StopInferenceResponse;
 import com.jdcloud.sdk.service.jdaip.client.StopInferenceExecutor;
@@ -130,6 +145,9 @@ import com.jdcloud.sdk.service.jdaip.client.SaveImageExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeInferenceEventsRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeInferenceEventsResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeInferenceEventsExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeNodesRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeNodesResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeNodesExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeNotebookRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeNotebookResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeNotebookExecutor;
@@ -163,6 +181,9 @@ import com.jdcloud.sdk.service.jdaip.client.UpdateModelVersionExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeNodeInstancesRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeNodeInstancesResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeNodeInstancesExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeFlavorDetailsRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeFlavorDetailsResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeFlavorDetailsExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DeleteNotebookRequest;
 import com.jdcloud.sdk.service.jdaip.model.DeleteNotebookResponse;
 import com.jdcloud.sdk.service.jdaip.client.DeleteNotebookExecutor;
@@ -181,6 +202,9 @@ import com.jdcloud.sdk.service.jdaip.client.DeleteNotebookLogCollectConfigExecut
 import com.jdcloud.sdk.service.jdaip.model.AdminDescribeJobListRequest;
 import com.jdcloud.sdk.service.jdaip.model.AdminDescribeJobListResponse;
 import com.jdcloud.sdk.service.jdaip.client.AdminDescribeJobListExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeNodePoolsRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeNodePoolsResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeNodePoolsExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeRunsRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeRunsResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeRunsExecutor;
@@ -190,6 +214,9 @@ import com.jdcloud.sdk.service.jdaip.client.UpdateInferenceExecutor;
 import com.jdcloud.sdk.service.jdaip.model.GetJobRestartHistoryRequest;
 import com.jdcloud.sdk.service.jdaip.model.GetJobRestartHistoryResponse;
 import com.jdcloud.sdk.service.jdaip.client.GetJobRestartHistoryExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeProfilingTaskRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeProfilingTaskResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeProfilingTaskExecutor;
 import com.jdcloud.sdk.service.jdaip.model.AddQueuesRequest;
 import com.jdcloud.sdk.service.jdaip.model.AddQueuesResponse;
 import com.jdcloud.sdk.service.jdaip.client.AddQueuesExecutor;
@@ -241,6 +268,9 @@ import com.jdcloud.sdk.service.jdaip.client.UpdateImageExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DeleteDatasetVersionRequest;
 import com.jdcloud.sdk.service.jdaip.model.DeleteDatasetVersionResponse;
 import com.jdcloud.sdk.service.jdaip.client.DeleteDatasetVersionExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeQueuesRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeQueuesResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeQueuesExecutor;
 import com.jdcloud.sdk.service.jdaip.model.RestartInferenceContainerRequest;
 import com.jdcloud.sdk.service.jdaip.model.RestartInferenceContainerResponse;
 import com.jdcloud.sdk.service.jdaip.client.RestartInferenceContainerExecutor;
@@ -265,6 +295,9 @@ import com.jdcloud.sdk.service.jdaip.client.UpdateModelExecutor;
 import com.jdcloud.sdk.service.jdaip.model.CreateNotebookLogCollectConfigRequest;
 import com.jdcloud.sdk.service.jdaip.model.CreateNotebookLogCollectConfigResponse;
 import com.jdcloud.sdk.service.jdaip.client.CreateNotebookLogCollectConfigExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DeleteProfilingTaskRequest;
+import com.jdcloud.sdk.service.jdaip.model.DeleteProfilingTaskResponse;
+import com.jdcloud.sdk.service.jdaip.client.DeleteProfilingTaskExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeJobRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeJobResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeJobExecutor;
@@ -313,6 +346,15 @@ import com.jdcloud.sdk.service.jdaip.client.DescribeInferenceRolloutsExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeInstancesRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeInstancesResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeInstancesExecutor;
+import com.jdcloud.sdk.service.jdaip.model.TransferProfilingTaskToOssRequest;
+import com.jdcloud.sdk.service.jdaip.model.TransferProfilingTaskToOssResponse;
+import com.jdcloud.sdk.service.jdaip.client.TransferProfilingTaskToOssExecutor;
+import com.jdcloud.sdk.service.jdaip.model.CreateProfilingTaskRequest;
+import com.jdcloud.sdk.service.jdaip.model.CreateProfilingTaskResponse;
+import com.jdcloud.sdk.service.jdaip.client.CreateProfilingTaskExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeNodeRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeNodeResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeNodeExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeRunConfigsRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeRunConfigsResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeRunConfigsExecutor;
@@ -328,6 +370,9 @@ import com.jdcloud.sdk.service.jdaip.client.CreateWorkspaceExecutor;
 import com.jdcloud.sdk.service.jdaip.model.AdminDescribeInferencesRequest;
 import com.jdcloud.sdk.service.jdaip.model.AdminDescribeInferencesResponse;
 import com.jdcloud.sdk.service.jdaip.client.AdminDescribeInferencesExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeProfilingInstancePidsRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeProfilingInstancePidsResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeProfilingInstancePidsExecutor;
 import com.jdcloud.sdk.service.jdaip.model.CreateJobRequest;
 import com.jdcloud.sdk.service.jdaip.model.CreateJobResponse;
 import com.jdcloud.sdk.service.jdaip.client.CreateJobExecutor;
@@ -352,6 +397,9 @@ import com.jdcloud.sdk.service.jdaip.client.StopNotebookExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeServicesRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeServicesResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeServicesExecutor;
+import com.jdcloud.sdk.service.jdaip.model.CreateModelExportRequest;
+import com.jdcloud.sdk.service.jdaip.model.CreateModelExportResponse;
+import com.jdcloud.sdk.service.jdaip.client.CreateModelExportExecutor;
 import com.jdcloud.sdk.service.jdaip.model.GetNotebookEventsRequest;
 import com.jdcloud.sdk.service.jdaip.model.GetNotebookEventsResponse;
 import com.jdcloud.sdk.service.jdaip.client.GetNotebookEventsExecutor;
@@ -438,7 +486,7 @@ public class JdaipClient extends JdcloudClient {
     /**
      * 更新训练任务属性信息。
 
-仅支持更新任务的元数据属性（名称、描述、权限、归属），不影响正在运行的训练任务。
+支持更新任务的元数据属性（名称、描述、权限、归属）和排队中任务的优先级。
 
 ## 使用场景
 
@@ -446,6 +494,7 @@ public class JdaipClient extends JdcloudClient {
 - 更新任务描述信息
 - 调整资源的可见性权限
 - 转移任务归属给其他用户
+- 调整共享资源池排队中任务的优先级
 
      *
      * @param request
@@ -454,6 +503,20 @@ public class JdaipClient extends JdcloudClient {
      */
     public UpdateJobResponse updateJob(UpdateJobRequest request) throws JdcloudSdkException {
         return new UpdateJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询训练任务的所有性能分析（profiling）任务列表。
+
+分页查询指定训练任务下的 profiling 任务列表，支持按任务名称和状态进行过滤。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeProfilingTasksResponse describeProfilingTasks(DescribeProfilingTasksRequest request) throws JdcloudSdkException {
+        return new DescribeProfilingTasksExecutor().client(this).execute(request);
     }
 
     /**
@@ -516,6 +579,17 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 查询队列详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeQueueResponse describeQueue(DescribeQueueRequest request) throws JdcloudSdkException {
+        return new DescribeQueueExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取数据集版本详情
      *
      * @param request
@@ -571,6 +645,7 @@ public class JdaipClient extends JdcloudClient {
 - **代码配置**: 更新代码库挂载配置
 - **环境变量配置**: 新增、修改、删除或清空用户环境变量
 - **节点亲和性配置**: 更新节点调度亲和性规则
+- **调度优先级配置**: 更新调度优先级(taskPriority，仅开启优先级的私有池/专享资源池)
 
 ## 接口说明
 - 更新操作需要在Notebook停止状态下进行。
@@ -613,6 +688,20 @@ public class JdaipClient extends JdcloudClient {
      */
     public AdminDescribeJobsCountResponse adminDescribeJobsCount(AdminDescribeJobsCountRequest request) throws JdcloudSdkException {
         return new AdminDescribeJobsCountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询训练任务的导出模型列表。
+
+分页查询指定训练任务下的模型导出记录列表，支持按状态进行过滤。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeModelExportsResponse describeModelExports(DescribeModelExportsRequest request) throws JdcloudSdkException {
+        return new DescribeModelExportsExecutor().client(this).execute(request);
     }
 
     /**
@@ -662,6 +751,25 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 下载性能分析任务指定实例的采集结果。
+
+下载指定 profiling 任务下指定实例的采集结果文件，以实例为单位进行下载。每次下载会将该实例的 &#x60;downloadTimes&#x60; 计数器加1。
+
+## 注意事项
+
+- 仅状态为 &#x60;completed&#x60; 的任务才允许下载
+- 结果文件为该实例采集数据的打包压缩文件
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DownloadProfilingTaskResponse downloadProfilingTask(DownloadProfilingTaskRequest request) throws JdcloudSdkException {
+        return new DownloadProfilingTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除微调运行。
 
 删除微调运行将释放相关资源，删除后无法恢复。
@@ -683,6 +791,17 @@ public class JdaipClient extends JdcloudClient {
      */
     public DeleteRunResponse deleteRun(DeleteRunRequest request) throws JdcloudSdkException {
         return new DeleteRunExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询节点池详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeNodePoolResponse describeNodePool(DescribeNodePoolRequest request) throws JdcloudSdkException {
+        return new DescribeNodePoolExecutor().client(this).execute(request);
     }
 
     /**
@@ -1047,6 +1166,17 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 查询节点列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeNodesResponse describeNodes(DescribeNodesRequest request) throws JdcloudSdkException {
+        return new DescribeNodesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询Notebook实例的详细信息，包括资源配置、存储配置、数据集配置、模型配置、计费信息等完整信息。
 
 ## 返回信息
@@ -1231,6 +1361,23 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 查询多个规格详情，供外部客户调用。
+
+## 接口说明
+- 支持按 &#x60;flavorIds&#x60; 批量查询；重复规格ID按首次出现顺序去重。
+- 指定 &#x60;flavorIds&#x60; 时，响应按去重后的传入顺序返回；未指定时按规格ID排序。
+- 返回基础规格属性，不包含调度标签、灰度开关和灰度Pin等内部配置。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeFlavorDetailsResponse describeFlavorDetails(DescribeFlavorDetailsRequest request) throws JdcloudSdkException {
+        return new DescribeFlavorDetailsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除Notebook实例。
 
 ## 接口说明
@@ -1327,6 +1474,17 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 查询节点池列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeNodePoolsResponse describeNodePools(DescribeNodePoolsRequest request) throws JdcloudSdkException {
+        return new DescribeNodePoolsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询微调运行列表。
 
 分页查询指定实验下的微调运行列表，支持多种过滤条件。
@@ -1371,6 +1529,21 @@ public class JdaipClient extends JdcloudClient {
      */
     public GetJobRestartHistoryResponse getJobRestartHistory(GetJobRestartHistoryRequest request) throws JdcloudSdkException {
         return new GetJobRestartHistoryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询性能分析任务的详细信息。
+
+返回 profiling 任务的完整信息，包括基本信息和监控目标的采集状态列表（profiling_instance 表）。
+支持按实例名称、节点名称和采集状态进行过滤分页查询。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeProfilingTaskResponse describeProfilingTask(DescribeProfilingTaskRequest request) throws JdcloudSdkException {
+        return new DescribeProfilingTaskExecutor().client(this).execute(request);
     }
 
     /**
@@ -1642,6 +1815,17 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 查询队列列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeQueuesResponse describeQueues(DescribeQueuesRequest request) throws JdcloudSdkException {
+        return new DescribeQueuesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 重建指定推理服务下Pod的容器
      *
      * @param request
@@ -1751,6 +1935,26 @@ public class JdaipClient extends JdcloudClient {
      */
     public CreateNotebookLogCollectConfigResponse createNotebookLogCollectConfig(CreateNotebookLogCollectConfigRequest request) throws JdcloudSdkException {
         return new CreateNotebookLogCollectConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除性能分析任务。
+
+软删除指定的 profiling 任务及其关联的监控目标列表数据。删除后不可恢复。
+
+## 注意事项
+
+- 删除操作为软删除，数据状态标记为已删除
+- 删除后任务不再在列表中显示
+- 正在运行的任务需先停止再删除
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteProfilingTaskResponse deleteProfilingTask(DeleteProfilingTaskRequest request) throws JdcloudSdkException {
+        return new DeleteProfilingTaskExecutor().client(this).execute(request);
     }
 
     /**
@@ -2008,6 +2212,62 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 转存性能分析任务结果至OSS。
+
+将指定 profiling 任务的采集结果文件转存至用户指定的OSS存储空间。
+
+## 注意事项
+
+- 仅状态为 &#x60;completed&#x60; 的任务才允许转存
+- 需确保目标OSS Bucket已存在且有写入权限
+- 转存为异步操作，提交后返回转存任务状态
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public TransferProfilingTaskToOssResponse transferProfilingTaskToOss(TransferProfilingTaskToOssRequest request) throws JdcloudSdkException {
+        return new TransferProfilingTaskToOssExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 新建性能分析（profiling）任务。
+
+为指定训练任务创建 profiling 监控任务，支持按实例或按PID两种模式（二选一）。
+
+## 采集模式
+
+- **instance 模式**：采集所选实例的所有PID，&#x60;targets&#x60; 中每个实例的 &#x60;pids&#x60; 为空数组
+- **pid 模式**：采集所选实例内筛选的PID，&#x60;targets&#x60; 中每个实例的 &#x60;pids&#x60; 填写指定PID列表
+
+## 前置准备
+
+创建任务前，可调用以下辅助接口获取PID信息：
+- &#x60;describeInstances&#x60;：查询实例信息（IP、状态、Pod IP）
+- &#x60;describeProfilingInstancePids&#x60;：查询指定实例的PID列表（PID、命令、用户、GPU PID）
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateProfilingTaskResponse createProfilingTask(CreateProfilingTaskRequest request) throws JdcloudSdkException {
+        return new CreateProfilingTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 节点详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeNodeResponse describeNode(DescribeNodeRequest request) throws JdcloudSdkException {
+        return new DescribeNodeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询微调运行配置参数列表。
 
 获取指定模型模板支持的训练配置参数，包括训练阶段、微调方法和详细参数列表。
@@ -2083,6 +2343,20 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 查询指定实例的PID列表（用于性能分析任务创建前的PID选择）。
+
+返回指定实例内所有进程的PID、命令、用户和GPU PID信息，仅在 pid 模式下需要调用此接口。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeProfilingInstancePidsResponse describeProfilingInstancePids(DescribeProfilingInstancePidsRequest request) throws JdcloudSdkException {
+        return new DescribeProfilingInstancePidsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建训练任务。
 
 创建一个新的训练任务，用于执行机器学习模型的训练工作。支持多种数据源、模型和计算资源配置。
@@ -2092,10 +2366,10 @@ public class JdaipClient extends JdcloudClient {
 - **基本信息**：任务名称、描述、框架类型
 - **镜像配置**：镜像可见性、镜像ID、镜像地址
 - **启动命令**：训练脚本执行命令和环境变量
-- **资源配置**：队列、GPU/CPU/内存、节点数量、可用区（公共池）
+- **资源配置**：队列、GPU/CPU/内存、节点数量、可用区（公共资源池/共享资源池）
 - **存储配置**：OSS/CFS/JPFS 为外部共享存储（&#x60;storageSpaces&#x60;）；本地存储为顶层字段 &#x60;localStorage&#x60;（训练节点本地临时高速缓存，仅专属资源池，每个任务最多一个）
 - **数据与模型**：数据集、模型、代码仓库配置
-- **高级配置**：重启策略（仅异构节点池+PyTorch）、健康检测、公共池排队超时
+- **高级配置**：重启策略（仅异构节点池+PyTorch）、健康检测、公共池排队超时、容器特权模式（仅专属资源池整机 GPU）
 
 ## 创建流程
 
@@ -2109,8 +2383,11 @@ public class JdaipClient extends JdcloudClient {
 - &#x60;resource&#x60; 参数已废弃
 - Ray 任务必须使用 &#x60;roleResource&#x60; 配置 Head 和 Worker 角色
 - **重启策略仅适用于异构节点池的 PyTorch 任务**，云主机资源池和 Ray 任务不支持
-- 公共资源池角色规格须通过 &#x60;logicAzCode&#x60; 指定可用区（异构规格还须填 &#x60;hpcClusterName&#x60;）
-- &#x60;queuingTimeoutMinutes&#x60; 仅公共资源池生效，排队超时后任务自动回滚为创建失败
+- 公共资源池和共享资源池角色规格须通过 &#x60;logicAzCode&#x60; 指定可用区（异构规格还须填 &#x60;hpcClusterName&#x60;）
+- 共享资源池固定使用 &#x60;queueId&#x3D;joybuilder-exclusive-queue&#x60;；用户必须已加入共享池且存在启用的 user queue
+- 共享资源池创建任务时 &#x60;taskPriority&#x60; 必填，取值范围 &#x60;1..9&#x60;；公共资源池不支持 &#x60;taskPriority&#x60;
+- &#x60;queuingTimeoutMinutes&#x60; 仅公共资源池和共享资源池生效，排队超时后任务自动回滚为创建失败
+- &#x60;privileged&#x3D;true&#x60; 仅支持专属资源池整机 GPU 任务；&#x60;Ascend&#x60; 前缀型号要求单实例申请 16 卡，其他非空 GPU 型号要求单实例申请 8 卡；Ray 全部角色都必须满足
 - 本地存储（顶层字段 &#x60;localStorage&#x60;）仅支持专属资源池（接口会校验拒绝公共资源池），每个任务最多一个，数据随实例删除/销毁自动清除、不支持持久化，不可存放 checkpoint、模型权重等关键数据
 - 本地存储依赖队列节点已配置本地高速盘（目前主要是异构专属节点池具备该能力），接口暂不校验节点本地盘能力，若节点不满足条件，任务会调度失败并停留在排队/启动中，而非创建时直接报错
 
@@ -2227,6 +2504,20 @@ public class JdaipClient extends JdcloudClient {
      */
     public DescribeServicesResponse describeServices(DescribeServicesRequest request) throws JdcloudSdkException {
         return new DescribeServicesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建导出模型任务。
+
+将指定训练任务产出的模型导出到用户指定的存储位置，支持指定模型格式和框架。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateModelExportResponse createModelExport(CreateModelExportRequest request) throws JdcloudSdkException {
+        return new CreateModelExportExecutor().client(this).execute(request);
     }
 
     /**

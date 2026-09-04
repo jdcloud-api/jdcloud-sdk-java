@@ -148,6 +148,11 @@ public class AdminJobListInfo  implements java.io.Serializable {
     private String jobType;
 
     /**
+     * 是否为用户训练主容器开启容器特权模式。
+     */
+    private Boolean privileged;
+
+    /**
      * 持续运行时间，单位为秒。
 
 ## 用途
@@ -173,26 +178,37 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 ## 特殊值
 使用公共资源池时固定为：&#x60;joybuilder-public-queue&#x60;
+使用共享资源池时固定为：&#x60;joybuilder-exclusive-queue&#x60;
 
      */
     private String queueId;
 
     /**
-     * 公共资源池的规格ID。
+     * 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     */
+    private String queueType;
+
+    /**
+     * 公共资源池或共享资源池的规格ID。
 
 ## 说明
-使用公共资源池时的资源规格标识，用于确定 CPU、内存、GPU 配置。
+使用公共资源池或共享资源池时的资源规格标识，用于确定 CPU、内存、GPU 配置。
 
      */
     private String flavorId;
 
     /**
-     * 公共资源池的规格详细信息。
+     * 公共资源池或共享资源池的规格详细信息。
 
 包含具体的资源配置信息，如 CPU 核数、内存大小、GPU 配置等。
 
      */
     private Object flavorInfo;
+
+    /**
+     * 任务优先级。共享资源池取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
+     */
+    private Integer taskPriority;
 
     /**
      * GPU卡类型。
@@ -258,7 +274,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
     private RoleResourceInfoForJobList roleResource;
 
     /**
-     * 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      */
     private InternetEgressForJob internetEgress;
@@ -670,6 +686,25 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 
     /**
+     * get 是否为用户训练主容器开启容器特权模式。
+     *
+     * @return
+     */
+    public Boolean getPrivileged() {
+        return privileged;
+    }
+
+    /**
+     * set 是否为用户训练主容器开启容器特权模式。
+     *
+     * @param privileged
+     */
+    public void setPrivileged(Boolean privileged) {
+        this.privileged = privileged;
+    }
+
+
+    /**
      * get 持续运行时间，单位为秒。
 
 ## 用途
@@ -731,6 +766,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 ## 特殊值
 使用公共资源池时固定为：&#x60;joybuilder-public-queue&#x60;
+使用共享资源池时固定为：&#x60;joybuilder-exclusive-queue&#x60;
 
      *
      * @return
@@ -747,6 +783,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 ## 特殊值
 使用公共资源池时固定为：&#x60;joybuilder-public-queue&#x60;
+使用共享资源池时固定为：&#x60;joybuilder-exclusive-queue&#x60;
 
      *
      * @param queueId
@@ -757,10 +794,29 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 
     /**
-     * get 公共资源池的规格ID。
+     * get 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     *
+     * @return
+     */
+    public String getQueueType() {
+        return queueType;
+    }
+
+    /**
+     * set 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     *
+     * @param queueType
+     */
+    public void setQueueType(String queueType) {
+        this.queueType = queueType;
+    }
+
+
+    /**
+     * get 公共资源池或共享资源池的规格ID。
 
 ## 说明
-使用公共资源池时的资源规格标识，用于确定 CPU、内存、GPU 配置。
+使用公共资源池或共享资源池时的资源规格标识，用于确定 CPU、内存、GPU 配置。
 
      *
      * @return
@@ -770,10 +826,10 @@ public class AdminJobListInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 公共资源池的规格ID。
+     * set 公共资源池或共享资源池的规格ID。
 
 ## 说明
-使用公共资源池时的资源规格标识，用于确定 CPU、内存、GPU 配置。
+使用公共资源池或共享资源池时的资源规格标识，用于确定 CPU、内存、GPU 配置。
 
      *
      * @param flavorId
@@ -784,7 +840,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 
     /**
-     * get 公共资源池的规格详细信息。
+     * get 公共资源池或共享资源池的规格详细信息。
 
 包含具体的资源配置信息，如 CPU 核数、内存大小、GPU 配置等。
 
@@ -796,7 +852,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 公共资源池的规格详细信息。
+     * set 公共资源池或共享资源池的规格详细信息。
 
 包含具体的资源配置信息，如 CPU 核数、内存大小、GPU 配置等。
 
@@ -805,6 +861,25 @@ public class AdminJobListInfo  implements java.io.Serializable {
      */
     public void setFlavorInfo(Object flavorInfo) {
         this.flavorInfo = flavorInfo;
+    }
+
+
+    /**
+     * get 任务优先级。共享资源池取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
+     *
+     * @return
+     */
+    public Integer getTaskPriority() {
+        return taskPriority;
+    }
+
+    /**
+     * set 任务优先级。共享资源池取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
+     *
+     * @param taskPriority
+     */
+    public void setTaskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
     }
 
 
@@ -980,7 +1055,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 
     /**
-     * get 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * get 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      *
      * @return
@@ -990,7 +1065,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * set 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      *
      * @param internetEgress
@@ -1575,6 +1650,18 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 
     /**
+     * set 是否为用户训练主容器开启容器特权模式。
+     *
+     * @param privileged 是否为用户训练主容器开启容器特权模式。
+     * @return AdminJobListInfo
+     */
+    public AdminJobListInfo privileged(Boolean privileged) {
+        this.privileged = privileged;
+        return this;
+    }
+
+
+    /**
      * set 持续运行时间，单位为秒。
 
 ## 用途
@@ -1622,6 +1709,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 ## 特殊值
 使用公共资源池时固定为：&#x60;joybuilder-public-queue&#x60;
+使用共享资源池时固定为：&#x60;joybuilder-exclusive-queue&#x60;
 
      *
      * @param queueId 队列ID。
@@ -1631,6 +1719,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 ## 特殊值
 使用公共资源池时固定为：&#x60;joybuilder-public-queue&#x60;
+使用共享资源池时固定为：&#x60;joybuilder-exclusive-queue&#x60;
 
      * @return AdminJobListInfo
      */
@@ -1641,16 +1730,28 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 
     /**
-     * set 公共资源池的规格ID。
+     * set 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     *
+     * @param queueType 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     * @return AdminJobListInfo
+     */
+    public AdminJobListInfo queueType(String queueType) {
+        this.queueType = queueType;
+        return this;
+    }
+
+
+    /**
+     * set 公共资源池或共享资源池的规格ID。
 
 ## 说明
-使用公共资源池时的资源规格标识，用于确定 CPU、内存、GPU 配置。
+使用公共资源池或共享资源池时的资源规格标识，用于确定 CPU、内存、GPU 配置。
 
      *
-     * @param flavorId 公共资源池的规格ID。
+     * @param flavorId 公共资源池或共享资源池的规格ID。
 
 ## 说明
-使用公共资源池时的资源规格标识，用于确定 CPU、内存、GPU 配置。
+使用公共资源池或共享资源池时的资源规格标识，用于确定 CPU、内存、GPU 配置。
 
      * @return AdminJobListInfo
      */
@@ -1661,12 +1762,12 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 
     /**
-     * set 公共资源池的规格详细信息。
+     * set 公共资源池或共享资源池的规格详细信息。
 
 包含具体的资源配置信息，如 CPU 核数、内存大小、GPU 配置等。
 
      *
-     * @param flavorInfo 公共资源池的规格详细信息。
+     * @param flavorInfo 公共资源池或共享资源池的规格详细信息。
 
 包含具体的资源配置信息，如 CPU 核数、内存大小、GPU 配置等。
 
@@ -1674,6 +1775,18 @@ public class AdminJobListInfo  implements java.io.Serializable {
      */
     public AdminJobListInfo flavorInfo(Object flavorInfo) {
         this.flavorInfo = flavorInfo;
+        return this;
+    }
+
+
+    /**
+     * set 任务优先级。共享资源池取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
+     *
+     * @param taskPriority 任务优先级。共享资源池取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
+     * @return AdminJobListInfo
+     */
+    public AdminJobListInfo taskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
         return this;
     }
 
@@ -1815,10 +1928,10 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 
     /**
-     * set 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * set 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      *
-     * @param internetEgress 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * @param internetEgress 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      * @return AdminJobListInfo
      */

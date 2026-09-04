@@ -40,11 +40,18 @@ public class RoleResourceInfoForJobList  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     */
+    private String queueType;
+
+    /**
      * 队列ID，所有角色共享同一个队列。
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
-**专属资源池：** 使用创建队列时返回的队列ID
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
+**专属资源池/安全资源池：** 使用创建队列时返回的队列ID
 
 **示例：** &#x60;queue-2xxx**********2d*********8b8&#x60;
 
@@ -70,11 +77,32 @@ public class RoleResourceInfoForJobList  implements java.io.Serializable {
 
 
     /**
+     * get 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     *
+     * @return
+     */
+    public String getQueueType() {
+        return queueType;
+    }
+
+    /**
+     * set 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     *
+     * @param queueType
+     */
+    public void setQueueType(String queueType) {
+        this.queueType = queueType;
+    }
+
+
+    /**
      * get 队列ID，所有角色共享同一个队列。
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
-**专属资源池：** 使用创建队列时返回的队列ID
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
+**专属资源池/安全资源池：** 使用创建队列时返回的队列ID
 
 **示例：** &#x60;queue-2xxx**********2d*********8b8&#x60;
 
@@ -90,7 +118,9 @@ public class RoleResourceInfoForJobList  implements java.io.Serializable {
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
-**专属资源池：** 使用创建队列时返回的队列ID
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
+**专属资源池/安全资源池：** 使用创建队列时返回的队列ID
 
 **示例：** &#x60;queue-2xxx**********2d*********8b8&#x60;
 
@@ -154,11 +184,25 @@ public class RoleResourceInfoForJobList  implements java.io.Serializable {
 
 
     /**
+     * set 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     *
+     * @param queueType 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     * @return RoleResourceInfoForJobList
+     */
+    public RoleResourceInfoForJobList queueType(String queueType) {
+        this.queueType = queueType;
+        return this;
+    }
+
+
+    /**
      * set 队列ID，所有角色共享同一个队列。
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
-**专属资源池：** 使用创建队列时返回的队列ID
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
+**专属资源池/安全资源池：** 使用创建队列时返回的队列ID
 
 **示例：** &#x60;queue-2xxx**********2d*********8b8&#x60;
 
@@ -167,7 +211,9 @@ public class RoleResourceInfoForJobList  implements java.io.Serializable {
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
-**专属资源池：** 使用创建队列时返回的队列ID
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
+**专属资源池/安全资源池：** 使用创建队列时返回的队列ID
 
 **示例：** &#x60;queue-2xxx**********2d*********8b8&#x60;
 

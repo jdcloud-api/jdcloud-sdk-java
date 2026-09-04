@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.jdaip.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.jdaip.model.SmartRouterConfig;
 import com.jdcloud.sdk.service.jdaip.model.ServiceInfo;
 import com.jdcloud.sdk.service.jdaip.model.Metadata;
 import com.jdcloud.sdk.service.jdaip.model.Model;
@@ -57,6 +58,16 @@ public class DescribeInferenceResult extends JdcloudResult implements java.io.Se
      * 部署方式（自定义,或者大语言模型）
      */
     private String deployType;
+
+    /**
+     * 在线服务类型
+     */
+    private String serviceType;
+
+    /**
+     * 智能路由配置，仅智能路由服务返回
+     */
+    private SmartRouterConfig smartRouterConfig;
 
     /**
      * 流量占比
@@ -180,6 +191,44 @@ public class DescribeInferenceResult extends JdcloudResult implements java.io.Se
      */
     public void setDeployType(String deployType) {
         this.deployType = deployType;
+    }
+
+
+    /**
+     * get 在线服务类型
+     *
+     * @return
+     */
+    public String getServiceType() {
+        return serviceType;
+    }
+
+    /**
+     * set 在线服务类型
+     *
+     * @param serviceType
+     */
+    public void setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+    }
+
+
+    /**
+     * get 智能路由配置，仅智能路由服务返回
+     *
+     * @return
+     */
+    public SmartRouterConfig getSmartRouterConfig() {
+        return smartRouterConfig;
+    }
+
+    /**
+     * set 智能路由配置，仅智能路由服务返回
+     *
+     * @param smartRouterConfig
+     */
+    public void setSmartRouterConfig(SmartRouterConfig smartRouterConfig) {
+        this.smartRouterConfig = smartRouterConfig;
     }
 
 
@@ -527,6 +576,30 @@ public class DescribeInferenceResult extends JdcloudResult implements java.io.Se
      */
     public DescribeInferenceResult deployType(String deployType) {
         this.deployType = deployType;
+        return this;
+    }
+
+
+    /**
+     * set 在线服务类型
+     *
+     * @param serviceType 在线服务类型
+     * @return DescribeInferenceResult
+     */
+    public DescribeInferenceResult serviceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+
+
+    /**
+     * set 智能路由配置，仅智能路由服务返回
+     *
+     * @param smartRouterConfig 智能路由配置，仅智能路由服务返回
+     * @return DescribeInferenceResult
+     */
+    public DescribeInferenceResult smartRouterConfig(SmartRouterConfig smartRouterConfig) {
+        this.smartRouterConfig = smartRouterConfig;
         return this;
     }
 

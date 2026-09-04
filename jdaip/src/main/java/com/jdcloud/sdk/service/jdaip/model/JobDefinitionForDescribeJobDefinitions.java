@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.jdaip.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.charge.model.Charge;
 
 /**
  * 任务定义列表项信息，包含任务定义的基本信息和状态概览。
@@ -57,6 +58,11 @@ public class JobDefinitionForDescribeJobDefinitions  implements java.io.Serializ
 
      */
     private String latestState;
+
+    /**
+     * 最新一条任务执行的失败原因。
+     */
+    private String latestFailureReason;
 
     /**
      * 最新一条任务执行的开始时间。
@@ -133,7 +139,12 @@ public class JobDefinitionForDescribeJobDefinitions  implements java.io.Serializ
     
     private List<StorageSpaceForDescribeJobDefinitions> storageSpaces;
     /**
-     * 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * 计费信息；私有队列时为空。
+     */
+    private Charge charge;
+
+    /**
+     * 任务优先级；当队列开启优先级调度时生效。
 
      */
     private Integer taskPriority;
@@ -265,6 +276,25 @@ public class JobDefinitionForDescribeJobDefinitions  implements java.io.Serializ
      */
     public void setLatestState(String latestState) {
         this.latestState = latestState;
+    }
+
+
+    /**
+     * get 最新一条任务执行的失败原因。
+     *
+     * @return
+     */
+    public String getLatestFailureReason() {
+        return latestFailureReason;
+    }
+
+    /**
+     * set 最新一条任务执行的失败原因。
+     *
+     * @param latestFailureReason
+     */
+    public void setLatestFailureReason(String latestFailureReason) {
+        this.latestFailureReason = latestFailureReason;
     }
 
 
@@ -534,7 +564,26 @@ public class JobDefinitionForDescribeJobDefinitions  implements java.io.Serializ
 
 
     /**
-     * get 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * get 计费信息；私有队列时为空。
+     *
+     * @return
+     */
+    public Charge getCharge() {
+        return charge;
+    }
+
+    /**
+     * set 计费信息；私有队列时为空。
+     *
+     * @param charge
+     */
+    public void setCharge(Charge charge) {
+        this.charge = charge;
+    }
+
+
+    /**
+     * get 任务优先级；当队列开启优先级调度时生效。
 
      *
      * @return
@@ -544,7 +593,7 @@ public class JobDefinitionForDescribeJobDefinitions  implements java.io.Serializ
     }
 
     /**
-     * set 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * set 任务优先级；当队列开启优先级调度时生效。
 
      *
      * @param taskPriority
@@ -783,6 +832,18 @@ public class JobDefinitionForDescribeJobDefinitions  implements java.io.Serializ
 
 
     /**
+     * set 最新一条任务执行的失败原因。
+     *
+     * @param latestFailureReason 最新一条任务执行的失败原因。
+     * @return JobDefinitionForDescribeJobDefinitions
+     */
+    public JobDefinitionForDescribeJobDefinitions latestFailureReason(String latestFailureReason) {
+        this.latestFailureReason = latestFailureReason;
+        return this;
+    }
+
+
+    /**
      * set 最新一条任务执行的开始时间。
 
      *
@@ -957,10 +1018,22 @@ public class JobDefinitionForDescribeJobDefinitions  implements java.io.Serializ
 
 
     /**
-     * set 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * set 计费信息；私有队列时为空。
+     *
+     * @param charge 计费信息；私有队列时为空。
+     * @return JobDefinitionForDescribeJobDefinitions
+     */
+    public JobDefinitionForDescribeJobDefinitions charge(Charge charge) {
+        this.charge = charge;
+        return this;
+    }
+
+
+    /**
+     * set 任务优先级；当队列开启优先级调度时生效。
 
      *
-     * @param taskPriority 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * @param taskPriority 任务优先级；当队列开启优先级调度时生效。
 
      * @return JobDefinitionForDescribeJobDefinitions
      */

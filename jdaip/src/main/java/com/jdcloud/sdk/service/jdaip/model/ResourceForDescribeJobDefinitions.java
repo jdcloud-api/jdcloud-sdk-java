@@ -50,6 +50,31 @@ public class ResourceForDescribeJobDefinitions  implements java.io.Serializable 
     private String queueId;
 
     /**
+     * 队列类型。
+     */
+    private String queueType;
+
+    /**
+     * 规格ID。
+     */
+    private String flavorId;
+
+    /**
+     * 逻辑可用区编码。
+     */
+    private String logicAzCode;
+
+    /**
+     * HPC集群名称。
+     */
+    private String hpcClusterName;
+
+    /**
+     * 规格类别。
+     */
+    private String flavorCategory;
+
+    /**
      * GPU 卡类型，指定使用的 GPU 型号。
 
 **常见型号示例：**
@@ -124,6 +149,101 @@ public class ResourceForDescribeJobDefinitions  implements java.io.Serializable 
      */
     public void setQueueId(String queueId) {
         this.queueId = queueId;
+    }
+
+
+    /**
+     * get 队列类型。
+     *
+     * @return
+     */
+    public String getQueueType() {
+        return queueType;
+    }
+
+    /**
+     * set 队列类型。
+     *
+     * @param queueType
+     */
+    public void setQueueType(String queueType) {
+        this.queueType = queueType;
+    }
+
+
+    /**
+     * get 规格ID。
+     *
+     * @return
+     */
+    public String getFlavorId() {
+        return flavorId;
+    }
+
+    /**
+     * set 规格ID。
+     *
+     * @param flavorId
+     */
+    public void setFlavorId(String flavorId) {
+        this.flavorId = flavorId;
+    }
+
+
+    /**
+     * get 逻辑可用区编码。
+     *
+     * @return
+     */
+    public String getLogicAzCode() {
+        return logicAzCode;
+    }
+
+    /**
+     * set 逻辑可用区编码。
+     *
+     * @param logicAzCode
+     */
+    public void setLogicAzCode(String logicAzCode) {
+        this.logicAzCode = logicAzCode;
+    }
+
+
+    /**
+     * get HPC集群名称。
+     *
+     * @return
+     */
+    public String getHpcClusterName() {
+        return hpcClusterName;
+    }
+
+    /**
+     * set HPC集群名称。
+     *
+     * @param hpcClusterName
+     */
+    public void setHpcClusterName(String hpcClusterName) {
+        this.hpcClusterName = hpcClusterName;
+    }
+
+
+    /**
+     * get 规格类别。
+     *
+     * @return
+     */
+    public String getFlavorCategory() {
+        return flavorCategory;
+    }
+
+    /**
+     * set 规格类别。
+     *
+     * @param flavorCategory
+     */
+    public void setFlavorCategory(String flavorCategory) {
+        this.flavorCategory = flavorCategory;
     }
 
 
@@ -274,6 +394,66 @@ public class ResourceForDescribeJobDefinitions  implements java.io.Serializable 
      */
     public ResourceForDescribeJobDefinitions queueId(String queueId) {
         this.queueId = queueId;
+        return this;
+    }
+
+
+    /**
+     * set 队列类型。
+     *
+     * @param queueType 队列类型。
+     * @return ResourceForDescribeJobDefinitions
+     */
+    public ResourceForDescribeJobDefinitions queueType(String queueType) {
+        this.queueType = queueType;
+        return this;
+    }
+
+
+    /**
+     * set 规格ID。
+     *
+     * @param flavorId 规格ID。
+     * @return ResourceForDescribeJobDefinitions
+     */
+    public ResourceForDescribeJobDefinitions flavorId(String flavorId) {
+        this.flavorId = flavorId;
+        return this;
+    }
+
+
+    /**
+     * set 逻辑可用区编码。
+     *
+     * @param logicAzCode 逻辑可用区编码。
+     * @return ResourceForDescribeJobDefinitions
+     */
+    public ResourceForDescribeJobDefinitions logicAzCode(String logicAzCode) {
+        this.logicAzCode = logicAzCode;
+        return this;
+    }
+
+
+    /**
+     * set HPC集群名称。
+     *
+     * @param hpcClusterName HPC集群名称。
+     * @return ResourceForDescribeJobDefinitions
+     */
+    public ResourceForDescribeJobDefinitions hpcClusterName(String hpcClusterName) {
+        this.hpcClusterName = hpcClusterName;
+        return this;
+    }
+
+
+    /**
+     * set 规格类别。
+     *
+     * @param flavorCategory 规格类别。
+     * @return ResourceForDescribeJobDefinitions
+     */
+    public ResourceForDescribeJobDefinitions flavorCategory(String flavorCategory) {
+        this.flavorCategory = flavorCategory;
         return this;
     }
 

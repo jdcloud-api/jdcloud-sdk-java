@@ -48,7 +48,10 @@ public class RolloutInferenceSpec  implements java.io.Serializable {
     private String rolloutId;
 
     /**
-     * 运行时配置；当 rolloutId 为空时必填
+     * 运行时配置；当 rolloutId 为空时必填。
+支持通过 runtime.gracefulShutdown 配置优雅退出，仅适用于普通单机推理。
+滚动更新不支持修改公网出口配置，不得传入 internetEgress。
+
      */
     private Runtime runtime;
 
@@ -124,7 +127,10 @@ public class RolloutInferenceSpec  implements java.io.Serializable {
 
 
     /**
-     * get 运行时配置；当 rolloutId 为空时必填
+     * get 运行时配置；当 rolloutId 为空时必填。
+支持通过 runtime.gracefulShutdown 配置优雅退出，仅适用于普通单机推理。
+滚动更新不支持修改公网出口配置，不得传入 internetEgress。
+
      *
      * @return
      */
@@ -133,7 +139,10 @@ public class RolloutInferenceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 运行时配置；当 rolloutId 为空时必填
+     * set 运行时配置；当 rolloutId 为空时必填。
+支持通过 runtime.gracefulShutdown 配置优雅退出，仅适用于普通单机推理。
+滚动更新不支持修改公网出口配置，不得传入 internetEgress。
+
      *
      * @param runtime
      */
@@ -263,9 +272,15 @@ public class RolloutInferenceSpec  implements java.io.Serializable {
 
 
     /**
-     * set 运行时配置；当 rolloutId 为空时必填
+     * set 运行时配置；当 rolloutId 为空时必填。
+支持通过 runtime.gracefulShutdown 配置优雅退出，仅适用于普通单机推理。
+滚动更新不支持修改公网出口配置，不得传入 internetEgress。
+
      *
-     * @param runtime 运行时配置；当 rolloutId 为空时必填
+     * @param runtime 运行时配置；当 rolloutId 为空时必填。
+支持通过 runtime.gracefulShutdown 配置优雅退出，仅适用于普通单机推理。
+滚动更新不支持修改公网出口配置，不得传入 internetEgress。
+
      * @return RolloutInferenceSpec
      */
     public RolloutInferenceSpec runtime(Runtime runtime) {

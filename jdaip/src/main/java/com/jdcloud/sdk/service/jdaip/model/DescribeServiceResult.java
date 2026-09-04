@@ -74,6 +74,21 @@ public class DescribeServiceResult extends JdcloudResult implements java.io.Seri
     private String gatewayType;
 
     /**
+     * 在线服务类型
+     */
+    private String serviceType;
+
+    /**
+     * 专属网关公网调用地址
+     */
+    private String dgAddress;
+
+    /**
+     * 专属网关内网调用地址
+     */
+    private String dgInnerAddress;
+
+    /**
      * 推理服务限流阈值（QPS）
      */
     private Integer qps;
@@ -82,6 +97,21 @@ public class DescribeServiceResult extends JdcloudResult implements java.io.Seri
      * 开启 true 关闭 false
      */
     private Boolean enableLimit;
+
+    /**
+     * 服务关联的产品ID
+     */
+    private String productId;
+
+    /**
+     * 服务关联的产品名称
+     */
+    private String productName;
+
+    /**
+     * 服务关联产品所属BG/BU
+     */
+    private String bgbu;
 
     /**
      * 该服务中总版本数
@@ -263,6 +293,63 @@ public class DescribeServiceResult extends JdcloudResult implements java.io.Seri
 
 
     /**
+     * get 在线服务类型
+     *
+     * @return
+     */
+    public String getServiceType() {
+        return serviceType;
+    }
+
+    /**
+     * set 在线服务类型
+     *
+     * @param serviceType
+     */
+    public void setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+    }
+
+
+    /**
+     * get 专属网关公网调用地址
+     *
+     * @return
+     */
+    public String getDgAddress() {
+        return dgAddress;
+    }
+
+    /**
+     * set 专属网关公网调用地址
+     *
+     * @param dgAddress
+     */
+    public void setDgAddress(String dgAddress) {
+        this.dgAddress = dgAddress;
+    }
+
+
+    /**
+     * get 专属网关内网调用地址
+     *
+     * @return
+     */
+    public String getDgInnerAddress() {
+        return dgInnerAddress;
+    }
+
+    /**
+     * set 专属网关内网调用地址
+     *
+     * @param dgInnerAddress
+     */
+    public void setDgInnerAddress(String dgInnerAddress) {
+        this.dgInnerAddress = dgInnerAddress;
+    }
+
+
+    /**
      * get 推理服务限流阈值（QPS）
      *
      * @return
@@ -297,6 +384,63 @@ public class DescribeServiceResult extends JdcloudResult implements java.io.Seri
      */
     public void setEnableLimit(Boolean enableLimit) {
         this.enableLimit = enableLimit;
+    }
+
+
+    /**
+     * get 服务关联的产品ID
+     *
+     * @return
+     */
+    public String getProductId() {
+        return productId;
+    }
+
+    /**
+     * set 服务关联的产品ID
+     *
+     * @param productId
+     */
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+
+    /**
+     * get 服务关联的产品名称
+     *
+     * @return
+     */
+    public String getProductName() {
+        return productName;
+    }
+
+    /**
+     * set 服务关联的产品名称
+     *
+     * @param productName
+     */
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+
+    /**
+     * get 服务关联产品所属BG/BU
+     *
+     * @return
+     */
+    public String getBgbu() {
+        return bgbu;
+    }
+
+    /**
+     * set 服务关联产品所属BG/BU
+     *
+     * @param bgbu
+     */
+    public void setBgbu(String bgbu) {
+        this.bgbu = bgbu;
     }
 
 
@@ -493,6 +637,42 @@ public class DescribeServiceResult extends JdcloudResult implements java.io.Seri
 
 
     /**
+     * set 在线服务类型
+     *
+     * @param serviceType 在线服务类型
+     * @return DescribeServiceResult
+     */
+    public DescribeServiceResult serviceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+
+
+    /**
+     * set 专属网关公网调用地址
+     *
+     * @param dgAddress 专属网关公网调用地址
+     * @return DescribeServiceResult
+     */
+    public DescribeServiceResult dgAddress(String dgAddress) {
+        this.dgAddress = dgAddress;
+        return this;
+    }
+
+
+    /**
+     * set 专属网关内网调用地址
+     *
+     * @param dgInnerAddress 专属网关内网调用地址
+     * @return DescribeServiceResult
+     */
+    public DescribeServiceResult dgInnerAddress(String dgInnerAddress) {
+        this.dgInnerAddress = dgInnerAddress;
+        return this;
+    }
+
+
+    /**
      * set 推理服务限流阈值（QPS）
      *
      * @param qps 推理服务限流阈值（QPS）
@@ -512,6 +692,42 @@ public class DescribeServiceResult extends JdcloudResult implements java.io.Seri
      */
     public DescribeServiceResult enableLimit(Boolean enableLimit) {
         this.enableLimit = enableLimit;
+        return this;
+    }
+
+
+    /**
+     * set 服务关联的产品ID
+     *
+     * @param productId 服务关联的产品ID
+     * @return DescribeServiceResult
+     */
+    public DescribeServiceResult productId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+
+
+    /**
+     * set 服务关联的产品名称
+     *
+     * @param productName 服务关联的产品名称
+     * @return DescribeServiceResult
+     */
+    public DescribeServiceResult productName(String productName) {
+        this.productName = productName;
+        return this;
+    }
+
+
+    /**
+     * set 服务关联产品所属BG/BU
+     *
+     * @param bgbu 服务关联产品所属BG/BU
+     * @return DescribeServiceResult
+     */
+    public DescribeServiceResult bgbu(String bgbu) {
+        this.bgbu = bgbu;
         return this;
     }
 

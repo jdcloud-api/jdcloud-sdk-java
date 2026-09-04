@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.jdaip.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.charge.model.Charge;
 
 /**
  * 任务定义详情信息，包含任务定义的完整配置信息。
@@ -57,6 +58,11 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
 
      */
     private String latestState;
+
+    /**
+     * 最新一条任务执行的失败原因。
+     */
+    private String latestFailureReason;
 
     /**
      * 最新一条任务执行的开始时间。
@@ -131,6 +137,11 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
     private ResourceForDescribeJobDefinition resource;
 
     /**
+     * 共享内存配置。
+     */
+    private SharedMemorySpec sharedMemory;
+
+    /**
      * 存储空间配置列表。
 
      */
@@ -142,6 +153,12 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
      */
     
     private List<ModelForDescribeJobDefinition> models;
+    /**
+     * 代码仓配置列表。
+
+     */
+    
+    private List<CodeForDescribeJobDefinition> codes;
     /**
      * 调度任务详情信息，包含调度任务的属性、环节、依赖关系等完整配置。
 
@@ -155,7 +172,17 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
     
     private List<NotifyRuleSpec> notifyConfig;
     /**
-     * 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * 排队超时时间（分钟）；&#x60;0&#x60; 表示使用全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     */
+    private Integer queuingTimeoutMinutes;
+
+    /**
+     * 计费信息；私有队列时为空。
+     */
+    private Charge charge;
+
+    /**
+     * 任务优先级；当队列开启优先级调度时生效。
 
      */
     private Integer taskPriority;
@@ -281,6 +308,25 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
      */
     public void setLatestState(String latestState) {
         this.latestState = latestState;
+    }
+
+
+    /**
+     * get 最新一条任务执行的失败原因。
+     *
+     * @return
+     */
+    public String getLatestFailureReason() {
+        return latestFailureReason;
+    }
+
+    /**
+     * set 最新一条任务执行的失败原因。
+     *
+     * @param latestFailureReason
+     */
+    public void setLatestFailureReason(String latestFailureReason) {
+        this.latestFailureReason = latestFailureReason;
     }
 
 
@@ -537,6 +583,25 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
 
 
     /**
+     * get 共享内存配置。
+     *
+     * @return
+     */
+    public SharedMemorySpec getSharedMemory() {
+        return sharedMemory;
+    }
+
+    /**
+     * set 共享内存配置。
+     *
+     * @param sharedMemory
+     */
+    public void setSharedMemory(SharedMemorySpec sharedMemory) {
+        this.sharedMemory = sharedMemory;
+    }
+
+
+    /**
     * get 存储空间配置列表。
 
     *
@@ -575,6 +640,27 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
     */
     public void setModels(List<ModelForDescribeJobDefinition> models) {
         this.models = models;
+    }
+
+
+    /**
+    * get 代码仓配置列表。
+
+    *
+    * @return
+    */
+    public List<CodeForDescribeJobDefinition> getCodes() {
+        return codes;
+    }
+
+    /**
+    * set 代码仓配置列表。
+
+    *
+    * @param codes
+    */
+    public void setCodes(List<CodeForDescribeJobDefinition> codes) {
+        this.codes = codes;
     }
 
 
@@ -621,7 +707,45 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
 
 
     /**
-     * get 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * get 排队超时时间（分钟）；&#x60;0&#x60; 表示使用全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     *
+     * @return
+     */
+    public Integer getQueuingTimeoutMinutes() {
+        return queuingTimeoutMinutes;
+    }
+
+    /**
+     * set 排队超时时间（分钟）；&#x60;0&#x60; 表示使用全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     *
+     * @param queuingTimeoutMinutes
+     */
+    public void setQueuingTimeoutMinutes(Integer queuingTimeoutMinutes) {
+        this.queuingTimeoutMinutes = queuingTimeoutMinutes;
+    }
+
+
+    /**
+     * get 计费信息；私有队列时为空。
+     *
+     * @return
+     */
+    public Charge getCharge() {
+        return charge;
+    }
+
+    /**
+     * set 计费信息；私有队列时为空。
+     *
+     * @param charge
+     */
+    public void setCharge(Charge charge) {
+        this.charge = charge;
+    }
+
+
+    /**
+     * get 任务优先级；当队列开启优先级调度时生效。
 
      *
      * @return
@@ -631,7 +755,7 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
     }
 
     /**
-     * set 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * set 任务优先级；当队列开启优先级调度时生效。
 
      *
      * @param taskPriority
@@ -849,6 +973,18 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
 
 
     /**
+     * set 最新一条任务执行的失败原因。
+     *
+     * @param latestFailureReason 最新一条任务执行的失败原因。
+     * @return JobDefinitionForDescribeJobDefinition
+     */
+    public JobDefinitionForDescribeJobDefinition latestFailureReason(String latestFailureReason) {
+        this.latestFailureReason = latestFailureReason;
+        return this;
+    }
+
+
+    /**
      * set 最新一条任务执行的开始时间。
 
      *
@@ -1017,6 +1153,18 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
 
 
     /**
+     * set 共享内存配置。
+     *
+     * @param sharedMemory 共享内存配置。
+     * @return JobDefinitionForDescribeJobDefinition
+     */
+    public JobDefinitionForDescribeJobDefinition sharedMemory(SharedMemorySpec sharedMemory) {
+        this.sharedMemory = sharedMemory;
+        return this;
+    }
+
+
+    /**
     * set 存储空间配置列表。
 
     *
@@ -1040,6 +1188,20 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
     */
     public JobDefinitionForDescribeJobDefinition models(List<ModelForDescribeJobDefinition> models) {
         this.models = models;
+        return this;
+    }
+
+
+    /**
+    * set 代码仓配置列表。
+
+    *
+    * @param codes 代码仓配置列表。
+
+    * @return JobDefinitionForDescribeJobDefinition
+    */
+    public JobDefinitionForDescribeJobDefinition codes(List<CodeForDescribeJobDefinition> codes) {
+        this.codes = codes;
         return this;
     }
 
@@ -1073,10 +1235,34 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
 
 
     /**
-     * set 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * set 排队超时时间（分钟）；&#x60;0&#x60; 表示使用全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     *
+     * @param queuingTimeoutMinutes 排队超时时间（分钟）；&#x60;0&#x60; 表示使用全局默认值，非 &#x60;0&#x60; 时取值范围为 5～1440。
+     * @return JobDefinitionForDescribeJobDefinition
+     */
+    public JobDefinitionForDescribeJobDefinition queuingTimeoutMinutes(Integer queuingTimeoutMinutes) {
+        this.queuingTimeoutMinutes = queuingTimeoutMinutes;
+        return this;
+    }
+
+
+    /**
+     * set 计费信息；私有队列时为空。
+     *
+     * @param charge 计费信息；私有队列时为空。
+     * @return JobDefinitionForDescribeJobDefinition
+     */
+    public JobDefinitionForDescribeJobDefinition charge(Charge charge) {
+        this.charge = charge;
+        return this;
+    }
+
+
+    /**
+     * set 任务优先级；当队列开启优先级调度时生效。
 
      *
-     * @param taskPriority 任务优先级，范围[1, 9]；当队列开启优先级调度时生效。
+     * @param taskPriority 任务优先级；当队列开启优先级调度时生效。
 
      * @return JobDefinitionForDescribeJobDefinition
      */
@@ -1207,6 +1393,19 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
             this.models = new ArrayList<>();
         }
         this.models.add(model);
+    }
+
+    /**
+     * add item to 代码仓配置列表。
+
+     *
+     * @param code
+     */
+    public void addCode(CodeForDescribeJobDefinition code) {
+        if (this.codes == null) {
+            this.codes = new ArrayList<>();
+        }
+        this.codes.add(code);
     }
 
     /**

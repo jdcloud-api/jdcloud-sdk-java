@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Node相关对象
- * JDOS Chogori vGPU OpenAPI
+ * 交易购买相关对象
+ * JDOS Chogori交易购买相关对象
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -50,7 +50,7 @@ public class NodePool  implements java.io.Serializable {
     private String bizType;
 
     /**
-     * 节点池类型，combined：异构节点池；general：云主机节点池；mixture：混合节点池
+     * 节点池类型，combined：异构节点池；general：云主机节点池；mixture：混合节点池；security：安全节点池
      */
     private String poolType;
 
@@ -209,7 +209,7 @@ public class NodePool  implements java.io.Serializable {
 
 
     /**
-     * get 节点池类型，combined：异构节点池；general：云主机节点池；mixture：混合节点池
+     * get 节点池类型，combined：异构节点池；general：云主机节点池；mixture：混合节点池；security：安全节点池
      *
      * @return
      */
@@ -218,7 +218,7 @@ public class NodePool  implements java.io.Serializable {
     }
 
     /**
-     * set 节点池类型，combined：异构节点池；general：云主机节点池；mixture：混合节点池
+     * set 节点池类型，combined：异构节点池；general：云主机节点池；mixture：混合节点池；security：安全节点池
      *
      * @param poolType
      */
@@ -626,9 +626,9 @@ public class NodePool  implements java.io.Serializable {
 
 
     /**
-     * set 节点池类型，combined：异构节点池；general：云主机节点池；mixture：混合节点池
+     * set 节点池类型，combined：异构节点池；general：云主机节点池；mixture：混合节点池；security：安全节点池
      *
-     * @param poolType 节点池类型，combined：异构节点池；general：云主机节点池；mixture：混合节点池
+     * @param poolType 节点池类型，combined：异构节点池；general：云主机节点池；mixture：混合节点池；security：安全节点池
      * @return NodePool
      */
     public NodePool poolType(String poolType) {
