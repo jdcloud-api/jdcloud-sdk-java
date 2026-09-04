@@ -86,28 +86,28 @@ public class AddGroupRequest extends JdcloudRequest implements java.io.Serializa
      * Required:true
      */
     @Required
-    private String cpu;
+    private Float cpu;
 
     /**
      * 内存限制
      * Required:true
      */
     @Required
-    private String memory;
+    private Float memory;
 
     /**
      * CPU 请求量
      * Required:true
      */
     @Required
-    private String requestCpu;
+    private Float requestCpu;
 
     /**
      * 内存请求量
      * Required:true
      */
     @Required
-    private String requestMemory;
+    private Float requestMemory;
 
     /**
      * 镜像地址，固定值：imageUrlHolder
@@ -323,7 +323,7 @@ public class AddGroupRequest extends JdcloudRequest implements java.io.Serializa
      *
      * @return
      */
-    public String getCpu() {
+    public Float getCpu() {
         return cpu;
     }
 
@@ -332,7 +332,7 @@ public class AddGroupRequest extends JdcloudRequest implements java.io.Serializa
      *
      * @param cpu
      */
-    public void setCpu(String cpu) {
+    public void setCpu(Float cpu) {
         this.cpu = cpu;
     }
 
@@ -342,7 +342,7 @@ public class AddGroupRequest extends JdcloudRequest implements java.io.Serializa
      *
      * @return
      */
-    public String getMemory() {
+    public Float getMemory() {
         return memory;
     }
 
@@ -351,7 +351,7 @@ public class AddGroupRequest extends JdcloudRequest implements java.io.Serializa
      *
      * @param memory
      */
-    public void setMemory(String memory) {
+    public void setMemory(Float memory) {
         this.memory = memory;
     }
 
@@ -361,7 +361,7 @@ public class AddGroupRequest extends JdcloudRequest implements java.io.Serializa
      *
      * @return
      */
-    public String getRequestCpu() {
+    public Float getRequestCpu() {
         return requestCpu;
     }
 
@@ -370,7 +370,7 @@ public class AddGroupRequest extends JdcloudRequest implements java.io.Serializa
      *
      * @param requestCpu
      */
-    public void setRequestCpu(String requestCpu) {
+    public void setRequestCpu(Float requestCpu) {
         this.requestCpu = requestCpu;
     }
 
@@ -380,7 +380,7 @@ public class AddGroupRequest extends JdcloudRequest implements java.io.Serializa
      *
      * @return
      */
-    public String getRequestMemory() {
+    public Float getRequestMemory() {
         return requestMemory;
     }
 
@@ -389,7 +389,7 @@ public class AddGroupRequest extends JdcloudRequest implements java.io.Serializa
      *
      * @param requestMemory
      */
-    public void setRequestMemory(String requestMemory) {
+    public void setRequestMemory(Float requestMemory) {
         this.requestMemory = requestMemory;
     }
 
@@ -751,7 +751,7 @@ public class AddGroupRequest extends JdcloudRequest implements java.io.Serializa
      * @param cpu CPU 限制
      * @return AddGroupRequest
      */
-    public AddGroupRequest cpu(String cpu) {
+    public AddGroupRequest cpu(Float cpu) {
         this.cpu = cpu;
         return this;
     }
@@ -763,7 +763,7 @@ public class AddGroupRequest extends JdcloudRequest implements java.io.Serializa
      * @param memory 内存限制
      * @return AddGroupRequest
      */
-    public AddGroupRequest memory(String memory) {
+    public AddGroupRequest memory(Float memory) {
         this.memory = memory;
         return this;
     }
@@ -775,7 +775,7 @@ public class AddGroupRequest extends JdcloudRequest implements java.io.Serializa
      * @param requestCpu CPU 请求量
      * @return AddGroupRequest
      */
-    public AddGroupRequest requestCpu(String requestCpu) {
+    public AddGroupRequest requestCpu(Float requestCpu) {
         this.requestCpu = requestCpu;
         return this;
     }
@@ -787,7 +787,7 @@ public class AddGroupRequest extends JdcloudRequest implements java.io.Serializa
      * @param requestMemory 内存请求量
      * @return AddGroupRequest
      */
-    public AddGroupRequest requestMemory(String requestMemory) {
+    public AddGroupRequest requestMemory(Float requestMemory) {
         this.requestMemory = requestMemory;
         return this;
     }

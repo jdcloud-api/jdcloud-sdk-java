@@ -97,28 +97,28 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      * Required:true
      */
     @Required
-    private String cpu;
+    private Float cpu;
 
     /**
      * 内存限制
      * Required:true
      */
     @Required
-    private String memory;
+    private Float memory;
 
     /**
      * CPU 请求量
      * Required:true
      */
     @Required
-    private String requestCpu;
+    private Float requestCpu;
 
     /**
      * 内存请求量
      * Required:true
      */
     @Required
-    private String requestMemory;
+    private Float requestMemory;
 
     /**
      * 镜像地址，固定值：imageUrlHolder
@@ -337,7 +337,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      *
      * @return
      */
-    public String getCpu() {
+    public Float getCpu() {
         return cpu;
     }
 
@@ -346,7 +346,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      *
      * @param cpu
      */
-    public void setCpu(String cpu) {
+    public void setCpu(Float cpu) {
         this.cpu = cpu;
     }
 
@@ -356,7 +356,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      *
      * @return
      */
-    public String getMemory() {
+    public Float getMemory() {
         return memory;
     }
 
@@ -365,7 +365,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      *
      * @param memory
      */
-    public void setMemory(String memory) {
+    public void setMemory(Float memory) {
         this.memory = memory;
     }
 
@@ -375,7 +375,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      *
      * @return
      */
-    public String getRequestCpu() {
+    public Float getRequestCpu() {
         return requestCpu;
     }
 
@@ -384,7 +384,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      *
      * @param requestCpu
      */
-    public void setRequestCpu(String requestCpu) {
+    public void setRequestCpu(Float requestCpu) {
         this.requestCpu = requestCpu;
     }
 
@@ -394,7 +394,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      *
      * @return
      */
-    public String getRequestMemory() {
+    public Float getRequestMemory() {
         return requestMemory;
     }
 
@@ -403,7 +403,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      *
      * @param requestMemory
      */
-    public void setRequestMemory(String requestMemory) {
+    public void setRequestMemory(Float requestMemory) {
         this.requestMemory = requestMemory;
     }
 
@@ -784,7 +784,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      * @param cpu CPU 限制
      * @return CopyAppGroupRequest
      */
-    public CopyAppGroupRequest cpu(String cpu) {
+    public CopyAppGroupRequest cpu(Float cpu) {
         this.cpu = cpu;
         return this;
     }
@@ -796,7 +796,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      * @param memory 内存限制
      * @return CopyAppGroupRequest
      */
-    public CopyAppGroupRequest memory(String memory) {
+    public CopyAppGroupRequest memory(Float memory) {
         this.memory = memory;
         return this;
     }
@@ -808,7 +808,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      * @param requestCpu CPU 请求量
      * @return CopyAppGroupRequest
      */
-    public CopyAppGroupRequest requestCpu(String requestCpu) {
+    public CopyAppGroupRequest requestCpu(Float requestCpu) {
         this.requestCpu = requestCpu;
         return this;
     }
@@ -820,7 +820,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      * @param requestMemory 内存请求量
      * @return CopyAppGroupRequest
      */
-    public CopyAppGroupRequest requestMemory(String requestMemory) {
+    public CopyAppGroupRequest requestMemory(Float requestMemory) {
         this.requestMemory = requestMemory;
         return this;
     }
