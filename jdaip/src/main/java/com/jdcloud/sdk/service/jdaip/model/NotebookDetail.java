@@ -40,7 +40,7 @@ import com.jdcloud.sdk.service.charge.model.Charge;
 - **数据配置**: 挂载的数据集列表
 - **模型配置**: 挂载的模型列表
 - **代码配置**: 挂载的代码库列表
-- **计费信息**: 公共资源池的计费详情(私有资源池无计费信息)
+- **计费信息**: 公共/专享资源池的计费详情(私有资源池无计费信息)
 - **权限信息**: 创建人、归属用户、资源权限
 - **关机策略**: 自动关机配置
 - **日志配置**: 日志采集配置
@@ -269,10 +269,10 @@ public class NotebookDetail  implements java.io.Serializable {
     private InternetEgressInfo internetEgress;
 
     /**
-     * Notebook的计费信息，公共资源池的计费详情。
+     * Notebook的计费信息，公共/专享资源池的计费详情。
 
 ## 使用说明
-- 仅公共资源池有计费信息
+- 仅公共/专享资源池有计费信息
 - 私有资源池的资源无计费信息
 
      */
@@ -391,11 +391,7 @@ public class NotebookDetail  implements java.io.Serializable {
     
     private List<Tag> userTags;
     /**
-     * 调度优先级值，Pod调度顺序控制。
-
-## 使用说明
-- 数值越大，优先级越高
-- 仅在调度器支持优先级时生效
+     * 任务调度优先级，数值越大，优先级越高。
 
      */
     private Integer taskPriority;
@@ -1106,10 +1102,10 @@ public class NotebookDetail  implements java.io.Serializable {
 
 
     /**
-     * get Notebook的计费信息，公共资源池的计费详情。
+     * get Notebook的计费信息，公共/专享资源池的计费详情。
 
 ## 使用说明
-- 仅公共资源池有计费信息
+- 仅公共/专享资源池有计费信息
 - 私有资源池的资源无计费信息
 
      *
@@ -1120,10 +1116,10 @@ public class NotebookDetail  implements java.io.Serializable {
     }
 
     /**
-     * set Notebook的计费信息，公共资源池的计费详情。
+     * set Notebook的计费信息，公共/专享资源池的计费详情。
 
 ## 使用说明
-- 仅公共资源池有计费信息
+- 仅公共/专享资源池有计费信息
 - 私有资源池的资源无计费信息
 
      *
@@ -1476,11 +1472,7 @@ public class NotebookDetail  implements java.io.Serializable {
 
 
     /**
-     * get 调度优先级值，Pod调度顺序控制。
-
-## 使用说明
-- 数值越大，优先级越高
-- 仅在调度器支持优先级时生效
+     * get 任务调度优先级，数值越大，优先级越高。
 
      *
      * @return
@@ -1490,11 +1482,7 @@ public class NotebookDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 调度优先级值，Pod调度顺序控制。
-
-## 使用说明
-- 数值越大，优先级越高
-- 仅在调度器支持优先级时生效
+     * set 任务调度优先级，数值越大，优先级越高。
 
      *
      * @param taskPriority
@@ -2048,17 +2036,17 @@ public class NotebookDetail  implements java.io.Serializable {
 
 
     /**
-     * set Notebook的计费信息，公共资源池的计费详情。
+     * set Notebook的计费信息，公共/专享资源池的计费详情。
 
 ## 使用说明
-- 仅公共资源池有计费信息
+- 仅公共/专享资源池有计费信息
 - 私有资源池的资源无计费信息
 
      *
-     * @param charge Notebook的计费信息，公共资源池的计费详情。
+     * @param charge Notebook的计费信息，公共/专享资源池的计费详情。
 
 ## 使用说明
-- 仅公共资源池有计费信息
+- 仅公共/专享资源池有计费信息
 - 私有资源池的资源无计费信息
 
      * @return NotebookDetail
@@ -2320,18 +2308,10 @@ public class NotebookDetail  implements java.io.Serializable {
 
 
     /**
-     * set 调度优先级值，Pod调度顺序控制。
-
-## 使用说明
-- 数值越大，优先级越高
-- 仅在调度器支持优先级时生效
+     * set 任务调度优先级，数值越大，优先级越高。
 
      *
-     * @param taskPriority 调度优先级值，Pod调度顺序控制。
-
-## 使用说明
-- 数值越大，优先级越高
-- 仅在调度器支持优先级时生效
+     * @param taskPriority 任务调度优先级，数值越大，优先级越高。
 
      * @return NotebookDetail
      */

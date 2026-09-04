@@ -31,7 +31,7 @@ package com.jdcloud.sdk.service.jdaip.model;
 资源配置信息，定义训练任务所需的计算资源。
 
 **资源配置方式：**
-- 使用队列（queueId）+ 规格（flavorId）：适用于公共资源池
+- 使用队列（queueId）+ 规格（flavorId）：适用于公共资源池和共享资源池
 - 使用队列 + 自定义资源：适用于专属资源池
 
 **资源单位说明：**
@@ -49,20 +49,23 @@ public class ResourceParamForJob  implements java.io.Serializable {
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
-**专属资源池：** 使用创建队列时返回的队列ID
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
+**专属资源池/安全资源池：** 使用创建队列时返回的队列ID
 
 **示例：**
 - 公共资源池：&#x60;joybuilder-public-queue&#x60;
+- 共享资源池：&#x60;joybuilder-exclusive-queue&#x60;
 - 专属资源池：&#x60;queue-2xxx**********2d*********8b8&#x60;
 
      */
     private String queueId;
 
     /**
-     * 规格ID，指定公共资源池的计算规格。
+     * 规格ID，指定公共资源池或共享资源池的计算规格。
 
 **说明：**
-- 公共资源池必须填写此字段
+- 公共资源池和共享资源池必须填写此字段
 - 专属资源池无需填写，由自定义资源配置决定
 
 **获取方式：** 通过规格查询接口获取可用规格列表
@@ -96,6 +99,8 @@ public class ResourceParamForJob  implements java.io.Serializable {
 - 小规格：&#x60;0.1&#x60;, &#x60;0.125&#x60;, &#x60;0.25&#x60;, &#x60;0.5&#x60;
 - 中规格：&#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;
 - 大规格：&#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;
+
+**昇腾整机规格：** &#x60;16&#x60;
 
 **使用建议：**
 - 小模型训练：0.5 ~ 2 核
@@ -143,10 +148,13 @@ public class ResourceParamForJob  implements java.io.Serializable {
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
-**专属资源池：** 使用创建队列时返回的队列ID
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
+**专属资源池/安全资源池：** 使用创建队列时返回的队列ID
 
 **示例：**
 - 公共资源池：&#x60;joybuilder-public-queue&#x60;
+- 共享资源池：&#x60;joybuilder-exclusive-queue&#x60;
 - 专属资源池：&#x60;queue-2xxx**********2d*********8b8&#x60;
 
      *
@@ -161,10 +169,13 @@ public class ResourceParamForJob  implements java.io.Serializable {
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
-**专属资源池：** 使用创建队列时返回的队列ID
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
+**专属资源池/安全资源池：** 使用创建队列时返回的队列ID
 
 **示例：**
 - 公共资源池：&#x60;joybuilder-public-queue&#x60;
+- 共享资源池：&#x60;joybuilder-exclusive-queue&#x60;
 - 专属资源池：&#x60;queue-2xxx**********2d*********8b8&#x60;
 
      *
@@ -176,10 +187,10 @@ public class ResourceParamForJob  implements java.io.Serializable {
 
 
     /**
-     * get 规格ID，指定公共资源池的计算规格。
+     * get 规格ID，指定公共资源池或共享资源池的计算规格。
 
 **说明：**
-- 公共资源池必须填写此字段
+- 公共资源池和共享资源池必须填写此字段
 - 专属资源池无需填写，由自定义资源配置决定
 
 **获取方式：** 通过规格查询接口获取可用规格列表
@@ -192,10 +203,10 @@ public class ResourceParamForJob  implements java.io.Serializable {
     }
 
     /**
-     * set 规格ID，指定公共资源池的计算规格。
+     * set 规格ID，指定公共资源池或共享资源池的计算规格。
 
 **说明：**
-- 公共资源池必须填写此字段
+- 公共资源池和共享资源池必须填写此字段
 - 专属资源池无需填写，由自定义资源配置决定
 
 **获取方式：** 通过规格查询接口获取可用规格列表
@@ -272,6 +283,8 @@ public class ResourceParamForJob  implements java.io.Serializable {
 - 中规格：&#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;
 - 大规格：&#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;
 
+**昇腾整机规格：** &#x60;16&#x60;
+
 **使用建议：**
 - 小模型训练：0.5 ~ 2 核
 - 中等模型：2 ~ 4 核
@@ -291,6 +304,8 @@ public class ResourceParamForJob  implements java.io.Serializable {
 - 小规格：&#x60;0.1&#x60;, &#x60;0.125&#x60;, &#x60;0.25&#x60;, &#x60;0.5&#x60;
 - 中规格：&#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;
 - 大规格：&#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;
+
+**昇腾整机规格：** &#x60;16&#x60;
 
 **使用建议：**
 - 小模型训练：0.5 ~ 2 核
@@ -391,10 +406,13 @@ public class ResourceParamForJob  implements java.io.Serializable {
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
-**专属资源池：** 使用创建队列时返回的队列ID
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
+**专属资源池/安全资源池：** 使用创建队列时返回的队列ID
 
 **示例：**
 - 公共资源池：&#x60;joybuilder-public-queue&#x60;
+- 共享资源池：&#x60;joybuilder-exclusive-queue&#x60;
 - 专属资源池：&#x60;queue-2xxx**********2d*********8b8&#x60;
 
      *
@@ -402,10 +420,13 @@ public class ResourceParamForJob  implements java.io.Serializable {
 
 **公共资源池：** 固定使用 &#x60;joybuilder-public-queue&#x60;
 
-**专属资源池：** 使用创建队列时返回的队列ID
+**共享资源池：** 固定使用 &#x60;joybuilder-exclusive-queue&#x60;
+
+**专属资源池/安全资源池：** 使用创建队列时返回的队列ID
 
 **示例：**
 - 公共资源池：&#x60;joybuilder-public-queue&#x60;
+- 共享资源池：&#x60;joybuilder-exclusive-queue&#x60;
 - 专属资源池：&#x60;queue-2xxx**********2d*********8b8&#x60;
 
      * @return ResourceParamForJob
@@ -417,19 +438,19 @@ public class ResourceParamForJob  implements java.io.Serializable {
 
 
     /**
-     * set 规格ID，指定公共资源池的计算规格。
+     * set 规格ID，指定公共资源池或共享资源池的计算规格。
 
 **说明：**
-- 公共资源池必须填写此字段
+- 公共资源池和共享资源池必须填写此字段
 - 专属资源池无需填写，由自定义资源配置决定
 
 **获取方式：** 通过规格查询接口获取可用规格列表
 
      *
-     * @param flavorId 规格ID，指定公共资源池的计算规格。
+     * @param flavorId 规格ID，指定公共资源池或共享资源池的计算规格。
 
 **说明：**
-- 公共资源池必须填写此字段
+- 公共资源池和共享资源池必须填写此字段
 - 专属资源池无需填写，由自定义资源配置决定
 
 **获取方式：** 通过规格查询接口获取可用规格列表
@@ -492,6 +513,8 @@ public class ResourceParamForJob  implements java.io.Serializable {
 - 中规格：&#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;
 - 大规格：&#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;
 
+**昇腾整机规格：** &#x60;16&#x60;
+
 **使用建议：**
 - 小模型训练：0.5 ~ 2 核
 - 中等模型：2 ~ 4 核
@@ -504,6 +527,8 @@ public class ResourceParamForJob  implements java.io.Serializable {
 - 小规格：&#x60;0.1&#x60;, &#x60;0.125&#x60;, &#x60;0.25&#x60;, &#x60;0.5&#x60;
 - 中规格：&#x60;1&#x60;, &#x60;2&#x60;, &#x60;3&#x60;, &#x60;4&#x60;
 - 大规格：&#x60;5&#x60;, &#x60;6&#x60;, &#x60;7&#x60;, &#x60;8&#x60;
+
+**昇腾整机规格：** &#x60;16&#x60;
 
 **使用建议：**
 - 小模型训练：0.5 ~ 2 核

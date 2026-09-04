@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.jdaip.model;
 
 
 /**
- * 存储空间配置信息（外部共享存储：oss/cfs/jpfs）。本地存储请见顶层字段 &#x60;localStorage&#x60;。
+ * 存储空间配置信息（外部共享存储：oss/cfs/jpfs/secure）。本地存储请见顶层字段 &#x60;localStorage&#x60;。
 
  */
 public class StorageSpaceDetailForJob  implements java.io.Serializable {
@@ -34,7 +34,7 @@ public class StorageSpaceDetailForJob  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 存储类型（数据来源），大小写敏感，地域不同，支持的存储类型也不同，需要根据地域实际支持的存储类型选择：[oss, cfs, jpfs]。
+     * 存储类型（数据来源），大小写敏感，地域不同，支持的存储类型也不同，需要根据地域实际支持的存储类型选择：[oss, cfs, jpfs, secure]。其中 &#x60;secure&#x60; 仅限安全队列使用。
 
      */
     private String storageType;
@@ -60,10 +60,15 @@ public class StorageSpaceDetailForJob  implements java.io.Serializable {
      */
     private JpfsDetailForJob jpfs;
 
+    /**
+     * secure
+     */
+    private SecureDetailForJob secure;
+
 
 
     /**
-     * get 存储类型（数据来源），大小写敏感，地域不同，支持的存储类型也不同，需要根据地域实际支持的存储类型选择：[oss, cfs, jpfs]。
+     * get 存储类型（数据来源），大小写敏感，地域不同，支持的存储类型也不同，需要根据地域实际支持的存储类型选择：[oss, cfs, jpfs, secure]。其中 &#x60;secure&#x60; 仅限安全队列使用。
 
      *
      * @return
@@ -73,7 +78,7 @@ public class StorageSpaceDetailForJob  implements java.io.Serializable {
     }
 
     /**
-     * set 存储类型（数据来源），大小写敏感，地域不同，支持的存储类型也不同，需要根据地域实际支持的存储类型选择：[oss, cfs, jpfs]。
+     * set 存储类型（数据来源），大小写敏感，地域不同，支持的存储类型也不同，需要根据地域实际支持的存储类型选择：[oss, cfs, jpfs, secure]。其中 &#x60;secure&#x60; 仅限安全队列使用。
 
      *
      * @param storageType
@@ -161,12 +166,31 @@ public class StorageSpaceDetailForJob  implements java.io.Serializable {
     }
 
 
+    /**
+     * get secure
+     *
+     * @return
+     */
+    public SecureDetailForJob getSecure() {
+        return secure;
+    }
 
     /**
-     * set 存储类型（数据来源），大小写敏感，地域不同，支持的存储类型也不同，需要根据地域实际支持的存储类型选择：[oss, cfs, jpfs]。
+     * set secure
+     *
+     * @param secure
+     */
+    public void setSecure(SecureDetailForJob secure) {
+        this.secure = secure;
+    }
+
+
+
+    /**
+     * set 存储类型（数据来源），大小写敏感，地域不同，支持的存储类型也不同，需要根据地域实际支持的存储类型选择：[oss, cfs, jpfs, secure]。其中 &#x60;secure&#x60; 仅限安全队列使用。
 
      *
-     * @param storageType 存储类型（数据来源），大小写敏感，地域不同，支持的存储类型也不同，需要根据地域实际支持的存储类型选择：[oss, cfs, jpfs]。
+     * @param storageType 存储类型（数据来源），大小写敏感，地域不同，支持的存储类型也不同，需要根据地域实际支持的存储类型选择：[oss, cfs, jpfs, secure]。其中 &#x60;secure&#x60; 仅限安全队列使用。
 
      * @return StorageSpaceDetailForJob
      */
@@ -222,6 +246,18 @@ public class StorageSpaceDetailForJob  implements java.io.Serializable {
      */
     public StorageSpaceDetailForJob jpfs(JpfsDetailForJob jpfs) {
         this.jpfs = jpfs;
+        return this;
+    }
+
+
+    /**
+     * set secure
+     *
+     * @param secure 
+     * @return StorageSpaceDetailForJob
+     */
+    public StorageSpaceDetailForJob secure(SecureDetailForJob secure) {
+        this.secure = secure;
         return this;
     }
 

@@ -42,7 +42,7 @@ public class Device  implements java.io.Serializable {
     /**
      * 显卡品牌
      */
-    private String brand;
+    private String deviceBrand;
 
     /**
      * 显卡型号
@@ -113,6 +113,16 @@ public class Device  implements java.io.Serializable {
      * 节点规格，对应节点表InstanceConfig
      */
     private String nodeSpec;
+
+    /**
+     * 节点创建时间，Unix秒
+     */
+    private Long createTime;
+
+    /**
+     * 节点类型
+     */
+    private String nodeType;
 
     /**
      * 集群ID
@@ -190,17 +200,17 @@ public class Device  implements java.io.Serializable {
      *
      * @return
      */
-    public String getBrand() {
-        return brand;
+    public String getDeviceBrand() {
+        return deviceBrand;
     }
 
     /**
      * set 显卡品牌
      *
-     * @param brand
+     * @param deviceBrand
      */
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public void setDeviceBrand(String deviceBrand) {
+        this.deviceBrand = deviceBrand;
     }
 
 
@@ -471,6 +481,44 @@ public class Device  implements java.io.Serializable {
 
 
     /**
+     * get 节点创建时间，Unix秒
+     *
+     * @return
+     */
+    public Long getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 节点创建时间，Unix秒
+     *
+     * @param createTime
+     */
+    public void setCreateTime(Long createTime) {
+        this.createTime = createTime;
+    }
+
+
+    /**
+     * get 节点类型
+     *
+     * @return
+     */
+    public String getNodeType() {
+        return nodeType;
+    }
+
+    /**
+     * set 节点类型
+     *
+     * @param nodeType
+     */
+    public void setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+    }
+
+
+    /**
      * get 集群ID
      *
      * @return
@@ -676,11 +724,11 @@ public class Device  implements java.io.Serializable {
     /**
      * set 显卡品牌
      *
-     * @param brand 显卡品牌
+     * @param deviceBrand 显卡品牌
      * @return Device
      */
-    public Device brand(String brand) {
-        this.brand = brand;
+    public Device deviceBrand(String deviceBrand) {
+        this.deviceBrand = deviceBrand;
         return this;
     }
 
@@ -849,6 +897,30 @@ public class Device  implements java.io.Serializable {
      */
     public Device nodeSpec(String nodeSpec) {
         this.nodeSpec = nodeSpec;
+        return this;
+    }
+
+
+    /**
+     * set 节点创建时间，Unix秒
+     *
+     * @param createTime 节点创建时间，Unix秒
+     * @return Device
+     */
+    public Device createTime(Long createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+
+
+    /**
+     * set 节点类型
+     *
+     * @param nodeType 节点类型
+     * @return Device
+     */
+    public Device nodeType(String nodeType) {
+        this.nodeType = nodeType;
         return this;
     }
 

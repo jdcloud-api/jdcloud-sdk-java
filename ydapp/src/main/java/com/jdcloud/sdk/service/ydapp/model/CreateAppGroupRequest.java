@@ -97,28 +97,28 @@ public class CreateAppGroupRequest extends JdcloudRequest implements java.io.Ser
      * Required:true
      */
     @Required
-    private String cpu;
+    private Float cpu;
 
     /**
      * 内存限制
      * Required:true
      */
     @Required
-    private String memory;
+    private Float memory;
 
     /**
      * CPU 请求量
      * Required:true
      */
     @Required
-    private String requestCpu;
+    private Float requestCpu;
 
     /**
      * 内存请求量
      * Required:true
      */
     @Required
-    private String requestMemory;
+    private Float requestMemory;
 
     /**
      * 镜像地址，固定值：imageUrlHolder
@@ -334,7 +334,7 @@ public class CreateAppGroupRequest extends JdcloudRequest implements java.io.Ser
      *
      * @return
      */
-    public String getCpu() {
+    public Float getCpu() {
         return cpu;
     }
 
@@ -343,7 +343,7 @@ public class CreateAppGroupRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param cpu
      */
-    public void setCpu(String cpu) {
+    public void setCpu(Float cpu) {
         this.cpu = cpu;
     }
 
@@ -353,7 +353,7 @@ public class CreateAppGroupRequest extends JdcloudRequest implements java.io.Ser
      *
      * @return
      */
-    public String getMemory() {
+    public Float getMemory() {
         return memory;
     }
 
@@ -362,7 +362,7 @@ public class CreateAppGroupRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param memory
      */
-    public void setMemory(String memory) {
+    public void setMemory(Float memory) {
         this.memory = memory;
     }
 
@@ -372,7 +372,7 @@ public class CreateAppGroupRequest extends JdcloudRequest implements java.io.Ser
      *
      * @return
      */
-    public String getRequestCpu() {
+    public Float getRequestCpu() {
         return requestCpu;
     }
 
@@ -381,7 +381,7 @@ public class CreateAppGroupRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param requestCpu
      */
-    public void setRequestCpu(String requestCpu) {
+    public void setRequestCpu(Float requestCpu) {
         this.requestCpu = requestCpu;
     }
 
@@ -391,7 +391,7 @@ public class CreateAppGroupRequest extends JdcloudRequest implements java.io.Ser
      *
      * @return
      */
-    public String getRequestMemory() {
+    public Float getRequestMemory() {
         return requestMemory;
     }
 
@@ -400,7 +400,7 @@ public class CreateAppGroupRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param requestMemory
      */
-    public void setRequestMemory(String requestMemory) {
+    public void setRequestMemory(Float requestMemory) {
         this.requestMemory = requestMemory;
     }
 
@@ -762,7 +762,7 @@ public class CreateAppGroupRequest extends JdcloudRequest implements java.io.Ser
      * @param cpu CPU 限制
      * @return CreateAppGroupRequest
      */
-    public CreateAppGroupRequest cpu(String cpu) {
+    public CreateAppGroupRequest cpu(Float cpu) {
         this.cpu = cpu;
         return this;
     }
@@ -774,7 +774,7 @@ public class CreateAppGroupRequest extends JdcloudRequest implements java.io.Ser
      * @param memory 内存限制
      * @return CreateAppGroupRequest
      */
-    public CreateAppGroupRequest memory(String memory) {
+    public CreateAppGroupRequest memory(Float memory) {
         this.memory = memory;
         return this;
     }
@@ -786,7 +786,7 @@ public class CreateAppGroupRequest extends JdcloudRequest implements java.io.Ser
      * @param requestCpu CPU 请求量
      * @return CreateAppGroupRequest
      */
-    public CreateAppGroupRequest requestCpu(String requestCpu) {
+    public CreateAppGroupRequest requestCpu(Float requestCpu) {
         this.requestCpu = requestCpu;
         return this;
     }
@@ -798,7 +798,7 @@ public class CreateAppGroupRequest extends JdcloudRequest implements java.io.Ser
      * @param requestMemory 内存请求量
      * @return CreateAppGroupRequest
      */
-    public CreateAppGroupRequest requestMemory(String requestMemory) {
+    public CreateAppGroupRequest requestMemory(Float requestMemory) {
         this.requestMemory = requestMemory;
         return this;
     }

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 - **代码配置**: 更新代码库挂载配置
 - **环境变量配置**: 新增、修改、删除或清空用户环境变量
 - **节点亲和性配置**: 更新节点调度亲和性规则
+- **RDMA配置**: 开启或关闭RDMA高速网络
 - **SSH配置**: 更新SSH连接配置
 
 ## 使用说明
@@ -90,7 +91,7 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
      * 工作负载资源配置，用于更新计算资源。
 
 ## 更新限制
-- 公共资源池不允许变更资源配置
+- 公共/专享资源池不允许变更资源配置
 - 私有资源池允许更换队列和资源配置
 
      */
@@ -159,6 +160,22 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
     
     private List<NotebookNodeAffinity> nodeAffinities;
     /**
+     * 是否启用RDMA高速网络。
+
+## 更新语义
+- 不传或传&#x60;null&#x60;表示不修改原配置
+- 传&#x60;true&#x60;表示开启，传&#x60;false&#x60;表示关闭；配置在Notebook下次启动时生效
+
+## 生效规则
+- 仅私有资源池中的Notebook支持修改该参数
+- 计算资源必须包含GPU，且GPU卡数必须为正整数
+- 未配置GPU或配置非整卡GPU时，即使传&#x60;true&#x60;也会静默按&#x60;false&#x60;处理
+- 公共/专享资源池忽略该参数，是否启用由所选规格的RDMA属性决定
+
+     */
+    private Boolean rdma;
+
+    /**
      * SSH配置，用于更新SSH连接能力。
 
 ## 使用说明
@@ -172,8 +189,11 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
 
 ## 使用说明
 - 可选参数，传null表示不修改（保持原值）
-- 仅私有资源池且工作空间队列设置了调度优先级时可设置
-- **取值范围：** 1 ~ 9，实际以工作空间配置为准
+- **取值范围：** 1 ~ 9
+- **按资源池类型区分：**
+  - 专享队列：必须设置(1~9)。
+  - 空间私有队列：开启调度优先级时必填。
+  - 公共队列：不支持设置。
 
      */
     private Integer taskPriority;
@@ -279,7 +299,7 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
      * get 工作负载资源配置，用于更新计算资源。
 
 ## 更新限制
-- 公共资源池不允许变更资源配置
+- 公共/专享资源池不允许变更资源配置
 - 私有资源池允许更换队列和资源配置
 
      *
@@ -293,7 +313,7 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
      * set 工作负载资源配置，用于更新计算资源。
 
 ## 更新限制
-- 公共资源池不允许变更资源配置
+- 公共/专享资源池不允许变更资源配置
 - 私有资源池允许更换队列和资源配置
 
      *
@@ -483,6 +503,47 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
 
 
     /**
+     * get 是否启用RDMA高速网络。
+
+## 更新语义
+- 不传或传&#x60;null&#x60;表示不修改原配置
+- 传&#x60;true&#x60;表示开启，传&#x60;false&#x60;表示关闭；配置在Notebook下次启动时生效
+
+## 生效规则
+- 仅私有资源池中的Notebook支持修改该参数
+- 计算资源必须包含GPU，且GPU卡数必须为正整数
+- 未配置GPU或配置非整卡GPU时，即使传&#x60;true&#x60;也会静默按&#x60;false&#x60;处理
+- 公共/专享资源池忽略该参数，是否启用由所选规格的RDMA属性决定
+
+     *
+     * @return
+     */
+    public Boolean getRdma() {
+        return rdma;
+    }
+
+    /**
+     * set 是否启用RDMA高速网络。
+
+## 更新语义
+- 不传或传&#x60;null&#x60;表示不修改原配置
+- 传&#x60;true&#x60;表示开启，传&#x60;false&#x60;表示关闭；配置在Notebook下次启动时生效
+
+## 生效规则
+- 仅私有资源池中的Notebook支持修改该参数
+- 计算资源必须包含GPU，且GPU卡数必须为正整数
+- 未配置GPU或配置非整卡GPU时，即使传&#x60;true&#x60;也会静默按&#x60;false&#x60;处理
+- 公共/专享资源池忽略该参数，是否启用由所选规格的RDMA属性决定
+
+     *
+     * @param rdma
+     */
+    public void setRdma(Boolean rdma) {
+        this.rdma = rdma;
+    }
+
+
+    /**
      * get SSH配置，用于更新SSH连接能力。
 
 ## 使用说明
@@ -514,8 +575,11 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
 
 ## 使用说明
 - 可选参数，传null表示不修改（保持原值）
-- 仅私有资源池且工作空间队列设置了调度优先级时可设置
-- **取值范围：** 1 ~ 9，实际以工作空间配置为准
+- **取值范围：** 1 ~ 9
+- **按资源池类型区分：**
+  - 专享队列：必须设置(1~9)。
+  - 空间私有队列：开启调度优先级时必填。
+  - 公共队列：不支持设置。
 
      *
      * @return
@@ -529,8 +593,11 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
 
 ## 使用说明
 - 可选参数，传null表示不修改（保持原值）
-- 仅私有资源池且工作空间队列设置了调度优先级时可设置
-- **取值范围：** 1 ~ 9，实际以工作空间配置为准
+- **取值范围：** 1 ~ 9
+- **按资源池类型区分：**
+  - 专享队列：必须设置(1~9)。
+  - 空间私有队列：开启调度优先级时必填。
+  - 公共队列：不支持设置。
 
      *
      * @param taskPriority
@@ -619,14 +686,14 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
      * set 工作负载资源配置，用于更新计算资源。
 
 ## 更新限制
-- 公共资源池不允许变更资源配置
+- 公共/专享资源池不允许变更资源配置
 - 私有资源池允许更换队列和资源配置
 
      *
      * @param workloadSpec 工作负载资源配置，用于更新计算资源。
 
 ## 更新限制
-- 公共资源池不允许变更资源配置
+- 公共/专享资源池不允许变更资源配置
 - 私有资源池允许更换队列和资源配置
 
      * @return UpdateResourcePropertiesParam
@@ -774,6 +841,40 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
 
 
     /**
+     * set 是否启用RDMA高速网络。
+
+## 更新语义
+- 不传或传&#x60;null&#x60;表示不修改原配置
+- 传&#x60;true&#x60;表示开启，传&#x60;false&#x60;表示关闭；配置在Notebook下次启动时生效
+
+## 生效规则
+- 仅私有资源池中的Notebook支持修改该参数
+- 计算资源必须包含GPU，且GPU卡数必须为正整数
+- 未配置GPU或配置非整卡GPU时，即使传&#x60;true&#x60;也会静默按&#x60;false&#x60;处理
+- 公共/专享资源池忽略该参数，是否启用由所选规格的RDMA属性决定
+
+     *
+     * @param rdma 是否启用RDMA高速网络。
+
+## 更新语义
+- 不传或传&#x60;null&#x60;表示不修改原配置
+- 传&#x60;true&#x60;表示开启，传&#x60;false&#x60;表示关闭；配置在Notebook下次启动时生效
+
+## 生效规则
+- 仅私有资源池中的Notebook支持修改该参数
+- 计算资源必须包含GPU，且GPU卡数必须为正整数
+- 未配置GPU或配置非整卡GPU时，即使传&#x60;true&#x60;也会静默按&#x60;false&#x60;处理
+- 公共/专享资源池忽略该参数，是否启用由所选规格的RDMA属性决定
+
+     * @return UpdateResourcePropertiesParam
+     */
+    public UpdateResourcePropertiesParam rdma(Boolean rdma) {
+        this.rdma = rdma;
+        return this;
+    }
+
+
+    /**
      * set SSH配置，用于更新SSH连接能力。
 
 ## 使用说明
@@ -798,16 +899,22 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
 
 ## 使用说明
 - 可选参数，传null表示不修改（保持原值）
-- 仅私有资源池且工作空间队列设置了调度优先级时可设置
-- **取值范围：** 1 ~ 9，实际以工作空间配置为准
+- **取值范围：** 1 ~ 9
+- **按资源池类型区分：**
+  - 专享队列：必须设置(1~9)。
+  - 空间私有队列：开启调度优先级时必填。
+  - 公共队列：不支持设置。
 
      *
      * @param taskPriority 任务调度优先级，数值越大，优先级越高。
 
 ## 使用说明
 - 可选参数，传null表示不修改（保持原值）
-- 仅私有资源池且工作空间队列设置了调度优先级时可设置
-- **取值范围：** 1 ~ 9，实际以工作空间配置为准
+- **取值范围：** 1 ~ 9
+- **按资源池类型区分：**
+  - 专享队列：必须设置(1~9)。
+  - 空间私有队列：开启调度优先级时必填。
+  - 公共队列：不支持设置。
 
      * @return UpdateResourcePropertiesParam
      */

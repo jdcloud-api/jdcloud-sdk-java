@@ -27,89 +27,90 @@ package com.jdcloud.sdk.service.jdaip.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 公网出口配置
+ * 公网出口配置，用于配置在线服务的出公网访问方式。
+
+- switchStatus 必须显式传值；on 表示开启，off 表示关闭。
+- 公共资源池开启时，egressType 必传且仅支持 SHARE_GATEWAY，所选规格须支持出公网（allowInternet&#x3D;true）。
+- 专属队列不支持开启公网出口。
+
  */
 public class InternetEgress  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 公网出口类型，指定在线服务出公网的访问方式。
-
-支持的类型：
-- SHARE_GATEWAY：经平台共享 NAT 网关出公网。
-
-使用说明：
-- 仅公共资源池生效。
-- 设为 SHARE_GATEWAY 时，要求实例规格支持出公网。
-- 指定 NONE 表示不出公网；不传 internetEgress 参数时默认为 NONE。
+     * 公网出口开关。on 表示开启，off 表示关闭；off 时 egressType 无效。
      * Required:true
      */
     @Required
-    private String type;
+    private String switchStatus;
+
+    /**
+     * 公网出口类型。switchStatus&#x3D;on 时必传，当前仅支持 SHARE_GATEWAY（平台共享 NAT 网关）。
+     */
+    private String egressType;
 
 
 
     /**
-     * get 公网出口类型，指定在线服务出公网的访问方式。
-
-支持的类型：
-- SHARE_GATEWAY：经平台共享 NAT 网关出公网。
-
-使用说明：
-- 仅公共资源池生效。
-- 设为 SHARE_GATEWAY 时，要求实例规格支持出公网。
-- 指定 NONE 表示不出公网；不传 internetEgress 参数时默认为 NONE。
+     * get 公网出口开关。on 表示开启，off 表示关闭；off 时 egressType 无效。
      *
      * @return
      */
-    public String getType() {
-        return type;
+    public String getSwitchStatus() {
+        return switchStatus;
     }
 
     /**
-     * set 公网出口类型，指定在线服务出公网的访问方式。
-
-支持的类型：
-- SHARE_GATEWAY：经平台共享 NAT 网关出公网。
-
-使用说明：
-- 仅公共资源池生效。
-- 设为 SHARE_GATEWAY 时，要求实例规格支持出公网。
-- 指定 NONE 表示不出公网；不传 internetEgress 参数时默认为 NONE。
+     * set 公网出口开关。on 表示开启，off 表示关闭；off 时 egressType 无效。
      *
-     * @param type
+     * @param switchStatus
      */
-    public void setType(String type) {
-        this.type = type;
+    public void setSwitchStatus(String switchStatus) {
+        this.switchStatus = switchStatus;
+    }
+
+
+    /**
+     * get 公网出口类型。switchStatus&#x3D;on 时必传，当前仅支持 SHARE_GATEWAY（平台共享 NAT 网关）。
+     *
+     * @return
+     */
+    public String getEgressType() {
+        return egressType;
+    }
+
+    /**
+     * set 公网出口类型。switchStatus&#x3D;on 时必传，当前仅支持 SHARE_GATEWAY（平台共享 NAT 网关）。
+     *
+     * @param egressType
+     */
+    public void setEgressType(String egressType) {
+        this.egressType = egressType;
     }
 
 
 
     /**
-     * set 公网出口类型，指定在线服务出公网的访问方式。
-
-支持的类型：
-- SHARE_GATEWAY：经平台共享 NAT 网关出公网。
-
-使用说明：
-- 仅公共资源池生效。
-- 设为 SHARE_GATEWAY 时，要求实例规格支持出公网。
-- 指定 NONE 表示不出公网；不传 internetEgress 参数时默认为 NONE。
+     * set 公网出口开关。on 表示开启，off 表示关闭；off 时 egressType 无效。
      *
-     * @param type 公网出口类型，指定在线服务出公网的访问方式。
-
-支持的类型：
-- SHARE_GATEWAY：经平台共享 NAT 网关出公网。
-
-使用说明：
-- 仅公共资源池生效。
-- 设为 SHARE_GATEWAY 时，要求实例规格支持出公网。
-- 指定 NONE 表示不出公网；不传 internetEgress 参数时默认为 NONE。
+     * @param switchStatus 公网出口开关。on 表示开启，off 表示关闭；off 时 egressType 无效。
      * @return InternetEgress
      */
-    public InternetEgress type(String type) {
-        this.type = type;
+    public InternetEgress switchStatus(String switchStatus) {
+        this.switchStatus = switchStatus;
+        return this;
+    }
+
+
+    /**
+     * set 公网出口类型。switchStatus&#x3D;on 时必传，当前仅支持 SHARE_GATEWAY（平台共享 NAT 网关）。
+     *
+     * @param egressType 公网出口类型。switchStatus&#x3D;on 时必传，当前仅支持 SHARE_GATEWAY（平台共享 NAT 网关）。
+     * @return InternetEgress
+     */
+    public InternetEgress egressType(String egressType) {
+        this.egressType = egressType;
         return this;
     }
 

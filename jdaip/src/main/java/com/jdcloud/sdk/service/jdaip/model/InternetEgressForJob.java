@@ -67,7 +67,7 @@ public class InternetEgressForJob  implements java.io.Serializable {
 - SHARE_GATEWAY: 经平台共享NAT网关出公网
 
 ## 使用说明
-- 仅公共资源池生效
+- 仅公共资源池和共享资源池生效
 - 设为 SHARE_GATEWAY 时，要求实例规格支持出公网
 
      */
@@ -111,7 +111,7 @@ public class InternetEgressForJob  implements java.io.Serializable {
 - SHARE_GATEWAY: 经平台共享NAT网关出公网
 
 ## 使用说明
-- 仅公共资源池生效
+- 仅公共资源池和共享资源池生效
 - 设为 SHARE_GATEWAY 时，要求实例规格支持出公网
 
      *
@@ -128,7 +128,7 @@ public class InternetEgressForJob  implements java.io.Serializable {
 - SHARE_GATEWAY: 经平台共享NAT网关出公网
 
 ## 使用说明
-- 仅公共资源池生效
+- 仅公共资源池和共享资源池生效
 - 设为 SHARE_GATEWAY 时，要求实例规格支持出公网
 
      *
@@ -169,7 +169,7 @@ public class InternetEgressForJob  implements java.io.Serializable {
 - SHARE_GATEWAY: 经平台共享NAT网关出公网
 
 ## 使用说明
-- 仅公共资源池生效
+- 仅公共资源池和共享资源池生效
 - 设为 SHARE_GATEWAY 时，要求实例规格支持出公网
 
      *
@@ -179,7 +179,7 @@ public class InternetEgressForJob  implements java.io.Serializable {
 - SHARE_GATEWAY: 经平台共享NAT网关出公网
 
 ## 使用说明
-- 仅公共资源池生效
+- 仅公共资源池和共享资源池生效
 - 设为 SHARE_GATEWAY 时，要求实例规格支持出公网
 
      * @return InternetEgressForJob

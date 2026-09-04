@@ -89,6 +89,11 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
     private String jobType;
 
     /**
+     * 是否为用户训练主容器开启容器特权模式。
+     */
+    private Boolean privileged;
+
+    /**
      * 持续时间，单位为秒。
      */
     private Integer runningTimeInSec;
@@ -193,7 +198,7 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
     private RoleResourceParamForJob roleResource;
 
     /**
-     * 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      */
     private InternetEgressForJob internetEgress;
@@ -238,6 +243,11 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
      */
     
     private List<JobTag> userTags;
+    /**
+     * 任务优先级。共享资源池创建时必填，范围 &#x60;1..9&#x60;。
+     */
+    private Integer taskPriority;
+
     /**
      * 归属用户pin。
      */
@@ -441,6 +451,25 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
      */
     public void setJobType(String jobType) {
         this.jobType = jobType;
+    }
+
+
+    /**
+     * get 是否为用户训练主容器开启容器特权模式。
+     *
+     * @return
+     */
+    public Boolean getPrivileged() {
+        return privileged;
+    }
+
+    /**
+     * set 是否为用户训练主容器开启容器特权模式。
+     *
+     * @param privileged
+     */
+    public void setPrivileged(Boolean privileged) {
+        this.privileged = privileged;
     }
 
 
@@ -833,7 +862,7 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * get 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * get 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      *
      * @return
@@ -843,7 +872,7 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
     }
 
     /**
-     * set 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * set 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      *
      * @param internetEgress
@@ -1002,6 +1031,25 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
     */
     public void setUserTags(List<JobTag> userTags) {
         this.userTags = userTags;
+    }
+
+
+    /**
+     * get 任务优先级。共享资源池创建时必填，范围 &#x60;1..9&#x60;。
+     *
+     * @return
+     */
+    public Integer getTaskPriority() {
+        return taskPriority;
+    }
+
+    /**
+     * set 任务优先级。共享资源池创建时必填，范围 &#x60;1..9&#x60;。
+     *
+     * @param taskPriority
+     */
+    public void setTaskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
     }
 
 
@@ -1260,6 +1308,18 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 
 
     /**
+     * set 是否为用户训练主容器开启容器特权模式。
+     *
+     * @param privileged 是否为用户训练主容器开启容器特权模式。
+     * @return JobDetailInfoForJob
+     */
+    public JobDetailInfoForJob privileged(Boolean privileged) {
+        this.privileged = privileged;
+        return this;
+    }
+
+
+    /**
      * set 持续时间，单位为秒。
      *
      * @param runningTimeInSec 持续时间，单位为秒。
@@ -1508,10 +1568,10 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * set 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * set 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      *
-     * @param internetEgress 出公网配置（任务级，仅公共资源池训练任务生效）。未配置时为 null。
+     * @param internetEgress 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。未配置时为 null。
 
      * @return JobDetailInfoForJob
      */
@@ -1613,6 +1673,18 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
     */
     public JobDetailInfoForJob userTags(List<JobTag> userTags) {
         this.userTags = userTags;
+        return this;
+    }
+
+
+    /**
+     * set 任务优先级。共享资源池创建时必填，范围 &#x60;1..9&#x60;。
+     *
+     * @param taskPriority 任务优先级。共享资源池创建时必填，范围 &#x60;1..9&#x60;。
+     * @return JobDetailInfoForJob
+     */
+    public JobDetailInfoForJob taskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
         return this;
     }
 

@@ -55,7 +55,7 @@ public class AddNodeParam  implements java.io.Serializable {
     private Integer nodeCount;
 
     /**
-     * 购买时间单位，year：年；month：月；day：天
+     * 购买时间单位，year：年；month：月；week：周；day：天
      */
     private String timeUnit;
 
@@ -134,7 +134,7 @@ public class AddNodeParam  implements java.io.Serializable {
 
 
     /**
-     * get 购买时间单位，year：年；month：月；day：天
+     * get 购买时间单位，year：年；month：月；week：周；day：天
      *
      * @return
      */
@@ -143,7 +143,7 @@ public class AddNodeParam  implements java.io.Serializable {
     }
 
     /**
-     * set 购买时间单位，year：年；month：月；day：天
+     * set 购买时间单位，year：年；month：月；week：周；day：天
      *
      * @param timeUnit
      */
@@ -247,9 +247,9 @@ public class AddNodeParam  implements java.io.Serializable {
 
 
     /**
-     * set 购买时间单位，year：年；month：月；day：天
+     * set 购买时间单位，year：年；month：月；week：周；day：天
      *
-     * @param timeUnit 购买时间单位，year：年；month：月；day：天
+     * @param timeUnit 购买时间单位，year：年；month：月；week：周；day：天
      * @return AddNodeParam
      */
     public AddNodeParam timeUnit(String timeUnit) {

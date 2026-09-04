@@ -20,7 +20,7 @@
 
 训练任务管理提供以下核心能力：
 
-- **任务创建**：支持 PyTorch 和 Ray 两种训练框架，可配置镜像、资源、存储、数据集等
+- **任务创建**：支持 PyTorch 和 Ray 两种训练框架，可使用公共资源池、共享资源池或工作空间绑定的资源队列
 - **任务监控**：实时查看任务状态、事件、日志
 - **任务控制**：支持停止、删除等操作
 - **实例管理**：查看训练任务的各个运行实例状态
@@ -53,7 +53,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 /**
  * 更新训练任务属性信息。
 
-仅支持更新任务的元数据属性（名称、描述、权限、归属），不影响正在运行的训练任务。
+支持更新任务的元数据属性（名称、描述、权限、归属）和排队中任务的优先级。
 
 ## 使用场景
 
@@ -61,6 +61,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 - 更新任务描述信息
 - 调整资源的可见性权限
 - 转移任务归属给其他用户
+- 调整共享资源池排队中任务的优先级
 
  */
 public class UpdateJobResult extends JdcloudResult implements java.io.Serializable {

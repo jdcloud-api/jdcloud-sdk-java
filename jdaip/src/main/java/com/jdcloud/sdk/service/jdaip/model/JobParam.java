@@ -35,6 +35,10 @@ import com.jdcloud.sdk.annotation.Required;
 - **PyTorch**：使用 &#x60;resource&#x60; 字段配置统一的节点资源，或使用 &#x60;roleResource&#x60; 配置分布式训练的不同角色
 - **Ray**：必须使用 &#x60;roleResource&#x60; 配置 Head 和 Worker 角色
 
+资源池队列支持：
+- **公共资源池**：&#x60;queueId&#x3D;joybuilder-public-queue&#x60;，不支持配置 &#x60;taskPriority&#x60;
+- **共享资源池**：&#x60;queueId&#x3D;joybuilder-exclusive-queue&#x60;，创建时必须配置 &#x60;taskPriority&#x3D;1..9&#x60;
+
  */
 public class JobParam  implements java.io.Serializable {
 
@@ -147,7 +151,12 @@ public class JobParam  implements java.io.Serializable {
     private Integer replica;
 
     /**
-     * 任务优先级，范围[1, 9]; 当队列开启优先级调度时生效
+     * 任务优先级，取值范围 &#x60;1..9&#x60;。
+
+- 共享资源池：创建时必填，仅校验取值范围
+- 公共资源池：不支持配置，传入任意值均拒绝
+- 其他资源队列：可选，按队列优先级策略校验
+
      */
     private Integer taskPriority;
 
@@ -238,7 +247,20 @@ public class JobParam  implements java.io.Serializable {
     private RoleResourceParamForJob roleResource;
 
     /**
-     * 出公网配置（任务级，仅公共资源池训练任务生效）。不需要出公网时不传此参数。
+     * 是否为用户训练主容器开启容器特权模式，默认值为 &#x60;false&#x60;。
+
+**开启条件：**
+- 仅支持工作空间绑定的资源队列，公共资源池和共享资源池不支持
+- 仅支持整机 GPU 任务：&#x60;Ascend&#x60; 前缀型号要求单实例申请 16 卡，其他非空 GPU 型号要求单实例申请 8 卡
+- Ray 任务的 Head 和全部 Worker 角色都必须满足整机条件
+
+不满足开启条件时，创建接口返回参数错误，不会静默降级为 &#x60;false&#x60;。
+
+     */
+    private Boolean privileged;
+
+    /**
+     * 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。不需要出公网时不传此参数。
 
      */
     private InternetEgressForJob internetEgress;
@@ -327,14 +349,14 @@ public class JobParam  implements java.io.Serializable {
     
     private List<CodeParam> codes;
     /**
-     * 公共池排队超时时间，单位：分钟。
+     * 公共资源池或共享资源池排队超时时间，单位：分钟。
 
 **取值范围：** 5 ~ 1440
 
 **默认值：** 5
 
 **说明：**
-- 仅公共资源池训练任务生效
+- 仅公共资源池和共享资源池训练任务生效
 - 排队超过此时间后，任务将自动回滚为创建失败
 
      */
@@ -366,6 +388,18 @@ public class JobParam  implements java.io.Serializable {
 
      */
     private String resourceGroupId;
+
+    /**
+     * 是否启用性能分析。(仅支持pytorch训练任务)
+
+**默认值：** &#x60;false&#x60;（禁用）
+**使用场景：**
+- 性能调优
+- 资源瓶颈分析
+- 模型训练优化
+
+     */
+    private Boolean profilingEnable;
 
 
 
@@ -630,7 +664,12 @@ public class JobParam  implements java.io.Serializable {
 
 
     /**
-     * get 任务优先级，范围[1, 9]; 当队列开启优先级调度时生效
+     * get 任务优先级，取值范围 &#x60;1..9&#x60;。
+
+- 共享资源池：创建时必填，仅校验取值范围
+- 公共资源池：不支持配置，传入任意值均拒绝
+- 其他资源队列：可选，按队列优先级策略校验
+
      *
      * @return
      */
@@ -639,7 +678,12 @@ public class JobParam  implements java.io.Serializable {
     }
 
     /**
-     * set 任务优先级，范围[1, 9]; 当队列开启优先级调度时生效
+     * set 任务优先级，取值范围 &#x60;1..9&#x60;。
+
+- 共享资源池：创建时必填，仅校验取值范围
+- 公共资源池：不支持配置，传入任意值均拒绝
+- 其他资源队列：可选，按队列优先级策略校验
+
      *
      * @param taskPriority
      */
@@ -884,7 +928,42 @@ public class JobParam  implements java.io.Serializable {
 
 
     /**
-     * get 出公网配置（任务级，仅公共资源池训练任务生效）。不需要出公网时不传此参数。
+     * get 是否为用户训练主容器开启容器特权模式，默认值为 &#x60;false&#x60;。
+
+**开启条件：**
+- 仅支持工作空间绑定的资源队列，公共资源池和共享资源池不支持
+- 仅支持整机 GPU 任务：&#x60;Ascend&#x60; 前缀型号要求单实例申请 16 卡，其他非空 GPU 型号要求单实例申请 8 卡
+- Ray 任务的 Head 和全部 Worker 角色都必须满足整机条件
+
+不满足开启条件时，创建接口返回参数错误，不会静默降级为 &#x60;false&#x60;。
+
+     *
+     * @return
+     */
+    public Boolean getPrivileged() {
+        return privileged;
+    }
+
+    /**
+     * set 是否为用户训练主容器开启容器特权模式，默认值为 &#x60;false&#x60;。
+
+**开启条件：**
+- 仅支持工作空间绑定的资源队列，公共资源池和共享资源池不支持
+- 仅支持整机 GPU 任务：&#x60;Ascend&#x60; 前缀型号要求单实例申请 16 卡，其他非空 GPU 型号要求单实例申请 8 卡
+- Ray 任务的 Head 和全部 Worker 角色都必须满足整机条件
+
+不满足开启条件时，创建接口返回参数错误，不会静默降级为 &#x60;false&#x60;。
+
+     *
+     * @param privileged
+     */
+    public void setPrivileged(Boolean privileged) {
+        this.privileged = privileged;
+    }
+
+
+    /**
+     * get 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。不需要出公网时不传此参数。
 
      *
      * @return
@@ -894,7 +973,7 @@ public class JobParam  implements java.io.Serializable {
     }
 
     /**
-     * set 出公网配置（任务级，仅公共资源池训练任务生效）。不需要出公网时不传此参数。
+     * set 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。不需要出公网时不传此参数。
 
      *
      * @param internetEgress
@@ -1125,14 +1204,14 @@ public class JobParam  implements java.io.Serializable {
 
 
     /**
-     * get 公共池排队超时时间，单位：分钟。
+     * get 公共资源池或共享资源池排队超时时间，单位：分钟。
 
 **取值范围：** 5 ~ 1440
 
 **默认值：** 5
 
 **说明：**
-- 仅公共资源池训练任务生效
+- 仅公共资源池和共享资源池训练任务生效
 - 排队超过此时间后，任务将自动回滚为创建失败
 
      *
@@ -1143,14 +1222,14 @@ public class JobParam  implements java.io.Serializable {
     }
 
     /**
-     * set 公共池排队超时时间，单位：分钟。
+     * set 公共资源池或共享资源池排队超时时间，单位：分钟。
 
 **取值范围：** 5 ~ 1440
 
 **默认值：** 5
 
 **说明：**
-- 仅公共资源池训练任务生效
+- 仅公共资源池和共享资源池训练任务生效
 - 排队超过此时间后，任务将自动回滚为创建失败
 
      *
@@ -1230,6 +1309,39 @@ public class JobParam  implements java.io.Serializable {
      */
     public void setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
+     * get 是否启用性能分析。(仅支持pytorch训练任务)
+
+**默认值：** &#x60;false&#x60;（禁用）
+**使用场景：**
+- 性能调优
+- 资源瓶颈分析
+- 模型训练优化
+
+     *
+     * @return
+     */
+    public Boolean getProfilingEnable() {
+        return profilingEnable;
+    }
+
+    /**
+     * set 是否启用性能分析。(仅支持pytorch训练任务)
+
+**默认值：** &#x60;false&#x60;（禁用）
+**使用场景：**
+- 性能调优
+- 资源瓶颈分析
+- 模型训练优化
+
+     *
+     * @param profilingEnable
+     */
+    public void setProfilingEnable(Boolean profilingEnable) {
+        this.profilingEnable = profilingEnable;
     }
 
 
@@ -1439,9 +1551,19 @@ public class JobParam  implements java.io.Serializable {
 
 
     /**
-     * set 任务优先级，范围[1, 9]; 当队列开启优先级调度时生效
+     * set 任务优先级，取值范围 &#x60;1..9&#x60;。
+
+- 共享资源池：创建时必填，仅校验取值范围
+- 公共资源池：不支持配置，传入任意值均拒绝
+- 其他资源队列：可选，按队列优先级策略校验
+
      *
-     * @param taskPriority 任务优先级，范围[1, 9]; 当队列开启优先级调度时生效
+     * @param taskPriority 任务优先级，取值范围 &#x60;1..9&#x60;。
+
+- 共享资源池：创建时必填，仅校验取值范围
+- 公共资源池：不支持配置，传入任意值均拒绝
+- 其他资源队列：可选，按队列优先级策略校验
+
      * @return JobParam
      */
     public JobParam taskPriority(Integer taskPriority) {
@@ -1637,10 +1759,38 @@ public class JobParam  implements java.io.Serializable {
 
 
     /**
-     * set 出公网配置（任务级，仅公共资源池训练任务生效）。不需要出公网时不传此参数。
+     * set 是否为用户训练主容器开启容器特权模式，默认值为 &#x60;false&#x60;。
+
+**开启条件：**
+- 仅支持工作空间绑定的资源队列，公共资源池和共享资源池不支持
+- 仅支持整机 GPU 任务：&#x60;Ascend&#x60; 前缀型号要求单实例申请 16 卡，其他非空 GPU 型号要求单实例申请 8 卡
+- Ray 任务的 Head 和全部 Worker 角色都必须满足整机条件
+
+不满足开启条件时，创建接口返回参数错误，不会静默降级为 &#x60;false&#x60;。
 
      *
-     * @param internetEgress 出公网配置（任务级，仅公共资源池训练任务生效）。不需要出公网时不传此参数。
+     * @param privileged 是否为用户训练主容器开启容器特权模式，默认值为 &#x60;false&#x60;。
+
+**开启条件：**
+- 仅支持工作空间绑定的资源队列，公共资源池和共享资源池不支持
+- 仅支持整机 GPU 任务：&#x60;Ascend&#x60; 前缀型号要求单实例申请 16 卡，其他非空 GPU 型号要求单实例申请 8 卡
+- Ray 任务的 Head 和全部 Worker 角色都必须满足整机条件
+
+不满足开启条件时，创建接口返回参数错误，不会静默降级为 &#x60;false&#x60;。
+
+     * @return JobParam
+     */
+    public JobParam privileged(Boolean privileged) {
+        this.privileged = privileged;
+        return this;
+    }
+
+
+    /**
+     * set 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。不需要出公网时不传此参数。
+
+     *
+     * @param internetEgress 出公网配置（任务级，公共资源池和共享资源池训练任务生效）。不需要出公网时不传此参数。
 
      * @return JobParam
      */
@@ -1829,25 +1979,25 @@ public class JobParam  implements java.io.Serializable {
 
 
     /**
-     * set 公共池排队超时时间，单位：分钟。
+     * set 公共资源池或共享资源池排队超时时间，单位：分钟。
 
 **取值范围：** 5 ~ 1440
 
 **默认值：** 5
 
 **说明：**
-- 仅公共资源池训练任务生效
+- 仅公共资源池和共享资源池训练任务生效
 - 排队超过此时间后，任务将自动回滚为创建失败
 
      *
-     * @param queuingTimeoutMinutes 公共池排队超时时间，单位：分钟。
+     * @param queuingTimeoutMinutes 公共资源池或共享资源池排队超时时间，单位：分钟。
 
 **取值范围：** 5 ~ 1440
 
 **默认值：** 5
 
 **说明：**
-- 仅公共资源池训练任务生效
+- 仅公共资源池和共享资源池训练任务生效
 - 排队超过此时间后，任务将自动回滚为创建失败
 
      * @return JobParam
@@ -1912,6 +2062,32 @@ public class JobParam  implements java.io.Serializable {
      */
     public JobParam resourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
+     * set 是否启用性能分析。(仅支持pytorch训练任务)
+
+**默认值：** &#x60;false&#x60;（禁用）
+**使用场景：**
+- 性能调优
+- 资源瓶颈分析
+- 模型训练优化
+
+     *
+     * @param profilingEnable 是否启用性能分析。(仅支持pytorch训练任务)
+
+**默认值：** &#x60;false&#x60;（禁用）
+**使用场景：**
+- 性能调优
+- 资源瓶颈分析
+- 模型训练优化
+
+     * @return JobParam
+     */
+    public JobParam profilingEnable(Boolean profilingEnable) {
+        this.profilingEnable = profilingEnable;
         return this;
     }
 

@@ -44,14 +44,14 @@ public class CreatePoolSpec  implements java.io.Serializable {
 
     /**
      * 资源池ID。
-     */
-    private String poolId;
-
-    /**
-     * 资源池名称。
      * Required:true
      */
     @Required
+    private String poolId;
+
+    /**
+     * 资源池名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 且 Scale 不可用时可作为兜底值。
+     */
     private String poolName;
 
     /**
@@ -74,16 +74,19 @@ public class CreatePoolSpec  implements java.io.Serializable {
     private String category;
 
     /**
-     * 资源池物理可用区列表。
-     * Required:true
+     * 资源池物理可用区列表。默认通过 Scale ListNode 查询已启用节点的逻辑 AZ，并结合 UC 映射转换为管理员已登记的物理 AZ；force&#x3D;true 时可作为兜底值。
      */
-    @Required
     
     private List<String> poolAzs;
     /**
-     * HPC物理集群名称。HPC资源池必填，非HPC资源池会清空。
+     * HPC物理集群名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 时可作为兜底值，非HPC资源池会清空。
      */
     private String hpcClusterName;
+
+    /**
+     * 是否跳过 Scale 资源池校验。默认 false；为 true 时节点池不存在或节点查询失败不阻止注册。
+     */
+    private Boolean force;
 
 
 
@@ -126,7 +129,7 @@ public class CreatePoolSpec  implements java.io.Serializable {
 
 
     /**
-     * get 资源池名称。
+     * get 资源池名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 且 Scale 不可用时可作为兜底值。
      *
      * @return
      */
@@ -135,7 +138,7 @@ public class CreatePoolSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 资源池名称。
+     * set 资源池名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 且 Scale 不可用时可作为兜底值。
      *
      * @param poolName
      */
@@ -202,7 +205,7 @@ public class CreatePoolSpec  implements java.io.Serializable {
 
 
     /**
-    * get 资源池物理可用区列表。
+    * get 资源池物理可用区列表。默认通过 Scale ListNode 查询已启用节点的逻辑 AZ，并结合 UC 映射转换为管理员已登记的物理 AZ；force&#x3D;true 时可作为兜底值。
     *
     * @return
     */
@@ -211,7 +214,7 @@ public class CreatePoolSpec  implements java.io.Serializable {
     }
 
     /**
-    * set 资源池物理可用区列表。
+    * set 资源池物理可用区列表。默认通过 Scale ListNode 查询已启用节点的逻辑 AZ，并结合 UC 映射转换为管理员已登记的物理 AZ；force&#x3D;true 时可作为兜底值。
     *
     * @param poolAzs
     */
@@ -221,7 +224,7 @@ public class CreatePoolSpec  implements java.io.Serializable {
 
 
     /**
-     * get HPC物理集群名称。HPC资源池必填，非HPC资源池会清空。
+     * get HPC物理集群名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 时可作为兜底值，非HPC资源池会清空。
      *
      * @return
      */
@@ -230,12 +233,31 @@ public class CreatePoolSpec  implements java.io.Serializable {
     }
 
     /**
-     * set HPC物理集群名称。HPC资源池必填，非HPC资源池会清空。
+     * set HPC物理集群名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 时可作为兜底值，非HPC资源池会清空。
      *
      * @param hpcClusterName
      */
     public void setHpcClusterName(String hpcClusterName) {
         this.hpcClusterName = hpcClusterName;
+    }
+
+
+    /**
+     * get 是否跳过 Scale 资源池校验。默认 false；为 true 时节点池不存在或节点查询失败不阻止注册。
+     *
+     * @return
+     */
+    public Boolean getForce() {
+        return force;
+    }
+
+    /**
+     * set 是否跳过 Scale 资源池校验。默认 false；为 true 时节点池不存在或节点查询失败不阻止注册。
+     *
+     * @param force
+     */
+    public void setForce(Boolean force) {
+        this.force = force;
     }
 
 
@@ -265,9 +287,9 @@ public class CreatePoolSpec  implements java.io.Serializable {
 
 
     /**
-     * set 资源池名称。
+     * set 资源池名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 且 Scale 不可用时可作为兜底值。
      *
-     * @param poolName 资源池名称。
+     * @param poolName 资源池名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 且 Scale 不可用时可作为兜底值。
      * @return CreatePoolSpec
      */
     public CreatePoolSpec poolName(String poolName) {
@@ -313,9 +335,9 @@ public class CreatePoolSpec  implements java.io.Serializable {
 
 
     /**
-    * set 资源池物理可用区列表。
+    * set 资源池物理可用区列表。默认通过 Scale ListNode 查询已启用节点的逻辑 AZ，并结合 UC 映射转换为管理员已登记的物理 AZ；force&#x3D;true 时可作为兜底值。
     *
-    * @param poolAzs 资源池物理可用区列表。
+    * @param poolAzs 资源池物理可用区列表。默认通过 Scale ListNode 查询已启用节点的逻辑 AZ，并结合 UC 映射转换为管理员已登记的物理 AZ；force&#x3D;true 时可作为兜底值。
     * @return CreatePoolSpec
     */
     public CreatePoolSpec poolAzs(List<String> poolAzs) {
@@ -325,9 +347,9 @@ public class CreatePoolSpec  implements java.io.Serializable {
 
 
     /**
-     * set HPC物理集群名称。HPC资源池必填，非HPC资源池会清空。
+     * set HPC物理集群名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 时可作为兜底值，非HPC资源池会清空。
      *
-     * @param hpcClusterName HPC物理集群名称。HPC资源池必填，非HPC资源池会清空。
+     * @param hpcClusterName HPC物理集群名称。默认由 Scale GetNodePool 接口获取；force&#x3D;true 时可作为兜底值，非HPC资源池会清空。
      * @return CreatePoolSpec
      */
     public CreatePoolSpec hpcClusterName(String hpcClusterName) {
@@ -336,9 +358,21 @@ public class CreatePoolSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 是否跳过 Scale 资源池校验。默认 false；为 true 时节点池不存在或节点查询失败不阻止注册。
+     *
+     * @param force 是否跳过 Scale 资源池校验。默认 false；为 true 时节点池不存在或节点查询失败不阻止注册。
+     * @return CreatePoolSpec
+     */
+    public CreatePoolSpec force(Boolean force) {
+        this.force = force;
+        return this;
+    }
+
+
 
     /**
-     * add item to 资源池物理可用区列表。
+     * add item to 资源池物理可用区列表。默认通过 Scale ListNode 查询已启用节点的逻辑 AZ，并结合 UC 映射转换为管理员已登记的物理 AZ；force&#x3D;true 时可作为兜底值。
      *
      * @param poolAz
      */

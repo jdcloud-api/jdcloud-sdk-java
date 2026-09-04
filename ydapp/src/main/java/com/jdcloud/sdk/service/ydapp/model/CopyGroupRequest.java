@@ -86,28 +86,28 @@ public class CopyGroupRequest extends JdcloudRequest implements java.io.Serializ
      * Required:true
      */
     @Required
-    private String cpu;
+    private Float cpu;
 
     /**
      * 内存限制
      * Required:true
      */
     @Required
-    private String memory;
+    private Float memory;
 
     /**
      * CPU 请求量
      * Required:true
      */
     @Required
-    private String requestCpu;
+    private Float requestCpu;
 
     /**
      * 内存请求量
      * Required:true
      */
     @Required
-    private String requestMemory;
+    private Float requestMemory;
 
     /**
      * 镜像地址，固定值：imageUrlHolder
@@ -319,7 +319,7 @@ public class CopyGroupRequest extends JdcloudRequest implements java.io.Serializ
      *
      * @return
      */
-    public String getCpu() {
+    public Float getCpu() {
         return cpu;
     }
 
@@ -328,7 +328,7 @@ public class CopyGroupRequest extends JdcloudRequest implements java.io.Serializ
      *
      * @param cpu
      */
-    public void setCpu(String cpu) {
+    public void setCpu(Float cpu) {
         this.cpu = cpu;
     }
 
@@ -338,7 +338,7 @@ public class CopyGroupRequest extends JdcloudRequest implements java.io.Serializ
      *
      * @return
      */
-    public String getMemory() {
+    public Float getMemory() {
         return memory;
     }
 
@@ -347,7 +347,7 @@ public class CopyGroupRequest extends JdcloudRequest implements java.io.Serializ
      *
      * @param memory
      */
-    public void setMemory(String memory) {
+    public void setMemory(Float memory) {
         this.memory = memory;
     }
 
@@ -357,7 +357,7 @@ public class CopyGroupRequest extends JdcloudRequest implements java.io.Serializ
      *
      * @return
      */
-    public String getRequestCpu() {
+    public Float getRequestCpu() {
         return requestCpu;
     }
 
@@ -366,7 +366,7 @@ public class CopyGroupRequest extends JdcloudRequest implements java.io.Serializ
      *
      * @param requestCpu
      */
-    public void setRequestCpu(String requestCpu) {
+    public void setRequestCpu(Float requestCpu) {
         this.requestCpu = requestCpu;
     }
 
@@ -376,7 +376,7 @@ public class CopyGroupRequest extends JdcloudRequest implements java.io.Serializ
      *
      * @return
      */
-    public String getRequestMemory() {
+    public Float getRequestMemory() {
         return requestMemory;
     }
 
@@ -385,7 +385,7 @@ public class CopyGroupRequest extends JdcloudRequest implements java.io.Serializ
      *
      * @param requestMemory
      */
-    public void setRequestMemory(String requestMemory) {
+    public void setRequestMemory(Float requestMemory) {
         this.requestMemory = requestMemory;
     }
 
@@ -747,7 +747,7 @@ public class CopyGroupRequest extends JdcloudRequest implements java.io.Serializ
      * @param cpu CPU 限制
      * @return CopyGroupRequest
      */
-    public CopyGroupRequest cpu(String cpu) {
+    public CopyGroupRequest cpu(Float cpu) {
         this.cpu = cpu;
         return this;
     }
@@ -759,7 +759,7 @@ public class CopyGroupRequest extends JdcloudRequest implements java.io.Serializ
      * @param memory 内存限制
      * @return CopyGroupRequest
      */
-    public CopyGroupRequest memory(String memory) {
+    public CopyGroupRequest memory(Float memory) {
         this.memory = memory;
         return this;
     }
@@ -771,7 +771,7 @@ public class CopyGroupRequest extends JdcloudRequest implements java.io.Serializ
      * @param requestCpu CPU 请求量
      * @return CopyGroupRequest
      */
-    public CopyGroupRequest requestCpu(String requestCpu) {
+    public CopyGroupRequest requestCpu(Float requestCpu) {
         this.requestCpu = requestCpu;
         return this;
     }
@@ -783,7 +783,7 @@ public class CopyGroupRequest extends JdcloudRequest implements java.io.Serializ
      * @param requestMemory 内存请求量
      * @return CopyGroupRequest
      */
-    public CopyGroupRequest requestMemory(String requestMemory) {
+    public CopyGroupRequest requestMemory(Float requestMemory) {
         this.requestMemory = requestMemory;
         return this;
     }

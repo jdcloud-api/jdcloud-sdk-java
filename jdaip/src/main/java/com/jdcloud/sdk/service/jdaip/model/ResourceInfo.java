@@ -63,6 +63,11 @@ public class ResourceInfo  implements java.io.Serializable {
     private String createUser;
 
     /**
+     * 任务优先级。取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
+     */
+    private Integer taskPriority;
+
+    /**
      * 关联信息。
 type为FineTuning时，关联信息为实验信息；
 type为Inference时，关联信息为服务信息；
@@ -187,6 +192,25 @@ type为Inference时，关联信息为服务信息；
 
 
     /**
+     * get 任务优先级。取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
+     *
+     * @return
+     */
+    public Integer getTaskPriority() {
+        return taskPriority;
+    }
+
+    /**
+     * set 任务优先级。取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
+     *
+     * @param taskPriority
+     */
+    public void setTaskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
+    }
+
+
+    /**
      * get 关联信息。
 type为FineTuning时，关联信息为实验信息；
 type为Inference时，关联信息为服务信息；
@@ -280,6 +304,18 @@ type为Inference时，关联信息为服务信息；
      */
     public ResourceInfo createUser(String createUser) {
         this.createUser = createUser;
+        return this;
+    }
+
+
+    /**
+     * set 任务优先级。取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
+     *
+     * @param taskPriority 任务优先级。取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
+     * @return ResourceInfo
+     */
+    public ResourceInfo taskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
         return this;
     }
 

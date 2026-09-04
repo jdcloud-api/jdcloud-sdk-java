@@ -38,7 +38,7 @@ public class RealTimeResourceStatisticsItem  implements java.io.Serializable {
     private String resourceType;
 
     /**
-     * 空闲资源
+     * 可用资源
      */
     private String idle;
 
@@ -53,17 +53,17 @@ public class RealTimeResourceStatisticsItem  implements java.io.Serializable {
     private String capacity;
 
     /**
-     * 已分配资源比例
+     * 资源分配率
      */
     private String allocatedRate;
 
     /**
-     * 已分配资源使用率
+     * 资源使用率
      */
     private Object usedUtilization;
 
     /**
-     * 已分配资源使用率
+     * 已分配资源的使用率
      */
     private Object allocatedUtilization;
 
@@ -89,7 +89,7 @@ public class RealTimeResourceStatisticsItem  implements java.io.Serializable {
 
 
     /**
-     * get 空闲资源
+     * get 可用资源
      *
      * @return
      */
@@ -98,7 +98,7 @@ public class RealTimeResourceStatisticsItem  implements java.io.Serializable {
     }
 
     /**
-     * set 空闲资源
+     * set 可用资源
      *
      * @param idle
      */
@@ -146,7 +146,7 @@ public class RealTimeResourceStatisticsItem  implements java.io.Serializable {
 
 
     /**
-     * get 已分配资源比例
+     * get 资源分配率
      *
      * @return
      */
@@ -155,7 +155,7 @@ public class RealTimeResourceStatisticsItem  implements java.io.Serializable {
     }
 
     /**
-     * set 已分配资源比例
+     * set 资源分配率
      *
      * @param allocatedRate
      */
@@ -165,7 +165,7 @@ public class RealTimeResourceStatisticsItem  implements java.io.Serializable {
 
 
     /**
-     * get 已分配资源使用率
+     * get 资源使用率
      *
      * @return
      */
@@ -174,7 +174,7 @@ public class RealTimeResourceStatisticsItem  implements java.io.Serializable {
     }
 
     /**
-     * set 已分配资源使用率
+     * set 资源使用率
      *
      * @param usedUtilization
      */
@@ -184,7 +184,7 @@ public class RealTimeResourceStatisticsItem  implements java.io.Serializable {
 
 
     /**
-     * get 已分配资源使用率
+     * get 已分配资源的使用率
      *
      * @return
      */
@@ -193,7 +193,7 @@ public class RealTimeResourceStatisticsItem  implements java.io.Serializable {
     }
 
     /**
-     * set 已分配资源使用率
+     * set 已分配资源的使用率
      *
      * @param allocatedUtilization
      */
@@ -216,9 +216,9 @@ public class RealTimeResourceStatisticsItem  implements java.io.Serializable {
 
 
     /**
-     * set 空闲资源
+     * set 可用资源
      *
-     * @param idle 空闲资源
+     * @param idle 可用资源
      * @return RealTimeResourceStatisticsItem
      */
     public RealTimeResourceStatisticsItem idle(String idle) {
@@ -252,9 +252,9 @@ public class RealTimeResourceStatisticsItem  implements java.io.Serializable {
 
 
     /**
-     * set 已分配资源比例
+     * set 资源分配率
      *
-     * @param allocatedRate 已分配资源比例
+     * @param allocatedRate 资源分配率
      * @return RealTimeResourceStatisticsItem
      */
     public RealTimeResourceStatisticsItem allocatedRate(String allocatedRate) {
@@ -264,9 +264,9 @@ public class RealTimeResourceStatisticsItem  implements java.io.Serializable {
 
 
     /**
-     * set 已分配资源使用率
+     * set 资源使用率
      *
-     * @param usedUtilization 已分配资源使用率
+     * @param usedUtilization 资源使用率
      * @return RealTimeResourceStatisticsItem
      */
     public RealTimeResourceStatisticsItem usedUtilization(Object usedUtilization) {
@@ -276,9 +276,9 @@ public class RealTimeResourceStatisticsItem  implements java.io.Serializable {
 
 
     /**
-     * set 已分配资源使用率
+     * set 已分配资源的使用率
      *
-     * @param allocatedUtilization 已分配资源使用率
+     * @param allocatedUtilization 已分配资源的使用率
      * @return RealTimeResourceStatisticsItem
      */
     public RealTimeResourceStatisticsItem allocatedUtilization(Object allocatedUtilization) {

@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>jdaip</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.7</version>
   <packaging>jar</packaging>
   <name>jdaip</name>
   <url>http://www.jdcloud.com</url>

@@ -43,6 +43,11 @@ public class Service  implements java.io.Serializable {
     private String deployType;
 
     /**
+     * 在线服务类型
+     */
+    private String serviceType;
+
+    /**
      * 服务名称
      */
     private String name;
@@ -83,9 +88,39 @@ public class Service  implements java.io.Serializable {
     private String accessToken;
 
     /**
+     * 网关类型
+     */
+    private String gatewayType;
+
+    /**
+     * 专属网关公网调用地址
+     */
+    private String dgAddress;
+
+    /**
+     * 专属网关内网调用地址
+     */
+    private String dgInnerAddress;
+
+    /**
      * 推理服务限流阈值（QPS）
      */
     private Integer qps;
+
+    /**
+     * 服务关联的产品ID
+     */
+    private String productId;
+
+    /**
+     * 服务关联的产品名称，层级之间使用连字符分隔
+     */
+    private String productName;
+
+    /**
+     * 服务关联产品所属BG/BU
+     */
+    private String bgbu;
 
     /**
      * 该服务中总版本数
@@ -129,6 +164,25 @@ public class Service  implements java.io.Serializable {
      */
     public void setDeployType(String deployType) {
         this.deployType = deployType;
+    }
+
+
+    /**
+     * get 在线服务类型
+     *
+     * @return
+     */
+    public String getServiceType() {
+        return serviceType;
+    }
+
+    /**
+     * set 在线服务类型
+     *
+     * @param serviceType
+     */
+    public void setServiceType(String serviceType) {
+        this.serviceType = serviceType;
     }
 
 
@@ -285,6 +339,63 @@ public class Service  implements java.io.Serializable {
 
 
     /**
+     * get 网关类型
+     *
+     * @return
+     */
+    public String getGatewayType() {
+        return gatewayType;
+    }
+
+    /**
+     * set 网关类型
+     *
+     * @param gatewayType
+     */
+    public void setGatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+    }
+
+
+    /**
+     * get 专属网关公网调用地址
+     *
+     * @return
+     */
+    public String getDgAddress() {
+        return dgAddress;
+    }
+
+    /**
+     * set 专属网关公网调用地址
+     *
+     * @param dgAddress
+     */
+    public void setDgAddress(String dgAddress) {
+        this.dgAddress = dgAddress;
+    }
+
+
+    /**
+     * get 专属网关内网调用地址
+     *
+     * @return
+     */
+    public String getDgInnerAddress() {
+        return dgInnerAddress;
+    }
+
+    /**
+     * set 专属网关内网调用地址
+     *
+     * @param dgInnerAddress
+     */
+    public void setDgInnerAddress(String dgInnerAddress) {
+        this.dgInnerAddress = dgInnerAddress;
+    }
+
+
+    /**
      * get 推理服务限流阈值（QPS）
      *
      * @return
@@ -300,6 +411,63 @@ public class Service  implements java.io.Serializable {
      */
     public void setQps(Integer qps) {
         this.qps = qps;
+    }
+
+
+    /**
+     * get 服务关联的产品ID
+     *
+     * @return
+     */
+    public String getProductId() {
+        return productId;
+    }
+
+    /**
+     * set 服务关联的产品ID
+     *
+     * @param productId
+     */
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+
+    /**
+     * get 服务关联的产品名称，层级之间使用连字符分隔
+     *
+     * @return
+     */
+    public String getProductName() {
+        return productName;
+    }
+
+    /**
+     * set 服务关联的产品名称，层级之间使用连字符分隔
+     *
+     * @param productName
+     */
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+
+    /**
+     * get 服务关联产品所属BG/BU
+     *
+     * @return
+     */
+    public String getBgbu() {
+        return bgbu;
+    }
+
+    /**
+     * set 服务关联产品所属BG/BU
+     *
+     * @param bgbu
+     */
+    public void setBgbu(String bgbu) {
+        this.bgbu = bgbu;
     }
 
 
@@ -343,6 +511,18 @@ public class Service  implements java.io.Serializable {
      */
     public Service deployType(String deployType) {
         this.deployType = deployType;
+        return this;
+    }
+
+
+    /**
+     * set 在线服务类型
+     *
+     * @param serviceType 在线服务类型
+     * @return Service
+     */
+    public Service serviceType(String serviceType) {
+        this.serviceType = serviceType;
         return this;
     }
 
@@ -444,6 +624,42 @@ public class Service  implements java.io.Serializable {
 
 
     /**
+     * set 网关类型
+     *
+     * @param gatewayType 网关类型
+     * @return Service
+     */
+    public Service gatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+        return this;
+    }
+
+
+    /**
+     * set 专属网关公网调用地址
+     *
+     * @param dgAddress 专属网关公网调用地址
+     * @return Service
+     */
+    public Service dgAddress(String dgAddress) {
+        this.dgAddress = dgAddress;
+        return this;
+    }
+
+
+    /**
+     * set 专属网关内网调用地址
+     *
+     * @param dgInnerAddress 专属网关内网调用地址
+     * @return Service
+     */
+    public Service dgInnerAddress(String dgInnerAddress) {
+        this.dgInnerAddress = dgInnerAddress;
+        return this;
+    }
+
+
+    /**
      * set 推理服务限流阈值（QPS）
      *
      * @param qps 推理服务限流阈值（QPS）
@@ -451,6 +667,42 @@ public class Service  implements java.io.Serializable {
      */
     public Service qps(Integer qps) {
         this.qps = qps;
+        return this;
+    }
+
+
+    /**
+     * set 服务关联的产品ID
+     *
+     * @param productId 服务关联的产品ID
+     * @return Service
+     */
+    public Service productId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+
+
+    /**
+     * set 服务关联的产品名称，层级之间使用连字符分隔
+     *
+     * @param productName 服务关联的产品名称，层级之间使用连字符分隔
+     * @return Service
+     */
+    public Service productName(String productName) {
+        this.productName = productName;
+        return this;
+    }
+
+
+    /**
+     * set 服务关联产品所属BG/BU
+     *
+     * @param bgbu 服务关联产品所属BG/BU
+     * @return Service
+     */
+    public Service bgbu(String bgbu) {
+        this.bgbu = bgbu;
         return this;
     }
 

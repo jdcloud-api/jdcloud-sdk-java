@@ -147,7 +147,7 @@ public class NotebookBaseInfo  implements java.io.Serializable {
     private String queue;
 
     /**
-     * 公共队列ID，公共资源池场景下的队列标识。
+     * 公共/专享队列ID，公共/专享资源池场景下的队列标识。
      */
     private String publicQueue;
 
@@ -494,7 +494,7 @@ public class NotebookBaseInfo  implements java.io.Serializable {
 
 
     /**
-     * get 公共队列ID，公共资源池场景下的队列标识。
+     * get 公共/专享队列ID，公共/专享资源池场景下的队列标识。
      *
      * @return
      */
@@ -503,7 +503,7 @@ public class NotebookBaseInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 公共队列ID，公共资源池场景下的队列标识。
+     * set 公共/专享队列ID，公共/专享资源池场景下的队列标识。
      *
      * @param publicQueue
      */
@@ -756,9 +756,9 @@ public class NotebookBaseInfo  implements java.io.Serializable {
 
 
     /**
-     * set 公共队列ID，公共资源池场景下的队列标识。
+     * set 公共/专享队列ID，公共/专享资源池场景下的队列标识。
      *
-     * @param publicQueue 公共队列ID，公共资源池场景下的队列标识。
+     * @param publicQueue 公共/专享队列ID，公共/专享资源池场景下的队列标识。
      * @return NotebookBaseInfo
      */
     public NotebookBaseInfo publicQueue(String publicQueue) {

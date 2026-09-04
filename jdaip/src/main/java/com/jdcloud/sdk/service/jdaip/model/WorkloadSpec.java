@@ -36,6 +36,14 @@ import com.jdcloud.sdk.annotation.Required;
 - 队列ID固定为：&#x60;joybuilder-public-queue&#x60;
 - 不支持设置节点亲和性(nodeAffinities)
 
+## 专享资源池配置
+- 必须指定规格ID(flavorId)
+- 必须指定逻辑可用区编码(logicAzCode)
+- 规格包含固定的CPU、内存、GPU配置
+- 队列ID固定为：&#x60;joybuilder-exclusive-queue&#x60;
+- 不支持设置节点亲和性(nodeAffinities)
+- 必须设置调度优先级(taskPriority，取值1~9)
+
 ## 私有资源池配置
 - 必须指定CPU和内存
 - 可选配置GPU类型和数量
@@ -59,6 +67,13 @@ public class WorkloadSpec  implements java.io.Serializable {
 - 需要指定规格ID(flavorId)
 - 需要指定逻辑可用区编码(logicAzCode)
 
+## 专享资源池
+- 队列ID固定为：&#x60;joybuilder-exclusive-queue&#x60;
+- 使用平台专享资源，按量计费
+- 需要指定规格ID(flavorId)
+- 需要指定逻辑可用区编码(logicAzCode)
+- 必须设置调度优先级(taskPriority，取值1~9)
+
 ## 私有资源池
 - 队列ID为用户工作空间中的私有队列ID
 - 使用用户专属资源，不计费
@@ -70,10 +85,10 @@ public class WorkloadSpec  implements java.io.Serializable {
     private String queueId;
 
     /**
-     * 公共资源池的规格ID，定义固定的资源配置。
+     * 公共/专享资源池的规格ID，定义固定的资源配置。
 
 ## 使用说明
-- 仅公共资源池需要指定
+- 仅公共/专享资源池需要指定
 - 规格ID对应预定义的CPU、内存、GPU配置
 - 可通过查询规格列表接口获取可用规格
 
@@ -146,7 +161,7 @@ public class WorkloadSpec  implements java.io.Serializable {
      * 逻辑可用区编码，指定Notebook实例运行的逻辑可用区。
 
 ## 使用说明
-- 公共资源池必填，私有资源池无需指定
+- 公共/专享资源池必填，私有资源池无需指定
 - 可通过查询可用区列表接口获取可用区编码
 - 支持包含&quot;random&quot;关键字实现随机可用区调度
 
@@ -161,7 +176,7 @@ public class WorkloadSpec  implements java.io.Serializable {
      * 物理集群名称，指定规格对应的异构可用区物理集群名称。
 
 ## 使用说明
-- 仅公共资源池有效，私有资源池无需指定
+- 仅公共/专享资源池有效，私有资源池无需指定
 
      */
     private String hpcClusterName;
@@ -170,7 +185,7 @@ public class WorkloadSpec  implements java.io.Serializable {
      * 排队超时时间（分钟），Notebook在排队状态的最大等待时间。
 
 ## 使用说明
-- 仅公共资源池有效，私有资源池不支持此参数
+- 仅公共/专享资源池有效，私有资源池不支持此参数
 - 不传或传0时默认使用系统配置 5分钟
 - 取值范围：5~1440
 - 超过排队超时时间后，Notebook将自动停止排队
@@ -193,6 +208,13 @@ public class WorkloadSpec  implements java.io.Serializable {
 - 需要指定规格ID(flavorId)
 - 需要指定逻辑可用区编码(logicAzCode)
 
+## 专享资源池
+- 队列ID固定为：&#x60;joybuilder-exclusive-queue&#x60;
+- 使用平台专享资源，按量计费
+- 需要指定规格ID(flavorId)
+- 需要指定逻辑可用区编码(logicAzCode)
+- 必须设置调度优先级(taskPriority，取值1~9)
+
 ## 私有资源池
 - 队列ID为用户工作空间中的私有队列ID
 - 使用用户专属资源，不计费
@@ -214,6 +236,13 @@ public class WorkloadSpec  implements java.io.Serializable {
 - 需要指定规格ID(flavorId)
 - 需要指定逻辑可用区编码(logicAzCode)
 
+## 专享资源池
+- 队列ID固定为：&#x60;joybuilder-exclusive-queue&#x60;
+- 使用平台专享资源，按量计费
+- 需要指定规格ID(flavorId)
+- 需要指定逻辑可用区编码(logicAzCode)
+- 必须设置调度优先级(taskPriority，取值1~9)
+
 ## 私有资源池
 - 队列ID为用户工作空间中的私有队列ID
 - 使用用户专属资源，不计费
@@ -228,10 +257,10 @@ public class WorkloadSpec  implements java.io.Serializable {
 
 
     /**
-     * get 公共资源池的规格ID，定义固定的资源配置。
+     * get 公共/专享资源池的规格ID，定义固定的资源配置。
 
 ## 使用说明
-- 仅公共资源池需要指定
+- 仅公共/专享资源池需要指定
 - 规格ID对应预定义的CPU、内存、GPU配置
 - 可通过查询规格列表接口获取可用规格
 
@@ -247,10 +276,10 @@ public class WorkloadSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 公共资源池的规格ID，定义固定的资源配置。
+     * set 公共/专享资源池的规格ID，定义固定的资源配置。
 
 ## 使用说明
-- 仅公共资源池需要指定
+- 仅公共/专享资源池需要指定
 - 规格ID对应预定义的CPU、内存、GPU配置
 - 可通过查询规格列表接口获取可用规格
 
@@ -422,7 +451,7 @@ public class WorkloadSpec  implements java.io.Serializable {
      * get 逻辑可用区编码，指定Notebook实例运行的逻辑可用区。
 
 ## 使用说明
-- 公共资源池必填，私有资源池无需指定
+- 公共/专享资源池必填，私有资源池无需指定
 - 可通过查询可用区列表接口获取可用区编码
 - 支持包含&quot;random&quot;关键字实现随机可用区调度
 
@@ -441,7 +470,7 @@ public class WorkloadSpec  implements java.io.Serializable {
      * set 逻辑可用区编码，指定Notebook实例运行的逻辑可用区。
 
 ## 使用说明
-- 公共资源池必填，私有资源池无需指定
+- 公共/专享资源池必填，私有资源池无需指定
 - 可通过查询可用区列表接口获取可用区编码
 - 支持包含&quot;random&quot;关键字实现随机可用区调度
 
@@ -461,7 +490,7 @@ public class WorkloadSpec  implements java.io.Serializable {
      * get 物理集群名称，指定规格对应的异构可用区物理集群名称。
 
 ## 使用说明
-- 仅公共资源池有效，私有资源池无需指定
+- 仅公共/专享资源池有效，私有资源池无需指定
 
      *
      * @return
@@ -474,7 +503,7 @@ public class WorkloadSpec  implements java.io.Serializable {
      * set 物理集群名称，指定规格对应的异构可用区物理集群名称。
 
 ## 使用说明
-- 仅公共资源池有效，私有资源池无需指定
+- 仅公共/专享资源池有效，私有资源池无需指定
 
      *
      * @param hpcClusterName
@@ -488,7 +517,7 @@ public class WorkloadSpec  implements java.io.Serializable {
      * get 排队超时时间（分钟），Notebook在排队状态的最大等待时间。
 
 ## 使用说明
-- 仅公共资源池有效，私有资源池不支持此参数
+- 仅公共/专享资源池有效，私有资源池不支持此参数
 - 不传或传0时默认使用系统配置 5分钟
 - 取值范围：5~1440
 - 超过排队超时时间后，Notebook将自动停止排队
@@ -508,7 +537,7 @@ public class WorkloadSpec  implements java.io.Serializable {
      * set 排队超时时间（分钟），Notebook在排队状态的最大等待时间。
 
 ## 使用说明
-- 仅公共资源池有效，私有资源池不支持此参数
+- 仅公共/专享资源池有效，私有资源池不支持此参数
 - 不传或传0时默认使用系统配置 5分钟
 - 取值范围：5~1440
 - 超过排队超时时间后，Notebook将自动停止排队
@@ -535,6 +564,13 @@ public class WorkloadSpec  implements java.io.Serializable {
 - 需要指定规格ID(flavorId)
 - 需要指定逻辑可用区编码(logicAzCode)
 
+## 专享资源池
+- 队列ID固定为：&#x60;joybuilder-exclusive-queue&#x60;
+- 使用平台专享资源，按量计费
+- 需要指定规格ID(flavorId)
+- 需要指定逻辑可用区编码(logicAzCode)
+- 必须设置调度优先级(taskPriority，取值1~9)
+
 ## 私有资源池
 - 队列ID为用户工作空间中的私有队列ID
 - 使用用户专属资源，不计费
@@ -548,6 +584,13 @@ public class WorkloadSpec  implements java.io.Serializable {
 - 使用平台共享资源，按量计费
 - 需要指定规格ID(flavorId)
 - 需要指定逻辑可用区编码(logicAzCode)
+
+## 专享资源池
+- 队列ID固定为：&#x60;joybuilder-exclusive-queue&#x60;
+- 使用平台专享资源，按量计费
+- 需要指定规格ID(flavorId)
+- 需要指定逻辑可用区编码(logicAzCode)
+- 必须设置调度优先级(taskPriority，取值1~9)
 
 ## 私有资源池
 - 队列ID为用户工作空间中的私有队列ID
@@ -563,10 +606,10 @@ public class WorkloadSpec  implements java.io.Serializable {
 
 
     /**
-     * set 公共资源池的规格ID，定义固定的资源配置。
+     * set 公共/专享资源池的规格ID，定义固定的资源配置。
 
 ## 使用说明
-- 仅公共资源池需要指定
+- 仅公共/专享资源池需要指定
 - 规格ID对应预定义的CPU、内存、GPU配置
 - 可通过查询规格列表接口获取可用规格
 
@@ -575,10 +618,10 @@ public class WorkloadSpec  implements java.io.Serializable {
 - gpu.t4.8g32: T4 GPU，8核CPU，32GB内存
 
      *
-     * @param flavorId 公共资源池的规格ID，定义固定的资源配置。
+     * @param flavorId 公共/专享资源池的规格ID，定义固定的资源配置。
 
 ## 使用说明
-- 仅公共资源池需要指定
+- 仅公共/专享资源池需要指定
 - 规格ID对应预定义的CPU、内存、GPU配置
 - 可通过查询规格列表接口获取可用规格
 
@@ -722,7 +765,7 @@ public class WorkloadSpec  implements java.io.Serializable {
      * set 逻辑可用区编码，指定Notebook实例运行的逻辑可用区。
 
 ## 使用说明
-- 公共资源池必填，私有资源池无需指定
+- 公共/专享资源池必填，私有资源池无需指定
 - 可通过查询可用区列表接口获取可用区编码
 - 支持包含&quot;random&quot;关键字实现随机可用区调度
 
@@ -734,7 +777,7 @@ public class WorkloadSpec  implements java.io.Serializable {
      * @param logicAzCode 逻辑可用区编码，指定Notebook实例运行的逻辑可用区。
 
 ## 使用说明
-- 公共资源池必填，私有资源池无需指定
+- 公共/专享资源池必填，私有资源池无需指定
 - 可通过查询可用区列表接口获取可用区编码
 - 支持包含&quot;random&quot;关键字实现随机可用区调度
 
@@ -754,13 +797,13 @@ public class WorkloadSpec  implements java.io.Serializable {
      * set 物理集群名称，指定规格对应的异构可用区物理集群名称。
 
 ## 使用说明
-- 仅公共资源池有效，私有资源池无需指定
+- 仅公共/专享资源池有效，私有资源池无需指定
 
      *
      * @param hpcClusterName 物理集群名称，指定规格对应的异构可用区物理集群名称。
 
 ## 使用说明
-- 仅公共资源池有效，私有资源池无需指定
+- 仅公共/专享资源池有效，私有资源池无需指定
 
      * @return WorkloadSpec
      */
@@ -774,7 +817,7 @@ public class WorkloadSpec  implements java.io.Serializable {
      * set 排队超时时间（分钟），Notebook在排队状态的最大等待时间。
 
 ## 使用说明
-- 仅公共资源池有效，私有资源池不支持此参数
+- 仅公共/专享资源池有效，私有资源池不支持此参数
 - 不传或传0时默认使用系统配置 5分钟
 - 取值范围：5~1440
 - 超过排队超时时间后，Notebook将自动停止排队
@@ -787,7 +830,7 @@ public class WorkloadSpec  implements java.io.Serializable {
      * @param queuingTimeoutMinutes 排队超时时间（分钟），Notebook在排队状态的最大等待时间。
 
 ## 使用说明
-- 仅公共资源池有效，私有资源池不支持此参数
+- 仅公共/专享资源池有效，私有资源池不支持此参数
 - 不传或传0时默认使用系统配置 5分钟
 - 取值范围：5~1440
 - 超过排队超时时间后，Notebook将自动停止排队

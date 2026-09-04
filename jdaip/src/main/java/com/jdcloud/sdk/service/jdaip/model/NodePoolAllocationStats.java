@@ -35,10 +35,34 @@ public class NodePoolAllocationStats  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * pool
+     */
+    private NodePoolAllocationStatsItem pool;
+
+    /**
      * 节点池资源分配情况
      */
     
-    private List<NodePoolAllocationStatsItem> data;
+    private List<QueueAllocationStatsItem> queue;
+
+
+    /**
+     * get pool
+     *
+     * @return
+     */
+    public NodePoolAllocationStatsItem getPool() {
+        return pool;
+    }
+
+    /**
+     * set pool
+     *
+     * @param pool
+     */
+    public void setPool(NodePoolAllocationStatsItem pool) {
+        this.pool = pool;
+    }
 
 
     /**
@@ -46,29 +70,41 @@ public class NodePoolAllocationStats  implements java.io.Serializable {
     *
     * @return
     */
-    public List<NodePoolAllocationStatsItem> getData() {
-        return data;
+    public List<QueueAllocationStatsItem> getQueue() {
+        return queue;
     }
 
     /**
     * set 节点池资源分配情况
     *
-    * @param data
+    * @param queue
     */
-    public void setData(List<NodePoolAllocationStatsItem> data) {
-        this.data = data;
+    public void setQueue(List<QueueAllocationStatsItem> queue) {
+        this.queue = queue;
     }
 
 
 
     /**
+     * set pool
+     *
+     * @param pool 
+     * @return NodePoolAllocationStats
+     */
+    public NodePoolAllocationStats pool(NodePoolAllocationStatsItem pool) {
+        this.pool = pool;
+        return this;
+    }
+
+
+    /**
     * set 节点池资源分配情况
     *
-    * @param data 节点池资源分配情况
+    * @param queue 节点池资源分配情况
     * @return NodePoolAllocationStats
     */
-    public NodePoolAllocationStats data(List<NodePoolAllocationStatsItem> data) {
-        this.data = data;
+    public NodePoolAllocationStats queue(List<QueueAllocationStatsItem> queue) {
+        this.queue = queue;
         return this;
     }
 
@@ -77,12 +113,12 @@ public class NodePoolAllocationStats  implements java.io.Serializable {
     /**
      * add item to 节点池资源分配情况
      *
-     * @param data
+     * @param queue
      */
-    public void addData(NodePoolAllocationStatsItem data) {
-        if (this.data == null) {
-            this.data = new ArrayList<>();
+    public void addQueue(QueueAllocationStatsItem queue) {
+        if (this.queue == null) {
+            this.queue = new ArrayList<>();
         }
-        this.data.add(data);
+        this.queue.add(queue);
     }
 }

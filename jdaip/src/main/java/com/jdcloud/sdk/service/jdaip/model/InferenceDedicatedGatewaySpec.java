@@ -26,7 +26,6 @@ package com.jdcloud.sdk.service.jdaip.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 专属网关参数
@@ -41,17 +40,17 @@ public class InferenceDedicatedGatewaySpec  implements java.io.Serializable {
     private Integer replicas;
 
     /**
-     * 专属网关单个实例所需cpu资源，单位豪核 如： 1000是一核
+     * 专属网关单个实例所需 CPU，单位 mCPU；须与 memory 按 1000/2048、2000/4096、4000/8192 配对
      */
     private Integer cpu;
 
     /**
-     * 专属网关单个实例所需内存资源，单位M， 如： 1024是1G
+     * 专属网关单个实例所需内存，单位 MiB；须与 cpu 按 1000/2048、2000/4096、4000/8192 配对
      */
     private Integer memory;
 
     /**
-     * 是否仅内网可用；&#x60;true&#x60; 表示只提供内网地址
+     * 是否仅内网可用；当前实际内外网类型以 elasticIp.bindType 为准
      */
     private Boolean internal;
 
@@ -62,9 +61,7 @@ public class InferenceDedicatedGatewaySpec  implements java.io.Serializable {
 
     /**
      * 子网信息
-     * Required:true
      */
-    @Required
     private Subnet subnet;
 
     /**
@@ -74,9 +71,7 @@ public class InferenceDedicatedGatewaySpec  implements java.io.Serializable {
 
     /**
      * 可用区集合（逗号分隔）
-     * Required:true
      */
-    @Required
     
     private List<Az> azs;
     /**
@@ -121,7 +116,7 @@ public class InferenceDedicatedGatewaySpec  implements java.io.Serializable {
 
 
     /**
-     * get 专属网关单个实例所需cpu资源，单位豪核 如： 1000是一核
+     * get 专属网关单个实例所需 CPU，单位 mCPU；须与 memory 按 1000/2048、2000/4096、4000/8192 配对
      *
      * @return
      */
@@ -130,7 +125,7 @@ public class InferenceDedicatedGatewaySpec  implements java.io.Serializable {
     }
 
     /**
-     * set 专属网关单个实例所需cpu资源，单位豪核 如： 1000是一核
+     * set 专属网关单个实例所需 CPU，单位 mCPU；须与 memory 按 1000/2048、2000/4096、4000/8192 配对
      *
      * @param cpu
      */
@@ -140,7 +135,7 @@ public class InferenceDedicatedGatewaySpec  implements java.io.Serializable {
 
 
     /**
-     * get 专属网关单个实例所需内存资源，单位M， 如： 1024是1G
+     * get 专属网关单个实例所需内存，单位 MiB；须与 cpu 按 1000/2048、2000/4096、4000/8192 配对
      *
      * @return
      */
@@ -149,7 +144,7 @@ public class InferenceDedicatedGatewaySpec  implements java.io.Serializable {
     }
 
     /**
-     * set 专属网关单个实例所需内存资源，单位M， 如： 1024是1G
+     * set 专属网关单个实例所需内存，单位 MiB；须与 cpu 按 1000/2048、2000/4096、4000/8192 配对
      *
      * @param memory
      */
@@ -159,7 +154,7 @@ public class InferenceDedicatedGatewaySpec  implements java.io.Serializable {
 
 
     /**
-     * get 是否仅内网可用；&#x60;true&#x60; 表示只提供内网地址
+     * get 是否仅内网可用；当前实际内外网类型以 elasticIp.bindType 为准
      *
      * @return
      */
@@ -168,7 +163,7 @@ public class InferenceDedicatedGatewaySpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否仅内网可用；&#x60;true&#x60; 表示只提供内网地址
+     * set 是否仅内网可用；当前实际内外网类型以 elasticIp.bindType 为准
      *
      * @param internal
      */
@@ -343,9 +338,9 @@ public class InferenceDedicatedGatewaySpec  implements java.io.Serializable {
 
 
     /**
-     * set 专属网关单个实例所需cpu资源，单位豪核 如： 1000是一核
+     * set 专属网关单个实例所需 CPU，单位 mCPU；须与 memory 按 1000/2048、2000/4096、4000/8192 配对
      *
-     * @param cpu 专属网关单个实例所需cpu资源，单位豪核 如： 1000是一核
+     * @param cpu 专属网关单个实例所需 CPU，单位 mCPU；须与 memory 按 1000/2048、2000/4096、4000/8192 配对
      * @return InferenceDedicatedGatewaySpec
      */
     public InferenceDedicatedGatewaySpec cpu(Integer cpu) {
@@ -355,9 +350,9 @@ public class InferenceDedicatedGatewaySpec  implements java.io.Serializable {
 
 
     /**
-     * set 专属网关单个实例所需内存资源，单位M， 如： 1024是1G
+     * set 专属网关单个实例所需内存，单位 MiB；须与 cpu 按 1000/2048、2000/4096、4000/8192 配对
      *
-     * @param memory 专属网关单个实例所需内存资源，单位M， 如： 1024是1G
+     * @param memory 专属网关单个实例所需内存，单位 MiB；须与 cpu 按 1000/2048、2000/4096、4000/8192 配对
      * @return InferenceDedicatedGatewaySpec
      */
     public InferenceDedicatedGatewaySpec memory(Integer memory) {
@@ -367,9 +362,9 @@ public class InferenceDedicatedGatewaySpec  implements java.io.Serializable {
 
 
     /**
-     * set 是否仅内网可用；&#x60;true&#x60; 表示只提供内网地址
+     * set 是否仅内网可用；当前实际内外网类型以 elasticIp.bindType 为准
      *
-     * @param internal 是否仅内网可用；&#x60;true&#x60; 表示只提供内网地址
+     * @param internal 是否仅内网可用；当前实际内外网类型以 elasticIp.bindType 为准
      * @return InferenceDedicatedGatewaySpec
      */
     public InferenceDedicatedGatewaySpec internal(Boolean internal) {
