@@ -56,6 +56,7 @@ public class DeleteImageStyleRequest extends JdcloudRequest implements java.io.S
     private Long id;
 
 
+
     /**
      * get 区域ID
      *
@@ -74,6 +75,7 @@ public class DeleteImageStyleRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
     }
 
+
     /**
      * get Bucket名称
      *
@@ -91,6 +93,7 @@ public class DeleteImageStyleRequest extends JdcloudRequest implements java.io.S
     public void setBucketName(String bucketName) {
         this.bucketName = bucketName;
     }
+
 
     /**
      * get 图片样式id
@@ -111,30 +114,36 @@ public class DeleteImageStyleRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 区域ID
      *
-     * @param regionId
+     * @param regionId 区域ID
+     * @return DeleteImageStyleRequest
      */
     public DeleteImageStyleRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set Bucket名称
      *
-     * @param bucketName
+     * @param bucketName Bucket名称
+     * @return DeleteImageStyleRequest
      */
     public DeleteImageStyleRequest bucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
     }
 
+
     /**
      * set 图片样式id
      *
-     * @param id
+     * @param id 图片样式id
+     * @return DeleteImageStyleRequest
      */
     public DeleteImageStyleRequest id(Long id) {
         this.id = id;

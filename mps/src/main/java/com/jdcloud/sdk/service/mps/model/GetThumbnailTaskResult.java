@@ -77,6 +77,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     private ThumbnailTaskRule rule;
 
 
+
     /**
      * get 任务ID (readonly)
      *
@@ -94,6 +95,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     public void setTaskID(String taskID) {
         this.taskID = taskID;
     }
+
 
     /**
      * get 状态 (SUCCESS, ERROR, PENDDING, RUNNING) (readonly)
@@ -113,6 +115,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
         this.status = status;
     }
 
+
     /**
      * get 错误码 (readonly)
      *
@@ -130,6 +133,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     public void setErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
     }
+
 
     /**
      * get 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
@@ -149,6 +153,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
         this.createdTime = createdTime;
     }
 
+
     /**
      * get 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
      *
@@ -166,6 +171,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     public void setLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
     }
+
 
     /**
      * get source
@@ -185,6 +191,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
         this.source = source;
     }
 
+
     /**
      * get target
      *
@@ -202,6 +209,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     public void setTarget(ThumbnailTaskTarget target) {
         this.target = target;
     }
+
 
     /**
      * get rule
@@ -222,80 +230,96 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set 任务ID (readonly)
      *
-     * @param taskID
+     * @param taskID 任务ID (readonly)
+     * @return GetThumbnailTaskResult
      */
     public GetThumbnailTaskResult taskID(String taskID) {
         this.taskID = taskID;
         return this;
     }
 
+
     /**
      * set 状态 (SUCCESS, ERROR, PENDDING, RUNNING) (readonly)
      *
-     * @param status
+     * @param status 状态 (SUCCESS, ERROR, PENDDING, RUNNING) (readonly)
+     * @return GetThumbnailTaskResult
      */
     public GetThumbnailTaskResult status(String status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 错误码 (readonly)
      *
-     * @param errorCode
+     * @param errorCode 错误码 (readonly)
+     * @return GetThumbnailTaskResult
      */
     public GetThumbnailTaskResult errorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
     }
 
+
     /**
      * set 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
      *
-     * @param createdTime
+     * @param createdTime 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
+     * @return GetThumbnailTaskResult
      */
     public GetThumbnailTaskResult createdTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
     }
 
+
     /**
      * set 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
      *
-     * @param lastUpdatedTime
+     * @param lastUpdatedTime 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
+     * @return GetThumbnailTaskResult
      */
     public GetThumbnailTaskResult lastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
     }
 
+
     /**
      * set source
      *
-     * @param source
+     * @param source 
+     * @return GetThumbnailTaskResult
      */
     public GetThumbnailTaskResult source(ThumbnailTaskSource source) {
         this.source = source;
         return this;
     }
 
+
     /**
      * set target
      *
-     * @param target
+     * @param target 
+     * @return GetThumbnailTaskResult
      */
     public GetThumbnailTaskResult target(ThumbnailTaskTarget target) {
         this.target = target;
         return this;
     }
 
+
     /**
      * set rule
      *
-     * @param rule
+     * @param rule 
+     * @return GetThumbnailTaskResult
      */
     public GetThumbnailTaskResult rule(ThumbnailTaskRule rule) {
         this.rule = rule;

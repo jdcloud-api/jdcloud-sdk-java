@@ -60,6 +60,7 @@ public class TranscodeOutputConfig  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<TranscodeOutputObject> outputList;
 
 
@@ -81,6 +82,7 @@ public class TranscodeOutputConfig  implements java.io.Serializable {
         this.accessKey = accessKey;
     }
 
+
     /**
      * get 输出对象存储 secretKey，可选参数，默认与输入 secretKey 保持一致
      *
@@ -98,6 +100,7 @@ public class TranscodeOutputConfig  implements java.io.Serializable {
     public void setSecretKey(String secretKey) {
         this.secretKey = secretKey;
     }
+
 
     /**
      * get 输出对象存储 endpoint。可选参数，内网域名，默认与输入 endpoint 保持一致，如 s3-internal.cn-north-1.jcloudcs.com
@@ -117,6 +120,7 @@ public class TranscodeOutputConfig  implements java.io.Serializable {
         this.endpoint = endpoint;
     }
 
+
     /**
      * get 输出对象存储 bucket，可选参数，默认与输入 bucket 保持一致
      *
@@ -135,74 +139,86 @@ public class TranscodeOutputConfig  implements java.io.Serializable {
         this.bucket = bucket;
     }
 
+
     /**
-     * get 输出集合，必须参数，非空集
-     *
-     * @return
-     */
+    * get 输出集合，必须参数，非空集
+    *
+    * @return
+    */
     public List<TranscodeOutputObject> getOutputList() {
         return outputList;
     }
 
     /**
-     * set 输出集合，必须参数，非空集
-     *
-     * @param outputList
-     */
+    * set 输出集合，必须参数，非空集
+    *
+    * @param outputList
+    */
     public void setOutputList(List<TranscodeOutputObject> outputList) {
         this.outputList = outputList;
     }
 
 
+
     /**
      * set 输出对象存储 accessKey，可选参数，默认与输入 accessKey 保持一致
      *
-     * @param accessKey
+     * @param accessKey 输出对象存储 accessKey，可选参数，默认与输入 accessKey 保持一致
+     * @return TranscodeOutputConfig
      */
     public TranscodeOutputConfig accessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
+
     /**
      * set 输出对象存储 secretKey，可选参数，默认与输入 secretKey 保持一致
      *
-     * @param secretKey
+     * @param secretKey 输出对象存储 secretKey，可选参数，默认与输入 secretKey 保持一致
+     * @return TranscodeOutputConfig
      */
     public TranscodeOutputConfig secretKey(String secretKey) {
         this.secretKey = secretKey;
         return this;
     }
 
+
     /**
      * set 输出对象存储 endpoint。可选参数，内网域名，默认与输入 endpoint 保持一致，如 s3-internal.cn-north-1.jcloudcs.com
      *
-     * @param endpoint
+     * @param endpoint 输出对象存储 endpoint。可选参数，内网域名，默认与输入 endpoint 保持一致，如 s3-internal.cn-north-1.jcloudcs.com
+     * @return TranscodeOutputConfig
      */
     public TranscodeOutputConfig endpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
 
+
     /**
      * set 输出对象存储 bucket，可选参数，默认与输入 bucket 保持一致
      *
-     * @param bucket
+     * @param bucket 输出对象存储 bucket，可选参数，默认与输入 bucket 保持一致
+     * @return TranscodeOutputConfig
      */
     public TranscodeOutputConfig bucket(String bucket) {
         this.bucket = bucket;
         return this;
     }
 
+
     /**
-     * set 输出集合，必须参数，非空集
-     *
-     * @param outputList
-     */
+    * set 输出集合，必须参数，非空集
+    *
+    * @param outputList 输出集合，必须参数，非空集
+    * @return TranscodeOutputConfig
+    */
     public TranscodeOutputConfig outputList(List<TranscodeOutputObject> outputList) {
         this.outputList = outputList;
         return this;
     }
+
 
 
     /**
@@ -216,5 +232,4 @@ public class TranscodeOutputConfig  implements java.io.Serializable {
         }
         this.outputList.add(outputList);
     }
-
 }

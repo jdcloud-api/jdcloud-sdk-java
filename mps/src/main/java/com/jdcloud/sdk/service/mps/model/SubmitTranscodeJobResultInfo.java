@@ -42,6 +42,7 @@ public class SubmitTranscodeJobResultInfo  implements java.io.Serializable {
     /**
      * 转码任务ID集合
      */
+    
     private List<String> taskIds;
 
 
@@ -63,44 +64,50 @@ public class SubmitTranscodeJobResultInfo  implements java.io.Serializable {
         this.jobId = jobId;
     }
 
+
     /**
-     * get 转码任务ID集合
-     *
-     * @return
-     */
+    * get 转码任务ID集合
+    *
+    * @return
+    */
     public List<String> getTaskIds() {
         return taskIds;
     }
 
     /**
-     * set 转码任务ID集合
-     *
-     * @param taskIds
-     */
+    * set 转码任务ID集合
+    *
+    * @param taskIds
+    */
     public void setTaskIds(List<String> taskIds) {
         this.taskIds = taskIds;
     }
 
 
+
     /**
      * set 转码作业ID
      *
-     * @param jobId
+     * @param jobId 转码作业ID
+     * @return SubmitTranscodeJobResultInfo
      */
     public SubmitTranscodeJobResultInfo jobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
 
+
     /**
-     * set 转码任务ID集合
-     *
-     * @param taskIds
-     */
+    * set 转码任务ID集合
+    *
+    * @param taskIds 转码任务ID集合
+    * @return SubmitTranscodeJobResultInfo
+    */
     public SubmitTranscodeJobResultInfo taskIds(List<String> taskIds) {
         this.taskIds = taskIds;
         return this;
     }
+
 
 
     /**
@@ -114,5 +121,4 @@ public class SubmitTranscodeJobResultInfo  implements java.io.Serializable {
         }
         this.taskIds.add(taskId);
     }
-
 }

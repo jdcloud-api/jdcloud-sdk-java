@@ -49,6 +49,7 @@ public class GetStyleDelimiterRequest extends JdcloudRequest implements java.io.
     private String bucketName;
 
 
+
     /**
      * get 区域ID
      *
@@ -66,6 +67,7 @@ public class GetStyleDelimiterRequest extends JdcloudRequest implements java.io.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Bucket名称
@@ -86,20 +88,24 @@ public class GetStyleDelimiterRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 区域ID
      *
-     * @param regionId
+     * @param regionId 区域ID
+     * @return GetStyleDelimiterRequest
      */
     public GetStyleDelimiterRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set Bucket名称
      *
-     * @param bucketName
+     * @param bucketName Bucket名称
+     * @return GetStyleDelimiterRequest
      */
     public GetStyleDelimiterRequest bucketName(String bucketName) {
         this.bucketName = bucketName;

@@ -52,12 +52,13 @@ public class Output  implements java.io.Serializable {
 若未设置，则使用默认的输出路径：mps/{YEAR}/{MONTH}/{DAY}/{FILENAME}/ ，最终解析出的路径如 mps/2020/04/15/我和我的祖国/
 为保证输出文件的唯一性，避免覆盖，系统会按照一定规则生成文件名，规则如下：
 对于普通截图，生成 {TASKID}.{SEQUENCEID}.{EXTNAME} 规则的文件名；
-对于雪碧图，生成 {TASKID}-sprite.{EXTNAME} 规则的文件名；
+对于雪碧图，生成 {TASKID}.{SEQUENCEID}-sprite.{EXTNAME} 规则的文件名；
 其中 SEQUENCEID 为左补0的6位数字截图序号，EXTNAME 为截图模板中截图格式 format 字段对应的文件扩展名
-综述，若未设置此字段，则最终输出的普通截图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898.000001.jpg ; 雪碧图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898-sprite.jpg
+综述，若未设置此字段，则最终输出的普通截图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898.000001.jpg ; 雪碧图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898.000001-sprite.jpg
 
      */
     private String objectPath;
+
 
 
     /**
@@ -78,6 +79,7 @@ public class Output  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 输出对象存储空间
      *
@@ -96,6 +98,7 @@ public class Output  implements java.io.Serializable {
         this.bucket = bucket;
     }
 
+
     /**
      * get 截图输出路径，包含占位符的截图输出路径。当前支持的占位符包括：
   {FILENAME} - 输入视频的简单文件名，如 &quot;我和我的祖国&quot;
@@ -106,9 +109,9 @@ public class Output  implements java.io.Serializable {
 若未设置，则使用默认的输出路径：mps/{YEAR}/{MONTH}/{DAY}/{FILENAME}/ ，最终解析出的路径如 mps/2020/04/15/我和我的祖国/
 为保证输出文件的唯一性，避免覆盖，系统会按照一定规则生成文件名，规则如下：
 对于普通截图，生成 {TASKID}.{SEQUENCEID}.{EXTNAME} 规则的文件名；
-对于雪碧图，生成 {TASKID}-sprite.{EXTNAME} 规则的文件名；
+对于雪碧图，生成 {TASKID}.{SEQUENCEID}-sprite.{EXTNAME} 规则的文件名；
 其中 SEQUENCEID 为左补0的6位数字截图序号，EXTNAME 为截图模板中截图格式 format 字段对应的文件扩展名
-综述，若未设置此字段，则最终输出的普通截图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898.000001.jpg ; 雪碧图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898-sprite.jpg
+综述，若未设置此字段，则最终输出的普通截图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898.000001.jpg ; 雪碧图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898.000001-sprite.jpg
 
      *
      * @return
@@ -127,9 +130,9 @@ public class Output  implements java.io.Serializable {
 若未设置，则使用默认的输出路径：mps/{YEAR}/{MONTH}/{DAY}/{FILENAME}/ ，最终解析出的路径如 mps/2020/04/15/我和我的祖国/
 为保证输出文件的唯一性，避免覆盖，系统会按照一定规则生成文件名，规则如下：
 对于普通截图，生成 {TASKID}.{SEQUENCEID}.{EXTNAME} 规则的文件名；
-对于雪碧图，生成 {TASKID}-sprite.{EXTNAME} 规则的文件名；
+对于雪碧图，生成 {TASKID}.{SEQUENCEID}-sprite.{EXTNAME} 规则的文件名；
 其中 SEQUENCEID 为左补0的6位数字截图序号，EXTNAME 为截图模板中截图格式 format 字段对应的文件扩展名
-综述，若未设置此字段，则最终输出的普通截图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898.000001.jpg ; 雪碧图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898-sprite.jpg
+综述，若未设置此字段，则最终输出的普通截图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898.000001.jpg ; 雪碧图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898.000001-sprite.jpg
 
      *
      * @param objectPath
@@ -139,25 +142,30 @@ public class Output  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 输出对象存储区域
      *
-     * @param region
+     * @param region 输出对象存储区域
+     * @return Output
      */
     public Output region(String region) {
         this.region = region;
         return this;
     }
 
+
     /**
      * set 输出对象存储空间
      *
-     * @param bucket
+     * @param bucket 输出对象存储空间
+     * @return Output
      */
     public Output bucket(String bucket) {
         this.bucket = bucket;
         return this;
     }
+
 
     /**
      * set 截图输出路径，包含占位符的截图输出路径。当前支持的占位符包括：
@@ -169,12 +177,25 @@ public class Output  implements java.io.Serializable {
 若未设置，则使用默认的输出路径：mps/{YEAR}/{MONTH}/{DAY}/{FILENAME}/ ，最终解析出的路径如 mps/2020/04/15/我和我的祖国/
 为保证输出文件的唯一性，避免覆盖，系统会按照一定规则生成文件名，规则如下：
 对于普通截图，生成 {TASKID}.{SEQUENCEID}.{EXTNAME} 规则的文件名；
-对于雪碧图，生成 {TASKID}-sprite.{EXTNAME} 规则的文件名；
+对于雪碧图，生成 {TASKID}.{SEQUENCEID}-sprite.{EXTNAME} 规则的文件名；
 其中 SEQUENCEID 为左补0的6位数字截图序号，EXTNAME 为截图模板中截图格式 format 字段对应的文件扩展名
-综述，若未设置此字段，则最终输出的普通截图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898.000001.jpg ; 雪碧图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898-sprite.jpg
+综述，若未设置此字段，则最终输出的普通截图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898.000001.jpg ; 雪碧图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898.000001-sprite.jpg
 
      *
-     * @param objectPath
+     * @param objectPath 截图输出路径，包含占位符的截图输出路径。当前支持的占位符包括：
+  {FILENAME} - 输入视频的简单文件名，如 &quot;我和我的祖国&quot;
+  {TASKID} - 该截图任务的ID，如 &quot;7234584d911b4e0db2fa13545c764898&quot;
+  {YEAR} - 四位数字年份，如 &quot;2020&quot;
+  {MONTH} - 两位数字月份，如 &quot;04&quot;
+  {DAY} - 两位数字日期，如 &quot;15&quot;
+若未设置，则使用默认的输出路径：mps/{YEAR}/{MONTH}/{DAY}/{FILENAME}/ ，最终解析出的路径如 mps/2020/04/15/我和我的祖国/
+为保证输出文件的唯一性，避免覆盖，系统会按照一定规则生成文件名，规则如下：
+对于普通截图，生成 {TASKID}.{SEQUENCEID}.{EXTNAME} 规则的文件名；
+对于雪碧图，生成 {TASKID}.{SEQUENCEID}-sprite.{EXTNAME} 规则的文件名；
+其中 SEQUENCEID 为左补0的6位数字截图序号，EXTNAME 为截图模板中截图格式 format 字段对应的文件扩展名
+综述，若未设置此字段，则最终输出的普通截图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898.000001.jpg ; 雪碧图形如：mps/2020/04/15/我和我的祖国/7234584d911b4e0db2fa13545c764898.000001-sprite.jpg
+
+     * @return Output
      */
     public Output objectPath(String objectPath) {
         this.objectPath = objectPath;

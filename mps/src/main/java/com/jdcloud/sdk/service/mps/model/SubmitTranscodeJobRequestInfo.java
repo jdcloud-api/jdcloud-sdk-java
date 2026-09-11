@@ -80,8 +80,8 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> templateIds;
-
     /**
      * 输出配置，必须参数
      * Required:true
@@ -105,6 +105,7 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
     private String additionalProperties;
 
 
+
     /**
      * get 输入对象存储 accessKey，必须参数
      *
@@ -122,6 +123,7 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
     public void setAccessKey(String accessKey) {
         this.accessKey = accessKey;
     }
+
 
     /**
      * get 输入对象存储 accessKey，必须参数
@@ -141,6 +143,7 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
         this.secretKey = secretKey;
     }
 
+
     /**
      * get 输入对象存储 endpoint。必须参数，内网域名，如 s3-internal.cn-north-1.jcloudcs.com
      *
@@ -158,6 +161,7 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
     public void setEndpoint(String endpoint) {
         this.endpoint = endpoint;
     }
+
 
     /**
      * get 输入对象存储 bucket，必须参数
@@ -177,6 +181,7 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
         this.bucket = bucket;
     }
 
+
     /**
      * get 输入对象存储 objectKey，必须参数
      *
@@ -194,6 +199,7 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
     public void setObjectKey(String objectKey) {
         this.objectKey = objectKey;
     }
+
 
     /**
      * get 输入视频标题，可选参数，默认会从 objectKey 中截取
@@ -213,23 +219,25 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
         this.title = title;
     }
 
+
     /**
-     * get 转码模板ID集合，必须参数，非空集合
-     *
-     * @return
-     */
+    * get 转码模板ID集合，必须参数，非空集合
+    *
+    * @return
+    */
     public List<String> getTemplateIds() {
         return templateIds;
     }
 
     /**
-     * set 转码模板ID集合，必须参数，非空集合
-     *
-     * @param templateIds
-     */
+    * set 转码模板ID集合，必须参数，非空集合
+    *
+    * @param templateIds
+    */
     public void setTemplateIds(List<String> templateIds) {
         this.templateIds = templateIds;
     }
+
 
     /**
      * get 输出配置，必须参数
@@ -248,6 +256,7 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
     public void setOutputConfig(TranscodeOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
     }
+
 
     /**
      * get 附加参数，JSON格式的字符串。除非清楚了解其用途和用法，请勿使用此字段。
@@ -288,85 +297,102 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 输入对象存储 accessKey，必须参数
      *
-     * @param accessKey
+     * @param accessKey 输入对象存储 accessKey，必须参数
+     * @return SubmitTranscodeJobRequestInfo
      */
     public SubmitTranscodeJobRequestInfo accessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
+
     /**
      * set 输入对象存储 accessKey，必须参数
      *
-     * @param secretKey
+     * @param secretKey 输入对象存储 accessKey，必须参数
+     * @return SubmitTranscodeJobRequestInfo
      */
     public SubmitTranscodeJobRequestInfo secretKey(String secretKey) {
         this.secretKey = secretKey;
         return this;
     }
 
+
     /**
      * set 输入对象存储 endpoint。必须参数，内网域名，如 s3-internal.cn-north-1.jcloudcs.com
      *
-     * @param endpoint
+     * @param endpoint 输入对象存储 endpoint。必须参数，内网域名，如 s3-internal.cn-north-1.jcloudcs.com
+     * @return SubmitTranscodeJobRequestInfo
      */
     public SubmitTranscodeJobRequestInfo endpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
 
+
     /**
      * set 输入对象存储 bucket，必须参数
      *
-     * @param bucket
+     * @param bucket 输入对象存储 bucket，必须参数
+     * @return SubmitTranscodeJobRequestInfo
      */
     public SubmitTranscodeJobRequestInfo bucket(String bucket) {
         this.bucket = bucket;
         return this;
     }
 
+
     /**
      * set 输入对象存储 objectKey，必须参数
      *
-     * @param objectKey
+     * @param objectKey 输入对象存储 objectKey，必须参数
+     * @return SubmitTranscodeJobRequestInfo
      */
     public SubmitTranscodeJobRequestInfo objectKey(String objectKey) {
         this.objectKey = objectKey;
         return this;
     }
 
+
     /**
      * set 输入视频标题，可选参数，默认会从 objectKey 中截取
      *
-     * @param title
+     * @param title 输入视频标题，可选参数，默认会从 objectKey 中截取
+     * @return SubmitTranscodeJobRequestInfo
      */
     public SubmitTranscodeJobRequestInfo title(String title) {
         this.title = title;
         return this;
     }
 
+
     /**
-     * set 转码模板ID集合，必须参数，非空集合
-     *
-     * @param templateIds
-     */
+    * set 转码模板ID集合，必须参数，非空集合
+    *
+    * @param templateIds 转码模板ID集合，必须参数，非空集合
+    * @return SubmitTranscodeJobRequestInfo
+    */
     public SubmitTranscodeJobRequestInfo templateIds(List<String> templateIds) {
         this.templateIds = templateIds;
         return this;
     }
 
+
     /**
      * set 输出配置，必须参数
      *
-     * @param outputConfig
+     * @param outputConfig 输出配置，必须参数
+     * @return SubmitTranscodeJobRequestInfo
      */
     public SubmitTranscodeJobRequestInfo outputConfig(TranscodeOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
+
 
     /**
      * set 附加参数，JSON格式的字符串。除非清楚了解其用途和用法，请勿使用此字段。
@@ -381,12 +407,24 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
   -  HLS加密相关参数，具有完整性要求，故 hls.encrypt 命名空间下的附加参数，依赖于 hls.encrypt.key 参数的设置情况。若设置 hls.encrypt.key 参数，则命名空间 hls.encrypt 下的其他参数也须同时设置；否则，其他参数会被忽略。
 
      *
-     * @param additionalProperties
+     * @param additionalProperties 附加参数，JSON格式的字符串。除非清楚了解其用途和用法，请勿使用此字段。
+若参数在本次作业提交所关联的模板中，存在相同用途的对应字段，则该属性值会覆盖模板中的对应字段；
+若参数在本次作业提交所关联的模板中，不存在相同用途的对应字段，则该属性值会作为补充设置，用于生产任务；
+有特殊说明的除外。
+当前支持的附加参数：
+  - hls.encrypt.key - HLS加密公钥，对应于转码模板中 encryption.hlsKey 字段
+  - hls.encrypt.keyUrl - HLS加密公钥地址，对应于转码模板中 encryption.hlsKeyUrl 字段
+  - hls.encrypt.encodeType - HLS加密公钥编码方式，对应于转码模板中 encryption.hlsKeyEncodeType 字段
+特殊说明：
+  -  HLS加密相关参数，具有完整性要求，故 hls.encrypt 命名空间下的附加参数，依赖于 hls.encrypt.key 参数的设置情况。若设置 hls.encrypt.key 参数，则命名空间 hls.encrypt 下的其他参数也须同时设置；否则，其他参数会被忽略。
+
+     * @return SubmitTranscodeJobRequestInfo
      */
     public SubmitTranscodeJobRequestInfo additionalProperties(String additionalProperties) {
         this.additionalProperties = additionalProperties;
         return this;
     }
+
 
 
     /**
@@ -400,5 +438,4 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
         }
         this.templateIds.add(templateId);
     }
-
 }

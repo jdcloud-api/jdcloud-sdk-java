@@ -41,8 +41,8 @@ public class SetStyleDelimiterRequest extends JdcloudRequest implements java.io.
      * Required:true
      */
     @Required
+    
     private List<String> delimiters;
-
     /**
      * 区域ID
      * Required:true
@@ -58,23 +58,25 @@ public class SetStyleDelimiterRequest extends JdcloudRequest implements java.io.
     private String bucketName;
 
 
+
     /**
-     * get 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
-     *
-     * @return
-     */
+    * get 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
+    *
+    * @return
+    */
     public List<String> getDelimiters() {
         return delimiters;
     }
 
     /**
-     * set 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
-     *
-     * @param delimiters
-     */
+    * set 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
+    *
+    * @param delimiters
+    */
     public void setDelimiters(List<String> delimiters) {
         this.delimiters = delimiters;
     }
+
 
     /**
      * get 区域ID
@@ -93,6 +95,7 @@ public class SetStyleDelimiterRequest extends JdcloudRequest implements java.io.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Bucket名称
@@ -113,35 +116,42 @@ public class SetStyleDelimiterRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
-     * set 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
-     *
-     * @param delimiters
-     */
+    * set 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
+    *
+    * @param delimiters 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
+    * @return SetStyleDelimiterRequest
+    */
     public SetStyleDelimiterRequest delimiters(List<String> delimiters) {
         this.delimiters = delimiters;
         return this;
     }
 
+
     /**
      * set 区域ID
      *
-     * @param regionId
+     * @param regionId 区域ID
+     * @return SetStyleDelimiterRequest
      */
     public SetStyleDelimiterRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set Bucket名称
      *
-     * @param bucketName
+     * @param bucketName Bucket名称
+     * @return SetStyleDelimiterRequest
      */
     public SetStyleDelimiterRequest bucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
     }
+
 
 
     /**
@@ -155,5 +165,4 @@ public class SetStyleDelimiterRequest extends JdcloudRequest implements java.io.
         }
         this.delimiters.add(delimiter);
     }
-
 }

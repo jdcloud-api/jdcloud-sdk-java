@@ -78,6 +78,7 @@ public class ThumbnailTask  implements java.io.Serializable {
     private ThumbnailTaskRule rule;
 
 
+
     /**
      * get 任务ID (readonly)
      *
@@ -95,6 +96,7 @@ public class ThumbnailTask  implements java.io.Serializable {
     public void setTaskID(String taskID) {
         this.taskID = taskID;
     }
+
 
     /**
      * get 状态 (SUCCESS, ERROR, PENDDING, RUNNING) (readonly)
@@ -114,6 +116,7 @@ public class ThumbnailTask  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 错误码 (readonly)
      *
@@ -131,6 +134,7 @@ public class ThumbnailTask  implements java.io.Serializable {
     public void setErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
     }
+
 
     /**
      * get 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
@@ -150,6 +154,7 @@ public class ThumbnailTask  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+
     /**
      * get 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
      *
@@ -167,6 +172,7 @@ public class ThumbnailTask  implements java.io.Serializable {
     public void setLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
     }
+
 
     /**
      * get source
@@ -186,6 +192,7 @@ public class ThumbnailTask  implements java.io.Serializable {
         this.source = source;
     }
 
+
     /**
      * get target
      *
@@ -203,6 +210,7 @@ public class ThumbnailTask  implements java.io.Serializable {
     public void setTarget(ThumbnailTaskTarget target) {
         this.target = target;
     }
+
 
     /**
      * get rule
@@ -223,80 +231,96 @@ public class ThumbnailTask  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 任务ID (readonly)
      *
-     * @param taskID
+     * @param taskID 任务ID (readonly)
+     * @return ThumbnailTask
      */
     public ThumbnailTask taskID(String taskID) {
         this.taskID = taskID;
         return this;
     }
 
+
     /**
      * set 状态 (SUCCESS, ERROR, PENDDING, RUNNING) (readonly)
      *
-     * @param status
+     * @param status 状态 (SUCCESS, ERROR, PENDDING, RUNNING) (readonly)
+     * @return ThumbnailTask
      */
     public ThumbnailTask status(String status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 错误码 (readonly)
      *
-     * @param errorCode
+     * @param errorCode 错误码 (readonly)
+     * @return ThumbnailTask
      */
     public ThumbnailTask errorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
     }
 
+
     /**
      * set 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
      *
-     * @param createdTime
+     * @param createdTime 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
+     * @return ThumbnailTask
      */
     public ThumbnailTask createdTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
     }
 
+
     /**
      * set 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
      *
-     * @param lastUpdatedTime
+     * @param lastUpdatedTime 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
+     * @return ThumbnailTask
      */
     public ThumbnailTask lastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
     }
 
+
     /**
      * set source
      *
-     * @param source
+     * @param source 
+     * @return ThumbnailTask
      */
     public ThumbnailTask source(ThumbnailTaskSource source) {
         this.source = source;
         return this;
     }
 
+
     /**
      * set target
      *
-     * @param target
+     * @param target 
+     * @return ThumbnailTask
      */
     public ThumbnailTask target(ThumbnailTaskTarget target) {
         this.target = target;
         return this;
     }
 
+
     /**
      * set rule
      *
-     * @param rule
+     * @param rule 
+     * @return ThumbnailTask
      */
     public ThumbnailTask rule(ThumbnailTaskRule rule) {
         this.rule = rule;

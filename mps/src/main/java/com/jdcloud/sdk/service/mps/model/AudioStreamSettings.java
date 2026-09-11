@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.mps.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 转码音频流配置
@@ -34,17 +33,18 @@ public class AudioStreamSettings  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 音频编码。取值范围：aac 。目前仅支持 acc
-     * Required:true
+     * 音频转码。取值范围：copy, disable, encode; 默认encode
      */
-    @Required
+    private String encoding;
+
+    /**
+     * 音频编码(encoding&#x3D;encode时必填)。取值范围：aac 。目前仅支持 acc
+     */
     private String codec;
 
     /**
-     * 音频目标码率。取值范围：[8, 1000]，单位为 Kbps
-     * Required:true
+     * 音频目标码率(encoding&#x3D;encode时必填)。取值范围：[8, 1000]，单位为 Kbps
      */
-    @Required
     private Integer bitrate;
 
     /**
@@ -66,8 +66,28 @@ public class AudioStreamSettings  implements java.io.Serializable {
     private Boolean comfortable;
 
 
+
     /**
-     * get 音频编码。取值范围：aac 。目前仅支持 acc
+     * get 音频转码。取值范围：copy, disable, encode; 默认encode
+     *
+     * @return
+     */
+    public String getEncoding() {
+        return encoding;
+    }
+
+    /**
+     * set 音频转码。取值范围：copy, disable, encode; 默认encode
+     *
+     * @param encoding
+     */
+    public void setEncoding(String encoding) {
+        this.encoding = encoding;
+    }
+
+
+    /**
+     * get 音频编码(encoding&#x3D;encode时必填)。取值范围：aac 。目前仅支持 acc
      *
      * @return
      */
@@ -76,7 +96,7 @@ public class AudioStreamSettings  implements java.io.Serializable {
     }
 
     /**
-     * set 音频编码。取值范围：aac 。目前仅支持 acc
+     * set 音频编码(encoding&#x3D;encode时必填)。取值范围：aac 。目前仅支持 acc
      *
      * @param codec
      */
@@ -84,8 +104,9 @@ public class AudioStreamSettings  implements java.io.Serializable {
         this.codec = codec;
     }
 
+
     /**
-     * get 音频目标码率。取值范围：[8, 1000]，单位为 Kbps
+     * get 音频目标码率(encoding&#x3D;encode时必填)。取值范围：[8, 1000]，单位为 Kbps
      *
      * @return
      */
@@ -94,13 +115,14 @@ public class AudioStreamSettings  implements java.io.Serializable {
     }
 
     /**
-     * set 音频目标码率。取值范围：[8, 1000]，单位为 Kbps
+     * set 音频目标码率(encoding&#x3D;encode时必填)。取值范围：[8, 1000]，单位为 Kbps
      *
      * @param bitrate
      */
     public void setBitrate(Integer bitrate) {
         this.bitrate = bitrate;
     }
+
 
     /**
      * get 音频采样率。
@@ -126,6 +148,7 @@ public class AudioStreamSettings  implements java.io.Serializable {
         this.sampleRate = sampleRate;
     }
 
+
     /**
      * get 音频声道数。取值范围：1、2 。默认值为 2
      *
@@ -143,6 +166,7 @@ public class AudioStreamSettings  implements java.io.Serializable {
     public void setChannels(Integer channels) {
         this.channels = channels;
     }
+
 
     /**
      * get 是否开启舒适音频。取值范围：true、false，默认值为 true
@@ -163,25 +187,42 @@ public class AudioStreamSettings  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 音频编码。取值范围：aac 。目前仅支持 acc
+     * set 音频转码。取值范围：copy, disable, encode; 默认encode
      *
-     * @param codec
+     * @param encoding 音频转码。取值范围：copy, disable, encode; 默认encode
+     * @return AudioStreamSettings
+     */
+    public AudioStreamSettings encoding(String encoding) {
+        this.encoding = encoding;
+        return this;
+    }
+
+
+    /**
+     * set 音频编码(encoding&#x3D;encode时必填)。取值范围：aac 。目前仅支持 acc
+     *
+     * @param codec 音频编码(encoding&#x3D;encode时必填)。取值范围：aac 。目前仅支持 acc
+     * @return AudioStreamSettings
      */
     public AudioStreamSettings codec(String codec) {
         this.codec = codec;
         return this;
     }
 
+
     /**
-     * set 音频目标码率。取值范围：[8, 1000]，单位为 Kbps
+     * set 音频目标码率(encoding&#x3D;encode时必填)。取值范围：[8, 1000]，单位为 Kbps
      *
-     * @param bitrate
+     * @param bitrate 音频目标码率(encoding&#x3D;encode时必填)。取值范围：[8, 1000]，单位为 Kbps
+     * @return AudioStreamSettings
      */
     public AudioStreamSettings bitrate(Integer bitrate) {
         this.bitrate = bitrate;
         return this;
     }
+
 
     /**
      * set 音频采样率。
@@ -189,27 +230,35 @@ public class AudioStreamSettings  implements java.io.Serializable {
 若容器封装格式不为 flv ，则此字段为非必须参数，未设置时，与源文件音频采样率保持一致，若设置值，其取值范围：22050、24000、32000、44100、48000、64000、88200、96000
 
      *
-     * @param sampleRate
+     * @param sampleRate 音频采样率。
+若容器封装格式为 flv ，该字段为必须参数，其取值范围：22050、44100
+若容器封装格式不为 flv ，则此字段为非必须参数，未设置时，与源文件音频采样率保持一致，若设置值，其取值范围：22050、24000、32000、44100、48000、64000、88200、96000
+
+     * @return AudioStreamSettings
      */
     public AudioStreamSettings sampleRate(Integer sampleRate) {
         this.sampleRate = sampleRate;
         return this;
     }
 
+
     /**
      * set 音频声道数。取值范围：1、2 。默认值为 2
      *
-     * @param channels
+     * @param channels 音频声道数。取值范围：1、2 。默认值为 2
+     * @return AudioStreamSettings
      */
     public AudioStreamSettings channels(Integer channels) {
         this.channels = channels;
         return this;
     }
 
+
     /**
      * set 是否开启舒适音频。取值范围：true、false，默认值为 true
      *
-     * @param comfortable
+     * @param comfortable 是否开启舒适音频。取值范围：true、false，默认值为 true
+     * @return AudioStreamSettings
      */
     public AudioStreamSettings comfortable(Boolean comfortable) {
         this.comfortable = comfortable;

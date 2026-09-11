@@ -67,7 +67,7 @@ public class VideoStreamSettings  implements java.io.Serializable {
 未设置时，与源文件视频帧率保持一致
 
      */
-    private Integer frameRate;
+    private String frameRate;
 
     /**
      * 视频输出宽度。取值范围：[128, 4096] 整数。单位为 px
@@ -82,6 +82,7 @@ public class VideoStreamSettings  implements java.io.Serializable {
 
      */
     private Integer height;
+
 
 
     /**
@@ -101,6 +102,7 @@ public class VideoStreamSettings  implements java.io.Serializable {
     public void setCodec(String codec) {
         this.codec = codec;
     }
+
 
     /**
      * get 码率控制模式。取值范围：
@@ -128,6 +130,7 @@ public class VideoStreamSettings  implements java.io.Serializable {
         this.rcmode = rcmode;
     }
 
+
     /**
      * get 码率控制因子。取值范围：[0, 51]，支持2位小数的浮点数
 当 codec 为 h264 时，默认值为 23；当 codec 为 h265 时，默认值为 28
@@ -150,6 +153,7 @@ public class VideoStreamSettings  implements java.io.Serializable {
         this.rateFactor = rateFactor;
     }
 
+
     /**
      * get 视频码率。取值范围：[128, 10000]，单位为 Kbps
 
@@ -170,6 +174,7 @@ public class VideoStreamSettings  implements java.io.Serializable {
         this.bitrate = bitrate;
     }
 
+
     /**
      * get 视频帧率。取值范围：[1, 60]，单位为 fps
 未设置时，与源文件视频帧率保持一致
@@ -177,7 +182,7 @@ public class VideoStreamSettings  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getFrameRate() {
+    public String getFrameRate() {
         return frameRate;
     }
 
@@ -188,9 +193,10 @@ public class VideoStreamSettings  implements java.io.Serializable {
      *
      * @param frameRate
      */
-    public void setFrameRate(Integer frameRate) {
+    public void setFrameRate(String frameRate) {
         this.frameRate = frameRate;
     }
+
 
     /**
      * get 视频输出宽度。取值范围：[128, 4096] 整数。单位为 px
@@ -213,6 +219,7 @@ public class VideoStreamSettings  implements java.io.Serializable {
     public void setWidth(Integer width) {
         this.width = width;
     }
+
 
     /**
      * get 视频输出高度。取值范围：[128, 4096] 整数。单位为 px
@@ -237,15 +244,18 @@ public class VideoStreamSettings  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 视频编码。取值范围：h264、h265
      *
-     * @param codec
+     * @param codec 视频编码。取值范围：h264、h265
+     * @return VideoStreamSettings
      */
     public VideoStreamSettings codec(String codec) {
         this.codec = codec;
         return this;
     }
+
 
     /**
      * set 码率控制模式。取值范围：
@@ -254,66 +264,90 @@ public class VideoStreamSettings  implements java.io.Serializable {
 默认值为 abr
 
      *
-     * @param rcmode
+     * @param rcmode 码率控制模式。取值范围：
+  crf - 恒定码率系数模式。设置此模式时，rateFactor 生效，bitrate 会被忽略
+  abr - 平均码率模式。设置此模式时，bitrate 生效，rateFactor 会被忽略
+默认值为 abr
+
+     * @return VideoStreamSettings
      */
     public VideoStreamSettings rcmode(String rcmode) {
         this.rcmode = rcmode;
         return this;
     }
 
+
     /**
      * set 码率控制因子。取值范围：[0, 51]，支持2位小数的浮点数
 当 codec 为 h264 时，默认值为 23；当 codec 为 h265 时，默认值为 28
 
      *
-     * @param rateFactor
+     * @param rateFactor 码率控制因子。取值范围：[0, 51]，支持2位小数的浮点数
+当 codec 为 h264 时，默认值为 23；当 codec 为 h265 时，默认值为 28
+
+     * @return VideoStreamSettings
      */
     public VideoStreamSettings rateFactor(String rateFactor) {
         this.rateFactor = rateFactor;
         return this;
     }
 
+
     /**
      * set 视频码率。取值范围：[128, 10000]，单位为 Kbps
 
      *
-     * @param bitrate
+     * @param bitrate 视频码率。取值范围：[128, 10000]，单位为 Kbps
+
+     * @return VideoStreamSettings
      */
     public VideoStreamSettings bitrate(Integer bitrate) {
         this.bitrate = bitrate;
         return this;
     }
 
+
     /**
      * set 视频帧率。取值范围：[1, 60]，单位为 fps
 未设置时，与源文件视频帧率保持一致
 
      *
-     * @param frameRate
+     * @param frameRate 视频帧率。取值范围：[1, 60]，单位为 fps
+未设置时，与源文件视频帧率保持一致
+
+     * @return VideoStreamSettings
      */
-    public VideoStreamSettings frameRate(Integer frameRate) {
+    public VideoStreamSettings frameRate(String frameRate) {
         this.frameRate = frameRate;
         return this;
     }
+
 
     /**
      * set 视频输出宽度。取值范围：[128, 4096] 整数。单位为 px
 未设置时，若 height 也未设置值，则 width 和 height 与原视频保持一致；若 height 设置值，则 width 按照原视频的分辨率等比缩放
 
      *
-     * @param width
+     * @param width 视频输出宽度。取值范围：[128, 4096] 整数。单位为 px
+未设置时，若 height 也未设置值，则 width 和 height 与原视频保持一致；若 height 设置值，则 width 按照原视频的分辨率等比缩放
+
+     * @return VideoStreamSettings
      */
     public VideoStreamSettings width(Integer width) {
         this.width = width;
         return this;
     }
 
+
     /**
      * set 视频输出高度。取值范围：[128, 4096] 整数。单位为 px
 未设置时，若 width 也未设置值，则 width 和 height 与原视频保持一致；若 width 设置值，则 height 按照原视频的分辨率等比缩放
 
      *
-     * @param height
+     * @param height 视频输出高度。取值范围：[128, 4096] 整数。单位为 px
+未设置时，若 width 也未设置值，则 width 和 height 与原视频保持一致；若 width 设置值，则 height 按照原视频的分辨率等比缩放
+
+     * @return VideoStreamSettings
      */
     public VideoStreamSettings height(Integer height) {
         this.height = height;

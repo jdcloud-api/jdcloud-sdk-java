@@ -42,6 +42,7 @@ public class ContainerSettings  implements java.io.Serializable {
     private String format;
 
 
+
     /**
      * get 输出的音视频文件封装格式。取值范围：mp4、hls、flv
 
@@ -63,11 +64,14 @@ public class ContainerSettings  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 输出的音视频文件封装格式。取值范围：mp4、hls、flv
 
      *
-     * @param format
+     * @param format 输出的音视频文件封装格式。取值范围：mp4、hls、flv
+
+     * @return ContainerSettings
      */
     public ContainerSettings format(String format) {
         this.format = format;

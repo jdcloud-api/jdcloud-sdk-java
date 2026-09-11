@@ -99,6 +99,12 @@ public class ModifySnapshotTemplateResult extends JdcloudResult implements java.
      */
     private String updateTime;
 
+    /**
+     * configData
+     */
+    private String configData;
+
+
 
     /**
      * get 模板ID
@@ -118,6 +124,7 @@ public class ModifySnapshotTemplateResult extends JdcloudResult implements java.
         this.templateId = templateId;
     }
 
+
     /**
      * get 模板标题。长度不超过 128 个字节。UTF-8 编码。
      *
@@ -135,6 +142,7 @@ public class ModifySnapshotTemplateResult extends JdcloudResult implements java.
     public void setTitle(String title) {
         this.title = title;
     }
+
 
     /**
      * get 截图起始时间，单位：秒
@@ -154,6 +162,7 @@ public class ModifySnapshotTemplateResult extends JdcloudResult implements java.
         this.startTime = startTime;
     }
 
+
     /**
      * get 截图帧类型。
      *
@@ -171,6 +180,7 @@ public class ModifySnapshotTemplateResult extends JdcloudResult implements java.
     public void setFrameType(String frameType) {
         this.frameType = frameType;
     }
+
 
     /**
      * get 截图格式。取值范围：jpg、png
@@ -190,6 +200,7 @@ public class ModifySnapshotTemplateResult extends JdcloudResult implements java.
         this.format = format;
     }
 
+
     /**
      * get 截图数量
      *
@@ -207,6 +218,7 @@ public class ModifySnapshotTemplateResult extends JdcloudResult implements java.
     public void setNumber(Integer number) {
         this.number = number;
     }
+
 
     /**
      * get 截图间隔
@@ -226,6 +238,7 @@ public class ModifySnapshotTemplateResult extends JdcloudResult implements java.
         this.interval = interval;
     }
 
+
     /**
      * get 截图宽度
      *
@@ -243,6 +256,7 @@ public class ModifySnapshotTemplateResult extends JdcloudResult implements java.
     public void setWidth(Integer width) {
         this.width = width;
     }
+
 
     /**
      * get 截图高度
@@ -262,6 +276,7 @@ public class ModifySnapshotTemplateResult extends JdcloudResult implements java.
         this.height = height;
     }
 
+
     /**
      * get 填充方式
      *
@@ -279,6 +294,7 @@ public class ModifySnapshotTemplateResult extends JdcloudResult implements java.
     public void setFillType(String fillType) {
         this.fillType = fillType;
     }
+
 
     /**
      * get 雪碧图配置
@@ -298,6 +314,7 @@ public class ModifySnapshotTemplateResult extends JdcloudResult implements java.
         this.spriteConfig = spriteConfig;
     }
 
+
     /**
      * get 创建时间
      *
@@ -315,6 +332,7 @@ public class ModifySnapshotTemplateResult extends JdcloudResult implements java.
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 修改时间
@@ -336,132 +354,189 @@ public class ModifySnapshotTemplateResult extends JdcloudResult implements java.
 
 
     /**
+     * get configData
+     *
+     * @return
+     */
+    public String getConfigData() {
+        return configData;
+    }
+
+    /**
+     * set configData
+     *
+     * @param configData
+     */
+    public void setConfigData(String configData) {
+        this.configData = configData;
+    }
+
+
+
+    /**
      * set 模板ID
      *
-     * @param templateId
+     * @param templateId 模板ID
+     * @return ModifySnapshotTemplateResult
      */
     public ModifySnapshotTemplateResult templateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
 
+
     /**
      * set 模板标题。长度不超过 128 个字节。UTF-8 编码。
      *
-     * @param title
+     * @param title 模板标题。长度不超过 128 个字节。UTF-8 编码。
+     * @return ModifySnapshotTemplateResult
      */
     public ModifySnapshotTemplateResult title(String title) {
         this.title = title;
         return this;
     }
 
+
     /**
      * set 截图起始时间，单位：秒
      *
-     * @param startTime
+     * @param startTime 截图起始时间，单位：秒
+     * @return ModifySnapshotTemplateResult
      */
     public ModifySnapshotTemplateResult startTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
 
+
     /**
      * set 截图帧类型。
      *
-     * @param frameType
+     * @param frameType 截图帧类型。
+     * @return ModifySnapshotTemplateResult
      */
     public ModifySnapshotTemplateResult frameType(String frameType) {
         this.frameType = frameType;
         return this;
     }
 
+
     /**
      * set 截图格式。取值范围：jpg、png
      *
-     * @param format
+     * @param format 截图格式。取值范围：jpg、png
+     * @return ModifySnapshotTemplateResult
      */
     public ModifySnapshotTemplateResult format(String format) {
         this.format = format;
         return this;
     }
 
+
     /**
      * set 截图数量
      *
-     * @param number
+     * @param number 截图数量
+     * @return ModifySnapshotTemplateResult
      */
     public ModifySnapshotTemplateResult number(Integer number) {
         this.number = number;
         return this;
     }
 
+
     /**
      * set 截图间隔
      *
-     * @param interval
+     * @param interval 截图间隔
+     * @return ModifySnapshotTemplateResult
      */
     public ModifySnapshotTemplateResult interval(Integer interval) {
         this.interval = interval;
         return this;
     }
 
+
     /**
      * set 截图宽度
      *
-     * @param width
+     * @param width 截图宽度
+     * @return ModifySnapshotTemplateResult
      */
     public ModifySnapshotTemplateResult width(Integer width) {
         this.width = width;
         return this;
     }
 
+
     /**
      * set 截图高度
      *
-     * @param height
+     * @param height 截图高度
+     * @return ModifySnapshotTemplateResult
      */
     public ModifySnapshotTemplateResult height(Integer height) {
         this.height = height;
         return this;
     }
 
+
     /**
      * set 填充方式
      *
-     * @param fillType
+     * @param fillType 填充方式
+     * @return ModifySnapshotTemplateResult
      */
     public ModifySnapshotTemplateResult fillType(String fillType) {
         this.fillType = fillType;
         return this;
     }
 
+
     /**
      * set 雪碧图配置
      *
-     * @param spriteConfig
+     * @param spriteConfig 雪碧图配置
+     * @return ModifySnapshotTemplateResult
      */
     public ModifySnapshotTemplateResult spriteConfig(SpriteConfig spriteConfig) {
         this.spriteConfig = spriteConfig;
         return this;
     }
 
+
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return ModifySnapshotTemplateResult
      */
     public ModifySnapshotTemplateResult createTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
 
+
     /**
      * set 修改时间
      *
-     * @param updateTime
+     * @param updateTime 修改时间
+     * @return ModifySnapshotTemplateResult
      */
     public ModifySnapshotTemplateResult updateTime(String updateTime) {
         this.updateTime = updateTime;
+        return this;
+    }
+
+
+    /**
+     * set configData
+     *
+     * @param configData 
+     * @return ModifySnapshotTemplateResult
+     */
+    public ModifySnapshotTemplateResult configData(String configData) {
+        this.configData = configData;
         return this;
     }
 

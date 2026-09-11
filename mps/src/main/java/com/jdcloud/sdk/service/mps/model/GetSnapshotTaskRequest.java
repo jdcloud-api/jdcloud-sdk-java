@@ -42,6 +42,7 @@ public class GetSnapshotTaskRequest extends JdcloudRequest implements java.io.Se
     private String taskId;
 
 
+
     /**
      * get 任务ID，路径参数
      *
@@ -61,10 +62,12 @@ public class GetSnapshotTaskRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 任务ID，路径参数
      *
-     * @param taskId
+     * @param taskId 任务ID，路径参数
+     * @return GetSnapshotTaskRequest
      */
     public GetSnapshotTaskRequest taskId(String taskId) {
         this.taskId = taskId;

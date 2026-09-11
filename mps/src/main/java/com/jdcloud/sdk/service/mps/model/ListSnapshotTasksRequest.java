@@ -55,6 +55,7 @@ public class ListSnapshotTasksRequest extends JdcloudRequest implements java.io.
     /**
      * filters
      */
+    
     private List<Filter> filters;
 
 
@@ -76,6 +77,7 @@ public class ListSnapshotTasksRequest extends JdcloudRequest implements java.io.
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认值为 10；取值范围 [10, 100]
      *
@@ -94,54 +96,62 @@ public class ListSnapshotTasksRequest extends JdcloudRequest implements java.io.
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get filters
-     *
-     * @return
-     */
+    * get filters
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set filters
-     *
-     * @param filters
-     */
+    * set filters
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
 
+
     /**
      * set 页码；默认值为 1
      *
-     * @param pageNumber
+     * @param pageNumber 页码；默认值为 1
+     * @return ListSnapshotTasksRequest
      */
     public ListSnapshotTasksRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 分页大小；默认值为 10；取值范围 [10, 100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小；默认值为 10；取值范围 [10, 100]
+     * @return ListSnapshotTasksRequest
      */
     public ListSnapshotTasksRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
+
     /**
-     * set filters
-     *
-     * @param filters
-     */
+    * set filters
+    *
+    * @param filters 
+    * @return ListSnapshotTasksRequest
+    */
     public ListSnapshotTasksRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
 
     /**
@@ -155,5 +165,4 @@ public class ListSnapshotTasksRequest extends JdcloudRequest implements java.io.
         }
         this.filters.add(filter);
     }
-
 }

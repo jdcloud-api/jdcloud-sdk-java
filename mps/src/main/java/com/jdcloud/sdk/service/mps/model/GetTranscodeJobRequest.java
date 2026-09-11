@@ -43,6 +43,7 @@ public class GetTranscodeJobRequest extends JdcloudRequest implements java.io.Se
     private String jobId;
 
 
+
     /**
      * get 转码作业ID
      *
@@ -62,10 +63,12 @@ public class GetTranscodeJobRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 转码作业ID
      *
-     * @param jobId
+     * @param jobId 转码作业ID
+     * @return GetTranscodeJobRequest
      */
     public GetTranscodeJobRequest jobId(String jobId) {
         this.jobId = jobId;

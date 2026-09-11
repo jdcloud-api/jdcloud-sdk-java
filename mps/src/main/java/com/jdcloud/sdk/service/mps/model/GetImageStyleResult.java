@@ -84,6 +84,7 @@ public class GetImageStyleResult extends JdcloudResult implements java.io.Serial
     private String createdTime;
 
 
+
     /**
      * get 图片样式id(readOnly)
      *
@@ -101,6 +102,7 @@ public class GetImageStyleResult extends JdcloudResult implements java.io.Serial
     public void setId(Long id) {
         this.id = id;
     }
+
 
     /**
      * get 用户id(readOnly)
@@ -120,6 +122,7 @@ public class GetImageStyleResult extends JdcloudResult implements java.io.Serial
         this.userId = userId;
     }
 
+
     /**
      * get 图片样式名称
      *
@@ -137,6 +140,7 @@ public class GetImageStyleResult extends JdcloudResult implements java.io.Serial
     public void setStyleName(String styleName) {
         this.styleName = styleName;
     }
+
 
     /**
      * get 图片样式参数
@@ -156,6 +160,7 @@ public class GetImageStyleResult extends JdcloudResult implements java.io.Serial
         this.params = params;
     }
 
+
     /**
      * get 图片样式参数别名
      *
@@ -173,6 +178,7 @@ public class GetImageStyleResult extends JdcloudResult implements java.io.Serial
     public void setParamAlias(String paramAlias) {
         this.paramAlias = paramAlias;
     }
+
 
     /**
      * get 所属区域(readOnly)
@@ -192,6 +198,7 @@ public class GetImageStyleResult extends JdcloudResult implements java.io.Serial
         this.regionId = regionId;
     }
 
+
     /**
      * get 所属Bucket(readOnly)
      *
@@ -209,6 +216,7 @@ public class GetImageStyleResult extends JdcloudResult implements java.io.Serial
     public void setBucketName(String bucketName) {
         this.bucketName = bucketName;
     }
+
 
     /**
      * get 图片样式状态(readOnly)
@@ -228,6 +236,7 @@ public class GetImageStyleResult extends JdcloudResult implements java.io.Serial
         this.status = status;
     }
 
+
     /**
      * get 修改时间(readOnly)
      *
@@ -245,6 +254,7 @@ public class GetImageStyleResult extends JdcloudResult implements java.io.Serial
     public void setModifyTime(String modifyTime) {
         this.modifyTime = modifyTime;
     }
+
 
     /**
      * get 创建时间(readOnly)
@@ -265,100 +275,120 @@ public class GetImageStyleResult extends JdcloudResult implements java.io.Serial
     }
 
 
+
     /**
      * set 图片样式id(readOnly)
      *
-     * @param id
+     * @param id 图片样式id(readOnly)
+     * @return GetImageStyleResult
      */
     public GetImageStyleResult id(Long id) {
         this.id = id;
         return this;
     }
 
+
     /**
      * set 用户id(readOnly)
      *
-     * @param userId
+     * @param userId 用户id(readOnly)
+     * @return GetImageStyleResult
      */
     public GetImageStyleResult userId(String userId) {
         this.userId = userId;
         return this;
     }
 
+
     /**
      * set 图片样式名称
      *
-     * @param styleName
+     * @param styleName 图片样式名称
+     * @return GetImageStyleResult
      */
     public GetImageStyleResult styleName(String styleName) {
         this.styleName = styleName;
         return this;
     }
 
+
     /**
      * set 图片样式参数
      *
-     * @param params
+     * @param params 图片样式参数
+     * @return GetImageStyleResult
      */
     public GetImageStyleResult params(String params) {
         this.params = params;
         return this;
     }
 
+
     /**
      * set 图片样式参数别名
      *
-     * @param paramAlias
+     * @param paramAlias 图片样式参数别名
+     * @return GetImageStyleResult
      */
     public GetImageStyleResult paramAlias(String paramAlias) {
         this.paramAlias = paramAlias;
         return this;
     }
 
+
     /**
      * set 所属区域(readOnly)
      *
-     * @param regionId
+     * @param regionId 所属区域(readOnly)
+     * @return GetImageStyleResult
      */
     public GetImageStyleResult regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 所属Bucket(readOnly)
      *
-     * @param bucketName
+     * @param bucketName 所属Bucket(readOnly)
+     * @return GetImageStyleResult
      */
     public GetImageStyleResult bucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
     }
 
+
     /**
      * set 图片样式状态(readOnly)
      *
-     * @param status
+     * @param status 图片样式状态(readOnly)
+     * @return GetImageStyleResult
      */
     public GetImageStyleResult status(Integer status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 修改时间(readOnly)
      *
-     * @param modifyTime
+     * @param modifyTime 修改时间(readOnly)
+     * @return GetImageStyleResult
      */
     public GetImageStyleResult modifyTime(String modifyTime) {
         this.modifyTime = modifyTime;
         return this;
     }
 
+
     /**
      * set 创建时间(readOnly)
      *
-     * @param createdTime
+     * @param createdTime 创建时间(readOnly)
+     * @return GetImageStyleResult
      */
     public GetImageStyleResult createdTime(String createdTime) {
         this.createdTime = createdTime;

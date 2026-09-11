@@ -42,6 +42,7 @@ public class QuerySnapshotTaskResultRequest extends JdcloudRequest implements ja
     private String taskId;
 
 
+
     /**
      * get 任务ID，路径参数
      *
@@ -61,10 +62,12 @@ public class QuerySnapshotTaskResultRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 任务ID，路径参数
      *
-     * @param taskId
+     * @param taskId 任务ID，路径参数
+     * @return QuerySnapshotTaskResultRequest
      */
     public QuerySnapshotTaskResultRequest taskId(String taskId) {
         this.taskId = taskId;

@@ -60,6 +60,7 @@ public class SubmitSnapshotTaskRequestObject  implements java.io.Serializable {
     private Output spriteOutput;
 
 
+
     /**
      * get 截图模板ID
      *
@@ -77,6 +78,7 @@ public class SubmitSnapshotTaskRequestObject  implements java.io.Serializable {
     public void setTemplateId(String templateId) {
         this.templateId = templateId;
     }
+
 
     /**
      * get input
@@ -96,6 +98,7 @@ public class SubmitSnapshotTaskRequestObject  implements java.io.Serializable {
         this.input = input;
     }
 
+
     /**
      * get output
      *
@@ -113,6 +116,7 @@ public class SubmitSnapshotTaskRequestObject  implements java.io.Serializable {
     public void setOutput(Output output) {
         this.output = output;
     }
+
 
     /**
      * get spriteOutput
@@ -133,40 +137,48 @@ public class SubmitSnapshotTaskRequestObject  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 截图模板ID
      *
-     * @param templateId
+     * @param templateId 截图模板ID
+     * @return SubmitSnapshotTaskRequestObject
      */
     public SubmitSnapshotTaskRequestObject templateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
 
+
     /**
      * set input
      *
-     * @param input
+     * @param input 
+     * @return SubmitSnapshotTaskRequestObject
      */
     public SubmitSnapshotTaskRequestObject input(Input input) {
         this.input = input;
         return this;
     }
 
+
     /**
      * set output
      *
-     * @param output
+     * @param output 
+     * @return SubmitSnapshotTaskRequestObject
      */
     public SubmitSnapshotTaskRequestObject output(Output output) {
         this.output = output;
         return this;
     }
 
+
     /**
      * set spriteOutput
      *
-     * @param spriteOutput
+     * @param spriteOutput 
+     * @return SubmitSnapshotTaskRequestObject
      */
     public SubmitSnapshotTaskRequestObject spriteOutput(Output spriteOutput) {
         this.spriteOutput = spriteOutput;

@@ -40,37 +40,41 @@ public class StyleDelimiterConf  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> delimiters;
 
 
     /**
-     * get 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
-     *
-     * @return
-     */
+    * get 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
+    *
+    * @return
+    */
     public List<String> getDelimiters() {
         return delimiters;
     }
 
     /**
-     * set 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
-     *
-     * @param delimiters
-     */
+    * set 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
+    *
+    * @param delimiters
+    */
     public void setDelimiters(List<String> delimiters) {
         this.delimiters = delimiters;
     }
 
 
+
     /**
-     * set 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
-     *
-     * @param delimiters
-     */
+    * set 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
+    *
+    * @param delimiters 图片样式分隔符配置（JSON数组）；支持的分隔符包含：[&quot;-&quot;, &quot;_&quot;, &quot;/&quot;, &quot;!&quot;]
+    * @return StyleDelimiterConf
+    */
     public StyleDelimiterConf delimiters(List<String> delimiters) {
         this.delimiters = delimiters;
         return this;
     }
+
 
 
     /**
@@ -84,5 +88,4 @@ public class StyleDelimiterConf  implements java.io.Serializable {
         }
         this.delimiters.add(delimiter);
     }
-
 }

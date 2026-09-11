@@ -42,6 +42,7 @@ public class DeleteSnapshotTemplateRequest extends JdcloudRequest implements jav
     private String templateId;
 
 
+
     /**
      * get 模板ID
      *
@@ -61,10 +62,12 @@ public class DeleteSnapshotTemplateRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 模板ID
      *
-     * @param templateId
+     * @param templateId 模板ID
+     * @return DeleteSnapshotTemplateRequest
      */
     public DeleteSnapshotTemplateRequest templateId(String templateId) {
         this.templateId = templateId;

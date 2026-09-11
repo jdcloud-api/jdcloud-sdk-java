@@ -74,6 +74,7 @@ public class ListThumbnailTaskResult extends JdcloudResult implements java.io.Se
     /**
      * 返回的task列表 (readonly)
      */
+    
     private List<ThumbnailTask> taskList;
 
 
@@ -95,6 +96,7 @@ public class ListThumbnailTaskResult extends JdcloudResult implements java.io.Se
         this.status = status;
     }
 
+
     /**
      * get 查询开始时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’
      *
@@ -112,6 +114,7 @@ public class ListThumbnailTaskResult extends JdcloudResult implements java.io.Se
     public void setBegin(String begin) {
         this.begin = begin;
     }
+
 
     /**
      * get 查询结束时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’
@@ -131,6 +134,7 @@ public class ListThumbnailTaskResult extends JdcloudResult implements java.io.Se
         this.end = end;
     }
 
+
     /**
      * get 本次请求的marker, 标记查询的起始位置, 此处为taskID
      *
@@ -148,6 +152,7 @@ public class ListThumbnailTaskResult extends JdcloudResult implements java.io.Se
     public void setMarker(String marker) {
         this.marker = marker;
     }
+
 
     /**
      * get 本次请求返回的任务列表的最大元素个数, 有效值: [1-1000]，默认值: 1000
@@ -167,6 +172,7 @@ public class ListThumbnailTaskResult extends JdcloudResult implements java.io.Se
         this.limit = limit;
     }
 
+
     /**
      * get 获取下一页所需要传递的marker值(此处为taskID), 仅当isTruncated为true时(数据未全部返回)出现 (readonly)
      *
@@ -184,6 +190,7 @@ public class ListThumbnailTaskResult extends JdcloudResult implements java.io.Se
     public void setNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
     }
+
 
     /**
      * get 指明返回数据是否被截断. true表示本页后面还有数据, 即数据未全部返回; false表示已是最后一页, 即数据已全部返回 (readonly)
@@ -203,104 +210,122 @@ public class ListThumbnailTaskResult extends JdcloudResult implements java.io.Se
         this.truncated = truncated;
     }
 
+
     /**
-     * get 返回的task列表 (readonly)
-     *
-     * @return
-     */
+    * get 返回的task列表 (readonly)
+    *
+    * @return
+    */
     public List<ThumbnailTask> getTaskList() {
         return taskList;
     }
 
     /**
-     * set 返回的task列表 (readonly)
-     *
-     * @param taskList
-     */
+    * set 返回的task列表 (readonly)
+    *
+    * @param taskList
+    */
     public void setTaskList(List<ThumbnailTask> taskList) {
         this.taskList = taskList;
     }
 
 
+
     /**
      * set 状态 (SUCCESS, ERROR, PENDDING, RUNNING)
      *
-     * @param status
+     * @param status 状态 (SUCCESS, ERROR, PENDDING, RUNNING)
+     * @return ListThumbnailTaskResult
      */
     public ListThumbnailTaskResult status(String status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 查询开始时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’
      *
-     * @param begin
+     * @param begin 查询开始时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’
+     * @return ListThumbnailTaskResult
      */
     public ListThumbnailTaskResult begin(String begin) {
         this.begin = begin;
         return this;
     }
 
+
     /**
      * set 查询结束时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’
      *
-     * @param end
+     * @param end 查询结束时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’
+     * @return ListThumbnailTaskResult
      */
     public ListThumbnailTaskResult end(String end) {
         this.end = end;
         return this;
     }
 
+
     /**
      * set 本次请求的marker, 标记查询的起始位置, 此处为taskID
      *
-     * @param marker
+     * @param marker 本次请求的marker, 标记查询的起始位置, 此处为taskID
+     * @return ListThumbnailTaskResult
      */
     public ListThumbnailTaskResult marker(String marker) {
         this.marker = marker;
         return this;
     }
 
+
     /**
      * set 本次请求返回的任务列表的最大元素个数, 有效值: [1-1000]，默认值: 1000
      *
-     * @param limit
+     * @param limit 本次请求返回的任务列表的最大元素个数, 有效值: [1-1000]，默认值: 1000
+     * @return ListThumbnailTaskResult
      */
     public ListThumbnailTaskResult limit(Integer limit) {
         this.limit = limit;
         return this;
     }
 
+
     /**
      * set 获取下一页所需要传递的marker值(此处为taskID), 仅当isTruncated为true时(数据未全部返回)出现 (readonly)
      *
-     * @param nextMarker
+     * @param nextMarker 获取下一页所需要传递的marker值(此处为taskID), 仅当isTruncated为true时(数据未全部返回)出现 (readonly)
+     * @return ListThumbnailTaskResult
      */
     public ListThumbnailTaskResult nextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
 
+
     /**
      * set 指明返回数据是否被截断. true表示本页后面还有数据, 即数据未全部返回; false表示已是最后一页, 即数据已全部返回 (readonly)
      *
-     * @param truncated
+     * @param truncated 指明返回数据是否被截断. true表示本页后面还有数据, 即数据未全部返回; false表示已是最后一页, 即数据已全部返回 (readonly)
+     * @return ListThumbnailTaskResult
      */
     public ListThumbnailTaskResult truncated(Boolean truncated) {
         this.truncated = truncated;
         return this;
     }
 
+
     /**
-     * set 返回的task列表 (readonly)
-     *
-     * @param taskList
-     */
+    * set 返回的task列表 (readonly)
+    *
+    * @param taskList 返回的task列表 (readonly)
+    * @return ListThumbnailTaskResult
+    */
     public ListThumbnailTaskResult taskList(List<ThumbnailTask> taskList) {
         this.taskList = taskList;
         return this;
     }
+
 
 
     /**
@@ -314,5 +339,4 @@ public class ListThumbnailTaskResult extends JdcloudResult implements java.io.Se
         }
         this.taskList.add(taskList);
     }
-
 }

@@ -92,6 +92,7 @@ public class ModifyTranscodeTemplateRequest extends JdcloudRequest implements ja
     private Long templateId;
 
 
+
     /**
      * get 模板标题。长度不超过 128 个字符，最少 2 个字符。UTF-8 编码。
 
@@ -112,6 +113,7 @@ public class ModifyTranscodeTemplateRequest extends JdcloudRequest implements ja
         this.title = title;
     }
 
+
     /**
      * get 视频参数配置
      *
@@ -129,6 +131,7 @@ public class ModifyTranscodeTemplateRequest extends JdcloudRequest implements ja
     public void setVideo(VideoStreamSettings video) {
         this.video = video;
     }
+
 
     /**
      * get 音频参数配置
@@ -148,6 +151,7 @@ public class ModifyTranscodeTemplateRequest extends JdcloudRequest implements ja
         this.audio = audio;
     }
 
+
     /**
      * get 封装容器配置
      *
@@ -166,6 +170,7 @@ public class ModifyTranscodeTemplateRequest extends JdcloudRequest implements ja
         this.container = container;
     }
 
+
     /**
      * get 加密配置
      *
@@ -183,6 +188,7 @@ public class ModifyTranscodeTemplateRequest extends JdcloudRequest implements ja
     public void setEncryption(EncryptionSettings encryption) {
         this.encryption = encryption;
     }
+
 
     /**
      * get 清晰度规格标记。取值范围：
@@ -214,6 +220,7 @@ public class ModifyTranscodeTemplateRequest extends JdcloudRequest implements ja
         this.definition = definition;
     }
 
+
     /**
      * get 转码方式。取值范围：
   normal - 普通转码
@@ -240,6 +247,7 @@ public class ModifyTranscodeTemplateRequest extends JdcloudRequest implements ja
         this.transcodeType = transcodeType;
     }
 
+
     /**
      * get 模板ID
      *
@@ -259,56 +267,68 @@ public class ModifyTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 模板标题。长度不超过 128 个字符，最少 2 个字符。UTF-8 编码。
 
      *
-     * @param title
+     * @param title 模板标题。长度不超过 128 个字符，最少 2 个字符。UTF-8 编码。
+
+     * @return ModifyTranscodeTemplateRequest
      */
     public ModifyTranscodeTemplateRequest title(String title) {
         this.title = title;
         return this;
     }
 
+
     /**
      * set 视频参数配置
      *
-     * @param video
+     * @param video 视频参数配置
+     * @return ModifyTranscodeTemplateRequest
      */
     public ModifyTranscodeTemplateRequest video(VideoStreamSettings video) {
         this.video = video;
         return this;
     }
 
+
     /**
      * set 音频参数配置
      *
-     * @param audio
+     * @param audio 音频参数配置
+     * @return ModifyTranscodeTemplateRequest
      */
     public ModifyTranscodeTemplateRequest audio(AudioStreamSettings audio) {
         this.audio = audio;
         return this;
     }
 
+
     /**
      * set 封装容器配置
      *
-     * @param container
+     * @param container 封装容器配置
+     * @return ModifyTranscodeTemplateRequest
      */
     public ModifyTranscodeTemplateRequest container(ContainerSettings container) {
         this.container = container;
         return this;
     }
 
+
     /**
      * set 加密配置
      *
-     * @param encryption
+     * @param encryption 加密配置
+     * @return ModifyTranscodeTemplateRequest
      */
     public ModifyTranscodeTemplateRequest encryption(EncryptionSettings encryption) {
         this.encryption = encryption;
         return this;
     }
+
 
     /**
      * set 清晰度规格标记。取值范围：
@@ -319,12 +339,20 @@ public class ModifyTranscodeTemplateRequest extends JdcloudRequest implements ja
   4K
 
      *
-     * @param definition
+     * @param definition 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
+     * @return ModifyTranscodeTemplateRequest
      */
     public ModifyTranscodeTemplateRequest definition(String definition) {
         this.definition = definition;
         return this;
     }
+
 
     /**
      * set 转码方式。取值范围：
@@ -333,17 +361,24 @@ public class ModifyTranscodeTemplateRequest extends JdcloudRequest implements ja
   jdchs - 极速转码
 
      *
-     * @param transcodeType
+     * @param transcodeType 转码方式。取值范围：
+  normal - 普通转码
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     * @return ModifyTranscodeTemplateRequest
      */
     public ModifyTranscodeTemplateRequest transcodeType(String transcodeType) {
         this.transcodeType = transcodeType;
         return this;
     }
 
+
     /**
      * set 模板ID
      *
-     * @param templateId
+     * @param templateId 模板ID
+     * @return ModifyTranscodeTemplateRequest
      */
     public ModifyTranscodeTemplateRequest templateId(Long templateId) {
         this.templateId = templateId;

@@ -49,6 +49,7 @@ public class SpriteResult extends JdcloudResult implements java.io.Serializable 
     private String objectKey;
 
 
+
     /**
      * get 雪碧图输出区域
      *
@@ -67,6 +68,7 @@ public class SpriteResult extends JdcloudResult implements java.io.Serializable 
         this.region = region;
     }
 
+
     /**
      * get 雪碧图输出空间
      *
@@ -84,6 +86,7 @@ public class SpriteResult extends JdcloudResult implements java.io.Serializable 
     public void setBucket(String bucket) {
         this.bucket = bucket;
     }
+
 
     /**
      * get 雪碧图输出对象
@@ -104,30 +107,36 @@ public class SpriteResult extends JdcloudResult implements java.io.Serializable 
     }
 
 
+
     /**
      * set 雪碧图输出区域
      *
-     * @param region
+     * @param region 雪碧图输出区域
+     * @return SpriteResult
      */
     public SpriteResult region(String region) {
         this.region = region;
         return this;
     }
 
+
     /**
      * set 雪碧图输出空间
      *
-     * @param bucket
+     * @param bucket 雪碧图输出空间
+     * @return SpriteResult
      */
     public SpriteResult bucket(String bucket) {
         this.bucket = bucket;
         return this;
     }
 
+
     /**
      * set 雪碧图输出对象
      *
-     * @param objectKey
+     * @param objectKey 雪碧图输出对象
+     * @return SpriteResult
      */
     public SpriteResult objectKey(String objectKey) {
         this.objectKey = objectKey;

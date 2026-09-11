@@ -34,108 +34,291 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.mps.model.QueryCallbackSettingsRequest;
 import com.jdcloud.sdk.service.mps.model.QueryCallbackSettingsResponse;
 import com.jdcloud.sdk.service.mps.client.QueryCallbackSettingsExecutor;
+import com.jdcloud.sdk.service.mps.model.DescribeKnowledgeBaseFileDownloadUrlRequest;
+import com.jdcloud.sdk.service.mps.model.DescribeKnowledgeBaseFileDownloadUrlResponse;
+import com.jdcloud.sdk.service.mps.client.DescribeKnowledgeBaseFileDownloadUrlExecutor;
+import com.jdcloud.sdk.service.mps.model.CreateVeditProjectRequest;
+import com.jdcloud.sdk.service.mps.model.CreateVeditProjectResponse;
+import com.jdcloud.sdk.service.mps.client.CreateVeditProjectExecutor;
 import com.jdcloud.sdk.service.mps.model.GetSnapshotTemplateRequest;
 import com.jdcloud.sdk.service.mps.model.GetSnapshotTemplateResponse;
 import com.jdcloud.sdk.service.mps.client.GetSnapshotTemplateExecutor;
-import com.jdcloud.sdk.service.mps.model.ListTranscodeJobsRequest;
-import com.jdcloud.sdk.service.mps.model.ListTranscodeJobsResponse;
-import com.jdcloud.sdk.service.mps.client.ListTranscodeJobsExecutor;
 import com.jdcloud.sdk.service.mps.model.SubmitTranscodeJobRequest;
 import com.jdcloud.sdk.service.mps.model.SubmitTranscodeJobResponse;
 import com.jdcloud.sdk.service.mps.client.SubmitTranscodeJobExecutor;
 import com.jdcloud.sdk.service.mps.model.ListSnapshotTemplatesRequest;
 import com.jdcloud.sdk.service.mps.model.ListSnapshotTemplatesResponse;
 import com.jdcloud.sdk.service.mps.client.ListSnapshotTemplatesExecutor;
+import com.jdcloud.sdk.service.mps.model.CreateWatermarkTemplateRequest;
+import com.jdcloud.sdk.service.mps.model.CreateWatermarkTemplateResponse;
+import com.jdcloud.sdk.service.mps.client.CreateWatermarkTemplateExecutor;
+import com.jdcloud.sdk.service.mps.model.SaveMyMinutesTextRequest;
+import com.jdcloud.sdk.service.mps.model.SaveMyMinutesTextResponse;
+import com.jdcloud.sdk.service.mps.client.SaveMyMinutesTextExecutor;
+import com.jdcloud.sdk.service.mps.model.CreateProcessDefinitionRequest;
+import com.jdcloud.sdk.service.mps.model.CreateProcessDefinitionResponse;
+import com.jdcloud.sdk.service.mps.client.CreateProcessDefinitionExecutor;
 import com.jdcloud.sdk.service.mps.model.DeleteSnapshotTaskRequest;
 import com.jdcloud.sdk.service.mps.model.DeleteSnapshotTaskResponse;
 import com.jdcloud.sdk.service.mps.client.DeleteSnapshotTaskExecutor;
 import com.jdcloud.sdk.service.mps.model.GetTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.mps.model.GetTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.mps.client.GetTranscodeTemplateExecutor;
-import com.jdcloud.sdk.service.mps.model.ListSnapshotTasksRequest;
-import com.jdcloud.sdk.service.mps.model.ListSnapshotTasksResponse;
-import com.jdcloud.sdk.service.mps.client.ListSnapshotTasksExecutor;
-import com.jdcloud.sdk.service.mps.model.CreateSnapshotTemplateRequest;
-import com.jdcloud.sdk.service.mps.model.CreateSnapshotTemplateResponse;
-import com.jdcloud.sdk.service.mps.client.CreateSnapshotTemplateExecutor;
+import com.jdcloud.sdk.service.mps.model.UpdateASRTaskHotWordsRequest;
+import com.jdcloud.sdk.service.mps.model.UpdateASRTaskHotWordsResponse;
+import com.jdcloud.sdk.service.mps.client.UpdateASRTaskHotWordsExecutor;
 import com.jdcloud.sdk.service.mps.model.CreateTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.mps.model.CreateTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.mps.client.CreateTranscodeTemplateExecutor;
-import com.jdcloud.sdk.service.mps.model.CreateThumbnailTaskRequest;
-import com.jdcloud.sdk.service.mps.model.CreateThumbnailTaskResponse;
-import com.jdcloud.sdk.service.mps.client.CreateThumbnailTaskExecutor;
 import com.jdcloud.sdk.service.mps.model.GetTranscodeJobRequest;
 import com.jdcloud.sdk.service.mps.model.GetTranscodeJobResponse;
 import com.jdcloud.sdk.service.mps.client.GetTranscodeJobExecutor;
+import com.jdcloud.sdk.service.mps.model.UpdateAsrTaskRequest;
+import com.jdcloud.sdk.service.mps.model.UpdateAsrTaskResponse;
+import com.jdcloud.sdk.service.mps.client.UpdateAsrTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.SaveASRMinutesTextRequest;
+import com.jdcloud.sdk.service.mps.model.SaveASRMinutesTextResponse;
+import com.jdcloud.sdk.service.mps.client.SaveASRMinutesTextExecutor;
 import com.jdcloud.sdk.service.mps.model.DeleteStyleDelimiterRequest;
 import com.jdcloud.sdk.service.mps.model.DeleteStyleDelimiterResponse;
 import com.jdcloud.sdk.service.mps.client.DeleteStyleDelimiterExecutor;
 import com.jdcloud.sdk.service.mps.model.ModifyTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.mps.model.ModifyTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.mps.client.ModifyTranscodeTemplateExecutor;
+import com.jdcloud.sdk.service.mps.model.UpdateVeditProjectRequest;
+import com.jdcloud.sdk.service.mps.model.UpdateVeditProjectResponse;
+import com.jdcloud.sdk.service.mps.client.UpdateVeditProjectExecutor;
+import com.jdcloud.sdk.service.mps.model.UpdateASRTaskHotWordStatusRequest;
+import com.jdcloud.sdk.service.mps.model.UpdateASRTaskHotWordStatusResponse;
+import com.jdcloud.sdk.service.mps.client.UpdateASRTaskHotWordStatusExecutor;
+import com.jdcloud.sdk.service.mps.model.DeleteKnowledgeBaseFileRecordRequest;
+import com.jdcloud.sdk.service.mps.model.DeleteKnowledgeBaseFileRecordResponse;
+import com.jdcloud.sdk.service.mps.client.DeleteKnowledgeBaseFileRecordExecutor;
+import com.jdcloud.sdk.service.mps.model.CreateVeditJobRequest;
+import com.jdcloud.sdk.service.mps.model.CreateVeditJobResponse;
+import com.jdcloud.sdk.service.mps.client.CreateVeditJobExecutor;
+import com.jdcloud.sdk.service.mps.model.GetWatermarkTemplateRequest;
+import com.jdcloud.sdk.service.mps.model.GetWatermarkTemplateResponse;
+import com.jdcloud.sdk.service.mps.client.GetWatermarkTemplateExecutor;
 import com.jdcloud.sdk.service.mps.model.ModifySnapshotTemplateRequest;
 import com.jdcloud.sdk.service.mps.model.ModifySnapshotTemplateResponse;
 import com.jdcloud.sdk.service.mps.client.ModifySnapshotTemplateExecutor;
+import com.jdcloud.sdk.service.mps.model.CreateNonRealtimeASRTasksRequest;
+import com.jdcloud.sdk.service.mps.model.CreateNonRealtimeASRTasksResponse;
+import com.jdcloud.sdk.service.mps.client.CreateNonRealtimeASRTasksExecutor;
+import com.jdcloud.sdk.service.mps.model.DeleteWatermarkTemplateRequest;
+import com.jdcloud.sdk.service.mps.model.DeleteWatermarkTemplateResponse;
+import com.jdcloud.sdk.service.mps.client.DeleteWatermarkTemplateExecutor;
+import com.jdcloud.sdk.service.mps.model.ListWatermarkTemplatesRequest;
+import com.jdcloud.sdk.service.mps.model.ListWatermarkTemplatesResponse;
+import com.jdcloud.sdk.service.mps.client.ListWatermarkTemplatesExecutor;
 import com.jdcloud.sdk.service.mps.model.CreateImageStyleRequest;
 import com.jdcloud.sdk.service.mps.model.CreateImageStyleResponse;
 import com.jdcloud.sdk.service.mps.client.CreateImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.DescribeASRTaskHotWordsRequest;
+import com.jdcloud.sdk.service.mps.model.DescribeASRTaskHotWordsResponse;
+import com.jdcloud.sdk.service.mps.client.DescribeASRTaskHotWordsExecutor;
 import com.jdcloud.sdk.service.mps.model.UpdateTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.mps.model.UpdateTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.mps.client.UpdateTranscodeTemplateExecutor;
 import com.jdcloud.sdk.service.mps.model.ListImageStyleRequest;
 import com.jdcloud.sdk.service.mps.model.ListImageStyleResponse;
 import com.jdcloud.sdk.service.mps.client.ListImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.GenTaskCodeListRequest;
+import com.jdcloud.sdk.service.mps.model.GenTaskCodeListResponse;
+import com.jdcloud.sdk.service.mps.client.GenTaskCodeListExecutor;
+import com.jdcloud.sdk.service.mps.model.SaveAsrTaskTemplateRequest;
+import com.jdcloud.sdk.service.mps.model.SaveAsrTaskTemplateResponse;
+import com.jdcloud.sdk.service.mps.client.SaveAsrTaskTemplateExecutor;
+import com.jdcloud.sdk.service.mps.model.DescribeASRTaskHotWordsDetailsRequest;
+import com.jdcloud.sdk.service.mps.model.DescribeASRTaskHotWordsDetailsResponse;
+import com.jdcloud.sdk.service.mps.client.DescribeASRTaskHotWordsDetailsExecutor;
 import com.jdcloud.sdk.service.mps.model.QuerySnapshotTaskResultRequest;
 import com.jdcloud.sdk.service.mps.model.QuerySnapshotTaskResultResponse;
 import com.jdcloud.sdk.service.mps.client.QuerySnapshotTaskResultExecutor;
-import com.jdcloud.sdk.service.mps.model.SetCallbackSettingsRequest;
-import com.jdcloud.sdk.service.mps.model.SetCallbackSettingsResponse;
-import com.jdcloud.sdk.service.mps.client.SetCallbackSettingsExecutor;
-import com.jdcloud.sdk.service.mps.model.GetImageStyleRequest;
-import com.jdcloud.sdk.service.mps.model.GetImageStyleResponse;
-import com.jdcloud.sdk.service.mps.client.GetImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.DescribeVoiceprintRequest;
+import com.jdcloud.sdk.service.mps.model.DescribeVoiceprintResponse;
+import com.jdcloud.sdk.service.mps.client.DescribeVoiceprintExecutor;
+import com.jdcloud.sdk.service.mps.model.DescribeASRMinutesTextRequest;
+import com.jdcloud.sdk.service.mps.model.DescribeASRMinutesTextResponse;
+import com.jdcloud.sdk.service.mps.client.DescribeASRMinutesTextExecutor;
+import com.jdcloud.sdk.service.mps.model.CreateGlobalHotWordsRequest;
+import com.jdcloud.sdk.service.mps.model.CreateGlobalHotWordsResponse;
+import com.jdcloud.sdk.service.mps.client.CreateGlobalHotWordsExecutor;
 import com.jdcloud.sdk.service.mps.model.SubmitSnapshotTaskRequest;
 import com.jdcloud.sdk.service.mps.model.SubmitSnapshotTaskResponse;
 import com.jdcloud.sdk.service.mps.client.SubmitSnapshotTaskExecutor;
 import com.jdcloud.sdk.service.mps.model.DeleteSnapshotTemplateRequest;
 import com.jdcloud.sdk.service.mps.model.DeleteSnapshotTemplateResponse;
 import com.jdcloud.sdk.service.mps.client.DeleteSnapshotTemplateExecutor;
-import com.jdcloud.sdk.service.mps.model.UpdateImageStyleRequest;
-import com.jdcloud.sdk.service.mps.model.UpdateImageStyleResponse;
-import com.jdcloud.sdk.service.mps.client.UpdateImageStyleExecutor;
 import com.jdcloud.sdk.service.mps.model.DeleteImageStyleRequest;
 import com.jdcloud.sdk.service.mps.model.DeleteImageStyleResponse;
 import com.jdcloud.sdk.service.mps.client.DeleteImageStyleExecutor;
-import com.jdcloud.sdk.service.mps.model.GetSnapshotTaskRequest;
-import com.jdcloud.sdk.service.mps.model.GetSnapshotTaskResponse;
-import com.jdcloud.sdk.service.mps.client.GetSnapshotTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.SaveVoiceprintRequest;
+import com.jdcloud.sdk.service.mps.model.SaveVoiceprintResponse;
+import com.jdcloud.sdk.service.mps.client.SaveVoiceprintExecutor;
+import com.jdcloud.sdk.service.mps.model.DeleteProcessDefinitionByCodeRequest;
+import com.jdcloud.sdk.service.mps.model.DeleteProcessDefinitionByCodeResponse;
+import com.jdcloud.sdk.service.mps.client.DeleteProcessDefinitionByCodeExecutor;
 import com.jdcloud.sdk.service.mps.model.CountImageStyleRequest;
 import com.jdcloud.sdk.service.mps.model.CountImageStyleResponse;
 import com.jdcloud.sdk.service.mps.client.CountImageStyleExecutor;
-import com.jdcloud.sdk.service.mps.model.ListThumbnailTaskRequest;
-import com.jdcloud.sdk.service.mps.model.ListThumbnailTaskResponse;
-import com.jdcloud.sdk.service.mps.client.ListThumbnailTaskExecutor;
-import com.jdcloud.sdk.service.mps.model.GetNotificationRequest;
-import com.jdcloud.sdk.service.mps.model.GetNotificationResponse;
-import com.jdcloud.sdk.service.mps.client.GetNotificationExecutor;
-import com.jdcloud.sdk.service.mps.model.GetThumbnailTaskRequest;
-import com.jdcloud.sdk.service.mps.model.GetThumbnailTaskResponse;
-import com.jdcloud.sdk.service.mps.client.GetThumbnailTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.QueryProcessInstanceByIdRequest;
+import com.jdcloud.sdk.service.mps.model.QueryProcessInstanceByIdResponse;
+import com.jdcloud.sdk.service.mps.client.QueryProcessInstanceByIdExecutor;
+import com.jdcloud.sdk.service.mps.model.UploadFileToKnowledgeBaseRequest;
+import com.jdcloud.sdk.service.mps.model.UploadFileToKnowledgeBaseResponse;
+import com.jdcloud.sdk.service.mps.client.UploadFileToKnowledgeBaseExecutor;
+import com.jdcloud.sdk.service.mps.model.GetVeditProjectRequest;
+import com.jdcloud.sdk.service.mps.model.GetVeditProjectResponse;
+import com.jdcloud.sdk.service.mps.client.GetVeditProjectExecutor;
+import com.jdcloud.sdk.service.mps.model.DescribeASRTaskTemplateRequest;
+import com.jdcloud.sdk.service.mps.model.DescribeASRTaskTemplateResponse;
+import com.jdcloud.sdk.service.mps.client.DescribeASRTaskTemplateExecutor;
+import com.jdcloud.sdk.service.mps.model.QueryProcessDefinitionListPagingRequest;
+import com.jdcloud.sdk.service.mps.model.QueryProcessDefinitionListPagingResponse;
+import com.jdcloud.sdk.service.mps.client.QueryProcessDefinitionListPagingExecutor;
+import com.jdcloud.sdk.service.mps.model.DeleteVeditProjectRequest;
+import com.jdcloud.sdk.service.mps.model.DeleteVeditProjectResponse;
+import com.jdcloud.sdk.service.mps.client.DeleteVeditProjectExecutor;
 import com.jdcloud.sdk.service.mps.model.SetNotificationRequest;
 import com.jdcloud.sdk.service.mps.model.SetNotificationResponse;
 import com.jdcloud.sdk.service.mps.client.SetNotificationExecutor;
 import com.jdcloud.sdk.service.mps.model.SetStyleDelimiterRequest;
 import com.jdcloud.sdk.service.mps.model.SetStyleDelimiterResponse;
 import com.jdcloud.sdk.service.mps.client.SetStyleDelimiterExecutor;
+import com.jdcloud.sdk.service.mps.model.CreateAiChatConvRequest;
+import com.jdcloud.sdk.service.mps.model.CreateAiChatConvResponse;
+import com.jdcloud.sdk.service.mps.client.CreateAiChatConvExecutor;
 import com.jdcloud.sdk.service.mps.model.GetStyleDelimiterRequest;
 import com.jdcloud.sdk.service.mps.model.GetStyleDelimiterResponse;
 import com.jdcloud.sdk.service.mps.client.GetStyleDelimiterExecutor;
+import com.jdcloud.sdk.service.mps.model.DeleteVoiceprintRequest;
+import com.jdcloud.sdk.service.mps.model.DeleteVoiceprintResponse;
+import com.jdcloud.sdk.service.mps.client.DeleteVoiceprintExecutor;
+import com.jdcloud.sdk.service.mps.model.DescribeASRTasksRequest;
+import com.jdcloud.sdk.service.mps.model.DescribeASRTasksResponse;
+import com.jdcloud.sdk.service.mps.client.DescribeASRTasksExecutor;
+import com.jdcloud.sdk.service.mps.model.QueryProcessDefinitionByCodeRequest;
+import com.jdcloud.sdk.service.mps.model.QueryProcessDefinitionByCodeResponse;
+import com.jdcloud.sdk.service.mps.client.QueryProcessDefinitionByCodeExecutor;
+import com.jdcloud.sdk.service.mps.model.UpdateKnowledgeBaseFileStatusRequest;
+import com.jdcloud.sdk.service.mps.model.UpdateKnowledgeBaseFileStatusResponse;
+import com.jdcloud.sdk.service.mps.client.UpdateKnowledgeBaseFileStatusExecutor;
+import com.jdcloud.sdk.service.mps.model.DescribeMyMinutesTextRequest;
+import com.jdcloud.sdk.service.mps.model.DescribeMyMinutesTextResponse;
+import com.jdcloud.sdk.service.mps.client.DescribeMyMinutesTextExecutor;
+import com.jdcloud.sdk.service.mps.model.CreateASRTaskHotWordsRequest;
+import com.jdcloud.sdk.service.mps.model.CreateASRTaskHotWordsResponse;
+import com.jdcloud.sdk.service.mps.client.CreateASRTaskHotWordsExecutor;
+import com.jdcloud.sdk.service.mps.model.ListTranscodeJobsRequest;
+import com.jdcloud.sdk.service.mps.model.ListTranscodeJobsResponse;
+import com.jdcloud.sdk.service.mps.client.ListTranscodeJobsExecutor;
+import com.jdcloud.sdk.service.mps.model.CreateRealtimeASRTaskRequest;
+import com.jdcloud.sdk.service.mps.model.CreateRealtimeASRTaskResponse;
+import com.jdcloud.sdk.service.mps.client.CreateRealtimeASRTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.DescribeKnowledgeBaseFileRecordsRequest;
+import com.jdcloud.sdk.service.mps.model.DescribeKnowledgeBaseFileRecordsResponse;
+import com.jdcloud.sdk.service.mps.client.DescribeKnowledgeBaseFileRecordsExecutor;
+import com.jdcloud.sdk.service.mps.model.DeleteProcessInstanceByIdRequest;
+import com.jdcloud.sdk.service.mps.model.DeleteProcessInstanceByIdResponse;
+import com.jdcloud.sdk.service.mps.client.DeleteProcessInstanceByIdExecutor;
+import com.jdcloud.sdk.service.mps.model.RegenerateASRTaskRequest;
+import com.jdcloud.sdk.service.mps.model.RegenerateASRTaskResponse;
+import com.jdcloud.sdk.service.mps.client.RegenerateASRTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.ListSnapshotTasksRequest;
+import com.jdcloud.sdk.service.mps.model.ListSnapshotTasksResponse;
+import com.jdcloud.sdk.service.mps.client.ListSnapshotTasksExecutor;
+import com.jdcloud.sdk.service.mps.model.CreateSnapshotTemplateRequest;
+import com.jdcloud.sdk.service.mps.model.CreateSnapshotTemplateResponse;
+import com.jdcloud.sdk.service.mps.client.CreateSnapshotTemplateExecutor;
+import com.jdcloud.sdk.service.mps.model.CreateThumbnailTaskRequest;
+import com.jdcloud.sdk.service.mps.model.CreateThumbnailTaskResponse;
+import com.jdcloud.sdk.service.mps.client.CreateThumbnailTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.BatchDeleteKnowledgeFileRecordRequest;
+import com.jdcloud.sdk.service.mps.model.BatchDeleteKnowledgeFileRecordResponse;
+import com.jdcloud.sdk.service.mps.client.BatchDeleteKnowledgeFileRecordExecutor;
+import com.jdcloud.sdk.service.mps.model.SubmitImageDetectionTaskRequest;
+import com.jdcloud.sdk.service.mps.model.SubmitImageDetectionTaskResponse;
+import com.jdcloud.sdk.service.mps.client.SubmitImageDetectionTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.SubmitVeditJobRequest;
+import com.jdcloud.sdk.service.mps.model.SubmitVeditJobResponse;
+import com.jdcloud.sdk.service.mps.client.SubmitVeditJobExecutor;
+import com.jdcloud.sdk.service.mps.model.DeleteASRTaskRequest;
+import com.jdcloud.sdk.service.mps.model.DeleteASRTaskResponse;
+import com.jdcloud.sdk.service.mps.client.DeleteASRTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.QueryProcessInstanceListRequest;
+import com.jdcloud.sdk.service.mps.model.QueryProcessInstanceListResponse;
+import com.jdcloud.sdk.service.mps.client.QueryProcessInstanceListExecutor;
+import com.jdcloud.sdk.service.mps.model.ImportKnowledgeByASRTaskRequest;
+import com.jdcloud.sdk.service.mps.model.ImportKnowledgeByASRTaskResponse;
+import com.jdcloud.sdk.service.mps.client.ImportKnowledgeByASRTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.ExportMinutesSummaryToWordRequest;
+import com.jdcloud.sdk.service.mps.model.ExportMinutesSummaryToWordResponse;
+import com.jdcloud.sdk.service.mps.client.ExportMinutesSummaryToWordExecutor;
+import com.jdcloud.sdk.service.mps.model.ExportMinutesTextToWordRequest;
+import com.jdcloud.sdk.service.mps.model.ExportMinutesTextToWordResponse;
+import com.jdcloud.sdk.service.mps.client.ExportMinutesTextToWordExecutor;
+import com.jdcloud.sdk.service.mps.model.BatchUploadFileToKnowledgeBaseRequest;
+import com.jdcloud.sdk.service.mps.model.BatchUploadFileToKnowledgeBaseResponse;
+import com.jdcloud.sdk.service.mps.client.BatchUploadFileToKnowledgeBaseExecutor;
+import com.jdcloud.sdk.service.mps.model.AccessRealtimeASRTaskTokenRequest;
+import com.jdcloud.sdk.service.mps.model.AccessRealtimeASRTaskTokenResponse;
+import com.jdcloud.sdk.service.mps.client.AccessRealtimeASRTaskTokenExecutor;
+import com.jdcloud.sdk.service.mps.model.SetCallbackSettingsRequest;
+import com.jdcloud.sdk.service.mps.model.SetCallbackSettingsResponse;
+import com.jdcloud.sdk.service.mps.client.SetCallbackSettingsExecutor;
+import com.jdcloud.sdk.service.mps.model.GetImageStyleRequest;
+import com.jdcloud.sdk.service.mps.model.GetImageStyleResponse;
+import com.jdcloud.sdk.service.mps.client.GetImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.DescribeASRTaskContentRequest;
+import com.jdcloud.sdk.service.mps.model.DescribeASRTaskContentResponse;
+import com.jdcloud.sdk.service.mps.client.DescribeASRTaskContentExecutor;
+import com.jdcloud.sdk.service.mps.model.DescribeVoiceprintsRequest;
+import com.jdcloud.sdk.service.mps.model.DescribeVoiceprintsResponse;
+import com.jdcloud.sdk.service.mps.client.DescribeVoiceprintsExecutor;
+import com.jdcloud.sdk.service.mps.model.UpdateImageStyleRequest;
+import com.jdcloud.sdk.service.mps.model.UpdateImageStyleResponse;
+import com.jdcloud.sdk.service.mps.client.UpdateImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.DeleteASRTaskHotWordsRequest;
+import com.jdcloud.sdk.service.mps.model.DeleteASRTaskHotWordsResponse;
+import com.jdcloud.sdk.service.mps.client.DeleteASRTaskHotWordsExecutor;
+import com.jdcloud.sdk.service.mps.model.QueryTaskListByProcessIdRequest;
+import com.jdcloud.sdk.service.mps.model.QueryTaskListByProcessIdResponse;
+import com.jdcloud.sdk.service.mps.client.QueryTaskListByProcessIdExecutor;
+import com.jdcloud.sdk.service.mps.model.GetSnapshotTaskRequest;
+import com.jdcloud.sdk.service.mps.model.GetSnapshotTaskResponse;
+import com.jdcloud.sdk.service.mps.client.GetSnapshotTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.ListThumbnailTaskRequest;
+import com.jdcloud.sdk.service.mps.model.ListThumbnailTaskResponse;
+import com.jdcloud.sdk.service.mps.client.ListThumbnailTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.GetNotificationRequest;
+import com.jdcloud.sdk.service.mps.model.GetNotificationResponse;
+import com.jdcloud.sdk.service.mps.client.GetNotificationExecutor;
+import com.jdcloud.sdk.service.mps.model.ExportAsrContentToWordRequest;
+import com.jdcloud.sdk.service.mps.model.ExportAsrContentToWordResponse;
+import com.jdcloud.sdk.service.mps.client.ExportAsrContentToWordExecutor;
+import com.jdcloud.sdk.service.mps.model.GetThumbnailTaskRequest;
+import com.jdcloud.sdk.service.mps.model.GetThumbnailTaskResponse;
+import com.jdcloud.sdk.service.mps.client.GetThumbnailTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.DescribeASRTaskRequest;
+import com.jdcloud.sdk.service.mps.model.DescribeASRTaskResponse;
+import com.jdcloud.sdk.service.mps.client.DescribeASRTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.StartProcessInstanceRequest;
+import com.jdcloud.sdk.service.mps.model.StartProcessInstanceResponse;
+import com.jdcloud.sdk.service.mps.client.StartProcessInstanceExecutor;
 import com.jdcloud.sdk.service.mps.model.ListTranscodeTemplatesRequest;
 import com.jdcloud.sdk.service.mps.model.ListTranscodeTemplatesResponse;
 import com.jdcloud.sdk.service.mps.client.ListTranscodeTemplatesExecutor;
+import com.jdcloud.sdk.service.mps.model.ListVeditProjectsRequest;
+import com.jdcloud.sdk.service.mps.model.ListVeditProjectsResponse;
+import com.jdcloud.sdk.service.mps.client.ListVeditProjectsExecutor;
 import com.jdcloud.sdk.service.mps.model.DeleteTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.mps.model.DeleteTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.mps.client.DeleteTranscodeTemplateExecutor;
+import com.jdcloud.sdk.service.mps.model.UpdateWatermarkTemplateRequest;
+import com.jdcloud.sdk.service.mps.model.UpdateWatermarkTemplateResponse;
+import com.jdcloud.sdk.service.mps.client.UpdateWatermarkTemplateExecutor;
 
 /**
  * mpsClient
@@ -144,7 +327,7 @@ public class MpsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.1";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "mps.jdcloud-api.com";
     public final static String ServiceName = "mps";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -198,6 +381,28 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
+     * 根据知识文件ID下载知识库文件
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeKnowledgeBaseFileDownloadUrlResponse describeKnowledgeBaseFileDownloadUrl(DescribeKnowledgeBaseFileDownloadUrlRequest request) throws JdcloudSdkException {
+        return new DescribeKnowledgeBaseFileDownloadUrlExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建视频剪辑工程
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateVeditProjectResponse createVeditProject(CreateVeditProjectRequest request) throws JdcloudSdkException {
+        return new CreateVeditProjectExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询截图模板
      *
      * @param request
@@ -206,20 +411,6 @@ public class MpsClient extends JdcloudClient {
      */
     public GetSnapshotTemplateResponse getSnapshotTemplate(GetSnapshotTemplateRequest request) throws JdcloudSdkException {
         return new GetSnapshotTemplateExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询转码作业列表。
-支持如下过滤器：
-- title[eq] 按照输入视频标题进行精确匹配
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ListTranscodeJobsResponse listTranscodeJobs(ListTranscodeJobsRequest request) throws JdcloudSdkException {
-        return new ListTranscodeJobsExecutor().client(this).execute(request);
     }
 
     /**
@@ -248,6 +439,39 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
+     * 创建水印模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateWatermarkTemplateResponse createWatermarkTemplate(CreateWatermarkTemplateRequest request) throws JdcloudSdkException {
+        return new CreateWatermarkTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 保存个人会议纪要文本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SaveMyMinutesTextResponse saveMyMinutesText(SaveMyMinutesTextRequest request) throws JdcloudSdkException {
+        return new SaveMyMinutesTextExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建流程定义
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateProcessDefinitionResponse createProcessDefinition(CreateProcessDefinitionRequest request) throws JdcloudSdkException {
+        return new CreateProcessDefinitionExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除视频截图任务。删除任务时，会同时删除任务相关的数据，如任务执行结果等
      *
      * @param request
@@ -267,6 +491,609 @@ public class MpsClient extends JdcloudClient {
      */
     public GetTranscodeTemplateResponse getTranscodeTemplate(GetTranscodeTemplateRequest request) throws JdcloudSdkException {
         return new GetTranscodeTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新已存在的ASR热词
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateASRTaskHotWordsResponse updateASRTaskHotWords(UpdateASRTaskHotWordsRequest request) throws JdcloudSdkException {
+        return new UpdateASRTaskHotWordsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建转码模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateTranscodeTemplateResponse createTranscodeTemplate(CreateTranscodeTemplateRequest request) throws JdcloudSdkException {
+        return new CreateTranscodeTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询单个转码作业信息。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTranscodeJobResponse getTranscodeJob(GetTranscodeJobRequest request) throws JdcloudSdkException {
+        return new GetTranscodeJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新已存在的ASR任务信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateAsrTaskResponse updateAsrTask(UpdateAsrTaskRequest request) throws JdcloudSdkException {
+        return new UpdateAsrTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 保存会议纪要文本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SaveASRMinutesTextResponse saveASRMinutesText(SaveASRMinutesTextRequest request) throws JdcloudSdkException {
+        return new SaveASRMinutesTextExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除bucket的图片样式分隔符配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteStyleDelimiterResponse deleteStyleDelimiter(DeleteStyleDelimiterRequest request) throws JdcloudSdkException {
+        return new DeleteStyleDelimiterExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 部分修改转码模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyTranscodeTemplateResponse modifyTranscodeTemplate(ModifyTranscodeTemplateRequest request) throws JdcloudSdkException {
+        return new ModifyTranscodeTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改视频剪辑工程信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateVeditProjectResponse updateVeditProject(UpdateVeditProjectRequest request) throws JdcloudSdkException {
+        return new UpdateVeditProjectExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新ASR热词的启用/禁用状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateASRTaskHotWordStatusResponse updateASRTaskHotWordStatus(UpdateASRTaskHotWordStatusRequest request) throws JdcloudSdkException {
+        return new UpdateASRTaskHotWordStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除指定的知识文件记录
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteKnowledgeBaseFileRecordResponse deleteKnowledgeBaseFileRecord(DeleteKnowledgeBaseFileRecordRequest request) throws JdcloudSdkException {
+        return new DeleteKnowledgeBaseFileRecordExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建视频剪辑作业
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateVeditJobResponse createVeditJob(CreateVeditJobRequest request) throws JdcloudSdkException {
+        return new CreateVeditJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询水印模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetWatermarkTemplateResponse getWatermarkTemplate(GetWatermarkTemplateRequest request) throws JdcloudSdkException {
+        return new GetWatermarkTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改截图模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifySnapshotTemplateResponse modifySnapshotTemplate(ModifySnapshotTemplateRequest request) throws JdcloudSdkException {
+        return new ModifySnapshotTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建非实时语音识别任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateNonRealtimeASRTasksResponse createNonRealtimeASRTasks(CreateNonRealtimeASRTasksRequest request) throws JdcloudSdkException {
+        return new CreateNonRealtimeASRTasksExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除水印模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteWatermarkTemplateResponse deleteWatermarkTemplate(DeleteWatermarkTemplateRequest request) throws JdcloudSdkException {
+        return new DeleteWatermarkTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询水印模板列表。
+允许通过条件过滤查询，支持的过滤字段如下：
+  - userPin[eq] 按用户PIN精确查询
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListWatermarkTemplatesResponse listWatermarkTemplates(ListWatermarkTemplatesRequest request) throws JdcloudSdkException {
+        return new ListWatermarkTemplatesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加图片样式
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateImageStyleResponse createImageStyle(CreateImageStyleRequest request) throws JdcloudSdkException {
+        return new CreateImageStyleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据热词ID查询ASR热词
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeASRTaskHotWordsResponse describeASRTaskHotWords(DescribeASRTaskHotWordsRequest request) throws JdcloudSdkException {
+        return new DescribeASRTaskHotWordsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 完整更新转码模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateTranscodeTemplateResponse updateTranscodeTemplate(UpdateTranscodeTemplateRequest request) throws JdcloudSdkException {
+        return new UpdateTranscodeTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 图片样式列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListImageStyleResponse listImageStyle(ListImageStyleRequest request) throws JdcloudSdkException {
+        return new ListImageStyleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 生成 taskCode
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GenTaskCodeListResponse genTaskCodeList(GenTaskCodeListRequest request) throws JdcloudSdkException {
+        return new GenTaskCodeListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 保存ASR任务模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SaveAsrTaskTemplateResponse saveAsrTaskTemplate(SaveAsrTaskTemplateRequest request) throws JdcloudSdkException {
+        return new SaveAsrTaskTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询热词详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeASRTaskHotWordsDetailsResponse describeASRTaskHotWordsDetails(DescribeASRTaskHotWordsDetailsRequest request) throws JdcloudSdkException {
+        return new DescribeASRTaskHotWordsDetailsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询视频截图任务结果
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QuerySnapshotTaskResultResponse querySnapshotTaskResult(QuerySnapshotTaskResultRequest request) throws JdcloudSdkException {
+        return new QuerySnapshotTaskResultExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询声纹
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeVoiceprintResponse describeVoiceprint(DescribeVoiceprintRequest request) throws JdcloudSdkException {
+        return new DescribeVoiceprintExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询会议纪要文本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeASRMinutesTextResponse describeASRMinutesText(DescribeASRMinutesTextRequest request) throws JdcloudSdkException {
+        return new DescribeASRMinutesTextExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建全局热词
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateGlobalHotWordsResponse createGlobalHotWords(CreateGlobalHotWordsRequest request) throws JdcloudSdkException {
+        return new CreateGlobalHotWordsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 提交视频截图任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SubmitSnapshotTaskResponse submitSnapshotTask(SubmitSnapshotTaskRequest request) throws JdcloudSdkException {
+        return new SubmitSnapshotTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除截图模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSnapshotTemplateResponse deleteSnapshotTemplate(DeleteSnapshotTemplateRequest request) throws JdcloudSdkException {
+        return new DeleteSnapshotTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除图片样式
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteImageStyleResponse deleteImageStyle(DeleteImageStyleRequest request) throws JdcloudSdkException {
+        return new DeleteImageStyleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 保存声纹
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SaveVoiceprintResponse saveVoiceprint(SaveVoiceprintRequest request) throws JdcloudSdkException {
+        return new SaveVoiceprintExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除流程定义
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteProcessDefinitionByCodeResponse deleteProcessDefinitionByCode(DeleteProcessDefinitionByCodeRequest request) throws JdcloudSdkException {
+        return new DeleteProcessDefinitionByCodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 图片样式总数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CountImageStyleResponse countImageStyle(CountImageStyleRequest request) throws JdcloudSdkException {
+        return new CountImageStyleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询流程实例详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryProcessInstanceByIdResponse queryProcessInstanceById(QueryProcessInstanceByIdRequest request) throws JdcloudSdkException {
+        return new QueryProcessInstanceByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 上传单个知识文件到知识库
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UploadFileToKnowledgeBaseResponse uploadFileToKnowledgeBase(UploadFileToKnowledgeBaseRequest request) throws JdcloudSdkException {
+        return new UploadFileToKnowledgeBaseExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询视频剪辑工程详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVeditProjectResponse getVeditProject(GetVeditProjectRequest request) throws JdcloudSdkException {
+        return new GetVeditProjectExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询ASR任务模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeASRTaskTemplateResponse describeASRTaskTemplate(DescribeASRTaskTemplateRequest request) throws JdcloudSdkException {
+        return new DescribeASRTaskTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询流程定义列表。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryProcessDefinitionListPagingResponse queryProcessDefinitionListPaging(QueryProcessDefinitionListPagingRequest request) throws JdcloudSdkException {
+        return new QueryProcessDefinitionListPagingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除视频剪辑工程
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVeditProjectResponse deleteVeditProject(DeleteVeditProjectRequest request) throws JdcloudSdkException {
+        return new DeleteVeditProjectExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetNotificationResponse setNotification(SetNotificationRequest request) throws JdcloudSdkException {
+        return new SetNotificationExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置图片样式分隔符
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetStyleDelimiterResponse setStyleDelimiter(SetStyleDelimiterRequest request) throws JdcloudSdkException {
+        return new SetStyleDelimiterExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建新的AI聊天会话
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateAiChatConvResponse createAiChatConv(CreateAiChatConvRequest request) throws JdcloudSdkException {
+        return new CreateAiChatConvExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取bucket的图片样式分隔符配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetStyleDelimiterResponse getStyleDelimiter(GetStyleDelimiterRequest request) throws JdcloudSdkException {
+        return new GetStyleDelimiterExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除声纹
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVoiceprintResponse deleteVoiceprint(DeleteVoiceprintRequest request) throws JdcloudSdkException {
+        return new DeleteVoiceprintExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据条件分页查询ASR任务列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeASRTasksResponse describeASRTasks(DescribeASRTasksRequest request) throws JdcloudSdkException {
+        return new DescribeASRTasksExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询流程定义详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryProcessDefinitionByCodeResponse queryProcessDefinitionByCode(QueryProcessDefinitionByCodeRequest request) throws JdcloudSdkException {
+        return new QueryProcessDefinitionByCodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新知识文件记录的状态信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateKnowledgeBaseFileStatusResponse updateKnowledgeBaseFileStatus(UpdateKnowledgeBaseFileStatusRequest request) throws JdcloudSdkException {
+        return new UpdateKnowledgeBaseFileStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询个人会议纪要文本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeMyMinutesTextResponse describeMyMinutesText(DescribeMyMinutesTextRequest request) throws JdcloudSdkException {
+        return new DescribeMyMinutesTextExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建热词
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateASRTaskHotWordsResponse createASRTaskHotWords(CreateASRTaskHotWordsRequest request) throws JdcloudSdkException {
+        return new CreateASRTaskHotWordsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询转码作业列表。
+支持如下过滤器：
+- title[eq] 按照输入视频标题进行精确匹配
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListTranscodeJobsResponse listTranscodeJobs(ListTranscodeJobsRequest request) throws JdcloudSdkException {
+        return new ListTranscodeJobsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建实时语音识别任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateRealtimeASRTaskResponse createRealtimeASRTask(CreateRealtimeASRTaskRequest request) throws JdcloudSdkException {
+        return new CreateRealtimeASRTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据条件分页查询知识库文件记录
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeKnowledgeBaseFileRecordsResponse describeKnowledgeBaseFileRecords(DescribeKnowledgeBaseFileRecordsRequest request) throws JdcloudSdkException {
+        return new DescribeKnowledgeBaseFileRecordsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除流程实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteProcessInstanceByIdResponse deleteProcessInstanceById(DeleteProcessInstanceByIdRequest request) throws JdcloudSdkException {
+        return new DeleteProcessInstanceByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重新生成ASR任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RegenerateASRTaskResponse regenerateASRTask(RegenerateASRTaskRequest request) throws JdcloudSdkException {
+        return new RegenerateASRTaskExecutor().client(this).execute(request);
     }
 
     /**
@@ -298,17 +1125,6 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
-     * 创建转码模板
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateTranscodeTemplateResponse createTranscodeTemplate(CreateTranscodeTemplateRequest request) throws JdcloudSdkException {
-        return new CreateTranscodeTemplateExecutor().client(this).execute(request);
-    }
-
-    /**
      * 创建截图任务，创建成功时返回任务ID。本接口用于截取指定时间点的画面。
      *
      * @param request
@@ -320,92 +1136,114 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
-     * 查询单个转码作业信息。
-
+     * 批量删除多个知识文件记录
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetTranscodeJobResponse getTranscodeJob(GetTranscodeJobRequest request) throws JdcloudSdkException {
-        return new GetTranscodeJobExecutor().client(this).execute(request);
+    public BatchDeleteKnowledgeFileRecordResponse batchDeleteKnowledgeFileRecord(BatchDeleteKnowledgeFileRecordRequest request) throws JdcloudSdkException {
+        return new BatchDeleteKnowledgeFileRecordExecutor().client(this).execute(request);
     }
 
     /**
-     * 删除bucket的图片样式分隔符配置
+     * 提交图片检测任务
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteStyleDelimiterResponse deleteStyleDelimiter(DeleteStyleDelimiterRequest request) throws JdcloudSdkException {
-        return new DeleteStyleDelimiterExecutor().client(this).execute(request);
+    public SubmitImageDetectionTaskResponse submitImageDetectionTask(SubmitImageDetectionTaskRequest request) throws JdcloudSdkException {
+        return new SubmitImageDetectionTaskExecutor().client(this).execute(request);
     }
 
     /**
-     * 部分修改转码模板
+     * 提交视频剪辑作业
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ModifyTranscodeTemplateResponse modifyTranscodeTemplate(ModifyTranscodeTemplateRequest request) throws JdcloudSdkException {
-        return new ModifyTranscodeTemplateExecutor().client(this).execute(request);
+    public SubmitVeditJobResponse submitVeditJob(SubmitVeditJobRequest request) throws JdcloudSdkException {
+        return new SubmitVeditJobExecutor().client(this).execute(request);
     }
 
     /**
-     * 修改截图模板
+     * 删除指定的ASR任务
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ModifySnapshotTemplateResponse modifySnapshotTemplate(ModifySnapshotTemplateRequest request) throws JdcloudSdkException {
-        return new ModifySnapshotTemplateExecutor().client(this).execute(request);
+    public DeleteASRTaskResponse deleteASRTask(DeleteASRTaskRequest request) throws JdcloudSdkException {
+        return new DeleteASRTaskExecutor().client(this).execute(request);
     }
 
     /**
-     * 添加图片样式
+     * 查询流程实例列表。
+
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CreateImageStyleResponse createImageStyle(CreateImageStyleRequest request) throws JdcloudSdkException {
-        return new CreateImageStyleExecutor().client(this).execute(request);
+    public QueryProcessInstanceListResponse queryProcessInstanceList(QueryProcessInstanceListRequest request) throws JdcloudSdkException {
+        return new QueryProcessInstanceListExecutor().client(this).execute(request);
     }
 
     /**
-     * 完整更新转码模板
+     * ASR任务导入知识库
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UpdateTranscodeTemplateResponse updateTranscodeTemplate(UpdateTranscodeTemplateRequest request) throws JdcloudSdkException {
-        return new UpdateTranscodeTemplateExecutor().client(this).execute(request);
+    public ImportKnowledgeByASRTaskResponse importKnowledgeByASRTask(ImportKnowledgeByASRTaskRequest request) throws JdcloudSdkException {
+        return new ImportKnowledgeByASRTaskExecutor().client(this).execute(request);
     }
 
     /**
-     * 图片样式列表
+     * 根据任务ID导出会议纪要Word文档，返回Word格式的会议纪要文件
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ListImageStyleResponse listImageStyle(ListImageStyleRequest request) throws JdcloudSdkException {
-        return new ListImageStyleExecutor().client(this).execute(request);
+    public ExportMinutesSummaryToWordResponse exportMinutesSummaryToWord(ExportMinutesSummaryToWordRequest request) throws JdcloudSdkException {
+        return new ExportMinutesSummaryToWordExecutor().client(this).execute(request);
     }
 
     /**
-     * 查询视频截图任务结果
+     * 根据任务ID导出会议文本Word文档，返回Word格式的会议文本文件
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public QuerySnapshotTaskResultResponse querySnapshotTaskResult(QuerySnapshotTaskResultRequest request) throws JdcloudSdkException {
-        return new QuerySnapshotTaskResultExecutor().client(this).execute(request);
+    public ExportMinutesTextToWordResponse exportMinutesTextToWord(ExportMinutesTextToWordRequest request) throws JdcloudSdkException {
+        return new ExportMinutesTextToWordExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量上传多个知识文件到知识库
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public BatchUploadFileToKnowledgeBaseResponse batchUploadFileToKnowledgeBase(BatchUploadFileToKnowledgeBaseRequest request) throws JdcloudSdkException {
+        return new BatchUploadFileToKnowledgeBaseExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取实时语音识别任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AccessRealtimeASRTaskTokenResponse accessRealtimeASRTaskToken(AccessRealtimeASRTaskTokenRequest request) throws JdcloudSdkException {
+        return new AccessRealtimeASRTaskTokenExecutor().client(this).execute(request);
     }
 
     /**
@@ -431,25 +1269,25 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
-     * 提交视频截图任务
+     * 查询ASR任务内容
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public SubmitSnapshotTaskResponse submitSnapshotTask(SubmitSnapshotTaskRequest request) throws JdcloudSdkException {
-        return new SubmitSnapshotTaskExecutor().client(this).execute(request);
+    public DescribeASRTaskContentResponse describeASRTaskContent(DescribeASRTaskContentRequest request) throws JdcloudSdkException {
+        return new DescribeASRTaskContentExecutor().client(this).execute(request);
     }
 
     /**
-     * 删除截图模板
+     * 查询声纹列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteSnapshotTemplateResponse deleteSnapshotTemplate(DeleteSnapshotTemplateRequest request) throws JdcloudSdkException {
-        return new DeleteSnapshotTemplateExecutor().client(this).execute(request);
+    public DescribeVoiceprintsResponse describeVoiceprints(DescribeVoiceprintsRequest request) throws JdcloudSdkException {
+        return new DescribeVoiceprintsExecutor().client(this).execute(request);
     }
 
     /**
@@ -464,14 +1302,25 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
-     * 删除图片样式
+     * 删除指定的ASR热词
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteImageStyleResponse deleteImageStyle(DeleteImageStyleRequest request) throws JdcloudSdkException {
-        return new DeleteImageStyleExecutor().client(this).execute(request);
+    public DeleteASRTaskHotWordsResponse deleteASRTaskHotWords(DeleteASRTaskHotWordsRequest request) throws JdcloudSdkException {
+        return new DeleteASRTaskHotWordsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询流程实例状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryTaskListByProcessIdResponse queryTaskListByProcessId(QueryTaskListByProcessIdRequest request) throws JdcloudSdkException {
+        return new QueryTaskListByProcessIdExecutor().client(this).execute(request);
     }
 
     /**
@@ -483,17 +1332,6 @@ public class MpsClient extends JdcloudClient {
      */
     public GetSnapshotTaskResponse getSnapshotTask(GetSnapshotTaskRequest request) throws JdcloudSdkException {
         return new GetSnapshotTaskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 图片样式总数
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CountImageStyleResponse countImageStyle(CountImageStyleRequest request) throws JdcloudSdkException {
-        return new CountImageStyleExecutor().client(this).execute(request);
     }
 
     /**
@@ -519,6 +1357,17 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
+     * 根据任务ID导出ASR内容Word文档，返回Word格式的ASR识别内容文件
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ExportAsrContentToWordResponse exportAsrContentToWord(ExportAsrContentToWordRequest request) throws JdcloudSdkException {
+        return new ExportAsrContentToWordExecutor().client(this).execute(request);
+    }
+
+    /**
      * 根据任务ID获取截图任务。
      *
      * @param request
@@ -530,36 +1379,25 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
-     * 设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验
+     * 根据任务ID查询ASR任务详细信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public SetNotificationResponse setNotification(SetNotificationRequest request) throws JdcloudSdkException {
-        return new SetNotificationExecutor().client(this).execute(request);
+    public DescribeASRTaskResponse describeASRTask(DescribeASRTaskRequest request) throws JdcloudSdkException {
+        return new DescribeASRTaskExecutor().client(this).execute(request);
     }
 
     /**
-     * 设置图片样式分隔符
+     * 提交文件到工作流
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public SetStyleDelimiterResponse setStyleDelimiter(SetStyleDelimiterRequest request) throws JdcloudSdkException {
-        return new SetStyleDelimiterExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取bucket的图片样式分隔符配置
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetStyleDelimiterResponse getStyleDelimiter(GetStyleDelimiterRequest request) throws JdcloudSdkException {
-        return new GetStyleDelimiterExecutor().client(this).execute(request);
+    public StartProcessInstanceResponse startProcessInstance(StartProcessInstanceRequest request) throws JdcloudSdkException {
+        return new StartProcessInstanceExecutor().client(this).execute(request);
     }
 
     /**
@@ -577,6 +1415,20 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询视频剪辑工程列表。
+允许通过条件过滤查询，支持的过滤字段如下：
+  - projectId[eq] 按照工程ID精确查询
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListVeditProjectsResponse listVeditProjects(ListVeditProjectsRequest request) throws JdcloudSdkException {
+        return new ListVeditProjectsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除转码模板
      *
      * @param request
@@ -585,6 +1437,17 @@ public class MpsClient extends JdcloudClient {
      */
     public DeleteTranscodeTemplateResponse deleteTranscodeTemplate(DeleteTranscodeTemplateRequest request) throws JdcloudSdkException {
         return new DeleteTranscodeTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 替换更新水印模板。此接口调用时，所有必要字段都需要设置，不设置或设置为NULL时会替换掉原有值。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateWatermarkTemplateResponse updateWatermarkTemplate(UpdateWatermarkTemplateRequest request) throws JdcloudSdkException {
+        return new UpdateWatermarkTemplateExecutor().client(this).execute(request);
     }
 
 

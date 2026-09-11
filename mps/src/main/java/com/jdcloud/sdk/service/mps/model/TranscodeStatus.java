@@ -51,6 +51,7 @@ public class TranscodeStatus  implements java.io.Serializable {
     private String notifyMessage;
 
 
+
     /**
      * get 状态 (SUCESS, ERROR, PENDDING, RUNNING)
      *
@@ -69,6 +70,7 @@ public class TranscodeStatus  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 错误码
      *
@@ -86,6 +88,7 @@ public class TranscodeStatus  implements java.io.Serializable {
     public void setErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
     }
+
 
     /**
      * get 通知消息, 由work调用, 暂时方案
@@ -106,30 +109,36 @@ public class TranscodeStatus  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 状态 (SUCESS, ERROR, PENDDING, RUNNING)
      *
-     * @param status
+     * @param status 状态 (SUCESS, ERROR, PENDDING, RUNNING)
+     * @return TranscodeStatus
      */
     public TranscodeStatus status(String status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 错误码
      *
-     * @param errorCode
+     * @param errorCode 错误码
+     * @return TranscodeStatus
      */
     public TranscodeStatus errorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
     }
 
+
     /**
      * set 通知消息, 由work调用, 暂时方案
      *
-     * @param notifyMessage
+     * @param notifyMessage 通知消息, 由work调用, 暂时方案
+     * @return TranscodeStatus
      */
     public TranscodeStatus notifyMessage(String notifyMessage) {
         this.notifyMessage = notifyMessage;

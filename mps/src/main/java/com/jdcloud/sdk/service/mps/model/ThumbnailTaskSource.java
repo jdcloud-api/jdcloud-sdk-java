@@ -48,6 +48,7 @@ public class ThumbnailTaskSource  implements java.io.Serializable {
     private String key;
 
 
+
     /**
      * get 输入视频信息的 bucket
      *
@@ -65,6 +66,7 @@ public class ThumbnailTaskSource  implements java.io.Serializable {
     public void setBucket(String bucket) {
         this.bucket = bucket;
     }
+
 
     /**
      * get 输入视频信息的 Key
@@ -85,20 +87,24 @@ public class ThumbnailTaskSource  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 输入视频信息的 bucket
      *
-     * @param bucket
+     * @param bucket 输入视频信息的 bucket
+     * @return ThumbnailTaskSource
      */
     public ThumbnailTaskSource bucket(String bucket) {
         this.bucket = bucket;
         return this;
     }
 
+
     /**
      * set 输入视频信息的 Key
      *
-     * @param key
+     * @param key 输入视频信息的 Key
+     * @return ThumbnailTaskSource
      */
     public ThumbnailTaskSource key(String key) {
         this.key = key;

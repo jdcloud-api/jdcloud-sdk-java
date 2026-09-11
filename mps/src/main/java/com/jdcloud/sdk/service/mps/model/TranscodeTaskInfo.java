@@ -89,6 +89,7 @@ public class TranscodeTaskInfo  implements java.io.Serializable {
     private String finishTime;
 
 
+
     /**
      * get 作业ID
      *
@@ -106,6 +107,7 @@ public class TranscodeTaskInfo  implements java.io.Serializable {
     public void setJobId(String jobId) {
         this.jobId = jobId;
     }
+
 
     /**
      * get 任务ID
@@ -125,6 +127,7 @@ public class TranscodeTaskInfo  implements java.io.Serializable {
         this.taskId = taskId;
     }
 
+
     /**
      * get 输出文件 objectKey
      *
@@ -142,6 +145,7 @@ public class TranscodeTaskInfo  implements java.io.Serializable {
     public void setObjectKey(String objectKey) {
         this.objectKey = objectKey;
     }
+
 
     /**
      * get 输出视频格式
@@ -161,6 +165,7 @@ public class TranscodeTaskInfo  implements java.io.Serializable {
         this.format = format;
     }
 
+
     /**
      * get 输出画面宽度
      *
@@ -178,6 +183,7 @@ public class TranscodeTaskInfo  implements java.io.Serializable {
     public void setWidth(String width) {
         this.width = width;
     }
+
 
     /**
      * get 输出画面高度
@@ -197,6 +203,7 @@ public class TranscodeTaskInfo  implements java.io.Serializable {
         this.height = height;
     }
 
+
     /**
      * get 输出码率
      *
@@ -214,6 +221,7 @@ public class TranscodeTaskInfo  implements java.io.Serializable {
     public void setBitrate(String bitrate) {
         this.bitrate = bitrate;
     }
+
 
     /**
      * get 输出帧率
@@ -233,6 +241,7 @@ public class TranscodeTaskInfo  implements java.io.Serializable {
         this.framerate = framerate;
     }
 
+
     /**
      * get 输出清晰度
      *
@@ -250,6 +259,7 @@ public class TranscodeTaskInfo  implements java.io.Serializable {
     public void setDefinition(String definition) {
         this.definition = definition;
     }
+
 
     /**
      * get 任务状态。in-process, succeeded, failed
@@ -271,6 +281,7 @@ public class TranscodeTaskInfo  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 任务结束时间
      *
@@ -290,111 +301,134 @@ public class TranscodeTaskInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 作业ID
      *
-     * @param jobId
+     * @param jobId 作业ID
+     * @return TranscodeTaskInfo
      */
     public TranscodeTaskInfo jobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
 
+
     /**
      * set 任务ID
      *
-     * @param taskId
+     * @param taskId 任务ID
+     * @return TranscodeTaskInfo
      */
     public TranscodeTaskInfo taskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
 
+
     /**
      * set 输出文件 objectKey
      *
-     * @param objectKey
+     * @param objectKey 输出文件 objectKey
+     * @return TranscodeTaskInfo
      */
     public TranscodeTaskInfo objectKey(String objectKey) {
         this.objectKey = objectKey;
         return this;
     }
 
+
     /**
      * set 输出视频格式
      *
-     * @param format
+     * @param format 输出视频格式
+     * @return TranscodeTaskInfo
      */
     public TranscodeTaskInfo format(String format) {
         this.format = format;
         return this;
     }
 
+
     /**
      * set 输出画面宽度
      *
-     * @param width
+     * @param width 输出画面宽度
+     * @return TranscodeTaskInfo
      */
     public TranscodeTaskInfo width(String width) {
         this.width = width;
         return this;
     }
 
+
     /**
      * set 输出画面高度
      *
-     * @param height
+     * @param height 输出画面高度
+     * @return TranscodeTaskInfo
      */
     public TranscodeTaskInfo height(String height) {
         this.height = height;
         return this;
     }
 
+
     /**
      * set 输出码率
      *
-     * @param bitrate
+     * @param bitrate 输出码率
+     * @return TranscodeTaskInfo
      */
     public TranscodeTaskInfo bitrate(String bitrate) {
         this.bitrate = bitrate;
         return this;
     }
 
+
     /**
      * set 输出帧率
      *
-     * @param framerate
+     * @param framerate 输出帧率
+     * @return TranscodeTaskInfo
      */
     public TranscodeTaskInfo framerate(String framerate) {
         this.framerate = framerate;
         return this;
     }
 
+
     /**
      * set 输出清晰度
      *
-     * @param definition
+     * @param definition 输出清晰度
+     * @return TranscodeTaskInfo
      */
     public TranscodeTaskInfo definition(String definition) {
         this.definition = definition;
         return this;
     }
 
+
     /**
      * set 任务状态。in-process, succeeded, failed
 
      *
-     * @param status
+     * @param status 任务状态。in-process, succeeded, failed
+
+     * @return TranscodeTaskInfo
      */
     public TranscodeTaskInfo status(String status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 任务结束时间
      *
-     * @param finishTime
+     * @param finishTime 任务结束时间
+     * @return TranscodeTaskInfo
      */
     public TranscodeTaskInfo finishTime(String finishTime) {
         this.finishTime = finishTime;

@@ -42,6 +42,7 @@ public class GetNotificationRequest extends JdcloudRequest implements java.io.Se
     private String regionId;
 
 
+
     /**
      * get region id
      *
@@ -61,10 +62,12 @@ public class GetNotificationRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set region id
      *
-     * @param regionId
+     * @param regionId region id
+     * @return GetNotificationRequest
      */
     public GetNotificationRequest regionId(String regionId) {
         this.regionId = regionId;

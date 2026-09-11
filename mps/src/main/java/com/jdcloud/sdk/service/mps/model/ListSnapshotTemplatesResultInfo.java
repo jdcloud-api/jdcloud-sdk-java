@@ -57,6 +57,7 @@ public class ListSnapshotTemplatesResultInfo  implements java.io.Serializable {
     /**
      * 分页内容
      */
+    
     private List<SnapshotTemplateInfo> content;
 
 
@@ -78,6 +79,7 @@ public class ListSnapshotTemplatesResultInfo  implements java.io.Serializable {
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页数量
      *
@@ -95,6 +97,7 @@ public class ListSnapshotTemplatesResultInfo  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 查询总数
@@ -114,6 +117,7 @@ public class ListSnapshotTemplatesResultInfo  implements java.io.Serializable {
         this.totalElements = totalElements;
     }
 
+
     /**
      * get 总页数
      *
@@ -132,74 +136,86 @@ public class ListSnapshotTemplatesResultInfo  implements java.io.Serializable {
         this.totalPages = totalPages;
     }
 
+
     /**
-     * get 分页内容
-     *
-     * @return
-     */
+    * get 分页内容
+    *
+    * @return
+    */
     public List<SnapshotTemplateInfo> getContent() {
         return content;
     }
 
     /**
-     * set 分页内容
-     *
-     * @param content
-     */
+    * set 分页内容
+    *
+    * @param content
+    */
     public void setContent(List<SnapshotTemplateInfo> content) {
         this.content = content;
     }
 
 
+
     /**
      * set 当前页码
      *
-     * @param pageNumber
+     * @param pageNumber 当前页码
+     * @return ListSnapshotTemplatesResultInfo
      */
     public ListSnapshotTemplatesResultInfo pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 每页数量
      *
-     * @param pageSize
+     * @param pageSize 每页数量
+     * @return ListSnapshotTemplatesResultInfo
      */
     public ListSnapshotTemplatesResultInfo pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
+
     /**
      * set 查询总数
      *
-     * @param totalElements
+     * @param totalElements 查询总数
+     * @return ListSnapshotTemplatesResultInfo
      */
     public ListSnapshotTemplatesResultInfo totalElements(Integer totalElements) {
         this.totalElements = totalElements;
         return this;
     }
 
+
     /**
      * set 总页数
      *
-     * @param totalPages
+     * @param totalPages 总页数
+     * @return ListSnapshotTemplatesResultInfo
      */
     public ListSnapshotTemplatesResultInfo totalPages(Integer totalPages) {
         this.totalPages = totalPages;
         return this;
     }
 
+
     /**
-     * set 分页内容
-     *
-     * @param content
-     */
+    * set 分页内容
+    *
+    * @param content 分页内容
+    * @return ListSnapshotTemplatesResultInfo
+    */
     public ListSnapshotTemplatesResultInfo content(List<SnapshotTemplateInfo> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -213,5 +229,4 @@ public class ListSnapshotTemplatesResultInfo  implements java.io.Serializable {
         }
         this.content.add(content);
     }
-
 }

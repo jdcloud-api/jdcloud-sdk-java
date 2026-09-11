@@ -65,6 +65,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     /**
      * 目标截图的Key的集合 (readonly)
      */
+    
     private List<String> keys;
 
 
@@ -86,6 +87,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
         this.destBucket = destBucket;
     }
 
+
     /**
      * get 目标截图的Key的前缀, &#39;前缀-taskID-%04d(num).(format)&#39;, 默认: sourceKey
      *
@@ -103,6 +105,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     public void setDestKeyPrefix(String destKeyPrefix) {
         this.destKeyPrefix = destKeyPrefix;
     }
+
 
     /**
      * get 目标截图的格式 default: jpg
@@ -122,6 +125,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
         this.format = format;
     }
 
+
     /**
      * get 目标截图的宽, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
      *
@@ -139,6 +143,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     public void setWidthInPixel(Integer widthInPixel) {
         this.widthInPixel = widthInPixel;
     }
+
 
     /**
      * get 目标截图的高, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
@@ -158,84 +163,98 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
         this.heightInPixel = heightInPixel;
     }
 
+
     /**
-     * get 目标截图的Key的集合 (readonly)
-     *
-     * @return
-     */
+    * get 目标截图的Key的集合 (readonly)
+    *
+    * @return
+    */
     public List<String> getKeys() {
         return keys;
     }
 
     /**
-     * set 目标截图的Key的集合 (readonly)
-     *
-     * @param keys
-     */
+    * set 目标截图的Key的集合 (readonly)
+    *
+    * @param keys
+    */
     public void setKeys(List<String> keys) {
         this.keys = keys;
     }
 
 
+
     /**
      * set 输入存放目标文件的 bucket
      *
-     * @param destBucket
+     * @param destBucket 输入存放目标文件的 bucket
+     * @return ThumbnailTaskTarget
      */
     public ThumbnailTaskTarget destBucket(String destBucket) {
         this.destBucket = destBucket;
         return this;
     }
 
+
     /**
      * set 目标截图的Key的前缀, &#39;前缀-taskID-%04d(num).(format)&#39;, 默认: sourceKey
      *
-     * @param destKeyPrefix
+     * @param destKeyPrefix 目标截图的Key的前缀, &#39;前缀-taskID-%04d(num).(format)&#39;, 默认: sourceKey
+     * @return ThumbnailTaskTarget
      */
     public ThumbnailTaskTarget destKeyPrefix(String destKeyPrefix) {
         this.destKeyPrefix = destKeyPrefix;
         return this;
     }
 
+
     /**
      * set 目标截图的格式 default: jpg
      *
-     * @param format
+     * @param format 目标截图的格式 default: jpg
+     * @return ThumbnailTaskTarget
      */
     public ThumbnailTaskTarget format(String format) {
         this.format = format;
         return this;
     }
 
+
     /**
      * set 目标截图的宽, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
      *
-     * @param widthInPixel
+     * @param widthInPixel 目标截图的宽, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
+     * @return ThumbnailTaskTarget
      */
     public ThumbnailTaskTarget widthInPixel(Integer widthInPixel) {
         this.widthInPixel = widthInPixel;
         return this;
     }
 
+
     /**
      * set 目标截图的高, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
      *
-     * @param heightInPixel
+     * @param heightInPixel 目标截图的高, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
+     * @return ThumbnailTaskTarget
      */
     public ThumbnailTaskTarget heightInPixel(Integer heightInPixel) {
         this.heightInPixel = heightInPixel;
         return this;
     }
 
+
     /**
-     * set 目标截图的Key的集合 (readonly)
-     *
-     * @param keys
-     */
+    * set 目标截图的Key的集合 (readonly)
+    *
+    * @param keys 目标截图的Key的集合 (readonly)
+    * @return ThumbnailTaskTarget
+    */
     public ThumbnailTaskTarget keys(List<String> keys) {
         this.keys = keys;
         return this;
     }
+
 
 
     /**
@@ -249,5 +268,4 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
         }
         this.keys.add(key);
     }
-
 }

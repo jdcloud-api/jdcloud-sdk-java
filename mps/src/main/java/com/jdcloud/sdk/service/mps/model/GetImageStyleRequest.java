@@ -56,6 +56,7 @@ public class GetImageStyleRequest extends JdcloudRequest implements java.io.Seri
     private Long id;
 
 
+
     /**
      * get 区域ID
      *
@@ -74,6 +75,7 @@ public class GetImageStyleRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
     }
 
+
     /**
      * get Bucket名称
      *
@@ -91,6 +93,7 @@ public class GetImageStyleRequest extends JdcloudRequest implements java.io.Seri
     public void setBucketName(String bucketName) {
         this.bucketName = bucketName;
     }
+
 
     /**
      * get 图片样式id
@@ -111,30 +114,36 @@ public class GetImageStyleRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 区域ID
      *
-     * @param regionId
+     * @param regionId 区域ID
+     * @return GetImageStyleRequest
      */
     public GetImageStyleRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set Bucket名称
      *
-     * @param bucketName
+     * @param bucketName Bucket名称
+     * @return GetImageStyleRequest
      */
     public GetImageStyleRequest bucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
     }
 
+
     /**
      * set 图片样式id
      *
-     * @param id
+     * @param id 图片样式id
+     * @return GetImageStyleRequest
      */
     public GetImageStyleRequest id(Long id) {
         this.id = id;

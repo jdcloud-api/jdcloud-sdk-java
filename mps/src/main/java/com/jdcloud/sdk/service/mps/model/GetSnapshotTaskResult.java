@@ -123,6 +123,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
     private String finishTime;
 
 
+
     /**
      * get 任务ID
      *
@@ -140,6 +141,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
     /**
      * get 截图起始时间
@@ -159,6 +161,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
         this.startTime = startTime;
     }
 
+
     /**
      * get 截图帧类型。
      *
@@ -176,6 +179,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
     public void setFrameType(String frameType) {
         this.frameType = frameType;
     }
+
 
     /**
      * get 截图格式。取值范围：jpg、png
@@ -195,6 +199,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
         this.format = format;
     }
 
+
     /**
      * get 截图数量
      *
@@ -212,6 +217,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
     public void setNumber(Integer number) {
         this.number = number;
     }
+
 
     /**
      * get 截图间隔
@@ -231,6 +237,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
         this.interval = interval;
     }
 
+
     /**
      * get 截图宽度
      *
@@ -248,6 +255,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
     public void setWidth(Integer width) {
         this.width = width;
     }
+
 
     /**
      * get 截图高度
@@ -267,6 +275,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
         this.height = height;
     }
 
+
     /**
      * get 填充方式
      *
@@ -284,6 +293,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
     public void setFillType(String fillType) {
         this.fillType = fillType;
     }
+
 
     /**
      * get 输入配置
@@ -303,6 +313,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
         this.input = input;
     }
 
+
     /**
      * get 输出配置
      *
@@ -320,6 +331,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
     public void setOutput(Output output) {
         this.output = output;
     }
+
 
     /**
      * get 雪碧图参数配置
@@ -339,6 +351,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
         this.spriteConfig = spriteConfig;
     }
 
+
     /**
      * get 雪碧图输出配置
      *
@@ -356,6 +369,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
     public void setSpriteOutput(Output spriteOutput) {
         this.spriteOutput = spriteOutput;
     }
+
 
     /**
      * get 任务状态。
@@ -387,6 +401,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
         this.status = status;
     }
 
+
     /**
      * get 创建时间
      *
@@ -404,6 +419,7 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 完成时间
@@ -424,135 +440,162 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
      * set 任务ID
      *
-     * @param taskId
+     * @param taskId 任务ID
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult taskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
 
+
     /**
      * set 截图起始时间
      *
-     * @param startTime
+     * @param startTime 截图起始时间
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult startTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
 
+
     /**
      * set 截图帧类型。
      *
-     * @param frameType
+     * @param frameType 截图帧类型。
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult frameType(String frameType) {
         this.frameType = frameType;
         return this;
     }
 
+
     /**
      * set 截图格式。取值范围：jpg、png
      *
-     * @param format
+     * @param format 截图格式。取值范围：jpg、png
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult format(String format) {
         this.format = format;
         return this;
     }
 
+
     /**
      * set 截图数量
      *
-     * @param number
+     * @param number 截图数量
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult number(Integer number) {
         this.number = number;
         return this;
     }
 
+
     /**
      * set 截图间隔
      *
-     * @param interval
+     * @param interval 截图间隔
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult interval(Integer interval) {
         this.interval = interval;
         return this;
     }
 
+
     /**
      * set 截图宽度
      *
-     * @param width
+     * @param width 截图宽度
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult width(Integer width) {
         this.width = width;
         return this;
     }
 
+
     /**
      * set 截图高度
      *
-     * @param height
+     * @param height 截图高度
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult height(Integer height) {
         this.height = height;
         return this;
     }
 
+
     /**
      * set 填充方式
      *
-     * @param fillType
+     * @param fillType 填充方式
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult fillType(String fillType) {
         this.fillType = fillType;
         return this;
     }
 
+
     /**
      * set 输入配置
      *
-     * @param input
+     * @param input 输入配置
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult input(Input input) {
         this.input = input;
         return this;
     }
 
+
     /**
      * set 输出配置
      *
-     * @param output
+     * @param output 输出配置
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult output(Output output) {
         this.output = output;
         return this;
     }
 
+
     /**
      * set 雪碧图参数配置
      *
-     * @param spriteConfig
+     * @param spriteConfig 雪碧图参数配置
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult spriteConfig(SpriteConfig spriteConfig) {
         this.spriteConfig = spriteConfig;
         return this;
     }
 
+
     /**
      * set 雪碧图输出配置
      *
-     * @param spriteOutput
+     * @param spriteOutput 雪碧图输出配置
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult spriteOutput(Output spriteOutput) {
         this.spriteOutput = spriteOutput;
         return this;
     }
+
 
     /**
      * set 任务状态。
@@ -563,27 +606,38 @@ public class GetSnapshotTaskResult extends JdcloudResult implements java.io.Seri
 - finished_failure
 
      *
-     * @param status
+     * @param status 任务状态。
+- submitted
+- cancelled
+- running
+- finished_success
+- finished_failure
+
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult status(String status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult createTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
 
+
     /**
      * set 完成时间
      *
-     * @param finishTime
+     * @param finishTime 完成时间
+     * @return GetSnapshotTaskResult
      */
     public GetSnapshotTaskResult finishTime(String finishTime) {
         this.finishTime = finishTime;

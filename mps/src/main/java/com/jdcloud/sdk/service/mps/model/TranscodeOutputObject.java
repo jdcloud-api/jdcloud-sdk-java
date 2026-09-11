@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.mps.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -47,6 +49,12 @@ public class TranscodeOutputObject  implements java.io.Serializable {
     @Required
     private String templateId;
 
+    /**
+     * 水印模板(watermarkId)可加多个水印
+     */
+    
+    private List<String> watermarkIds;
+
 
     /**
      * get 输出对象存储 objectKey，必须参数
@@ -65,6 +73,7 @@ public class TranscodeOutputObject  implements java.io.Serializable {
     public void setObjectKey(String objectKey) {
         this.objectKey = objectKey;
     }
+
 
     /**
      * get 关联模板ID，必须参数
@@ -86,19 +95,42 @@ public class TranscodeOutputObject  implements java.io.Serializable {
 
 
     /**
+    * get 水印模板(watermarkId)可加多个水印
+    *
+    * @return
+    */
+    public List<String> getWatermarkIds() {
+        return watermarkIds;
+    }
+
+    /**
+    * set 水印模板(watermarkId)可加多个水印
+    *
+    * @param watermarkIds
+    */
+    public void setWatermarkIds(List<String> watermarkIds) {
+        this.watermarkIds = watermarkIds;
+    }
+
+
+
+    /**
      * set 输出对象存储 objectKey，必须参数
      *
-     * @param objectKey
+     * @param objectKey 输出对象存储 objectKey，必须参数
+     * @return TranscodeOutputObject
      */
     public TranscodeOutputObject objectKey(String objectKey) {
         this.objectKey = objectKey;
         return this;
     }
 
+
     /**
      * set 关联模板ID，必须参数
      *
-     * @param templateId
+     * @param templateId 关联模板ID，必须参数
+     * @return TranscodeOutputObject
      */
     public TranscodeOutputObject templateId(String templateId) {
         this.templateId = templateId;
@@ -106,4 +138,28 @@ public class TranscodeOutputObject  implements java.io.Serializable {
     }
 
 
+    /**
+    * set 水印模板(watermarkId)可加多个水印
+    *
+    * @param watermarkIds 水印模板(watermarkId)可加多个水印
+    * @return TranscodeOutputObject
+    */
+    public TranscodeOutputObject watermarkIds(List<String> watermarkIds) {
+        this.watermarkIds = watermarkIds;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 水印模板(watermarkId)可加多个水印
+     *
+     * @param watermarkId
+     */
+    public void addWatermarkId(String watermarkId) {
+        if (this.watermarkIds == null) {
+            this.watermarkIds = new ArrayList<>();
+        }
+        this.watermarkIds.add(watermarkId);
+    }
 }

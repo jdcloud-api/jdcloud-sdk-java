@@ -48,6 +48,7 @@ public class ShotResult extends JdcloudResult implements java.io.Serializable {
     /**
      * 截图输出对象集
      */
+    
     private List<String> objectKeys;
 
 
@@ -69,6 +70,7 @@ public class ShotResult extends JdcloudResult implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 截图输出空间
      *
@@ -87,54 +89,62 @@ public class ShotResult extends JdcloudResult implements java.io.Serializable {
         this.bucket = bucket;
     }
 
+
     /**
-     * get 截图输出对象集
-     *
-     * @return
-     */
+    * get 截图输出对象集
+    *
+    * @return
+    */
     public List<String> getObjectKeys() {
         return objectKeys;
     }
 
     /**
-     * set 截图输出对象集
-     *
-     * @param objectKeys
-     */
+    * set 截图输出对象集
+    *
+    * @param objectKeys
+    */
     public void setObjectKeys(List<String> objectKeys) {
         this.objectKeys = objectKeys;
     }
 
 
+
     /**
      * set 截图输出区域
      *
-     * @param region
+     * @param region 截图输出区域
+     * @return ShotResult
      */
     public ShotResult region(String region) {
         this.region = region;
         return this;
     }
 
+
     /**
      * set 截图输出空间
      *
-     * @param bucket
+     * @param bucket 截图输出空间
+     * @return ShotResult
      */
     public ShotResult bucket(String bucket) {
         this.bucket = bucket;
         return this;
     }
 
+
     /**
-     * set 截图输出对象集
-     *
-     * @param objectKeys
-     */
+    * set 截图输出对象集
+    *
+    * @param objectKeys 截图输出对象集
+    * @return ShotResult
+    */
     public ShotResult objectKeys(List<String> objectKeys) {
         this.objectKeys = objectKeys;
         return this;
     }
+
 
 
     /**
@@ -148,5 +158,4 @@ public class ShotResult extends JdcloudResult implements java.io.Serializable {
         }
         this.objectKeys.add(objectKey);
     }
-
 }

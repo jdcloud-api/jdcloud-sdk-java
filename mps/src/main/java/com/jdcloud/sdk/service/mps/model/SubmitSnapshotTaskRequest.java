@@ -63,6 +63,7 @@ public class SubmitSnapshotTaskRequest extends JdcloudRequest implements java.io
     private Output spriteOutput;
 
 
+
     /**
      * get 截图模板ID
      *
@@ -80,6 +81,7 @@ public class SubmitSnapshotTaskRequest extends JdcloudRequest implements java.io
     public void setTemplateId(String templateId) {
         this.templateId = templateId;
     }
+
 
     /**
      * get input
@@ -99,6 +101,7 @@ public class SubmitSnapshotTaskRequest extends JdcloudRequest implements java.io
         this.input = input;
     }
 
+
     /**
      * get output
      *
@@ -116,6 +119,7 @@ public class SubmitSnapshotTaskRequest extends JdcloudRequest implements java.io
     public void setOutput(Output output) {
         this.output = output;
     }
+
 
     /**
      * get spriteOutput
@@ -136,40 +140,48 @@ public class SubmitSnapshotTaskRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 截图模板ID
      *
-     * @param templateId
+     * @param templateId 截图模板ID
+     * @return SubmitSnapshotTaskRequest
      */
     public SubmitSnapshotTaskRequest templateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
 
+
     /**
      * set input
      *
-     * @param input
+     * @param input 
+     * @return SubmitSnapshotTaskRequest
      */
     public SubmitSnapshotTaskRequest input(Input input) {
         this.input = input;
         return this;
     }
 
+
     /**
      * set output
      *
-     * @param output
+     * @param output 
+     * @return SubmitSnapshotTaskRequest
      */
     public SubmitSnapshotTaskRequest output(Output output) {
         this.output = output;
         return this;
     }
 
+
     /**
      * set spriteOutput
      *
-     * @param spriteOutput
+     * @param spriteOutput 
+     * @return SubmitSnapshotTaskRequest
      */
     public SubmitSnapshotTaskRequest spriteOutput(Output spriteOutput) {
         this.spriteOutput = spriteOutput;

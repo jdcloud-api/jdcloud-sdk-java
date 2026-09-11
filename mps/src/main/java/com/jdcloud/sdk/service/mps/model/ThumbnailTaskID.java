@@ -38,6 +38,7 @@ public class ThumbnailTaskID  implements java.io.Serializable {
     private String taskID;
 
 
+
     /**
      * get taskID
      *
@@ -57,10 +58,12 @@ public class ThumbnailTaskID  implements java.io.Serializable {
     }
 
 
+
     /**
      * set taskID
      *
-     * @param taskID
+     * @param taskID 
+     * @return ThumbnailTaskID
      */
     public ThumbnailTaskID taskID(String taskID) {
         this.taskID = taskID;

@@ -61,6 +61,7 @@ public class SnapshotTaskResultObject  implements java.io.Serializable {
     private SpriteResult spriteResult;
 
 
+
     /**
      * get 任务ID
      *
@@ -78,6 +79,7 @@ public class SnapshotTaskResultObject  implements java.io.Serializable {
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
     /**
      * get 结果状态。
@@ -103,6 +105,7 @@ public class SnapshotTaskResultObject  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 错误码
      *
@@ -121,6 +124,7 @@ public class SnapshotTaskResultObject  implements java.io.Serializable {
         this.errorCode = errorCode;
     }
 
+
     /**
      * get 截图输出结果
      *
@@ -138,6 +142,7 @@ public class SnapshotTaskResultObject  implements java.io.Serializable {
     public void setShotResult(ShotResult shotResult) {
         this.shotResult = shotResult;
     }
+
 
     /**
      * get 雪碧图输出结果
@@ -158,15 +163,18 @@ public class SnapshotTaskResultObject  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 任务ID
      *
-     * @param taskId
+     * @param taskId 任务ID
+     * @return SnapshotTaskResultObject
      */
     public SnapshotTaskResultObject taskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
+
 
     /**
      * set 结果状态。
@@ -174,37 +182,47 @@ public class SnapshotTaskResultObject  implements java.io.Serializable {
 - finished_failure
 
      *
-     * @param status
+     * @param status 结果状态。
+- finished_success
+- finished_failure
+
+     * @return SnapshotTaskResultObject
      */
     public SnapshotTaskResultObject status(String status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 错误码
      *
-     * @param errorCode
+     * @param errorCode 错误码
+     * @return SnapshotTaskResultObject
      */
     public SnapshotTaskResultObject errorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
 
+
     /**
      * set 截图输出结果
      *
-     * @param shotResult
+     * @param shotResult 截图输出结果
+     * @return SnapshotTaskResultObject
      */
     public SnapshotTaskResultObject shotResult(ShotResult shotResult) {
         this.shotResult = shotResult;
         return this;
     }
 
+
     /**
      * set 雪碧图输出结果
      *
-     * @param spriteResult
+     * @param spriteResult 雪碧图输出结果
+     * @return SnapshotTaskResultObject
      */
     public SnapshotTaskResultObject spriteResult(SpriteResult spriteResult) {
         this.spriteResult = spriteResult;

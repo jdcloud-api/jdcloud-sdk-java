@@ -51,8 +51,8 @@ public class SetNotificationRequest extends JdcloudRequest implements java.io.Se
     /**
      * 触发通知的事件集合 (mpsTranscodeComplete, mpsThumbnailComplete)
      */
+    
     private List<String> events;
-
     /**
      * 重试策略, BACKOFF_RETRY: 退避重试策略, 重试 3 次, 每次重试的间隔时间是 10秒 到 20秒 之间的随机值; EXPONENTIAL_DECAY_RETRY: 指数衰减重试, 重试 176 次, 每次重试的间隔时间指数递增至 512秒, 总计重试时间为1天; 每次重试的具体间隔为: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512 ... 512 秒(共167个512)
      */
@@ -69,6 +69,7 @@ public class SetNotificationRequest extends JdcloudRequest implements java.io.Se
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -89,6 +90,7 @@ public class SetNotificationRequest extends JdcloudRequest implements java.io.Se
         this.enabled = enabled;
     }
 
+
     /**
      * get 通知endpoint, 当前支持http://和https://
      *
@@ -107,23 +109,25 @@ public class SetNotificationRequest extends JdcloudRequest implements java.io.Se
         this.endpoint = endpoint;
     }
 
+
     /**
-     * get 触发通知的事件集合 (mpsTranscodeComplete, mpsThumbnailComplete)
-     *
-     * @return
-     */
+    * get 触发通知的事件集合 (mpsTranscodeComplete, mpsThumbnailComplete)
+    *
+    * @return
+    */
     public List<String> getEvents() {
         return events;
     }
 
     /**
-     * set 触发通知的事件集合 (mpsTranscodeComplete, mpsThumbnailComplete)
-     *
-     * @param events
-     */
+    * set 触发通知的事件集合 (mpsTranscodeComplete, mpsThumbnailComplete)
+    *
+    * @param events
+    */
     public void setEvents(List<String> events) {
         this.events = events;
     }
+
 
     /**
      * get 重试策略, BACKOFF_RETRY: 退避重试策略, 重试 3 次, 每次重试的间隔时间是 10秒 到 20秒 之间的随机值; EXPONENTIAL_DECAY_RETRY: 指数衰减重试, 重试 176 次, 每次重试的间隔时间指数递增至 512秒, 总计重试时间为1天; 每次重试的具体间隔为: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512 ... 512 秒(共167个512)
@@ -143,6 +147,7 @@ public class SetNotificationRequest extends JdcloudRequest implements java.io.Se
         this.notifyStrategy = notifyStrategy;
     }
 
+
     /**
      * get 描述了向 Endpoint 推送的消息格式, JSON: 包含消息正文和消息属性, SIMPLIFIED: 消息体即用户发布的消息, 不包含任何属性信息
      *
@@ -160,6 +165,7 @@ public class SetNotificationRequest extends JdcloudRequest implements java.io.Se
     public void setNotifyContentFormat(String notifyContentFormat) {
         this.notifyContentFormat = notifyContentFormat;
     }
+
 
     /**
      * get region id
@@ -180,65 +186,78 @@ public class SetNotificationRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 是否启用通知
      *
-     * @param enabled
+     * @param enabled 是否启用通知
+     * @return SetNotificationRequest
      */
     public SetNotificationRequest enabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
 
+
     /**
      * set 通知endpoint, 当前支持http://和https://
      *
-     * @param endpoint
+     * @param endpoint 通知endpoint, 当前支持http://和https://
+     * @return SetNotificationRequest
      */
     public SetNotificationRequest endpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
 
+
     /**
-     * set 触发通知的事件集合 (mpsTranscodeComplete, mpsThumbnailComplete)
-     *
-     * @param events
-     */
+    * set 触发通知的事件集合 (mpsTranscodeComplete, mpsThumbnailComplete)
+    *
+    * @param events 触发通知的事件集合 (mpsTranscodeComplete, mpsThumbnailComplete)
+    * @return SetNotificationRequest
+    */
     public SetNotificationRequest events(List<String> events) {
         this.events = events;
         return this;
     }
 
+
     /**
      * set 重试策略, BACKOFF_RETRY: 退避重试策略, 重试 3 次, 每次重试的间隔时间是 10秒 到 20秒 之间的随机值; EXPONENTIAL_DECAY_RETRY: 指数衰减重试, 重试 176 次, 每次重试的间隔时间指数递增至 512秒, 总计重试时间为1天; 每次重试的具体间隔为: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512 ... 512 秒(共167个512)
      *
-     * @param notifyStrategy
+     * @param notifyStrategy 重试策略, BACKOFF_RETRY: 退避重试策略, 重试 3 次, 每次重试的间隔时间是 10秒 到 20秒 之间的随机值; EXPONENTIAL_DECAY_RETRY: 指数衰减重试, 重试 176 次, 每次重试的间隔时间指数递增至 512秒, 总计重试时间为1天; 每次重试的具体间隔为: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512 ... 512 秒(共167个512)
+     * @return SetNotificationRequest
      */
     public SetNotificationRequest notifyStrategy(String notifyStrategy) {
         this.notifyStrategy = notifyStrategy;
         return this;
     }
 
+
     /**
      * set 描述了向 Endpoint 推送的消息格式, JSON: 包含消息正文和消息属性, SIMPLIFIED: 消息体即用户发布的消息, 不包含任何属性信息
      *
-     * @param notifyContentFormat
+     * @param notifyContentFormat 描述了向 Endpoint 推送的消息格式, JSON: 包含消息正文和消息属性, SIMPLIFIED: 消息体即用户发布的消息, 不包含任何属性信息
+     * @return SetNotificationRequest
      */
     public SetNotificationRequest notifyContentFormat(String notifyContentFormat) {
         this.notifyContentFormat = notifyContentFormat;
         return this;
     }
 
+
     /**
      * set region id
      *
-     * @param regionId
+     * @param regionId region id
+     * @return SetNotificationRequest
      */
     public SetNotificationRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -252,5 +271,4 @@ public class SetNotificationRequest extends JdcloudRequest implements java.io.Se
         }
         this.events.add(event);
     }
-
 }

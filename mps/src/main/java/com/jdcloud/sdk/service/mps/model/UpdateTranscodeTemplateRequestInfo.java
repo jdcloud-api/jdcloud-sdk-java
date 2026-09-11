@@ -79,6 +79,7 @@ public class UpdateTranscodeTemplateRequestInfo  implements java.io.Serializable
     private String transcodeType;
 
 
+
     /**
      * get 模板标题。长度不超过 128 个字符，最少 2 个字符。UTF-8 编码。
 
@@ -99,6 +100,7 @@ public class UpdateTranscodeTemplateRequestInfo  implements java.io.Serializable
         this.title = title;
     }
 
+
     /**
      * get 视频参数配置
      *
@@ -116,6 +118,7 @@ public class UpdateTranscodeTemplateRequestInfo  implements java.io.Serializable
     public void setVideo(VideoStreamSettings video) {
         this.video = video;
     }
+
 
     /**
      * get 音频参数配置
@@ -135,6 +138,7 @@ public class UpdateTranscodeTemplateRequestInfo  implements java.io.Serializable
         this.audio = audio;
     }
 
+
     /**
      * get 封装容器配置
      *
@@ -153,6 +157,7 @@ public class UpdateTranscodeTemplateRequestInfo  implements java.io.Serializable
         this.container = container;
     }
 
+
     /**
      * get 加密配置
      *
@@ -170,6 +175,7 @@ public class UpdateTranscodeTemplateRequestInfo  implements java.io.Serializable
     public void setEncryption(EncryptionSettings encryption) {
         this.encryption = encryption;
     }
+
 
     /**
      * get 清晰度规格标记。取值范围：
@@ -201,6 +207,7 @@ public class UpdateTranscodeTemplateRequestInfo  implements java.io.Serializable
         this.definition = definition;
     }
 
+
     /**
      * get 转码方式。取值范围：
   normal - 普通转码
@@ -228,56 +235,68 @@ public class UpdateTranscodeTemplateRequestInfo  implements java.io.Serializable
     }
 
 
+
     /**
      * set 模板标题。长度不超过 128 个字符，最少 2 个字符。UTF-8 编码。
 
      *
-     * @param title
+     * @param title 模板标题。长度不超过 128 个字符，最少 2 个字符。UTF-8 编码。
+
+     * @return UpdateTranscodeTemplateRequestInfo
      */
     public UpdateTranscodeTemplateRequestInfo title(String title) {
         this.title = title;
         return this;
     }
 
+
     /**
      * set 视频参数配置
      *
-     * @param video
+     * @param video 视频参数配置
+     * @return UpdateTranscodeTemplateRequestInfo
      */
     public UpdateTranscodeTemplateRequestInfo video(VideoStreamSettings video) {
         this.video = video;
         return this;
     }
 
+
     /**
      * set 音频参数配置
      *
-     * @param audio
+     * @param audio 音频参数配置
+     * @return UpdateTranscodeTemplateRequestInfo
      */
     public UpdateTranscodeTemplateRequestInfo audio(AudioStreamSettings audio) {
         this.audio = audio;
         return this;
     }
 
+
     /**
      * set 封装容器配置
      *
-     * @param container
+     * @param container 封装容器配置
+     * @return UpdateTranscodeTemplateRequestInfo
      */
     public UpdateTranscodeTemplateRequestInfo container(ContainerSettings container) {
         this.container = container;
         return this;
     }
 
+
     /**
      * set 加密配置
      *
-     * @param encryption
+     * @param encryption 加密配置
+     * @return UpdateTranscodeTemplateRequestInfo
      */
     public UpdateTranscodeTemplateRequestInfo encryption(EncryptionSettings encryption) {
         this.encryption = encryption;
         return this;
     }
+
 
     /**
      * set 清晰度规格标记。取值范围：
@@ -288,12 +307,20 @@ public class UpdateTranscodeTemplateRequestInfo  implements java.io.Serializable
   4K
 
      *
-     * @param definition
+     * @param definition 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
+     * @return UpdateTranscodeTemplateRequestInfo
      */
     public UpdateTranscodeTemplateRequestInfo definition(String definition) {
         this.definition = definition;
         return this;
     }
+
 
     /**
      * set 转码方式。取值范围：
@@ -302,7 +329,12 @@ public class UpdateTranscodeTemplateRequestInfo  implements java.io.Serializable
   jdchs - 极速转码
 
      *
-     * @param transcodeType
+     * @param transcodeType 转码方式。取值范围：
+  normal - 普通转码
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     * @return UpdateTranscodeTemplateRequestInfo
      */
     public UpdateTranscodeTemplateRequestInfo transcodeType(String transcodeType) {
         this.transcodeType = transcodeType;

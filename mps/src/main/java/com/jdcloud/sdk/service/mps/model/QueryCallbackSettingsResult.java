@@ -39,10 +39,14 @@ public class QueryCallbackSettingsResult extends JdcloudResult implements java.i
     /**
      * 回调事件列表。取值范围：
 - snapshot_complete 截图完成，包括成功和失败
+- clip_complete 剪辑完成，包括成功和失败
+- StreamTranscodeComplete 转码完成，包括成功和失败
+- image_detection_complete 图片识别完成，包括成功和失败
+- av_summary_complete 音视频总结完成，包括成功和失败
 
      */
+    
     private List<String> callbackEvents;
-
     /**
      * 回调方式，目前只支持 http
      * Required:true
@@ -61,27 +65,37 @@ public class QueryCallbackSettingsResult extends JdcloudResult implements java.i
     private String disabled;
 
 
-    /**
-     * get 回调事件列表。取值范围：
-- snapshot_complete 截图完成，包括成功和失败
 
-     *
-     * @return
-     */
+    /**
+    * get 回调事件列表。取值范围：
+- snapshot_complete 截图完成，包括成功和失败
+- clip_complete 剪辑完成，包括成功和失败
+- StreamTranscodeComplete 转码完成，包括成功和失败
+- image_detection_complete 图片识别完成，包括成功和失败
+- av_summary_complete 音视频总结完成，包括成功和失败
+
+    *
+    * @return
+    */
     public List<String> getCallbackEvents() {
         return callbackEvents;
     }
 
     /**
-     * set 回调事件列表。取值范围：
+    * set 回调事件列表。取值范围：
 - snapshot_complete 截图完成，包括成功和失败
+- clip_complete 剪辑完成，包括成功和失败
+- StreamTranscodeComplete 转码完成，包括成功和失败
+- image_detection_complete 图片识别完成，包括成功和失败
+- av_summary_complete 音视频总结完成，包括成功和失败
 
-     *
-     * @param callbackEvents
-     */
+    *
+    * @param callbackEvents
+    */
     public void setCallbackEvents(List<String> callbackEvents) {
         this.callbackEvents = callbackEvents;
     }
+
 
     /**
      * get 回调方式，目前只支持 http
@@ -101,6 +115,7 @@ public class QueryCallbackSettingsResult extends JdcloudResult implements java.i
         this.callbackType = callbackType;
     }
 
+
     /**
      * get 回调方式为 http 时，此为必须参数
      *
@@ -118,6 +133,7 @@ public class QueryCallbackSettingsResult extends JdcloudResult implements java.i
     public void setHttpUrl(String httpUrl) {
         this.httpUrl = httpUrl;
     }
+
 
     /**
      * get 是否禁用回调，默认值为 false，即开启回调
@@ -138,42 +154,60 @@ public class QueryCallbackSettingsResult extends JdcloudResult implements java.i
     }
 
 
-    /**
-     * set 回调事件列表。取值范围：
-- snapshot_complete 截图完成，包括成功和失败
 
-     *
-     * @param callbackEvents
-     */
+    /**
+    * set 回调事件列表。取值范围：
+- snapshot_complete 截图完成，包括成功和失败
+- clip_complete 剪辑完成，包括成功和失败
+- StreamTranscodeComplete 转码完成，包括成功和失败
+- image_detection_complete 图片识别完成，包括成功和失败
+- av_summary_complete 音视频总结完成，包括成功和失败
+
+    *
+    * @param callbackEvents 回调事件列表。取值范围：
+- snapshot_complete 截图完成，包括成功和失败
+- clip_complete 剪辑完成，包括成功和失败
+- StreamTranscodeComplete 转码完成，包括成功和失败
+- image_detection_complete 图片识别完成，包括成功和失败
+- av_summary_complete 音视频总结完成，包括成功和失败
+
+    * @return QueryCallbackSettingsResult
+    */
     public QueryCallbackSettingsResult callbackEvents(List<String> callbackEvents) {
         this.callbackEvents = callbackEvents;
         return this;
     }
 
+
     /**
      * set 回调方式，目前只支持 http
      *
-     * @param callbackType
+     * @param callbackType 回调方式，目前只支持 http
+     * @return QueryCallbackSettingsResult
      */
     public QueryCallbackSettingsResult callbackType(String callbackType) {
         this.callbackType = callbackType;
         return this;
     }
 
+
     /**
      * set 回调方式为 http 时，此为必须参数
      *
-     * @param httpUrl
+     * @param httpUrl 回调方式为 http 时，此为必须参数
+     * @return QueryCallbackSettingsResult
      */
     public QueryCallbackSettingsResult httpUrl(String httpUrl) {
         this.httpUrl = httpUrl;
         return this;
     }
 
+
     /**
      * set 是否禁用回调，默认值为 false，即开启回调
      *
-     * @param disabled
+     * @param disabled 是否禁用回调，默认值为 false，即开启回调
+     * @return QueryCallbackSettingsResult
      */
     public QueryCallbackSettingsResult disabled(String disabled) {
         this.disabled = disabled;
@@ -181,9 +215,14 @@ public class QueryCallbackSettingsResult extends JdcloudResult implements java.i
     }
 
 
+
     /**
      * add item to 回调事件列表。取值范围：
 - snapshot_complete 截图完成，包括成功和失败
+- clip_complete 剪辑完成，包括成功和失败
+- StreamTranscodeComplete 转码完成，包括成功和失败
+- image_detection_complete 图片识别完成，包括成功和失败
+- av_summary_complete 音视频总结完成，包括成功和失败
 
      *
      * @param callbackEvent
@@ -194,5 +233,4 @@ public class QueryCallbackSettingsResult extends JdcloudResult implements java.i
         }
         this.callbackEvents.add(callbackEvent);
     }
-
 }

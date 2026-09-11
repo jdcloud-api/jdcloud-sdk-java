@@ -38,6 +38,7 @@ public class ImageStyleCount  implements java.io.Serializable {
     private Integer styleCount;
 
 
+
     /**
      * get 图片样式总数
      *
@@ -57,10 +58,12 @@ public class ImageStyleCount  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 图片样式总数
      *
-     * @param styleCount
+     * @param styleCount 图片样式总数
+     * @return ImageStyleCount
      */
     public ImageStyleCount styleCount(Integer styleCount) {
         this.styleCount = styleCount;

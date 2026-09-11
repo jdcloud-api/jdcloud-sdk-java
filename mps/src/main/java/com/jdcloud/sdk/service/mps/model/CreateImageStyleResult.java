@@ -39,6 +39,7 @@ public class CreateImageStyleResult extends JdcloudResult implements java.io.Ser
     private Long id;
 
 
+
     /**
      * get 图片样式ID
      *
@@ -58,10 +59,12 @@ public class CreateImageStyleResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set 图片样式ID
      *
-     * @param id
+     * @param id 图片样式ID
+     * @return CreateImageStyleResult
      */
     public CreateImageStyleResult id(Long id) {
         this.id = id;

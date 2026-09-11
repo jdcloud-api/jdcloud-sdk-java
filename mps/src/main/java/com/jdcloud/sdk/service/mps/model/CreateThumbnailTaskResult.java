@@ -39,6 +39,7 @@ public class CreateThumbnailTaskResult extends JdcloudResult implements java.io.
     private String taskID;
 
 
+
     /**
      * get taskID
      *
@@ -58,10 +59,12 @@ public class CreateThumbnailTaskResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
      * set taskID
      *
-     * @param taskID
+     * @param taskID 
+     * @return CreateThumbnailTaskResult
      */
     public CreateThumbnailTaskResult taskID(String taskID) {
         this.taskID = taskID;

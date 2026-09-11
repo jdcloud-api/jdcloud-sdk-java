@@ -38,6 +38,7 @@ public class ImageStyleID  implements java.io.Serializable {
     private Long id;
 
 
+
     /**
      * get 图片样式ID
      *
@@ -57,10 +58,12 @@ public class ImageStyleID  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 图片样式ID
      *
-     * @param id
+     * @param id 图片样式ID
+     * @return ImageStyleID
      */
     public ImageStyleID id(Long id) {
         this.id = id;

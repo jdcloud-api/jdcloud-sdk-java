@@ -47,6 +47,7 @@ public class TranscodeJobInfo  implements java.io.Serializable {
     /**
      * 转码任务集合
      */
+    
     private List<TranscodeTaskInfo> tasks;
 
 
@@ -68,6 +69,7 @@ public class TranscodeJobInfo  implements java.io.Serializable {
         this.jobId = jobId;
     }
 
+
     /**
      * get 输入文件标题
      *
@@ -86,54 +88,62 @@ public class TranscodeJobInfo  implements java.io.Serializable {
         this.title = title;
     }
 
+
     /**
-     * get 转码任务集合
-     *
-     * @return
-     */
+    * get 转码任务集合
+    *
+    * @return
+    */
     public List<TranscodeTaskInfo> getTasks() {
         return tasks;
     }
 
     /**
-     * set 转码任务集合
-     *
-     * @param tasks
-     */
+    * set 转码任务集合
+    *
+    * @param tasks
+    */
     public void setTasks(List<TranscodeTaskInfo> tasks) {
         this.tasks = tasks;
     }
 
 
+
     /**
      * set 作业ID
      *
-     * @param jobId
+     * @param jobId 作业ID
+     * @return TranscodeJobInfo
      */
     public TranscodeJobInfo jobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
 
+
     /**
      * set 输入文件标题
      *
-     * @param title
+     * @param title 输入文件标题
+     * @return TranscodeJobInfo
      */
     public TranscodeJobInfo title(String title) {
         this.title = title;
         return this;
     }
 
+
     /**
-     * set 转码任务集合
-     *
-     * @param tasks
-     */
+    * set 转码任务集合
+    *
+    * @param tasks 转码任务集合
+    * @return TranscodeJobInfo
+    */
     public TranscodeJobInfo tasks(List<TranscodeTaskInfo> tasks) {
         this.tasks = tasks;
         return this;
     }
+
 
 
     /**
@@ -147,5 +157,4 @@ public class TranscodeJobInfo  implements java.io.Serializable {
         }
         this.tasks.add(task);
     }
-
 }

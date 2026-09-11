@@ -42,6 +42,7 @@ public class DeleteSnapshotTaskRequest extends JdcloudRequest implements java.io
     private String taskId;
 
 
+
     /**
      * get 任务ID，路径参数
      *
@@ -61,10 +62,12 @@ public class DeleteSnapshotTaskRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 任务ID，路径参数
      *
-     * @param taskId
+     * @param taskId 任务ID，路径参数
+     * @return DeleteSnapshotTaskRequest
      */
     public DeleteSnapshotTaskRequest taskId(String taskId) {
         this.taskId = taskId;

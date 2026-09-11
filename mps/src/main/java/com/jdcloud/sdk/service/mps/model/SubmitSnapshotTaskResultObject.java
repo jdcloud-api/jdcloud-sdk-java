@@ -37,37 +37,41 @@ public class SubmitSnapshotTaskResultObject  implements java.io.Serializable {
     /**
      * submitResult
      */
+    
     private List<SnapshotTaskObject> submitResult;
 
 
     /**
-     * get submitResult
-     *
-     * @return
-     */
+    * get submitResult
+    *
+    * @return
+    */
     public List<SnapshotTaskObject> getSubmitResult() {
         return submitResult;
     }
 
     /**
-     * set submitResult
-     *
-     * @param submitResult
-     */
+    * set submitResult
+    *
+    * @param submitResult
+    */
     public void setSubmitResult(List<SnapshotTaskObject> submitResult) {
         this.submitResult = submitResult;
     }
 
 
+
     /**
-     * set submitResult
-     *
-     * @param submitResult
-     */
+    * set submitResult
+    *
+    * @param submitResult 
+    * @return SubmitSnapshotTaskResultObject
+    */
     public SubmitSnapshotTaskResultObject submitResult(List<SnapshotTaskObject> submitResult) {
         this.submitResult = submitResult;
         return this;
     }
+
 
 
     /**
@@ -81,5 +85,4 @@ public class SubmitSnapshotTaskResultObject  implements java.io.Serializable {
         }
         this.submitResult.add(submitResult);
     }
-
 }

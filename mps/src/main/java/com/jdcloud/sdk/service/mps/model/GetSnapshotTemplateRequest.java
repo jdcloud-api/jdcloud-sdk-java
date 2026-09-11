@@ -42,6 +42,7 @@ public class GetSnapshotTemplateRequest extends JdcloudRequest implements java.i
     private String templateId;
 
 
+
     /**
      * get 模板ID
      *
@@ -61,10 +62,12 @@ public class GetSnapshotTemplateRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 模板ID
      *
-     * @param templateId
+     * @param templateId 模板ID
+     * @return GetSnapshotTemplateRequest
      */
     public GetSnapshotTemplateRequest templateId(String templateId) {
         this.templateId = templateId;

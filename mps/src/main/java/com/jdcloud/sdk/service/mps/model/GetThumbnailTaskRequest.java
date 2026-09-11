@@ -49,6 +49,7 @@ public class GetThumbnailTaskRequest extends JdcloudRequest implements java.io.S
     private String taskId;
 
 
+
     /**
      * get region id
      *
@@ -66,6 +67,7 @@ public class GetThumbnailTaskRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get task id
@@ -86,20 +88,24 @@ public class GetThumbnailTaskRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set region id
      *
-     * @param regionId
+     * @param regionId region id
+     * @return GetThumbnailTaskRequest
      */
     public GetThumbnailTaskRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set task id
      *
-     * @param taskId
+     * @param taskId task id
+     * @return GetThumbnailTaskRequest
      */
     public GetThumbnailTaskRequest taskId(String taskId) {
         this.taskId = taskId;

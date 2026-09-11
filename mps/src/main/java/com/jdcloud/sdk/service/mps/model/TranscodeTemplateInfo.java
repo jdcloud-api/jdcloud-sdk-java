@@ -94,6 +94,7 @@ public class TranscodeTemplateInfo  implements java.io.Serializable {
     private String updateTime;
 
 
+
     /**
      * get 模板ID
      *
@@ -111,6 +112,7 @@ public class TranscodeTemplateInfo  implements java.io.Serializable {
     public void setTemplateId(String templateId) {
         this.templateId = templateId;
     }
+
 
     /**
      * get 模板标题。长度不超过 128 个字符，最少 2 个字符。UTF-8 编码。
@@ -132,6 +134,7 @@ public class TranscodeTemplateInfo  implements java.io.Serializable {
         this.title = title;
     }
 
+
     /**
      * get 视频参数配置
      *
@@ -149,6 +152,7 @@ public class TranscodeTemplateInfo  implements java.io.Serializable {
     public void setVideo(VideoStreamSettings video) {
         this.video = video;
     }
+
 
     /**
      * get 音频参数配置
@@ -168,6 +172,7 @@ public class TranscodeTemplateInfo  implements java.io.Serializable {
         this.audio = audio;
     }
 
+
     /**
      * get 容器设置
      *
@@ -186,6 +191,7 @@ public class TranscodeTemplateInfo  implements java.io.Serializable {
         this.container = container;
     }
 
+
     /**
      * get 加密配置
      *
@@ -203,6 +209,7 @@ public class TranscodeTemplateInfo  implements java.io.Serializable {
     public void setEncryption(EncryptionSettings encryption) {
         this.encryption = encryption;
     }
+
 
     /**
      * get 清晰度规格标记。取值范围：
@@ -234,6 +241,7 @@ public class TranscodeTemplateInfo  implements java.io.Serializable {
         this.definition = definition;
     }
 
+
     /**
      * get 转码方式。取值范围：
   normal - 普通转码
@@ -260,6 +268,7 @@ public class TranscodeTemplateInfo  implements java.io.Serializable {
         this.transcodeType = transcodeType;
     }
 
+
     /**
      * get 创建时间
      *
@@ -277,6 +286,7 @@ public class TranscodeTemplateInfo  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 修改时间
@@ -297,66 +307,80 @@ public class TranscodeTemplateInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 模板ID
      *
-     * @param templateId
+     * @param templateId 模板ID
+     * @return TranscodeTemplateInfo
      */
     public TranscodeTemplateInfo templateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
 
+
     /**
      * set 模板标题。长度不超过 128 个字符，最少 2 个字符。UTF-8 编码。
 
      *
-     * @param title
+     * @param title 模板标题。长度不超过 128 个字符，最少 2 个字符。UTF-8 编码。
+
+     * @return TranscodeTemplateInfo
      */
     public TranscodeTemplateInfo title(String title) {
         this.title = title;
         return this;
     }
 
+
     /**
      * set 视频参数配置
      *
-     * @param video
+     * @param video 视频参数配置
+     * @return TranscodeTemplateInfo
      */
     public TranscodeTemplateInfo video(VideoStreamSettings video) {
         this.video = video;
         return this;
     }
 
+
     /**
      * set 音频参数配置
      *
-     * @param audio
+     * @param audio 音频参数配置
+     * @return TranscodeTemplateInfo
      */
     public TranscodeTemplateInfo audio(AudioStreamSettings audio) {
         this.audio = audio;
         return this;
     }
 
+
     /**
      * set 容器设置
      *
-     * @param container
+     * @param container 容器设置
+     * @return TranscodeTemplateInfo
      */
     public TranscodeTemplateInfo container(ContainerSettings container) {
         this.container = container;
         return this;
     }
 
+
     /**
      * set 加密配置
      *
-     * @param encryption
+     * @param encryption 加密配置
+     * @return TranscodeTemplateInfo
      */
     public TranscodeTemplateInfo encryption(EncryptionSettings encryption) {
         this.encryption = encryption;
         return this;
     }
+
 
     /**
      * set 清晰度规格标记。取值范围：
@@ -367,12 +391,20 @@ public class TranscodeTemplateInfo  implements java.io.Serializable {
   4K
 
      *
-     * @param definition
+     * @param definition 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
+     * @return TranscodeTemplateInfo
      */
     public TranscodeTemplateInfo definition(String definition) {
         this.definition = definition;
         return this;
     }
+
 
     /**
      * set 转码方式。取值范围：
@@ -381,27 +413,36 @@ public class TranscodeTemplateInfo  implements java.io.Serializable {
   jdchs - 极速转码
 
      *
-     * @param transcodeType
+     * @param transcodeType 转码方式。取值范围：
+  normal - 普通转码
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     * @return TranscodeTemplateInfo
      */
     public TranscodeTemplateInfo transcodeType(String transcodeType) {
         this.transcodeType = transcodeType;
         return this;
     }
 
+
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return TranscodeTemplateInfo
      */
     public TranscodeTemplateInfo createTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
 
+
     /**
      * set 修改时间
      *
-     * @param updateTime
+     * @param updateTime 修改时间
+     * @return TranscodeTemplateInfo
      */
     public TranscodeTemplateInfo updateTime(String updateTime) {
         this.updateTime = updateTime;

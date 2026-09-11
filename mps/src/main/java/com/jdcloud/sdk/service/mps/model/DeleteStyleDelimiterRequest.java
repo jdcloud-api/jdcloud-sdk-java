@@ -49,6 +49,7 @@ public class DeleteStyleDelimiterRequest extends JdcloudRequest implements java.
     private String bucketName;
 
 
+
     /**
      * get 区域ID
      *
@@ -66,6 +67,7 @@ public class DeleteStyleDelimiterRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Bucket名称
@@ -86,20 +88,24 @@ public class DeleteStyleDelimiterRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 区域ID
      *
-     * @param regionId
+     * @param regionId 区域ID
+     * @return DeleteStyleDelimiterRequest
      */
     public DeleteStyleDelimiterRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set Bucket名称
      *
-     * @param bucketName
+     * @param bucketName Bucket名称
+     * @return DeleteStyleDelimiterRequest
      */
     public DeleteStyleDelimiterRequest bucketName(String bucketName) {
         this.bucketName = bucketName;

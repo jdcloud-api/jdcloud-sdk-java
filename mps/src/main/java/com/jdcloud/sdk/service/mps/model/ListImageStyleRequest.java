@@ -64,6 +64,7 @@ public class ListImageStyleRequest extends JdcloudRequest implements java.io.Ser
     private String bucketName;
 
 
+
     /**
      * get 按样式名称查询
      *
@@ -81,6 +82,7 @@ public class ListImageStyleRequest extends JdcloudRequest implements java.io.Ser
     public void setStyleName(String styleName) {
         this.styleName = styleName;
     }
+
 
     /**
      * get 数据页码
@@ -100,6 +102,7 @@ public class ListImageStyleRequest extends JdcloudRequest implements java.io.Ser
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页数据的条数
      *
@@ -118,6 +121,7 @@ public class ListImageStyleRequest extends JdcloudRequest implements java.io.Ser
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 区域ID
      *
@@ -135,6 +139,7 @@ public class ListImageStyleRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Bucket名称
@@ -155,50 +160,60 @@ public class ListImageStyleRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 按样式名称查询
      *
-     * @param styleName
+     * @param styleName 按样式名称查询
+     * @return ListImageStyleRequest
      */
     public ListImageStyleRequest styleName(String styleName) {
         this.styleName = styleName;
         return this;
     }
 
+
     /**
      * set 数据页码
      *
-     * @param pageNumber
+     * @param pageNumber 数据页码
+     * @return ListImageStyleRequest
      */
     public ListImageStyleRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 每页数据的条数
      *
-     * @param pageSize
+     * @param pageSize 每页数据的条数
+     * @return ListImageStyleRequest
      */
     public ListImageStyleRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
+
     /**
      * set 区域ID
      *
-     * @param regionId
+     * @param regionId 区域ID
+     * @return ListImageStyleRequest
      */
     public ListImageStyleRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set Bucket名称
      *
-     * @param bucketName
+     * @param bucketName Bucket名称
+     * @return ListImageStyleRequest
      */
     public ListImageStyleRequest bucketName(String bucketName) {
         this.bucketName = bucketName;

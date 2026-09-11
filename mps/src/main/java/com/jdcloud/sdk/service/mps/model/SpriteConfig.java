@@ -73,6 +73,7 @@ public class SpriteConfig  implements java.io.Serializable {
     private Boolean doKeepShots;
 
 
+
     /**
      * get 雪碧图小图行数。雪碧图行列积必须不大于100
 
@@ -93,6 +94,7 @@ public class SpriteConfig  implements java.io.Serializable {
         this.rows = rows;
     }
 
+
     /**
      * get 雪碧图小图列数。雪碧图行列积必须不大于100
 
@@ -112,6 +114,7 @@ public class SpriteConfig  implements java.io.Serializable {
     public void setColumns(Integer columns) {
         this.columns = columns;
     }
+
 
     /**
      * get 雪碧图单元格宽度
@@ -137,6 +140,7 @@ public class SpriteConfig  implements java.io.Serializable {
         this.cellWidth = cellWidth;
     }
 
+
     /**
      * get 雪碧图单元格高度，
 取值范围：[8, 4096]，不能为奇数
@@ -161,6 +165,7 @@ public class SpriteConfig  implements java.io.Serializable {
         this.cellHeight = cellHeight;
     }
 
+
     /**
      * get 是否保留截图
 雪碧图的截图方式是先截取普通图，然后合成雪碧图。此字段控制是否保留截图。
@@ -184,27 +189,34 @@ public class SpriteConfig  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 雪碧图小图行数。雪碧图行列积必须不大于100
 
      *
-     * @param rows
+     * @param rows 雪碧图小图行数。雪碧图行列积必须不大于100
+
+     * @return SpriteConfig
      */
     public SpriteConfig rows(Integer rows) {
         this.rows = rows;
         return this;
     }
 
+
     /**
      * set 雪碧图小图列数。雪碧图行列积必须不大于100
 
      *
-     * @param columns
+     * @param columns 雪碧图小图列数。雪碧图行列积必须不大于100
+
+     * @return SpriteConfig
      */
     public SpriteConfig columns(Integer columns) {
         this.columns = columns;
         return this;
     }
+
 
     /**
      * set 雪碧图单元格宽度
@@ -212,12 +224,17 @@ public class SpriteConfig  implements java.io.Serializable {
 未设置时，回退为截图宽度 width
 
      *
-     * @param cellWidth
+     * @param cellWidth 雪碧图单元格宽度
+取值范围：[8, 4096]，不能为奇数
+未设置时，回退为截图宽度 width
+
+     * @return SpriteConfig
      */
     public SpriteConfig cellWidth(Integer cellWidth) {
         this.cellWidth = cellWidth;
         return this;
     }
+
 
     /**
      * set 雪碧图单元格高度，
@@ -225,19 +242,27 @@ public class SpriteConfig  implements java.io.Serializable {
 未设置时，系统自动会自动设置为截图高度 height
 
      *
-     * @param cellHeight
+     * @param cellHeight 雪碧图单元格高度，
+取值范围：[8, 4096]，不能为奇数
+未设置时，系统自动会自动设置为截图高度 height
+
+     * @return SpriteConfig
      */
     public SpriteConfig cellHeight(Integer cellHeight) {
         this.cellHeight = cellHeight;
         return this;
     }
 
+
     /**
      * set 是否保留截图
 雪碧图的截图方式是先截取普通图，然后合成雪碧图。此字段控制是否保留截图。
 
      *
-     * @param doKeepShots
+     * @param doKeepShots 是否保留截图
+雪碧图的截图方式是先截取普通图，然后合成雪碧图。此字段控制是否保留截图。
+
+     * @return SpriteConfig
      */
     public SpriteConfig doKeepShots(Boolean doKeepShots) {
         this.doKeepShots = doKeepShots;

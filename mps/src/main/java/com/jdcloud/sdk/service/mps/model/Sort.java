@@ -43,6 +43,7 @@ public class Sort  implements java.io.Serializable {
     private String direction;
 
 
+
     /**
      * get 排序属性名
      *
@@ -60,6 +61,7 @@ public class Sort  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 排序方向
@@ -80,20 +82,24 @@ public class Sort  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 排序属性名
      *
-     * @param name
+     * @param name 排序属性名
+     * @return Sort
      */
     public Sort name(String name) {
         this.name = name;
         return this;
     }
 
+
     /**
      * set 排序方向
      *
-     * @param direction
+     * @param direction 排序方向
+     * @return Sort
      */
     public Sort direction(String direction) {
         this.direction = direction;

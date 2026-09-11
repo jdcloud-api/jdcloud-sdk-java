@@ -51,6 +51,7 @@ public class ThumbnailStatus  implements java.io.Serializable {
     private Integer count;
 
 
+
     /**
      * get 状态 (SUCESS, ERROR, PENDDING, RUNNING)
      *
@@ -69,6 +70,7 @@ public class ThumbnailStatus  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 错误码
      *
@@ -86,6 +88,7 @@ public class ThumbnailStatus  implements java.io.Serializable {
     public void setErrorCode(Integer errorCode) {
         this.errorCode = errorCode;
     }
+
 
     /**
      * get 成功时生成的截图文件个数
@@ -106,30 +109,36 @@ public class ThumbnailStatus  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 状态 (SUCESS, ERROR, PENDDING, RUNNING)
      *
-     * @param status
+     * @param status 状态 (SUCESS, ERROR, PENDDING, RUNNING)
+     * @return ThumbnailStatus
      */
     public ThumbnailStatus status(String status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 错误码
      *
-     * @param errorCode
+     * @param errorCode 错误码
+     * @return ThumbnailStatus
      */
     public ThumbnailStatus errorCode(Integer errorCode) {
         this.errorCode = errorCode;
         return this;
     }
 
+
     /**
      * set 成功时生成的截图文件个数
      *
-     * @param count
+     * @param count 成功时生成的截图文件个数
+     * @return ThumbnailStatus
      */
     public ThumbnailStatus count(Integer count) {
         this.count = count;

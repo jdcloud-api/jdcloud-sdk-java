@@ -90,6 +90,16 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
      */
     private SpriteConfig spriteConfig;
 
+    /**
+     * 配置数据，JSON格式的字符串。
+sampleConfig.pageCallbackCount 可配置 普通截图 每次回调结果中，截图个数。默认 10。
+spriteConfig.pageCallbackCount 可配置 雪碧图 每次回调结果中，截图个数。 默认 1。
+如 {\&quot;sampleConfig\&quot;:{\&quot;pageCallbackCount\&quot;:10},\&quot;spriteConfig\&quot;:{\&quot;pageCallbackCount\&quot;:1}}
+
+     */
+    private String configData;
+
+
 
     /**
      * get 模板标题。长度不超过 128 个字节。UTF-8 编码。
@@ -109,6 +119,7 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
         this.title = title;
     }
 
+
     /**
      * get 截图起始时间，单位为秒，缺省值为 0
      *
@@ -126,6 +137,7 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
     public void setStartTime(Integer startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 截图帧类型。取值范围：normal、intra
@@ -145,6 +157,7 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
         this.frameType = frameType;
     }
 
+
     /**
      * get 截图格式。取值范围：jpg、png
      *
@@ -162,6 +175,7 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
     public void setFormat(String format) {
         this.format = format;
     }
+
 
     /**
      * get 截图数量，缺省值为 10
@@ -181,6 +195,7 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
         this.number = number;
     }
 
+
     /**
      * get 截图间隔
      *
@@ -198,6 +213,7 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
     public void setInterval(Integer interval) {
         this.interval = interval;
     }
+
 
     /**
      * get 截图宽度，取值范围：[8, 4096]
@@ -219,6 +235,7 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
         this.width = width;
     }
 
+
     /**
      * get 截图高度，取值范围：[8, 4096]
 
@@ -238,6 +255,7 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
     public void setHeight(Integer height) {
         this.height = height;
     }
+
 
     /**
      * get 填充方式，当视频宽高与截图宽高指定值不能匹配时的填充处理方式。取值范围：
@@ -269,6 +287,7 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
         this.fillType = fillType;
     }
 
+
     /**
      * get 雪碧图配置
      *
@@ -289,86 +308,132 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
 
 
     /**
+     * get 配置数据，JSON格式的字符串。
+sampleConfig.pageCallbackCount 可配置 普通截图 每次回调结果中，截图个数。默认 10。
+spriteConfig.pageCallbackCount 可配置 雪碧图 每次回调结果中，截图个数。 默认 1。
+如 {\&quot;sampleConfig\&quot;:{\&quot;pageCallbackCount\&quot;:10},\&quot;spriteConfig\&quot;:{\&quot;pageCallbackCount\&quot;:1}}
+
+     *
+     * @return
+     */
+    public String getConfigData() {
+        return configData;
+    }
+
+    /**
+     * set 配置数据，JSON格式的字符串。
+sampleConfig.pageCallbackCount 可配置 普通截图 每次回调结果中，截图个数。默认 10。
+spriteConfig.pageCallbackCount 可配置 雪碧图 每次回调结果中，截图个数。 默认 1。
+如 {\&quot;sampleConfig\&quot;:{\&quot;pageCallbackCount\&quot;:10},\&quot;spriteConfig\&quot;:{\&quot;pageCallbackCount\&quot;:1}}
+
+     *
+     * @param configData
+     */
+    public void setConfigData(String configData) {
+        this.configData = configData;
+    }
+
+
+
+    /**
      * set 模板标题。长度不超过 128 个字节。UTF-8 编码。
      *
-     * @param title
+     * @param title 模板标题。长度不超过 128 个字节。UTF-8 编码。
+     * @return UpdateSnapshotTemplateRequestInfo
      */
     public UpdateSnapshotTemplateRequestInfo title(String title) {
         this.title = title;
         return this;
     }
 
+
     /**
      * set 截图起始时间，单位为秒，缺省值为 0
      *
-     * @param startTime
+     * @param startTime 截图起始时间，单位为秒，缺省值为 0
+     * @return UpdateSnapshotTemplateRequestInfo
      */
     public UpdateSnapshotTemplateRequestInfo startTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
 
+
     /**
      * set 截图帧类型。取值范围：normal、intra
      *
-     * @param frameType
+     * @param frameType 截图帧类型。取值范围：normal、intra
+     * @return UpdateSnapshotTemplateRequestInfo
      */
     public UpdateSnapshotTemplateRequestInfo frameType(String frameType) {
         this.frameType = frameType;
         return this;
     }
 
+
     /**
      * set 截图格式。取值范围：jpg、png
      *
-     * @param format
+     * @param format 截图格式。取值范围：jpg、png
+     * @return UpdateSnapshotTemplateRequestInfo
      */
     public UpdateSnapshotTemplateRequestInfo format(String format) {
         this.format = format;
         return this;
     }
 
+
     /**
      * set 截图数量，缺省值为 10
      *
-     * @param number
+     * @param number 截图数量，缺省值为 10
+     * @return UpdateSnapshotTemplateRequestInfo
      */
     public UpdateSnapshotTemplateRequestInfo number(Integer number) {
         this.number = number;
         return this;
     }
 
+
     /**
      * set 截图间隔
      *
-     * @param interval
+     * @param interval 截图间隔
+     * @return UpdateSnapshotTemplateRequestInfo
      */
     public UpdateSnapshotTemplateRequestInfo interval(Integer interval) {
         this.interval = interval;
         return this;
     }
 
+
     /**
      * set 截图宽度，取值范围：[8, 4096]
 
      *
-     * @param width
+     * @param width 截图宽度，取值范围：[8, 4096]
+
+     * @return UpdateSnapshotTemplateRequestInfo
      */
     public UpdateSnapshotTemplateRequestInfo width(Integer width) {
         this.width = width;
         return this;
     }
 
+
     /**
      * set 截图高度，取值范围：[8, 4096]
 
      *
-     * @param height
+     * @param height 截图高度，取值范围：[8, 4096]
+
+     * @return UpdateSnapshotTemplateRequestInfo
      */
     public UpdateSnapshotTemplateRequestInfo height(Integer height) {
         this.height = height;
         return this;
     }
+
 
     /**
      * set 填充方式，当视频宽高与截图宽高指定值不能匹配时的填充处理方式。取值范围：
@@ -379,20 +444,49 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
 缺省值为 black
 
      *
-     * @param fillType
+     * @param fillType 填充方式，当视频宽高与截图宽高指定值不能匹配时的填充处理方式。取值范围：
+  stretch - 伸缩
+  black - 留黑
+  white - 留白
+  gauss - 高斯模糊
+缺省值为 black
+
+     * @return UpdateSnapshotTemplateRequestInfo
      */
     public UpdateSnapshotTemplateRequestInfo fillType(String fillType) {
         this.fillType = fillType;
         return this;
     }
 
+
     /**
      * set 雪碧图配置
      *
-     * @param spriteConfig
+     * @param spriteConfig 雪碧图配置
+     * @return UpdateSnapshotTemplateRequestInfo
      */
     public UpdateSnapshotTemplateRequestInfo spriteConfig(SpriteConfig spriteConfig) {
         this.spriteConfig = spriteConfig;
+        return this;
+    }
+
+
+    /**
+     * set 配置数据，JSON格式的字符串。
+sampleConfig.pageCallbackCount 可配置 普通截图 每次回调结果中，截图个数。默认 10。
+spriteConfig.pageCallbackCount 可配置 雪碧图 每次回调结果中，截图个数。 默认 1。
+如 {\&quot;sampleConfig\&quot;:{\&quot;pageCallbackCount\&quot;:10},\&quot;spriteConfig\&quot;:{\&quot;pageCallbackCount\&quot;:1}}
+
+     *
+     * @param configData 配置数据，JSON格式的字符串。
+sampleConfig.pageCallbackCount 可配置 普通截图 每次回调结果中，截图个数。默认 10。
+spriteConfig.pageCallbackCount 可配置 雪碧图 每次回调结果中，截图个数。 默认 1。
+如 {\&quot;sampleConfig\&quot;:{\&quot;pageCallbackCount\&quot;:10},\&quot;spriteConfig\&quot;:{\&quot;pageCallbackCount\&quot;:1}}
+
+     * @return UpdateSnapshotTemplateRequestInfo
+     */
+    public UpdateSnapshotTemplateRequestInfo configData(String configData) {
+        this.configData = configData;
         return this;
     }
 

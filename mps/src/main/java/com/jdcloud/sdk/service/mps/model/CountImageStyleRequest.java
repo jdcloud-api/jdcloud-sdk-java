@@ -54,6 +54,7 @@ public class CountImageStyleRequest extends JdcloudRequest implements java.io.Se
     private String bucketName;
 
 
+
     /**
      * get 按样式名称查询
      *
@@ -72,6 +73,7 @@ public class CountImageStyleRequest extends JdcloudRequest implements java.io.Se
         this.styleName = styleName;
     }
 
+
     /**
      * get 区域ID
      *
@@ -89,6 +91,7 @@ public class CountImageStyleRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Bucket名称
@@ -109,30 +112,36 @@ public class CountImageStyleRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 按样式名称查询
      *
-     * @param styleName
+     * @param styleName 按样式名称查询
+     * @return CountImageStyleRequest
      */
     public CountImageStyleRequest styleName(String styleName) {
         this.styleName = styleName;
         return this;
     }
 
+
     /**
      * set 区域ID
      *
-     * @param regionId
+     * @param regionId 区域ID
+     * @return CountImageStyleRequest
      */
     public CountImageStyleRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set Bucket名称
      *
-     * @param bucketName
+     * @param bucketName Bucket名称
+     * @return CountImageStyleRequest
      */
     public CountImageStyleRequest bucketName(String bucketName) {
         this.bucketName = bucketName;

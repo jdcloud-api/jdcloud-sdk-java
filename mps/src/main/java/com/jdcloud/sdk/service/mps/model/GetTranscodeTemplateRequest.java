@@ -42,6 +42,7 @@ public class GetTranscodeTemplateRequest extends JdcloudRequest implements java.
     private Long templateId;
 
 
+
     /**
      * get 模板ID
      *
@@ -61,10 +62,12 @@ public class GetTranscodeTemplateRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 模板ID
      *
-     * @param templateId
+     * @param templateId 模板ID
+     * @return GetTranscodeTemplateRequest
      */
     public GetTranscodeTemplateRequest templateId(Long templateId) {
         this.templateId = templateId;

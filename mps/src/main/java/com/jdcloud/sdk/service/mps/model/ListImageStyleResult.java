@@ -54,6 +54,7 @@ public class ListImageStyleResult extends JdcloudResult implements java.io.Seria
     /**
      * 图片样式列表
      */
+    
     private List<ImageStyle> imageStyleList;
 
 
@@ -75,6 +76,7 @@ public class ListImageStyleResult extends JdcloudResult implements java.io.Seria
         this.styleName = styleName;
     }
 
+
     /**
      * get 数据页码
      *
@@ -92,6 +94,7 @@ public class ListImageStyleResult extends JdcloudResult implements java.io.Seria
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 每页数据的条数
@@ -111,64 +114,74 @@ public class ListImageStyleResult extends JdcloudResult implements java.io.Seria
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get 图片样式列表
-     *
-     * @return
-     */
+    * get 图片样式列表
+    *
+    * @return
+    */
     public List<ImageStyle> getImageStyleList() {
         return imageStyleList;
     }
 
     /**
-     * set 图片样式列表
-     *
-     * @param imageStyleList
-     */
+    * set 图片样式列表
+    *
+    * @param imageStyleList
+    */
     public void setImageStyleList(List<ImageStyle> imageStyleList) {
         this.imageStyleList = imageStyleList;
     }
 
 
+
     /**
      * set 按样式名称查询
      *
-     * @param styleName
+     * @param styleName 按样式名称查询
+     * @return ListImageStyleResult
      */
     public ListImageStyleResult styleName(String styleName) {
         this.styleName = styleName;
         return this;
     }
 
+
     /**
      * set 数据页码
      *
-     * @param pageNumber
+     * @param pageNumber 数据页码
+     * @return ListImageStyleResult
      */
     public ListImageStyleResult pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 每页数据的条数
      *
-     * @param pageSize
+     * @param pageSize 每页数据的条数
+     * @return ListImageStyleResult
      */
     public ListImageStyleResult pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
+
     /**
-     * set 图片样式列表
-     *
-     * @param imageStyleList
-     */
+    * set 图片样式列表
+    *
+    * @param imageStyleList 图片样式列表
+    * @return ListImageStyleResult
+    */
     public ListImageStyleResult imageStyleList(List<ImageStyle> imageStyleList) {
         this.imageStyleList = imageStyleList;
         return this;
     }
+
 
 
     /**
@@ -182,5 +195,4 @@ public class ListImageStyleResult extends JdcloudResult implements java.io.Seria
         }
         this.imageStyleList.add(imageStyleList);
     }
-
 }

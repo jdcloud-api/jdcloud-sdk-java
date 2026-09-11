@@ -42,6 +42,7 @@ public class DeleteTranscodeTemplateRequest extends JdcloudRequest implements ja
     private Long templateId;
 
 
+
     /**
      * get 模板ID
      *
@@ -61,10 +62,12 @@ public class DeleteTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 模板ID
      *
-     * @param templateId
+     * @param templateId 模板ID
+     * @return DeleteTranscodeTemplateRequest
      */
     public DeleteTranscodeTemplateRequest templateId(Long templateId) {
         this.templateId = templateId;

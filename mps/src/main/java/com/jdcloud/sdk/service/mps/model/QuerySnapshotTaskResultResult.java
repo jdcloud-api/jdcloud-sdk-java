@@ -64,6 +64,7 @@ public class QuerySnapshotTaskResultResult extends JdcloudResult implements java
     private SpriteResult spriteResult;
 
 
+
     /**
      * get 任务ID
      *
@@ -81,6 +82,7 @@ public class QuerySnapshotTaskResultResult extends JdcloudResult implements java
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
     /**
      * get 结果状态。
@@ -106,6 +108,7 @@ public class QuerySnapshotTaskResultResult extends JdcloudResult implements java
         this.status = status;
     }
 
+
     /**
      * get 错误码
      *
@@ -124,6 +127,7 @@ public class QuerySnapshotTaskResultResult extends JdcloudResult implements java
         this.errorCode = errorCode;
     }
 
+
     /**
      * get 截图输出结果
      *
@@ -141,6 +145,7 @@ public class QuerySnapshotTaskResultResult extends JdcloudResult implements java
     public void setShotResult(ShotResult shotResult) {
         this.shotResult = shotResult;
     }
+
 
     /**
      * get 雪碧图输出结果
@@ -161,15 +166,18 @@ public class QuerySnapshotTaskResultResult extends JdcloudResult implements java
     }
 
 
+
     /**
      * set 任务ID
      *
-     * @param taskId
+     * @param taskId 任务ID
+     * @return QuerySnapshotTaskResultResult
      */
     public QuerySnapshotTaskResultResult taskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
+
 
     /**
      * set 结果状态。
@@ -177,37 +185,47 @@ public class QuerySnapshotTaskResultResult extends JdcloudResult implements java
 - finished_failure
 
      *
-     * @param status
+     * @param status 结果状态。
+- finished_success
+- finished_failure
+
+     * @return QuerySnapshotTaskResultResult
      */
     public QuerySnapshotTaskResultResult status(String status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 错误码
      *
-     * @param errorCode
+     * @param errorCode 错误码
+     * @return QuerySnapshotTaskResultResult
      */
     public QuerySnapshotTaskResultResult errorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
 
+
     /**
      * set 截图输出结果
      *
-     * @param shotResult
+     * @param shotResult 截图输出结果
+     * @return QuerySnapshotTaskResultResult
      */
     public QuerySnapshotTaskResultResult shotResult(ShotResult shotResult) {
         this.shotResult = shotResult;
         return this;
     }
 
+
     /**
      * set 雪碧图输出结果
      *
-     * @param spriteResult
+     * @param spriteResult 雪碧图输出结果
+     * @return QuerySnapshotTaskResultResult
      */
     public QuerySnapshotTaskResultResult spriteResult(SpriteResult spriteResult) {
         this.spriteResult = spriteResult;

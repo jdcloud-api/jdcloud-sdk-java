@@ -39,37 +39,41 @@ public class SubmitSnapshotTaskResult extends JdcloudResult implements java.io.S
     /**
      * submitResult
      */
+    
     private List<SnapshotTaskObject> submitResult;
 
 
     /**
-     * get submitResult
-     *
-     * @return
-     */
+    * get submitResult
+    *
+    * @return
+    */
     public List<SnapshotTaskObject> getSubmitResult() {
         return submitResult;
     }
 
     /**
-     * set submitResult
-     *
-     * @param submitResult
-     */
+    * set submitResult
+    *
+    * @param submitResult
+    */
     public void setSubmitResult(List<SnapshotTaskObject> submitResult) {
         this.submitResult = submitResult;
     }
 
 
+
     /**
-     * set submitResult
-     *
-     * @param submitResult
-     */
+    * set submitResult
+    *
+    * @param submitResult 
+    * @return SubmitSnapshotTaskResult
+    */
     public SubmitSnapshotTaskResult submitResult(List<SnapshotTaskObject> submitResult) {
         this.submitResult = submitResult;
         return this;
     }
+
 
 
     /**
@@ -83,5 +87,4 @@ public class SubmitSnapshotTaskResult extends JdcloudResult implements java.io.S
         }
         this.submitResult.add(submitResult);
     }
-
 }

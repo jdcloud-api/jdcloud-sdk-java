@@ -99,6 +99,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     private String updateTime;
 
 
+
     /**
      * get 模板ID
      *
@@ -116,6 +117,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     public void setTemplateId(String templateId) {
         this.templateId = templateId;
     }
+
 
     /**
      * get 模板标题。长度不超过 128 个字符，最少 2 个字符。UTF-8 编码。
@@ -137,6 +139,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
         this.title = title;
     }
 
+
     /**
      * get 视频参数配置
      *
@@ -154,6 +157,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     public void setVideo(VideoStreamSettings video) {
         this.video = video;
     }
+
 
     /**
      * get 音频参数配置
@@ -173,6 +177,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
         this.audio = audio;
     }
 
+
     /**
      * get 容器设置
      *
@@ -191,6 +196,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
         this.container = container;
     }
 
+
     /**
      * get 加密配置
      *
@@ -208,6 +214,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     public void setEncryption(EncryptionSettings encryption) {
         this.encryption = encryption;
     }
+
 
     /**
      * get 清晰度规格标记。取值范围：
@@ -239,6 +246,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
         this.definition = definition;
     }
 
+
     /**
      * get 转码方式。取值范围：
   normal - 普通转码
@@ -265,6 +273,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
         this.transcodeType = transcodeType;
     }
 
+
     /**
      * get 创建时间
      *
@@ -282,6 +291,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 修改时间
@@ -302,66 +312,80 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
      * set 模板ID
      *
-     * @param templateId
+     * @param templateId 模板ID
+     * @return GetTranscodeTemplateResult
      */
     public GetTranscodeTemplateResult templateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
 
+
     /**
      * set 模板标题。长度不超过 128 个字符，最少 2 个字符。UTF-8 编码。
 
      *
-     * @param title
+     * @param title 模板标题。长度不超过 128 个字符，最少 2 个字符。UTF-8 编码。
+
+     * @return GetTranscodeTemplateResult
      */
     public GetTranscodeTemplateResult title(String title) {
         this.title = title;
         return this;
     }
 
+
     /**
      * set 视频参数配置
      *
-     * @param video
+     * @param video 视频参数配置
+     * @return GetTranscodeTemplateResult
      */
     public GetTranscodeTemplateResult video(VideoStreamSettings video) {
         this.video = video;
         return this;
     }
 
+
     /**
      * set 音频参数配置
      *
-     * @param audio
+     * @param audio 音频参数配置
+     * @return GetTranscodeTemplateResult
      */
     public GetTranscodeTemplateResult audio(AudioStreamSettings audio) {
         this.audio = audio;
         return this;
     }
 
+
     /**
      * set 容器设置
      *
-     * @param container
+     * @param container 容器设置
+     * @return GetTranscodeTemplateResult
      */
     public GetTranscodeTemplateResult container(ContainerSettings container) {
         this.container = container;
         return this;
     }
 
+
     /**
      * set 加密配置
      *
-     * @param encryption
+     * @param encryption 加密配置
+     * @return GetTranscodeTemplateResult
      */
     public GetTranscodeTemplateResult encryption(EncryptionSettings encryption) {
         this.encryption = encryption;
         return this;
     }
+
 
     /**
      * set 清晰度规格标记。取值范围：
@@ -372,12 +396,20 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
   4K
 
      *
-     * @param definition
+     * @param definition 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
+     * @return GetTranscodeTemplateResult
      */
     public GetTranscodeTemplateResult definition(String definition) {
         this.definition = definition;
         return this;
     }
+
 
     /**
      * set 转码方式。取值范围：
@@ -386,27 +418,36 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
   jdchs - 极速转码
 
      *
-     * @param transcodeType
+     * @param transcodeType 转码方式。取值范围：
+  normal - 普通转码
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     * @return GetTranscodeTemplateResult
      */
     public GetTranscodeTemplateResult transcodeType(String transcodeType) {
         this.transcodeType = transcodeType;
         return this;
     }
 
+
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return GetTranscodeTemplateResult
      */
     public GetTranscodeTemplateResult createTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
 
+
     /**
      * set 修改时间
      *
-     * @param updateTime
+     * @param updateTime 修改时间
+     * @return GetTranscodeTemplateResult
      */
     public GetTranscodeTemplateResult updateTime(String updateTime) {
         this.updateTime = updateTime;

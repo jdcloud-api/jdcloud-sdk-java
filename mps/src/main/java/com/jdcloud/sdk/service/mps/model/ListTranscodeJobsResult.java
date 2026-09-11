@@ -62,6 +62,7 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
     /**
      * 分页内容
      */
+    
     private List<TranscodeJobInfo> content;
 
 
@@ -83,6 +84,7 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页数量
      *
@@ -100,6 +102,7 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 查询总数
@@ -119,6 +122,7 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
         this.totalElements = totalElements;
     }
 
+
     /**
      * get 总页数
      *
@@ -137,74 +141,86 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
         this.totalPages = totalPages;
     }
 
+
     /**
-     * get 分页内容
-     *
-     * @return
-     */
+    * get 分页内容
+    *
+    * @return
+    */
     public List<TranscodeJobInfo> getContent() {
         return content;
     }
 
     /**
-     * set 分页内容
-     *
-     * @param content
-     */
+    * set 分页内容
+    *
+    * @param content
+    */
     public void setContent(List<TranscodeJobInfo> content) {
         this.content = content;
     }
 
 
+
     /**
      * set 当前页码
      *
-     * @param pageNumber
+     * @param pageNumber 当前页码
+     * @return ListTranscodeJobsResult
      */
     public ListTranscodeJobsResult pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 每页数量
      *
-     * @param pageSize
+     * @param pageSize 每页数量
+     * @return ListTranscodeJobsResult
      */
     public ListTranscodeJobsResult pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
+
     /**
      * set 查询总数
      *
-     * @param totalElements
+     * @param totalElements 查询总数
+     * @return ListTranscodeJobsResult
      */
     public ListTranscodeJobsResult totalElements(Integer totalElements) {
         this.totalElements = totalElements;
         return this;
     }
 
+
     /**
      * set 总页数
      *
-     * @param totalPages
+     * @param totalPages 总页数
+     * @return ListTranscodeJobsResult
      */
     public ListTranscodeJobsResult totalPages(Integer totalPages) {
         this.totalPages = totalPages;
         return this;
     }
 
+
     /**
-     * set 分页内容
-     *
-     * @param content
-     */
+    * set 分页内容
+    *
+    * @param content 分页内容
+    * @return ListTranscodeJobsResult
+    */
     public ListTranscodeJobsResult content(List<TranscodeJobInfo> content) {
         this.content = content;
         return this;
     }
+
 
 
     /**
@@ -218,5 +234,4 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
         }
         this.content.add(content);
     }
-
 }

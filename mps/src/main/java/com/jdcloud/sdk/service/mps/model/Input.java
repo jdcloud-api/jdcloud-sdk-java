@@ -48,6 +48,7 @@ public class Input  implements java.io.Serializable {
     private String objectKey;
 
 
+
     /**
      * get 输入对象存储区域
      *
@@ -66,6 +67,7 @@ public class Input  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 输入对象存储空间
      *
@@ -83,6 +85,7 @@ public class Input  implements java.io.Serializable {
     public void setBucket(String bucket) {
         this.bucket = bucket;
     }
+
 
     /**
      * get 输入对象
@@ -103,30 +106,36 @@ public class Input  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 输入对象存储区域
      *
-     * @param region
+     * @param region 输入对象存储区域
+     * @return Input
      */
     public Input region(String region) {
         this.region = region;
         return this;
     }
 
+
     /**
      * set 输入对象存储空间
      *
-     * @param bucket
+     * @param bucket 输入对象存储空间
+     * @return Input
      */
     public Input bucket(String bucket) {
         this.bucket = bucket;
         return this;
     }
 
+
     /**
      * set 输入对象
      *
-     * @param objectKey
+     * @param objectKey 输入对象
+     * @return Input
      */
     public Input objectKey(String objectKey) {
         this.objectKey = objectKey;

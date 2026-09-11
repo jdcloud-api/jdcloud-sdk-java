@@ -39,6 +39,7 @@ public class CountImageStyleResult extends JdcloudResult implements java.io.Seri
     private Integer styleCount;
 
 
+
     /**
      * get 图片样式总数
      *
@@ -58,10 +59,12 @@ public class CountImageStyleResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
      * set 图片样式总数
      *
-     * @param styleCount
+     * @param styleCount 图片样式总数
+     * @return CountImageStyleResult
      */
     public CountImageStyleResult styleCount(Integer styleCount) {
         this.styleCount = styleCount;

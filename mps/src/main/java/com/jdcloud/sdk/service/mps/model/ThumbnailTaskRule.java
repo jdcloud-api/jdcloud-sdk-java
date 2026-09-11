@@ -58,6 +58,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     private Integer count;
 
 
+
     /**
      * get 截图模式 单张: single 多张: multi 平均: average default: single
      *
@@ -75,6 +76,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     public void setMode(String mode) {
         this.mode = mode;
     }
+
 
     /**
      * get 是否开启关键帧截图 default: true
@@ -94,6 +96,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
         this.keyFrame = keyFrame;
     }
 
+
     /**
      * get 生成截图的开始时间, mode&#x3D;average 时不可选. default:0
      *
@@ -112,6 +115,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
         this.startTimeInSecond = startTimeInSecond;
     }
 
+
     /**
      * get 生成截图的结束时间, mode&#x3D;single/average时不可选, 且不得小于startTimeInSecond. default:-1(代表视频时长)
      *
@@ -129,6 +133,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     public void setEndTimeInSecond(Integer endTimeInSecond) {
         this.endTimeInSecond = endTimeInSecond;
     }
+
 
     /**
      * get 截图数量, mode&#x3D;single时不可选. default:1
@@ -149,50 +154,60 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 截图模式 单张: single 多张: multi 平均: average default: single
      *
-     * @param mode
+     * @param mode 截图模式 单张: single 多张: multi 平均: average default: single
+     * @return ThumbnailTaskRule
      */
     public ThumbnailTaskRule mode(String mode) {
         this.mode = mode;
         return this;
     }
 
+
     /**
      * set 是否开启关键帧截图 default: true
      *
-     * @param keyFrame
+     * @param keyFrame 是否开启关键帧截图 default: true
+     * @return ThumbnailTaskRule
      */
     public ThumbnailTaskRule keyFrame(Boolean keyFrame) {
         this.keyFrame = keyFrame;
         return this;
     }
 
+
     /**
      * set 生成截图的开始时间, mode&#x3D;average 时不可选. default:0
      *
-     * @param startTimeInSecond
+     * @param startTimeInSecond 生成截图的开始时间, mode&#x3D;average 时不可选. default:0
+     * @return ThumbnailTaskRule
      */
     public ThumbnailTaskRule startTimeInSecond(Integer startTimeInSecond) {
         this.startTimeInSecond = startTimeInSecond;
         return this;
     }
 
+
     /**
      * set 生成截图的结束时间, mode&#x3D;single/average时不可选, 且不得小于startTimeInSecond. default:-1(代表视频时长)
      *
-     * @param endTimeInSecond
+     * @param endTimeInSecond 生成截图的结束时间, mode&#x3D;single/average时不可选, 且不得小于startTimeInSecond. default:-1(代表视频时长)
+     * @return ThumbnailTaskRule
      */
     public ThumbnailTaskRule endTimeInSecond(Integer endTimeInSecond) {
         this.endTimeInSecond = endTimeInSecond;
         return this;
     }
 
+
     /**
      * set 截图数量, mode&#x3D;single时不可选. default:1
      *
-     * @param count
+     * @param count 截图数量, mode&#x3D;single时不可选. default:1
+     * @return ThumbnailTaskRule
      */
     public ThumbnailTaskRule count(Integer count) {
         this.count = count;

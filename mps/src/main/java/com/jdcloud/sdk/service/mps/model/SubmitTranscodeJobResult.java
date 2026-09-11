@@ -43,6 +43,7 @@ public class SubmitTranscodeJobResult extends JdcloudResult implements java.io.S
     /**
      * 转码任务ID集合
      */
+    
     private List<String> taskIds;
 
 
@@ -64,44 +65,50 @@ public class SubmitTranscodeJobResult extends JdcloudResult implements java.io.S
         this.jobId = jobId;
     }
 
+
     /**
-     * get 转码任务ID集合
-     *
-     * @return
-     */
+    * get 转码任务ID集合
+    *
+    * @return
+    */
     public List<String> getTaskIds() {
         return taskIds;
     }
 
     /**
-     * set 转码任务ID集合
-     *
-     * @param taskIds
-     */
+    * set 转码任务ID集合
+    *
+    * @param taskIds
+    */
     public void setTaskIds(List<String> taskIds) {
         this.taskIds = taskIds;
     }
 
 
+
     /**
      * set 转码作业ID
      *
-     * @param jobId
+     * @param jobId 转码作业ID
+     * @return SubmitTranscodeJobResult
      */
     public SubmitTranscodeJobResult jobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
 
+
     /**
-     * set 转码任务ID集合
-     *
-     * @param taskIds
-     */
+    * set 转码任务ID集合
+    *
+    * @param taskIds 转码任务ID集合
+    * @return SubmitTranscodeJobResult
+    */
     public SubmitTranscodeJobResult taskIds(List<String> taskIds) {
         this.taskIds = taskIds;
         return this;
     }
+
 
 
     /**
@@ -115,5 +122,4 @@ public class SubmitTranscodeJobResult extends JdcloudResult implements java.io.S
         }
         this.taskIds.add(taskId);
     }
-
 }

@@ -67,6 +67,7 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
     private String regionId;
 
 
+
     /**
      * get task 状态 (PENDING, RUNNING, SUCCESS, FAILED)
      *
@@ -84,6 +85,7 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 开始时间 时间格式(GMT): yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
@@ -103,6 +105,7 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
         this.begin = begin;
     }
 
+
     /**
      * get 结束时间 时间格式(GMT): yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
      *
@@ -120,6 +123,7 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
     public void setEnd(String end) {
         this.end = end;
     }
+
 
     /**
      * get 查询标记
@@ -139,6 +143,7 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
         this.marker = marker;
     }
 
+
     /**
      * get 查询记录数 [1, 1000]
      *
@@ -156,6 +161,7 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
     public void setLimit(Integer limit) {
         this.limit = limit;
     }
+
 
     /**
      * get region id
@@ -176,60 +182,72 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set task 状态 (PENDING, RUNNING, SUCCESS, FAILED)
      *
-     * @param status
+     * @param status task 状态 (PENDING, RUNNING, SUCCESS, FAILED)
+     * @return ListThumbnailTaskRequest
      */
     public ListThumbnailTaskRequest status(String status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 开始时间 时间格式(GMT): yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
      *
-     * @param begin
+     * @param begin 开始时间 时间格式(GMT): yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
+     * @return ListThumbnailTaskRequest
      */
     public ListThumbnailTaskRequest begin(String begin) {
         this.begin = begin;
         return this;
     }
 
+
     /**
      * set 结束时间 时间格式(GMT): yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
      *
-     * @param end
+     * @param end 结束时间 时间格式(GMT): yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
+     * @return ListThumbnailTaskRequest
      */
     public ListThumbnailTaskRequest end(String end) {
         this.end = end;
         return this;
     }
 
+
     /**
      * set 查询标记
      *
-     * @param marker
+     * @param marker 查询标记
+     * @return ListThumbnailTaskRequest
      */
     public ListThumbnailTaskRequest marker(String marker) {
         this.marker = marker;
         return this;
     }
 
+
     /**
      * set 查询记录数 [1, 1000]
      *
-     * @param limit
+     * @param limit 查询记录数 [1, 1000]
+     * @return ListThumbnailTaskRequest
      */
     public ListThumbnailTaskRequest limit(Integer limit) {
         this.limit = limit;
         return this;
     }
 
+
     /**
      * set region id
      *
-     * @param regionId
+     * @param regionId region id
+     * @return ListThumbnailTaskRequest
      */
     public ListThumbnailTaskRequest regionId(String regionId) {
         this.regionId = regionId;
