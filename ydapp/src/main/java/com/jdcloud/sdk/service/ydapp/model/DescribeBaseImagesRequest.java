@@ -27,49 +27,13 @@ package com.jdcloud.sdk.service.ydapp.model;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询已发布的基础镜像列表，可按镜像类型过滤（JAVA、PHP、Nginx）
+ * 查询已发布的基础镜像列表
  */
 public class DescribeBaseImagesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 镜像类型，可选值：JAVA、PHP、Nginx，E.g.，JAVA
-     */
-    private String imageType;
 
-
-
-    /**
-     * get 镜像类型，可选值：JAVA、PHP、Nginx，E.g.，JAVA
-     *
-     * @return
-     */
-    public String getImageType() {
-        return imageType;
-    }
-
-    /**
-     * set 镜像类型，可选值：JAVA、PHP、Nginx，E.g.，JAVA
-     *
-     * @param imageType
-     */
-    public void setImageType(String imageType) {
-        this.imageType = imageType;
-    }
-
-
-
-    /**
-     * set 镜像类型，可选值：JAVA、PHP、Nginx，E.g.，JAVA
-     *
-     * @param imageType 镜像类型，可选值：JAVA、PHP、Nginx，E.g.，JAVA
-     * @return DescribeBaseImagesRequest
-     */
-    public DescribeBaseImagesRequest imageType(String imageType) {
-        this.imageType = imageType;
-        return this;
-    }
 
 
 }

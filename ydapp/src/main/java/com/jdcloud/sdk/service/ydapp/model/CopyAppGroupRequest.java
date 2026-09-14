@@ -24,172 +24,84 @@
 
 package com.jdcloud.sdk.service.ydapp.model;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.ydapp.model.DeployStrategyStruct;
-import com.jdcloud.sdk.service.ydapp.model.HealthCheckStruct;
-import com.jdcloud.sdk.service.ydapp.model.ReadyCheckStruct;
-import com.jdcloud.sdk.service.ydapp.model.LifecycleStruct;
-import com.jdcloud.sdk.service.ydapp.model.ContainerInfoStruct;
-import com.jdcloud.sdk.service.ydapp.model.BaseInfoStruct;
-import com.jdcloud.sdk.service.ydapp.model.GroupConfigInfo;
-import com.jdcloud.sdk.service.ydapp.model.TaskPort;
-import com.jdcloud.sdk.service.ydapp.model.TagInfo;
-import com.jdcloud.sdk.service.ydapp.model.StartCmdStruct;
-import com.jdcloud.sdk.service.ydapp.model.GroupVolume;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 复制指定分组
+ * 复制指定分组，所选集群的环境必须与分组环境一致
  */
 public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 应用ID，服务端会从 path 参数写入
-     * Required:true
-     */
-    @Required
-    private String appId;
-
-    /**
-     * 分组 key
+     * 分组英文名，由小写字母、数字和中划线组成，以小写字母或数字开头结尾，长度为2-27个字符
      * Required:true
      */
     @Required
     private String groupKey;
 
     /**
-     * 分组名称
+     * 分组中文名称，为空默认和分组英文名保持一致
      */
     private String groupName;
 
     /**
-     * 环境
+     * 分组环境，必须与所选集群环境一致。test-测试环境; product-生产环境
      * Required:true
      */
     @Required
     private String env;
 
     /**
-     * 服务名称
-     */
-    private String serviceName;
-
-    /**
      * 集群ID
      * Required:true
      */
     @Required
-    private Integer clusterId;
+    private Long clusterId;
 
     /**
-     * Pod 数量
+     * Pod数量，最小值 1
      * Required:true
      */
     @Required
     private Integer podCount;
 
     /**
-     * CPU 限制
+     * CPU规格，单位为核，最小为0.1。CPU资源，单位为核
      * Required:true
      */
     @Required
-    private Float cpu;
+    private Number cpu;
 
     /**
-     * 内存限制
+     * 内存规格，单位为GB，最小为0.1。内存资源，单位为GB
      * Required:true
      */
     @Required
-    private Float memory;
+    private Number memory;
 
     /**
-     * CPU 请求量
+     * CPU限制，单位为核，最小为0.1。CPU资源限制，单位为核
      * Required:true
      */
     @Required
-    private Float requestCpu;
+    private Number requestCpu;
 
     /**
-     * 内存请求量
+     * 内存限制，单位为GB，最小为0.1。内存资源限制，单位为GB
      * Required:true
      */
     @Required
-    private Float requestMemory;
+    private Number requestMemory;
 
     /**
-     * 镜像地址，固定值：imageUrlHolder
+     * 应用ID
+     * Required:true
      */
-    private String imageUrl;
+    @Required
+    private String appId;
 
-    /**
-     * 优雅终止时间
-     */
-    private Integer terminationGraceSeconds;
-
-    /**
-     * deployStrategyStruct
-     */
-    private DeployStrategyStruct deployStrategyStruct;
-
-    /**
-     * healthCheckStruct
-     */
-    private HealthCheckStruct healthCheckStruct;
-
-    /**
-     * readyCheckStruct
-     */
-    private ReadyCheckStruct readyCheckStruct;
-
-    /**
-     * lifecycleStruct
-     */
-    private LifecycleStruct lifecycleStruct;
-
-    /**
-     * containerInfo
-     */
-    private ContainerInfoStruct containerInfo;
-
-    /**
-     * baseInfo
-     */
-    private BaseInfoStruct baseInfo;
-
-    /**
-     * 配置文件列表
-     */
-    
-    private List<GroupConfigInfo> configFiles;
-    /**
-     * 端口列表
-     */
-    
-    private List<TaskPort> ports;
-    /**
-     * 标签列表
-     */
-    
-    private List<TagInfo> tags;
-    /**
-     * 注解列表
-     */
-    
-    private List<TagInfo> annotations;
-    /**
-     * startCmdStruct
-     */
-    private StartCmdStruct startCmdStruct;
-
-    /**
-     * 卷基础配置列表
-     */
-    
-    private List<GroupVolume> volumeBases;
     /**
      * 源分组ID
      * Required:true
@@ -200,26 +112,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 应用ID，服务端会从 path 参数写入
-     *
-     * @return
-     */
-    public String getAppId() {
-        return appId;
-    }
-
-    /**
-     * set 应用ID，服务端会从 path 参数写入
-     *
-     * @param appId
-     */
-    public void setAppId(String appId) {
-        this.appId = appId;
-    }
-
-
-    /**
-     * get 分组 key
+     * get 分组英文名，由小写字母、数字和中划线组成，以小写字母或数字开头结尾，长度为2-27个字符
      *
      * @return
      */
@@ -228,7 +121,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 分组 key
+     * set 分组英文名，由小写字母、数字和中划线组成，以小写字母或数字开头结尾，长度为2-27个字符
      *
      * @param groupKey
      */
@@ -238,7 +131,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 分组名称
+     * get 分组中文名称，为空默认和分组英文名保持一致
      *
      * @return
      */
@@ -247,7 +140,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 分组名称
+     * set 分组中文名称，为空默认和分组英文名保持一致
      *
      * @param groupName
      */
@@ -257,7 +150,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 环境
+     * get 分组环境，必须与所选集群环境一致。test-测试环境; product-生产环境
      *
      * @return
      */
@@ -266,7 +159,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 环境
+     * set 分组环境，必须与所选集群环境一致。test-测试环境; product-生产环境
      *
      * @param env
      */
@@ -276,30 +169,11 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 服务名称
-     *
-     * @return
-     */
-    public String getServiceName() {
-        return serviceName;
-    }
-
-    /**
-     * set 服务名称
-     *
-     * @param serviceName
-     */
-    public void setServiceName(String serviceName) {
-        this.serviceName = serviceName;
-    }
-
-
-    /**
      * get 集群ID
      *
      * @return
      */
-    public Integer getClusterId() {
+    public Long getClusterId() {
         return clusterId;
     }
 
@@ -308,13 +182,13 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      *
      * @param clusterId
      */
-    public void setClusterId(Integer clusterId) {
+    public void setClusterId(Long clusterId) {
         this.clusterId = clusterId;
     }
 
 
     /**
-     * get Pod 数量
+     * get Pod数量，最小值 1
      *
      * @return
      */
@@ -323,7 +197,7 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set Pod 数量
+     * set Pod数量，最小值 1
      *
      * @param podCount
      */
@@ -333,344 +207,97 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get CPU 限制
+     * get CPU规格，单位为核，最小为0.1。CPU资源，单位为核
      *
      * @return
      */
-    public Float getCpu() {
+    public Number getCpu() {
         return cpu;
     }
 
     /**
-     * set CPU 限制
+     * set CPU规格，单位为核，最小为0.1。CPU资源，单位为核
      *
      * @param cpu
      */
-    public void setCpu(Float cpu) {
+    public void setCpu(Number cpu) {
         this.cpu = cpu;
     }
 
 
     /**
-     * get 内存限制
+     * get 内存规格，单位为GB，最小为0.1。内存资源，单位为GB
      *
      * @return
      */
-    public Float getMemory() {
+    public Number getMemory() {
         return memory;
     }
 
     /**
-     * set 内存限制
+     * set 内存规格，单位为GB，最小为0.1。内存资源，单位为GB
      *
      * @param memory
      */
-    public void setMemory(Float memory) {
+    public void setMemory(Number memory) {
         this.memory = memory;
     }
 
 
     /**
-     * get CPU 请求量
+     * get CPU限制，单位为核，最小为0.1。CPU资源限制，单位为核
      *
      * @return
      */
-    public Float getRequestCpu() {
+    public Number getRequestCpu() {
         return requestCpu;
     }
 
     /**
-     * set CPU 请求量
+     * set CPU限制，单位为核，最小为0.1。CPU资源限制，单位为核
      *
      * @param requestCpu
      */
-    public void setRequestCpu(Float requestCpu) {
+    public void setRequestCpu(Number requestCpu) {
         this.requestCpu = requestCpu;
     }
 
 
     /**
-     * get 内存请求量
+     * get 内存限制，单位为GB，最小为0.1。内存资源限制，单位为GB
      *
      * @return
      */
-    public Float getRequestMemory() {
+    public Number getRequestMemory() {
         return requestMemory;
     }
 
     /**
-     * set 内存请求量
+     * set 内存限制，单位为GB，最小为0.1。内存资源限制，单位为GB
      *
      * @param requestMemory
      */
-    public void setRequestMemory(Float requestMemory) {
+    public void setRequestMemory(Number requestMemory) {
         this.requestMemory = requestMemory;
     }
 
 
     /**
-     * get 镜像地址，固定值：imageUrlHolder
+     * get 应用ID
      *
      * @return
      */
-    public String getImageUrl() {
-        return imageUrl;
+    public String getAppId() {
+        return appId;
     }
 
     /**
-     * set 镜像地址，固定值：imageUrlHolder
+     * set 应用ID
      *
-     * @param imageUrl
+     * @param appId
      */
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
-
-    /**
-     * get 优雅终止时间
-     *
-     * @return
-     */
-    public Integer getTerminationGraceSeconds() {
-        return terminationGraceSeconds;
-    }
-
-    /**
-     * set 优雅终止时间
-     *
-     * @param terminationGraceSeconds
-     */
-    public void setTerminationGraceSeconds(Integer terminationGraceSeconds) {
-        this.terminationGraceSeconds = terminationGraceSeconds;
-    }
-
-
-    /**
-     * get deployStrategyStruct
-     *
-     * @return
-     */
-    public DeployStrategyStruct getDeployStrategyStruct() {
-        return deployStrategyStruct;
-    }
-
-    /**
-     * set deployStrategyStruct
-     *
-     * @param deployStrategyStruct
-     */
-    public void setDeployStrategyStruct(DeployStrategyStruct deployStrategyStruct) {
-        this.deployStrategyStruct = deployStrategyStruct;
-    }
-
-
-    /**
-     * get healthCheckStruct
-     *
-     * @return
-     */
-    public HealthCheckStruct getHealthCheckStruct() {
-        return healthCheckStruct;
-    }
-
-    /**
-     * set healthCheckStruct
-     *
-     * @param healthCheckStruct
-     */
-    public void setHealthCheckStruct(HealthCheckStruct healthCheckStruct) {
-        this.healthCheckStruct = healthCheckStruct;
-    }
-
-
-    /**
-     * get readyCheckStruct
-     *
-     * @return
-     */
-    public ReadyCheckStruct getReadyCheckStruct() {
-        return readyCheckStruct;
-    }
-
-    /**
-     * set readyCheckStruct
-     *
-     * @param readyCheckStruct
-     */
-    public void setReadyCheckStruct(ReadyCheckStruct readyCheckStruct) {
-        this.readyCheckStruct = readyCheckStruct;
-    }
-
-
-    /**
-     * get lifecycleStruct
-     *
-     * @return
-     */
-    public LifecycleStruct getLifecycleStruct() {
-        return lifecycleStruct;
-    }
-
-    /**
-     * set lifecycleStruct
-     *
-     * @param lifecycleStruct
-     */
-    public void setLifecycleStruct(LifecycleStruct lifecycleStruct) {
-        this.lifecycleStruct = lifecycleStruct;
-    }
-
-
-    /**
-     * get containerInfo
-     *
-     * @return
-     */
-    public ContainerInfoStruct getContainerInfo() {
-        return containerInfo;
-    }
-
-    /**
-     * set containerInfo
-     *
-     * @param containerInfo
-     */
-    public void setContainerInfo(ContainerInfoStruct containerInfo) {
-        this.containerInfo = containerInfo;
-    }
-
-
-    /**
-     * get baseInfo
-     *
-     * @return
-     */
-    public BaseInfoStruct getBaseInfo() {
-        return baseInfo;
-    }
-
-    /**
-     * set baseInfo
-     *
-     * @param baseInfo
-     */
-    public void setBaseInfo(BaseInfoStruct baseInfo) {
-        this.baseInfo = baseInfo;
-    }
-
-
-    /**
-    * get 配置文件列表
-    *
-    * @return
-    */
-    public List<GroupConfigInfo> getConfigFiles() {
-        return configFiles;
-    }
-
-    /**
-    * set 配置文件列表
-    *
-    * @param configFiles
-    */
-    public void setConfigFiles(List<GroupConfigInfo> configFiles) {
-        this.configFiles = configFiles;
-    }
-
-
-    /**
-    * get 端口列表
-    *
-    * @return
-    */
-    public List<TaskPort> getPorts() {
-        return ports;
-    }
-
-    /**
-    * set 端口列表
-    *
-    * @param ports
-    */
-    public void setPorts(List<TaskPort> ports) {
-        this.ports = ports;
-    }
-
-
-    /**
-    * get 标签列表
-    *
-    * @return
-    */
-    public List<TagInfo> getTags() {
-        return tags;
-    }
-
-    /**
-    * set 标签列表
-    *
-    * @param tags
-    */
-    public void setTags(List<TagInfo> tags) {
-        this.tags = tags;
-    }
-
-
-    /**
-    * get 注解列表
-    *
-    * @return
-    */
-    public List<TagInfo> getAnnotations() {
-        return annotations;
-    }
-
-    /**
-    * set 注解列表
-    *
-    * @param annotations
-    */
-    public void setAnnotations(List<TagInfo> annotations) {
-        this.annotations = annotations;
-    }
-
-
-    /**
-     * get startCmdStruct
-     *
-     * @return
-     */
-    public StartCmdStruct getStartCmdStruct() {
-        return startCmdStruct;
-    }
-
-    /**
-     * set startCmdStruct
-     *
-     * @param startCmdStruct
-     */
-    public void setStartCmdStruct(StartCmdStruct startCmdStruct) {
-        this.startCmdStruct = startCmdStruct;
-    }
-
-
-    /**
-    * get 卷基础配置列表
-    *
-    * @return
-    */
-    public List<GroupVolume> getVolumeBases() {
-        return volumeBases;
-    }
-
-    /**
-    * set 卷基础配置列表
-    *
-    * @param volumeBases
-    */
-    public void setVolumeBases(List<GroupVolume> volumeBases) {
-        this.volumeBases = volumeBases;
+    public void setAppId(String appId) {
+        this.appId = appId;
     }
 
 
@@ -695,21 +322,9 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 应用ID，服务端会从 path 参数写入
+     * set 分组英文名，由小写字母、数字和中划线组成，以小写字母或数字开头结尾，长度为2-27个字符
      *
-     * @param appId 应用ID，服务端会从 path 参数写入
-     * @return CopyAppGroupRequest
-     */
-    public CopyAppGroupRequest appId(String appId) {
-        this.appId = appId;
-        return this;
-    }
-
-
-    /**
-     * set 分组 key
-     *
-     * @param groupKey 分组 key
+     * @param groupKey 分组英文名，由小写字母、数字和中划线组成，以小写字母或数字开头结尾，长度为2-27个字符
      * @return CopyAppGroupRequest
      */
     public CopyAppGroupRequest groupKey(String groupKey) {
@@ -719,9 +334,9 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 分组名称
+     * set 分组中文名称，为空默认和分组英文名保持一致
      *
-     * @param groupName 分组名称
+     * @param groupName 分组中文名称，为空默认和分组英文名保持一致
      * @return CopyAppGroupRequest
      */
     public CopyAppGroupRequest groupName(String groupName) {
@@ -731,25 +346,13 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 环境
+     * set 分组环境，必须与所选集群环境一致。test-测试环境; product-生产环境
      *
-     * @param env 环境
+     * @param env 分组环境，必须与所选集群环境一致。test-测试环境; product-生产环境
      * @return CopyAppGroupRequest
      */
     public CopyAppGroupRequest env(String env) {
         this.env = env;
-        return this;
-    }
-
-
-    /**
-     * set 服务名称
-     *
-     * @param serviceName 服务名称
-     * @return CopyAppGroupRequest
-     */
-    public CopyAppGroupRequest serviceName(String serviceName) {
-        this.serviceName = serviceName;
         return this;
     }
 
@@ -760,16 +363,16 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
      * @param clusterId 集群ID
      * @return CopyAppGroupRequest
      */
-    public CopyAppGroupRequest clusterId(Integer clusterId) {
+    public CopyAppGroupRequest clusterId(Long clusterId) {
         this.clusterId = clusterId;
         return this;
     }
 
 
     /**
-     * set Pod 数量
+     * set Pod数量，最小值 1
      *
-     * @param podCount Pod 数量
+     * @param podCount Pod数量，最小值 1
      * @return CopyAppGroupRequest
      */
     public CopyAppGroupRequest podCount(Integer podCount) {
@@ -779,217 +382,61 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set CPU 限制
+     * set CPU规格，单位为核，最小为0.1。CPU资源，单位为核
      *
-     * @param cpu CPU 限制
+     * @param cpu CPU规格，单位为核，最小为0.1。CPU资源，单位为核
      * @return CopyAppGroupRequest
      */
-    public CopyAppGroupRequest cpu(Float cpu) {
+    public CopyAppGroupRequest cpu(Number cpu) {
         this.cpu = cpu;
         return this;
     }
 
 
     /**
-     * set 内存限制
+     * set 内存规格，单位为GB，最小为0.1。内存资源，单位为GB
      *
-     * @param memory 内存限制
+     * @param memory 内存规格，单位为GB，最小为0.1。内存资源，单位为GB
      * @return CopyAppGroupRequest
      */
-    public CopyAppGroupRequest memory(Float memory) {
+    public CopyAppGroupRequest memory(Number memory) {
         this.memory = memory;
         return this;
     }
 
 
     /**
-     * set CPU 请求量
+     * set CPU限制，单位为核，最小为0.1。CPU资源限制，单位为核
      *
-     * @param requestCpu CPU 请求量
+     * @param requestCpu CPU限制，单位为核，最小为0.1。CPU资源限制，单位为核
      * @return CopyAppGroupRequest
      */
-    public CopyAppGroupRequest requestCpu(Float requestCpu) {
+    public CopyAppGroupRequest requestCpu(Number requestCpu) {
         this.requestCpu = requestCpu;
         return this;
     }
 
 
     /**
-     * set 内存请求量
+     * set 内存限制，单位为GB，最小为0.1。内存资源限制，单位为GB
      *
-     * @param requestMemory 内存请求量
+     * @param requestMemory 内存限制，单位为GB，最小为0.1。内存资源限制，单位为GB
      * @return CopyAppGroupRequest
      */
-    public CopyAppGroupRequest requestMemory(Float requestMemory) {
+    public CopyAppGroupRequest requestMemory(Number requestMemory) {
         this.requestMemory = requestMemory;
         return this;
     }
 
 
     /**
-     * set 镜像地址，固定值：imageUrlHolder
+     * set 应用ID
      *
-     * @param imageUrl 镜像地址，固定值：imageUrlHolder
+     * @param appId 应用ID
      * @return CopyAppGroupRequest
      */
-    public CopyAppGroupRequest imageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-        return this;
-    }
-
-
-    /**
-     * set 优雅终止时间
-     *
-     * @param terminationGraceSeconds 优雅终止时间
-     * @return CopyAppGroupRequest
-     */
-    public CopyAppGroupRequest terminationGraceSeconds(Integer terminationGraceSeconds) {
-        this.terminationGraceSeconds = terminationGraceSeconds;
-        return this;
-    }
-
-
-    /**
-     * set deployStrategyStruct
-     *
-     * @param deployStrategyStruct 
-     * @return CopyAppGroupRequest
-     */
-    public CopyAppGroupRequest deployStrategyStruct(DeployStrategyStruct deployStrategyStruct) {
-        this.deployStrategyStruct = deployStrategyStruct;
-        return this;
-    }
-
-
-    /**
-     * set healthCheckStruct
-     *
-     * @param healthCheckStruct 
-     * @return CopyAppGroupRequest
-     */
-    public CopyAppGroupRequest healthCheckStruct(HealthCheckStruct healthCheckStruct) {
-        this.healthCheckStruct = healthCheckStruct;
-        return this;
-    }
-
-
-    /**
-     * set readyCheckStruct
-     *
-     * @param readyCheckStruct 
-     * @return CopyAppGroupRequest
-     */
-    public CopyAppGroupRequest readyCheckStruct(ReadyCheckStruct readyCheckStruct) {
-        this.readyCheckStruct = readyCheckStruct;
-        return this;
-    }
-
-
-    /**
-     * set lifecycleStruct
-     *
-     * @param lifecycleStruct 
-     * @return CopyAppGroupRequest
-     */
-    public CopyAppGroupRequest lifecycleStruct(LifecycleStruct lifecycleStruct) {
-        this.lifecycleStruct = lifecycleStruct;
-        return this;
-    }
-
-
-    /**
-     * set containerInfo
-     *
-     * @param containerInfo 
-     * @return CopyAppGroupRequest
-     */
-    public CopyAppGroupRequest containerInfo(ContainerInfoStruct containerInfo) {
-        this.containerInfo = containerInfo;
-        return this;
-    }
-
-
-    /**
-     * set baseInfo
-     *
-     * @param baseInfo 
-     * @return CopyAppGroupRequest
-     */
-    public CopyAppGroupRequest baseInfo(BaseInfoStruct baseInfo) {
-        this.baseInfo = baseInfo;
-        return this;
-    }
-
-
-    /**
-    * set 配置文件列表
-    *
-    * @param configFiles 配置文件列表
-    * @return CopyAppGroupRequest
-    */
-    public CopyAppGroupRequest configFiles(List<GroupConfigInfo> configFiles) {
-        this.configFiles = configFiles;
-        return this;
-    }
-
-
-    /**
-    * set 端口列表
-    *
-    * @param ports 端口列表
-    * @return CopyAppGroupRequest
-    */
-    public CopyAppGroupRequest ports(List<TaskPort> ports) {
-        this.ports = ports;
-        return this;
-    }
-
-
-    /**
-    * set 标签列表
-    *
-    * @param tags 标签列表
-    * @return CopyAppGroupRequest
-    */
-    public CopyAppGroupRequest tags(List<TagInfo> tags) {
-        this.tags = tags;
-        return this;
-    }
-
-
-    /**
-    * set 注解列表
-    *
-    * @param annotations 注解列表
-    * @return CopyAppGroupRequest
-    */
-    public CopyAppGroupRequest annotations(List<TagInfo> annotations) {
-        this.annotations = annotations;
-        return this;
-    }
-
-
-    /**
-     * set startCmdStruct
-     *
-     * @param startCmdStruct 
-     * @return CopyAppGroupRequest
-     */
-    public CopyAppGroupRequest startCmdStruct(StartCmdStruct startCmdStruct) {
-        this.startCmdStruct = startCmdStruct;
-        return this;
-    }
-
-
-    /**
-    * set 卷基础配置列表
-    *
-    * @param volumeBases 卷基础配置列表
-    * @return CopyAppGroupRequest
-    */
-    public CopyAppGroupRequest volumeBases(List<GroupVolume> volumeBases) {
-        this.volumeBases = volumeBases;
+    public CopyAppGroupRequest appId(String appId) {
+        this.appId = appId;
         return this;
     }
 
@@ -1006,64 +453,4 @@ public class CopyAppGroupRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
-
-    /**
-     * add item to 配置文件列表
-     *
-     * @param configFile
-     */
-    public void addConfigFile(GroupConfigInfo configFile) {
-        if (this.configFiles == null) {
-            this.configFiles = new ArrayList<>();
-        }
-        this.configFiles.add(configFile);
-    }
-
-    /**
-     * add item to 端口列表
-     *
-     * @param port
-     */
-    public void addPort(TaskPort port) {
-        if (this.ports == null) {
-            this.ports = new ArrayList<>();
-        }
-        this.ports.add(port);
-    }
-
-    /**
-     * add item to 标签列表
-     *
-     * @param tag
-     */
-    public void addTag(TagInfo tag) {
-        if (this.tags == null) {
-            this.tags = new ArrayList<>();
-        }
-        this.tags.add(tag);
-    }
-
-    /**
-     * add item to 注解列表
-     *
-     * @param annotation
-     */
-    public void addAnnotation(TagInfo annotation) {
-        if (this.annotations == null) {
-            this.annotations = new ArrayList<>();
-        }
-        this.annotations.add(annotation);
-    }
-
-    /**
-     * add item to 卷基础配置列表
-     *
-     * @param volumeBase
-     */
-    public void addVolumeBase(GroupVolume volumeBase) {
-        if (this.volumeBases == null) {
-            this.volumeBases = new ArrayList<>();
-        }
-        this.volumeBases.add(volumeBase);
-    }
 }

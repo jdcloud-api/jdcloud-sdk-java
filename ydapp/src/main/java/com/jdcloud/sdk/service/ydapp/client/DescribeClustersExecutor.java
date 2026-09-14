@@ -40,7 +40,7 @@ class DescribeClustersExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/clusters:page";
+        return "/clusters";
     }
 
     @Override

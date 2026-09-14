@@ -40,22 +40,22 @@ public class GroupConfig  implements java.io.Serializable {
     /**
      * CPU核数
      */
-    private Float cpu;
+    private Number cpu;
 
     /**
      * 内存大小(GB)
      */
-    private Float memory;
+    private Number memory;
 
     /**
      * 请求CPU核数
      */
-    private Float requestCpu;
+    private Number requestCpu;
 
     /**
      * 请求内存大小(GB)
      */
-    private Float requestMemory;
+    private Number requestMemory;
 
     /**
      * 启动命令
@@ -233,7 +233,7 @@ public class GroupConfig  implements java.io.Serializable {
      *
      * @return
      */
-    public Float getCpu() {
+    public Number getCpu() {
         return cpu;
     }
 
@@ -242,7 +242,7 @@ public class GroupConfig  implements java.io.Serializable {
      *
      * @param cpu
      */
-    public void setCpu(Float cpu) {
+    public void setCpu(Number cpu) {
         this.cpu = cpu;
     }
 
@@ -252,7 +252,7 @@ public class GroupConfig  implements java.io.Serializable {
      *
      * @return
      */
-    public Float getMemory() {
+    public Number getMemory() {
         return memory;
     }
 
@@ -261,7 +261,7 @@ public class GroupConfig  implements java.io.Serializable {
      *
      * @param memory
      */
-    public void setMemory(Float memory) {
+    public void setMemory(Number memory) {
         this.memory = memory;
     }
 
@@ -271,7 +271,7 @@ public class GroupConfig  implements java.io.Serializable {
      *
      * @return
      */
-    public Float getRequestCpu() {
+    public Number getRequestCpu() {
         return requestCpu;
     }
 
@@ -280,7 +280,7 @@ public class GroupConfig  implements java.io.Serializable {
      *
      * @param requestCpu
      */
-    public void setRequestCpu(Float requestCpu) {
+    public void setRequestCpu(Number requestCpu) {
         this.requestCpu = requestCpu;
     }
 
@@ -290,7 +290,7 @@ public class GroupConfig  implements java.io.Serializable {
      *
      * @return
      */
-    public Float getRequestMemory() {
+    public Number getRequestMemory() {
         return requestMemory;
     }
 
@@ -299,7 +299,7 @@ public class GroupConfig  implements java.io.Serializable {
      *
      * @param requestMemory
      */
-    public void setRequestMemory(Float requestMemory) {
+    public void setRequestMemory(Number requestMemory) {
         this.requestMemory = requestMemory;
     }
 
@@ -893,7 +893,7 @@ public class GroupConfig  implements java.io.Serializable {
      * @param cpu CPU核数
      * @return GroupConfig
      */
-    public GroupConfig cpu(Float cpu) {
+    public GroupConfig cpu(Number cpu) {
         this.cpu = cpu;
         return this;
     }
@@ -905,7 +905,7 @@ public class GroupConfig  implements java.io.Serializable {
      * @param memory 内存大小(GB)
      * @return GroupConfig
      */
-    public GroupConfig memory(Float memory) {
+    public GroupConfig memory(Number memory) {
         this.memory = memory;
         return this;
     }
@@ -917,7 +917,7 @@ public class GroupConfig  implements java.io.Serializable {
      * @param requestCpu 请求CPU核数
      * @return GroupConfig
      */
-    public GroupConfig requestCpu(Float requestCpu) {
+    public GroupConfig requestCpu(Number requestCpu) {
         this.requestCpu = requestCpu;
         return this;
     }
@@ -929,7 +929,7 @@ public class GroupConfig  implements java.io.Serializable {
      * @param requestMemory 请求内存大小(GB)
      * @return GroupConfig
      */
-    public GroupConfig requestMemory(Float requestMemory) {
+    public GroupConfig requestMemory(Number requestMemory) {
         this.requestMemory = requestMemory;
         return this;
     }

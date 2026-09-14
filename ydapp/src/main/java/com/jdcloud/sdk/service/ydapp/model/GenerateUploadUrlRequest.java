@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取制品包预签名 PUT 上传地址。客户端使用返回的 presignedPutUrl 直接 PUT 上传文件， 上传成功后再用 finalUrl 调用关联接口（linkPackage）来关联包。
+ * 获取程序包预签名 PUT 上传地址。客户端使用返回的 presignedPutUrl 直接 PUT 上传文件， 上传成功后再用 finalUrl 调用关联接口（linkPackage）来关联包。
  */
 public class GenerateUploadUrlRequest extends JdcloudRequest implements java.io.Serializable {
 

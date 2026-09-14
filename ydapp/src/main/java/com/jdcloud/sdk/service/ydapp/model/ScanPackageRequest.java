@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 对指定制品包触发安全扫描
+ * 对指定程序包触发安全扫描
  */
 public class ScanPackageRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,7 +42,7 @@ public class ScanPackageRequest extends JdcloudRequest implements java.io.Serial
     private String appId;
 
     /**
-     * 制品包ID，E.g.，10086
+     * 程序包ID，E.g.，10086
      * Required:true
      */
     @Required
@@ -70,7 +70,7 @@ public class ScanPackageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get 制品包ID，E.g.，10086
+     * get 程序包ID，E.g.，10086
      *
      * @return
      */
@@ -79,7 +79,7 @@ public class ScanPackageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 制品包ID，E.g.，10086
+     * set 程序包ID，E.g.，10086
      *
      * @param packageId
      */
@@ -102,9 +102,9 @@ public class ScanPackageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set 制品包ID，E.g.，10086
+     * set 程序包ID，E.g.，10086
      *
-     * @param packageId 制品包ID，E.g.，10086
+     * @param packageId 程序包ID，E.g.，10086
      * @return ScanPackageRequest
      */
     public ScanPackageRequest packageId(Long packageId) {

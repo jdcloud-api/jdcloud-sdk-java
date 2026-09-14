@@ -35,38 +35,12 @@ public class DeleteAppGroupRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * 应用ID
-     * Required:true
-     */
-    @Required
-    private String appId;
-
-    /**
      * 分组ID
      * Required:true
      */
     @Required
     private String groupId;
 
-
-
-    /**
-     * get 应用ID
-     *
-     * @return
-     */
-    public String getAppId() {
-        return appId;
-    }
-
-    /**
-     * set 应用ID
-     *
-     * @param appId
-     */
-    public void setAppId(String appId) {
-        this.appId = appId;
-    }
 
 
     /**
@@ -87,18 +61,6 @@ public class DeleteAppGroupRequest extends JdcloudRequest implements java.io.Ser
         this.groupId = groupId;
     }
 
-
-
-    /**
-     * set 应用ID
-     *
-     * @param appId 应用ID
-     * @return DeleteAppGroupRequest
-     */
-    public DeleteAppGroupRequest appId(String appId) {
-        this.appId = appId;
-        return this;
-    }
 
 
     /**

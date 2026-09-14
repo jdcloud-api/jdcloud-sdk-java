@@ -25,7 +25,6 @@
 package com.jdcloud.sdk.service.ydapp.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.ydapp.model.AppMember;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -36,26 +35,26 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
-     * 应用名称
+     * 应用英文名称，由小写字母、数字和中划线组成，以小写字母或数字开头结尾，长度为2-27个字符
      * Required:true
      */
     @Required
     private String appKey;
 
     /**
-     * 应用中文名称
+     * 应用中文名称，为空默认和应用英文名称保持一致
      */
     private String appName;
 
     /**
-     * 绑定系统id
+     * 绑定系统ID
      * Required:true
      */
     @Required
     private String systemId;
 
     /**
-     * 应用描述
+     * 应用描述，长度不超过100
      */
     private String description;
 
@@ -64,7 +63,7 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
      * Required:true
      */
     @Required
-    private String appLevel;
+    private Integer appLevel;
 
     /**
      * 应用类型：true-有状态应用，false-无状态应用
@@ -74,23 +73,16 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
     private Boolean stateful;
 
     /**
-     * 编程语言：Java、Php、其他
+     * 编程语言：Java、Php、Other
      * Required:true
      */
     @Required
     private String language;
 
-    /**
-     * appMembers
-     * Required:true
-     */
-    @Required
-    private AppMember appMembers;
-
 
 
     /**
-     * get 应用名称
+     * get 应用英文名称，由小写字母、数字和中划线组成，以小写字母或数字开头结尾，长度为2-27个字符
      *
      * @return
      */
@@ -99,7 +91,7 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 应用名称
+     * set 应用英文名称，由小写字母、数字和中划线组成，以小写字母或数字开头结尾，长度为2-27个字符
      *
      * @param appKey
      */
@@ -109,7 +101,7 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * get 应用中文名称
+     * get 应用中文名称，为空默认和应用英文名称保持一致
      *
      * @return
      */
@@ -118,7 +110,7 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 应用中文名称
+     * set 应用中文名称，为空默认和应用英文名称保持一致
      *
      * @param appName
      */
@@ -128,7 +120,7 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * get 绑定系统id
+     * get 绑定系统ID
      *
      * @return
      */
@@ -137,7 +129,7 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 绑定系统id
+     * set 绑定系统ID
      *
      * @param systemId
      */
@@ -147,7 +139,7 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * get 应用描述
+     * get 应用描述，长度不超过100
      *
      * @return
      */
@@ -156,7 +148,7 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 应用描述
+     * set 应用描述，长度不超过100
      *
      * @param description
      */
@@ -170,7 +162,7 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
      *
      * @return
      */
-    public String getAppLevel() {
+    public Integer getAppLevel() {
         return appLevel;
     }
 
@@ -179,7 +171,7 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
      *
      * @param appLevel
      */
-    public void setAppLevel(String appLevel) {
+    public void setAppLevel(Integer appLevel) {
         this.appLevel = appLevel;
     }
 
@@ -204,7 +196,7 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * get 编程语言：Java、Php、其他
+     * get 编程语言：Java、Php、Other
      *
      * @return
      */
@@ -213,7 +205,7 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 编程语言：Java、Php、其他
+     * set 编程语言：Java、Php、Other
      *
      * @param language
      */
@@ -222,30 +214,11 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
-    /**
-     * get appMembers
-     *
-     * @return
-     */
-    public AppMember getAppMembers() {
-        return appMembers;
-    }
 
     /**
-     * set appMembers
+     * set 应用英文名称，由小写字母、数字和中划线组成，以小写字母或数字开头结尾，长度为2-27个字符
      *
-     * @param appMembers
-     */
-    public void setAppMembers(AppMember appMembers) {
-        this.appMembers = appMembers;
-    }
-
-
-
-    /**
-     * set 应用名称
-     *
-     * @param appKey 应用名称
+     * @param appKey 应用英文名称，由小写字母、数字和中划线组成，以小写字母或数字开头结尾，长度为2-27个字符
      * @return CreateAppRequest
      */
     public CreateAppRequest appKey(String appKey) {
@@ -255,9 +228,9 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * set 应用中文名称
+     * set 应用中文名称，为空默认和应用英文名称保持一致
      *
-     * @param appName 应用中文名称
+     * @param appName 应用中文名称，为空默认和应用英文名称保持一致
      * @return CreateAppRequest
      */
     public CreateAppRequest appName(String appName) {
@@ -267,9 +240,9 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * set 绑定系统id
+     * set 绑定系统ID
      *
-     * @param systemId 绑定系统id
+     * @param systemId 绑定系统ID
      * @return CreateAppRequest
      */
     public CreateAppRequest systemId(String systemId) {
@@ -279,9 +252,9 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * set 应用描述
+     * set 应用描述，长度不超过100
      *
-     * @param description 应用描述
+     * @param description 应用描述，长度不超过100
      * @return CreateAppRequest
      */
     public CreateAppRequest description(String description) {
@@ -296,7 +269,7 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
      * @param appLevel 应用级别：0-核心应用，3-其他应用
      * @return CreateAppRequest
      */
-    public CreateAppRequest appLevel(String appLevel) {
+    public CreateAppRequest appLevel(Integer appLevel) {
         this.appLevel = appLevel;
         return this;
     }
@@ -315,25 +288,13 @@ public class CreateAppRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * set 编程语言：Java、Php、其他
+     * set 编程语言：Java、Php、Other
      *
-     * @param language 编程语言：Java、Php、其他
+     * @param language 编程语言：Java、Php、Other
      * @return CreateAppRequest
      */
     public CreateAppRequest language(String language) {
         this.language = language;
-        return this;
-    }
-
-
-    /**
-     * set appMembers
-     *
-     * @param appMembers 
-     * @return CreateAppRequest
-     */
-    public CreateAppRequest appMembers(AppMember appMembers) {
-        this.appMembers = appMembers;
         return this;
     }
 

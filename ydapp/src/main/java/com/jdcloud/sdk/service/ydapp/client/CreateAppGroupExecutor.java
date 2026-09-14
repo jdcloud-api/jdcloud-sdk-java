@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ydapp.model.CreateAppGroupResponse;
 
 /**
- * 在指定应用下创建分组
+ * 在指定应用下创建分组，所选集群的环境必须与分组环境一致
  */
 class CreateAppGroupExecutor extends JdcloudExecutor {
 

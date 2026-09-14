@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取指定应用下制品包的下载信息，包含名称、版本及预签名下载地址（preSignedUrl）。 调用方使用返回的 preSignedUrl 自行下载文件（该地址有鉴权、有效期有限）。
+ * 获取指定应用下程序包的下载信息，包含名称、版本及预签名下载地址（preSignedUrl）。 调用方使用返回的 preSignedUrl 自行下载文件（该地址有鉴权、有效期有限）。
  */
 public class GetPackageDownloadInfoRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,7 +42,7 @@ public class GetPackageDownloadInfoRequest extends JdcloudRequest implements jav
     private String appId;
 
     /**
-     * 制品包ID，E.g.，10086
+     * 程序包ID，E.g.，10086
      * Required:true
      */
     @Required
@@ -70,7 +70,7 @@ public class GetPackageDownloadInfoRequest extends JdcloudRequest implements jav
 
 
     /**
-     * get 制品包ID，E.g.，10086
+     * get 程序包ID，E.g.，10086
      *
      * @return
      */
@@ -79,7 +79,7 @@ public class GetPackageDownloadInfoRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 制品包ID，E.g.，10086
+     * set 程序包ID，E.g.，10086
      *
      * @param packageId
      */
@@ -102,9 +102,9 @@ public class GetPackageDownloadInfoRequest extends JdcloudRequest implements jav
 
 
     /**
-     * set 制品包ID，E.g.，10086
+     * set 程序包ID，E.g.，10086
      *
-     * @param packageId 制品包ID，E.g.，10086
+     * @param packageId 程序包ID，E.g.，10086
      * @return GetPackageDownloadInfoRequest
      */
     public GetPackageDownloadInfoRequest packageId(Long packageId) {

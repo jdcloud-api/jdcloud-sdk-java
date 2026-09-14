@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ydapp.model.LinkPackageResponse;
 
 /**
- * 将制品包与指定应用建立关联，返回流水线ID
+ * 将程序包与指定应用建立关联，返回程序包ID
  */
 class LinkPackageExecutor extends JdcloudExecutor {
 

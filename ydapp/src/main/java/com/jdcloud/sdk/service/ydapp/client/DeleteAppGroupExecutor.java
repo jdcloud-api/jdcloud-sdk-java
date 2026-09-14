@@ -40,7 +40,7 @@ class DeleteAppGroupExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/app/{appId}/group/{groupId}";
+        return "/group/{groupId}";
     }
 
     @Override

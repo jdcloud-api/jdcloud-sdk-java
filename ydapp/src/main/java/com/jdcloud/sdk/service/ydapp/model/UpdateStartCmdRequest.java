@@ -42,22 +42,22 @@ public class UpdateStartCmdRequest extends JdcloudRequest implements java.io.Ser
     /**
      * CPU核数
      */
-    private Float cpu;
+    private Number cpu;
 
     /**
      * 内存大小(GB)
      */
-    private Float memory;
+    private Number memory;
 
     /**
      * 请求CPU核数
      */
-    private Float requestCpu;
+    private Number requestCpu;
 
     /**
      * 请求内存大小(GB)
      */
-    private Float requestMemory;
+    private Number requestMemory;
 
     /**
      * 启动命令
@@ -249,7 +249,7 @@ public class UpdateStartCmdRequest extends JdcloudRequest implements java.io.Ser
      *
      * @return
      */
-    public Float getCpu() {
+    public Number getCpu() {
         return cpu;
     }
 
@@ -258,7 +258,7 @@ public class UpdateStartCmdRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param cpu
      */
-    public void setCpu(Float cpu) {
+    public void setCpu(Number cpu) {
         this.cpu = cpu;
     }
 
@@ -268,7 +268,7 @@ public class UpdateStartCmdRequest extends JdcloudRequest implements java.io.Ser
      *
      * @return
      */
-    public Float getMemory() {
+    public Number getMemory() {
         return memory;
     }
 
@@ -277,7 +277,7 @@ public class UpdateStartCmdRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param memory
      */
-    public void setMemory(Float memory) {
+    public void setMemory(Number memory) {
         this.memory = memory;
     }
 
@@ -287,7 +287,7 @@ public class UpdateStartCmdRequest extends JdcloudRequest implements java.io.Ser
      *
      * @return
      */
-    public Float getRequestCpu() {
+    public Number getRequestCpu() {
         return requestCpu;
     }
 
@@ -296,7 +296,7 @@ public class UpdateStartCmdRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param requestCpu
      */
-    public void setRequestCpu(Float requestCpu) {
+    public void setRequestCpu(Number requestCpu) {
         this.requestCpu = requestCpu;
     }
 
@@ -306,7 +306,7 @@ public class UpdateStartCmdRequest extends JdcloudRequest implements java.io.Ser
      *
      * @return
      */
-    public Float getRequestMemory() {
+    public Number getRequestMemory() {
         return requestMemory;
     }
 
@@ -315,7 +315,7 @@ public class UpdateStartCmdRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param requestMemory
      */
-    public void setRequestMemory(Float requestMemory) {
+    public void setRequestMemory(Number requestMemory) {
         this.requestMemory = requestMemory;
     }
 
@@ -947,7 +947,7 @@ public class UpdateStartCmdRequest extends JdcloudRequest implements java.io.Ser
      * @param cpu CPU核数
      * @return UpdateStartCmdRequest
      */
-    public UpdateStartCmdRequest cpu(Float cpu) {
+    public UpdateStartCmdRequest cpu(Number cpu) {
         this.cpu = cpu;
         return this;
     }
@@ -959,7 +959,7 @@ public class UpdateStartCmdRequest extends JdcloudRequest implements java.io.Ser
      * @param memory 内存大小(GB)
      * @return UpdateStartCmdRequest
      */
-    public UpdateStartCmdRequest memory(Float memory) {
+    public UpdateStartCmdRequest memory(Number memory) {
         this.memory = memory;
         return this;
     }
@@ -971,7 +971,7 @@ public class UpdateStartCmdRequest extends JdcloudRequest implements java.io.Ser
      * @param requestCpu 请求CPU核数
      * @return UpdateStartCmdRequest
      */
-    public UpdateStartCmdRequest requestCpu(Float requestCpu) {
+    public UpdateStartCmdRequest requestCpu(Number requestCpu) {
         this.requestCpu = requestCpu;
         return this;
     }
@@ -983,7 +983,7 @@ public class UpdateStartCmdRequest extends JdcloudRequest implements java.io.Ser
      * @param requestMemory 请求内存大小(GB)
      * @return UpdateStartCmdRequest
      */
-    public UpdateStartCmdRequest requestMemory(Float requestMemory) {
+    public UpdateStartCmdRequest requestMemory(Number requestMemory) {
         this.requestMemory = requestMemory;
         return this;
     }

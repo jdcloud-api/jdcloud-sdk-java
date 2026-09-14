@@ -27,31 +27,31 @@ package com.jdcloud.sdk.service.ydapp.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 创建系统请求参数
+ * 创建系统请求
  */
 public class CreateSystemSpec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 系统名称
+     * 系统英文名，对应 k8s 集群的 namespace；支持小写字母、数字和中划线，且必须以字母或数字开头、结尾，长度2~50字符
      * Required:true
      */
     @Required
     private String systemKey;
 
     /**
-     * 系统中文名
+     * 系统中文名，为空时和系统英文名保持一致
      */
     private String systemName;
 
     /**
-     * 应用描述
+     * 系统描述
      */
     private String description;
 
     /**
-     * 绑定JOS应用名称appKey
+     * 绑定 JOS 应用 appKey
      * Required:true
      */
     @Required
@@ -60,7 +60,7 @@ public class CreateSystemSpec  implements java.io.Serializable {
 
 
     /**
-     * get 系统名称
+     * get 系统英文名，对应 k8s 集群的 namespace；支持小写字母、数字和中划线，且必须以字母或数字开头、结尾，长度2~50字符
      *
      * @return
      */
@@ -69,7 +69,7 @@ public class CreateSystemSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 系统名称
+     * set 系统英文名，对应 k8s 集群的 namespace；支持小写字母、数字和中划线，且必须以字母或数字开头、结尾，长度2~50字符
      *
      * @param systemKey
      */
@@ -79,7 +79,7 @@ public class CreateSystemSpec  implements java.io.Serializable {
 
 
     /**
-     * get 系统中文名
+     * get 系统中文名，为空时和系统英文名保持一致
      *
      * @return
      */
@@ -88,7 +88,7 @@ public class CreateSystemSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 系统中文名
+     * set 系统中文名，为空时和系统英文名保持一致
      *
      * @param systemName
      */
@@ -98,7 +98,7 @@ public class CreateSystemSpec  implements java.io.Serializable {
 
 
     /**
-     * get 应用描述
+     * get 系统描述
      *
      * @return
      */
@@ -107,7 +107,7 @@ public class CreateSystemSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 应用描述
+     * set 系统描述
      *
      * @param description
      */
@@ -117,7 +117,7 @@ public class CreateSystemSpec  implements java.io.Serializable {
 
 
     /**
-     * get 绑定JOS应用名称appKey
+     * get 绑定 JOS 应用 appKey
      *
      * @return
      */
@@ -126,7 +126,7 @@ public class CreateSystemSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 绑定JOS应用名称appKey
+     * set 绑定 JOS 应用 appKey
      *
      * @param josAppKey
      */
@@ -137,9 +137,9 @@ public class CreateSystemSpec  implements java.io.Serializable {
 
 
     /**
-     * set 系统名称
+     * set 系统英文名，对应 k8s 集群的 namespace；支持小写字母、数字和中划线，且必须以字母或数字开头、结尾，长度2~50字符
      *
-     * @param systemKey 系统名称
+     * @param systemKey 系统英文名，对应 k8s 集群的 namespace；支持小写字母、数字和中划线，且必须以字母或数字开头、结尾，长度2~50字符
      * @return CreateSystemSpec
      */
     public CreateSystemSpec systemKey(String systemKey) {
@@ -149,9 +149,9 @@ public class CreateSystemSpec  implements java.io.Serializable {
 
 
     /**
-     * set 系统中文名
+     * set 系统中文名，为空时和系统英文名保持一致
      *
-     * @param systemName 系统中文名
+     * @param systemName 系统中文名，为空时和系统英文名保持一致
      * @return CreateSystemSpec
      */
     public CreateSystemSpec systemName(String systemName) {
@@ -161,9 +161,9 @@ public class CreateSystemSpec  implements java.io.Serializable {
 
 
     /**
-     * set 应用描述
+     * set 系统描述
      *
-     * @param description 应用描述
+     * @param description 系统描述
      * @return CreateSystemSpec
      */
     public CreateSystemSpec description(String description) {
@@ -173,9 +173,9 @@ public class CreateSystemSpec  implements java.io.Serializable {
 
 
     /**
-     * set 绑定JOS应用名称appKey
+     * set 绑定 JOS 应用 appKey
      *
-     * @param josAppKey 绑定JOS应用名称appKey
+     * @param josAppKey 绑定 JOS 应用 appKey
      * @return CreateSystemSpec
      */
     public CreateSystemSpec josAppKey(String josAppKey) {

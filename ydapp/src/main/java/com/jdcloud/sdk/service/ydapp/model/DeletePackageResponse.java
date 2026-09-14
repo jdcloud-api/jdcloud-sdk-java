@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ydapp.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除指定应用下的制品包
+ * 删除指定应用下的程序包
  */
 public class DeletePackageResponse extends JdcloudResponse<DeletePackageResult> implements java.io.Serializable {
 

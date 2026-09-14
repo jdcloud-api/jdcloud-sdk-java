@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.ydapp.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.ydapp.model.WukongSystem;
+import com.jdcloud.sdk.service.ydapp.model.SystemResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -40,7 +40,7 @@ public class DescribeSystemsResult extends JdcloudResult implements java.io.Seri
      * data
      */
     
-    private List<WukongSystem> data;
+    private List<SystemResult> data;
     /**
      * 本次查询可匹配到的总记录数。
      */
@@ -53,7 +53,7 @@ public class DescribeSystemsResult extends JdcloudResult implements java.io.Seri
     *
     * @return
     */
-    public List<WukongSystem> getData() {
+    public List<SystemResult> getData() {
         return data;
     }
 
@@ -62,7 +62,7 @@ public class DescribeSystemsResult extends JdcloudResult implements java.io.Seri
     *
     * @param data
     */
-    public void setData(List<WukongSystem> data) {
+    public void setData(List<SystemResult> data) {
         this.data = data;
     }
 
@@ -93,7 +93,7 @@ public class DescribeSystemsResult extends JdcloudResult implements java.io.Seri
     * @param data 
     * @return DescribeSystemsResult
     */
-    public DescribeSystemsResult data(List<WukongSystem> data) {
+    public DescribeSystemsResult data(List<SystemResult> data) {
         this.data = data;
         return this;
     }
@@ -117,7 +117,7 @@ public class DescribeSystemsResult extends JdcloudResult implements java.io.Seri
      *
      * @param data
      */
-    public void addData(WukongSystem data) {
+    public void addData(SystemResult data) {
         if (this.data == null) {
             this.data = new ArrayList<>();
         }

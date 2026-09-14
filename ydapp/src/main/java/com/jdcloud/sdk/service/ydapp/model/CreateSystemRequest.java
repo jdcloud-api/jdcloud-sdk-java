@@ -35,24 +35,24 @@ public class CreateSystemRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 系统名称
+     * 系统英文名，对应 k8s 集群的 namespace；支持小写字母、数字和中划线，且必须以字母或数字开头、结尾，长度2~50字符
      * Required:true
      */
     @Required
     private String systemKey;
 
     /**
-     * 系统中文名
+     * 系统中文名，为空时和系统英文名保持一致
      */
     private String systemName;
 
     /**
-     * 应用描述
+     * 系统描述
      */
     private String description;
 
     /**
-     * 绑定JOS应用名称appKey
+     * 绑定 JOS 应用 appKey
      * Required:true
      */
     @Required
@@ -61,7 +61,7 @@ public class CreateSystemRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 系统名称
+     * get 系统英文名，对应 k8s 集群的 namespace；支持小写字母、数字和中划线，且必须以字母或数字开头、结尾，长度2~50字符
      *
      * @return
      */
@@ -70,7 +70,7 @@ public class CreateSystemRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 系统名称
+     * set 系统英文名，对应 k8s 集群的 namespace；支持小写字母、数字和中划线，且必须以字母或数字开头、结尾，长度2~50字符
      *
      * @param systemKey
      */
@@ -80,7 +80,7 @@ public class CreateSystemRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 系统中文名
+     * get 系统中文名，为空时和系统英文名保持一致
      *
      * @return
      */
@@ -89,7 +89,7 @@ public class CreateSystemRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 系统中文名
+     * set 系统中文名，为空时和系统英文名保持一致
      *
      * @param systemName
      */
@@ -99,7 +99,7 @@ public class CreateSystemRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 应用描述
+     * get 系统描述
      *
      * @return
      */
@@ -108,7 +108,7 @@ public class CreateSystemRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 应用描述
+     * set 系统描述
      *
      * @param description
      */
@@ -118,7 +118,7 @@ public class CreateSystemRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 绑定JOS应用名称appKey
+     * get 绑定 JOS 应用 appKey
      *
      * @return
      */
@@ -127,7 +127,7 @@ public class CreateSystemRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 绑定JOS应用名称appKey
+     * set 绑定 JOS 应用 appKey
      *
      * @param josAppKey
      */
@@ -138,9 +138,9 @@ public class CreateSystemRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 系统名称
+     * set 系统英文名，对应 k8s 集群的 namespace；支持小写字母、数字和中划线，且必须以字母或数字开头、结尾，长度2~50字符
      *
-     * @param systemKey 系统名称
+     * @param systemKey 系统英文名，对应 k8s 集群的 namespace；支持小写字母、数字和中划线，且必须以字母或数字开头、结尾，长度2~50字符
      * @return CreateSystemRequest
      */
     public CreateSystemRequest systemKey(String systemKey) {
@@ -150,9 +150,9 @@ public class CreateSystemRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 系统中文名
+     * set 系统中文名，为空时和系统英文名保持一致
      *
-     * @param systemName 系统中文名
+     * @param systemName 系统中文名，为空时和系统英文名保持一致
      * @return CreateSystemRequest
      */
     public CreateSystemRequest systemName(String systemName) {
@@ -162,9 +162,9 @@ public class CreateSystemRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 应用描述
+     * set 系统描述
      *
-     * @param description 应用描述
+     * @param description 系统描述
      * @return CreateSystemRequest
      */
     public CreateSystemRequest description(String description) {
@@ -174,9 +174,9 @@ public class CreateSystemRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 绑定JOS应用名称appKey
+     * set 绑定 JOS 应用 appKey
      *
-     * @param josAppKey 绑定JOS应用名称appKey
+     * @param josAppKey 绑定 JOS 应用 appKey
      * @return CreateSystemRequest
      */
     public CreateSystemRequest josAppKey(String josAppKey) {

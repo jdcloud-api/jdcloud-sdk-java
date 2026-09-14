@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ydapp.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 对指定制品包触发安全扫描
+ * 对指定程序包触发安全扫描
  */
 public class ScanPackageResponse extends JdcloudResponse<ScanPackageResult> implements java.io.Serializable {
 
