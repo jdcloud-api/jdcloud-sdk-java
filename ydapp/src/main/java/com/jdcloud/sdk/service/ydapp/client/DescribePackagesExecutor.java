@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ydapp.model.DescribePackagesResponse;
 
 /**
- * 分页查询指定应用下的制品包列表，支持按名称模糊搜索
+ * 分页查询指定应用下的程序包列表，支持按名称模糊搜索
  */
 class DescribePackagesExecutor extends JdcloudExecutor {
 

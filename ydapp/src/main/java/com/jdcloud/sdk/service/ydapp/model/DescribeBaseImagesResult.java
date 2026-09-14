@@ -26,11 +26,11 @@ package com.jdcloud.sdk.service.ydapp.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.ydapp.model.BaseImage;
+import com.jdcloud.sdk.service.ydapp.model.BaseImageResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询已发布的基础镜像列表，可按镜像类型过滤（JAVA、PHP、Nginx）
+ * 查询已发布的基础镜像列表
  */
 public class DescribeBaseImagesResult extends JdcloudResult implements java.io.Serializable {
 
@@ -40,7 +40,7 @@ public class DescribeBaseImagesResult extends JdcloudResult implements java.io.S
      * data
      */
     
-    private List<BaseImage> data;
+    private List<BaseImageResult> data;
     /**
      * 总记录数，E.g.，10
      */
@@ -53,7 +53,7 @@ public class DescribeBaseImagesResult extends JdcloudResult implements java.io.S
     *
     * @return
     */
-    public List<BaseImage> getData() {
+    public List<BaseImageResult> getData() {
         return data;
     }
 
@@ -62,7 +62,7 @@ public class DescribeBaseImagesResult extends JdcloudResult implements java.io.S
     *
     * @param data
     */
-    public void setData(List<BaseImage> data) {
+    public void setData(List<BaseImageResult> data) {
         this.data = data;
     }
 
@@ -93,7 +93,7 @@ public class DescribeBaseImagesResult extends JdcloudResult implements java.io.S
     * @param data 
     * @return DescribeBaseImagesResult
     */
-    public DescribeBaseImagesResult data(List<BaseImage> data) {
+    public DescribeBaseImagesResult data(List<BaseImageResult> data) {
         this.data = data;
         return this;
     }
@@ -117,7 +117,7 @@ public class DescribeBaseImagesResult extends JdcloudResult implements java.io.S
      *
      * @param data
      */
-    public void addData(BaseImage data) {
+    public void addData(BaseImageResult data) {
         if (this.data == null) {
             this.data = new ArrayList<>();
         }

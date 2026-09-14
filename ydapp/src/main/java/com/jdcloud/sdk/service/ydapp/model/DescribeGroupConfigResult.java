@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.ydapp.model;
 
+import com.jdcloud.sdk.service.ydapp.model.PodAntiAffinity;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -207,6 +208,11 @@ public class DescribeGroupConfigResult extends JdcloudResult implements java.io.
      * 终止宽限期秒数
      */
     private Integer terminationGraceSeconds;
+
+    /**
+     * podAntiAffinity
+     */
+    private PodAntiAffinity podAntiAffinity;
 
 
 
@@ -875,6 +881,25 @@ public class DescribeGroupConfigResult extends JdcloudResult implements java.io.
     }
 
 
+    /**
+     * get podAntiAffinity
+     *
+     * @return
+     */
+    public PodAntiAffinity getPodAntiAffinity() {
+        return podAntiAffinity;
+    }
+
+    /**
+     * set podAntiAffinity
+     *
+     * @param podAntiAffinity
+     */
+    public void setPodAntiAffinity(PodAntiAffinity podAntiAffinity) {
+        this.podAntiAffinity = podAntiAffinity;
+    }
+
+
 
     /**
      * set 组名称
@@ -1292,6 +1317,18 @@ public class DescribeGroupConfigResult extends JdcloudResult implements java.io.
      */
     public DescribeGroupConfigResult terminationGraceSeconds(Integer terminationGraceSeconds) {
         this.terminationGraceSeconds = terminationGraceSeconds;
+        return this;
+    }
+
+
+    /**
+     * set podAntiAffinity
+     *
+     * @param podAntiAffinity 
+     * @return DescribeGroupConfigResult
+     */
+    public DescribeGroupConfigResult podAntiAffinity(PodAntiAffinity podAntiAffinity) {
+        this.podAntiAffinity = podAntiAffinity;
         return this;
     }
 

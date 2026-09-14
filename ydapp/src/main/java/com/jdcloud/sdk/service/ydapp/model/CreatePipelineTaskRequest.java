@@ -35,54 +35,30 @@ public class CreatePipelineTaskRequest extends JdcloudRequest implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
-     * 应用ID，E.g.，app-123456789
-     * Required:true
-     */
-    @Required
-    private String appId;
-
-    /**
-     * 基础镜像UID，从 baseImages 接口返回参数 uid 获取，E.g.，baseimg-123456789
+     * 基础镜像UID
      * Required:true
      */
     @Required
     private String baseImageUid;
 
     /**
-     * 制品包ID，E.g.，10086
+     * 程序包ID
      * Required:true
      */
     @Required
     private Long packageId;
 
     /**
-     * 附加扩展参数，一般无需传递，E.g.，&#39;&#39;
+     * 应用ID
+     * Required:true
      */
-    private String args;
+    @Required
+    private String appId;
 
 
 
     /**
-     * get 应用ID，E.g.，app-123456789
-     *
-     * @return
-     */
-    public String getAppId() {
-        return appId;
-    }
-
-    /**
-     * set 应用ID，E.g.，app-123456789
-     *
-     * @param appId
-     */
-    public void setAppId(String appId) {
-        this.appId = appId;
-    }
-
-
-    /**
-     * get 基础镜像UID，从 baseImages 接口返回参数 uid 获取，E.g.，baseimg-123456789
+     * get 基础镜像UID
      *
      * @return
      */
@@ -91,7 +67,7 @@ public class CreatePipelineTaskRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 基础镜像UID，从 baseImages 接口返回参数 uid 获取，E.g.，baseimg-123456789
+     * set 基础镜像UID
      *
      * @param baseImageUid
      */
@@ -101,7 +77,7 @@ public class CreatePipelineTaskRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get 制品包ID，E.g.，10086
+     * get 程序包ID
      *
      * @return
      */
@@ -110,7 +86,7 @@ public class CreatePipelineTaskRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 制品包ID，E.g.，10086
+     * set 程序包ID
      *
      * @param packageId
      */
@@ -120,41 +96,29 @@ public class CreatePipelineTaskRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get 附加扩展参数，一般无需传递，E.g.，&#39;&#39;
+     * get 应用ID
      *
      * @return
      */
-    public String getArgs() {
-        return args;
+    public String getAppId() {
+        return appId;
     }
 
     /**
-     * set 附加扩展参数，一般无需传递，E.g.，&#39;&#39;
+     * set 应用ID
      *
-     * @param args
+     * @param appId
      */
-    public void setArgs(String args) {
-        this.args = args;
-    }
-
-
-
-    /**
-     * set 应用ID，E.g.，app-123456789
-     *
-     * @param appId 应用ID，E.g.，app-123456789
-     * @return CreatePipelineTaskRequest
-     */
-    public CreatePipelineTaskRequest appId(String appId) {
+    public void setAppId(String appId) {
         this.appId = appId;
-        return this;
     }
 
 
+
     /**
-     * set 基础镜像UID，从 baseImages 接口返回参数 uid 获取，E.g.，baseimg-123456789
+     * set 基础镜像UID
      *
-     * @param baseImageUid 基础镜像UID，从 baseImages 接口返回参数 uid 获取，E.g.，baseimg-123456789
+     * @param baseImageUid 基础镜像UID
      * @return CreatePipelineTaskRequest
      */
     public CreatePipelineTaskRequest baseImageUid(String baseImageUid) {
@@ -164,9 +128,9 @@ public class CreatePipelineTaskRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 制品包ID，E.g.，10086
+     * set 程序包ID
      *
-     * @param packageId 制品包ID，E.g.，10086
+     * @param packageId 程序包ID
      * @return CreatePipelineTaskRequest
      */
     public CreatePipelineTaskRequest packageId(Long packageId) {
@@ -176,13 +140,13 @@ public class CreatePipelineTaskRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 附加扩展参数，一般无需传递，E.g.，&#39;&#39;
+     * set 应用ID
      *
-     * @param args 附加扩展参数，一般无需传递，E.g.，&#39;&#39;
+     * @param appId 应用ID
      * @return CreatePipelineTaskRequest
      */
-    public CreatePipelineTaskRequest args(String args) {
-        this.args = args;
+    public CreatePipelineTaskRequest appId(String appId) {
+        this.appId = appId;
         return this;
     }
 

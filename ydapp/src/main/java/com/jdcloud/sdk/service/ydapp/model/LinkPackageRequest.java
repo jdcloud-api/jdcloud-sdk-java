@@ -28,35 +28,36 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 将制品包与指定应用建立关联，返回流水线ID
+ * 将程序包与指定应用建立关联，返回程序包ID
  */
 public class LinkPackageRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 制品包名称，E.g.，my-app-package
+     * 程序包名称，支持5-64位大小写字母、中划线和下划线
+     * Required:true
      */
+    @Required
     private String name;
 
     /**
-     * 制品包版本号，E.g.，v1.0.0
+     * 程序包版本，支持2-32位大小写字母、数字、点和中划线
+     * Required:true
      */
+    @Required
     private String version;
 
     /**
-     * 制品包描述，E.g.，一次构建产物
+     * 备注，最长128字符
      */
     private String desc;
 
     /**
-     * 环境标识，E.g.，prod
+     * 程序包地址
+     * Required:true
      */
-    private String env;
-
-    /**
-     * 制品包下载地址，E.g.，https://repo.jdcloud.com/artifact/my-app-package-v1.0.0.tar.gz
-     */
+    @Required
     private String url;
 
     /**
@@ -69,7 +70,7 @@ public class LinkPackageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get 制品包名称，E.g.，my-app-package
+     * get 程序包名称，支持5-64位大小写字母、中划线和下划线
      *
      * @return
      */
@@ -78,7 +79,7 @@ public class LinkPackageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 制品包名称，E.g.，my-app-package
+     * set 程序包名称，支持5-64位大小写字母、中划线和下划线
      *
      * @param name
      */
@@ -88,7 +89,7 @@ public class LinkPackageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get 制品包版本号，E.g.，v1.0.0
+     * get 程序包版本，支持2-32位大小写字母、数字、点和中划线
      *
      * @return
      */
@@ -97,7 +98,7 @@ public class LinkPackageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 制品包版本号，E.g.，v1.0.0
+     * set 程序包版本，支持2-32位大小写字母、数字、点和中划线
      *
      * @param version
      */
@@ -107,7 +108,7 @@ public class LinkPackageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get 制品包描述，E.g.，一次构建产物
+     * get 备注，最长128字符
      *
      * @return
      */
@@ -116,7 +117,7 @@ public class LinkPackageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 制品包描述，E.g.，一次构建产物
+     * set 备注，最长128字符
      *
      * @param desc
      */
@@ -126,26 +127,7 @@ public class LinkPackageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get 环境标识，E.g.，prod
-     *
-     * @return
-     */
-    public String getEnv() {
-        return env;
-    }
-
-    /**
-     * set 环境标识，E.g.，prod
-     *
-     * @param env
-     */
-    public void setEnv(String env) {
-        this.env = env;
-    }
-
-
-    /**
-     * get 制品包下载地址，E.g.，https://repo.jdcloud.com/artifact/my-app-package-v1.0.0.tar.gz
+     * get 程序包地址
      *
      * @return
      */
@@ -154,7 +136,7 @@ public class LinkPackageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 制品包下载地址，E.g.，https://repo.jdcloud.com/artifact/my-app-package-v1.0.0.tar.gz
+     * set 程序包地址
      *
      * @param url
      */
@@ -184,9 +166,9 @@ public class LinkPackageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set 制品包名称，E.g.，my-app-package
+     * set 程序包名称，支持5-64位大小写字母、中划线和下划线
      *
-     * @param name 制品包名称，E.g.，my-app-package
+     * @param name 程序包名称，支持5-64位大小写字母、中划线和下划线
      * @return LinkPackageRequest
      */
     public LinkPackageRequest name(String name) {
@@ -196,9 +178,9 @@ public class LinkPackageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set 制品包版本号，E.g.，v1.0.0
+     * set 程序包版本，支持2-32位大小写字母、数字、点和中划线
      *
-     * @param version 制品包版本号，E.g.，v1.0.0
+     * @param version 程序包版本，支持2-32位大小写字母、数字、点和中划线
      * @return LinkPackageRequest
      */
     public LinkPackageRequest version(String version) {
@@ -208,9 +190,9 @@ public class LinkPackageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set 制品包描述，E.g.，一次构建产物
+     * set 备注，最长128字符
      *
-     * @param desc 制品包描述，E.g.，一次构建产物
+     * @param desc 备注，最长128字符
      * @return LinkPackageRequest
      */
     public LinkPackageRequest desc(String desc) {
@@ -220,21 +202,9 @@ public class LinkPackageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set 环境标识，E.g.，prod
+     * set 程序包地址
      *
-     * @param env 环境标识，E.g.，prod
-     * @return LinkPackageRequest
-     */
-    public LinkPackageRequest env(String env) {
-        this.env = env;
-        return this;
-    }
-
-
-    /**
-     * set 制品包下载地址，E.g.，https://repo.jdcloud.com/artifact/my-app-package-v1.0.0.tar.gz
-     *
-     * @param url 制品包下载地址，E.g.，https://repo.jdcloud.com/artifact/my-app-package-v1.0.0.tar.gz
+     * @param url 程序包地址
      * @return LinkPackageRequest
      */
     public LinkPackageRequest url(String url) {

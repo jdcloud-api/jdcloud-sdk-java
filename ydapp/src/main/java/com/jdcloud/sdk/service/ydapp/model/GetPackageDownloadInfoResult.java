@@ -27,19 +27,19 @@ package com.jdcloud.sdk.service.ydapp.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取指定应用下制品包的下载信息，包含名称、版本及预签名下载地址（preSignedUrl）。 调用方使用返回的 preSignedUrl 自行下载文件（该地址有鉴权、有效期有限）。
+ * 获取指定应用下程序包的下载信息，包含名称、版本及预签名下载地址（preSignedUrl）。 调用方使用返回的 preSignedUrl 自行下载文件（该地址有鉴权、有效期有限）。
  */
 public class GetPackageDownloadInfoResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 制品包名称（可能与上传的包名不同），E.g.，my-app-package
+     * 程序包名称（可能与上传的包名不同），E.g.，my-app-package
      */
     private String name;
 
     /**
-     * 制品包原始名称，与上传包名一致，E.g.，my-app-package-v1.0.0.tar.gz
+     * 程序包原始名称，与上传包名一致，E.g.，my-app-package-v1.0.0.tar.gz
      */
     private String rawFilename;
 
@@ -61,7 +61,7 @@ public class GetPackageDownloadInfoResult extends JdcloudResult implements java.
 
 
     /**
-     * get 制品包名称（可能与上传的包名不同），E.g.，my-app-package
+     * get 程序包名称（可能与上传的包名不同），E.g.，my-app-package
      *
      * @return
      */
@@ -70,7 +70,7 @@ public class GetPackageDownloadInfoResult extends JdcloudResult implements java.
     }
 
     /**
-     * set 制品包名称（可能与上传的包名不同），E.g.，my-app-package
+     * set 程序包名称（可能与上传的包名不同），E.g.，my-app-package
      *
      * @param name
      */
@@ -80,7 +80,7 @@ public class GetPackageDownloadInfoResult extends JdcloudResult implements java.
 
 
     /**
-     * get 制品包原始名称，与上传包名一致，E.g.，my-app-package-v1.0.0.tar.gz
+     * get 程序包原始名称，与上传包名一致，E.g.，my-app-package-v1.0.0.tar.gz
      *
      * @return
      */
@@ -89,7 +89,7 @@ public class GetPackageDownloadInfoResult extends JdcloudResult implements java.
     }
 
     /**
-     * set 制品包原始名称，与上传包名一致，E.g.，my-app-package-v1.0.0.tar.gz
+     * set 程序包原始名称，与上传包名一致，E.g.，my-app-package-v1.0.0.tar.gz
      *
      * @param rawFilename
      */
@@ -157,9 +157,9 @@ public class GetPackageDownloadInfoResult extends JdcloudResult implements java.
 
 
     /**
-     * set 制品包名称（可能与上传的包名不同），E.g.，my-app-package
+     * set 程序包名称（可能与上传的包名不同），E.g.，my-app-package
      *
-     * @param name 制品包名称（可能与上传的包名不同），E.g.，my-app-package
+     * @param name 程序包名称（可能与上传的包名不同），E.g.，my-app-package
      * @return GetPackageDownloadInfoResult
      */
     public GetPackageDownloadInfoResult name(String name) {
@@ -169,9 +169,9 @@ public class GetPackageDownloadInfoResult extends JdcloudResult implements java.
 
 
     /**
-     * set 制品包原始名称，与上传包名一致，E.g.，my-app-package-v1.0.0.tar.gz
+     * set 程序包原始名称，与上传包名一致，E.g.，my-app-package-v1.0.0.tar.gz
      *
-     * @param rawFilename 制品包原始名称，与上传包名一致，E.g.，my-app-package-v1.0.0.tar.gz
+     * @param rawFilename 程序包原始名称，与上传包名一致，E.g.，my-app-package-v1.0.0.tar.gz
      * @return GetPackageDownloadInfoResult
      */
     public GetPackageDownloadInfoResult rawFilename(String rawFilename) {

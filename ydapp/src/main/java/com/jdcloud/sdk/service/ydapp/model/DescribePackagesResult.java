@@ -26,11 +26,11 @@ package com.jdcloud.sdk.service.ydapp.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.ydapp.model.PackageDetailInfo;
+import com.jdcloud.sdk.service.ydapp.model.PackageResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 分页查询指定应用下的制品包列表，支持按名称模糊搜索
+ * 分页查询指定应用下的程序包列表，支持按名称模糊搜索
  */
 public class DescribePackagesResult extends JdcloudResult implements java.io.Serializable {
 
@@ -40,7 +40,7 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
      * data
      */
     
-    private List<PackageDetailInfo> data;
+    private List<PackageResult> data;
     /**
      * 总记录数，E.g.，100
      */
@@ -53,7 +53,7 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
     *
     * @return
     */
-    public List<PackageDetailInfo> getData() {
+    public List<PackageResult> getData() {
         return data;
     }
 
@@ -62,7 +62,7 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
     *
     * @param data
     */
-    public void setData(List<PackageDetailInfo> data) {
+    public void setData(List<PackageResult> data) {
         this.data = data;
     }
 
@@ -93,7 +93,7 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
     * @param data 
     * @return DescribePackagesResult
     */
-    public DescribePackagesResult data(List<PackageDetailInfo> data) {
+    public DescribePackagesResult data(List<PackageResult> data) {
         this.data = data;
         return this;
     }
@@ -117,7 +117,7 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
      *
      * @param data
      */
-    public void addData(PackageDetailInfo data) {
+    public void addData(PackageResult data) {
         if (this.data == null) {
             this.data = new ArrayList<>();
         }

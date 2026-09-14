@@ -36,7 +36,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     /**
      * 应用ID
      */
-    private String value;
+    private String appId;
 
 
 
@@ -45,17 +45,17 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
      *
      * @return
      */
-    public String getValue() {
-        return value;
+    public String getAppId() {
+        return appId;
     }
 
     /**
      * set 应用ID
      *
-     * @param value
+     * @param appId
      */
-    public void setValue(String value) {
-        this.value = value;
+    public void setAppId(String appId) {
+        this.appId = appId;
     }
 
 
@@ -63,11 +63,11 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     /**
      * set 应用ID
      *
-     * @param value 应用ID
+     * @param appId 应用ID
      * @return CreateAppResult
      */
-    public CreateAppResult value(String value) {
-        this.value = value;
+    public CreateAppResult appId(String appId) {
+        this.appId = appId;
         return this;
     }
 

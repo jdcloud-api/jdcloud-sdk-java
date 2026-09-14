@@ -34,40 +34,40 @@ public class CreatePipelineTaskResult extends JdcloudResult implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * 流水线任务ID，E.g.，task-123456789
+     * 流水线任务ID
      */
-    private String value;
+    private String pipelineTaskId;
 
 
 
     /**
-     * get 流水线任务ID，E.g.，task-123456789
+     * get 流水线任务ID
      *
      * @return
      */
-    public String getValue() {
-        return value;
+    public String getPipelineTaskId() {
+        return pipelineTaskId;
     }
 
     /**
-     * set 流水线任务ID，E.g.，task-123456789
+     * set 流水线任务ID
      *
-     * @param value
+     * @param pipelineTaskId
      */
-    public void setValue(String value) {
-        this.value = value;
+    public void setPipelineTaskId(String pipelineTaskId) {
+        this.pipelineTaskId = pipelineTaskId;
     }
 
 
 
     /**
-     * set 流水线任务ID，E.g.，task-123456789
+     * set 流水线任务ID
      *
-     * @param value 流水线任务ID，E.g.，task-123456789
+     * @param pipelineTaskId 流水线任务ID
      * @return CreatePipelineTaskResult
      */
-    public CreatePipelineTaskResult value(String value) {
-        this.value = value;
+    public CreatePipelineTaskResult pipelineTaskId(String pipelineTaskId) {
+        this.pipelineTaskId = pipelineTaskId;
         return this;
     }
 

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ydapp.model.GetPackageDownloadInfoResponse;
 
 /**
- * 获取指定应用下制品包的下载信息，包含名称、版本及预签名下载地址（preSignedUrl）。 调用方使用返回的 preSignedUrl 自行下载文件（该地址有鉴权、有效期有限）。
+ * 获取指定应用下程序包的下载信息，包含名称、版本及预签名下载地址（preSignedUrl）。 调用方使用返回的 preSignedUrl 自行下载文件（该地址有鉴权、有效期有限）。
  */
 class GetPackageDownloadInfoExecutor extends JdcloudExecutor {
 

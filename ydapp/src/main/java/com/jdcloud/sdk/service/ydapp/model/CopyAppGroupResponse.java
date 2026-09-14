@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ydapp.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 复制指定分组
+ * 复制指定分组，所选集群的环境必须与分组环境一致
  */
 public class CopyAppGroupResponse extends JdcloudResponse<CopyAppGroupResult> implements java.io.Serializable {
 

@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.ydapp.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.ydapp.model.JosApp;
+import com.jdcloud.sdk.service.ydapp.model.JosAppSpec;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -40,7 +40,7 @@ public class DescribeJosAppsResult extends JdcloudResult implements java.io.Seri
      * apps
      */
     
-    private List<JosApp> apps;
+    private List<JosAppSpec> apps;
 
 
     /**
@@ -48,7 +48,7 @@ public class DescribeJosAppsResult extends JdcloudResult implements java.io.Seri
     *
     * @return
     */
-    public List<JosApp> getApps() {
+    public List<JosAppSpec> getApps() {
         return apps;
     }
 
@@ -57,7 +57,7 @@ public class DescribeJosAppsResult extends JdcloudResult implements java.io.Seri
     *
     * @param apps
     */
-    public void setApps(List<JosApp> apps) {
+    public void setApps(List<JosAppSpec> apps) {
         this.apps = apps;
     }
 
@@ -69,7 +69,7 @@ public class DescribeJosAppsResult extends JdcloudResult implements java.io.Seri
     * @param apps 
     * @return DescribeJosAppsResult
     */
-    public DescribeJosAppsResult apps(List<JosApp> apps) {
+    public DescribeJosAppsResult apps(List<JosAppSpec> apps) {
         this.apps = apps;
         return this;
     }
@@ -81,7 +81,7 @@ public class DescribeJosAppsResult extends JdcloudResult implements java.io.Seri
      *
      * @param app
      */
-    public void addApp(JosApp app) {
+    public void addApp(JosAppSpec app) {
         if (this.apps == null) {
             this.apps = new ArrayList<>();
         }

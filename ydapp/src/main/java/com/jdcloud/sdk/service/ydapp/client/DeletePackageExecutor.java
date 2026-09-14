@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ydapp.model.DeletePackageResponse;
 
 /**
- * 删除指定应用下的制品包
+ * 删除指定应用下的程序包
  */
 class DeletePackageExecutor extends JdcloudExecutor {
 

@@ -27,47 +27,47 @@ package com.jdcloud.sdk.service.ydapp.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 将制品包与指定应用建立关联，返回流水线ID
+ * 将程序包与指定应用建立关联，返回程序包ID
  */
 public class LinkPackageResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 关联生成的流水线ID，E.g.，10086
+     * 程序包ID
      */
-    private Long value;
+    private Long packageId;
 
 
 
     /**
-     * get 关联生成的流水线ID，E.g.，10086
+     * get 程序包ID
      *
      * @return
      */
-    public Long getValue() {
-        return value;
+    public Long getPackageId() {
+        return packageId;
     }
 
     /**
-     * set 关联生成的流水线ID，E.g.，10086
+     * set 程序包ID
      *
-     * @param value
+     * @param packageId
      */
-    public void setValue(Long value) {
-        this.value = value;
+    public void setPackageId(Long packageId) {
+        this.packageId = packageId;
     }
 
 
 
     /**
-     * set 关联生成的流水线ID，E.g.，10086
+     * set 程序包ID
      *
-     * @param value 关联生成的流水线ID，E.g.，10086
+     * @param packageId 程序包ID
      * @return LinkPackageResult
      */
-    public LinkPackageResult value(Long value) {
-        this.value = value;
+    public LinkPackageResult packageId(Long packageId) {
+        this.packageId = packageId;
         return this;
     }
 

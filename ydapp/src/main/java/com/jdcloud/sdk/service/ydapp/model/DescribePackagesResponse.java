@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ydapp.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 分页查询指定应用下的制品包列表，支持按名称模糊搜索
+ * 分页查询指定应用下的程序包列表，支持按名称模糊搜索
  */
 public class DescribePackagesResponse extends JdcloudResponse<DescribePackagesResult> implements java.io.Serializable {
 

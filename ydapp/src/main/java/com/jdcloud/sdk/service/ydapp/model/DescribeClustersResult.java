@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.ydapp.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.ydapp.model.OpenapiDeployClusterRespVo;
+import com.jdcloud.sdk.service.ydapp.model.ClusterResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -40,7 +40,7 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
      * data
      */
     
-    private List<OpenapiDeployClusterRespVo> data;
+    private List<ClusterResult> data;
     /**
      * 本次查询可匹配到的总记录数。
      */
@@ -53,7 +53,7 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
     *
     * @return
     */
-    public List<OpenapiDeployClusterRespVo> getData() {
+    public List<ClusterResult> getData() {
         return data;
     }
 
@@ -62,7 +62,7 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
     *
     * @param data
     */
-    public void setData(List<OpenapiDeployClusterRespVo> data) {
+    public void setData(List<ClusterResult> data) {
         this.data = data;
     }
 
@@ -93,7 +93,7 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
     * @param data 
     * @return DescribeClustersResult
     */
-    public DescribeClustersResult data(List<OpenapiDeployClusterRespVo> data) {
+    public DescribeClustersResult data(List<ClusterResult> data) {
         this.data = data;
         return this;
     }
@@ -117,7 +117,7 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
      *
      * @param data
      */
-    public void addData(OpenapiDeployClusterRespVo data) {
+    public void addData(ClusterResult data) {
         if (this.data == null) {
             this.data = new ArrayList<>();
         }

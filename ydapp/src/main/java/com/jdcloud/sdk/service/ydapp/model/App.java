@@ -33,34 +33,34 @@ public class App  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 应用ID，E.g.，app-123456789
+     * 应用ID
      */
     private String appId;
 
     /**
-     * 应用名称，E.g.，测试应用
+     * 应用名称
      */
     private String appName;
 
     /**
-     * 应用归属的系统ID，E.g.，sys-987654321
+     * 应用归属的系统ID
      */
     private String systemId;
 
     /**
-     * 创建时间，E.g.，&#39;2024-08-22T05:48:37.000+00:00&#39;
+     * 创建时间
      */
     private String createTime;
 
     /**
-     * 更新时间，E.g.，&#39;2024-08-22T05:48:37.000+00:00&#39;
+     * 更新时间
      */
     private String updateTime;
 
 
 
     /**
-     * get 应用ID，E.g.，app-123456789
+     * get 应用ID
      *
      * @return
      */
@@ -69,7 +69,7 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * set 应用ID，E.g.，app-123456789
+     * set 应用ID
      *
      * @param appId
      */
@@ -79,7 +79,7 @@ public class App  implements java.io.Serializable {
 
 
     /**
-     * get 应用名称，E.g.，测试应用
+     * get 应用名称
      *
      * @return
      */
@@ -88,7 +88,7 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * set 应用名称，E.g.，测试应用
+     * set 应用名称
      *
      * @param appName
      */
@@ -98,7 +98,7 @@ public class App  implements java.io.Serializable {
 
 
     /**
-     * get 应用归属的系统ID，E.g.，sys-987654321
+     * get 应用归属的系统ID
      *
      * @return
      */
@@ -107,7 +107,7 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * set 应用归属的系统ID，E.g.，sys-987654321
+     * set 应用归属的系统ID
      *
      * @param systemId
      */
@@ -117,7 +117,7 @@ public class App  implements java.io.Serializable {
 
 
     /**
-     * get 创建时间，E.g.，&#39;2024-08-22T05:48:37.000+00:00&#39;
+     * get 创建时间
      *
      * @return
      */
@@ -126,7 +126,7 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间，E.g.，&#39;2024-08-22T05:48:37.000+00:00&#39;
+     * set 创建时间
      *
      * @param createTime
      */
@@ -136,7 +136,7 @@ public class App  implements java.io.Serializable {
 
 
     /**
-     * get 更新时间，E.g.，&#39;2024-08-22T05:48:37.000+00:00&#39;
+     * get 更新时间
      *
      * @return
      */
@@ -145,7 +145,7 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * set 更新时间，E.g.，&#39;2024-08-22T05:48:37.000+00:00&#39;
+     * set 更新时间
      *
      * @param updateTime
      */
@@ -156,9 +156,9 @@ public class App  implements java.io.Serializable {
 
 
     /**
-     * set 应用ID，E.g.，app-123456789
+     * set 应用ID
      *
-     * @param appId 应用ID，E.g.，app-123456789
+     * @param appId 应用ID
      * @return App
      */
     public App appId(String appId) {
@@ -168,9 +168,9 @@ public class App  implements java.io.Serializable {
 
 
     /**
-     * set 应用名称，E.g.，测试应用
+     * set 应用名称
      *
-     * @param appName 应用名称，E.g.，测试应用
+     * @param appName 应用名称
      * @return App
      */
     public App appName(String appName) {
@@ -180,9 +180,9 @@ public class App  implements java.io.Serializable {
 
 
     /**
-     * set 应用归属的系统ID，E.g.，sys-987654321
+     * set 应用归属的系统ID
      *
-     * @param systemId 应用归属的系统ID，E.g.，sys-987654321
+     * @param systemId 应用归属的系统ID
      * @return App
      */
     public App systemId(String systemId) {
@@ -192,9 +192,9 @@ public class App  implements java.io.Serializable {
 
 
     /**
-     * set 创建时间，E.g.，&#39;2024-08-22T05:48:37.000+00:00&#39;
+     * set 创建时间
      *
-     * @param createTime 创建时间，E.g.，&#39;2024-08-22T05:48:37.000+00:00&#39;
+     * @param createTime 创建时间
      * @return App
      */
     public App createTime(String createTime) {
@@ -204,9 +204,9 @@ public class App  implements java.io.Serializable {
 
 
     /**
-     * set 更新时间，E.g.，&#39;2024-08-22T05:48:37.000+00:00&#39;
+     * set 更新时间
      *
-     * @param updateTime 更新时间，E.g.，&#39;2024-08-22T05:48:37.000+00:00&#39;
+     * @param updateTime 更新时间
      * @return App
      */
     public App updateTime(String updateTime) {

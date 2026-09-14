@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.ydapp.model;
 
-import com.jdcloud.sdk.service.ydapp.model.AppMembers;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -40,7 +39,7 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
     private String appId;
 
     /**
-     * 应用名称
+     * 应用英文名称
      */
     private String appKey;
 
@@ -57,7 +56,7 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
     /**
      * 应用级别：0-核心应用，3-其他应用
      */
-    private String appLevel;
+    private Integer appLevel;
 
     /**
      * 应用类型：true-有状态应用，false-无状态应用
@@ -65,14 +64,9 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
     private Boolean stateful;
 
     /**
-     * 编程语言：Java、Php、其他
+     * 编程语言：Java、Php、Other
      */
     private String language;
-
-    /**
-     * appMembers
-     */
-    private AppMembers appMembers;
 
     /**
      * 系统ID
@@ -80,7 +74,7 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
     private String systemId;
 
     /**
-     * 系统名称
+     * 系统英文名
      */
     private String systemKey;
 
@@ -111,7 +105,7 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
 
 
     /**
-     * get 应用名称
+     * get 应用英文名称
      *
      * @return
      */
@@ -120,7 +114,7 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set 应用名称
+     * set 应用英文名称
      *
      * @param appKey
      */
@@ -172,7 +166,7 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
      *
      * @return
      */
-    public String getAppLevel() {
+    public Integer getAppLevel() {
         return appLevel;
     }
 
@@ -181,7 +175,7 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
      *
      * @param appLevel
      */
-    public void setAppLevel(String appLevel) {
+    public void setAppLevel(Integer appLevel) {
         this.appLevel = appLevel;
     }
 
@@ -206,7 +200,7 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
 
 
     /**
-     * get 编程语言：Java、Php、其他
+     * get 编程语言：Java、Php、Other
      *
      * @return
      */
@@ -215,31 +209,12 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set 编程语言：Java、Php、其他
+     * set 编程语言：Java、Php、Other
      *
      * @param language
      */
     public void setLanguage(String language) {
         this.language = language;
-    }
-
-
-    /**
-     * get appMembers
-     *
-     * @return
-     */
-    public AppMembers getAppMembers() {
-        return appMembers;
-    }
-
-    /**
-     * set appMembers
-     *
-     * @param appMembers
-     */
-    public void setAppMembers(AppMembers appMembers) {
-        this.appMembers = appMembers;
     }
 
 
@@ -263,7 +238,7 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
 
 
     /**
-     * get 系统名称
+     * get 系统英文名
      *
      * @return
      */
@@ -272,7 +247,7 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set 系统名称
+     * set 系统英文名
      *
      * @param systemKey
      */
@@ -314,9 +289,9 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
 
 
     /**
-     * set 应用名称
+     * set 应用英文名称
      *
-     * @param appKey 应用名称
+     * @param appKey 应用英文名称
      * @return DescribeAppResult
      */
     public DescribeAppResult appKey(String appKey) {
@@ -355,7 +330,7 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
      * @param appLevel 应用级别：0-核心应用，3-其他应用
      * @return DescribeAppResult
      */
-    public DescribeAppResult appLevel(String appLevel) {
+    public DescribeAppResult appLevel(Integer appLevel) {
         this.appLevel = appLevel;
         return this;
     }
@@ -374,25 +349,13 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
 
 
     /**
-     * set 编程语言：Java、Php、其他
+     * set 编程语言：Java、Php、Other
      *
-     * @param language 编程语言：Java、Php、其他
+     * @param language 编程语言：Java、Php、Other
      * @return DescribeAppResult
      */
     public DescribeAppResult language(String language) {
         this.language = language;
-        return this;
-    }
-
-
-    /**
-     * set appMembers
-     *
-     * @param appMembers 
-     * @return DescribeAppResult
-     */
-    public DescribeAppResult appMembers(AppMembers appMembers) {
-        this.appMembers = appMembers;
         return this;
     }
 
@@ -410,9 +373,9 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
 
 
     /**
-     * set 系统名称
+     * set 系统英文名
      *
-     * @param systemKey 系统名称
+     * @param systemKey 系统英文名
      * @return DescribeAppResult
      */
     public DescribeAppResult systemKey(String systemKey) {

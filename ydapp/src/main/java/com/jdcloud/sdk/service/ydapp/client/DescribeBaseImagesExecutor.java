@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ydapp.model.DescribeBaseImagesResponse;
 
 /**
- * 查询已发布的基础镜像列表，可按镜像类型过滤（JAVA、PHP、Nginx）
+ * 查询已发布的基础镜像列表
  */
 class DescribeBaseImagesExecutor extends JdcloudExecutor {
 

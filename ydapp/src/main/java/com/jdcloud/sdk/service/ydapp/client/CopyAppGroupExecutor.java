@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ydapp.model.CopyAppGroupResponse;
 
 /**
- * 复制指定分组
+ * 复制指定分组，所选集群的环境必须与分组环境一致
  */
 class CopyAppGroupExecutor extends JdcloudExecutor {
 

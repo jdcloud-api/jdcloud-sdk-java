@@ -43,6 +43,11 @@ public class CreateSystemResult extends JdcloudResult implements java.io.Seriali
      */
     private String vpcId;
 
+    /**
+     * 系统英文名，对应 k8s 集群的 namespace
+     */
+    private String systemKey;
+
 
 
     /**
@@ -83,6 +88,25 @@ public class CreateSystemResult extends JdcloudResult implements java.io.Seriali
     }
 
 
+    /**
+     * get 系统英文名，对应 k8s 集群的 namespace
+     *
+     * @return
+     */
+    public String getSystemKey() {
+        return systemKey;
+    }
+
+    /**
+     * set 系统英文名，对应 k8s 集群的 namespace
+     *
+     * @param systemKey
+     */
+    public void setSystemKey(String systemKey) {
+        this.systemKey = systemKey;
+    }
+
+
 
     /**
      * set 系统ID
@@ -104,6 +128,18 @@ public class CreateSystemResult extends JdcloudResult implements java.io.Seriali
      */
     public CreateSystemResult vpcId(String vpcId) {
         this.vpcId = vpcId;
+        return this;
+    }
+
+
+    /**
+     * set 系统英文名，对应 k8s 集群的 namespace
+     *
+     * @param systemKey 系统英文名，对应 k8s 集群的 namespace
+     * @return CreateSystemResult
+     */
+    public CreateSystemResult systemKey(String systemKey) {
+        this.systemKey = systemKey;
         return this;
     }
 

@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 分页查询指定应用下的制品包列表，支持按名称模糊搜索
+ * 分页查询指定应用下的程序包列表，支持按名称模糊搜索
  */
 public class DescribePackagesRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -45,7 +45,7 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
     private Integer pageSize;
 
     /**
-     * 制品包名称，模糊匹配，E.g.，my-app
+     * 程序包名称，模糊匹配，E.g.，my-app
      */
     private String nameLike;
 
@@ -97,7 +97,7 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 制品包名称，模糊匹配，E.g.，my-app
+     * get 程序包名称，模糊匹配，E.g.，my-app
      *
      * @return
      */
@@ -106,7 +106,7 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 制品包名称，模糊匹配，E.g.，my-app
+     * set 程序包名称，模糊匹配，E.g.，my-app
      *
      * @param nameLike
      */
@@ -160,9 +160,9 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 制品包名称，模糊匹配，E.g.，my-app
+     * set 程序包名称，模糊匹配，E.g.，my-app
      *
-     * @param nameLike 制品包名称，模糊匹配，E.g.，my-app
+     * @param nameLike 程序包名称，模糊匹配，E.g.，my-app
      * @return DescribePackagesRequest
      */
     public DescribePackagesRequest nameLike(String nameLike) {

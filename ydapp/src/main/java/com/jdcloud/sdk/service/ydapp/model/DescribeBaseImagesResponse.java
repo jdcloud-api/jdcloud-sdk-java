@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ydapp.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询已发布的基础镜像列表，可按镜像类型过滤（JAVA、PHP、Nginx）
+ * 查询已发布的基础镜像列表
  */
 public class DescribeBaseImagesResponse extends JdcloudResponse<DescribeBaseImagesResult> implements java.io.Serializable {
 

@@ -40,7 +40,7 @@ class CreatePipelineTaskExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/pipelinetask";
+        return "/app/{appId}/pipelinetask";
     }
 
     @Override

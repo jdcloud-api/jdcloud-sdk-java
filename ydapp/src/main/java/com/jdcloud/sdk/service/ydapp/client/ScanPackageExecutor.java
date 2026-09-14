@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ydapp.model.ScanPackageResponse;
 
 /**
- * 对指定制品包触发安全扫描
+ * 对指定程序包触发安全扫描
  */
 class ScanPackageExecutor extends JdcloudExecutor {
 
