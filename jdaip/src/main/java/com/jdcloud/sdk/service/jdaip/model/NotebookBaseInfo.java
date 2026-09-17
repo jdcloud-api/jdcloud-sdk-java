@@ -151,6 +151,23 @@ public class NotebookBaseInfo  implements java.io.Serializable {
      */
     private String publicQueue;
 
+    /**
+     * 队列类型，实例运行所在资源队列的类型。
+
+## 取值
+- private: 私有资源池队列
+- public: 公共资源池队列
+- exclusive: 专享资源池队列
+- security: 安全队列，出站网络受管控，禁止修改资源属性
+
+## 使用说明
+- 该字段为查询返回值，创建/更新时无需传入
+- 存量实例以及创建时未查询到队列信息的实例返回空串，调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
+- 安全队列的完整使用限制见&#x60;nbWorkloadDetail.queueType&#x60;
+
+     */
+    private String queueType;
+
 
 
     /**
@@ -512,6 +529,49 @@ public class NotebookBaseInfo  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 队列类型，实例运行所在资源队列的类型。
+
+## 取值
+- private: 私有资源池队列
+- public: 公共资源池队列
+- exclusive: 专享资源池队列
+- security: 安全队列，出站网络受管控，禁止修改资源属性
+
+## 使用说明
+- 该字段为查询返回值，创建/更新时无需传入
+- 存量实例以及创建时未查询到队列信息的实例返回空串，调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
+- 安全队列的完整使用限制见&#x60;nbWorkloadDetail.queueType&#x60;
+
+     *
+     * @return
+     */
+    public String getQueueType() {
+        return queueType;
+    }
+
+    /**
+     * set 队列类型，实例运行所在资源队列的类型。
+
+## 取值
+- private: 私有资源池队列
+- public: 公共资源池队列
+- exclusive: 专享资源池队列
+- security: 安全队列，出站网络受管控，禁止修改资源属性
+
+## 使用说明
+- 该字段为查询返回值，创建/更新时无需传入
+- 存量实例以及创建时未查询到队列信息的实例返回空串，调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
+- 安全队列的完整使用限制见&#x60;nbWorkloadDetail.queueType&#x60;
+
+     *
+     * @param queueType
+     */
+    public void setQueueType(String queueType) {
+        this.queueType = queueType;
+    }
+
+
 
     /**
      * set 主账号，资源所属的主账号标识。
@@ -763,6 +823,42 @@ public class NotebookBaseInfo  implements java.io.Serializable {
      */
     public NotebookBaseInfo publicQueue(String publicQueue) {
         this.publicQueue = publicQueue;
+        return this;
+    }
+
+
+    /**
+     * set 队列类型，实例运行所在资源队列的类型。
+
+## 取值
+- private: 私有资源池队列
+- public: 公共资源池队列
+- exclusive: 专享资源池队列
+- security: 安全队列，出站网络受管控，禁止修改资源属性
+
+## 使用说明
+- 该字段为查询返回值，创建/更新时无需传入
+- 存量实例以及创建时未查询到队列信息的实例返回空串，调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
+- 安全队列的完整使用限制见&#x60;nbWorkloadDetail.queueType&#x60;
+
+     *
+     * @param queueType 队列类型，实例运行所在资源队列的类型。
+
+## 取值
+- private: 私有资源池队列
+- public: 公共资源池队列
+- exclusive: 专享资源池队列
+- security: 安全队列，出站网络受管控，禁止修改资源属性
+
+## 使用说明
+- 该字段为查询返回值，创建/更新时无需传入
+- 存量实例以及创建时未查询到队列信息的实例返回空串，调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
+- 安全队列的完整使用限制见&#x60;nbWorkloadDetail.queueType&#x60;
+
+     * @return NotebookBaseInfo
+     */
+    public NotebookBaseInfo queueType(String queueType) {
+        this.queueType = queueType;
         return this;
     }
 

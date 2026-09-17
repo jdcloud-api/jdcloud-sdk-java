@@ -59,9 +59,12 @@ import com.jdcloud.sdk.service.jdaip.model.TransferProfilingTaskToOssResponse;
 
 ## 注意事项
 
-- 仅状态为 &#x60;completed&#x60; 的任务才允许转存
+- 仅状态为 &#x60;completed&#x60; 且结果未过保留期的采集任务才允许转存，否则返回400
+- 接口会先做一次过期判定：&#x60;completed&#x60; 但已超保留期的任务会被就地流转为 &#x60;expired&#x60;，随后被上面的 &#x60;completed&#x60; 校验拦下。因此结果已过期的任务同样不允许转存
+- &#x60;pending&#x60;/&#x60;running&#x60;/&#x60;failed&#x60; 状态的任务不允许转存：前两者结果尚未生成或不完整，后者没有可用结果
+- 校验不通过时不会创建任何转存记录，也不会下发转存作业
 - 需确保目标OSS Bucket已存在且有写入权限
-- 转存为异步操作，提交后返回转存任务状态
+- 转存为异步操作，提交后返回转存任务状态，接口不等待转存完成
 
  */
 class TransferProfilingTaskToOssExecutor extends JdcloudExecutor {

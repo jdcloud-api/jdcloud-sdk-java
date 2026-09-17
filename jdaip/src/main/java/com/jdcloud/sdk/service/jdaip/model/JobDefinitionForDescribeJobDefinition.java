@@ -166,6 +166,11 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
     private BuffaloForDescribeJobDefinition buffalo;
 
     /**
+     * 已绑定的 Ku+ Buffalo 任务ID；未绑定时返回 null。
+     */
+    private Long kuplusBuffaloId;
+
+    /**
      * 通知投递配置列表（event -&gt; channels 映射）。
 
      */
@@ -682,6 +687,25 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
      */
     public void setBuffalo(BuffaloForDescribeJobDefinition buffalo) {
         this.buffalo = buffalo;
+    }
+
+
+    /**
+     * get 已绑定的 Ku+ Buffalo 任务ID；未绑定时返回 null。
+     *
+     * @return
+     */
+    public Long getKuplusBuffaloId() {
+        return kuplusBuffaloId;
+    }
+
+    /**
+     * set 已绑定的 Ku+ Buffalo 任务ID；未绑定时返回 null。
+     *
+     * @param kuplusBuffaloId
+     */
+    public void setKuplusBuffaloId(Long kuplusBuffaloId) {
+        this.kuplusBuffaloId = kuplusBuffaloId;
     }
 
 
@@ -1216,6 +1240,18 @@ public class JobDefinitionForDescribeJobDefinition  implements java.io.Serializa
      */
     public JobDefinitionForDescribeJobDefinition buffalo(BuffaloForDescribeJobDefinition buffalo) {
         this.buffalo = buffalo;
+        return this;
+    }
+
+
+    /**
+     * set 已绑定的 Ku+ Buffalo 任务ID；未绑定时返回 null。
+     *
+     * @param kuplusBuffaloId 已绑定的 Ku+ Buffalo 任务ID；未绑定时返回 null。
+     * @return JobDefinitionForDescribeJobDefinition
+     */
+    public JobDefinitionForDescribeJobDefinition kuplusBuffaloId(Long kuplusBuffaloId) {
+        this.kuplusBuffaloId = kuplusBuffaloId;
         return this;
     }
 

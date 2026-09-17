@@ -48,9 +48,6 @@
 
 package com.jdcloud.sdk.service.jdaip.model;
 
-import java.util.List;
-import java.util.ArrayList;
-import com.jdcloud.sdk.service.jdaip.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -74,13 +71,6 @@ public class DescribeModelExportsRequest extends JdcloudRequest implements java.
      */
     private Integer pageSize;
 
-    /**
-     * &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;status&#x60;: 导出状态，精确匹配，支持多个，可选(pending/exporting/completed/failed)。
-
-     */
-    
-    private List<Filter> filters;
     /**
      * 地域ID
      * Required:true
@@ -139,29 +129,6 @@ public class DescribeModelExportsRequest extends JdcloudRequest implements java.
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
-    }
-
-
-    /**
-    * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;status&#x60;: 导出状态，精确匹配，支持多个，可选(pending/exporting/completed/failed)。
-
-    *
-    * @return
-    */
-    public List<Filter> getFilters() {
-        return filters;
-    }
-
-    /**
-    * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;status&#x60;: 导出状态，精确匹配，支持多个，可选(pending/exporting/completed/failed)。
-
-    *
-    * @param filters
-    */
-    public void setFilters(List<Filter> filters) {
-        this.filters = filters;
     }
 
 
@@ -248,22 +215,6 @@ public class DescribeModelExportsRequest extends JdcloudRequest implements java.
 
 
     /**
-    * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;status&#x60;: 导出状态，精确匹配，支持多个，可选(pending/exporting/completed/failed)。
-
-    *
-    * @param filters &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;status&#x60;: 导出状态，精确匹配，支持多个，可选(pending/exporting/completed/failed)。
-
-    * @return DescribeModelExportsRequest
-    */
-    public DescribeModelExportsRequest filters(List<Filter> filters) {
-        this.filters = filters;
-        return this;
-    }
-
-
-    /**
      * set 地域ID
      *
      * @param regionId 地域ID
@@ -299,18 +250,4 @@ public class DescribeModelExportsRequest extends JdcloudRequest implements java.
     }
 
 
-
-    /**
-     * add item to &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;status&#x60;: 导出状态，精确匹配，支持多个，可选(pending/exporting/completed/failed)。
-
-     *
-     * @param filter
-     */
-    public void addFilter(Filter filter) {
-        if (this.filters == null) {
-            this.filters = new ArrayList<>();
-        }
-        this.filters.add(filter);
-    }
 }

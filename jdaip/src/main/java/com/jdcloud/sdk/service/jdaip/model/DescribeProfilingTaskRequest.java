@@ -77,8 +77,8 @@ public class DescribeProfilingTaskRequest extends JdcloudRequest implements java
 
     /**
      * &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;instanceName&#x60;: 实例名称，模糊匹配，支持单个。
-&#x60;nodeName&#x60;: 所属节点名称，模糊匹配，支持单个。
+&#x60;instanceName&#x60;: 实例名称，精确匹配，支持单个。
+&#x60;nodeName&#x60;: 所属节点名称，精确匹配，支持单个。
 &#x60;collectStatus&#x60;: 采集状态，精确匹配，支持多个，可选(pending/collecting/success/failed)。
 
      */
@@ -154,8 +154,8 @@ public class DescribeProfilingTaskRequest extends JdcloudRequest implements java
 
     /**
     * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;instanceName&#x60;: 实例名称，模糊匹配，支持单个。
-&#x60;nodeName&#x60;: 所属节点名称，模糊匹配，支持单个。
+&#x60;instanceName&#x60;: 实例名称，精确匹配，支持单个。
+&#x60;nodeName&#x60;: 所属节点名称，精确匹配，支持单个。
 &#x60;collectStatus&#x60;: 采集状态，精确匹配，支持多个，可选(pending/collecting/success/failed)。
 
     *
@@ -167,8 +167,8 @@ public class DescribeProfilingTaskRequest extends JdcloudRequest implements java
 
     /**
     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;instanceName&#x60;: 实例名称，模糊匹配，支持单个。
-&#x60;nodeName&#x60;: 所属节点名称，模糊匹配，支持单个。
+&#x60;instanceName&#x60;: 实例名称，精确匹配，支持单个。
+&#x60;nodeName&#x60;: 所属节点名称，精确匹配，支持单个。
 &#x60;collectStatus&#x60;: 采集状态，精确匹配，支持多个，可选(pending/collecting/success/failed)。
 
     *
@@ -282,14 +282,14 @@ public class DescribeProfilingTaskRequest extends JdcloudRequest implements java
 
     /**
     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;instanceName&#x60;: 实例名称，模糊匹配，支持单个。
-&#x60;nodeName&#x60;: 所属节点名称，模糊匹配，支持单个。
+&#x60;instanceName&#x60;: 实例名称，精确匹配，支持单个。
+&#x60;nodeName&#x60;: 所属节点名称，精确匹配，支持单个。
 &#x60;collectStatus&#x60;: 采集状态，精确匹配，支持多个，可选(pending/collecting/success/failed)。
 
     *
     * @param filters &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;instanceName&#x60;: 实例名称，模糊匹配，支持单个。
-&#x60;nodeName&#x60;: 所属节点名称，模糊匹配，支持单个。
+&#x60;instanceName&#x60;: 实例名称，精确匹配，支持单个。
+&#x60;nodeName&#x60;: 所属节点名称，精确匹配，支持单个。
 &#x60;collectStatus&#x60;: 采集状态，精确匹配，支持多个，可选(pending/collecting/success/failed)。
 
     * @return DescribeProfilingTaskRequest
@@ -351,8 +351,8 @@ public class DescribeProfilingTaskRequest extends JdcloudRequest implements java
 
     /**
      * add item to &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;instanceName&#x60;: 实例名称，模糊匹配，支持单个。
-&#x60;nodeName&#x60;: 所属节点名称，模糊匹配，支持单个。
+&#x60;instanceName&#x60;: 实例名称，精确匹配，支持单个。
+&#x60;nodeName&#x60;: 所属节点名称，精确匹配，支持单个。
 &#x60;collectStatus&#x60;: 采集状态，精确匹配，支持多个，可选(pending/collecting/success/failed)。
 
      *

@@ -55,6 +55,7 @@ public class DatasetWarmTask  implements java.io.Serializable {
 - completed：预热完成
 - failed：预热失败
 - deleting：删除中
+- deleteFailed：删除失败
 
      */
     private String status;
@@ -78,6 +79,11 @@ public class DatasetWarmTask  implements java.io.Serializable {
      * 安全存储ID
      */
     private String safeStorageId;
+
+    /**
+     * 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变
+     */
+    private String safeStorageDisplayId;
 
     /**
      * 安全存储名称快照
@@ -171,6 +177,7 @@ public class DatasetWarmTask  implements java.io.Serializable {
 - completed：预热完成
 - failed：预热失败
 - deleting：删除中
+- deleteFailed：删除失败
 
      *
      * @return
@@ -187,6 +194,7 @@ public class DatasetWarmTask  implements java.io.Serializable {
 - completed：预热完成
 - failed：预热失败
 - deleting：删除中
+- deleteFailed：删除失败
 
      *
      * @param status
@@ -269,6 +277,25 @@ public class DatasetWarmTask  implements java.io.Serializable {
      */
     public void setSafeStorageId(String safeStorageId) {
         this.safeStorageId = safeStorageId;
+    }
+
+
+    /**
+     * get 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变
+     *
+     * @return
+     */
+    public String getSafeStorageDisplayId() {
+        return safeStorageDisplayId;
+    }
+
+    /**
+     * set 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变
+     *
+     * @param safeStorageDisplayId
+     */
+    public void setSafeStorageDisplayId(String safeStorageDisplayId) {
+        this.safeStorageDisplayId = safeStorageDisplayId;
     }
 
 
@@ -412,6 +439,7 @@ public class DatasetWarmTask  implements java.io.Serializable {
 - completed：预热完成
 - failed：预热失败
 - deleting：删除中
+- deleteFailed：删除失败
 
      *
      * @param status 预热任务状态，可选值：
@@ -421,6 +449,7 @@ public class DatasetWarmTask  implements java.io.Serializable {
 - completed：预热完成
 - failed：预热失败
 - deleting：删除中
+- deleteFailed：删除失败
 
      * @return DatasetWarmTask
      */
@@ -474,6 +503,18 @@ public class DatasetWarmTask  implements java.io.Serializable {
      */
     public DatasetWarmTask safeStorageId(String safeStorageId) {
         this.safeStorageId = safeStorageId;
+        return this;
+    }
+
+
+    /**
+     * set 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变
+     *
+     * @param safeStorageDisplayId 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变
+     * @return DatasetWarmTask
+     */
+    public DatasetWarmTask safeStorageDisplayId(String safeStorageDisplayId) {
+        this.safeStorageDisplayId = safeStorageDisplayId;
         return this;
     }
 

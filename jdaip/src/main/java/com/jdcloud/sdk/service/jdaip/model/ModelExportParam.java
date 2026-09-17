@@ -44,6 +44,18 @@ public class ModelExportParam  implements java.io.Serializable {
     private ModelExportStorageInfo targetStorage;
 
     /**
+     * 导出目录，指定安全存储output下的子目录。
+
+**默认值：** 不传时默认为 &#x60;/output/&#x60;。
+
+**约束：** 必须以 &#x60;/output/&#x60; 为前缀。
+
+**示例：** &#x60;/output/my-model/&#x60;
+
+     */
+    private String exportDir;
+
+    /**
      * 模型格式。
 
 **可选值：**
@@ -66,7 +78,6 @@ public class ModelExportParam  implements java.io.Serializable {
      * 模型框架，与模型格式联动。
 
 **联动规则：**
-- &#x60;Custom&#x60; → Custom
 - &#x60;HuggingFace&#x60; → SafeTensor、Transformers、Diffusers
 - &#x60;SavedModel&#x60; → TensorFlow
 - &#x60;TorchScript&#x60; → PyTorch
@@ -84,6 +95,8 @@ public class ModelExportParam  implements java.io.Serializable {
 
     /**
      * 模型参数量，单位为B（十亿）。支持输入实际模型参数量，如 7 表示 7B、14 表示 14B、123.4 表示 123.4B 等。
+
+**约束：** 最大值为 1000。
 
 **示例：** &#x60;7&#x60;、&#x60;14&#x60;、&#x60;123.4&#x60;
 
@@ -110,6 +123,39 @@ public class ModelExportParam  implements java.io.Serializable {
      */
     public void setTargetStorage(ModelExportStorageInfo targetStorage) {
         this.targetStorage = targetStorage;
+    }
+
+
+    /**
+     * get 导出目录，指定安全存储output下的子目录。
+
+**默认值：** 不传时默认为 &#x60;/output/&#x60;。
+
+**约束：** 必须以 &#x60;/output/&#x60; 为前缀。
+
+**示例：** &#x60;/output/my-model/&#x60;
+
+     *
+     * @return
+     */
+    public String getExportDir() {
+        return exportDir;
+    }
+
+    /**
+     * set 导出目录，指定安全存储output下的子目录。
+
+**默认值：** 不传时默认为 &#x60;/output/&#x60;。
+
+**约束：** 必须以 &#x60;/output/&#x60; 为前缀。
+
+**示例：** &#x60;/output/my-model/&#x60;
+
+     *
+     * @param exportDir
+     */
+    public void setExportDir(String exportDir) {
+        this.exportDir = exportDir;
     }
 
 
@@ -160,7 +206,6 @@ public class ModelExportParam  implements java.io.Serializable {
      * get 模型框架，与模型格式联动。
 
 **联动规则：**
-- &#x60;Custom&#x60; → Custom
 - &#x60;HuggingFace&#x60; → SafeTensor、Transformers、Diffusers
 - &#x60;SavedModel&#x60; → TensorFlow
 - &#x60;TorchScript&#x60; → PyTorch
@@ -182,7 +227,6 @@ public class ModelExportParam  implements java.io.Serializable {
      * set 模型框架，与模型格式联动。
 
 **联动规则：**
-- &#x60;Custom&#x60; → Custom
 - &#x60;HuggingFace&#x60; → SafeTensor、Transformers、Diffusers
 - &#x60;SavedModel&#x60; → TensorFlow
 - &#x60;TorchScript&#x60; → PyTorch
@@ -204,6 +248,8 @@ public class ModelExportParam  implements java.io.Serializable {
     /**
      * get 模型参数量，单位为B（十亿）。支持输入实际模型参数量，如 7 表示 7B、14 表示 14B、123.4 表示 123.4B 等。
 
+**约束：** 最大值为 1000。
+
 **示例：** &#x60;7&#x60;、&#x60;14&#x60;、&#x60;123.4&#x60;
 
      *
@@ -215,6 +261,8 @@ public class ModelExportParam  implements java.io.Serializable {
 
     /**
      * set 模型参数量，单位为B（十亿）。支持输入实际模型参数量，如 7 表示 7B、14 表示 14B、123.4 表示 123.4B 等。
+
+**约束：** 最大值为 1000。
 
 **示例：** &#x60;7&#x60;、&#x60;14&#x60;、&#x60;123.4&#x60;
 
@@ -235,6 +283,32 @@ public class ModelExportParam  implements java.io.Serializable {
      */
     public ModelExportParam targetStorage(ModelExportStorageInfo targetStorage) {
         this.targetStorage = targetStorage;
+        return this;
+    }
+
+
+    /**
+     * set 导出目录，指定安全存储output下的子目录。
+
+**默认值：** 不传时默认为 &#x60;/output/&#x60;。
+
+**约束：** 必须以 &#x60;/output/&#x60; 为前缀。
+
+**示例：** &#x60;/output/my-model/&#x60;
+
+     *
+     * @param exportDir 导出目录，指定安全存储output下的子目录。
+
+**默认值：** 不传时默认为 &#x60;/output/&#x60;。
+
+**约束：** 必须以 &#x60;/output/&#x60; 为前缀。
+
+**示例：** &#x60;/output/my-model/&#x60;
+
+     * @return ModelExportParam
+     */
+    public ModelExportParam exportDir(String exportDir) {
+        this.exportDir = exportDir;
         return this;
     }
 
@@ -279,7 +353,6 @@ public class ModelExportParam  implements java.io.Serializable {
      * set 模型框架，与模型格式联动。
 
 **联动规则：**
-- &#x60;Custom&#x60; → Custom
 - &#x60;HuggingFace&#x60; → SafeTensor、Transformers、Diffusers
 - &#x60;SavedModel&#x60; → TensorFlow
 - &#x60;TorchScript&#x60; → PyTorch
@@ -294,7 +367,6 @@ public class ModelExportParam  implements java.io.Serializable {
      * @param modelFramework 模型框架，与模型格式联动。
 
 **联动规则：**
-- &#x60;Custom&#x60; → Custom
 - &#x60;HuggingFace&#x60; → SafeTensor、Transformers、Diffusers
 - &#x60;SavedModel&#x60; → TensorFlow
 - &#x60;TorchScript&#x60; → PyTorch
@@ -316,10 +388,14 @@ public class ModelExportParam  implements java.io.Serializable {
     /**
      * set 模型参数量，单位为B（十亿）。支持输入实际模型参数量，如 7 表示 7B、14 表示 14B、123.4 表示 123.4B 等。
 
+**约束：** 最大值为 1000。
+
 **示例：** &#x60;7&#x60;、&#x60;14&#x60;、&#x60;123.4&#x60;
 
      *
      * @param modelParams 模型参数量，单位为B（十亿）。支持输入实际模型参数量，如 7 表示 7B、14 表示 14B、123.4 表示 123.4B 等。
+
+**约束：** 最大值为 1000。
 
 **示例：** &#x60;7&#x60;、&#x60;14&#x60;、&#x60;123.4&#x60;
 

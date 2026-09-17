@@ -130,6 +130,9 @@ import com.jdcloud.sdk.service.jdaip.client.GetNotebookPodsExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DeleteImageTaskRequest;
 import com.jdcloud.sdk.service.jdaip.model.DeleteImageTaskResponse;
 import com.jdcloud.sdk.service.jdaip.client.DeleteImageTaskExecutor;
+import com.jdcloud.sdk.service.jdaip.model.StartNodeRequest;
+import com.jdcloud.sdk.service.jdaip.model.StartNodeResponse;
+import com.jdcloud.sdk.service.jdaip.client.StartNodeExecutor;
 import com.jdcloud.sdk.service.jdaip.model.GetPodLogsRequest;
 import com.jdcloud.sdk.service.jdaip.model.GetPodLogsResponse;
 import com.jdcloud.sdk.service.jdaip.client.GetPodLogsExecutor;
@@ -160,6 +163,9 @@ import com.jdcloud.sdk.service.jdaip.client.DescribeJobTypesExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DeleteDatasetRequest;
 import com.jdcloud.sdk.service.jdaip.model.DeleteDatasetResponse;
 import com.jdcloud.sdk.service.jdaip.client.DeleteDatasetExecutor;
+import com.jdcloud.sdk.service.jdaip.model.StopModelExportRequest;
+import com.jdcloud.sdk.service.jdaip.model.StopModelExportResponse;
+import com.jdcloud.sdk.service.jdaip.client.StopModelExportExecutor;
 import com.jdcloud.sdk.service.jdaip.model.UpdateServiceQPSRequest;
 import com.jdcloud.sdk.service.jdaip.model.UpdateServiceQPSResponse;
 import com.jdcloud.sdk.service.jdaip.client.UpdateServiceQPSExecutor;
@@ -214,6 +220,9 @@ import com.jdcloud.sdk.service.jdaip.client.UpdateInferenceExecutor;
 import com.jdcloud.sdk.service.jdaip.model.GetJobRestartHistoryRequest;
 import com.jdcloud.sdk.service.jdaip.model.GetJobRestartHistoryResponse;
 import com.jdcloud.sdk.service.jdaip.client.GetJobRestartHistoryExecutor;
+import com.jdcloud.sdk.service.jdaip.model.StopNodeRequest;
+import com.jdcloud.sdk.service.jdaip.model.StopNodeResponse;
+import com.jdcloud.sdk.service.jdaip.client.StopNodeExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeProfilingTaskRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeProfilingTaskResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeProfilingTaskExecutor;
@@ -753,12 +762,15 @@ public class JdaipClient extends JdcloudClient {
     /**
      * 下载性能分析任务指定实例的采集结果。
 
-下载指定 profiling 任务下指定实例的采集结果文件，以实例为单位进行下载。每次下载会将该实例的 &#x60;downloadTimes&#x60; 计数器加1。
+下载指定 profiling 任务下指定实例的采集结果文件，以实例为单位进行下载。每次下载成功会将该实例的 &#x60;downloadTimes&#x60; 计数器加1。
 
 ## 注意事项
 
-- 仅状态为 &#x60;completed&#x60; 的任务才允许下载
-- 结果文件为该实例采集数据的打包压缩文件
+- 下载校验的是**实例级**采集状态：仅该实例的 &#x60;collectStatus&#x60; 为 &#x60;success&#x60; 时才允许下载，否则返回400
+- 采集任务整体状态为 &#x60;completed&#x60; 并不代表每个实例都可下载。部分实例采集失败时，任务整体仍可能为 &#x60;completed&#x60;，但失败实例的 &#x60;collectStatus&#x60; 为 &#x60;failed&#x60;，该实例不可下载
+- 采集任务已过期（&#x60;status&#x60; 为 &#x60;expired&#x60;）时不允许下载，返回400。采集结果在平台存储上仅保留有限时长，超期后被回收
+- 每个实例的下载次数上限为 **3 次**（&#x60;downloadTimes&#x60; 达到3后，第4次请求返回400）
+- 结果文件为该实例采集数据的打包压缩文件，接口返回预签名下载URL
 
      *
      * @param request
@@ -1082,6 +1094,17 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 启动节点
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StartNodeResponse startNode(StartNodeRequest request) throws JdcloudSdkException {
+        return new StartNodeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取构建镜像任务关联的 Pod 日志（流式返回）。
 
 通过 SSE（Server-Sent Events）技术实时推送训练日志，适用于实时监控训练进度。
@@ -1241,6 +1264,30 @@ public class JdaipClient extends JdcloudClient {
      */
     public DeleteDatasetResponse deleteDataset(DeleteDatasetRequest request) throws JdcloudSdkException {
         return new DeleteDatasetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止模型导出任务。
+
+停止正在执行或等待中的模型导出任务。停止后将清理已导出的临时资源。
+
+## 可停止的导出状态
+
+- ✅ pending（等待中）、exporting（导出中）
+- ❌ completed（已完成）、failed（已失败）的导出任务无需停止
+
+## 注意事项
+
+- 停止操作不可逆，停止后导出任务将进入 stopping 状态并最终变为 stopped
+- 已导出到目标存储的部分数据不会被自动清理
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopModelExportResponse stopModelExport(StopModelExportRequest request) throws JdcloudSdkException {
+        return new StopModelExportExecutor().client(this).execute(request);
     }
 
     /**
@@ -1529,6 +1576,17 @@ public class JdaipClient extends JdcloudClient {
      */
     public GetJobRestartHistoryResponse getJobRestartHistory(GetJobRestartHistoryRequest request) throws JdcloudSdkException {
         return new GetJobRestartHistoryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止节点
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopNodeResponse stopNode(StopNodeRequest request) throws JdcloudSdkException {
+        return new StopNodeExecutor().client(this).execute(request);
     }
 
     /**
@@ -2218,9 +2276,12 @@ public class JdaipClient extends JdcloudClient {
 
 ## 注意事项
 
-- 仅状态为 &#x60;completed&#x60; 的任务才允许转存
+- 仅状态为 &#x60;completed&#x60; 且结果未过保留期的采集任务才允许转存，否则返回400
+- 接口会先做一次过期判定：&#x60;completed&#x60; 但已超保留期的任务会被就地流转为 &#x60;expired&#x60;，随后被上面的 &#x60;completed&#x60; 校验拦下。因此结果已过期的任务同样不允许转存
+- &#x60;pending&#x60;/&#x60;running&#x60;/&#x60;failed&#x60; 状态的任务不允许转存：前两者结果尚未生成或不完整，后者没有可用结果
+- 校验不通过时不会创建任何转存记录，也不会下发转存作业
 - 需确保目标OSS Bucket已存在且有写入权限
-- 转存为异步操作，提交后返回转存任务状态
+- 转存为异步操作，提交后返回转存任务状态，接口不等待转存完成
 
      *
      * @param request

@@ -52,7 +52,7 @@ public class EsStorageSpec  implements java.io.Serializable {
     /**
      * 存储路径。&#x60;cfs&#x60; 类型参数示例(10.0.23.45:/dir-path或/dir-path)。
 &#x60;oss&#x60; 类型参数示例(oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path)。
-&#x60;jpfs&#x60; 类型参数示例(fs-xxxxxxxxxx:/dir-path或/dir-path)。
+&#x60;jpfs&#x60; 类型参数示例(fs-xxxxxxxxxx:/dir-path或fs-xxxxx:fsmt-yyyyy:/dir-path或/dir-path)。
 
      * Required:true
      */
@@ -122,7 +122,7 @@ public class EsStorageSpec  implements java.io.Serializable {
     /**
      * get 存储路径。&#x60;cfs&#x60; 类型参数示例(10.0.23.45:/dir-path或/dir-path)。
 &#x60;oss&#x60; 类型参数示例(oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path)。
-&#x60;jpfs&#x60; 类型参数示例(fs-xxxxxxxxxx:/dir-path或/dir-path)。
+&#x60;jpfs&#x60; 类型参数示例(fs-xxxxxxxxxx:/dir-path或fs-xxxxx:fsmt-yyyyy:/dir-path或/dir-path)。
 
      *
      * @return
@@ -134,7 +134,7 @@ public class EsStorageSpec  implements java.io.Serializable {
     /**
      * set 存储路径。&#x60;cfs&#x60; 类型参数示例(10.0.23.45:/dir-path或/dir-path)。
 &#x60;oss&#x60; 类型参数示例(oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path)。
-&#x60;jpfs&#x60; 类型参数示例(fs-xxxxxxxxxx:/dir-path或/dir-path)。
+&#x60;jpfs&#x60; 类型参数示例(fs-xxxxxxxxxx:/dir-path或fs-xxxxx:fsmt-yyyyy:/dir-path或/dir-path)。
 
      *
      * @param storagePath
@@ -222,12 +222,12 @@ public class EsStorageSpec  implements java.io.Serializable {
     /**
      * set 存储路径。&#x60;cfs&#x60; 类型参数示例(10.0.23.45:/dir-path或/dir-path)。
 &#x60;oss&#x60; 类型参数示例(oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path)。
-&#x60;jpfs&#x60; 类型参数示例(fs-xxxxxxxxxx:/dir-path或/dir-path)。
+&#x60;jpfs&#x60; 类型参数示例(fs-xxxxxxxxxx:/dir-path或fs-xxxxx:fsmt-yyyyy:/dir-path或/dir-path)。
 
      *
      * @param storagePath 存储路径。&#x60;cfs&#x60; 类型参数示例(10.0.23.45:/dir-path或/dir-path)。
 &#x60;oss&#x60; 类型参数示例(oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path)。
-&#x60;jpfs&#x60; 类型参数示例(fs-xxxxxxxxxx:/dir-path或/dir-path)。
+&#x60;jpfs&#x60; 类型参数示例(fs-xxxxxxxxxx:/dir-path或fs-xxxxx:fsmt-yyyyy:/dir-path或/dir-path)。
 
      * @return EsStorageSpec
      */

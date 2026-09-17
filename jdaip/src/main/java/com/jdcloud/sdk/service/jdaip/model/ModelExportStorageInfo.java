@@ -55,13 +55,13 @@ public class ModelExportStorageInfo  implements java.io.Serializable {
     private String bucket;
 
     /**
-     * 存储路径（不含Bucket名称）。
+     * 存储路径（不含Bucket名称），为相对路径。
+
+**默认值：** 不传时默认导出到 Bucket 根目录。
 
 **示例：** &#x60;models/export-abc123/model.tar.gz&#x60;
 
-     * Required:true
      */
-    @Required
     private String path;
 
 
@@ -117,7 +117,9 @@ public class ModelExportStorageInfo  implements java.io.Serializable {
 
 
     /**
-     * get 存储路径（不含Bucket名称）。
+     * get 存储路径（不含Bucket名称），为相对路径。
+
+**默认值：** 不传时默认导出到 Bucket 根目录。
 
 **示例：** &#x60;models/export-abc123/model.tar.gz&#x60;
 
@@ -129,7 +131,9 @@ public class ModelExportStorageInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 存储路径（不含Bucket名称）。
+     * set 存储路径（不含Bucket名称），为相对路径。
+
+**默认值：** 不传时默认导出到 Bucket 根目录。
 
 **示例：** &#x60;models/export-abc123/model.tar.gz&#x60;
 
@@ -179,12 +183,16 @@ public class ModelExportStorageInfo  implements java.io.Serializable {
 
 
     /**
-     * set 存储路径（不含Bucket名称）。
+     * set 存储路径（不含Bucket名称），为相对路径。
+
+**默认值：** 不传时默认导出到 Bucket 根目录。
 
 **示例：** &#x60;models/export-abc123/model.tar.gz&#x60;
 
      *
-     * @param path 存储路径（不含Bucket名称）。
+     * @param path 存储路径（不含Bucket名称），为相对路径。
+
+**默认值：** 不传时默认导出到 Bucket 根目录。
 
 **示例：** &#x60;models/export-abc123/model.tar.gz&#x60;
 

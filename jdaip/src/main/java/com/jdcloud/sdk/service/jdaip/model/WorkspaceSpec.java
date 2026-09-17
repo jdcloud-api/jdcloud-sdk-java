@@ -55,7 +55,7 @@ public class WorkspaceSpec  implements java.io.Serializable {
     
     private List<String> resourceQueue;
     /**
-     * 资源队列配置。
+     * 资源队列配置。注意：队列默认优先级会设置为5
      */
     
     private List<WorkspaceRelatedQueue> queueConfigs;
@@ -133,7 +133,7 @@ public class WorkspaceSpec  implements java.io.Serializable {
 
 
     /**
-    * get 资源队列配置。
+    * get 资源队列配置。注意：队列默认优先级会设置为5
     *
     * @return
     */
@@ -142,7 +142,7 @@ public class WorkspaceSpec  implements java.io.Serializable {
     }
 
     /**
-    * set 资源队列配置。
+    * set 资源队列配置。注意：队列默认优先级会设置为5
     *
     * @param queueConfigs
     */
@@ -231,9 +231,9 @@ public class WorkspaceSpec  implements java.io.Serializable {
 
 
     /**
-    * set 资源队列配置。
+    * set 资源队列配置。注意：队列默认优先级会设置为5
     *
-    * @param queueConfigs 资源队列配置。
+    * @param queueConfigs 资源队列配置。注意：队列默认优先级会设置为5
     * @return WorkspaceSpec
     */
     public WorkspaceSpec queueConfigs(List<WorkspaceRelatedQueue> queueConfigs) {
@@ -280,7 +280,7 @@ public class WorkspaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 资源队列配置。
+     * add item to 资源队列配置。注意：队列默认优先级会设置为5
      *
      * @param queueConfig
      */

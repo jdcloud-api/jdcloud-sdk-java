@@ -57,9 +57,7 @@ public class JpfsSpec  implements java.io.Serializable {
     private List<JpfsTag> userTags;
     /**
      * HPC集群名称，多个值按JPFS服务约定分隔
-     * Required:true
      */
-    @Required
     private String hpcClusterNames;
 
     /**

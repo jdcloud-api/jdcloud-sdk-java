@@ -46,6 +46,7 @@ public class WarmTaskProcess  implements java.io.Serializable {
 - failed：预热失败
 - deleting：删除中
 - deleted：已删除
+- deleteFailed：删除失败
 
      */
     private String status;
@@ -90,6 +91,7 @@ public class WarmTaskProcess  implements java.io.Serializable {
 - failed：预热失败
 - deleting：删除中
 - deleted：已删除
+- deleteFailed：删除失败
 
      *
      * @return
@@ -107,6 +109,7 @@ public class WarmTaskProcess  implements java.io.Serializable {
 - failed：预热失败
 - deleting：删除中
 - deleted：已删除
+- deleteFailed：删除失败
 
      *
      * @param status
@@ -176,6 +179,7 @@ public class WarmTaskProcess  implements java.io.Serializable {
 - failed：预热失败
 - deleting：删除中
 - deleted：已删除
+- deleteFailed：删除失败
 
      *
      * @param status 预热任务状态，可选值：
@@ -186,6 +190,7 @@ public class WarmTaskProcess  implements java.io.Serializable {
 - failed：预热失败
 - deleting：删除中
 - deleted：已删除
+- deleteFailed：删除失败
 
      * @return WarmTaskProcess
      */

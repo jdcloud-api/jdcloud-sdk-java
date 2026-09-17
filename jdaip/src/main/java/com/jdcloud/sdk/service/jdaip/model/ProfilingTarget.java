@@ -46,8 +46,8 @@ public class ProfilingTarget  implements java.io.Serializable {
     /**
      * 筛选的PID列表。
 
-- **pid 模式**：填写需要采集的PID列表
-- **instance 模式**：留空数组，表示采集全部进程
+- **pid 模式**：必填，至少一个PID，且每个PID只允许纯数字
+- **instance 模式**：可不传或传空数组，表示采集该实例全部进程
 
      */
     
@@ -76,8 +76,8 @@ public class ProfilingTarget  implements java.io.Serializable {
     /**
     * get 筛选的PID列表。
 
-- **pid 模式**：填写需要采集的PID列表
-- **instance 模式**：留空数组，表示采集全部进程
+- **pid 模式**：必填，至少一个PID，且每个PID只允许纯数字
+- **instance 模式**：可不传或传空数组，表示采集该实例全部进程
 
     *
     * @return
@@ -89,8 +89,8 @@ public class ProfilingTarget  implements java.io.Serializable {
     /**
     * set 筛选的PID列表。
 
-- **pid 模式**：填写需要采集的PID列表
-- **instance 模式**：留空数组，表示采集全部进程
+- **pid 模式**：必填，至少一个PID，且每个PID只允许纯数字
+- **instance 模式**：可不传或传空数组，表示采集该实例全部进程
 
     *
     * @param pids
@@ -116,14 +116,14 @@ public class ProfilingTarget  implements java.io.Serializable {
     /**
     * set 筛选的PID列表。
 
-- **pid 模式**：填写需要采集的PID列表
-- **instance 模式**：留空数组，表示采集全部进程
+- **pid 模式**：必填，至少一个PID，且每个PID只允许纯数字
+- **instance 模式**：可不传或传空数组，表示采集该实例全部进程
 
     *
     * @param pids 筛选的PID列表。
 
-- **pid 模式**：填写需要采集的PID列表
-- **instance 模式**：留空数组，表示采集全部进程
+- **pid 模式**：必填，至少一个PID，且每个PID只允许纯数字
+- **instance 模式**：可不传或传空数组，表示采集该实例全部进程
 
     * @return ProfilingTarget
     */
@@ -137,8 +137,8 @@ public class ProfilingTarget  implements java.io.Serializable {
     /**
      * add item to 筛选的PID列表。
 
-- **pid 模式**：填写需要采集的PID列表
-- **instance 模式**：留空数组，表示采集全部进程
+- **pid 模式**：必填，至少一个PID，且每个PID只允许纯数字
+- **instance 模式**：可不传或传空数组，表示采集该实例全部进程
 
      *
      * @param pid

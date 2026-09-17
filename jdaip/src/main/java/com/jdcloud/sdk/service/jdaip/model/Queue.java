@@ -50,7 +50,7 @@ public class Queue  implements java.io.Serializable {
     private String nodePoolId;
 
     /**
-     * 节点池相关信息，key值参照NodePool属性，查询时有用
+     * 节点池相关信息，key值参照NodePool属性，查询时有用（name、poolType、vpcId、vpcName、topology）
      */
     private Object nodePoolInfo;
 
@@ -70,7 +70,15 @@ public class Queue  implements java.io.Serializable {
     private CpuQuota cpuQuota;
 
     /**
-     * 状态，1创建中2创建失败3运行中4更新中5错误6删除中7已删除
+     * 队列状态，
+- 1 创建中
+- 2 创建失败
+- 3 运行中
+- 4 更新中
+- 5 错误
+- 6 删除中
+- 7 已删除
+
      */
     private Integer status;
 
@@ -90,6 +98,16 @@ public class Queue  implements java.io.Serializable {
     private Boolean priority;
 
     /**
+     * 是否开启任务优先级
+     */
+    private Boolean taskPriority;
+
+    /**
+     * 是否开启任务抢占
+     */
+    private Boolean taskPreempt;
+
+    /**
      * 创建时间，秒
      */
     private Long createTime;
@@ -98,6 +116,34 @@ public class Queue  implements java.io.Serializable {
      * 资源队列名称
      */
     private String desc;
+
+    /**
+     * 队列类型，common：普通队列；security：安全队列
+     */
+    private String queueType;
+
+    /**
+     * 计费模式，创建时确定不可修改
+- 1 按量计费（不承诺配额，min 默认 0）
+- 2 按配置计费（强制 min&#x3D;max）
+
+     */
+    private Integer billingMode;
+
+    /**
+     * Tag信息
+     */
+    
+    private List<Tag> userTags;
+    /**
+     * 资源组Id
+     */
+    private String resourceGroupId;
+
+    /**
+     * 资源组名称
+     */
+    private String resourceGroupName;
 
 
 
@@ -159,7 +205,7 @@ public class Queue  implements java.io.Serializable {
 
 
     /**
-     * get 节点池相关信息，key值参照NodePool属性，查询时有用
+     * get 节点池相关信息，key值参照NodePool属性，查询时有用（name、poolType、vpcId、vpcName、topology）
      *
      * @return
      */
@@ -168,7 +214,7 @@ public class Queue  implements java.io.Serializable {
     }
 
     /**
-     * set 节点池相关信息，key值参照NodePool属性，查询时有用
+     * set 节点池相关信息，key值参照NodePool属性，查询时有用（name、poolType、vpcId、vpcName、topology）
      *
      * @param nodePoolInfo
      */
@@ -235,7 +281,15 @@ public class Queue  implements java.io.Serializable {
 
 
     /**
-     * get 状态，1创建中2创建失败3运行中4更新中5错误6删除中7已删除
+     * get 队列状态，
+- 1 创建中
+- 2 创建失败
+- 3 运行中
+- 4 更新中
+- 5 错误
+- 6 删除中
+- 7 已删除
+
      *
      * @return
      */
@@ -244,7 +298,15 @@ public class Queue  implements java.io.Serializable {
     }
 
     /**
-     * set 状态，1创建中2创建失败3运行中4更新中5错误6删除中7已删除
+     * set 队列状态，
+- 1 创建中
+- 2 创建失败
+- 3 运行中
+- 4 更新中
+- 5 错误
+- 6 删除中
+- 7 已删除
+
      *
      * @param status
      */
@@ -311,6 +373,44 @@ public class Queue  implements java.io.Serializable {
 
 
     /**
+     * get 是否开启任务优先级
+     *
+     * @return
+     */
+    public Boolean getTaskPriority() {
+        return taskPriority;
+    }
+
+    /**
+     * set 是否开启任务优先级
+     *
+     * @param taskPriority
+     */
+    public void setTaskPriority(Boolean taskPriority) {
+        this.taskPriority = taskPriority;
+    }
+
+
+    /**
+     * get 是否开启任务抢占
+     *
+     * @return
+     */
+    public Boolean getTaskPreempt() {
+        return taskPreempt;
+    }
+
+    /**
+     * set 是否开启任务抢占
+     *
+     * @param taskPreempt
+     */
+    public void setTaskPreempt(Boolean taskPreempt) {
+        this.taskPreempt = taskPreempt;
+    }
+
+
+    /**
      * get 创建时间，秒
      *
      * @return
@@ -345,6 +445,107 @@ public class Queue  implements java.io.Serializable {
      */
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+
+    /**
+     * get 队列类型，common：普通队列；security：安全队列
+     *
+     * @return
+     */
+    public String getQueueType() {
+        return queueType;
+    }
+
+    /**
+     * set 队列类型，common：普通队列；security：安全队列
+     *
+     * @param queueType
+     */
+    public void setQueueType(String queueType) {
+        this.queueType = queueType;
+    }
+
+
+    /**
+     * get 计费模式，创建时确定不可修改
+- 1 按量计费（不承诺配额，min 默认 0）
+- 2 按配置计费（强制 min&#x3D;max）
+
+     *
+     * @return
+     */
+    public Integer getBillingMode() {
+        return billingMode;
+    }
+
+    /**
+     * set 计费模式，创建时确定不可修改
+- 1 按量计费（不承诺配额，min 默认 0）
+- 2 按配置计费（强制 min&#x3D;max）
+
+     *
+     * @param billingMode
+     */
+    public void setBillingMode(Integer billingMode) {
+        this.billingMode = billingMode;
+    }
+
+
+    /**
+    * get Tag信息
+    *
+    * @return
+    */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+    * set Tag信息
+    *
+    * @param userTags
+    */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
+
+    /**
+     * get 资源组Id
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组Id
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
+     * get 资源组名称
+     *
+     * @return
+     */
+    public String getResourceGroupName() {
+        return resourceGroupName;
+    }
+
+    /**
+     * set 资源组名称
+     *
+     * @param resourceGroupName
+     */
+    public void setResourceGroupName(String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
     }
 
 
@@ -386,9 +587,9 @@ public class Queue  implements java.io.Serializable {
 
 
     /**
-     * set 节点池相关信息，key值参照NodePool属性，查询时有用
+     * set 节点池相关信息，key值参照NodePool属性，查询时有用（name、poolType、vpcId、vpcName、topology）
      *
-     * @param nodePoolInfo 节点池相关信息，key值参照NodePool属性，查询时有用
+     * @param nodePoolInfo 节点池相关信息，key值参照NodePool属性，查询时有用（name、poolType、vpcId、vpcName、topology）
      * @return Queue
      */
     public Queue nodePoolInfo(Object nodePoolInfo) {
@@ -434,9 +635,25 @@ public class Queue  implements java.io.Serializable {
 
 
     /**
-     * set 状态，1创建中2创建失败3运行中4更新中5错误6删除中7已删除
+     * set 队列状态，
+- 1 创建中
+- 2 创建失败
+- 3 运行中
+- 4 更新中
+- 5 错误
+- 6 删除中
+- 7 已删除
+
      *
-     * @param status 状态，1创建中2创建失败3运行中4更新中5错误6删除中7已删除
+     * @param status 队列状态，
+- 1 创建中
+- 2 创建失败
+- 3 运行中
+- 4 更新中
+- 5 错误
+- 6 删除中
+- 7 已删除
+
      * @return Queue
      */
     public Queue status(Integer status) {
@@ -482,6 +699,30 @@ public class Queue  implements java.io.Serializable {
 
 
     /**
+     * set 是否开启任务优先级
+     *
+     * @param taskPriority 是否开启任务优先级
+     * @return Queue
+     */
+    public Queue taskPriority(Boolean taskPriority) {
+        this.taskPriority = taskPriority;
+        return this;
+    }
+
+
+    /**
+     * set 是否开启任务抢占
+     *
+     * @param taskPreempt 是否开启任务抢占
+     * @return Queue
+     */
+    public Queue taskPreempt(Boolean taskPreempt) {
+        this.taskPreempt = taskPreempt;
+        return this;
+    }
+
+
+    /**
      * set 创建时间，秒
      *
      * @param createTime 创建时间，秒
@@ -505,6 +746,72 @@ public class Queue  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 队列类型，common：普通队列；security：安全队列
+     *
+     * @param queueType 队列类型，common：普通队列；security：安全队列
+     * @return Queue
+     */
+    public Queue queueType(String queueType) {
+        this.queueType = queueType;
+        return this;
+    }
+
+
+    /**
+     * set 计费模式，创建时确定不可修改
+- 1 按量计费（不承诺配额，min 默认 0）
+- 2 按配置计费（强制 min&#x3D;max）
+
+     *
+     * @param billingMode 计费模式，创建时确定不可修改
+- 1 按量计费（不承诺配额，min 默认 0）
+- 2 按配置计费（强制 min&#x3D;max）
+
+     * @return Queue
+     */
+    public Queue billingMode(Integer billingMode) {
+        this.billingMode = billingMode;
+        return this;
+    }
+
+
+    /**
+    * set Tag信息
+    *
+    * @param userTags Tag信息
+    * @return Queue
+    */
+    public Queue userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
+
+    /**
+     * set 资源组Id
+     *
+     * @param resourceGroupId 资源组Id
+     * @return Queue
+     */
+    public Queue resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
+     * set 资源组名称
+     *
+     * @param resourceGroupName 资源组名称
+     * @return Queue
+     */
+    public Queue resourceGroupName(String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+        return this;
+    }
+
+
 
     /**
      * add item to GPU资源配额信息
@@ -516,5 +823,17 @@ public class Queue  implements java.io.Serializable {
             this.gpuQuotas = new ArrayList<>();
         }
         this.gpuQuotas.add(gpuQuota);
+    }
+
+    /**
+     * add item to Tag信息
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
     }
 }

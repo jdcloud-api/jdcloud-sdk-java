@@ -54,12 +54,15 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 /**
  * 下载性能分析任务指定实例的采集结果。
 
-下载指定 profiling 任务下指定实例的采集结果文件，以实例为单位进行下载。每次下载会将该实例的 &#x60;downloadTimes&#x60; 计数器加1。
+下载指定 profiling 任务下指定实例的采集结果文件，以实例为单位进行下载。每次下载成功会将该实例的 &#x60;downloadTimes&#x60; 计数器加1。
 
 ## 注意事项
 
-- 仅状态为 &#x60;completed&#x60; 的任务才允许下载
-- 结果文件为该实例采集数据的打包压缩文件
+- 下载校验的是**实例级**采集状态：仅该实例的 &#x60;collectStatus&#x60; 为 &#x60;success&#x60; 时才允许下载，否则返回400
+- 采集任务整体状态为 &#x60;completed&#x60; 并不代表每个实例都可下载。部分实例采集失败时，任务整体仍可能为 &#x60;completed&#x60;，但失败实例的 &#x60;collectStatus&#x60; 为 &#x60;failed&#x60;，该实例不可下载
+- 采集任务已过期（&#x60;status&#x60; 为 &#x60;expired&#x60;）时不允许下载，返回400。采集结果在平台存储上仅保留有限时长，超期后被回收
+- 每个实例的下载次数上限为 **3 次**（&#x60;downloadTimes&#x60; 达到3后，第4次请求返回400）
+- 结果文件为该实例采集数据的打包压缩文件，接口返回预签名下载URL
 
  */
 public class DownloadProfilingTaskRequest extends JdcloudRequest implements java.io.Serializable {

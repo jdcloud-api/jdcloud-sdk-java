@@ -49,7 +49,6 @@
 package com.jdcloud.sdk.service.jdaip.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdaip.model.TransferToOssParam;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -59,9 +58,12 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 ## 注意事项
 
-- 仅状态为 &#x60;completed&#x60; 的任务才允许转存
+- 仅状态为 &#x60;completed&#x60; 且结果未过保留期的采集任务才允许转存，否则返回400
+- 接口会先做一次过期判定：&#x60;completed&#x60; 但已超保留期的任务会被就地流转为 &#x60;expired&#x60;，随后被上面的 &#x60;completed&#x60; 校验拦下。因此结果已过期的任务同样不允许转存
+- &#x60;pending&#x60;/&#x60;running&#x60;/&#x60;failed&#x60; 状态的任务不允许转存：前两者结果尚未生成或不完整，后者没有可用结果
+- 校验不通过时不会创建任何转存记录，也不会下发转存作业
 - 需确保目标OSS Bucket已存在且有写入权限
-- 转存为异步操作，提交后返回转存任务状态
+- 转存为异步操作，提交后返回转存任务状态，接口不等待转存完成
 
  */
 public class TransferProfilingTaskToOssRequest extends JdcloudRequest implements java.io.Serializable {
@@ -69,11 +71,37 @@ public class TransferProfilingTaskToOssRequest extends JdcloudRequest implements
     private static final long serialVersionUID = 1L;
 
     /**
-     * 转存参数。
+     * OSS存储空间名称。
+
+**注意：** 需确保目标Bucket已存在且有写入权限。
+
      * Required:true
      */
     @Required
-    private TransferToOssParam transferParam;
+    private String ossBucket;
+
+    /**
+     * OSS服务的endpoint地址（如 &#x60;oss.cn-north-1.jdcloud-oss.com&#x60;）。
+
+**注意：** 需与目标Bucket所在地域一致。
+
+     * Required:true
+     */
+    @Required
+    private String endpoint;
+
+    /**
+     * 对象存储中的目标**目录前缀**（不含Bucket名称）。
+
+采集结果会以递归拷贝的方式写入该前缀之下，因此这里应填目录而非单个文件名；
+开头的 &#x60;/&#x60; 会被忽略。
+
+**示例：** &#x60;my-profiling-results/job-abc123/&#x60;
+
+     * Required:true
+     */
+    @Required
+    private String objectPath;
 
     /**
      * 地域ID
@@ -106,21 +134,83 @@ public class TransferProfilingTaskToOssRequest extends JdcloudRequest implements
 
 
     /**
-     * get 转存参数。
+     * get OSS存储空间名称。
+
+**注意：** 需确保目标Bucket已存在且有写入权限。
+
      *
      * @return
      */
-    public TransferToOssParam getTransferParam() {
-        return transferParam;
+    public String getOssBucket() {
+        return ossBucket;
     }
 
     /**
-     * set 转存参数。
+     * set OSS存储空间名称。
+
+**注意：** 需确保目标Bucket已存在且有写入权限。
+
      *
-     * @param transferParam
+     * @param ossBucket
      */
-    public void setTransferParam(TransferToOssParam transferParam) {
-        this.transferParam = transferParam;
+    public void setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+    }
+
+
+    /**
+     * get OSS服务的endpoint地址（如 &#x60;oss.cn-north-1.jdcloud-oss.com&#x60;）。
+
+**注意：** 需与目标Bucket所在地域一致。
+
+     *
+     * @return
+     */
+    public String getEndpoint() {
+        return endpoint;
+    }
+
+    /**
+     * set OSS服务的endpoint地址（如 &#x60;oss.cn-north-1.jdcloud-oss.com&#x60;）。
+
+**注意：** 需与目标Bucket所在地域一致。
+
+     *
+     * @param endpoint
+     */
+    public void setEndpoint(String endpoint) {
+        this.endpoint = endpoint;
+    }
+
+
+    /**
+     * get 对象存储中的目标**目录前缀**（不含Bucket名称）。
+
+采集结果会以递归拷贝的方式写入该前缀之下，因此这里应填目录而非单个文件名；
+开头的 &#x60;/&#x60; 会被忽略。
+
+**示例：** &#x60;my-profiling-results/job-abc123/&#x60;
+
+     *
+     * @return
+     */
+    public String getObjectPath() {
+        return objectPath;
+    }
+
+    /**
+     * set 对象存储中的目标**目录前缀**（不含Bucket名称）。
+
+采集结果会以递归拷贝的方式写入该前缀之下，因此这里应填目录而非单个文件名；
+开头的 &#x60;/&#x60; 会被忽略。
+
+**示例：** &#x60;my-profiling-results/job-abc123/&#x60;
+
+     *
+     * @param objectPath
+     */
+    public void setObjectPath(String objectPath) {
+        this.objectPath = objectPath;
     }
 
 
@@ -202,13 +292,61 @@ public class TransferProfilingTaskToOssRequest extends JdcloudRequest implements
 
 
     /**
-     * set 转存参数。
+     * set OSS存储空间名称。
+
+**注意：** 需确保目标Bucket已存在且有写入权限。
+
      *
-     * @param transferParam 转存参数。
+     * @param ossBucket OSS存储空间名称。
+
+**注意：** 需确保目标Bucket已存在且有写入权限。
+
      * @return TransferProfilingTaskToOssRequest
      */
-    public TransferProfilingTaskToOssRequest transferParam(TransferToOssParam transferParam) {
-        this.transferParam = transferParam;
+    public TransferProfilingTaskToOssRequest ossBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+
+
+    /**
+     * set OSS服务的endpoint地址（如 &#x60;oss.cn-north-1.jdcloud-oss.com&#x60;）。
+
+**注意：** 需与目标Bucket所在地域一致。
+
+     *
+     * @param endpoint OSS服务的endpoint地址（如 &#x60;oss.cn-north-1.jdcloud-oss.com&#x60;）。
+
+**注意：** 需与目标Bucket所在地域一致。
+
+     * @return TransferProfilingTaskToOssRequest
+     */
+    public TransferProfilingTaskToOssRequest endpoint(String endpoint) {
+        this.endpoint = endpoint;
+        return this;
+    }
+
+
+    /**
+     * set 对象存储中的目标**目录前缀**（不含Bucket名称）。
+
+采集结果会以递归拷贝的方式写入该前缀之下，因此这里应填目录而非单个文件名；
+开头的 &#x60;/&#x60; 会被忽略。
+
+**示例：** &#x60;my-profiling-results/job-abc123/&#x60;
+
+     *
+     * @param objectPath 对象存储中的目标**目录前缀**（不含Bucket名称）。
+
+采集结果会以递归拷贝的方式写入该前缀之下，因此这里应填目录而非单个文件名；
+开头的 &#x60;/&#x60; 会被忽略。
+
+**示例：** &#x60;my-profiling-results/job-abc123/&#x60;
+
+     * @return TransferProfilingTaskToOssRequest
+     */
+    public TransferProfilingTaskToOssRequest objectPath(String objectPath) {
+        this.objectPath = objectPath;
         return this;
     }
 
