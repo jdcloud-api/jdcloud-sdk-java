@@ -84,6 +84,11 @@ key值说明
      */
     private String command;
 
+    /**
+     * 描述。最大长度256
+     */
+    private String description;
+
 
 
     /**
@@ -253,6 +258,25 @@ key值说明
     }
 
 
+    /**
+     * get 描述。最大长度256
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 描述。最大长度256
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
 
     /**
      * set 镜像名称
@@ -368,6 +392,18 @@ key值说明
      */
     public CreatePublicImageParam command(String command) {
         this.command = command;
+        return this;
+    }
+
+
+    /**
+     * set 描述。最大长度256
+     *
+     * @param description 描述。最大长度256
+     * @return CreatePublicImageParam
+     */
+    public CreatePublicImageParam description(String description) {
+        this.description = description;
         return this;
     }
 

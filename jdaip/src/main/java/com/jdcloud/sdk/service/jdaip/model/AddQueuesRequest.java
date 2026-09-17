@@ -56,7 +56,7 @@ public class AddQueuesRequest extends JdcloudRequest implements java.io.Serializ
     
     private List<String> queueIds;
     /**
-     * 关联队列配置
+     * 关联队列配置。注意：队列默认优先级会设置为5
      */
     
     private List<WorkspaceRelatedQueue> queueConfigs;
@@ -96,7 +96,7 @@ public class AddQueuesRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-    * get 关联队列配置
+    * get 关联队列配置。注意：队列默认优先级会设置为5
     *
     * @return
     */
@@ -105,7 +105,7 @@ public class AddQueuesRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-    * set 关联队列配置
+    * set 关联队列配置。注意：队列默认优先级会设置为5
     *
     * @param queueConfigs
     */
@@ -166,9 +166,9 @@ public class AddQueuesRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-    * set 关联队列配置
+    * set 关联队列配置。注意：队列默认优先级会设置为5
     *
-    * @param queueConfigs 关联队列配置
+    * @param queueConfigs 关联队列配置。注意：队列默认优先级会设置为5
     * @return AddQueuesRequest
     */
     public AddQueuesRequest queueConfigs(List<WorkspaceRelatedQueue> queueConfigs) {
@@ -215,7 +215,7 @@ public class AddQueuesRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * add item to 关联队列配置
+     * add item to 关联队列配置。注意：队列默认优先级会设置为5
      *
      * @param queueConfig
      */

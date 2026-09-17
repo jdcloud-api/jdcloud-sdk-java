@@ -94,6 +94,16 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
     private Boolean privileged;
 
     /**
+     * 是否为安全训练任务。
+     */
+    private Boolean secJob;
+
+    /**
+     * 是否支持导出模型。
+     */
+    private Boolean supportExportModel;
+
+    /**
      * 持续时间，单位为秒。
      */
     private Integer runningTimeInSec;
@@ -247,6 +257,19 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
      * 任务优先级。共享资源池创建时必填，范围 &#x60;1..9&#x60;。
      */
     private Integer taskPriority;
+
+    /**
+     * 是否开启性能分析。
+
+**取值说明：**
+- &#x60;true&#x60;：已开启性能分析
+- &#x60;false&#x60;：未开启性能分析
+- &#x60;null&#x60;：该任务类型不支持性能分析
+
+**注意：** 仅 &#x60;jobType&#x60; 为 &#x60;pytorch&#x60; 的任务返回该字段的布尔值，其他任务类型返回 &#x60;null&#x60;。
+
+     */
+    private Boolean profilingEnable;
 
     /**
      * 归属用户pin。
@@ -470,6 +493,44 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
      */
     public void setPrivileged(Boolean privileged) {
         this.privileged = privileged;
+    }
+
+
+    /**
+     * get 是否为安全训练任务。
+     *
+     * @return
+     */
+    public Boolean getSecJob() {
+        return secJob;
+    }
+
+    /**
+     * set 是否为安全训练任务。
+     *
+     * @param secJob
+     */
+    public void setSecJob(Boolean secJob) {
+        this.secJob = secJob;
+    }
+
+
+    /**
+     * get 是否支持导出模型。
+     *
+     * @return
+     */
+    public Boolean getSupportExportModel() {
+        return supportExportModel;
+    }
+
+    /**
+     * set 是否支持导出模型。
+     *
+     * @param supportExportModel
+     */
+    public void setSupportExportModel(Boolean supportExportModel) {
+        this.supportExportModel = supportExportModel;
     }
 
 
@@ -1054,6 +1115,41 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 
 
     /**
+     * get 是否开启性能分析。
+
+**取值说明：**
+- &#x60;true&#x60;：已开启性能分析
+- &#x60;false&#x60;：未开启性能分析
+- &#x60;null&#x60;：该任务类型不支持性能分析
+
+**注意：** 仅 &#x60;jobType&#x60; 为 &#x60;pytorch&#x60; 的任务返回该字段的布尔值，其他任务类型返回 &#x60;null&#x60;。
+
+     *
+     * @return
+     */
+    public Boolean getProfilingEnable() {
+        return profilingEnable;
+    }
+
+    /**
+     * set 是否开启性能分析。
+
+**取值说明：**
+- &#x60;true&#x60;：已开启性能分析
+- &#x60;false&#x60;：未开启性能分析
+- &#x60;null&#x60;：该任务类型不支持性能分析
+
+**注意：** 仅 &#x60;jobType&#x60; 为 &#x60;pytorch&#x60; 的任务返回该字段的布尔值，其他任务类型返回 &#x60;null&#x60;。
+
+     *
+     * @param profilingEnable
+     */
+    public void setProfilingEnable(Boolean profilingEnable) {
+        this.profilingEnable = profilingEnable;
+    }
+
+
+    /**
      * get 归属用户pin。
      *
      * @return
@@ -1315,6 +1411,30 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
      */
     public JobDetailInfoForJob privileged(Boolean privileged) {
         this.privileged = privileged;
+        return this;
+    }
+
+
+    /**
+     * set 是否为安全训练任务。
+     *
+     * @param secJob 是否为安全训练任务。
+     * @return JobDetailInfoForJob
+     */
+    public JobDetailInfoForJob secJob(Boolean secJob) {
+        this.secJob = secJob;
+        return this;
+    }
+
+
+    /**
+     * set 是否支持导出模型。
+     *
+     * @param supportExportModel 是否支持导出模型。
+     * @return JobDetailInfoForJob
+     */
+    public JobDetailInfoForJob supportExportModel(Boolean supportExportModel) {
+        this.supportExportModel = supportExportModel;
         return this;
     }
 
@@ -1685,6 +1805,34 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
      */
     public JobDetailInfoForJob taskPriority(Integer taskPriority) {
         this.taskPriority = taskPriority;
+        return this;
+    }
+
+
+    /**
+     * set 是否开启性能分析。
+
+**取值说明：**
+- &#x60;true&#x60;：已开启性能分析
+- &#x60;false&#x60;：未开启性能分析
+- &#x60;null&#x60;：该任务类型不支持性能分析
+
+**注意：** 仅 &#x60;jobType&#x60; 为 &#x60;pytorch&#x60; 的任务返回该字段的布尔值，其他任务类型返回 &#x60;null&#x60;。
+
+     *
+     * @param profilingEnable 是否开启性能分析。
+
+**取值说明：**
+- &#x60;true&#x60;：已开启性能分析
+- &#x60;false&#x60;：未开启性能分析
+- &#x60;null&#x60;：该任务类型不支持性能分析
+
+**注意：** 仅 &#x60;jobType&#x60; 为 &#x60;pytorch&#x60; 的任务返回该字段的布尔值，其他任务类型返回 &#x60;null&#x60;。
+
+     * @return JobDetailInfoForJob
+     */
+    public JobDetailInfoForJob profilingEnable(Boolean profilingEnable) {
+        this.profilingEnable = profilingEnable;
         return this;
     }
 

@@ -76,8 +76,8 @@ public class DescribeProfilingTasksRequest extends JdcloudRequest implements jav
 
     /**
      * &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;name&#x60;: 性能分析任务名称，模糊匹配，支持单个。
-&#x60;status&#x60;: 任务状态，精确匹配，支持多个，可选(pending/running/completed/failed/canceled)。
+&#x60;name&#x60;: 性能分析任务名称，精确匹配，支持单个。
+&#x60;status&#x60;: 任务状态，精确匹配，支持多个，可选(pending/running/completed/failed/expired)。
 &#x60;targetType&#x60;: 监控目标类型，精确匹配，支持多个，可选(instance/pid)。
 
      */
@@ -146,8 +146,8 @@ public class DescribeProfilingTasksRequest extends JdcloudRequest implements jav
 
     /**
     * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;name&#x60;: 性能分析任务名称，模糊匹配，支持单个。
-&#x60;status&#x60;: 任务状态，精确匹配，支持多个，可选(pending/running/completed/failed/canceled)。
+&#x60;name&#x60;: 性能分析任务名称，精确匹配，支持单个。
+&#x60;status&#x60;: 任务状态，精确匹配，支持多个，可选(pending/running/completed/failed/expired)。
 &#x60;targetType&#x60;: 监控目标类型，精确匹配，支持多个，可选(instance/pid)。
 
     *
@@ -159,8 +159,8 @@ public class DescribeProfilingTasksRequest extends JdcloudRequest implements jav
 
     /**
     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;name&#x60;: 性能分析任务名称，模糊匹配，支持单个。
-&#x60;status&#x60;: 任务状态，精确匹配，支持多个，可选(pending/running/completed/failed/canceled)。
+&#x60;name&#x60;: 性能分析任务名称，精确匹配，支持单个。
+&#x60;status&#x60;: 任务状态，精确匹配，支持多个，可选(pending/running/completed/failed/expired)。
 &#x60;targetType&#x60;: 监控目标类型，精确匹配，支持多个，可选(instance/pid)。
 
     *
@@ -255,14 +255,14 @@ public class DescribeProfilingTasksRequest extends JdcloudRequest implements jav
 
     /**
     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;name&#x60;: 性能分析任务名称，模糊匹配，支持单个。
-&#x60;status&#x60;: 任务状态，精确匹配，支持多个，可选(pending/running/completed/failed/canceled)。
+&#x60;name&#x60;: 性能分析任务名称，精确匹配，支持单个。
+&#x60;status&#x60;: 任务状态，精确匹配，支持多个，可选(pending/running/completed/failed/expired)。
 &#x60;targetType&#x60;: 监控目标类型，精确匹配，支持多个，可选(instance/pid)。
 
     *
     * @param filters &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;name&#x60;: 性能分析任务名称，模糊匹配，支持单个。
-&#x60;status&#x60;: 任务状态，精确匹配，支持多个，可选(pending/running/completed/failed/canceled)。
+&#x60;name&#x60;: 性能分析任务名称，精确匹配，支持单个。
+&#x60;status&#x60;: 任务状态，精确匹配，支持多个，可选(pending/running/completed/failed/expired)。
 &#x60;targetType&#x60;: 监控目标类型，精确匹配，支持多个，可选(instance/pid)。
 
     * @return DescribeProfilingTasksRequest
@@ -312,8 +312,8 @@ public class DescribeProfilingTasksRequest extends JdcloudRequest implements jav
 
     /**
      * add item to &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;name&#x60;: 性能分析任务名称，模糊匹配，支持单个。
-&#x60;status&#x60;: 任务状态，精确匹配，支持多个，可选(pending/running/completed/failed/canceled)。
+&#x60;name&#x60;: 性能分析任务名称，精确匹配，支持单个。
+&#x60;status&#x60;: 任务状态，精确匹配，支持多个，可选(pending/running/completed/failed/expired)。
 &#x60;targetType&#x60;: 监控目标类型，精确匹配，支持多个，可选(instance/pid)。
 
      *

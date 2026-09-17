@@ -71,6 +71,11 @@ public class UpdateImageParam  implements java.io.Serializable {
      */
     private String command;
 
+    /**
+     * 描述。最大长度256，传空字符串会更新为空
+     */
+    private String description;
+
 
 
     /**
@@ -205,6 +210,25 @@ public class UpdateImageParam  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 描述。最大长度256，传空字符串会更新为空
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 描述。最大长度256，传空字符串会更新为空
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
 
     /**
      * set 镜像名称(1~128字符，仅支持小写字母、数字、英文中划线“-”、英文下划线“_”和点 “.”，只能以字母开头)
@@ -292,6 +316,18 @@ public class UpdateImageParam  implements java.io.Serializable {
      */
     public UpdateImageParam command(String command) {
         this.command = command;
+        return this;
+    }
+
+
+    /**
+     * set 描述。最大长度256，传空字符串会更新为空
+     *
+     * @param description 描述。最大长度256，传空字符串会更新为空
+     * @return UpdateImageParam
+     */
+    public UpdateImageParam description(String description) {
+        this.description = description;
         return this;
     }
 

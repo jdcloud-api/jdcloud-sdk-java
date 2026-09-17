@@ -59,6 +59,32 @@ public class NbWorkloadDetail  implements java.io.Serializable {
     private String queueId;
 
     /**
+     * 队列类型，实例运行所在资源队列的类型。
+
+## 取值
+- private: 私有资源池队列
+- public: 公共资源池队列
+- exclusive: 专享资源池队列
+- security: 安全队列，出站网络受管控，禁止修改资源属性
+
+## 使用说明
+- 该字段为查询返回值，创建/更新时无需传入，队列类型由&#x60;queueId&#x60;推导
+
+## 兼容性说明
+- 存量实例以及创建时未查询到队列信息的实例，该字段返回空串
+- 调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
+
+## 安全队列使用限制
+- 仅支持&#x60;jpfs&#x60;/&#x60;oss&#x60;两种存储类型，其他存储类型(如&#x60;cfs&#x60;)会被拒绝
+- 不支持开启大数据(BDP)功能，因其依赖CFS挂载
+- 不支持修改资源属性、不支持在启动时变更资源规格/队列、不支持保存镜像
+- 不允许把已有实例的资源属性变更到安全队列
+- 除安全jpfs(&#x60;storageSource&#x3D;security&#x60;)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
+
+     */
+    private String queueType;
+
+    /**
      * 规格ID，公共/专享资源池的规格标识。
 
 ## 使用说明
@@ -200,6 +226,67 @@ public class NbWorkloadDetail  implements java.io.Serializable {
      */
     public void setQueueId(String queueId) {
         this.queueId = queueId;
+    }
+
+
+    /**
+     * get 队列类型，实例运行所在资源队列的类型。
+
+## 取值
+- private: 私有资源池队列
+- public: 公共资源池队列
+- exclusive: 专享资源池队列
+- security: 安全队列，出站网络受管控，禁止修改资源属性
+
+## 使用说明
+- 该字段为查询返回值，创建/更新时无需传入，队列类型由&#x60;queueId&#x60;推导
+
+## 兼容性说明
+- 存量实例以及创建时未查询到队列信息的实例，该字段返回空串
+- 调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
+
+## 安全队列使用限制
+- 仅支持&#x60;jpfs&#x60;/&#x60;oss&#x60;两种存储类型，其他存储类型(如&#x60;cfs&#x60;)会被拒绝
+- 不支持开启大数据(BDP)功能，因其依赖CFS挂载
+- 不支持修改资源属性、不支持在启动时变更资源规格/队列、不支持保存镜像
+- 不允许把已有实例的资源属性变更到安全队列
+- 除安全jpfs(&#x60;storageSource&#x3D;security&#x60;)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
+
+     *
+     * @return
+     */
+    public String getQueueType() {
+        return queueType;
+    }
+
+    /**
+     * set 队列类型，实例运行所在资源队列的类型。
+
+## 取值
+- private: 私有资源池队列
+- public: 公共资源池队列
+- exclusive: 专享资源池队列
+- security: 安全队列，出站网络受管控，禁止修改资源属性
+
+## 使用说明
+- 该字段为查询返回值，创建/更新时无需传入，队列类型由&#x60;queueId&#x60;推导
+
+## 兼容性说明
+- 存量实例以及创建时未查询到队列信息的实例，该字段返回空串
+- 调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
+
+## 安全队列使用限制
+- 仅支持&#x60;jpfs&#x60;/&#x60;oss&#x60;两种存储类型，其他存储类型(如&#x60;cfs&#x60;)会被拒绝
+- 不支持开启大数据(BDP)功能，因其依赖CFS挂载
+- 不支持修改资源属性、不支持在启动时变更资源规格/队列、不支持保存镜像
+- 不允许把已有实例的资源属性变更到安全队列
+- 除安全jpfs(&#x60;storageSource&#x3D;security&#x60;)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
+
+     *
+     * @param queueType
+     */
+    public void setQueueType(String queueType) {
+        this.queueType = queueType;
     }
 
 
@@ -530,6 +617,60 @@ public class NbWorkloadDetail  implements java.io.Serializable {
      */
     public NbWorkloadDetail queueId(String queueId) {
         this.queueId = queueId;
+        return this;
+    }
+
+
+    /**
+     * set 队列类型，实例运行所在资源队列的类型。
+
+## 取值
+- private: 私有资源池队列
+- public: 公共资源池队列
+- exclusive: 专享资源池队列
+- security: 安全队列，出站网络受管控，禁止修改资源属性
+
+## 使用说明
+- 该字段为查询返回值，创建/更新时无需传入，队列类型由&#x60;queueId&#x60;推导
+
+## 兼容性说明
+- 存量实例以及创建时未查询到队列信息的实例，该字段返回空串
+- 调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
+
+## 安全队列使用限制
+- 仅支持&#x60;jpfs&#x60;/&#x60;oss&#x60;两种存储类型，其他存储类型(如&#x60;cfs&#x60;)会被拒绝
+- 不支持开启大数据(BDP)功能，因其依赖CFS挂载
+- 不支持修改资源属性、不支持在启动时变更资源规格/队列、不支持保存镜像
+- 不允许把已有实例的资源属性变更到安全队列
+- 除安全jpfs(&#x60;storageSource&#x3D;security&#x60;)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
+
+     *
+     * @param queueType 队列类型，实例运行所在资源队列的类型。
+
+## 取值
+- private: 私有资源池队列
+- public: 公共资源池队列
+- exclusive: 专享资源池队列
+- security: 安全队列，出站网络受管控，禁止修改资源属性
+
+## 使用说明
+- 该字段为查询返回值，创建/更新时无需传入，队列类型由&#x60;queueId&#x60;推导
+
+## 兼容性说明
+- 存量实例以及创建时未查询到队列信息的实例，该字段返回空串
+- 调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
+
+## 安全队列使用限制
+- 仅支持&#x60;jpfs&#x60;/&#x60;oss&#x60;两种存储类型，其他存储类型(如&#x60;cfs&#x60;)会被拒绝
+- 不支持开启大数据(BDP)功能，因其依赖CFS挂载
+- 不支持修改资源属性、不支持在启动时变更资源规格/队列、不支持保存镜像
+- 不允许把已有实例的资源属性变更到安全队列
+- 除安全jpfs(&#x60;storageSource&#x3D;security&#x60;)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
+
+     * @return NbWorkloadDetail
+     */
+    public NbWorkloadDetail queueType(String queueType) {
+        this.queueType = queueType;
         return this;
     }
 

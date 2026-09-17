@@ -80,7 +80,7 @@ public class NbDatasetDetail  implements java.io.Serializable {
 ## 各类型地址格式
 - cfs: &#x60;10.0.23.45:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 - oss: &#x60;oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path&#x60;
-- jpfs: &#x60;fs-xxxxxxxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
+- jpfs: &#x60;fs-xxxxx:fsmt-yyyyy:/dir-path&#x60; 或 &#x60;fs-xxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 
      */
     private String datasetUrl;
@@ -231,7 +231,7 @@ public class NbDatasetDetail  implements java.io.Serializable {
 ## 各类型地址格式
 - cfs: &#x60;10.0.23.45:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 - oss: &#x60;oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path&#x60;
-- jpfs: &#x60;fs-xxxxxxxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
+- jpfs: &#x60;fs-xxxxx:fsmt-yyyyy:/dir-path&#x60; 或 &#x60;fs-xxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 
      *
      * @return
@@ -246,7 +246,7 @@ public class NbDatasetDetail  implements java.io.Serializable {
 ## 各类型地址格式
 - cfs: &#x60;10.0.23.45:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 - oss: &#x60;oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path&#x60;
-- jpfs: &#x60;fs-xxxxxxxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
+- jpfs: &#x60;fs-xxxxx:fsmt-yyyyy:/dir-path&#x60; 或 &#x60;fs-xxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 
      *
      * @param datasetUrl
@@ -405,7 +405,7 @@ public class NbDatasetDetail  implements java.io.Serializable {
 ## 各类型地址格式
 - cfs: &#x60;10.0.23.45:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 - oss: &#x60;oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path&#x60;
-- jpfs: &#x60;fs-xxxxxxxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
+- jpfs: &#x60;fs-xxxxx:fsmt-yyyyy:/dir-path&#x60; 或 &#x60;fs-xxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 
      *
      * @param datasetUrl 数据集地址，数据集的实际存储路径。
@@ -413,7 +413,7 @@ public class NbDatasetDetail  implements java.io.Serializable {
 ## 各类型地址格式
 - cfs: &#x60;10.0.23.45:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 - oss: &#x60;oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path&#x60;
-- jpfs: &#x60;fs-xxxxxxxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
+- jpfs: &#x60;fs-xxxxx:fsmt-yyyyy:/dir-path&#x60; 或 &#x60;fs-xxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 
      * @return NbDatasetDetail
      */

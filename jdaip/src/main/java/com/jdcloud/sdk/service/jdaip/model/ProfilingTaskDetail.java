@@ -55,7 +55,12 @@ public class ProfilingTaskDetail  implements java.io.Serializable {
     /**
      * 任务状态。
 
-**可选值：** &#x60;pending&#x60;、&#x60;running&#x60;、&#x60;completed&#x60;、&#x60;failed&#x60;、&#x60;canceled&#x60;
+**可选值：**
+- &#x60;pending&#x60;：等待中，任务已创建但尚未开始采集
+- &#x60;running&#x60;：运行中，正在采集数据
+- &#x60;completed&#x60;：已完成，所有实例采集结束
+- &#x60;failed&#x60;：失败，部分或全部实例采集失败
+- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;completed&#x60; 流转而来
 
      */
     private String status;
@@ -72,16 +77,6 @@ public class ProfilingTaskDetail  implements java.io.Serializable {
 
      */
     private String targetType;
-
-    /**
-     * 监控实例总数。
-     */
-    private Integer instanceCount;
-
-    /**
-     * 实例采集完成数。
-     */
-    private Integer finishedCount;
 
     /**
      * 采集指标列表。
@@ -160,7 +155,12 @@ public class ProfilingTaskDetail  implements java.io.Serializable {
     /**
      * get 任务状态。
 
-**可选值：** &#x60;pending&#x60;、&#x60;running&#x60;、&#x60;completed&#x60;、&#x60;failed&#x60;、&#x60;canceled&#x60;
+**可选值：**
+- &#x60;pending&#x60;：等待中，任务已创建但尚未开始采集
+- &#x60;running&#x60;：运行中，正在采集数据
+- &#x60;completed&#x60;：已完成，所有实例采集结束
+- &#x60;failed&#x60;：失败，部分或全部实例采集失败
+- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;completed&#x60; 流转而来
 
      *
      * @return
@@ -172,7 +172,12 @@ public class ProfilingTaskDetail  implements java.io.Serializable {
     /**
      * set 任务状态。
 
-**可选值：** &#x60;pending&#x60;、&#x60;running&#x60;、&#x60;completed&#x60;、&#x60;failed&#x60;、&#x60;canceled&#x60;
+**可选值：**
+- &#x60;pending&#x60;：等待中，任务已创建但尚未开始采集
+- &#x60;running&#x60;：运行中，正在采集数据
+- &#x60;completed&#x60;：已完成，所有实例采集结束
+- &#x60;failed&#x60;：失败，部分或全部实例采集失败
+- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;completed&#x60; 流转而来
 
      *
      * @param status
@@ -223,44 +228,6 @@ public class ProfilingTaskDetail  implements java.io.Serializable {
      */
     public void setTargetType(String targetType) {
         this.targetType = targetType;
-    }
-
-
-    /**
-     * get 监控实例总数。
-     *
-     * @return
-     */
-    public Integer getInstanceCount() {
-        return instanceCount;
-    }
-
-    /**
-     * set 监控实例总数。
-     *
-     * @param instanceCount
-     */
-    public void setInstanceCount(Integer instanceCount) {
-        this.instanceCount = instanceCount;
-    }
-
-
-    /**
-     * get 实例采集完成数。
-     *
-     * @return
-     */
-    public Integer getFinishedCount() {
-        return finishedCount;
-    }
-
-    /**
-     * set 实例采集完成数。
-     *
-     * @param finishedCount
-     */
-    public void setFinishedCount(Integer finishedCount) {
-        this.finishedCount = finishedCount;
     }
 
 
@@ -361,12 +328,22 @@ public class ProfilingTaskDetail  implements java.io.Serializable {
     /**
      * set 任务状态。
 
-**可选值：** &#x60;pending&#x60;、&#x60;running&#x60;、&#x60;completed&#x60;、&#x60;failed&#x60;、&#x60;canceled&#x60;
+**可选值：**
+- &#x60;pending&#x60;：等待中，任务已创建但尚未开始采集
+- &#x60;running&#x60;：运行中，正在采集数据
+- &#x60;completed&#x60;：已完成，所有实例采集结束
+- &#x60;failed&#x60;：失败，部分或全部实例采集失败
+- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;completed&#x60; 流转而来
 
      *
      * @param status 任务状态。
 
-**可选值：** &#x60;pending&#x60;、&#x60;running&#x60;、&#x60;completed&#x60;、&#x60;failed&#x60;、&#x60;canceled&#x60;
+**可选值：**
+- &#x60;pending&#x60;：等待中，任务已创建但尚未开始采集
+- &#x60;running&#x60;：运行中，正在采集数据
+- &#x60;completed&#x60;：已完成，所有实例采集结束
+- &#x60;failed&#x60;：失败，部分或全部实例采集失败
+- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;completed&#x60; 流转而来
 
      * @return ProfilingTaskDetail
      */
@@ -402,30 +379,6 @@ public class ProfilingTaskDetail  implements java.io.Serializable {
      */
     public ProfilingTaskDetail targetType(String targetType) {
         this.targetType = targetType;
-        return this;
-    }
-
-
-    /**
-     * set 监控实例总数。
-     *
-     * @param instanceCount 监控实例总数。
-     * @return ProfilingTaskDetail
-     */
-    public ProfilingTaskDetail instanceCount(Integer instanceCount) {
-        this.instanceCount = instanceCount;
-        return this;
-    }
-
-
-    /**
-     * set 实例采集完成数。
-     *
-     * @param finishedCount 实例采集完成数。
-     * @return ProfilingTaskDetail
-     */
-    public ProfilingTaskDetail finishedCount(Integer finishedCount) {
-        this.finishedCount = finishedCount;
         return this;
     }
 

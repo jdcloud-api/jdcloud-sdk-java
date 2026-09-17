@@ -24,15 +24,101 @@
 
 package com.jdcloud.sdk.service.jdaip.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
- * 按地域和可用区组织的节点规格列表，第一层键为地域，第二层键为可用区
+ * 按服务端地域、可用区和规格白名单过滤后的HPC节点规格结果
  */
 public class NodeSpecifications  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 节点规格详情
+     */
+    
+    private List<NodeSpecification> instanceTypes;
+    /**
+     * 过滤后的节点规格数量
+     */
+    private Integer totalCount;
 
 
 
+    /**
+    * get 节点规格详情
+    *
+    * @return
+    */
+    public List<NodeSpecification> getInstanceTypes() {
+        return instanceTypes;
+    }
+
+    /**
+    * set 节点规格详情
+    *
+    * @param instanceTypes
+    */
+    public void setInstanceTypes(List<NodeSpecification> instanceTypes) {
+        this.instanceTypes = instanceTypes;
+    }
+
+
+    /**
+     * get 过滤后的节点规格数量
+     *
+     * @return
+     */
+    public Integer getTotalCount() {
+        return totalCount;
+    }
+
+    /**
+     * set 过滤后的节点规格数量
+     *
+     * @param totalCount
+     */
+    public void setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+    }
+
+
+
+    /**
+    * set 节点规格详情
+    *
+    * @param instanceTypes 节点规格详情
+    * @return NodeSpecifications
+    */
+    public NodeSpecifications instanceTypes(List<NodeSpecification> instanceTypes) {
+        this.instanceTypes = instanceTypes;
+        return this;
+    }
+
+
+    /**
+     * set 过滤后的节点规格数量
+     *
+     * @param totalCount 过滤后的节点规格数量
+     * @return NodeSpecifications
+     */
+    public NodeSpecifications totalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 节点规格详情
+     *
+     * @param instanceType
+     */
+    public void addInstanceType(NodeSpecification instanceType) {
+        if (this.instanceTypes == null) {
+            this.instanceTypes = new ArrayList<>();
+        }
+        this.instanceTypes.add(instanceType);
+    }
 }

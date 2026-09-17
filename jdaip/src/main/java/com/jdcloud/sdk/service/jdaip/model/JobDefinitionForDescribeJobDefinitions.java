@@ -156,6 +156,11 @@ public class JobDefinitionForDescribeJobDefinitions  implements java.io.Serializ
     private BuffaloForDescribeJobDefinitions buffalo;
 
     /**
+     * 已绑定的 Ku+ Buffalo 任务ID；未绑定时返回 null。
+     */
+    private Long kuplusBuffaloId;
+
+    /**
      * 主账号ID。
      */
     private String pin;
@@ -625,6 +630,25 @@ public class JobDefinitionForDescribeJobDefinitions  implements java.io.Serializ
 
 
     /**
+     * get 已绑定的 Ku+ Buffalo 任务ID；未绑定时返回 null。
+     *
+     * @return
+     */
+    public Long getKuplusBuffaloId() {
+        return kuplusBuffaloId;
+    }
+
+    /**
+     * set 已绑定的 Ku+ Buffalo 任务ID；未绑定时返回 null。
+     *
+     * @param kuplusBuffaloId
+     */
+    public void setKuplusBuffaloId(Long kuplusBuffaloId) {
+        this.kuplusBuffaloId = kuplusBuffaloId;
+    }
+
+
+    /**
      * get 主账号ID。
      *
      * @return
@@ -1053,6 +1077,18 @@ public class JobDefinitionForDescribeJobDefinitions  implements java.io.Serializ
      */
     public JobDefinitionForDescribeJobDefinitions buffalo(BuffaloForDescribeJobDefinitions buffalo) {
         this.buffalo = buffalo;
+        return this;
+    }
+
+
+    /**
+     * set 已绑定的 Ku+ Buffalo 任务ID；未绑定时返回 null。
+     *
+     * @param kuplusBuffaloId 已绑定的 Ku+ Buffalo 任务ID；未绑定时返回 null。
+     * @return JobDefinitionForDescribeJobDefinitions
+     */
+    public JobDefinitionForDescribeJobDefinitions kuplusBuffaloId(Long kuplusBuffaloId) {
+        this.kuplusBuffaloId = kuplusBuffaloId;
         return this;
     }
 

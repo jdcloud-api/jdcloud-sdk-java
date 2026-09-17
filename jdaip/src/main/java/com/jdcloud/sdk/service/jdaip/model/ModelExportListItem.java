@@ -64,6 +64,14 @@ public class ModelExportListItem  implements java.io.Serializable {
     private ModelExportStorageInfo targetStorage;
 
     /**
+     * 导出目录，安全存储output下的子目录。
+
+**示例：** &#x60;/output/my-model/&#x60;
+
+     */
+    private String exportDir;
+
+    /**
      * 模型格式。
 
 **可选值：**
@@ -100,6 +108,8 @@ public class ModelExportListItem  implements java.io.Serializable {
     /**
      * 模型参数量，单位为B（十亿）。支持输入实际模型参数量，如 7 表示 7B、14 表示 14B、123.4 表示 123.4B 等。
 
+**约束：** 最大值为 1000。
+
 **示例：** &#x60;7&#x60;、&#x60;14&#x60;、&#x60;123.4&#x60;
 
      */
@@ -111,6 +121,8 @@ public class ModelExportListItem  implements java.io.Serializable {
 **可选值：**
 - &#x60;pending&#x60;：等待中，导出任务已创建但尚未开始
 - &#x60;exporting&#x60;：导出中，正在导出模型
+- &#x60;stopping&#x60;：停止中，导出任务正在停止
+- &#x60;stopped&#x60;：已停止，导出任务已被手动停止
 - &#x60;completed&#x60;：已完成，模型导出成功
 - &#x60;failed&#x60;：失败，模型导出失败
 
@@ -118,7 +130,7 @@ public class ModelExportListItem  implements java.io.Serializable {
     private String state;
 
     /**
-     * 失败原因，仅当状态为 failed 时有值。
+     * 失败或停止原因，仅当状态为 failed 或 stopped 时有值。
      */
     private String reason;
 
@@ -236,6 +248,31 @@ public class ModelExportListItem  implements java.io.Serializable {
 
 
     /**
+     * get 导出目录，安全存储output下的子目录。
+
+**示例：** &#x60;/output/my-model/&#x60;
+
+     *
+     * @return
+     */
+    public String getExportDir() {
+        return exportDir;
+    }
+
+    /**
+     * set 导出目录，安全存储output下的子目录。
+
+**示例：** &#x60;/output/my-model/&#x60;
+
+     *
+     * @param exportDir
+     */
+    public void setExportDir(String exportDir) {
+        this.exportDir = exportDir;
+    }
+
+
+    /**
      * get 模型格式。
 
 **可选值：**
@@ -324,6 +361,8 @@ public class ModelExportListItem  implements java.io.Serializable {
     /**
      * get 模型参数量，单位为B（十亿）。支持输入实际模型参数量，如 7 表示 7B、14 表示 14B、123.4 表示 123.4B 等。
 
+**约束：** 最大值为 1000。
+
 **示例：** &#x60;7&#x60;、&#x60;14&#x60;、&#x60;123.4&#x60;
 
      *
@@ -335,6 +374,8 @@ public class ModelExportListItem  implements java.io.Serializable {
 
     /**
      * set 模型参数量，单位为B（十亿）。支持输入实际模型参数量，如 7 表示 7B、14 表示 14B、123.4 表示 123.4B 等。
+
+**约束：** 最大值为 1000。
 
 **示例：** &#x60;7&#x60;、&#x60;14&#x60;、&#x60;123.4&#x60;
 
@@ -352,6 +393,8 @@ public class ModelExportListItem  implements java.io.Serializable {
 **可选值：**
 - &#x60;pending&#x60;：等待中，导出任务已创建但尚未开始
 - &#x60;exporting&#x60;：导出中，正在导出模型
+- &#x60;stopping&#x60;：停止中，导出任务正在停止
+- &#x60;stopped&#x60;：已停止，导出任务已被手动停止
 - &#x60;completed&#x60;：已完成，模型导出成功
 - &#x60;failed&#x60;：失败，模型导出失败
 
@@ -368,6 +411,8 @@ public class ModelExportListItem  implements java.io.Serializable {
 **可选值：**
 - &#x60;pending&#x60;：等待中，导出任务已创建但尚未开始
 - &#x60;exporting&#x60;：导出中，正在导出模型
+- &#x60;stopping&#x60;：停止中，导出任务正在停止
+- &#x60;stopped&#x60;：已停止，导出任务已被手动停止
 - &#x60;completed&#x60;：已完成，模型导出成功
 - &#x60;failed&#x60;：失败，模型导出失败
 
@@ -380,7 +425,7 @@ public class ModelExportListItem  implements java.io.Serializable {
 
 
     /**
-     * get 失败原因，仅当状态为 failed 时有值。
+     * get 失败或停止原因，仅当状态为 failed 或 stopped 时有值。
      *
      * @return
      */
@@ -389,7 +434,7 @@ public class ModelExportListItem  implements java.io.Serializable {
     }
 
     /**
-     * set 失败原因，仅当状态为 failed 时有值。
+     * set 失败或停止原因，仅当状态为 failed 或 stopped 时有值。
      *
      * @param reason
      */
@@ -504,6 +549,24 @@ public class ModelExportListItem  implements java.io.Serializable {
 
 
     /**
+     * set 导出目录，安全存储output下的子目录。
+
+**示例：** &#x60;/output/my-model/&#x60;
+
+     *
+     * @param exportDir 导出目录，安全存储output下的子目录。
+
+**示例：** &#x60;/output/my-model/&#x60;
+
+     * @return ModelExportListItem
+     */
+    public ModelExportListItem exportDir(String exportDir) {
+        this.exportDir = exportDir;
+        return this;
+    }
+
+
+    /**
      * set 模型格式。
 
 **可选值：**
@@ -578,10 +641,14 @@ public class ModelExportListItem  implements java.io.Serializable {
     /**
      * set 模型参数量，单位为B（十亿）。支持输入实际模型参数量，如 7 表示 7B、14 表示 14B、123.4 表示 123.4B 等。
 
+**约束：** 最大值为 1000。
+
 **示例：** &#x60;7&#x60;、&#x60;14&#x60;、&#x60;123.4&#x60;
 
      *
      * @param modelParams 模型参数量，单位为B（十亿）。支持输入实际模型参数量，如 7 表示 7B、14 表示 14B、123.4 表示 123.4B 等。
+
+**约束：** 最大值为 1000。
 
 **示例：** &#x60;7&#x60;、&#x60;14&#x60;、&#x60;123.4&#x60;
 
@@ -599,6 +666,8 @@ public class ModelExportListItem  implements java.io.Serializable {
 **可选值：**
 - &#x60;pending&#x60;：等待中，导出任务已创建但尚未开始
 - &#x60;exporting&#x60;：导出中，正在导出模型
+- &#x60;stopping&#x60;：停止中，导出任务正在停止
+- &#x60;stopped&#x60;：已停止，导出任务已被手动停止
 - &#x60;completed&#x60;：已完成，模型导出成功
 - &#x60;failed&#x60;：失败，模型导出失败
 
@@ -608,6 +677,8 @@ public class ModelExportListItem  implements java.io.Serializable {
 **可选值：**
 - &#x60;pending&#x60;：等待中，导出任务已创建但尚未开始
 - &#x60;exporting&#x60;：导出中，正在导出模型
+- &#x60;stopping&#x60;：停止中，导出任务正在停止
+- &#x60;stopped&#x60;：已停止，导出任务已被手动停止
 - &#x60;completed&#x60;：已完成，模型导出成功
 - &#x60;failed&#x60;：失败，模型导出失败
 
@@ -620,9 +691,9 @@ public class ModelExportListItem  implements java.io.Serializable {
 
 
     /**
-     * set 失败原因，仅当状态为 failed 时有值。
+     * set 失败或停止原因，仅当状态为 failed 或 stopped 时有值。
      *
-     * @param reason 失败原因，仅当状态为 failed 时有值。
+     * @param reason 失败或停止原因，仅当状态为 failed 或 stopped 时有值。
      * @return ModelExportListItem
      */
     public ModelExportListItem reason(String reason) {

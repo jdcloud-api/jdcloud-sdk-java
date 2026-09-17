@@ -184,6 +184,21 @@ public class Node  implements java.io.Serializable {
      */
     
     private List<UnHealthReason> unhealthReasons;
+    /**
+     * Tag信息
+     */
+    
+    private List<Tag> userTags;
+    /**
+     * 资源组Id
+     */
+    private String resourceGroupId;
+
+    /**
+     * 资源组名称
+     */
+    private String resourceGroupName;
+
 
 
     /**
@@ -756,6 +771,63 @@ public class Node  implements java.io.Serializable {
     }
 
 
+    /**
+    * get Tag信息
+    *
+    * @return
+    */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+    * set Tag信息
+    *
+    * @param userTags
+    */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
+
+    /**
+     * get 资源组Id
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组Id
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
+     * get 资源组名称
+     *
+     * @return
+     */
+    public String getResourceGroupName() {
+        return resourceGroupName;
+    }
+
+    /**
+     * set 资源组名称
+     *
+     * @param resourceGroupName
+     */
+    public void setResourceGroupName(String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+    }
+
+
 
     /**
      * set 节点ID
@@ -1117,6 +1189,42 @@ public class Node  implements java.io.Serializable {
     }
 
 
+    /**
+    * set Tag信息
+    *
+    * @param userTags Tag信息
+    * @return Node
+    */
+    public Node userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
+
+    /**
+     * set 资源组Id
+     *
+     * @param resourceGroupId 资源组Id
+     * @return Node
+     */
+    public Node resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
+     * set 资源组名称
+     *
+     * @param resourceGroupName 资源组名称
+     * @return Node
+     */
+    public Node resourceGroupName(String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+        return this;
+    }
+
+
 
     /**
      * add item to dataDisk
@@ -1152,5 +1260,17 @@ public class Node  implements java.io.Serializable {
             this.unhealthReasons = new ArrayList<>();
         }
         this.unhealthReasons.add(unhealthReason);
+    }
+
+    /**
+     * add item to Tag信息
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
     }
 }

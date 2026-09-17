@@ -124,6 +124,11 @@ public class PublicImageInfo  implements java.io.Serializable {
      */
     private Boolean online;
 
+    /**
+     * 描述。
+     */
+    private String description;
+
 
 
     /**
@@ -441,6 +446,25 @@ public class PublicImageInfo  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 描述。
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 描述。
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
 
     /**
      * set 镜像ID。 示例：img-lh****3p
@@ -648,6 +672,18 @@ public class PublicImageInfo  implements java.io.Serializable {
      */
     public PublicImageInfo online(Boolean online) {
         this.online = online;
+        return this;
+    }
+
+
+    /**
+     * set 描述。
+     *
+     * @param description 描述。
+     * @return PublicImageInfo
+     */
+    public PublicImageInfo description(String description) {
+        this.description = description;
         return this;
     }
 

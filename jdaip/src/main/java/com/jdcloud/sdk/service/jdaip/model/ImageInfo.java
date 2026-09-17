@@ -185,6 +185,11 @@ labels转化对象， key:value中key值如果有._会删除转发成驼峰式�
      */
     private String permission;
 
+    /**
+     * 描述
+     */
+    private String description;
+
 
 
     /**
@@ -714,6 +719,25 @@ labels转化对象， key:value中key值如果有._会删除转发成驼峰式�
     }
 
 
+    /**
+     * get 描述
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 描述
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
 
     /**
      * set 镜像ID。 示例img-lh****3p
@@ -1063,6 +1087,18 @@ labels转化对象， key:value中key值如果有._会删除转发成驼峰式�
      */
     public ImageInfo permission(String permission) {
         this.permission = permission;
+        return this;
+    }
+
+
+    /**
+     * set 描述
+     *
+     * @param description 描述
+     * @return ImageInfo
+     */
+    public ImageInfo description(String description) {
+        this.description = description;
         return this;
     }
 

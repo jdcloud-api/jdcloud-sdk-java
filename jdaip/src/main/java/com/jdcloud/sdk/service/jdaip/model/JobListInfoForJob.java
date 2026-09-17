@@ -119,6 +119,16 @@ public class JobListInfoForJob  implements java.io.Serializable {
     private Boolean privileged;
 
     /**
+     * 是否为安全训练任务。
+     */
+    private Boolean secJob;
+
+    /**
+     * 是否支持导出模型。
+     */
+    private Boolean supportExportModel;
+
+    /**
      * 任务运行时长，单位：秒。
 
 **说明：** 从任务开始运行到当前或结束的时间
@@ -239,11 +249,6 @@ public class JobListInfoForJob  implements java.io.Serializable {
      */
     
     private List<JobTag> userTags;
-    /**
-     * 是否开启性能分析。
-     */
-    private Boolean profilingEnable;
-
     /**
      * 归属用户 pin。
      */
@@ -528,6 +533,44 @@ public class JobListInfoForJob  implements java.io.Serializable {
      */
     public void setPrivileged(Boolean privileged) {
         this.privileged = privileged;
+    }
+
+
+    /**
+     * get 是否为安全训练任务。
+     *
+     * @return
+     */
+    public Boolean getSecJob() {
+        return secJob;
+    }
+
+    /**
+     * set 是否为安全训练任务。
+     *
+     * @param secJob
+     */
+    public void setSecJob(Boolean secJob) {
+        this.secJob = secJob;
+    }
+
+
+    /**
+     * get 是否支持导出模型。
+     *
+     * @return
+     */
+    public Boolean getSupportExportModel() {
+        return supportExportModel;
+    }
+
+    /**
+     * set 是否支持导出模型。
+     *
+     * @param supportExportModel
+     */
+    public void setSupportExportModel(Boolean supportExportModel) {
+        this.supportExportModel = supportExportModel;
     }
 
 
@@ -954,25 +997,6 @@ public class JobListInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * get 是否开启性能分析。
-     *
-     * @return
-     */
-    public Boolean getProfilingEnable() {
-        return profilingEnable;
-    }
-
-    /**
-     * set 是否开启性能分析。
-     *
-     * @param profilingEnable
-     */
-    public void setProfilingEnable(Boolean profilingEnable) {
-        this.profilingEnable = profilingEnable;
-    }
-
-
-    /**
      * get 归属用户 pin。
      *
      * @return
@@ -1287,6 +1311,30 @@ public class JobListInfoForJob  implements java.io.Serializable {
 
 
     /**
+     * set 是否为安全训练任务。
+     *
+     * @param secJob 是否为安全训练任务。
+     * @return JobListInfoForJob
+     */
+    public JobListInfoForJob secJob(Boolean secJob) {
+        this.secJob = secJob;
+        return this;
+    }
+
+
+    /**
+     * set 是否支持导出模型。
+     *
+     * @param supportExportModel 是否支持导出模型。
+     * @return JobListInfoForJob
+     */
+    public JobListInfoForJob supportExportModel(Boolean supportExportModel) {
+        this.supportExportModel = supportExportModel;
+        return this;
+    }
+
+
+    /**
      * set 任务运行时长，单位：秒。
 
 **说明：** 从任务开始运行到当前或结束的时间
@@ -1564,18 +1612,6 @@ public class JobListInfoForJob  implements java.io.Serializable {
     */
     public JobListInfoForJob userTags(List<JobTag> userTags) {
         this.userTags = userTags;
-        return this;
-    }
-
-
-    /**
-     * set 是否开启性能分析。
-     *
-     * @param profilingEnable 是否开启性能分析。
-     * @return JobListInfoForJob
-     */
-    public JobListInfoForJob profilingEnable(Boolean profilingEnable) {
-        this.profilingEnable = profilingEnable;
         return this;
     }
 

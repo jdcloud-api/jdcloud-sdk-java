@@ -48,8 +48,9 @@
 
 package com.jdcloud.sdk.service.jdaip.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdaip.model.ProfilingParam;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -74,12 +75,64 @@ public class CreateProfilingTaskRequest extends JdcloudRequest implements java.i
     private static final long serialVersionUID = 1L;
 
     /**
-     * 性能分析任务参数。
+     * 监控任务名称。必填。
+
+**限制：** 不超过128个字符
+
      * Required:true
      */
     @Required
-    private ProfilingParam profilingParam;
+    private String name;
 
+    /**
+     * 监控任务描述。非必填。
+
+**限制：** 不超过512个字符
+
+     */
+    private String description;
+
+    /**
+     * 监控时长（秒）。必填。
+
+**取值范围：** 1 ~ 10（超出范围返回参数错误）
+
+     * Required:true
+     */
+    @Required
+    private Integer duration;
+
+    /**
+     * 监控目标类型，决定采集范围。必填。
+
+**可选值：**
+- &#x60;instance&#x60;：按实例采集，采集所选实例的所有进程
+- &#x60;pid&#x60;：按PID采集，仅采集指定实例内的指定PID
+
+     * Required:true
+     */
+    @Required
+    private String targetType;
+
+    /**
+     * 监控目标列表，每个目标对应一个实例。**必填且不允许为空数组**（任何 &#x60;targetType&#x60; 下都必填）。
+
+- **instance 模式**：&#x60;pids&#x60; 可不传或传空数组，表示采集该实例的全部进程
+- **pid 模式**：每个目标的 &#x60;pids&#x60; 必须至少包含一个PID，且PID只允许纯数字，否则返回参数错误
+
+     * Required:true
+     */
+    @Required
+    
+    private List<ProfilingTarget> targets;
+    /**
+     * 采集指标列表，指定需要监控的性能指标。非必填，不传时由采集端按各类别默认值处理。
+
+**说明：** 取值由采集端定义，本接口不做取值校验。
+
+     */
+    
+    private List<String> metrics;
     /**
      * 地域ID
      * Required:true
@@ -104,21 +157,158 @@ public class CreateProfilingTaskRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 性能分析任务参数。
+     * get 监控任务名称。必填。
+
+**限制：** 不超过128个字符
+
      *
      * @return
      */
-    public ProfilingParam getProfilingParam() {
-        return profilingParam;
+    public String getName() {
+        return name;
     }
 
     /**
-     * set 性能分析任务参数。
+     * set 监控任务名称。必填。
+
+**限制：** 不超过128个字符
+
      *
-     * @param profilingParam
+     * @param name
      */
-    public void setProfilingParam(ProfilingParam profilingParam) {
-        this.profilingParam = profilingParam;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    /**
+     * get 监控任务描述。非必填。
+
+**限制：** 不超过512个字符
+
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 监控任务描述。非必填。
+
+**限制：** 不超过512个字符
+
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
+    /**
+     * get 监控时长（秒）。必填。
+
+**取值范围：** 1 ~ 10（超出范围返回参数错误）
+
+     *
+     * @return
+     */
+    public Integer getDuration() {
+        return duration;
+    }
+
+    /**
+     * set 监控时长（秒）。必填。
+
+**取值范围：** 1 ~ 10（超出范围返回参数错误）
+
+     *
+     * @param duration
+     */
+    public void setDuration(Integer duration) {
+        this.duration = duration;
+    }
+
+
+    /**
+     * get 监控目标类型，决定采集范围。必填。
+
+**可选值：**
+- &#x60;instance&#x60;：按实例采集，采集所选实例的所有进程
+- &#x60;pid&#x60;：按PID采集，仅采集指定实例内的指定PID
+
+     *
+     * @return
+     */
+    public String getTargetType() {
+        return targetType;
+    }
+
+    /**
+     * set 监控目标类型，决定采集范围。必填。
+
+**可选值：**
+- &#x60;instance&#x60;：按实例采集，采集所选实例的所有进程
+- &#x60;pid&#x60;：按PID采集，仅采集指定实例内的指定PID
+
+     *
+     * @param targetType
+     */
+    public void setTargetType(String targetType) {
+        this.targetType = targetType;
+    }
+
+
+    /**
+    * get 监控目标列表，每个目标对应一个实例。**必填且不允许为空数组**（任何 &#x60;targetType&#x60; 下都必填）。
+
+- **instance 模式**：&#x60;pids&#x60; 可不传或传空数组，表示采集该实例的全部进程
+- **pid 模式**：每个目标的 &#x60;pids&#x60; 必须至少包含一个PID，且PID只允许纯数字，否则返回参数错误
+
+    *
+    * @return
+    */
+    public List<ProfilingTarget> getTargets() {
+        return targets;
+    }
+
+    /**
+    * set 监控目标列表，每个目标对应一个实例。**必填且不允许为空数组**（任何 &#x60;targetType&#x60; 下都必填）。
+
+- **instance 模式**：&#x60;pids&#x60; 可不传或传空数组，表示采集该实例的全部进程
+- **pid 模式**：每个目标的 &#x60;pids&#x60; 必须至少包含一个PID，且PID只允许纯数字，否则返回参数错误
+
+    *
+    * @param targets
+    */
+    public void setTargets(List<ProfilingTarget> targets) {
+        this.targets = targets;
+    }
+
+
+    /**
+    * get 采集指标列表，指定需要监控的性能指标。非必填，不传时由采集端按各类别默认值处理。
+
+**说明：** 取值由采集端定义，本接口不做取值校验。
+
+    *
+    * @return
+    */
+    public List<String> getMetrics() {
+        return metrics;
+    }
+
+    /**
+    * set 采集指标列表，指定需要监控的性能指标。非必填，不传时由采集端按各类别默认值处理。
+
+**说明：** 取值由采集端定义，本接口不做取值校验。
+
+    *
+    * @param metrics
+    */
+    public void setMetrics(List<String> metrics) {
+        this.metrics = metrics;
     }
 
 
@@ -181,13 +371,115 @@ public class CreateProfilingTaskRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 性能分析任务参数。
+     * set 监控任务名称。必填。
+
+**限制：** 不超过128个字符
+
      *
-     * @param profilingParam 性能分析任务参数。
+     * @param name 监控任务名称。必填。
+
+**限制：** 不超过128个字符
+
      * @return CreateProfilingTaskRequest
      */
-    public CreateProfilingTaskRequest profilingParam(ProfilingParam profilingParam) {
-        this.profilingParam = profilingParam;
+    public CreateProfilingTaskRequest name(String name) {
+        this.name = name;
+        return this;
+    }
+
+
+    /**
+     * set 监控任务描述。非必填。
+
+**限制：** 不超过512个字符
+
+     *
+     * @param description 监控任务描述。非必填。
+
+**限制：** 不超过512个字符
+
+     * @return CreateProfilingTaskRequest
+     */
+    public CreateProfilingTaskRequest description(String description) {
+        this.description = description;
+        return this;
+    }
+
+
+    /**
+     * set 监控时长（秒）。必填。
+
+**取值范围：** 1 ~ 10（超出范围返回参数错误）
+
+     *
+     * @param duration 监控时长（秒）。必填。
+
+**取值范围：** 1 ~ 10（超出范围返回参数错误）
+
+     * @return CreateProfilingTaskRequest
+     */
+    public CreateProfilingTaskRequest duration(Integer duration) {
+        this.duration = duration;
+        return this;
+    }
+
+
+    /**
+     * set 监控目标类型，决定采集范围。必填。
+
+**可选值：**
+- &#x60;instance&#x60;：按实例采集，采集所选实例的所有进程
+- &#x60;pid&#x60;：按PID采集，仅采集指定实例内的指定PID
+
+     *
+     * @param targetType 监控目标类型，决定采集范围。必填。
+
+**可选值：**
+- &#x60;instance&#x60;：按实例采集，采集所选实例的所有进程
+- &#x60;pid&#x60;：按PID采集，仅采集指定实例内的指定PID
+
+     * @return CreateProfilingTaskRequest
+     */
+    public CreateProfilingTaskRequest targetType(String targetType) {
+        this.targetType = targetType;
+        return this;
+    }
+
+
+    /**
+    * set 监控目标列表，每个目标对应一个实例。**必填且不允许为空数组**（任何 &#x60;targetType&#x60; 下都必填）。
+
+- **instance 模式**：&#x60;pids&#x60; 可不传或传空数组，表示采集该实例的全部进程
+- **pid 模式**：每个目标的 &#x60;pids&#x60; 必须至少包含一个PID，且PID只允许纯数字，否则返回参数错误
+
+    *
+    * @param targets 监控目标列表，每个目标对应一个实例。**必填且不允许为空数组**（任何 &#x60;targetType&#x60; 下都必填）。
+
+- **instance 模式**：&#x60;pids&#x60; 可不传或传空数组，表示采集该实例的全部进程
+- **pid 模式**：每个目标的 &#x60;pids&#x60; 必须至少包含一个PID，且PID只允许纯数字，否则返回参数错误
+
+    * @return CreateProfilingTaskRequest
+    */
+    public CreateProfilingTaskRequest targets(List<ProfilingTarget> targets) {
+        this.targets = targets;
+        return this;
+    }
+
+
+    /**
+    * set 采集指标列表，指定需要监控的性能指标。非必填，不传时由采集端按各类别默认值处理。
+
+**说明：** 取值由采集端定义，本接口不做取值校验。
+
+    *
+    * @param metrics 采集指标列表，指定需要监控的性能指标。非必填，不传时由采集端按各类别默认值处理。
+
+**说明：** 取值由采集端定义，本接口不做取值校验。
+
+    * @return CreateProfilingTaskRequest
+    */
+    public CreateProfilingTaskRequest metrics(List<String> metrics) {
+        this.metrics = metrics;
         return this;
     }
 
@@ -228,4 +520,35 @@ public class CreateProfilingTaskRequest extends JdcloudRequest implements java.i
     }
 
 
+
+    /**
+     * add item to 监控目标列表，每个目标对应一个实例。**必填且不允许为空数组**（任何 &#x60;targetType&#x60; 下都必填）。
+
+- **instance 模式**：&#x60;pids&#x60; 可不传或传空数组，表示采集该实例的全部进程
+- **pid 模式**：每个目标的 &#x60;pids&#x60; 必须至少包含一个PID，且PID只允许纯数字，否则返回参数错误
+
+     *
+     * @param target
+     */
+    public void addTarget(ProfilingTarget target) {
+        if (this.targets == null) {
+            this.targets = new ArrayList<>();
+        }
+        this.targets.add(target);
+    }
+
+    /**
+     * add item to 采集指标列表，指定需要监控的性能指标。非必填，不传时由采集端按各类别默认值处理。
+
+**说明：** 取值由采集端定义，本接口不做取值校验。
+
+     *
+     * @param metric
+     */
+    public void addMetric(String metric) {
+        if (this.metrics == null) {
+            this.metrics = new ArrayList<>();
+        }
+        this.metrics.add(metric);
+    }
 }

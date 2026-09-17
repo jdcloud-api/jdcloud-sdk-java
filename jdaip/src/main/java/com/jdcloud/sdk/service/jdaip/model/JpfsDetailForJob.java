@@ -38,6 +38,20 @@ public class JpfsDetailForJob  implements java.io.Serializable {
     private String id;
 
     /**
+     * JPFS 挂载点 ID，指定要使用的挂载点。
+
+**使用场景：** 当 JPFS 文件系统有多个挂载点时，可通过此字段指定具体的挂载点。
+
+**选点规则：** 如果不指定，系统将根据节点池类型和 JPFS 规格自动选择匹配的挂载点：
+- 异构节点池(combined)：选择 RDMA 协议的挂载点
+- 云主机节点池(vm)：智能型规格选择 NFS 协议，通用型规格选择 TCP 协议
+
+**示例：** &#x60;mt-xxxxxxxx&#x60;
+
+     */
+    private String mountTargetId;
+
+    /**
      * jpfs 源路径。示例：/data/d1。
      */
     private String sourcePath;
@@ -68,6 +82,43 @@ public class JpfsDetailForJob  implements java.io.Serializable {
      */
     public void setId(String id) {
         this.id = id;
+    }
+
+
+    /**
+     * get JPFS 挂载点 ID，指定要使用的挂载点。
+
+**使用场景：** 当 JPFS 文件系统有多个挂载点时，可通过此字段指定具体的挂载点。
+
+**选点规则：** 如果不指定，系统将根据节点池类型和 JPFS 规格自动选择匹配的挂载点：
+- 异构节点池(combined)：选择 RDMA 协议的挂载点
+- 云主机节点池(vm)：智能型规格选择 NFS 协议，通用型规格选择 TCP 协议
+
+**示例：** &#x60;mt-xxxxxxxx&#x60;
+
+     *
+     * @return
+     */
+    public String getMountTargetId() {
+        return mountTargetId;
+    }
+
+    /**
+     * set JPFS 挂载点 ID，指定要使用的挂载点。
+
+**使用场景：** 当 JPFS 文件系统有多个挂载点时，可通过此字段指定具体的挂载点。
+
+**选点规则：** 如果不指定，系统将根据节点池类型和 JPFS 规格自动选择匹配的挂载点：
+- 异构节点池(combined)：选择 RDMA 协议的挂载点
+- 云主机节点池(vm)：智能型规格选择 NFS 协议，通用型规格选择 TCP 协议
+
+**示例：** &#x60;mt-xxxxxxxx&#x60;
+
+     *
+     * @param mountTargetId
+     */
+    public void setMountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
     }
 
 
@@ -124,6 +175,36 @@ public class JpfsDetailForJob  implements java.io.Serializable {
      */
     public JpfsDetailForJob id(String id) {
         this.id = id;
+        return this;
+    }
+
+
+    /**
+     * set JPFS 挂载点 ID，指定要使用的挂载点。
+
+**使用场景：** 当 JPFS 文件系统有多个挂载点时，可通过此字段指定具体的挂载点。
+
+**选点规则：** 如果不指定，系统将根据节点池类型和 JPFS 规格自动选择匹配的挂载点：
+- 异构节点池(combined)：选择 RDMA 协议的挂载点
+- 云主机节点池(vm)：智能型规格选择 NFS 协议，通用型规格选择 TCP 协议
+
+**示例：** &#x60;mt-xxxxxxxx&#x60;
+
+     *
+     * @param mountTargetId JPFS 挂载点 ID，指定要使用的挂载点。
+
+**使用场景：** 当 JPFS 文件系统有多个挂载点时，可通过此字段指定具体的挂载点。
+
+**选点规则：** 如果不指定，系统将根据节点池类型和 JPFS 规格自动选择匹配的挂载点：
+- 异构节点池(combined)：选择 RDMA 协议的挂载点
+- 云主机节点池(vm)：智能型规格选择 NFS 协议，通用型规格选择 TCP 协议
+
+**示例：** &#x60;mt-xxxxxxxx&#x60;
+
+     * @return JpfsDetailForJob
+     */
+    public JpfsDetailForJob mountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
         return this;
     }
 
