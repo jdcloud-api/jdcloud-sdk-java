@@ -70,7 +70,7 @@ public class CreatePublicImageParam  implements java.io.Serializable {
      * 标签。多个标签使用英文逗号拼接，每个标签格式 key:value。
 key值说明
   - baseinfo 镜像基础环境信息：vllm0.25.0、pytorch2.11.0、cuda13.0、gpu等
-  - jobtype 训练任务镜像专属，任务类型，支持单个，可选值pytorch、ray
+  - jobtype 训练任务镜像专属，任务类型，可选值pytorch、ray、batch
   - protocol 在线服务镜像专属，自定义部署-协议，支持多个http、grpc、tcp、udp
   - distributed 在线服务镜像专属，分布式，支持单个，可选值sglang、vllm
 
@@ -208,7 +208,7 @@ key值说明
      * get 标签。多个标签使用英文逗号拼接，每个标签格式 key:value。
 key值说明
   - baseinfo 镜像基础环境信息：vllm0.25.0、pytorch2.11.0、cuda13.0、gpu等
-  - jobtype 训练任务镜像专属，任务类型，支持单个，可选值pytorch、ray
+  - jobtype 训练任务镜像专属，任务类型，可选值pytorch、ray、batch
   - protocol 在线服务镜像专属，自定义部署-协议，支持多个http、grpc、tcp、udp
   - distributed 在线服务镜像专属，分布式，支持单个，可选值sglang、vllm
 
@@ -225,7 +225,7 @@ key值说明
      * set 标签。多个标签使用英文逗号拼接，每个标签格式 key:value。
 key值说明
   - baseinfo 镜像基础环境信息：vllm0.25.0、pytorch2.11.0、cuda13.0、gpu等
-  - jobtype 训练任务镜像专属，任务类型，支持单个，可选值pytorch、ray
+  - jobtype 训练任务镜像专属，任务类型，可选值pytorch、ray、batch
   - protocol 在线服务镜像专属，自定义部署-协议，支持多个http、grpc、tcp、udp
   - distributed 在线服务镜像专属，分布式，支持单个，可选值sglang、vllm
 
@@ -360,7 +360,7 @@ key值说明
      * set 标签。多个标签使用英文逗号拼接，每个标签格式 key:value。
 key值说明
   - baseinfo 镜像基础环境信息：vllm0.25.0、pytorch2.11.0、cuda13.0、gpu等
-  - jobtype 训练任务镜像专属，任务类型，支持单个，可选值pytorch、ray
+  - jobtype 训练任务镜像专属，任务类型，可选值pytorch、ray、batch
   - protocol 在线服务镜像专属，自定义部署-协议，支持多个http、grpc、tcp、udp
   - distributed 在线服务镜像专属，分布式，支持单个，可选值sglang、vllm
 
@@ -370,7 +370,7 @@ key值说明
      * @param labels 标签。多个标签使用英文逗号拼接，每个标签格式 key:value。
 key值说明
   - baseinfo 镜像基础环境信息：vllm0.25.0、pytorch2.11.0、cuda13.0、gpu等
-  - jobtype 训练任务镜像专属，任务类型，支持单个，可选值pytorch、ray
+  - jobtype 训练任务镜像专属，任务类型，可选值pytorch、ray、batch
   - protocol 在线服务镜像专属，自定义部署-协议，支持多个http、grpc、tcp、udp
   - distributed 在线服务镜像专属，分布式，支持单个，可选值sglang、vllm
 

@@ -54,6 +54,16 @@ public class ModelResultForJob  implements java.io.Serializable {
     private Boolean readonly;
 
     /**
+     * JPFS 挂载点 ID。
+     */
+    private String mountTargetId;
+
+    /**
+     * CFS 挂载点 IP 地址。
+     */
+    private String host;
+
+    /**
      * 存储参数。
      */
     private StorageSpaceParamForJob storage;
@@ -139,6 +149,44 @@ public class ModelResultForJob  implements java.io.Serializable {
 
 
     /**
+     * get JPFS 挂载点 ID。
+     *
+     * @return
+     */
+    public String getMountTargetId() {
+        return mountTargetId;
+    }
+
+    /**
+     * set JPFS 挂载点 ID。
+     *
+     * @param mountTargetId
+     */
+    public void setMountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
+    }
+
+
+    /**
+     * get CFS 挂载点 IP 地址。
+     *
+     * @return
+     */
+    public String getHost() {
+        return host;
+    }
+
+    /**
+     * set CFS 挂载点 IP 地址。
+     *
+     * @param host
+     */
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+
+    /**
      * get 存储参数。
      *
      * @return
@@ -204,6 +252,30 @@ public class ModelResultForJob  implements java.io.Serializable {
      */
     public ModelResultForJob readonly(Boolean readonly) {
         this.readonly = readonly;
+        return this;
+    }
+
+
+    /**
+     * set JPFS 挂载点 ID。
+     *
+     * @param mountTargetId JPFS 挂载点 ID。
+     * @return ModelResultForJob
+     */
+    public ModelResultForJob mountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
+        return this;
+    }
+
+
+    /**
+     * set CFS 挂载点 IP 地址。
+     *
+     * @param host CFS 挂载点 IP 地址。
+     * @return ModelResultForJob
+     */
+    public ModelResultForJob host(String host) {
+        this.host = host;
         return this;
     }
 

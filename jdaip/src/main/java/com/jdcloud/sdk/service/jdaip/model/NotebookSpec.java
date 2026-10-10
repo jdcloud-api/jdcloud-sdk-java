@@ -127,7 +127,7 @@ public class NotebookSpec  implements java.io.Serializable {
 ## 使用说明
 - **公共资源池**: 可通过lbEnable&#x3D;true开启公网访问，系统自动分配LB，无需指定lbId/lbPort
 - **私有资源池**: 需要传入与资源队列可通信的负载均衡ID和端口
-- **安全队列(&#x60;queueType&#x3D;security&#x60;)**: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
+- **安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)**: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
 - 不需要公网SSH访问时不要指定此参数
 
      */
@@ -180,6 +180,17 @@ public class NotebookSpec  implements java.io.Serializable {
      */
     
     private List<DatasetSpec> datasets;
+    /**
+     * 科技数据集配置列表，独立最多挂载50条,仅限京东内部用户使用。
+
+## 配置说明
+- 支持公共数据集和个人数据集
+- 可选择数据集版本
+- 建议挂载到&#x60;/mnt/techdataset-x/&#x60;路径下
+
+     */
+    
+    private List<TechDatasetSpec> techDatasets;
     /**
      * 模型配置列表，定义Notebook挂载的模型资源。
 
@@ -491,7 +502,7 @@ public class NotebookSpec  implements java.io.Serializable {
 ## 使用说明
 - **公共资源池**: 可通过lbEnable&#x3D;true开启公网访问，系统自动分配LB，无需指定lbId/lbPort
 - **私有资源池**: 需要传入与资源队列可通信的负载均衡ID和端口
-- **安全队列(&#x60;queueType&#x3D;security&#x60;)**: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
+- **安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)**: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
 - 不需要公网SSH访问时不要指定此参数
 
      *
@@ -507,7 +518,7 @@ public class NotebookSpec  implements java.io.Serializable {
 ## 使用说明
 - **公共资源池**: 可通过lbEnable&#x3D;true开启公网访问，系统自动分配LB，无需指定lbId/lbPort
 - **私有资源池**: 需要传入与资源队列可通信的负载均衡ID和端口
-- **安全队列(&#x60;queueType&#x3D;security&#x60;)**: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
+- **安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)**: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
 - 不需要公网SSH访问时不要指定此参数
 
      *
@@ -637,6 +648,37 @@ public class NotebookSpec  implements java.io.Serializable {
     */
     public void setDatasets(List<DatasetSpec> datasets) {
         this.datasets = datasets;
+    }
+
+
+    /**
+    * get 科技数据集配置列表，独立最多挂载50条,仅限京东内部用户使用。
+
+## 配置说明
+- 支持公共数据集和个人数据集
+- 可选择数据集版本
+- 建议挂载到&#x60;/mnt/techdataset-x/&#x60;路径下
+
+    *
+    * @return
+    */
+    public List<TechDatasetSpec> getTechDatasets() {
+        return techDatasets;
+    }
+
+    /**
+    * set 科技数据集配置列表，独立最多挂载50条,仅限京东内部用户使用。
+
+## 配置说明
+- 支持公共数据集和个人数据集
+- 可选择数据集版本
+- 建议挂载到&#x60;/mnt/techdataset-x/&#x60;路径下
+
+    *
+    * @param techDatasets
+    */
+    public void setTechDatasets(List<TechDatasetSpec> techDatasets) {
+        this.techDatasets = techDatasets;
     }
 
 
@@ -1094,7 +1136,7 @@ public class NotebookSpec  implements java.io.Serializable {
 ## 使用说明
 - **公共资源池**: 可通过lbEnable&#x3D;true开启公网访问，系统自动分配LB，无需指定lbId/lbPort
 - **私有资源池**: 需要传入与资源队列可通信的负载均衡ID和端口
-- **安全队列(&#x60;queueType&#x3D;security&#x60;)**: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
+- **安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)**: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
 - 不需要公网SSH访问时不要指定此参数
 
      *
@@ -1103,7 +1145,7 @@ public class NotebookSpec  implements java.io.Serializable {
 ## 使用说明
 - **公共资源池**: 可通过lbEnable&#x3D;true开启公网访问，系统自动分配LB，无需指定lbId/lbPort
 - **私有资源池**: 需要传入与资源队列可通信的负载均衡ID和端口
-- **安全队列(&#x60;queueType&#x3D;security&#x60;)**: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
+- **安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)**: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
 - 不需要公网SSH访问时不要指定此参数
 
      * @return NotebookSpec
@@ -1204,6 +1246,30 @@ public class NotebookSpec  implements java.io.Serializable {
     */
     public NotebookSpec datasets(List<DatasetSpec> datasets) {
         this.datasets = datasets;
+        return this;
+    }
+
+
+    /**
+    * set 科技数据集配置列表，独立最多挂载50条,仅限京东内部用户使用。
+
+## 配置说明
+- 支持公共数据集和个人数据集
+- 可选择数据集版本
+- 建议挂载到&#x60;/mnt/techdataset-x/&#x60;路径下
+
+    *
+    * @param techDatasets 科技数据集配置列表，独立最多挂载50条,仅限京东内部用户使用。
+
+## 配置说明
+- 支持公共数据集和个人数据集
+- 可选择数据集版本
+- 建议挂载到&#x60;/mnt/techdataset-x/&#x60;路径下
+
+    * @return NotebookSpec
+    */
+    public NotebookSpec techDatasets(List<TechDatasetSpec> techDatasets) {
+        this.techDatasets = techDatasets;
         return this;
     }
 
@@ -1485,6 +1551,24 @@ public class NotebookSpec  implements java.io.Serializable {
             this.datasets = new ArrayList<>();
         }
         this.datasets.add(dataset);
+    }
+
+    /**
+     * add item to 科技数据集配置列表，独立最多挂载50条,仅限京东内部用户使用。
+
+## 配置说明
+- 支持公共数据集和个人数据集
+- 可选择数据集版本
+- 建议挂载到&#x60;/mnt/techdataset-x/&#x60;路径下
+
+     *
+     * @param techDataset
+     */
+    public void addTechDataset(TechDatasetSpec techDataset) {
+        if (this.techDatasets == null) {
+            this.techDatasets = new ArrayList<>();
+        }
+        this.techDatasets.add(techDataset);
     }
 
     /**

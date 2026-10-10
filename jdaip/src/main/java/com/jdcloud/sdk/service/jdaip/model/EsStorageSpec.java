@@ -70,6 +70,18 @@ public class EsStorageSpec  implements java.io.Serializable {
     private String mountPath;
 
     /**
+     * 挂载点ID。仅当存储类型为&#x60;jpfs&#x60;时生效，用于指定JPFS的挂载点ID。
+
+     */
+    private String mountTargetId;
+
+    /**
+     * 挂载点IP。仅当存储类型为&#x60;cfs&#x60;时生效，用于指定CFS的挂载点IP地址。
+
+     */
+    private String host;
+
+    /**
      * 是否以只读模式挂载存储。只读模式下，用户无法在挂载的存储中进行写操作。仅当存储类型为oss时有效。
 
      */
@@ -170,6 +182,48 @@ public class EsStorageSpec  implements java.io.Serializable {
 
 
     /**
+     * get 挂载点ID。仅当存储类型为&#x60;jpfs&#x60;时生效，用于指定JPFS的挂载点ID。
+
+     *
+     * @return
+     */
+    public String getMountTargetId() {
+        return mountTargetId;
+    }
+
+    /**
+     * set 挂载点ID。仅当存储类型为&#x60;jpfs&#x60;时生效，用于指定JPFS的挂载点ID。
+
+     *
+     * @param mountTargetId
+     */
+    public void setMountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
+    }
+
+
+    /**
+     * get 挂载点IP。仅当存储类型为&#x60;cfs&#x60;时生效，用于指定CFS的挂载点IP地址。
+
+     *
+     * @return
+     */
+    public String getHost() {
+        return host;
+    }
+
+    /**
+     * set 挂载点IP。仅当存储类型为&#x60;cfs&#x60;时生效，用于指定CFS的挂载点IP地址。
+
+     *
+     * @param host
+     */
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+
+    /**
      * get 是否以只读模式挂载存储。只读模式下，用户无法在挂载的存储中进行写操作。仅当存储类型为oss时有效。
 
      *
@@ -251,6 +305,34 @@ public class EsStorageSpec  implements java.io.Serializable {
      */
     public EsStorageSpec mountPath(String mountPath) {
         this.mountPath = mountPath;
+        return this;
+    }
+
+
+    /**
+     * set 挂载点ID。仅当存储类型为&#x60;jpfs&#x60;时生效，用于指定JPFS的挂载点ID。
+
+     *
+     * @param mountTargetId 挂载点ID。仅当存储类型为&#x60;jpfs&#x60;时生效，用于指定JPFS的挂载点ID。
+
+     * @return EsStorageSpec
+     */
+    public EsStorageSpec mountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
+        return this;
+    }
+
+
+    /**
+     * set 挂载点IP。仅当存储类型为&#x60;cfs&#x60;时生效，用于指定CFS的挂载点IP地址。
+
+     *
+     * @param host 挂载点IP。仅当存储类型为&#x60;cfs&#x60;时生效，用于指定CFS的挂载点IP地址。
+
+     * @return EsStorageSpec
+     */
+    public EsStorageSpec host(String host) {
+        this.host = host;
         return this;
     }
 

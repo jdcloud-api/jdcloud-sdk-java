@@ -50,9 +50,9 @@ public class Queue  implements java.io.Serializable {
     private String nodePoolId;
 
     /**
-     * 节点池相关信息，key值参照NodePool属性，查询时有用（name、poolType、vpcId、vpcName、topology）
+     * 节点池相关信息
      */
-    private Object nodePoolInfo;
+    private NodePoolInfo nodePoolInfo;
 
     /**
      * 队列下任务的命名空间
@@ -118,7 +118,7 @@ public class Queue  implements java.io.Serializable {
     private String desc;
 
     /**
-     * 队列类型，common：普通队列；security：安全队列
+     * 废弃，参考nodePoolInfo.poolType，队列类型，common：普通队列；security：安全队列
      */
     private String queueType;
 
@@ -205,20 +205,20 @@ public class Queue  implements java.io.Serializable {
 
 
     /**
-     * get 节点池相关信息，key值参照NodePool属性，查询时有用（name、poolType、vpcId、vpcName、topology）
+     * get 节点池相关信息
      *
      * @return
      */
-    public Object getNodePoolInfo() {
+    public NodePoolInfo getNodePoolInfo() {
         return nodePoolInfo;
     }
 
     /**
-     * set 节点池相关信息，key值参照NodePool属性，查询时有用（name、poolType、vpcId、vpcName、topology）
+     * set 节点池相关信息
      *
      * @param nodePoolInfo
      */
-    public void setNodePoolInfo(Object nodePoolInfo) {
+    public void setNodePoolInfo(NodePoolInfo nodePoolInfo) {
         this.nodePoolInfo = nodePoolInfo;
     }
 
@@ -449,7 +449,7 @@ public class Queue  implements java.io.Serializable {
 
 
     /**
-     * get 队列类型，common：普通队列；security：安全队列
+     * get 废弃，参考nodePoolInfo.poolType，队列类型，common：普通队列；security：安全队列
      *
      * @return
      */
@@ -458,7 +458,7 @@ public class Queue  implements java.io.Serializable {
     }
 
     /**
-     * set 队列类型，common：普通队列；security：安全队列
+     * set 废弃，参考nodePoolInfo.poolType，队列类型，common：普通队列；security：安全队列
      *
      * @param queueType
      */
@@ -587,12 +587,12 @@ public class Queue  implements java.io.Serializable {
 
 
     /**
-     * set 节点池相关信息，key值参照NodePool属性，查询时有用（name、poolType、vpcId、vpcName、topology）
+     * set 节点池相关信息
      *
-     * @param nodePoolInfo 节点池相关信息，key值参照NodePool属性，查询时有用（name、poolType、vpcId、vpcName、topology）
+     * @param nodePoolInfo 节点池相关信息
      * @return Queue
      */
-    public Queue nodePoolInfo(Object nodePoolInfo) {
+    public Queue nodePoolInfo(NodePoolInfo nodePoolInfo) {
         this.nodePoolInfo = nodePoolInfo;
         return this;
     }
@@ -747,9 +747,9 @@ public class Queue  implements java.io.Serializable {
 
 
     /**
-     * set 队列类型，common：普通队列；security：安全队列
+     * set 废弃，参考nodePoolInfo.poolType，队列类型，common：普通队列；security：安全队列
      *
-     * @param queueType 队列类型，common：普通队列；security：安全队列
+     * @param queueType 废弃，参考nodePoolInfo.poolType，队列类型，common：普通队列；security：安全队列
      * @return Queue
      */
     public Queue queueType(String queueType) {

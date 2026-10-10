@@ -96,6 +96,30 @@ public class ModelParamForJob  implements java.io.Serializable {
      */
     private Boolean readonly;
 
+    /**
+     * JPFS 挂载点 ID，指定模型使用的 JPFS 挂载点。
+
+**使用场景：** 当模型底层存储为 JPFS 且文件系统有多个挂载点时，可通过此字段指定具体的挂载点。
+
+**示例：** &#x60;mt-xxxxxxxx&#x60;
+
+     */
+    private String mountTargetId;
+
+    /**
+     * CFS 挂载点 IP 地址，指定模型使用的 CFS 挂载目标。
+
+**格式：** IPv4 地址
+
+**示例：** &#x60;192.168.0.1&#x60;
+
+**说明：**
+- 非必传参数
+- 如需指定特定挂载点，请传此参数
+
+     */
+    private String host;
+
 
 
     /**
@@ -257,6 +281,72 @@ public class ModelParamForJob  implements java.io.Serializable {
     }
 
 
+    /**
+     * get JPFS 挂载点 ID，指定模型使用的 JPFS 挂载点。
+
+**使用场景：** 当模型底层存储为 JPFS 且文件系统有多个挂载点时，可通过此字段指定具体的挂载点。
+
+**示例：** &#x60;mt-xxxxxxxx&#x60;
+
+     *
+     * @return
+     */
+    public String getMountTargetId() {
+        return mountTargetId;
+    }
+
+    /**
+     * set JPFS 挂载点 ID，指定模型使用的 JPFS 挂载点。
+
+**使用场景：** 当模型底层存储为 JPFS 且文件系统有多个挂载点时，可通过此字段指定具体的挂载点。
+
+**示例：** &#x60;mt-xxxxxxxx&#x60;
+
+     *
+     * @param mountTargetId
+     */
+    public void setMountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
+    }
+
+
+    /**
+     * get CFS 挂载点 IP 地址，指定模型使用的 CFS 挂载目标。
+
+**格式：** IPv4 地址
+
+**示例：** &#x60;192.168.0.1&#x60;
+
+**说明：**
+- 非必传参数
+- 如需指定特定挂载点，请传此参数
+
+     *
+     * @return
+     */
+    public String getHost() {
+        return host;
+    }
+
+    /**
+     * set CFS 挂载点 IP 地址，指定模型使用的 CFS 挂载目标。
+
+**格式：** IPv4 地址
+
+**示例：** &#x60;192.168.0.1&#x60;
+
+**说明：**
+- 非必传参数
+- 如需指定特定挂载点，请传此参数
+
+     *
+     * @param host
+     */
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+
 
     /**
      * set 模型可见性，决定模型的访问权限。
@@ -378,6 +468,58 @@ public class ModelParamForJob  implements java.io.Serializable {
      */
     public ModelParamForJob readonly(Boolean readonly) {
         this.readonly = readonly;
+        return this;
+    }
+
+
+    /**
+     * set JPFS 挂载点 ID，指定模型使用的 JPFS 挂载点。
+
+**使用场景：** 当模型底层存储为 JPFS 且文件系统有多个挂载点时，可通过此字段指定具体的挂载点。
+
+**示例：** &#x60;mt-xxxxxxxx&#x60;
+
+     *
+     * @param mountTargetId JPFS 挂载点 ID，指定模型使用的 JPFS 挂载点。
+
+**使用场景：** 当模型底层存储为 JPFS 且文件系统有多个挂载点时，可通过此字段指定具体的挂载点。
+
+**示例：** &#x60;mt-xxxxxxxx&#x60;
+
+     * @return ModelParamForJob
+     */
+    public ModelParamForJob mountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
+        return this;
+    }
+
+
+    /**
+     * set CFS 挂载点 IP 地址，指定模型使用的 CFS 挂载目标。
+
+**格式：** IPv4 地址
+
+**示例：** &#x60;192.168.0.1&#x60;
+
+**说明：**
+- 非必传参数
+- 如需指定特定挂载点，请传此参数
+
+     *
+     * @param host CFS 挂载点 IP 地址，指定模型使用的 CFS 挂载目标。
+
+**格式：** IPv4 地址
+
+**示例：** &#x60;192.168.0.1&#x60;
+
+**说明：**
+- 非必传参数
+- 如需指定特定挂载点，请传此参数
+
+     * @return ModelParamForJob
+     */
+    public ModelParamForJob host(String host) {
+        this.host = host;
         return this;
     }
 

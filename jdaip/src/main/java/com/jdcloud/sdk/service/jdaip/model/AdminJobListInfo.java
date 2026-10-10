@@ -93,6 +93,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 | &#x60;stopping&#x60; | 停止中，正在停止任务 | 等待 |
 | &#x60;stopped&#x60; | 停止，任务已被停止 | 可重新提交 |
 | &#x60;success&#x60; | 成功，任务执行完成 | 可查看结果 |
+| &#x60;partial-success&#x60; | 部分成功，仅 Batch 任务返回 | 可查看各副本结果 |
 | &#x60;deleting&#x60; | 删除中，正在删除任务 | 等待 |
 | &#x60;rolling-back&#x60; | 回滚中，正在回滚 | 等待 |
 | &#x60;rolled-back&#x60; | 已回滚，回滚完成 | - |
@@ -101,7 +102,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
     private String state;
 
     /**
-     * 训练任务失败类型，仅在 state 为 &#x60;failed&#x60; 时返回。
+     * 训练任务失败类型。
 
 ## 失败类型说明
 
@@ -112,6 +113,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 | &#x60;environment-failed&#x60; | 算力健康检测不通过 | 检查资源配置，确保环境正常 |
 | &#x60;task-hang&#x60; | 任务卡住 | 检查代码逻辑，可能存在死锁 |
 | &#x60;process-inspection-failed&#x60; | 进程巡检失败 | 检查进程状态和资源使用情况 |
+| &#x60;task-evict&#x60; | 任务副本被抢占或跨队列归还 | 查看任务实例与调度事件 |
 
      */
     private String failureType;
@@ -143,6 +145,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 ## 可选值
 - &#x60;PyTorch&#x60;：PyTorch 训练任务
 - &#x60;Ray&#x60;：Ray 训练任务
+- &#x60;Batch&#x60;：批量任务
 
      */
     private String jobType;
@@ -518,6 +521,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 | &#x60;stopping&#x60; | 停止中，正在停止任务 | 等待 |
 | &#x60;stopped&#x60; | 停止，任务已被停止 | 可重新提交 |
 | &#x60;success&#x60; | 成功，任务执行完成 | 可查看结果 |
+| &#x60;partial-success&#x60; | 部分成功，仅 Batch 任务返回 | 可查看各副本结果 |
 | &#x60;deleting&#x60; | 删除中，正在删除任务 | 等待 |
 | &#x60;rolling-back&#x60; | 回滚中，正在回滚 | 等待 |
 | &#x60;rolled-back&#x60; | 已回滚，回滚完成 | - |
@@ -543,6 +547,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 | &#x60;stopping&#x60; | 停止中，正在停止任务 | 等待 |
 | &#x60;stopped&#x60; | 停止，任务已被停止 | 可重新提交 |
 | &#x60;success&#x60; | 成功，任务执行完成 | 可查看结果 |
+| &#x60;partial-success&#x60; | 部分成功，仅 Batch 任务返回 | 可查看各副本结果 |
 | &#x60;deleting&#x60; | 删除中，正在删除任务 | 等待 |
 | &#x60;rolling-back&#x60; | 回滚中，正在回滚 | 等待 |
 | &#x60;rolled-back&#x60; | 已回滚，回滚完成 | - |
@@ -556,7 +561,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 
     /**
-     * get 训练任务失败类型，仅在 state 为 &#x60;failed&#x60; 时返回。
+     * get 训练任务失败类型。
 
 ## 失败类型说明
 
@@ -567,6 +572,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 | &#x60;environment-failed&#x60; | 算力健康检测不通过 | 检查资源配置，确保环境正常 |
 | &#x60;task-hang&#x60; | 任务卡住 | 检查代码逻辑，可能存在死锁 |
 | &#x60;process-inspection-failed&#x60; | 进程巡检失败 | 检查进程状态和资源使用情况 |
+| &#x60;task-evict&#x60; | 任务副本被抢占或跨队列归还 | 查看任务实例与调度事件 |
 
      *
      * @return
@@ -576,7 +582,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 训练任务失败类型，仅在 state 为 &#x60;failed&#x60; 时返回。
+     * set 训练任务失败类型。
 
 ## 失败类型说明
 
@@ -587,6 +593,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 | &#x60;environment-failed&#x60; | 算力健康检测不通过 | 检查资源配置，确保环境正常 |
 | &#x60;task-hang&#x60; | 任务卡住 | 检查代码逻辑，可能存在死锁 |
 | &#x60;process-inspection-failed&#x60; | 进程巡检失败 | 检查进程状态和资源使用情况 |
+| &#x60;task-evict&#x60; | 任务副本被抢占或跨队列归还 | 查看任务实例与调度事件 |
 
      *
      * @param failureType
@@ -662,6 +669,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 ## 可选值
 - &#x60;PyTorch&#x60;：PyTorch 训练任务
 - &#x60;Ray&#x60;：Ray 训练任务
+- &#x60;Batch&#x60;：批量任务
 
      *
      * @return
@@ -676,6 +684,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 ## 可选值
 - &#x60;PyTorch&#x60;：PyTorch 训练任务
 - &#x60;Ray&#x60;：Ray 训练任务
+- &#x60;Batch&#x60;：批量任务
 
      *
      * @param jobType
@@ -1517,6 +1526,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 | &#x60;stopping&#x60; | 停止中，正在停止任务 | 等待 |
 | &#x60;stopped&#x60; | 停止，任务已被停止 | 可重新提交 |
 | &#x60;success&#x60; | 成功，任务执行完成 | 可查看结果 |
+| &#x60;partial-success&#x60; | 部分成功，仅 Batch 任务返回 | 可查看各副本结果 |
 | &#x60;deleting&#x60; | 删除中，正在删除任务 | 等待 |
 | &#x60;rolling-back&#x60; | 回滚中，正在回滚 | 等待 |
 | &#x60;rolled-back&#x60; | 已回滚，回滚完成 | - |
@@ -1535,6 +1545,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 | &#x60;stopping&#x60; | 停止中，正在停止任务 | 等待 |
 | &#x60;stopped&#x60; | 停止，任务已被停止 | 可重新提交 |
 | &#x60;success&#x60; | 成功，任务执行完成 | 可查看结果 |
+| &#x60;partial-success&#x60; | 部分成功，仅 Batch 任务返回 | 可查看各副本结果 |
 | &#x60;deleting&#x60; | 删除中，正在删除任务 | 等待 |
 | &#x60;rolling-back&#x60; | 回滚中，正在回滚 | 等待 |
 | &#x60;rolled-back&#x60; | 已回滚，回滚完成 | - |
@@ -1548,7 +1559,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 
 
     /**
-     * set 训练任务失败类型，仅在 state 为 &#x60;failed&#x60; 时返回。
+     * set 训练任务失败类型。
 
 ## 失败类型说明
 
@@ -1559,9 +1570,10 @@ public class AdminJobListInfo  implements java.io.Serializable {
 | &#x60;environment-failed&#x60; | 算力健康检测不通过 | 检查资源配置，确保环境正常 |
 | &#x60;task-hang&#x60; | 任务卡住 | 检查代码逻辑，可能存在死锁 |
 | &#x60;process-inspection-failed&#x60; | 进程巡检失败 | 检查进程状态和资源使用情况 |
+| &#x60;task-evict&#x60; | 任务副本被抢占或跨队列归还 | 查看任务实例与调度事件 |
 
      *
-     * @param failureType 训练任务失败类型，仅在 state 为 &#x60;failed&#x60; 时返回。
+     * @param failureType 训练任务失败类型。
 
 ## 失败类型说明
 
@@ -1572,6 +1584,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 | &#x60;environment-failed&#x60; | 算力健康检测不通过 | 检查资源配置，确保环境正常 |
 | &#x60;task-hang&#x60; | 任务卡住 | 检查代码逻辑，可能存在死锁 |
 | &#x60;process-inspection-failed&#x60; | 进程巡检失败 | 检查进程状态和资源使用情况 |
+| &#x60;task-evict&#x60; | 任务副本被抢占或跨队列归还 | 查看任务实例与调度事件 |
 
      * @return AdminJobListInfo
      */
@@ -1633,6 +1646,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 ## 可选值
 - &#x60;PyTorch&#x60;：PyTorch 训练任务
 - &#x60;Ray&#x60;：Ray 训练任务
+- &#x60;Batch&#x60;：批量任务
 
      *
      * @param jobType 任务类型。
@@ -1640,6 +1654,7 @@ public class AdminJobListInfo  implements java.io.Serializable {
 ## 可选值
 - &#x60;PyTorch&#x60;：PyTorch 训练任务
 - &#x60;Ray&#x60;：Ray 训练任务
+- &#x60;Batch&#x60;：批量任务
 
      * @return AdminJobListInfo
      */

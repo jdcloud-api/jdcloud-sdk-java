@@ -76,24 +76,34 @@ public class DatasetWarmTask  implements java.io.Serializable {
     private Long completeTime;
 
     /**
-     * 安全存储ID
+     * 安全存储ID，JPFS 任务返回；OSS 任务可为空
      */
     private String safeStorageId;
 
     /**
-     * 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变
+     * 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变；OSS 任务可为空
      */
     private String safeStorageDisplayId;
 
     /**
-     * 安全存储名称快照
+     * 安全存储名称快照，JPFS 任务返回；OSS 任务可为空
      */
     private String safeStorageName;
 
     /**
-     * JPFS文件夹名称，生成规则与预热任务ID一致
+     * 预热目标路径，JPFS/OSS 共用，生成规则保持一致
      */
-    private String jpfsFolderName;
+    private String folderName;
+
+    /**
+     * 预热任务类型，可选值：jpfs、oss；存量任务可为空字符串
+     */
+    private String taskType;
+
+    /**
+     * OSS bucket 名称；taskType&#x3D;oss 时返回，JPFS 任务可为空或不返回
+     */
+    private String bucketName;
 
     /**
      * 数据集预估大小，单位GB
@@ -262,7 +272,7 @@ public class DatasetWarmTask  implements java.io.Serializable {
 
 
     /**
-     * get 安全存储ID
+     * get 安全存储ID，JPFS 任务返回；OSS 任务可为空
      *
      * @return
      */
@@ -271,7 +281,7 @@ public class DatasetWarmTask  implements java.io.Serializable {
     }
 
     /**
-     * set 安全存储ID
+     * set 安全存储ID，JPFS 任务返回；OSS 任务可为空
      *
      * @param safeStorageId
      */
@@ -281,7 +291,7 @@ public class DatasetWarmTask  implements java.io.Serializable {
 
 
     /**
-     * get 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变
+     * get 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变；OSS 任务可为空
      *
      * @return
      */
@@ -290,7 +300,7 @@ public class DatasetWarmTask  implements java.io.Serializable {
     }
 
     /**
-     * set 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变
+     * set 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变；OSS 任务可为空
      *
      * @param safeStorageDisplayId
      */
@@ -300,7 +310,7 @@ public class DatasetWarmTask  implements java.io.Serializable {
 
 
     /**
-     * get 安全存储名称快照
+     * get 安全存储名称快照，JPFS 任务返回；OSS 任务可为空
      *
      * @return
      */
@@ -309,7 +319,7 @@ public class DatasetWarmTask  implements java.io.Serializable {
     }
 
     /**
-     * set 安全存储名称快照
+     * set 安全存储名称快照，JPFS 任务返回；OSS 任务可为空
      *
      * @param safeStorageName
      */
@@ -319,21 +329,59 @@ public class DatasetWarmTask  implements java.io.Serializable {
 
 
     /**
-     * get JPFS文件夹名称，生成规则与预热任务ID一致
+     * get 预热目标路径，JPFS/OSS 共用，生成规则保持一致
      *
      * @return
      */
-    public String getJpfsFolderName() {
-        return jpfsFolderName;
+    public String getFolderName() {
+        return folderName;
     }
 
     /**
-     * set JPFS文件夹名称，生成规则与预热任务ID一致
+     * set 预热目标路径，JPFS/OSS 共用，生成规则保持一致
      *
-     * @param jpfsFolderName
+     * @param folderName
      */
-    public void setJpfsFolderName(String jpfsFolderName) {
-        this.jpfsFolderName = jpfsFolderName;
+    public void setFolderName(String folderName) {
+        this.folderName = folderName;
+    }
+
+
+    /**
+     * get 预热任务类型，可选值：jpfs、oss；存量任务可为空字符串
+     *
+     * @return
+     */
+    public String getTaskType() {
+        return taskType;
+    }
+
+    /**
+     * set 预热任务类型，可选值：jpfs、oss；存量任务可为空字符串
+     *
+     * @param taskType
+     */
+    public void setTaskType(String taskType) {
+        this.taskType = taskType;
+    }
+
+
+    /**
+     * get OSS bucket 名称；taskType&#x3D;oss 时返回，JPFS 任务可为空或不返回
+     *
+     * @return
+     */
+    public String getBucketName() {
+        return bucketName;
+    }
+
+    /**
+     * set OSS bucket 名称；taskType&#x3D;oss 时返回，JPFS 任务可为空或不返回
+     *
+     * @param bucketName
+     */
+    public void setBucketName(String bucketName) {
+        this.bucketName = bucketName;
     }
 
 
@@ -496,9 +544,9 @@ public class DatasetWarmTask  implements java.io.Serializable {
 
 
     /**
-     * set 安全存储ID
+     * set 安全存储ID，JPFS 任务返回；OSS 任务可为空
      *
-     * @param safeStorageId 安全存储ID
+     * @param safeStorageId 安全存储ID，JPFS 任务返回；OSS 任务可为空
      * @return DatasetWarmTask
      */
     public DatasetWarmTask safeStorageId(String safeStorageId) {
@@ -508,9 +556,9 @@ public class DatasetWarmTask  implements java.io.Serializable {
 
 
     /**
-     * set 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变
+     * set 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变；OSS 任务可为空
      *
-     * @param safeStorageDisplayId 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变
+     * @param safeStorageDisplayId 安全存储展示ID，在安全存储ID前拼接sec-前缀；当安全存储ID已包含sec-前缀时保持不变；OSS 任务可为空
      * @return DatasetWarmTask
      */
     public DatasetWarmTask safeStorageDisplayId(String safeStorageDisplayId) {
@@ -520,9 +568,9 @@ public class DatasetWarmTask  implements java.io.Serializable {
 
 
     /**
-     * set 安全存储名称快照
+     * set 安全存储名称快照，JPFS 任务返回；OSS 任务可为空
      *
-     * @param safeStorageName 安全存储名称快照
+     * @param safeStorageName 安全存储名称快照，JPFS 任务返回；OSS 任务可为空
      * @return DatasetWarmTask
      */
     public DatasetWarmTask safeStorageName(String safeStorageName) {
@@ -532,13 +580,37 @@ public class DatasetWarmTask  implements java.io.Serializable {
 
 
     /**
-     * set JPFS文件夹名称，生成规则与预热任务ID一致
+     * set 预热目标路径，JPFS/OSS 共用，生成规则保持一致
      *
-     * @param jpfsFolderName JPFS文件夹名称，生成规则与预热任务ID一致
+     * @param folderName 预热目标路径，JPFS/OSS 共用，生成规则保持一致
      * @return DatasetWarmTask
      */
-    public DatasetWarmTask jpfsFolderName(String jpfsFolderName) {
-        this.jpfsFolderName = jpfsFolderName;
+    public DatasetWarmTask folderName(String folderName) {
+        this.folderName = folderName;
+        return this;
+    }
+
+
+    /**
+     * set 预热任务类型，可选值：jpfs、oss；存量任务可为空字符串
+     *
+     * @param taskType 预热任务类型，可选值：jpfs、oss；存量任务可为空字符串
+     * @return DatasetWarmTask
+     */
+    public DatasetWarmTask taskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+
+
+    /**
+     * set OSS bucket 名称；taskType&#x3D;oss 时返回，JPFS 任务可为空或不返回
+     *
+     * @param bucketName OSS bucket 名称；taskType&#x3D;oss 时返回，JPFS 任务可为空或不返回
+     * @return DatasetWarmTask
+     */
+    public DatasetWarmTask bucketName(String bucketName) {
+        this.bucketName = bucketName;
         return this;
     }
 

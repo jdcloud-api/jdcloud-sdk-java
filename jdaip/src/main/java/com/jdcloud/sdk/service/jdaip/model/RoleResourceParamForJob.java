@@ -72,6 +72,7 @@ public class RoleResourceParamForJob  implements java.io.Serializable {
 **配置规则：**
 - PyTorch 任务：仅支持 Worker 角色
 - Ray 任务：必须包含 Head 角色，可根据需求增加 Worker 角色
+- Batch 任务：必须且只能包含一个 Worker 角色，&#x60;count&#x60; 不小于 1
 
      */
     
@@ -164,6 +165,7 @@ public class RoleResourceParamForJob  implements java.io.Serializable {
 **配置规则：**
 - PyTorch 任务：仅支持 Worker 角色
 - Ray 任务：必须包含 Head 角色，可根据需求增加 Worker 角色
+- Batch 任务：必须且只能包含一个 Worker 角色，&#x60;count&#x60; 不小于 1
 
     *
     * @return
@@ -178,6 +180,7 @@ public class RoleResourceParamForJob  implements java.io.Serializable {
 **配置规则：**
 - PyTorch 任务：仅支持 Worker 角色
 - Ray 任务：必须包含 Head 角色，可根据需求增加 Worker 角色
+- Batch 任务：必须且只能包含一个 Worker 角色，&#x60;count&#x60; 不小于 1
 
     *
     * @param roles
@@ -260,6 +263,7 @@ public class RoleResourceParamForJob  implements java.io.Serializable {
 **配置规则：**
 - PyTorch 任务：仅支持 Worker 角色
 - Ray 任务：必须包含 Head 角色，可根据需求增加 Worker 角色
+- Batch 任务：必须且只能包含一个 Worker 角色，&#x60;count&#x60; 不小于 1
 
     *
     * @param roles 角色资源配置详细信息列表。
@@ -267,6 +271,7 @@ public class RoleResourceParamForJob  implements java.io.Serializable {
 **配置规则：**
 - PyTorch 任务：仅支持 Worker 角色
 - Ray 任务：必须包含 Head 角色，可根据需求增加 Worker 角色
+- Batch 任务：必须且只能包含一个 Worker 角色，&#x60;count&#x60; 不小于 1
 
     * @return RoleResourceParamForJob
     */
@@ -283,6 +288,7 @@ public class RoleResourceParamForJob  implements java.io.Serializable {
 **配置规则：**
 - PyTorch 任务：仅支持 Worker 角色
 - Ray 任务：必须包含 Head 角色，可根据需求增加 Worker 角色
+- Batch 任务：必须且只能包含一个 Worker 角色，&#x60;count&#x60; 不小于 1
 
      *
      * @param role

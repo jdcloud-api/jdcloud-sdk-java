@@ -35,7 +35,7 @@ package com.jdcloud.sdk.service.jdaip.model;
 ## 配置说明
 - **公共资源池**: LbSpec不为空仅表示需要公网访问，lbId/lbPort由系统自动分配，无需指定
 - **私有资源池**: 需要传入与资源队列可通信的负载均衡ID和端口
-- **安全队列(&#x60;queueType&#x3D;security&#x60;)**: 只需指定lbEnable&#x3D;true即可开启SSH访问，lbId/lbPort由系统自动分配，无需也不应指定(传入会被忽略)；负载均衡取自该安全队列所属集群绑定的负载均衡，端口由系统分配为该负载均衡上唯一的空闲端口，并在实例生命周期内持续占用
+- **安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)**: 只需指定lbEnable&#x3D;true即可开启SSH访问，lbId/lbPort由系统自动分配，无需也不应指定(传入会被忽略)；负载均衡取自该安全队列所属集群绑定的负载均衡，端口由系统分配为该负载均衡上唯一的空闲端口，并在实例生命周期内持续占用
 - 负载均衡需要与资源队列在同一VPC下
 - 端口需要未被占用
 
@@ -49,7 +49,7 @@ public class LbSpec  implements java.io.Serializable {
 
 ## 要求
 - 私有资源池必填
-- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;)均无需指定(系统自动分配)，传入会被忽略
+- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)均无需指定(系统自动分配)，传入会被忽略
 - 负载均衡需要与资源队列在同一VPC下
 - 支持四层(TCP)负载均衡
 
@@ -61,7 +61,7 @@ public class LbSpec  implements java.io.Serializable {
 
 ## 端口范围
 - 私有资源池必填
-- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;)均无需指定(系统自动分配)，传入会被忽略
+- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)均无需指定(系统自动分配)，传入会被忽略
 - 1-65534
 - 需要指定一个未被占用的空闲可用端口
 - 建议使用1024以上端口
@@ -70,11 +70,11 @@ public class LbSpec  implements java.io.Serializable {
     private Integer lbPort;
 
     /**
-     * 是否开启公网访问，对公共资源池与安全队列(&#x60;queueType&#x3D;security&#x60;)有效。
+     * 是否开启公网访问，对公共资源池与安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)有效。
 
 ## 使用说明
 - 公共资源池: 为true时表示需要公网访问，系统会自动分配LB，无需指定lbId和lbPort
-- 安全队列(&#x60;queueType&#x3D;security&#x60;): 为true时即开启SSH访问，系统会自动分配LB与端口(LB取自该安全队列所属集群绑定的负载均衡)，无需也不应指定lbId和lbPort
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;): 为true时即开启SSH访问，系统会自动分配LB与端口(LB取自该安全队列所属集群绑定的负载均衡)，无需也不应指定lbId和lbPort
 - 普通私有资源池: 无效，需要通过lbId和lbPort指定负载均衡
 - 默认为false
 
@@ -88,7 +88,7 @@ public class LbSpec  implements java.io.Serializable {
 
 ## 要求
 - 私有资源池必填
-- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;)均无需指定(系统自动分配)，传入会被忽略
+- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)均无需指定(系统自动分配)，传入会被忽略
 - 负载均衡需要与资源队列在同一VPC下
 - 支持四层(TCP)负载均衡
 
@@ -104,7 +104,7 @@ public class LbSpec  implements java.io.Serializable {
 
 ## 要求
 - 私有资源池必填
-- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;)均无需指定(系统自动分配)，传入会被忽略
+- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)均无需指定(系统自动分配)，传入会被忽略
 - 负载均衡需要与资源队列在同一VPC下
 - 支持四层(TCP)负载均衡
 
@@ -121,7 +121,7 @@ public class LbSpec  implements java.io.Serializable {
 
 ## 端口范围
 - 私有资源池必填
-- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;)均无需指定(系统自动分配)，传入会被忽略
+- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)均无需指定(系统自动分配)，传入会被忽略
 - 1-65534
 - 需要指定一个未被占用的空闲可用端口
 - 建议使用1024以上端口
@@ -138,7 +138,7 @@ public class LbSpec  implements java.io.Serializable {
 
 ## 端口范围
 - 私有资源池必填
-- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;)均无需指定(系统自动分配)，传入会被忽略
+- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)均无需指定(系统自动分配)，传入会被忽略
 - 1-65534
 - 需要指定一个未被占用的空闲可用端口
 - 建议使用1024以上端口
@@ -152,11 +152,11 @@ public class LbSpec  implements java.io.Serializable {
 
 
     /**
-     * get 是否开启公网访问，对公共资源池与安全队列(&#x60;queueType&#x3D;security&#x60;)有效。
+     * get 是否开启公网访问，对公共资源池与安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)有效。
 
 ## 使用说明
 - 公共资源池: 为true时表示需要公网访问，系统会自动分配LB，无需指定lbId和lbPort
-- 安全队列(&#x60;queueType&#x3D;security&#x60;): 为true时即开启SSH访问，系统会自动分配LB与端口(LB取自该安全队列所属集群绑定的负载均衡)，无需也不应指定lbId和lbPort
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;): 为true时即开启SSH访问，系统会自动分配LB与端口(LB取自该安全队列所属集群绑定的负载均衡)，无需也不应指定lbId和lbPort
 - 普通私有资源池: 无效，需要通过lbId和lbPort指定负载均衡
 - 默认为false
 
@@ -168,11 +168,11 @@ public class LbSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否开启公网访问，对公共资源池与安全队列(&#x60;queueType&#x3D;security&#x60;)有效。
+     * set 是否开启公网访问，对公共资源池与安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)有效。
 
 ## 使用说明
 - 公共资源池: 为true时表示需要公网访问，系统会自动分配LB，无需指定lbId和lbPort
-- 安全队列(&#x60;queueType&#x3D;security&#x60;): 为true时即开启SSH访问，系统会自动分配LB与端口(LB取自该安全队列所属集群绑定的负载均衡)，无需也不应指定lbId和lbPort
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;): 为true时即开启SSH访问，系统会自动分配LB与端口(LB取自该安全队列所属集群绑定的负载均衡)，无需也不应指定lbId和lbPort
 - 普通私有资源池: 无效，需要通过lbId和lbPort指定负载均衡
 - 默认为false
 
@@ -190,7 +190,7 @@ public class LbSpec  implements java.io.Serializable {
 
 ## 要求
 - 私有资源池必填
-- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;)均无需指定(系统自动分配)，传入会被忽略
+- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)均无需指定(系统自动分配)，传入会被忽略
 - 负载均衡需要与资源队列在同一VPC下
 - 支持四层(TCP)负载均衡
 
@@ -199,7 +199,7 @@ public class LbSpec  implements java.io.Serializable {
 
 ## 要求
 - 私有资源池必填
-- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;)均无需指定(系统自动分配)，传入会被忽略
+- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)均无需指定(系统自动分配)，传入会被忽略
 - 负载均衡需要与资源队列在同一VPC下
 - 支持四层(TCP)负载均衡
 
@@ -216,7 +216,7 @@ public class LbSpec  implements java.io.Serializable {
 
 ## 端口范围
 - 私有资源池必填
-- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;)均无需指定(系统自动分配)，传入会被忽略
+- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)均无需指定(系统自动分配)，传入会被忽略
 - 1-65534
 - 需要指定一个未被占用的空闲可用端口
 - 建议使用1024以上端口
@@ -226,7 +226,7 @@ public class LbSpec  implements java.io.Serializable {
 
 ## 端口范围
 - 私有资源池必填
-- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;)均无需指定(系统自动分配)，传入会被忽略
+- 公共资源池、安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)均无需指定(系统自动分配)，传入会被忽略
 - 1-65534
 - 需要指定一个未被占用的空闲可用端口
 - 建议使用1024以上端口
@@ -240,20 +240,20 @@ public class LbSpec  implements java.io.Serializable {
 
 
     /**
-     * set 是否开启公网访问，对公共资源池与安全队列(&#x60;queueType&#x3D;security&#x60;)有效。
+     * set 是否开启公网访问，对公共资源池与安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)有效。
 
 ## 使用说明
 - 公共资源池: 为true时表示需要公网访问，系统会自动分配LB，无需指定lbId和lbPort
-- 安全队列(&#x60;queueType&#x3D;security&#x60;): 为true时即开启SSH访问，系统会自动分配LB与端口(LB取自该安全队列所属集群绑定的负载均衡)，无需也不应指定lbId和lbPort
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;): 为true时即开启SSH访问，系统会自动分配LB与端口(LB取自该安全队列所属集群绑定的负载均衡)，无需也不应指定lbId和lbPort
 - 普通私有资源池: 无效，需要通过lbId和lbPort指定负载均衡
 - 默认为false
 
      *
-     * @param lbEnable 是否开启公网访问，对公共资源池与安全队列(&#x60;queueType&#x3D;security&#x60;)有效。
+     * @param lbEnable 是否开启公网访问，对公共资源池与安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)有效。
 
 ## 使用说明
 - 公共资源池: 为true时表示需要公网访问，系统会自动分配LB，无需指定lbId和lbPort
-- 安全队列(&#x60;queueType&#x3D;security&#x60;): 为true时即开启SSH访问，系统会自动分配LB与端口(LB取自该安全队列所属集群绑定的负载均衡)，无需也不应指定lbId和lbPort
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;): 为true时即开启SSH访问，系统会自动分配LB与端口(LB取自该安全队列所属集群绑定的负载均衡)，无需也不应指定lbId和lbPort
 - 普通私有资源池: 无效，需要通过lbId和lbPort指定负载均衡
 - 默认为false
 

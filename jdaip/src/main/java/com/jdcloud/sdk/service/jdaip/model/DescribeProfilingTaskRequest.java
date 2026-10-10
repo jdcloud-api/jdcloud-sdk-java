@@ -20,7 +20,7 @@
 
 训练任务管理提供以下核心能力：
 
-- **任务创建**：支持 PyTorch 和 Ray 两种训练框架，可使用公共资源池、共享资源池或工作空间绑定的资源队列
+- **任务创建**：支持 PyTorch、Ray 和 Batch 三种任务类型，可使用公共资源池、共享资源池或工作空间绑定的资源队列
 - **任务监控**：实时查看任务状态、事件、日志
 - **任务控制**：支持停止、删除等操作
 - **实例管理**：查看训练任务的各个运行实例状态
@@ -28,7 +28,7 @@
 ## 任务生命周期
 
 ```
-创建 → 排队(queuing) → 启动(pending) → 运行(running) → 成功(success)/失败(failed)/停止(stopped)
+创建 → 排队(queuing) → 启动(pending) → 运行(running) → 成功(success)/部分成功(partial-success)/失败(failed)/停止(stopped)
                           ↓
                      异常时可自动重启
 ```
@@ -77,8 +77,8 @@ public class DescribeProfilingTaskRequest extends JdcloudRequest implements java
 
     /**
      * &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;instanceName&#x60;: 实例名称，精确匹配，支持单个。
-&#x60;nodeName&#x60;: 所属节点名称，精确匹配，支持单个。
+&#x60;instanceName&#x60;: 实例名称，模糊匹配，支持单个。
+&#x60;nodeName&#x60;: 所属节点名称，模糊匹配，支持单个。
 &#x60;collectStatus&#x60;: 采集状态，精确匹配，支持多个，可选(pending/collecting/success/failed)。
 
      */
@@ -154,8 +154,8 @@ public class DescribeProfilingTaskRequest extends JdcloudRequest implements java
 
     /**
     * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;instanceName&#x60;: 实例名称，精确匹配，支持单个。
-&#x60;nodeName&#x60;: 所属节点名称，精确匹配，支持单个。
+&#x60;instanceName&#x60;: 实例名称，模糊匹配，支持单个。
+&#x60;nodeName&#x60;: 所属节点名称，模糊匹配，支持单个。
 &#x60;collectStatus&#x60;: 采集状态，精确匹配，支持多个，可选(pending/collecting/success/failed)。
 
     *
@@ -167,8 +167,8 @@ public class DescribeProfilingTaskRequest extends JdcloudRequest implements java
 
     /**
     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;instanceName&#x60;: 实例名称，精确匹配，支持单个。
-&#x60;nodeName&#x60;: 所属节点名称，精确匹配，支持单个。
+&#x60;instanceName&#x60;: 实例名称，模糊匹配，支持单个。
+&#x60;nodeName&#x60;: 所属节点名称，模糊匹配，支持单个。
 &#x60;collectStatus&#x60;: 采集状态，精确匹配，支持多个，可选(pending/collecting/success/failed)。
 
     *
@@ -282,14 +282,14 @@ public class DescribeProfilingTaskRequest extends JdcloudRequest implements java
 
     /**
     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;instanceName&#x60;: 实例名称，精确匹配，支持单个。
-&#x60;nodeName&#x60;: 所属节点名称，精确匹配，支持单个。
+&#x60;instanceName&#x60;: 实例名称，模糊匹配，支持单个。
+&#x60;nodeName&#x60;: 所属节点名称，模糊匹配，支持单个。
 &#x60;collectStatus&#x60;: 采集状态，精确匹配，支持多个，可选(pending/collecting/success/failed)。
 
     *
     * @param filters &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;instanceName&#x60;: 实例名称，精确匹配，支持单个。
-&#x60;nodeName&#x60;: 所属节点名称，精确匹配，支持单个。
+&#x60;instanceName&#x60;: 实例名称，模糊匹配，支持单个。
+&#x60;nodeName&#x60;: 所属节点名称，模糊匹配，支持单个。
 &#x60;collectStatus&#x60;: 采集状态，精确匹配，支持多个，可选(pending/collecting/success/failed)。
 
     * @return DescribeProfilingTaskRequest
@@ -351,8 +351,8 @@ public class DescribeProfilingTaskRequest extends JdcloudRequest implements java
 
     /**
      * add item to &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;instanceName&#x60;: 实例名称，精确匹配，支持单个。
-&#x60;nodeName&#x60;: 所属节点名称，精确匹配，支持单个。
+&#x60;instanceName&#x60;: 实例名称，模糊匹配，支持单个。
+&#x60;nodeName&#x60;: 所属节点名称，模糊匹配，支持单个。
 &#x60;collectStatus&#x60;: 采集状态，精确匹配，支持多个，可选(pending/collecting/success/failed)。
 
      *

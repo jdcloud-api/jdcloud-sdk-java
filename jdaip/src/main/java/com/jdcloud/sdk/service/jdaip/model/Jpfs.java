@@ -73,6 +73,11 @@ public class Jpfs  implements java.io.Serializable {
     private String az;
 
     /**
+     * 是否为边缘网络作用域
+     */
+    private Boolean edge;
+
+    /**
      * 文件系统规格
      */
     private JpfsSpec spec;
@@ -91,6 +96,21 @@ public class Jpfs  implements java.io.Serializable {
      * 计费到期时间，原样返回JPFS ChargeSpecRes中的chargeExpiredTime
      */
     private String chargeExpiredTime;
+
+    /**
+     * RDMA协议挂载目标ID
+     */
+    private String rdmaMountTargetId;
+
+    /**
+     * TCP协议挂载目标ID，仅general规格返回
+     */
+    private String tcpMountTargetId;
+
+    /**
+     * NFS协议挂载目标ID，仅intelligent规格返回
+     */
+    private String nfsMountTargetId;
 
     /**
      * 商业平台购买单ID
@@ -287,6 +307,25 @@ public class Jpfs  implements java.io.Serializable {
 
 
     /**
+     * get 是否为边缘网络作用域
+     *
+     * @return
+     */
+    public Boolean getEdge() {
+        return edge;
+    }
+
+    /**
+     * set 是否为边缘网络作用域
+     *
+     * @param edge
+     */
+    public void setEdge(Boolean edge) {
+        this.edge = edge;
+    }
+
+
+    /**
      * get 文件系统规格
      *
      * @return
@@ -359,6 +398,63 @@ public class Jpfs  implements java.io.Serializable {
      */
     public void setChargeExpiredTime(String chargeExpiredTime) {
         this.chargeExpiredTime = chargeExpiredTime;
+    }
+
+
+    /**
+     * get RDMA协议挂载目标ID
+     *
+     * @return
+     */
+    public String getRdmaMountTargetId() {
+        return rdmaMountTargetId;
+    }
+
+    /**
+     * set RDMA协议挂载目标ID
+     *
+     * @param rdmaMountTargetId
+     */
+    public void setRdmaMountTargetId(String rdmaMountTargetId) {
+        this.rdmaMountTargetId = rdmaMountTargetId;
+    }
+
+
+    /**
+     * get TCP协议挂载目标ID，仅general规格返回
+     *
+     * @return
+     */
+    public String getTcpMountTargetId() {
+        return tcpMountTargetId;
+    }
+
+    /**
+     * set TCP协议挂载目标ID，仅general规格返回
+     *
+     * @param tcpMountTargetId
+     */
+    public void setTcpMountTargetId(String tcpMountTargetId) {
+        this.tcpMountTargetId = tcpMountTargetId;
+    }
+
+
+    /**
+     * get NFS协议挂载目标ID，仅intelligent规格返回
+     *
+     * @return
+     */
+    public String getNfsMountTargetId() {
+        return nfsMountTargetId;
+    }
+
+    /**
+     * set NFS协议挂载目标ID，仅intelligent规格返回
+     *
+     * @param nfsMountTargetId
+     */
+    public void setNfsMountTargetId(String nfsMountTargetId) {
+        this.nfsMountTargetId = nfsMountTargetId;
     }
 
 
@@ -612,6 +708,18 @@ public class Jpfs  implements java.io.Serializable {
 
 
     /**
+     * set 是否为边缘网络作用域
+     *
+     * @param edge 是否为边缘网络作用域
+     * @return Jpfs
+     */
+    public Jpfs edge(Boolean edge) {
+        this.edge = edge;
+        return this;
+    }
+
+
+    /**
      * set 文件系统规格
      *
      * @param spec 文件系统规格
@@ -655,6 +763,42 @@ public class Jpfs  implements java.io.Serializable {
      */
     public Jpfs chargeExpiredTime(String chargeExpiredTime) {
         this.chargeExpiredTime = chargeExpiredTime;
+        return this;
+    }
+
+
+    /**
+     * set RDMA协议挂载目标ID
+     *
+     * @param rdmaMountTargetId RDMA协议挂载目标ID
+     * @return Jpfs
+     */
+    public Jpfs rdmaMountTargetId(String rdmaMountTargetId) {
+        this.rdmaMountTargetId = rdmaMountTargetId;
+        return this;
+    }
+
+
+    /**
+     * set TCP协议挂载目标ID，仅general规格返回
+     *
+     * @param tcpMountTargetId TCP协议挂载目标ID，仅general规格返回
+     * @return Jpfs
+     */
+    public Jpfs tcpMountTargetId(String tcpMountTargetId) {
+        this.tcpMountTargetId = tcpMountTargetId;
+        return this;
+    }
+
+
+    /**
+     * set NFS协议挂载目标ID，仅intelligent规格返回
+     *
+     * @param nfsMountTargetId NFS协议挂载目标ID，仅intelligent规格返回
+     * @return Jpfs
+     */
+    public Jpfs nfsMountTargetId(String nfsMountTargetId) {
+        this.nfsMountTargetId = nfsMountTargetId;
         return this;
     }
 

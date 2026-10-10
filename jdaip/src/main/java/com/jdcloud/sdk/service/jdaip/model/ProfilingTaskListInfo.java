@@ -58,9 +58,9 @@ public class ProfilingTaskListInfo  implements java.io.Serializable {
 **可选值：**
 - &#x60;pending&#x60;：等待中，任务已创建但尚未开始采集
 - &#x60;running&#x60;：运行中，正在采集数据
-- &#x60;completed&#x60;：已完成，所有实例采集结束
+- &#x60;success&#x60;：已完成，所有实例采集结束
 - &#x60;failed&#x60;：失败，部分或全部实例采集失败
-- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;completed&#x60; 流转而来
+- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;success&#x60; 流转而来
 
      */
     private String status;
@@ -158,9 +158,9 @@ public class ProfilingTaskListInfo  implements java.io.Serializable {
 **可选值：**
 - &#x60;pending&#x60;：等待中，任务已创建但尚未开始采集
 - &#x60;running&#x60;：运行中，正在采集数据
-- &#x60;completed&#x60;：已完成，所有实例采集结束
+- &#x60;success&#x60;：已完成，所有实例采集结束
 - &#x60;failed&#x60;：失败，部分或全部实例采集失败
-- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;completed&#x60; 流转而来
+- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;success&#x60; 流转而来
 
      *
      * @return
@@ -175,9 +175,9 @@ public class ProfilingTaskListInfo  implements java.io.Serializable {
 **可选值：**
 - &#x60;pending&#x60;：等待中，任务已创建但尚未开始采集
 - &#x60;running&#x60;：运行中，正在采集数据
-- &#x60;completed&#x60;：已完成，所有实例采集结束
+- &#x60;success&#x60;：已完成，所有实例采集结束
 - &#x60;failed&#x60;：失败，部分或全部实例采集失败
-- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;completed&#x60; 流转而来
+- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;success&#x60; 流转而来
 
      *
      * @param status
@@ -331,9 +331,9 @@ public class ProfilingTaskListInfo  implements java.io.Serializable {
 **可选值：**
 - &#x60;pending&#x60;：等待中，任务已创建但尚未开始采集
 - &#x60;running&#x60;：运行中，正在采集数据
-- &#x60;completed&#x60;：已完成，所有实例采集结束
+- &#x60;success&#x60;：已完成，所有实例采集结束
 - &#x60;failed&#x60;：失败，部分或全部实例采集失败
-- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;completed&#x60; 流转而来
+- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;success&#x60; 流转而来
 
      *
      * @param status 任务状态。
@@ -341,9 +341,9 @@ public class ProfilingTaskListInfo  implements java.io.Serializable {
 **可选值：**
 - &#x60;pending&#x60;：等待中，任务已创建但尚未开始采集
 - &#x60;running&#x60;：运行中，正在采集数据
-- &#x60;completed&#x60;：已完成，所有实例采集结束
+- &#x60;success&#x60;：已完成，所有实例采集结束
 - &#x60;failed&#x60;：失败，部分或全部实例采集失败
-- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;completed&#x60; 流转而来
+- &#x60;expired&#x60;：结果已过期。采集结果在平台存储上仅保留有限时长，超期后被回收；此状态表示采集本身成功但结果已不可下载、也不可转存至OSS。由查询接口惰性判定并写回，仅从 &#x60;success&#x60; 流转而来
 
      * @return ProfilingTaskListInfo
      */

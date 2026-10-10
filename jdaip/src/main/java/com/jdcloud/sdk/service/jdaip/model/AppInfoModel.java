@@ -183,7 +183,7 @@ public class AppInfoModel  implements java.io.Serializable {
      * 支持远程调用后RPC字段规则
 1. 本地应用绑定本地卡，只使用allocate字段
 2. 本地应用绑定远程卡，只使用remoteAllocates字段
-3. 远程应用使用本地卡，使用 remoteNodeIp\u0026remoteNodeName + remoteAllocates字段
+3. 远程应用使用本地卡，使用 remoteNodeIp + remoteNodeName + remoteAllocates字段
      */
     private String remoteNodeIp;
 
@@ -814,7 +814,7 @@ public class AppInfoModel  implements java.io.Serializable {
      * get 支持远程调用后RPC字段规则
 1. 本地应用绑定本地卡，只使用allocate字段
 2. 本地应用绑定远程卡，只使用remoteAllocates字段
-3. 远程应用使用本地卡，使用 remoteNodeIp\u0026remoteNodeName + remoteAllocates字段
+3. 远程应用使用本地卡，使用 remoteNodeIp + remoteNodeName + remoteAllocates字段
      *
      * @return
      */
@@ -826,7 +826,7 @@ public class AppInfoModel  implements java.io.Serializable {
      * set 支持远程调用后RPC字段规则
 1. 本地应用绑定本地卡，只使用allocate字段
 2. 本地应用绑定远程卡，只使用remoteAllocates字段
-3. 远程应用使用本地卡，使用 remoteNodeIp\u0026remoteNodeName + remoteAllocates字段
+3. 远程应用使用本地卡，使用 remoteNodeIp + remoteNodeName + remoteAllocates字段
      *
      * @param remoteNodeIp
      */
@@ -1454,12 +1454,12 @@ public class AppInfoModel  implements java.io.Serializable {
      * set 支持远程调用后RPC字段规则
 1. 本地应用绑定本地卡，只使用allocate字段
 2. 本地应用绑定远程卡，只使用remoteAllocates字段
-3. 远程应用使用本地卡，使用 remoteNodeIp\u0026remoteNodeName + remoteAllocates字段
+3. 远程应用使用本地卡，使用 remoteNodeIp + remoteNodeName + remoteAllocates字段
      *
      * @param remoteNodeIp 支持远程调用后RPC字段规则
 1. 本地应用绑定本地卡，只使用allocate字段
 2. 本地应用绑定远程卡，只使用remoteAllocates字段
-3. 远程应用使用本地卡，使用 remoteNodeIp\u0026remoteNodeName + remoteAllocates字段
+3. 远程应用使用本地卡，使用 remoteNodeIp + remoteNodeName + remoteAllocates字段
      * @return AppInfoModel
      */
     public AppInfoModel remoteNodeIp(String remoteNodeIp) {

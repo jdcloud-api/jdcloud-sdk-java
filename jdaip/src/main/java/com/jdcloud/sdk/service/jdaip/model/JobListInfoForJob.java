@@ -68,6 +68,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
 - &#x60;pending&#x60;：启动中，资源已分配，正在创建 Pod
 - &#x60;running&#x60;：运行中，训练任务正在执行
 - &#x60;success&#x60;：成功，训练任务正常完成
+- &#x60;partial-success&#x60;：部分成功，仅 Batch 任务返回；有副本成功且有副本失败
 - &#x60;failed&#x60;：失败，训练任务执行失败
 - &#x60;stopping&#x60;：停止中，正在执行停止操作
 - &#x60;stopped&#x60;：已停止，任务已被手动停止
@@ -79,7 +80,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
     private String state;
 
     /**
-     * 训练任务失败类型，仅在状态为 &#x60;failed&#x60; 时有值。
+     * 训练任务失败类型。
 
 **可选值：**
 - &#x60;resource-failed&#x60;：节点故障
@@ -87,6 +88,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
 - &#x60;environment-failed&#x60;：算力健康检测不通过
 - &#x60;task-hang&#x60;：任务卡住
 - &#x60;process-inspection-failed&#x60;：进程巡检失败
+- &#x60;task-evict&#x60;：任务副本被调度器抢占或跨队列归还
 
      */
     private String failureType;
@@ -108,7 +110,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
     /**
      * 训练框架类型。
 
-**可选值：** &#x60;pytorch&#x60;, &#x60;ray&#x60;
+**可选值：** &#x60;pytorch&#x60;, &#x60;ray&#x60;, &#x60;batch&#x60;
 
      */
     private String jobType;
@@ -157,7 +159,15 @@ public class JobListInfoForJob  implements java.io.Serializable {
     private String queueId;
 
     /**
-     * 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     * 队列类型。
+
+**可选值：**
+- &#x60;public&#x60;：公共资源池
+- &#x60;exclusive&#x60;：共享资源池
+- &#x60;private&#x60;：专属资源池
+- &#x60;security&#x60;：安全异构节点池
+- &#x60;sec-vm&#x60;：安全云主机节点池
+
      */
     private String queueType;
 
@@ -374,6 +384,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
 - &#x60;pending&#x60;：启动中，资源已分配，正在创建 Pod
 - &#x60;running&#x60;：运行中，训练任务正在执行
 - &#x60;success&#x60;：成功，训练任务正常完成
+- &#x60;partial-success&#x60;：部分成功，仅 Batch 任务返回；有副本成功且有副本失败
 - &#x60;failed&#x60;：失败，训练任务执行失败
 - &#x60;stopping&#x60;：停止中，正在执行停止操作
 - &#x60;stopped&#x60;：已停止，任务已被手动停止
@@ -396,6 +407,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
 - &#x60;pending&#x60;：启动中，资源已分配，正在创建 Pod
 - &#x60;running&#x60;：运行中，训练任务正在执行
 - &#x60;success&#x60;：成功，训练任务正常完成
+- &#x60;partial-success&#x60;：部分成功，仅 Batch 任务返回；有副本成功且有副本失败
 - &#x60;failed&#x60;：失败，训练任务执行失败
 - &#x60;stopping&#x60;：停止中，正在执行停止操作
 - &#x60;stopped&#x60;：已停止，任务已被手动停止
@@ -412,7 +424,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * get 训练任务失败类型，仅在状态为 &#x60;failed&#x60; 时有值。
+     * get 训练任务失败类型。
 
 **可选值：**
 - &#x60;resource-failed&#x60;：节点故障
@@ -420,6 +432,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
 - &#x60;environment-failed&#x60;：算力健康检测不通过
 - &#x60;task-hang&#x60;：任务卡住
 - &#x60;process-inspection-failed&#x60;：进程巡检失败
+- &#x60;task-evict&#x60;：任务副本被调度器抢占或跨队列归还
 
      *
      * @return
@@ -429,7 +442,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
     }
 
     /**
-     * set 训练任务失败类型，仅在状态为 &#x60;failed&#x60; 时有值。
+     * set 训练任务失败类型。
 
 **可选值：**
 - &#x60;resource-failed&#x60;：节点故障
@@ -437,6 +450,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
 - &#x60;environment-failed&#x60;：算力健康检测不通过
 - &#x60;task-hang&#x60;：任务卡住
 - &#x60;process-inspection-failed&#x60;：进程巡检失败
+- &#x60;task-evict&#x60;：任务副本被调度器抢占或跨队列归还
 
      *
      * @param failureType
@@ -495,7 +509,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
     /**
      * get 训练框架类型。
 
-**可选值：** &#x60;pytorch&#x60;, &#x60;ray&#x60;
+**可选值：** &#x60;pytorch&#x60;, &#x60;ray&#x60;, &#x60;batch&#x60;
 
      *
      * @return
@@ -507,7 +521,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
     /**
      * set 训练框架类型。
 
-**可选值：** &#x60;pytorch&#x60;, &#x60;ray&#x60;
+**可选值：** &#x60;pytorch&#x60;, &#x60;ray&#x60;, &#x60;batch&#x60;
 
      *
      * @param jobType
@@ -667,7 +681,15 @@ public class JobListInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * get 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     * get 队列类型。
+
+**可选值：**
+- &#x60;public&#x60;：公共资源池
+- &#x60;exclusive&#x60;：共享资源池
+- &#x60;private&#x60;：专属资源池
+- &#x60;security&#x60;：安全异构节点池
+- &#x60;sec-vm&#x60;：安全云主机节点池
+
      *
      * @return
      */
@@ -676,7 +698,15 @@ public class JobListInfoForJob  implements java.io.Serializable {
     }
 
     /**
-     * set 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     * set 队列类型。
+
+**可选值：**
+- &#x60;public&#x60;：公共资源池
+- &#x60;exclusive&#x60;：共享资源池
+- &#x60;private&#x60;：专属资源池
+- &#x60;security&#x60;：安全异构节点池
+- &#x60;sec-vm&#x60;：安全云主机节点池
+
      *
      * @param queueType
      */
@@ -1190,6 +1220,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
 - &#x60;pending&#x60;：启动中，资源已分配，正在创建 Pod
 - &#x60;running&#x60;：运行中，训练任务正在执行
 - &#x60;success&#x60;：成功，训练任务正常完成
+- &#x60;partial-success&#x60;：部分成功，仅 Batch 任务返回；有副本成功且有副本失败
 - &#x60;failed&#x60;：失败，训练任务执行失败
 - &#x60;stopping&#x60;：停止中，正在执行停止操作
 - &#x60;stopped&#x60;：已停止，任务已被手动停止
@@ -1205,6 +1236,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
 - &#x60;pending&#x60;：启动中，资源已分配，正在创建 Pod
 - &#x60;running&#x60;：运行中，训练任务正在执行
 - &#x60;success&#x60;：成功，训练任务正常完成
+- &#x60;partial-success&#x60;：部分成功，仅 Batch 任务返回；有副本成功且有副本失败
 - &#x60;failed&#x60;：失败，训练任务执行失败
 - &#x60;stopping&#x60;：停止中，正在执行停止操作
 - &#x60;stopped&#x60;：已停止，任务已被手动停止
@@ -1221,7 +1253,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * set 训练任务失败类型，仅在状态为 &#x60;failed&#x60; 时有值。
+     * set 训练任务失败类型。
 
 **可选值：**
 - &#x60;resource-failed&#x60;：节点故障
@@ -1229,9 +1261,10 @@ public class JobListInfoForJob  implements java.io.Serializable {
 - &#x60;environment-failed&#x60;：算力健康检测不通过
 - &#x60;task-hang&#x60;：任务卡住
 - &#x60;process-inspection-failed&#x60;：进程巡检失败
+- &#x60;task-evict&#x60;：任务副本被调度器抢占或跨队列归还
 
      *
-     * @param failureType 训练任务失败类型，仅在状态为 &#x60;failed&#x60; 时有值。
+     * @param failureType 训练任务失败类型。
 
 **可选值：**
 - &#x60;resource-failed&#x60;：节点故障
@@ -1239,6 +1272,7 @@ public class JobListInfoForJob  implements java.io.Serializable {
 - &#x60;environment-failed&#x60;：算力健康检测不通过
 - &#x60;task-hang&#x60;：任务卡住
 - &#x60;process-inspection-failed&#x60;：进程巡检失败
+- &#x60;task-evict&#x60;：任务副本被调度器抢占或跨队列归还
 
      * @return JobListInfoForJob
      */
@@ -1283,12 +1317,12 @@ public class JobListInfoForJob  implements java.io.Serializable {
     /**
      * set 训练框架类型。
 
-**可选值：** &#x60;pytorch&#x60;, &#x60;ray&#x60;
+**可选值：** &#x60;pytorch&#x60;, &#x60;ray&#x60;, &#x60;batch&#x60;
 
      *
      * @param jobType 训练框架类型。
 
-**可选值：** &#x60;pytorch&#x60;, &#x60;ray&#x60;
+**可选值：** &#x60;pytorch&#x60;, &#x60;ray&#x60;, &#x60;batch&#x60;
 
      * @return JobListInfoForJob
      */
@@ -1399,9 +1433,25 @@ public class JobListInfoForJob  implements java.io.Serializable {
 
 
     /**
-     * set 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     * set 队列类型。
+
+**可选值：**
+- &#x60;public&#x60;：公共资源池
+- &#x60;exclusive&#x60;：共享资源池
+- &#x60;private&#x60;：专属资源池
+- &#x60;security&#x60;：安全异构节点池
+- &#x60;sec-vm&#x60;：安全云主机节点池
+
      *
-     * @param queueType 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     * @param queueType 队列类型。
+
+**可选值：**
+- &#x60;public&#x60;：公共资源池
+- &#x60;exclusive&#x60;：共享资源池
+- &#x60;private&#x60;：专属资源池
+- &#x60;security&#x60;：安全异构节点池
+- &#x60;sec-vm&#x60;：安全云主机节点池
+
      * @return JobListInfoForJob
      */
     public JobListInfoForJob queueType(String queueType) {

@@ -78,6 +78,18 @@ public class EsDatasetSpec  implements java.io.Serializable {
     private String datasetUrl;
 
     /**
+     * 挂载点ID。仅当存储类型为&#x60;jpfs&#x60;时生效，用于指定JPFS的挂载点ID。
+
+     */
+    private String mountTargetId;
+
+    /**
+     * 挂载点IP。仅当存储类型为&#x60;cfs&#x60;时生效，用于指定CFS的挂载点IP地址。
+
+     */
+    private String host;
+
+    /**
      * 建议挂载到/mnt/开头的路径下，不支持挂载到系统目录。
 系统目录参考：/, /bin, /boot, /dev, /etc, /home, /lib, /lib32, /lib64, /libx32, /opt, /proc, /root, /run, /sbin, /sys, /tmp, /usr, /var。
 
@@ -218,6 +230,48 @@ public class EsDatasetSpec  implements java.io.Serializable {
 
 
     /**
+     * get 挂载点ID。仅当存储类型为&#x60;jpfs&#x60;时生效，用于指定JPFS的挂载点ID。
+
+     *
+     * @return
+     */
+    public String getMountTargetId() {
+        return mountTargetId;
+    }
+
+    /**
+     * set 挂载点ID。仅当存储类型为&#x60;jpfs&#x60;时生效，用于指定JPFS的挂载点ID。
+
+     *
+     * @param mountTargetId
+     */
+    public void setMountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
+    }
+
+
+    /**
+     * get 挂载点IP。仅当存储类型为&#x60;cfs&#x60;时生效，用于指定CFS的挂载点IP地址。
+
+     *
+     * @return
+     */
+    public String getHost() {
+        return host;
+    }
+
+    /**
+     * set 挂载点IP。仅当存储类型为&#x60;cfs&#x60;时生效，用于指定CFS的挂载点IP地址。
+
+     *
+     * @param host
+     */
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+
+    /**
      * get 建议挂载到/mnt/开头的路径下，不支持挂载到系统目录。
 系统目录参考：/, /bin, /boot, /dev, /etc, /home, /lib, /lib32, /lib64, /libx32, /opt, /proc, /root, /run, /sbin, /sys, /tmp, /usr, /var。
 
@@ -340,6 +394,34 @@ public class EsDatasetSpec  implements java.io.Serializable {
      */
     public EsDatasetSpec datasetUrl(String datasetUrl) {
         this.datasetUrl = datasetUrl;
+        return this;
+    }
+
+
+    /**
+     * set 挂载点ID。仅当存储类型为&#x60;jpfs&#x60;时生效，用于指定JPFS的挂载点ID。
+
+     *
+     * @param mountTargetId 挂载点ID。仅当存储类型为&#x60;jpfs&#x60;时生效，用于指定JPFS的挂载点ID。
+
+     * @return EsDatasetSpec
+     */
+    public EsDatasetSpec mountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
+        return this;
+    }
+
+
+    /**
+     * set 挂载点IP。仅当存储类型为&#x60;cfs&#x60;时生效，用于指定CFS的挂载点IP地址。
+
+     *
+     * @param host 挂载点IP。仅当存储类型为&#x60;cfs&#x60;时生效，用于指定CFS的挂载点IP地址。
+
+     * @return EsDatasetSpec
+     */
+    public EsDatasetSpec host(String host) {
+        this.host = host;
         return this;
     }
 
