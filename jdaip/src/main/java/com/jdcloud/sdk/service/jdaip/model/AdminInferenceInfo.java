@@ -86,6 +86,11 @@ public class AdminInferenceInfo  implements java.io.Serializable {
     private String createUserPin;
 
     /**
+     * 推理服务创建时间
+     */
+    private String createTime;
+
+    /**
      * 推理服务所属工作空间ID
      */
     private String workspaceId;
@@ -282,6 +287,25 @@ public class AdminInferenceInfo  implements java.io.Serializable {
 
 
     /**
+     * get 推理服务创建时间
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 推理服务创建时间
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+
+    /**
      * get 推理服务所属工作空间ID
      *
      * @return
@@ -472,6 +496,18 @@ public class AdminInferenceInfo  implements java.io.Serializable {
      */
     public AdminInferenceInfo createUserPin(String createUserPin) {
         this.createUserPin = createUserPin;
+        return this;
+    }
+
+
+    /**
+     * set 推理服务创建时间
+     *
+     * @param createTime 推理服务创建时间
+     * @return AdminInferenceInfo
+     */
+    public AdminInferenceInfo createTime(String createTime) {
+        this.createTime = createTime;
         return this;
     }
 

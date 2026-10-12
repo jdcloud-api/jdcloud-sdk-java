@@ -70,7 +70,7 @@ public class UpdateJobRequest extends JdcloudRequest implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
-     * 训练任务名称。1~32字符，仅支持中文、大小写字母、数字、英文中划线 &quot;-&quot;和英文下划线&quot;_&quot;。
+     * 训练任务名称。1~256字符，仅支持中文、大小写字母、数字、英文中划线 &quot;-&quot;和英文下划线&quot;_&quot;。
      */
     private String name;
 
@@ -122,7 +122,7 @@ public class UpdateJobRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * get 训练任务名称。1~32字符，仅支持中文、大小写字母、数字、英文中划线 &quot;-&quot;和英文下划线&quot;_&quot;。
+     * get 训练任务名称。1~256字符，仅支持中文、大小写字母、数字、英文中划线 &quot;-&quot;和英文下划线&quot;_&quot;。
      *
      * @return
      */
@@ -131,7 +131,7 @@ public class UpdateJobRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 训练任务名称。1~32字符，仅支持中文、大小写字母、数字、英文中划线 &quot;-&quot;和英文下划线&quot;_&quot;。
+     * set 训练任务名称。1~256字符，仅支持中文、大小写字母、数字、英文中划线 &quot;-&quot;和英文下划线&quot;_&quot;。
      *
      * @param name
      */
@@ -283,9 +283,9 @@ public class UpdateJobRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * set 训练任务名称。1~32字符，仅支持中文、大小写字母、数字、英文中划线 &quot;-&quot;和英文下划线&quot;_&quot;。
+     * set 训练任务名称。1~256字符，仅支持中文、大小写字母、数字、英文中划线 &quot;-&quot;和英文下划线&quot;_&quot;。
      *
-     * @param name 训练任务名称。1~32字符，仅支持中文、大小写字母、数字、英文中划线 &quot;-&quot;和英文下划线&quot;_&quot;。
+     * @param name 训练任务名称。1~256字符，仅支持中文、大小写字母、数字、英文中划线 &quot;-&quot;和英文下划线&quot;_&quot;。
      * @return UpdateJobRequest
      */
     public UpdateJobRequest name(String name) {

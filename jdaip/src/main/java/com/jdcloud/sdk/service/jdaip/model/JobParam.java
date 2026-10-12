@@ -49,7 +49,7 @@ public class JobParam  implements java.io.Serializable {
      * 训练任务名称。
 
 **命名规则：**
-- 长度：1~32个字符
+- 长度：1~256个字符
 - 支持字符：中文、大小写字母、数字、英文中划线 &quot;-&quot; 和英文下划线 &quot;_&quot;
 - 同一工作空间内名称不能重复
 
@@ -415,7 +415,7 @@ public class JobParam  implements java.io.Serializable {
      * get 训练任务名称。
 
 **命名规则：**
-- 长度：1~32个字符
+- 长度：1~256个字符
 - 支持字符：中文、大小写字母、数字、英文中划线 &quot;-&quot; 和英文下划线 &quot;_&quot;
 - 同一工作空间内名称不能重复
 
@@ -434,7 +434,7 @@ public class JobParam  implements java.io.Serializable {
      * set 训练任务名称。
 
 **命名规则：**
-- 长度：1~32个字符
+- 长度：1~256个字符
 - 支持字符：中文、大小写字母、数字、英文中划线 &quot;-&quot; 和英文下划线 &quot;_&quot;
 - 同一工作空间内名称不能重复
 
@@ -1381,7 +1381,7 @@ public class JobParam  implements java.io.Serializable {
      * set 训练任务名称。
 
 **命名规则：**
-- 长度：1~32个字符
+- 长度：1~256个字符
 - 支持字符：中文、大小写字母、数字、英文中划线 &quot;-&quot; 和英文下划线 &quot;_&quot;
 - 同一工作空间内名称不能重复
 
@@ -1393,7 +1393,7 @@ public class JobParam  implements java.io.Serializable {
      * @param name 训练任务名称。
 
 **命名规则：**
-- 长度：1~32个字符
+- 长度：1~256个字符
 - 支持字符：中文、大小写字母、数字、英文中划线 &quot;-&quot; 和英文下划线 &quot;_&quot;
 - 同一工作空间内名称不能重复
 

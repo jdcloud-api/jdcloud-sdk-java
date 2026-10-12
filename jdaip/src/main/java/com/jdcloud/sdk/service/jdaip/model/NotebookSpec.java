@@ -51,7 +51,7 @@ public class NotebookSpec  implements java.io.Serializable {
      * Notebook实例名称。
 
 ## 命名规则
-- 长度：1~32字符
+- 长度：1~256字符
 - 支持字符：中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;、点&quot;.&quot;
 - 示例：my-notebook-01
 
@@ -187,6 +187,7 @@ public class NotebookSpec  implements java.io.Serializable {
 - 支持公共数据集和个人数据集
 - 可选择数据集版本
 - 建议挂载到&#x60;/mnt/techdataset-x/&#x60;路径下
+- 默认强制只读挂载
 
      */
     
@@ -309,7 +310,7 @@ public class NotebookSpec  implements java.io.Serializable {
      * get Notebook实例名称。
 
 ## 命名规则
-- 长度：1~32字符
+- 长度：1~256字符
 - 支持字符：中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;、点&quot;.&quot;
 - 示例：my-notebook-01
 
@@ -324,7 +325,7 @@ public class NotebookSpec  implements java.io.Serializable {
      * set Notebook实例名称。
 
 ## 命名规则
-- 长度：1~32字符
+- 长度：1~256字符
 - 支持字符：中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;、点&quot;.&quot;
 - 示例：my-notebook-01
 
@@ -658,6 +659,7 @@ public class NotebookSpec  implements java.io.Serializable {
 - 支持公共数据集和个人数据集
 - 可选择数据集版本
 - 建议挂载到&#x60;/mnt/techdataset-x/&#x60;路径下
+- 默认强制只读挂载
 
     *
     * @return
@@ -673,6 +675,7 @@ public class NotebookSpec  implements java.io.Serializable {
 - 支持公共数据集和个人数据集
 - 可选择数据集版本
 - 建议挂载到&#x60;/mnt/techdataset-x/&#x60;路径下
+- 默认强制只读挂载
 
     *
     * @param techDatasets
@@ -992,7 +995,7 @@ public class NotebookSpec  implements java.io.Serializable {
      * set Notebook实例名称。
 
 ## 命名规则
-- 长度：1~32字符
+- 长度：1~256字符
 - 支持字符：中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;、点&quot;.&quot;
 - 示例：my-notebook-01
 
@@ -1000,7 +1003,7 @@ public class NotebookSpec  implements java.io.Serializable {
      * @param name Notebook实例名称。
 
 ## 命名规则
-- 长度：1~32字符
+- 长度：1~256字符
 - 支持字符：中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;、点&quot;.&quot;
 - 示例：my-notebook-01
 
@@ -1257,6 +1260,7 @@ public class NotebookSpec  implements java.io.Serializable {
 - 支持公共数据集和个人数据集
 - 可选择数据集版本
 - 建议挂载到&#x60;/mnt/techdataset-x/&#x60;路径下
+- 默认强制只读挂载
 
     *
     * @param techDatasets 科技数据集配置列表，独立最多挂载50条,仅限京东内部用户使用。
@@ -1265,6 +1269,7 @@ public class NotebookSpec  implements java.io.Serializable {
 - 支持公共数据集和个人数据集
 - 可选择数据集版本
 - 建议挂载到&#x60;/mnt/techdataset-x/&#x60;路径下
+- 默认强制只读挂载
 
     * @return NotebookSpec
     */
@@ -1560,6 +1565,7 @@ public class NotebookSpec  implements java.io.Serializable {
 - 支持公共数据集和个人数据集
 - 可选择数据集版本
 - 建议挂载到&#x60;/mnt/techdataset-x/&#x60;路径下
+- 默认强制只读挂载
 
      *
      * @param techDataset

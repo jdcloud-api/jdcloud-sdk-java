@@ -33,7 +33,7 @@ public class UpdateNotebookInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 名称。1~32字符，可以包含中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;或点&quot;.&quot;。传null表示不修改此字段。
+     * 名称。1~256字符，可以包含中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;或点&quot;.&quot;。传null表示不修改此字段。
      */
     private String name;
 
@@ -66,7 +66,7 @@ public class UpdateNotebookInfo  implements java.io.Serializable {
 
 
     /**
-     * get 名称。1~32字符，可以包含中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;或点&quot;.&quot;。传null表示不修改此字段。
+     * get 名称。1~256字符，可以包含中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;或点&quot;.&quot;。传null表示不修改此字段。
      *
      * @return
      */
@@ -75,7 +75,7 @@ public class UpdateNotebookInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 名称。1~32字符，可以包含中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;或点&quot;.&quot;。传null表示不修改此字段。
+     * set 名称。1~256字符，可以包含中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;或点&quot;.&quot;。传null表示不修改此字段。
      *
      * @param name
      */
@@ -174,9 +174,9 @@ public class UpdateNotebookInfo  implements java.io.Serializable {
 
 
     /**
-     * set 名称。1~32字符，可以包含中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;或点&quot;.&quot;。传null表示不修改此字段。
+     * set 名称。1~256字符，可以包含中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;或点&quot;.&quot;。传null表示不修改此字段。
      *
-     * @param name 名称。1~32字符，可以包含中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;或点&quot;.&quot;。传null表示不修改此字段。
+     * @param name 名称。1~256字符，可以包含中文、数字、大小写字母、英文下划线&quot;_&quot;、中划线&quot;-&quot;或点&quot;.&quot;。传null表示不修改此字段。
      * @return UpdateNotebookInfo
      */
     public UpdateNotebookInfo name(String name) {
