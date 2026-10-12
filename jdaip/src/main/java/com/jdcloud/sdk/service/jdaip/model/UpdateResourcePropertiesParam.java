@@ -120,7 +120,9 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
     /**
      * 科技数据集配置，用于整体替换科技数据集挂载。
 
-不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+## 使用说明
+- 不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+- 默认强制只读挂载
 
      */
     
@@ -394,7 +396,9 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
     /**
     * get 科技数据集配置，用于整体替换科技数据集挂载。
 
-不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+## 使用说明
+- 不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+- 默认强制只读挂载
 
     *
     * @return
@@ -406,7 +410,9 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
     /**
     * set 科技数据集配置，用于整体替换科技数据集挂载。
 
-不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+## 使用说明
+- 不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+- 默认强制只读挂载
 
     *
     * @param techDatasets
@@ -787,12 +793,16 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
     /**
     * set 科技数据集配置，用于整体替换科技数据集挂载。
 
-不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+## 使用说明
+- 不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+- 默认强制只读挂载
 
     *
     * @param techDatasets 科技数据集配置，用于整体替换科技数据集挂载。
 
-不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+## 使用说明
+- 不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+- 默认强制只读挂载
 
     * @return UpdateResourcePropertiesParam
     */
@@ -1017,7 +1027,9 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
     /**
      * add item to 科技数据集配置，用于整体替换科技数据集挂载。
 
-不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+## 使用说明
+- 不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+- 默认强制只读挂载
 
      *
      * @param techDataset

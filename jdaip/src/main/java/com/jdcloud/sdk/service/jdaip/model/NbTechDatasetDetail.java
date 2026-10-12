@@ -43,6 +43,15 @@ public class NbTechDatasetDetail  implements java.io.Serializable {
     private String storageName;
 
     /**
+     * 存储类型，数据集的存储后端类型。
+
+## 支持类型
+- oss: 京东云对象存储
+
+     */
+    private String storageType;
+
+    /**
      * 科技数据集ID。
      */
     private String datasetId;
@@ -99,6 +108,33 @@ public class NbTechDatasetDetail  implements java.io.Serializable {
      */
     public void setStorageName(String storageName) {
         this.storageName = storageName;
+    }
+
+
+    /**
+     * get 存储类型，数据集的存储后端类型。
+
+## 支持类型
+- oss: 京东云对象存储
+
+     *
+     * @return
+     */
+    public String getStorageType() {
+        return storageType;
+    }
+
+    /**
+     * set 存储类型，数据集的存储后端类型。
+
+## 支持类型
+- oss: 京东云对象存储
+
+     *
+     * @param storageType
+     */
+    public void setStorageType(String storageType) {
+        this.storageType = storageType;
     }
 
 
@@ -199,6 +235,26 @@ public class NbTechDatasetDetail  implements java.io.Serializable {
      */
     public NbTechDatasetDetail storageName(String storageName) {
         this.storageName = storageName;
+        return this;
+    }
+
+
+    /**
+     * set 存储类型，数据集的存储后端类型。
+
+## 支持类型
+- oss: 京东云对象存储
+
+     *
+     * @param storageType 存储类型，数据集的存储后端类型。
+
+## 支持类型
+- oss: 京东云对象存储
+
+     * @return NbTechDatasetDetail
+     */
+    public NbTechDatasetDetail storageType(String storageType) {
+        this.storageType = storageType;
         return this;
     }
 

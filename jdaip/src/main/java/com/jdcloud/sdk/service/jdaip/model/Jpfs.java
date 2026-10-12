@@ -93,7 +93,7 @@ public class Jpfs  implements java.io.Serializable {
     private JpfsBillingInfo billingInfo;
 
     /**
-     * 计费到期时间，原样返回JPFS ChargeSpecRes中的chargeExpiredTime
+     * 商业平台返回的JPFS到期时间原始值；无有效到期时间时返回空字符串
      */
     private String chargeExpiredTime;
 
@@ -383,7 +383,7 @@ public class Jpfs  implements java.io.Serializable {
 
 
     /**
-     * get 计费到期时间，原样返回JPFS ChargeSpecRes中的chargeExpiredTime
+     * get 商业平台返回的JPFS到期时间原始值；无有效到期时间时返回空字符串
      *
      * @return
      */
@@ -392,7 +392,7 @@ public class Jpfs  implements java.io.Serializable {
     }
 
     /**
-     * set 计费到期时间，原样返回JPFS ChargeSpecRes中的chargeExpiredTime
+     * set 商业平台返回的JPFS到期时间原始值；无有效到期时间时返回空字符串
      *
      * @param chargeExpiredTime
      */
@@ -756,9 +756,9 @@ public class Jpfs  implements java.io.Serializable {
 
 
     /**
-     * set 计费到期时间，原样返回JPFS ChargeSpecRes中的chargeExpiredTime
+     * set 商业平台返回的JPFS到期时间原始值；无有效到期时间时返回空字符串
      *
-     * @param chargeExpiredTime 计费到期时间，原样返回JPFS ChargeSpecRes中的chargeExpiredTime
+     * @param chargeExpiredTime 商业平台返回的JPFS到期时间原始值；无有效到期时间时返回空字符串
      * @return Jpfs
      */
     public Jpfs chargeExpiredTime(String chargeExpiredTime) {

@@ -155,6 +155,11 @@ public class Node  implements java.io.Serializable {
     private Long createTime;
 
     /**
+     * 商业平台返回的节点到期时间原始值；无有效到期时间时返回空字符串
+     */
+    private String expireTime;
+
+    /**
      * GPU资源配额信息
      */
     private GpuQuota gpuQuota;
@@ -668,6 +673,25 @@ public class Node  implements java.io.Serializable {
 
 
     /**
+     * get 商业平台返回的节点到期时间原始值；无有效到期时间时返回空字符串
+     *
+     * @return
+     */
+    public String getExpireTime() {
+        return expireTime;
+    }
+
+    /**
+     * set 商业平台返回的节点到期时间原始值；无有效到期时间时返回空字符串
+     *
+     * @param expireTime
+     */
+    public void setExpireTime(String expireTime) {
+        this.expireTime = expireTime;
+    }
+
+
+    /**
      * get GPU资源配额信息
      *
      * @return
@@ -1161,6 +1185,18 @@ public class Node  implements java.io.Serializable {
      */
     public Node createTime(Long createTime) {
         this.createTime = createTime;
+        return this;
+    }
+
+
+    /**
+     * set 商业平台返回的节点到期时间原始值；无有效到期时间时返回空字符串
+     *
+     * @param expireTime 商业平台返回的节点到期时间原始值；无有效到期时间时返回空字符串
+     * @return Node
+     */
+    public Node expireTime(String expireTime) {
+        this.expireTime = expireTime;
         return this;
     }
 

@@ -145,6 +145,9 @@ import com.jdcloud.sdk.service.jdaip.client.AdminDescribeRunListExecutor;
 import com.jdcloud.sdk.service.jdaip.model.SaveImageRequest;
 import com.jdcloud.sdk.service.jdaip.model.SaveImageResponse;
 import com.jdcloud.sdk.service.jdaip.client.SaveImageExecutor;
+import com.jdcloud.sdk.service.jdaip.model.UpdateNotebookTaskPriorityRequest;
+import com.jdcloud.sdk.service.jdaip.model.UpdateNotebookTaskPriorityResponse;
+import com.jdcloud.sdk.service.jdaip.client.UpdateNotebookTaskPriorityExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeInferenceEventsRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeInferenceEventsResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeInferenceEventsExecutor;
@@ -271,6 +274,9 @@ import com.jdcloud.sdk.service.jdaip.client.AdminDescribeNotebooksExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribePublicModelsRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribePublicModelsResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribePublicModelsExecutor;
+import com.jdcloud.sdk.service.jdaip.model.GetNotebookSshPublicKeysRequest;
+import com.jdcloud.sdk.service.jdaip.model.GetNotebookSshPublicKeysResponse;
+import com.jdcloud.sdk.service.jdaip.client.GetNotebookSshPublicKeysExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeJobsRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeJobsResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeJobsExecutor;
@@ -340,6 +346,9 @@ import com.jdcloud.sdk.service.jdaip.client.DeleteInferenceScaleExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DeleteServiceRequest;
 import com.jdcloud.sdk.service.jdaip.model.DeleteServiceResponse;
 import com.jdcloud.sdk.service.jdaip.client.DeleteServiceExecutor;
+import com.jdcloud.sdk.service.jdaip.model.ChangePriorityRequest;
+import com.jdcloud.sdk.service.jdaip.model.ChangePriorityResponse;
+import com.jdcloud.sdk.service.jdaip.client.ChangePriorityExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DeleteModelRequest;
 import com.jdcloud.sdk.service.jdaip.model.DeleteModelResponse;
 import com.jdcloud.sdk.service.jdaip.client.DeleteModelExecutor;
@@ -427,6 +436,9 @@ import com.jdcloud.sdk.service.jdaip.client.DeleteInferenceExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeExperimentRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeExperimentResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeExperimentExecutor;
+import com.jdcloud.sdk.service.jdaip.model.GetPodLimitLogsRequest;
+import com.jdcloud.sdk.service.jdaip.model.GetPodLimitLogsResponse;
+import com.jdcloud.sdk.service.jdaip.client.GetPodLimitLogsExecutor;
 
 /**
  * jdaipClient
@@ -1181,6 +1193,24 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 更新Notebook的调度优先级。
+
+## 接口说明
+- 仅支持处于 排队中(waiting) 或 停止(stopped) 状态的Notebook。
+- 仅私有资源池且队列开启了调度优先级时可设置。
+- 优先级取值范围为[1, 队列优先级上限]，数值越大优先级越高。
+- 对处于 排队中(waiting) 状态的Notebook，新优先级会即时生效。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateNotebookTaskPriorityResponse updateNotebookTaskPriority(UpdateNotebookTaskPriorityRequest request) throws JdcloudSdkException {
+        return new UpdateNotebookTaskPriorityExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取推理服务事件
      *
      * @param request
@@ -1853,6 +1883,17 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 获取notebook SSH公钥列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetNotebookSshPublicKeysResponse getNotebookSshPublicKeys(GetNotebookSshPublicKeysRequest request) throws JdcloudSdkException {
+        return new GetNotebookSshPublicKeysExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询训练任务列表。
 
 分页查询工作空间下的训练任务列表，支持多种过滤条件。
@@ -2176,6 +2217,32 @@ Batch 任务额外返回 &#x60;minAvailable&#x60; 和 &#x60;batchSummary&#x60;�
      */
     public DeleteServiceResponse deleteService(DeleteServiceRequest request) throws JdcloudSdkException {
         return new DeleteServiceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 调整训练任务的调度优先级。
+
+通过调整优先级可以影响任务的调度顺序，优先级高的任务会更快获得计算资源。
+
+## 系统预置优先级
+
+- &#x60;high-priority&#x60;：高优先级（20000），优先调度
+- &#x60;normal-priority&#x60;：普通优先级（10000），默认
+- &#x60;low-priority&#x60;：低优先级（5000），最后调度
+
+## 注意事项
+
+- 提高优先级可以让任务更快被调度执行
+- 如果队列调度策略支持资源抢占，可能导致运行中的低优先级任务被停止
+- 优先级调整仅影响排队中的任务，对已运行的任务无效
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ChangePriorityResponse changePriority(ChangePriorityRequest request) throws JdcloudSdkException {
+        return new ChangePriorityExecutor().client(this).execute(request);
     }
 
     /**
@@ -2675,6 +2742,26 @@ Batch 实例额外返回 &#x60;taskIndex&#x60;、&#x60;exitCode&#x60;、&#x60;te
      */
     public DescribeExperimentResponse describeExperiment(DescribeExperimentRequest request) throws JdcloudSdkException {
         return new DescribeExperimentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取训练任务关联的 Pod 日志（非流式返回）。
+
+一次性获取指定数量的日志内容，适用于日志分析、问题排查等场景。
+
+## 使用场景
+
+- 获取历史日志进行分析
+- 问题排查和诊断
+- 日志导出和归档
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetPodLimitLogsResponse getPodLimitLogs(GetPodLimitLogsRequest request) throws JdcloudSdkException {
+        return new GetPodLimitLogsExecutor().client(this).execute(request);
     }
 
 
