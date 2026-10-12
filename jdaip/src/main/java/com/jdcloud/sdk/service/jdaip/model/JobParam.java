@@ -31,9 +31,10 @@ import com.jdcloud.sdk.annotation.Required;
 /**
  * 创建训练任务需要的参数。
 
-训练任务支持两种框架类型：PyTorch 和 Ray。根据框架类型的不同，资源配置方式有所差异：
+训练任务支持 PyTorch、Ray 和 Batch 三种类型。根据任务类型的不同，资源配置方式有所差异：
 - **PyTorch**：使用 &#x60;resource&#x60; 字段配置统一的节点资源，或使用 &#x60;roleResource&#x60; 配置分布式训练的不同角色
 - **Ray**：必须使用 &#x60;roleResource&#x60; 配置 Head 和 Worker 角色
+- **Batch**：必须使用 &#x60;roleResource&#x60; 配置唯一的 Worker 角色，&#x60;roles[0].count&#x60; 为副本总数
 
 资源池队列支持：
 - **公共资源池**：&#x60;queueId&#x3D;joybuilder-public-queue&#x60;，不支持配置 &#x60;taskPriority&#x60;
@@ -113,6 +114,7 @@ public class JobParam  implements java.io.Serializable {
 **可选值：**
 - &#x60;pytorch&#x60;：PyTorch 框架，适用于深度学习训练
 - &#x60;ray&#x60;：Ray 框架，适用于分布式计算、强化学习
+- &#x60;batch&#x60;：批量任务，多个同规格 Worker 独立执行
 
 **注意：** 大小写敏感，必须使用小写
 
@@ -149,6 +151,11 @@ public class JobParam  implements java.io.Serializable {
 
      */
     private Integer replica;
+
+    /**
+     * Batch 任务的最小可调度副本数，范围为 &#x60;[1, roleResource.roles[0].count]&#x60;；非 Batch 任务不传。
+     */
+    private Integer minAvailable;
 
     /**
      * 任务优先级，取值范围 &#x60;1..9&#x60;。
@@ -242,6 +249,7 @@ public class JobParam  implements java.io.Serializable {
 **适用场景：**
 - Ray 分布式训练（必须配置 Head 和 Worker）
 - PyTorch 分布式训练（可配置不同规格的 Worker）
+- Batch 批量任务（必须且只能配置一个 Worker，&#x60;count&#x60; 为副本总数）
 
      */
     private RoleResourceParamForJob roleResource;
@@ -564,6 +572,7 @@ public class JobParam  implements java.io.Serializable {
 **可选值：**
 - &#x60;pytorch&#x60;：PyTorch 框架，适用于深度学习训练
 - &#x60;ray&#x60;：Ray 框架，适用于分布式计算、强化学习
+- &#x60;batch&#x60;：批量任务，多个同规格 Worker 独立执行
 
 **注意：** 大小写敏感，必须使用小写
 
@@ -580,6 +589,7 @@ public class JobParam  implements java.io.Serializable {
 **可选值：**
 - &#x60;pytorch&#x60;：PyTorch 框架，适用于深度学习训练
 - &#x60;ray&#x60;：Ray 框架，适用于分布式计算、强化学习
+- &#x60;batch&#x60;：批量任务，多个同规格 Worker 独立执行
 
 **注意：** 大小写敏感，必须使用小写
 
@@ -660,6 +670,25 @@ public class JobParam  implements java.io.Serializable {
      */
     public void setReplica(Integer replica) {
         this.replica = replica;
+    }
+
+
+    /**
+     * get Batch 任务的最小可调度副本数，范围为 &#x60;[1, roleResource.roles[0].count]&#x60;；非 Batch 任务不传。
+     *
+     * @return
+     */
+    public Integer getMinAvailable() {
+        return minAvailable;
+    }
+
+    /**
+     * set Batch 任务的最小可调度副本数，范围为 &#x60;[1, roleResource.roles[0].count]&#x60;；非 Batch 任务不传。
+     *
+     * @param minAvailable
+     */
+    public void setMinAvailable(Integer minAvailable) {
+        this.minAvailable = minAvailable;
     }
 
 
@@ -904,6 +933,7 @@ public class JobParam  implements java.io.Serializable {
 **适用场景：**
 - Ray 分布式训练（必须配置 Head 和 Worker）
 - PyTorch 分布式训练（可配置不同规格的 Worker）
+- Batch 批量任务（必须且只能配置一个 Worker，&#x60;count&#x60; 为副本总数）
 
      *
      * @return
@@ -918,6 +948,7 @@ public class JobParam  implements java.io.Serializable {
 **适用场景：**
 - Ray 分布式训练（必须配置 Head 和 Worker）
 - PyTorch 分布式训练（可配置不同规格的 Worker）
+- Batch 批量任务（必须且只能配置一个 Worker，&#x60;count&#x60; 为副本总数）
 
      *
      * @param roleResource
@@ -1472,6 +1503,7 @@ public class JobParam  implements java.io.Serializable {
 **可选值：**
 - &#x60;pytorch&#x60;：PyTorch 框架，适用于深度学习训练
 - &#x60;ray&#x60;：Ray 框架，适用于分布式计算、强化学习
+- &#x60;batch&#x60;：批量任务，多个同规格 Worker 独立执行
 
 **注意：** 大小写敏感，必须使用小写
 
@@ -1481,6 +1513,7 @@ public class JobParam  implements java.io.Serializable {
 **可选值：**
 - &#x60;pytorch&#x60;：PyTorch 框架，适用于深度学习训练
 - &#x60;ray&#x60;：Ray 框架，适用于分布式计算、强化学习
+- &#x60;batch&#x60;：批量任务，多个同规格 Worker 独立执行
 
 **注意：** 大小写敏感，必须使用小写
 
@@ -1546,6 +1579,18 @@ public class JobParam  implements java.io.Serializable {
      */
     public JobParam replica(Integer replica) {
         this.replica = replica;
+        return this;
+    }
+
+
+    /**
+     * set Batch 任务的最小可调度副本数，范围为 &#x60;[1, roleResource.roles[0].count]&#x60;；非 Batch 任务不传。
+     *
+     * @param minAvailable Batch 任务的最小可调度副本数，范围为 &#x60;[1, roleResource.roles[0].count]&#x60;；非 Batch 任务不传。
+     * @return JobParam
+     */
+    public JobParam minAvailable(Integer minAvailable) {
+        this.minAvailable = minAvailable;
         return this;
     }
 
@@ -1742,6 +1787,7 @@ public class JobParam  implements java.io.Serializable {
 **适用场景：**
 - Ray 分布式训练（必须配置 Head 和 Worker）
 - PyTorch 分布式训练（可配置不同规格的 Worker）
+- Batch 批量任务（必须且只能配置一个 Worker，&#x60;count&#x60; 为副本总数）
 
      *
      * @param roleResource 角色资源配置信息，用于配置不同角色的节点资源。
@@ -1749,6 +1795,7 @@ public class JobParam  implements java.io.Serializable {
 **适用场景：**
 - Ray 分布式训练（必须配置 Head 和 Worker）
 - PyTorch 分布式训练（可配置不同规格的 Worker）
+- Batch 批量任务（必须且只能配置一个 Worker，&#x60;count&#x60; 为副本总数）
 
      * @return JobParam
      */

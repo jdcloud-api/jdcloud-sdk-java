@@ -80,7 +80,7 @@ public class NbModelDetail  implements java.io.Serializable {
 ## 各类型地址格式
 - cfs: &#x60;10.0.23.45:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 - oss: &#x60;oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path&#x60;
-- jpfs: &#x60;fs-xxxxx:fsmt-yyyyy:/dir-path&#x60; 或 &#x60;fs-xxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
+- jpfs: &#x60;JPFS-ID:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 
      */
     private String modelUrl;
@@ -100,11 +100,34 @@ public class NbModelDetail  implements java.io.Serializable {
 ## 使用说明
 - 仅oss类型且self来源的模型有效
 - public模型强制只读
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)上的实例：模型强制只读，详见&#x60;storageSpec.readonly&#x60;
 - true: 只读模式，无法写入
 - false: 读写模式，可读写
 
      */
     private Boolean readonly;
+
+    /**
+     * 挂载点ID，仅对&#x60;storageType&#x3D;jpfs&#x60;生效。
+
+## 使用场景
+- 当JPFS文件系统有多个挂载点时，可通过此字段指定具体的挂载点
+- 用于支持同一JPFS文件系统的多挂载点
+
+     */
+    private String mountTargetId;
+
+    /**
+     * 挂载点IP，仅对&#x60;storageType&#x3D;cfs&#x60;生效。
+
+## 使用场景
+- 当CFS文件系统有多个挂载点时，可通过此字段匹配同一CFS文件系统的多挂载点
+
+## 兼容逻辑
+- 为空时从&#x60;modelUrl&#x60;的格式（&#x60;ip:/path&#x60;）解析，兼容旧逻辑
+
+     */
+    private String host;
 
 
 
@@ -231,7 +254,7 @@ public class NbModelDetail  implements java.io.Serializable {
 ## 各类型地址格式
 - cfs: &#x60;10.0.23.45:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 - oss: &#x60;oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path&#x60;
-- jpfs: &#x60;fs-xxxxx:fsmt-yyyyy:/dir-path&#x60; 或 &#x60;fs-xxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
+- jpfs: &#x60;JPFS-ID:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 
      *
      * @return
@@ -246,7 +269,7 @@ public class NbModelDetail  implements java.io.Serializable {
 ## 各类型地址格式
 - cfs: &#x60;10.0.23.45:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 - oss: &#x60;oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path&#x60;
-- jpfs: &#x60;fs-xxxxx:fsmt-yyyyy:/dir-path&#x60; 或 &#x60;fs-xxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
+- jpfs: &#x60;JPFS-ID:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 
      *
      * @param modelUrl
@@ -289,6 +312,7 @@ public class NbModelDetail  implements java.io.Serializable {
 ## 使用说明
 - 仅oss类型且self来源的模型有效
 - public模型强制只读
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)上的实例：模型强制只读，详见&#x60;storageSpec.readonly&#x60;
 - true: 只读模式，无法写入
 - false: 读写模式，可读写
 
@@ -305,6 +329,7 @@ public class NbModelDetail  implements java.io.Serializable {
 ## 使用说明
 - 仅oss类型且self来源的模型有效
 - public模型强制只读
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)上的实例：模型强制只读，详见&#x60;storageSpec.readonly&#x60;
 - true: 只读模式，无法写入
 - false: 读写模式，可读写
 
@@ -313,6 +338,68 @@ public class NbModelDetail  implements java.io.Serializable {
      */
     public void setReadonly(Boolean readonly) {
         this.readonly = readonly;
+    }
+
+
+    /**
+     * get 挂载点ID，仅对&#x60;storageType&#x3D;jpfs&#x60;生效。
+
+## 使用场景
+- 当JPFS文件系统有多个挂载点时，可通过此字段指定具体的挂载点
+- 用于支持同一JPFS文件系统的多挂载点
+
+     *
+     * @return
+     */
+    public String getMountTargetId() {
+        return mountTargetId;
+    }
+
+    /**
+     * set 挂载点ID，仅对&#x60;storageType&#x3D;jpfs&#x60;生效。
+
+## 使用场景
+- 当JPFS文件系统有多个挂载点时，可通过此字段指定具体的挂载点
+- 用于支持同一JPFS文件系统的多挂载点
+
+     *
+     * @param mountTargetId
+     */
+    public void setMountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
+    }
+
+
+    /**
+     * get 挂载点IP，仅对&#x60;storageType&#x3D;cfs&#x60;生效。
+
+## 使用场景
+- 当CFS文件系统有多个挂载点时，可通过此字段匹配同一CFS文件系统的多挂载点
+
+## 兼容逻辑
+- 为空时从&#x60;modelUrl&#x60;的格式（&#x60;ip:/path&#x60;）解析，兼容旧逻辑
+
+     *
+     * @return
+     */
+    public String getHost() {
+        return host;
+    }
+
+    /**
+     * set 挂载点IP，仅对&#x60;storageType&#x3D;cfs&#x60;生效。
+
+## 使用场景
+- 当CFS文件系统有多个挂载点时，可通过此字段匹配同一CFS文件系统的多挂载点
+
+## 兼容逻辑
+- 为空时从&#x60;modelUrl&#x60;的格式（&#x60;ip:/path&#x60;）解析，兼容旧逻辑
+
+     *
+     * @param host
+     */
+    public void setHost(String host) {
+        this.host = host;
     }
 
 
@@ -405,7 +492,7 @@ public class NbModelDetail  implements java.io.Serializable {
 ## 各类型地址格式
 - cfs: &#x60;10.0.23.45:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 - oss: &#x60;oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path&#x60;
-- jpfs: &#x60;fs-xxxxx:fsmt-yyyyy:/dir-path&#x60; 或 &#x60;fs-xxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
+- jpfs: &#x60;JPFS-ID:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 
      *
      * @param modelUrl 模型地址，模型的实际存储路径。
@@ -413,7 +500,7 @@ public class NbModelDetail  implements java.io.Serializable {
 ## 各类型地址格式
 - cfs: &#x60;10.0.23.45:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 - oss: &#x60;oss://bucket.s3.cn-north-1.jdcloud-oss.com/object-path&#x60;
-- jpfs: &#x60;fs-xxxxx:fsmt-yyyyy:/dir-path&#x60; 或 &#x60;fs-xxxxx:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
+- jpfs: &#x60;JPFS-ID:/dir-path&#x60; 或 &#x60;/dir-path&#x60;
 
      * @return NbModelDetail
      */
@@ -449,6 +536,7 @@ public class NbModelDetail  implements java.io.Serializable {
 ## 使用说明
 - 仅oss类型且self来源的模型有效
 - public模型强制只读
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)上的实例：模型强制只读，详见&#x60;storageSpec.readonly&#x60;
 - true: 只读模式，无法写入
 - false: 读写模式，可读写
 
@@ -458,6 +546,7 @@ public class NbModelDetail  implements java.io.Serializable {
 ## 使用说明
 - 仅oss类型且self来源的模型有效
 - public模型强制只读
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)上的实例：模型强制只读，详见&#x60;storageSpec.readonly&#x60;
 - true: 只读模式，无法写入
 - false: 读写模式，可读写
 
@@ -465,6 +554,54 @@ public class NbModelDetail  implements java.io.Serializable {
      */
     public NbModelDetail readonly(Boolean readonly) {
         this.readonly = readonly;
+        return this;
+    }
+
+
+    /**
+     * set 挂载点ID，仅对&#x60;storageType&#x3D;jpfs&#x60;生效。
+
+## 使用场景
+- 当JPFS文件系统有多个挂载点时，可通过此字段指定具体的挂载点
+- 用于支持同一JPFS文件系统的多挂载点
+
+     *
+     * @param mountTargetId 挂载点ID，仅对&#x60;storageType&#x3D;jpfs&#x60;生效。
+
+## 使用场景
+- 当JPFS文件系统有多个挂载点时，可通过此字段指定具体的挂载点
+- 用于支持同一JPFS文件系统的多挂载点
+
+     * @return NbModelDetail
+     */
+    public NbModelDetail mountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
+        return this;
+    }
+
+
+    /**
+     * set 挂载点IP，仅对&#x60;storageType&#x3D;cfs&#x60;生效。
+
+## 使用场景
+- 当CFS文件系统有多个挂载点时，可通过此字段匹配同一CFS文件系统的多挂载点
+
+## 兼容逻辑
+- 为空时从&#x60;modelUrl&#x60;的格式（&#x60;ip:/path&#x60;）解析，兼容旧逻辑
+
+     *
+     * @param host 挂载点IP，仅对&#x60;storageType&#x3D;cfs&#x60;生效。
+
+## 使用场景
+- 当CFS文件系统有多个挂载点时，可通过此字段匹配同一CFS文件系统的多挂载点
+
+## 兼容逻辑
+- 为空时从&#x60;modelUrl&#x60;的格式（&#x60;ip:/path&#x60;）解析，兼容旧逻辑
+
+     * @return NbModelDetail
+     */
+    public NbModelDetail host(String host) {
+        this.host = host;
         return this;
     }
 

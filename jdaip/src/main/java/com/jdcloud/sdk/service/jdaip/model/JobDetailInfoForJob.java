@@ -54,6 +54,7 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 &#x60;stopping&#x60;：&#x60;停止中&#x60;
 &#x60;stopped&#x60;：&#x60;停止&#x60;
 &#x60;success&#x60;：&#x60;成功&#x60;
+&#x60;partial-success&#x60;：&#x60;部分成功&#x60;（仅 Batch 任务）
 &#x60;deleting&#x60;: &#x60;删除中&#x60;
 &#x60;rolling-back&#x60;：&#x60;回滚中&#x60;
 &#x60;rolled-back&#x60;：&#x60;已回滚&#x60;
@@ -68,6 +69,7 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 - &#x60;environment-failed&#x60;: 算力健康检测不通过。
 - &#x60;task-hang&#x60;: 任务卡住。
 - &#x60;process-inspection-failed&#x60;: 进程巡检失败。
+- &#x60;task-evict&#x60;: 任务副本被抢占或归还。
 
      */
     private String failureType;
@@ -87,6 +89,16 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
      * 任务类型。
      */
     private String jobType;
+
+    /**
+     * Batch 任务开始调度的最小副本数；非 Batch 任务不返回。
+     */
+    private Integer minAvailable;
+
+    /**
+     * Batch 任务的逻辑副本状态统计；非 Batch 任务不返回。
+     */
+    private BatchSummaryForJob batchSummary;
 
     /**
      * 是否为用户训练主容器开启容器特权模式。
@@ -355,6 +367,7 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 &#x60;stopping&#x60;：&#x60;停止中&#x60;
 &#x60;stopped&#x60;：&#x60;停止&#x60;
 &#x60;success&#x60;：&#x60;成功&#x60;
+&#x60;partial-success&#x60;：&#x60;部分成功&#x60;（仅 Batch 任务）
 &#x60;deleting&#x60;: &#x60;删除中&#x60;
 &#x60;rolling-back&#x60;：&#x60;回滚中&#x60;
 &#x60;rolled-back&#x60;：&#x60;已回滚&#x60;
@@ -375,6 +388,7 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 &#x60;stopping&#x60;：&#x60;停止中&#x60;
 &#x60;stopped&#x60;：&#x60;停止&#x60;
 &#x60;success&#x60;：&#x60;成功&#x60;
+&#x60;partial-success&#x60;：&#x60;部分成功&#x60;（仅 Batch 任务）
 &#x60;deleting&#x60;: &#x60;删除中&#x60;
 &#x60;rolling-back&#x60;：&#x60;回滚中&#x60;
 &#x60;rolled-back&#x60;：&#x60;已回滚&#x60;
@@ -394,6 +408,7 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 - &#x60;environment-failed&#x60;: 算力健康检测不通过。
 - &#x60;task-hang&#x60;: 任务卡住。
 - &#x60;process-inspection-failed&#x60;: 进程巡检失败。
+- &#x60;task-evict&#x60;: 任务副本被抢占或归还。
 
      *
      * @return
@@ -409,6 +424,7 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 - &#x60;environment-failed&#x60;: 算力健康检测不通过。
 - &#x60;task-hang&#x60;: 任务卡住。
 - &#x60;process-inspection-failed&#x60;: 进程巡检失败。
+- &#x60;task-evict&#x60;: 任务副本被抢占或归还。
 
      *
      * @param failureType
@@ -474,6 +490,44 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
      */
     public void setJobType(String jobType) {
         this.jobType = jobType;
+    }
+
+
+    /**
+     * get Batch 任务开始调度的最小副本数；非 Batch 任务不返回。
+     *
+     * @return
+     */
+    public Integer getMinAvailable() {
+        return minAvailable;
+    }
+
+    /**
+     * set Batch 任务开始调度的最小副本数；非 Batch 任务不返回。
+     *
+     * @param minAvailable
+     */
+    public void setMinAvailable(Integer minAvailable) {
+        this.minAvailable = minAvailable;
+    }
+
+
+    /**
+     * get Batch 任务的逻辑副本状态统计；非 Batch 任务不返回。
+     *
+     * @return
+     */
+    public BatchSummaryForJob getBatchSummary() {
+        return batchSummary;
+    }
+
+    /**
+     * set Batch 任务的逻辑副本状态统计；非 Batch 任务不返回。
+     *
+     * @param batchSummary
+     */
+    public void setBatchSummary(BatchSummaryForJob batchSummary) {
+        this.batchSummary = batchSummary;
     }
 
 
@@ -1316,6 +1370,7 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 &#x60;stopping&#x60;：&#x60;停止中&#x60;
 &#x60;stopped&#x60;：&#x60;停止&#x60;
 &#x60;success&#x60;：&#x60;成功&#x60;
+&#x60;partial-success&#x60;：&#x60;部分成功&#x60;（仅 Batch 任务）
 &#x60;deleting&#x60;: &#x60;删除中&#x60;
 &#x60;rolling-back&#x60;：&#x60;回滚中&#x60;
 &#x60;rolled-back&#x60;：&#x60;已回滚&#x60;
@@ -1329,6 +1384,7 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 &#x60;stopping&#x60;：&#x60;停止中&#x60;
 &#x60;stopped&#x60;：&#x60;停止&#x60;
 &#x60;success&#x60;：&#x60;成功&#x60;
+&#x60;partial-success&#x60;：&#x60;部分成功&#x60;（仅 Batch 任务）
 &#x60;deleting&#x60;: &#x60;删除中&#x60;
 &#x60;rolling-back&#x60;：&#x60;回滚中&#x60;
 &#x60;rolled-back&#x60;：&#x60;已回滚&#x60;
@@ -1348,6 +1404,7 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 - &#x60;environment-failed&#x60;: 算力健康检测不通过。
 - &#x60;task-hang&#x60;: 任务卡住。
 - &#x60;process-inspection-failed&#x60;: 进程巡检失败。
+- &#x60;task-evict&#x60;: 任务副本被抢占或归还。
 
      *
      * @param failureType 训练任务失败类型。可选值如下：
@@ -1356,6 +1413,7 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 - &#x60;environment-failed&#x60;: 算力健康检测不通过。
 - &#x60;task-hang&#x60;: 任务卡住。
 - &#x60;process-inspection-failed&#x60;: 进程巡检失败。
+- &#x60;task-evict&#x60;: 任务副本被抢占或归还。
 
      * @return JobDetailInfoForJob
      */
@@ -1399,6 +1457,30 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
      */
     public JobDetailInfoForJob jobType(String jobType) {
         this.jobType = jobType;
+        return this;
+    }
+
+
+    /**
+     * set Batch 任务开始调度的最小副本数；非 Batch 任务不返回。
+     *
+     * @param minAvailable Batch 任务开始调度的最小副本数；非 Batch 任务不返回。
+     * @return JobDetailInfoForJob
+     */
+    public JobDetailInfoForJob minAvailable(Integer minAvailable) {
+        this.minAvailable = minAvailable;
+        return this;
+    }
+
+
+    /**
+     * set Batch 任务的逻辑副本状态统计；非 Batch 任务不返回。
+     *
+     * @param batchSummary Batch 任务的逻辑副本状态统计；非 Batch 任务不返回。
+     * @return JobDetailInfoForJob
+     */
+    public JobDetailInfoForJob batchSummary(BatchSummaryForJob batchSummary) {
+        this.batchSummary = batchSummary;
         return this;
     }
 

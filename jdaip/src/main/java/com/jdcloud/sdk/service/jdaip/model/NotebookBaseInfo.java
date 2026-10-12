@@ -158,7 +158,8 @@ public class NotebookBaseInfo  implements java.io.Serializable {
 - private: 私有资源池队列
 - public: 公共资源池队列
 - exclusive: 专享资源池队列
-- security: 安全队列，出站网络受管控，禁止修改资源属性
+- security: 安全异构队列，出站网络受管控，禁止修改资源属性
+- sec-vm: 安全云主机队列，管控约束与&#x60;security&#x60;一致
 
 ## 使用说明
 - 该字段为查询返回值，创建/更新时无需传入
@@ -536,7 +537,8 @@ public class NotebookBaseInfo  implements java.io.Serializable {
 - private: 私有资源池队列
 - public: 公共资源池队列
 - exclusive: 专享资源池队列
-- security: 安全队列，出站网络受管控，禁止修改资源属性
+- security: 安全异构队列，出站网络受管控，禁止修改资源属性
+- sec-vm: 安全云主机队列，管控约束与&#x60;security&#x60;一致
 
 ## 使用说明
 - 该字段为查询返回值，创建/更新时无需传入
@@ -557,7 +559,8 @@ public class NotebookBaseInfo  implements java.io.Serializable {
 - private: 私有资源池队列
 - public: 公共资源池队列
 - exclusive: 专享资源池队列
-- security: 安全队列，出站网络受管控，禁止修改资源属性
+- security: 安全异构队列，出站网络受管控，禁止修改资源属性
+- sec-vm: 安全云主机队列，管控约束与&#x60;security&#x60;一致
 
 ## 使用说明
 - 该字段为查询返回值，创建/更新时无需传入
@@ -834,7 +837,8 @@ public class NotebookBaseInfo  implements java.io.Serializable {
 - private: 私有资源池队列
 - public: 公共资源池队列
 - exclusive: 专享资源池队列
-- security: 安全队列，出站网络受管控，禁止修改资源属性
+- security: 安全异构队列，出站网络受管控，禁止修改资源属性
+- sec-vm: 安全云主机队列，管控约束与&#x60;security&#x60;一致
 
 ## 使用说明
 - 该字段为查询返回值，创建/更新时无需传入
@@ -848,7 +852,8 @@ public class NotebookBaseInfo  implements java.io.Serializable {
 - private: 私有资源池队列
 - public: 公共资源池队列
 - exclusive: 专享资源池队列
-- security: 安全队列，出站网络受管控，禁止修改资源属性
+- security: 安全异构队列，出站网络受管控，禁止修改资源属性
+- sec-vm: 安全云主机队列，管控约束与&#x60;security&#x60;一致
 
 ## 使用说明
 - 该字段为查询返回值，创建/更新时无需传入

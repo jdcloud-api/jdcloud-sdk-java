@@ -50,8 +50,8 @@ import com.jdcloud.sdk.annotation.Required;
 - 队列ID为用户工作空间中的私有队列ID
 
 ## GPU配置说明
-- deviceModel: GPU设备类型，如 NVIDIA_H20-3e、NVIDIA_A100等
-- vcudaCore: 虚拟GPU数量，支持切分(0.25/0.5/1/2/4/8等)
+- deviceModel: GPU设备类型，如 NVIDIA_H20-3e、Ascend910B、MTT_S5000等
+- vcudaCore: 虚拟GPU数量，取值随芯片厂商不同，详见该字段说明
 
  */
 public class WorkloadSpec  implements java.io.Serializable {
@@ -141,18 +141,22 @@ public class WorkloadSpec  implements java.io.Serializable {
     private String deviceModel;
 
     /**
-     * 虚拟GPU数量，仅私有资源池有效。
+     * 虚拟GPU数量，即本实例申请的GPU卡数总量，仅私有资源池生效。
 
-## NVIDIA GPU配置
-- 支持整数：1、2、4、8(卡)
-- 支持小数：0.125、0.25、0.5(卡切分)
+## 英伟达GPU配置
+- 取值范围：0.1、0.125、0.25、0.5、1、2、3、4、5、6、7、8
 
 ## 昇腾GPU配置
-- 仅支持整数：1-8(卡)
+- 取值范围：1、2、3、4、5、6、7、8、16
+
+## 摩尔线程GPU配置
+- 取值范围：0.1、0.2、0.4、0.6、0.8、1、2、3、4、5、6、7、8
 
 ## 使用说明
-- 必须与deviceModel同时使用
-- 小数表示GPU切分，共享GPU资源
+- 传0或不传表示CPU实例，此时deviceModel可为空
+- 取值非0时必须同时传deviceModel
+- 公共/专享资源池传值无效，由实例规格决定
+- 显存与算力不可指定，由平台按卡数同比例换算
 
      */
     private String vcudaCore;
@@ -405,18 +409,22 @@ public class WorkloadSpec  implements java.io.Serializable {
 
 
     /**
-     * get 虚拟GPU数量，仅私有资源池有效。
+     * get 虚拟GPU数量，即本实例申请的GPU卡数总量，仅私有资源池生效。
 
-## NVIDIA GPU配置
-- 支持整数：1、2、4、8(卡)
-- 支持小数：0.125、0.25、0.5(卡切分)
+## 英伟达GPU配置
+- 取值范围：0.1、0.125、0.25、0.5、1、2、3、4、5、6、7、8
 
 ## 昇腾GPU配置
-- 仅支持整数：1-8(卡)
+- 取值范围：1、2、3、4、5、6、7、8、16
+
+## 摩尔线程GPU配置
+- 取值范围：0.1、0.2、0.4、0.6、0.8、1、2、3、4、5、6、7、8
 
 ## 使用说明
-- 必须与deviceModel同时使用
-- 小数表示GPU切分，共享GPU资源
+- 传0或不传表示CPU实例，此时deviceModel可为空
+- 取值非0时必须同时传deviceModel
+- 公共/专享资源池传值无效，由实例规格决定
+- 显存与算力不可指定，由平台按卡数同比例换算
 
      *
      * @return
@@ -426,18 +434,22 @@ public class WorkloadSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 虚拟GPU数量，仅私有资源池有效。
+     * set 虚拟GPU数量，即本实例申请的GPU卡数总量，仅私有资源池生效。
 
-## NVIDIA GPU配置
-- 支持整数：1、2、4、8(卡)
-- 支持小数：0.125、0.25、0.5(卡切分)
+## 英伟达GPU配置
+- 取值范围：0.1、0.125、0.25、0.5、1、2、3、4、5、6、7、8
 
 ## 昇腾GPU配置
-- 仅支持整数：1-8(卡)
+- 取值范围：1、2、3、4、5、6、7、8、16
+
+## 摩尔线程GPU配置
+- 取值范围：0.1、0.2、0.4、0.6、0.8、1、2、3、4、5、6、7、8
 
 ## 使用说明
-- 必须与deviceModel同时使用
-- 小数表示GPU切分，共享GPU资源
+- 传0或不传表示CPU实例，此时deviceModel可为空
+- 取值非0时必须同时传deviceModel
+- 公共/专享资源池传值无效，由实例规格决定
+- 显存与算力不可指定，由平台按卡数同比例换算
 
      *
      * @param vcudaCore
@@ -726,32 +738,40 @@ public class WorkloadSpec  implements java.io.Serializable {
 
 
     /**
-     * set 虚拟GPU数量，仅私有资源池有效。
+     * set 虚拟GPU数量，即本实例申请的GPU卡数总量，仅私有资源池生效。
 
-## NVIDIA GPU配置
-- 支持整数：1、2、4、8(卡)
-- 支持小数：0.125、0.25、0.5(卡切分)
+## 英伟达GPU配置
+- 取值范围：0.1、0.125、0.25、0.5、1、2、3、4、5、6、7、8
 
 ## 昇腾GPU配置
-- 仅支持整数：1-8(卡)
+- 取值范围：1、2、3、4、5、6、7、8、16
+
+## 摩尔线程GPU配置
+- 取值范围：0.1、0.2、0.4、0.6、0.8、1、2、3、4、5、6、7、8
 
 ## 使用说明
-- 必须与deviceModel同时使用
-- 小数表示GPU切分，共享GPU资源
+- 传0或不传表示CPU实例，此时deviceModel可为空
+- 取值非0时必须同时传deviceModel
+- 公共/专享资源池传值无效，由实例规格决定
+- 显存与算力不可指定，由平台按卡数同比例换算
 
      *
-     * @param vcudaCore 虚拟GPU数量，仅私有资源池有效。
+     * @param vcudaCore 虚拟GPU数量，即本实例申请的GPU卡数总量，仅私有资源池生效。
 
-## NVIDIA GPU配置
-- 支持整数：1、2、4、8(卡)
-- 支持小数：0.125、0.25、0.5(卡切分)
+## 英伟达GPU配置
+- 取值范围：0.1、0.125、0.25、0.5、1、2、3、4、5、6、7、8
 
 ## 昇腾GPU配置
-- 仅支持整数：1-8(卡)
+- 取值范围：1、2、3、4、5、6、7、8、16
+
+## 摩尔线程GPU配置
+- 取值范围：0.1、0.2、0.4、0.6、0.8、1、2、3、4、5、6、7、8
 
 ## 使用说明
-- 必须与deviceModel同时使用
-- 小数表示GPU切分，共享GPU资源
+- 传0或不传表示CPU实例，此时deviceModel可为空
+- 取值非0时必须同时传deviceModel
+- 公共/专享资源池传值无效，由实例规格决定
+- 显存与算力不可指定，由平台按卡数同比例换算
 
      * @return WorkloadSpec
      */

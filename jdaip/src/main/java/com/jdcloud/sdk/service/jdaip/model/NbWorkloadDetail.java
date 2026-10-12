@@ -65,7 +65,8 @@ public class NbWorkloadDetail  implements java.io.Serializable {
 - private: 私有资源池队列
 - public: 公共资源池队列
 - exclusive: 专享资源池队列
-- security: 安全队列，出站网络受管控，禁止修改资源属性
+- security: 安全异构队列，出站网络受管控，禁止修改资源属性
+- sec-vm: 安全云主机队列，管控约束与&#x60;security&#x60;一致
 
 ## 使用说明
 - 该字段为查询返回值，创建/更新时无需传入，队列类型由&#x60;queueId&#x60;推导
@@ -75,11 +76,12 @@ public class NbWorkloadDetail  implements java.io.Serializable {
 - 调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
 
 ## 安全队列使用限制
+以下限制对&#x60;security&#x60;与&#x60;sec-vm&#x60;两类安全队列同样生效：
 - 仅支持&#x60;jpfs&#x60;/&#x60;oss&#x60;两种存储类型，其他存储类型(如&#x60;cfs&#x60;)会被拒绝
 - 不支持开启大数据(BDP)功能，因其依赖CFS挂载
 - 不支持修改资源属性、不支持在启动时变更资源规格/队列、不支持保存镜像
 - 不允许把已有实例的资源属性变更到安全队列
-- 除安全jpfs(&#x60;storageSource&#x3D;security&#x60;)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
+- 除安全存储(&#x60;storageSource&#x3D;security&#x60;的jpfs/oss)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
 
      */
     private String queueType;
@@ -127,12 +129,12 @@ public class NbWorkloadDetail  implements java.io.Serializable {
     private String deviceModel;
 
     /**
-     * 虚拟GPU数量，分配的GPU卡数。
+     * 虚拟GPU数量，实例实际分配的GPU卡数总量。
 
 ## 使用说明
-- 整数表示完整GPU卡
-- 小数表示GPU切分
-- 示例：1, 2, 4, 8, 0.5, 0.25
+- 整数表示整卡，小数表示卡切分
+- 各芯片厂商支持的取值不同，详见创建参数workloadSpec.vcudaCore
+- 取值为0或空表示CPU实例
 
      */
     private String vcudaCore;
@@ -236,7 +238,8 @@ public class NbWorkloadDetail  implements java.io.Serializable {
 - private: 私有资源池队列
 - public: 公共资源池队列
 - exclusive: 专享资源池队列
-- security: 安全队列，出站网络受管控，禁止修改资源属性
+- security: 安全异构队列，出站网络受管控，禁止修改资源属性
+- sec-vm: 安全云主机队列，管控约束与&#x60;security&#x60;一致
 
 ## 使用说明
 - 该字段为查询返回值，创建/更新时无需传入，队列类型由&#x60;queueId&#x60;推导
@@ -246,11 +249,12 @@ public class NbWorkloadDetail  implements java.io.Serializable {
 - 调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
 
 ## 安全队列使用限制
+以下限制对&#x60;security&#x60;与&#x60;sec-vm&#x60;两类安全队列同样生效：
 - 仅支持&#x60;jpfs&#x60;/&#x60;oss&#x60;两种存储类型，其他存储类型(如&#x60;cfs&#x60;)会被拒绝
 - 不支持开启大数据(BDP)功能，因其依赖CFS挂载
 - 不支持修改资源属性、不支持在启动时变更资源规格/队列、不支持保存镜像
 - 不允许把已有实例的资源属性变更到安全队列
-- 除安全jpfs(&#x60;storageSource&#x3D;security&#x60;)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
+- 除安全存储(&#x60;storageSource&#x3D;security&#x60;的jpfs/oss)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
 
      *
      * @return
@@ -266,7 +270,8 @@ public class NbWorkloadDetail  implements java.io.Serializable {
 - private: 私有资源池队列
 - public: 公共资源池队列
 - exclusive: 专享资源池队列
-- security: 安全队列，出站网络受管控，禁止修改资源属性
+- security: 安全异构队列，出站网络受管控，禁止修改资源属性
+- sec-vm: 安全云主机队列，管控约束与&#x60;security&#x60;一致
 
 ## 使用说明
 - 该字段为查询返回值，创建/更新时无需传入，队列类型由&#x60;queueId&#x60;推导
@@ -276,11 +281,12 @@ public class NbWorkloadDetail  implements java.io.Serializable {
 - 调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
 
 ## 安全队列使用限制
+以下限制对&#x60;security&#x60;与&#x60;sec-vm&#x60;两类安全队列同样生效：
 - 仅支持&#x60;jpfs&#x60;/&#x60;oss&#x60;两种存储类型，其他存储类型(如&#x60;cfs&#x60;)会被拒绝
 - 不支持开启大数据(BDP)功能，因其依赖CFS挂载
 - 不支持修改资源属性、不支持在启动时变更资源规格/队列、不支持保存镜像
 - 不允许把已有实例的资源属性变更到安全队列
-- 除安全jpfs(&#x60;storageSource&#x3D;security&#x60;)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
+- 除安全存储(&#x60;storageSource&#x3D;security&#x60;的jpfs/oss)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
 
      *
      * @param queueType
@@ -411,12 +417,12 @@ public class NbWorkloadDetail  implements java.io.Serializable {
 
 
     /**
-     * get 虚拟GPU数量，分配的GPU卡数。
+     * get 虚拟GPU数量，实例实际分配的GPU卡数总量。
 
 ## 使用说明
-- 整数表示完整GPU卡
-- 小数表示GPU切分
-- 示例：1, 2, 4, 8, 0.5, 0.25
+- 整数表示整卡，小数表示卡切分
+- 各芯片厂商支持的取值不同，详见创建参数workloadSpec.vcudaCore
+- 取值为0或空表示CPU实例
 
      *
      * @return
@@ -426,12 +432,12 @@ public class NbWorkloadDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 虚拟GPU数量，分配的GPU卡数。
+     * set 虚拟GPU数量，实例实际分配的GPU卡数总量。
 
 ## 使用说明
-- 整数表示完整GPU卡
-- 小数表示GPU切分
-- 示例：1, 2, 4, 8, 0.5, 0.25
+- 整数表示整卡，小数表示卡切分
+- 各芯片厂商支持的取值不同，详见创建参数workloadSpec.vcudaCore
+- 取值为0或空表示CPU实例
 
      *
      * @param vcudaCore
@@ -628,7 +634,8 @@ public class NbWorkloadDetail  implements java.io.Serializable {
 - private: 私有资源池队列
 - public: 公共资源池队列
 - exclusive: 专享资源池队列
-- security: 安全队列，出站网络受管控，禁止修改资源属性
+- security: 安全异构队列，出站网络受管控，禁止修改资源属性
+- sec-vm: 安全云主机队列，管控约束与&#x60;security&#x60;一致
 
 ## 使用说明
 - 该字段为查询返回值，创建/更新时无需传入，队列类型由&#x60;queueId&#x60;推导
@@ -638,11 +645,12 @@ public class NbWorkloadDetail  implements java.io.Serializable {
 - 调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
 
 ## 安全队列使用限制
+以下限制对&#x60;security&#x60;与&#x60;sec-vm&#x60;两类安全队列同样生效：
 - 仅支持&#x60;jpfs&#x60;/&#x60;oss&#x60;两种存储类型，其他存储类型(如&#x60;cfs&#x60;)会被拒绝
 - 不支持开启大数据(BDP)功能，因其依赖CFS挂载
 - 不支持修改资源属性、不支持在启动时变更资源规格/队列、不支持保存镜像
 - 不允许把已有实例的资源属性变更到安全队列
-- 除安全jpfs(&#x60;storageSource&#x3D;security&#x60;)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
+- 除安全存储(&#x60;storageSource&#x3D;security&#x60;的jpfs/oss)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
 
      *
      * @param queueType 队列类型，实例运行所在资源队列的类型。
@@ -651,7 +659,8 @@ public class NbWorkloadDetail  implements java.io.Serializable {
 - private: 私有资源池队列
 - public: 公共资源池队列
 - exclusive: 专享资源池队列
-- security: 安全队列，出站网络受管控，禁止修改资源属性
+- security: 安全异构队列，出站网络受管控，禁止修改资源属性
+- sec-vm: 安全云主机队列，管控约束与&#x60;security&#x60;一致
 
 ## 使用说明
 - 该字段为查询返回值，创建/更新时无需传入，队列类型由&#x60;queueId&#x60;推导
@@ -661,11 +670,12 @@ public class NbWorkloadDetail  implements java.io.Serializable {
 - 调用方需同时容忍空串与&#x60;private&#x60;两种表示私有资源池的情形
 
 ## 安全队列使用限制
+以下限制对&#x60;security&#x60;与&#x60;sec-vm&#x60;两类安全队列同样生效：
 - 仅支持&#x60;jpfs&#x60;/&#x60;oss&#x60;两种存储类型，其他存储类型(如&#x60;cfs&#x60;)会被拒绝
 - 不支持开启大数据(BDP)功能，因其依赖CFS挂载
 - 不支持修改资源属性、不支持在启动时变更资源规格/队列、不支持保存镜像
 - 不允许把已有实例的资源属性变更到安全队列
-- 除安全jpfs(&#x60;storageSource&#x3D;security&#x60;)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
+- 除安全存储(&#x60;storageSource&#x3D;security&#x60;的jpfs/oss)本身外，其余挂载点强制只读，详见&#x60;storageSpec.readonly&#x60;
 
      * @return NbWorkloadDetail
      */
@@ -768,20 +778,20 @@ public class NbWorkloadDetail  implements java.io.Serializable {
 
 
     /**
-     * set 虚拟GPU数量，分配的GPU卡数。
+     * set 虚拟GPU数量，实例实际分配的GPU卡数总量。
 
 ## 使用说明
-- 整数表示完整GPU卡
-- 小数表示GPU切分
-- 示例：1, 2, 4, 8, 0.5, 0.25
+- 整数表示整卡，小数表示卡切分
+- 各芯片厂商支持的取值不同，详见创建参数workloadSpec.vcudaCore
+- 取值为0或空表示CPU实例
 
      *
-     * @param vcudaCore 虚拟GPU数量，分配的GPU卡数。
+     * @param vcudaCore 虚拟GPU数量，实例实际分配的GPU卡数总量。
 
 ## 使用说明
-- 整数表示完整GPU卡
-- 小数表示GPU切分
-- 示例：1, 2, 4, 8, 0.5, 0.25
+- 整数表示整卡，小数表示卡切分
+- 各芯片厂商支持的取值不同，详见创建参数workloadSpec.vcudaCore
+- 取值为0或空表示CPU实例
 
      * @return NbWorkloadDetail
      */

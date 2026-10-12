@@ -256,6 +256,9 @@ import com.jdcloud.sdk.service.jdaip.client.CreateImageExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeNotebookCountRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeNotebookCountResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeNotebookCountExecutor;
+import com.jdcloud.sdk.service.jdaip.model.AdminDescribeDedicatedGatewaysRequest;
+import com.jdcloud.sdk.service.jdaip.model.AdminDescribeDedicatedGatewaysResponse;
+import com.jdcloud.sdk.service.jdaip.client.AdminDescribeDedicatedGatewaysExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeImagesRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeImagesResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeImagesExecutor;
@@ -1241,6 +1244,7 @@ public class JdaipClient extends JdcloudClient {
 **支持的训练任务类型：**
 - &#x60;pytorch&#x60;：PyTorch 框架，适用于深度学习训练、分布式训练
 - &#x60;ray&#x60;：Ray 框架，适用于分布式计算、强化学习、超参调优
+- &#x60;batch&#x60;：批量任务，多个同规格 Worker 副本独立执行
 
      *
      * @param request
@@ -1759,6 +1763,18 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 查询pin下有权限的工作空间下的专属网关列表。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AdminDescribeDedicatedGatewaysResponse adminDescribeDedicatedGateways(AdminDescribeDedicatedGatewaysRequest request) throws JdcloudSdkException {
+        return new AdminDescribeDedicatedGatewaysExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取镜像列表
 
 ## 下游任务使用时，接口入参说明
@@ -2019,6 +2035,7 @@ public class JdaipClient extends JdcloudClient {
      * 查询训练任务详情。
 
 获取训练任务的完整配置信息和运行状态，包括基本信息、镜像配置、资源配置、存储配置、运行配置、Pod信息等。
+Batch 任务额外返回 &#x60;minAvailable&#x60; 和 &#x60;batchSummary&#x60;；混合成功/失败时状态为 &#x60;partial-success&#x60;。
 
 ## 使用场景
 
@@ -2253,6 +2270,7 @@ public class JdaipClient extends JdcloudClient {
 
 查询训练任务下所有运行实例（Pod）的详细信息，包括名称、类型、状态、IP、运行时长等。
 支持分页查询和多种过滤条件，异常状态数据可优先展示。
+Batch 实例额外返回 &#x60;taskIndex&#x60;、&#x60;exitCode&#x60;、&#x60;terminationReason&#x60;、&#x60;attemptNo&#x60; 和 &#x60;isCurrent&#x60;。
 
 ## 使用场景
 
@@ -2443,6 +2461,7 @@ public class JdaipClient extends JdcloudClient {
 
 - &#x60;resource&#x60; 参数已废弃
 - Ray 任务必须使用 &#x60;roleResource&#x60; 配置 Head 和 Worker 角色
+- Batch 任务使用单 Worker &#x60;roleResource&#x60;，副本数取 Worker 的 &#x60;count&#x60;，&#x60;minAvailable&#x60; 默认 1，不支持重启策略、健康检测、高级配置和 RDMA
 - **重启策略仅适用于异构节点池的 PyTorch 任务**，云主机资源池和 Ray 任务不支持
 - 公共资源池和共享资源池角色规格须通过 &#x60;logicAzCode&#x60; 指定可用区（异构规格还须填 &#x60;hpcClusterName&#x60;）
 - 共享资源池固定使用 &#x60;queueId&#x3D;joybuilder-exclusive-queue&#x60;；用户必须已加入共享池且存在启用的 user queue

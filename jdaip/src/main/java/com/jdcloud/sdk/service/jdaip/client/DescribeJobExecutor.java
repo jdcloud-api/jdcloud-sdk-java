@@ -20,7 +20,7 @@
 
 训练任务管理提供以下核心能力：
 
-- **任务创建**：支持 PyTorch 和 Ray 两种训练框架，可使用公共资源池、共享资源池或工作空间绑定的资源队列
+- **任务创建**：支持 PyTorch、Ray 和 Batch 三种任务类型，可使用公共资源池、共享资源池或工作空间绑定的资源队列
 - **任务监控**：实时查看任务状态、事件、日志
 - **任务控制**：支持停止、删除等操作
 - **实例管理**：查看训练任务的各个运行实例状态
@@ -28,7 +28,7 @@
 ## 任务生命周期
 
 ```
-创建 → 排队(queuing) → 启动(pending) → 运行(running) → 成功(success)/失败(failed)/停止(stopped)
+创建 → 排队(queuing) → 启动(pending) → 运行(running) → 成功(success)/部分成功(partial-success)/失败(failed)/停止(stopped)
                           ↓
                      异常时可自动重启
 ```
@@ -56,6 +56,7 @@ import com.jdcloud.sdk.service.jdaip.model.DescribeJobResponse;
  * 查询训练任务详情。
 
 获取训练任务的完整配置信息和运行状态，包括基本信息、镜像配置、资源配置、存储配置、运行配置、Pod信息等。
+Batch 任务额外返回 &#x60;minAvailable&#x60; 和 &#x60;batchSummary&#x60;；混合成功/失败时状态为 &#x60;partial-success&#x60;。
 
 ## 使用场景
 

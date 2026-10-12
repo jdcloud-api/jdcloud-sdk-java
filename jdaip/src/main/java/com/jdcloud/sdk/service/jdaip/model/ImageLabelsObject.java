@@ -40,7 +40,7 @@ public class ImageLabelsObject  implements java.io.Serializable {
     
     private List<String> baseinfo;
     /**
-     * 训练任务,当imageUsage包含training时， 使用该字段在创建训练任务时，任务类型使用，支持单个，可选值pytorch、ray
+     * 训练任务,当imageUsage包含training时， 使用该字段在创建训练任务时，任务类型使用，可选值pytorch、ray、batch
 训练任务文档参考: [创建训练任务](https://docs.jdcloud.com/cn/jdaip/create-trainjob)
 
      */
@@ -78,7 +78,7 @@ public class ImageLabelsObject  implements java.io.Serializable {
 
 
     /**
-    * get 训练任务,当imageUsage包含training时， 使用该字段在创建训练任务时，任务类型使用，支持单个，可选值pytorch、ray
+    * get 训练任务,当imageUsage包含training时， 使用该字段在创建训练任务时，任务类型使用，可选值pytorch、ray、batch
 训练任务文档参考: [创建训练任务](https://docs.jdcloud.com/cn/jdaip/create-trainjob)
 
     *
@@ -89,7 +89,7 @@ public class ImageLabelsObject  implements java.io.Serializable {
     }
 
     /**
-    * set 训练任务,当imageUsage包含training时， 使用该字段在创建训练任务时，任务类型使用，支持单个，可选值pytorch、ray
+    * set 训练任务,当imageUsage包含training时， 使用该字段在创建训练任务时，任务类型使用，可选值pytorch、ray、batch
 训练任务文档参考: [创建训练任务](https://docs.jdcloud.com/cn/jdaip/create-trainjob)
 
     *
@@ -152,11 +152,11 @@ public class ImageLabelsObject  implements java.io.Serializable {
 
 
     /**
-    * set 训练任务,当imageUsage包含training时， 使用该字段在创建训练任务时，任务类型使用，支持单个，可选值pytorch、ray
+    * set 训练任务,当imageUsage包含training时， 使用该字段在创建训练任务时，任务类型使用，可选值pytorch、ray、batch
 训练任务文档参考: [创建训练任务](https://docs.jdcloud.com/cn/jdaip/create-trainjob)
 
     *
-    * @param jobtype 训练任务,当imageUsage包含training时， 使用该字段在创建训练任务时，任务类型使用，支持单个，可选值pytorch、ray
+    * @param jobtype 训练任务,当imageUsage包含training时， 使用该字段在创建训练任务时，任务类型使用，可选值pytorch、ray、batch
 训练任务文档参考: [创建训练任务](https://docs.jdcloud.com/cn/jdaip/create-trainjob)
 
     * @return ImageLabelsObject
@@ -205,7 +205,7 @@ public class ImageLabelsObject  implements java.io.Serializable {
     }
 
     /**
-     * add item to 训练任务,当imageUsage包含training时， 使用该字段在创建训练任务时，任务类型使用，支持单个，可选值pytorch、ray
+     * add item to 训练任务,当imageUsage包含training时， 使用该字段在创建训练任务时，任务类型使用，可选值pytorch、ray、batch
 训练任务文档参考: [创建训练任务](https://docs.jdcloud.com/cn/jdaip/create-trainjob)
 
      *

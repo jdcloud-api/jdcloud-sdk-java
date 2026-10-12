@@ -40,7 +40,7 @@ public class Node  implements java.io.Serializable {
     private String id;
 
     /**
-     * 节点类型
+     * 节点类型，vm为云主机节点，hpc为物理集群节点
      */
     private String nodeType;
 
@@ -175,6 +175,16 @@ public class Node  implements java.io.Serializable {
     private String deviceBrand;
 
     /**
+     * GPU类型
+     */
+    private String deviceModel;
+
+    /**
+     * 驱动版本
+     */
+    private String driverVersion;
+
+    /**
      * 所属租户
      */
     private String pin;
@@ -221,7 +231,7 @@ public class Node  implements java.io.Serializable {
 
 
     /**
-     * get 节点类型
+     * get 节点类型，vm为云主机节点，hpc为物理集群节点
      *
      * @return
      */
@@ -230,7 +240,7 @@ public class Node  implements java.io.Serializable {
     }
 
     /**
-     * set 节点类型
+     * set 节点类型，vm为云主机节点，hpc为物理集群节点
      *
      * @param nodeType
      */
@@ -734,6 +744,44 @@ public class Node  implements java.io.Serializable {
 
 
     /**
+     * get GPU类型
+     *
+     * @return
+     */
+    public String getDeviceModel() {
+        return deviceModel;
+    }
+
+    /**
+     * set GPU类型
+     *
+     * @param deviceModel
+     */
+    public void setDeviceModel(String deviceModel) {
+        this.deviceModel = deviceModel;
+    }
+
+
+    /**
+     * get 驱动版本
+     *
+     * @return
+     */
+    public String getDriverVersion() {
+        return driverVersion;
+    }
+
+    /**
+     * set 驱动版本
+     *
+     * @param driverVersion
+     */
+    public void setDriverVersion(String driverVersion) {
+        this.driverVersion = driverVersion;
+    }
+
+
+    /**
      * get 所属租户
      *
      * @return
@@ -842,9 +890,9 @@ public class Node  implements java.io.Serializable {
 
 
     /**
-     * set 节点类型
+     * set 节点类型，vm为云主机节点，hpc为物理集群节点
      *
-     * @param nodeType 节点类型
+     * @param nodeType 节点类型，vm为云主机节点，hpc为物理集群节点
      * @return Node
      */
     public Node nodeType(String nodeType) {
@@ -1161,6 +1209,30 @@ public class Node  implements java.io.Serializable {
      */
     public Node deviceBrand(String deviceBrand) {
         this.deviceBrand = deviceBrand;
+        return this;
+    }
+
+
+    /**
+     * set GPU类型
+     *
+     * @param deviceModel GPU类型
+     * @return Node
+     */
+    public Node deviceModel(String deviceModel) {
+        this.deviceModel = deviceModel;
+        return this;
+    }
+
+
+    /**
+     * set 驱动版本
+     *
+     * @param driverVersion 驱动版本
+     * @return Node
+     */
+    public Node driverVersion(String driverVersion) {
+        this.driverVersion = driverVersion;
         return this;
     }
 

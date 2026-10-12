@@ -134,6 +134,11 @@ public class RoleDeploy  implements java.io.Serializable {
      */
     private String routerDecodePolicy;
 
+    /**
+     * 多角色部署KVCache传输协议类型
+     */
+    private String kvTransferProtocol;
+
 
 
     /**
@@ -516,6 +521,25 @@ public class RoleDeploy  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 多角色部署KVCache传输协议类型
+     *
+     * @return
+     */
+    public String getKvTransferProtocol() {
+        return kvTransferProtocol;
+    }
+
+    /**
+     * set 多角色部署KVCache传输协议类型
+     *
+     * @param kvTransferProtocol
+     */
+    public void setKvTransferProtocol(String kvTransferProtocol) {
+        this.kvTransferProtocol = kvTransferProtocol;
+    }
+
+
 
     /**
      * set 角色名称（prefill/decode/router/custom）
@@ -753,6 +777,18 @@ public class RoleDeploy  implements java.io.Serializable {
      */
     public RoleDeploy routerDecodePolicy(String routerDecodePolicy) {
         this.routerDecodePolicy = routerDecodePolicy;
+        return this;
+    }
+
+
+    /**
+     * set 多角色部署KVCache传输协议类型
+     *
+     * @param kvTransferProtocol 多角色部署KVCache传输协议类型
+     * @return RoleDeploy
+     */
+    public RoleDeploy kvTransferProtocol(String kvTransferProtocol) {
+        this.kvTransferProtocol = kvTransferProtocol;
         return this;
     }
 

@@ -89,7 +89,7 @@ public class DatasetWarmCommercialDatasetInfo  implements java.io.Serializable {
     private String updateTime;
 
     /**
-     * 该数据集在当前安全存储空间下是否存在非删除状态的预热任务
+     * 该数据集在当前安全存储下是否存在非删除状态的预热任务。JPFS 场景按 safeStorageId 判断，OSS 场景按 taskType&#x3D;oss + bucketName 判断；OSS 场景未传 bucketName 时，safeStorageId 按 bucketName 兼容处理
      */
     private Boolean hasDatasetWarmTask;
 
@@ -298,7 +298,7 @@ public class DatasetWarmCommercialDatasetInfo  implements java.io.Serializable {
 
 
     /**
-     * get 该数据集在当前安全存储空间下是否存在非删除状态的预热任务
+     * get 该数据集在当前安全存储下是否存在非删除状态的预热任务。JPFS 场景按 safeStorageId 判断，OSS 场景按 taskType&#x3D;oss + bucketName 判断；OSS 场景未传 bucketName 时，safeStorageId 按 bucketName 兼容处理
      *
      * @return
      */
@@ -307,7 +307,7 @@ public class DatasetWarmCommercialDatasetInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 该数据集在当前安全存储空间下是否存在非删除状态的预热任务
+     * set 该数据集在当前安全存储下是否存在非删除状态的预热任务。JPFS 场景按 safeStorageId 判断，OSS 场景按 taskType&#x3D;oss + bucketName 判断；OSS 场景未传 bucketName 时，safeStorageId 按 bucketName 兼容处理
      *
      * @param hasDatasetWarmTask
      */
@@ -450,9 +450,9 @@ public class DatasetWarmCommercialDatasetInfo  implements java.io.Serializable {
 
 
     /**
-     * set 该数据集在当前安全存储空间下是否存在非删除状态的预热任务
+     * set 该数据集在当前安全存储下是否存在非删除状态的预热任务。JPFS 场景按 safeStorageId 判断，OSS 场景按 taskType&#x3D;oss + bucketName 判断；OSS 场景未传 bucketName 时，safeStorageId 按 bucketName 兼容处理
      *
-     * @param hasDatasetWarmTask 该数据集在当前安全存储空间下是否存在非删除状态的预热任务
+     * @param hasDatasetWarmTask 该数据集在当前安全存储下是否存在非删除状态的预热任务。JPFS 场景按 safeStorageId 判断，OSS 场景按 taskType&#x3D;oss + bucketName 判断；OSS 场景未传 bucketName 时，safeStorageId 按 bucketName 兼容处理
      * @return DatasetWarmCommercialDatasetInfo
      */
     public DatasetWarmCommercialDatasetInfo hasDatasetWarmTask(Boolean hasDatasetWarmTask) {

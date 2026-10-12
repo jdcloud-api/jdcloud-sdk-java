@@ -42,6 +42,16 @@ public class Disk  implements java.io.Serializable {
      */
     private Integer capacity;
 
+    /**
+     * 磁盘分类，取值为 cloud(云盘) 或 local(本地盘)
+     */
+    private String diskCategory;
+
+    /**
+     * 磁盘Id, 仅云盘有效
+     */
+    private String diskId;
+
 
 
     /**
@@ -82,6 +92,44 @@ public class Disk  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 磁盘分类，取值为 cloud(云盘) 或 local(本地盘)
+     *
+     * @return
+     */
+    public String getDiskCategory() {
+        return diskCategory;
+    }
+
+    /**
+     * set 磁盘分类，取值为 cloud(云盘) 或 local(本地盘)
+     *
+     * @param diskCategory
+     */
+    public void setDiskCategory(String diskCategory) {
+        this.diskCategory = diskCategory;
+    }
+
+
+    /**
+     * get 磁盘Id, 仅云盘有效
+     *
+     * @return
+     */
+    public String getDiskId() {
+        return diskId;
+    }
+
+    /**
+     * set 磁盘Id, 仅云盘有效
+     *
+     * @param diskId
+     */
+    public void setDiskId(String diskId) {
+        this.diskId = diskId;
+    }
+
+
 
     /**
      * set 硬盘类型
@@ -103,6 +151,30 @@ public class Disk  implements java.io.Serializable {
      */
     public Disk capacity(Integer capacity) {
         this.capacity = capacity;
+        return this;
+    }
+
+
+    /**
+     * set 磁盘分类，取值为 cloud(云盘) 或 local(本地盘)
+     *
+     * @param diskCategory 磁盘分类，取值为 cloud(云盘) 或 local(本地盘)
+     * @return Disk
+     */
+    public Disk diskCategory(String diskCategory) {
+        this.diskCategory = diskCategory;
+        return this;
+    }
+
+
+    /**
+     * set 磁盘Id, 仅云盘有效
+     *
+     * @param diskId 磁盘Id, 仅云盘有效
+     * @return Disk
+     */
+    public Disk diskId(String diskId) {
+        this.diskId = diskId;
         return this;
     }
 

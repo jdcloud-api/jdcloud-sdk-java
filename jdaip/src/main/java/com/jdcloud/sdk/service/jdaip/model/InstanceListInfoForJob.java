@@ -87,10 +87,36 @@ public class InstanceListInfoForJob  implements java.io.Serializable {
 - &#x60;succeeded&#x60;：成功，训练正常完成
 - &#x60;failed&#x60;：失败，实例执行失败
 - &#x60;terminating&#x60;：终止中，正在终止实例
+- &#x60;terminated&#x60;：已终止；Batch 的历史 attempt 或任务停止后可能返回
 - &#x60;unknown&#x60;：未知，状态无法获取
 
      */
     private String state;
+
+    /**
+     * Batch 副本的零基序号；非 Batch 任务不返回。
+     */
+    private Integer taskIndex;
+
+    /**
+     * 主容器退出码；尚未退出或非 Batch 任务不返回。
+     */
+    private Integer exitCode;
+
+    /**
+     * Pod 或主容器终止原因；非 Batch 任务不返回。
+     */
+    private String terminationReason;
+
+    /**
+     * 同一 taskIndex 的尝试序号，从 1 开始；非 Batch 任务不返回。
+     */
+    private Integer attemptNo;
+
+    /**
+     * 是否为该 taskIndex 当前的 Pod 尝试；非 Batch 任务不返回。
+     */
+    private Boolean isCurrent;
 
     /**
      * 实例创建时间。
@@ -267,6 +293,7 @@ public class InstanceListInfoForJob  implements java.io.Serializable {
 - &#x60;succeeded&#x60;：成功，训练正常完成
 - &#x60;failed&#x60;：失败，实例执行失败
 - &#x60;terminating&#x60;：终止中，正在终止实例
+- &#x60;terminated&#x60;：已终止；Batch 的历史 attempt 或任务停止后可能返回
 - &#x60;unknown&#x60;：未知，状态无法获取
 
      *
@@ -286,6 +313,7 @@ public class InstanceListInfoForJob  implements java.io.Serializable {
 - &#x60;succeeded&#x60;：成功，训练正常完成
 - &#x60;failed&#x60;：失败，实例执行失败
 - &#x60;terminating&#x60;：终止中，正在终止实例
+- &#x60;terminated&#x60;：已终止；Batch 的历史 attempt 或任务停止后可能返回
 - &#x60;unknown&#x60;：未知，状态无法获取
 
      *
@@ -293,6 +321,101 @@ public class InstanceListInfoForJob  implements java.io.Serializable {
      */
     public void setState(String state) {
         this.state = state;
+    }
+
+
+    /**
+     * get Batch 副本的零基序号；非 Batch 任务不返回。
+     *
+     * @return
+     */
+    public Integer getTaskIndex() {
+        return taskIndex;
+    }
+
+    /**
+     * set Batch 副本的零基序号；非 Batch 任务不返回。
+     *
+     * @param taskIndex
+     */
+    public void setTaskIndex(Integer taskIndex) {
+        this.taskIndex = taskIndex;
+    }
+
+
+    /**
+     * get 主容器退出码；尚未退出或非 Batch 任务不返回。
+     *
+     * @return
+     */
+    public Integer getExitCode() {
+        return exitCode;
+    }
+
+    /**
+     * set 主容器退出码；尚未退出或非 Batch 任务不返回。
+     *
+     * @param exitCode
+     */
+    public void setExitCode(Integer exitCode) {
+        this.exitCode = exitCode;
+    }
+
+
+    /**
+     * get Pod 或主容器终止原因；非 Batch 任务不返回。
+     *
+     * @return
+     */
+    public String getTerminationReason() {
+        return terminationReason;
+    }
+
+    /**
+     * set Pod 或主容器终止原因；非 Batch 任务不返回。
+     *
+     * @param terminationReason
+     */
+    public void setTerminationReason(String terminationReason) {
+        this.terminationReason = terminationReason;
+    }
+
+
+    /**
+     * get 同一 taskIndex 的尝试序号，从 1 开始；非 Batch 任务不返回。
+     *
+     * @return
+     */
+    public Integer getAttemptNo() {
+        return attemptNo;
+    }
+
+    /**
+     * set 同一 taskIndex 的尝试序号，从 1 开始；非 Batch 任务不返回。
+     *
+     * @param attemptNo
+     */
+    public void setAttemptNo(Integer attemptNo) {
+        this.attemptNo = attemptNo;
+    }
+
+
+    /**
+     * get 是否为该 taskIndex 当前的 Pod 尝试；非 Batch 任务不返回。
+     *
+     * @return
+     */
+    public Boolean getIsCurrent() {
+        return isCurrent;
+    }
+
+    /**
+     * set 是否为该 taskIndex 当前的 Pod 尝试；非 Batch 任务不返回。
+     *
+     * @param isCurrent
+     */
+    public void setIsCurrent(Boolean isCurrent) {
+        this.isCurrent = isCurrent;
     }
 
 
@@ -510,6 +633,7 @@ public class InstanceListInfoForJob  implements java.io.Serializable {
 - &#x60;succeeded&#x60;：成功，训练正常完成
 - &#x60;failed&#x60;：失败，实例执行失败
 - &#x60;terminating&#x60;：终止中，正在终止实例
+- &#x60;terminated&#x60;：已终止；Batch 的历史 attempt 或任务停止后可能返回
 - &#x60;unknown&#x60;：未知，状态无法获取
 
      *
@@ -522,12 +646,73 @@ public class InstanceListInfoForJob  implements java.io.Serializable {
 - &#x60;succeeded&#x60;：成功，训练正常完成
 - &#x60;failed&#x60;：失败，实例执行失败
 - &#x60;terminating&#x60;：终止中，正在终止实例
+- &#x60;terminated&#x60;：已终止；Batch 的历史 attempt 或任务停止后可能返回
 - &#x60;unknown&#x60;：未知，状态无法获取
 
      * @return InstanceListInfoForJob
      */
     public InstanceListInfoForJob state(String state) {
         this.state = state;
+        return this;
+    }
+
+
+    /**
+     * set Batch 副本的零基序号；非 Batch 任务不返回。
+     *
+     * @param taskIndex Batch 副本的零基序号；非 Batch 任务不返回。
+     * @return InstanceListInfoForJob
+     */
+    public InstanceListInfoForJob taskIndex(Integer taskIndex) {
+        this.taskIndex = taskIndex;
+        return this;
+    }
+
+
+    /**
+     * set 主容器退出码；尚未退出或非 Batch 任务不返回。
+     *
+     * @param exitCode 主容器退出码；尚未退出或非 Batch 任务不返回。
+     * @return InstanceListInfoForJob
+     */
+    public InstanceListInfoForJob exitCode(Integer exitCode) {
+        this.exitCode = exitCode;
+        return this;
+    }
+
+
+    /**
+     * set Pod 或主容器终止原因；非 Batch 任务不返回。
+     *
+     * @param terminationReason Pod 或主容器终止原因；非 Batch 任务不返回。
+     * @return InstanceListInfoForJob
+     */
+    public InstanceListInfoForJob terminationReason(String terminationReason) {
+        this.terminationReason = terminationReason;
+        return this;
+    }
+
+
+    /**
+     * set 同一 taskIndex 的尝试序号，从 1 开始；非 Batch 任务不返回。
+     *
+     * @param attemptNo 同一 taskIndex 的尝试序号，从 1 开始；非 Batch 任务不返回。
+     * @return InstanceListInfoForJob
+     */
+    public InstanceListInfoForJob attemptNo(Integer attemptNo) {
+        this.attemptNo = attemptNo;
+        return this;
+    }
+
+
+    /**
+     * set 是否为该 taskIndex 当前的 Pod 尝试；非 Batch 任务不返回。
+     *
+     * @param isCurrent 是否为该 taskIndex 当前的 Pod 尝试；非 Batch 任务不返回。
+     * @return InstanceListInfoForJob
+     */
+    public InstanceListInfoForJob isCurrent(Boolean isCurrent) {
+        this.isCurrent = isCurrent;
         return this;
     }
 

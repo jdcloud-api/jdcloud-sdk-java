@@ -40,7 +40,15 @@ public class RoleResourceInfoForJobList  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     * 队列类型。
+
+**可选值：**
+- &#x60;public&#x60;：公共资源池
+- &#x60;exclusive&#x60;：共享资源池
+- &#x60;private&#x60;：专属资源池
+- &#x60;security&#x60;：安全异构节点池
+- &#x60;sec-vm&#x60;：安全云主机节点池
+
      */
     private String queueType;
 
@@ -77,7 +85,15 @@ public class RoleResourceInfoForJobList  implements java.io.Serializable {
 
 
     /**
-     * get 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     * get 队列类型。
+
+**可选值：**
+- &#x60;public&#x60;：公共资源池
+- &#x60;exclusive&#x60;：共享资源池
+- &#x60;private&#x60;：专属资源池
+- &#x60;security&#x60;：安全异构节点池
+- &#x60;sec-vm&#x60;：安全云主机节点池
+
      *
      * @return
      */
@@ -86,7 +102,15 @@ public class RoleResourceInfoForJobList  implements java.io.Serializable {
     }
 
     /**
-     * set 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     * set 队列类型。
+
+**可选值：**
+- &#x60;public&#x60;：公共资源池
+- &#x60;exclusive&#x60;：共享资源池
+- &#x60;private&#x60;：专属资源池
+- &#x60;security&#x60;：安全异构节点池
+- &#x60;sec-vm&#x60;：安全云主机节点池
+
      *
      * @param queueType
      */
@@ -184,9 +208,25 @@ public class RoleResourceInfoForJobList  implements java.io.Serializable {
 
 
     /**
-     * set 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     * set 队列类型。
+
+**可选值：**
+- &#x60;public&#x60;：公共资源池
+- &#x60;exclusive&#x60;：共享资源池
+- &#x60;private&#x60;：专属资源池
+- &#x60;security&#x60;：安全异构节点池
+- &#x60;sec-vm&#x60;：安全云主机节点池
+
      *
-     * @param queueType 队列类型。公共资源池为 &#x60;public&#x60;，共享资源池为 &#x60;exclusive&#x60;，安全资源池为 &#x60;secure&#x60;。
+     * @param queueType 队列类型。
+
+**可选值：**
+- &#x60;public&#x60;：公共资源池
+- &#x60;exclusive&#x60;：共享资源池
+- &#x60;private&#x60;：专属资源池
+- &#x60;security&#x60;：安全异构节点池
+- &#x60;sec-vm&#x60;：安全云主机节点池
+
      * @return RoleResourceInfoForJobList
      */
     public RoleResourceInfoForJobList queueType(String queueType) {

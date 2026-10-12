@@ -301,6 +301,11 @@ public class NotebookDetail  implements java.io.Serializable {
     
     private List<NbDatasetDetail> datasets;
     /**
+     * 科技数据集列表，返回Notebook本地只读挂载信息。
+     */
+    
+    private List<NbTechDatasetDetail> techDatasets;
+    /**
      * 模型列表，实例挂载的模型配置详情。
 
 ## 包含信息
@@ -1189,6 +1194,25 @@ public class NotebookDetail  implements java.io.Serializable {
     */
     public void setDatasets(List<NbDatasetDetail> datasets) {
         this.datasets = datasets;
+    }
+
+
+    /**
+    * get 科技数据集列表，返回Notebook本地只读挂载信息。
+    *
+    * @return
+    */
+    public List<NbTechDatasetDetail> getTechDatasets() {
+        return techDatasets;
+    }
+
+    /**
+    * set 科技数据集列表，返回Notebook本地只读挂载信息。
+    *
+    * @param techDatasets
+    */
+    public void setTechDatasets(List<NbTechDatasetDetail> techDatasets) {
+        this.techDatasets = techDatasets;
     }
 
 
@@ -2106,6 +2130,18 @@ public class NotebookDetail  implements java.io.Serializable {
 
 
     /**
+    * set 科技数据集列表，返回Notebook本地只读挂载信息。
+    *
+    * @param techDatasets 科技数据集列表，返回Notebook本地只读挂载信息。
+    * @return NotebookDetail
+    */
+    public NotebookDetail techDatasets(List<NbTechDatasetDetail> techDatasets) {
+        this.techDatasets = techDatasets;
+        return this;
+    }
+
+
+    /**
     * set 模型列表，实例挂载的模型配置详情。
 
 ## 包含信息
@@ -2411,6 +2447,18 @@ public class NotebookDetail  implements java.io.Serializable {
             this.datasets = new ArrayList<>();
         }
         this.datasets.add(dataset);
+    }
+
+    /**
+     * add item to 科技数据集列表，返回Notebook本地只读挂载信息。
+     *
+     * @param techDataset
+     */
+    public void addTechDataset(NbTechDatasetDetail techDataset) {
+        if (this.techDatasets == null) {
+            this.techDatasets = new ArrayList<>();
+        }
+        this.techDatasets.add(techDataset);
     }
 
     /**

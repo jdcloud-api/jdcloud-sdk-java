@@ -61,7 +61,7 @@ public class JpfsSpec  implements java.io.Serializable {
     private String hpcClusterNames;
 
     /**
-     * JPFS规格编码，同时作为商业平台商品名称
+     * JPFS规格编码；intelligent仅支持RDMA挂载，general同时支持RDMA和TCP挂载
      * Required:true
      */
     @Required
@@ -165,7 +165,7 @@ public class JpfsSpec  implements java.io.Serializable {
 
 
     /**
-     * get JPFS规格编码，同时作为商业平台商品名称
+     * get JPFS规格编码；intelligent仅支持RDMA挂载，general同时支持RDMA和TCP挂载
      *
      * @return
      */
@@ -174,7 +174,7 @@ public class JpfsSpec  implements java.io.Serializable {
     }
 
     /**
-     * set JPFS规格编码，同时作为商业平台商品名称
+     * set JPFS规格编码；intelligent仅支持RDMA挂载，general同时支持RDMA和TCP挂载
      *
      * @param specification
      */
@@ -245,9 +245,9 @@ public class JpfsSpec  implements java.io.Serializable {
 
 
     /**
-     * set JPFS规格编码，同时作为商业平台商品名称
+     * set JPFS规格编码；intelligent仅支持RDMA挂载，general同时支持RDMA和TCP挂载
      *
-     * @param specification JPFS规格编码，同时作为商业平台商品名称
+     * @param specification JPFS规格编码；intelligent仅支持RDMA挂载，general同时支持RDMA和TCP挂载
      * @return JpfsSpec
      */
     public JpfsSpec specification(String specification) {

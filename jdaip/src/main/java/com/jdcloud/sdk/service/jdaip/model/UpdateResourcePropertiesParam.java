@@ -82,7 +82,7 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
 ## 使用说明
 - 私有资源池中的Notebook: 需要传入与资源队列可通信的负载均衡ID和端口
 - 公共资源池中的Notebook: 可通过lbEnable&#x3D;true开启公网访问，系统自动分配LB
-- 安全队列(&#x60;queueType&#x3D;security&#x60;)中的Notebook: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)中的Notebook: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
 - 不需要公网访问时不要指定此参数
 
      */
@@ -117,6 +117,14 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
      */
     
     private List<DatasetSpec> datasets;
+    /**
+     * 科技数据集配置，用于整体替换科技数据集挂载。
+
+不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+
+     */
+    
+    private List<TechDatasetSpec> techDatasets;
     /**
      * 模型配置，用于更新模型挂载。
 
@@ -271,7 +279,7 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
 ## 使用说明
 - 私有资源池中的Notebook: 需要传入与资源队列可通信的负载均衡ID和端口
 - 公共资源池中的Notebook: 可通过lbEnable&#x3D;true开启公网访问，系统自动分配LB
-- 安全队列(&#x60;queueType&#x3D;security&#x60;)中的Notebook: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)中的Notebook: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
 - 不需要公网访问时不要指定此参数
 
      *
@@ -287,7 +295,7 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
 ## 使用说明
 - 私有资源池中的Notebook: 需要传入与资源队列可通信的负载均衡ID和端口
 - 公共资源池中的Notebook: 可通过lbEnable&#x3D;true开启公网访问，系统自动分配LB
-- 安全队列(&#x60;queueType&#x3D;security&#x60;)中的Notebook: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)中的Notebook: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
 - 不需要公网访问时不要指定此参数
 
      *
@@ -380,6 +388,31 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
     */
     public void setDatasets(List<DatasetSpec> datasets) {
         this.datasets = datasets;
+    }
+
+
+    /**
+    * get 科技数据集配置，用于整体替换科技数据集挂载。
+
+不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+
+    *
+    * @return
+    */
+    public List<TechDatasetSpec> getTechDatasets() {
+        return techDatasets;
+    }
+
+    /**
+    * set 科技数据集配置，用于整体替换科技数据集挂载。
+
+不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+
+    *
+    * @param techDatasets
+    */
+    public void setTechDatasets(List<TechDatasetSpec> techDatasets) {
+        this.techDatasets = techDatasets;
     }
 
 
@@ -667,7 +700,7 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
 ## 使用说明
 - 私有资源池中的Notebook: 需要传入与资源队列可通信的负载均衡ID和端口
 - 公共资源池中的Notebook: 可通过lbEnable&#x3D;true开启公网访问，系统自动分配LB
-- 安全队列(&#x60;queueType&#x3D;security&#x60;)中的Notebook: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)中的Notebook: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
 - 不需要公网访问时不要指定此参数
 
      *
@@ -676,7 +709,7 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
 ## 使用说明
 - 私有资源池中的Notebook: 需要传入与资源队列可通信的负载均衡ID和端口
 - 公共资源池中的Notebook: 可通过lbEnable&#x3D;true开启公网访问，系统自动分配LB
-- 安全队列(&#x60;queueType&#x3D;security&#x60;)中的Notebook: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
+- 安全队列(&#x60;queueType&#x3D;security&#x60;或&#x60;sec-vm&#x60;)中的Notebook: 可通过lbEnable&#x3D;true开启SSH访问，系统自动分配LB与端口，无需指定lbId/lbPort
 - 不需要公网访问时不要指定此参数
 
      * @return UpdateResourcePropertiesParam
@@ -747,6 +780,24 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
     */
     public UpdateResourcePropertiesParam datasets(List<DatasetSpec> datasets) {
         this.datasets = datasets;
+        return this;
+    }
+
+
+    /**
+    * set 科技数据集配置，用于整体替换科技数据集挂载。
+
+不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+
+    *
+    * @param techDatasets 科技数据集配置，用于整体替换科技数据集挂载。
+
+不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+
+    * @return UpdateResourcePropertiesParam
+    */
+    public UpdateResourcePropertiesParam techDatasets(List<TechDatasetSpec> techDatasets) {
+        this.techDatasets = techDatasets;
         return this;
     }
 
@@ -961,6 +1012,21 @@ public class UpdateResourcePropertiesParam  implements java.io.Serializable {
             this.datasets = new ArrayList<>();
         }
         this.datasets.add(dataset);
+    }
+
+    /**
+     * add item to 科技数据集配置，用于整体替换科技数据集挂载。
+
+不传或传null表示保留原配置，传空数组表示清空，传非空数组表示全量替换；独立最多50条。
+
+     *
+     * @param techDataset
+     */
+    public void addTechDataset(TechDatasetSpec techDataset) {
+        if (this.techDatasets == null) {
+            this.techDatasets = new ArrayList<>();
+        }
+        this.techDatasets.add(techDataset);
     }
 
     /**

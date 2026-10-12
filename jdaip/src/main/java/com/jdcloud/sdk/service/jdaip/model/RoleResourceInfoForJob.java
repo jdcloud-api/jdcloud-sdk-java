@@ -35,6 +35,7 @@ package com.jdcloud.sdk.service.jdaip.model;
 | PyTorch | Worker | 所有节点均为 Worker，通过 PyTorch 分布式框架协调 |
 | Ray | Head | 主节点，负责任务调度和资源管理 |
 | Ray | Worker | 工作节点，执行计算任务 |
+| Batch | Worker | 同规格副本独立执行，不包含 Head/Master |
 
  */
 public class RoleResourceInfoForJob  implements java.io.Serializable {
@@ -52,13 +53,13 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
 - 必须包含 &#x60;Head&#x60; 角色（主节点）
 - 可配置 &#x60;Worker&#x60; 或 &#x60;Worker-{name}&#x60; 角色（工作节点）
 - 示例：&#x60;Head&#x60;, &#x60;Worker&#x60;, &#x60;Worker-gpu-1&#x60;, &#x60;Worker-gpu-2&#x60;
+**Batch 任务：** 只能使用 &#x60;Worker&#x60;。
 
      */
     private String name;
 
     /**
      * 该角色的节点数量。如果是pytorch任务，count 值等于 Master + Worker 的总数。
-
 **取值范围：** 1 ~ 正整数
 
 **建议：**
@@ -146,6 +147,7 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
 - 必须包含 &#x60;Head&#x60; 角色（主节点）
 - 可配置 &#x60;Worker&#x60; 或 &#x60;Worker-{name}&#x60; 角色（工作节点）
 - 示例：&#x60;Head&#x60;, &#x60;Worker&#x60;, &#x60;Worker-gpu-1&#x60;, &#x60;Worker-gpu-2&#x60;
+**Batch 任务：** 只能使用 &#x60;Worker&#x60;。
 
      *
      * @return
@@ -165,6 +167,7 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
 - 必须包含 &#x60;Head&#x60; 角色（主节点）
 - 可配置 &#x60;Worker&#x60; 或 &#x60;Worker-{name}&#x60; 角色（工作节点）
 - 示例：&#x60;Head&#x60;, &#x60;Worker&#x60;, &#x60;Worker-gpu-1&#x60;, &#x60;Worker-gpu-2&#x60;
+**Batch 任务：** 只能使用 &#x60;Worker&#x60;。
 
      *
      * @param name
@@ -176,7 +179,6 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
 
     /**
      * get 该角色的节点数量。如果是pytorch任务，count 值等于 Master + Worker 的总数。
-
 **取值范围：** 1 ~ 正整数
 
 **建议：**
@@ -192,7 +194,6 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
 
     /**
      * set 该角色的节点数量。如果是pytorch任务，count 值等于 Master + Worker 的总数。
-
 **取值范围：** 1 ~ 正整数
 
 **建议：**
@@ -421,6 +422,7 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
 - 必须包含 &#x60;Head&#x60; 角色（主节点）
 - 可配置 &#x60;Worker&#x60; 或 &#x60;Worker-{name}&#x60; 角色（工作节点）
 - 示例：&#x60;Head&#x60;, &#x60;Worker&#x60;, &#x60;Worker-gpu-1&#x60;, &#x60;Worker-gpu-2&#x60;
+**Batch 任务：** 只能使用 &#x60;Worker&#x60;。
 
      *
      * @param name 角色名称，决定节点在分布式训练中的职责。
@@ -433,6 +435,7 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
 - 必须包含 &#x60;Head&#x60; 角色（主节点）
 - 可配置 &#x60;Worker&#x60; 或 &#x60;Worker-{name}&#x60; 角色（工作节点）
 - 示例：&#x60;Head&#x60;, &#x60;Worker&#x60;, &#x60;Worker-gpu-1&#x60;, &#x60;Worker-gpu-2&#x60;
+**Batch 任务：** 只能使用 &#x60;Worker&#x60;。
 
      * @return RoleResourceInfoForJob
      */
@@ -444,7 +447,6 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
 
     /**
      * set 该角色的节点数量。如果是pytorch任务，count 值等于 Master + Worker 的总数。
-
 **取值范围：** 1 ~ 正整数
 
 **建议：**
@@ -453,7 +455,6 @@ public class RoleResourceInfoForJob  implements java.io.Serializable {
 
      *
      * @param count 该角色的节点数量。如果是pytorch任务，count 值等于 Master + Worker 的总数。
-
 **取值范围：** 1 ~ 正整数
 
 **建议：**

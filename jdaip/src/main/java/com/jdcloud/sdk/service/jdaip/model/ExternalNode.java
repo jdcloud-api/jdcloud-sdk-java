@@ -40,7 +40,7 @@ public class ExternalNode  implements java.io.Serializable {
     private String id;
 
     /**
-     * 节点类型
+     * 节点类型，vm为云主机节点，hpc为物理集群节点
      */
     private String nodeType;
 
@@ -201,7 +201,7 @@ public class ExternalNode  implements java.io.Serializable {
 
 
     /**
-     * get 节点类型
+     * get 节点类型，vm为云主机节点，hpc为物理集群节点
      *
      * @return
      */
@@ -210,7 +210,7 @@ public class ExternalNode  implements java.io.Serializable {
     }
 
     /**
-     * set 节点类型
+     * set 节点类型，vm为云主机节点，hpc为物理集群节点
      *
      * @param nodeType
      */
@@ -746,9 +746,9 @@ public class ExternalNode  implements java.io.Serializable {
 
 
     /**
-     * set 节点类型
+     * set 节点类型，vm为云主机节点，hpc为物理集群节点
      *
-     * @param nodeType 节点类型
+     * @param nodeType 节点类型，vm为云主机节点，hpc为物理集群节点
      * @return ExternalNode
      */
     public ExternalNode nodeType(String nodeType) {
