@@ -43,6 +43,7 @@ public class CreateSubscriptionKey  implements java.io.Serializable {
     private String name;
 
 
+
     /**
      * get 描述
      *
@@ -60,6 +61,7 @@ public class CreateSubscriptionKey  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 密钥名称
@@ -80,20 +82,24 @@ public class CreateSubscriptionKey  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return CreateSubscriptionKey
      */
     public CreateSubscriptionKey description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 密钥名称
      *
-     * @param name
+     * @param name 密钥名称
+     * @return CreateSubscriptionKey
      */
     public CreateSubscriptionKey name(String name) {
         this.name = name;

@@ -63,6 +63,7 @@ public class DebugReturnMessage  implements java.io.Serializable {
     private String responseBody;
 
 
+
     /**
      * get 请求地址
      *
@@ -80,6 +81,7 @@ public class DebugReturnMessage  implements java.io.Serializable {
     public void setRequestUrl(String requestUrl) {
         this.requestUrl = requestUrl;
     }
+
 
     /**
      * get request中header信息
@@ -99,6 +101,7 @@ public class DebugReturnMessage  implements java.io.Serializable {
         this.requestHeader = requestHeader;
     }
 
+
     /**
      * get request中body信息
      *
@@ -116,6 +119,7 @@ public class DebugReturnMessage  implements java.io.Serializable {
     public void setRequestBody(String requestBody) {
         this.requestBody = requestBody;
     }
+
 
     /**
      * get 响应状态码
@@ -135,6 +139,7 @@ public class DebugReturnMessage  implements java.io.Serializable {
         this.responseCodeStatus = responseCodeStatus;
     }
 
+
     /**
      * get header返回值
      *
@@ -152,6 +157,7 @@ public class DebugReturnMessage  implements java.io.Serializable {
     public void setResponseHeaderValue(String responseHeaderValue) {
         this.responseHeaderValue = responseHeaderValue;
     }
+
 
     /**
      * get body返回值
@@ -172,60 +178,72 @@ public class DebugReturnMessage  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 请求地址
      *
-     * @param requestUrl
+     * @param requestUrl 请求地址
+     * @return DebugReturnMessage
      */
     public DebugReturnMessage requestUrl(String requestUrl) {
         this.requestUrl = requestUrl;
         return this;
     }
 
+
     /**
      * set request中header信息
      *
-     * @param requestHeader
+     * @param requestHeader request中header信息
+     * @return DebugReturnMessage
      */
     public DebugReturnMessage requestHeader(String requestHeader) {
         this.requestHeader = requestHeader;
         return this;
     }
 
+
     /**
      * set request中body信息
      *
-     * @param requestBody
+     * @param requestBody request中body信息
+     * @return DebugReturnMessage
      */
     public DebugReturnMessage requestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
     }
 
+
     /**
      * set 响应状态码
      *
-     * @param responseCodeStatus
+     * @param responseCodeStatus 响应状态码
+     * @return DebugReturnMessage
      */
     public DebugReturnMessage responseCodeStatus(String responseCodeStatus) {
         this.responseCodeStatus = responseCodeStatus;
         return this;
     }
 
+
     /**
      * set header返回值
      *
-     * @param responseHeaderValue
+     * @param responseHeaderValue header返回值
+     * @return DebugReturnMessage
      */
     public DebugReturnMessage responseHeaderValue(String responseHeaderValue) {
         this.responseHeaderValue = responseHeaderValue;
         return this;
     }
 
+
     /**
      * set body返回值
      *
-     * @param responseBody
+     * @param responseBody body返回值
+     * @return DebugReturnMessage
      */
     public DebugReturnMessage responseBody(String responseBody) {
         this.responseBody = responseBody;

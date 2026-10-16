@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API调用者密钥
+ * API-Gateway-Access-Key
  * 关于API调用者密钥操作的相关接口
  *
  * OpenAPI spec version: v1
@@ -52,14 +52,15 @@ public class QueryAccessKeysRequest extends JdcloudRequest implements java.io.Se
 accessKey - accesskey，模糊匹配
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -80,6 +81,7 @@ accessKey - accesskey，模糊匹配
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -98,27 +100,29 @@ accessKey - accesskey，模糊匹配
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get description - 名称，模糊匹配
+    * get description - 名称，模糊匹配
 accessKey - accesskey，模糊匹配
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set description - 名称，模糊匹配
+    * set description - 名称，模糊匹配
 accessKey - accesskey，模糊匹配
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -139,47 +143,58 @@ accessKey - accesskey，模糊匹配
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
-     * @param pageNumber
+     * @param pageNumber 页码, 默认为1, 取值范围：[1,∞)
+     * @return QueryAccessKeysRequest
      */
     public QueryAccessKeysRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认为20，取值范围：[10,100]
+     * @return QueryAccessKeysRequest
      */
     public QueryAccessKeysRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
+
     /**
-     * set description - 名称，模糊匹配
+    * set description - 名称，模糊匹配
 accessKey - accesskey，模糊匹配
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters description - 名称，模糊匹配
+accessKey - accesskey，模糊匹配
+
+    * @return QueryAccessKeysRequest
+    */
     public QueryAccessKeysRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QueryAccessKeysRequest
      */
     public QueryAccessKeysRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -195,5 +210,4 @@ accessKey - accesskey，模糊匹配
         }
         this.filters.add(filter);
     }
-
 }

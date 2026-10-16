@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 部署列表
+ * Deployment-List
  * 提供部署信息的创建、查询、下线、修改等功能。
  *
  * OpenAPI spec version: v1
@@ -56,6 +56,7 @@ public class OfflineRequest extends JdcloudRequest implements java.io.Serializab
     private String deploymentId;
 
 
+
     /**
      * get 地域ID
      *
@@ -74,6 +75,7 @@ public class OfflineRequest extends JdcloudRequest implements java.io.Serializab
         this.regionId = regionId;
     }
 
+
     /**
      * get 分组ID
      *
@@ -91,6 +93,7 @@ public class OfflineRequest extends JdcloudRequest implements java.io.Serializab
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 部署ID
@@ -111,30 +114,36 @@ public class OfflineRequest extends JdcloudRequest implements java.io.Serializab
     }
 
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return OfflineRequest
      */
     public OfflineRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return OfflineRequest
      */
     public OfflineRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 部署ID
      *
-     * @param deploymentId
+     * @param deploymentId 部署ID
+     * @return OfflineRequest
      */
     public OfflineRequest deploymentId(String deploymentId) {
         this.deploymentId = deploymentId;

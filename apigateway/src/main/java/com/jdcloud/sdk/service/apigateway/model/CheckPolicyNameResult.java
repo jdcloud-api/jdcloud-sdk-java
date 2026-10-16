@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 流控策略
+ * Rate-Limit-Policy
  * 关于流控策略配置和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -39,6 +39,7 @@ public class CheckPolicyNameResult extends JdcloudResult implements java.io.Seri
     private String policyId;
 
 
+
     /**
      * get 返回policyID
      *
@@ -58,10 +59,12 @@ public class CheckPolicyNameResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
      * set 返回policyID
      *
-     * @param policyId
+     * @param policyId 返回policyID
+     * @return CheckPolicyNameResult
      */
     public CheckPolicyNameResult policyId(String policyId) {
         this.policyId = policyId;

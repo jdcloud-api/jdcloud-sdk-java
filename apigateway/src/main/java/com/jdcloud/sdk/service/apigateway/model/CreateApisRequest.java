@@ -62,6 +62,7 @@ public class CreateApisRequest extends JdcloudRequest implements java.io.Seriali
     private String revision;
 
 
+
     /**
      * get api
      *
@@ -79,6 +80,7 @@ public class CreateApisRequest extends JdcloudRequest implements java.io.Seriali
     public void setApi(CreateApi api) {
         this.api = api;
     }
+
 
     /**
      * get 地域ID
@@ -98,6 +100,7 @@ public class CreateApisRequest extends JdcloudRequest implements java.io.Seriali
         this.regionId = regionId;
     }
 
+
     /**
      * get 分组ID
      *
@@ -115,6 +118,7 @@ public class CreateApisRequest extends JdcloudRequest implements java.io.Seriali
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 版本号
@@ -135,40 +139,48 @@ public class CreateApisRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set api
      *
-     * @param api
+     * @param api api
+     * @return CreateApisRequest
      */
     public CreateApisRequest api(CreateApi api) {
         this.api = api;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CreateApisRequest
      */
     public CreateApisRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return CreateApisRequest
      */
     public CreateApisRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 版本号
      *
-     * @param revision
+     * @param revision 版本号
+     * @return CreateApisRequest
      */
     public CreateApisRequest revision(String revision) {
         this.revision = revision;

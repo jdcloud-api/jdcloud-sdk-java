@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API调用者密钥
+ * API-Gateway-Access-Key
  * 关于API调用者密钥操作的相关接口
  *
  * OpenAPI spec version: v1
@@ -64,6 +64,7 @@ public class UpdateAccessKeyRequest extends JdcloudRequest implements java.io.Se
     private String accessKeyId;
 
 
+
     /**
      * get 描述
      *
@@ -81,6 +82,7 @@ public class UpdateAccessKeyRequest extends JdcloudRequest implements java.io.Se
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 密钥类型
@@ -100,6 +102,7 @@ public class UpdateAccessKeyRequest extends JdcloudRequest implements java.io.Se
         this.accessKeyType = accessKeyType;
     }
 
+
     /**
      * get Access Key
      *
@@ -118,6 +121,7 @@ public class UpdateAccessKeyRequest extends JdcloudRequest implements java.io.Se
         this.accessKey = accessKey;
     }
 
+
     /**
      * get 地域ID
      *
@@ -135,6 +139,7 @@ public class UpdateAccessKeyRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get access key id
@@ -155,50 +160,60 @@ public class UpdateAccessKeyRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return UpdateAccessKeyRequest
      */
     public UpdateAccessKeyRequest description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 密钥类型
      *
-     * @param accessKeyType
+     * @param accessKeyType 密钥类型
+     * @return UpdateAccessKeyRequest
      */
     public UpdateAccessKeyRequest accessKeyType(String accessKeyType) {
         this.accessKeyType = accessKeyType;
         return this;
     }
 
+
     /**
      * set Access Key
      *
-     * @param accessKey
+     * @param accessKey Access Key
+     * @return UpdateAccessKeyRequest
      */
     public UpdateAccessKeyRequest accessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UpdateAccessKeyRequest
      */
     public UpdateAccessKeyRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set access key id
      *
-     * @param accessKeyId
+     * @param accessKeyId access key id
+     * @return UpdateAccessKeyRequest
      */
     public UpdateAccessKeyRequest accessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;

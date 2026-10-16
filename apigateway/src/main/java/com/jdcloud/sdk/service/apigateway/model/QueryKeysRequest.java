@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * kms
+ * Key-Manager-Service
  * key manager service
  *
  * OpenAPI spec version: v1
@@ -67,6 +67,7 @@ public class QueryKeysRequest extends JdcloudRequest implements java.io.Serializ
     private String regionId;
 
 
+
     /**
      * get 页码, 默认为1, 取值范围：[1,∞)
      *
@@ -84,6 +85,7 @@ public class QueryKeysRequest extends JdcloudRequest implements java.io.Serializ
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
@@ -103,6 +105,7 @@ public class QueryKeysRequest extends JdcloudRequest implements java.io.Serializ
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 排序类型
      *
@@ -120,6 +123,7 @@ public class QueryKeysRequest extends JdcloudRequest implements java.io.Serializ
     public void setOrderBy(String orderBy) {
         this.orderBy = orderBy;
     }
+
 
     /**
      * get 用户类型
@@ -139,6 +143,7 @@ public class QueryKeysRequest extends JdcloudRequest implements java.io.Serializ
         this.userType = userType;
     }
 
+
     /**
      * get 密钥Id
      *
@@ -156,6 +161,7 @@ public class QueryKeysRequest extends JdcloudRequest implements java.io.Serializ
     public void setKeyId(String keyId) {
         this.keyId = keyId;
     }
+
 
     /**
      * get 地域ID
@@ -176,60 +182,72 @@ public class QueryKeysRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
-     * @param pageNumber
+     * @param pageNumber 页码, 默认为1, 取值范围：[1,∞)
+     * @return QueryKeysRequest
      */
     public QueryKeysRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认为20，取值范围：[10,100]
+     * @return QueryKeysRequest
      */
     public QueryKeysRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
+
     /**
      * set 排序类型
      *
-     * @param orderBy
+     * @param orderBy 排序类型
+     * @return QueryKeysRequest
      */
     public QueryKeysRequest orderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
     }
 
+
     /**
      * set 用户类型
      *
-     * @param userType
+     * @param userType 用户类型
+     * @return QueryKeysRequest
      */
     public QueryKeysRequest userType(String userType) {
         this.userType = userType;
         return this;
     }
 
+
     /**
      * set 密钥Id
      *
-     * @param keyId
+     * @param keyId 密钥Id
+     * @return QueryKeysRequest
      */
     public QueryKeysRequest keyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QueryKeysRequest
      */
     public QueryKeysRequest regionId(String regionId) {
         this.regionId = regionId;

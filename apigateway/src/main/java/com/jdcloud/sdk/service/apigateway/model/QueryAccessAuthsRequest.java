@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 访问授权
+ * Access-Authorization
  * 关于访问授权管理和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -52,14 +52,15 @@ public class QueryAccessAuthsRequest extends JdcloudRequest implements java.io.S
 auth_user_id - 用户标识，精确匹配，jd_cloud（京东云用户）, jd_apikms（api网关签名密钥）, jd_subscription_key（订阅密钥）,jd_cloud_pin（激活用户）
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -80,6 +81,7 @@ auth_user_id - 用户标识，精确匹配，jd_cloud（京东云用户）, jd_a
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -98,27 +100,29 @@ auth_user_id - 用户标识，精确匹配，jd_cloud（京东云用户）, jd_a
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get auth_user_type - 授权类型，默认为 全部类型
+    * get auth_user_type - 授权类型，默认为 全部类型
 auth_user_id - 用户标识，精确匹配，jd_cloud（京东云用户）, jd_apikms（api网关签名密钥）, jd_subscription_key（订阅密钥）,jd_cloud_pin（激活用户）
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set auth_user_type - 授权类型，默认为 全部类型
+    * set auth_user_type - 授权类型，默认为 全部类型
 auth_user_id - 用户标识，精确匹配，jd_cloud（京东云用户）, jd_apikms（api网关签名密钥）, jd_subscription_key（订阅密钥）,jd_cloud_pin（激活用户）
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -139,47 +143,58 @@ auth_user_id - 用户标识，精确匹配，jd_cloud（京东云用户）, jd_a
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
-     * @param pageNumber
+     * @param pageNumber 页码, 默认为1, 取值范围：[1,∞)
+     * @return QueryAccessAuthsRequest
      */
     public QueryAccessAuthsRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认为20，取值范围：[10,100]
+     * @return QueryAccessAuthsRequest
      */
     public QueryAccessAuthsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
+
     /**
-     * set auth_user_type - 授权类型，默认为 全部类型
+    * set auth_user_type - 授权类型，默认为 全部类型
 auth_user_id - 用户标识，精确匹配，jd_cloud（京东云用户）, jd_apikms（api网关签名密钥）, jd_subscription_key（订阅密钥）,jd_cloud_pin（激活用户）
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters auth_user_type - 授权类型，默认为 全部类型
+auth_user_id - 用户标识，精确匹配，jd_cloud（京东云用户）, jd_apikms（api网关签名密钥）, jd_subscription_key（订阅密钥）,jd_cloud_pin（激活用户）
+
+    * @return QueryAccessAuthsRequest
+    */
     public QueryAccessAuthsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QueryAccessAuthsRequest
      */
     public QueryAccessAuthsRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -195,5 +210,4 @@ auth_user_id - 用户标识，精确匹配，jd_cloud（京东云用户）, jd_a
         }
         this.filters.add(filter);
     }
-
 }

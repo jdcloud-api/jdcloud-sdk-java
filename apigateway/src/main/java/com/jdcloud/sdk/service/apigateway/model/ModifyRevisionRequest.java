@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 修订版本
+ * Version-Revision
  * 提供修订版本的创建、查询、删除、修改、查重功能。
  *
  * OpenAPI spec version: v1
@@ -61,6 +61,7 @@ public class ModifyRevisionRequest extends JdcloudRequest implements java.io.Ser
     private String revisionId;
 
 
+
     /**
      * get 修订备注
      *
@@ -78,6 +79,7 @@ public class ModifyRevisionRequest extends JdcloudRequest implements java.io.Ser
     public void setRevisionNote(String revisionNote) {
         this.revisionNote = revisionNote;
     }
+
 
     /**
      * get 地域ID
@@ -97,6 +99,7 @@ public class ModifyRevisionRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
     }
 
+
     /**
      * get 分组ID
      *
@@ -114,6 +117,7 @@ public class ModifyRevisionRequest extends JdcloudRequest implements java.io.Ser
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 版本ID
@@ -134,40 +138,48 @@ public class ModifyRevisionRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 修订备注
      *
-     * @param revisionNote
+     * @param revisionNote 修订备注
+     * @return ModifyRevisionRequest
      */
     public ModifyRevisionRequest revisionNote(String revisionNote) {
         this.revisionNote = revisionNote;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ModifyRevisionRequest
      */
     public ModifyRevisionRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return ModifyRevisionRequest
      */
     public ModifyRevisionRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 版本ID
      *
-     * @param revisionId
+     * @param revisionId 版本ID
+     * @return ModifyRevisionRequest
      */
     public ModifyRevisionRequest revisionId(String revisionId) {
         this.revisionId = revisionId;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 部署列表
+ * Deployment-List
  * 提供部署信息的创建、查询、下线、修改等功能。
  *
  * OpenAPI spec version: v1
@@ -39,37 +39,41 @@ public class DescribeDeploymentsResult extends JdcloudResult implements java.io.
     /**
      * deployments
      */
+    
     private List<Deployment> deployments;
 
 
     /**
-     * get deployments
-     *
-     * @return
-     */
+    * get deployments
+    *
+    * @return
+    */
     public List<Deployment> getDeployments() {
         return deployments;
     }
 
     /**
-     * set deployments
-     *
-     * @param deployments
-     */
+    * set deployments
+    *
+    * @param deployments
+    */
     public void setDeployments(List<Deployment> deployments) {
         this.deployments = deployments;
     }
 
 
+
     /**
-     * set deployments
-     *
-     * @param deployments
-     */
+    * set deployments
+    *
+    * @param deployments 
+    * @return DescribeDeploymentsResult
+    */
     public DescribeDeploymentsResult deployments(List<Deployment> deployments) {
         this.deployments = deployments;
         return this;
     }
+
 
 
     /**
@@ -83,5 +87,4 @@ public class DescribeDeploymentsResult extends JdcloudResult implements java.io.
         }
         this.deployments.add(deployment);
     }
-
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API调用者密钥
+ * API-Gateway-Access-Key
  * 关于API调用者密钥操作的相关接口
  *
  * OpenAPI spec version: v1
@@ -39,6 +39,7 @@ public class DeleteAccessKeyResult extends JdcloudResult implements java.io.Seri
     private String accessKeyId;
 
 
+
     /**
      * get 已删除密钥Id
      *
@@ -58,10 +59,12 @@ public class DeleteAccessKeyResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
      * set 已删除密钥Id
      *
-     * @param accessKeyId
+     * @param accessKeyId 已删除密钥Id
+     * @return DeleteAccessKeyResult
      */
     public DeleteAccessKeyResult accessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;

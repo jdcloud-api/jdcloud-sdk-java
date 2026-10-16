@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 访问授权
+ * Access-Authorization
  * 关于访问授权管理和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -39,31 +39,33 @@ public class QueryAccessAuthsResult extends JdcloudResult implements java.io.Ser
     /**
      * accessAuths
      */
+    
     private List<AccessAuth> accessAuths;
-
     /**
      * 查询的访问授权数目
      */
     private Integer totalCount;
 
 
+
     /**
-     * get accessAuths
-     *
-     * @return
-     */
+    * get accessAuths
+    *
+    * @return
+    */
     public List<AccessAuth> getAccessAuths() {
         return accessAuths;
     }
 
     /**
-     * set accessAuths
-     *
-     * @param accessAuths
-     */
+    * set accessAuths
+    *
+    * @param accessAuths
+    */
     public void setAccessAuths(List<AccessAuth> accessAuths) {
         this.accessAuths = accessAuths;
     }
+
 
     /**
      * get 查询的访问授权数目
@@ -84,25 +86,30 @@ public class QueryAccessAuthsResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
-     * set accessAuths
-     *
-     * @param accessAuths
-     */
+    * set accessAuths
+    *
+    * @param accessAuths 
+    * @return QueryAccessAuthsResult
+    */
     public QueryAccessAuthsResult accessAuths(List<AccessAuth> accessAuths) {
         this.accessAuths = accessAuths;
         return this;
     }
 
+
     /**
      * set 查询的访问授权数目
      *
-     * @param totalCount
+     * @param totalCount 查询的访问授权数目
+     * @return QueryAccessAuthsResult
      */
     public QueryAccessAuthsResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +123,4 @@ public class QueryAccessAuthsResult extends JdcloudResult implements java.io.Ser
         }
         this.accessAuths.add(accessAuth);
     }
-
 }

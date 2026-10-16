@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 流控策略
+ * Rate-Limit-Policy
  * 关于流控策略配置和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -48,6 +48,7 @@ public class CreateRateLimitPolicyRequest extends JdcloudRequest implements java
     private String regionId;
 
 
+
     /**
      * get 流控策略详情
      *
@@ -65,6 +66,7 @@ public class CreateRateLimitPolicyRequest extends JdcloudRequest implements java
     public void setRateLimitPolicyView(RateLimitPolicyView rateLimitPolicyView) {
         this.rateLimitPolicyView = rateLimitPolicyView;
     }
+
 
     /**
      * get 地域ID
@@ -85,20 +87,24 @@ public class CreateRateLimitPolicyRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 流控策略详情
      *
-     * @param rateLimitPolicyView
+     * @param rateLimitPolicyView 流控策略详情
+     * @return CreateRateLimitPolicyRequest
      */
     public CreateRateLimitPolicyRequest rateLimitPolicyView(RateLimitPolicyView rateLimitPolicyView) {
         this.rateLimitPolicyView = rateLimitPolicyView;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CreateRateLimitPolicyRequest
      */
     public CreateRateLimitPolicyRequest regionId(String regionId) {
         this.regionId = regionId;

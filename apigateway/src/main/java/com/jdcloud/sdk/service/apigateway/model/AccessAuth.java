@@ -63,6 +63,7 @@ public class AccessAuth  implements java.io.Serializable {
     private String appId;
 
 
+
     /**
      * get 访问授权ID
      *
@@ -80,6 +81,7 @@ public class AccessAuth  implements java.io.Serializable {
     public void setAccessAuthId(String accessAuthId) {
         this.accessAuthId = accessAuthId;
     }
+
 
     /**
      * get 授权用户类型
@@ -99,6 +101,7 @@ public class AccessAuth  implements java.io.Serializable {
         this.authUserType = authUserType;
     }
 
+
     /**
      * get Access Key
      *
@@ -116,6 +119,7 @@ public class AccessAuth  implements java.io.Serializable {
     public void setAccessKey(String accessKey) {
         this.accessKey = accessKey;
     }
+
 
     /**
      * get 描述
@@ -135,6 +139,7 @@ public class AccessAuth  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 绑定分组,用英文逗号分隔
      *
@@ -152,6 +157,7 @@ public class AccessAuth  implements java.io.Serializable {
     public void setBindGroups(String bindGroups) {
         this.bindGroups = bindGroups;
     }
+
 
     /**
      * get api调用者的appid
@@ -172,60 +178,72 @@ public class AccessAuth  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 访问授权ID
      *
-     * @param accessAuthId
+     * @param accessAuthId 访问授权ID
+     * @return AccessAuth
      */
     public AccessAuth accessAuthId(String accessAuthId) {
         this.accessAuthId = accessAuthId;
         return this;
     }
 
+
     /**
      * set 授权用户类型
      *
-     * @param authUserType
+     * @param authUserType 授权用户类型
+     * @return AccessAuth
      */
     public AccessAuth authUserType(String authUserType) {
         this.authUserType = authUserType;
         return this;
     }
 
+
     /**
      * set Access Key
      *
-     * @param accessKey
+     * @param accessKey Access Key
+     * @return AccessAuth
      */
     public AccessAuth accessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return AccessAuth
      */
     public AccessAuth description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 绑定分组,用英文逗号分隔
      *
-     * @param bindGroups
+     * @param bindGroups 绑定分组,用英文逗号分隔
+     * @return AccessAuth
      */
     public AccessAuth bindGroups(String bindGroups) {
         this.bindGroups = bindGroups;
         return this;
     }
 
+
     /**
      * set api调用者的appid
      *
-     * @param appId
+     * @param appId api调用者的appid
+     * @return AccessAuth
      */
     public AccessAuth appId(String appId) {
         this.appId = appId;

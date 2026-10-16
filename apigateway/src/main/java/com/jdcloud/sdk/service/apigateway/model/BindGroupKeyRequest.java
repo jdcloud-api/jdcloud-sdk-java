@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API调用者密钥
+ * API-Gateway-Access-Key
  * 关于API调用者密钥操作的相关接口
  *
  * OpenAPI spec version: v1
@@ -56,6 +56,7 @@ public class BindGroupKeyRequest extends JdcloudRequest implements java.io.Seria
     private String accessKeyId;
 
 
+
     /**
      * get 待绑定的部署ids用逗号隔开
      *
@@ -74,6 +75,7 @@ public class BindGroupKeyRequest extends JdcloudRequest implements java.io.Seria
         this.deploymentIds = deploymentIds;
     }
 
+
     /**
      * get 地域ID
      *
@@ -91,6 +93,7 @@ public class BindGroupKeyRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get access key id
@@ -111,30 +114,36 @@ public class BindGroupKeyRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 待绑定的部署ids用逗号隔开
      *
-     * @param deploymentIds
+     * @param deploymentIds 待绑定的部署ids用逗号隔开
+     * @return BindGroupKeyRequest
      */
     public BindGroupKeyRequest deploymentIds(String deploymentIds) {
         this.deploymentIds = deploymentIds;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return BindGroupKeyRequest
      */
     public BindGroupKeyRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set access key id
      *
-     * @param accessKeyId
+     * @param accessKeyId access key id
+     * @return BindGroupKeyRequest
      */
     public BindGroupKeyRequest accessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;

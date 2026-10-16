@@ -63,6 +63,7 @@ public class Parameter  implements java.io.Serializable {
     private Boolean isRequired;
 
 
+
     /**
      * get 名称
      *
@@ -80,6 +81,7 @@ public class Parameter  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 描述
@@ -99,6 +101,7 @@ public class Parameter  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 参数位置
      *
@@ -116,6 +119,7 @@ public class Parameter  implements java.io.Serializable {
     public void setParamLocation(String paramLocation) {
         this.paramLocation = paramLocation;
     }
+
 
     /**
      * get 参数类型
@@ -135,6 +139,7 @@ public class Parameter  implements java.io.Serializable {
         this.paramType = paramType;
     }
 
+
     /**
      * get 默认值
      *
@@ -152,6 +157,7 @@ public class Parameter  implements java.io.Serializable {
     public void setDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
     }
+
 
     /**
      * get 默认值
@@ -172,60 +178,72 @@ public class Parameter  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 名称
      *
-     * @param name
+     * @param name 名称
+     * @return Parameter
      */
     public Parameter name(String name) {
         this.name = name;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return Parameter
      */
     public Parameter description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 参数位置
      *
-     * @param paramLocation
+     * @param paramLocation 参数位置
+     * @return Parameter
      */
     public Parameter paramLocation(String paramLocation) {
         this.paramLocation = paramLocation;
         return this;
     }
 
+
     /**
      * set 参数类型
      *
-     * @param paramType
+     * @param paramType 参数类型
+     * @return Parameter
      */
     public Parameter paramType(String paramType) {
         this.paramType = paramType;
         return this;
     }
 
+
     /**
      * set 默认值
      *
-     * @param defaultValue
+     * @param defaultValue 默认值
+     * @return Parameter
      */
     public Parameter defaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
     }
 
+
     /**
      * set 默认值
      *
-     * @param isRequired
+     * @param isRequired 默认值
+     * @return Parameter
      */
     public Parameter isRequired(Boolean isRequired) {
         this.isRequired = isRequired;

@@ -38,6 +38,7 @@ public class ModifyApi  implements java.io.Serializable {
     private String wafStatus;
 
 
+
     /**
      * get waf状态，如：observe,deny,off
      *
@@ -57,10 +58,12 @@ public class ModifyApi  implements java.io.Serializable {
     }
 
 
+
     /**
      * set waf状态，如：observe,deny,off
      *
-     * @param wafStatus
+     * @param wafStatus waf状态，如：observe,deny,off
+     * @return ModifyApi
      */
     public ModifyApi wafStatus(String wafStatus) {
         this.wafStatus = wafStatus;

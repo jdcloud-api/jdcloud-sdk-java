@@ -62,6 +62,7 @@ public class ServiceError  implements java.io.Serializable {
     private String status;
 
 
+
     /**
      * get code
      *
@@ -79,6 +80,7 @@ public class ServiceError  implements java.io.Serializable {
     public void setCode(Integer code) {
         this.code = code;
     }
+
 
     /**
      * get details
@@ -98,6 +100,7 @@ public class ServiceError  implements java.io.Serializable {
         this.details = details;
     }
 
+
     /**
      * get message
      *
@@ -115,6 +118,7 @@ public class ServiceError  implements java.io.Serializable {
     public void setMessage(String message) {
         this.message = message;
     }
+
 
     /**
      * get status
@@ -135,40 +139,48 @@ public class ServiceError  implements java.io.Serializable {
     }
 
 
+
     /**
      * set code
      *
-     * @param code
+     * @param code 
+     * @return ServiceError
      */
     public ServiceError code(Integer code) {
         this.code = code;
         return this;
     }
 
+
     /**
      * set details
      *
-     * @param details
+     * @param details 
+     * @return ServiceError
      */
     public ServiceError details(String details) {
         this.details = details;
         return this;
     }
 
+
     /**
      * set message
      *
-     * @param message
+     * @param message 
+     * @return ServiceError
      */
     public ServiceError message(String message) {
         this.message = message;
         return this;
     }
 
+
     /**
      * set status
      *
-     * @param status
+     * @param status 
+     * @return ServiceError
      */
     public ServiceError status(String status) {
         this.status = status;

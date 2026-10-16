@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 订阅密钥
+ * Subscription-key
  * 订阅密钥相关接口
  *
  * OpenAPI spec version: v1
@@ -52,6 +52,7 @@ public class CreateSubscriptionKeyRequest extends JdcloudRequest implements java
     private String regionId;
 
 
+
     /**
      * get 描述
      *
@@ -70,6 +71,7 @@ public class CreateSubscriptionKeyRequest extends JdcloudRequest implements java
         this.description = description;
     }
 
+
     /**
      * get 密钥名称
      *
@@ -87,6 +89,7 @@ public class CreateSubscriptionKeyRequest extends JdcloudRequest implements java
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 地域ID
@@ -107,30 +110,36 @@ public class CreateSubscriptionKeyRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return CreateSubscriptionKeyRequest
      */
     public CreateSubscriptionKeyRequest description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 密钥名称
      *
-     * @param name
+     * @param name 密钥名称
+     * @return CreateSubscriptionKeyRequest
      */
     public CreateSubscriptionKeyRequest name(String name) {
         this.name = name;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CreateSubscriptionKeyRequest
      */
     public CreateSubscriptionKeyRequest regionId(String regionId) {
         this.regionId = regionId;

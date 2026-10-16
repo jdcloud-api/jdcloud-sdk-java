@@ -39,6 +39,7 @@ public class CheckApiNameExistResult extends JdcloudResult implements java.io.Se
     private String apiId;
 
 
+
     /**
      * get API名称
      *
@@ -58,10 +59,12 @@ public class CheckApiNameExistResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
      * set API名称
      *
-     * @param apiId
+     * @param apiId API名称
+     * @return CheckApiNameExistResult
      */
     public CheckApiNameExistResult apiId(String apiId) {
         this.apiId = apiId;

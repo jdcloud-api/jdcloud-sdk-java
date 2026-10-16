@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 修订版本
+ * Version-Revision
  * 提供修订版本的创建、查询、删除、修改、查重功能。
  *
  * OpenAPI spec version: v1
@@ -53,8 +53,8 @@ environment - 发布环境，模糊匹配
 revisionNote - 修订备注，模糊匹配
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
@@ -77,6 +77,7 @@ revisionNote - 修订备注，模糊匹配
     private String revisionId;
 
 
+
     /**
      * get 页码, 默认为1, 取值范围：[1,∞)
      *
@@ -94,6 +95,7 @@ revisionNote - 修订备注，模糊匹配
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
@@ -113,29 +115,31 @@ revisionNote - 修订备注，模糊匹配
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get revision - 修订版本号，模糊匹配
+    * get revision - 修订版本号，模糊匹配
 environment - 发布环境，模糊匹配
 revisionNote - 修订备注，模糊匹配
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set revision - 修订版本号，模糊匹配
+    * set revision - 修订版本号，模糊匹配
 environment - 发布环境，模糊匹配
 revisionNote - 修订备注，模糊匹配
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -155,6 +159,7 @@ revisionNote - 修订备注，模糊匹配
         this.regionId = regionId;
     }
 
+
     /**
      * get 分组ID
      *
@@ -172,6 +177,7 @@ revisionNote - 修订备注，模糊匹配
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 版本ID
@@ -192,68 +198,84 @@ revisionNote - 修订备注，模糊匹配
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
-     * @param pageNumber
+     * @param pageNumber 页码, 默认为1, 取值范围：[1,∞)
+     * @return QueryRevisionRequest
      */
     public QueryRevisionRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认为20，取值范围：[10,100]
+     * @return QueryRevisionRequest
      */
     public QueryRevisionRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
+
     /**
-     * set revision - 修订版本号，模糊匹配
+    * set revision - 修订版本号，模糊匹配
 environment - 发布环境，模糊匹配
 revisionNote - 修订备注，模糊匹配
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters revision - 修订版本号，模糊匹配
+environment - 发布环境，模糊匹配
+revisionNote - 修订备注，模糊匹配
+
+    * @return QueryRevisionRequest
+    */
     public QueryRevisionRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QueryRevisionRequest
      */
     public QueryRevisionRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return QueryRevisionRequest
      */
     public QueryRevisionRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 版本ID
      *
-     * @param revisionId
+     * @param revisionId 版本ID
+     * @return QueryRevisionRequest
      */
     public QueryRevisionRequest revisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
+
 
 
     /**
@@ -270,5 +292,4 @@ revisionNote - 修订备注，模糊匹配
         }
         this.filters.add(filter);
     }
-
 }

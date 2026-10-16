@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 访问授权
+ * Access-Authorization
  * 关于访问授权管理和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -49,6 +49,7 @@ public class QueryBindGroupAuthRequest extends JdcloudRequest implements java.io
     private String accessAuthId;
 
 
+
     /**
      * get 地域ID
      *
@@ -66,6 +67,7 @@ public class QueryBindGroupAuthRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 访问授权ID
@@ -86,20 +88,24 @@ public class QueryBindGroupAuthRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QueryBindGroupAuthRequest
      */
     public QueryBindGroupAuthRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 访问授权ID
      *
-     * @param accessAuthId
+     * @param accessAuthId 访问授权ID
+     * @return QueryBindGroupAuthRequest
      */
     public QueryBindGroupAuthRequest accessAuthId(String accessAuthId) {
         this.accessAuthId = accessAuthId;

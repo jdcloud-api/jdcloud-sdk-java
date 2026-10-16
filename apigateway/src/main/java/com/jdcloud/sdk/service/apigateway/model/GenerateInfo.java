@@ -48,6 +48,7 @@ public class GenerateInfo  implements java.io.Serializable {
     private String fileUrl;
 
 
+
     /**
      * get 语言
      *
@@ -66,6 +67,7 @@ public class GenerateInfo  implements java.io.Serializable {
         this.language = language;
     }
 
+
     /**
      * get 文件状态,0:未生成，1:生成中，2:生成完成
      *
@@ -83,6 +85,7 @@ public class GenerateInfo  implements java.io.Serializable {
     public void setFileStatus(Integer fileStatus) {
         this.fileStatus = fileStatus;
     }
+
 
     /**
      * get 下载地址
@@ -103,30 +106,36 @@ public class GenerateInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 语言
      *
-     * @param language
+     * @param language 语言
+     * @return GenerateInfo
      */
     public GenerateInfo language(String language) {
         this.language = language;
         return this;
     }
 
+
     /**
      * set 文件状态,0:未生成，1:生成中，2:生成完成
      *
-     * @param fileStatus
+     * @param fileStatus 文件状态,0:未生成，1:生成中，2:生成完成
+     * @return GenerateInfo
      */
     public GenerateInfo fileStatus(Integer fileStatus) {
         this.fileStatus = fileStatus;
         return this;
     }
 
+
     /**
      * set 下载地址
      *
-     * @param fileUrl
+     * @param fileUrl 下载地址
+     * @return GenerateInfo
      */
     public GenerateInfo fileUrl(String fileUrl) {
         this.fileUrl = fileUrl;

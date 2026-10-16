@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 访问授权
+ * Access-Authorization
  * 关于访问授权管理和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -39,6 +39,7 @@ public class CreateAccessAuthResult extends JdcloudResult implements java.io.Ser
     private String accessAuthId;
 
 
+
     /**
      * get 已创建访问授权ID
      *
@@ -58,10 +59,12 @@ public class CreateAccessAuthResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set 已创建访问授权ID
      *
-     * @param accessAuthId
+     * @param accessAuthId 已创建访问授权ID
+     * @return CreateAccessAuthResult
      */
     public CreateAccessAuthResult accessAuthId(String accessAuthId) {
         this.accessAuthId = accessAuthId;

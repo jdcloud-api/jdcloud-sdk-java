@@ -45,6 +45,7 @@ public class ApiChargeSpec  implements java.io.Serializable {
     /**
      * 计费项
      */
+    
     private List<Formula> formulas;
 
 
@@ -66,44 +67,50 @@ public class ApiChargeSpec  implements java.io.Serializable {
         this.apiId = apiId;
     }
 
+
     /**
-     * get 计费项
-     *
-     * @return
-     */
+    * get 计费项
+    *
+    * @return
+    */
     public List<Formula> getFormulas() {
         return formulas;
     }
 
     /**
-     * set 计费项
-     *
-     * @param formulas
-     */
+    * set 计费项
+    *
+    * @param formulas
+    */
     public void setFormulas(List<Formula> formulas) {
         this.formulas = formulas;
     }
 
 
+
     /**
      * set API ID
      *
-     * @param apiId
+     * @param apiId API ID
+     * @return ApiChargeSpec
      */
     public ApiChargeSpec apiId(String apiId) {
         this.apiId = apiId;
         return this;
     }
 
+
     /**
-     * set 计费项
-     *
-     * @param formulas
-     */
+    * set 计费项
+    *
+    * @param formulas 计费项
+    * @return ApiChargeSpec
+    */
     public ApiChargeSpec formulas(List<Formula> formulas) {
         this.formulas = formulas;
         return this;
     }
+
 
 
     /**
@@ -117,5 +124,4 @@ public class ApiChargeSpec  implements java.io.Serializable {
         }
         this.formulas.add(formula);
     }
-
 }

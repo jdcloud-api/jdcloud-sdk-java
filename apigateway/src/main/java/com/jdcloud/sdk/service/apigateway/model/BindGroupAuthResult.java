@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 访问授权
+ * Access-Authorization
  * 关于访问授权管理和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -39,37 +39,41 @@ public class BindGroupAuthResult extends JdcloudResult implements java.io.Serial
     /**
      * bindGroups
      */
+    
     private List<BindGroups> bindGroups;
 
 
     /**
-     * get bindGroups
-     *
-     * @return
-     */
+    * get bindGroups
+    *
+    * @return
+    */
     public List<BindGroups> getBindGroups() {
         return bindGroups;
     }
 
     /**
-     * set bindGroups
-     *
-     * @param bindGroups
-     */
+    * set bindGroups
+    *
+    * @param bindGroups
+    */
     public void setBindGroups(List<BindGroups> bindGroups) {
         this.bindGroups = bindGroups;
     }
 
 
+
     /**
-     * set bindGroups
-     *
-     * @param bindGroups
-     */
+    * set bindGroups
+    *
+    * @param bindGroups 
+    * @return BindGroupAuthResult
+    */
     public BindGroupAuthResult bindGroups(List<BindGroups> bindGroups) {
         this.bindGroups = bindGroups;
         return this;
     }
+
 
 
     /**
@@ -83,5 +87,4 @@ public class BindGroupAuthResult extends JdcloudResult implements java.io.Serial
         }
         this.bindGroups.add(bindGroup);
     }
-
 }

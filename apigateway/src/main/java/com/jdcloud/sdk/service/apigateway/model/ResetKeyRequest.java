@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * kms
+ * Key-Manager-Service
  * key manager service
  *
  * OpenAPI spec version: v1
@@ -49,6 +49,7 @@ public class ResetKeyRequest extends JdcloudRequest implements java.io.Serializa
     private String regionId;
 
 
+
     /**
      * get keyId
      *
@@ -66,6 +67,7 @@ public class ResetKeyRequest extends JdcloudRequest implements java.io.Serializa
     public void setKeyId(String keyId) {
         this.keyId = keyId;
     }
+
 
     /**
      * get 地域ID
@@ -86,20 +88,24 @@ public class ResetKeyRequest extends JdcloudRequest implements java.io.Serializa
     }
 
 
+
     /**
      * set keyId
      *
-     * @param keyId
+     * @param keyId keyId
+     * @return ResetKeyRequest
      */
     public ResetKeyRequest keyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ResetKeyRequest
      */
     public ResetKeyRequest regionId(String regionId) {
         this.regionId = regionId;

@@ -53,6 +53,7 @@ public class Formula  implements java.io.Serializable {
     private String unit;
 
 
+
     /**
      * get key
      *
@@ -71,6 +72,7 @@ public class Formula  implements java.io.Serializable {
         this.key = key;
     }
 
+
     /**
      * get value
      *
@@ -88,6 +90,7 @@ public class Formula  implements java.io.Serializable {
     public void setValue(String value) {
         this.value = value;
     }
+
 
     /**
      * get 单位
@@ -108,30 +111,36 @@ public class Formula  implements java.io.Serializable {
     }
 
 
+
     /**
      * set key
      *
-     * @param key
+     * @param key key
+     * @return Formula
      */
     public Formula key(String key) {
         this.key = key;
         return this;
     }
 
+
     /**
      * set value
      *
-     * @param value
+     * @param value value
+     * @return Formula
      */
     public Formula value(String value) {
         this.value = value;
         return this;
     }
 
+
     /**
      * set 单位
      *
-     * @param unit
+     * @param unit 单位
+     * @return Formula
      */
     public Formula unit(String unit) {
         this.unit = unit;

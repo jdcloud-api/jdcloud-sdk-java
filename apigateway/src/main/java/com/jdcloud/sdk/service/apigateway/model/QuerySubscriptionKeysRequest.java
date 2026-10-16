@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 订阅密钥
+ * Subscription-key
  * 订阅密钥相关接口
  *
  * OpenAPI spec version: v1
@@ -53,14 +53,15 @@ subscriptionKeyId - subscriptionKeyId，精确匹配
 orderBy - 排序类型 desc asc
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -81,6 +82,7 @@ orderBy - 排序类型 desc asc
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -99,29 +101,31 @@ orderBy - 排序类型 desc asc
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get description - 名称，模糊匹配
+    * get description - 名称，模糊匹配
 subscriptionKeyId - subscriptionKeyId，精确匹配
 orderBy - 排序类型 desc asc
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set description - 名称，模糊匹配
+    * set description - 名称，模糊匹配
 subscriptionKeyId - subscriptionKeyId，精确匹配
 orderBy - 排序类型 desc asc
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -142,48 +146,60 @@ orderBy - 排序类型 desc asc
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
-     * @param pageNumber
+     * @param pageNumber 页码, 默认为1, 取值范围：[1,∞)
+     * @return QuerySubscriptionKeysRequest
      */
     public QuerySubscriptionKeysRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认为20，取值范围：[10,100]
+     * @return QuerySubscriptionKeysRequest
      */
     public QuerySubscriptionKeysRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
+
     /**
-     * set description - 名称，模糊匹配
+    * set description - 名称，模糊匹配
 subscriptionKeyId - subscriptionKeyId，精确匹配
 orderBy - 排序类型 desc asc
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters description - 名称，模糊匹配
+subscriptionKeyId - subscriptionKeyId，精确匹配
+orderBy - 排序类型 desc asc
+
+    * @return QuerySubscriptionKeysRequest
+    */
     public QuerySubscriptionKeysRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QuerySubscriptionKeysRequest
      */
     public QuerySubscriptionKeysRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -200,5 +216,4 @@ orderBy - 排序类型 desc asc
         }
         this.filters.add(filter);
     }
-
 }

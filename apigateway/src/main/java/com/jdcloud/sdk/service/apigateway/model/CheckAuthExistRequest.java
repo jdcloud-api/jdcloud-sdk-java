@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 访问授权
+ * Access-Authorization
  * 关于访问授权管理和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -56,6 +56,7 @@ public class CheckAuthExistRequest extends JdcloudRequest implements java.io.Ser
     private String regionId;
 
 
+
     /**
      * get accessKey
      *
@@ -74,6 +75,7 @@ public class CheckAuthExistRequest extends JdcloudRequest implements java.io.Ser
         this.accessKey = accessKey;
     }
 
+
     /**
      * get authUserType
      *
@@ -91,6 +93,7 @@ public class CheckAuthExistRequest extends JdcloudRequest implements java.io.Ser
     public void setAuthUserType(String authUserType) {
         this.authUserType = authUserType;
     }
+
 
     /**
      * get 地域ID
@@ -111,30 +114,36 @@ public class CheckAuthExistRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set accessKey
      *
-     * @param accessKey
+     * @param accessKey 
+     * @return CheckAuthExistRequest
      */
     public CheckAuthExistRequest accessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
+
     /**
      * set authUserType
      *
-     * @param authUserType
+     * @param authUserType 
+     * @return CheckAuthExistRequest
      */
     public CheckAuthExistRequest authUserType(String authUserType) {
         this.authUserType = authUserType;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CheckAuthExistRequest
      */
     public CheckAuthExistRequest regionId(String regionId) {
         this.regionId = regionId;

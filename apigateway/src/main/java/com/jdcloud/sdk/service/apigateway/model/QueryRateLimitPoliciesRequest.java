@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 流控策略
+ * Rate-Limit-Policy
  * 关于流控策略配置和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -51,14 +51,15 @@ public class QueryRateLimitPoliciesRequest extends JdcloudRequest implements jav
      * policyName - 策略名称，模糊匹配
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -79,6 +80,7 @@ public class QueryRateLimitPoliciesRequest extends JdcloudRequest implements jav
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -97,25 +99,27 @@ public class QueryRateLimitPoliciesRequest extends JdcloudRequest implements jav
         this.pageSize = pageSize;
     }
 
-    /**
-     * get policyName - 策略名称，模糊匹配
 
-     *
-     * @return
-     */
+    /**
+    * get policyName - 策略名称，模糊匹配
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set policyName - 策略名称，模糊匹配
+    * set policyName - 策略名称，模糊匹配
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -136,46 +140,56 @@ public class QueryRateLimitPoliciesRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
-     * @param pageNumber
+     * @param pageNumber 页码, 默认为1, 取值范围：[1,∞)
+     * @return QueryRateLimitPoliciesRequest
      */
     public QueryRateLimitPoliciesRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认为20，取值范围：[10,100]
+     * @return QueryRateLimitPoliciesRequest
      */
     public QueryRateLimitPoliciesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
-    /**
-     * set policyName - 策略名称，模糊匹配
 
-     *
-     * @param filters
-     */
+    /**
+    * set policyName - 策略名称，模糊匹配
+
+    *
+    * @param filters policyName - 策略名称，模糊匹配
+
+    * @return QueryRateLimitPoliciesRequest
+    */
     public QueryRateLimitPoliciesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QueryRateLimitPoliciesRequest
      */
     public QueryRateLimitPoliciesRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -190,5 +204,4 @@ public class QueryRateLimitPoliciesRequest extends JdcloudRequest implements jav
         }
         this.filters.add(filter);
     }
-
 }

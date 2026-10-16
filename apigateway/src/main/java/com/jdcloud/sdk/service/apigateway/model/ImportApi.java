@@ -41,6 +41,7 @@ public class ImportApi  implements java.io.Serializable {
     private String apiDefine;
 
 
+
     /**
      * get api接口定义
      *
@@ -60,10 +61,12 @@ public class ImportApi  implements java.io.Serializable {
     }
 
 
+
     /**
      * set api接口定义
      *
-     * @param apiDefine
+     * @param apiDefine api接口定义
+     * @return ImportApi
      */
     public ImportApi apiDefine(String apiDefine) {
         this.apiDefine = apiDefine;

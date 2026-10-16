@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API分组
+ * API-Group
  * 提供API分组的创建、查询、删除、修改等功能。
  *
  * OpenAPI spec version: v1
@@ -49,6 +49,7 @@ public class CheckGroupNameExistRequest extends JdcloudRequest implements java.i
     private String regionId;
 
 
+
     /**
      * get 分组名称
      *
@@ -66,6 +67,7 @@ public class CheckGroupNameExistRequest extends JdcloudRequest implements java.i
     public void setGroupName(String groupName) {
         this.groupName = groupName;
     }
+
 
     /**
      * get 地域ID
@@ -86,20 +88,24 @@ public class CheckGroupNameExistRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 分组名称
      *
-     * @param groupName
+     * @param groupName 分组名称
+     * @return CheckGroupNameExistRequest
      */
     public CheckGroupNameExistRequest groupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CheckGroupNameExistRequest
      */
     public CheckGroupNameExistRequest regionId(String regionId) {
         this.regionId = regionId;

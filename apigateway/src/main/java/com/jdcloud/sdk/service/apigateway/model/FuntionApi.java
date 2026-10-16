@@ -67,8 +67,8 @@ public class FuntionApi  implements java.io.Serializable {
     /**
      * 请求路径，同时发布多个环境后会有多个路径
      */
+    
     private List<String> path;
-
     /**
      * API描述
      */
@@ -78,6 +78,7 @@ public class FuntionApi  implements java.io.Serializable {
      * 部署状态(1:已部署)
      */
     private Integer deploymentStatus;
+
 
 
     /**
@@ -98,6 +99,7 @@ public class FuntionApi  implements java.io.Serializable {
         this.apiId = apiId;
     }
 
+
     /**
      * get 分组ID
      *
@@ -115,6 +117,7 @@ public class FuntionApi  implements java.io.Serializable {
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 分组名称
@@ -134,6 +137,7 @@ public class FuntionApi  implements java.io.Serializable {
         this.groupName = groupName;
     }
 
+
     /**
      * get 修订版本号
      *
@@ -151,6 +155,7 @@ public class FuntionApi  implements java.io.Serializable {
     public void setRevision(String revision) {
         this.revision = revision;
     }
+
 
     /**
      * get API名称
@@ -170,6 +175,7 @@ public class FuntionApi  implements java.io.Serializable {
         this.apiName = apiName;
     }
 
+
     /**
      * get 请求方式
      *
@@ -188,23 +194,25 @@ public class FuntionApi  implements java.io.Serializable {
         this.action = action;
     }
 
+
     /**
-     * get 请求路径，同时发布多个环境后会有多个路径
-     *
-     * @return
-     */
+    * get 请求路径，同时发布多个环境后会有多个路径
+    *
+    * @return
+    */
     public List<String> getPath() {
         return path;
     }
 
     /**
-     * set 请求路径，同时发布多个环境后会有多个路径
-     *
-     * @param path
-     */
+    * set 请求路径，同时发布多个环境后会有多个路径
+    *
+    * @param path
+    */
     public void setPath(List<String> path) {
         this.path = path;
     }
+
 
     /**
      * get API描述
@@ -223,6 +231,7 @@ public class FuntionApi  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 部署状态(1:已部署)
@@ -243,95 +252,114 @@ public class FuntionApi  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 接口ID
      *
-     * @param apiId
+     * @param apiId 接口ID
+     * @return FuntionApi
      */
     public FuntionApi apiId(String apiId) {
         this.apiId = apiId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return FuntionApi
      */
     public FuntionApi apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 分组名称
      *
-     * @param groupName
+     * @param groupName 分组名称
+     * @return FuntionApi
      */
     public FuntionApi groupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
 
+
     /**
      * set 修订版本号
      *
-     * @param revision
+     * @param revision 修订版本号
+     * @return FuntionApi
      */
     public FuntionApi revision(String revision) {
         this.revision = revision;
         return this;
     }
 
+
     /**
      * set API名称
      *
-     * @param apiName
+     * @param apiName API名称
+     * @return FuntionApi
      */
     public FuntionApi apiName(String apiName) {
         this.apiName = apiName;
         return this;
     }
 
+
     /**
      * set 请求方式
      *
-     * @param action
+     * @param action 请求方式
+     * @return FuntionApi
      */
     public FuntionApi action(String action) {
         this.action = action;
         return this;
     }
 
+
     /**
-     * set 请求路径，同时发布多个环境后会有多个路径
-     *
-     * @param path
-     */
+    * set 请求路径，同时发布多个环境后会有多个路径
+    *
+    * @param path 请求路径，同时发布多个环境后会有多个路径
+    * @return FuntionApi
+    */
     public FuntionApi path(List<String> path) {
         this.path = path;
         return this;
     }
 
+
     /**
      * set API描述
      *
-     * @param description
+     * @param description API描述
+     * @return FuntionApi
      */
     public FuntionApi description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 部署状态(1:已部署)
      *
-     * @param deploymentStatus
+     * @param deploymentStatus 部署状态(1:已部署)
+     * @return FuntionApi
      */
     public FuntionApi deploymentStatus(Integer deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
     }
+
 
 
     /**
@@ -345,5 +373,4 @@ public class FuntionApi  implements java.io.Serializable {
         }
         this.path.add(path);
     }
-
 }

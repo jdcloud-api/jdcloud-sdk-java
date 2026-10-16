@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 自定义域名
+ * Customized-Domain-Name
  * api 自定义域名 service
  *
  * OpenAPI spec version: v1

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * kms
+ * Key-Manager-Service
  * key manager service
  *
  * OpenAPI spec version: v1

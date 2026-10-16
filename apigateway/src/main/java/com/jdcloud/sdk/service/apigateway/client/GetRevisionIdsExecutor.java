@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 修订版本
+ * Version-Revision
  * 提供修订版本的创建、查询、删除、修改、查重功能。
  *
  * OpenAPI spec version: v1

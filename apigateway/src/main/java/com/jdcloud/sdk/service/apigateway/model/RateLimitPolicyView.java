@@ -63,6 +63,7 @@ public class RateLimitPolicyView  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get 策略名称
      *
@@ -80,6 +81,7 @@ public class RateLimitPolicyView  implements java.io.Serializable {
     public void setPolicyName(String policyName) {
         this.policyName = policyName;
     }
+
 
     /**
      * get 时间单位
@@ -99,6 +101,7 @@ public class RateLimitPolicyView  implements java.io.Serializable {
         this.timeUnit = timeUnit;
     }
 
+
     /**
      * get api流量限制次数
      *
@@ -116,6 +119,7 @@ public class RateLimitPolicyView  implements java.io.Serializable {
     public void setApiLimitCount(Integer apiLimitCount) {
         this.apiLimitCount = apiLimitCount;
     }
+
 
     /**
      * get 用户流量限制次数
@@ -135,6 +139,7 @@ public class RateLimitPolicyView  implements java.io.Serializable {
         this.userLimitCount = userLimitCount;
     }
 
+
     /**
      * get 应用流量限制次数
      *
@@ -152,6 +157,7 @@ public class RateLimitPolicyView  implements java.io.Serializable {
     public void setAppLimitCount(Integer appLimitCount) {
         this.appLimitCount = appLimitCount;
     }
+
 
     /**
      * get 描述
@@ -172,60 +178,72 @@ public class RateLimitPolicyView  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 策略名称
      *
-     * @param policyName
+     * @param policyName 策略名称
+     * @return RateLimitPolicyView
      */
     public RateLimitPolicyView policyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
 
+
     /**
      * set 时间单位
      *
-     * @param timeUnit
+     * @param timeUnit 时间单位
+     * @return RateLimitPolicyView
      */
     public RateLimitPolicyView timeUnit(String timeUnit) {
         this.timeUnit = timeUnit;
         return this;
     }
 
+
     /**
      * set api流量限制次数
      *
-     * @param apiLimitCount
+     * @param apiLimitCount api流量限制次数
+     * @return RateLimitPolicyView
      */
     public RateLimitPolicyView apiLimitCount(Integer apiLimitCount) {
         this.apiLimitCount = apiLimitCount;
         return this;
     }
 
+
     /**
      * set 用户流量限制次数
      *
-     * @param userLimitCount
+     * @param userLimitCount 用户流量限制次数
+     * @return RateLimitPolicyView
      */
     public RateLimitPolicyView userLimitCount(Integer userLimitCount) {
         this.userLimitCount = userLimitCount;
         return this;
     }
 
+
     /**
      * set 应用流量限制次数
      *
-     * @param appLimitCount
+     * @param appLimitCount 应用流量限制次数
+     * @return RateLimitPolicyView
      */
     public RateLimitPolicyView appLimitCount(Integer appLimitCount) {
         this.appLimitCount = appLimitCount;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return RateLimitPolicyView
      */
     public RateLimitPolicyView description(String description) {
         this.description = description;

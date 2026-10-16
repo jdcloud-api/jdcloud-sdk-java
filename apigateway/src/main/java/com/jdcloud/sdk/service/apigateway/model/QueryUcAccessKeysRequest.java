@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 京东云用户密钥
+ * JD-Cloud-User-Center-Access-Key
  * 主要提供京东云用户密钥查询服务
  *
  * OpenAPI spec version: v1
@@ -51,14 +51,15 @@ public class QueryUcAccessKeysRequest extends JdcloudRequest implements java.io.
      * accessKey - accesskey，精确匹配
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -79,6 +80,7 @@ public class QueryUcAccessKeysRequest extends JdcloudRequest implements java.io.
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -97,25 +99,27 @@ public class QueryUcAccessKeysRequest extends JdcloudRequest implements java.io.
         this.pageSize = pageSize;
     }
 
-    /**
-     * get accessKey - accesskey，精确匹配
 
-     *
-     * @return
-     */
+    /**
+    * get accessKey - accesskey，精确匹配
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set accessKey - accesskey，精确匹配
+    * set accessKey - accesskey，精确匹配
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -136,46 +140,56 @@ public class QueryUcAccessKeysRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
-     * @param pageNumber
+     * @param pageNumber 页码, 默认为1, 取值范围：[1,∞)
+     * @return QueryUcAccessKeysRequest
      */
     public QueryUcAccessKeysRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认为20，取值范围：[10,100]
+     * @return QueryUcAccessKeysRequest
      */
     public QueryUcAccessKeysRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
-    /**
-     * set accessKey - accesskey，精确匹配
 
-     *
-     * @param filters
-     */
+    /**
+    * set accessKey - accesskey，精确匹配
+
+    *
+    * @param filters accessKey - accesskey，精确匹配
+
+    * @return QueryUcAccessKeysRequest
+    */
     public QueryUcAccessKeysRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QueryUcAccessKeysRequest
      */
     public QueryUcAccessKeysRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -190,5 +204,4 @@ public class QueryUcAccessKeysRequest extends JdcloudRequest implements java.io.
         }
         this.filters.add(filter);
     }
-
 }

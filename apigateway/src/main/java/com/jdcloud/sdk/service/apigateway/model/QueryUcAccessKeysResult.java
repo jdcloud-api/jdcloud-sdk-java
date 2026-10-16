@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 京东云用户密钥
+ * JD-Cloud-User-Center-Access-Key
  * 主要提供京东云用户密钥查询服务
  *
  * OpenAPI spec version: v1
@@ -39,31 +39,33 @@ public class QueryUcAccessKeysResult extends JdcloudResult implements java.io.Se
     /**
      * accessKeys
      */
+    
     private List<UcAccessKey> accessKeys;
-
     /**
      * 查询的密钥数目
      */
     private Integer totalCount;
 
 
+
     /**
-     * get accessKeys
-     *
-     * @return
-     */
+    * get accessKeys
+    *
+    * @return
+    */
     public List<UcAccessKey> getAccessKeys() {
         return accessKeys;
     }
 
     /**
-     * set accessKeys
-     *
-     * @param accessKeys
-     */
+    * set accessKeys
+    *
+    * @param accessKeys
+    */
     public void setAccessKeys(List<UcAccessKey> accessKeys) {
         this.accessKeys = accessKeys;
     }
+
 
     /**
      * get 查询的密钥数目
@@ -84,25 +86,30 @@ public class QueryUcAccessKeysResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
-     * set accessKeys
-     *
-     * @param accessKeys
-     */
+    * set accessKeys
+    *
+    * @param accessKeys 
+    * @return QueryUcAccessKeysResult
+    */
     public QueryUcAccessKeysResult accessKeys(List<UcAccessKey> accessKeys) {
         this.accessKeys = accessKeys;
         return this;
     }
 
+
     /**
      * set 查询的密钥数目
      *
-     * @param totalCount
+     * @param totalCount 查询的密钥数目
+     * @return QueryUcAccessKeysResult
      */
     public QueryUcAccessKeysResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +123,4 @@ public class QueryUcAccessKeysResult extends JdcloudResult implements java.io.Se
         }
         this.accessKeys.add(accessKey);
     }
-
 }

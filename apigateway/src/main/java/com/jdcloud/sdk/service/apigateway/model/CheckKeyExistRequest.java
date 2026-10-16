@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API调用者密钥
+ * API-Gateway-Access-Key
  * 关于API调用者密钥操作的相关接口
  *
  * OpenAPI spec version: v1
@@ -56,6 +56,7 @@ public class CheckKeyExistRequest extends JdcloudRequest implements java.io.Seri
     private String regionId;
 
 
+
     /**
      * get accessKey
      *
@@ -74,6 +75,7 @@ public class CheckKeyExistRequest extends JdcloudRequest implements java.io.Seri
         this.accessKey = accessKey;
     }
 
+
     /**
      * get accessKeyType
      *
@@ -91,6 +93,7 @@ public class CheckKeyExistRequest extends JdcloudRequest implements java.io.Seri
     public void setAccessKeyType(String accessKeyType) {
         this.accessKeyType = accessKeyType;
     }
+
 
     /**
      * get 地域ID
@@ -111,30 +114,36 @@ public class CheckKeyExistRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set accessKey
      *
-     * @param accessKey
+     * @param accessKey 
+     * @return CheckKeyExistRequest
      */
     public CheckKeyExistRequest accessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
+
     /**
      * set accessKeyType
      *
-     * @param accessKeyType
+     * @param accessKeyType 
+     * @return CheckKeyExistRequest
      */
     public CheckKeyExistRequest accessKeyType(String accessKeyType) {
         this.accessKeyType = accessKeyType;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CheckKeyExistRequest
      */
     public CheckKeyExistRequest regionId(String regionId) {
         this.regionId = regionId;

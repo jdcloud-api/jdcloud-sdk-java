@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 访问授权
+ * Access-Authorization
  * 关于访问授权管理和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -49,6 +49,7 @@ public class QueryAuthGroupListRequest extends JdcloudRequest implements java.io
     private String regionId;
 
 
+
     /**
      * get 待绑定的用户类型
      *
@@ -66,6 +67,7 @@ public class QueryAuthGroupListRequest extends JdcloudRequest implements java.io
     public void setAuthUserType(String authUserType) {
         this.authUserType = authUserType;
     }
+
 
     /**
      * get 地域ID
@@ -86,20 +88,24 @@ public class QueryAuthGroupListRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 待绑定的用户类型
      *
-     * @param authUserType
+     * @param authUserType 待绑定的用户类型
+     * @return QueryAuthGroupListRequest
      */
     public QueryAuthGroupListRequest authUserType(String authUserType) {
         this.authUserType = authUserType;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QueryAuthGroupListRequest
      */
     public QueryAuthGroupListRequest regionId(String regionId) {
         this.regionId = regionId;

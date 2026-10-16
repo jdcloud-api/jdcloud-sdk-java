@@ -48,6 +48,7 @@ public class BindGroups  implements java.io.Serializable {
     private String environment;
 
 
+
     /**
      * get 部署ID
      *
@@ -66,6 +67,7 @@ public class BindGroups  implements java.io.Serializable {
         this.deploymentId = deploymentId;
     }
 
+
     /**
      * get 分组名称
      *
@@ -83,6 +85,7 @@ public class BindGroups  implements java.io.Serializable {
     public void setGroupName(String groupName) {
         this.groupName = groupName;
     }
+
 
     /**
      * get 环境：test、preview、online
@@ -103,30 +106,36 @@ public class BindGroups  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 部署ID
      *
-     * @param deploymentId
+     * @param deploymentId 部署ID
+     * @return BindGroups
      */
     public BindGroups deploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
     }
 
+
     /**
      * set 分组名称
      *
-     * @param groupName
+     * @param groupName 分组名称
+     * @return BindGroups
      */
     public BindGroups groupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
 
+
     /**
      * set 环境：test、preview、online
      *
-     * @param environment
+     * @param environment 环境：test、preview、online
+     * @return BindGroups
      */
     public BindGroups environment(String environment) {
         this.environment = environment;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 修订版本
+ * Version-Revision
  * 提供修订版本的创建、查询、删除、修改、查重功能。
  *
  * OpenAPI spec version: v1
@@ -39,6 +39,7 @@ public class CheckRevisionExistResult extends JdcloudResult implements java.io.S
     private Boolean isRepeate;
 
 
+
     /**
      * get 新建修订版本号重复否
      *
@@ -58,10 +59,12 @@ public class CheckRevisionExistResult extends JdcloudResult implements java.io.S
     }
 
 
+
     /**
      * set 新建修订版本号重复否
      *
-     * @param isRepeate
+     * @param isRepeate 新建修订版本号重复否
+     * @return CheckRevisionExistResult
      */
     public CheckRevisionExistResult isRepeate(Boolean isRepeate) {
         this.isRepeate = isRepeate;

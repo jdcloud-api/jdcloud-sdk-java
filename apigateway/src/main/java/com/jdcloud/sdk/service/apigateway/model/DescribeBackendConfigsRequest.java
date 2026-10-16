@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 后端配置
+ * Backend-Configuration
  * 后端配置
  *
  * OpenAPI spec version: v1
@@ -51,8 +51,8 @@ public class DescribeBackendConfigsRequest extends JdcloudRequest implements jav
      * sort - 路由排序，赋值0时为默认的后端配置
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
@@ -75,6 +75,7 @@ public class DescribeBackendConfigsRequest extends JdcloudRequest implements jav
     private String environment;
 
 
+
     /**
      * get 页码, 默认为1, 取值范围：[1,∞)
      *
@@ -92,6 +93,7 @@ public class DescribeBackendConfigsRequest extends JdcloudRequest implements jav
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
@@ -111,25 +113,27 @@ public class DescribeBackendConfigsRequest extends JdcloudRequest implements jav
         this.pageSize = pageSize;
     }
 
-    /**
-     * get sort - 路由排序，赋值0时为默认的后端配置
 
-     *
-     * @return
-     */
+    /**
+    * get sort - 路由排序，赋值0时为默认的后端配置
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set sort - 路由排序，赋值0时为默认的后端配置
+    * set sort - 路由排序，赋值0时为默认的后端配置
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -149,6 +153,7 @@ public class DescribeBackendConfigsRequest extends JdcloudRequest implements jav
         this.regionId = regionId;
     }
 
+
     /**
      * get 分组ID
      *
@@ -166,6 +171,7 @@ public class DescribeBackendConfigsRequest extends JdcloudRequest implements jav
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 环境：test、preview、online
@@ -186,66 +192,80 @@ public class DescribeBackendConfigsRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
-     * @param pageNumber
+     * @param pageNumber 页码, 默认为1, 取值范围：[1,∞)
+     * @return DescribeBackendConfigsRequest
      */
     public DescribeBackendConfigsRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认为20，取值范围：[10,100]
+     * @return DescribeBackendConfigsRequest
      */
     public DescribeBackendConfigsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
-    /**
-     * set sort - 路由排序，赋值0时为默认的后端配置
 
-     *
-     * @param filters
-     */
+    /**
+    * set sort - 路由排序，赋值0时为默认的后端配置
+
+    *
+    * @param filters sort - 路由排序，赋值0时为默认的后端配置
+
+    * @return DescribeBackendConfigsRequest
+    */
     public DescribeBackendConfigsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DescribeBackendConfigsRequest
      */
     public DescribeBackendConfigsRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return DescribeBackendConfigsRequest
      */
     public DescribeBackendConfigsRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 环境：test、preview、online
      *
-     * @param environment
+     * @param environment 环境：test、preview、online
+     * @return DescribeBackendConfigsRequest
      */
     public DescribeBackendConfigsRequest environment(String environment) {
         this.environment = environment;
         return this;
     }
+
 
 
     /**
@@ -260,5 +280,4 @@ public class DescribeBackendConfigsRequest extends JdcloudRequest implements jav
         }
         this.filters.add(filter);
     }
-
 }

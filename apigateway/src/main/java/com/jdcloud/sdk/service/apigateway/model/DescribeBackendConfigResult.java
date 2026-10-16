@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 后端配置
+ * Backend-Configuration
  * 后端配置
  *
  * OpenAPI spec version: v1
@@ -40,6 +40,7 @@ public class DescribeBackendConfigResult extends JdcloudResult implements java.i
     private BackendConfig backendConfig;
 
 
+
     /**
      * get backendConfig
      *
@@ -59,10 +60,12 @@ public class DescribeBackendConfigResult extends JdcloudResult implements java.i
     }
 
 
+
     /**
      * set backendConfig
      *
-     * @param backendConfig
+     * @param backendConfig 
+     * @return DescribeBackendConfigResult
      */
     public DescribeBackendConfigResult backendConfig(BackendConfig backendConfig) {
         this.backendConfig = backendConfig;

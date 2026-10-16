@@ -48,6 +48,7 @@ public class CreateRevision  implements java.io.Serializable {
     private String revisionNote;
 
 
+
     /**
      * get 修订版本号，如果创建版本时传回修订版本，此为必填项
      *
@@ -66,6 +67,7 @@ public class CreateRevision  implements java.io.Serializable {
         this.revision = revision;
     }
 
+
     /**
      * get 基于此版本，如果创建版本时传回修订版本，此为必填项
      *
@@ -83,6 +85,7 @@ public class CreateRevision  implements java.io.Serializable {
     public void setBaseRevision(String baseRevision) {
         this.baseRevision = baseRevision;
     }
+
 
     /**
      * get 修订备注
@@ -103,30 +106,36 @@ public class CreateRevision  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 修订版本号，如果创建版本时传回修订版本，此为必填项
      *
-     * @param revision
+     * @param revision 修订版本号，如果创建版本时传回修订版本，此为必填项
+     * @return CreateRevision
      */
     public CreateRevision revision(String revision) {
         this.revision = revision;
         return this;
     }
 
+
     /**
      * set 基于此版本，如果创建版本时传回修订版本，此为必填项
      *
-     * @param baseRevision
+     * @param baseRevision 基于此版本，如果创建版本时传回修订版本，此为必填项
+     * @return CreateRevision
      */
     public CreateRevision baseRevision(String baseRevision) {
         this.baseRevision = baseRevision;
         return this;
     }
 
+
     /**
      * set 修订备注
      *
-     * @param revisionNote
+     * @param revisionNote 修订备注
+     * @return CreateRevision
      */
     public CreateRevision revisionNote(String revisionNote) {
         this.revisionNote = revisionNote;

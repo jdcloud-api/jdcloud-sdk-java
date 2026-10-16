@@ -47,11 +47,12 @@ public class ApiBackendConfig  implements java.io.Serializable {
     /**
      * 后端参数列表
      */
+    
     private List<BackendParameter> backendParams;
-
     /**
      * 后端常量参数列表
      */
+    
     private List<Parameter> backendConstParams;
 
 
@@ -73,6 +74,7 @@ public class ApiBackendConfig  implements java.io.Serializable {
         this.backendPath = backendPath;
     }
 
+
     /**
      * get 后端请求方式
      *
@@ -91,82 +93,93 @@ public class ApiBackendConfig  implements java.io.Serializable {
         this.backendAction = backendAction;
     }
 
+
     /**
-     * get 后端参数列表
-     *
-     * @return
-     */
+    * get 后端参数列表
+    *
+    * @return
+    */
     public List<BackendParameter> getBackendParams() {
         return backendParams;
     }
 
     /**
-     * set 后端参数列表
-     *
-     * @param backendParams
-     */
+    * set 后端参数列表
+    *
+    * @param backendParams
+    */
     public void setBackendParams(List<BackendParameter> backendParams) {
         this.backendParams = backendParams;
     }
 
+
     /**
-     * get 后端常量参数列表
-     *
-     * @return
-     */
+    * get 后端常量参数列表
+    *
+    * @return
+    */
     public List<Parameter> getBackendConstParams() {
         return backendConstParams;
     }
 
     /**
-     * set 后端常量参数列表
-     *
-     * @param backendConstParams
-     */
+    * set 后端常量参数列表
+    *
+    * @param backendConstParams
+    */
     public void setBackendConstParams(List<Parameter> backendConstParams) {
         this.backendConstParams = backendConstParams;
     }
 
 
+
     /**
      * set 后端路径
      *
-     * @param backendPath
+     * @param backendPath 后端路径
+     * @return ApiBackendConfig
      */
     public ApiBackendConfig backendPath(String backendPath) {
         this.backendPath = backendPath;
         return this;
     }
 
+
     /**
      * set 后端请求方式
      *
-     * @param backendAction
+     * @param backendAction 后端请求方式
+     * @return ApiBackendConfig
      */
     public ApiBackendConfig backendAction(String backendAction) {
         this.backendAction = backendAction;
         return this;
     }
 
+
     /**
-     * set 后端参数列表
-     *
-     * @param backendParams
-     */
+    * set 后端参数列表
+    *
+    * @param backendParams 后端参数列表
+    * @return ApiBackendConfig
+    */
     public ApiBackendConfig backendParams(List<BackendParameter> backendParams) {
         this.backendParams = backendParams;
         return this;
     }
 
+
     /**
-     * set 后端常量参数列表
-     *
-     * @param backendConstParams
-     */
+    * set 后端常量参数列表
+    *
+    * @param backendConstParams 后端常量参数列表
+    * @return ApiBackendConfig
+    */
     public ApiBackendConfig backendConstParams(List<Parameter> backendConstParams) {
         this.backendConstParams = backendConstParams;
         return this;
     }
+
 
 
     /**
@@ -192,5 +205,4 @@ public class ApiBackendConfig  implements java.io.Serializable {
         }
         this.backendConstParams.add(backendConstParam);
     }
-
 }

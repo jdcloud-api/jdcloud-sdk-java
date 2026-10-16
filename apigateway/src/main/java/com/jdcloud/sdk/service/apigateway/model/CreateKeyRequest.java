@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * kms
+ * Key-Manager-Service
  * key manager service
  *
  * OpenAPI spec version: v1
@@ -52,6 +52,7 @@ public class CreateKeyRequest extends JdcloudRequest implements java.io.Serializ
     private String regionId;
 
 
+
     /**
      * get key 名称
      *
@@ -70,6 +71,7 @@ public class CreateKeyRequest extends JdcloudRequest implements java.io.Serializ
         this.keyName = keyName;
     }
 
+
     /**
      * get key 描述
      *
@@ -87,6 +89,7 @@ public class CreateKeyRequest extends JdcloudRequest implements java.io.Serializ
     public void setKeyDesc(String keyDesc) {
         this.keyDesc = keyDesc;
     }
+
 
     /**
      * get 地域ID
@@ -107,30 +110,36 @@ public class CreateKeyRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set key 名称
      *
-     * @param keyName
+     * @param keyName key 名称
+     * @return CreateKeyRequest
      */
     public CreateKeyRequest keyName(String keyName) {
         this.keyName = keyName;
         return this;
     }
 
+
     /**
      * set key 描述
      *
-     * @param keyDesc
+     * @param keyDesc key 描述
+     * @return CreateKeyRequest
      */
     public CreateKeyRequest keyDesc(String keyDesc) {
         this.keyDesc = keyDesc;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CreateKeyRequest
      */
     public CreateKeyRequest regionId(String regionId) {
         this.regionId = regionId;

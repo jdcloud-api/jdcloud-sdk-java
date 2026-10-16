@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 部署列表
+ * Deployment-List
  * 提供部署信息的创建、查询、下线、修改等功能。
  *
  * OpenAPI spec version: v1
@@ -89,6 +89,7 @@ public class DescribeDeploymentResult extends JdcloudResult implements java.io.S
     private String jdsfId;
 
 
+
     /**
      * get 部署ID
      *
@@ -106,6 +107,7 @@ public class DescribeDeploymentResult extends JdcloudResult implements java.io.S
     public void setDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
     }
+
 
     /**
      * get 发布的修订版本号
@@ -125,6 +127,7 @@ public class DescribeDeploymentResult extends JdcloudResult implements java.io.S
         this.revision = revision;
     }
 
+
     /**
      * get 路径
      *
@@ -142,6 +145,7 @@ public class DescribeDeploymentResult extends JdcloudResult implements java.io.S
     public void setPath(String path) {
         this.path = path;
     }
+
 
     /**
      * get 环境：test、preview、online
@@ -161,6 +165,7 @@ public class DescribeDeploymentResult extends JdcloudResult implements java.io.S
         this.environment = environment;
     }
 
+
     /**
      * get 后端服务类型：mock、unique、vpc
      *
@@ -178,6 +183,7 @@ public class DescribeDeploymentResult extends JdcloudResult implements java.io.S
     public void setBackendServiceType(String backendServiceType) {
         this.backendServiceType = backendServiceType;
     }
+
 
     /**
      * get 后端地址
@@ -197,6 +203,7 @@ public class DescribeDeploymentResult extends JdcloudResult implements java.io.S
         this.backendUrl = backendUrl;
     }
 
+
     /**
      * get 描述
      *
@@ -214,6 +221,7 @@ public class DescribeDeploymentResult extends JdcloudResult implements java.io.S
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 发布日期，格式为毫秒级时间戳
@@ -233,6 +241,7 @@ public class DescribeDeploymentResult extends JdcloudResult implements java.io.S
         this.createTime = createTime;
     }
 
+
     /**
      * get 微服务网关名称
      *
@@ -251,6 +260,7 @@ public class DescribeDeploymentResult extends JdcloudResult implements java.io.S
         this.jdsfName = jdsfName;
     }
 
+
     /**
      * get 微服务注册中心ID
      *
@@ -268,6 +278,7 @@ public class DescribeDeploymentResult extends JdcloudResult implements java.io.S
     public void setJdsfRegistryName(String jdsfRegistryName) {
         this.jdsfRegistryName = jdsfRegistryName;
     }
+
 
     /**
      * get 微服务ID
@@ -288,110 +299,132 @@ public class DescribeDeploymentResult extends JdcloudResult implements java.io.S
     }
 
 
+
     /**
      * set 部署ID
      *
-     * @param deploymentId
+     * @param deploymentId 部署ID
+     * @return DescribeDeploymentResult
      */
     public DescribeDeploymentResult deploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
     }
 
+
     /**
      * set 发布的修订版本号
      *
-     * @param revision
+     * @param revision 发布的修订版本号
+     * @return DescribeDeploymentResult
      */
     public DescribeDeploymentResult revision(String revision) {
         this.revision = revision;
         return this;
     }
 
+
     /**
      * set 路径
      *
-     * @param path
+     * @param path 路径
+     * @return DescribeDeploymentResult
      */
     public DescribeDeploymentResult path(String path) {
         this.path = path;
         return this;
     }
 
+
     /**
      * set 环境：test、preview、online
      *
-     * @param environment
+     * @param environment 环境：test、preview、online
+     * @return DescribeDeploymentResult
      */
     public DescribeDeploymentResult environment(String environment) {
         this.environment = environment;
         return this;
     }
 
+
     /**
      * set 后端服务类型：mock、unique、vpc
      *
-     * @param backendServiceType
+     * @param backendServiceType 后端服务类型：mock、unique、vpc
+     * @return DescribeDeploymentResult
      */
     public DescribeDeploymentResult backendServiceType(String backendServiceType) {
         this.backendServiceType = backendServiceType;
         return this;
     }
 
+
     /**
      * set 后端地址
      *
-     * @param backendUrl
+     * @param backendUrl 后端地址
+     * @return DescribeDeploymentResult
      */
     public DescribeDeploymentResult backendUrl(String backendUrl) {
         this.backendUrl = backendUrl;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return DescribeDeploymentResult
      */
     public DescribeDeploymentResult description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 发布日期，格式为毫秒级时间戳
      *
-     * @param createTime
+     * @param createTime 发布日期，格式为毫秒级时间戳
+     * @return DescribeDeploymentResult
      */
     public DescribeDeploymentResult createTime(Long createTime) {
         this.createTime = createTime;
         return this;
     }
 
+
     /**
      * set 微服务网关名称
      *
-     * @param jdsfName
+     * @param jdsfName 微服务网关名称
+     * @return DescribeDeploymentResult
      */
     public DescribeDeploymentResult jdsfName(String jdsfName) {
         this.jdsfName = jdsfName;
         return this;
     }
 
+
     /**
      * set 微服务注册中心ID
      *
-     * @param jdsfRegistryName
+     * @param jdsfRegistryName 微服务注册中心ID
+     * @return DescribeDeploymentResult
      */
     public DescribeDeploymentResult jdsfRegistryName(String jdsfRegistryName) {
         this.jdsfRegistryName = jdsfRegistryName;
         return this;
     }
 
+
     /**
      * set 微服务ID
      *
-     * @param jdsfId
+     * @param jdsfId 微服务ID
+     * @return DescribeDeploymentResult
      */
     public DescribeDeploymentResult jdsfId(String jdsfId) {
         this.jdsfId = jdsfId;

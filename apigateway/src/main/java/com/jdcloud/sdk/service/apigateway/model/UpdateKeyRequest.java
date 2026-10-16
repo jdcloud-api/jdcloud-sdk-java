@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * kms
+ * Key-Manager-Service
  * key manager service
  *
  * OpenAPI spec version: v1
@@ -59,6 +59,7 @@ public class UpdateKeyRequest extends JdcloudRequest implements java.io.Serializ
     private String regionId;
 
 
+
     /**
      * get keyid
      *
@@ -76,6 +77,7 @@ public class UpdateKeyRequest extends JdcloudRequest implements java.io.Serializ
     public void setKeyId(String keyId) {
         this.keyId = keyId;
     }
+
 
     /**
      * get key 名称
@@ -95,6 +97,7 @@ public class UpdateKeyRequest extends JdcloudRequest implements java.io.Serializ
         this.keyName = keyName;
     }
 
+
     /**
      * get keyDesc
      *
@@ -112,6 +115,7 @@ public class UpdateKeyRequest extends JdcloudRequest implements java.io.Serializ
     public void setKeyDesc(String keyDesc) {
         this.keyDesc = keyDesc;
     }
+
 
     /**
      * get 地域ID
@@ -132,40 +136,48 @@ public class UpdateKeyRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set keyid
      *
-     * @param keyId
+     * @param keyId keyid
+     * @return UpdateKeyRequest
      */
     public UpdateKeyRequest keyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
 
+
     /**
      * set key 名称
      *
-     * @param keyName
+     * @param keyName key 名称
+     * @return UpdateKeyRequest
      */
     public UpdateKeyRequest keyName(String keyName) {
         this.keyName = keyName;
         return this;
     }
 
+
     /**
      * set keyDesc
      *
-     * @param keyDesc
+     * @param keyDesc 
+     * @return UpdateKeyRequest
      */
     public UpdateKeyRequest keyDesc(String keyDesc) {
         this.keyDesc = keyDesc;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UpdateKeyRequest
      */
     public UpdateKeyRequest regionId(String regionId) {
         this.regionId = regionId;

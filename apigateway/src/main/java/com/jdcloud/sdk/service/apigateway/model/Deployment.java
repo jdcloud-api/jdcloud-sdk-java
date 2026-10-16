@@ -88,6 +88,7 @@ public class Deployment  implements java.io.Serializable {
     private String jdsfId;
 
 
+
     /**
      * get 部署ID
      *
@@ -105,6 +106,7 @@ public class Deployment  implements java.io.Serializable {
     public void setDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
     }
+
 
     /**
      * get 发布的修订版本号
@@ -124,6 +126,7 @@ public class Deployment  implements java.io.Serializable {
         this.revision = revision;
     }
 
+
     /**
      * get 路径
      *
@@ -141,6 +144,7 @@ public class Deployment  implements java.io.Serializable {
     public void setPath(String path) {
         this.path = path;
     }
+
 
     /**
      * get 环境：test、preview、online
@@ -160,6 +164,7 @@ public class Deployment  implements java.io.Serializable {
         this.environment = environment;
     }
 
+
     /**
      * get 后端服务类型：mock、unique、vpc
      *
@@ -177,6 +182,7 @@ public class Deployment  implements java.io.Serializable {
     public void setBackendServiceType(String backendServiceType) {
         this.backendServiceType = backendServiceType;
     }
+
 
     /**
      * get 后端地址
@@ -196,6 +202,7 @@ public class Deployment  implements java.io.Serializable {
         this.backendUrl = backendUrl;
     }
 
+
     /**
      * get 描述
      *
@@ -213,6 +220,7 @@ public class Deployment  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 发布日期，格式为毫秒级时间戳
@@ -232,6 +240,7 @@ public class Deployment  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 微服务网关名称
      *
@@ -250,6 +259,7 @@ public class Deployment  implements java.io.Serializable {
         this.jdsfName = jdsfName;
     }
 
+
     /**
      * get 微服务注册中心ID
      *
@@ -267,6 +277,7 @@ public class Deployment  implements java.io.Serializable {
     public void setJdsfRegistryName(String jdsfRegistryName) {
         this.jdsfRegistryName = jdsfRegistryName;
     }
+
 
     /**
      * get 微服务ID
@@ -287,110 +298,132 @@ public class Deployment  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 部署ID
      *
-     * @param deploymentId
+     * @param deploymentId 部署ID
+     * @return Deployment
      */
     public Deployment deploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
     }
 
+
     /**
      * set 发布的修订版本号
      *
-     * @param revision
+     * @param revision 发布的修订版本号
+     * @return Deployment
      */
     public Deployment revision(String revision) {
         this.revision = revision;
         return this;
     }
 
+
     /**
      * set 路径
      *
-     * @param path
+     * @param path 路径
+     * @return Deployment
      */
     public Deployment path(String path) {
         this.path = path;
         return this;
     }
 
+
     /**
      * set 环境：test、preview、online
      *
-     * @param environment
+     * @param environment 环境：test、preview、online
+     * @return Deployment
      */
     public Deployment environment(String environment) {
         this.environment = environment;
         return this;
     }
 
+
     /**
      * set 后端服务类型：mock、unique、vpc
      *
-     * @param backendServiceType
+     * @param backendServiceType 后端服务类型：mock、unique、vpc
+     * @return Deployment
      */
     public Deployment backendServiceType(String backendServiceType) {
         this.backendServiceType = backendServiceType;
         return this;
     }
 
+
     /**
      * set 后端地址
      *
-     * @param backendUrl
+     * @param backendUrl 后端地址
+     * @return Deployment
      */
     public Deployment backendUrl(String backendUrl) {
         this.backendUrl = backendUrl;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return Deployment
      */
     public Deployment description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 发布日期，格式为毫秒级时间戳
      *
-     * @param createTime
+     * @param createTime 发布日期，格式为毫秒级时间戳
+     * @return Deployment
      */
     public Deployment createTime(Long createTime) {
         this.createTime = createTime;
         return this;
     }
 
+
     /**
      * set 微服务网关名称
      *
-     * @param jdsfName
+     * @param jdsfName 微服务网关名称
+     * @return Deployment
      */
     public Deployment jdsfName(String jdsfName) {
         this.jdsfName = jdsfName;
         return this;
     }
 
+
     /**
      * set 微服务注册中心ID
      *
-     * @param jdsfRegistryName
+     * @param jdsfRegistryName 微服务注册中心ID
+     * @return Deployment
      */
     public Deployment jdsfRegistryName(String jdsfRegistryName) {
         this.jdsfRegistryName = jdsfRegistryName;
         return this;
     }
 
+
     /**
      * set 微服务ID
      *
-     * @param jdsfId
+     * @param jdsfId 微服务ID
+     * @return Deployment
      */
     public Deployment jdsfId(String jdsfId) {
         this.jdsfId = jdsfId;

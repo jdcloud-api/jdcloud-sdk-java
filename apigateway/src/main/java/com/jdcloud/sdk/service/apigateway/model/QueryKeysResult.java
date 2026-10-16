@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * kms
+ * Key-Manager-Service
  * key manager service
  *
  * OpenAPI spec version: v1
@@ -44,6 +44,7 @@ public class QueryKeysResult extends JdcloudResult implements java.io.Serializab
     /**
      * data
      */
+    
     private List<KeyInfo> data;
 
 
@@ -65,44 +66,50 @@ public class QueryKeysResult extends JdcloudResult implements java.io.Serializab
         this.total = total;
     }
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<KeyInfo> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<KeyInfo> data) {
         this.data = data;
     }
 
 
+
     /**
      * set total count
      *
-     * @param total
+     * @param total total count
+     * @return QueryKeysResult
      */
     public QueryKeysResult total(Integer total) {
         this.total = total;
         return this;
     }
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data 
+    * @return QueryKeysResult
+    */
     public QueryKeysResult data(List<KeyInfo> data) {
         this.data = data;
         return this;
     }
+
 
 
     /**
@@ -116,5 +123,4 @@ public class QueryKeysResult extends JdcloudResult implements java.io.Serializab
         }
         this.data.add(data);
     }
-
 }

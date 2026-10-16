@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API调用者密钥
+ * API-Gateway-Access-Key
  * 关于API调用者密钥操作的相关接口
  *
  * OpenAPI spec version: v1
@@ -39,31 +39,33 @@ public class QueryAccessKeysResult extends JdcloudResult implements java.io.Seri
     /**
      * accessKeys
      */
+    
     private List<AccessKey> accessKeys;
-
     /**
      * 查询的密钥数目
      */
     private Integer totalCount;
 
 
+
     /**
-     * get accessKeys
-     *
-     * @return
-     */
+    * get accessKeys
+    *
+    * @return
+    */
     public List<AccessKey> getAccessKeys() {
         return accessKeys;
     }
 
     /**
-     * set accessKeys
-     *
-     * @param accessKeys
-     */
+    * set accessKeys
+    *
+    * @param accessKeys
+    */
     public void setAccessKeys(List<AccessKey> accessKeys) {
         this.accessKeys = accessKeys;
     }
+
 
     /**
      * get 查询的密钥数目
@@ -84,25 +86,30 @@ public class QueryAccessKeysResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
-     * set accessKeys
-     *
-     * @param accessKeys
-     */
+    * set accessKeys
+    *
+    * @param accessKeys 
+    * @return QueryAccessKeysResult
+    */
     public QueryAccessKeysResult accessKeys(List<AccessKey> accessKeys) {
         this.accessKeys = accessKeys;
         return this;
     }
 
+
     /**
      * set 查询的密钥数目
      *
-     * @param totalCount
+     * @param totalCount 查询的密钥数目
+     * @return QueryAccessKeysResult
      */
     public QueryAccessKeysResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +123,4 @@ public class QueryAccessKeysResult extends JdcloudResult implements java.io.Seri
         }
         this.accessKeys.add(accessKey);
     }
-
 }

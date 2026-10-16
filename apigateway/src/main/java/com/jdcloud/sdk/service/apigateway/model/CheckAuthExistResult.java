@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 访问授权
+ * Access-Authorization
  * 关于访问授权管理和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -39,6 +39,7 @@ public class CheckAuthExistResult extends JdcloudResult implements java.io.Seria
     private String accessAuthId;
 
 
+
     /**
      * get 返回accessAuthId
      *
@@ -58,10 +59,12 @@ public class CheckAuthExistResult extends JdcloudResult implements java.io.Seria
     }
 
 
+
     /**
      * set 返回accessAuthId
      *
-     * @param accessAuthId
+     * @param accessAuthId 返回accessAuthId
+     * @return CheckAuthExistResult
      */
     public CheckAuthExistResult accessAuthId(String accessAuthId) {
         this.accessAuthId = accessAuthId;

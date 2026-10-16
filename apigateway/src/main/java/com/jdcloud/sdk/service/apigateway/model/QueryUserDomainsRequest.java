@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 自定义域名
+ * Customized-Domain-Name
  * api 自定义域名 service
  *
  * OpenAPI spec version: v1
@@ -64,6 +64,7 @@ public class QueryUserDomainsRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
      * get 页码
      *
@@ -81,6 +82,7 @@ public class QueryUserDomainsRequest extends JdcloudRequest implements java.io.S
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
@@ -100,6 +102,7 @@ public class QueryUserDomainsRequest extends JdcloudRequest implements java.io.S
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 排序类型
      *
@@ -118,6 +121,7 @@ public class QueryUserDomainsRequest extends JdcloudRequest implements java.io.S
         this.orderBy = orderBy;
     }
 
+
     /**
      * get api分组id
      *
@@ -135,6 +139,7 @@ public class QueryUserDomainsRequest extends JdcloudRequest implements java.io.S
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 地域ID
@@ -155,50 +160,60 @@ public class QueryUserDomainsRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 页码
      *
-     * @param pageNumber
+     * @param pageNumber 页码
+     * @return QueryUserDomainsRequest
      */
     public QueryUserDomainsRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认为20，取值范围：[10,100]
+     * @return QueryUserDomainsRequest
      */
     public QueryUserDomainsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
+
     /**
      * set 排序类型
      *
-     * @param orderBy
+     * @param orderBy 排序类型
+     * @return QueryUserDomainsRequest
      */
     public QueryUserDomainsRequest orderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
     }
 
+
     /**
      * set api分组id
      *
-     * @param apiGroupId
+     * @param apiGroupId api分组id
+     * @return QueryUserDomainsRequest
      */
     public QueryUserDomainsRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QueryUserDomainsRequest
      */
     public QueryUserDomainsRequest regionId(String regionId) {
         this.regionId = regionId;

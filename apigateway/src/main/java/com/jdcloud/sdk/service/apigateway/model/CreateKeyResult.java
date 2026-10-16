@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * kms
+ * Key-Manager-Service
  * key manager service
  *
  * OpenAPI spec version: v1
@@ -44,6 +44,7 @@ public class CreateKeyResult extends JdcloudResult implements java.io.Serializab
     private String secretKey;
 
 
+
     /**
      * get 生成的accessKey
      *
@@ -61,6 +62,7 @@ public class CreateKeyResult extends JdcloudResult implements java.io.Serializab
     public void setAccessKey(String accessKey) {
         this.accessKey = accessKey;
     }
+
 
     /**
      * get 生成的secretKey
@@ -81,20 +83,24 @@ public class CreateKeyResult extends JdcloudResult implements java.io.Serializab
     }
 
 
+
     /**
      * set 生成的accessKey
      *
-     * @param accessKey
+     * @param accessKey 生成的accessKey
+     * @return CreateKeyResult
      */
     public CreateKeyResult accessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
+
     /**
      * set 生成的secretKey
      *
-     * @param secretKey
+     * @param secretKey 生成的secretKey
+     * @return CreateKeyResult
      */
     public CreateKeyResult secretKey(String secretKey) {
         this.secretKey = secretKey;

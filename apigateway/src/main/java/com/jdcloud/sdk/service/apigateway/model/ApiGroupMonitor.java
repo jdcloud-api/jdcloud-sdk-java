@@ -68,6 +68,7 @@ public class ApiGroupMonitor  implements java.io.Serializable {
     private Long deploymentDate;
 
 
+
     /**
      * get 分组ID
      *
@@ -85,6 +86,7 @@ public class ApiGroupMonitor  implements java.io.Serializable {
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 分组名称
@@ -104,6 +106,7 @@ public class ApiGroupMonitor  implements java.io.Serializable {
         this.groupName = groupName;
     }
 
+
     /**
      * get 后端服务地址
      *
@@ -121,6 +124,7 @@ public class ApiGroupMonitor  implements java.io.Serializable {
     public void setBackendUrl(String backendUrl) {
         this.backendUrl = backendUrl;
     }
+
 
     /**
      * get 分组路径
@@ -140,6 +144,7 @@ public class ApiGroupMonitor  implements java.io.Serializable {
         this.groupPath = groupPath;
     }
 
+
     /**
      * get 版本号
      *
@@ -158,6 +163,7 @@ public class ApiGroupMonitor  implements java.io.Serializable {
         this.version = version;
     }
 
+
     /**
      * get API总数
      *
@@ -175,6 +181,7 @@ public class ApiGroupMonitor  implements java.io.Serializable {
     public void setApiCount(String apiCount) {
         this.apiCount = apiCount;
     }
+
 
     /**
      * get 发布日期，格式为毫秒级时间戳
@@ -195,70 +202,84 @@ public class ApiGroupMonitor  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return ApiGroupMonitor
      */
     public ApiGroupMonitor apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 分组名称
      *
-     * @param groupName
+     * @param groupName 分组名称
+     * @return ApiGroupMonitor
      */
     public ApiGroupMonitor groupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
 
+
     /**
      * set 后端服务地址
      *
-     * @param backendUrl
+     * @param backendUrl 后端服务地址
+     * @return ApiGroupMonitor
      */
     public ApiGroupMonitor backendUrl(String backendUrl) {
         this.backendUrl = backendUrl;
         return this;
     }
 
+
     /**
      * set 分组路径
      *
-     * @param groupPath
+     * @param groupPath 分组路径
+     * @return ApiGroupMonitor
      */
     public ApiGroupMonitor groupPath(String groupPath) {
         this.groupPath = groupPath;
         return this;
     }
 
+
     /**
      * set 版本号
      *
-     * @param version
+     * @param version 版本号
+     * @return ApiGroupMonitor
      */
     public ApiGroupMonitor version(String version) {
         this.version = version;
         return this;
     }
 
+
     /**
      * set API总数
      *
-     * @param apiCount
+     * @param apiCount API总数
+     * @return ApiGroupMonitor
      */
     public ApiGroupMonitor apiCount(String apiCount) {
         this.apiCount = apiCount;
         return this;
     }
 
+
     /**
      * set 发布日期，格式为毫秒级时间戳
      *
-     * @param deploymentDate
+     * @param deploymentDate 发布日期，格式为毫秒级时间戳
+     * @return ApiGroupMonitor
      */
     public ApiGroupMonitor deploymentDate(Long deploymentDate) {
         this.deploymentDate = deploymentDate;

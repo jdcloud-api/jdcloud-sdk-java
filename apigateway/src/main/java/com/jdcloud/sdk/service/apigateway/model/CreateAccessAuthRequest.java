@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 访问授权
+ * Access-Authorization
  * 关于访问授权管理和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -48,6 +48,7 @@ public class CreateAccessAuthRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
      * get api分组
      *
@@ -65,6 +66,7 @@ public class CreateAccessAuthRequest extends JdcloudRequest implements java.io.S
     public void setAccessAuthView(AccessAuthView accessAuthView) {
         this.accessAuthView = accessAuthView;
     }
+
 
     /**
      * get 地域ID
@@ -85,20 +87,24 @@ public class CreateAccessAuthRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set api分组
      *
-     * @param accessAuthView
+     * @param accessAuthView api分组
+     * @return CreateAccessAuthRequest
      */
     public CreateAccessAuthRequest accessAuthView(AccessAuthView accessAuthView) {
         this.accessAuthView = accessAuthView;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CreateAccessAuthRequest
      */
     public CreateAccessAuthRequest regionId(String regionId) {
         this.regionId = regionId;

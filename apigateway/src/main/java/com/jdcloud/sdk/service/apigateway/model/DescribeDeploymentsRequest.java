@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 部署列表
+ * Deployment-List
  * 提供部署信息的创建、查询、下线、修改等功能。
  *
  * OpenAPI spec version: v1
@@ -41,8 +41,8 @@ public class DescribeDeploymentsRequest extends JdcloudRequest implements java.i
      * isApiProduct - 是否API产品，精确匹配，1为是
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
@@ -58,25 +58,27 @@ public class DescribeDeploymentsRequest extends JdcloudRequest implements java.i
     private String apiGroupId;
 
 
-    /**
-     * get isApiProduct - 是否API产品，精确匹配，1为是
 
-     *
-     * @return
-     */
+    /**
+    * get isApiProduct - 是否API产品，精确匹配，1为是
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set isApiProduct - 是否API产品，精确匹配，1为是
+    * set isApiProduct - 是否API产品，精确匹配，1为是
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -95,6 +97,7 @@ public class DescribeDeploymentsRequest extends JdcloudRequest implements java.i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 分组ID
@@ -115,36 +118,44 @@ public class DescribeDeploymentsRequest extends JdcloudRequest implements java.i
     }
 
 
-    /**
-     * set isApiProduct - 是否API产品，精确匹配，1为是
 
-     *
-     * @param filters
-     */
+    /**
+    * set isApiProduct - 是否API产品，精确匹配，1为是
+
+    *
+    * @param filters isApiProduct - 是否API产品，精确匹配，1为是
+
+    * @return DescribeDeploymentsRequest
+    */
     public DescribeDeploymentsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DescribeDeploymentsRequest
      */
     public DescribeDeploymentsRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return DescribeDeploymentsRequest
      */
     public DescribeDeploymentsRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
+
 
 
     /**
@@ -159,5 +170,4 @@ public class DescribeDeploymentsRequest extends JdcloudRequest implements java.i
         }
         this.filters.add(filter);
     }
-
 }

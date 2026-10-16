@@ -62,6 +62,7 @@ public class SubscriptionKey  implements java.io.Serializable {
     /**
      * 绑定分组
      */
+    
     private List<BindGroups> bindGroups;
 
 
@@ -83,6 +84,7 @@ public class SubscriptionKey  implements java.io.Serializable {
         this.subscriptionKeyId = subscriptionKeyId;
     }
 
+
     /**
      * get 描述
      *
@@ -100,6 +102,7 @@ public class SubscriptionKey  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get subscription Key
@@ -119,6 +122,7 @@ public class SubscriptionKey  implements java.io.Serializable {
         this.subscriptionKey = subscriptionKey;
     }
 
+
     /**
      * get 密钥名称
      *
@@ -136,6 +140,7 @@ public class SubscriptionKey  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 密钥创建时间
@@ -155,84 +160,98 @@ public class SubscriptionKey  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
-     * get 绑定分组
-     *
-     * @return
-     */
+    * get 绑定分组
+    *
+    * @return
+    */
     public List<BindGroups> getBindGroups() {
         return bindGroups;
     }
 
     /**
-     * set 绑定分组
-     *
-     * @param bindGroups
-     */
+    * set 绑定分组
+    *
+    * @param bindGroups
+    */
     public void setBindGroups(List<BindGroups> bindGroups) {
         this.bindGroups = bindGroups;
     }
 
 
+
     /**
      * set subscription Key id
      *
-     * @param subscriptionKeyId
+     * @param subscriptionKeyId subscription Key id
+     * @return SubscriptionKey
      */
     public SubscriptionKey subscriptionKeyId(String subscriptionKeyId) {
         this.subscriptionKeyId = subscriptionKeyId;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return SubscriptionKey
      */
     public SubscriptionKey description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set subscription Key
      *
-     * @param subscriptionKey
+     * @param subscriptionKey subscription Key
+     * @return SubscriptionKey
      */
     public SubscriptionKey subscriptionKey(String subscriptionKey) {
         this.subscriptionKey = subscriptionKey;
         return this;
     }
 
+
     /**
      * set 密钥名称
      *
-     * @param name
+     * @param name 密钥名称
+     * @return SubscriptionKey
      */
     public SubscriptionKey name(String name) {
         this.name = name;
         return this;
     }
 
+
     /**
      * set 密钥创建时间
      *
-     * @param createTime
+     * @param createTime 密钥创建时间
+     * @return SubscriptionKey
      */
     public SubscriptionKey createTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
 
+
     /**
-     * set 绑定分组
-     *
-     * @param bindGroups
-     */
+    * set 绑定分组
+    *
+    * @param bindGroups 绑定分组
+    * @return SubscriptionKey
+    */
     public SubscriptionKey bindGroups(List<BindGroups> bindGroups) {
         this.bindGroups = bindGroups;
         return this;
     }
+
 
 
     /**
@@ -246,5 +265,4 @@ public class SubscriptionKey  implements java.io.Serializable {
         }
         this.bindGroups.add(bindGroup);
     }
-
 }

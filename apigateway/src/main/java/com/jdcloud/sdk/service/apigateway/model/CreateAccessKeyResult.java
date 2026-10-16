@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API调用者密钥
+ * API-Gateway-Access-Key
  * 关于API调用者密钥操作的相关接口
  *
  * OpenAPI spec version: v1
@@ -39,6 +39,7 @@ public class CreateAccessKeyResult extends JdcloudResult implements java.io.Seri
     private String accessKeyId;
 
 
+
     /**
      * get 已创建密钥ID
      *
@@ -58,10 +59,12 @@ public class CreateAccessKeyResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
      * set 已创建密钥ID
      *
-     * @param accessKeyId
+     * @param accessKeyId 已创建密钥ID
+     * @return CreateAccessKeyResult
      */
     public CreateAccessKeyResult accessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;

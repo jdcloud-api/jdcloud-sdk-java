@@ -83,6 +83,7 @@ public class UpdateApiGroup  implements java.io.Serializable {
     private String jdsfId;
 
 
+
     /**
      * get 名称
      *
@@ -100,6 +101,7 @@ public class UpdateApiGroup  implements java.io.Serializable {
     public void setGroupName(String groupName) {
         this.groupName = groupName;
     }
+
 
     /**
      * get 描述
@@ -119,6 +121,7 @@ public class UpdateApiGroup  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 分组路径前缀
      *
@@ -136,6 +139,7 @@ public class UpdateApiGroup  implements java.io.Serializable {
     public void setPrefix(String prefix) {
         this.prefix = prefix;
     }
+
 
     /**
      * get 密钥验证方式：check_exist（密钥必须在访问授权中已配置）、no_check_exist（无需事先配置）
@@ -155,6 +159,7 @@ public class UpdateApiGroup  implements java.io.Serializable {
         this.keyCheck = keyCheck;
     }
 
+
     /**
      * get 访问授权方式：None（免鉴权）、jd_cloud（开启访问授权，且必须使用京东云的AK、SK验签）、hufu（虎符用户）
      *
@@ -172,6 +177,7 @@ public class UpdateApiGroup  implements java.io.Serializable {
     public void setAuthType(String authType) {
         this.authType = authType;
     }
+
 
     /**
      * get 是否转发分组路径到后端服务：0（不转发）、1（转发）默认为1
@@ -191,6 +197,7 @@ public class UpdateApiGroup  implements java.io.Serializable {
         this.prefixStrip = prefixStrip;
     }
 
+
     /**
      * get 分组类型：api_group（api分组）、jdsf_group（微服务分组）默认为 api_group
      *
@@ -208,6 +215,7 @@ public class UpdateApiGroup  implements java.io.Serializable {
     public void setGroupType(String groupType) {
         this.groupType = groupType;
     }
+
 
     /**
      * get 微服务网关名称
@@ -227,6 +235,7 @@ public class UpdateApiGroup  implements java.io.Serializable {
         this.jdsfName = jdsfName;
     }
 
+
     /**
      * get 微服务注册中心ID
      *
@@ -244,6 +253,7 @@ public class UpdateApiGroup  implements java.io.Serializable {
     public void setJdsfRegistryName(String jdsfRegistryName) {
         this.jdsfRegistryName = jdsfRegistryName;
     }
+
 
     /**
      * get 微服务网关ID
@@ -264,100 +274,120 @@ public class UpdateApiGroup  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 名称
      *
-     * @param groupName
+     * @param groupName 名称
+     * @return UpdateApiGroup
      */
     public UpdateApiGroup groupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return UpdateApiGroup
      */
     public UpdateApiGroup description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 分组路径前缀
      *
-     * @param prefix
+     * @param prefix 分组路径前缀
+     * @return UpdateApiGroup
      */
     public UpdateApiGroup prefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
 
+
     /**
      * set 密钥验证方式：check_exist（密钥必须在访问授权中已配置）、no_check_exist（无需事先配置）
      *
-     * @param keyCheck
+     * @param keyCheck 密钥验证方式：check_exist（密钥必须在访问授权中已配置）、no_check_exist（无需事先配置）
+     * @return UpdateApiGroup
      */
     public UpdateApiGroup keyCheck(String keyCheck) {
         this.keyCheck = keyCheck;
         return this;
     }
 
+
     /**
      * set 访问授权方式：None（免鉴权）、jd_cloud（开启访问授权，且必须使用京东云的AK、SK验签）、hufu（虎符用户）
      *
-     * @param authType
+     * @param authType 访问授权方式：None（免鉴权）、jd_cloud（开启访问授权，且必须使用京东云的AK、SK验签）、hufu（虎符用户）
+     * @return UpdateApiGroup
      */
     public UpdateApiGroup authType(String authType) {
         this.authType = authType;
         return this;
     }
 
+
     /**
      * set 是否转发分组路径到后端服务：0（不转发）、1（转发）默认为1
      *
-     * @param prefixStrip
+     * @param prefixStrip 是否转发分组路径到后端服务：0（不转发）、1（转发）默认为1
+     * @return UpdateApiGroup
      */
     public UpdateApiGroup prefixStrip(Integer prefixStrip) {
         this.prefixStrip = prefixStrip;
         return this;
     }
 
+
     /**
      * set 分组类型：api_group（api分组）、jdsf_group（微服务分组）默认为 api_group
      *
-     * @param groupType
+     * @param groupType 分组类型：api_group（api分组）、jdsf_group（微服务分组）默认为 api_group
+     * @return UpdateApiGroup
      */
     public UpdateApiGroup groupType(String groupType) {
         this.groupType = groupType;
         return this;
     }
 
+
     /**
      * set 微服务网关名称
      *
-     * @param jdsfName
+     * @param jdsfName 微服务网关名称
+     * @return UpdateApiGroup
      */
     public UpdateApiGroup jdsfName(String jdsfName) {
         this.jdsfName = jdsfName;
         return this;
     }
 
+
     /**
      * set 微服务注册中心ID
      *
-     * @param jdsfRegistryName
+     * @param jdsfRegistryName 微服务注册中心ID
+     * @return UpdateApiGroup
      */
     public UpdateApiGroup jdsfRegistryName(String jdsfRegistryName) {
         this.jdsfRegistryName = jdsfRegistryName;
         return this;
     }
 
+
     /**
      * set 微服务网关ID
      *
-     * @param jdsfId
+     * @param jdsfId 微服务网关ID
+     * @return UpdateApiGroup
      */
     public UpdateApiGroup jdsfId(String jdsfId) {
         this.jdsfId = jdsfId;

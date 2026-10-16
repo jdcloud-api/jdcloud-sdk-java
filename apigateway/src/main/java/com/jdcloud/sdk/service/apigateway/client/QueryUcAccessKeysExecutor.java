@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 京东云用户密钥
+ * JD-Cloud-User-Center-Access-Key
  * 主要提供京东云用户密钥查询服务
  *
  * OpenAPI spec version: v1

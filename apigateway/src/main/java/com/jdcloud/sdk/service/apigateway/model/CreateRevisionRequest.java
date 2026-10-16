@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 修订版本
+ * Version-Revision
  * 提供修订版本的创建、查询、删除、修改、查重功能。
  *
  * OpenAPI spec version: v1
@@ -64,6 +64,7 @@ public class CreateRevisionRequest extends JdcloudRequest implements java.io.Ser
     private String apiGroupId;
 
 
+
     /**
      * get 修订版本号，如果创建版本时传回修订版本，此为必填项
      *
@@ -81,6 +82,7 @@ public class CreateRevisionRequest extends JdcloudRequest implements java.io.Ser
     public void setRevision(String revision) {
         this.revision = revision;
     }
+
 
     /**
      * get 基于此版本，如果创建版本时传回修订版本，此为必填项
@@ -100,6 +102,7 @@ public class CreateRevisionRequest extends JdcloudRequest implements java.io.Ser
         this.baseRevision = baseRevision;
     }
 
+
     /**
      * get 修订备注
      *
@@ -118,6 +121,7 @@ public class CreateRevisionRequest extends JdcloudRequest implements java.io.Ser
         this.revisionNote = revisionNote;
     }
 
+
     /**
      * get 地域ID
      *
@@ -135,6 +139,7 @@ public class CreateRevisionRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 分组ID
@@ -155,50 +160,60 @@ public class CreateRevisionRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 修订版本号，如果创建版本时传回修订版本，此为必填项
      *
-     * @param revision
+     * @param revision 修订版本号，如果创建版本时传回修订版本，此为必填项
+     * @return CreateRevisionRequest
      */
     public CreateRevisionRequest revision(String revision) {
         this.revision = revision;
         return this;
     }
 
+
     /**
      * set 基于此版本，如果创建版本时传回修订版本，此为必填项
      *
-     * @param baseRevision
+     * @param baseRevision 基于此版本，如果创建版本时传回修订版本，此为必填项
+     * @return CreateRevisionRequest
      */
     public CreateRevisionRequest baseRevision(String baseRevision) {
         this.baseRevision = baseRevision;
         return this;
     }
 
+
     /**
      * set 修订备注
      *
-     * @param revisionNote
+     * @param revisionNote 修订备注
+     * @return CreateRevisionRequest
      */
     public CreateRevisionRequest revisionNote(String revisionNote) {
         this.revisionNote = revisionNote;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CreateRevisionRequest
      */
     public CreateRevisionRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return CreateRevisionRequest
      */
     public CreateRevisionRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;

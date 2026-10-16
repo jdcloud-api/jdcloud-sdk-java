@@ -65,6 +65,7 @@ public class ApiChargeSpecView  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<ApiChargeSpec> apiChargeSpecs;
 
 
@@ -86,6 +87,7 @@ public class ApiChargeSpecView  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
      * get serviceCode
      *
@@ -103,6 +105,7 @@ public class ApiChargeSpecView  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get api中心展示，1展示，0 不展示 默认不展示
@@ -122,6 +125,7 @@ public class ApiChargeSpecView  implements java.io.Serializable {
         this.showStatus = showStatus;
     }
 
+
     /**
      * get 计费类型 0 标准计费 1 阶梯计费
      *
@@ -139,6 +143,7 @@ public class ApiChargeSpecView  implements java.io.Serializable {
     public void setChargeType(Integer chargeType) {
         this.chargeType = chargeType;
     }
+
 
     /**
      * get 计费方式 0 200请求计费 1 后端处理计费
@@ -158,84 +163,98 @@ public class ApiChargeSpecView  implements java.io.Serializable {
         this.accessSuccessType = accessSuccessType;
     }
 
+
     /**
-     * get 请求参数列表
-     *
-     * @return
-     */
+    * get 请求参数列表
+    *
+    * @return
+    */
     public List<ApiChargeSpec> getApiChargeSpecs() {
         return apiChargeSpecs;
     }
 
     /**
-     * set 请求参数列表
-     *
-     * @param apiChargeSpecs
-     */
+    * set 请求参数列表
+    *
+    * @param apiChargeSpecs
+    */
     public void setApiChargeSpecs(List<ApiChargeSpec> apiChargeSpecs) {
         this.apiChargeSpecs = apiChargeSpecs;
     }
 
 
+
     /**
      * set appCode
      *
-     * @param appCode
+     * @param appCode appCode
+     * @return ApiChargeSpecView
      */
     public ApiChargeSpecView appCode(String appCode) {
         this.appCode = appCode;
         return this;
     }
 
+
     /**
      * set serviceCode
      *
-     * @param serviceCode
+     * @param serviceCode serviceCode
+     * @return ApiChargeSpecView
      */
     public ApiChargeSpecView serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
 
+
     /**
      * set api中心展示，1展示，0 不展示 默认不展示
      *
-     * @param showStatus
+     * @param showStatus api中心展示，1展示，0 不展示 默认不展示
+     * @return ApiChargeSpecView
      */
     public ApiChargeSpecView showStatus(Integer showStatus) {
         this.showStatus = showStatus;
         return this;
     }
 
+
     /**
      * set 计费类型 0 标准计费 1 阶梯计费
      *
-     * @param chargeType
+     * @param chargeType 计费类型 0 标准计费 1 阶梯计费
+     * @return ApiChargeSpecView
      */
     public ApiChargeSpecView chargeType(Integer chargeType) {
         this.chargeType = chargeType;
         return this;
     }
 
+
     /**
      * set 计费方式 0 200请求计费 1 后端处理计费
      *
-     * @param accessSuccessType
+     * @param accessSuccessType 计费方式 0 200请求计费 1 后端处理计费
+     * @return ApiChargeSpecView
      */
     public ApiChargeSpecView accessSuccessType(Integer accessSuccessType) {
         this.accessSuccessType = accessSuccessType;
         return this;
     }
 
+
     /**
-     * set 请求参数列表
-     *
-     * @param apiChargeSpecs
-     */
+    * set 请求参数列表
+    *
+    * @param apiChargeSpecs 请求参数列表
+    * @return ApiChargeSpecView
+    */
     public ApiChargeSpecView apiChargeSpecs(List<ApiChargeSpec> apiChargeSpecs) {
         this.apiChargeSpecs = apiChargeSpecs;
         return this;
     }
+
 
 
     /**
@@ -249,5 +268,4 @@ public class ApiChargeSpecView  implements java.io.Serializable {
         }
         this.apiChargeSpecs.add(apiChargeSpec);
     }
-
 }

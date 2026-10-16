@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 部署列表
+ * Deployment-List
  * 提供部署信息的创建、查询、下线、修改等功能。
  *
  * OpenAPI spec version: v1
@@ -93,6 +93,7 @@ public class DeployRequest extends JdcloudRequest implements java.io.Serializabl
     private String apiGroupId;
 
 
+
     /**
      * get 发布的修订版本号
      *
@@ -110,6 +111,7 @@ public class DeployRequest extends JdcloudRequest implements java.io.Serializabl
     public void setRevision(String revision) {
         this.revision = revision;
     }
+
 
     /**
      * get 环境：test、preview、online
@@ -129,6 +131,7 @@ public class DeployRequest extends JdcloudRequest implements java.io.Serializabl
         this.environment = environment;
     }
 
+
     /**
      * get 后端服务类型：mock、unique、vpc
      *
@@ -146,6 +149,7 @@ public class DeployRequest extends JdcloudRequest implements java.io.Serializabl
     public void setBackendServiceType(String backendServiceType) {
         this.backendServiceType = backendServiceType;
     }
+
 
     /**
      * get 后端地址
@@ -165,6 +169,7 @@ public class DeployRequest extends JdcloudRequest implements java.io.Serializabl
         this.backendUrl = backendUrl;
     }
 
+
     /**
      * get 描述
      *
@@ -182,6 +187,7 @@ public class DeployRequest extends JdcloudRequest implements java.io.Serializabl
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 微服务网关名称
@@ -201,6 +207,7 @@ public class DeployRequest extends JdcloudRequest implements java.io.Serializabl
         this.jdsfName = jdsfName;
     }
 
+
     /**
      * get 微服务注册中心ID
      *
@@ -218,6 +225,7 @@ public class DeployRequest extends JdcloudRequest implements java.io.Serializabl
     public void setJdsfRegistryName(String jdsfRegistryName) {
         this.jdsfRegistryName = jdsfRegistryName;
     }
+
 
     /**
      * get 微服务ID
@@ -237,6 +245,7 @@ public class DeployRequest extends JdcloudRequest implements java.io.Serializabl
         this.jdsfId = jdsfId;
     }
 
+
     /**
      * get 地域ID
      *
@@ -254,6 +263,7 @@ public class DeployRequest extends JdcloudRequest implements java.io.Serializabl
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 分组ID
@@ -274,100 +284,120 @@ public class DeployRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
 
+
     /**
      * set 发布的修订版本号
      *
-     * @param revision
+     * @param revision 发布的修订版本号
+     * @return DeployRequest
      */
     public DeployRequest revision(String revision) {
         this.revision = revision;
         return this;
     }
 
+
     /**
      * set 环境：test、preview、online
      *
-     * @param environment
+     * @param environment 环境：test、preview、online
+     * @return DeployRequest
      */
     public DeployRequest environment(String environment) {
         this.environment = environment;
         return this;
     }
 
+
     /**
      * set 后端服务类型：mock、unique、vpc
      *
-     * @param backendServiceType
+     * @param backendServiceType 后端服务类型：mock、unique、vpc
+     * @return DeployRequest
      */
     public DeployRequest backendServiceType(String backendServiceType) {
         this.backendServiceType = backendServiceType;
         return this;
     }
 
+
     /**
      * set 后端地址
      *
-     * @param backendUrl
+     * @param backendUrl 后端地址
+     * @return DeployRequest
      */
     public DeployRequest backendUrl(String backendUrl) {
         this.backendUrl = backendUrl;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return DeployRequest
      */
     public DeployRequest description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 微服务网关名称
      *
-     * @param jdsfName
+     * @param jdsfName 微服务网关名称
+     * @return DeployRequest
      */
     public DeployRequest jdsfName(String jdsfName) {
         this.jdsfName = jdsfName;
         return this;
     }
 
+
     /**
      * set 微服务注册中心ID
      *
-     * @param jdsfRegistryName
+     * @param jdsfRegistryName 微服务注册中心ID
+     * @return DeployRequest
      */
     public DeployRequest jdsfRegistryName(String jdsfRegistryName) {
         this.jdsfRegistryName = jdsfRegistryName;
         return this;
     }
 
+
     /**
      * set 微服务ID
      *
-     * @param jdsfId
+     * @param jdsfId 微服务ID
+     * @return DeployRequest
      */
     public DeployRequest jdsfId(String jdsfId) {
         this.jdsfId = jdsfId;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DeployRequest
      */
     public DeployRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return DeployRequest
      */
     public DeployRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;

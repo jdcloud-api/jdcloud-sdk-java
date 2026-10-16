@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 流控策略
+ * Rate-Limit-Policy
  * 关于流控策略配置和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -40,6 +40,7 @@ public class QueryRateLimitPolicyResult extends JdcloudResult implements java.io
     private RateLimitPolicy rateLimitPolicy;
 
 
+
     /**
      * get rateLimitPolicy
      *
@@ -59,10 +60,12 @@ public class QueryRateLimitPolicyResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
      * set rateLimitPolicy
      *
-     * @param rateLimitPolicy
+     * @param rateLimitPolicy 
+     * @return QueryRateLimitPolicyResult
      */
     public QueryRateLimitPolicyResult rateLimitPolicy(RateLimitPolicy rateLimitPolicy) {
         this.rateLimitPolicy = rateLimitPolicy;

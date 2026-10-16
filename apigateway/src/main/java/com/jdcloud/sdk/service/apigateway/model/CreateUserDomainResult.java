@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 自定义域名
+ * Customized-Domain-Name
  * api 自定义域名 service
  *
  * OpenAPI spec version: v1
@@ -39,6 +39,7 @@ public class CreateUserDomainResult extends JdcloudResult implements java.io.Ser
     private String domainId;
 
 
+
     /**
      * get 生成的domainId
      *
@@ -58,10 +59,12 @@ public class CreateUserDomainResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set 生成的domainId
      *
-     * @param domainId
+     * @param domainId 生成的domainId
+     * @return CreateUserDomainResult
      */
     public CreateUserDomainResult domainId(String domainId) {
         this.domainId = domainId;

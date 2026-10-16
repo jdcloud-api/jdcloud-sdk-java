@@ -53,6 +53,7 @@ public class AccessAuthView  implements java.io.Serializable {
     private String description;
 
 
+
     /**
      * get 授权用户类型
      *
@@ -70,6 +71,7 @@ public class AccessAuthView  implements java.io.Serializable {
     public void setAuthUserType(String authUserType) {
         this.authUserType = authUserType;
     }
+
 
     /**
      * get Access Key
@@ -89,6 +91,7 @@ public class AccessAuthView  implements java.io.Serializable {
         this.accessKey = accessKey;
     }
 
+
     /**
      * get 待绑定的部署ids逗号隔开
      *
@@ -106,6 +109,7 @@ public class AccessAuthView  implements java.io.Serializable {
     public void setDeploymentIds(String deploymentIds) {
         this.deploymentIds = deploymentIds;
     }
+
 
     /**
      * get 描述
@@ -126,40 +130,48 @@ public class AccessAuthView  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 授权用户类型
      *
-     * @param authUserType
+     * @param authUserType 授权用户类型
+     * @return AccessAuthView
      */
     public AccessAuthView authUserType(String authUserType) {
         this.authUserType = authUserType;
         return this;
     }
 
+
     /**
      * set Access Key
      *
-     * @param accessKey
+     * @param accessKey Access Key
+     * @return AccessAuthView
      */
     public AccessAuthView accessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
+
     /**
      * set 待绑定的部署ids逗号隔开
      *
-     * @param deploymentIds
+     * @param deploymentIds 待绑定的部署ids逗号隔开
+     * @return AccessAuthView
      */
     public AccessAuthView deploymentIds(String deploymentIds) {
         this.deploymentIds = deploymentIds;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return AccessAuthView
      */
     public AccessAuthView description(String description) {
         this.description = description;

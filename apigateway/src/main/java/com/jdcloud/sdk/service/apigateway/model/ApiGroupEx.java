@@ -48,6 +48,7 @@ public class ApiGroupEx  implements java.io.Serializable {
     private String regionId;
 
 
+
     /**
      * get 分组ID
      *
@@ -66,6 +67,7 @@ public class ApiGroupEx  implements java.io.Serializable {
         this.apiGroupId = apiGroupId;
     }
 
+
     /**
      * get 名称
      *
@@ -83,6 +85,7 @@ public class ApiGroupEx  implements java.io.Serializable {
     public void setGroupName(String groupName) {
         this.groupName = groupName;
     }
+
 
     /**
      * get 区域
@@ -103,30 +106,36 @@ public class ApiGroupEx  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return ApiGroupEx
      */
     public ApiGroupEx apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 名称
      *
-     * @param groupName
+     * @param groupName 名称
+     * @return ApiGroupEx
      */
     public ApiGroupEx groupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
 
+
     /**
      * set 区域
      *
-     * @param regionId
+     * @param regionId 区域
+     * @return ApiGroupEx
      */
     public ApiGroupEx regionId(String regionId) {
         this.regionId = regionId;

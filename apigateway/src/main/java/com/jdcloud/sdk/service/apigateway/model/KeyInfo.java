@@ -68,6 +68,7 @@ public class KeyInfo  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get userid
      *
@@ -85,6 +86,7 @@ public class KeyInfo  implements java.io.Serializable {
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get keyid
@@ -104,6 +106,7 @@ public class KeyInfo  implements java.io.Serializable {
         this.keyId = keyId;
     }
 
+
     /**
      * get keyname
      *
@@ -121,6 +124,7 @@ public class KeyInfo  implements java.io.Serializable {
     public void setKeyName(String keyName) {
         this.keyName = keyName;
     }
+
 
     /**
      * get ak
@@ -140,6 +144,7 @@ public class KeyInfo  implements java.io.Serializable {
         this.accessKey = accessKey;
     }
 
+
     /**
      * get sk
      *
@@ -158,6 +163,7 @@ public class KeyInfo  implements java.io.Serializable {
         this.secretKey = secretKey;
     }
 
+
     /**
      * get key描述信息
      *
@@ -175,6 +181,7 @@ public class KeyInfo  implements java.io.Serializable {
     public void setKeyDesc(String keyDesc) {
         this.keyDesc = keyDesc;
     }
+
 
     /**
      * get 创建时间
@@ -195,70 +202,84 @@ public class KeyInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set userid
      *
-     * @param userId
+     * @param userId userid
+     * @return KeyInfo
      */
     public KeyInfo userId(String userId) {
         this.userId = userId;
         return this;
     }
 
+
     /**
      * set keyid
      *
-     * @param keyId
+     * @param keyId keyid
+     * @return KeyInfo
      */
     public KeyInfo keyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
 
+
     /**
      * set keyname
      *
-     * @param keyName
+     * @param keyName keyname
+     * @return KeyInfo
      */
     public KeyInfo keyName(String keyName) {
         this.keyName = keyName;
         return this;
     }
 
+
     /**
      * set ak
      *
-     * @param accessKey
+     * @param accessKey ak
+     * @return KeyInfo
      */
     public KeyInfo accessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
+
     /**
      * set sk
      *
-     * @param secretKey
+     * @param secretKey sk
+     * @return KeyInfo
      */
     public KeyInfo secretKey(String secretKey) {
         this.secretKey = secretKey;
         return this;
     }
 
+
     /**
      * set key描述信息
      *
-     * @param keyDesc
+     * @param keyDesc key描述信息
+     * @return KeyInfo
      */
     public KeyInfo keyDesc(String keyDesc) {
         this.keyDesc = keyDesc;
         return this;
     }
 
+
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return KeyInfo
      */
     public KeyInfo createTime(String createTime) {
         this.createTime = createTime;

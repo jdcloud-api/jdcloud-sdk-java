@@ -73,6 +73,7 @@ public class BindJdsfGroup  implements java.io.Serializable {
     private String groupType;
 
 
+
     /**
      * get 微服务网关名称
      *
@@ -90,6 +91,7 @@ public class BindJdsfGroup  implements java.io.Serializable {
     public void setJdsfName(String jdsfName) {
         this.jdsfName = jdsfName;
     }
+
 
     /**
      * get 微服务注册中心ID
@@ -109,6 +111,7 @@ public class BindJdsfGroup  implements java.io.Serializable {
         this.jdsfRegistryName = jdsfRegistryName;
     }
 
+
     /**
      * get 环境信息
      *
@@ -126,6 +129,7 @@ public class BindJdsfGroup  implements java.io.Serializable {
     public void setEnvironment(String environment) {
         this.environment = environment;
     }
+
 
     /**
      * get 微服务网关ID
@@ -145,6 +149,7 @@ public class BindJdsfGroup  implements java.io.Serializable {
         this.jdsfId = jdsfId;
     }
 
+
     /**
      * get VPC类型时，传vpc对应的IP:port
      *
@@ -163,6 +168,7 @@ public class BindJdsfGroup  implements java.io.Serializable {
         this.jdsfParam = jdsfParam;
     }
 
+
     /**
      * get 微服务网关region ID
      *
@@ -180,6 +186,7 @@ public class BindJdsfGroup  implements java.io.Serializable {
     public void setJdsfRegion(String jdsfRegion) {
         this.jdsfRegion = jdsfRegion;
     }
+
 
     /**
      * get 分组类型：api_group（api分组）、jdsf_group（微服务分组）默认api_group
@@ -200,70 +207,84 @@ public class BindJdsfGroup  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 微服务网关名称
      *
-     * @param jdsfName
+     * @param jdsfName 微服务网关名称
+     * @return BindJdsfGroup
      */
     public BindJdsfGroup jdsfName(String jdsfName) {
         this.jdsfName = jdsfName;
         return this;
     }
 
+
     /**
      * set 微服务注册中心ID
      *
-     * @param jdsfRegistryName
+     * @param jdsfRegistryName 微服务注册中心ID
+     * @return BindJdsfGroup
      */
     public BindJdsfGroup jdsfRegistryName(String jdsfRegistryName) {
         this.jdsfRegistryName = jdsfRegistryName;
         return this;
     }
 
+
     /**
      * set 环境信息
      *
-     * @param environment
+     * @param environment 环境信息
+     * @return BindJdsfGroup
      */
     public BindJdsfGroup environment(String environment) {
         this.environment = environment;
         return this;
     }
 
+
     /**
      * set 微服务网关ID
      *
-     * @param jdsfId
+     * @param jdsfId 微服务网关ID
+     * @return BindJdsfGroup
      */
     public BindJdsfGroup jdsfId(String jdsfId) {
         this.jdsfId = jdsfId;
         return this;
     }
 
+
     /**
      * set VPC类型时，传vpc对应的IP:port
      *
-     * @param jdsfParam
+     * @param jdsfParam VPC类型时，传vpc对应的IP:port
+     * @return BindJdsfGroup
      */
     public BindJdsfGroup jdsfParam(String jdsfParam) {
         this.jdsfParam = jdsfParam;
         return this;
     }
 
+
     /**
      * set 微服务网关region ID
      *
-     * @param jdsfRegion
+     * @param jdsfRegion 微服务网关region ID
+     * @return BindJdsfGroup
      */
     public BindJdsfGroup jdsfRegion(String jdsfRegion) {
         this.jdsfRegion = jdsfRegion;
         return this;
     }
 
+
     /**
      * set 分组类型：api_group（api分组）、jdsf_group（微服务分组）默认api_group
      *
-     * @param groupType
+     * @param groupType 分组类型：api_group（api分组）、jdsf_group（微服务分组）默认api_group
+     * @return BindJdsfGroup
      */
     public BindJdsfGroup groupType(String groupType) {
         this.groupType = groupType;

@@ -78,6 +78,7 @@ public class Deploy  implements java.io.Serializable {
     private String jdsfId;
 
 
+
     /**
      * get 发布的修订版本号
      *
@@ -95,6 +96,7 @@ public class Deploy  implements java.io.Serializable {
     public void setRevision(String revision) {
         this.revision = revision;
     }
+
 
     /**
      * get 环境：test、preview、online
@@ -114,6 +116,7 @@ public class Deploy  implements java.io.Serializable {
         this.environment = environment;
     }
 
+
     /**
      * get 后端服务类型：mock、unique、vpc
      *
@@ -131,6 +134,7 @@ public class Deploy  implements java.io.Serializable {
     public void setBackendServiceType(String backendServiceType) {
         this.backendServiceType = backendServiceType;
     }
+
 
     /**
      * get 后端地址
@@ -150,6 +154,7 @@ public class Deploy  implements java.io.Serializable {
         this.backendUrl = backendUrl;
     }
 
+
     /**
      * get 描述
      *
@@ -167,6 +172,7 @@ public class Deploy  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 微服务网关名称
@@ -186,6 +192,7 @@ public class Deploy  implements java.io.Serializable {
         this.jdsfName = jdsfName;
     }
 
+
     /**
      * get 微服务注册中心ID
      *
@@ -203,6 +210,7 @@ public class Deploy  implements java.io.Serializable {
     public void setJdsfRegistryName(String jdsfRegistryName) {
         this.jdsfRegistryName = jdsfRegistryName;
     }
+
 
     /**
      * get 微服务ID
@@ -223,80 +231,96 @@ public class Deploy  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 发布的修订版本号
      *
-     * @param revision
+     * @param revision 发布的修订版本号
+     * @return Deploy
      */
     public Deploy revision(String revision) {
         this.revision = revision;
         return this;
     }
 
+
     /**
      * set 环境：test、preview、online
      *
-     * @param environment
+     * @param environment 环境：test、preview、online
+     * @return Deploy
      */
     public Deploy environment(String environment) {
         this.environment = environment;
         return this;
     }
 
+
     /**
      * set 后端服务类型：mock、unique、vpc
      *
-     * @param backendServiceType
+     * @param backendServiceType 后端服务类型：mock、unique、vpc
+     * @return Deploy
      */
     public Deploy backendServiceType(String backendServiceType) {
         this.backendServiceType = backendServiceType;
         return this;
     }
 
+
     /**
      * set 后端地址
      *
-     * @param backendUrl
+     * @param backendUrl 后端地址
+     * @return Deploy
      */
     public Deploy backendUrl(String backendUrl) {
         this.backendUrl = backendUrl;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return Deploy
      */
     public Deploy description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 微服务网关名称
      *
-     * @param jdsfName
+     * @param jdsfName 微服务网关名称
+     * @return Deploy
      */
     public Deploy jdsfName(String jdsfName) {
         this.jdsfName = jdsfName;
         return this;
     }
 
+
     /**
      * set 微服务注册中心ID
      *
-     * @param jdsfRegistryName
+     * @param jdsfRegistryName 微服务注册中心ID
+     * @return Deploy
      */
     public Deploy jdsfRegistryName(String jdsfRegistryName) {
         this.jdsfRegistryName = jdsfRegistryName;
         return this;
     }
 
+
     /**
      * set 微服务ID
      *
-     * @param jdsfId
+     * @param jdsfId 微服务ID
+     * @return Deploy
      */
     public Deploy jdsfId(String jdsfId) {
         this.jdsfId = jdsfId;

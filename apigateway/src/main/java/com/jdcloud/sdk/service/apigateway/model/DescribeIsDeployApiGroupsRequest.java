@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API分组
+ * API-Group
  * 提供API分组的创建、查询、删除、修改等功能。
  *
  * OpenAPI spec version: v1
@@ -41,8 +41,8 @@ public class DescribeIsDeployApiGroupsRequest extends JdcloudRequest implements 
      * deployStatus - 发布状态，已发布：1，未发布：0
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
@@ -51,25 +51,27 @@ public class DescribeIsDeployApiGroupsRequest extends JdcloudRequest implements 
     private String regionId;
 
 
-    /**
-     * get deployStatus - 发布状态，已发布：1，未发布：0
 
-     *
-     * @return
-     */
+    /**
+    * get deployStatus - 发布状态，已发布：1，未发布：0
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set deployStatus - 发布状态，已发布：1，未发布：0
+    * set deployStatus - 发布状态，已发布：1，未发布：0
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -90,26 +92,32 @@ public class DescribeIsDeployApiGroupsRequest extends JdcloudRequest implements 
     }
 
 
-    /**
-     * set deployStatus - 发布状态，已发布：1，未发布：0
 
-     *
-     * @param filters
-     */
+    /**
+    * set deployStatus - 发布状态，已发布：1，未发布：0
+
+    *
+    * @param filters deployStatus - 发布状态，已发布：1，未发布：0
+
+    * @return DescribeIsDeployApiGroupsRequest
+    */
     public DescribeIsDeployApiGroupsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DescribeIsDeployApiGroupsRequest
      */
     public DescribeIsDeployApiGroupsRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -124,5 +132,4 @@ public class DescribeIsDeployApiGroupsRequest extends JdcloudRequest implements 
         }
         this.filters.add(filter);
     }
-
 }

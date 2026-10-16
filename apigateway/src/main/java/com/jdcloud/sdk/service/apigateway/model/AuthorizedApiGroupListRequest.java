@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 访问授权
+ * Access-Authorization
  * 关于访问授权管理和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -51,14 +51,15 @@ public class AuthorizedApiGroupListRequest extends JdcloudRequest implements jav
      * apiGroupName - 名称，模糊匹配
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -79,6 +80,7 @@ public class AuthorizedApiGroupListRequest extends JdcloudRequest implements jav
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -97,25 +99,27 @@ public class AuthorizedApiGroupListRequest extends JdcloudRequest implements jav
         this.pageSize = pageSize;
     }
 
-    /**
-     * get apiGroupName - 名称，模糊匹配
 
-     *
-     * @return
-     */
+    /**
+    * get apiGroupName - 名称，模糊匹配
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set apiGroupName - 名称，模糊匹配
+    * set apiGroupName - 名称，模糊匹配
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -136,46 +140,56 @@ public class AuthorizedApiGroupListRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
-     * @param pageNumber
+     * @param pageNumber 页码, 默认为1, 取值范围：[1,∞)
+     * @return AuthorizedApiGroupListRequest
      */
     public AuthorizedApiGroupListRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认为20，取值范围：[10,100]
+     * @return AuthorizedApiGroupListRequest
      */
     public AuthorizedApiGroupListRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
-    /**
-     * set apiGroupName - 名称，模糊匹配
 
-     *
-     * @param filters
-     */
+    /**
+    * set apiGroupName - 名称，模糊匹配
+
+    *
+    * @param filters apiGroupName - 名称，模糊匹配
+
+    * @return AuthorizedApiGroupListRequest
+    */
     public AuthorizedApiGroupListRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return AuthorizedApiGroupListRequest
      */
     public AuthorizedApiGroupListRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -190,5 +204,4 @@ public class AuthorizedApiGroupListRequest extends JdcloudRequest implements jav
         }
         this.filters.add(filter);
     }
-
 }
