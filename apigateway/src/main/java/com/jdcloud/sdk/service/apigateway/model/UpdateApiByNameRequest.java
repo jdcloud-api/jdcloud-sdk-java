@@ -69,6 +69,7 @@ public class UpdateApiByNameRequest extends JdcloudRequest implements java.io.Se
     private String apiName;
 
 
+
     /**
      * get api
      *
@@ -86,6 +87,7 @@ public class UpdateApiByNameRequest extends JdcloudRequest implements java.io.Se
     public void setApi(CreateApi api) {
         this.api = api;
     }
+
 
     /**
      * get 地域ID
@@ -105,6 +107,7 @@ public class UpdateApiByNameRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
     }
 
+
     /**
      * get 分组ID
      *
@@ -123,6 +126,7 @@ public class UpdateApiByNameRequest extends JdcloudRequest implements java.io.Se
         this.apiGroupId = apiGroupId;
     }
 
+
     /**
      * get 版本号
      *
@@ -140,6 +144,7 @@ public class UpdateApiByNameRequest extends JdcloudRequest implements java.io.Se
     public void setRevision(String revision) {
         this.revision = revision;
     }
+
 
     /**
      * get apiName
@@ -160,50 +165,60 @@ public class UpdateApiByNameRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set api
      *
-     * @param api
+     * @param api api
+     * @return UpdateApiByNameRequest
      */
     public UpdateApiByNameRequest api(CreateApi api) {
         this.api = api;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UpdateApiByNameRequest
      */
     public UpdateApiByNameRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return UpdateApiByNameRequest
      */
     public UpdateApiByNameRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 版本号
      *
-     * @param revision
+     * @param revision 版本号
+     * @return UpdateApiByNameRequest
      */
     public UpdateApiByNameRequest revision(String revision) {
         this.revision = revision;
         return this;
     }
 
+
     /**
      * set apiName
      *
-     * @param apiName
+     * @param apiName 
+     * @return UpdateApiByNameRequest
      */
     public UpdateApiByNameRequest apiName(String apiName) {
         this.apiName = apiName;

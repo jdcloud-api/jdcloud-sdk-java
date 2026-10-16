@@ -48,6 +48,7 @@ public class CreateAccessKey  implements java.io.Serializable {
     private String accessKey;
 
 
+
     /**
      * get 描述
      *
@@ -66,6 +67,7 @@ public class CreateAccessKey  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 密钥类型
      *
@@ -83,6 +85,7 @@ public class CreateAccessKey  implements java.io.Serializable {
     public void setAccessKeyType(String accessKeyType) {
         this.accessKeyType = accessKeyType;
     }
+
 
     /**
      * get Access Key
@@ -103,30 +106,36 @@ public class CreateAccessKey  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return CreateAccessKey
      */
     public CreateAccessKey description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 密钥类型
      *
-     * @param accessKeyType
+     * @param accessKeyType 密钥类型
+     * @return CreateAccessKey
      */
     public CreateAccessKey accessKeyType(String accessKeyType) {
         this.accessKeyType = accessKeyType;
         return this;
     }
 
+
     /**
      * set Access Key
      *
-     * @param accessKey
+     * @param accessKey Access Key
+     * @return CreateAccessKey
      */
     public CreateAccessKey accessKey(String accessKey) {
         this.accessKey = accessKey;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API调用者密钥
+ * API-Gateway-Access-Key
  * 关于API调用者密钥操作的相关接口
  *
  * OpenAPI spec version: v1
@@ -39,37 +39,41 @@ public class BindGroupKeyResult extends JdcloudResult implements java.io.Seriali
     /**
      * bindGroups
      */
+    
     private List<BindGroups> bindGroups;
 
 
     /**
-     * get bindGroups
-     *
-     * @return
-     */
+    * get bindGroups
+    *
+    * @return
+    */
     public List<BindGroups> getBindGroups() {
         return bindGroups;
     }
 
     /**
-     * set bindGroups
-     *
-     * @param bindGroups
-     */
+    * set bindGroups
+    *
+    * @param bindGroups
+    */
     public void setBindGroups(List<BindGroups> bindGroups) {
         this.bindGroups = bindGroups;
     }
 
 
+
     /**
-     * set bindGroups
-     *
-     * @param bindGroups
-     */
+    * set bindGroups
+    *
+    * @param bindGroups 
+    * @return BindGroupKeyResult
+    */
     public BindGroupKeyResult bindGroups(List<BindGroups> bindGroups) {
         this.bindGroups = bindGroups;
         return this;
     }
+
 
 
     /**
@@ -83,5 +87,4 @@ public class BindGroupKeyResult extends JdcloudResult implements java.io.Seriali
         }
         this.bindGroups.add(bindGroup);
     }
-
 }

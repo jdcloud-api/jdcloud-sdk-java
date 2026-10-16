@@ -48,6 +48,7 @@ public class ChargeAuth  implements java.io.Serializable {
     private String resourceId;
 
 
+
     /**
      * get 用户pin
      *
@@ -65,6 +66,7 @@ public class ChargeAuth  implements java.io.Serializable {
     public void setUserPin(String userPin) {
         this.userPin = userPin;
     }
+
 
     /**
      * get 资源的uuid
@@ -85,20 +87,24 @@ public class ChargeAuth  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户pin
      *
-     * @param userPin
+     * @param userPin 用户pin
+     * @return ChargeAuth
      */
     public ChargeAuth userPin(String userPin) {
         this.userPin = userPin;
         return this;
     }
 
+
     /**
      * set 资源的uuid
      *
-     * @param resourceId
+     * @param resourceId 资源的uuid
+     * @return ChargeAuth
      */
     public ChargeAuth resourceId(String resourceId) {
         this.resourceId = resourceId;

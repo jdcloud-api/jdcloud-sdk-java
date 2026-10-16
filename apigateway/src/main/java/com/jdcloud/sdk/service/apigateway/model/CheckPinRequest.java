@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 用户信息
+ * The-User-Information
  * 关于用户信息
  *
  * OpenAPI spec version: v1
@@ -49,6 +49,7 @@ public class CheckPinRequest extends JdcloudRequest implements java.io.Serializa
     private String pin;
 
 
+
     /**
      * get 地域ID
      *
@@ -66,6 +67,7 @@ public class CheckPinRequest extends JdcloudRequest implements java.io.Serializa
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 京东云pin
@@ -86,20 +88,24 @@ public class CheckPinRequest extends JdcloudRequest implements java.io.Serializa
     }
 
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CheckPinRequest
      */
     public CheckPinRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 京东云pin
      *
-     * @param pin
+     * @param pin 京东云pin
+     * @return CheckPinRequest
      */
     public CheckPinRequest pin(String pin) {
         this.pin = pin;

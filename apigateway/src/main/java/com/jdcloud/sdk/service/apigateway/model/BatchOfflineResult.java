@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 部署列表
+ * Deployment-List
  * 提供部署信息的创建、查询、下线、修改等功能。
  *
  * OpenAPI spec version: v1
@@ -44,6 +44,7 @@ public class BatchOfflineResult extends JdcloudResult implements java.io.Seriali
     /**
      * failed
      */
+    
     private List<ErrorItem> failed;
 
 
@@ -65,44 +66,50 @@ public class BatchOfflineResult extends JdcloudResult implements java.io.Seriali
         this.successCount = successCount;
     }
 
+
     /**
-     * get failed
-     *
-     * @return
-     */
+    * get failed
+    *
+    * @return
+    */
     public List<ErrorItem> getFailed() {
         return failed;
     }
 
     /**
-     * set failed
-     *
-     * @param failed
-     */
+    * set failed
+    *
+    * @param failed
+    */
     public void setFailed(List<ErrorItem> failed) {
         this.failed = failed;
     }
 
 
+
     /**
      * set 操作成功的资源个数
      *
-     * @param successCount
+     * @param successCount 操作成功的资源个数
+     * @return BatchOfflineResult
      */
     public BatchOfflineResult successCount(Integer successCount) {
         this.successCount = successCount;
         return this;
     }
 
+
     /**
-     * set failed
-     *
-     * @param failed
-     */
+    * set failed
+    *
+    * @param failed 
+    * @return BatchOfflineResult
+    */
     public BatchOfflineResult failed(List<ErrorItem> failed) {
         this.failed = failed;
         return this;
     }
+
 
 
     /**
@@ -116,5 +123,4 @@ public class BatchOfflineResult extends JdcloudResult implements java.io.Seriali
         }
         this.failed.add(failed);
     }
-
 }

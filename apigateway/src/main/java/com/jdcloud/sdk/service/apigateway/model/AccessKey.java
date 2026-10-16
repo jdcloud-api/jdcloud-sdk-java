@@ -57,6 +57,7 @@ public class AccessKey  implements java.io.Serializable {
     /**
      * 绑定分组
      */
+    
     private List<BindGroups> bindGroups;
 
 
@@ -78,6 +79,7 @@ public class AccessKey  implements java.io.Serializable {
         this.accessKeyId = accessKeyId;
     }
 
+
     /**
      * get 描述
      *
@@ -95,6 +97,7 @@ public class AccessKey  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 密钥类型
@@ -114,6 +117,7 @@ public class AccessKey  implements java.io.Serializable {
         this.accessKeyType = accessKeyType;
     }
 
+
     /**
      * get Access Key
      *
@@ -132,74 +136,86 @@ public class AccessKey  implements java.io.Serializable {
         this.accessKey = accessKey;
     }
 
+
     /**
-     * get 绑定分组
-     *
-     * @return
-     */
+    * get 绑定分组
+    *
+    * @return
+    */
     public List<BindGroups> getBindGroups() {
         return bindGroups;
     }
 
     /**
-     * set 绑定分组
-     *
-     * @param bindGroups
-     */
+    * set 绑定分组
+    *
+    * @param bindGroups
+    */
     public void setBindGroups(List<BindGroups> bindGroups) {
         this.bindGroups = bindGroups;
     }
 
 
+
     /**
      * set Access Key id
      *
-     * @param accessKeyId
+     * @param accessKeyId Access Key id
+     * @return AccessKey
      */
     public AccessKey accessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return AccessKey
      */
     public AccessKey description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 密钥类型
      *
-     * @param accessKeyType
+     * @param accessKeyType 密钥类型
+     * @return AccessKey
      */
     public AccessKey accessKeyType(String accessKeyType) {
         this.accessKeyType = accessKeyType;
         return this;
     }
 
+
     /**
      * set Access Key
      *
-     * @param accessKey
+     * @param accessKey Access Key
+     * @return AccessKey
      */
     public AccessKey accessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
+
     /**
-     * set 绑定分组
-     *
-     * @param bindGroups
-     */
+    * set 绑定分组
+    *
+    * @param bindGroups 绑定分组
+    * @return AccessKey
+    */
     public AccessKey bindGroups(List<BindGroups> bindGroups) {
         this.bindGroups = bindGroups;
         return this;
     }
+
 
 
     /**
@@ -213,5 +229,4 @@ public class AccessKey  implements java.io.Serializable {
         }
         this.bindGroups.add(bindGroup);
     }
-
 }

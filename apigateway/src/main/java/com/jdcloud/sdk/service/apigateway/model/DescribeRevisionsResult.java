@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 修订版本
+ * Version-Revision
  * 提供修订版本的创建、查询、删除、修改、查重功能。
  *
  * OpenAPI spec version: v1
@@ -39,31 +39,33 @@ public class DescribeRevisionsResult extends JdcloudResult implements java.io.Se
     /**
      * revisions
      */
+    
     private List<RevisionList> revisions;
-
     /**
      * 查询的版本数目
      */
     private Integer totalCount;
 
 
+
     /**
-     * get revisions
-     *
-     * @return
-     */
+    * get revisions
+    *
+    * @return
+    */
     public List<RevisionList> getRevisions() {
         return revisions;
     }
 
     /**
-     * set revisions
-     *
-     * @param revisions
-     */
+    * set revisions
+    *
+    * @param revisions
+    */
     public void setRevisions(List<RevisionList> revisions) {
         this.revisions = revisions;
     }
+
 
     /**
      * get 查询的版本数目
@@ -84,25 +86,30 @@ public class DescribeRevisionsResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
-     * set revisions
-     *
-     * @param revisions
-     */
+    * set revisions
+    *
+    * @param revisions 
+    * @return DescribeRevisionsResult
+    */
     public DescribeRevisionsResult revisions(List<RevisionList> revisions) {
         this.revisions = revisions;
         return this;
     }
 
+
     /**
      * set 查询的版本数目
      *
-     * @param totalCount
+     * @param totalCount 查询的版本数目
+     * @return DescribeRevisionsResult
      */
     public DescribeRevisionsResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +123,4 @@ public class DescribeRevisionsResult extends JdcloudResult implements java.io.Se
         }
         this.revisions.add(revision);
     }
-
 }

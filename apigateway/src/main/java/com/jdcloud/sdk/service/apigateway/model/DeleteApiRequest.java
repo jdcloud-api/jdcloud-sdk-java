@@ -63,6 +63,7 @@ public class DeleteApiRequest extends JdcloudRequest implements java.io.Serializ
     private String apiId;
 
 
+
     /**
      * get 地域ID
      *
@@ -80,6 +81,7 @@ public class DeleteApiRequest extends JdcloudRequest implements java.io.Serializ
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 分组ID
@@ -99,6 +101,7 @@ public class DeleteApiRequest extends JdcloudRequest implements java.io.Serializ
         this.apiGroupId = apiGroupId;
     }
 
+
     /**
      * get 版本号
      *
@@ -116,6 +119,7 @@ public class DeleteApiRequest extends JdcloudRequest implements java.io.Serializ
     public void setRevision(String revision) {
         this.revision = revision;
     }
+
 
     /**
      * get 接口ID
@@ -136,40 +140,48 @@ public class DeleteApiRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DeleteApiRequest
      */
     public DeleteApiRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return DeleteApiRequest
      */
     public DeleteApiRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 版本号
      *
-     * @param revision
+     * @param revision 版本号
+     * @return DeleteApiRequest
      */
     public DeleteApiRequest revision(String revision) {
         this.revision = revision;
         return this;
     }
 
+
     /**
      * set 接口ID
      *
-     * @param apiId
+     * @param apiId 接口ID
+     * @return DeleteApiRequest
      */
     public DeleteApiRequest apiId(String apiId) {
         this.apiId = apiId;

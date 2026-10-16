@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 订阅密钥
+ * Subscription-key
  * 订阅密钥相关接口
  *
  * OpenAPI spec version: v1
@@ -39,31 +39,33 @@ public class QuerySubscriptionKeysResult extends JdcloudResult implements java.i
     /**
      * subscriptionKeys
      */
+    
     private List<SubscriptionKey> subscriptionKeys;
-
     /**
      * 查询的密钥数目
      */
     private Integer totalCount;
 
 
+
     /**
-     * get subscriptionKeys
-     *
-     * @return
-     */
+    * get subscriptionKeys
+    *
+    * @return
+    */
     public List<SubscriptionKey> getSubscriptionKeys() {
         return subscriptionKeys;
     }
 
     /**
-     * set subscriptionKeys
-     *
-     * @param subscriptionKeys
-     */
+    * set subscriptionKeys
+    *
+    * @param subscriptionKeys
+    */
     public void setSubscriptionKeys(List<SubscriptionKey> subscriptionKeys) {
         this.subscriptionKeys = subscriptionKeys;
     }
+
 
     /**
      * get 查询的密钥数目
@@ -84,25 +86,30 @@ public class QuerySubscriptionKeysResult extends JdcloudResult implements java.i
     }
 
 
+
     /**
-     * set subscriptionKeys
-     *
-     * @param subscriptionKeys
-     */
+    * set subscriptionKeys
+    *
+    * @param subscriptionKeys 
+    * @return QuerySubscriptionKeysResult
+    */
     public QuerySubscriptionKeysResult subscriptionKeys(List<SubscriptionKey> subscriptionKeys) {
         this.subscriptionKeys = subscriptionKeys;
         return this;
     }
 
+
     /**
      * set 查询的密钥数目
      *
-     * @param totalCount
+     * @param totalCount 查询的密钥数目
+     * @return QuerySubscriptionKeysResult
      */
     public QuerySubscriptionKeysResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +123,4 @@ public class QuerySubscriptionKeysResult extends JdcloudResult implements java.i
         }
         this.subscriptionKeys.add(subscriptionKey);
     }
-
 }

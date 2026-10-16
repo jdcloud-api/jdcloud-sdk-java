@@ -48,6 +48,7 @@ public class UpdateGroupVpcPathModel  implements java.io.Serializable {
     private String vpcPath;
 
 
+
     /**
      * get 微服务网关ID
      *
@@ -65,6 +66,7 @@ public class UpdateGroupVpcPathModel  implements java.io.Serializable {
     public void setJdsfGwId(String jdsfGwId) {
         this.jdsfGwId = jdsfGwId;
     }
+
 
     /**
      * get vpc内ip:port,如：192.168.1.2:8000
@@ -85,20 +87,24 @@ public class UpdateGroupVpcPathModel  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 微服务网关ID
      *
-     * @param jdsfGwId
+     * @param jdsfGwId 微服务网关ID
+     * @return UpdateGroupVpcPathModel
      */
     public UpdateGroupVpcPathModel jdsfGwId(String jdsfGwId) {
         this.jdsfGwId = jdsfGwId;
         return this;
     }
 
+
     /**
      * set vpc内ip:port,如：192.168.1.2:8000
      *
-     * @param vpcPath
+     * @param vpcPath vpc内ip:port,如：192.168.1.2:8000
+     * @return UpdateGroupVpcPathModel
      */
     public UpdateGroupVpcPathModel vpcPath(String vpcPath) {
         this.vpcPath = vpcPath;

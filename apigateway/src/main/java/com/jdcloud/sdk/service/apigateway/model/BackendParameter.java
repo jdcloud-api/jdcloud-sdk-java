@@ -58,6 +58,7 @@ public class BackendParameter  implements java.io.Serializable {
     private String paramType;
 
 
+
     /**
      * get 后端名称
      *
@@ -75,6 +76,7 @@ public class BackendParameter  implements java.io.Serializable {
     public void setBackendName(String backendName) {
         this.backendName = backendName;
     }
+
 
     /**
      * get 后端参数位置
@@ -94,6 +96,7 @@ public class BackendParameter  implements java.io.Serializable {
         this.backendParamLocation = backendParamLocation;
     }
 
+
     /**
      * get 入参名称
      *
@@ -112,6 +115,7 @@ public class BackendParameter  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 入参位置
      *
@@ -129,6 +133,7 @@ public class BackendParameter  implements java.io.Serializable {
     public void setParamLocation(String paramLocation) {
         this.paramLocation = paramLocation;
     }
+
 
     /**
      * get 入参类型
@@ -149,50 +154,60 @@ public class BackendParameter  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 后端名称
      *
-     * @param backendName
+     * @param backendName 后端名称
+     * @return BackendParameter
      */
     public BackendParameter backendName(String backendName) {
         this.backendName = backendName;
         return this;
     }
 
+
     /**
      * set 后端参数位置
      *
-     * @param backendParamLocation
+     * @param backendParamLocation 后端参数位置
+     * @return BackendParameter
      */
     public BackendParameter backendParamLocation(String backendParamLocation) {
         this.backendParamLocation = backendParamLocation;
         return this;
     }
 
+
     /**
      * set 入参名称
      *
-     * @param name
+     * @param name 入参名称
+     * @return BackendParameter
      */
     public BackendParameter name(String name) {
         this.name = name;
         return this;
     }
 
+
     /**
      * set 入参位置
      *
-     * @param paramLocation
+     * @param paramLocation 入参位置
+     * @return BackendParameter
      */
     public BackendParameter paramLocation(String paramLocation) {
         this.paramLocation = paramLocation;
         return this;
     }
 
+
     /**
      * set 入参类型
      *
-     * @param paramType
+     * @param paramType 入参类型
+     * @return BackendParameter
      */
     public BackendParameter paramType(String paramType) {
         this.paramType = paramType;

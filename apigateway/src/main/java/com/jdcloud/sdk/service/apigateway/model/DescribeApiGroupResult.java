@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API分组
+ * API-Group
  * 提供API分组的创建、查询、删除、修改等功能。
  *
  * OpenAPI spec version: v1
@@ -40,6 +40,7 @@ public class DescribeApiGroupResult extends JdcloudResult implements java.io.Ser
     private ApiGroup apiGroup;
 
 
+
     /**
      * get apiGroup
      *
@@ -59,10 +60,12 @@ public class DescribeApiGroupResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set apiGroup
      *
-     * @param apiGroup
+     * @param apiGroup 
+     * @return DescribeApiGroupResult
      */
     public DescribeApiGroupResult apiGroup(ApiGroup apiGroup) {
         this.apiGroup = apiGroup;

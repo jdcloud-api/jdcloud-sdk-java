@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 后端配置
+ * Backend-Configuration
  * 后端配置
  *
  * OpenAPI spec version: v1
@@ -56,6 +56,7 @@ public class DescribeBackendConfigRequest extends JdcloudRequest implements java
     private String backendConfigId;
 
 
+
     /**
      * get 地域ID
      *
@@ -74,6 +75,7 @@ public class DescribeBackendConfigRequest extends JdcloudRequest implements java
         this.regionId = regionId;
     }
 
+
     /**
      * get 分组ID
      *
@@ -91,6 +93,7 @@ public class DescribeBackendConfigRequest extends JdcloudRequest implements java
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get backendConfigId
@@ -111,30 +114,36 @@ public class DescribeBackendConfigRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DescribeBackendConfigRequest
      */
     public DescribeBackendConfigRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return DescribeBackendConfigRequest
      */
     public DescribeBackendConfigRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set backendConfigId
      *
-     * @param backendConfigId
+     * @param backendConfigId backendConfigId
+     * @return DescribeBackendConfigRequest
      */
     public DescribeBackendConfigRequest backendConfigId(String backendConfigId) {
         this.backendConfigId = backendConfigId;

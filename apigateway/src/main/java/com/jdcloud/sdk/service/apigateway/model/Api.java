@@ -77,8 +77,8 @@ public class Api  implements java.io.Serializable {
     /**
      * 请求参数列表
      */
+    
     private List<Parameter> reqParams;
-
     /**
      * 请求格式
      */
@@ -112,8 +112,8 @@ public class Api  implements java.io.Serializable {
     /**
      * 当前分组版本，发布的环境信息
      */
+    
     private List<String> deploymentEnvironment;
-
     /**
      * 请求格式类型,当reqBodyType等于3时,使用该请求格式类型
      */
@@ -128,6 +128,7 @@ public class Api  implements java.io.Serializable {
      * waf状态，如：observe,deny,off
      */
     private String wafStatus;
+
 
 
     /**
@@ -148,6 +149,7 @@ public class Api  implements java.io.Serializable {
         this.apiId = apiId;
     }
 
+
     /**
      * get 分组ID
      *
@@ -165,6 +167,7 @@ public class Api  implements java.io.Serializable {
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 名称
@@ -184,6 +187,7 @@ public class Api  implements java.io.Serializable {
         this.apiName = apiName;
     }
 
+
     /**
      * get 动作
      *
@@ -201,6 +205,7 @@ public class Api  implements java.io.Serializable {
     public void setAction(String action) {
         this.action = action;
     }
+
 
     /**
      * get 请求路径
@@ -220,6 +225,7 @@ public class Api  implements java.io.Serializable {
         this.path = path;
     }
 
+
     /**
      * get 匹配模式：1.&quot;absolute&quot;(绝对匹配); 2.&quot;prefix&quot;（前缀匹配）;
      *
@@ -237,6 +243,7 @@ public class Api  implements java.io.Serializable {
     public void setMatchType(String matchType) {
         this.matchType = matchType;
     }
+
 
     /**
      * get 后端类型，为空或null时前端显示未设置
@@ -256,6 +263,7 @@ public class Api  implements java.io.Serializable {
         this.backServiceType = backServiceType;
     }
 
+
     /**
      * get 描述
      *
@@ -274,23 +282,25 @@ public class Api  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
-     * get 请求参数列表
-     *
-     * @return
-     */
+    * get 请求参数列表
+    *
+    * @return
+    */
     public List<Parameter> getReqParams() {
         return reqParams;
     }
 
     /**
-     * set 请求参数列表
-     *
-     * @param reqParams
-     */
+    * set 请求参数列表
+    *
+    * @param reqParams
+    */
     public void setReqParams(List<Parameter> reqParams) {
         this.reqParams = reqParams;
     }
+
 
     /**
      * get 请求格式
@@ -310,6 +320,7 @@ public class Api  implements java.io.Serializable {
         this.reqBody = reqBody;
     }
 
+
     /**
      * get 返回格式
      *
@@ -327,6 +338,7 @@ public class Api  implements java.io.Serializable {
     public void setResBody(String resBody) {
         this.resBody = resBody;
     }
+
 
     /**
      * get 请求格式类型,1:application/json,2:text/xml,3:其他
@@ -346,6 +358,7 @@ public class Api  implements java.io.Serializable {
         this.reqBodyType = reqBodyType;
     }
 
+
     /**
      * get 返回格式类型,1:application/json,2:text/xml,3:其他
      *
@@ -363,6 +376,7 @@ public class Api  implements java.io.Serializable {
     public void setResBodyType(Integer resBodyType) {
         this.resBodyType = resBodyType;
     }
+
 
     /**
      * get api后端配置
@@ -382,6 +396,7 @@ public class Api  implements java.io.Serializable {
         this.apiBackendConfig = apiBackendConfig;
     }
 
+
     /**
      * get 应用类型ID,云鼎业务线专用
      *
@@ -400,23 +415,25 @@ public class Api  implements java.io.Serializable {
         this.hufuAppTypeId = hufuAppTypeId;
     }
 
+
     /**
-     * get 当前分组版本，发布的环境信息
-     *
-     * @return
-     */
+    * get 当前分组版本，发布的环境信息
+    *
+    * @return
+    */
     public List<String> getDeploymentEnvironment() {
         return deploymentEnvironment;
     }
 
     /**
-     * set 当前分组版本，发布的环境信息
-     *
-     * @param deploymentEnvironment
-     */
+    * set 当前分组版本，发布的环境信息
+    *
+    * @param deploymentEnvironment
+    */
     public void setDeploymentEnvironment(List<String> deploymentEnvironment) {
         this.deploymentEnvironment = deploymentEnvironment;
     }
+
 
     /**
      * get 请求格式类型,当reqBodyType等于3时,使用该请求格式类型
@@ -436,6 +453,7 @@ public class Api  implements java.io.Serializable {
         this.editableReqBodyType = editableReqBodyType;
     }
 
+
     /**
      * get 响应格式类型,当resBodyType等于3时,使用该响应格式类型
      *
@@ -453,6 +471,7 @@ public class Api  implements java.io.Serializable {
     public void setEditableResBodyType(String editableResBodyType) {
         this.editableResBodyType = editableResBodyType;
     }
+
 
     /**
      * get waf状态，如：observe,deny,off
@@ -473,195 +492,234 @@ public class Api  implements java.io.Serializable {
     }
 
 
+
     /**
      * set apiId
      *
-     * @param apiId
+     * @param apiId apiId
+     * @return Api
      */
     public Api apiId(String apiId) {
         this.apiId = apiId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return Api
      */
     public Api apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 名称
      *
-     * @param apiName
+     * @param apiName 名称
+     * @return Api
      */
     public Api apiName(String apiName) {
         this.apiName = apiName;
         return this;
     }
 
+
     /**
      * set 动作
      *
-     * @param action
+     * @param action 动作
+     * @return Api
      */
     public Api action(String action) {
         this.action = action;
         return this;
     }
 
+
     /**
      * set 请求路径
      *
-     * @param path
+     * @param path 请求路径
+     * @return Api
      */
     public Api path(String path) {
         this.path = path;
         return this;
     }
 
+
     /**
      * set 匹配模式：1.&quot;absolute&quot;(绝对匹配); 2.&quot;prefix&quot;（前缀匹配）;
      *
-     * @param matchType
+     * @param matchType 匹配模式：1.&quot;absolute&quot;(绝对匹配); 2.&quot;prefix&quot;（前缀匹配）;
+     * @return Api
      */
     public Api matchType(String matchType) {
         this.matchType = matchType;
         return this;
     }
 
+
     /**
      * set 后端类型，为空或null时前端显示未设置
      *
-     * @param backServiceType
+     * @param backServiceType 后端类型，为空或null时前端显示未设置
+     * @return Api
      */
     public Api backServiceType(String backServiceType) {
         this.backServiceType = backServiceType;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return Api
      */
     public Api description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
-     * set 请求参数列表
-     *
-     * @param reqParams
-     */
+    * set 请求参数列表
+    *
+    * @param reqParams 请求参数列表
+    * @return Api
+    */
     public Api reqParams(List<Parameter> reqParams) {
         this.reqParams = reqParams;
         return this;
     }
 
+
     /**
      * set 请求格式
      *
-     * @param reqBody
+     * @param reqBody 请求格式
+     * @return Api
      */
     public Api reqBody(String reqBody) {
         this.reqBody = reqBody;
         return this;
     }
 
+
     /**
      * set 返回格式
      *
-     * @param resBody
+     * @param resBody 返回格式
+     * @return Api
      */
     public Api resBody(String resBody) {
         this.resBody = resBody;
         return this;
     }
 
+
     /**
      * set 请求格式类型,1:application/json,2:text/xml,3:其他
      *
-     * @param reqBodyType
+     * @param reqBodyType 请求格式类型,1:application/json,2:text/xml,3:其他
+     * @return Api
      */
     public Api reqBodyType(Integer reqBodyType) {
         this.reqBodyType = reqBodyType;
         return this;
     }
 
+
     /**
      * set 返回格式类型,1:application/json,2:text/xml,3:其他
      *
-     * @param resBodyType
+     * @param resBodyType 返回格式类型,1:application/json,2:text/xml,3:其他
+     * @return Api
      */
     public Api resBodyType(Integer resBodyType) {
         this.resBodyType = resBodyType;
         return this;
     }
 
+
     /**
      * set api后端配置
      *
-     * @param apiBackendConfig
+     * @param apiBackendConfig api后端配置
+     * @return Api
      */
     public Api apiBackendConfig(ApiBackendConfig apiBackendConfig) {
         this.apiBackendConfig = apiBackendConfig;
         return this;
     }
 
+
     /**
      * set 应用类型ID,云鼎业务线专用
      *
-     * @param hufuAppTypeId
+     * @param hufuAppTypeId 应用类型ID,云鼎业务线专用
+     * @return Api
      */
     public Api hufuAppTypeId(Integer hufuAppTypeId) {
         this.hufuAppTypeId = hufuAppTypeId;
         return this;
     }
 
+
     /**
-     * set 当前分组版本，发布的环境信息
-     *
-     * @param deploymentEnvironment
-     */
+    * set 当前分组版本，发布的环境信息
+    *
+    * @param deploymentEnvironment 当前分组版本，发布的环境信息
+    * @return Api
+    */
     public Api deploymentEnvironment(List<String> deploymentEnvironment) {
         this.deploymentEnvironment = deploymentEnvironment;
         return this;
     }
 
+
     /**
      * set 请求格式类型,当reqBodyType等于3时,使用该请求格式类型
      *
-     * @param editableReqBodyType
+     * @param editableReqBodyType 请求格式类型,当reqBodyType等于3时,使用该请求格式类型
+     * @return Api
      */
     public Api editableReqBodyType(String editableReqBodyType) {
         this.editableReqBodyType = editableReqBodyType;
         return this;
     }
 
+
     /**
      * set 响应格式类型,当resBodyType等于3时,使用该响应格式类型
      *
-     * @param editableResBodyType
+     * @param editableResBodyType 响应格式类型,当resBodyType等于3时,使用该响应格式类型
+     * @return Api
      */
     public Api editableResBodyType(String editableResBodyType) {
         this.editableResBodyType = editableResBodyType;
         return this;
     }
 
+
     /**
      * set waf状态，如：observe,deny,off
      *
-     * @param wafStatus
+     * @param wafStatus waf状态，如：observe,deny,off
+     * @return Api
      */
     public Api wafStatus(String wafStatus) {
         this.wafStatus = wafStatus;
         return this;
     }
+
 
 
     /**
@@ -687,5 +745,4 @@ public class Api  implements java.io.Serializable {
         }
         this.deploymentEnvironment.add(deploymentEnvironment);
     }
-
 }

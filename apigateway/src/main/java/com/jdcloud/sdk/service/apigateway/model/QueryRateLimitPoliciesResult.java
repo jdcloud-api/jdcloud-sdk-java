@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 流控策略
+ * Rate-Limit-Policy
  * 关于流控策略配置和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -39,31 +39,33 @@ public class QueryRateLimitPoliciesResult extends JdcloudResult implements java.
     /**
      * rateLimitPolicys
      */
+    
     private List<RateLimitPolicy> rateLimitPolicys;
-
     /**
      * 查询的流控策略数目
      */
     private Integer totalCount;
 
 
+
     /**
-     * get rateLimitPolicys
-     *
-     * @return
-     */
+    * get rateLimitPolicys
+    *
+    * @return
+    */
     public List<RateLimitPolicy> getRateLimitPolicys() {
         return rateLimitPolicys;
     }
 
     /**
-     * set rateLimitPolicys
-     *
-     * @param rateLimitPolicys
-     */
+    * set rateLimitPolicys
+    *
+    * @param rateLimitPolicys
+    */
     public void setRateLimitPolicys(List<RateLimitPolicy> rateLimitPolicys) {
         this.rateLimitPolicys = rateLimitPolicys;
     }
+
 
     /**
      * get 查询的流控策略数目
@@ -84,25 +86,30 @@ public class QueryRateLimitPoliciesResult extends JdcloudResult implements java.
     }
 
 
+
     /**
-     * set rateLimitPolicys
-     *
-     * @param rateLimitPolicys
-     */
+    * set rateLimitPolicys
+    *
+    * @param rateLimitPolicys 
+    * @return QueryRateLimitPoliciesResult
+    */
     public QueryRateLimitPoliciesResult rateLimitPolicys(List<RateLimitPolicy> rateLimitPolicys) {
         this.rateLimitPolicys = rateLimitPolicys;
         return this;
     }
 
+
     /**
      * set 查询的流控策略数目
      *
-     * @param totalCount
+     * @param totalCount 查询的流控策略数目
+     * @return QueryRateLimitPoliciesResult
      */
     public QueryRateLimitPoliciesResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +123,4 @@ public class QueryRateLimitPoliciesResult extends JdcloudResult implements java.
         }
         this.rateLimitPolicys.add(rateLimitPolicy);
     }
-
 }

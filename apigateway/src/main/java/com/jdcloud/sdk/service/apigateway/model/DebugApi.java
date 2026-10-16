@@ -118,6 +118,7 @@ public class DebugApi  implements java.io.Serializable {
     private String isApiProduct;
 
 
+
     /**
      * get assessKey：京东云用户、API调用者、订阅密钥key
      *
@@ -135,6 +136,7 @@ public class DebugApi  implements java.io.Serializable {
     public void setAssessKey(String assessKey) {
         this.assessKey = assessKey;
     }
+
 
     /**
      * get secretKey：京东云用户、API调用者
@@ -154,6 +156,7 @@ public class DebugApi  implements java.io.Serializable {
         this.secretKey = secretKey;
     }
 
+
     /**
      * get 请求host
      *
@@ -171,6 +174,7 @@ public class DebugApi  implements java.io.Serializable {
     public void setHost(String host) {
         this.host = host;
     }
+
 
     /**
      * get 请求uri,分组路径前缀+API请求路径，如：/todo/api/v1/creatApi
@@ -190,6 +194,7 @@ public class DebugApi  implements java.io.Serializable {
         this.uri = uri;
     }
 
+
     /**
      * get 请求方式
      *
@@ -207,6 +212,7 @@ public class DebugApi  implements java.io.Serializable {
     public void setMethod(String method) {
         this.method = method;
     }
+
 
     /**
      * get 访问授权方式：None（免鉴权）,jd_cloud（京东云用户），jd_apikms（API调用者），jd_subscription_key（订阅密钥）
@@ -226,6 +232,7 @@ public class DebugApi  implements java.io.Serializable {
         this.authType = authType;
     }
 
+
     /**
      * get api所属region
      *
@@ -243,6 +250,7 @@ public class DebugApi  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get query参数，用&amp;分隔，如：id&#x3D;1&amp;version&#x3D;v1
@@ -262,6 +270,7 @@ public class DebugApi  implements java.io.Serializable {
         this.queryString = queryString;
     }
 
+
     /**
      * get body参数，传json字符串的base64编码，例如body的值为：{&quot;title&quot;:&quot;desk&quot;,&quot;desc&quot;:&quot;cheap&quot;}，应传值为：&quot;eyJ0aXRsZSI6ImRlc2siLCJkZXNjIjoiY2hlYXAifQ&#x3D;&#x3D;&quot;
      *
@@ -279,6 +288,7 @@ public class DebugApi  implements java.io.Serializable {
     public void setBody(String body) {
         this.body = body;
     }
+
 
     /**
      * get 请求格式类型,1:application/json,2:text/xml,3:其他
@@ -298,6 +308,7 @@ public class DebugApi  implements java.io.Serializable {
         this.reqBodyType = reqBodyType;
     }
 
+
     /**
      * get 请求格式类型,当reqBodyType等于3时,使用该请求格式类型
      *
@@ -315,6 +326,7 @@ public class DebugApi  implements java.io.Serializable {
     public void setEditableReqBodyType(String editableReqBodyType) {
         this.editableReqBodyType = editableReqBodyType;
     }
+
 
     /**
      * get header参数，传json字符串
@@ -334,6 +346,7 @@ public class DebugApi  implements java.io.Serializable {
         this.headerString = headerString;
     }
 
+
     /**
      * get 发布的环境信息，如：online,preview,test
      *
@@ -351,6 +364,7 @@ public class DebugApi  implements java.io.Serializable {
     public void setEnvironment(String environment) {
         this.environment = environment;
     }
+
 
     /**
      * get 是否API产品, 1为是
@@ -371,140 +385,168 @@ public class DebugApi  implements java.io.Serializable {
     }
 
 
+
     /**
      * set assessKey：京东云用户、API调用者、订阅密钥key
      *
-     * @param assessKey
+     * @param assessKey assessKey：京东云用户、API调用者、订阅密钥key
+     * @return DebugApi
      */
     public DebugApi assessKey(String assessKey) {
         this.assessKey = assessKey;
         return this;
     }
 
+
     /**
      * set secretKey：京东云用户、API调用者
      *
-     * @param secretKey
+     * @param secretKey secretKey：京东云用户、API调用者
+     * @return DebugApi
      */
     public DebugApi secretKey(String secretKey) {
         this.secretKey = secretKey;
         return this;
     }
 
+
     /**
      * set 请求host
      *
-     * @param host
+     * @param host 请求host
+     * @return DebugApi
      */
     public DebugApi host(String host) {
         this.host = host;
         return this;
     }
 
+
     /**
      * set 请求uri,分组路径前缀+API请求路径，如：/todo/api/v1/creatApi
      *
-     * @param uri
+     * @param uri 请求uri,分组路径前缀+API请求路径，如：/todo/api/v1/creatApi
+     * @return DebugApi
      */
     public DebugApi uri(String uri) {
         this.uri = uri;
         return this;
     }
 
+
     /**
      * set 请求方式
      *
-     * @param method
+     * @param method 请求方式
+     * @return DebugApi
      */
     public DebugApi method(String method) {
         this.method = method;
         return this;
     }
 
+
     /**
      * set 访问授权方式：None（免鉴权）,jd_cloud（京东云用户），jd_apikms（API调用者），jd_subscription_key（订阅密钥）
      *
-     * @param authType
+     * @param authType 访问授权方式：None（免鉴权）,jd_cloud（京东云用户），jd_apikms（API调用者），jd_subscription_key（订阅密钥）
+     * @return DebugApi
      */
     public DebugApi authType(String authType) {
         this.authType = authType;
         return this;
     }
 
+
     /**
      * set api所属region
      *
-     * @param region
+     * @param region api所属region
+     * @return DebugApi
      */
     public DebugApi region(String region) {
         this.region = region;
         return this;
     }
 
+
     /**
      * set query参数，用&amp;分隔，如：id&#x3D;1&amp;version&#x3D;v1
      *
-     * @param queryString
+     * @param queryString query参数，用&amp;分隔，如：id&#x3D;1&amp;version&#x3D;v1
+     * @return DebugApi
      */
     public DebugApi queryString(String queryString) {
         this.queryString = queryString;
         return this;
     }
 
+
     /**
      * set body参数，传json字符串的base64编码，例如body的值为：{&quot;title&quot;:&quot;desk&quot;,&quot;desc&quot;:&quot;cheap&quot;}，应传值为：&quot;eyJ0aXRsZSI6ImRlc2siLCJkZXNjIjoiY2hlYXAifQ&#x3D;&#x3D;&quot;
      *
-     * @param body
+     * @param body body参数，传json字符串的base64编码，例如body的值为：{&quot;title&quot;:&quot;desk&quot;,&quot;desc&quot;:&quot;cheap&quot;}，应传值为：&quot;eyJ0aXRsZSI6ImRlc2siLCJkZXNjIjoiY2hlYXAifQ&#x3D;&#x3D;&quot;
+     * @return DebugApi
      */
     public DebugApi body(String body) {
         this.body = body;
         return this;
     }
 
+
     /**
      * set 请求格式类型,1:application/json,2:text/xml,3:其他
      *
-     * @param reqBodyType
+     * @param reqBodyType 请求格式类型,1:application/json,2:text/xml,3:其他
+     * @return DebugApi
      */
     public DebugApi reqBodyType(String reqBodyType) {
         this.reqBodyType = reqBodyType;
         return this;
     }
 
+
     /**
      * set 请求格式类型,当reqBodyType等于3时,使用该请求格式类型
      *
-     * @param editableReqBodyType
+     * @param editableReqBodyType 请求格式类型,当reqBodyType等于3时,使用该请求格式类型
+     * @return DebugApi
      */
     public DebugApi editableReqBodyType(String editableReqBodyType) {
         this.editableReqBodyType = editableReqBodyType;
         return this;
     }
 
+
     /**
      * set header参数，传json字符串
      *
-     * @param headerString
+     * @param headerString header参数，传json字符串
+     * @return DebugApi
      */
     public DebugApi headerString(String headerString) {
         this.headerString = headerString;
         return this;
     }
 
+
     /**
      * set 发布的环境信息，如：online,preview,test
      *
-     * @param environment
+     * @param environment 发布的环境信息，如：online,preview,test
+     * @return DebugApi
      */
     public DebugApi environment(String environment) {
         this.environment = environment;
         return this;
     }
 
+
     /**
      * set 是否API产品, 1为是
      *
-     * @param isApiProduct
+     * @param isApiProduct 是否API产品, 1为是
+     * @return DebugApi
      */
     public DebugApi isApiProduct(String isApiProduct) {
         this.isApiProduct = isApiProduct;

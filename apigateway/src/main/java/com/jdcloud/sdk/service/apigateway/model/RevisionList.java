@@ -63,6 +63,7 @@ public class RevisionList  implements java.io.Serializable {
     private String revisionNote;
 
 
+
     /**
      * get 版本Id
      *
@@ -80,6 +81,7 @@ public class RevisionList  implements java.io.Serializable {
     public void setRevisionId(String revisionId) {
         this.revisionId = revisionId;
     }
+
 
     /**
      * get 修订版本号
@@ -99,6 +101,7 @@ public class RevisionList  implements java.io.Serializable {
         this.revision = revision;
     }
 
+
     /**
      * get 基于此版本
      *
@@ -116,6 +119,7 @@ public class RevisionList  implements java.io.Serializable {
     public void setBaseRevision(String baseRevision) {
         this.baseRevision = baseRevision;
     }
+
 
     /**
      * get 发布环境
@@ -135,6 +139,7 @@ public class RevisionList  implements java.io.Serializable {
         this.environment = environment;
     }
 
+
     /**
      * get 修订日期
      *
@@ -152,6 +157,7 @@ public class RevisionList  implements java.io.Serializable {
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
+
 
     /**
      * get 修订备注
@@ -172,60 +178,72 @@ public class RevisionList  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 版本Id
      *
-     * @param revisionId
+     * @param revisionId 版本Id
+     * @return RevisionList
      */
     public RevisionList revisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
 
+
     /**
      * set 修订版本号
      *
-     * @param revision
+     * @param revision 修订版本号
+     * @return RevisionList
      */
     public RevisionList revision(String revision) {
         this.revision = revision;
         return this;
     }
 
+
     /**
      * set 基于此版本
      *
-     * @param baseRevision
+     * @param baseRevision 基于此版本
+     * @return RevisionList
      */
     public RevisionList baseRevision(String baseRevision) {
         this.baseRevision = baseRevision;
         return this;
     }
 
+
     /**
      * set 发布环境
      *
-     * @param environment
+     * @param environment 发布环境
+     * @return RevisionList
      */
     public RevisionList environment(String environment) {
         this.environment = environment;
         return this;
     }
 
+
     /**
      * set 修订日期
      *
-     * @param createdAt
+     * @param createdAt 修订日期
+     * @return RevisionList
      */
     public RevisionList createdAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
+
     /**
      * set 修订备注
      *
-     * @param revisionNote
+     * @param revisionNote 修订备注
+     * @return RevisionList
      */
     public RevisionList revisionNote(String revisionNote) {
         this.revisionNote = revisionNote;

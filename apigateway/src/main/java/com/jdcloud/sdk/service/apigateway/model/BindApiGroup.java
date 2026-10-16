@@ -113,6 +113,7 @@ public class BindApiGroup  implements java.io.Serializable {
     private Integer deploy;
 
 
+
     /**
      * get 分组ID
      *
@@ -130,6 +131,7 @@ public class BindApiGroup  implements java.io.Serializable {
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 名称
@@ -149,6 +151,7 @@ public class BindApiGroup  implements java.io.Serializable {
         this.groupName = groupName;
     }
 
+
     /**
      * get 描述
      *
@@ -166,6 +169,7 @@ public class BindApiGroup  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 分组路径前缀
@@ -185,6 +189,7 @@ public class BindApiGroup  implements java.io.Serializable {
         this.prefix = prefix;
     }
 
+
     /**
      * get 版本号
      *
@@ -202,6 +207,7 @@ public class BindApiGroup  implements java.io.Serializable {
     public void setVersion(String version) {
         this.version = version;
     }
+
 
     /**
      * get 区域
@@ -221,6 +227,7 @@ public class BindApiGroup  implements java.io.Serializable {
         this.regionId = regionId;
     }
 
+
     /**
      * get 域名
      *
@@ -238,6 +245,7 @@ public class BindApiGroup  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 网关绑定分组的环境信息
@@ -257,6 +265,7 @@ public class BindApiGroup  implements java.io.Serializable {
         this.environment = environment;
     }
 
+
     /**
      * get 密钥验证方式：check_exist（密钥必须在访问授权中已配置）、no_check_exist（无需事先配置）
      *
@@ -274,6 +283,7 @@ public class BindApiGroup  implements java.io.Serializable {
     public void setKeyCheck(String keyCheck) {
         this.keyCheck = keyCheck;
     }
+
 
     /**
      * get 访问授权方式：None（免鉴权）、jd_cloud（开启访问授权，且必须使用京东云的AK、SK验签）、hufu（虎符用户）
@@ -293,6 +303,7 @@ public class BindApiGroup  implements java.io.Serializable {
         this.authType = authType;
     }
 
+
     /**
      * get 是否转发分组路径到后端服务：0（不转发）、1（转发）
      *
@@ -310,6 +321,7 @@ public class BindApiGroup  implements java.io.Serializable {
     public void setPrefixStrip(Integer prefixStrip) {
         this.prefixStrip = prefixStrip;
     }
+
 
     /**
      * get 分组类型：api_group（api分组）、jdsf_group（微服务分组）
@@ -329,6 +341,7 @@ public class BindApiGroup  implements java.io.Serializable {
         this.groupType = groupType;
     }
 
+
     /**
      * get 微服务网关名称
      *
@@ -346,6 +359,7 @@ public class BindApiGroup  implements java.io.Serializable {
     public void setJdsfName(String jdsfName) {
         this.jdsfName = jdsfName;
     }
+
 
     /**
      * get 微服务注册中心ID
@@ -365,6 +379,7 @@ public class BindApiGroup  implements java.io.Serializable {
         this.jdsfRegistryName = jdsfRegistryName;
     }
 
+
     /**
      * get 微服务网关ID
      *
@@ -382,6 +397,7 @@ public class BindApiGroup  implements java.io.Serializable {
     public void setJdsfId(String jdsfId) {
         this.jdsfId = jdsfId;
     }
+
 
     /**
      * get 分组是否已发布：0（未发布）、1（发布）
@@ -402,160 +418,192 @@ public class BindApiGroup  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return BindApiGroup
      */
     public BindApiGroup apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 名称
      *
-     * @param groupName
+     * @param groupName 名称
+     * @return BindApiGroup
      */
     public BindApiGroup groupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return BindApiGroup
      */
     public BindApiGroup description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 分组路径前缀
      *
-     * @param prefix
+     * @param prefix 分组路径前缀
+     * @return BindApiGroup
      */
     public BindApiGroup prefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
 
+
     /**
      * set 版本号
      *
-     * @param version
+     * @param version 版本号
+     * @return BindApiGroup
      */
     public BindApiGroup version(String version) {
         this.version = version;
         return this;
     }
 
+
     /**
      * set 区域
      *
-     * @param regionId
+     * @param regionId 区域
+     * @return BindApiGroup
      */
     public BindApiGroup regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 域名
      *
-     * @param domain
+     * @param domain 域名
+     * @return BindApiGroup
      */
     public BindApiGroup domain(String domain) {
         this.domain = domain;
         return this;
     }
 
+
     /**
      * set 网关绑定分组的环境信息
      *
-     * @param environment
+     * @param environment 网关绑定分组的环境信息
+     * @return BindApiGroup
      */
     public BindApiGroup environment(String environment) {
         this.environment = environment;
         return this;
     }
 
+
     /**
      * set 密钥验证方式：check_exist（密钥必须在访问授权中已配置）、no_check_exist（无需事先配置）
      *
-     * @param keyCheck
+     * @param keyCheck 密钥验证方式：check_exist（密钥必须在访问授权中已配置）、no_check_exist（无需事先配置）
+     * @return BindApiGroup
      */
     public BindApiGroup keyCheck(String keyCheck) {
         this.keyCheck = keyCheck;
         return this;
     }
 
+
     /**
      * set 访问授权方式：None（免鉴权）、jd_cloud（开启访问授权，且必须使用京东云的AK、SK验签）、hufu（虎符用户）
      *
-     * @param authType
+     * @param authType 访问授权方式：None（免鉴权）、jd_cloud（开启访问授权，且必须使用京东云的AK、SK验签）、hufu（虎符用户）
+     * @return BindApiGroup
      */
     public BindApiGroup authType(String authType) {
         this.authType = authType;
         return this;
     }
 
+
     /**
      * set 是否转发分组路径到后端服务：0（不转发）、1（转发）
      *
-     * @param prefixStrip
+     * @param prefixStrip 是否转发分组路径到后端服务：0（不转发）、1（转发）
+     * @return BindApiGroup
      */
     public BindApiGroup prefixStrip(Integer prefixStrip) {
         this.prefixStrip = prefixStrip;
         return this;
     }
 
+
     /**
      * set 分组类型：api_group（api分组）、jdsf_group（微服务分组）
      *
-     * @param groupType
+     * @param groupType 分组类型：api_group（api分组）、jdsf_group（微服务分组）
+     * @return BindApiGroup
      */
     public BindApiGroup groupType(String groupType) {
         this.groupType = groupType;
         return this;
     }
 
+
     /**
      * set 微服务网关名称
      *
-     * @param jdsfName
+     * @param jdsfName 微服务网关名称
+     * @return BindApiGroup
      */
     public BindApiGroup jdsfName(String jdsfName) {
         this.jdsfName = jdsfName;
         return this;
     }
 
+
     /**
      * set 微服务注册中心ID
      *
-     * @param jdsfRegistryName
+     * @param jdsfRegistryName 微服务注册中心ID
+     * @return BindApiGroup
      */
     public BindApiGroup jdsfRegistryName(String jdsfRegistryName) {
         this.jdsfRegistryName = jdsfRegistryName;
         return this;
     }
 
+
     /**
      * set 微服务网关ID
      *
-     * @param jdsfId
+     * @param jdsfId 微服务网关ID
+     * @return BindApiGroup
      */
     public BindApiGroup jdsfId(String jdsfId) {
         this.jdsfId = jdsfId;
         return this;
     }
 
+
     /**
      * set 分组是否已发布：0（未发布）、1（发布）
      *
-     * @param deploy
+     * @param deploy 分组是否已发布：0（未发布）、1（发布）
+     * @return BindApiGroup
      */
     public BindApiGroup deploy(Integer deploy) {
         this.deploy = deploy;

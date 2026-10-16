@@ -46,6 +46,7 @@ public class Function  implements java.io.Serializable {
     private String versionName;
 
 
+
     /**
      * get 函数名称
      *
@@ -63,6 +64,7 @@ public class Function  implements java.io.Serializable {
     public void setFunctionName(String functionName) {
         this.functionName = functionName;
     }
+
 
     /**
      * get 函数版本名称
@@ -83,20 +85,24 @@ public class Function  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 函数名称
      *
-     * @param functionName
+     * @param functionName 函数名称
+     * @return Function
      */
     public Function functionName(String functionName) {
         this.functionName = functionName;
         return this;
     }
 
+
     /**
      * set 函数版本名称
      *
-     * @param versionName
+     * @param versionName 函数版本名称
+     * @return Function
      */
     public Function versionName(String versionName) {
         this.versionName = versionName;

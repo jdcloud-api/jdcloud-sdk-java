@@ -58,6 +58,7 @@ public class BindedGroup  implements java.io.Serializable {
     private String bindedTime;
 
 
+
     /**
      * get 分组ID
      *
@@ -75,6 +76,7 @@ public class BindedGroup  implements java.io.Serializable {
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 名称
@@ -94,6 +96,7 @@ public class BindedGroup  implements java.io.Serializable {
         this.groupName = groupName;
     }
 
+
     /**
      * get 区域
      *
@@ -112,6 +115,7 @@ public class BindedGroup  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 环境
      *
@@ -129,6 +133,7 @@ public class BindedGroup  implements java.io.Serializable {
     public void setEnvironment(String environment) {
         this.environment = environment;
     }
+
 
     /**
      * get 授权时间
@@ -149,50 +154,60 @@ public class BindedGroup  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return BindedGroup
      */
     public BindedGroup apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 名称
      *
-     * @param groupName
+     * @param groupName 名称
+     * @return BindedGroup
      */
     public BindedGroup groupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
 
+
     /**
      * set 区域
      *
-     * @param region
+     * @param region 区域
+     * @return BindedGroup
      */
     public BindedGroup region(String region) {
         this.region = region;
         return this;
     }
 
+
     /**
      * set 环境
      *
-     * @param environment
+     * @param environment 环境
+     * @return BindedGroup
      */
     public BindedGroup environment(String environment) {
         this.environment = environment;
         return this;
     }
 
+
     /**
      * set 授权时间
      *
-     * @param bindedTime
+     * @param bindedTime 授权时间
+     * @return BindedGroup
      */
     public BindedGroup bindedTime(String bindedTime) {
         this.bindedTime = bindedTime;

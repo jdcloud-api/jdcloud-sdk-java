@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 修订版本
+ * Version-Revision
  * 提供修订版本的创建、查询、删除、修改、查重功能。
  *
  * OpenAPI spec version: v1
@@ -39,6 +39,7 @@ public class DeleteRevisionResult extends JdcloudResult implements java.io.Seria
     private Boolean deleteRevision;
 
 
+
     /**
      * get 删除修订版本成功否
      *
@@ -58,10 +59,12 @@ public class DeleteRevisionResult extends JdcloudResult implements java.io.Seria
     }
 
 
+
     /**
      * set 删除修订版本成功否
      *
-     * @param deleteRevision
+     * @param deleteRevision 删除修订版本成功否
+     * @return DeleteRevisionResult
      */
     public DeleteRevisionResult deleteRevision(Boolean deleteRevision) {
         this.deleteRevision = deleteRevision;

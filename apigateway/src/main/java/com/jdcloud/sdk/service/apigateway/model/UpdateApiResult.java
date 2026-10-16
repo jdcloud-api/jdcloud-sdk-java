@@ -39,6 +39,7 @@ public class UpdateApiResult extends JdcloudResult implements java.io.Serializab
     private String apiId;
 
 
+
     /**
      * get apiId
      *
@@ -58,10 +59,12 @@ public class UpdateApiResult extends JdcloudResult implements java.io.Serializab
     }
 
 
+
     /**
      * set apiId
      *
-     * @param apiId
+     * @param apiId apiId
+     * @return UpdateApiResult
      */
     public UpdateApiResult apiId(String apiId) {
         this.apiId = apiId;

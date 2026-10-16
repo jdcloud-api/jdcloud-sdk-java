@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API分组
+ * API-Group
  * 提供API分组的创建、查询、删除、修改等功能。
  *
  * OpenAPI spec version: v1
@@ -44,6 +44,7 @@ public class CreateApiGroupResult extends JdcloudResult implements java.io.Seria
     private String revision;
 
 
+
     /**
      * get 创建的API分组ID
      *
@@ -61,6 +62,7 @@ public class CreateApiGroupResult extends JdcloudResult implements java.io.Seria
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 修订版本号
@@ -81,20 +83,24 @@ public class CreateApiGroupResult extends JdcloudResult implements java.io.Seria
     }
 
 
+
     /**
      * set 创建的API分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 创建的API分组ID
+     * @return CreateApiGroupResult
      */
     public CreateApiGroupResult apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 修订版本号
      *
-     * @param revision
+     * @param revision 修订版本号
+     * @return CreateApiGroupResult
      */
     public CreateApiGroupResult revision(String revision) {
         this.revision = revision;

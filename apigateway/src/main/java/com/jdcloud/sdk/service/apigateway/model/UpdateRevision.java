@@ -38,6 +38,7 @@ public class UpdateRevision  implements java.io.Serializable {
     private String revisionNote;
 
 
+
     /**
      * get 修订备注
      *
@@ -57,10 +58,12 @@ public class UpdateRevision  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 修订备注
      *
-     * @param revisionNote
+     * @param revisionNote 修订备注
+     * @return UpdateRevision
      */
     public UpdateRevision revisionNote(String revisionNote) {
         this.revisionNote = revisionNote;

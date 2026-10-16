@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * kms
+ * Key-Manager-Service
  * key manager service
  *
  * OpenAPI spec version: v1
@@ -49,6 +49,7 @@ public class QueryKeyInfoRequest extends JdcloudRequest implements java.io.Seria
     private String keyId;
 
 
+
     /**
      * get 地域ID
      *
@@ -66,6 +67,7 @@ public class QueryKeyInfoRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get keyId
@@ -86,20 +88,24 @@ public class QueryKeyInfoRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QueryKeyInfoRequest
      */
     public QueryKeyInfoRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set keyId
      *
-     * @param keyId
+     * @param keyId keyId
+     * @return QueryKeyInfoRequest
      */
     public QueryKeyInfoRequest keyId(String keyId) {
         this.keyId = keyId;

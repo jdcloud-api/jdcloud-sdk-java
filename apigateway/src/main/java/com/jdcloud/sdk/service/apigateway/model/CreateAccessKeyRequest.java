@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API调用者密钥
+ * API-Gateway-Access-Key
  * 关于API调用者密钥操作的相关接口
  *
  * OpenAPI spec version: v1
@@ -57,6 +57,7 @@ public class CreateAccessKeyRequest extends JdcloudRequest implements java.io.Se
     private String regionId;
 
 
+
     /**
      * get 描述
      *
@@ -74,6 +75,7 @@ public class CreateAccessKeyRequest extends JdcloudRequest implements java.io.Se
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 密钥类型
@@ -93,6 +95,7 @@ public class CreateAccessKeyRequest extends JdcloudRequest implements java.io.Se
         this.accessKeyType = accessKeyType;
     }
 
+
     /**
      * get Access Key
      *
@@ -110,6 +113,7 @@ public class CreateAccessKeyRequest extends JdcloudRequest implements java.io.Se
     public void setAccessKey(String accessKey) {
         this.accessKey = accessKey;
     }
+
 
     /**
      * get 地域ID
@@ -130,40 +134,48 @@ public class CreateAccessKeyRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return CreateAccessKeyRequest
      */
     public CreateAccessKeyRequest description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 密钥类型
      *
-     * @param accessKeyType
+     * @param accessKeyType 密钥类型
+     * @return CreateAccessKeyRequest
      */
     public CreateAccessKeyRequest accessKeyType(String accessKeyType) {
         this.accessKeyType = accessKeyType;
         return this;
     }
 
+
     /**
      * set Access Key
      *
-     * @param accessKey
+     * @param accessKey Access Key
+     * @return CreateAccessKeyRequest
      */
     public CreateAccessKeyRequest accessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CreateAccessKeyRequest
      */
     public CreateAccessKeyRequest regionId(String regionId) {
         this.regionId = regionId;

@@ -43,6 +43,7 @@ public class UcAccessKey  implements java.io.Serializable {
     private String accessKey;
 
 
+
     /**
      * get 密钥转态
      *
@@ -60,6 +61,7 @@ public class UcAccessKey  implements java.io.Serializable {
     public void setAccessKeyStatus(String accessKeyStatus) {
         this.accessKeyStatus = accessKeyStatus;
     }
+
 
     /**
      * get Access Key
@@ -80,20 +82,24 @@ public class UcAccessKey  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 密钥转态
      *
-     * @param accessKeyStatus
+     * @param accessKeyStatus 密钥转态
+     * @return UcAccessKey
      */
     public UcAccessKey accessKeyStatus(String accessKeyStatus) {
         this.accessKeyStatus = accessKeyStatus;
         return this;
     }
 
+
     /**
      * set Access Key
      *
-     * @param accessKey
+     * @param accessKey Access Key
+     * @return UcAccessKey
      */
     public UcAccessKey accessKey(String accessKey) {
         this.accessKey = accessKey;

@@ -69,6 +69,7 @@ public class UpdateApiRequest extends JdcloudRequest implements java.io.Serializ
     private String apiId;
 
 
+
     /**
      * get api
      *
@@ -86,6 +87,7 @@ public class UpdateApiRequest extends JdcloudRequest implements java.io.Serializ
     public void setApi(CreateApi api) {
         this.api = api;
     }
+
 
     /**
      * get 地域ID
@@ -105,6 +107,7 @@ public class UpdateApiRequest extends JdcloudRequest implements java.io.Serializ
         this.regionId = regionId;
     }
 
+
     /**
      * get 分组ID
      *
@@ -123,6 +126,7 @@ public class UpdateApiRequest extends JdcloudRequest implements java.io.Serializ
         this.apiGroupId = apiGroupId;
     }
 
+
     /**
      * get 版本号
      *
@@ -140,6 +144,7 @@ public class UpdateApiRequest extends JdcloudRequest implements java.io.Serializ
     public void setRevision(String revision) {
         this.revision = revision;
     }
+
 
     /**
      * get 接口ID
@@ -160,50 +165,60 @@ public class UpdateApiRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set api
      *
-     * @param api
+     * @param api api
+     * @return UpdateApiRequest
      */
     public UpdateApiRequest api(CreateApi api) {
         this.api = api;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UpdateApiRequest
      */
     public UpdateApiRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return UpdateApiRequest
      */
     public UpdateApiRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 版本号
      *
-     * @param revision
+     * @param revision 版本号
+     * @return UpdateApiRequest
      */
     public UpdateApiRequest revision(String revision) {
         this.revision = revision;
         return this;
     }
 
+
     /**
      * set 接口ID
      *
-     * @param apiId
+     * @param apiId 接口ID
+     * @return UpdateApiRequest
      */
     public UpdateApiRequest apiId(String apiId) {
         this.apiId = apiId;

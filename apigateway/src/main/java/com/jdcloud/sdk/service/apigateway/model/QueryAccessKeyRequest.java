@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API调用者密钥
+ * API-Gateway-Access-Key
  * 关于API调用者密钥操作的相关接口
  *
  * OpenAPI spec version: v1
@@ -49,6 +49,7 @@ public class QueryAccessKeyRequest extends JdcloudRequest implements java.io.Ser
     private String accessKeyId;
 
 
+
     /**
      * get 地域ID
      *
@@ -66,6 +67,7 @@ public class QueryAccessKeyRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get access key id
@@ -86,20 +88,24 @@ public class QueryAccessKeyRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QueryAccessKeyRequest
      */
     public QueryAccessKeyRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set access key id
      *
-     * @param accessKeyId
+     * @param accessKeyId access key id
+     * @return QueryAccessKeyRequest
      */
     public QueryAccessKeyRequest accessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;

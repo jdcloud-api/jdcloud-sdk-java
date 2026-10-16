@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API分组
+ * API-Group
  * 提供API分组的创建、查询、删除、修改等功能。
  *
  * OpenAPI spec version: v1
@@ -49,6 +49,7 @@ public class DeleteApiGroupRequest extends JdcloudRequest implements java.io.Ser
     private String apiGroupId;
 
 
+
     /**
      * get 地域ID
      *
@@ -66,6 +67,7 @@ public class DeleteApiGroupRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 分组ID
@@ -86,20 +88,24 @@ public class DeleteApiGroupRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DeleteApiGroupRequest
      */
     public DeleteApiGroupRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return DeleteApiGroupRequest
      */
     public DeleteApiGroupRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;

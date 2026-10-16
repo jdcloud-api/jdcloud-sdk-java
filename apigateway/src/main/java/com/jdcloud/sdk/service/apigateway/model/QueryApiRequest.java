@@ -41,8 +41,8 @@ public class QueryApiRequest extends JdcloudRequest implements java.io.Serializa
      * isApiProduct - 是否API产品，精确匹配，1为是
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
@@ -72,25 +72,27 @@ public class QueryApiRequest extends JdcloudRequest implements java.io.Serializa
     private String apiId;
 
 
-    /**
-     * get isApiProduct - 是否API产品，精确匹配，1为是
 
-     *
-     * @return
-     */
+    /**
+    * get isApiProduct - 是否API产品，精确匹配，1为是
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set isApiProduct - 是否API产品，精确匹配，1为是
+    * set isApiProduct - 是否API产品，精确匹配，1为是
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -110,6 +112,7 @@ public class QueryApiRequest extends JdcloudRequest implements java.io.Serializa
         this.regionId = regionId;
     }
 
+
     /**
      * get 分组ID
      *
@@ -128,6 +131,7 @@ public class QueryApiRequest extends JdcloudRequest implements java.io.Serializa
         this.apiGroupId = apiGroupId;
     }
 
+
     /**
      * get 版本号
      *
@@ -145,6 +149,7 @@ public class QueryApiRequest extends JdcloudRequest implements java.io.Serializa
     public void setRevision(String revision) {
         this.revision = revision;
     }
+
 
     /**
      * get 接口ID
@@ -165,56 +170,68 @@ public class QueryApiRequest extends JdcloudRequest implements java.io.Serializa
     }
 
 
-    /**
-     * set isApiProduct - 是否API产品，精确匹配，1为是
 
-     *
-     * @param filters
-     */
+    /**
+    * set isApiProduct - 是否API产品，精确匹配，1为是
+
+    *
+    * @param filters isApiProduct - 是否API产品，精确匹配，1为是
+
+    * @return QueryApiRequest
+    */
     public QueryApiRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QueryApiRequest
      */
     public QueryApiRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return QueryApiRequest
      */
     public QueryApiRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 版本号
      *
-     * @param revision
+     * @param revision 版本号
+     * @return QueryApiRequest
      */
     public QueryApiRequest revision(String revision) {
         this.revision = revision;
         return this;
     }
 
+
     /**
      * set 接口ID
      *
-     * @param apiId
+     * @param apiId 接口ID
+     * @return QueryApiRequest
      */
     public QueryApiRequest apiId(String apiId) {
         this.apiId = apiId;
         return this;
     }
+
 
 
     /**
@@ -229,5 +246,4 @@ public class QueryApiRequest extends JdcloudRequest implements java.io.Serializa
         }
         this.filters.add(filter);
     }
-
 }

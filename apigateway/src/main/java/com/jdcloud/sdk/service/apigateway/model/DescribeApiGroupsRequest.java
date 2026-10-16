@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API分组
+ * API-Group
  * 提供API分组的创建、查询、删除、修改等功能。
  *
  * OpenAPI spec version: v1
@@ -56,19 +56,20 @@ domain - 域名，模糊匹配
 jdsfId - 微服务网关ID，精确匹配
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 标签查询条件
      */
+    
     private List<TagFilter> tagFilters;
-
     /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -89,6 +90,7 @@ jdsfId - 微服务网关ID，精确匹配
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
      *
@@ -107,51 +109,54 @@ jdsfId - 微服务网关ID，精确匹配
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get groupName - 分组名称，模糊匹配，支持单个
+    * get groupName - 分组名称，模糊匹配，支持单个
 description - 描述信息，模糊匹配，支持单个
 groupId - 分组ID，精确匹配
 domain - 域名，模糊匹配
 jdsfId - 微服务网关ID，精确匹配
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set groupName - 分组名称，模糊匹配，支持单个
+    * set groupName - 分组名称，模糊匹配，支持单个
 description - 描述信息，模糊匹配，支持单个
 groupId - 分组ID，精确匹配
 domain - 域名，模糊匹配
 jdsfId - 微服务网关ID，精确匹配
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
+
     /**
-     * get 标签查询条件
-     *
-     * @return
-     */
+    * get 标签查询条件
+    *
+    * @return
+    */
     public List<TagFilter> getTagFilters() {
         return tagFilters;
     }
 
     /**
-     * set 标签查询条件
-     *
-     * @param tagFilters
-     */
+    * set 标签查询条件
+    *
+    * @param tagFilters
+    */
     public void setTagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
     }
+
 
     /**
      * get 地域ID
@@ -172,60 +177,76 @@ jdsfId - 微服务网关ID，精确匹配
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
-     * @param pageNumber
+     * @param pageNumber 页码, 默认为1, 取值范围：[1,∞)
+     * @return DescribeApiGroupsRequest
      */
     public DescribeApiGroupsRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认为20，取值范围：[10,100]
+     * @return DescribeApiGroupsRequest
      */
     public DescribeApiGroupsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
+
     /**
-     * set groupName - 分组名称，模糊匹配，支持单个
+    * set groupName - 分组名称，模糊匹配，支持单个
 description - 描述信息，模糊匹配，支持单个
 groupId - 分组ID，精确匹配
 domain - 域名，模糊匹配
 jdsfId - 微服务网关ID，精确匹配
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters groupName - 分组名称，模糊匹配，支持单个
+description - 描述信息，模糊匹配，支持单个
+groupId - 分组ID，精确匹配
+domain - 域名，模糊匹配
+jdsfId - 微服务网关ID，精确匹配
+
+    * @return DescribeApiGroupsRequest
+    */
     public DescribeApiGroupsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
-     * set 标签查询条件
-     *
-     * @param tagFilters
-     */
+    * set 标签查询条件
+    *
+    * @param tagFilters 标签查询条件
+    * @return DescribeApiGroupsRequest
+    */
     public DescribeApiGroupsRequest tagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DescribeApiGroupsRequest
      */
     public DescribeApiGroupsRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -256,5 +277,4 @@ jdsfId - 微服务网关ID，精确匹配
         }
         this.tagFilters.add(tagFilter);
     }
-
 }

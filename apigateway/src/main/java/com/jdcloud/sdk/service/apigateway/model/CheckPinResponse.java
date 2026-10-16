@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 用户信息
+ * The-User-Information
  * 关于用户信息
  *
  * OpenAPI spec version: v1

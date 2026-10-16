@@ -56,8 +56,8 @@ description - 描述，模糊匹配，支持单个
 isApiProduct - 是否API产品，精确匹配，1为是
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域ID
      * Required:true
@@ -80,6 +80,7 @@ isApiProduct - 是否API产品，精确匹配，1为是
     private String revision;
 
 
+
     /**
      * get 页码, 默认为1, 取值范围：[1,∞)
      *
@@ -97,6 +98,7 @@ isApiProduct - 是否API产品，精确匹配，1为是
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小，默认为20，取值范围：[10,100]
@@ -116,35 +118,37 @@ isApiProduct - 是否API产品，精确匹配，1为是
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get apiName - API名称，模糊匹配，支持单个
+    * get apiName - API名称，模糊匹配，支持单个
 action - 动作，精确匹配，支持多个
 backServiceType- 后端服务类型，精确匹配，支持多个
 path - 路径，模糊匹配，支持单个
 description - 描述，模糊匹配，支持单个
 isApiProduct - 是否API产品，精确匹配，1为是
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set apiName - API名称，模糊匹配，支持单个
+    * set apiName - API名称，模糊匹配，支持单个
 action - 动作，精确匹配，支持多个
 backServiceType- 后端服务类型，精确匹配，支持多个
 path - 路径，模糊匹配，支持单个
 description - 描述，模糊匹配，支持单个
 isApiProduct - 是否API产品，精确匹配，1为是
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域ID
@@ -164,6 +168,7 @@ isApiProduct - 是否API产品，精确匹配，1为是
         this.regionId = regionId;
     }
 
+
     /**
      * get 分组ID
      *
@@ -181,6 +186,7 @@ isApiProduct - 是否API产品，精确匹配，1为是
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 版本号
@@ -201,71 +207,90 @@ isApiProduct - 是否API产品，精确匹配，1为是
     }
 
 
+
     /**
      * set 页码, 默认为1, 取值范围：[1,∞)
      *
-     * @param pageNumber
+     * @param pageNumber 页码, 默认为1, 取值范围：[1,∞)
+     * @return QueryApisRequest
      */
     public QueryApisRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
+
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认为20，取值范围：[10,100]
+     * @return QueryApisRequest
      */
     public QueryApisRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
+
     /**
-     * set apiName - API名称，模糊匹配，支持单个
+    * set apiName - API名称，模糊匹配，支持单个
 action - 动作，精确匹配，支持多个
 backServiceType- 后端服务类型，精确匹配，支持多个
 path - 路径，模糊匹配，支持单个
 description - 描述，模糊匹配，支持单个
 isApiProduct - 是否API产品，精确匹配，1为是
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters apiName - API名称，模糊匹配，支持单个
+action - 动作，精确匹配，支持多个
+backServiceType- 后端服务类型，精确匹配，支持多个
+path - 路径，模糊匹配，支持单个
+description - 描述，模糊匹配，支持单个
+isApiProduct - 是否API产品，精确匹配，1为是
+
+    * @return QueryApisRequest
+    */
     public QueryApisRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return QueryApisRequest
      */
     public QueryApisRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return QueryApisRequest
      */
     public QueryApisRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 版本号
      *
-     * @param revision
+     * @param revision 版本号
+     * @return QueryApisRequest
      */
     public QueryApisRequest revision(String revision) {
         this.revision = revision;
         return this;
     }
+
 
 
     /**
@@ -285,5 +310,4 @@ isApiProduct - 是否API产品，精确匹配，1为是
         }
         this.filters.add(filter);
     }
-
 }

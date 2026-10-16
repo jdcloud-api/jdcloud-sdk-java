@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 访问授权
+ * Access-Authorization
  * 关于访问授权管理和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -39,37 +39,41 @@ public class AuthorizedApiGroupListResult extends JdcloudResult implements java.
     /**
      * apiGroups
      */
+    
     private List<UserBindedGroups> apiGroups;
 
 
     /**
-     * get apiGroups
-     *
-     * @return
-     */
+    * get apiGroups
+    *
+    * @return
+    */
     public List<UserBindedGroups> getApiGroups() {
         return apiGroups;
     }
 
     /**
-     * set apiGroups
-     *
-     * @param apiGroups
-     */
+    * set apiGroups
+    *
+    * @param apiGroups
+    */
     public void setApiGroups(List<UserBindedGroups> apiGroups) {
         this.apiGroups = apiGroups;
     }
 
 
+
     /**
-     * set apiGroups
-     *
-     * @param apiGroups
-     */
+    * set apiGroups
+    *
+    * @param apiGroups 
+    * @return AuthorizedApiGroupListResult
+    */
     public AuthorizedApiGroupListResult apiGroups(List<UserBindedGroups> apiGroups) {
         this.apiGroups = apiGroups;
         return this;
     }
+
 
 
     /**
@@ -83,5 +87,4 @@ public class AuthorizedApiGroupListResult extends JdcloudResult implements java.
         }
         this.apiGroups.add(apiGroup);
     }
-
 }

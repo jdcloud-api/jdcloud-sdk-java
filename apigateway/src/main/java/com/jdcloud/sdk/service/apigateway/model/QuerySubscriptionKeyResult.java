@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 订阅密钥
+ * Subscription-key
  * 订阅密钥相关接口
  *
  * OpenAPI spec version: v1
@@ -40,6 +40,7 @@ public class QuerySubscriptionKeyResult extends JdcloudResult implements java.io
     private SubscriptionKey subscriptionKey;
 
 
+
     /**
      * get subscriptionKey
      *
@@ -59,10 +60,12 @@ public class QuerySubscriptionKeyResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
      * set subscriptionKey
      *
-     * @param subscriptionKey
+     * @param subscriptionKey 
+     * @return QuerySubscriptionKeyResult
      */
     public QuerySubscriptionKeyResult subscriptionKey(SubscriptionKey subscriptionKey) {
         this.subscriptionKey = subscriptionKey;

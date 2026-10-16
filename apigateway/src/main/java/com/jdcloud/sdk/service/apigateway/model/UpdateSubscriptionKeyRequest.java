@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 订阅密钥
+ * Subscription-key
  * 订阅密钥相关接口
  *
  * OpenAPI spec version: v1
@@ -59,6 +59,7 @@ public class UpdateSubscriptionKeyRequest extends JdcloudRequest implements java
     private String subscriptionKeyId;
 
 
+
     /**
      * get 描述
      *
@@ -76,6 +77,7 @@ public class UpdateSubscriptionKeyRequest extends JdcloudRequest implements java
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 密钥名称
@@ -95,6 +97,7 @@ public class UpdateSubscriptionKeyRequest extends JdcloudRequest implements java
         this.name = name;
     }
 
+
     /**
      * get 地域ID
      *
@@ -112,6 +115,7 @@ public class UpdateSubscriptionKeyRequest extends JdcloudRequest implements java
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get subscription key id
@@ -132,40 +136,48 @@ public class UpdateSubscriptionKeyRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return UpdateSubscriptionKeyRequest
      */
     public UpdateSubscriptionKeyRequest description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 密钥名称
      *
-     * @param name
+     * @param name 密钥名称
+     * @return UpdateSubscriptionKeyRequest
      */
     public UpdateSubscriptionKeyRequest name(String name) {
         this.name = name;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UpdateSubscriptionKeyRequest
      */
     public UpdateSubscriptionKeyRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set subscription key id
      *
-     * @param subscriptionKeyId
+     * @param subscriptionKeyId subscription key id
+     * @return UpdateSubscriptionKeyRequest
      */
     public UpdateSubscriptionKeyRequest subscriptionKeyId(String subscriptionKeyId) {
         this.subscriptionKeyId = subscriptionKeyId;

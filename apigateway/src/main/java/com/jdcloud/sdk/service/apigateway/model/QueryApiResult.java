@@ -40,6 +40,7 @@ public class QueryApiResult extends JdcloudResult implements java.io.Serializabl
     private Api api;
 
 
+
     /**
      * get api
      *
@@ -59,10 +60,12 @@ public class QueryApiResult extends JdcloudResult implements java.io.Serializabl
     }
 
 
+
     /**
      * set api
      *
-     * @param api
+     * @param api 
+     * @return QueryApiResult
      */
     public QueryApiResult api(Api api) {
         this.api = api;

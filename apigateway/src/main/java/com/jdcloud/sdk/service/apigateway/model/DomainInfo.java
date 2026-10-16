@@ -68,6 +68,7 @@ public class DomainInfo  implements java.io.Serializable {
     private String status;
 
 
+
     /**
      * get api分组id
      *
@@ -85,6 +86,7 @@ public class DomainInfo  implements java.io.Serializable {
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 域名id
@@ -104,6 +106,7 @@ public class DomainInfo  implements java.io.Serializable {
         this.domainId = domainId;
     }
 
+
     /**
      * get 域名
      *
@@ -121,6 +124,7 @@ public class DomainInfo  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 解析的cname
@@ -140,6 +144,7 @@ public class DomainInfo  implements java.io.Serializable {
         this.cname = cname;
     }
 
+
     /**
      * get 域名使用的协议
      *
@@ -158,6 +163,7 @@ public class DomainInfo  implements java.io.Serializable {
         this.protocol = protocol;
     }
 
+
     /**
      * get 域名创建时间
      *
@@ -175,6 +181,7 @@ public class DomainInfo  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 域名状态
@@ -195,70 +202,84 @@ public class DomainInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set api分组id
      *
-     * @param apiGroupId
+     * @param apiGroupId api分组id
+     * @return DomainInfo
      */
     public DomainInfo apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 域名id
      *
-     * @param domainId
+     * @param domainId 域名id
+     * @return DomainInfo
      */
     public DomainInfo domainId(String domainId) {
         this.domainId = domainId;
         return this;
     }
 
+
     /**
      * set 域名
      *
-     * @param domain
+     * @param domain 域名
+     * @return DomainInfo
      */
     public DomainInfo domain(String domain) {
         this.domain = domain;
         return this;
     }
 
+
     /**
      * set 解析的cname
      *
-     * @param cname
+     * @param cname 解析的cname
+     * @return DomainInfo
      */
     public DomainInfo cname(String cname) {
         this.cname = cname;
         return this;
     }
 
+
     /**
      * set 域名使用的协议
      *
-     * @param protocol
+     * @param protocol 域名使用的协议
+     * @return DomainInfo
      */
     public DomainInfo protocol(String protocol) {
         this.protocol = protocol;
         return this;
     }
 
+
     /**
      * set 域名创建时间
      *
-     * @param createTime
+     * @param createTime 域名创建时间
+     * @return DomainInfo
      */
     public DomainInfo createTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
 
+
     /**
      * set 域名状态
      *
-     * @param status
+     * @param status 域名状态
+     * @return DomainInfo
      */
     public DomainInfo status(String status) {
         this.status = status;

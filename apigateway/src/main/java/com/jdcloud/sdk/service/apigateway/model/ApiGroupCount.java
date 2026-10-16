@@ -43,6 +43,7 @@ public class ApiGroupCount  implements java.io.Serializable {
     private Integer count;
 
 
+
     /**
      * get 网关ID
      *
@@ -60,6 +61,7 @@ public class ApiGroupCount  implements java.io.Serializable {
     public void setGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
     }
+
 
     /**
      * get 分组数量
@@ -80,20 +82,24 @@ public class ApiGroupCount  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 网关ID
      *
-     * @param gatewayId
+     * @param gatewayId 网关ID
+     * @return ApiGroupCount
      */
     public ApiGroupCount gatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
     }
 
+
     /**
      * set 分组数量
      *
-     * @param count
+     * @param count 分组数量
+     * @return ApiGroupCount
      */
     public ApiGroupCount count(Integer count) {
         this.count = count;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * kms
+ * Key-Manager-Service
  * key manager service
  *
  * OpenAPI spec version: v1
@@ -40,6 +40,7 @@ public class ResetKeyResult extends JdcloudResult implements java.io.Serializabl
     private KeyInfo keyInfo;
 
 
+
     /**
      * get keyInfo
      *
@@ -59,10 +60,12 @@ public class ResetKeyResult extends JdcloudResult implements java.io.Serializabl
     }
 
 
+
     /**
      * set keyInfo
      *
-     * @param keyInfo
+     * @param keyInfo 
+     * @return ResetKeyResult
      */
     public ResetKeyResult keyInfo(KeyInfo keyInfo) {
         this.keyInfo = keyInfo;

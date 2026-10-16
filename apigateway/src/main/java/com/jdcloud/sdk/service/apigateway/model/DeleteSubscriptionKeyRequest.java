@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 订阅密钥
+ * Subscription-key
  * 订阅密钥相关接口
  *
  * OpenAPI spec version: v1
@@ -49,6 +49,7 @@ public class DeleteSubscriptionKeyRequest extends JdcloudRequest implements java
     private String subscriptionKeyId;
 
 
+
     /**
      * get 地域ID
      *
@@ -66,6 +67,7 @@ public class DeleteSubscriptionKeyRequest extends JdcloudRequest implements java
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get subscription key id
@@ -86,20 +88,24 @@ public class DeleteSubscriptionKeyRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DeleteSubscriptionKeyRequest
      */
     public DeleteSubscriptionKeyRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set subscription key id
      *
-     * @param subscriptionKeyId
+     * @param subscriptionKeyId subscription key id
+     * @return DeleteSubscriptionKeyRequest
      */
     public DeleteSubscriptionKeyRequest subscriptionKeyId(String subscriptionKeyId) {
         this.subscriptionKeyId = subscriptionKeyId;

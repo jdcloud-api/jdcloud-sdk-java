@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 流控策略
+ * Rate-Limit-Policy
  * 关于流控策略配置和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -56,6 +56,7 @@ public class BindGroupPolicyRequest extends JdcloudRequest implements java.io.Se
     private String policyId;
 
 
+
     /**
      * get 待绑定的部署ids逗号隔开
      *
@@ -74,6 +75,7 @@ public class BindGroupPolicyRequest extends JdcloudRequest implements java.io.Se
         this.deploymentIds = deploymentIds;
     }
 
+
     /**
      * get 地域ID
      *
@@ -91,6 +93,7 @@ public class BindGroupPolicyRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 限流策略ID
@@ -111,30 +114,36 @@ public class BindGroupPolicyRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 待绑定的部署ids逗号隔开
      *
-     * @param deploymentIds
+     * @param deploymentIds 待绑定的部署ids逗号隔开
+     * @return BindGroupPolicyRequest
      */
     public BindGroupPolicyRequest deploymentIds(String deploymentIds) {
         this.deploymentIds = deploymentIds;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return BindGroupPolicyRequest
      */
     public BindGroupPolicyRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 限流策略ID
      *
-     * @param policyId
+     * @param policyId 限流策略ID
+     * @return BindGroupPolicyRequest
      */
     public BindGroupPolicyRequest policyId(String policyId) {
         this.policyId = policyId;

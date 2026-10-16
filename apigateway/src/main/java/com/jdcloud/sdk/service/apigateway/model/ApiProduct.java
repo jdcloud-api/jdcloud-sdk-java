@@ -78,6 +78,7 @@ public class ApiProduct  implements java.io.Serializable {
     private Long buyDate;
 
 
+
     /**
      * get 分组ID
      *
@@ -95,6 +96,7 @@ public class ApiProduct  implements java.io.Serializable {
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 名称
@@ -114,6 +116,7 @@ public class ApiProduct  implements java.io.Serializable {
         this.groupName = groupName;
     }
 
+
     /**
      * get 描述
      *
@@ -131,6 +134,7 @@ public class ApiProduct  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 版本号
@@ -150,6 +154,7 @@ public class ApiProduct  implements java.io.Serializable {
         this.version = version;
     }
 
+
     /**
      * get 区域
      *
@@ -167,6 +172,7 @@ public class ApiProduct  implements java.io.Serializable {
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 计价方式
@@ -186,6 +192,7 @@ public class ApiProduct  implements java.io.Serializable {
         this.price = price;
     }
 
+
     /**
      * get 发布日期，格式为毫秒级时间戳
      *
@@ -204,6 +211,7 @@ public class ApiProduct  implements java.io.Serializable {
         this.deploymentDate = deploymentDate;
     }
 
+
     /**
      * get 购买状态，1已购买，0未购买
      *
@@ -221,6 +229,7 @@ public class ApiProduct  implements java.io.Serializable {
     public void setIsBuyed(Integer isBuyed) {
         this.isBuyed = isBuyed;
     }
+
 
     /**
      * get 发布日期，格式为毫秒级时间戳
@@ -241,90 +250,108 @@ public class ApiProduct  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return ApiProduct
      */
     public ApiProduct apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 名称
      *
-     * @param groupName
+     * @param groupName 名称
+     * @return ApiProduct
      */
     public ApiProduct groupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return ApiProduct
      */
     public ApiProduct description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 版本号
      *
-     * @param version
+     * @param version 版本号
+     * @return ApiProduct
      */
     public ApiProduct version(String version) {
         this.version = version;
         return this;
     }
 
+
     /**
      * set 区域
      *
-     * @param regionId
+     * @param regionId 区域
+     * @return ApiProduct
      */
     public ApiProduct regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 计价方式
      *
-     * @param price
+     * @param price 计价方式
+     * @return ApiProduct
      */
     public ApiProduct price(String price) {
         this.price = price;
         return this;
     }
 
+
     /**
      * set 发布日期，格式为毫秒级时间戳
      *
-     * @param deploymentDate
+     * @param deploymentDate 发布日期，格式为毫秒级时间戳
+     * @return ApiProduct
      */
     public ApiProduct deploymentDate(Long deploymentDate) {
         this.deploymentDate = deploymentDate;
         return this;
     }
 
+
     /**
      * set 购买状态，1已购买，0未购买
      *
-     * @param isBuyed
+     * @param isBuyed 购买状态，1已购买，0未购买
+     * @return ApiProduct
      */
     public ApiProduct isBuyed(Integer isBuyed) {
         this.isBuyed = isBuyed;
         return this;
     }
 
+
     /**
      * set 发布日期，格式为毫秒级时间戳
      *
-     * @param buyDate
+     * @param buyDate 发布日期，格式为毫秒级时间戳
+     * @return ApiProduct
      */
     public ApiProduct buyDate(Long buyDate) {
         this.buyDate = buyDate;

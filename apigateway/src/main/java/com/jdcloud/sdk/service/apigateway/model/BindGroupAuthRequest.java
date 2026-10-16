@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 访问授权
+ * Access-Authorization
  * 关于访问授权管理和查看的相关接口
  *
  * OpenAPI spec version: v1
@@ -56,6 +56,7 @@ public class BindGroupAuthRequest extends JdcloudRequest implements java.io.Seri
     private String accessAuthId;
 
 
+
     /**
      * get 待绑定的部署ids逗号隔开
      *
@@ -74,6 +75,7 @@ public class BindGroupAuthRequest extends JdcloudRequest implements java.io.Seri
         this.deploymentIds = deploymentIds;
     }
 
+
     /**
      * get 地域ID
      *
@@ -91,6 +93,7 @@ public class BindGroupAuthRequest extends JdcloudRequest implements java.io.Seri
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 访问授权ID
@@ -111,30 +114,36 @@ public class BindGroupAuthRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 待绑定的部署ids逗号隔开
      *
-     * @param deploymentIds
+     * @param deploymentIds 待绑定的部署ids逗号隔开
+     * @return BindGroupAuthRequest
      */
     public BindGroupAuthRequest deploymentIds(String deploymentIds) {
         this.deploymentIds = deploymentIds;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return BindGroupAuthRequest
      */
     public BindGroupAuthRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 访问授权ID
      *
-     * @param accessAuthId
+     * @param accessAuthId 访问授权ID
+     * @return BindGroupAuthRequest
      */
     public BindGroupAuthRequest accessAuthId(String accessAuthId) {
         this.accessAuthId = accessAuthId;

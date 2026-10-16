@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 后端配置
+ * Backend-Configuration
  * 后端配置
  *
  * OpenAPI spec version: v1
@@ -64,13 +64,13 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
     /**
      * header参数列表
      */
+    
     private List<SimpleParameter> headerParams;
-
     /**
      * query参数列表
      */
+    
     private List<SimpleParameter> queryParams;
-
     /**
      * 描述
      */
@@ -135,6 +135,7 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
     private String backendConfigId;
 
 
+
     /**
      * get 分组ID
      *
@@ -152,6 +153,7 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
     public void setBaseGroupId(String baseGroupId) {
         this.baseGroupId = baseGroupId;
     }
+
 
     /**
      * get 环境：test、preview、online
@@ -171,6 +173,7 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
         this.environment = environment;
     }
 
+
     /**
      * get 后端地址
      *
@@ -188,6 +191,7 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
     public void setBackendUrl(String backendUrl) {
         this.backendUrl = backendUrl;
     }
+
 
     /**
      * get 后端服务类型：mock、HTTP/HTTPS
@@ -207,41 +211,44 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
         this.backendServiceType = backendServiceType;
     }
 
+
     /**
-     * get header参数列表
-     *
-     * @return
-     */
+    * get header参数列表
+    *
+    * @return
+    */
     public List<SimpleParameter> getHeaderParams() {
         return headerParams;
     }
 
     /**
-     * set header参数列表
-     *
-     * @param headerParams
-     */
+    * set header参数列表
+    *
+    * @param headerParams
+    */
     public void setHeaderParams(List<SimpleParameter> headerParams) {
         this.headerParams = headerParams;
     }
 
+
     /**
-     * get query参数列表
-     *
-     * @return
-     */
+    * get query参数列表
+    *
+    * @return
+    */
     public List<SimpleParameter> getQueryParams() {
         return queryParams;
     }
 
     /**
-     * set query参数列表
-     *
-     * @param queryParams
-     */
+    * set query参数列表
+    *
+    * @param queryParams
+    */
     public void setQueryParams(List<SimpleParameter> queryParams) {
         this.queryParams = queryParams;
     }
+
 
     /**
      * get 描述
@@ -261,6 +268,7 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
         this.description = description;
     }
 
+
     /**
      * get 发布日期，格式为毫秒级时间戳
      *
@@ -278,6 +286,7 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
     public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 排序，赋值0时为默认的后端配置
@@ -297,6 +306,7 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
         this.sort = sort;
     }
 
+
     /**
      * get 排序，用于展示使用
      *
@@ -314,6 +324,7 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
     public void setUserSort(Integer userSort) {
         this.userSort = userSort;
     }
+
 
     /**
      * get vpc网关id
@@ -333,6 +344,7 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
         this.jdsfId = jdsfId;
     }
 
+
     /**
      * get vpc后端地址
      *
@@ -350,6 +362,7 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
     public void setJdsfParam(String jdsfParam) {
         this.jdsfParam = jdsfParam;
     }
+
 
     /**
      * get vpc网关所属region
@@ -369,6 +382,7 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
         this.jdsfRegion = jdsfRegion;
     }
 
+
     /**
      * get vpc网关创建者的pin
      *
@@ -386,6 +400,7 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
     public void setJdsfPin(String jdsfPin) {
         this.jdsfPin = jdsfPin;
     }
+
 
     /**
      * get 地域ID
@@ -405,6 +420,7 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
     }
 
+
     /**
      * get 分组ID
      *
@@ -422,6 +438,7 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get backendConfigId
@@ -442,175 +459,210 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 分组ID
      *
-     * @param baseGroupId
+     * @param baseGroupId 分组ID
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest baseGroupId(String baseGroupId) {
         this.baseGroupId = baseGroupId;
         return this;
     }
 
+
     /**
      * set 环境：test、preview、online
      *
-     * @param environment
+     * @param environment 环境：test、preview、online
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest environment(String environment) {
         this.environment = environment;
         return this;
     }
 
+
     /**
      * set 后端地址
      *
-     * @param backendUrl
+     * @param backendUrl 后端地址
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest backendUrl(String backendUrl) {
         this.backendUrl = backendUrl;
         return this;
     }
 
+
     /**
      * set 后端服务类型：mock、HTTP/HTTPS
      *
-     * @param backendServiceType
+     * @param backendServiceType 后端服务类型：mock、HTTP/HTTPS
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest backendServiceType(String backendServiceType) {
         this.backendServiceType = backendServiceType;
         return this;
     }
 
+
     /**
-     * set header参数列表
-     *
-     * @param headerParams
-     */
+    * set header参数列表
+    *
+    * @param headerParams header参数列表
+    * @return UpdateBackendConfigRequest
+    */
     public UpdateBackendConfigRequest headerParams(List<SimpleParameter> headerParams) {
         this.headerParams = headerParams;
         return this;
     }
 
+
     /**
-     * set query参数列表
-     *
-     * @param queryParams
-     */
+    * set query参数列表
+    *
+    * @param queryParams query参数列表
+    * @return UpdateBackendConfigRequest
+    */
     public UpdateBackendConfigRequest queryParams(List<SimpleParameter> queryParams) {
         this.queryParams = queryParams;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 发布日期，格式为毫秒级时间戳
      *
-     * @param createTime
+     * @param createTime 发布日期，格式为毫秒级时间戳
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest createTime(Long createTime) {
         this.createTime = createTime;
         return this;
     }
 
+
     /**
      * set 排序，赋值0时为默认的后端配置
      *
-     * @param sort
+     * @param sort 排序，赋值0时为默认的后端配置
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest sort(Integer sort) {
         this.sort = sort;
         return this;
     }
 
+
     /**
      * set 排序，用于展示使用
      *
-     * @param userSort
+     * @param userSort 排序，用于展示使用
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest userSort(Integer userSort) {
         this.userSort = userSort;
         return this;
     }
 
+
     /**
      * set vpc网关id
      *
-     * @param jdsfId
+     * @param jdsfId vpc网关id
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest jdsfId(String jdsfId) {
         this.jdsfId = jdsfId;
         return this;
     }
 
+
     /**
      * set vpc后端地址
      *
-     * @param jdsfParam
+     * @param jdsfParam vpc后端地址
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest jdsfParam(String jdsfParam) {
         this.jdsfParam = jdsfParam;
         return this;
     }
 
+
     /**
      * set vpc网关所属region
      *
-     * @param jdsfRegion
+     * @param jdsfRegion vpc网关所属region
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest jdsfRegion(String jdsfRegion) {
         this.jdsfRegion = jdsfRegion;
         return this;
     }
 
+
     /**
      * set vpc网关创建者的pin
      *
-     * @param jdsfPin
+     * @param jdsfPin vpc网关创建者的pin
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest jdsfPin(String jdsfPin) {
         this.jdsfPin = jdsfPin;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set backendConfigId
      *
-     * @param backendConfigId
+     * @param backendConfigId backendConfigId
+     * @return UpdateBackendConfigRequest
      */
     public UpdateBackendConfigRequest backendConfigId(String backendConfigId) {
         this.backendConfigId = backendConfigId;
         return this;
     }
+
 
 
     /**
@@ -636,5 +688,4 @@ public class UpdateBackendConfigRequest extends JdcloudRequest implements java.i
         }
         this.queryParams.add(queryParam);
     }
-
 }

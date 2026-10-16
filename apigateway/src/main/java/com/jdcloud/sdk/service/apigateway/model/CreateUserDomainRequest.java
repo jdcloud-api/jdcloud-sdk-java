@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 自定义域名
+ * Customized-Domain-Name
  * api 自定义域名 service
  *
  * OpenAPI spec version: v1
@@ -61,6 +61,7 @@ public class CreateUserDomainRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
      * get 域名
      *
@@ -78,6 +79,7 @@ public class CreateUserDomainRequest extends JdcloudRequest implements java.io.S
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 协议
@@ -97,6 +99,7 @@ public class CreateUserDomainRequest extends JdcloudRequest implements java.io.S
         this.protocol = protocol;
     }
 
+
     /**
      * get api分组id
      *
@@ -114,6 +117,7 @@ public class CreateUserDomainRequest extends JdcloudRequest implements java.io.S
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 地域ID
@@ -134,40 +138,48 @@ public class CreateUserDomainRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 域名
      *
-     * @param domain
+     * @param domain 域名
+     * @return CreateUserDomainRequest
      */
     public CreateUserDomainRequest domain(String domain) {
         this.domain = domain;
         return this;
     }
 
+
     /**
      * set 协议
      *
-     * @param protocol
+     * @param protocol 协议
+     * @return CreateUserDomainRequest
      */
     public CreateUserDomainRequest protocol(String protocol) {
         this.protocol = protocol;
         return this;
     }
 
+
     /**
      * set api分组id
      *
-     * @param apiGroupId
+     * @param apiGroupId api分组id
+     * @return CreateUserDomainRequest
      */
     public CreateUserDomainRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CreateUserDomainRequest
      */
     public CreateUserDomainRequest regionId(String regionId) {
         this.regionId = regionId;

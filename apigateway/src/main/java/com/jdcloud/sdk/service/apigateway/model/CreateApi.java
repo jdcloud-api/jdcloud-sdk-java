@@ -78,8 +78,8 @@ public class CreateApi  implements java.io.Serializable {
     /**
      * 请求参数列表
      */
+    
     private List<Parameter> reqParams;
-
     /**
      * 请求格式
      */
@@ -160,6 +160,7 @@ public class CreateApi  implements java.io.Serializable {
     private String editableResBodyType;
 
 
+
     /**
      * get 分组ID
      *
@@ -177,6 +178,7 @@ public class CreateApi  implements java.io.Serializable {
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 名称
@@ -196,6 +198,7 @@ public class CreateApi  implements java.io.Serializable {
         this.apiName = apiName;
     }
 
+
     /**
      * get 动作
      *
@@ -213,6 +216,7 @@ public class CreateApi  implements java.io.Serializable {
     public void setAction(String action) {
         this.action = action;
     }
+
 
     /**
      * get 请求路径
@@ -232,6 +236,7 @@ public class CreateApi  implements java.io.Serializable {
         this.path = path;
     }
 
+
     /**
      * get 匹配模式：1.&quot;absolute&quot;(绝对匹配); 2.&quot;prefix&quot;（前缀匹配）;
      *
@@ -249,6 +254,7 @@ public class CreateApi  implements java.io.Serializable {
     public void setMatchType(String matchType) {
         this.matchType = matchType;
     }
+
 
     /**
      * get 描述
@@ -268,23 +274,25 @@ public class CreateApi  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
-     * get 请求参数列表
-     *
-     * @return
-     */
+    * get 请求参数列表
+    *
+    * @return
+    */
     public List<Parameter> getReqParams() {
         return reqParams;
     }
 
     /**
-     * set 请求参数列表
-     *
-     * @param reqParams
-     */
+    * set 请求参数列表
+    *
+    * @param reqParams
+    */
     public void setReqParams(List<Parameter> reqParams) {
         this.reqParams = reqParams;
     }
+
 
     /**
      * get 请求格式
@@ -304,6 +312,7 @@ public class CreateApi  implements java.io.Serializable {
         this.reqBody = reqBody;
     }
 
+
     /**
      * get 返回格式
      *
@@ -321,6 +330,7 @@ public class CreateApi  implements java.io.Serializable {
     public void setResBody(String resBody) {
         this.resBody = resBody;
     }
+
 
     /**
      * get 请求格式类型,1:application/json,2:text/xml,3:其他
@@ -340,6 +350,7 @@ public class CreateApi  implements java.io.Serializable {
         this.reqBodyType = reqBodyType;
     }
 
+
     /**
      * get 返回格式类型,1:application/json,2:text/xml,3:其他
      *
@@ -357,6 +368,7 @@ public class CreateApi  implements java.io.Serializable {
     public void setResBodyType(Integer resBodyType) {
         this.resBodyType = resBodyType;
     }
+
 
     /**
      * get api后端配置
@@ -376,6 +388,7 @@ public class CreateApi  implements java.io.Serializable {
         this.apiBackendConfig = apiBackendConfig;
     }
 
+
     /**
      * get 后端服务类型，如HTTP/HTTPS,mock,funcion等
      *
@@ -393,6 +406,7 @@ public class CreateApi  implements java.io.Serializable {
     public void setBackServiceType(String backServiceType) {
         this.backServiceType = backServiceType;
     }
+
 
     /**
      * get 后端服务地址，如后端服务地址，funtion路径等
@@ -412,6 +426,7 @@ public class CreateApi  implements java.io.Serializable {
         this.backServicePath = backServicePath;
     }
 
+
     /**
      * get 后端服务ID，如函数ID等
      *
@@ -429,6 +444,7 @@ public class CreateApi  implements java.io.Serializable {
     public void setBackServiceId(String backServiceId) {
         this.backServiceId = backServiceId;
     }
+
 
     /**
      * get 后端服务名称，如函数名称
@@ -448,6 +464,7 @@ public class CreateApi  implements java.io.Serializable {
         this.backServiceName = backServiceName;
     }
 
+
     /**
      * get 后端地址
      *
@@ -465,6 +482,7 @@ public class CreateApi  implements java.io.Serializable {
     public void setBackUrl(String backUrl) {
         this.backUrl = backUrl;
     }
+
 
     /**
      * get 后端服务配置，为true时，采用与分组统一的配置，初始创建api时请设置为True。
@@ -484,6 +502,7 @@ public class CreateApi  implements java.io.Serializable {
         this.backServiceConfig = backServiceConfig;
     }
 
+
     /**
      * get 后端服务版本，如函数版本名称
      *
@@ -501,6 +520,7 @@ public class CreateApi  implements java.io.Serializable {
     public void setBackServiceVersion(String backServiceVersion) {
         this.backServiceVersion = backServiceVersion;
     }
+
 
     /**
      * get 应用类型ID,云鼎业务线专用
@@ -520,6 +540,7 @@ public class CreateApi  implements java.io.Serializable {
         this.hufuAppTypeId = hufuAppTypeId;
     }
 
+
     /**
      * get 请求格式类型,当reqBodyType等于3时,使用该请求格式类型
      *
@@ -537,6 +558,7 @@ public class CreateApi  implements java.io.Serializable {
     public void setEditableReqBodyType(String editableReqBodyType) {
         this.editableReqBodyType = editableReqBodyType;
     }
+
 
     /**
      * get 响应格式类型,当resBodyType等于3时,使用该响应格式类型
@@ -557,225 +579,270 @@ public class CreateApi  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return CreateApi
      */
     public CreateApi apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 名称
      *
-     * @param apiName
+     * @param apiName 名称
+     * @return CreateApi
      */
     public CreateApi apiName(String apiName) {
         this.apiName = apiName;
         return this;
     }
 
+
     /**
      * set 动作
      *
-     * @param action
+     * @param action 动作
+     * @return CreateApi
      */
     public CreateApi action(String action) {
         this.action = action;
         return this;
     }
 
+
     /**
      * set 请求路径
      *
-     * @param path
+     * @param path 请求路径
+     * @return CreateApi
      */
     public CreateApi path(String path) {
         this.path = path;
         return this;
     }
 
+
     /**
      * set 匹配模式：1.&quot;absolute&quot;(绝对匹配); 2.&quot;prefix&quot;（前缀匹配）;
      *
-     * @param matchType
+     * @param matchType 匹配模式：1.&quot;absolute&quot;(绝对匹配); 2.&quot;prefix&quot;（前缀匹配）;
+     * @return CreateApi
      */
     public CreateApi matchType(String matchType) {
         this.matchType = matchType;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return CreateApi
      */
     public CreateApi description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
-     * set 请求参数列表
-     *
-     * @param reqParams
-     */
+    * set 请求参数列表
+    *
+    * @param reqParams 请求参数列表
+    * @return CreateApi
+    */
     public CreateApi reqParams(List<Parameter> reqParams) {
         this.reqParams = reqParams;
         return this;
     }
 
+
     /**
      * set 请求格式
      *
-     * @param reqBody
+     * @param reqBody 请求格式
+     * @return CreateApi
      */
     public CreateApi reqBody(String reqBody) {
         this.reqBody = reqBody;
         return this;
     }
 
+
     /**
      * set 返回格式
      *
-     * @param resBody
+     * @param resBody 返回格式
+     * @return CreateApi
      */
     public CreateApi resBody(String resBody) {
         this.resBody = resBody;
         return this;
     }
 
+
     /**
      * set 请求格式类型,1:application/json,2:text/xml,3:其他
      *
-     * @param reqBodyType
+     * @param reqBodyType 请求格式类型,1:application/json,2:text/xml,3:其他
+     * @return CreateApi
      */
     public CreateApi reqBodyType(Integer reqBodyType) {
         this.reqBodyType = reqBodyType;
         return this;
     }
 
+
     /**
      * set 返回格式类型,1:application/json,2:text/xml,3:其他
      *
-     * @param resBodyType
+     * @param resBodyType 返回格式类型,1:application/json,2:text/xml,3:其他
+     * @return CreateApi
      */
     public CreateApi resBodyType(Integer resBodyType) {
         this.resBodyType = resBodyType;
         return this;
     }
 
+
     /**
      * set api后端配置
      *
-     * @param apiBackendConfig
+     * @param apiBackendConfig api后端配置
+     * @return CreateApi
      */
     public CreateApi apiBackendConfig(ApiBackendConfig apiBackendConfig) {
         this.apiBackendConfig = apiBackendConfig;
         return this;
     }
 
+
     /**
      * set 后端服务类型，如HTTP/HTTPS,mock,funcion等
      *
-     * @param backServiceType
+     * @param backServiceType 后端服务类型，如HTTP/HTTPS,mock,funcion等
+     * @return CreateApi
      */
     public CreateApi backServiceType(String backServiceType) {
         this.backServiceType = backServiceType;
         return this;
     }
 
+
     /**
      * set 后端服务地址，如后端服务地址，funtion路径等
      *
-     * @param backServicePath
+     * @param backServicePath 后端服务地址，如后端服务地址，funtion路径等
+     * @return CreateApi
      */
     public CreateApi backServicePath(String backServicePath) {
         this.backServicePath = backServicePath;
         return this;
     }
 
+
     /**
      * set 后端服务ID，如函数ID等
      *
-     * @param backServiceId
+     * @param backServiceId 后端服务ID，如函数ID等
+     * @return CreateApi
      */
     public CreateApi backServiceId(String backServiceId) {
         this.backServiceId = backServiceId;
         return this;
     }
 
+
     /**
      * set 后端服务名称，如函数名称
      *
-     * @param backServiceName
+     * @param backServiceName 后端服务名称，如函数名称
+     * @return CreateApi
      */
     public CreateApi backServiceName(String backServiceName) {
         this.backServiceName = backServiceName;
         return this;
     }
 
+
     /**
      * set 后端地址
      *
-     * @param backUrl
+     * @param backUrl 后端地址
+     * @return CreateApi
      */
     public CreateApi backUrl(String backUrl) {
         this.backUrl = backUrl;
         return this;
     }
 
+
     /**
      * set 后端服务配置，为true时，采用与分组统一的配置，初始创建api时请设置为True。
      *
-     * @param backServiceConfig
+     * @param backServiceConfig 后端服务配置，为true时，采用与分组统一的配置，初始创建api时请设置为True。
+     * @return CreateApi
      */
     public CreateApi backServiceConfig(Boolean backServiceConfig) {
         this.backServiceConfig = backServiceConfig;
         return this;
     }
 
+
     /**
      * set 后端服务版本，如函数版本名称
      *
-     * @param backServiceVersion
+     * @param backServiceVersion 后端服务版本，如函数版本名称
+     * @return CreateApi
      */
     public CreateApi backServiceVersion(String backServiceVersion) {
         this.backServiceVersion = backServiceVersion;
         return this;
     }
 
+
     /**
      * set 应用类型ID,云鼎业务线专用
      *
-     * @param hufuAppTypeId
+     * @param hufuAppTypeId 应用类型ID,云鼎业务线专用
+     * @return CreateApi
      */
     public CreateApi hufuAppTypeId(Integer hufuAppTypeId) {
         this.hufuAppTypeId = hufuAppTypeId;
         return this;
     }
 
+
     /**
      * set 请求格式类型,当reqBodyType等于3时,使用该请求格式类型
      *
-     * @param editableReqBodyType
+     * @param editableReqBodyType 请求格式类型,当reqBodyType等于3时,使用该请求格式类型
+     * @return CreateApi
      */
     public CreateApi editableReqBodyType(String editableReqBodyType) {
         this.editableReqBodyType = editableReqBodyType;
         return this;
     }
 
+
     /**
      * set 响应格式类型,当resBodyType等于3时,使用该响应格式类型
      *
-     * @param editableResBodyType
+     * @param editableResBodyType 响应格式类型,当resBodyType等于3时,使用该响应格式类型
+     * @return CreateApi
      */
     public CreateApi editableResBodyType(String editableResBodyType) {
         this.editableResBodyType = editableResBodyType;
         return this;
     }
+
 
 
     /**
@@ -789,5 +856,4 @@ public class CreateApi  implements java.io.Serializable {
         }
         this.reqParams.add(reqParam);
     }
-
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 部署列表
+ * Deployment-List
  * 提供部署信息的创建、查询、下线、修改等功能。
  *
  * OpenAPI spec version: v1
@@ -54,6 +54,7 @@ public class BatchOfflineRequest extends JdcloudRequest implements java.io.Seria
     private String apiGroupId;
 
 
+
     /**
      * get 要删除的部署ID集合，以,分隔
      *
@@ -72,6 +73,7 @@ public class BatchOfflineRequest extends JdcloudRequest implements java.io.Seria
         this.deploymentIds = deploymentIds;
     }
 
+
     /**
      * get 地域ID
      *
@@ -89,6 +91,7 @@ public class BatchOfflineRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 分组ID
@@ -109,30 +112,36 @@ public class BatchOfflineRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 要删除的部署ID集合，以,分隔
      *
-     * @param deploymentIds
+     * @param deploymentIds 要删除的部署ID集合，以,分隔
+     * @return BatchOfflineRequest
      */
     public BatchOfflineRequest deploymentIds(String deploymentIds) {
         this.deploymentIds = deploymentIds;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return BatchOfflineRequest
      */
     public BatchOfflineRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return BatchOfflineRequest
      */
     public BatchOfflineRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;

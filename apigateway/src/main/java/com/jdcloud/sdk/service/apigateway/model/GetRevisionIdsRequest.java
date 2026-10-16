@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 修订版本
+ * Version-Revision
  * 提供修订版本的创建、查询、删除、修改、查重功能。
  *
  * OpenAPI spec version: v1
@@ -49,6 +49,7 @@ public class GetRevisionIdsRequest extends JdcloudRequest implements java.io.Ser
     private String apiGroupId;
 
 
+
     /**
      * get 地域ID
      *
@@ -66,6 +67,7 @@ public class GetRevisionIdsRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 分组ID
@@ -86,20 +88,24 @@ public class GetRevisionIdsRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GetRevisionIdsRequest
      */
     public GetRevisionIdsRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return GetRevisionIdsRequest
      */
     public GetRevisionIdsRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;

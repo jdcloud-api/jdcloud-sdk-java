@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 修订版本
+ * Version-Revision
  * 提供修订版本的创建、查询、删除、修改、查重功能。
  *
  * OpenAPI spec version: v1
@@ -56,6 +56,7 @@ public class CheckRevisionExistRequest extends JdcloudRequest implements java.io
     private String apiGroupId;
 
 
+
     /**
      * get 版本号
      *
@@ -74,6 +75,7 @@ public class CheckRevisionExistRequest extends JdcloudRequest implements java.io
         this.revision = revision;
     }
 
+
     /**
      * get 地域ID
      *
@@ -91,6 +93,7 @@ public class CheckRevisionExistRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 分组ID
@@ -111,30 +114,36 @@ public class CheckRevisionExistRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 版本号
      *
-     * @param revision
+     * @param revision 版本号
+     * @return CheckRevisionExistRequest
      */
     public CheckRevisionExistRequest revision(String revision) {
         this.revision = revision;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CheckRevisionExistRequest
      */
     public CheckRevisionExistRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return CheckRevisionExistRequest
      */
     public CheckRevisionExistRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;

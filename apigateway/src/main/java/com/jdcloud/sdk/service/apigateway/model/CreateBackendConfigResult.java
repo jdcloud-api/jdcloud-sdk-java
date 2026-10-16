@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 后端配置
+ * Backend-Configuration
  * 后端配置
  *
  * OpenAPI spec version: v1
@@ -39,6 +39,7 @@ public class CreateBackendConfigResult extends JdcloudResult implements java.io.
     private String backendConfigId;
 
 
+
     /**
      * get 主键Id
      *
@@ -58,10 +59,12 @@ public class CreateBackendConfigResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
      * set 主键Id
      *
-     * @param backendConfigId
+     * @param backendConfigId 主键Id
+     * @return CreateBackendConfigResult
      */
     public CreateBackendConfigResult backendConfigId(String backendConfigId) {
         this.backendConfigId = backendConfigId;

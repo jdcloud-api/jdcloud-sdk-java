@@ -39,31 +39,33 @@ public class QueryApisResult extends JdcloudResult implements java.io.Serializab
     /**
      * apis
      */
+    
     private List<Api> apis;
-
     /**
      * 查询的数目
      */
     private Integer totalCount;
 
 
+
     /**
-     * get apis
-     *
-     * @return
-     */
+    * get apis
+    *
+    * @return
+    */
     public List<Api> getApis() {
         return apis;
     }
 
     /**
-     * set apis
-     *
-     * @param apis
-     */
+    * set apis
+    *
+    * @param apis
+    */
     public void setApis(List<Api> apis) {
         this.apis = apis;
     }
+
 
     /**
      * get 查询的数目
@@ -84,25 +86,30 @@ public class QueryApisResult extends JdcloudResult implements java.io.Serializab
     }
 
 
+
     /**
-     * set apis
-     *
-     * @param apis
-     */
+    * set apis
+    *
+    * @param apis 
+    * @return QueryApisResult
+    */
     public QueryApisResult apis(List<Api> apis) {
         this.apis = apis;
         return this;
     }
 
+
     /**
      * set 查询的数目
      *
-     * @param totalCount
+     * @param totalCount 查询的数目
+     * @return QueryApisResult
      */
     public QueryApisResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +123,4 @@ public class QueryApisResult extends JdcloudResult implements java.io.Serializab
         }
         this.apis.add(api);
     }
-
 }

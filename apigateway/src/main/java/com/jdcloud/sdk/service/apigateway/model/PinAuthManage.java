@@ -46,6 +46,7 @@ public class PinAuthManage  implements java.io.Serializable {
     private String subordinatesPin;
 
 
+
     /**
      * get 被管理用户的名称
      *
@@ -63,6 +64,7 @@ public class PinAuthManage  implements java.io.Serializable {
     public void setSubordinatesName(String subordinatesName) {
         this.subordinatesName = subordinatesName;
     }
+
 
     /**
      * get 被管理用户的pin
@@ -83,20 +85,24 @@ public class PinAuthManage  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 被管理用户的名称
      *
-     * @param subordinatesName
+     * @param subordinatesName 被管理用户的名称
+     * @return PinAuthManage
      */
     public PinAuthManage subordinatesName(String subordinatesName) {
         this.subordinatesName = subordinatesName;
         return this;
     }
 
+
     /**
      * set 被管理用户的pin
      *
-     * @param subordinatesPin
+     * @param subordinatesPin 被管理用户的pin
+     * @return PinAuthManage
      */
     public PinAuthManage subordinatesPin(String subordinatesPin) {
         this.subordinatesPin = subordinatesPin;

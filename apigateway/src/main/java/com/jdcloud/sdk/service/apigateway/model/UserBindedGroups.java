@@ -78,6 +78,7 @@ public class UserBindedGroups  implements java.io.Serializable {
     private String revision;
 
 
+
     /**
      * get 分组ID
      *
@@ -95,6 +96,7 @@ public class UserBindedGroups  implements java.io.Serializable {
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 分组名称
@@ -114,6 +116,7 @@ public class UserBindedGroups  implements java.io.Serializable {
         this.groupName = groupName;
     }
 
+
     /**
      * get 区域
      *
@@ -131,6 +134,7 @@ public class UserBindedGroups  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 授权时间
@@ -150,6 +154,7 @@ public class UserBindedGroups  implements java.io.Serializable {
         this.authtime = authtime;
     }
 
+
     /**
      * get 授权用户类型
      *
@@ -167,6 +172,7 @@ public class UserBindedGroups  implements java.io.Serializable {
     public void setAuthUserType(String authUserType) {
         this.authUserType = authUserType;
     }
+
 
     /**
      * get Access Key
@@ -186,6 +192,7 @@ public class UserBindedGroups  implements java.io.Serializable {
         this.accessKey = accessKey;
     }
 
+
     /**
      * get api调用者的appid
      *
@@ -204,6 +211,7 @@ public class UserBindedGroups  implements java.io.Serializable {
         this.appId = appId;
     }
 
+
     /**
      * get api部署的环境
      *
@@ -221,6 +229,7 @@ public class UserBindedGroups  implements java.io.Serializable {
     public void setEnvironment(String environment) {
         this.environment = environment;
     }
+
 
     /**
      * get api版本
@@ -241,90 +250,108 @@ public class UserBindedGroups  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return UserBindedGroups
      */
     public UserBindedGroups apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 分组名称
      *
-     * @param groupName
+     * @param groupName 分组名称
+     * @return UserBindedGroups
      */
     public UserBindedGroups groupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
 
+
     /**
      * set 区域
      *
-     * @param region
+     * @param region 区域
+     * @return UserBindedGroups
      */
     public UserBindedGroups region(String region) {
         this.region = region;
         return this;
     }
 
+
     /**
      * set 授权时间
      *
-     * @param authtime
+     * @param authtime 授权时间
+     * @return UserBindedGroups
      */
     public UserBindedGroups authtime(String authtime) {
         this.authtime = authtime;
         return this;
     }
 
+
     /**
      * set 授权用户类型
      *
-     * @param authUserType
+     * @param authUserType 授权用户类型
+     * @return UserBindedGroups
      */
     public UserBindedGroups authUserType(String authUserType) {
         this.authUserType = authUserType;
         return this;
     }
 
+
     /**
      * set Access Key
      *
-     * @param accessKey
+     * @param accessKey Access Key
+     * @return UserBindedGroups
      */
     public UserBindedGroups accessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
+
     /**
      * set api调用者的appid
      *
-     * @param appId
+     * @param appId api调用者的appid
+     * @return UserBindedGroups
      */
     public UserBindedGroups appId(String appId) {
         this.appId = appId;
         return this;
     }
 
+
     /**
      * set api部署的环境
      *
-     * @param environment
+     * @param environment api部署的环境
+     * @return UserBindedGroups
      */
     public UserBindedGroups environment(String environment) {
         this.environment = environment;
         return this;
     }
 
+
     /**
      * set api版本
      *
-     * @param revision
+     * @param revision api版本
+     * @return UserBindedGroups
      */
     public UserBindedGroups revision(String revision) {
         this.revision = revision;

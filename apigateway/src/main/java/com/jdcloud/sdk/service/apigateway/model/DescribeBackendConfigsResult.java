@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 后端配置
+ * Backend-Configuration
  * 后端配置
  *
  * OpenAPI spec version: v1
@@ -39,31 +39,33 @@ public class DescribeBackendConfigsResult extends JdcloudResult implements java.
     /**
      * backendConfigs
      */
+    
     private List<BackendConfig> backendConfigs;
-
     /**
      * 结果总数
      */
     private Integer totalCount;
 
 
+
     /**
-     * get backendConfigs
-     *
-     * @return
-     */
+    * get backendConfigs
+    *
+    * @return
+    */
     public List<BackendConfig> getBackendConfigs() {
         return backendConfigs;
     }
 
     /**
-     * set backendConfigs
-     *
-     * @param backendConfigs
-     */
+    * set backendConfigs
+    *
+    * @param backendConfigs
+    */
     public void setBackendConfigs(List<BackendConfig> backendConfigs) {
         this.backendConfigs = backendConfigs;
     }
+
 
     /**
      * get 结果总数
@@ -84,25 +86,30 @@ public class DescribeBackendConfigsResult extends JdcloudResult implements java.
     }
 
 
+
     /**
-     * set backendConfigs
-     *
-     * @param backendConfigs
-     */
+    * set backendConfigs
+    *
+    * @param backendConfigs 
+    * @return DescribeBackendConfigsResult
+    */
     public DescribeBackendConfigsResult backendConfigs(List<BackendConfig> backendConfigs) {
         this.backendConfigs = backendConfigs;
         return this;
     }
 
+
     /**
      * set 结果总数
      *
-     * @param totalCount
+     * @param totalCount 结果总数
+     * @return DescribeBackendConfigsResult
      */
     public DescribeBackendConfigsResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +123,4 @@ public class DescribeBackendConfigsResult extends JdcloudResult implements java.
         }
         this.backendConfigs.add(backendConfig);
     }
-
 }

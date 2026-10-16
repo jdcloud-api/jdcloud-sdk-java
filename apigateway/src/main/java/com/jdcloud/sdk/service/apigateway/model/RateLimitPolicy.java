@@ -83,6 +83,7 @@ public class RateLimitPolicy  implements java.io.Serializable {
     private String bindGroups;
 
 
+
     /**
      * get 策略id
      *
@@ -100,6 +101,7 @@ public class RateLimitPolicy  implements java.io.Serializable {
     public void setPolicyId(String policyId) {
         this.policyId = policyId;
     }
+
 
     /**
      * get 策略名称
@@ -119,6 +121,7 @@ public class RateLimitPolicy  implements java.io.Serializable {
         this.policyName = policyName;
     }
 
+
     /**
      * get 时间单位
      *
@@ -136,6 +139,7 @@ public class RateLimitPolicy  implements java.io.Serializable {
     public void setTimeUnit(String timeUnit) {
         this.timeUnit = timeUnit;
     }
+
 
     /**
      * get api流量限制次数
@@ -155,6 +159,7 @@ public class RateLimitPolicy  implements java.io.Serializable {
         this.apiLimitCount = apiLimitCount;
     }
 
+
     /**
      * get 用户流量限制次数
      *
@@ -172,6 +177,7 @@ public class RateLimitPolicy  implements java.io.Serializable {
     public void setUserLimitCount(Integer userLimitCount) {
         this.userLimitCount = userLimitCount;
     }
+
 
     /**
      * get 应用流量限制次数
@@ -191,6 +197,7 @@ public class RateLimitPolicy  implements java.io.Serializable {
         this.appLimitCount = appLimitCount;
     }
 
+
     /**
      * get 用户ID
      *
@@ -208,6 +215,7 @@ public class RateLimitPolicy  implements java.io.Serializable {
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
 
     /**
      * get 用户名
@@ -227,6 +235,7 @@ public class RateLimitPolicy  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 描述
      *
@@ -244,6 +253,7 @@ public class RateLimitPolicy  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 绑定分组，以逗号隔开的分组id存储，以逗号隔开的分组name返回
@@ -264,100 +274,120 @@ public class RateLimitPolicy  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 策略id
      *
-     * @param policyId
+     * @param policyId 策略id
+     * @return RateLimitPolicy
      */
     public RateLimitPolicy policyId(String policyId) {
         this.policyId = policyId;
         return this;
     }
 
+
     /**
      * set 策略名称
      *
-     * @param policyName
+     * @param policyName 策略名称
+     * @return RateLimitPolicy
      */
     public RateLimitPolicy policyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
 
+
     /**
      * set 时间单位
      *
-     * @param timeUnit
+     * @param timeUnit 时间单位
+     * @return RateLimitPolicy
      */
     public RateLimitPolicy timeUnit(String timeUnit) {
         this.timeUnit = timeUnit;
         return this;
     }
 
+
     /**
      * set api流量限制次数
      *
-     * @param apiLimitCount
+     * @param apiLimitCount api流量限制次数
+     * @return RateLimitPolicy
      */
     public RateLimitPolicy apiLimitCount(Integer apiLimitCount) {
         this.apiLimitCount = apiLimitCount;
         return this;
     }
 
+
     /**
      * set 用户流量限制次数
      *
-     * @param userLimitCount
+     * @param userLimitCount 用户流量限制次数
+     * @return RateLimitPolicy
      */
     public RateLimitPolicy userLimitCount(Integer userLimitCount) {
         this.userLimitCount = userLimitCount;
         return this;
     }
 
+
     /**
      * set 应用流量限制次数
      *
-     * @param appLimitCount
+     * @param appLimitCount 应用流量限制次数
+     * @return RateLimitPolicy
      */
     public RateLimitPolicy appLimitCount(Integer appLimitCount) {
         this.appLimitCount = appLimitCount;
         return this;
     }
 
+
     /**
      * set 用户ID
      *
-     * @param userId
+     * @param userId 用户ID
+     * @return RateLimitPolicy
      */
     public RateLimitPolicy userId(String userId) {
         this.userId = userId;
         return this;
     }
 
+
     /**
      * set 用户名
      *
-     * @param pin
+     * @param pin 用户名
+     * @return RateLimitPolicy
      */
     public RateLimitPolicy pin(String pin) {
         this.pin = pin;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return RateLimitPolicy
      */
     public RateLimitPolicy description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 绑定分组，以逗号隔开的分组id存储，以逗号隔开的分组name返回
      *
-     * @param bindGroups
+     * @param bindGroups 绑定分组，以逗号隔开的分组id存储，以逗号隔开的分组name返回
+     * @return RateLimitPolicy
      */
     public RateLimitPolicy bindGroups(String bindGroups) {
         this.bindGroups = bindGroups;

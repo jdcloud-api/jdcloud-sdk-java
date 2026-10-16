@@ -63,6 +63,7 @@ public class CheckApiNameExistRequest extends JdcloudRequest implements java.io.
     private String revision;
 
 
+
     /**
      * get API名称
      *
@@ -80,6 +81,7 @@ public class CheckApiNameExistRequest extends JdcloudRequest implements java.io.
     public void setApiName(String apiName) {
         this.apiName = apiName;
     }
+
 
     /**
      * get 地域ID
@@ -99,6 +101,7 @@ public class CheckApiNameExistRequest extends JdcloudRequest implements java.io.
         this.regionId = regionId;
     }
 
+
     /**
      * get 分组ID
      *
@@ -116,6 +119,7 @@ public class CheckApiNameExistRequest extends JdcloudRequest implements java.io.
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 版本号
@@ -136,40 +140,48 @@ public class CheckApiNameExistRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set API名称
      *
-     * @param apiName
+     * @param apiName API名称
+     * @return CheckApiNameExistRequest
      */
     public CheckApiNameExistRequest apiName(String apiName) {
         this.apiName = apiName;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CheckApiNameExistRequest
      */
     public CheckApiNameExistRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return CheckApiNameExistRequest
      */
     public CheckApiNameExistRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 版本号
      *
-     * @param revision
+     * @param revision 版本号
+     * @return CheckApiNameExistRequest
      */
     public CheckApiNameExistRequest revision(String revision) {
         this.revision = revision;

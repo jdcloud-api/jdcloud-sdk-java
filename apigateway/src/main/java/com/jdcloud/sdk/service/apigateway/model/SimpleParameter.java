@@ -43,6 +43,7 @@ public class SimpleParameter  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get 名称
      *
@@ -60,6 +61,7 @@ public class SimpleParameter  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 值
@@ -80,20 +82,24 @@ public class SimpleParameter  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 名称
      *
-     * @param name
+     * @param name 名称
+     * @return SimpleParameter
      */
     public SimpleParameter name(String name) {
         this.name = name;
         return this;
     }
 
+
     /**
      * set 值
      *
-     * @param value
+     * @param value 值
+     * @return SimpleParameter
      */
     public SimpleParameter value(String value) {
         this.value = value;

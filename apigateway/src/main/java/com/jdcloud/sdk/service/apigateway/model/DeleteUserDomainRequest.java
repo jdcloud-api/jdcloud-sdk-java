@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 自定义域名
+ * Customized-Domain-Name
  * api 自定义域名 service
  *
  * OpenAPI spec version: v1
@@ -54,6 +54,7 @@ public class DeleteUserDomainRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
      * get 要删除domain的id集合，以,分隔
      *
@@ -72,6 +73,7 @@ public class DeleteUserDomainRequest extends JdcloudRequest implements java.io.S
         this.domainIds = domainIds;
     }
 
+
     /**
      * get api分组id
      *
@@ -89,6 +91,7 @@ public class DeleteUserDomainRequest extends JdcloudRequest implements java.io.S
     public void setApiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
     }
+
 
     /**
      * get 地域ID
@@ -109,30 +112,36 @@ public class DeleteUserDomainRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 要删除domain的id集合，以,分隔
      *
-     * @param domainIds
+     * @param domainIds 要删除domain的id集合，以,分隔
+     * @return DeleteUserDomainRequest
      */
     public DeleteUserDomainRequest domainIds(String domainIds) {
         this.domainIds = domainIds;
         return this;
     }
 
+
     /**
      * set api分组id
      *
-     * @param apiGroupId
+     * @param apiGroupId api分组id
+     * @return DeleteUserDomainRequest
      */
     public DeleteUserDomainRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DeleteUserDomainRequest
      */
     public DeleteUserDomainRequest regionId(String regionId) {
         this.regionId = regionId;

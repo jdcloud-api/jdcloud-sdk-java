@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * API分组
+ * API-Group
  * 提供API分组的创建、查询、删除、修改等功能。
  *
  * OpenAPI spec version: v1
@@ -99,6 +99,7 @@ public class ModifyApiGroupAttributeRequest extends JdcloudRequest implements ja
     private String apiGroupId;
 
 
+
     /**
      * get 名称
      *
@@ -116,6 +117,7 @@ public class ModifyApiGroupAttributeRequest extends JdcloudRequest implements ja
     public void setGroupName(String groupName) {
         this.groupName = groupName;
     }
+
 
     /**
      * get 描述
@@ -135,6 +137,7 @@ public class ModifyApiGroupAttributeRequest extends JdcloudRequest implements ja
         this.description = description;
     }
 
+
     /**
      * get 分组路径前缀
      *
@@ -152,6 +155,7 @@ public class ModifyApiGroupAttributeRequest extends JdcloudRequest implements ja
     public void setPrefix(String prefix) {
         this.prefix = prefix;
     }
+
 
     /**
      * get 密钥验证方式：check_exist（密钥必须在访问授权中已配置）、no_check_exist（无需事先配置）
@@ -171,6 +175,7 @@ public class ModifyApiGroupAttributeRequest extends JdcloudRequest implements ja
         this.keyCheck = keyCheck;
     }
 
+
     /**
      * get 访问授权方式：None（免鉴权）、jd_cloud（开启访问授权，且必须使用京东云的AK、SK验签）、hufu（虎符用户）
      *
@@ -188,6 +193,7 @@ public class ModifyApiGroupAttributeRequest extends JdcloudRequest implements ja
     public void setAuthType(String authType) {
         this.authType = authType;
     }
+
 
     /**
      * get 是否转发分组路径到后端服务：0（不转发）、1（转发）默认为1
@@ -207,6 +213,7 @@ public class ModifyApiGroupAttributeRequest extends JdcloudRequest implements ja
         this.prefixStrip = prefixStrip;
     }
 
+
     /**
      * get 分组类型：api_group（api分组）、jdsf_group（微服务分组）默认为 api_group
      *
@@ -224,6 +231,7 @@ public class ModifyApiGroupAttributeRequest extends JdcloudRequest implements ja
     public void setGroupType(String groupType) {
         this.groupType = groupType;
     }
+
 
     /**
      * get 微服务网关名称
@@ -243,6 +251,7 @@ public class ModifyApiGroupAttributeRequest extends JdcloudRequest implements ja
         this.jdsfName = jdsfName;
     }
 
+
     /**
      * get 微服务注册中心ID
      *
@@ -260,6 +269,7 @@ public class ModifyApiGroupAttributeRequest extends JdcloudRequest implements ja
     public void setJdsfRegistryName(String jdsfRegistryName) {
         this.jdsfRegistryName = jdsfRegistryName;
     }
+
 
     /**
      * get 微服务网关ID
@@ -279,6 +289,7 @@ public class ModifyApiGroupAttributeRequest extends JdcloudRequest implements ja
         this.jdsfId = jdsfId;
     }
 
+
     /**
      * get 地域ID
      *
@@ -296,6 +307,7 @@ public class ModifyApiGroupAttributeRequest extends JdcloudRequest implements ja
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 分组ID
@@ -316,120 +328,144 @@ public class ModifyApiGroupAttributeRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 名称
      *
-     * @param groupName
+     * @param groupName 名称
+     * @return ModifyApiGroupAttributeRequest
      */
     public ModifyApiGroupAttributeRequest groupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return ModifyApiGroupAttributeRequest
      */
     public ModifyApiGroupAttributeRequest description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 分组路径前缀
      *
-     * @param prefix
+     * @param prefix 分组路径前缀
+     * @return ModifyApiGroupAttributeRequest
      */
     public ModifyApiGroupAttributeRequest prefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
 
+
     /**
      * set 密钥验证方式：check_exist（密钥必须在访问授权中已配置）、no_check_exist（无需事先配置）
      *
-     * @param keyCheck
+     * @param keyCheck 密钥验证方式：check_exist（密钥必须在访问授权中已配置）、no_check_exist（无需事先配置）
+     * @return ModifyApiGroupAttributeRequest
      */
     public ModifyApiGroupAttributeRequest keyCheck(String keyCheck) {
         this.keyCheck = keyCheck;
         return this;
     }
 
+
     /**
      * set 访问授权方式：None（免鉴权）、jd_cloud（开启访问授权，且必须使用京东云的AK、SK验签）、hufu（虎符用户）
      *
-     * @param authType
+     * @param authType 访问授权方式：None（免鉴权）、jd_cloud（开启访问授权，且必须使用京东云的AK、SK验签）、hufu（虎符用户）
+     * @return ModifyApiGroupAttributeRequest
      */
     public ModifyApiGroupAttributeRequest authType(String authType) {
         this.authType = authType;
         return this;
     }
 
+
     /**
      * set 是否转发分组路径到后端服务：0（不转发）、1（转发）默认为1
      *
-     * @param prefixStrip
+     * @param prefixStrip 是否转发分组路径到后端服务：0（不转发）、1（转发）默认为1
+     * @return ModifyApiGroupAttributeRequest
      */
     public ModifyApiGroupAttributeRequest prefixStrip(Integer prefixStrip) {
         this.prefixStrip = prefixStrip;
         return this;
     }
 
+
     /**
      * set 分组类型：api_group（api分组）、jdsf_group（微服务分组）默认为 api_group
      *
-     * @param groupType
+     * @param groupType 分组类型：api_group（api分组）、jdsf_group（微服务分组）默认为 api_group
+     * @return ModifyApiGroupAttributeRequest
      */
     public ModifyApiGroupAttributeRequest groupType(String groupType) {
         this.groupType = groupType;
         return this;
     }
 
+
     /**
      * set 微服务网关名称
      *
-     * @param jdsfName
+     * @param jdsfName 微服务网关名称
+     * @return ModifyApiGroupAttributeRequest
      */
     public ModifyApiGroupAttributeRequest jdsfName(String jdsfName) {
         this.jdsfName = jdsfName;
         return this;
     }
 
+
     /**
      * set 微服务注册中心ID
      *
-     * @param jdsfRegistryName
+     * @param jdsfRegistryName 微服务注册中心ID
+     * @return ModifyApiGroupAttributeRequest
      */
     public ModifyApiGroupAttributeRequest jdsfRegistryName(String jdsfRegistryName) {
         this.jdsfRegistryName = jdsfRegistryName;
         return this;
     }
 
+
     /**
      * set 微服务网关ID
      *
-     * @param jdsfId
+     * @param jdsfId 微服务网关ID
+     * @return ModifyApiGroupAttributeRequest
      */
     public ModifyApiGroupAttributeRequest jdsfId(String jdsfId) {
         this.jdsfId = jdsfId;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ModifyApiGroupAttributeRequest
      */
     public ModifyApiGroupAttributeRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return ModifyApiGroupAttributeRequest
      */
     public ModifyApiGroupAttributeRequest apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;

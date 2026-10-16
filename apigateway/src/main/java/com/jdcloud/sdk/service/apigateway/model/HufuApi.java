@@ -63,6 +63,7 @@ public class HufuApi  implements java.io.Serializable {
     private Integer hufuAppTypeId;
 
 
+
     /**
      * get API ID
      *
@@ -80,6 +81,7 @@ public class HufuApi  implements java.io.Serializable {
     public void setApiId(String apiId) {
         this.apiId = apiId;
     }
+
 
     /**
      * get 分组ID
@@ -99,6 +101,7 @@ public class HufuApi  implements java.io.Serializable {
         this.apiGroupId = apiGroupId;
     }
 
+
     /**
      * get api状态
      *
@@ -116,6 +119,7 @@ public class HufuApi  implements java.io.Serializable {
     public void setApiStatus(String apiStatus) {
         this.apiStatus = apiStatus;
     }
+
 
     /**
      * get 名称
@@ -135,6 +139,7 @@ public class HufuApi  implements java.io.Serializable {
         this.apiName = apiName;
     }
 
+
     /**
      * get 描述
      *
@@ -152,6 +157,7 @@ public class HufuApi  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 应用类型ID,云鼎业务线专用
@@ -172,60 +178,72 @@ public class HufuApi  implements java.io.Serializable {
     }
 
 
+
     /**
      * set API ID
      *
-     * @param apiId
+     * @param apiId API ID
+     * @return HufuApi
      */
     public HufuApi apiId(String apiId) {
         this.apiId = apiId;
         return this;
     }
 
+
     /**
      * set 分组ID
      *
-     * @param apiGroupId
+     * @param apiGroupId 分组ID
+     * @return HufuApi
      */
     public HufuApi apiGroupId(String apiGroupId) {
         this.apiGroupId = apiGroupId;
         return this;
     }
 
+
     /**
      * set api状态
      *
-     * @param apiStatus
+     * @param apiStatus api状态
+     * @return HufuApi
      */
     public HufuApi apiStatus(String apiStatus) {
         this.apiStatus = apiStatus;
         return this;
     }
 
+
     /**
      * set 名称
      *
-     * @param apiName
+     * @param apiName 名称
+     * @return HufuApi
      */
     public HufuApi apiName(String apiName) {
         this.apiName = apiName;
         return this;
     }
 
+
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return HufuApi
      */
     public HufuApi description(String description) {
         this.description = description;
         return this;
     }
 
+
     /**
      * set 应用类型ID,云鼎业务线专用
      *
-     * @param hufuAppTypeId
+     * @param hufuAppTypeId 应用类型ID,云鼎业务线专用
+     * @return HufuApi
      */
     public HufuApi hufuAppTypeId(Integer hufuAppTypeId) {
         this.hufuAppTypeId = hufuAppTypeId;

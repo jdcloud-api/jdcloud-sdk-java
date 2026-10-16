@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 自定义域名
+ * Customized-Domain-Name
  * api 自定义域名 service
  *
  * OpenAPI spec version: v1
@@ -44,6 +44,7 @@ public class QueryUserDomainsResult extends JdcloudResult implements java.io.Ser
     /**
      * data
      */
+    
     private List<DomainInfo> data;
 
 
@@ -65,44 +66,50 @@ public class QueryUserDomainsResult extends JdcloudResult implements java.io.Ser
         this.total = total;
     }
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<DomainInfo> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<DomainInfo> data) {
         this.data = data;
     }
 
 
+
     /**
      * set total count
      *
-     * @param total
+     * @param total total count
+     * @return QueryUserDomainsResult
      */
     public QueryUserDomainsResult total(Integer total) {
         this.total = total;
         return this;
     }
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data 
+    * @return QueryUserDomainsResult
+    */
     public QueryUserDomainsResult data(List<DomainInfo> data) {
         this.data = data;
         return this;
     }
+
 
 
     /**
@@ -116,5 +123,4 @@ public class QueryUserDomainsResult extends JdcloudResult implements java.io.Ser
         }
         this.data.add(data);
     }
-
 }
