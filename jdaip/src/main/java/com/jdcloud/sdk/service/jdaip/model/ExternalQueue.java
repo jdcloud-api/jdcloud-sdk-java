@@ -60,6 +60,16 @@ public class ExternalQueue  implements java.io.Serializable {
     private String namespace;
 
     /**
+     * GPU资源配额信息；数值来自队列当前配额和使用情况
+     */
+    
+    private List<GpuQuota> gpuQuotas;
+    /**
+     * CPU和内存资源配额信息；CPU单位为核，内存单位为GiB
+     */
+    private CpuQuota cpuQuota;
+
+    /**
      * 队列状态，
 - 1 创建中
 - 2 创建失败
@@ -108,17 +118,9 @@ public class ExternalQueue  implements java.io.Serializable {
     private String desc;
 
     /**
-     * 队列类型，0：普通队列；1：安全队列，默认0
+     * 队列类型，common：普通队列；security：安全队列
      */
-    private Integer queueType;
-
-    /**
-     * 计费模式，创建时确定不可修改
-- 1 按量计费（不承诺配额，min 默认 0）
-- 2 按配置计费（强制 min&#x3D;max）
-
-     */
-    private Integer billingMode;
+    private String queueType;
 
     /**
      * realTimeResourceStatistics
@@ -219,6 +221,44 @@ public class ExternalQueue  implements java.io.Serializable {
      */
     public void setNamespace(String namespace) {
         this.namespace = namespace;
+    }
+
+
+    /**
+    * get GPU资源配额信息；数值来自队列当前配额和使用情况
+    *
+    * @return
+    */
+    public List<GpuQuota> getGpuQuotas() {
+        return gpuQuotas;
+    }
+
+    /**
+    * set GPU资源配额信息；数值来自队列当前配额和使用情况
+    *
+    * @param gpuQuotas
+    */
+    public void setGpuQuotas(List<GpuQuota> gpuQuotas) {
+        this.gpuQuotas = gpuQuotas;
+    }
+
+
+    /**
+     * get CPU和内存资源配额信息；CPU单位为核，内存单位为GiB
+     *
+     * @return
+     */
+    public CpuQuota getCpuQuota() {
+        return cpuQuota;
+    }
+
+    /**
+     * set CPU和内存资源配额信息；CPU单位为核，内存单位为GiB
+     *
+     * @param cpuQuota
+     */
+    public void setCpuQuota(CpuQuota cpuQuota) {
+        this.cpuQuota = cpuQuota;
     }
 
 
@@ -391,46 +431,21 @@ public class ExternalQueue  implements java.io.Serializable {
 
 
     /**
-     * get 队列类型，0：普通队列；1：安全队列，默认0
+     * get 队列类型，common：普通队列；security：安全队列
      *
      * @return
      */
-    public Integer getQueueType() {
+    public String getQueueType() {
         return queueType;
     }
 
     /**
-     * set 队列类型，0：普通队列；1：安全队列，默认0
+     * set 队列类型，common：普通队列；security：安全队列
      *
      * @param queueType
      */
-    public void setQueueType(Integer queueType) {
+    public void setQueueType(String queueType) {
         this.queueType = queueType;
-    }
-
-
-    /**
-     * get 计费模式，创建时确定不可修改
-- 1 按量计费（不承诺配额，min 默认 0）
-- 2 按配置计费（强制 min&#x3D;max）
-
-     *
-     * @return
-     */
-    public Integer getBillingMode() {
-        return billingMode;
-    }
-
-    /**
-     * set 计费模式，创建时确定不可修改
-- 1 按量计费（不承诺配额，min 默认 0）
-- 2 按配置计费（强制 min&#x3D;max）
-
-     *
-     * @param billingMode
-     */
-    public void setBillingMode(Integer billingMode) {
-        this.billingMode = billingMode;
     }
 
 
@@ -510,6 +525,30 @@ public class ExternalQueue  implements java.io.Serializable {
      */
     public ExternalQueue namespace(String namespace) {
         this.namespace = namespace;
+        return this;
+    }
+
+
+    /**
+    * set GPU资源配额信息；数值来自队列当前配额和使用情况
+    *
+    * @param gpuQuotas GPU资源配额信息；数值来自队列当前配额和使用情况
+    * @return ExternalQueue
+    */
+    public ExternalQueue gpuQuotas(List<GpuQuota> gpuQuotas) {
+        this.gpuQuotas = gpuQuotas;
+        return this;
+    }
+
+
+    /**
+     * set CPU和内存资源配额信息；CPU单位为核，内存单位为GiB
+     *
+     * @param cpuQuota CPU和内存资源配额信息；CPU单位为核，内存单位为GiB
+     * @return ExternalQueue
+     */
+    public ExternalQueue cpuQuota(CpuQuota cpuQuota) {
+        this.cpuQuota = cpuQuota;
         return this;
     }
 
@@ -627,31 +666,13 @@ public class ExternalQueue  implements java.io.Serializable {
 
 
     /**
-     * set 队列类型，0：普通队列；1：安全队列，默认0
+     * set 队列类型，common：普通队列；security：安全队列
      *
-     * @param queueType 队列类型，0：普通队列；1：安全队列，默认0
+     * @param queueType 队列类型，common：普通队列；security：安全队列
      * @return ExternalQueue
      */
-    public ExternalQueue queueType(Integer queueType) {
+    public ExternalQueue queueType(String queueType) {
         this.queueType = queueType;
-        return this;
-    }
-
-
-    /**
-     * set 计费模式，创建时确定不可修改
-- 1 按量计费（不承诺配额，min 默认 0）
-- 2 按配置计费（强制 min&#x3D;max）
-
-     *
-     * @param billingMode 计费模式，创建时确定不可修改
-- 1 按量计费（不承诺配额，min 默认 0）
-- 2 按配置计费（强制 min&#x3D;max）
-
-     * @return ExternalQueue
-     */
-    public ExternalQueue billingMode(Integer billingMode) {
-        this.billingMode = billingMode;
         return this;
     }
 
@@ -668,6 +689,18 @@ public class ExternalQueue  implements java.io.Serializable {
     }
 
 
+
+    /**
+     * add item to GPU资源配额信息；数值来自队列当前配额和使用情况
+     *
+     * @param gpuQuota
+     */
+    public void addGpuQuota(GpuQuota gpuQuota) {
+        if (this.gpuQuotas == null) {
+            this.gpuQuotas = new ArrayList<>();
+        }
+        this.gpuQuotas.add(gpuQuota);
+    }
 
     /**
      * add item to realTimeResourceStatistics

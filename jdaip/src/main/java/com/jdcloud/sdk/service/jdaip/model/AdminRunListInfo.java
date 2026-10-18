@@ -138,6 +138,17 @@ public class AdminRunListInfo  implements java.io.Serializable {
     private Integer runningTimeInSec;
 
     /**
+     * 任务优先级。
+
+共享资源池取值范围为 &#x60;1..9&#x60;，数值越大优先级越高；未配置优先级时返回 &#x60;0&#x60;。
+
+## 使用场景
+当队列开启优先级调度时生效，用于任务排队时的调度排序。
+
+     */
+    private Integer taskPriority;
+
+    /**
      * 业务类型。
 
 标识微调任务的具体业务来源。
@@ -489,6 +500,37 @@ public class AdminRunListInfo  implements java.io.Serializable {
      */
     public void setRunningTimeInSec(Integer runningTimeInSec) {
         this.runningTimeInSec = runningTimeInSec;
+    }
+
+
+    /**
+     * get 任务优先级。
+
+共享资源池取值范围为 &#x60;1..9&#x60;，数值越大优先级越高；未配置优先级时返回 &#x60;0&#x60;。
+
+## 使用场景
+当队列开启优先级调度时生效，用于任务排队时的调度排序。
+
+     *
+     * @return
+     */
+    public Integer getTaskPriority() {
+        return taskPriority;
+    }
+
+    /**
+     * set 任务优先级。
+
+共享资源池取值范围为 &#x60;1..9&#x60;，数值越大优先级越高；未配置优先级时返回 &#x60;0&#x60;。
+
+## 使用场景
+当队列开启优先级调度时生效，用于任务排队时的调度排序。
+
+     *
+     * @param taskPriority
+     */
+    public void setTaskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
     }
 
 
@@ -946,6 +988,30 @@ public class AdminRunListInfo  implements java.io.Serializable {
      */
     public AdminRunListInfo runningTimeInSec(Integer runningTimeInSec) {
         this.runningTimeInSec = runningTimeInSec;
+        return this;
+    }
+
+
+    /**
+     * set 任务优先级。
+
+共享资源池取值范围为 &#x60;1..9&#x60;，数值越大优先级越高；未配置优先级时返回 &#x60;0&#x60;。
+
+## 使用场景
+当队列开启优先级调度时生效，用于任务排队时的调度排序。
+
+     *
+     * @param taskPriority 任务优先级。
+
+共享资源池取值范围为 &#x60;1..9&#x60;，数值越大优先级越高；未配置优先级时返回 &#x60;0&#x60;。
+
+## 使用场景
+当队列开启优先级调度时生效，用于任务排队时的调度排序。
+
+     * @return AdminRunListInfo
+     */
+    public AdminRunListInfo taskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
         return this;
     }
 

@@ -233,6 +233,14 @@ public class JobParam  implements java.io.Serializable {
     
     private List<DatasetParamForJob> datasets;
     /**
+     * 科技数据集配置列表，用于将科技数据集只读挂载到训练容器，仅限京东内部用户使用。
+
+科技数据集固定使用 OSS 并以只读模式挂载，存储信息由服务端根据数据集版本查询，调用方无需传入。
+
+     */
+    
+    private List<TechDatasetParamForJob> techDatasets;
+    /**
      * 模型配置列表，用于挂载预训练模型或检查点文件。
 
 **使用场景：**
@@ -893,6 +901,31 @@ public class JobParam  implements java.io.Serializable {
     */
     public void setDatasets(List<DatasetParamForJob> datasets) {
         this.datasets = datasets;
+    }
+
+
+    /**
+    * get 科技数据集配置列表，用于将科技数据集只读挂载到训练容器，仅限京东内部用户使用。
+
+科技数据集固定使用 OSS 并以只读模式挂载，存储信息由服务端根据数据集版本查询，调用方无需传入。
+
+    *
+    * @return
+    */
+    public List<TechDatasetParamForJob> getTechDatasets() {
+        return techDatasets;
+    }
+
+    /**
+    * set 科技数据集配置列表，用于将科技数据集只读挂载到训练容器，仅限京东内部用户使用。
+
+科技数据集固定使用 OSS 并以只读模式挂载，存储信息由服务端根据数据集版本查询，调用方无需传入。
+
+    *
+    * @param techDatasets
+    */
+    public void setTechDatasets(List<TechDatasetParamForJob> techDatasets) {
+        this.techDatasets = techDatasets;
     }
 
 
@@ -1758,6 +1791,24 @@ public class JobParam  implements java.io.Serializable {
 
 
     /**
+    * set 科技数据集配置列表，用于将科技数据集只读挂载到训练容器，仅限京东内部用户使用。
+
+科技数据集固定使用 OSS 并以只读模式挂载，存储信息由服务端根据数据集版本查询，调用方无需传入。
+
+    *
+    * @param techDatasets 科技数据集配置列表，用于将科技数据集只读挂载到训练容器，仅限京东内部用户使用。
+
+科技数据集固定使用 OSS 并以只读模式挂载，存储信息由服务端根据数据集版本查询，调用方无需传入。
+
+    * @return JobParam
+    */
+    public JobParam techDatasets(List<TechDatasetParamForJob> techDatasets) {
+        this.techDatasets = techDatasets;
+        return this;
+    }
+
+
+    /**
     * set 模型配置列表，用于挂载预训练模型或检查点文件。
 
 **使用场景：**
@@ -2209,6 +2260,21 @@ public class JobParam  implements java.io.Serializable {
             this.datasets = new ArrayList<>();
         }
         this.datasets.add(dataset);
+    }
+
+    /**
+     * add item to 科技数据集配置列表，用于将科技数据集只读挂载到训练容器，仅限京东内部用户使用。
+
+科技数据集固定使用 OSS 并以只读模式挂载，存储信息由服务端根据数据集版本查询，调用方无需传入。
+
+     *
+     * @param techDataset
+     */
+    public void addTechDataset(TechDatasetParamForJob techDataset) {
+        if (this.techDatasets == null) {
+            this.techDatasets = new ArrayList<>();
+        }
+        this.techDatasets.add(techDataset);
     }
 
     /**

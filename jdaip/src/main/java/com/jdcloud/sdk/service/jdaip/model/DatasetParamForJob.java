@@ -45,11 +45,11 @@ public class DatasetParamForJob  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 数据集可见性，决定数据集的访问权限。
+     * 数据集来源，指定使用公共数据集还是个人数据集。
 
 **可选值：**
-- &#x60;public&#x60;：公开数据集，工作空间所有成员可使用
-- &#x60;private&#x60;：私有数据集，仅创建者和空间管理员可使用
+- &#x60;public&#x60;：表示产品页面[资产管理-数据集]对应的公共数据集，平台预置，所有用户可使用
+- &#x60;private&#x60;：表示产品页面[资产管理-数据集]对应的个人数据集
 
      */
     private String datasetVisibility;
@@ -128,11 +128,11 @@ public class DatasetParamForJob  implements java.io.Serializable {
 
 
     /**
-     * get 数据集可见性，决定数据集的访问权限。
+     * get 数据集来源，指定使用公共数据集还是个人数据集。
 
 **可选值：**
-- &#x60;public&#x60;：公开数据集，工作空间所有成员可使用
-- &#x60;private&#x60;：私有数据集，仅创建者和空间管理员可使用
+- &#x60;public&#x60;：表示产品页面[资产管理-数据集]对应的公共数据集，平台预置，所有用户可使用
+- &#x60;private&#x60;：表示产品页面[资产管理-数据集]对应的个人数据集
 
      *
      * @return
@@ -142,11 +142,11 @@ public class DatasetParamForJob  implements java.io.Serializable {
     }
 
     /**
-     * set 数据集可见性，决定数据集的访问权限。
+     * set 数据集来源，指定使用公共数据集还是个人数据集。
 
 **可选值：**
-- &#x60;public&#x60;：公开数据集，工作空间所有成员可使用
-- &#x60;private&#x60;：私有数据集，仅创建者和空间管理员可使用
+- &#x60;public&#x60;：表示产品页面[资产管理-数据集]对应的公共数据集，平台预置，所有用户可使用
+- &#x60;private&#x60;：表示产品页面[资产管理-数据集]对应的个人数据集
 
      *
      * @param datasetVisibility
@@ -354,18 +354,18 @@ public class DatasetParamForJob  implements java.io.Serializable {
 
 
     /**
-     * set 数据集可见性，决定数据集的访问权限。
+     * set 数据集来源，指定使用公共数据集还是个人数据集。
 
 **可选值：**
-- &#x60;public&#x60;：公开数据集，工作空间所有成员可使用
-- &#x60;private&#x60;：私有数据集，仅创建者和空间管理员可使用
+- &#x60;public&#x60;：表示产品页面[资产管理-数据集]对应的公共数据集，平台预置，所有用户可使用
+- &#x60;private&#x60;：表示产品页面[资产管理-数据集]对应的个人数据集
 
      *
-     * @param datasetVisibility 数据集可见性，决定数据集的访问权限。
+     * @param datasetVisibility 数据集来源，指定使用公共数据集还是个人数据集。
 
 **可选值：**
-- &#x60;public&#x60;：公开数据集，工作空间所有成员可使用
-- &#x60;private&#x60;：私有数据集，仅创建者和空间管理员可使用
+- &#x60;public&#x60;：表示产品页面[资产管理-数据集]对应的公共数据集，平台预置，所有用户可使用
+- &#x60;private&#x60;：表示产品页面[资产管理-数据集]对应的个人数据集
 
      * @return DatasetParamForJob
      */

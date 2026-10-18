@@ -35,7 +35,7 @@ public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * 模糊匹配过来条件名称或描述
+     * 模糊匹配队列名称或描述
      */
     private String filter;
 
@@ -50,9 +50,9 @@ public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Ser
     private Integer status;
 
     /**
-     * 队列类型，0：普通队列；1：安全队列，默认0
+     * 队列类型，common：普通队列；security：安全队列；不传则不过滤队列类型
      */
-    private Integer queueType;
+    private String queueType;
 
     /**
      * 队列ID列表，逗号分割
@@ -65,12 +65,12 @@ public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Ser
     private Integer page;
 
     /**
-     * 分页页大小；未传时默认10
+     * 分页页大小；未传时默认10，最大值为99
      */
     private Integer pageSize;
 
     /**
-     * 排序字段
+     * 排序字段；当前服务端固定按创建时间排序，仅支持createTime
      */
     private String orderBy;
 
@@ -89,7 +89,7 @@ public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 模糊匹配过来条件名称或描述
+     * get 模糊匹配队列名称或描述
      *
      * @return
      */
@@ -98,7 +98,7 @@ public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 模糊匹配过来条件名称或描述
+     * set 模糊匹配队列名称或描述
      *
      * @param filter
      */
@@ -146,20 +146,20 @@ public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 队列类型，0：普通队列；1：安全队列，默认0
+     * get 队列类型，common：普通队列；security：安全队列；不传则不过滤队列类型
      *
      * @return
      */
-    public Integer getQueueType() {
+    public String getQueueType() {
         return queueType;
     }
 
     /**
-     * set 队列类型，0：普通队列；1：安全队列，默认0
+     * set 队列类型，common：普通队列；security：安全队列；不传则不过滤队列类型
      *
      * @param queueType
      */
-    public void setQueueType(Integer queueType) {
+    public void setQueueType(String queueType) {
         this.queueType = queueType;
     }
 
@@ -203,7 +203,7 @@ public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 分页页大小；未传时默认10
+     * get 分页页大小；未传时默认10，最大值为99
      *
      * @return
      */
@@ -212,7 +212,7 @@ public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 分页页大小；未传时默认10
+     * set 分页页大小；未传时默认10，最大值为99
      *
      * @param pageSize
      */
@@ -222,7 +222,7 @@ public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 排序字段
+     * get 排序字段；当前服务端固定按创建时间排序，仅支持createTime
      *
      * @return
      */
@@ -231,7 +231,7 @@ public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 排序字段
+     * set 排序字段；当前服务端固定按创建时间排序，仅支持createTime
      *
      * @param orderBy
      */
@@ -280,9 +280,9 @@ public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 模糊匹配过来条件名称或描述
+     * set 模糊匹配队列名称或描述
      *
-     * @param filter 模糊匹配过来条件名称或描述
+     * @param filter 模糊匹配队列名称或描述
      * @return DescribeQueuesRequest
      */
     public DescribeQueuesRequest filter(String filter) {
@@ -316,12 +316,12 @@ public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 队列类型，0：普通队列；1：安全队列，默认0
+     * set 队列类型，common：普通队列；security：安全队列；不传则不过滤队列类型
      *
-     * @param queueType 队列类型，0：普通队列；1：安全队列，默认0
+     * @param queueType 队列类型，common：普通队列；security：安全队列；不传则不过滤队列类型
      * @return DescribeQueuesRequest
      */
-    public DescribeQueuesRequest queueType(Integer queueType) {
+    public DescribeQueuesRequest queueType(String queueType) {
         this.queueType = queueType;
         return this;
     }
@@ -352,9 +352,9 @@ public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 分页页大小；未传时默认10
+     * set 分页页大小；未传时默认10，最大值为99
      *
-     * @param pageSize 分页页大小；未传时默认10
+     * @param pageSize 分页页大小；未传时默认10，最大值为99
      * @return DescribeQueuesRequest
      */
     public DescribeQueuesRequest pageSize(Integer pageSize) {
@@ -364,9 +364,9 @@ public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 排序字段
+     * set 排序字段；当前服务端固定按创建时间排序，仅支持createTime
      *
-     * @param orderBy 排序字段
+     * @param orderBy 排序字段；当前服务端固定按创建时间排序，仅支持createTime
      * @return DescribeQueuesRequest
      */
     public DescribeQueuesRequest orderBy(String orderBy) {

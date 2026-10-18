@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.jdaip.model.UpdateNotebookRequest;
 import com.jdcloud.sdk.service.jdaip.model.UpdateNotebookResponse;
 import com.jdcloud.sdk.service.jdaip.client.UpdateNotebookExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DeleteQueueRequest;
+import com.jdcloud.sdk.service.jdaip.model.DeleteQueueResponse;
+import com.jdcloud.sdk.service.jdaip.client.DeleteQueueExecutor;
 import com.jdcloud.sdk.service.jdaip.model.UpdateJobRequest;
 import com.jdcloud.sdk.service.jdaip.model.UpdateJobResponse;
 import com.jdcloud.sdk.service.jdaip.client.UpdateJobExecutor;
@@ -115,6 +118,9 @@ import com.jdcloud.sdk.service.jdaip.client.DescribeInferenceScaleExecutor;
 import com.jdcloud.sdk.service.jdaip.model.GetRunEventsRequest;
 import com.jdcloud.sdk.service.jdaip.model.GetRunEventsResponse;
 import com.jdcloud.sdk.service.jdaip.client.GetRunEventsExecutor;
+import com.jdcloud.sdk.service.jdaip.model.CreateQueueRequest;
+import com.jdcloud.sdk.service.jdaip.model.CreateQueueResponse;
+import com.jdcloud.sdk.service.jdaip.client.CreateQueueExecutor;
 import com.jdcloud.sdk.service.jdaip.model.GetJobEventsRequest;
 import com.jdcloud.sdk.service.jdaip.model.GetJobEventsResponse;
 import com.jdcloud.sdk.service.jdaip.client.GetJobEventsExecutor;
@@ -175,6 +181,9 @@ import com.jdcloud.sdk.service.jdaip.client.UpdateServiceQPSExecutor;
 import com.jdcloud.sdk.service.jdaip.model.CreateModelRequest;
 import com.jdcloud.sdk.service.jdaip.model.CreateModelResponse;
 import com.jdcloud.sdk.service.jdaip.client.CreateModelExecutor;
+import com.jdcloud.sdk.service.jdaip.model.ModifyQueueEnableRequest;
+import com.jdcloud.sdk.service.jdaip.model.ModifyQueueEnableResponse;
+import com.jdcloud.sdk.service.jdaip.client.ModifyQueueEnableExecutor;
 import com.jdcloud.sdk.service.jdaip.model.StartNotebookRequest;
 import com.jdcloud.sdk.service.jdaip.model.StartNotebookResponse;
 import com.jdcloud.sdk.service.jdaip.client.StartNotebookExecutor;
@@ -187,6 +196,9 @@ import com.jdcloud.sdk.service.jdaip.client.GetInstanceEventsExecutor;
 import com.jdcloud.sdk.service.jdaip.model.UpdateModelVersionRequest;
 import com.jdcloud.sdk.service.jdaip.model.UpdateModelVersionResponse;
 import com.jdcloud.sdk.service.jdaip.client.UpdateModelVersionExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeWorkspacesRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeWorkspacesResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeWorkspacesExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeNodeInstancesRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeNodeInstancesResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeNodeInstancesExecutor;
@@ -232,6 +244,9 @@ import com.jdcloud.sdk.service.jdaip.client.DescribeProfilingTaskExecutor;
 import com.jdcloud.sdk.service.jdaip.model.AddQueuesRequest;
 import com.jdcloud.sdk.service.jdaip.model.AddQueuesResponse;
 import com.jdcloud.sdk.service.jdaip.client.AddQueuesExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeWorkspaceRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeWorkspaceResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeWorkspaceExecutor;
 import com.jdcloud.sdk.service.jdaip.model.StopRunRequest;
 import com.jdcloud.sdk.service.jdaip.model.StopRunResponse;
 import com.jdcloud.sdk.service.jdaip.client.StopRunExecutor;
@@ -241,6 +256,9 @@ import com.jdcloud.sdk.service.jdaip.client.UpdateInferenceScaleExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeModelVersionRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeModelVersionResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeModelVersionExecutor;
+import com.jdcloud.sdk.service.jdaip.model.ModifyQueueRequest;
+import com.jdcloud.sdk.service.jdaip.model.ModifyQueueResponse;
+import com.jdcloud.sdk.service.jdaip.client.ModifyQueueExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DescribeExperimentsRequest;
 import com.jdcloud.sdk.service.jdaip.model.DescribeExperimentsResponse;
 import com.jdcloud.sdk.service.jdaip.client.DescribeExperimentsExecutor;
@@ -253,6 +271,9 @@ import com.jdcloud.sdk.service.jdaip.client.CreateCodeRepoConfigExecutor;
 import com.jdcloud.sdk.service.jdaip.model.PauseRolloutRequest;
 import com.jdcloud.sdk.service.jdaip.model.PauseRolloutResponse;
 import com.jdcloud.sdk.service.jdaip.client.PauseRolloutExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeQueueLoadBalancerRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeQueueLoadBalancerResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeQueueLoadBalancerExecutor;
 import com.jdcloud.sdk.service.jdaip.model.CreateImageRequest;
 import com.jdcloud.sdk.service.jdaip.model.CreateImageResponse;
 import com.jdcloud.sdk.service.jdaip.client.CreateImageExecutor;
@@ -505,6 +526,17 @@ public class JdaipClient extends JdcloudClient {
      */
     public UpdateNotebookResponse updateNotebook(UpdateNotebookRequest request) throws JdcloudSdkException {
         return new UpdateNotebookExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除资源队列
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteQueueResponse deleteQueue(DeleteQueueRequest request) throws JdcloudSdkException {
+        return new DeleteQueueExecutor().client(this).execute(request);
     }
 
     /**
@@ -1009,6 +1041,17 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 创建资源队列；节点池必须存在且处于运行中状态，创建成功后返回资源队列ID
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateQueueResponse createQueue(CreateQueueRequest request) throws JdcloudSdkException {
+        return new CreateQueueExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取训练任务事件。
 
 查询训练任务执行过程中的各类事件记录，用于监控任务状态变化和问题排查。
@@ -1350,6 +1393,17 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 修改资源队列启用状态；enable&#x3D;true 启用队列，enable&#x3D;false 禁用队列
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyQueueEnableResponse modifyQueueEnable(ModifyQueueEnableRequest request) throws JdcloudSdkException {
+        return new ModifyQueueEnableExecutor().client(this).execute(request);
+    }
+
+    /**
      * 启动Notebook实例。
 
 ## 接口说明
@@ -1428,6 +1482,17 @@ public class JdaipClient extends JdcloudClient {
      */
     public UpdateModelVersionResponse updateModelVersion(UpdateModelVersionRequest request) throws JdcloudSdkException {
         return new UpdateModelVersionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询工作空间列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeWorkspacesResponse describeWorkspaces(DescribeWorkspacesRequest request) throws JdcloudSdkException {
+        return new DescribeWorkspacesExecutor().client(this).execute(request);
     }
 
     /**
@@ -1660,6 +1725,24 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 查询工作空间详情l，仅返回工作空间的基础信息。
+
+### 其他相关信息接口参考
+1. 获取工作空间下队列列表：[describeWorkspaceQueues](./describeWorkspaceQueues.md)
+2. 获取工作空间下成员列表：[describeMembers](./describeMembers.md)
+3. 获取工作空间下日志投递配置：[describeLogConfigs](./describeLogConfigs.md)
+4. 获取工作空间关机策略详情：[describeShutdownPolicy](./describeShutdownPolicy.md)
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeWorkspaceResponse describeWorkspace(DescribeWorkspaceRequest request) throws JdcloudSdkException {
+        return new DescribeWorkspaceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 停止微调运行。
 
 手动停止正在运行或等待中的微调运行。停止后运行将释放计算资源，且无法再次启动。
@@ -1703,6 +1786,17 @@ public class JdaipClient extends JdcloudClient {
      */
     public DescribeModelVersionResponse describeModelVersion(DescribeModelVersionRequest request) throws JdcloudSdkException {
         return new DescribeModelVersionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改资源队列；type&#x3D;base 修改名称和描述，type&#x3D;gpu 或 type&#x3D;cpu 进入配额更新逻辑，按请求体传入的 GPU配额、CPU/内存配额和任务优先级策略同步更新
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyQueueResponse modifyQueue(ModifyQueueRequest request) throws JdcloudSdkException {
+        return new ModifyQueueExecutor().client(this).execute(request);
     }
 
     /**
@@ -1765,6 +1859,17 @@ public class JdaipClient extends JdcloudClient {
      */
     public PauseRolloutResponse pauseRollout(PauseRolloutRequest request) throws JdcloudSdkException {
         return new PauseRolloutExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询安全队列所属集群的负载均衡信息；负载均衡未就绪时返回错误
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeQueueLoadBalancerResponse describeQueueLoadBalancer(DescribeQueueLoadBalancerRequest request) throws JdcloudSdkException {
+        return new DescribeQueueLoadBalancerExecutor().client(this).execute(request);
     }
 
     /**
@@ -2337,7 +2442,6 @@ Batch 任务额外返回 &#x60;minAvailable&#x60; 和 &#x60;batchSummary&#x60;�
 
 查询训练任务下所有运行实例（Pod）的详细信息，包括名称、类型、状态、IP、运行时长等。
 支持分页查询和多种过滤条件，异常状态数据可优先展示。
-Batch 实例额外返回 &#x60;taskIndex&#x60;、&#x60;exitCode&#x60;、&#x60;terminationReason&#x60;、&#x60;attemptNo&#x60; 和 &#x60;isCurrent&#x60;。
 
 ## 使用场景
 

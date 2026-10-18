@@ -24,55 +24,69 @@
 
 package com.jdcloud.sdk.service.jdaip.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 安全节点或安全JPFS续费临时单请求
+ * 安全节点或安全JPFS续费临时单请求，与renewal submitTempOrderV2保持相同的请求体结构
  */
 public class RenewalTempOrderRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * A租户可见的sec-开头资源ID
+     * 按业务线、产品线和续费类型组织的资源列表，逐个校验通过后整体提交
      * Required:true
      */
     @Required
-    private String resourceId;
-
+    
+    private List<RenewalTempOrderParam> paramList;
 
 
     /**
-     * get A租户可见的sec-开头资源ID
-     *
-     * @return
-     */
-    public String getResourceId() {
-        return resourceId;
+    * get 按业务线、产品线和续费类型组织的资源列表，逐个校验通过后整体提交
+    *
+    * @return
+    */
+    public List<RenewalTempOrderParam> getParamList() {
+        return paramList;
     }
 
     /**
-     * set A租户可见的sec-开头资源ID
-     *
-     * @param resourceId
-     */
-    public void setResourceId(String resourceId) {
-        this.resourceId = resourceId;
+    * set 按业务线、产品线和续费类型组织的资源列表，逐个校验通过后整体提交
+    *
+    * @param paramList
+    */
+    public void setParamList(List<RenewalTempOrderParam> paramList) {
+        this.paramList = paramList;
     }
 
 
 
     /**
-     * set A租户可见的sec-开头资源ID
-     *
-     * @param resourceId A租户可见的sec-开头资源ID
-     * @return RenewalTempOrderRequest
-     */
-    public RenewalTempOrderRequest resourceId(String resourceId) {
-        this.resourceId = resourceId;
+    * set 按业务线、产品线和续费类型组织的资源列表，逐个校验通过后整体提交
+    *
+    * @param paramList 按业务线、产品线和续费类型组织的资源列表，逐个校验通过后整体提交
+    * @return RenewalTempOrderRequest
+    */
+    public RenewalTempOrderRequest paramList(List<RenewalTempOrderParam> paramList) {
+        this.paramList = paramList;
         return this;
     }
 
 
+
+    /**
+     * add item to 按业务线、产品线和续费类型组织的资源列表，逐个校验通过后整体提交
+     *
+     * @param paramList
+     */
+    public void addParamList(RenewalTempOrderParam paramList) {
+        if (this.paramList == null) {
+            this.paramList = new ArrayList<>();
+        }
+        this.paramList.add(paramList);
+    }
 }

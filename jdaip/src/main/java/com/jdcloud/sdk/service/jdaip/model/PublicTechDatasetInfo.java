@@ -72,6 +72,11 @@ public class PublicTechDatasetInfo  implements java.io.Serializable {
      */
     private String createTime;
 
+    /**
+     * 是否可用：false表示不可用，dss数据集查不到
+     */
+    private Boolean isAvailable;
+
 
 
     /**
@@ -226,6 +231,25 @@ public class PublicTechDatasetInfo  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 是否可用：false表示不可用，dss数据集查不到
+     *
+     * @return
+     */
+    public Boolean getIsAvailable() {
+        return isAvailable;
+    }
+
+    /**
+     * set 是否可用：false表示不可用，dss数据集查不到
+     *
+     * @param isAvailable
+     */
+    public void setIsAvailable(Boolean isAvailable) {
+        this.isAvailable = isAvailable;
+    }
+
+
 
     /**
      * set 数据集ID。示例：&quot;dst-*******&quot;
@@ -319,6 +343,18 @@ public class PublicTechDatasetInfo  implements java.io.Serializable {
      */
     public PublicTechDatasetInfo createTime(String createTime) {
         this.createTime = createTime;
+        return this;
+    }
+
+
+    /**
+     * set 是否可用：false表示不可用，dss数据集查不到
+     *
+     * @param isAvailable 是否可用：false表示不可用，dss数据集查不到
+     * @return PublicTechDatasetInfo
+     */
+    public PublicTechDatasetInfo isAvailable(Boolean isAvailable) {
+        this.isAvailable = isAvailable;
         return this;
     }
 

@@ -63,6 +63,11 @@ public class ResourceInfo  implements java.io.Serializable {
     private String createUser;
 
     /**
+     * 创建时间，格式为 &#x60;2026-01-01T00:00:00Z&#x60;。
+     */
+    private String createTime;
+
+    /**
      * 任务优先级。取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
      */
     private Integer taskPriority;
@@ -192,6 +197,25 @@ type为Inference时，关联信息为服务信息；
 
 
     /**
+     * get 创建时间，格式为 &#x60;2026-01-01T00:00:00Z&#x60;。
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 创建时间，格式为 &#x60;2026-01-01T00:00:00Z&#x60;。
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+
+    /**
      * get 任务优先级。取值范围为 &#x60;1..9&#x60;；未配置优先级时返回 &#x60;0&#x60;。
      *
      * @return
@@ -304,6 +328,18 @@ type为Inference时，关联信息为服务信息；
      */
     public ResourceInfo createUser(String createUser) {
         this.createUser = createUser;
+        return this;
+    }
+
+
+    /**
+     * set 创建时间，格式为 &#x60;2026-01-01T00:00:00Z&#x60;。
+     *
+     * @param createTime 创建时间，格式为 &#x60;2026-01-01T00:00:00Z&#x60;。
+     * @return ResourceInfo
+     */
+    public ResourceInfo createTime(String createTime) {
+        this.createTime = createTime;
         return this;
     }
 
