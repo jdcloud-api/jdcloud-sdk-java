@@ -47,11 +47,6 @@ public class JpfsBillingInfo  implements java.io.Serializable {
      */
     private Integer chargeDuration;
 
-    /**
-     * 是否自动续费
-     */
-    private Boolean autoRenew;
-
 
 
     /**
@@ -111,25 +106,6 @@ public class JpfsBillingInfo  implements java.io.Serializable {
     }
 
 
-    /**
-     * get 是否自动续费
-     *
-     * @return
-     */
-    public Boolean getAutoRenew() {
-        return autoRenew;
-    }
-
-    /**
-     * set 是否自动续费
-     *
-     * @param autoRenew
-     */
-    public void setAutoRenew(Boolean autoRenew) {
-        this.autoRenew = autoRenew;
-    }
-
-
 
     /**
      * set 计费模式
@@ -163,18 +139,6 @@ public class JpfsBillingInfo  implements java.io.Serializable {
      */
     public JpfsBillingInfo chargeDuration(Integer chargeDuration) {
         this.chargeDuration = chargeDuration;
-        return this;
-    }
-
-
-    /**
-     * set 是否自动续费
-     *
-     * @param autoRenew 是否自动续费
-     * @return JpfsBillingInfo
-     */
-    public JpfsBillingInfo autoRenew(Boolean autoRenew) {
-        this.autoRenew = autoRenew;
         return this;
     }
 

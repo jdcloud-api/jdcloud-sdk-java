@@ -91,6 +91,15 @@ public class AdminInferenceInfo  implements java.io.Serializable {
     private String createTime;
 
     /**
+     * 任务调度优先级，数值越大，优先级越高。
+**取值范围：** 1 ~ 9
+**使用前提：**
+- 空间私有队列且开启了调度优先级功能
+
+     */
+    private Integer taskPriority;
+
+    /**
      * 推理服务所属工作空间ID
      */
     private String workspaceId;
@@ -306,6 +315,33 @@ public class AdminInferenceInfo  implements java.io.Serializable {
 
 
     /**
+     * get 任务调度优先级，数值越大，优先级越高。
+**取值范围：** 1 ~ 9
+**使用前提：**
+- 空间私有队列且开启了调度优先级功能
+
+     *
+     * @return
+     */
+    public Integer getTaskPriority() {
+        return taskPriority;
+    }
+
+    /**
+     * set 任务调度优先级，数值越大，优先级越高。
+**取值范围：** 1 ~ 9
+**使用前提：**
+- 空间私有队列且开启了调度优先级功能
+
+     *
+     * @param taskPriority
+     */
+    public void setTaskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
+    }
+
+
+    /**
      * get 推理服务所属工作空间ID
      *
      * @return
@@ -508,6 +544,26 @@ public class AdminInferenceInfo  implements java.io.Serializable {
      */
     public AdminInferenceInfo createTime(String createTime) {
         this.createTime = createTime;
+        return this;
+    }
+
+
+    /**
+     * set 任务调度优先级，数值越大，优先级越高。
+**取值范围：** 1 ~ 9
+**使用前提：**
+- 空间私有队列且开启了调度优先级功能
+
+     *
+     * @param taskPriority 任务调度优先级，数值越大，优先级越高。
+**取值范围：** 1 ~ 9
+**使用前提：**
+- 空间私有队列且开启了调度优先级功能
+
+     * @return AdminInferenceInfo
+     */
+    public AdminInferenceInfo taskPriority(Integer taskPriority) {
+        this.taskPriority = taskPriority;
         return this;
     }
 

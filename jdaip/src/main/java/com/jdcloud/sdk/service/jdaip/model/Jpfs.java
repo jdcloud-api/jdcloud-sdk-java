@@ -98,6 +98,11 @@ public class Jpfs  implements java.io.Serializable {
     private String chargeExpiredTime;
 
     /**
+     * 商业平台返回的JPFS释放时间原始值；无有效释放时间时返回空字符串
+     */
+    private String chargeReleaseTime;
+
+    /**
      * RDMA协议挂载目标ID
      */
     private String rdmaMountTargetId;
@@ -398,6 +403,25 @@ public class Jpfs  implements java.io.Serializable {
      */
     public void setChargeExpiredTime(String chargeExpiredTime) {
         this.chargeExpiredTime = chargeExpiredTime;
+    }
+
+
+    /**
+     * get 商业平台返回的JPFS释放时间原始值；无有效释放时间时返回空字符串
+     *
+     * @return
+     */
+    public String getChargeReleaseTime() {
+        return chargeReleaseTime;
+    }
+
+    /**
+     * set 商业平台返回的JPFS释放时间原始值；无有效释放时间时返回空字符串
+     *
+     * @param chargeReleaseTime
+     */
+    public void setChargeReleaseTime(String chargeReleaseTime) {
+        this.chargeReleaseTime = chargeReleaseTime;
     }
 
 
@@ -763,6 +787,18 @@ public class Jpfs  implements java.io.Serializable {
      */
     public Jpfs chargeExpiredTime(String chargeExpiredTime) {
         this.chargeExpiredTime = chargeExpiredTime;
+        return this;
+    }
+
+
+    /**
+     * set 商业平台返回的JPFS释放时间原始值；无有效释放时间时返回空字符串
+     *
+     * @param chargeReleaseTime 商业平台返回的JPFS释放时间原始值；无有效释放时间时返回空字符串
+     * @return Jpfs
+     */
+    public Jpfs chargeReleaseTime(String chargeReleaseTime) {
+        this.chargeReleaseTime = chargeReleaseTime;
         return this;
     }
 

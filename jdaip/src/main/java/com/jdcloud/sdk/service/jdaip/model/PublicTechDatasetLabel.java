@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.jdaip.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 公共数据集标签信息
@@ -35,18 +37,18 @@ public class PublicTechDatasetLabel  implements java.io.Serializable {
     /**
      * 场景
      */
-    private String scenario;
-
+    
+    private List<String> scenario;
     /**
      * 语言
      */
-    private String language;
-
+    
+    private List<String> language;
     /**
      * 其他关键词
      */
-    private String keyword;
-
+    
+    private List<String> keyword;
     /**
      * 数据大小或行数
      */
@@ -60,58 +62,58 @@ public class PublicTechDatasetLabel  implements java.io.Serializable {
 
 
     /**
-     * get 场景
-     *
-     * @return
-     */
-    public String getScenario() {
+    * get 场景
+    *
+    * @return
+    */
+    public List<String> getScenario() {
         return scenario;
     }
 
     /**
-     * set 场景
-     *
-     * @param scenario
-     */
-    public void setScenario(String scenario) {
+    * set 场景
+    *
+    * @param scenario
+    */
+    public void setScenario(List<String> scenario) {
         this.scenario = scenario;
     }
 
 
     /**
-     * get 语言
-     *
-     * @return
-     */
-    public String getLanguage() {
+    * get 语言
+    *
+    * @return
+    */
+    public List<String> getLanguage() {
         return language;
     }
 
     /**
-     * set 语言
-     *
-     * @param language
-     */
-    public void setLanguage(String language) {
+    * set 语言
+    *
+    * @param language
+    */
+    public void setLanguage(List<String> language) {
         this.language = language;
     }
 
 
     /**
-     * get 其他关键词
-     *
-     * @return
-     */
-    public String getKeyword() {
+    * get 其他关键词
+    *
+    * @return
+    */
+    public List<String> getKeyword() {
         return keyword;
     }
 
     /**
-     * set 其他关键词
-     *
-     * @param keyword
-     */
-    public void setKeyword(String keyword) {
+    * set 其他关键词
+    *
+    * @param keyword
+    */
+    public void setKeyword(List<String> keyword) {
         this.keyword = keyword;
     }
 
@@ -156,36 +158,36 @@ public class PublicTechDatasetLabel  implements java.io.Serializable {
 
 
     /**
-     * set 场景
-     *
-     * @param scenario 场景
-     * @return PublicTechDatasetLabel
-     */
-    public PublicTechDatasetLabel scenario(String scenario) {
+    * set 场景
+    *
+    * @param scenario 场景
+    * @return PublicTechDatasetLabel
+    */
+    public PublicTechDatasetLabel scenario(List<String> scenario) {
         this.scenario = scenario;
         return this;
     }
 
 
     /**
-     * set 语言
-     *
-     * @param language 语言
-     * @return PublicTechDatasetLabel
-     */
-    public PublicTechDatasetLabel language(String language) {
+    * set 语言
+    *
+    * @param language 语言
+    * @return PublicTechDatasetLabel
+    */
+    public PublicTechDatasetLabel language(List<String> language) {
         this.language = language;
         return this;
     }
 
 
     /**
-     * set 其他关键词
-     *
-     * @param keyword 其他关键词
-     * @return PublicTechDatasetLabel
-     */
-    public PublicTechDatasetLabel keyword(String keyword) {
+    * set 其他关键词
+    *
+    * @param keyword 其他关键词
+    * @return PublicTechDatasetLabel
+    */
+    public PublicTechDatasetLabel keyword(List<String> keyword) {
         this.keyword = keyword;
         return this;
     }
@@ -215,4 +217,40 @@ public class PublicTechDatasetLabel  implements java.io.Serializable {
     }
 
 
+
+    /**
+     * add item to 场景
+     *
+     * @param scenario
+     */
+    public void addScenario(String scenario) {
+        if (this.scenario == null) {
+            this.scenario = new ArrayList<>();
+        }
+        this.scenario.add(scenario);
+    }
+
+    /**
+     * add item to 语言
+     *
+     * @param language
+     */
+    public void addLanguage(String language) {
+        if (this.language == null) {
+            this.language = new ArrayList<>();
+        }
+        this.language.add(language);
+    }
+
+    /**
+     * add item to 其他关键词
+     *
+     * @param keyword
+     */
+    public void addKeyword(String keyword) {
+        if (this.keyword == null) {
+            this.keyword = new ArrayList<>();
+        }
+        this.keyword.add(keyword);
+    }
 }

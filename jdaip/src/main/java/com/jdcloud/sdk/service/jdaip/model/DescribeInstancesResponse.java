@@ -55,7 +55,6 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 
 查询训练任务下所有运行实例（Pod）的详细信息，包括名称、类型、状态、IP、运行时长等。
 支持分页查询和多种过滤条件，异常状态数据可优先展示。
-Batch 实例额外返回 &#x60;taskIndex&#x60;、&#x60;exitCode&#x60;、&#x60;terminationReason&#x60;、&#x60;attemptNo&#x60; 和 &#x60;isCurrent&#x60;。
 
 ## 使用场景
 

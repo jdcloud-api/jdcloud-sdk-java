@@ -33,7 +33,7 @@ public class DatasetResultForJob  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 数据集可见性。可选值：[public, private]。
+     * 数据集来源。可选值：[public, private]。
      */
     private String datasetVisibility;
 
@@ -71,7 +71,7 @@ public class DatasetResultForJob  implements java.io.Serializable {
 
 
     /**
-     * get 数据集可见性。可选值：[public, private]。
+     * get 数据集来源。可选值：[public, private]。
      *
      * @return
      */
@@ -80,7 +80,7 @@ public class DatasetResultForJob  implements java.io.Serializable {
     }
 
     /**
-     * set 数据集可见性。可选值：[public, private]。
+     * set 数据集来源。可选值：[public, private]。
      *
      * @param datasetVisibility
      */
@@ -207,9 +207,9 @@ public class DatasetResultForJob  implements java.io.Serializable {
 
 
     /**
-     * set 数据集可见性。可选值：[public, private]。
+     * set 数据集来源。可选值：[public, private]。
      *
-     * @param datasetVisibility 数据集可见性。可选值：[public, private]。
+     * @param datasetVisibility 数据集来源。可选值：[public, private]。
      * @return DatasetResultForJob
      */
     public DatasetResultForJob datasetVisibility(String datasetVisibility) {

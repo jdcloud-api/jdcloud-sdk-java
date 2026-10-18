@@ -46,6 +46,11 @@ public class DescribeQueuesResult extends JdcloudResult implements java.io.Seria
      */
     private Integer total;
 
+    /**
+     * 兼容字段，当前队列列表返回值为0，请以total为准
+     */
+    private Integer totalCount;
+
 
 
     /**
@@ -86,6 +91,25 @@ public class DescribeQueuesResult extends JdcloudResult implements java.io.Seria
     }
 
 
+    /**
+     * get 兼容字段，当前队列列表返回值为0，请以total为准
+     *
+     * @return
+     */
+    public Integer getTotalCount() {
+        return totalCount;
+    }
+
+    /**
+     * set 兼容字段，当前队列列表返回值为0，请以total为准
+     *
+     * @param totalCount
+     */
+    public void setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+    }
+
+
 
     /**
     * set data
@@ -107,6 +131,18 @@ public class DescribeQueuesResult extends JdcloudResult implements java.io.Seria
      */
     public DescribeQueuesResult total(Integer total) {
         this.total = total;
+        return this;
+    }
+
+
+    /**
+     * set 兼容字段，当前队列列表返回值为0，请以total为准
+     *
+     * @param totalCount 兼容字段，当前队列列表返回值为0，请以total为准
+     * @return DescribeQueuesResult
+     */
+    public DescribeQueuesResult totalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
 

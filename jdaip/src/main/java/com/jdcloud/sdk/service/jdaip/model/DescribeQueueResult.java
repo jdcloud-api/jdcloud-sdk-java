@@ -26,6 +26,8 @@ package com.jdcloud.sdk.service.jdaip.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.jdaip.model.GpuQuota;
+import com.jdcloud.sdk.service.jdaip.model.CpuQuota;
 import com.jdcloud.sdk.service.jdaip.model.RealTimeResourceStatisticsItem;
 import com.jdcloud.sdk.service.JdcloudResult;
 
@@ -60,6 +62,16 @@ public class DescribeQueueResult extends JdcloudResult implements java.io.Serial
      * 队列下任务的命名空间
      */
     private String namespace;
+
+    /**
+     * GPU资源配额信息；数值来自队列当前配额和使用情况
+     */
+    
+    private List<GpuQuota> gpuQuotas;
+    /**
+     * CPU和内存资源配额信息；CPU单位为核，内存单位为GiB
+     */
+    private CpuQuota cpuQuota;
 
     /**
      * 队列状态，
@@ -110,17 +122,9 @@ public class DescribeQueueResult extends JdcloudResult implements java.io.Serial
     private String desc;
 
     /**
-     * 队列类型，0：普通队列；1：安全队列，默认0
+     * 队列类型，common：普通队列；security：安全队列
      */
-    private Integer queueType;
-
-    /**
-     * 计费模式，创建时确定不可修改
-- 1 按量计费（不承诺配额，min 默认 0）
-- 2 按配置计费（强制 min&#x3D;max）
-
-     */
-    private Integer billingMode;
+    private String queueType;
 
     /**
      * 资源统计列表（CPU、内存、各GPU型号分类）
@@ -221,6 +225,44 @@ public class DescribeQueueResult extends JdcloudResult implements java.io.Serial
      */
     public void setNamespace(String namespace) {
         this.namespace = namespace;
+    }
+
+
+    /**
+    * get GPU资源配额信息；数值来自队列当前配额和使用情况
+    *
+    * @return
+    */
+    public List<GpuQuota> getGpuQuotas() {
+        return gpuQuotas;
+    }
+
+    /**
+    * set GPU资源配额信息；数值来自队列当前配额和使用情况
+    *
+    * @param gpuQuotas
+    */
+    public void setGpuQuotas(List<GpuQuota> gpuQuotas) {
+        this.gpuQuotas = gpuQuotas;
+    }
+
+
+    /**
+     * get CPU和内存资源配额信息；CPU单位为核，内存单位为GiB
+     *
+     * @return
+     */
+    public CpuQuota getCpuQuota() {
+        return cpuQuota;
+    }
+
+    /**
+     * set CPU和内存资源配额信息；CPU单位为核，内存单位为GiB
+     *
+     * @param cpuQuota
+     */
+    public void setCpuQuota(CpuQuota cpuQuota) {
+        this.cpuQuota = cpuQuota;
     }
 
 
@@ -393,46 +435,21 @@ public class DescribeQueueResult extends JdcloudResult implements java.io.Serial
 
 
     /**
-     * get 队列类型，0：普通队列；1：安全队列，默认0
+     * get 队列类型，common：普通队列；security：安全队列
      *
      * @return
      */
-    public Integer getQueueType() {
+    public String getQueueType() {
         return queueType;
     }
 
     /**
-     * set 队列类型，0：普通队列；1：安全队列，默认0
+     * set 队列类型，common：普通队列；security：安全队列
      *
      * @param queueType
      */
-    public void setQueueType(Integer queueType) {
+    public void setQueueType(String queueType) {
         this.queueType = queueType;
-    }
-
-
-    /**
-     * get 计费模式，创建时确定不可修改
-- 1 按量计费（不承诺配额，min 默认 0）
-- 2 按配置计费（强制 min&#x3D;max）
-
-     *
-     * @return
-     */
-    public Integer getBillingMode() {
-        return billingMode;
-    }
-
-    /**
-     * set 计费模式，创建时确定不可修改
-- 1 按量计费（不承诺配额，min 默认 0）
-- 2 按配置计费（强制 min&#x3D;max）
-
-     *
-     * @param billingMode
-     */
-    public void setBillingMode(Integer billingMode) {
-        this.billingMode = billingMode;
     }
 
 
@@ -512,6 +529,30 @@ public class DescribeQueueResult extends JdcloudResult implements java.io.Serial
      */
     public DescribeQueueResult namespace(String namespace) {
         this.namespace = namespace;
+        return this;
+    }
+
+
+    /**
+    * set GPU资源配额信息；数值来自队列当前配额和使用情况
+    *
+    * @param gpuQuotas GPU资源配额信息；数值来自队列当前配额和使用情况
+    * @return DescribeQueueResult
+    */
+    public DescribeQueueResult gpuQuotas(List<GpuQuota> gpuQuotas) {
+        this.gpuQuotas = gpuQuotas;
+        return this;
+    }
+
+
+    /**
+     * set CPU和内存资源配额信息；CPU单位为核，内存单位为GiB
+     *
+     * @param cpuQuota CPU和内存资源配额信息；CPU单位为核，内存单位为GiB
+     * @return DescribeQueueResult
+     */
+    public DescribeQueueResult cpuQuota(CpuQuota cpuQuota) {
+        this.cpuQuota = cpuQuota;
         return this;
     }
 
@@ -629,31 +670,13 @@ public class DescribeQueueResult extends JdcloudResult implements java.io.Serial
 
 
     /**
-     * set 队列类型，0：普通队列；1：安全队列，默认0
+     * set 队列类型，common：普通队列；security：安全队列
      *
-     * @param queueType 队列类型，0：普通队列；1：安全队列，默认0
+     * @param queueType 队列类型，common：普通队列；security：安全队列
      * @return DescribeQueueResult
      */
-    public DescribeQueueResult queueType(Integer queueType) {
+    public DescribeQueueResult queueType(String queueType) {
         this.queueType = queueType;
-        return this;
-    }
-
-
-    /**
-     * set 计费模式，创建时确定不可修改
-- 1 按量计费（不承诺配额，min 默认 0）
-- 2 按配置计费（强制 min&#x3D;max）
-
-     *
-     * @param billingMode 计费模式，创建时确定不可修改
-- 1 按量计费（不承诺配额，min 默认 0）
-- 2 按配置计费（强制 min&#x3D;max）
-
-     * @return DescribeQueueResult
-     */
-    public DescribeQueueResult billingMode(Integer billingMode) {
-        this.billingMode = billingMode;
         return this;
     }
 
@@ -670,6 +693,18 @@ public class DescribeQueueResult extends JdcloudResult implements java.io.Serial
     }
 
 
+
+    /**
+     * add item to GPU资源配额信息；数值来自队列当前配额和使用情况
+     *
+     * @param gpuQuota
+     */
+    public void addGpuQuota(GpuQuota gpuQuota) {
+        if (this.gpuQuotas == null) {
+            this.gpuQuotas = new ArrayList<>();
+        }
+        this.gpuQuotas.add(gpuQuota);
+    }
 
     /**
      * add item to 资源统计列表（CPU、内存、各GPU型号分类）

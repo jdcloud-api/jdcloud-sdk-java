@@ -190,6 +190,11 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
     
     private List<DatasetResultForJob> datasets;
     /**
+     * 科技数据集列表，返回训练容器的只读挂载及存储配置信息。
+     */
+    
+    private List<TechDatasetResultForJob> techDatasets;
+    /**
      * 模型。
      */
     
@@ -859,6 +864,25 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
     */
     public void setDatasets(List<DatasetResultForJob> datasets) {
         this.datasets = datasets;
+    }
+
+
+    /**
+    * get 科技数据集列表，返回训练容器的只读挂载及存储配置信息。
+    *
+    * @return
+    */
+    public List<TechDatasetResultForJob> getTechDatasets() {
+        return techDatasets;
+    }
+
+    /**
+    * set 科技数据集列表，返回训练容器的只读挂载及存储配置信息。
+    *
+    * @param techDatasets
+    */
+    public void setTechDatasets(List<TechDatasetResultForJob> techDatasets) {
+        this.techDatasets = techDatasets;
     }
 
 
@@ -1698,6 +1722,18 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
 
 
     /**
+    * set 科技数据集列表，返回训练容器的只读挂载及存储配置信息。
+    *
+    * @param techDatasets 科技数据集列表，返回训练容器的只读挂载及存储配置信息。
+    * @return JobDetailInfoForJob
+    */
+    public JobDetailInfoForJob techDatasets(List<TechDatasetResultForJob> techDatasets) {
+        this.techDatasets = techDatasets;
+        return this;
+    }
+
+
+    /**
     * set 模型。
     *
     * @param models 模型。
@@ -2038,6 +2074,18 @@ public class JobDetailInfoForJob  implements java.io.Serializable {
             this.datasets = new ArrayList<>();
         }
         this.datasets.add(dataset);
+    }
+
+    /**
+     * add item to 科技数据集列表，返回训练容器的只读挂载及存储配置信息。
+     *
+     * @param techDataset
+     */
+    public void addTechDataset(TechDatasetResultForJob techDataset) {
+        if (this.techDatasets == null) {
+            this.techDatasets = new ArrayList<>();
+        }
+        this.techDatasets.add(techDataset);
     }
 
     /**

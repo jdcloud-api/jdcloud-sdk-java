@@ -97,6 +97,11 @@ public class TechDatasetInfo  implements java.io.Serializable {
      */
     private String permission;
 
+    /**
+     * 是否可用：false表示不可用，dss数据集查不到
+     */
+    private Boolean isAvailable;
+
 
 
     /**
@@ -346,6 +351,25 @@ public class TechDatasetInfo  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 是否可用：false表示不可用，dss数据集查不到
+     *
+     * @return
+     */
+    public Boolean getIsAvailable() {
+        return isAvailable;
+    }
+
+    /**
+     * set 是否可用：false表示不可用，dss数据集查不到
+     *
+     * @param isAvailable
+     */
+    public void setIsAvailable(Boolean isAvailable) {
+        this.isAvailable = isAvailable;
+    }
+
+
 
     /**
      * set 数据集ID。示例：&quot;dst-*******&quot;
@@ -499,6 +523,18 @@ public class TechDatasetInfo  implements java.io.Serializable {
      */
     public TechDatasetInfo permission(String permission) {
         this.permission = permission;
+        return this;
+    }
+
+
+    /**
+     * set 是否可用：false表示不可用，dss数据集查不到
+     *
+     * @param isAvailable 是否可用：false表示不可用，dss数据集查不到
+     * @return TechDatasetInfo
+     */
+    public TechDatasetInfo isAvailable(Boolean isAvailable) {
+        this.isAvailable = isAvailable;
         return this;
     }
 
