@@ -33,6 +33,7 @@
     </license>
   </licenses>
   <scm>
+
     <url>https://github.com/jdcloud-api/jdcloud-sdk-java</url>
     <connection>https://github.com/jdcloud-api/jdcloud-sdk-java.git</connection>
   </scm>
