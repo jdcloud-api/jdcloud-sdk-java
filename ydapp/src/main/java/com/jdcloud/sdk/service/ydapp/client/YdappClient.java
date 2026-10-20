@@ -82,6 +82,9 @@ import com.jdcloud.sdk.service.ydapp.client.DescribeClusterAddonsExecutor;
 import com.jdcloud.sdk.service.ydapp.model.DeleteAppRequest;
 import com.jdcloud.sdk.service.ydapp.model.DeleteAppResponse;
 import com.jdcloud.sdk.service.ydapp.client.DeleteAppExecutor;
+import com.jdcloud.sdk.service.ydapp.model.AnalysisRequest;
+import com.jdcloud.sdk.service.ydapp.model.AnalysisResponse;
+import com.jdcloud.sdk.service.ydapp.client.AnalysisExecutor;
 import com.jdcloud.sdk.service.ydapp.model.OpenAppImageAutoDeleteRequest;
 import com.jdcloud.sdk.service.ydapp.model.OpenAppImageAutoDeleteResponse;
 import com.jdcloud.sdk.service.ydapp.client.OpenAppImageAutoDeleteExecutor;
@@ -169,6 +172,9 @@ import com.jdcloud.sdk.service.ydapp.client.DescribeSystemExecutor;
 import com.jdcloud.sdk.service.ydapp.model.LinkPackageRequest;
 import com.jdcloud.sdk.service.ydapp.model.LinkPackageResponse;
 import com.jdcloud.sdk.service.ydapp.client.LinkPackageExecutor;
+import com.jdcloud.sdk.service.ydapp.model.SearchLogsRequest;
+import com.jdcloud.sdk.service.ydapp.model.SearchLogsResponse;
+import com.jdcloud.sdk.service.ydapp.client.SearchLogsExecutor;
 import com.jdcloud.sdk.service.ydapp.model.DeleteCustomImageRequest;
 import com.jdcloud.sdk.service.ydapp.model.DeleteCustomImageResponse;
 import com.jdcloud.sdk.service.ydapp.client.DeleteCustomImageExecutor;
@@ -479,6 +485,17 @@ public class YdappClient extends JdcloudClient {
      */
     public DeleteAppResponse deleteApp(DeleteAppRequest request) throws JdcloudSdkException {
         return new DeleteAppExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 按日志集、日志主题对日志做分析统计
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AnalysisResponse analysis(AnalysisRequest request) throws JdcloudSdkException {
+        return new AnalysisExecutor().client(this).execute(request);
     }
 
     /**
@@ -798,6 +815,17 @@ public class YdappClient extends JdcloudClient {
      */
     public LinkPackageResponse linkPackage(LinkPackageRequest request) throws JdcloudSdkException {
         return new LinkPackageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 检索指定日志集、日志主题下的日志，支持预览、全文检索和按检索语句检索
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SearchLogsResponse searchLogs(SearchLogsRequest request) throws JdcloudSdkException {
+        return new SearchLogsExecutor().client(this).execute(request);
     }
 
     /**
