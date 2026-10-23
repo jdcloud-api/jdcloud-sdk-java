@@ -90,7 +90,8 @@ public class DescribePermissionsResult extends JdcloudResult implements java.io.
     /**
      * set 总数
      *
-     * @param total
+     * @param total 总数
+     * @return DescribePermissionsResult
      */
     public DescribePermissionsResult total(Integer total) {
         this.total = total;
@@ -101,7 +102,8 @@ public class DescribePermissionsResult extends JdcloudResult implements java.io.
     /**
     * set permissions
     *
-    * @param permissions
+    * @param permissions 
+    * @return DescribePermissionsResult
     */
     public DescribePermissionsResult permissions(List<Permission> permissions) {
         this.permissions = permissions;

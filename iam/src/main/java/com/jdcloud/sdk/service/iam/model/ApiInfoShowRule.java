@@ -117,7 +117,8 @@ public class ApiInfoShowRule  implements java.io.Serializable {
     /**
      * set showCreateByPolicy
      *
-     * @param showCreateByPolicy
+     * @param showCreateByPolicy 
+     * @return ApiInfoShowRule
      */
     public ApiInfoShowRule showCreateByPolicy(Boolean showCreateByPolicy) {
         this.showCreateByPolicy = showCreateByPolicy;
@@ -128,7 +129,8 @@ public class ApiInfoShowRule  implements java.io.Serializable {
     /**
      * set showCreateByTag
      *
-     * @param showCreateByTag
+     * @param showCreateByTag 
+     * @return ApiInfoShowRule
      */
     public ApiInfoShowRule showCreateByTag(Boolean showCreateByTag) {
         this.showCreateByTag = showCreateByTag;
@@ -139,7 +141,8 @@ public class ApiInfoShowRule  implements java.io.Serializable {
     /**
      * set showCreateByBusiness
      *
-     * @param showCreateByBusiness
+     * @param showCreateByBusiness 
+     * @return ApiInfoShowRule
      */
     public ApiInfoShowRule showCreateByBusiness(Boolean showCreateByBusiness) {
         this.showCreateByBusiness = showCreateByBusiness;

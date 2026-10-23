@@ -66,7 +66,8 @@ public class CreateRoleResult extends JdcloudResult implements java.io.Serializa
     /**
      * set 角色信息
      *
-     * @param roleInfo
+     * @param roleInfo 角色信息
+     * @return CreateRoleResult
      */
     public CreateRoleResult roleInfo(RoleInfo roleInfo) {
         this.roleInfo = roleInfo;

@@ -182,7 +182,8 @@ public class RolePolicy  implements java.io.Serializable {
     /**
      * set 策略id
      *
-     * @param policyId
+     * @param policyId 策略id
+     * @return RolePolicy
      */
     public RolePolicy policyId(String policyId) {
         this.policyId = policyId;
@@ -193,7 +194,8 @@ public class RolePolicy  implements java.io.Serializable {
     /**
      * set 策略名称
      *
-     * @param policyName
+     * @param policyName 策略名称
+     * @return RolePolicy
      */
     public RolePolicy policyName(String policyName) {
         this.policyName = policyName;
@@ -204,7 +206,8 @@ public class RolePolicy  implements java.io.Serializable {
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return RolePolicy
      */
     public RolePolicy description(String description) {
         this.description = description;
@@ -215,7 +218,8 @@ public class RolePolicy  implements java.io.Serializable {
     /**
      * set 策略类型：0-系统策略，1-用户策略
      *
-     * @param type
+     * @param type 策略类型：0-系统策略，1-用户策略
+     * @return RolePolicy
      */
     public RolePolicy type(Integer type) {
         this.type = type;
@@ -226,7 +230,8 @@ public class RolePolicy  implements java.io.Serializable {
     /**
      * set 京东云策略资源描述
      *
-     * @param policyJrn
+     * @param policyJrn 京东云策略资源描述
+     * @return RolePolicy
      */
     public RolePolicy policyJrn(String policyJrn) {
         this.policyJrn = policyJrn;
@@ -237,7 +242,8 @@ public class RolePolicy  implements java.io.Serializable {
     /**
      * set 授权范围类型：1-全部资源，2-指定资源
      *
-     * @param scopeType
+     * @param scopeType 授权范围类型：1-全部资源，2-指定资源
+     * @return RolePolicy
      */
     public RolePolicy scopeType(Integer scopeType) {
         this.scopeType = scopeType;

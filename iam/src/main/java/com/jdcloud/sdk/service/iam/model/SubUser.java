@@ -77,6 +77,31 @@ public class SubUser  implements java.io.Serializable {
      */
     private String nickName;
 
+    /**
+     * 创建方式
+     */
+    private String createType;
+
+    /**
+     * 用户所在组织id
+     */
+    private String orgId;
+
+    /**
+     * 用户所在组织名称
+     */
+    private String orgName;
+
+    /**
+     * 用户所在组织路径
+     */
+    private String orgPath;
+
+    /**
+     * 操作者
+     */
+    private String operator;
+
 
 
     /**
@@ -250,11 +275,107 @@ public class SubUser  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 创建方式
+     *
+     * @return
+     */
+    public String getCreateType() {
+        return createType;
+    }
+
+    /**
+     * set 创建方式
+     *
+     * @param createType
+     */
+    public void setCreateType(String createType) {
+        this.createType = createType;
+    }
+
+
+    /**
+     * get 用户所在组织id
+     *
+     * @return
+     */
+    public String getOrgId() {
+        return orgId;
+    }
+
+    /**
+     * set 用户所在组织id
+     *
+     * @param orgId
+     */
+    public void setOrgId(String orgId) {
+        this.orgId = orgId;
+    }
+
+
+    /**
+     * get 用户所在组织名称
+     *
+     * @return
+     */
+    public String getOrgName() {
+        return orgName;
+    }
+
+    /**
+     * set 用户所在组织名称
+     *
+     * @param orgName
+     */
+    public void setOrgName(String orgName) {
+        this.orgName = orgName;
+    }
+
+
+    /**
+     * get 用户所在组织路径
+     *
+     * @return
+     */
+    public String getOrgPath() {
+        return orgPath;
+    }
+
+    /**
+     * set 用户所在组织路径
+     *
+     * @param orgPath
+     */
+    public void setOrgPath(String orgPath) {
+        this.orgPath = orgPath;
+    }
+
+
+    /**
+     * get 操作者
+     *
+     * @return
+     */
+    public String getOperator() {
+        return operator;
+    }
+
+    /**
+     * set 操作者
+     *
+     * @param operator
+     */
+    public void setOperator(String operator) {
+        this.operator = operator;
+    }
+
+
 
     /**
      * set 用户pin
      *
-     * @param pin
+     * @param pin 用户pin
+     * @return SubUser
      */
     public SubUser pin(String pin) {
         this.pin = pin;
@@ -265,7 +386,8 @@ public class SubUser  implements java.io.Serializable {
     /**
      * set 用户名
      *
-     * @param name
+     * @param name 用户名
+     * @return SubUser
      */
     public SubUser name(String name) {
         this.name = name;
@@ -276,7 +398,8 @@ public class SubUser  implements java.io.Serializable {
     /**
      * set 手机号码
      *
-     * @param phone
+     * @param phone 手机号码
+     * @return SubUser
      */
     public SubUser phone(String phone) {
         this.phone = phone;
@@ -287,7 +410,8 @@ public class SubUser  implements java.io.Serializable {
     /**
      * set 邮箱
      *
-     * @param email
+     * @param email 邮箱
+     * @return SubUser
      */
     public SubUser email(String email) {
         this.email = email;
@@ -298,7 +422,8 @@ public class SubUser  implements java.io.Serializable {
     /**
      * set 描述信息
      *
-     * @param description
+     * @param description 描述信息
+     * @return SubUser
      */
     public SubUser description(String description) {
         this.description = description;
@@ -309,7 +434,8 @@ public class SubUser  implements java.io.Serializable {
     /**
      * set 主账号
      *
-     * @param account
+     * @param account 主账号
+     * @return SubUser
      */
     public SubUser account(String account) {
         this.account = account;
@@ -320,7 +446,8 @@ public class SubUser  implements java.io.Serializable {
     /**
      * set 用户创建时间
      *
-     * @param createTime
+     * @param createTime 用户创建时间
+     * @return SubUser
      */
     public SubUser createTime(String createTime) {
         this.createTime = createTime;
@@ -331,7 +458,8 @@ public class SubUser  implements java.io.Serializable {
     /**
      * set 用户更新时间
      *
-     * @param updateTime
+     * @param updateTime 用户更新时间
+     * @return SubUser
      */
     public SubUser updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -342,10 +470,71 @@ public class SubUser  implements java.io.Serializable {
     /**
      * set 姓名
      *
-     * @param nickName
+     * @param nickName 姓名
+     * @return SubUser
      */
     public SubUser nickName(String nickName) {
         this.nickName = nickName;
+        return this;
+    }
+
+
+    /**
+     * set 创建方式
+     *
+     * @param createType 创建方式
+     * @return SubUser
+     */
+    public SubUser createType(String createType) {
+        this.createType = createType;
+        return this;
+    }
+
+
+    /**
+     * set 用户所在组织id
+     *
+     * @param orgId 用户所在组织id
+     * @return SubUser
+     */
+    public SubUser orgId(String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+
+
+    /**
+     * set 用户所在组织名称
+     *
+     * @param orgName 用户所在组织名称
+     * @return SubUser
+     */
+    public SubUser orgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
+
+
+    /**
+     * set 用户所在组织路径
+     *
+     * @param orgPath 用户所在组织路径
+     * @return SubUser
+     */
+    public SubUser orgPath(String orgPath) {
+        this.orgPath = orgPath;
+        return this;
+    }
+
+
+    /**
+     * set 操作者
+     *
+     * @param operator 操作者
+     * @return SubUser
+     */
+    public SubUser operator(String operator) {
+        this.operator = operator;
         return this;
     }
 

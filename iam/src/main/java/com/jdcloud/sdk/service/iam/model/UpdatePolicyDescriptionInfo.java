@@ -65,7 +65,8 @@ public class UpdatePolicyDescriptionInfo  implements java.io.Serializable {
     /**
      * set 描述，0~256个字符
      *
-     * @param description
+     * @param description 描述，0~256个字符
+     * @return UpdatePolicyDescriptionInfo
      */
     public UpdatePolicyDescriptionInfo description(String description) {
         this.description = description;

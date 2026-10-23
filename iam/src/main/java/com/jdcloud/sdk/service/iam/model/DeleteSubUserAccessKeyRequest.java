@@ -93,7 +93,8 @@ public class DeleteSubUserAccessKeyRequest extends JdcloudRequest implements jav
     /**
      * set 子用户名称
      *
-     * @param subUser
+     * @param subUser 子用户名称
+     * @return DeleteSubUserAccessKeyRequest
      */
     public DeleteSubUserAccessKeyRequest subUser(String subUser) {
         this.subUser = subUser;
@@ -104,7 +105,8 @@ public class DeleteSubUserAccessKeyRequest extends JdcloudRequest implements jav
     /**
      * set accessKey
      *
-     * @param accessKey
+     * @param accessKey accessKey
+     * @return DeleteSubUserAccessKeyRequest
      */
     public DeleteSubUserAccessKeyRequest accessKey(String accessKey) {
         this.accessKey = accessKey;

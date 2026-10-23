@@ -116,7 +116,8 @@ public class DescribeRolePoliciesScopeRequest extends JdcloudRequest implements 
     /**
      * set 策略ID
      *
-     * @param policyID
+     * @param policyID 策略ID
+     * @return DescribeRolePoliciesScopeRequest
      */
     public DescribeRolePoliciesScopeRequest policyID(String policyID) {
         this.policyID = policyID;
@@ -127,7 +128,8 @@ public class DescribeRolePoliciesScopeRequest extends JdcloudRequest implements 
     /**
      * set 滤绑定策略资源组：&quot;Deny&quot; 不允许，Allow 允许，空情况默认不允许，兼容历史数据
      *
-     * @param filterBindResGroup
+     * @param filterBindResGroup 滤绑定策略资源组：&quot;Deny&quot; 不允许，Allow 允许，空情况默认不允许，兼容历史数据
+     * @return DescribeRolePoliciesScopeRequest
      */
     public DescribeRolePoliciesScopeRequest filterBindResGroup(String filterBindResGroup) {
         this.filterBindResGroup = filterBindResGroup;
@@ -138,7 +140,8 @@ public class DescribeRolePoliciesScopeRequest extends JdcloudRequest implements 
     /**
      * set 角色名称
      *
-     * @param roleName
+     * @param roleName 角色名称
+     * @return DescribeRolePoliciesScopeRequest
      */
     public DescribeRolePoliciesScopeRequest roleName(String roleName) {
         this.roleName = roleName;

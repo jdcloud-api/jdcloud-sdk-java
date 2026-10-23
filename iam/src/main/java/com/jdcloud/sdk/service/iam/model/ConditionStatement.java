@@ -64,7 +64,8 @@ public class ConditionStatement  implements java.io.Serializable {
     /**
     * set ConditionMapping列表，ConditionStatement 之间是“或”关系，同一个ConditionStatement下ConditionMapping是“且”关系，同一个ConditionMapping下多个value是“或”关系
     *
-    * @param conditionMappings
+    * @param conditionMappings ConditionMapping列表，ConditionStatement 之间是“或”关系，同一个ConditionStatement下ConditionMapping是“且”关系，同一个ConditionMapping下多个value是“或”关系
+    * @return ConditionStatement
     */
     public ConditionStatement conditionMappings(List<ConditionMappingVo> conditionMappings) {
         this.conditionMappings = conditionMappings;

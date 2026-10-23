@@ -93,7 +93,8 @@ public class DeleteUserAccessKeyRequest extends JdcloudRequest implements java.i
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DeleteUserAccessKeyRequest
      */
     public DeleteUserAccessKeyRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -104,7 +105,8 @@ public class DeleteUserAccessKeyRequest extends JdcloudRequest implements java.i
     /**
      * set accessKey
      *
-     * @param accessKey
+     * @param accessKey accessKey
+     * @return DeleteUserAccessKeyRequest
      */
     public DeleteUserAccessKeyRequest accessKey(String accessKey) {
         this.accessKey = accessKey;

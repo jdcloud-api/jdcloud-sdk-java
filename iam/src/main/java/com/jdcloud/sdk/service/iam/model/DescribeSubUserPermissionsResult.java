@@ -90,7 +90,8 @@ public class DescribeSubUserPermissionsResult extends JdcloudResult implements j
     /**
      * set 总数
      *
-     * @param total
+     * @param total 总数
+     * @return DescribeSubUserPermissionsResult
      */
     public DescribeSubUserPermissionsResult total(Integer total) {
         this.total = total;
@@ -101,7 +102,8 @@ public class DescribeSubUserPermissionsResult extends JdcloudResult implements j
     /**
     * set permissions
     *
-    * @param permissions
+    * @param permissions 
+    * @return DescribeSubUserPermissionsResult
     */
     public DescribeSubUserPermissionsResult permissions(List<Permission> permissions) {
         this.permissions = permissions;

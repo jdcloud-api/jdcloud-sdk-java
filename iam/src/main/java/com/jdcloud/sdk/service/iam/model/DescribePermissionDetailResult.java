@@ -64,7 +64,8 @@ public class DescribePermissionDetailResult extends JdcloudResult implements jav
     /**
      * set 权限信息
      *
-     * @param permission
+     * @param permission 权限信息
+     * @return DescribePermissionDetailResult
      */
     public DescribePermissionDetailResult permission(Permission permission) {
         this.permission = permission;

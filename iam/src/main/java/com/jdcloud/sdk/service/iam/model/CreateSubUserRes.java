@@ -77,6 +77,11 @@ public class CreateSubUserRes  implements java.io.Serializable {
      */
     private String nickName;
 
+    /**
+     * 子用户pin
+     */
+    private String pin;
+
 
 
     /**
@@ -250,11 +255,31 @@ public class CreateSubUserRes  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 子用户pin
+     *
+     * @return
+     */
+    public String getPin() {
+        return pin;
+    }
+
+    /**
+     * set 子用户pin
+     *
+     * @param pin
+     */
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
+
+
 
     /**
      * set 用户名
      *
-     * @param name
+     * @param name 用户名
+     * @return CreateSubUserRes
      */
     public CreateSubUserRes name(String name) {
         this.name = name;
@@ -265,7 +290,8 @@ public class CreateSubUserRes  implements java.io.Serializable {
     /**
      * set 密码
      *
-     * @param password
+     * @param password 密码
+     * @return CreateSubUserRes
      */
     public CreateSubUserRes password(String password) {
         this.password = password;
@@ -276,7 +302,8 @@ public class CreateSubUserRes  implements java.io.Serializable {
     /**
      * set 邮箱
      *
-     * @param email
+     * @param email 邮箱
+     * @return CreateSubUserRes
      */
     public CreateSubUserRes email(String email) {
         this.email = email;
@@ -287,7 +314,8 @@ public class CreateSubUserRes  implements java.io.Serializable {
     /**
      * set 手机号码
      *
-     * @param phone
+     * @param phone 手机号码
+     * @return CreateSubUserRes
      */
     public CreateSubUserRes phone(String phone) {
         this.phone = phone;
@@ -298,7 +326,8 @@ public class CreateSubUserRes  implements java.io.Serializable {
     /**
      * set accessKey
      *
-     * @param accessKey
+     * @param accessKey accessKey
+     * @return CreateSubUserRes
      */
     public CreateSubUserRes accessKey(String accessKey) {
         this.accessKey = accessKey;
@@ -309,7 +338,8 @@ public class CreateSubUserRes  implements java.io.Serializable {
     /**
      * set AccessKey secret
      *
-     * @param secretAccessKey
+     * @param secretAccessKey AccessKey secret
+     * @return CreateSubUserRes
      */
     public CreateSubUserRes secretAccessKey(String secretAccessKey) {
         this.secretAccessKey = secretAccessKey;
@@ -320,7 +350,8 @@ public class CreateSubUserRes  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return CreateSubUserRes
      */
     public CreateSubUserRes createTime(String createTime) {
         this.createTime = createTime;
@@ -331,7 +362,8 @@ public class CreateSubUserRes  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return CreateSubUserRes
      */
     public CreateSubUserRes updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -342,10 +374,23 @@ public class CreateSubUserRes  implements java.io.Serializable {
     /**
      * set 姓名
      *
-     * @param nickName
+     * @param nickName 姓名
+     * @return CreateSubUserRes
      */
     public CreateSubUserRes nickName(String nickName) {
         this.nickName = nickName;
+        return this;
+    }
+
+
+    /**
+     * set 子用户pin
+     *
+     * @param pin 子用户pin
+     * @return CreateSubUserRes
+     */
+    public CreateSubUserRes pin(String pin) {
+        this.pin = pin;
         return this;
     }
 

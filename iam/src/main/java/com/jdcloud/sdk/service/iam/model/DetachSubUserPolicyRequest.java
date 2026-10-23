@@ -140,7 +140,8 @@ public class DetachSubUserPolicyRequest extends JdcloudRequest implements java.i
     /**
      * set 策略名称
      *
-     * @param policyName
+     * @param policyName 策略名称
+     * @return DetachSubUserPolicyRequest
      */
     public DetachSubUserPolicyRequest policyName(String policyName) {
         this.policyName = policyName;
@@ -151,7 +152,8 @@ public class DetachSubUserPolicyRequest extends JdcloudRequest implements java.i
     /**
      * set 资源组id
      *
-     * @param scopeId
+     * @param scopeId 资源组id
+     * @return DetachSubUserPolicyRequest
      */
     public DetachSubUserPolicyRequest scopeId(String scopeId) {
         this.scopeId = scopeId;
@@ -162,7 +164,8 @@ public class DetachSubUserPolicyRequest extends JdcloudRequest implements java.i
     /**
      * set 允许解除策略：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
      *
-     * @param allowDetachAddPolicy
+     * @param allowDetachAddPolicy 允许解除策略：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     * @return DetachSubUserPolicyRequest
      */
     public DetachSubUserPolicyRequest allowDetachAddPolicy(String allowDetachAddPolicy) {
         this.allowDetachAddPolicy = allowDetachAddPolicy;
@@ -173,7 +176,8 @@ public class DetachSubUserPolicyRequest extends JdcloudRequest implements java.i
     /**
      * set 子用户名
      *
-     * @param subUser
+     * @param subUser 子用户名
+     * @return DetachSubUserPolicyRequest
      */
     public DetachSubUserPolicyRequest subUser(String subUser) {
         this.subUser = subUser;

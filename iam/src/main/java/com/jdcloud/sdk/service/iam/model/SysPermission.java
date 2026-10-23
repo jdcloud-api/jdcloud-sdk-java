@@ -431,7 +431,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return SysPermission
      */
     public SysPermission id(Integer id) {
         this.id = id;
@@ -442,7 +443,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
      * set policyId
      *
-     * @param policyId
+     * @param policyId 
+     * @return SysPermission
      */
     public SysPermission policyId(String policyId) {
         this.policyId = policyId;
@@ -453,7 +455,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
      * set name
      *
-     * @param name
+     * @param name 
+     * @return SysPermission
      */
     public SysPermission name(String name) {
         this.name = name;
@@ -464,7 +467,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
      * set description
      *
-     * @param description
+     * @param description 
+     * @return SysPermission
      */
     public SysPermission description(String description) {
         this.description = description;
@@ -475,7 +479,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
      * set status
      *
-     * @param status
+     * @param status 
+     * @return SysPermission
      */
     public SysPermission status(Integer status) {
         this.status = status;
@@ -486,7 +491,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
      * set version
      *
-     * @param version
+     * @param version 
+     * @return SysPermission
      */
     public SysPermission version(Integer version) {
         this.version = version;
@@ -497,7 +503,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
      * set content
      *
-     * @param content
+     * @param content 
+     * @return SysPermission
      */
     public SysPermission content(String content) {
         this.content = content;
@@ -508,7 +515,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
      * set createTime
      *
-     * @param createTime
+     * @param createTime 
+     * @return SysPermission
      */
     public SysPermission createTime(String createTime) {
         this.createTime = createTime;
@@ -519,7 +527,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
      * set createBy
      *
-     * @param createBy
+     * @param createBy 
+     * @return SysPermission
      */
     public SysPermission createBy(Integer createBy) {
         this.createBy = createBy;
@@ -530,7 +539,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
      * set createByErp
      *
-     * @param createByErp
+     * @param createByErp 
+     * @return SysPermission
      */
     public SysPermission createByErp(String createByErp) {
         this.createByErp = createByErp;
@@ -541,7 +551,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
      * set updateTime
      *
-     * @param updateTime
+     * @param updateTime 
+     * @return SysPermission
      */
     public SysPermission updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -552,7 +563,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
      * set updateBy
      *
-     * @param updateBy
+     * @param updateBy 
+     * @return SysPermission
      */
     public SysPermission updateBy(Integer updateBy) {
         this.updateBy = updateBy;
@@ -563,7 +575,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
      * set updateByErp
      *
-     * @param updateByErp
+     * @param updateByErp 
+     * @return SysPermission
      */
     public SysPermission updateByErp(String updateByErp) {
         this.updateByErp = updateByErp;
@@ -574,7 +587,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
     * set menuInfo
     *
-    * @param menuInfo
+    * @param menuInfo 
+    * @return SysPermission
     */
     public SysPermission menuInfo(List<SysPermissionMenuVo> menuInfo) {
         this.menuInfo = menuInfo;
@@ -585,7 +599,8 @@ public class SysPermission  implements java.io.Serializable {
     /**
      * set erp
      *
-     * @param erp
+     * @param erp 
+     * @return SysPermission
      */
     public SysPermission erp(String erp) {
         this.erp = erp;

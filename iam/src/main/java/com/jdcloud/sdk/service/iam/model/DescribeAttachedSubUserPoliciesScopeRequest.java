@@ -116,7 +116,8 @@ public class DescribeAttachedSubUserPoliciesScopeRequest extends JdcloudRequest 
     /**
      * set 策略ID
      *
-     * @param policyID
+     * @param policyID 策略ID
+     * @return DescribeAttachedSubUserPoliciesScopeRequest
      */
     public DescribeAttachedSubUserPoliciesScopeRequest policyID(String policyID) {
         this.policyID = policyID;
@@ -127,7 +128,8 @@ public class DescribeAttachedSubUserPoliciesScopeRequest extends JdcloudRequest 
     /**
      * set 滤绑定策略资源组：&quot;Deny&quot; 不允许，Allow 允许，空情况默认不允许，兼容历史数据
      *
-     * @param filterBindResGroup
+     * @param filterBindResGroup 滤绑定策略资源组：&quot;Deny&quot; 不允许，Allow 允许，空情况默认不允许，兼容历史数据
+     * @return DescribeAttachedSubUserPoliciesScopeRequest
      */
     public DescribeAttachedSubUserPoliciesScopeRequest filterBindResGroup(String filterBindResGroup) {
         this.filterBindResGroup = filterBindResGroup;
@@ -138,7 +140,8 @@ public class DescribeAttachedSubUserPoliciesScopeRequest extends JdcloudRequest 
     /**
      * set 子用户名
      *
-     * @param subUser
+     * @param subUser 子用户名
+     * @return DescribeAttachedSubUserPoliciesScopeRequest
      */
     public DescribeAttachedSubUserPoliciesScopeRequest subUser(String subUser) {
         this.subUser = subUser;

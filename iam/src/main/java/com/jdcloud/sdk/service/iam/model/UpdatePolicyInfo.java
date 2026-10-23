@@ -65,7 +65,8 @@ public class UpdatePolicyInfo  implements java.io.Serializable {
     /**
      * set 权限策略信息详情，最多6144个字符
      *
-     * @param content
+     * @param content 权限策略信息详情，最多6144个字符
+     * @return UpdatePolicyInfo
      */
     public UpdatePolicyInfo content(String content) {
         this.content = content;

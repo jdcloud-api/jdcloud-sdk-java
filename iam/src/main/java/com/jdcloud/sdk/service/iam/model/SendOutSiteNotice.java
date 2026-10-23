@@ -219,7 +219,8 @@ public class SendOutSiteNotice  implements java.io.Serializable {
     /**
      * set 用户pin
      *
-     * @param pin
+     * @param pin 用户pin
+     * @return SendOutSiteNotice
      */
     public SendOutSiteNotice pin(String pin) {
         this.pin = pin;
@@ -230,7 +231,8 @@ public class SendOutSiteNotice  implements java.io.Serializable {
     /**
      * set 邮件标题
      *
-     * @param emailSubject
+     * @param emailSubject 邮件标题
+     * @return SendOutSiteNotice
      */
     public SendOutSiteNotice emailSubject(String emailSubject) {
         this.emailSubject = emailSubject;
@@ -241,7 +243,8 @@ public class SendOutSiteNotice  implements java.io.Serializable {
     /**
      * set 邮件内容
      *
-     * @param emailContent
+     * @param emailContent 邮件内容
+     * @return SendOutSiteNotice
      */
     public SendOutSiteNotice emailContent(String emailContent) {
         this.emailContent = emailContent;
@@ -252,7 +255,8 @@ public class SendOutSiteNotice  implements java.io.Serializable {
     /**
      * set 消息类型
      *
-     * @param notifyBusinessTypeEnum
+     * @param notifyBusinessTypeEnum 消息类型
+     * @return SendOutSiteNotice
      */
     public SendOutSiteNotice notifyBusinessTypeEnum(String notifyBusinessTypeEnum) {
         this.notifyBusinessTypeEnum = notifyBusinessTypeEnum;
@@ -263,7 +267,8 @@ public class SendOutSiteNotice  implements java.io.Serializable {
     /**
      * set 模版code
      *
-     * @param templateId
+     * @param templateId 模版code
+     * @return SendOutSiteNotice
      */
     public SendOutSiteNotice templateId(Integer templateId) {
         this.templateId = templateId;
@@ -274,7 +279,8 @@ public class SendOutSiteNotice  implements java.io.Serializable {
     /**
     * set 模版参数
     *
-    * @param templateParam
+    * @param templateParam 模版参数
+    * @return SendOutSiteNotice
     */
     public SendOutSiteNotice templateParam(List<String> templateParam) {
         this.templateParam = templateParam;
@@ -285,7 +291,8 @@ public class SendOutSiteNotice  implements java.io.Serializable {
     /**
      * set 业务编码(和产品申请)
      *
-     * @param smsMessageSource
+     * @param smsMessageSource 业务编码(和产品申请)
+     * @return SendOutSiteNotice
      */
     public SendOutSiteNotice smsMessageSource(String smsMessageSource) {
         this.smsMessageSource = smsMessageSource;

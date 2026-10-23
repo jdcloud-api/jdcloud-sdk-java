@@ -158,7 +158,8 @@ public class OrganizationUserRelation  implements java.io.Serializable {
     /**
      * set 组织ID
      *
-     * @param orgId
+     * @param orgId 组织ID
+     * @return OrganizationUserRelation
      */
     public OrganizationUserRelation orgId(String orgId) {
         this.orgId = orgId;
@@ -169,7 +170,8 @@ public class OrganizationUserRelation  implements java.io.Serializable {
     /**
      * set 组织用户标识，如：erp
      *
-     * @param userId
+     * @param userId 组织用户标识，如：erp
+     * @return OrganizationUserRelation
      */
     public OrganizationUserRelation userId(String userId) {
         this.userId = userId;
@@ -180,7 +182,8 @@ public class OrganizationUserRelation  implements java.io.Serializable {
     /**
      * set 关联的子用户名
      *
-     * @param subUserName
+     * @param subUserName 关联的子用户名
+     * @return OrganizationUserRelation
      */
     public OrganizationUserRelation subUserName(String subUserName) {
         this.subUserName = subUserName;
@@ -191,7 +194,8 @@ public class OrganizationUserRelation  implements java.io.Serializable {
     /**
      * set 组织部门路径名称
      *
-     * @param departmentPathName
+     * @param departmentPathName 组织部门路径名称
+     * @return OrganizationUserRelation
      */
     public OrganizationUserRelation departmentPathName(String departmentPathName) {
         this.departmentPathName = departmentPathName;
@@ -202,7 +206,8 @@ public class OrganizationUserRelation  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return OrganizationUserRelation
      */
     public OrganizationUserRelation createTime(String createTime) {
         this.createTime = createTime;

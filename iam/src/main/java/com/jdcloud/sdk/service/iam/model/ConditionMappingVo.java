@@ -88,7 +88,8 @@ public class ConditionMappingVo  implements java.io.Serializable {
     /**
      * set 条件键Key
      *
-     * @param conditionKey
+     * @param conditionKey 条件键Key
+     * @return ConditionMappingVo
      */
     public ConditionMappingVo conditionKey(String conditionKey) {
         this.conditionKey = conditionKey;
@@ -99,7 +100,8 @@ public class ConditionMappingVo  implements java.io.Serializable {
     /**
     * set 符合条件键的值列表
     *
-    * @param values
+    * @param values 符合条件键的值列表
+    * @return ConditionMappingVo
     */
     public ConditionMappingVo values(List<String> values) {
         this.values = values;

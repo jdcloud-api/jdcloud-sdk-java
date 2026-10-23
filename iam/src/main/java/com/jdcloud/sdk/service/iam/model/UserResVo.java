@@ -278,7 +278,8 @@ public class UserResVo  implements java.io.Serializable {
     /**
      * set 用户pin
      *
-     * @param pin
+     * @param pin 用户pin
+     * @return UserResVo
      */
     public UserResVo pin(String pin) {
         this.pin = pin;
@@ -289,7 +290,8 @@ public class UserResVo  implements java.io.Serializable {
     /**
      * set 用户手机号
      *
-     * @param cscPhone
+     * @param cscPhone 用户手机号
+     * @return UserResVo
      */
     public UserResVo cscPhone(String cscPhone) {
         this.cscPhone = cscPhone;
@@ -300,7 +302,8 @@ public class UserResVo  implements java.io.Serializable {
     /**
      * set 用户邮箱
      *
-     * @param cscEmail
+     * @param cscEmail 用户邮箱
+     * @return UserResVo
      */
     public UserResVo cscEmail(String cscEmail) {
         this.cscEmail = cscEmail;
@@ -311,7 +314,8 @@ public class UserResVo  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return UserResVo
      */
     public UserResVo createTime(String createTime) {
         this.createTime = createTime;
@@ -322,7 +326,8 @@ public class UserResVo  implements java.io.Serializable {
     /**
      * set 用户类型
      *
-     * @param userType
+     * @param userType 用户类型
+     * @return UserResVo
      */
     public UserResVo userType(Integer userType) {
         this.userType = userType;
@@ -333,7 +338,8 @@ public class UserResVo  implements java.io.Serializable {
     /**
      * set 公司名
      *
-     * @param companyName
+     * @param companyName 公司名
+     * @return UserResVo
      */
     public UserResVo companyName(String companyName) {
         this.companyName = companyName;
@@ -344,7 +350,8 @@ public class UserResVo  implements java.io.Serializable {
     /**
      * set 姓名
      *
-     * @param name
+     * @param name 姓名
+     * @return UserResVo
      */
     public UserResVo name(String name) {
         this.name = name;
@@ -355,7 +362,8 @@ public class UserResVo  implements java.io.Serializable {
     /**
      * set 欠费时间
      *
-     * @param arrearageTime
+     * @param arrearageTime 欠费时间
+     * @return UserResVo
      */
     public UserResVo arrearageTime(String arrearageTime) {
         this.arrearageTime = arrearageTime;
@@ -366,7 +374,8 @@ public class UserResVo  implements java.io.Serializable {
     /**
      * set 用户标签：
      *
-     * @param userTagObject
+     * @param userTagObject 用户标签：
+     * @return UserResVo
      */
     public UserResVo userTagObject(Flags userTagObject) {
         this.userTagObject = userTagObject;
@@ -377,7 +386,8 @@ public class UserResVo  implements java.io.Serializable {
     /**
      * set 用户标签：
      *
-     * @param attachment
+     * @param attachment 用户标签：
+     * @return UserResVo
      */
     public UserResVo attachment(UserAttachment attachment) {
         this.attachment = attachment;

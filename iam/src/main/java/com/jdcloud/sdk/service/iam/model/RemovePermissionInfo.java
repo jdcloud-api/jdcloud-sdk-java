@@ -65,7 +65,8 @@ public class RemovePermissionInfo  implements java.io.Serializable {
     /**
      * set 权限id
      *
-     * @param permissionId
+     * @param permissionId 权限id
+     * @return RemovePermissionInfo
      */
     public RemovePermissionInfo permissionId(Integer permissionId) {
         this.permissionId = permissionId;

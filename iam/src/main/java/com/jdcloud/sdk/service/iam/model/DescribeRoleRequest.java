@@ -66,7 +66,8 @@ public class DescribeRoleRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 角色名称
      *
-     * @param roleName
+     * @param roleName 角色名称
+     * @return DescribeRoleRequest
      */
     public DescribeRoleRequest roleName(String roleName) {
         this.roleName = roleName;

@@ -86,7 +86,8 @@ public class Organization  implements java.io.Serializable {
     /**
      * set 组织名称
      *
-     * @param orgId
+     * @param orgId 组织名称
+     * @return Organization
      */
     public Organization orgId(String orgId) {
         this.orgId = orgId;
@@ -97,7 +98,8 @@ public class Organization  implements java.io.Serializable {
     /**
      * set 组织登录地址
      *
-     * @param loginUrl
+     * @param loginUrl 组织登录地址
+     * @return Organization
      */
     public Organization loginUrl(String loginUrl) {
         this.loginUrl = loginUrl;

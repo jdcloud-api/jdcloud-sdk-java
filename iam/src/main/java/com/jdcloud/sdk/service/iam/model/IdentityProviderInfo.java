@@ -182,7 +182,8 @@ public class IdentityProviderInfo  implements java.io.Serializable {
     /**
      * set 身份提供商名称，支持4~64位的字母，数字以及-和_, 以字母开头
      *
-     * @param name
+     * @param name 身份提供商名称，支持4~64位的字母，数字以及-和_, 以字母开头
+     * @return IdentityProviderInfo
      */
     public IdentityProviderInfo name(String name) {
         this.name = name;
@@ -193,7 +194,8 @@ public class IdentityProviderInfo  implements java.io.Serializable {
     /**
      * set 协议类型,目前支持SAML20
      *
-     * @param protocolType
+     * @param protocolType 协议类型,目前支持SAML20
+     * @return IdentityProviderInfo
      */
     public IdentityProviderInfo protocolType(String protocolType) {
         this.protocolType = protocolType;
@@ -204,7 +206,8 @@ public class IdentityProviderInfo  implements java.io.Serializable {
     /**
      * set 描述，0~256个字符
      *
-     * @param description
+     * @param description 描述，0~256个字符
+     * @return IdentityProviderInfo
      */
     public IdentityProviderInfo description(String description) {
         this.description = description;
@@ -215,7 +218,8 @@ public class IdentityProviderInfo  implements java.io.Serializable {
     /**
      * set 身份提供商元数据
      *
-     * @param metadata
+     * @param metadata 身份提供商元数据
+     * @return IdentityProviderInfo
      */
     public IdentityProviderInfo metadata(String metadata) {
         this.metadata = metadata;
@@ -226,7 +230,8 @@ public class IdentityProviderInfo  implements java.io.Serializable {
     /**
      * set 京东云资源标识(jrn)
      *
-     * @param jrn
+     * @param jrn 京东云资源标识(jrn)
+     * @return IdentityProviderInfo
      */
     public IdentityProviderInfo jrn(String jrn) {
         this.jrn = jrn;
@@ -237,7 +242,8 @@ public class IdentityProviderInfo  implements java.io.Serializable {
     /**
      * set IdP登录地址
      *
-     * @param forwardIdPUrl
+     * @param forwardIdPUrl IdP登录地址
+     * @return IdentityProviderInfo
      */
     public IdentityProviderInfo forwardIdPUrl(String forwardIdPUrl) {
         this.forwardIdPUrl = forwardIdPUrl;

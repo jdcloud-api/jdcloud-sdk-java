@@ -114,7 +114,8 @@ public class DescribeUserPinRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 用户accessKey
      *
-     * @param accessKey
+     * @param accessKey 用户accessKey
+     * @return DescribeUserPinRequest
      */
     public DescribeUserPinRequest accessKey(String accessKey) {
         this.accessKey = accessKey;
@@ -125,7 +126,8 @@ public class DescribeUserPinRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 用户唯一id
      *
-     * @param accountId
+     * @param accountId 用户唯一id
+     * @return DescribeUserPinRequest
      */
     public DescribeUserPinRequest accountId(String accountId) {
         this.accountId = accountId;
@@ -136,7 +138,8 @@ public class DescribeUserPinRequest extends JdcloudRequest implements java.io.Se
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribeUserPinRequest
      */
     public DescribeUserPinRequest regionId(String regionId) {
         this.regionId = regionId;

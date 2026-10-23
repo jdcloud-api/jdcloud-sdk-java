@@ -302,7 +302,8 @@ public class UserAttachment  implements java.io.Serializable {
     /**
      * set 公司名称
      *
-     * @param remark
+     * @param remark 公司名称
+     * @return UserAttachment
      */
     public UserAttachment remark(String remark) {
         this.remark = remark;
@@ -313,7 +314,8 @@ public class UserAttachment  implements java.io.Serializable {
     /**
      * set 主营行业
      *
-     * @param industry
+     * @param industry 主营行业
+     * @return UserAttachment
      */
     public UserAttachment industry(String industry) {
         this.industry = industry;
@@ -324,7 +326,8 @@ public class UserAttachment  implements java.io.Serializable {
     /**
      * set 主营行业子选项
      *
-     * @param subIndustry
+     * @param subIndustry 主营行业子选项
+     * @return UserAttachment
      */
     public UserAttachment subIndustry(String subIndustry) {
         this.subIndustry = subIndustry;
@@ -335,7 +338,8 @@ public class UserAttachment  implements java.io.Serializable {
     /**
      * set 主营业务
      *
-     * @param business
+     * @param business 主营业务
+     * @return UserAttachment
      */
     public UserAttachment business(String business) {
         this.business = business;
@@ -346,7 +350,8 @@ public class UserAttachment  implements java.io.Serializable {
     /**
      * set 网站
      *
-     * @param website
+     * @param website 网站
+     * @return UserAttachment
      */
     public UserAttachment website(String website) {
         this.website = website;
@@ -357,7 +362,8 @@ public class UserAttachment  implements java.io.Serializable {
     /**
      * set 国家
      *
-     * @param cpState
+     * @param cpState 国家
+     * @return UserAttachment
      */
     public UserAttachment cpState(String cpState) {
         this.cpState = cpState;
@@ -368,7 +374,8 @@ public class UserAttachment  implements java.io.Serializable {
     /**
      * set 省
      *
-     * @param cpProvince
+     * @param cpProvince 省
+     * @return UserAttachment
      */
     public UserAttachment cpProvince(String cpProvince) {
         this.cpProvince = cpProvince;
@@ -379,7 +386,8 @@ public class UserAttachment  implements java.io.Serializable {
     /**
      * set 市
      *
-     * @param cpCity
+     * @param cpCity 市
+     * @return UserAttachment
      */
     public UserAttachment cpCity(String cpCity) {
         this.cpCity = cpCity;
@@ -390,7 +398,8 @@ public class UserAttachment  implements java.io.Serializable {
     /**
      * set 区县
      *
-     * @param cpCountry
+     * @param cpCountry 区县
+     * @return UserAttachment
      */
     public UserAttachment cpCountry(String cpCountry) {
         this.cpCountry = cpCountry;
@@ -401,7 +410,8 @@ public class UserAttachment  implements java.io.Serializable {
     /**
      * set 详细地址
      *
-     * @param cpAddress
+     * @param cpAddress 详细地址
+     * @return UserAttachment
      */
     public UserAttachment cpAddress(String cpAddress) {
         this.cpAddress = cpAddress;
@@ -412,7 +422,8 @@ public class UserAttachment  implements java.io.Serializable {
     /**
      * set 联系手机
      *
-     * @param cpTelphone
+     * @param cpTelphone 联系手机
+     * @return UserAttachment
      */
     public UserAttachment cpTelphone(String cpTelphone) {
         this.cpTelphone = cpTelphone;

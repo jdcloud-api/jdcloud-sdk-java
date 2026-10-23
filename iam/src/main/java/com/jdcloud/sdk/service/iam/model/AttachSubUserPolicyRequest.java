@@ -140,7 +140,8 @@ public class AttachSubUserPolicyRequest extends JdcloudRequest implements java.i
     /**
      * set 策略名称
      *
-     * @param policyName
+     * @param policyName 策略名称
+     * @return AttachSubUserPolicyRequest
      */
     public AttachSubUserPolicyRequest policyName(String policyName) {
         this.policyName = policyName;
@@ -151,7 +152,8 @@ public class AttachSubUserPolicyRequest extends JdcloudRequest implements java.i
     /**
      * set 资源组id
      *
-     * @param scopeId
+     * @param scopeId 资源组id
+     * @return AttachSubUserPolicyRequest
      */
     public AttachSubUserPolicyRequest scopeId(String scopeId) {
         this.scopeId = scopeId;
@@ -162,7 +164,8 @@ public class AttachSubUserPolicyRequest extends JdcloudRequest implements java.i
     /**
      * set 允许添加策略绑定：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
      *
-     * @param allowAddPolicy
+     * @param allowAddPolicy 允许添加策略绑定：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     * @return AttachSubUserPolicyRequest
      */
     public AttachSubUserPolicyRequest allowAddPolicy(String allowAddPolicy) {
         this.allowAddPolicy = allowAddPolicy;
@@ -173,7 +176,8 @@ public class AttachSubUserPolicyRequest extends JdcloudRequest implements java.i
     /**
      * set 子用户名
      *
-     * @param subUser
+     * @param subUser 子用户名
+     * @return AttachSubUserPolicyRequest
      */
     public AttachSubUserPolicyRequest subUser(String subUser) {
         this.subUser = subUser;

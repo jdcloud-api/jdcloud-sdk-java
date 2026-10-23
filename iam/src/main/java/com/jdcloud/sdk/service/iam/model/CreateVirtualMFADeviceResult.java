@@ -64,7 +64,8 @@ public class CreateVirtualMFADeviceResult extends JdcloudResult implements java.
     /**
      * set virtualMFADevice
      *
-     * @param virtualMFADevice
+     * @param virtualMFADevice 
+     * @return CreateVirtualMFADeviceResult
      */
     public CreateVirtualMFADeviceResult virtualMFADevice(VirtualMFADevice virtualMFADevice) {
         this.virtualMFADevice = virtualMFADevice;

@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.iam.model;
 
-import com.jdcloud.sdk.service.iam.model.CreateSubUserRes;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -37,39 +36,364 @@ public class CreateSubUserInnerResult extends JdcloudResult implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * subUser
+     * 用户名
      */
-    private CreateSubUserRes subUser;
+    private String name;
+
+    /**
+     * 密码
+     */
+    private String password;
+
+    /**
+     * 邮箱
+     */
+    private String email;
+
+    /**
+     * 手机号码
+     */
+    private String phone;
+
+    /**
+     * accessKey
+     */
+    private String accessKey;
+
+    /**
+     * AccessKey secret
+     */
+    private String secretAccessKey;
+
+    /**
+     * 创建时间
+     */
+    private String createTime;
+
+    /**
+     * 更新时间
+     */
+    private String updateTime;
+
+    /**
+     * 姓名
+     */
+    private String nickName;
+
+    /**
+     * 子用户pin
+     */
+    private String pin;
 
 
 
     /**
-     * get subUser
+     * get 用户名
      *
      * @return
      */
-    public CreateSubUserRes getSubUser() {
-        return subUser;
+    public String getName() {
+        return name;
     }
 
     /**
-     * set subUser
+     * set 用户名
      *
-     * @param subUser
+     * @param name
      */
-    public void setSubUser(CreateSubUserRes subUser) {
-        this.subUser = subUser;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    /**
+     * get 密码
+     *
+     * @return
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * set 密码
+     *
+     * @param password
+     */
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
+    /**
+     * get 邮箱
+     *
+     * @return
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * set 邮箱
+     *
+     * @param email
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+    /**
+     * get 手机号码
+     *
+     * @return
+     */
+    public String getPhone() {
+        return phone;
+    }
+
+    /**
+     * set 手机号码
+     *
+     * @param phone
+     */
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+
+    /**
+     * get accessKey
+     *
+     * @return
+     */
+    public String getAccessKey() {
+        return accessKey;
+    }
+
+    /**
+     * set accessKey
+     *
+     * @param accessKey
+     */
+    public void setAccessKey(String accessKey) {
+        this.accessKey = accessKey;
+    }
+
+
+    /**
+     * get AccessKey secret
+     *
+     * @return
+     */
+    public String getSecretAccessKey() {
+        return secretAccessKey;
+    }
+
+    /**
+     * set AccessKey secret
+     *
+     * @param secretAccessKey
+     */
+    public void setSecretAccessKey(String secretAccessKey) {
+        this.secretAccessKey = secretAccessKey;
+    }
+
+
+    /**
+     * get 创建时间
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+
+    /**
+     * get 更新时间
+     *
+     * @return
+     */
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    /**
+     * set 更新时间
+     *
+     * @param updateTime
+     */
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
+    }
+
+
+    /**
+     * get 姓名
+     *
+     * @return
+     */
+    public String getNickName() {
+        return nickName;
+    }
+
+    /**
+     * set 姓名
+     *
+     * @param nickName
+     */
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+
+    /**
+     * get 子用户pin
+     *
+     * @return
+     */
+    public String getPin() {
+        return pin;
+    }
+
+    /**
+     * set 子用户pin
+     *
+     * @param pin
+     */
+    public void setPin(String pin) {
+        this.pin = pin;
     }
 
 
 
     /**
-     * set subUser
+     * set 用户名
      *
-     * @param subUser
+     * @param name 用户名
+     * @return CreateSubUserInnerResult
      */
-    public CreateSubUserInnerResult subUser(CreateSubUserRes subUser) {
-        this.subUser = subUser;
+    public CreateSubUserInnerResult name(String name) {
+        this.name = name;
+        return this;
+    }
+
+
+    /**
+     * set 密码
+     *
+     * @param password 密码
+     * @return CreateSubUserInnerResult
+     */
+    public CreateSubUserInnerResult password(String password) {
+        this.password = password;
+        return this;
+    }
+
+
+    /**
+     * set 邮箱
+     *
+     * @param email 邮箱
+     * @return CreateSubUserInnerResult
+     */
+    public CreateSubUserInnerResult email(String email) {
+        this.email = email;
+        return this;
+    }
+
+
+    /**
+     * set 手机号码
+     *
+     * @param phone 手机号码
+     * @return CreateSubUserInnerResult
+     */
+    public CreateSubUserInnerResult phone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+
+
+    /**
+     * set accessKey
+     *
+     * @param accessKey accessKey
+     * @return CreateSubUserInnerResult
+     */
+    public CreateSubUserInnerResult accessKey(String accessKey) {
+        this.accessKey = accessKey;
+        return this;
+    }
+
+
+    /**
+     * set AccessKey secret
+     *
+     * @param secretAccessKey AccessKey secret
+     * @return CreateSubUserInnerResult
+     */
+    public CreateSubUserInnerResult secretAccessKey(String secretAccessKey) {
+        this.secretAccessKey = secretAccessKey;
+        return this;
+    }
+
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime 创建时间
+     * @return CreateSubUserInnerResult
+     */
+    public CreateSubUserInnerResult createTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+
+
+    /**
+     * set 更新时间
+     *
+     * @param updateTime 更新时间
+     * @return CreateSubUserInnerResult
+     */
+    public CreateSubUserInnerResult updateTime(String updateTime) {
+        this.updateTime = updateTime;
+        return this;
+    }
+
+
+    /**
+     * set 姓名
+     *
+     * @param nickName 姓名
+     * @return CreateSubUserInnerResult
+     */
+    public CreateSubUserInnerResult nickName(String nickName) {
+        this.nickName = nickName;
+        return this;
+    }
+
+
+    /**
+     * set 子用户pin
+     *
+     * @param pin 子用户pin
+     * @return CreateSubUserInnerResult
+     */
+    public CreateSubUserInnerResult pin(String pin) {
+        this.pin = pin;
         return this;
     }
 

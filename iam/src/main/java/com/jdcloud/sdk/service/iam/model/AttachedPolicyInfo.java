@@ -62,7 +62,8 @@ public class AttachedPolicyInfo  implements java.io.Serializable {
     /**
      * set policyId
      *
-     * @param policyId
+     * @param policyId 
+     * @return AttachedPolicyInfo
      */
     public AttachedPolicyInfo policyId(String policyId) {
         this.policyId = policyId;

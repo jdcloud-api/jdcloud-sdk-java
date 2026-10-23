@@ -119,7 +119,8 @@ public class ServiceDetail  implements java.io.Serializable {
     /**
      * set 产品线名称
      *
-     * @param serviceName
+     * @param serviceName 产品线名称
+     * @return ServiceDetail
      */
     public ServiceDetail serviceName(String serviceName) {
         this.serviceName = serviceName;
@@ -130,7 +131,8 @@ public class ServiceDetail  implements java.io.Serializable {
     /**
     * set 策略相关OpenAPI的Action列表
     *
-    * @param apiList
+    * @param apiList 策略相关OpenAPI的Action列表
+    * @return ServiceDetail
     */
     public ServiceDetail apiList(List<APIInfo> apiList) {
         this.apiList = apiList;
@@ -141,7 +143,8 @@ public class ServiceDetail  implements java.io.Serializable {
     /**
     * set 资源列表
     *
-    * @param resourceList
+    * @param resourceList 资源列表
+    * @return ServiceDetail
     */
     public ServiceDetail resourceList(List<String> resourceList) {
         this.resourceList = resourceList;

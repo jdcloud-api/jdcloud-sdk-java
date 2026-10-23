@@ -93,7 +93,8 @@ public class AddOrganizationUserRelationRequest extends JdcloudRequest implement
     /**
      * set 新建组织用户关联子用户关系参数
      *
-     * @param addOrganizationUserRelationInfo
+     * @param addOrganizationUserRelationInfo 新建组织用户关联子用户关系参数
+     * @return AddOrganizationUserRelationRequest
      */
     public AddOrganizationUserRelationRequest addOrganizationUserRelationInfo(AddOrganizationUserRelationInfo addOrganizationUserRelationInfo) {
         this.addOrganizationUserRelationInfo = addOrganizationUserRelationInfo;
@@ -104,7 +105,8 @@ public class AddOrganizationUserRelationRequest extends JdcloudRequest implement
     /**
      * set 组织ID
      *
-     * @param orgId
+     * @param orgId 组织ID
+     * @return AddOrganizationUserRelationRequest
      */
     public AddOrganizationUserRelationRequest orgId(String orgId) {
         this.orgId = orgId;

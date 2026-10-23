@@ -307,7 +307,8 @@ public class CreateSubUserInfo  implements java.io.Serializable {
     /**
      * set 子用户名，支持4~20位的字母，数字以及-和_，以字母开头
      *
-     * @param name
+     * @param name 子用户名，支持4~20位的字母，数字以及-和_，以字母开头
+     * @return CreateSubUserInfo
      */
     public CreateSubUserInfo name(String name) {
         this.name = name;
@@ -318,7 +319,8 @@ public class CreateSubUserInfo  implements java.io.Serializable {
     /**
      * set 描述，0~256个字符
      *
-     * @param description
+     * @param description 描述，0~256个字符
+     * @return CreateSubUserInfo
      */
     public CreateSubUserInfo description(String description) {
         this.description = description;
@@ -329,7 +331,8 @@ public class CreateSubUserInfo  implements java.io.Serializable {
     /**
      * set 按照密码策略设置，默认8~20位，至少包含一个小写字母、大写字母和数字
      *
-     * @param password
+     * @param password 按照密码策略设置，默认8~20位，至少包含一个小写字母、大写字母和数字
+     * @return CreateSubUserInfo
      */
     public CreateSubUserInfo password(String password) {
         this.password = password;
@@ -340,7 +343,8 @@ public class CreateSubUserInfo  implements java.io.Serializable {
     /**
      * set 手机号码，区号-手机号
      *
-     * @param phone
+     * @param phone 手机号码，区号-手机号
+     * @return CreateSubUserInfo
      */
     public CreateSubUserInfo phone(String phone) {
         this.phone = phone;
@@ -351,7 +355,8 @@ public class CreateSubUserInfo  implements java.io.Serializable {
     /**
      * set 邮箱
      *
-     * @param email
+     * @param email 邮箱
+     * @return CreateSubUserInfo
      */
     public CreateSubUserInfo email(String email) {
         this.email = email;
@@ -362,7 +367,8 @@ public class CreateSubUserInfo  implements java.io.Serializable {
     /**
      * set 姓名
      *
-     * @param nickName
+     * @param nickName 姓名
+     * @return CreateSubUserInfo
      */
     public CreateSubUserInfo nickName(String nickName) {
         this.nickName = nickName;
@@ -373,7 +379,8 @@ public class CreateSubUserInfo  implements java.io.Serializable {
     /**
      * set 是否创建accessKey，默认false
      *
-     * @param createAk
+     * @param createAk 是否创建accessKey，默认false
+     * @return CreateSubUserInfo
      */
     public CreateSubUserInfo createAk(Boolean createAk) {
         this.createAk = createAk;
@@ -384,7 +391,8 @@ public class CreateSubUserInfo  implements java.io.Serializable {
     /**
      * set 子用户首次登录是否需要重置密码，默认false
      *
-     * @param needResetPassword
+     * @param needResetPassword 子用户首次登录是否需要重置密码，默认false
+     * @return CreateSubUserInfo
      */
     public CreateSubUserInfo needResetPassword(Boolean needResetPassword) {
         this.needResetPassword = needResetPassword;
@@ -395,7 +403,8 @@ public class CreateSubUserInfo  implements java.io.Serializable {
     /**
      * set 子用户是否支持控制台登录，默认true
      *
-     * @param consoleLogin
+     * @param consoleLogin 子用户是否支持控制台登录，默认true
+     * @return CreateSubUserInfo
      */
     public CreateSubUserInfo consoleLogin(Boolean consoleLogin) {
         this.consoleLogin = consoleLogin;
@@ -406,7 +415,8 @@ public class CreateSubUserInfo  implements java.io.Serializable {
     /**
      * set 是否自动生成密码，默认false
      *
-     * @param autoGeneratePassword
+     * @param autoGeneratePassword 是否自动生成密码，默认false
+     * @return CreateSubUserInfo
      */
     public CreateSubUserInfo autoGeneratePassword(Boolean autoGeneratePassword) {
         this.autoGeneratePassword = autoGeneratePassword;
@@ -417,7 +427,8 @@ public class CreateSubUserInfo  implements java.io.Serializable {
     /**
      * set 是否作为联系人，默认false,为true时手机和邮箱必需
      *
-     * @param contactTag
+     * @param contactTag 是否作为联系人，默认false,为true时手机和邮箱必需
+     * @return CreateSubUserInfo
      */
     public CreateSubUserInfo contactTag(Boolean contactTag) {
         this.contactTag = contactTag;

@@ -134,7 +134,8 @@ public class LoginProfileInfo  implements java.io.Serializable {
     /**
      * set 子用户名
      *
-     * @param name
+     * @param name 子用户名
+     * @return LoginProfileInfo
      */
     public LoginProfileInfo name(String name) {
         this.name = name;
@@ -145,7 +146,8 @@ public class LoginProfileInfo  implements java.io.Serializable {
     /**
      * set 密码
      *
-     * @param password
+     * @param password 密码
+     * @return LoginProfileInfo
      */
     public LoginProfileInfo password(String password) {
         this.password = password;
@@ -156,7 +158,8 @@ public class LoginProfileInfo  implements java.io.Serializable {
     /**
      * set 要求下次登录时重设密码
      *
-     * @param passwordResetRequired
+     * @param passwordResetRequired 要求下次登录时重设密码
+     * @return LoginProfileInfo
      */
     public LoginProfileInfo passwordResetRequired(Boolean passwordResetRequired) {
         this.passwordResetRequired = passwordResetRequired;
@@ -167,7 +170,8 @@ public class LoginProfileInfo  implements java.io.Serializable {
     /**
      * set 要求必须绑定多因素认证设备
      *
-     * @param mFABindRequired
+     * @param mFABindRequired 要求必须绑定多因素认证设备
+     * @return LoginProfileInfo
      */
     public LoginProfileInfo mFABindRequired(Boolean mFABindRequired) {
         this.mFABindRequired = mFABindRequired;

@@ -110,7 +110,8 @@ public class PolicyAttachedEntity  implements java.io.Serializable {
     /**
      * set 实体名称
      *
-     * @param name
+     * @param name 实体名称
+     * @return PolicyAttachedEntity
      */
     public PolicyAttachedEntity name(String name) {
         this.name = name;
@@ -121,7 +122,8 @@ public class PolicyAttachedEntity  implements java.io.Serializable {
     /**
      * set 实体类型：SUBUSER-子账号； GROUP-用户组； ROLE-角色
      *
-     * @param entityType
+     * @param entityType 实体类型：SUBUSER-子账号； GROUP-用户组； ROLE-角色
+     * @return PolicyAttachedEntity
      */
     public PolicyAttachedEntity entityType(String entityType) {
         this.entityType = entityType;
@@ -132,7 +134,8 @@ public class PolicyAttachedEntity  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return PolicyAttachedEntity
      */
     public PolicyAttachedEntity createTime(String createTime) {
         this.createTime = createTime;

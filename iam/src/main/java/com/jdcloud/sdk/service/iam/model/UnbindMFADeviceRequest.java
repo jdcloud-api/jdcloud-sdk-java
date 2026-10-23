@@ -63,7 +63,8 @@ public class UnbindMFADeviceRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 被解绑的账号（目前支持：默认不填的情况表示给自己解绑，填写子用户名表示为子用户解绑)
      *
-     * @param unboundAccount
+     * @param unboundAccount 被解绑的账号（目前支持：默认不填的情况表示给自己解绑，填写子用户名表示为子用户解绑)
+     * @return UnbindMFADeviceRequest
      */
     public UnbindMFADeviceRequest unboundAccount(String unboundAccount) {
         this.unboundAccount = unboundAccount;

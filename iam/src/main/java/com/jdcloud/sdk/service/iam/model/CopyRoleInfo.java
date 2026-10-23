@@ -91,7 +91,8 @@ public class CopyRoleInfo  implements java.io.Serializable {
     /**
      * set 被复制的角色名字
      *
-     * @param oldRoleName
+     * @param oldRoleName 被复制的角色名字
+     * @return CopyRoleInfo
      */
     public CopyRoleInfo oldRoleName(String oldRoleName) {
         this.oldRoleName = oldRoleName;
@@ -102,7 +103,8 @@ public class CopyRoleInfo  implements java.io.Serializable {
     /**
      * set 新复制的角色名字
      *
-     * @param newRoleName
+     * @param newRoleName 新复制的角色名字
+     * @return CopyRoleInfo
      */
     public CopyRoleInfo newRoleName(String newRoleName) {
         this.newRoleName = newRoleName;

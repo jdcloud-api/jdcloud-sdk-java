@@ -247,7 +247,8 @@ public class ServiceInfoVo  implements java.io.Serializable {
     /**
      * set serviceCode
      *
-     * @param serviceCode
+     * @param serviceCode 
+     * @return ServiceInfoVo
      */
     public ServiceInfoVo serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
@@ -258,7 +259,8 @@ public class ServiceInfoVo  implements java.io.Serializable {
     /**
      * set cnName
      *
-     * @param cnName
+     * @param cnName 
+     * @return ServiceInfoVo
      */
     public ServiceInfoVo cnName(String cnName) {
         this.cnName = cnName;
@@ -269,7 +271,8 @@ public class ServiceInfoVo  implements java.io.Serializable {
     /**
      * set enName
      *
-     * @param enName
+     * @param enName 
+     * @return ServiceInfoVo
      */
     public ServiceInfoVo enName(String enName) {
         this.enName = enName;
@@ -280,7 +283,8 @@ public class ServiceInfoVo  implements java.io.Serializable {
     /**
      * set region
      *
-     * @param region
+     * @param region 
+     * @return ServiceInfoVo
      */
     public ServiceInfoVo region(String region) {
         this.region = region;
@@ -291,7 +295,8 @@ public class ServiceInfoVo  implements java.io.Serializable {
     /**
      * set createTime
      *
-     * @param createTime
+     * @param createTime 
+     * @return ServiceInfoVo
      */
     public ServiceInfoVo createTime(String createTime) {
         this.createTime = createTime;
@@ -302,7 +307,8 @@ public class ServiceInfoVo  implements java.io.Serializable {
     /**
      * set createUser
      *
-     * @param createUser
+     * @param createUser 
+     * @return ServiceInfoVo
      */
     public ServiceInfoVo createUser(String createUser) {
         this.createUser = createUser;
@@ -313,7 +319,8 @@ public class ServiceInfoVo  implements java.io.Serializable {
     /**
      * set updateTime
      *
-     * @param updateTime
+     * @param updateTime 
+     * @return ServiceInfoVo
      */
     public ServiceInfoVo updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -324,7 +331,8 @@ public class ServiceInfoVo  implements java.io.Serializable {
     /**
      * set updateUser
      *
-     * @param updateUser
+     * @param updateUser 
+     * @return ServiceInfoVo
      */
     public ServiceInfoVo updateUser(String updateUser) {
         this.updateUser = updateUser;

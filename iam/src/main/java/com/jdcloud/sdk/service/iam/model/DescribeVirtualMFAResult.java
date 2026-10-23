@@ -63,7 +63,8 @@ public class DescribeVirtualMFAResult extends JdcloudResult implements java.io.S
     /**
      * set 0-关闭，1-启用
      *
-     * @param status
+     * @param status 0-关闭，1-启用
+     * @return DescribeVirtualMFAResult
      */
     public DescribeVirtualMFAResult status(Integer status) {
         this.status = status;

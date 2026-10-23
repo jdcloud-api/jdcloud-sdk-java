@@ -69,7 +69,8 @@ public class CreateSubUserRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 子用户信息
      *
-     * @param createSubUserInfo
+     * @param createSubUserInfo 子用户信息
+     * @return CreateSubUserRequest
      */
     public CreateSubUserRequest createSubUserInfo(CreateSubUserInfo createSubUserInfo) {
         this.createSubUserInfo = createSubUserInfo;

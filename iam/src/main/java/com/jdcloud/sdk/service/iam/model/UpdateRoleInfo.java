@@ -86,7 +86,8 @@ public class UpdateRoleInfo  implements java.io.Serializable {
     /**
      * set 描述，0~256个字符
      *
-     * @param description
+     * @param description 描述，0~256个字符
+     * @return UpdateRoleInfo
      */
     public UpdateRoleInfo description(String description) {
         this.description = description;
@@ -97,7 +98,8 @@ public class UpdateRoleInfo  implements java.io.Serializable {
     /**
      * set 最大会话时长3600~43200秒，默认3600秒
      *
-     * @param maxSessionDuration
+     * @param maxSessionDuration 最大会话时长3600~43200秒，默认3600秒
+     * @return UpdateRoleInfo
      */
     public UpdateRoleInfo maxSessionDuration(Integer maxSessionDuration) {
         this.maxSessionDuration = maxSessionDuration;

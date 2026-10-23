@@ -140,7 +140,8 @@ public class AttachRolePolicyRequest extends JdcloudRequest implements java.io.S
     /**
      * set 策略名称
      *
-     * @param policyName
+     * @param policyName 策略名称
+     * @return AttachRolePolicyRequest
      */
     public AttachRolePolicyRequest policyName(String policyName) {
         this.policyName = policyName;
@@ -151,7 +152,8 @@ public class AttachRolePolicyRequest extends JdcloudRequest implements java.io.S
     /**
      * set 资源组id
      *
-     * @param scopeId
+     * @param scopeId 资源组id
+     * @return AttachRolePolicyRequest
      */
     public AttachRolePolicyRequest scopeId(String scopeId) {
         this.scopeId = scopeId;
@@ -162,7 +164,8 @@ public class AttachRolePolicyRequest extends JdcloudRequest implements java.io.S
     /**
      * set 允许添加策略绑定：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
      *
-     * @param allowAddPolicy
+     * @param allowAddPolicy 允许添加策略绑定：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     * @return AttachRolePolicyRequest
      */
     public AttachRolePolicyRequest allowAddPolicy(String allowAddPolicy) {
         this.allowAddPolicy = allowAddPolicy;
@@ -173,7 +176,8 @@ public class AttachRolePolicyRequest extends JdcloudRequest implements java.io.S
     /**
      * set 角色名称
      *
-     * @param roleName
+     * @param roleName 角色名称
+     * @return AttachRolePolicyRequest
      */
     public AttachRolePolicyRequest roleName(String roleName) {
         this.roleName = roleName;

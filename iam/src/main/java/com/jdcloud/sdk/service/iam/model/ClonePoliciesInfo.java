@@ -91,7 +91,8 @@ public class ClonePoliciesInfo  implements java.io.Serializable {
     /**
      * set 模板子用户名
      *
-     * @param sourceSubUser
+     * @param sourceSubUser 模板子用户名
+     * @return ClonePoliciesInfo
      */
     public ClonePoliciesInfo sourceSubUser(String sourceSubUser) {
         this.sourceSubUser = sourceSubUser;
@@ -102,7 +103,8 @@ public class ClonePoliciesInfo  implements java.io.Serializable {
     /**
      * set 复制目标子用户名
      *
-     * @param targetSubUser
+     * @param targetSubUser 复制目标子用户名
+     * @return ClonePoliciesInfo
      */
     public ClonePoliciesInfo targetSubUser(String targetSubUser) {
         this.targetSubUser = targetSubUser;

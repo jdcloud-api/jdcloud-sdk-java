@@ -49,9 +49,14 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
     private String keyword;
 
     /**
-     * 策略类型：0-全部（默认），1-系统策略，2-自定义策略
+     * 废弃，请使用types 策略类型：0-全部（默认），1-系统策略，2-自定义策略
      */
     private Integer queryType;
+
+    /**
+     * 类型列表 逗号分隔  1系统策略 2当前用户私有策略 3系统ak策略
+     */
+    private String types;
 
     /**
      * 排序规则：0-创建时间顺序排序，1-创建时间倒序排序
@@ -118,7 +123,7 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 策略类型：0-全部（默认），1-系统策略，2-自定义策略
+     * get 废弃，请使用types 策略类型：0-全部（默认），1-系统策略，2-自定义策略
      *
      * @return
      */
@@ -127,12 +132,31 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 策略类型：0-全部（默认），1-系统策略，2-自定义策略
+     * set 废弃，请使用types 策略类型：0-全部（默认），1-系统策略，2-自定义策略
      *
      * @param queryType
      */
     public void setQueryType(Integer queryType) {
         this.queryType = queryType;
+    }
+
+
+    /**
+     * get 类型列表 逗号分隔  1系统策略 2当前用户私有策略 3系统ak策略
+     *
+     * @return
+     */
+    public String getTypes() {
+        return types;
+    }
+
+    /**
+     * set 类型列表 逗号分隔  1系统策略 2当前用户私有策略 3系统ak策略
+     *
+     * @param types
+     */
+    public void setTypes(String types) {
+        this.types = types;
     }
 
 
@@ -159,7 +183,8 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
     /**
      * set 页码，默认1
      *
-     * @param pageNumber
+     * @param pageNumber 页码，默认1
+     * @return DescribePoliciesRequest
      */
     public DescribePoliciesRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -170,7 +195,8 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
     /**
      * set 分页大小，默认50，取值范围[10, 100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认50，取值范围[10, 100]
+     * @return DescribePoliciesRequest
      */
     public DescribePoliciesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -181,7 +207,8 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
     /**
      * set 关键字
      *
-     * @param keyword
+     * @param keyword 关键字
+     * @return DescribePoliciesRequest
      */
     public DescribePoliciesRequest keyword(String keyword) {
         this.keyword = keyword;
@@ -190,9 +217,10 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 策略类型：0-全部（默认），1-系统策略，2-自定义策略
+     * set 废弃，请使用types 策略类型：0-全部（默认），1-系统策略，2-自定义策略
      *
-     * @param queryType
+     * @param queryType 废弃，请使用types 策略类型：0-全部（默认），1-系统策略，2-自定义策略
+     * @return DescribePoliciesRequest
      */
     public DescribePoliciesRequest queryType(Integer queryType) {
         this.queryType = queryType;
@@ -201,9 +229,22 @@ public class DescribePoliciesRequest extends JdcloudRequest implements java.io.S
 
 
     /**
+     * set 类型列表 逗号分隔  1系统策略 2当前用户私有策略 3系统ak策略
+     *
+     * @param types 类型列表 逗号分隔  1系统策略 2当前用户私有策略 3系统ak策略
+     * @return DescribePoliciesRequest
+     */
+    public DescribePoliciesRequest types(String types) {
+        this.types = types;
+        return this;
+    }
+
+
+    /**
      * set 排序规则：0-创建时间顺序排序，1-创建时间倒序排序
      *
-     * @param sort
+     * @param sort 排序规则：0-创建时间顺序排序，1-创建时间倒序排序
+     * @return DescribePoliciesRequest
      */
     public DescribePoliciesRequest sort(Integer sort) {
         this.sort = sort;

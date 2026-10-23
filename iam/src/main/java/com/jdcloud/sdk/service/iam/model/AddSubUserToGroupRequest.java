@@ -92,7 +92,8 @@ public class AddSubUserToGroupRequest extends JdcloudRequest implements java.io.
     /**
      * set 子用户名
      *
-     * @param subUser
+     * @param subUser 子用户名
+     * @return AddSubUserToGroupRequest
      */
     public AddSubUserToGroupRequest subUser(String subUser) {
         this.subUser = subUser;
@@ -103,7 +104,8 @@ public class AddSubUserToGroupRequest extends JdcloudRequest implements java.io.
     /**
      * set 用户组名称
      *
-     * @param groupName
+     * @param groupName 用户组名称
+     * @return AddSubUserToGroupRequest
      */
     public AddSubUserToGroupRequest groupName(String groupName) {
         this.groupName = groupName;

@@ -254,7 +254,8 @@ public class UserAccessKey  implements java.io.Serializable {
     /**
      * set accessKey
      *
-     * @param accessKey
+     * @param accessKey accessKey
+     * @return UserAccessKey
      */
     public UserAccessKey accessKey(String accessKey) {
         this.accessKey = accessKey;
@@ -265,7 +266,8 @@ public class UserAccessKey  implements java.io.Serializable {
     /**
      * set accessKeySecret
      *
-     * @param accessKeySecret
+     * @param accessKeySecret accessKeySecret
+     * @return UserAccessKey
      */
     public UserAccessKey accessKeySecret(String accessKeySecret) {
         this.accessKeySecret = accessKeySecret;
@@ -276,7 +278,8 @@ public class UserAccessKey  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return UserAccessKey
      */
     public UserAccessKey createTime(String createTime) {
         this.createTime = createTime;
@@ -287,7 +290,8 @@ public class UserAccessKey  implements java.io.Serializable {
     /**
      * set 修改时间
      *
-     * @param modified
+     * @param modified 修改时间
+     * @return UserAccessKey
      */
     public UserAccessKey modified(String modified) {
         this.modified = modified;
@@ -298,7 +302,8 @@ public class UserAccessKey  implements java.io.Serializable {
     /**
      * set 最近一次使用AK访问时间
      *
-     * @param lastVisitTime
+     * @param lastVisitTime 最近一次使用AK访问时间
+     * @return UserAccessKey
      */
     public UserAccessKey lastVisitTime(String lastVisitTime) {
         this.lastVisitTime = lastVisitTime;
@@ -309,7 +314,8 @@ public class UserAccessKey  implements java.io.Serializable {
     /**
      * set 最近一次使用AK访问事件
      *
-     * @param lastVisitEvent
+     * @param lastVisitEvent 最近一次使用AK访问事件
+     * @return UserAccessKey
      */
     public UserAccessKey lastVisitEvent(String lastVisitEvent) {
         this.lastVisitEvent = lastVisitEvent;
@@ -320,7 +326,8 @@ public class UserAccessKey  implements java.io.Serializable {
     /**
      * set 禁用/启用状态[0-禁用,1-启用]
      *
-     * @param state
+     * @param state 禁用/启用状态[0-禁用,1-启用]
+     * @return UserAccessKey
      */
     public UserAccessKey state(Integer state) {
         this.state = state;
@@ -331,7 +338,8 @@ public class UserAccessKey  implements java.io.Serializable {
     /**
      * set 删除/有效状态[0-删除,1-有效]
      *
-     * @param yn
+     * @param yn 删除/有效状态[0-删除,1-有效]
+     * @return UserAccessKey
      */
     public UserAccessKey yn(Integer yn) {
         this.yn = yn;
@@ -342,7 +350,8 @@ public class UserAccessKey  implements java.io.Serializable {
     /**
      * set AK备注信息
      *
-     * @param remark
+     * @param remark AK备注信息
+     * @return UserAccessKey
      */
     public UserAccessKey remark(String remark) {
         this.remark = remark;

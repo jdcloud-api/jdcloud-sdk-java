@@ -63,7 +63,8 @@ public class DescribeUserPinResult extends JdcloudResult implements java.io.Seri
     /**
      * set 用户pin，如果是子账号，则格式为主账号pin @ 子账号pin
      *
-     * @param pin
+     * @param pin 用户pin，如果是子账号，则格式为主账号pin @ 子账号pin
+     * @return DescribeUserPinResult
      */
     public DescribeUserPinResult pin(String pin) {
         this.pin = pin;

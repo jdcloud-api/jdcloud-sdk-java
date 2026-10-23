@@ -64,7 +64,8 @@ public class DescribeRoleResult extends JdcloudResult implements java.io.Seriali
     /**
      * set 角色信息
      *
-     * @param roleInfo
+     * @param roleInfo 角色信息
+     * @return DescribeRoleResult
      */
     public DescribeRoleResult roleInfo(RoleInfo roleInfo) {
         this.roleInfo = roleInfo;

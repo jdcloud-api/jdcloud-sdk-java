@@ -24,8 +24,6 @@
 
 package com.jdcloud.sdk.service.iam.model;
 
-import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.iam.model.CreateSubUserInfoInner;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -38,41 +36,436 @@ public class CreateSubUserInnerRequest extends JdcloudRequest implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
-     * 子用户信息
-     * Required:true
+     * 描述，0~256个字符
      */
-    @Required
-    private CreateSubUserInfoInner createSubUserInfo;
+    private String description;
+
+    /**
+     * 按照密码策略设置，默认8~20位，至少包含一个小写字母、大写字母和数字
+     */
+    private String password;
+
+    /**
+     * 手机号码，区号-手机号
+     */
+    private String phone;
+
+    /**
+     * 邮箱
+     */
+    private String email;
+
+    /**
+     * 姓名
+     */
+    private String nickName;
+
+    /**
+     * 是否创建accessKey，默认false
+     */
+    private Boolean createAk;
+
+    /**
+     * 子用户首次登录是否需要重置密码，默认false
+     */
+    private Boolean needResetPassword;
+
+    /**
+     * 子用户是否支持控制台登录，默认true
+     */
+    private Boolean consoleLogin;
+
+    /**
+     * 是否自动生成密码，默认false
+     */
+    private Boolean autoGeneratePassword;
+
+    /**
+     * 主用户pin
+     */
+    private String account;
+
+    /**
+     * 子用户名(注意不是pin)，支持4~20位的字母，数字以及-和_，以字母开头 必填
+     */
+    private String subUser;
+
+    /**
+     * 创建类型 0自定义 1组织 2ldap 3jd 4wx 5joyCode
+     */
+    private Integer createType;
 
 
 
     /**
-     * get 子用户信息
+     * get 描述，0~256个字符
      *
      * @return
      */
-    public CreateSubUserInfoInner getCreateSubUserInfo() {
-        return createSubUserInfo;
+    public String getDescription() {
+        return description;
     }
 
     /**
-     * set 子用户信息
+     * set 描述，0~256个字符
      *
-     * @param createSubUserInfo
+     * @param description
      */
-    public void setCreateSubUserInfo(CreateSubUserInfoInner createSubUserInfo) {
-        this.createSubUserInfo = createSubUserInfo;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
+    /**
+     * get 按照密码策略设置，默认8~20位，至少包含一个小写字母、大写字母和数字
+     *
+     * @return
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * set 按照密码策略设置，默认8~20位，至少包含一个小写字母、大写字母和数字
+     *
+     * @param password
+     */
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
+    /**
+     * get 手机号码，区号-手机号
+     *
+     * @return
+     */
+    public String getPhone() {
+        return phone;
+    }
+
+    /**
+     * set 手机号码，区号-手机号
+     *
+     * @param phone
+     */
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+
+    /**
+     * get 邮箱
+     *
+     * @return
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * set 邮箱
+     *
+     * @param email
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+    /**
+     * get 姓名
+     *
+     * @return
+     */
+    public String getNickName() {
+        return nickName;
+    }
+
+    /**
+     * set 姓名
+     *
+     * @param nickName
+     */
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+
+    /**
+     * get 是否创建accessKey，默认false
+     *
+     * @return
+     */
+    public Boolean getCreateAk() {
+        return createAk;
+    }
+
+    /**
+     * set 是否创建accessKey，默认false
+     *
+     * @param createAk
+     */
+    public void setCreateAk(Boolean createAk) {
+        this.createAk = createAk;
+    }
+
+
+    /**
+     * get 子用户首次登录是否需要重置密码，默认false
+     *
+     * @return
+     */
+    public Boolean getNeedResetPassword() {
+        return needResetPassword;
+    }
+
+    /**
+     * set 子用户首次登录是否需要重置密码，默认false
+     *
+     * @param needResetPassword
+     */
+    public void setNeedResetPassword(Boolean needResetPassword) {
+        this.needResetPassword = needResetPassword;
+    }
+
+
+    /**
+     * get 子用户是否支持控制台登录，默认true
+     *
+     * @return
+     */
+    public Boolean getConsoleLogin() {
+        return consoleLogin;
+    }
+
+    /**
+     * set 子用户是否支持控制台登录，默认true
+     *
+     * @param consoleLogin
+     */
+    public void setConsoleLogin(Boolean consoleLogin) {
+        this.consoleLogin = consoleLogin;
+    }
+
+
+    /**
+     * get 是否自动生成密码，默认false
+     *
+     * @return
+     */
+    public Boolean getAutoGeneratePassword() {
+        return autoGeneratePassword;
+    }
+
+    /**
+     * set 是否自动生成密码，默认false
+     *
+     * @param autoGeneratePassword
+     */
+    public void setAutoGeneratePassword(Boolean autoGeneratePassword) {
+        this.autoGeneratePassword = autoGeneratePassword;
+    }
+
+
+    /**
+     * get 主用户pin
+     *
+     * @return
+     */
+    public String getAccount() {
+        return account;
+    }
+
+    /**
+     * set 主用户pin
+     *
+     * @param account
+     */
+    public void setAccount(String account) {
+        this.account = account;
+    }
+
+
+    /**
+     * get 子用户名(注意不是pin)，支持4~20位的字母，数字以及-和_，以字母开头 必填
+     *
+     * @return
+     */
+    public String getSubUser() {
+        return subUser;
+    }
+
+    /**
+     * set 子用户名(注意不是pin)，支持4~20位的字母，数字以及-和_，以字母开头 必填
+     *
+     * @param subUser
+     */
+    public void setSubUser(String subUser) {
+        this.subUser = subUser;
+    }
+
+
+    /**
+     * get 创建类型 0自定义 1组织 2ldap 3jd 4wx 5joyCode
+     *
+     * @return
+     */
+    public Integer getCreateType() {
+        return createType;
+    }
+
+    /**
+     * set 创建类型 0自定义 1组织 2ldap 3jd 4wx 5joyCode
+     *
+     * @param createType
+     */
+    public void setCreateType(Integer createType) {
+        this.createType = createType;
     }
 
 
 
     /**
-     * set 子用户信息
+     * set 描述，0~256个字符
      *
-     * @param createSubUserInfo
+     * @param description 描述，0~256个字符
+     * @return CreateSubUserInnerRequest
      */
-    public CreateSubUserInnerRequest createSubUserInfo(CreateSubUserInfoInner createSubUserInfo) {
-        this.createSubUserInfo = createSubUserInfo;
+    public CreateSubUserInnerRequest description(String description) {
+        this.description = description;
+        return this;
+    }
+
+
+    /**
+     * set 按照密码策略设置，默认8~20位，至少包含一个小写字母、大写字母和数字
+     *
+     * @param password 按照密码策略设置，默认8~20位，至少包含一个小写字母、大写字母和数字
+     * @return CreateSubUserInnerRequest
+     */
+    public CreateSubUserInnerRequest password(String password) {
+        this.password = password;
+        return this;
+    }
+
+
+    /**
+     * set 手机号码，区号-手机号
+     *
+     * @param phone 手机号码，区号-手机号
+     * @return CreateSubUserInnerRequest
+     */
+    public CreateSubUserInnerRequest phone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+
+
+    /**
+     * set 邮箱
+     *
+     * @param email 邮箱
+     * @return CreateSubUserInnerRequest
+     */
+    public CreateSubUserInnerRequest email(String email) {
+        this.email = email;
+        return this;
+    }
+
+
+    /**
+     * set 姓名
+     *
+     * @param nickName 姓名
+     * @return CreateSubUserInnerRequest
+     */
+    public CreateSubUserInnerRequest nickName(String nickName) {
+        this.nickName = nickName;
+        return this;
+    }
+
+
+    /**
+     * set 是否创建accessKey，默认false
+     *
+     * @param createAk 是否创建accessKey，默认false
+     * @return CreateSubUserInnerRequest
+     */
+    public CreateSubUserInnerRequest createAk(Boolean createAk) {
+        this.createAk = createAk;
+        return this;
+    }
+
+
+    /**
+     * set 子用户首次登录是否需要重置密码，默认false
+     *
+     * @param needResetPassword 子用户首次登录是否需要重置密码，默认false
+     * @return CreateSubUserInnerRequest
+     */
+    public CreateSubUserInnerRequest needResetPassword(Boolean needResetPassword) {
+        this.needResetPassword = needResetPassword;
+        return this;
+    }
+
+
+    /**
+     * set 子用户是否支持控制台登录，默认true
+     *
+     * @param consoleLogin 子用户是否支持控制台登录，默认true
+     * @return CreateSubUserInnerRequest
+     */
+    public CreateSubUserInnerRequest consoleLogin(Boolean consoleLogin) {
+        this.consoleLogin = consoleLogin;
+        return this;
+    }
+
+
+    /**
+     * set 是否自动生成密码，默认false
+     *
+     * @param autoGeneratePassword 是否自动生成密码，默认false
+     * @return CreateSubUserInnerRequest
+     */
+    public CreateSubUserInnerRequest autoGeneratePassword(Boolean autoGeneratePassword) {
+        this.autoGeneratePassword = autoGeneratePassword;
+        return this;
+    }
+
+
+    /**
+     * set 主用户pin
+     *
+     * @param account 主用户pin
+     * @return CreateSubUserInnerRequest
+     */
+    public CreateSubUserInnerRequest account(String account) {
+        this.account = account;
+        return this;
+    }
+
+
+    /**
+     * set 子用户名(注意不是pin)，支持4~20位的字母，数字以及-和_，以字母开头 必填
+     *
+     * @param subUser 子用户名(注意不是pin)，支持4~20位的字母，数字以及-和_，以字母开头 必填
+     * @return CreateSubUserInnerRequest
+     */
+    public CreateSubUserInnerRequest subUser(String subUser) {
+        this.subUser = subUser;
+        return this;
+    }
+
+
+    /**
+     * set 创建类型 0自定义 1组织 2ldap 3jd 4wx 5joyCode
+     *
+     * @param createType 创建类型 0自定义 1组织 2ldap 3jd 4wx 5joyCode
+     * @return CreateSubUserInnerRequest
+     */
+    public CreateSubUserInnerRequest createType(Integer createType) {
+        this.createType = createType;
         return this;
     }
 

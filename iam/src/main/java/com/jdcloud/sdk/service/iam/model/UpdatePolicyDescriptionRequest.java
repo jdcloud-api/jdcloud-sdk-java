@@ -93,7 +93,8 @@ public class UpdatePolicyDescriptionRequest extends JdcloudRequest implements ja
     /**
      * set 策略描述信息
      *
-     * @param updatePolicyDescriptionInfo
+     * @param updatePolicyDescriptionInfo 策略描述信息
+     * @return UpdatePolicyDescriptionRequest
      */
     public UpdatePolicyDescriptionRequest updatePolicyDescriptionInfo(UpdatePolicyDescriptionInfo updatePolicyDescriptionInfo) {
         this.updatePolicyDescriptionInfo = updatePolicyDescriptionInfo;
@@ -104,7 +105,8 @@ public class UpdatePolicyDescriptionRequest extends JdcloudRequest implements ja
     /**
      * set 策略名称
      *
-     * @param policyName
+     * @param policyName 策略名称
+     * @return UpdatePolicyDescriptionRequest
      */
     public UpdatePolicyDescriptionRequest policyName(String policyName) {
         this.policyName = policyName;

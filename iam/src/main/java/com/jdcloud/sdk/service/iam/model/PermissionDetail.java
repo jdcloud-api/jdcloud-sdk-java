@@ -93,7 +93,8 @@ public class PermissionDetail  implements java.io.Serializable {
     /**
      * set 权限类型，只读-R、删除-D、修改-M
      *
-     * @param permission
+     * @param permission 权限类型，只读-R、删除-D、修改-M
+     * @return PermissionDetail
      */
     public PermissionDetail permission(String permission) {
         this.permission = permission;
@@ -104,7 +105,8 @@ public class PermissionDetail  implements java.io.Serializable {
     /**
     * set 资源信息
     *
-    * @param resource
+    * @param resource 资源信息
+    * @return PermissionDetail
     */
     public PermissionDetail resource(List<Resource> resource) {
         this.resource = resource;

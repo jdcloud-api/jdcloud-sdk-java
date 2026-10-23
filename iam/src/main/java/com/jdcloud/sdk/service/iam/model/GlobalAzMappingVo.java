@@ -112,7 +112,8 @@ public class GlobalAzMappingVo  implements java.io.Serializable {
     /**
      * set 别名
      *
-     * @param alias
+     * @param alias 别名
+     * @return GlobalAzMappingVo
      */
     public GlobalAzMappingVo alias(String alias) {
         this.alias = alias;
@@ -123,7 +124,8 @@ public class GlobalAzMappingVo  implements java.io.Serializable {
     /**
      * set 地域
      *
-     * @param region
+     * @param region 地域
+     * @return GlobalAzMappingVo
      */
     public GlobalAzMappingVo region(String region) {
         this.region = region;
@@ -134,7 +136,8 @@ public class GlobalAzMappingVo  implements java.io.Serializable {
     /**
     * set Az Mapping
     *
-    * @param mapping
+    * @param mapping Az Mapping
+    * @return GlobalAzMappingVo
     */
     public GlobalAzMappingVo mapping(List<AzMappingVo> mapping) {
         this.mapping = mapping;

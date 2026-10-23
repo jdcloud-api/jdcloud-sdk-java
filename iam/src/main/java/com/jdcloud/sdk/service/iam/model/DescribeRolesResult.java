@@ -90,7 +90,8 @@ public class DescribeRolesResult extends JdcloudResult implements java.io.Serial
     /**
      * set 总数
      *
-     * @param total
+     * @param total 总数
+     * @return DescribeRolesResult
      */
     public DescribeRolesResult total(Integer total) {
         this.total = total;
@@ -101,7 +102,8 @@ public class DescribeRolesResult extends JdcloudResult implements java.io.Serial
     /**
     * set roles
     *
-    * @param roles
+    * @param roles 
+    * @return DescribeRolesResult
     */
     public DescribeRolesResult roles(List<ListRoleInfo> roles) {
         this.roles = roles;

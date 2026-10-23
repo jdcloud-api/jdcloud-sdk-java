@@ -116,7 +116,8 @@ public class DescribeAttachedGroupPoliciesScopeRequest extends JdcloudRequest im
     /**
      * set 策略ID
      *
-     * @param policyID
+     * @param policyID 策略ID
+     * @return DescribeAttachedGroupPoliciesScopeRequest
      */
     public DescribeAttachedGroupPoliciesScopeRequest policyID(String policyID) {
         this.policyID = policyID;
@@ -127,7 +128,8 @@ public class DescribeAttachedGroupPoliciesScopeRequest extends JdcloudRequest im
     /**
      * set 滤绑定策略资源组：&quot;Deny&quot; 不允许，Allow 允许，空情况默认不允许，兼容历史数据
      *
-     * @param filterBindResGroup
+     * @param filterBindResGroup 滤绑定策略资源组：&quot;Deny&quot; 不允许，Allow 允许，空情况默认不允许，兼容历史数据
+     * @return DescribeAttachedGroupPoliciesScopeRequest
      */
     public DescribeAttachedGroupPoliciesScopeRequest filterBindResGroup(String filterBindResGroup) {
         this.filterBindResGroup = filterBindResGroup;
@@ -138,7 +140,8 @@ public class DescribeAttachedGroupPoliciesScopeRequest extends JdcloudRequest im
     /**
      * set 用户组名称
      *
-     * @param groupName
+     * @param groupName 用户组名称
+     * @return DescribeAttachedGroupPoliciesScopeRequest
      */
     public DescribeAttachedGroupPoliciesScopeRequest groupName(String groupName) {
         this.groupName = groupName;

@@ -398,7 +398,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 用户pin
      *
-     * @param pin
+     * @param pin 用户pin
+     * @return UserReqVo
      */
     public UserReqVo pin(String pin) {
         this.pin = pin;
@@ -409,7 +410,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 用户手机号
      *
-     * @param cscPhone
+     * @param cscPhone 用户手机号
+     * @return UserReqVo
      */
     public UserReqVo cscPhone(String cscPhone) {
         this.cscPhone = cscPhone;
@@ -420,7 +422,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 用户邮箱
      *
-     * @param cscEmail
+     * @param cscEmail 用户邮箱
+     * @return UserReqVo
      */
     public UserReqVo cscEmail(String cscEmail) {
         this.cscEmail = cscEmail;
@@ -431,7 +434,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 用户名
      *
-     * @param name
+     * @param name 用户名
+     * @return UserReqVo
      */
     public UserReqVo name(String name) {
         this.name = name;
@@ -442,7 +446,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 用户类型
      *
-     * @param userType
+     * @param userType 用户类型
+     * @return UserReqVo
      */
     public UserReqVo userType(Integer userType) {
         this.userType = userType;
@@ -453,7 +458,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 公司名
      *
-     * @param companyName
+     * @param companyName 公司名
+     * @return UserReqVo
      */
     public UserReqVo companyName(String companyName) {
         this.companyName = companyName;
@@ -464,7 +470,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 起始时间
      *
-     * @param createTimeStart
+     * @param createTimeStart 起始时间
+     * @return UserReqVo
      */
     public UserReqVo createTimeStart(String createTimeStart) {
         this.createTimeStart = createTimeStart;
@@ -475,7 +482,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 结束时间
      *
-     * @param createTimeEnd
+     * @param createTimeEnd 结束时间
+     * @return UserReqVo
      */
     public UserReqVo createTimeEnd(String createTimeEnd) {
         this.createTimeEnd = createTimeEnd;
@@ -486,7 +494,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 欠费状态：
      *
-     * @param arrearageStatus
+     * @param arrearageStatus 欠费状态：
+     * @return UserReqVo
      */
     public UserReqVo arrearageStatus(Integer arrearageStatus) {
         this.arrearageStatus = arrearageStatus;
@@ -497,7 +506,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 用户分组，多个逗号分隔:1-自然流量，2-内部测试，3-内部重点，4-渠道用户
      *
-     * @param groups
+     * @param groups 用户分组，多个逗号分隔:1-自然流量，2-内部测试，3-内部重点，4-渠道用户
+     * @return UserReqVo
      */
     public UserReqVo groups(String groups) {
         this.groups = groups;
@@ -508,7 +518,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 用户分组:1-自然流量，2-内部测试，3-内部重点，4-渠道用户
      *
-     * @param group
+     * @param group 用户分组:1-自然流量，2-内部测试，3-内部重点，4-渠道用户
+     * @return UserReqVo
      */
     public UserReqVo group(Integer group) {
         this.group = group;
@@ -519,7 +530,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 计费白名单：1、在白名单  2、不在白名单
      *
-     * @param billingWhite
+     * @param billingWhite 计费白名单：1、在白名单  2、不在白名单
+     * @return UserReqVo
      */
     public UserReqVo billingWhite(Integer billingWhite) {
         this.billingWhite = billingWhite;
@@ -530,7 +542,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 渠道等级;1普通用户2测试用户4VIP用户8其他VIP用户16boss迁移账户
      *
-     * @param tag
+     * @param tag 渠道等级;1普通用户2测试用户4VIP用户8其他VIP用户16boss迁移账户
+     * @return UserReqVo
      */
     public UserReqVo tag(Integer tag) {
         this.tag = tag;
@@ -541,7 +554,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 页大小
      *
-     * @param pageSize
+     * @param pageSize 页大小
+     * @return UserReqVo
      */
     public UserReqVo pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -552,7 +566,8 @@ public class UserReqVo  implements java.io.Serializable {
     /**
      * set 当前页
      *
-     * @param currentPage
+     * @param currentPage 当前页
+     * @return UserReqVo
      */
     public UserReqVo currentPage(Integer currentPage) {
         this.currentPage = currentPage;

@@ -134,7 +134,8 @@ public class AzSaleStatusVo  implements java.io.Serializable {
     /**
      * set az
      *
-     * @param az
+     * @param az 
+     * @return AzSaleStatusVo
      */
     public AzSaleStatusVo az(String az) {
         this.az = az;
@@ -145,7 +146,8 @@ public class AzSaleStatusVo  implements java.io.Serializable {
     /**
      * set 是否售罄 (0未售罄 1售罄)
      *
-     * @param canSale
+     * @param canSale 是否售罄 (0未售罄 1售罄)
+     * @return AzSaleStatusVo
      */
     public AzSaleStatusVo canSale(Integer canSale) {
         this.canSale = canSale;
@@ -156,7 +158,8 @@ public class AzSaleStatusVo  implements java.io.Serializable {
     /**
      * set 是否可见(1可见 0不可见)
      *
-     * @param visible
+     * @param visible 是否可见(1可见 0不可见)
+     * @return AzSaleStatusVo
      */
     public AzSaleStatusVo visible(Integer visible) {
         this.visible = visible;
@@ -167,7 +170,8 @@ public class AzSaleStatusVo  implements java.io.Serializable {
     /**
      * set 可用区类别:AZ-center EZ-edge
      *
-     * @param zoneType
+     * @param zoneType 可用区类别:AZ-center EZ-edge
+     * @return AzSaleStatusVo
      */
     public AzSaleStatusVo zoneType(String zoneType) {
         this.zoneType = zoneType;

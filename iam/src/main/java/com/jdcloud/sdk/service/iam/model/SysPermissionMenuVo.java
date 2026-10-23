@@ -91,7 +91,8 @@ public class SysPermissionMenuVo  implements java.io.Serializable {
     /**
      * set menuId
      *
-     * @param menuId
+     * @param menuId 
+     * @return SysPermissionMenuVo
      */
     public SysPermissionMenuVo menuId(String menuId) {
         this.menuId = menuId;
@@ -102,7 +103,8 @@ public class SysPermissionMenuVo  implements java.io.Serializable {
     /**
      * set autoMountChildMenu
      *
-     * @param autoMountChildMenu
+     * @param autoMountChildMenu 
+     * @return SysPermissionMenuVo
      */
     public SysPermissionMenuVo autoMountChildMenu(String autoMountChildMenu) {
         this.autoMountChildMenu = autoMountChildMenu;

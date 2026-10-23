@@ -89,7 +89,8 @@ public class CreateGroupInfo  implements java.io.Serializable {
     /**
      * set 群组名：支持4-32位的字母，数字以及-和_, 以字母开头
      *
-     * @param name
+     * @param name 群组名：支持4-32位的字母，数字以及-和_, 以字母开头
+     * @return CreateGroupInfo
      */
     public CreateGroupInfo name(String name) {
         this.name = name;
@@ -100,7 +101,8 @@ public class CreateGroupInfo  implements java.io.Serializable {
     /**
      * set 描述，0~256个字符
      *
-     * @param description
+     * @param description 描述，0~256个字符
+     * @return CreateGroupInfo
      */
     public CreateGroupInfo description(String description) {
         this.description = description;

@@ -134,7 +134,8 @@ public class PolicyEdition  implements java.io.Serializable {
     /**
      * set 是否为默认版本
      *
-     * @param isDefaultEdition
+     * @param isDefaultEdition 是否为默认版本
+     * @return PolicyEdition
      */
     public PolicyEdition isDefaultEdition(Boolean isDefaultEdition) {
         this.isDefaultEdition = isDefaultEdition;
@@ -145,7 +146,8 @@ public class PolicyEdition  implements java.io.Serializable {
     /**
      * set 策略文档版本
      *
-     * @param edition
+     * @param edition 策略文档版本
+     * @return PolicyEdition
      */
     public PolicyEdition edition(String edition) {
         this.edition = edition;
@@ -156,7 +158,8 @@ public class PolicyEdition  implements java.io.Serializable {
     /**
      * set 权限策略内容
      *
-     * @param policyDocument
+     * @param policyDocument 权限策略内容
+     * @return PolicyEdition
      */
     public PolicyEdition policyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
@@ -167,7 +170,8 @@ public class PolicyEdition  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return PolicyEdition
      */
     public PolicyEdition createTime(String createTime) {
         this.createTime = createTime;

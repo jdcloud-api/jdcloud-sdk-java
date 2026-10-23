@@ -66,7 +66,8 @@ public class DescribePolicyRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 策略名称
      *
-     * @param policyName
+     * @param policyName 策略名称
+     * @return DescribePolicyRequest
      */
     public DescribePolicyRequest policyName(String policyName) {
         this.policyName = policyName;

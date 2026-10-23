@@ -182,7 +182,8 @@ public class OrganizationUser  implements java.io.Serializable {
     /**
      * set 组织ID
      *
-     * @param orgId
+     * @param orgId 组织ID
+     * @return OrganizationUser
      */
     public OrganizationUser orgId(String orgId) {
         this.orgId = orgId;
@@ -193,7 +194,8 @@ public class OrganizationUser  implements java.io.Serializable {
     /**
      * set 组织用户标识，如：erp
      *
-     * @param userId
+     * @param userId 组织用户标识，如：erp
+     * @return OrganizationUser
      */
     public OrganizationUser userId(String userId) {
         this.userId = userId;
@@ -204,7 +206,8 @@ public class OrganizationUser  implements java.io.Serializable {
     /**
      * set 组织部门路径名称
      *
-     * @param departmentPathName
+     * @param departmentPathName 组织部门路径名称
+     * @return OrganizationUser
      */
     public OrganizationUser departmentPathName(String departmentPathName) {
         this.departmentPathName = departmentPathName;
@@ -215,7 +218,8 @@ public class OrganizationUser  implements java.io.Serializable {
     /**
      * set 手机号码
      *
-     * @param phone
+     * @param phone 手机号码
+     * @return OrganizationUser
      */
     public OrganizationUser phone(String phone) {
         this.phone = phone;
@@ -226,7 +230,8 @@ public class OrganizationUser  implements java.io.Serializable {
     /**
      * set 邮箱
      *
-     * @param email
+     * @param email 邮箱
+     * @return OrganizationUser
      */
     public OrganizationUser email(String email) {
         this.email = email;
@@ -237,7 +242,8 @@ public class OrganizationUser  implements java.io.Serializable {
     /**
      * set 预校验结果：0-预校验通过; 1-子用户名格式不合法; 2-不允许与主账号同名; 3-BusinessType&#x3D;1说明子用户名已存在, BusinessType&#x3D;2说明关联关系已存在
      *
-     * @param validateState
+     * @param validateState 预校验结果：0-预校验通过; 1-子用户名格式不合法; 2-不允许与主账号同名; 3-BusinessType&#x3D;1说明子用户名已存在, BusinessType&#x3D;2说明关联关系已存在
+     * @return OrganizationUser
      */
     public OrganizationUser validateState(Integer validateState) {
         this.validateState = validateState;

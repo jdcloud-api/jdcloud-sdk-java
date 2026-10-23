@@ -86,7 +86,8 @@ public class UpdateIdentityProviderInfo  implements java.io.Serializable {
     /**
      * set 描述，0~256个字符
      *
-     * @param description
+     * @param description 描述，0~256个字符
+     * @return UpdateIdentityProviderInfo
      */
     public UpdateIdentityProviderInfo description(String description) {
         this.description = description;
@@ -97,7 +98,8 @@ public class UpdateIdentityProviderInfo  implements java.io.Serializable {
     /**
      * set 身份提供商元数据
      *
-     * @param metadata
+     * @param metadata 身份提供商元数据
+     * @return UpdateIdentityProviderInfo
      */
     public UpdateIdentityProviderInfo metadata(String metadata) {
         this.metadata = metadata;

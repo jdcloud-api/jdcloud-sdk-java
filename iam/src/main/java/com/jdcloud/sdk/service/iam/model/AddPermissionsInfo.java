@@ -67,7 +67,8 @@ public class AddPermissionsInfo  implements java.io.Serializable {
     /**
     * set 权限id集合
     *
-    * @param permissionIds
+    * @param permissionIds 权限id集合
+    * @return AddPermissionsInfo
     */
     public AddPermissionsInfo permissionIds(List<Integer> permissionIds) {
         this.permissionIds = permissionIds;

@@ -66,7 +66,8 @@ public class DescribeGroupRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 用户组名称
      *
-     * @param groupName
+     * @param groupName 用户组名称
+     * @return DescribeGroupRequest
      */
     public DescribeGroupRequest groupName(String groupName) {
         this.groupName = groupName;

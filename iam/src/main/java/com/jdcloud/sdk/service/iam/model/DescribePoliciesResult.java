@@ -90,7 +90,8 @@ public class DescribePoliciesResult extends JdcloudResult implements java.io.Ser
     /**
      * set 总数
      *
-     * @param total
+     * @param total 总数
+     * @return DescribePoliciesResult
      */
     public DescribePoliciesResult total(Integer total) {
         this.total = total;
@@ -101,7 +102,8 @@ public class DescribePoliciesResult extends JdcloudResult implements java.io.Ser
     /**
     * set policies
     *
-    * @param policies
+    * @param policies 
+    * @return DescribePoliciesResult
     */
     public DescribePoliciesResult policies(List<Policy> policies) {
         this.policies = policies;

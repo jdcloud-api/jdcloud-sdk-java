@@ -93,7 +93,8 @@ public class EnableSubUserAccessKeyRequest extends JdcloudRequest implements jav
     /**
      * set 子用户名称
      *
-     * @param subUser
+     * @param subUser 子用户名称
+     * @return EnableSubUserAccessKeyRequest
      */
     public EnableSubUserAccessKeyRequest subUser(String subUser) {
         this.subUser = subUser;
@@ -104,7 +105,8 @@ public class EnableSubUserAccessKeyRequest extends JdcloudRequest implements jav
     /**
      * set accessKey
      *
-     * @param accessKey
+     * @param accessKey accessKey
+     * @return EnableSubUserAccessKeyRequest
      */
     public EnableSubUserAccessKeyRequest accessKey(String accessKey) {
         this.accessKey = accessKey;

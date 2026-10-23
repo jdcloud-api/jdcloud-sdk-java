@@ -141,7 +141,8 @@ public class CreateIdentityProviderInfo  implements java.io.Serializable {
     /**
      * set 身份提供商名称，支持4~64位的字母，数字以及-和_, 以字母开头
      *
-     * @param name
+     * @param name 身份提供商名称，支持4~64位的字母，数字以及-和_, 以字母开头
+     * @return CreateIdentityProviderInfo
      */
     public CreateIdentityProviderInfo name(String name) {
         this.name = name;
@@ -152,7 +153,8 @@ public class CreateIdentityProviderInfo  implements java.io.Serializable {
     /**
      * set 协议类型,目前支持SAML20
      *
-     * @param protocolType
+     * @param protocolType 协议类型,目前支持SAML20
+     * @return CreateIdentityProviderInfo
      */
     public CreateIdentityProviderInfo protocolType(String protocolType) {
         this.protocolType = protocolType;
@@ -163,7 +165,8 @@ public class CreateIdentityProviderInfo  implements java.io.Serializable {
     /**
      * set 描述，0~256个字符
      *
-     * @param description
+     * @param description 描述，0~256个字符
+     * @return CreateIdentityProviderInfo
      */
     public CreateIdentityProviderInfo description(String description) {
         this.description = description;
@@ -174,7 +177,8 @@ public class CreateIdentityProviderInfo  implements java.io.Serializable {
     /**
      * set 身份提供商元数据
      *
-     * @param metadata
+     * @param metadata 身份提供商元数据
+     * @return CreateIdentityProviderInfo
      */
     public CreateIdentityProviderInfo metadata(String metadata) {
         this.metadata = metadata;

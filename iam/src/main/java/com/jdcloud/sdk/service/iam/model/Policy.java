@@ -278,7 +278,8 @@ public class Policy  implements java.io.Serializable {
     /**
      * set 策略id
      *
-     * @param policyId
+     * @param policyId 策略id
+     * @return Policy
      */
     public Policy policyId(String policyId) {
         this.policyId = policyId;
@@ -289,7 +290,8 @@ public class Policy  implements java.io.Serializable {
     /**
      * set 策略名称
      *
-     * @param name
+     * @param name 策略名称
+     * @return Policy
      */
     public Policy name(String name) {
         this.name = name;
@@ -300,7 +302,8 @@ public class Policy  implements java.io.Serializable {
     /**
      * set 京东云资源标识(jrn)
      *
-     * @param jrn
+     * @param jrn 京东云资源标识(jrn)
+     * @return Policy
      */
     public Policy jrn(String jrn) {
         this.jrn = jrn;
@@ -311,7 +314,8 @@ public class Policy  implements java.io.Serializable {
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return Policy
      */
     public Policy description(String description) {
         this.description = description;
@@ -322,7 +326,8 @@ public class Policy  implements java.io.Serializable {
     /**
      * set 策略类型：0-系统策略，1-用户策略
      *
-     * @param policyType
+     * @param policyType 策略类型：0-系统策略，1-用户策略
+     * @return Policy
      */
     public Policy policyType(Integer policyType) {
         this.policyType = policyType;
@@ -333,7 +338,8 @@ public class Policy  implements java.io.Serializable {
     /**
      * set 策略版本号
      *
-     * @param version
+     * @param version 策略版本号
+     * @return Policy
      */
     public Policy version(String version) {
         this.version = version;
@@ -344,7 +350,8 @@ public class Policy  implements java.io.Serializable {
     /**
      * set 当前默认策略文档版本
      *
-     * @param currentDefaultEdition
+     * @param currentDefaultEdition 当前默认策略文档版本
+     * @return Policy
      */
     public Policy currentDefaultEdition(String currentDefaultEdition) {
         this.currentDefaultEdition = currentDefaultEdition;
@@ -355,7 +362,8 @@ public class Policy  implements java.io.Serializable {
     /**
      * set 策略创建时间
      *
-     * @param createTime
+     * @param createTime 策略创建时间
+     * @return Policy
      */
     public Policy createTime(String createTime) {
         this.createTime = createTime;
@@ -366,7 +374,8 @@ public class Policy  implements java.io.Serializable {
     /**
      * set 策略更新时间
      *
-     * @param updateTime
+     * @param updateTime 策略更新时间
+     * @return Policy
      */
     public Policy updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -377,7 +386,8 @@ public class Policy  implements java.io.Serializable {
     /**
      * set 授权范围类型：1-全部资源，2-指定资源
      *
-     * @param scopeType
+     * @param scopeType 授权范围类型：1-全部资源，2-指定资源
+     * @return Policy
      */
     public Policy scopeType(Integer scopeType) {
         this.scopeType = scopeType;

@@ -254,7 +254,8 @@ public class RoleInfo  implements java.io.Serializable {
     /**
      * set 角色ID
      *
-     * @param roleId
+     * @param roleId 角色ID
+     * @return RoleInfo
      */
     public RoleInfo roleId(String roleId) {
         this.roleId = roleId;
@@ -265,7 +266,8 @@ public class RoleInfo  implements java.io.Serializable {
     /**
      * set 角色名称
      *
-     * @param roleName
+     * @param roleName 角色名称
+     * @return RoleInfo
      */
     public RoleInfo roleName(String roleName) {
         this.roleName = roleName;
@@ -276,7 +278,8 @@ public class RoleInfo  implements java.io.Serializable {
     /**
      * set 角色类型，2-服务相关角色，3-服务角色，4-用户角色
      *
-     * @param type
+     * @param type 角色类型，2-服务相关角色，3-服务角色，4-用户角色
+     * @return RoleInfo
      */
     public RoleInfo type(Integer type) {
         this.type = type;
@@ -287,7 +290,8 @@ public class RoleInfo  implements java.io.Serializable {
     /**
      * set 信任实体信息
      *
-     * @param assumeRolePolicyDocument
+     * @param assumeRolePolicyDocument 信任实体信息
+     * @return RoleInfo
      */
     public RoleInfo assumeRolePolicyDocument(String assumeRolePolicyDocument) {
         this.assumeRolePolicyDocument = assumeRolePolicyDocument;
@@ -298,7 +302,8 @@ public class RoleInfo  implements java.io.Serializable {
     /**
      * set 描述，0~256个字符
      *
-     * @param description
+     * @param description 描述，0~256个字符
+     * @return RoleInfo
      */
     public RoleInfo description(String description) {
         this.description = description;
@@ -309,7 +314,8 @@ public class RoleInfo  implements java.io.Serializable {
     /**
      * set 最大会话时长3600~43200秒，默认3600秒
      *
-     * @param maxSessionDuration
+     * @param maxSessionDuration 最大会话时长3600~43200秒，默认3600秒
+     * @return RoleInfo
      */
     public RoleInfo maxSessionDuration(Integer maxSessionDuration) {
         this.maxSessionDuration = maxSessionDuration;
@@ -320,7 +326,8 @@ public class RoleInfo  implements java.io.Serializable {
     /**
      * set 京东云资源标识(jrn)
      *
-     * @param jrn
+     * @param jrn 京东云资源标识(jrn)
+     * @return RoleInfo
      */
     public RoleInfo jrn(String jrn) {
         this.jrn = jrn;
@@ -331,7 +338,8 @@ public class RoleInfo  implements java.io.Serializable {
     /**
      * set 创建角色的时间
      *
-     * @param createTime
+     * @param createTime 创建角色的时间
+     * @return RoleInfo
      */
     public RoleInfo createTime(String createTime) {
         this.createTime = createTime;
@@ -342,7 +350,8 @@ public class RoleInfo  implements java.io.Serializable {
     /**
      * set 角色所属主账号
      *
-     * @param account
+     * @param account 角色所属主账号
+     * @return RoleInfo
      */
     public RoleInfo account(String account) {
         this.account = account;

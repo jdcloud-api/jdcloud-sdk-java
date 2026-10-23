@@ -69,7 +69,8 @@ public class CreatePolicyRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 策略信息
      *
-     * @param createPolicyInfo
+     * @param createPolicyInfo 策略信息
+     * @return CreatePolicyRequest
      */
     public CreatePolicyRequest createPolicyInfo(CreatePolicyInfo createPolicyInfo) {
         this.createPolicyInfo = createPolicyInfo;

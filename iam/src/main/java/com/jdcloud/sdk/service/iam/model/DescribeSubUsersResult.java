@@ -90,7 +90,8 @@ public class DescribeSubUsersResult extends JdcloudResult implements java.io.Ser
     /**
     * set subUsers
     *
-    * @param subUsers
+    * @param subUsers 
+    * @return DescribeSubUsersResult
     */
     public DescribeSubUsersResult subUsers(List<SubUser> subUsers) {
         this.subUsers = subUsers;
@@ -101,7 +102,8 @@ public class DescribeSubUsersResult extends JdcloudResult implements java.io.Ser
     /**
      * set total
      *
-     * @param total
+     * @param total 
+     * @return DescribeSubUsersResult
      */
     public DescribeSubUsersResult total(Integer total) {
         this.total = total;

@@ -93,7 +93,8 @@ public class Resource  implements java.io.Serializable {
     /**
     * set 资源id集合，传*表示对所有id生效
     *
-    * @param ids
+    * @param ids 资源id集合，传*表示对所有id生效
+    * @return Resource
     */
     public Resource ids(List<String> ids) {
         this.ids = ids;
@@ -104,7 +105,8 @@ public class Resource  implements java.io.Serializable {
     /**
      * set 资源类型，云主机-server、镜像-image、云硬盘-volume、vpc-vpc、公网Ip-floatingIp、负载均衡-loadbalance、云数据库(mysql)-database、云缓存-cache
      *
-     * @param type
+     * @param type 资源类型，云主机-server、镜像-image、云硬盘-volume、vpc-vpc、公网Ip-floatingIp、负载均衡-loadbalance、云数据库(mysql)-database、云缓存-cache
+     * @return Resource
      */
     public Resource type(String type) {
         this.type = type;

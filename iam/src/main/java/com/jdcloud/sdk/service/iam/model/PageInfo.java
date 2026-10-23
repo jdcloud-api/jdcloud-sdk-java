@@ -134,7 +134,8 @@ public class PageInfo  implements java.io.Serializable {
     /**
      * set 当前页码
      *
-     * @param currentPage
+     * @param currentPage 当前页码
+     * @return PageInfo
      */
     public PageInfo currentPage(Integer currentPage) {
         this.currentPage = currentPage;
@@ -145,7 +146,8 @@ public class PageInfo  implements java.io.Serializable {
     /**
      * set 每页条数
      *
-     * @param pageSize
+     * @param pageSize 每页条数
+     * @return PageInfo
      */
     public PageInfo pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -156,7 +158,8 @@ public class PageInfo  implements java.io.Serializable {
     /**
      * set 总条数
      *
-     * @param totalRecord
+     * @param totalRecord 总条数
+     * @return PageInfo
      */
     public PageInfo totalRecord(Integer totalRecord) {
         this.totalRecord = totalRecord;
@@ -167,7 +170,8 @@ public class PageInfo  implements java.io.Serializable {
     /**
      * set 总页数
      *
-     * @param totalPage
+     * @param totalPage 总页数
+     * @return PageInfo
      */
     public PageInfo totalPage(Integer totalPage) {
         this.totalPage = totalPage;

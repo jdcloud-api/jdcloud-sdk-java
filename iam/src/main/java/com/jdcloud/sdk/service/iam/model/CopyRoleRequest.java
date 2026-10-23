@@ -67,7 +67,8 @@ public class CopyRoleRequest extends JdcloudRequest implements java.io.Serializa
     /**
      * set 角色信息
      *
-     * @param copyRoleInfo
+     * @param copyRoleInfo 角色信息
+     * @return CopyRoleRequest
      */
     public CopyRoleRequest copyRoleInfo(CopyRoleInfo copyRoleInfo) {
         this.copyRoleInfo = copyRoleInfo;

@@ -134,7 +134,8 @@ public class UpdateLoginProfileInfo  implements java.io.Serializable {
     /**
      * set 子用户登录是否需要重置密码，默认false
      *
-     * @param passwordResetRequired
+     * @param passwordResetRequired 子用户登录是否需要重置密码，默认false
+     * @return UpdateLoginProfileInfo
      */
     public UpdateLoginProfileInfo passwordResetRequired(Boolean passwordResetRequired) {
         this.passwordResetRequired = passwordResetRequired;
@@ -145,7 +146,8 @@ public class UpdateLoginProfileInfo  implements java.io.Serializable {
     /**
      * set 指定密码，密码必须符合密码强度要求。关于密码强度设置接口，请参考describePasswordPolicy
      *
-     * @param password
+     * @param password 指定密码，密码必须符合密码强度要求。关于密码强度设置接口，请参考describePasswordPolicy
+     * @return UpdateLoginProfileInfo
      */
     public UpdateLoginProfileInfo password(String password) {
         this.password = password;
@@ -156,7 +158,8 @@ public class UpdateLoginProfileInfo  implements java.io.Serializable {
     /**
      * set 是否自动生成密码，默认false
      *
-     * @param autoGeneratePassword
+     * @param autoGeneratePassword 是否自动生成密码，默认false
+     * @return UpdateLoginProfileInfo
      */
     public UpdateLoginProfileInfo autoGeneratePassword(Boolean autoGeneratePassword) {
         this.autoGeneratePassword = autoGeneratePassword;
@@ -167,7 +170,8 @@ public class UpdateLoginProfileInfo  implements java.io.Serializable {
     /**
      * set 指定子用户在下次登录时是否必须绑定多因素认证器
      *
-     * @param mFABindRequired
+     * @param mFABindRequired 指定子用户在下次登录时是否必须绑定多因素认证器
+     * @return UpdateLoginProfileInfo
      */
     public UpdateLoginProfileInfo mFABindRequired(Boolean mFABindRequired) {
         this.mFABindRequired = mFABindRequired;

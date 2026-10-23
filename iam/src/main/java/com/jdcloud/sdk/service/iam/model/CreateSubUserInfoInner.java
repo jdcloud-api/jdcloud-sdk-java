@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.iam.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * createSubUserInfoInner
@@ -32,13 +31,6 @@ import com.jdcloud.sdk.annotation.Required;
 public class CreateSubUserInfoInner  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * 子用户名，支持4~20位的字母，数字以及-和_，以字母开头
-     * Required:true
-     */
-    @Required
-    private String name;
 
     /**
      * 描述，0~256个字符
@@ -85,25 +77,21 @@ public class CreateSubUserInfoInner  implements java.io.Serializable {
      */
     private Boolean autoGeneratePassword;
 
-
+    /**
+     * 主用户pin
+     */
+    private String account;
 
     /**
-     * get 子用户名，支持4~20位的字母，数字以及-和_，以字母开头
-     *
-     * @return
+     * 子用户名(注意不是pin)，支持4~20位的字母，数字以及-和_，以字母开头 必填
      */
-    public String getName() {
-        return name;
-    }
+    private String subUser;
 
     /**
-     * set 子用户名，支持4~20位的字母，数字以及-和_，以字母开头
-     *
-     * @param name
+     * 创建类型 0自定义 1组织 2ldap 3jd 4wx 5joyCode
      */
-    public void setName(String name) {
-        this.name = name;
-    }
+    private Integer createType;
+
 
 
     /**
@@ -277,22 +265,69 @@ public class CreateSubUserInfoInner  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 主用户pin
+     *
+     * @return
+     */
+    public String getAccount() {
+        return account;
+    }
 
     /**
-     * set 子用户名，支持4~20位的字母，数字以及-和_，以字母开头
+     * set 主用户pin
      *
-     * @param name
+     * @param account
      */
-    public CreateSubUserInfoInner name(String name) {
-        this.name = name;
-        return this;
+    public void setAccount(String account) {
+        this.account = account;
     }
+
+
+    /**
+     * get 子用户名(注意不是pin)，支持4~20位的字母，数字以及-和_，以字母开头 必填
+     *
+     * @return
+     */
+    public String getSubUser() {
+        return subUser;
+    }
+
+    /**
+     * set 子用户名(注意不是pin)，支持4~20位的字母，数字以及-和_，以字母开头 必填
+     *
+     * @param subUser
+     */
+    public void setSubUser(String subUser) {
+        this.subUser = subUser;
+    }
+
+
+    /**
+     * get 创建类型 0自定义 1组织 2ldap 3jd 4wx 5joyCode
+     *
+     * @return
+     */
+    public Integer getCreateType() {
+        return createType;
+    }
+
+    /**
+     * set 创建类型 0自定义 1组织 2ldap 3jd 4wx 5joyCode
+     *
+     * @param createType
+     */
+    public void setCreateType(Integer createType) {
+        this.createType = createType;
+    }
+
 
 
     /**
      * set 描述，0~256个字符
      *
-     * @param description
+     * @param description 描述，0~256个字符
+     * @return CreateSubUserInfoInner
      */
     public CreateSubUserInfoInner description(String description) {
         this.description = description;
@@ -303,7 +338,8 @@ public class CreateSubUserInfoInner  implements java.io.Serializable {
     /**
      * set 按照密码策略设置，默认8~20位，至少包含一个小写字母、大写字母和数字
      *
-     * @param password
+     * @param password 按照密码策略设置，默认8~20位，至少包含一个小写字母、大写字母和数字
+     * @return CreateSubUserInfoInner
      */
     public CreateSubUserInfoInner password(String password) {
         this.password = password;
@@ -314,7 +350,8 @@ public class CreateSubUserInfoInner  implements java.io.Serializable {
     /**
      * set 手机号码，区号-手机号
      *
-     * @param phone
+     * @param phone 手机号码，区号-手机号
+     * @return CreateSubUserInfoInner
      */
     public CreateSubUserInfoInner phone(String phone) {
         this.phone = phone;
@@ -325,7 +362,8 @@ public class CreateSubUserInfoInner  implements java.io.Serializable {
     /**
      * set 邮箱
      *
-     * @param email
+     * @param email 邮箱
+     * @return CreateSubUserInfoInner
      */
     public CreateSubUserInfoInner email(String email) {
         this.email = email;
@@ -336,7 +374,8 @@ public class CreateSubUserInfoInner  implements java.io.Serializable {
     /**
      * set 姓名
      *
-     * @param nickName
+     * @param nickName 姓名
+     * @return CreateSubUserInfoInner
      */
     public CreateSubUserInfoInner nickName(String nickName) {
         this.nickName = nickName;
@@ -347,7 +386,8 @@ public class CreateSubUserInfoInner  implements java.io.Serializable {
     /**
      * set 是否创建accessKey，默认false
      *
-     * @param createAk
+     * @param createAk 是否创建accessKey，默认false
+     * @return CreateSubUserInfoInner
      */
     public CreateSubUserInfoInner createAk(Boolean createAk) {
         this.createAk = createAk;
@@ -358,7 +398,8 @@ public class CreateSubUserInfoInner  implements java.io.Serializable {
     /**
      * set 子用户首次登录是否需要重置密码，默认false
      *
-     * @param needResetPassword
+     * @param needResetPassword 子用户首次登录是否需要重置密码，默认false
+     * @return CreateSubUserInfoInner
      */
     public CreateSubUserInfoInner needResetPassword(Boolean needResetPassword) {
         this.needResetPassword = needResetPassword;
@@ -369,7 +410,8 @@ public class CreateSubUserInfoInner  implements java.io.Serializable {
     /**
      * set 子用户是否支持控制台登录，默认true
      *
-     * @param consoleLogin
+     * @param consoleLogin 子用户是否支持控制台登录，默认true
+     * @return CreateSubUserInfoInner
      */
     public CreateSubUserInfoInner consoleLogin(Boolean consoleLogin) {
         this.consoleLogin = consoleLogin;
@@ -380,10 +422,47 @@ public class CreateSubUserInfoInner  implements java.io.Serializable {
     /**
      * set 是否自动生成密码，默认false
      *
-     * @param autoGeneratePassword
+     * @param autoGeneratePassword 是否自动生成密码，默认false
+     * @return CreateSubUserInfoInner
      */
     public CreateSubUserInfoInner autoGeneratePassword(Boolean autoGeneratePassword) {
         this.autoGeneratePassword = autoGeneratePassword;
+        return this;
+    }
+
+
+    /**
+     * set 主用户pin
+     *
+     * @param account 主用户pin
+     * @return CreateSubUserInfoInner
+     */
+    public CreateSubUserInfoInner account(String account) {
+        this.account = account;
+        return this;
+    }
+
+
+    /**
+     * set 子用户名(注意不是pin)，支持4~20位的字母，数字以及-和_，以字母开头 必填
+     *
+     * @param subUser 子用户名(注意不是pin)，支持4~20位的字母，数字以及-和_，以字母开头 必填
+     * @return CreateSubUserInfoInner
+     */
+    public CreateSubUserInfoInner subUser(String subUser) {
+        this.subUser = subUser;
+        return this;
+    }
+
+
+    /**
+     * set 创建类型 0自定义 1组织 2ldap 3jd 4wx 5joyCode
+     *
+     * @param createType 创建类型 0自定义 1组织 2ldap 3jd 4wx 5joyCode
+     * @return CreateSubUserInfoInner
+     */
+    public CreateSubUserInfoInner createType(Integer createType) {
+        this.createType = createType;
         return this;
     }
 

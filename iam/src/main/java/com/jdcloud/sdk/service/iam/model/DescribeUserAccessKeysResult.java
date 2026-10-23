@@ -68,7 +68,8 @@ public class DescribeUserAccessKeysResult extends JdcloudResult implements java.
     /**
     * set userAccessKeys
     *
-    * @param userAccessKeys
+    * @param userAccessKeys 
+    * @return DescribeUserAccessKeysResult
     */
     public DescribeUserAccessKeysResult userAccessKeys(List<UserAccessKey> userAccessKeys) {
         this.userAccessKeys = userAccessKeys;
