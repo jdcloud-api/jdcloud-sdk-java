@@ -254,7 +254,8 @@ public class TPaasUser  implements java.io.Serializable {
     /**
      * set pin
      *
-     * @param pin
+     * @param pin pin
+     * @return TPaasUser
      */
     public TPaasUser pin(String pin) {
         this.pin = pin;
@@ -265,7 +266,8 @@ public class TPaasUser  implements java.io.Serializable {
     /**
      * set 用户名
      *
-     * @param name
+     * @param name 用户名
+     * @return TPaasUser
      */
     public TPaasUser name(String name) {
         this.name = name;
@@ -276,7 +278,8 @@ public class TPaasUser  implements java.io.Serializable {
     /**
      * set 手机号码
      *
-     * @param phone
+     * @param phone 手机号码
+     * @return TPaasUser
      */
     public TPaasUser phone(String phone) {
         this.phone = phone;
@@ -287,7 +290,8 @@ public class TPaasUser  implements java.io.Serializable {
     /**
      * set 邮箱
      *
-     * @param email
+     * @param email 邮箱
+     * @return TPaasUser
      */
     public TPaasUser email(String email) {
         this.email = email;
@@ -298,7 +302,8 @@ public class TPaasUser  implements java.io.Serializable {
     /**
      * set 描述信息
      *
-     * @param description
+     * @param description 描述信息
+     * @return TPaasUser
      */
     public TPaasUser description(String description) {
         this.description = description;
@@ -309,7 +314,8 @@ public class TPaasUser  implements java.io.Serializable {
     /**
      * set 账号id
      *
-     * @param account
+     * @param account 账号id
+     * @return TPaasUser
      */
     public TPaasUser account(Integer account) {
         this.account = account;
@@ -320,7 +326,8 @@ public class TPaasUser  implements java.io.Serializable {
     /**
      * set 用户创建时间
      *
-     * @param createTime
+     * @param createTime 用户创建时间
+     * @return TPaasUser
      */
     public TPaasUser createTime(String createTime) {
         this.createTime = createTime;
@@ -331,7 +338,8 @@ public class TPaasUser  implements java.io.Serializable {
     /**
      * set 用户更新时间
      *
-     * @param updateTime
+     * @param updateTime 用户更新时间
+     * @return TPaasUser
      */
     public TPaasUser updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -342,7 +350,8 @@ public class TPaasUser  implements java.io.Serializable {
     /**
      * set 姓名
      *
-     * @param nickName
+     * @param nickName 姓名
+     * @return TPaasUser
      */
     public TPaasUser nickName(String nickName) {
         this.nickName = nickName;

@@ -64,7 +64,8 @@ public class DescribeGroupResult extends JdcloudResult implements java.io.Serial
     /**
      * set 用户组信息
      *
-     * @param group
+     * @param group 用户组信息
+     * @return DescribeGroupResult
      */
     public DescribeGroupResult group(GroupDetail group) {
         this.group = group;

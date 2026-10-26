@@ -232,7 +232,8 @@ public class Permission  implements java.io.Serializable {
     /**
      * set 权限id
      *
-     * @param id
+     * @param id 权限id
+     * @return Permission
      */
     public Permission id(Integer id) {
         this.id = id;
@@ -243,7 +244,8 @@ public class Permission  implements java.io.Serializable {
     /**
      * set 主账号pin
      *
-     * @param account
+     * @param account 主账号pin
+     * @return Permission
      */
     public Permission account(String account) {
         this.account = account;
@@ -254,7 +256,8 @@ public class Permission  implements java.io.Serializable {
     /**
      * set 权限名称
      *
-     * @param name
+     * @param name 权限名称
+     * @return Permission
      */
     public Permission name(String name) {
         this.name = name;
@@ -265,7 +268,8 @@ public class Permission  implements java.io.Serializable {
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return Permission
      */
     public Permission description(String description) {
         this.description = description;
@@ -276,7 +280,8 @@ public class Permission  implements java.io.Serializable {
     /**
      * set 权限类型
      *
-     * @param permissionType
+     * @param permissionType 权限类型
+     * @return Permission
      */
     public Permission permissionType(String permissionType) {
         this.permissionType = permissionType;
@@ -287,7 +292,8 @@ public class Permission  implements java.io.Serializable {
     /**
      * set 权限版本号
      *
-     * @param version
+     * @param version 权限版本号
+     * @return Permission
      */
     public Permission version(String version) {
         this.version = version;
@@ -298,7 +304,8 @@ public class Permission  implements java.io.Serializable {
     /**
      * set 权限内容
      *
-     * @param content
+     * @param content 权限内容
+     * @return Permission
      */
     public Permission content(String content) {
         this.content = content;
@@ -309,7 +316,8 @@ public class Permission  implements java.io.Serializable {
     /**
     * set 权限详细信息
     *
-    * @param permissionDetailList
+    * @param permissionDetailList 权限详细信息
+    * @return Permission
     */
     public Permission permissionDetailList(List<PermissionDetail> permissionDetailList) {
         this.permissionDetailList = permissionDetailList;

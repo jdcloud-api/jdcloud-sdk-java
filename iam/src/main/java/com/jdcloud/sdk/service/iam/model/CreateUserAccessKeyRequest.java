@@ -67,7 +67,8 @@ public class CreateUserAccessKeyRequest extends JdcloudRequest implements java.i
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return CreateUserAccessKeyRequest
      */
     public CreateUserAccessKeyRequest regionId(String regionId) {
         this.regionId = regionId;

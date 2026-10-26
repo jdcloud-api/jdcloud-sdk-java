@@ -86,7 +86,8 @@ public class ResourceGroup  implements java.io.Serializable {
     /**
      * set 资源组ID
      *
-     * @param scopeId
+     * @param scopeId 资源组ID
+     * @return ResourceGroup
      */
     public ResourceGroup scopeId(String scopeId) {
         this.scopeId = scopeId;
@@ -97,7 +98,8 @@ public class ResourceGroup  implements java.io.Serializable {
     /**
      * set 资源组名称
      *
-     * @param scopeName
+     * @param scopeName 资源组名称
+     * @return ResourceGroup
      */
     public ResourceGroup scopeName(String scopeName) {
         this.scopeName = scopeName;

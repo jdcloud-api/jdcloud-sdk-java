@@ -117,7 +117,8 @@ public class PolicyCollection  implements java.io.Serializable {
     /**
      * set serviceName
      *
-     * @param serviceName
+     * @param serviceName 
+     * @return PolicyCollection
      */
     public PolicyCollection serviceName(String serviceName) {
         this.serviceName = serviceName;
@@ -128,7 +129,8 @@ public class PolicyCollection  implements java.io.Serializable {
     /**
      * set name
      *
-     * @param name
+     * @param name 
+     * @return PolicyCollection
      */
     public PolicyCollection name(String name) {
         this.name = name;
@@ -139,7 +141,8 @@ public class PolicyCollection  implements java.io.Serializable {
     /**
      * set content
      *
-     * @param content
+     * @param content 
+     * @return PolicyCollection
      */
     public PolicyCollection content(String content) {
         this.content = content;

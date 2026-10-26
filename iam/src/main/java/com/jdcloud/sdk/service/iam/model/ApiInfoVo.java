@@ -457,7 +457,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set serviceNameCN
      *
-     * @param serviceNameCN
+     * @param serviceNameCN 
+     * @return ApiInfoVo
      */
     public ApiInfoVo serviceNameCN(String serviceNameCN) {
         this.serviceNameCN = serviceNameCN;
@@ -468,7 +469,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set serviceName
      *
-     * @param serviceName
+     * @param serviceName 
+     * @return ApiInfoVo
      */
     public ApiInfoVo serviceName(String serviceName) {
         this.serviceName = serviceName;
@@ -479,7 +481,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set serviceOldCode
      *
-     * @param serviceOldCode
+     * @param serviceOldCode 
+     * @return ApiInfoVo
      */
     public ApiInfoVo serviceOldCode(String serviceOldCode) {
         this.serviceOldCode = serviceOldCode;
@@ -490,7 +493,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set resourceType
      *
-     * @param resourceType
+     * @param resourceType 
+     * @return ApiInfoVo
      */
     public ApiInfoVo resourceType(String resourceType) {
         this.resourceType = resourceType;
@@ -501,7 +505,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set subResourceType
      *
-     * @param subResourceType
+     * @param subResourceType 
+     * @return ApiInfoVo
      */
     public ApiInfoVo subResourceType(String subResourceType) {
         this.subResourceType = subResourceType;
@@ -512,7 +517,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set actionName
      *
-     * @param actionName
+     * @param actionName 
+     * @return ApiInfoVo
      */
     public ApiInfoVo actionName(String actionName) {
         this.actionName = actionName;
@@ -523,7 +529,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set actionDescription
      *
-     * @param actionDescription
+     * @param actionDescription 
+     * @return ApiInfoVo
      */
     public ApiInfoVo actionDescription(String actionDescription) {
         this.actionDescription = actionDescription;
@@ -534,7 +541,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set actionType
      *
-     * @param actionType
+     * @param actionType 
+     * @return ApiInfoVo
      */
     public ApiInfoVo actionType(String actionType) {
         this.actionType = actionType;
@@ -545,7 +553,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set method
      *
-     * @param method
+     * @param method 
+     * @return ApiInfoVo
      */
     public ApiInfoVo method(String method) {
         this.method = method;
@@ -556,7 +565,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set region
      *
-     * @param region
+     * @param region 
+     * @return ApiInfoVo
      */
     public ApiInfoVo region(Integer region) {
         this.region = region;
@@ -567,7 +577,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set version
      *
-     * @param version
+     * @param version 
+     * @return ApiInfoVo
      */
     public ApiInfoVo version(Integer version) {
         this.version = version;
@@ -578,7 +589,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set accessLevel
      *
-     * @param accessLevel
+     * @param accessLevel 
+     * @return ApiInfoVo
      */
     public ApiInfoVo accessLevel(Integer accessLevel) {
         this.accessLevel = accessLevel;
@@ -589,7 +601,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
     * set showRule
     *
-    * @param showRule
+    * @param showRule 
+    * @return ApiInfoVo
     */
     public ApiInfoVo showRule(List<ApiInfoShowRule> showRule) {
         this.showRule = showRule;
@@ -600,7 +613,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set supply
      *
-     * @param supply
+     * @param supply 
+     * @return ApiInfoVo
      */
     public ApiInfoVo supply(Integer supply) {
         this.supply = supply;
@@ -611,7 +625,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set ignoreDeny
      *
-     * @param ignoreDeny
+     * @param ignoreDeny 
+     * @return ApiInfoVo
      */
     public ApiInfoVo ignoreDeny(Integer ignoreDeny) {
         this.ignoreDeny = ignoreDeny;
@@ -622,7 +637,8 @@ public class ApiInfoVo  implements java.io.Serializable {
     /**
      * set tagResourceLevel
      *
-     * @param tagResourceLevel
+     * @param tagResourceLevel 
+     * @return ApiInfoVo
      */
     public ApiInfoVo tagResourceLevel(Integer tagResourceLevel) {
         this.tagResourceLevel = tagResourceLevel;

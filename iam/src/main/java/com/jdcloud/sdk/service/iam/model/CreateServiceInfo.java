@@ -62,7 +62,8 @@ public class CreateServiceInfo  implements java.io.Serializable {
     /**
      * set serviceInfoVo
      *
-     * @param serviceInfoVo
+     * @param serviceInfoVo 
+     * @return CreateServiceInfo
      */
     public CreateServiceInfo serviceInfoVo(ServiceInfoVo serviceInfoVo) {
         this.serviceInfoVo = serviceInfoVo;

@@ -62,7 +62,8 @@ public class UpdateAssumeRolePolicyInfo  implements java.io.Serializable {
     /**
      * set 信任实体信息
      *
-     * @param assumeRolePolicyDocument
+     * @param assumeRolePolicyDocument 信任实体信息
+     * @return UpdateAssumeRolePolicyInfo
      */
     public UpdateAssumeRolePolicyInfo assumeRolePolicyDocument(String assumeRolePolicyDocument) {
         this.assumeRolePolicyDocument = assumeRolePolicyDocument;

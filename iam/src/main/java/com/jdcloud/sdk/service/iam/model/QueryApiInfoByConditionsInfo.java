@@ -269,7 +269,8 @@ public class QueryApiInfoByConditionsInfo  implements java.io.Serializable {
     /**
     * set serviceNameCNs
     *
-    * @param serviceNameCNs
+    * @param serviceNameCNs 
+    * @return QueryApiInfoByConditionsInfo
     */
     public QueryApiInfoByConditionsInfo serviceNameCNs(List<String> serviceNameCNs) {
         this.serviceNameCNs = serviceNameCNs;
@@ -280,7 +281,8 @@ public class QueryApiInfoByConditionsInfo  implements java.io.Serializable {
     /**
     * set serviceNames
     *
-    * @param serviceNames
+    * @param serviceNames 
+    * @return QueryApiInfoByConditionsInfo
     */
     public QueryApiInfoByConditionsInfo serviceNames(List<String> serviceNames) {
         this.serviceNames = serviceNames;
@@ -291,7 +293,8 @@ public class QueryApiInfoByConditionsInfo  implements java.io.Serializable {
     /**
     * set actionTypes
     *
-    * @param actionTypes
+    * @param actionTypes 
+    * @return QueryApiInfoByConditionsInfo
     */
     public QueryApiInfoByConditionsInfo actionTypes(List<String> actionTypes) {
         this.actionTypes = actionTypes;
@@ -302,7 +305,8 @@ public class QueryApiInfoByConditionsInfo  implements java.io.Serializable {
     /**
      * set actionDescription
      *
-     * @param actionDescription
+     * @param actionDescription 
+     * @return QueryApiInfoByConditionsInfo
      */
     public QueryApiInfoByConditionsInfo actionDescription(String actionDescription) {
         this.actionDescription = actionDescription;
@@ -313,7 +317,8 @@ public class QueryApiInfoByConditionsInfo  implements java.io.Serializable {
     /**
      * set actionName
      *
-     * @param actionName
+     * @param actionName 
+     * @return QueryApiInfoByConditionsInfo
      */
     public QueryApiInfoByConditionsInfo actionName(String actionName) {
         this.actionName = actionName;
@@ -324,7 +329,8 @@ public class QueryApiInfoByConditionsInfo  implements java.io.Serializable {
     /**
     * set actionNames
     *
-    * @param actionNames
+    * @param actionNames 
+    * @return QueryApiInfoByConditionsInfo
     */
     public QueryApiInfoByConditionsInfo actionNames(List<String> actionNames) {
         this.actionNames = actionNames;
@@ -335,7 +341,8 @@ public class QueryApiInfoByConditionsInfo  implements java.io.Serializable {
     /**
     * set accessLevels
     *
-    * @param accessLevels
+    * @param accessLevels 
+    * @return QueryApiInfoByConditionsInfo
     */
     public QueryApiInfoByConditionsInfo accessLevels(List<String> accessLevels) {
         this.accessLevels = accessLevels;
@@ -346,7 +353,8 @@ public class QueryApiInfoByConditionsInfo  implements java.io.Serializable {
     /**
      * set page
      *
-     * @param page
+     * @param page 
+     * @return QueryApiInfoByConditionsInfo
      */
     public QueryApiInfoByConditionsInfo page(Integer page) {
         this.page = page;
@@ -357,7 +365,8 @@ public class QueryApiInfoByConditionsInfo  implements java.io.Serializable {
     /**
      * set pageSize
      *
-     * @param pageSize
+     * @param pageSize 
+     * @return QueryApiInfoByConditionsInfo
      */
     public QueryApiInfoByConditionsInfo pageSize(Integer pageSize) {
         this.pageSize = pageSize;

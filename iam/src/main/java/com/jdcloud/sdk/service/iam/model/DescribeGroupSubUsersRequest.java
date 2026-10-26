@@ -114,7 +114,8 @@ public class DescribeGroupSubUsersRequest extends JdcloudRequest implements java
     /**
      * set 页码，默认1
      *
-     * @param pageNumber
+     * @param pageNumber 页码，默认1
+     * @return DescribeGroupSubUsersRequest
      */
     public DescribeGroupSubUsersRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -125,7 +126,8 @@ public class DescribeGroupSubUsersRequest extends JdcloudRequest implements java
     /**
      * set 分页大小，默认50，取值范围[10, 100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认50，取值范围[10, 100]
+     * @return DescribeGroupSubUsersRequest
      */
     public DescribeGroupSubUsersRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -136,7 +138,8 @@ public class DescribeGroupSubUsersRequest extends JdcloudRequest implements java
     /**
      * set 用户组名称
      *
-     * @param groupName
+     * @param groupName 用户组名称
+     * @return DescribeGroupSubUsersRequest
      */
     public DescribeGroupSubUsersRequest groupName(String groupName) {
         this.groupName = groupName;

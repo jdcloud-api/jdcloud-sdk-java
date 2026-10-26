@@ -65,7 +65,8 @@ public class Flags  implements java.io.Serializable {
     /**
      * set value
      *
-     * @param value
+     * @param value 
+     * @return Flags
      */
     public Flags value(Integer value) {
         this.value = value;

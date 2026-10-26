@@ -93,7 +93,8 @@ public class UpdateSubUserRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 子用户信息
      *
-     * @param updateSubUserInfo
+     * @param updateSubUserInfo 子用户信息
+     * @return UpdateSubUserRequest
      */
     public UpdateSubUserRequest updateSubUserInfo(UpdateSubUserInfo updateSubUserInfo) {
         this.updateSubUserInfo = updateSubUserInfo;
@@ -104,7 +105,8 @@ public class UpdateSubUserRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 子用户名
      *
-     * @param subUser
+     * @param subUser 子用户名
+     * @return UpdateSubUserRequest
      */
     public UpdateSubUserRequest subUser(String subUser) {
         this.subUser = subUser;

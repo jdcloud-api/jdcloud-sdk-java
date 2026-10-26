@@ -64,7 +64,8 @@ public class CopyRoleResult extends JdcloudResult implements java.io.Serializabl
     /**
      * set 角色信息
      *
-     * @param roleInfo
+     * @param roleInfo 角色信息
+     * @return CopyRoleResult
      */
     public CopyRoleResult roleInfo(RoleInfo roleInfo) {
         this.roleInfo = roleInfo;

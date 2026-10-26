@@ -86,7 +86,8 @@ public class UserAuditRecord  implements java.io.Serializable {
     /**
      * set 最近一次使用AK访问时间
      *
-     * @param lastVisitTime
+     * @param lastVisitTime 最近一次使用AK访问时间
+     * @return UserAuditRecord
      */
     public UserAuditRecord lastVisitTime(String lastVisitTime) {
         this.lastVisitTime = lastVisitTime;
@@ -97,7 +98,8 @@ public class UserAuditRecord  implements java.io.Serializable {
     /**
      * set 最近一次使用AK访问事件
      *
-     * @param lastVisitEvent
+     * @param lastVisitEvent 最近一次使用AK访问事件
+     * @return UserAuditRecord
      */
     public UserAuditRecord lastVisitEvent(String lastVisitEvent) {
         this.lastVisitEvent = lastVisitEvent;

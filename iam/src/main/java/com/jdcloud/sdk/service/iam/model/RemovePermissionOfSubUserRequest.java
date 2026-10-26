@@ -118,7 +118,8 @@ public class RemovePermissionOfSubUserRequest extends JdcloudRequest implements 
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return RemovePermissionOfSubUserRequest
      */
     public RemovePermissionOfSubUserRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -129,7 +130,8 @@ public class RemovePermissionOfSubUserRequest extends JdcloudRequest implements 
     /**
      * set 权限id
      *
-     * @param permissionId
+     * @param permissionId 权限id
+     * @return RemovePermissionOfSubUserRequest
      */
     public RemovePermissionOfSubUserRequest permissionId(Integer permissionId) {
         this.permissionId = permissionId;
@@ -140,7 +142,8 @@ public class RemovePermissionOfSubUserRequest extends JdcloudRequest implements 
     /**
      * set 子用户用户名
      *
-     * @param subUser
+     * @param subUser 子用户用户名
+     * @return RemovePermissionOfSubUserRequest
      */
     public RemovePermissionOfSubUserRequest subUser(String subUser) {
         this.subUser = subUser;

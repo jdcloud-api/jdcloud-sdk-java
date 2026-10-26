@@ -140,7 +140,8 @@ public class DetachGroupPolicyRequest extends JdcloudRequest implements java.io.
     /**
      * set 策略名称
      *
-     * @param policyName
+     * @param policyName 策略名称
+     * @return DetachGroupPolicyRequest
      */
     public DetachGroupPolicyRequest policyName(String policyName) {
         this.policyName = policyName;
@@ -151,7 +152,8 @@ public class DetachGroupPolicyRequest extends JdcloudRequest implements java.io.
     /**
      * set 资源组id
      *
-     * @param scopeId
+     * @param scopeId 资源组id
+     * @return DetachGroupPolicyRequest
      */
     public DetachGroupPolicyRequest scopeId(String scopeId) {
         this.scopeId = scopeId;
@@ -162,7 +164,8 @@ public class DetachGroupPolicyRequest extends JdcloudRequest implements java.io.
     /**
      * set 允许解除策略：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
      *
-     * @param allowDetachAddPolicy
+     * @param allowDetachAddPolicy 允许解除策略：&quot;Deny&quot; 不允许，Allow 允许，空情况默认允许，兼容历史数据
+     * @return DetachGroupPolicyRequest
      */
     public DetachGroupPolicyRequest allowDetachAddPolicy(String allowDetachAddPolicy) {
         this.allowDetachAddPolicy = allowDetachAddPolicy;
@@ -173,7 +176,8 @@ public class DetachGroupPolicyRequest extends JdcloudRequest implements java.io.
     /**
      * set 用户组名称
      *
-     * @param groupName
+     * @param groupName 用户组名称
+     * @return DetachGroupPolicyRequest
      */
     public DetachGroupPolicyRequest groupName(String groupName) {
         this.groupName = groupName;

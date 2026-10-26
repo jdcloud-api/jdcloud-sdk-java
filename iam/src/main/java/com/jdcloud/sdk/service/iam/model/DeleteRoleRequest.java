@@ -66,7 +66,8 @@ public class DeleteRoleRequest extends JdcloudRequest implements java.io.Seriali
     /**
      * set 角色名称
      *
-     * @param roleName
+     * @param roleName 角色名称
+     * @return DeleteRoleRequest
      */
     public DeleteRoleRequest roleName(String roleName) {
         this.roleName = roleName;

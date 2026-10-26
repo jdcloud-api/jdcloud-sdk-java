@@ -35,12 +35,60 @@ public class DescribeAttachedGroupPoliciesRequest extends JdcloudRequest impleme
     private static final long serialVersionUID = 1L;
 
     /**
+     * 页码，默认1
+     */
+    private Integer pageNumber;
+
+    /**
+     * 分页大小，默认50，取值范围[10, 100]
+     */
+    private Integer pageSize;
+
+    /**
      * 用户组名称
      * Required:true
      */
     @Required
     private String groupName;
 
+
+
+    /**
+     * get 页码，默认1
+     *
+     * @return
+     */
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 页码，默认1
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+
+    /**
+     * get 分页大小，默认50，取值范围[10, 100]
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 分页大小，默认50，取值范围[10, 100]
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
 
 
     /**
@@ -64,9 +112,34 @@ public class DescribeAttachedGroupPoliciesRequest extends JdcloudRequest impleme
 
 
     /**
+     * set 页码，默认1
+     *
+     * @param pageNumber 页码，默认1
+     * @return DescribeAttachedGroupPoliciesRequest
+     */
+    public DescribeAttachedGroupPoliciesRequest pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+
+    /**
+     * set 分页大小，默认50，取值范围[10, 100]
+     *
+     * @param pageSize 分页大小，默认50，取值范围[10, 100]
+     * @return DescribeAttachedGroupPoliciesRequest
+     */
+    public DescribeAttachedGroupPoliciesRequest pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+
+
+    /**
      * set 用户组名称
      *
-     * @param groupName
+     * @param groupName 用户组名称
+     * @return DescribeAttachedGroupPoliciesRequest
      */
     public DescribeAttachedGroupPoliciesRequest groupName(String groupName) {
         this.groupName = groupName;

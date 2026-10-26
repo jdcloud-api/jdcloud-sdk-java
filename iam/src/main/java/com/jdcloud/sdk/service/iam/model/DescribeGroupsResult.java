@@ -90,7 +90,8 @@ public class DescribeGroupsResult extends JdcloudResult implements java.io.Seria
     /**
      * set 总数
      *
-     * @param total
+     * @param total 总数
+     * @return DescribeGroupsResult
      */
     public DescribeGroupsResult total(Integer total) {
         this.total = total;
@@ -101,7 +102,8 @@ public class DescribeGroupsResult extends JdcloudResult implements java.io.Seria
     /**
     * set groups
     *
-    * @param groups
+    * @param groups 
+    * @return DescribeGroupsResult
     */
     public DescribeGroupsResult groups(List<Group> groups) {
         this.groups = groups;

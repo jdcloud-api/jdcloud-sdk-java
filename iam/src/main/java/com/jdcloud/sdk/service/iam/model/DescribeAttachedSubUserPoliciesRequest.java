@@ -66,7 +66,8 @@ public class DescribeAttachedSubUserPoliciesRequest extends JdcloudRequest imple
     /**
      * set 子用户名
      *
-     * @param subUser
+     * @param subUser 子用户名
+     * @return DescribeAttachedSubUserPoliciesRequest
      */
     public DescribeAttachedSubUserPoliciesRequest subUser(String subUser) {
         this.subUser = subUser;

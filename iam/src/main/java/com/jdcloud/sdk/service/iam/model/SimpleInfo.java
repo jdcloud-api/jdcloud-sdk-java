@@ -91,7 +91,8 @@ public class SimpleInfo  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return SimpleInfo
      */
     public SimpleInfo id(Integer id) {
         this.id = id;
@@ -102,7 +103,8 @@ public class SimpleInfo  implements java.io.Serializable {
     /**
      * set name
      *
-     * @param name
+     * @param name 
+     * @return SimpleInfo
      */
     public SimpleInfo name(String name) {
         this.name = name;

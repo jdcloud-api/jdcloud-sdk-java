@@ -92,7 +92,8 @@ public class DescribePermissionDetailRequest extends JdcloudRequest implements j
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribePermissionDetailRequest
      */
     public DescribePermissionDetailRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class DescribePermissionDetailRequest extends JdcloudRequest implements j
     /**
      * set 权限id
      *
-     * @param permissionId
+     * @param permissionId 权限id
+     * @return DescribePermissionDetailRequest
      */
     public DescribePermissionDetailRequest permissionId(Integer permissionId) {
         this.permissionId = permissionId;

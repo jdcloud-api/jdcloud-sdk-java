@@ -86,7 +86,8 @@ public class MFAInfo  implements java.io.Serializable {
     /**
      * set 用户名
      *
-     * @param name
+     * @param name 用户名
+     * @return MFAInfo
      */
     public MFAInfo name(String name) {
         this.name = name;
@@ -97,7 +98,8 @@ public class MFAInfo  implements java.io.Serializable {
     /**
      * set 秘钥
      *
-     * @param secret
+     * @param secret 秘钥
+     * @return MFAInfo
      */
     public MFAInfo secret(String secret) {
         this.secret = secret;

@@ -144,7 +144,8 @@ public class DescribeSubUserPermissionsRequest extends JdcloudRequest implements
     /**
      * set 页码
      *
-     * @param pageNumber
+     * @param pageNumber 页码
+     * @return DescribeSubUserPermissionsRequest
      */
     public DescribeSubUserPermissionsRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -155,7 +156,8 @@ public class DescribeSubUserPermissionsRequest extends JdcloudRequest implements
     /**
      * set 每页显示数目
      *
-     * @param pageSize
+     * @param pageSize 每页显示数目
+     * @return DescribeSubUserPermissionsRequest
      */
     public DescribeSubUserPermissionsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -166,7 +168,8 @@ public class DescribeSubUserPermissionsRequest extends JdcloudRequest implements
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribeSubUserPermissionsRequest
      */
     public DescribeSubUserPermissionsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -177,7 +180,8 @@ public class DescribeSubUserPermissionsRequest extends JdcloudRequest implements
     /**
      * set 子用户用户名
      *
-     * @param subUser
+     * @param subUser 子用户用户名
+     * @return DescribeSubUserPermissionsRequest
      */
     public DescribeSubUserPermissionsRequest subUser(String subUser) {
         this.subUser = subUser;

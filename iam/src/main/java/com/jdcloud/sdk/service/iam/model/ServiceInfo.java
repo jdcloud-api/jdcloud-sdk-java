@@ -206,7 +206,8 @@ public class ServiceInfo  implements java.io.Serializable {
     /**
      * set 产品线编码
      *
-     * @param serviceCode
+     * @param serviceCode 产品线编码
+     * @return ServiceInfo
      */
     public ServiceInfo serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
@@ -217,7 +218,8 @@ public class ServiceInfo  implements java.io.Serializable {
     /**
      * set 中文名称
      *
-     * @param cnName
+     * @param cnName 中文名称
+     * @return ServiceInfo
      */
     public ServiceInfo cnName(String cnName) {
         this.cnName = cnName;
@@ -228,7 +230,8 @@ public class ServiceInfo  implements java.io.Serializable {
     /**
      * set 英文名称
      *
-     * @param enName
+     * @param enName 英文名称
+     * @return ServiceInfo
      */
     public ServiceInfo enName(String enName) {
         this.enName = enName;
@@ -239,7 +242,8 @@ public class ServiceInfo  implements java.io.Serializable {
     /**
      * set 可用区信息
      *
-     * @param region
+     * @param region 可用区信息
+     * @return ServiceInfo
      */
     public ServiceInfo region(String region) {
         this.region = region;
@@ -250,7 +254,8 @@ public class ServiceInfo  implements java.io.Serializable {
     /**
      * set 接入时间
      *
-     * @param createTime
+     * @param createTime 接入时间
+     * @return ServiceInfo
      */
     public ServiceInfo createTime(String createTime) {
         this.createTime = createTime;
@@ -261,7 +266,8 @@ public class ServiceInfo  implements java.io.Serializable {
     /**
      * set 操作人erp
      *
-     * @param createUser
+     * @param createUser 操作人erp
+     * @return ServiceInfo
      */
     public ServiceInfo createUser(String createUser) {
         this.createUser = createUser;
@@ -272,7 +278,8 @@ public class ServiceInfo  implements java.io.Serializable {
     /**
      * set 是否可删除
      *
-     * @param canDelete
+     * @param canDelete 是否可删除
+     * @return ServiceInfo
      */
     public ServiceInfo canDelete(Boolean canDelete) {
         this.canDelete = canDelete;

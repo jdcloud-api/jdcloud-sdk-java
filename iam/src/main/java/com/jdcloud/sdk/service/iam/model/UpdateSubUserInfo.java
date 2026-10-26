@@ -134,7 +134,8 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
     /**
      * set 描述，0~256个字符
      *
-     * @param description
+     * @param description 描述，0~256个字符
+     * @return UpdateSubUserInfo
      */
     public UpdateSubUserInfo description(String description) {
         this.description = description;
@@ -145,7 +146,8 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
     /**
      * set 手机号码，区号-手机号
      *
-     * @param phone
+     * @param phone 手机号码，区号-手机号
+     * @return UpdateSubUserInfo
      */
     public UpdateSubUserInfo phone(String phone) {
         this.phone = phone;
@@ -156,7 +158,8 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
     /**
      * set 邮箱
      *
-     * @param email
+     * @param email 邮箱
+     * @return UpdateSubUserInfo
      */
     public UpdateSubUserInfo email(String email) {
         this.email = email;
@@ -167,7 +170,8 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
     /**
      * set 姓名
      *
-     * @param nickName
+     * @param nickName 姓名
+     * @return UpdateSubUserInfo
      */
     public UpdateSubUserInfo nickName(String nickName) {
         this.nickName = nickName;

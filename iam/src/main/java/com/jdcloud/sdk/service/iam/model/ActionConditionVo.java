@@ -247,7 +247,8 @@ public class ActionConditionVo  implements java.io.Serializable {
     /**
      * set id
      *
-     * @param id
+     * @param id 
+     * @return ActionConditionVo
      */
     public ActionConditionVo id(Integer id) {
         this.id = id;
@@ -258,7 +259,8 @@ public class ActionConditionVo  implements java.io.Serializable {
     /**
      * set serviceName
      *
-     * @param serviceName
+     * @param serviceName 
+     * @return ActionConditionVo
      */
     public ActionConditionVo serviceName(String serviceName) {
         this.serviceName = serviceName;
@@ -269,7 +271,8 @@ public class ActionConditionVo  implements java.io.Serializable {
     /**
      * set action
      *
-     * @param action
+     * @param action 
+     * @return ActionConditionVo
      */
     public ActionConditionVo action(String action) {
         this.action = action;
@@ -280,7 +283,8 @@ public class ActionConditionVo  implements java.io.Serializable {
     /**
      * set conditionName
      *
-     * @param conditionName
+     * @param conditionName 
+     * @return ActionConditionVo
      */
     public ActionConditionVo conditionName(String conditionName) {
         this.conditionName = conditionName;
@@ -291,7 +295,8 @@ public class ActionConditionVo  implements java.io.Serializable {
     /**
      * set postProcess
      *
-     * @param postProcess
+     * @param postProcess 
+     * @return ActionConditionVo
      */
     public ActionConditionVo postProcess(Integer postProcess) {
         this.postProcess = postProcess;
@@ -302,7 +307,8 @@ public class ActionConditionVo  implements java.io.Serializable {
     /**
      * set type
      *
-     * @param type
+     * @param type 
+     * @return ActionConditionVo
      */
     public ActionConditionVo type(Integer type) {
         this.type = type;
@@ -313,7 +319,8 @@ public class ActionConditionVo  implements java.io.Serializable {
     /**
      * set createTime
      *
-     * @param createTime
+     * @param createTime 
+     * @return ActionConditionVo
      */
     public ActionConditionVo createTime(String createTime) {
         this.createTime = createTime;
@@ -324,7 +331,8 @@ public class ActionConditionVo  implements java.io.Serializable {
     /**
      * set updateTime
      *
-     * @param updateTime
+     * @param updateTime 
+     * @return ActionConditionVo
      */
     public ActionConditionVo updateTime(String updateTime) {
         this.updateTime = updateTime;

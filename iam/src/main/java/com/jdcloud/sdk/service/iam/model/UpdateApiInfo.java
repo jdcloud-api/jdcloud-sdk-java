@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.iam.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -34,80 +36,844 @@ public class UpdateApiInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * success
+     * id
      * Required:true
      */
     @Required
-    private Boolean success;
+    private Integer id;
 
     /**
-     * message
+     * serviceName
      * Required:true
      */
     @Required
-    private String message;
+    private String serviceName;
+
+    /**
+     * serviceNameCN
+     * Required:true
+     */
+    @Required
+    private String serviceNameCN;
+
+    /**
+     * serviceOldCode
+     */
+    private String serviceOldCode;
+
+    /**
+     * resourceType
+     * Required:true
+     */
+    @Required
+    private String resourceType;
+
+    /**
+     * actionName
+     * Required:true
+     */
+    @Required
+    private String actionName;
+
+    /**
+     * actionType
+     * Required:true
+     */
+    @Required
+    private String actionType;
+
+    /**
+     * actionDescription
+     * Required:true
+     */
+    @Required
+    private String actionDescription;
+
+    /**
+     * region
+     * Required:true
+     */
+    @Required
+    private Integer region;
+
+    /**
+     * method
+     * Required:true
+     */
+    @Required
+    private String method;
+
+    /**
+     * accessLevel
+     * Required:true
+     */
+    @Required
+    private Integer accessLevel;
+
+    /**
+     * version
+     * Required:true
+     */
+    @Required
+    private Integer version;
+
+    /**
+     * status
+     * Required:true
+     */
+    @Required
+    private Integer status;
+
+    /**
+     * showRule
+     * Required:true
+     */
+    @Required
+    
+    private List<ApiInfoShowRule> showRule;
+    /**
+     * supply
+     * Required:true
+     */
+    @Required
+    private Integer supply;
+
+    /**
+     * ignoreDeny
+     * Required:true
+     */
+    @Required
+    private Integer ignoreDeny;
+
+    /**
+     * tagResourceLevel
+     * Required:true
+     */
+    @Required
+    private Integer tagResourceLevel;
+
+    /**
+     * showType
+     * Required:true
+     */
+    @Required
+    private Integer showType;
+
+    /**
+     * createTime
+     */
+    private String createTime;
+
+    /**
+     * createUser
+     */
+    private String createUser;
+
+    /**
+     * updateTime
+     */
+    private String updateTime;
+
+    /**
+     * updateUser
+     */
+    private String updateUser;
 
 
 
     /**
-     * get success
+     * get id
      *
      * @return
      */
-    public Boolean getSuccess() {
-        return success;
+    public Integer getId() {
+        return id;
     }
 
     /**
-     * set success
+     * set id
      *
-     * @param success
+     * @param id
      */
-    public void setSuccess(Boolean success) {
-        this.success = success;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
 
     /**
-     * get message
+     * get serviceName
      *
      * @return
      */
-    public String getMessage() {
-        return message;
+    public String getServiceName() {
+        return serviceName;
     }
 
     /**
-     * set message
+     * set serviceName
      *
-     * @param message
+     * @param serviceName
      */
-    public void setMessage(String message) {
-        this.message = message;
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+    }
+
+
+    /**
+     * get serviceNameCN
+     *
+     * @return
+     */
+    public String getServiceNameCN() {
+        return serviceNameCN;
+    }
+
+    /**
+     * set serviceNameCN
+     *
+     * @param serviceNameCN
+     */
+    public void setServiceNameCN(String serviceNameCN) {
+        this.serviceNameCN = serviceNameCN;
+    }
+
+
+    /**
+     * get serviceOldCode
+     *
+     * @return
+     */
+    public String getServiceOldCode() {
+        return serviceOldCode;
+    }
+
+    /**
+     * set serviceOldCode
+     *
+     * @param serviceOldCode
+     */
+    public void setServiceOldCode(String serviceOldCode) {
+        this.serviceOldCode = serviceOldCode;
+    }
+
+
+    /**
+     * get resourceType
+     *
+     * @return
+     */
+    public String getResourceType() {
+        return resourceType;
+    }
+
+    /**
+     * set resourceType
+     *
+     * @param resourceType
+     */
+    public void setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+    }
+
+
+    /**
+     * get actionName
+     *
+     * @return
+     */
+    public String getActionName() {
+        return actionName;
+    }
+
+    /**
+     * set actionName
+     *
+     * @param actionName
+     */
+    public void setActionName(String actionName) {
+        this.actionName = actionName;
+    }
+
+
+    /**
+     * get actionType
+     *
+     * @return
+     */
+    public String getActionType() {
+        return actionType;
+    }
+
+    /**
+     * set actionType
+     *
+     * @param actionType
+     */
+    public void setActionType(String actionType) {
+        this.actionType = actionType;
+    }
+
+
+    /**
+     * get actionDescription
+     *
+     * @return
+     */
+    public String getActionDescription() {
+        return actionDescription;
+    }
+
+    /**
+     * set actionDescription
+     *
+     * @param actionDescription
+     */
+    public void setActionDescription(String actionDescription) {
+        this.actionDescription = actionDescription;
+    }
+
+
+    /**
+     * get region
+     *
+     * @return
+     */
+    public Integer getRegion() {
+        return region;
+    }
+
+    /**
+     * set region
+     *
+     * @param region
+     */
+    public void setRegion(Integer region) {
+        this.region = region;
+    }
+
+
+    /**
+     * get method
+     *
+     * @return
+     */
+    public String getMethod() {
+        return method;
+    }
+
+    /**
+     * set method
+     *
+     * @param method
+     */
+    public void setMethod(String method) {
+        this.method = method;
+    }
+
+
+    /**
+     * get accessLevel
+     *
+     * @return
+     */
+    public Integer getAccessLevel() {
+        return accessLevel;
+    }
+
+    /**
+     * set accessLevel
+     *
+     * @param accessLevel
+     */
+    public void setAccessLevel(Integer accessLevel) {
+        this.accessLevel = accessLevel;
+    }
+
+
+    /**
+     * get version
+     *
+     * @return
+     */
+    public Integer getVersion() {
+        return version;
+    }
+
+    /**
+     * set version
+     *
+     * @param version
+     */
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
+
+    /**
+     * get status
+     *
+     * @return
+     */
+    public Integer getStatus() {
+        return status;
+    }
+
+    /**
+     * set status
+     *
+     * @param status
+     */
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+
+    /**
+    * get showRule
+    *
+    * @return
+    */
+    public List<ApiInfoShowRule> getShowRule() {
+        return showRule;
+    }
+
+    /**
+    * set showRule
+    *
+    * @param showRule
+    */
+    public void setShowRule(List<ApiInfoShowRule> showRule) {
+        this.showRule = showRule;
+    }
+
+
+    /**
+     * get supply
+     *
+     * @return
+     */
+    public Integer getSupply() {
+        return supply;
+    }
+
+    /**
+     * set supply
+     *
+     * @param supply
+     */
+    public void setSupply(Integer supply) {
+        this.supply = supply;
+    }
+
+
+    /**
+     * get ignoreDeny
+     *
+     * @return
+     */
+    public Integer getIgnoreDeny() {
+        return ignoreDeny;
+    }
+
+    /**
+     * set ignoreDeny
+     *
+     * @param ignoreDeny
+     */
+    public void setIgnoreDeny(Integer ignoreDeny) {
+        this.ignoreDeny = ignoreDeny;
+    }
+
+
+    /**
+     * get tagResourceLevel
+     *
+     * @return
+     */
+    public Integer getTagResourceLevel() {
+        return tagResourceLevel;
+    }
+
+    /**
+     * set tagResourceLevel
+     *
+     * @param tagResourceLevel
+     */
+    public void setTagResourceLevel(Integer tagResourceLevel) {
+        this.tagResourceLevel = tagResourceLevel;
+    }
+
+
+    /**
+     * get showType
+     *
+     * @return
+     */
+    public Integer getShowType() {
+        return showType;
+    }
+
+    /**
+     * set showType
+     *
+     * @param showType
+     */
+    public void setShowType(Integer showType) {
+        this.showType = showType;
+    }
+
+
+    /**
+     * get createTime
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set createTime
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+
+    /**
+     * get createUser
+     *
+     * @return
+     */
+    public String getCreateUser() {
+        return createUser;
+    }
+
+    /**
+     * set createUser
+     *
+     * @param createUser
+     */
+    public void setCreateUser(String createUser) {
+        this.createUser = createUser;
+    }
+
+
+    /**
+     * get updateTime
+     *
+     * @return
+     */
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    /**
+     * set updateTime
+     *
+     * @param updateTime
+     */
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
+    }
+
+
+    /**
+     * get updateUser
+     *
+     * @return
+     */
+    public String getUpdateUser() {
+        return updateUser;
+    }
+
+    /**
+     * set updateUser
+     *
+     * @param updateUser
+     */
+    public void setUpdateUser(String updateUser) {
+        this.updateUser = updateUser;
     }
 
 
 
     /**
-     * set success
+     * set id
      *
-     * @param success
+     * @param id 
+     * @return UpdateApiInfo
      */
-    public UpdateApiInfo success(Boolean success) {
-        this.success = success;
+    public UpdateApiInfo id(Integer id) {
+        this.id = id;
         return this;
     }
 
 
     /**
-     * set message
+     * set serviceName
      *
-     * @param message
+     * @param serviceName 
+     * @return UpdateApiInfo
      */
-    public UpdateApiInfo message(String message) {
-        this.message = message;
+    public UpdateApiInfo serviceName(String serviceName) {
+        this.serviceName = serviceName;
         return this;
     }
 
 
+    /**
+     * set serviceNameCN
+     *
+     * @param serviceNameCN 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo serviceNameCN(String serviceNameCN) {
+        this.serviceNameCN = serviceNameCN;
+        return this;
+    }
+
+
+    /**
+     * set serviceOldCode
+     *
+     * @param serviceOldCode 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo serviceOldCode(String serviceOldCode) {
+        this.serviceOldCode = serviceOldCode;
+        return this;
+    }
+
+
+    /**
+     * set resourceType
+     *
+     * @param resourceType 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo resourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+
+
+    /**
+     * set actionName
+     *
+     * @param actionName 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo actionName(String actionName) {
+        this.actionName = actionName;
+        return this;
+    }
+
+
+    /**
+     * set actionType
+     *
+     * @param actionType 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo actionType(String actionType) {
+        this.actionType = actionType;
+        return this;
+    }
+
+
+    /**
+     * set actionDescription
+     *
+     * @param actionDescription 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo actionDescription(String actionDescription) {
+        this.actionDescription = actionDescription;
+        return this;
+    }
+
+
+    /**
+     * set region
+     *
+     * @param region 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo region(Integer region) {
+        this.region = region;
+        return this;
+    }
+
+
+    /**
+     * set method
+     *
+     * @param method 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo method(String method) {
+        this.method = method;
+        return this;
+    }
+
+
+    /**
+     * set accessLevel
+     *
+     * @param accessLevel 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo accessLevel(Integer accessLevel) {
+        this.accessLevel = accessLevel;
+        return this;
+    }
+
+
+    /**
+     * set version
+     *
+     * @param version 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo version(Integer version) {
+        this.version = version;
+        return this;
+    }
+
+
+    /**
+     * set status
+     *
+     * @param status 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo status(Integer status) {
+        this.status = status;
+        return this;
+    }
+
+
+    /**
+    * set showRule
+    *
+    * @param showRule 
+    * @return UpdateApiInfo
+    */
+    public UpdateApiInfo showRule(List<ApiInfoShowRule> showRule) {
+        this.showRule = showRule;
+        return this;
+    }
+
+
+    /**
+     * set supply
+     *
+     * @param supply 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo supply(Integer supply) {
+        this.supply = supply;
+        return this;
+    }
+
+
+    /**
+     * set ignoreDeny
+     *
+     * @param ignoreDeny 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo ignoreDeny(Integer ignoreDeny) {
+        this.ignoreDeny = ignoreDeny;
+        return this;
+    }
+
+
+    /**
+     * set tagResourceLevel
+     *
+     * @param tagResourceLevel 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo tagResourceLevel(Integer tagResourceLevel) {
+        this.tagResourceLevel = tagResourceLevel;
+        return this;
+    }
+
+
+    /**
+     * set showType
+     *
+     * @param showType 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo showType(Integer showType) {
+        this.showType = showType;
+        return this;
+    }
+
+
+    /**
+     * set createTime
+     *
+     * @param createTime 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo createTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+
+
+    /**
+     * set createUser
+     *
+     * @param createUser 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo createUser(String createUser) {
+        this.createUser = createUser;
+        return this;
+    }
+
+
+    /**
+     * set updateTime
+     *
+     * @param updateTime 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo updateTime(String updateTime) {
+        this.updateTime = updateTime;
+        return this;
+    }
+
+
+    /**
+     * set updateUser
+     *
+     * @param updateUser 
+     * @return UpdateApiInfo
+     */
+    public UpdateApiInfo updateUser(String updateUser) {
+        this.updateUser = updateUser;
+        return this;
+    }
+
+
+
+    /**
+     * add item to showRule
+     *
+     * @param showRule
+     */
+    public void addShowRule(ApiInfoShowRule showRule) {
+        if (this.showRule == null) {
+            this.showRule = new ArrayList<>();
+        }
+        this.showRule.add(showRule);
+    }
 }

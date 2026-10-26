@@ -273,7 +273,8 @@ public class EntityObjectLimits  implements java.io.Serializable {
     /**
      * set userCountLimit
      *
-     * @param userCountLimit
+     * @param userCountLimit 
+     * @return EntityObjectLimits
      */
     public EntityObjectLimits userCountLimit(Integer userCountLimit) {
         this.userCountLimit = userCountLimit;
@@ -284,7 +285,8 @@ public class EntityObjectLimits  implements java.io.Serializable {
     /**
      * set policyCountLimit
      *
-     * @param policyCountLimit
+     * @param policyCountLimit 
+     * @return EntityObjectLimits
      */
     public EntityObjectLimits policyCountLimit(Integer policyCountLimit) {
         this.policyCountLimit = policyCountLimit;
@@ -295,7 +297,8 @@ public class EntityObjectLimits  implements java.io.Serializable {
     /**
      * set roleCountLimit
      *
-     * @param roleCountLimit
+     * @param roleCountLimit 
+     * @return EntityObjectLimits
      */
     public EntityObjectLimits roleCountLimit(Integer roleCountLimit) {
         this.roleCountLimit = roleCountLimit;
@@ -306,7 +309,8 @@ public class EntityObjectLimits  implements java.io.Serializable {
     /**
      * set groupCountLimit
      *
-     * @param groupCountLimit
+     * @param groupCountLimit 
+     * @return EntityObjectLimits
      */
     public EntityObjectLimits groupCountLimit(Integer groupCountLimit) {
         this.groupCountLimit = groupCountLimit;
@@ -317,7 +321,8 @@ public class EntityObjectLimits  implements java.io.Serializable {
     /**
      * set userAttachedPolicyCountLimit
      *
-     * @param userAttachedPolicyCountLimit
+     * @param userAttachedPolicyCountLimit 
+     * @return EntityObjectLimits
      */
     public EntityObjectLimits userAttachedPolicyCountLimit(Integer userAttachedPolicyCountLimit) {
         this.userAttachedPolicyCountLimit = userAttachedPolicyCountLimit;
@@ -328,7 +333,8 @@ public class EntityObjectLimits  implements java.io.Serializable {
     /**
      * set groupAttachedPolicyCountLimit
      *
-     * @param groupAttachedPolicyCountLimit
+     * @param groupAttachedPolicyCountLimit 
+     * @return EntityObjectLimits
      */
     public EntityObjectLimits groupAttachedPolicyCountLimit(Integer groupAttachedPolicyCountLimit) {
         this.groupAttachedPolicyCountLimit = groupAttachedPolicyCountLimit;
@@ -339,7 +345,8 @@ public class EntityObjectLimits  implements java.io.Serializable {
     /**
      * set roleAttachedPolicyCountLimit
      *
-     * @param roleAttachedPolicyCountLimit
+     * @param roleAttachedPolicyCountLimit 
+     * @return EntityObjectLimits
      */
     public EntityObjectLimits roleAttachedPolicyCountLimit(Integer roleAttachedPolicyCountLimit) {
         this.roleAttachedPolicyCountLimit = roleAttachedPolicyCountLimit;
@@ -350,7 +357,8 @@ public class EntityObjectLimits  implements java.io.Serializable {
     /**
      * set userAttachToGroupCountLimit
      *
-     * @param userAttachToGroupCountLimit
+     * @param userAttachToGroupCountLimit 
+     * @return EntityObjectLimits
      */
     public EntityObjectLimits userAttachToGroupCountLimit(Integer userAttachToGroupCountLimit) {
         this.userAttachToGroupCountLimit = userAttachToGroupCountLimit;
@@ -361,7 +369,8 @@ public class EntityObjectLimits  implements java.io.Serializable {
     /**
      * set groupAttachedUserCountLimit
      *
-     * @param groupAttachedUserCountLimit
+     * @param groupAttachedUserCountLimit 
+     * @return EntityObjectLimits
      */
     public EntityObjectLimits groupAttachedUserCountLimit(Integer groupAttachedUserCountLimit) {
         this.groupAttachedUserCountLimit = groupAttachedUserCountLimit;

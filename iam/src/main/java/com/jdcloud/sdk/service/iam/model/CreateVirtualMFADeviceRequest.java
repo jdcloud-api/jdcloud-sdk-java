@@ -63,7 +63,8 @@ public class CreateVirtualMFADeviceRequest extends JdcloudRequest implements jav
     /**
      * set 初始化的账号（目前支持：默认不填的情况表示为自己初始化，填写子用户名表示为子用户化初始)
      *
-     * @param boundAccount
+     * @param boundAccount 初始化的账号（目前支持：默认不填的情况表示为自己初始化，填写子用户名表示为子用户化初始)
+     * @return CreateVirtualMFADeviceRequest
      */
     public CreateVirtualMFADeviceRequest boundAccount(String boundAccount) {
         this.boundAccount = boundAccount;

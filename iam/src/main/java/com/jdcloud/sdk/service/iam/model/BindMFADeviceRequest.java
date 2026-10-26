@@ -116,7 +116,8 @@ public class BindMFADeviceRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 被绑定的账号（目前支持：默认不填的情况表示给自己绑定，填写子用户名表示主账号给子用户绑定)
      *
-     * @param boundAccount
+     * @param boundAccount 被绑定的账号（目前支持：默认不填的情况表示给自己绑定，填写子用户名表示主账号给子用户绑定)
+     * @return BindMFADeviceRequest
      */
     public BindMFADeviceRequest boundAccount(String boundAccount) {
         this.boundAccount = boundAccount;
@@ -127,7 +128,8 @@ public class BindMFADeviceRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 第一组动态密码（连续的两组）
      *
-     * @param authenticationCode1
+     * @param authenticationCode1 第一组动态密码（连续的两组）
+     * @return BindMFADeviceRequest
      */
     public BindMFADeviceRequest authenticationCode1(String authenticationCode1) {
         this.authenticationCode1 = authenticationCode1;
@@ -138,7 +140,8 @@ public class BindMFADeviceRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 第二组动态密码（连续的两组）
      *
-     * @param authenticationCode2
+     * @param authenticationCode2 第二组动态密码（连续的两组）
+     * @return BindMFADeviceRequest
      */
     public BindMFADeviceRequest authenticationCode2(String authenticationCode2) {
         this.authenticationCode2 = authenticationCode2;

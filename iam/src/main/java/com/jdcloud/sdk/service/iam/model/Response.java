@@ -93,7 +93,8 @@ public class Response  implements java.io.Serializable {
     /**
      * set requestId
      *
-     * @param requestId
+     * @param requestId 
+     * @return Response
      */
     public Response requestId(String requestId) {
         this.requestId = requestId;
@@ -104,7 +105,8 @@ public class Response  implements java.io.Serializable {
     /**
     * set simpleInfo
     *
-    * @param simpleInfo
+    * @param simpleInfo 
+    * @return Response
     */
     public Response simpleInfo(List<SimpleInfo> simpleInfo) {
         this.simpleInfo = simpleInfo;

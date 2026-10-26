@@ -86,7 +86,8 @@ public class ResultMsg  implements java.io.Serializable {
     /**
      * set 错误编码
      *
-     * @param errorCode
+     * @param errorCode 错误编码
+     * @return ResultMsg
      */
     public ResultMsg errorCode(String errorCode) {
         this.errorCode = errorCode;
@@ -97,7 +98,8 @@ public class ResultMsg  implements java.io.Serializable {
     /**
      * set 错误信息
      *
-     * @param errorMsg
+     * @param errorMsg 错误信息
+     * @return ResultMsg
      */
     public ResultMsg errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;

@@ -182,7 +182,8 @@ public class CreateGroupRes  implements java.io.Serializable {
     /**
      * set 用户组ID
      *
-     * @param groupId
+     * @param groupId 用户组ID
+     * @return CreateGroupRes
      */
     public CreateGroupRes groupId(String groupId) {
         this.groupId = groupId;
@@ -193,7 +194,8 @@ public class CreateGroupRes  implements java.io.Serializable {
     /**
      * set 用户组名
      *
-     * @param name
+     * @param name 用户组名
+     * @return CreateGroupRes
      */
     public CreateGroupRes name(String name) {
         this.name = name;
@@ -204,7 +206,8 @@ public class CreateGroupRes  implements java.io.Serializable {
     /**
      * set 京东云资源标识(jrn)
      *
-     * @param jrn
+     * @param jrn 京东云资源标识(jrn)
+     * @return CreateGroupRes
      */
     public CreateGroupRes jrn(String jrn) {
         this.jrn = jrn;
@@ -215,7 +218,8 @@ public class CreateGroupRes  implements java.io.Serializable {
     /**
      * set 用户组描述
      *
-     * @param description
+     * @param description 用户组描述
+     * @return CreateGroupRes
      */
     public CreateGroupRes description(String description) {
         this.description = description;
@@ -226,7 +230,8 @@ public class CreateGroupRes  implements java.io.Serializable {
     /**
      * set 用户组创建时间
      *
-     * @param createTime
+     * @param createTime 用户组创建时间
+     * @return CreateGroupRes
      */
     public CreateGroupRes createTime(String createTime) {
         this.createTime = createTime;
@@ -237,7 +242,8 @@ public class CreateGroupRes  implements java.io.Serializable {
     /**
      * set 用户组更新时间
      *
-     * @param updateTime
+     * @param updateTime 用户组更新时间
+     * @return CreateGroupRes
      */
     public CreateGroupRes updateTime(String updateTime) {
         this.updateTime = updateTime;

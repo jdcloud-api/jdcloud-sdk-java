@@ -78,6 +78,11 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
      */
     private String name;
 
+    /**
+     * 子用户pin
+     */
+    private String pin;
+
 
 
     /**
@@ -251,11 +256,31 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
     }
 
 
+    /**
+     * get 子用户pin
+     *
+     * @return
+     */
+    public String getPin() {
+        return pin;
+    }
+
+    /**
+     * set 子用户pin
+     *
+     * @param pin
+     */
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
+
+
 
     /**
      * set 页码，默认1
      *
-     * @param pageNumber
+     * @param pageNumber 页码，默认1
+     * @return DescribeSubUsersRequest
      */
     public DescribeSubUsersRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -266,7 +291,8 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
     /**
      * set 分页大小，默认50，取值范围[10, 100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认50，取值范围[10, 100]
+     * @return DescribeSubUsersRequest
      */
     public DescribeSubUsersRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -277,7 +303,8 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
     /**
      * set 关键字
      *
-     * @param keyword
+     * @param keyword 关键字
+     * @return DescribeSubUsersRequest
      */
     public DescribeSubUsersRequest keyword(String keyword) {
         this.keyword = keyword;
@@ -288,7 +315,8 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
     /**
      * set 排序规则：0-创建时间顺序排序，1-创建时间倒序排序
      *
-     * @param sort
+     * @param sort 排序规则：0-创建时间顺序排序，1-创建时间倒序排序
+     * @return DescribeSubUsersRequest
      */
     public DescribeSubUsersRequest sort(Integer sort) {
         this.sort = sort;
@@ -299,7 +327,8 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
     /**
      * set 手机号，和keyword互斥，不要都传
      *
-     * @param phone
+     * @param phone 手机号，和keyword互斥，不要都传
+     * @return DescribeSubUsersRequest
      */
     public DescribeSubUsersRequest phone(String phone) {
         this.phone = phone;
@@ -310,7 +339,8 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
     /**
      * set 邮箱，和keyword互斥，不要都传
      *
-     * @param email
+     * @param email 邮箱，和keyword互斥，不要都传
+     * @return DescribeSubUsersRequest
      */
     public DescribeSubUsersRequest email(String email) {
         this.email = email;
@@ -321,7 +351,8 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
     /**
      * set 用户姓名，和keyword互斥，不要都传
      *
-     * @param description
+     * @param description 用户姓名，和keyword互斥，不要都传
+     * @return DescribeSubUsersRequest
      */
     public DescribeSubUsersRequest description(String description) {
         this.description = description;
@@ -332,7 +363,8 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
     /**
      * set 子用户别名
      *
-     * @param nickName
+     * @param nickName 子用户别名
+     * @return DescribeSubUsersRequest
      */
     public DescribeSubUsersRequest nickName(String nickName) {
         this.nickName = nickName;
@@ -343,10 +375,23 @@ public class DescribeSubUsersRequest extends JdcloudRequest implements java.io.S
     /**
      * set 子用户姓名
      *
-     * @param name
+     * @param name 子用户姓名
+     * @return DescribeSubUsersRequest
      */
     public DescribeSubUsersRequest name(String name) {
         this.name = name;
+        return this;
+    }
+
+
+    /**
+     * set 子用户pin
+     *
+     * @param pin 子用户pin
+     * @return DescribeSubUsersRequest
+     */
+    public DescribeSubUsersRequest pin(String pin) {
+        this.pin = pin;
         return this;
     }
 

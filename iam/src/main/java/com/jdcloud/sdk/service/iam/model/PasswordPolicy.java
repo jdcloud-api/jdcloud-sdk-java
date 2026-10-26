@@ -221,7 +221,8 @@ public class PasswordPolicy  implements java.io.Serializable {
     /**
      * set 密码长度，6~20位，默认8位
      *
-     * @param length
+     * @param length 密码长度，6~20位，默认8位
+     * @return PasswordPolicy
      */
     public PasswordPolicy length(Integer length) {
         this.length = length;
@@ -232,7 +233,8 @@ public class PasswordPolicy  implements java.io.Serializable {
     /**
      * set 密码有效期（天），0~1095，0表示永不过期
      *
-     * @param age
+     * @param age 密码有效期（天），0~1095，0表示永不过期
+     * @return PasswordPolicy
      */
     public PasswordPolicy age(Integer age) {
         this.age = age;
@@ -243,7 +245,8 @@ public class PasswordPolicy  implements java.io.Serializable {
     /**
      * set 密码过期后重置方式：0-联系主账号重置，1-子用户登录后重置
      *
-     * @param expirationOperation
+     * @param expirationOperation 密码过期后重置方式：0-联系主账号重置，1-子用户登录后重置
+     * @return PasswordPolicy
      */
     public PasswordPolicy expirationOperation(Integer expirationOperation) {
         this.expirationOperation = expirationOperation;
@@ -254,7 +257,8 @@ public class PasswordPolicy  implements java.io.Serializable {
     /**
      * set 历史密码检查策略，禁止使用前(0~10)次密码，0表示不启用
      *
-     * @param reusePrevention
+     * @param reusePrevention 历史密码检查策略，禁止使用前(0~10)次密码，0表示不启用
+     * @return PasswordPolicy
      */
     public PasswordPolicy reusePrevention(Integer reusePrevention) {
         this.reusePrevention = reusePrevention;
@@ -265,7 +269,8 @@ public class PasswordPolicy  implements java.io.Serializable {
     /**
      * set 1小时内使用错误密码最多(1~16)次
      *
-     * @param retryTimes
+     * @param retryTimes 1小时内使用错误密码最多(1~16)次
+     * @return PasswordPolicy
      */
     public PasswordPolicy retryTimes(Integer retryTimes) {
         this.retryTimes = retryTimes;
@@ -276,7 +281,8 @@ public class PasswordPolicy  implements java.io.Serializable {
     /**
      * set 登录有效期（分钟），15~720
      *
-     * @param validLoginDuration
+     * @param validLoginDuration 登录有效期（分钟），15~720
+     * @return PasswordPolicy
      */
     public PasswordPolicy validLoginDuration(Integer validLoginDuration) {
         this.validLoginDuration = validLoginDuration;
@@ -287,7 +293,8 @@ public class PasswordPolicy  implements java.io.Serializable {
     /**
      * set 密码字符类型，至少包含一种
      *
-     * @param rule
+     * @param rule 密码字符类型，至少包含一种
+     * @return PasswordPolicy
      */
     public PasswordPolicy rule(PasswordPolicyRule rule) {
         this.rule = rule;

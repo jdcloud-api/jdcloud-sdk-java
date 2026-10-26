@@ -95,7 +95,8 @@ public class CreatePermissionRequest extends JdcloudRequest implements java.io.S
     /**
      * set 权限信息
      *
-     * @param createPermissionInfo
+     * @param createPermissionInfo 权限信息
+     * @return CreatePermissionRequest
      */
     public CreatePermissionRequest createPermissionInfo(CreatePermissionInfo createPermissionInfo) {
         this.createPermissionInfo = createPermissionInfo;
@@ -106,7 +107,8 @@ public class CreatePermissionRequest extends JdcloudRequest implements java.io.S
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return CreatePermissionRequest
      */
     public CreatePermissionRequest regionId(String regionId) {
         this.regionId = regionId;

@@ -90,7 +90,8 @@ public class BindMFADeviceByOneCodeRequest extends JdcloudRequest implements jav
     /**
      * set 被绑定的账号（目前支持：默认不填的情况表示给自己绑定，填写子用户名表示主账号给子用户绑定)
      *
-     * @param boundAccount
+     * @param boundAccount 被绑定的账号（目前支持：默认不填的情况表示给自己绑定，填写子用户名表示主账号给子用户绑定)
+     * @return BindMFADeviceByOneCodeRequest
      */
     public BindMFADeviceByOneCodeRequest boundAccount(String boundAccount) {
         this.boundAccount = boundAccount;
@@ -101,7 +102,8 @@ public class BindMFADeviceByOneCodeRequest extends JdcloudRequest implements jav
     /**
      * set 一组动态密码
      *
-     * @param authenticationCode
+     * @param authenticationCode 一组动态密码
+     * @return BindMFADeviceByOneCodeRequest
      */
     public BindMFADeviceByOneCodeRequest authenticationCode(String authenticationCode) {
         this.authenticationCode = authenticationCode;

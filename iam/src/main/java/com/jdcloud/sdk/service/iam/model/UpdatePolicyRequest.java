@@ -93,7 +93,8 @@ public class UpdatePolicyRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 策略文档信息
      *
-     * @param updatePolicyInfo
+     * @param updatePolicyInfo 策略文档信息
+     * @return UpdatePolicyRequest
      */
     public UpdatePolicyRequest updatePolicyInfo(UpdatePolicyInfo updatePolicyInfo) {
         this.updatePolicyInfo = updatePolicyInfo;
@@ -104,7 +105,8 @@ public class UpdatePolicyRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 策略名称
      *
-     * @param policyName
+     * @param policyName 策略名称
+     * @return UpdatePolicyRequest
      */
     public UpdatePolicyRequest policyName(String policyName) {
         this.policyName = policyName;

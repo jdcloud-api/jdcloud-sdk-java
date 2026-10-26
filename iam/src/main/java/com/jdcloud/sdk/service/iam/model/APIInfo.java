@@ -206,7 +206,8 @@ public class APIInfo  implements java.io.Serializable {
     /**
      * set 访问级别
      *
-     * @param accessLevel
+     * @param accessLevel 访问级别
+     * @return APIInfo
      */
     public APIInfo accessLevel(Integer accessLevel) {
         this.accessLevel = accessLevel;
@@ -217,7 +218,8 @@ public class APIInfo  implements java.io.Serializable {
     /**
      * set action name
      *
-     * @param actionName
+     * @param actionName action name
+     * @return APIInfo
      */
     public APIInfo actionName(String actionName) {
         this.actionName = actionName;
@@ -228,7 +230,8 @@ public class APIInfo  implements java.io.Serializable {
     /**
      * set action type
      *
-     * @param actionType
+     * @param actionType action type
+     * @return APIInfo
      */
     public APIInfo actionType(String actionType) {
         this.actionType = actionType;
@@ -239,7 +242,8 @@ public class APIInfo  implements java.io.Serializable {
     /**
      * set 资源
      *
-     * @param resource
+     * @param resource 资源
+     * @return APIInfo
      */
     public APIInfo resource(String resource) {
         this.resource = resource;
@@ -250,7 +254,8 @@ public class APIInfo  implements java.io.Serializable {
     /**
      * set 资源类型
      *
-     * @param resourceType
+     * @param resourceType 资源类型
+     * @return APIInfo
      */
     public APIInfo resourceType(String resourceType) {
         this.resourceType = resourceType;
@@ -261,7 +266,8 @@ public class APIInfo  implements java.io.Serializable {
     /**
      * set 子资源类型
      *
-     * @param subResourceType
+     * @param subResourceType 子资源类型
+     * @return APIInfo
      */
     public APIInfo subResourceType(String subResourceType) {
         this.subResourceType = subResourceType;
@@ -272,7 +278,8 @@ public class APIInfo  implements java.io.Serializable {
     /**
      * set 三级资源类型
      *
-     * @param terResourceType
+     * @param terResourceType 三级资源类型
+     * @return APIInfo
      */
     public APIInfo terResourceType(String terResourceType) {
         this.terResourceType = terResourceType;

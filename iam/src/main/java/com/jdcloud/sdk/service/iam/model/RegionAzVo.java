@@ -136,7 +136,8 @@ public class RegionAzVo  implements java.io.Serializable {
     /**
      * set 别名
      *
-     * @param alias
+     * @param alias 别名
+     * @return RegionAzVo
      */
     public RegionAzVo alias(String alias) {
         this.alias = alias;
@@ -147,7 +148,8 @@ public class RegionAzVo  implements java.io.Serializable {
     /**
      * set 地域
      *
-     * @param region
+     * @param region 地域
+     * @return RegionAzVo
      */
     public RegionAzVo region(String region) {
         this.region = region;
@@ -158,7 +160,8 @@ public class RegionAzVo  implements java.io.Serializable {
     /**
      * set 是否可见(1可见 0不可见)
      *
-     * @param visible
+     * @param visible 是否可见(1可见 0不可见)
+     * @return RegionAzVo
      */
     public RegionAzVo visible(Integer visible) {
         this.visible = visible;
@@ -169,7 +172,8 @@ public class RegionAzVo  implements java.io.Serializable {
     /**
     * set az状态信息
     *
-    * @param azStatusList
+    * @param azStatusList az状态信息
+    * @return RegionAzVo
     */
     public RegionAzVo azStatusList(List<AzSaleStatusVo> azStatusList) {
         this.azStatusList = azStatusList;

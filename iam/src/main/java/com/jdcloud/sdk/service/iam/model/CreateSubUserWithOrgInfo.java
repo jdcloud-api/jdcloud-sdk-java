@@ -163,7 +163,8 @@ public class CreateSubUserWithOrgInfo  implements java.io.Serializable {
     /**
      * set 组织ID
      *
-     * @param orgId
+     * @param orgId 组织ID
+     * @return CreateSubUserWithOrgInfo
      */
     public CreateSubUserWithOrgInfo orgId(String orgId) {
         this.orgId = orgId;
@@ -174,7 +175,8 @@ public class CreateSubUserWithOrgInfo  implements java.io.Serializable {
     /**
      * set 组织用户标识
      *
-     * @param orgUserId
+     * @param orgUserId 组织用户标识
+     * @return CreateSubUserWithOrgInfo
      */
     public CreateSubUserWithOrgInfo orgUserId(String orgUserId) {
         this.orgUserId = orgUserId;
@@ -185,7 +187,8 @@ public class CreateSubUserWithOrgInfo  implements java.io.Serializable {
     /**
      * set 描述，0~256个字符
      *
-     * @param description
+     * @param description 描述，0~256个字符
+     * @return CreateSubUserWithOrgInfo
      */
     public CreateSubUserWithOrgInfo description(String description) {
         this.description = description;
@@ -196,7 +199,8 @@ public class CreateSubUserWithOrgInfo  implements java.io.Serializable {
     /**
      * set 是否创建accessKey，默认false
      *
-     * @param createAk
+     * @param createAk 是否创建accessKey，默认false
+     * @return CreateSubUserWithOrgInfo
      */
     public CreateSubUserWithOrgInfo createAk(Boolean createAk) {
         this.createAk = createAk;
@@ -207,7 +211,8 @@ public class CreateSubUserWithOrgInfo  implements java.io.Serializable {
     /**
      * set 子用户是否支持控制台登录，默认true
      *
-     * @param consoleLogin
+     * @param consoleLogin 子用户是否支持控制台登录，默认true
+     * @return CreateSubUserWithOrgInfo
      */
     public CreateSubUserWithOrgInfo consoleLogin(Boolean consoleLogin) {
         this.consoleLogin = consoleLogin;

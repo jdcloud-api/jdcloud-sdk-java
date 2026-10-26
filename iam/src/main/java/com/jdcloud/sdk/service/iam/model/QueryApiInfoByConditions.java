@@ -136,7 +136,8 @@ public class QueryApiInfoByConditions  implements java.io.Serializable {
     /**
     * set apiInfos
     *
-    * @param apiInfos
+    * @param apiInfos 
+    * @return QueryApiInfoByConditions
     */
     public QueryApiInfoByConditions apiInfos(List<ApiInfoVo> apiInfos) {
         this.apiInfos = apiInfos;
@@ -147,7 +148,8 @@ public class QueryApiInfoByConditions  implements java.io.Serializable {
     /**
      * set totalRecord
      *
-     * @param totalRecord
+     * @param totalRecord 
+     * @return QueryApiInfoByConditions
      */
     public QueryApiInfoByConditions totalRecord(Integer totalRecord) {
         this.totalRecord = totalRecord;
@@ -158,7 +160,8 @@ public class QueryApiInfoByConditions  implements java.io.Serializable {
     /**
      * set success
      *
-     * @param success
+     * @param success 
+     * @return QueryApiInfoByConditions
      */
     public QueryApiInfoByConditions success(Boolean success) {
         this.success = success;
@@ -169,7 +172,8 @@ public class QueryApiInfoByConditions  implements java.io.Serializable {
     /**
      * set message
      *
-     * @param message
+     * @param message 
+     * @return QueryApiInfoByConditions
      */
     public QueryApiInfoByConditions message(String message) {
         this.message = message;

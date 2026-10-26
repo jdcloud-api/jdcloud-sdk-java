@@ -66,7 +66,8 @@ public class DescribeSubUserGroupsRequest extends JdcloudRequest implements java
     /**
      * set 子用户名
      *
-     * @param subUser
+     * @param subUser 子用户名
+     * @return DescribeSubUserGroupsRequest
      */
     public DescribeSubUserGroupsRequest subUser(String subUser) {
         this.subUser = subUser;

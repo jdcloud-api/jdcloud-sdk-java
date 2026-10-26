@@ -88,7 +88,8 @@ public class BaseProductRegionVo  implements java.io.Serializable {
     /**
      * set 产品编码
      *
-     * @param serviceCode
+     * @param serviceCode 产品编码
+     * @return BaseProductRegionVo
      */
     public BaseProductRegionVo serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
@@ -99,7 +100,8 @@ public class BaseProductRegionVo  implements java.io.Serializable {
     /**
     * set az信息
     *
-    * @param regionAzVos
+    * @param regionAzVos az信息
+    * @return BaseProductRegionVo
     */
     public BaseProductRegionVo regionAzVos(List<RegionAzVo> regionAzVos) {
         this.regionAzVos = regionAzVos;

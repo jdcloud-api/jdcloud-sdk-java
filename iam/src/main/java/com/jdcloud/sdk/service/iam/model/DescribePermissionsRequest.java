@@ -168,7 +168,8 @@ public class DescribePermissionsRequest extends JdcloudRequest implements java.i
     /**
      * set 页码
      *
-     * @param pageNumber
+     * @param pageNumber 页码
+     * @return DescribePermissionsRequest
      */
     public DescribePermissionsRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -179,7 +180,8 @@ public class DescribePermissionsRequest extends JdcloudRequest implements java.i
     /**
      * set 每页显示数目
      *
-     * @param pageSize
+     * @param pageSize 每页显示数目
+     * @return DescribePermissionsRequest
      */
     public DescribePermissionsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -190,7 +192,8 @@ public class DescribePermissionsRequest extends JdcloudRequest implements java.i
     /**
      * set 关键字
      *
-     * @param keyword
+     * @param keyword 关键字
+     * @return DescribePermissionsRequest
      */
     public DescribePermissionsRequest keyword(String keyword) {
         this.keyword = keyword;
@@ -201,7 +204,8 @@ public class DescribePermissionsRequest extends JdcloudRequest implements java.i
     /**
      * set 权限类型,0-全部，1-系统权限，2-自定义权限
      *
-     * @param queryType
+     * @param queryType 权限类型,0-全部，1-系统权限，2-自定义权限
+     * @return DescribePermissionsRequest
      */
     public DescribePermissionsRequest queryType(Integer queryType) {
         this.queryType = queryType;
@@ -212,7 +216,8 @@ public class DescribePermissionsRequest extends JdcloudRequest implements java.i
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribePermissionsRequest
      */
     public DescribePermissionsRequest regionId(String regionId) {
         this.regionId = regionId;

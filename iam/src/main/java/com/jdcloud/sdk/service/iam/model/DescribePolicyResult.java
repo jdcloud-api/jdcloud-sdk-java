@@ -89,7 +89,8 @@ public class DescribePolicyResult extends JdcloudResult implements java.io.Seria
     /**
      * set 权限策略信息
      *
-     * @param policy
+     * @param policy 权限策略信息
+     * @return DescribePolicyResult
      */
     public DescribePolicyResult policy(PolicyDetail policy) {
         this.policy = policy;
@@ -100,7 +101,8 @@ public class DescribePolicyResult extends JdcloudResult implements java.io.Seria
     /**
      * set 权限策略的默认版本信息
      *
-     * @param defaultPolicyEdition
+     * @param defaultPolicyEdition 权限策略的默认版本信息
+     * @return DescribePolicyResult
      */
     public DescribePolicyResult defaultPolicyEdition(PolicyEdition defaultPolicyEdition) {
         this.defaultPolicyEdition = defaultPolicyEdition;

@@ -69,7 +69,8 @@ public class CreateRoleRequest extends JdcloudRequest implements java.io.Seriali
     /**
      * set 角色信息
      *
-     * @param createRoleInfo
+     * @param createRoleInfo 角色信息
+     * @return CreateRoleRequest
      */
     public CreateRoleRequest createRoleInfo(CreateRoleInfo createRoleInfo) {
         this.createRoleInfo = createRoleInfo;

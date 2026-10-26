@@ -66,7 +66,8 @@ public class DeleteSubUserRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 子用户名
      *
-     * @param subUser
+     * @param subUser 子用户名
+     * @return DeleteSubUserRequest
      */
     public DeleteSubUserRequest subUser(String subUser) {
         this.subUser = subUser;

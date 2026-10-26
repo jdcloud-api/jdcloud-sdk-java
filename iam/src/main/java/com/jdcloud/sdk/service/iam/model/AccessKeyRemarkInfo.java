@@ -65,7 +65,8 @@ public class AccessKeyRemarkInfo  implements java.io.Serializable {
     /**
      * set AK备注信息
      *
-     * @param remark
+     * @param remark AK备注信息
+     * @return AccessKeyRemarkInfo
      */
     public AccessKeyRemarkInfo remark(String remark) {
         this.remark = remark;

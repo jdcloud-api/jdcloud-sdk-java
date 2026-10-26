@@ -66,7 +66,8 @@ public class CreateGroupResult extends JdcloudResult implements java.io.Serializ
     /**
      * set 用户组信息
      *
-     * @param group
+     * @param group 用户组信息
+     * @return CreateGroupResult
      */
     public CreateGroupResult group(CreateGroupRes group) {
         this.group = group;

@@ -159,7 +159,8 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 页码，默认1
      *
-     * @param pageNumber
+     * @param pageNumber 页码，默认1
+     * @return DescribeRolesRequest
      */
     public DescribeRolesRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -170,7 +171,8 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 分页大小，默认50，取值范围[10, 100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认50，取值范围[10, 100]
+     * @return DescribeRolesRequest
      */
     public DescribeRolesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -181,7 +183,8 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 角色名称关键词
      *
-     * @param roleName
+     * @param roleName 角色名称关键词
+     * @return DescribeRolesRequest
      */
     public DescribeRolesRequest roleName(String roleName) {
         this.roleName = roleName;
@@ -192,7 +195,8 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 角色类型，默认查找所有类型，2-服务相关角色，3-服务角色，4-用户角色
      *
-     * @param type
+     * @param type 角色类型，默认查找所有类型，2-服务相关角色，3-服务角色，4-用户角色
+     * @return DescribeRolesRequest
      */
     public DescribeRolesRequest type(Integer type) {
         this.type = type;
@@ -203,7 +207,8 @@ public class DescribeRolesRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 排序策略,0-按创建时间顺序排序,1-按创建时间倒序排序
      *
-     * @param sort
+     * @param sort 排序策略,0-按创建时间顺序排序,1-按创建时间倒序排序
+     * @return DescribeRolesRequest
      */
     public DescribeRolesRequest sort(Integer sort) {
         this.sort = sort;

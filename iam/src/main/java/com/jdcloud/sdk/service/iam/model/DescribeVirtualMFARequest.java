@@ -63,7 +63,8 @@ public class DescribeVirtualMFARequest extends JdcloudRequest implements java.io
     /**
      * set 被查询的账号（目前支持：默认不填的情况表示查询自己，填写子用户名表示查询子用户)
      *
-     * @param queriedAccount
+     * @param queriedAccount 被查询的账号（目前支持：默认不填的情况表示查询自己，填写子用户名表示查询子用户)
+     * @return DescribeVirtualMFARequest
      */
     public DescribeVirtualMFARequest queriedAccount(String queriedAccount) {
         this.queriedAccount = queriedAccount;

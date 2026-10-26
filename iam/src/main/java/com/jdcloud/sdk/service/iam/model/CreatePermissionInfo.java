@@ -117,7 +117,8 @@ public class CreatePermissionInfo  implements java.io.Serializable {
     /**
      * set 权限名称，1~32位数字、字母、中文、下划线、下划线、中划线
      *
-     * @param name
+     * @param name 权限名称，1~32位数字、字母、中文、下划线、下划线、中划线
+     * @return CreatePermissionInfo
      */
     public CreatePermissionInfo name(String name) {
         this.name = name;
@@ -128,7 +129,8 @@ public class CreatePermissionInfo  implements java.io.Serializable {
     /**
      * set 描述，0~256个字符
      *
-     * @param description
+     * @param description 描述，0~256个字符
+     * @return CreatePermissionInfo
      */
     public CreatePermissionInfo description(String description) {
         this.description = description;
@@ -139,7 +141,8 @@ public class CreatePermissionInfo  implements java.io.Serializable {
     /**
     * set 权限详细信息
     *
-    * @param content
+    * @param content 权限详细信息
+    * @return CreatePermissionInfo
     */
     public CreatePermissionInfo content(List<PermissionDetail> content) {
         this.content = content;

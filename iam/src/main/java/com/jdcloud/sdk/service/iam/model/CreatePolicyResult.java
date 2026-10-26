@@ -66,7 +66,8 @@ public class CreatePolicyResult extends JdcloudResult implements java.io.Seriali
     /**
      * set 策略信息
      *
-     * @param policy
+     * @param policy 策略信息
+     * @return CreatePolicyResult
      */
     public CreatePolicyResult policy(Policy policy) {
         this.policy = policy;

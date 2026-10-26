@@ -139,7 +139,8 @@ public class AuthenticationInfo  implements java.io.Serializable {
     /**
      * set 主账号pin
      *
-     * @param account
+     * @param account 主账号pin
+     * @return AuthenticationInfo
      */
     public AuthenticationInfo account(String account) {
         this.account = account;
@@ -150,7 +151,8 @@ public class AuthenticationInfo  implements java.io.Serializable {
     /**
      * set 子账号pin
      *
-     * @param subUser
+     * @param subUser 子账号pin
+     * @return AuthenticationInfo
      */
     public AuthenticationInfo subUser(String subUser) {
         this.subUser = subUser;
@@ -161,7 +163,8 @@ public class AuthenticationInfo  implements java.io.Serializable {
     /**
      * set 操作类型,格式：serviceName:operationId
      *
-     * @param action
+     * @param action 操作类型,格式：serviceName:operationId
+     * @return AuthenticationInfo
      */
     public AuthenticationInfo action(String action) {
         this.action = action;
@@ -172,7 +175,8 @@ public class AuthenticationInfo  implements java.io.Serializable {
     /**
      * set 资源信息,格式：jrn:service:region:accountId:resourceType/resourceId/subresourceType/subresourceId
      *
-     * @param resource
+     * @param resource 资源信息,格式：jrn:service:region:accountId:resourceType/resourceId/subresourceType/subresourceId
+     * @return AuthenticationInfo
      */
     public AuthenticationInfo resource(String resource) {
         this.resource = resource;

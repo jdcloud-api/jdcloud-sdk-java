@@ -69,7 +69,8 @@ public class CreateGroupRequest extends JdcloudRequest implements java.io.Serial
     /**
      * set createGroupInfo
      *
-     * @param createGroupInfo
+     * @param createGroupInfo 
+     * @return CreateGroupRequest
      */
     public CreateGroupRequest createGroupInfo(CreateGroupInfo createGroupInfo) {
         this.createGroupInfo = createGroupInfo;

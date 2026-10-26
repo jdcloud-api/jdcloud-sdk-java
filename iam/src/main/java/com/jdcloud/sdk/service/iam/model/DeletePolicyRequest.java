@@ -66,7 +66,8 @@ public class DeletePolicyRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 策略名称
      *
-     * @param policyName
+     * @param policyName 策略名称
+     * @return DeletePolicyRequest
      */
     public DeletePolicyRequest policyName(String policyName) {
         this.policyName = policyName;

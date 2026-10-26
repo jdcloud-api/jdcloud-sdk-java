@@ -184,7 +184,8 @@ public class BaseResponseVo  implements java.io.Serializable {
     /**
      * set isSuccess
      *
-     * @param isSuccess
+     * @param isSuccess 
+     * @return BaseResponseVo
      */
     public BaseResponseVo isSuccess(Boolean isSuccess) {
         this.isSuccess = isSuccess;
@@ -195,7 +196,8 @@ public class BaseResponseVo  implements java.io.Serializable {
     /**
      * set message
      *
-     * @param message
+     * @param message 
+     * @return BaseResponseVo
      */
     public BaseResponseVo message(String message) {
         this.message = message;
@@ -206,7 +208,8 @@ public class BaseResponseVo  implements java.io.Serializable {
     /**
      * set errorCode
      *
-     * @param errorCode
+     * @param errorCode 
+     * @return BaseResponseVo
      */
     public BaseResponseVo errorCode(Integer errorCode) {
         this.errorCode = errorCode;
@@ -217,7 +220,8 @@ public class BaseResponseVo  implements java.io.Serializable {
     /**
      * set data
      *
-     * @param data
+     * @param data 
+     * @return BaseResponseVo
      */
     public BaseResponseVo data(Integer data) {
         this.data = data;
@@ -228,7 +232,8 @@ public class BaseResponseVo  implements java.io.Serializable {
     /**
     * set errStrSet
     *
-    * @param errStrSet
+    * @param errStrSet 
+    * @return BaseResponseVo
     */
     public BaseResponseVo errStrSet(List<String> errStrSet) {
         this.errStrSet = errStrSet;
@@ -239,7 +244,8 @@ public class BaseResponseVo  implements java.io.Serializable {
     /**
      * set requestId
      *
-     * @param requestId
+     * @param requestId 
+     * @return BaseResponseVo
      */
     public BaseResponseVo requestId(String requestId) {
         this.requestId = requestId;

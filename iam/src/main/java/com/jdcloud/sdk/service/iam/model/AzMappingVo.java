@@ -86,7 +86,8 @@ public class AzMappingVo  implements java.io.Serializable {
     /**
      * set 逻辑 Az
      *
-     * @param laz
+     * @param laz 逻辑 Az
+     * @return AzMappingVo
      */
     public AzMappingVo laz(String laz) {
         this.laz = laz;
@@ -97,7 +98,8 @@ public class AzMappingVo  implements java.io.Serializable {
     /**
      * set 物理 Az
      *
-     * @param paz
+     * @param paz 物理 Az
+     * @return AzMappingVo
      */
     public AzMappingVo paz(String paz) {
         this.paz = paz;

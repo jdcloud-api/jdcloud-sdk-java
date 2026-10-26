@@ -90,7 +90,8 @@ public class DescribeSubUserGroupsResult extends JdcloudResult implements java.i
     /**
     * set groups
     *
-    * @param groups
+    * @param groups 
+    * @return DescribeSubUserGroupsResult
     */
     public DescribeSubUserGroupsResult groups(List<GroupInfo> groups) {
         this.groups = groups;
@@ -101,7 +102,8 @@ public class DescribeSubUserGroupsResult extends JdcloudResult implements java.i
     /**
      * set total
      *
-     * @param total
+     * @param total 
+     * @return DescribeSubUserGroupsResult
      */
     public DescribeSubUserGroupsResult total(Integer total) {
         this.total = total;

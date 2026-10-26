@@ -66,7 +66,8 @@ public class DescribeSubUserRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 子用户名
      *
-     * @param subUser
+     * @param subUser 子用户名
+     * @return DescribeSubUserRequest
      */
     public DescribeSubUserRequest subUser(String subUser) {
         this.subUser = subUser;

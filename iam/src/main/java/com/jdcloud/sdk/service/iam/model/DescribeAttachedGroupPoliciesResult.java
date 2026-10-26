@@ -90,7 +90,8 @@ public class DescribeAttachedGroupPoliciesResult extends JdcloudResult implement
     /**
      * set 总数
      *
-     * @param total
+     * @param total 总数
+     * @return DescribeAttachedGroupPoliciesResult
      */
     public DescribeAttachedGroupPoliciesResult total(Integer total) {
         this.total = total;
@@ -101,7 +102,8 @@ public class DescribeAttachedGroupPoliciesResult extends JdcloudResult implement
     /**
     * set policies
     *
-    * @param policies
+    * @param policies 
+    * @return DescribeAttachedGroupPoliciesResult
     */
     public DescribeAttachedGroupPoliciesResult policies(List<Policy> policies) {
         this.policies = policies;

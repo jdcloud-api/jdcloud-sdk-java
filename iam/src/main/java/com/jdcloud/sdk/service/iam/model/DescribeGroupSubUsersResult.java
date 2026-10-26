@@ -90,7 +90,8 @@ public class DescribeGroupSubUsersResult extends JdcloudResult implements java.i
     /**
      * set 用户总数
      *
-     * @param total
+     * @param total 用户总数
+     * @return DescribeGroupSubUsersResult
      */
     public DescribeGroupSubUsersResult total(Integer total) {
         this.total = total;
@@ -101,7 +102,8 @@ public class DescribeGroupSubUsersResult extends JdcloudResult implements java.i
     /**
     * set subUsers
     *
-    * @param subUsers
+    * @param subUsers 
+    * @return DescribeGroupSubUsersResult
     */
     public DescribeGroupSubUsersResult subUsers(List<SubUserInfo> subUsers) {
         this.subUsers = subUsers;

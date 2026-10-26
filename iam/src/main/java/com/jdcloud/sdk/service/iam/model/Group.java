@@ -230,7 +230,8 @@ public class Group  implements java.io.Serializable {
     /**
      * set 用户组ID
      *
-     * @param groupId
+     * @param groupId 用户组ID
+     * @return Group
      */
     public Group groupId(String groupId) {
         this.groupId = groupId;
@@ -241,7 +242,8 @@ public class Group  implements java.io.Serializable {
     /**
      * set 用户组名
      *
-     * @param name
+     * @param name 用户组名
+     * @return Group
      */
     public Group name(String name) {
         this.name = name;
@@ -252,7 +254,8 @@ public class Group  implements java.io.Serializable {
     /**
      * set 京东云资源标识(jrn)
      *
-     * @param jrn
+     * @param jrn 京东云资源标识(jrn)
+     * @return Group
      */
     public Group jrn(String jrn) {
         this.jrn = jrn;
@@ -263,7 +266,8 @@ public class Group  implements java.io.Serializable {
     /**
      * set 用户组描述
      *
-     * @param description
+     * @param description 用户组描述
+     * @return Group
      */
     public Group description(String description) {
         this.description = description;
@@ -274,7 +278,8 @@ public class Group  implements java.io.Serializable {
     /**
      * set 子用户个数
      *
-     * @param subUserSum
+     * @param subUserSum 子用户个数
+     * @return Group
      */
     public Group subUserSum(Integer subUserSum) {
         this.subUserSum = subUserSum;
@@ -285,7 +290,8 @@ public class Group  implements java.io.Serializable {
     /**
      * set 绑定策略个数
      *
-     * @param policySum
+     * @param policySum 绑定策略个数
+     * @return Group
      */
     public Group policySum(Integer policySum) {
         this.policySum = policySum;
@@ -296,7 +302,8 @@ public class Group  implements java.io.Serializable {
     /**
      * set 用户组创建时间
      *
-     * @param createTime
+     * @param createTime 用户组创建时间
+     * @return Group
      */
     public Group createTime(String createTime) {
         this.createTime = createTime;
@@ -307,7 +314,8 @@ public class Group  implements java.io.Serializable {
     /**
      * set 用户组更新时间
      *
-     * @param updateTime
+     * @param updateTime 用户组更新时间
+     * @return Group
      */
     public Group updateTime(String updateTime) {
         this.updateTime = updateTime;

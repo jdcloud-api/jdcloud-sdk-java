@@ -66,7 +66,8 @@ public class DeleteGroupRequest extends JdcloudRequest implements java.io.Serial
     /**
      * set 用户组名称
      *
-     * @param groupName
+     * @param groupName 用户组名称
+     * @return DeleteGroupRequest
      */
     public DeleteGroupRequest groupName(String groupName) {
         this.groupName = groupName;

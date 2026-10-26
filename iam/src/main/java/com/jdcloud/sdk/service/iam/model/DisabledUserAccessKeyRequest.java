@@ -93,7 +93,8 @@ public class DisabledUserAccessKeyRequest extends JdcloudRequest implements java
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DisabledUserAccessKeyRequest
      */
     public DisabledUserAccessKeyRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -104,7 +105,8 @@ public class DisabledUserAccessKeyRequest extends JdcloudRequest implements java
     /**
      * set accessKey
      *
-     * @param accessKey
+     * @param accessKey accessKey
+     * @return DisabledUserAccessKeyRequest
      */
     public DisabledUserAccessKeyRequest accessKey(String accessKey) {
         this.accessKey = accessKey;

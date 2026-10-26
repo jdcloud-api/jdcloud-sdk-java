@@ -62,7 +62,8 @@ public class UpdateGroupInfo  implements java.io.Serializable {
     /**
      * set 用户组描述
      *
-     * @param description
+     * @param description 用户组描述
+     * @return UpdateGroupInfo
      */
     public UpdateGroupInfo description(String description) {
         this.description = description;

@@ -88,7 +88,8 @@ public class VirtualMFADevice  implements java.io.Serializable {
     /**
      * set Base64加密后的二维码信息
      *
-     * @param base64Qr
+     * @param base64Qr Base64加密后的二维码信息
+     * @return VirtualMFADevice
      */
     public VirtualMFADevice base64Qr(String base64Qr) {
         this.base64Qr = base64Qr;
@@ -99,7 +100,8 @@ public class VirtualMFADevice  implements java.io.Serializable {
     /**
     * set 创建MFA设备相关信息
     *
-    * @param mFAInfos
+    * @param mFAInfos 创建MFA设备相关信息
+    * @return VirtualMFADevice
     */
     public VirtualMFADevice mFAInfos(List<MFAInfo> mFAInfos) {
         this.mFAInfos = mFAInfos;

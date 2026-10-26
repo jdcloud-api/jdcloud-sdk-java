@@ -91,7 +91,8 @@ public class AddOrganizationUserRelationInfo  implements java.io.Serializable {
     /**
      * set 子用户名
      *
-     * @param subUserName
+     * @param subUserName 子用户名
+     * @return AddOrganizationUserRelationInfo
      */
     public AddOrganizationUserRelationInfo subUserName(String subUserName) {
         this.subUserName = subUserName;
@@ -102,7 +103,8 @@ public class AddOrganizationUserRelationInfo  implements java.io.Serializable {
     /**
      * set 组织用户标识，如：erp
      *
-     * @param userId
+     * @param userId 组织用户标识，如：erp
+     * @return AddOrganizationUserRelationInfo
      */
     public AddOrganizationUserRelationInfo userId(String userId) {
         this.userId = userId;
