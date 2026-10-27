@@ -103,6 +103,11 @@ public class Jpfs  implements java.io.Serializable {
     private String chargeReleaseTime;
 
     /**
+     * 商业平台资源单欠费、到期状态；仅资源在商业平台存在有效资源单时返回。1&#x3D;包年包月正常，2&#x3D;包年包月到期，3&#x3D;按配置或按用量正常，4&#x3D;按配置或按用量欠费
+     */
+    private Integer aeStatus;
+
+    /**
      * RDMA协议挂载目标ID
      */
     private String rdmaMountTargetId;
@@ -422,6 +427,25 @@ public class Jpfs  implements java.io.Serializable {
      */
     public void setChargeReleaseTime(String chargeReleaseTime) {
         this.chargeReleaseTime = chargeReleaseTime;
+    }
+
+
+    /**
+     * get 商业平台资源单欠费、到期状态；仅资源在商业平台存在有效资源单时返回。1&#x3D;包年包月正常，2&#x3D;包年包月到期，3&#x3D;按配置或按用量正常，4&#x3D;按配置或按用量欠费
+     *
+     * @return
+     */
+    public Integer getAeStatus() {
+        return aeStatus;
+    }
+
+    /**
+     * set 商业平台资源单欠费、到期状态；仅资源在商业平台存在有效资源单时返回。1&#x3D;包年包月正常，2&#x3D;包年包月到期，3&#x3D;按配置或按用量正常，4&#x3D;按配置或按用量欠费
+     *
+     * @param aeStatus
+     */
+    public void setAeStatus(Integer aeStatus) {
+        this.aeStatus = aeStatus;
     }
 
 
@@ -799,6 +823,18 @@ public class Jpfs  implements java.io.Serializable {
      */
     public Jpfs chargeReleaseTime(String chargeReleaseTime) {
         this.chargeReleaseTime = chargeReleaseTime;
+        return this;
+    }
+
+
+    /**
+     * set 商业平台资源单欠费、到期状态；仅资源在商业平台存在有效资源单时返回。1&#x3D;包年包月正常，2&#x3D;包年包月到期，3&#x3D;按配置或按用量正常，4&#x3D;按配置或按用量欠费
+     *
+     * @param aeStatus 商业平台资源单欠费、到期状态；仅资源在商业平台存在有效资源单时返回。1&#x3D;包年包月正常，2&#x3D;包年包月到期，3&#x3D;按配置或按用量正常，4&#x3D;按配置或按用量欠费
+     * @return Jpfs
+     */
+    public Jpfs aeStatus(Integer aeStatus) {
+        this.aeStatus = aeStatus;
         return this;
     }
 

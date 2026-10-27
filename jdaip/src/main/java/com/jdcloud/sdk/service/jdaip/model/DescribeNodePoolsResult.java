@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.jdaip.model.ExternalNodePool;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询节点池列表
+ * 查询节点池列表。
  */
 public class DescribeNodePoolsResult extends JdcloudResult implements java.io.Serializable {
 

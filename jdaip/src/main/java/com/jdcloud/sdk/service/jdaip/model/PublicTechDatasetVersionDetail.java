@@ -43,6 +43,11 @@ public class PublicTechDatasetVersionDetail  implements java.io.Serializable {
     private String dssDatasetId;
 
     /**
+     * 数据集名称。
+     */
+    private String datasetName;
+
+    /**
      * 版本号
      */
     private String version;
@@ -111,6 +116,25 @@ public class PublicTechDatasetVersionDetail  implements java.io.Serializable {
      */
     public void setDssDatasetId(String dssDatasetId) {
         this.dssDatasetId = dssDatasetId;
+    }
+
+
+    /**
+     * get 数据集名称。
+     *
+     * @return
+     */
+    public String getDatasetName() {
+        return datasetName;
+    }
+
+    /**
+     * set 数据集名称。
+     *
+     * @param datasetName
+     */
+    public void setDatasetName(String datasetName) {
+        this.datasetName = datasetName;
     }
 
 
@@ -253,6 +277,18 @@ public class PublicTechDatasetVersionDetail  implements java.io.Serializable {
      */
     public PublicTechDatasetVersionDetail dssDatasetId(String dssDatasetId) {
         this.dssDatasetId = dssDatasetId;
+        return this;
+    }
+
+
+    /**
+     * set 数据集名称。
+     *
+     * @param datasetName 数据集名称。
+     * @return PublicTechDatasetVersionDetail
+     */
+    public PublicTechDatasetVersionDetail datasetName(String datasetName) {
+        this.datasetName = datasetName;
         return this;
     }
 

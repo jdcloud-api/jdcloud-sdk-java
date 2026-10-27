@@ -42,6 +42,11 @@ public class StopNodeRequest extends JdcloudRequest implements java.io.Serializa
     private String nodePoolId;
 
     /**
+     * 可选值：true/false，是否停止计费，默认值：false
+     */
+    private String stopCharge;
+
+    /**
      * Region ID，例如：cn-north-1
      * Required:true
      */
@@ -73,6 +78,25 @@ public class StopNodeRequest extends JdcloudRequest implements java.io.Serializa
      */
     public void setNodePoolId(String nodePoolId) {
         this.nodePoolId = nodePoolId;
+    }
+
+
+    /**
+     * get 可选值：true/false，是否停止计费，默认值：false
+     *
+     * @return
+     */
+    public String getStopCharge() {
+        return stopCharge;
+    }
+
+    /**
+     * set 可选值：true/false，是否停止计费，默认值：false
+     *
+     * @param stopCharge
+     */
+    public void setStopCharge(String stopCharge) {
+        this.stopCharge = stopCharge;
     }
 
 
@@ -123,6 +147,18 @@ public class StopNodeRequest extends JdcloudRequest implements java.io.Serializa
      */
     public StopNodeRequest nodePoolId(String nodePoolId) {
         this.nodePoolId = nodePoolId;
+        return this;
+    }
+
+
+    /**
+     * set 可选值：true/false，是否停止计费，默认值：false
+     *
+     * @param stopCharge 可选值：true/false，是否停止计费，默认值：false
+     * @return StopNodeRequest
+     */
+    public StopNodeRequest stopCharge(String stopCharge) {
+        this.stopCharge = stopCharge;
         return this;
     }
 

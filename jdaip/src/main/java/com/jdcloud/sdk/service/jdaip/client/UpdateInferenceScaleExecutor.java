@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.jdaip.model.UpdateInferenceScaleResponse;
 
 /**
- * 更新指定推理服务的自动扩缩容规则配置
+ * 更新指定推理服务的自动扩缩容规则配置。请求体与创建接口相同，支持 basic / advanced 模式切换；
+advanced 使用 metrics 双阈值，basic 使用 *Threshold 扁平阈值
+
  */
 class UpdateInferenceScaleExecutor extends JdcloudExecutor {
 

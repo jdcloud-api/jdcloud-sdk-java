@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.jdaip.model.DescribeQueuesResponse;
 
 /**
- * 查询队列列表
+ * 查询队列列表。
  */
 class DescribeQueuesExecutor extends JdcloudExecutor {
 

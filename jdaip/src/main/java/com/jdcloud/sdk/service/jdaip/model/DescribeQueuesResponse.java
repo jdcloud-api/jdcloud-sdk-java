@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.jdaip.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询队列列表
+ * 查询队列列表。
  */
 public class DescribeQueuesResponse extends JdcloudResponse<DescribeQueuesResult> implements java.io.Serializable {
 

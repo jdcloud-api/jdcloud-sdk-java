@@ -43,6 +43,11 @@ public class DatasetResultForJob  implements java.io.Serializable {
     private String datasetId;
 
     /**
+     * 数据集名字。
+     */
+    private String datasetName;
+
+    /**
      * 数据集版本。示例：v1
      */
     private String datasetVersion;
@@ -105,6 +110,25 @@ public class DatasetResultForJob  implements java.io.Serializable {
      */
     public void setDatasetId(String datasetId) {
         this.datasetId = datasetId;
+    }
+
+
+    /**
+     * get 数据集名字。
+     *
+     * @return
+     */
+    public String getDatasetName() {
+        return datasetName;
+    }
+
+    /**
+     * set 数据集名字。
+     *
+     * @param datasetName
+     */
+    public void setDatasetName(String datasetName) {
+        this.datasetName = datasetName;
     }
 
 
@@ -226,6 +250,18 @@ public class DatasetResultForJob  implements java.io.Serializable {
      */
     public DatasetResultForJob datasetId(String datasetId) {
         this.datasetId = datasetId;
+        return this;
+    }
+
+
+    /**
+     * set 数据集名字。
+     *
+     * @param datasetName 数据集名字。
+     * @return DatasetResultForJob
+     */
+    public DatasetResultForJob datasetName(String datasetName) {
+        this.datasetName = datasetName;
         return this;
     }
 

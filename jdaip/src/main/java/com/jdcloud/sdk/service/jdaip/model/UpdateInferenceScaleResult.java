@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.jdaip.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 更新指定推理服务的自动扩缩容规则配置
+ * 更新指定推理服务的自动扩缩容规则配置。请求体与创建接口相同，支持 basic / advanced 模式切换；
+advanced 使用 metrics 双阈值，basic 使用 *Threshold 扁平阈值
+
  */
 public class UpdateInferenceScaleResult extends JdcloudResult implements java.io.Serializable {
 

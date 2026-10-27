@@ -35,6 +35,11 @@ public class Node  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 仅用于响应，创建和更新请求不应传入。owned表示拥有，managed表示管理，shared表示被授权共享；不代表写操作权限。共享响应仅返回基础信息，私有字段不返回。
+     */
+    private String accessRelation;
+
+    /**
      * 节点ID
      */
     private String id;
@@ -165,6 +170,11 @@ public class Node  implements java.io.Serializable {
     private String releaseTime;
 
     /**
+     * 商业平台资源单欠费、到期状态；仅资源在商业平台存在有效资源单时返回。1&#x3D;包年包月正常，2&#x3D;包年包月到期，3&#x3D;按配置或按用量正常，4&#x3D;按配置或按用量欠费
+     */
+    private Integer aeStatus;
+
+    /**
      * GPU资源配额信息
      */
     private GpuQuota gpuQuota;
@@ -219,6 +229,25 @@ public class Node  implements java.io.Serializable {
      */
     private String resourceGroupName;
 
+
+
+    /**
+     * get 仅用于响应，创建和更新请求不应传入。owned表示拥有，managed表示管理，shared表示被授权共享；不代表写操作权限。共享响应仅返回基础信息，私有字段不返回。
+     *
+     * @return
+     */
+    public String getAccessRelation() {
+        return accessRelation;
+    }
+
+    /**
+     * set 仅用于响应，创建和更新请求不应传入。owned表示拥有，managed表示管理，shared表示被授权共享；不代表写操作权限。共享响应仅返回基础信息，私有字段不返回。
+     *
+     * @param accessRelation
+     */
+    public void setAccessRelation(String accessRelation) {
+        this.accessRelation = accessRelation;
+    }
 
 
     /**
@@ -716,6 +745,25 @@ public class Node  implements java.io.Serializable {
 
 
     /**
+     * get 商业平台资源单欠费、到期状态；仅资源在商业平台存在有效资源单时返回。1&#x3D;包年包月正常，2&#x3D;包年包月到期，3&#x3D;按配置或按用量正常，4&#x3D;按配置或按用量欠费
+     *
+     * @return
+     */
+    public Integer getAeStatus() {
+        return aeStatus;
+    }
+
+    /**
+     * set 商业平台资源单欠费、到期状态；仅资源在商业平台存在有效资源单时返回。1&#x3D;包年包月正常，2&#x3D;包年包月到期，3&#x3D;按配置或按用量正常，4&#x3D;按配置或按用量欠费
+     *
+     * @param aeStatus
+     */
+    public void setAeStatus(Integer aeStatus) {
+        this.aeStatus = aeStatus;
+    }
+
+
+    /**
      * get GPU资源配额信息
      *
      * @return
@@ -923,6 +971,18 @@ public class Node  implements java.io.Serializable {
         this.resourceGroupName = resourceGroupName;
     }
 
+
+
+    /**
+     * set 仅用于响应，创建和更新请求不应传入。owned表示拥有，managed表示管理，shared表示被授权共享；不代表写操作权限。共享响应仅返回基础信息，私有字段不返回。
+     *
+     * @param accessRelation 仅用于响应，创建和更新请求不应传入。owned表示拥有，managed表示管理，shared表示被授权共享；不代表写操作权限。共享响应仅返回基础信息，私有字段不返回。
+     * @return Node
+     */
+    public Node accessRelation(String accessRelation) {
+        this.accessRelation = accessRelation;
+        return this;
+    }
 
 
     /**
@@ -1233,6 +1293,18 @@ public class Node  implements java.io.Serializable {
      */
     public Node releaseTime(String releaseTime) {
         this.releaseTime = releaseTime;
+        return this;
+    }
+
+
+    /**
+     * set 商业平台资源单欠费、到期状态；仅资源在商业平台存在有效资源单时返回。1&#x3D;包年包月正常，2&#x3D;包年包月到期，3&#x3D;按配置或按用量正常，4&#x3D;按配置或按用量欠费
+     *
+     * @param aeStatus 商业平台资源单欠费、到期状态；仅资源在商业平台存在有效资源单时返回。1&#x3D;包年包月正常，2&#x3D;包年包月到期，3&#x3D;按配置或按用量正常，4&#x3D;按配置或按用量欠费
+     * @return Node
+     */
+    public Node aeStatus(Integer aeStatus) {
+        this.aeStatus = aeStatus;
         return this;
     }
 

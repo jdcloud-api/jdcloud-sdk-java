@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.jdaip.model.ExternalNode;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询节点列表
+ * 查询节点列表。
  */
 public class DescribeNodesResult extends JdcloudResult implements java.io.Serializable {
 

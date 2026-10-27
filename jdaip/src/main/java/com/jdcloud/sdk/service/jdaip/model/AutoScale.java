@@ -53,34 +53,100 @@ public class AutoScale  implements java.io.Serializable {
     private Integer scaleUpDelay;
 
     /**
-     * 缩容延迟时间（秒）
+     * 缩容延迟时间（秒）。创建/更新时（scaleType&#x3D;auto）必须在 30-3600，否则返回 400；
+存量低于 30 的规则查询时原值返回，不会被自动修正
+
      */
     private Integer scaleDownDelay;
 
     /**
-     * CPU使用率阈值（%，基于Limits）
+     * 自动扩缩容模式，仅 scaleType&#x3D;auto 有效。缺省按 basic；
+basic 使用扁平阈值（*Threshold），advanced 使用 metrics 双阈值。
+查询时缺省值会补全返回
+
+     */
+    private String mode;
+
+    /**
+     * advanced 扩容组合条件，仅接受大写 AND / OR，缺省 OR；
+非法值返回 400。查询 advanced 规则时缺省值会补全返回
+
+     */
+    private String scaleUpOperator;
+
+    /**
+     * advanced 缩容组合条件，仅接受大写 AND / OR，缺省 AND；
+非法值返回 400。查询 advanced 规则时缺省值会补全返回
+
+     */
+    private String scaleDownOperator;
+
+    /**
+     * advanced 扩容信号系数（百分比整数，必填）。如 150 表示 PromQL 输出 1.5（threshold&#x3D;1）；
+必须大于 100，且大于 scaleDownFactor。basic / cron 禁止携带。推荐值 150
+
+     */
+    private Integer scaleUpFactor;
+
+    /**
+     * advanced 缩容信号系数（百分比整数，必填）。如 40 表示 PromQL 输出 0.4；
+必须在 1-99，且小于 scaleUpFactor。basic / cron 禁止携带。推荐值 40
+
+     */
+    private Integer scaleDownFactor;
+
+    /**
+     * advanced 双阈值指标，至少配置一项。key 白名单：
+cpu、gpu、memory、waitingRequestCount、timeToFirstTokenP99、tokenUsage、decodeTransferQueue。
+每项至少配置 scaleUp/scaleDown 之一，两者都配时 scaleUp 必须大于 scaleDown；
+未传与显式 0 含义不同（未传表示该方向不参与判断）
+
+     */
+    private Object metrics;
+
+    /**
+     * 分角色自动扩缩容预留字段。缺省、null、空对象 {} 按整组策略处理；
+含任何角色条目（即使值为 null 或 {}）一律返回 400（分角色自动扩缩容尚未开放）
+
+     */
+    private Object roles;
+
+    /**
+     * basic 模式下 CPU 使用率阈值（%，基于 Limits），0 表示关闭
      */
     private Integer cpuThreshold;
 
     /**
-     * GPU利用率阈值（%）
+     * basic 模式下 GPU 利用率阈值（%），0 表示关闭
      */
     private Integer gpuThreshold;
 
     /**
-     * 内存使用率阈值（%，基于Limits）
+     * basic 模式下内存使用率阈值（%，基于 Limits），0 表示关闭
      */
     private Integer memoryThreshold;
 
     /**
-     * 排队中的请求数阈值
+     * basic 模式下排队中的请求数阈值，0 表示关闭
      */
     private Integer waitingRequestCountThreshold;
 
     /**
-     * 首token时延阈值，单位毫秒
+     * basic 模式下首 token 时延 P99 阈值（毫秒），0 表示关闭
      */
     private Integer timeToFirstTokenP99Threshold;
+
+    /**
+     * basic 模式下 KV Cache 占用阈值（整数百分比），0 表示关闭
+     */
+    private Integer tokenUsageThreshold;
+
+    /**
+     * basic 模式下 Decode 传输排队阈值（个），0 表示关闭；
+仅 SGLang 的 PD 分离实例可启用，否则返回 400
+
+     */
+    private Integer decodeTransferQueueThreshold;
 
 
 
@@ -142,7 +208,9 @@ public class AutoScale  implements java.io.Serializable {
 
 
     /**
-     * get 缩容延迟时间（秒）
+     * get 缩容延迟时间（秒）。创建/更新时（scaleType&#x3D;auto）必须在 30-3600，否则返回 400；
+存量低于 30 的规则查询时原值返回，不会被自动修正
+
      *
      * @return
      */
@@ -151,7 +219,9 @@ public class AutoScale  implements java.io.Serializable {
     }
 
     /**
-     * set 缩容延迟时间（秒）
+     * set 缩容延迟时间（秒）。创建/更新时（scaleType&#x3D;auto）必须在 30-3600，否则返回 400；
+存量低于 30 的规则查询时原值返回，不会被自动修正
+
      *
      * @param scaleDownDelay
      */
@@ -161,7 +231,174 @@ public class AutoScale  implements java.io.Serializable {
 
 
     /**
-     * get CPU使用率阈值（%，基于Limits）
+     * get 自动扩缩容模式，仅 scaleType&#x3D;auto 有效。缺省按 basic；
+basic 使用扁平阈值（*Threshold），advanced 使用 metrics 双阈值。
+查询时缺省值会补全返回
+
+     *
+     * @return
+     */
+    public String getMode() {
+        return mode;
+    }
+
+    /**
+     * set 自动扩缩容模式，仅 scaleType&#x3D;auto 有效。缺省按 basic；
+basic 使用扁平阈值（*Threshold），advanced 使用 metrics 双阈值。
+查询时缺省值会补全返回
+
+     *
+     * @param mode
+     */
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
+
+
+    /**
+     * get advanced 扩容组合条件，仅接受大写 AND / OR，缺省 OR；
+非法值返回 400。查询 advanced 规则时缺省值会补全返回
+
+     *
+     * @return
+     */
+    public String getScaleUpOperator() {
+        return scaleUpOperator;
+    }
+
+    /**
+     * set advanced 扩容组合条件，仅接受大写 AND / OR，缺省 OR；
+非法值返回 400。查询 advanced 规则时缺省值会补全返回
+
+     *
+     * @param scaleUpOperator
+     */
+    public void setScaleUpOperator(String scaleUpOperator) {
+        this.scaleUpOperator = scaleUpOperator;
+    }
+
+
+    /**
+     * get advanced 缩容组合条件，仅接受大写 AND / OR，缺省 AND；
+非法值返回 400。查询 advanced 规则时缺省值会补全返回
+
+     *
+     * @return
+     */
+    public String getScaleDownOperator() {
+        return scaleDownOperator;
+    }
+
+    /**
+     * set advanced 缩容组合条件，仅接受大写 AND / OR，缺省 AND；
+非法值返回 400。查询 advanced 规则时缺省值会补全返回
+
+     *
+     * @param scaleDownOperator
+     */
+    public void setScaleDownOperator(String scaleDownOperator) {
+        this.scaleDownOperator = scaleDownOperator;
+    }
+
+
+    /**
+     * get advanced 扩容信号系数（百分比整数，必填）。如 150 表示 PromQL 输出 1.5（threshold&#x3D;1）；
+必须大于 100，且大于 scaleDownFactor。basic / cron 禁止携带。推荐值 150
+
+     *
+     * @return
+     */
+    public Integer getScaleUpFactor() {
+        return scaleUpFactor;
+    }
+
+    /**
+     * set advanced 扩容信号系数（百分比整数，必填）。如 150 表示 PromQL 输出 1.5（threshold&#x3D;1）；
+必须大于 100，且大于 scaleDownFactor。basic / cron 禁止携带。推荐值 150
+
+     *
+     * @param scaleUpFactor
+     */
+    public void setScaleUpFactor(Integer scaleUpFactor) {
+        this.scaleUpFactor = scaleUpFactor;
+    }
+
+
+    /**
+     * get advanced 缩容信号系数（百分比整数，必填）。如 40 表示 PromQL 输出 0.4；
+必须在 1-99，且小于 scaleUpFactor。basic / cron 禁止携带。推荐值 40
+
+     *
+     * @return
+     */
+    public Integer getScaleDownFactor() {
+        return scaleDownFactor;
+    }
+
+    /**
+     * set advanced 缩容信号系数（百分比整数，必填）。如 40 表示 PromQL 输出 0.4；
+必须在 1-99，且小于 scaleUpFactor。basic / cron 禁止携带。推荐值 40
+
+     *
+     * @param scaleDownFactor
+     */
+    public void setScaleDownFactor(Integer scaleDownFactor) {
+        this.scaleDownFactor = scaleDownFactor;
+    }
+
+
+    /**
+     * get advanced 双阈值指标，至少配置一项。key 白名单：
+cpu、gpu、memory、waitingRequestCount、timeToFirstTokenP99、tokenUsage、decodeTransferQueue。
+每项至少配置 scaleUp/scaleDown 之一，两者都配时 scaleUp 必须大于 scaleDown；
+未传与显式 0 含义不同（未传表示该方向不参与判断）
+
+     *
+     * @return
+     */
+    public Object getMetrics() {
+        return metrics;
+    }
+
+    /**
+     * set advanced 双阈值指标，至少配置一项。key 白名单：
+cpu、gpu、memory、waitingRequestCount、timeToFirstTokenP99、tokenUsage、decodeTransferQueue。
+每项至少配置 scaleUp/scaleDown 之一，两者都配时 scaleUp 必须大于 scaleDown；
+未传与显式 0 含义不同（未传表示该方向不参与判断）
+
+     *
+     * @param metrics
+     */
+    public void setMetrics(Object metrics) {
+        this.metrics = metrics;
+    }
+
+
+    /**
+     * get 分角色自动扩缩容预留字段。缺省、null、空对象 {} 按整组策略处理；
+含任何角色条目（即使值为 null 或 {}）一律返回 400（分角色自动扩缩容尚未开放）
+
+     *
+     * @return
+     */
+    public Object getRoles() {
+        return roles;
+    }
+
+    /**
+     * set 分角色自动扩缩容预留字段。缺省、null、空对象 {} 按整组策略处理；
+含任何角色条目（即使值为 null 或 {}）一律返回 400（分角色自动扩缩容尚未开放）
+
+     *
+     * @param roles
+     */
+    public void setRoles(Object roles) {
+        this.roles = roles;
+    }
+
+
+    /**
+     * get basic 模式下 CPU 使用率阈值（%，基于 Limits），0 表示关闭
      *
      * @return
      */
@@ -170,7 +407,7 @@ public class AutoScale  implements java.io.Serializable {
     }
 
     /**
-     * set CPU使用率阈值（%，基于Limits）
+     * set basic 模式下 CPU 使用率阈值（%，基于 Limits），0 表示关闭
      *
      * @param cpuThreshold
      */
@@ -180,7 +417,7 @@ public class AutoScale  implements java.io.Serializable {
 
 
     /**
-     * get GPU利用率阈值（%）
+     * get basic 模式下 GPU 利用率阈值（%），0 表示关闭
      *
      * @return
      */
@@ -189,7 +426,7 @@ public class AutoScale  implements java.io.Serializable {
     }
 
     /**
-     * set GPU利用率阈值（%）
+     * set basic 模式下 GPU 利用率阈值（%），0 表示关闭
      *
      * @param gpuThreshold
      */
@@ -199,7 +436,7 @@ public class AutoScale  implements java.io.Serializable {
 
 
     /**
-     * get 内存使用率阈值（%，基于Limits）
+     * get basic 模式下内存使用率阈值（%，基于 Limits），0 表示关闭
      *
      * @return
      */
@@ -208,7 +445,7 @@ public class AutoScale  implements java.io.Serializable {
     }
 
     /**
-     * set 内存使用率阈值（%，基于Limits）
+     * set basic 模式下内存使用率阈值（%，基于 Limits），0 表示关闭
      *
      * @param memoryThreshold
      */
@@ -218,7 +455,7 @@ public class AutoScale  implements java.io.Serializable {
 
 
     /**
-     * get 排队中的请求数阈值
+     * get basic 模式下排队中的请求数阈值，0 表示关闭
      *
      * @return
      */
@@ -227,7 +464,7 @@ public class AutoScale  implements java.io.Serializable {
     }
 
     /**
-     * set 排队中的请求数阈值
+     * set basic 模式下排队中的请求数阈值，0 表示关闭
      *
      * @param waitingRequestCountThreshold
      */
@@ -237,7 +474,7 @@ public class AutoScale  implements java.io.Serializable {
 
 
     /**
-     * get 首token时延阈值，单位毫秒
+     * get basic 模式下首 token 时延 P99 阈值（毫秒），0 表示关闭
      *
      * @return
      */
@@ -246,12 +483,54 @@ public class AutoScale  implements java.io.Serializable {
     }
 
     /**
-     * set 首token时延阈值，单位毫秒
+     * set basic 模式下首 token 时延 P99 阈值（毫秒），0 表示关闭
      *
      * @param timeToFirstTokenP99Threshold
      */
     public void setTimeToFirstTokenP99Threshold(Integer timeToFirstTokenP99Threshold) {
         this.timeToFirstTokenP99Threshold = timeToFirstTokenP99Threshold;
+    }
+
+
+    /**
+     * get basic 模式下 KV Cache 占用阈值（整数百分比），0 表示关闭
+     *
+     * @return
+     */
+    public Integer getTokenUsageThreshold() {
+        return tokenUsageThreshold;
+    }
+
+    /**
+     * set basic 模式下 KV Cache 占用阈值（整数百分比），0 表示关闭
+     *
+     * @param tokenUsageThreshold
+     */
+    public void setTokenUsageThreshold(Integer tokenUsageThreshold) {
+        this.tokenUsageThreshold = tokenUsageThreshold;
+    }
+
+
+    /**
+     * get basic 模式下 Decode 传输排队阈值（个），0 表示关闭；
+仅 SGLang 的 PD 分离实例可启用，否则返回 400
+
+     *
+     * @return
+     */
+    public Integer getDecodeTransferQueueThreshold() {
+        return decodeTransferQueueThreshold;
+    }
+
+    /**
+     * set basic 模式下 Decode 传输排队阈值（个），0 表示关闭；
+仅 SGLang 的 PD 分离实例可启用，否则返回 400
+
+     *
+     * @param decodeTransferQueueThreshold
+     */
+    public void setDecodeTransferQueueThreshold(Integer decodeTransferQueueThreshold) {
+        this.decodeTransferQueueThreshold = decodeTransferQueueThreshold;
     }
 
 
@@ -293,9 +572,13 @@ public class AutoScale  implements java.io.Serializable {
 
 
     /**
-     * set 缩容延迟时间（秒）
+     * set 缩容延迟时间（秒）。创建/更新时（scaleType&#x3D;auto）必须在 30-3600，否则返回 400；
+存量低于 30 的规则查询时原值返回，不会被自动修正
+
      *
-     * @param scaleDownDelay 缩容延迟时间（秒）
+     * @param scaleDownDelay 缩容延迟时间（秒）。创建/更新时（scaleType&#x3D;auto）必须在 30-3600，否则返回 400；
+存量低于 30 的规则查询时原值返回，不会被自动修正
+
      * @return AutoScale
      */
     public AutoScale scaleDownDelay(Integer scaleDownDelay) {
@@ -305,9 +588,127 @@ public class AutoScale  implements java.io.Serializable {
 
 
     /**
-     * set CPU使用率阈值（%，基于Limits）
+     * set 自动扩缩容模式，仅 scaleType&#x3D;auto 有效。缺省按 basic；
+basic 使用扁平阈值（*Threshold），advanced 使用 metrics 双阈值。
+查询时缺省值会补全返回
+
      *
-     * @param cpuThreshold CPU使用率阈值（%，基于Limits）
+     * @param mode 自动扩缩容模式，仅 scaleType&#x3D;auto 有效。缺省按 basic；
+basic 使用扁平阈值（*Threshold），advanced 使用 metrics 双阈值。
+查询时缺省值会补全返回
+
+     * @return AutoScale
+     */
+    public AutoScale mode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+
+
+    /**
+     * set advanced 扩容组合条件，仅接受大写 AND / OR，缺省 OR；
+非法值返回 400。查询 advanced 规则时缺省值会补全返回
+
+     *
+     * @param scaleUpOperator advanced 扩容组合条件，仅接受大写 AND / OR，缺省 OR；
+非法值返回 400。查询 advanced 规则时缺省值会补全返回
+
+     * @return AutoScale
+     */
+    public AutoScale scaleUpOperator(String scaleUpOperator) {
+        this.scaleUpOperator = scaleUpOperator;
+        return this;
+    }
+
+
+    /**
+     * set advanced 缩容组合条件，仅接受大写 AND / OR，缺省 AND；
+非法值返回 400。查询 advanced 规则时缺省值会补全返回
+
+     *
+     * @param scaleDownOperator advanced 缩容组合条件，仅接受大写 AND / OR，缺省 AND；
+非法值返回 400。查询 advanced 规则时缺省值会补全返回
+
+     * @return AutoScale
+     */
+    public AutoScale scaleDownOperator(String scaleDownOperator) {
+        this.scaleDownOperator = scaleDownOperator;
+        return this;
+    }
+
+
+    /**
+     * set advanced 扩容信号系数（百分比整数，必填）。如 150 表示 PromQL 输出 1.5（threshold&#x3D;1）；
+必须大于 100，且大于 scaleDownFactor。basic / cron 禁止携带。推荐值 150
+
+     *
+     * @param scaleUpFactor advanced 扩容信号系数（百分比整数，必填）。如 150 表示 PromQL 输出 1.5（threshold&#x3D;1）；
+必须大于 100，且大于 scaleDownFactor。basic / cron 禁止携带。推荐值 150
+
+     * @return AutoScale
+     */
+    public AutoScale scaleUpFactor(Integer scaleUpFactor) {
+        this.scaleUpFactor = scaleUpFactor;
+        return this;
+    }
+
+
+    /**
+     * set advanced 缩容信号系数（百分比整数，必填）。如 40 表示 PromQL 输出 0.4；
+必须在 1-99，且小于 scaleUpFactor。basic / cron 禁止携带。推荐值 40
+
+     *
+     * @param scaleDownFactor advanced 缩容信号系数（百分比整数，必填）。如 40 表示 PromQL 输出 0.4；
+必须在 1-99，且小于 scaleUpFactor。basic / cron 禁止携带。推荐值 40
+
+     * @return AutoScale
+     */
+    public AutoScale scaleDownFactor(Integer scaleDownFactor) {
+        this.scaleDownFactor = scaleDownFactor;
+        return this;
+    }
+
+
+    /**
+     * set advanced 双阈值指标，至少配置一项。key 白名单：
+cpu、gpu、memory、waitingRequestCount、timeToFirstTokenP99、tokenUsage、decodeTransferQueue。
+每项至少配置 scaleUp/scaleDown 之一，两者都配时 scaleUp 必须大于 scaleDown；
+未传与显式 0 含义不同（未传表示该方向不参与判断）
+
+     *
+     * @param metrics advanced 双阈值指标，至少配置一项。key 白名单：
+cpu、gpu、memory、waitingRequestCount、timeToFirstTokenP99、tokenUsage、decodeTransferQueue。
+每项至少配置 scaleUp/scaleDown 之一，两者都配时 scaleUp 必须大于 scaleDown；
+未传与显式 0 含义不同（未传表示该方向不参与判断）
+
+     * @return AutoScale
+     */
+    public AutoScale metrics(Object metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+
+
+    /**
+     * set 分角色自动扩缩容预留字段。缺省、null、空对象 {} 按整组策略处理；
+含任何角色条目（即使值为 null 或 {}）一律返回 400（分角色自动扩缩容尚未开放）
+
+     *
+     * @param roles 分角色自动扩缩容预留字段。缺省、null、空对象 {} 按整组策略处理；
+含任何角色条目（即使值为 null 或 {}）一律返回 400（分角色自动扩缩容尚未开放）
+
+     * @return AutoScale
+     */
+    public AutoScale roles(Object roles) {
+        this.roles = roles;
+        return this;
+    }
+
+
+    /**
+     * set basic 模式下 CPU 使用率阈值（%，基于 Limits），0 表示关闭
+     *
+     * @param cpuThreshold basic 模式下 CPU 使用率阈值（%，基于 Limits），0 表示关闭
      * @return AutoScale
      */
     public AutoScale cpuThreshold(Integer cpuThreshold) {
@@ -317,9 +718,9 @@ public class AutoScale  implements java.io.Serializable {
 
 
     /**
-     * set GPU利用率阈值（%）
+     * set basic 模式下 GPU 利用率阈值（%），0 表示关闭
      *
-     * @param gpuThreshold GPU利用率阈值（%）
+     * @param gpuThreshold basic 模式下 GPU 利用率阈值（%），0 表示关闭
      * @return AutoScale
      */
     public AutoScale gpuThreshold(Integer gpuThreshold) {
@@ -329,9 +730,9 @@ public class AutoScale  implements java.io.Serializable {
 
 
     /**
-     * set 内存使用率阈值（%，基于Limits）
+     * set basic 模式下内存使用率阈值（%，基于 Limits），0 表示关闭
      *
-     * @param memoryThreshold 内存使用率阈值（%，基于Limits）
+     * @param memoryThreshold basic 模式下内存使用率阈值（%，基于 Limits），0 表示关闭
      * @return AutoScale
      */
     public AutoScale memoryThreshold(Integer memoryThreshold) {
@@ -341,9 +742,9 @@ public class AutoScale  implements java.io.Serializable {
 
 
     /**
-     * set 排队中的请求数阈值
+     * set basic 模式下排队中的请求数阈值，0 表示关闭
      *
-     * @param waitingRequestCountThreshold 排队中的请求数阈值
+     * @param waitingRequestCountThreshold basic 模式下排队中的请求数阈值，0 表示关闭
      * @return AutoScale
      */
     public AutoScale waitingRequestCountThreshold(Integer waitingRequestCountThreshold) {
@@ -353,13 +754,41 @@ public class AutoScale  implements java.io.Serializable {
 
 
     /**
-     * set 首token时延阈值，单位毫秒
+     * set basic 模式下首 token 时延 P99 阈值（毫秒），0 表示关闭
      *
-     * @param timeToFirstTokenP99Threshold 首token时延阈值，单位毫秒
+     * @param timeToFirstTokenP99Threshold basic 模式下首 token 时延 P99 阈值（毫秒），0 表示关闭
      * @return AutoScale
      */
     public AutoScale timeToFirstTokenP99Threshold(Integer timeToFirstTokenP99Threshold) {
         this.timeToFirstTokenP99Threshold = timeToFirstTokenP99Threshold;
+        return this;
+    }
+
+
+    /**
+     * set basic 模式下 KV Cache 占用阈值（整数百分比），0 表示关闭
+     *
+     * @param tokenUsageThreshold basic 模式下 KV Cache 占用阈值（整数百分比），0 表示关闭
+     * @return AutoScale
+     */
+    public AutoScale tokenUsageThreshold(Integer tokenUsageThreshold) {
+        this.tokenUsageThreshold = tokenUsageThreshold;
+        return this;
+    }
+
+
+    /**
+     * set basic 模式下 Decode 传输排队阈值（个），0 表示关闭；
+仅 SGLang 的 PD 分离实例可启用，否则返回 400
+
+     *
+     * @param decodeTransferQueueThreshold basic 模式下 Decode 传输排队阈值（个），0 表示关闭；
+仅 SGLang 的 PD 分离实例可启用，否则返回 400
+
+     * @return AutoScale
+     */
+    public AutoScale decodeTransferQueueThreshold(Integer decodeTransferQueueThreshold) {
+        this.decodeTransferQueueThreshold = decodeTransferQueueThreshold;
         return this;
     }
 

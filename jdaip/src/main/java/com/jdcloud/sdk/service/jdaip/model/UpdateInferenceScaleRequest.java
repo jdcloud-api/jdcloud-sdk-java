@@ -29,14 +29,16 @@ import com.jdcloud.sdk.service.jdaip.model.InferenceScaleSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 更新指定推理服务的自动扩缩容规则配置
+ * 更新指定推理服务的自动扩缩容规则配置。请求体与创建接口相同，支持 basic / advanced 模式切换；
+advanced 使用 metrics 双阈值，basic 使用 *Threshold 扁平阈值
+
  */
 public class UpdateInferenceScaleRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 日志采集配置
+     * 自动扩缩容配置
      * Required:true
      */
     @Required
@@ -66,7 +68,7 @@ public class UpdateInferenceScaleRequest extends JdcloudRequest implements java.
 
 
     /**
-     * get 日志采集配置
+     * get 自动扩缩容配置
      *
      * @return
      */
@@ -75,7 +77,7 @@ public class UpdateInferenceScaleRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 日志采集配置
+     * set 自动扩缩容配置
      *
      * @param inferenceScaleSpec
      */
@@ -143,9 +145,9 @@ public class UpdateInferenceScaleRequest extends JdcloudRequest implements java.
 
 
     /**
-     * set 日志采集配置
+     * set 自动扩缩容配置
      *
-     * @param inferenceScaleSpec 日志采集配置
+     * @param inferenceScaleSpec 自动扩缩容配置
      * @return UpdateInferenceScaleRequest
      */
     public UpdateInferenceScaleRequest inferenceScaleSpec(InferenceScaleSpec inferenceScaleSpec) {
