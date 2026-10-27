@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.shenhaiplatform.model.EngineWorkspaceDetailResp;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 按照projectCode查询绑定的计算引擎信息以及计算引擎绑定的空间信息
+ * 按照projectCode查询绑定的计算引擎信息以及计算引擎绑定的空间信息。同一云仓项目可挂多个工作空间时仍返回单条（按绑定id最小）。
  */
 public class GetByProjectCodeResult extends JdcloudResult implements java.io.Serializable {
 

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.model.BindInstanceResponse;
 
 /**
- * 计算引擎绑定云仓或JMR实例
+ * 计算引擎绑定云仓或JMR实例。JCW：同一工作空间内同一云仓项目只能绑定一次（不可同时挂到开发与生产），允许同一项目绑定到多个工作空间。JMR：同一集群可绑定到多个工作空间，同一工作空间内可绑定多个引擎；同一引擎下同一集群可按env分别绑定dev/prod，并配置不同默认访问身份。
  */
 class BindInstanceExecutor extends JdcloudExecutor {
 

@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 按照projectCode查询绑定的计算引擎信息以及计算引擎绑定的空间信息
+ * 按照projectCode查询绑定的计算引擎信息以及计算引擎绑定的空间信息。同一云仓项目可挂多个工作空间时仍返回单条（按绑定id最小）。
  */
 public class GetByProjectCodeRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -45,9 +45,14 @@ public class GetByProjectCodeRequest extends JdcloudRequest implements java.io.S
     private String workspaceCode;
 
     /**
-     * projectCode
+     * 云仓项目code / JMR实例code
      */
     private String projectCode;
+
+    /**
+     * 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
+     */
+    private String instanceCode;
 
     /**
      * resourceCode
@@ -55,7 +60,7 @@ public class GetByProjectCodeRequest extends JdcloudRequest implements java.io.S
     private String resourceCode;
 
     /**
-     * 存算引擎实例编码
+     * 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
      */
     private String engineCode;
 
@@ -114,7 +119,7 @@ public class GetByProjectCodeRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get projectCode
+     * get 云仓项目code / JMR实例code
      *
      * @return
      */
@@ -123,12 +128,31 @@ public class GetByProjectCodeRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set projectCode
+     * set 云仓项目code / JMR实例code
      *
      * @param projectCode
      */
     public void setProjectCode(String projectCode) {
         this.projectCode = projectCode;
+    }
+
+
+    /**
+     * get 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
+     *
+     * @return
+     */
+    public String getInstanceCode() {
+        return instanceCode;
+    }
+
+    /**
+     * set 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
+     *
+     * @param instanceCode
+     */
+    public void setInstanceCode(String instanceCode) {
+        this.instanceCode = instanceCode;
     }
 
 
@@ -152,7 +176,7 @@ public class GetByProjectCodeRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 存算引擎实例编码
+     * get 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
      *
      * @return
      */
@@ -161,7 +185,7 @@ public class GetByProjectCodeRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 存算引擎实例编码
+     * set 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
      *
      * @param engineCode
      */
@@ -234,13 +258,25 @@ public class GetByProjectCodeRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set projectCode
+     * set 云仓项目code / JMR实例code
      *
-     * @param projectCode 
+     * @param projectCode 云仓项目code / JMR实例code
      * @return GetByProjectCodeRequest
      */
     public GetByProjectCodeRequest projectCode(String projectCode) {
         this.projectCode = projectCode;
+        return this;
+    }
+
+
+    /**
+     * set 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
+     *
+     * @param instanceCode 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
+     * @return GetByProjectCodeRequest
+     */
+    public GetByProjectCodeRequest instanceCode(String instanceCode) {
+        this.instanceCode = instanceCode;
         return this;
     }
 
@@ -258,9 +294,9 @@ public class GetByProjectCodeRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 存算引擎实例编码
+     * set 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
      *
-     * @param engineCode 存算引擎实例编码
+     * @param engineCode 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
      * @return GetByProjectCodeRequest
      */
     public GetByProjectCodeRequest engineCode(String engineCode) {

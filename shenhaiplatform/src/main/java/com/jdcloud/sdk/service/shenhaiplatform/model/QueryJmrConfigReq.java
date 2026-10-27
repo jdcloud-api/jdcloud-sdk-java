@@ -38,12 +38,17 @@ public class QueryJmrConfigReq  implements java.io.Serializable {
     private String engineCode;
 
     /**
-     * 配置类型(如 core-site, hdfs-site 等，为空返回全部)
+     * 工作空间Code(可选，管理员权限校验兜底使用，header有值时优先取header)
+     */
+    private String workspaceCode;
+
+    /**
+     * 配置类型(如 core-site, hdfs-site, openldap-proxy 等，为空返回全部)
      */
     private String configType;
 
     /**
-     * 环境类型(dev/prod)
+     * 环境类型(dev/prod)；refreshJmrConfigs/getJmrConfigs 均可选：空则覆盖全部环境、非空则只作用该环境
      */
     private String env;
 
@@ -69,7 +74,26 @@ public class QueryJmrConfigReq  implements java.io.Serializable {
 
 
     /**
-     * get 配置类型(如 core-site, hdfs-site 等，为空返回全部)
+     * get 工作空间Code(可选，管理员权限校验兜底使用，header有值时优先取header)
+     *
+     * @return
+     */
+    public String getWorkspaceCode() {
+        return workspaceCode;
+    }
+
+    /**
+     * set 工作空间Code(可选，管理员权限校验兜底使用，header有值时优先取header)
+     *
+     * @param workspaceCode
+     */
+    public void setWorkspaceCode(String workspaceCode) {
+        this.workspaceCode = workspaceCode;
+    }
+
+
+    /**
+     * get 配置类型(如 core-site, hdfs-site, openldap-proxy 等，为空返回全部)
      *
      * @return
      */
@@ -78,7 +102,7 @@ public class QueryJmrConfigReq  implements java.io.Serializable {
     }
 
     /**
-     * set 配置类型(如 core-site, hdfs-site 等，为空返回全部)
+     * set 配置类型(如 core-site, hdfs-site, openldap-proxy 等，为空返回全部)
      *
      * @param configType
      */
@@ -88,7 +112,7 @@ public class QueryJmrConfigReq  implements java.io.Serializable {
 
 
     /**
-     * get 环境类型(dev/prod)
+     * get 环境类型(dev/prod)；refreshJmrConfigs/getJmrConfigs 均可选：空则覆盖全部环境、非空则只作用该环境
      *
      * @return
      */
@@ -97,7 +121,7 @@ public class QueryJmrConfigReq  implements java.io.Serializable {
     }
 
     /**
-     * set 环境类型(dev/prod)
+     * set 环境类型(dev/prod)；refreshJmrConfigs/getJmrConfigs 均可选：空则覆盖全部环境、非空则只作用该环境
      *
      * @param env
      */
@@ -120,9 +144,21 @@ public class QueryJmrConfigReq  implements java.io.Serializable {
 
 
     /**
-     * set 配置类型(如 core-site, hdfs-site 等，为空返回全部)
+     * set 工作空间Code(可选，管理员权限校验兜底使用，header有值时优先取header)
      *
-     * @param configType 配置类型(如 core-site, hdfs-site 等，为空返回全部)
+     * @param workspaceCode 工作空间Code(可选，管理员权限校验兜底使用，header有值时优先取header)
+     * @return QueryJmrConfigReq
+     */
+    public QueryJmrConfigReq workspaceCode(String workspaceCode) {
+        this.workspaceCode = workspaceCode;
+        return this;
+    }
+
+
+    /**
+     * set 配置类型(如 core-site, hdfs-site, openldap-proxy 等，为空返回全部)
+     *
+     * @param configType 配置类型(如 core-site, hdfs-site, openldap-proxy 等，为空返回全部)
      * @return QueryJmrConfigReq
      */
     public QueryJmrConfigReq configType(String configType) {
@@ -132,9 +168,9 @@ public class QueryJmrConfigReq  implements java.io.Serializable {
 
 
     /**
-     * set 环境类型(dev/prod)
+     * set 环境类型(dev/prod)；refreshJmrConfigs/getJmrConfigs 均可选：空则覆盖全部环境、非空则只作用该环境
      *
-     * @param env 环境类型(dev/prod)
+     * @param env 环境类型(dev/prod)；refreshJmrConfigs/getJmrConfigs 均可选：空则覆盖全部环境、非空则只作用该环境
      * @return QueryJmrConfigReq
      */
     public QueryJmrConfigReq env(String env) {

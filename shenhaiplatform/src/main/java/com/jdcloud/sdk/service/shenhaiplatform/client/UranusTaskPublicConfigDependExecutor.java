@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicConfigDependResponse;
 
 /**
- * 全量更新任务的依赖信息
+ * 全量更新任务的依赖信息。写依赖校验允许 manual 周期任务作为依赖，其余跨工作空间、状态、自依赖等校验保持不变
  */
 class UranusTaskPublicConfigDependExecutor extends JdcloudExecutor {
 

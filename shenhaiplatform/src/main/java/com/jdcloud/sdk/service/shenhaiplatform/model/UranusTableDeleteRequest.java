@@ -49,6 +49,11 @@ public class UranusTableDeleteRequest extends JdcloudRequest implements java.io.
     private String env;
 
     /**
+     * 库名（JMR 引擎必传）
+     */
+    private String dbName;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -99,6 +104,25 @@ public class UranusTableDeleteRequest extends JdcloudRequest implements java.io.
      */
     public void setEnv(String env) {
         this.env = env;
+    }
+
+
+    /**
+     * get 库名（JMR 引擎必传）
+     *
+     * @return
+     */
+    public String getDbName() {
+        return dbName;
+    }
+
+    /**
+     * set 库名（JMR 引擎必传）
+     *
+     * @param dbName
+     */
+    public void setDbName(String dbName) {
+        this.dbName = dbName;
     }
 
 
@@ -161,6 +185,18 @@ public class UranusTableDeleteRequest extends JdcloudRequest implements java.io.
      */
     public UranusTableDeleteRequest env(String env) {
         this.env = env;
+        return this;
+    }
+
+
+    /**
+     * set 库名（JMR 引擎必传）
+     *
+     * @param dbName 库名（JMR 引擎必传）
+     * @return UranusTableDeleteRequest
+     */
+    public UranusTableDeleteRequest dbName(String dbName) {
+        this.dbName = dbName;
         return this;
     }
 

@@ -94,6 +94,26 @@ public class TaskParamInfoRes  implements java.io.Serializable {
      */
     private TaskAlcGeneralParam alcGeneralParams;
 
+    /**
+     * 本节点环境变量列表（LOCAL + UPSTREAM 混合，供配置页展示/编辑）
+     */
+    
+    private List<TaskEnvVar> envParams;
+    /**
+     * 合并后的最终环境变量（已解析到常量，供预览/注入）
+     */
+    private Object finalEnvParams;
+
+    /**
+     * 所属工作流参数（只读回显，不参与本节点参数落库）
+     */
+    
+    private List<TaskInheritedParamRes> flowParams;
+    /**
+     * 所属空间参数（只读回显，不参与本节点参数落库）
+     */
+    
+    private List<TaskInheritedParamRes> spaceParams;
 
 
     /**
@@ -324,6 +344,82 @@ public class TaskParamInfoRes  implements java.io.Serializable {
     }
 
 
+    /**
+    * get 本节点环境变量列表（LOCAL + UPSTREAM 混合，供配置页展示/编辑）
+    *
+    * @return
+    */
+    public List<TaskEnvVar> getEnvParams() {
+        return envParams;
+    }
+
+    /**
+    * set 本节点环境变量列表（LOCAL + UPSTREAM 混合，供配置页展示/编辑）
+    *
+    * @param envParams
+    */
+    public void setEnvParams(List<TaskEnvVar> envParams) {
+        this.envParams = envParams;
+    }
+
+
+    /**
+     * get 合并后的最终环境变量（已解析到常量，供预览/注入）
+     *
+     * @return
+     */
+    public Object getFinalEnvParams() {
+        return finalEnvParams;
+    }
+
+    /**
+     * set 合并后的最终环境变量（已解析到常量，供预览/注入）
+     *
+     * @param finalEnvParams
+     */
+    public void setFinalEnvParams(Object finalEnvParams) {
+        this.finalEnvParams = finalEnvParams;
+    }
+
+
+    /**
+    * get 所属工作流参数（只读回显，不参与本节点参数落库）
+    *
+    * @return
+    */
+    public List<TaskInheritedParamRes> getFlowParams() {
+        return flowParams;
+    }
+
+    /**
+    * set 所属工作流参数（只读回显，不参与本节点参数落库）
+    *
+    * @param flowParams
+    */
+    public void setFlowParams(List<TaskInheritedParamRes> flowParams) {
+        this.flowParams = flowParams;
+    }
+
+
+    /**
+    * get 所属空间参数（只读回显，不参与本节点参数落库）
+    *
+    * @return
+    */
+    public List<TaskInheritedParamRes> getSpaceParams() {
+        return spaceParams;
+    }
+
+    /**
+    * set 所属空间参数（只读回显，不参与本节点参数落库）
+    *
+    * @param spaceParams
+    */
+    public void setSpaceParams(List<TaskInheritedParamRes> spaceParams) {
+        this.spaceParams = spaceParams;
+    }
+
+
 
     /**
      * set 草稿 ID
@@ -469,6 +565,54 @@ public class TaskParamInfoRes  implements java.io.Serializable {
     }
 
 
+    /**
+    * set 本节点环境变量列表（LOCAL + UPSTREAM 混合，供配置页展示/编辑）
+    *
+    * @param envParams 本节点环境变量列表（LOCAL + UPSTREAM 混合，供配置页展示/编辑）
+    * @return TaskParamInfoRes
+    */
+    public TaskParamInfoRes envParams(List<TaskEnvVar> envParams) {
+        this.envParams = envParams;
+        return this;
+    }
+
+
+    /**
+     * set 合并后的最终环境变量（已解析到常量，供预览/注入）
+     *
+     * @param finalEnvParams 合并后的最终环境变量（已解析到常量，供预览/注入）
+     * @return TaskParamInfoRes
+     */
+    public TaskParamInfoRes finalEnvParams(Object finalEnvParams) {
+        this.finalEnvParams = finalEnvParams;
+        return this;
+    }
+
+
+    /**
+    * set 所属工作流参数（只读回显，不参与本节点参数落库）
+    *
+    * @param flowParams 所属工作流参数（只读回显，不参与本节点参数落库）
+    * @return TaskParamInfoRes
+    */
+    public TaskParamInfoRes flowParams(List<TaskInheritedParamRes> flowParams) {
+        this.flowParams = flowParams;
+        return this;
+    }
+
+
+    /**
+    * set 所属空间参数（只读回显，不参与本节点参数落库）
+    *
+    * @param spaceParams 所属空间参数（只读回显，不参与本节点参数落库）
+    * @return TaskParamInfoRes
+    */
+    public TaskParamInfoRes spaceParams(List<TaskInheritedParamRes> spaceParams) {
+        this.spaceParams = spaceParams;
+        return this;
+    }
+
+
 
     /**
      * add item to 输入参数列表
@@ -516,5 +660,41 @@ public class TaskParamInfoRes  implements java.io.Serializable {
             this.specialParams = new ArrayList<>();
         }
         this.specialParams.add(specialParam);
+    }
+
+    /**
+     * add item to 本节点环境变量列表（LOCAL + UPSTREAM 混合，供配置页展示/编辑）
+     *
+     * @param envParam
+     */
+    public void addEnvParam(TaskEnvVar envParam) {
+        if (this.envParams == null) {
+            this.envParams = new ArrayList<>();
+        }
+        this.envParams.add(envParam);
+    }
+
+    /**
+     * add item to 所属工作流参数（只读回显，不参与本节点参数落库）
+     *
+     * @param flowParam
+     */
+    public void addFlowParam(TaskInheritedParamRes flowParam) {
+        if (this.flowParams == null) {
+            this.flowParams = new ArrayList<>();
+        }
+        this.flowParams.add(flowParam);
+    }
+
+    /**
+     * add item to 所属空间参数（只读回显，不参与本节点参数落库）
+     *
+     * @param spaceParam
+     */
+    public void addSpaceParam(TaskInheritedParamRes spaceParam) {
+        if (this.spaceParams == null) {
+            this.spaceParams = new ArrayList<>();
+        }
+        this.spaceParams.add(spaceParam);
     }
 }

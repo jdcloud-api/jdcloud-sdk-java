@@ -63,7 +63,7 @@ public class EngineJmrConfigResp  implements java.io.Serializable {
     private Integer configVersion;
 
     /**
-     * 配置属性表
+     * 配置属性表。openldap-proxy 类型为 {&quot;userName&quot;:&quot;jmr_{companyCode}&quot;,&quot;password&quot;:&quot;明文密码&quot;}
      */
     private Object properties;
 
@@ -194,7 +194,7 @@ public class EngineJmrConfigResp  implements java.io.Serializable {
 
 
     /**
-     * get 配置属性表
+     * get 配置属性表。openldap-proxy 类型为 {&quot;userName&quot;:&quot;jmr_{companyCode}&quot;,&quot;password&quot;:&quot;明文密码&quot;}
      *
      * @return
      */
@@ -203,7 +203,7 @@ public class EngineJmrConfigResp  implements java.io.Serializable {
     }
 
     /**
-     * set 配置属性表
+     * set 配置属性表。openldap-proxy 类型为 {&quot;userName&quot;:&quot;jmr_{companyCode}&quot;,&quot;password&quot;:&quot;明文密码&quot;}
      *
      * @param properties
      */
@@ -324,9 +324,9 @@ public class EngineJmrConfigResp  implements java.io.Serializable {
 
 
     /**
-     * set 配置属性表
+     * set 配置属性表。openldap-proxy 类型为 {&quot;userName&quot;:&quot;jmr_{companyCode}&quot;,&quot;password&quot;:&quot;明文密码&quot;}
      *
-     * @param properties 配置属性表
+     * @param properties 配置属性表。openldap-proxy 类型为 {&quot;userName&quot;:&quot;jmr_{companyCode}&quot;,&quot;password&quot;:&quot;明文密码&quot;}
      * @return EngineJmrConfigResp
      */
     public EngineJmrConfigResp properties(Object properties) {

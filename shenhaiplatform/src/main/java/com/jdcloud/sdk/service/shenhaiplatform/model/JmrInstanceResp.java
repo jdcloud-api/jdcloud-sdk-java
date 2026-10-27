@@ -43,11 +43,6 @@ public class JmrInstanceResp  implements java.io.Serializable {
     private String instanceName;
 
     /**
-     * 资源组Code
-     */
-    private String resourceCode;
-
-    /**
      * 环境类型(dev/prod)
      */
     private String env;
@@ -56,6 +51,16 @@ public class JmrInstanceResp  implements java.io.Serializable {
      * 计算引擎Code
      */
     private String engineCode;
+
+    /**
+     * JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；历史数据兜底返回CLUSTER_ACCOUNT_HADOOP)
+     */
+    private String defaultAccessIdentity;
+
+    /**
+     * 该实例下的 JMR 账号映射数量（仅 defaultAccessIdentity&#x3D;TASK_OWNER_MAPPED_ACCOUNT 时前端需要显示/编辑）
+     */
+    private Integer accountMappingCount;
 
 
 
@@ -98,25 +103,6 @@ public class JmrInstanceResp  implements java.io.Serializable {
 
 
     /**
-     * get 资源组Code
-     *
-     * @return
-     */
-    public String getResourceCode() {
-        return resourceCode;
-    }
-
-    /**
-     * set 资源组Code
-     *
-     * @param resourceCode
-     */
-    public void setResourceCode(String resourceCode) {
-        this.resourceCode = resourceCode;
-    }
-
-
-    /**
      * get 环境类型(dev/prod)
      *
      * @return
@@ -154,6 +140,44 @@ public class JmrInstanceResp  implements java.io.Serializable {
     }
 
 
+    /**
+     * get JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；历史数据兜底返回CLUSTER_ACCOUNT_HADOOP)
+     *
+     * @return
+     */
+    public String getDefaultAccessIdentity() {
+        return defaultAccessIdentity;
+    }
+
+    /**
+     * set JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；历史数据兜底返回CLUSTER_ACCOUNT_HADOOP)
+     *
+     * @param defaultAccessIdentity
+     */
+    public void setDefaultAccessIdentity(String defaultAccessIdentity) {
+        this.defaultAccessIdentity = defaultAccessIdentity;
+    }
+
+
+    /**
+     * get 该实例下的 JMR 账号映射数量（仅 defaultAccessIdentity&#x3D;TASK_OWNER_MAPPED_ACCOUNT 时前端需要显示/编辑）
+     *
+     * @return
+     */
+    public Integer getAccountMappingCount() {
+        return accountMappingCount;
+    }
+
+    /**
+     * set 该实例下的 JMR 账号映射数量（仅 defaultAccessIdentity&#x3D;TASK_OWNER_MAPPED_ACCOUNT 时前端需要显示/编辑）
+     *
+     * @param accountMappingCount
+     */
+    public void setAccountMappingCount(Integer accountMappingCount) {
+        this.accountMappingCount = accountMappingCount;
+    }
+
+
 
     /**
      * set JMR实例Code
@@ -180,18 +204,6 @@ public class JmrInstanceResp  implements java.io.Serializable {
 
 
     /**
-     * set 资源组Code
-     *
-     * @param resourceCode 资源组Code
-     * @return JmrInstanceResp
-     */
-    public JmrInstanceResp resourceCode(String resourceCode) {
-        this.resourceCode = resourceCode;
-        return this;
-    }
-
-
-    /**
      * set 环境类型(dev/prod)
      *
      * @param env 环境类型(dev/prod)
@@ -211,6 +223,30 @@ public class JmrInstanceResp  implements java.io.Serializable {
      */
     public JmrInstanceResp engineCode(String engineCode) {
         this.engineCode = engineCode;
+        return this;
+    }
+
+
+    /**
+     * set JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；历史数据兜底返回CLUSTER_ACCOUNT_HADOOP)
+     *
+     * @param defaultAccessIdentity JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；历史数据兜底返回CLUSTER_ACCOUNT_HADOOP)
+     * @return JmrInstanceResp
+     */
+    public JmrInstanceResp defaultAccessIdentity(String defaultAccessIdentity) {
+        this.defaultAccessIdentity = defaultAccessIdentity;
+        return this;
+    }
+
+
+    /**
+     * set 该实例下的 JMR 账号映射数量（仅 defaultAccessIdentity&#x3D;TASK_OWNER_MAPPED_ACCOUNT 时前端需要显示/编辑）
+     *
+     * @param accountMappingCount 该实例下的 JMR 账号映射数量（仅 defaultAccessIdentity&#x3D;TASK_OWNER_MAPPED_ACCOUNT 时前端需要显示/编辑）
+     * @return JmrInstanceResp
+     */
+    public JmrInstanceResp accountMappingCount(Integer accountMappingCount) {
+        this.accountMappingCount = accountMappingCount;
         return this;
     }
 

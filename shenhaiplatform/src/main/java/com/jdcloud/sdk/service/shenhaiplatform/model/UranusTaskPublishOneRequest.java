@@ -45,7 +45,7 @@ public class UranusTaskPublishOneRequest extends JdcloudRequest implements java.
     
     private List<UranusNodePublishChildReq> ids;
     /**
-     * 发布原因
+     * 发布任务的原因
      * Required:true
      */
     @Required
@@ -87,7 +87,7 @@ public class UranusTaskPublishOneRequest extends JdcloudRequest implements java.
 
 
     /**
-     * get 发布原因
+     * get 发布任务的原因
      *
      * @return
      */
@@ -96,7 +96,7 @@ public class UranusTaskPublishOneRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 发布原因
+     * set 发布任务的原因
      *
      * @param reason
      */
@@ -157,9 +157,9 @@ public class UranusTaskPublishOneRequest extends JdcloudRequest implements java.
 
 
     /**
-     * set 发布原因
+     * set 发布任务的原因
      *
-     * @param reason 发布原因
+     * @param reason 发布任务的原因
      * @return UranusTaskPublishOneRequest
      */
     public UranusTaskPublishOneRequest reason(String reason) {

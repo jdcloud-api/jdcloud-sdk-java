@@ -43,7 +43,7 @@ public class UranusTaskNodePublishOReq  implements java.io.Serializable {
     
     private List<UranusNodePublishChildReq> ids;
     /**
-     * 发布原因
+     * 发布任务的原因
      * Required:true
      */
     @Required
@@ -71,7 +71,7 @@ public class UranusTaskNodePublishOReq  implements java.io.Serializable {
 
 
     /**
-     * get 发布原因
+     * get 发布任务的原因
      *
      * @return
      */
@@ -80,7 +80,7 @@ public class UranusTaskNodePublishOReq  implements java.io.Serializable {
     }
 
     /**
-     * set 发布原因
+     * set 发布任务的原因
      *
      * @param reason
      */
@@ -103,9 +103,9 @@ public class UranusTaskNodePublishOReq  implements java.io.Serializable {
 
 
     /**
-     * set 发布原因
+     * set 发布任务的原因
      *
-     * @param reason 发布原因
+     * @param reason 发布任务的原因
      * @return UranusTaskNodePublishOReq
      */
     public UranusTaskNodePublishOReq reason(String reason) {

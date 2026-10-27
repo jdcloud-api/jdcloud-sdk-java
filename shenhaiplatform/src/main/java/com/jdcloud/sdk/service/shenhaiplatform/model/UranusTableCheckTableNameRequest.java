@@ -47,6 +47,11 @@ public class UranusTableCheckTableNameRequest extends JdcloudRequest implements 
     private String env;
 
     /**
+     * 校验库名称
+     */
+    private String dbName;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -97,6 +102,25 @@ public class UranusTableCheckTableNameRequest extends JdcloudRequest implements 
      */
     public void setEnv(String env) {
         this.env = env;
+    }
+
+
+    /**
+     * get 校验库名称
+     *
+     * @return
+     */
+    public String getDbName() {
+        return dbName;
+    }
+
+    /**
+     * set 校验库名称
+     *
+     * @param dbName
+     */
+    public void setDbName(String dbName) {
+        this.dbName = dbName;
     }
 
 
@@ -159,6 +183,18 @@ public class UranusTableCheckTableNameRequest extends JdcloudRequest implements 
      */
     public UranusTableCheckTableNameRequest env(String env) {
         this.env = env;
+        return this;
+    }
+
+
+    /**
+     * set 校验库名称
+     *
+     * @param dbName 校验库名称
+     * @return UranusTableCheckTableNameRequest
+     */
+    public UranusTableCheckTableNameRequest dbName(String dbName) {
+        this.dbName = dbName;
         return this;
     }
 

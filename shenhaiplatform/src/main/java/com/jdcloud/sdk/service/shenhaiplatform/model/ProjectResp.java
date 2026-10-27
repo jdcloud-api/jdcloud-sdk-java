@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.shenhaiplatform.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * projectResp
@@ -62,6 +64,11 @@ public class ProjectResp  implements java.io.Serializable {
      */
     private String env;
 
+    /**
+     * 项目绑定的资源组列表(实时查云仓，计算在前/集成在后，查询失败降级空列表)
+     */
+    
+    private List<ResourceInfoItem> resourceInfos;
 
 
     /**
@@ -178,6 +185,25 @@ public class ProjectResp  implements java.io.Serializable {
     }
 
 
+    /**
+    * get 项目绑定的资源组列表(实时查云仓，计算在前/集成在后，查询失败降级空列表)
+    *
+    * @return
+    */
+    public List<ResourceInfoItem> getResourceInfos() {
+        return resourceInfos;
+    }
+
+    /**
+    * set 项目绑定的资源组列表(实时查云仓，计算在前/集成在后，查询失败降级空列表)
+    *
+    * @param resourceInfos
+    */
+    public void setResourceInfos(List<ResourceInfoItem> resourceInfos) {
+        this.resourceInfos = resourceInfos;
+    }
+
+
 
     /**
      * set projectCode
@@ -251,4 +277,28 @@ public class ProjectResp  implements java.io.Serializable {
     }
 
 
+    /**
+    * set 项目绑定的资源组列表(实时查云仓，计算在前/集成在后，查询失败降级空列表)
+    *
+    * @param resourceInfos 项目绑定的资源组列表(实时查云仓，计算在前/集成在后，查询失败降级空列表)
+    * @return ProjectResp
+    */
+    public ProjectResp resourceInfos(List<ResourceInfoItem> resourceInfos) {
+        this.resourceInfos = resourceInfos;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 项目绑定的资源组列表(实时查云仓，计算在前/集成在后，查询失败降级空列表)
+     *
+     * @param resourceInfo
+     */
+    public void addResourceInfo(ResourceInfoItem resourceInfo) {
+        if (this.resourceInfos == null) {
+            this.resourceInfos = new ArrayList<>();
+        }
+        this.resourceInfos.add(resourceInfo);
+    }
 }

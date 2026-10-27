@@ -208,6 +208,12 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobMan
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasSearchColumnLineageRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasSearchColumnLineageResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasSearchColumnLineageExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusSpaceParamCreateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusSpaceParamCreateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusSpaceParamCreateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetJmrAccountMappingsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetJmrAccountMappingsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GetJmrAccountMappingsExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskOrFlowNodeDeleteRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskOrFlowNodeDeleteResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskOrFlowNodeDeleteExecutor;
@@ -220,6 +226,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UranusUdfListFunctionExecu
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheResetJobInstStatusRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobscheResetJobInstStatusResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobscheResetJobInstStatusExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDatabasesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDatabasesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableDatabasesExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskKillRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskKillResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskKillExecutor;
@@ -271,6 +280,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobMan
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityListTxDateStatusRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityListTxDateStatusResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityListTxDateStatusExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusSpaceParamListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusSpaceParamListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusSpaceParamListExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowUpdateRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskFlowUpdateResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskFlowUpdateExecutor;
@@ -319,6 +331,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableDDLExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoHistoryListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoHistoryListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoHistoryListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusSpaceParamDeleteRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusSpaceParamDeleteResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusSpaceParamDeleteExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobSuccessCountRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleJobMonitorJobSuccessCountResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobMonitorJobSuccessCountExecutor;
@@ -364,9 +379,15 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTablePublishToPublis
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStorageTableDDLRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubStorageTableDDLResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubStorageTableDDLExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableManagedDatabasesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableManagedDatabasesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableManagedDatabasesExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoSaveRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoSaveResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoSaveExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicCatalogCreateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicCatalogCreateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicCatalogCreateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoGetTaskCodeRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoGetTaskCodeResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoGetTaskCodeExecutor;
@@ -418,6 +439,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoLockDetailEx
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobLogRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ManageHubGravityJobLogResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubGravityJobLogExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.SetEnginePrimaryRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.SetEnginePrimaryResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.SetEnginePrimaryExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasPageSearchTablePartitionsRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.JtlasPageSearchTablePartitionsResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.JtlasPageSearchTablePartitionsExecutor;
@@ -433,6 +457,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPipeCreateTableE
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetScriptInfoTypeRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GravityParticleDubboJobManagerGetScriptInfoTypeResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleDubboJobManagerGetScriptInfoTypeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicSparkJarParamInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicSparkJarParamInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicSparkJarParamInfoUpdateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPrePublishRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPrePublishResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPrePublishExecutor;
@@ -514,6 +541,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.ParamDeleteExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ParamTypesRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ParamTypesResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ParamTypesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.SaveJmrAccountMappingRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.SaveJmrAccountMappingResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.SaveJmrAccountMappingExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ParamListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.ParamListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.ParamListExecutor;
@@ -592,6 +622,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJob
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowUpdateAllCanvasRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusFlowUpdateAllCanvasResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusFlowUpdateAllCanvasExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UpdateWorkspaceEngineRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UpdateWorkspaceEngineResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UpdateWorkspaceEngineExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListImagesRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListImagesResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicListImagesExecutor;
@@ -769,6 +802,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.ManageHubClusterMetaAddExe
 import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictTaskTypesRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.RotorDictTaskTypesResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.RotorDictTaskTypesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetEngineDetailsByEngineCodeRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.GetEngineDetailsByEngineCodeResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.GetEngineDetailsByEngineCodeExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoPrePublishRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskInfoPrePublishResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoPrePublishExecutor;
@@ -883,6 +919,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskInfoDetailExecut
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetMembersRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceGetMembersResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceGetMembersExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableSelectDatabasesRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableSelectDatabasesResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableSelectDatabasesExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDatasourceParamInfoUpdateRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDatasourceParamInfoUpdateResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDatasourceParamInfoUpdateExecutor;
@@ -1000,6 +1039,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.RotorInstanceHistoriesExec
 import com.jdcloud.sdk.service.shenhaiplatform.model.StatusPercentageTodayRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.StatusPercentageTodayResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.StatusPercentageTodayExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicNameExistedRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicNameExistedResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicNameExistedExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListFlatCatalogRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListFlatCatalogResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicListFlatCatalogExecutor;
@@ -1102,6 +1144,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleOpenRerunEx
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskExportParamListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskExportParamListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskExportParamListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDependEnvParamListRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskDependEnvParamListResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskDependEnvParamListExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogExistedRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskCatalogExistedResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskCatalogExistedExecutor;
@@ -1111,6 +1156,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UranusCatalogDeleteExecuto
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPageListRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPageListResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPageListExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskEnvParamInfoUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskEnvParamInfoUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskEnvParamInfoUpdateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceStopExpireOrDeleteRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.WorkspaceStopExpireOrDeleteResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.WorkspaceStopExpireOrDeleteExecutor;
@@ -1159,6 +1207,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleJobDepGetPa
 import com.jdcloud.sdk.service.shenhaiplatform.model.GetByProjectCodeRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GetByProjectCodeResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GetByProjectCodeExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RefreshJmrConfigsRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.RefreshJmrConfigsResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.RefreshJmrConfigsExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableUnpublishedInfoRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableUnpublishedInfoResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTableUnpublishedInfoExecutor;
@@ -1168,6 +1219,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.GravityParticleParticleJob
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeCreateRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskNodeCreateResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskNodeCreateExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusSpaceParamUpdateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusSpaceParamUpdateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusSpaceParamUpdateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListResourcesRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicListResourcesResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicListResourcesExecutor;
@@ -1228,6 +1282,9 @@ import com.jdcloud.sdk.service.shenhaiplatform.client.UnbindInstanceExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GetMostFailedTimesInstancesRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.GetMostFailedTimesInstancesResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.GetMostFailedTimesInstancesExecutor;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicNodeCreateRequest;
+import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicNodeCreateResponse;
+import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicNodeCreateExecutor;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicConfigScheduleRequest;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTaskPublicConfigScheduleResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.client.UranusTaskPublicConfigScheduleExecutor;
@@ -2105,6 +2162,28 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 新建空间参数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusSpaceParamCreateResponse uranusSpaceParamCreate(UranusSpaceParamCreateRequest request) throws JdcloudSdkException {
+        return new UranusSpaceParamCreateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询 JMR 引擎下全部账号映射，可选按 clusterId/env 过滤。云账号与 JMR 系统账号一一对应，同一云账号在 (engineCode, clusterId, env) 粒度内只允许一条有效映射。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetJmrAccountMappingsResponse getJmrAccountMappings(GetJmrAccountMappingsRequest request) throws JdcloudSdkException {
+        return new GetJmrAccountMappingsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除任务节点
      *
      * @param request
@@ -2146,6 +2225,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public GravityParticleJobscheResetJobInstStatusResponse gravityParticleJobscheResetJobInstStatus(GravityParticleJobscheResetJobInstStatusRequest request) throws JdcloudSdkException {
         return new GravityParticleJobscheResetJobInstStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列出可用数据库（JCW 返回单一库名，JMR 返回集群下全部库名）。当前仅 JMR 引擎需要该接口，服务端固定按 JMR 引擎解析集群
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTableDatabasesResponse uranusTableDatabases(UranusTableDatabasesRequest request) throws JdcloudSdkException {
+        return new UranusTableDatabasesExecutor().client(this).execute(request);
     }
 
     /**
@@ -2336,6 +2426,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 查询空间参数列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusSpaceParamListResponse uranusSpaceParamList(UranusSpaceParamListRequest request) throws JdcloudSdkException {
+        return new UranusSpaceParamListExecutor().client(this).execute(request);
+    }
+
+    /**
      * 工作流更新
      *
      * @param request
@@ -2512,6 +2613,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 删除空间参数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusSpaceParamDeleteResponse uranusSpaceParamDelete(UranusSpaceParamDeleteRequest request) throws JdcloudSdkException {
+        return new UranusSpaceParamDeleteExecutor().client(this).execute(request);
+    }
+
+    /**
      * 统计成功作业状态数量
      *
      * @param request
@@ -2677,6 +2789,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 查询当前空间引擎下可查询的库列表（读管理员配置的可管理库列表）。引擎上下文（engineCode / clusterId / engineType / dbName）非空时按传入值解析，为空则回退用户选定引擎
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTableManagedDatabasesResponse uranusTableManagedDatabases(UranusTableManagedDatabasesRequest request) throws JdcloudSdkException {
+        return new UranusTableManagedDatabasesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 任务保存
      *
      * @param request
@@ -2685,6 +2808,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusTaskInfoSaveResponse uranusTaskInfoSave(UranusTaskInfoSaveRequest request) throws JdcloudSdkException {
         return new UranusTaskInfoSaveExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建任务业务目录，返回 biz_ 前缀的目录ID
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicCatalogCreateResponse uranusTaskPublicCatalogCreate(UranusTaskPublicCatalogCreateRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicCatalogCreateExecutor().client(this).execute(request);
     }
 
     /**
@@ -2875,6 +3009,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 设置工作空间下的默认计算引擎(同一工作空间默认引擎唯一)
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetEnginePrimaryResponse setEnginePrimary(SetEnginePrimaryRequest request) throws JdcloudSdkException {
+        return new SetEnginePrimaryExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询表分区
      *
      * @param request
@@ -2927,6 +3072,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public GravityParticleDubboJobManagerGetScriptInfoTypeResponse gravityParticleDubboJobManagerGetScriptInfoType(GravityParticleDubboJobManagerGetScriptInfoTypeRequest request) throws JdcloudSdkException {
         return new GravityParticleDubboJobManagerGetScriptInfoTypeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新任务的 SparkJar 参数，包括主 Jar、主类、依赖资源等
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicSparkJarParamInfoUpdateResponse uranusTaskPublicSparkJarParamInfoUpdate(UranusTaskPublicSparkJarParamInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicSparkJarParamInfoUpdateExecutor().client(this).execute(request);
     }
 
     /**
@@ -3029,7 +3185,7 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 通过计算引擎Code查询绑定的JMR引擎配置信息(支持按类型过滤)
+     * 通过计算引擎Code查询绑定的JMR引擎配置信息(支持按类型过滤)。绑定JMR时会额外落一条configType&#x3D;openldap-proxy，properties含userName与解密后的password；按configType过滤时只返回对应类型。
      *
      * @param request
      * @return
@@ -3227,6 +3383,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 全量覆盖保存 JMR 账号映射：前端传入该引擎/集群/环境粒度下全量映射对，库中存在则更新、请求新增则插入、库中多余则逻辑删除；传空列表清空。cloudAccount 原样保存（支持中文/特殊字符），systemAccount 仅允许字母数字下划线连字符且不超过64位。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SaveJmrAccountMappingResponse saveJmrAccountMapping(SaveJmrAccountMappingRequest request) throws JdcloudSdkException {
+        return new SaveJmrAccountMappingExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询指定工作空间下的参数列表及参数值
      *
      * @param request
@@ -3403,7 +3570,7 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 全量更新任务的依赖信息
+     * 全量更新任务的依赖信息。写依赖校验允许 manual 周期任务作为依赖，其余跨工作空间、状态、自依赖等校验保持不变
      *
      * @param request
      * @return
@@ -3513,6 +3680,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 编辑已绑定计算引擎的开发/生产环境配置。引擎名绑定后不可修改；类型不可在JCW/JMR间切换。JCW可改项目与追加资源组，同一工作空间内同一云仓项目不能同时作为dev/prod。JMR可改集群与默认访问身份；同一集群仍可同时作为dev/prod，且同一集群允许被多个工作空间绑定。清空某一环境则解绑该环境，不可两个环境同时为空。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateWorkspaceEngineResponse updateWorkspaceEngine(UpdateWorkspaceEngineRequest request) throws JdcloudSdkException {
+        return new UpdateWorkspaceEngineExecutor().client(this).execute(request);
+    }
+
+    /**
      * 列出所有镜像信息
      *
      * @param request
@@ -3590,7 +3768,7 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 查询表来源列表并标识默认项
+     * 查询表来源列表并标识默认项，每条带当前用户选定的引擎编码
      *
      * @param request
      * @return
@@ -4162,6 +4340,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 通过计算引擎Code查询引擎详情及绑定的JCW/JMR实例信息（含云仓资源组实时查询、JMR默认访问身份）。请求体必填engineCode，返回单个引擎及其cloudProjects/jmrInstances。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetEngineDetailsByEngineCodeResponse getEngineDetailsByEngineCode(GetEngineDetailsByEngineCodeRequest request) throws JdcloudSdkException {
+        return new GetEngineDetailsByEngineCodeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 任务预发布
      *
      * @param request
@@ -4577,6 +4766,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public WorkspaceGetMembersResponse workspaceGetMembers(WorkspaceGetMembersRequest request) throws JdcloudSdkException {
         return new WorkspaceGetMembersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 覆盖式设置 JMR 引擎可管理库列表（仅空间管理员可改）
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTableSelectDatabasesResponse uranusTableSelectDatabases(UranusTableSelectDatabasesRequest request) throws JdcloudSdkException {
+        return new UranusTableSelectDatabasesExecutor().client(this).execute(request);
     }
 
     /**
@@ -5009,6 +5209,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 判断任务名称在当前工作空间是否已存在
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicNameExistedResponse uranusTaskPublicNameExisted(UranusTaskPublicNameExistedRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicNameExistedExecutor().client(this).execute(request);
+    }
+
+    /**
      * 以KV的方式将目录与ID列出来
      *
      * @param request
@@ -5064,7 +5275,7 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 前端绑定计算引擎弹窗一键完成绑定
+     * 前端绑定计算引擎弹窗一键完成绑定。JCW不允许devConfig与prodConfig使用同一云仓项目（同一工作空间内项目唯一），但同一项目可以绑定到多个工作空间。JMR允许devConfig与prodConfig使用同一集群，分别指定默认访问身份，详情查询按环境返回两条实例；同一集群可绑定到多个工作空间，同一工作空间内也可绑定多个引擎。
      *
      * @param request
      * @return
@@ -5284,7 +5495,7 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 更新用户默认表来源
+     * 更新用户默认表来源（即引擎类型）与默认引擎编码，各字段非空才覆盖
      *
      * @param request
      * @return
@@ -5383,6 +5594,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 任务依赖节点的环境变量查询
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskDependEnvParamListResponse uranusTaskDependEnvParamList(UranusTaskDependEnvParamListRequest request) throws JdcloudSdkException {
+        return new UranusTaskDependEnvParamListExecutor().client(this).execute(request);
+    }
+
+    /**
      * 任务业务目录是否存在
      *
      * @param request
@@ -5413,6 +5635,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusTaskPageListResponse uranusTaskPageList(UranusTaskPageListRequest request) throws JdcloudSdkException {
         return new UranusTaskPageListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新任务的环境变量信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskEnvParamInfoUpdateResponse uranusTaskEnvParamInfoUpdate(UranusTaskEnvParamInfoUpdateRequest request) throws JdcloudSdkException {
+        return new UranusTaskEnvParamInfoUpdateExecutor().client(this).execute(request);
     }
 
     /**
@@ -5581,7 +5814,7 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 按照projectCode查询绑定的计算引擎信息以及计算引擎绑定的空间信息
+     * 按照projectCode查询绑定的计算引擎信息以及计算引擎绑定的空间信息。同一云仓项目可挂多个工作空间时仍返回单条（按绑定id最小）。
      *
      * @param request
      * @return
@@ -5589,6 +5822,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public GetByProjectCodeResponse getByProjectCode(GetByProjectCodeRequest request) throws JdcloudSdkException {
         return new GetByProjectCodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 刷新JMR集群的Hadoop配置快照：删除本地存储的该JMR集群全部Hadoop配置，重新从JMR服务拉取最新配置并插入。拉取失败不删除本地数据；删除与插入在同一事务内原子化。不触碰openldap-proxy代理用户配置。env可选，传了只刷该环境、不传则刷该引擎下所有JMR集群的全部环境。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RefreshJmrConfigsResponse refreshJmrConfigs(RefreshJmrConfigsRequest request) throws JdcloudSdkException {
+        return new RefreshJmrConfigsExecutor().client(this).execute(request);
     }
 
     /**
@@ -5622,6 +5866,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
      */
     public UranusTaskNodeCreateResponse uranusTaskNodeCreate(UranusTaskNodeCreateRequest request) throws JdcloudSdkException {
         return new UranusTaskNodeCreateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 编辑空间参数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusSpaceParamUpdateResponse uranusSpaceParamUpdate(UranusSpaceParamUpdateRequest request) throws JdcloudSdkException {
+        return new UranusSpaceParamUpdateExecutor().client(this).execute(request);
     }
 
     /**
@@ -5845,6 +6100,17 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
+     * 创建任务草稿，支持全部任务类型，owner/collaborators 由请求指定
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UranusTaskPublicNodeCreateResponse uranusTaskPublicNodeCreate(UranusTaskPublicNodeCreateRequest request) throws JdcloudSdkException {
+        return new UranusTaskPublicNodeCreateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 配置任务的调度策略，包括调度周期、优先级、重试次数等
      *
      * @param request
@@ -6065,7 +6331,7 @@ public class ShenhaiplatformClient extends JdcloudClient {
     }
 
     /**
-     * 计算引擎绑定云仓或JMR实例
+     * 计算引擎绑定云仓或JMR实例。JCW：同一工作空间内同一云仓项目只能绑定一次（不可同时挂到开发与生产），允许同一项目绑定到多个工作空间。JMR：同一集群可绑定到多个工作空间，同一工作空间内可绑定多个引擎；同一引擎下同一集群可按env分别绑定dev/prod，并配置不同默认访问身份。
      *
      * @param request
      * @return

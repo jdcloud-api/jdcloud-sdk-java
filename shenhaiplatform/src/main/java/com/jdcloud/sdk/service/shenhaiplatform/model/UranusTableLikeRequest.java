@@ -59,6 +59,23 @@ public class UranusTableLikeRequest extends JdcloudRequest implements java.io.Se
     private Integer diff;
 
     /**
+     * 引擎类型：JCW/JMR
+     * Required:true
+     */
+    @Required
+    private String engineType;
+
+    /**
+     * 引擎编码
+     */
+    private String engineCode;
+
+    /**
+     * 库名（JMR 引擎必传, 默认JCW不传）
+     */
+    private String dbName;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -151,6 +168,63 @@ public class UranusTableLikeRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
+     * get 引擎类型：JCW/JMR
+     *
+     * @return
+     */
+    public String getEngineType() {
+        return engineType;
+    }
+
+    /**
+     * set 引擎类型：JCW/JMR
+     *
+     * @param engineType
+     */
+    public void setEngineType(String engineType) {
+        this.engineType = engineType;
+    }
+
+
+    /**
+     * get 引擎编码
+     *
+     * @return
+     */
+    public String getEngineCode() {
+        return engineCode;
+    }
+
+    /**
+     * set 引擎编码
+     *
+     * @param engineCode
+     */
+    public void setEngineCode(String engineCode) {
+        this.engineCode = engineCode;
+    }
+
+
+    /**
+     * get 库名（JMR 引擎必传, 默认JCW不传）
+     *
+     * @return
+     */
+    public String getDbName() {
+        return dbName;
+    }
+
+    /**
+     * set 库名（JMR 引擎必传, 默认JCW不传）
+     *
+     * @param dbName
+     */
+    public void setDbName(String dbName) {
+        this.dbName = dbName;
+    }
+
+
+    /**
      * get 地域ID
      *
      * @return
@@ -233,6 +307,42 @@ public class UranusTableLikeRequest extends JdcloudRequest implements java.io.Se
      */
     public UranusTableLikeRequest diff(Integer diff) {
         this.diff = diff;
+        return this;
+    }
+
+
+    /**
+     * set 引擎类型：JCW/JMR
+     *
+     * @param engineType 引擎类型：JCW/JMR
+     * @return UranusTableLikeRequest
+     */
+    public UranusTableLikeRequest engineType(String engineType) {
+        this.engineType = engineType;
+        return this;
+    }
+
+
+    /**
+     * set 引擎编码
+     *
+     * @param engineCode 引擎编码
+     * @return UranusTableLikeRequest
+     */
+    public UranusTableLikeRequest engineCode(String engineCode) {
+        this.engineCode = engineCode;
+        return this;
+    }
+
+
+    /**
+     * set 库名（JMR 引擎必传, 默认JCW不传）
+     *
+     * @param dbName 库名（JMR 引擎必传, 默认JCW不传）
+     * @return UranusTableLikeRequest
+     */
+    public UranusTableLikeRequest dbName(String dbName) {
+        this.dbName = dbName;
         return this;
     }
 

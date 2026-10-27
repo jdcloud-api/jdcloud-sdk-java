@@ -50,7 +50,7 @@ public class WorkspaceEngineDetailResp  implements java.io.Serializable {
     private String engineName;
 
     /**
-     * 计算引擎类型
+     * 计算引擎类型(JCW/JMR)
      */
     private String engineType;
 
@@ -60,12 +60,17 @@ public class WorkspaceEngineDetailResp  implements java.io.Serializable {
     private String status;
 
     /**
+     * 是否默认引擎：1、是，0、否
+     */
+    private Integer primaryFlag;
+
+    /**
      * 绑定的云仓项目列表
      */
     
     private List<ProjectResp> cloudProjects;
     /**
-     * 绑定的JMR实例列表
+     * 绑定的JMR实例列表(同一集群绑定dev和prod时返回两条，env与defaultAccessIdentity分别对应环境)
      */
     
     private List<JmrInstanceResp> jmrInstances;
@@ -129,7 +134,7 @@ public class WorkspaceEngineDetailResp  implements java.io.Serializable {
 
 
     /**
-     * get 计算引擎类型
+     * get 计算引擎类型(JCW/JMR)
      *
      * @return
      */
@@ -138,7 +143,7 @@ public class WorkspaceEngineDetailResp  implements java.io.Serializable {
     }
 
     /**
-     * set 计算引擎类型
+     * set 计算引擎类型(JCW/JMR)
      *
      * @param engineType
      */
@@ -167,6 +172,25 @@ public class WorkspaceEngineDetailResp  implements java.io.Serializable {
 
 
     /**
+     * get 是否默认引擎：1、是，0、否
+     *
+     * @return
+     */
+    public Integer getPrimaryFlag() {
+        return primaryFlag;
+    }
+
+    /**
+     * set 是否默认引擎：1、是，0、否
+     *
+     * @param primaryFlag
+     */
+    public void setPrimaryFlag(Integer primaryFlag) {
+        this.primaryFlag = primaryFlag;
+    }
+
+
+    /**
     * get 绑定的云仓项目列表
     *
     * @return
@@ -186,7 +210,7 @@ public class WorkspaceEngineDetailResp  implements java.io.Serializable {
 
 
     /**
-    * get 绑定的JMR实例列表
+    * get 绑定的JMR实例列表(同一集群绑定dev和prod时返回两条，env与defaultAccessIdentity分别对应环境)
     *
     * @return
     */
@@ -195,7 +219,7 @@ public class WorkspaceEngineDetailResp  implements java.io.Serializable {
     }
 
     /**
-    * set 绑定的JMR实例列表
+    * set 绑定的JMR实例列表(同一集群绑定dev和prod时返回两条，env与defaultAccessIdentity分别对应环境)
     *
     * @param jmrInstances
     */
@@ -242,9 +266,9 @@ public class WorkspaceEngineDetailResp  implements java.io.Serializable {
 
 
     /**
-     * set 计算引擎类型
+     * set 计算引擎类型(JCW/JMR)
      *
-     * @param engineType 计算引擎类型
+     * @param engineType 计算引擎类型(JCW/JMR)
      * @return WorkspaceEngineDetailResp
      */
     public WorkspaceEngineDetailResp engineType(String engineType) {
@@ -266,6 +290,18 @@ public class WorkspaceEngineDetailResp  implements java.io.Serializable {
 
 
     /**
+     * set 是否默认引擎：1、是，0、否
+     *
+     * @param primaryFlag 是否默认引擎：1、是，0、否
+     * @return WorkspaceEngineDetailResp
+     */
+    public WorkspaceEngineDetailResp primaryFlag(Integer primaryFlag) {
+        this.primaryFlag = primaryFlag;
+        return this;
+    }
+
+
+    /**
     * set 绑定的云仓项目列表
     *
     * @param cloudProjects 绑定的云仓项目列表
@@ -278,9 +314,9 @@ public class WorkspaceEngineDetailResp  implements java.io.Serializable {
 
 
     /**
-    * set 绑定的JMR实例列表
+    * set 绑定的JMR实例列表(同一集群绑定dev和prod时返回两条，env与defaultAccessIdentity分别对应环境)
     *
-    * @param jmrInstances 绑定的JMR实例列表
+    * @param jmrInstances 绑定的JMR实例列表(同一集群绑定dev和prod时返回两条，env与defaultAccessIdentity分别对应环境)
     * @return WorkspaceEngineDetailResp
     */
     public WorkspaceEngineDetailResp jmrInstances(List<JmrInstanceResp> jmrInstances) {
@@ -303,7 +339,7 @@ public class WorkspaceEngineDetailResp  implements java.io.Serializable {
     }
 
     /**
-     * add item to 绑定的JMR实例列表
+     * add item to 绑定的JMR实例列表(同一集群绑定dev和prod时返回两条，env与defaultAccessIdentity分别对应环境)
      *
      * @param jmrInstance
      */

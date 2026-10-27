@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.shenhaiplatform.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询表来源列表并标识默认项
+ * 查询表来源列表并标识默认项，每条带当前用户选定的引擎编码
  */
 public class UranusTableSourcesResponse extends JdcloudResponse<UranusTableSourcesResult> implements java.io.Serializable {
 

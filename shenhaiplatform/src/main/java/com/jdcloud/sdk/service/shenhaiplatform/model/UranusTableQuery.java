@@ -40,6 +40,11 @@ public class UranusTableQuery  implements java.io.Serializable {
     private String id;
 
     /**
+     * 库名（JMR 引擎表返回所属库名）
+     */
+    private String dbName;
+
+    /**
      * 表英文名称
      */
     private String tableEnName;
@@ -117,6 +122,25 @@ public class UranusTableQuery  implements java.io.Serializable {
      */
     public void setId(String id) {
         this.id = id;
+    }
+
+
+    /**
+     * get 库名（JMR 引擎表返回所属库名）
+     *
+     * @return
+     */
+    public String getDbName() {
+        return dbName;
+    }
+
+    /**
+     * set 库名（JMR 引擎表返回所属库名）
+     *
+     * @param dbName
+     */
+    public void setDbName(String dbName) {
+        this.dbName = dbName;
     }
 
 
@@ -357,6 +381,18 @@ public class UranusTableQuery  implements java.io.Serializable {
      */
     public UranusTableQuery id(String id) {
         this.id = id;
+        return this;
+    }
+
+
+    /**
+     * set 库名（JMR 引擎表返回所属库名）
+     *
+     * @param dbName 库名（JMR 引擎表返回所属库名）
+     * @return UranusTableQuery
+     */
+    public UranusTableQuery dbName(String dbName) {
+        this.dbName = dbName;
         return this;
     }
 

@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.shenhaiplatform.model.TableSourceVo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询表来源列表并标识默认项
+ * 查询表来源列表并标识默认项，每条带当前用户选定的引擎编码
  */
 public class UranusTableSourcesResult extends JdcloudResult implements java.io.Serializable {
 

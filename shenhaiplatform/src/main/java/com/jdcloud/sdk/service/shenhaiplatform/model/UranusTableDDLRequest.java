@@ -47,6 +47,11 @@ public class UranusTableDDLRequest extends JdcloudRequest implements java.io.Ser
     private String env;
 
     /**
+     * 库名（JMR 引擎必传）
+     */
+    private String dbName;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -97,6 +102,25 @@ public class UranusTableDDLRequest extends JdcloudRequest implements java.io.Ser
      */
     public void setEnv(String env) {
         this.env = env;
+    }
+
+
+    /**
+     * get 库名（JMR 引擎必传）
+     *
+     * @return
+     */
+    public String getDbName() {
+        return dbName;
+    }
+
+    /**
+     * set 库名（JMR 引擎必传）
+     *
+     * @param dbName
+     */
+    public void setDbName(String dbName) {
+        this.dbName = dbName;
     }
 
 
@@ -159,6 +183,18 @@ public class UranusTableDDLRequest extends JdcloudRequest implements java.io.Ser
      */
     public UranusTableDDLRequest env(String env) {
         this.env = env;
+        return this;
+    }
+
+
+    /**
+     * set 库名（JMR 引擎必传）
+     *
+     * @param dbName 库名（JMR 引擎必传）
+     * @return UranusTableDDLRequest
+     */
+    public UranusTableDDLRequest dbName(String dbName) {
+        this.dbName = dbName;
         return this;
     }
 

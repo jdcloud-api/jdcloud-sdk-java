@@ -57,6 +57,11 @@ public class TableSourceVo  implements java.io.Serializable {
      */
     private Boolean isDefault;
 
+    /**
+     * 当前用户在此空间选定的引擎编码，与 isDefault 无关，每条来源均返回
+     */
+    private String engineCode;
+
 
 
     /**
@@ -154,6 +159,25 @@ public class TableSourceVo  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 当前用户在此空间选定的引擎编码，与 isDefault 无关，每条来源均返回
+     *
+     * @return
+     */
+    public String getEngineCode() {
+        return engineCode;
+    }
+
+    /**
+     * set 当前用户在此空间选定的引擎编码，与 isDefault 无关，每条来源均返回
+     *
+     * @param engineCode
+     */
+    public void setEngineCode(String engineCode) {
+        this.engineCode = engineCode;
+    }
+
+
 
     /**
      * set 表来源ID
@@ -211,6 +235,18 @@ public class TableSourceVo  implements java.io.Serializable {
      */
     public TableSourceVo isDefault(Boolean isDefault) {
         this.isDefault = isDefault;
+        return this;
+    }
+
+
+    /**
+     * set 当前用户在此空间选定的引擎编码，与 isDefault 无关，每条来源均返回
+     *
+     * @param engineCode 当前用户在此空间选定的引擎编码，与 isDefault 无关，每条来源均返回
+     * @return TableSourceVo
+     */
+    public TableSourceVo engineCode(String engineCode) {
+        this.engineCode = engineCode;
         return this;
     }
 
