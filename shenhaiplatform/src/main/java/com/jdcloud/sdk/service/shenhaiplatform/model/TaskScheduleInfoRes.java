@@ -88,6 +88,11 @@ public class TaskScheduleInfoRes  implements java.io.Serializable {
     private String resourceGroup;
 
     /**
+     * 执行引擎编码（任务绑定的计算引擎实例Code）
+     */
+    private String engineCode;
+
+    /**
      * 跨周期依赖类型，目前只支持SELF
      */
     private String crossCycleDependType;
@@ -309,6 +314,25 @@ public class TaskScheduleInfoRes  implements java.io.Serializable {
 
 
     /**
+     * get 执行引擎编码（任务绑定的计算引擎实例Code）
+     *
+     * @return
+     */
+    public String getEngineCode() {
+        return engineCode;
+    }
+
+    /**
+     * set 执行引擎编码（任务绑定的计算引擎实例Code）
+     *
+     * @param engineCode
+     */
+    public void setEngineCode(String engineCode) {
+        this.engineCode = engineCode;
+    }
+
+
+    /**
      * get 跨周期依赖类型，目前只支持SELF
      *
      * @return
@@ -475,6 +499,18 @@ public class TaskScheduleInfoRes  implements java.io.Serializable {
      */
     public TaskScheduleInfoRes resourceGroup(String resourceGroup) {
         this.resourceGroup = resourceGroup;
+        return this;
+    }
+
+
+    /**
+     * set 执行引擎编码（任务绑定的计算引擎实例Code）
+     *
+     * @param engineCode 执行引擎编码（任务绑定的计算引擎实例Code）
+     * @return TaskScheduleInfoRes
+     */
+    public TaskScheduleInfoRes engineCode(String engineCode) {
+        this.engineCode = engineCode;
         return this;
     }
 

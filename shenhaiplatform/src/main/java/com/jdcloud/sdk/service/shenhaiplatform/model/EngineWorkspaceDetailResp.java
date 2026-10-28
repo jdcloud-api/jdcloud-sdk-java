@@ -43,6 +43,11 @@ public class EngineWorkspaceDetailResp  implements java.io.Serializable {
     private String instanceType;
 
     /**
+     * JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；仅JMR实例有值，历史数据兜底返回CLUSTER_ACCOUNT_HADOOP，JCW实例为null)
+     */
+    private String defaultAccessIdentity;
+
+    /**
      * 计算引擎Code
      */
     private String engineCode;
@@ -124,6 +129,25 @@ public class EngineWorkspaceDetailResp  implements java.io.Serializable {
      */
     public void setInstanceType(String instanceType) {
         this.instanceType = instanceType;
+    }
+
+
+    /**
+     * get JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；仅JMR实例有值，历史数据兜底返回CLUSTER_ACCOUNT_HADOOP，JCW实例为null)
+     *
+     * @return
+     */
+    public String getDefaultAccessIdentity() {
+        return defaultAccessIdentity;
+    }
+
+    /**
+     * set JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；仅JMR实例有值，历史数据兜底返回CLUSTER_ACCOUNT_HADOOP，JCW实例为null)
+     *
+     * @param defaultAccessIdentity
+     */
+    public void setDefaultAccessIdentity(String defaultAccessIdentity) {
+        this.defaultAccessIdentity = defaultAccessIdentity;
     }
 
 
@@ -319,6 +343,18 @@ public class EngineWorkspaceDetailResp  implements java.io.Serializable {
      */
     public EngineWorkspaceDetailResp instanceType(String instanceType) {
         this.instanceType = instanceType;
+        return this;
+    }
+
+
+    /**
+     * set JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；仅JMR实例有值，历史数据兜底返回CLUSTER_ACCOUNT_HADOOP，JCW实例为null)
+     *
+     * @param defaultAccessIdentity JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；仅JMR实例有值，历史数据兜底返回CLUSTER_ACCOUNT_HADOOP，JCW实例为null)
+     * @return EngineWorkspaceDetailResp
+     */
+    public EngineWorkspaceDetailResp defaultAccessIdentity(String defaultAccessIdentity) {
+        this.defaultAccessIdentity = defaultAccessIdentity;
         return this;
     }
 

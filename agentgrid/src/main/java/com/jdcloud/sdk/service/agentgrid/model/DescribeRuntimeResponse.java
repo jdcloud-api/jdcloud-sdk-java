@@ -32,6 +32,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 ## 接口说明
 - 不传 &#x60;version&#x60; 时，返回 Runtime 当前生效版本的信息。
 - 返回结果中的顶层 &#x60;state&#x60; 表示 Runtime 当前整体状态；&#x60;versionView.state&#x60; 表示指定版本或当前生效版本的状态。
+- 返回结果包含 Runtime 的用户标签、资源组 ID 和本次查询版本的资源配置。
 
  */
 public class DescribeRuntimeResponse extends JdcloudResponse<DescribeRuntimeResult> implements java.io.Serializable {

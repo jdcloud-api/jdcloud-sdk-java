@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.shenhaiplatform.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * taskRunParam
@@ -42,6 +44,11 @@ public class TaskRunParam  implements java.io.Serializable {
      */
     private Integer parallelism;
 
+    /**
+     * JMR运行参数（仅 JMR 任务类型生效）
+     */
+    
+    private List<TaskBaseParam> jmrRunParams;
 
 
     /**
@@ -82,6 +89,25 @@ public class TaskRunParam  implements java.io.Serializable {
     }
 
 
+    /**
+    * get JMR运行参数（仅 JMR 任务类型生效）
+    *
+    * @return
+    */
+    public List<TaskBaseParam> getJmrRunParams() {
+        return jmrRunParams;
+    }
+
+    /**
+    * set JMR运行参数（仅 JMR 任务类型生效）
+    *
+    * @param jmrRunParams
+    */
+    public void setJmrRunParams(List<TaskBaseParam> jmrRunParams) {
+        this.jmrRunParams = jmrRunParams;
+    }
+
+
 
     /**
      * set CU数量
@@ -107,4 +133,28 @@ public class TaskRunParam  implements java.io.Serializable {
     }
 
 
+    /**
+    * set JMR运行参数（仅 JMR 任务类型生效）
+    *
+    * @param jmrRunParams JMR运行参数（仅 JMR 任务类型生效）
+    * @return TaskRunParam
+    */
+    public TaskRunParam jmrRunParams(List<TaskBaseParam> jmrRunParams) {
+        this.jmrRunParams = jmrRunParams;
+        return this;
+    }
+
+
+
+    /**
+     * add item to JMR运行参数（仅 JMR 任务类型生效）
+     *
+     * @param jmrRunParam
+     */
+    public void addJmrRunParam(TaskBaseParam jmrRunParam) {
+        if (this.jmrRunParams == null) {
+            this.jmrRunParams = new ArrayList<>();
+        }
+        this.jmrRunParams.add(jmrRunParam);
+    }
 }

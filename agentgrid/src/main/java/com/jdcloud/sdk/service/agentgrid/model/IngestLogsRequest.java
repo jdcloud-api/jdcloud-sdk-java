@@ -67,7 +67,8 @@ public class IngestLogsRequest extends JdcloudRequest implements java.io.Seriali
     /**
      * set Logs 数据。
      *
-     * @param body
+     * @param body Logs 数据。
+     * @return IngestLogsRequest
      */
     public IngestLogsRequest body(Object body) {
         this.body = body;

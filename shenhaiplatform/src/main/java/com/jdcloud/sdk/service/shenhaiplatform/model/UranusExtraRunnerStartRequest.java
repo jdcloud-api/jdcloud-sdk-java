@@ -52,6 +52,11 @@ public class UranusExtraRunnerStartRequest extends JdcloudRequest implements jav
     private String execEngine;
 
     /**
+     * 执行引擎编码，只支持JCW类型的引擎
+     */
+    private String engineCode;
+
+    /**
      * 脚本内容的变量参数配置
      */
     private UranusTaskParamReq args;
@@ -141,6 +146,25 @@ public class UranusExtraRunnerStartRequest extends JdcloudRequest implements jav
      */
     public void setExecEngine(String execEngine) {
         this.execEngine = execEngine;
+    }
+
+
+    /**
+     * get 执行引擎编码，只支持JCW类型的引擎
+     *
+     * @return
+     */
+    public String getEngineCode() {
+        return engineCode;
+    }
+
+    /**
+     * set 执行引擎编码，只支持JCW类型的引擎
+     *
+     * @param engineCode
+     */
+    public void setEngineCode(String engineCode) {
+        this.engineCode = engineCode;
     }
 
 
@@ -291,6 +315,18 @@ public class UranusExtraRunnerStartRequest extends JdcloudRequest implements jav
      */
     public UranusExtraRunnerStartRequest execEngine(String execEngine) {
         this.execEngine = execEngine;
+        return this;
+    }
+
+
+    /**
+     * set 执行引擎编码，只支持JCW类型的引擎
+     *
+     * @param engineCode 执行引擎编码，只支持JCW类型的引擎
+     * @return UranusExtraRunnerStartRequest
+     */
+    public UranusExtraRunnerStartRequest engineCode(String engineCode) {
+        this.engineCode = engineCode;
         return this;
     }
 

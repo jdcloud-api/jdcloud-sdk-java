@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.jdaip.model.DescribeNodeResponse;
 
 /**
- * 节点详情
+ * 节点详情。
  */
 class DescribeNodeExecutor extends JdcloudExecutor {
 

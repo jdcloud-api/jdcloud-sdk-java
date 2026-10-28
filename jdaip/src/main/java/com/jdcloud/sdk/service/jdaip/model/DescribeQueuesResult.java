@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.jdaip.model.ExternalQueue;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询队列列表
+ * 查询队列列表。
  */
 public class DescribeQueuesResult extends JdcloudResult implements java.io.Serializable {
 

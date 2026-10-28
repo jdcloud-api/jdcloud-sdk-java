@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.shenhaiplatform.model.EngineJmrConfigResp;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 通过计算引擎Code查询绑定的JMR引擎配置信息(支持按类型过滤)
+ * 通过计算引擎Code查询绑定的JMR引擎配置信息(支持按类型过滤)。绑定JMR时会额外落一条configType&#x3D;openldap-proxy，properties含userName与解密后的password；按configType过滤时只返回对应类型。
  */
 public class GetJmrConfigsResult extends JdcloudResult implements java.io.Serializable {
 

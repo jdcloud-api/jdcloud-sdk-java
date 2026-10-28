@@ -96,7 +96,8 @@ public class DescribeBrowserToolSessionsResult extends JdcloudResult implements 
     /**
     * set browserToolSessions
     *
-    * @param browserToolSessions
+    * @param browserToolSessions 
+    * @return DescribeBrowserToolSessionsResult
     */
     public DescribeBrowserToolSessionsResult browserToolSessions(List<BrowserToolSession> browserToolSessions) {
         this.browserToolSessions = browserToolSessions;
@@ -107,7 +108,8 @@ public class DescribeBrowserToolSessionsResult extends JdcloudResult implements 
     /**
      * set 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      *
-     * @param total
+     * @param total 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
+     * @return DescribeBrowserToolSessionsResult
      */
     public DescribeBrowserToolSessionsResult total(Integer total) {
         this.total = total;

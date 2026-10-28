@@ -1,9 +1,12 @@
 # 更新历史 #
 
-API版本：1.0.11
+API版本：1.0.14
 
 | 发布时间       | 版本号   | 更新           | 说明                                   |
 |------------|-------|--------------|--------------------------------------|
+| 2026-10-21 | 1.0.14 | 新增在线服务版本列表接口 | * 新增 describeServiceVersions 产品侧接口，支持按 `ownerUserPin` 精确过滤服务所有者，并在服务权限过滤后返回稳定分页的服务版本列表 |
+| 2026-10-20 | 1.0.13 | advanced 扩缩信号系数可配 | * `autoScale` 新增 `scaleUpFactor` / `scaleDownFactor`（百分比整数，如 150/40；advanced 必填；服务端换算为 1.5/0.4 写入 HPA formula） |
+| 2026-10-15 | 1.0.12 | 在线服务自动扩缩容支持双阈值 | * createInferenceScale / updateInferenceScale 的 `autoScale` 新增 `mode`、`scaleUpOperator`、`scaleDownOperator`、`metrics`（ScaleMetric 双阈值）、`roles`（预留）、`tokenUsageThreshold`、`decodeTransferQueueThreshold`；`scaleDownDelay` 创建/更新下限调整为 30；describeInferenceScale 读回时补全 mode / operator 缺省值 |
 | 2026-10-13 | 1.0.11 | 训练任务支持科技数据集 | * CreateJob 新增 `techDatasets` 创建参数；DescribeJob 新增包含 `storage` 的 `techDatasets` 挂载信息，固定使用 OSS 并只读挂载 |
 | 2026-10-08 | 1.0.10 | Notebook支持科技数据集 | * CreateNotebook、UpdateResourceProperties 的 `techDatasets` 由服务端查询存储信息；DescribeNotebook 固定返回 `storageType=oss`、只读且不暴露存储地址 |
 | 2026-09-20 | 1.0.9 | 新增批量训练任务契约 | * 训练任务新增 `batch` 类型、`minAvailable`、`partial-success`、副本统计及实例尝试字段 |
@@ -17,3 +20,4 @@ API版本：1.0.11
 | 2026-08-31 | 1.0.7 | 在线服务支持智能路由与专属网关 | * 新增 serviceType、smartRouterConfig、EPP 规格及专属网关地址字段 |
 | 2026-08-31 | 1.0.8 | 对外发布启动、停止节点接口 | * 对外发布启动、停止节点接口 |
 | 2026-10-15 | 1.0.9 | 对外发布队列相关接口 | * 对外发布队列相关接口 |
+| 2026-10-27 | 1.0.10 | 对外发布OSS的列表接口 | * 对外发布OSS的列表接口 |

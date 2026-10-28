@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.agentgrid.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 镜像运行信息视图
@@ -36,6 +38,21 @@ public class ImageView  implements java.io.Serializable {
      * 镜像地址
      */
     private String imageUrl;
+
+    /**
+     * 当前版本覆盖镜像 ENTRYPOINT 的启动入口；未设置时不返回。
+     */
+    
+    private List<String> command;
+    /**
+     * 当前版本覆盖镜像 CMD 的启动参数；未设置时不返回。
+     */
+    
+    private List<String> args;
+    /**
+     * 当前版本声明的服务端口；未设置时不返回，并使用协议默认端口。
+     */
+    private Integer port;
 
 
 
@@ -58,11 +75,69 @@ public class ImageView  implements java.io.Serializable {
     }
 
 
+    /**
+    * get 当前版本覆盖镜像 ENTRYPOINT 的启动入口；未设置时不返回。
+    *
+    * @return
+    */
+    public List<String> getCommand() {
+        return command;
+    }
+
+    /**
+    * set 当前版本覆盖镜像 ENTRYPOINT 的启动入口；未设置时不返回。
+    *
+    * @param command
+    */
+    public void setCommand(List<String> command) {
+        this.command = command;
+    }
+
+
+    /**
+    * get 当前版本覆盖镜像 CMD 的启动参数；未设置时不返回。
+    *
+    * @return
+    */
+    public List<String> getArgs() {
+        return args;
+    }
+
+    /**
+    * set 当前版本覆盖镜像 CMD 的启动参数；未设置时不返回。
+    *
+    * @param args
+    */
+    public void setArgs(List<String> args) {
+        this.args = args;
+    }
+
+
+    /**
+     * get 当前版本声明的服务端口；未设置时不返回，并使用协议默认端口。
+     *
+     * @return
+     */
+    public Integer getPort() {
+        return port;
+    }
+
+    /**
+     * set 当前版本声明的服务端口；未设置时不返回，并使用协议默认端口。
+     *
+     * @param port
+     */
+    public void setPort(Integer port) {
+        this.port = port;
+    }
+
+
 
     /**
      * set 镜像地址
      *
-     * @param imageUrl
+     * @param imageUrl 镜像地址
+     * @return ImageView
      */
     public ImageView imageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
@@ -70,4 +145,64 @@ public class ImageView  implements java.io.Serializable {
     }
 
 
+    /**
+    * set 当前版本覆盖镜像 ENTRYPOINT 的启动入口；未设置时不返回。
+    *
+    * @param command 当前版本覆盖镜像 ENTRYPOINT 的启动入口；未设置时不返回。
+    * @return ImageView
+    */
+    public ImageView command(List<String> command) {
+        this.command = command;
+        return this;
+    }
+
+
+    /**
+    * set 当前版本覆盖镜像 CMD 的启动参数；未设置时不返回。
+    *
+    * @param args 当前版本覆盖镜像 CMD 的启动参数；未设置时不返回。
+    * @return ImageView
+    */
+    public ImageView args(List<String> args) {
+        this.args = args;
+        return this;
+    }
+
+
+    /**
+     * set 当前版本声明的服务端口；未设置时不返回，并使用协议默认端口。
+     *
+     * @param port 当前版本声明的服务端口；未设置时不返回，并使用协议默认端口。
+     * @return ImageView
+     */
+    public ImageView port(Integer port) {
+        this.port = port;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 当前版本覆盖镜像 ENTRYPOINT 的启动入口；未设置时不返回。
+     *
+     * @param command
+     */
+    public void addCommand(String command) {
+        if (this.command == null) {
+            this.command = new ArrayList<>();
+        }
+        this.command.add(command);
+    }
+
+    /**
+     * add item to 当前版本覆盖镜像 CMD 的启动参数；未设置时不返回。
+     *
+     * @param arg
+     */
+    public void addArg(String arg) {
+        if (this.args == null) {
+            this.args = new ArrayList<>();
+        }
+        this.args.add(arg);
+    }
 }

@@ -96,7 +96,8 @@ public class DescribeCodeInterpreterSessionsResult extends JdcloudResult impleme
     /**
      * set session 总数量。
      *
-     * @param total
+     * @param total session 总数量。
+     * @return DescribeCodeInterpreterSessionsResult
      */
     public DescribeCodeInterpreterSessionsResult total(Integer total) {
         this.total = total;
@@ -107,7 +108,8 @@ public class DescribeCodeInterpreterSessionsResult extends JdcloudResult impleme
     /**
     * set codeInterpreterSessions
     *
-    * @param codeInterpreterSessions
+    * @param codeInterpreterSessions 
+    * @return DescribeCodeInterpreterSessionsResult
     */
     public DescribeCodeInterpreterSessionsResult codeInterpreterSessions(List<CodeInterpreterSession> codeInterpreterSessions) {
         this.codeInterpreterSessions = codeInterpreterSessions;

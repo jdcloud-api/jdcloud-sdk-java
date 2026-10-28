@@ -43,6 +43,11 @@ public class TechDatasetResultForJob  implements java.io.Serializable {
     private String datasetId;
 
     /**
+     * 科技数据集名字。
+     */
+    private String datasetName;
+
+    /**
      * 科技数据集版本。
      */
     private String datasetVersion;
@@ -94,6 +99,25 @@ public class TechDatasetResultForJob  implements java.io.Serializable {
      */
     public void setDatasetId(String datasetId) {
         this.datasetId = datasetId;
+    }
+
+
+    /**
+     * get 科技数据集名字。
+     *
+     * @return
+     */
+    public String getDatasetName() {
+        return datasetName;
+    }
+
+    /**
+     * set 科技数据集名字。
+     *
+     * @param datasetName
+     */
+    public void setDatasetName(String datasetName) {
+        this.datasetName = datasetName;
     }
 
 
@@ -175,6 +199,18 @@ public class TechDatasetResultForJob  implements java.io.Serializable {
      */
     public TechDatasetResultForJob datasetId(String datasetId) {
         this.datasetId = datasetId;
+        return this;
+    }
+
+
+    /**
+     * set 科技数据集名字。
+     *
+     * @param datasetName 科技数据集名字。
+     * @return TechDatasetResultForJob
+     */
+    public TechDatasetResultForJob datasetName(String datasetName) {
+        this.datasetName = datasetName;
         return this;
     }
 

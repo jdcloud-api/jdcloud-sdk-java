@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.agentgrid.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.agentgrid.model.Filter;
+import com.jdcloud.sdk.service.agentgrid.model.TagFilter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -35,6 +36,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 ## 接口说明
 - 支持按 Browser Tool ID 批量查询。
+- 支持按用户标签和资源组 ID 过滤，返回结果包含标签、资源组 ID 和资源配置。
 
  */
 public class DescribeBrowserToolsRequest extends JdcloudRequest implements java.io.Serializable {
@@ -59,6 +61,16 @@ public class DescribeBrowserToolsRequest extends JdcloudRequest implements java.
      */
     
     private List<Filter> filters;
+    /**
+     * 按 Browser Tool 用户标签过滤。
+     */
+    
+    private List<TagFilter> tags;
+    /**
+     * 按 Browser Tool 所属资源组 ID 过滤。
+     */
+    
+    private List<String> resourceGroupIds;
     /**
      * Region ID
      * Required:true
@@ -132,6 +144,44 @@ public class DescribeBrowserToolsRequest extends JdcloudRequest implements java.
 
 
     /**
+    * get 按 Browser Tool 用户标签过滤。
+    *
+    * @return
+    */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 按 Browser Tool 用户标签过滤。
+    *
+    * @param tags
+    */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+    * get 按 Browser Tool 所属资源组 ID 过滤。
+    *
+    * @return
+    */
+    public List<String> getResourceGroupIds() {
+        return resourceGroupIds;
+    }
+
+    /**
+    * set 按 Browser Tool 所属资源组 ID 过滤。
+    *
+    * @param resourceGroupIds
+    */
+    public void setResourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+    }
+
+
+    /**
      * get Region ID
      *
      * @return
@@ -154,7 +204,8 @@ public class DescribeBrowserToolsRequest extends JdcloudRequest implements java.
     /**
      * set 每页返回的数据条数。取值范围 10～100，默认值为 10。
      *
-     * @param pageSize
+     * @param pageSize 每页返回的数据条数。取值范围 10～100，默认值为 10。
+     * @return DescribeBrowserToolsRequest
      */
     public DescribeBrowserToolsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -165,7 +216,8 @@ public class DescribeBrowserToolsRequest extends JdcloudRequest implements java.
     /**
      * set 页码。默认值为 1。
      *
-     * @param pageNumber
+     * @param pageNumber 页码。默认值为 1。
+     * @return DescribeBrowserToolsRequest
      */
     public DescribeBrowserToolsRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -179,7 +231,11 @@ public class DescribeBrowserToolsRequest extends JdcloudRequest implements java.
 - name：按 Browser Tool 名称模糊匹配，仅支持单个值。
 
     *
-    * @param filters
+    * @param filters 过滤条件。支持的键如下：
+- browserToolId：按 Browser Tool ID 精确匹配，支持多个值。
+- name：按 Browser Tool 名称模糊匹配，仅支持单个值。
+
+    * @return DescribeBrowserToolsRequest
     */
     public DescribeBrowserToolsRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -188,9 +244,34 @@ public class DescribeBrowserToolsRequest extends JdcloudRequest implements java.
 
 
     /**
+    * set 按 Browser Tool 用户标签过滤。
+    *
+    * @param tags 按 Browser Tool 用户标签过滤。
+    * @return DescribeBrowserToolsRequest
+    */
+    public DescribeBrowserToolsRequest tags(List<TagFilter> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+    * set 按 Browser Tool 所属资源组 ID 过滤。
+    *
+    * @param resourceGroupIds 按 Browser Tool 所属资源组 ID 过滤。
+    * @return DescribeBrowserToolsRequest
+    */
+    public DescribeBrowserToolsRequest resourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+        return this;
+    }
+
+
+    /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribeBrowserToolsRequest
      */
     public DescribeBrowserToolsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -212,5 +293,29 @@ public class DescribeBrowserToolsRequest extends JdcloudRequest implements java.
             this.filters = new ArrayList<>();
         }
         this.filters.add(filter);
+    }
+
+    /**
+     * add item to 按 Browser Tool 用户标签过滤。
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
+
+    /**
+     * add item to 按 Browser Tool 所属资源组 ID 过滤。
+     *
+     * @param resourceGroupId
+     */
+    public void addResourceGroupId(String resourceGroupId) {
+        if (this.resourceGroupIds == null) {
+            this.resourceGroupIds = new ArrayList<>();
+        }
+        this.resourceGroupIds.add(resourceGroupId);
     }
 }

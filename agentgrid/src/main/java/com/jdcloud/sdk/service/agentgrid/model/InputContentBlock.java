@@ -113,7 +113,8 @@ public class InputContentBlock  implements java.io.Serializable {
     /**
      * set 输入内容路径，长度范围0～100000000
      *
-     * @param path
+     * @param path 输入内容路径，长度范围0～100000000
+     * @return InputContentBlock
      */
     public InputContentBlock path(String path) {
         this.path = path;
@@ -124,7 +125,8 @@ public class InputContentBlock  implements java.io.Serializable {
     /**
      * set Base64 编码的二进制内容，长度范围0～100000000
      *
-     * @param blob
+     * @param blob Base64 编码的二进制内容，长度范围0～100000000
+     * @return InputContentBlock
      */
     public InputContentBlock blob(String blob) {
         this.blob = blob;
@@ -135,7 +137,8 @@ public class InputContentBlock  implements java.io.Serializable {
     /**
      * set 文本输入内容，长度范围0～100000000
      *
-     * @param text
+     * @param text 文本输入内容，长度范围0～100000000
+     * @return InputContentBlock
      */
     public InputContentBlock text(String text) {
         this.text = text;

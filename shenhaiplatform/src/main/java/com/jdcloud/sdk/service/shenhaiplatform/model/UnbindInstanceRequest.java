@@ -35,18 +35,34 @@ public class UnbindInstanceRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * 引擎 Code
-     * Required:true
+     * id
      */
-    @Required
-    private String engineCode;
+    private Integer id;
 
     /**
-     * 实例 Code
-     * Required:true
+     * workspaceCode
      */
-    @Required
+    private String workspaceCode;
+
+    /**
+     * 云仓项目code / JMR实例code
+     */
+    private String projectCode;
+
+    /**
+     * 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
+     */
     private String instanceCode;
+
+    /**
+     * resourceCode
+     */
+    private String resourceCode;
+
+    /**
+     * 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
+     */
+    private String engineCode;
 
     /**
      * 地域ID
@@ -65,26 +81,64 @@ public class UnbindInstanceRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 引擎 Code
+     * get id
      *
      * @return
      */
-    public String getEngineCode() {
-        return engineCode;
+    public Integer getId() {
+        return id;
     }
 
     /**
-     * set 引擎 Code
+     * set id
      *
-     * @param engineCode
+     * @param id
      */
-    public void setEngineCode(String engineCode) {
-        this.engineCode = engineCode;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
 
     /**
-     * get 实例 Code
+     * get workspaceCode
+     *
+     * @return
+     */
+    public String getWorkspaceCode() {
+        return workspaceCode;
+    }
+
+    /**
+     * set workspaceCode
+     *
+     * @param workspaceCode
+     */
+    public void setWorkspaceCode(String workspaceCode) {
+        this.workspaceCode = workspaceCode;
+    }
+
+
+    /**
+     * get 云仓项目code / JMR实例code
+     *
+     * @return
+     */
+    public String getProjectCode() {
+        return projectCode;
+    }
+
+    /**
+     * set 云仓项目code / JMR实例code
+     *
+     * @param projectCode
+     */
+    public void setProjectCode(String projectCode) {
+        this.projectCode = projectCode;
+    }
+
+
+    /**
+     * get 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
      *
      * @return
      */
@@ -93,12 +147,50 @@ public class UnbindInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 实例 Code
+     * set 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
      *
      * @param instanceCode
      */
     public void setInstanceCode(String instanceCode) {
         this.instanceCode = instanceCode;
+    }
+
+
+    /**
+     * get resourceCode
+     *
+     * @return
+     */
+    public String getResourceCode() {
+        return resourceCode;
+    }
+
+    /**
+     * set resourceCode
+     *
+     * @param resourceCode
+     */
+    public void setResourceCode(String resourceCode) {
+        this.resourceCode = resourceCode;
+    }
+
+
+    /**
+     * get 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
+     *
+     * @return
+     */
+    public String getEngineCode() {
+        return engineCode;
+    }
+
+    /**
+     * set 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
+     *
+     * @param engineCode
+     */
+    public void setEngineCode(String engineCode) {
+        this.engineCode = engineCode;
     }
 
 
@@ -142,25 +234,73 @@ public class UnbindInstanceRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 引擎 Code
+     * set id
      *
-     * @param engineCode 引擎 Code
+     * @param id 
      * @return UnbindInstanceRequest
      */
-    public UnbindInstanceRequest engineCode(String engineCode) {
-        this.engineCode = engineCode;
+    public UnbindInstanceRequest id(Integer id) {
+        this.id = id;
         return this;
     }
 
 
     /**
-     * set 实例 Code
+     * set workspaceCode
      *
-     * @param instanceCode 实例 Code
+     * @param workspaceCode 
+     * @return UnbindInstanceRequest
+     */
+    public UnbindInstanceRequest workspaceCode(String workspaceCode) {
+        this.workspaceCode = workspaceCode;
+        return this;
+    }
+
+
+    /**
+     * set 云仓项目code / JMR实例code
+     *
+     * @param projectCode 云仓项目code / JMR实例code
+     * @return UnbindInstanceRequest
+     */
+    public UnbindInstanceRequest projectCode(String projectCode) {
+        this.projectCode = projectCode;
+        return this;
+    }
+
+
+    /**
+     * set 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
+     *
+     * @param instanceCode 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
      * @return UnbindInstanceRequest
      */
     public UnbindInstanceRequest instanceCode(String instanceCode) {
         this.instanceCode = instanceCode;
+        return this;
+    }
+
+
+    /**
+     * set resourceCode
+     *
+     * @param resourceCode 
+     * @return UnbindInstanceRequest
+     */
+    public UnbindInstanceRequest resourceCode(String resourceCode) {
+        this.resourceCode = resourceCode;
+        return this;
+    }
+
+
+    /**
+     * set 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
+     *
+     * @param engineCode 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
+     * @return UnbindInstanceRequest
+     */
+    public UnbindInstanceRequest engineCode(String engineCode) {
+        this.engineCode = engineCode;
         return this;
     }
 

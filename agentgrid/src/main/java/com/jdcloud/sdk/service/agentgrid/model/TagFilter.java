@@ -91,7 +91,8 @@ public class TagFilter  implements java.io.Serializable {
     /**
      * set 标签键
      *
-     * @param key
+     * @param key 标签键
+     * @return TagFilter
      */
     public TagFilter key(String key) {
         this.key = key;
@@ -102,7 +103,8 @@ public class TagFilter  implements java.io.Serializable {
     /**
     * set 标签值列表
     *
-    * @param values
+    * @param values 标签值列表
+    * @return TagFilter
     */
     public TagFilter values(List<String> values) {
         this.values = values;

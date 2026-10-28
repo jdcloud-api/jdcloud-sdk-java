@@ -35,11 +35,14 @@ public class ParamDeleteRequest extends JdcloudRequest implements java.io.Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 参数 Code
-     * Required:true
+     * 参数Code
      */
-    @Required
     private String paramCode;
+
+    /**
+     * 工作空间Code(可选，与paramList/paramBatchSave请求体字段对齐)
+     */
+    private String workspaceCode;
 
     /**
      * 地域ID
@@ -58,7 +61,7 @@ public class ParamDeleteRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get 参数 Code
+     * get 参数Code
      *
      * @return
      */
@@ -67,12 +70,31 @@ public class ParamDeleteRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 参数 Code
+     * set 参数Code
      *
      * @param paramCode
      */
     public void setParamCode(String paramCode) {
         this.paramCode = paramCode;
+    }
+
+
+    /**
+     * get 工作空间Code(可选，与paramList/paramBatchSave请求体字段对齐)
+     *
+     * @return
+     */
+    public String getWorkspaceCode() {
+        return workspaceCode;
+    }
+
+    /**
+     * set 工作空间Code(可选，与paramList/paramBatchSave请求体字段对齐)
+     *
+     * @param workspaceCode
+     */
+    public void setWorkspaceCode(String workspaceCode) {
+        this.workspaceCode = workspaceCode;
     }
 
 
@@ -116,13 +138,25 @@ public class ParamDeleteRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set 参数 Code
+     * set 参数Code
      *
-     * @param paramCode 参数 Code
+     * @param paramCode 参数Code
      * @return ParamDeleteRequest
      */
     public ParamDeleteRequest paramCode(String paramCode) {
         this.paramCode = paramCode;
+        return this;
+    }
+
+
+    /**
+     * set 工作空间Code(可选，与paramList/paramBatchSave请求体字段对齐)
+     *
+     * @param workspaceCode 工作空间Code(可选，与paramList/paramBatchSave请求体字段对齐)
+     * @return ParamDeleteRequest
+     */
+    public ParamDeleteRequest workspaceCode(String workspaceCode) {
+        this.workspaceCode = workspaceCode;
         return this;
     }
 

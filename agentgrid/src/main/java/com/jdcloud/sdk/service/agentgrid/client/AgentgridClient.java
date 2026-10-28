@@ -58,6 +58,9 @@ import com.jdcloud.sdk.service.agentgrid.client.CreateRuntimeEndpointExecutor;
 import com.jdcloud.sdk.service.agentgrid.model.DeleteRuntimeEndpointRequest;
 import com.jdcloud.sdk.service.agentgrid.model.DeleteRuntimeEndpointResponse;
 import com.jdcloud.sdk.service.agentgrid.client.DeleteRuntimeEndpointExecutor;
+import com.jdcloud.sdk.service.agentgrid.model.DeleteRuntimeSessionRequest;
+import com.jdcloud.sdk.service.agentgrid.model.DeleteRuntimeSessionResponse;
+import com.jdcloud.sdk.service.agentgrid.client.DeleteRuntimeSessionExecutor;
 import com.jdcloud.sdk.service.agentgrid.model.DeleteBrowserToolSessionRequest;
 import com.jdcloud.sdk.service.agentgrid.model.DeleteBrowserToolSessionResponse;
 import com.jdcloud.sdk.service.agentgrid.client.DeleteBrowserToolSessionExecutor;
@@ -103,6 +106,9 @@ import com.jdcloud.sdk.service.agentgrid.client.DescribeRuntimeEndpointsExecutor
 import com.jdcloud.sdk.service.agentgrid.model.IngestMetricsRequest;
 import com.jdcloud.sdk.service.agentgrid.model.IngestMetricsResponse;
 import com.jdcloud.sdk.service.agentgrid.client.IngestMetricsExecutor;
+import com.jdcloud.sdk.service.agentgrid.model.DescribeRuntimeSessionsByVersionRequest;
+import com.jdcloud.sdk.service.agentgrid.model.DescribeRuntimeSessionsByVersionResponse;
+import com.jdcloud.sdk.service.agentgrid.client.DescribeRuntimeSessionsByVersionExecutor;
 import com.jdcloud.sdk.service.agentgrid.model.DescribeCodeInterpreterSessionRequest;
 import com.jdcloud.sdk.service.agentgrid.model.DescribeCodeInterpreterSessionResponse;
 import com.jdcloud.sdk.service.agentgrid.client.DescribeCodeInterpreterSessionExecutor;
@@ -185,6 +191,7 @@ public class AgentgridClient extends JdcloudClient {
 
 ## 接口说明
 - 每个版本的 &#x60;state&#x60; 可选值为：&#x60;pending&#x60;、&#x60;creating&#x60;、&#x60;running&#x60;、&#x60;failed&#x60;、&#x60;deleted&#x60;。
+- 每个版本分别返回其资源配置；未记录规格时不返回 &#x60;resource&#x60;。
 - 建议在创建 Runtime 或更新 Runtime 后，通过本接口确认版本是否已进入 &#x60;running&#x60;。
 
      *
@@ -201,6 +208,7 @@ public class AgentgridClient extends JdcloudClient {
 
 ## 接口说明
 - 支持通过 &#x60;clientToken&#x60; 保证请求幂等性。
+- 支持在创建时指定用户标签和资源组，创建成功后自动上报资源中心。
 - 创建成功后由服务端自动生成 &#x60;apiKey&#x60;。
 - Code Interpreter 状态包括：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;ready&#x60;（可创建 Session）、&#x60;failed&#x60;（处理失败）、&#x60;deleting&#x60;（删除中）、&#x60;deleted&#x60;（已删除）。
 - 本接口为异步接口。请求受理成功后，资源通常先进入 &#x60;pending&#x60;，待底层资源准备完成后进入 &#x60;ready&#x60;；如创建失败则进入 &#x60;failed&#x60;。建议通过“查询 Code Interpreter 详情”或“查询 Code Interpreter 列表”轮询确认最终状态。
@@ -250,7 +258,8 @@ public class AgentgridClient extends JdcloudClient {
      * 查询 Runtime 列表，默认返回当前生效版本的信息。
 
 ## 接口说明
-- 支持分页、排序、条件过滤与标签过滤。
+- 支持分页、条件过滤、标签过滤与资源组过滤。
+- 返回结果包含 Runtime 的用户标签、资源组 ID 和当前版本资源配置。
 - Runtime 状态包括：&#x60;pending&#x60;、&#x60;creating&#x60;、&#x60;running&#x60;、&#x60;updating&#x60;、&#x60;failed&#x60;、&#x60;deleted&#x60;。
 - 返回结果中的 &#x60;state&#x60; 表示 Runtime 当前整体状态；&#x60;versionView.state&#x60; 表示本次返回版本的状态。
 
@@ -320,6 +329,22 @@ public class AgentgridClient extends JdcloudClient {
     }
 
     /**
+     * 删除指定 Runtime 版本下的 Session，并释放其 Sandbox。
+
+## 接口说明
+- 通过 Runtime ID、版本号和 Session ID 定位目标 Session。
+- 删除完成后，该 Session 不再出现在该版本的 Session 列表中；如需继续使用，应创建新的 Session。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteRuntimeSessionResponse deleteRuntimeSession(DeleteRuntimeSessionRequest request) throws JdcloudSdkException {
+        return new DeleteRuntimeSessionExecutor().client(this).execute(request);
+    }
+
+    /**
      * 停止指定 Browser Tool Session。
 
 ## 接口说明
@@ -356,6 +381,9 @@ public class AgentgridClient extends JdcloudClient {
 ## 接口说明
 - 支持通过 &#x60;clientToken&#x60; 保证请求幂等性。
 - 创建时需提供制品、鉴权方式、网络等核心配置信息。
+- 镜像制品的 &#x60;imageUrl&#x60; 必填；可选的 &#x60;command&#x60;、&#x60;args&#x60; 分别覆盖镜像的 ENTRYPOINT、CMD，&#x60;port&#x60; 声明镜像内服务实际监听的端口（1～65535）。不填写这些可选项时沿用镜像默认启动方式和协议默认端口。
+- 可通过 &#x60;imageVolumes&#x60; 配置最多 1 个只读镜像卷，挂载路径必须位于 &#x60;/mnt&#x60; 的子目录下，且不能与 OSS 或 CFS 挂载点重叠。
+- 支持在创建时指定用户标签和资源组；标签或资源组参数会在创建前进行合法性校验，并在 Runtime 创建成功后绑定到资源。
 - Runtime 状态包括：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;creating&#x60;（创建中）、&#x60;running&#x60;（可正常调用）、&#x60;updating&#x60;（版本或配置更新中）、&#x60;failed&#x60;（处理失败）、&#x60;deleted&#x60;（已删除，不可继续使用）。
 - Runtime Version 状态包括：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;creating&#x60;（创建中）、&#x60;running&#x60;（可正常使用）、&#x60;failed&#x60;（处理失败）、&#x60;deleted&#x60;（已删除）。
 - 本接口为异步接口，请求受理成功后会返回 &#x60;requestId&#x60;、&#x60;runtimeId&#x60; 和初始 &#x60;runtimeVersion&#x60;。创建初期，Runtime 与首个 Runtime Version 通常先处于 &#x60;pending&#x60;，随后进入 &#x60;creating&#x60;，最终进入 &#x60;running&#x60; 或 &#x60;failed&#x60;。
@@ -404,8 +432,12 @@ public class AgentgridClient extends JdcloudClient {
 
 ## 接口说明
 - 该操作用于更新 Runtime 的配置信息。
+- 更新镜像配置时，可仅传 &#x60;image.command&#x60;、&#x60;image.args&#x60; 或 &#x60;image.port&#x60;，无需重复传 &#x60;image.imageUrl&#x60;；未传的字段沿用当前生效版本。&#x60;command&#x60; 或 &#x60;args&#x60; 传空数组可恢复镜像默认配置。
+- &#x60;imageVolumes&#x60; 不传或传 null 时继承当前生效版本，传空数组 &#x60;[]&#x60; 时清空新版本的镜像卷，传非空数组时整体替换，最多 1 个。镜像卷挂载路径会与更新后或继承的文件系统配置一起校验，不能与 OSS 或 CFS 挂载点重叠。
+- &#x60;image.port&#x60; 的配置形态在更新时不可改变：当前生效版本已有自定义端口时，可将其修改为另一个 1～65535 的端口，不能传 0 删除；当前生效版本没有自定义端口时，不能在更新中新增自定义端口。不传 &#x60;port&#x60; 则沿用原配置。
+- Runtime 协议在创建后不可修改；更新时沿用创建 Runtime 时指定的协议。
 - Runtime 在处理更新请求期间，其状态通常会变为 &#x60;updating&#x60;；本次新生成的 Runtime Version 状态通常会依次经历 &#x60;pending&#x60;、&#x60;creating&#x60;，最终进入 &#x60;running&#x60; 或 &#x60;failed&#x60;。
-- 本接口响应仅返回 &#x60;requestId&#x60;，不会直接返回新版本号。请求受理后，建议调用“查询 Runtime 版本列表”确认最新版本号及其状态。
+- 本接口返回 &#x60;requestId&#x60;、&#x60;runtimeId&#x60; 和新生成的 &#x60;runtimeVersion&#x60;；请求受理后，建议调用“查询 Runtime 版本列表”确认新版本的状态。
 - 新版本创建成功后不会自动成为生效版本；如需切换，请继续调用“选择 Runtime 模版版本”接口。
 
      *
@@ -470,6 +502,7 @@ public class AgentgridClient extends JdcloudClient {
 
 ## 接口说明
 - 仅当 Runtime 当前状态为 &#x60;running&#x60; 或 &#x60;failed&#x60; 时允许删除。
+- 本接口为异步接口，返回 200 表示删除请求已受理，不表示底层资源已经删除完成。
 - 删除后数据不可恢复，请谨慎操作。
 - 删除完成后，Runtime 最终状态为 &#x60;deleted&#x60;；&#x60;deleted&#x60; 状态的 Runtime 不可恢复。
 
@@ -499,6 +532,7 @@ public class AgentgridClient extends JdcloudClient {
 
 ## 接口说明
 - 支持按 Browser Tool ID 批量查询。
+- 支持按用户标签和资源组 ID 过滤，返回结果包含标签、资源组 ID 和资源配置。
 
      *
      * @param request
@@ -549,6 +583,23 @@ public class AgentgridClient extends JdcloudClient {
      */
     public IngestMetricsResponse ingestMetrics(IngestMetricsRequest request) throws JdcloudSdkException {
         return new IngestMetricsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 分页查询指定 Runtime 版本当前绑定的 Session。
+
+## 接口说明
+- &#x60;total&#x60; 表示该 Runtime 版本下符合条件的全部 Session 数量，统计发生在分页之前，不是本页条数。
+- &#x60;pageNumber&#x60;、&#x60;pageSize&#x60; 表示本次查询使用的分页参数；不传时分别为 1 和 10。
+- 同一个 Session ID 可以出现在不同版本中，应结合 Runtime ID 和版本号定位 Session。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRuntimeSessionsByVersionResponse describeRuntimeSessionsByVersion(DescribeRuntimeSessionsByVersionRequest request) throws JdcloudSdkException {
+        return new DescribeRuntimeSessionsByVersionExecutor().client(this).execute(request);
     }
 
     /**
@@ -643,6 +694,7 @@ public class AgentgridClient extends JdcloudClient {
 
 ## 接口说明
 - 支持通过 &#x60;clientToken&#x60; 保证请求幂等性。
+- 支持在创建时指定用户标签和资源组，创建成功后自动上报资源中心。
 - 创建成功后由服务端自动生成 &#x60;apiKey&#x60;。
 - Browser Tool 状态包括：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;ready&#x60;（可创建 Session）、&#x60;failed&#x60;（处理失败）、&#x60;deleting&#x60;（删除中）、&#x60;deleted&#x60;（已删除）。
 - 本接口为异步接口。请求受理成功后，资源通常先进入 &#x60;pending&#x60;，待底层资源准备完成后进入 &#x60;ready&#x60;；如创建失败则进入 &#x60;failed&#x60;。建议通过“查询 Browser Tool 详情”或“查询 Browser Tool 列表”轮询确认最终状态。
@@ -661,6 +713,7 @@ public class AgentgridClient extends JdcloudClient {
 
 ## 接口说明
 - 支持按 Code Interpreter ID 批量查询。
+- 支持按用户标签和资源组 ID 过滤，返回结果包含标签、资源组 ID 和资源配置。
 
      *
      * @param request
@@ -677,6 +730,7 @@ public class AgentgridClient extends JdcloudClient {
 ## 接口说明
 - 不传 &#x60;version&#x60; 时，返回 Runtime 当前生效版本的信息。
 - 返回结果中的顶层 &#x60;state&#x60; 表示 Runtime 当前整体状态；&#x60;versionView.state&#x60; 表示指定版本或当前生效版本的状态。
+- 返回结果包含 Runtime 的用户标签、资源组 ID 和本次查询版本的资源配置。
 
      *
      * @param request

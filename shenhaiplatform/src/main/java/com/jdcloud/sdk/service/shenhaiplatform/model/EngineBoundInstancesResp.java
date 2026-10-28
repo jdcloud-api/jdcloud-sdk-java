@@ -45,7 +45,7 @@ public class EngineBoundInstancesResp  implements java.io.Serializable {
     
     private List<ProjectResp> cloudProjects;
     /**
-     * 绑定的JMR实例列表
+     * 绑定的JMR实例列表(同一集群绑定dev和prod时返回两条，env与defaultAccessIdentity分别对应环境)
      */
     
     private List<JmrInstanceResp> jmrInstances;
@@ -90,7 +90,7 @@ public class EngineBoundInstancesResp  implements java.io.Serializable {
 
 
     /**
-    * get 绑定的JMR实例列表
+    * get 绑定的JMR实例列表(同一集群绑定dev和prod时返回两条，env与defaultAccessIdentity分别对应环境)
     *
     * @return
     */
@@ -99,7 +99,7 @@ public class EngineBoundInstancesResp  implements java.io.Serializable {
     }
 
     /**
-    * set 绑定的JMR实例列表
+    * set 绑定的JMR实例列表(同一集群绑定dev和prod时返回两条，env与defaultAccessIdentity分别对应环境)
     *
     * @param jmrInstances
     */
@@ -134,9 +134,9 @@ public class EngineBoundInstancesResp  implements java.io.Serializable {
 
 
     /**
-    * set 绑定的JMR实例列表
+    * set 绑定的JMR实例列表(同一集群绑定dev和prod时返回两条，env与defaultAccessIdentity分别对应环境)
     *
-    * @param jmrInstances 绑定的JMR实例列表
+    * @param jmrInstances 绑定的JMR实例列表(同一集群绑定dev和prod时返回两条，env与defaultAccessIdentity分别对应环境)
     * @return EngineBoundInstancesResp
     */
     public EngineBoundInstancesResp jmrInstances(List<JmrInstanceResp> jmrInstances) {
@@ -159,7 +159,7 @@ public class EngineBoundInstancesResp  implements java.io.Serializable {
     }
 
     /**
-     * add item to 绑定的JMR实例列表
+     * add item to 绑定的JMR实例列表(同一集群绑定dev和prod时返回两条，env与defaultAccessIdentity分别对应环境)
      *
      * @param jmrInstance
      */

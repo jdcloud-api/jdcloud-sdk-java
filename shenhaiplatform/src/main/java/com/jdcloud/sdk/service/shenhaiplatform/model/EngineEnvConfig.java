@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.shenhaiplatform.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * engineEnvConfig
@@ -33,7 +35,7 @@ public class EngineEnvConfig  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 项目/实例Code
+     * 项目/实例Code(JCW留空且projectName非空时，绑定过程中自动创建新的云仓项目；JMR允许devConfig与prodConfig填同一集群，分别配置访问身份)
      */
     private String projectCode;
 
@@ -43,14 +45,24 @@ public class EngineEnvConfig  implements java.io.Serializable {
     private String projectName;
 
     /**
-     * 资源组Code
+     * 计算资源组Code列表(新建云仓项目时随项目一并绑定，对应云仓calculateResourceList)
      */
-    private String resourceCode;
+    
+    private List<String> calculateResourceCodes;
+    /**
+     * 集成资源组Code列表(新建云仓项目时随项目一并绑定，对应云仓integrationResourceCode)
+     */
+    
+    private List<String> integrationResourceCodes;
+    /**
+     * JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；绑定JMR引擎时对配置了实例的环境必填，JCW不使用)
+     */
+    private String defaultAccessIdentity;
 
 
 
     /**
-     * get 项目/实例Code
+     * get 项目/实例Code(JCW留空且projectName非空时，绑定过程中自动创建新的云仓项目；JMR允许devConfig与prodConfig填同一集群，分别配置访问身份)
      *
      * @return
      */
@@ -59,7 +71,7 @@ public class EngineEnvConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 项目/实例Code
+     * set 项目/实例Code(JCW留空且projectName非空时，绑定过程中自动创建新的云仓项目；JMR允许devConfig与prodConfig填同一集群，分别配置访问身份)
      *
      * @param projectCode
      */
@@ -88,29 +100,67 @@ public class EngineEnvConfig  implements java.io.Serializable {
 
 
     /**
-     * get 资源组Code
+    * get 计算资源组Code列表(新建云仓项目时随项目一并绑定，对应云仓calculateResourceList)
+    *
+    * @return
+    */
+    public List<String> getCalculateResourceCodes() {
+        return calculateResourceCodes;
+    }
+
+    /**
+    * set 计算资源组Code列表(新建云仓项目时随项目一并绑定，对应云仓calculateResourceList)
+    *
+    * @param calculateResourceCodes
+    */
+    public void setCalculateResourceCodes(List<String> calculateResourceCodes) {
+        this.calculateResourceCodes = calculateResourceCodes;
+    }
+
+
+    /**
+    * get 集成资源组Code列表(新建云仓项目时随项目一并绑定，对应云仓integrationResourceCode)
+    *
+    * @return
+    */
+    public List<String> getIntegrationResourceCodes() {
+        return integrationResourceCodes;
+    }
+
+    /**
+    * set 集成资源组Code列表(新建云仓项目时随项目一并绑定，对应云仓integrationResourceCode)
+    *
+    * @param integrationResourceCodes
+    */
+    public void setIntegrationResourceCodes(List<String> integrationResourceCodes) {
+        this.integrationResourceCodes = integrationResourceCodes;
+    }
+
+
+    /**
+     * get JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；绑定JMR引擎时对配置了实例的环境必填，JCW不使用)
      *
      * @return
      */
-    public String getResourceCode() {
-        return resourceCode;
+    public String getDefaultAccessIdentity() {
+        return defaultAccessIdentity;
     }
 
     /**
-     * set 资源组Code
+     * set JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；绑定JMR引擎时对配置了实例的环境必填，JCW不使用)
      *
-     * @param resourceCode
+     * @param defaultAccessIdentity
      */
-    public void setResourceCode(String resourceCode) {
-        this.resourceCode = resourceCode;
+    public void setDefaultAccessIdentity(String defaultAccessIdentity) {
+        this.defaultAccessIdentity = defaultAccessIdentity;
     }
 
 
 
     /**
-     * set 项目/实例Code
+     * set 项目/实例Code(JCW留空且projectName非空时，绑定过程中自动创建新的云仓项目；JMR允许devConfig与prodConfig填同一集群，分别配置访问身份)
      *
-     * @param projectCode 项目/实例Code
+     * @param projectCode 项目/实例Code(JCW留空且projectName非空时，绑定过程中自动创建新的云仓项目；JMR允许devConfig与prodConfig填同一集群，分别配置访问身份)
      * @return EngineEnvConfig
      */
     public EngineEnvConfig projectCode(String projectCode) {
@@ -132,15 +182,63 @@ public class EngineEnvConfig  implements java.io.Serializable {
 
 
     /**
-     * set 资源组Code
-     *
-     * @param resourceCode 资源组Code
-     * @return EngineEnvConfig
-     */
-    public EngineEnvConfig resourceCode(String resourceCode) {
-        this.resourceCode = resourceCode;
+    * set 计算资源组Code列表(新建云仓项目时随项目一并绑定，对应云仓calculateResourceList)
+    *
+    * @param calculateResourceCodes 计算资源组Code列表(新建云仓项目时随项目一并绑定，对应云仓calculateResourceList)
+    * @return EngineEnvConfig
+    */
+    public EngineEnvConfig calculateResourceCodes(List<String> calculateResourceCodes) {
+        this.calculateResourceCodes = calculateResourceCodes;
         return this;
     }
 
 
+    /**
+    * set 集成资源组Code列表(新建云仓项目时随项目一并绑定，对应云仓integrationResourceCode)
+    *
+    * @param integrationResourceCodes 集成资源组Code列表(新建云仓项目时随项目一并绑定，对应云仓integrationResourceCode)
+    * @return EngineEnvConfig
+    */
+    public EngineEnvConfig integrationResourceCodes(List<String> integrationResourceCodes) {
+        this.integrationResourceCodes = integrationResourceCodes;
+        return this;
+    }
+
+
+    /**
+     * set JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；绑定JMR引擎时对配置了实例的环境必填，JCW不使用)
+     *
+     * @param defaultAccessIdentity JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；绑定JMR引擎时对配置了实例的环境必填，JCW不使用)
+     * @return EngineEnvConfig
+     */
+    public EngineEnvConfig defaultAccessIdentity(String defaultAccessIdentity) {
+        this.defaultAccessIdentity = defaultAccessIdentity;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 计算资源组Code列表(新建云仓项目时随项目一并绑定，对应云仓calculateResourceList)
+     *
+     * @param calculateResourceCode
+     */
+    public void addCalculateResourceCode(String calculateResourceCode) {
+        if (this.calculateResourceCodes == null) {
+            this.calculateResourceCodes = new ArrayList<>();
+        }
+        this.calculateResourceCodes.add(calculateResourceCode);
+    }
+
+    /**
+     * add item to 集成资源组Code列表(新建云仓项目时随项目一并绑定，对应云仓integrationResourceCode)
+     *
+     * @param integrationResourceCode
+     */
+    public void addIntegrationResourceCode(String integrationResourceCode) {
+        if (this.integrationResourceCodes == null) {
+            this.integrationResourceCodes = new ArrayList<>();
+        }
+        this.integrationResourceCodes.add(integrationResourceCode);
+    }
 }

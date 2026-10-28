@@ -29,14 +29,18 @@ import com.jdcloud.sdk.service.jdaip.model.InferenceScaleSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 为指定的推理服务创建自动扩缩容规则，包括基于资源使用率的自动扩缩容和基于时间的定时扩缩容
+ * 为指定的推理服务创建自动扩缩容规则，包括基于指标的自动扩缩容（basic 扁平阈值 / advanced 双阈值）
+和基于时间的定时扩缩容。scaleType&#x3D;auto 时，mode 缺省为 basic；advanced 需配置 metrics、
+scaleUpFactor / scaleDownFactor（百分比整数，如 150/40），并可指定 scaleUpOperator /
+scaleDownOperator（缺省分别为 OR / AND）
+
  */
 public class CreateInferenceScaleRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 日志采集配置
+     * 自动扩缩容配置
      * Required:true
      */
     @Required
@@ -66,7 +70,7 @@ public class CreateInferenceScaleRequest extends JdcloudRequest implements java.
 
 
     /**
-     * get 日志采集配置
+     * get 自动扩缩容配置
      *
      * @return
      */
@@ -75,7 +79,7 @@ public class CreateInferenceScaleRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 日志采集配置
+     * set 自动扩缩容配置
      *
      * @param inferenceScaleSpec
      */
@@ -143,9 +147,9 @@ public class CreateInferenceScaleRequest extends JdcloudRequest implements java.
 
 
     /**
-     * set 日志采集配置
+     * set 自动扩缩容配置
      *
-     * @param inferenceScaleSpec 日志采集配置
+     * @param inferenceScaleSpec 自动扩缩容配置
      * @return CreateInferenceScaleRequest
      */
     public CreateInferenceScaleRequest inferenceScaleSpec(InferenceScaleSpec inferenceScaleSpec) {

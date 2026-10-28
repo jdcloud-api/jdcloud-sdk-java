@@ -52,7 +52,7 @@ public class UranusTaskNodeCreateRequest extends JdcloudRequest implements java.
     private String taskName;
 
     /**
-     * 任务类型, JCW_SQL jcw引擎的SQL任务、PYTHON python任务、SHELL Linux脚本任务、SPARK_JAR sparkJar任务、STAR_ROCKS starrocks任务、MYSQL mysql任务、LOOP 循环节点任务、PIPE 数据集成任务
+     * 任务类型, JCW_SQL jcw引擎的SQL任务、PYTHON python任务、SHELL Linux脚本任务、SPARK_JAR sparkJar任务、STAR_ROCKS starrocks任务、MYSQL mysql任务、LOOP 循环节点任务、PIPE 数据集成任务、JMR_HIVE_SQL JMR Hive SQL任务、JMR_SPARK_SQL JMR Spark SQL任务、JMR_SPARK JMR Spark任务、JMR_SHELL JMR Shell任务、JMR_PYTHON JMR Python任务
      */
     private String taskType;
 
@@ -160,7 +160,7 @@ public class UranusTaskNodeCreateRequest extends JdcloudRequest implements java.
 
 
     /**
-     * get 任务类型, JCW_SQL jcw引擎的SQL任务、PYTHON python任务、SHELL Linux脚本任务、SPARK_JAR sparkJar任务、STAR_ROCKS starrocks任务、MYSQL mysql任务、LOOP 循环节点任务、PIPE 数据集成任务
+     * get 任务类型, JCW_SQL jcw引擎的SQL任务、PYTHON python任务、SHELL Linux脚本任务、SPARK_JAR sparkJar任务、STAR_ROCKS starrocks任务、MYSQL mysql任务、LOOP 循环节点任务、PIPE 数据集成任务、JMR_HIVE_SQL JMR Hive SQL任务、JMR_SPARK_SQL JMR Spark SQL任务、JMR_SPARK JMR Spark任务、JMR_SHELL JMR Shell任务、JMR_PYTHON JMR Python任务
      *
      * @return
      */
@@ -169,7 +169,7 @@ public class UranusTaskNodeCreateRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 任务类型, JCW_SQL jcw引擎的SQL任务、PYTHON python任务、SHELL Linux脚本任务、SPARK_JAR sparkJar任务、STAR_ROCKS starrocks任务、MYSQL mysql任务、LOOP 循环节点任务、PIPE 数据集成任务
+     * set 任务类型, JCW_SQL jcw引擎的SQL任务、PYTHON python任务、SHELL Linux脚本任务、SPARK_JAR sparkJar任务、STAR_ROCKS starrocks任务、MYSQL mysql任务、LOOP 循环节点任务、PIPE 数据集成任务、JMR_HIVE_SQL JMR Hive SQL任务、JMR_SPARK_SQL JMR Spark SQL任务、JMR_SPARK JMR Spark任务、JMR_SHELL JMR Shell任务、JMR_PYTHON JMR Python任务
      *
      * @param taskType
      */
@@ -368,9 +368,9 @@ public class UranusTaskNodeCreateRequest extends JdcloudRequest implements java.
 
 
     /**
-     * set 任务类型, JCW_SQL jcw引擎的SQL任务、PYTHON python任务、SHELL Linux脚本任务、SPARK_JAR sparkJar任务、STAR_ROCKS starrocks任务、MYSQL mysql任务、LOOP 循环节点任务、PIPE 数据集成任务
+     * set 任务类型, JCW_SQL jcw引擎的SQL任务、PYTHON python任务、SHELL Linux脚本任务、SPARK_JAR sparkJar任务、STAR_ROCKS starrocks任务、MYSQL mysql任务、LOOP 循环节点任务、PIPE 数据集成任务、JMR_HIVE_SQL JMR Hive SQL任务、JMR_SPARK_SQL JMR Spark SQL任务、JMR_SPARK JMR Spark任务、JMR_SHELL JMR Shell任务、JMR_PYTHON JMR Python任务
      *
-     * @param taskType 任务类型, JCW_SQL jcw引擎的SQL任务、PYTHON python任务、SHELL Linux脚本任务、SPARK_JAR sparkJar任务、STAR_ROCKS starrocks任务、MYSQL mysql任务、LOOP 循环节点任务、PIPE 数据集成任务
+     * @param taskType 任务类型, JCW_SQL jcw引擎的SQL任务、PYTHON python任务、SHELL Linux脚本任务、SPARK_JAR sparkJar任务、STAR_ROCKS starrocks任务、MYSQL mysql任务、LOOP 循环节点任务、PIPE 数据集成任务、JMR_HIVE_SQL JMR Hive SQL任务、JMR_SPARK_SQL JMR Spark SQL任务、JMR_SPARK JMR Spark任务、JMR_SHELL JMR Shell任务、JMR_PYTHON JMR Python任务
      * @return UranusTaskNodeCreateRequest
      */
     public UranusTaskNodeCreateRequest taskType(String taskType) {

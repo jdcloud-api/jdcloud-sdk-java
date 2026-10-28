@@ -90,6 +90,11 @@ public class UranusTaskScheduleInfoUpdateRequest extends JdcloudRequest implemen
     private String resourceGroup;
 
     /**
+     * 执行引擎编码（任务绑定的计算引擎实例Code）
+     */
+    private String engineCode;
+
+    /**
      * 跨周期依赖类型，目前只支持SELF
      */
     private String crossCycleDependType;
@@ -325,6 +330,25 @@ public class UranusTaskScheduleInfoUpdateRequest extends JdcloudRequest implemen
 
 
     /**
+     * get 执行引擎编码（任务绑定的计算引擎实例Code）
+     *
+     * @return
+     */
+    public String getEngineCode() {
+        return engineCode;
+    }
+
+    /**
+     * set 执行引擎编码（任务绑定的计算引擎实例Code）
+     *
+     * @param engineCode
+     */
+    public void setEngineCode(String engineCode) {
+        this.engineCode = engineCode;
+    }
+
+
+    /**
      * get 跨周期依赖类型，目前只支持SELF
      *
      * @return
@@ -529,6 +553,18 @@ public class UranusTaskScheduleInfoUpdateRequest extends JdcloudRequest implemen
      */
     public UranusTaskScheduleInfoUpdateRequest resourceGroup(String resourceGroup) {
         this.resourceGroup = resourceGroup;
+        return this;
+    }
+
+
+    /**
+     * set 执行引擎编码（任务绑定的计算引擎实例Code）
+     *
+     * @param engineCode 执行引擎编码（任务绑定的计算引擎实例Code）
+     * @return UranusTaskScheduleInfoUpdateRequest
+     */
+    public UranusTaskScheduleInfoUpdateRequest engineCode(String engineCode) {
+        this.engineCode = engineCode;
         return this;
     }
 

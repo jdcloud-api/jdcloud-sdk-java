@@ -107,6 +107,16 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
     private Integer bucketNum;
 
     /**
+     * 库名（JMR 引擎由用户选择后回传；JCW 引擎可不传）
+     */
+    private String dbName;
+
+    /**
+     * 环境：dev 开发环境，prod 生产环境（JMR 标准模式由前端选定）
+     */
+    private String env;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -370,6 +380,44 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
 
 
     /**
+     * get 库名（JMR 引擎由用户选择后回传；JCW 引擎可不传）
+     *
+     * @return
+     */
+    public String getDbName() {
+        return dbName;
+    }
+
+    /**
+     * set 库名（JMR 引擎由用户选择后回传；JCW 引擎可不传）
+     *
+     * @param dbName
+     */
+    public void setDbName(String dbName) {
+        this.dbName = dbName;
+    }
+
+
+    /**
+     * get 环境：dev 开发环境，prod 生产环境（JMR 标准模式由前端选定）
+     *
+     * @return
+     */
+    public String getEnv() {
+        return env;
+    }
+
+    /**
+     * set 环境：dev 开发环境，prod 生产环境（JMR 标准模式由前端选定）
+     *
+     * @param env
+     */
+    public void setEnv(String env) {
+        this.env = env;
+    }
+
+
+    /**
      * get 地域ID
      *
      * @return
@@ -560,6 +608,30 @@ public class UranusTableAlterSqlViewRequest extends JdcloudRequest implements ja
      */
     public UranusTableAlterSqlViewRequest bucketNum(Integer bucketNum) {
         this.bucketNum = bucketNum;
+        return this;
+    }
+
+
+    /**
+     * set 库名（JMR 引擎由用户选择后回传；JCW 引擎可不传）
+     *
+     * @param dbName 库名（JMR 引擎由用户选择后回传；JCW 引擎可不传）
+     * @return UranusTableAlterSqlViewRequest
+     */
+    public UranusTableAlterSqlViewRequest dbName(String dbName) {
+        this.dbName = dbName;
+        return this;
+    }
+
+
+    /**
+     * set 环境：dev 开发环境，prod 生产环境（JMR 标准模式由前端选定）
+     *
+     * @param env 环境：dev 开发环境，prod 生产环境（JMR 标准模式由前端选定）
+     * @return UranusTableAlterSqlViewRequest
+     */
+    public UranusTableAlterSqlViewRequest env(String env) {
+        this.env = env;
         return this;
     }
 

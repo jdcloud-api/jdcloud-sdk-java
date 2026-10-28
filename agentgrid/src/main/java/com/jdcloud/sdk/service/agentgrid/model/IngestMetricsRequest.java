@@ -67,7 +67,8 @@ public class IngestMetricsRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Metrics 数据。
      *
-     * @param body
+     * @param body Metrics 数据。
+     * @return IngestMetricsRequest
      */
     public IngestMetricsRequest body(Object body) {
         this.body = body;

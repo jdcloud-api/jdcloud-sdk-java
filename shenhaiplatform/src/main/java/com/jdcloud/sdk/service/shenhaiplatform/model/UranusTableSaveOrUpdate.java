@@ -104,6 +104,16 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
      */
     private Integer bucketNum;
 
+    /**
+     * 库名（JMR 引擎由用户选择后回传；JCW 引擎可不传）
+     */
+    private String dbName;
+
+    /**
+     * 环境：dev 开发环境，prod 生产环境（JMR 标准模式由前端选定）
+     */
+    private String env;
+
 
 
     /**
@@ -353,6 +363,44 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 库名（JMR 引擎由用户选择后回传；JCW 引擎可不传）
+     *
+     * @return
+     */
+    public String getDbName() {
+        return dbName;
+    }
+
+    /**
+     * set 库名（JMR 引擎由用户选择后回传；JCW 引擎可不传）
+     *
+     * @param dbName
+     */
+    public void setDbName(String dbName) {
+        this.dbName = dbName;
+    }
+
+
+    /**
+     * get 环境：dev 开发环境，prod 生产环境（JMR 标准模式由前端选定）
+     *
+     * @return
+     */
+    public String getEnv() {
+        return env;
+    }
+
+    /**
+     * set 环境：dev 开发环境，prod 生产环境（JMR 标准模式由前端选定）
+     *
+     * @param env
+     */
+    public void setEnv(String env) {
+        this.env = env;
+    }
+
+
 
     /**
      * set 表英文名称
@@ -506,6 +554,30 @@ public class UranusTableSaveOrUpdate  implements java.io.Serializable {
      */
     public UranusTableSaveOrUpdate bucketNum(Integer bucketNum) {
         this.bucketNum = bucketNum;
+        return this;
+    }
+
+
+    /**
+     * set 库名（JMR 引擎由用户选择后回传；JCW 引擎可不传）
+     *
+     * @param dbName 库名（JMR 引擎由用户选择后回传；JCW 引擎可不传）
+     * @return UranusTableSaveOrUpdate
+     */
+    public UranusTableSaveOrUpdate dbName(String dbName) {
+        this.dbName = dbName;
+        return this;
+    }
+
+
+    /**
+     * set 环境：dev 开发环境，prod 生产环境（JMR 标准模式由前端选定）
+     *
+     * @param env 环境：dev 开发环境，prod 生产环境（JMR 标准模式由前端选定）
+     * @return UranusTableSaveOrUpdate
+     */
+    public UranusTableSaveOrUpdate env(String env) {
+        this.env = env;
         return this;
     }
 

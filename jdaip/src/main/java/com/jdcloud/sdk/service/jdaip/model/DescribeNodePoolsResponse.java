@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.jdaip.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询节点池列表
+ * 查询节点池列表。
  */
 public class DescribeNodePoolsResponse extends JdcloudResponse<DescribeNodePoolsResult> implements java.io.Serializable {
 

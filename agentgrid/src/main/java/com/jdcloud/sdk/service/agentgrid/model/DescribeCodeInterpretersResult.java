@@ -34,6 +34,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 ## 接口说明
 - 支持按 Code Interpreter ID 批量查询。
+- 支持按用户标签和资源组 ID 过滤，返回结果包含标签、资源组 ID 和资源配置。
 
  */
 public class DescribeCodeInterpretersResult extends JdcloudResult implements java.io.Serializable {
@@ -94,7 +95,8 @@ public class DescribeCodeInterpretersResult extends JdcloudResult implements jav
     /**
      * set 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      *
-     * @param total
+     * @param total 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
+     * @return DescribeCodeInterpretersResult
      */
     public DescribeCodeInterpretersResult total(Integer total) {
         this.total = total;
@@ -105,7 +107,8 @@ public class DescribeCodeInterpretersResult extends JdcloudResult implements jav
     /**
     * set codeInterpreters
     *
-    * @param codeInterpreters
+    * @param codeInterpreters 
+    * @return DescribeCodeInterpretersResult
     */
     public DescribeCodeInterpretersResult codeInterpreters(List<CodeInterpreter> codeInterpreters) {
         this.codeInterpreters = codeInterpreters;

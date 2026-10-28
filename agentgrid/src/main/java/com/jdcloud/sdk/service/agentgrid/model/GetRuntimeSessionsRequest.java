@@ -96,7 +96,8 @@ public class GetRuntimeSessionsRequest extends JdcloudRequest implements java.io
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return GetRuntimeSessionsRequest
      */
     public GetRuntimeSessionsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -107,7 +108,8 @@ public class GetRuntimeSessionsRequest extends JdcloudRequest implements java.io
     /**
      * set Runtime ID
      *
-     * @param runtimeId
+     * @param runtimeId Runtime ID
+     * @return GetRuntimeSessionsRequest
      */
     public GetRuntimeSessionsRequest runtimeId(String runtimeId) {
         this.runtimeId = runtimeId;

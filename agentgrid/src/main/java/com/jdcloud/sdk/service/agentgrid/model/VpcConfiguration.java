@@ -119,7 +119,8 @@ public class VpcConfiguration  implements java.io.Serializable {
     /**
      * set 私有网络 ID
      *
-     * @param vpcId
+     * @param vpcId 私有网络 ID
+     * @return VpcConfiguration
      */
     public VpcConfiguration vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -130,7 +131,8 @@ public class VpcConfiguration  implements java.io.Serializable {
     /**
     * set 子网 ID 列表
     *
-    * @param subnetIds
+    * @param subnetIds 子网 ID 列表
+    * @return VpcConfiguration
     */
     public VpcConfiguration subnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
@@ -141,7 +143,8 @@ public class VpcConfiguration  implements java.io.Serializable {
     /**
     * set 安全组列表
     *
-    * @param securityGroups
+    * @param securityGroups 安全组列表
+    * @return VpcConfiguration
     */
     public VpcConfiguration securityGroups(List<String> securityGroups) {
         this.securityGroups = securityGroups;

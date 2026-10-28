@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 节点详情
+ * 节点详情。
  */
 public class DescribeNodeRequest extends JdcloudRequest implements java.io.Serializable {
 

@@ -86,7 +86,8 @@ public class VersionSessionView  implements java.io.Serializable {
     /**
      * set Runtime 版本号
      *
-     * @param version
+     * @param version Runtime 版本号
+     * @return VersionSessionView
      */
     public VersionSessionView version(String version) {
         this.version = version;
@@ -97,7 +98,8 @@ public class VersionSessionView  implements java.io.Serializable {
     /**
      * set 该版本当前生效的 Session 数量
      *
-     * @param sessionCount
+     * @param sessionCount 该版本当前生效的 Session 数量
+     * @return VersionSessionView
      */
     public VersionSessionView sessionCount(Integer sessionCount) {
         this.sessionCount = sessionCount;

@@ -35,7 +35,7 @@ public class UranusTableColumnRequest extends JdcloudRequest implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 墨迹搜索字段
+     * 模糊搜索字段
      * Required:true
      */
     @Required
@@ -47,6 +47,11 @@ public class UranusTableColumnRequest extends JdcloudRequest implements java.io.
      */
     @Required
     private String env;
+
+    /**
+     * 库名（JMR 引擎必传）
+     */
+    private String dbName;
 
     /**
      * 地域ID
@@ -65,7 +70,7 @@ public class UranusTableColumnRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 墨迹搜索字段
+     * get 模糊搜索字段
      *
      * @return
      */
@@ -74,7 +79,7 @@ public class UranusTableColumnRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 墨迹搜索字段
+     * set 模糊搜索字段
      *
      * @param table
      */
@@ -99,6 +104,25 @@ public class UranusTableColumnRequest extends JdcloudRequest implements java.io.
      */
     public void setEnv(String env) {
         this.env = env;
+    }
+
+
+    /**
+     * get 库名（JMR 引擎必传）
+     *
+     * @return
+     */
+    public String getDbName() {
+        return dbName;
+    }
+
+    /**
+     * set 库名（JMR 引擎必传）
+     *
+     * @param dbName
+     */
+    public void setDbName(String dbName) {
+        this.dbName = dbName;
     }
 
 
@@ -142,9 +166,9 @@ public class UranusTableColumnRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 墨迹搜索字段
+     * set 模糊搜索字段
      *
-     * @param table 墨迹搜索字段
+     * @param table 模糊搜索字段
      * @return UranusTableColumnRequest
      */
     public UranusTableColumnRequest table(String table) {
@@ -161,6 +185,18 @@ public class UranusTableColumnRequest extends JdcloudRequest implements java.io.
      */
     public UranusTableColumnRequest env(String env) {
         this.env = env;
+        return this;
+    }
+
+
+    /**
+     * set 库名（JMR 引擎必传）
+     *
+     * @param dbName 库名（JMR 引擎必传）
+     * @return UranusTableColumnRequest
+     */
+    public UranusTableColumnRequest dbName(String dbName) {
+        this.dbName = dbName;
         return this;
     }
 

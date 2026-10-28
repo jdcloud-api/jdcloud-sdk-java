@@ -120,7 +120,8 @@ public class UpdateRuntimeAttributesRequest extends JdcloudRequest implements ja
     /**
      * set Runtime 描述信息。
      *
-     * @param description
+     * @param description Runtime 描述信息。
+     * @return UpdateRuntimeAttributesRequest
      */
     public UpdateRuntimeAttributesRequest description(String description) {
         this.description = description;
@@ -131,7 +132,8 @@ public class UpdateRuntimeAttributesRequest extends JdcloudRequest implements ja
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return UpdateRuntimeAttributesRequest
      */
     public UpdateRuntimeAttributesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -142,7 +144,8 @@ public class UpdateRuntimeAttributesRequest extends JdcloudRequest implements ja
     /**
      * set Runtime ID
      *
-     * @param runtimeId
+     * @param runtimeId Runtime ID
+     * @return UpdateRuntimeAttributesRequest
      */
     public UpdateRuntimeAttributesRequest runtimeId(String runtimeId) {
         this.runtimeId = runtimeId;

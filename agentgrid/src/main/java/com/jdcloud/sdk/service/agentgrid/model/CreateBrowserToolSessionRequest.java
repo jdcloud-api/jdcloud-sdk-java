@@ -46,7 +46,12 @@ public class CreateBrowserToolSessionRequest extends JdcloudRequest implements j
     private String name;
 
     /**
-     * Session 最大存活时长（秒）。取值范围 60～28800，默认值为 28800。
+     * 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
+     */
+    private Boolean persistent;
+
+    /**
+     * Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 28800。
      */
     private Integer maxLifeTime;
 
@@ -91,7 +96,26 @@ public class CreateBrowserToolSessionRequest extends JdcloudRequest implements j
 
 
     /**
-     * get Session 最大存活时长（秒）。取值范围 60～28800，默认值为 28800。
+     * get 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
+     *
+     * @return
+     */
+    public Boolean getPersistent() {
+        return persistent;
+    }
+
+    /**
+     * set 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
+     *
+     * @param persistent
+     */
+    public void setPersistent(Boolean persistent) {
+        this.persistent = persistent;
+    }
+
+
+    /**
+     * get Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 28800。
      *
      * @return
      */
@@ -100,7 +124,7 @@ public class CreateBrowserToolSessionRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set Session 最大存活时长（秒）。取值范围 60～28800，默认值为 28800。
+     * set Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 28800。
      *
      * @param maxLifeTime
      */
@@ -170,7 +194,8 @@ public class CreateBrowserToolSessionRequest extends JdcloudRequest implements j
     /**
      * set Session 名称。
      *
-     * @param name
+     * @param name Session 名称。
+     * @return CreateBrowserToolSessionRequest
      */
     public CreateBrowserToolSessionRequest name(String name) {
         this.name = name;
@@ -179,9 +204,22 @@ public class CreateBrowserToolSessionRequest extends JdcloudRequest implements j
 
 
     /**
-     * set Session 最大存活时长（秒）。取值范围 60～28800，默认值为 28800。
+     * set 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
      *
-     * @param maxLifeTime
+     * @param persistent 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
+     * @return CreateBrowserToolSessionRequest
+     */
+    public CreateBrowserToolSessionRequest persistent(Boolean persistent) {
+        this.persistent = persistent;
+        return this;
+    }
+
+
+    /**
+     * set Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 28800。
+     *
+     * @param maxLifeTime Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 28800。
+     * @return CreateBrowserToolSessionRequest
      */
     public CreateBrowserToolSessionRequest maxLifeTime(Integer maxLifeTime) {
         this.maxLifeTime = maxLifeTime;
@@ -192,7 +230,8 @@ public class CreateBrowserToolSessionRequest extends JdcloudRequest implements j
     /**
      * set 用于保证请求幂等性。
      *
-     * @param clientToken
+     * @param clientToken 用于保证请求幂等性。
+     * @return CreateBrowserToolSessionRequest
      */
     public CreateBrowserToolSessionRequest clientToken(String clientToken) {
         this.clientToken = clientToken;
@@ -203,7 +242,8 @@ public class CreateBrowserToolSessionRequest extends JdcloudRequest implements j
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return CreateBrowserToolSessionRequest
      */
     public CreateBrowserToolSessionRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -214,7 +254,8 @@ public class CreateBrowserToolSessionRequest extends JdcloudRequest implements j
     /**
      * set Browser Tool ID
      *
-     * @param browserToolId
+     * @param browserToolId Browser Tool ID
+     * @return CreateBrowserToolSessionRequest
      */
     public CreateBrowserToolSessionRequest browserToolId(String browserToolId) {
         this.browserToolId = browserToolId;

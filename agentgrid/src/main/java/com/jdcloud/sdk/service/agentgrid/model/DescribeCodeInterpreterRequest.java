@@ -93,7 +93,8 @@ public class DescribeCodeInterpreterRequest extends JdcloudRequest implements ja
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribeCodeInterpreterRequest
      */
     public DescribeCodeInterpreterRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -104,7 +105,8 @@ public class DescribeCodeInterpreterRequest extends JdcloudRequest implements ja
     /**
      * set Code Interpreter ID
      *
-     * @param codeInterpreterId
+     * @param codeInterpreterId Code Interpreter ID
+     * @return DescribeCodeInterpreterRequest
      */
     public DescribeCodeInterpreterRequest codeInterpreterId(String codeInterpreterId) {
         this.codeInterpreterId = codeInterpreterId;

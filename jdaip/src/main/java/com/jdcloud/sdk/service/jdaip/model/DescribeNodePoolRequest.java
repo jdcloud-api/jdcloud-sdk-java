@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询节点池详情
+ * 查询节点池详情。
  */
 public class DescribeNodePoolRequest extends JdcloudRequest implements java.io.Serializable {
 

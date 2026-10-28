@@ -43,9 +43,14 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
     private String workspaceCode;
 
     /**
-     * projectCode
+     * 云仓项目code / JMR实例code
      */
     private String projectCode;
+
+    /**
+     * 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
+     */
+    private String instanceCode;
 
     /**
      * resourceCode
@@ -53,7 +58,7 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
     private String resourceCode;
 
     /**
-     * 存算引擎实例编码
+     * 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
      */
     private String engineCode;
 
@@ -98,7 +103,7 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
 
 
     /**
-     * get projectCode
+     * get 云仓项目code / JMR实例code
      *
      * @return
      */
@@ -107,12 +112,31 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
     }
 
     /**
-     * set projectCode
+     * set 云仓项目code / JMR实例code
      *
      * @param projectCode
      */
     public void setProjectCode(String projectCode) {
         this.projectCode = projectCode;
+    }
+
+
+    /**
+     * get 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
+     *
+     * @return
+     */
+    public String getInstanceCode() {
+        return instanceCode;
+    }
+
+    /**
+     * set 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
+     *
+     * @param instanceCode
+     */
+    public void setInstanceCode(String instanceCode) {
+        this.instanceCode = instanceCode;
     }
 
 
@@ -136,7 +160,7 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
 
 
     /**
-     * get 存算引擎实例编码
+     * get 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
      *
      * @return
      */
@@ -145,7 +169,7 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
     }
 
     /**
-     * set 存算引擎实例编码
+     * set 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
      *
      * @param engineCode
      */
@@ -180,13 +204,25 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
 
 
     /**
-     * set projectCode
+     * set 云仓项目code / JMR实例code
      *
-     * @param projectCode 
+     * @param projectCode 云仓项目code / JMR实例code
      * @return QueryWorkspaceInfoReq
      */
     public QueryWorkspaceInfoReq projectCode(String projectCode) {
         this.projectCode = projectCode;
+        return this;
+    }
+
+
+    /**
+     * set 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
+     *
+     * @param instanceCode 实例编码(解绑引擎实例时使用，JCW项目projectCode或JMR集群实例ID)
+     * @return QueryWorkspaceInfoReq
+     */
+    public QueryWorkspaceInfoReq instanceCode(String instanceCode) {
+        this.instanceCode = instanceCode;
         return this;
     }
 
@@ -204,9 +240,9 @@ public class QueryWorkspaceInfoReq  implements java.io.Serializable {
 
 
     /**
-     * set 存算引擎实例编码
+     * set 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
      *
-     * @param engineCode 存算引擎实例编码
+     * @param engineCode 存算引擎实例编码（getEngineDetailsByEngineCode、getInstances 等按引擎查询接口必填）
      * @return QueryWorkspaceInfoReq
      */
     public QueryWorkspaceInfoReq engineCode(String engineCode) {

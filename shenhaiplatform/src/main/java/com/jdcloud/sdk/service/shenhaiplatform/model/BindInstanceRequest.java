@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 计算引擎绑定云仓或JMR实例
+ * 计算引擎绑定云仓或JMR实例。JCW：同一工作空间内同一云仓项目只能绑定一次（不可同时挂到开发与生产），允许同一项目绑定到多个工作空间。JMR：同一集群可绑定到多个工作空间，同一工作空间内可绑定多个引擎；同一引擎下同一集群可按env分别绑定dev/prod，并配置不同默认访问身份。
  */
 public class BindInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -55,14 +55,19 @@ public class BindInstanceRequest extends JdcloudRequest implements java.io.Seria
     private String instanceType;
 
     /**
-     * 资源组Code
+     * JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；可选，不传落库为null，查询时兜底返回CLUSTER_ACCOUNT_HADOOP)
      */
-    private String resourceCode;
+    private String defaultAccessIdentity;
 
     /**
-     * 环境类型(dev/prod)
+     * 环境类型(dev/prod)。同一引擎下同一实例按环境区分，允许同一JMR集群分别绑定开发/生产并配置不同访问身份
      */
     private String env;
+
+    /**
+     * 工作空间Code(管理员校验用，网关未注入workspaceCode头时兜底)
+     */
+    private String workspaceCode;
 
     /**
      * 地域ID
@@ -157,26 +162,26 @@ public class BindInstanceRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 资源组Code
+     * get JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；可选，不传落库为null，查询时兜底返回CLUSTER_ACCOUNT_HADOOP)
      *
      * @return
      */
-    public String getResourceCode() {
-        return resourceCode;
+    public String getDefaultAccessIdentity() {
+        return defaultAccessIdentity;
     }
 
     /**
-     * set 资源组Code
+     * set JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；可选，不传落库为null，查询时兜底返回CLUSTER_ACCOUNT_HADOOP)
      *
-     * @param resourceCode
+     * @param defaultAccessIdentity
      */
-    public void setResourceCode(String resourceCode) {
-        this.resourceCode = resourceCode;
+    public void setDefaultAccessIdentity(String defaultAccessIdentity) {
+        this.defaultAccessIdentity = defaultAccessIdentity;
     }
 
 
     /**
-     * get 环境类型(dev/prod)
+     * get 环境类型(dev/prod)。同一引擎下同一实例按环境区分，允许同一JMR集群分别绑定开发/生产并配置不同访问身份
      *
      * @return
      */
@@ -185,12 +190,31 @@ public class BindInstanceRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 环境类型(dev/prod)
+     * set 环境类型(dev/prod)。同一引擎下同一实例按环境区分，允许同一JMR集群分别绑定开发/生产并配置不同访问身份
      *
      * @param env
      */
     public void setEnv(String env) {
         this.env = env;
+    }
+
+
+    /**
+     * get 工作空间Code(管理员校验用，网关未注入workspaceCode头时兜底)
+     *
+     * @return
+     */
+    public String getWorkspaceCode() {
+        return workspaceCode;
+    }
+
+    /**
+     * set 工作空间Code(管理员校验用，网关未注入workspaceCode头时兜底)
+     *
+     * @param workspaceCode
+     */
+    public void setWorkspaceCode(String workspaceCode) {
+        this.workspaceCode = workspaceCode;
     }
 
 
@@ -282,25 +306,37 @@ public class BindInstanceRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 资源组Code
+     * set JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；可选，不传落库为null，查询时兜底返回CLUSTER_ACCOUNT_HADOOP)
      *
-     * @param resourceCode 资源组Code
+     * @param defaultAccessIdentity JMR默认访问身份(CLUSTER_ACCOUNT_HADOOP-集群账号hadoop，TASK_OWNER_MAPPED_ACCOUNT-任务责任人映射集群账号；可选，不传落库为null，查询时兜底返回CLUSTER_ACCOUNT_HADOOP)
      * @return BindInstanceRequest
      */
-    public BindInstanceRequest resourceCode(String resourceCode) {
-        this.resourceCode = resourceCode;
+    public BindInstanceRequest defaultAccessIdentity(String defaultAccessIdentity) {
+        this.defaultAccessIdentity = defaultAccessIdentity;
         return this;
     }
 
 
     /**
-     * set 环境类型(dev/prod)
+     * set 环境类型(dev/prod)。同一引擎下同一实例按环境区分，允许同一JMR集群分别绑定开发/生产并配置不同访问身份
      *
-     * @param env 环境类型(dev/prod)
+     * @param env 环境类型(dev/prod)。同一引擎下同一实例按环境区分，允许同一JMR集群分别绑定开发/生产并配置不同访问身份
      * @return BindInstanceRequest
      */
     public BindInstanceRequest env(String env) {
         this.env = env;
+        return this;
+    }
+
+
+    /**
+     * set 工作空间Code(管理员校验用，网关未注入workspaceCode头时兜底)
+     *
+     * @param workspaceCode 工作空间Code(管理员校验用，网关未注入workspaceCode头时兜底)
+     * @return BindInstanceRequest
+     */
+    public BindInstanceRequest workspaceCode(String workspaceCode) {
+        this.workspaceCode = workspaceCode;
         return this;
     }
 

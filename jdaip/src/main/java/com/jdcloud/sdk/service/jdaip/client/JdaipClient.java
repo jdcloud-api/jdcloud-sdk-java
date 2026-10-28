@@ -121,6 +121,9 @@ import com.jdcloud.sdk.service.jdaip.client.GetRunEventsExecutor;
 import com.jdcloud.sdk.service.jdaip.model.CreateQueueRequest;
 import com.jdcloud.sdk.service.jdaip.model.CreateQueueResponse;
 import com.jdcloud.sdk.service.jdaip.client.CreateQueueExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeSafeBucketsRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeSafeBucketsResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeSafeBucketsExecutor;
 import com.jdcloud.sdk.service.jdaip.model.GetJobEventsRequest;
 import com.jdcloud.sdk.service.jdaip.model.GetJobEventsResponse;
 import com.jdcloud.sdk.service.jdaip.client.GetJobEventsExecutor;
@@ -289,6 +292,9 @@ import com.jdcloud.sdk.service.jdaip.client.DescribeImagesExecutor;
 import com.jdcloud.sdk.service.jdaip.model.DeleteCodeRepoConfigRequest;
 import com.jdcloud.sdk.service.jdaip.model.DeleteCodeRepoConfigResponse;
 import com.jdcloud.sdk.service.jdaip.client.DeleteCodeRepoConfigExecutor;
+import com.jdcloud.sdk.service.jdaip.model.DescribeSafeBucketRequest;
+import com.jdcloud.sdk.service.jdaip.model.DescribeSafeBucketResponse;
+import com.jdcloud.sdk.service.jdaip.client.DescribeSafeBucketExecutor;
 import com.jdcloud.sdk.service.jdaip.model.AdminDescribeNotebooksRequest;
 import com.jdcloud.sdk.service.jdaip.model.AdminDescribeNotebooksResponse;
 import com.jdcloud.sdk.service.jdaip.client.AdminDescribeNotebooksExecutor;
@@ -635,7 +641,7 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
-     * 查询队列详情
+     * 查询队列详情。
      *
      * @param request
      * @return
@@ -796,7 +802,11 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
-     * 为指定的推理服务创建自动扩缩容规则，包括基于资源使用率的自动扩缩容和基于时间的定时扩缩容
+     * 为指定的推理服务创建自动扩缩容规则，包括基于指标的自动扩缩容（basic 扁平阈值 / advanced 双阈值）
+和基于时间的定时扩缩容。scaleType&#x3D;auto 时，mode 缺省为 basic；advanced 需配置 metrics、
+scaleUpFactor / scaleDownFactor（百分比整数，如 150/40），并可指定 scaleUpOperator /
+scaleDownOperator（缺省分别为 OR / AND）
+
      *
      * @param request
      * @return
@@ -853,7 +863,7 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
-     * 查询节点池详情
+     * 查询节点池详情。
      *
      * @param request
      * @return
@@ -1010,7 +1020,10 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
-     * 获取指定推理服务的当前自动扩缩容规则配置
+     * 获取指定推理服务的当前自动扩缩容规则配置。
+查询时 mode 缺省按 basic 补全返回；advanced 规则的 scaleUpOperator / scaleDownOperator
+缺省分别按 OR / AND 补全返回（不改写库中原值）
+
      *
      * @param request
      * @return
@@ -1049,6 +1062,17 @@ public class JdaipClient extends JdcloudClient {
      */
     public CreateQueueResponse createQueue(CreateQueueRequest request) throws JdcloudSdkException {
         return new CreateQueueExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 桶列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSafeBucketsResponse describeSafeBuckets(DescribeSafeBucketsRequest request) throws JdcloudSdkException {
+        return new DescribeSafeBucketsExecutor().client(this).execute(request);
     }
 
     /**
@@ -1265,7 +1289,7 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
-     * 查询节点列表
+     * 查询节点列表。
      *
      * @param request
      * @return
@@ -1620,7 +1644,7 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
-     * 查询节点池列表
+     * 查询节点池列表。
      *
      * @param request
      * @return
@@ -1767,7 +1791,9 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
-     * 更新指定推理服务的自动扩缩容规则配置
+     * 更新指定推理服务的自动扩缩容规则配置。请求体与创建接口相同，支持 basic / advanced 模式切换；
+advanced 使用 metrics 双阈值，basic 使用 *Threshold 扁平阈值
+
      *
      * @param request
      * @return
@@ -1937,6 +1963,17 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
+     * 获取桶信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSafeBucketResponse describeSafeBucket(DescribeSafeBucketRequest request) throws JdcloudSdkException {
+        return new DescribeSafeBucketExecutor().client(this).execute(request);
+    }
+
+    /**
      * 管理员查询子账号下有权限的所有Notebook实例，支持跨工作空间查询。
 
 ## 接口说明
@@ -2035,7 +2072,7 @@ public class JdaipClient extends JdcloudClient {
     }
 
     /**
-     * 查询队列列表
+     * 查询队列列表。
      *
      * @param request
      * @return
@@ -2507,7 +2544,7 @@ Batch 任务额外返回 &#x60;minAvailable&#x60; 和 &#x60;batchSummary&#x60;�
     }
 
     /**
-     * 节点详情
+     * 节点详情。
      *
      * @param request
      * @return

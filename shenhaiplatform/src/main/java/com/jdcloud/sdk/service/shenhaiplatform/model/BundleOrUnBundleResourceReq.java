@@ -55,6 +55,11 @@ public class BundleOrUnBundleResourceReq  implements java.io.Serializable {
     
     private List<String> integrationResourceCode;
     /**
+     * 通用型资源组Code（双用途：计算+集成）
+     */
+    
+    private List<String> generalResourceCode;
+    /**
      * bundleResource
      */
     private Boolean bundleResource;
@@ -138,6 +143,25 @@ public class BundleOrUnBundleResourceReq  implements java.io.Serializable {
 
 
     /**
+    * get 通用型资源组Code（双用途：计算+集成）
+    *
+    * @return
+    */
+    public List<String> getGeneralResourceCode() {
+        return generalResourceCode;
+    }
+
+    /**
+    * set 通用型资源组Code（双用途：计算+集成）
+    *
+    * @param generalResourceCode
+    */
+    public void setGeneralResourceCode(List<String> generalResourceCode) {
+        this.generalResourceCode = generalResourceCode;
+    }
+
+
+    /**
      * get bundleResource
      *
      * @return
@@ -206,6 +230,18 @@ public class BundleOrUnBundleResourceReq  implements java.io.Serializable {
 
 
     /**
+    * set 通用型资源组Code（双用途：计算+集成）
+    *
+    * @param generalResourceCode 通用型资源组Code（双用途：计算+集成）
+    * @return BundleOrUnBundleResourceReq
+    */
+    public BundleOrUnBundleResourceReq generalResourceCode(List<String> generalResourceCode) {
+        this.generalResourceCode = generalResourceCode;
+        return this;
+    }
+
+
+    /**
      * set bundleResource
      *
      * @param bundleResource 
@@ -240,5 +276,17 @@ public class BundleOrUnBundleResourceReq  implements java.io.Serializable {
             this.integrationResourceCode = new ArrayList<>();
         }
         this.integrationResourceCode.add(integrationResourceCode);
+    }
+
+    /**
+     * add item to 通用型资源组Code（双用途：计算+集成）
+     *
+     * @param generalResourceCode
+     */
+    public void addGeneralResourceCode(String generalResourceCode) {
+        if (this.generalResourceCode == null) {
+            this.generalResourceCode = new ArrayList<>();
+        }
+        this.generalResourceCode.add(generalResourceCode);
     }
 }

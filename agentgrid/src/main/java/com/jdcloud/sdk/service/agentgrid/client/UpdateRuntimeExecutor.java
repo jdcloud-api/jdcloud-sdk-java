@@ -33,8 +33,12 @@ import com.jdcloud.sdk.service.agentgrid.model.UpdateRuntimeResponse;
 
 ## 接口说明
 - 该操作用于更新 Runtime 的配置信息。
+- 更新镜像配置时，可仅传 &#x60;image.command&#x60;、&#x60;image.args&#x60; 或 &#x60;image.port&#x60;，无需重复传 &#x60;image.imageUrl&#x60;；未传的字段沿用当前生效版本。&#x60;command&#x60; 或 &#x60;args&#x60; 传空数组可恢复镜像默认配置。
+- &#x60;imageVolumes&#x60; 不传或传 null 时继承当前生效版本，传空数组 &#x60;[]&#x60; 时清空新版本的镜像卷，传非空数组时整体替换，最多 1 个。镜像卷挂载路径会与更新后或继承的文件系统配置一起校验，不能与 OSS 或 CFS 挂载点重叠。
+- &#x60;image.port&#x60; 的配置形态在更新时不可改变：当前生效版本已有自定义端口时，可将其修改为另一个 1～65535 的端口，不能传 0 删除；当前生效版本没有自定义端口时，不能在更新中新增自定义端口。不传 &#x60;port&#x60; 则沿用原配置。
+- Runtime 协议在创建后不可修改；更新时沿用创建 Runtime 时指定的协议。
 - Runtime 在处理更新请求期间，其状态通常会变为 &#x60;updating&#x60;；本次新生成的 Runtime Version 状态通常会依次经历 &#x60;pending&#x60;、&#x60;creating&#x60;，最终进入 &#x60;running&#x60; 或 &#x60;failed&#x60;。
-- 本接口响应仅返回 &#x60;requestId&#x60;，不会直接返回新版本号。请求受理后，建议调用“查询 Runtime 版本列表”确认最新版本号及其状态。
+- 本接口返回 &#x60;requestId&#x60;、&#x60;runtimeId&#x60; 和新生成的 &#x60;runtimeVersion&#x60;；请求受理后，建议调用“查询 Runtime 版本列表”确认新版本的状态。
 - 新版本创建成功后不会自动成为生效版本；如需切换，请继续调用“选择 Runtime 模版版本”接口。
 
  */

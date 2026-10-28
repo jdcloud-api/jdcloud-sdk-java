@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.model.BindWorkspaceEngineResponse;
 
 /**
- * 前端绑定计算引擎弹窗一键完成绑定
+ * 前端绑定计算引擎弹窗一键完成绑定。JCW不允许devConfig与prodConfig使用同一云仓项目（同一工作空间内项目唯一），但同一项目可以绑定到多个工作空间。JMR允许devConfig与prodConfig使用同一集群，分别指定默认访问身份，详情查询按环境返回两条实例；同一集群可绑定到多个工作空间，同一工作空间内也可绑定多个引擎。
  */
 class BindWorkspaceEngineExecutor extends JdcloudExecutor {
 

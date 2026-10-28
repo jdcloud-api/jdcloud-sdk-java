@@ -28,18 +28,33 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 更新用户默认表来源
+ * 更新用户默认表来源（即引擎类型）与默认引擎编码，各字段非空才覆盖
  */
 public class UranusTableDefaultSourceRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 表来源类型：JCW、AI_LAKE
+     * 表来源类型，即引擎类型：JCW、AI_LAKE、JMR（必传，为空返回参数错误）
      * Required:true
      */
     @Required
     private String sourceType;
+
+    /**
+     * 引擎编码
+     */
+    private String engineCode;
+
+    /**
+     * 集群 ID（JMR 引擎）
+     */
+    private String clusterId;
+
+    /**
+     * 库名（JMR 引擎）
+     */
+    private String dbName;
 
     /**
      * 地域ID
@@ -58,7 +73,7 @@ public class UranusTableDefaultSourceRequest extends JdcloudRequest implements j
 
 
     /**
-     * get 表来源类型：JCW、AI_LAKE
+     * get 表来源类型，即引擎类型：JCW、AI_LAKE、JMR（必传，为空返回参数错误）
      *
      * @return
      */
@@ -67,12 +82,69 @@ public class UranusTableDefaultSourceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 表来源类型：JCW、AI_LAKE
+     * set 表来源类型，即引擎类型：JCW、AI_LAKE、JMR（必传，为空返回参数错误）
      *
      * @param sourceType
      */
     public void setSourceType(String sourceType) {
         this.sourceType = sourceType;
+    }
+
+
+    /**
+     * get 引擎编码
+     *
+     * @return
+     */
+    public String getEngineCode() {
+        return engineCode;
+    }
+
+    /**
+     * set 引擎编码
+     *
+     * @param engineCode
+     */
+    public void setEngineCode(String engineCode) {
+        this.engineCode = engineCode;
+    }
+
+
+    /**
+     * get 集群 ID（JMR 引擎）
+     *
+     * @return
+     */
+    public String getClusterId() {
+        return clusterId;
+    }
+
+    /**
+     * set 集群 ID（JMR 引擎）
+     *
+     * @param clusterId
+     */
+    public void setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+    }
+
+
+    /**
+     * get 库名（JMR 引擎）
+     *
+     * @return
+     */
+    public String getDbName() {
+        return dbName;
+    }
+
+    /**
+     * set 库名（JMR 引擎）
+     *
+     * @param dbName
+     */
+    public void setDbName(String dbName) {
+        this.dbName = dbName;
     }
 
 
@@ -116,13 +188,49 @@ public class UranusTableDefaultSourceRequest extends JdcloudRequest implements j
 
 
     /**
-     * set 表来源类型：JCW、AI_LAKE
+     * set 表来源类型，即引擎类型：JCW、AI_LAKE、JMR（必传，为空返回参数错误）
      *
-     * @param sourceType 表来源类型：JCW、AI_LAKE
+     * @param sourceType 表来源类型，即引擎类型：JCW、AI_LAKE、JMR（必传，为空返回参数错误）
      * @return UranusTableDefaultSourceRequest
      */
     public UranusTableDefaultSourceRequest sourceType(String sourceType) {
         this.sourceType = sourceType;
+        return this;
+    }
+
+
+    /**
+     * set 引擎编码
+     *
+     * @param engineCode 引擎编码
+     * @return UranusTableDefaultSourceRequest
+     */
+    public UranusTableDefaultSourceRequest engineCode(String engineCode) {
+        this.engineCode = engineCode;
+        return this;
+    }
+
+
+    /**
+     * set 集群 ID（JMR 引擎）
+     *
+     * @param clusterId 集群 ID（JMR 引擎）
+     * @return UranusTableDefaultSourceRequest
+     */
+    public UranusTableDefaultSourceRequest clusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+
+
+    /**
+     * set 库名（JMR 引擎）
+     *
+     * @param dbName 库名（JMR 引擎）
+     * @return UranusTableDefaultSourceRequest
+     */
+    public UranusTableDefaultSourceRequest dbName(String dbName) {
+        this.dbName = dbName;
         return this;
     }
 

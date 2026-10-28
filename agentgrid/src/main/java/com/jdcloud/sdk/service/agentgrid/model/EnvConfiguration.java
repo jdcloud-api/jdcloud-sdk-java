@@ -91,7 +91,8 @@ public class EnvConfiguration  implements java.io.Serializable {
     /**
      * set 运行时环境变量键，最大长度为256
      *
-     * @param key
+     * @param key 运行时环境变量键，最大长度为256
+     * @return EnvConfiguration
      */
     public EnvConfiguration key(String key) {
         this.key = key;
@@ -102,7 +103,8 @@ public class EnvConfiguration  implements java.io.Serializable {
     /**
      * set 运行时环境变量值，最大长度为16384
      *
-     * @param value
+     * @param value 运行时环境变量值，最大长度为16384
+     * @return EnvConfiguration
      */
     public EnvConfiguration value(String value) {
         this.value = value;

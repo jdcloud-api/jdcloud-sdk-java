@@ -34,6 +34,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 ## 接口说明
 - 每个版本的 &#x60;state&#x60; 可选值为：&#x60;pending&#x60;、&#x60;creating&#x60;、&#x60;running&#x60;、&#x60;failed&#x60;、&#x60;deleted&#x60;。
+- 每个版本分别返回其资源配置；未记录规格时不返回 &#x60;resource&#x60;。
 - 建议在创建 Runtime 或更新 Runtime 后，通过本接口确认版本是否已进入 &#x60;running&#x60;。
 
  */
@@ -119,7 +120,8 @@ public class DescribeRuntimeVersionsResult extends JdcloudResult implements java
     /**
      * set Runtime ID
      *
-     * @param runtimeId
+     * @param runtimeId Runtime ID
+     * @return DescribeRuntimeVersionsResult
      */
     public DescribeRuntimeVersionsResult runtimeId(String runtimeId) {
         this.runtimeId = runtimeId;
@@ -130,7 +132,8 @@ public class DescribeRuntimeVersionsResult extends JdcloudResult implements java
     /**
      * set Runtime 名称
      *
-     * @param name
+     * @param name Runtime 名称
+     * @return DescribeRuntimeVersionsResult
      */
     public DescribeRuntimeVersionsResult name(String name) {
         this.name = name;
@@ -141,7 +144,8 @@ public class DescribeRuntimeVersionsResult extends JdcloudResult implements java
     /**
     * set runtimeVersionViews
     *
-    * @param runtimeVersionViews
+    * @param runtimeVersionViews 
+    * @return DescribeRuntimeVersionsResult
     */
     public DescribeRuntimeVersionsResult runtimeVersionViews(List<RuntimeVersionView> runtimeVersionViews) {
         this.runtimeVersionViews = runtimeVersionViews;

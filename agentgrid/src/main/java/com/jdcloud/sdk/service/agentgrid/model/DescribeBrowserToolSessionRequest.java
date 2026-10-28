@@ -119,7 +119,8 @@ public class DescribeBrowserToolSessionRequest extends JdcloudRequest implements
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribeBrowserToolSessionRequest
      */
     public DescribeBrowserToolSessionRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -130,7 +131,8 @@ public class DescribeBrowserToolSessionRequest extends JdcloudRequest implements
     /**
      * set Browser Tool ID
      *
-     * @param browserToolId
+     * @param browserToolId Browser Tool ID
+     * @return DescribeBrowserToolSessionRequest
      */
     public DescribeBrowserToolSessionRequest browserToolId(String browserToolId) {
         this.browserToolId = browserToolId;
@@ -141,7 +143,8 @@ public class DescribeBrowserToolSessionRequest extends JdcloudRequest implements
     /**
      * set Session ID
      *
-     * @param sessionId
+     * @param sessionId Session ID
+     * @return DescribeBrowserToolSessionRequest
      */
     public DescribeBrowserToolSessionRequest sessionId(String sessionId) {
         this.sessionId = sessionId;

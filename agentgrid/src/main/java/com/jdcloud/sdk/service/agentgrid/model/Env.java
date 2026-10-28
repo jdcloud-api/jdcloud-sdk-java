@@ -91,7 +91,8 @@ public class Env  implements java.io.Serializable {
     /**
      * set 运行时环境变量键
      *
-     * @param key
+     * @param key 运行时环境变量键
+     * @return Env
      */
     public Env key(String key) {
         this.key = key;
@@ -102,7 +103,8 @@ public class Env  implements java.io.Serializable {
     /**
      * set 运行时环境变量值
      *
-     * @param value
+     * @param value 运行时环境变量值
+     * @return Env
      */
     public Env value(String value) {
         this.value = value;

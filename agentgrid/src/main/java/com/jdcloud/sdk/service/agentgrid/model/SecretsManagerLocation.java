@@ -65,7 +65,8 @@ public class SecretsManagerLocation  implements java.io.Serializable {
     /**
      * set 存放证书的 Secrets Manager ARN
      *
-     * @param secretArn
+     * @param secretArn 存放证书的 Secrets Manager ARN
+     * @return SecretsManagerLocation
      */
     public SecretsManagerLocation secretArn(String secretArn) {
         this.secretArn = secretArn;

@@ -24,7 +24,8 @@
 
 package com.jdcloud.sdk.service.agentgrid.model;
 
-import com.jdcloud.sdk.annotation.Required;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 镜像运行配置
@@ -34,16 +35,29 @@ public class ImageConfiguration  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 镜像地址
-     * Required:true
+     * 镜像地址。创建 Runtime 时必填；更新时不传则沿用当前版本的镜像。
      */
-    @Required
     private String imageUrl;
+
+    /**
+     * 覆盖镜像的启动入口（ENTRYPOINT），按数组顺序执行；不传沿用当前配置，更新时传空数组恢复镜像默认启动入口。
+     */
+    
+    private List<String> command;
+    /**
+     * 覆盖镜像的启动参数（CMD）；不传沿用当前配置，更新时传空数组恢复镜像默认启动参数。
+     */
+    
+    private List<String> args;
+    /**
+     * 镜像内服务监听端口，取值范围 1～65535。创建时可选；更新时仅当 Runtime 当前生效版本已有自定义端口才可传入新端口，不传则沿用当前端口。不能在更新时新增或删除自定义端口。端口声明不会改变镜像内进程实际监听的端口。
+     */
+    private Integer port;
 
 
 
     /**
-     * get 镜像地址
+     * get 镜像地址。创建 Runtime 时必填；更新时不传则沿用当前版本的镜像。
      *
      * @return
      */
@@ -52,7 +66,7 @@ public class ImageConfiguration  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像地址
+     * set 镜像地址。创建 Runtime 时必填；更新时不传则沿用当前版本的镜像。
      *
      * @param imageUrl
      */
@@ -61,11 +75,69 @@ public class ImageConfiguration  implements java.io.Serializable {
     }
 
 
+    /**
+    * get 覆盖镜像的启动入口（ENTRYPOINT），按数组顺序执行；不传沿用当前配置，更新时传空数组恢复镜像默认启动入口。
+    *
+    * @return
+    */
+    public List<String> getCommand() {
+        return command;
+    }
 
     /**
-     * set 镜像地址
+    * set 覆盖镜像的启动入口（ENTRYPOINT），按数组顺序执行；不传沿用当前配置，更新时传空数组恢复镜像默认启动入口。
+    *
+    * @param command
+    */
+    public void setCommand(List<String> command) {
+        this.command = command;
+    }
+
+
+    /**
+    * get 覆盖镜像的启动参数（CMD）；不传沿用当前配置，更新时传空数组恢复镜像默认启动参数。
+    *
+    * @return
+    */
+    public List<String> getArgs() {
+        return args;
+    }
+
+    /**
+    * set 覆盖镜像的启动参数（CMD）；不传沿用当前配置，更新时传空数组恢复镜像默认启动参数。
+    *
+    * @param args
+    */
+    public void setArgs(List<String> args) {
+        this.args = args;
+    }
+
+
+    /**
+     * get 镜像内服务监听端口，取值范围 1～65535。创建时可选；更新时仅当 Runtime 当前生效版本已有自定义端口才可传入新端口，不传则沿用当前端口。不能在更新时新增或删除自定义端口。端口声明不会改变镜像内进程实际监听的端口。
      *
-     * @param imageUrl
+     * @return
+     */
+    public Integer getPort() {
+        return port;
+    }
+
+    /**
+     * set 镜像内服务监听端口，取值范围 1～65535。创建时可选；更新时仅当 Runtime 当前生效版本已有自定义端口才可传入新端口，不传则沿用当前端口。不能在更新时新增或删除自定义端口。端口声明不会改变镜像内进程实际监听的端口。
+     *
+     * @param port
+     */
+    public void setPort(Integer port) {
+        this.port = port;
+    }
+
+
+
+    /**
+     * set 镜像地址。创建 Runtime 时必填；更新时不传则沿用当前版本的镜像。
+     *
+     * @param imageUrl 镜像地址。创建 Runtime 时必填；更新时不传则沿用当前版本的镜像。
+     * @return ImageConfiguration
      */
     public ImageConfiguration imageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
@@ -73,4 +145,64 @@ public class ImageConfiguration  implements java.io.Serializable {
     }
 
 
+    /**
+    * set 覆盖镜像的启动入口（ENTRYPOINT），按数组顺序执行；不传沿用当前配置，更新时传空数组恢复镜像默认启动入口。
+    *
+    * @param command 覆盖镜像的启动入口（ENTRYPOINT），按数组顺序执行；不传沿用当前配置，更新时传空数组恢复镜像默认启动入口。
+    * @return ImageConfiguration
+    */
+    public ImageConfiguration command(List<String> command) {
+        this.command = command;
+        return this;
+    }
+
+
+    /**
+    * set 覆盖镜像的启动参数（CMD）；不传沿用当前配置，更新时传空数组恢复镜像默认启动参数。
+    *
+    * @param args 覆盖镜像的启动参数（CMD）；不传沿用当前配置，更新时传空数组恢复镜像默认启动参数。
+    * @return ImageConfiguration
+    */
+    public ImageConfiguration args(List<String> args) {
+        this.args = args;
+        return this;
+    }
+
+
+    /**
+     * set 镜像内服务监听端口，取值范围 1～65535。创建时可选；更新时仅当 Runtime 当前生效版本已有自定义端口才可传入新端口，不传则沿用当前端口。不能在更新时新增或删除自定义端口。端口声明不会改变镜像内进程实际监听的端口。
+     *
+     * @param port 镜像内服务监听端口，取值范围 1～65535。创建时可选；更新时仅当 Runtime 当前生效版本已有自定义端口才可传入新端口，不传则沿用当前端口。不能在更新时新增或删除自定义端口。端口声明不会改变镜像内进程实际监听的端口。
+     * @return ImageConfiguration
+     */
+    public ImageConfiguration port(Integer port) {
+        this.port = port;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 覆盖镜像的启动入口（ENTRYPOINT），按数组顺序执行；不传沿用当前配置，更新时传空数组恢复镜像默认启动入口。
+     *
+     * @param command
+     */
+    public void addCommand(String command) {
+        if (this.command == null) {
+            this.command = new ArrayList<>();
+        }
+        this.command.add(command);
+    }
+
+    /**
+     * add item to 覆盖镜像的启动参数（CMD）；不传沿用当前配置，更新时传空数组恢复镜像默认启动参数。
+     *
+     * @param arg
+     */
+    public void addArg(String arg) {
+        if (this.args == null) {
+            this.args = new ArrayList<>();
+        }
+        this.args.add(arg);
+    }
 }

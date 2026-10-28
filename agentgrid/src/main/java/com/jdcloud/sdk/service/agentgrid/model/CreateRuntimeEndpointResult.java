@@ -92,7 +92,8 @@ public class CreateRuntimeEndpointResult extends JdcloudResult implements java.i
     /**
      * set 公网访问地址。
      *
-     * @param publicEndpoint
+     * @param publicEndpoint 公网访问地址。
+     * @return CreateRuntimeEndpointResult
      */
     public CreateRuntimeEndpointResult publicEndpoint(String publicEndpoint) {
         this.publicEndpoint = publicEndpoint;
@@ -103,7 +104,8 @@ public class CreateRuntimeEndpointResult extends JdcloudResult implements java.i
     /**
      * set 私网访问地址。
      *
-     * @param internalEndpoint
+     * @param internalEndpoint 私网访问地址。
+     * @return CreateRuntimeEndpointResult
      */
     public CreateRuntimeEndpointResult internalEndpoint(String internalEndpoint) {
         this.internalEndpoint = internalEndpoint;

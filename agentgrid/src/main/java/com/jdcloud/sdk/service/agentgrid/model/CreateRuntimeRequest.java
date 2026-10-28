@@ -28,11 +28,15 @@ import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.agentgrid.model.ArtifactConfiguration;
+import com.jdcloud.sdk.service.agentgrid.model.ResourceConfiguration;
 import com.jdcloud.sdk.service.agentgrid.model.AuthorizerConfiguration;
 import com.jdcloud.sdk.service.agentgrid.model.LifecycleConfiguration;
+import com.jdcloud.sdk.service.agentgrid.model.LogConfiguration;
 import com.jdcloud.sdk.service.agentgrid.model.NetworkConfiguration;
 import com.jdcloud.sdk.service.agentgrid.model.EnvConfiguration;
-import com.jdcloud.sdk.service.agentgrid.model.FilesystemConfiguration;
+import com.jdcloud.sdk.service.agentgrid.model.FileSystemConfiguration;
+import com.jdcloud.sdk.service.agentgrid.model.ImageVolume;
+import com.jdcloud.sdk.service.agentgrid.model.Tag;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -41,6 +45,9 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 ## 接口说明
 - 支持通过 &#x60;clientToken&#x60; 保证请求幂等性。
 - 创建时需提供制品、鉴权方式、网络等核心配置信息。
+- 镜像制品的 &#x60;imageUrl&#x60; 必填；可选的 &#x60;command&#x60;、&#x60;args&#x60; 分别覆盖镜像的 ENTRYPOINT、CMD，&#x60;port&#x60; 声明镜像内服务实际监听的端口（1～65535）。不填写这些可选项时沿用镜像默认启动方式和协议默认端口。
+- 可通过 &#x60;imageVolumes&#x60; 配置最多 1 个只读镜像卷，挂载路径必须位于 &#x60;/mnt&#x60; 的子目录下，且不能与 OSS 或 CFS 挂载点重叠。
+- 支持在创建时指定用户标签和资源组；标签或资源组参数会在创建前进行合法性校验，并在 Runtime 创建成功后绑定到资源。
 - Runtime 状态包括：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;creating&#x60;（创建中）、&#x60;running&#x60;（可正常调用）、&#x60;updating&#x60;（版本或配置更新中）、&#x60;failed&#x60;（处理失败）、&#x60;deleted&#x60;（已删除，不可继续使用）。
 - Runtime Version 状态包括：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;creating&#x60;（创建中）、&#x60;running&#x60;（可正常使用）、&#x60;failed&#x60;（处理失败）、&#x60;deleted&#x60;（已删除）。
 - 本接口为异步接口，请求受理成功后会返回 &#x60;requestId&#x60;、&#x60;runtimeId&#x60; 和初始 &#x60;runtimeVersion&#x60;。创建初期，Runtime 与首个 Runtime Version 通常先处于 &#x60;pending&#x60;，随后进入 &#x60;creating&#x60;，最终进入 &#x60;running&#x60; 或 &#x60;failed&#x60;。
@@ -59,7 +66,7 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     private String name;
 
     /**
-     * Runtime 制品配置，当前支持通过镜像导入
+     * Runtime 制品配置，当前支持通过镜像导入；创建时必须提供 &#x60;image.imageUrl&#x60;，&#x60;image.command&#x60;、&#x60;image.args&#x60;、&#x60;image.port&#x60; 可选。
      * Required:true
      */
     @Required
@@ -74,6 +81,11 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
      * Runtime 可承载的最大 Session 数量，取值范围1～10，默认值为 10。
      */
     private Integer maxSession;
+
+    /**
+     * Runtime 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     */
+    private ResourceConfiguration resourceConfiguration;
 
     /**
      * Runtime 描述信息。
@@ -91,6 +103,11 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
      * Runtime 生命周期配置。
      */
     private LifecycleConfiguration lifecycleConfiguration;
+
+    /**
+     * Runtime 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     */
+    private LogConfiguration logConfiguration;
 
     /**
      * Runtime 网络配置。
@@ -112,10 +129,25 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * Runtime 文件系统配置，最多支持配置 5 个文件系统。
      */
-    private FilesystemConfiguration filesystemConfiguration;
+    private FileSystemConfiguration fileSystemConfiguration;
 
     /**
-     * Runtime 支持的协议类型。当前支持http、mcp、a2a。
+     * Runtime 只读镜像卷配置，最多 1 个，数组元素不能为 null。不传、传 null 或空数组表示不配置镜像卷。
+     */
+    
+    private List<ImageVolume> imageVolumes;
+    /**
+     * Runtime 用户标签配置。
+     */
+    
+    private List<Tag> tags;
+    /**
+     * Runtime 所属资源组 ID；不指定时使用默认资源组。
+     */
+    private String resourceGroupId;
+
+    /**
+     * Runtime 支持的协议类型。当前支持 http、mcp、a2a；创建后不可修改。
      */
     private String protocol;
 
@@ -153,7 +185,7 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get Runtime 制品配置，当前支持通过镜像导入
+     * get Runtime 制品配置，当前支持通过镜像导入；创建时必须提供 &#x60;image.imageUrl&#x60;，&#x60;image.command&#x60;、&#x60;image.args&#x60;、&#x60;image.port&#x60; 可选。
      *
      * @return
      */
@@ -162,7 +194,7 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Runtime 制品配置，当前支持通过镜像导入
+     * set Runtime 制品配置，当前支持通过镜像导入；创建时必须提供 &#x60;image.imageUrl&#x60;，&#x60;image.command&#x60;、&#x60;image.args&#x60;、&#x60;image.port&#x60; 可选。
      *
      * @param artifactConfiguration
      */
@@ -206,6 +238,25 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
      */
     public void setMaxSession(Integer maxSession) {
         this.maxSession = maxSession;
+    }
+
+
+    /**
+     * get Runtime 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     *
+     * @return
+     */
+    public ResourceConfiguration getResourceConfiguration() {
+        return resourceConfiguration;
+    }
+
+    /**
+     * set Runtime 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     *
+     * @param resourceConfiguration
+     */
+    public void setResourceConfiguration(ResourceConfiguration resourceConfiguration) {
+        this.resourceConfiguration = resourceConfiguration;
     }
 
 
@@ -263,6 +314,25 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
      */
     public void setLifecycleConfiguration(LifecycleConfiguration lifecycleConfiguration) {
         this.lifecycleConfiguration = lifecycleConfiguration;
+    }
+
+
+    /**
+     * get Runtime 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     *
+     * @return
+     */
+    public LogConfiguration getLogConfiguration() {
+        return logConfiguration;
+    }
+
+    /**
+     * set Runtime 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     *
+     * @param logConfiguration
+     */
+    public void setLogConfiguration(LogConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
     }
 
 
@@ -328,22 +398,79 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
      *
      * @return
      */
-    public FilesystemConfiguration getFilesystemConfiguration() {
-        return filesystemConfiguration;
+    public FileSystemConfiguration getFileSystemConfiguration() {
+        return fileSystemConfiguration;
     }
 
     /**
      * set Runtime 文件系统配置，最多支持配置 5 个文件系统。
      *
-     * @param filesystemConfiguration
+     * @param fileSystemConfiguration
      */
-    public void setFilesystemConfiguration(FilesystemConfiguration filesystemConfiguration) {
-        this.filesystemConfiguration = filesystemConfiguration;
+    public void setFileSystemConfiguration(FileSystemConfiguration fileSystemConfiguration) {
+        this.fileSystemConfiguration = fileSystemConfiguration;
     }
 
 
     /**
-     * get Runtime 支持的协议类型。当前支持http、mcp、a2a。
+    * get Runtime 只读镜像卷配置，最多 1 个，数组元素不能为 null。不传、传 null 或空数组表示不配置镜像卷。
+    *
+    * @return
+    */
+    public List<ImageVolume> getImageVolumes() {
+        return imageVolumes;
+    }
+
+    /**
+    * set Runtime 只读镜像卷配置，最多 1 个，数组元素不能为 null。不传、传 null 或空数组表示不配置镜像卷。
+    *
+    * @param imageVolumes
+    */
+    public void setImageVolumes(List<ImageVolume> imageVolumes) {
+        this.imageVolumes = imageVolumes;
+    }
+
+
+    /**
+    * get Runtime 用户标签配置。
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Runtime 用户标签配置。
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get Runtime 所属资源组 ID；不指定时使用默认资源组。
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set Runtime 所属资源组 ID；不指定时使用默认资源组。
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
+     * get Runtime 支持的协议类型。当前支持 http、mcp、a2a；创建后不可修改。
      *
      * @return
      */
@@ -352,7 +479,7 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Runtime 支持的协议类型。当前支持http、mcp、a2a。
+     * set Runtime 支持的协议类型。当前支持 http、mcp、a2a；创建后不可修改。
      *
      * @param protocol
      */
@@ -403,7 +530,8 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Runtime 名称。长度为 1~32 个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
      *
-     * @param name
+     * @param name Runtime 名称。长度为 1~32 个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
+     * @return CreateRuntimeRequest
      */
     public CreateRuntimeRequest name(String name) {
         this.name = name;
@@ -412,9 +540,10 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set Runtime 制品配置，当前支持通过镜像导入
+     * set Runtime 制品配置，当前支持通过镜像导入；创建时必须提供 &#x60;image.imageUrl&#x60;，&#x60;image.command&#x60;、&#x60;image.args&#x60;、&#x60;image.port&#x60; 可选。
      *
-     * @param artifactConfiguration
+     * @param artifactConfiguration Runtime 制品配置，当前支持通过镜像导入；创建时必须提供 &#x60;image.imageUrl&#x60;，&#x60;image.command&#x60;、&#x60;image.args&#x60;、&#x60;image.port&#x60; 可选。
+     * @return CreateRuntimeRequest
      */
     public CreateRuntimeRequest artifactConfiguration(ArtifactConfiguration artifactConfiguration) {
         this.artifactConfiguration = artifactConfiguration;
@@ -425,7 +554,8 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Runtime 预热 Session 数量，进行预热后，将会提前生成对应数量的 Session 实例，可以大幅减少会话初次启动时间。取值范围1～10，默认值为 1，且应小于等于 &#x60;maxSession&#x60;。
      *
-     * @param warmSession
+     * @param warmSession Runtime 预热 Session 数量，进行预热后，将会提前生成对应数量的 Session 实例，可以大幅减少会话初次启动时间。取值范围1～10，默认值为 1，且应小于等于 &#x60;maxSession&#x60;。
+     * @return CreateRuntimeRequest
      */
     public CreateRuntimeRequest warmSession(Integer warmSession) {
         this.warmSession = warmSession;
@@ -436,7 +566,8 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Runtime 可承载的最大 Session 数量，取值范围1～10，默认值为 10。
      *
-     * @param maxSession
+     * @param maxSession Runtime 可承载的最大 Session 数量，取值范围1～10，默认值为 10。
+     * @return CreateRuntimeRequest
      */
     public CreateRuntimeRequest maxSession(Integer maxSession) {
         this.maxSession = maxSession;
@@ -445,9 +576,22 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * set Runtime 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     *
+     * @param resourceConfiguration Runtime 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     * @return CreateRuntimeRequest
+     */
+    public CreateRuntimeRequest resourceConfiguration(ResourceConfiguration resourceConfiguration) {
+        this.resourceConfiguration = resourceConfiguration;
+        return this;
+    }
+
+
+    /**
      * set Runtime 描述信息。
      *
-     * @param description
+     * @param description Runtime 描述信息。
+     * @return CreateRuntimeRequest
      */
     public CreateRuntimeRequest description(String description) {
         this.description = description;
@@ -458,7 +602,8 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Runtime 鉴权配置。
      *
-     * @param authorizerConfiguration
+     * @param authorizerConfiguration Runtime 鉴权配置。
+     * @return CreateRuntimeRequest
      */
     public CreateRuntimeRequest authorizerConfiguration(AuthorizerConfiguration authorizerConfiguration) {
         this.authorizerConfiguration = authorizerConfiguration;
@@ -469,7 +614,8 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Runtime 生命周期配置。
      *
-     * @param lifecycleConfiguration
+     * @param lifecycleConfiguration Runtime 生命周期配置。
+     * @return CreateRuntimeRequest
      */
     public CreateRuntimeRequest lifecycleConfiguration(LifecycleConfiguration lifecycleConfiguration) {
         this.lifecycleConfiguration = lifecycleConfiguration;
@@ -478,9 +624,22 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * set Runtime 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     *
+     * @param logConfiguration Runtime 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     * @return CreateRuntimeRequest
+     */
+    public CreateRuntimeRequest logConfiguration(LogConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
+        return this;
+    }
+
+
+    /**
      * set Runtime 网络配置。
      *
-     * @param networkConfiguration
+     * @param networkConfiguration Runtime 网络配置。
+     * @return CreateRuntimeRequest
      */
     public CreateRuntimeRequest networkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
@@ -491,7 +650,8 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 绑定 IAM 服务角色名。
      *
-     * @param roleName
+     * @param roleName 绑定 IAM 服务角色名。
+     * @return CreateRuntimeRequest
      */
     public CreateRuntimeRequest roleName(String roleName) {
         this.roleName = roleName;
@@ -502,7 +662,8 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
     * set Runtime 环境变量配置，最多 50 组。
     *
-    * @param envs
+    * @param envs Runtime 环境变量配置，最多 50 组。
+    * @return CreateRuntimeRequest
     */
     public CreateRuntimeRequest envs(List<EnvConfiguration> envs) {
         this.envs = envs;
@@ -513,18 +674,56 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Runtime 文件系统配置，最多支持配置 5 个文件系统。
      *
-     * @param filesystemConfiguration
+     * @param fileSystemConfiguration Runtime 文件系统配置，最多支持配置 5 个文件系统。
+     * @return CreateRuntimeRequest
      */
-    public CreateRuntimeRequest filesystemConfiguration(FilesystemConfiguration filesystemConfiguration) {
-        this.filesystemConfiguration = filesystemConfiguration;
+    public CreateRuntimeRequest fileSystemConfiguration(FileSystemConfiguration fileSystemConfiguration) {
+        this.fileSystemConfiguration = fileSystemConfiguration;
         return this;
     }
 
 
     /**
-     * set Runtime 支持的协议类型。当前支持http、mcp、a2a。
+    * set Runtime 只读镜像卷配置，最多 1 个，数组元素不能为 null。不传、传 null 或空数组表示不配置镜像卷。
+    *
+    * @param imageVolumes Runtime 只读镜像卷配置，最多 1 个，数组元素不能为 null。不传、传 null 或空数组表示不配置镜像卷。
+    * @return CreateRuntimeRequest
+    */
+    public CreateRuntimeRequest imageVolumes(List<ImageVolume> imageVolumes) {
+        this.imageVolumes = imageVolumes;
+        return this;
+    }
+
+
+    /**
+    * set Runtime 用户标签配置。
+    *
+    * @param tags Runtime 用户标签配置。
+    * @return CreateRuntimeRequest
+    */
+    public CreateRuntimeRequest tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set Runtime 所属资源组 ID；不指定时使用默认资源组。
      *
-     * @param protocol
+     * @param resourceGroupId Runtime 所属资源组 ID；不指定时使用默认资源组。
+     * @return CreateRuntimeRequest
+     */
+    public CreateRuntimeRequest resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
+     * set Runtime 支持的协议类型。当前支持 http、mcp、a2a；创建后不可修改。
+     *
+     * @param protocol Runtime 支持的协议类型。当前支持 http、mcp、a2a；创建后不可修改。
+     * @return CreateRuntimeRequest
      */
     public CreateRuntimeRequest protocol(String protocol) {
         this.protocol = protocol;
@@ -535,7 +734,8 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 用于保证请求幂等性。
      *
-     * @param clientToken
+     * @param clientToken 用于保证请求幂等性。
+     * @return CreateRuntimeRequest
      */
     public CreateRuntimeRequest clientToken(String clientToken) {
         this.clientToken = clientToken;
@@ -546,7 +746,8 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return CreateRuntimeRequest
      */
     public CreateRuntimeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -565,5 +766,29 @@ public class CreateRuntimeRequest extends JdcloudRequest implements java.io.Seri
             this.envs = new ArrayList<>();
         }
         this.envs.add(env);
+    }
+
+    /**
+     * add item to Runtime 只读镜像卷配置，最多 1 个，数组元素不能为 null。不传、传 null 或空数组表示不配置镜像卷。
+     *
+     * @param imageVolume
+     */
+    public void addImageVolume(ImageVolume imageVolume) {
+        if (this.imageVolumes == null) {
+            this.imageVolumes = new ArrayList<>();
+        }
+        this.imageVolumes.add(imageVolume);
+    }
+
+    /**
+     * add item to Runtime 用户标签配置。
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 }

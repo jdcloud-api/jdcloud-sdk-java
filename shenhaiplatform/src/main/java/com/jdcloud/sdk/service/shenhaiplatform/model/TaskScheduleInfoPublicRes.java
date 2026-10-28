@@ -83,6 +83,11 @@ public class TaskScheduleInfoPublicRes  implements java.io.Serializable {
     private String resourceCode;
 
     /**
+     * 执行引擎编码（任务绑定的计算引擎实例Code）
+     */
+    private String engineCode;
+
+    /**
      * 用于标识任务调度所需的镜像, 适用于Python任务, 当配置为0时 更新为系统默认镜像
      */
     private Long imageId;
@@ -280,6 +285,25 @@ public class TaskScheduleInfoPublicRes  implements java.io.Serializable {
 
 
     /**
+     * get 执行引擎编码（任务绑定的计算引擎实例Code）
+     *
+     * @return
+     */
+    public String getEngineCode() {
+        return engineCode;
+    }
+
+    /**
+     * set 执行引擎编码（任务绑定的计算引擎实例Code）
+     *
+     * @param engineCode
+     */
+    public void setEngineCode(String engineCode) {
+        this.engineCode = engineCode;
+    }
+
+
+    /**
      * get 用于标识任务调度所需的镜像, 适用于Python任务, 当配置为0时 更新为系统默认镜像
      *
      * @return
@@ -415,6 +439,18 @@ public class TaskScheduleInfoPublicRes  implements java.io.Serializable {
      */
     public TaskScheduleInfoPublicRes resourceCode(String resourceCode) {
         this.resourceCode = resourceCode;
+        return this;
+    }
+
+
+    /**
+     * set 执行引擎编码（任务绑定的计算引擎实例Code）
+     *
+     * @param engineCode 执行引擎编码（任务绑定的计算引擎实例Code）
+     * @return TaskScheduleInfoPublicRes
+     */
+    public TaskScheduleInfoPublicRes engineCode(String engineCode) {
+        this.engineCode = engineCode;
         return this;
     }
 

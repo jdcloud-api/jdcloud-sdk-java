@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.shenhaiplatform.model.UranusTableDefaultSourceResponse;
 
 /**
- * 更新用户默认表来源
+ * 更新用户默认表来源（即引擎类型）与默认引擎编码，各字段非空才覆盖
  */
 class UranusTableDefaultSourceExecutor extends JdcloudExecutor {
 

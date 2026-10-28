@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.agentgrid.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * CFS 访问点配置
@@ -33,18 +34,17 @@ public class CfsAccessPointConfiguration  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 挂载目标ID。
+     * CFS 文件系统 ID。长度不能超过 64 个字符，必须以字母或数字开头，仅支持字母、数字、点号（.）、下划线（_）、冒号（:）和连字符（-）。同一个 Runtime 中不能重复配置相同的文件系统 ID。
+     * Required:true
      */
-    private String mountTargetId;
+    @Required
+    private String fileSystemId;
 
     /**
-     * CFS 路径，可以不填，默认值为 /cfs。
+     * 挂载在 Runtime 内的路径。必须位于 /mnt 的子目录下，不能直接使用 /mnt；所有 OSS、CFS 和镜像卷挂载点不能相同，也不能互为父子路径。
+     * Required:true
      */
-    private String path;
-
-    /**
-     * 挂载在 Runtime 内的路径。MountPath 必须是绝对路径，即以 &#39;/&#39; 开头；不允许是 /、/bin、/usr、/var/run、/proc、/sys、/dev 系统路径；多个挂载点不能互为父子路径，例如 /mnt 和 /mnt/data。
-     */
+    @Required
     private String mountPath;
 
     /**
@@ -55,45 +55,26 @@ public class CfsAccessPointConfiguration  implements java.io.Serializable {
 
 
     /**
-     * get 挂载目标ID。
+     * get CFS 文件系统 ID。长度不能超过 64 个字符，必须以字母或数字开头，仅支持字母、数字、点号（.）、下划线（_）、冒号（:）和连字符（-）。同一个 Runtime 中不能重复配置相同的文件系统 ID。
      *
      * @return
      */
-    public String getMountTargetId() {
-        return mountTargetId;
+    public String getFileSystemId() {
+        return fileSystemId;
     }
 
     /**
-     * set 挂载目标ID。
+     * set CFS 文件系统 ID。长度不能超过 64 个字符，必须以字母或数字开头，仅支持字母、数字、点号（.）、下划线（_）、冒号（:）和连字符（-）。同一个 Runtime 中不能重复配置相同的文件系统 ID。
      *
-     * @param mountTargetId
+     * @param fileSystemId
      */
-    public void setMountTargetId(String mountTargetId) {
-        this.mountTargetId = mountTargetId;
+    public void setFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
     }
 
 
     /**
-     * get CFS 路径，可以不填，默认值为 /cfs。
-     *
-     * @return
-     */
-    public String getPath() {
-        return path;
-    }
-
-    /**
-     * set CFS 路径，可以不填，默认值为 /cfs。
-     *
-     * @param path
-     */
-    public void setPath(String path) {
-        this.path = path;
-    }
-
-
-    /**
-     * get 挂载在 Runtime 内的路径。MountPath 必须是绝对路径，即以 &#39;/&#39; 开头；不允许是 /、/bin、/usr、/var/run、/proc、/sys、/dev 系统路径；多个挂载点不能互为父子路径，例如 /mnt 和 /mnt/data。
+     * get 挂载在 Runtime 内的路径。必须位于 /mnt 的子目录下，不能直接使用 /mnt；所有 OSS、CFS 和镜像卷挂载点不能相同，也不能互为父子路径。
      *
      * @return
      */
@@ -102,7 +83,7 @@ public class CfsAccessPointConfiguration  implements java.io.Serializable {
     }
 
     /**
-     * set 挂载在 Runtime 内的路径。MountPath 必须是绝对路径，即以 &#39;/&#39; 开头；不允许是 /、/bin、/usr、/var/run、/proc、/sys、/dev 系统路径；多个挂载点不能互为父子路径，例如 /mnt 和 /mnt/data。
+     * set 挂载在 Runtime 内的路径。必须位于 /mnt 的子目录下，不能直接使用 /mnt；所有 OSS、CFS 和镜像卷挂载点不能相同，也不能互为父子路径。
      *
      * @param mountPath
      */
@@ -132,31 +113,22 @@ public class CfsAccessPointConfiguration  implements java.io.Serializable {
 
 
     /**
-     * set 挂载目标ID。
+     * set CFS 文件系统 ID。长度不能超过 64 个字符，必须以字母或数字开头，仅支持字母、数字、点号（.）、下划线（_）、冒号（:）和连字符（-）。同一个 Runtime 中不能重复配置相同的文件系统 ID。
      *
-     * @param mountTargetId
+     * @param fileSystemId CFS 文件系统 ID。长度不能超过 64 个字符，必须以字母或数字开头，仅支持字母、数字、点号（.）、下划线（_）、冒号（:）和连字符（-）。同一个 Runtime 中不能重复配置相同的文件系统 ID。
+     * @return CfsAccessPointConfiguration
      */
-    public CfsAccessPointConfiguration mountTargetId(String mountTargetId) {
-        this.mountTargetId = mountTargetId;
+    public CfsAccessPointConfiguration fileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
         return this;
     }
 
 
     /**
-     * set CFS 路径，可以不填，默认值为 /cfs。
+     * set 挂载在 Runtime 内的路径。必须位于 /mnt 的子目录下，不能直接使用 /mnt；所有 OSS、CFS 和镜像卷挂载点不能相同，也不能互为父子路径。
      *
-     * @param path
-     */
-    public CfsAccessPointConfiguration path(String path) {
-        this.path = path;
-        return this;
-    }
-
-
-    /**
-     * set 挂载在 Runtime 内的路径。MountPath 必须是绝对路径，即以 &#39;/&#39; 开头；不允许是 /、/bin、/usr、/var/run、/proc、/sys、/dev 系统路径；多个挂载点不能互为父子路径，例如 /mnt 和 /mnt/data。
-     *
-     * @param mountPath
+     * @param mountPath 挂载在 Runtime 内的路径。必须位于 /mnt 的子目录下，不能直接使用 /mnt；所有 OSS、CFS 和镜像卷挂载点不能相同，也不能互为父子路径。
+     * @return CfsAccessPointConfiguration
      */
     public CfsAccessPointConfiguration mountPath(String mountPath) {
         this.mountPath = mountPath;
@@ -167,7 +139,8 @@ public class CfsAccessPointConfiguration  implements java.io.Serializable {
     /**
      * set 文件系统是否只读。
      *
-     * @param readOnly
+     * @param readOnly 文件系统是否只读。
+     * @return CfsAccessPointConfiguration
      */
     public CfsAccessPointConfiguration readOnly(Boolean readOnly) {
         this.readOnly = readOnly;

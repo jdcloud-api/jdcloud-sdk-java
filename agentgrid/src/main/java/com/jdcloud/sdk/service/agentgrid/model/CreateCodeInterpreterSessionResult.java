@@ -68,7 +68,8 @@ public class CreateCodeInterpreterSessionResult extends JdcloudResult implements
     /**
      * set 创建的 Session ID。
      *
-     * @param sessionId
+     * @param sessionId 创建的 Session ID。
+     * @return CreateCodeInterpreterSessionResult
      */
     public CreateCodeInterpreterSessionResult sessionId(String sessionId) {
         this.sessionId = sessionId;

@@ -35,6 +35,11 @@ public class ExternalQueue  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 仅用于响应，创建和更新请求不应传入。owned表示拥有，managed表示管理，shared表示被授权共享；不代表写操作权限。共享响应仅返回基础信息，私有字段不返回。
+     */
+    private String accessRelation;
+
+    /**
      * 资源队列ID
      */
     private String id;
@@ -127,6 +132,25 @@ public class ExternalQueue  implements java.io.Serializable {
      */
     
     private List<RealTimeResourceStatisticsItem> realTimeResourceStatistics;
+
+
+    /**
+     * get 仅用于响应，创建和更新请求不应传入。owned表示拥有，managed表示管理，shared表示被授权共享；不代表写操作权限。共享响应仅返回基础信息，私有字段不返回。
+     *
+     * @return
+     */
+    public String getAccessRelation() {
+        return accessRelation;
+    }
+
+    /**
+     * set 仅用于响应，创建和更新请求不应传入。owned表示拥有，managed表示管理，shared表示被授权共享；不代表写操作权限。共享响应仅返回基础信息，私有字段不返回。
+     *
+     * @param accessRelation
+     */
+    public void setAccessRelation(String accessRelation) {
+        this.accessRelation = accessRelation;
+    }
 
 
     /**
@@ -467,6 +491,18 @@ public class ExternalQueue  implements java.io.Serializable {
         this.realTimeResourceStatistics = realTimeResourceStatistics;
     }
 
+
+
+    /**
+     * set 仅用于响应，创建和更新请求不应传入。owned表示拥有，managed表示管理，shared表示被授权共享；不代表写操作权限。共享响应仅返回基础信息，私有字段不返回。
+     *
+     * @param accessRelation 仅用于响应，创建和更新请求不应传入。owned表示拥有，managed表示管理，shared表示被授权共享；不代表写操作权限。共享响应仅返回基础信息，私有字段不返回。
+     * @return ExternalQueue
+     */
+    public ExternalQueue accessRelation(String accessRelation) {
+        this.accessRelation = accessRelation;
+        return this;
+    }
 
 
     /**

@@ -62,7 +62,8 @@ public class CertificateLocation  implements java.io.Serializable {
     /**
      * set Secrets Manager 位置配置
      *
-     * @param secretsManager
+     * @param secretsManager Secrets Manager 位置配置
+     * @return CertificateLocation
      */
     public CertificateLocation secretsManager(SecretsManagerLocation secretsManager) {
         this.secretsManager = secretsManager;

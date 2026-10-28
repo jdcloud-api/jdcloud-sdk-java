@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.agentgrid.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * OSS 访问点配置
@@ -34,7 +35,9 @@ public class OssAccessPointConfiguration  implements java.io.Serializable {
 
     /**
      * OSS Bucket 名称。长度必须在 3~63 个字符之间，仅能由小写字母、数字、连字符（-）组成，且必须以小写字母或数字开头和结尾。
+     * Required:true
      */
+    @Required
     private String bucketName;
 
     /**
@@ -43,9 +46,16 @@ public class OssAccessPointConfiguration  implements java.io.Serializable {
     private String bucketPath;
 
     /**
-     * 挂载在 Runtime 内的路径。MountPath 必须是绝对路径，即以 &#39;/&#39; 开头；不允许是 /、/etc、/bin、/usr、/var/run、/proc、/sys、/dev 等系统路径；多个挂载点不能互为父子路径，例如 /mnt 和 /mnt/data。
+     * 挂载在 Runtime 内的路径。必须位于 /mnt 的子目录下，不能直接使用 /mnt；所有 OSS、CFS 和镜像卷挂载点不能相同，也不能互为父子路径。
+     * Required:true
      */
+    @Required
     private String mountPath;
+
+    /**
+     * 是否以只读方式挂载 OSS，默认 false，表示可读写。
+     */
+    private Boolean readOnly;
 
 
 
@@ -88,7 +98,7 @@ public class OssAccessPointConfiguration  implements java.io.Serializable {
 
 
     /**
-     * get 挂载在 Runtime 内的路径。MountPath 必须是绝对路径，即以 &#39;/&#39; 开头；不允许是 /、/etc、/bin、/usr、/var/run、/proc、/sys、/dev 等系统路径；多个挂载点不能互为父子路径，例如 /mnt 和 /mnt/data。
+     * get 挂载在 Runtime 内的路径。必须位于 /mnt 的子目录下，不能直接使用 /mnt；所有 OSS、CFS 和镜像卷挂载点不能相同，也不能互为父子路径。
      *
      * @return
      */
@@ -97,7 +107,7 @@ public class OssAccessPointConfiguration  implements java.io.Serializable {
     }
 
     /**
-     * set 挂载在 Runtime 内的路径。MountPath 必须是绝对路径，即以 &#39;/&#39; 开头；不允许是 /、/etc、/bin、/usr、/var/run、/proc、/sys、/dev 等系统路径；多个挂载点不能互为父子路径，例如 /mnt 和 /mnt/data。
+     * set 挂载在 Runtime 内的路径。必须位于 /mnt 的子目录下，不能直接使用 /mnt；所有 OSS、CFS 和镜像卷挂载点不能相同，也不能互为父子路径。
      *
      * @param mountPath
      */
@@ -106,11 +116,31 @@ public class OssAccessPointConfiguration  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 是否以只读方式挂载 OSS，默认 false，表示可读写。
+     *
+     * @return
+     */
+    public Boolean getReadOnly() {
+        return readOnly;
+    }
+
+    /**
+     * set 是否以只读方式挂载 OSS，默认 false，表示可读写。
+     *
+     * @param readOnly
+     */
+    public void setReadOnly(Boolean readOnly) {
+        this.readOnly = readOnly;
+    }
+
+
 
     /**
      * set OSS Bucket 名称。长度必须在 3~63 个字符之间，仅能由小写字母、数字、连字符（-）组成，且必须以小写字母或数字开头和结尾。
      *
-     * @param bucketName
+     * @param bucketName OSS Bucket 名称。长度必须在 3~63 个字符之间，仅能由小写字母、数字、连字符（-）组成，且必须以小写字母或数字开头和结尾。
+     * @return OssAccessPointConfiguration
      */
     public OssAccessPointConfiguration bucketName(String bucketName) {
         this.bucketName = bucketName;
@@ -121,7 +151,8 @@ public class OssAccessPointConfiguration  implements java.io.Serializable {
     /**
      * set OSS Bucket 内的文件夹路径。文件夹名称全路径长度不能超过 1022 个字节，不能包含反斜杠（\）或双斜杠（//），且文件夹不能以斜杠（/）开头。
      *
-     * @param bucketPath
+     * @param bucketPath OSS Bucket 内的文件夹路径。文件夹名称全路径长度不能超过 1022 个字节，不能包含反斜杠（\）或双斜杠（//），且文件夹不能以斜杠（/）开头。
+     * @return OssAccessPointConfiguration
      */
     public OssAccessPointConfiguration bucketPath(String bucketPath) {
         this.bucketPath = bucketPath;
@@ -130,12 +161,25 @@ public class OssAccessPointConfiguration  implements java.io.Serializable {
 
 
     /**
-     * set 挂载在 Runtime 内的路径。MountPath 必须是绝对路径，即以 &#39;/&#39; 开头；不允许是 /、/etc、/bin、/usr、/var/run、/proc、/sys、/dev 等系统路径；多个挂载点不能互为父子路径，例如 /mnt 和 /mnt/data。
+     * set 挂载在 Runtime 内的路径。必须位于 /mnt 的子目录下，不能直接使用 /mnt；所有 OSS、CFS 和镜像卷挂载点不能相同，也不能互为父子路径。
      *
-     * @param mountPath
+     * @param mountPath 挂载在 Runtime 内的路径。必须位于 /mnt 的子目录下，不能直接使用 /mnt；所有 OSS、CFS 和镜像卷挂载点不能相同，也不能互为父子路径。
+     * @return OssAccessPointConfiguration
      */
     public OssAccessPointConfiguration mountPath(String mountPath) {
         this.mountPath = mountPath;
+        return this;
+    }
+
+
+    /**
+     * set 是否以只读方式挂载 OSS，默认 false，表示可读写。
+     *
+     * @param readOnly 是否以只读方式挂载 OSS，默认 false，表示可读写。
+     * @return OssAccessPointConfiguration
+     */
+    public OssAccessPointConfiguration readOnly(Boolean readOnly) {
+        this.readOnly = readOnly;
         return this;
     }
 

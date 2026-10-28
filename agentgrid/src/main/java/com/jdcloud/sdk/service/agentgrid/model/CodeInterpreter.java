@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.agentgrid.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Code Interpreter 详情信息
@@ -66,6 +68,26 @@ public class CodeInterpreter  implements java.io.Serializable {
      * 网络配置类型
      */
     private String network;
+
+    /**
+     * Code Interpreter 资源配置；未记录规格时不返回
+     */
+    private ResourceView resource;
+
+    /**
+     * Code Interpreter 的云日志投递配置
+     */
+    private LogConfigurationView logConfigurationView;
+
+    /**
+     * Code Interpreter 绑定的用户标签
+     */
+    
+    private List<Tag> tags;
+    /**
+     * Code Interpreter 所属资源组 ID
+     */
+    private String resourceGroupId;
 
     /**
      * Code Interpreter 创建时间
@@ -208,6 +230,82 @@ public class CodeInterpreter  implements java.io.Serializable {
 
 
     /**
+     * get Code Interpreter 资源配置；未记录规格时不返回
+     *
+     * @return
+     */
+    public ResourceView getResource() {
+        return resource;
+    }
+
+    /**
+     * set Code Interpreter 资源配置；未记录规格时不返回
+     *
+     * @param resource
+     */
+    public void setResource(ResourceView resource) {
+        this.resource = resource;
+    }
+
+
+    /**
+     * get Code Interpreter 的云日志投递配置
+     *
+     * @return
+     */
+    public LogConfigurationView getLogConfigurationView() {
+        return logConfigurationView;
+    }
+
+    /**
+     * set Code Interpreter 的云日志投递配置
+     *
+     * @param logConfigurationView
+     */
+    public void setLogConfigurationView(LogConfigurationView logConfigurationView) {
+        this.logConfigurationView = logConfigurationView;
+    }
+
+
+    /**
+    * get Code Interpreter 绑定的用户标签
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Code Interpreter 绑定的用户标签
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get Code Interpreter 所属资源组 ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set Code Interpreter 所属资源组 ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
      * get Code Interpreter 创建时间
      *
      * @return
@@ -230,7 +328,8 @@ public class CodeInterpreter  implements java.io.Serializable {
     /**
      * set Code Interpreter ID
      *
-     * @param codeInterpreterId
+     * @param codeInterpreterId Code Interpreter ID
+     * @return CodeInterpreter
      */
     public CodeInterpreter codeInterpreterId(String codeInterpreterId) {
         this.codeInterpreterId = codeInterpreterId;
@@ -241,7 +340,8 @@ public class CodeInterpreter  implements java.io.Serializable {
     /**
      * set Code Interpreter 名称
      *
-     * @param name
+     * @param name Code Interpreter 名称
+     * @return CodeInterpreter
      */
     public CodeInterpreter name(String name) {
         this.name = name;
@@ -252,7 +352,8 @@ public class CodeInterpreter  implements java.io.Serializable {
     /**
      * set Code Interpreter 描述信息
      *
-     * @param description
+     * @param description Code Interpreter 描述信息
+     * @return CodeInterpreter
      */
     public CodeInterpreter description(String description) {
         this.description = description;
@@ -263,7 +364,8 @@ public class CodeInterpreter  implements java.io.Serializable {
     /**
      * set 用于鉴权的 API Key 的值
      *
-     * @param apiKey
+     * @param apiKey 用于鉴权的 API Key 的值
+     * @return CodeInterpreter
      */
     public CodeInterpreter apiKey(String apiKey) {
         this.apiKey = apiKey;
@@ -274,7 +376,8 @@ public class CodeInterpreter  implements java.io.Serializable {
     /**
      * set 失败原因；仅当 &#x60;state&#x60; 为 &#x60;failed&#x60; 时通常有值
      *
-     * @param failureReason
+     * @param failureReason 失败原因；仅当 &#x60;state&#x60; 为 &#x60;failed&#x60; 时通常有值
+     * @return CodeInterpreter
      */
     public CodeInterpreter failureReason(String failureReason) {
         this.failureReason = failureReason;
@@ -285,7 +388,8 @@ public class CodeInterpreter  implements java.io.Serializable {
     /**
      * set Code Interpreter 状态。可选值：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;ready&#x60;（可创建 Session）、&#x60;failed&#x60;（处理失败）、&#x60;deleting&#x60;（删除中）、&#x60;deleted&#x60;（已删除）
      *
-     * @param state
+     * @param state Code Interpreter 状态。可选值：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;ready&#x60;（可创建 Session）、&#x60;failed&#x60;（处理失败）、&#x60;deleting&#x60;（删除中）、&#x60;deleted&#x60;（已删除）
+     * @return CodeInterpreter
      */
     public CodeInterpreter state(String state) {
         this.state = state;
@@ -296,7 +400,8 @@ public class CodeInterpreter  implements java.io.Serializable {
     /**
      * set 网络配置类型
      *
-     * @param network
+     * @param network 网络配置类型
+     * @return CodeInterpreter
      */
     public CodeInterpreter network(String network) {
         this.network = network;
@@ -305,9 +410,58 @@ public class CodeInterpreter  implements java.io.Serializable {
 
 
     /**
+     * set Code Interpreter 资源配置；未记录规格时不返回
+     *
+     * @param resource Code Interpreter 资源配置；未记录规格时不返回
+     * @return CodeInterpreter
+     */
+    public CodeInterpreter resource(ResourceView resource) {
+        this.resource = resource;
+        return this;
+    }
+
+
+    /**
+     * set Code Interpreter 的云日志投递配置
+     *
+     * @param logConfigurationView Code Interpreter 的云日志投递配置
+     * @return CodeInterpreter
+     */
+    public CodeInterpreter logConfigurationView(LogConfigurationView logConfigurationView) {
+        this.logConfigurationView = logConfigurationView;
+        return this;
+    }
+
+
+    /**
+    * set Code Interpreter 绑定的用户标签
+    *
+    * @param tags Code Interpreter 绑定的用户标签
+    * @return CodeInterpreter
+    */
+    public CodeInterpreter tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set Code Interpreter 所属资源组 ID
+     *
+     * @param resourceGroupId Code Interpreter 所属资源组 ID
+     * @return CodeInterpreter
+     */
+    public CodeInterpreter resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
      * set Code Interpreter 创建时间
      *
-     * @param createTime
+     * @param createTime Code Interpreter 创建时间
+     * @return CodeInterpreter
      */
     public CodeInterpreter createTime(String createTime) {
         this.createTime = createTime;
@@ -315,4 +469,16 @@ public class CodeInterpreter  implements java.io.Serializable {
     }
 
 
+
+    /**
+     * add item to Code Interpreter 绑定的用户标签
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 }

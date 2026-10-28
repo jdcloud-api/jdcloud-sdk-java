@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.agentgrid.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Browser Tool 详情视图
@@ -61,6 +63,26 @@ public class BrowserTool  implements java.io.Serializable {
      * 网络配置类型
      */
     private String network;
+
+    /**
+     * Browser Tool 资源配置；未记录规格时不返回
+     */
+    private ResourceView resource;
+
+    /**
+     * Browser Tool 的云日志投递配置
+     */
+    private LogConfigurationView logConfigurationView;
+
+    /**
+     * Browser Tool 绑定的用户标签
+     */
+    
+    private List<Tag> tags;
+    /**
+     * Browser Tool 所属资源组 ID
+     */
+    private String resourceGroupId;
 
     /**
      * Browser Tool 创建时间
@@ -184,6 +206,82 @@ public class BrowserTool  implements java.io.Serializable {
 
 
     /**
+     * get Browser Tool 资源配置；未记录规格时不返回
+     *
+     * @return
+     */
+    public ResourceView getResource() {
+        return resource;
+    }
+
+    /**
+     * set Browser Tool 资源配置；未记录规格时不返回
+     *
+     * @param resource
+     */
+    public void setResource(ResourceView resource) {
+        this.resource = resource;
+    }
+
+
+    /**
+     * get Browser Tool 的云日志投递配置
+     *
+     * @return
+     */
+    public LogConfigurationView getLogConfigurationView() {
+        return logConfigurationView;
+    }
+
+    /**
+     * set Browser Tool 的云日志投递配置
+     *
+     * @param logConfigurationView
+     */
+    public void setLogConfigurationView(LogConfigurationView logConfigurationView) {
+        this.logConfigurationView = logConfigurationView;
+    }
+
+
+    /**
+    * get Browser Tool 绑定的用户标签
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Browser Tool 绑定的用户标签
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get Browser Tool 所属资源组 ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set Browser Tool 所属资源组 ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
      * get Browser Tool 创建时间
      *
      * @return
@@ -206,7 +304,8 @@ public class BrowserTool  implements java.io.Serializable {
     /**
      * set Browser Tool ID
      *
-     * @param browserToolId
+     * @param browserToolId Browser Tool ID
+     * @return BrowserTool
      */
     public BrowserTool browserToolId(String browserToolId) {
         this.browserToolId = browserToolId;
@@ -217,7 +316,8 @@ public class BrowserTool  implements java.io.Serializable {
     /**
      * set Browser Tool 名称
      *
-     * @param name
+     * @param name Browser Tool 名称
+     * @return BrowserTool
      */
     public BrowserTool name(String name) {
         this.name = name;
@@ -228,7 +328,8 @@ public class BrowserTool  implements java.io.Serializable {
     /**
      * set Browser Tool 描述信息
      *
-     * @param description
+     * @param description Browser Tool 描述信息
+     * @return BrowserTool
      */
     public BrowserTool description(String description) {
         this.description = description;
@@ -239,7 +340,8 @@ public class BrowserTool  implements java.io.Serializable {
     /**
      * set Browser Tool API Key
      *
-     * @param apiKey
+     * @param apiKey Browser Tool API Key
+     * @return BrowserTool
      */
     public BrowserTool apiKey(String apiKey) {
         this.apiKey = apiKey;
@@ -250,7 +352,8 @@ public class BrowserTool  implements java.io.Serializable {
     /**
      * set Browser Tool 状态。可选值：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;ready&#x60;（可创建 Session）、&#x60;failed&#x60;（处理失败）、&#x60;deleting&#x60;（删除中）、&#x60;deleted&#x60;（已删除）
      *
-     * @param state
+     * @param state Browser Tool 状态。可选值：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;ready&#x60;（可创建 Session）、&#x60;failed&#x60;（处理失败）、&#x60;deleting&#x60;（删除中）、&#x60;deleted&#x60;（已删除）
+     * @return BrowserTool
      */
     public BrowserTool state(String state) {
         this.state = state;
@@ -261,7 +364,8 @@ public class BrowserTool  implements java.io.Serializable {
     /**
      * set 网络配置类型
      *
-     * @param network
+     * @param network 网络配置类型
+     * @return BrowserTool
      */
     public BrowserTool network(String network) {
         this.network = network;
@@ -270,9 +374,58 @@ public class BrowserTool  implements java.io.Serializable {
 
 
     /**
+     * set Browser Tool 资源配置；未记录规格时不返回
+     *
+     * @param resource Browser Tool 资源配置；未记录规格时不返回
+     * @return BrowserTool
+     */
+    public BrowserTool resource(ResourceView resource) {
+        this.resource = resource;
+        return this;
+    }
+
+
+    /**
+     * set Browser Tool 的云日志投递配置
+     *
+     * @param logConfigurationView Browser Tool 的云日志投递配置
+     * @return BrowserTool
+     */
+    public BrowserTool logConfigurationView(LogConfigurationView logConfigurationView) {
+        this.logConfigurationView = logConfigurationView;
+        return this;
+    }
+
+
+    /**
+    * set Browser Tool 绑定的用户标签
+    *
+    * @param tags Browser Tool 绑定的用户标签
+    * @return BrowserTool
+    */
+    public BrowserTool tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set Browser Tool 所属资源组 ID
+     *
+     * @param resourceGroupId Browser Tool 所属资源组 ID
+     * @return BrowserTool
+     */
+    public BrowserTool resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
      * set Browser Tool 创建时间
      *
-     * @param createTime
+     * @param createTime Browser Tool 创建时间
+     * @return BrowserTool
      */
     public BrowserTool createTime(String createTime) {
         this.createTime = createTime;
@@ -280,4 +433,16 @@ public class BrowserTool  implements java.io.Serializable {
     }
 
 
+
+    /**
+     * add item to Browser Tool 绑定的用户标签
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 }

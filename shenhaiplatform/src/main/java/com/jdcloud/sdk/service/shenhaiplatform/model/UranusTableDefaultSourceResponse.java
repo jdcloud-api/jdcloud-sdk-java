@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.shenhaiplatform.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 更新用户默认表来源
+ * 更新用户默认表来源（即引擎类型）与默认引擎编码，各字段非空才覆盖
  */
 public class UranusTableDefaultSourceResponse extends JdcloudResponse<UranusTableDefaultSourceResult> implements java.io.Serializable {
 

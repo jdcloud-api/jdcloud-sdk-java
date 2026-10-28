@@ -24,7 +24,12 @@
 
 package com.jdcloud.sdk.service.agentgrid.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.agentgrid.model.ResourceConfiguration;
+import com.jdcloud.sdk.service.agentgrid.model.LogConfiguration;
+import com.jdcloud.sdk.service.agentgrid.model.Tag;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -32,6 +37,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 ## 接口说明
 - 支持通过 &#x60;clientToken&#x60; 保证请求幂等性。
+- 支持在创建时指定用户标签和资源组，创建成功后自动上报资源中心。
 - 创建成功后由服务端自动生成 &#x60;apiKey&#x60;。
 - Code Interpreter 状态包括：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;ready&#x60;（可创建 Session）、&#x60;failed&#x60;（处理失败）、&#x60;deleting&#x60;（删除中）、&#x60;deleted&#x60;（已删除）。
 - 本接口为异步接口。请求受理成功后，资源通常先进入 &#x60;pending&#x60;，待底层资源准备完成后进入 &#x60;ready&#x60;；如创建失败则进入 &#x60;failed&#x60;。建议通过“查询 Code Interpreter 详情”或“查询 Code Interpreter 列表”轮询确认最终状态。
@@ -54,6 +60,21 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
     private String description;
 
     /**
+     * Code Interpreter 绑定的实例角色
+     */
+    private String roleName;
+
+    /**
+     * Code Interpreter 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     */
+    private ResourceConfiguration resourceConfiguration;
+
+    /**
+     * Code Interpreter 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     */
+    private LogConfiguration logConfiguration;
+
+    /**
      * Code Interpreter 鉴权方式，当前仅支持 &#x60;API_KEY&#x60;
      */
     private String authenticationType;
@@ -69,6 +90,16 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
      */
     @Required
     private String networkConfiguration;
+
+    /**
+     * Code Interpreter 用户标签配置。
+     */
+    
+    private List<Tag> tags;
+    /**
+     * Code Interpreter 所属资源组 ID；不指定时使用默认资源组。
+     */
+    private String resourceGroupId;
 
     /**
      * Region ID
@@ -114,6 +145,63 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+
+    /**
+     * get Code Interpreter 绑定的实例角色
+     *
+     * @return
+     */
+    public String getRoleName() {
+        return roleName;
+    }
+
+    /**
+     * set Code Interpreter 绑定的实例角色
+     *
+     * @param roleName
+     */
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
+
+
+    /**
+     * get Code Interpreter 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     *
+     * @return
+     */
+    public ResourceConfiguration getResourceConfiguration() {
+        return resourceConfiguration;
+    }
+
+    /**
+     * set Code Interpreter 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     *
+     * @param resourceConfiguration
+     */
+    public void setResourceConfiguration(ResourceConfiguration resourceConfiguration) {
+        this.resourceConfiguration = resourceConfiguration;
+    }
+
+
+    /**
+     * get Code Interpreter 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     *
+     * @return
+     */
+    public LogConfiguration getLogConfiguration() {
+        return logConfiguration;
+    }
+
+    /**
+     * set Code Interpreter 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     *
+     * @param logConfiguration
+     */
+    public void setLogConfiguration(LogConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
     }
 
 
@@ -175,6 +263,44 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
 
 
     /**
+    * get Code Interpreter 用户标签配置。
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Code Interpreter 用户标签配置。
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get Code Interpreter 所属资源组 ID；不指定时使用默认资源组。
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set Code Interpreter 所属资源组 ID；不指定时使用默认资源组。
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
      * get Region ID
      *
      * @return
@@ -197,7 +323,8 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
     /**
      * set Code Interpreter 名称。长度为 1~32 个字符，可包含中文、数字、大小写字母、下划线、中划线或点。
      *
-     * @param name
+     * @param name Code Interpreter 名称。长度为 1~32 个字符，可包含中文、数字、大小写字母、下划线、中划线或点。
+     * @return CreateCodeInterpreterRequest
      */
     public CreateCodeInterpreterRequest name(String name) {
         this.name = name;
@@ -208,7 +335,8 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
     /**
      * set Code Interpreter 描述信息。
      *
-     * @param description
+     * @param description Code Interpreter 描述信息。
+     * @return CreateCodeInterpreterRequest
      */
     public CreateCodeInterpreterRequest description(String description) {
         this.description = description;
@@ -217,9 +345,46 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
 
 
     /**
+     * set Code Interpreter 绑定的实例角色
+     *
+     * @param roleName Code Interpreter 绑定的实例角色
+     * @return CreateCodeInterpreterRequest
+     */
+    public CreateCodeInterpreterRequest roleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+
+
+    /**
+     * set Code Interpreter 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     *
+     * @param resourceConfiguration Code Interpreter 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     * @return CreateCodeInterpreterRequest
+     */
+    public CreateCodeInterpreterRequest resourceConfiguration(ResourceConfiguration resourceConfiguration) {
+        this.resourceConfiguration = resourceConfiguration;
+        return this;
+    }
+
+
+    /**
+     * set Code Interpreter 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     *
+     * @param logConfiguration Code Interpreter 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     * @return CreateCodeInterpreterRequest
+     */
+    public CreateCodeInterpreterRequest logConfiguration(LogConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
+        return this;
+    }
+
+
+    /**
      * set Code Interpreter 鉴权方式，当前仅支持 &#x60;API_KEY&#x60;
      *
-     * @param authenticationType
+     * @param authenticationType Code Interpreter 鉴权方式，当前仅支持 &#x60;API_KEY&#x60;
+     * @return CreateCodeInterpreterRequest
      */
     public CreateCodeInterpreterRequest authenticationType(String authenticationType) {
         this.authenticationType = authenticationType;
@@ -230,7 +395,8 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
     /**
      * set 用于保证请求幂等性。
      *
-     * @param clientToken
+     * @param clientToken 用于保证请求幂等性。
+     * @return CreateCodeInterpreterRequest
      */
     public CreateCodeInterpreterRequest clientToken(String clientToken) {
         this.clientToken = clientToken;
@@ -241,7 +407,8 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
     /**
      * set Code Interpreter 网络配置类型。当前支持 &#x60;public&#x60; 和 &#x60;sandbox&#x60;。
      *
-     * @param networkConfiguration
+     * @param networkConfiguration Code Interpreter 网络配置类型。当前支持 &#x60;public&#x60; 和 &#x60;sandbox&#x60;。
+     * @return CreateCodeInterpreterRequest
      */
     public CreateCodeInterpreterRequest networkConfiguration(String networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
@@ -250,9 +417,34 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
 
 
     /**
+    * set Code Interpreter 用户标签配置。
+    *
+    * @param tags Code Interpreter 用户标签配置。
+    * @return CreateCodeInterpreterRequest
+    */
+    public CreateCodeInterpreterRequest tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set Code Interpreter 所属资源组 ID；不指定时使用默认资源组。
+     *
+     * @param resourceGroupId Code Interpreter 所属资源组 ID；不指定时使用默认资源组。
+     * @return CreateCodeInterpreterRequest
+     */
+    public CreateCodeInterpreterRequest resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return CreateCodeInterpreterRequest
      */
     public CreateCodeInterpreterRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -260,4 +452,16 @@ public class CreateCodeInterpreterRequest extends JdcloudRequest implements java
     }
 
 
+
+    /**
+     * add item to Code Interpreter 用户标签配置。
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 }

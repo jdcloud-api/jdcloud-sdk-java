@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询队列列表
+ * 查询队列列表。
  */
 public class DescribeQueuesRequest extends JdcloudRequest implements java.io.Serializable {
 

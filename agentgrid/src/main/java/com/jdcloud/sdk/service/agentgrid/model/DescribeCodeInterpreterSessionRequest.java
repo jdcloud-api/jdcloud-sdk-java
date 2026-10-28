@@ -119,7 +119,8 @@ public class DescribeCodeInterpreterSessionRequest extends JdcloudRequest implem
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribeCodeInterpreterSessionRequest
      */
     public DescribeCodeInterpreterSessionRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -130,7 +131,8 @@ public class DescribeCodeInterpreterSessionRequest extends JdcloudRequest implem
     /**
      * set Code Interpreter ID
      *
-     * @param codeInterpreterId
+     * @param codeInterpreterId Code Interpreter ID
+     * @return DescribeCodeInterpreterSessionRequest
      */
     public DescribeCodeInterpreterSessionRequest codeInterpreterId(String codeInterpreterId) {
         this.codeInterpreterId = codeInterpreterId;
@@ -141,7 +143,8 @@ public class DescribeCodeInterpreterSessionRequest extends JdcloudRequest implem
     /**
      * set Session ID
      *
-     * @param sessionId
+     * @param sessionId Session ID
+     * @return DescribeCodeInterpreterSessionRequest
      */
     public DescribeCodeInterpreterSessionRequest sessionId(String sessionId) {
         this.sessionId = sessionId;

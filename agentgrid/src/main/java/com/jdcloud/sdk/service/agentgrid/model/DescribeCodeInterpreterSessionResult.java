@@ -65,7 +65,8 @@ public class DescribeCodeInterpreterSessionResult extends JdcloudResult implemen
     /**
      * set codeInterpreterSession
      *
-     * @param codeInterpreterSession
+     * @param codeInterpreterSession 
+     * @return DescribeCodeInterpreterSessionResult
      */
     public DescribeCodeInterpreterSessionResult codeInterpreterSession(CodeInterpreterSession codeInterpreterSession) {
         this.codeInterpreterSession = codeInterpreterSession;

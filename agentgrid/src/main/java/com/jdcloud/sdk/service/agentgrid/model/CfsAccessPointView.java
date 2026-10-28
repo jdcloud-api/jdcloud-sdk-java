@@ -33,14 +33,9 @@ public class CfsAccessPointView  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 挂载目标ID
+     * CFS 文件系统 ID
      */
-    private String mountTargetId;
-
-    /**
-     * CFS 路径
-     */
-    private String path;
+    private String fileSystemId;
 
     /**
      * 挂载在 Runtime 内的路径
@@ -55,40 +50,21 @@ public class CfsAccessPointView  implements java.io.Serializable {
 
 
     /**
-     * get 挂载目标ID
+     * get CFS 文件系统 ID
      *
      * @return
      */
-    public String getMountTargetId() {
-        return mountTargetId;
+    public String getFileSystemId() {
+        return fileSystemId;
     }
 
     /**
-     * set 挂载目标ID
+     * set CFS 文件系统 ID
      *
-     * @param mountTargetId
+     * @param fileSystemId
      */
-    public void setMountTargetId(String mountTargetId) {
-        this.mountTargetId = mountTargetId;
-    }
-
-
-    /**
-     * get CFS 路径
-     *
-     * @return
-     */
-    public String getPath() {
-        return path;
-    }
-
-    /**
-     * set CFS 路径
-     *
-     * @param path
-     */
-    public void setPath(String path) {
-        this.path = path;
+    public void setFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
     }
 
 
@@ -132,23 +108,13 @@ public class CfsAccessPointView  implements java.io.Serializable {
 
 
     /**
-     * set 挂载目标ID
+     * set CFS 文件系统 ID
      *
-     * @param mountTargetId
+     * @param fileSystemId CFS 文件系统 ID
+     * @return CfsAccessPointView
      */
-    public CfsAccessPointView mountTargetId(String mountTargetId) {
-        this.mountTargetId = mountTargetId;
-        return this;
-    }
-
-
-    /**
-     * set CFS 路径
-     *
-     * @param path
-     */
-    public CfsAccessPointView path(String path) {
-        this.path = path;
+    public CfsAccessPointView fileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
         return this;
     }
 
@@ -156,7 +122,8 @@ public class CfsAccessPointView  implements java.io.Serializable {
     /**
      * set 挂载在 Runtime 内的路径
      *
-     * @param mountPath
+     * @param mountPath 挂载在 Runtime 内的路径
+     * @return CfsAccessPointView
      */
     public CfsAccessPointView mountPath(String mountPath) {
         this.mountPath = mountPath;
@@ -167,7 +134,8 @@ public class CfsAccessPointView  implements java.io.Serializable {
     /**
      * set 文件系统是否只读
      *
-     * @param readOnly
+     * @param readOnly 文件系统是否只读
+     * @return CfsAccessPointView
      */
     public CfsAccessPointView readOnly(Boolean readOnly) {
         this.readOnly = readOnly;

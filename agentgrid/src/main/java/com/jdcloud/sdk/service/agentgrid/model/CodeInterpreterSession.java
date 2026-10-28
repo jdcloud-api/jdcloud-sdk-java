@@ -53,7 +53,12 @@ public class CodeInterpreterSession  implements java.io.Serializable {
     private String state;
 
     /**
-     * Session 最大存活时长（秒）
+     * 是否开启长程运行
+     */
+    private Boolean persistent;
+
+    /**
+     * Session 最大生命周期，单位为秒；长程运行时不生效
      */
     private Integer maxLifeTime;
 
@@ -141,7 +146,26 @@ public class CodeInterpreterSession  implements java.io.Serializable {
 
 
     /**
-     * get Session 最大存活时长（秒）
+     * get 是否开启长程运行
+     *
+     * @return
+     */
+    public Boolean getPersistent() {
+        return persistent;
+    }
+
+    /**
+     * set 是否开启长程运行
+     *
+     * @param persistent
+     */
+    public void setPersistent(Boolean persistent) {
+        this.persistent = persistent;
+    }
+
+
+    /**
+     * get Session 最大生命周期，单位为秒；长程运行时不生效
      *
      * @return
      */
@@ -150,7 +174,7 @@ public class CodeInterpreterSession  implements java.io.Serializable {
     }
 
     /**
-     * set Session 最大存活时长（秒）
+     * set Session 最大生命周期，单位为秒；长程运行时不生效
      *
      * @param maxLifeTime
      */
@@ -182,7 +206,8 @@ public class CodeInterpreterSession  implements java.io.Serializable {
     /**
      * set Code Interpreter ID
      *
-     * @param codeInterpreterId
+     * @param codeInterpreterId Code Interpreter ID
+     * @return CodeInterpreterSession
      */
     public CodeInterpreterSession codeInterpreterId(String codeInterpreterId) {
         this.codeInterpreterId = codeInterpreterId;
@@ -193,7 +218,8 @@ public class CodeInterpreterSession  implements java.io.Serializable {
     /**
      * set Session ID
      *
-     * @param sessionId
+     * @param sessionId Session ID
+     * @return CodeInterpreterSession
      */
     public CodeInterpreterSession sessionId(String sessionId) {
         this.sessionId = sessionId;
@@ -204,7 +230,8 @@ public class CodeInterpreterSession  implements java.io.Serializable {
     /**
      * set Session 名称
      *
-     * @param name
+     * @param name Session 名称
+     * @return CodeInterpreterSession
      */
     public CodeInterpreterSession name(String name) {
         this.name = name;
@@ -215,7 +242,8 @@ public class CodeInterpreterSession  implements java.io.Serializable {
     /**
      * set Session 状态。可选值：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;creating&#x60;（初始化中）、&#x60;ready&#x60;（可执行工具调用）、&#x60;deleting&#x60;（删除中）、&#x60;deleted&#x60;（已删除）、&#x60;failed&#x60;（初始化失败）
      *
-     * @param state
+     * @param state Session 状态。可选值：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;creating&#x60;（初始化中）、&#x60;ready&#x60;（可执行工具调用）、&#x60;deleting&#x60;（删除中）、&#x60;deleted&#x60;（已删除）、&#x60;failed&#x60;（初始化失败）
+     * @return CodeInterpreterSession
      */
     public CodeInterpreterSession state(String state) {
         this.state = state;
@@ -224,9 +252,22 @@ public class CodeInterpreterSession  implements java.io.Serializable {
 
 
     /**
-     * set Session 最大存活时长（秒）
+     * set 是否开启长程运行
      *
-     * @param maxLifeTime
+     * @param persistent 是否开启长程运行
+     * @return CodeInterpreterSession
+     */
+    public CodeInterpreterSession persistent(Boolean persistent) {
+        this.persistent = persistent;
+        return this;
+    }
+
+
+    /**
+     * set Session 最大生命周期，单位为秒；长程运行时不生效
+     *
+     * @param maxLifeTime Session 最大生命周期，单位为秒；长程运行时不生效
+     * @return CodeInterpreterSession
      */
     public CodeInterpreterSession maxLifeTime(Integer maxLifeTime) {
         this.maxLifeTime = maxLifeTime;
@@ -237,7 +278,8 @@ public class CodeInterpreterSession  implements java.io.Serializable {
     /**
      * set Session 创建时间
      *
-     * @param createTime
+     * @param createTime Session 创建时间
+     * @return CodeInterpreterSession
      */
     public CodeInterpreterSession createTime(String createTime) {
         this.createTime = createTime;

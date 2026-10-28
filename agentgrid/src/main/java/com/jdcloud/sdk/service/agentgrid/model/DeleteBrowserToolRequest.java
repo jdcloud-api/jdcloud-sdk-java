@@ -97,7 +97,8 @@ public class DeleteBrowserToolRequest extends JdcloudRequest implements java.io.
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DeleteBrowserToolRequest
      */
     public DeleteBrowserToolRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -108,7 +109,8 @@ public class DeleteBrowserToolRequest extends JdcloudRequest implements java.io.
     /**
      * set Browser Tool ID
      *
-     * @param browserToolId
+     * @param browserToolId Browser Tool ID
+     * @return DeleteBrowserToolRequest
      */
     public DeleteBrowserToolRequest browserToolId(String browserToolId) {
         this.browserToolId = browserToolId;

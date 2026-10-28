@@ -93,7 +93,8 @@ public class DeleteRuntimeEndpointRequest extends JdcloudRequest implements java
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DeleteRuntimeEndpointRequest
      */
     public DeleteRuntimeEndpointRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -104,7 +105,8 @@ public class DeleteRuntimeEndpointRequest extends JdcloudRequest implements java
     /**
      * set Runtime ID
      *
-     * @param runtimeId
+     * @param runtimeId Runtime ID
+     * @return DeleteRuntimeEndpointRequest
      */
     public DeleteRuntimeEndpointRequest runtimeId(String runtimeId) {
         this.runtimeId = runtimeId;

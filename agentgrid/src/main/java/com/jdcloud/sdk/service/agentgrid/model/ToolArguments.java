@@ -280,7 +280,8 @@ public class ToolArguments  implements java.io.Serializable {
     /**
      * set 是否清理上下文
      *
-     * @param clearContext
+     * @param clearContext 是否清理上下文
+     * @return ToolArguments
      */
     public ToolArguments clearContext(Boolean clearContext) {
         this.clearContext = clearContext;
@@ -291,7 +292,8 @@ public class ToolArguments  implements java.io.Serializable {
     /**
      * set 代码执行内容，长度范围0～100000000
      *
-     * @param code
+     * @param code 代码执行内容，长度范围0～100000000
+     * @return ToolArguments
      */
     public ToolArguments code(String code) {
         this.code = code;
@@ -302,7 +304,8 @@ public class ToolArguments  implements java.io.Serializable {
     /**
      * set 命令执行内容，长度范围0～100000000
      *
-     * @param command
+     * @param command 命令执行内容，长度范围0～100000000
+     * @return ToolArguments
      */
     public ToolArguments command(String command) {
         this.command = command;
@@ -313,7 +316,8 @@ public class ToolArguments  implements java.io.Serializable {
     /**
     * set 输入内容块列表
     *
-    * @param content
+    * @param content 输入内容块列表
+    * @return ToolArguments
     */
     public ToolArguments content(List<InputContentBlock> content) {
         this.content = content;
@@ -324,7 +328,8 @@ public class ToolArguments  implements java.io.Serializable {
     /**
      * set 目录路径
      *
-     * @param directoryPath
+     * @param directoryPath 目录路径
+     * @return ToolArguments
      */
     public ToolArguments directoryPath(String directoryPath) {
         this.directoryPath = directoryPath;
@@ -335,7 +340,8 @@ public class ToolArguments  implements java.io.Serializable {
     /**
      * set 代码语言，支持 python、javascript、typescript
      *
-     * @param language
+     * @param language 代码语言，支持 python、javascript、typescript
+     * @return ToolArguments
      */
     public ToolArguments language(String language) {
         this.language = language;
@@ -346,7 +352,8 @@ public class ToolArguments  implements java.io.Serializable {
     /**
      * set 单文件路径，长度范围0～100000000
      *
-     * @param path
+     * @param path 单文件路径，长度范围0～100000000
+     * @return ToolArguments
      */
     public ToolArguments path(String path) {
         this.path = path;
@@ -357,7 +364,8 @@ public class ToolArguments  implements java.io.Serializable {
     /**
     * set 多文件路径列表，长度范围0～100000000
     *
-    * @param paths
+    * @param paths 多文件路径列表，长度范围0～100000000
+    * @return ToolArguments
     */
     public ToolArguments paths(List<String> paths) {
         this.paths = paths;
@@ -368,7 +376,8 @@ public class ToolArguments  implements java.io.Serializable {
     /**
      * set 运行时类型，支持 nodejs、deno、python
      *
-     * @param runtime
+     * @param runtime 运行时类型，支持 nodejs、deno、python
+     * @return ToolArguments
      */
     public ToolArguments runtime(String runtime) {
         this.runtime = runtime;
@@ -379,7 +388,8 @@ public class ToolArguments  implements java.io.Serializable {
     /**
      * set 任务 ID
      *
-     * @param taskId
+     * @param taskId 任务 ID
+     * @return ToolArguments
      */
     public ToolArguments taskId(String taskId) {
         this.taskId = taskId;

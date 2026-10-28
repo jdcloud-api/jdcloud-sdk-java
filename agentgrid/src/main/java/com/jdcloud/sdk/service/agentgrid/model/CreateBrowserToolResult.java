@@ -31,6 +31,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 ## 接口说明
 - 支持通过 &#x60;clientToken&#x60; 保证请求幂等性。
+- 支持在创建时指定用户标签和资源组，创建成功后自动上报资源中心。
 - 创建成功后由服务端自动生成 &#x60;apiKey&#x60;。
 - Browser Tool 状态包括：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;ready&#x60;（可创建 Session）、&#x60;failed&#x60;（处理失败）、&#x60;deleting&#x60;（删除中）、&#x60;deleted&#x60;（已删除）。
 - 本接口为异步接口。请求受理成功后，资源通常先进入 &#x60;pending&#x60;，待底层资源准备完成后进入 &#x60;ready&#x60;；如创建失败则进入 &#x60;failed&#x60;。建议通过“查询 Browser Tool 详情”或“查询 Browser Tool 列表”轮询确认最终状态。
@@ -70,7 +71,8 @@ public class CreateBrowserToolResult extends JdcloudResult implements java.io.Se
     /**
      * set Browser Tool ID。
      *
-     * @param browserToolId
+     * @param browserToolId Browser Tool ID。
+     * @return CreateBrowserToolResult
      */
     public CreateBrowserToolResult browserToolId(String browserToolId) {
         this.browserToolId = browserToolId;
