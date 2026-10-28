@@ -65,7 +65,8 @@ public class AuthorizerConfiguration  implements java.io.Serializable {
     /**
      * set 鉴权类型，当前支持 API_KEY。
      *
-     * @param type
+     * @param type 鉴权类型，当前支持 API_KEY。
+     * @return AuthorizerConfiguration
      */
     public AuthorizerConfiguration type(String type) {
         this.type = type;

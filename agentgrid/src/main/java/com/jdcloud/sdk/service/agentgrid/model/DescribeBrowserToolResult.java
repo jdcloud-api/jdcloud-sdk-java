@@ -65,7 +65,8 @@ public class DescribeBrowserToolResult extends JdcloudResult implements java.io.
     /**
      * set browserTool
      *
-     * @param browserTool
+     * @param browserTool 
+     * @return DescribeBrowserToolResult
      */
     public DescribeBrowserToolResult browserTool(BrowserTool browserTool) {
         this.browserTool = browserTool;

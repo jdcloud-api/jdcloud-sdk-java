@@ -29,9 +29,12 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.agentgrid.model.AuthorizerConfiguration;
 import com.jdcloud.sdk.service.agentgrid.model.ArtifactConfiguration;
 import com.jdcloud.sdk.service.agentgrid.model.NetworkConfiguration;
+import com.jdcloud.sdk.service.agentgrid.model.ResourceConfiguration;
 import com.jdcloud.sdk.service.agentgrid.model.EnvConfiguration;
-import com.jdcloud.sdk.service.agentgrid.model.FilesystemConfiguration;
+import com.jdcloud.sdk.service.agentgrid.model.FileSystemConfiguration;
+import com.jdcloud.sdk.service.agentgrid.model.ImageVolume;
 import com.jdcloud.sdk.service.agentgrid.model.LifecycleConfiguration;
+import com.jdcloud.sdk.service.agentgrid.model.LogConfiguration;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -40,8 +43,12 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 ## 接口说明
 - 该操作用于更新 Runtime 的配置信息。
+- 更新镜像配置时，可仅传 &#x60;image.command&#x60;、&#x60;image.args&#x60; 或 &#x60;image.port&#x60;，无需重复传 &#x60;image.imageUrl&#x60;；未传的字段沿用当前生效版本。&#x60;command&#x60; 或 &#x60;args&#x60; 传空数组可恢复镜像默认配置。
+- &#x60;imageVolumes&#x60; 不传或传 null 时继承当前生效版本，传空数组 &#x60;[]&#x60; 时清空新版本的镜像卷，传非空数组时整体替换，最多 1 个。镜像卷挂载路径会与更新后或继承的文件系统配置一起校验，不能与 OSS 或 CFS 挂载点重叠。
+- &#x60;image.port&#x60; 的配置形态在更新时不可改变：当前生效版本已有自定义端口时，可将其修改为另一个 1～65535 的端口，不能传 0 删除；当前生效版本没有自定义端口时，不能在更新中新增自定义端口。不传 &#x60;port&#x60; 则沿用原配置。
+- Runtime 协议在创建后不可修改；更新时沿用创建 Runtime 时指定的协议。
 - Runtime 在处理更新请求期间，其状态通常会变为 &#x60;updating&#x60;；本次新生成的 Runtime Version 状态通常会依次经历 &#x60;pending&#x60;、&#x60;creating&#x60;，最终进入 &#x60;running&#x60; 或 &#x60;failed&#x60;。
-- 本接口响应仅返回 &#x60;requestId&#x60;，不会直接返回新版本号。请求受理后，建议调用“查询 Runtime 版本列表”确认最新版本号及其状态。
+- 本接口返回 &#x60;requestId&#x60;、&#x60;runtimeId&#x60; 和新生成的 &#x60;runtimeVersion&#x60;；请求受理后，建议调用“查询 Runtime 版本列表”确认新版本的状态。
 - 新版本创建成功后不会自动成为生效版本；如需切换，请继续调用“选择 Runtime 模版版本”接口。
 
  */
@@ -60,7 +67,7 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     private AuthorizerConfiguration authorizerConfiguration;
 
     /**
-     * Runtime 制品配置，支持更换镜像
+     * Runtime 制品配置；可以只更新镜像地址、启动入口、启动参数或服务端口，其余镜像字段沿用当前版本。
      */
     private ArtifactConfiguration artifactConfiguration;
 
@@ -78,6 +85,11 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
      * Runtime 可承载的最大 Session 数量，取值范围1～10，默认值为 10。
      */
     private Integer maxSession;
+
+    /**
+     * Runtime 新版本的资源配置；不指定时沿用当前版本规格，已有 Session 不受影响。
+     */
+    private ResourceConfiguration resourceConfiguration;
 
     /**
      * runtime 绑定的实例角色
@@ -100,17 +112,22 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * Runtime 文件系统配置。不传该参数时，保留当前生效版本中的文件系统配置；传入该参数时，将用本次配置替换新版本中的文件系统配置，最多支持配置 5 个文件系统。
      */
-    private FilesystemConfiguration filesystemConfiguration;
+    private FileSystemConfiguration fileSystemConfiguration;
 
     /**
-     * Runtime 支持的协议类型，当前支持http、mcp、a2a。
+     * Runtime 只读镜像卷配置，最多 1 个，数组元素不能为 null。不传或传 null 时继承当前生效版本；传空数组 [] 时清空新版本的镜像卷；传非空数组时整体替换。
      */
-    private String protocol;
-
+    
+    private List<ImageVolume> imageVolumes;
     /**
-     * Runtime 生命周期配置。
+     * Runtime 生命周期配置。不传时继承当前生效版本的配置。
      */
     private LifecycleConfiguration lifecycleConfiguration;
+
+    /**
+     * Runtime 云日志投递配置。不传时继承当前生效版本的配置；传入 enabled&#x3D;false 时关闭；传入 enabled&#x3D;true 时完整覆盖。
+     */
+    private LogConfiguration logConfiguration;
 
     /**
      * Region ID
@@ -167,7 +184,7 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get Runtime 制品配置，支持更换镜像
+     * get Runtime 制品配置；可以只更新镜像地址、启动入口、启动参数或服务端口，其余镜像字段沿用当前版本。
      *
      * @return
      */
@@ -176,7 +193,7 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Runtime 制品配置，支持更换镜像
+     * set Runtime 制品配置；可以只更新镜像地址、启动入口、启动参数或服务端口，其余镜像字段沿用当前版本。
      *
      * @param artifactConfiguration
      */
@@ -243,6 +260,25 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * get Runtime 新版本的资源配置；不指定时沿用当前版本规格，已有 Session 不受影响。
+     *
+     * @return
+     */
+    public ResourceConfiguration getResourceConfiguration() {
+        return resourceConfiguration;
+    }
+
+    /**
+     * set Runtime 新版本的资源配置；不指定时沿用当前版本规格，已有 Session 不受影响。
+     *
+     * @param resourceConfiguration
+     */
+    public void setResourceConfiguration(ResourceConfiguration resourceConfiguration) {
+        this.resourceConfiguration = resourceConfiguration;
+    }
+
+
+    /**
      * get runtime 绑定的实例角色
      *
      * @return
@@ -301,41 +337,41 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
      *
      * @return
      */
-    public FilesystemConfiguration getFilesystemConfiguration() {
-        return filesystemConfiguration;
+    public FileSystemConfiguration getFileSystemConfiguration() {
+        return fileSystemConfiguration;
     }
 
     /**
      * set Runtime 文件系统配置。不传该参数时，保留当前生效版本中的文件系统配置；传入该参数时，将用本次配置替换新版本中的文件系统配置，最多支持配置 5 个文件系统。
      *
-     * @param filesystemConfiguration
+     * @param fileSystemConfiguration
      */
-    public void setFilesystemConfiguration(FilesystemConfiguration filesystemConfiguration) {
-        this.filesystemConfiguration = filesystemConfiguration;
+    public void setFileSystemConfiguration(FileSystemConfiguration fileSystemConfiguration) {
+        this.fileSystemConfiguration = fileSystemConfiguration;
     }
 
 
     /**
-     * get Runtime 支持的协议类型，当前支持http、mcp、a2a。
-     *
-     * @return
-     */
-    public String getProtocol() {
-        return protocol;
+    * get Runtime 只读镜像卷配置，最多 1 个，数组元素不能为 null。不传或传 null 时继承当前生效版本；传空数组 [] 时清空新版本的镜像卷；传非空数组时整体替换。
+    *
+    * @return
+    */
+    public List<ImageVolume> getImageVolumes() {
+        return imageVolumes;
     }
 
     /**
-     * set Runtime 支持的协议类型，当前支持http、mcp、a2a。
-     *
-     * @param protocol
-     */
-    public void setProtocol(String protocol) {
-        this.protocol = protocol;
+    * set Runtime 只读镜像卷配置，最多 1 个，数组元素不能为 null。不传或传 null 时继承当前生效版本；传空数组 [] 时清空新版本的镜像卷；传非空数组时整体替换。
+    *
+    * @param imageVolumes
+    */
+    public void setImageVolumes(List<ImageVolume> imageVolumes) {
+        this.imageVolumes = imageVolumes;
     }
 
 
     /**
-     * get Runtime 生命周期配置。
+     * get Runtime 生命周期配置。不传时继承当前生效版本的配置。
      *
      * @return
      */
@@ -344,12 +380,31 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Runtime 生命周期配置。
+     * set Runtime 生命周期配置。不传时继承当前生效版本的配置。
      *
      * @param lifecycleConfiguration
      */
     public void setLifecycleConfiguration(LifecycleConfiguration lifecycleConfiguration) {
         this.lifecycleConfiguration = lifecycleConfiguration;
+    }
+
+
+    /**
+     * get Runtime 云日志投递配置。不传时继承当前生效版本的配置；传入 enabled&#x3D;false 时关闭；传入 enabled&#x3D;true 时完整覆盖。
+     *
+     * @return
+     */
+    public LogConfiguration getLogConfiguration() {
+        return logConfiguration;
+    }
+
+    /**
+     * set Runtime 云日志投递配置。不传时继承当前生效版本的配置；传入 enabled&#x3D;false 时关闭；传入 enabled&#x3D;true 时完整覆盖。
+     *
+     * @param logConfiguration
+     */
+    public void setLogConfiguration(LogConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
     }
 
 
@@ -395,7 +450,8 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Runtime 新版本的描述信息。
      *
-     * @param description
+     * @param description Runtime 新版本的描述信息。
+     * @return UpdateRuntimeRequest
      */
     public UpdateRuntimeRequest description(String description) {
         this.description = description;
@@ -406,7 +462,8 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Runtime 鉴权配置。
      *
-     * @param authorizerConfiguration
+     * @param authorizerConfiguration Runtime 鉴权配置。
+     * @return UpdateRuntimeRequest
      */
     public UpdateRuntimeRequest authorizerConfiguration(AuthorizerConfiguration authorizerConfiguration) {
         this.authorizerConfiguration = authorizerConfiguration;
@@ -415,9 +472,10 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set Runtime 制品配置，支持更换镜像
+     * set Runtime 制品配置；可以只更新镜像地址、启动入口、启动参数或服务端口，其余镜像字段沿用当前版本。
      *
-     * @param artifactConfiguration
+     * @param artifactConfiguration Runtime 制品配置；可以只更新镜像地址、启动入口、启动参数或服务端口，其余镜像字段沿用当前版本。
+     * @return UpdateRuntimeRequest
      */
     public UpdateRuntimeRequest artifactConfiguration(ArtifactConfiguration artifactConfiguration) {
         this.artifactConfiguration = artifactConfiguration;
@@ -428,7 +486,8 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Runtime 网络配置。
      *
-     * @param networkConfiguration
+     * @param networkConfiguration Runtime 网络配置。
+     * @return UpdateRuntimeRequest
      */
     public UpdateRuntimeRequest networkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
@@ -439,7 +498,8 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Runtime 预热 Session 数量，进行预热后，将会提前生成对应数量的 Session 实例，可以大幅减少会话初次启动时间。取值范围1～10，默认值为 1，且应小于等于 &#x60;maxSession&#x60;。
      *
-     * @param warmSession
+     * @param warmSession Runtime 预热 Session 数量，进行预热后，将会提前生成对应数量的 Session 实例，可以大幅减少会话初次启动时间。取值范围1～10，默认值为 1，且应小于等于 &#x60;maxSession&#x60;。
+     * @return UpdateRuntimeRequest
      */
     public UpdateRuntimeRequest warmSession(Integer warmSession) {
         this.warmSession = warmSession;
@@ -450,7 +510,8 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Runtime 可承载的最大 Session 数量，取值范围1～10，默认值为 10。
      *
-     * @param maxSession
+     * @param maxSession Runtime 可承载的最大 Session 数量，取值范围1～10，默认值为 10。
+     * @return UpdateRuntimeRequest
      */
     public UpdateRuntimeRequest maxSession(Integer maxSession) {
         this.maxSession = maxSession;
@@ -459,9 +520,22 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * set Runtime 新版本的资源配置；不指定时沿用当前版本规格，已有 Session 不受影响。
+     *
+     * @param resourceConfiguration Runtime 新版本的资源配置；不指定时沿用当前版本规格，已有 Session 不受影响。
+     * @return UpdateRuntimeRequest
+     */
+    public UpdateRuntimeRequest resourceConfiguration(ResourceConfiguration resourceConfiguration) {
+        this.resourceConfiguration = resourceConfiguration;
+        return this;
+    }
+
+
+    /**
      * set runtime 绑定的实例角色
      *
-     * @param roleName
+     * @param roleName runtime 绑定的实例角色
+     * @return UpdateRuntimeRequest
      */
     public UpdateRuntimeRequest roleName(String roleName) {
         this.roleName = roleName;
@@ -480,7 +554,16 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 &#x60;key&#x60; 长度上限为 256 个字符。
 
     *
-    * @param envs
+    * @param envs Runtime 环境变量配置，以 &#x60;key-value&#x60; 键值对形式指定，单次请求最多支持 50 组。
+
+参数说明
+不传该参数时，保留当前生效版本中的环境变量配置。
+当 &#x60;key&#x60; 以连字符 &#x60;-&#x60; 结尾时，表示删除旧版本中对应 &#x60;key&#x60; 的环境变量。
+当 &#x60;key&#x60; 不以连字符 &#x60;-&#x60; 结尾时，表示新增或更新该环境变量。
+本次调用后，环境变量不能超过50组
+&#x60;key&#x60; 长度上限为 256 个字符。
+
+    * @return UpdateRuntimeRequest
     */
     public UpdateRuntimeRequest envs(List<EnvConfiguration> envs) {
         this.envs = envs;
@@ -491,29 +574,32 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Runtime 文件系统配置。不传该参数时，保留当前生效版本中的文件系统配置；传入该参数时，将用本次配置替换新版本中的文件系统配置，最多支持配置 5 个文件系统。
      *
-     * @param filesystemConfiguration
+     * @param fileSystemConfiguration Runtime 文件系统配置。不传该参数时，保留当前生效版本中的文件系统配置；传入该参数时，将用本次配置替换新版本中的文件系统配置，最多支持配置 5 个文件系统。
+     * @return UpdateRuntimeRequest
      */
-    public UpdateRuntimeRequest filesystemConfiguration(FilesystemConfiguration filesystemConfiguration) {
-        this.filesystemConfiguration = filesystemConfiguration;
+    public UpdateRuntimeRequest fileSystemConfiguration(FileSystemConfiguration fileSystemConfiguration) {
+        this.fileSystemConfiguration = fileSystemConfiguration;
         return this;
     }
 
 
     /**
-     * set Runtime 支持的协议类型，当前支持http、mcp、a2a。
-     *
-     * @param protocol
-     */
-    public UpdateRuntimeRequest protocol(String protocol) {
-        this.protocol = protocol;
+    * set Runtime 只读镜像卷配置，最多 1 个，数组元素不能为 null。不传或传 null 时继承当前生效版本；传空数组 [] 时清空新版本的镜像卷；传非空数组时整体替换。
+    *
+    * @param imageVolumes Runtime 只读镜像卷配置，最多 1 个，数组元素不能为 null。不传或传 null 时继承当前生效版本；传空数组 [] 时清空新版本的镜像卷；传非空数组时整体替换。
+    * @return UpdateRuntimeRequest
+    */
+    public UpdateRuntimeRequest imageVolumes(List<ImageVolume> imageVolumes) {
+        this.imageVolumes = imageVolumes;
         return this;
     }
 
 
     /**
-     * set Runtime 生命周期配置。
+     * set Runtime 生命周期配置。不传时继承当前生效版本的配置。
      *
-     * @param lifecycleConfiguration
+     * @param lifecycleConfiguration Runtime 生命周期配置。不传时继承当前生效版本的配置。
+     * @return UpdateRuntimeRequest
      */
     public UpdateRuntimeRequest lifecycleConfiguration(LifecycleConfiguration lifecycleConfiguration) {
         this.lifecycleConfiguration = lifecycleConfiguration;
@@ -522,9 +608,22 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * set Runtime 云日志投递配置。不传时继承当前生效版本的配置；传入 enabled&#x3D;false 时关闭；传入 enabled&#x3D;true 时完整覆盖。
+     *
+     * @param logConfiguration Runtime 云日志投递配置。不传时继承当前生效版本的配置；传入 enabled&#x3D;false 时关闭；传入 enabled&#x3D;true 时完整覆盖。
+     * @return UpdateRuntimeRequest
+     */
+    public UpdateRuntimeRequest logConfiguration(LogConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
+        return this;
+    }
+
+
+    /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return UpdateRuntimeRequest
      */
     public UpdateRuntimeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -535,7 +634,8 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Runtime ID
      *
-     * @param runtimeId
+     * @param runtimeId Runtime ID
+     * @return UpdateRuntimeRequest
      */
     public UpdateRuntimeRequest runtimeId(String runtimeId) {
         this.runtimeId = runtimeId;
@@ -562,5 +662,17 @@ public class UpdateRuntimeRequest extends JdcloudRequest implements java.io.Seri
             this.envs = new ArrayList<>();
         }
         this.envs.add(env);
+    }
+
+    /**
+     * add item to Runtime 只读镜像卷配置，最多 1 个，数组元素不能为 null。不传或传 null 时继承当前生效版本；传空数组 [] 时清空新版本的镜像卷；传非空数组时整体替换。
+     *
+     * @param imageVolume
+     */
+    public void addImageVolume(ImageVolume imageVolume) {
+        if (this.imageVolumes == null) {
+            this.imageVolumes = new ArrayList<>();
+        }
+        this.imageVolumes.add(imageVolume);
     }
 }

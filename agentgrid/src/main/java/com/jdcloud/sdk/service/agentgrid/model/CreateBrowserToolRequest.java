@@ -24,7 +24,12 @@
 
 package com.jdcloud.sdk.service.agentgrid.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.agentgrid.model.ResourceConfiguration;
+import com.jdcloud.sdk.service.agentgrid.model.LogConfiguration;
+import com.jdcloud.sdk.service.agentgrid.model.Tag;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -32,6 +37,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 ## 接口说明
 - 支持通过 &#x60;clientToken&#x60; 保证请求幂等性。
+- 支持在创建时指定用户标签和资源组，创建成功后自动上报资源中心。
 - 创建成功后由服务端自动生成 &#x60;apiKey&#x60;。
 - Browser Tool 状态包括：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;ready&#x60;（可创建 Session）、&#x60;failed&#x60;（处理失败）、&#x60;deleting&#x60;（删除中）、&#x60;deleted&#x60;（已删除）。
 - 本接口为异步接口。请求受理成功后，资源通常先进入 &#x60;pending&#x60;，待底层资源准备完成后进入 &#x60;ready&#x60;；如创建失败则进入 &#x60;failed&#x60;。建议通过“查询 Browser Tool 详情”或“查询 Browser Tool 列表”轮询确认最终状态。
@@ -54,6 +60,16 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
     private String description;
 
     /**
+     * Browser Tool 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     */
+    private ResourceConfiguration resourceConfiguration;
+
+    /**
+     * Browser Tool 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     */
+    private LogConfiguration logConfiguration;
+
+    /**
      * Browser Tool 鉴权方式，当前仅支持 &#x60;API_KEY&#x60;
      */
     private String authenticationType;
@@ -69,6 +85,16 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
      * 用于保证请求幂等性。
      */
     private String clientToken;
+
+    /**
+     * Browser Tool 用户标签配置。
+     */
+    
+    private List<Tag> tags;
+    /**
+     * Browser Tool 所属资源组 ID；不指定时使用默认资源组。
+     */
+    private String resourceGroupId;
 
     /**
      * Region ID
@@ -114,6 +140,44 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+
+    /**
+     * get Browser Tool 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     *
+     * @return
+     */
+    public ResourceConfiguration getResourceConfiguration() {
+        return resourceConfiguration;
+    }
+
+    /**
+     * set Browser Tool 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     *
+     * @param resourceConfiguration
+     */
+    public void setResourceConfiguration(ResourceConfiguration resourceConfiguration) {
+        this.resourceConfiguration = resourceConfiguration;
+    }
+
+
+    /**
+     * get Browser Tool 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     *
+     * @return
+     */
+    public LogConfiguration getLogConfiguration() {
+        return logConfiguration;
+    }
+
+    /**
+     * set Browser Tool 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     *
+     * @param logConfiguration
+     */
+    public void setLogConfiguration(LogConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
     }
 
 
@@ -175,6 +239,44 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
 
 
     /**
+    * get Browser Tool 用户标签配置。
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Browser Tool 用户标签配置。
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get Browser Tool 所属资源组 ID；不指定时使用默认资源组。
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set Browser Tool 所属资源组 ID；不指定时使用默认资源组。
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
      * get Region ID
      *
      * @return
@@ -197,7 +299,8 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
     /**
      * set Browser Tool 名称。长度为 1~32 个字符，可包含中文、数字、大小写字母、下划线、中划线或点。
      *
-     * @param name
+     * @param name Browser Tool 名称。长度为 1~32 个字符，可包含中文、数字、大小写字母、下划线、中划线或点。
+     * @return CreateBrowserToolRequest
      */
     public CreateBrowserToolRequest name(String name) {
         this.name = name;
@@ -208,7 +311,8 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
     /**
      * set Browser Tool 描述信息，长度不超过 256 个字符。
      *
-     * @param description
+     * @param description Browser Tool 描述信息，长度不超过 256 个字符。
+     * @return CreateBrowserToolRequest
      */
     public CreateBrowserToolRequest description(String description) {
         this.description = description;
@@ -217,9 +321,34 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
 
 
     /**
+     * set Browser Tool 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     *
+     * @param resourceConfiguration Browser Tool 资源配置；不指定时使用 1 vCPU、2 GiB 内存。
+     * @return CreateBrowserToolRequest
+     */
+    public CreateBrowserToolRequest resourceConfiguration(ResourceConfiguration resourceConfiguration) {
+        this.resourceConfiguration = resourceConfiguration;
+        return this;
+    }
+
+
+    /**
+     * set Browser Tool 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     *
+     * @param logConfiguration Browser Tool 云日志投递配置。不传或 enabled&#x3D;false 时不开启日志投递。
+     * @return CreateBrowserToolRequest
+     */
+    public CreateBrowserToolRequest logConfiguration(LogConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
+        return this;
+    }
+
+
+    /**
      * set Browser Tool 鉴权方式，当前仅支持 &#x60;API_KEY&#x60;
      *
-     * @param authenticationType
+     * @param authenticationType Browser Tool 鉴权方式，当前仅支持 &#x60;API_KEY&#x60;
+     * @return CreateBrowserToolRequest
      */
     public CreateBrowserToolRequest authenticationType(String authenticationType) {
         this.authenticationType = authenticationType;
@@ -230,7 +359,8 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
     /**
      * set Code Interpreter 网络配置。支持 public｜sandbox 两种。
      *
-     * @param networkConfiguration
+     * @param networkConfiguration Code Interpreter 网络配置。支持 public｜sandbox 两种。
+     * @return CreateBrowserToolRequest
      */
     public CreateBrowserToolRequest networkConfiguration(String networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
@@ -241,7 +371,8 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
     /**
      * set 用于保证请求幂等性。
      *
-     * @param clientToken
+     * @param clientToken 用于保证请求幂等性。
+     * @return CreateBrowserToolRequest
      */
     public CreateBrowserToolRequest clientToken(String clientToken) {
         this.clientToken = clientToken;
@@ -250,9 +381,34 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
 
 
     /**
+    * set Browser Tool 用户标签配置。
+    *
+    * @param tags Browser Tool 用户标签配置。
+    * @return CreateBrowserToolRequest
+    */
+    public CreateBrowserToolRequest tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set Browser Tool 所属资源组 ID；不指定时使用默认资源组。
+     *
+     * @param resourceGroupId Browser Tool 所属资源组 ID；不指定时使用默认资源组。
+     * @return CreateBrowserToolRequest
+     */
+    public CreateBrowserToolRequest resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return CreateBrowserToolRequest
      */
     public CreateBrowserToolRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -260,4 +416,16 @@ public class CreateBrowserToolRequest extends JdcloudRequest implements java.io.
     }
 
 
+
+    /**
+     * add item to Browser Tool 用户标签配置。
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 }

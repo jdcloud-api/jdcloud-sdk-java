@@ -67,7 +67,8 @@ public class DescribeRuntimeEndpointsResult extends JdcloudResult implements jav
     /**
     * set runtimeEndpoints
     *
-    * @param runtimeEndpoints
+    * @param runtimeEndpoints 
+    * @return DescribeRuntimeEndpointsResult
     */
     public DescribeRuntimeEndpointsResult runtimeEndpoints(List<RuntimeEndpointInfo> runtimeEndpoints) {
         this.runtimeEndpoints = runtimeEndpoints;

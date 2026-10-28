@@ -117,7 +117,8 @@ public class CodeConfiguration  implements java.io.Serializable {
     /**
      * set 代码位置，S3 链接
      *
-     * @param ossLocation
+     * @param ossLocation 代码位置，S3 链接
+     * @return CodeConfiguration
      */
     public CodeConfiguration ossLocation(OssLocationConfiguration ossLocation) {
         this.ossLocation = ossLocation;
@@ -128,7 +129,8 @@ public class CodeConfiguration  implements java.io.Serializable {
     /**
      * set 代码入口，运行时调用的函数或方法
      *
-     * @param entryPoint
+     * @param entryPoint 代码入口，运行时调用的函数或方法
+     * @return CodeConfiguration
      */
     public CodeConfiguration entryPoint(String entryPoint) {
         this.entryPoint = entryPoint;
@@ -139,7 +141,8 @@ public class CodeConfiguration  implements java.io.Serializable {
     /**
      * set 运行环境，如 PYTHON_3_10 或 PYTHON_3_11等
      *
-     * @param runtimeEnvironment
+     * @param runtimeEnvironment 运行环境，如 PYTHON_3_10 或 PYTHON_3_11等
+     * @return CodeConfiguration
      */
     public CodeConfiguration runtimeEnvironment(String runtimeEnvironment) {
         this.runtimeEnvironment = runtimeEnvironment;

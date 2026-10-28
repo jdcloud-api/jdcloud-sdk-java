@@ -70,6 +70,11 @@ public class RuntimeVersionView  implements java.io.Serializable {
     private Integer maxSession;
 
     /**
+     * 当前版本的资源配置；未记录规格时不返回
+     */
+    private ResourceView resource;
+
+    /**
      * Runtime 协议
      */
     private String protocol;
@@ -80,6 +85,11 @@ public class RuntimeVersionView  implements java.io.Serializable {
     private LifecycleView lifecycle;
 
     /**
+     * 当前 Runtime 版本的云日志投递配置
+     */
+    private LogConfigurationView logConfigurationView;
+
+    /**
      * 环境变量信息
      */
     
@@ -87,8 +97,13 @@ public class RuntimeVersionView  implements java.io.Serializable {
     /**
      * 当前版本文件系统配置
      */
-    private FilesystemView fileSystem;
+    private FileSystemView fileSystem;
 
+    /**
+     * 当前版本的只读镜像卷配置，未配置时不返回。仅包含源镜像地址和挂载路径。
+     */
+    
+    private List<ImageVolume> imageVolumes;
     /**
      * 当前版本创建时间
      */
@@ -230,6 +245,25 @@ public class RuntimeVersionView  implements java.io.Serializable {
 
 
     /**
+     * get 当前版本的资源配置；未记录规格时不返回
+     *
+     * @return
+     */
+    public ResourceView getResource() {
+        return resource;
+    }
+
+    /**
+     * set 当前版本的资源配置；未记录规格时不返回
+     *
+     * @param resource
+     */
+    public void setResource(ResourceView resource) {
+        this.resource = resource;
+    }
+
+
+    /**
      * get Runtime 协议
      *
      * @return
@@ -268,6 +302,25 @@ public class RuntimeVersionView  implements java.io.Serializable {
 
 
     /**
+     * get 当前 Runtime 版本的云日志投递配置
+     *
+     * @return
+     */
+    public LogConfigurationView getLogConfigurationView() {
+        return logConfigurationView;
+    }
+
+    /**
+     * set 当前 Runtime 版本的云日志投递配置
+     *
+     * @param logConfigurationView
+     */
+    public void setLogConfigurationView(LogConfigurationView logConfigurationView) {
+        this.logConfigurationView = logConfigurationView;
+    }
+
+
+    /**
     * get 环境变量信息
     *
     * @return
@@ -291,7 +344,7 @@ public class RuntimeVersionView  implements java.io.Serializable {
      *
      * @return
      */
-    public FilesystemView getFileSystem() {
+    public FileSystemView getFileSystem() {
         return fileSystem;
     }
 
@@ -300,8 +353,27 @@ public class RuntimeVersionView  implements java.io.Serializable {
      *
      * @param fileSystem
      */
-    public void setFileSystem(FilesystemView fileSystem) {
+    public void setFileSystem(FileSystemView fileSystem) {
         this.fileSystem = fileSystem;
+    }
+
+
+    /**
+    * get 当前版本的只读镜像卷配置，未配置时不返回。仅包含源镜像地址和挂载路径。
+    *
+    * @return
+    */
+    public List<ImageVolume> getImageVolumes() {
+        return imageVolumes;
+    }
+
+    /**
+    * set 当前版本的只读镜像卷配置，未配置时不返回。仅包含源镜像地址和挂载路径。
+    *
+    * @param imageVolumes
+    */
+    public void setImageVolumes(List<ImageVolume> imageVolumes) {
+        this.imageVolumes = imageVolumes;
     }
 
 
@@ -328,7 +400,8 @@ public class RuntimeVersionView  implements java.io.Serializable {
     /**
      * set Runtime 版本号
      *
-     * @param version
+     * @param version Runtime 版本号
+     * @return RuntimeVersionView
      */
     public RuntimeVersionView version(String version) {
         this.version = version;
@@ -339,7 +412,8 @@ public class RuntimeVersionView  implements java.io.Serializable {
     /**
      * set 当前版本镜像信息
      *
-     * @param artifact
+     * @param artifact 当前版本镜像信息
+     * @return RuntimeVersionView
      */
     public RuntimeVersionView artifact(ArtifactView artifact) {
         this.artifact = artifact;
@@ -350,7 +424,8 @@ public class RuntimeVersionView  implements java.io.Serializable {
     /**
      * set 当前版本网络配置信息
      *
-     * @param network
+     * @param network 当前版本网络配置信息
+     * @return RuntimeVersionView
      */
     public RuntimeVersionView network(NetworkView network) {
         this.network = network;
@@ -361,7 +436,8 @@ public class RuntimeVersionView  implements java.io.Serializable {
     /**
      * set Runtime 版本状态。可选值：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;creating&#x60;（创建中）、&#x60;running&#x60;（可正常使用）、&#x60;failed&#x60;（处理失败）、&#x60;deleted&#x60;（已删除）
      *
-     * @param state
+     * @param state Runtime 版本状态。可选值：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;creating&#x60;（创建中）、&#x60;running&#x60;（可正常使用）、&#x60;failed&#x60;（处理失败）、&#x60;deleted&#x60;（已删除）
+     * @return RuntimeVersionView
      */
     public RuntimeVersionView state(String state) {
         this.state = state;
@@ -372,7 +448,8 @@ public class RuntimeVersionView  implements java.io.Serializable {
     /**
      * set 当前版本的描述信息
      *
-     * @param versionDescription
+     * @param versionDescription 当前版本的描述信息
+     * @return RuntimeVersionView
      */
     public RuntimeVersionView versionDescription(String versionDescription) {
         this.versionDescription = versionDescription;
@@ -383,7 +460,8 @@ public class RuntimeVersionView  implements java.io.Serializable {
     /**
      * set 预热 Session 数
      *
-     * @param warmSession
+     * @param warmSession 预热 Session 数
+     * @return RuntimeVersionView
      */
     public RuntimeVersionView warmSession(Integer warmSession) {
         this.warmSession = warmSession;
@@ -394,7 +472,8 @@ public class RuntimeVersionView  implements java.io.Serializable {
     /**
      * set 最大 Session 数
      *
-     * @param maxSession
+     * @param maxSession 最大 Session 数
+     * @return RuntimeVersionView
      */
     public RuntimeVersionView maxSession(Integer maxSession) {
         this.maxSession = maxSession;
@@ -403,9 +482,22 @@ public class RuntimeVersionView  implements java.io.Serializable {
 
 
     /**
+     * set 当前版本的资源配置；未记录规格时不返回
+     *
+     * @param resource 当前版本的资源配置；未记录规格时不返回
+     * @return RuntimeVersionView
+     */
+    public RuntimeVersionView resource(ResourceView resource) {
+        this.resource = resource;
+        return this;
+    }
+
+
+    /**
      * set Runtime 协议
      *
-     * @param protocol
+     * @param protocol Runtime 协议
+     * @return RuntimeVersionView
      */
     public RuntimeVersionView protocol(String protocol) {
         this.protocol = protocol;
@@ -416,7 +508,8 @@ public class RuntimeVersionView  implements java.io.Serializable {
     /**
      * set Runtime 存活周期配置
      *
-     * @param lifecycle
+     * @param lifecycle Runtime 存活周期配置
+     * @return RuntimeVersionView
      */
     public RuntimeVersionView lifecycle(LifecycleView lifecycle) {
         this.lifecycle = lifecycle;
@@ -425,9 +518,22 @@ public class RuntimeVersionView  implements java.io.Serializable {
 
 
     /**
+     * set 当前 Runtime 版本的云日志投递配置
+     *
+     * @param logConfigurationView 当前 Runtime 版本的云日志投递配置
+     * @return RuntimeVersionView
+     */
+    public RuntimeVersionView logConfigurationView(LogConfigurationView logConfigurationView) {
+        this.logConfigurationView = logConfigurationView;
+        return this;
+    }
+
+
+    /**
     * set 环境变量信息
     *
-    * @param envs
+    * @param envs 环境变量信息
+    * @return RuntimeVersionView
     */
     public RuntimeVersionView envs(List<Env> envs) {
         this.envs = envs;
@@ -438,10 +544,23 @@ public class RuntimeVersionView  implements java.io.Serializable {
     /**
      * set 当前版本文件系统配置
      *
-     * @param fileSystem
+     * @param fileSystem 当前版本文件系统配置
+     * @return RuntimeVersionView
      */
-    public RuntimeVersionView fileSystem(FilesystemView fileSystem) {
+    public RuntimeVersionView fileSystem(FileSystemView fileSystem) {
         this.fileSystem = fileSystem;
+        return this;
+    }
+
+
+    /**
+    * set 当前版本的只读镜像卷配置，未配置时不返回。仅包含源镜像地址和挂载路径。
+    *
+    * @param imageVolumes 当前版本的只读镜像卷配置，未配置时不返回。仅包含源镜像地址和挂载路径。
+    * @return RuntimeVersionView
+    */
+    public RuntimeVersionView imageVolumes(List<ImageVolume> imageVolumes) {
+        this.imageVolumes = imageVolumes;
         return this;
     }
 
@@ -449,7 +568,8 @@ public class RuntimeVersionView  implements java.io.Serializable {
     /**
      * set 当前版本创建时间
      *
-     * @param createTime
+     * @param createTime 当前版本创建时间
+     * @return RuntimeVersionView
      */
     public RuntimeVersionView createTime(String createTime) {
         this.createTime = createTime;
@@ -468,5 +588,17 @@ public class RuntimeVersionView  implements java.io.Serializable {
             this.envs = new ArrayList<>();
         }
         this.envs.add(env);
+    }
+
+    /**
+     * add item to 当前版本的只读镜像卷配置，未配置时不返回。仅包含源镜像地址和挂载路径。
+     *
+     * @param imageVolume
+     */
+    public void addImageVolume(ImageVolume imageVolume) {
+        if (this.imageVolumes == null) {
+            this.imageVolumes = new ArrayList<>();
+        }
+        this.imageVolumes.add(imageVolume);
     }
 }

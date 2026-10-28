@@ -26,21 +26,45 @@ package com.jdcloud.sdk.service.agentgrid.model;
 
 
 /**
- * runtime 生命周期配置
+ * Runtime 生命周期配置
  */
 public class LifecycleConfiguration  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * Session 会话从创建到自动终止的最长时间（秒），取值范围 0～28800，默认 28800。当值为 0 时，生成的Session不会自动终止。
+     * 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
+     */
+    private Boolean persistent;
+
+    /**
+     * Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 28800。
      */
     private Integer maxLifeTime;
 
 
 
     /**
-     * get Session 会话从创建到自动终止的最长时间（秒），取值范围 0～28800，默认 28800。当值为 0 时，生成的Session不会自动终止。
+     * get 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
+     *
+     * @return
+     */
+    public Boolean getPersistent() {
+        return persistent;
+    }
+
+    /**
+     * set 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
+     *
+     * @param persistent
+     */
+    public void setPersistent(Boolean persistent) {
+        this.persistent = persistent;
+    }
+
+
+    /**
+     * get Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 28800。
      *
      * @return
      */
@@ -49,7 +73,7 @@ public class LifecycleConfiguration  implements java.io.Serializable {
     }
 
     /**
-     * set Session 会话从创建到自动终止的最长时间（秒），取值范围 0～28800，默认 28800。当值为 0 时，生成的Session不会自动终止。
+     * set Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 28800。
      *
      * @param maxLifeTime
      */
@@ -60,9 +84,22 @@ public class LifecycleConfiguration  implements java.io.Serializable {
 
 
     /**
-     * set Session 会话从创建到自动终止的最长时间（秒），取值范围 0～28800，默认 28800。当值为 0 时，生成的Session不会自动终止。
+     * set 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
      *
-     * @param maxLifeTime
+     * @param persistent 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
+     * @return LifecycleConfiguration
+     */
+    public LifecycleConfiguration persistent(Boolean persistent) {
+        this.persistent = persistent;
+        return this;
+    }
+
+
+    /**
+     * set Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 28800。
+     *
+     * @param maxLifeTime Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 28800。
+     * @return LifecycleConfiguration
      */
     public LifecycleConfiguration maxLifeTime(Integer maxLifeTime) {
         this.maxLifeTime = maxLifeTime;

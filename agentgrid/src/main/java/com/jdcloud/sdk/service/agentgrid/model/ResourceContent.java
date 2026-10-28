@@ -161,7 +161,8 @@ public class ResourceContent  implements java.io.Serializable {
     /**
      * set 资源内容类型，支持 text、blob
      *
-     * @param type
+     * @param type 资源内容类型，支持 text、blob
+     * @return ResourceContent
      */
     public ResourceContent type(String type) {
         this.type = type;
@@ -172,7 +173,8 @@ public class ResourceContent  implements java.io.Serializable {
     /**
      * set Base64 编码的二进制资源内容
      *
-     * @param blob
+     * @param blob Base64 编码的二进制资源内容
+     * @return ResourceContent
      */
     public ResourceContent blob(String blob) {
         this.blob = blob;
@@ -183,7 +185,8 @@ public class ResourceContent  implements java.io.Serializable {
     /**
      * set 资源 MIME 类型
      *
-     * @param mimeType
+     * @param mimeType 资源 MIME 类型
+     * @return ResourceContent
      */
     public ResourceContent mimeType(String mimeType) {
         this.mimeType = mimeType;
@@ -194,7 +197,8 @@ public class ResourceContent  implements java.io.Serializable {
     /**
      * set 文本资源内容
      *
-     * @param text
+     * @param text 文本资源内容
+     * @return ResourceContent
      */
     public ResourceContent text(String text) {
         this.text = text;
@@ -205,7 +209,8 @@ public class ResourceContent  implements java.io.Serializable {
     /**
      * set 资源 URI
      *
-     * @param uri
+     * @param uri 资源 URI
+     * @return ResourceContent
      */
     public ResourceContent uri(String uri) {
         this.uri = uri;

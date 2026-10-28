@@ -123,7 +123,8 @@ public class ModifyRuntimeVersionRequest extends JdcloudRequest implements java.
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return ModifyRuntimeVersionRequest
      */
     public ModifyRuntimeVersionRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -134,7 +135,8 @@ public class ModifyRuntimeVersionRequest extends JdcloudRequest implements java.
     /**
      * set Runtime ID
      *
-     * @param runtimeId
+     * @param runtimeId Runtime ID
+     * @return ModifyRuntimeVersionRequest
      */
     public ModifyRuntimeVersionRequest runtimeId(String runtimeId) {
         this.runtimeId = runtimeId;
@@ -145,7 +147,8 @@ public class ModifyRuntimeVersionRequest extends JdcloudRequest implements java.
     /**
      * set Runtime 版本号
      *
-     * @param version
+     * @param version Runtime 版本号
+     * @return ModifyRuntimeVersionRequest
      */
     public ModifyRuntimeVersionRequest version(String version) {
         this.version = version;

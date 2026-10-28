@@ -93,7 +93,8 @@ public class DescribeBrowserToolRequest extends JdcloudRequest implements java.i
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribeBrowserToolRequest
      */
     public DescribeBrowserToolRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -104,7 +105,8 @@ public class DescribeBrowserToolRequest extends JdcloudRequest implements java.i
     /**
      * set Browser Tool ID
      *
-     * @param browserToolId
+     * @param browserToolId Browser Tool ID
+     * @return DescribeBrowserToolRequest
      */
     public DescribeBrowserToolRequest browserToolId(String browserToolId) {
         this.browserToolId = browserToolId;

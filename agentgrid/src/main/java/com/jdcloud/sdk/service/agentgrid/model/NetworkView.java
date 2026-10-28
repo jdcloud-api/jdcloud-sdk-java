@@ -38,7 +38,7 @@ public class NetworkView  implements java.io.Serializable {
     private Boolean enablePublicNetwork;
 
     /**
-     * 是否具备沙盒能力
+     * 是否具备在沙盒环境执行能力
      */
     private Boolean enableSandbox;
 
@@ -64,7 +64,7 @@ public class NetworkView  implements java.io.Serializable {
 
 
     /**
-     * get 是否具备沙盒能力
+     * get 是否具备在沙盒环境执行能力
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class NetworkView  implements java.io.Serializable {
     }
 
     /**
-     * set 是否具备沙盒能力
+     * set 是否具备在沙盒环境执行能力
      *
      * @param enableSandbox
      */
@@ -86,7 +86,8 @@ public class NetworkView  implements java.io.Serializable {
     /**
      * set 是否具备访问公网的能力
      *
-     * @param enablePublicNetwork
+     * @param enablePublicNetwork 是否具备访问公网的能力
+     * @return NetworkView
      */
     public NetworkView enablePublicNetwork(Boolean enablePublicNetwork) {
         this.enablePublicNetwork = enablePublicNetwork;
@@ -95,9 +96,10 @@ public class NetworkView  implements java.io.Serializable {
 
 
     /**
-     * set 是否具备沙盒能力
+     * set 是否具备在沙盒环境执行能力
      *
-     * @param enableSandbox
+     * @param enableSandbox 是否具备在沙盒环境执行能力
+     * @return NetworkView
      */
     public NetworkView enableSandbox(Boolean enableSandbox) {
         this.enableSandbox = enableSandbox;

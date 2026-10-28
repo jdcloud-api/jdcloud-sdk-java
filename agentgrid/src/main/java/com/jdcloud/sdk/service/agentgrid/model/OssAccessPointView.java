@@ -47,6 +47,11 @@ public class OssAccessPointView  implements java.io.Serializable {
      */
     private String mountPath;
 
+    /**
+     * 是否以只读方式挂载 OSS，false 表示可读写。
+     */
+    private Boolean readOnly;
+
 
 
     /**
@@ -106,11 +111,31 @@ public class OssAccessPointView  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 是否以只读方式挂载 OSS，false 表示可读写。
+     *
+     * @return
+     */
+    public Boolean getReadOnly() {
+        return readOnly;
+    }
+
+    /**
+     * set 是否以只读方式挂载 OSS，false 表示可读写。
+     *
+     * @param readOnly
+     */
+    public void setReadOnly(Boolean readOnly) {
+        this.readOnly = readOnly;
+    }
+
+
 
     /**
      * set OSS Bucket 名称
      *
-     * @param bucketName
+     * @param bucketName OSS Bucket 名称
+     * @return OssAccessPointView
      */
     public OssAccessPointView bucketName(String bucketName) {
         this.bucketName = bucketName;
@@ -121,7 +146,8 @@ public class OssAccessPointView  implements java.io.Serializable {
     /**
      * set OSS Bucket 内的文件夹路径
      *
-     * @param bucketPath
+     * @param bucketPath OSS Bucket 内的文件夹路径
+     * @return OssAccessPointView
      */
     public OssAccessPointView bucketPath(String bucketPath) {
         this.bucketPath = bucketPath;
@@ -132,10 +158,23 @@ public class OssAccessPointView  implements java.io.Serializable {
     /**
      * set 挂载在 Runtime 内的路径
      *
-     * @param mountPath
+     * @param mountPath 挂载在 Runtime 内的路径
+     * @return OssAccessPointView
      */
     public OssAccessPointView mountPath(String mountPath) {
         this.mountPath = mountPath;
+        return this;
+    }
+
+
+    /**
+     * set 是否以只读方式挂载 OSS，false 表示可读写。
+     *
+     * @param readOnly 是否以只读方式挂载 OSS，false 表示可读写。
+     * @return OssAccessPointView
+     */
+    public OssAccessPointView readOnly(Boolean readOnly) {
+        this.readOnly = readOnly;
         return this;
     }
 

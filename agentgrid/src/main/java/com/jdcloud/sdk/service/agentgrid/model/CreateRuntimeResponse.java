@@ -32,6 +32,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 ## 接口说明
 - 支持通过 &#x60;clientToken&#x60; 保证请求幂等性。
 - 创建时需提供制品、鉴权方式、网络等核心配置信息。
+- 镜像制品的 &#x60;imageUrl&#x60; 必填；可选的 &#x60;command&#x60;、&#x60;args&#x60; 分别覆盖镜像的 ENTRYPOINT、CMD，&#x60;port&#x60; 声明镜像内服务实际监听的端口（1～65535）。不填写这些可选项时沿用镜像默认启动方式和协议默认端口。
+- 可通过 &#x60;imageVolumes&#x60; 配置最多 1 个只读镜像卷，挂载路径必须位于 &#x60;/mnt&#x60; 的子目录下，且不能与 OSS 或 CFS 挂载点重叠。
+- 支持在创建时指定用户标签和资源组；标签或资源组参数会在创建前进行合法性校验，并在 Runtime 创建成功后绑定到资源。
 - Runtime 状态包括：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;creating&#x60;（创建中）、&#x60;running&#x60;（可正常调用）、&#x60;updating&#x60;（版本或配置更新中）、&#x60;failed&#x60;（处理失败）、&#x60;deleted&#x60;（已删除，不可继续使用）。
 - Runtime Version 状态包括：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;creating&#x60;（创建中）、&#x60;running&#x60;（可正常使用）、&#x60;failed&#x60;（处理失败）、&#x60;deleted&#x60;（已删除）。
 - 本接口为异步接口，请求受理成功后会返回 &#x60;requestId&#x60;、&#x60;runtimeId&#x60; 和初始 &#x60;runtimeVersion&#x60;。创建初期，Runtime 与首个 Runtime Version 通常先处于 &#x60;pending&#x60;，随后进入 &#x60;creating&#x60;，最终进入 &#x60;running&#x60; 或 &#x60;failed&#x60;。

@@ -110,7 +110,8 @@ public class OssLocationView  implements java.io.Serializable {
     /**
      * set 包含存储数据的 S3 存储桶名称
      *
-     * @param bucket
+     * @param bucket 包含存储数据的 S3 存储桶名称
+     * @return OssLocationView
      */
     public OssLocationView bucket(String bucket) {
         this.bucket = bucket;
@@ -121,7 +122,8 @@ public class OssLocationView  implements java.io.Serializable {
     /**
      * set S3 存储桶中对象的前缀
      *
-     * @param prefix
+     * @param prefix S3 存储桶中对象的前缀
+     * @return OssLocationView
      */
     public OssLocationView prefix(String prefix) {
         this.prefix = prefix;
@@ -132,7 +134,8 @@ public class OssLocationView  implements java.io.Serializable {
     /**
      * set S3 对象的版本 ID
      *
-     * @param versionId
+     * @param versionId S3 对象的版本 ID
+     * @return OssLocationView
      */
     public OssLocationView versionId(String versionId) {
         this.versionId = versionId;

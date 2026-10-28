@@ -53,7 +53,12 @@ public class BrowserToolSession  implements java.io.Serializable {
     private String state;
 
     /**
-     * Session 最大存活时长（秒）
+     * 是否开启长程运行
+     */
+    private Boolean persistent;
+
+    /**
+     * Session 最大生命周期，单位为秒；长程运行时不生效
      */
     private Integer maxLifeTime;
 
@@ -166,7 +171,26 @@ public class BrowserToolSession  implements java.io.Serializable {
 
 
     /**
-     * get Session 最大存活时长（秒）
+     * get 是否开启长程运行
+     *
+     * @return
+     */
+    public Boolean getPersistent() {
+        return persistent;
+    }
+
+    /**
+     * set 是否开启长程运行
+     *
+     * @param persistent
+     */
+    public void setPersistent(Boolean persistent) {
+        this.persistent = persistent;
+    }
+
+
+    /**
+     * get Session 最大生命周期，单位为秒；长程运行时不生效
      *
      * @return
      */
@@ -175,7 +199,7 @@ public class BrowserToolSession  implements java.io.Serializable {
     }
 
     /**
-     * set Session 最大存活时长（秒）
+     * set Session 最大生命周期，单位为秒；长程运行时不生效
      *
      * @param maxLifeTime
      */
@@ -302,7 +326,8 @@ public class BrowserToolSession  implements java.io.Serializable {
     /**
      * set Browser Tool ID
      *
-     * @param browserToolId
+     * @param browserToolId Browser Tool ID
+     * @return BrowserToolSession
      */
     public BrowserToolSession browserToolId(String browserToolId) {
         this.browserToolId = browserToolId;
@@ -313,7 +338,8 @@ public class BrowserToolSession  implements java.io.Serializable {
     /**
      * set browser tool 名字
      *
-     * @param name
+     * @param name browser tool 名字
+     * @return BrowserToolSession
      */
     public BrowserToolSession name(String name) {
         this.name = name;
@@ -324,7 +350,8 @@ public class BrowserToolSession  implements java.io.Serializable {
     /**
      * set Session ID
      *
-     * @param sessionId
+     * @param sessionId Session ID
+     * @return BrowserToolSession
      */
     public BrowserToolSession sessionId(String sessionId) {
         this.sessionId = sessionId;
@@ -335,7 +362,8 @@ public class BrowserToolSession  implements java.io.Serializable {
     /**
      * set Session 状态。可选值：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;creating&#x60;（初始化中）、&#x60;ready&#x60;（可连接使用）、&#x60;deleting&#x60;（删除中）、&#x60;deleted&#x60;（已删除）、&#x60;failed&#x60;（初始化失败）
      *
-     * @param state
+     * @param state Session 状态。可选值：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;creating&#x60;（初始化中）、&#x60;ready&#x60;（可连接使用）、&#x60;deleting&#x60;（删除中）、&#x60;deleted&#x60;（已删除）、&#x60;failed&#x60;（初始化失败）
+     * @return BrowserToolSession
      */
     public BrowserToolSession state(String state) {
         this.state = state;
@@ -344,9 +372,22 @@ public class BrowserToolSession  implements java.io.Serializable {
 
 
     /**
-     * set Session 最大存活时长（秒）
+     * set 是否开启长程运行
      *
-     * @param maxLifeTime
+     * @param persistent 是否开启长程运行
+     * @return BrowserToolSession
+     */
+    public BrowserToolSession persistent(Boolean persistent) {
+        this.persistent = persistent;
+        return this;
+    }
+
+
+    /**
+     * set Session 最大生命周期，单位为秒；长程运行时不生效
+     *
+     * @param maxLifeTime Session 最大生命周期，单位为秒；长程运行时不生效
+     * @return BrowserToolSession
      */
     public BrowserToolSession maxLifeTime(Integer maxLifeTime) {
         this.maxLifeTime = maxLifeTime;
@@ -357,7 +398,8 @@ public class BrowserToolSession  implements java.io.Serializable {
     /**
      * set Chrome DevTools Protocol WebSocket 地址；通常仅当 &#x60;state&#x60; 为 &#x60;ready&#x60; 时可用
      *
-     * @param cdpEndpoint
+     * @param cdpEndpoint Chrome DevTools Protocol WebSocket 地址；通常仅当 &#x60;state&#x60; 为 &#x60;ready&#x60; 时可用
+     * @return BrowserToolSession
      */
     public BrowserToolSession cdpEndpoint(String cdpEndpoint) {
         this.cdpEndpoint = cdpEndpoint;
@@ -368,7 +410,8 @@ public class BrowserToolSession  implements java.io.Serializable {
     /**
      * set VNC 访问地址；通常仅当 &#x60;state&#x60; 为 &#x60;ready&#x60; 时可用
      *
-     * @param vncEndpoint
+     * @param vncEndpoint VNC 访问地址；通常仅当 &#x60;state&#x60; 为 &#x60;ready&#x60; 时可用
+     * @return BrowserToolSession
      */
     public BrowserToolSession vncEndpoint(String vncEndpoint) {
         this.vncEndpoint = vncEndpoint;
@@ -379,7 +422,8 @@ public class BrowserToolSession  implements java.io.Serializable {
     /**
      * set 访问 VNC 的校验 Token；通常仅当 &#x60;state&#x60; 为 &#x60;ready&#x60; 时可用
      *
-     * @param vncAccessToken
+     * @param vncAccessToken 访问 VNC 的校验 Token；通常仅当 &#x60;state&#x60; 为 &#x60;ready&#x60; 时可用
+     * @return BrowserToolSession
      */
     public BrowserToolSession vncAccessToken(String vncAccessToken) {
         this.vncAccessToken = vncAccessToken;
@@ -390,7 +434,8 @@ public class BrowserToolSession  implements java.io.Serializable {
     /**
      * set Session 失败原因；仅当 &#x60;state&#x60; 为 &#x60;failed&#x60; 时通常有值
      *
-     * @param failureReason
+     * @param failureReason Session 失败原因；仅当 &#x60;state&#x60; 为 &#x60;failed&#x60; 时通常有值
+     * @return BrowserToolSession
      */
     public BrowserToolSession failureReason(String failureReason) {
         this.failureReason = failureReason;
@@ -401,7 +446,8 @@ public class BrowserToolSession  implements java.io.Serializable {
     /**
      * set Session 创建时间
      *
-     * @param createTime
+     * @param createTime Session 创建时间
+     * @return BrowserToolSession
      */
     public BrowserToolSession createTime(String createTime) {
         this.createTime = createTime;
@@ -412,7 +458,8 @@ public class BrowserToolSession  implements java.io.Serializable {
     /**
      * set Session 过期时间
      *
-     * @param expireTime
+     * @param expireTime Session 过期时间
+     * @return BrowserToolSession
      */
     public BrowserToolSession expireTime(String expireTime) {
         this.expireTime = expireTime;

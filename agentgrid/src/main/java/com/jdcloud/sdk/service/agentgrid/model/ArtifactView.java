@@ -62,7 +62,8 @@ public class ArtifactView  implements java.io.Serializable {
     /**
      * set 镜像信息
      *
-     * @param image
+     * @param image 镜像信息
+     * @return ArtifactView
      */
     public ArtifactView image(ImageView image) {
         this.image = image;

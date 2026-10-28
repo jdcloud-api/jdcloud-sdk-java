@@ -45,7 +45,12 @@ public class CreateCodeInterpreterSessionRequest extends JdcloudRequest implemen
     private String name;
 
     /**
-     * Session 存活时间（秒）。取值范围为60～28800，默认为900秒（15分钟）。
+     * 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
+     */
+    private Boolean persistent;
+
+    /**
+     * Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 900。
      */
     private Integer maxLifeTime;
 
@@ -90,7 +95,26 @@ public class CreateCodeInterpreterSessionRequest extends JdcloudRequest implemen
 
 
     /**
-     * get Session 存活时间（秒）。取值范围为60～28800，默认为900秒（15分钟）。
+     * get 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
+     *
+     * @return
+     */
+    public Boolean getPersistent() {
+        return persistent;
+    }
+
+    /**
+     * set 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
+     *
+     * @param persistent
+     */
+    public void setPersistent(Boolean persistent) {
+        this.persistent = persistent;
+    }
+
+
+    /**
+     * get Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 900。
      *
      * @return
      */
@@ -99,7 +123,7 @@ public class CreateCodeInterpreterSessionRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set Session 存活时间（秒）。取值范围为60～28800，默认为900秒（15分钟）。
+     * set Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 900。
      *
      * @param maxLifeTime
      */
@@ -169,7 +193,8 @@ public class CreateCodeInterpreterSessionRequest extends JdcloudRequest implemen
     /**
      * set Session 名称。长度为 1~32 个字符，可包含中文、数字、大小写字母、下划线、中划线或点。
      *
-     * @param name
+     * @param name Session 名称。长度为 1~32 个字符，可包含中文、数字、大小写字母、下划线、中划线或点。
+     * @return CreateCodeInterpreterSessionRequest
      */
     public CreateCodeInterpreterSessionRequest name(String name) {
         this.name = name;
@@ -178,9 +203,22 @@ public class CreateCodeInterpreterSessionRequest extends JdcloudRequest implemen
 
 
     /**
-     * set Session 存活时间（秒）。取值范围为60～28800，默认为900秒（15分钟）。
+     * set 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
      *
-     * @param maxLifeTime
+     * @param persistent 是否开启长程运行。开启后 Session 不受最大生命周期限制，需要主动删除。
+     * @return CreateCodeInterpreterSessionRequest
+     */
+    public CreateCodeInterpreterSessionRequest persistent(Boolean persistent) {
+        this.persistent = persistent;
+        return this;
+    }
+
+
+    /**
+     * set Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 900。
+     *
+     * @param maxLifeTime Session 最大生命周期，单位为秒。仅在 persistent 为 false 时生效，取值范围为 60～28800，默认值为 900。
+     * @return CreateCodeInterpreterSessionRequest
      */
     public CreateCodeInterpreterSessionRequest maxLifeTime(Integer maxLifeTime) {
         this.maxLifeTime = maxLifeTime;
@@ -191,7 +229,8 @@ public class CreateCodeInterpreterSessionRequest extends JdcloudRequest implemen
     /**
      * set 用于保证请求幂等性。
      *
-     * @param clientToken
+     * @param clientToken 用于保证请求幂等性。
+     * @return CreateCodeInterpreterSessionRequest
      */
     public CreateCodeInterpreterSessionRequest clientToken(String clientToken) {
         this.clientToken = clientToken;
@@ -202,7 +241,8 @@ public class CreateCodeInterpreterSessionRequest extends JdcloudRequest implemen
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return CreateCodeInterpreterSessionRequest
      */
     public CreateCodeInterpreterSessionRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -213,7 +253,8 @@ public class CreateCodeInterpreterSessionRequest extends JdcloudRequest implemen
     /**
      * set Code Interpreter ID
      *
-     * @param codeInterpreterId
+     * @param codeInterpreterId Code Interpreter ID
+     * @return CreateCodeInterpreterSessionRequest
      */
     public CreateCodeInterpreterSessionRequest codeInterpreterId(String codeInterpreterId) {
         this.codeInterpreterId = codeInterpreterId;

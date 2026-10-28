@@ -26,21 +26,45 @@ package com.jdcloud.sdk.service.agentgrid.model;
 
 
 /**
- * runtime 存活周期配置
+ * Runtime 生命周期视图
  */
 public class LifecycleView  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * runtime 的 session 存活的最长时间
+     * 是否开启长程运行
+     */
+    private Boolean persistent;
+
+    /**
+     * Session 最大生命周期，单位为秒；长程运行时不生效
      */
     private Integer maxLifeTime;
 
 
 
     /**
-     * get runtime 的 session 存活的最长时间
+     * get 是否开启长程运行
+     *
+     * @return
+     */
+    public Boolean getPersistent() {
+        return persistent;
+    }
+
+    /**
+     * set 是否开启长程运行
+     *
+     * @param persistent
+     */
+    public void setPersistent(Boolean persistent) {
+        this.persistent = persistent;
+    }
+
+
+    /**
+     * get Session 最大生命周期，单位为秒；长程运行时不生效
      *
      * @return
      */
@@ -49,7 +73,7 @@ public class LifecycleView  implements java.io.Serializable {
     }
 
     /**
-     * set runtime 的 session 存活的最长时间
+     * set Session 最大生命周期，单位为秒；长程运行时不生效
      *
      * @param maxLifeTime
      */
@@ -60,9 +84,22 @@ public class LifecycleView  implements java.io.Serializable {
 
 
     /**
-     * set runtime 的 session 存活的最长时间
+     * set 是否开启长程运行
      *
-     * @param maxLifeTime
+     * @param persistent 是否开启长程运行
+     * @return LifecycleView
+     */
+    public LifecycleView persistent(Boolean persistent) {
+        this.persistent = persistent;
+        return this;
+    }
+
+
+    /**
+     * set Session 最大生命周期，单位为秒；长程运行时不生效
+     *
+     * @param maxLifeTime Session 最大生命周期，单位为秒；长程运行时不生效
+     * @return LifecycleView
      */
     public LifecycleView maxLifeTime(Integer maxLifeTime) {
         this.maxLifeTime = maxLifeTime;

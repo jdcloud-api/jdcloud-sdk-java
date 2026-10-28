@@ -65,7 +65,8 @@ public class DescribeBrowserToolSessionResult extends JdcloudResult implements j
     /**
      * set browserToolSession
      *
-     * @param browserToolSession
+     * @param browserToolSession 
+     * @return DescribeBrowserToolSessionResult
      */
     public DescribeBrowserToolSessionResult browserToolSession(BrowserToolSession browserToolSession) {
         this.browserToolSession = browserToolSession;

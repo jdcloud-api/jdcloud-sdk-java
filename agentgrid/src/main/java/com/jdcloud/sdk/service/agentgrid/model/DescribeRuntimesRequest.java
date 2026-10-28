@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.agentgrid.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.agentgrid.model.Filter;
+import com.jdcloud.sdk.service.agentgrid.model.TagFilter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -34,7 +35,8 @@ import com.jdcloud.sdk.service.JdcloudRequest;
  * 查询 Runtime 列表，默认返回当前生效版本的信息。
 
 ## 接口说明
-- 支持分页、排序、条件过滤与标签过滤。
+- 支持分页、条件过滤、标签过滤与资源组过滤。
+- 返回结果包含 Runtime 的用户标签、资源组 ID 和当前版本资源配置。
 - Runtime 状态包括：&#x60;pending&#x60;、&#x60;creating&#x60;、&#x60;running&#x60;、&#x60;updating&#x60;、&#x60;failed&#x60;、&#x60;deleted&#x60;。
 - 返回结果中的 &#x60;state&#x60; 表示 Runtime 当前整体状态；&#x60;versionView.state&#x60; 表示本次返回版本的状态。
 
@@ -62,6 +64,16 @@ public class DescribeRuntimesRequest extends JdcloudRequest implements java.io.S
      */
     
     private List<Filter> filters;
+    /**
+     * 按 Runtime 用户标签过滤；不同标签条件之间取交集。
+     */
+    
+    private List<TagFilter> tags;
+    /**
+     * 按 Runtime 所属资源组 ID 过滤。
+     */
+    
+    private List<String> resourceGroupIds;
     /**
      * Region ID
      * Required:true
@@ -137,6 +149,44 @@ public class DescribeRuntimesRequest extends JdcloudRequest implements java.io.S
 
 
     /**
+    * get 按 Runtime 用户标签过滤；不同标签条件之间取交集。
+    *
+    * @return
+    */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 按 Runtime 用户标签过滤；不同标签条件之间取交集。
+    *
+    * @param tags
+    */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+    * get 按 Runtime 所属资源组 ID 过滤。
+    *
+    * @return
+    */
+    public List<String> getResourceGroupIds() {
+        return resourceGroupIds;
+    }
+
+    /**
+    * set 按 Runtime 所属资源组 ID 过滤。
+    *
+    * @param resourceGroupIds
+    */
+    public void setResourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+    }
+
+
+    /**
      * get Region ID
      *
      * @return
@@ -159,7 +209,8 @@ public class DescribeRuntimesRequest extends JdcloudRequest implements java.io.S
     /**
      * set 每页返回的数据条数。取值范围 10～100，默认值为 10。
      *
-     * @param pageSize
+     * @param pageSize 每页返回的数据条数。取值范围 10～100，默认值为 10。
+     * @return DescribeRuntimesRequest
      */
     public DescribeRuntimesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -170,7 +221,8 @@ public class DescribeRuntimesRequest extends JdcloudRequest implements java.io.S
     /**
      * set 页码。默认值为 1。
      *
-     * @param pageNumber
+     * @param pageNumber 页码。默认值为 1。
+     * @return DescribeRuntimesRequest
      */
     public DescribeRuntimesRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -185,7 +237,12 @@ public class DescribeRuntimesRequest extends JdcloudRequest implements java.io.S
 &#x60;state&#x60;：按 Runtime 状态过滤，支持多个值。可选值：&#x60;pending&#x60;、&#x60;creating&#x60;、&#x60;running&#x60;、&#x60;updating&#x60;、&#x60;failed&#x60;、&#x60;deleted&#x60;
 
     *
-    * @param filters
+    * @param filters 过滤条件。支持的键如下：
+&#x60;runtimeId&#x60;：按 Runtime ID 精确匹配，支持多个值。
+&#x60;runtimeName&#x60;：按 Runtime 名称模糊匹配，仅支持单个值。
+&#x60;state&#x60;：按 Runtime 状态过滤，支持多个值。可选值：&#x60;pending&#x60;、&#x60;creating&#x60;、&#x60;running&#x60;、&#x60;updating&#x60;、&#x60;failed&#x60;、&#x60;deleted&#x60;
+
+    * @return DescribeRuntimesRequest
     */
     public DescribeRuntimesRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -194,9 +251,34 @@ public class DescribeRuntimesRequest extends JdcloudRequest implements java.io.S
 
 
     /**
+    * set 按 Runtime 用户标签过滤；不同标签条件之间取交集。
+    *
+    * @param tags 按 Runtime 用户标签过滤；不同标签条件之间取交集。
+    * @return DescribeRuntimesRequest
+    */
+    public DescribeRuntimesRequest tags(List<TagFilter> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+    * set 按 Runtime 所属资源组 ID 过滤。
+    *
+    * @param resourceGroupIds 按 Runtime 所属资源组 ID 过滤。
+    * @return DescribeRuntimesRequest
+    */
+    public DescribeRuntimesRequest resourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+        return this;
+    }
+
+
+    /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribeRuntimesRequest
      */
     public DescribeRuntimesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -219,5 +301,29 @@ public class DescribeRuntimesRequest extends JdcloudRequest implements java.io.S
             this.filters = new ArrayList<>();
         }
         this.filters.add(filter);
+    }
+
+    /**
+     * add item to 按 Runtime 用户标签过滤；不同标签条件之间取交集。
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
+
+    /**
+     * add item to 按 Runtime 所属资源组 ID 过滤。
+     *
+     * @param resourceGroupId
+     */
+    public void addResourceGroupId(String resourceGroupId) {
+        if (this.resourceGroupIds == null) {
+            this.resourceGroupIds = new ArrayList<>();
+        }
+        this.resourceGroupIds.add(resourceGroupId);
     }
 }

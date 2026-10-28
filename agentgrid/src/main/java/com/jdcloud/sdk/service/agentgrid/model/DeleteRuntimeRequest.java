@@ -32,6 +32,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 ## 接口说明
 - 仅当 Runtime 当前状态为 &#x60;running&#x60; 或 &#x60;failed&#x60; 时允许删除。
+- 本接口为异步接口，返回 200 表示删除请求已受理，不表示底层资源已经删除完成。
 - 删除后数据不可恢复，请谨慎操作。
 - 删除完成后，Runtime 最终状态为 &#x60;deleted&#x60;；&#x60;deleted&#x60; 状态的 Runtime 不可恢复。
 
@@ -98,7 +99,8 @@ public class DeleteRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DeleteRuntimeRequest
      */
     public DeleteRuntimeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -109,7 +111,8 @@ public class DeleteRuntimeRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Runtime ID
      *
-     * @param runtimeId
+     * @param runtimeId Runtime ID
+     * @return DeleteRuntimeRequest
      */
     public DeleteRuntimeRequest runtimeId(String runtimeId) {
         this.runtimeId = runtimeId;

@@ -65,7 +65,8 @@ public class DescribeCodeInterpreterResult extends JdcloudResult implements java
     /**
      * set codeInterpreter
      *
-     * @param codeInterpreter
+     * @param codeInterpreter 
+     * @return DescribeCodeInterpreterResult
      */
     public DescribeCodeInterpreterResult codeInterpreter(CodeInterpreter codeInterpreter) {
         this.codeInterpreter = codeInterpreter;

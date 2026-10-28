@@ -86,7 +86,8 @@ public class VpcView  implements java.io.Serializable {
     /**
      * set 私有网络 ID
      *
-     * @param vpcId
+     * @param vpcId 私有网络 ID
+     * @return VpcView
      */
     public VpcView vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -97,7 +98,8 @@ public class VpcView  implements java.io.Serializable {
     /**
      * set 内网访问域名
      *
-     * @param internalAccessDomain
+     * @param internalAccessDomain 内网访问域名
+     * @return VpcView
      */
     public VpcView internalAccessDomain(String internalAccessDomain) {
         this.internalAccessDomain = internalAccessDomain;

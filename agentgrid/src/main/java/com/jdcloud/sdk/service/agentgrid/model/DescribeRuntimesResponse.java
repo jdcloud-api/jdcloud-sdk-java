@@ -30,7 +30,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
  * 查询 Runtime 列表，默认返回当前生效版本的信息。
 
 ## 接口说明
-- 支持分页、排序、条件过滤与标签过滤。
+- 支持分页、条件过滤、标签过滤与资源组过滤。
+- 返回结果包含 Runtime 的用户标签、资源组 ID 和当前版本资源配置。
 - Runtime 状态包括：&#x60;pending&#x60;、&#x60;creating&#x60;、&#x60;running&#x60;、&#x60;updating&#x60;、&#x60;failed&#x60;、&#x60;deleted&#x60;。
 - 返回结果中的 &#x60;state&#x60; 表示 Runtime 当前整体状态；&#x60;versionView.state&#x60; 表示本次返回版本的状态。
 

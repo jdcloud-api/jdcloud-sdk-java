@@ -115,7 +115,8 @@ public class Filter  implements java.io.Serializable {
     /**
      * set 过滤键
      *
-     * @param name
+     * @param name 过滤键
+     * @return Filter
      */
     public Filter name(String name) {
         this.name = name;
@@ -126,7 +127,8 @@ public class Filter  implements java.io.Serializable {
     /**
      * set 过滤操作符，支持eq
      *
-     * @param operator
+     * @param operator 过滤操作符，支持eq
+     * @return Filter
      */
     public Filter operator(String operator) {
         this.operator = operator;
@@ -137,7 +139,8 @@ public class Filter  implements java.io.Serializable {
     /**
     * set 过滤值
     *
-    * @param values
+    * @param values 过滤值
+    * @return Filter
     */
     public Filter values(List<String> values) {
         this.values = values;

@@ -67,7 +67,8 @@ public class IngestTracesRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set Trace 数据。
      *
-     * @param body
+     * @param body Trace 数据。
+     * @return IngestTracesRequest
      */
     public IngestTracesRequest body(Object body) {
         this.body = body;

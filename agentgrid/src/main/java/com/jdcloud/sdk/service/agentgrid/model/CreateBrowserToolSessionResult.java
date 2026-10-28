@@ -69,7 +69,8 @@ public class CreateBrowserToolSessionResult extends JdcloudResult implements jav
     /**
      * set Session ID。
      *
-     * @param sessionId
+     * @param sessionId Session ID。
+     * @return CreateBrowserToolSessionResult
      */
     public CreateBrowserToolSessionResult sessionId(String sessionId) {
         this.sessionId = sessionId;

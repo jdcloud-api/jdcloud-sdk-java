@@ -118,7 +118,8 @@ public class GetRuntimeSessionsResult extends JdcloudResult implements java.io.S
     /**
      * set Runtime ID。
      *
-     * @param runtimeId
+     * @param runtimeId Runtime ID。
+     * @return GetRuntimeSessionsResult
      */
     public GetRuntimeSessionsResult runtimeId(String runtimeId) {
         this.runtimeId = runtimeId;
@@ -129,7 +130,8 @@ public class GetRuntimeSessionsResult extends JdcloudResult implements java.io.S
     /**
      * set 当前 Runtime 下处于运行状态的 Session 数量。
      *
-     * @param totalSession
+     * @param totalSession 当前 Runtime 下处于运行状态的 Session 数量。
+     * @return GetRuntimeSessionsResult
      */
     public GetRuntimeSessionsResult totalSession(Integer totalSession) {
         this.totalSession = totalSession;
@@ -140,7 +142,8 @@ public class GetRuntimeSessionsResult extends JdcloudResult implements java.io.S
     /**
     * set versionSessions
     *
-    * @param versionSessions
+    * @param versionSessions 
+    * @return GetRuntimeSessionsResult
     */
     public GetRuntimeSessionsResult versionSessions(List<VersionSessionView> versionSessions) {
         this.versionSessions = versionSessions;

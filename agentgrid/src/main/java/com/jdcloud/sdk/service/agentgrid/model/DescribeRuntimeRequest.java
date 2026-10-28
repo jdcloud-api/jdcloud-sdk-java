@@ -33,6 +33,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 ## 接口说明
 - 不传 &#x60;version&#x60; 时，返回 Runtime 当前生效版本的信息。
 - 返回结果中的顶层 &#x60;state&#x60; 表示 Runtime 当前整体状态；&#x60;versionView.state&#x60; 表示指定版本或当前生效版本的状态。
+- 返回结果包含 Runtime 的用户标签、资源组 ID 和本次查询版本的资源配置。
 
  */
 public class DescribeRuntimeRequest extends JdcloudRequest implements java.io.Serializable {
@@ -121,7 +122,8 @@ public class DescribeRuntimeRequest extends JdcloudRequest implements java.io.Se
     /**
      * set Runtime 版本号。
      *
-     * @param version
+     * @param version Runtime 版本号。
+     * @return DescribeRuntimeRequest
      */
     public DescribeRuntimeRequest version(String version) {
         this.version = version;
@@ -132,7 +134,8 @@ public class DescribeRuntimeRequest extends JdcloudRequest implements java.io.Se
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribeRuntimeRequest
      */
     public DescribeRuntimeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -143,7 +146,8 @@ public class DescribeRuntimeRequest extends JdcloudRequest implements java.io.Se
     /**
      * set Runtime ID
      *
-     * @param runtimeId
+     * @param runtimeId Runtime ID
+     * @return DescribeRuntimeRequest
      */
     public DescribeRuntimeRequest runtimeId(String runtimeId) {
         this.runtimeId = runtimeId;

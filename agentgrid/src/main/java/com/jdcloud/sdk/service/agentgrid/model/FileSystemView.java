@@ -28,80 +28,82 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * Runtime 文件系统配置
+ * Runtime 文件系统配置视图
  */
-public class FilesystemConfiguration  implements java.io.Serializable {
+public class FileSystemView  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * OSS 访问点配置列表。配置 ossAccessPointConfiguration 时，必须指定 RoleName。
+     * OSS 访问点配置列表
      */
     
-    private List<OssAccessPointConfiguration> ossAccessPoints;
+    private List<OssAccessPointView> ossAccessPoints;
     /**
-     * CFS 访问点配置列表。
+     * CFS 访问点配置列表
      */
     
-    private List<CfsAccessPointConfiguration> cfsAccessPoints;
+    private List<CfsAccessPointView> cfsAccessPoints;
 
 
     /**
-    * get OSS 访问点配置列表。配置 ossAccessPointConfiguration 时，必须指定 RoleName。
+    * get OSS 访问点配置列表
     *
     * @return
     */
-    public List<OssAccessPointConfiguration> getOssAccessPoints() {
+    public List<OssAccessPointView> getOssAccessPoints() {
         return ossAccessPoints;
     }
 
     /**
-    * set OSS 访问点配置列表。配置 ossAccessPointConfiguration 时，必须指定 RoleName。
+    * set OSS 访问点配置列表
     *
     * @param ossAccessPoints
     */
-    public void setOssAccessPoints(List<OssAccessPointConfiguration> ossAccessPoints) {
+    public void setOssAccessPoints(List<OssAccessPointView> ossAccessPoints) {
         this.ossAccessPoints = ossAccessPoints;
     }
 
 
     /**
-    * get CFS 访问点配置列表。
+    * get CFS 访问点配置列表
     *
     * @return
     */
-    public List<CfsAccessPointConfiguration> getCfsAccessPoints() {
+    public List<CfsAccessPointView> getCfsAccessPoints() {
         return cfsAccessPoints;
     }
 
     /**
-    * set CFS 访问点配置列表。
+    * set CFS 访问点配置列表
     *
     * @param cfsAccessPoints
     */
-    public void setCfsAccessPoints(List<CfsAccessPointConfiguration> cfsAccessPoints) {
+    public void setCfsAccessPoints(List<CfsAccessPointView> cfsAccessPoints) {
         this.cfsAccessPoints = cfsAccessPoints;
     }
 
 
 
     /**
-    * set OSS 访问点配置列表。配置 ossAccessPointConfiguration 时，必须指定 RoleName。
+    * set OSS 访问点配置列表
     *
-    * @param ossAccessPoints
+    * @param ossAccessPoints OSS 访问点配置列表
+    * @return FileSystemView
     */
-    public FilesystemConfiguration ossAccessPoints(List<OssAccessPointConfiguration> ossAccessPoints) {
+    public FileSystemView ossAccessPoints(List<OssAccessPointView> ossAccessPoints) {
         this.ossAccessPoints = ossAccessPoints;
         return this;
     }
 
 
     /**
-    * set CFS 访问点配置列表。
+    * set CFS 访问点配置列表
     *
-    * @param cfsAccessPoints
+    * @param cfsAccessPoints CFS 访问点配置列表
+    * @return FileSystemView
     */
-    public FilesystemConfiguration cfsAccessPoints(List<CfsAccessPointConfiguration> cfsAccessPoints) {
+    public FileSystemView cfsAccessPoints(List<CfsAccessPointView> cfsAccessPoints) {
         this.cfsAccessPoints = cfsAccessPoints;
         return this;
     }
@@ -109,11 +111,11 @@ public class FilesystemConfiguration  implements java.io.Serializable {
 
 
     /**
-     * add item to OSS 访问点配置列表。配置 ossAccessPointConfiguration 时，必须指定 RoleName。
+     * add item to OSS 访问点配置列表
      *
      * @param ossAccessPoint
      */
-    public void addOssAccessPoint(OssAccessPointConfiguration ossAccessPoint) {
+    public void addOssAccessPoint(OssAccessPointView ossAccessPoint) {
         if (this.ossAccessPoints == null) {
             this.ossAccessPoints = new ArrayList<>();
         }
@@ -121,11 +123,11 @@ public class FilesystemConfiguration  implements java.io.Serializable {
     }
 
     /**
-     * add item to CFS 访问点配置列表。
+     * add item to CFS 访问点配置列表
      *
      * @param cfsAccessPoint
      */
-    public void addCfsAccessPoint(CfsAccessPointConfiguration cfsAccessPoint) {
+    public void addCfsAccessPoint(CfsAccessPointView cfsAccessPoint) {
         if (this.cfsAccessPoints == null) {
             this.cfsAccessPoints = new ArrayList<>();
         }

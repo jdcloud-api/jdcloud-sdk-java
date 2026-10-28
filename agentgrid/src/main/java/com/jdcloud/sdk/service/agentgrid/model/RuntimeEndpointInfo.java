@@ -110,7 +110,8 @@ public class RuntimeEndpointInfo  implements java.io.Serializable {
     /**
      * set runtime ID
      *
-     * @param runtimeId
+     * @param runtimeId runtime ID
+     * @return RuntimeEndpointInfo
      */
     public RuntimeEndpointInfo runtimeId(String runtimeId) {
         this.runtimeId = runtimeId;
@@ -121,7 +122,8 @@ public class RuntimeEndpointInfo  implements java.io.Serializable {
     /**
      * set 公网访问 endpoint
      *
-     * @param publicEndpoint
+     * @param publicEndpoint 公网访问 endpoint
+     * @return RuntimeEndpointInfo
      */
     public RuntimeEndpointInfo publicEndpoint(String publicEndpoint) {
         this.publicEndpoint = publicEndpoint;
@@ -132,7 +134,8 @@ public class RuntimeEndpointInfo  implements java.io.Serializable {
     /**
      * set 私网访问 endpoint
      *
-     * @param internalEndpoint
+     * @param internalEndpoint 私网访问 endpoint
+     * @return RuntimeEndpointInfo
      */
     public RuntimeEndpointInfo internalEndpoint(String internalEndpoint) {
         this.internalEndpoint = internalEndpoint;

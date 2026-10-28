@@ -182,7 +182,8 @@ public class ToolResultStructuredContent  implements java.io.Serializable {
     /**
      * set 执行耗时（毫秒）
      *
-     * @param executionTime
+     * @param executionTime 执行耗时（毫秒）
+     * @return ToolResultStructuredContent
      */
     public ToolResultStructuredContent executionTime(Double executionTime) {
         this.executionTime = executionTime;
@@ -193,7 +194,8 @@ public class ToolResultStructuredContent  implements java.io.Serializable {
     /**
      * set 进程退出码
      *
-     * @param exitCode
+     * @param exitCode 进程退出码
+     * @return ToolResultStructuredContent
      */
     public ToolResultStructuredContent exitCode(Integer exitCode) {
         this.exitCode = exitCode;
@@ -204,7 +206,8 @@ public class ToolResultStructuredContent  implements java.io.Serializable {
     /**
      * set 标准错误输出
      *
-     * @param stderr
+     * @param stderr 标准错误输出
+     * @return ToolResultStructuredContent
      */
     public ToolResultStructuredContent stderr(String stderr) {
         this.stderr = stderr;
@@ -215,7 +218,8 @@ public class ToolResultStructuredContent  implements java.io.Serializable {
     /**
      * set 标准输出
      *
-     * @param stdout
+     * @param stdout 标准输出
+     * @return ToolResultStructuredContent
      */
     public ToolResultStructuredContent stdout(String stdout) {
         this.stdout = stdout;
@@ -226,7 +230,8 @@ public class ToolResultStructuredContent  implements java.io.Serializable {
     /**
      * set 异步任务 ID
      *
-     * @param taskId
+     * @param taskId 异步任务 ID
+     * @return ToolResultStructuredContent
      */
     public ToolResultStructuredContent taskId(String taskId) {
         this.taskId = taskId;
@@ -237,7 +242,8 @@ public class ToolResultStructuredContent  implements java.io.Serializable {
     /**
      * set 异步任务状态
      *
-     * @param taskStatus
+     * @param taskStatus 异步任务状态
+     * @return ToolResultStructuredContent
      */
     public ToolResultStructuredContent taskStatus(String taskStatus) {
         this.taskStatus = taskStatus;

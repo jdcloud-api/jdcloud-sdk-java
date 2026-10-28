@@ -75,7 +75,10 @@ public class InvokeRuntimeBody  implements java.io.Serializable {
 - 结构由 Runtime 实例自己定义
 - Gateway 不做任何解析和验证
      *
-     * @param anyField
+     * @param anyField 任意 JSON 内容，作为业务载荷透传给 Runtime 实例
+- 结构由 Runtime 实例自己定义
+- Gateway 不做任何解析和验证
+     * @return InvokeRuntimeBody
      */
     public InvokeRuntimeBody anyField(Object anyField) {
         this.anyField = anyField;

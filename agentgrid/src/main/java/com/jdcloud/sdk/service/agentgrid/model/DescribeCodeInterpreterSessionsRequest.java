@@ -182,7 +182,8 @@ public class DescribeCodeInterpreterSessionsRequest extends JdcloudRequest imple
     /**
      * set 每页返回的数据条数。取值范围 10～100，默认值为 10。
      *
-     * @param pageSize
+     * @param pageSize 每页返回的数据条数。取值范围 10～100，默认值为 10。
+     * @return DescribeCodeInterpreterSessionsRequest
      */
     public DescribeCodeInterpreterSessionsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -193,7 +194,8 @@ public class DescribeCodeInterpreterSessionsRequest extends JdcloudRequest imple
     /**
      * set 页码。默认值为 1。
      *
-     * @param pageNumber
+     * @param pageNumber 页码。默认值为 1。
+     * @return DescribeCodeInterpreterSessionsRequest
      */
     public DescribeCodeInterpreterSessionsRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -207,7 +209,11 @@ public class DescribeCodeInterpreterSessionsRequest extends JdcloudRequest imple
 - sessionId：按 session ID 精确匹配，支持多个值。
 
     *
-    * @param filters
+    * @param filters 过滤条件。支持的键如下：
+- state：按 Session 状态精确匹配，支持单个值。可选值：&#x60;pending&#x60;、&#x60;creating&#x60;、&#x60;ready&#x60;、&#x60;deleting&#x60;、&#x60;deleted&#x60;、&#x60;failed&#x60;
+- sessionId：按 session ID 精确匹配，支持多个值。
+
+    * @return DescribeCodeInterpreterSessionsRequest
     */
     public DescribeCodeInterpreterSessionsRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -218,7 +224,8 @@ public class DescribeCodeInterpreterSessionsRequest extends JdcloudRequest imple
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribeCodeInterpreterSessionsRequest
      */
     public DescribeCodeInterpreterSessionsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -229,7 +236,8 @@ public class DescribeCodeInterpreterSessionsRequest extends JdcloudRequest imple
     /**
      * set Code Interpreter ID
      *
-     * @param codeInterpreterId
+     * @param codeInterpreterId Code Interpreter ID
+     * @return DescribeCodeInterpreterSessionsRequest
      */
     public DescribeCodeInterpreterSessionsRequest codeInterpreterId(String codeInterpreterId) {
         this.codeInterpreterId = codeInterpreterId;

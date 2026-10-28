@@ -65,7 +65,8 @@ public class Certificate  implements java.io.Serializable {
     /**
      * set 证书位置
      *
-     * @param location
+     * @param location 证书位置
+     * @return Certificate
      */
     public Certificate location(CertificateLocation location) {
         this.location = location;

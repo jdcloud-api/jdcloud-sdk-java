@@ -110,7 +110,8 @@ public class CodeView  implements java.io.Serializable {
     /**
      * set 代码位置，S3 链接
      *
-     * @param ossLocation
+     * @param ossLocation 代码位置，S3 链接
+     * @return CodeView
      */
     public CodeView ossLocation(OssLocationView ossLocation) {
         this.ossLocation = ossLocation;
@@ -121,7 +122,8 @@ public class CodeView  implements java.io.Serializable {
     /**
      * set 代码入口，运行时调用的函数或方法
      *
-     * @param entryPoint
+     * @param entryPoint 代码入口，运行时调用的函数或方法
+     * @return CodeView
      */
     public CodeView entryPoint(String entryPoint) {
         this.entryPoint = entryPoint;
@@ -132,7 +134,8 @@ public class CodeView  implements java.io.Serializable {
     /**
      * set 运行环境，如 PYTHON_3_10 或 PYTHON_3_11
      *
-     * @param runtimeEnvironment
+     * @param runtimeEnvironment 运行环境，如 PYTHON_3_10 或 PYTHON_3_11
+     * @return CodeView
      */
     public CodeView runtimeEnvironment(String runtimeEnvironment) {
         this.runtimeEnvironment = runtimeEnvironment;

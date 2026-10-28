@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.agentgrid.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * runtime 网络配置，公网和私网至少开启一个
+ * runtime 网络配置，当前支持公网访问
  */
 public class NetworkConfiguration  implements java.io.Serializable {
 
@@ -89,7 +89,8 @@ public class NetworkConfiguration  implements java.io.Serializable {
     /**
      * set 是否具备访问公网的能力
      *
-     * @param enablePublicNetwork
+     * @param enablePublicNetwork 是否具备访问公网的能力
+     * @return NetworkConfiguration
      */
     public NetworkConfiguration enablePublicNetwork(Boolean enablePublicNetwork) {
         this.enablePublicNetwork = enablePublicNetwork;
@@ -100,7 +101,8 @@ public class NetworkConfiguration  implements java.io.Serializable {
     /**
      * set 是否具备在沙盒环境执行能力
      *
-     * @param enableSandbox
+     * @param enableSandbox 是否具备在沙盒环境执行能力
+     * @return NetworkConfiguration
      */
     public NetworkConfiguration enableSandbox(Boolean enableSandbox) {
         this.enableSandbox = enableSandbox;

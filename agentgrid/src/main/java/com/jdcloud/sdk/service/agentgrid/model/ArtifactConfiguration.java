@@ -62,7 +62,8 @@ public class ArtifactConfiguration  implements java.io.Serializable {
     /**
      * set 通过镜像导入，需指定京东云容器镜像仓库地址。
      *
-     * @param image
+     * @param image 通过镜像导入，需指定京东云容器镜像仓库地址。
+     * @return ArtifactConfiguration
      */
     public ArtifactConfiguration image(ImageConfiguration image) {
         this.image = image;

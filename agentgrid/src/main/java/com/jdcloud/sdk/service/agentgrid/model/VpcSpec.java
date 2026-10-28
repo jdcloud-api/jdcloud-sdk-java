@@ -119,7 +119,8 @@ public class VpcSpec  implements java.io.Serializable {
     /**
      * set 私有网络 ID
      *
-     * @param vpcId
+     * @param vpcId 私有网络 ID
+     * @return VpcSpec
      */
     public VpcSpec vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -130,7 +131,8 @@ public class VpcSpec  implements java.io.Serializable {
     /**
      * set 子网 ID
      *
-     * @param subnetId
+     * @param subnetId 子网 ID
+     * @return VpcSpec
      */
     public VpcSpec subnetId(String subnetId) {
         this.subnetId = subnetId;
@@ -141,7 +143,8 @@ public class VpcSpec  implements java.io.Serializable {
     /**
     * set 安全组列表
     *
-    * @param securityGroups
+    * @param securityGroups 安全组列表
+    * @return VpcSpec
     */
     public VpcSpec securityGroups(List<String> securityGroups) {
         this.securityGroups = securityGroups;

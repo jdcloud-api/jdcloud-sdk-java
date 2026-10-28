@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.agentgrid.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Runtime 详情视图
@@ -76,6 +78,16 @@ public class RuntimeView  implements java.io.Serializable {
      * 绑定 IAM 角色名
      */
     private String roleName;
+
+    /**
+     * Runtime 绑定的用户标签
+     */
+    
+    private List<Tag> tags;
+    /**
+     * Runtime 所属资源组 ID
+     */
+    private String resourceGroupId;
 
     /**
      * Runtime 创建时间
@@ -261,6 +273,44 @@ public class RuntimeView  implements java.io.Serializable {
 
 
     /**
+    * get Runtime 绑定的用户标签
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Runtime 绑定的用户标签
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get Runtime 所属资源组 ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set Runtime 所属资源组 ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
      * get Runtime 创建时间
      *
      * @return
@@ -302,7 +352,8 @@ public class RuntimeView  implements java.io.Serializable {
     /**
      * set Runtime ID
      *
-     * @param runtimeId
+     * @param runtimeId Runtime ID
+     * @return RuntimeView
      */
     public RuntimeView runtimeId(String runtimeId) {
         this.runtimeId = runtimeId;
@@ -313,7 +364,8 @@ public class RuntimeView  implements java.io.Serializable {
     /**
      * set Runtime 名称
      *
-     * @param name
+     * @param name Runtime 名称
+     * @return RuntimeView
      */
     public RuntimeView name(String name) {
         this.name = name;
@@ -324,7 +376,8 @@ public class RuntimeView  implements java.io.Serializable {
     /**
      * set Runtime 当前生效的默认版本号
      *
-     * @param currentVersion
+     * @param currentVersion Runtime 当前生效的默认版本号
+     * @return RuntimeView
      */
     public RuntimeView currentVersion(String currentVersion) {
         this.currentVersion = currentVersion;
@@ -335,7 +388,8 @@ public class RuntimeView  implements java.io.Serializable {
     /**
      * set 本次查询返回的 Runtime 版本号；未指定查询版本时，通常与 &#x60;currentVersion&#x60; 一致
      *
-     * @param queriedVersion
+     * @param queriedVersion 本次查询返回的 Runtime 版本号；未指定查询版本时，通常与 &#x60;currentVersion&#x60; 一致
+     * @return RuntimeView
      */
     public RuntimeView queriedVersion(String queriedVersion) {
         this.queriedVersion = queriedVersion;
@@ -346,7 +400,8 @@ public class RuntimeView  implements java.io.Serializable {
     /**
      * set Runtime 状态。可选值：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;creating&#x60;（创建中）、&#x60;running&#x60;（可正常调用）、&#x60;updating&#x60;（版本或配置更新中）、&#x60;failed&#x60;（处理失败）、&#x60;deleted&#x60;（已删除，不可继续使用）
      *
-     * @param state
+     * @param state Runtime 状态。可选值：&#x60;pending&#x60;（已受理，等待资源准备）、&#x60;creating&#x60;（创建中）、&#x60;running&#x60;（可正常调用）、&#x60;updating&#x60;（版本或配置更新中）、&#x60;failed&#x60;（处理失败）、&#x60;deleted&#x60;（已删除，不可继续使用）
+     * @return RuntimeView
      */
     public RuntimeView state(String state) {
         this.state = state;
@@ -357,7 +412,8 @@ public class RuntimeView  implements java.io.Serializable {
     /**
      * set Runtime 描述信息
      *
-     * @param description
+     * @param description Runtime 描述信息
+     * @return RuntimeView
      */
     public RuntimeView description(String description) {
         this.description = description;
@@ -368,7 +424,8 @@ public class RuntimeView  implements java.io.Serializable {
     /**
      * set 本次查询返回的 Runtime 版本详情；其中 &#x60;state&#x60; 表示该版本自身状态
      *
-     * @param versionView
+     * @param versionView 本次查询返回的 Runtime 版本详情；其中 &#x60;state&#x60; 表示该版本自身状态
+     * @return RuntimeView
      */
     public RuntimeView versionView(RuntimeVersionView versionView) {
         this.versionView = versionView;
@@ -379,7 +436,8 @@ public class RuntimeView  implements java.io.Serializable {
     /**
      * set 访问 agent 的 APIKey
      *
-     * @param apiKey
+     * @param apiKey 访问 agent 的 APIKey
+     * @return RuntimeView
      */
     public RuntimeView apiKey(String apiKey) {
         this.apiKey = apiKey;
@@ -390,7 +448,8 @@ public class RuntimeView  implements java.io.Serializable {
     /**
      * set 绑定 IAM 角色名
      *
-     * @param roleName
+     * @param roleName 绑定 IAM 角色名
+     * @return RuntimeView
      */
     public RuntimeView roleName(String roleName) {
         this.roleName = roleName;
@@ -399,9 +458,34 @@ public class RuntimeView  implements java.io.Serializable {
 
 
     /**
+    * set Runtime 绑定的用户标签
+    *
+    * @param tags Runtime 绑定的用户标签
+    * @return RuntimeView
+    */
+    public RuntimeView tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set Runtime 所属资源组 ID
+     *
+     * @param resourceGroupId Runtime 所属资源组 ID
+     * @return RuntimeView
+     */
+    public RuntimeView resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
      * set Runtime 创建时间
      *
-     * @param createTime
+     * @param createTime Runtime 创建时间
+     * @return RuntimeView
      */
     public RuntimeView createTime(String createTime) {
         this.createTime = createTime;
@@ -412,7 +496,8 @@ public class RuntimeView  implements java.io.Serializable {
     /**
      * set Runtime 最近一次更新时间
      *
-     * @param updateTime
+     * @param updateTime Runtime 最近一次更新时间
+     * @return RuntimeView
      */
     public RuntimeView updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -420,4 +505,16 @@ public class RuntimeView  implements java.io.Serializable {
     }
 
 
+
+    /**
+     * add item to Runtime 绑定的用户标签
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 }

@@ -257,7 +257,8 @@ public class ContentBlock  implements java.io.Serializable {
     /**
      * set 内容类型，支持 text、image、resource、resource_link
      *
-     * @param type
+     * @param type 内容类型，支持 text、image、resource、resource_link
+     * @return ContentBlock
      */
     public ContentBlock type(String type) {
         this.type = type;
@@ -268,7 +269,8 @@ public class ContentBlock  implements java.io.Serializable {
     /**
      * set Base64 编码二进制内容
      *
-     * @param data
+     * @param data Base64 编码二进制内容
+     * @return ContentBlock
      */
     public ContentBlock data(String data) {
         this.data = data;
@@ -279,7 +281,8 @@ public class ContentBlock  implements java.io.Serializable {
     /**
      * set 内容描述
      *
-     * @param description
+     * @param description 内容描述
+     * @return ContentBlock
      */
     public ContentBlock description(String description) {
         this.description = description;
@@ -290,7 +293,8 @@ public class ContentBlock  implements java.io.Serializable {
     /**
      * set MIME 类型
      *
-     * @param mimeType
+     * @param mimeType MIME 类型
+     * @return ContentBlock
      */
     public ContentBlock mimeType(String mimeType) {
         this.mimeType = mimeType;
@@ -301,7 +305,8 @@ public class ContentBlock  implements java.io.Serializable {
     /**
      * set 名称
      *
-     * @param name
+     * @param name 名称
+     * @return ContentBlock
      */
     public ContentBlock name(String name) {
         this.name = name;
@@ -312,7 +317,8 @@ public class ContentBlock  implements java.io.Serializable {
     /**
      * set 资源内容
      *
-     * @param resource
+     * @param resource 资源内容
+     * @return ContentBlock
      */
     public ContentBlock resource(ResourceContent resource) {
         this.resource = resource;
@@ -323,7 +329,8 @@ public class ContentBlock  implements java.io.Serializable {
     /**
      * set 内容大小（字节）
      *
-     * @param size
+     * @param size 内容大小（字节）
+     * @return ContentBlock
      */
     public ContentBlock size(Long size) {
         this.size = size;
@@ -334,7 +341,8 @@ public class ContentBlock  implements java.io.Serializable {
     /**
      * set 文本内容
      *
-     * @param text
+     * @param text 文本内容
+     * @return ContentBlock
      */
     public ContentBlock text(String text) {
         this.text = text;
@@ -345,7 +353,8 @@ public class ContentBlock  implements java.io.Serializable {
     /**
      * set 内容 URI
      *
-     * @param uri
+     * @param uri 内容 URI
+     * @return ContentBlock
      */
     public ContentBlock uri(String uri) {
         this.uri = uri;

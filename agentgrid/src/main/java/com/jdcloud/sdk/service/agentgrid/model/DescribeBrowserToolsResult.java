@@ -34,6 +34,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 ## 接口说明
 - 支持按 Browser Tool ID 批量查询。
+- 支持按用户标签和资源组 ID 过滤，返回结果包含标签、资源组 ID 和资源配置。
 
  */
 public class DescribeBrowserToolsResult extends JdcloudResult implements java.io.Serializable {
@@ -94,7 +95,8 @@ public class DescribeBrowserToolsResult extends JdcloudResult implements java.io
     /**
     * set browserTools
     *
-    * @param browserTools
+    * @param browserTools 
+    * @return DescribeBrowserToolsResult
     */
     public DescribeBrowserToolsResult browserTools(List<BrowserTool> browserTools) {
         this.browserTools = browserTools;
@@ -105,7 +107,8 @@ public class DescribeBrowserToolsResult extends JdcloudResult implements java.io
     /**
      * set 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      *
-     * @param total
+     * @param total 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
+     * @return DescribeBrowserToolsResult
      */
     public DescribeBrowserToolsResult total(Integer total) {
         this.total = total;
