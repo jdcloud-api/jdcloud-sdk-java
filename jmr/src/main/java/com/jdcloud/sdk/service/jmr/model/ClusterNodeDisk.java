@@ -48,6 +48,7 @@ public class ClusterNodeDisk  implements java.io.Serializable {
     private Integer clusterNodeDiskSize;
 
 
+
     /**
      * get 云硬盘ID，暂不提供
      *
@@ -66,6 +67,7 @@ public class ClusterNodeDisk  implements java.io.Serializable {
         this.clusterNodeDiskId = clusterNodeDiskId;
     }
 
+
     /**
      * get 云硬盘类型
      *
@@ -83,6 +85,7 @@ public class ClusterNodeDisk  implements java.io.Serializable {
     public void setClusterNodeDiskType(String clusterNodeDiskType) {
         this.clusterNodeDiskType = clusterNodeDiskType;
     }
+
 
     /**
      * get 云硬盘大小，单位为 GiB
@@ -103,30 +106,36 @@ public class ClusterNodeDisk  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云硬盘ID，暂不提供
      *
-     * @param clusterNodeDiskId
+     * @param clusterNodeDiskId 云硬盘ID，暂不提供
+     * @return ClusterNodeDisk
      */
     public ClusterNodeDisk clusterNodeDiskId(String clusterNodeDiskId) {
         this.clusterNodeDiskId = clusterNodeDiskId;
         return this;
     }
 
+
     /**
      * set 云硬盘类型
      *
-     * @param clusterNodeDiskType
+     * @param clusterNodeDiskType 云硬盘类型
+     * @return ClusterNodeDisk
      */
     public ClusterNodeDisk clusterNodeDiskType(String clusterNodeDiskType) {
         this.clusterNodeDiskType = clusterNodeDiskType;
         return this;
     }
 
+
     /**
      * set 云硬盘大小，单位为 GiB
      *
-     * @param clusterNodeDiskSize
+     * @param clusterNodeDiskSize 云硬盘大小，单位为 GiB
+     * @return ClusterNodeDisk
      */
     public ClusterNodeDisk clusterNodeDiskSize(Integer clusterNodeDiskSize) {
         this.clusterNodeDiskSize = clusterNodeDiskSize;

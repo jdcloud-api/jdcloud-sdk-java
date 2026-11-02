@@ -42,6 +42,7 @@ public class GetJmrVersionListRequest extends JdcloudRequest implements java.io.
     private String regionId;
 
 
+
     /**
      * get 地域ID
      *
@@ -61,10 +62,12 @@ public class GetJmrVersionListRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GetJmrVersionListRequest
      */
     public GetJmrVersionListRequest regionId(String regionId) {
         this.regionId = regionId;

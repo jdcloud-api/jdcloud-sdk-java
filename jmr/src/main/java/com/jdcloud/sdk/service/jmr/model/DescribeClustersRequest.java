@@ -24,6 +24,10 @@
 
 package com.jdcloud.sdk.service.jmr.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.common.model.Filter;
+import com.jdcloud.sdk.service.common.model.TagFilter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -66,11 +70,27 @@ public class DescribeClustersRequest extends JdcloudRequest implements java.io.S
     private Integer pageSize;
 
     /**
+     * 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+clusterId, 支持operator选项：eq
+clusterName, 支持operator选项：eq, like
+status, 支持operator选项：eq
+
+     */
+    
+    private List<Filter> filters;
+    /**
+     * 资源标签
+     */
+    
+    private List<TagFilter> tagFilters;
+    /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -91,6 +111,7 @@ public class DescribeClustersRequest extends JdcloudRequest implements java.io.S
         this.dataCenter = dataCenter;
     }
 
+
     /**
      * get 集群状态，CREATING，RUNNING，RELEASED，FAILED等
      *
@@ -108,6 +129,7 @@ public class DescribeClustersRequest extends JdcloudRequest implements java.io.S
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 集群名称
@@ -127,6 +149,7 @@ public class DescribeClustersRequest extends JdcloudRequest implements java.io.S
         this.clusterName = clusterName;
     }
 
+
     /**
      * get 排序，比如 id desc
      *
@@ -144,6 +167,7 @@ public class DescribeClustersRequest extends JdcloudRequest implements java.io.S
     public void setOrderBy(String orderBy) {
         this.orderBy = orderBy;
     }
+
 
     /**
      * get 页数，默认为1
@@ -163,6 +187,7 @@ public class DescribeClustersRequest extends JdcloudRequest implements java.io.S
         this.pageNum = pageNum;
     }
 
+
     /**
      * get 每页数目，默认为10
      *
@@ -180,6 +205,55 @@ public class DescribeClustersRequest extends JdcloudRequest implements java.io.S
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
+
+    /**
+    * get 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+clusterId, 支持operator选项：eq
+clusterName, 支持operator选项：eq, like
+status, 支持operator选项：eq
+
+    *
+    * @return
+    */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+clusterId, 支持operator选项：eq
+clusterName, 支持operator选项：eq, like
+status, 支持operator选项：eq
+
+    *
+    * @param filters
+    */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
+
+
+    /**
+    * get 资源标签
+    *
+    * @return
+    */
+    public List<TagFilter> getTagFilters() {
+        return tagFilters;
+    }
+
+    /**
+    * set 资源标签
+    *
+    * @param tagFilters
+    */
+    public void setTagFilters(List<TagFilter> tagFilters) {
+        this.tagFilters = tagFilters;
+    }
+
 
     /**
      * get 地域ID
@@ -200,70 +274,118 @@ public class DescribeClustersRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 地域
      *
-     * @param dataCenter
+     * @param dataCenter 地域
+     * @return DescribeClustersRequest
      */
     public DescribeClustersRequest dataCenter(String dataCenter) {
         this.dataCenter = dataCenter;
         return this;
     }
 
+
     /**
      * set 集群状态，CREATING，RUNNING，RELEASED，FAILED等
      *
-     * @param status
+     * @param status 集群状态，CREATING，RUNNING，RELEASED，FAILED等
+     * @return DescribeClustersRequest
      */
     public DescribeClustersRequest status(String status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 集群名称
      *
-     * @param clusterName
+     * @param clusterName 集群名称
+     * @return DescribeClustersRequest
      */
     public DescribeClustersRequest clusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
     }
 
+
     /**
      * set 排序，比如 id desc
      *
-     * @param orderBy
+     * @param orderBy 排序，比如 id desc
+     * @return DescribeClustersRequest
      */
     public DescribeClustersRequest orderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
     }
 
+
     /**
      * set 页数，默认为1
      *
-     * @param pageNum
+     * @param pageNum 页数，默认为1
+     * @return DescribeClustersRequest
      */
     public DescribeClustersRequest pageNum(Integer pageNum) {
         this.pageNum = pageNum;
         return this;
     }
 
+
     /**
      * set 每页数目，默认为10
      *
-     * @param pageSize
+     * @param pageSize 每页数目，默认为10
+     * @return DescribeClustersRequest
      */
     public DescribeClustersRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
 
+
+    /**
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+clusterId, 支持operator选项：eq
+clusterName, 支持operator选项：eq, like
+status, 支持operator选项：eq
+
+    *
+    * @param filters 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+clusterId, 支持operator选项：eq
+clusterName, 支持operator选项：eq, like
+status, 支持operator选项：eq
+
+    * @return DescribeClustersRequest
+    */
+    public DescribeClustersRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+
+    /**
+    * set 资源标签
+    *
+    * @param tagFilters 资源标签
+    * @return DescribeClustersRequest
+    */
+    public DescribeClustersRequest tagFilters(List<TagFilter> tagFilters) {
+        this.tagFilters = tagFilters;
+        return this;
+    }
+
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DescribeClustersRequest
      */
     public DescribeClustersRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -271,4 +393,33 @@ public class DescribeClustersRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
+    /**
+     * add item to 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+clusterId, 支持operator选项：eq
+clusterName, 支持operator选项：eq, like
+status, 支持operator选项：eq
+
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
+
+    /**
+     * add item to 资源标签
+     *
+     * @param tagFilter
+     */
+    public void addTagFilter(TagFilter tagFilter) {
+        if (this.tagFilters == null) {
+            this.tagFilters = new ArrayList<>();
+        }
+        this.tagFilters.add(tagFilter);
+    }
 }

@@ -42,13 +42,21 @@ public class ClusterReduction  implements java.io.Serializable {
 
     /**
      * 保留的节点个数
+     * Required:true
      */
+    @Required
     private String reserveNum;
 
     /**
-     * 缩容节点类型。 仅支持 Task ，即计算节点
+     * 缩容Task或Edge节点。默认为Task节点
      */
     private String nodeType;
+
+    /**
+     * 缩容Task所属的节点组ID
+     */
+    private String configGroupId;
+
 
 
     /**
@@ -69,6 +77,7 @@ public class ClusterReduction  implements java.io.Serializable {
         this.clusterId = clusterId;
     }
 
+
     /**
      * get 保留的节点个数
      *
@@ -87,8 +96,9 @@ public class ClusterReduction  implements java.io.Serializable {
         this.reserveNum = reserveNum;
     }
 
+
     /**
-     * get 缩容节点类型。 仅支持 Task ，即计算节点
+     * get 缩容Task或Edge节点。默认为Task节点
      *
      * @return
      */
@@ -97,7 +107,7 @@ public class ClusterReduction  implements java.io.Serializable {
     }
 
     /**
-     * set 缩容节点类型。 仅支持 Task ，即计算节点
+     * set 缩容Task或Edge节点。默认为Task节点
      *
      * @param nodeType
      */
@@ -107,32 +117,69 @@ public class ClusterReduction  implements java.io.Serializable {
 
 
     /**
+     * get 缩容Task所属的节点组ID
+     *
+     * @return
+     */
+    public String getConfigGroupId() {
+        return configGroupId;
+    }
+
+    /**
+     * set 缩容Task所属的节点组ID
+     *
+     * @param configGroupId
+     */
+    public void setConfigGroupId(String configGroupId) {
+        this.configGroupId = configGroupId;
+    }
+
+
+
+    /**
      * set 集群ID
      *
-     * @param clusterId
+     * @param clusterId 集群ID
+     * @return ClusterReduction
      */
     public ClusterReduction clusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
 
+
     /**
      * set 保留的节点个数
      *
-     * @param reserveNum
+     * @param reserveNum 保留的节点个数
+     * @return ClusterReduction
      */
     public ClusterReduction reserveNum(String reserveNum) {
         this.reserveNum = reserveNum;
         return this;
     }
 
+
     /**
-     * set 缩容节点类型。 仅支持 Task ，即计算节点
+     * set 缩容Task或Edge节点。默认为Task节点
      *
-     * @param nodeType
+     * @param nodeType 缩容Task或Edge节点。默认为Task节点
+     * @return ClusterReduction
      */
     public ClusterReduction nodeType(String nodeType) {
         this.nodeType = nodeType;
+        return this;
+    }
+
+
+    /**
+     * set 缩容Task所属的节点组ID
+     *
+     * @param configGroupId 缩容Task所属的节点组ID
+     * @return ClusterReduction
+     */
+    public ClusterReduction configGroupId(String configGroupId) {
+        this.configGroupId = configGroupId;
         return this;
     }
 

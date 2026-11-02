@@ -39,7 +39,14 @@ public class GetSoftwareInfoRequest extends JdcloudRequest implements java.io.Se
      * Required:true
      */
     @Required
-    private String version;
+    private String softVer;
+
+    /**
+     * JMR的模板名称
+     * Required:true
+     */
+    @Required
+    private String template;
 
     /**
      * 地域ID
@@ -49,23 +56,44 @@ public class GetSoftwareInfoRequest extends JdcloudRequest implements java.io.Se
     private String regionId;
 
 
+
     /**
      * get JMR软件版本号
      *
      * @return
      */
-    public String getVersion() {
-        return version;
+    public String getSoftVer() {
+        return softVer;
     }
 
     /**
      * set JMR软件版本号
      *
-     * @param version
+     * @param softVer
      */
-    public void setVersion(String version) {
-        this.version = version;
+    public void setSoftVer(String softVer) {
+        this.softVer = softVer;
     }
+
+
+    /**
+     * get JMR的模板名称
+     *
+     * @return
+     */
+    public String getTemplate() {
+        return template;
+    }
+
+    /**
+     * set JMR的模板名称
+     *
+     * @param template
+     */
+    public void setTemplate(String template) {
+        this.template = template;
+    }
+
 
     /**
      * get 地域ID
@@ -86,20 +114,36 @@ public class GetSoftwareInfoRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set JMR软件版本号
      *
-     * @param version
+     * @param softVer JMR软件版本号
+     * @return GetSoftwareInfoRequest
      */
-    public GetSoftwareInfoRequest version(String version) {
-        this.version = version;
+    public GetSoftwareInfoRequest softVer(String softVer) {
+        this.softVer = softVer;
         return this;
     }
+
+
+    /**
+     * set JMR的模板名称
+     *
+     * @param template JMR的模板名称
+     * @return GetSoftwareInfoRequest
+     */
+    public GetSoftwareInfoRequest template(String template) {
+        this.template = template;
+        return this;
+    }
+
 
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return GetSoftwareInfoRequest
      */
     public GetSoftwareInfoRequest regionId(String regionId) {
         this.regionId = regionId;

@@ -44,6 +44,7 @@ public class IdataClusterResult extends JdcloudResult implements java.io.Seriali
     private Boolean status;
 
 
+
     /**
      * get 包括集群信息列表
      *
@@ -61,6 +62,7 @@ public class IdataClusterResult extends JdcloudResult implements java.io.Seriali
     public void setData(Object data) {
         this.data = data;
     }
+
 
     /**
      * get status
@@ -81,20 +83,24 @@ public class IdataClusterResult extends JdcloudResult implements java.io.Seriali
     }
 
 
+
     /**
      * set 包括集群信息列表
      *
-     * @param data
+     * @param data 包括集群信息列表
+     * @return IdataClusterResult
      */
     public IdataClusterResult data(Object data) {
         this.data = data;
         return this;
     }
 
+
     /**
      * set status
      *
-     * @param status
+     * @param status 
+     * @return IdataClusterResult
      */
     public IdataClusterResult status(Boolean status) {
         this.status = status;

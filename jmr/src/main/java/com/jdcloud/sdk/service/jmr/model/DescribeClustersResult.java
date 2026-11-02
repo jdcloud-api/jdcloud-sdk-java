@@ -45,12 +45,13 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
     /**
      * clusters
      */
+    
     private List<ClusterListNode> clusters;
-
     /**
      * status
      */
     private Boolean status;
+
 
 
     /**
@@ -71,23 +72,25 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
         this.totalNum = totalNum;
     }
 
+
     /**
-     * get clusters
-     *
-     * @return
-     */
+    * get clusters
+    *
+    * @return
+    */
     public List<ClusterListNode> getClusters() {
         return clusters;
     }
 
     /**
-     * set clusters
-     *
-     * @param clusters
-     */
+    * set clusters
+    *
+    * @param clusters
+    */
     public void setClusters(List<ClusterListNode> clusters) {
         this.clusters = clusters;
     }
+
 
     /**
      * get status
@@ -108,35 +111,42 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set 集群总的数目
      *
-     * @param totalNum
+     * @param totalNum 集群总的数目
+     * @return DescribeClustersResult
      */
     public DescribeClustersResult totalNum(Integer totalNum) {
         this.totalNum = totalNum;
         return this;
     }
 
+
     /**
-     * set clusters
-     *
-     * @param clusters
-     */
+    * set clusters
+    *
+    * @param clusters 
+    * @return DescribeClustersResult
+    */
     public DescribeClustersResult clusters(List<ClusterListNode> clusters) {
         this.clusters = clusters;
         return this;
     }
 
+
     /**
      * set status
      *
-     * @param status
+     * @param status 
+     * @return DescribeClustersResult
      */
     public DescribeClustersResult status(Boolean status) {
         this.status = status;
         return this;
     }
+
 
 
     /**
@@ -150,5 +160,4 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
         }
         this.clusters.add(cluster);
     }
-
 }

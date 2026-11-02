@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 集群管理
- * JMR集群管理相关接口
+ * 弹性伸缩
+ * JMR 集群 Task 节点组弹性伸缩接口：伸缩组（含扩容/缩容规则）的增删改查、手工触发伸缩、伸缩记录查询与导出、可选节点组与指标字典
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,9 +27,11 @@ package com.jdcloud.sdk.service.jmr.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询JMR的监控模板信息
+ * 查询可用于伸缩规则的指标字典，是规则里 conditions[].metricKey 的取值来源。
+不依赖具体集群，clusterId 只用于路径统一。
+
  */
-public class MonitorLabelListResponse extends JdcloudResponse<MonitorLabelListResult> implements java.io.Serializable {
+public class DescribeScalingMetricsResponse extends JdcloudResponse<DescribeScalingMetricsResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

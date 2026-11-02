@@ -44,6 +44,7 @@ public class GetSoftwareInfoResult extends JdcloudResult implements java.io.Seri
     private Boolean status;
 
 
+
     /**
      * get 对应的软件清单信息
      *
@@ -61,6 +62,7 @@ public class GetSoftwareInfoResult extends JdcloudResult implements java.io.Seri
     public void setData(String data) {
         this.data = data;
     }
+
 
     /**
      * get status
@@ -81,20 +83,24 @@ public class GetSoftwareInfoResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
      * set 对应的软件清单信息
      *
-     * @param data
+     * @param data 对应的软件清单信息
+     * @return GetSoftwareInfoResult
      */
     public GetSoftwareInfoResult data(String data) {
         this.data = data;
         return this;
     }
 
+
     /**
      * set status
      *
-     * @param status
+     * @param status 
+     * @return GetSoftwareInfoResult
      */
     public GetSoftwareInfoResult status(Boolean status) {
         this.status = status;

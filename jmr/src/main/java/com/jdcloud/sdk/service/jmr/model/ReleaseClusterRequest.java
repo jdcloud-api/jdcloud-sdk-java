@@ -50,6 +50,7 @@ public class ReleaseClusterRequest extends JdcloudRequest implements java.io.Ser
     private String clusterId;
 
 
+
     /**
      * get 地域ID
      *
@@ -67,6 +68,7 @@ public class ReleaseClusterRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 集群ID
@@ -87,20 +89,24 @@ public class ReleaseClusterRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ReleaseClusterRequest
      */
     public ReleaseClusterRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 集群ID
      *
-     * @param clusterId
+     * @param clusterId 集群ID
+     * @return ReleaseClusterRequest
      */
     public ReleaseClusterRequest clusterId(String clusterId) {
         this.clusterId = clusterId;

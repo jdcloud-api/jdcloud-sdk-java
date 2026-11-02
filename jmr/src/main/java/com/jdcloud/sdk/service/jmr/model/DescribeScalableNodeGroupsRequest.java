@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 集群管理
- * JMR集群管理相关接口
+ * 弹性伸缩
+ * JMR 集群 Task 节点组弹性伸缩接口：伸缩组（含扩容/缩容规则）的增删改查、手工触发伸缩、伸缩记录查询与导出、可选节点组与指标字典
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,9 +28,11 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询JMR的监控模板信息
+ * 查询集群下可作为伸缩对象的节点组（Task 节点组）及其是否支持伸缩。
+scalable&#x3D;false 的节点组不可配置伸缩，reason 给出原因，调用方据此置灰。
+
  */
-public class MonitorLabelListRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeScalableNodeGroupsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -47,6 +49,7 @@ public class MonitorLabelListRequest extends JdcloudRequest implements java.io.S
      */
     @Required
     private String clusterId;
+
 
 
     /**
@@ -67,6 +70,7 @@ public class MonitorLabelListRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
     }
 
+
     /**
      * get 集群ID
      *
@@ -86,22 +90,26 @@ public class MonitorLabelListRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DescribeScalableNodeGroupsRequest
      */
-    public MonitorLabelListRequest regionId(String regionId) {
+    public DescribeScalableNodeGroupsRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 集群ID
      *
-     * @param clusterId
+     * @param clusterId 集群ID
+     * @return DescribeScalableNodeGroupsRequest
      */
-    public MonitorLabelListRequest clusterId(String clusterId) {
+    public DescribeScalableNodeGroupsRequest clusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }

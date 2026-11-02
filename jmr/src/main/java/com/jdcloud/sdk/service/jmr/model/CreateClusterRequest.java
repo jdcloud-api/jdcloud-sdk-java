@@ -56,6 +56,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     private String regionId;
 
 
+
     /**
      * get 描述集群配置
      *
@@ -73,6 +74,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     public void setClusterSpec(ClusterSpec clusterSpec) {
         this.clusterSpec = clusterSpec;
     }
+
 
     /**
      * get 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
@@ -94,6 +96,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         this.clientToken = clientToken;
     }
 
+
     /**
      * get 地域ID
      *
@@ -113,31 +116,38 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 描述集群配置
      *
-     * @param clusterSpec
+     * @param clusterSpec 描述集群配置
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest clusterSpec(ClusterSpec clusterSpec) {
         this.clusterSpec = clusterSpec;
         return this;
     }
 
+
     /**
      * set 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
 
      *
-     * @param clientToken
+     * @param clientToken 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
+
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest clientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest regionId(String regionId) {
         this.regionId = regionId;

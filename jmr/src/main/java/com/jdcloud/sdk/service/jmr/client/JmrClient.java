@@ -34,33 +34,114 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.jmr.model.GetJmrVersionListRequest;
 import com.jdcloud.sdk.service.jmr.model.GetJmrVersionListResponse;
 import com.jdcloud.sdk.service.jmr.client.GetJmrVersionListExecutor;
-import com.jdcloud.sdk.service.jmr.model.MonitorLabelListRequest;
-import com.jdcloud.sdk.service.jmr.model.MonitorLabelListResponse;
-import com.jdcloud.sdk.service.jmr.client.MonitorLabelListExecutor;
-import com.jdcloud.sdk.service.jmr.model.ClusterReductionRequest;
-import com.jdcloud.sdk.service.jmr.model.ClusterReductionResponse;
-import com.jdcloud.sdk.service.jmr.client.ClusterReductionExecutor;
+import com.jdcloud.sdk.service.jmr.model.GetDatabaseRequest;
+import com.jdcloud.sdk.service.jmr.model.GetDatabaseResponse;
+import com.jdcloud.sdk.service.jmr.client.GetDatabaseExecutor;
+import com.jdcloud.sdk.service.jmr.model.DescribeScalingActivitiesRequest;
+import com.jdcloud.sdk.service.jmr.model.DescribeScalingActivitiesResponse;
+import com.jdcloud.sdk.service.jmr.client.DescribeScalingActivitiesExecutor;
 import com.jdcloud.sdk.service.jmr.model.DescribeClustersRequest;
 import com.jdcloud.sdk.service.jmr.model.DescribeClustersResponse;
 import com.jdcloud.sdk.service.jmr.client.DescribeClustersExecutor;
-import com.jdcloud.sdk.service.jmr.model.ReleaseClusterRequest;
-import com.jdcloud.sdk.service.jmr.model.ReleaseClusterResponse;
-import com.jdcloud.sdk.service.jmr.client.ReleaseClusterExecutor;
+import com.jdcloud.sdk.service.jmr.model.ExportScalingActivitiesRequest;
+import com.jdcloud.sdk.service.jmr.model.ExportScalingActivitiesResponse;
+import com.jdcloud.sdk.service.jmr.client.ExportScalingActivitiesExecutor;
 import com.jdcloud.sdk.service.jmr.model.IdataClusterRequest;
 import com.jdcloud.sdk.service.jmr.model.IdataClusterResponse;
 import com.jdcloud.sdk.service.jmr.client.IdataClusterExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetSoftwareInfoRequest;
-import com.jdcloud.sdk.service.jmr.model.GetSoftwareInfoResponse;
-import com.jdcloud.sdk.service.jmr.client.GetSoftwareInfoExecutor;
 import com.jdcloud.sdk.service.jmr.model.ClusterExpansionRequest;
 import com.jdcloud.sdk.service.jmr.model.ClusterExpansionResponse;
 import com.jdcloud.sdk.service.jmr.client.ClusterExpansionExecutor;
+import com.jdcloud.sdk.service.jmr.model.DescribeScalingGroupRequest;
+import com.jdcloud.sdk.service.jmr.model.DescribeScalingGroupResponse;
+import com.jdcloud.sdk.service.jmr.client.DescribeScalingGroupExecutor;
+import com.jdcloud.sdk.service.jmr.model.DescribeScalableNodeGroupsRequest;
+import com.jdcloud.sdk.service.jmr.model.DescribeScalableNodeGroupsResponse;
+import com.jdcloud.sdk.service.jmr.client.DescribeScalableNodeGroupsExecutor;
+import com.jdcloud.sdk.service.jmr.model.GetTableRequest;
+import com.jdcloud.sdk.service.jmr.model.GetTableResponse;
+import com.jdcloud.sdk.service.jmr.client.GetTableExecutor;
+import com.jdcloud.sdk.service.jmr.model.ModifyScalingGroupRequest;
+import com.jdcloud.sdk.service.jmr.model.ModifyScalingGroupResponse;
+import com.jdcloud.sdk.service.jmr.client.ModifyScalingGroupExecutor;
+import com.jdcloud.sdk.service.jmr.model.ListPartitionsRequest;
+import com.jdcloud.sdk.service.jmr.model.ListPartitionsResponse;
+import com.jdcloud.sdk.service.jmr.client.ListPartitionsExecutor;
+import com.jdcloud.sdk.service.jmr.model.DescribeClusterConfigsRequest;
+import com.jdcloud.sdk.service.jmr.model.DescribeClusterConfigsResponse;
+import com.jdcloud.sdk.service.jmr.client.DescribeClusterConfigsExecutor;
+import com.jdcloud.sdk.service.jmr.model.ListTablesRequest;
+import com.jdcloud.sdk.service.jmr.model.ListTablesResponse;
+import com.jdcloud.sdk.service.jmr.client.ListTablesExecutor;
+import com.jdcloud.sdk.service.jmr.model.CreateDatabaseRequest;
+import com.jdcloud.sdk.service.jmr.model.CreateDatabaseResponse;
+import com.jdcloud.sdk.service.jmr.client.CreateDatabaseExecutor;
+import com.jdcloud.sdk.service.jmr.model.CreateOpenLdapUserRequest;
+import com.jdcloud.sdk.service.jmr.model.CreateOpenLdapUserResponse;
+import com.jdcloud.sdk.service.jmr.client.CreateOpenLdapUserExecutor;
+import com.jdcloud.sdk.service.jmr.model.CreateScalingGroupRequest;
+import com.jdcloud.sdk.service.jmr.model.CreateScalingGroupResponse;
+import com.jdcloud.sdk.service.jmr.client.CreateScalingGroupExecutor;
+import com.jdcloud.sdk.service.jmr.model.GetSoftwareInfoRequest;
+import com.jdcloud.sdk.service.jmr.model.GetSoftwareInfoResponse;
+import com.jdcloud.sdk.service.jmr.client.GetSoftwareInfoExecutor;
+import com.jdcloud.sdk.service.jmr.model.DescribeScalingActivityLogRequest;
+import com.jdcloud.sdk.service.jmr.model.DescribeScalingActivityLogResponse;
+import com.jdcloud.sdk.service.jmr.client.DescribeScalingActivityLogExecutor;
 import com.jdcloud.sdk.service.jmr.model.CreateClusterRequest;
 import com.jdcloud.sdk.service.jmr.model.CreateClusterResponse;
 import com.jdcloud.sdk.service.jmr.client.CreateClusterExecutor;
+import com.jdcloud.sdk.service.jmr.model.DropDatabaseRequest;
+import com.jdcloud.sdk.service.jmr.model.DropDatabaseResponse;
+import com.jdcloud.sdk.service.jmr.client.DropDatabaseExecutor;
+import com.jdcloud.sdk.service.jmr.model.DeleteScalingGroupRequest;
+import com.jdcloud.sdk.service.jmr.model.DeleteScalingGroupResponse;
+import com.jdcloud.sdk.service.jmr.client.DeleteScalingGroupExecutor;
+import com.jdcloud.sdk.service.jmr.model.DescribeProgressStatusRequest;
+import com.jdcloud.sdk.service.jmr.model.DescribeProgressStatusResponse;
+import com.jdcloud.sdk.service.jmr.client.DescribeProgressStatusExecutor;
+import com.jdcloud.sdk.service.jmr.model.GrantHivePermissionRequest;
+import com.jdcloud.sdk.service.jmr.model.GrantHivePermissionResponse;
+import com.jdcloud.sdk.service.jmr.client.GrantHivePermissionExecutor;
+import com.jdcloud.sdk.service.jmr.model.DescribeScalingGroupsRequest;
+import com.jdcloud.sdk.service.jmr.model.DescribeScalingGroupsResponse;
+import com.jdcloud.sdk.service.jmr.client.DescribeScalingGroupsExecutor;
+import com.jdcloud.sdk.service.jmr.model.ReleaseClusterRequest;
+import com.jdcloud.sdk.service.jmr.model.ReleaseClusterResponse;
+import com.jdcloud.sdk.service.jmr.client.ReleaseClusterExecutor;
+import com.jdcloud.sdk.service.jmr.model.ListDatabasesRequest;
+import com.jdcloud.sdk.service.jmr.model.ListDatabasesResponse;
+import com.jdcloud.sdk.service.jmr.client.ListDatabasesExecutor;
 import com.jdcloud.sdk.service.jmr.model.DescribeClusterRequest;
 import com.jdcloud.sdk.service.jmr.model.DescribeClusterResponse;
 import com.jdcloud.sdk.service.jmr.client.DescribeClusterExecutor;
+import com.jdcloud.sdk.service.jmr.model.CreateTableRequest;
+import com.jdcloud.sdk.service.jmr.model.CreateTableResponse;
+import com.jdcloud.sdk.service.jmr.client.CreateTableExecutor;
+import com.jdcloud.sdk.service.jmr.model.AlterTableRequest;
+import com.jdcloud.sdk.service.jmr.model.AlterTableResponse;
+import com.jdcloud.sdk.service.jmr.client.AlterTableExecutor;
+import com.jdcloud.sdk.service.jmr.model.DropTableRequest;
+import com.jdcloud.sdk.service.jmr.model.DropTableResponse;
+import com.jdcloud.sdk.service.jmr.client.DropTableExecutor;
+import com.jdcloud.sdk.service.jmr.model.RevokeHivePermissionRequest;
+import com.jdcloud.sdk.service.jmr.model.RevokeHivePermissionResponse;
+import com.jdcloud.sdk.service.jmr.client.RevokeHivePermissionExecutor;
+import com.jdcloud.sdk.service.jmr.model.ClusterReductionRequest;
+import com.jdcloud.sdk.service.jmr.model.ClusterReductionResponse;
+import com.jdcloud.sdk.service.jmr.client.ClusterReductionExecutor;
+import com.jdcloud.sdk.service.jmr.model.DescribeScalingMetricsRequest;
+import com.jdcloud.sdk.service.jmr.model.DescribeScalingMetricsResponse;
+import com.jdcloud.sdk.service.jmr.client.DescribeScalingMetricsExecutor;
+import com.jdcloud.sdk.service.jmr.model.ListHivePermissionsRequest;
+import com.jdcloud.sdk.service.jmr.model.ListHivePermissionsResponse;
+import com.jdcloud.sdk.service.jmr.client.ListHivePermissionsExecutor;
+import com.jdcloud.sdk.service.jmr.model.CopyScalingGroupRequest;
+import com.jdcloud.sdk.service.jmr.model.CopyScalingGroupResponse;
+import com.jdcloud.sdk.service.jmr.client.CopyScalingGroupExecutor;
+import com.jdcloud.sdk.service.jmr.model.ExecuteScalingManuallyRequest;
+import com.jdcloud.sdk.service.jmr.model.ExecuteScalingManuallyResponse;
+import com.jdcloud.sdk.service.jmr.client.ExecuteScalingManuallyExecutor;
 
 /**
  * jmrClient
@@ -69,7 +150,7 @@ public class JmrClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.11";
     public final static String DefaultEndpoint = "jmr.jdcloud-api.com";
     public final static String ServiceName = "jmr";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -123,25 +204,29 @@ public class JmrClient extends JdcloudClient {
     }
 
     /**
-     * 查询JMR的监控模板信息
+     * 获取指定数据库的详情，包括 location、owner、parameters 等。
+仅支持 v2 集群（controlMethod&#x3D;ambari）。
+
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public MonitorLabelListResponse monitorLabelList(MonitorLabelListRequest request) throws JdcloudSdkException {
-        return new MonitorLabelListExecutor().client(this).execute(request);
+    public GetDatabaseResponse getDatabase(GetDatabaseRequest request) throws JdcloudSdkException {
+        return new GetDatabaseExecutor().client(this).execute(request);
     }
 
     /**
-     * 缩容集群
+     * 查询伸缩记录，只保留最近 60 天。记录包含自动触发、手工触发、被拒绝与影子模式（DRY_RUN）
+的全部活动，status 为 REJECTED 的记录 rejectReason 说明未执行的原因。
+
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ClusterReductionResponse clusterReduction(ClusterReductionRequest request) throws JdcloudSdkException {
-        return new ClusterReductionExecutor().client(this).execute(request);
+    public DescribeScalingActivitiesResponse describeScalingActivities(DescribeScalingActivitiesRequest request) throws JdcloudSdkException {
+        return new DescribeScalingActivitiesExecutor().client(this).execute(request);
     }
 
     /**
@@ -157,15 +242,16 @@ public class JmrClient extends JdcloudClient {
     }
 
     /**
-     * 释放集群
+     * 按查询条件导出伸缩记录 CSV，最多导出 10000 行，超出部分截断。
+CSV 文本通过 data.content 返回，由调用方自行落盘（接口不返回二进制流）。
 
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ReleaseClusterResponse releaseCluster(ReleaseClusterRequest request) throws JdcloudSdkException {
-        return new ReleaseClusterExecutor().client(this).execute(request);
+    public ExportScalingActivitiesResponse exportScalingActivities(ExportScalingActivitiesRequest request) throws JdcloudSdkException {
+        return new ExportScalingActivitiesExecutor().client(this).execute(request);
     }
 
     /**
@@ -180,6 +266,152 @@ public class JmrClient extends JdcloudClient {
     }
 
     /**
+     * 扩容集群
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ClusterExpansionResponse clusterExpansion(ClusterExpansionRequest request) throws JdcloudSdkException {
+        return new ClusterExpansionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询单个伸缩组详情，用于编辑回显。version 是乐观锁版本号，修改时必须原样回传。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeScalingGroupResponse describeScalingGroup(DescribeScalingGroupRequest request) throws JdcloudSdkException {
+        return new DescribeScalingGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询集群下可作为伸缩对象的节点组（Task 节点组）及其是否支持伸缩。
+scalable&#x3D;false 的节点组不可配置伸缩，reason 给出原因，调用方据此置灰。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeScalableNodeGroupsResponse describeScalableNodeGroups(DescribeScalableNodeGroupsRequest request) throws JdcloudSdkException {
+        return new DescribeScalableNodeGroupsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取指定表的详情，包括列定义、存储描述符、表参数等。
+仅支持 v2 集群（controlMethod&#x3D;ambari）。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTableResponse getTable(GetTableRequest request) throws JdcloudSdkException {
+        return new GetTableExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改伸缩组配置。注意这是**全量替换**语义：请求体里没有的字段按默认值/空处理，
+扩容与缩容子规则按提交内容整组重建（不是增量修改）。
+因此编辑前必须先调 describeScalingGroup 取到完整配置，只改需要改的字段后再整体提交；
+启用/停用（enable）也走本接口整体提交，没有单独的启停接口。
+version 必须与 describeScalingGroup 返回的一致，不一致表示配置已被他人修改，会报错。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyScalingGroupResponse modifyScalingGroup(ModifyScalingGroupRequest request) throws JdcloudSdkException {
+        return new ModifyScalingGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列出指定表的分区名列表，按 maxParts 限量返回。
+仅支持 v2 集群（controlMethod&#x3D;ambari）。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListPartitionsResponse listPartitions(ListPartitionsRequest request) throws JdcloudSdkException {
+        return new ListPartitionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取指定集群某个服务当前生效的配置文件内容，以 properties Map 形式返回。
+仅支持 v2 集群（controlMethod&#x3D;ambari）。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeClusterConfigsResponse describeClusterConfigs(DescribeClusterConfigsRequest request) throws JdcloudSdkException {
+        return new DescribeClusterConfigsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列出指定数据库下的所有表名，支持按通配符 pattern 过滤。
+仅支持 v2 集群（controlMethod&#x3D;ambari）。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListTablesResponse listTables(ListTablesRequest request) throws JdcloudSdkException {
+        return new ListTablesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建数据库，执行传入的 CREATE DATABASE 语句。
+仅支持 v2 集群（controlMethod&#x3D;ambari）。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateDatabaseResponse createDatabase(CreateDatabaseRequest request) throws JdcloudSdkException {
+        return new CreateDatabaseExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 在指定集群的 OpenLDAP 上创建用户，并加入 hadoop 组。
+仅支持 v2 集群（controlMethod&#x3D;ambari），且集群需安装 OpenLDAP。
+uidNumber 取 ou&#x3D;people 现有最大 +1，gidNumber&#x3D;1000，homeDirectory&#x3D;/home/users/{userName}。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateOpenLdapUserResponse createOpenLdapUser(CreateOpenLdapUserRequest request) throws JdcloudSdkException {
+        return new CreateOpenLdapUserExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 为指定 Task 节点组创建伸缩组，扩容/缩容子规则一次性提交。
+节点组必须支持弹性伸缩（可先调 describeScalableNodeGroups 查询）。
+enableScaleOut / enableScaleIn 为 PRD 的两个开关：开关关闭时对应方向的子规则不生效。
+dryRun 为影子模式（只记录活动不真正伸缩），上线灰度期使用。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateScalingGroupResponse createScalingGroup(CreateScalingGroupRequest request) throws JdcloudSdkException {
+        return new CreateScalingGroupExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取对应版本的软件清单信息
      *
      * @param request
@@ -191,14 +423,15 @@ public class JmrClient extends JdcloudClient {
     }
 
     /**
-     * 扩容集群
+     * 查询一条伸缩活动的执行日志，包含触发时的指标快照与执行过程输出，用于「查看日志」。
+
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ClusterExpansionResponse clusterExpansion(ClusterExpansionRequest request) throws JdcloudSdkException {
-        return new ClusterExpansionExecutor().client(this).execute(request);
+    public DescribeScalingActivityLogResponse describeScalingActivityLog(DescribeScalingActivityLogRequest request) throws JdcloudSdkException {
+        return new DescribeScalingActivityLogExecutor().client(this).execute(request);
     }
 
     /**
@@ -213,6 +446,96 @@ public class JmrClient extends JdcloudClient {
     }
 
     /**
+     * 删除数据库，执行传入的 DROP DATABASE 语句。
+仅支持 v2 集群（controlMethod&#x3D;ambari）。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DropDatabaseResponse dropDatabase(DropDatabaseRequest request) throws JdcloudSdkException {
+        return new DropDatabaseExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除伸缩组配置（含扩容/缩容子规则），删除后该节点组不再自动伸缩。
+已经在执行中的伸缩活动不受影响，会继续跑完。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteScalingGroupResponse deleteScalingGroup(DeleteScalingGroupRequest request) throws JdcloudSdkException {
+        return new DeleteScalingGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询集群操作(比如:扩容缩容)的进度信息
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeProgressStatusResponse describeProgressStatus(DescribeProgressStatusRequest request) throws JdcloudSdkException {
+        return new DescribeProgressStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 对指定主体（用户/用户组）在指定库表上授权。
+主体需已同步到 Ranger（否则报错）。table 为空时表示数据库级授权。
+仅支持 v2 集群（controlMethod&#x3D;ambari），且集群需安装 Ranger。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GrantHivePermissionResponse grantHivePermission(GrantHivePermissionRequest request) throws JdcloudSdkException {
+        return new GrantHivePermissionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询集群下已配置的伸缩组列表（每个 Task 节点组最多一个伸缩组，子规则随组返回）。
+支持按节点组过滤与分页。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeScalingGroupsResponse describeScalingGroups(DescribeScalingGroupsRequest request) throws JdcloudSdkException {
+        return new DescribeScalingGroupsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 释放集群
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ReleaseClusterResponse releaseCluster(ReleaseClusterRequest request) throws JdcloudSdkException {
+        return new ReleaseClusterExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列出集群下所有数据库名。
+仅支持 v2 集群（controlMethod&#x3D;ambari）。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListDatabasesResponse listDatabases(ListDatabasesRequest request) throws JdcloudSdkException {
+        return new ListDatabasesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询指定集群的详细信息
 
      *
@@ -222,6 +545,126 @@ public class JmrClient extends JdcloudClient {
      */
     public DescribeClusterResponse describeCluster(DescribeClusterRequest request) throws JdcloudSdkException {
         return new DescribeClusterExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建表，执行传入的 CREATE TABLE 语句。
+仅支持 v2 集群（controlMethod&#x3D;ambari）。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateTableResponse createTable(CreateTableRequest request) throws JdcloudSdkException {
+        return new CreateTableExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改表，执行传入的 ALTER TABLE 语句（如重命名、增改列、设置表属性等）。
+仅支持 v2 集群（controlMethod&#x3D;ambari）。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AlterTableResponse alterTable(AlterTableRequest request) throws JdcloudSdkException {
+        return new AlterTableExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除表，执行传入的 DROP TABLE 语句。
+仅支持 v2 集群（controlMethod&#x3D;ambari）。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DropTableResponse dropTable(DropTableRequest request) throws JdcloudSdkException {
+        return new DropTableExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 回收指定主体（用户/用户组）在指定库表上的权限。
+privileges 为空时表示回收该主体在该资源上的全部权限。
+仅支持 v2 集群（controlMethod&#x3D;ambari），且集群需安装 Ranger。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RevokeHivePermissionResponse revokeHivePermission(RevokeHivePermissionRequest request) throws JdcloudSdkException {
+        return new RevokeHivePermissionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 缩容集群
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ClusterReductionResponse clusterReduction(ClusterReductionRequest request) throws JdcloudSdkException {
+        return new ClusterReductionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询可用于伸缩规则的指标字典，是规则里 conditions[].metricKey 的取值来源。
+不依赖具体集群，clusterId 只用于路径统一。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeScalingMetricsResponse describeScalingMetrics(DescribeScalingMetricsRequest request) throws JdcloudSdkException {
+        return new DescribeScalingMetricsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询集群下 Hive 库表权限，支持按数据库、表、主体类型、主体名称过滤。
+仅支持 v2 集群（controlMethod&#x3D;ambari），且集群需安装 Ranger。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListHivePermissionsResponse listHivePermissions(ListHivePermissionsRequest request) throws JdcloudSdkException {
+        return new ListHivePermissionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 把源节点组的伸缩配置复制到目标节点组，便于同类节点组之间复用。
+isCover&#x3D;true 时覆盖目标节点组已有配置，否则目标节点组已有配置时报错。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CopyScalingGroupResponse copyScalingGroup(CopyScalingGroupRequest request) throws JdcloudSdkException {
+        return new CopyScalingGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 手工触发一次伸缩，不依赖伸缩规则是否命中（规则中的冷却时间、日限、节点上下限仍然生效）。
+该节点组必须已配置伸缩组；targetNum 为期望的节点总数（不是增量）。
+被风控拦下时 status&#x3D;false，message 为原因、data.rejectReason 为机器可读的原因码，
+可能的取值：GROUP_DISABLED / GROUP_SUSPENDED / CLUSTER_NOT_RUNNING / ACTIVITY_RUNNING /
+METRIC_UNAVAILABLE / METRIC_NOT_ENOUGH / IN_COOLDOWN / RULE_NOT_MATCH / OUT_OF_BOUND /
+DAILY_LIMIT / HARD_LIMIT / NO_STOCK / IDLE_NODE_NOT_ENOUGH / NODE_GROUP_EMPTY。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ExecuteScalingManuallyResponse executeScalingManually(ExecuteScalingManuallyRequest request) throws JdcloudSdkException {
+        return new ExecuteScalingManuallyExecutor().client(this).execute(request);
     }
 
 

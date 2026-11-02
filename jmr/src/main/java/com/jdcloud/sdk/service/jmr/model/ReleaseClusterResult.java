@@ -39,6 +39,17 @@ public class ReleaseClusterResult extends JdcloudResult implements java.io.Seria
      */
     private Boolean status;
 
+    /**
+     * 集群ID
+     */
+    private String clusterId;
+
+    /**
+     * 释放集群的信息
+     */
+    private String message;
+
+
 
     /**
      * get 是否开始释放集群
@@ -60,12 +71,76 @@ public class ReleaseClusterResult extends JdcloudResult implements java.io.Seria
 
 
     /**
+     * get 集群ID
+     *
+     * @return
+     */
+    public String getClusterId() {
+        return clusterId;
+    }
+
+    /**
+     * set 集群ID
+     *
+     * @param clusterId
+     */
+    public void setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+    }
+
+
+    /**
+     * get 释放集群的信息
+     *
+     * @return
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * set 释放集群的信息
+     *
+     * @param message
+     */
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+
+
+    /**
      * set 是否开始释放集群
      *
-     * @param status
+     * @param status 是否开始释放集群
+     * @return ReleaseClusterResult
      */
     public ReleaseClusterResult status(Boolean status) {
         this.status = status;
+        return this;
+    }
+
+
+    /**
+     * set 集群ID
+     *
+     * @param clusterId 集群ID
+     * @return ReleaseClusterResult
+     */
+    public ReleaseClusterResult clusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+
+
+    /**
+     * set 释放集群的信息
+     *
+     * @param message 释放集群的信息
+     * @return ReleaseClusterResult
+     */
+    public ReleaseClusterResult message(String message) {
+        this.message = message;
         return this;
     }
 

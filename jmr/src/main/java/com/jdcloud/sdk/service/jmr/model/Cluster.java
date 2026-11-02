@@ -100,13 +100,19 @@ public class Cluster  implements java.io.Serializable {
     private String duration;
 
     /**
-     * 集群节点个数
+     * 集群使用的RDS实例ID
+     */
+    private String rdsInstanceId;
+
+    /**
+     * 集群节点数量
      */
     private Integer nodeCount;
 
     /**
      * 集群节点信息
      */
+    
     private List<ClusterNode> hardware;
 
 
@@ -128,6 +134,7 @@ public class Cluster  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 集群名称
      *
@@ -145,6 +152,7 @@ public class Cluster  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 集群所属地域
@@ -164,6 +172,7 @@ public class Cluster  implements java.io.Serializable {
         this.dataCenter = dataCenter;
     }
 
+
     /**
      * get 集群ID
      *
@@ -181,6 +190,7 @@ public class Cluster  implements java.io.Serializable {
     public void setClusterPrimaryId(String clusterPrimaryId) {
         this.clusterPrimaryId = clusterPrimaryId;
     }
+
 
     /**
      * get 监控ID
@@ -200,6 +210,7 @@ public class Cluster  implements java.io.Serializable {
         this.monitorResourceId = monitorResourceId;
     }
 
+
     /**
      * get 集群状态
      *
@@ -217,6 +228,7 @@ public class Cluster  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 软件信息
@@ -236,6 +248,7 @@ public class Cluster  implements java.io.Serializable {
         this.softwareStack = softwareStack;
     }
 
+
     /**
      * get 集群创建时间
      *
@@ -253,6 +266,7 @@ public class Cluster  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 集群是否高可用
@@ -272,6 +286,7 @@ public class Cluster  implements java.io.Serializable {
         this.haFlag = haFlag;
     }
 
+
     /**
      * get 集群是否使用OSS
      *
@@ -289,6 +304,7 @@ public class Cluster  implements java.io.Serializable {
     public void setJssFlag(Boolean jssFlag) {
         this.jssFlag = jssFlag;
     }
+
 
     /**
      * get 集群费用
@@ -308,6 +324,7 @@ public class Cluster  implements java.io.Serializable {
         this.payPrice = payPrice;
     }
 
+
     /**
      * get 集群收费类型
      *
@@ -325,6 +342,7 @@ public class Cluster  implements java.io.Serializable {
     public void setPayType(String payType) {
         this.payType = payType;
     }
+
 
     /**
      * get 集群运行时间
@@ -344,8 +362,28 @@ public class Cluster  implements java.io.Serializable {
         this.duration = duration;
     }
 
+
     /**
-     * get 集群节点个数
+     * get 集群使用的RDS实例ID
+     *
+     * @return
+     */
+    public String getRdsInstanceId() {
+        return rdsInstanceId;
+    }
+
+    /**
+     * set 集群使用的RDS实例ID
+     *
+     * @param rdsInstanceId
+     */
+    public void setRdsInstanceId(String rdsInstanceId) {
+        this.rdsInstanceId = rdsInstanceId;
+    }
+
+
+    /**
+     * get 集群节点数量
      *
      * @return
      */
@@ -354,7 +392,7 @@ public class Cluster  implements java.io.Serializable {
     }
 
     /**
-     * set 集群节点个数
+     * set 集群节点数量
      *
      * @param nodeCount
      */
@@ -362,174 +400,218 @@ public class Cluster  implements java.io.Serializable {
         this.nodeCount = nodeCount;
     }
 
+
     /**
-     * get 集群节点信息
-     *
-     * @return
-     */
+    * get 集群节点信息
+    *
+    * @return
+    */
     public List<ClusterNode> getHardware() {
         return hardware;
     }
 
     /**
-     * set 集群节点信息
-     *
-     * @param hardware
-     */
+    * set 集群节点信息
+    *
+    * @param hardware
+    */
     public void setHardware(List<ClusterNode> hardware) {
         this.hardware = hardware;
     }
 
 
+
     /**
      * set 集群ID
      *
-     * @param id
+     * @param id 集群ID
+     * @return Cluster
      */
     public Cluster id(String id) {
         this.id = id;
         return this;
     }
 
+
     /**
      * set 集群名称
      *
-     * @param name
+     * @param name 集群名称
+     * @return Cluster
      */
     public Cluster name(String name) {
         this.name = name;
         return this;
     }
 
+
     /**
      * set 集群所属地域
      *
-     * @param dataCenter
+     * @param dataCenter 集群所属地域
+     * @return Cluster
      */
     public Cluster dataCenter(String dataCenter) {
         this.dataCenter = dataCenter;
         return this;
     }
 
+
     /**
      * set 集群ID
      *
-     * @param clusterPrimaryId
+     * @param clusterPrimaryId 集群ID
+     * @return Cluster
      */
     public Cluster clusterPrimaryId(String clusterPrimaryId) {
         this.clusterPrimaryId = clusterPrimaryId;
         return this;
     }
 
+
     /**
      * set 监控ID
      *
-     * @param monitorResourceId
+     * @param monitorResourceId 监控ID
+     * @return Cluster
      */
     public Cluster monitorResourceId(String monitorResourceId) {
         this.monitorResourceId = monitorResourceId;
         return this;
     }
 
+
     /**
      * set 集群状态
      *
-     * @param status
+     * @param status 集群状态
+     * @return Cluster
      */
     public Cluster status(String status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 软件信息
      *
-     * @param softwareStack
+     * @param softwareStack 软件信息
+     * @return Cluster
      */
     public Cluster softwareStack(SoftwareStack softwareStack) {
         this.softwareStack = softwareStack;
         return this;
     }
 
+
     /**
      * set 集群创建时间
      *
-     * @param createTime
+     * @param createTime 集群创建时间
+     * @return Cluster
      */
     public Cluster createTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
 
+
     /**
      * set 集群是否高可用
      *
-     * @param haFlag
+     * @param haFlag 集群是否高可用
+     * @return Cluster
      */
     public Cluster haFlag(Boolean haFlag) {
         this.haFlag = haFlag;
         return this;
     }
 
+
     /**
      * set 集群是否使用OSS
      *
-     * @param jssFlag
+     * @param jssFlag 集群是否使用OSS
+     * @return Cluster
      */
     public Cluster jssFlag(Boolean jssFlag) {
         this.jssFlag = jssFlag;
         return this;
     }
 
+
     /**
      * set 集群费用
      *
-     * @param payPrice
+     * @param payPrice 集群费用
+     * @return Cluster
      */
     public Cluster payPrice(Double payPrice) {
         this.payPrice = payPrice;
         return this;
     }
 
+
     /**
      * set 集群收费类型
      *
-     * @param payType
+     * @param payType 集群收费类型
+     * @return Cluster
      */
     public Cluster payType(String payType) {
         this.payType = payType;
         return this;
     }
 
+
     /**
      * set 集群运行时间
      *
-     * @param duration
+     * @param duration 集群运行时间
+     * @return Cluster
      */
     public Cluster duration(String duration) {
         this.duration = duration;
         return this;
     }
 
+
     /**
-     * set 集群节点个数
+     * set 集群使用的RDS实例ID
      *
-     * @param nodeCount
+     * @param rdsInstanceId 集群使用的RDS实例ID
+     * @return Cluster
+     */
+    public Cluster rdsInstanceId(String rdsInstanceId) {
+        this.rdsInstanceId = rdsInstanceId;
+        return this;
+    }
+
+
+    /**
+     * set 集群节点数量
+     *
+     * @param nodeCount 集群节点数量
+     * @return Cluster
      */
     public Cluster nodeCount(Integer nodeCount) {
         this.nodeCount = nodeCount;
         return this;
     }
 
+
     /**
-     * set 集群节点信息
-     *
-     * @param hardware
-     */
+    * set 集群节点信息
+    *
+    * @param hardware 集群节点信息
+    * @return Cluster
+    */
     public Cluster hardware(List<ClusterNode> hardware) {
         this.hardware = hardware;
         return this;
     }
+
 
 
     /**
@@ -543,5 +625,4 @@ public class Cluster  implements java.io.Serializable {
         }
         this.hardware.add(hardware);
     }
-
 }
