@@ -56,6 +56,7 @@ public class ClusterExpansionRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
      * get 描述集群扩容信息
      *
@@ -73,6 +74,7 @@ public class ClusterExpansionRequest extends JdcloudRequest implements java.io.S
     public void setClusterExpansion(ClusterExpansion clusterExpansion) {
         this.clusterExpansion = clusterExpansion;
     }
+
 
     /**
      * get 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
@@ -94,6 +96,7 @@ public class ClusterExpansionRequest extends JdcloudRequest implements java.io.S
         this.clientToken = clientToken;
     }
 
+
     /**
      * get 地域ID
      *
@@ -113,31 +116,38 @@ public class ClusterExpansionRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 描述集群扩容信息
      *
-     * @param clusterExpansion
+     * @param clusterExpansion 描述集群扩容信息
+     * @return ClusterExpansionRequest
      */
     public ClusterExpansionRequest clusterExpansion(ClusterExpansion clusterExpansion) {
         this.clusterExpansion = clusterExpansion;
         return this;
     }
 
+
     /**
      * set 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
 
      *
-     * @param clientToken
+     * @param clientToken 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
+
+     * @return ClusterExpansionRequest
      */
     public ClusterExpansionRequest clientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return ClusterExpansionRequest
      */
     public ClusterExpansionRequest regionId(String regionId) {
         this.regionId = regionId;

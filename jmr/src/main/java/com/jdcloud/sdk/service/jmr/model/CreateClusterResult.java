@@ -49,6 +49,7 @@ public class CreateClusterResult extends JdcloudResult implements java.io.Serial
     private String message;
 
 
+
     /**
      * get 是否开始创建集群
      *
@@ -67,6 +68,7 @@ public class CreateClusterResult extends JdcloudResult implements java.io.Serial
         this.status = status;
     }
 
+
     /**
      * get 集群ID
      *
@@ -84,6 +86,7 @@ public class CreateClusterResult extends JdcloudResult implements java.io.Serial
     public void setClusterId(String clusterId) {
         this.clusterId = clusterId;
     }
+
 
     /**
      * get 创建集群的信息
@@ -104,30 +107,36 @@ public class CreateClusterResult extends JdcloudResult implements java.io.Serial
     }
 
 
+
     /**
      * set 是否开始创建集群
      *
-     * @param status
+     * @param status 是否开始创建集群
+     * @return CreateClusterResult
      */
     public CreateClusterResult status(Boolean status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 集群ID
      *
-     * @param clusterId
+     * @param clusterId 集群ID
+     * @return CreateClusterResult
      */
     public CreateClusterResult clusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
 
+
     /**
      * set 创建集群的信息
      *
-     * @param message
+     * @param message 创建集群的信息
+     * @return CreateClusterResult
      */
     public CreateClusterResult message(String message) {
         this.message = message;

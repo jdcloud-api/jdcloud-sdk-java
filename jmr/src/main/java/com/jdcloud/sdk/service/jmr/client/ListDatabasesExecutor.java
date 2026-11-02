@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 集群管理
- * JMR集群管理相关接口
+ * 库表元数据管理
+ * JMR集群Hive库表元数据查询与DDL管理接口，通过agent执行hive -e
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,25 +26,27 @@ package com.jdcloud.sdk.service.jmr.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.jmr.model.MonitorLabelListResponse;
+import com.jdcloud.sdk.service.jmr.model.ListDatabasesResponse;
 
 /**
- * 查询JMR的监控模板信息
+ * 列出集群下所有数据库名。
+仅支持 v2 集群（controlMethod&#x3D;ambari）。
+
  */
-class MonitorLabelListExecutor extends JdcloudExecutor {
+class ListDatabasesExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "POST";
+        return "GET";
     }
 
     @Override
     public String url() {
-        return "/regions/{regionId}/monitorLabelList/{clusterId}";
+        return "/regions/{regionId}/clusters/{clusterId}/databases";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return MonitorLabelListResponse.class;
+        return ListDatabasesResponse.class;
     }
 }

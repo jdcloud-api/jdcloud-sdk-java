@@ -70,7 +70,7 @@ public class ClusterListNode  implements java.io.Serializable {
     /**
      * 集群创建时间
      */
-    private String createTime;
+    private Number createTime;
 
     /**
      * 集群收费类型
@@ -86,6 +86,17 @@ public class ClusterListNode  implements java.io.Serializable {
      * 公网Ip
      */
     private String outerIp;
+
+    /**
+     * 控制方式，取值v1或者v2
+     */
+    private String controlMethod;
+
+    /**
+     * 节点类型汇总信息
+     */
+    private String nodeTypeSummary;
+
 
 
     /**
@@ -106,6 +117,7 @@ public class ClusterListNode  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 集群名称
      *
@@ -123,6 +135,7 @@ public class ClusterListNode  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 集群所属地域
@@ -142,6 +155,7 @@ public class ClusterListNode  implements java.io.Serializable {
         this.dataCenter = dataCenter;
     }
 
+
     /**
      * get 集群ID
      *
@@ -159,6 +173,7 @@ public class ClusterListNode  implements java.io.Serializable {
     public void setRecordId(Integer recordId) {
         this.recordId = recordId;
     }
+
 
     /**
      * get 监控ID
@@ -178,6 +193,7 @@ public class ClusterListNode  implements java.io.Serializable {
         this.monitorResourceId = monitorResourceId;
     }
 
+
     /**
      * get 集群状态
      *
@@ -195,6 +211,7 @@ public class ClusterListNode  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 错误信息
@@ -214,12 +231,13 @@ public class ClusterListNode  implements java.io.Serializable {
         this.errorMessage = errorMessage;
     }
 
+
     /**
      * get 集群创建时间
      *
      * @return
      */
-    public String getCreateTime() {
+    public Number getCreateTime() {
         return createTime;
     }
 
@@ -228,9 +246,10 @@ public class ClusterListNode  implements java.io.Serializable {
      *
      * @param createTime
      */
-    public void setCreateTime(String createTime) {
+    public void setCreateTime(Number createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 集群收费类型
@@ -250,6 +269,7 @@ public class ClusterListNode  implements java.io.Serializable {
         this.payType = payType;
     }
 
+
     /**
      * get 集群运行时间
      *
@@ -267,6 +287,7 @@ public class ClusterListNode  implements java.io.Serializable {
     public void setDuration(String duration) {
         this.duration = duration;
     }
+
 
     /**
      * get 公网Ip
@@ -288,112 +309,196 @@ public class ClusterListNode  implements java.io.Serializable {
 
 
     /**
+     * get 控制方式，取值v1或者v2
+     *
+     * @return
+     */
+    public String getControlMethod() {
+        return controlMethod;
+    }
+
+    /**
+     * set 控制方式，取值v1或者v2
+     *
+     * @param controlMethod
+     */
+    public void setControlMethod(String controlMethod) {
+        this.controlMethod = controlMethod;
+    }
+
+
+    /**
+     * get 节点类型汇总信息
+     *
+     * @return
+     */
+    public String getNodeTypeSummary() {
+        return nodeTypeSummary;
+    }
+
+    /**
+     * set 节点类型汇总信息
+     *
+     * @param nodeTypeSummary
+     */
+    public void setNodeTypeSummary(String nodeTypeSummary) {
+        this.nodeTypeSummary = nodeTypeSummary;
+    }
+
+
+
+    /**
      * set 集群ID
      *
-     * @param id
+     * @param id 集群ID
+     * @return ClusterListNode
      */
     public ClusterListNode id(String id) {
         this.id = id;
         return this;
     }
 
+
     /**
      * set 集群名称
      *
-     * @param name
+     * @param name 集群名称
+     * @return ClusterListNode
      */
     public ClusterListNode name(String name) {
         this.name = name;
         return this;
     }
 
+
     /**
      * set 集群所属地域
      *
-     * @param dataCenter
+     * @param dataCenter 集群所属地域
+     * @return ClusterListNode
      */
     public ClusterListNode dataCenter(String dataCenter) {
         this.dataCenter = dataCenter;
         return this;
     }
 
+
     /**
      * set 集群ID
      *
-     * @param recordId
+     * @param recordId 集群ID
+     * @return ClusterListNode
      */
     public ClusterListNode recordId(Integer recordId) {
         this.recordId = recordId;
         return this;
     }
 
+
     /**
      * set 监控ID
      *
-     * @param monitorResourceId
+     * @param monitorResourceId 监控ID
+     * @return ClusterListNode
      */
     public ClusterListNode monitorResourceId(String monitorResourceId) {
         this.monitorResourceId = monitorResourceId;
         return this;
     }
 
+
     /**
      * set 集群状态
      *
-     * @param status
+     * @param status 集群状态
+     * @return ClusterListNode
      */
     public ClusterListNode status(String status) {
         this.status = status;
         return this;
     }
 
+
     /**
      * set 错误信息
      *
-     * @param errorMessage
+     * @param errorMessage 错误信息
+     * @return ClusterListNode
      */
     public ClusterListNode errorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
 
+
     /**
      * set 集群创建时间
      *
-     * @param createTime
+     * @param createTime 集群创建时间
+     * @return ClusterListNode
      */
-    public ClusterListNode createTime(String createTime) {
+    public ClusterListNode createTime(Number createTime) {
         this.createTime = createTime;
         return this;
     }
 
+
     /**
      * set 集群收费类型
      *
-     * @param payType
+     * @param payType 集群收费类型
+     * @return ClusterListNode
      */
     public ClusterListNode payType(String payType) {
         this.payType = payType;
         return this;
     }
 
+
     /**
      * set 集群运行时间
      *
-     * @param duration
+     * @param duration 集群运行时间
+     * @return ClusterListNode
      */
     public ClusterListNode duration(String duration) {
         this.duration = duration;
         return this;
     }
 
+
     /**
      * set 公网Ip
      *
-     * @param outerIp
+     * @param outerIp 公网Ip
+     * @return ClusterListNode
      */
     public ClusterListNode outerIp(String outerIp) {
         this.outerIp = outerIp;
+        return this;
+    }
+
+
+    /**
+     * set 控制方式，取值v1或者v2
+     *
+     * @param controlMethod 控制方式，取值v1或者v2
+     * @return ClusterListNode
+     */
+    public ClusterListNode controlMethod(String controlMethod) {
+        this.controlMethod = controlMethod;
+        return this;
+    }
+
+
+    /**
+     * set 节点类型汇总信息
+     *
+     * @param nodeTypeSummary 节点类型汇总信息
+     * @return ClusterListNode
+     */
+    public ClusterListNode nodeTypeSummary(String nodeTypeSummary) {
+        this.nodeTypeSummary = nodeTypeSummary;
         return this;
     }
 

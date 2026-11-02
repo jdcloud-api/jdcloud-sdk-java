@@ -43,6 +43,7 @@ public class SoftwareStack  implements java.io.Serializable {
     private String version;
 
 
+
     /**
      * get 软件列表
      *
@@ -60,6 +61,7 @@ public class SoftwareStack  implements java.io.Serializable {
     public void setSoftware(String software) {
         this.software = software;
     }
+
 
     /**
      * get 版本
@@ -80,20 +82,24 @@ public class SoftwareStack  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 软件列表
      *
-     * @param software
+     * @param software 软件列表
+     * @return SoftwareStack
      */
     public SoftwareStack software(String software) {
         this.software = software;
         return this;
     }
 
+
     /**
      * set 版本
      *
-     * @param version
+     * @param version 版本
+     * @return SoftwareStack
      */
     public SoftwareStack version(String version) {
         this.version = version;

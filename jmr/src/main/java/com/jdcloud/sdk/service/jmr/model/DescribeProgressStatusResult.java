@@ -26,44 +26,47 @@ package com.jdcloud.sdk.service.jmr.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.jmr.model.MonitorLabelDetail;
+import com.jdcloud.sdk.service.jmr.model.ProgressStatus;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询JMR的监控模板信息
+ * 查询集群操作(比如:扩容缩容)的进度信息
+
  */
-public class MonitorLabelListResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeProgressStatusResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * data
+     * progressStatus
      */
-    private List<MonitorLabelDetail> data;
-
+    
+    private List<ProgressStatus> progressStatus;
     /**
      * status
      */
     private Boolean status;
 
 
+
     /**
-     * get data
-     *
-     * @return
-     */
-    public List<MonitorLabelDetail> getData() {
-        return data;
+    * get progressStatus
+    *
+    * @return
+    */
+    public List<ProgressStatus> getProgressStatus() {
+        return progressStatus;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
-    public void setData(List<MonitorLabelDetail> data) {
-        this.data = data;
+    * set progressStatus
+    *
+    * @param progressStatus
+    */
+    public void setProgressStatus(List<ProgressStatus> progressStatus) {
+        this.progressStatus = progressStatus;
     }
+
 
     /**
      * get status
@@ -84,37 +87,41 @@ public class MonitorLabelListResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
-    public MonitorLabelListResult data(List<MonitorLabelDetail> data) {
-        this.data = data;
+    * set progressStatus
+    *
+    * @param progressStatus 
+    * @return DescribeProgressStatusResult
+    */
+    public DescribeProgressStatusResult progressStatus(List<ProgressStatus> progressStatus) {
+        this.progressStatus = progressStatus;
         return this;
     }
+
 
     /**
      * set status
      *
-     * @param status
+     * @param status 
+     * @return DescribeProgressStatusResult
      */
-    public MonitorLabelListResult status(Boolean status) {
+    public DescribeProgressStatusResult status(Boolean status) {
         this.status = status;
         return this;
     }
 
 
-    /**
-     * add item to data
-     *
-     * @param data
-     */
-    public void addData(MonitorLabelDetail data) {
-        if (this.data == null) {
-            this.data = new ArrayList<>();
-        }
-        this.data.add(data);
-    }
 
+    /**
+     * add item to progressStatus
+     *
+     * @param progressStatu
+     */
+    public void addProgressStatu(ProgressStatus progressStatu) {
+        if (this.progressStatus == null) {
+            this.progressStatus = new ArrayList<>();
+        }
+        this.progressStatus.add(progressStatu);
+    }
 }

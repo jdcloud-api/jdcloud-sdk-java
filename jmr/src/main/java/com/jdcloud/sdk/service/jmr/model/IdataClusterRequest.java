@@ -49,6 +49,7 @@ public class IdataClusterRequest extends JdcloudRequest implements java.io.Seria
     private String dataCenter;
 
 
+
     /**
      * get 地域ID
      *
@@ -66,6 +67,7 @@ public class IdataClusterRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 地域信息
@@ -86,20 +88,24 @@ public class IdataClusterRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return IdataClusterRequest
      */
     public IdataClusterRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
     /**
      * set 地域信息
      *
-     * @param dataCenter
+     * @param dataCenter 地域信息
+     * @return IdataClusterRequest
      */
     public IdataClusterRequest dataCenter(String dataCenter) {
         this.dataCenter = dataCenter;

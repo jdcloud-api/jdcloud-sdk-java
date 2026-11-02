@@ -68,7 +68,7 @@ public class ClusterNode  implements java.io.Serializable {
     private String nodeDiskType;
 
     /**
-     * 节点类型，MASTER或者SLAVE
+     * 节点类型，MASTER，Core，Task，Edge
      */
     private String nodeType;
 
@@ -91,6 +91,11 @@ public class ClusterNode  implements java.io.Serializable {
      * 节点数据盘大小(GB)
      */
     private Integer nodeDiskVolume;
+
+    /**
+     * 节点数据盘数量(个)
+     */
+    private Integer nodeDiskNumber;
 
     /**
      * 信息
@@ -122,6 +127,32 @@ public class ClusterNode  implements java.io.Serializable {
      */
     private Integer nodeMemoryNum;
 
+    /**
+     * Task节点的节点组ID
+     */
+    private String configGroupId;
+
+    /**
+     * Task节点的节点组名称
+     */
+    private String configGroupName;
+
+    /**
+     * 节点数量(个)
+     */
+    private Integer nodeNumber;
+
+    /**
+     * 节点系统盘IOPS
+     */
+    private Integer nodeSystemDiskIops;
+
+    /**
+     * 节点数据盘IOPS
+     */
+    private Integer nodeDiskIops;
+
+
 
     /**
      * get 节点ID
@@ -141,6 +172,7 @@ public class ClusterNode  implements java.io.Serializable {
         this.serverId = serverId;
     }
 
+
     /**
      * get 节点实例信息
      *
@@ -158,6 +190,7 @@ public class ClusterNode  implements java.io.Serializable {
     public void setInstanceInfo(String instanceInfo) {
         this.instanceInfo = instanceInfo;
     }
+
 
     /**
      * get 节点主机名称
@@ -177,6 +210,7 @@ public class ClusterNode  implements java.io.Serializable {
         this.nodeName = nodeName;
     }
 
+
     /**
      * get 节点系统盘类型
      *
@@ -194,6 +228,7 @@ public class ClusterNode  implements java.io.Serializable {
     public void setNodeSystemDiskType(String nodeSystemDiskType) {
         this.nodeSystemDiskType = nodeSystemDiskType;
     }
+
 
     /**
      * get 节点实例类型
@@ -213,6 +248,7 @@ public class ClusterNode  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
      * get 节点运行状态
      *
@@ -230,6 +266,7 @@ public class ClusterNode  implements java.io.Serializable {
     public void setNodeStatus(String nodeStatus) {
         this.nodeStatus = nodeStatus;
     }
+
 
     /**
      * get 节点数据盘类型
@@ -249,8 +286,9 @@ public class ClusterNode  implements java.io.Serializable {
         this.nodeDiskType = nodeDiskType;
     }
 
+
     /**
-     * get 节点类型，MASTER或者SLAVE
+     * get 节点类型，MASTER，Core，Task，Edge
      *
      * @return
      */
@@ -259,13 +297,14 @@ public class ClusterNode  implements java.io.Serializable {
     }
 
     /**
-     * set 节点类型，MASTER或者SLAVE
+     * set 节点类型，MASTER，Core，Task，Edge
      *
      * @param nodeType
      */
     public void setNodeType(String nodeType) {
         this.nodeType = nodeType;
     }
+
 
     /**
      * get 节点外网IP
@@ -285,6 +324,7 @@ public class ClusterNode  implements java.io.Serializable {
         this.outerIp = outerIp;
     }
 
+
     /**
      * get 节点内网IP
      *
@@ -302,6 +342,7 @@ public class ClusterNode  implements java.io.Serializable {
     public void setInnerIp(String innerIp) {
         this.innerIp = innerIp;
     }
+
 
     /**
      * get 节点系统盘大小(GB)
@@ -321,6 +362,7 @@ public class ClusterNode  implements java.io.Serializable {
         this.nodeSystemDiskVolume = nodeSystemDiskVolume;
     }
 
+
     /**
      * get 节点数据盘大小(GB)
      *
@@ -338,6 +380,26 @@ public class ClusterNode  implements java.io.Serializable {
     public void setNodeDiskVolume(Integer nodeDiskVolume) {
         this.nodeDiskVolume = nodeDiskVolume;
     }
+
+
+    /**
+     * get 节点数据盘数量(个)
+     *
+     * @return
+     */
+    public Integer getNodeDiskNumber() {
+        return nodeDiskNumber;
+    }
+
+    /**
+     * set 节点数据盘数量(个)
+     *
+     * @param nodeDiskNumber
+     */
+    public void setNodeDiskNumber(Integer nodeDiskNumber) {
+        this.nodeDiskNumber = nodeDiskNumber;
+    }
+
 
     /**
      * get 信息
@@ -357,6 +419,7 @@ public class ClusterNode  implements java.io.Serializable {
         this.msg = msg;
     }
 
+
     /**
      * get 节点系统信息
      *
@@ -374,6 +437,7 @@ public class ClusterNode  implements java.io.Serializable {
     public void setNodeSystemInfo(String nodeSystemInfo) {
         this.nodeSystemInfo = nodeSystemInfo;
     }
+
 
     /**
      * get 节点硬盘类型
@@ -393,6 +457,7 @@ public class ClusterNode  implements java.io.Serializable {
         this.nodeDiskCategory = nodeDiskCategory;
     }
 
+
     /**
      * get 节点系统盘类型
      *
@@ -411,6 +476,7 @@ public class ClusterNode  implements java.io.Serializable {
         this.nodeSystemDiskCategory = nodeSystemDiskCategory;
     }
 
+
     /**
      * get 节点数量
      *
@@ -428,6 +494,7 @@ public class ClusterNode  implements java.io.Serializable {
     public void setNodeCoreNum(Integer nodeCoreNum) {
         this.nodeCoreNum = nodeCoreNum;
     }
+
 
     /**
      * get 节点内存数量
@@ -449,182 +516,385 @@ public class ClusterNode  implements java.io.Serializable {
 
 
     /**
+     * get Task节点的节点组ID
+     *
+     * @return
+     */
+    public String getConfigGroupId() {
+        return configGroupId;
+    }
+
+    /**
+     * set Task节点的节点组ID
+     *
+     * @param configGroupId
+     */
+    public void setConfigGroupId(String configGroupId) {
+        this.configGroupId = configGroupId;
+    }
+
+
+    /**
+     * get Task节点的节点组名称
+     *
+     * @return
+     */
+    public String getConfigGroupName() {
+        return configGroupName;
+    }
+
+    /**
+     * set Task节点的节点组名称
+     *
+     * @param configGroupName
+     */
+    public void setConfigGroupName(String configGroupName) {
+        this.configGroupName = configGroupName;
+    }
+
+
+    /**
+     * get 节点数量(个)
+     *
+     * @return
+     */
+    public Integer getNodeNumber() {
+        return nodeNumber;
+    }
+
+    /**
+     * set 节点数量(个)
+     *
+     * @param nodeNumber
+     */
+    public void setNodeNumber(Integer nodeNumber) {
+        this.nodeNumber = nodeNumber;
+    }
+
+
+    /**
+     * get 节点系统盘IOPS
+     *
+     * @return
+     */
+    public Integer getNodeSystemDiskIops() {
+        return nodeSystemDiskIops;
+    }
+
+    /**
+     * set 节点系统盘IOPS
+     *
+     * @param nodeSystemDiskIops
+     */
+    public void setNodeSystemDiskIops(Integer nodeSystemDiskIops) {
+        this.nodeSystemDiskIops = nodeSystemDiskIops;
+    }
+
+
+    /**
+     * get 节点数据盘IOPS
+     *
+     * @return
+     */
+    public Integer getNodeDiskIops() {
+        return nodeDiskIops;
+    }
+
+    /**
+     * set 节点数据盘IOPS
+     *
+     * @param nodeDiskIops
+     */
+    public void setNodeDiskIops(Integer nodeDiskIops) {
+        this.nodeDiskIops = nodeDiskIops;
+    }
+
+
+
+    /**
      * set 节点ID
      *
-     * @param serverId
+     * @param serverId 节点ID
+     * @return ClusterNode
      */
     public ClusterNode serverId(String serverId) {
         this.serverId = serverId;
         return this;
     }
 
+
     /**
      * set 节点实例信息
      *
-     * @param instanceInfo
+     * @param instanceInfo 节点实例信息
+     * @return ClusterNode
      */
     public ClusterNode instanceInfo(String instanceInfo) {
         this.instanceInfo = instanceInfo;
         return this;
     }
 
+
     /**
      * set 节点主机名称
      *
-     * @param nodeName
+     * @param nodeName 节点主机名称
+     * @return ClusterNode
      */
     public ClusterNode nodeName(String nodeName) {
         this.nodeName = nodeName;
         return this;
     }
 
+
     /**
      * set 节点系统盘类型
      *
-     * @param nodeSystemDiskType
+     * @param nodeSystemDiskType 节点系统盘类型
+     * @return ClusterNode
      */
     public ClusterNode nodeSystemDiskType(String nodeSystemDiskType) {
         this.nodeSystemDiskType = nodeSystemDiskType;
         return this;
     }
 
+
     /**
      * set 节点实例类型
      *
-     * @param instanceType
+     * @param instanceType 节点实例类型
+     * @return ClusterNode
      */
     public ClusterNode instanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
     }
 
+
     /**
      * set 节点运行状态
      *
-     * @param nodeStatus
+     * @param nodeStatus 节点运行状态
+     * @return ClusterNode
      */
     public ClusterNode nodeStatus(String nodeStatus) {
         this.nodeStatus = nodeStatus;
         return this;
     }
 
+
     /**
      * set 节点数据盘类型
      *
-     * @param nodeDiskType
+     * @param nodeDiskType 节点数据盘类型
+     * @return ClusterNode
      */
     public ClusterNode nodeDiskType(String nodeDiskType) {
         this.nodeDiskType = nodeDiskType;
         return this;
     }
 
+
     /**
-     * set 节点类型，MASTER或者SLAVE
+     * set 节点类型，MASTER，Core，Task，Edge
      *
-     * @param nodeType
+     * @param nodeType 节点类型，MASTER，Core，Task，Edge
+     * @return ClusterNode
      */
     public ClusterNode nodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
     }
 
+
     /**
      * set 节点外网IP
      *
-     * @param outerIp
+     * @param outerIp 节点外网IP
+     * @return ClusterNode
      */
     public ClusterNode outerIp(String outerIp) {
         this.outerIp = outerIp;
         return this;
     }
 
+
     /**
      * set 节点内网IP
      *
-     * @param innerIp
+     * @param innerIp 节点内网IP
+     * @return ClusterNode
      */
     public ClusterNode innerIp(String innerIp) {
         this.innerIp = innerIp;
         return this;
     }
 
+
     /**
      * set 节点系统盘大小(GB)
      *
-     * @param nodeSystemDiskVolume
+     * @param nodeSystemDiskVolume 节点系统盘大小(GB)
+     * @return ClusterNode
      */
     public ClusterNode nodeSystemDiskVolume(Integer nodeSystemDiskVolume) {
         this.nodeSystemDiskVolume = nodeSystemDiskVolume;
         return this;
     }
 
+
     /**
      * set 节点数据盘大小(GB)
      *
-     * @param nodeDiskVolume
+     * @param nodeDiskVolume 节点数据盘大小(GB)
+     * @return ClusterNode
      */
     public ClusterNode nodeDiskVolume(Integer nodeDiskVolume) {
         this.nodeDiskVolume = nodeDiskVolume;
         return this;
     }
 
+
+    /**
+     * set 节点数据盘数量(个)
+     *
+     * @param nodeDiskNumber 节点数据盘数量(个)
+     * @return ClusterNode
+     */
+    public ClusterNode nodeDiskNumber(Integer nodeDiskNumber) {
+        this.nodeDiskNumber = nodeDiskNumber;
+        return this;
+    }
+
+
     /**
      * set 信息
      *
-     * @param msg
+     * @param msg 信息
+     * @return ClusterNode
      */
     public ClusterNode msg(String msg) {
         this.msg = msg;
         return this;
     }
 
+
     /**
      * set 节点系统信息
      *
-     * @param nodeSystemInfo
+     * @param nodeSystemInfo 节点系统信息
+     * @return ClusterNode
      */
     public ClusterNode nodeSystemInfo(String nodeSystemInfo) {
         this.nodeSystemInfo = nodeSystemInfo;
         return this;
     }
 
+
     /**
      * set 节点硬盘类型
      *
-     * @param nodeDiskCategory
+     * @param nodeDiskCategory 节点硬盘类型
+     * @return ClusterNode
      */
     public ClusterNode nodeDiskCategory(String nodeDiskCategory) {
         this.nodeDiskCategory = nodeDiskCategory;
         return this;
     }
 
+
     /**
      * set 节点系统盘类型
      *
-     * @param nodeSystemDiskCategory
+     * @param nodeSystemDiskCategory 节点系统盘类型
+     * @return ClusterNode
      */
     public ClusterNode nodeSystemDiskCategory(String nodeSystemDiskCategory) {
         this.nodeSystemDiskCategory = nodeSystemDiskCategory;
         return this;
     }
 
+
     /**
      * set 节点数量
      *
-     * @param nodeCoreNum
+     * @param nodeCoreNum 节点数量
+     * @return ClusterNode
      */
     public ClusterNode nodeCoreNum(Integer nodeCoreNum) {
         this.nodeCoreNum = nodeCoreNum;
         return this;
     }
 
+
     /**
      * set 节点内存数量
      *
-     * @param nodeMemoryNum
+     * @param nodeMemoryNum 节点内存数量
+     * @return ClusterNode
      */
     public ClusterNode nodeMemoryNum(Integer nodeMemoryNum) {
         this.nodeMemoryNum = nodeMemoryNum;
+        return this;
+    }
+
+
+    /**
+     * set Task节点的节点组ID
+     *
+     * @param configGroupId Task节点的节点组ID
+     * @return ClusterNode
+     */
+    public ClusterNode configGroupId(String configGroupId) {
+        this.configGroupId = configGroupId;
+        return this;
+    }
+
+
+    /**
+     * set Task节点的节点组名称
+     *
+     * @param configGroupName Task节点的节点组名称
+     * @return ClusterNode
+     */
+    public ClusterNode configGroupName(String configGroupName) {
+        this.configGroupName = configGroupName;
+        return this;
+    }
+
+
+    /**
+     * set 节点数量(个)
+     *
+     * @param nodeNumber 节点数量(个)
+     * @return ClusterNode
+     */
+    public ClusterNode nodeNumber(Integer nodeNumber) {
+        this.nodeNumber = nodeNumber;
+        return this;
+    }
+
+
+    /**
+     * set 节点系统盘IOPS
+     *
+     * @param nodeSystemDiskIops 节点系统盘IOPS
+     * @return ClusterNode
+     */
+    public ClusterNode nodeSystemDiskIops(Integer nodeSystemDiskIops) {
+        this.nodeSystemDiskIops = nodeSystemDiskIops;
+        return this;
+    }
+
+
+    /**
+     * set 节点数据盘IOPS
+     *
+     * @param nodeDiskIops 节点数据盘IOPS
+     * @return ClusterNode
+     */
+    public ClusterNode nodeDiskIops(Integer nodeDiskIops) {
+        this.nodeDiskIops = nodeDiskIops;
         return this;
     }
 

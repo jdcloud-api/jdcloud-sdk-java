@@ -52,6 +52,7 @@ public class MonitorLabelNodeDetail  implements java.io.Serializable {
     /**
      * 过滤条件的值
      */
+    
     private List<String> filters;
 
 
@@ -73,6 +74,7 @@ public class MonitorLabelNodeDetail  implements java.io.Serializable {
         this.label = label;
     }
 
+
     /**
      * get 监控项目代码
      *
@@ -90,6 +92,7 @@ public class MonitorLabelNodeDetail  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 监控项目资源代码
@@ -109,64 +112,74 @@ public class MonitorLabelNodeDetail  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
-     * get 过滤条件的值
-     *
-     * @return
-     */
+    * get 过滤条件的值
+    *
+    * @return
+    */
     public List<String> getFilters() {
         return filters;
     }
 
     /**
-     * set 过滤条件的值
-     *
-     * @param filters
-     */
+    * set 过滤条件的值
+    *
+    * @param filters
+    */
     public void setFilters(List<String> filters) {
         this.filters = filters;
     }
 
 
+
     /**
      * set 监控显示名称
      *
-     * @param label
+     * @param label 监控显示名称
+     * @return MonitorLabelNodeDetail
      */
     public MonitorLabelNodeDetail label(String label) {
         this.label = label;
         return this;
     }
 
+
     /**
      * set 监控项目代码
      *
-     * @param serviceCode
+     * @param serviceCode 监控项目代码
+     * @return MonitorLabelNodeDetail
      */
     public MonitorLabelNodeDetail serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
 
+
     /**
      * set 监控项目资源代码
      *
-     * @param resourceId
+     * @param resourceId 监控项目资源代码
+     * @return MonitorLabelNodeDetail
      */
     public MonitorLabelNodeDetail resourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
 
+
     /**
-     * set 过滤条件的值
-     *
-     * @param filters
-     */
+    * set 过滤条件的值
+    *
+    * @param filters 过滤条件的值
+    * @return MonitorLabelNodeDetail
+    */
     public MonitorLabelNodeDetail filters(List<String> filters) {
         this.filters = filters;
         return this;
     }
+
 
 
     /**
@@ -180,5 +193,4 @@ public class MonitorLabelNodeDetail  implements java.io.Serializable {
         }
         this.filters.add(filter);
     }
-
 }

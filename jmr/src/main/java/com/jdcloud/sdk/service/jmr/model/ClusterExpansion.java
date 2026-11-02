@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.jmr.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -41,16 +43,37 @@ public class ClusterExpansion  implements java.io.Serializable {
     private String clusterId;
 
     /**
-     * 扩容节点个数
+     * 扩容节点数量
      * Required:true
      */
     @Required
     private String expansionNum;
 
     /**
-     * 扩容节点类型。 Task：计算节点，Core：存储和计算节点
+     * 扩容节点类型，默认为Core类型。 Task：计算节点，Core：存储和计算节点，Edge：边缘节点
      */
     private String nodeType;
+
+    /**
+     * （已废弃）扩容节点规格，默认值为0。集群已有的Core，Task，Edge节点规格分别取值0，-1，-2。否则需为预置规格的id，取值&gt;0
+     */
+    private String expandTypeId;
+
+    /**
+     * 扩容时选择的组件，默认为集群已有组件。逗号分割，举例 HDFS,YARN,HBASE
+     */
+    private String expandServices;
+
+    /**
+     * 扩容节点所属的已有节点组ID
+     */
+    private String configGroupId;
+
+    /**
+     * 扩容新建的节点组及节点信息
+     */
+    
+    private List<ClusterNode> taskNodesByGroup;
 
 
     /**
@@ -71,8 +94,9 @@ public class ClusterExpansion  implements java.io.Serializable {
         this.clusterId = clusterId;
     }
 
+
     /**
-     * get 扩容节点个数
+     * get 扩容节点数量
      *
      * @return
      */
@@ -81,7 +105,7 @@ public class ClusterExpansion  implements java.io.Serializable {
     }
 
     /**
-     * set 扩容节点个数
+     * set 扩容节点数量
      *
      * @param expansionNum
      */
@@ -89,8 +113,9 @@ public class ClusterExpansion  implements java.io.Serializable {
         this.expansionNum = expansionNum;
     }
 
+
     /**
-     * get 扩容节点类型。 Task：计算节点，Core：存储和计算节点
+     * get 扩容节点类型，默认为Core类型。 Task：计算节点，Core：存储和计算节点，Edge：边缘节点
      *
      * @return
      */
@@ -99,7 +124,7 @@ public class ClusterExpansion  implements java.io.Serializable {
     }
 
     /**
-     * set 扩容节点类型。 Task：计算节点，Core：存储和计算节点
+     * set 扩容节点类型，默认为Core类型。 Task：计算节点，Core：存储和计算节点，Edge：边缘节点
      *
      * @param nodeType
      */
@@ -109,29 +134,111 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
+     * get （已废弃）扩容节点规格，默认值为0。集群已有的Core，Task，Edge节点规格分别取值0，-1，-2。否则需为预置规格的id，取值&gt;0
+     *
+     * @return
+     */
+    public String getExpandTypeId() {
+        return expandTypeId;
+    }
+
+    /**
+     * set （已废弃）扩容节点规格，默认值为0。集群已有的Core，Task，Edge节点规格分别取值0，-1，-2。否则需为预置规格的id，取值&gt;0
+     *
+     * @param expandTypeId
+     */
+    public void setExpandTypeId(String expandTypeId) {
+        this.expandTypeId = expandTypeId;
+    }
+
+
+    /**
+     * get 扩容时选择的组件，默认为集群已有组件。逗号分割，举例 HDFS,YARN,HBASE
+     *
+     * @return
+     */
+    public String getExpandServices() {
+        return expandServices;
+    }
+
+    /**
+     * set 扩容时选择的组件，默认为集群已有组件。逗号分割，举例 HDFS,YARN,HBASE
+     *
+     * @param expandServices
+     */
+    public void setExpandServices(String expandServices) {
+        this.expandServices = expandServices;
+    }
+
+
+    /**
+     * get 扩容节点所属的已有节点组ID
+     *
+     * @return
+     */
+    public String getConfigGroupId() {
+        return configGroupId;
+    }
+
+    /**
+     * set 扩容节点所属的已有节点组ID
+     *
+     * @param configGroupId
+     */
+    public void setConfigGroupId(String configGroupId) {
+        this.configGroupId = configGroupId;
+    }
+
+
+    /**
+    * get 扩容新建的节点组及节点信息
+    *
+    * @return
+    */
+    public List<ClusterNode> getTaskNodesByGroup() {
+        return taskNodesByGroup;
+    }
+
+    /**
+    * set 扩容新建的节点组及节点信息
+    *
+    * @param taskNodesByGroup
+    */
+    public void setTaskNodesByGroup(List<ClusterNode> taskNodesByGroup) {
+        this.taskNodesByGroup = taskNodesByGroup;
+    }
+
+
+
+    /**
      * set 集群ID
      *
-     * @param clusterId
+     * @param clusterId 集群ID
+     * @return ClusterExpansion
      */
     public ClusterExpansion clusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
 
+
     /**
-     * set 扩容节点个数
+     * set 扩容节点数量
      *
-     * @param expansionNum
+     * @param expansionNum 扩容节点数量
+     * @return ClusterExpansion
      */
     public ClusterExpansion expansionNum(String expansionNum) {
         this.expansionNum = expansionNum;
         return this;
     }
 
+
     /**
-     * set 扩容节点类型。 Task：计算节点，Core：存储和计算节点
+     * set 扩容节点类型，默认为Core类型。 Task：计算节点，Core：存储和计算节点，Edge：边缘节点
      *
-     * @param nodeType
+     * @param nodeType 扩容节点类型，默认为Core类型。 Task：计算节点，Core：存储和计算节点，Edge：边缘节点
+     * @return ClusterExpansion
      */
     public ClusterExpansion nodeType(String nodeType) {
         this.nodeType = nodeType;
@@ -139,4 +246,64 @@ public class ClusterExpansion  implements java.io.Serializable {
     }
 
 
+    /**
+     * set （已废弃）扩容节点规格，默认值为0。集群已有的Core，Task，Edge节点规格分别取值0，-1，-2。否则需为预置规格的id，取值&gt;0
+     *
+     * @param expandTypeId （已废弃）扩容节点规格，默认值为0。集群已有的Core，Task，Edge节点规格分别取值0，-1，-2。否则需为预置规格的id，取值&gt;0
+     * @return ClusterExpansion
+     */
+    public ClusterExpansion expandTypeId(String expandTypeId) {
+        this.expandTypeId = expandTypeId;
+        return this;
+    }
+
+
+    /**
+     * set 扩容时选择的组件，默认为集群已有组件。逗号分割，举例 HDFS,YARN,HBASE
+     *
+     * @param expandServices 扩容时选择的组件，默认为集群已有组件。逗号分割，举例 HDFS,YARN,HBASE
+     * @return ClusterExpansion
+     */
+    public ClusterExpansion expandServices(String expandServices) {
+        this.expandServices = expandServices;
+        return this;
+    }
+
+
+    /**
+     * set 扩容节点所属的已有节点组ID
+     *
+     * @param configGroupId 扩容节点所属的已有节点组ID
+     * @return ClusterExpansion
+     */
+    public ClusterExpansion configGroupId(String configGroupId) {
+        this.configGroupId = configGroupId;
+        return this;
+    }
+
+
+    /**
+    * set 扩容新建的节点组及节点信息
+    *
+    * @param taskNodesByGroup 扩容新建的节点组及节点信息
+    * @return ClusterExpansion
+    */
+    public ClusterExpansion taskNodesByGroup(List<ClusterNode> taskNodesByGroup) {
+        this.taskNodesByGroup = taskNodesByGroup;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 扩容新建的节点组及节点信息
+     *
+     * @param taskNodesByGroup
+     */
+    public void addTaskNodesByGroup(ClusterNode taskNodesByGroup) {
+        if (this.taskNodesByGroup == null) {
+            this.taskNodesByGroup = new ArrayList<>();
+        }
+        this.taskNodesByGroup.add(taskNodesByGroup);
+    }
 }

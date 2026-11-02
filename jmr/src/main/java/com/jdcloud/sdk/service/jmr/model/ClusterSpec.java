@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.jmr.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -42,9 +44,7 @@ public class ClusterSpec  implements java.io.Serializable {
 
     /**
      * 集群root用户密码(须包含大小写字母、数字及特殊字符其中三类，且不能少于8字符不能超过30字符)
-     * Required:true
      */
-    @Required
     private String password;
 
     /**
@@ -74,14 +74,14 @@ public class ClusterSpec  implements java.io.Serializable {
     private String masterSystemDiskType;
 
     /**
-     * Master系统硬盘大小，单位GB
+     * Master系统硬盘大小，取值范围[40, 500]，单位GB。
      * Required:true
      */
     @Required
     private Integer masterSystemDiskVolume;
 
     /**
-     * Master系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * Master系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      */
     private Integer masterSystemDiskIops;
 
@@ -93,14 +93,14 @@ public class ClusterSpec  implements java.io.Serializable {
     private String masterDiskType;
 
     /**
-     * Master数据盘大小，单位GB
+     * Master数据盘大小，取值范围[50, 32000]，单位GB
      * Required:true
      */
     @Required
     private Integer masterDiskVolume;
 
     /**
-     * Master数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * Master数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      */
     private Integer masterDiskIops;
 
@@ -126,14 +126,14 @@ public class ClusterSpec  implements java.io.Serializable {
     private String slaveSystemDiskType;
 
     /**
-     * Slave系统硬盘大小，单位GB
+     * Slave系统硬盘大小，取值范围[40, 500]，单位GB
      * Required:true
      */
     @Required
     private Integer slaveSystemDiskVolume;
 
     /**
-     * Slave系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * Slave系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      */
     private Integer slaveSystemDiskIops;
 
@@ -145,14 +145,19 @@ public class ClusterSpec  implements java.io.Serializable {
     private String slaveDiskType;
 
     /**
-     * Slave数据盘大小，单位GB
+     * Slave数据盘大小，取值范围[50, 32000]，单位GB
      * Required:true
      */
     @Required
     private Integer slaveDiskVolume;
 
     /**
-     * Slave数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * Slave数据盘数量，取值范围[1, 7]，单位个，默认1个
+     */
+    private Integer slaveDiskNumber;
+
+    /**
+     * Slave数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      */
     private Integer slaveDiskIops;
 
@@ -164,10 +169,98 @@ public class ClusterSpec  implements java.io.Serializable {
     private String coreInstanceType;
 
     /**
-     * 关联JSS
-     * Required:true
+     * task节点数量
      */
-    @Required
+    private Integer taskNodeCount;
+
+    /**
+     * task系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
+     */
+    private String taskSystemDiskType;
+
+    /**
+     * task系统硬盘大小，取值范围[40, 500]，单位GB
+     */
+    private Integer taskSystemDiskVolume;
+
+    /**
+     * task系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     */
+    private Integer taskSystemDiskIops;
+
+    /**
+     * task数据盘类型：ssd.gp1,ssd.io1和hdd.std1
+     */
+    private String taskDiskType;
+
+    /**
+     * task数据盘大小，取值范围[50, 32000]，单位GB
+     */
+    private Integer taskDiskVolume;
+
+    /**
+     * task数据盘数量，取值范围[1, 7]，单位个，默认1个
+     */
+    private Integer taskDiskNumber;
+
+    /**
+     * task数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     */
+    private Integer taskDiskIops;
+
+    /**
+     * task节点规格
+     */
+    private String taskInstanceType;
+
+    /**
+     * coord节点数量
+     */
+    private Integer coordNodeCount;
+
+    /**
+     * coord系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
+     */
+    private String coordSystemDiskType;
+
+    /**
+     * coord系统硬盘大小，取值范围[40, 500]，单位GB
+     */
+    private Integer coordSystemDiskVolume;
+
+    /**
+     * coord系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     */
+    private Integer coordSystemDiskIops;
+
+    /**
+     * coord数据盘类型：ssd.gp1,ssd.io1和hdd.std1
+     */
+    private String coordDiskType;
+
+    /**
+     * coord数据盘大小，取值范围[50, 32000]，单位GB
+     */
+    private Integer coordDiskVolume;
+
+    /**
+     * coord数据盘数量，取值范围[1, 7]，单位个，默认1个
+     */
+    private Integer coordDiskNumber;
+
+    /**
+     * coord数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     */
+    private Integer coordDiskIops;
+
+    /**
+     * coord节点规格
+     */
+    private String coordInstanceType;
+
+    /**
+     * 关联JSS，默认为false
+     */
     private Boolean jssFlag;
 
     /**
@@ -185,11 +278,21 @@ public class ClusterSpec  implements java.io.Serializable {
     private String softwareList;
 
     /**
-     * 集群是否为高可用，默认为高可用集群
+     * 集群是否为高可用，默认为true，高可用集群
      * Required:true
      */
     @Required
     private Boolean haFlag;
+
+    /**
+     * 是否创建RDS作为Hive元数据库字段，默认为false
+     */
+    private Boolean rdsMetaFlag;
+
+    /**
+     * 集群是否支持Kerberos，默认为false
+     */
+    private Boolean isKerberos;
 
     /**
      * Vpc网络ID
@@ -213,12 +316,12 @@ public class ClusterSpec  implements java.io.Serializable {
     private String az;
 
     /**
-     * 是否创建公网IP
+     * 是否创建公网IP，默认为false
      */
     private Boolean createOuterIpFlag;
 
     /**
-     * 是否创建安全组
+     * 是否创建安全组，默认为false
      */
     private Boolean createSecurityGroupFlag;
 
@@ -226,6 +329,22 @@ public class ClusterSpec  implements java.io.Serializable {
      * 安全组ID
      */
     private String securityGroupId;
+
+    /**
+     * 自定义软件配置，JSON格式字符串
+     */
+    private String userDefinedConf;
+
+    /**
+     * 集群使用密钥创建的密钥名称
+     */
+    private String sshKeyName;
+
+    /**
+     * 集群创建的Task所属的节点组的规格和扩容节点数量信息
+     */
+    
+    private List<ClusterNode> taskNodesByGroup;
 
 
     /**
@@ -246,6 +365,7 @@ public class ClusterSpec  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 集群root用户密码(须包含大小写字母、数字及特殊字符其中三类，且不能少于8字符不能超过30字符)
      *
@@ -263,6 +383,7 @@ public class ClusterSpec  implements java.io.Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
 
     /**
      * get 集群版本，默认版本为JMR2.0.0
@@ -282,6 +403,7 @@ public class ClusterSpec  implements java.io.Serializable {
         this.version = version;
     }
 
+
     /**
      * get 集群计费类型，支持按配置和包年包月计费
      *
@@ -299,6 +421,7 @@ public class ClusterSpec  implements java.io.Serializable {
     public void setPayType(String payType) {
         this.payType = payType;
     }
+
 
     /**
      * get 主节点数量
@@ -318,6 +441,7 @@ public class ClusterSpec  implements java.io.Serializable {
         this.masterNodeCount = masterNodeCount;
     }
 
+
     /**
      * get Master系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
      *
@@ -336,8 +460,9 @@ public class ClusterSpec  implements java.io.Serializable {
         this.masterSystemDiskType = masterSystemDiskType;
     }
 
+
     /**
-     * get Master系统硬盘大小，单位GB
+     * get Master系统硬盘大小，取值范围[40, 500]，单位GB。
      *
      * @return
      */
@@ -346,7 +471,7 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Master系统硬盘大小，单位GB
+     * set Master系统硬盘大小，取值范围[40, 500]，单位GB。
      *
      * @param masterSystemDiskVolume
      */
@@ -354,8 +479,9 @@ public class ClusterSpec  implements java.io.Serializable {
         this.masterSystemDiskVolume = masterSystemDiskVolume;
     }
 
+
     /**
-     * get Master系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * get Master系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      *
      * @return
      */
@@ -364,13 +490,14 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Master系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * set Master系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      *
      * @param masterSystemDiskIops
      */
     public void setMasterSystemDiskIops(Integer masterSystemDiskIops) {
         this.masterSystemDiskIops = masterSystemDiskIops;
     }
+
 
     /**
      * get Master数据盘类型：ssd.gp1,ssd.io1和hdd.std1
@@ -390,8 +517,9 @@ public class ClusterSpec  implements java.io.Serializable {
         this.masterDiskType = masterDiskType;
     }
 
+
     /**
-     * get Master数据盘大小，单位GB
+     * get Master数据盘大小，取值范围[50, 32000]，单位GB
      *
      * @return
      */
@@ -400,7 +528,7 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Master数据盘大小，单位GB
+     * set Master数据盘大小，取值范围[50, 32000]，单位GB
      *
      * @param masterDiskVolume
      */
@@ -408,8 +536,9 @@ public class ClusterSpec  implements java.io.Serializable {
         this.masterDiskVolume = masterDiskVolume;
     }
 
+
     /**
-     * get Master数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * get Master数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      *
      * @return
      */
@@ -418,13 +547,14 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Master数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * set Master数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      *
      * @param masterDiskIops
      */
     public void setMasterDiskIops(Integer masterDiskIops) {
         this.masterDiskIops = masterDiskIops;
     }
+
 
     /**
      * get master节点规格
@@ -444,6 +574,7 @@ public class ClusterSpec  implements java.io.Serializable {
         this.masterInstanceType = masterInstanceType;
     }
 
+
     /**
      * get Slave节点数量
      *
@@ -461,6 +592,7 @@ public class ClusterSpec  implements java.io.Serializable {
     public void setSlaveNodeCount(Integer slaveNodeCount) {
         this.slaveNodeCount = slaveNodeCount;
     }
+
 
     /**
      * get Slave系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
@@ -480,8 +612,9 @@ public class ClusterSpec  implements java.io.Serializable {
         this.slaveSystemDiskType = slaveSystemDiskType;
     }
 
+
     /**
-     * get Slave系统硬盘大小，单位GB
+     * get Slave系统硬盘大小，取值范围[40, 500]，单位GB
      *
      * @return
      */
@@ -490,7 +623,7 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Slave系统硬盘大小，单位GB
+     * set Slave系统硬盘大小，取值范围[40, 500]，单位GB
      *
      * @param slaveSystemDiskVolume
      */
@@ -498,8 +631,9 @@ public class ClusterSpec  implements java.io.Serializable {
         this.slaveSystemDiskVolume = slaveSystemDiskVolume;
     }
 
+
     /**
-     * get Slave系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * get Slave系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      *
      * @return
      */
@@ -508,13 +642,14 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Slave系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * set Slave系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      *
      * @param slaveSystemDiskIops
      */
     public void setSlaveSystemDiskIops(Integer slaveSystemDiskIops) {
         this.slaveSystemDiskIops = slaveSystemDiskIops;
     }
+
 
     /**
      * get Slave数据盘类型：ssd.gp1,ssd.io1和hdd.std1
@@ -534,8 +669,9 @@ public class ClusterSpec  implements java.io.Serializable {
         this.slaveDiskType = slaveDiskType;
     }
 
+
     /**
-     * get Slave数据盘大小，单位GB
+     * get Slave数据盘大小，取值范围[50, 32000]，单位GB
      *
      * @return
      */
@@ -544,7 +680,7 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Slave数据盘大小，单位GB
+     * set Slave数据盘大小，取值范围[50, 32000]，单位GB
      *
      * @param slaveDiskVolume
      */
@@ -552,8 +688,28 @@ public class ClusterSpec  implements java.io.Serializable {
         this.slaveDiskVolume = slaveDiskVolume;
     }
 
+
     /**
-     * get Slave数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * get Slave数据盘数量，取值范围[1, 7]，单位个，默认1个
+     *
+     * @return
+     */
+    public Integer getSlaveDiskNumber() {
+        return slaveDiskNumber;
+    }
+
+    /**
+     * set Slave数据盘数量，取值范围[1, 7]，单位个，默认1个
+     *
+     * @param slaveDiskNumber
+     */
+    public void setSlaveDiskNumber(Integer slaveDiskNumber) {
+        this.slaveDiskNumber = slaveDiskNumber;
+    }
+
+
+    /**
+     * get Slave数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      *
      * @return
      */
@@ -562,13 +718,14 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Slave数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * set Slave数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      *
      * @param slaveDiskIops
      */
     public void setSlaveDiskIops(Integer slaveDiskIops) {
         this.slaveDiskIops = slaveDiskIops;
     }
+
 
     /**
      * get slave节点规格
@@ -588,8 +745,351 @@ public class ClusterSpec  implements java.io.Serializable {
         this.coreInstanceType = coreInstanceType;
     }
 
+
     /**
-     * get 关联JSS
+     * get task节点数量
+     *
+     * @return
+     */
+    public Integer getTaskNodeCount() {
+        return taskNodeCount;
+    }
+
+    /**
+     * set task节点数量
+     *
+     * @param taskNodeCount
+     */
+    public void setTaskNodeCount(Integer taskNodeCount) {
+        this.taskNodeCount = taskNodeCount;
+    }
+
+
+    /**
+     * get task系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
+     *
+     * @return
+     */
+    public String getTaskSystemDiskType() {
+        return taskSystemDiskType;
+    }
+
+    /**
+     * set task系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
+     *
+     * @param taskSystemDiskType
+     */
+    public void setTaskSystemDiskType(String taskSystemDiskType) {
+        this.taskSystemDiskType = taskSystemDiskType;
+    }
+
+
+    /**
+     * get task系统硬盘大小，取值范围[40, 500]，单位GB
+     *
+     * @return
+     */
+    public Integer getTaskSystemDiskVolume() {
+        return taskSystemDiskVolume;
+    }
+
+    /**
+     * set task系统硬盘大小，取值范围[40, 500]，单位GB
+     *
+     * @param taskSystemDiskVolume
+     */
+    public void setTaskSystemDiskVolume(Integer taskSystemDiskVolume) {
+        this.taskSystemDiskVolume = taskSystemDiskVolume;
+    }
+
+
+    /**
+     * get task系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     *
+     * @return
+     */
+    public Integer getTaskSystemDiskIops() {
+        return taskSystemDiskIops;
+    }
+
+    /**
+     * set task系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     *
+     * @param taskSystemDiskIops
+     */
+    public void setTaskSystemDiskIops(Integer taskSystemDiskIops) {
+        this.taskSystemDiskIops = taskSystemDiskIops;
+    }
+
+
+    /**
+     * get task数据盘类型：ssd.gp1,ssd.io1和hdd.std1
+     *
+     * @return
+     */
+    public String getTaskDiskType() {
+        return taskDiskType;
+    }
+
+    /**
+     * set task数据盘类型：ssd.gp1,ssd.io1和hdd.std1
+     *
+     * @param taskDiskType
+     */
+    public void setTaskDiskType(String taskDiskType) {
+        this.taskDiskType = taskDiskType;
+    }
+
+
+    /**
+     * get task数据盘大小，取值范围[50, 32000]，单位GB
+     *
+     * @return
+     */
+    public Integer getTaskDiskVolume() {
+        return taskDiskVolume;
+    }
+
+    /**
+     * set task数据盘大小，取值范围[50, 32000]，单位GB
+     *
+     * @param taskDiskVolume
+     */
+    public void setTaskDiskVolume(Integer taskDiskVolume) {
+        this.taskDiskVolume = taskDiskVolume;
+    }
+
+
+    /**
+     * get task数据盘数量，取值范围[1, 7]，单位个，默认1个
+     *
+     * @return
+     */
+    public Integer getTaskDiskNumber() {
+        return taskDiskNumber;
+    }
+
+    /**
+     * set task数据盘数量，取值范围[1, 7]，单位个，默认1个
+     *
+     * @param taskDiskNumber
+     */
+    public void setTaskDiskNumber(Integer taskDiskNumber) {
+        this.taskDiskNumber = taskDiskNumber;
+    }
+
+
+    /**
+     * get task数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     *
+     * @return
+     */
+    public Integer getTaskDiskIops() {
+        return taskDiskIops;
+    }
+
+    /**
+     * set task数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     *
+     * @param taskDiskIops
+     */
+    public void setTaskDiskIops(Integer taskDiskIops) {
+        this.taskDiskIops = taskDiskIops;
+    }
+
+
+    /**
+     * get task节点规格
+     *
+     * @return
+     */
+    public String getTaskInstanceType() {
+        return taskInstanceType;
+    }
+
+    /**
+     * set task节点规格
+     *
+     * @param taskInstanceType
+     */
+    public void setTaskInstanceType(String taskInstanceType) {
+        this.taskInstanceType = taskInstanceType;
+    }
+
+
+    /**
+     * get coord节点数量
+     *
+     * @return
+     */
+    public Integer getCoordNodeCount() {
+        return coordNodeCount;
+    }
+
+    /**
+     * set coord节点数量
+     *
+     * @param coordNodeCount
+     */
+    public void setCoordNodeCount(Integer coordNodeCount) {
+        this.coordNodeCount = coordNodeCount;
+    }
+
+
+    /**
+     * get coord系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
+     *
+     * @return
+     */
+    public String getCoordSystemDiskType() {
+        return coordSystemDiskType;
+    }
+
+    /**
+     * set coord系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
+     *
+     * @param coordSystemDiskType
+     */
+    public void setCoordSystemDiskType(String coordSystemDiskType) {
+        this.coordSystemDiskType = coordSystemDiskType;
+    }
+
+
+    /**
+     * get coord系统硬盘大小，取值范围[40, 500]，单位GB
+     *
+     * @return
+     */
+    public Integer getCoordSystemDiskVolume() {
+        return coordSystemDiskVolume;
+    }
+
+    /**
+     * set coord系统硬盘大小，取值范围[40, 500]，单位GB
+     *
+     * @param coordSystemDiskVolume
+     */
+    public void setCoordSystemDiskVolume(Integer coordSystemDiskVolume) {
+        this.coordSystemDiskVolume = coordSystemDiskVolume;
+    }
+
+
+    /**
+     * get coord系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     *
+     * @return
+     */
+    public Integer getCoordSystemDiskIops() {
+        return coordSystemDiskIops;
+    }
+
+    /**
+     * set coord系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     *
+     * @param coordSystemDiskIops
+     */
+    public void setCoordSystemDiskIops(Integer coordSystemDiskIops) {
+        this.coordSystemDiskIops = coordSystemDiskIops;
+    }
+
+
+    /**
+     * get coord数据盘类型：ssd.gp1,ssd.io1和hdd.std1
+     *
+     * @return
+     */
+    public String getCoordDiskType() {
+        return coordDiskType;
+    }
+
+    /**
+     * set coord数据盘类型：ssd.gp1,ssd.io1和hdd.std1
+     *
+     * @param coordDiskType
+     */
+    public void setCoordDiskType(String coordDiskType) {
+        this.coordDiskType = coordDiskType;
+    }
+
+
+    /**
+     * get coord数据盘大小，取值范围[50, 32000]，单位GB
+     *
+     * @return
+     */
+    public Integer getCoordDiskVolume() {
+        return coordDiskVolume;
+    }
+
+    /**
+     * set coord数据盘大小，取值范围[50, 32000]，单位GB
+     *
+     * @param coordDiskVolume
+     */
+    public void setCoordDiskVolume(Integer coordDiskVolume) {
+        this.coordDiskVolume = coordDiskVolume;
+    }
+
+
+    /**
+     * get coord数据盘数量，取值范围[1, 7]，单位个，默认1个
+     *
+     * @return
+     */
+    public Integer getCoordDiskNumber() {
+        return coordDiskNumber;
+    }
+
+    /**
+     * set coord数据盘数量，取值范围[1, 7]，单位个，默认1个
+     *
+     * @param coordDiskNumber
+     */
+    public void setCoordDiskNumber(Integer coordDiskNumber) {
+        this.coordDiskNumber = coordDiskNumber;
+    }
+
+
+    /**
+     * get coord数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     *
+     * @return
+     */
+    public Integer getCoordDiskIops() {
+        return coordDiskIops;
+    }
+
+    /**
+     * set coord数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     *
+     * @param coordDiskIops
+     */
+    public void setCoordDiskIops(Integer coordDiskIops) {
+        this.coordDiskIops = coordDiskIops;
+    }
+
+
+    /**
+     * get coord节点规格
+     *
+     * @return
+     */
+    public String getCoordInstanceType() {
+        return coordInstanceType;
+    }
+
+    /**
+     * set coord节点规格
+     *
+     * @param coordInstanceType
+     */
+    public void setCoordInstanceType(String coordInstanceType) {
+        this.coordInstanceType = coordInstanceType;
+    }
+
+
+    /**
+     * get 关联JSS，默认为false
      *
      * @return
      */
@@ -598,13 +1098,14 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 关联JSS
+     * set 关联JSS，默认为false
      *
      * @param jssFlag
      */
     public void setJssFlag(Boolean jssFlag) {
         this.jssFlag = jssFlag;
     }
+
 
     /**
      * get 数据中心，即regionId
@@ -624,6 +1125,7 @@ public class ClusterSpec  implements java.io.Serializable {
         this.dataCenter = dataCenter;
     }
 
+
     /**
      * get 软件列表
      *
@@ -642,8 +1144,9 @@ public class ClusterSpec  implements java.io.Serializable {
         this.softwareList = softwareList;
     }
 
+
     /**
-     * get 集群是否为高可用，默认为高可用集群
+     * get 集群是否为高可用，默认为true，高可用集群
      *
      * @return
      */
@@ -652,13 +1155,52 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 集群是否为高可用，默认为高可用集群
+     * set 集群是否为高可用，默认为true，高可用集群
      *
      * @param haFlag
      */
     public void setHaFlag(Boolean haFlag) {
         this.haFlag = haFlag;
     }
+
+
+    /**
+     * get 是否创建RDS作为Hive元数据库字段，默认为false
+     *
+     * @return
+     */
+    public Boolean getRdsMetaFlag() {
+        return rdsMetaFlag;
+    }
+
+    /**
+     * set 是否创建RDS作为Hive元数据库字段，默认为false
+     *
+     * @param rdsMetaFlag
+     */
+    public void setRdsMetaFlag(Boolean rdsMetaFlag) {
+        this.rdsMetaFlag = rdsMetaFlag;
+    }
+
+
+    /**
+     * get 集群是否支持Kerberos，默认为false
+     *
+     * @return
+     */
+    public Boolean getIsKerberos() {
+        return isKerberos;
+    }
+
+    /**
+     * set 集群是否支持Kerberos，默认为false
+     *
+     * @param isKerberos
+     */
+    public void setIsKerberos(Boolean isKerberos) {
+        this.isKerberos = isKerberos;
+    }
+
 
     /**
      * get Vpc网络ID
@@ -678,6 +1220,7 @@ public class ClusterSpec  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get Vpc子网ID
      *
@@ -695,6 +1238,7 @@ public class ClusterSpec  implements java.io.Serializable {
     public void setVpcSubnetId(String vpcSubnetId) {
         this.vpcSubnetId = vpcSubnetId;
     }
+
 
     /**
      * get 数据中心的可用区
@@ -714,8 +1258,9 @@ public class ClusterSpec  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
-     * get 是否创建公网IP
+     * get 是否创建公网IP，默认为false
      *
      * @return
      */
@@ -724,7 +1269,7 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否创建公网IP
+     * set 是否创建公网IP，默认为false
      *
      * @param createOuterIpFlag
      */
@@ -732,8 +1277,9 @@ public class ClusterSpec  implements java.io.Serializable {
         this.createOuterIpFlag = createOuterIpFlag;
     }
 
+
     /**
-     * get 是否创建安全组
+     * get 是否创建安全组，默认为false
      *
      * @return
      */
@@ -742,13 +1288,14 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否创建安全组
+     * set 是否创建安全组，默认为false
      *
      * @param createSecurityGroupFlag
      */
     public void setCreateSecurityGroupFlag(Boolean createSecurityGroupFlag) {
         this.createSecurityGroupFlag = createSecurityGroupFlag;
     }
+
 
     /**
      * get 安全组ID
@@ -770,299 +1317,668 @@ public class ClusterSpec  implements java.io.Serializable {
 
 
     /**
+     * get 自定义软件配置，JSON格式字符串
+     *
+     * @return
+     */
+    public String getUserDefinedConf() {
+        return userDefinedConf;
+    }
+
+    /**
+     * set 自定义软件配置，JSON格式字符串
+     *
+     * @param userDefinedConf
+     */
+    public void setUserDefinedConf(String userDefinedConf) {
+        this.userDefinedConf = userDefinedConf;
+    }
+
+
+    /**
+     * get 集群使用密钥创建的密钥名称
+     *
+     * @return
+     */
+    public String getSshKeyName() {
+        return sshKeyName;
+    }
+
+    /**
+     * set 集群使用密钥创建的密钥名称
+     *
+     * @param sshKeyName
+     */
+    public void setSshKeyName(String sshKeyName) {
+        this.sshKeyName = sshKeyName;
+    }
+
+
+    /**
+    * get 集群创建的Task所属的节点组的规格和扩容节点数量信息
+    *
+    * @return
+    */
+    public List<ClusterNode> getTaskNodesByGroup() {
+        return taskNodesByGroup;
+    }
+
+    /**
+    * set 集群创建的Task所属的节点组的规格和扩容节点数量信息
+    *
+    * @param taskNodesByGroup
+    */
+    public void setTaskNodesByGroup(List<ClusterNode> taskNodesByGroup) {
+        this.taskNodesByGroup = taskNodesByGroup;
+    }
+
+
+
+    /**
      * set 集群名称(不能少于6字符不能超过20字符，除下划线外不能包含特殊符号)
      *
-     * @param name
+     * @param name 集群名称(不能少于6字符不能超过20字符，除下划线外不能包含特殊符号)
+     * @return ClusterSpec
      */
     public ClusterSpec name(String name) {
         this.name = name;
         return this;
     }
 
+
     /**
      * set 集群root用户密码(须包含大小写字母、数字及特殊字符其中三类，且不能少于8字符不能超过30字符)
      *
-     * @param password
+     * @param password 集群root用户密码(须包含大小写字母、数字及特殊字符其中三类，且不能少于8字符不能超过30字符)
+     * @return ClusterSpec
      */
     public ClusterSpec password(String password) {
         this.password = password;
         return this;
     }
 
+
     /**
      * set 集群版本，默认版本为JMR2.0.0
      *
-     * @param version
+     * @param version 集群版本，默认版本为JMR2.0.0
+     * @return ClusterSpec
      */
     public ClusterSpec version(String version) {
         this.version = version;
         return this;
     }
 
+
     /**
      * set 集群计费类型，支持按配置和包年包月计费
      *
-     * @param payType
+     * @param payType 集群计费类型，支持按配置和包年包月计费
+     * @return ClusterSpec
      */
     public ClusterSpec payType(String payType) {
         this.payType = payType;
         return this;
     }
 
+
     /**
      * set 主节点数量
      *
-     * @param masterNodeCount
+     * @param masterNodeCount 主节点数量
+     * @return ClusterSpec
      */
     public ClusterSpec masterNodeCount(Integer masterNodeCount) {
         this.masterNodeCount = masterNodeCount;
         return this;
     }
 
+
     /**
      * set Master系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
      *
-     * @param masterSystemDiskType
+     * @param masterSystemDiskType Master系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
+     * @return ClusterSpec
      */
     public ClusterSpec masterSystemDiskType(String masterSystemDiskType) {
         this.masterSystemDiskType = masterSystemDiskType;
         return this;
     }
 
+
     /**
-     * set Master系统硬盘大小，单位GB
+     * set Master系统硬盘大小，取值范围[40, 500]，单位GB。
      *
-     * @param masterSystemDiskVolume
+     * @param masterSystemDiskVolume Master系统硬盘大小，取值范围[40, 500]，单位GB。
+     * @return ClusterSpec
      */
     public ClusterSpec masterSystemDiskVolume(Integer masterSystemDiskVolume) {
         this.masterSystemDiskVolume = masterSystemDiskVolume;
         return this;
     }
 
+
     /**
-     * set Master系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * set Master系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      *
-     * @param masterSystemDiskIops
+     * @param masterSystemDiskIops Master系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     * @return ClusterSpec
      */
     public ClusterSpec masterSystemDiskIops(Integer masterSystemDiskIops) {
         this.masterSystemDiskIops = masterSystemDiskIops;
         return this;
     }
 
+
     /**
      * set Master数据盘类型：ssd.gp1,ssd.io1和hdd.std1
      *
-     * @param masterDiskType
+     * @param masterDiskType Master数据盘类型：ssd.gp1,ssd.io1和hdd.std1
+     * @return ClusterSpec
      */
     public ClusterSpec masterDiskType(String masterDiskType) {
         this.masterDiskType = masterDiskType;
         return this;
     }
 
+
     /**
-     * set Master数据盘大小，单位GB
+     * set Master数据盘大小，取值范围[50, 32000]，单位GB
      *
-     * @param masterDiskVolume
+     * @param masterDiskVolume Master数据盘大小，取值范围[50, 32000]，单位GB
+     * @return ClusterSpec
      */
     public ClusterSpec masterDiskVolume(Integer masterDiskVolume) {
         this.masterDiskVolume = masterDiskVolume;
         return this;
     }
 
+
     /**
-     * set Master数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * set Master数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      *
-     * @param masterDiskIops
+     * @param masterDiskIops Master数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     * @return ClusterSpec
      */
     public ClusterSpec masterDiskIops(Integer masterDiskIops) {
         this.masterDiskIops = masterDiskIops;
         return this;
     }
 
+
     /**
      * set master节点规格
      *
-     * @param masterInstanceType
+     * @param masterInstanceType master节点规格
+     * @return ClusterSpec
      */
     public ClusterSpec masterInstanceType(String masterInstanceType) {
         this.masterInstanceType = masterInstanceType;
         return this;
     }
 
+
     /**
      * set Slave节点数量
      *
-     * @param slaveNodeCount
+     * @param slaveNodeCount Slave节点数量
+     * @return ClusterSpec
      */
     public ClusterSpec slaveNodeCount(Integer slaveNodeCount) {
         this.slaveNodeCount = slaveNodeCount;
         return this;
     }
 
+
     /**
      * set Slave系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
      *
-     * @param slaveSystemDiskType
+     * @param slaveSystemDiskType Slave系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
+     * @return ClusterSpec
      */
     public ClusterSpec slaveSystemDiskType(String slaveSystemDiskType) {
         this.slaveSystemDiskType = slaveSystemDiskType;
         return this;
     }
 
+
     /**
-     * set Slave系统硬盘大小，单位GB
+     * set Slave系统硬盘大小，取值范围[40, 500]，单位GB
      *
-     * @param slaveSystemDiskVolume
+     * @param slaveSystemDiskVolume Slave系统硬盘大小，取值范围[40, 500]，单位GB
+     * @return ClusterSpec
      */
     public ClusterSpec slaveSystemDiskVolume(Integer slaveSystemDiskVolume) {
         this.slaveSystemDiskVolume = slaveSystemDiskVolume;
         return this;
     }
 
+
     /**
-     * set Slave系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * set Slave系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
      *
-     * @param slaveSystemDiskIops
+     * @param slaveSystemDiskIops Slave系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     * @return ClusterSpec
      */
     public ClusterSpec slaveSystemDiskIops(Integer slaveSystemDiskIops) {
         this.slaveSystemDiskIops = slaveSystemDiskIops;
         return this;
     }
 
+
     /**
      * set Slave数据盘类型：ssd.gp1,ssd.io1和hdd.std1
      *
-     * @param slaveDiskType
+     * @param slaveDiskType Slave数据盘类型：ssd.gp1,ssd.io1和hdd.std1
+     * @return ClusterSpec
      */
     public ClusterSpec slaveDiskType(String slaveDiskType) {
         this.slaveDiskType = slaveDiskType;
         return this;
     }
 
+
     /**
-     * set Slave数据盘大小，单位GB
+     * set Slave数据盘大小，取值范围[50, 32000]，单位GB
      *
-     * @param slaveDiskVolume
+     * @param slaveDiskVolume Slave数据盘大小，取值范围[50, 32000]，单位GB
+     * @return ClusterSpec
      */
     public ClusterSpec slaveDiskVolume(Integer slaveDiskVolume) {
         this.slaveDiskVolume = slaveDiskVolume;
         return this;
     }
 
+
     /**
-     * set Slave数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
+     * set Slave数据盘数量，取值范围[1, 7]，单位个，默认1个
      *
-     * @param slaveDiskIops
+     * @param slaveDiskNumber Slave数据盘数量，取值范围[1, 7]，单位个，默认1个
+     * @return ClusterSpec
+     */
+    public ClusterSpec slaveDiskNumber(Integer slaveDiskNumber) {
+        this.slaveDiskNumber = slaveDiskNumber;
+        return this;
+    }
+
+
+    /**
+     * set Slave数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     *
+     * @param slaveDiskIops Slave数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     * @return ClusterSpec
      */
     public ClusterSpec slaveDiskIops(Integer slaveDiskIops) {
         this.slaveDiskIops = slaveDiskIops;
         return this;
     }
 
+
     /**
      * set slave节点规格
      *
-     * @param coreInstanceType
+     * @param coreInstanceType slave节点规格
+     * @return ClusterSpec
      */
     public ClusterSpec coreInstanceType(String coreInstanceType) {
         this.coreInstanceType = coreInstanceType;
         return this;
     }
 
+
     /**
-     * set 关联JSS
+     * set task节点数量
      *
-     * @param jssFlag
+     * @param taskNodeCount task节点数量
+     * @return ClusterSpec
+     */
+    public ClusterSpec taskNodeCount(Integer taskNodeCount) {
+        this.taskNodeCount = taskNodeCount;
+        return this;
+    }
+
+
+    /**
+     * set task系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
+     *
+     * @param taskSystemDiskType task系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
+     * @return ClusterSpec
+     */
+    public ClusterSpec taskSystemDiskType(String taskSystemDiskType) {
+        this.taskSystemDiskType = taskSystemDiskType;
+        return this;
+    }
+
+
+    /**
+     * set task系统硬盘大小，取值范围[40, 500]，单位GB
+     *
+     * @param taskSystemDiskVolume task系统硬盘大小，取值范围[40, 500]，单位GB
+     * @return ClusterSpec
+     */
+    public ClusterSpec taskSystemDiskVolume(Integer taskSystemDiskVolume) {
+        this.taskSystemDiskVolume = taskSystemDiskVolume;
+        return this;
+    }
+
+
+    /**
+     * set task系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     *
+     * @param taskSystemDiskIops task系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     * @return ClusterSpec
+     */
+    public ClusterSpec taskSystemDiskIops(Integer taskSystemDiskIops) {
+        this.taskSystemDiskIops = taskSystemDiskIops;
+        return this;
+    }
+
+
+    /**
+     * set task数据盘类型：ssd.gp1,ssd.io1和hdd.std1
+     *
+     * @param taskDiskType task数据盘类型：ssd.gp1,ssd.io1和hdd.std1
+     * @return ClusterSpec
+     */
+    public ClusterSpec taskDiskType(String taskDiskType) {
+        this.taskDiskType = taskDiskType;
+        return this;
+    }
+
+
+    /**
+     * set task数据盘大小，取值范围[50, 32000]，单位GB
+     *
+     * @param taskDiskVolume task数据盘大小，取值范围[50, 32000]，单位GB
+     * @return ClusterSpec
+     */
+    public ClusterSpec taskDiskVolume(Integer taskDiskVolume) {
+        this.taskDiskVolume = taskDiskVolume;
+        return this;
+    }
+
+
+    /**
+     * set task数据盘数量，取值范围[1, 7]，单位个，默认1个
+     *
+     * @param taskDiskNumber task数据盘数量，取值范围[1, 7]，单位个，默认1个
+     * @return ClusterSpec
+     */
+    public ClusterSpec taskDiskNumber(Integer taskDiskNumber) {
+        this.taskDiskNumber = taskDiskNumber;
+        return this;
+    }
+
+
+    /**
+     * set task数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     *
+     * @param taskDiskIops task数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     * @return ClusterSpec
+     */
+    public ClusterSpec taskDiskIops(Integer taskDiskIops) {
+        this.taskDiskIops = taskDiskIops;
+        return this;
+    }
+
+
+    /**
+     * set task节点规格
+     *
+     * @param taskInstanceType task节点规格
+     * @return ClusterSpec
+     */
+    public ClusterSpec taskInstanceType(String taskInstanceType) {
+        this.taskInstanceType = taskInstanceType;
+        return this;
+    }
+
+
+    /**
+     * set coord节点数量
+     *
+     * @param coordNodeCount coord节点数量
+     * @return ClusterSpec
+     */
+    public ClusterSpec coordNodeCount(Integer coordNodeCount) {
+        this.coordNodeCount = coordNodeCount;
+        return this;
+    }
+
+
+    /**
+     * set coord系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
+     *
+     * @param coordSystemDiskType coord系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
+     * @return ClusterSpec
+     */
+    public ClusterSpec coordSystemDiskType(String coordSystemDiskType) {
+        this.coordSystemDiskType = coordSystemDiskType;
+        return this;
+    }
+
+
+    /**
+     * set coord系统硬盘大小，取值范围[40, 500]，单位GB
+     *
+     * @param coordSystemDiskVolume coord系统硬盘大小，取值范围[40, 500]，单位GB
+     * @return ClusterSpec
+     */
+    public ClusterSpec coordSystemDiskVolume(Integer coordSystemDiskVolume) {
+        this.coordSystemDiskVolume = coordSystemDiskVolume;
+        return this;
+    }
+
+
+    /**
+     * set coord系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     *
+     * @param coordSystemDiskIops coord系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     * @return ClusterSpec
+     */
+    public ClusterSpec coordSystemDiskIops(Integer coordSystemDiskIops) {
+        this.coordSystemDiskIops = coordSystemDiskIops;
+        return this;
+    }
+
+
+    /**
+     * set coord数据盘类型：ssd.gp1,ssd.io1和hdd.std1
+     *
+     * @param coordDiskType coord数据盘类型：ssd.gp1,ssd.io1和hdd.std1
+     * @return ClusterSpec
+     */
+    public ClusterSpec coordDiskType(String coordDiskType) {
+        this.coordDiskType = coordDiskType;
+        return this;
+    }
+
+
+    /**
+     * set coord数据盘大小，取值范围[50, 32000]，单位GB
+     *
+     * @param coordDiskVolume coord数据盘大小，取值范围[50, 32000]，单位GB
+     * @return ClusterSpec
+     */
+    public ClusterSpec coordDiskVolume(Integer coordDiskVolume) {
+        this.coordDiskVolume = coordDiskVolume;
+        return this;
+    }
+
+
+    /**
+     * set coord数据盘数量，取值范围[1, 7]，单位个，默认1个
+     *
+     * @param coordDiskNumber coord数据盘数量，取值范围[1, 7]，单位个，默认1个
+     * @return ClusterSpec
+     */
+    public ClusterSpec coordDiskNumber(Integer coordDiskNumber) {
+        this.coordDiskNumber = coordDiskNumber;
+        return this;
+    }
+
+
+    /**
+     * set coord数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     *
+     * @param coordDiskIops coord数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，详细取值说明见云硬盘相关文档
+     * @return ClusterSpec
+     */
+    public ClusterSpec coordDiskIops(Integer coordDiskIops) {
+        this.coordDiskIops = coordDiskIops;
+        return this;
+    }
+
+
+    /**
+     * set coord节点规格
+     *
+     * @param coordInstanceType coord节点规格
+     * @return ClusterSpec
+     */
+    public ClusterSpec coordInstanceType(String coordInstanceType) {
+        this.coordInstanceType = coordInstanceType;
+        return this;
+    }
+
+
+    /**
+     * set 关联JSS，默认为false
+     *
+     * @param jssFlag 关联JSS，默认为false
+     * @return ClusterSpec
      */
     public ClusterSpec jssFlag(Boolean jssFlag) {
         this.jssFlag = jssFlag;
         return this;
     }
 
+
     /**
      * set 数据中心，即regionId
      *
-     * @param dataCenter
+     * @param dataCenter 数据中心，即regionId
+     * @return ClusterSpec
      */
     public ClusterSpec dataCenter(String dataCenter) {
         this.dataCenter = dataCenter;
         return this;
     }
 
+
     /**
      * set 软件列表
      *
-     * @param softwareList
+     * @param softwareList 软件列表
+     * @return ClusterSpec
      */
     public ClusterSpec softwareList(String softwareList) {
         this.softwareList = softwareList;
         return this;
     }
 
+
     /**
-     * set 集群是否为高可用，默认为高可用集群
+     * set 集群是否为高可用，默认为true，高可用集群
      *
-     * @param haFlag
+     * @param haFlag 集群是否为高可用，默认为true，高可用集群
+     * @return ClusterSpec
      */
     public ClusterSpec haFlag(Boolean haFlag) {
         this.haFlag = haFlag;
         return this;
     }
 
+
+    /**
+     * set 是否创建RDS作为Hive元数据库字段，默认为false
+     *
+     * @param rdsMetaFlag 是否创建RDS作为Hive元数据库字段，默认为false
+     * @return ClusterSpec
+     */
+    public ClusterSpec rdsMetaFlag(Boolean rdsMetaFlag) {
+        this.rdsMetaFlag = rdsMetaFlag;
+        return this;
+    }
+
+
+    /**
+     * set 集群是否支持Kerberos，默认为false
+     *
+     * @param isKerberos 集群是否支持Kerberos，默认为false
+     * @return ClusterSpec
+     */
+    public ClusterSpec isKerberos(Boolean isKerberos) {
+        this.isKerberos = isKerberos;
+        return this;
+    }
+
+
     /**
      * set Vpc网络ID
      *
-     * @param vpcId
+     * @param vpcId Vpc网络ID
+     * @return ClusterSpec
      */
     public ClusterSpec vpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
 
+
     /**
      * set Vpc子网ID
      *
-     * @param vpcSubnetId
+     * @param vpcSubnetId Vpc子网ID
+     * @return ClusterSpec
      */
     public ClusterSpec vpcSubnetId(String vpcSubnetId) {
         this.vpcSubnetId = vpcSubnetId;
         return this;
     }
 
+
     /**
      * set 数据中心的可用区
      *
-     * @param az
+     * @param az 数据中心的可用区
+     * @return ClusterSpec
      */
     public ClusterSpec az(String az) {
         this.az = az;
         return this;
     }
 
+
     /**
-     * set 是否创建公网IP
+     * set 是否创建公网IP，默认为false
      *
-     * @param createOuterIpFlag
+     * @param createOuterIpFlag 是否创建公网IP，默认为false
+     * @return ClusterSpec
      */
     public ClusterSpec createOuterIpFlag(Boolean createOuterIpFlag) {
         this.createOuterIpFlag = createOuterIpFlag;
         return this;
     }
 
+
     /**
-     * set 是否创建安全组
+     * set 是否创建安全组，默认为false
      *
-     * @param createSecurityGroupFlag
+     * @param createSecurityGroupFlag 是否创建安全组，默认为false
+     * @return ClusterSpec
      */
     public ClusterSpec createSecurityGroupFlag(Boolean createSecurityGroupFlag) {
         this.createSecurityGroupFlag = createSecurityGroupFlag;
         return this;
     }
 
+
     /**
      * set 安全组ID
      *
-     * @param securityGroupId
+     * @param securityGroupId 安全组ID
+     * @return ClusterSpec
      */
     public ClusterSpec securityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
@@ -1070,4 +1986,52 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 自定义软件配置，JSON格式字符串
+     *
+     * @param userDefinedConf 自定义软件配置，JSON格式字符串
+     * @return ClusterSpec
+     */
+    public ClusterSpec userDefinedConf(String userDefinedConf) {
+        this.userDefinedConf = userDefinedConf;
+        return this;
+    }
+
+
+    /**
+     * set 集群使用密钥创建的密钥名称
+     *
+     * @param sshKeyName 集群使用密钥创建的密钥名称
+     * @return ClusterSpec
+     */
+    public ClusterSpec sshKeyName(String sshKeyName) {
+        this.sshKeyName = sshKeyName;
+        return this;
+    }
+
+
+    /**
+    * set 集群创建的Task所属的节点组的规格和扩容节点数量信息
+    *
+    * @param taskNodesByGroup 集群创建的Task所属的节点组的规格和扩容节点数量信息
+    * @return ClusterSpec
+    */
+    public ClusterSpec taskNodesByGroup(List<ClusterNode> taskNodesByGroup) {
+        this.taskNodesByGroup = taskNodesByGroup;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 集群创建的Task所属的节点组的规格和扩容节点数量信息
+     *
+     * @param taskNodesByGroup
+     */
+    public void addTaskNodesByGroup(ClusterNode taskNodesByGroup) {
+        if (this.taskNodesByGroup == null) {
+            this.taskNodesByGroup = new ArrayList<>();
+        }
+        this.taskNodesByGroup.add(taskNodesByGroup);
+    }
 }

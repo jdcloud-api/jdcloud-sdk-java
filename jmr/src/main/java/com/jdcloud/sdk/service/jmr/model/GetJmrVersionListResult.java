@@ -38,31 +38,33 @@ public class GetJmrVersionListResult extends JdcloudResult implements java.io.Se
     /**
      * data
      */
+    
     private List<String> data;
-
     /**
      * status
      */
     private Boolean status;
 
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<String> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<String> data) {
         this.data = data;
     }
+
 
     /**
      * get status
@@ -83,25 +85,30 @@ public class GetJmrVersionListResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data 
+    * @return GetJmrVersionListResult
+    */
     public GetJmrVersionListResult data(List<String> data) {
         this.data = data;
         return this;
     }
 
+
     /**
      * set status
      *
-     * @param status
+     * @param status 
+     * @return GetJmrVersionListResult
      */
     public GetJmrVersionListResult status(Boolean status) {
         this.status = status;
         return this;
     }
+
 
 
     /**
@@ -115,5 +122,4 @@ public class GetJmrVersionListResult extends JdcloudResult implements java.io.Se
         }
         this.data.add(data);
     }
-
 }

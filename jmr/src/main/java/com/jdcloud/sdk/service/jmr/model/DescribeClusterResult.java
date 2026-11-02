@@ -46,6 +46,7 @@ public class DescribeClusterResult extends JdcloudResult implements java.io.Seri
     private Boolean status;
 
 
+
     /**
      * get cluster
      *
@@ -63,6 +64,7 @@ public class DescribeClusterResult extends JdcloudResult implements java.io.Seri
     public void setCluster(Cluster cluster) {
         this.cluster = cluster;
     }
+
 
     /**
      * get status
@@ -83,20 +85,24 @@ public class DescribeClusterResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
      * set cluster
      *
-     * @param cluster
+     * @param cluster 
+     * @return DescribeClusterResult
      */
     public DescribeClusterResult cluster(Cluster cluster) {
         this.cluster = cluster;
         return this;
     }
 
+
     /**
      * set status
      *
-     * @param status
+     * @param status 
+     * @return DescribeClusterResult
      */
     public DescribeClusterResult status(Boolean status) {
         this.status = status;
