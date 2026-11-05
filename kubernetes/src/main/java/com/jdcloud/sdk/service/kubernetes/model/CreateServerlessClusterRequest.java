@@ -305,7 +305,8 @@ public class CreateServerlessClusterRequest extends JdcloudRequest implements ja
     /**
      * set 名称（同一用户的 cluster 允许重名）
      *
-     * @param name
+     * @param name 名称（同一用户的 cluster 允许重名）
+     * @return CreateServerlessClusterRequest
      */
     public CreateServerlessClusterRequest name(String name) {
         this.name = name;
@@ -316,7 +317,8 @@ public class CreateServerlessClusterRequest extends JdcloudRequest implements ja
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return CreateServerlessClusterRequest
      */
     public CreateServerlessClusterRequest description(String description) {
         this.description = description;
@@ -327,7 +329,8 @@ public class CreateServerlessClusterRequest extends JdcloudRequest implements ja
     /**
      * set kubernetes的版本
      *
-     * @param version
+     * @param version kubernetes的版本
+     * @return CreateServerlessClusterRequest
      */
     public CreateServerlessClusterRequest version(String version) {
         this.version = version;
@@ -338,7 +341,8 @@ public class CreateServerlessClusterRequest extends JdcloudRequest implements ja
     /**
     * set 集群所在的az
     *
-    * @param azs
+    * @param azs 集群所在的az
+    * @return CreateServerlessClusterRequest
     */
     public CreateServerlessClusterRequest azs(List<String> azs) {
         this.azs = azs;
@@ -349,7 +353,8 @@ public class CreateServerlessClusterRequest extends JdcloudRequest implements ja
     /**
      * set 用户的AccessKey，插件调用open-api时的认证凭证
      *
-     * @param accessKey
+     * @param accessKey 用户的AccessKey，插件调用open-api时的认证凭证
+     * @return CreateServerlessClusterRequest
      */
     public CreateServerlessClusterRequest accessKey(String accessKey) {
         this.accessKey = accessKey;
@@ -360,7 +365,8 @@ public class CreateServerlessClusterRequest extends JdcloudRequest implements ja
     /**
      * set 用户的SecretKey，插件调用open-api时的认证凭证
      *
-     * @param secretKey
+     * @param secretKey 用户的SecretKey，插件调用open-api时的认证凭证
+     * @return CreateServerlessClusterRequest
      */
     public CreateServerlessClusterRequest secretKey(String secretKey) {
         this.secretKey = secretKey;
@@ -371,7 +377,8 @@ public class CreateServerlessClusterRequest extends JdcloudRequest implements ja
     /**
     * set 集群组件配置
     *
-    * @param addonsConfig
+    * @param addonsConfig 集群组件配置
+    * @return CreateServerlessClusterRequest
     */
     public CreateServerlessClusterRequest addonsConfig(List<AddonConfigSpec> addonsConfig) {
         this.addonsConfig = addonsConfig;
@@ -382,7 +389,8 @@ public class CreateServerlessClusterRequest extends JdcloudRequest implements ja
     /**
      * set 集群网络配置
      *
-     * @param clusterNetworkSpec
+     * @param clusterNetworkSpec 集群网络配置
+     * @return CreateServerlessClusterRequest
      */
     public CreateServerlessClusterRequest clusterNetworkSpec(ServerlessClusterNetworkSpec clusterNetworkSpec) {
         this.clusterNetworkSpec = clusterNetworkSpec;
@@ -393,7 +401,8 @@ public class CreateServerlessClusterRequest extends JdcloudRequest implements ja
     /**
     * set 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
     *
-    * @param clusterEnvironments
+    * @param clusterEnvironments 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
+    * @return CreateServerlessClusterRequest
     */
     public CreateServerlessClusterRequest clusterEnvironments(List<StringKeyValuePair> clusterEnvironments) {
         this.clusterEnvironments = clusterEnvironments;
@@ -404,7 +413,8 @@ public class CreateServerlessClusterRequest extends JdcloudRequest implements ja
     /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return CreateServerlessClusterRequest
      */
     public CreateServerlessClusterRequest regionId(String regionId) {
         this.regionId = regionId;

@@ -164,7 +164,8 @@ public class MaintenanceWindowSpec  implements java.io.Serializable {
     /**
      * set daily, weekly, monthly， 默认 weekly
      *
-     * @param periodType
+     * @param periodType daily, weekly, monthly， 默认 weekly
+     * @return MaintenanceWindowSpec
      */
     public MaintenanceWindowSpec periodType(String periodType) {
         this.periodType = periodType;
@@ -176,7 +177,9 @@ public class MaintenanceWindowSpec  implements java.io.Serializable {
      * set 维护操作开始具体日期, 仅对 periodType 取值为 weekly 或 monthly 时有效, periodType 为 weekly 时可以取 1-7, periodType 为 monthly 时可取 1-28
 
      *
-     * @param startDay
+     * @param startDay 维护操作开始具体日期, 仅对 periodType 取值为 weekly 或 monthly 时有效, periodType 为 weekly 时可以取 1-7, periodType 为 monthly 时可取 1-28
+
+     * @return MaintenanceWindowSpec
      */
     public MaintenanceWindowSpec startDay(Integer startDay) {
         this.startDay = startDay;
@@ -187,7 +190,8 @@ public class MaintenanceWindowSpec  implements java.io.Serializable {
     /**
      * set 维护操作开始具体时间. 时间格式符合RFC3339，并使用 UTC 时间，精确到分钟，例如 23:27
      *
-     * @param startTime
+     * @param startTime 维护操作开始具体时间. 时间格式符合RFC3339，并使用 UTC 时间，精确到分钟，例如 23:27
+     * @return MaintenanceWindowSpec
      */
     public MaintenanceWindowSpec startTime(String startTime) {
         this.startTime = startTime;
@@ -198,7 +202,8 @@ public class MaintenanceWindowSpec  implements java.io.Serializable {
     /**
      * set 时区，使用 IANA 数据格式，例如：&quot;Asia/Shanghai&quot; 或 &quot;America/Los_Angeles&quot;，默认 &quot;UTC&quot;
      *
-     * @param timeZone
+     * @param timeZone 时区，使用 IANA 数据格式，例如：&quot;Asia/Shanghai&quot; 或 &quot;America/Los_Angeles&quot;，默认 &quot;UTC&quot;
+     * @return MaintenanceWindowSpec
      */
     public MaintenanceWindowSpec timeZone(String timeZone) {
         this.timeZone = timeZone;
@@ -209,7 +214,8 @@ public class MaintenanceWindowSpec  implements java.io.Serializable {
     /**
      * set 维护运行时长: 4-24 小时，步长 1 小时， 默认为： 4小时
      *
-     * @param duration
+     * @param duration 维护运行时长: 4-24 小时，步长 1 小时， 默认为： 4小时
+     * @return MaintenanceWindowSpec
      */
     public MaintenanceWindowSpec duration(Integer duration) {
         this.duration = duration;

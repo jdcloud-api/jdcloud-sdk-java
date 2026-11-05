@@ -71,7 +71,8 @@ public class CreateServerlessClusterResult extends JdcloudResult implements java
     /**
      * set clusterId
      *
-     * @param clusterId
+     * @param clusterId 
+     * @return CreateServerlessClusterResult
      */
     public CreateServerlessClusterResult clusterId(String clusterId) {
         this.clusterId = clusterId;

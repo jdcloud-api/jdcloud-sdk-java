@@ -41,24 +41,18 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
     private Boolean publicApiServer;
 
     /**
-     * master网络的cidr
-     * Required:true
+     * master网络的cidr；isCreditNic为true时，自动生成；isCreditNic为false，此参数值如果为空则自动生成
      */
-    @Required
     private String masterCidr;
 
     /**
-     * node网络的cidr，自动切分
-     * Required:true
+     * node网络的cidr，自动切分；vpcId不为空时，此参数必传
      */
-    @Required
     private String nodeNetworkCidr;
 
     /**
-     * 用户侧承载node和pod的vpc id
-     * Required:true
+     * 用户侧承载node和pod的vpc id，此参数为空则自动创建
      */
-    @Required
     private String vpcId;
 
     /**
@@ -103,7 +97,7 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
 
 
     /**
-     * get master网络的cidr
+     * get master网络的cidr；isCreditNic为true时，自动生成；isCreditNic为false，此参数值如果为空则自动生成
      *
      * @return
      */
@@ -112,7 +106,7 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
     }
 
     /**
-     * set master网络的cidr
+     * set master网络的cidr；isCreditNic为true时，自动生成；isCreditNic为false，此参数值如果为空则自动生成
      *
      * @param masterCidr
      */
@@ -122,7 +116,7 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
 
 
     /**
-     * get node网络的cidr，自动切分
+     * get node网络的cidr，自动切分；vpcId不为空时，此参数必传
      *
      * @return
      */
@@ -131,7 +125,7 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
     }
 
     /**
-     * set node网络的cidr，自动切分
+     * set node网络的cidr，自动切分；vpcId不为空时，此参数必传
      *
      * @param nodeNetworkCidr
      */
@@ -141,7 +135,7 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
 
 
     /**
-     * get 用户侧承载node和pod的vpc id
+     * get 用户侧承载node和pod的vpc id，此参数为空则自动创建
      *
      * @return
      */
@@ -150,7 +144,7 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 用户侧承载node和pod的vpc id
+     * set 用户侧承载node和pod的vpc id，此参数为空则自动创建
      *
      * @param vpcId
      */
@@ -239,7 +233,8 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set kube-apiserver是否可公网访问，false则kube-apiserver不绑定公网地址，true绑定公网地址
      *
-     * @param publicApiServer
+     * @param publicApiServer kube-apiserver是否可公网访问，false则kube-apiserver不绑定公网地址，true绑定公网地址
+     * @return AutoClusterNetworkSpec
      */
     public AutoClusterNetworkSpec publicApiServer(Boolean publicApiServer) {
         this.publicApiServer = publicApiServer;
@@ -248,9 +243,10 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
 
 
     /**
-     * set master网络的cidr
+     * set master网络的cidr；isCreditNic为true时，自动生成；isCreditNic为false，此参数值如果为空则自动生成
      *
-     * @param masterCidr
+     * @param masterCidr master网络的cidr；isCreditNic为true时，自动生成；isCreditNic为false，此参数值如果为空则自动生成
+     * @return AutoClusterNetworkSpec
      */
     public AutoClusterNetworkSpec masterCidr(String masterCidr) {
         this.masterCidr = masterCidr;
@@ -259,9 +255,10 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
 
 
     /**
-     * set node网络的cidr，自动切分
+     * set node网络的cidr，自动切分；vpcId不为空时，此参数必传
      *
-     * @param nodeNetworkCidr
+     * @param nodeNetworkCidr node网络的cidr，自动切分；vpcId不为空时，此参数必传
+     * @return AutoClusterNetworkSpec
      */
     public AutoClusterNetworkSpec nodeNetworkCidr(String nodeNetworkCidr) {
         this.nodeNetworkCidr = nodeNetworkCidr;
@@ -270,9 +267,10 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
 
 
     /**
-     * set 用户侧承载node和pod的vpc id
+     * set 用户侧承载node和pod的vpc id，此参数为空则自动创建
      *
-     * @param vpcId
+     * @param vpcId 用户侧承载node和pod的vpc id，此参数为空则自动创建
+     * @return AutoClusterNetworkSpec
      */
     public AutoClusterNetworkSpec vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -283,7 +281,8 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 是否双栈支持，开启后，kube-apiserver将拥有ipv6地址，默认不开启
      *
-     * @param dualStack
+     * @param dualStack 是否双栈支持，开启后，kube-apiserver将拥有ipv6地址，默认不开启
+     * @return AutoClusterNetworkSpec
      */
     public AutoClusterNetworkSpec dualStack(Boolean dualStack) {
         this.dualStack = dualStack;
@@ -294,7 +293,8 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 是否开启master访问公网的能力，如果需要引入公网OIDC认证时需要开启，默认不开启
      *
-     * @param masterNatEnabled
+     * @param masterNatEnabled 是否开启master访问公网的能力，如果需要引入公网OIDC认证时需要开启，默认不开启
+     * @return AutoClusterNetworkSpec
      */
     public AutoClusterNetworkSpec masterNatEnabled(Boolean masterNatEnabled) {
         this.masterNatEnabled = masterNatEnabled;
@@ -305,7 +305,8 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set nat网关配置,如果clusterNetworkType为auto，当natGateway和nodeElasticIpSpec都为空时会自动创建nat虚机
      *
-     * @param natGateway
+     * @param natGateway nat网关配置,如果clusterNetworkType为auto，当natGateway和nodeElasticIpSpec都为空时会自动创建nat虚机
+     * @return AutoClusterNetworkSpec
      */
     public AutoClusterNetworkSpec natGateway(NatGatewaySpec natGateway) {
         this.natGateway = natGateway;
@@ -316,7 +317,8 @@ public class AutoClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 节点公网IP的配置，与nat网关配置互斥，不可同时设置
      *
-     * @param nodeElasticIpSpec
+     * @param nodeElasticIpSpec 节点公网IP的配置，与nat网关配置互斥，不可同时设置
+     * @return AutoClusterNetworkSpec
      */
     public AutoClusterNetworkSpec nodeElasticIpSpec(NodeElasticIpSpec nodeElasticIpSpec) {
         this.nodeElasticIpSpec = nodeElasticIpSpec;

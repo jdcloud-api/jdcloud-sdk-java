@@ -117,7 +117,8 @@ public class NodeElasticIpSpec  implements java.io.Serializable {
     /**
      * set 公网IP带宽【1-200】
      *
-     * @param bandWidthMbps
+     * @param bandWidthMbps 公网IP带宽【1-200】
+     * @return NodeElasticIpSpec
      */
     public NodeElasticIpSpec bandWidthMbps(Integer bandWidthMbps) {
         this.bandWidthMbps = bandWidthMbps;
@@ -128,7 +129,8 @@ public class NodeElasticIpSpec  implements java.io.Serializable {
     /**
      * set 公网IP的provider：BGP
      *
-     * @param provider
+     * @param provider 公网IP的provider：BGP
+     * @return NodeElasticIpSpec
      */
     public NodeElasticIpSpec provider(String provider) {
         this.provider = provider;
@@ -139,7 +141,8 @@ public class NodeElasticIpSpec  implements java.io.Serializable {
     /**
      * set 公网IP计费类型：flow流量计费,bandwith带宽计费
      *
-     * @param chargeMode
+     * @param chargeMode 公网IP计费类型：flow流量计费,bandwith带宽计费
+     * @return NodeElasticIpSpec
      */
     public NodeElasticIpSpec chargeMode(String chargeMode) {
         this.chargeMode = chargeMode;

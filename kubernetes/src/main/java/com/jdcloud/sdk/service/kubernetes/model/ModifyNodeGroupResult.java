@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 修改工作节点组的 名称 和 描述&lt;br&gt;name 和 description 必须要指定一个
+ * 修改工作节点组的 名称 和 描述以及k8s label、taint等信息 &lt;br&gt;name 和 description 必须要指定一个
  */
 public class ModifyNodeGroupResult extends JdcloudResult implements java.io.Serializable {
 

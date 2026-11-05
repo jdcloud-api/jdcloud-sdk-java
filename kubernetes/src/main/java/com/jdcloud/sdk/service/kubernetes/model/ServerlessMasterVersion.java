@@ -136,7 +136,8 @@ public class ServerlessMasterVersion  implements java.io.Serializable {
     /**
      * set 版本号
      *
-     * @param version
+     * @param version 版本号
+     * @return ServerlessMasterVersion
      */
     public ServerlessMasterVersion version(String version) {
         this.version = version;
@@ -147,7 +148,8 @@ public class ServerlessMasterVersion  implements java.io.Serializable {
     /**
      * set 是否默认版本
      *
-     * @param isDefault
+     * @param isDefault 是否默认版本
+     * @return ServerlessMasterVersion
      */
     public ServerlessMasterVersion isDefault(Boolean isDefault) {
         this.isDefault = isDefault;
@@ -158,7 +160,8 @@ public class ServerlessMasterVersion  implements java.io.Serializable {
     /**
      * set 版本状态
      *
-     * @param versionStatus
+     * @param versionStatus 版本状态
+     * @return ServerlessMasterVersion
      */
     public ServerlessMasterVersion versionStatus(String versionStatus) {
         this.versionStatus = versionStatus;
@@ -169,7 +172,8 @@ public class ServerlessMasterVersion  implements java.io.Serializable {
     /**
     * set 该版本可以安装的组件列表
     *
-    * @param clusterAddons
+    * @param clusterAddons 该版本可以安装的组件列表
+    * @return ServerlessMasterVersion
     */
     public ServerlessMasterVersion clusterAddons(List<ClusterAddon> clusterAddons) {
         this.clusterAddons = clusterAddons;

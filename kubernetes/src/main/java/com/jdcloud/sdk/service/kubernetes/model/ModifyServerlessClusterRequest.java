@@ -140,7 +140,8 @@ public class ModifyServerlessClusterRequest extends JdcloudRequest implements ja
     /**
      * set 集群名称
      *
-     * @param name
+     * @param name 集群名称
+     * @return ModifyServerlessClusterRequest
      */
     public ModifyServerlessClusterRequest name(String name) {
         this.name = name;
@@ -151,7 +152,8 @@ public class ModifyServerlessClusterRequest extends JdcloudRequest implements ja
     /**
      * set 集群描述
      *
-     * @param description
+     * @param description 集群描述
+     * @return ModifyServerlessClusterRequest
      */
     public ModifyServerlessClusterRequest description(String description) {
         this.description = description;
@@ -162,7 +164,8 @@ public class ModifyServerlessClusterRequest extends JdcloudRequest implements ja
     /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return ModifyServerlessClusterRequest
      */
     public ModifyServerlessClusterRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -173,7 +176,8 @@ public class ModifyServerlessClusterRequest extends JdcloudRequest implements ja
     /**
      * set 集群 ID
      *
-     * @param clusterId
+     * @param clusterId 集群 ID
+     * @return ModifyServerlessClusterRequest
      */
     public ModifyServerlessClusterRequest clusterId(String clusterId) {
         this.clusterId = clusterId;

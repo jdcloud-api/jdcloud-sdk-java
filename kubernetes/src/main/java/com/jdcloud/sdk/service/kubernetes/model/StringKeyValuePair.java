@@ -91,7 +91,8 @@ public class StringKeyValuePair  implements java.io.Serializable {
     /**
      * set key
      *
-     * @param key
+     * @param key key
+     * @return StringKeyValuePair
      */
     public StringKeyValuePair key(String key) {
         this.key = key;
@@ -102,7 +103,8 @@ public class StringKeyValuePair  implements java.io.Serializable {
     /**
      * set value
      *
-     * @param value
+     * @param value value
+     * @return StringKeyValuePair
      */
     public StringKeyValuePair value(String value) {
         this.value = value;

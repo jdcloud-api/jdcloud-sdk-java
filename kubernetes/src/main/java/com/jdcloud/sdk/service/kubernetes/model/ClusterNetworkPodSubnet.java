@@ -38,7 +38,7 @@ public class ClusterNetworkPodSubnet  implements java.io.Serializable {
     private String subnetId;
 
     /**
-     * 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet
+     * 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet/pod_subnet_with_namespace
      */
     private String subnetType;
 
@@ -77,6 +77,11 @@ public class ClusterNetworkPodSubnet  implements java.io.Serializable {
      */
     private String runtimeError;
 
+    /**
+     * pod子网关联的命名空间
+     */
+    private String namespace;
+
 
 
     /**
@@ -99,7 +104,7 @@ public class ClusterNetworkPodSubnet  implements java.io.Serializable {
 
 
     /**
-     * get 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet
+     * get 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet/pod_subnet_with_namespace
      *
      * @return
      */
@@ -108,7 +113,7 @@ public class ClusterNetworkPodSubnet  implements java.io.Serializable {
     }
 
     /**
-     * set 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet
+     * set 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet/pod_subnet_with_namespace
      *
      * @param subnetType
      */
@@ -250,11 +255,31 @@ public class ClusterNetworkPodSubnet  implements java.io.Serializable {
     }
 
 
+    /**
+     * get pod子网关联的命名空间
+     *
+     * @return
+     */
+    public String getNamespace() {
+        return namespace;
+    }
+
+    /**
+     * set pod子网关联的命名空间
+     *
+     * @param namespace
+     */
+    public void setNamespace(String namespace) {
+        this.namespace = namespace;
+    }
+
+
 
     /**
      * set 子网 ID
      *
-     * @param subnetId
+     * @param subnetId 子网 ID
+     * @return ClusterNetworkPodSubnet
      */
     public ClusterNetworkPodSubnet subnetId(String subnetId) {
         this.subnetId = subnetId;
@@ -263,9 +288,10 @@ public class ClusterNetworkPodSubnet  implements java.io.Serializable {
 
 
     /**
-     * set 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet
+     * set 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet/pod_subnet_with_namespace
      *
-     * @param subnetType
+     * @param subnetType 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet/pod_subnet_with_namespace
+     * @return ClusterNetworkPodSubnet
      */
     public ClusterNetworkPodSubnet subnetType(String subnetType) {
         this.subnetType = subnetType;
@@ -276,7 +302,8 @@ public class ClusterNetworkPodSubnet  implements java.io.Serializable {
     /**
      * set 子网是否启用，仅pod子网可用
      *
-     * @param enabled
+     * @param enabled 子网是否启用，仅pod子网可用
+     * @return ClusterNetworkPodSubnet
      */
     public ClusterNetworkPodSubnet enabled(Boolean enabled) {
         this.enabled = enabled;
@@ -287,7 +314,8 @@ public class ClusterNetworkPodSubnet  implements java.io.Serializable {
     /**
      * set 是否允许自动删除
      *
-     * @param autoDelete
+     * @param autoDelete 是否允许自动删除
+     * @return ClusterNetworkPodSubnet
      */
     public ClusterNetworkPodSubnet autoDelete(Boolean autoDelete) {
         this.autoDelete = autoDelete;
@@ -298,7 +326,8 @@ public class ClusterNetworkPodSubnet  implements java.io.Serializable {
     /**
      * set ip mask of subnet view
      *
-     * @param ipMaskLen
+     * @param ipMaskLen ip mask of subnet view
+     * @return ClusterNetworkPodSubnet
      */
     public ClusterNetworkPodSubnet ipMaskLen(Integer ipMaskLen) {
         this.ipMaskLen = ipMaskLen;
@@ -309,7 +338,8 @@ public class ClusterNetworkPodSubnet  implements java.io.Serializable {
     /**
      * set 可用的node数量
      *
-     * @param availableCidrCount
+     * @param availableCidrCount 可用的node数量
+     * @return ClusterNetworkPodSubnet
      */
     public ClusterNetworkPodSubnet availableCidrCount(Integer availableCidrCount) {
         this.availableCidrCount = availableCidrCount;
@@ -320,7 +350,8 @@ public class ClusterNetworkPodSubnet  implements java.io.Serializable {
     /**
      * set ip count of each cidr. defined by user
      *
-     * @param eniLen
+     * @param eniLen ip count of each cidr. defined by user
+     * @return ClusterNetworkPodSubnet
      */
     public ClusterNetworkPodSubnet eniLen(Integer eniLen) {
         this.eniLen = eniLen;
@@ -331,7 +362,8 @@ public class ClusterNetworkPodSubnet  implements java.io.Serializable {
     /**
      * set ipam policy. defined by user
      *
-     * @param ipamPolicy
+     * @param ipamPolicy ipam policy. defined by user
+     * @return ClusterNetworkPodSubnet
      */
     public ClusterNetworkPodSubnet ipamPolicy(String ipamPolicy) {
         this.ipamPolicy = ipamPolicy;
@@ -342,10 +374,23 @@ public class ClusterNetworkPodSubnet  implements java.io.Serializable {
     /**
      * set tell if runtime subnet has error
      *
-     * @param runtimeError
+     * @param runtimeError tell if runtime subnet has error
+     * @return ClusterNetworkPodSubnet
      */
     public ClusterNetworkPodSubnet runtimeError(String runtimeError) {
         this.runtimeError = runtimeError;
+        return this;
+    }
+
+
+    /**
+     * set pod子网关联的命名空间
+     *
+     * @param namespace pod子网关联的命名空间
+     * @return ClusterNetworkPodSubnet
+     */
+    public ClusterNetworkPodSubnet namespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
 

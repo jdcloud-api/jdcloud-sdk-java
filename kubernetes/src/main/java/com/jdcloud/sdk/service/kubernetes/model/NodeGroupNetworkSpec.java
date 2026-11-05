@@ -62,7 +62,8 @@ public class NodeGroupNetworkSpec  implements java.io.Serializable {
     /**
      * set node所在子网id
      *
-     * @param subnetId
+     * @param subnetId node所在子网id
+     * @return NodeGroupNetworkSpec
      */
     public NodeGroupNetworkSpec subnetId(String subnetId) {
         this.subnetId = subnetId;

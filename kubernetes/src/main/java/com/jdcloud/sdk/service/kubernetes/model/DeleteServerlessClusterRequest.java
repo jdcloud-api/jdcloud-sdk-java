@@ -116,7 +116,8 @@ public class DeleteServerlessClusterRequest extends JdcloudRequest implements ja
     /**
      * set 替换路由表id
      *
-     * @param routeTableId
+     * @param routeTableId 替换路由表id
+     * @return DeleteServerlessClusterRequest
      */
     public DeleteServerlessClusterRequest routeTableId(String routeTableId) {
         this.routeTableId = routeTableId;
@@ -127,7 +128,8 @@ public class DeleteServerlessClusterRequest extends JdcloudRequest implements ja
     /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return DeleteServerlessClusterRequest
      */
     public DeleteServerlessClusterRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class DeleteServerlessClusterRequest extends JdcloudRequest implements ja
     /**
      * set 集群 ID
      *
-     * @param clusterId
+     * @param clusterId 集群 ID
+     * @return DeleteServerlessClusterRequest
      */
     public DeleteServerlessClusterRequest clusterId(String clusterId) {
         this.clusterId = clusterId;

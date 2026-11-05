@@ -45,6 +45,11 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     private String description;
 
     /**
+     * 集群删除保护
+     */
+    private Boolean deleteProtected;
+
+    /**
      * 地域 ID
      * Required:true
      */
@@ -99,6 +104,25 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * get 集群删除保护
+     *
+     * @return
+     */
+    public Boolean getDeleteProtected() {
+        return deleteProtected;
+    }
+
+    /**
+     * set 集群删除保护
+     *
+     * @param deleteProtected
+     */
+    public void setDeleteProtected(Boolean deleteProtected) {
+        this.deleteProtected = deleteProtected;
+    }
+
+
+    /**
      * get 地域 ID
      *
      * @return
@@ -140,7 +164,8 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 集群名称
      *
-     * @param name
+     * @param name 集群名称
+     * @return ModifyClusterRequest
      */
     public ModifyClusterRequest name(String name) {
         this.name = name;
@@ -151,7 +176,8 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 集群描述
      *
-     * @param description
+     * @param description 集群描述
+     * @return ModifyClusterRequest
      */
     public ModifyClusterRequest description(String description) {
         this.description = description;
@@ -160,9 +186,22 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * set 集群删除保护
+     *
+     * @param deleteProtected 集群删除保护
+     * @return ModifyClusterRequest
+     */
+    public ModifyClusterRequest deleteProtected(Boolean deleteProtected) {
+        this.deleteProtected = deleteProtected;
+        return this;
+    }
+
+
+    /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return ModifyClusterRequest
      */
     public ModifyClusterRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -173,7 +212,8 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 集群 ID
      *
-     * @param clusterId
+     * @param clusterId 集群 ID
+     * @return ModifyClusterRequest
      */
     public ModifyClusterRequest clusterId(String clusterId) {
         this.clusterId = clusterId;

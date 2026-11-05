@@ -136,7 +136,8 @@ public class ClusterAddon  implements java.io.Serializable {
     /**
      * set 组件名称
      *
-     * @param name
+     * @param name 组件名称
+     * @return ClusterAddon
      */
     public ClusterAddon name(String name) {
         this.name = name;
@@ -147,7 +148,8 @@ public class ClusterAddon  implements java.io.Serializable {
     /**
      * set 组件是否必需开启
      *
-     * @param required
+     * @param required 组件是否必需开启
+     * @return ClusterAddon
      */
     public ClusterAddon required(Boolean required) {
         this.required = required;
@@ -158,7 +160,8 @@ public class ClusterAddon  implements java.io.Serializable {
     /**
      * set 组件说明
      *
-     * @param description
+     * @param description 组件说明
+     * @return ClusterAddon
      */
     public ClusterAddon description(String description) {
         this.description = description;
@@ -169,7 +172,8 @@ public class ClusterAddon  implements java.io.Serializable {
     /**
     * set availableVersions
     *
-    * @param availableVersions
+    * @param availableVersions 
+    * @return ClusterAddon
     */
     public ClusterAddon availableVersions(List<ClusterAddonVersion> availableVersions) {
         this.availableVersions = availableVersions;

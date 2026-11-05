@@ -38,13 +38,17 @@ public class DeleteNodeInstancesRequest extends JdcloudRequest implements java.i
 
     /**
      * 需要从工作节点组中删除的实例
-- 不可将一个集群中的实例全部删除
 
      * Required:true
      */
     @Required
     
     private List<String> instanceIds;
+    /**
+     * 是否需要释放实例
+     */
+    private Boolean realDeleteInstance;
+
     /**
      * 地域 ID
      * Required:true
@@ -63,7 +67,6 @@ public class DeleteNodeInstancesRequest extends JdcloudRequest implements java.i
 
     /**
     * get 需要从工作节点组中删除的实例
-- 不可将一个集群中的实例全部删除
 
     *
     * @return
@@ -74,13 +77,31 @@ public class DeleteNodeInstancesRequest extends JdcloudRequest implements java.i
 
     /**
     * set 需要从工作节点组中删除的实例
-- 不可将一个集群中的实例全部删除
 
     *
     * @param instanceIds
     */
     public void setInstanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
+    }
+
+
+    /**
+     * get 是否需要释放实例
+     *
+     * @return
+     */
+    public Boolean getRealDeleteInstance() {
+        return realDeleteInstance;
+    }
+
+    /**
+     * set 是否需要释放实例
+     *
+     * @param realDeleteInstance
+     */
+    public void setRealDeleteInstance(Boolean realDeleteInstance) {
+        this.realDeleteInstance = realDeleteInstance;
     }
 
 
@@ -125,10 +146,11 @@ public class DeleteNodeInstancesRequest extends JdcloudRequest implements java.i
 
     /**
     * set 需要从工作节点组中删除的实例
-- 不可将一个集群中的实例全部删除
 
     *
-    * @param instanceIds
+    * @param instanceIds 需要从工作节点组中删除的实例
+
+    * @return DeleteNodeInstancesRequest
     */
     public DeleteNodeInstancesRequest instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
@@ -137,9 +159,22 @@ public class DeleteNodeInstancesRequest extends JdcloudRequest implements java.i
 
 
     /**
+     * set 是否需要释放实例
+     *
+     * @param realDeleteInstance 是否需要释放实例
+     * @return DeleteNodeInstancesRequest
+     */
+    public DeleteNodeInstancesRequest realDeleteInstance(Boolean realDeleteInstance) {
+        this.realDeleteInstance = realDeleteInstance;
+        return this;
+    }
+
+
+    /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return DeleteNodeInstancesRequest
      */
     public DeleteNodeInstancesRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -150,7 +185,8 @@ public class DeleteNodeInstancesRequest extends JdcloudRequest implements java.i
     /**
      * set 工作节点组 ID
      *
-     * @param nodeGroupId
+     * @param nodeGroupId 工作节点组 ID
+     * @return DeleteNodeInstancesRequest
      */
     public DeleteNodeInstancesRequest nodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
@@ -161,7 +197,6 @@ public class DeleteNodeInstancesRequest extends JdcloudRequest implements java.i
 
     /**
      * add item to 需要从工作节点组中删除的实例
-- 不可将一个集群中的实例全部删除
 
      *
      * @param instanceId

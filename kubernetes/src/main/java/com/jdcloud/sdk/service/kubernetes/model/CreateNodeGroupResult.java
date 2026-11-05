@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建工作节点组&lt;br&gt;
+ * 创建云主机节点组&lt;br&gt;
 - 要求集群状态为running
 
  */
@@ -39,6 +39,11 @@ public class CreateNodeGroupResult extends JdcloudResult implements java.io.Seri
      * nodeGroupId
      */
     private String nodeGroupId;
+
+    /**
+     * 创建节点组关联的操作ID
+     */
+    private String operationId;
 
 
 
@@ -61,14 +66,46 @@ public class CreateNodeGroupResult extends JdcloudResult implements java.io.Seri
     }
 
 
+    /**
+     * get 创建节点组关联的操作ID
+     *
+     * @return
+     */
+    public String getOperationId() {
+        return operationId;
+    }
+
+    /**
+     * set 创建节点组关联的操作ID
+     *
+     * @param operationId
+     */
+    public void setOperationId(String operationId) {
+        this.operationId = operationId;
+    }
+
+
 
     /**
      * set nodeGroupId
      *
-     * @param nodeGroupId
+     * @param nodeGroupId 
+     * @return CreateNodeGroupResult
      */
     public CreateNodeGroupResult nodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
+        return this;
+    }
+
+
+    /**
+     * set 创建节点组关联的操作ID
+     *
+     * @param operationId 创建节点组关联的操作ID
+     * @return CreateNodeGroupResult
+     */
+    public CreateNodeGroupResult operationId(String operationId) {
+        this.operationId = operationId;
         return this;
     }
 

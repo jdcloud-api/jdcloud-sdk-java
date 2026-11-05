@@ -144,7 +144,8 @@ public class DiskSpec  implements java.io.Serializable {
     /**
      * set 磁盘类型，取值为cloud、local，默认为cloud
      *
-     * @param systemDiskCategory
+     * @param systemDiskCategory 磁盘类型，取值为cloud、local，默认为cloud
+     * @return DiskSpec
      */
     public DiskSpec systemDiskCategory(String systemDiskCategory) {
         this.systemDiskCategory = systemDiskCategory;
@@ -155,7 +156,8 @@ public class DiskSpec  implements java.io.Serializable {
     /**
      * set 云盘系统盘的大小 单位(GB)
      *
-     * @param systemDiskSize
+     * @param systemDiskSize 云盘系统盘的大小 单位(GB)
+     * @return DiskSpec
      */
     public DiskSpec systemDiskSize(Integer systemDiskSize) {
         this.systemDiskSize = systemDiskSize;
@@ -166,7 +168,8 @@ public class DiskSpec  implements java.io.Serializable {
     /**
      * set 云盘系统盘的类型，支持 hdd.std1,ssd.gp1,ssd.io1
      *
-     * @param systemDiskType
+     * @param systemDiskType 云盘系统盘的类型，支持 hdd.std1,ssd.gp1,ssd.io1
+     * @return DiskSpec
      */
     public DiskSpec systemDiskType(String systemDiskType) {
         this.systemDiskType = systemDiskType;
@@ -177,7 +180,8 @@ public class DiskSpec  implements java.io.Serializable {
     /**
      * set 云盘 iops，仅限 ssd.io1 类型云盘有效
      *
-     * @param systemDiskIops
+     * @param systemDiskIops 云盘 iops，仅限 ssd.io1 类型云盘有效
+     * @return DiskSpec
      */
     public DiskSpec systemDiskIops(Integer systemDiskIops) {
         this.systemDiskIops = systemDiskIops;

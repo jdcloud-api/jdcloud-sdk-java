@@ -90,7 +90,8 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
     /**
     * set clusters
     *
-    * @param clusters
+    * @param clusters 
+    * @return DescribeClustersResult
     */
     public DescribeClustersResult clusters(List<Cluster> clusters) {
         this.clusters = clusters;
@@ -101,7 +102,8 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
     /**
      * set totalCount
      *
-     * @param totalCount
+     * @param totalCount 
+     * @return DescribeClustersResult
      */
     public DescribeClustersResult totalCount(Number totalCount) {
         this.totalCount = totalCount;

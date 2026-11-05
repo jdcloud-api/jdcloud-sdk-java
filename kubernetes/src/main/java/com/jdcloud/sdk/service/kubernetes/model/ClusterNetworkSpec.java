@@ -247,7 +247,8 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set kube-apiserver是否可公网访问，false则kube-apiserver不绑定公网地址，true绑定公网地址
      *
-     * @param publicApiServer
+     * @param publicApiServer kube-apiserver是否可公网访问，false则kube-apiserver不绑定公网地址，true绑定公网地址
+     * @return ClusterNetworkSpec
      */
     public ClusterNetworkSpec publicApiServer(Boolean publicApiServer) {
         this.publicApiServer = publicApiServer;
@@ -258,7 +259,8 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set master网络的cidr
      *
-     * @param masterCidr
+     * @param masterCidr master网络的cidr
+     * @return ClusterNetworkSpec
      */
     public ClusterNetworkSpec masterCidr(String masterCidr) {
         this.masterCidr = masterCidr;
@@ -269,7 +271,8 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set service网络的cidr
      *
-     * @param serviceCidr
+     * @param serviceCidr service网络的cidr
+     * @return ClusterNetworkSpec
      */
     public ClusterNetworkSpec serviceCidr(String serviceCidr) {
         this.serviceCidr = serviceCidr;
@@ -280,7 +283,8 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 用户侧承载node和pod的vpc id
      *
-     * @param vpcId
+     * @param vpcId 用户侧承载node和pod的vpc id
+     * @return ClusterNetworkSpec
      */
     public ClusterNetworkSpec vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -291,7 +295,8 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 初始pod的子网id
      *
-     * @param podSubnetId
+     * @param podSubnetId 初始pod的子网id
+     * @return ClusterNetworkSpec
      */
     public ClusterNetworkSpec podSubnetId(String podSubnetId) {
         this.podSubnetId = podSubnetId;
@@ -302,7 +307,8 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 初始loadbalancer类型的service所创建的lb所在的subnet
      *
-     * @param lbSubnetId
+     * @param lbSubnetId 初始loadbalancer类型的service所创建的lb所在的subnet
+     * @return ClusterNetworkSpec
      */
     public ClusterNetworkSpec lbSubnetId(String lbSubnetId) {
         this.lbSubnetId = lbSubnetId;
@@ -313,7 +319,8 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 初始的node子网ID
      *
-     * @param nodeSubnetId
+     * @param nodeSubnetId 初始的node子网ID
+     * @return ClusterNetworkSpec
      */
     public ClusterNetworkSpec nodeSubnetId(String nodeSubnetId) {
         this.nodeSubnetId = nodeSubnetId;
@@ -324,7 +331,8 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set nat网关配置
      *
-     * @param natGateway
+     * @param natGateway nat网关配置
+     * @return ClusterNetworkSpec
      */
     public ClusterNetworkSpec natGateway(NatGatewaySpec natGateway) {
         this.natGateway = natGateway;

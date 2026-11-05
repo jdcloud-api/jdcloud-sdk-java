@@ -33,19 +33,19 @@ public class MasterProgress  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 操作类型 upgrade,rollback,downgrade 等
+     * 操作类型 upgrade
      */
     private String action;
 
     /**
-     * 升级范围, 目前只有三个值：0, 50, 100
+     * 升级进度
      */
     private String progress;
 
 
 
     /**
-     * get 操作类型 upgrade,rollback,downgrade 等
+     * get 操作类型 upgrade
      *
      * @return
      */
@@ -54,7 +54,7 @@ public class MasterProgress  implements java.io.Serializable {
     }
 
     /**
-     * set 操作类型 upgrade,rollback,downgrade 等
+     * set 操作类型 upgrade
      *
      * @param action
      */
@@ -64,7 +64,7 @@ public class MasterProgress  implements java.io.Serializable {
 
 
     /**
-     * get 升级范围, 目前只有三个值：0, 50, 100
+     * get 升级进度
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class MasterProgress  implements java.io.Serializable {
     }
 
     /**
-     * set 升级范围, 目前只有三个值：0, 50, 100
+     * set 升级进度
      *
      * @param progress
      */
@@ -84,9 +84,10 @@ public class MasterProgress  implements java.io.Serializable {
 
 
     /**
-     * set 操作类型 upgrade,rollback,downgrade 等
+     * set 操作类型 upgrade
      *
-     * @param action
+     * @param action 操作类型 upgrade
+     * @return MasterProgress
      */
     public MasterProgress action(String action) {
         this.action = action;
@@ -95,9 +96,10 @@ public class MasterProgress  implements java.io.Serializable {
 
 
     /**
-     * set 升级范围, 目前只有三个值：0, 50, 100
+     * set 升级进度
      *
-     * @param progress
+     * @param progress 升级进度
+     * @return MasterProgress
      */
     public MasterProgress progress(String progress) {
         this.progress = progress;

@@ -86,7 +86,8 @@ public class Tag  implements java.io.Serializable {
     /**
      * set Tag键
      *
-     * @param key
+     * @param key Tag键
+     * @return Tag
      */
     public Tag key(String key) {
         this.key = key;
@@ -97,7 +98,8 @@ public class Tag  implements java.io.Serializable {
     /**
      * set Tag值
      *
-     * @param value
+     * @param value Tag值
+     * @return Tag
      */
     public Tag value(String value) {
         this.value = value;

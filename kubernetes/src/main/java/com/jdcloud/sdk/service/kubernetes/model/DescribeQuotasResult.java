@@ -66,7 +66,8 @@ public class DescribeQuotasResult extends JdcloudResult implements java.io.Seria
     /**
     * set quotas
     *
-    * @param quotas
+    * @param quotas 
+    * @return DescribeQuotasResult
     */
     public DescribeQuotasResult quotas(List<Quota> quotas) {
         this.quotas = quotas;

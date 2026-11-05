@@ -147,7 +147,8 @@ id - id，支持多个
     /**
      * set 页码；默认为1
      *
-     * @param pageNumber
+     * @param pageNumber 页码；默认为1
+     * @return DescribeServerlessClustersRequest
      */
     public DescribeServerlessClustersRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -158,7 +159,8 @@ id - id，支持多个
     /**
      * set 分页大小；默认为20；取值范围[10, 100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小；默认为20；取值范围[10, 100]
+     * @return DescribeServerlessClustersRequest
      */
     public DescribeServerlessClustersRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -171,7 +173,10 @@ id - id，支持多个
 id - id，支持多个   
 
     *
-    * @param filters
+    * @param filters name - 集群名称，模糊匹配，仅支持单个   
+id - id，支持多个   
+
+    * @return DescribeServerlessClustersRequest
     */
     public DescribeServerlessClustersRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -182,7 +187,8 @@ id - id，支持多个
     /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return DescribeServerlessClustersRequest
      */
     public DescribeServerlessClustersRequest regionId(String regionId) {
         this.regionId = regionId;

@@ -90,7 +90,8 @@ public class DescribeNodeGroupsResult extends JdcloudResult implements java.io.S
     /**
     * set nodeGroups
     *
-    * @param nodeGroups
+    * @param nodeGroups 
+    * @return DescribeNodeGroupsResult
     */
     public DescribeNodeGroupsResult nodeGroups(List<NodeGroup> nodeGroups) {
         this.nodeGroups = nodeGroups;
@@ -101,7 +102,8 @@ public class DescribeNodeGroupsResult extends JdcloudResult implements java.io.S
     /**
      * set totalCount
      *
-     * @param totalCount
+     * @param totalCount 
+     * @return DescribeNodeGroupsResult
      */
     public DescribeNodeGroupsResult totalCount(Number totalCount) {
         this.totalCount = totalCount;

@@ -178,7 +178,8 @@ clusterName - 根据 cluster 名称查询
     /**
      * set 页码；默认为1
      *
-     * @param pageNumber
+     * @param pageNumber 页码；默认为1
+     * @return DescribeNodeGroupsRequest
      */
     public DescribeNodeGroupsRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -189,7 +190,8 @@ clusterName - 根据 cluster 名称查询
     /**
      * set 分页大小；默认为20；取值范围[10, 100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小；默认为20；取值范围[10, 100]
+     * @return DescribeNodeGroupsRequest
      */
     public DescribeNodeGroupsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -200,7 +202,8 @@ clusterName - 根据 cluster 名称查询
     /**
     * set Tag筛选条件
     *
-    * @param tags
+    * @param tags Tag筛选条件
+    * @return DescribeNodeGroupsRequest
     */
     public DescribeNodeGroupsRequest tags(List<TagFilter> tags) {
         this.tags = tags;
@@ -215,7 +218,12 @@ clusterId - 根据 clusterId 查询
 clusterName - 根据 cluster 名称查询
 
     *
-    * @param filters
+    * @param filters name - 节点组名称，模糊匹配，支持单个
+id - 节点组 id，支持多个
+clusterId - 根据 clusterId 查询
+clusterName - 根据 cluster 名称查询
+
+    * @return DescribeNodeGroupsRequest
     */
     public DescribeNodeGroupsRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -226,7 +234,8 @@ clusterName - 根据 cluster 名称查询
     /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return DescribeNodeGroupsRequest
      */
     public DescribeNodeGroupsRequest regionId(String regionId) {
         this.regionId = regionId;

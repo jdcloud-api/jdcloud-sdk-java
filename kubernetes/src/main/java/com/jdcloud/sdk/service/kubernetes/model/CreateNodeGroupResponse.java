@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建工作节点组&lt;br&gt;
+ * 创建云主机节点组&lt;br&gt;
 - 要求集群状态为running
 
  */

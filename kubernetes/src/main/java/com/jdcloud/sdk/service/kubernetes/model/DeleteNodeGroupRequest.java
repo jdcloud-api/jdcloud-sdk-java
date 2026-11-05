@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 集群摘除工作节点组并删除工作节点组
+ * 集群摘除工作节点并删除工作节点组
  */
 public class DeleteNodeGroupRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -92,7 +92,8 @@ public class DeleteNodeGroupRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return DeleteNodeGroupRequest
      */
     public DeleteNodeGroupRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class DeleteNodeGroupRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 工作节点组 ID
      *
-     * @param nodeGroupId
+     * @param nodeGroupId 工作节点组 ID
+     * @return DeleteNodeGroupRequest
      */
     public DeleteNodeGroupRequest nodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;

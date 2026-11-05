@@ -86,7 +86,8 @@ public class Label  implements java.io.Serializable {
     /**
      * set key
      *
-     * @param key
+     * @param key 
+     * @return Label
      */
     public Label key(String key) {
         this.key = key;
@@ -97,7 +98,8 @@ public class Label  implements java.io.Serializable {
     /**
      * set value
      *
-     * @param value
+     * @param value 
+     * @return Label
      */
     public Label value(String value) {
         this.value = value;

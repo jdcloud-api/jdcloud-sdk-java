@@ -75,6 +75,16 @@ public class NodeConfig  implements java.io.Serializable {
     
     private List<LabelSpec> labels;
     /**
+     * 工作节点组污点
+     */
+    
+    private List<TaintSpec> taints;
+    /**
+     * 变更是否对存量节点生效
+     */
+    private Boolean updateExistNode;
+
+    /**
      * 云主机脚本，目前支持启动脚本，key为launch-script。
      */
     
@@ -93,6 +103,11 @@ public class NodeConfig  implements java.io.Serializable {
      * 工作节点组的安全组配置，为空则使用默认安全组
      */
     private String securityGroup;
+
+    /**
+     * 工作节点组的计费配置
+     */
+    private ChargeConfigSpec chargeConfig;
 
 
 
@@ -249,6 +264,44 @@ public class NodeConfig  implements java.io.Serializable {
 
 
     /**
+    * get 工作节点组污点
+    *
+    * @return
+    */
+    public List<TaintSpec> getTaints() {
+        return taints;
+    }
+
+    /**
+    * set 工作节点组污点
+    *
+    * @param taints
+    */
+    public void setTaints(List<TaintSpec> taints) {
+        this.taints = taints;
+    }
+
+
+    /**
+     * get 变更是否对存量节点生效
+     *
+     * @return
+     */
+    public Boolean getUpdateExistNode() {
+        return updateExistNode;
+    }
+
+    /**
+     * set 变更是否对存量节点生效
+     *
+     * @param updateExistNode
+     */
+    public void setUpdateExistNode(Boolean updateExistNode) {
+        this.updateExistNode = updateExistNode;
+    }
+
+
+    /**
     * get 云主机脚本，目前支持启动脚本，key为launch-script。
     *
     * @return
@@ -324,11 +377,31 @@ public class NodeConfig  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 工作节点组的计费配置
+     *
+     * @return
+     */
+    public ChargeConfigSpec getChargeConfig() {
+        return chargeConfig;
+    }
+
+    /**
+     * set 工作节点组的计费配置
+     *
+     * @param chargeConfig
+     */
+    public void setChargeConfig(ChargeConfigSpec chargeConfig) {
+        this.chargeConfig = chargeConfig;
+    }
+
+
 
     /**
      * set 实例类型
      *
-     * @param instanceType
+     * @param instanceType 实例类型
+     * @return NodeConfig
      */
     public NodeConfig instanceType(String instanceType) {
         this.instanceType = instanceType;
@@ -339,7 +412,8 @@ public class NodeConfig  implements java.io.Serializable {
     /**
      * set 镜像信息
      *
-     * @param imageId
+     * @param imageId 镜像信息
+     * @return NodeConfig
      */
     public NodeConfig imageId(String imageId) {
         this.imageId = imageId;
@@ -350,7 +424,8 @@ public class NodeConfig  implements java.io.Serializable {
     /**
     * set 云主机SSH密钥对名称
     *
-    * @param keyNames
+    * @param keyNames 云主机SSH密钥对名称
+    * @return NodeConfig
     */
     public NodeConfig keyNames(List<String> keyNames) {
         this.keyNames = keyNames;
@@ -361,7 +436,8 @@ public class NodeConfig  implements java.io.Serializable {
     /**
      * set 云主机磁盘类型
      *
-     * @param systemDiskCategory
+     * @param systemDiskCategory 云主机磁盘类型
+     * @return NodeConfig
      */
     public NodeConfig systemDiskCategory(String systemDiskCategory) {
         this.systemDiskCategory = systemDiskCategory;
@@ -372,7 +448,8 @@ public class NodeConfig  implements java.io.Serializable {
     /**
      * set 云主机云盘系统盘大小  单位(GB)
      *
-     * @param systemDiskSize
+     * @param systemDiskSize 云主机云盘系统盘大小  单位(GB)
+     * @return NodeConfig
      */
     public NodeConfig systemDiskSize(Integer systemDiskSize) {
         this.systemDiskSize = systemDiskSize;
@@ -383,7 +460,8 @@ public class NodeConfig  implements java.io.Serializable {
     /**
      * set 云主机云盘系统盘类型
      *
-     * @param systemDiskType
+     * @param systemDiskType 云主机云盘系统盘类型
+     * @return NodeConfig
      */
     public NodeConfig systemDiskType(String systemDiskType) {
         this.systemDiskType = systemDiskType;
@@ -394,7 +472,8 @@ public class NodeConfig  implements java.io.Serializable {
     /**
      * set 云主机云盘 iops，仅限 ssd 类型云盘有效
      *
-     * @param systemDiskIops
+     * @param systemDiskIops 云主机云盘 iops，仅限 ssd 类型云盘有效
+     * @return NodeConfig
      */
     public NodeConfig systemDiskIops(Integer systemDiskIops) {
         this.systemDiskIops = systemDiskIops;
@@ -405,7 +484,8 @@ public class NodeConfig  implements java.io.Serializable {
     /**
     * set 工作节点组标签
     *
-    * @param labels
+    * @param labels 工作节点组标签
+    * @return NodeConfig
     */
     public NodeConfig labels(List<LabelSpec> labels) {
         this.labels = labels;
@@ -414,9 +494,34 @@ public class NodeConfig  implements java.io.Serializable {
 
 
     /**
+    * set 工作节点组污点
+    *
+    * @param taints 工作节点组污点
+    * @return NodeConfig
+    */
+    public NodeConfig taints(List<TaintSpec> taints) {
+        this.taints = taints;
+        return this;
+    }
+
+
+    /**
+     * set 变更是否对存量节点生效
+     *
+     * @param updateExistNode 变更是否对存量节点生效
+     * @return NodeConfig
+     */
+    public NodeConfig updateExistNode(Boolean updateExistNode) {
+        this.updateExistNode = updateExistNode;
+        return this;
+    }
+
+
+    /**
     * set 云主机脚本，目前支持启动脚本，key为launch-script。
     *
-    * @param userScripts
+    * @param userScripts 云主机脚本，目前支持启动脚本，key为launch-script。
+    * @return NodeConfig
     */
     public NodeConfig userScripts(List<UserScriptSpec> userScripts) {
         this.userScripts = userScripts;
@@ -427,7 +532,8 @@ public class NodeConfig  implements java.io.Serializable {
     /**
     * set 数据盘配置信息
     *
-    * @param dataDiskSpec
+    * @param dataDiskSpec 数据盘配置信息
+    * @return NodeConfig
     */
     public NodeConfig dataDiskSpec(List<DataDiskSpec> dataDiskSpec) {
         this.dataDiskSpec = dataDiskSpec;
@@ -438,7 +544,8 @@ public class NodeConfig  implements java.io.Serializable {
     /**
      * set 数据盘配置信息
      *
-     * @param systemDiskSpec
+     * @param systemDiskSpec 数据盘配置信息
+     * @return NodeConfig
      */
     public NodeConfig systemDiskSpec(DiskSpec systemDiskSpec) {
         this.systemDiskSpec = systemDiskSpec;
@@ -449,10 +556,23 @@ public class NodeConfig  implements java.io.Serializable {
     /**
      * set 工作节点组的安全组配置，为空则使用默认安全组
      *
-     * @param securityGroup
+     * @param securityGroup 工作节点组的安全组配置，为空则使用默认安全组
+     * @return NodeConfig
      */
     public NodeConfig securityGroup(String securityGroup) {
         this.securityGroup = securityGroup;
+        return this;
+    }
+
+
+    /**
+     * set 工作节点组的计费配置
+     *
+     * @param chargeConfig 工作节点组的计费配置
+     * @return NodeConfig
+     */
+    public NodeConfig chargeConfig(ChargeConfigSpec chargeConfig) {
+        this.chargeConfig = chargeConfig;
         return this;
     }
 
@@ -480,6 +600,18 @@ public class NodeConfig  implements java.io.Serializable {
             this.labels = new ArrayList<>();
         }
         this.labels.add(label);
+    }
+
+    /**
+     * add item to 工作节点组污点
+     *
+     * @param taint
+     */
+    public void addTaint(TaintSpec taint) {
+        if (this.taints == null) {
+            this.taints = new ArrayList<>();
+        }
+        this.taints.add(taint);
     }
 
     /**

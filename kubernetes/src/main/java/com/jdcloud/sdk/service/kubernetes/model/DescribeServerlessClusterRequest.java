@@ -92,7 +92,8 @@ public class DescribeServerlessClusterRequest extends JdcloudRequest implements 
     /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return DescribeServerlessClusterRequest
      */
     public DescribeServerlessClusterRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class DescribeServerlessClusterRequest extends JdcloudRequest implements 
     /**
      * set 集群 ID
      *
-     * @param clusterId
+     * @param clusterId 集群 ID
+     * @return DescribeServerlessClusterRequest
      */
     public DescribeServerlessClusterRequest clusterId(String clusterId) {
         this.clusterId = clusterId;

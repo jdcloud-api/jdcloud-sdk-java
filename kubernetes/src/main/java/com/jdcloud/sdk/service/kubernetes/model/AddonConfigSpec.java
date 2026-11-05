@@ -163,7 +163,8 @@ public class AddonConfigSpec  implements java.io.Serializable {
     /**
      * set 组件名称，目前支持customMetrics、logging
      *
-     * @param name
+     * @param name 组件名称，目前支持customMetrics、logging
+     * @return AddonConfigSpec
      */
     public AddonConfigSpec name(String name) {
         this.name = name;
@@ -174,7 +175,8 @@ public class AddonConfigSpec  implements java.io.Serializable {
     /**
      * set 组件版本，非必须
      *
-     * @param version
+     * @param version 组件版本，非必须
+     * @return AddonConfigSpec
      */
     public AddonConfigSpec version(String version) {
         this.version = version;
@@ -185,7 +187,8 @@ public class AddonConfigSpec  implements java.io.Serializable {
     /**
      * set 是否开启该组件，默认为false。
      *
-     * @param enabled
+     * @param enabled 是否开启该组件，默认为false。
+     * @return AddonConfigSpec
      */
     public AddonConfigSpec enabled(Boolean enabled) {
         this.enabled = enabled;
@@ -196,7 +199,8 @@ public class AddonConfigSpec  implements java.io.Serializable {
     /**
      * set 组件参数(deprecated)
      *
-     * @param params
+     * @param params 组件参数(deprecated)
+     * @return AddonConfigSpec
      */
     public AddonConfigSpec params(Object params) {
         this.params = params;
@@ -207,7 +211,8 @@ public class AddonConfigSpec  implements java.io.Serializable {
     /**
     * set 组件的额外参数（新）
     *
-    * @param parameters
+    * @param parameters 组件的额外参数（新）
+    * @return AddonConfigSpec
     */
     public AddonConfigSpec parameters(List<StringKeyValuePair> parameters) {
         this.parameters = parameters;

@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 描述工作节点组配置信息
+ * 描述云主机节点组配置信息
  */
 public class NodeGroupSpec  implements java.io.Serializable {
 
@@ -43,24 +43,24 @@ public class NodeGroupSpec  implements java.io.Serializable {
     private String name;
 
     /**
-     * description
+     * 描述
      */
     private String description;
 
     /**
-     * 工作节点组的信息
+     * 云主机节点组的信息
      * Required:true
      */
     @Required
     private NodeConfigSpec nodeConfig;
 
     /**
-     * 工作节点组的 az，必须为集群az的子集，默认为集群az
+     * 云主机节点组的 az
      */
     
     private List<String> azs;
     /**
-     * 工作节点组初始化大小，至少为1个
+     * 云主机节点组初始化大小
      * Required:true
      */
     @Required
@@ -70,6 +70,26 @@ public class NodeGroupSpec  implements java.io.Serializable {
      * 自动伸缩配置
      */
     private CAConfigSpec caConfig;
+
+    /**
+     * 资源组id
+     */
+    private String resourceGroupId;
+
+    /**
+     * 工作节点数据盘初始化策略；创建后保存为节点组默认策略；不传时沿用 legacy 默认值；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     */
+    private DiskInitializeSpec diskInitialize;
+
+    /**
+     * 资源标签
+     */
+    
+    private List<Tag> tags;
+    /**
+     * 容器运行时，默认为空字符。仅支持空字符或者kata-container
+     */
+    private String containerRuntime;
 
 
 
@@ -93,7 +113,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
 
 
     /**
-     * get description
+     * get 描述
      *
      * @return
      */
@@ -102,7 +122,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set description
+     * set 描述
      *
      * @param description
      */
@@ -112,7 +132,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
 
 
     /**
-     * get 工作节点组的信息
+     * get 云主机节点组的信息
      *
      * @return
      */
@@ -121,7 +141,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 工作节点组的信息
+     * set 云主机节点组的信息
      *
      * @param nodeConfig
      */
@@ -131,7 +151,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
 
 
     /**
-    * get 工作节点组的 az，必须为集群az的子集，默认为集群az
+    * get 云主机节点组的 az
     *
     * @return
     */
@@ -140,7 +160,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-    * set 工作节点组的 az，必须为集群az的子集，默认为集群az
+    * set 云主机节点组的 az
     *
     * @param azs
     */
@@ -150,7 +170,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
 
 
     /**
-     * get 工作节点组初始化大小，至少为1个
+     * get 云主机节点组初始化大小
      *
      * @return
      */
@@ -159,7 +179,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 工作节点组初始化大小，至少为1个
+     * set 云主机节点组初始化大小
      *
      * @param initialNodeCount
      */
@@ -187,11 +207,88 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 资源组id
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组id
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
+     * get 工作节点数据盘初始化策略；创建后保存为节点组默认策略；不传时沿用 legacy 默认值；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     *
+     * @return
+     */
+    public DiskInitializeSpec getDiskInitialize() {
+        return diskInitialize;
+    }
+
+    /**
+     * set 工作节点数据盘初始化策略；创建后保存为节点组默认策略；不传时沿用 legacy 默认值；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     *
+     * @param diskInitialize
+     */
+    public void setDiskInitialize(DiskInitializeSpec diskInitialize) {
+        this.diskInitialize = diskInitialize;
+    }
+
+
+    /**
+    * get 资源标签
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 资源标签
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get 容器运行时，默认为空字符。仅支持空字符或者kata-container
+     *
+     * @return
+     */
+    public String getContainerRuntime() {
+        return containerRuntime;
+    }
+
+    /**
+     * set 容器运行时，默认为空字符。仅支持空字符或者kata-container
+     *
+     * @param containerRuntime
+     */
+    public void setContainerRuntime(String containerRuntime) {
+        this.containerRuntime = containerRuntime;
+    }
+
+
 
     /**
      * set 名称
      *
-     * @param name
+     * @param name 名称
+     * @return NodeGroupSpec
      */
     public NodeGroupSpec name(String name) {
         this.name = name;
@@ -200,9 +297,10 @@ public class NodeGroupSpec  implements java.io.Serializable {
 
 
     /**
-     * set description
+     * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return NodeGroupSpec
      */
     public NodeGroupSpec description(String description) {
         this.description = description;
@@ -211,9 +309,10 @@ public class NodeGroupSpec  implements java.io.Serializable {
 
 
     /**
-     * set 工作节点组的信息
+     * set 云主机节点组的信息
      *
-     * @param nodeConfig
+     * @param nodeConfig 云主机节点组的信息
+     * @return NodeGroupSpec
      */
     public NodeGroupSpec nodeConfig(NodeConfigSpec nodeConfig) {
         this.nodeConfig = nodeConfig;
@@ -222,9 +321,10 @@ public class NodeGroupSpec  implements java.io.Serializable {
 
 
     /**
-    * set 工作节点组的 az，必须为集群az的子集，默认为集群az
+    * set 云主机节点组的 az
     *
-    * @param azs
+    * @param azs 云主机节点组的 az
+    * @return NodeGroupSpec
     */
     public NodeGroupSpec azs(List<String> azs) {
         this.azs = azs;
@@ -233,9 +333,10 @@ public class NodeGroupSpec  implements java.io.Serializable {
 
 
     /**
-     * set 工作节点组初始化大小，至少为1个
+     * set 云主机节点组初始化大小
      *
-     * @param initialNodeCount
+     * @param initialNodeCount 云主机节点组初始化大小
+     * @return NodeGroupSpec
      */
     public NodeGroupSpec initialNodeCount(Integer initialNodeCount) {
         this.initialNodeCount = initialNodeCount;
@@ -246,7 +347,8 @@ public class NodeGroupSpec  implements java.io.Serializable {
     /**
      * set 自动伸缩配置
      *
-     * @param caConfig
+     * @param caConfig 自动伸缩配置
+     * @return NodeGroupSpec
      */
     public NodeGroupSpec caConfig(CAConfigSpec caConfig) {
         this.caConfig = caConfig;
@@ -254,9 +356,57 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 资源组id
+     *
+     * @param resourceGroupId 资源组id
+     * @return NodeGroupSpec
+     */
+    public NodeGroupSpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
 
     /**
-     * add item to 工作节点组的 az，必须为集群az的子集，默认为集群az
+     * set 工作节点数据盘初始化策略；创建后保存为节点组默认策略；不传时沿用 legacy 默认值；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     *
+     * @param diskInitialize 工作节点数据盘初始化策略；创建后保存为节点组默认策略；不传时沿用 legacy 默认值；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     * @return NodeGroupSpec
+     */
+    public NodeGroupSpec diskInitialize(DiskInitializeSpec diskInitialize) {
+        this.diskInitialize = diskInitialize;
+        return this;
+    }
+
+
+    /**
+    * set 资源标签
+    *
+    * @param tags 资源标签
+    * @return NodeGroupSpec
+    */
+    public NodeGroupSpec tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set 容器运行时，默认为空字符。仅支持空字符或者kata-container
+     *
+     * @param containerRuntime 容器运行时，默认为空字符。仅支持空字符或者kata-container
+     * @return NodeGroupSpec
+     */
+    public NodeGroupSpec containerRuntime(String containerRuntime) {
+        this.containerRuntime = containerRuntime;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 云主机节点组的 az
      *
      * @param az
      */
@@ -265,5 +415,17 @@ public class NodeGroupSpec  implements java.io.Serializable {
             this.azs = new ArrayList<>();
         }
         this.azs.add(az);
+    }
+
+    /**
+     * add item to 资源标签
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 }

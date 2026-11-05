@@ -244,7 +244,8 @@ public class DataDiskSpec  implements java.io.Serializable {
     /**
      * set 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1之一
      *
-     * @param diskType
+     * @param diskType 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1之一
+     * @return DataDiskSpec
      */
     public DataDiskSpec diskType(String diskType) {
         this.diskType = diskType;
@@ -255,7 +256,8 @@ public class DataDiskSpec  implements java.io.Serializable {
     /**
      * set 云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G, ssd.gp1, ssd.io1, hdd.std1 类型取值均是范围[20,16000]GB，步长为10G
      *
-     * @param diskSizeGB
+     * @param diskSizeGB 云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G, ssd.gp1, ssd.io1, hdd.std1 类型取值均是范围[20,16000]GB，步长为10G
+     * @return DataDiskSpec
      */
     public DataDiskSpec diskSizeGB(Integer diskSizeGB) {
         this.diskSizeGB = diskSizeGB;
@@ -266,7 +268,8 @@ public class DataDiskSpec  implements java.io.Serializable {
     /**
      * set 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.
      *
-     * @param iops
+     * @param iops 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.
+     * @return DataDiskSpec
      */
     public DataDiskSpec iops(Integer iops) {
         this.iops = iops;
@@ -277,7 +280,8 @@ public class DataDiskSpec  implements java.io.Serializable {
     /**
      * set 用于创建云硬盘的快照ID
      *
-     * @param snapshotId
+     * @param snapshotId 用于创建云硬盘的快照ID
+     * @return DataDiskSpec
      */
     public DataDiskSpec snapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
@@ -288,7 +292,8 @@ public class DataDiskSpec  implements java.io.Serializable {
     /**
      * set 随虚机删除，默认true
      *
-     * @param autoDelete
+     * @param autoDelete 随虚机删除，默认true
+     * @return DataDiskSpec
      */
     public DataDiskSpec autoDelete(Boolean autoDelete) {
         this.autoDelete = autoDelete;
@@ -299,7 +304,8 @@ public class DataDiskSpec  implements java.io.Serializable {
     /**
      * set 自动format，默认true
      *
-     * @param autoFormat
+     * @param autoFormat 自动format，默认true
+     * @return DataDiskSpec
      */
     public DataDiskSpec autoFormat(Boolean autoFormat) {
         this.autoFormat = autoFormat;
@@ -310,7 +316,8 @@ public class DataDiskSpec  implements java.io.Serializable {
     /**
      * set 支持ext4,xfs
      *
-     * @param fsType
+     * @param fsType 支持ext4,xfs
+     * @return DataDiskSpec
      */
     public DataDiskSpec fsType(String fsType) {
         this.fsType = fsType;
@@ -321,7 +328,8 @@ public class DataDiskSpec  implements java.io.Serializable {
     /**
      * set 挂载点，默认 /var/lib/docker
      *
-     * @param mountPoint
+     * @param mountPoint 挂载点，默认 /var/lib/docker
+     * @return DataDiskSpec
      */
     public DataDiskSpec mountPoint(String mountPoint) {
         this.mountPoint = mountPoint;

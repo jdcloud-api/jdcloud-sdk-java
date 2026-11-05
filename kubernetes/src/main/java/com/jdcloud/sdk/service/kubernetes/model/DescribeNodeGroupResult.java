@@ -64,7 +64,8 @@ public class DescribeNodeGroupResult extends JdcloudResult implements java.io.Se
     /**
      * set nodeGroup
      *
-     * @param nodeGroup
+     * @param nodeGroup 
+     * @return DescribeNodeGroupResult
      */
     public DescribeNodeGroupResult nodeGroup(NodeGroup nodeGroup) {
         this.nodeGroup = nodeGroup;

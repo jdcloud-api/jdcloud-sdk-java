@@ -208,7 +208,8 @@ public class ServerlessClusterNetworkConfig  implements java.io.Serializable {
     /**
      * set kube-apiserver是否可公网访问，false则kube-apiserver不绑定公网地址，true绑定公网地址
      *
-     * @param publicApiServer
+     * @param publicApiServer kube-apiserver是否可公网访问，false则kube-apiserver不绑定公网地址，true绑定公网地址
+     * @return ServerlessClusterNetworkConfig
      */
     public ServerlessClusterNetworkConfig publicApiServer(Boolean publicApiServer) {
         this.publicApiServer = publicApiServer;
@@ -219,7 +220,8 @@ public class ServerlessClusterNetworkConfig  implements java.io.Serializable {
     /**
      * set master网络的cidr
      *
-     * @param masterCidr
+     * @param masterCidr master网络的cidr
+     * @return ServerlessClusterNetworkConfig
      */
     public ServerlessClusterNetworkConfig masterCidr(String masterCidr) {
         this.masterCidr = masterCidr;
@@ -230,7 +232,8 @@ public class ServerlessClusterNetworkConfig  implements java.io.Serializable {
     /**
      * set service网络的cidr
      *
-     * @param serviceCidr
+     * @param serviceCidr service网络的cidr
+     * @return ServerlessClusterNetworkConfig
      */
     public ServerlessClusterNetworkConfig serviceCidr(String serviceCidr) {
         this.serviceCidr = serviceCidr;
@@ -241,7 +244,8 @@ public class ServerlessClusterNetworkConfig  implements java.io.Serializable {
     /**
      * set 用户侧承载node和pod的vpc id
      *
-     * @param vpcId
+     * @param vpcId 用户侧承载node和pod的vpc id
+     * @return ServerlessClusterNetworkConfig
      */
     public ServerlessClusterNetworkConfig vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -252,7 +256,8 @@ public class ServerlessClusterNetworkConfig  implements java.io.Serializable {
     /**
     * set 集群Pod子网信息
     *
-    * @param podSubnets
+    * @param podSubnets 集群Pod子网信息
+    * @return ServerlessClusterNetworkConfig
     */
     public ServerlessClusterNetworkConfig podSubnets(List<ClusterNetworkPodSubnet> podSubnets) {
         this.podSubnets = podSubnets;
@@ -263,7 +268,8 @@ public class ServerlessClusterNetworkConfig  implements java.io.Serializable {
     /**
     * set 集群lb子网信息
     *
-    * @param lbSubnets
+    * @param lbSubnets 集群lb子网信息
+    * @return ServerlessClusterNetworkConfig
     */
     public ServerlessClusterNetworkConfig lbSubnets(List<ClusterNetworkSubnet> lbSubnets) {
         this.lbSubnets = lbSubnets;
@@ -274,7 +280,8 @@ public class ServerlessClusterNetworkConfig  implements java.io.Serializable {
     /**
     * set nat网关配置
     *
-    * @param natGateways
+    * @param natGateways nat网关配置
+    * @return ServerlessClusterNetworkConfig
     */
     public ServerlessClusterNetworkConfig natGateways(List<NatGateway> natGateways) {
         this.natGateways = natGateways;

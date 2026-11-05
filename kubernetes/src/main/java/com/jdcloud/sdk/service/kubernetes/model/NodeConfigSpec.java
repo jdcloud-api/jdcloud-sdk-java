@@ -29,14 +29,14 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 工作节点配置信息
+ * 云主机节点配置信息
  */
 public class NodeConfigSpec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例类型
+     * 云主机实例类型
      * Required:true
      */
     @Required
@@ -53,34 +53,54 @@ public class NodeConfigSpec  implements java.io.Serializable {
     
     private List<String> keyNames;
     /**
+     * 是否允许SSH密码登录。yes：允许SSH密码登录。no：禁止SSH密码登录。仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
+     */
+    private String passWordAuth;
+
+    /**
      * 云主机系统盘配置信息
      */
     private DiskSpec systemDisk;
 
     /**
-     * 工作节点组标签，最多支持 10 个
+     * k8s节点标签，最多支持5个
      */
     
     private List<LabelSpec> labels;
+    /**
+     * k8s节点污点，最多支持20个
+     */
+    
+    private List<TaintSpec> taints;
     /**
      * 云主机脚本，暂定最多支持5个脚本，目前支持脚本类型为启动脚本，key为launch-script。
      */
     
     private List<UserScriptSpec> userScripts;
     /**
+     * 自定义云主机镜像，为空则使用k8s release关联镜像
+     */
+    private String customizedImageId;
+
+    /**
      * 云主机数据盘配置信息
      */
     
     private List<DataDiskSpec> dataDiskSpec;
     /**
-     * 工作节点组的安全组配置，为空则使用默认安全组
+     * 云主机节点的安全组配置，为空则使用默认安全组
      */
     private String securityGroup;
+
+    /**
+     * 云主机节点的计费配置
+     */
+    private ChargeConfigSpec chargeConfig;
 
 
 
     /**
-     * get 实例类型
+     * get 云主机实例类型
      *
      * @return
      */
@@ -89,7 +109,7 @@ public class NodeConfigSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型
+     * set 云主机实例类型
      *
      * @param instanceType
      */
@@ -137,6 +157,25 @@ public class NodeConfigSpec  implements java.io.Serializable {
 
 
     /**
+     * get 是否允许SSH密码登录。yes：允许SSH密码登录。no：禁止SSH密码登录。仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
+     *
+     * @return
+     */
+    public String getPassWordAuth() {
+        return passWordAuth;
+    }
+
+    /**
+     * set 是否允许SSH密码登录。yes：允许SSH密码登录。no：禁止SSH密码登录。仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
+     *
+     * @param passWordAuth
+     */
+    public void setPassWordAuth(String passWordAuth) {
+        this.passWordAuth = passWordAuth;
+    }
+
+
+    /**
      * get 云主机系统盘配置信息
      *
      * @return
@@ -156,7 +195,7 @@ public class NodeConfigSpec  implements java.io.Serializable {
 
 
     /**
-    * get 工作节点组标签，最多支持 10 个
+    * get k8s节点标签，最多支持5个
     *
     * @return
     */
@@ -165,12 +204,31 @@ public class NodeConfigSpec  implements java.io.Serializable {
     }
 
     /**
-    * set 工作节点组标签，最多支持 10 个
+    * set k8s节点标签，最多支持5个
     *
     * @param labels
     */
     public void setLabels(List<LabelSpec> labels) {
         this.labels = labels;
+    }
+
+
+    /**
+    * get k8s节点污点，最多支持20个
+    *
+    * @return
+    */
+    public List<TaintSpec> getTaints() {
+        return taints;
+    }
+
+    /**
+    * set k8s节点污点，最多支持20个
+    *
+    * @param taints
+    */
+    public void setTaints(List<TaintSpec> taints) {
+        this.taints = taints;
     }
 
 
@@ -194,6 +252,25 @@ public class NodeConfigSpec  implements java.io.Serializable {
 
 
     /**
+     * get 自定义云主机镜像，为空则使用k8s release关联镜像
+     *
+     * @return
+     */
+    public String getCustomizedImageId() {
+        return customizedImageId;
+    }
+
+    /**
+     * set 自定义云主机镜像，为空则使用k8s release关联镜像
+     *
+     * @param customizedImageId
+     */
+    public void setCustomizedImageId(String customizedImageId) {
+        this.customizedImageId = customizedImageId;
+    }
+
+
+    /**
     * get 云主机数据盘配置信息
     *
     * @return
@@ -213,7 +290,7 @@ public class NodeConfigSpec  implements java.io.Serializable {
 
 
     /**
-     * get 工作节点组的安全组配置，为空则使用默认安全组
+     * get 云主机节点的安全组配置，为空则使用默认安全组
      *
      * @return
      */
@@ -222,7 +299,7 @@ public class NodeConfigSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 工作节点组的安全组配置，为空则使用默认安全组
+     * set 云主机节点的安全组配置，为空则使用默认安全组
      *
      * @param securityGroup
      */
@@ -231,11 +308,31 @@ public class NodeConfigSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 云主机节点的计费配置
+     *
+     * @return
+     */
+    public ChargeConfigSpec getChargeConfig() {
+        return chargeConfig;
+    }
 
     /**
-     * set 实例类型
+     * set 云主机节点的计费配置
      *
-     * @param instanceType
+     * @param chargeConfig
+     */
+    public void setChargeConfig(ChargeConfigSpec chargeConfig) {
+        this.chargeConfig = chargeConfig;
+    }
+
+
+
+    /**
+     * set 云主机实例类型
+     *
+     * @param instanceType 云主机实例类型
+     * @return NodeConfigSpec
      */
     public NodeConfigSpec instanceType(String instanceType) {
         this.instanceType = instanceType;
@@ -246,7 +343,8 @@ public class NodeConfigSpec  implements java.io.Serializable {
     /**
      * set 云主机密码，默认为集群密码，密码规范参考：[公共参数规范](https://docs.jdcloud.com/cn/virtual-machines/api/general_parameters)
      *
-     * @param password
+     * @param password 云主机密码，默认为集群密码，密码规范参考：[公共参数规范](https://docs.jdcloud.com/cn/virtual-machines/api/general_parameters)
+     * @return NodeConfigSpec
      */
     public NodeConfigSpec password(String password) {
         this.password = password;
@@ -257,7 +355,8 @@ public class NodeConfigSpec  implements java.io.Serializable {
     /**
     * set 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
     *
-    * @param keyNames
+    * @param keyNames 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    * @return NodeConfigSpec
     */
     public NodeConfigSpec keyNames(List<String> keyNames) {
         this.keyNames = keyNames;
@@ -266,9 +365,22 @@ public class NodeConfigSpec  implements java.io.Serializable {
 
 
     /**
+     * set 是否允许SSH密码登录。yes：允许SSH密码登录。no：禁止SSH密码登录。仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
+     *
+     * @param passWordAuth 是否允许SSH密码登录。yes：允许SSH密码登录。no：禁止SSH密码登录。仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
+     * @return NodeConfigSpec
+     */
+    public NodeConfigSpec passWordAuth(String passWordAuth) {
+        this.passWordAuth = passWordAuth;
+        return this;
+    }
+
+
+    /**
      * set 云主机系统盘配置信息
      *
-     * @param systemDisk
+     * @param systemDisk 云主机系统盘配置信息
+     * @return NodeConfigSpec
      */
     public NodeConfigSpec systemDisk(DiskSpec systemDisk) {
         this.systemDisk = systemDisk;
@@ -277,9 +389,10 @@ public class NodeConfigSpec  implements java.io.Serializable {
 
 
     /**
-    * set 工作节点组标签，最多支持 10 个
+    * set k8s节点标签，最多支持5个
     *
-    * @param labels
+    * @param labels k8s节点标签，最多支持5个
+    * @return NodeConfigSpec
     */
     public NodeConfigSpec labels(List<LabelSpec> labels) {
         this.labels = labels;
@@ -288,9 +401,22 @@ public class NodeConfigSpec  implements java.io.Serializable {
 
 
     /**
+    * set k8s节点污点，最多支持20个
+    *
+    * @param taints k8s节点污点，最多支持20个
+    * @return NodeConfigSpec
+    */
+    public NodeConfigSpec taints(List<TaintSpec> taints) {
+        this.taints = taints;
+        return this;
+    }
+
+
+    /**
     * set 云主机脚本，暂定最多支持5个脚本，目前支持脚本类型为启动脚本，key为launch-script。
     *
-    * @param userScripts
+    * @param userScripts 云主机脚本，暂定最多支持5个脚本，目前支持脚本类型为启动脚本，key为launch-script。
+    * @return NodeConfigSpec
     */
     public NodeConfigSpec userScripts(List<UserScriptSpec> userScripts) {
         this.userScripts = userScripts;
@@ -299,9 +425,22 @@ public class NodeConfigSpec  implements java.io.Serializable {
 
 
     /**
+     * set 自定义云主机镜像，为空则使用k8s release关联镜像
+     *
+     * @param customizedImageId 自定义云主机镜像，为空则使用k8s release关联镜像
+     * @return NodeConfigSpec
+     */
+    public NodeConfigSpec customizedImageId(String customizedImageId) {
+        this.customizedImageId = customizedImageId;
+        return this;
+    }
+
+
+    /**
     * set 云主机数据盘配置信息
     *
-    * @param dataDiskSpec
+    * @param dataDiskSpec 云主机数据盘配置信息
+    * @return NodeConfigSpec
     */
     public NodeConfigSpec dataDiskSpec(List<DataDiskSpec> dataDiskSpec) {
         this.dataDiskSpec = dataDiskSpec;
@@ -310,12 +449,25 @@ public class NodeConfigSpec  implements java.io.Serializable {
 
 
     /**
-     * set 工作节点组的安全组配置，为空则使用默认安全组
+     * set 云主机节点的安全组配置，为空则使用默认安全组
      *
-     * @param securityGroup
+     * @param securityGroup 云主机节点的安全组配置，为空则使用默认安全组
+     * @return NodeConfigSpec
      */
     public NodeConfigSpec securityGroup(String securityGroup) {
         this.securityGroup = securityGroup;
+        return this;
+    }
+
+
+    /**
+     * set 云主机节点的计费配置
+     *
+     * @param chargeConfig 云主机节点的计费配置
+     * @return NodeConfigSpec
+     */
+    public NodeConfigSpec chargeConfig(ChargeConfigSpec chargeConfig) {
+        this.chargeConfig = chargeConfig;
         return this;
     }
 
@@ -334,7 +486,7 @@ public class NodeConfigSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 工作节点组标签，最多支持 10 个
+     * add item to k8s节点标签，最多支持5个
      *
      * @param label
      */
@@ -343,6 +495,18 @@ public class NodeConfigSpec  implements java.io.Serializable {
             this.labels = new ArrayList<>();
         }
         this.labels.add(label);
+    }
+
+    /**
+     * add item to k8s节点污点，最多支持20个
+     *
+     * @param taint
+     */
+    public void addTaint(TaintSpec taint) {
+        if (this.taints == null) {
+            this.taints = new ArrayList<>();
+        }
+        this.taints.add(taint);
     }
 
     /**
