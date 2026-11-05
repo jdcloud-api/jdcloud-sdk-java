@@ -30,10 +30,12 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.kubernetes.model.NodeConfigSpec;
 import com.jdcloud.sdk.service.kubernetes.model.CAConfigSpec;
 import com.jdcloud.sdk.service.kubernetes.model.NodeGroupNetworkSpec;
+import com.jdcloud.sdk.service.kubernetes.model.DiskInitializeSpec;
+import com.jdcloud.sdk.service.kubernetes.model.Tag;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建工作节点组&lt;br&gt;
+ * 创建云主机节点组&lt;br&gt;
 - 要求集群状态为running
 
  */
@@ -54,26 +56,31 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     private String description;
 
     /**
-     * 工作节点所属的集群
+     * 节点组所属的集群
      * Required:true
      */
     @Required
     private String clusterId;
 
     /**
-     * 工作节点配置信息
+     * 节点组关联的资源组id，不传为默认资源组
+     */
+    private String resourceGroupId;
+
+    /**
+     * 云主机节点配置信息
      * Required:true
      */
     @Required
     private NodeConfigSpec nodeConfig;
 
     /**
-     * 工作节点组的 az，必须为集群az的子集，默认为集群az
+     * 云主机节点组的 az
      */
     
     private List<String> azs;
     /**
-     * 工作节点组初始化大小
+     * 云主机节点组初始化大小
      * Required:true
      */
     @Required
@@ -85,9 +92,24 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     private CAConfigSpec caConfig;
 
     /**
-     * 节点组的网络配置，如果集群的类型customized类型，则必须指定该参数，如果是auto，则不是必须
+     * 节点组的网络配置，如果集群的网络类型为customized类型，则必须指定该参数，如果是auto，则不是必须
      */
     private NodeGroupNetworkSpec nodeGroupNetwork;
+
+    /**
+     * 工作节点数据盘初始化策略；创建后保存为节点组默认策略；不传时沿用 legacy 默认值diskPriority&#x3D;local_first、splitStrategy&#x3D;weighted、containerWeight&#x3D;100、containerCapGB&#x3D;1000、rootfsQuotaGB&#x3D;0；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     */
+    private DiskInitializeSpec diskInitialize;
+
+    /**
+     * 云主机节点组关联的资源标签
+     */
+    
+    private List<Tag> tags;
+    /**
+     * 容器运行时，默认为空字符。仅支持空字符和kata-container
+     */
+    private String containerRuntime;
 
     /**
      * 地域 ID
@@ -137,7 +159,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 工作节点所属的集群
+     * get 节点组所属的集群
      *
      * @return
      */
@@ -146,7 +168,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 工作节点所属的集群
+     * set 节点组所属的集群
      *
      * @param clusterId
      */
@@ -156,7 +178,26 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 工作节点配置信息
+     * get 节点组关联的资源组id，不传为默认资源组
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 节点组关联的资源组id，不传为默认资源组
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
+     * get 云主机节点配置信息
      *
      * @return
      */
@@ -165,7 +206,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 工作节点配置信息
+     * set 云主机节点配置信息
      *
      * @param nodeConfig
      */
@@ -175,7 +216,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-    * get 工作节点组的 az，必须为集群az的子集，默认为集群az
+    * get 云主机节点组的 az
     *
     * @return
     */
@@ -184,7 +225,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-    * set 工作节点组的 az，必须为集群az的子集，默认为集群az
+    * set 云主机节点组的 az
     *
     * @param azs
     */
@@ -194,7 +235,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 工作节点组初始化大小
+     * get 云主机节点组初始化大小
      *
      * @return
      */
@@ -203,7 +244,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 工作节点组初始化大小
+     * set 云主机节点组初始化大小
      *
      * @param initialNodeCount
      */
@@ -232,7 +273,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 节点组的网络配置，如果集群的类型customized类型，则必须指定该参数，如果是auto，则不是必须
+     * get 节点组的网络配置，如果集群的网络类型为customized类型，则必须指定该参数，如果是auto，则不是必须
      *
      * @return
      */
@@ -241,12 +282,69 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 节点组的网络配置，如果集群的类型customized类型，则必须指定该参数，如果是auto，则不是必须
+     * set 节点组的网络配置，如果集群的网络类型为customized类型，则必须指定该参数，如果是auto，则不是必须
      *
      * @param nodeGroupNetwork
      */
     public void setNodeGroupNetwork(NodeGroupNetworkSpec nodeGroupNetwork) {
         this.nodeGroupNetwork = nodeGroupNetwork;
+    }
+
+
+    /**
+     * get 工作节点数据盘初始化策略；创建后保存为节点组默认策略；不传时沿用 legacy 默认值diskPriority&#x3D;local_first、splitStrategy&#x3D;weighted、containerWeight&#x3D;100、containerCapGB&#x3D;1000、rootfsQuotaGB&#x3D;0；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     *
+     * @return
+     */
+    public DiskInitializeSpec getDiskInitialize() {
+        return diskInitialize;
+    }
+
+    /**
+     * set 工作节点数据盘初始化策略；创建后保存为节点组默认策略；不传时沿用 legacy 默认值diskPriority&#x3D;local_first、splitStrategy&#x3D;weighted、containerWeight&#x3D;100、containerCapGB&#x3D;1000、rootfsQuotaGB&#x3D;0；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     *
+     * @param diskInitialize
+     */
+    public void setDiskInitialize(DiskInitializeSpec diskInitialize) {
+        this.diskInitialize = diskInitialize;
+    }
+
+
+    /**
+    * get 云主机节点组关联的资源标签
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 云主机节点组关联的资源标签
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get 容器运行时，默认为空字符。仅支持空字符和kata-container
+     *
+     * @return
+     */
+    public String getContainerRuntime() {
+        return containerRuntime;
+    }
+
+    /**
+     * set 容器运行时，默认为空字符。仅支持空字符和kata-container
+     *
+     * @param containerRuntime
+     */
+    public void setContainerRuntime(String containerRuntime) {
+        this.containerRuntime = containerRuntime;
     }
 
 
@@ -273,7 +371,8 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 名称（同一用户的 cluster 内部唯一）
      *
-     * @param name
+     * @param name 名称（同一用户的 cluster 内部唯一）
+     * @return CreateNodeGroupRequest
      */
     public CreateNodeGroupRequest name(String name) {
         this.name = name;
@@ -284,7 +383,8 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return CreateNodeGroupRequest
      */
     public CreateNodeGroupRequest description(String description) {
         this.description = description;
@@ -293,9 +393,10 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 工作节点所属的集群
+     * set 节点组所属的集群
      *
-     * @param clusterId
+     * @param clusterId 节点组所属的集群
+     * @return CreateNodeGroupRequest
      */
     public CreateNodeGroupRequest clusterId(String clusterId) {
         this.clusterId = clusterId;
@@ -304,9 +405,22 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 工作节点配置信息
+     * set 节点组关联的资源组id，不传为默认资源组
      *
-     * @param nodeConfig
+     * @param resourceGroupId 节点组关联的资源组id，不传为默认资源组
+     * @return CreateNodeGroupRequest
+     */
+    public CreateNodeGroupRequest resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
+     * set 云主机节点配置信息
+     *
+     * @param nodeConfig 云主机节点配置信息
+     * @return CreateNodeGroupRequest
      */
     public CreateNodeGroupRequest nodeConfig(NodeConfigSpec nodeConfig) {
         this.nodeConfig = nodeConfig;
@@ -315,9 +429,10 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-    * set 工作节点组的 az，必须为集群az的子集，默认为集群az
+    * set 云主机节点组的 az
     *
-    * @param azs
+    * @param azs 云主机节点组的 az
+    * @return CreateNodeGroupRequest
     */
     public CreateNodeGroupRequest azs(List<String> azs) {
         this.azs = azs;
@@ -326,9 +441,10 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 工作节点组初始化大小
+     * set 云主机节点组初始化大小
      *
-     * @param initialNodeCount
+     * @param initialNodeCount 云主机节点组初始化大小
+     * @return CreateNodeGroupRequest
      */
     public CreateNodeGroupRequest initialNodeCount(Integer initialNodeCount) {
         this.initialNodeCount = initialNodeCount;
@@ -339,7 +455,8 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 自动伸缩配置
      *
-     * @param caConfig
+     * @param caConfig 自动伸缩配置
+     * @return CreateNodeGroupRequest
      */
     public CreateNodeGroupRequest caConfig(CAConfigSpec caConfig) {
         this.caConfig = caConfig;
@@ -348,9 +465,10 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 节点组的网络配置，如果集群的类型customized类型，则必须指定该参数，如果是auto，则不是必须
+     * set 节点组的网络配置，如果集群的网络类型为customized类型，则必须指定该参数，如果是auto，则不是必须
      *
-     * @param nodeGroupNetwork
+     * @param nodeGroupNetwork 节点组的网络配置，如果集群的网络类型为customized类型，则必须指定该参数，如果是auto，则不是必须
+     * @return CreateNodeGroupRequest
      */
     public CreateNodeGroupRequest nodeGroupNetwork(NodeGroupNetworkSpec nodeGroupNetwork) {
         this.nodeGroupNetwork = nodeGroupNetwork;
@@ -359,9 +477,46 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
+     * set 工作节点数据盘初始化策略；创建后保存为节点组默认策略；不传时沿用 legacy 默认值diskPriority&#x3D;local_first、splitStrategy&#x3D;weighted、containerWeight&#x3D;100、containerCapGB&#x3D;1000、rootfsQuotaGB&#x3D;0；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     *
+     * @param diskInitialize 工作节点数据盘初始化策略；创建后保存为节点组默认策略；不传时沿用 legacy 默认值diskPriority&#x3D;local_first、splitStrategy&#x3D;weighted、containerWeight&#x3D;100、containerCapGB&#x3D;1000、rootfsQuotaGB&#x3D;0；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     * @return CreateNodeGroupRequest
+     */
+    public CreateNodeGroupRequest diskInitialize(DiskInitializeSpec diskInitialize) {
+        this.diskInitialize = diskInitialize;
+        return this;
+    }
+
+
+    /**
+    * set 云主机节点组关联的资源标签
+    *
+    * @param tags 云主机节点组关联的资源标签
+    * @return CreateNodeGroupRequest
+    */
+    public CreateNodeGroupRequest tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set 容器运行时，默认为空字符。仅支持空字符和kata-container
+     *
+     * @param containerRuntime 容器运行时，默认为空字符。仅支持空字符和kata-container
+     * @return CreateNodeGroupRequest
+     */
+    public CreateNodeGroupRequest containerRuntime(String containerRuntime) {
+        this.containerRuntime = containerRuntime;
+        return this;
+    }
+
+
+    /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return CreateNodeGroupRequest
      */
     public CreateNodeGroupRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -371,7 +526,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * add item to 工作节点组的 az，必须为集群az的子集，默认为集群az
+     * add item to 云主机节点组的 az
      *
      * @param az
      */
@@ -380,5 +535,17 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
             this.azs = new ArrayList<>();
         }
         this.azs.add(az);
+    }
+
+    /**
+     * add item to 云主机节点组关联的资源标签
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 }

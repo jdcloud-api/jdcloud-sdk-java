@@ -64,7 +64,8 @@ public class DescribeClusterResult extends JdcloudResult implements java.io.Seri
     /**
      * set cluster
      *
-     * @param cluster
+     * @param cluster 
+     * @return DescribeClusterResult
      */
     public DescribeClusterResult cluster(Cluster cluster) {
         this.cluster = cluster;

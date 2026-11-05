@@ -110,7 +110,8 @@ public class NatGatewaySpec  implements java.io.Serializable {
     /**
      * set nat的类型，nat_vm/nat_gw/nat_none
      *
-     * @param natType
+     * @param natType nat的类型，nat_vm/nat_gw/nat_none
+     * @return NatGatewaySpec
      */
     public NatGatewaySpec natType(String natType) {
         this.natType = natType;
@@ -121,7 +122,8 @@ public class NatGatewaySpec  implements java.io.Serializable {
     /**
      * set nat虚机id，或者nat网关的实例id
      *
-     * @param natId
+     * @param natId nat虚机id，或者nat网关的实例id
+     * @return NatGatewaySpec
      */
     public NatGatewaySpec natId(String natId) {
         this.natId = natId;
@@ -132,7 +134,8 @@ public class NatGatewaySpec  implements java.io.Serializable {
     /**
      * set Nat实例对应的公网IP的配置，只有nat_vm时才生效
      *
-     * @param elasticIpSpec
+     * @param elasticIpSpec Nat实例对应的公网IP的配置，只有nat_vm时才生效
+     * @return NatGatewaySpec
      */
     public NatGatewaySpec elasticIpSpec(NodeElasticIpSpec elasticIpSpec) {
         this.elasticIpSpec = elasticIpSpec;

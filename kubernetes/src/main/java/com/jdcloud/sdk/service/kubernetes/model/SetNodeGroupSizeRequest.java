@@ -25,6 +25,7 @@
 package com.jdcloud.sdk.service.kubernetes.model;
 
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.kubernetes.model.DiskInitializeSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,6 +41,11 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
      */
     @Required
     private Integer expectCount;
+
+    /**
+     * 扩容新建节点使用的磁盘初始化策略；不传时继承节点组默认策略diskPriority&#x3D;local_first、splitStrategy&#x3D;weighted、containerWeight&#x3D;100、containerCapGB&#x3D;1000、rootfsQuotaGB&#x3D;0；显式传入仅覆盖本次扩容，不修改节点组默认策略或存量节点；缩容或节点数不变时不允许传入
+     */
+    private DiskInitializeSpec diskInitialize;
 
     /**
      * 地域 ID
@@ -73,6 +79,25 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
      */
     public void setExpectCount(Integer expectCount) {
         this.expectCount = expectCount;
+    }
+
+
+    /**
+     * get 扩容新建节点使用的磁盘初始化策略；不传时继承节点组默认策略diskPriority&#x3D;local_first、splitStrategy&#x3D;weighted、containerWeight&#x3D;100、containerCapGB&#x3D;1000、rootfsQuotaGB&#x3D;0；显式传入仅覆盖本次扩容，不修改节点组默认策略或存量节点；缩容或节点数不变时不允许传入
+     *
+     * @return
+     */
+    public DiskInitializeSpec getDiskInitialize() {
+        return diskInitialize;
+    }
+
+    /**
+     * set 扩容新建节点使用的磁盘初始化策略；不传时继承节点组默认策略diskPriority&#x3D;local_first、splitStrategy&#x3D;weighted、containerWeight&#x3D;100、containerCapGB&#x3D;1000、rootfsQuotaGB&#x3D;0；显式传入仅覆盖本次扩容，不修改节点组默认策略或存量节点；缩容或节点数不变时不允许传入
+     *
+     * @param diskInitialize
+     */
+    public void setDiskInitialize(DiskInitializeSpec diskInitialize) {
+        this.diskInitialize = diskInitialize;
     }
 
 
@@ -118,7 +143,8 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
     /**
      * set 预期目标节点数量
      *
-     * @param expectCount
+     * @param expectCount 预期目标节点数量
+     * @return SetNodeGroupSizeRequest
      */
     public SetNodeGroupSizeRequest expectCount(Integer expectCount) {
         this.expectCount = expectCount;
@@ -127,9 +153,22 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
 
 
     /**
+     * set 扩容新建节点使用的磁盘初始化策略；不传时继承节点组默认策略diskPriority&#x3D;local_first、splitStrategy&#x3D;weighted、containerWeight&#x3D;100、containerCapGB&#x3D;1000、rootfsQuotaGB&#x3D;0；显式传入仅覆盖本次扩容，不修改节点组默认策略或存量节点；缩容或节点数不变时不允许传入
+     *
+     * @param diskInitialize 扩容新建节点使用的磁盘初始化策略；不传时继承节点组默认策略diskPriority&#x3D;local_first、splitStrategy&#x3D;weighted、containerWeight&#x3D;100、containerCapGB&#x3D;1000、rootfsQuotaGB&#x3D;0；显式传入仅覆盖本次扩容，不修改节点组默认策略或存量节点；缩容或节点数不变时不允许传入
+     * @return SetNodeGroupSizeRequest
+     */
+    public SetNodeGroupSizeRequest diskInitialize(DiskInitializeSpec diskInitialize) {
+        this.diskInitialize = diskInitialize;
+        return this;
+    }
+
+
+    /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return SetNodeGroupSizeRequest
      */
     public SetNodeGroupSizeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +179,8 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
     /**
      * set 工作节点组 ID
      *
-     * @param nodeGroupId
+     * @param nodeGroupId 工作节点组 ID
+     * @return SetNodeGroupSizeRequest
      */
     public SetNodeGroupSizeRequest nodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;

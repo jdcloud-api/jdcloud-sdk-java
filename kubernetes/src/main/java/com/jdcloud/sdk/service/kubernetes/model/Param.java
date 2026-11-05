@@ -86,7 +86,8 @@ public class Param  implements java.io.Serializable {
     /**
      * set 组件参数键
      *
-     * @param key
+     * @param key 组件参数键
+     * @return Param
      */
     public Param key(String key) {
         this.key = key;
@@ -97,7 +98,8 @@ public class Param  implements java.io.Serializable {
     /**
      * set 组件参数值
      *
-     * @param name
+     * @param name 组件参数值
+     * @return Param
      */
     public Param name(String name) {
         this.name = name;

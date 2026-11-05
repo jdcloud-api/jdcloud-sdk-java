@@ -24,6 +24,9 @@
 
 package com.jdcloud.sdk.service.kubernetes.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.kubernetes.model.ClusterOperationMeta;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -31,7 +34,6 @@ import com.jdcloud.sdk.service.JdcloudResult;
 - 证书
   - 关于kubernetes的证书，默认生成，不需要用户传入。
 - nodegroup
-  - cluster必须与nodeGroup进行绑定
   - cluster支持多nodegroup
   - 状态
     - pending,reconciling,deleting状态不可以操作更新接口
@@ -54,6 +56,11 @@ public class CreateClusterResult extends JdcloudResult implements java.io.Serial
      */
     private String clusterId;
 
+    /**
+     * operations
+     */
+    
+    private List<ClusterOperationMeta> operations;
 
 
     /**
@@ -75,11 +82,31 @@ public class CreateClusterResult extends JdcloudResult implements java.io.Serial
     }
 
 
+    /**
+    * get operations
+    *
+    * @return
+    */
+    public List<ClusterOperationMeta> getOperations() {
+        return operations;
+    }
+
+    /**
+    * set operations
+    *
+    * @param operations
+    */
+    public void setOperations(List<ClusterOperationMeta> operations) {
+        this.operations = operations;
+    }
+
+
 
     /**
      * set clusterId
      *
-     * @param clusterId
+     * @param clusterId 
+     * @return CreateClusterResult
      */
     public CreateClusterResult clusterId(String clusterId) {
         this.clusterId = clusterId;
@@ -87,4 +114,28 @@ public class CreateClusterResult extends JdcloudResult implements java.io.Serial
     }
 
 
+    /**
+    * set operations
+    *
+    * @param operations 
+    * @return CreateClusterResult
+    */
+    public CreateClusterResult operations(List<ClusterOperationMeta> operations) {
+        this.operations = operations;
+        return this;
+    }
+
+
+
+    /**
+     * add item to operations
+     *
+     * @param operation
+     */
+    public void addOperation(ClusterOperationMeta operation) {
+        if (this.operations == null) {
+            this.operations = new ArrayList<>();
+        }
+        this.operations.add(operation);
+    }
 }

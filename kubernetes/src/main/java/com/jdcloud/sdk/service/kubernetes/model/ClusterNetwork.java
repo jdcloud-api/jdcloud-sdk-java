@@ -232,7 +232,8 @@ public class ClusterNetwork  implements java.io.Serializable {
     /**
      * set kube-apiserver是否可公网访问，false则kube-apiserver不绑定公网地址，true绑定公网地址
      *
-     * @param publicApiServer
+     * @param publicApiServer kube-apiserver是否可公网访问，false则kube-apiserver不绑定公网地址，true绑定公网地址
+     * @return ClusterNetwork
      */
     public ClusterNetwork publicApiServer(Boolean publicApiServer) {
         this.publicApiServer = publicApiServer;
@@ -243,7 +244,8 @@ public class ClusterNetwork  implements java.io.Serializable {
     /**
      * set master网络的cidr
      *
-     * @param masterCidr
+     * @param masterCidr master网络的cidr
+     * @return ClusterNetwork
      */
     public ClusterNetwork masterCidr(String masterCidr) {
         this.masterCidr = masterCidr;
@@ -254,7 +256,8 @@ public class ClusterNetwork  implements java.io.Serializable {
     /**
      * set service网络的cidr
      *
-     * @param serviceCidr
+     * @param serviceCidr service网络的cidr
+     * @return ClusterNetwork
      */
     public ClusterNetwork serviceCidr(String serviceCidr) {
         this.serviceCidr = serviceCidr;
@@ -265,7 +268,8 @@ public class ClusterNetwork  implements java.io.Serializable {
     /**
      * set 用户侧承载node和pod的vpc id
      *
-     * @param vpcId
+     * @param vpcId 用户侧承载node和pod的vpc id
+     * @return ClusterNetwork
      */
     public ClusterNetwork vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -276,7 +280,8 @@ public class ClusterNetwork  implements java.io.Serializable {
     /**
     * set 集群Pod子网信息
     *
-    * @param podSubnets
+    * @param podSubnets 集群Pod子网信息
+    * @return ClusterNetwork
     */
     public ClusterNetwork podSubnets(List<ClusterNetworkPodSubnet> podSubnets) {
         this.podSubnets = podSubnets;
@@ -287,7 +292,8 @@ public class ClusterNetwork  implements java.io.Serializable {
     /**
     * set 集群子网信息
     *
-    * @param clusterSubnets
+    * @param clusterSubnets 集群子网信息
+    * @return ClusterNetwork
     */
     public ClusterNetwork clusterSubnets(List<ClusterNetworkSubnet> clusterSubnets) {
         this.clusterSubnets = clusterSubnets;
@@ -298,7 +304,8 @@ public class ClusterNetwork  implements java.io.Serializable {
     /**
     * set nat网关配置
     *
-    * @param natGateway
+    * @param natGateway nat网关配置
+    * @return ClusterNetwork
     */
     public ClusterNetwork natGateway(List<NatGateway> natGateway) {
         this.natGateway = natGateway;
@@ -309,7 +316,8 @@ public class ClusterNetwork  implements java.io.Serializable {
     /**
      * set 节点公网IP的配置，如果设置了节点公网IP，此项不为空
      *
-     * @param nodeElasticIpSpec
+     * @param nodeElasticIpSpec 节点公网IP的配置，如果设置了节点公网IP，此项不为空
+     * @return ClusterNetwork
      */
     public ClusterNetwork nodeElasticIpSpec(NodeElasticIpSpec nodeElasticIpSpec) {
         this.nodeElasticIpSpec = nodeElasticIpSpec;

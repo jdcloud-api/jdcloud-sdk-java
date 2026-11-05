@@ -90,7 +90,8 @@ public class DescribeServerlessVersionsRequest extends JdcloudRequest implements
     /**
      * set masterVersion
      *
-     * @param masterVersion
+     * @param masterVersion 
+     * @return DescribeServerlessVersionsRequest
      */
     public DescribeServerlessVersionsRequest masterVersion(String masterVersion) {
         this.masterVersion = masterVersion;
@@ -101,7 +102,8 @@ public class DescribeServerlessVersionsRequest extends JdcloudRequest implements
     /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return DescribeServerlessVersionsRequest
      */
     public DescribeServerlessVersionsRequest regionId(String regionId) {
         this.regionId = regionId;

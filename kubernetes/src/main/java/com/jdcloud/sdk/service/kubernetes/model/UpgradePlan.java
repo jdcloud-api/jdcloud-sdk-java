@@ -67,6 +67,11 @@ public class UpgradePlan  implements java.io.Serializable {
      */
     private Integer duration;
 
+    /**
+     * 集群升级定制选项
+     */
+    private Object options;
+
 
 
     /**
@@ -202,11 +207,31 @@ public class UpgradePlan  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 集群升级定制选项
+     *
+     * @return
+     */
+    public Object getOptions() {
+        return options;
+    }
+
+    /**
+     * set 集群升级定制选项
+     *
+     * @param options
+     */
+    public void setOptions(Object options) {
+        this.options = options;
+    }
+
+
 
     /**
      * set 升级方式 auto, manual
      *
-     * @param mode
+     * @param mode 升级方式 auto, manual
+     * @return UpgradePlan
      */
     public UpgradePlan mode(String mode) {
         this.mode = mode;
@@ -217,7 +242,8 @@ public class UpgradePlan  implements java.io.Serializable {
     /**
      * set 升级范围 cluster, master, nodegroup
      *
-     * @param scope
+     * @param scope 升级范围 cluster, master, nodegroup
+     * @return UpgradePlan
      */
     public UpgradePlan scope(String scope) {
         this.scope = scope;
@@ -228,7 +254,8 @@ public class UpgradePlan  implements java.io.Serializable {
     /**
      * set 升级计划状态 waiting, upgrading
      *
-     * @param state
+     * @param state 升级计划状态 waiting, upgrading
+     * @return UpgradePlan
      */
     public UpgradePlan state(String state) {
         this.state = state;
@@ -239,7 +266,8 @@ public class UpgradePlan  implements java.io.Serializable {
     /**
      * set master 期望版本
      *
-     * @param masterExpectedVersion
+     * @param masterExpectedVersion master 期望版本
+     * @return UpgradePlan
      */
     public UpgradePlan masterExpectedVersion(String masterExpectedVersion) {
         this.masterExpectedVersion = masterExpectedVersion;
@@ -250,7 +278,8 @@ public class UpgradePlan  implements java.io.Serializable {
     /**
      * set node 期望版本
      *
-     * @param nodeExpectedVersion
+     * @param nodeExpectedVersion node 期望版本
+     * @return UpgradePlan
      */
     public UpgradePlan nodeExpectedVersion(String nodeExpectedVersion) {
         this.nodeExpectedVersion = nodeExpectedVersion;
@@ -261,7 +290,8 @@ public class UpgradePlan  implements java.io.Serializable {
     /**
      * set 升级启动时间
      *
-     * @param startTime
+     * @param startTime 升级启动时间
+     * @return UpgradePlan
      */
     public UpgradePlan startTime(String startTime) {
         this.startTime = startTime;
@@ -272,10 +302,23 @@ public class UpgradePlan  implements java.io.Serializable {
     /**
      * set 持续时长
      *
-     * @param duration
+     * @param duration 持续时长
+     * @return UpgradePlan
      */
     public UpgradePlan duration(Integer duration) {
         this.duration = duration;
+        return this;
+    }
+
+
+    /**
+     * set 集群升级定制选项
+     *
+     * @param options 集群升级定制选项
+     * @return UpgradePlan
+     */
+    public UpgradePlan options(Object options) {
+        this.options = options;
         return this;
     }
 

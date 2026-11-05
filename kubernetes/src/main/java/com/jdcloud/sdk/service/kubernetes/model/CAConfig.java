@@ -115,7 +115,9 @@ public class CAConfig  implements java.io.Serializable {
      * set 是否启用了自动伸缩
 
      *
-     * @param enable
+     * @param enable 是否启用了自动伸缩
+
+     * @return CAConfig
      */
     public CAConfig enable(Boolean enable) {
         this.enable = enable;
@@ -126,7 +128,8 @@ public class CAConfig  implements java.io.Serializable {
     /**
      * set 自动扩容最大工作节点数
      *
-     * @param maxNode
+     * @param maxNode 自动扩容最大工作节点数
+     * @return CAConfig
      */
     public CAConfig maxNode(Integer maxNode) {
         this.maxNode = maxNode;
@@ -137,7 +140,8 @@ public class CAConfig  implements java.io.Serializable {
     /**
      * set 自动扩容最小工作节点数
      *
-     * @param minNode
+     * @param minNode 自动扩容最小工作节点数
+     * @return CAConfig
      */
     public CAConfig minNode(Integer minNode) {
         this.minNode = minNode;

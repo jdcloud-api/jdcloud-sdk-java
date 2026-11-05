@@ -137,7 +137,8 @@ public class MaintenanceWindow  implements java.io.Serializable {
     /**
      * set daily, weekly, monthly， 默认 weekly
      *
-     * @param periodType
+     * @param periodType daily, weekly, monthly， 默认 weekly
+     * @return MaintenanceWindow
      */
     public MaintenanceWindow periodType(String periodType) {
         this.periodType = periodType;
@@ -149,7 +150,9 @@ public class MaintenanceWindow  implements java.io.Serializable {
      * set 维护操作开始具体日期, 仅对 periodType 取值为 weekly 或 monthly 时有效, periodType 为 weekly 时可以取 1-7, periodType 为 monthly 时可取 1-28
 
      *
-     * @param startDay
+     * @param startDay 维护操作开始具体日期, 仅对 periodType 取值为 weekly 或 monthly 时有效, periodType 为 weekly 时可以取 1-7, periodType 为 monthly 时可取 1-28
+
+     * @return MaintenanceWindow
      */
     public MaintenanceWindow startDay(Integer startDay) {
         this.startDay = startDay;
@@ -160,7 +163,8 @@ public class MaintenanceWindow  implements java.io.Serializable {
     /**
      * set 维护操作开始具体时间. 时间格式符合RFC3339，并使用 UTC 时间，精确到分钟，例如 23:27
      *
-     * @param startTime
+     * @param startTime 维护操作开始具体时间. 时间格式符合RFC3339，并使用 UTC 时间，精确到分钟，例如 23:27
+     * @return MaintenanceWindow
      */
     public MaintenanceWindow startTime(String startTime) {
         this.startTime = startTime;
@@ -171,7 +175,8 @@ public class MaintenanceWindow  implements java.io.Serializable {
     /**
      * set 维护运行时长: 4-24 小时，步长 1 小时， 默认为： 4小时
      *
-     * @param duration
+     * @param duration 维护运行时长: 4-24 小时，步长 1 小时， 默认为： 4小时
+     * @return MaintenanceWindow
      */
     public MaintenanceWindow duration(Integer duration) {
         this.duration = duration;

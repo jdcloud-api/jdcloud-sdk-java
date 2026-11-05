@@ -41,10 +41,8 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
     private Boolean publicApiServer;
 
     /**
-     * master网络的cidr
-     * Required:true
+     * master网络的cidr；isCreditNic为true时，自动生成；isCreditNic为false，此参数值必填
      */
-    @Required
     private String masterCidr;
 
     /**
@@ -76,10 +74,8 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
     private String lbSubnetId;
 
     /**
-     * 初始的node子网ID
-     * Required:true
+     * 初始的vm node子网ID
      */
-    @Required
     private String nodeSubnetId;
 
     /**
@@ -101,6 +97,16 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
      * 节点公网IP的配置，与nat网关配置互斥，不可同时设置
      */
     private NodeElasticIpSpec nodeElasticIpSpec;
+
+    /**
+     * 负载均衡配置，仅对集群isCreditNic:true生效, 如果isCreditNic设置true,lbConfig对象必须设置
+     */
+    private LbConfig lbConfig;
+
+    /**
+     * 异构节点子网id,如果创建集群时选择了异构节点组，此字段需必传
+     */
+    private String hpcNodeSubnetId;
 
 
 
@@ -124,7 +130,7 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
 
 
     /**
-     * get master网络的cidr
+     * get master网络的cidr；isCreditNic为true时，自动生成；isCreditNic为false，此参数值必填
      *
      * @return
      */
@@ -133,7 +139,7 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
     }
 
     /**
-     * set master网络的cidr
+     * set master网络的cidr；isCreditNic为true时，自动生成；isCreditNic为false，此参数值必填
      *
      * @param masterCidr
      */
@@ -219,7 +225,7 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
 
 
     /**
-     * get 初始的node子网ID
+     * get 初始的vm node子网ID
      *
      * @return
      */
@@ -228,7 +234,7 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 初始的node子网ID
+     * set 初始的vm node子网ID
      *
      * @param nodeSubnetId
      */
@@ -313,11 +319,50 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 负载均衡配置，仅对集群isCreditNic:true生效, 如果isCreditNic设置true,lbConfig对象必须设置
+     *
+     * @return
+     */
+    public LbConfig getLbConfig() {
+        return lbConfig;
+    }
+
+    /**
+     * set 负载均衡配置，仅对集群isCreditNic:true生效, 如果isCreditNic设置true,lbConfig对象必须设置
+     *
+     * @param lbConfig
+     */
+    public void setLbConfig(LbConfig lbConfig) {
+        this.lbConfig = lbConfig;
+    }
+
+
+    /**
+     * get 异构节点子网id,如果创建集群时选择了异构节点组，此字段需必传
+     *
+     * @return
+     */
+    public String getHpcNodeSubnetId() {
+        return hpcNodeSubnetId;
+    }
+
+    /**
+     * set 异构节点子网id,如果创建集群时选择了异构节点组，此字段需必传
+     *
+     * @param hpcNodeSubnetId
+     */
+    public void setHpcNodeSubnetId(String hpcNodeSubnetId) {
+        this.hpcNodeSubnetId = hpcNodeSubnetId;
+    }
+
+
 
     /**
      * set kube-apiserver是否可公网访问，false则kube-apiserver不绑定公网地址，true绑定公网地址
      *
-     * @param publicApiServer
+     * @param publicApiServer kube-apiserver是否可公网访问，false则kube-apiserver不绑定公网地址，true绑定公网地址
+     * @return CustomizedClusterNetworkSpec
      */
     public CustomizedClusterNetworkSpec publicApiServer(Boolean publicApiServer) {
         this.publicApiServer = publicApiServer;
@@ -326,9 +371,10 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
 
 
     /**
-     * set master网络的cidr
+     * set master网络的cidr；isCreditNic为true时，自动生成；isCreditNic为false，此参数值必填
      *
-     * @param masterCidr
+     * @param masterCidr master网络的cidr；isCreditNic为true时，自动生成；isCreditNic为false，此参数值必填
+     * @return CustomizedClusterNetworkSpec
      */
     public CustomizedClusterNetworkSpec masterCidr(String masterCidr) {
         this.masterCidr = masterCidr;
@@ -339,7 +385,8 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set service网络的cidr
      *
-     * @param serviceCidr
+     * @param serviceCidr service网络的cidr
+     * @return CustomizedClusterNetworkSpec
      */
     public CustomizedClusterNetworkSpec serviceCidr(String serviceCidr) {
         this.serviceCidr = serviceCidr;
@@ -350,7 +397,8 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 用户侧承载node和pod的vpc id
      *
-     * @param vpcId
+     * @param vpcId 用户侧承载node和pod的vpc id
+     * @return CustomizedClusterNetworkSpec
      */
     public CustomizedClusterNetworkSpec vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -361,7 +409,8 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 初始pod的子网id
      *
-     * @param podSubnetId
+     * @param podSubnetId 初始pod的子网id
+     * @return CustomizedClusterNetworkSpec
      */
     public CustomizedClusterNetworkSpec podSubnetId(String podSubnetId) {
         this.podSubnetId = podSubnetId;
@@ -372,7 +421,8 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 初始loadbalancer类型的service所创建的lb所在的subnet
      *
-     * @param lbSubnetId
+     * @param lbSubnetId 初始loadbalancer类型的service所创建的lb所在的subnet
+     * @return CustomizedClusterNetworkSpec
      */
     public CustomizedClusterNetworkSpec lbSubnetId(String lbSubnetId) {
         this.lbSubnetId = lbSubnetId;
@@ -381,9 +431,10 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
 
 
     /**
-     * set 初始的node子网ID
+     * set 初始的vm node子网ID
      *
-     * @param nodeSubnetId
+     * @param nodeSubnetId 初始的vm node子网ID
+     * @return CustomizedClusterNetworkSpec
      */
     public CustomizedClusterNetworkSpec nodeSubnetId(String nodeSubnetId) {
         this.nodeSubnetId = nodeSubnetId;
@@ -394,7 +445,8 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 是否双栈支持，开启后，kube-apiserver将拥有ipv6地址，默认不开启
      *
-     * @param dualStack
+     * @param dualStack 是否双栈支持，开启后，kube-apiserver将拥有ipv6地址，默认不开启
+     * @return CustomizedClusterNetworkSpec
      */
     public CustomizedClusterNetworkSpec dualStack(Boolean dualStack) {
         this.dualStack = dualStack;
@@ -405,7 +457,8 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 是否开启master访问公网的能力，如果需要引入公网OIDC认证时需要开启，默认不开启
      *
-     * @param masterNatEnabled
+     * @param masterNatEnabled 是否开启master访问公网的能力，如果需要引入公网OIDC认证时需要开启，默认不开启
+     * @return CustomizedClusterNetworkSpec
      */
     public CustomizedClusterNetworkSpec masterNatEnabled(Boolean masterNatEnabled) {
         this.masterNatEnabled = masterNatEnabled;
@@ -416,7 +469,8 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set nat网关配置
      *
-     * @param natGateway
+     * @param natGateway nat网关配置
+     * @return CustomizedClusterNetworkSpec
      */
     public CustomizedClusterNetworkSpec natGateway(NatGatewaySpec natGateway) {
         this.natGateway = natGateway;
@@ -427,10 +481,35 @@ public class CustomizedClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 节点公网IP的配置，与nat网关配置互斥，不可同时设置
      *
-     * @param nodeElasticIpSpec
+     * @param nodeElasticIpSpec 节点公网IP的配置，与nat网关配置互斥，不可同时设置
+     * @return CustomizedClusterNetworkSpec
      */
     public CustomizedClusterNetworkSpec nodeElasticIpSpec(NodeElasticIpSpec nodeElasticIpSpec) {
         this.nodeElasticIpSpec = nodeElasticIpSpec;
+        return this;
+    }
+
+
+    /**
+     * set 负载均衡配置，仅对集群isCreditNic:true生效, 如果isCreditNic设置true,lbConfig对象必须设置
+     *
+     * @param lbConfig 负载均衡配置，仅对集群isCreditNic:true生效, 如果isCreditNic设置true,lbConfig对象必须设置
+     * @return CustomizedClusterNetworkSpec
+     */
+    public CustomizedClusterNetworkSpec lbConfig(LbConfig lbConfig) {
+        this.lbConfig = lbConfig;
+        return this;
+    }
+
+
+    /**
+     * set 异构节点子网id,如果创建集群时选择了异构节点组，此字段需必传
+     *
+     * @param hpcNodeSubnetId 异构节点子网id,如果创建集群时选择了异构节点组，此字段需必传
+     * @return CustomizedClusterNetworkSpec
+     */
+    public CustomizedClusterNetworkSpec hpcNodeSubnetId(String hpcNodeSubnetId) {
+        this.hpcNodeSubnetId = hpcNodeSubnetId;
         return this;
     }
 

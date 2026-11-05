@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 工作节点组标签
+ * 工作节点组k8s标签
  */
 public class LabelSpec  implements java.io.Serializable {
 
@@ -35,7 +35,7 @@ public class LabelSpec  implements java.io.Serializable {
 
     /**
      * key包含两个部分：prefix与name，name是必须的，prefix是可选的。prefix与name分隔用&quot;/&quot;。 
-name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标准（例如：kubernetes.io/），长度不超过253 
+name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标准（例如：kubernetes.io/），长度不超过253。 
 [参照](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set)    
 
      * Required:true
@@ -52,7 +52,7 @@ name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标�
 
     /**
      * get key包含两个部分：prefix与name，name是必须的，prefix是可选的。prefix与name分隔用&quot;/&quot;。 
-name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标准（例如：kubernetes.io/），长度不超过253 
+name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标准（例如：kubernetes.io/），长度不超过253。 
 [参照](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set)    
 
      *
@@ -64,7 +64,7 @@ name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标�
 
     /**
      * set key包含两个部分：prefix与name，name是必须的，prefix是可选的。prefix与name分隔用&quot;/&quot;。 
-name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标准（例如：kubernetes.io/），长度不超过253 
+name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标准（例如：kubernetes.io/），长度不超过253。 
 [参照](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set)    
 
      *
@@ -97,11 +97,15 @@ name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标�
 
     /**
      * set key包含两个部分：prefix与name，name是必须的，prefix是可选的。prefix与name分隔用&quot;/&quot;。 
-name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标准（例如：kubernetes.io/），长度不超过253 
+name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标准（例如：kubernetes.io/），长度不超过253。 
 [参照](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set)    
 
      *
-     * @param key
+     * @param key key包含两个部分：prefix与name，name是必须的，prefix是可选的。prefix与name分隔用&quot;/&quot;。 
+name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标准（例如：kubernetes.io/），长度不超过253。 
+[参照](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set)    
+
+     * @return LabelSpec
      */
     public LabelSpec key(String key) {
         this.key = key;
@@ -112,7 +116,8 @@ name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标�
     /**
      * set 字母，数字,[-_.],长度不超过63
      *
-     * @param value
+     * @param value 字母，数字,[-_.],长度不超过63
+     * @return LabelSpec
      */
     public LabelSpec value(String value) {
         this.value = value;

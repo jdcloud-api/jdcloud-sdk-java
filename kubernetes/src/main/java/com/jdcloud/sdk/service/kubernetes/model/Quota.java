@@ -110,7 +110,8 @@ public class Quota  implements java.io.Serializable {
     /**
      * set 资源类型[kubernetes、serverless-kubernetes]
      *
-     * @param resourceType
+     * @param resourceType 资源类型[kubernetes、serverless-kubernetes]
+     * @return Quota
      */
     public Quota resourceType(String resourceType) {
         this.resourceType = resourceType;
@@ -121,7 +122,8 @@ public class Quota  implements java.io.Serializable {
     /**
      * set 可用资源上限
      *
-     * @param limit
+     * @param limit 可用资源上限
+     * @return Quota
      */
     public Quota limit(Integer limit) {
         this.limit = limit;
@@ -132,7 +134,8 @@ public class Quota  implements java.io.Serializable {
     /**
      * set 已用资源数量
      *
-     * @param used
+     * @param used 已用资源数量
+     * @return Quota
      */
     public Quota used(Integer used) {
         this.used = used;

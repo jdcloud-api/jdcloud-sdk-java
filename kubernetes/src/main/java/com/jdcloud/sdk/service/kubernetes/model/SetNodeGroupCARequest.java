@@ -119,7 +119,8 @@ public class SetNodeGroupCARequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 自动伸缩配置，其中 enable 必须指定
      *
-     * @param caConfig
+     * @param caConfig 自动伸缩配置，其中 enable 必须指定
+     * @return SetNodeGroupCARequest
      */
     public SetNodeGroupCARequest caConfig(CAConfigSpec caConfig) {
         this.caConfig = caConfig;
@@ -130,7 +131,8 @@ public class SetNodeGroupCARequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return SetNodeGroupCARequest
      */
     public SetNodeGroupCARequest regionId(String regionId) {
         this.regionId = regionId;
@@ -141,7 +143,8 @@ public class SetNodeGroupCARequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 工作节点组 ID
      *
-     * @param nodeGroupId
+     * @param nodeGroupId 工作节点组 ID
+     * @return SetNodeGroupCARequest
      */
     public SetNodeGroupCARequest nodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;

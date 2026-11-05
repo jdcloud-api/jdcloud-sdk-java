@@ -254,7 +254,8 @@ public class ServerlessClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set kube-apiserver是否可公网访问，false则kube-apiserver不绑定公网地址，true绑定公网地址
      *
-     * @param publicApiServer
+     * @param publicApiServer kube-apiserver是否可公网访问，false则kube-apiserver不绑定公网地址，true绑定公网地址
+     * @return ServerlessClusterNetworkSpec
      */
     public ServerlessClusterNetworkSpec publicApiServer(Boolean publicApiServer) {
         this.publicApiServer = publicApiServer;
@@ -265,7 +266,8 @@ public class ServerlessClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set master子网CIDR
      *
-     * @param masterCidr
+     * @param masterCidr master子网CIDR
+     * @return ServerlessClusterNetworkSpec
      */
     public ServerlessClusterNetworkSpec masterCidr(String masterCidr) {
         this.masterCidr = masterCidr;
@@ -276,7 +278,8 @@ public class ServerlessClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set Pod所在VPC
      *
-     * @param vpcId
+     * @param vpcId Pod所在VPC
+     * @return ServerlessClusterNetworkSpec
      */
     public ServerlessClusterNetworkSpec vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -287,7 +290,8 @@ public class ServerlessClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set natGateway
      *
-     * @param natGateway
+     * @param natGateway 
+     * @return ServerlessClusterNetworkSpec
      */
     public ServerlessClusterNetworkSpec natGateway(NatGatewaySpec natGateway) {
         this.natGateway = natGateway;
@@ -298,7 +302,8 @@ public class ServerlessClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set service所在子网CIDR
      *
-     * @param serviceCidr
+     * @param serviceCidr service所在子网CIDR
+     * @return ServerlessClusterNetworkSpec
      */
     public ServerlessClusterNetworkSpec serviceCidr(String serviceCidr) {
         this.serviceCidr = serviceCidr;
@@ -309,7 +314,8 @@ public class ServerlessClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set pod所在子网ID
      *
-     * @param podSubnetId
+     * @param podSubnetId pod所在子网ID
+     * @return ServerlessClusterNetworkSpec
      */
     public ServerlessClusterNetworkSpec podSubnetId(String podSubnetId) {
         this.podSubnetId = podSubnetId;
@@ -320,7 +326,8 @@ public class ServerlessClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set lb所在子网ID
      *
-     * @param lbSubnetId
+     * @param lbSubnetId lb所在子网ID
+     * @return ServerlessClusterNetworkSpec
      */
     public ServerlessClusterNetworkSpec lbSubnetId(String lbSubnetId) {
         this.lbSubnetId = lbSubnetId;
@@ -331,7 +338,8 @@ public class ServerlessClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 是否双栈支持，开启后，kube-apiserver将拥有ipv6地址，默认不开启
      *
-     * @param dualStack
+     * @param dualStack 是否双栈支持，开启后，kube-apiserver将拥有ipv6地址，默认不开启
+     * @return ServerlessClusterNetworkSpec
      */
     public ServerlessClusterNetworkSpec dualStack(Boolean dualStack) {
         this.dualStack = dualStack;
@@ -342,7 +350,8 @@ public class ServerlessClusterNetworkSpec  implements java.io.Serializable {
     /**
      * set 是否开启master访问公网的能力，如果需要引入公网OIDC认证时需要开启，默认不开启
      *
-     * @param masterNatEnabled
+     * @param masterNatEnabled 是否开启master访问公网的能力，如果需要引入公网OIDC认证时需要开启，默认不开启
+     * @return ServerlessClusterNetworkSpec
      */
     public ServerlessClusterNetworkSpec masterNatEnabled(Boolean masterNatEnabled) {
         this.masterNatEnabled = masterNatEnabled;

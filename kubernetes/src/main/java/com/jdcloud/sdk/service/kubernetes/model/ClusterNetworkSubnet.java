@@ -110,7 +110,8 @@ public class ClusterNetworkSubnet  implements java.io.Serializable {
     /**
      * set 子网 ID
      *
-     * @param subnetId
+     * @param subnetId 子网 ID
+     * @return ClusterNetworkSubnet
      */
     public ClusterNetworkSubnet subnetId(String subnetId) {
         this.subnetId = subnetId;
@@ -121,7 +122,8 @@ public class ClusterNetworkSubnet  implements java.io.Serializable {
     /**
      * set 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet
      *
-     * @param subnetType
+     * @param subnetType 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet
+     * @return ClusterNetworkSubnet
      */
     public ClusterNetworkSubnet subnetType(String subnetType) {
         this.subnetType = subnetType;
@@ -132,7 +134,8 @@ public class ClusterNetworkSubnet  implements java.io.Serializable {
     /**
      * set 子网是否启用，仅pod子网可用。
      *
-     * @param enabled
+     * @param enabled 子网是否启用，仅pod子网可用。
+     * @return ClusterNetworkSubnet
      */
     public ClusterNetworkSubnet enabled(Boolean enabled) {
         this.enabled = enabled;

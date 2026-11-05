@@ -640,7 +640,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 集群id
      *
-     * @param clusterId
+     * @param clusterId 集群id
+     * @return ServerlessCluster
      */
     public ServerlessCluster clusterId(String clusterId) {
         this.clusterId = clusterId;
@@ -651,7 +652,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 名称
      *
-     * @param name
+     * @param name 名称
+     * @return ServerlessCluster
      */
     public ServerlessCluster name(String name) {
         this.name = name;
@@ -662,7 +664,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return ServerlessCluster
      */
     public ServerlessCluster description(String description) {
         this.description = description;
@@ -673,7 +676,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set kubernetes的版本
      *
-     * @param version
+     * @param version kubernetes的版本
+     * @return ServerlessCluster
      */
     public ServerlessCluster version(String version) {
         this.version = version;
@@ -684,7 +688,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
     * set 集群所在的az
     *
-    * @param azs
+    * @param azs 集群所在的az
+    * @return ServerlessCluster
     */
     public ServerlessCluster azs(List<String> azs) {
         this.azs = azs;
@@ -695,7 +700,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set k8s的cluster的cidr
      *
-     * @param clusterCidr
+     * @param clusterCidr k8s的cluster的cidr
+     * @return ServerlessCluster
      */
     public ServerlessCluster clusterCidr(String clusterCidr) {
         this.clusterCidr = clusterCidr;
@@ -706,7 +712,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 认证信息
      *
-     * @param masterAuth
+     * @param masterAuth 认证信息
+     * @return ServerlessCluster
      */
     public ServerlessCluster masterAuth(MasterAuth masterAuth) {
         this.masterAuth = masterAuth;
@@ -717,7 +724,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 状态  [pending,running,reconciling（升级时的状态）, deleting, deleted, error]
      *
-     * @param clusterState
+     * @param clusterState 状态  [pending,running,reconciling（升级时的状态）, deleting, deleted, error]
+     * @return ServerlessCluster
      */
     public ServerlessCluster clusterState(String clusterState) {
         this.clusterState = clusterState;
@@ -728,7 +736,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 状态变更原因
      *
-     * @param stateMessage
+     * @param stateMessage 状态变更原因
+     * @return ServerlessCluster
      */
     public ServerlessCluster stateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
@@ -739,7 +748,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 用户的AccessKey，插件调用open-api时的认证凭证
      *
-     * @param accessKey
+     * @param accessKey 用户的AccessKey，插件调用open-api时的认证凭证
+     * @return ServerlessCluster
      */
     public ServerlessCluster accessKey(String accessKey) {
         this.accessKey = accessKey;
@@ -750,7 +760,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 基本验证方式
      *
-     * @param basicAuth
+     * @param basicAuth 基本验证方式
+     * @return ServerlessCluster
      */
     public ServerlessCluster basicAuth(Boolean basicAuth) {
         this.basicAuth = basicAuth;
@@ -761,7 +772,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 证书验证方式
      *
-     * @param clientCertificate
+     * @param clientCertificate 证书验证方式
+     * @return ServerlessCluster
      */
     public ServerlessCluster clientCertificate(Boolean clientCertificate) {
         this.clientCertificate = clientCertificate;
@@ -772,7 +784,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 用户访问的内网ip
      *
-     * @param privateEndpoint
+     * @param privateEndpoint 用户访问的内网ip
+     * @return ServerlessCluster
      */
     public ServerlessCluster privateEndpoint(String privateEndpoint) {
         this.privateEndpoint = privateEndpoint;
@@ -783,7 +796,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 用户访问的ip
      *
-     * @param endpoint
+     * @param endpoint 用户访问的ip
+     * @return ServerlessCluster
      */
     public ServerlessCluster endpoint(String endpoint) {
         this.endpoint = endpoint;
@@ -794,7 +808,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set IPv6地址
      *
-     * @param endpointIPV6
+     * @param endpointIPV6 IPv6地址
+     * @return ServerlessCluster
      */
     public ServerlessCluster endpointIPV6(String endpointIPV6) {
         this.endpointIPV6 = endpointIPV6;
@@ -805,7 +820,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set endpoint的port
      *
-     * @param endpointPort
+     * @param endpointPort endpoint的port
+     * @return ServerlessCluster
      */
     public ServerlessCluster endpointPort(String endpointPort) {
         this.endpointPort = endpointPort;
@@ -816,7 +832,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set endpoint的dashboard port
      *
-     * @param dashboardPort
+     * @param dashboardPort endpoint的dashboard port
+     * @return ServerlessCluster
      */
     public ServerlessCluster dashboardPort(String dashboardPort) {
         this.dashboardPort = dashboardPort;
@@ -827,7 +844,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set deprecated 优先以addonsConfig中的配置为准 &lt;br&gt;用户是否启用集群自定义监控，true 表示开启用，false 表示未开启用
      *
-     * @param userMetrics
+     * @param userMetrics deprecated 优先以addonsConfig中的配置为准 &lt;br&gt;用户是否启用集群自定义监控，true 表示开启用，false 表示未开启用
+     * @return ServerlessCluster
      */
     public ServerlessCluster userMetrics(Boolean userMetrics) {
         this.userMetrics = userMetrics;
@@ -838,7 +856,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
     * set 集群组件配置信息
     *
-    * @param addonsConfig
+    * @param addonsConfig 集群组件配置信息
+    * @return ServerlessCluster
     */
     public ServerlessCluster addonsConfig(List<AddonConfig> addonsConfig) {
         this.addonsConfig = addonsConfig;
@@ -849,7 +868,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 控制节点操作进度
      *
-     * @param masterProgress
+     * @param masterProgress 控制节点操作进度
+     * @return ServerlessCluster
      */
     public ServerlessCluster masterProgress(MaintenanceWindow masterProgress) {
         this.masterProgress = masterProgress;
@@ -860,7 +880,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 网络配置信息
      *
-     * @param clusterNetwork
+     * @param clusterNetwork 网络配置信息
+     * @return ServerlessCluster
      */
     public ServerlessCluster clusterNetwork(ServerlessClusterNetworkConfig clusterNetwork) {
         this.clusterNetwork = clusterNetwork;
@@ -871,7 +892,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return ServerlessCluster
      */
     public ServerlessCluster createTime(String createTime) {
         this.createTime = createTime;
@@ -882,7 +904,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 集群网络类型,可取值为auto和customized
      *
-     * @param networkMode
+     * @param networkMode 集群网络类型,可取值为auto和customized
+     * @return ServerlessCluster
      */
     public ServerlessCluster networkMode(String networkMode) {
         this.networkMode = networkMode;
@@ -893,7 +916,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
     * set 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
     *
-    * @param clusterEnvironments
+    * @param clusterEnvironments 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
+    * @return ServerlessCluster
     */
     public ServerlessCluster clusterEnvironments(List<StringKeyValuePair> clusterEnvironments) {
         this.clusterEnvironments = clusterEnvironments;
@@ -904,7 +928,8 @@ public class ServerlessCluster  implements java.io.Serializable {
     /**
      * set 是否是边缘计算集群
      *
-     * @param isEdge
+     * @param isEdge 是否是边缘计算集群
+     * @return ServerlessCluster
      */
     public ServerlessCluster isEdge(Boolean isEdge) {
         this.isEdge = isEdge;

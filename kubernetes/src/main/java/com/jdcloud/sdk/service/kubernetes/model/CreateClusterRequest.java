@@ -27,11 +27,14 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.kubernetes.model.Tag;
 import com.jdcloud.sdk.service.kubernetes.model.NodeGroupSpec;
+import com.jdcloud.sdk.service.kubernetes.model.HpcNodeGroupSpec;
 import com.jdcloud.sdk.service.kubernetes.model.AddonConfigSpec;
 import com.jdcloud.sdk.service.kubernetes.model.AutoClusterNetworkSpec;
 import com.jdcloud.sdk.service.kubernetes.model.CustomizedClusterNetworkSpec;
 import com.jdcloud.sdk.service.kubernetes.model.StringKeyValuePair;
+import com.jdcloud.sdk.service.kubernetes.model.ClusterDnsSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -39,7 +42,6 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 - 证书
   - 关于kubernetes的证书，默认生成，不需要用户传入。
 - nodegroup
-  - cluster必须与nodeGroup进行绑定
   - cluster支持多nodegroup
   - 状态
     - pending,reconciling,deleting状态不可以操作更新接口
@@ -75,36 +77,53 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     private String version;
 
     /**
+     * 集群关联的资源组id，不传使用默认资源组
+     */
+    private String resourceGroupId;
+
+    /**
+     * 集群关联的资源标签
+     */
+    
+    private List<Tag> tags;
+    /**
      * 是否是边缘计算集群
      */
     private Boolean isEdge;
 
     /**
-     * 集群所在的az
-     * Required:true
+     * 是否开启集群删除保护
      */
-    @Required
+    private Boolean deleteProtected;
+
+    /**
+     * 是否开启授信网卡网络模式
+     */
+    private Boolean isCreditNic;
+
+    /**
+     * 集群所在的az,边缘集群必填，中心可用区不填默认随机
+     */
     
     private List<String> azs;
     /**
-     * 集群节点组
-     * Required:true
+     * 云主机节点组
      */
-    @Required
     private NodeGroupSpec nodeGroup;
 
     /**
-     * 用户的AccessKey，插件调用open-api时的认证凭证
-     * Required:true
+     * 异构节点组，仅授信网卡模式支持创建(isCreditNic&#x3D;true)
      */
-    @Required
+    private HpcNodeGroupSpec hpcNodeGroup;
+
+    /**
+     * 用户的AccessKey，插件调用open-api时的认证凭证(已废弃)
+     */
     private String accessKey;
 
     /**
-     * 用户的SecretKey，插件调用open-api时的认证凭证
-     * Required:true
+     * 用户的SecretKey，插件调用open-api时的认证凭证(已废弃)
      */
-    @Required
     private String secretKey;
 
     /**
@@ -132,6 +151,16 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
      */
     
     private List<StringKeyValuePair> clusterEnvironments;
+    /**
+     * 集群DNS配置
+     */
+    private ClusterDnsSpec clusterDnsSpec;
+
+    /**
+     * KubeApiserver自定义域名配置
+     */
+    
+    private List<String> kubeApiserverDomains;
     /**
      * 地域 ID
      * Required:true
@@ -199,6 +228,44 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * get 集群关联的资源组id，不传使用默认资源组
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 集群关联的资源组id，不传使用默认资源组
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
+    * get 集群关联的资源标签
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 集群关联的资源标签
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
      * get 是否是边缘计算集群
      *
      * @return
@@ -218,7 +285,45 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-    * get 集群所在的az
+     * get 是否开启集群删除保护
+     *
+     * @return
+     */
+    public Boolean getDeleteProtected() {
+        return deleteProtected;
+    }
+
+    /**
+     * set 是否开启集群删除保护
+     *
+     * @param deleteProtected
+     */
+    public void setDeleteProtected(Boolean deleteProtected) {
+        this.deleteProtected = deleteProtected;
+    }
+
+
+    /**
+     * get 是否开启授信网卡网络模式
+     *
+     * @return
+     */
+    public Boolean getIsCreditNic() {
+        return isCreditNic;
+    }
+
+    /**
+     * set 是否开启授信网卡网络模式
+     *
+     * @param isCreditNic
+     */
+    public void setIsCreditNic(Boolean isCreditNic) {
+        this.isCreditNic = isCreditNic;
+    }
+
+
+    /**
+    * get 集群所在的az,边缘集群必填，中心可用区不填默认随机
     *
     * @return
     */
@@ -227,7 +332,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-    * set 集群所在的az
+    * set 集群所在的az,边缘集群必填，中心可用区不填默认随机
     *
     * @param azs
     */
@@ -237,7 +342,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 集群节点组
+     * get 云主机节点组
      *
      * @return
      */
@@ -246,7 +351,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 集群节点组
+     * set 云主机节点组
      *
      * @param nodeGroup
      */
@@ -256,7 +361,26 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 用户的AccessKey，插件调用open-api时的认证凭证
+     * get 异构节点组，仅授信网卡模式支持创建(isCreditNic&#x3D;true)
+     *
+     * @return
+     */
+    public HpcNodeGroupSpec getHpcNodeGroup() {
+        return hpcNodeGroup;
+    }
+
+    /**
+     * set 异构节点组，仅授信网卡模式支持创建(isCreditNic&#x3D;true)
+     *
+     * @param hpcNodeGroup
+     */
+    public void setHpcNodeGroup(HpcNodeGroupSpec hpcNodeGroup) {
+        this.hpcNodeGroup = hpcNodeGroup;
+    }
+
+
+    /**
+     * get 用户的AccessKey，插件调用open-api时的认证凭证(已废弃)
      *
      * @return
      */
@@ -265,7 +389,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 用户的AccessKey，插件调用open-api时的认证凭证
+     * set 用户的AccessKey，插件调用open-api时的认证凭证(已废弃)
      *
      * @param accessKey
      */
@@ -275,7 +399,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 用户的SecretKey，插件调用open-api时的认证凭证
+     * get 用户的SecretKey，插件调用open-api时的认证凭证(已废弃)
      *
      * @return
      */
@@ -284,7 +408,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 用户的SecretKey，插件调用open-api时的认证凭证
+     * set 用户的SecretKey，插件调用open-api时的认证凭证(已废弃)
      *
      * @param secretKey
      */
@@ -389,6 +513,44 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * get 集群DNS配置
+     *
+     * @return
+     */
+    public ClusterDnsSpec getClusterDnsSpec() {
+        return clusterDnsSpec;
+    }
+
+    /**
+     * set 集群DNS配置
+     *
+     * @param clusterDnsSpec
+     */
+    public void setClusterDnsSpec(ClusterDnsSpec clusterDnsSpec) {
+        this.clusterDnsSpec = clusterDnsSpec;
+    }
+
+
+    /**
+    * get KubeApiserver自定义域名配置
+    *
+    * @return
+    */
+    public List<String> getKubeApiserverDomains() {
+        return kubeApiserverDomains;
+    }
+
+    /**
+    * set KubeApiserver自定义域名配置
+    *
+    * @param kubeApiserverDomains
+    */
+    public void setKubeApiserverDomains(List<String> kubeApiserverDomains) {
+        this.kubeApiserverDomains = kubeApiserverDomains;
+    }
+
+
+    /**
      * get 地域 ID
      *
      * @return
@@ -411,7 +573,8 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 名称（同一用户的 cluster 允许重名）
      *
-     * @param name
+     * @param name 名称（同一用户的 cluster 允许重名）
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest name(String name) {
         this.name = name;
@@ -422,7 +585,8 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest description(String description) {
         this.description = description;
@@ -433,7 +597,8 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set kubernetes的版本
      *
-     * @param version
+     * @param version kubernetes的版本
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest version(String version) {
         this.version = version;
@@ -442,9 +607,34 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * set 集群关联的资源组id，不传使用默认资源组
+     *
+     * @param resourceGroupId 集群关联的资源组id，不传使用默认资源组
+     * @return CreateClusterRequest
+     */
+    public CreateClusterRequest resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
+    * set 集群关联的资源标签
+    *
+    * @param tags 集群关联的资源标签
+    * @return CreateClusterRequest
+    */
+    public CreateClusterRequest tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
      * set 是否是边缘计算集群
      *
-     * @param isEdge
+     * @param isEdge 是否是边缘计算集群
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest isEdge(Boolean isEdge) {
         this.isEdge = isEdge;
@@ -453,9 +643,34 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-    * set 集群所在的az
+     * set 是否开启集群删除保护
+     *
+     * @param deleteProtected 是否开启集群删除保护
+     * @return CreateClusterRequest
+     */
+    public CreateClusterRequest deleteProtected(Boolean deleteProtected) {
+        this.deleteProtected = deleteProtected;
+        return this;
+    }
+
+
+    /**
+     * set 是否开启授信网卡网络模式
+     *
+     * @param isCreditNic 是否开启授信网卡网络模式
+     * @return CreateClusterRequest
+     */
+    public CreateClusterRequest isCreditNic(Boolean isCreditNic) {
+        this.isCreditNic = isCreditNic;
+        return this;
+    }
+
+
+    /**
+    * set 集群所在的az,边缘集群必填，中心可用区不填默认随机
     *
-    * @param azs
+    * @param azs 集群所在的az,边缘集群必填，中心可用区不填默认随机
+    * @return CreateClusterRequest
     */
     public CreateClusterRequest azs(List<String> azs) {
         this.azs = azs;
@@ -464,9 +679,10 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 集群节点组
+     * set 云主机节点组
      *
-     * @param nodeGroup
+     * @param nodeGroup 云主机节点组
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest nodeGroup(NodeGroupSpec nodeGroup) {
         this.nodeGroup = nodeGroup;
@@ -475,9 +691,22 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 用户的AccessKey，插件调用open-api时的认证凭证
+     * set 异构节点组，仅授信网卡模式支持创建(isCreditNic&#x3D;true)
      *
-     * @param accessKey
+     * @param hpcNodeGroup 异构节点组，仅授信网卡模式支持创建(isCreditNic&#x3D;true)
+     * @return CreateClusterRequest
+     */
+    public CreateClusterRequest hpcNodeGroup(HpcNodeGroupSpec hpcNodeGroup) {
+        this.hpcNodeGroup = hpcNodeGroup;
+        return this;
+    }
+
+
+    /**
+     * set 用户的AccessKey，插件调用open-api时的认证凭证(已废弃)
+     *
+     * @param accessKey 用户的AccessKey，插件调用open-api时的认证凭证(已废弃)
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest accessKey(String accessKey) {
         this.accessKey = accessKey;
@@ -486,9 +715,10 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 用户的SecretKey，插件调用open-api时的认证凭证
+     * set 用户的SecretKey，插件调用open-api时的认证凭证(已废弃)
      *
-     * @param secretKey
+     * @param secretKey 用户的SecretKey，插件调用open-api时的认证凭证(已废弃)
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest secretKey(String secretKey) {
         this.secretKey = secretKey;
@@ -499,7 +729,8 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
     * set 集群组件配置
     *
-    * @param addonsConfig
+    * @param addonsConfig 集群组件配置
+    * @return CreateClusterRequest
     */
     public CreateClusterRequest addonsConfig(List<AddonConfigSpec> addonsConfig) {
         this.addonsConfig = addonsConfig;
@@ -510,7 +741,8 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 集群网络配置类型，取值：auto，customized，创建集群接口合并，原CreateCusomizedCluster接口废弃
      *
-     * @param clusterNetworkType
+     * @param clusterNetworkType 集群网络配置类型，取值：auto，customized，创建集群接口合并，原CreateCusomizedCluster接口废弃
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest clusterNetworkType(String clusterNetworkType) {
         this.clusterNetworkType = clusterNetworkType;
@@ -521,7 +753,8 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set clusterNetworkType为【auto】时，此配置必须要配置
      *
-     * @param autoClusterNetworkSpec
+     * @param autoClusterNetworkSpec clusterNetworkType为【auto】时，此配置必须要配置
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest autoClusterNetworkSpec(AutoClusterNetworkSpec autoClusterNetworkSpec) {
         this.autoClusterNetworkSpec = autoClusterNetworkSpec;
@@ -532,7 +765,8 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set clusterNetworkType为【customized】时，此配置必须要配置
      *
-     * @param customizedClusterNetworkSpec
+     * @param customizedClusterNetworkSpec clusterNetworkType为【customized】时，此配置必须要配置
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest customizedClusterNetworkSpec(CustomizedClusterNetworkSpec customizedClusterNetworkSpec) {
         this.customizedClusterNetworkSpec = customizedClusterNetworkSpec;
@@ -543,7 +777,8 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
     * set 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
     *
-    * @param clusterEnvironments
+    * @param clusterEnvironments 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
+    * @return CreateClusterRequest
     */
     public CreateClusterRequest clusterEnvironments(List<StringKeyValuePair> clusterEnvironments) {
         this.clusterEnvironments = clusterEnvironments;
@@ -552,9 +787,34 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
+     * set 集群DNS配置
+     *
+     * @param clusterDnsSpec 集群DNS配置
+     * @return CreateClusterRequest
+     */
+    public CreateClusterRequest clusterDnsSpec(ClusterDnsSpec clusterDnsSpec) {
+        this.clusterDnsSpec = clusterDnsSpec;
+        return this;
+    }
+
+
+    /**
+    * set KubeApiserver自定义域名配置
+    *
+    * @param kubeApiserverDomains KubeApiserver自定义域名配置
+    * @return CreateClusterRequest
+    */
+    public CreateClusterRequest kubeApiserverDomains(List<String> kubeApiserverDomains) {
+        this.kubeApiserverDomains = kubeApiserverDomains;
+        return this;
+    }
+
+
+    /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -564,7 +824,19 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * add item to 集群所在的az
+     * add item to 集群关联的资源标签
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
+
+    /**
+     * add item to 集群所在的az,边缘集群必填，中心可用区不填默认随机
      *
      * @param az
      */
@@ -597,5 +869,17 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
             this.clusterEnvironments = new ArrayList<>();
         }
         this.clusterEnvironments.add(clusterEnvironment);
+    }
+
+    /**
+     * add item to KubeApiserver自定义域名配置
+     *
+     * @param kubeApiserverDomain
+     */
+    public void addKubeApiserverDomain(String kubeApiserverDomain) {
+        if (this.kubeApiserverDomains == null) {
+            this.kubeApiserverDomains = new ArrayList<>();
+        }
+        this.kubeApiserverDomains.add(kubeApiserverDomain);
     }
 }

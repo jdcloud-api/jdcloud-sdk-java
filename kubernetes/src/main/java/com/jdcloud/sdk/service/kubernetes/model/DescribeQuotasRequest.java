@@ -97,7 +97,9 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     * set resourceTypes - 资源类型，暂时只支持[kubernetes、serverless-kubernetes]
 
     *
-    * @param filters
+    * @param filters resourceTypes - 资源类型，暂时只支持[kubernetes、serverless-kubernetes]
+
+    * @return DescribeQuotasRequest
     */
     public DescribeQuotasRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -108,7 +110,8 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribeQuotasRequest
      */
     public DescribeQuotasRequest regionId(String regionId) {
         this.regionId = regionId;

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.kubernetes.model.DeleteNodeGroupResponse;
 
 /**
- * 集群摘除工作节点组并删除工作节点组
+ * 集群摘除工作节点并删除工作节点组
  */
 class DeleteNodeGroupExecutor extends JdcloudExecutor {
 

@@ -62,7 +62,8 @@ public class NodeNetwork  implements java.io.Serializable {
     /**
      * set node子网的id
      *
-     * @param nodeSubnetId
+     * @param nodeSubnetId node子网的id
+     * @return NodeNetwork
      */
     public NodeNetwork nodeSubnetId(String nodeSubnetId) {
         this.nodeSubnetId = nodeSubnetId;

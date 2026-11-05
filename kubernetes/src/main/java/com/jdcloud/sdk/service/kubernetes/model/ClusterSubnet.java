@@ -206,7 +206,8 @@ public class ClusterSubnet  implements java.io.Serializable {
     /**
      * set 子网 ID
      *
-     * @param subnetId
+     * @param subnetId 子网 ID
+     * @return ClusterSubnet
      */
     public ClusterSubnet subnetId(String subnetId) {
         this.subnetId = subnetId;
@@ -217,7 +218,8 @@ public class ClusterSubnet  implements java.io.Serializable {
     /**
      * set 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet
      *
-     * @param subnetType
+     * @param subnetType 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet
+     * @return ClusterSubnet
      */
     public ClusterSubnet subnetType(String subnetType) {
         this.subnetType = subnetType;
@@ -228,7 +230,8 @@ public class ClusterSubnet  implements java.io.Serializable {
     /**
      * set 子网是否启用，仅pod子网可用。
      *
-     * @param enabled
+     * @param enabled 子网是否启用，仅pod子网可用。
+     * @return ClusterSubnet
      */
     public ClusterSubnet enabled(Boolean enabled) {
         this.enabled = enabled;
@@ -239,7 +242,8 @@ public class ClusterSubnet  implements java.io.Serializable {
     /**
      * set 子网是否自动删除，用户自定义子网不会自动删除
      *
-     * @param autoDelete
+     * @param autoDelete 子网是否自动删除，用户自定义子网不会自动删除
+     * @return ClusterSubnet
      */
     public ClusterSubnet autoDelete(Boolean autoDelete) {
         this.autoDelete = autoDelete;
@@ -250,7 +254,8 @@ public class ClusterSubnet  implements java.io.Serializable {
     /**
      * set 子网CIDR
      *
-     * @param cidr
+     * @param cidr 子网CIDR
+     * @return ClusterSubnet
      */
     public ClusterSubnet cidr(String cidr) {
         this.cidr = cidr;
@@ -261,7 +266,8 @@ public class ClusterSubnet  implements java.io.Serializable {
     /**
      * set 子网中可用的IP数量
      *
-     * @param availableIpNum
+     * @param availableIpNum 子网中可用的IP数量
+     * @return ClusterSubnet
      */
     public ClusterSubnet availableIpNum(Integer availableIpNum) {
         this.availableIpNum = availableIpNum;
@@ -272,7 +278,8 @@ public class ClusterSubnet  implements java.io.Serializable {
     /**
      * set 子网名称
      *
-     * @param subnetName
+     * @param subnetName 子网名称
+     * @return ClusterSubnet
      */
     public ClusterSubnet subnetName(String subnetName) {
         this.subnetName = subnetName;

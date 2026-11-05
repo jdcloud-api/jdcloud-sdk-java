@@ -33,7 +33,79 @@ public class SetNodeGroupSizeResult extends JdcloudResult implements java.io.Ser
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 扩容任务ID
+     */
+    private Number taskId;
 
+    /**
+     * 扩容操作ID
+     */
+    private String operationId;
+
+
+
+    /**
+     * get 扩容任务ID
+     *
+     * @return
+     */
+    public Number getTaskId() {
+        return taskId;
+    }
+
+    /**
+     * set 扩容任务ID
+     *
+     * @param taskId
+     */
+    public void setTaskId(Number taskId) {
+        this.taskId = taskId;
+    }
+
+
+    /**
+     * get 扩容操作ID
+     *
+     * @return
+     */
+    public String getOperationId() {
+        return operationId;
+    }
+
+    /**
+     * set 扩容操作ID
+     *
+     * @param operationId
+     */
+    public void setOperationId(String operationId) {
+        this.operationId = operationId;
+    }
+
+
+
+    /**
+     * set 扩容任务ID
+     *
+     * @param taskId 扩容任务ID
+     * @return SetNodeGroupSizeResult
+     */
+    public SetNodeGroupSizeResult taskId(Number taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+
+
+    /**
+     * set 扩容操作ID
+     *
+     * @param operationId 扩容操作ID
+     * @return SetNodeGroupSizeResult
+     */
+    public SetNodeGroupSizeResult operationId(String operationId) {
+        this.operationId = operationId;
+        return this;
+    }
 
 
 }

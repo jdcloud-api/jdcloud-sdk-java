@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.kubernetes.model.TagFilter;
 import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
@@ -48,8 +49,13 @@ public class DescribeClustersRequest extends JdcloudRequest implements java.io.S
     private Integer pageSize;
 
     /**
+     * tags
+     */
+    
+    private List<TagFilter> tags;
+    /**
      * name - 集群名称，模糊匹配，仅支持单个   
-id - id，支持多个   
+id - id，支持多个
 
      */
     
@@ -102,8 +108,27 @@ id - id，支持多个
 
 
     /**
+    * get tags
+    *
+    * @return
+    */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+    * set tags
+    *
+    * @param tags
+    */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
     * get name - 集群名称，模糊匹配，仅支持单个   
-id - id，支持多个   
+id - id，支持多个
 
     *
     * @return
@@ -114,7 +139,7 @@ id - id，支持多个
 
     /**
     * set name - 集群名称，模糊匹配，仅支持单个   
-id - id，支持多个   
+id - id，支持多个
 
     *
     * @param filters
@@ -147,7 +172,8 @@ id - id，支持多个
     /**
      * set 页码；默认为1
      *
-     * @param pageNumber
+     * @param pageNumber 页码；默认为1
+     * @return DescribeClustersRequest
      */
     public DescribeClustersRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -158,7 +184,8 @@ id - id，支持多个
     /**
      * set 分页大小；默认为20；取值范围[10, 100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小；默认为20；取值范围[10, 100]
+     * @return DescribeClustersRequest
      */
     public DescribeClustersRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -167,11 +194,26 @@ id - id，支持多个
 
 
     /**
+    * set tags
+    *
+    * @param tags 
+    * @return DescribeClustersRequest
+    */
+    public DescribeClustersRequest tags(List<TagFilter> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
     * set name - 集群名称，模糊匹配，仅支持单个   
-id - id，支持多个   
+id - id，支持多个
 
     *
-    * @param filters
+    * @param filters name - 集群名称，模糊匹配，仅支持单个   
+id - id，支持多个
+
+    * @return DescribeClustersRequest
     */
     public DescribeClustersRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -182,7 +224,8 @@ id - id，支持多个
     /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return DescribeClustersRequest
      */
     public DescribeClustersRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -192,8 +235,20 @@ id - id，支持多个
 
 
     /**
+     * add item to tags
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
+
+    /**
      * add item to name - 集群名称，模糊匹配，仅支持单个   
-id - id，支持多个   
+id - id，支持多个
 
      *
      * @param filter

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 集群摘除工作节点组并删除工作节点组
+ * 集群摘除工作节点并删除工作节点组
  */
 public class DeleteNodeGroupResponse extends JdcloudResponse<DeleteNodeGroupResult> implements java.io.Serializable {
 

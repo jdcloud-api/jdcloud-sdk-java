@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.kubernetes.model.CreateNodeGroupResponse;
 
 /**
- * 创建工作节点组&lt;br&gt;
+ * 创建云主机节点组&lt;br&gt;
 - 要求集群状态为running
 
  */

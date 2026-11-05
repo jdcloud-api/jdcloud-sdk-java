@@ -55,6 +55,11 @@ public class Cluster  implements java.io.Serializable {
     private String version;
 
     /**
+     * k8s可升级的版本
+     */
+    
+    private List<String> upgradeVersion;
+    /**
      * 集群所在的az
      */
     
@@ -75,7 +80,7 @@ public class Cluster  implements java.io.Serializable {
     private MasterAuth masterAuth;
 
     /**
-     * 状态  [pending,running,reconciling（升级时的状态）, deleting, deleted, error]
+     * 状态  [pending,running,upgrading(升级中), deleting, deleted, error]
      */
     private String clusterState;
 
@@ -184,6 +189,36 @@ public class Cluster  implements java.io.Serializable {
      */
     private Boolean isEdge;
 
+    /**
+     * 是否开启集群删除保护
+     */
+    private Boolean deleteProtected;
+
+    /**
+     * 资源标签
+     */
+    
+    private List<Tag> tags;
+    /**
+     * 资源组id
+     */
+    private String resourceGroupId;
+
+    /**
+     * 是否开启集群授权网卡, true表示开启， false表示未开启
+     */
+    private Boolean isCreditNic;
+
+    /**
+     * 集群DNS的定制化配置，可以配置自定义的hosts和域名解析
+     */
+    private ClusterDnsSpec clusterDnsSpec;
+
+    /**
+     * kube-apiserver的自定义域名，会自动签名到证书里
+     */
+    
+    private List<String> kubeApiserverDomains;
 
 
     /**
@@ -259,6 +294,25 @@ public class Cluster  implements java.io.Serializable {
      */
     public void setVersion(String version) {
         this.version = version;
+    }
+
+
+    /**
+    * get k8s可升级的版本
+    *
+    * @return
+    */
+    public List<String> getUpgradeVersion() {
+        return upgradeVersion;
+    }
+
+    /**
+    * set k8s可升级的版本
+    *
+    * @param upgradeVersion
+    */
+    public void setUpgradeVersion(List<String> upgradeVersion) {
+        this.upgradeVersion = upgradeVersion;
     }
 
 
@@ -339,7 +393,7 @@ public class Cluster  implements java.io.Serializable {
 
 
     /**
-     * get 状态  [pending,running,reconciling（升级时的状态）, deleting, deleted, error]
+     * get 状态  [pending,running,upgrading(升级中), deleting, deleted, error]
      *
      * @return
      */
@@ -348,7 +402,7 @@ public class Cluster  implements java.io.Serializable {
     }
 
     /**
-     * set 状态  [pending,running,reconciling（升级时的状态）, deleting, deleted, error]
+     * set 状态  [pending,running,upgrading(升级中), deleting, deleted, error]
      *
      * @param clusterState
      */
@@ -756,11 +810,126 @@ public class Cluster  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 是否开启集群删除保护
+     *
+     * @return
+     */
+    public Boolean getDeleteProtected() {
+        return deleteProtected;
+    }
+
+    /**
+     * set 是否开启集群删除保护
+     *
+     * @param deleteProtected
+     */
+    public void setDeleteProtected(Boolean deleteProtected) {
+        this.deleteProtected = deleteProtected;
+    }
+
+
+    /**
+    * get 资源标签
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set 资源标签
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get 资源组id
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组id
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
+     * get 是否开启集群授权网卡, true表示开启， false表示未开启
+     *
+     * @return
+     */
+    public Boolean getIsCreditNic() {
+        return isCreditNic;
+    }
+
+    /**
+     * set 是否开启集群授权网卡, true表示开启， false表示未开启
+     *
+     * @param isCreditNic
+     */
+    public void setIsCreditNic(Boolean isCreditNic) {
+        this.isCreditNic = isCreditNic;
+    }
+
+
+    /**
+     * get 集群DNS的定制化配置，可以配置自定义的hosts和域名解析
+     *
+     * @return
+     */
+    public ClusterDnsSpec getClusterDnsSpec() {
+        return clusterDnsSpec;
+    }
+
+    /**
+     * set 集群DNS的定制化配置，可以配置自定义的hosts和域名解析
+     *
+     * @param clusterDnsSpec
+     */
+    public void setClusterDnsSpec(ClusterDnsSpec clusterDnsSpec) {
+        this.clusterDnsSpec = clusterDnsSpec;
+    }
+
+
+    /**
+    * get kube-apiserver的自定义域名，会自动签名到证书里
+    *
+    * @return
+    */
+    public List<String> getKubeApiserverDomains() {
+        return kubeApiserverDomains;
+    }
+
+    /**
+    * set kube-apiserver的自定义域名，会自动签名到证书里
+    *
+    * @param kubeApiserverDomains
+    */
+    public void setKubeApiserverDomains(List<String> kubeApiserverDomains) {
+        this.kubeApiserverDomains = kubeApiserverDomains;
+    }
+
+
 
     /**
      * set 集群id
      *
-     * @param clusterId
+     * @param clusterId 集群id
+     * @return Cluster
      */
     public Cluster clusterId(String clusterId) {
         this.clusterId = clusterId;
@@ -771,7 +940,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 名称
      *
-     * @param name
+     * @param name 名称
+     * @return Cluster
      */
     public Cluster name(String name) {
         this.name = name;
@@ -782,7 +952,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 描述
      *
-     * @param description
+     * @param description 描述
+     * @return Cluster
      */
     public Cluster description(String description) {
         this.description = description;
@@ -793,7 +964,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set kubernetes的版本
      *
-     * @param version
+     * @param version kubernetes的版本
+     * @return Cluster
      */
     public Cluster version(String version) {
         this.version = version;
@@ -802,9 +974,22 @@ public class Cluster  implements java.io.Serializable {
 
 
     /**
+    * set k8s可升级的版本
+    *
+    * @param upgradeVersion k8s可升级的版本
+    * @return Cluster
+    */
+    public Cluster upgradeVersion(List<String> upgradeVersion) {
+        this.upgradeVersion = upgradeVersion;
+        return this;
+    }
+
+
+    /**
     * set 集群所在的az
     *
-    * @param azs
+    * @param azs 集群所在的az
+    * @return Cluster
     */
     public Cluster azs(List<String> azs) {
         this.azs = azs;
@@ -815,7 +1000,8 @@ public class Cluster  implements java.io.Serializable {
     /**
     * set 节点组列表
     *
-    * @param nodeGroups
+    * @param nodeGroups 节点组列表
+    * @return Cluster
     */
     public Cluster nodeGroups(List<NodeGroup> nodeGroups) {
         this.nodeGroups = nodeGroups;
@@ -826,7 +1012,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set k8s的cluster的cidr
      *
-     * @param clusterCidr
+     * @param clusterCidr k8s的cluster的cidr
+     * @return Cluster
      */
     public Cluster clusterCidr(String clusterCidr) {
         this.clusterCidr = clusterCidr;
@@ -837,7 +1024,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 认证信息
      *
-     * @param masterAuth
+     * @param masterAuth 认证信息
+     * @return Cluster
      */
     public Cluster masterAuth(MasterAuth masterAuth) {
         this.masterAuth = masterAuth;
@@ -846,9 +1034,10 @@ public class Cluster  implements java.io.Serializable {
 
 
     /**
-     * set 状态  [pending,running,reconciling（升级时的状态）, deleting, deleted, error]
+     * set 状态  [pending,running,upgrading(升级中), deleting, deleted, error]
      *
-     * @param clusterState
+     * @param clusterState 状态  [pending,running,upgrading(升级中), deleting, deleted, error]
+     * @return Cluster
      */
     public Cluster clusterState(String clusterState) {
         this.clusterState = clusterState;
@@ -859,7 +1048,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 状态变更原因
      *
-     * @param stateMessage
+     * @param stateMessage 状态变更原因
+     * @return Cluster
      */
     public Cluster stateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
@@ -870,7 +1060,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return Cluster
      */
     public Cluster updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -881,7 +1072,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return Cluster
      */
     public Cluster createTime(String createTime) {
         this.createTime = createTime;
@@ -892,7 +1084,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 用户的AccessKey，插件调用open-api时的认证凭证
      *
-     * @param accessKey
+     * @param accessKey 用户的AccessKey，插件调用open-api时的认证凭证
+     * @return Cluster
      */
     public Cluster accessKey(String accessKey) {
         this.accessKey = accessKey;
@@ -903,7 +1096,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 基本验证方式
      *
-     * @param basicAuth
+     * @param basicAuth 基本验证方式
+     * @return Cluster
      */
     public Cluster basicAuth(Boolean basicAuth) {
         this.basicAuth = basicAuth;
@@ -914,7 +1108,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 证书验证方式
      *
-     * @param clientCertificate
+     * @param clientCertificate 证书验证方式
+     * @return Cluster
      */
     public Cluster clientCertificate(Boolean clientCertificate) {
         this.clientCertificate = clientCertificate;
@@ -925,7 +1120,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 用户访问的内网ip
      *
-     * @param privateEndpoint
+     * @param privateEndpoint 用户访问的内网ip
+     * @return Cluster
      */
     public Cluster privateEndpoint(String privateEndpoint) {
         this.privateEndpoint = privateEndpoint;
@@ -936,7 +1132,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 用户访问的ip
      *
-     * @param endpoint
+     * @param endpoint 用户访问的ip
+     * @return Cluster
      */
     public Cluster endpoint(String endpoint) {
         this.endpoint = endpoint;
@@ -947,7 +1144,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set IPv6地址
      *
-     * @param endpointIPV6
+     * @param endpointIPV6 IPv6地址
+     * @return Cluster
      */
     public Cluster endpointIPV6(String endpointIPV6) {
         this.endpointIPV6 = endpointIPV6;
@@ -958,7 +1156,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set endpoint的port
      *
-     * @param endpointPort
+     * @param endpointPort endpoint的port
+     * @return Cluster
      */
     public Cluster endpointPort(String endpointPort) {
         this.endpointPort = endpointPort;
@@ -969,7 +1168,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set endpoint的dashboard port
      *
-     * @param dashboardPort
+     * @param dashboardPort endpoint的dashboard port
+     * @return Cluster
      */
     public Cluster dashboardPort(String dashboardPort) {
         this.dashboardPort = dashboardPort;
@@ -980,7 +1180,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set deprecated 优先以addonsConfig中的配置为准 &lt;br&gt;用户是否启用集群自定义监控，true 表示开启用，false 表示未开启用
      *
-     * @param userMetrics
+     * @param userMetrics deprecated 优先以addonsConfig中的配置为准 &lt;br&gt;用户是否启用集群自定义监控，true 表示开启用，false 表示未开启用
+     * @return Cluster
      */
     public Cluster userMetrics(Boolean userMetrics) {
         this.userMetrics = userMetrics;
@@ -991,7 +1192,8 @@ public class Cluster  implements java.io.Serializable {
     /**
     * set 集群组件配置信息
     *
-    * @param addonsConfig
+    * @param addonsConfig 集群组件配置信息
+    * @return Cluster
     */
     public Cluster addonsConfig(List<AddonConfig> addonsConfig) {
         this.addonsConfig = addonsConfig;
@@ -1002,7 +1204,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 是否开启集群自动升级，true 表示开启，false 表示未开启
      *
-     * @param autoUpgrade
+     * @param autoUpgrade 是否开启集群自动升级，true 表示开启，false 表示未开启
+     * @return Cluster
      */
     public Cluster autoUpgrade(Boolean autoUpgrade) {
         this.autoUpgrade = autoUpgrade;
@@ -1013,7 +1216,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 配置集群维护策略
      *
-     * @param maintenanceWindow
+     * @param maintenanceWindow 配置集群维护策略
+     * @return Cluster
      */
     public Cluster maintenanceWindow(MaintenanceWindow maintenanceWindow) {
         this.maintenanceWindow = maintenanceWindow;
@@ -1024,7 +1228,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 集群升级计划信息, 仅展示最新一条升级计划信息
      *
-     * @param upgradePlan
+     * @param upgradePlan 集群升级计划信息, 仅展示最新一条升级计划信息
+     * @return Cluster
      */
     public Cluster upgradePlan(UpgradePlan upgradePlan) {
         this.upgradePlan = upgradePlan;
@@ -1035,7 +1240,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 控制节点操作进度
      *
-     * @param masterProgress
+     * @param masterProgress 控制节点操作进度
+     * @return Cluster
      */
     public Cluster masterProgress(MaintenanceWindow masterProgress) {
         this.masterProgress = masterProgress;
@@ -1046,7 +1252,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 网络配置信息
      *
-     * @param clusterNetwork
+     * @param clusterNetwork 网络配置信息
+     * @return Cluster
      */
     public Cluster clusterNetwork(ClusterNetwork clusterNetwork) {
         this.clusterNetwork = clusterNetwork;
@@ -1057,7 +1264,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 集群网络类型,可取值为auto和customized
      *
-     * @param networkMode
+     * @param networkMode 集群网络类型,可取值为auto和customized
+     * @return Cluster
      */
     public Cluster networkMode(String networkMode) {
         this.networkMode = networkMode;
@@ -1068,7 +1276,8 @@ public class Cluster  implements java.io.Serializable {
     /**
     * set 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
     *
-    * @param clusterEnvironments
+    * @param clusterEnvironments 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
+    * @return Cluster
     */
     public Cluster clusterEnvironments(List<StringKeyValuePair> clusterEnvironments) {
         this.clusterEnvironments = clusterEnvironments;
@@ -1079,7 +1288,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 是否是边缘计算集群
      *
-     * @param isEdge
+     * @param isEdge 是否是边缘计算集群
+     * @return Cluster
      */
     public Cluster isEdge(Boolean isEdge) {
         this.isEdge = isEdge;
@@ -1087,6 +1297,90 @@ public class Cluster  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 是否开启集群删除保护
+     *
+     * @param deleteProtected 是否开启集群删除保护
+     * @return Cluster
+     */
+    public Cluster deleteProtected(Boolean deleteProtected) {
+        this.deleteProtected = deleteProtected;
+        return this;
+    }
+
+
+    /**
+    * set 资源标签
+    *
+    * @param tags 资源标签
+    * @return Cluster
+    */
+    public Cluster tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set 资源组id
+     *
+     * @param resourceGroupId 资源组id
+     * @return Cluster
+     */
+    public Cluster resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
+     * set 是否开启集群授权网卡, true表示开启， false表示未开启
+     *
+     * @param isCreditNic 是否开启集群授权网卡, true表示开启， false表示未开启
+     * @return Cluster
+     */
+    public Cluster isCreditNic(Boolean isCreditNic) {
+        this.isCreditNic = isCreditNic;
+        return this;
+    }
+
+
+    /**
+     * set 集群DNS的定制化配置，可以配置自定义的hosts和域名解析
+     *
+     * @param clusterDnsSpec 集群DNS的定制化配置，可以配置自定义的hosts和域名解析
+     * @return Cluster
+     */
+    public Cluster clusterDnsSpec(ClusterDnsSpec clusterDnsSpec) {
+        this.clusterDnsSpec = clusterDnsSpec;
+        return this;
+    }
+
+
+    /**
+    * set kube-apiserver的自定义域名，会自动签名到证书里
+    *
+    * @param kubeApiserverDomains kube-apiserver的自定义域名，会自动签名到证书里
+    * @return Cluster
+    */
+    public Cluster kubeApiserverDomains(List<String> kubeApiserverDomains) {
+        this.kubeApiserverDomains = kubeApiserverDomains;
+        return this;
+    }
+
+
+
+    /**
+     * add item to k8s可升级的版本
+     *
+     * @param upgradeVersion
+     */
+    public void addUpgradeVersion(String upgradeVersion) {
+        if (this.upgradeVersion == null) {
+            this.upgradeVersion = new ArrayList<>();
+        }
+        this.upgradeVersion.add(upgradeVersion);
+    }
 
     /**
      * add item to 集群所在的az
@@ -1134,5 +1428,29 @@ public class Cluster  implements java.io.Serializable {
             this.clusterEnvironments = new ArrayList<>();
         }
         this.clusterEnvironments.add(clusterEnvironment);
+    }
+
+    /**
+     * add item to 资源标签
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
+
+    /**
+     * add item to kube-apiserver的自定义域名，会自动签名到证书里
+     *
+     * @param kubeApiserverDomain
+     */
+    public void addKubeApiserverDomain(String kubeApiserverDomain) {
+        if (this.kubeApiserverDomains == null) {
+            this.kubeApiserverDomains = new ArrayList<>();
+        }
+        this.kubeApiserverDomains.add(kubeApiserverDomain);
     }
 }

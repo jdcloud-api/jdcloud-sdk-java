@@ -53,12 +53,12 @@ public class ClusterAddonVersion  implements java.io.Serializable {
     private String releaseNote;
 
     /**
-     * 适配的k8s最低版本，如 1.12
+     * 适配的k8s最低版本，如 1.18
      */
     private String minAdaptedK8sVersion;
 
     /**
-     * 适配的k8s最高版本，如 1.18
+     * 适配的k8s最高版本，如 1.30
      */
     private String maxAdaptedK8sVersion;
 
@@ -141,7 +141,7 @@ public class ClusterAddonVersion  implements java.io.Serializable {
 
 
     /**
-     * get 适配的k8s最低版本，如 1.12
+     * get 适配的k8s最低版本，如 1.18
      *
      * @return
      */
@@ -150,7 +150,7 @@ public class ClusterAddonVersion  implements java.io.Serializable {
     }
 
     /**
-     * set 适配的k8s最低版本，如 1.12
+     * set 适配的k8s最低版本，如 1.18
      *
      * @param minAdaptedK8sVersion
      */
@@ -160,7 +160,7 @@ public class ClusterAddonVersion  implements java.io.Serializable {
 
 
     /**
-     * get 适配的k8s最高版本，如 1.18
+     * get 适配的k8s最高版本，如 1.30
      *
      * @return
      */
@@ -169,7 +169,7 @@ public class ClusterAddonVersion  implements java.io.Serializable {
     }
 
     /**
-     * set 适配的k8s最高版本，如 1.18
+     * set 适配的k8s最高版本，如 1.30
      *
      * @param maxAdaptedK8sVersion
      */
@@ -182,7 +182,8 @@ public class ClusterAddonVersion  implements java.io.Serializable {
     /**
      * set 组件名称
      *
-     * @param name
+     * @param name 组件名称
+     * @return ClusterAddonVersion
      */
     public ClusterAddonVersion name(String name) {
         this.name = name;
@@ -193,7 +194,8 @@ public class ClusterAddonVersion  implements java.io.Serializable {
     /**
      * set 组件版本，非必须
      *
-     * @param version
+     * @param version 组件版本，非必须
+     * @return ClusterAddonVersion
      */
     public ClusterAddonVersion version(String version) {
         this.version = version;
@@ -204,7 +206,8 @@ public class ClusterAddonVersion  implements java.io.Serializable {
     /**
      * set 组件版本简要说明
      *
-     * @param description
+     * @param description 组件版本简要说明
+     * @return ClusterAddonVersion
      */
     public ClusterAddonVersion description(String description) {
         this.description = description;
@@ -215,7 +218,8 @@ public class ClusterAddonVersion  implements java.io.Serializable {
     /**
      * set 组件版本发布说明
      *
-     * @param releaseNote
+     * @param releaseNote 组件版本发布说明
+     * @return ClusterAddonVersion
      */
     public ClusterAddonVersion releaseNote(String releaseNote) {
         this.releaseNote = releaseNote;
@@ -224,9 +228,10 @@ public class ClusterAddonVersion  implements java.io.Serializable {
 
 
     /**
-     * set 适配的k8s最低版本，如 1.12
+     * set 适配的k8s最低版本，如 1.18
      *
-     * @param minAdaptedK8sVersion
+     * @param minAdaptedK8sVersion 适配的k8s最低版本，如 1.18
+     * @return ClusterAddonVersion
      */
     public ClusterAddonVersion minAdaptedK8sVersion(String minAdaptedK8sVersion) {
         this.minAdaptedK8sVersion = minAdaptedK8sVersion;
@@ -235,9 +240,10 @@ public class ClusterAddonVersion  implements java.io.Serializable {
 
 
     /**
-     * set 适配的k8s最高版本，如 1.18
+     * set 适配的k8s最高版本，如 1.30
      *
-     * @param maxAdaptedK8sVersion
+     * @param maxAdaptedK8sVersion 适配的k8s最高版本，如 1.30
+     * @return ClusterAddonVersion
      */
     public ClusterAddonVersion maxAdaptedK8sVersion(String maxAdaptedK8sVersion) {
         this.maxAdaptedK8sVersion = maxAdaptedK8sVersion;

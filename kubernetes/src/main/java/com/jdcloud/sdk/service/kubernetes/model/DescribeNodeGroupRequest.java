@@ -92,7 +92,8 @@ public class DescribeNodeGroupRequest extends JdcloudRequest implements java.io.
     /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return DescribeNodeGroupRequest
      */
     public DescribeNodeGroupRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class DescribeNodeGroupRequest extends JdcloudRequest implements java.io.
     /**
      * set 工作节点组 ID
      *
-     * @param nodeGroupId
+     * @param nodeGroupId 工作节点组 ID
+     * @return DescribeNodeGroupRequest
      */
     public DescribeNodeGroupRequest nodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;

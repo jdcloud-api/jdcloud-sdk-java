@@ -40,7 +40,7 @@ public class MasterVersion  implements java.io.Serializable {
     private String version;
 
     /**
-     * 是否默认版本
+     * 是否为默认版本
      */
     private Boolean isDefault;
 
@@ -55,10 +55,15 @@ public class MasterVersion  implements java.io.Serializable {
     private String versionStatus;
 
     /**
-     * node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS|Windows
+     * node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS、Windows、OpenEuler等
      */
     private String nodeOsTypes;
 
+    /**
+     * 异构节点操作系统版本，如OpenEuler 24.03等
+     */
+    
+    private List<HpcNodeOsVersion> hpcNodeOsVersions;
     /**
      * 该版本可安装的addons
      */
@@ -86,7 +91,7 @@ public class MasterVersion  implements java.io.Serializable {
 
 
     /**
-     * get 是否默认版本
+     * get 是否为默认版本
      *
      * @return
      */
@@ -95,7 +100,7 @@ public class MasterVersion  implements java.io.Serializable {
     }
 
     /**
-     * set 是否默认版本
+     * set 是否为默认版本
      *
      * @param isDefault
      */
@@ -143,7 +148,7 @@ public class MasterVersion  implements java.io.Serializable {
 
 
     /**
-     * get node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS|Windows
+     * get node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS、Windows、OpenEuler等
      *
      * @return
      */
@@ -152,12 +157,31 @@ public class MasterVersion  implements java.io.Serializable {
     }
 
     /**
-     * set node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS|Windows
+     * set node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS、Windows、OpenEuler等
      *
      * @param nodeOsTypes
      */
     public void setNodeOsTypes(String nodeOsTypes) {
         this.nodeOsTypes = nodeOsTypes;
+    }
+
+
+    /**
+    * get 异构节点操作系统版本，如OpenEuler 24.03等
+    *
+    * @return
+    */
+    public List<HpcNodeOsVersion> getHpcNodeOsVersions() {
+        return hpcNodeOsVersions;
+    }
+
+    /**
+    * set 异构节点操作系统版本，如OpenEuler 24.03等
+    *
+    * @param hpcNodeOsVersions
+    */
+    public void setHpcNodeOsVersions(List<HpcNodeOsVersion> hpcNodeOsVersions) {
+        this.hpcNodeOsVersions = hpcNodeOsVersions;
     }
 
 
@@ -184,7 +208,8 @@ public class MasterVersion  implements java.io.Serializable {
     /**
      * set 集群版本号
      *
-     * @param version
+     * @param version 集群版本号
+     * @return MasterVersion
      */
     public MasterVersion version(String version) {
         this.version = version;
@@ -193,9 +218,10 @@ public class MasterVersion  implements java.io.Serializable {
 
 
     /**
-     * set 是否默认版本
+     * set 是否为默认版本
      *
-     * @param isDefault
+     * @param isDefault 是否为默认版本
+     * @return MasterVersion
      */
     public MasterVersion isDefault(Boolean isDefault) {
         this.isDefault = isDefault;
@@ -206,7 +232,8 @@ public class MasterVersion  implements java.io.Serializable {
     /**
      * set 默认工作节点版本号
      *
-     * @param defaultNodeVersion
+     * @param defaultNodeVersion 默认工作节点版本号
+     * @return MasterVersion
      */
     public MasterVersion defaultNodeVersion(String defaultNodeVersion) {
         this.defaultNodeVersion = defaultNodeVersion;
@@ -217,7 +244,8 @@ public class MasterVersion  implements java.io.Serializable {
     /**
      * set 版本状态
      *
-     * @param versionStatus
+     * @param versionStatus 版本状态
+     * @return MasterVersion
      */
     public MasterVersion versionStatus(String versionStatus) {
         this.versionStatus = versionStatus;
@@ -226,9 +254,10 @@ public class MasterVersion  implements java.io.Serializable {
 
 
     /**
-     * set node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS|Windows
+     * set node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS、Windows、OpenEuler等
      *
-     * @param nodeOsTypes
+     * @param nodeOsTypes node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS、Windows、OpenEuler等
+     * @return MasterVersion
      */
     public MasterVersion nodeOsTypes(String nodeOsTypes) {
         this.nodeOsTypes = nodeOsTypes;
@@ -237,9 +266,22 @@ public class MasterVersion  implements java.io.Serializable {
 
 
     /**
+    * set 异构节点操作系统版本，如OpenEuler 24.03等
+    *
+    * @param hpcNodeOsVersions 异构节点操作系统版本，如OpenEuler 24.03等
+    * @return MasterVersion
+    */
+    public MasterVersion hpcNodeOsVersions(List<HpcNodeOsVersion> hpcNodeOsVersions) {
+        this.hpcNodeOsVersions = hpcNodeOsVersions;
+        return this;
+    }
+
+
+    /**
     * set 该版本可安装的addons
     *
-    * @param clusterAddons
+    * @param clusterAddons 该版本可安装的addons
+    * @return MasterVersion
     */
     public MasterVersion clusterAddons(List<ClusterAddon> clusterAddons) {
         this.clusterAddons = clusterAddons;
@@ -247,6 +289,18 @@ public class MasterVersion  implements java.io.Serializable {
     }
 
 
+
+    /**
+     * add item to 异构节点操作系统版本，如OpenEuler 24.03等
+     *
+     * @param hpcNodeOsVersion
+     */
+    public void addHpcNodeOsVersion(HpcNodeOsVersion hpcNodeOsVersion) {
+        if (this.hpcNodeOsVersions == null) {
+            this.hpcNodeOsVersions = new ArrayList<>();
+        }
+        this.hpcNodeOsVersions.add(hpcNodeOsVersion);
+    }
 
     /**
      * add item to 该版本可安装的addons

@@ -206,7 +206,8 @@ public class GpuInstaller  implements java.io.Serializable {
     /**
      * set 驱动安装器名称，驱动安装器名称格式：{GPU型号}-{驱动版本}-{CUDA版本}
      *
-     * @param installerName
+     * @param installerName 驱动安装器名称，驱动安装器名称格式：{GPU型号}-{驱动版本}-{CUDA版本}
+     * @return GpuInstaller
      */
     public GpuInstaller installerName(String installerName) {
         this.installerName = installerName;
@@ -217,7 +218,8 @@ public class GpuInstaller  implements java.io.Serializable {
     /**
      * set 驱动安装器镜像名称
      *
-     * @param imageName
+     * @param imageName 驱动安装器镜像名称
+     * @return GpuInstaller
      */
     public GpuInstaller imageName(String imageName) {
         this.imageName = imageName;
@@ -228,7 +230,8 @@ public class GpuInstaller  implements java.io.Serializable {
     /**
      * set 驱动安装器镜像版本
      *
-     * @param imageVersion
+     * @param imageVersion 驱动安装器镜像版本
+     * @return GpuInstaller
      */
     public GpuInstaller imageVersion(String imageVersion) {
         this.imageVersion = imageVersion;
@@ -239,7 +242,8 @@ public class GpuInstaller  implements java.io.Serializable {
     /**
      * set 设备配型，例如v100/p40
      *
-     * @param deviceType
+     * @param deviceType 设备配型，例如v100/p40
+     * @return GpuInstaller
      */
     public GpuInstaller deviceType(String deviceType) {
         this.deviceType = deviceType;
@@ -250,7 +254,8 @@ public class GpuInstaller  implements java.io.Serializable {
     /**
      * set 驱动版本
      *
-     * @param driverVersion
+     * @param driverVersion 驱动版本
+     * @return GpuInstaller
      */
     public GpuInstaller driverVersion(String driverVersion) {
         this.driverVersion = driverVersion;
@@ -261,7 +266,8 @@ public class GpuInstaller  implements java.io.Serializable {
     /**
      * set cuda版本
      *
-     * @param cudaVersion
+     * @param cudaVersion cuda版本
+     * @return GpuInstaller
      */
     public GpuInstaller cudaVersion(String cudaVersion) {
         this.cudaVersion = cudaVersion;
@@ -272,7 +278,8 @@ public class GpuInstaller  implements java.io.Serializable {
     /**
      * set Gpu驱动安装器状态，1 启动，0禁用
      *
-     * @param status
+     * @param status Gpu驱动安装器状态，1 启动，0禁用
+     * @return GpuInstaller
      */
     public GpuInstaller status(Integer status) {
         this.status = status;

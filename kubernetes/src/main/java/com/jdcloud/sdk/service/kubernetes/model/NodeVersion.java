@@ -33,7 +33,7 @@ public class NodeVersion  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 节点版本
+     * 节点版本号
      */
     private String version;
 
@@ -50,7 +50,7 @@ public class NodeVersion  implements java.io.Serializable {
 
 
     /**
-     * get 节点版本
+     * get 节点版本号
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class NodeVersion  implements java.io.Serializable {
     }
 
     /**
-     * set 节点版本
+     * set 节点版本号
      *
      * @param version
      */
@@ -108,9 +108,10 @@ public class NodeVersion  implements java.io.Serializable {
 
 
     /**
-     * set 节点版本
+     * set 节点版本号
      *
-     * @param version
+     * @param version 节点版本号
+     * @return NodeVersion
      */
     public NodeVersion version(String version) {
         this.version = version;
@@ -121,7 +122,8 @@ public class NodeVersion  implements java.io.Serializable {
     /**
      * set 镜像操作系统
      *
-     * @param imageOs
+     * @param imageOs 镜像操作系统
+     * @return NodeVersion
      */
     public NodeVersion imageOs(String imageOs) {
         this.imageOs = imageOs;
@@ -132,7 +134,8 @@ public class NodeVersion  implements java.io.Serializable {
     /**
      * set 版本状态
      *
-     * @param versionStatus
+     * @param versionStatus 版本状态
+     * @return NodeVersion
      */
     public NodeVersion versionStatus(String versionStatus) {
         this.versionStatus = versionStatus;

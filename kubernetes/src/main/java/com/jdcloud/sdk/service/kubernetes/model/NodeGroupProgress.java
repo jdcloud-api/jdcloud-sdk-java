@@ -38,7 +38,7 @@ public class NodeGroupProgress  implements java.io.Serializable {
     private String nodeGroupId;
 
     /**
-     * 操作类型, upgrade, downgrade, rollback
+     * 操作类型, upgrade
      */
     private String action;
 
@@ -74,7 +74,7 @@ public class NodeGroupProgress  implements java.io.Serializable {
 
 
     /**
-     * get 操作类型, upgrade, downgrade, rollback
+     * get 操作类型, upgrade
      *
      * @return
      */
@@ -83,7 +83,7 @@ public class NodeGroupProgress  implements java.io.Serializable {
     }
 
     /**
-     * set 操作类型, upgrade, downgrade, rollback
+     * set 操作类型, upgrade
      *
      * @param action
      */
@@ -134,7 +134,8 @@ public class NodeGroupProgress  implements java.io.Serializable {
     /**
      * set 工作节点组 id
      *
-     * @param nodeGroupId
+     * @param nodeGroupId 工作节点组 id
+     * @return NodeGroupProgress
      */
     public NodeGroupProgress nodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
@@ -143,9 +144,10 @@ public class NodeGroupProgress  implements java.io.Serializable {
 
 
     /**
-     * set 操作类型, upgrade, downgrade, rollback
+     * set 操作类型, upgrade
      *
-     * @param action
+     * @param action 操作类型, upgrade
+     * @return NodeGroupProgress
      */
     public NodeGroupProgress action(String action) {
         this.action = action;
@@ -156,7 +158,8 @@ public class NodeGroupProgress  implements java.io.Serializable {
     /**
      * set 总工作节点个数
      *
-     * @param totalCount
+     * @param totalCount 总工作节点个数
+     * @return NodeGroupProgress
      */
     public NodeGroupProgress totalCount(Integer totalCount) {
         this.totalCount = totalCount;
@@ -167,7 +170,8 @@ public class NodeGroupProgress  implements java.io.Serializable {
     /**
      * set 升级完成工作节点个数
      *
-     * @param updatedCount
+     * @param updatedCount 升级完成工作节点个数
+     * @return NodeGroupProgress
      */
     public NodeGroupProgress updatedCount(Integer updatedCount) {
         this.updatedCount = updatedCount;

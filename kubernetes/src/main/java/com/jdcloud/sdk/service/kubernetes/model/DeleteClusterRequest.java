@@ -116,7 +116,8 @@ public class DeleteClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 替换路由表id
      *
-     * @param routeTableId
+     * @param routeTableId 替换路由表id
+     * @return DeleteClusterRequest
      */
     public DeleteClusterRequest routeTableId(String routeTableId) {
         this.routeTableId = routeTableId;
@@ -127,7 +128,8 @@ public class DeleteClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return DeleteClusterRequest
      */
     public DeleteClusterRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -138,7 +140,8 @@ public class DeleteClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 集群 ID
      *
-     * @param clusterId
+     * @param clusterId 集群 ID
+     * @return DeleteClusterRequest
      */
     public DeleteClusterRequest clusterId(String clusterId) {
         this.clusterId = clusterId;

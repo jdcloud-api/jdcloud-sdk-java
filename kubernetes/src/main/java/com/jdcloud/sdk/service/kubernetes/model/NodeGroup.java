@@ -35,6 +35,11 @@ public class NodeGroup  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 新增节点数据盘初始化策略
+     */
+    private DiskInitializeSpec diskInitialize;
+
+    /**
      * 集群 id
      */
     private String clusterId;
@@ -64,6 +69,11 @@ public class NodeGroup  implements java.io.Serializable {
      */
     private String version;
 
+    /**
+     * 工作节点组可升级版本
+     */
+    
+    private List<String> upgradeVersion;
     /**
      * 工作节点所属的网络信息
      */
@@ -95,7 +105,7 @@ public class NodeGroup  implements java.io.Serializable {
     private String instanceTemplateId;
 
     /**
-     * 状态  [pending,running,resizing,reconciling,deleting,deleted,error,running_with_error(部分节点有问题)]
+     * 状态  [pending,running,resizing,upgrading(升级中),deleting,deleted,error,running_with_error(部分节点有问题)]
      */
     private String state;
 
@@ -104,6 +114,11 @@ public class NodeGroup  implements java.io.Serializable {
      */
     
     private List<Tag> tags;
+    /**
+     * 资源组id
+     */
+    private String resourceGroupId;
+
     /**
      * 更新时间
      */
@@ -129,6 +144,40 @@ public class NodeGroup  implements java.io.Serializable {
      */
     private String createdTime;
 
+    /**
+     * instanceIds
+     */
+    
+    private List<String> instanceIds;
+    /**
+     * 工作节点组的类型
+     */
+    private String nodeGroupType;
+
+    /**
+     * 异构节点组关联的实例物理集群Id
+     */
+    private String hpcClusterId;
+
+
+
+    /**
+     * get 新增节点数据盘初始化策略
+     *
+     * @return
+     */
+    public DiskInitializeSpec getDiskInitialize() {
+        return diskInitialize;
+    }
+
+    /**
+     * set 新增节点数据盘初始化策略
+     *
+     * @param diskInitialize
+     */
+    public void setDiskInitialize(DiskInitializeSpec diskInitialize) {
+        this.diskInitialize = diskInitialize;
+    }
 
 
     /**
@@ -242,6 +291,25 @@ public class NodeGroup  implements java.io.Serializable {
      */
     public void setVersion(String version) {
         this.version = version;
+    }
+
+
+    /**
+    * get 工作节点组可升级版本
+    *
+    * @return
+    */
+    public List<String> getUpgradeVersion() {
+        return upgradeVersion;
+    }
+
+    /**
+    * set 工作节点组可升级版本
+    *
+    * @param upgradeVersion
+    */
+    public void setUpgradeVersion(List<String> upgradeVersion) {
+        this.upgradeVersion = upgradeVersion;
     }
 
 
@@ -360,7 +428,7 @@ public class NodeGroup  implements java.io.Serializable {
 
 
     /**
-     * get 状态  [pending,running,resizing,reconciling,deleting,deleted,error,running_with_error(部分节点有问题)]
+     * get 状态  [pending,running,resizing,upgrading(升级中),deleting,deleted,error,running_with_error(部分节点有问题)]
      *
      * @return
      */
@@ -369,7 +437,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 状态  [pending,running,resizing,reconciling,deleting,deleted,error,running_with_error(部分节点有问题)]
+     * set 状态  [pending,running,resizing,upgrading(升级中),deleting,deleted,error,running_with_error(部分节点有问题)]
      *
      * @param state
      */
@@ -394,6 +462,25 @@ public class NodeGroup  implements java.io.Serializable {
     */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
+    }
+
+
+    /**
+     * get 资源组id
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组id
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
     }
 
 
@@ -492,11 +579,81 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
 
+    /**
+    * get instanceIds
+    *
+    * @return
+    */
+    public List<String> getInstanceIds() {
+        return instanceIds;
+    }
+
+    /**
+    * set instanceIds
+    *
+    * @param instanceIds
+    */
+    public void setInstanceIds(List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+    }
+
+
+    /**
+     * get 工作节点组的类型
+     *
+     * @return
+     */
+    public String getNodeGroupType() {
+        return nodeGroupType;
+    }
+
+    /**
+     * set 工作节点组的类型
+     *
+     * @param nodeGroupType
+     */
+    public void setNodeGroupType(String nodeGroupType) {
+        this.nodeGroupType = nodeGroupType;
+    }
+
+
+    /**
+     * get 异构节点组关联的实例物理集群Id
+     *
+     * @return
+     */
+    public String getHpcClusterId() {
+        return hpcClusterId;
+    }
+
+    /**
+     * set 异构节点组关联的实例物理集群Id
+     *
+     * @param hpcClusterId
+     */
+    public void setHpcClusterId(String hpcClusterId) {
+        this.hpcClusterId = hpcClusterId;
+    }
+
+
+
+    /**
+     * set 新增节点数据盘初始化策略
+     *
+     * @param diskInitialize 新增节点数据盘初始化策略
+     * @return NodeGroup
+     */
+    public NodeGroup diskInitialize(DiskInitializeSpec diskInitialize) {
+        this.diskInitialize = diskInitialize;
+        return this;
+    }
+
 
     /**
      * set 集群 id
      *
-     * @param clusterId
+     * @param clusterId 集群 id
+     * @return NodeGroup
      */
     public NodeGroup clusterId(String clusterId) {
         this.clusterId = clusterId;
@@ -507,7 +664,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * set 工作节点组 id
      *
-     * @param nodeGroupId
+     * @param nodeGroupId 工作节点组 id
+     * @return NodeGroup
      */
     public NodeGroup nodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
@@ -518,7 +676,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * set 工作节点组名称
      *
-     * @param name
+     * @param name 工作节点组名称
+     * @return NodeGroup
      */
     public NodeGroup name(String name) {
         this.name = name;
@@ -529,7 +688,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * set 工作节点组描述
      *
-     * @param description
+     * @param description 工作节点组描述
+     * @return NodeGroup
      */
     public NodeGroup description(String description) {
         this.description = description;
@@ -540,7 +700,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * set 工作节点组配置信息
      *
-     * @param nodeConfig
+     * @param nodeConfig 工作节点组配置信息
+     * @return NodeGroup
      */
     public NodeGroup nodeConfig(NodeConfig nodeConfig) {
         this.nodeConfig = nodeConfig;
@@ -551,7 +712,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * set 工作节点版本
      *
-     * @param version
+     * @param version 工作节点版本
+     * @return NodeGroup
      */
     public NodeGroup version(String version) {
         this.version = version;
@@ -560,9 +722,22 @@ public class NodeGroup  implements java.io.Serializable {
 
 
     /**
+    * set 工作节点组可升级版本
+    *
+    * @param upgradeVersion 工作节点组可升级版本
+    * @return NodeGroup
+    */
+    public NodeGroup upgradeVersion(List<String> upgradeVersion) {
+        this.upgradeVersion = upgradeVersion;
+        return this;
+    }
+
+
+    /**
      * set 工作节点所属的网络信息
      *
-     * @param nodeNetwork
+     * @param nodeNetwork 工作节点所属的网络信息
+     * @return NodeGroup
      */
     public NodeGroup nodeNetwork(NodeNetwork nodeNetwork) {
         this.nodeNetwork = nodeNetwork;
@@ -573,7 +748,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * set 当前工作节点数量
      *
-     * @param currentCount
+     * @param currentCount 当前工作节点数量
+     * @return NodeGroup
      */
     public NodeGroup currentCount(Integer currentCount) {
         this.currentCount = currentCount;
@@ -584,7 +760,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * set 期望的工作节点数量
      *
-     * @param expectCount
+     * @param expectCount 期望的工作节点数量
+     * @return NodeGroup
      */
     public NodeGroup expectCount(Integer expectCount) {
         this.expectCount = expectCount;
@@ -595,7 +772,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * set 工作节点组的ag id ，通过agid可以查询该工作节点组下的实例
      *
-     * @param agId
+     * @param agId 工作节点组的ag id ，通过agid可以查询该工作节点组下的实例
+     * @return NodeGroup
      */
     public NodeGroup agId(String agId) {
         this.agId = agId;
@@ -606,7 +784,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
     * set 工作节点组所在的 az
     *
-    * @param azs
+    * @param azs 工作节点组所在的 az
+    * @return NodeGroup
     */
     public NodeGroup azs(List<String> azs) {
         this.azs = azs;
@@ -617,7 +796,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * set 工作节点组的 ag 对应的实例模板
      *
-     * @param instanceTemplateId
+     * @param instanceTemplateId 工作节点组的 ag 对应的实例模板
+     * @return NodeGroup
      */
     public NodeGroup instanceTemplateId(String instanceTemplateId) {
         this.instanceTemplateId = instanceTemplateId;
@@ -626,9 +806,10 @@ public class NodeGroup  implements java.io.Serializable {
 
 
     /**
-     * set 状态  [pending,running,resizing,reconciling,deleting,deleted,error,running_with_error(部分节点有问题)]
+     * set 状态  [pending,running,resizing,upgrading(升级中),deleting,deleted,error,running_with_error(部分节点有问题)]
      *
-     * @param state
+     * @param state 状态  [pending,running,resizing,upgrading(升级中),deleting,deleted,error,running_with_error(部分节点有问题)]
+     * @return NodeGroup
      */
     public NodeGroup state(String state) {
         this.state = state;
@@ -639,7 +820,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
     * set tags
     *
-    * @param tags
+    * @param tags 
+    * @return NodeGroup
     */
     public NodeGroup tags(List<Tag> tags) {
         this.tags = tags;
@@ -648,9 +830,22 @@ public class NodeGroup  implements java.io.Serializable {
 
 
     /**
+     * set 资源组id
+     *
+     * @param resourceGroupId 资源组id
+     * @return NodeGroup
+     */
+    public NodeGroup resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return NodeGroup
      */
     public NodeGroup updateTime(String updateTime) {
         this.updateTime = updateTime;
@@ -661,7 +856,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * set 状态变更原因
      *
-     * @param stateMessage
+     * @param stateMessage 状态变更原因
+     * @return NodeGroup
      */
     public NodeGroup stateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
@@ -672,7 +868,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * set 控制节点操作进度
      *
-     * @param progress
+     * @param progress 控制节点操作进度
+     * @return NodeGroup
      */
     public NodeGroup progress(NodeGroupProgress progress) {
         this.progress = progress;
@@ -683,7 +880,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * set 自动伸缩配置
      *
-     * @param caConfig
+     * @param caConfig 自动伸缩配置
+     * @return NodeGroup
      */
     public NodeGroup caConfig(CAConfig caConfig) {
         this.caConfig = caConfig;
@@ -694,7 +892,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createdTime
+     * @param createdTime 创建时间
+     * @return NodeGroup
      */
     public NodeGroup createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -702,6 +901,54 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
 
+    /**
+    * set instanceIds
+    *
+    * @param instanceIds 
+    * @return NodeGroup
+    */
+    public NodeGroup instanceIds(List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+
+
+    /**
+     * set 工作节点组的类型
+     *
+     * @param nodeGroupType 工作节点组的类型
+     * @return NodeGroup
+     */
+    public NodeGroup nodeGroupType(String nodeGroupType) {
+        this.nodeGroupType = nodeGroupType;
+        return this;
+    }
+
+
+    /**
+     * set 异构节点组关联的实例物理集群Id
+     *
+     * @param hpcClusterId 异构节点组关联的实例物理集群Id
+     * @return NodeGroup
+     */
+    public NodeGroup hpcClusterId(String hpcClusterId) {
+        this.hpcClusterId = hpcClusterId;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 工作节点组可升级版本
+     *
+     * @param upgradeVersion
+     */
+    public void addUpgradeVersion(String upgradeVersion) {
+        if (this.upgradeVersion == null) {
+            this.upgradeVersion = new ArrayList<>();
+        }
+        this.upgradeVersion.add(upgradeVersion);
+    }
 
     /**
      * add item to 工作节点组所在的 az
@@ -725,5 +972,17 @@ public class NodeGroup  implements java.io.Serializable {
             this.tags = new ArrayList<>();
         }
         this.tags.add(tag);
+    }
+
+    /**
+     * add item to instanceIds
+     *
+     * @param instanceId
+     */
+    public void addInstanceId(String instanceId) {
+        if (this.instanceIds == null) {
+            this.instanceIds = new ArrayList<>();
+        }
+        this.instanceIds.add(instanceId);
     }
 }

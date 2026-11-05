@@ -208,7 +208,8 @@ public class AddonConfig  implements java.io.Serializable {
     /**
      * set 组件名称
      *
-     * @param name
+     * @param name 组件名称
+     * @return AddonConfig
      */
     public AddonConfig name(String name) {
         this.name = name;
@@ -219,7 +220,8 @@ public class AddonConfig  implements java.io.Serializable {
     /**
      * set 组件版本，非必须，未安装时填充为默认版本号
      *
-     * @param version
+     * @param version 组件版本，非必须，未安装时填充为默认版本号
+     * @return AddonConfig
      */
     public AddonConfig version(String version) {
         this.version = version;
@@ -230,7 +232,8 @@ public class AddonConfig  implements java.io.Serializable {
     /**
      * set 组件是否开启
      *
-     * @param enabled
+     * @param enabled 组件是否开启
+     * @return AddonConfig
      */
     public AddonConfig enabled(Boolean enabled) {
         this.enabled = enabled;
@@ -241,7 +244,8 @@ public class AddonConfig  implements java.io.Serializable {
     /**
      * set 组件安装状态 not_installed,installed,installing,uninstalling,error_installed
      *
-     * @param state
+     * @param state 组件安装状态 not_installed,installed,installing,uninstalling,error_installed
+     * @return AddonConfig
      */
     public AddonConfig state(String state) {
         this.state = state;
@@ -252,7 +256,8 @@ public class AddonConfig  implements java.io.Serializable {
     /**
      * set 组件的额外参数(deprecated)
      *
-     * @param params
+     * @param params 组件的额外参数(deprecated)
+     * @return AddonConfig
      */
     public AddonConfig params(Object params) {
         this.params = params;
@@ -263,7 +268,8 @@ public class AddonConfig  implements java.io.Serializable {
     /**
     * set 组件的额外参数（新）
     *
-    * @param parameters
+    * @param parameters 组件的额外参数（新）
+    * @return AddonConfig
     */
     public AddonConfig parameters(List<StringKeyValuePair> parameters) {
         this.parameters = parameters;
@@ -274,7 +280,8 @@ public class AddonConfig  implements java.io.Serializable {
     /**
      * set 可安装的addons
      *
-     * @param addonDetail
+     * @param addonDetail 可安装的addons
+     * @return AddonConfig
      */
     public AddonConfig addonDetail(ClusterAddon addonDetail) {
         this.addonDetail = addonDetail;

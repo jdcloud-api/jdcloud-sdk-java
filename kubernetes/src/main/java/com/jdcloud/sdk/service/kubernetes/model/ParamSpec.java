@@ -89,7 +89,8 @@ public class ParamSpec  implements java.io.Serializable {
     /**
      * set 组件参数键
      *
-     * @param key
+     * @param key 组件参数键
+     * @return ParamSpec
      */
     public ParamSpec key(String key) {
         this.key = key;
@@ -100,7 +101,8 @@ public class ParamSpec  implements java.io.Serializable {
     /**
      * set 组件参数值
      *
-     * @param name
+     * @param name 组件参数值
+     * @return ParamSpec
      */
     public ParamSpec name(String name) {
         this.name = name;

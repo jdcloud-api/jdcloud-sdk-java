@@ -66,7 +66,8 @@ public class DescribeServerlessVersionsResult extends JdcloudResult implements j
     /**
     * set masterVersions
     *
-    * @param masterVersions
+    * @param masterVersions 
+    * @return DescribeServerlessVersionsResult
     */
     public DescribeServerlessVersionsResult masterVersions(List<ServerlessMasterVersion> masterVersions) {
         this.masterVersions = masterVersions;

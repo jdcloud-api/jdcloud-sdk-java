@@ -86,7 +86,8 @@ public class UserScriptSpec  implements java.io.Serializable {
     /**
      * set 脚本名称，最大长度暂定为100 byte，目前支持值为 launch-script，表示云主机启动脚本。
      *
-     * @param key
+     * @param key 脚本名称，最大长度暂定为100 byte，目前支持值为 launch-script，表示云主机启动脚本。
+     * @return UserScriptSpec
      */
     public UserScriptSpec key(String key) {
         this.key = key;
@@ -97,7 +98,8 @@ public class UserScriptSpec  implements java.io.Serializable {
     /**
      * set 脚本详情，启动脚本（key为launch-script时对应的value）内容经过base64编码，编码前数据不能大于2KB（2048 byte）,编码后数据不大于2768 byte，只支持bash脚本，编码前内容必须以 &quot;#!/bin/bash&quot; 作为首行。
      *
-     * @param value
+     * @param value 脚本详情，启动脚本（key为launch-script时对应的value）内容经过base64编码，编码前数据不能大于2KB（2048 byte）,编码后数据不大于2768 byte，只支持bash脚本，编码前内容必须以 &quot;#!/bin/bash&quot; 作为首行。
+     * @return UserScriptSpec
      */
     public UserScriptSpec value(String value) {
         this.value = value;

@@ -24,11 +24,18 @@
 
 package com.jdcloud.sdk.service.kubernetes.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.kubernetes.model.LabelSpec;
+import com.jdcloud.sdk.service.kubernetes.model.TaintSpec;
+import com.jdcloud.sdk.service.kubernetes.model.DiskInitializeSpec;
+import com.jdcloud.sdk.service.kubernetes.model.NodeGroupSystemDiskSpec;
+import com.jdcloud.sdk.service.kubernetes.model.NodeGroupDataDiskSpec;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改工作节点组的 名称 和 描述&lt;br&gt;name 和 description 必须要指定一个
+ * 修改工作节点组的 名称 和 描述以及k8s label、taint等信息 &lt;br&gt;name 和 description 必须要指定一个
  */
 public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -44,6 +51,36 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
      */
     private String description;
 
+    /**
+     * k8s标签
+     */
+    
+    private List<LabelSpec> labels;
+    /**
+     * k8s污点
+     */
+    
+    private List<TaintSpec> taints;
+    /**
+     * 变更是否对存量节点生效，默认false
+     */
+    private Boolean updateExistNode;
+
+    /**
+     * 更新节点组默认磁盘初始化策略；不传时保留原策略；仅影响后续新建节点，不调整已有布局；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     */
+    private DiskInitializeSpec diskInitialize;
+
+    /**
+     * 更新节点组系统盘信息，仅支持修改系统盘类型
+     */
+    private NodeGroupSystemDiskSpec systemDisk;
+
+    /**
+     * 更新节点组数据盘信息，兼容多块盘模式
+     */
+    
+    private List<NodeGroupDataDiskSpec> dataDisks;
     /**
      * 地域 ID
      * Required:true
@@ -99,6 +136,120 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
+    * get k8s标签
+    *
+    * @return
+    */
+    public List<LabelSpec> getLabels() {
+        return labels;
+    }
+
+    /**
+    * set k8s标签
+    *
+    * @param labels
+    */
+    public void setLabels(List<LabelSpec> labels) {
+        this.labels = labels;
+    }
+
+
+    /**
+    * get k8s污点
+    *
+    * @return
+    */
+    public List<TaintSpec> getTaints() {
+        return taints;
+    }
+
+    /**
+    * set k8s污点
+    *
+    * @param taints
+    */
+    public void setTaints(List<TaintSpec> taints) {
+        this.taints = taints;
+    }
+
+
+    /**
+     * get 变更是否对存量节点生效，默认false
+     *
+     * @return
+     */
+    public Boolean getUpdateExistNode() {
+        return updateExistNode;
+    }
+
+    /**
+     * set 变更是否对存量节点生效，默认false
+     *
+     * @param updateExistNode
+     */
+    public void setUpdateExistNode(Boolean updateExistNode) {
+        this.updateExistNode = updateExistNode;
+    }
+
+
+    /**
+     * get 更新节点组默认磁盘初始化策略；不传时保留原策略；仅影响后续新建节点，不调整已有布局；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     *
+     * @return
+     */
+    public DiskInitializeSpec getDiskInitialize() {
+        return diskInitialize;
+    }
+
+    /**
+     * set 更新节点组默认磁盘初始化策略；不传时保留原策略；仅影响后续新建节点，不调整已有布局；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     *
+     * @param diskInitialize
+     */
+    public void setDiskInitialize(DiskInitializeSpec diskInitialize) {
+        this.diskInitialize = diskInitialize;
+    }
+
+
+    /**
+     * get 更新节点组系统盘信息，仅支持修改系统盘类型
+     *
+     * @return
+     */
+    public NodeGroupSystemDiskSpec getSystemDisk() {
+        return systemDisk;
+    }
+
+    /**
+     * set 更新节点组系统盘信息，仅支持修改系统盘类型
+     *
+     * @param systemDisk
+     */
+    public void setSystemDisk(NodeGroupSystemDiskSpec systemDisk) {
+        this.systemDisk = systemDisk;
+    }
+
+
+    /**
+    * get 更新节点组数据盘信息，兼容多块盘模式
+    *
+    * @return
+    */
+    public List<NodeGroupDataDiskSpec> getDataDisks() {
+        return dataDisks;
+    }
+
+    /**
+    * set 更新节点组数据盘信息，兼容多块盘模式
+    *
+    * @param dataDisks
+    */
+    public void setDataDisks(List<NodeGroupDataDiskSpec> dataDisks) {
+        this.dataDisks = dataDisks;
+    }
+
+
+    /**
      * get 地域 ID
      *
      * @return
@@ -140,7 +291,8 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 工作节点组名称
      *
-     * @param name
+     * @param name 工作节点组名称
+     * @return ModifyNodeGroupRequest
      */
     public ModifyNodeGroupRequest name(String name) {
         this.name = name;
@@ -151,7 +303,8 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 工作节点组描述
      *
-     * @param description
+     * @param description 工作节点组描述
+     * @return ModifyNodeGroupRequest
      */
     public ModifyNodeGroupRequest description(String description) {
         this.description = description;
@@ -160,9 +313,82 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
+    * set k8s标签
+    *
+    * @param labels k8s标签
+    * @return ModifyNodeGroupRequest
+    */
+    public ModifyNodeGroupRequest labels(List<LabelSpec> labels) {
+        this.labels = labels;
+        return this;
+    }
+
+
+    /**
+    * set k8s污点
+    *
+    * @param taints k8s污点
+    * @return ModifyNodeGroupRequest
+    */
+    public ModifyNodeGroupRequest taints(List<TaintSpec> taints) {
+        this.taints = taints;
+        return this;
+    }
+
+
+    /**
+     * set 变更是否对存量节点生效，默认false
+     *
+     * @param updateExistNode 变更是否对存量节点生效，默认false
+     * @return ModifyNodeGroupRequest
+     */
+    public ModifyNodeGroupRequest updateExistNode(Boolean updateExistNode) {
+        this.updateExistNode = updateExistNode;
+        return this;
+    }
+
+
+    /**
+     * set 更新节点组默认磁盘初始化策略；不传时保留原策略；仅影响后续新建节点，不调整已有布局；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     *
+     * @param diskInitialize 更新节点组默认磁盘初始化策略；不传时保留原策略；仅影响后续新建节点，不调整已有布局；all_disks_lvm 的 CSI 初始预留默认 800 GiB
+     * @return ModifyNodeGroupRequest
+     */
+    public ModifyNodeGroupRequest diskInitialize(DiskInitializeSpec diskInitialize) {
+        this.diskInitialize = diskInitialize;
+        return this;
+    }
+
+
+    /**
+     * set 更新节点组系统盘信息，仅支持修改系统盘类型
+     *
+     * @param systemDisk 更新节点组系统盘信息，仅支持修改系统盘类型
+     * @return ModifyNodeGroupRequest
+     */
+    public ModifyNodeGroupRequest systemDisk(NodeGroupSystemDiskSpec systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+
+
+    /**
+    * set 更新节点组数据盘信息，兼容多块盘模式
+    *
+    * @param dataDisks 更新节点组数据盘信息，兼容多块盘模式
+    * @return ModifyNodeGroupRequest
+    */
+    public ModifyNodeGroupRequest dataDisks(List<NodeGroupDataDiskSpec> dataDisks) {
+        this.dataDisks = dataDisks;
+        return this;
+    }
+
+
+    /**
      * set 地域 ID
      *
-     * @param regionId
+     * @param regionId 地域 ID
+     * @return ModifyNodeGroupRequest
      */
     public ModifyNodeGroupRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -173,7 +399,8 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 工作节点组 ID
      *
-     * @param nodeGroupId
+     * @param nodeGroupId 工作节点组 ID
+     * @return ModifyNodeGroupRequest
      */
     public ModifyNodeGroupRequest nodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
@@ -181,4 +408,40 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
+    /**
+     * add item to k8s标签
+     *
+     * @param label
+     */
+    public void addLabel(LabelSpec label) {
+        if (this.labels == null) {
+            this.labels = new ArrayList<>();
+        }
+        this.labels.add(label);
+    }
+
+    /**
+     * add item to k8s污点
+     *
+     * @param taint
+     */
+    public void addTaint(TaintSpec taint) {
+        if (this.taints == null) {
+            this.taints = new ArrayList<>();
+        }
+        this.taints.add(taint);
+    }
+
+    /**
+     * add item to 更新节点组数据盘信息，兼容多块盘模式
+     *
+     * @param dataDisk
+     */
+    public void addDataDisk(NodeGroupDataDiskSpec dataDisk) {
+        if (this.dataDisks == null) {
+            this.dataDisks = new ArrayList<>();
+        }
+        this.dataDisks.add(dataDisk);
+    }
 }

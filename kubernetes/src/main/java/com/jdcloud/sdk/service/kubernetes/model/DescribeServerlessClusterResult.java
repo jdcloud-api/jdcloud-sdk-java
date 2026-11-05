@@ -64,7 +64,8 @@ public class DescribeServerlessClusterResult extends JdcloudResult implements ja
     /**
      * set cluster
      *
-     * @param cluster
+     * @param cluster 
+     * @return DescribeServerlessClusterResult
      */
     public DescribeServerlessClusterResult cluster(ServerlessCluster cluster) {
         this.cluster = cluster;
