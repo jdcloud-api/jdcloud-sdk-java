@@ -1,8 +1,9 @@
 # 更新历史 #
-API版本：1.1.16
+API版本：1.1.17
 
 | 发布时间       | 版本号    |更新|说明|
 |------------|--------|---|---|
+| 2026-10-29 | 1.1.17 |修改|* 集群扩容 clusterExpansion / 缩容 clusterReduction：修复 nodeType 参数未生效（此前 Task/Edge 扩容会按 Core 处理）；补充参数校验（新建节点组必填项、configGroupId 必填规则）与 clientToken 幂等（24 小时）；补充请求/响应示例与字段取值范围
 | 2026-10-12 | 1.1.16 |新增|* 新增 Task 节点组弹性伸缩接口：伸缩组增删改查 describeScalingGroups/describeScalingGroup/createScalingGroup/modifyScalingGroup/copyScalingGroup/deleteScalingGroup；手工伸缩 executeScalingManually；可选节点组与指标字典 describeScalableNodeGroups/describeScalingMetrics；伸缩记录查询与导出 describeScalingActivities/exportScalingActivities/describeScalingActivityLog
 | 2026-08-07 | 1.1.15 |新增|* 新增集群服务当前生效配置查询接口 describeClusterConfigs；新增库表元数据查询接口 listDatabases/getDatabase/listTables/getTable/listPartitions
 | 2025-06-20 | 1.1.14 |修改|* 节点组名称的字段由configGroupId改为configGroupName；ClusterExpansion去掉参数configGroupName

@@ -36,48 +36,62 @@ public class ClusterExpansion  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 集群ID
+     * 集群ID。
      * Required:true
      */
     @Required
     private String clusterId;
 
     /**
-     * 扩容节点数量
+     * 扩容节点数量（新增节点数，不是扩容后的总数）；取值需大于 0。
+新建节点组模式（taskNodesByGroup 非空）下该值传 0 即可，实际数量以 taskNodesByGroup 中的 nodeNumber 为准；
+若同时传入大于 0 且与 nodeNumber 不一致，请求会被拒绝。
+
      * Required:true
      */
     @Required
     private String expansionNum;
 
     /**
-     * 扩容节点类型，默认为Core类型。 Task：计算节点，Core：存储和计算节点，Edge：边缘节点
+     * 扩容节点类型；默认 Core。
+取值范围：Core（存储和计算节点）、Task（计算节点）、Edge（边缘节点）。
+仅 Task/Edge 支持通过 taskNodesByGroup 新建节点组。
+
      */
     private String nodeType;
 
     /**
-     * （已废弃）扩容节点规格，默认值为0。集群已有的Core，Task，Edge节点规格分别取值0，-1，-2。否则需为预置规格的id，取值&gt;0
+     * （已废弃）扩容节点规格：0&#x3D;已有 Core 规格，-1&#x3D;已有 Task 规格，-2&#x3D;已有 Edge 规格，&gt;0&#x3D;预置规格 ID。
+建议改用 configGroupId（已有节点组）或 taskNodesByGroup（新建节点组）；与 taskNodesByGroup 互斥。
+
      */
     private String expandTypeId;
 
     /**
-     * 扩容时选择的组件，默认为集群已有组件。逗号分割，举例 HDFS,YARN,HBASE
+     * 扩容节点需要安装的组件，逗号分割，举例 HDFS,YARN,HBASE；默认沿用集群已有组件。
      */
     private String expandServices;
 
     /**
-     * 扩容节点所属的已有节点组ID
+     * 已有节点组ID：在指定 Task/Edge 节点组内扩容时传入。
+与 taskNodesByGroup 互斥，同时传会返回参数错误。
+
      */
     private String configGroupId;
 
     /**
-     * 扩容新建的节点组及节点信息
+     * 新建节点组模式：数组仅支持 1 个元素（多于 1 个会返回参数错误）。
+元素中 configGroupName（节点组名称，集群内唯一）、nodeNumber（节点数量，≥1）、instanceType，
+以及磁盘参数 nodeSystemDiskType、nodeSystemDiskVolume、nodeDiskType、nodeDiskVolume、nodeDiskNumber 必填。
+单个集群的节点组数量上限为 10；与 configGroupId 互斥。
+
      */
     
     private List<ClusterNode> taskNodesByGroup;
 
 
     /**
-     * get 集群ID
+     * get 集群ID。
      *
      * @return
      */
@@ -86,7 +100,7 @@ public class ClusterExpansion  implements java.io.Serializable {
     }
 
     /**
-     * set 集群ID
+     * set 集群ID。
      *
      * @param clusterId
      */
@@ -96,7 +110,10 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
-     * get 扩容节点数量
+     * get 扩容节点数量（新增节点数，不是扩容后的总数）；取值需大于 0。
+新建节点组模式（taskNodesByGroup 非空）下该值传 0 即可，实际数量以 taskNodesByGroup 中的 nodeNumber 为准；
+若同时传入大于 0 且与 nodeNumber 不一致，请求会被拒绝。
+
      *
      * @return
      */
@@ -105,7 +122,10 @@ public class ClusterExpansion  implements java.io.Serializable {
     }
 
     /**
-     * set 扩容节点数量
+     * set 扩容节点数量（新增节点数，不是扩容后的总数）；取值需大于 0。
+新建节点组模式（taskNodesByGroup 非空）下该值传 0 即可，实际数量以 taskNodesByGroup 中的 nodeNumber 为准；
+若同时传入大于 0 且与 nodeNumber 不一致，请求会被拒绝。
+
      *
      * @param expansionNum
      */
@@ -115,7 +135,10 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
-     * get 扩容节点类型，默认为Core类型。 Task：计算节点，Core：存储和计算节点，Edge：边缘节点
+     * get 扩容节点类型；默认 Core。
+取值范围：Core（存储和计算节点）、Task（计算节点）、Edge（边缘节点）。
+仅 Task/Edge 支持通过 taskNodesByGroup 新建节点组。
+
      *
      * @return
      */
@@ -124,7 +147,10 @@ public class ClusterExpansion  implements java.io.Serializable {
     }
 
     /**
-     * set 扩容节点类型，默认为Core类型。 Task：计算节点，Core：存储和计算节点，Edge：边缘节点
+     * set 扩容节点类型；默认 Core。
+取值范围：Core（存储和计算节点）、Task（计算节点）、Edge（边缘节点）。
+仅 Task/Edge 支持通过 taskNodesByGroup 新建节点组。
+
      *
      * @param nodeType
      */
@@ -134,7 +160,9 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
-     * get （已废弃）扩容节点规格，默认值为0。集群已有的Core，Task，Edge节点规格分别取值0，-1，-2。否则需为预置规格的id，取值&gt;0
+     * get （已废弃）扩容节点规格：0&#x3D;已有 Core 规格，-1&#x3D;已有 Task 规格，-2&#x3D;已有 Edge 规格，&gt;0&#x3D;预置规格 ID。
+建议改用 configGroupId（已有节点组）或 taskNodesByGroup（新建节点组）；与 taskNodesByGroup 互斥。
+
      *
      * @return
      */
@@ -143,7 +171,9 @@ public class ClusterExpansion  implements java.io.Serializable {
     }
 
     /**
-     * set （已废弃）扩容节点规格，默认值为0。集群已有的Core，Task，Edge节点规格分别取值0，-1，-2。否则需为预置规格的id，取值&gt;0
+     * set （已废弃）扩容节点规格：0&#x3D;已有 Core 规格，-1&#x3D;已有 Task 规格，-2&#x3D;已有 Edge 规格，&gt;0&#x3D;预置规格 ID。
+建议改用 configGroupId（已有节点组）或 taskNodesByGroup（新建节点组）；与 taskNodesByGroup 互斥。
+
      *
      * @param expandTypeId
      */
@@ -153,7 +183,7 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
-     * get 扩容时选择的组件，默认为集群已有组件。逗号分割，举例 HDFS,YARN,HBASE
+     * get 扩容节点需要安装的组件，逗号分割，举例 HDFS,YARN,HBASE；默认沿用集群已有组件。
      *
      * @return
      */
@@ -162,7 +192,7 @@ public class ClusterExpansion  implements java.io.Serializable {
     }
 
     /**
-     * set 扩容时选择的组件，默认为集群已有组件。逗号分割，举例 HDFS,YARN,HBASE
+     * set 扩容节点需要安装的组件，逗号分割，举例 HDFS,YARN,HBASE；默认沿用集群已有组件。
      *
      * @param expandServices
      */
@@ -172,7 +202,9 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
-     * get 扩容节点所属的已有节点组ID
+     * get 已有节点组ID：在指定 Task/Edge 节点组内扩容时传入。
+与 taskNodesByGroup 互斥，同时传会返回参数错误。
+
      *
      * @return
      */
@@ -181,7 +213,9 @@ public class ClusterExpansion  implements java.io.Serializable {
     }
 
     /**
-     * set 扩容节点所属的已有节点组ID
+     * set 已有节点组ID：在指定 Task/Edge 节点组内扩容时传入。
+与 taskNodesByGroup 互斥，同时传会返回参数错误。
+
      *
      * @param configGroupId
      */
@@ -191,7 +225,11 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
-    * get 扩容新建的节点组及节点信息
+    * get 新建节点组模式：数组仅支持 1 个元素（多于 1 个会返回参数错误）。
+元素中 configGroupName（节点组名称，集群内唯一）、nodeNumber（节点数量，≥1）、instanceType，
+以及磁盘参数 nodeSystemDiskType、nodeSystemDiskVolume、nodeDiskType、nodeDiskVolume、nodeDiskNumber 必填。
+单个集群的节点组数量上限为 10；与 configGroupId 互斥。
+
     *
     * @return
     */
@@ -200,7 +238,11 @@ public class ClusterExpansion  implements java.io.Serializable {
     }
 
     /**
-    * set 扩容新建的节点组及节点信息
+    * set 新建节点组模式：数组仅支持 1 个元素（多于 1 个会返回参数错误）。
+元素中 configGroupName（节点组名称，集群内唯一）、nodeNumber（节点数量，≥1）、instanceType，
+以及磁盘参数 nodeSystemDiskType、nodeSystemDiskVolume、nodeDiskType、nodeDiskVolume、nodeDiskNumber 必填。
+单个集群的节点组数量上限为 10；与 configGroupId 互斥。
+
     *
     * @param taskNodesByGroup
     */
@@ -211,9 +253,9 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
-     * set 集群ID
+     * set 集群ID。
      *
-     * @param clusterId 集群ID
+     * @param clusterId 集群ID。
      * @return ClusterExpansion
      */
     public ClusterExpansion clusterId(String clusterId) {
@@ -223,9 +265,15 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
-     * set 扩容节点数量
+     * set 扩容节点数量（新增节点数，不是扩容后的总数）；取值需大于 0。
+新建节点组模式（taskNodesByGroup 非空）下该值传 0 即可，实际数量以 taskNodesByGroup 中的 nodeNumber 为准；
+若同时传入大于 0 且与 nodeNumber 不一致，请求会被拒绝。
+
      *
-     * @param expansionNum 扩容节点数量
+     * @param expansionNum 扩容节点数量（新增节点数，不是扩容后的总数）；取值需大于 0。
+新建节点组模式（taskNodesByGroup 非空）下该值传 0 即可，实际数量以 taskNodesByGroup 中的 nodeNumber 为准；
+若同时传入大于 0 且与 nodeNumber 不一致，请求会被拒绝。
+
      * @return ClusterExpansion
      */
     public ClusterExpansion expansionNum(String expansionNum) {
@@ -235,9 +283,15 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
-     * set 扩容节点类型，默认为Core类型。 Task：计算节点，Core：存储和计算节点，Edge：边缘节点
+     * set 扩容节点类型；默认 Core。
+取值范围：Core（存储和计算节点）、Task（计算节点）、Edge（边缘节点）。
+仅 Task/Edge 支持通过 taskNodesByGroup 新建节点组。
+
      *
-     * @param nodeType 扩容节点类型，默认为Core类型。 Task：计算节点，Core：存储和计算节点，Edge：边缘节点
+     * @param nodeType 扩容节点类型；默认 Core。
+取值范围：Core（存储和计算节点）、Task（计算节点）、Edge（边缘节点）。
+仅 Task/Edge 支持通过 taskNodesByGroup 新建节点组。
+
      * @return ClusterExpansion
      */
     public ClusterExpansion nodeType(String nodeType) {
@@ -247,9 +301,13 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
-     * set （已废弃）扩容节点规格，默认值为0。集群已有的Core，Task，Edge节点规格分别取值0，-1，-2。否则需为预置规格的id，取值&gt;0
+     * set （已废弃）扩容节点规格：0&#x3D;已有 Core 规格，-1&#x3D;已有 Task 规格，-2&#x3D;已有 Edge 规格，&gt;0&#x3D;预置规格 ID。
+建议改用 configGroupId（已有节点组）或 taskNodesByGroup（新建节点组）；与 taskNodesByGroup 互斥。
+
      *
-     * @param expandTypeId （已废弃）扩容节点规格，默认值为0。集群已有的Core，Task，Edge节点规格分别取值0，-1，-2。否则需为预置规格的id，取值&gt;0
+     * @param expandTypeId （已废弃）扩容节点规格：0&#x3D;已有 Core 规格，-1&#x3D;已有 Task 规格，-2&#x3D;已有 Edge 规格，&gt;0&#x3D;预置规格 ID。
+建议改用 configGroupId（已有节点组）或 taskNodesByGroup（新建节点组）；与 taskNodesByGroup 互斥。
+
      * @return ClusterExpansion
      */
     public ClusterExpansion expandTypeId(String expandTypeId) {
@@ -259,9 +317,9 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
-     * set 扩容时选择的组件，默认为集群已有组件。逗号分割，举例 HDFS,YARN,HBASE
+     * set 扩容节点需要安装的组件，逗号分割，举例 HDFS,YARN,HBASE；默认沿用集群已有组件。
      *
-     * @param expandServices 扩容时选择的组件，默认为集群已有组件。逗号分割，举例 HDFS,YARN,HBASE
+     * @param expandServices 扩容节点需要安装的组件，逗号分割，举例 HDFS,YARN,HBASE；默认沿用集群已有组件。
      * @return ClusterExpansion
      */
     public ClusterExpansion expandServices(String expandServices) {
@@ -271,9 +329,13 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
-     * set 扩容节点所属的已有节点组ID
+     * set 已有节点组ID：在指定 Task/Edge 节点组内扩容时传入。
+与 taskNodesByGroup 互斥，同时传会返回参数错误。
+
      *
-     * @param configGroupId 扩容节点所属的已有节点组ID
+     * @param configGroupId 已有节点组ID：在指定 Task/Edge 节点组内扩容时传入。
+与 taskNodesByGroup 互斥，同时传会返回参数错误。
+
      * @return ClusterExpansion
      */
     public ClusterExpansion configGroupId(String configGroupId) {
@@ -283,9 +345,17 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
-    * set 扩容新建的节点组及节点信息
+    * set 新建节点组模式：数组仅支持 1 个元素（多于 1 个会返回参数错误）。
+元素中 configGroupName（节点组名称，集群内唯一）、nodeNumber（节点数量，≥1）、instanceType，
+以及磁盘参数 nodeSystemDiskType、nodeSystemDiskVolume、nodeDiskType、nodeDiskVolume、nodeDiskNumber 必填。
+单个集群的节点组数量上限为 10；与 configGroupId 互斥。
+
     *
-    * @param taskNodesByGroup 扩容新建的节点组及节点信息
+    * @param taskNodesByGroup 新建节点组模式：数组仅支持 1 个元素（多于 1 个会返回参数错误）。
+元素中 configGroupName（节点组名称，集群内唯一）、nodeNumber（节点数量，≥1）、instanceType，
+以及磁盘参数 nodeSystemDiskType、nodeSystemDiskVolume、nodeDiskType、nodeDiskVolume、nodeDiskNumber 必填。
+单个集群的节点组数量上限为 10；与 configGroupId 互斥。
+
     * @return ClusterExpansion
     */
     public ClusterExpansion taskNodesByGroup(List<ClusterNode> taskNodesByGroup) {
@@ -296,7 +366,11 @@ public class ClusterExpansion  implements java.io.Serializable {
 
 
     /**
-     * add item to 扩容新建的节点组及节点信息
+     * add item to 新建节点组模式：数组仅支持 1 个元素（多于 1 个会返回参数错误）。
+元素中 configGroupName（节点组名称，集群内唯一）、nodeNumber（节点数量，≥1）、instanceType，
+以及磁盘参数 nodeSystemDiskType、nodeSystemDiskVolume、nodeDiskType、nodeDiskVolume、nodeDiskNumber 必填。
+单个集群的节点组数量上限为 10；与 configGroupId 互斥。
+
      *
      * @param taskNodesByGroup
      */

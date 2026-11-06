@@ -29,7 +29,11 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.jmr.model.ClusterExpansionResponse;
 
 /**
- * 扩容集群
+ * 扩容集群：在已有节点组内追加节点，或新建 Task/Edge 节点组。
+接口为异步：返回成功仅表示扩容已开始，集群状态会变为 EXPANDING，请轮询 describeClusters 直到恢复 RUNNING。
+失败语义：业务校验失败时 HTTP 仍返回 200，result.status 为 false，具体原因见 result.message。
+clientToken 幂等：相同 clientToken 的重复请求在 24 小时内只执行一次并返回首次结果。
+
  */
 class ClusterExpansionExecutor extends JdcloudExecutor {
 

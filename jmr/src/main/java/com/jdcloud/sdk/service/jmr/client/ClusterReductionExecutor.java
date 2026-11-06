@@ -29,7 +29,11 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.jmr.model.ClusterReductionResponse;
 
 /**
- * 缩容集群
+ * 缩容集群：释放 Task/Edge 节点，保留 reserveNum 个。
+接口为异步：返回成功仅表示缩容已开始，集群状态会变为 REDUCING，请轮询 describeClusters 直到恢复 RUNNING。
+失败语义：业务校验失败时 HTTP 仍返回 200，result.status 为 false，具体原因见 result.message。
+clientToken 幂等：相同 clientToken 的重复请求在 24 小时内只执行一次并返回首次结果。
+
  */
 class ClusterReductionExecutor extends JdcloudExecutor {
 

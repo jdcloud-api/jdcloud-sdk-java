@@ -266,7 +266,11 @@ CSV 文本通过 data.content 返回，由调用方自行落盘（接口不返�
     }
 
     /**
-     * 扩容集群
+     * 扩容集群：在已有节点组内追加节点，或新建 Task/Edge 节点组。
+接口为异步：返回成功仅表示扩容已开始，集群状态会变为 EXPANDING，请轮询 describeClusters 直到恢复 RUNNING。
+失败语义：业务校验失败时 HTTP 仍返回 200，result.status 为 false，具体原因见 result.message。
+clientToken 幂等：相同 clientToken 的重复请求在 24 小时内只执行一次并返回首次结果。
+
      *
      * @param request
      * @return
@@ -601,7 +605,11 @@ privileges 为空时表示回收该主体在该资源上的全部权限。
     }
 
     /**
-     * 缩容集群
+     * 缩容集群：释放 Task/Edge 节点，保留 reserveNum 个。
+接口为异步：返回成功仅表示缩容已开始，集群状态会变为 REDUCING，请轮询 describeClusters 直到恢复 RUNNING。
+失败语义：业务校验失败时 HTTP 仍返回 200，result.status 为 false，具体原因见 result.message。
+clientToken 幂等：相同 clientToken 的重复请求在 24 小时内只执行一次并返回首次结果。
+
      *
      * @param request
      * @return

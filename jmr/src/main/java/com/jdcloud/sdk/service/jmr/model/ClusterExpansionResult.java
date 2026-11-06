@@ -27,14 +27,18 @@ package com.jdcloud.sdk.service.jmr.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 扩容集群
+ * 扩容集群：在已有节点组内追加节点，或新建 Task/Edge 节点组。
+接口为异步：返回成功仅表示扩容已开始，集群状态会变为 EXPANDING，请轮询 describeClusters 直到恢复 RUNNING。
+失败语义：业务校验失败时 HTTP 仍返回 200，result.status 为 false，具体原因见 result.message。
+clientToken 幂等：相同 clientToken 的重复请求在 24 小时内只执行一次并返回首次结果。
+
  */
 public class ClusterExpansionResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 是否开始扩容集群
+     * 是否开始扩容；false 表示未执行，原因见 message
      */
     private Boolean status;
 
@@ -44,14 +48,14 @@ public class ClusterExpansionResult extends JdcloudResult implements java.io.Ser
     private String clusterId;
 
     /**
-     * 扩容集群的信息
+     * 扩容集群的信息；status&#x3D;false 时为失败原因
      */
     private String message;
 
 
 
     /**
-     * get 是否开始扩容集群
+     * get 是否开始扩容；false 表示未执行，原因见 message
      *
      * @return
      */
@@ -60,7 +64,7 @@ public class ClusterExpansionResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 是否开始扩容集群
+     * set 是否开始扩容；false 表示未执行，原因见 message
      *
      * @param status
      */
@@ -89,7 +93,7 @@ public class ClusterExpansionResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * get 扩容集群的信息
+     * get 扩容集群的信息；status&#x3D;false 时为失败原因
      *
      * @return
      */
@@ -98,7 +102,7 @@ public class ClusterExpansionResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 扩容集群的信息
+     * set 扩容集群的信息；status&#x3D;false 时为失败原因
      *
      * @param message
      */
@@ -109,9 +113,9 @@ public class ClusterExpansionResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * set 是否开始扩容集群
+     * set 是否开始扩容；false 表示未执行，原因见 message
      *
-     * @param status 是否开始扩容集群
+     * @param status 是否开始扩容；false 表示未执行，原因见 message
      * @return ClusterExpansionResult
      */
     public ClusterExpansionResult status(Boolean status) {
@@ -133,9 +137,9 @@ public class ClusterExpansionResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * set 扩容集群的信息
+     * set 扩容集群的信息；status&#x3D;false 时为失败原因
      *
-     * @param message 扩容集群的信息
+     * @param message 扩容集群的信息；status&#x3D;false 时为失败原因
      * @return ClusterExpansionResult
      */
     public ClusterExpansionResult message(String message) {
