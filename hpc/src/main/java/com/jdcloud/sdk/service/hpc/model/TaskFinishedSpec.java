@@ -218,7 +218,8 @@ in: path
     /**
      * set 错误信息
      *
-     * @param errorMsg
+     * @param errorMsg 错误信息
+     * @return TaskFinishedSpec
      */
     public TaskFinishedSpec errorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
@@ -229,7 +230,8 @@ in: path
     /**
      * set 事件类型
      *
-     * @param eventType
+     * @param eventType 事件类型
+     * @return TaskFinishedSpec
      */
     public TaskFinishedSpec eventType(String eventType) {
         this.eventType = eventType;
@@ -240,7 +242,8 @@ in: path
     /**
      * set 流水线示例 ID
      *
-     * @param instanceID
+     * @param instanceID 流水线示例 ID
+     * @return TaskFinishedSpec
      */
     public TaskFinishedSpec instanceID(String instanceID) {
         this.instanceID = instanceID;
@@ -251,7 +254,8 @@ in: path
     /**
      * set 标准输出
      *
-     * @param stdout
+     * @param stdout 标准输出
+     * @return TaskFinishedSpec
      */
     public TaskFinishedSpec stdout(String stdout) {
         this.stdout = stdout;
@@ -263,7 +267,9 @@ in: path
      * set 任务UID
 in: path
      *
-     * @param taskID
+     * @param taskID 任务UID
+in: path
+     * @return TaskFinishedSpec
      */
     public TaskFinishedSpec taskID(String taskID) {
         this.taskID = taskID;
@@ -274,7 +280,8 @@ in: path
     /**
      * set taskStatus
      *
-     * @param taskStatus
+     * @param taskStatus 
+     * @return TaskFinishedSpec
      */
     public TaskFinishedSpec taskStatus(String taskStatus) {
         this.taskStatus = taskStatus;
@@ -285,7 +292,8 @@ in: path
     /**
      * set 用户变量
      *
-     * @param userVars
+     * @param userVars 用户变量
+     * @return TaskFinishedSpec
      */
     public TaskFinishedSpec userVars(Object userVars) {
         this.userVars = userVars;

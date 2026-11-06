@@ -123,7 +123,9 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
      * set 网卡设备Index。创建实例时此参数无须指定且指定无效。对于主网卡默认Index为1。
 
      *
-     * @param deviceIndex
+     * @param deviceIndex 网卡设备Index。创建实例时此参数无须指定且指定无效。对于主网卡默认Index为1。
+
+     * @return InstanceNetworkInterfaceAttachmentSpec
      */
     public InstanceNetworkInterfaceAttachmentSpec deviceIndex(Integer deviceIndex) {
         this.deviceIndex = deviceIndex;
@@ -137,7 +139,11 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
 &#x60;false&#x60;（默认值）：不随实例删除。
 
      *
-     * @param autoDelete
+     * @param autoDelete 是否随实例一起删除。
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
+
+     * @return InstanceNetworkInterfaceAttachmentSpec
      */
     public InstanceNetworkInterfaceAttachmentSpec autoDelete(Boolean autoDelete) {
         this.autoDelete = autoDelete;
@@ -148,7 +154,8 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
     /**
      * set 网卡设备详细配置。
      *
-     * @param networkInterface
+     * @param networkInterface 网卡设备详细配置。
+     * @return InstanceNetworkInterfaceAttachmentSpec
      */
     public InstanceNetworkInterfaceAttachmentSpec networkInterface(NetworkInterfaceSpec networkInterface) {
         this.networkInterface = networkInterface;

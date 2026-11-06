@@ -212,7 +212,8 @@ public class HardwareStaticCheckNodeSummary  implements java.io.Serializable {
     /**
      * set 节点名称。
      *
-     * @param nodeName
+     * @param nodeName 节点名称。
+     * @return HardwareStaticCheckNodeSummary
      */
     public HardwareStaticCheckNodeSummary nodeName(String nodeName) {
         this.nodeName = nodeName;
@@ -223,7 +224,8 @@ public class HardwareStaticCheckNodeSummary  implements java.io.Serializable {
     /**
      * set 实例ID。
      *
-     * @param instanceId
+     * @param instanceId 实例ID。
+     * @return HardwareStaticCheckNodeSummary
      */
     public HardwareStaticCheckNodeSummary instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -234,7 +236,8 @@ public class HardwareStaticCheckNodeSummary  implements java.io.Serializable {
     /**
      * set 内网IP地址。
      *
-     * @param privateIpAddress
+     * @param privateIpAddress 内网IP地址。
+     * @return HardwareStaticCheckNodeSummary
      */
     public HardwareStaticCheckNodeSummary privateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
@@ -245,7 +248,8 @@ public class HardwareStaticCheckNodeSummary  implements java.io.Serializable {
     /**
      * set 公网IP地址。
      *
-     * @param publicIpAddress
+     * @param publicIpAddress 公网IP地址。
+     * @return HardwareStaticCheckNodeSummary
      */
     public HardwareStaticCheckNodeSummary publicIpAddress(String publicIpAddress) {
         this.publicIpAddress = publicIpAddress;
@@ -256,7 +260,8 @@ public class HardwareStaticCheckNodeSummary  implements java.io.Serializable {
     /**
      * set 实例规格。
      *
-     * @param instanceType
+     * @param instanceType 实例规格。
+     * @return HardwareStaticCheckNodeSummary
      */
     public HardwareStaticCheckNodeSummary instanceType(String instanceType) {
         this.instanceType = instanceType;
@@ -267,7 +272,8 @@ public class HardwareStaticCheckNodeSummary  implements java.io.Serializable {
     /**
      * set 操作系统。
      *
-     * @param operatingSystem
+     * @param operatingSystem 操作系统。
+     * @return HardwareStaticCheckNodeSummary
      */
     public HardwareStaticCheckNodeSummary operatingSystem(String operatingSystem) {
         this.operatingSystem = operatingSystem;
@@ -280,7 +286,10 @@ public class HardwareStaticCheckNodeSummary  implements java.io.Serializable {
 取值：&#x60;通过&#x60;、&#x60;不通过&#x60;。
 
      *
-     * @param checkResult
+     * @param checkResult 检查结论。
+取值：&#x60;通过&#x60;、&#x60;不通过&#x60;。
+
+     * @return HardwareStaticCheckNodeSummary
      */
     public HardwareStaticCheckNodeSummary checkResult(String checkResult) {
         this.checkResult = checkResult;

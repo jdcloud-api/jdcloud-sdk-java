@@ -203,7 +203,8 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     /**
     * set Tag筛选条件。
     *
-    * @param tags
+    * @param tags Tag筛选条件。
+    * @return DescribeInstancesRequest
     */
     public DescribeInstancesRequest tags(List<TagFilter> tags) {
         this.tags = tags;
@@ -226,7 +227,20 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
 &#x60;_privateIpAddress&#x60;: 实例内网ip地址。支持精确单个（内部使用）
 
     *
-    * @param filters
+    * @param filters &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;instanceId&#x60;: 实例ID。支持精确批量
+&#x60;instanceName&#x60;: 实例名称。支持单个模糊查询
+&#x60;privateIpAddress&#x60;: 实例内网ip地址。支持单个模糊查询
+&#x60;hostName&#x60;: 主机hostName。支持单个模糊查询
+&#x60;subnetId&#x60;: 实例所在子网。支持精确批量
+&#x60;instanceType&#x60;: 实例规格。支持精确批量
+&#x60;az&#x60;: 可用区。支持精确多个
+&#x60;status&#x60;: 实例状态。支持精确批量
+&#x60;packageId&#x60;: 实例使用的安装包ID。支持精确批量
+&#x60;hpcClusterId&#x60;: 实例网络集群ID。支持精确批量
+&#x60;_privateIpAddress&#x60;: 实例内网ip地址。支持精确单个（内部使用）
+
+    * @return DescribeInstancesRequest
     */
     public DescribeInstancesRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -237,7 +251,8 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     /**
      * set 页码；默认为1。
      *
-     * @param pageNumber
+     * @param pageNumber 页码；默认为1。
+     * @return DescribeInstancesRequest
      */
     public DescribeInstancesRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -248,7 +263,8 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     /**
      * set 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
-     * @param pageSize
+     * @param pageSize 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
+     * @return DescribeInstancesRequest
      */
     public DescribeInstancesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -259,7 +275,8 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return DescribeInstancesRequest
      */
     public DescribeInstancesRequest regionId(String regionId) {
         this.regionId = regionId;

@@ -64,7 +64,8 @@ public class NetworkTopology  implements java.io.Serializable {
     /**
     * set 网络拓扑层级cluster信息
     *
-    * @param clusterLayers
+    * @param clusterLayers 网络拓扑层级cluster信息
+    * @return NetworkTopology
     */
     public NetworkTopology clusterLayers(List<ClusterLayer> clusterLayers) {
         this.clusterLayers = clusterLayers;

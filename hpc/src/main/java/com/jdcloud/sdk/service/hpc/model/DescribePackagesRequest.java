@@ -216,7 +216,8 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
     /**
      * set 按照安装包名称模糊查询。
      *
-     * @param packageName
+     * @param packageName 按照安装包名称模糊查询。
+     * @return DescribePackagesRequest
      */
     public DescribePackagesRequest packageName(String packageName) {
         this.packageName = packageName;
@@ -227,7 +228,8 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
     /**
     * set 按照安装包ID进行筛选。
     *
-    * @param packageIds
+    * @param packageIds 按照安装包ID进行筛选。
+    * @return DescribePackagesRequest
     */
     public DescribePackagesRequest packageIds(List<String> packageIds) {
         this.packageIds = packageIds;
@@ -238,7 +240,8 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
     /**
      * set 按照操作系统类型筛选，如ubuntu、openEuler等。
      *
-     * @param osType
+     * @param osType 按照操作系统类型筛选，如ubuntu、openEuler等。
+     * @return DescribePackagesRequest
      */
     public DescribePackagesRequest osType(String osType) {
         this.osType = osType;
@@ -249,7 +252,8 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
     /**
      * set 按照使用的架构筛选，支持：x86_64,arm64。
      *
-     * @param architecture
+     * @param architecture 按照使用的架构筛选，支持：x86_64,arm64。
+     * @return DescribePackagesRequest
      */
     public DescribePackagesRequest architecture(String architecture) {
         this.architecture = architecture;
@@ -260,7 +264,8 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
     /**
      * set 页码；默认为1。
      *
-     * @param pageNumber
+     * @param pageNumber 页码；默认为1。
+     * @return DescribePackagesRequest
      */
     public DescribePackagesRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -271,7 +276,8 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
     /**
      * set 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
-     * @param pageSize
+     * @param pageSize 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
+     * @return DescribePackagesRequest
      */
     public DescribePackagesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -283,7 +289,9 @@ public class DescribePackagesRequest extends JdcloudRequest implements java.io.S
      * set 地域ID。
 
      *
-     * @param regionId
+     * @param regionId 地域ID。
+
+     * @return DescribePackagesRequest
      */
     public DescribePackagesRequest regionId(String regionId) {
         this.regionId = regionId;

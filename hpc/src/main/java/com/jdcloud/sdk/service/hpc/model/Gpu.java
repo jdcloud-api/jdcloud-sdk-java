@@ -110,7 +110,8 @@ public class Gpu  implements java.io.Serializable {
     /**
      * set GPU卡型号。
      *
-     * @param model
+     * @param model GPU卡型号。
+     * @return Gpu
      */
     public Gpu model(String model) {
         this.model = model;
@@ -121,7 +122,8 @@ public class Gpu  implements java.io.Serializable {
     /**
      * set GPU卡数量。
      *
-     * @param number
+     * @param number GPU卡数量。
+     * @return Gpu
      */
     public Gpu number(Integer number) {
         this.number = number;
@@ -132,7 +134,8 @@ public class Gpu  implements java.io.Serializable {
     /**
      * set 显存大小，单位：GB。
      *
-     * @param vram
+     * @param vram 显存大小，单位：GB。
+     * @return Gpu
      */
     public Gpu vram(Integer vram) {
         this.vram = vram;

@@ -158,7 +158,8 @@ public class Result  implements java.io.Serializable {
     /**
      * set 源节点
      *
-     * @param srcId
+     * @param srcId 源节点
+     * @return Result
      */
     public Result srcId(String srcId) {
         this.srcId = srcId;
@@ -169,7 +170,8 @@ public class Result  implements java.io.Serializable {
     /**
      * set 目的节点
      *
-     * @param dstId
+     * @param dstId 目的节点
+     * @return Result
      */
     public Result dstId(String dstId) {
         this.dstId = dstId;
@@ -180,7 +182,8 @@ public class Result  implements java.io.Serializable {
     /**
      * set 测试值
      *
-     * @param value
+     * @param value 测试值
+     * @return Result
      */
     public Result value(Float value) {
         this.value = value;
@@ -191,7 +194,8 @@ public class Result  implements java.io.Serializable {
     /**
      * set success:成功，failed:失败
      *
-     * @param state
+     * @param state success:成功，failed:失败
+     * @return Result
      */
     public Result state(String state) {
         this.state = state;
@@ -202,7 +206,8 @@ public class Result  implements java.io.Serializable {
     /**
      * set 原因
      *
-     * @param reason
+     * @param reason 原因
+     * @return Result
      */
     public Result reason(String reason) {
         this.reason = reason;

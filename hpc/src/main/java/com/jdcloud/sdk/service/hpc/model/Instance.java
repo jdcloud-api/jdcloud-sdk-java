@@ -182,6 +182,21 @@ public class Instance  implements java.io.Serializable {
      */
     private Integer progress;
 
+    /**
+     * 专属区名称
+     */
+    private String dedicatedZoneName;
+
+    /**
+     * 专属区ID
+     */
+    private String dedicatedZoneId;
+
+    /**
+     * 已绑定的密钥对名称列表
+     */
+    
+    private List<String> keyNames;
 
 
     /**
@@ -739,11 +754,69 @@ public class Instance  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 专属区名称
+     *
+     * @return
+     */
+    public String getDedicatedZoneName() {
+        return dedicatedZoneName;
+    }
+
+    /**
+     * set 专属区名称
+     *
+     * @param dedicatedZoneName
+     */
+    public void setDedicatedZoneName(String dedicatedZoneName) {
+        this.dedicatedZoneName = dedicatedZoneName;
+    }
+
+
+    /**
+     * get 专属区ID
+     *
+     * @return
+     */
+    public String getDedicatedZoneId() {
+        return dedicatedZoneId;
+    }
+
+    /**
+     * set 专属区ID
+     *
+     * @param dedicatedZoneId
+     */
+    public void setDedicatedZoneId(String dedicatedZoneId) {
+        this.dedicatedZoneId = dedicatedZoneId;
+    }
+
+
+    /**
+    * get 已绑定的密钥对名称列表
+    *
+    * @return
+    */
+    public List<String> getKeyNames() {
+        return keyNames;
+    }
+
+    /**
+    * set 已绑定的密钥对名称列表
+    *
+    * @param keyNames
+    */
+    public void setKeyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
+    }
+
+
 
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return Instance
      */
     public Instance instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -754,7 +827,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 实例名称
      *
-     * @param instanceName
+     * @param instanceName 实例名称
+     * @return Instance
      */
     public Instance instanceName(String instanceName) {
         this.instanceName = instanceName;
@@ -765,7 +839,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 主机名
      *
-     * @param hostName
+     * @param hostName 主机名
+     * @return Instance
      */
     public Instance hostName(String hostName) {
         this.hostName = hostName;
@@ -776,7 +851,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 实例状态
      *
-     * @param status
+     * @param status 实例状态
+     * @return Instance
      */
     public Instance status(String status) {
         this.status = status;
@@ -787,7 +863,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 地域
      *
-     * @param region
+     * @param region 地域
+     * @return Instance
      */
     public Instance region(String region) {
         this.region = region;
@@ -798,7 +875,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 可用区
      *
-     * @param az
+     * @param az 可用区
+     * @return Instance
      */
     public Instance az(String az) {
         this.az = az;
@@ -809,7 +887,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 实例网络集群Id
      *
-     * @param hpcClusterId
+     * @param hpcClusterId 实例网络集群Id
+     * @return Instance
      */
     public Instance hpcClusterId(String hpcClusterId) {
         this.hpcClusterId = hpcClusterId;
@@ -820,7 +899,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 实例网络集群名称
      *
-     * @param hpcClusterName
+     * @param hpcClusterName 实例网络集群名称
+     * @return Instance
      */
     public Instance hpcClusterName(String hpcClusterName) {
         this.hpcClusterName = hpcClusterName;
@@ -831,7 +911,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 安装包ID
      *
-     * @param packageId
+     * @param packageId 安装包ID
+     * @return Instance
      */
     public Instance packageId(String packageId) {
         this.packageId = packageId;
@@ -842,7 +923,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 操作系统类型
      *
-     * @param osType
+     * @param osType 操作系统类型
+     * @return Instance
      */
     public Instance osType(String osType) {
         this.osType = osType;
@@ -853,7 +935,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 操作系统版本
      *
-     * @param osVersion
+     * @param osVersion 操作系统版本
+     * @return Instance
      */
     public Instance osVersion(String osVersion) {
         this.osVersion = osVersion;
@@ -864,7 +947,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 实例规格
      *
-     * @param instanceType
+     * @param instanceType 实例规格
+     * @return Instance
      */
     public Instance instanceType(String instanceType) {
         this.instanceType = instanceType;
@@ -875,7 +959,8 @@ public class Instance  implements java.io.Serializable {
     /**
     * set tags
     *
-    * @param tags
+    * @param tags 
+    * @return Instance
     */
     public Instance tags(List<Tag> tags) {
         this.tags = tags;
@@ -886,7 +971,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 资源组ID
      *
-     * @param resourceGroupId
+     * @param resourceGroupId 资源组ID
+     * @return Instance
      */
     public Instance resourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
@@ -897,7 +983,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 系统盘配置。
      *
-     * @param systemDisk
+     * @param systemDisk 系统盘配置。
+     * @return Instance
      */
     public Instance systemDisk(InstanceDiskAttachment systemDisk) {
         this.systemDisk = systemDisk;
@@ -908,7 +995,8 @@ public class Instance  implements java.io.Serializable {
     /**
     * set 数据盘配置列表。
     *
-    * @param dataDisks
+    * @param dataDisks 数据盘配置列表。
+    * @return Instance
     */
     public Instance dataDisks(List<InstanceDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
@@ -919,7 +1007,8 @@ public class Instance  implements java.io.Serializable {
     /**
     * set RDMA网卡配置列表。
     *
-    * @param rdmaNetworkInterfaces
+    * @param rdmaNetworkInterfaces RDMA网卡配置列表。
+    * @return Instance
     */
     public Instance rdmaNetworkInterfaces(List<RdmaNetworkInterface> rdmaNetworkInterfaces) {
         this.rdmaNetworkInterfaces = rdmaNetworkInterfaces;
@@ -930,7 +1019,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 主网卡所属VPC的ID
      *
-     * @param vpcId
+     * @param vpcId 主网卡所属VPC的ID
+     * @return Instance
      */
     public Instance vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -941,7 +1031,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 主网卡所属子网的ID
      *
-     * @param subnetId
+     * @param subnetId 主网卡所属子网的ID
+     * @return Instance
      */
     public Instance subnetId(String subnetId) {
         this.subnetId = subnetId;
@@ -952,7 +1043,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 主网卡的主内网IP地址
      *
-     * @param privateIpAddress
+     * @param privateIpAddress 主网卡的主内网IP地址
+     * @return Instance
      */
     public Instance privateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
@@ -963,7 +1055,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 主网卡主IP绑定的公网IP的ID
      *
-     * @param elasticIpId
+     * @param elasticIpId 主网卡主IP绑定的公网IP的ID
+     * @return Instance
      */
     public Instance elasticIpId(String elasticIpId) {
         this.elasticIpId = elasticIpId;
@@ -974,7 +1067,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 主网卡主IP绑定的公网IP的地址
      *
-     * @param elasticIpAddress
+     * @param elasticIpAddress 主网卡主IP绑定的公网IP的地址
+     * @return Instance
      */
     public Instance elasticIpAddress(String elasticIpAddress) {
         this.elasticIpAddress = elasticIpAddress;
@@ -985,7 +1079,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 主网卡主IP关联的弹性公网IP配置。
      *
-     * @param primaryNetworkInterface
+     * @param primaryNetworkInterface 主网卡主IP关联的弹性公网IP配置。
+     * @return Instance
      */
     public Instance primaryNetworkInterface(InstanceNetworkInterfaceAttachment primaryNetworkInterface) {
         this.primaryNetworkInterface = primaryNetworkInterface;
@@ -996,7 +1091,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 实例创建时间
      *
-     * @param launchTime
+     * @param launchTime 实例创建时间
+     * @return Instance
      */
     public Instance launchTime(String launchTime) {
         this.launchTime = launchTime;
@@ -1009,7 +1105,10 @@ public class Instance  implements java.io.Serializable {
 实例不支持按用量方式计费，如果计费配置为空，则按照包年包月计费方式处理。
 
      *
-     * @param charge
+     * @param charge 计费配置。
+实例不支持按用量方式计费，如果计费配置为空，则按照包年包月计费方式处理。
+
+     * @return Instance
      */
     public Instance charge(ChargeSpec charge) {
         this.charge = charge;
@@ -1020,7 +1119,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 实例操作系统平台，取值：ubuntu、openEuler、centos、rocky。
      *
-     * @param platform
+     * @param platform 实例操作系统平台，取值：ubuntu、openEuler、centos、rocky。
+     * @return Instance
      */
     public Instance platform(String platform) {
         this.platform = platform;
@@ -1031,7 +1131,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 启动方式，取值：bios、uefi。
      *
-     * @param bootMode
+     * @param bootMode 启动方式，取值：bios、uefi。
+     * @return Instance
      */
     public Instance bootMode(String bootMode) {
         this.bootMode = bootMode;
@@ -1042,7 +1143,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 架构，取值：x86_64、arm64。
      *
-     * @param architecture
+     * @param architecture 架构，取值：x86_64、arm64。
+     * @return Instance
      */
     public Instance architecture(String architecture) {
         this.architecture = architecture;
@@ -1053,10 +1155,47 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 装机进度，取值范围：[0,100]。
      *
-     * @param progress
+     * @param progress 装机进度，取值范围：[0,100]。
+     * @return Instance
      */
     public Instance progress(Integer progress) {
         this.progress = progress;
+        return this;
+    }
+
+
+    /**
+     * set 专属区名称
+     *
+     * @param dedicatedZoneName 专属区名称
+     * @return Instance
+     */
+    public Instance dedicatedZoneName(String dedicatedZoneName) {
+        this.dedicatedZoneName = dedicatedZoneName;
+        return this;
+    }
+
+
+    /**
+     * set 专属区ID
+     *
+     * @param dedicatedZoneId 专属区ID
+     * @return Instance
+     */
+    public Instance dedicatedZoneId(String dedicatedZoneId) {
+        this.dedicatedZoneId = dedicatedZoneId;
+        return this;
+    }
+
+
+    /**
+    * set 已绑定的密钥对名称列表
+    *
+    * @param keyNames 已绑定的密钥对名称列表
+    * @return Instance
+    */
+    public Instance keyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
         return this;
     }
 
@@ -1096,5 +1235,17 @@ public class Instance  implements java.io.Serializable {
             this.rdmaNetworkInterfaces = new ArrayList<>();
         }
         this.rdmaNetworkInterfaces.add(rdmaNetworkInterface);
+    }
+
+    /**
+     * add item to 已绑定的密钥对名称列表
+     *
+     * @param keyName
+     */
+    public void addKeyName(String keyName) {
+        if (this.keyNames == null) {
+            this.keyNames = new ArrayList<>();
+        }
+        this.keyNames.add(keyName);
     }
 }

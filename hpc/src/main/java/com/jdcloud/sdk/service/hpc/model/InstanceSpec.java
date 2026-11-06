@@ -60,11 +60,23 @@ public class InstanceSpec  implements java.io.Serializable {
     private String hostName;
 
     /**
-     * 实例密码。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+     * 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_\-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
 
      */
     private String password;
 
+    /**
+     * 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     */
+    private String passwordAuth;
+
+    /**
+     * 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+     */
+    
+    private List<String> keyNames;
     /**
      * 主网卡配置。
 
@@ -119,11 +131,16 @@ public class InstanceSpec  implements java.io.Serializable {
     private String resourceGroupId;
 
     /**
-     * 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+     * 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或&quot;jdc-&quot;开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
 
      */
     
     private List<Tag> userTags;
+    /**
+     * 专属区ID
+     */
+    private String dedicatedZoneId;
+
 
 
     /**
@@ -222,7 +239,7 @@ public class InstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * get 实例密码。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+     * get 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_\-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
 
      *
      * @return
@@ -232,13 +249,55 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 实例密码。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+     * set 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_\-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
 
      *
      * @param password
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    /**
+     * get 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     *
+     * @return
+     */
+    public String getPasswordAuth() {
+        return passwordAuth;
+    }
+
+    /**
+     * set 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     *
+     * @param passwordAuth
+     */
+    public void setPasswordAuth(String passwordAuth) {
+        this.passwordAuth = passwordAuth;
+    }
+
+
+    /**
+    * get 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+    *
+    * @return
+    */
+    public List<String> getKeyNames() {
+        return keyNames;
+    }
+
+    /**
+    * set 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+    *
+    * @param keyNames
+    */
+    public void setKeyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
     }
 
 
@@ -430,7 +489,7 @@ public class InstanceSpec  implements java.io.Serializable {
 
 
     /**
-    * get 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+    * get 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或&quot;jdc-&quot;开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
 
     *
     * @return
@@ -440,7 +499,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-    * set 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+    * set 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或&quot;jdc-&quot;开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
 
     *
     * @param userTags
@@ -450,11 +509,31 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 专属区ID
+     *
+     * @return
+     */
+    public String getDedicatedZoneId() {
+        return dedicatedZoneId;
+    }
+
+    /**
+     * set 专属区ID
+     *
+     * @param dedicatedZoneId
+     */
+    public void setDedicatedZoneId(String dedicatedZoneId) {
+        this.dedicatedZoneId = dedicatedZoneId;
+    }
+
+
 
     /**
      * set 可用区
      *
-     * @param az
+     * @param az 可用区
+     * @return InstanceSpec
      */
     public InstanceSpec az(String az) {
         this.az = az;
@@ -465,7 +544,8 @@ public class InstanceSpec  implements java.io.Serializable {
     /**
      * set 实例规格
      *
-     * @param instanceType
+     * @param instanceType 实例规格
+     * @return InstanceSpec
      */
     public InstanceSpec instanceType(String instanceType) {
         this.instanceType = instanceType;
@@ -476,7 +556,8 @@ public class InstanceSpec  implements java.io.Serializable {
     /**
      * set 安装包ID
      *
-     * @param packageId
+     * @param packageId 安装包ID
+     * @return InstanceSpec
      */
     public InstanceSpec packageId(String packageId) {
         this.packageId = packageId;
@@ -487,7 +568,8 @@ public class InstanceSpec  implements java.io.Serializable {
     /**
      * set 实例名称。长度为2~128个字符，只允许中文、数字、大小写字母、英文下划线（_）、连字符（-）
      *
-     * @param name
+     * @param name 实例名称。长度为2~128个字符，只允许中文、数字、大小写字母、英文下划线（_）、连字符（-）
+     * @return InstanceSpec
      */
     public InstanceSpec name(String name) {
         this.name = name;
@@ -498,7 +580,8 @@ public class InstanceSpec  implements java.io.Serializable {
     /**
      * set 实例hostname。若不指定hostname，则默认以实例名称 name 作为hostname，但是会以RFC 952和RFC 1123命名规范做一定转义
      *
-     * @param hostName
+     * @param hostName 实例hostname。若不指定hostname，则默认以实例名称 name 作为hostname，但是会以RFC 952和RFC 1123命名规范做一定转义
+     * @return InstanceSpec
      */
     public InstanceSpec hostName(String hostName) {
         this.hostName = hostName;
@@ -507,10 +590,12 @@ public class InstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * set 实例密码。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+     * set 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_\-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
 
      *
-     * @param password
+     * @param password 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_\-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+
+     * @return InstanceSpec
      */
     public InstanceSpec password(String password) {
         this.password = password;
@@ -519,10 +604,40 @@ public class InstanceSpec  implements java.io.Serializable {
 
 
     /**
+     * set 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     *
+     * @param passwordAuth 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     * @return InstanceSpec
+     */
+    public InstanceSpec passwordAuth(String passwordAuth) {
+        this.passwordAuth = passwordAuth;
+        return this;
+    }
+
+
+    /**
+    * set 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+    *
+    * @param keyNames 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+    * @return InstanceSpec
+    */
+    public InstanceSpec keyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
+        return this;
+    }
+
+
+    /**
      * set 主网卡配置。
 
      *
-     * @param primaryNetworkInterface
+     * @param primaryNetworkInterface 主网卡配置。
+
+     * @return InstanceSpec
      */
     public InstanceSpec primaryNetworkInterface(InstanceNetworkInterfaceAttachmentSpec primaryNetworkInterface) {
         this.primaryNetworkInterface = primaryNetworkInterface;
@@ -534,7 +649,9 @@ public class InstanceSpec  implements java.io.Serializable {
      * set 计费配置。
 
      *
-     * @param charge
+     * @param charge 计费配置。
+
+     * @return InstanceSpec
      */
     public InstanceSpec charge(InstanceChargeSpec charge) {
         this.charge = charge;
@@ -547,7 +664,10 @@ public class InstanceSpec  implements java.io.Serializable {
 **linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 
     *
-    * @param userdata
+    * @param userdata 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+**linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+
+    * @return InstanceSpec
     */
     public InstanceSpec userdata(List<Userdata> userdata) {
         this.userdata = userdata;
@@ -560,7 +680,10 @@ public class InstanceSpec  implements java.io.Serializable {
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
     *
-    * @param metadata
+    * @param metadata 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+    * @return InstanceSpec
     */
     public InstanceSpec metadata(List<Metadata> metadata) {
         this.metadata = metadata;
@@ -573,7 +696,10 @@ public class InstanceSpec  implements java.io.Serializable {
 注意事项：该参数仅对配备GPU的计算实例规格生效，若实例未配置GPU硬件则此参数不产生实际效果。建议在需要定制化驱动版本或使用特殊驱动场景时开启此参数
 
      *
-     * @param installGpuDriver
+     * @param installGpuDriver 指定是否在创建计算实例时跳过GPU驱动的自动安装流程。当该参数设置为：&#x60;true&#x60;（默认值）：系统将自动为实例安装适配的GPU驱动程序；&#x60;false&#x60;：系统将不执行GPU驱动安装操作，用户需自行完成驱动的安装配置。
+注意事项：该参数仅对配备GPU的计算实例规格生效，若实例未配置GPU硬件则此参数不产生实际效果。建议在需要定制化驱动版本或使用特殊驱动场景时开启此参数
+
+     * @return InstanceSpec
      */
     public InstanceSpec installGpuDriver(Boolean installGpuDriver) {
         this.installGpuDriver = installGpuDriver;
@@ -584,7 +710,8 @@ public class InstanceSpec  implements java.io.Serializable {
     /**
     * set 传入指定调度的su列表：如果参数中的su不在用户配置的数据库su列表中，则禁止调度；传入的参数没有指定su列表时：1.用户数据库中配置了su，则走配置的su调度；2.用户未配置su则进行默认调度策略
     *
-    * @param su
+    * @param su 传入指定调度的su列表：如果参数中的su不在用户配置的数据库su列表中，则禁止调度；传入的参数没有指定su列表时：1.用户数据库中配置了su，则走配置的su调度；2.用户未配置su则进行默认调度策略
+    * @return InstanceSpec
     */
     public InstanceSpec su(List<String> su) {
         this.su = su;
@@ -595,7 +722,8 @@ public class InstanceSpec  implements java.io.Serializable {
     /**
      * set 实例网络集群Id
      *
-     * @param hpcClusterId
+     * @param hpcClusterId 实例网络集群Id
+     * @return InstanceSpec
      */
     public InstanceSpec hpcClusterId(String hpcClusterId) {
         this.hpcClusterId = hpcClusterId;
@@ -606,7 +734,8 @@ public class InstanceSpec  implements java.io.Serializable {
     /**
      * set 实例网络集群名称
      *
-     * @param hpcClusterName
+     * @param hpcClusterName 实例网络集群名称
+     * @return InstanceSpec
      */
     public InstanceSpec hpcClusterName(String hpcClusterName) {
         this.hpcClusterName = hpcClusterName;
@@ -617,7 +746,8 @@ public class InstanceSpec  implements java.io.Serializable {
     /**
      * set 资源组ID
      *
-     * @param resourceGroupId
+     * @param resourceGroupId 资源组ID
+     * @return InstanceSpec
      */
     public InstanceSpec resourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
@@ -626,10 +756,12 @@ public class InstanceSpec  implements java.io.Serializable {
 
 
     /**
-    * set 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+    * set 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或&quot;jdc-&quot;开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
 
     *
-    * @param userTags
+    * @param userTags 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或&quot;jdc-&quot;开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+
+    * @return InstanceSpec
     */
     public InstanceSpec userTags(List<Tag> userTags) {
         this.userTags = userTags;
@@ -637,6 +769,31 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 专属区ID
+     *
+     * @param dedicatedZoneId 专属区ID
+     * @return InstanceSpec
+     */
+    public InstanceSpec dedicatedZoneId(String dedicatedZoneId) {
+        this.dedicatedZoneId = dedicatedZoneId;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+     *
+     * @param keyName
+     */
+    public void addKeyName(String keyName) {
+        if (this.keyNames == null) {
+            this.keyNames = new ArrayList<>();
+        }
+        this.keyNames.add(keyName);
+    }
 
     /**
      * add item to 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
@@ -679,7 +836,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+     * add item to 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或&quot;jdc-&quot;开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
 
      *
      * @param userTag

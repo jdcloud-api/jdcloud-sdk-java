@@ -38,7 +38,10 @@ public class Quota  implements java.io.Serializable {
     private String region;
 
     /**
-     * 资源类型
+     * 资源类型。取值范围：
+- hpc：HPC实例配额
+- keypair：密钥对配额
+
      */
     private String resourceType;
 
@@ -74,7 +77,10 @@ public class Quota  implements java.io.Serializable {
 
 
     /**
-     * get 资源类型
+     * get 资源类型。取值范围：
+- hpc：HPC实例配额
+- keypair：密钥对配额
+
      *
      * @return
      */
@@ -83,7 +89,10 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set 资源类型
+     * set 资源类型。取值范围：
+- hpc：HPC实例配额
+- keypair：密钥对配额
+
      *
      * @param resourceType
      */
@@ -134,7 +143,8 @@ public class Quota  implements java.io.Serializable {
     /**
      * set 地域
      *
-     * @param region
+     * @param region 地域
+     * @return Quota
      */
     public Quota region(String region) {
         this.region = region;
@@ -143,9 +153,16 @@ public class Quota  implements java.io.Serializable {
 
 
     /**
-     * set 资源类型
+     * set 资源类型。取值范围：
+- hpc：HPC实例配额
+- keypair：密钥对配额
+
      *
-     * @param resourceType
+     * @param resourceType 资源类型。取值范围：
+- hpc：HPC实例配额
+- keypair：密钥对配额
+
+     * @return Quota
      */
     public Quota resourceType(String resourceType) {
         this.resourceType = resourceType;
@@ -156,7 +173,8 @@ public class Quota  implements java.io.Serializable {
     /**
      * set 已使用配额
      *
-     * @param used
+     * @param used 已使用配额
+     * @return Quota
      */
     public Quota used(Integer used) {
         this.used = used;
@@ -167,7 +185,8 @@ public class Quota  implements java.io.Serializable {
     /**
      * set 总配额
      *
-     * @param limited
+     * @param limited 总配额
+     * @return Quota
      */
     public Quota limited(Integer limited) {
         this.limited = limited;

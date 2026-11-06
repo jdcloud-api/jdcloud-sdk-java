@@ -285,7 +285,8 @@ public class DiagnosticCheckResult extends JdcloudResult implements java.io.Seri
     /**
      * set 序号。
      *
-     * @param serialNumber
+     * @param serialNumber 序号。
+     * @return DiagnosticCheckResult
      */
     public DiagnosticCheckResult serialNumber(Integer serialNumber) {
         this.serialNumber = serialNumber;
@@ -296,7 +297,8 @@ public class DiagnosticCheckResult extends JdcloudResult implements java.io.Seri
     /**
      * set 诊断项名称。
      *
-     * @param diagnosticItem
+     * @param diagnosticItem 诊断项名称。
+     * @return DiagnosticCheckResult
      */
     public DiagnosticCheckResult diagnosticItem(String diagnosticItem) {
         this.diagnosticItem = diagnosticItem;
@@ -307,7 +309,8 @@ public class DiagnosticCheckResult extends JdcloudResult implements java.io.Seri
     /**
      * set 诊断结论。
      *
-     * @param diagnosticResult
+     * @param diagnosticResult 诊断结论。
+     * @return DiagnosticCheckResult
      */
     public DiagnosticCheckResult diagnosticResult(String diagnosticResult) {
         this.diagnosticResult = diagnosticResult;
@@ -318,7 +321,8 @@ public class DiagnosticCheckResult extends JdcloudResult implements java.io.Seri
     /**
      * set 诊断项描述。
      *
-     * @param description
+     * @param description 诊断项描述。
+     * @return DiagnosticCheckResult
      */
     public DiagnosticCheckResult description(String description) {
         this.description = description;
@@ -329,7 +333,8 @@ public class DiagnosticCheckResult extends JdcloudResult implements java.io.Seri
     /**
      * set 通过条件。
      *
-     * @param passCondition
+     * @param passCondition 通过条件。
+     * @return DiagnosticCheckResult
      */
     public DiagnosticCheckResult passCondition(String passCondition) {
         this.passCondition = passCondition;
@@ -340,7 +345,8 @@ public class DiagnosticCheckResult extends JdcloudResult implements java.io.Seri
     /**
      * set 优先级。
      *
-     * @param priority
+     * @param priority 优先级。
+     * @return DiagnosticCheckResult
      */
     public DiagnosticCheckResult priority(String priority) {
         this.priority = priority;
@@ -351,7 +357,8 @@ public class DiagnosticCheckResult extends JdcloudResult implements java.io.Seri
     /**
      * set 节点ID。
      *
-     * @param node
+     * @param node 节点ID。
+     * @return DiagnosticCheckResult
      */
     public DiagnosticCheckResult node(String node) {
         this.node = node;
@@ -362,7 +369,8 @@ public class DiagnosticCheckResult extends JdcloudResult implements java.io.Seri
     /**
      * set 检测值，类型不固定。
      *
-     * @param checkValue
+     * @param checkValue 检测值，类型不固定。
+     * @return DiagnosticCheckResult
      */
     public DiagnosticCheckResult checkValue(Object checkValue) {
         this.checkValue = checkValue;
@@ -375,7 +383,10 @@ public class DiagnosticCheckResult extends JdcloudResult implements java.io.Seri
 取值示例：&#x60;通过&#x60;、&#x60;不通过&#x60;。
 
      *
-     * @param diagnosticStatus
+     * @param diagnosticStatus 诊断状态。
+取值示例：&#x60;通过&#x60;、&#x60;不通过&#x60;。
+
+     * @return DiagnosticCheckResult
      */
     public DiagnosticCheckResult diagnosticStatus(String diagnosticStatus) {
         this.diagnosticStatus = diagnosticStatus;
@@ -386,7 +397,8 @@ public class DiagnosticCheckResult extends JdcloudResult implements java.io.Seri
     /**
      * set 失败原因。
      *
-     * @param failureReason
+     * @param failureReason 失败原因。
+     * @return DiagnosticCheckResult
      */
     public DiagnosticCheckResult failureReason(String failureReason) {
         this.failureReason = failureReason;

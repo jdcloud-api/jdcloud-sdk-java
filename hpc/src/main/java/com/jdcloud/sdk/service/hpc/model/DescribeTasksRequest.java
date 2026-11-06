@@ -66,7 +66,8 @@ public class DescribeTasksRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 资源UID
      *
-     * @param resourceID
+     * @param resourceID 资源UID
+     * @return DescribeTasksRequest
      */
     public DescribeTasksRequest resourceID(String resourceID) {
         this.resourceID = resourceID;

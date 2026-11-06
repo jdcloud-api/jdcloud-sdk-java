@@ -424,7 +424,8 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
     /**
      * set 诊断任务ID。
      *
-     * @param diagnosticId
+     * @param diagnosticId 诊断任务ID。
+     * @return DiagnosticTaskSummary
      */
     public DiagnosticTaskSummary diagnosticId(String diagnosticId) {
         this.diagnosticId = diagnosticId;
@@ -435,7 +436,8 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
     /**
     * set 诊断目标实例ID列表。
     *
-    * @param instanceIds
+    * @param instanceIds 诊断目标实例ID列表。
+    * @return DiagnosticTaskSummary
     */
     public DiagnosticTaskSummary instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
@@ -446,7 +448,8 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
     /**
      * set 集群ID。
      *
-     * @param clusterId
+     * @param clusterId 集群ID。
+     * @return DiagnosticTaskSummary
      */
     public DiagnosticTaskSummary clusterId(String clusterId) {
         this.clusterId = clusterId;
@@ -457,7 +460,8 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
     /**
      * set 集群名称。
      *
-     * @param clusterName
+     * @param clusterName 集群名称。
+     * @return DiagnosticTaskSummary
      */
     public DiagnosticTaskSummary clusterName(String clusterName) {
         this.clusterName = clusterName;
@@ -468,7 +472,8 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
     /**
      * set 地域。
      *
-     * @param region
+     * @param region 地域。
+     * @return DiagnosticTaskSummary
      */
     public DiagnosticTaskSummary region(String region) {
         this.region = region;
@@ -479,7 +484,8 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
     /**
      * set 可用区。
      *
-     * @param az
+     * @param az 可用区。
+     * @return DiagnosticTaskSummary
      */
     public DiagnosticTaskSummary az(String az) {
         this.az = az;
@@ -492,7 +498,10 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
 例如：&#x60;整集群&#x60;、&#x60;3个实例&#x60;。
 
      *
-     * @param scopeDisplay
+     * @param scopeDisplay 诊断范围展示文本。
+例如：&#x60;整集群&#x60;、&#x60;3个实例&#x60;。
+
+     * @return DiagnosticTaskSummary
      */
     public DiagnosticTaskSummary scopeDisplay(String scopeDisplay) {
         this.scopeDisplay = scopeDisplay;
@@ -505,7 +514,10 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
 取值：&#x60;HardwareStaticCheck&#x60;、&#x60;NetworkNcclTest&#x60;、&#x60;OneClickDiagnosis&#x60;。
 
      *
-     * @param diagnosticType
+     * @param diagnosticType 诊断类型。
+取值：&#x60;HardwareStaticCheck&#x60;、&#x60;NetworkNcclTest&#x60;、&#x60;OneClickDiagnosis&#x60;。
+
+     * @return DiagnosticTaskSummary
      */
     public DiagnosticTaskSummary diagnosticType(String diagnosticType) {
         this.diagnosticType = diagnosticType;
@@ -518,7 +530,10 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
 取值：&#x60;running&#x60;、&#x60;success&#x60;、&#x60;failed&#x60;。
 
      *
-     * @param diagnosticState
+     * @param diagnosticState 诊断任务状态。
+取值：&#x60;running&#x60;、&#x60;success&#x60;、&#x60;failed&#x60;。
+
+     * @return DiagnosticTaskSummary
      */
     public DiagnosticTaskSummary diagnosticState(String diagnosticState) {
         this.diagnosticState = diagnosticState;
@@ -531,7 +546,10 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
 取值：&#x60;执行中&#x60;、&#x60;成功&#x60;、&#x60;失败&#x60;。
 
      *
-     * @param diagnosticStateDisplay
+     * @param diagnosticStateDisplay 诊断任务状态展示文本。
+取值：&#x60;执行中&#x60;、&#x60;成功&#x60;、&#x60;失败&#x60;。
+
+     * @return DiagnosticTaskSummary
      */
     public DiagnosticTaskSummary diagnosticStateDisplay(String diagnosticStateDisplay) {
         this.diagnosticStateDisplay = diagnosticStateDisplay;
@@ -542,7 +560,8 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
     /**
      * set 创建时间，RFC3339 格式（UTC+8）。
      *
-     * @param createdTime
+     * @param createdTime 创建时间，RFC3339 格式（UTC+8）。
+     * @return DiagnosticTaskSummary
      */
     public DiagnosticTaskSummary createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -553,7 +572,8 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
     /**
      * set 结束时间，RFC3339 格式（UTC+8）。
      *
-     * @param endTime
+     * @param endTime 结束时间，RFC3339 格式（UTC+8）。
+     * @return DiagnosticTaskSummary
      */
     public DiagnosticTaskSummary endTime(String endTime) {
         this.endTime = endTime;
@@ -564,7 +584,8 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
     /**
      * set 硬件静态检查配置（当 &#x60;diagnosticType&#x60; 为 &#x60;HardwareStaticCheck&#x60; 时返回）。
      *
-     * @param hardwareStaticCheckSpec
+     * @param hardwareStaticCheckSpec 硬件静态检查配置（当 &#x60;diagnosticType&#x60; 为 &#x60;HardwareStaticCheck&#x60; 时返回）。
+     * @return DiagnosticTaskSummary
      */
     public DiagnosticTaskSummary hardwareStaticCheckSpec(HardwareStaticCheckSpec hardwareStaticCheckSpec) {
         this.hardwareStaticCheckSpec = hardwareStaticCheckSpec;
@@ -575,7 +596,8 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
     /**
      * set NCCL 网络测试配置（当 &#x60;diagnosticType&#x60; 为 &#x60;NetworkNcclTest&#x60; 时返回）。
      *
-     * @param networkNcclTestSpec
+     * @param networkNcclTestSpec NCCL 网络测试配置（当 &#x60;diagnosticType&#x60; 为 &#x60;NetworkNcclTest&#x60; 时返回）。
+     * @return DiagnosticTaskSummary
      */
     public DiagnosticTaskSummary networkNcclTestSpec(NetworkNcclTestSpec networkNcclTestSpec) {
         this.networkNcclTestSpec = networkNcclTestSpec;
@@ -586,7 +608,8 @@ public class DiagnosticTaskSummary  implements java.io.Serializable {
     /**
      * set 一键诊断配置（当 &#x60;diagnosticType&#x60; 为 &#x60;OneClickDiagnosis&#x60; 时返回）。
      *
-     * @param oneClickDiagnosisSpec
+     * @param oneClickDiagnosisSpec 一键诊断配置（当 &#x60;diagnosticType&#x60; 为 &#x60;OneClickDiagnosis&#x60; 时返回）。
+     * @return DiagnosticTaskSummary
      */
     public DiagnosticTaskSummary oneClickDiagnosisSpec(OneClickDiagnosisSpec oneClickDiagnosisSpec) {
         this.oneClickDiagnosisSpec = oneClickDiagnosisSpec;

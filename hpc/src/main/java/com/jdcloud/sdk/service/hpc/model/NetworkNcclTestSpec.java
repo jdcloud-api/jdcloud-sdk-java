@@ -206,7 +206,8 @@ public class NetworkNcclTestSpec  implements java.io.Serializable {
     /**
      * set 可用区。
      *
-     * @param az
+     * @param az 可用区。
+     * @return NetworkNcclTestSpec
      */
     public NetworkNcclTestSpec az(String az) {
         this.az = az;
@@ -217,7 +218,8 @@ public class NetworkNcclTestSpec  implements java.io.Serializable {
     /**
      * set VPC ID。
      *
-     * @param vpcId
+     * @param vpcId VPC ID。
+     * @return NetworkNcclTestSpec
      */
     public NetworkNcclTestSpec vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -230,7 +232,10 @@ public class NetworkNcclTestSpec  implements java.io.Serializable {
 取值：&#x60;AllReduce&#x60;、&#x60;AllGather&#x60;、&#x60;AllToAll&#x60;、&#x60;Broadcast&#x60;。
 
      *
-     * @param communicationModel
+     * @param communicationModel 通信模型。
+取值：&#x60;AllReduce&#x60;、&#x60;AllGather&#x60;、&#x60;AllToAll&#x60;、&#x60;Broadcast&#x60;。
+
+     * @return NetworkNcclTestSpec
      */
     public NetworkNcclTestSpec communicationModel(String communicationModel) {
         this.communicationModel = communicationModel;
@@ -241,7 +246,8 @@ public class NetworkNcclTestSpec  implements java.io.Serializable {
     /**
      * set GPU 数量，取值范围 [1, 8]。
      *
-     * @param gpuCount
+     * @param gpuCount GPU 数量，取值范围 [1, 8]。
+     * @return NetworkNcclTestSpec
      */
     public NetworkNcclTestSpec gpuCount(Integer gpuCount) {
         this.gpuCount = gpuCount;
@@ -252,7 +258,8 @@ public class NetworkNcclTestSpec  implements java.io.Serializable {
     /**
      * set 端口号，取值范围 [5000, 65535]。
      *
-     * @param port
+     * @param port 端口号，取值范围 [5000, 65535]。
+     * @return NetworkNcclTestSpec
      */
     public NetworkNcclTestSpec port(Integer port) {
         this.port = port;
@@ -266,7 +273,11 @@ public class NetworkNcclTestSpec  implements java.io.Serializable {
 当取值为 &#x60;cluster&#x60; 时，&#x60;instanceIds&#x60; 可为空。
 
      *
-     * @param scopeType
+     * @param scopeType 诊断范围类型。
+取值：&#x60;cluster&#x60;（整集群）、&#x60;instances&#x60;（指定实例）。
+当取值为 &#x60;cluster&#x60; 时，&#x60;instanceIds&#x60; 可为空。
+
+     * @return NetworkNcclTestSpec
      */
     public NetworkNcclTestSpec scopeType(String scopeType) {
         this.scopeType = scopeType;

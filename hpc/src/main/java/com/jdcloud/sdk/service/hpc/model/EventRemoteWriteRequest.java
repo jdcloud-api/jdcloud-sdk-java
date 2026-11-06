@@ -87,7 +87,8 @@ public class EventRemoteWriteRequest extends JdcloudRequest implements java.io.S
     /**
      * set route
      *
-     * @param route
+     * @param route route
+     * @return EventRemoteWriteRequest
      */
     public EventRemoteWriteRequest route(String route) {
         this.route = route;
@@ -98,7 +99,8 @@ public class EventRemoteWriteRequest extends JdcloudRequest implements java.io.S
     /**
      * set body
      *
-     * @param body
+     * @param body 
+     * @return EventRemoteWriteRequest
      */
     public EventRemoteWriteRequest body(Object body) {
         this.body = body;

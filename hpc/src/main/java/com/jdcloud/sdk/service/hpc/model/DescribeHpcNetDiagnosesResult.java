@@ -90,7 +90,8 @@ public class DescribeHpcNetDiagnosesResult extends JdcloudResult implements java
     /**
     * set hpcNetworkDiagnoseViews
     *
-    * @param hpcNetworkDiagnoseViews
+    * @param hpcNetworkDiagnoseViews 
+    * @return DescribeHpcNetDiagnosesResult
     */
     public DescribeHpcNetDiagnosesResult hpcNetworkDiagnoseViews(List<HpcNetDiagnoses> hpcNetworkDiagnoseViews) {
         this.hpcNetworkDiagnoseViews = hpcNetworkDiagnoseViews;
@@ -101,7 +102,8 @@ public class DescribeHpcNetDiagnosesResult extends JdcloudResult implements java
     /**
      * set 总数量
      *
-     * @param totalCount
+     * @param totalCount 总数量
+     * @return DescribeHpcNetDiagnosesResult
      */
     public DescribeHpcNetDiagnosesResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;

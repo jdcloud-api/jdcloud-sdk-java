@@ -97,7 +97,9 @@ public class DescribePackageRequest extends JdcloudRequest implements java.io.Se
      * set 打包ID。
 
      *
-     * @param packageId
+     * @param packageId 打包ID。
+
+     * @return DescribePackageRequest
      */
     public DescribePackageRequest packageId(String packageId) {
         this.packageId = packageId;
@@ -108,7 +110,8 @@ public class DescribePackageRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 地域ID
      *
-     * @param regionId
+     * @param regionId 地域ID
+     * @return DescribePackageRequest
      */
     public DescribePackageRequest regionId(String regionId) {
         this.regionId = regionId;

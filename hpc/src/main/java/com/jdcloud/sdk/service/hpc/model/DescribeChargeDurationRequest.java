@@ -66,7 +66,8 @@ public class DescribeChargeDurationRequest extends JdcloudRequest implements jav
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return DescribeChargeDurationRequest
      */
     public DescribeChargeDurationRequest regionId(String regionId) {
         this.regionId = regionId;

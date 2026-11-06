@@ -86,7 +86,8 @@ public class Tag  implements java.io.Serializable {
     /**
      * set 标签key。长度不能超过127字符，不能以 &#x60;jrn:&#x60; 或 &#x60;jdc-&#x60; 开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
      *
-     * @param key
+     * @param key 标签key。长度不能超过127字符，不能以 &#x60;jrn:&#x60; 或 &#x60;jdc-&#x60; 开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+     * @return Tag
      */
     public Tag key(String key) {
         this.key = key;
@@ -97,7 +98,8 @@ public class Tag  implements java.io.Serializable {
     /**
      * set 标签value。长度不能超过255字符，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
      *
-     * @param value
+     * @param value 标签value。长度不能超过255字符，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+     * @return Tag
      */
     public Tag value(String value) {
         this.value = value;

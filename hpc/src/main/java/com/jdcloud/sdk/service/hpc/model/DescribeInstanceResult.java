@@ -65,7 +65,8 @@ public class DescribeInstanceResult extends JdcloudResult implements java.io.Ser
     /**
      * set 实例详情。
      *
-     * @param instance
+     * @param instance 实例详情。
+     * @return DescribeInstanceResult
      */
     public DescribeInstanceResult instance(Instance instance) {
         this.instance = instance;

@@ -26,9 +26,9 @@ package com.jdcloud.sdk.service.hpc.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.hpc.model.Metadata;
 import com.jdcloud.sdk.service.hpc.model.Userdata;
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -44,13 +44,23 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例密码。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+     * 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
 
-     * Required:true
      */
-    @Required
     private String password;
 
+    /**
+     * 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     */
+    private String passwordAuth;
+
+    /**
+     * 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+     */
+    
+    private List<String> keyNames;
     /**
      * 镜像ID。
 若不指定镜像ID，默认使用当前主机的原镜像重置系统。
@@ -107,7 +117,7 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 实例密码。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+     * get 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
 
      *
      * @return
@@ -117,13 +127,55 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 实例密码。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+     * set 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
 
      *
      * @param password
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    /**
+     * get 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     *
+     * @return
+     */
+    public String getPasswordAuth() {
+        return passwordAuth;
+    }
+
+    /**
+     * set 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     *
+     * @param passwordAuth
+     */
+    public void setPasswordAuth(String passwordAuth) {
+        this.passwordAuth = passwordAuth;
+    }
+
+
+    /**
+    * get 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+    *
+    * @return
+    */
+    public List<String> getKeyNames() {
+        return keyNames;
+    }
+
+    /**
+    * set 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+    *
+    * @param keyNames
+    */
+    public void setKeyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
     }
 
 
@@ -299,13 +351,43 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 实例密码。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+     * set 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
 
      *
-     * @param password
+     * @param password 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+
+     * @return RebuildInstanceRequest
      */
     public RebuildInstanceRequest password(String password) {
         this.password = password;
+        return this;
+    }
+
+
+    /**
+     * set 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     *
+     * @param passwordAuth 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     * @return RebuildInstanceRequest
+     */
+    public RebuildInstanceRequest passwordAuth(String passwordAuth) {
+        this.passwordAuth = passwordAuth;
+        return this;
+    }
+
+
+    /**
+    * set 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+    *
+    * @param keyNames 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+    * @return RebuildInstanceRequest
+    */
+    public RebuildInstanceRequest keyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
         return this;
     }
 
@@ -315,7 +397,10 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
 若不指定镜像ID，默认使用当前主机的原镜像重置系统。
 
      *
-     * @param packageId
+     * @param packageId 镜像ID。
+若不指定镜像ID，默认使用当前主机的原镜像重置系统。
+
+     * @return RebuildInstanceRequest
      */
     public RebuildInstanceRequest packageId(String packageId) {
         this.packageId = packageId;
@@ -329,7 +414,11 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
 **Linux系统**：长度为2-64个字符，允许使用大小写字母、数字或连字符（-），但不能连续使用连字符（-），不能以连字符（-）开头或结尾。
 
      *
-     * @param hostname
+     * @param hostname 实例hostname。
+**Windows系统**：长度为2\~15个字符，允许大小写字母、数字或连字符（-），不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+**Linux系统**：长度为2-64个字符，允许使用大小写字母、数字或连字符（-），但不能连续使用连字符（-），不能以连字符（-）开头或结尾。
+
+     * @return RebuildInstanceRequest
      */
     public RebuildInstanceRequest hostname(String hostname) {
         this.hostname = hostname;
@@ -342,7 +431,10 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
     *
-    * @param metadata
+    * @param metadata 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+    * @return RebuildInstanceRequest
     */
     public RebuildInstanceRequest metadata(List<Metadata> metadata) {
         this.metadata = metadata;
@@ -355,7 +447,10 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
 **linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 
     *
-    * @param userdata
+    * @param userdata 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+**linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+
+    * @return RebuildInstanceRequest
     */
     public RebuildInstanceRequest userdata(List<Userdata> userdata) {
         this.userdata = userdata;
@@ -366,7 +461,8 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 是否清空数据盘数据，false为不清空，true为清空，默认不清空。
      *
-     * @param clearDataDisks
+     * @param clearDataDisks 是否清空数据盘数据，false为不清空，true为清空，默认不清空。
+     * @return RebuildInstanceRequest
      */
     public RebuildInstanceRequest clearDataDisks(Boolean clearDataDisks) {
         this.clearDataDisks = clearDataDisks;
@@ -377,7 +473,8 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount同时指定，不支持抢占重分配。该参数依赖子网的预分配网段。
      *
-     * @param secondaryIpMaskLen
+     * @param secondaryIpMaskLen 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount同时指定，不支持抢占重分配。该参数依赖子网的预分配网段。
+     * @return RebuildInstanceRequest
      */
     public RebuildInstanceRequest secondaryIpMaskLen(Integer secondaryIpMaskLen) {
         this.secondaryIpMaskLen = secondaryIpMaskLen;
@@ -388,7 +485,8 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return RebuildInstanceRequest
      */
     public RebuildInstanceRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -399,7 +497,8 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 实例ID。
      *
-     * @param instanceId
+     * @param instanceId 实例ID。
+     * @return RebuildInstanceRequest
      */
     public RebuildInstanceRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -407,6 +506,19 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
+    /**
+     * add item to 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+     *
+     * @param keyName
+     */
+    public void addKeyName(String keyName) {
+        if (this.keyNames == null) {
+            this.keyNames = new ArrayList<>();
+        }
+        this.keyNames.add(keyName);
+    }
 
     /**
      * add item to 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。

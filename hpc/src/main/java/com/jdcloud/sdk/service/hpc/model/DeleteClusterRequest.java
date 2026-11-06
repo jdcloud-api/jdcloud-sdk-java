@@ -93,7 +93,8 @@ public class DeleteClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Id
      *
-     * @param id
+     * @param id Id
+     * @return DeleteClusterRequest
      */
     public DeleteClusterRequest id(Integer id) {
         this.id = id;
@@ -104,7 +105,8 @@ public class DeleteClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return DeleteClusterRequest
      */
     public DeleteClusterRequest regionId(String regionId) {
         this.regionId = regionId;

@@ -106,7 +106,11 @@ public class DescribeAvailableClustersRequest extends JdcloudRequest implements 
 &#x60;azType&#x60;: 可用区类型：边缘(edge)或中心(standard)。精确匹配，支持单个
 
     *
-    * @param filters
+    * @param filters &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;azs&#x60;: 可用区。精确匹配，支持多个
+&#x60;azType&#x60;: 可用区类型：边缘(edge)或中心(standard)。精确匹配，支持单个
+
+    * @return DescribeAvailableClustersRequest
     */
     public DescribeAvailableClustersRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -117,7 +121,8 @@ public class DescribeAvailableClustersRequest extends JdcloudRequest implements 
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return DescribeAvailableClustersRequest
      */
     public DescribeAvailableClustersRequest regionId(String regionId) {
         this.regionId = regionId;

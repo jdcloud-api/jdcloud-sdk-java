@@ -67,7 +67,8 @@ public class DescribeAvailableClustersResult extends JdcloudResult implements ja
     /**
     * set clusters
     *
-    * @param clusters
+    * @param clusters 
+    * @return DescribeAvailableClustersResult
     */
     public DescribeAvailableClustersResult clusters(List<Cluster> clusters) {
         this.clusters = clusters;

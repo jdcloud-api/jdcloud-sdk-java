@@ -60,6 +60,11 @@ public class ChargeSpec  implements java.io.Serializable {
      */
     private String chargeRetireTime;
 
+    /**
+     * chargeMode&#x3D;prepaid_by_duration 时有效。true 表示包销，false 表示普通包年包月（非包销），默认值为false。
+     */
+    private Boolean isCommitment;
+
 
 
     /**
@@ -157,11 +162,31 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get chargeMode&#x3D;prepaid_by_duration 时有效。true 表示包销，false 表示普通包年包月（非包销），默认值为false。
+     *
+     * @return
+     */
+    public Boolean getIsCommitment() {
+        return isCommitment;
+    }
+
+    /**
+     * set chargeMode&#x3D;prepaid_by_duration 时有效。true 表示包销，false 表示普通包年包月（非包销），默认值为false。
+     *
+     * @param isCommitment
+     */
+    public void setIsCommitment(Boolean isCommitment) {
+        this.isCommitment = isCommitment;
+    }
+
+
 
     /**
      * set 计费模式，取值为：prepaid_by_duration 表示预付费
      *
-     * @param chargeMode
+     * @param chargeMode 计费模式，取值为：prepaid_by_duration 表示预付费
+     * @return ChargeSpec
      */
     public ChargeSpec chargeMode(String chargeMode) {
         this.chargeMode = chargeMode;
@@ -172,7 +197,8 @@ public class ChargeSpec  implements java.io.Serializable {
     /**
      * set 费用支付状态，取值为：normal、overdue、arrear，normal表示正常，overdue表示已到期，arrear表示欠费
      *
-     * @param chargeStatus
+     * @param chargeStatus 费用支付状态，取值为：normal、overdue、arrear，normal表示正常，overdue表示已到期，arrear表示欠费
+     * @return ChargeSpec
      */
     public ChargeSpec chargeStatus(String chargeStatus) {
         this.chargeStatus = chargeStatus;
@@ -183,7 +209,8 @@ public class ChargeSpec  implements java.io.Serializable {
     /**
      * set 计费开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
      *
-     * @param chargeStartTime
+     * @param chargeStartTime 计费开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * @return ChargeSpec
      */
     public ChargeSpec chargeStartTime(String chargeStartTime) {
         this.chargeStartTime = chargeStartTime;
@@ -194,7 +221,8 @@ public class ChargeSpec  implements java.io.Serializable {
     /**
      * set 过期时间，预付费资源的到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ，后付费资源此字段内容为空
      *
-     * @param chargeExpiredTime
+     * @param chargeExpiredTime 过期时间，预付费资源的到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ，后付费资源此字段内容为空
+     * @return ChargeSpec
      */
     public ChargeSpec chargeExpiredTime(String chargeExpiredTime) {
         this.chargeExpiredTime = chargeExpiredTime;
@@ -205,10 +233,23 @@ public class ChargeSpec  implements java.io.Serializable {
     /**
      * set 预期释放时间，资源的预期释放时间，预付费/后付费资源均有此值，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
      *
-     * @param chargeRetireTime
+     * @param chargeRetireTime 预期释放时间，资源的预期释放时间，预付费/后付费资源均有此值，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * @return ChargeSpec
      */
     public ChargeSpec chargeRetireTime(String chargeRetireTime) {
         this.chargeRetireTime = chargeRetireTime;
+        return this;
+    }
+
+
+    /**
+     * set chargeMode&#x3D;prepaid_by_duration 时有效。true 表示包销，false 表示普通包年包月（非包销），默认值为false。
+     *
+     * @param isCommitment chargeMode&#x3D;prepaid_by_duration 时有效。true 表示包销，false 表示普通包年包月（非包销），默认值为false。
+     * @return ChargeSpec
+     */
+    public ChargeSpec isCommitment(Boolean isCommitment) {
+        this.isCommitment = isCommitment;
         return this;
     }
 

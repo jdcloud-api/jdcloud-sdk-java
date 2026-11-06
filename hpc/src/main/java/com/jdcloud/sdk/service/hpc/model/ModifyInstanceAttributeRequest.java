@@ -191,7 +191,9 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
      * set 实例要修改的名称。
 
      *
-     * @param instanceName
+     * @param instanceName 实例要修改的名称。
+
+     * @return ModifyInstanceAttributeRequest
      */
     public ModifyInstanceAttributeRequest instanceName(String instanceName) {
         this.instanceName = instanceName;
@@ -205,7 +207,11 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
 **linux系统**：支持bash和python，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
 
     *
-    * @param userdata
+    * @param userdata 自定义脚本。
+目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须Base64编码且编码前数据长度不能超过16KB。
+**linux系统**：支持bash和python，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+
+    * @return ModifyInstanceAttributeRequest
     */
     public ModifyInstanceAttributeRequest userdata(List<Userdata> userdata) {
         this.userdata = userdata;
@@ -219,7 +225,11 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
 注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
 
     *
-    * @param metadata
+    * @param metadata 用户自定义元数据。
+以 &#x60;key-value&#x60; 键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且 &#x60;key&#x60; 不超过256字符，&#x60;value&#x60; 不超过16KB，不区分大小写。
+注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
+
+    * @return ModifyInstanceAttributeRequest
     */
     public ModifyInstanceAttributeRequest metadata(List<Metadata> metadata) {
         this.metadata = metadata;
@@ -230,7 +240,8 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return ModifyInstanceAttributeRequest
      */
     public ModifyInstanceAttributeRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -241,7 +252,8 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     /**
      * set 实例ID。
      *
-     * @param instanceId
+     * @param instanceId 实例ID。
+     * @return ModifyInstanceAttributeRequest
      */
     public ModifyInstanceAttributeRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

@@ -136,7 +136,8 @@ public class PodLayer  implements java.io.Serializable {
     /**
      * set 类型
      *
-     * @param layerType
+     * @param layerType 类型
+     * @return PodLayer
      */
     public PodLayer layerType(String layerType) {
         this.layerType = layerType;
@@ -147,7 +148,8 @@ public class PodLayer  implements java.io.Serializable {
     /**
      * set 层级Id(预留字段，目前值同name)
      *
-     * @param id
+     * @param id 层级Id(预留字段，目前值同name)
+     * @return PodLayer
      */
     public PodLayer id(String id) {
         this.id = id;
@@ -158,7 +160,8 @@ public class PodLayer  implements java.io.Serializable {
     /**
      * set 层级name
      *
-     * @param name
+     * @param name 层级name
+     * @return PodLayer
      */
     public PodLayer name(String name) {
         this.name = name;
@@ -169,7 +172,8 @@ public class PodLayer  implements java.io.Serializable {
     /**
     * set 网络拓扑层级su信息
     *
-    * @param suLayers
+    * @param suLayers 网络拓扑层级su信息
+    * @return PodLayer
     */
     public PodLayer suLayers(List<SuLayer> suLayers) {
         this.suLayers = suLayers;

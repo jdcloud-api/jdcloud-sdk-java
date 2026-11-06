@@ -182,7 +182,8 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     /**
      * set 弹性网卡ID。
      *
-     * @param networkInterfaceId
+     * @param networkInterfaceId 弹性网卡ID。
+     * @return InstanceNetworkInterface
      */
     public InstanceNetworkInterface networkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
@@ -193,7 +194,8 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     /**
      * set 弹性网卡MAC地址。
      *
-     * @param macAddress
+     * @param macAddress 弹性网卡MAC地址。
+     * @return InstanceNetworkInterface
      */
     public InstanceNetworkInterface macAddress(String macAddress) {
         this.macAddress = macAddress;
@@ -204,7 +206,8 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     /**
      * set 弹性网卡所属VPC的ID。
      *
-     * @param vpcId
+     * @param vpcId 弹性网卡所属VPC的ID。
+     * @return InstanceNetworkInterface
      */
     public InstanceNetworkInterface vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -215,7 +218,8 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     /**
      * set 子网ID。
      *
-     * @param subnetId
+     * @param subnetId 子网ID。
+     * @return InstanceNetworkInterface
      */
     public InstanceNetworkInterface subnetId(String subnetId) {
         this.subnetId = subnetId;
@@ -226,7 +230,8 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     /**
      * set 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount同时指定，不支持抢占重分配。
      *
-     * @param secondaryIpMaskLen
+     * @param secondaryIpMaskLen 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount同时指定，不支持抢占重分配。
+     * @return InstanceNetworkInterface
      */
     public InstanceNetworkInterface secondaryIpMaskLen(Integer secondaryIpMaskLen) {
         this.secondaryIpMaskLen = secondaryIpMaskLen;
@@ -237,7 +242,8 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     /**
      * set 网卡主IP配置。
      *
-     * @param primaryIp
+     * @param primaryIp 网卡主IP配置。
+     * @return InstanceNetworkInterface
      */
     public InstanceNetworkInterface primaryIp(NetworkInterfacePrivateIp primaryIp) {
         this.primaryIp = primaryIp;

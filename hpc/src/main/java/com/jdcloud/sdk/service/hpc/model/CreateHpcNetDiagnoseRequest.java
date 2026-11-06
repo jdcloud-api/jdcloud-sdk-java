@@ -319,7 +319,8 @@ public class CreateHpcNetDiagnoseRequest extends JdcloudRequest implements java.
     /**
      * set 可用区
      *
-     * @param az
+     * @param az 可用区
+     * @return CreateHpcNetDiagnoseRequest
      */
     public CreateHpcNetDiagnoseRequest az(String az) {
         this.az = az;
@@ -330,7 +331,8 @@ public class CreateHpcNetDiagnoseRequest extends JdcloudRequest implements java.
     /**
      * set vpc id
      *
-     * @param vpcId
+     * @param vpcId vpc id
+     * @return CreateHpcNetDiagnoseRequest
      */
     public CreateHpcNetDiagnoseRequest vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -341,7 +343,8 @@ public class CreateHpcNetDiagnoseRequest extends JdcloudRequest implements java.
     /**
      * set 集群名字
      *
-     * @param hpcClusterName
+     * @param hpcClusterName 集群名字
+     * @return CreateHpcNetDiagnoseRequest
      */
     public CreateHpcNetDiagnoseRequest hpcClusterName(String hpcClusterName) {
         this.hpcClusterName = hpcClusterName;
@@ -352,7 +355,8 @@ public class CreateHpcNetDiagnoseRequest extends JdcloudRequest implements java.
     /**
      * set BANDWIDTH:带宽测试；LATENCY:时延测试
      *
-     * @param type
+     * @param type BANDWIDTH:带宽测试；LATENCY:时延测试
+     * @return CreateHpcNetDiagnoseRequest
      */
     public CreateHpcNetDiagnoseRequest type(String type) {
         this.type = type;
@@ -363,7 +367,8 @@ public class CreateHpcNetDiagnoseRequest extends JdcloudRequest implements java.
     /**
      * set MTON,FULLMESH (带宽测试独有，必填)
      *
-     * @param traffic
+     * @param traffic MTON,FULLMESH (带宽测试独有，必填)
+     * @return CreateHpcNetDiagnoseRequest
      */
     public CreateHpcNetDiagnoseRequest traffic(String traffic) {
         this.traffic = traffic;
@@ -374,7 +379,8 @@ public class CreateHpcNetDiagnoseRequest extends JdcloudRequest implements java.
     /**
      * set 测试时长 （带宽测试独有，必填）
      *
-     * @param duration
+     * @param duration 测试时长 （带宽测试独有，必填）
+     * @return CreateHpcNetDiagnoseRequest
      */
     public CreateHpcNetDiagnoseRequest duration(Integer duration) {
         this.duration = duration;
@@ -385,7 +391,8 @@ public class CreateHpcNetDiagnoseRequest extends JdcloudRequest implements java.
     /**
      * set qp [1-16384]（带宽测试独有,必填）
      *
-     * @param qp
+     * @param qp qp [1-16384]（带宽测试独有,必填）
+     * @return CreateHpcNetDiagnoseRequest
      */
     public CreateHpcNetDiagnoseRequest qp(Integer qp) {
         this.qp = qp;
@@ -396,7 +403,8 @@ public class CreateHpcNetDiagnoseRequest extends JdcloudRequest implements java.
     /**
      * set 是否启用 GDR（带宽测试独有，默认false）
      *
-     * @param gdr
+     * @param gdr 是否启用 GDR（带宽测试独有，默认false）
+     * @return CreateHpcNetDiagnoseRequest
      */
     public CreateHpcNetDiagnoseRequest gdr(Boolean gdr) {
         this.gdr = gdr;
@@ -407,7 +415,8 @@ public class CreateHpcNetDiagnoseRequest extends JdcloudRequest implements java.
     /**
      * set 端口 [5000-65535]
      *
-     * @param port
+     * @param port 端口 [5000-65535]
+     * @return CreateHpcNetDiagnoseRequest
      */
     public CreateHpcNetDiagnoseRequest port(Integer port) {
         this.port = port;
@@ -418,7 +427,8 @@ public class CreateHpcNetDiagnoseRequest extends JdcloudRequest implements java.
     /**
     * set 节点信息
     *
-    * @param instances
+    * @param instances 节点信息
+    * @return CreateHpcNetDiagnoseRequest
     */
     public CreateHpcNetDiagnoseRequest instances(List<NetNodeSpec> instances) {
         this.instances = instances;
@@ -429,7 +439,8 @@ public class CreateHpcNetDiagnoseRequest extends JdcloudRequest implements java.
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return CreateHpcNetDiagnoseRequest
      */
     public CreateHpcNetDiagnoseRequest regionId(String regionId) {
         this.regionId = regionId;

@@ -496,7 +496,8 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
     /**
      * set 诊断任务ID。
      *
-     * @param diagnosticId
+     * @param diagnosticId 诊断任务ID。
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail diagnosticId(String diagnosticId) {
         this.diagnosticId = diagnosticId;
@@ -507,7 +508,8 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
     /**
     * set 诊断目标实例ID列表。
     *
-    * @param instanceIds
+    * @param instanceIds 诊断目标实例ID列表。
+    * @return DiagnosticResultDetail
     */
     public DiagnosticResultDetail instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
@@ -518,7 +520,8 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
     /**
      * set 集群ID。
      *
-     * @param clusterId
+     * @param clusterId 集群ID。
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail clusterId(String clusterId) {
         this.clusterId = clusterId;
@@ -529,7 +532,8 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
     /**
      * set 集群名称。
      *
-     * @param clusterName
+     * @param clusterName 集群名称。
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail clusterName(String clusterName) {
         this.clusterName = clusterName;
@@ -540,7 +544,8 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
     /**
      * set 地域。
      *
-     * @param region
+     * @param region 地域。
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail region(String region) {
         this.region = region;
@@ -551,7 +556,8 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
     /**
      * set 可用区。
      *
-     * @param az
+     * @param az 可用区。
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail az(String az) {
         this.az = az;
@@ -564,7 +570,10 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
 例如：&#x60;整集群&#x60;、&#x60;3个实例&#x60;。
 
      *
-     * @param scopeDisplay
+     * @param scopeDisplay 诊断范围展示文本。
+例如：&#x60;整集群&#x60;、&#x60;3个实例&#x60;。
+
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail scopeDisplay(String scopeDisplay) {
         this.scopeDisplay = scopeDisplay;
@@ -577,7 +586,10 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
 取值：&#x60;HardwareStaticCheck&#x60;、&#x60;NetworkNcclTest&#x60;、&#x60;OneClickDiagnosis&#x60;。
 
      *
-     * @param diagnosticType
+     * @param diagnosticType 诊断类型。
+取值：&#x60;HardwareStaticCheck&#x60;、&#x60;NetworkNcclTest&#x60;、&#x60;OneClickDiagnosis&#x60;。
+
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail diagnosticType(String diagnosticType) {
         this.diagnosticType = diagnosticType;
@@ -590,7 +602,10 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
 取值：&#x60;submitted&#x60;、&#x60;running&#x60;、&#x60;success&#x60;、&#x60;failed&#x60;、&#x60;submit_failed&#x60;。
 
      *
-     * @param diagnosticState
+     * @param diagnosticState 诊断任务状态。
+取值：&#x60;submitted&#x60;、&#x60;running&#x60;、&#x60;success&#x60;、&#x60;failed&#x60;、&#x60;submit_failed&#x60;。
+
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail diagnosticState(String diagnosticState) {
         this.diagnosticState = diagnosticState;
@@ -603,7 +618,10 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
 取值：&#x60;执行中&#x60;、&#x60;成功&#x60;、&#x60;失败&#x60;。
 
      *
-     * @param diagnosticStateDisplay
+     * @param diagnosticStateDisplay 诊断任务状态展示文本。
+取值：&#x60;执行中&#x60;、&#x60;成功&#x60;、&#x60;失败&#x60;。
+
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail diagnosticStateDisplay(String diagnosticStateDisplay) {
         this.diagnosticStateDisplay = diagnosticStateDisplay;
@@ -614,7 +632,8 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
     /**
      * set 硬件静态检查配置（当 &#x60;diagnosticType&#x60; 为 &#x60;HardwareStaticCheck&#x60; 时返回）。
      *
-     * @param hardwareStaticCheckSpec
+     * @param hardwareStaticCheckSpec 硬件静态检查配置（当 &#x60;diagnosticType&#x60; 为 &#x60;HardwareStaticCheck&#x60; 时返回）。
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail hardwareStaticCheckSpec(HardwareStaticCheckSpec hardwareStaticCheckSpec) {
         this.hardwareStaticCheckSpec = hardwareStaticCheckSpec;
@@ -625,7 +644,8 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
     /**
      * set 硬件静态检查结果（当 &#x60;diagnosticType&#x60; 为 &#x60;HardwareStaticCheck&#x60; 时返回）。
      *
-     * @param hardwareStaticCheckResult
+     * @param hardwareStaticCheckResult 硬件静态检查结果（当 &#x60;diagnosticType&#x60; 为 &#x60;HardwareStaticCheck&#x60; 时返回）。
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail hardwareStaticCheckResult(HardwareStaticCheckResult hardwareStaticCheckResult) {
         this.hardwareStaticCheckResult = hardwareStaticCheckResult;
@@ -636,7 +656,8 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
     /**
      * set NCCL 网络测试配置（当 &#x60;diagnosticType&#x60; 为 &#x60;NetworkNcclTest&#x60; 时返回）。
      *
-     * @param networkNcclTestSpec
+     * @param networkNcclTestSpec NCCL 网络测试配置（当 &#x60;diagnosticType&#x60; 为 &#x60;NetworkNcclTest&#x60; 时返回）。
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail networkNcclTestSpec(NetworkNcclTestSpec networkNcclTestSpec) {
         this.networkNcclTestSpec = networkNcclTestSpec;
@@ -647,7 +668,8 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
     /**
      * set NCCL 网络测试结果（当 &#x60;diagnosticType&#x60; 为 &#x60;NetworkNcclTest&#x60; 时返回）。
      *
-     * @param networkNcclTestResult
+     * @param networkNcclTestResult NCCL 网络测试结果（当 &#x60;diagnosticType&#x60; 为 &#x60;NetworkNcclTest&#x60; 时返回）。
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail networkNcclTestResult(NetworkNcclTestResult networkNcclTestResult) {
         this.networkNcclTestResult = networkNcclTestResult;
@@ -658,7 +680,8 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
     /**
      * set 一键诊断配置（当 &#x60;diagnosticType&#x60; 为 &#x60;OneClickDiagnosis&#x60; 时返回）。
      *
-     * @param oneClickDiagnosisSpec
+     * @param oneClickDiagnosisSpec 一键诊断配置（当 &#x60;diagnosticType&#x60; 为 &#x60;OneClickDiagnosis&#x60; 时返回）。
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail oneClickDiagnosisSpec(OneClickDiagnosisSpec oneClickDiagnosisSpec) {
         this.oneClickDiagnosisSpec = oneClickDiagnosisSpec;
@@ -669,7 +692,8 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
     /**
      * set 一键诊断结果（当 &#x60;diagnosticType&#x60; 为 &#x60;OneClickDiagnosis&#x60; 时返回）。
      *
-     * @param oneClickDiagnosisResult
+     * @param oneClickDiagnosisResult 一键诊断结果（当 &#x60;diagnosticType&#x60; 为 &#x60;OneClickDiagnosis&#x60; 时返回）。
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail oneClickDiagnosisResult(OneClickDiagnosisResult oneClickDiagnosisResult) {
         this.oneClickDiagnosisResult = oneClickDiagnosisResult;
@@ -680,7 +704,8 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
     /**
      * set 创建时间，RFC3339 格式（UTC+8）。
      *
-     * @param createdTime
+     * @param createdTime 创建时间，RFC3339 格式（UTC+8）。
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -691,7 +716,8 @@ public class DiagnosticResultDetail  implements java.io.Serializable {
     /**
      * set 结束时间，RFC3339 格式（UTC+8）。
      *
-     * @param endTime
+     * @param endTime 结束时间，RFC3339 格式（UTC+8）。
+     * @return DiagnosticResultDetail
      */
     public DiagnosticResultDetail endTime(String endTime) {
         this.endTime = endTime;

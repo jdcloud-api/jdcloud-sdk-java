@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.hpc.model.DescribeKeypairsRequest;
+import com.jdcloud.sdk.service.hpc.model.DescribeKeypairsResponse;
+import com.jdcloud.sdk.service.hpc.client.DescribeKeypairsExecutor;
 import com.jdcloud.sdk.service.hpc.model.DisassociateElasticIpRequest;
 import com.jdcloud.sdk.service.hpc.model.DisassociateElasticIpResponse;
 import com.jdcloud.sdk.service.hpc.client.DisassociateElasticIpExecutor;
@@ -49,6 +52,9 @@ import com.jdcloud.sdk.service.hpc.client.AssociateElasticIpExecutor;
 import com.jdcloud.sdk.service.hpc.model.ModifyInstanceAttributeRequest;
 import com.jdcloud.sdk.service.hpc.model.ModifyInstanceAttributeResponse;
 import com.jdcloud.sdk.service.hpc.client.ModifyInstanceAttributeExecutor;
+import com.jdcloud.sdk.service.hpc.model.DetachKeypairRequest;
+import com.jdcloud.sdk.service.hpc.model.DetachKeypairResponse;
+import com.jdcloud.sdk.service.hpc.client.DetachKeypairExecutor;
 import com.jdcloud.sdk.service.hpc.model.EventRemoteWriteRequest;
 import com.jdcloud.sdk.service.hpc.model.EventRemoteWriteResponse;
 import com.jdcloud.sdk.service.hpc.client.EventRemoteWriteExecutor;
@@ -67,6 +73,12 @@ import com.jdcloud.sdk.service.hpc.client.CreateInstancesExecutor;
 import com.jdcloud.sdk.service.hpc.model.RebootInstanceRequest;
 import com.jdcloud.sdk.service.hpc.model.RebootInstanceResponse;
 import com.jdcloud.sdk.service.hpc.client.RebootInstanceExecutor;
+import com.jdcloud.sdk.service.hpc.model.CreateWebTerminalSessionRequest;
+import com.jdcloud.sdk.service.hpc.model.CreateWebTerminalSessionResponse;
+import com.jdcloud.sdk.service.hpc.client.CreateWebTerminalSessionExecutor;
+import com.jdcloud.sdk.service.hpc.model.AttachKeypairRequest;
+import com.jdcloud.sdk.service.hpc.model.AttachKeypairResponse;
+import com.jdcloud.sdk.service.hpc.client.AttachKeypairExecutor;
 import com.jdcloud.sdk.service.hpc.model.ExportInstancesDataRequest;
 import com.jdcloud.sdk.service.hpc.model.ExportInstancesDataResponse;
 import com.jdcloud.sdk.service.hpc.client.ExportInstancesDataExecutor;
@@ -94,6 +106,9 @@ import com.jdcloud.sdk.service.hpc.client.ModifyInstancePasswordExecutor;
 import com.jdcloud.sdk.service.hpc.model.CreateHpcNetDiagnoseRequest;
 import com.jdcloud.sdk.service.hpc.model.CreateHpcNetDiagnoseResponse;
 import com.jdcloud.sdk.service.hpc.client.CreateHpcNetDiagnoseExecutor;
+import com.jdcloud.sdk.service.hpc.model.CreateKeypairRequest;
+import com.jdcloud.sdk.service.hpc.model.CreateKeypairResponse;
+import com.jdcloud.sdk.service.hpc.client.CreateKeypairExecutor;
 import com.jdcloud.sdk.service.hpc.model.DescribeCommunicationRangeRequest;
 import com.jdcloud.sdk.service.hpc.model.DescribeCommunicationRangeResponse;
 import com.jdcloud.sdk.service.hpc.client.DescribeCommunicationRangeExecutor;
@@ -127,15 +142,24 @@ import com.jdcloud.sdk.service.hpc.client.DescribeChargeDurationExecutor;
 import com.jdcloud.sdk.service.hpc.model.DescribeInstanceRequest;
 import com.jdcloud.sdk.service.hpc.model.DescribeInstanceResponse;
 import com.jdcloud.sdk.service.hpc.client.DescribeInstanceExecutor;
+import com.jdcloud.sdk.service.hpc.model.ImportKeypairRequest;
+import com.jdcloud.sdk.service.hpc.model.ImportKeypairResponse;
+import com.jdcloud.sdk.service.hpc.client.ImportKeypairExecutor;
 import com.jdcloud.sdk.service.hpc.model.DescribePackageRequest;
 import com.jdcloud.sdk.service.hpc.model.DescribePackageResponse;
 import com.jdcloud.sdk.service.hpc.client.DescribePackageExecutor;
 import com.jdcloud.sdk.service.hpc.model.DescribeTasksRequest;
 import com.jdcloud.sdk.service.hpc.model.DescribeTasksResponse;
 import com.jdcloud.sdk.service.hpc.client.DescribeTasksExecutor;
+import com.jdcloud.sdk.service.hpc.model.DescribeHPCAssistantAgentsRequest;
+import com.jdcloud.sdk.service.hpc.model.DescribeHPCAssistantAgentsResponse;
+import com.jdcloud.sdk.service.hpc.client.DescribeHPCAssistantAgentsExecutor;
 import com.jdcloud.sdk.service.hpc.model.ModifyClusterRequest;
 import com.jdcloud.sdk.service.hpc.model.ModifyClusterResponse;
 import com.jdcloud.sdk.service.hpc.client.ModifyClusterExecutor;
+import com.jdcloud.sdk.service.hpc.model.DeleteKeypairRequest;
+import com.jdcloud.sdk.service.hpc.model.DeleteKeypairResponse;
+import com.jdcloud.sdk.service.hpc.client.DeleteKeypairExecutor;
 import com.jdcloud.sdk.service.hpc.model.DescribePackagesRequest;
 import com.jdcloud.sdk.service.hpc.model.DescribePackagesResponse;
 import com.jdcloud.sdk.service.hpc.client.DescribePackagesExecutor;
@@ -188,6 +212,18 @@ public class HpcClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * 查询密钥对列表。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeKeypairsResponse describeKeypairs(DescribeKeypairsRequest request) throws JdcloudSdkException {
+        return new DescribeKeypairsExecutor().client(this).execute(request);
+    }
 
     /**
      * 为实例解绑公网IP。
@@ -262,6 +298,18 @@ public class HpcClient extends JdcloudClient {
      */
     public ModifyInstanceAttributeResponse modifyInstanceAttribute(ModifyInstanceAttributeRequest request) throws JdcloudSdkException {
         return new ModifyInstanceAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 将密钥对从指定实例上解绑。支持批量解绑。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DetachKeypairResponse detachKeypair(DetachKeypairRequest request) throws JdcloudSdkException {
+        return new DetachKeypairExecutor().client(this).execute(request);
     }
 
     /**
@@ -340,6 +388,29 @@ public class HpcClient extends JdcloudClient {
      */
     public RebootInstanceResponse rebootInstance(RebootInstanceRequest request) throws JdcloudSdkException {
         return new RebootInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * CreateWebTerminalSession 创建 WebTerminal 会话并返回会话参数。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateWebTerminalSessionResponse createWebTerminalSession(CreateWebTerminalSessionRequest request) throws JdcloudSdkException {
+        return new CreateWebTerminalSessionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 将密钥对绑定到指定实例。支持批量绑定，已绑定其他密钥对的实例会被跳过。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AttachKeypairResponse attachKeypair(AttachKeypairRequest request) throws JdcloudSdkException {
+        return new AttachKeypairExecutor().client(this).execute(request);
     }
 
     /**
@@ -459,6 +530,18 @@ public class HpcClient extends JdcloudClient {
      */
     public CreateHpcNetDiagnoseResponse createHpcNetDiagnose(CreateHpcNetDiagnoseRequest request) throws JdcloudSdkException {
         return new CreateHpcNetDiagnoseExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建SSH密钥对。创建成功后系统会返回密钥对的私钥，请妥善保管，私钥仅在此一次返回，后续无法再次获取。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateKeypairResponse createKeypair(CreateKeypairRequest request) throws JdcloudSdkException {
+        return new CreateKeypairExecutor().client(this).execute(request);
     }
 
     /**
@@ -606,6 +689,18 @@ public class HpcClient extends JdcloudClient {
     }
 
     /**
+     * 导入SSH密钥对。用户需提供公钥内容，系统将导入该密钥对用于实例认证。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ImportKeypairResponse importKeypair(ImportKeypairRequest request) throws JdcloudSdkException {
+        return new ImportKeypairExecutor().client(this).execute(request);
+    }
+
+    /**
      * DescribePackage 查询指定地域下一个安装包信息详情。
 
      *
@@ -629,6 +724,17 @@ public class HpcClient extends JdcloudClient {
     }
 
     /**
+     * 根据资源 ID 批量查询最近五分钟内的云助手心跳状态。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeHPCAssistantAgentsResponse describeHPCAssistantAgents(DescribeHPCAssistantAgentsRequest request) throws JdcloudSdkException {
+        return new DescribeHPCAssistantAgentsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 更新用户可调度的网络集群
 
      *
@@ -638,6 +744,18 @@ public class HpcClient extends JdcloudClient {
      */
     public ModifyClusterResponse modifyCluster(ModifyClusterRequest request) throws JdcloudSdkException {
         return new ModifyClusterExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除SSH密钥对。删除前请确保该密钥对未绑定任何实例。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteKeypairResponse deleteKeypair(DeleteKeypairRequest request) throws JdcloudSdkException {
+        return new DeleteKeypairExecutor().client(this).execute(request);
     }
 
     /**

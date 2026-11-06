@@ -134,7 +134,8 @@ public class InstanceTypeState  implements java.io.Serializable {
     /**
      * set 可用区。
      *
-     * @param az
+     * @param az 可用区。
+     * @return InstanceTypeState
      */
     public InstanceTypeState az(String az) {
         this.az = az;
@@ -145,7 +146,8 @@ public class InstanceTypeState  implements java.io.Serializable {
     /**
      * set 集群id。
      *
-     * @param clusterId
+     * @param clusterId 集群id。
+     * @return InstanceTypeState
      */
     public InstanceTypeState clusterId(String clusterId) {
         this.clusterId = clusterId;
@@ -156,7 +158,8 @@ public class InstanceTypeState  implements java.io.Serializable {
     /**
      * set 售卖状态，&#x60;true&#x60;：可售卖、&#x60;false&#x60;：已售罄不可用。
      *
-     * @param inStock
+     * @param inStock 售卖状态，&#x60;true&#x60;：可售卖、&#x60;false&#x60;：已售罄不可用。
+     * @return InstanceTypeState
      */
     public InstanceTypeState inStock(Boolean inStock) {
         this.inStock = inStock;
@@ -167,7 +170,8 @@ public class InstanceTypeState  implements java.io.Serializable {
     /**
      * set 可用库存数量，目前该字段为预留阶段。
      *
-     * @param availableCount
+     * @param availableCount 可用库存数量，目前该字段为预留阶段。
+     * @return InstanceTypeState
      */
     public InstanceTypeState availableCount(Integer availableCount) {
         this.availableCount = availableCount;

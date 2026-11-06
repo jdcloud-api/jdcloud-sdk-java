@@ -126,7 +126,9 @@ public class DescribeNetworkRelationshipRequest extends JdcloudRequest implement
      * set 实例ID
 
      *
-     * @param instanceId1
+     * @param instanceId1 实例ID
+
+     * @return DescribeNetworkRelationshipRequest
      */
     public DescribeNetworkRelationshipRequest instanceId1(String instanceId1) {
         this.instanceId1 = instanceId1;
@@ -138,7 +140,9 @@ public class DescribeNetworkRelationshipRequest extends JdcloudRequest implement
      * set 实例ID
 
      *
-     * @param instanceId2
+     * @param instanceId2 实例ID
+
+     * @return DescribeNetworkRelationshipRequest
      */
     public DescribeNetworkRelationshipRequest instanceId2(String instanceId2) {
         this.instanceId2 = instanceId2;
@@ -149,7 +153,8 @@ public class DescribeNetworkRelationshipRequest extends JdcloudRequest implement
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return DescribeNetworkRelationshipRequest
      */
     public DescribeNetworkRelationshipRequest regionId(String regionId) {
         this.regionId = regionId;

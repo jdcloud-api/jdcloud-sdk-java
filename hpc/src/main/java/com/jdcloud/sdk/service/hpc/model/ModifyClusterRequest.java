@@ -169,7 +169,8 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set Id
      *
-     * @param id
+     * @param id Id
+     * @return ModifyClusterRequest
      */
     public ModifyClusterRequest id(Integer id) {
         this.id = id;
@@ -180,7 +181,8 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 逻辑集群id
      *
-     * @param clusterId
+     * @param clusterId 逻辑集群id
+     * @return ModifyClusterRequest
      */
     public ModifyClusterRequest clusterId(String clusterId) {
         this.clusterId = clusterId;
@@ -191,7 +193,8 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
     * set podId列表
     *
-    * @param podIds
+    * @param podIds podId列表
+    * @return ModifyClusterRequest
     */
     public ModifyClusterRequest podIds(List<String> podIds) {
         this.podIds = podIds;
@@ -202,7 +205,8 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
     * set suId列表
     *
-    * @param suIds
+    * @param suIds suId列表
+    * @return ModifyClusterRequest
     */
     public ModifyClusterRequest suIds(List<String> suIds) {
         this.suIds = suIds;
@@ -213,7 +217,8 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return ModifyClusterRequest
      */
     public ModifyClusterRequest regionId(String regionId) {
         this.regionId = regionId;

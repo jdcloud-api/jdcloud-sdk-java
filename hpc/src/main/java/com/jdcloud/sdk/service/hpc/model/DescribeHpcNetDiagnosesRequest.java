@@ -144,7 +144,8 @@ public class DescribeHpcNetDiagnosesRequest extends JdcloudRequest implements ja
     /**
      * set 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
      *
-     * @param pageNumber
+     * @param pageNumber 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
+     * @return DescribeHpcNetDiagnosesRequest
      */
     public DescribeHpcNetDiagnosesRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -155,7 +156,8 @@ public class DescribeHpcNetDiagnosesRequest extends JdcloudRequest implements ja
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认为20，取值范围：[10,100]
+     * @return DescribeHpcNetDiagnosesRequest
      */
     public DescribeHpcNetDiagnosesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -167,7 +169,9 @@ public class DescribeHpcNetDiagnosesRequest extends JdcloudRequest implements ja
     * set ids - 诊断报告ID列表，支持多个
 
     *
-    * @param filters
+    * @param filters ids - 诊断报告ID列表，支持多个
+
+    * @return DescribeHpcNetDiagnosesRequest
     */
     public DescribeHpcNetDiagnosesRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -178,7 +182,8 @@ public class DescribeHpcNetDiagnosesRequest extends JdcloudRequest implements ja
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribeHpcNetDiagnosesRequest
      */
     public DescribeHpcNetDiagnosesRequest regionId(String regionId) {
         this.regionId = regionId;

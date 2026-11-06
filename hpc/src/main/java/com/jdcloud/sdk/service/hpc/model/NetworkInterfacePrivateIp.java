@@ -110,7 +110,8 @@ public class NetworkInterfacePrivateIp  implements java.io.Serializable {
     /**
      * set 私有IP的IPV4地址
      *
-     * @param privateIpAddress
+     * @param privateIpAddress 私有IP的IPV4地址
+     * @return NetworkInterfacePrivateIp
      */
     public NetworkInterfacePrivateIp privateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
@@ -121,7 +122,8 @@ public class NetworkInterfacePrivateIp  implements java.io.Serializable {
     /**
      * set 弹性IP实例ID
      *
-     * @param elasticIpId
+     * @param elasticIpId 弹性IP实例ID
+     * @return NetworkInterfacePrivateIp
      */
     public NetworkInterfacePrivateIp elasticIpId(String elasticIpId) {
         this.elasticIpId = elasticIpId;
@@ -132,7 +134,8 @@ public class NetworkInterfacePrivateIp  implements java.io.Serializable {
     /**
      * set 弹性IP实例地址
      *
-     * @param elasticIpAddress
+     * @param elasticIpAddress 弹性IP实例地址
+     * @return NetworkInterfacePrivateIp
      */
     public NetworkInterfacePrivateIp elasticIpAddress(String elasticIpAddress) {
         this.elasticIpAddress = elasticIpAddress;

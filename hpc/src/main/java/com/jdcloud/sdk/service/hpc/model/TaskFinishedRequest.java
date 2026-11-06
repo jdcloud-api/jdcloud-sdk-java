@@ -93,7 +93,8 @@ public class TaskFinishedRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set body
      *
-     * @param body
+     * @param body 
+     * @return TaskFinishedRequest
      */
     public TaskFinishedRequest body(TaskFinishedSpec body) {
         this.body = body;
@@ -104,7 +105,8 @@ public class TaskFinishedRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 任务UID
      *
-     * @param taskID
+     * @param taskID 任务UID
+     * @return TaskFinishedRequest
      */
     public TaskFinishedRequest taskID(String taskID) {
         this.taskID = taskID;

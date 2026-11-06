@@ -64,7 +64,8 @@ public class DescribeChargeDurationResult extends JdcloudResult implements java.
     /**
      * set 购买周期详情
      *
-     * @param chargeDuration
+     * @param chargeDuration 购买周期详情
+     * @return DescribeChargeDurationResult
      */
     public DescribeChargeDurationResult chargeDuration(ChargeDuration chargeDuration) {
         this.chargeDuration = chargeDuration;

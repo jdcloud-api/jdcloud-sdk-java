@@ -308,7 +308,8 @@ public class ExportInstancesDataRequest extends JdcloudRequest implements java.i
     /**
      * set 要导出的起始页码，startPage、endPage、pageSize都没有指定的情况下代表导出全部
      *
-     * @param startPage
+     * @param startPage 要导出的起始页码，startPage、endPage、pageSize都没有指定的情况下代表导出全部
+     * @return ExportInstancesDataRequest
      */
     public ExportInstancesDataRequest startPage(Integer startPage) {
         this.startPage = startPage;
@@ -319,7 +320,8 @@ public class ExportInstancesDataRequest extends JdcloudRequest implements java.i
     /**
      * set 要导出的结束页码，startPage、endPage、pageSize都没有指定的情况下代表导出全部。
      *
-     * @param endPage
+     * @param endPage 要导出的结束页码，startPage、endPage、pageSize都没有指定的情况下代表导出全部。
+     * @return ExportInstancesDataRequest
      */
     public ExportInstancesDataRequest endPage(Integer endPage) {
         this.endPage = endPage;
@@ -330,7 +332,8 @@ public class ExportInstancesDataRequest extends JdcloudRequest implements java.i
     /**
      * set 每页大小，startPage、endPage、pageSize都没有指定的情况下代表导出全部。
      *
-     * @param pageSize
+     * @param pageSize 每页大小，startPage、endPage、pageSize都没有指定的情况下代表导出全部。
+     * @return ExportInstancesDataRequest
      */
     public ExportInstancesDataRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -341,7 +344,8 @@ public class ExportInstancesDataRequest extends JdcloudRequest implements java.i
     /**
     * set Tag筛选条件
     *
-    * @param tags
+    * @param tags Tag筛选条件
+    * @return ExportInstancesDataRequest
     */
     public ExportInstancesDataRequest tags(List<TagFilter> tags) {
         this.tags = tags;
@@ -363,7 +367,19 @@ public class ExportInstancesDataRequest extends JdcloudRequest implements java.i
 &#x60;hpcClusterId&#x60;: 实例网络集群ID。支持精确批量
 
     *
-    * @param filters
+    * @param filters &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;instanceId&#x60;: 实例Id，精确匹配，支持多个
+&#x60;instanceName&#x60;: 实例名称。支持单个模糊查询
+&#x60;hostName&#x60;: 主机hostName。支持单个模糊查询
+&#x60;instanceType&#x60;: 实例规格。支持精确批量
+&#x60;az&#x60;: 可用区。支持精确多个
+&#x60;status&#x60;: 实例状态。支持精确批量
+&#x60;privateIpAddress&#x60;: 实例内网ip地址。支持单个模糊查询
+&#x60;subnetId&#x60;: 实例所在子网。支持精确批量
+&#x60;packageId&#x60;: 实例使用的安装包ID。支持精确批量
+&#x60;hpcClusterId&#x60;: 实例网络集群ID。支持精确批量
+
+    * @return ExportInstancesDataRequest
     */
     public ExportInstancesDataRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -386,7 +402,20 @@ public class ExportInstancesDataRequest extends JdcloudRequest implements java.i
 &quot;resourceGroup&quot;: &quot;资源组ID&quot;,&quot;资源组名称&quot;
 
     *
-    * @param columns
+    * @param columns 指定需要导出的资源，可选值:
+&quot;instanceId&quot;: 实例Id
+&quot;instanceName&quot;: 实例名称
+&quot;hostName&quot;: 主机名
+&quot;az&quot;: 可用区
+&quot;hpcClusterId&quot;: 实例网络集群ID
+&quot;privateIpAddress&quot; : IP地址
+&quot;status&quot;: 运行状态
+&quot;instanceType&quot;: 实例规格
+&quot;charge&quot;: 计费信息
+&quot;tag&quot;: &quot;标签&quot;
+&quot;resourceGroup&quot;: &quot;资源组ID&quot;,&quot;资源组名称&quot;
+
+    * @return ExportInstancesDataRequest
     */
     public ExportInstancesDataRequest columns(List<String> columns) {
         this.columns = columns;
@@ -397,7 +426,8 @@ public class ExportInstancesDataRequest extends JdcloudRequest implements java.i
     /**
      * set 排序方式，默认为按创建时间降序排序
      *
-     * @param networkTopologyOrder
+     * @param networkTopologyOrder 排序方式，默认为按创建时间降序排序
+     * @return ExportInstancesDataRequest
      */
     public ExportInstancesDataRequest networkTopologyOrder(Boolean networkTopologyOrder) {
         this.networkTopologyOrder = networkTopologyOrder;
@@ -408,7 +438,8 @@ public class ExportInstancesDataRequest extends JdcloudRequest implements java.i
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return ExportInstancesDataRequest
      */
     public ExportInstancesDataRequest regionId(String regionId) {
         this.regionId = regionId;

@@ -112,7 +112,8 @@ public class DiagnosticCompareDistributionItem  implements java.io.Serializable 
     /**
      * set 检测值。
      *
-     * @param checkValue
+     * @param checkValue 检测值。
+     * @return DiagnosticCompareDistributionItem
      */
     public DiagnosticCompareDistributionItem checkValue(String checkValue) {
         this.checkValue = checkValue;
@@ -123,7 +124,8 @@ public class DiagnosticCompareDistributionItem  implements java.io.Serializable 
     /**
      * set 节点数量。
      *
-     * @param count
+     * @param count 节点数量。
+     * @return DiagnosticCompareDistributionItem
      */
     public DiagnosticCompareDistributionItem count(Integer count) {
         this.count = count;
@@ -134,7 +136,8 @@ public class DiagnosticCompareDistributionItem  implements java.io.Serializable 
     /**
     * set 实例ID列表。
     *
-    * @param instanceIds
+    * @param instanceIds 实例ID列表。
+    * @return DiagnosticCompareDistributionItem
     */
     public DiagnosticCompareDistributionItem instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;

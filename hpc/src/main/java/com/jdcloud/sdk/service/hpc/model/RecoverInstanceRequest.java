@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.hpc.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -40,13 +42,23 @@ public class RecoverInstanceRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例密码。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+     * 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
 
-     * Required:true
      */
-    @Required
     private String password;
 
+    /**
+     * 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     */
+    private String passwordAuth;
+
+    /**
+     * 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+     */
+    
+    private List<String> keyNames;
     /**
      * 地域ID。
      * Required:true
@@ -64,7 +76,7 @@ public class RecoverInstanceRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 实例密码。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+     * get 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
 
      *
      * @return
@@ -74,13 +86,55 @@ public class RecoverInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 实例密码。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+     * set 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
 
      *
      * @param password
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    /**
+     * get 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     *
+     * @return
+     */
+    public String getPasswordAuth() {
+        return passwordAuth;
+    }
+
+    /**
+     * set 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     *
+     * @param passwordAuth
+     */
+    public void setPasswordAuth(String passwordAuth) {
+        this.passwordAuth = passwordAuth;
+    }
+
+
+    /**
+    * get 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+    *
+    * @return
+    */
+    public List<String> getKeyNames() {
+        return keyNames;
+    }
+
+    /**
+    * set 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+    *
+    * @param keyNames
+    */
+    public void setKeyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
     }
 
 
@@ -124,10 +178,12 @@ public class RecoverInstanceRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 实例密码。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+     * set 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
 
      *
-     * @param password
+     * @param password 实例密码。当passwordAuth为yes时必填。可用于SSH登录和VNC登录，长度为8-30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/
+
+     * @return RecoverInstanceRequest
      */
     public RecoverInstanceRequest password(String password) {
         this.password = password;
@@ -136,9 +192,38 @@ public class RecoverInstanceRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
+     * set 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     *
+     * @param passwordAuth 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+
+     * @return RecoverInstanceRequest
+     */
+    public RecoverInstanceRequest passwordAuth(String passwordAuth) {
+        this.passwordAuth = passwordAuth;
+        return this;
+    }
+
+
+    /**
+    * set 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+    *
+    * @param keyNames 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+    * @return RecoverInstanceRequest
+    */
+    public RecoverInstanceRequest keyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
+        return this;
+    }
+
+
+    /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return RecoverInstanceRequest
      */
     public RecoverInstanceRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -149,7 +234,8 @@ public class RecoverInstanceRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 实例ID。
      *
-     * @param instanceId
+     * @param instanceId 实例ID。
+     * @return RecoverInstanceRequest
      */
     public RecoverInstanceRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -157,4 +243,17 @@ public class RecoverInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
+    /**
+     * add item to 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+
+     *
+     * @param keyName
+     */
+    public void addKeyName(String keyName) {
+        if (this.keyNames == null) {
+            this.keyNames = new ArrayList<>();
+        }
+        this.keyNames.add(keyName);
+    }
 }

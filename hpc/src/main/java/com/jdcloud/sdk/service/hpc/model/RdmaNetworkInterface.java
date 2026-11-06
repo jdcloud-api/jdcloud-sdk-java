@@ -208,7 +208,8 @@ public class RdmaNetworkInterface  implements java.io.Serializable {
     /**
      * set 名称
      *
-     * @param name
+     * @param name 名称
+     * @return RdmaNetworkInterface
      */
     public RdmaNetworkInterface name(String name) {
         this.name = name;
@@ -219,7 +220,8 @@ public class RdmaNetworkInterface  implements java.io.Serializable {
     /**
      * set rdma网卡ID
      *
-     * @param portId
+     * @param portId rdma网卡ID
+     * @return RdmaNetworkInterface
      */
     public RdmaNetworkInterface portId(String portId) {
         this.portId = portId;
@@ -230,7 +232,8 @@ public class RdmaNetworkInterface  implements java.io.Serializable {
     /**
      * set RDMA网卡GUID，当RDMA网卡为IB类型时有意义。
      *
-     * @param guid
+     * @param guid RDMA网卡GUID，当RDMA网卡为IB类型时有意义。
+     * @return RdmaNetworkInterface
      */
     public RdmaNetworkInterface guid(String guid) {
         this.guid = guid;
@@ -241,7 +244,8 @@ public class RdmaNetworkInterface  implements java.io.Serializable {
     /**
      * set RDMA网卡物理MAC地址。
      *
-     * @param macAddress
+     * @param macAddress RDMA网卡物理MAC地址。
+     * @return RdmaNetworkInterface
      */
     public RdmaNetworkInterface macAddress(String macAddress) {
         this.macAddress = macAddress;
@@ -252,7 +256,8 @@ public class RdmaNetworkInterface  implements java.io.Serializable {
     /**
      * set RDMA网卡逻辑MAC地址。
      *
-     * @param logicMacAddress
+     * @param logicMacAddress RDMA网卡逻辑MAC地址。
+     * @return RdmaNetworkInterface
      */
     public RdmaNetworkInterface logicMacAddress(String logicMacAddress) {
         this.logicMacAddress = logicMacAddress;
@@ -263,7 +268,8 @@ public class RdmaNetworkInterface  implements java.io.Serializable {
     /**
     * set RDMA网卡IP地址。
     *
-    * @param ipAddress
+    * @param ipAddress RDMA网卡IP地址。
+    * @return RdmaNetworkInterface
     */
     public RdmaNetworkInterface ipAddress(List<String> ipAddress) {
         this.ipAddress = ipAddress;
@@ -274,7 +280,8 @@ public class RdmaNetworkInterface  implements java.io.Serializable {
     /**
      * set 网卡应用场景，取值：compute、storage。
      *
-     * @param scene
+     * @param scene 网卡应用场景，取值：compute、storage。
+     * @return RdmaNetworkInterface
      */
     public RdmaNetworkInterface scene(String scene) {
         this.scene = scene;

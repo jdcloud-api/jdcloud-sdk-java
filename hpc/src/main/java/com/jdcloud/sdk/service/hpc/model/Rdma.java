@@ -86,7 +86,8 @@ public class Rdma  implements java.io.Serializable {
     /**
      * set RDMA网卡个数。
      *
-     * @param count
+     * @param count RDMA网卡个数。
+     * @return Rdma
      */
     public Rdma count(Integer count) {
         this.count = count;
@@ -97,7 +98,8 @@ public class Rdma  implements java.io.Serializable {
     /**
      * set RDMA网卡带宽。
      *
-     * @param bandwidthGbps
+     * @param bandwidthGbps RDMA网卡带宽。
+     * @return Rdma
      */
     public Rdma bandwidthGbps(Integer bandwidthGbps) {
         this.bandwidthGbps = bandwidthGbps;

@@ -65,7 +65,8 @@ public class DescribeQuotaResult extends JdcloudResult implements java.io.Serial
     /**
      * set 配额详情
      *
-     * @param quota
+     * @param quota 配额详情
+     * @return DescribeQuotaResult
      */
     public DescribeQuotaResult quota(Quota quota) {
         this.quota = quota;

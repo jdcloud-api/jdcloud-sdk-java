@@ -158,7 +158,8 @@ public class Charge  implements java.io.Serializable {
     /**
      * set 支付模式，取值为：prePaid表示预付费，默认为prePaid
      *
-     * @param chargeMode
+     * @param chargeMode 支付模式，取值为：prePaid表示预付费，默认为prePaid
+     * @return Charge
      */
     public Charge chargeMode(String chargeMode) {
         this.chargeMode = chargeMode;
@@ -169,7 +170,8 @@ public class Charge  implements java.io.Serializable {
     /**
      * set 费用支付状态，取值为：normal、overdue、arrear，normal表示正常，overdue表示已到期，arrear表示欠费
      *
-     * @param chargeStatus
+     * @param chargeStatus 费用支付状态，取值为：normal、overdue、arrear，normal表示正常，overdue表示已到期，arrear表示欠费
+     * @return Charge
      */
     public Charge chargeStatus(String chargeStatus) {
         this.chargeStatus = chargeStatus;
@@ -180,7 +182,8 @@ public class Charge  implements java.io.Serializable {
     /**
      * set 计费开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
      *
-     * @param chargeStartTime
+     * @param chargeStartTime 计费开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * @return Charge
      */
     public Charge chargeStartTime(String chargeStartTime) {
         this.chargeStartTime = chargeStartTime;
@@ -191,7 +194,8 @@ public class Charge  implements java.io.Serializable {
     /**
      * set 过期时间，预付费资源的到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ，后付费资源此字段内容为空
      *
-     * @param chargeExpiredTime
+     * @param chargeExpiredTime 过期时间，预付费资源的到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ，后付费资源此字段内容为空
+     * @return Charge
      */
     public Charge chargeExpiredTime(String chargeExpiredTime) {
         this.chargeExpiredTime = chargeExpiredTime;
@@ -202,7 +206,8 @@ public class Charge  implements java.io.Serializable {
     /**
      * set 预期释放时间，资源的预期释放时间，预付费/后付费资源均有此值，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
      *
-     * @param chargeRetireTime
+     * @param chargeRetireTime 预期释放时间，资源的预期释放时间，预付费/后付费资源均有此值，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * @return Charge
      */
     public Charge chargeRetireTime(String chargeRetireTime) {
         this.chargeRetireTime = chargeRetireTime;

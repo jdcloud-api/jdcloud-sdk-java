@@ -136,7 +136,8 @@ public class DiagnosticCompareItem  implements java.io.Serializable {
     /**
      * set 对比项名称。
      *
-     * @param name
+     * @param name 对比项名称。
+     * @return DiagnosticCompareItem
      */
     public DiagnosticCompareItem name(String name) {
         this.name = name;
@@ -147,7 +148,8 @@ public class DiagnosticCompareItem  implements java.io.Serializable {
     /**
      * set 对比项描述。
      *
-     * @param description
+     * @param description 对比项描述。
+     * @return DiagnosticCompareItem
      */
     public DiagnosticCompareItem description(String description) {
         this.description = description;
@@ -158,7 +160,8 @@ public class DiagnosticCompareItem  implements java.io.Serializable {
     /**
      * set 对比结果。
      *
-     * @param result
+     * @param result 对比结果。
+     * @return DiagnosticCompareItem
      */
     public DiagnosticCompareItem result(String result) {
         this.result = result;
@@ -169,7 +172,8 @@ public class DiagnosticCompareItem  implements java.io.Serializable {
     /**
     * set 分布信息。
     *
-    * @param distribution
+    * @param distribution 分布信息。
+    * @return DiagnosticCompareItem
     */
     public DiagnosticCompareItem distribution(List<DiagnosticCompareDistributionItem> distribution) {
         this.distribution = distribution;
