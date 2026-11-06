@@ -34,33 +34,37 @@ public class ClusterReduction  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 集群ID
+     * 集群ID。
      * Required:true
      */
     @Required
     private String clusterId;
 
     /**
-     * 保留的节点个数
+     * 保留的节点个数（不是缩容数量）；取值范围：[0, 当前节点数-1]。
+传 0 表示释放该节点组的全部节点。
+
      * Required:true
      */
     @Required
     private String reserveNum;
 
     /**
-     * 缩容Task或Edge节点。默认为Task节点
+     * 缩容 Task 或 Edge 节点；默认 Task。
      */
     private String nodeType;
 
     /**
-     * 缩容Task所属的节点组ID
+     * 缩容目标节点组ID：nodeType&#x3D;Task 时必填（不传会返回参数错误，避免误缩其他节点组的节点）；
+nodeType&#x3D;Edge 时可选，用于指定 Edge 节点的规格来源。
+
      */
     private String configGroupId;
 
 
 
     /**
-     * get 集群ID
+     * get 集群ID。
      *
      * @return
      */
@@ -69,7 +73,7 @@ public class ClusterReduction  implements java.io.Serializable {
     }
 
     /**
-     * set 集群ID
+     * set 集群ID。
      *
      * @param clusterId
      */
@@ -79,7 +83,9 @@ public class ClusterReduction  implements java.io.Serializable {
 
 
     /**
-     * get 保留的节点个数
+     * get 保留的节点个数（不是缩容数量）；取值范围：[0, 当前节点数-1]。
+传 0 表示释放该节点组的全部节点。
+
      *
      * @return
      */
@@ -88,7 +94,9 @@ public class ClusterReduction  implements java.io.Serializable {
     }
 
     /**
-     * set 保留的节点个数
+     * set 保留的节点个数（不是缩容数量）；取值范围：[0, 当前节点数-1]。
+传 0 表示释放该节点组的全部节点。
+
      *
      * @param reserveNum
      */
@@ -98,7 +106,7 @@ public class ClusterReduction  implements java.io.Serializable {
 
 
     /**
-     * get 缩容Task或Edge节点。默认为Task节点
+     * get 缩容 Task 或 Edge 节点；默认 Task。
      *
      * @return
      */
@@ -107,7 +115,7 @@ public class ClusterReduction  implements java.io.Serializable {
     }
 
     /**
-     * set 缩容Task或Edge节点。默认为Task节点
+     * set 缩容 Task 或 Edge 节点；默认 Task。
      *
      * @param nodeType
      */
@@ -117,7 +125,9 @@ public class ClusterReduction  implements java.io.Serializable {
 
 
     /**
-     * get 缩容Task所属的节点组ID
+     * get 缩容目标节点组ID：nodeType&#x3D;Task 时必填（不传会返回参数错误，避免误缩其他节点组的节点）；
+nodeType&#x3D;Edge 时可选，用于指定 Edge 节点的规格来源。
+
      *
      * @return
      */
@@ -126,7 +136,9 @@ public class ClusterReduction  implements java.io.Serializable {
     }
 
     /**
-     * set 缩容Task所属的节点组ID
+     * set 缩容目标节点组ID：nodeType&#x3D;Task 时必填（不传会返回参数错误，避免误缩其他节点组的节点）；
+nodeType&#x3D;Edge 时可选，用于指定 Edge 节点的规格来源。
+
      *
      * @param configGroupId
      */
@@ -137,9 +149,9 @@ public class ClusterReduction  implements java.io.Serializable {
 
 
     /**
-     * set 集群ID
+     * set 集群ID。
      *
-     * @param clusterId 集群ID
+     * @param clusterId 集群ID。
      * @return ClusterReduction
      */
     public ClusterReduction clusterId(String clusterId) {
@@ -149,9 +161,13 @@ public class ClusterReduction  implements java.io.Serializable {
 
 
     /**
-     * set 保留的节点个数
+     * set 保留的节点个数（不是缩容数量）；取值范围：[0, 当前节点数-1]。
+传 0 表示释放该节点组的全部节点。
+
      *
-     * @param reserveNum 保留的节点个数
+     * @param reserveNum 保留的节点个数（不是缩容数量）；取值范围：[0, 当前节点数-1]。
+传 0 表示释放该节点组的全部节点。
+
      * @return ClusterReduction
      */
     public ClusterReduction reserveNum(String reserveNum) {
@@ -161,9 +177,9 @@ public class ClusterReduction  implements java.io.Serializable {
 
 
     /**
-     * set 缩容Task或Edge节点。默认为Task节点
+     * set 缩容 Task 或 Edge 节点；默认 Task。
      *
-     * @param nodeType 缩容Task或Edge节点。默认为Task节点
+     * @param nodeType 缩容 Task 或 Edge 节点；默认 Task。
      * @return ClusterReduction
      */
     public ClusterReduction nodeType(String nodeType) {
@@ -173,9 +189,13 @@ public class ClusterReduction  implements java.io.Serializable {
 
 
     /**
-     * set 缩容Task所属的节点组ID
+     * set 缩容目标节点组ID：nodeType&#x3D;Task 时必填（不传会返回参数错误，避免误缩其他节点组的节点）；
+nodeType&#x3D;Edge 时可选，用于指定 Edge 节点的规格来源。
+
      *
-     * @param configGroupId 缩容Task所属的节点组ID
+     * @param configGroupId 缩容目标节点组ID：nodeType&#x3D;Task 时必填（不传会返回参数错误，避免误缩其他节点组的节点）；
+nodeType&#x3D;Edge 时可选，用于指定 Edge 节点的规格来源。
+
      * @return ClusterReduction
      */
     public ClusterReduction configGroupId(String configGroupId) {
