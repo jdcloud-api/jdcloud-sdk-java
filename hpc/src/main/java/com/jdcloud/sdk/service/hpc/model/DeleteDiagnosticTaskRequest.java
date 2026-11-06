@@ -96,7 +96,8 @@ public class DeleteDiagnosticTaskRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return DeleteDiagnosticTaskRequest
      */
     public DeleteDiagnosticTaskRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -107,7 +108,8 @@ public class DeleteDiagnosticTaskRequest extends JdcloudRequest implements java.
     /**
      * set 诊断任务ID。
      *
-     * @param diagnosticId
+     * @param diagnosticId 诊断任务ID。
+     * @return DeleteDiagnosticTaskRequest
      */
     public DeleteDiagnosticTaskRequest diagnosticId(String diagnosticId) {
         this.diagnosticId = diagnosticId;

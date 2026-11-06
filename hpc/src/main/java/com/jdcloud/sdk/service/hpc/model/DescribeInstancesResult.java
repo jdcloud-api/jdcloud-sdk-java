@@ -91,7 +91,8 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     /**
     * set instances
     *
-    * @param instances
+    * @param instances 
+    * @return DescribeInstancesResult
     */
     public DescribeInstancesResult instances(List<Instance> instances) {
         this.instances = instances;
@@ -102,7 +103,8 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     /**
      * set 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      *
-     * @param totalCount
+     * @param totalCount 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
+     * @return DescribeInstancesResult
      */
     public DescribeInstancesResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;

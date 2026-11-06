@@ -291,7 +291,8 @@ public class CreateHpcNetDiagnoseSpec  implements java.io.Serializable {
     /**
      * set 可用区
      *
-     * @param az
+     * @param az 可用区
+     * @return CreateHpcNetDiagnoseSpec
      */
     public CreateHpcNetDiagnoseSpec az(String az) {
         this.az = az;
@@ -302,7 +303,8 @@ public class CreateHpcNetDiagnoseSpec  implements java.io.Serializable {
     /**
      * set vpc id
      *
-     * @param vpcId
+     * @param vpcId vpc id
+     * @return CreateHpcNetDiagnoseSpec
      */
     public CreateHpcNetDiagnoseSpec vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -313,7 +315,8 @@ public class CreateHpcNetDiagnoseSpec  implements java.io.Serializable {
     /**
      * set 集群名字
      *
-     * @param hpcClusterName
+     * @param hpcClusterName 集群名字
+     * @return CreateHpcNetDiagnoseSpec
      */
     public CreateHpcNetDiagnoseSpec hpcClusterName(String hpcClusterName) {
         this.hpcClusterName = hpcClusterName;
@@ -324,7 +327,8 @@ public class CreateHpcNetDiagnoseSpec  implements java.io.Serializable {
     /**
      * set BANDWIDTH:带宽测试；LATENCY:时延测试
      *
-     * @param type
+     * @param type BANDWIDTH:带宽测试；LATENCY:时延测试
+     * @return CreateHpcNetDiagnoseSpec
      */
     public CreateHpcNetDiagnoseSpec type(String type) {
         this.type = type;
@@ -335,7 +339,8 @@ public class CreateHpcNetDiagnoseSpec  implements java.io.Serializable {
     /**
      * set MTON,FULLMESH (带宽测试独有，必填)
      *
-     * @param traffic
+     * @param traffic MTON,FULLMESH (带宽测试独有，必填)
+     * @return CreateHpcNetDiagnoseSpec
      */
     public CreateHpcNetDiagnoseSpec traffic(String traffic) {
         this.traffic = traffic;
@@ -346,7 +351,8 @@ public class CreateHpcNetDiagnoseSpec  implements java.io.Serializable {
     /**
      * set 测试时长 （带宽测试独有，必填）
      *
-     * @param duration
+     * @param duration 测试时长 （带宽测试独有，必填）
+     * @return CreateHpcNetDiagnoseSpec
      */
     public CreateHpcNetDiagnoseSpec duration(Integer duration) {
         this.duration = duration;
@@ -357,7 +363,8 @@ public class CreateHpcNetDiagnoseSpec  implements java.io.Serializable {
     /**
      * set qp [1-16384]（带宽测试独有,必填）
      *
-     * @param qp
+     * @param qp qp [1-16384]（带宽测试独有,必填）
+     * @return CreateHpcNetDiagnoseSpec
      */
     public CreateHpcNetDiagnoseSpec qp(Integer qp) {
         this.qp = qp;
@@ -368,7 +375,8 @@ public class CreateHpcNetDiagnoseSpec  implements java.io.Serializable {
     /**
      * set 是否启用 GDR（带宽测试独有，默认false）
      *
-     * @param gdr
+     * @param gdr 是否启用 GDR（带宽测试独有，默认false）
+     * @return CreateHpcNetDiagnoseSpec
      */
     public CreateHpcNetDiagnoseSpec gdr(Boolean gdr) {
         this.gdr = gdr;
@@ -379,7 +387,8 @@ public class CreateHpcNetDiagnoseSpec  implements java.io.Serializable {
     /**
      * set 端口 [5000-65535]
      *
-     * @param port
+     * @param port 端口 [5000-65535]
+     * @return CreateHpcNetDiagnoseSpec
      */
     public CreateHpcNetDiagnoseSpec port(Integer port) {
         this.port = port;
@@ -390,7 +399,8 @@ public class CreateHpcNetDiagnoseSpec  implements java.io.Serializable {
     /**
     * set 节点信息
     *
-    * @param instances
+    * @param instances 节点信息
+    * @return CreateHpcNetDiagnoseSpec
     */
     public CreateHpcNetDiagnoseSpec instances(List<NetNodeSpec> instances) {
         this.instances = instances;

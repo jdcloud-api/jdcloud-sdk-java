@@ -66,7 +66,8 @@ public class TaskHeartbeatRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 任务UID
      *
-     * @param taskID
+     * @param taskID 任务UID
+     * @return TaskHeartbeatRequest
      */
     public TaskHeartbeatRequest taskID(String taskID) {
         this.taskID = taskID;

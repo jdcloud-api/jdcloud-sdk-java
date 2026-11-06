@@ -93,7 +93,8 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return StopInstanceRequest
      */
     public StopInstanceRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -104,7 +105,8 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 实例ID。
      *
-     * @param instanceId
+     * @param instanceId 实例ID。
+     * @return StopInstanceRequest
      */
     public StopInstanceRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

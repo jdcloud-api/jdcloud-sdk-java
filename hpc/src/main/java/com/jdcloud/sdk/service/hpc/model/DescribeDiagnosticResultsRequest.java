@@ -175,7 +175,14 @@ public class DescribeDiagnosticResultsRequest extends JdcloudRequest implements 
 &#x60;diagnosticState&#x60;：诊断任务状态
 
     *
-    * @param filters
+    * @param filters &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;diagnosticId&#x60;：诊断任务ID
+&#x60;diagnosticType&#x60;：诊断类型
+&#x60;clusterId&#x60;：集群ID
+&#x60;instanceId&#x60;：节点ID
+&#x60;diagnosticState&#x60;：诊断任务状态
+
+    * @return DescribeDiagnosticResultsRequest
     */
     public DescribeDiagnosticResultsRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -186,7 +193,8 @@ public class DescribeDiagnosticResultsRequest extends JdcloudRequest implements 
     /**
      * set 页码；默认为1。
      *
-     * @param pageNumber
+     * @param pageNumber 页码；默认为1。
+     * @return DescribeDiagnosticResultsRequest
      */
     public DescribeDiagnosticResultsRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -197,7 +205,8 @@ public class DescribeDiagnosticResultsRequest extends JdcloudRequest implements 
     /**
      * set 分页大小；默认为20；取值范围[10, 100]。
      *
-     * @param pageSize
+     * @param pageSize 分页大小；默认为20；取值范围[10, 100]。
+     * @return DescribeDiagnosticResultsRequest
      */
     public DescribeDiagnosticResultsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -208,7 +217,8 @@ public class DescribeDiagnosticResultsRequest extends JdcloudRequest implements 
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return DescribeDiagnosticResultsRequest
      */
     public DescribeDiagnosticResultsRequest regionId(String regionId) {
         this.regionId = regionId;

@@ -36,7 +36,10 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源类型：hpc
+     * 资源类型。取值范围：
+- hpc：HPC实例配额
+- keypair：密钥对配额
+
      * Required:true
      */
     @Required
@@ -52,7 +55,10 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 资源类型：hpc
+     * get 资源类型。取值范围：
+- hpc：HPC实例配额
+- keypair：密钥对配额
+
      *
      * @return
      */
@@ -61,7 +67,10 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 资源类型：hpc
+     * set 资源类型。取值范围：
+- hpc：HPC实例配额
+- keypair：密钥对配额
+
      *
      * @param resourceType
      */
@@ -91,9 +100,16 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 资源类型：hpc
+     * set 资源类型。取值范围：
+- hpc：HPC实例配额
+- keypair：密钥对配额
+
      *
-     * @param resourceType
+     * @param resourceType 资源类型。取值范围：
+- hpc：HPC实例配额
+- keypair：密钥对配额
+
+     * @return DescribeQuotaRequest
      */
     public DescribeQuotaRequest resourceType(String resourceType) {
         this.resourceType = resourceType;
@@ -104,7 +120,8 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return DescribeQuotaRequest
      */
     public DescribeQuotaRequest regionId(String regionId) {
         this.regionId = regionId;

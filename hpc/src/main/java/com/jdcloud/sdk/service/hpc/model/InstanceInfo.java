@@ -136,7 +136,8 @@ public class InstanceInfo  implements java.io.Serializable {
     /**
      * set hpc ID
      *
-     * @param resourceId
+     * @param resourceId hpc ID
+     * @return InstanceInfo
      */
     public InstanceInfo resourceId(String resourceId) {
         this.resourceId = resourceId;
@@ -147,7 +148,8 @@ public class InstanceInfo  implements java.io.Serializable {
     /**
      * set hpc 名称
      *
-     * @param resourceName
+     * @param resourceName hpc 名称
+     * @return InstanceInfo
      */
     public InstanceInfo resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -158,7 +160,8 @@ public class InstanceInfo  implements java.io.Serializable {
     /**
      * set 备注信息
      *
-     * @param remark
+     * @param remark 备注信息
+     * @return InstanceInfo
      */
     public InstanceInfo remark(String remark) {
         this.remark = remark;
@@ -169,7 +172,8 @@ public class InstanceInfo  implements java.io.Serializable {
     /**
     * set 绑定资源
     *
-    * @param bind
+    * @param bind 绑定资源
+    * @return InstanceInfo
     */
     public InstanceInfo bind(List<BindInfo> bind) {
         this.bind = bind;

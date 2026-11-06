@@ -182,7 +182,8 @@ public class ChargeDuration  implements java.io.Serializable {
     /**
      * set 地域
      *
-     * @param region
+     * @param region 地域
+     * @return ChargeDuration
      */
     public ChargeDuration region(String region) {
         this.region = region;
@@ -193,7 +194,8 @@ public class ChargeDuration  implements java.io.Serializable {
     /**
      * set 购买周期
      *
-     * @param chargeDuration
+     * @param chargeDuration 购买周期
+     * @return ChargeDuration
      */
     public ChargeDuration chargeDuration(String chargeDuration) {
         this.chargeDuration = chargeDuration;
@@ -204,7 +206,8 @@ public class ChargeDuration  implements java.io.Serializable {
     /**
      * set 开始时间
      *
-     * @param startTime
+     * @param startTime 开始时间
+     * @return ChargeDuration
      */
     public ChargeDuration startTime(String startTime) {
         this.startTime = startTime;
@@ -215,7 +218,8 @@ public class ChargeDuration  implements java.io.Serializable {
     /**
      * set 过期时间
      *
-     * @param expireTime
+     * @param expireTime 过期时间
+     * @return ChargeDuration
      */
     public ChargeDuration expireTime(String expireTime) {
         this.expireTime = expireTime;
@@ -226,7 +230,8 @@ public class ChargeDuration  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return ChargeDuration
      */
     public ChargeDuration createTime(String createTime) {
         this.createTime = createTime;
@@ -237,7 +242,8 @@ public class ChargeDuration  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return ChargeDuration
      */
     public ChargeDuration updateTime(String updateTime) {
         this.updateTime = updateTime;

@@ -64,7 +64,8 @@ public class ExportInstancesDataResult extends JdcloudResult implements java.io.
     /**
      * set taskId
      *
-     * @param taskId
+     * @param taskId 
+     * @return ExportInstancesDataResult
      */
     public ExportInstancesDataResult taskId(Integer taskId) {
         this.taskId = taskId;

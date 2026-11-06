@@ -100,7 +100,8 @@ public class HardwareStaticCheckSpec  implements java.io.Serializable {
     /**
      * set 可用区。
      *
-     * @param az
+     * @param az 可用区。
+     * @return HardwareStaticCheckSpec
      */
     public HardwareStaticCheckSpec az(String az) {
         this.az = az;
@@ -114,7 +115,11 @@ public class HardwareStaticCheckSpec  implements java.io.Serializable {
 当取值为 &#x60;cluster&#x60; 时，&#x60;instanceIds&#x60; 可为空。
 
      *
-     * @param scopeType
+     * @param scopeType 诊断范围类型。
+取值：&#x60;cluster&#x60;（整集群）、&#x60;instances&#x60;（指定实例）。
+当取值为 &#x60;cluster&#x60; 时，&#x60;instanceIds&#x60; 可为空。
+
+     * @return HardwareStaticCheckSpec
      */
     public HardwareStaticCheckSpec scopeType(String scopeType) {
         this.scopeType = scopeType;

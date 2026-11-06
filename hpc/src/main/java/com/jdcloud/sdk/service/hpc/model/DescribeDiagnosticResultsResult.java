@@ -100,7 +100,8 @@ public class DescribeDiagnosticResultsResult extends JdcloudResult implements ja
     /**
     * set diagnosticResults
     *
-    * @param diagnosticResults
+    * @param diagnosticResults 
+    * @return DescribeDiagnosticResultsResult
     */
     public DescribeDiagnosticResultsResult diagnosticResults(List<DiagnosticTaskSummary> diagnosticResults) {
         this.diagnosticResults = diagnosticResults;
@@ -111,7 +112,8 @@ public class DescribeDiagnosticResultsResult extends JdcloudResult implements ja
     /**
      * set 本次查询可匹配到的总记录数。
      *
-     * @param totalCount
+     * @param totalCount 本次查询可匹配到的总记录数。
+     * @return DescribeDiagnosticResultsResult
      */
     public DescribeDiagnosticResultsResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;

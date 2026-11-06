@@ -206,7 +206,8 @@ public class InstanceLayer  implements java.io.Serializable {
     /**
      * set 类型
      *
-     * @param layerType
+     * @param layerType 类型
+     * @return InstanceLayer
      */
     public InstanceLayer layerType(String layerType) {
         this.layerType = layerType;
@@ -217,7 +218,8 @@ public class InstanceLayer  implements java.io.Serializable {
     /**
      * set 实例Id
      *
-     * @param instanceId
+     * @param instanceId 实例Id
+     * @return InstanceLayer
      */
     public InstanceLayer instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -228,7 +230,8 @@ public class InstanceLayer  implements java.io.Serializable {
     /**
      * set 实例名称
      *
-     * @param instanceName
+     * @param instanceName 实例名称
+     * @return InstanceLayer
      */
     public InstanceLayer instanceName(String instanceName) {
         this.instanceName = instanceName;
@@ -239,7 +242,8 @@ public class InstanceLayer  implements java.io.Serializable {
     /**
      * set 主机名
      *
-     * @param hostName
+     * @param hostName 主机名
+     * @return InstanceLayer
      */
     public InstanceLayer hostName(String hostName) {
         this.hostName = hostName;
@@ -250,7 +254,8 @@ public class InstanceLayer  implements java.io.Serializable {
     /**
      * set 主网卡的主内网IP地址
      *
-     * @param privateIpAddress
+     * @param privateIpAddress 主网卡的主内网IP地址
+     * @return InstanceLayer
      */
     public InstanceLayer privateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
@@ -261,7 +266,8 @@ public class InstanceLayer  implements java.io.Serializable {
     /**
      * set 主网卡所属VPC的ID
      *
-     * @param vpcId
+     * @param vpcId 主网卡所属VPC的ID
+     * @return InstanceLayer
      */
     public InstanceLayer vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -272,7 +278,8 @@ public class InstanceLayer  implements java.io.Serializable {
     /**
      * set 实例规格
      *
-     * @param instanceType
+     * @param instanceType 实例规格
+     * @return InstanceLayer
      */
     public InstanceLayer instanceType(String instanceType) {
         this.instanceType = instanceType;

@@ -117,7 +117,8 @@ public class NetNodeSpec  implements java.io.Serializable {
     /**
      * set 实例id
      *
-     * @param instanceId
+     * @param instanceId 实例id
+     * @return NetNodeSpec
      */
     public NetNodeSpec instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -128,7 +129,8 @@ public class NetNodeSpec  implements java.io.Serializable {
     /**
      * set 网卡名字
      *
-     * @param nic
+     * @param nic 网卡名字
+     * @return NetNodeSpec
      */
     public NetNodeSpec nic(String nic) {
         this.nic = nic;
@@ -139,7 +141,8 @@ public class NetNodeSpec  implements java.io.Serializable {
     /**
      * set 类型 CLIENT,SERVER,NODE
      *
-     * @param type
+     * @param type 类型 CLIENT,SERVER,NODE
+     * @return NetNodeSpec
      */
     public NetNodeSpec type(String type) {
         this.type = type;

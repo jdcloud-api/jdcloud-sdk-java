@@ -86,7 +86,8 @@ public class Metadata  implements java.io.Serializable {
     /**
      * set key，字符长度不超过256，支持全字符。不能以连字符(-)结尾，否则此key不生效。
      *
-     * @param key
+     * @param key key，字符长度不超过256，支持全字符。不能以连字符(-)结尾，否则此key不生效。
+     * @return Metadata
      */
     public Metadata key(String key) {
         this.key = key;
@@ -97,7 +98,8 @@ public class Metadata  implements java.io.Serializable {
     /**
      * set value，字符长度不超过16KB，支持全字符。
      *
-     * @param value
+     * @param value value，字符长度不超过16KB，支持全字符。
+     * @return Metadata
      */
     public Metadata value(String value) {
         this.value = value;

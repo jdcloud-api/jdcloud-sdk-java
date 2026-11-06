@@ -224,7 +224,8 @@ public class DescribeCommunicationRangeRequest extends JdcloudRequest implements
     /**
      * set 实例ID
      *
-     * @param instanceId
+     * @param instanceId 实例ID
+     * @return DescribeCommunicationRangeRequest
      */
     public DescribeCommunicationRangeRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -235,7 +236,8 @@ public class DescribeCommunicationRangeRequest extends JdcloudRequest implements
     /**
      * set 距离(su\pod\cluster)
      *
-     * @param communicationRange
+     * @param communicationRange 距离(su\pod\cluster)
+     * @return DescribeCommunicationRangeRequest
      */
     public DescribeCommunicationRangeRequest communicationRange(String communicationRange) {
         this.communicationRange = communicationRange;
@@ -256,7 +258,18 @@ public class DescribeCommunicationRangeRequest extends JdcloudRequest implements
 &#x60;packageId&#x60;: 实例使用的安装包ID。支持精确批量
 
     *
-    * @param filters
+    * @param filters &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;instanceId&#x60;: 实例Id，精确匹配，支持多个
+&#x60;instanceName&#x60;: 实例名称。支持单个模糊查询
+&#x60;hostName&#x60;: 主机hostName。支持单个模糊查询
+&#x60;instanceType&#x60;: 实例规格。支持精确批量
+&#x60;az&#x60;: 可用区。支持精确多个
+&#x60;status&#x60;: 实例状态。支持精确批量
+&#x60;privateIpAddress&#x60;: 实例内网ip地址。支持单个模糊查询
+&#x60;subnetId&#x60;: 实例所在子网。支持精确批量
+&#x60;packageId&#x60;: 实例使用的安装包ID。支持精确批量
+
+    * @return DescribeCommunicationRangeRequest
     */
     public DescribeCommunicationRangeRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -267,7 +280,8 @@ public class DescribeCommunicationRangeRequest extends JdcloudRequest implements
     /**
      * set 页码；默认为1。
      *
-     * @param pageNumber
+     * @param pageNumber 页码；默认为1。
+     * @return DescribeCommunicationRangeRequest
      */
     public DescribeCommunicationRangeRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -278,7 +292,8 @@ public class DescribeCommunicationRangeRequest extends JdcloudRequest implements
     /**
      * set 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
-     * @param pageSize
+     * @param pageSize 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
+     * @return DescribeCommunicationRangeRequest
      */
     public DescribeCommunicationRangeRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -289,7 +304,8 @@ public class DescribeCommunicationRangeRequest extends JdcloudRequest implements
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return DescribeCommunicationRangeRequest
      */
     public DescribeCommunicationRangeRequest regionId(String regionId) {
         this.regionId = regionId;

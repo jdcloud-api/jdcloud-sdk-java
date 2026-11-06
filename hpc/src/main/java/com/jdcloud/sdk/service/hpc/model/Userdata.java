@@ -86,7 +86,8 @@ public class Userdata  implements java.io.Serializable {
     /**
      * set 脚本类型，当前仅支持输入 &#x60;launch-script&#x60;，即启动脚本。
      *
-     * @param key
+     * @param key 脚本类型，当前仅支持输入 &#x60;launch-script&#x60;，即启动脚本。
+     * @return Userdata
      */
     public Userdata key(String key) {
         this.key = key;
@@ -97,7 +98,8 @@ public class Userdata  implements java.io.Serializable {
     /**
      * set 脚本内容，须 &#x60;Base64&#x60; 编码，且编码前长度不能超过16KB。
      *
-     * @param value
+     * @param value 脚本内容，须 &#x60;Base64&#x60; 编码，且编码前长度不能超过16KB。
+     * @return Userdata
      */
     public Userdata value(String value) {
         this.value = value;

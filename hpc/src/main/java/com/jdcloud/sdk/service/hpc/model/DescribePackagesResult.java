@@ -91,7 +91,8 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
     /**
     * set packageList
     *
-    * @param packageList
+    * @param packageList 
+    * @return DescribePackagesResult
     */
     public DescribePackagesResult packageList(List<PackageInfo> packageList) {
         this.packageList = packageList;
@@ -102,7 +103,8 @@ public class DescribePackagesResult extends JdcloudResult implements java.io.Ser
     /**
      * set 本次查询可匹配到的总记录数。
      *
-     * @param totalCount
+     * @param totalCount 本次查询可匹配到的总记录数。
+     * @return DescribePackagesResult
      */
     public DescribePackagesResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;

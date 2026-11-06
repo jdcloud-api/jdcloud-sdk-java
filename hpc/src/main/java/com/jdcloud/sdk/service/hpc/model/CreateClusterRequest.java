@@ -169,7 +169,8 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set az
      *
-     * @param az
+     * @param az az
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest az(String az) {
         this.az = az;
@@ -180,7 +181,8 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 逻辑集群id
      *
-     * @param clusterId
+     * @param clusterId 逻辑集群id
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest clusterId(String clusterId) {
         this.clusterId = clusterId;
@@ -191,7 +193,8 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
     * set podId列表
     *
-    * @param podIds
+    * @param podIds podId列表
+    * @return CreateClusterRequest
     */
     public CreateClusterRequest podIds(List<String> podIds) {
         this.podIds = podIds;
@@ -202,7 +205,8 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
     * set suId列表
     *
-    * @param suIds
+    * @param suIds suId列表
+    * @return CreateClusterRequest
     */
     public CreateClusterRequest suIds(List<String> suIds) {
         this.suIds = suIds;
@@ -213,7 +217,8 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return CreateClusterRequest
      */
     public CreateClusterRequest regionId(String regionId) {
         this.regionId = regionId;

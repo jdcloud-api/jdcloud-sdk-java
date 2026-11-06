@@ -257,7 +257,8 @@ public class CreateDiagnosticTaskRequest extends JdcloudRequest implements java.
     /**
      * set 集群名称。
      *
-     * @param clusterName
+     * @param clusterName 集群名称。
+     * @return CreateDiagnosticTaskRequest
      */
     public CreateDiagnosticTaskRequest clusterName(String clusterName) {
         this.clusterName = clusterName;
@@ -270,7 +271,10 @@ public class CreateDiagnosticTaskRequest extends JdcloudRequest implements java.
 当 spec 中 &#x60;scopeType&#x60; 为 &#x60;instances&#x60; 时必填；当 &#x60;scopeType&#x60; 为 &#x60;cluster&#x60; 时可为空。
 
     *
-    * @param instanceIds
+    * @param instanceIds 诊断目标实例ID列表。
+当 spec 中 &#x60;scopeType&#x60; 为 &#x60;instances&#x60; 时必填；当 &#x60;scopeType&#x60; 为 &#x60;cluster&#x60; 时可为空。
+
+    * @return CreateDiagnosticTaskRequest
     */
     public CreateDiagnosticTaskRequest instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
@@ -283,7 +287,10 @@ public class CreateDiagnosticTaskRequest extends JdcloudRequest implements java.
 取值：&#x60;HardwareStaticCheck&#x60;、&#x60;NetworkNcclTest&#x60;、&#x60;OneClickDiagnosis&#x60;。
 
      *
-     * @param diagnosticType
+     * @param diagnosticType 诊断类型。
+取值：&#x60;HardwareStaticCheck&#x60;、&#x60;NetworkNcclTest&#x60;、&#x60;OneClickDiagnosis&#x60;。
+
+     * @return CreateDiagnosticTaskRequest
      */
     public CreateDiagnosticTaskRequest diagnosticType(String diagnosticType) {
         this.diagnosticType = diagnosticType;
@@ -296,7 +303,10 @@ public class CreateDiagnosticTaskRequest extends JdcloudRequest implements java.
 当 &#x60;diagnosticType&#x60; 为 &#x60;HardwareStaticCheck&#x60; 时必填。
 
      *
-     * @param hardwareStaticCheckSpec
+     * @param hardwareStaticCheckSpec 硬件静态检查配置。
+当 &#x60;diagnosticType&#x60; 为 &#x60;HardwareStaticCheck&#x60; 时必填。
+
+     * @return CreateDiagnosticTaskRequest
      */
     public CreateDiagnosticTaskRequest hardwareStaticCheckSpec(HardwareStaticCheckSpec hardwareStaticCheckSpec) {
         this.hardwareStaticCheckSpec = hardwareStaticCheckSpec;
@@ -309,7 +319,10 @@ public class CreateDiagnosticTaskRequest extends JdcloudRequest implements java.
 当 &#x60;diagnosticType&#x60; 为 &#x60;NetworkNcclTest&#x60; 时必填。
 
      *
-     * @param networkNcclTestSpec
+     * @param networkNcclTestSpec NCCL 网络测试配置。
+当 &#x60;diagnosticType&#x60; 为 &#x60;NetworkNcclTest&#x60; 时必填。
+
+     * @return CreateDiagnosticTaskRequest
      */
     public CreateDiagnosticTaskRequest networkNcclTestSpec(NetworkNcclTestSpec networkNcclTestSpec) {
         this.networkNcclTestSpec = networkNcclTestSpec;
@@ -322,7 +335,10 @@ public class CreateDiagnosticTaskRequest extends JdcloudRequest implements java.
 当 &#x60;diagnosticType&#x60; 为 &#x60;OneClickDiagnosis&#x60; 时必填。
 
      *
-     * @param oneClickDiagnosisSpec
+     * @param oneClickDiagnosisSpec 一键诊断配置。
+当 &#x60;diagnosticType&#x60; 为 &#x60;OneClickDiagnosis&#x60; 时必填。
+
+     * @return CreateDiagnosticTaskRequest
      */
     public CreateDiagnosticTaskRequest oneClickDiagnosisSpec(OneClickDiagnosisSpec oneClickDiagnosisSpec) {
         this.oneClickDiagnosisSpec = oneClickDiagnosisSpec;
@@ -333,7 +349,8 @@ public class CreateDiagnosticTaskRequest extends JdcloudRequest implements java.
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return CreateDiagnosticTaskRequest
      */
     public CreateDiagnosticTaskRequest regionId(String regionId) {
         this.regionId = regionId;

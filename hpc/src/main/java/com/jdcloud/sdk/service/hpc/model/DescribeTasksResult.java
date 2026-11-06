@@ -89,7 +89,8 @@ public class DescribeTasksResult extends JdcloudResult implements java.io.Serial
     /**
     * set tasks
     *
-    * @param tasks
+    * @param tasks 
+    * @return DescribeTasksResult
     */
     public DescribeTasksResult tasks(List<Object> tasks) {
         this.tasks = tasks;
@@ -100,7 +101,8 @@ public class DescribeTasksResult extends JdcloudResult implements java.io.Serial
     /**
      * set TotalCount 总数
      *
-     * @param totalCount
+     * @param totalCount TotalCount 总数
+     * @return DescribeTasksResult
      */
     public DescribeTasksResult totalCount(Long totalCount) {
         this.totalCount = totalCount;

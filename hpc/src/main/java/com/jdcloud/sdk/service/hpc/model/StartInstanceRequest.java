@@ -93,7 +93,8 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return StartInstanceRequest
      */
     public StartInstanceRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -104,7 +105,8 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
     /**
      * set 实例ID。
      *
-     * @param instanceId
+     * @param instanceId 实例ID。
+     * @return StartInstanceRequest
      */
     public StartInstanceRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

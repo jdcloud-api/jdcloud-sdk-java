@@ -137,7 +137,8 @@ public class OneClickDiagnosisResult extends JdcloudResult implements java.io.Se
     /**
     * set 对比项列表。
     *
-    * @param compareItems
+    * @param compareItems 对比项列表。
+    * @return OneClickDiagnosisResult
     */
     public OneClickDiagnosisResult compareItems(List<DiagnosticCompareItem> compareItems) {
         this.compareItems = compareItems;
@@ -148,7 +149,8 @@ public class OneClickDiagnosisResult extends JdcloudResult implements java.io.Se
     /**
     * set 各实例诊断结果。
     *
-    * @param instanceResults
+    * @param instanceResults 各实例诊断结果。
+    * @return OneClickDiagnosisResult
     */
     public OneClickDiagnosisResult instanceResults(List<OneClickDiagnosisInstanceResult> instanceResults) {
         this.instanceResults = instanceResults;
@@ -159,7 +161,8 @@ public class OneClickDiagnosisResult extends JdcloudResult implements java.io.Se
     /**
      * set 整体失败原因。
      *
-     * @param failureReason
+     * @param failureReason 整体失败原因。
+     * @return OneClickDiagnosisResult
      */
     public OneClickDiagnosisResult failureReason(String failureReason) {
         this.failureReason = failureReason;
@@ -170,7 +173,8 @@ public class OneClickDiagnosisResult extends JdcloudResult implements java.io.Se
     /**
      * set 汇总信息，结构不固定。
      *
-     * @param summary
+     * @param summary 汇总信息，结构不固定。
+     * @return OneClickDiagnosisResult
      */
     public OneClickDiagnosisResult summary(Object summary) {
         this.summary = summary;

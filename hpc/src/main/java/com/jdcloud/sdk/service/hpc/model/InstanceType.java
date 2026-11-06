@@ -328,7 +328,8 @@ public class InstanceType  implements java.io.Serializable {
     /**
      * set 实例规格族。
      *
-     * @param family
+     * @param family 实例规格族。
+     * @return InstanceType
      */
     public InstanceType family(String family) {
         this.family = family;
@@ -339,7 +340,8 @@ public class InstanceType  implements java.io.Serializable {
     /**
      * set 实例规格。
      *
-     * @param instanceType
+     * @param instanceType 实例规格。
+     * @return InstanceType
      */
     public InstanceType instanceType(String instanceType) {
         this.instanceType = instanceType;
@@ -350,7 +352,8 @@ public class InstanceType  implements java.io.Serializable {
     /**
      * set cpu个数。
      *
-     * @param cpu
+     * @param cpu cpu个数。
+     * @return InstanceType
      */
     public InstanceType cpu(Integer cpu) {
         this.cpu = cpu;
@@ -361,7 +364,8 @@ public class InstanceType  implements java.io.Serializable {
     /**
      * set 系统架构。取值范围：&#x60;x86_64、arm64&#x60;。
      *
-     * @param architecture
+     * @param architecture 系统架构。取值范围：&#x60;x86_64、arm64&#x60;。
+     * @return InstanceType
      */
     public InstanceType architecture(String architecture) {
         this.architecture = architecture;
@@ -372,7 +376,8 @@ public class InstanceType  implements java.io.Serializable {
     /**
      * set 内存大小，单位：MB。
      *
-     * @param memoryMB
+     * @param memoryMB 内存大小，单位：MB。
+     * @return InstanceType
      */
     public InstanceType memoryMB(Integer memoryMB) {
         this.memoryMB = memoryMB;
@@ -383,7 +388,8 @@ public class InstanceType  implements java.io.Serializable {
     /**
      * set 支持绑定的弹性网卡数量，包括主网卡。
      *
-     * @param nicLimit
+     * @param nicLimit 支持绑定的弹性网卡数量，包括主网卡。
+     * @return InstanceType
      */
     public InstanceType nicLimit(Integer nicLimit) {
         this.nicLimit = nicLimit;
@@ -394,7 +400,8 @@ public class InstanceType  implements java.io.Serializable {
     /**
      * set 实例规格描述。
      *
-     * @param description
+     * @param description 实例规格描述。
+     * @return InstanceType
      */
     public InstanceType description(String description) {
         this.description = description;
@@ -405,7 +412,8 @@ public class InstanceType  implements java.io.Serializable {
     /**
      * set 是否禁用弹性公网IP。
      *
-     * @param forbiddenElasticIp
+     * @param forbiddenElasticIp 是否禁用弹性公网IP。
+     * @return InstanceType
      */
     public InstanceType forbiddenElasticIp(Boolean forbiddenElasticIp) {
         this.forbiddenElasticIp = forbiddenElasticIp;
@@ -416,7 +424,8 @@ public class InstanceType  implements java.io.Serializable {
     /**
     * set 实例规格售卖状态，已售罄的实例规格无法使用。
     *
-    * @param state
+    * @param state 实例规格售卖状态，已售罄的实例规格无法使用。
+    * @return InstanceType
     */
     public InstanceType state(List<InstanceTypeState> state) {
         this.state = state;
@@ -427,7 +436,8 @@ public class InstanceType  implements java.io.Serializable {
     /**
      * set RDMA配置，针对HPC类型的实例规格有效。
      *
-     * @param rdma
+     * @param rdma RDMA配置，针对HPC类型的实例规格有效。
+     * @return InstanceType
      */
     public InstanceType rdma(Rdma rdma) {
         this.rdma = rdma;
@@ -438,7 +448,8 @@ public class InstanceType  implements java.io.Serializable {
     /**
      * set 实例规格代数。
      *
-     * @param generation
+     * @param generation 实例规格代数。
+     * @return InstanceType
      */
     public InstanceType generation(Integer generation) {
         this.generation = generation;
@@ -449,7 +460,8 @@ public class InstanceType  implements java.io.Serializable {
     /**
     * set 本地数据盘配置（缓存盘），针对GPU类型、或本地存储型的实例规格有效。
     *
-    * @param localDisks
+    * @param localDisks 本地数据盘配置（缓存盘），针对GPU类型、或本地存储型的实例规格有效。
+    * @return InstanceType
     */
     public InstanceType localDisks(List<LocalDisk> localDisks) {
         this.localDisks = localDisks;

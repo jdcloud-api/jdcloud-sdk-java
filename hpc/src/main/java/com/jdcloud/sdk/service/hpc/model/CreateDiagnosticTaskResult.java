@@ -71,7 +71,8 @@ public class CreateDiagnosticTaskResult extends JdcloudResult implements java.io
     /**
      * set 诊断任务ID。
      *
-     * @param diagnosticId
+     * @param diagnosticId 诊断任务ID。
+     * @return CreateDiagnosticTaskResult
      */
     public CreateDiagnosticTaskResult diagnosticId(String diagnosticId) {
         this.diagnosticId = diagnosticId;

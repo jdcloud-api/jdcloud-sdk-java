@@ -86,7 +86,8 @@ public class LocalDisk  implements java.io.Serializable {
     /**
      * set 磁盘类型，取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      *
-     * @param diskType
+     * @param diskType 磁盘类型，取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
+     * @return LocalDisk
      */
     public LocalDisk diskType(String diskType) {
         this.diskType = diskType;
@@ -97,7 +98,8 @@ public class LocalDisk  implements java.io.Serializable {
     /**
      * set 磁盘大小。
      *
-     * @param diskSizeGB
+     * @param diskSizeGB 磁盘大小。
+     * @return LocalDisk
      */
     public LocalDisk diskSizeGB(Integer diskSizeGB) {
         this.diskSizeGB = diskSizeGB;

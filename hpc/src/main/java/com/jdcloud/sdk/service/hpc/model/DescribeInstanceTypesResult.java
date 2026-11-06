@@ -98,7 +98,8 @@ public class DescribeInstanceTypesResult extends JdcloudResult implements java.i
     /**
     * set instanceTypes
     *
-    * @param instanceTypes
+    * @param instanceTypes 
+    * @return DescribeInstanceTypesResult
     */
     public DescribeInstanceTypesResult instanceTypes(List<InstanceType> instanceTypes) {
         this.instanceTypes = instanceTypes;
@@ -109,7 +110,8 @@ public class DescribeInstanceTypesResult extends JdcloudResult implements java.i
     /**
      * set 本次查询到的所有实例规格数量。
      *
-     * @param totalCount
+     * @param totalCount 本次查询到的所有实例规格数量。
+     * @return DescribeInstanceTypesResult
      */
     public DescribeInstanceTypesResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;

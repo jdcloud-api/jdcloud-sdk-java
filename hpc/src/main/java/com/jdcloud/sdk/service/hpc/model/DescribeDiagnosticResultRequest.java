@@ -98,7 +98,8 @@ public class DescribeDiagnosticResultRequest extends JdcloudRequest implements j
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return DescribeDiagnosticResultRequest
      */
     public DescribeDiagnosticResultRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -109,7 +110,8 @@ public class DescribeDiagnosticResultRequest extends JdcloudRequest implements j
     /**
      * set 诊断任务ID。
      *
-     * @param diagnosticId
+     * @param diagnosticId 诊断任务ID。
+     * @return DescribeDiagnosticResultRequest
      */
     public DescribeDiagnosticResultRequest diagnosticId(String diagnosticId) {
         this.diagnosticId = diagnosticId;

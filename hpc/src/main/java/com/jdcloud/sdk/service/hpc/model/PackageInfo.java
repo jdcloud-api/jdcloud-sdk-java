@@ -209,7 +209,8 @@ public class PackageInfo  implements java.io.Serializable {
     /**
      * set 安装包ID
      *
-     * @param packageId
+     * @param packageId 安装包ID
+     * @return PackageInfo
      */
     public PackageInfo packageId(String packageId) {
         this.packageId = packageId;
@@ -220,7 +221,8 @@ public class PackageInfo  implements java.io.Serializable {
     /**
      * set 安装包名称
      *
-     * @param packageName
+     * @param packageName 安装包名称
+     * @return PackageInfo
      */
     public PackageInfo packageName(String packageName) {
         this.packageName = packageName;
@@ -231,7 +233,8 @@ public class PackageInfo  implements java.io.Serializable {
     /**
      * set 安装包的操作系统类型
      *
-     * @param osType
+     * @param osType 安装包的操作系统类型
+     * @return PackageInfo
      */
     public PackageInfo osType(String osType) {
         this.osType = osType;
@@ -242,7 +245,8 @@ public class PackageInfo  implements java.io.Serializable {
     /**
      * set 安装包的操作系统版本
      *
-     * @param osVersion
+     * @param osVersion 安装包的操作系统版本
+     * @return PackageInfo
      */
     public PackageInfo osVersion(String osVersion) {
         this.osVersion = osVersion;
@@ -254,7 +258,9 @@ public class PackageInfo  implements java.io.Serializable {
      * set 操作系统架构, 可选值：x86_64、arm64
 
      *
-     * @param architecture
+     * @param architecture 操作系统架构, 可选值：x86_64、arm64
+
+     * @return PackageInfo
      */
     public PackageInfo architecture(String architecture) {
         this.architecture = architecture;
@@ -265,7 +271,8 @@ public class PackageInfo  implements java.io.Serializable {
     /**
      * set 描述信息
      *
-     * @param description
+     * @param description 描述信息
+     * @return PackageInfo
      */
     public PackageInfo description(String description) {
         this.description = description;
@@ -276,7 +283,8 @@ public class PackageInfo  implements java.io.Serializable {
     /**
      * set 安装包创建时间
      *
-     * @param createTime
+     * @param createTime 安装包创建时间
+     * @return PackageInfo
      */
     public PackageInfo createTime(String createTime) {
         this.createTime = createTime;

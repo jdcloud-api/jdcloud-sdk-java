@@ -123,7 +123,9 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
      * set 新密码。
 
      *
-     * @param password
+     * @param password 新密码。
+
+     * @return ModifyInstancePasswordRequest
      */
     public ModifyInstancePasswordRequest password(String password) {
         this.password = password;
@@ -134,7 +136,8 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return ModifyInstancePasswordRequest
      */
     public ModifyInstancePasswordRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -145,7 +148,8 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     /**
      * set 实例ID。
      *
-     * @param instanceId
+     * @param instanceId 实例ID。
+     * @return ModifyInstancePasswordRequest
      */
     public ModifyInstancePasswordRequest instanceId(String instanceId) {
         this.instanceId = instanceId;

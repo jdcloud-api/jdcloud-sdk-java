@@ -63,7 +63,8 @@ public class NetworkNcclTestResult extends JdcloudResult implements java.io.Seri
     /**
      * set NCCL 测试检查结果。
      *
-     * @param ncclTestCheckResult
+     * @param ncclTestCheckResult NCCL 测试检查结果。
+     * @return NetworkNcclTestResult
      */
     public NetworkNcclTestResult ncclTestCheckResult(String ncclTestCheckResult) {
         this.ncclTestCheckResult = ncclTestCheckResult;

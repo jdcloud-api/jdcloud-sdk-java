@@ -65,7 +65,8 @@ public class DescribePackageResult extends JdcloudResult implements java.io.Seri
     /**
      * set 安装包详情
      *
-     * @param packageInfo
+     * @param packageInfo 安装包详情
+     * @return DescribePackageResult
      */
     public DescribePackageResult packageInfo(PackageInfo packageInfo) {
         this.packageInfo = packageInfo;

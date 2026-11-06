@@ -134,7 +134,18 @@ public class DescribeNetworkTopologyRequest extends JdcloudRequest implements ja
 &#x60;packageId&#x60;: 实例使用的安装包ID。支持精确批量
 
     *
-    * @param filters
+    * @param filters &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;instanceId&#x60;: 实例Id，精确匹配，支持多个
+&#x60;instanceName&#x60;: 实例名称。支持单个模糊查询
+&#x60;hostName&#x60;: 主机hostName。支持单个模糊查询
+&#x60;instanceType&#x60;: 实例规格。支持精确批量
+&#x60;az&#x60;: 可用区。支持精确多个
+&#x60;status&#x60;: 实例状态。支持精确批量
+&#x60;privateIpAddress&#x60;: 实例内网ip地址。支持单个模糊查询
+&#x60;subnetId&#x60;: 实例所在子网。支持精确批量
+&#x60;packageId&#x60;: 实例使用的安装包ID。支持精确批量
+
+    * @return DescribeNetworkTopologyRequest
     */
     public DescribeNetworkTopologyRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -145,7 +156,8 @@ public class DescribeNetworkTopologyRequest extends JdcloudRequest implements ja
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return DescribeNetworkTopologyRequest
      */
     public DescribeNetworkTopologyRequest regionId(String regionId) {
         this.regionId = regionId;

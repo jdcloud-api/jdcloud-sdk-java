@@ -230,7 +230,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set az
      *
-     * @param az
+     * @param az az
+     * @return Cluster
      */
     public Cluster az(String az) {
         this.az = az;
@@ -241,7 +242,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 可用区类型
      *
-     * @param azType
+     * @param azType 可用区类型
+     * @return Cluster
      */
     public Cluster azType(String azType) {
         this.azType = azType;
@@ -252,7 +254,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 实例网络集群Id
      *
-     * @param hpcClusterId
+     * @param hpcClusterId 实例网络集群Id
+     * @return Cluster
      */
     public Cluster hpcClusterId(String hpcClusterId) {
         this.hpcClusterId = hpcClusterId;
@@ -263,7 +266,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 实例网络集群名称
      *
-     * @param hpcClusterName
+     * @param hpcClusterName 实例网络集群名称
+     * @return Cluster
      */
     public Cluster hpcClusterName(String hpcClusterName) {
         this.hpcClusterName = hpcClusterName;
@@ -274,7 +278,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 实例所属网络拓扑的PodIds
      *
-     * @param podIds
+     * @param podIds 实例所属网络拓扑的PodIds
+     * @return Cluster
      */
     public Cluster podIds(String podIds) {
         this.podIds = podIds;
@@ -285,7 +290,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 实例所属网络拓扑的SuIds
      *
-     * @param suIds
+     * @param suIds 实例所属网络拓扑的SuIds
+     * @return Cluster
      */
     public Cluster suIds(String suIds) {
         this.suIds = suIds;
@@ -296,7 +302,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return Cluster
      */
     public Cluster createTime(String createTime) {
         this.createTime = createTime;
@@ -307,7 +314,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 更新时间
      *
-     * @param updateTime
+     * @param updateTime 更新时间
+     * @return Cluster
      */
     public Cluster updateTime(String updateTime) {
         this.updateTime = updateTime;

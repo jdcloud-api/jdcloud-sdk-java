@@ -63,7 +63,8 @@ public class CreateHpcNetDiagnoseResult extends JdcloudResult implements java.io
     /**
      * set 诊断id
      *
-     * @param hpcNetworkDiagnoseId
+     * @param hpcNetworkDiagnoseId 诊断id
+     * @return CreateHpcNetDiagnoseResult
      */
     public CreateHpcNetDiagnoseResult hpcNetworkDiagnoseId(String hpcNetworkDiagnoseId) {
         this.hpcNetworkDiagnoseId = hpcNetworkDiagnoseId;

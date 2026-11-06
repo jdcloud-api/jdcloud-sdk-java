@@ -92,7 +92,8 @@ public class DeleteHpcNetDiagnoseRequest extends JdcloudRequest implements java.
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DeleteHpcNetDiagnoseRequest
      */
     public DeleteHpcNetDiagnoseRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -103,7 +104,8 @@ public class DeleteHpcNetDiagnoseRequest extends JdcloudRequest implements java.
     /**
      * set hpc net diagnosis ID
      *
-     * @param hpcNetworkDiagnoseId
+     * @param hpcNetworkDiagnoseId hpc net diagnosis ID
+     * @return DeleteHpcNetDiagnoseRequest
      */
     public DeleteHpcNetDiagnoseRequest hpcNetworkDiagnoseId(String hpcNetworkDiagnoseId) {
         this.hpcNetworkDiagnoseId = hpcNetworkDiagnoseId;

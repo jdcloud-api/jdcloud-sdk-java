@@ -126,7 +126,8 @@ public class OneClickDiagnosisSpec  implements java.io.Serializable {
     /**
      * set 可用区。
      *
-     * @param az
+     * @param az 可用区。
+     * @return OneClickDiagnosisSpec
      */
     public OneClickDiagnosisSpec az(String az) {
         this.az = az;
@@ -137,7 +138,8 @@ public class OneClickDiagnosisSpec  implements java.io.Serializable {
     /**
      * set VPC ID。
      *
-     * @param vpcId
+     * @param vpcId VPC ID。
+     * @return OneClickDiagnosisSpec
      */
     public OneClickDiagnosisSpec vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -151,7 +153,11 @@ public class OneClickDiagnosisSpec  implements java.io.Serializable {
 当取值为 &#x60;cluster&#x60; 时，&#x60;instanceIds&#x60; 可为空。
 
      *
-     * @param scopeType
+     * @param scopeType 诊断范围类型。
+取值：&#x60;cluster&#x60;（整集群）、&#x60;instances&#x60;（指定实例）。
+当取值为 &#x60;cluster&#x60; 时，&#x60;instanceIds&#x60; 可为空。
+
+     * @return OneClickDiagnosisSpec
      */
     public OneClickDiagnosisSpec scopeType(String scopeType) {
         this.scopeType = scopeType;

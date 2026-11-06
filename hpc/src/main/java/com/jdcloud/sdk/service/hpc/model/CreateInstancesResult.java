@@ -66,7 +66,8 @@ public class CreateInstancesResult extends JdcloudResult implements java.io.Seri
     /**
     * set instanceIds
     *
-    * @param instanceIds
+    * @param instanceIds 
+    * @return CreateInstancesResult
     */
     public CreateInstancesResult instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;

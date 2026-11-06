@@ -65,7 +65,8 @@ public class DescribeNetworkTopologyResult extends JdcloudResult implements java
     /**
      * set networkTopology
      *
-     * @param networkTopology
+     * @param networkTopology 
+     * @return DescribeNetworkTopologyResult
      */
     public DescribeNetworkTopologyResult networkTopology(NetworkTopology networkTopology) {
         this.networkTopology = networkTopology;

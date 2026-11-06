@@ -267,7 +267,8 @@ public class OneClickDiagnosisInstanceResult extends JdcloudResult implements ja
     /**
      * set 节点名称。
      *
-     * @param nodeName
+     * @param nodeName 节点名称。
+     * @return OneClickDiagnosisInstanceResult
      */
     public OneClickDiagnosisInstanceResult nodeName(String nodeName) {
         this.nodeName = nodeName;
@@ -278,7 +279,8 @@ public class OneClickDiagnosisInstanceResult extends JdcloudResult implements ja
     /**
      * set 实例ID。
      *
-     * @param instanceId
+     * @param instanceId 实例ID。
+     * @return OneClickDiagnosisInstanceResult
      */
     public OneClickDiagnosisInstanceResult instanceId(String instanceId) {
         this.instanceId = instanceId;
@@ -289,7 +291,8 @@ public class OneClickDiagnosisInstanceResult extends JdcloudResult implements ja
     /**
      * set 内网IP地址。
      *
-     * @param privateIpAddress
+     * @param privateIpAddress 内网IP地址。
+     * @return OneClickDiagnosisInstanceResult
      */
     public OneClickDiagnosisInstanceResult privateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
@@ -300,7 +303,8 @@ public class OneClickDiagnosisInstanceResult extends JdcloudResult implements ja
     /**
      * set 公网IP地址。
      *
-     * @param publicIpAddress
+     * @param publicIpAddress 公网IP地址。
+     * @return OneClickDiagnosisInstanceResult
      */
     public OneClickDiagnosisInstanceResult publicIpAddress(String publicIpAddress) {
         this.publicIpAddress = publicIpAddress;
@@ -311,7 +315,8 @@ public class OneClickDiagnosisInstanceResult extends JdcloudResult implements ja
     /**
      * set 实例规格。
      *
-     * @param instanceType
+     * @param instanceType 实例规格。
+     * @return OneClickDiagnosisInstanceResult
      */
     public OneClickDiagnosisInstanceResult instanceType(String instanceType) {
         this.instanceType = instanceType;
@@ -322,7 +327,8 @@ public class OneClickDiagnosisInstanceResult extends JdcloudResult implements ja
     /**
      * set 操作系统。
      *
-     * @param operatingSystem
+     * @param operatingSystem 操作系统。
+     * @return OneClickDiagnosisInstanceResult
      */
     public OneClickDiagnosisInstanceResult operatingSystem(String operatingSystem) {
         this.operatingSystem = operatingSystem;
@@ -335,7 +341,10 @@ public class OneClickDiagnosisInstanceResult extends JdcloudResult implements ja
 取值：&#x60;通过&#x60;、&#x60;不通过&#x60;。
 
      *
-     * @param checkResult
+     * @param checkResult 检查结论。
+取值：&#x60;通过&#x60;、&#x60;不通过&#x60;。
+
+     * @return OneClickDiagnosisInstanceResult
      */
     public OneClickDiagnosisInstanceResult checkResult(String checkResult) {
         this.checkResult = checkResult;
@@ -348,7 +357,10 @@ public class OneClickDiagnosisInstanceResult extends JdcloudResult implements ja
 取值：&#x60;通过&#x60;、&#x60;不通过&#x60;。
 
      *
-     * @param result
+     * @param result 诊断结果。
+取值：&#x60;通过&#x60;、&#x60;不通过&#x60;。
+
+     * @return OneClickDiagnosisInstanceResult
      */
     public OneClickDiagnosisInstanceResult result(String result) {
         this.result = result;
@@ -359,7 +371,8 @@ public class OneClickDiagnosisInstanceResult extends JdcloudResult implements ja
     /**
      * set 失败原因。
      *
-     * @param failureReason
+     * @param failureReason 失败原因。
+     * @return OneClickDiagnosisInstanceResult
      */
     public OneClickDiagnosisInstanceResult failureReason(String failureReason) {
         this.failureReason = failureReason;

@@ -400,7 +400,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
      * set 诊断报告ID
      *
-     * @param id
+     * @param id 诊断报告ID
+     * @return HpcNetDiagnose
      */
     public HpcNetDiagnose id(String id) {
         this.id = id;
@@ -411,7 +412,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
      * set 可用区
      *
-     * @param az
+     * @param az 可用区
+     * @return HpcNetDiagnose
      */
     public HpcNetDiagnose az(String az) {
         this.az = az;
@@ -422,7 +424,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
      * set 地域
      *
-     * @param region
+     * @param region 地域
+     * @return HpcNetDiagnose
      */
     public HpcNetDiagnose region(String region) {
         this.region = region;
@@ -433,7 +436,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
      * set vpc id
      *
-     * @param vpcId
+     * @param vpcId vpc id
+     * @return HpcNetDiagnose
      */
     public HpcNetDiagnose vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -444,7 +448,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
      * set 集群名字
      *
-     * @param hpcClusterName
+     * @param hpcClusterName 集群名字
+     * @return HpcNetDiagnose
      */
     public HpcNetDiagnose hpcClusterName(String hpcClusterName) {
         this.hpcClusterName = hpcClusterName;
@@ -455,7 +460,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
      * set LATENCY:时延测试；BANDWIDTH:带宽测试；
      *
-     * @param type
+     * @param type LATENCY:时延测试；BANDWIDTH:带宽测试；
+     * @return HpcNetDiagnose
      */
     public HpcNetDiagnose type(String type) {
         this.type = type;
@@ -466,7 +472,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
      * set MTON,FULLMESH (带宽测试独有)
      *
-     * @param traffic
+     * @param traffic MTON,FULLMESH (带宽测试独有)
+     * @return HpcNetDiagnose
      */
     public HpcNetDiagnose traffic(String traffic) {
         this.traffic = traffic;
@@ -477,7 +484,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
      * set 端口 5000-65535
      *
-     * @param port
+     * @param port 端口 5000-65535
+     * @return HpcNetDiagnose
      */
     public HpcNetDiagnose port(Integer port) {
         this.port = port;
@@ -488,7 +496,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return HpcNetDiagnose
      */
     public HpcNetDiagnose createTime(String createTime) {
         this.createTime = createTime;
@@ -499,7 +508,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
      * set 结束时间
      *
-     * @param endTime
+     * @param endTime 结束时间
+     * @return HpcNetDiagnose
      */
     public HpcNetDiagnose endTime(String endTime) {
         this.endTime = endTime;
@@ -510,7 +520,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
      * set 诊断报告完成状态(取值：INIT：初始化；FINISH：已完成；PROCESS：处理中；ERROR:错误)
      *
-     * @param status
+     * @param status 诊断报告完成状态(取值：INIT：初始化；FINISH：已完成；PROCESS：处理中；ERROR:错误)
+     * @return HpcNetDiagnose
      */
     public HpcNetDiagnose status(String status) {
         this.status = status;
@@ -521,7 +532,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
      * set 测试时长 （带宽测试独有）
      *
-     * @param duration
+     * @param duration 测试时长 （带宽测试独有）
+     * @return HpcNetDiagnose
      */
     public HpcNetDiagnose duration(Integer duration) {
         this.duration = duration;
@@ -532,7 +544,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
      * set qp [1-16384]（带宽测试独有）
      *
-     * @param qp
+     * @param qp qp [1-16384]（带宽测试独有）
+     * @return HpcNetDiagnose
      */
     public HpcNetDiagnose qp(Integer qp) {
         this.qp = qp;
@@ -543,7 +556,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
      * set 是否启用 GDR（带宽测试独有）
      *
-     * @param gdr
+     * @param gdr 是否启用 GDR（带宽测试独有）
+     * @return HpcNetDiagnose
      */
     public HpcNetDiagnose gdr(Boolean gdr) {
         this.gdr = gdr;
@@ -554,7 +568,8 @@ public class HpcNetDiagnose  implements java.io.Serializable {
     /**
     * set 测试结果
     *
-    * @param results
+    * @param results 测试结果
+    * @return HpcNetDiagnose
     */
     public HpcNetDiagnose results(List<Result> results) {
         this.results = results;

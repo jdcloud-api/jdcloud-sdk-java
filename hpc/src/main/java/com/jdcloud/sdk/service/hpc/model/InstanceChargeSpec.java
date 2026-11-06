@@ -55,6 +55,11 @@ public class InstanceChargeSpec  implements java.io.Serializable {
      */
     private Boolean autoRenew;
 
+    /**
+     * chargeMode&#x3D;prepaid_by_duration 时有效。true 表示包销，false 表示普通包年包月（非包销），默认值为false。
+     */
+    private Boolean isCommitment;
+
 
 
     /**
@@ -133,11 +138,31 @@ public class InstanceChargeSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get chargeMode&#x3D;prepaid_by_duration 时有效。true 表示包销，false 表示普通包年包月（非包销），默认值为false。
+     *
+     * @return
+     */
+    public Boolean getIsCommitment() {
+        return isCommitment;
+    }
+
+    /**
+     * set chargeMode&#x3D;prepaid_by_duration 时有效。true 表示包销，false 表示普通包年包月（非包销），默认值为false。
+     *
+     * @param isCommitment
+     */
+    public void setIsCommitment(Boolean isCommitment) {
+        this.isCommitment = isCommitment;
+    }
+
+
 
     /**
      * set 计费模式，取值为：prepaid_by_duration 表示预付费
      *
-     * @param chargeMode
+     * @param chargeMode 计费模式，取值为：prepaid_by_duration 表示预付费
+     * @return InstanceChargeSpec
      */
     public InstanceChargeSpec chargeMode(String chargeMode) {
         this.chargeMode = chargeMode;
@@ -148,7 +173,8 @@ public class InstanceChargeSpec  implements java.io.Serializable {
     /**
      * set 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：week,month,year。
      *
-     * @param chargeUnit
+     * @param chargeUnit 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：week,month,year。
+     * @return InstanceChargeSpec
      */
     public InstanceChargeSpec chargeUnit(String chargeUnit) {
         this.chargeUnit = chargeUnit;
@@ -159,7 +185,8 @@ public class InstanceChargeSpec  implements java.io.Serializable {
     /**
      * set 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。默认取值1年，灰度用户支持week和month的购买周期。
      *
-     * @param chargeDuration
+     * @param chargeDuration 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。默认取值1年，灰度用户支持week和month的购买周期。
+     * @return InstanceChargeSpec
      */
     public InstanceChargeSpec chargeDuration(Integer chargeDuration) {
         this.chargeDuration = chargeDuration;
@@ -170,10 +197,23 @@ public class InstanceChargeSpec  implements java.io.Serializable {
     /**
      * set 自动续费。true为开通自动续费，false为不开通自动续费，默认为false，仅对包年包月资源有效。开通后，将以本次创建时的购买时长作为自动续费周期，自动续费周期可在续费管理功能中进行修改。
      *
-     * @param autoRenew
+     * @param autoRenew 自动续费。true为开通自动续费，false为不开通自动续费，默认为false，仅对包年包月资源有效。开通后，将以本次创建时的购买时长作为自动续费周期，自动续费周期可在续费管理功能中进行修改。
+     * @return InstanceChargeSpec
      */
     public InstanceChargeSpec autoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
+        return this;
+    }
+
+
+    /**
+     * set chargeMode&#x3D;prepaid_by_duration 时有效。true 表示包销，false 表示普通包年包月（非包销），默认值为false。
+     *
+     * @param isCommitment chargeMode&#x3D;prepaid_by_duration 时有效。true 表示包销，false 表示普通包年包月（非包销），默认值为false。
+     * @return InstanceChargeSpec
+     */
+    public InstanceChargeSpec isCommitment(Boolean isCommitment) {
+        this.isCommitment = isCommitment;
         return this;
     }
 

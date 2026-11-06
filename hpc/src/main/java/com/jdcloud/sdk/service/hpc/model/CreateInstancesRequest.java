@@ -169,7 +169,8 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 实例配置
      *
-     * @param instanceSpec
+     * @param instanceSpec 实例配置
+     * @return CreateInstancesRequest
      */
     public CreateInstancesRequest instanceSpec(InstanceSpec instanceSpec) {
         this.instanceSpec = instanceSpec;
@@ -181,7 +182,9 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
      * set 创建节点的数量，调用商业平台配额查询接口结合已购买数量，判断最大可购买数量，不可超出配额。默认值：1。
 
      *
-     * @param maxCount
+     * @param maxCount 创建节点的数量，调用商业平台配额查询接口结合已购买数量，判断最大可购买数量，不可超出配额。默认值：1。
+
+     * @return CreateInstancesRequest
      */
     public CreateInstancesRequest maxCount(Integer maxCount) {
         this.maxCount = maxCount;
@@ -192,7 +195,8 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 预先验证创建请求
      *
-     * @param dryRun
+     * @param dryRun 预先验证创建请求
+     * @return CreateInstancesRequest
      */
     public CreateInstancesRequest dryRun(Boolean dryRun) {
         this.dryRun = dryRun;
@@ -203,7 +207,8 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 用于保证请求的幂等性。由客户端生成，并确保不同请求中该参数唯一，长度不能超过64个字符。
      *
-     * @param clientToken
+     * @param clientToken 用于保证请求的幂等性。由客户端生成，并确保不同请求中该参数唯一，长度不能超过64个字符。
+     * @return CreateInstancesRequest
      */
     public CreateInstancesRequest clientToken(String clientToken) {
         this.clientToken = clientToken;
@@ -214,7 +219,8 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return CreateInstancesRequest
      */
     public CreateInstancesRequest regionId(String regionId) {
         this.regionId = regionId;

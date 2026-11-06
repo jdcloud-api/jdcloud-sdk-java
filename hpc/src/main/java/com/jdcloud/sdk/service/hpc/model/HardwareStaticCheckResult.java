@@ -125,7 +125,8 @@ key 为实例ID，value 为该实例的摘要信息。
     /**
     * set 对比项列表。
     *
-    * @param compareItems
+    * @param compareItems 对比项列表。
+    * @return HardwareStaticCheckResult
     */
     public HardwareStaticCheckResult compareItems(List<DiagnosticCompareItem> compareItems) {
         this.compareItems = compareItems;
@@ -138,7 +139,10 @@ key 为实例ID，value 为该实例的摘要信息。
 key 为实例ID，value 为该实例的检查结果数组。
 
      *
-     * @param nodeResults
+     * @param nodeResults 按节点分组的检查结果。
+key 为实例ID，value 为该实例的检查结果数组。
+
+     * @return HardwareStaticCheckResult
      */
     public HardwareStaticCheckResult nodeResults(Object nodeResults) {
         this.nodeResults = nodeResults;
@@ -151,7 +155,10 @@ key 为实例ID，value 为该实例的检查结果数组。
 key 为实例ID，value 为该实例的摘要信息。
 
      *
-     * @param nodeSummary
+     * @param nodeSummary 按节点分组的摘要信息。
+key 为实例ID，value 为该实例的摘要信息。
+
+     * @return HardwareStaticCheckResult
      */
     public HardwareStaticCheckResult nodeSummary(Object nodeSummary) {
         this.nodeSummary = nodeSummary;

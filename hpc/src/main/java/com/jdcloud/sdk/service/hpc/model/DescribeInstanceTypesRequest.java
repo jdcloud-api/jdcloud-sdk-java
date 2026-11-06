@@ -117,7 +117,12 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
 &#x60;architecture&#x60;: CPU架构，精确匹配，支持单个，可选范围:x86_64或arm64
 
     *
-    * @param filters
+    * @param filters &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;instanceTypes&#x60;: 实例规格，精确匹配，支持多个
+&#x60;az&#x60;: 可用区，精确匹配，支持多个
+&#x60;architecture&#x60;: CPU架构，精确匹配，支持单个，可选范围:x86_64或arm64
+
+    * @return DescribeInstanceTypesRequest
     */
     public DescribeInstanceTypesRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -128,7 +133,8 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
     /**
      * set 地域ID。
      *
-     * @param regionId
+     * @param regionId 地域ID。
+     * @return DescribeInstanceTypesRequest
      */
     public DescribeInstanceTypesRequest regionId(String regionId) {
         this.regionId = regionId;

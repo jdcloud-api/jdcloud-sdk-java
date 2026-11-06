@@ -230,7 +230,8 @@ public class HpcNetDiagnoses  implements java.io.Serializable {
     /**
      * set 诊断报告ID
      *
-     * @param id
+     * @param id 诊断报告ID
+     * @return HpcNetDiagnoses
      */
     public HpcNetDiagnoses id(String id) {
         this.id = id;
@@ -241,7 +242,8 @@ public class HpcNetDiagnoses  implements java.io.Serializable {
     /**
      * set LATENCY:时延测试；BANDWIDTH:带宽测试；
      *
-     * @param type
+     * @param type LATENCY:时延测试；BANDWIDTH:带宽测试；
+     * @return HpcNetDiagnoses
      */
     public HpcNetDiagnoses type(String type) {
         this.type = type;
@@ -252,7 +254,8 @@ public class HpcNetDiagnoses  implements java.io.Serializable {
     /**
      * set client 个数
      *
-     * @param clientNum
+     * @param clientNum client 个数
+     * @return HpcNetDiagnoses
      */
     public HpcNetDiagnoses clientNum(Integer clientNum) {
         this.clientNum = clientNum;
@@ -263,7 +266,8 @@ public class HpcNetDiagnoses  implements java.io.Serializable {
     /**
      * set server 个数
      *
-     * @param serverNum
+     * @param serverNum server 个数
+     * @return HpcNetDiagnoses
      */
     public HpcNetDiagnoses serverNum(Integer serverNum) {
         this.serverNum = serverNum;
@@ -274,7 +278,8 @@ public class HpcNetDiagnoses  implements java.io.Serializable {
     /**
      * set 测试节点个数
      *
-     * @param nodeNum
+     * @param nodeNum 测试节点个数
+     * @return HpcNetDiagnoses
      */
     public HpcNetDiagnoses nodeNum(Integer nodeNum) {
         this.nodeNum = nodeNum;
@@ -285,7 +290,8 @@ public class HpcNetDiagnoses  implements java.io.Serializable {
     /**
      * set 端口 5000-65535
      *
-     * @param port
+     * @param port 端口 5000-65535
+     * @return HpcNetDiagnoses
      */
     public HpcNetDiagnoses port(Integer port) {
         this.port = port;
@@ -296,7 +302,8 @@ public class HpcNetDiagnoses  implements java.io.Serializable {
     /**
      * set 创建时间
      *
-     * @param createTime
+     * @param createTime 创建时间
+     * @return HpcNetDiagnoses
      */
     public HpcNetDiagnoses createTime(String createTime) {
         this.createTime = createTime;
@@ -307,7 +314,8 @@ public class HpcNetDiagnoses  implements java.io.Serializable {
     /**
      * set 测试状态(取值：INIT：初始化；FINISH：已完成；PROCESS：处理中；ERROR:错误)
      *
-     * @param status
+     * @param status 测试状态(取值：INIT：初始化；FINISH：已完成；PROCESS：处理中；ERROR:错误)
+     * @return HpcNetDiagnoses
      */
     public HpcNetDiagnoses status(String status) {
         this.status = status;

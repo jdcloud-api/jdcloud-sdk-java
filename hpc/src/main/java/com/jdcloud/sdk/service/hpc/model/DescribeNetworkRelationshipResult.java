@@ -64,7 +64,8 @@ public class DescribeNetworkRelationshipResult extends JdcloudResult implements 
     /**
      * set 实例组网关系(sameSu、samePod、sameCluster、anotherCluster)
      *
-     * @param relationship
+     * @param relationship 实例组网关系(sameSu、samePod、sameCluster、anotherCluster)
+     * @return DescribeNetworkRelationshipResult
      */
     public DescribeNetworkRelationshipResult relationship(String relationship) {
         this.relationship = relationship;

@@ -88,7 +88,8 @@ public class TagFilter  implements java.io.Serializable {
     /**
      * set 标签key。
      *
-     * @param key
+     * @param key 标签key。
+     * @return TagFilter
      */
     public TagFilter key(String key) {
         this.key = key;
@@ -99,7 +100,8 @@ public class TagFilter  implements java.io.Serializable {
     /**
     * set 标签value。
     *
-    * @param values
+    * @param values 标签value。
+    * @return TagFilter
     */
     public TagFilter values(List<String> values) {
         this.values = values;

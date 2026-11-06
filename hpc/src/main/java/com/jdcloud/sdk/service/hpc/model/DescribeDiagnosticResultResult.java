@@ -70,7 +70,8 @@ public class DescribeDiagnosticResultResult extends JdcloudResult implements jav
     /**
      * set 诊断任务详情。
      *
-     * @param diagnosticResultDetail
+     * @param diagnosticResultDetail 诊断任务详情。
+     * @return DescribeDiagnosticResultResult
      */
     public DescribeDiagnosticResultResult diagnosticResultDetail(DiagnosticResultDetail diagnosticResultDetail) {
         this.diagnosticResultDetail = diagnosticResultDetail;

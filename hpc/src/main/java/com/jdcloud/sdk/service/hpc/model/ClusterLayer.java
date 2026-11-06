@@ -136,7 +136,8 @@ public class ClusterLayer  implements java.io.Serializable {
     /**
      * set 类型
      *
-     * @param layerType
+     * @param layerType 类型
+     * @return ClusterLayer
      */
     public ClusterLayer layerType(String layerType) {
         this.layerType = layerType;
@@ -147,7 +148,8 @@ public class ClusterLayer  implements java.io.Serializable {
     /**
      * set 层级Id(预留字段，目前值同name)
      *
-     * @param id
+     * @param id 层级Id(预留字段，目前值同name)
+     * @return ClusterLayer
      */
     public ClusterLayer id(String id) {
         this.id = id;
@@ -158,7 +160,8 @@ public class ClusterLayer  implements java.io.Serializable {
     /**
      * set 层级name
      *
-     * @param name
+     * @param name 层级name
+     * @return ClusterLayer
      */
     public ClusterLayer name(String name) {
         this.name = name;
@@ -169,7 +172,8 @@ public class ClusterLayer  implements java.io.Serializable {
     /**
     * set 网络拓扑层级pod信息
     *
-    * @param podLayers
+    * @param podLayers 网络拓扑层级pod信息
+    * @return ClusterLayer
     */
     public ClusterLayer podLayers(List<PodLayer> podLayers) {
         this.podLayers = podLayers;
