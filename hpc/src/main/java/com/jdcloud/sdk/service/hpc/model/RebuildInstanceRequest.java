@@ -74,7 +74,7 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
 **Linux系统**：长度为2-64个字符，允许使用大小写字母、数字或连字符（-），但不能连续使用连字符（-），不能以连字符（-）开头或结尾。
 
      */
-    private String hostname;
+    private String hostName;
 
     /**
      * 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
@@ -210,8 +210,8 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
      *
      * @return
      */
-    public String getHostname() {
-        return hostname;
+    public String getHostName() {
+        return hostName;
     }
 
     /**
@@ -220,10 +220,10 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
 **Linux系统**：长度为2-64个字符，允许使用大小写字母、数字或连字符（-），但不能连续使用连字符（-），不能以连字符（-）开头或结尾。
 
      *
-     * @param hostname
+     * @param hostName
      */
-    public void setHostname(String hostname) {
-        this.hostname = hostname;
+    public void setHostName(String hostName) {
+        this.hostName = hostName;
     }
 
 
@@ -414,14 +414,14 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
 **Linux系统**：长度为2-64个字符，允许使用大小写字母、数字或连字符（-），但不能连续使用连字符（-），不能以连字符（-）开头或结尾。
 
      *
-     * @param hostname 实例hostname。
+     * @param hostName 实例hostname。
 **Windows系统**：长度为2\~15个字符，允许大小写字母、数字或连字符（-），不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
 **Linux系统**：长度为2-64个字符，允许使用大小写字母、数字或连字符（-），但不能连续使用连字符（-），不能以连字符（-）开头或结尾。
 
      * @return RebuildInstanceRequest
      */
-    public RebuildInstanceRequest hostname(String hostname) {
-        this.hostname = hostname;
+    public RebuildInstanceRequest hostName(String hostName) {
+        this.hostName = hostName;
         return this;
     }
 

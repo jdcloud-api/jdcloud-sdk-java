@@ -39,14 +39,6 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
     private Integer deviceIndex;
 
     /**
-     * 是否随实例一起删除。
-&#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;（默认值）：不随实例删除。
-
-     */
-    private Boolean autoDelete;
-
-    /**
      * 网卡设备详细配置。
      */
     private NetworkInterfaceSpec networkInterface;
@@ -71,31 +63,6 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
      */
     public void setDeviceIndex(Integer deviceIndex) {
         this.deviceIndex = deviceIndex;
-    }
-
-
-    /**
-     * get 是否随实例一起删除。
-&#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;（默认值）：不随实例删除。
-
-     *
-     * @return
-     */
-    public Boolean getAutoDelete() {
-        return autoDelete;
-    }
-
-    /**
-     * set 是否随实例一起删除。
-&#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;（默认值）：不随实例删除。
-
-     *
-     * @param autoDelete
-     */
-    public void setAutoDelete(Boolean autoDelete) {
-        this.autoDelete = autoDelete;
     }
 
 
@@ -129,24 +96,6 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
      */
     public InstanceNetworkInterfaceAttachmentSpec deviceIndex(Integer deviceIndex) {
         this.deviceIndex = deviceIndex;
-        return this;
-    }
-
-
-    /**
-     * set 是否随实例一起删除。
-&#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;（默认值）：不随实例删除。
-
-     *
-     * @param autoDelete 是否随实例一起删除。
-&#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;（默认值）：不随实例删除。
-
-     * @return InstanceNetworkInterfaceAttachmentSpec
-     */
-    public InstanceNetworkInterfaceAttachmentSpec autoDelete(Boolean autoDelete) {
-        this.autoDelete = autoDelete;
         return this;
     }
 

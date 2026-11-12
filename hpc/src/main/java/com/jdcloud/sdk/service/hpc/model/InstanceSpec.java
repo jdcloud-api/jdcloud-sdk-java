@@ -104,13 +104,6 @@ public class InstanceSpec  implements java.io.Serializable {
     
     private List<Metadata> metadata;
     /**
-     * 指定是否在创建计算实例时跳过GPU驱动的自动安装流程。当该参数设置为：&#x60;true&#x60;（默认值）：系统将自动为实例安装适配的GPU驱动程序；&#x60;false&#x60;：系统将不执行GPU驱动安装操作，用户需自行完成驱动的安装配置。
-注意事项：该参数仅对配备GPU的计算实例规格生效，若实例未配置GPU硬件则此参数不产生实际效果。建议在需要定制化驱动版本或使用特殊驱动场景时开启此参数
-
-     */
-    private Boolean installGpuDriver;
-
-    /**
      * 传入指定调度的su列表：如果参数中的su不在用户配置的数据库su列表中，则禁止调度；传入的参数没有指定su列表时：1.用户数据库中配置了su，则走配置的su调度；2.用户未配置su则进行默认调度策略
      */
     
@@ -136,11 +129,6 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     
     private List<Tag> userTags;
-    /**
-     * 专属区ID
-     */
-    private String dedicatedZoneId;
-
 
 
     /**
@@ -390,29 +378,6 @@ public class InstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * get 指定是否在创建计算实例时跳过GPU驱动的自动安装流程。当该参数设置为：&#x60;true&#x60;（默认值）：系统将自动为实例安装适配的GPU驱动程序；&#x60;false&#x60;：系统将不执行GPU驱动安装操作，用户需自行完成驱动的安装配置。
-注意事项：该参数仅对配备GPU的计算实例规格生效，若实例未配置GPU硬件则此参数不产生实际效果。建议在需要定制化驱动版本或使用特殊驱动场景时开启此参数
-
-     *
-     * @return
-     */
-    public Boolean getInstallGpuDriver() {
-        return installGpuDriver;
-    }
-
-    /**
-     * set 指定是否在创建计算实例时跳过GPU驱动的自动安装流程。当该参数设置为：&#x60;true&#x60;（默认值）：系统将自动为实例安装适配的GPU驱动程序；&#x60;false&#x60;：系统将不执行GPU驱动安装操作，用户需自行完成驱动的安装配置。
-注意事项：该参数仅对配备GPU的计算实例规格生效，若实例未配置GPU硬件则此参数不产生实际效果。建议在需要定制化驱动版本或使用特殊驱动场景时开启此参数
-
-     *
-     * @param installGpuDriver
-     */
-    public void setInstallGpuDriver(Boolean installGpuDriver) {
-        this.installGpuDriver = installGpuDriver;
-    }
-
-
-    /**
     * get 传入指定调度的su列表：如果参数中的su不在用户配置的数据库su列表中，则禁止调度；传入的参数没有指定su列表时：1.用户数据库中配置了su，则走配置的su调度；2.用户未配置su则进行默认调度策略
     *
     * @return
@@ -506,25 +471,6 @@ public class InstanceSpec  implements java.io.Serializable {
     */
     public void setUserTags(List<Tag> userTags) {
         this.userTags = userTags;
-    }
-
-
-    /**
-     * get 专属区ID
-     *
-     * @return
-     */
-    public String getDedicatedZoneId() {
-        return dedicatedZoneId;
-    }
-
-    /**
-     * set 专属区ID
-     *
-     * @param dedicatedZoneId
-     */
-    public void setDedicatedZoneId(String dedicatedZoneId) {
-        this.dedicatedZoneId = dedicatedZoneId;
     }
 
 
@@ -692,22 +638,6 @@ public class InstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * set 指定是否在创建计算实例时跳过GPU驱动的自动安装流程。当该参数设置为：&#x60;true&#x60;（默认值）：系统将自动为实例安装适配的GPU驱动程序；&#x60;false&#x60;：系统将不执行GPU驱动安装操作，用户需自行完成驱动的安装配置。
-注意事项：该参数仅对配备GPU的计算实例规格生效，若实例未配置GPU硬件则此参数不产生实际效果。建议在需要定制化驱动版本或使用特殊驱动场景时开启此参数
-
-     *
-     * @param installGpuDriver 指定是否在创建计算实例时跳过GPU驱动的自动安装流程。当该参数设置为：&#x60;true&#x60;（默认值）：系统将自动为实例安装适配的GPU驱动程序；&#x60;false&#x60;：系统将不执行GPU驱动安装操作，用户需自行完成驱动的安装配置。
-注意事项：该参数仅对配备GPU的计算实例规格生效，若实例未配置GPU硬件则此参数不产生实际效果。建议在需要定制化驱动版本或使用特殊驱动场景时开启此参数
-
-     * @return InstanceSpec
-     */
-    public InstanceSpec installGpuDriver(Boolean installGpuDriver) {
-        this.installGpuDriver = installGpuDriver;
-        return this;
-    }
-
-
-    /**
     * set 传入指定调度的su列表：如果参数中的su不在用户配置的数据库su列表中，则禁止调度；传入的参数没有指定su列表时：1.用户数据库中配置了su，则走配置的su调度；2.用户未配置su则进行默认调度策略
     *
     * @param su 传入指定调度的su列表：如果参数中的su不在用户配置的数据库su列表中，则禁止调度；传入的参数没有指定su列表时：1.用户数据库中配置了su，则走配置的su调度；2.用户未配置su则进行默认调度策略
@@ -765,18 +695,6 @@ public class InstanceSpec  implements java.io.Serializable {
     */
     public InstanceSpec userTags(List<Tag> userTags) {
         this.userTags = userTags;
-        return this;
-    }
-
-
-    /**
-     * set 专属区ID
-     *
-     * @param dedicatedZoneId 专属区ID
-     * @return InstanceSpec
-     */
-    public InstanceSpec dedicatedZoneId(String dedicatedZoneId) {
-        this.dedicatedZoneId = dedicatedZoneId;
         return this;
     }
 

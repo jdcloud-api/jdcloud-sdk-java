@@ -41,12 +41,12 @@ public class InstanceChargeSpec  implements java.io.Serializable {
     private String chargeMode;
 
     /**
-     * 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：week,month,year。
+     * 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：day,week,month,year。
      */
     private String chargeUnit;
 
     /**
-     * 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。默认取值1年，灰度用户支持week和month的购买周期。
+     * 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。默认取值1年，灰度用户支持day,week和month的购买周期。
      */
     private Integer chargeDuration;
 
@@ -82,7 +82,7 @@ public class InstanceChargeSpec  implements java.io.Serializable {
 
 
     /**
-     * get 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：week,month,year。
+     * get 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：day,week,month,year。
      *
      * @return
      */
@@ -91,7 +91,7 @@ public class InstanceChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：week,month,year。
+     * set 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：day,week,month,year。
      *
      * @param chargeUnit
      */
@@ -101,7 +101,7 @@ public class InstanceChargeSpec  implements java.io.Serializable {
 
 
     /**
-     * get 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。默认取值1年，灰度用户支持week和month的购买周期。
+     * get 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。默认取值1年，灰度用户支持day,week和month的购买周期。
      *
      * @return
      */
@@ -110,7 +110,7 @@ public class InstanceChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。默认取值1年，灰度用户支持week和month的购买周期。
+     * set 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。默认取值1年，灰度用户支持day,week和month的购买周期。
      *
      * @param chargeDuration
      */
@@ -171,9 +171,9 @@ public class InstanceChargeSpec  implements java.io.Serializable {
 
 
     /**
-     * set 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：week,month,year。
+     * set 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：day,week,month,year。
      *
-     * @param chargeUnit 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：week,month,year。
+     * @param chargeUnit 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：day,week,month,year。
      * @return InstanceChargeSpec
      */
     public InstanceChargeSpec chargeUnit(String chargeUnit) {
@@ -183,9 +183,9 @@ public class InstanceChargeSpec  implements java.io.Serializable {
 
 
     /**
-     * set 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。默认取值1年，灰度用户支持week和month的购买周期。
+     * set 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。默认取值1年，灰度用户支持day,week和month的购买周期。
      *
-     * @param chargeDuration 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。默认取值1年，灰度用户支持week和month的购买周期。
+     * @param chargeDuration 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。默认取值1年，灰度用户支持day,week和month的购买周期。
      * @return InstanceChargeSpec
      */
     public InstanceChargeSpec chargeDuration(Integer chargeDuration) {

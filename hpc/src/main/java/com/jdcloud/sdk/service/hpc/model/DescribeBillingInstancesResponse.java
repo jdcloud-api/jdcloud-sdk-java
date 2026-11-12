@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * operation
- * 异构计算的运维接口
+ * instance
+ * 实例相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,10 +27,10 @@ package com.jdcloud.sdk.service.hpc.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除用户可调度的网络集群Id
+ * 查询统一计费实例的详细信息列表。
 
  */
-public class DeleteClusterResponse extends JdcloudResponse<DeleteClusterResult> implements java.io.Serializable {
+public class DescribeBillingInstancesResponse extends JdcloudResponse<DescribeBillingInstancesResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
