@@ -163,11 +163,6 @@ public class Instance  implements java.io.Serializable {
     private ChargeSpec charge;
 
     /**
-     * 实例操作系统平台，取值：ubuntu、openEuler、centos、rocky。
-     */
-    private String platform;
-
-    /**
      * 启动方式，取值：bios、uefi。
      */
     private String bootMode;
@@ -181,16 +176,6 @@ public class Instance  implements java.io.Serializable {
      * 装机进度，取值范围：[0,100]。
      */
     private Integer progress;
-
-    /**
-     * 专属区名称
-     */
-    private String dedicatedZoneName;
-
-    /**
-     * 专属区ID
-     */
-    private String dedicatedZoneId;
 
     /**
      * 已绑定的密钥对名称列表
@@ -679,25 +664,6 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
-     * get 实例操作系统平台，取值：ubuntu、openEuler、centos、rocky。
-     *
-     * @return
-     */
-    public String getPlatform() {
-        return platform;
-    }
-
-    /**
-     * set 实例操作系统平台，取值：ubuntu、openEuler、centos、rocky。
-     *
-     * @param platform
-     */
-    public void setPlatform(String platform) {
-        this.platform = platform;
-    }
-
-
-    /**
      * get 启动方式，取值：bios、uefi。
      *
      * @return
@@ -751,44 +717,6 @@ public class Instance  implements java.io.Serializable {
      */
     public void setProgress(Integer progress) {
         this.progress = progress;
-    }
-
-
-    /**
-     * get 专属区名称
-     *
-     * @return
-     */
-    public String getDedicatedZoneName() {
-        return dedicatedZoneName;
-    }
-
-    /**
-     * set 专属区名称
-     *
-     * @param dedicatedZoneName
-     */
-    public void setDedicatedZoneName(String dedicatedZoneName) {
-        this.dedicatedZoneName = dedicatedZoneName;
-    }
-
-
-    /**
-     * get 专属区ID
-     *
-     * @return
-     */
-    public String getDedicatedZoneId() {
-        return dedicatedZoneId;
-    }
-
-    /**
-     * set 专属区ID
-     *
-     * @param dedicatedZoneId
-     */
-    public void setDedicatedZoneId(String dedicatedZoneId) {
-        this.dedicatedZoneId = dedicatedZoneId;
     }
 
 
@@ -1117,18 +1045,6 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
-     * set 实例操作系统平台，取值：ubuntu、openEuler、centos、rocky。
-     *
-     * @param platform 实例操作系统平台，取值：ubuntu、openEuler、centos、rocky。
-     * @return Instance
-     */
-    public Instance platform(String platform) {
-        this.platform = platform;
-        return this;
-    }
-
-
-    /**
      * set 启动方式，取值：bios、uefi。
      *
      * @param bootMode 启动方式，取值：bios、uefi。
@@ -1160,30 +1076,6 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance progress(Integer progress) {
         this.progress = progress;
-        return this;
-    }
-
-
-    /**
-     * set 专属区名称
-     *
-     * @param dedicatedZoneName 专属区名称
-     * @return Instance
-     */
-    public Instance dedicatedZoneName(String dedicatedZoneName) {
-        this.dedicatedZoneName = dedicatedZoneName;
-        return this;
-    }
-
-
-    /**
-     * set 专属区ID
-     *
-     * @param dedicatedZoneId 专属区ID
-     * @return Instance
-     */
-    public Instance dedicatedZoneId(String dedicatedZoneId) {
-        this.dedicatedZoneId = dedicatedZoneId;
         return this;
     }
 

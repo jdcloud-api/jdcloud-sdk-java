@@ -40,8 +40,8 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
 
     /**
      * 是否随实例一起删除。
-&#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;（默认值）：不随实例删除。
+&#x60;true&#x60;（默认值）：随实例删除。
+&#x60;false&#x60;：不随实例删除。
 
      */
     private Boolean autoDelete;
@@ -76,8 +76,8 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
 
     /**
      * get 是否随实例一起删除。
-&#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;（默认值）：不随实例删除。
+&#x60;true&#x60;（默认值）：随实例删除。
+&#x60;false&#x60;：不随实例删除。
 
      *
      * @return
@@ -88,8 +88,8 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
 
     /**
      * set 是否随实例一起删除。
-&#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;（默认值）：不随实例删除。
+&#x60;true&#x60;（默认值）：随实例删除。
+&#x60;false&#x60;：不随实例删除。
 
      *
      * @param autoDelete
@@ -135,13 +135,13 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
 
     /**
      * set 是否随实例一起删除。
-&#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;（默认值）：不随实例删除。
+&#x60;true&#x60;（默认值）：随实例删除。
+&#x60;false&#x60;：不随实例删除。
 
      *
      * @param autoDelete 是否随实例一起删除。
-&#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;（默认值）：不随实例删除。
+&#x60;true&#x60;（默认值）：随实例删除。
+&#x60;false&#x60;：不随实例删除。
 
      * @return InstanceNetworkInterfaceAttachment
      */

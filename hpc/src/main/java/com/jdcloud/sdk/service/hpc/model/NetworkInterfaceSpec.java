@@ -24,8 +24,6 @@
 
 package com.jdcloud.sdk.service.hpc.model;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -43,39 +41,14 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     private String subnetId;
 
     /**
-     * 可用区，用户的默认可用区，该参数无效，不建议使用
-     */
-    private String az;
-
-    /**
-     * 网卡名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
-     */
-    private String networkInterfaceName;
-
-    /**
      * 网卡主IP，如果不指定，会自动从子网中分配
      */
     private String primaryIpAddress;
 
     /**
-     * SecondaryIp列表
-     */
-    
-    private List<String> secondaryIpAddresses;
-    /**
-     * 自动分配的SecondaryIp数量
-     */
-    private Integer secondaryIpCount;
-
-    /**
      * 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount同时指定，不支持抢占重分配。该参数依赖子网的预分配网段。
      */
     private Integer secondaryIpMaskLen;
-
-    /**
-     * 描述,允许输入UTF-8编码下的全部字符，不超过256字符
-     */
-    private String description;
 
 
 
@@ -99,44 +72,6 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
 
 
     /**
-     * get 可用区，用户的默认可用区，该参数无效，不建议使用
-     *
-     * @return
-     */
-    public String getAz() {
-        return az;
-    }
-
-    /**
-     * set 可用区，用户的默认可用区，该参数无效，不建议使用
-     *
-     * @param az
-     */
-    public void setAz(String az) {
-        this.az = az;
-    }
-
-
-    /**
-     * get 网卡名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
-     *
-     * @return
-     */
-    public String getNetworkInterfaceName() {
-        return networkInterfaceName;
-    }
-
-    /**
-     * set 网卡名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
-     *
-     * @param networkInterfaceName
-     */
-    public void setNetworkInterfaceName(String networkInterfaceName) {
-        this.networkInterfaceName = networkInterfaceName;
-    }
-
-
-    /**
      * get 网卡主IP，如果不指定，会自动从子网中分配
      *
      * @return
@@ -152,44 +87,6 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
      */
     public void setPrimaryIpAddress(String primaryIpAddress) {
         this.primaryIpAddress = primaryIpAddress;
-    }
-
-
-    /**
-    * get SecondaryIp列表
-    *
-    * @return
-    */
-    public List<String> getSecondaryIpAddresses() {
-        return secondaryIpAddresses;
-    }
-
-    /**
-    * set SecondaryIp列表
-    *
-    * @param secondaryIpAddresses
-    */
-    public void setSecondaryIpAddresses(List<String> secondaryIpAddresses) {
-        this.secondaryIpAddresses = secondaryIpAddresses;
-    }
-
-
-    /**
-     * get 自动分配的SecondaryIp数量
-     *
-     * @return
-     */
-    public Integer getSecondaryIpCount() {
-        return secondaryIpCount;
-    }
-
-    /**
-     * set 自动分配的SecondaryIp数量
-     *
-     * @param secondaryIpCount
-     */
-    public void setSecondaryIpCount(Integer secondaryIpCount) {
-        this.secondaryIpCount = secondaryIpCount;
     }
 
 
@@ -212,25 +109,6 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
 
-    /**
-     * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
-     *
-     * @return
-     */
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
-     *
-     * @param description
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-
 
     /**
      * set 子网ID
@@ -240,30 +118,6 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
      */
     public NetworkInterfaceSpec subnetId(String subnetId) {
         this.subnetId = subnetId;
-        return this;
-    }
-
-
-    /**
-     * set 可用区，用户的默认可用区，该参数无效，不建议使用
-     *
-     * @param az 可用区，用户的默认可用区，该参数无效，不建议使用
-     * @return NetworkInterfaceSpec
-     */
-    public NetworkInterfaceSpec az(String az) {
-        this.az = az;
-        return this;
-    }
-
-
-    /**
-     * set 网卡名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
-     *
-     * @param networkInterfaceName 网卡名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
-     * @return NetworkInterfaceSpec
-     */
-    public NetworkInterfaceSpec networkInterfaceName(String networkInterfaceName) {
-        this.networkInterfaceName = networkInterfaceName;
         return this;
     }
 
@@ -281,30 +135,6 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
 
 
     /**
-    * set SecondaryIp列表
-    *
-    * @param secondaryIpAddresses SecondaryIp列表
-    * @return NetworkInterfaceSpec
-    */
-    public NetworkInterfaceSpec secondaryIpAddresses(List<String> secondaryIpAddresses) {
-        this.secondaryIpAddresses = secondaryIpAddresses;
-        return this;
-    }
-
-
-    /**
-     * set 自动分配的SecondaryIp数量
-     *
-     * @param secondaryIpCount 自动分配的SecondaryIp数量
-     * @return NetworkInterfaceSpec
-     */
-    public NetworkInterfaceSpec secondaryIpCount(Integer secondaryIpCount) {
-        this.secondaryIpCount = secondaryIpCount;
-        return this;
-    }
-
-
-    /**
      * set 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount同时指定，不支持抢占重分配。该参数依赖子网的预分配网段。
      *
      * @param secondaryIpMaskLen 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount同时指定，不支持抢占重分配。该参数依赖子网的预分配网段。
@@ -316,28 +146,4 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
 
-    /**
-     * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
-     *
-     * @param description 描述,允许输入UTF-8编码下的全部字符，不超过256字符
-     * @return NetworkInterfaceSpec
-     */
-    public NetworkInterfaceSpec description(String description) {
-        this.description = description;
-        return this;
-    }
-
-
-
-    /**
-     * add item to SecondaryIp列表
-     *
-     * @param secondaryIpAddresse
-     */
-    public void addSecondaryIpAddresse(String secondaryIpAddresse) {
-        if (this.secondaryIpAddresses == null) {
-            this.secondaryIpAddresses = new ArrayList<>();
-        }
-        this.secondaryIpAddresses.add(secondaryIpAddresse);
-    }
 }

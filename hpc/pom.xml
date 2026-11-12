@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>hpc</artifactId>
-  <version>4.3.16</version>
+  <version>4.4.18</version>
   <packaging>jar</packaging>
   <name>hpc</name>
   <url>http://www.jdcloud.com</url>

@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.hpc.client.DescribeKeypairsExecutor;
 import com.jdcloud.sdk.service.hpc.model.DisassociateElasticIpRequest;
 import com.jdcloud.sdk.service.hpc.model.DisassociateElasticIpResponse;
 import com.jdcloud.sdk.service.hpc.client.DisassociateElasticIpExecutor;
+import com.jdcloud.sdk.service.hpc.model.DescribeBillingInstancesRequest;
+import com.jdcloud.sdk.service.hpc.model.DescribeBillingInstancesResponse;
+import com.jdcloud.sdk.service.hpc.client.DescribeBillingInstancesExecutor;
 import com.jdcloud.sdk.service.hpc.model.DescribeNetworkTopologyRequest;
 import com.jdcloud.sdk.service.hpc.model.DescribeNetworkTopologyResponse;
 import com.jdcloud.sdk.service.hpc.client.DescribeNetworkTopologyExecutor;
@@ -88,9 +91,6 @@ import com.jdcloud.sdk.service.hpc.client.DescribeNetworkRelationshipExecutor;
 import com.jdcloud.sdk.service.hpc.model.RecoverInstanceRequest;
 import com.jdcloud.sdk.service.hpc.model.RecoverInstanceResponse;
 import com.jdcloud.sdk.service.hpc.client.RecoverInstanceExecutor;
-import com.jdcloud.sdk.service.hpc.model.CreateClusterRequest;
-import com.jdcloud.sdk.service.hpc.model.CreateClusterResponse;
-import com.jdcloud.sdk.service.hpc.client.CreateClusterExecutor;
 import com.jdcloud.sdk.service.hpc.model.DeleteDiagnosticTaskRequest;
 import com.jdcloud.sdk.service.hpc.model.DeleteDiagnosticTaskResponse;
 import com.jdcloud.sdk.service.hpc.client.DeleteDiagnosticTaskExecutor;
@@ -118,9 +118,6 @@ import com.jdcloud.sdk.service.hpc.client.DescribeInstanceTypesExecutor;
 import com.jdcloud.sdk.service.hpc.model.DescribeDiagnosticResultsRequest;
 import com.jdcloud.sdk.service.hpc.model.DescribeDiagnosticResultsResponse;
 import com.jdcloud.sdk.service.hpc.client.DescribeDiagnosticResultsExecutor;
-import com.jdcloud.sdk.service.hpc.model.DeleteClusterRequest;
-import com.jdcloud.sdk.service.hpc.model.DeleteClusterResponse;
-import com.jdcloud.sdk.service.hpc.client.DeleteClusterExecutor;
 import com.jdcloud.sdk.service.hpc.model.DescribeHpcNetDiagnosesRequest;
 import com.jdcloud.sdk.service.hpc.model.DescribeHpcNetDiagnosesResponse;
 import com.jdcloud.sdk.service.hpc.client.DescribeHpcNetDiagnosesExecutor;
@@ -154,9 +151,6 @@ import com.jdcloud.sdk.service.hpc.client.DescribeTasksExecutor;
 import com.jdcloud.sdk.service.hpc.model.DescribeHPCAssistantAgentsRequest;
 import com.jdcloud.sdk.service.hpc.model.DescribeHPCAssistantAgentsResponse;
 import com.jdcloud.sdk.service.hpc.client.DescribeHPCAssistantAgentsExecutor;
-import com.jdcloud.sdk.service.hpc.model.ModifyClusterRequest;
-import com.jdcloud.sdk.service.hpc.model.ModifyClusterResponse;
-import com.jdcloud.sdk.service.hpc.client.ModifyClusterExecutor;
 import com.jdcloud.sdk.service.hpc.model.DeleteKeypairRequest;
 import com.jdcloud.sdk.service.hpc.model.DeleteKeypairResponse;
 import com.jdcloud.sdk.service.hpc.client.DeleteKeypairExecutor;
@@ -235,6 +229,18 @@ public class HpcClient extends JdcloudClient {
      */
     public DisassociateElasticIpResponse disassociateElasticIp(DisassociateElasticIpRequest request) throws JdcloudSdkException {
         return new DisassociateElasticIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询统一计费实例的详细信息列表。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBillingInstancesResponse describeBillingInstances(DescribeBillingInstancesRequest request) throws JdcloudSdkException {
+        return new DescribeBillingInstancesExecutor().client(this).execute(request);
     }
 
     /**
@@ -454,18 +460,6 @@ public class HpcClient extends JdcloudClient {
     }
 
     /**
-     * 创建用户可调度的网络集群
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateClusterResponse createCluster(CreateClusterRequest request) throws JdcloudSdkException {
-        return new CreateClusterExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除诊断任务。
 
 ## 接口说明
@@ -597,18 +591,6 @@ public class HpcClient extends JdcloudClient {
     }
 
     /**
-     * 删除用户可调度的网络集群Id
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteClusterResponse deleteCluster(DeleteClusterRequest request) throws JdcloudSdkException {
-        return new DeleteClusterExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询hpc网络诊断
      *
      * @param request
@@ -732,18 +714,6 @@ public class HpcClient extends JdcloudClient {
      */
     public DescribeHPCAssistantAgentsResponse describeHPCAssistantAgents(DescribeHPCAssistantAgentsRequest request) throws JdcloudSdkException {
         return new DescribeHPCAssistantAgentsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 更新用户可调度的网络集群
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyClusterResponse modifyCluster(ModifyClusterRequest request) throws JdcloudSdkException {
-        return new ModifyClusterExecutor().client(this).execute(request);
     }
 
     /**
