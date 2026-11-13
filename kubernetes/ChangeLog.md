@@ -1,11 +1,12 @@
 # 更新历史
 
-API版本：1.4.14
+API版本：1.4.15
 
 | 发布时间       | 版本号    | 更新     | 说明                                                                                                                                                                                          |
 |------------|--------| -------- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 未发布        | —      | 新增接口 | `describeLatestOperations` 批量查询最新操作摘要，`describeOperations` 批量查询详情；保留资源隔离、所有者鉴权与单项投影失败信息。                                                                                                    |
 | 未发布        | —      | 新增接口 | `describeLatestOperation` 支持按 clusterId、可选 nodeGroupId 和 operationType 查询最新操作，返回与批量查询一致的扁平摘要及建议轮询间隔；两个 latest 仅返回 currentStageId，阶段明细需调用详情接口；保留无匹配记录时的空 operationId/operationType。          |
+| 2026-11-12 | 1.4.15 | 更新接口 | * AddClusterNetworkDetail接口对外发布                                                                                                                                                             |
 | 2026-11-05 | 1.4.14 | 更新接口 | * 节点组和节点相关接口对外发布                                                                                                                                                                            |
 | 2026-10-19 | 1.4.13 | 更新接口 | `diskInitialize` 新增 `layoutMode=all_disks_lvm` 和 `csiReservedCapGB`；CSI 初始预留默认 800 GiB，可调小或调大；未指定模式保留 legacy 行为。`NodeGroup`、`HpcNodeGroup` 查询模型补充可选 `diskInitialize`，返回节点组默认策略，不代表节点当前磁盘布局。 |
 | 2026-10-15 | 1.4.12 | 更新接口 | * modifyNodeGroup 支持修改节点组磁盘类型                                                                                                                                                               |

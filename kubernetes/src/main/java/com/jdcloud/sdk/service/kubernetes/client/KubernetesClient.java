@@ -94,6 +94,9 @@ import com.jdcloud.sdk.service.kubernetes.client.DescribeQuotasExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeOperationsRequest;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeOperationsResponse;
 import com.jdcloud.sdk.service.kubernetes.client.DescribeOperationsExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.AddClusterNetworkDetailRequest;
+import com.jdcloud.sdk.service.kubernetes.model.AddClusterNetworkDetailResponse;
+import com.jdcloud.sdk.service.kubernetes.client.AddClusterNetworkDetailExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.CreateServerlessClusterRequest;
 import com.jdcloud.sdk.service.kubernetes.model.CreateServerlessClusterResponse;
 import com.jdcloud.sdk.service.kubernetes.client.CreateServerlessClusterExecutor;
@@ -455,6 +458,17 @@ public class KubernetesClient extends JdcloudClient {
      */
     public DescribeOperationsResponse describeOperations(DescribeOperationsRequest request) throws JdcloudSdkException {
         return new DescribeOperationsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加集群的网络配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddClusterNetworkDetailResponse addClusterNetworkDetail(AddClusterNetworkDetailRequest request) throws JdcloudSdkException {
+        return new AddClusterNetworkDetailExecutor().client(this).execute(request);
     }
 
     /**

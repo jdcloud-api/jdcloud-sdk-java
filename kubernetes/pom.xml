@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>kubernetes</artifactId>
-  <version>1.4.14</version>
+  <version>1.4.15</version>
   <packaging>jar</packaging>
   <name>kubernetes</name>
   <url>http://www.jdcloud.com</url>
