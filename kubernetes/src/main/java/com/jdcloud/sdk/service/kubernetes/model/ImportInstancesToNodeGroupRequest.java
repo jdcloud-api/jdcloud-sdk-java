@@ -51,6 +51,11 @@ public class ImportInstancesToNodeGroupRequest extends JdcloudRequest implements
     private String password;
 
     /**
+     * SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+     */
+    
+    private List<String> keyNames;
+    /**
      * 地域 ID
      * Required:true
      */
@@ -101,6 +106,25 @@ public class ImportInstancesToNodeGroupRequest extends JdcloudRequest implements
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    /**
+    * get SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    *
+    * @return
+    */
+    public List<String> getKeyNames() {
+        return keyNames;
+    }
+
+    /**
+    * set SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    *
+    * @param keyNames
+    */
+    public void setKeyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
     }
 
 
@@ -168,6 +192,18 @@ public class ImportInstancesToNodeGroupRequest extends JdcloudRequest implements
 
 
     /**
+    * set SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    *
+    * @param keyNames SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    * @return ImportInstancesToNodeGroupRequest
+    */
+    public ImportInstancesToNodeGroupRequest keyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
+        return this;
+    }
+
+
+    /**
      * set 地域 ID
      *
      * @param regionId 地域 ID
@@ -202,5 +238,17 @@ public class ImportInstancesToNodeGroupRequest extends JdcloudRequest implements
             this.instances = new ArrayList<>();
         }
         this.instances.add(instance);
+    }
+
+    /**
+     * add item to SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+     *
+     * @param keyName
+     */
+    public void addKeyName(String keyName) {
+        if (this.keyNames == null) {
+            this.keyNames = new ArrayList<>();
+        }
+        this.keyNames.add(keyName);
     }
 }

@@ -44,11 +44,14 @@ public class HpcNodeConfigSpec  implements java.io.Serializable {
 
     /**
      * 异构节点密码，密码规范参考：[公共参数规范](https://docs.jdcloud.com/cn/virtual-machines/api/general_parameters)
-     * Required:true
      */
-    @Required
     private String password;
 
+    /**
+     * SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+     */
+    
+    private List<String> keyNames;
     /**
      * k8s节点标签，最多支持10个
      */
@@ -111,6 +114,25 @@ public class HpcNodeConfigSpec  implements java.io.Serializable {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    /**
+    * get SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    *
+    * @return
+    */
+    public List<String> getKeyNames() {
+        return keyNames;
+    }
+
+    /**
+    * set SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    *
+    * @param keyNames
+    */
+    public void setKeyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
     }
 
 
@@ -235,6 +257,18 @@ public class HpcNodeConfigSpec  implements java.io.Serializable {
 
 
     /**
+    * set SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    *
+    * @param keyNames SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    * @return HpcNodeConfigSpec
+    */
+    public HpcNodeConfigSpec keyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
+        return this;
+    }
+
+
+    /**
     * set k8s节点标签，最多支持10个
     *
     * @param labels k8s节点标签，最多支持10个
@@ -294,6 +328,18 @@ public class HpcNodeConfigSpec  implements java.io.Serializable {
     }
 
 
+
+    /**
+     * add item to SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+     *
+     * @param keyName
+     */
+    public void addKeyName(String keyName) {
+        if (this.keyNames == null) {
+            this.keyNames = new ArrayList<>();
+        }
+        this.keyNames.add(keyName);
+    }
 
     /**
      * add item to k8s节点标签，最多支持10个

@@ -45,11 +45,14 @@ public class ImportInstancesToHpcNodeGroupRequest extends JdcloudRequest impleme
     private List<String> instances;
     /**
      * 导入异构实例密码，密码规范参考：[公共参数规范](https://docs.jdcloud.com/cn/virtual-machines/api/general_parameters)
-     * Required:true
      */
-    @Required
     private String password;
 
+    /**
+     * SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+     */
+    
+    private List<String> keyNames;
     /**
      * 地域 ID
      * Required:true
@@ -101,6 +104,25 @@ public class ImportInstancesToHpcNodeGroupRequest extends JdcloudRequest impleme
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    /**
+    * get SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    *
+    * @return
+    */
+    public List<String> getKeyNames() {
+        return keyNames;
+    }
+
+    /**
+    * set SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    *
+    * @param keyNames
+    */
+    public void setKeyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
     }
 
 
@@ -168,6 +190,18 @@ public class ImportInstancesToHpcNodeGroupRequest extends JdcloudRequest impleme
 
 
     /**
+    * set SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    *
+    * @param keyNames SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    * @return ImportInstancesToHpcNodeGroupRequest
+    */
+    public ImportInstancesToHpcNodeGroupRequest keyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
+        return this;
+    }
+
+
+    /**
      * set 地域 ID
      *
      * @param regionId 地域 ID
@@ -202,5 +236,17 @@ public class ImportInstancesToHpcNodeGroupRequest extends JdcloudRequest impleme
             this.instances = new ArrayList<>();
         }
         this.instances.add(instance);
+    }
+
+    /**
+     * add item to SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+     *
+     * @param keyName
+     */
+    public void addKeyName(String keyName) {
+        if (this.keyNames == null) {
+            this.keyNames = new ArrayList<>();
+        }
+        this.keyNames.add(keyName);
     }
 }
