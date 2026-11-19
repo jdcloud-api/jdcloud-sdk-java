@@ -66,13 +66,17 @@ public class InstanceSpec  implements java.io.Serializable {
     private String password;
 
     /**
-     * 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+     * 允许SSH密码登录。
+可选值：
+&#x60;yes&#x60;（默认值）：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
+仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
 
      */
     private String passwordAuth;
 
     /**
-     * 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+     * 密钥对名称列表。通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
 
      */
     
@@ -248,7 +252,11 @@ public class InstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * get 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+     * get 允许SSH密码登录。
+可选值：
+&#x60;yes&#x60;（默认值）：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
+仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
 
      *
      * @return
@@ -258,7 +266,11 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+     * set 允许SSH密码登录。
+可选值：
+&#x60;yes&#x60;（默认值）：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
+仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
 
      *
      * @param passwordAuth
@@ -269,7 +281,7 @@ public class InstanceSpec  implements java.io.Serializable {
 
 
     /**
-    * get 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+    * get 密钥对名称列表。通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
 
     *
     * @return
@@ -279,7 +291,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-    * set 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+    * set 密钥对名称列表。通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
 
     *
     * @param keyNames
@@ -550,10 +562,18 @@ public class InstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * set 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+     * set 允许SSH密码登录。
+可选值：
+&#x60;yes&#x60;（默认值）：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
+仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
 
      *
-     * @param passwordAuth 认证模式。yes表示密码认证（需同时指定password），no表示密钥认证（需同时指定keyNames）。不指定时默认为yes。
+     * @param passwordAuth 允许SSH密码登录。
+可选值：
+&#x60;yes&#x60;（默认值）：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
+仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
 
      * @return InstanceSpec
      */
@@ -564,10 +584,10 @@ public class InstanceSpec  implements java.io.Serializable {
 
 
     /**
-    * set 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+    * set 密钥对名称列表。通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
 
     *
-    * @param keyNames 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+    * @param keyNames 密钥对名称列表。通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
 
     * @return InstanceSpec
     */
@@ -701,7 +721,7 @@ public class InstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to 密钥对名称列表。当passwordAuth为no时，通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
+     * add item to 密钥对名称列表。通过此参数指定绑定的密钥对名称。目前只支持一个密钥对。
 
      *
      * @param keyName
