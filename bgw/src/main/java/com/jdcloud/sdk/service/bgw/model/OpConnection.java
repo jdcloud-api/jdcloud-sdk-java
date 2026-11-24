@@ -120,6 +120,16 @@ public class OpConnection  implements java.io.Serializable {
      */
     private Charge charge;
 
+    /**
+     * Tag信息
+     */
+    
+    private List<Tag> tags;
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -445,11 +455,50 @@ public class OpConnection  implements java.io.Serializable {
     }
 
 
+    /**
+    * get Tag信息
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Tag信息
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
 
     /**
      * set Connection的Id
      *
-     * @param connectionId
+     * @param connectionId Connection的Id
+     * @return OpConnection
      */
     public OpConnection connectionId(String connectionId) {
         this.connectionId = connectionId;
@@ -460,7 +509,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set 专线的名称, 只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param connectionName
+     * @param connectionName 专线的名称, 只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return OpConnection
      */
     public OpConnection connectionName(String connectionName) {
         this.connectionName = connectionName;
@@ -471,7 +521,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set 自助专线开通的地域信息；只有自助专线才有location信息
      *
-     * @param location
+     * @param location 自助专线开通的地域信息；只有自助专线才有location信息
+     * @return OpConnection
      */
     public OpConnection location(ConnectionLocation location) {
         this.location = location;
@@ -482,7 +533,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set 专线服务商的信息;只在type为jcloud_partner时有合作伙伴信息详情
      *
-     * @param partner
+     * @param partner 专线服务商的信息;只在type为jcloud_partner时有合作伙伴信息详情
+     * @return OpConnection
      */
     public OpConnection partner(Partner partner) {
         this.partner = partner;
@@ -493,7 +545,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set 类型, jcloud_hosted:托管连接; jcloud_partner:合作伙伴连接; jcloud:自助连接。
      *
-     * @param type
+     * @param type 类型, jcloud_hosted:托管连接; jcloud_partner:合作伙伴连接; jcloud:自助连接。
+     * @return OpConnection
      */
     public OpConnection type(String type) {
         this.type = type;
@@ -504,7 +557,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set 申请的专线带宽：Mbps
      *
-     * @param bandwidthMbps
+     * @param bandwidthMbps 申请的专线带宽：Mbps
+     * @return OpConnection
      */
     public OpConnection bandwidthMbps(Integer bandwidthMbps) {
         this.bandwidthMbps = bandwidthMbps;
@@ -515,7 +569,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set 订单编号
      *
-     * @param orderId
+     * @param orderId 订单编号
+     * @return OpConnection
      */
     public OpConnection orderId(String orderId) {
         this.orderId = orderId;
@@ -526,7 +581,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
     * set connection上通道Id列表
     *
-    * @param vifIds
+    * @param vifIds connection上通道Id列表
+    * @return OpConnection
     */
     public OpConnection vifIds(List<String> vifIds) {
         this.vifIds = vifIds;
@@ -537,7 +593,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set 专线的状态，取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、已删除(Deleted)、审核未通过(Rejected)
      *
-     * @param connectionStatus
+     * @param connectionStatus 专线的状态，取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、已删除(Deleted)、审核未通过(Rejected)
+     * @return OpConnection
      */
     public OpConnection connectionStatus(String connectionStatus) {
         this.connectionStatus = connectionStatus;
@@ -548,7 +605,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set connection的描述, 允许输入UTF-8编码下的全部字符，不超过256字符。
      *
-     * @param description
+     * @param description connection的描述, 允许输入UTF-8编码下的全部字符，不超过256字符。
+     * @return OpConnection
      */
     public OpConnection description(String description) {
         this.description = description;
@@ -559,7 +617,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set 专线申请的时间
      *
-     * @param createdTime
+     * @param createdTime 专线申请的时间
+     * @return OpConnection
      */
     public OpConnection createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -570,7 +629,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set 客户idc地址，取值范围：1~100个字符
      *
-     * @param idcAddress
+     * @param idcAddress 客户idc地址，取值范围：1~100个字符
+     * @return OpConnection
      */
     public OpConnection idcAddress(String idcAddress) {
         this.idcAddress = idcAddress;
@@ -581,7 +641,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set 联系人名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param contactName
+     * @param contactName 联系人名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return OpConnection
      */
     public OpConnection contactName(String contactName) {
         this.contactName = contactName;
@@ -592,7 +653,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set 联系人手机号码，11位数字且需要13、14、15、16、17、18、19开头
      *
-     * @param phoneNumber
+     * @param phoneNumber 联系人手机号码，11位数字且需要13、14、15、16、17、18、19开头
+     * @return OpConnection
      */
     public OpConnection phoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
@@ -603,7 +665,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set 审核不通过的原因
      *
-     * @param rejectedReason
+     * @param rejectedReason 审核不通过的原因
+     * @return OpConnection
      */
     public OpConnection rejectedReason(String rejectedReason) {
         this.rejectedReason = rejectedReason;
@@ -614,7 +677,8 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set 专线所有者的用户pin
      *
-     * @param connectionOwner
+     * @param connectionOwner 专线所有者的用户pin
+     * @return OpConnection
      */
     public OpConnection connectionOwner(String connectionOwner) {
         this.connectionOwner = connectionOwner;
@@ -625,10 +689,35 @@ public class OpConnection  implements java.io.Serializable {
     /**
      * set 计费信息
      *
-     * @param charge
+     * @param charge 计费信息
+     * @return OpConnection
      */
     public OpConnection charge(Charge charge) {
         this.charge = charge;
+        return this;
+    }
+
+
+    /**
+    * set Tag信息
+    *
+    * @param tags Tag信息
+    * @return OpConnection
+    */
+    public OpConnection tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId 资源所属资源组ID
+     * @return OpConnection
+     */
+    public OpConnection resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 
@@ -644,5 +733,17 @@ public class OpConnection  implements java.io.Serializable {
             this.vifIds = new ArrayList<>();
         }
         this.vifIds.add(vifId);
+    }
+
+    /**
+     * add item to Tag信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 }

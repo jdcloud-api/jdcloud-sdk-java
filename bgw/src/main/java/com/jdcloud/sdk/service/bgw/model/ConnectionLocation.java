@@ -230,7 +230,8 @@ public class ConnectionLocation  implements java.io.Serializable {
     /**
      * set Location的Id
      *
-     * @param locationId
+     * @param locationId Location的Id
+     * @return ConnectionLocation
      */
     public ConnectionLocation locationId(String locationId) {
         this.locationId = locationId;
@@ -241,7 +242,8 @@ public class ConnectionLocation  implements java.io.Serializable {
     /**
      * set Location名称, 只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param locationName
+     * @param locationName Location名称, 只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return ConnectionLocation
      */
     public ConnectionLocation locationName(String locationName) {
         this.locationName = locationName;
@@ -252,7 +254,8 @@ public class ConnectionLocation  implements java.io.Serializable {
     /**
      * set Location的类型
      *
-     * @param locationType
+     * @param locationType Location的类型
+     * @return ConnectionLocation
      */
     public ConnectionLocation locationType(String locationType) {
         this.locationType = locationType;
@@ -263,7 +266,8 @@ public class ConnectionLocation  implements java.io.Serializable {
     /**
      * set Location的编码
      *
-     * @param locationCode
+     * @param locationCode Location的编码
+     * @return ConnectionLocation
      */
     public ConnectionLocation locationCode(String locationCode) {
         this.locationCode = locationCode;
@@ -274,7 +278,8 @@ public class ConnectionLocation  implements java.io.Serializable {
     /**
      * set Location的地址
      *
-     * @param address
+     * @param address Location的地址
+     * @return ConnectionLocation
      */
     public ConnectionLocation address(String address) {
         this.address = address;
@@ -285,7 +290,8 @@ public class ConnectionLocation  implements java.io.Serializable {
     /**
      * set Location创建时间
      *
-     * @param createdTime
+     * @param createdTime Location创建时间
+     * @return ConnectionLocation
      */
     public ConnectionLocation createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -296,7 +302,8 @@ public class ConnectionLocation  implements java.io.Serializable {
     /**
      * set 专线开通的端口信息。自助专线和托管专线有端口信息
      *
-     * @param locationPortSpec
+     * @param locationPortSpec 专线开通的端口信息。自助专线和托管专线有端口信息
+     * @return ConnectionLocation
      */
     public ConnectionLocation locationPortSpec(LocationPortSpec locationPortSpec) {
         this.locationPortSpec = locationPortSpec;
@@ -307,7 +314,8 @@ public class ConnectionLocation  implements java.io.Serializable {
     /**
      * set 专线开通的运营商信息。自助专线时有运营商信息
      *
-     * @param locationISP
+     * @param locationISP 专线开通的运营商信息。自助专线时有运营商信息
+     * @return ConnectionLocation
      */
     public ConnectionLocation locationISP(LocationISP locationISP) {
         this.locationISP = locationISP;

@@ -42,6 +42,11 @@ public class ReplenishTrafficOrderSpec  implements java.io.Serializable {
     @Required
     
     private List<String> connectionIds;
+    /**
+     * 补单的PIN，base64
+     */
+    private String customerPin;
+
 
 
     /**
@@ -63,14 +68,46 @@ public class ReplenishTrafficOrderSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 补单的PIN，base64
+     *
+     * @return
+     */
+    public String getCustomerPin() {
+        return customerPin;
+    }
+
+    /**
+     * set 补单的PIN，base64
+     *
+     * @param customerPin
+     */
+    public void setCustomerPin(String customerPin) {
+        this.customerPin = customerPin;
+    }
+
+
 
     /**
     * set 补单connection ID列表
     *
-    * @param connectionIds
+    * @param connectionIds 补单connection ID列表
+    * @return ReplenishTrafficOrderSpec
     */
     public ReplenishTrafficOrderSpec connectionIds(List<String> connectionIds) {
         this.connectionIds = connectionIds;
+        return this;
+    }
+
+
+    /**
+     * set 补单的PIN，base64
+     *
+     * @param customerPin 补单的PIN，base64
+     * @return ReplenishTrafficOrderSpec
+     */
+    public ReplenishTrafficOrderSpec customerPin(String customerPin) {
+        this.customerPin = customerPin;
         return this;
     }
 

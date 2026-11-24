@@ -38,9 +38,14 @@ public class Peer  implements java.io.Serializable {
     private String peerId;
 
     /**
-     * Peer的BGP状态，取值为：Up, Down
+     * 用户bgpPeer的连接状态（探测），取值为：Established、UnEstablished
      */
-    private String peerBgpStatus;
+    private String bgpPeerState;
+
+    /**
+     * peer的NQA/BFD健康检查状态，取值为：Active、Inactive、Unknown
+     */
+    private String peerHealthState;
 
     /**
      * Peer的ip信息详情
@@ -69,21 +74,40 @@ public class Peer  implements java.io.Serializable {
 
 
     /**
-     * get Peer的BGP状态，取值为：Up, Down
+     * get 用户bgpPeer的连接状态（探测），取值为：Established、UnEstablished
      *
      * @return
      */
-    public String getPeerBgpStatus() {
-        return peerBgpStatus;
+    public String getBgpPeerState() {
+        return bgpPeerState;
     }
 
     /**
-     * set Peer的BGP状态，取值为：Up, Down
+     * set 用户bgpPeer的连接状态（探测），取值为：Established、UnEstablished
      *
-     * @param peerBgpStatus
+     * @param bgpPeerState
      */
-    public void setPeerBgpStatus(String peerBgpStatus) {
-        this.peerBgpStatus = peerBgpStatus;
+    public void setBgpPeerState(String bgpPeerState) {
+        this.bgpPeerState = bgpPeerState;
+    }
+
+
+    /**
+     * get peer的NQA/BFD健康检查状态，取值为：Active、Inactive、Unknown
+     *
+     * @return
+     */
+    public String getPeerHealthState() {
+        return peerHealthState;
+    }
+
+    /**
+     * set peer的NQA/BFD健康检查状态，取值为：Active、Inactive、Unknown
+     *
+     * @param peerHealthState
+     */
+    public void setPeerHealthState(String peerHealthState) {
+        this.peerHealthState = peerHealthState;
     }
 
 
@@ -110,7 +134,8 @@ public class Peer  implements java.io.Serializable {
     /**
      * set Peer的Id
      *
-     * @param peerId
+     * @param peerId Peer的Id
+     * @return Peer
      */
     public Peer peerId(String peerId) {
         this.peerId = peerId;
@@ -119,12 +144,25 @@ public class Peer  implements java.io.Serializable {
 
 
     /**
-     * set Peer的BGP状态，取值为：Up, Down
+     * set 用户bgpPeer的连接状态（探测），取值为：Established、UnEstablished
      *
-     * @param peerBgpStatus
+     * @param bgpPeerState 用户bgpPeer的连接状态（探测），取值为：Established、UnEstablished
+     * @return Peer
      */
-    public Peer peerBgpStatus(String peerBgpStatus) {
-        this.peerBgpStatus = peerBgpStatus;
+    public Peer bgpPeerState(String bgpPeerState) {
+        this.bgpPeerState = bgpPeerState;
+        return this;
+    }
+
+
+    /**
+     * set peer的NQA/BFD健康检查状态，取值为：Active、Inactive、Unknown
+     *
+     * @param peerHealthState peer的NQA/BFD健康检查状态，取值为：Active、Inactive、Unknown
+     * @return Peer
+     */
+    public Peer peerHealthState(String peerHealthState) {
+        this.peerHealthState = peerHealthState;
         return this;
     }
 
@@ -132,7 +170,8 @@ public class Peer  implements java.io.Serializable {
     /**
      * set Peer的ip信息详情
      *
-     * @param peerIps
+     * @param peerIps Peer的ip信息详情
+     * @return Peer
      */
     public Peer peerIps(PeerIps peerIps) {
         this.peerIps = peerIps;

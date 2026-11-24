@@ -47,6 +47,11 @@ public class ModifyPrivateVirtualInterfaceSpec  implements java.io.Serializable 
      */
     private HealthCheckSpec healthCheck;
 
+    /**
+     * 更新privateVif的监控相关属性
+     */
+    private MonitorSpec monitor;
+
 
 
     /**
@@ -106,11 +111,31 @@ public class ModifyPrivateVirtualInterfaceSpec  implements java.io.Serializable 
     }
 
 
+    /**
+     * get 更新privateVif的监控相关属性
+     *
+     * @return
+     */
+    public MonitorSpec getMonitor() {
+        return monitor;
+    }
+
+    /**
+     * set 更新privateVif的监控相关属性
+     *
+     * @param monitor
+     */
+    public void setMonitor(MonitorSpec monitor) {
+        this.monitor = monitor;
+    }
+
+
 
     /**
      * set privateVif 名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param privateVifName
+     * @param privateVifName privateVif 名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return ModifyPrivateVirtualInterfaceSpec
      */
     public ModifyPrivateVirtualInterfaceSpec privateVifName(String privateVifName) {
         this.privateVifName = privateVifName;
@@ -121,7 +146,8 @@ public class ModifyPrivateVirtualInterfaceSpec  implements java.io.Serializable 
     /**
      * set privateVif的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
-     * @param description
+     * @param description privateVif的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+     * @return ModifyPrivateVirtualInterfaceSpec
      */
     public ModifyPrivateVirtualInterfaceSpec description(String description) {
         this.description = description;
@@ -132,10 +158,23 @@ public class ModifyPrivateVirtualInterfaceSpec  implements java.io.Serializable 
     /**
      * set 更新privateVif的健康检查相关属性
      *
-     * @param healthCheck
+     * @param healthCheck 更新privateVif的健康检查相关属性
+     * @return ModifyPrivateVirtualInterfaceSpec
      */
     public ModifyPrivateVirtualInterfaceSpec healthCheck(HealthCheckSpec healthCheck) {
         this.healthCheck = healthCheck;
+        return this;
+    }
+
+
+    /**
+     * set 更新privateVif的监控相关属性
+     *
+     * @param monitor 更新privateVif的监控相关属性
+     * @return ModifyPrivateVirtualInterfaceSpec
+     */
+    public ModifyPrivateVirtualInterfaceSpec monitor(MonitorSpec monitor) {
+        this.monitor = monitor;
         return this;
     }
 

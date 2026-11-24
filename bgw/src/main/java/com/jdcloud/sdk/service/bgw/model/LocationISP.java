@@ -134,7 +134,8 @@ public class LocationISP  implements java.io.Serializable {
     /**
      * set LocationISP的Id
      *
-     * @param locationISPId
+     * @param locationISPId LocationISP的Id
+     * @return LocationISP
      */
     public LocationISP locationISPId(String locationISPId) {
         this.locationISPId = locationISPId;
@@ -145,7 +146,8 @@ public class LocationISP  implements java.io.Serializable {
     /**
      * set LocationISP的名称, 只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param ispName
+     * @param ispName LocationISP的名称, 只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return LocationISP
      */
     public LocationISP ispName(String ispName) {
         this.ispName = ispName;
@@ -156,7 +158,8 @@ public class LocationISP  implements java.io.Serializable {
     /**
      * set Location的编码
      *
-     * @param locationCode
+     * @param locationCode Location的编码
+     * @return LocationISP
      */
     public LocationISP locationCode(String locationCode) {
         this.locationCode = locationCode;
@@ -167,7 +170,8 @@ public class LocationISP  implements java.io.Serializable {
     /**
      * set LocationISP的编码
      *
-     * @param ispCode
+     * @param ispCode LocationISP的编码
+     * @return LocationISP
      */
     public LocationISP ispCode(String ispCode) {
         this.ispCode = ispCode;

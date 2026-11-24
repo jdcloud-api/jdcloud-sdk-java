@@ -117,7 +117,8 @@ public class PropagationAttribute  implements java.io.Serializable {
     /**
      * set vpc接口绑定的vpcId
      *
-     * @param vpcId
+     * @param vpcId vpc接口绑定的vpcId
+     * @return PropagationAttribute
      */
     public PropagationAttribute vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -128,7 +129,8 @@ public class PropagationAttribute  implements java.io.Serializable {
     /**
      * set 选择传播网段的方式all,partial，none
      *
-     * @param propagateType
+     * @param propagateType 选择传播网段的方式all,partial，none
+     * @return PropagationAttribute
      */
     public PropagationAttribute propagateType(String propagateType) {
         this.propagateType = propagateType;
@@ -139,7 +141,8 @@ public class PropagationAttribute  implements java.io.Serializable {
     /**
     * set 选择传播的网段列表
     *
-    * @param subnetIds
+    * @param subnetIds 选择传播的网段列表
+    * @return PropagationAttribute
     */
     public PropagationAttribute subnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;

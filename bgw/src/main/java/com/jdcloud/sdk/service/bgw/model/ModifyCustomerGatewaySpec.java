@@ -112,7 +112,8 @@ public class ModifyCustomerGatewaySpec  implements java.io.Serializable {
     /**
      * set 客户网关的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param customerGatewayName
+     * @param customerGatewayName 客户网关的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return ModifyCustomerGatewaySpec
      */
     public ModifyCustomerGatewaySpec customerGatewayName(String customerGatewayName) {
         this.customerGatewayName = customerGatewayName;
@@ -123,7 +124,8 @@ public class ModifyCustomerGatewaySpec  implements java.io.Serializable {
     /**
      * set 客户网关的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
-     * @param description
+     * @param description 客户网关的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+     * @return ModifyCustomerGatewaySpec
      */
     public ModifyCustomerGatewaySpec description(String description) {
         this.description = description;
@@ -134,7 +136,8 @@ public class ModifyCustomerGatewaySpec  implements java.io.Serializable {
     /**
     * set 修改后的客户网关上的IP地址列表，可以为单IP、双IP、四IP，IP不能相同
     *
-    * @param customerIps
+    * @param customerIps 修改后的客户网关上的IP地址列表，可以为单IP、双IP、四IP，IP不能相同
+    * @return ModifyCustomerGatewaySpec
     */
     public ModifyCustomerGatewaySpec customerIps(List<String> customerIps) {
         this.customerIps = customerIps;

@@ -33,7 +33,7 @@ public class NqaSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 连续两次发送探测报文的时间间隔。取值为1-20s。默认为4s
+     * 连续两次发送探测报文的时间间隔，需大于等于responseTimeout。取值为1-20s。默认为4s
      */
     private Integer txInterval;
 
@@ -43,14 +43,14 @@ public class NqaSpec  implements java.io.Serializable {
     private Integer thresholdCount;
 
     /**
-     * 一次NQA探测的超时时间。取值1-10s，默认为3s
+     * 一次NQA探测的超时时间，不能大于txInterval。取值1-10s，默认为3s
      */
     private Integer responseTimeout;
 
 
 
     /**
-     * get 连续两次发送探测报文的时间间隔。取值为1-20s。默认为4s
+     * get 连续两次发送探测报文的时间间隔，需大于等于responseTimeout。取值为1-20s。默认为4s
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class NqaSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 连续两次发送探测报文的时间间隔。取值为1-20s。默认为4s
+     * set 连续两次发送探测报文的时间间隔，需大于等于responseTimeout。取值为1-20s。默认为4s
      *
      * @param txInterval
      */
@@ -88,7 +88,7 @@ public class NqaSpec  implements java.io.Serializable {
 
 
     /**
-     * get 一次NQA探测的超时时间。取值1-10s，默认为3s
+     * get 一次NQA探测的超时时间，不能大于txInterval。取值1-10s，默认为3s
      *
      * @return
      */
@@ -97,7 +97,7 @@ public class NqaSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 一次NQA探测的超时时间。取值1-10s，默认为3s
+     * set 一次NQA探测的超时时间，不能大于txInterval。取值1-10s，默认为3s
      *
      * @param responseTimeout
      */
@@ -108,9 +108,10 @@ public class NqaSpec  implements java.io.Serializable {
 
 
     /**
-     * set 连续两次发送探测报文的时间间隔。取值为1-20s。默认为4s
+     * set 连续两次发送探测报文的时间间隔，需大于等于responseTimeout。取值为1-20s。默认为4s
      *
-     * @param txInterval
+     * @param txInterval 连续两次发送探测报文的时间间隔，需大于等于responseTimeout。取值为1-20s。默认为4s
+     * @return NqaSpec
      */
     public NqaSpec txInterval(Integer txInterval) {
         this.txInterval = txInterval;
@@ -121,7 +122,8 @@ public class NqaSpec  implements java.io.Serializable {
     /**
      * set 指定发送连续探测报文的个数。取值为3-8个，默认为5
      *
-     * @param thresholdCount
+     * @param thresholdCount 指定发送连续探测报文的个数。取值为3-8个，默认为5
+     * @return NqaSpec
      */
     public NqaSpec thresholdCount(Integer thresholdCount) {
         this.thresholdCount = thresholdCount;
@@ -130,9 +132,10 @@ public class NqaSpec  implements java.io.Serializable {
 
 
     /**
-     * set 一次NQA探测的超时时间。取值1-10s，默认为3s
+     * set 一次NQA探测的超时时间，不能大于txInterval。取值1-10s，默认为3s
      *
-     * @param responseTimeout
+     * @param responseTimeout 一次NQA探测的超时时间，不能大于txInterval。取值1-10s，默认为3s
+     * @return NqaSpec
      */
     public NqaSpec responseTimeout(Integer responseTimeout) {
         this.responseTimeout = responseTimeout;

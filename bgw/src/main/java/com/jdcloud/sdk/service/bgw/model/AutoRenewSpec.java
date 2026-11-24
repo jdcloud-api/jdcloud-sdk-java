@@ -110,7 +110,8 @@ public class AutoRenewSpec  implements java.io.Serializable {
     /**
      * set 是否开启自动续费,取值范围&quot;OPEN&quot;,&quot;CLOSE&quot;
      *
-     * @param autoRenewStatus
+     * @param autoRenewStatus 是否开启自动续费,取值范围&quot;OPEN&quot;,&quot;CLOSE&quot;
+     * @return AutoRenewSpec
      */
     public AutoRenewSpec autoRenewStatus(String autoRenewStatus) {
         this.autoRenewStatus = autoRenewStatus;
@@ -121,7 +122,8 @@ public class AutoRenewSpec  implements java.io.Serializable {
     /**
      * set 自动续费周期,取值为MONTH，YEAR；autoRenewStatus为OPEN时默认为MONTH。
      *
-     * @param renewTimeUnit
+     * @param renewTimeUnit 自动续费周期,取值为MONTH，YEAR；autoRenewStatus为OPEN时默认为MONTH。
+     * @return AutoRenewSpec
      */
     public AutoRenewSpec renewTimeUnit(String renewTimeUnit) {
         this.renewTimeUnit = renewTimeUnit;
@@ -132,7 +134,8 @@ public class AutoRenewSpec  implements java.io.Serializable {
     /**
      * set 端口租用费付费时长，renewTimeUnit为MONTH时取值范围1，2，3，4，5，6，7，8，9；renewTimeUnit为YEAR时取值范围1,2,3。autoRenewStatus为OPEN时默认为1
      *
-     * @param renewTimeSpan
+     * @param renewTimeSpan 端口租用费付费时长，renewTimeUnit为MONTH时取值范围1，2，3，4，5，6，7，8，9；renewTimeUnit为YEAR时取值范围1,2,3。autoRenewStatus为OPEN时默认为1
+     * @return AutoRenewSpec
      */
     public AutoRenewSpec renewTimeSpan(Integer renewTimeSpan) {
         this.renewTimeSpan = renewTimeSpan;

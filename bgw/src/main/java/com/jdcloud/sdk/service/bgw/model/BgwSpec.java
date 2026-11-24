@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.bgw.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -54,6 +56,21 @@ public class BgwSpec  implements java.io.Serializable {
      * 边界网关可用区，azType为edge时，边缘BGW必须指定可用区，edge为standard时忽略
      */
     private String az;
+
+    /**
+     * 用户标签
+     */
+    
+    private List<Tag> userTags;
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
+
+    /**
+     * 物理资源专区, 仅内部使用[JDStack]
+     */
+    private String resourceTag;
 
 
 
@@ -133,11 +150,69 @@ public class BgwSpec  implements java.io.Serializable {
     }
 
 
+    /**
+    * get 用户标签
+    *
+    * @return
+    */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+    * set 用户标签
+    *
+    * @param userTags
+    */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
+
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
+    /**
+     * get 物理资源专区, 仅内部使用[JDStack]
+     *
+     * @return
+     */
+    public String getResourceTag() {
+        return resourceTag;
+    }
+
+    /**
+     * set 物理资源专区, 仅内部使用[JDStack]
+     *
+     * @param resourceTag
+     */
+    public void setResourceTag(String resourceTag) {
+        this.resourceTag = resourceTag;
+    }
+
+
 
     /**
      * set 边界网关的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param bgwName
+     * @param bgwName 边界网关的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return BgwSpec
      */
     public BgwSpec bgwName(String bgwName) {
         this.bgwName = bgwName;
@@ -148,7 +223,8 @@ public class BgwSpec  implements java.io.Serializable {
     /**
      * set 边界网关的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
-     * @param description
+     * @param description 边界网关的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+     * @return BgwSpec
      */
     public BgwSpec description(String description) {
         this.description = description;
@@ -159,7 +235,8 @@ public class BgwSpec  implements java.io.Serializable {
     /**
      * set 边界网关az类型，取值：standard(标准BGW)，edge(边缘BGW)
      *
-     * @param azType
+     * @param azType 边界网关az类型，取值：standard(标准BGW)，edge(边缘BGW)
+     * @return BgwSpec
      */
     public BgwSpec azType(String azType) {
         this.azType = azType;
@@ -170,7 +247,8 @@ public class BgwSpec  implements java.io.Serializable {
     /**
      * set 边界网关可用区，azType为edge时，边缘BGW必须指定可用区，edge为standard时忽略
      *
-     * @param az
+     * @param az 边界网关可用区，azType为edge时，边缘BGW必须指定可用区，edge为standard时忽略
+     * @return BgwSpec
      */
     public BgwSpec az(String az) {
         this.az = az;
@@ -178,4 +256,52 @@ public class BgwSpec  implements java.io.Serializable {
     }
 
 
+    /**
+    * set 用户标签
+    *
+    * @param userTags 用户标签
+    * @return BgwSpec
+    */
+    public BgwSpec userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId 资源所属资源组ID
+     * @return BgwSpec
+     */
+    public BgwSpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+    /**
+     * set 物理资源专区, 仅内部使用[JDStack]
+     *
+     * @param resourceTag 物理资源专区, 仅内部使用[JDStack]
+     * @return BgwSpec
+     */
+    public BgwSpec resourceTag(String resourceTag) {
+        this.resourceTag = resourceTag;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 用户标签
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
+    }
 }

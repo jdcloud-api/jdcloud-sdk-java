@@ -86,7 +86,8 @@ public class PeerIps  implements java.io.Serializable {
     /**
      * set Peer用户侧地址
      *
-     * @param customerIp
+     * @param customerIp Peer用户侧地址
+     * @return PeerIps
      */
     public PeerIps customerIp(String customerIp) {
         this.customerIp = customerIp;
@@ -97,7 +98,8 @@ public class PeerIps  implements java.io.Serializable {
     /**
      * set Peer京东云侧地址
      *
-     * @param jdCloudIp
+     * @param jdCloudIp Peer京东云侧地址
+     * @return PeerIps
      */
     public PeerIps jdCloudIp(String jdCloudIp) {
         this.jdCloudIp = jdCloudIp;

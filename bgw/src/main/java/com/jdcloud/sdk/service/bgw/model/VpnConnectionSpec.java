@@ -82,6 +82,16 @@ public class VpnConnectionSpec  implements java.io.Serializable {
      */
     private ChargeSpec chargeSpec;
 
+    /**
+     * 用户标签
+     */
+    
+    private List<Tag> userTags;
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -236,11 +246,50 @@ public class VpnConnectionSpec  implements java.io.Serializable {
     }
 
 
+    /**
+    * get 用户标签
+    *
+    * @return
+    */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+    * set 用户标签
+    *
+    * @param userTags
+    */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
+
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
 
     /**
      * set VPN连接的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param vpnConnectionName
+     * @param vpnConnectionName VPN连接的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return VpnConnectionSpec
      */
     public VpnConnectionSpec vpnConnectionName(String vpnConnectionName) {
         this.vpnConnectionName = vpnConnectionName;
@@ -251,7 +300,8 @@ public class VpnConnectionSpec  implements java.io.Serializable {
     /**
      * set VPN连接的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
-     * @param description
+     * @param description VPN连接的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+     * @return VpnConnectionSpec
      */
     public VpnConnectionSpec description(String description) {
         this.description = description;
@@ -262,7 +312,8 @@ public class VpnConnectionSpec  implements java.io.Serializable {
     /**
      * set 边界网关的Id
      *
-     * @param bgwId
+     * @param bgwId 边界网关的Id
+     * @return VpnConnectionSpec
      */
     public VpnConnectionSpec bgwId(String bgwId) {
         this.bgwId = bgwId;
@@ -273,7 +324,8 @@ public class VpnConnectionSpec  implements java.io.Serializable {
     /**
      * set 客户网关的Id
      *
-     * @param cgwId
+     * @param cgwId 客户网关的Id
+     * @return VpnConnectionSpec
      */
     public VpnConnectionSpec cgwId(String cgwId) {
         this.cgwId = cgwId;
@@ -284,7 +336,8 @@ public class VpnConnectionSpec  implements java.io.Serializable {
     /**
      * set “是否使用BGP路由，取值范围为：false（不使能）、true（使能），默认为：true”
      *
-     * @param bgpEnabled
+     * @param bgpEnabled “是否使用BGP路由，取值范围为：false（不使能）、true（使能），默认为：true”
+     * @return VpnConnectionSpec
      */
     public VpnConnectionSpec bgpEnabled(Boolean bgpEnabled) {
         this.bgpEnabled = bgpEnabled;
@@ -295,7 +348,8 @@ public class VpnConnectionSpec  implements java.io.Serializable {
     /**
      * set 本地的BGP ASN号，支持16位的私有ASN，取值范围为：64512~65534，默认从BGW继承65000
      *
-     * @param localAsn
+     * @param localAsn 本地的BGP ASN号，支持16位的私有ASN，取值范围为：64512~65534，默认从BGW继承65000
+     * @return VpnConnectionSpec
      */
     public VpnConnectionSpec localAsn(Integer localAsn) {
         this.localAsn = localAsn;
@@ -306,7 +360,8 @@ public class VpnConnectionSpec  implements java.io.Serializable {
     /**
     * set VPN连接的2个公网IP线路信息。当BGW为标准BGW时，忽略此参数。当BGW为边缘BGW时，可配置2个公网IP线路，其值可通过调用describeEdgeIpProviders获取不同边缘节点的边缘公网IP线路信息，不指定provider时，系统会自动选择describeEdgeIpProviders获取的此边缘节点第1顺序的线路作为第1个provider，边缘节点第2顺序的线路作为第2个provider，特殊情况：当获取的线路只有1个时，provider2&#x3D;provider1
     *
-    * @param providers
+    * @param providers VPN连接的2个公网IP线路信息。当BGW为标准BGW时，忽略此参数。当BGW为边缘BGW时，可配置2个公网IP线路，其值可通过调用describeEdgeIpProviders获取不同边缘节点的边缘公网IP线路信息，不指定provider时，系统会自动选择describeEdgeIpProviders获取的此边缘节点第1顺序的线路作为第1个provider，边缘节点第2顺序的线路作为第2个provider，特殊情况：当获取的线路只有1个时，provider2&#x3D;provider1
+    * @return VpnConnectionSpec
     */
     public VpnConnectionSpec providers(List<String> providers) {
         this.providers = providers;
@@ -317,10 +372,35 @@ public class VpnConnectionSpec  implements java.io.Serializable {
     /**
      * set 计费配置，仅支持按用量，默认按用量
      *
-     * @param chargeSpec
+     * @param chargeSpec 计费配置，仅支持按用量，默认按用量
+     * @return VpnConnectionSpec
      */
     public VpnConnectionSpec chargeSpec(ChargeSpec chargeSpec) {
         this.chargeSpec = chargeSpec;
+        return this;
+    }
+
+
+    /**
+    * set 用户标签
+    *
+    * @param userTags 用户标签
+    * @return VpnConnectionSpec
+    */
+    public VpnConnectionSpec userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId 资源所属资源组ID
+     * @return VpnConnectionSpec
+     */
+    public VpnConnectionSpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 
@@ -336,5 +416,17 @@ public class VpnConnectionSpec  implements java.io.Serializable {
             this.providers = new ArrayList<>();
         }
         this.providers.add(provider);
+    }
+
+    /**
+     * add item to 用户标签
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
     }
 }

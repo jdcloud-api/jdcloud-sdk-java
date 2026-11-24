@@ -232,7 +232,8 @@ public class Location  implements java.io.Serializable {
     /**
      * set Location的Id
      *
-     * @param locationId
+     * @param locationId Location的Id
+     * @return Location
      */
     public Location locationId(String locationId) {
         this.locationId = locationId;
@@ -243,7 +244,8 @@ public class Location  implements java.io.Serializable {
     /**
      * set Location名称, 只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param locationName
+     * @param locationName Location名称, 只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return Location
      */
     public Location locationName(String locationName) {
         this.locationName = locationName;
@@ -254,7 +256,8 @@ public class Location  implements java.io.Serializable {
     /**
      * set Location的编码
      *
-     * @param locationCode
+     * @param locationCode Location的编码
+     * @return Location
      */
     public Location locationCode(String locationCode) {
         this.locationCode = locationCode;
@@ -265,7 +268,8 @@ public class Location  implements java.io.Serializable {
     /**
      * set Location的类型
      *
-     * @param locationType
+     * @param locationType Location的类型
+     * @return Location
      */
     public Location locationType(String locationType) {
         this.locationType = locationType;
@@ -276,7 +280,8 @@ public class Location  implements java.io.Serializable {
     /**
      * set Location的地址
      *
-     * @param address
+     * @param address Location的地址
+     * @return Location
      */
     public Location address(String address) {
         this.address = address;
@@ -287,7 +292,8 @@ public class Location  implements java.io.Serializable {
     /**
      * set Location创建时间
      *
-     * @param createdTime
+     * @param createdTime Location创建时间
+     * @return Location
      */
     public Location createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -298,7 +304,8 @@ public class Location  implements java.io.Serializable {
     /**
     * set 支持的端口规格列表
     *
-    * @param locationPortSpecs
+    * @param locationPortSpecs 支持的端口规格列表
+    * @return Location
     */
     public Location locationPortSpecs(List<LocationPortSpec> locationPortSpecs) {
         this.locationPortSpecs = locationPortSpecs;
@@ -309,7 +316,8 @@ public class Location  implements java.io.Serializable {
     /**
     * set 支持的运营商列表
     *
-    * @param locationISPs
+    * @param locationISPs 支持的运营商列表
+    * @return Location
     */
     public Location locationISPs(List<LocationISP> locationISPs) {
         this.locationISPs = locationISPs;

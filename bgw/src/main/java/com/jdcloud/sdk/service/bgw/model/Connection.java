@@ -125,6 +125,21 @@ public class Connection  implements java.io.Serializable {
      */
     private Charge charge;
 
+    /**
+     * 秒级监控信息
+     */
+    private Monitor monitor;
+
+    /**
+     * Tag信息
+     */
+    
+    private List<Tag> tags;
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -469,11 +484,69 @@ public class Connection  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 秒级监控信息
+     *
+     * @return
+     */
+    public Monitor getMonitor() {
+        return monitor;
+    }
+
+    /**
+     * set 秒级监控信息
+     *
+     * @param monitor
+     */
+    public void setMonitor(Monitor monitor) {
+        this.monitor = monitor;
+    }
+
+
+    /**
+    * get Tag信息
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Tag信息
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
 
     /**
      * set Connection的Id
      *
-     * @param connectionId
+     * @param connectionId Connection的Id
+     * @return Connection
      */
     public Connection connectionId(String connectionId) {
         this.connectionId = connectionId;
@@ -484,7 +557,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 专线的名称, 只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param connectionName
+     * @param connectionName 专线的名称, 只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return Connection
      */
     public Connection connectionName(String connectionName) {
         this.connectionName = connectionName;
@@ -495,7 +569,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 自助专线开通的地域信息；自助专线和托管专线有location信息
      *
-     * @param location
+     * @param location 自助专线开通的地域信息；自助专线和托管专线有location信息
+     * @return Connection
      */
     public Connection location(ConnectionLocation location) {
         this.location = location;
@@ -506,7 +581,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 专线服务商的信息;只在type为jcloud_partner时有合作伙伴信息详情
      *
-     * @param partner
+     * @param partner 专线服务商的信息;只在type为jcloud_partner时有合作伙伴信息详情
+     * @return Connection
      */
     public Connection partner(Partner partner) {
         this.partner = partner;
@@ -517,7 +593,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 类型, jcloud_hosted:托管连接; jcloud_partner:合作伙伴连接; jcloud:自助连接；jcloud_self:自助连接。
      *
-     * @param type
+     * @param type 类型, jcloud_hosted:托管连接; jcloud_partner:合作伙伴连接; jcloud:自助连接；jcloud_self:自助连接。
+     * @return Connection
      */
     public Connection type(String type) {
         this.type = type;
@@ -528,7 +605,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 申请的专线带宽：Mbps
      *
-     * @param bandwidthMbps
+     * @param bandwidthMbps 申请的专线带宽：Mbps
+     * @return Connection
      */
     public Connection bandwidthMbps(Integer bandwidthMbps) {
         this.bandwidthMbps = bandwidthMbps;
@@ -539,7 +617,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 订单编号
      *
-     * @param orderId
+     * @param orderId 订单编号
+     * @return Connection
      */
     public Connection orderId(String orderId) {
         this.orderId = orderId;
@@ -550,7 +629,8 @@ public class Connection  implements java.io.Serializable {
     /**
     * set connection上通道Id列表
     *
-    * @param vifIds
+    * @param vifIds connection上通道Id列表
+    * @return Connection
     */
     public Connection vifIds(List<String> vifIds) {
         this.vifIds = vifIds;
@@ -561,7 +641,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 专线的状态，取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、已删除(Deleted)、审核未通过(Rejected)
      *
-     * @param connectionStatus
+     * @param connectionStatus 专线的状态，取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、已删除(Deleted)、审核未通过(Rejected)
+     * @return Connection
      */
     public Connection connectionStatus(String connectionStatus) {
         this.connectionStatus = connectionStatus;
@@ -572,7 +653,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set connection的描述, 允许输入UTF-8编码下的全部字符，不超过256字符。
      *
-     * @param description
+     * @param description connection的描述, 允许输入UTF-8编码下的全部字符，不超过256字符。
+     * @return Connection
      */
     public Connection description(String description) {
         this.description = description;
@@ -583,7 +665,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 专线申请的时间
      *
-     * @param createdTime
+     * @param createdTime 专线申请的时间
+     * @return Connection
      */
     public Connection createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -594,7 +677,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 客户idc地址，取值范围：1~100个字符
      *
-     * @param idcAddress
+     * @param idcAddress 客户idc地址，取值范围：1~100个字符
+     * @return Connection
      */
     public Connection idcAddress(String idcAddress) {
         this.idcAddress = idcAddress;
@@ -605,7 +689,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 联系人名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param contactName
+     * @param contactName 联系人名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return Connection
      */
     public Connection contactName(String contactName) {
         this.contactName = contactName;
@@ -616,7 +701,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 联系人手机号码，11位数字且需要13、14、15、16、17、18、19开头
      *
-     * @param phoneNumber
+     * @param phoneNumber 联系人手机号码，11位数字且需要13、14、15、16、17、18、19开头
+     * @return Connection
      */
     public Connection phoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
@@ -627,7 +713,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 审核不通过的原因
      *
-     * @param rejectedReason
+     * @param rejectedReason 审核不通过的原因
+     * @return Connection
      */
     public Connection rejectedReason(String rejectedReason) {
         this.rejectedReason = rejectedReason;
@@ -638,7 +725,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 初装费资源ID
      *
-     * @param resourceIdInitial
+     * @param resourceIdInitial 初装费资源ID
+     * @return Connection
      */
     public Connection resourceIdInitial(String resourceIdInitial) {
         this.resourceIdInitial = resourceIdInitial;
@@ -649,7 +737,8 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 端口租用费资源ID
      *
-     * @param resourceIdPTenancy
+     * @param resourceIdPTenancy 端口租用费资源ID
+     * @return Connection
      */
     public Connection resourceIdPTenancy(String resourceIdPTenancy) {
         this.resourceIdPTenancy = resourceIdPTenancy;
@@ -660,10 +749,47 @@ public class Connection  implements java.io.Serializable {
     /**
      * set 计费信息
      *
-     * @param charge
+     * @param charge 计费信息
+     * @return Connection
      */
     public Connection charge(Charge charge) {
         this.charge = charge;
+        return this;
+    }
+
+
+    /**
+     * set 秒级监控信息
+     *
+     * @param monitor 秒级监控信息
+     * @return Connection
+     */
+    public Connection monitor(Monitor monitor) {
+        this.monitor = monitor;
+        return this;
+    }
+
+
+    /**
+    * set Tag信息
+    *
+    * @param tags Tag信息
+    * @return Connection
+    */
+    public Connection tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId 资源所属资源组ID
+     * @return Connection
+     */
+    public Connection resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 
@@ -679,5 +805,17 @@ public class Connection  implements java.io.Serializable {
             this.vifIds = new ArrayList<>();
         }
         this.vifIds.add(vifId);
+    }
+
+    /**
+     * add item to Tag信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 }

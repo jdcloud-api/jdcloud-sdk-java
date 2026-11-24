@@ -165,7 +165,8 @@ public class BgpPeerSpec  implements java.io.Serializable {
     /**
      * set BgpPeer的地址簇：目前仅支持ipv4，默认为ipv4
      *
-     * @param addressFamily
+     * @param addressFamily BgpPeer的地址簇：目前仅支持ipv4，默认为ipv4
+     * @return BgpPeerSpec
      */
     public BgpPeerSpec addressFamily(String addressFamily) {
         this.addressFamily = addressFamily;
@@ -176,7 +177,8 @@ public class BgpPeerSpec  implements java.io.Serializable {
     /**
      * set BpgPeer用户侧地址，创建托管专线时，会将多条物理链路连接到不同的专线接入设备上，以保证服务的高可用性。需为每条物理链路明确指定业务通道两端的路由地址，例如：192.168.1.1/30和192.168.1.2/30，两个IP需在一个网段、不能相同且不能和Secondary IP重叠，客户侧使用第一个地址，京东云使用第二个地址
      *
-     * @param customerIp
+     * @param customerIp BpgPeer用户侧地址，创建托管专线时，会将多条物理链路连接到不同的专线接入设备上，以保证服务的高可用性。需为每条物理链路明确指定业务通道两端的路由地址，例如：192.168.1.1/30和192.168.1.2/30，两个IP需在一个网段、不能相同且不能和Secondary IP重叠，客户侧使用第一个地址，京东云使用第二个地址
+     * @return BgpPeerSpec
      */
     public BgpPeerSpec customerIp(String customerIp) {
         this.customerIp = customerIp;
@@ -187,7 +189,8 @@ public class BgpPeerSpec  implements java.io.Serializable {
     /**
      * set BpgPeer京东云侧地址，创建托管专线时，会将多条物理链路连接到不同的专线接入设备上，以保证服务的高可用性。需为每条物理链路明确指定业务通道两端的路由地址，例如：192.168.1.1/30和192.168.1.2/30，两个IP需在一个网段、不能相同且不能和Secondary IP重叠，客户侧使用第一个地址，京东云使用第二个地址
      *
-     * @param jdCloudIp
+     * @param jdCloudIp BpgPeer京东云侧地址，创建托管专线时，会将多条物理链路连接到不同的专线接入设备上，以保证服务的高可用性。需为每条物理链路明确指定业务通道两端的路由地址，例如：192.168.1.1/30和192.168.1.2/30，两个IP需在一个网段、不能相同且不能和Secondary IP重叠，客户侧使用第一个地址，京东云使用第二个地址
+     * @return BgpPeerSpec
      */
     public BgpPeerSpec jdCloudIp(String jdCloudIp) {
         this.jdCloudIp = jdCloudIp;
@@ -198,7 +201,8 @@ public class BgpPeerSpec  implements java.io.Serializable {
     /**
      * set 用户侧ASN,京东云使用的BGP ASN为64512，取值范围[65001,65499]
      *
-     * @param customerAsn
+     * @param customerAsn 用户侧ASN,京东云使用的BGP ASN为64512，取值范围[65001,65499]
+     * @return BgpPeerSpec
      */
     public BgpPeerSpec customerAsn(Integer customerAsn) {
         this.customerAsn = customerAsn;
@@ -209,7 +213,8 @@ public class BgpPeerSpec  implements java.io.Serializable {
     /**
      * set Bgp配置的认证key
      *
-     * @param authKey
+     * @param authKey Bgp配置的认证key
+     * @return BgpPeerSpec
      */
     public BgpPeerSpec authKey(String authKey) {
         this.authKey = authKey;

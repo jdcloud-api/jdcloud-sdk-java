@@ -115,6 +115,16 @@ public class VpnConnection  implements java.io.Serializable {
      */
     private String az;
 
+    /**
+     * Tag信息
+     */
+    
+    private List<Tag> tags;
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -421,11 +431,50 @@ public class VpnConnection  implements java.io.Serializable {
     }
 
 
+    /**
+    * get Tag信息
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Tag信息
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
 
     /**
      * set VPN connection的Id
      *
-     * @param vpnConnectionId
+     * @param vpnConnectionId VPN connection的Id
+     * @return VpnConnection
      */
     public VpnConnection vpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
@@ -436,7 +485,8 @@ public class VpnConnection  implements java.io.Serializable {
     /**
      * set VPN connection的名称
      *
-     * @param vpnConnectionName
+     * @param vpnConnectionName VPN connection的名称
+     * @return VpnConnection
      */
     public VpnConnection vpnConnectionName(String vpnConnectionName) {
         this.vpnConnectionName = vpnConnectionName;
@@ -447,7 +497,8 @@ public class VpnConnection  implements java.io.Serializable {
     /**
      * set 边界网关的Id
      *
-     * @param bgwId
+     * @param bgwId 边界网关的Id
+     * @return VpnConnection
      */
     public VpnConnection bgwId(String bgwId) {
         this.bgwId = bgwId;
@@ -458,7 +509,8 @@ public class VpnConnection  implements java.io.Serializable {
     /**
      * set 客户网关的Id
      *
-     * @param cgwId
+     * @param cgwId 客户网关的Id
+     * @return VpnConnection
      */
     public VpnConnection cgwId(String cgwId) {
         this.cgwId = cgwId;
@@ -469,7 +521,8 @@ public class VpnConnection  implements java.io.Serializable {
     /**
      * set 是否使能BGP路由
      *
-     * @param bgpEnabled
+     * @param bgpEnabled 是否使能BGP路由
+     * @return VpnConnection
      */
     public VpnConnection bgpEnabled(Boolean bgpEnabled) {
         this.bgpEnabled = bgpEnabled;
@@ -480,7 +533,8 @@ public class VpnConnection  implements java.io.Serializable {
     /**
      * set 本地的BGP ASN号
      *
-     * @param localAsn
+     * @param localAsn 本地的BGP ASN号
+     * @return VpnConnection
      */
     public VpnConnection localAsn(Integer localAsn) {
         this.localAsn = localAsn;
@@ -491,7 +545,8 @@ public class VpnConnection  implements java.io.Serializable {
     /**
     * set VPN connection上分配的本端公网可路由的两个IPv4地址
     *
-    * @param cloudPublicIp
+    * @param cloudPublicIp VPN connection上分配的本端公网可路由的两个IPv4地址
+    * @return VpnConnection
     */
     public VpnConnection cloudPublicIp(List<String> cloudPublicIp) {
         this.cloudPublicIp = cloudPublicIp;
@@ -502,7 +557,8 @@ public class VpnConnection  implements java.io.Serializable {
     /**
     * set VPN连接的2个公网IP线路信息。当VPN为标准VPN时，2个线路都为bgp。当VPN为边缘VPN时，显示使用的2个公网IP线路
     *
-    * @param providers
+    * @param providers VPN连接的2个公网IP线路信息。当VPN为标准VPN时，2个线路都为bgp。当VPN为边缘VPN时，显示使用的2个公网IP线路
+    * @return VpnConnection
     */
     public VpnConnection providers(List<String> providers) {
         this.providers = providers;
@@ -513,7 +569,8 @@ public class VpnConnection  implements java.io.Serializable {
     /**
      * set 当前隧道状态是否满足高可用, 取值范围为: redundancy, no_redundancy
      *
-     * @param haStatus
+     * @param haStatus 当前隧道状态是否满足高可用, 取值范围为: redundancy, no_redundancy
+     * @return VpnConnection
      */
     public VpnConnection haStatus(String haStatus) {
         this.haStatus = haStatus;
@@ -524,7 +581,8 @@ public class VpnConnection  implements java.io.Serializable {
     /**
      * set VPN connection的描述
      *
-     * @param description
+     * @param description VPN connection的描述
+     * @return VpnConnection
      */
     public VpnConnection description(String description) {
         this.description = description;
@@ -535,7 +593,8 @@ public class VpnConnection  implements java.io.Serializable {
     /**
      * set 客户网关的创建时间
      *
-     * @param createdTime
+     * @param createdTime 客户网关的创建时间
+     * @return VpnConnection
      */
     public VpnConnection createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -546,7 +605,8 @@ public class VpnConnection  implements java.io.Serializable {
     /**
      * set 客户网关的更新时间
      *
-     * @param updatedTime
+     * @param updatedTime 客户网关的更新时间
+     * @return VpnConnection
      */
     public VpnConnection updatedTime(String updatedTime) {
         this.updatedTime = updatedTime;
@@ -557,7 +617,8 @@ public class VpnConnection  implements java.io.Serializable {
     /**
      * set 计费信息
      *
-     * @param charge
+     * @param charge 计费信息
+     * @return VpnConnection
      */
     public VpnConnection charge(Charge charge) {
         this.charge = charge;
@@ -568,7 +629,8 @@ public class VpnConnection  implements java.io.Serializable {
     /**
     * set vpn connection policy，IPSec VPN的感兴趣流，用于第二阶段协商
     *
-    * @param trafficSelectors
+    * @param trafficSelectors vpn connection policy，IPSec VPN的感兴趣流，用于第二阶段协商
+    * @return VpnConnection
     */
     public VpnConnection trafficSelectors(List<VpnTrafficSelectorSpec> trafficSelectors) {
         this.trafficSelectors = trafficSelectors;
@@ -579,7 +641,8 @@ public class VpnConnection  implements java.io.Serializable {
     /**
      * set VPN az类型，取值：standard(标准VPN)，edge(边缘VPN)
      *
-     * @param azType
+     * @param azType VPN az类型，取值：standard(标准VPN)，edge(边缘VPN)
+     * @return VpnConnection
      */
     public VpnConnection azType(String azType) {
         this.azType = azType;
@@ -590,10 +653,35 @@ public class VpnConnection  implements java.io.Serializable {
     /**
      * set VPN可用区
      *
-     * @param az
+     * @param az VPN可用区
+     * @return VpnConnection
      */
     public VpnConnection az(String az) {
         this.az = az;
+        return this;
+    }
+
+
+    /**
+    * set Tag信息
+    *
+    * @param tags Tag信息
+    * @return VpnConnection
+    */
+    public VpnConnection tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId 资源所属资源组ID
+     * @return VpnConnection
+     */
+    public VpnConnection resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 
@@ -633,5 +721,17 @@ public class VpnConnection  implements java.io.Serializable {
             this.trafficSelectors = new ArrayList<>();
         }
         this.trafficSelectors.add(trafficSelector);
+    }
+
+    /**
+     * add item to Tag信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 }

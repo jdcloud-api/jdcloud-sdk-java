@@ -80,6 +80,11 @@ public class PrivateVif  implements java.io.Serializable {
     private String privateVifStatus;
 
     /**
+     * 通道不可用原因，取值为：Arrear_NoService(流量费欠费停服或端口到期)
+     */
+    private String inActiveReason;
+
+    /**
      * 通道的描述
      */
     private String description;
@@ -108,6 +113,21 @@ public class PrivateVif  implements java.io.Serializable {
      * 通道健康检查相关信息详情
      */
     private HealthCheck healthCheck;
+
+    /**
+     * 秒级监控信息
+     */
+    private Monitor monitor;
+
+    /**
+     * Tag信息
+     */
+    
+    private List<Tag> tags;
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
 
 
 
@@ -283,6 +303,25 @@ public class PrivateVif  implements java.io.Serializable {
 
 
     /**
+     * get 通道不可用原因，取值为：Arrear_NoService(流量费欠费停服或端口到期)
+     *
+     * @return
+     */
+    public String getInActiveReason() {
+        return inActiveReason;
+    }
+
+    /**
+     * set 通道不可用原因，取值为：Arrear_NoService(流量费欠费停服或端口到期)
+     *
+     * @param inActiveReason
+     */
+    public void setInActiveReason(String inActiveReason) {
+        this.inActiveReason = inActiveReason;
+    }
+
+
+    /**
      * get 通道的描述
      *
      * @return
@@ -396,11 +435,69 @@ public class PrivateVif  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 秒级监控信息
+     *
+     * @return
+     */
+    public Monitor getMonitor() {
+        return monitor;
+    }
+
+    /**
+     * set 秒级监控信息
+     *
+     * @param monitor
+     */
+    public void setMonitor(Monitor monitor) {
+        this.monitor = monitor;
+    }
+
+
+    /**
+    * get Tag信息
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Tag信息
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
 
     /**
      * set 通道的Id
      *
-     * @param privateVifId
+     * @param privateVifId 通道的Id
+     * @return PrivateVif
      */
     public PrivateVif privateVifId(String privateVifId) {
         this.privateVifId = privateVifId;
@@ -411,7 +508,8 @@ public class PrivateVif  implements java.io.Serializable {
     /**
      * set 通道的名称
      *
-     * @param privateVifName
+     * @param privateVifName 通道的名称
+     * @return PrivateVif
      */
     public PrivateVif privateVifName(String privateVifName) {
         this.privateVifName = privateVifName;
@@ -422,7 +520,8 @@ public class PrivateVif  implements java.io.Serializable {
     /**
      * set 连接Id
      *
-     * @param connectionId
+     * @param connectionId 连接Id
+     * @return PrivateVif
      */
     public PrivateVif connectionId(String connectionId) {
         this.connectionId = connectionId;
@@ -433,7 +532,8 @@ public class PrivateVif  implements java.io.Serializable {
     /**
      * set 通道类型,hosted:托管通道; directed:专线通道
      *
-     * @param type
+     * @param type 通道类型,hosted:托管通道; directed:专线通道
+     * @return PrivateVif
      */
     public PrivateVif type(String type) {
         this.type = type;
@@ -444,7 +544,8 @@ public class PrivateVif  implements java.io.Serializable {
     /**
      * set 通道的owner:用户pin
      *
-     * @param privateVifOwner
+     * @param privateVifOwner 通道的owner:用户pin
+     * @return PrivateVif
      */
     public PrivateVif privateVifOwner(String privateVifOwner) {
         this.privateVifOwner = privateVifOwner;
@@ -455,7 +556,8 @@ public class PrivateVif  implements java.io.Serializable {
     /**
      * set 边界网关的Id
      *
-     * @param bgwId
+     * @param bgwId 边界网关的Id
+     * @return PrivateVif
      */
     public PrivateVif bgwId(String bgwId) {
         this.bgwId = bgwId;
@@ -466,7 +568,8 @@ public class PrivateVif  implements java.io.Serializable {
     /**
     * set 通道涉及BgpPeer信息
     *
-    * @param bgpPeers
+    * @param bgpPeers 通道涉及BgpPeer信息
+    * @return PrivateVif
     */
     public PrivateVif bgpPeers(List<BgpPeer> bgpPeers) {
         this.bgpPeers = bgpPeers;
@@ -477,7 +580,8 @@ public class PrivateVif  implements java.io.Serializable {
     /**
      * set 通道的业务vlan,取值范围 [1,4000]
      *
-     * @param vlan
+     * @param vlan 通道的业务vlan,取值范围 [1,4000]
+     * @return PrivateVif
      */
     public PrivateVif vlan(Integer vlan) {
         this.vlan = vlan;
@@ -488,7 +592,8 @@ public class PrivateVif  implements java.io.Serializable {
     /**
      * set 通道的状态，取值为：Confirming(待确认),Rejected（已拒绝）,Pending（配置中）,Active（可用）,Down（不可用）,Deleting（删除中）,Deleted（已删除）,Unknown（未知状态）,InActive(不可用)
      *
-     * @param privateVifStatus
+     * @param privateVifStatus 通道的状态，取值为：Confirming(待确认),Rejected（已拒绝）,Pending（配置中）,Active（可用）,Down（不可用）,Deleting（删除中）,Deleted（已删除）,Unknown（未知状态）,InActive(不可用)
+     * @return PrivateVif
      */
     public PrivateVif privateVifStatus(String privateVifStatus) {
         this.privateVifStatus = privateVifStatus;
@@ -497,9 +602,22 @@ public class PrivateVif  implements java.io.Serializable {
 
 
     /**
+     * set 通道不可用原因，取值为：Arrear_NoService(流量费欠费停服或端口到期)
+     *
+     * @param inActiveReason 通道不可用原因，取值为：Arrear_NoService(流量费欠费停服或端口到期)
+     * @return PrivateVif
+     */
+    public PrivateVif inActiveReason(String inActiveReason) {
+        this.inActiveReason = inActiveReason;
+        return this;
+    }
+
+
+    /**
      * set 通道的描述
      *
-     * @param description
+     * @param description 通道的描述
+     * @return PrivateVif
      */
     public PrivateVif description(String description) {
         this.description = description;
@@ -510,7 +628,8 @@ public class PrivateVif  implements java.io.Serializable {
     /**
      * set 通道创建的时间
      *
-     * @param createdTime
+     * @param createdTime 通道创建的时间
+     * @return PrivateVif
      */
     public PrivateVif createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -521,7 +640,8 @@ public class PrivateVif  implements java.io.Serializable {
     /**
      * set 是否开启bgp，仅支持开启
      *
-     * @param enableBgp
+     * @param enableBgp 是否开启bgp，仅支持开启
+     * @return PrivateVif
      */
     public PrivateVif enableBgp(Boolean enableBgp) {
         this.enableBgp = enableBgp;
@@ -532,7 +652,8 @@ public class PrivateVif  implements java.io.Serializable {
     /**
     * set 通道Peer相关信息详情
     *
-    * @param peers
+    * @param peers 通道Peer相关信息详情
+    * @return PrivateVif
     */
     public PrivateVif peers(List<Peer> peers) {
         this.peers = peers;
@@ -543,7 +664,8 @@ public class PrivateVif  implements java.io.Serializable {
     /**
      * set 通道Bgp相关信息详情
      *
-     * @param bgp
+     * @param bgp 通道Bgp相关信息详情
+     * @return PrivateVif
      */
     public PrivateVif bgp(Bgp bgp) {
         this.bgp = bgp;
@@ -554,10 +676,47 @@ public class PrivateVif  implements java.io.Serializable {
     /**
      * set 通道健康检查相关信息详情
      *
-     * @param healthCheck
+     * @param healthCheck 通道健康检查相关信息详情
+     * @return PrivateVif
      */
     public PrivateVif healthCheck(HealthCheck healthCheck) {
         this.healthCheck = healthCheck;
+        return this;
+    }
+
+
+    /**
+     * set 秒级监控信息
+     *
+     * @param monitor 秒级监控信息
+     * @return PrivateVif
+     */
+    public PrivateVif monitor(Monitor monitor) {
+        this.monitor = monitor;
+        return this;
+    }
+
+
+    /**
+    * set Tag信息
+    *
+    * @param tags Tag信息
+    * @return PrivateVif
+    */
+    public PrivateVif tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId 资源所属资源组ID
+     * @return PrivateVif
+     */
+    public PrivateVif resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 
@@ -585,5 +744,17 @@ public class PrivateVif  implements java.io.Serializable {
             this.peers = new ArrayList<>();
         }
         this.peers.add(peer);
+    }
+
+    /**
+     * add item to Tag信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 }

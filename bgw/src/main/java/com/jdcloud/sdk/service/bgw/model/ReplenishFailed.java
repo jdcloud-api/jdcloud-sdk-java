@@ -86,7 +86,8 @@ public class ReplenishFailed  implements java.io.Serializable {
     /**
      * set 失败Connection的Id
      *
-     * @param connectionId
+     * @param connectionId 失败Connection的Id
+     * @return ReplenishFailed
      */
     public ReplenishFailed connectionId(String connectionId) {
         this.connectionId = connectionId;
@@ -97,7 +98,8 @@ public class ReplenishFailed  implements java.io.Serializable {
     /**
      * set 失败原因
      *
-     * @param reason
+     * @param reason 失败原因
+     * @return ReplenishFailed
      */
     public ReplenishFailed reason(String reason) {
         this.reason = reason;

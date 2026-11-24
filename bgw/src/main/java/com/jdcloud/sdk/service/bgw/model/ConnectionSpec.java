@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.bgw.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -86,6 +88,16 @@ public class ConnectionSpec  implements java.io.Serializable {
      * 专线接入点信息,type为jcloud或jcloud_hosted时必传
      */
     private LocationSpec location;
+
+    /**
+     * 用户标签
+     */
+    
+    private List<Tag> userTags;
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
 
 
 
@@ -279,11 +291,50 @@ public class ConnectionSpec  implements java.io.Serializable {
     }
 
 
+    /**
+    * get 用户标签
+    *
+    * @return
+    */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+    * set 用户标签
+    *
+    * @param userTags
+    */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
+
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
 
     /**
      * set 连接的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param connectionName
+     * @param connectionName 连接的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return ConnectionSpec
      */
     public ConnectionSpec connectionName(String connectionName) {
         this.connectionName = connectionName;
@@ -294,7 +345,8 @@ public class ConnectionSpec  implements java.io.Serializable {
     /**
      * set 合作伙伴编码;只在创建合作伙伴连接时生效，通过调用[describePartners](../Partner/describePartners.md)接口获取
      *
-     * @param partnerCode
+     * @param partnerCode 合作伙伴编码;只在创建合作伙伴连接时生效，通过调用[describePartners](../Partner/describePartners.md)接口获取
+     * @return ConnectionSpec
      */
     public ConnectionSpec partnerCode(String partnerCode) {
         this.partnerCode = partnerCode;
@@ -305,7 +357,8 @@ public class ConnectionSpec  implements java.io.Serializable {
     /**
      * set 创建专线类型；jcloud_hosted:托管连接; jcloud_partner:合作伙伴连接; jcloud:自助连接
      *
-     * @param type
+     * @param type 创建专线类型；jcloud_hosted:托管连接; jcloud_partner:合作伙伴连接; jcloud:自助连接
+     * @return ConnectionSpec
      */
     public ConnectionSpec type(String type) {
         this.type = type;
@@ -316,7 +369,8 @@ public class ConnectionSpec  implements java.io.Serializable {
     /**
      * set 专线的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
-     * @param description
+     * @param description 专线的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+     * @return ConnectionSpec
      */
     public ConnectionSpec description(String description) {
         this.description = description;
@@ -327,7 +381,8 @@ public class ConnectionSpec  implements java.io.Serializable {
     /**
      * set 客户idc地址，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
-     * @param idcAddress
+     * @param idcAddress 客户idc地址，允许输入UTF-8编码下的全部字符，不超过256字符。
+     * @return ConnectionSpec
      */
     public ConnectionSpec idcAddress(String idcAddress) {
         this.idcAddress = idcAddress;
@@ -338,7 +393,8 @@ public class ConnectionSpec  implements java.io.Serializable {
     /**
      * set 联系人名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param contactName
+     * @param contactName 联系人名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return ConnectionSpec
      */
     public ConnectionSpec contactName(String contactName) {
         this.contactName = contactName;
@@ -349,7 +405,8 @@ public class ConnectionSpec  implements java.io.Serializable {
     /**
      * set 联系人手机号码，11位数字且需要13、14、15、16、17、18、19开头
      *
-     * @param phoneNumber
+     * @param phoneNumber 联系人手机号码，11位数字且需要13、14、15、16、17、18、19开头
+     * @return ConnectionSpec
      */
     public ConnectionSpec phoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
@@ -360,7 +417,8 @@ public class ConnectionSpec  implements java.io.Serializable {
     /**
      * set 合作伙伴连接的时长，取值范围：1,3,6,12,24,36，单位月，默认值为6
      *
-     * @param chargeDuration
+     * @param chargeDuration 合作伙伴连接的时长，取值范围：1,3,6,12,24,36，单位月，默认值为6
+     * @return ConnectionSpec
      */
     public ConnectionSpec chargeDuration(Integer chargeDuration) {
         this.chargeDuration = chargeDuration;
@@ -371,7 +429,8 @@ public class ConnectionSpec  implements java.io.Serializable {
     /**
      * set 初装费订单自动支付设置,取值范围：true,false,值为true时自动支付
      *
-     * @param autoPay
+     * @param autoPay 初装费订单自动支付设置,取值范围：true,false,值为true时自动支付
+     * @return ConnectionSpec
      */
     public ConnectionSpec autoPay(Boolean autoPay) {
         this.autoPay = autoPay;
@@ -382,7 +441,8 @@ public class ConnectionSpec  implements java.io.Serializable {
     /**
      * set 专线接入点信息,type为jcloud或jcloud_hosted时必传
      *
-     * @param location
+     * @param location 专线接入点信息,type为jcloud或jcloud_hosted时必传
+     * @return ConnectionSpec
      */
     public ConnectionSpec location(LocationSpec location) {
         this.location = location;
@@ -390,4 +450,40 @@ public class ConnectionSpec  implements java.io.Serializable {
     }
 
 
+    /**
+    * set 用户标签
+    *
+    * @param userTags 用户标签
+    * @return ConnectionSpec
+    */
+    public ConnectionSpec userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId 资源所属资源组ID
+     * @return ConnectionSpec
+     */
+    public ConnectionSpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 用户标签
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
+    }
 }

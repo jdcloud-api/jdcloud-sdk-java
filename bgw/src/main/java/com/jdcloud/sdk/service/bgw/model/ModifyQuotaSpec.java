@@ -115,7 +115,8 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     /**
      * set 资源类型，取值范围：bgw、connection、vif、bgw_route、bgw_propagated_route、vpc_attachment、cgw、vpn_connection、vpn_tunnel、vpn_traffic_selector
      *
-     * @param type
+     * @param type 资源类型，取值范围：bgw、connection、vif、bgw_route、bgw_propagated_route、vpc_attachment、cgw、vpn_connection、vpn_tunnel、vpn_traffic_selector
+     * @return ModifyQuotaSpec
      */
     public ModifyQuotaSpec type(String type) {
         this.type = type;
@@ -126,7 +127,8 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     /**
      * set type为bgw、connection、cgw不设置, type为bgw_route、bgw_propagated_route、vpc_attachment、vpn_connection设置为bgwId, type为vif设置为connectionId, type为vpn_tunnel设置为vpnConnectionId，type为vpn_traffic_selector设置为vpnConnectionId
      *
-     * @param parentResourceId
+     * @param parentResourceId type为bgw、connection、cgw不设置, type为bgw_route、bgw_propagated_route、vpc_attachment、vpn_connection设置为bgwId, type为vif设置为connectionId, type为vpn_tunnel设置为vpnConnectionId，type为vpn_traffic_selector设置为vpnConnectionId
+     * @return ModifyQuotaSpec
      */
     public ModifyQuotaSpec parentResourceId(String parentResourceId) {
         this.parentResourceId = parentResourceId;
@@ -137,7 +139,8 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     /**
      * set 配额大小
      *
-     * @param maxLimit
+     * @param maxLimit 配额大小
+     * @return ModifyQuotaSpec
      */
     public ModifyQuotaSpec maxLimit(Integer maxLimit) {
         this.maxLimit = maxLimit;

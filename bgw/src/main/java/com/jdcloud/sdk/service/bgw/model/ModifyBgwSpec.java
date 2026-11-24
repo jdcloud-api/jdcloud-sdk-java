@@ -86,7 +86,8 @@ public class ModifyBgwSpec  implements java.io.Serializable {
     /**
      * set 边界网关的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param bgwName
+     * @param bgwName 边界网关的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return ModifyBgwSpec
      */
     public ModifyBgwSpec bgwName(String bgwName) {
         this.bgwName = bgwName;
@@ -97,7 +98,8 @@ public class ModifyBgwSpec  implements java.io.Serializable {
     /**
      * set 边界网关的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
-     * @param description
+     * @param description 边界网关的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+     * @return ModifyBgwSpec
      */
     public ModifyBgwSpec description(String description) {
         this.description = description;

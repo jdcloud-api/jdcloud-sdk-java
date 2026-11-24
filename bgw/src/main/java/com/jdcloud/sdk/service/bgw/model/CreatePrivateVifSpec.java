@@ -98,6 +98,16 @@ public class CreatePrivateVifSpec  implements java.io.Serializable {
      */
     private HealthCheckSpec healthCheck;
 
+    /**
+     * 用户标签
+     */
+    
+    private List<Tag> userTags;
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -309,11 +319,50 @@ public class CreatePrivateVifSpec  implements java.io.Serializable {
     }
 
 
+    /**
+    * get 用户标签
+    *
+    * @return
+    */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+    * set 用户标签
+    *
+    * @param userTags
+    */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
+
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
 
     /**
      * set PrivateVif的名称参考
      *
-     * @param privateVifName
+     * @param privateVifName PrivateVif的名称参考
+     * @return CreatePrivateVifSpec
      */
     public CreatePrivateVifSpec privateVifName(String privateVifName) {
         this.privateVifName = privateVifName;
@@ -324,7 +373,8 @@ public class CreatePrivateVifSpec  implements java.io.Serializable {
     /**
      * set 物理连接的Id
      *
-     * @param connectionId
+     * @param connectionId 物理连接的Id
+     * @return CreatePrivateVifSpec
      */
     public CreatePrivateVifSpec connectionId(String connectionId) {
         this.connectionId = connectionId;
@@ -335,7 +385,8 @@ public class CreatePrivateVifSpec  implements java.io.Serializable {
     /**
      * set 通道的owner:用户pin
      *
-     * @param privateVifOwner
+     * @param privateVifOwner 通道的owner:用户pin
+     * @return CreatePrivateVifSpec
      */
     public CreatePrivateVifSpec privateVifOwner(String privateVifOwner) {
         this.privateVifOwner = privateVifOwner;
@@ -346,7 +397,8 @@ public class CreatePrivateVifSpec  implements java.io.Serializable {
     /**
      * set 边界网关的Id
      *
-     * @param bgwId
+     * @param bgwId 边界网关的Id
+     * @return CreatePrivateVifSpec
      */
     public CreatePrivateVifSpec bgwId(String bgwId) {
         this.bgwId = bgwId;
@@ -357,7 +409,8 @@ public class CreatePrivateVifSpec  implements java.io.Serializable {
     /**
      * set 通道的业务vlan,取值范围 [1,4000]
      *
-     * @param vlan
+     * @param vlan 通道的业务vlan,取值范围 [1,4000]
+     * @return CreatePrivateVifSpec
      */
     public CreatePrivateVifSpec vlan(Integer vlan) {
         this.vlan = vlan;
@@ -368,7 +421,8 @@ public class CreatePrivateVifSpec  implements java.io.Serializable {
     /**
     * set 通道涉及BgpPeer信息(即将弃用)
     *
-    * @param bgpPeers
+    * @param bgpPeers 通道涉及BgpPeer信息(即将弃用)
+    * @return CreatePrivateVifSpec
     */
     public CreatePrivateVifSpec bgpPeers(List<BgpPeerSpec> bgpPeers) {
         this.bgpPeers = bgpPeers;
@@ -379,7 +433,8 @@ public class CreatePrivateVifSpec  implements java.io.Serializable {
     /**
      * set PrivateVif的描述
      *
-     * @param description
+     * @param description PrivateVif的描述
+     * @return CreatePrivateVifSpec
      */
     public CreatePrivateVifSpec description(String description) {
         this.description = description;
@@ -390,7 +445,8 @@ public class CreatePrivateVifSpec  implements java.io.Serializable {
     /**
      * set 是否开启bgp，仅支持开启
      *
-     * @param enableBgp
+     * @param enableBgp 是否开启bgp，仅支持开启
+     * @return CreatePrivateVifSpec
      */
     public CreatePrivateVifSpec enableBgp(Boolean enableBgp) {
         this.enableBgp = enableBgp;
@@ -401,7 +457,8 @@ public class CreatePrivateVifSpec  implements java.io.Serializable {
     /**
     * set 通道Peer的ip信息
     *
-    * @param peerIps
+    * @param peerIps 通道Peer的ip信息
+    * @return CreatePrivateVifSpec
     */
     public CreatePrivateVifSpec peerIps(List<PeerIpsSpec> peerIps) {
         this.peerIps = peerIps;
@@ -412,7 +469,8 @@ public class CreatePrivateVifSpec  implements java.io.Serializable {
     /**
      * set 通道Bgp相关信息详情
      *
-     * @param bgpSpec
+     * @param bgpSpec 通道Bgp相关信息详情
+     * @return CreatePrivateVifSpec
      */
     public CreatePrivateVifSpec bgpSpec(BgpSpec bgpSpec) {
         this.bgpSpec = bgpSpec;
@@ -423,10 +481,35 @@ public class CreatePrivateVifSpec  implements java.io.Serializable {
     /**
      * set 通道健康检查相关信息详情
      *
-     * @param healthCheck
+     * @param healthCheck 通道健康检查相关信息详情
+     * @return CreatePrivateVifSpec
      */
     public CreatePrivateVifSpec healthCheck(HealthCheckSpec healthCheck) {
         this.healthCheck = healthCheck;
+        return this;
+    }
+
+
+    /**
+    * set 用户标签
+    *
+    * @param userTags 用户标签
+    * @return CreatePrivateVifSpec
+    */
+    public CreatePrivateVifSpec userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId 资源所属资源组ID
+     * @return CreatePrivateVifSpec
+     */
+    public CreatePrivateVifSpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 
@@ -454,5 +537,17 @@ public class CreatePrivateVifSpec  implements java.io.Serializable {
             this.peerIps = new ArrayList<>();
         }
         this.peerIps.add(peerIp);
+    }
+
+    /**
+     * add item to 用户标签
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
     }
 }

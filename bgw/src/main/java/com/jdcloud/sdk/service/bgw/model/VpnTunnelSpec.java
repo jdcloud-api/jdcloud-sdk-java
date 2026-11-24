@@ -42,6 +42,11 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     private String vpnConnectionId;
 
     /**
+     * VPN隧道名称, 名称只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符；无默认值，可为空
+     */
+    private String vpnTunnelName;
+
+    /**
      * VPN隧道本地公网IP
      * Required:true
      */
@@ -165,6 +170,25 @@ public class VpnTunnelSpec  implements java.io.Serializable {
      */
     public void setVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
+    }
+
+
+    /**
+     * get VPN隧道名称, 名称只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符；无默认值，可为空
+     *
+     * @return
+     */
+    public String getVpnTunnelName() {
+        return vpnTunnelName;
+    }
+
+    /**
+     * set VPN隧道名称, 名称只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符；无默认值，可为空
+     *
+     * @param vpnTunnelName
+     */
+    public void setVpnTunnelName(String vpnTunnelName) {
+        this.vpnTunnelName = vpnTunnelName;
     }
 
 
@@ -552,7 +576,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set VPN CONNECTION ID
      *
-     * @param vpnConnectionId
+     * @param vpnConnectionId VPN CONNECTION ID
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec vpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
@@ -561,9 +586,22 @@ public class VpnTunnelSpec  implements java.io.Serializable {
 
 
     /**
+     * set VPN隧道名称, 名称只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符；无默认值，可为空
+     *
+     * @param vpnTunnelName VPN隧道名称, 名称只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符；无默认值，可为空
+     * @return VpnTunnelSpec
+     */
+    public VpnTunnelSpec vpnTunnelName(String vpnTunnelName) {
+        this.vpnTunnelName = vpnTunnelName;
+        return this;
+    }
+
+
+    /**
      * set VPN隧道本地公网IP
      *
-     * @param cloudPublicIp
+     * @param cloudPublicIp VPN隧道本地公网IP
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec cloudPublicIp(String cloudPublicIp) {
         this.cloudPublicIp = cloudPublicIp;
@@ -574,7 +612,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set VPN隧道客户侧公网IP
      *
-     * @param customerIp
+     * @param customerIp VPN隧道客户侧公网IP
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec customerIp(String customerIp) {
         this.customerIp = customerIp;
@@ -585,7 +624,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set 预共享秘钥字符串, 只允许输入数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过20字符, 不能以0x或0s开头
      *
-     * @param psk
+     * @param psk 预共享秘钥字符串, 只允许输入数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过20字符, 不能以0x或0s开头
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec psk(String psk) {
         this.psk = psk;
@@ -596,7 +636,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set VPN隧道内网的掩码长度必须为30的CIDR格式IPv4地址段，必须在169.254.0.0/20, 10.0.0.0/8, 192.168.0.0/16, 172.16.0.0/12这四个网段内，且不能和同一边界网关上的其它VPN隧道内层地址冲突
      *
-     * @param tunnelIp
+     * @param tunnelIp VPN隧道内网的掩码长度必须为30的CIDR格式IPv4地址段，必须在169.254.0.0/20, 10.0.0.0/8, 192.168.0.0/16, 172.16.0.0/12这四个网段内，且不能和同一边界网关上的其它VPN隧道内层地址冲突
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec tunnelIp(String tunnelIp) {
         this.tunnelIp = tunnelIp;
@@ -607,7 +648,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set VPN隧道内网的本端ip，必须是/30的段，而且不能是段里的第一个和最后一个ip
      *
-     * @param localTunnelIp
+     * @param localTunnelIp VPN隧道内网的本端ip，必须是/30的段，而且不能是段里的第一个和最后一个ip
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec localTunnelIp(String localTunnelIp) {
         this.localTunnelIp = localTunnelIp;
@@ -618,7 +660,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set IKE版本, 取值范围为：v1、v2, 默认为：v2
      *
-     * @param ikeVersion
+     * @param ikeVersion IKE版本, 取值范围为：v1、v2, 默认为：v2
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec ikeVersion(String ikeVersion) {
         this.ikeVersion = ikeVersion;
@@ -629,7 +672,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set IKE模式, IKEv2时忽略, 取值范围为：main、aggressive，默认为：main
      *
-     * @param ikeMode
+     * @param ikeMode IKE模式, IKEv2时忽略, 取值范围为：main、aggressive，默认为：main
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec ikeMode(String ikeMode) {
         this.ikeMode = ikeMode;
@@ -640,7 +684,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set DH秘钥协商算法组选项. 取值范围为：modp1024、modp1536、modp2048、ecp256、ecp384，默认为：ecp256
      *
-     * @param ikeKeyExchange
+     * @param ikeKeyExchange DH秘钥协商算法组选项. 取值范围为：modp1024、modp1536、modp2048、ecp256、ecp384，默认为：ecp256
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec ikeKeyExchange(String ikeKeyExchange) {
         this.ikeKeyExchange = ikeKeyExchange;
@@ -651,7 +696,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set 加密算法. 取值范围为：aes128、aes192、aes256、3des，默认为：aes128
      *
-     * @param ikeCipher
+     * @param ikeCipher 加密算法. 取值范围为：aes128、aes192、aes256、3des，默认为：aes128
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec ikeCipher(String ikeCipher) {
         this.ikeCipher = ikeCipher;
@@ -662,7 +708,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set 认证算法. 取值范围为：sha1、sha256、sha384，默认为：sha256
      *
-     * @param ikeAuth
+     * @param ikeAuth 认证算法. 取值范围为：sha1、sha256、sha384，默认为：sha256
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec ikeAuth(String ikeAuth) {
         this.ikeAuth = ikeAuth;
@@ -673,7 +720,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set DPD开关, 取值范围为：0、10，10代表10秒，默认为：10
      *
-     * @param ikeDpdSec
+     * @param ikeDpdSec DPD开关, 取值范围为：0、10，10代表10秒，默认为：10
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec ikeDpdSec(Integer ikeDpdSec) {
         this.ikeDpdSec = ikeDpdSec;
@@ -684,7 +732,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set IKE SA重协商时间，单位秒，取值范围为[60,86400]的整数，默认为：14400(4小时)
      *
-     * @param ikeSaLifeSec
+     * @param ikeSaLifeSec IKE SA重协商时间，单位秒，取值范围为[60,86400]的整数，默认为：14400(4小时)
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec ikeSaLifeSec(Integer ikeSaLifeSec) {
         this.ikeSaLifeSec = ikeSaLifeSec;
@@ -695,7 +744,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set 加密算法. 取值范围为：aes128、aes192、aes256，默认为：aes128
      *
-     * @param ipsecCipher
+     * @param ipsecCipher 加密算法. 取值范围为：aes128、aes192、aes256，默认为：aes128
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec ipsecCipher(String ipsecCipher) {
         this.ipsecCipher = ipsecCipher;
@@ -706,7 +756,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set 认证算法. 取值范围为：sha1、sha256、sha384，默认为：sha256
      *
-     * @param ipsecAuth
+     * @param ipsecAuth 认证算法. 取值范围为：sha1、sha256、sha384，默认为：sha256
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec ipsecAuth(String ipsecAuth) {
         this.ipsecAuth = ipsecAuth;
@@ -717,7 +768,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set DH组选项. 取值范围为：null、modp1024、modp1536、modp2048、ecp256、ecp384，默认为：null
      *
-     * @param ipsecKeyExchange
+     * @param ipsecKeyExchange DH组选项. 取值范围为：null、modp1024、modp1536、modp2048、ecp256、ecp384，默认为：null
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec ipsecKeyExchange(String ipsecKeyExchange) {
         this.ipsecKeyExchange = ipsecKeyExchange;
@@ -728,7 +780,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set Child SA重协商时间. 单位秒, 取值范围为[60,86400]的整数，默认为：3600(1小时)
      *
-     * @param ipsecSaLifeSec
+     * @param ipsecSaLifeSec Child SA重协商时间. 单位秒, 取值范围为[60,86400]的整数，默认为：3600(1小时)
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec ipsecSaLifeSec(Integer ipsecSaLifeSec) {
         this.ipsecSaLifeSec = ipsecSaLifeSec;
@@ -739,7 +792,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set Child SA重协商报数，单位个, 0代表不开启，取值范围为[0,100000000]的整数，默认为：0
      *
-     * @param ipsecSaLifepkt
+     * @param ipsecSaLifepkt Child SA重协商报数，单位个, 0代表不开启，取值范围为[0,100000000]的整数，默认为：0
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec ipsecSaLifepkt(Long ipsecSaLifepkt) {
         this.ipsecSaLifepkt = ipsecSaLifepkt;
@@ -750,7 +804,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set Child SA重协商字节数. 单位字节, 0代表不开启，取值范围为[0,107374182400]的整数，默认为：0
      *
-     * @param ipsecSaLifebyte
+     * @param ipsecSaLifebyte Child SA重协商字节数. 单位字节, 0代表不开启，取值范围为[0,107374182400]的整数，默认为：0
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec ipsecSaLifebyte(Long ipsecSaLifebyte) {
         this.ipsecSaLifebyte = ipsecSaLifebyte;
@@ -761,7 +816,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set 计费配置，仅支持按配置，默认按配置
      *
-     * @param chargeSpec
+     * @param chargeSpec 计费配置，仅支持按配置，默认按配置
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec chargeSpec(ChargeSpec chargeSpec) {
         this.chargeSpec = chargeSpec;
@@ -772,7 +828,8 @@ public class VpnTunnelSpec  implements java.io.Serializable {
     /**
      * set VPN隧道公网限速带宽（单位：Mbps），取值范围为[1-1500]
      *
-     * @param bandwidthMbps
+     * @param bandwidthMbps VPN隧道公网限速带宽（单位：Mbps），取值范围为[1-1500]
+     * @return VpnTunnelSpec
      */
     public VpnTunnelSpec bandwidthMbps(Integer bandwidthMbps) {
         this.bandwidthMbps = bandwidthMbps;

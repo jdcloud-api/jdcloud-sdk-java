@@ -53,7 +53,7 @@ public class ModifyVpnConnectionSpec  implements java.io.Serializable {
      * vpn connection policy，IPSec VPN的感兴趣流，用于第二阶段协商
      */
     
-    private List<VpnTrafficSelectorSpec> trafficSelectors;
+    private List<ModifyVpnTrafficSelectorSpec> trafficSelectors;
 
 
     /**
@@ -118,7 +118,7 @@ public class ModifyVpnConnectionSpec  implements java.io.Serializable {
     *
     * @return
     */
-    public List<VpnTrafficSelectorSpec> getTrafficSelectors() {
+    public List<ModifyVpnTrafficSelectorSpec> getTrafficSelectors() {
         return trafficSelectors;
     }
 
@@ -127,7 +127,7 @@ public class ModifyVpnConnectionSpec  implements java.io.Serializable {
     *
     * @param trafficSelectors
     */
-    public void setTrafficSelectors(List<VpnTrafficSelectorSpec> trafficSelectors) {
+    public void setTrafficSelectors(List<ModifyVpnTrafficSelectorSpec> trafficSelectors) {
         this.trafficSelectors = trafficSelectors;
     }
 
@@ -136,7 +136,8 @@ public class ModifyVpnConnectionSpec  implements java.io.Serializable {
     /**
      * set VPN连接的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param vpnConnectionName
+     * @param vpnConnectionName VPN连接的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return ModifyVpnConnectionSpec
      */
     public ModifyVpnConnectionSpec vpnConnectionName(String vpnConnectionName) {
         this.vpnConnectionName = vpnConnectionName;
@@ -147,7 +148,8 @@ public class ModifyVpnConnectionSpec  implements java.io.Serializable {
     /**
      * set VPN连接的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
-     * @param description
+     * @param description VPN连接的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+     * @return ModifyVpnConnectionSpec
      */
     public ModifyVpnConnectionSpec description(String description) {
         this.description = description;
@@ -158,7 +160,8 @@ public class ModifyVpnConnectionSpec  implements java.io.Serializable {
     /**
      * set “是否使用BGP路由，取值范围为：false（不使能）、true（使能）”
      *
-     * @param bgpEnabled
+     * @param bgpEnabled “是否使用BGP路由，取值范围为：false（不使能）、true（使能）”
+     * @return ModifyVpnConnectionSpec
      */
     public ModifyVpnConnectionSpec bgpEnabled(Boolean bgpEnabled) {
         this.bgpEnabled = bgpEnabled;
@@ -169,9 +172,10 @@ public class ModifyVpnConnectionSpec  implements java.io.Serializable {
     /**
     * set vpn connection policy，IPSec VPN的感兴趣流，用于第二阶段协商
     *
-    * @param trafficSelectors
+    * @param trafficSelectors vpn connection policy，IPSec VPN的感兴趣流，用于第二阶段协商
+    * @return ModifyVpnConnectionSpec
     */
-    public ModifyVpnConnectionSpec trafficSelectors(List<VpnTrafficSelectorSpec> trafficSelectors) {
+    public ModifyVpnConnectionSpec trafficSelectors(List<ModifyVpnTrafficSelectorSpec> trafficSelectors) {
         this.trafficSelectors = trafficSelectors;
         return this;
     }
@@ -183,7 +187,7 @@ public class ModifyVpnConnectionSpec  implements java.io.Serializable {
      *
      * @param trafficSelector
      */
-    public void addTrafficSelector(VpnTrafficSelectorSpec trafficSelector) {
+    public void addTrafficSelector(ModifyVpnTrafficSelectorSpec trafficSelector) {
         if (this.trafficSelectors == null) {
             this.trafficSelectors = new ArrayList<>();
         }

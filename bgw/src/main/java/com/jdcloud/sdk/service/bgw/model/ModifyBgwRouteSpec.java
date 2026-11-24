@@ -48,7 +48,7 @@ public class ModifyBgwRouteSpec  implements java.io.Serializable {
     private String bgwRouteDestination;
 
     /**
-     * Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)和vpc(vpc)
+     * Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)、vpc(vpc)和中转路由器(tr)
      * Required:true
      */
     @Required
@@ -107,7 +107,7 @@ public class ModifyBgwRouteSpec  implements java.io.Serializable {
 
 
     /**
-     * get Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)和vpc(vpc)
+     * get Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)、vpc(vpc)和中转路由器(tr)
      *
      * @return
      */
@@ -116,7 +116,7 @@ public class ModifyBgwRouteSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)和vpc(vpc)
+     * set Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)、vpc(vpc)和中转路由器(tr)
      *
      * @param bgwNexthopType
      */
@@ -167,7 +167,8 @@ public class ModifyBgwRouteSpec  implements java.io.Serializable {
     /**
      * set Bgw上路由的Id
      *
-     * @param bgwRouteId
+     * @param bgwRouteId Bgw上路由的Id
+     * @return ModifyBgwRouteSpec
      */
     public ModifyBgwRouteSpec bgwRouteId(String bgwRouteId) {
         this.bgwRouteId = bgwRouteId;
@@ -178,7 +179,8 @@ public class ModifyBgwRouteSpec  implements java.io.Serializable {
     /**
      * set Bgw上路由的目的地址,格式如：172.10.2.15/16，参见RFC 4632
      *
-     * @param bgwRouteDestination
+     * @param bgwRouteDestination Bgw上路由的目的地址,格式如：172.10.2.15/16，参见RFC 4632
+     * @return ModifyBgwRouteSpec
      */
     public ModifyBgwRouteSpec bgwRouteDestination(String bgwRouteDestination) {
         this.bgwRouteDestination = bgwRouteDestination;
@@ -187,9 +189,10 @@ public class ModifyBgwRouteSpec  implements java.io.Serializable {
 
 
     /**
-     * set Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)和vpc(vpc)
+     * set Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)、vpc(vpc)和中转路由器(tr)
      *
-     * @param bgwNexthopType
+     * @param bgwNexthopType Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)、vpc(vpc)和中转路由器(tr)
+     * @return ModifyBgwRouteSpec
      */
     public ModifyBgwRouteSpec bgwNexthopType(String bgwNexthopType) {
         this.bgwNexthopType = bgwNexthopType;
@@ -200,7 +203,8 @@ public class ModifyBgwRouteSpec  implements java.io.Serializable {
     /**
      * set Bgw上路由的下一跳设备资源Id，目前支持vifId,vpcAttachmentId,vpnConnectionId
      *
-     * @param bgwRouteNexthop
+     * @param bgwRouteNexthop Bgw上路由的下一跳设备资源Id，目前支持vifId,vpcAttachmentId,vpnConnectionId
+     * @return ModifyBgwRouteSpec
      */
     public ModifyBgwRouteSpec bgwRouteNexthop(String bgwRouteNexthop) {
         this.bgwRouteNexthop = bgwRouteNexthop;
@@ -211,7 +215,8 @@ public class ModifyBgwRouteSpec  implements java.io.Serializable {
     /**
      * set Bgw路由的描述，仅支持静态类型的route更改description
      *
-     * @param description
+     * @param description Bgw路由的描述，仅支持静态类型的route更改description
+     * @return ModifyBgwRouteSpec
      */
     public ModifyBgwRouteSpec description(String description) {
         this.description = description;

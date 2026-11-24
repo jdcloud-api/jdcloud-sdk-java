@@ -118,7 +118,8 @@ public class ModifyAdminStatusRequest extends JdcloudRequest implements java.io.
     /**
      * set 隧道管理状态, UP, DOWN
      *
-     * @param adminStatus
+     * @param adminStatus 隧道管理状态, UP, DOWN
+     * @return ModifyAdminStatusRequest
      */
     public ModifyAdminStatusRequest adminStatus(String adminStatus) {
         this.adminStatus = adminStatus;
@@ -129,7 +130,8 @@ public class ModifyAdminStatusRequest extends JdcloudRequest implements java.io.
     /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return ModifyAdminStatusRequest
      */
     public ModifyAdminStatusRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -140,7 +142,8 @@ public class ModifyAdminStatusRequest extends JdcloudRequest implements java.io.
     /**
      * set VPN Tunnel ID
      *
-     * @param vpnTunnelId
+     * @param vpnTunnelId VPN Tunnel ID
+     * @return ModifyAdminStatusRequest
      */
     public ModifyAdminStatusRequest vpnTunnelId(String vpnTunnelId) {
         this.vpnTunnelId = vpnTunnelId;

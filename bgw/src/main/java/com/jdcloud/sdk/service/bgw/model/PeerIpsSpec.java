@@ -91,7 +91,8 @@ public class PeerIpsSpec  implements java.io.Serializable {
     /**
      * set Peer用户侧地址，创建托管专线时，会将多条物理链路连接到不同的专线接入设备上，以保证服务的高可用性。需为每条物理链路明确指定业务通道两端的路由地址，例如：192.168.1.1/30和192.168.1.2/30，两个IP需在一个网段、不能相同且不能和其他Peer内IP重叠，客户侧使用第一个地址，京东云使用第二个地址
      *
-     * @param customerIp
+     * @param customerIp Peer用户侧地址，创建托管专线时，会将多条物理链路连接到不同的专线接入设备上，以保证服务的高可用性。需为每条物理链路明确指定业务通道两端的路由地址，例如：192.168.1.1/30和192.168.1.2/30，两个IP需在一个网段、不能相同且不能和其他Peer内IP重叠，客户侧使用第一个地址，京东云使用第二个地址
+     * @return PeerIpsSpec
      */
     public PeerIpsSpec customerIp(String customerIp) {
         this.customerIp = customerIp;
@@ -102,7 +103,8 @@ public class PeerIpsSpec  implements java.io.Serializable {
     /**
      * set Peer京东云侧地址，创建托管专线时，会将多条物理链路连接到不同的专线接入设备上，以保证服务的高可用性。需为每条物理链路明确指定业务通道两端的路由地址，例如：192.168.1.1/30和192.168.1.2/30，两个IP需在一个网段、不能相同且不能其他Peer内IP重叠，客户侧使用第一个地址，京东云使用第二个地址
      *
-     * @param jdCloudIp
+     * @param jdCloudIp Peer京东云侧地址，创建托管专线时，会将多条物理链路连接到不同的专线接入设备上，以保证服务的高可用性。需为每条物理链路明确指定业务通道两端的路由地址，例如：192.168.1.1/30和192.168.1.2/30，两个IP需在一个网段、不能相同且不能其他Peer内IP重叠，客户侧使用第一个地址，京东云使用第二个地址
+     * @return PeerIpsSpec
      */
     public PeerIpsSpec jdCloudIp(String jdCloudIp) {
         this.jdCloudIp = jdCloudIp;

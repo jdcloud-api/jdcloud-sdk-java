@@ -90,7 +90,8 @@ public class DescribeConnectionsResult extends JdcloudResult implements java.io.
     /**
     * set connections
     *
-    * @param connections
+    * @param connections 
+    * @return DescribeConnectionsResult
     */
     public DescribeConnectionsResult connections(List<Connection> connections) {
         this.connections = connections;
@@ -101,7 +102,8 @@ public class DescribeConnectionsResult extends JdcloudResult implements java.io.
     /**
      * set 总数量
      *
-     * @param totalCount
+     * @param totalCount 总数量
+     * @return DescribeConnectionsResult
      */
     public DescribeConnectionsResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;

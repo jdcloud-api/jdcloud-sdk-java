@@ -79,6 +79,16 @@ public class Bgw  implements java.io.Serializable {
      */
     private String createdTime;
 
+    /**
+     * Tag信息
+     */
+    
+    private List<Tag> tags;
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -252,11 +262,50 @@ public class Bgw  implements java.io.Serializable {
     }
 
 
+    /**
+    * get Tag信息
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Tag信息
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
 
     /**
      * set bgw的Id
      *
-     * @param bgwId
+     * @param bgwId bgw的Id
+     * @return Bgw
      */
     public Bgw bgwId(String bgwId) {
         this.bgwId = bgwId;
@@ -267,7 +316,8 @@ public class Bgw  implements java.io.Serializable {
     /**
      * set 边界网关的名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param bgwName
+     * @param bgwName 边界网关的名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return Bgw
      */
     public Bgw bgwName(String bgwName) {
         this.bgwName = bgwName;
@@ -278,7 +328,8 @@ public class Bgw  implements java.io.Serializable {
     /**
      * set Bgw的描述，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param description
+     * @param description Bgw的描述，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return Bgw
      */
     public Bgw description(String description) {
         this.description = description;
@@ -289,7 +340,8 @@ public class Bgw  implements java.io.Serializable {
     /**
     * set Bgw上通道Id列表
     *
-    * @param vifIds
+    * @param vifIds Bgw上通道Id列表
+    * @return Bgw
     */
     public Bgw vifIds(List<String> vifIds) {
         this.vifIds = vifIds;
@@ -300,7 +352,8 @@ public class Bgw  implements java.io.Serializable {
     /**
     * set Bgw上vpc接口Id列表
     *
-    * @param vpcAttachmentIds
+    * @param vpcAttachmentIds Bgw上vpc接口Id列表
+    * @return Bgw
     */
     public Bgw vpcAttachmentIds(List<String> vpcAttachmentIds) {
         this.vpcAttachmentIds = vpcAttachmentIds;
@@ -311,7 +364,8 @@ public class Bgw  implements java.io.Serializable {
     /**
     * set Bgw上vpn连接Id列表
     *
-    * @param vpnConnectionIds
+    * @param vpnConnectionIds Bgw上vpn连接Id列表
+    * @return Bgw
     */
     public Bgw vpnConnectionIds(List<String> vpnConnectionIds) {
         this.vpnConnectionIds = vpnConnectionIds;
@@ -322,7 +376,8 @@ public class Bgw  implements java.io.Serializable {
     /**
      * set 边界网关az类型，取值：standard(标准BGW)，edge(边缘BGW)
      *
-     * @param azType
+     * @param azType 边界网关az类型，取值：standard(标准BGW)，edge(边缘BGW)
+     * @return Bgw
      */
     public Bgw azType(String azType) {
         this.azType = azType;
@@ -333,7 +388,8 @@ public class Bgw  implements java.io.Serializable {
     /**
      * set 边界网关可用区，边缘BGW必须指定可用区，中心BGW返回空
      *
-     * @param az
+     * @param az 边界网关可用区，边缘BGW必须指定可用区，中心BGW返回空
+     * @return Bgw
      */
     public Bgw az(String az) {
         this.az = az;
@@ -344,10 +400,35 @@ public class Bgw  implements java.io.Serializable {
     /**
      * set Bgw的创建时间
      *
-     * @param createdTime
+     * @param createdTime Bgw的创建时间
+     * @return Bgw
      */
     public Bgw createdTime(String createdTime) {
         this.createdTime = createdTime;
+        return this;
+    }
+
+
+    /**
+    * set Tag信息
+    *
+    * @param tags Tag信息
+    * @return Bgw
+    */
+    public Bgw tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId 资源所属资源组ID
+     * @return Bgw
+     */
+    public Bgw resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 
@@ -387,5 +468,17 @@ public class Bgw  implements java.io.Serializable {
             this.vpnConnectionIds = new ArrayList<>();
         }
         this.vpnConnectionIds.add(vpnConnectionId);
+    }
+
+    /**
+     * add item to Tag信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 }

@@ -63,7 +63,7 @@ public class BgwRoute  implements java.io.Serializable {
     private Integer bgwRoutePriority;
 
     /**
-     * Bgw上路由的下一跳类型：目前支持privateVif（专线网关）、hostedPrivateVif（托管网关）、vpcAttachment（vpc接口）、vpnConnection(vpn连接)
+     * Bgw上路由的下一跳类型：private_vif（专线网关）、hosted_private_vif（托管网关）、vpc_attachment（vpc接口）、vpn_connection（vpn连接）、vpc（VPC）、tr（中转路由器）
      */
     private String bgwRouteNextHopType;
 
@@ -189,7 +189,7 @@ public class BgwRoute  implements java.io.Serializable {
 
 
     /**
-     * get Bgw上路由的下一跳类型：目前支持privateVif（专线网关）、hostedPrivateVif（托管网关）、vpcAttachment（vpc接口）、vpnConnection(vpn连接)
+     * get Bgw上路由的下一跳类型：private_vif（专线网关）、hosted_private_vif（托管网关）、vpc_attachment（vpc接口）、vpn_connection（vpn连接）、vpc（VPC）、tr（中转路由器）
      *
      * @return
      */
@@ -198,7 +198,7 @@ public class BgwRoute  implements java.io.Serializable {
     }
 
     /**
-     * set Bgw上路由的下一跳类型：目前支持privateVif（专线网关）、hostedPrivateVif（托管网关）、vpcAttachment（vpc接口）、vpnConnection(vpn连接)
+     * set Bgw上路由的下一跳类型：private_vif（专线网关）、hosted_private_vif（托管网关）、vpc_attachment（vpc接口）、vpn_connection（vpn连接）、vpc（VPC）、tr（中转路由器）
      *
      * @param bgwRouteNextHopType
      */
@@ -230,7 +230,8 @@ public class BgwRoute  implements java.io.Serializable {
     /**
      * set Bgw上路由的Id
      *
-     * @param bgwRouteId
+     * @param bgwRouteId Bgw上路由的Id
+     * @return BgwRoute
      */
     public BgwRoute bgwRouteId(String bgwRouteId) {
         this.bgwRouteId = bgwRouteId;
@@ -241,7 +242,8 @@ public class BgwRoute  implements java.io.Serializable {
     /**
      * set bgw的Id
      *
-     * @param bgwId
+     * @param bgwId bgw的Id
+     * @return BgwRoute
      */
     public BgwRoute bgwId(String bgwId) {
         this.bgwId = bgwId;
@@ -252,7 +254,8 @@ public class BgwRoute  implements java.io.Serializable {
     /**
      * set Bgw上路由的目的地址,格式如：172.10.2.15/16，参见RFC 4632
      *
-     * @param bgwRouteDestination
+     * @param bgwRouteDestination Bgw上路由的目的地址,格式如：172.10.2.15/16，参见RFC 4632
+     * @return BgwRoute
      */
     public BgwRoute bgwRouteDestination(String bgwRouteDestination) {
         this.bgwRouteDestination = bgwRouteDestination;
@@ -263,7 +266,8 @@ public class BgwRoute  implements java.io.Serializable {
     /**
      * set Bgw上路由的下一跳设备资源Id,目前支持托管通道Id，专线通道Id,vpc接口Id和vpn连接Id
      *
-     * @param bgwRouteNexthop
+     * @param bgwRouteNexthop Bgw上路由的下一跳设备资源Id,目前支持托管通道Id，专线通道Id,vpc接口Id和vpn连接Id
+     * @return BgwRoute
      */
     public BgwRoute bgwRouteNexthop(String bgwRouteNexthop) {
         this.bgwRouteNexthop = bgwRouteNexthop;
@@ -274,7 +278,8 @@ public class BgwRoute  implements java.io.Serializable {
     /**
      * set Bgw上的路由是静态的还是传播的:static,propagated
      *
-     * @param origin
+     * @param origin Bgw上的路由是静态的还是传播的:static,propagated
+     * @return BgwRoute
      */
     public BgwRoute origin(String origin) {
         this.origin = origin;
@@ -285,7 +290,8 @@ public class BgwRoute  implements java.io.Serializable {
     /**
      * set Bgw上路由的优先级
      *
-     * @param bgwRoutePriority
+     * @param bgwRoutePriority Bgw上路由的优先级
+     * @return BgwRoute
      */
     public BgwRoute bgwRoutePriority(Integer bgwRoutePriority) {
         this.bgwRoutePriority = bgwRoutePriority;
@@ -294,9 +300,10 @@ public class BgwRoute  implements java.io.Serializable {
 
 
     /**
-     * set Bgw上路由的下一跳类型：目前支持privateVif（专线网关）、hostedPrivateVif（托管网关）、vpcAttachment（vpc接口）、vpnConnection(vpn连接)
+     * set Bgw上路由的下一跳类型：private_vif（专线网关）、hosted_private_vif（托管网关）、vpc_attachment（vpc接口）、vpn_connection（vpn连接）、vpc（VPC）、tr（中转路由器）
      *
-     * @param bgwRouteNextHopType
+     * @param bgwRouteNextHopType Bgw上路由的下一跳类型：private_vif（专线网关）、hosted_private_vif（托管网关）、vpc_attachment（vpc接口）、vpn_connection（vpn连接）、vpc（VPC）、tr（中转路由器）
+     * @return BgwRoute
      */
     public BgwRoute bgwRouteNextHopType(String bgwRouteNextHopType) {
         this.bgwRouteNextHopType = bgwRouteNextHopType;
@@ -307,7 +314,8 @@ public class BgwRoute  implements java.io.Serializable {
     /**
      * set Bgw路由的描述
      *
-     * @param description
+     * @param description Bgw路由的描述
+     * @return BgwRoute
      */
     public BgwRoute description(String description) {
         this.description = description;

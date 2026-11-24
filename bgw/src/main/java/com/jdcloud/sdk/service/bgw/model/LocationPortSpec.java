@@ -182,7 +182,8 @@ public class LocationPortSpec  implements java.io.Serializable {
     /**
      * set LocationPortSpec的Id
      *
-     * @param locationPortSpecId
+     * @param locationPortSpecId LocationPortSpec的Id
+     * @return LocationPortSpec
      */
     public LocationPortSpec locationPortSpecId(String locationPortSpecId) {
         this.locationPortSpecId = locationPortSpecId;
@@ -193,7 +194,8 @@ public class LocationPortSpec  implements java.io.Serializable {
     /**
      * set 端口规格的名称, 只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param portSpecName
+     * @param portSpecName 端口规格的名称, 只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return LocationPortSpec
      */
     public LocationPortSpec portSpecName(String portSpecName) {
         this.portSpecName = portSpecName;
@@ -204,7 +206,8 @@ public class LocationPortSpec  implements java.io.Serializable {
     /**
      * set 端口规格代码
      *
-     * @param portSpecCode
+     * @param portSpecCode 端口规格代码
+     * @return LocationPortSpec
      */
     public LocationPortSpec portSpecCode(String portSpecCode) {
         this.portSpecCode = portSpecCode;
@@ -215,7 +218,8 @@ public class LocationPortSpec  implements java.io.Serializable {
     /**
      * set Location的编码
      *
-     * @param locationCode
+     * @param locationCode Location的编码
+     * @return LocationPortSpec
      */
     public LocationPortSpec locationCode(String locationCode) {
         this.locationCode = locationCode;
@@ -226,7 +230,8 @@ public class LocationPortSpec  implements java.io.Serializable {
     /**
      * set LocationPortSpec的类型，电口(Electrical),光口(Optical)
      *
-     * @param portSpecType
+     * @param portSpecType LocationPortSpec的类型，电口(Electrical),光口(Optical)
+     * @return LocationPortSpec
      */
     public LocationPortSpec portSpecType(String portSpecType) {
         this.portSpecType = portSpecType;
@@ -237,7 +242,8 @@ public class LocationPortSpec  implements java.io.Serializable {
     /**
      * set 端口规格带宽:Gbps
      *
-     * @param bandwidthGbps
+     * @param bandwidthGbps 端口规格带宽:Gbps
+     * @return LocationPortSpec
      */
     public LocationPortSpec bandwidthGbps(Integer bandwidthGbps) {
         this.bandwidthGbps = bandwidthGbps;

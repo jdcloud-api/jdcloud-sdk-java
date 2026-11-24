@@ -73,11 +73,6 @@ public class BgpPeer  implements java.io.Serializable {
     private String privateVifId;
 
     /**
-     * BgpPeer的状态，取值为：Up, Down
-     */
-    private String bgpPeerStatus;
-
-    /**
      * 通道创建的时间
      */
     private String createdTime;
@@ -237,25 +232,6 @@ public class BgpPeer  implements java.io.Serializable {
 
 
     /**
-     * get BgpPeer的状态，取值为：Up, Down
-     *
-     * @return
-     */
-    public String getBgpPeerStatus() {
-        return bgpPeerStatus;
-    }
-
-    /**
-     * set BgpPeer的状态，取值为：Up, Down
-     *
-     * @param bgpPeerStatus
-     */
-    public void setBgpPeerStatus(String bgpPeerStatus) {
-        this.bgpPeerStatus = bgpPeerStatus;
-    }
-
-
-    /**
      * get 通道创建的时间
      *
      * @return
@@ -278,7 +254,8 @@ public class BgpPeer  implements java.io.Serializable {
     /**
      * set BgpPeer的Id
      *
-     * @param bgpPeerId
+     * @param bgpPeerId BgpPeer的Id
+     * @return BgpPeer
      */
     public BgpPeer bgpPeerId(String bgpPeerId) {
         this.bgpPeerId = bgpPeerId;
@@ -289,7 +266,8 @@ public class BgpPeer  implements java.io.Serializable {
     /**
      * set BgpPeer的地址簇：目前仅支持ipv4
      *
-     * @param addressFamily
+     * @param addressFamily BgpPeer的地址簇：目前仅支持ipv4
+     * @return BgpPeer
      */
     public BgpPeer addressFamily(String addressFamily) {
         this.addressFamily = addressFamily;
@@ -300,7 +278,8 @@ public class BgpPeer  implements java.io.Serializable {
     /**
      * set BpgPeer用户侧地址
      *
-     * @param customerIp
+     * @param customerIp BpgPeer用户侧地址
+     * @return BgpPeer
      */
     public BgpPeer customerIp(String customerIp) {
         this.customerIp = customerIp;
@@ -311,7 +290,8 @@ public class BgpPeer  implements java.io.Serializable {
     /**
      * set BpgPeer京东云侧地址
      *
-     * @param jdCloudIp
+     * @param jdCloudIp BpgPeer京东云侧地址
+     * @return BgpPeer
      */
     public BgpPeer jdCloudIp(String jdCloudIp) {
         this.jdCloudIp = jdCloudIp;
@@ -322,7 +302,8 @@ public class BgpPeer  implements java.io.Serializable {
     /**
      * set 用户侧AS
      *
-     * @param customerAsn
+     * @param customerAsn 用户侧AS
+     * @return BgpPeer
      */
     public BgpPeer customerAsn(Integer customerAsn) {
         this.customerAsn = customerAsn;
@@ -333,7 +314,8 @@ public class BgpPeer  implements java.io.Serializable {
     /**
      * set 京东云侧AS
      *
-     * @param jdCloudAsn
+     * @param jdCloudAsn 京东云侧AS
+     * @return BgpPeer
      */
     public BgpPeer jdCloudAsn(Integer jdCloudAsn) {
         this.jdCloudAsn = jdCloudAsn;
@@ -344,7 +326,8 @@ public class BgpPeer  implements java.io.Serializable {
     /**
      * set Bgp配置的认证key
      *
-     * @param authKey
+     * @param authKey Bgp配置的认证key
+     * @return BgpPeer
      */
     public BgpPeer authKey(String authKey) {
         this.authKey = authKey;
@@ -355,7 +338,8 @@ public class BgpPeer  implements java.io.Serializable {
     /**
      * set 通道的Id
      *
-     * @param privateVifId
+     * @param privateVifId 通道的Id
+     * @return BgpPeer
      */
     public BgpPeer privateVifId(String privateVifId) {
         this.privateVifId = privateVifId;
@@ -364,20 +348,10 @@ public class BgpPeer  implements java.io.Serializable {
 
 
     /**
-     * set BgpPeer的状态，取值为：Up, Down
-     *
-     * @param bgpPeerStatus
-     */
-    public BgpPeer bgpPeerStatus(String bgpPeerStatus) {
-        this.bgpPeerStatus = bgpPeerStatus;
-        return this;
-    }
-
-
-    /**
      * set 通道创建的时间
      *
-     * @param createdTime
+     * @param createdTime 通道创建的时间
+     * @return BgpPeer
      */
     public BgpPeer createdTime(String createdTime) {
         this.createdTime = createdTime;
