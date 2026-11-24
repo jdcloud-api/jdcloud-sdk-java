@@ -69,6 +69,16 @@ public class CustomerGateway  implements java.io.Serializable {
      */
     private String updatedTime;
 
+    /**
+     * Tag信息
+     */
+    
+    private List<Tag> tags;
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -204,11 +214,50 @@ public class CustomerGateway  implements java.io.Serializable {
     }
 
 
+    /**
+    * get Tag信息
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Tag信息
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
 
     /**
      * set 客户网关的Id
      *
-     * @param customerGatewayId
+     * @param customerGatewayId 客户网关的Id
+     * @return CustomerGateway
      */
     public CustomerGateway customerGatewayId(String customerGatewayId) {
         this.customerGatewayId = customerGatewayId;
@@ -219,7 +268,8 @@ public class CustomerGateway  implements java.io.Serializable {
     /**
      * set 客户网关的名称
      *
-     * @param customerGatewayName
+     * @param customerGatewayName 客户网关的名称
+     * @return CustomerGateway
      */
     public CustomerGateway customerGatewayName(String customerGatewayName) {
         this.customerGatewayName = customerGatewayName;
@@ -230,7 +280,8 @@ public class CustomerGateway  implements java.io.Serializable {
     /**
     * set 客户网关上的IP列表
     *
-    * @param customerIps
+    * @param customerIps 客户网关上的IP列表
+    * @return CustomerGateway
     */
     public CustomerGateway customerIps(List<String> customerIps) {
         this.customerIps = customerIps;
@@ -241,7 +292,8 @@ public class CustomerGateway  implements java.io.Serializable {
     /**
      * set 客户自治系统的ASN号
      *
-     * @param bgpAsn
+     * @param bgpAsn 客户自治系统的ASN号
+     * @return CustomerGateway
      */
     public CustomerGateway bgpAsn(Integer bgpAsn) {
         this.bgpAsn = bgpAsn;
@@ -252,7 +304,8 @@ public class CustomerGateway  implements java.io.Serializable {
     /**
      * set 客户网关的描述
      *
-     * @param description
+     * @param description 客户网关的描述
+     * @return CustomerGateway
      */
     public CustomerGateway description(String description) {
         this.description = description;
@@ -263,7 +316,8 @@ public class CustomerGateway  implements java.io.Serializable {
     /**
      * set 客户网关的创建时间
      *
-     * @param createdTime
+     * @param createdTime 客户网关的创建时间
+     * @return CustomerGateway
      */
     public CustomerGateway createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -274,10 +328,35 @@ public class CustomerGateway  implements java.io.Serializable {
     /**
      * set 客户网关的更新时间
      *
-     * @param updatedTime
+     * @param updatedTime 客户网关的更新时间
+     * @return CustomerGateway
      */
     public CustomerGateway updatedTime(String updatedTime) {
         this.updatedTime = updatedTime;
+        return this;
+    }
+
+
+    /**
+    * set Tag信息
+    *
+    * @param tags Tag信息
+    * @return CustomerGateway
+    */
+    public CustomerGateway tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId 资源所属资源组ID
+     * @return CustomerGateway
+     */
+    public CustomerGateway resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 
@@ -293,5 +372,17 @@ public class CustomerGateway  implements java.io.Serializable {
             this.customerIps = new ArrayList<>();
         }
         this.customerIps.add(customerIp);
+    }
+
+    /**
+     * add item to Tag信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 }

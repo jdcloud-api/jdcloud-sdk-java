@@ -94,6 +94,9 @@ import com.jdcloud.sdk.service.kubernetes.client.DescribeQuotasExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeOperationsRequest;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeOperationsResponse;
 import com.jdcloud.sdk.service.kubernetes.client.DescribeOperationsExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.AddClusterNetworkDetailRequest;
+import com.jdcloud.sdk.service.kubernetes.model.AddClusterNetworkDetailResponse;
+import com.jdcloud.sdk.service.kubernetes.client.AddClusterNetworkDetailExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.CreateServerlessClusterRequest;
 import com.jdcloud.sdk.service.kubernetes.model.CreateServerlessClusterResponse;
 import com.jdcloud.sdk.service.kubernetes.client.CreateServerlessClusterExecutor;
@@ -389,6 +392,10 @@ public class KubernetesClient extends JdcloudClient {
      * 重置节点。
 - 对指定节点执行重置操作，包括停机、重装系统、启动
 - 重置后节点将恢复到初始状态，节点上的数据将丢失
+- recover 默认为 false，保持普通重置行为；为 true 时先迁移恢复，再重建系统并启动，实例 ID 保持不变
+- recover 为 true 即授权系统执行必要的停机操作，此时忽略 autoStop；不支持 HPC 节点
+- recover 为 true 时不要求显式传密码，不传则沿用节点组/集群已有密码；仅当均为空时返回 400
+- 节点正在重置或存在在途重置任务时返回 400（instance already resetting）
 
      *
      * @param request
@@ -455,6 +462,17 @@ public class KubernetesClient extends JdcloudClient {
      */
     public DescribeOperationsResponse describeOperations(DescribeOperationsRequest request) throws JdcloudSdkException {
         return new DescribeOperationsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加集群的网络配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddClusterNetworkDetailResponse addClusterNetworkDetail(AddClusterNetworkDetailRequest request) throws JdcloudSdkException {
+        return new AddClusterNetworkDetailExecutor().client(this).execute(request);
     }
 
     /**

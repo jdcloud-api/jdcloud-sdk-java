@@ -41,12 +41,14 @@ public class BgwRouteSpec  implements java.io.Serializable {
     private String bgwRouteDestination;
 
     /**
-     * Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)和vpc(vpc)
+     * Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)、vpc(vpc)和中转路由器(tr)
+     * Required:true
      */
+    @Required
     private String bgwNexthopType;
 
     /**
-     * Bgw上路由的下一跳设备资源Id,目前支持hostedPrivateVifId(托管通道Id)，privateVifId专线通道Id,vpcAttachmentId(vpc接口Id)和vpnConnectionId(vpn连接Id)
+     * Bgw上路由的下一跳设备资源Id，目前支持hostedPrivateVifId(托管通道Id)、privateVifId(专线通道Id)、vpcAttachmentId(vpc接口Id)、vpnConnectionId(vpn连接Id)、vpcId(VPC Id)和trId(中转路由器Id)
      * Required:true
      */
     @Required
@@ -79,7 +81,7 @@ public class BgwRouteSpec  implements java.io.Serializable {
 
 
     /**
-     * get Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)和vpc(vpc)
+     * get Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)、vpc(vpc)和中转路由器(tr)
      *
      * @return
      */
@@ -88,7 +90,7 @@ public class BgwRouteSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)和vpc(vpc)
+     * set Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)、vpc(vpc)和中转路由器(tr)
      *
      * @param bgwNexthopType
      */
@@ -98,7 +100,7 @@ public class BgwRouteSpec  implements java.io.Serializable {
 
 
     /**
-     * get Bgw上路由的下一跳设备资源Id,目前支持hostedPrivateVifId(托管通道Id)，privateVifId专线通道Id,vpcAttachmentId(vpc接口Id)和vpnConnectionId(vpn连接Id)
+     * get Bgw上路由的下一跳设备资源Id，目前支持hostedPrivateVifId(托管通道Id)、privateVifId(专线通道Id)、vpcAttachmentId(vpc接口Id)、vpnConnectionId(vpn连接Id)、vpcId(VPC Id)和trId(中转路由器Id)
      *
      * @return
      */
@@ -107,7 +109,7 @@ public class BgwRouteSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Bgw上路由的下一跳设备资源Id,目前支持hostedPrivateVifId(托管通道Id)，privateVifId专线通道Id,vpcAttachmentId(vpc接口Id)和vpnConnectionId(vpn连接Id)
+     * set Bgw上路由的下一跳设备资源Id，目前支持hostedPrivateVifId(托管通道Id)、privateVifId(专线通道Id)、vpcAttachmentId(vpc接口Id)、vpnConnectionId(vpn连接Id)、vpcId(VPC Id)和trId(中转路由器Id)
      *
      * @param bgwRouteNexthop
      */
@@ -139,7 +141,8 @@ public class BgwRouteSpec  implements java.io.Serializable {
     /**
      * set Bgw上路由的目的地址,格式如：172.10.2.15/16,参见RFC 4632
      *
-     * @param bgwRouteDestination
+     * @param bgwRouteDestination Bgw上路由的目的地址,格式如：172.10.2.15/16,参见RFC 4632
+     * @return BgwRouteSpec
      */
     public BgwRouteSpec bgwRouteDestination(String bgwRouteDestination) {
         this.bgwRouteDestination = bgwRouteDestination;
@@ -148,9 +151,10 @@ public class BgwRouteSpec  implements java.io.Serializable {
 
 
     /**
-     * set Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)和vpc(vpc)
+     * set Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)、vpc(vpc)和中转路由器(tr)
      *
-     * @param bgwNexthopType
+     * @param bgwNexthopType Bgw上路由的下一跳类型：目前支持托管通道(hosted_private_vif),专线通道(private_vif),vpc接口(vpc_attachment),vpn连接(vpn_connection)、vpc(vpc)和中转路由器(tr)
+     * @return BgwRouteSpec
      */
     public BgwRouteSpec bgwNexthopType(String bgwNexthopType) {
         this.bgwNexthopType = bgwNexthopType;
@@ -159,9 +163,10 @@ public class BgwRouteSpec  implements java.io.Serializable {
 
 
     /**
-     * set Bgw上路由的下一跳设备资源Id,目前支持hostedPrivateVifId(托管通道Id)，privateVifId专线通道Id,vpcAttachmentId(vpc接口Id)和vpnConnectionId(vpn连接Id)
+     * set Bgw上路由的下一跳设备资源Id，目前支持hostedPrivateVifId(托管通道Id)、privateVifId(专线通道Id)、vpcAttachmentId(vpc接口Id)、vpnConnectionId(vpn连接Id)、vpcId(VPC Id)和trId(中转路由器Id)
      *
-     * @param bgwRouteNexthop
+     * @param bgwRouteNexthop Bgw上路由的下一跳设备资源Id，目前支持hostedPrivateVifId(托管通道Id)、privateVifId(专线通道Id)、vpcAttachmentId(vpc接口Id)、vpnConnectionId(vpn连接Id)、vpcId(VPC Id)和trId(中转路由器Id)
+     * @return BgwRouteSpec
      */
     public BgwRouteSpec bgwRouteNexthop(String bgwRouteNexthop) {
         this.bgwRouteNexthop = bgwRouteNexthop;
@@ -172,7 +177,8 @@ public class BgwRouteSpec  implements java.io.Serializable {
     /**
      * set Bgw路由的描述
      *
-     * @param description
+     * @param description Bgw路由的描述
+     * @return BgwRouteSpec
      */
     public BgwRouteSpec description(String description) {
         this.description = description;

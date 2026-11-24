@@ -134,7 +134,8 @@ public class Bgp  implements java.io.Serializable {
     /**
      * set BgpPeer的地址簇：目前仅支持ipv4
      *
-     * @param addressFamily
+     * @param addressFamily BgpPeer的地址簇：目前仅支持ipv4
+     * @return Bgp
      */
     public Bgp addressFamily(String addressFamily) {
         this.addressFamily = addressFamily;
@@ -145,7 +146,8 @@ public class Bgp  implements java.io.Serializable {
     /**
      * set 用户侧AS
      *
-     * @param customerAsn
+     * @param customerAsn 用户侧AS
+     * @return Bgp
      */
     public Bgp customerAsn(Integer customerAsn) {
         this.customerAsn = customerAsn;
@@ -156,7 +158,8 @@ public class Bgp  implements java.io.Serializable {
     /**
      * set 京东云侧AS
      *
-     * @param jdCloudAsn
+     * @param jdCloudAsn 京东云侧AS
+     * @return Bgp
      */
     public Bgp jdCloudAsn(Integer jdCloudAsn) {
         this.jdCloudAsn = jdCloudAsn;
@@ -167,7 +170,8 @@ public class Bgp  implements java.io.Serializable {
     /**
      * set Bgp配置的认证key
      *
-     * @param authKey
+     * @param authKey Bgp配置的认证key
+     * @return Bgp
      */
     public Bgp authKey(String authKey) {
         this.authKey = authKey;

@@ -65,7 +65,8 @@ public class VpnTunnelAdminStatus  implements java.io.Serializable {
     /**
      * set 隧道管理状态, UP, DOWN
      *
-     * @param adminStatus
+     * @param adminStatus 隧道管理状态, UP, DOWN
+     * @return VpnTunnelAdminStatus
      */
     public VpnTunnelAdminStatus adminStatus(String adminStatus) {
         this.adminStatus = adminStatus;

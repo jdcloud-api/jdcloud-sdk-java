@@ -42,6 +42,11 @@ public class ModifyConnectionSpec  implements java.io.Serializable {
      */
     private String description;
 
+    /**
+     * 更新连接的监控相关属性
+     */
+    private MonitorSpec monitor;
+
 
 
     /**
@@ -82,11 +87,31 @@ public class ModifyConnectionSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 更新连接的监控相关属性
+     *
+     * @return
+     */
+    public MonitorSpec getMonitor() {
+        return monitor;
+    }
+
+    /**
+     * set 更新连接的监控相关属性
+     *
+     * @param monitor
+     */
+    public void setMonitor(MonitorSpec monitor) {
+        this.monitor = monitor;
+    }
+
+
 
     /**
      * set Connection的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param connectionName
+     * @param connectionName Connection的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return ModifyConnectionSpec
      */
     public ModifyConnectionSpec connectionName(String connectionName) {
         this.connectionName = connectionName;
@@ -97,10 +122,23 @@ public class ModifyConnectionSpec  implements java.io.Serializable {
     /**
      * set Connection的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
-     * @param description
+     * @param description Connection的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+     * @return ModifyConnectionSpec
      */
     public ModifyConnectionSpec description(String description) {
         this.description = description;
+        return this;
+    }
+
+
+    /**
+     * set 更新连接的监控相关属性
+     *
+     * @param monitor 更新连接的监控相关属性
+     * @return ModifyConnectionSpec
+     */
+    public ModifyConnectionSpec monitor(MonitorSpec monitor) {
+        this.monitor = monitor;
         return this;
     }
 

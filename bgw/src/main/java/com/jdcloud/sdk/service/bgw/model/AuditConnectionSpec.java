@@ -45,6 +45,11 @@ public class AuditConnectionSpec  implements java.io.Serializable {
      */
     private String rejectedReason;
 
+    /**
+     * 京东内部客户的预制参数配置信息和bgw所在vip集群组信息
+     */
+    private AllocateJdBgwVifConfSpec jdConfItem;
+
 
 
     /**
@@ -85,11 +90,31 @@ public class AuditConnectionSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 京东内部客户的预制参数配置信息和bgw所在vip集群组信息
+     *
+     * @return
+     */
+    public AllocateJdBgwVifConfSpec getJdConfItem() {
+        return jdConfItem;
+    }
+
+    /**
+     * set 京东内部客户的预制参数配置信息和bgw所在vip集群组信息
+     *
+     * @param jdConfItem
+     */
+    public void setJdConfItem(AllocateJdBgwVifConfSpec jdConfItem) {
+        this.jdConfItem = jdConfItem;
+    }
+
+
 
     /**
      * set 审核结果，取值为：accept:通过、reject:不通过
      *
-     * @param result
+     * @param result 审核结果，取值为：accept:通过、reject:不通过
+     * @return AuditConnectionSpec
      */
     public AuditConnectionSpec result(String result) {
         this.result = result;
@@ -100,10 +125,23 @@ public class AuditConnectionSpec  implements java.io.Serializable {
     /**
      * set 审核不通过的原因，审核通过忽略此字段,允许输入UTF-8编码下的全部字符，不超过256字符。
      *
-     * @param rejectedReason
+     * @param rejectedReason 审核不通过的原因，审核通过忽略此字段,允许输入UTF-8编码下的全部字符，不超过256字符。
+     * @return AuditConnectionSpec
      */
     public AuditConnectionSpec rejectedReason(String rejectedReason) {
         this.rejectedReason = rejectedReason;
+        return this;
+    }
+
+
+    /**
+     * set 京东内部客户的预制参数配置信息和bgw所在vip集群组信息
+     *
+     * @param jdConfItem 京东内部客户的预制参数配置信息和bgw所在vip集群组信息
+     * @return AuditConnectionSpec
+     */
+    public AuditConnectionSpec jdConfItem(AllocateJdBgwVifConfSpec jdConfItem) {
+        this.jdConfItem = jdConfItem;
         return this;
     }
 

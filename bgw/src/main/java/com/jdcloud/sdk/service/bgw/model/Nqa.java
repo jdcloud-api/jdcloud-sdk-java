@@ -110,7 +110,8 @@ public class Nqa  implements java.io.Serializable {
     /**
      * set 连续两次发送探测报文的时间间隔。
      *
-     * @param txInterval
+     * @param txInterval 连续两次发送探测报文的时间间隔。
+     * @return Nqa
      */
     public Nqa txInterval(Integer txInterval) {
         this.txInterval = txInterval;
@@ -121,7 +122,8 @@ public class Nqa  implements java.io.Serializable {
     /**
      * set 指定发送连续探测报文的个数。
      *
-     * @param thresholdCount
+     * @param thresholdCount 指定发送连续探测报文的个数。
+     * @return Nqa
      */
     public Nqa thresholdCount(Integer thresholdCount) {
         this.thresholdCount = thresholdCount;
@@ -132,7 +134,8 @@ public class Nqa  implements java.io.Serializable {
     /**
      * set 一次NQA探测的超时时间。
      *
-     * @param responseTimeout
+     * @param responseTimeout 一次NQA探测的超时时间。
+     * @return Nqa
      */
     public Nqa responseTimeout(Integer responseTimeout) {
         this.responseTimeout = responseTimeout;

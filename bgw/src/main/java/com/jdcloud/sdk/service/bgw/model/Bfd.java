@@ -110,7 +110,8 @@ public class Bfd  implements java.io.Serializable {
     /**
      * set BFD报文的最小发送间隔
      *
-     * @param minTxInterval
+     * @param minTxInterval BFD报文的最小发送间隔
+     * @return Bfd
      */
     public Bfd minTxInterval(Integer minTxInterval) {
         this.minTxInterval = minTxInterval;
@@ -121,7 +122,8 @@ public class Bfd  implements java.io.Serializable {
     /**
      * set BFD报文的最小接受间隔
      *
-     * @param minRxInterval
+     * @param minRxInterval BFD报文的最小接受间隔
+     * @return Bfd
      */
     public Bfd minRxInterval(Integer minRxInterval) {
         this.minRxInterval = minRxInterval;
@@ -132,7 +134,8 @@ public class Bfd  implements java.io.Serializable {
     /**
      * set 接收方允许发送方发送BFD控制报文的最大连续丢包数
      *
-     * @param detectMultiplier
+     * @param detectMultiplier 接收方允许发送方发送BFD控制报文的最大连续丢包数
+     * @return Bfd
      */
     public Bfd detectMultiplier(Integer detectMultiplier) {
         this.detectMultiplier = detectMultiplier;

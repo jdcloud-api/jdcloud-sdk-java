@@ -134,7 +134,8 @@ public class ConfirmConnectionSpec  implements java.io.Serializable {
     /**
      * set 端口租用费付费周期，取值为MONTH、YEAR.默认为MONTH
      *
-     * @param chargeTimeUnit
+     * @param chargeTimeUnit 端口租用费付费周期，取值为MONTH、YEAR.默认为MONTH
+     * @return ConfirmConnectionSpec
      */
     public ConfirmConnectionSpec chargeTimeUnit(String chargeTimeUnit) {
         this.chargeTimeUnit = chargeTimeUnit;
@@ -145,7 +146,8 @@ public class ConfirmConnectionSpec  implements java.io.Serializable {
     /**
      * set 端口租用费付费时长，chargeTimeUnit为MONTH时取值范围1，2，3，4，5，6，7，8，9；chargeTimeUnit为YEAR时取值范围1,2,3。默认为1
      *
-     * @param chargeTimeSpan
+     * @param chargeTimeSpan 端口租用费付费时长，chargeTimeUnit为MONTH时取值范围1，2，3，4，5，6，7，8，9；chargeTimeUnit为YEAR时取值范围1,2,3。默认为1
+     * @return ConfirmConnectionSpec
      */
     public ConfirmConnectionSpec chargeTimeSpan(Integer chargeTimeSpan) {
         this.chargeTimeSpan = chargeTimeSpan;
@@ -156,7 +158,8 @@ public class ConfirmConnectionSpec  implements java.io.Serializable {
     /**
      * set 自动支付设置,值为true时自动支付
      *
-     * @param autoPay
+     * @param autoPay 自动支付设置,值为true时自动支付
+     * @return ConfirmConnectionSpec
      */
     public ConfirmConnectionSpec autoPay(Boolean autoPay) {
         this.autoPay = autoPay;
@@ -167,7 +170,8 @@ public class ConfirmConnectionSpec  implements java.io.Serializable {
     /**
      * set 端口租用费自动续费设置
      *
-     * @param autoRenewSpec
+     * @param autoRenewSpec 端口租用费自动续费设置
+     * @return ConfirmConnectionSpec
      */
     public ConfirmConnectionSpec autoRenewSpec(AutoRenewSpec autoRenewSpec) {
         this.autoRenewSpec = autoRenewSpec;

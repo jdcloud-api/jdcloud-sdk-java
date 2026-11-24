@@ -113,7 +113,8 @@ public class BgpSpec  implements java.io.Serializable {
     /**
      * set BgpPeer的地址簇：目前仅支持ipv4，默认为ipv4
      *
-     * @param addressFamily
+     * @param addressFamily BgpPeer的地址簇：目前仅支持ipv4，默认为ipv4
+     * @return BgpSpec
      */
     public BgpSpec addressFamily(String addressFamily) {
         this.addressFamily = addressFamily;
@@ -124,7 +125,8 @@ public class BgpSpec  implements java.io.Serializable {
     /**
      * set 用户侧ASN,京东云使用的BGP ASN为64512，取值范围[65001,65499]
      *
-     * @param customerAsn
+     * @param customerAsn 用户侧ASN,京东云使用的BGP ASN为64512，取值范围[65001,65499]
+     * @return BgpSpec
      */
     public BgpSpec customerAsn(Integer customerAsn) {
         this.customerAsn = customerAsn;
@@ -135,7 +137,8 @@ public class BgpSpec  implements java.io.Serializable {
     /**
      * set Bgp配置的认证key
      *
-     * @param authKey
+     * @param authKey Bgp配置的认证key
+     * @return BgpSpec
      */
     public BgpSpec authKey(String authKey) {
         this.authKey = authKey;

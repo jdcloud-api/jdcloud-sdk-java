@@ -52,6 +52,11 @@ public class VpnTrafficSelectorSpec  implements java.io.Serializable {
      */
     private String description;
 
+    /**
+     * 感兴趣流的生成类型，SYSTEM (系统生成）， CUSTOM（用户自定义）
+     */
+    private String policyType;
+
 
 
     /**
@@ -111,11 +116,31 @@ public class VpnTrafficSelectorSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 感兴趣流的生成类型，SYSTEM (系统生成）， CUSTOM（用户自定义）
+     *
+     * @return
+     */
+    public String getPolicyType() {
+        return policyType;
+    }
+
+    /**
+     * set 感兴趣流的生成类型，SYSTEM (系统生成）， CUSTOM（用户自定义）
+     *
+     * @param policyType
+     */
+    public void setPolicyType(String policyType) {
+        this.policyType = policyType;
+    }
+
+
 
     /**
      * set 本端网段。需要和本地IDC互连的VPC侧的网段，用于第二阶段协商。例如：192.168.1.0/24
      *
-     * @param localSubnet
+     * @param localSubnet 本端网段。需要和本地IDC互连的VPC侧的网段，用于第二阶段协商。例如：192.168.1.0/24
+     * @return VpnTrafficSelectorSpec
      */
     public VpnTrafficSelectorSpec localSubnet(String localSubnet) {
         this.localSubnet = localSubnet;
@@ -126,7 +151,8 @@ public class VpnTrafficSelectorSpec  implements java.io.Serializable {
     /**
     * set 对端网段地址的数组。本地IDC的网段，用于第二阶段协商。例如：192.168.3.0/24
     *
-    * @param remoteSubnets
+    * @param remoteSubnets 对端网段地址的数组。本地IDC的网段，用于第二阶段协商。例如：192.168.3.0/24
+    * @return VpnTrafficSelectorSpec
     */
     public VpnTrafficSelectorSpec remoteSubnets(List<String> remoteSubnets) {
         this.remoteSubnets = remoteSubnets;
@@ -137,10 +163,23 @@ public class VpnTrafficSelectorSpec  implements java.io.Serializable {
     /**
      * set 感兴趣流的描述
      *
-     * @param description
+     * @param description 感兴趣流的描述
+     * @return VpnTrafficSelectorSpec
      */
     public VpnTrafficSelectorSpec description(String description) {
         this.description = description;
+        return this;
+    }
+
+
+    /**
+     * set 感兴趣流的生成类型，SYSTEM (系统生成）， CUSTOM（用户自定义）
+     *
+     * @param policyType 感兴趣流的生成类型，SYSTEM (系统生成）， CUSTOM（用户自定义）
+     * @return VpnTrafficSelectorSpec
+     */
+    public VpnTrafficSelectorSpec policyType(String policyType) {
+        this.policyType = policyType;
         return this;
     }
 

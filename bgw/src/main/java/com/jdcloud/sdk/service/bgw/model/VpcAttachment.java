@@ -74,6 +74,16 @@ public class VpcAttachment  implements java.io.Serializable {
      */
     private String createdTime;
 
+    /**
+     * Tag信息
+     */
+    
+    private List<Tag> tags;
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -228,11 +238,50 @@ public class VpcAttachment  implements java.io.Serializable {
     }
 
 
+    /**
+    * get Tag信息
+    *
+    * @return
+    */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Tag信息
+    *
+    * @param tags
+    */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
 
     /**
      * set vpc接口的Id
      *
-     * @param vpcAttachmentId
+     * @param vpcAttachmentId vpc接口的Id
+     * @return VpcAttachment
      */
     public VpcAttachment vpcAttachmentId(String vpcAttachmentId) {
         this.vpcAttachmentId = vpcAttachmentId;
@@ -243,7 +292,8 @@ public class VpcAttachment  implements java.io.Serializable {
     /**
      * set vpc接口的名称
      *
-     * @param vpcAttachmentName
+     * @param vpcAttachmentName vpc接口的名称
+     * @return VpcAttachment
      */
     public VpcAttachment vpcAttachmentName(String vpcAttachmentName) {
         this.vpcAttachmentName = vpcAttachmentName;
@@ -254,7 +304,8 @@ public class VpcAttachment  implements java.io.Serializable {
     /**
      * set vpc接口对应的bgwId
      *
-     * @param bgwId
+     * @param bgwId vpc接口对应的bgwId
+     * @return VpcAttachment
      */
     public VpcAttachment bgwId(String bgwId) {
         this.bgwId = bgwId;
@@ -265,7 +316,8 @@ public class VpcAttachment  implements java.io.Serializable {
     /**
      * set vpc接口对应的vpcId
      *
-     * @param vpcId
+     * @param vpcId vpc接口对应的vpcId
+     * @return VpcAttachment
      */
     public VpcAttachment vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -276,7 +328,8 @@ public class VpcAttachment  implements java.io.Serializable {
     /**
      * set 选择传播网段的方式all，partial，none
      *
-     * @param propagateType
+     * @param propagateType 选择传播网段的方式all，partial，none
+     * @return VpcAttachment
      */
     public VpcAttachment propagateType(String propagateType) {
         this.propagateType = propagateType;
@@ -287,7 +340,8 @@ public class VpcAttachment  implements java.io.Serializable {
     /**
      * set 创建vpc接口的状态:active
      *
-     * @param status
+     * @param status 创建vpc接口的状态:active
+     * @return VpcAttachment
      */
     public VpcAttachment status(String status) {
         this.status = status;
@@ -298,7 +352,8 @@ public class VpcAttachment  implements java.io.Serializable {
     /**
     * set Vpc接口传播的网段信息列表
     *
-    * @param propagateCidrInfos
+    * @param propagateCidrInfos Vpc接口传播的网段信息列表
+    * @return VpcAttachment
     */
     public VpcAttachment propagateCidrInfos(List<PropagateCidrInfo> propagateCidrInfos) {
         this.propagateCidrInfos = propagateCidrInfos;
@@ -309,10 +364,35 @@ public class VpcAttachment  implements java.io.Serializable {
     /**
      * set vpc接口创建的时间
      *
-     * @param createdTime
+     * @param createdTime vpc接口创建的时间
+     * @return VpcAttachment
      */
     public VpcAttachment createdTime(String createdTime) {
         this.createdTime = createdTime;
+        return this;
+    }
+
+
+    /**
+    * set Tag信息
+    *
+    * @param tags Tag信息
+    * @return VpcAttachment
+    */
+    public VpcAttachment tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId 资源所属资源组ID
+     * @return VpcAttachment
+     */
+    public VpcAttachment resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 
@@ -328,5 +408,17 @@ public class VpcAttachment  implements java.io.Serializable {
             this.propagateCidrInfos = new ArrayList<>();
         }
         this.propagateCidrInfos.add(propagateCidrInfo);
+    }
+
+    /**
+     * add item to Tag信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 }

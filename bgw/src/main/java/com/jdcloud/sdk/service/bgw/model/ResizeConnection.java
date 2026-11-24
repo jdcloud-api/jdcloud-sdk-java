@@ -89,7 +89,8 @@ public class ResizeConnection  implements java.io.Serializable {
     /**
      * set 新的专线locationPortSpec的代码，通过[describeLocations](../Location/describeLocations.md)获得
      *
-     * @param locationPortSpecCode
+     * @param locationPortSpecCode 新的专线locationPortSpec的代码，通过[describeLocations](../Location/describeLocations.md)获得
+     * @return ResizeConnection
      */
     public ResizeConnection locationPortSpecCode(String locationPortSpecCode) {
         this.locationPortSpecCode = locationPortSpecCode;
@@ -100,7 +101,8 @@ public class ResizeConnection  implements java.io.Serializable {
     /**
      * set 自动支付设置,值为true时自动支付
      *
-     * @param autoPay
+     * @param autoPay 自动支付设置,值为true时自动支付
+     * @return ResizeConnection
      */
     public ResizeConnection autoPay(Boolean autoPay) {
         this.autoPay = autoPay;

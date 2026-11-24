@@ -134,7 +134,8 @@ public class Quota  implements java.io.Serializable {
     /**
      * set 资源类型，取值范围：bgw、connection、vif、bgw_route、bgw_propagated_route、vpc_attachment、customer_gateway、vpn_connection、vpn_tunnel、vpn_traffic_selector
      *
-     * @param type
+     * @param type 资源类型，取值范围：bgw、connection、vif、bgw_route、bgw_propagated_route、vpc_attachment、customer_gateway、vpn_connection、vpn_tunnel、vpn_traffic_selector
+     * @return Quota
      */
     public Quota type(String type) {
         this.type = type;
@@ -145,7 +146,8 @@ public class Quota  implements java.io.Serializable {
     /**
      * set type为bgw、connection、cgw不设置, type为bgw_route、bgw_propagated_route、vpc_attachment、vpn_connection设置为bgwId, type为vif设置为connectionId, type为vpn_tunnel设置为vpnConnectionId, type为vpn_traffic_selector设置为vpnConnectionId
      *
-     * @param parentResourceId
+     * @param parentResourceId type为bgw、connection、cgw不设置, type为bgw_route、bgw_propagated_route、vpc_attachment、vpn_connection设置为bgwId, type为vif设置为connectionId, type为vpn_tunnel设置为vpnConnectionId, type为vpn_traffic_selector设置为vpnConnectionId
+     * @return Quota
      */
     public Quota parentResourceId(String parentResourceId) {
         this.parentResourceId = parentResourceId;
@@ -156,7 +158,8 @@ public class Quota  implements java.io.Serializable {
     /**
      * set 配额大小
      *
-     * @param maxLimit
+     * @param maxLimit 配额大小
+     * @return Quota
      */
     public Quota maxLimit(Integer maxLimit) {
         this.maxLimit = maxLimit;
@@ -167,7 +170,8 @@ public class Quota  implements java.io.Serializable {
     /**
      * set 已存在的资源数量
      *
-     * @param count
+     * @param count 已存在的资源数量
+     * @return Quota
      */
     public Quota count(Integer count) {
         this.count = count;

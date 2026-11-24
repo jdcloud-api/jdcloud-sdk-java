@@ -30,6 +30,10 @@ import com.jdcloud.sdk.service.JdcloudResponse;
  * 重置节点。
 - 对指定节点执行重置操作，包括停机、重装系统、启动
 - 重置后节点将恢复到初始状态，节点上的数据将丢失
+- recover 默认为 false，保持普通重置行为；为 true 时先迁移恢复，再重建系统并启动，实例 ID 保持不变
+- recover 为 true 即授权系统执行必要的停机操作，此时忽略 autoStop；不支持 HPC 节点
+- recover 为 true 时不要求显式传密码，不传则沿用节点组/集群已有密码；仅当均为空时返回 400
+- 节点正在重置或存在在途重置任务时返回 400（instance already resetting）
 
  */
 public class ResetNodeResponse extends JdcloudResponse<ResetNodeResult> implements java.io.Serializable {

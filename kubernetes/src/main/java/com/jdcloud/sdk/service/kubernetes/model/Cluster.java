@@ -219,6 +219,11 @@ public class Cluster  implements java.io.Serializable {
      */
     
     private List<String> kubeApiserverDomains;
+    /**
+     * 集群级自动伸缩策略，独立于各节点池的 caConfig
+     */
+    private CAClusterConfig caClusterConfig;
+
 
 
     /**
@@ -924,6 +929,25 @@ public class Cluster  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 集群级自动伸缩策略，独立于各节点池的 caConfig
+     *
+     * @return
+     */
+    public CAClusterConfig getCaClusterConfig() {
+        return caClusterConfig;
+    }
+
+    /**
+     * set 集群级自动伸缩策略，独立于各节点池的 caConfig
+     *
+     * @param caClusterConfig
+     */
+    public void setCaClusterConfig(CAClusterConfig caClusterConfig) {
+        this.caClusterConfig = caClusterConfig;
+    }
+
+
 
     /**
      * set 集群id
@@ -1365,6 +1389,18 @@ public class Cluster  implements java.io.Serializable {
     */
     public Cluster kubeApiserverDomains(List<String> kubeApiserverDomains) {
         this.kubeApiserverDomains = kubeApiserverDomains;
+        return this;
+    }
+
+
+    /**
+     * set 集群级自动伸缩策略，独立于各节点池的 caConfig
+     *
+     * @param caClusterConfig 集群级自动伸缩策略，独立于各节点池的 caConfig
+     * @return Cluster
+     */
+    public Cluster caClusterConfig(CAClusterConfig caClusterConfig) {
+        this.caClusterConfig = caClusterConfig;
         return this;
     }
 

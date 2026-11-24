@@ -86,7 +86,8 @@ public class PropagateCidrInfo  implements java.io.Serializable {
     /**
      * set vpc接口中的一个传播网段,格式如：172.10.2.15/16,
      *
-     * @param subnetCidr
+     * @param subnetCidr vpc接口中的一个传播网段,格式如：172.10.2.15/16,
+     * @return PropagateCidrInfo
      */
     public PropagateCidrInfo subnetCidr(String subnetCidr) {
         this.subnetCidr = subnetCidr;
@@ -97,7 +98,8 @@ public class PropagateCidrInfo  implements java.io.Serializable {
     /**
      * set 传播网段对应的subnetId
      *
-     * @param subnetId
+     * @param subnetId 传播网段对应的subnetId
+     * @return PropagateCidrInfo
      */
     public PropagateCidrInfo subnetId(String subnetId) {
         this.subnetId = subnetId;

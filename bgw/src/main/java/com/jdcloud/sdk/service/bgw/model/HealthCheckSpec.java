@@ -110,7 +110,8 @@ public class HealthCheckSpec  implements java.io.Serializable {
     /**
      * set 健康检查类型；NO_CHECK:不检查; NQA:配置NQA探测检查; BFD:配置BFD session探测检查
      *
-     * @param healthCheckType
+     * @param healthCheckType 健康检查类型；NO_CHECK:不检查; NQA:配置NQA探测检查; BFD:配置BFD session探测检查
+     * @return HealthCheckSpec
      */
     public HealthCheckSpec healthCheckType(String healthCheckType) {
         this.healthCheckType = healthCheckType;
@@ -121,7 +122,8 @@ public class HealthCheckSpec  implements java.io.Serializable {
     /**
      * set NQA探测参数信息
      *
-     * @param nqaInfo
+     * @param nqaInfo NQA探测参数信息
+     * @return HealthCheckSpec
      */
     public HealthCheckSpec nqaInfo(NqaSpec nqaInfo) {
         this.nqaInfo = nqaInfo;
@@ -132,7 +134,8 @@ public class HealthCheckSpec  implements java.io.Serializable {
     /**
      * set BFD探测参数信息
      *
-     * @param bfdInfo
+     * @param bfdInfo BFD探测参数信息
+     * @return HealthCheckSpec
      */
     public HealthCheckSpec bfdInfo(BfdSpec bfdInfo) {
         this.bfdInfo = bfdInfo;

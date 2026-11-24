@@ -68,6 +68,16 @@ public class VpcAttachmentSpec  implements java.io.Serializable {
      */
     
     private List<String> subnetIds;
+    /**
+     * 用户标签
+     */
+    
+    private List<Tag> userTags;
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
+
 
 
     /**
@@ -165,11 +175,50 @@ public class VpcAttachmentSpec  implements java.io.Serializable {
     }
 
 
+    /**
+    * get 用户标签
+    *
+    * @return
+    */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+    * set 用户标签
+    *
+    * @param userTags
+    */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
+
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
 
     /**
      * set vpc接口的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param vpcAttachmentName
+     * @param vpcAttachmentName vpc接口的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return VpcAttachmentSpec
      */
     public VpcAttachmentSpec vpcAttachmentName(String vpcAttachmentName) {
         this.vpcAttachmentName = vpcAttachmentName;
@@ -180,7 +229,8 @@ public class VpcAttachmentSpec  implements java.io.Serializable {
     /**
      * set vpc接口的vpcId
      *
-     * @param vpcId
+     * @param vpcId vpc接口的vpcId
+     * @return VpcAttachmentSpec
      */
     public VpcAttachmentSpec vpcId(String vpcId) {
         this.vpcId = vpcId;
@@ -191,7 +241,8 @@ public class VpcAttachmentSpec  implements java.io.Serializable {
     /**
      * set 选择传播网段的方式all，partial，none
      *
-     * @param propagateType
+     * @param propagateType 选择传播网段的方式all，partial，none
+     * @return VpcAttachmentSpec
      */
     public VpcAttachmentSpec propagateType(String propagateType) {
         this.propagateType = propagateType;
@@ -202,7 +253,8 @@ public class VpcAttachmentSpec  implements java.io.Serializable {
     /**
      * set vpc接口到的bgw的id
      *
-     * @param bgwId
+     * @param bgwId vpc接口到的bgw的id
+     * @return VpcAttachmentSpec
      */
     public VpcAttachmentSpec bgwId(String bgwId) {
         this.bgwId = bgwId;
@@ -213,10 +265,35 @@ public class VpcAttachmentSpec  implements java.io.Serializable {
     /**
     * set 选择传播的网段列表,仅在传播方式为partial的时候生效
     *
-    * @param subnetIds
+    * @param subnetIds 选择传播的网段列表,仅在传播方式为partial的时候生效
+    * @return VpcAttachmentSpec
     */
     public VpcAttachmentSpec subnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
+        return this;
+    }
+
+
+    /**
+    * set 用户标签
+    *
+    * @param userTags 用户标签
+    * @return VpcAttachmentSpec
+    */
+    public VpcAttachmentSpec userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId 资源所属资源组ID
+     * @return VpcAttachmentSpec
+     */
+    public VpcAttachmentSpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 
@@ -232,5 +309,17 @@ public class VpcAttachmentSpec  implements java.io.Serializable {
             this.subnetIds = new ArrayList<>();
         }
         this.subnetIds.add(subnetId);
+    }
+
+    /**
+     * add item to 用户标签
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
     }
 }

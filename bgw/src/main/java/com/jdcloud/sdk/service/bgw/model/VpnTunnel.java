@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.bgw.model;
 
+import com.jdcloud.sdk.service.charge.model.Charge;
 
 /**
  * vpnTunnel
@@ -36,6 +37,11 @@ public class VpnTunnel  implements java.io.Serializable {
      * VPN隧道ID
      */
     private String vpnTunnelId;
+
+    /**
+     * VPN隧道Name
+     */
+    private String vpnTunnelName;
 
     /**
      * VPN连接ID
@@ -178,6 +184,11 @@ public class VpnTunnel  implements java.io.Serializable {
     private String updatedTime;
 
     /**
+     * 计费信息
+     */
+    private Charge charge;
+
+    /**
      * VPN隧道公网限速带宽，单位Mbps
      */
     private Integer bandwidthMbps;
@@ -200,6 +211,25 @@ public class VpnTunnel  implements java.io.Serializable {
      */
     public void setVpnTunnelId(String vpnTunnelId) {
         this.vpnTunnelId = vpnTunnelId;
+    }
+
+
+    /**
+     * get VPN隧道Name
+     *
+     * @return
+     */
+    public String getVpnTunnelName() {
+        return vpnTunnelName;
+    }
+
+    /**
+     * set VPN隧道Name
+     *
+     * @param vpnTunnelName
+     */
+    public void setVpnTunnelName(String vpnTunnelName) {
+        this.vpnTunnelName = vpnTunnelName;
     }
 
 
@@ -736,6 +766,25 @@ public class VpnTunnel  implements java.io.Serializable {
 
 
     /**
+     * get 计费信息
+     *
+     * @return
+     */
+    public Charge getCharge() {
+        return charge;
+    }
+
+    /**
+     * set 计费信息
+     *
+     * @param charge
+     */
+    public void setCharge(Charge charge) {
+        this.charge = charge;
+    }
+
+
+    /**
      * get VPN隧道公网限速带宽，单位Mbps
      *
      * @return
@@ -758,7 +807,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set VPN隧道ID
      *
-     * @param vpnTunnelId
+     * @param vpnTunnelId VPN隧道ID
+     * @return VpnTunnel
      */
     public VpnTunnel vpnTunnelId(String vpnTunnelId) {
         this.vpnTunnelId = vpnTunnelId;
@@ -767,9 +817,22 @@ public class VpnTunnel  implements java.io.Serializable {
 
 
     /**
+     * set VPN隧道Name
+     *
+     * @param vpnTunnelName VPN隧道Name
+     * @return VpnTunnel
+     */
+    public VpnTunnel vpnTunnelName(String vpnTunnelName) {
+        this.vpnTunnelName = vpnTunnelName;
+        return this;
+    }
+
+
+    /**
      * set VPN连接ID
      *
-     * @param vpnConnectionId
+     * @param vpnConnectionId VPN连接ID
+     * @return VpnTunnel
      */
     public VpnTunnel vpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
@@ -780,7 +843,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set VPN本地IP
      *
-     * @param cloudPublicIp
+     * @param cloudPublicIp VPN本地IP
+     * @return VpnTunnel
      */
     public VpnTunnel cloudPublicIp(String cloudPublicIp) {
         this.cloudPublicIp = cloudPublicIp;
@@ -791,7 +855,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set 客户IP
      *
-     * @param customerIp
+     * @param customerIp 客户IP
+     * @return VpnTunnel
      */
     public VpnTunnel customerIp(String customerIp) {
         this.customerIp = customerIp;
@@ -802,7 +867,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set 预共享秘钥字符串
      *
-     * @param psk
+     * @param psk 预共享秘钥字符串
+     * @return VpnTunnel
      */
     public VpnTunnel psk(String psk) {
         this.psk = psk;
@@ -813,7 +879,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set 本地身份验证标识
      *
-     * @param localId
+     * @param localId 本地身份验证标识
+     * @return VpnTunnel
      */
     public VpnTunnel localId(String localId) {
         this.localId = localId;
@@ -824,7 +891,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set 远程身份验证标识
      *
-     * @param remoteId
+     * @param remoteId 远程身份验证标识
+     * @return VpnTunnel
      */
     public VpnTunnel remoteId(String remoteId) {
         this.remoteId = remoteId;
@@ -835,7 +903,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set VPN隧道的本地网关IP
      *
-     * @param localIp
+     * @param localIp VPN隧道的本地网关IP
+     * @return VpnTunnel
      */
     public VpnTunnel localIp(String localIp) {
         this.localIp = localIp;
@@ -846,7 +915,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set VPN隧道的本地网关IP
      *
-     * @param localTunnelIp
+     * @param localTunnelIp VPN隧道的本地网关IP
+     * @return VpnTunnel
      */
     public VpnTunnel localTunnelIp(String localTunnelIp) {
         this.localTunnelIp = localTunnelIp;
@@ -857,7 +927,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set VPN隧道的远端网关IP
      *
-     * @param remoteIp
+     * @param remoteIp VPN隧道的远端网关IP
+     * @return VpnTunnel
      */
     public VpnTunnel remoteIp(String remoteIp) {
         this.remoteIp = remoteIp;
@@ -868,7 +939,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set VPN隧道的远端网关IP
      *
-     * @param remoteTunnelIp
+     * @param remoteTunnelIp VPN隧道的远端网关IP
+     * @return VpnTunnel
      */
     public VpnTunnel remoteTunnelIp(String remoteTunnelIp) {
         this.remoteTunnelIp = remoteTunnelIp;
@@ -879,7 +951,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set VPN隧道的网段,CIDR格式
      *
-     * @param tunnelIp
+     * @param tunnelIp VPN隧道的网段,CIDR格式
+     * @return VpnTunnel
      */
     public VpnTunnel tunnelIp(String tunnelIp) {
         this.tunnelIp = tunnelIp;
@@ -890,7 +963,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set IKE版本
      *
-     * @param ikeVersion
+     * @param ikeVersion IKE版本
+     * @return VpnTunnel
      */
     public VpnTunnel ikeVersion(String ikeVersion) {
         this.ikeVersion = ikeVersion;
@@ -901,7 +975,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set IKE模式
      *
-     * @param ikeMode
+     * @param ikeMode IKE模式
+     * @return VpnTunnel
      */
     public VpnTunnel ikeMode(String ikeMode) {
         this.ikeMode = ikeMode;
@@ -912,7 +987,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set IKE协商秘钥交换算法
      *
-     * @param ikeKeyExchange
+     * @param ikeKeyExchange IKE协商秘钥交换算法
+     * @return VpnTunnel
      */
     public VpnTunnel ikeKeyExchange(String ikeKeyExchange) {
         this.ikeKeyExchange = ikeKeyExchange;
@@ -923,7 +999,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set IKE协商加密算法
      *
-     * @param ikeCipher
+     * @param ikeCipher IKE协商加密算法
+     * @return VpnTunnel
      */
     public VpnTunnel ikeCipher(String ikeCipher) {
         this.ikeCipher = ikeCipher;
@@ -934,7 +1011,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set IKE协商认证算法
      *
-     * @param ikeAuth
+     * @param ikeAuth IKE协商认证算法
+     * @return VpnTunnel
      */
     public VpnTunnel ikeAuth(String ikeAuth) {
         this.ikeAuth = ikeAuth;
@@ -945,7 +1023,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set IKE协商DPD（dead peer detection）是否启用
      *
-     * @param ikeDpdSec
+     * @param ikeDpdSec IKE协商DPD（dead peer detection）是否启用
+     * @return VpnTunnel
      */
     public VpnTunnel ikeDpdSec(Integer ikeDpdSec) {
         this.ikeDpdSec = ikeDpdSec;
@@ -956,7 +1035,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set IKE SA的存活时间
      *
-     * @param ikeSaLifeSec
+     * @param ikeSaLifeSec IKE SA的存活时间
+     * @return VpnTunnel
      */
     public VpnTunnel ikeSaLifeSec(Integer ikeSaLifeSec) {
         this.ikeSaLifeSec = ikeSaLifeSec;
@@ -967,7 +1047,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set IKE child的加密算法
      *
-     * @param ipsecCipher
+     * @param ipsecCipher IKE child的加密算法
+     * @return VpnTunnel
      */
     public VpnTunnel ipsecCipher(String ipsecCipher) {
         this.ipsecCipher = ipsecCipher;
@@ -978,7 +1059,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set IKE child的验证算法
      *
-     * @param ipsecAuth
+     * @param ipsecAuth IKE child的验证算法
+     * @return VpnTunnel
      */
     public VpnTunnel ipsecAuth(String ipsecAuth) {
         this.ipsecAuth = ipsecAuth;
@@ -989,7 +1071,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set IKE child的秘钥交换算法
      *
-     * @param ipsecKeyExchange
+     * @param ipsecKeyExchange IKE child的秘钥交换算法
+     * @return VpnTunnel
      */
     public VpnTunnel ipsecKeyExchange(String ipsecKeyExchange) {
         this.ipsecKeyExchange = ipsecKeyExchange;
@@ -1000,7 +1083,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set IKE child SA的存活时间
      *
-     * @param ipsecSaLifeSec
+     * @param ipsecSaLifeSec IKE child SA的存活时间
+     * @return VpnTunnel
      */
     public VpnTunnel ipsecSaLifeSec(Integer ipsecSaLifeSec) {
         this.ipsecSaLifeSec = ipsecSaLifeSec;
@@ -1011,7 +1095,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set IKE child SA的存活报文数
      *
-     * @param ipsecSaLifepkt
+     * @param ipsecSaLifepkt IKE child SA的存活报文数
+     * @return VpnTunnel
      */
     public VpnTunnel ipsecSaLifepkt(Long ipsecSaLifepkt) {
         this.ipsecSaLifepkt = ipsecSaLifepkt;
@@ -1022,7 +1107,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set IKE child SA的存活字节数
      *
-     * @param ipsecSaLifebyte
+     * @param ipsecSaLifebyte IKE child SA的存活字节数
+     * @return VpnTunnel
      */
     public VpnTunnel ipsecSaLifebyte(Long ipsecSaLifebyte) {
         this.ipsecSaLifebyte = ipsecSaLifebyte;
@@ -1033,7 +1119,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set 隧道管理状态, UP或DOWN
      *
-     * @param adminStatus
+     * @param adminStatus 隧道管理状态, UP或DOWN
+     * @return VpnTunnel
      */
     public VpnTunnel adminStatus(String adminStatus) {
         this.adminStatus = adminStatus;
@@ -1044,7 +1131,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set 隧道活跃状态, UP或DOWN
      *
-     * @param opStatus
+     * @param opStatus 隧道活跃状态, UP或DOWN
+     * @return VpnTunnel
      */
     public VpnTunnel opStatus(String opStatus) {
         this.opStatus = opStatus;
@@ -1055,7 +1143,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set 隧道创建时间
      *
-     * @param createdTime
+     * @param createdTime 隧道创建时间
+     * @return VpnTunnel
      */
     public VpnTunnel createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -1066,7 +1155,8 @@ public class VpnTunnel  implements java.io.Serializable {
     /**
      * set 隧道最后更新时间
      *
-     * @param updatedTime
+     * @param updatedTime 隧道最后更新时间
+     * @return VpnTunnel
      */
     public VpnTunnel updatedTime(String updatedTime) {
         this.updatedTime = updatedTime;
@@ -1075,9 +1165,22 @@ public class VpnTunnel  implements java.io.Serializable {
 
 
     /**
+     * set 计费信息
+     *
+     * @param charge 计费信息
+     * @return VpnTunnel
+     */
+    public VpnTunnel charge(Charge charge) {
+        this.charge = charge;
+        return this;
+    }
+
+
+    /**
      * set VPN隧道公网限速带宽，单位Mbps
      *
-     * @param bandwidthMbps
+     * @param bandwidthMbps VPN隧道公网限速带宽，单位Mbps
+     * @return VpnTunnel
      */
     public VpnTunnel bandwidthMbps(Integer bandwidthMbps) {
         this.bandwidthMbps = bandwidthMbps;

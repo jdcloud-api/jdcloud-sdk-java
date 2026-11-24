@@ -31,6 +31,10 @@ import com.jdcloud.sdk.service.JdcloudRequest;
  * 重置节点。
 - 对指定节点执行重置操作，包括停机、重装系统、启动
 - 重置后节点将恢复到初始状态，节点上的数据将丢失
+- recover 默认为 false，保持普通重置行为；为 true 时先迁移恢复，再重建系统并启动，实例 ID 保持不变
+- recover 为 true 即授权系统执行必要的停机操作，此时忽略 autoStop；不支持 HPC 节点
+- recover 为 true 时不要求显式传密码，不传则沿用节点组/集群已有密码；仅当均为空时返回 400
+- 节点正在重置或存在在途重置任务时返回 400（instance already resetting）
 
  */
 public class ResetNodeRequest extends JdcloudRequest implements java.io.Serializable {
@@ -43,14 +47,34 @@ public class ResetNodeRequest extends JdcloudRequest implements java.io.Serializ
     private String imageId;
 
     /**
-     * 是否自动停机（可选），默认 false
+     * 是否自动停机（可选），默认 false；recover 为 true 时忽略此参数
      */
     private Boolean autoStop;
 
     /**
-     * 重置密码（可选），若不传则使用节点组或集群默认密码
+     * 是否先迁移恢复再重建系统并启动（可选），默认 false；为 true 时授权停机并忽略 autoStop，实例 ID 保持不变，不支持 HPC 节点
+     */
+    private Boolean recover;
+
+    /**
+     * 重置密码（可选），若不传则沿用节点组或集群已有密码
      */
     private String password;
+
+    /**
+     * 故障描述，最长 256 个字符；recover 为 true 时必填且不能仅含空白，recover 为 false 时忽略
+     */
+    private String description;
+
+    /**
+     * 故障复现命令，最长 2048 个 UTF-8 字节，仅保存展示不执行；recover 为 true 时必填，recover 为 false 时忽略
+     */
+    private String reproductionCommand;
+
+    /**
+     * 复现命令输出，最长 16384 个 UTF-8 字节，原样保存，超限拒绝；recover 为 true 时必填，recover 为 false 时忽略
+     */
+    private String commandOutput;
 
     /**
      * 地域 ID
@@ -95,7 +119,7 @@ public class ResetNodeRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * get 是否自动停机（可选），默认 false
+     * get 是否自动停机（可选），默认 false；recover 为 true 时忽略此参数
      *
      * @return
      */
@@ -104,7 +128,7 @@ public class ResetNodeRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 是否自动停机（可选），默认 false
+     * set 是否自动停机（可选），默认 false；recover 为 true 时忽略此参数
      *
      * @param autoStop
      */
@@ -114,7 +138,26 @@ public class ResetNodeRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * get 重置密码（可选），若不传则使用节点组或集群默认密码
+     * get 是否先迁移恢复再重建系统并启动（可选），默认 false；为 true 时授权停机并忽略 autoStop，实例 ID 保持不变，不支持 HPC 节点
+     *
+     * @return
+     */
+    public Boolean getRecover() {
+        return recover;
+    }
+
+    /**
+     * set 是否先迁移恢复再重建系统并启动（可选），默认 false；为 true 时授权停机并忽略 autoStop，实例 ID 保持不变，不支持 HPC 节点
+     *
+     * @param recover
+     */
+    public void setRecover(Boolean recover) {
+        this.recover = recover;
+    }
+
+
+    /**
+     * get 重置密码（可选），若不传则沿用节点组或集群已有密码
      *
      * @return
      */
@@ -123,12 +166,69 @@ public class ResetNodeRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 重置密码（可选），若不传则使用节点组或集群默认密码
+     * set 重置密码（可选），若不传则沿用节点组或集群已有密码
      *
      * @param password
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    /**
+     * get 故障描述，最长 256 个字符；recover 为 true 时必填且不能仅含空白，recover 为 false 时忽略
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 故障描述，最长 256 个字符；recover 为 true 时必填且不能仅含空白，recover 为 false 时忽略
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
+    /**
+     * get 故障复现命令，最长 2048 个 UTF-8 字节，仅保存展示不执行；recover 为 true 时必填，recover 为 false 时忽略
+     *
+     * @return
+     */
+    public String getReproductionCommand() {
+        return reproductionCommand;
+    }
+
+    /**
+     * set 故障复现命令，最长 2048 个 UTF-8 字节，仅保存展示不执行；recover 为 true 时必填，recover 为 false 时忽略
+     *
+     * @param reproductionCommand
+     */
+    public void setReproductionCommand(String reproductionCommand) {
+        this.reproductionCommand = reproductionCommand;
+    }
+
+
+    /**
+     * get 复现命令输出，最长 16384 个 UTF-8 字节，原样保存，超限拒绝；recover 为 true 时必填，recover 为 false 时忽略
+     *
+     * @return
+     */
+    public String getCommandOutput() {
+        return commandOutput;
+    }
+
+    /**
+     * set 复现命令输出，最长 16384 个 UTF-8 字节，原样保存，超限拒绝；recover 为 true 时必填，recover 为 false 时忽略
+     *
+     * @param commandOutput
+     */
+    public void setCommandOutput(String commandOutput) {
+        this.commandOutput = commandOutput;
     }
 
 
@@ -203,9 +303,9 @@ public class ResetNodeRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * set 是否自动停机（可选），默认 false
+     * set 是否自动停机（可选），默认 false；recover 为 true 时忽略此参数
      *
-     * @param autoStop 是否自动停机（可选），默认 false
+     * @param autoStop 是否自动停机（可选），默认 false；recover 为 true 时忽略此参数
      * @return ResetNodeRequest
      */
     public ResetNodeRequest autoStop(Boolean autoStop) {
@@ -215,13 +315,61 @@ public class ResetNodeRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * set 重置密码（可选），若不传则使用节点组或集群默认密码
+     * set 是否先迁移恢复再重建系统并启动（可选），默认 false；为 true 时授权停机并忽略 autoStop，实例 ID 保持不变，不支持 HPC 节点
      *
-     * @param password 重置密码（可选），若不传则使用节点组或集群默认密码
+     * @param recover 是否先迁移恢复再重建系统并启动（可选），默认 false；为 true 时授权停机并忽略 autoStop，实例 ID 保持不变，不支持 HPC 节点
+     * @return ResetNodeRequest
+     */
+    public ResetNodeRequest recover(Boolean recover) {
+        this.recover = recover;
+        return this;
+    }
+
+
+    /**
+     * set 重置密码（可选），若不传则沿用节点组或集群已有密码
+     *
+     * @param password 重置密码（可选），若不传则沿用节点组或集群已有密码
      * @return ResetNodeRequest
      */
     public ResetNodeRequest password(String password) {
         this.password = password;
+        return this;
+    }
+
+
+    /**
+     * set 故障描述，最长 256 个字符；recover 为 true 时必填且不能仅含空白，recover 为 false 时忽略
+     *
+     * @param description 故障描述，最长 256 个字符；recover 为 true 时必填且不能仅含空白，recover 为 false 时忽略
+     * @return ResetNodeRequest
+     */
+    public ResetNodeRequest description(String description) {
+        this.description = description;
+        return this;
+    }
+
+
+    /**
+     * set 故障复现命令，最长 2048 个 UTF-8 字节，仅保存展示不执行；recover 为 true 时必填，recover 为 false 时忽略
+     *
+     * @param reproductionCommand 故障复现命令，最长 2048 个 UTF-8 字节，仅保存展示不执行；recover 为 true 时必填，recover 为 false 时忽略
+     * @return ResetNodeRequest
+     */
+    public ResetNodeRequest reproductionCommand(String reproductionCommand) {
+        this.reproductionCommand = reproductionCommand;
+        return this;
+    }
+
+
+    /**
+     * set 复现命令输出，最长 16384 个 UTF-8 字节，原样保存，超限拒绝；recover 为 true 时必填，recover 为 false 时忽略
+     *
+     * @param commandOutput 复现命令输出，最长 16384 个 UTF-8 字节，原样保存，超限拒绝；recover 为 true 时必填，recover 为 false 时忽略
+     * @return ResetNodeRequest
+     */
+    public ResetNodeRequest commandOutput(String commandOutput) {
+        this.commandOutput = commandOutput;
         return this;
     }
 

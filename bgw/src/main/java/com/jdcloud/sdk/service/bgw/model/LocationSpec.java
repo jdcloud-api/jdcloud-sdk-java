@@ -110,7 +110,8 @@ public class LocationSpec  implements java.io.Serializable {
     /**
      * set 专线创建的地域编码;只在创建自助连接时生效，通过调用[describeLocations](../Location/describeLocations.md)接口获取
      *
-     * @param locationCode
+     * @param locationCode 专线创建的地域编码;只在创建自助连接时生效，通过调用[describeLocations](../Location/describeLocations.md)接口获取
+     * @return LocationSpec
      */
     public LocationSpec locationCode(String locationCode) {
         this.locationCode = locationCode;
@@ -121,7 +122,8 @@ public class LocationSpec  implements java.io.Serializable {
     /**
      * set 专线接入端口规格代码，在创建自助连接和托管专线时生效.通过调用[describeLocations](../Location/describeLocations.md)接口获取
      *
-     * @param locationPortSpecCode
+     * @param locationPortSpecCode 专线接入端口规格代码，在创建自助连接和托管专线时生效.通过调用[describeLocations](../Location/describeLocations.md)接口获取
+     * @return LocationSpec
      */
     public LocationSpec locationPortSpecCode(String locationPortSpecCode) {
         this.locationPortSpecCode = locationPortSpecCode;
@@ -132,7 +134,8 @@ public class LocationSpec  implements java.io.Serializable {
     /**
      * set 专线接入运营商代码，只在创建自助连接时生效.通过调用[describeLocations](../Location/describeLocations.md)接口获取
      *
-     * @param locationISPCode
+     * @param locationISPCode 专线接入运营商代码，只在创建自助连接时生效.通过调用[describeLocations](../Location/describeLocations.md)接口获取
+     * @return LocationSpec
      */
     public LocationSpec locationISPCode(String locationISPCode) {
         this.locationISPCode = locationISPCode;

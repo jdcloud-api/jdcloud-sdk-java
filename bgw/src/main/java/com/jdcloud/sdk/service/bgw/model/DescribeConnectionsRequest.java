@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.bgw.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.common.model.Filter;
+import com.jdcloud.sdk.service.bgw.model.TagFilter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -49,13 +50,23 @@ public class DescribeConnectionsRequest extends JdcloudRequest implements java.i
 
     /**
      * connectionIds - 连接ID列表，支持多个
-connectionNames - 连接名称列表,支持多个
+connectionNames - 连接名称列表，支持多个
 types - 类型，取值：jcloud_hosted:托管连接、jcloud_partner:合作伙伴连接、jcloud:自助连接, 支持多个
-status - Connection状态,支持单个。取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、已删除(Deleted)、审核未通过(Rejected)
+status - Connection状态，支持单个。取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、审核未通过(Rejected)
 
      */
     
     private List<Filter> filters;
+    /**
+     * Tag筛选条件
+     */
+    
+    private List<TagFilter> tags;
+    /**
+     * 资源组筛选条件
+     */
+    
+    private List<String> resourceGroupIds;
     /**
      * Region ID
      * Required:true
@@ -105,9 +116,9 @@ status - Connection状态,支持单个。取值为：待审核(Ordering)、待�
 
     /**
     * get connectionIds - 连接ID列表，支持多个
-connectionNames - 连接名称列表,支持多个
+connectionNames - 连接名称列表，支持多个
 types - 类型，取值：jcloud_hosted:托管连接、jcloud_partner:合作伙伴连接、jcloud:自助连接, 支持多个
-status - Connection状态,支持单个。取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、已删除(Deleted)、审核未通过(Rejected)
+status - Connection状态，支持单个。取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、审核未通过(Rejected)
 
     *
     * @return
@@ -118,15 +129,53 @@ status - Connection状态,支持单个。取值为：待审核(Ordering)、待�
 
     /**
     * set connectionIds - 连接ID列表，支持多个
-connectionNames - 连接名称列表,支持多个
+connectionNames - 连接名称列表，支持多个
 types - 类型，取值：jcloud_hosted:托管连接、jcloud_partner:合作伙伴连接、jcloud:自助连接, 支持多个
-status - Connection状态,支持单个。取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、已删除(Deleted)、审核未通过(Rejected)
+status - Connection状态，支持单个。取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、审核未通过(Rejected)
 
     *
     * @param filters
     */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
+    }
+
+
+    /**
+    * get Tag筛选条件
+    *
+    * @return
+    */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+    * get 资源组筛选条件
+    *
+    * @return
+    */
+    public List<String> getResourceGroupIds() {
+        return resourceGroupIds;
+    }
+
+    /**
+    * set 资源组筛选条件
+    *
+    * @param resourceGroupIds
+    */
+    public void setResourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
     }
 
 
@@ -153,7 +202,8 @@ status - Connection状态,支持单个。取值为：待审核(Ordering)、待�
     /**
      * set 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
      *
-     * @param pageNumber
+     * @param pageNumber 页码, 默认为1, 取值范围：[1,∞), 页码超过总页数时, 显示最后一页
+     * @return DescribeConnectionsRequest
      */
     public DescribeConnectionsRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
@@ -164,7 +214,8 @@ status - Connection状态,支持单个。取值为：待审核(Ordering)、待�
     /**
      * set 分页大小，默认为20，取值范围：[10,100]
      *
-     * @param pageSize
+     * @param pageSize 分页大小，默认为20，取值范围：[10,100]
+     * @return DescribeConnectionsRequest
      */
     public DescribeConnectionsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
@@ -174,12 +225,17 @@ status - Connection状态,支持单个。取值为：待审核(Ordering)、待�
 
     /**
     * set connectionIds - 连接ID列表，支持多个
-connectionNames - 连接名称列表,支持多个
+connectionNames - 连接名称列表，支持多个
 types - 类型，取值：jcloud_hosted:托管连接、jcloud_partner:合作伙伴连接、jcloud:自助连接, 支持多个
-status - Connection状态,支持单个。取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、已删除(Deleted)、审核未通过(Rejected)
+status - Connection状态，支持单个。取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、审核未通过(Rejected)
 
     *
-    * @param filters
+    * @param filters connectionIds - 连接ID列表，支持多个
+connectionNames - 连接名称列表，支持多个
+types - 类型，取值：jcloud_hosted:托管连接、jcloud_partner:合作伙伴连接、jcloud:自助连接, 支持多个
+status - Connection状态，支持单个。取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、审核未通过(Rejected)
+
+    * @return DescribeConnectionsRequest
     */
     public DescribeConnectionsRequest filters(List<Filter> filters) {
         this.filters = filters;
@@ -188,9 +244,34 @@ status - Connection状态,支持单个。取值为：待审核(Ordering)、待�
 
 
     /**
+    * set Tag筛选条件
+    *
+    * @param tags Tag筛选条件
+    * @return DescribeConnectionsRequest
+    */
+    public DescribeConnectionsRequest tags(List<TagFilter> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+    * set 资源组筛选条件
+    *
+    * @param resourceGroupIds 资源组筛选条件
+    * @return DescribeConnectionsRequest
+    */
+    public DescribeConnectionsRequest resourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+        return this;
+    }
+
+
+    /**
      * set Region ID
      *
-     * @param regionId
+     * @param regionId Region ID
+     * @return DescribeConnectionsRequest
      */
     public DescribeConnectionsRequest regionId(String regionId) {
         this.regionId = regionId;
@@ -201,9 +282,9 @@ status - Connection状态,支持单个。取值为：待审核(Ordering)、待�
 
     /**
      * add item to connectionIds - 连接ID列表，支持多个
-connectionNames - 连接名称列表,支持多个
+connectionNames - 连接名称列表，支持多个
 types - 类型，取值：jcloud_hosted:托管连接、jcloud_partner:合作伙伴连接、jcloud:自助连接, 支持多个
-status - Connection状态,支持单个。取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、已删除(Deleted)、审核未通过(Rejected)
+status - Connection状态，支持单个。取值为：待审核(Ordering)、待支付(Installation_Paying)、施工中(Pending)、等待确认(Confirming)、可用(Active)、不可用(InActive)、删除中(Deleting)、审核未通过(Rejected)
 
      *
      * @param filter
@@ -213,5 +294,29 @@ status - Connection状态,支持单个。取值为：待审核(Ordering)、待�
             this.filters = new ArrayList<>();
         }
         this.filters.add(filter);
+    }
+
+    /**
+     * add item to Tag筛选条件
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
+
+    /**
+     * add item to 资源组筛选条件
+     *
+     * @param resourceGroupId
+     */
+    public void addResourceGroupId(String resourceGroupId) {
+        if (this.resourceGroupIds == null) {
+            this.resourceGroupIds = new ArrayList<>();
+        }
+        this.resourceGroupIds.add(resourceGroupId);
     }
 }

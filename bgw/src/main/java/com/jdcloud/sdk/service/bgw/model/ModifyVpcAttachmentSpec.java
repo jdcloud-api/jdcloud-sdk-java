@@ -86,7 +86,8 @@ public class ModifyVpcAttachmentSpec  implements java.io.Serializable {
     /**
      * set vpc接口的名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param vpcAttachmentName
+     * @param vpcAttachmentName vpc接口的名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return ModifyVpcAttachmentSpec
      */
     public ModifyVpcAttachmentSpec vpcAttachmentName(String vpcAttachmentName) {
         this.vpcAttachmentName = vpcAttachmentName;
@@ -97,7 +98,8 @@ public class ModifyVpcAttachmentSpec  implements java.io.Serializable {
     /**
      * set 更新vpc接口和传播相关的属性，全量更新
      *
-     * @param propagationAttribute
+     * @param propagationAttribute 更新vpc接口和传播相关的属性，全量更新
+     * @return ModifyVpcAttachmentSpec
      */
     public ModifyVpcAttachmentSpec propagationAttribute(PropagationAttribute propagationAttribute) {
         this.propagationAttribute = propagationAttribute;

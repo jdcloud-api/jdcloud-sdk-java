@@ -34,9 +34,36 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.bgw.model.DescribeConnectionsRequest;
 import com.jdcloud.sdk.service.bgw.model.DescribeConnectionsResponse;
 import com.jdcloud.sdk.service.bgw.client.DescribeConnectionsExecutor;
+import com.jdcloud.sdk.service.bgw.model.DescribeBgwRoutesRequest;
+import com.jdcloud.sdk.service.bgw.model.DescribeBgwRoutesResponse;
+import com.jdcloud.sdk.service.bgw.client.DescribeBgwRoutesExecutor;
+import com.jdcloud.sdk.service.bgw.model.DescribeVpcAttachmentRequest;
+import com.jdcloud.sdk.service.bgw.model.DescribeVpcAttachmentResponse;
+import com.jdcloud.sdk.service.bgw.client.DescribeVpcAttachmentExecutor;
+import com.jdcloud.sdk.service.bgw.model.DescribePrivateVirtualInterfacesRequest;
+import com.jdcloud.sdk.service.bgw.model.DescribePrivateVirtualInterfacesResponse;
+import com.jdcloud.sdk.service.bgw.client.DescribePrivateVirtualInterfacesExecutor;
+import com.jdcloud.sdk.service.bgw.model.DescribePrivateVirtualInterfaceRequest;
+import com.jdcloud.sdk.service.bgw.model.DescribePrivateVirtualInterfaceResponse;
+import com.jdcloud.sdk.service.bgw.client.DescribePrivateVirtualInterfaceExecutor;
 import com.jdcloud.sdk.service.bgw.model.ModifyAdminStatusRequest;
 import com.jdcloud.sdk.service.bgw.model.ModifyAdminStatusResponse;
 import com.jdcloud.sdk.service.bgw.client.ModifyAdminStatusExecutor;
+import com.jdcloud.sdk.service.bgw.model.DescribeBgwsRequest;
+import com.jdcloud.sdk.service.bgw.model.DescribeBgwsResponse;
+import com.jdcloud.sdk.service.bgw.client.DescribeBgwsExecutor;
+import com.jdcloud.sdk.service.bgw.model.DescribeBgwRequest;
+import com.jdcloud.sdk.service.bgw.model.DescribeBgwResponse;
+import com.jdcloud.sdk.service.bgw.client.DescribeBgwExecutor;
+import com.jdcloud.sdk.service.bgw.model.DescribeConnectionRequest;
+import com.jdcloud.sdk.service.bgw.model.DescribeConnectionResponse;
+import com.jdcloud.sdk.service.bgw.client.DescribeConnectionExecutor;
+import com.jdcloud.sdk.service.bgw.model.DescribeVpcAttachmentsRequest;
+import com.jdcloud.sdk.service.bgw.model.DescribeVpcAttachmentsResponse;
+import com.jdcloud.sdk.service.bgw.client.DescribeVpcAttachmentsExecutor;
+import com.jdcloud.sdk.service.bgw.model.DescribeopJdBgwVifConfsRequest;
+import com.jdcloud.sdk.service.bgw.model.DescribeopJdBgwVifConfsResponse;
+import com.jdcloud.sdk.service.bgw.client.DescribeopJdBgwVifConfsExecutor;
 
 /**
  * bgwClient
@@ -99,6 +126,50 @@ public class BgwClient extends JdcloudClient {
     }
 
     /**
+     * 查询边界网关路由列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBgwRoutesResponse describeBgwRoutes(DescribeBgwRoutesRequest request) throws JdcloudSdkException {
+        return new DescribeBgwRoutesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询vpc接口详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeVpcAttachmentResponse describeVpcAttachment(DescribeVpcAttachmentRequest request) throws JdcloudSdkException {
+        return new DescribeVpcAttachmentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询privateVif列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribePrivateVirtualInterfacesResponse describePrivateVirtualInterfaces(DescribePrivateVirtualInterfacesRequest request) throws JdcloudSdkException {
+        return new DescribePrivateVirtualInterfacesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询privateVif信息详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribePrivateVirtualInterfaceResponse describePrivateVirtualInterface(DescribePrivateVirtualInterfaceRequest request) throws JdcloudSdkException {
+        return new DescribePrivateVirtualInterfaceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改VPN隧道管理状态
      *
      * @param request
@@ -107,6 +178,61 @@ public class BgwClient extends JdcloudClient {
      */
     public ModifyAdminStatusResponse modifyAdminStatus(ModifyAdminStatusRequest request) throws JdcloudSdkException {
         return new ModifyAdminStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询边界网关列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBgwsResponse describeBgws(DescribeBgwsRequest request) throws JdcloudSdkException {
+        return new DescribeBgwsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询边界网关信息详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBgwResponse describeBgw(DescribeBgwRequest request) throws JdcloudSdkException {
+        return new DescribeBgwExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询Connection信息详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeConnectionResponse describeConnection(DescribeConnectionRequest request) throws JdcloudSdkException {
+        return new DescribeConnectionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询vpc接口列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeVpcAttachmentsResponse describeVpcAttachments(DescribeVpcAttachmentsRequest request) throws JdcloudSdkException {
+        return new DescribeVpcAttachmentsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询专线配置列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeopJdBgwVifConfsResponse describeopJdBgwVifConfs(DescribeopJdBgwVifConfsRequest request) throws JdcloudSdkException {
+        return new DescribeopJdBgwVifConfsExecutor().client(this).execute(request);
     }
 
 

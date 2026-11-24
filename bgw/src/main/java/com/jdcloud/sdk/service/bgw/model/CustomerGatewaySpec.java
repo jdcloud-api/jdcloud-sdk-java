@@ -50,7 +50,7 @@ public class CustomerGatewaySpec  implements java.io.Serializable {
     
     private List<String> customerIps;
     /**
-     * 客户自治系统的ASN号，取值范围[65001,65499]，设置后不支持修改；
+     * 客户自治系统的ASN号，取值范围[64512,65534]，设置后不支持修改；
      * Required:true
      */
     @Required
@@ -60,6 +60,16 @@ public class CustomerGatewaySpec  implements java.io.Serializable {
      * 客户网关的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      */
     private String description;
+
+    /**
+     * 用户标签
+     */
+    
+    private List<Tag> userTags;
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
 
 
 
@@ -102,7 +112,7 @@ public class CustomerGatewaySpec  implements java.io.Serializable {
 
 
     /**
-     * get 客户自治系统的ASN号，取值范围[65001,65499]，设置后不支持修改；
+     * get 客户自治系统的ASN号，取值范围[64512,65534]，设置后不支持修改；
      *
      * @return
      */
@@ -111,7 +121,7 @@ public class CustomerGatewaySpec  implements java.io.Serializable {
     }
 
     /**
-     * set 客户自治系统的ASN号，取值范围[65001,65499]，设置后不支持修改；
+     * set 客户自治系统的ASN号，取值范围[64512,65534]，设置后不支持修改；
      *
      * @param bgpAsn
      */
@@ -139,11 +149,50 @@ public class CustomerGatewaySpec  implements java.io.Serializable {
     }
 
 
+    /**
+    * get 用户标签
+    *
+    * @return
+    */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+    * set 用户标签
+    *
+    * @param userTags
+    */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
+
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+
 
     /**
      * set 客户网关的名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param customerGatewayName
+     * @param customerGatewayName 客户网关的名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return CustomerGatewaySpec
      */
     public CustomerGatewaySpec customerGatewayName(String customerGatewayName) {
         this.customerGatewayName = customerGatewayName;
@@ -154,7 +203,8 @@ public class CustomerGatewaySpec  implements java.io.Serializable {
     /**
     * set 客户网关上公网可路由的IPv4地址列表，可以为单IP、双IP、四IP，IP不能相同
     *
-    * @param customerIps
+    * @param customerIps 客户网关上公网可路由的IPv4地址列表，可以为单IP、双IP、四IP，IP不能相同
+    * @return CustomerGatewaySpec
     */
     public CustomerGatewaySpec customerIps(List<String> customerIps) {
         this.customerIps = customerIps;
@@ -163,9 +213,10 @@ public class CustomerGatewaySpec  implements java.io.Serializable {
 
 
     /**
-     * set 客户自治系统的ASN号，取值范围[65001,65499]，设置后不支持修改；
+     * set 客户自治系统的ASN号，取值范围[64512,65534]，设置后不支持修改；
      *
-     * @param bgpAsn
+     * @param bgpAsn 客户自治系统的ASN号，取值范围[64512,65534]，设置后不支持修改；
+     * @return CustomerGatewaySpec
      */
     public CustomerGatewaySpec bgpAsn(Integer bgpAsn) {
         this.bgpAsn = bgpAsn;
@@ -176,10 +227,35 @@ public class CustomerGatewaySpec  implements java.io.Serializable {
     /**
      * set 客户网关的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
-     * @param description
+     * @param description 客户网关的描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+     * @return CustomerGatewaySpec
      */
     public CustomerGatewaySpec description(String description) {
         this.description = description;
+        return this;
+    }
+
+
+    /**
+    * set 用户标签
+    *
+    * @param userTags 用户标签
+    * @return CustomerGatewaySpec
+    */
+    public CustomerGatewaySpec userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId 资源所属资源组ID
+     * @return CustomerGatewaySpec
+     */
+    public CustomerGatewaySpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 
@@ -195,5 +271,17 @@ public class CustomerGatewaySpec  implements java.io.Serializable {
             this.customerIps = new ArrayList<>();
         }
         this.customerIps.add(customerIp);
+    }
+
+    /**
+     * add item to 用户标签
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
     }
 }

@@ -63,6 +63,11 @@ public class Partner  implements java.io.Serializable {
     private String mailbox;
 
     /**
+     * 合作伙伴描述，最长支持50个字符
+     */
+    private String description;
+
+    /**
      * 合作伙伴对应的pin
      */
     private String pin;
@@ -184,6 +189,25 @@ public class Partner  implements java.io.Serializable {
 
 
     /**
+     * get 合作伙伴描述，最长支持50个字符
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 合作伙伴描述，最长支持50个字符
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
+    /**
      * get 合作伙伴对应的pin
      *
      * @return
@@ -206,7 +230,8 @@ public class Partner  implements java.io.Serializable {
     /**
      * set Partner的Id
      *
-     * @param partnerId
+     * @param partnerId Partner的Id
+     * @return Partner
      */
     public Partner partnerId(String partnerId) {
         this.partnerId = partnerId;
@@ -217,7 +242,8 @@ public class Partner  implements java.io.Serializable {
     /**
      * set Partner的名称, 只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
-     * @param partnerName
+     * @param partnerName Partner的名称, 只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     * @return Partner
      */
     public Partner partnerName(String partnerName) {
         this.partnerName = partnerName;
@@ -228,7 +254,8 @@ public class Partner  implements java.io.Serializable {
     /**
      * set Partner的编码
      *
-     * @param partnerCode
+     * @param partnerCode Partner的编码
+     * @return Partner
      */
     public Partner partnerCode(String partnerCode) {
         this.partnerCode = partnerCode;
@@ -239,7 +266,8 @@ public class Partner  implements java.io.Serializable {
     /**
      * set Partner的创建时间
      *
-     * @param createdTime
+     * @param createdTime Partner的创建时间
+     * @return Partner
      */
     public Partner createdTime(String createdTime) {
         this.createdTime = createdTime;
@@ -250,7 +278,8 @@ public class Partner  implements java.io.Serializable {
     /**
      * set 合作伙伴联系电话，11位数字且需要13、14、15、16、17、18、19开头
      *
-     * @param phoneNumber
+     * @param phoneNumber 合作伙伴联系电话，11位数字且需要13、14、15、16、17、18、19开头
+     * @return Partner
      */
     public Partner phoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
@@ -261,7 +290,8 @@ public class Partner  implements java.io.Serializable {
     /**
      * set 合作伙伴联系邮箱，最长支持50个字符
      *
-     * @param mailbox
+     * @param mailbox 合作伙伴联系邮箱，最长支持50个字符
+     * @return Partner
      */
     public Partner mailbox(String mailbox) {
         this.mailbox = mailbox;
@@ -270,9 +300,22 @@ public class Partner  implements java.io.Serializable {
 
 
     /**
+     * set 合作伙伴描述，最长支持50个字符
+     *
+     * @param description 合作伙伴描述，最长支持50个字符
+     * @return Partner
+     */
+    public Partner description(String description) {
+        this.description = description;
+        return this;
+    }
+
+
+    /**
      * set 合作伙伴对应的pin
      *
-     * @param pin
+     * @param pin 合作伙伴对应的pin
+     * @return Partner
      */
     public Partner pin(String pin) {
         this.pin = pin;

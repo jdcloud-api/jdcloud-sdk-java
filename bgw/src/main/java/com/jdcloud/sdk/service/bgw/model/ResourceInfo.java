@@ -110,7 +110,8 @@ public class ResourceInfo  implements java.io.Serializable {
     /**
      * set 实例id
      *
-     * @param resourceId
+     * @param resourceId 实例id
+     * @return ResourceInfo
      */
     public ResourceInfo resourceId(String resourceId) {
         this.resourceId = resourceId;
@@ -121,7 +122,8 @@ public class ResourceInfo  implements java.io.Serializable {
     /**
      * set 实例名称
      *
-     * @param resourceName
+     * @param resourceName 实例名称
+     * @return ResourceInfo
      */
     public ResourceInfo resourceName(String resourceName) {
         this.resourceName = resourceName;
@@ -132,7 +134,8 @@ public class ResourceInfo  implements java.io.Serializable {
     /**
      * set 额外描述信息，包括可续费时长，套餐类型
      *
-     * @param remark
+     * @param remark 额外描述信息，包括可续费时长，套餐类型
+     * @return ResourceInfo
      */
     public ResourceInfo remark(String remark) {
         this.remark = remark;

@@ -91,7 +91,8 @@ public class ModifyPartnerConnectionStatusSpec  implements java.io.Serializable 
     /**
      * set 专线所有者的用户pin
      *
-     * @param connectionOwner
+     * @param connectionOwner 专线所有者的用户pin
+     * @return ModifyPartnerConnectionStatusSpec
      */
     public ModifyPartnerConnectionStatusSpec connectionOwner(String connectionOwner) {
         this.connectionOwner = connectionOwner;
@@ -102,7 +103,8 @@ public class ModifyPartnerConnectionStatusSpec  implements java.io.Serializable 
     /**
      * set 专线的状态，取值为 Pending(施工中),Confirming(等待确认),Deleted(删除)。状态流转只允许由Installation_Paying设置为Pending、由Pending设置为Confirming、由Deleting设置为Deleted
      *
-     * @param connectionStatus
+     * @param connectionStatus 专线的状态，取值为 Pending(施工中),Confirming(等待确认),Deleted(删除)。状态流转只允许由Installation_Paying设置为Pending、由Pending设置为Confirming、由Deleting设置为Deleted
+     * @return ModifyPartnerConnectionStatusSpec
      */
     public ModifyPartnerConnectionStatusSpec connectionStatus(String connectionStatus) {
         this.connectionStatus = connectionStatus;
