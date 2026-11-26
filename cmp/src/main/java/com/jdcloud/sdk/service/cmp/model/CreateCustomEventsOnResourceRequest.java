@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建自定义运维事件，仅支持实例资源。
+ * 创建自定义运维事件，支持VM云主机（i-前缀）和异构计算实例（hpc-前缀）。
 仅灰度用户可用（元数据 vm_submithost&#x3D;1）。
 
  */
@@ -37,7 +37,24 @@ public class CreateCustomEventsOnResourceRequest extends JdcloudRequest implemen
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源ID（实例ID）
+     * 创建事件的幂等标识，最多64个字符。同一账号（PIN）使用相同clientToken时，在通过原有参数、灰度和资源校验后返回首次创建的eventId。
+后续请求修改其他参数（包括targetState）或原事件执行失败，均不会覆盖首次事件或创建新事件；创建新事件应使用新的clientToken。
+不传或空字符串时沿用原创建行为，不保证幂等。
+
+     */
+    private String clientToken;
+
+    /**
+     * 可选的恢复后开机状态，仅支持VM云主机；异构计算实例传入该参数时会忽略且不向下游透传。不传时沿用原有开关机处理逻辑。
+running：按开机意图执行，开机条件、调用、轮询及失败处理沿用原流程。
+stopped：不自动开机，包括失败后的兜底开机，并跳过原有running检查；不会主动关闭已运行的实例。
+本参数只控制恢复后的自动开机行为，不改变恢复成功判定。
+
+     */
+    private String targetState;
+
+    /**
+     * 资源ID，支持i-前缀的VM云主机实例和hpc-前缀的异构计算实例。
      * Required:true
      */
     @Required
@@ -67,6 +84,7 @@ public class CreateCustomEventsOnResourceRequest extends JdcloudRequest implemen
      * 是否允许本次迁移丢弃本地数据盘，缺省或false保持原迁移行为，仅显式true时允许弃盘。
 true仅支持云系统盘VM实例，保留系统盘和云数据盘，不支持本地系统盘。
 不要求实例实际存在本地数据盘，纯云盘或无数据盘实例满足上述条件时也可传true。
+异构计算实例传入该参数时会忽略且不向下游透传。
 
      */
     private Boolean discardLocalDataDisk;
@@ -81,7 +99,59 @@ true仅支持云系统盘VM实例，保留系统盘和云数据盘，不支持�
 
 
     /**
-     * get 资源ID（实例ID）
+     * get 创建事件的幂等标识，最多64个字符。同一账号（PIN）使用相同clientToken时，在通过原有参数、灰度和资源校验后返回首次创建的eventId。
+后续请求修改其他参数（包括targetState）或原事件执行失败，均不会覆盖首次事件或创建新事件；创建新事件应使用新的clientToken。
+不传或空字符串时沿用原创建行为，不保证幂等。
+
+     *
+     * @return
+     */
+    public String getClientToken() {
+        return clientToken;
+    }
+
+    /**
+     * set 创建事件的幂等标识，最多64个字符。同一账号（PIN）使用相同clientToken时，在通过原有参数、灰度和资源校验后返回首次创建的eventId。
+后续请求修改其他参数（包括targetState）或原事件执行失败，均不会覆盖首次事件或创建新事件；创建新事件应使用新的clientToken。
+不传或空字符串时沿用原创建行为，不保证幂等。
+
+     *
+     * @param clientToken
+     */
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+
+    /**
+     * get 可选的恢复后开机状态，仅支持VM云主机；异构计算实例传入该参数时会忽略且不向下游透传。不传时沿用原有开关机处理逻辑。
+running：按开机意图执行，开机条件、调用、轮询及失败处理沿用原流程。
+stopped：不自动开机，包括失败后的兜底开机，并跳过原有running检查；不会主动关闭已运行的实例。
+本参数只控制恢复后的自动开机行为，不改变恢复成功判定。
+
+     *
+     * @return
+     */
+    public String getTargetState() {
+        return targetState;
+    }
+
+    /**
+     * set 可选的恢复后开机状态，仅支持VM云主机；异构计算实例传入该参数时会忽略且不向下游透传。不传时沿用原有开关机处理逻辑。
+running：按开机意图执行，开机条件、调用、轮询及失败处理沿用原流程。
+stopped：不自动开机，包括失败后的兜底开机，并跳过原有running检查；不会主动关闭已运行的实例。
+本参数只控制恢复后的自动开机行为，不改变恢复成功判定。
+
+     *
+     * @param targetState
+     */
+    public void setTargetState(String targetState) {
+        this.targetState = targetState;
+    }
+
+
+    /**
+     * get 资源ID，支持i-前缀的VM云主机实例和hpc-前缀的异构计算实例。
      *
      * @return
      */
@@ -90,7 +160,7 @@ true仅支持云系统盘VM实例，保留系统盘和云数据盘，不支持�
     }
 
     /**
-     * set 资源ID（实例ID）
+     * set 资源ID，支持i-前缀的VM云主机实例和hpc-前缀的异构计算实例。
      *
      * @param resourceId
      */
@@ -170,6 +240,7 @@ true仅支持云系统盘VM实例，保留系统盘和云数据盘，不支持�
      * get 是否允许本次迁移丢弃本地数据盘，缺省或false保持原迁移行为，仅显式true时允许弃盘。
 true仅支持云系统盘VM实例，保留系统盘和云数据盘，不支持本地系统盘。
 不要求实例实际存在本地数据盘，纯云盘或无数据盘实例满足上述条件时也可传true。
+异构计算实例传入该参数时会忽略且不向下游透传。
 
      *
      * @return
@@ -182,6 +253,7 @@ true仅支持云系统盘VM实例，保留系统盘和云数据盘，不支持�
      * set 是否允许本次迁移丢弃本地数据盘，缺省或false保持原迁移行为，仅显式true时允许弃盘。
 true仅支持云系统盘VM实例，保留系统盘和云数据盘，不支持本地系统盘。
 不要求实例实际存在本地数据盘，纯云盘或无数据盘实例满足上述条件时也可传true。
+异构计算实例传入该参数时会忽略且不向下游透传。
 
      *
      * @param discardLocalDataDisk
@@ -212,9 +284,47 @@ true仅支持云系统盘VM实例，保留系统盘和云数据盘，不支持�
 
 
     /**
-     * set 资源ID（实例ID）
+     * set 创建事件的幂等标识，最多64个字符。同一账号（PIN）使用相同clientToken时，在通过原有参数、灰度和资源校验后返回首次创建的eventId。
+后续请求修改其他参数（包括targetState）或原事件执行失败，均不会覆盖首次事件或创建新事件；创建新事件应使用新的clientToken。
+不传或空字符串时沿用原创建行为，不保证幂等。
+
      *
-     * @param resourceId 资源ID（实例ID）
+     * @param clientToken 创建事件的幂等标识，最多64个字符。同一账号（PIN）使用相同clientToken时，在通过原有参数、灰度和资源校验后返回首次创建的eventId。
+后续请求修改其他参数（包括targetState）或原事件执行失败，均不会覆盖首次事件或创建新事件；创建新事件应使用新的clientToken。
+不传或空字符串时沿用原创建行为，不保证幂等。
+
+     * @return CreateCustomEventsOnResourceRequest
+     */
+    public CreateCustomEventsOnResourceRequest clientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+
+
+    /**
+     * set 可选的恢复后开机状态，仅支持VM云主机；异构计算实例传入该参数时会忽略且不向下游透传。不传时沿用原有开关机处理逻辑。
+running：按开机意图执行，开机条件、调用、轮询及失败处理沿用原流程。
+stopped：不自动开机，包括失败后的兜底开机，并跳过原有running检查；不会主动关闭已运行的实例。
+本参数只控制恢复后的自动开机行为，不改变恢复成功判定。
+
+     *
+     * @param targetState 可选的恢复后开机状态，仅支持VM云主机；异构计算实例传入该参数时会忽略且不向下游透传。不传时沿用原有开关机处理逻辑。
+running：按开机意图执行，开机条件、调用、轮询及失败处理沿用原流程。
+stopped：不自动开机，包括失败后的兜底开机，并跳过原有running检查；不会主动关闭已运行的实例。
+本参数只控制恢复后的自动开机行为，不改变恢复成功判定。
+
+     * @return CreateCustomEventsOnResourceRequest
+     */
+    public CreateCustomEventsOnResourceRequest targetState(String targetState) {
+        this.targetState = targetState;
+        return this;
+    }
+
+
+    /**
+     * set 资源ID，支持i-前缀的VM云主机实例和hpc-前缀的异构计算实例。
+     *
+     * @param resourceId 资源ID，支持i-前缀的VM云主机实例和hpc-前缀的异构计算实例。
      * @return CreateCustomEventsOnResourceRequest
      */
     public CreateCustomEventsOnResourceRequest resourceId(String resourceId) {
@@ -273,11 +383,13 @@ true仅支持云系统盘VM实例，保留系统盘和云数据盘，不支持�
      * set 是否允许本次迁移丢弃本地数据盘，缺省或false保持原迁移行为，仅显式true时允许弃盘。
 true仅支持云系统盘VM实例，保留系统盘和云数据盘，不支持本地系统盘。
 不要求实例实际存在本地数据盘，纯云盘或无数据盘实例满足上述条件时也可传true。
+异构计算实例传入该参数时会忽略且不向下游透传。
 
      *
      * @param discardLocalDataDisk 是否允许本次迁移丢弃本地数据盘，缺省或false保持原迁移行为，仅显式true时允许弃盘。
 true仅支持云系统盘VM实例，保留系统盘和云数据盘，不支持本地系统盘。
 不要求实例实际存在本地数据盘，纯云盘或无数据盘实例满足上述条件时也可传true。
+异构计算实例传入该参数时会忽略且不向下游透传。
 
      * @return CreateCustomEventsOnResourceRequest
      */

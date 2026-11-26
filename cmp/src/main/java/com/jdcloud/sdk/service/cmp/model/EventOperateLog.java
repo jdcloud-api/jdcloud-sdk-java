@@ -61,6 +61,24 @@ public class EventOperateLog  implements java.io.Serializable {
      */
     private String commandOutput;
 
+    /**
+     * 管理员审核结果，pass表示通过，reject表示拒绝。
+
+     */
+    private String auditResult;
+
+    /**
+     * 管理员审核意见。
+
+     */
+    private String auditOpinion;
+
+    /**
+     * 审核人ERP。
+
+     */
+    private String auditorErp;
+
 
 
     /**
@@ -166,6 +184,69 @@ public class EventOperateLog  implements java.io.Serializable {
     }
 
 
+    /**
+     * get 管理员审核结果，pass表示通过，reject表示拒绝。
+
+     *
+     * @return
+     */
+    public String getAuditResult() {
+        return auditResult;
+    }
+
+    /**
+     * set 管理员审核结果，pass表示通过，reject表示拒绝。
+
+     *
+     * @param auditResult
+     */
+    public void setAuditResult(String auditResult) {
+        this.auditResult = auditResult;
+    }
+
+
+    /**
+     * get 管理员审核意见。
+
+     *
+     * @return
+     */
+    public String getAuditOpinion() {
+        return auditOpinion;
+    }
+
+    /**
+     * set 管理员审核意见。
+
+     *
+     * @param auditOpinion
+     */
+    public void setAuditOpinion(String auditOpinion) {
+        this.auditOpinion = auditOpinion;
+    }
+
+
+    /**
+     * get 审核人ERP。
+
+     *
+     * @return
+     */
+    public String getAuditorErp() {
+        return auditorErp;
+    }
+
+    /**
+     * set 审核人ERP。
+
+     *
+     * @param auditorErp
+     */
+    public void setAuditorErp(String auditorErp) {
+        this.auditorErp = auditorErp;
+    }
+
+
 
     /**
      * set 运维事件操作时间
@@ -231,6 +312,48 @@ public class EventOperateLog  implements java.io.Serializable {
      */
     public EventOperateLog commandOutput(String commandOutput) {
         this.commandOutput = commandOutput;
+        return this;
+    }
+
+
+    /**
+     * set 管理员审核结果，pass表示通过，reject表示拒绝。
+
+     *
+     * @param auditResult 管理员审核结果，pass表示通过，reject表示拒绝。
+
+     * @return EventOperateLog
+     */
+    public EventOperateLog auditResult(String auditResult) {
+        this.auditResult = auditResult;
+        return this;
+    }
+
+
+    /**
+     * set 管理员审核意见。
+
+     *
+     * @param auditOpinion 管理员审核意见。
+
+     * @return EventOperateLog
+     */
+    public EventOperateLog auditOpinion(String auditOpinion) {
+        this.auditOpinion = auditOpinion;
+        return this;
+    }
+
+
+    /**
+     * set 审核人ERP。
+
+     *
+     * @param auditorErp 审核人ERP。
+
+     * @return EventOperateLog
+     */
+    public EventOperateLog auditorErp(String auditorErp) {
+        this.auditorErp = auditorErp;
         return this;
     }
 

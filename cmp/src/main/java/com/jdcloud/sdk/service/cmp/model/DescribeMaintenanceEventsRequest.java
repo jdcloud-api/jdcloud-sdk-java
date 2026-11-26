@@ -51,7 +51,7 @@ public class DescribeMaintenanceEventsRequest extends JdcloudRequest implements 
     /**
      * 事件类型
 - Evacuate：非预期
-- Maintenance：预期
+- Maintenance：预期，包含系统运维以及实例异常的迁移、维修、重启、观察事件
 - OfflineMachine：实例所在宿主机下线
 - HpcEvacuate：异构计算实例非预期
 
@@ -136,7 +136,7 @@ public class DescribeMaintenanceEventsRequest extends JdcloudRequest implements 
     /**
      * get 事件类型
 - Evacuate：非预期
-- Maintenance：预期
+- Maintenance：预期，包含系统运维以及实例异常的迁移、维修、重启、观察事件
 - OfflineMachine：实例所在宿主机下线
 - HpcEvacuate：异构计算实例非预期
 
@@ -150,7 +150,7 @@ public class DescribeMaintenanceEventsRequest extends JdcloudRequest implements 
     /**
      * set 事件类型
 - Evacuate：非预期
-- Maintenance：预期
+- Maintenance：预期，包含系统运维以及实例异常的迁移、维修、重启、观察事件
 - OfflineMachine：实例所在宿主机下线
 - HpcEvacuate：异构计算实例非预期
 
@@ -288,14 +288,14 @@ public class DescribeMaintenanceEventsRequest extends JdcloudRequest implements 
     /**
      * set 事件类型
 - Evacuate：非预期
-- Maintenance：预期
+- Maintenance：预期，包含系统运维以及实例异常的迁移、维修、重启、观察事件
 - OfflineMachine：实例所在宿主机下线
 - HpcEvacuate：异构计算实例非预期
 
      *
      * @param eventType 事件类型
 - Evacuate：非预期
-- Maintenance：预期
+- Maintenance：预期，包含系统运维以及实例异常的迁移、维修、重启、观察事件
 - OfflineMachine：实例所在宿主机下线
 - HpcEvacuate：异构计算实例非预期
 

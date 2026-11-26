@@ -31,36 +31,45 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.cmp.model.DescribeMaintenancePoliciesRequest;
-import com.jdcloud.sdk.service.cmp.model.DescribeMaintenancePoliciesResponse;
-import com.jdcloud.sdk.service.cmp.client.DescribeMaintenancePoliciesExecutor;
-import com.jdcloud.sdk.service.cmp.model.ModifyMaintenancePolicyRequest;
-import com.jdcloud.sdk.service.cmp.model.ModifyMaintenancePolicyResponse;
-import com.jdcloud.sdk.service.cmp.client.ModifyMaintenancePolicyExecutor;
-import com.jdcloud.sdk.service.cmp.model.ModifyMaintenanceEventRequest;
-import com.jdcloud.sdk.service.cmp.model.ModifyMaintenanceEventResponse;
-import com.jdcloud.sdk.service.cmp.client.ModifyMaintenanceEventExecutor;
 import com.jdcloud.sdk.service.cmp.model.DescribeMaintenanceEventsRequest;
 import com.jdcloud.sdk.service.cmp.model.DescribeMaintenanceEventsResponse;
 import com.jdcloud.sdk.service.cmp.client.DescribeMaintenanceEventsExecutor;
 import com.jdcloud.sdk.service.cmp.model.RecommendedInstanceTypesRequest;
 import com.jdcloud.sdk.service.cmp.model.RecommendedInstanceTypesResponse;
 import com.jdcloud.sdk.service.cmp.client.RecommendedInstanceTypesExecutor;
-import com.jdcloud.sdk.service.cmp.model.DisassociateMaintenancePolicyRequest;
-import com.jdcloud.sdk.service.cmp.model.DisassociateMaintenancePolicyResponse;
-import com.jdcloud.sdk.service.cmp.client.DisassociateMaintenancePolicyExecutor;
 import com.jdcloud.sdk.service.cmp.model.AuthorizeEventRequest;
 import com.jdcloud.sdk.service.cmp.model.AuthorizeEventResponse;
 import com.jdcloud.sdk.service.cmp.client.AuthorizeEventExecutor;
+import com.jdcloud.sdk.service.cmp.model.DescribeInstanceMaintenanceEventsRequest;
+import com.jdcloud.sdk.service.cmp.model.DescribeInstanceMaintenanceEventsResponse;
+import com.jdcloud.sdk.service.cmp.client.DescribeInstanceMaintenanceEventsExecutor;
+import com.jdcloud.sdk.service.cmp.model.AuthorizeInstanceEventRequest;
+import com.jdcloud.sdk.service.cmp.model.AuthorizeInstanceEventResponse;
+import com.jdcloud.sdk.service.cmp.client.AuthorizeInstanceEventExecutor;
+import com.jdcloud.sdk.service.cmp.model.CreateMaintenancePolicyRequest;
+import com.jdcloud.sdk.service.cmp.model.CreateMaintenancePolicyResponse;
+import com.jdcloud.sdk.service.cmp.client.CreateMaintenancePolicyExecutor;
+import com.jdcloud.sdk.service.cmp.model.DescribeMaintenancePoliciesRequest;
+import com.jdcloud.sdk.service.cmp.model.DescribeMaintenancePoliciesResponse;
+import com.jdcloud.sdk.service.cmp.client.DescribeMaintenancePoliciesExecutor;
+import com.jdcloud.sdk.service.cmp.model.ModifyMaintenancePolicyRequest;
+import com.jdcloud.sdk.service.cmp.model.ModifyMaintenancePolicyResponse;
+import com.jdcloud.sdk.service.cmp.client.ModifyMaintenancePolicyExecutor;
+import com.jdcloud.sdk.service.cmp.model.ReportCustomEventsOnResourceRequest;
+import com.jdcloud.sdk.service.cmp.model.ReportCustomEventsOnResourceResponse;
+import com.jdcloud.sdk.service.cmp.client.ReportCustomEventsOnResourceExecutor;
+import com.jdcloud.sdk.service.cmp.model.ModifyMaintenanceEventRequest;
+import com.jdcloud.sdk.service.cmp.model.ModifyMaintenanceEventResponse;
+import com.jdcloud.sdk.service.cmp.client.ModifyMaintenanceEventExecutor;
+import com.jdcloud.sdk.service.cmp.model.DisassociateMaintenancePolicyRequest;
+import com.jdcloud.sdk.service.cmp.model.DisassociateMaintenancePolicyResponse;
+import com.jdcloud.sdk.service.cmp.client.DisassociateMaintenancePolicyExecutor;
 import com.jdcloud.sdk.service.cmp.model.DeleteMaintenancePolicyRequest;
 import com.jdcloud.sdk.service.cmp.model.DeleteMaintenancePolicyResponse;
 import com.jdcloud.sdk.service.cmp.client.DeleteMaintenancePolicyExecutor;
 import com.jdcloud.sdk.service.cmp.model.AssociateMaintenancePolicyRequest;
 import com.jdcloud.sdk.service.cmp.model.AssociateMaintenancePolicyResponse;
 import com.jdcloud.sdk.service.cmp.client.AssociateMaintenancePolicyExecutor;
-import com.jdcloud.sdk.service.cmp.model.CreateMaintenancePolicyRequest;
-import com.jdcloud.sdk.service.cmp.model.CreateMaintenancePolicyResponse;
-import com.jdcloud.sdk.service.cmp.client.CreateMaintenancePolicyExecutor;
 import com.jdcloud.sdk.service.cmp.model.CreateCustomEventsOnResourceRequest;
 import com.jdcloud.sdk.service.cmp.model.CreateCustomEventsOnResourceResponse;
 import com.jdcloud.sdk.service.cmp.client.CreateCustomEventsOnResourceExecutor;
@@ -115,40 +124,6 @@ public class CmpClient extends JdcloudClient {
 
 
     /**
-     * 查询自定义运维策略
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeMaintenancePoliciesResponse describeMaintenancePolicies(DescribeMaintenancePoliciesRequest request) throws JdcloudSdkException {
-        return new DescribeMaintenancePoliciesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改自定义运维策略
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyMaintenancePolicyResponse modifyMaintenancePolicy(ModifyMaintenancePolicyRequest request) throws JdcloudSdkException {
-        return new ModifyMaintenancePolicyExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改（预约）云主机的事件
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyMaintenanceEventResponse modifyMaintenanceEvent(ModifyMaintenanceEventRequest request) throws JdcloudSdkException {
-        return new ModifyMaintenanceEventExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询云主机的运维事件
 
      *
@@ -174,18 +149,7 @@ public class CmpClient extends JdcloudClient {
     }
 
     /**
-     * 云主机解关联运维策略
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DisassociateMaintenancePolicyResponse disassociateMaintenancePolicy(DisassociateMaintenancePolicyRequest request) throws JdcloudSdkException {
-        return new DisassociateMaintenancePolicyExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 授权计划迁移系统中的运维事件，授权前会校验事件是否存在且归属当前账号，仅支持计划迁移系统内的事件。
+     * 授权计划迁移系统中的运维事件。授权前会校验事件与当前账号的归属关系，资源ID由后端根据事件获取，仅支持计划迁移系统内的事件。
 
      *
      * @param request
@@ -194,6 +158,101 @@ public class CmpClient extends JdcloudClient {
      */
     public AuthorizeEventResponse authorizeEvent(AuthorizeEventRequest request) throws JdcloudSdkException {
         return new AuthorizeEventExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询异构计算实例运维事件。接口始终按资源维度聚合并分页，即使filters中传入resourceId，也仅返回资源摘要，不返回事件明细。
+nodeState和authorizationState会在资源聚合后进行过滤；同一字段传入多个值时为OR，不同字段同时传入时为AND。
+totalCount始终表示聚合及状态过滤后满足条件的唯一资源总数；仅传入一个resourceId时，totalCount只能为0或1。
+默认按create_time降序排列。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceMaintenanceEventsResponse describeInstanceMaintenanceEvents(DescribeInstanceMaintenanceEventsRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceMaintenanceEventsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 按异构计算资源授权实例级运维事件。提交的处置建议必须与当前资源的最终处置建议一致；若建议已变化，请重新查询后再授权。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AuthorizeInstanceEventResponse authorizeInstanceEvent(AuthorizeInstanceEventRequest request) throws JdcloudSdkException {
+        return new AuthorizeInstanceEventExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建自定义运维策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateMaintenancePolicyResponse createMaintenancePolicy(CreateMaintenancePolicyRequest request) throws JdcloudSdkException {
+        return new CreateMaintenancePolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询自定义运维策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeMaintenancePoliciesResponse describeMaintenancePolicies(DescribeMaintenancePoliciesRequest request) throws JdcloudSdkException {
+        return new DescribeMaintenancePoliciesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改自定义运维策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyMaintenancePolicyResponse modifyMaintenancePolicy(ModifyMaintenancePolicyRequest request) throws JdcloudSdkException {
+        return new ModifyMaintenancePolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 上报异构计算资源故障事件。事件上报后需先由管理员审核，再由用户授权。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ReportCustomEventsOnResourceResponse reportCustomEventsOnResource(ReportCustomEventsOnResourceRequest request) throws JdcloudSdkException {
+        return new ReportCustomEventsOnResourceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改（预约）云主机的事件
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyMaintenanceEventResponse modifyMaintenanceEvent(ModifyMaintenanceEventRequest request) throws JdcloudSdkException {
+        return new ModifyMaintenanceEventExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 云主机解关联运维策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisassociateMaintenancePolicyResponse disassociateMaintenancePolicy(DisassociateMaintenancePolicyRequest request) throws JdcloudSdkException {
+        return new DisassociateMaintenancePolicyExecutor().client(this).execute(request);
     }
 
     /**
@@ -219,18 +278,7 @@ public class CmpClient extends JdcloudClient {
     }
 
     /**
-     * 创建自定义运维策略
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateMaintenancePolicyResponse createMaintenancePolicy(CreateMaintenancePolicyRequest request) throws JdcloudSdkException {
-        return new CreateMaintenancePolicyExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建自定义运维事件，仅支持实例资源。
+     * 创建自定义运维事件，支持VM云主机（i-前缀）和异构计算实例（hpc-前缀）。
 仅灰度用户可用（元数据 vm_submithost&#x3D;1）。
 
      *

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cmp.model.CreateCustomEventsOnResourceResponse;
 
 /**
- * 创建自定义运维事件，仅支持实例资源。
+ * 创建自定义运维事件，支持VM云主机（i-前缀）和异构计算实例（hpc-前缀）。
 仅灰度用户可用（元数据 vm_submithost&#x3D;1）。
 
  */
