@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>cmp</artifactId>
-  <version>0.2.3</version>
+  <version>0.2.12</version>
   <packaging>jar</packaging>
   <name>cmp</name>
   <url>http://www.jdcloud.com</url>

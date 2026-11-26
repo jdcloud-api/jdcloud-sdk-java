@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 授权计划迁移系统中的运维事件，授权前会校验事件是否存在且归属当前账号，仅支持计划迁移系统内的事件。
+ * 授权计划迁移系统中的运维事件。授权前会校验事件与当前账号的归属关系，资源ID由后端根据事件获取，仅支持计划迁移系统内的事件。
 
  */
 public class AuthorizeEventRequest extends JdcloudRequest implements java.io.Serializable {

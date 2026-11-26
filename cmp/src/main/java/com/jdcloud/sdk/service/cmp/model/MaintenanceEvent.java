@@ -39,6 +39,7 @@ public class MaintenanceEvent  implements java.io.Serializable {
 
     /**
      * 运维事件状态
+- SreConfirm：等待管理员审核
 - Inquiring：等待授权
 - Scheduled：等待执行
 - Avoided：已避免
@@ -52,10 +53,25 @@ public class MaintenanceEvent  implements java.io.Serializable {
     private String eventState;
 
     /**
+     * Custom云主机恢复事件的底层资源执行结果：true表示成功，false表示失败，null表示尚无最终结果或历史事件未采集。
+eventState表示事件处理阶段，Executed不应单独用于判断底层资源是否恢复成功。
+
+     */
+    private Boolean executionSucceeded;
+
+    /**
+     * 终态宿主机IP是否相对事件记录的源宿主机IP发生变化：true表示变化，false表示未变化，null表示尚无终态或缺少地址证据。
+与executionSucceeded独立，执行失败时也可能为true。比较基准为事件已保存的源宿主机，不证明地址变化一定由本次恢复引起。
+
+     */
+    private Boolean hostChanged;
+
+    /**
      * 事件类型
 - Evacuate：非预期
-- Maintenance：预期
+- Maintenance：预期，包含系统运维以及实例异常的迁移、维修、重启、观察事件
 - OfflineMachine：实例所在宿主机下线
+- HpcEvacuate：异构计算实例非预期
 
      */
     private String eventType;
@@ -64,6 +80,7 @@ public class MaintenanceEvent  implements java.io.Serializable {
      * 策略类型
 - SystemMaintenance：系统运维
 - LocalDataDiskFailure：本地盘异常
+- InstanceException：实例异常
 
      */
     private String maintenancePolicyType;
@@ -73,6 +90,9 @@ public class MaintenanceEvent  implements java.io.Serializable {
 - Migrate：迁移
 - AbandonDiskAndMigrate：弃盘迁移
 - OfflineMachine：实例所在宿主机下线
+- Repair：维修
+- Reboot：重启
+- Observe：观察，暂不执行处置动作
 
      */
     private String maintenancePolicyOperate;
@@ -82,6 +102,42 @@ public class MaintenanceEvent  implements java.io.Serializable {
 
      */
     private String resourceId;
+
+    /**
+     * 故障类型，例如 GPU_XID_79。
+
+     */
+    private String faultType;
+
+    /**
+     * 故障等级，例如 critical、urgent。
+
+     */
+    private String faultLevel;
+
+    /**
+     * 故障建议操作，例如 repair。
+
+     */
+    private String suggestAction;
+
+    /**
+     * 故障检测次数。
+
+     */
+    private Integer detectCount;
+
+    /**
+     * 故障设备类型，例如 gpu。
+
+     */
+    private String deviceType;
+
+    /**
+     * 故障设备唯一标识，支持 GPU UUID、PCI Bus ID、网卡设备ID等。
+
+     */
+    private String deviceId;
 
     /**
      * 本次迁移是否允许丢弃本地数据盘，不包含系统盘和云数据盘；缺省或false表示未开启。
@@ -141,6 +197,7 @@ public class MaintenanceEvent  implements java.io.Serializable {
 
     /**
      * get 运维事件状态
+- SreConfirm：等待管理员审核
 - Inquiring：等待授权
 - Scheduled：等待执行
 - Avoided：已避免
@@ -159,6 +216,7 @@ public class MaintenanceEvent  implements java.io.Serializable {
 
     /**
      * set 运维事件状态
+- SreConfirm：等待管理员审核
 - Inquiring：等待授权
 - Scheduled：等待执行
 - Avoided：已避免
@@ -177,10 +235,57 @@ public class MaintenanceEvent  implements java.io.Serializable {
 
 
     /**
+     * get Custom云主机恢复事件的底层资源执行结果：true表示成功，false表示失败，null表示尚无最终结果或历史事件未采集。
+eventState表示事件处理阶段，Executed不应单独用于判断底层资源是否恢复成功。
+
+     *
+     * @return
+     */
+    public Boolean getExecutionSucceeded() {
+        return executionSucceeded;
+    }
+
+    /**
+     * set Custom云主机恢复事件的底层资源执行结果：true表示成功，false表示失败，null表示尚无最终结果或历史事件未采集。
+eventState表示事件处理阶段，Executed不应单独用于判断底层资源是否恢复成功。
+
+     *
+     * @param executionSucceeded
+     */
+    public void setExecutionSucceeded(Boolean executionSucceeded) {
+        this.executionSucceeded = executionSucceeded;
+    }
+
+
+    /**
+     * get 终态宿主机IP是否相对事件记录的源宿主机IP发生变化：true表示变化，false表示未变化，null表示尚无终态或缺少地址证据。
+与executionSucceeded独立，执行失败时也可能为true。比较基准为事件已保存的源宿主机，不证明地址变化一定由本次恢复引起。
+
+     *
+     * @return
+     */
+    public Boolean getHostChanged() {
+        return hostChanged;
+    }
+
+    /**
+     * set 终态宿主机IP是否相对事件记录的源宿主机IP发生变化：true表示变化，false表示未变化，null表示尚无终态或缺少地址证据。
+与executionSucceeded独立，执行失败时也可能为true。比较基准为事件已保存的源宿主机，不证明地址变化一定由本次恢复引起。
+
+     *
+     * @param hostChanged
+     */
+    public void setHostChanged(Boolean hostChanged) {
+        this.hostChanged = hostChanged;
+    }
+
+
+    /**
      * get 事件类型
 - Evacuate：非预期
-- Maintenance：预期
+- Maintenance：预期，包含系统运维以及实例异常的迁移、维修、重启、观察事件
 - OfflineMachine：实例所在宿主机下线
+- HpcEvacuate：异构计算实例非预期
 
      *
      * @return
@@ -192,8 +297,9 @@ public class MaintenanceEvent  implements java.io.Serializable {
     /**
      * set 事件类型
 - Evacuate：非预期
-- Maintenance：预期
+- Maintenance：预期，包含系统运维以及实例异常的迁移、维修、重启、观察事件
 - OfflineMachine：实例所在宿主机下线
+- HpcEvacuate：异构计算实例非预期
 
      *
      * @param eventType
@@ -207,6 +313,7 @@ public class MaintenanceEvent  implements java.io.Serializable {
      * get 策略类型
 - SystemMaintenance：系统运维
 - LocalDataDiskFailure：本地盘异常
+- InstanceException：实例异常
 
      *
      * @return
@@ -219,6 +326,7 @@ public class MaintenanceEvent  implements java.io.Serializable {
      * set 策略类型
 - SystemMaintenance：系统运维
 - LocalDataDiskFailure：本地盘异常
+- InstanceException：实例异常
 
      *
      * @param maintenancePolicyType
@@ -233,6 +341,9 @@ public class MaintenanceEvent  implements java.io.Serializable {
 - Migrate：迁移
 - AbandonDiskAndMigrate：弃盘迁移
 - OfflineMachine：实例所在宿主机下线
+- Repair：维修
+- Reboot：重启
+- Observe：观察，暂不执行处置动作
 
      *
      * @return
@@ -246,6 +357,9 @@ public class MaintenanceEvent  implements java.io.Serializable {
 - Migrate：迁移
 - AbandonDiskAndMigrate：弃盘迁移
 - OfflineMachine：实例所在宿主机下线
+- Repair：维修
+- Reboot：重启
+- Observe：观察，暂不执行处置动作
 
      *
      * @param maintenancePolicyOperate
@@ -273,6 +387,132 @@ public class MaintenanceEvent  implements java.io.Serializable {
      */
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
+    }
+
+
+    /**
+     * get 故障类型，例如 GPU_XID_79。
+
+     *
+     * @return
+     */
+    public String getFaultType() {
+        return faultType;
+    }
+
+    /**
+     * set 故障类型，例如 GPU_XID_79。
+
+     *
+     * @param faultType
+     */
+    public void setFaultType(String faultType) {
+        this.faultType = faultType;
+    }
+
+
+    /**
+     * get 故障等级，例如 critical、urgent。
+
+     *
+     * @return
+     */
+    public String getFaultLevel() {
+        return faultLevel;
+    }
+
+    /**
+     * set 故障等级，例如 critical、urgent。
+
+     *
+     * @param faultLevel
+     */
+    public void setFaultLevel(String faultLevel) {
+        this.faultLevel = faultLevel;
+    }
+
+
+    /**
+     * get 故障建议操作，例如 repair。
+
+     *
+     * @return
+     */
+    public String getSuggestAction() {
+        return suggestAction;
+    }
+
+    /**
+     * set 故障建议操作，例如 repair。
+
+     *
+     * @param suggestAction
+     */
+    public void setSuggestAction(String suggestAction) {
+        this.suggestAction = suggestAction;
+    }
+
+
+    /**
+     * get 故障检测次数。
+
+     *
+     * @return
+     */
+    public Integer getDetectCount() {
+        return detectCount;
+    }
+
+    /**
+     * set 故障检测次数。
+
+     *
+     * @param detectCount
+     */
+    public void setDetectCount(Integer detectCount) {
+        this.detectCount = detectCount;
+    }
+
+
+    /**
+     * get 故障设备类型，例如 gpu。
+
+     *
+     * @return
+     */
+    public String getDeviceType() {
+        return deviceType;
+    }
+
+    /**
+     * set 故障设备类型，例如 gpu。
+
+     *
+     * @param deviceType
+     */
+    public void setDeviceType(String deviceType) {
+        this.deviceType = deviceType;
+    }
+
+
+    /**
+     * get 故障设备唯一标识，支持 GPU UUID、PCI Bus ID、网卡设备ID等。
+
+     *
+     * @return
+     */
+    public String getDeviceId() {
+        return deviceId;
+    }
+
+    /**
+     * set 故障设备唯一标识，支持 GPU UUID、PCI Bus ID、网卡设备ID等。
+
+     *
+     * @param deviceId
+     */
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
     }
 
 
@@ -415,6 +655,7 @@ public class MaintenanceEvent  implements java.io.Serializable {
 
     /**
      * set 运维事件状态
+- SreConfirm：等待管理员审核
 - Inquiring：等待授权
 - Scheduled：等待执行
 - Avoided：已避免
@@ -426,6 +667,7 @@ public class MaintenanceEvent  implements java.io.Serializable {
 
      *
      * @param eventState 运维事件状态
+- SreConfirm：等待管理员审核
 - Inquiring：等待授权
 - Scheduled：等待执行
 - Avoided：已避免
@@ -444,16 +686,50 @@ public class MaintenanceEvent  implements java.io.Serializable {
 
 
     /**
+     * set Custom云主机恢复事件的底层资源执行结果：true表示成功，false表示失败，null表示尚无最终结果或历史事件未采集。
+eventState表示事件处理阶段，Executed不应单独用于判断底层资源是否恢复成功。
+
+     *
+     * @param executionSucceeded Custom云主机恢复事件的底层资源执行结果：true表示成功，false表示失败，null表示尚无最终结果或历史事件未采集。
+eventState表示事件处理阶段，Executed不应单独用于判断底层资源是否恢复成功。
+
+     * @return MaintenanceEvent
+     */
+    public MaintenanceEvent executionSucceeded(Boolean executionSucceeded) {
+        this.executionSucceeded = executionSucceeded;
+        return this;
+    }
+
+
+    /**
+     * set 终态宿主机IP是否相对事件记录的源宿主机IP发生变化：true表示变化，false表示未变化，null表示尚无终态或缺少地址证据。
+与executionSucceeded独立，执行失败时也可能为true。比较基准为事件已保存的源宿主机，不证明地址变化一定由本次恢复引起。
+
+     *
+     * @param hostChanged 终态宿主机IP是否相对事件记录的源宿主机IP发生变化：true表示变化，false表示未变化，null表示尚无终态或缺少地址证据。
+与executionSucceeded独立，执行失败时也可能为true。比较基准为事件已保存的源宿主机，不证明地址变化一定由本次恢复引起。
+
+     * @return MaintenanceEvent
+     */
+    public MaintenanceEvent hostChanged(Boolean hostChanged) {
+        this.hostChanged = hostChanged;
+        return this;
+    }
+
+
+    /**
      * set 事件类型
 - Evacuate：非预期
-- Maintenance：预期
+- Maintenance：预期，包含系统运维以及实例异常的迁移、维修、重启、观察事件
 - OfflineMachine：实例所在宿主机下线
+- HpcEvacuate：异构计算实例非预期
 
      *
      * @param eventType 事件类型
 - Evacuate：非预期
-- Maintenance：预期
+- Maintenance：预期，包含系统运维以及实例异常的迁移、维修、重启、观察事件
 - OfflineMachine：实例所在宿主机下线
+- HpcEvacuate：异构计算实例非预期
 
      * @return MaintenanceEvent
      */
@@ -467,11 +743,13 @@ public class MaintenanceEvent  implements java.io.Serializable {
      * set 策略类型
 - SystemMaintenance：系统运维
 - LocalDataDiskFailure：本地盘异常
+- InstanceException：实例异常
 
      *
      * @param maintenancePolicyType 策略类型
 - SystemMaintenance：系统运维
 - LocalDataDiskFailure：本地盘异常
+- InstanceException：实例异常
 
      * @return MaintenanceEvent
      */
@@ -486,12 +764,18 @@ public class MaintenanceEvent  implements java.io.Serializable {
 - Migrate：迁移
 - AbandonDiskAndMigrate：弃盘迁移
 - OfflineMachine：实例所在宿主机下线
+- Repair：维修
+- Reboot：重启
+- Observe：观察，暂不执行处置动作
 
      *
      * @param maintenancePolicyOperate 策略操作
 - Migrate：迁移
 - AbandonDiskAndMigrate：弃盘迁移
 - OfflineMachine：实例所在宿主机下线
+- Repair：维修
+- Reboot：重启
+- Observe：观察，暂不执行处置动作
 
      * @return MaintenanceEvent
      */
@@ -511,6 +795,90 @@ public class MaintenanceEvent  implements java.io.Serializable {
      */
     public MaintenanceEvent resourceId(String resourceId) {
         this.resourceId = resourceId;
+        return this;
+    }
+
+
+    /**
+     * set 故障类型，例如 GPU_XID_79。
+
+     *
+     * @param faultType 故障类型，例如 GPU_XID_79。
+
+     * @return MaintenanceEvent
+     */
+    public MaintenanceEvent faultType(String faultType) {
+        this.faultType = faultType;
+        return this;
+    }
+
+
+    /**
+     * set 故障等级，例如 critical、urgent。
+
+     *
+     * @param faultLevel 故障等级，例如 critical、urgent。
+
+     * @return MaintenanceEvent
+     */
+    public MaintenanceEvent faultLevel(String faultLevel) {
+        this.faultLevel = faultLevel;
+        return this;
+    }
+
+
+    /**
+     * set 故障建议操作，例如 repair。
+
+     *
+     * @param suggestAction 故障建议操作，例如 repair。
+
+     * @return MaintenanceEvent
+     */
+    public MaintenanceEvent suggestAction(String suggestAction) {
+        this.suggestAction = suggestAction;
+        return this;
+    }
+
+
+    /**
+     * set 故障检测次数。
+
+     *
+     * @param detectCount 故障检测次数。
+
+     * @return MaintenanceEvent
+     */
+    public MaintenanceEvent detectCount(Integer detectCount) {
+        this.detectCount = detectCount;
+        return this;
+    }
+
+
+    /**
+     * set 故障设备类型，例如 gpu。
+
+     *
+     * @param deviceType 故障设备类型，例如 gpu。
+
+     * @return MaintenanceEvent
+     */
+    public MaintenanceEvent deviceType(String deviceType) {
+        this.deviceType = deviceType;
+        return this;
+    }
+
+
+    /**
+     * set 故障设备唯一标识，支持 GPU UUID、PCI Bus ID、网卡设备ID等。
+
+     *
+     * @param deviceId 故障设备唯一标识，支持 GPU UUID、PCI Bus ID、网卡设备ID等。
+
+     * @return MaintenanceEvent
+     */
+    public MaintenanceEvent deviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
 
